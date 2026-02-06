@@ -1,0 +1,58 @@
+{
+  "id": "lesson6-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 6,
+    "pinyin": "Nǐ de shǒujīhào shì duōshao?",
+    "title": "你的手机号是多少？",
+    "titleTranslation": "Telefon raqamingiz qancha?",
+    "titleTranslation_ru": "Какой у тебя номер телефона?"
+  },
+  "sections": [
+    {
+      "id": "l6p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l6p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂手机号码并使用号码拨打手机。",
+          "text_translation": "Telefon raqamlarini tushunish va ulardan foydalanib qo'ng'iroq qilish.",
+          "text_translation_ru": "Понимать номера мобильных телефонов и использовать их для совершения звонков.",
+          "pinyin": "Néng tīng dǒng shǒujī hàomǎ bìng shǐyòng hàomǎ bōdǎ shǒujī.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p1-obj-s2",
+          "section": "objectives",
+          "text_original": "能听懂并使用两个或多个动词性短语表达动作的目的或方式。",
+          "text_translation": "Ikki yoki undan ko'p fe'l iboralarini tushunish va harakatning maqsadi yoki usulini ifodalash uchun ishlatish.",
+          "text_translation_ru": "Понимать и использовать два или более глагольных выражения для передачи цели или способа действия.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng liǎng gè huò duō gè dòngcíxìng duǎnyǔ biǎodá dòngzuò de mùdì huò fāngshì.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握能愿动词\"想\"的用法。",
+          "text_translation": "Modal fe'l \"想\" ning ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Овладеть употреблением модального глагола «想».",
+          "pinyin": "Zhǎngwò néngyuàn dòngcí 'xiǎng' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p1-obj-s4",
+          "section": "objectives",
+          "text_original": "掌握疑问代词\"怎么\"询问方式的用法。",
+          "text_translation": "So'roq olmoshi \"怎么\" ning so'rash usulini o'zlashtirish.",
+          "text_translation_ru": "Овладеть употреблением вопросительного местоимения «怎么» для вопроса о способе или методе действия.",
+          "pinyin": "Zhǎngwò yíwèn dàicí 'zěnme' xúnwèn fāngshì de yòngfǎ.",
+          "isCheckbox": true
+        }
+      ]
+    }
+  ]
+}

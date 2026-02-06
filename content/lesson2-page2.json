@@ -1,0 +1,207 @@
+{
+  "id": "lesson2-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l2p2-sec-text2",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在校园里，陈天中和白家月打招呼时认错了人。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Chén Tiānzhōng hé Bái Jiāyuè dǎ zhāohu shí rèn cuò le rén.",
+      "contextTranslation": "Kampusda Chen Tianzhong Bai Jiayue bilan salomlashayotganda uni boshqa odam deb o'yladi.",
+      "contextTranslation_ru": "На территории кампуса Чэнь Тяньчжун поздоровался с Бай Цзяюэ, но перепутал её с кем-то другим.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l2p2-text2.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-2-1.jpg",
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "在口语中也说「没事」或「没事没事」。",
+        "pinyin": "Zài kǒuyǔ zhōng yě shuō「méi shì」huò「méi shì méi shì」.",
+        "translation": "Og'zaki nutqda「没事」yoki「没事没事」ham ishlatiladi.",
+        "translation_ru": "В разговорной речи также говорят「没事」или「没事没事」."
+      },
+      "sentences": [
+        {
+          "id": "l2p2-t2-s1",
+          "section": "text",
+          "text_original": "你好，安妮！",
+          "text_translation": "Salom, Anni!",
+          "text_translation_ru": "Привет, Энни!",
+          "pinyin": "Nǐ hǎo, Ānnī!",
+          "speaker": "陈天中",
+          "speakerName": "Chén Tiānzhōng",
+          "audio_url": "/audio/l2p2-t2-s1.mp3"
+        },
+        {
+          "id": "l2p2-t2-s2",
+          "section": "text",
+          "text_original": "你好，陈天中！我不是安妮，我是白家月。",
+          "text_translation": "Salom, Chen Tianzhong! Men Anni emasman, men Bai Jiayueman.",
+          "text_translation_ru": "Привет, Чэнь Тяньчжун! Я не Энни, я Бай Цзяюэ.",
+          "pinyin": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+          "speaker": "白家月",
+          "speakerName": "Bái Jiāyuè",
+          "audio_url": "/audio/l2p2-t2-s2.mp3"
+        },
+        {
+          "id": "l2p2-t2-s3",
+          "section": "text",
+          "text_original": "对不起！",
+          "text_translation": "Kechirasiz!",
+          "text_translation_ru": "Извините!",
+          "pinyin": "Duìbuqǐ!",
+          "speaker": "陈天中",
+          "speakerName": "Chén Tiānzhōng",
+          "audio_url": "/audio/l2p2-t2-s3.mp3"
+        },
+        {
+          "id": "l2p2-t2-s4",
+          "section": "text",
+          "text_original": "没关系！",
+          "text_translation": "Hech gap emas!",
+          "text_translation_ru": "Ничего страшного!",
+          "pinyin": "Méi guānxi!",
+          "speaker": "白家月",
+          "speakerName": "Bái Jiāyuè",
+          "audio_url": "/audio/l2p2-t2-s4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l2p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l2p2-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l2p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "不",
+          "text_translation": "yo'q, emas (ravish)",
+          "text_translation_ru": "не, нет (наречие)",
+          "pinyin": "bù"
+        },
+        {
+          "id": "l2p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "是",
+          "text_translation": "bo'lmoq (fe'l)",
+          "text_translation_ru": "быть (глагол)",
+          "pinyin": "shì"
+        },
+        {
+          "id": "l2p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "对不起",
+          "text_translation": "kechirasiz (fe'l)",
+          "text_translation_ru": "извините (глагол)",
+          "pinyin": "duìbuqǐ"
+        },
+        {
+          "id": "l2p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "没关系",
+          "text_translation": "hech gap emas, xavotir olmang",
+          "text_translation_ru": "ничего страшного, всё в порядке",
+          "pinyin": "méi guānxi"
+        },
+        {
+          "id": "l2p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "没事",
+          "text_translation": "hech gap emas (fe'l)",
+          "text_translation_ru": "ничего, неважно (глагол)",
+          "pinyin": "méishì"
+        }
+      ]
+    },
+    {
+      "id": "l2p2-sec-exercise",
+      "type": "exercise",
+      "subheading_ru": "Упражнения",
+      "sentences": [
+        {
+          "id": "l2p2-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l2p2-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组，用真实姓名对话。",
+          "text_translation": "Ikki kishidan iborat guruhda haqiqiy ismlaringiz bilan suhbatlashing.",
+          "text_translation_ru": "В парах поговорите, используя настоящие имена.",
+          "pinyin": "Liǎng rén yī zǔ, yòng zhēnshí xìngmíng duìhuà.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l2p2-sec-grammar",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l2p2-g-s1",
+          "section": "grammar",
+          "text_original": "汉语的基本语序",
+          "text_translation": "Xitoy tilining asosiy so'z tartibi",
+          "text_translation_ru": "Базовый порядок слов в китайском языке",
+          "pinyin": "Hànyǔ de jīběn yǔxù"
+        },
+        {
+          "id": "l2p2-g-s2",
+          "section": "grammar",
+          "text_original": "汉语的基本语序是：主语+谓语+宾语。例如：我（主语）叫（谓语）陈天中（宾语）。",
+          "text_translation": "Xitoy tilining asosiy so'z tartibi: Ega + Kesim + To'ldiruvchi. Masalan: 我 (Ega) 叫 (Kesim) 陈天中 (To'ldiruvchi).",
+          "text_translation_ru": "Базовый порядок слов в китайском: Подлежащее + Сказуемое + Дополнение. Например: 我 (Подлежащее) 叫 (Сказуемое) 陈天中 (Дополнение).",
+          "pinyin": "Hànyǔ de jīběn yǔxù shì: zhǔyǔ + wèiyǔ + bīnyǔ. Lìrú: wǒ (zhǔyǔ) jiào (wèiyǔ) Chén Tiānzhōng (bīnyǔ)."
+        },
+        {
+          "id": "l2p2-g-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l2p2-g-s4",
+          "section": "grammar",
+          "text_original": "(1) 你叫什么名字？",
+          "text_translation": "Ismingiz nima?",
+          "text_translation_ru": "Как тебя зовут?",
+          "pinyin": "Nǐ jiào shénme míngzi?"
+        },
+        {
+          "id": "l2p2-g-s5",
+          "section": "grammar",
+          "text_original": "(2) 我叫白家月。",
+          "text_translation": "Mening ismim Bai Jiayue.",
+          "text_translation_ru": "Меня зовут Бай Цзяюэ.",
+          "pinyin": "Wǒ jiào Bái Jiāyuè."
+        },
+        {
+          "id": "l2p2-g-s6",
+          "section": "grammar",
+          "text_original": "(3) 我是学生。",
+          "text_translation": "Men talabaman.",
+          "text_translation_ru": "Я студент.",
+          "pinyin": "Wǒ shì xuéshēng."
+        }
+      ]
+    }
+  ]
+}

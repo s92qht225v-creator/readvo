@@ -1,0 +1,315 @@
+{
+  "id": "lesson3-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 3,
+    "pinyin": "Wǒ shì Zhōngguó rén",
+    "title": "我是中国人",
+    "titleTranslation": "Men Xitoylikman",
+    "titleTranslation_ru": "Я китаец"
+  },
+  "sections": [
+    {
+      "id": "l3p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l3p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用「是」字句表达等同或类属。",
+          "text_translation": "\"是\" gap tuzilmasini tushunish va tenglashtiruv yoki turkumlashni ifodalash uchun ishlatish.",
+          "text_translation_ru": "Понимать и использовать предложения с «是» для выражения тождества или принадлежности к категории.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng \"shì\" zìjù biǎodá děngtóng huò lèishǔ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握结构助词「的」的用法。",
+          "text_translation": "\"的\" strukturaviy yordamchi so'zining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование структурной частицы «的».",
+          "pinyin": "Zhǎngwò jiégòu zhùcí \"de\" de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握用「吗」的是非问句的用法。",
+          "text_translation": "\"吗\" yordamida ha-yo'q savollarini tuzish usulini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование вопросов типа «да-нет» с «吗».",
+          "pinyin": "Zhǎngwò yòng \"ma\" de shìfēi wènjù de yòngfǎ.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l3p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在校园里，李文和白家月第一次相遇，两人继续聊天儿。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè dì yī cì xiāngyù, liǎng rén jìxù liáotiānr.",
+      "contextTranslation": "Kampusda Li Ven va Bai Jiayue birinchi marta uchrashdi va suhbatni davom ettirdi.",
+      "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые и продолжили беседу.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l3p1-text1.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l3p1-t1-s1",
+          "section": "text",
+          "text_original": "我是中国人。",
+          "text_translation": "Men xitoylikman.",
+          "text_translation_ru": "Я китаец.",
+          "pinyin": "Wǒ shì Zhōngguó rén.",
+          "speaker": "李文",
+          "speakerName": "Lǐ Wén",
+          "audio_url": "/audio/l3p1-t1-s1.mp3"
+        },
+        {
+          "id": "l3p1-t1-s2",
+          "section": "text",
+          "text_original": "我是法国人。我的中文老师也是中国人。",
+          "text_translation": "Men fransuzman. Mening xitoy tili o'qituvchim ham xitoylik.",
+          "text_translation_ru": "Я француженка. Мой учитель китайского тоже китаец.",
+          "pinyin": "Wǒ shì Fǎguó rén. Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
+          "speaker": "白家月",
+          "speakerName": "Bái Jiāyuè",
+          "audio_url": "/audio/l3p1-t1-s2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l3p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l3p1-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l3p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "人",
+          "text_translation": "odam, kishi (ot)",
+          "text_translation_ru": "человек (сущ.)",
+          "pinyin": "rén"
+        },
+        {
+          "id": "l3p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "的",
+          "text_translation": "ning (yuklamasi)",
+          "text_translation_ru": "притяжательная частица",
+          "pinyin": "de"
+        },
+        {
+          "id": "l3p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "中国",
+          "text_translation": "Xitoy (atoqli ot)",
+          "text_translation_ru": "Китай (имя собств.)",
+          "pinyin": "Zhōngguó"
+        },
+        {
+          "id": "l3p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "法国",
+          "text_translation": "Fransiya (atoqli ot)",
+          "text_translation_ru": "Франция (имя собств.)",
+          "pinyin": "Fǎguó"
+        },
+        {
+          "id": "l3p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "中文",
+          "text_translation": "xitoy tili (atoqli ot)",
+          "text_translation_ru": "китайский язык (имя собств.)",
+          "pinyin": "Zhōngwén"
+        }
+      ]
+    },
+    {
+      "id": "l3p1-sec-exercise",
+      "type": "exercise",
+      "heading": "练习",
+      "subheading": "Mashqlar",
+      "subheading_ru": "Упражнения",
+      "sentences": [
+        {
+          "id": "l3p1-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p1-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组，根据实际情况对话。",
+          "text_translation": "Ikki kishidan iborat guruhda haqiqiy vaziyatga asoslangan suhbat quring.",
+          "text_translation_ru": "В парах составьте диалог на основе реальной ситуации.",
+          "pinyin": "Liǎng rén yī zǔ, gēnjù shíjì qíngkuàng duìhuà.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l3p1-sec-grammar",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l3p1-g-s1",
+          "section": "grammar",
+          "text_original": "\"是\"字句表示人或事物等同什么或类属什么，否定形式是「不是」。",
+          "text_translation": "\"是\" gap tuzilmasi biror kishi yoki narsa nimaga teng yoki qaysi turkumga tegishli ekanini bildiradi. Inkor shakli \"不是\".",
+          "text_translation_ru": "Предложение с «是» используется для указания, чему равен человек или предмет, или к какой категории принадлежит. Отрицательная форма — «不是».",
+          "pinyin": "\"Shì\" zìjù biǎoshì rén huò shìwù děngtóng shénme huò lèishǔ shénme, fǒudìng xíngshì shì \"bú shì\"."
+        },
+        {
+          "id": "l3p1-g-s4",
+          "section": "grammar",
+          "text_original": "(1) 我是法国人。",
+          "text_translation": "Men fransuzman.",
+          "text_translation_ru": "Я француз(женка).",
+          "pinyin": "Wǒ shì Fǎguó rén."
+        },
+        {
+          "id": "l3p1-g-s5",
+          "section": "grammar",
+          "text_original": "(2) 她是中文老师。",
+          "text_translation": "U xitoy tili o'qituvchisi.",
+          "text_translation_ru": "Она учитель китайского языка.",
+          "pinyin": "Tā shì Zhōngwén lǎoshī."
+        },
+        {
+          "id": "l3p1-g-s6",
+          "section": "grammar",
+          "text_original": "(3) 我老师不是法国人。",
+          "text_translation": "Mening o'qituvchim fransuz emas.",
+          "text_translation_ru": "Мой учитель не француз.",
+          "pinyin": "Wǒ lǎoshī bú shì Fǎguó rén."
+        },
+        {
+          "id": "l3p1-g-s7",
+          "section": "grammar",
+          "text_original": "结构助词「的」在定语和中心语之间，表达领属关系。",
+          "text_translation": "\"的\" strukturaviy yordamchi so'zi aniqlovchi va bosh so'z o'rtasida qo'yilib, egalik munosabatini bildiradi.",
+          "text_translation_ru": "Структурная частица «的» ставится между определением и главным словом, выражая принадлежность.",
+          "pinyin": "Jiégòu zhùcí \"de\" zài dìngyǔ hé zhōngxīnyǔ zhījiān, biǎodá lǐngshǔ guānxi."
+        },
+        {
+          "id": "l3p1-g-s10",
+          "section": "grammar",
+          "text_original": "(1) 白家月的中文老师",
+          "text_translation": "Bai Jiayuening xitoy tili o'qituvchisi",
+          "text_translation_ru": "Учитель китайского языка Бай Цзяюэ",
+          "pinyin": "Bái Jiāyuè de Zhōngwén lǎoshī"
+        },
+        {
+          "id": "l3p1-g-s11",
+          "section": "grammar",
+          "text_original": "(2) 你的名字",
+          "text_translation": "Sening isming",
+          "text_translation_ru": "Твоё имя",
+          "pinyin": "Nǐ de míngzi"
+        },
+        {
+          "id": "l3p1-g-s12",
+          "section": "grammar",
+          "text_original": "如果「的」前边是人称代词，后边是亲属称谓或指人的名词，「的」可省略。",
+          "text_translation": "Agar \"的\" oldida kishilik olmoshi, keyin esa qarindoshlik atamasi yoki kishini bildiruvchi ot kelsa, \"的\" tushirib qoldirilishi mumkin.",
+          "text_translation_ru": "Если перед «的» стоит личное местоимение, а после него — термин родства или существительное, обозначающее человека, «的» можно опустить.",
+          "pinyin": "Rúguǒ \"de\" qiánbiān shì rénchēng dàicí, hòubiān shì qīnshǔ chēngwèi huò zhǐ rén de míngcí, \"de\" kě shěnglüè."
+        },
+        {
+          "id": "l3p1-g-s14",
+          "section": "grammar",
+          "text_original": "(1) 我老师",
+          "text_translation": "Mening o'qituvchim",
+          "text_translation_ru": "Мой учитель",
+          "pinyin": "Wǒ lǎoshī"
+        },
+        {
+          "id": "l3p1-g-s15",
+          "section": "grammar",
+          "text_original": "(2) 我学生",
+          "text_translation": "Mening o'quvchim",
+          "text_translation_ru": "Мой ученик",
+          "pinyin": "Wǒ xuéshēng"
+        },
+        {
+          "id": "l3p1-g-s16",
+          "section": "grammar",
+          "text_original": "(3) 你同学",
+          "text_translation": "Sening kursdoshing",
+          "text_translation_ru": "Твой одноклассник",
+          "pinyin": "Nǐ tóngxué"
+        },
+        {
+          "id": "l3p1-g-s17",
+          "section": "grammar",
+          "text_original": "(4) 我妈妈（māma, mother）",
+          "text_translation": "Mening onam",
+          "text_translation_ru": "Моя мама",
+          "pinyin": "Wǒ māma"
+        },
+        {
+          "id": "l3p1-g-s18",
+          "section": "grammar",
+          "text_original": "完成对话。",
+          "text_translation": "Dialoglarni to'ldiring.",
+          "text_translation_ru": "Завершите диалоги.",
+          "pinyin": "Wánchéng duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p1-g-s19a",
+          "section": "grammar",
+          "text_original": "A：这是我（　　）。",
+          "text_translation": "A: Bu mening (    ).",
+          "text_translation_ru": "A: Это мой (    ).",
+          "pinyin": "A: Zhè shì wǒ (    ).",
+          "dialogueNumber": "1"
+        },
+        {
+          "id": "l3p1-g-s19b",
+          "section": "grammar",
+          "text_original": "B：老师，您好！",
+          "text_translation": "B: O'qituvchi, salom!",
+          "text_translation_ru": "B: Учитель, здравствуйте!",
+          "pinyin": "B: Lǎoshī, nín hǎo!",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l3p1-g-s20a",
+          "section": "grammar",
+          "text_original": "李文：请问，你（　　）叫什么名字？",
+          "text_translation": "Li Ven: Kechirasiz, sizning (    ) ismi nima?",
+          "text_translation_ru": "Ли Вэнь: Извините, как зовут вашего (    )?",
+          "pinyin": "Lǐ Wén: Qǐngwèn, nǐ (    ) jiào shénme míngzi?",
+          "dialogueNumber": "2"
+        },
+        {
+          "id": "l3p1-g-s20b",
+          "section": "grammar",
+          "text_original": "白家月：我（　　）叫王一飞。",
+          "text_translation": "Bai Jiayue: Mening (    ) ismi Wang Yifei.",
+          "text_translation_ru": "Бай Цзяюэ: Моего (    ) зовут Ван Ифэй.",
+          "pinyin": "Bái Jiāyuè: Wǒ (    ) jiào Wáng Yīfēi.",
+          "dialogueNumber": ""
+        }
+      ]
+    }
+  ]
+}

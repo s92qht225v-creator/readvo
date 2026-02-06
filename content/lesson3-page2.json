@@ -1,0 +1,164 @@
+{
+  "id": "lesson3-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l3p2-sec-text2",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在教室里，下课后，安妮在看陈天中手机里的照片。",
+      "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Ānnī zài kàn Chén Tiānzhōng shǒujī lǐ de zhàopiàn.",
+      "contextTranslation": "Sinfxonada, darsdan keyin, Anni Chen Tianzhongning telefonidagi suratlarni ko'rmoqda.",
+      "contextTranslation_ru": "В классе после урока Энни смотрит фотографии на телефоне Чэнь Тяньчжуна.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l3p2-text2.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-2-1.jpg",
+      "tip": {
+        "label": "小语助力",
+        "text": "\"谁\"也可以读成\"shuí\"。",
+        "pinyin": "\"Shéi\" yě kěyǐ dú chéng \"shuí\".",
+        "translation": "\"谁\" so'zini \"shuí\" deb ham o'qish mumkin.",
+        "translation_ru": "«谁» также можно произносить как «shuí»."
+      },
+      "sentences": [
+        {
+          "id": "l3p2-t2-s1",
+          "section": "text",
+          "text_original": "这是谁？",
+          "text_translation": "Bu kim?",
+          "text_translation_ru": "Кто это?",
+          "pinyin": "Zhè shì shéi?",
+          "speaker": "安妮",
+          "speakerName": "Ānnī",
+          "audio_url": "/audio/l3p2-t2-s1.mp3"
+        },
+        {
+          "id": "l3p2-t2-s2",
+          "section": "text",
+          "text_original": "这是我女朋友。",
+          "text_translation": "Bu mening qiz do'stim.",
+          "text_translation_ru": "Это моя девушка.",
+          "pinyin": "Zhè shì wǒ nǚpéngyou.",
+          "speaker": "陈天中",
+          "speakerName": "Chén Tiānzhōng",
+          "audio_url": "/audio/l3p2-t2-s2.mp3"
+        },
+        {
+          "id": "l3p2-t2-s3",
+          "section": "text",
+          "text_original": "你女朋友是哪国人？",
+          "text_translation": "Qiz do'sting qaysi mamlakatdan?",
+          "text_translation_ru": "Откуда твоя девушка?",
+          "pinyin": "Nǐ nǚpéngyou shì nǎ guó rén?",
+          "speaker": "安妮",
+          "speakerName": "Ānnī",
+          "audio_url": "/audio/l3p2-t2-s3.mp3"
+        },
+        {
+          "id": "l3p2-t2-s4",
+          "section": "text",
+          "text_original": "她也是泰国人。",
+          "text_translation": "U ham tailandlik.",
+          "text_translation_ru": "Она тоже тайка.",
+          "pinyin": "Tā yě shì Tàiguó rén.",
+          "speaker": "陈天中",
+          "speakerName": "Chén Tiānzhōng",
+          "audio_url": "/audio/l3p2-t2-s4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l3p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l3p2-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l3p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "这",
+          "text_translation": "bu (olmosh)",
+          "text_translation_ru": "это (мест.)",
+          "pinyin": "zhè"
+        },
+        {
+          "id": "l3p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "谁",
+          "text_translation": "kim (olmosh)",
+          "text_translation_ru": "кто (мест.)",
+          "pinyin": "shéi/shuí"
+        },
+        {
+          "id": "l3p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "女朋友",
+          "text_translation": "qiz do'st (ot)",
+          "text_translation_ru": "девушка (сущ.)",
+          "pinyin": "nǚpéngyou"
+        },
+        {
+          "id": "l3p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "哪",
+          "text_translation": "qaysi (olmosh)",
+          "text_translation_ru": "какой, который (мест.)",
+          "pinyin": "nǎ"
+        },
+        {
+          "id": "l3p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "国",
+          "text_translation": "mamlakat (ot)",
+          "text_translation_ru": "страна (сущ.)",
+          "pinyin": "guó"
+        },
+        {
+          "id": "l3p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "她",
+          "text_translation": "u (ayol) (olmosh)",
+          "text_translation_ru": "она (мест.)",
+          "pinyin": "tā"
+        },
+        {
+          "id": "l3p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "泰国",
+          "text_translation": "Tailand (atoqli ot)",
+          "text_translation_ru": "Таиланд (имя собств.)",
+          "pinyin": "Tàiguó"
+        }
+      ]
+    },
+    {
+      "id": "l3p2-sec-exercise",
+      "type": "exercise",
+      "sentences": [
+        {
+          "id": "l3p2-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p2-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组，根据老师给出的图片模仿课文互相问答。",
+          "text_translation": "Ikki kishidan iborat guruhda, o'qituvchi bergan suratlarga asoslanib, matnni taqlid qilib bir-biringizga savol bering va javob bering.",
+          "text_translation_ru": "В парах задавайте друг другу вопросы и отвечайте, подражая тексту, используя картинки, данные учителем.",
+          "pinyin": "Liǎng rén yī zǔ, gēnjù lǎoshī gěi chū de túpiàn mófǎng kèwén hùxiāng wèndá.",
+          "isCheckbox": true
+        }
+      ]
+    }
+  ]
+}

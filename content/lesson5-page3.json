@@ -1,0 +1,430 @@
+{
+  "id": "lesson5-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l5p3-sec-text3",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Text 3",
+      "subheading_ru": "Текст 3",
+      "context": "在公司里，王一雪和杨同乐下班时聊天儿。",
+      "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiàbān shí liáotiānr.",
+      "contextTranslation": "Kompaniyada Wang Yixue va Yang Tongle ishdan keyin suhbatlashmoqda.",
+      "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ болтают после работы.",
+      "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%205.mp3",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l5p3-mc-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "杨同乐也（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）。" }
+            ],
+            "options": [
+              { "label": "A", "word": "上班", "pinyin": "shàngbān" },
+              { "label": "B", "word": "下班", "pinyin": "xiàbān" },
+              { "label": "C", "word": "休息", "pinyin": "xiūxi" }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l5p3-mc-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "杨同乐有一个新（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）。" }
+            ],
+            "options": [
+              { "label": "A", "word": "名字", "pinyin": "míngzi" },
+              { "label": "B", "word": "工作", "pinyin": "gōngzuò" },
+              { "label": "C", "word": "电脑", "pinyin": "diànnǎo" }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l5p3-sec-dialogue3",
+      "type": "text",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l5p3-t3-s1",
+          "section": "text",
+          "text_original": "同乐，下班吗？",
+          "text_translation": "Tongle, ishdan ketayapsanmi?",
+          "text_translation_ru": "Тунлэ, уходишь с работы?",
+          "pinyin": "Tónglè, xiàbān ma?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p3-t3-s2",
+          "section": "text",
+          "text_original": "下班。",
+          "text_translation": "Ha, ketayapman.",
+          "text_translation_ru": "Да, ухожу.",
+          "pinyin": "Xiàbān.",
+          "speaker": "杨同乐",
+          "speakerName": "杨同乐"
+        },
+        {
+          "id": "l5p3-t3-s3",
+          "section": "text",
+          "text_original": "这是你的新电脑吗？",
+          "text_translation": "Bu sening yangi kompyuteringmi?",
+          "text_translation_ru": "Это твой новый компьютер?",
+          "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p3-t3-s4",
+          "section": "text",
+          "text_original": "是的，是我的新电脑。",
+          "text_translation": "Ha, bu mening yangi kompyuterim.",
+          "text_translation_ru": "Да, это мой новый компьютер.",
+          "pinyin": "Shì de, shì wǒ de xīn diànnǎo.",
+          "speaker": "杨同乐",
+          "speakerName": "杨同乐"
+        },
+        {
+          "id": "l5p3-t3-s5",
+          "section": "text",
+          "text_original": "真好看！",
+          "text_translation": "Juda chiroyli!",
+          "text_translation_ru": "Очень красивый!",
+          "pinyin": "Zhēn hǎokàn!",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p3-t3-s6",
+          "section": "text",
+          "text_original": "我也很喜欢它。",
+          "text_translation": "Men ham uni juda yaxshi ko'raman.",
+          "text_translation_ru": "Мне тоже он очень нравится.",
+          "pinyin": "Wǒ yě hěn xǐhuan tā.",
+          "speaker": "杨同乐",
+          "speakerName": "杨同乐"
+        }
+      ]
+    },
+    {
+      "id": "l5p3-sec-vocab3",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%206.mp3",
+      "sentences": [
+        {
+          "id": "l5p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "下班",
+          "text_translation": "ishdan ketmoq",
+          "text_translation_ru": "уходить с работы",
+          "pinyin": "xiàbān"
+        },
+        {
+          "id": "l5p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "新",
+          "text_translation": "yangi (sifat)",
+          "text_translation_ru": "новый (прил.)",
+          "pinyin": "xīn"
+        },
+        {
+          "id": "l5p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "电脑",
+          "text_translation": "kompyuter (ot)",
+          "text_translation_ru": "компьютер (сущ.)",
+          "pinyin": "diànnǎo"
+        },
+        {
+          "id": "l5p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "真",
+          "text_translation": "haqiqatan, juda (ravish)",
+          "text_translation_ru": "действительно, очень (нареч.)",
+          "pinyin": "zhēn"
+        },
+        {
+          "id": "l5p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "好看",
+          "text_translation": "chiroyli, ko'rkam (sifat)",
+          "text_translation_ru": "красивый, привлекательный (прил.)",
+          "pinyin": "hǎokàn"
+        },
+        {
+          "id": "l5p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "喜欢",
+          "text_translation": "yoqtirmoq, yaxshi ko'rmoq (fe'l)",
+          "text_translation_ru": "нравиться, любить (гл.)",
+          "pinyin": "xǐhuan"
+        },
+        {
+          "id": "l5p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "它",
+          "text_translation": "u (narsa uchun olmosh)",
+          "text_translation_ru": "он/она/оно (для предметов, мест.)",
+          "pinyin": "tā"
+        }
+      ]
+    },
+    {
+      "id": "l5p3-sec-exercise",
+      "type": "exercise",
+      "sentences": [
+        {
+          "id": "l5p3-ex-s1",
+          "section": "exercise",
+          "text_original": "根据课文内容回答问题。",
+          "text_translation": "Matn mazmuniga ko'ra savollarga javob bering.",
+          "text_translation_ru": "Ответьте на вопросы по содержанию текста.",
+          "pinyin": "Gēnjù kèwén nèiróng huídá wèntí.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l5p3-ex-s2",
+          "section": "exercise",
+          "text_original": "(1) 杨同乐的新电脑好看吗？",
+          "text_translation": "Yang Tonglening yangi kompyuteri chirolimi?",
+          "text_translation_ru": "Новый компьютер Ян Тунлэ красивый?",
+          "pinyin": "Yáng Tónglè de xīn diànnǎo hǎokàn ma?"
+        },
+        {
+          "id": "l5p3-ex-s3",
+          "section": "exercise",
+          "text_original": "(2) 杨同乐喜欢他的新电脑吗？",
+          "text_translation": "Yang Tongle o'zining yangi kompyuterini yaxshi ko'radimi?",
+          "text_translation_ru": "Ян Тунлэ нравится его новый компьютер?",
+          "pinyin": "Yáng Tónglè xǐhuan tā de xīn diànnǎo ma?"
+        }
+      ]
+    },
+    {
+      "id": "l5p3-sec-comprehensive",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。Bo'sh joylarga mos so'zlarni tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          { "id": "A", "label": "A", "word": "菜", "pinyin": "cài" },
+          { "id": "B", "label": "B", "word": "喜欢", "pinyin": "xǐhuan" },
+          { "id": "C", "label": "C", "word": "6月22号", "pinyin": "liù yuè èrshí'èr hào" },
+          { "id": "D", "label": "D", "word": "新", "pinyin": "xīn" },
+          { "id": "E", "label": "E", "word": "真", "pinyin": "zhēn" }
+        ],
+        "sentences": [
+          {
+            "id": "l5p3-comp-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "今天是" },
+              { "type": "blank" },
+              { "type": "text", "content": "，星期三。" }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l5p3-comp-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "我会做面条儿，也会做一些" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l5p3-comp-q3a",
+            "number": 3,
+            "parts": [
+              { "type": "text", "content": "这是我的" },
+              { "type": "blank" },
+              { "type": "text", "content": "电脑，" }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l5p3-comp-q3b",
+            "parts": [
+              { "type": "blank" },
+              { "type": "text", "content": "好看！" }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l5p3-comp-q4",
+            "number": 4,
+            "parts": [
+              { "type": "text", "content": "我很" },
+              { "type": "blank" },
+              { "type": "text", "content": "我的新电脑。" }
+            ],
+            "correctOptionId": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l5p3-sec-imgdesc",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Rasmlarni shu darsda o'rganilgan so'z va grammatik qoidalar yordamida tasvirlab yozing.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l5p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-1.jpg",
+            "parts": [
+              { "type": "text", "content": "今天" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "answers": ["9月7号，星期六"]
+          },
+          {
+            "id": "l5p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-2.jpg",
+            "parts": [
+              { "type": "text", "content": "杨同乐会" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "answers": ["做饭"]
+          },
+          {
+            "id": "l5p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-3.jpg",
+            "parts": [
+              { "type": "text", "content": "我" },
+              { "type": "blank" },
+              { "type": "text", "content": "两个菜。" }
+            ],
+            "answers": ["会做"]
+          },
+          {
+            "id": "l5p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-4.jpg",
+            "parts": [
+              { "type": "text", "content": "今天是" },
+              { "type": "blank" },
+              { "type": "text", "content": "年" },
+              { "type": "blank" },
+              { "type": "text", "content": "月1号，" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "answers": ["2025", "5", "星期四"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l5p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Dars mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "sentences": [
+        {
+          "id": "l5p3-act-s1",
+          "section": "activity",
+          "text_original": "小组游戏 Group Game",
+          "text_translation": "Guruh o'yini",
+          "text_translation_ru": "Групповая игра",
+          "pinyin": "Xiǎozǔ yóuxì",
+          "isCheckbox": true
+        },
+        {
+          "id": "l5p3-act-s2",
+          "section": "activity",
+          "text_original": "一个人拿着词语卡片，询问其他人会不会做这件事，其他人抢答。抢答最少者成为下一轮的提问者。",
+          "text_translation": "Bir kishi so'z kartalarini ushlab, boshqalardan bu ishni qila olish-olmasligini so'raydi. Boshqalar tezda javob beradi. Eng kam javob bergan kishi keyingi turda savol beruvchi bo'ladi.",
+          "text_translation_ru": "Один человек держит карточки со словами и спрашивает других, умеют ли они выполнять эти действия. Остальные отвечают наперегонки. Тот, кто ответил меньше всех, становится следующим ведущим.",
+          "pinyin": "Yí gè rén názhe cíyǔ kǎpiàn, xúnwèn qítā rén huì bú huì zuò zhè jiàn shì, qítā rén qiǎngdá. Qiǎngdá zuìshǎo zhě chéngwéi xià yì lún de tíwèn zhě."
+        },
+        {
+          "id": "l5p3-act-s3",
+          "section": "activity",
+          "text_original": "小语的例子 Xiaoyu's Example",
+          "text_translation": "Xiaoyuning namunasi",
+          "text_translation_ru": "Пример Сяоюй",
+          "pinyin": "Xiǎoyǔ de lìzi"
+        },
+        {
+          "id": "l5p3-act-s4",
+          "section": "activity",
+          "text_original": "A：你们会做饭吗？",
+          "text_translation": "Sizlar ovqat tayyorlashni bilasizlarmi?",
+          "text_translation_ru": "Вы умеете готовить?",
+          "pinyin": "Nǐmen huì zuò fàn ma?",
+          "speaker": "A"
+        },
+        {
+          "id": "l5p3-act-s5",
+          "section": "activity",
+          "text_original": "B：我会。",
+          "text_translation": "Bilaman.",
+          "text_translation_ru": "Умею.",
+          "pinyin": "Wǒ huì.",
+          "speaker": "B"
+        },
+        {
+          "id": "l5p3-act-s6",
+          "section": "activity",
+          "text_original": "A：你们会做这个菜吗？",
+          "text_translation": "Sizlar bu taomni tayyorlashni bilasizlarmi?",
+          "text_translation_ru": "Вы умеете готовить это блюдо?",
+          "pinyin": "Nǐmen huì zuò zhège cài ma?",
+          "speaker": "A"
+        },
+        {
+          "id": "l5p3-act-s7",
+          "section": "activity",
+          "text_original": "C：我不会做。",
+          "text_translation": "Bilmayman.",
+          "text_translation_ru": "Не умею.",
+          "pinyin": "Wǒ bú huì zuò.",
+          "speaker": "C"
+        },
+        {
+          "id": "l5p3-act-s8",
+          "section": "activity",
+          "text_original": "……",
+          "text_translation": "……",
+          "text_translation_ru": "……",
+          "pinyin": "……"
+        }
+      ]
+    },
+    {
+      "id": "l5p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyu's Bonus Content 5-1",
+      "subheading_ru": "Бонусный контент Сяоюй 5-1",
+      "sentences": [],
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201/HSK-5-bonus-1.mp4"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "id": "lesson4-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 4,
+    "pinyin": "Wǒ yǒu liǎng gè háizi",
+    "title": "我有两个孩子",
+    "titleTranslation": "Mening ikki farzandim bor",
+    "titleTranslation_ru": "У меня двое детей"
+  },
+  "sections": [
+    {
+      "id": "l4p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l4p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用\"有\"字句（1）表达领有人或物品。",
+          "text_translation": "\"有\" gap tuzilmasini (1) tushunish va odamlar yoki narsalarga egalikni ifodalash uchun ishlatish.",
+          "text_translation_ru": "Понимать и использовать предложения с «有» (1) для выражения обладания людьми или предметами.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng 'yǒu' zìjù (1) biǎodá lǐngyǒu rén huò wùpǐn.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l4p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握\"A……，B呢？\"的用法。",
+          "text_translation": "'A……, B ne?' tuzilmasining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование конструкции «A……, B呢?».",
+          "pinyin": "Zhǎngwò 'A……, B ne?' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l4p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握本课数词、量词的用法。",
+          "text_translation": "Ushbu darsda kiritilgan son va o'lchov so'zlarining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование числительных и счётных слов, введённых в этом уроке.",
+          "pinyin": "Zhǎngwò běn kè shùcí, liàngcí de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l4p1-obj-s4",
+          "section": "objectives",
+          "text_original": "了解中国人如何问答年龄，能使用合适的词语进行年龄问答。",
+          "text_translation": "Xitoyliklar yosh haqida qanday so'rashini tushunish va yosh haqida savol-javob qilish uchun mos so'zlarni ishlatish.",
+          "text_translation_ru": "Понять, как китайцы спрашивают и отвечают о возрасте, и уметь использовать подходящие слова для вопросов и ответов о возрасте.",
+          "pinyin": "Liǎojiě Zhōngguó rén rúhé wèndá niánlíng, néng shǐyòng héshì de cíyǔ jìnxíng niánlíng wèndá.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-warmup",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Isitish",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l4p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-gege.png",
+          "word": "哥哥",
+          "pinyin": "gēge",
+          "translation": "aka",
+          "translation_ru": "старший брат"
+        },
+        {
+          "id": "l4p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-wu.png",
+          "word": "五",
+          "pinyin": "wǔ",
+          "translation": "besh",
+          "translation_ru": "пять"
+        },
+        {
+          "id": "l4p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-xuesheng.png",
+          "word": "学生",
+          "pinyin": "xuéshēng",
+          "translation": "talaba",
+          "translation_ru": "студент"
+        },
+        {
+          "id": "l4p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-liushisui.jpg",
+          "word": "六十岁",
+          "pinyin": "liùshí suì",
+          "translation": "oltmish yosh",
+          "translation_ru": "шестьдесят лет"
+        },
+        {
+          "id": "l4p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-mama.png",
+          "word": "妈妈",
+          "pinyin": "māma",
+          "translation": "ona",
+          "translation_ru": "мама"
+        },
+        {
+          "id": "l4p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-laoshi.png",
+          "word": "老师",
+          "pinyin": "lǎoshī",
+          "translation": "o'qituvchi",
+          "translation_ru": "учитель"
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在家里，刘明和王一雪在聊天儿。",
+      "contextPinyin": "Zài jiā lǐ, Liú Míng hé Wáng Yīxuě zài liáotiānr.",
+      "contextTranslation": "Uyda Liu Ming va Wang Yixue suhbatlashmoqda.",
+      "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ беседуют.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l4p1-t1-s1",
+          "section": "text",
+          "text_original": "一飞忙吗？",
+          "text_translation": "Yifey bandmi?",
+          "text_translation_ru": "Ифэй занята?",
+          "pinyin": "Yīfēi máng ma?",
+          "speaker": "刘明",
+          "speakerName": "Liú Míng"
+        },
+        {
+          "id": "l4p1-t1-s2",
+          "section": "text",
+          "text_original": "她很忙。",
+          "text_translation": "U juda band.",
+          "text_translation_ru": "Она очень занята.",
+          "pinyin": "Tā hěn máng.",
+          "speaker": "王一雪",
+          "speakerName": "Wáng Yīxuě"
+        },
+        {
+          "id": "l4p1-t1-s3",
+          "section": "text",
+          "text_original": "她有多少个学生？",
+          "text_translation": "Uning nechta o'quvchisi bor?",
+          "text_translation_ru": "Сколько у неё учеников?",
+          "pinyin": "Tā yǒu duōshao gè xuéshēng?",
+          "speaker": "刘明",
+          "speakerName": "Liú Míng"
+        },
+        {
+          "id": "l4p1-t1-s4",
+          "section": "text",
+          "text_original": "她有二十个学生。",
+          "text_translation": "Uning yigirmata o'quvchisi bor.",
+          "text_translation_ru": "У неё двадцать учеников.",
+          "pinyin": "Tā yǒu èrshí gè xuéshēng.",
+          "speaker": "王一雪",
+          "speakerName": "Wáng Yīxuě"
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "sentences": [
+        {
+          "id": "l4p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "有",
+          "text_translation": "bor, ega bo'lmoq (fe'l)",
+          "text_translation_ru": "иметь (гл.)",
+          "pinyin": "yǒu"
+        },
+        {
+          "id": "l4p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "多少",
+          "text_translation": "qancha, nechta (olmosh)",
+          "text_translation_ru": "сколько (мест.)",
+          "pinyin": "duōshao"
+        },
+        {
+          "id": "l4p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "个",
+          "text_translation": "dona (o'lchov so'zi)",
+          "text_translation_ru": "штука (счётное слово)",
+          "pinyin": "gè"
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-exercise",
+      "type": "exercise",
+      "sentences": [
+        {
+          "id": "l4p1-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-grammar",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l4p1-g-s1",
+          "section": "grammar",
+          "text_original": "\"有\"字句（1）\"有\" Sentence (1)",
+          "text_translation": "\"有\" gap tuzilmasi (1)",
+          "text_translation_ru": "Предложение с «有» (1)",
+          "pinyin": "\"Yǒu\" zìjù (1)",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l4p1-g-s2",
+          "section": "grammar",
+          "text_original": "本课\"有\"表示领有，否定形式为\"没/没有\"。",
+          "text_translation": "Ushbu darsda \"有\" egalikni bildiradi. Uning inkor shakli \"没/没有\".",
+          "text_translation_ru": "В этом уроке «有» обозначает обладание. Его отрицательная форма — «没/没有».",
+          "pinyin": "Běn kè \"yǒu\" biǎoshì lǐngyǒu, fǒudìng xíngshì wéi \"méi/méiyǒu\"."
+        },
+        {
+          "id": "l4p1-g-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。Read aloud.",
+          "text_translation": "Baland ovozda o'qing.",
+          "text_translation_ru": "Читайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l4p1-g-s4",
+          "section": "grammar",
+          "text_original": "(1) 她有二十个学生。",
+          "text_translation": "Uning yigirmata o'quvchisi bor.",
+          "text_translation_ru": "У неё двадцать учеников.",
+          "pinyin": "Tā yǒu èrshí gè xuéshēng."
+        },
+        {
+          "id": "l4p1-g-s5",
+          "section": "grammar",
+          "text_original": "(2) 她有一个姐姐。",
+          "text_translation": "Uning bitta opasi bor.",
+          "text_translation_ru": "У неё есть одна старшая сестра.",
+          "pinyin": "Tā yǒu yí gè jiějie."
+        },
+        {
+          "id": "l4p1-g-s6",
+          "section": "grammar",
+          "text_original": "(3) 我没/没有姐姐。",
+          "text_translation": "Mening opam yo'q.",
+          "text_translation_ru": "У меня нет старшей сестры.",
+          "pinyin": "Wǒ méi/méiyǒu jiějie."
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-grammar2",
+      "type": "grammar",
+      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-2.jpg",
+      "sentences": [
+        {
+          "id": "l4p1-g2-s1",
+          "section": "grammar",
+          "text_original": "数字的表达",
+          "text_translation": "Raqamlarni ifodalash",
+          "text_translation_ru": "Выражение чисел",
+          "pinyin": "Shùzì de biǎodá",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l4p1-g2-s2",
+          "section": "grammar",
+          "text_original": "汉语中，数字有阿拉伯数字和汉字两种写法，例如\"1\"和\"一\"。",
+          "text_translation": "Xitoy tilida raqamlar ikki xil yoziladi: arab raqamlari (masalan, \"1\") va xitoy belgilari (masalan, \"一\").",
+          "text_translation_ru": "В китайском языке числа можно записать двумя способами: арабскими цифрами (например, «1») и китайскими иероглифами (например, «一»).",
+          "pinyin": "Hànyǔ zhōng, shùzì yǒu ālābó shùzì hé hànzì liǎng zhǒng xiěfǎ, lìrú \"1\" hé \"yī\"."
+        },
+        {
+          "id": "l4p1-g2-s3",
+          "section": "grammar",
+          "text_original": "（1）0~99的写法和读法  The writing and pronunciation of numbers 0–99",
+          "text_translation": "0~99 raqamlarining yozilishi va o'qilishi",
+          "text_translation_ru": "Написание и произношение чисел 0–99",
+          "pinyin": "0~99 de xiěfǎ hé dúfǎ"
+        },
+        {
+          "id": "l4p1-g2-s4",
+          "section": "grammar",
+          "text_original": "大声朗读。Read aloud.",
+          "text_translation": "Baland ovozda o'qing.",
+          "text_translation_ru": "Читайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-grammar2b",
+      "type": "grammar",
+      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-3.jpg",
+      "sentences": [
+        {
+          "id": "l4p1-g2b-s1",
+          "section": "grammar",
+          "text_original": "（2）\"百\"以上（含）、\"万\"以内数字的写法与读法  The writing and pronunciation of numbers from 100 (inclusive) to 10,000",
+          "text_translation": "100 (shu jumladan) dan 10 000 gacha bo'lgan raqamlarning yozilishi va o'qilishi",
+          "text_translation_ru": "Написание и произношение чисел от 100 (включительно) до 10 000",
+          "pinyin": "\"Bǎi\" yǐshàng (hán), \"wàn\" yǐnèi shùzì de xiěfǎ yǔ dúfǎ"
+        }
+      ]
+    },
+    {
+      "id": "l4p1-sec-grammar2c",
+      "type": "grammar",
+      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-4.jpg",
+      "sentences": [
+        {
+          "id": "l4p1-g2c-s1",
+          "section": "grammar",
+          "text_original": "（3）\"2\"的写法和读法  The writing and pronunciation of \"2\"",
+          "text_translation": "\"2\" raqamining yozilishi va o'qilishi",
+          "text_translation_ru": "Написание и произношение «2»",
+          "pinyin": "\"2\" de xiěfǎ hé dúfǎ"
+        },
+        {
+          "id": "l4p1-g2c-s2",
+          "section": "grammar",
+          "text_original": "数字\"2\"写作、读作\"二（èr）\"或\"两（liǎng）\"。一般情况下，在序数词里用\"二（èr）\"，如\"第二\"；在量词前用\"两（liǎng）\"。",
+          "text_translation": "\"2\" raqami \"二 (èr)\" yoki \"两 (liǎng)\" deb yoziladi va o'qiladi. Odatda tartib sonlarida \"二 (èr)\" ishlatiladi, masalan \"第二\"; o'lchov so'zlaridan oldin esa \"两 (liǎng)\" ishlatiladi.",
+          "text_translation_ru": "Число «2» может записываться и произноситься как «二 (èr)» или «两 (liǎng)». Обычно «二 (èr)» используется в порядковых числительных, например «第二», а «两 (liǎng)» — перед счётными словами.",
+          "pinyin": "Shùzì \"2\" xiězuò, dúzuò \"èr\" huò \"liǎng\". Yībān qíngkuàng xià, zài xùshùcí lǐ yòng \"èr\", rú \"dì èr\"; zài liàngcí qián yòng \"liǎng\"."
+        }
+      ]
+    }
+  ]
+}

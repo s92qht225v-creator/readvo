@@ -1,0 +1,165 @@
+{
+  "id": "lesson1-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l1p2-sec-text2",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "开学第一天，课堂上，学生们学习打招呼用语。",
+      "contextPinyin": "Kāixué dì yī tiān, kètáng shàng, xuéshēngmen xuéxí dǎ zhāohu yòngyǔ.",
+      "contextTranslation": "O'quv yilining birinchi kuni, sinfda, talabalar salomlashish iboralarini o'rganmoqda.",
+      "contextTranslation_ru": "В первый день учёбы в классе студенты изучают приветствия.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l1p2-text2.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-2-1.jpg",
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "「您」，敬称，对年长者或尊敬的人使用。",
+        "pinyin": "「Nín」, jìngchēng, duì niánzhǎng zhě huò zūnjìng de rén shǐyòng.",
+        "translation": "「您」hurmat olmoshi bo'lib, kattalar yoki hurmat qilinadigan kishilarga nisbatan ishlatiladi.",
+        "translation_ru": "「您」— вежливое местоимение, используется при обращении к старшим или уважаемым людям."
+      },
+      "sentences": [
+        {
+          "id": "l1p2-t2-s1",
+          "section": "text",
+          "text_original": "大家好！",
+          "text_translation": "Hammaga salom!",
+          "text_translation_ru": "Всем привет!",
+          "pinyin": "Dàjiā hǎo!",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "/audio/l1p2-t2-s1.mp3"
+        },
+        {
+          "id": "l1p2-t2-s2",
+          "section": "text",
+          "text_original": "老师，您好！",
+          "text_translation": "Salom, ustoz",
+          "text_translation_ru": "Здравствуйте, учитель!",
+          "pinyin": "Lǎoshī, nín hǎo!",
+          "speaker": "学生们",
+          "speakerName": "xuéshēngmen",
+          "audio_url": "/audio/l1p2-t2-s2.mp3"
+        },
+        {
+          "id": "l1p2-t2-s3",
+          "section": "text",
+          "text_original": "你们好！",
+          "text_translation": "Hammangizga salom!",
+          "text_translation_ru": "Привет всем!",
+          "pinyin": "Nǐmen hǎo!",
+          "speaker": "小语",
+          "speakerName": "Xiǎoyǔ",
+          "audio_url": "/audio/l1p2-t2-s3.mp3"
+        },
+        {
+          "id": "l1p2-t2-s4",
+          "section": "text",
+          "text_original": "你好，小语！",
+          "text_translation": "Salom, Xiaoyu!",
+          "text_translation_ru": "Привет, Сяоюй!",
+          "pinyin": "Nǐ hǎo, Xiǎoyǔ!",
+          "speaker": "学生们",
+          "speakerName": "xuéshēngmen",
+          "audio_url": "/audio/l1p2-t2-s4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l1p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l1p2-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l1p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "大家",
+          "text_translation": "hamma, barcha",
+          "text_translation_ru": "все, всем",
+          "pinyin": "dàjiā"
+        },
+        {
+          "id": "l1p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "好",
+          "text_translation": "yaxshi",
+          "text_translation_ru": "хороший, хорошо",
+          "pinyin": "hǎo"
+        },
+        {
+          "id": "l1p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "学生",
+          "text_translation": "talaba, o'quvchi",
+          "text_translation_ru": "студент, ученик",
+          "pinyin": "xuéshēng"
+        },
+        {
+          "id": "l1p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "们",
+          "text_translation": "ko'plik qo'shimchasi (shaxs olmoshlari va otlardan keyin)",
+          "text_translation_ru": "суффикс множественного числа (для местоимений и существительных)",
+          "pinyin": "men"
+        },
+        {
+          "id": "l1p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "老师",
+          "text_translation": "o'qituvchi",
+          "text_translation_ru": "учитель",
+          "pinyin": "lǎoshī"
+        },
+        {
+          "id": "l1p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "您",
+          "text_translation": "Siz (hurmatli)",
+          "text_translation_ru": "Вы (вежливая форма)",
+          "pinyin": "nín"
+        },
+        {
+          "id": "l1p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "你们",
+          "text_translation": "sizlar, siz (ko'plik)",
+          "text_translation_ru": "вы (множественное число)",
+          "pinyin": "nǐmen"
+        }
+      ]
+    },
+    {
+      "id": "l1p2-sec-exercise",
+      "type": "exercise",
+      "subheading_ru": "Упражнения",
+      "sentences": [
+        {
+          "id": "l1p2-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l1p2-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组或多人一组，用真实姓名对话。",
+          "text_translation": "Ikki yoki undan ko'p kishidan iborat guruhda haqiqiy ismlaringiz bilan suhbatlashing.",
+          "text_translation_ru": "В парах или группах поговорите, используя настоящие имена.",
+          "pinyin": "Liǎng rén yī zǔ huò duō rén yī zǔ, yòng zhēnshí xìngmíng duìhuà.",
+          "isCheckbox": true
+        }
+      ]
+    }
+  ]
+}

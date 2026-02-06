@@ -1,0 +1,332 @@
+{
+  "id": "lesson5-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 5,
+    "pinyin": "Jīntiān wǒ xiūxi",
+    "title": "今天我休息",
+    "titleTranslation": "Bugun men dam olaman",
+    "titleTranslation_ru": "Сегодня я отдыхаю"
+  },
+  "sections": [
+    {
+      "id": "l5p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l5p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂、看懂并按照中文习惯描述事件、行为发生的日期。",
+          "text_translation": "Xitoy tili an'analariga ko'ra voqealar va harakatlar sodir bo'lgan sanalarni tushunish, o'qish va tasvirlash.",
+          "text_translation_ru": "Понимать, читать и описывать даты событий и действий в соответствии с китайскими языковыми нормами.",
+          "pinyin": "Néng tīng dǒng, kàn dǒng bìng ànzhào Zhōngwén xíguàn miáoshù shìjiàn, xíngwéi fāshēng de rìqī.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l5p1-obj-s2",
+          "section": "objectives",
+          "text_original": "能听懂并使用能愿动词\"会\"表达懂得或有能力做事情。",
+          "text_translation": "Modal fe'l \"会\" ni tushunish va biror narsani bilish yoki qila olishni ifodalash uchun ishlatish.",
+          "text_translation_ru": "Понимать и использовать модальный глагол «会» для выражения умения или способности что-либо делать.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng néngyuàn dòngcí 'huì' biǎodá dǒngde huò yǒu nénglì zuò shìqíng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l5p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握名词谓语句的用法。",
+          "text_translation": "Ot kesimli gaplarning ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Овладеть употреблением предложений с именным сказуемым.",
+          "pinyin": "Zhǎngwò míngcí wèiyǔjù de yòngfǎ.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l5p1-sec-warmup",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Isitish",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l5p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-calendar.jpg",
+          "word": "2025年5月",
+          "pinyin": "èr líng èr wǔ nián wǔ yuè",
+          "translation": "2025-yil 5-oy",
+          "translation_ru": "Май 2025 года"
+        },
+        {
+          "id": "l5p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-rest.jpg",
+          "word": "星期一",
+          "pinyin": "Xīngqīyī",
+          "translation": "dushanba",
+          "translation_ru": "понедельник"
+        },
+        {
+          "id": "l5p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-dumplings.jpg",
+          "word": "电脑",
+          "pinyin": "diànnǎo",
+          "translation": "kompyuter",
+          "translation_ru": "компьютер"
+        },
+        {
+          "id": "l5p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-tv.jpg",
+          "word": "做饭",
+          "pinyin": "zuò fàn",
+          "translation": "ovqat tayyorlash",
+          "translation_ru": "готовить еду"
+        },
+        {
+          "id": "l5p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-cooking.jpg",
+          "word": "休息",
+          "pinyin": "xiūxi",
+          "translation": "dam olish",
+          "translation_ru": "отдыхать"
+        },
+        {
+          "id": "l5p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-warmup-xingqi.jpg",
+          "word": "饺子",
+          "pinyin": "jiǎozi",
+          "translation": "chuchvara",
+          "translation_ru": "пельмени"
+        }
+      ]
+    },
+    {
+      "id": "l5p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Text 1",
+      "subheading_ru": "Текст 1",
+      "context": "在家里，刘明和王一雪在聊天儿。",
+      "contextPinyin": "Zài jiālǐ, Liú Míng hé Wáng Yīxuě zài liáotiānr.",
+      "contextTranslation": "Uyda Liu Ming va Wang Yixue suhbatlashmoqda.",
+      "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ болтают.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-1-1.jpg",
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "也说\"9月8日\"。",
+        "pinyin": "Yě shuō \"jiǔ yuè bā rì\".",
+        "translation": "\"9月8日\" deb ham aytiladi.",
+        "translation_ru": "Можно также сказать «9月8日»."
+      },
+      "sentences": [
+        {
+          "id": "l5p1-t1-s1",
+          "section": "text",
+          "text_original": "今天几号？",
+          "text_translation": "Bugun nechanchi sana?",
+          "text_translation_ru": "Какое сегодня число?",
+          "pinyin": "Jīntiān jǐ hào?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p1-t1-s2",
+          "section": "text",
+          "text_original": "今天9月8号。",
+          "text_translation": "Bugun 9-oyning 8-sanasi.",
+          "text_translation_ru": "Сегодня 8 сентября.",
+          "pinyin": "Jīntiān jiǔ yuè bā hào.",
+          "speaker": "刘明",
+          "speakerName": "刘明"
+        },
+        {
+          "id": "l5p1-t1-s3",
+          "section": "text",
+          "text_original": "星期几？",
+          "text_translation": "Haftaning qaysi kuni?",
+          "text_translation_ru": "Какой день недели?",
+          "pinyin": "Xīngqī jǐ?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p1-t1-s4",
+          "section": "text",
+          "text_original": "星期日。今天我休息。",
+          "text_translation": "Yakshanba. Bugun men dam olaman.",
+          "text_translation_ru": "Воскресенье. Сегодня я отдыхаю.",
+          "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+          "speaker": "刘明",
+          "speakerName": "刘明"
+        }
+      ]
+    },
+    {
+      "id": "l5p1-sec-tip-xingqitian",
+      "type": "tip",
+      "sentences": [
+        {
+          "id": "l5p1-tip-s1",
+          "section": "tip",
+          "text_original": "也说\"星期天\"。",
+          "text_translation": "\"星期天\" deb ham aytiladi.",
+          "text_translation_ru": "Можно также сказать «星期天».",
+          "pinyin": "Yě shuō \"Xīngqītiān\"."
+        }
+      ]
+    },
+    {
+      "id": "l5p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%202.mp3",
+      "sentences": [
+        {
+          "id": "l5p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "今天",
+          "text_translation": "bugun (ot)",
+          "text_translation_ru": "сегодня (сущ.)",
+          "pinyin": "jīntiān"
+        },
+        {
+          "id": "l5p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "号",
+          "text_translation": "sana (o'lchov so'zi)",
+          "text_translation_ru": "число (счётн. сл.)",
+          "pinyin": "hào"
+        },
+        {
+          "id": "l5p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "月",
+          "text_translation": "oy (ot)",
+          "text_translation_ru": "месяц (сущ.)",
+          "pinyin": "yuè"
+        },
+        {
+          "id": "l5p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "日",
+          "text_translation": "kun (o'lchov so'zi)",
+          "text_translation_ru": "день (счётн. сл.)",
+          "pinyin": "rì"
+        },
+        {
+          "id": "l5p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "星期",
+          "text_translation": "hafta (ot)",
+          "text_translation_ru": "неделя (сущ.)",
+          "pinyin": "xīngqī"
+        },
+        {
+          "id": "l5p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "星期日",
+          "text_translation": "yakshanba (ot)",
+          "text_translation_ru": "воскресенье (сущ.)",
+          "pinyin": "Xīngqīrì"
+        },
+        {
+          "id": "l5p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "星期天",
+          "text_translation": "yakshanba (ot)",
+          "text_translation_ru": "воскресенье (сущ.)",
+          "pinyin": "Xīngqītiān"
+        },
+        {
+          "id": "l5p1-v-s8",
+          "section": "vocabulary",
+          "text_original": "休息",
+          "text_translation": "dam olmoq (fe'l)",
+          "text_translation_ru": "отдыхать (гл.)",
+          "pinyin": "xiūxi"
+        }
+      ]
+    },
+    {
+      "id": "l5p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l5p1-g1-s1",
+          "section": "grammar",
+          "text_original": "时间的表达（1） ",
+          "text_translation": "Vaqtni ifodalash (1)",
+          "text_translation_ru": "Выражение времени (1)",
+          "pinyin": "Shíjiān de biǎodá (1)",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l5p1-g1-s2",
+          "section": "grammar",
+          "text_original": "本课学习日期、星期的表达。汉语日期、星期的表达顺序是：年→月→日/号→星期。",
+          "text_translation": "Ushbu darsda sana va hafta kunlarini ifodalash o'rganiladi. Xitoy tilida sana va hafta kunlarini ifodalash tartibi: yil→oy→kun/sana→hafta kuni.",
+          "text_translation_ru": "В этом уроке изучается выражение дат и дней недели. Порядок выражения дат и дней недели в китайском языке: год→месяц→день/число→день недели.",
+          "pinyin": "Běn kè xuéxí rìqī, xīngqī de biǎodá. Hànyǔ rìqī, xīngqī de biǎodá shùnxù shì: nián→yuè→rì/hào→xīngqī."
+        }
+      ],
+      "images_bottom": [
+        "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-grammar1-ex1.jpg",
+        "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-grammar1-ex2.jpg",
+        "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-grammar1-ex3.jpg",
+        "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-grammar1-ex4.jpg"
+      ]
+    },
+    {
+      "id": "l5p1-sec-grammar2",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l5p1-g2-s1",
+          "section": "grammar",
+          "text_original": "名词谓语句 ",
+          "text_translation": "Ot kesimli gaplar",
+          "text_translation_ru": "Предложения с именным сказуемым",
+          "pinyin": "Míngcí wèiyǔjù",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l5p1-g2-s2",
+          "section": "grammar",
+          "text_original": "名词谓语句谓语部分只有名词或名词性成分，这部分词语一般是表达时间、日期、年龄等的词语。",
+          "text_translation": "Ot kesimli gaplarda kesim qismi faqat ot yoki otga oid tarkiblardan iborat bo'ladi. Bu tarkiblar odatda vaqt, sana, yosh va boshqalarni ifodalovchi so'zlardir.",
+          "text_translation_ru": "В предложениях с именным сказуемым сказуемое состоит только из существительного или именной группы. Обычно это слова, выражающие время, дату, возраст и т.д.",
+          "pinyin": "Míngcí wèiyǔjù wèiyǔ bùfèn zhǐ yǒu míngcí huò míngcíxìng chéngfèn, zhè bùfèn cíyǔ yībān shì biǎodá shíjiān, rìqī, niánlíng děng de cíyǔ."
+        },
+        {
+          "id": "l5p1-g2-s3",
+          "section": "grammar",
+          "text_original": "(1) A：今天几号？ B：今天5月1号。",
+          "text_translation": "(1) A: Bugun nechanchi sana? B: Bugun 5-oyning 1-sanasi.",
+          "text_translation_ru": "(1) A: Какое сегодня число? B: Сегодня 1 мая.",
+          "pinyin": "(1) A: Jīntiān jǐ hào? B: Jīntiān wǔ yuè yī hào."
+        },
+        {
+          "id": "l5p1-g2-s4",
+          "section": "grammar",
+          "text_original": "(2) 我妹妹12岁。",
+          "text_translation": "(2) Mening singlim 12 yoshda.",
+          "text_translation_ru": "(2) Моей младшей сестре 12 лет.",
+          "pinyin": "(2) Wǒ mèimei shí'èr suì."
+        }
+      ]
+    }
+  ]
+}

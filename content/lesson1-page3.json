@@ -1,0 +1,188 @@
+{
+  "id": "lesson1-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l1p3-sec-text3",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "开学第一天，课堂上，学生们学习致谢语、告别语。",
+      "contextPinyin": "Kāixué dì yī tiān, kètáng shàng, xuéshēngmen xuéxí zhìxiè yǔ, gàobié yǔ.",
+      "contextTranslation": "O'quv yilining birinchi kuni, sinfda, talabalar minnatdorchilik va xayrlashish iboralarini o'rganmoqda.",
+      "contextTranslation_ru": "В первый день учёбы в классе студенты изучают выражения благодарности и прощания.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l1p3-text3.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l1p3-t3-s1",
+          "section": "text",
+          "text_original": "谢谢！",
+          "text_translation": "Rahmat!",
+          "text_translation_ru": "Спасибо!",
+          "pinyin": "Xièxie!",
+          "speaker": "学生们",
+          "speakerName": "xuéshēngmen",
+          "audio_url": "/audio/l1p3-t3-s1.mp3"
+        },
+        {
+          "id": "l1p3-t3-s2",
+          "section": "text",
+          "text_original": "不客气！",
+          "text_translation": "Arzimaydi!",
+          "text_translation_ru": "Пожалуйста! (Не за что!)",
+          "pinyin": "Bú kèqi!",
+          "speaker": "小语",
+          "speakerName": "Xiǎoyǔ",
+          "audio_url": "/audio/l1p3-t3-s2.mp3"
+        },
+        {
+          "id": "l1p3-t3-s3",
+          "section": "text",
+          "text_original": "同学们，再见！",
+          "text_translation": "Xayr, talabalar!",
+          "text_translation_ru": "До свидания, студенты!",
+          "pinyin": "Tóngxuémen, zàijiàn!",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "/audio/l1p3-t3-s3.mp3"
+        },
+        {
+          "id": "l1p3-t3-s4",
+          "section": "text",
+          "text_original": "老师，再见！",
+          "text_translation": "Xayr, ustoz!",
+          "text_translation_ru": "До свидания, учитель!",
+          "pinyin": "Lǎoshī, zàijiàn!",
+          "speaker": "学生们",
+          "speakerName": "xuéshēngmen",
+          "audio_url": "/audio/l1p3-t3-s4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l1p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l1p3-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l1p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "谢谢",
+          "text_translation": "rahmat (fe'l)",
+          "text_translation_ru": "спасибо (глагол)",
+          "pinyin": "xièxie"
+        },
+        {
+          "id": "l1p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "不客气",
+          "text_translation": "arzimaydi, hech gap emas",
+          "text_translation_ru": "пожалуйста, не за что",
+          "pinyin": "bú kèqi"
+        },
+        {
+          "id": "l1p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "同学",
+          "text_translation": "sinfdosh (ot)",
+          "text_translation_ru": "одноклассник (сущ.)",
+          "pinyin": "tóngxué"
+        },
+        {
+          "id": "l1p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "再见",
+          "text_translation": "xayr (fe'l)",
+          "text_translation_ru": "до свидания (глагол)",
+          "pinyin": "zàijiàn"
+        }
+      ]
+    },
+    {
+      "id": "l1p3-sec-exercise",
+      "type": "exercise",
+      "subheading_ru": "Упражнения",
+      "sentences": [
+        {
+          "id": "l1p3-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l1p3-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组，用对方的名字对话。",
+          "text_translation": "Ikki kishidan iborat guruhda bir-biringizning ismlaringiz bilan suhbatlashing.",
+          "text_translation_ru": "В парах поговорите, используя имена друг друга.",
+          "pinyin": "Liǎng rén yī zǔ, yòng duìfāng de míngzi duìhuà.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l1p4-sec-tonguetwister",
+      "type": "text",
+      "heading": "跟读绕口令",
+      "subheading": "Tez aytishni qaytaring",
+      "subheading_ru": "Повторяйте скороговорку",
+      "audio_url": "/audio/l1p4-tonguetwister.mp3",
+      "sentences": [
+        {
+          "id": "l1p4-tt-s1",
+          "section": "text",
+          "text_original": "妈种麻，我放马。",
+          "text_translation": "Onam kanop ekadi, men otni boqaman.",
+          "text_translation_ru": "Мама сажает коноплю, я пасу лошадь.",
+          "pinyin": "Mā zhòng má, wǒ fàng mǎ.",
+          "audio_url": "/audio/l1p4-tt-s1.mp3"
+        },
+        {
+          "id": "l1p4-tt-s2",
+          "section": "text",
+          "text_original": "马吃麻，妈骂马。",
+          "text_translation": "Ot kanopni yeydi, onam otni so'kadi.",
+          "text_translation_ru": "Лошадь ест коноплю, мама ругает лошадь.",
+          "pinyin": "Mǎ chī má, mà mà mǎ.",
+          "audio_url": "/audio/l1p4-tt-s2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l1p4-sec-tip",
+      "type": "tip",
+      "heading": "小语助力",
+      "subheading": "Xiaoyudan maslahat",
+      "subheading_ru": "Совет от Сяоюй",
+      "sentences": [
+        {
+          "id": "l1p4-tip-s1",
+          "section": "tip",
+          "text_original": "你还想学习更多的汉语拼音知识吗？那就去敲敲「小语的彩蛋」吧，惊喜等着你。",
+          "text_translation": "Xitoy pinyini haqida ko'proq o'rganmoqchimisiz? Xiaoyu'ning bonus kontentiga o'ting. Sizni kutayotgan ajoyib surpriz bor.",
+          "text_translation_ru": "Хотите узнать больше о китайском пиньине? Тогда загляните в «Бонусный контент Сяоюй». Вас ждёт сюрприз.",
+          "pinyin": "Nǐ hái xiǎng xuéxí gèng duō de Hànyǔ pīnyīn zhīshi ma? Nà jiù qù qiāoqiāo「Xiǎoyǔ de cǎidàn」ba, jīngxǐ děngzhe nǐ."
+        }
+      ]
+    },
+    {
+      "id": "l1p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyudan Bonus Kontent 1-1",
+      "subheading_ru": "Бонусный контент Сяоюй 1-1",
+      "sentences": [],
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201/HSK-1-bonus-1.mp4"
+    }
+  ]
+}

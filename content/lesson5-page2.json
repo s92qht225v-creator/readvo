@@ -1,0 +1,220 @@
+{
+  "id": "lesson5-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l5p2-sec-text2",
+      "type": "multiplechoice",
+      "heading": "课文 2",
+      "subheading": "Text 2",
+      "subheading_ru": "Текст 2",
+      "context": "在公司里，王一雪和杨同乐休息时聊天儿。",
+      "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiūxi shí liáotiānr.",
+      "contextTranslation": "Kompaniyada Wang Yixue va Yang Tongle tanaffus paytida suhbatlashmoqda.",
+      "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ болтают во время перерыва.",
+      "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%203.mp3",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l5p2-mc-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "杨同乐（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）做饭。" }
+            ],
+            "options": [
+              { "label": "A", "word": "会", "pinyin": "huì" },
+              { "label": "B", "word": "不", "pinyin": "bú" },
+              { "label": "C", "word": "不会", "pinyin": "bú huì" }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l5p2-mc-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "杨同乐（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）也做饭。" }
+            ],
+            "options": [
+              { "label": "A", "word": "星期三", "pinyin": "Xīngqīsān" },
+              { "label": "B", "word": "星期六", "pinyin": "Xīngqīliù" },
+              { "label": "C", "word": "星期日", "pinyin": "Xīngqīrì" }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l5p2-sec-dialogue2",
+      "type": "text",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l5p2-t2-s1",
+          "section": "text",
+          "text_original": "你会做饭吗？",
+          "text_translation": "Sen ovqat tayyorlashni bilasanmi?",
+          "text_translation_ru": "Ты умеешь готовить?",
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p2-t2-s2",
+          "section": "text",
+          "text_original": "我会做。",
+          "text_translation": "Bilaman.",
+          "text_translation_ru": "Умею.",
+          "pinyin": "Wǒ huì zuò.",
+          "speaker": "杨同乐",
+          "speakerName": "杨同乐"
+        },
+        {
+          "id": "l5p2-t2-s3",
+          "section": "text",
+          "text_original": "你会做什么？",
+          "text_translation": "Nima tayyorlashni bilasan?",
+          "text_translation_ru": "Что ты умеешь готовить?",
+          "pinyin": "Nǐ huì zuò shénme?",
+          "speaker": "王一雪",
+          "speakerName": "王一雪"
+        },
+        {
+          "id": "l5p2-t2-s4",
+          "section": "text",
+          "text_original": "我会做面条儿、饺子，也会做一些菜。星期天我也做饭。",
+          "text_translation": "Men lapsha, chuchvara hamda ba'zi taomlarni tayyorlay olaman. Yakshanba kuni ham ovqat tayyorlayman.",
+          "text_translation_ru": "Я умею готовить лапшу, пельмени, а также некоторые блюда. По воскресеньям я тоже готовлю.",
+          "pinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài. Xīngqītiān wǒ yě zuò fàn.",
+          "speaker": "杨同乐",
+          "speakerName": "杨同乐"
+        }
+      ]
+    },
+    {
+      "id": "l5p2-sec-vocab2",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%204.mp3",
+      "sentences": [
+        {
+          "id": "l5p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "会",
+          "text_translation": "qila olmoq, bilmoq (modal fe'l)",
+          "text_translation_ru": "уметь, мочь (модальн. гл.)",
+          "pinyin": "huì"
+        },
+        {
+          "id": "l5p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "做饭",
+          "text_translation": "ovqat tayyorlamoq",
+          "text_translation_ru": "готовить еду",
+          "pinyin": "zuò fàn"
+        },
+        {
+          "id": "l5p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "做",
+          "text_translation": "qilmoq, tayyorlamoq (fe'l)",
+          "text_translation_ru": "делать, готовить (гл.)",
+          "pinyin": "zuò"
+        },
+        {
+          "id": "l5p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "面条儿",
+          "text_translation": "noodle (ot)",
+          "text_translation_ru": "лапша (сущ.)",
+          "pinyin": "miàntiáor"
+        },
+        {
+          "id": "l5p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "饺子",
+          "text_translation": "chuchvara (ot)",
+          "text_translation_ru": "пельмени (сущ.)",
+          "pinyin": "jiǎozi"
+        },
+        {
+          "id": "l5p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "一些",
+          "text_translation": "bir nechta (son-o'lchov so'zi)",
+          "text_translation_ru": "несколько, некоторые (числ.-сч.сл.)",
+          "pinyin": "yìxiē"
+        },
+        {
+          "id": "l5p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "菜",
+          "text_translation": "taom, ovqat (ot)",
+          "text_translation_ru": "блюдо, кушанье (сущ.)",
+          "pinyin": "cài"
+        }
+      ]
+    },
+    {
+      "id": "l5p2-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "instruction": "大声朗读。Read aloud.",
+      "instruction_ru": "大声朗读。Читайте вслух.",
+      "sentences": [
+        {
+          "id": "l5p2-g3-s1",
+          "section": "grammar",
+          "text_original": "能愿动词\"会\"",
+          "text_translation": "Modal fe'l \"会\"",
+          "text_translation_ru": "Модальный глагол «会»",
+          "pinyin": "Néngyuàn dòngcí \"huì\"",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l5p2-g3-s2",
+          "section": "grammar",
+          "text_original": "\"会\"用在动词前，表示通过学习后，懂得怎样做或有能力做。",
+          "text_translation": "\"会\" fe'ldan oldin qo'llaniladi va o'rganish orqali biror narsani qanday qilishni bilish yoki qila olish qobiliyatini bildiradi.",
+          "text_translation_ru": "«会» ставится перед глаголом и указывает на умение или способность выполнять действие, приобретённые в результате обучения.",
+          "pinyin": "\"Huì\" yòng zài dòngcí qián, biǎoshì tōngguò xuéxí hòu, dǒngde zěnyàng zuò huò yǒu nénglì zuò."
+        },
+        {
+          "id": "l5p2-g3-s3",
+          "section": "grammar",
+          "text_original": "(1) 你会做饭吗？",
+          "text_translation": "(1) Sen ovqat tayyorlashni bilasanmi?",
+          "text_translation_ru": "(1) Ты умеешь готовить?",
+          "pinyin": "(1) Nǐ huì zuò fàn ma?"
+        },
+        {
+          "id": "l5p2-g3-s4",
+          "section": "grammar",
+          "text_original": "(2) 我会做面条儿。",
+          "text_translation": "(2) Men lapsha tayyorlashni bilaman.",
+          "text_translation_ru": "(2) Я умею готовить лапшу.",
+          "pinyin": "(2) Wǒ huì zuò miàntiáor."
+        },
+        {
+          "id": "l5p2-g3-s5",
+          "section": "grammar",
+          "text_original": "(3) 我不会做菜。",
+          "text_translation": "(3) Men ovqat tayorlashni bilmayman.",
+          "text_translation_ru": "(3) Я не умею готовить блюда.",
+          "pinyin": "(3) Wǒ bú huì zuò cài."
+        }
+      ]
+    }
+  ]
+}

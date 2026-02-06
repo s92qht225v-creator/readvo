@@ -1,0 +1,161 @@
+{
+  "id": "lesson2-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l2p3-sec-text3",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在校园里，李文和白家月第一次相遇。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè dì yī cì xiāngyù.",
+      "contextTranslation": "Kampusda Li Ven va Bai Jiayue birinchi marta uchrashdi.",
+      "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l2p3-text3.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-3-1.jpg",
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "中国人的姓名：姓+名",
+        "pinyin": "Zhōngguó rén de xìngmíng: xìng + míng",
+        "translation": "Xitoyliklarning ismlari: familiya + ism",
+        "translation_ru": "Китайские имена: фамилия + имя"
+      },
+      "sentences": [
+        {
+          "id": "l2p3-t3-s1",
+          "section": "text",
+          "text_original": "你好！我叫李文。",
+          "text_translation": "Salom! Mening ismim Li Ven.",
+          "text_translation_ru": "Привет! Меня зовут Ли Вэнь.",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+          "speaker": "李文",
+          "speakerName": "Lǐ Wén",
+          "audio_url": "/audio/l2p3-t3-s1.mp3"
+        },
+        {
+          "id": "l2p3-t3-s2",
+          "section": "text",
+          "text_original": "你好！我叫白家月。",
+          "text_translation": "Salom! Mening ismim Bai Jiayue.",
+          "text_translation_ru": "Привет! Меня зовут Бай Цзяюэ.",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
+          "speaker": "白家月",
+          "speakerName": "Bái Jiāyuè",
+          "audio_url": "/audio/l2p3-t3-s2.mp3"
+        },
+        {
+          "id": "l2p3-t3-s3",
+          "section": "text",
+          "text_original": "很高兴认识你。",
+          "text_translation": "Tanishganimdan xursandman.",
+          "text_translation_ru": "Очень рад с тобой познакомиться.",
+          "pinyin": "Hěn gāoxìng rènshi nǐ.",
+          "speaker": "李文",
+          "speakerName": "Lǐ Wén",
+          "audio_url": "/audio/l2p3-t3-s3.mp3"
+        },
+        {
+          "id": "l2p3-t3-s4",
+          "section": "text",
+          "text_original": "认识你我也很高兴。",
+          "text_translation": "Men ham siz bilan tanishganimdan xursandman.",
+          "text_translation_ru": "Я тоже рада познакомиться с тобой.",
+          "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+          "speaker": "白家月",
+          "speakerName": "Bái Jiāyuè",
+          "audio_url": "/audio/l2p3-t3-s4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l2p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l2p3-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l2p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "很",
+          "text_translation": "juda (ravish)",
+          "text_translation_ru": "очень (наречие)",
+          "pinyin": "hěn"
+        },
+        {
+          "id": "l2p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "高兴",
+          "text_translation": "xursand, baxtli (sifat)",
+          "text_translation_ru": "рад, счастливый (прил.)",
+          "pinyin": "gāoxìng"
+        },
+        {
+          "id": "l2p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "认识",
+          "text_translation": "bilmoq, tanishmoq (fe'l)",
+          "text_translation_ru": "знать, познакомиться (глагол)",
+          "pinyin": "rènshi"
+        },
+        {
+          "id": "l2p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "也",
+          "text_translation": "ham (ravish)",
+          "text_translation_ru": "тоже (наречие)",
+          "pinyin": "yě"
+        }
+      ]
+    },
+    {
+      "id": "l2p3-sec-exercise",
+      "type": "exercise",
+      "heading": "练习",
+      "subheading": "Mashqlar",
+      "subheading_ru": "Упражнения",
+      "sentences": [
+        {
+          "id": "l2p3-ex-s1",
+          "section": "exercise",
+          "text_original": "分角色朗读对话。",
+          "text_translation": "Dialogni rollarga bo'lib o'qing.",
+          "text_translation_ru": "Прочитайте диалог по ролям.",
+          "pinyin": "Fēn juésè lǎngdú duìhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l2p3-ex-s2",
+          "section": "exercise",
+          "text_original": "两人一组，用自己的名字自我介绍。",
+          "text_translation": "Ikki kishidan iborat guruhda o'z ismlaringiz bilan o'zingizni tanishtiring.",
+          "text_translation_ru": "В парах представьтесь, используя свои имена.",
+          "pinyin": "Liǎng rén yī zǔ, yòng zìjǐ de míngzi zìwǒ jièshào.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l2p3-sec-tonguetwister",
+      "type": "grammar",
+      "heading": "跟读绕口令",
+      "subheading": "Tez aytish",
+      "subheading_ru": "Скороговорка",
+      "audio_url": "/audio/l2p3-tonguetwister.mp3",
+      "sentences": [
+        {
+          "id": "l2p3-tt-s2",
+          "section": "grammar",
+          "text_original": "七加一，再减一，加完减完等于几？加完减完还是七。",
+          "text_translation": "Yettiga bir qo'sh, yana birni ayir, qo'shib ayirgandan keyin nechaga teng? Qo'shib ayirgandan keyin baribir yetti.",
+          "text_translation_ru": "Семь плюс один, минус один, сколько получится после сложения и вычитания? После сложения и вычитания всё равно семь.",
+          "pinyin": "Qī jiā yī, zài jiǎn yī, jiāwán jiǎnwán děngyú jǐ? Jiāwán jiǎnwán háishì qī."
+        }
+      ]
+    }
+  ]
+}

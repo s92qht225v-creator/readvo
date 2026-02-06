@@ -1,0 +1,105 @@
+{
+  "id": "lesson1-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 1,
+    "pinyin": "AI Xiǎoyǔ, nǐ hǎo!",
+    "title": "AI小语，你好！",
+    "titleTranslation": "Salom, AI Xiaoyu!",
+    "titleTranslation_ru": "Привет, AI Сяоюй!"
+  },
+  "sections": [
+    {
+      "id": "l1p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l1p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用礼貌用语打招呼、致谢、告别。",
+          "text_translation": "Salomlashish, minnatdorchilik bildirish va xayrlashish uchun xushmuomala iboralarni tushunish va ishlatish.",
+          "text_translation_ru": "Понимать и использовать вежливые выражения для приветствия, благодарности и прощания.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng lǐmào yòngyǔ dǎ zhāohu, zhìxiè, gàobié.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l1p1-obj-s2",
+          "section": "objectives",
+          "text_original": "了解中文交际礼仪，能听懂并使用第二人称代词敬称「您」。",
+          "text_translation": "Xitoy muloqot odob-axloqini tushunish va ikkinchi shaxs olmoshi «您» (hurmatli «siz») ni qo'llash.",
+          "text_translation_ru": "Понимать китайский этикет общения и использовать вежливое местоимение «您».",
+          "pinyin": "Liǎojiě Zhōngwén jiāojì lǐyí, néng tīng dǒng bìng shǐyòng dì èr rénchēng dàicí jìngchēng「nín」.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l1p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "开学第一天，在办公室里，王一飞和AI助教小语打招呼。",
+      "contextPinyin": "Kāixué dì yī tiān, zài bàngōngshì lǐ, Wáng Yīfēi hé AI zhùjiào Xiǎoyǔ dǎ zhāohu.",
+      "contextTranslation": "O'quv yilining birinchi kuni, ofisda Wang Yifei AI yordamchisi Xiaoyu bilan salomlashmoqda.",
+      "contextTranslation_ru": "В первый день учёбы в офисе Ван Ифэй приветствует ИИ-помощника Сяоюй.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l1p1-t1-s1",
+          "section": "text",
+          "text_original": "AI小语，你好！",
+          "text_translation": "Salom, AI Xiaoyu!",
+          "text_translation_ru": "Привет, AI Сяоюй!",
+          "pinyin": "AI Xiǎoyǔ, nǐ hǎo!",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201a.mp3"
+        },
+        {
+          "id": "l1p1-t1-s2",
+          "section": "text",
+          "text_original": "王老师，你好！",
+          "text_translation": "Salom, Wang ustoz",
+          "text_translation_ru": "Здравствуйте, учитель Ван!",
+          "pinyin": "Wáng lǎoshī, nǐ hǎo!",
+          "speaker": "小语",
+          "speakerName": "Xiǎoyǔ",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l1p1-sec-vocabulary",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l1p1-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l1p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "你好",
+          "text_translation": "salom",
+          "text_translation_ru": "привет",
+          "pinyin": "nǐ hǎo"
+        },
+        {
+          "id": "l1p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "王老师",
+          "text_translation": "Wang ustoz",
+          "text_translation_ru": "учитель Ван",
+          "pinyin": "Wáng lǎoshī"
+        }
+      ]
+    }
+  ]
+}

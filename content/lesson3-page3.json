@@ -1,0 +1,420 @@
+{
+  "id": "lesson3-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l3p3-sec-text3",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在家里，王一雪给王一飞打视频电话。",
+      "contextPinyin": "Zài jiā lǐ, Wáng Yīxuě gěi Wáng Yīfēi dǎ shìpín diànhuà.",
+      "contextTranslation": "Uyda, Wang Yixue Wang Yifeiga video qo'ng'iroq qilmoqda.",
+      "contextTranslation_ru": "Дома Ван Исюэ звонит по видеосвязи Ван Ифэю.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "/audio/l3p3-text3.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l3p3-t3-s1",
+          "section": "text",
+          "text_original": "喂，一飞！",
+          "text_translation": "Alo, Yifei!",
+          "text_translation_ru": "Алло, Ифэй!",
+          "pinyin": "Wèi, Yīfēi!",
+          "speaker": "王一雪",
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "/audio/l3p3-t3-s1.mp3"
+        },
+        {
+          "id": "l3p3-t3-s2",
+          "section": "text",
+          "text_original": "姐姐！",
+          "text_translation": "Opa!",
+          "text_translation_ru": "Сестра!",
+          "pinyin": "Jiějie!",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "/audio/l3p3-t3-s2.mp3"
+        },
+        {
+          "id": "l3p3-t3-s3",
+          "section": "text",
+          "text_original": "你工作还忙吗？",
+          "text_translation": "Ishing hali ham bandmi?",
+          "text_translation_ru": "Ты всё ещё занят работой?",
+          "pinyin": "Nǐ gōngzuò hái máng ma?",
+          "speaker": "王一雪",
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "/audio/l3p3-t3-s3.mp3"
+        },
+        {
+          "id": "l3p3-t3-s4",
+          "section": "text",
+          "text_original": "对，还很忙。你也很忙吗？",
+          "text_translation": "Ha, hali juda band. Sen ham juda bandmisan?",
+          "text_translation_ru": "Да, всё ещё очень занят. А ты тоже очень занята?",
+          "pinyin": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "/audio/l3p3-t3-s4.mp3"
+        },
+        {
+          "id": "l3p3-t3-s5",
+          "section": "text",
+          "text_original": "我不太忙。我们很想你。",
+          "text_translation": "Men unchalik band emasman. Biz seni juda sog'indik.",
+          "text_translation_ru": "Я не очень занята. Мы очень скучаем по тебе.",
+          "pinyin": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
+          "speaker": "王一雪",
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "/audio/l3p3-t3-s5.mp3"
+        },
+        {
+          "id": "l3p3-t3-s6",
+          "section": "text",
+          "text_original": "我也想你们。",
+          "text_translation": "Men ham sizlarni sog'indim.",
+          "text_translation_ru": "Я тоже скучаю по вам.",
+          "pinyin": "Wǒ yě xiǎng nǐmen.",
+          "speaker": "王一飞",
+          "speakerName": "Wáng Yīfēi",
+          "audio_url": "/audio/l3p3-t3-s6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l3p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "/audio/l3p3-vocab.mp3",
+      "sentences": [
+        {
+          "id": "l3p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "喂",
+          "text_translation": "alo (undov)",
+          "text_translation_ru": "алло (межд.)",
+          "pinyin": "wèi"
+        },
+        {
+          "id": "l3p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "姐姐",
+          "text_translation": "opa (ot)",
+          "text_translation_ru": "старшая сестра (сущ.)",
+          "pinyin": "jiějie"
+        },
+        {
+          "id": "l3p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "工作",
+          "text_translation": "ish (ot)",
+          "text_translation_ru": "работа (сущ.)",
+          "pinyin": "gōngzuò"
+        },
+        {
+          "id": "l3p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "还",
+          "text_translation": "hali (ravish)",
+          "text_translation_ru": "ещё (нареч.)",
+          "pinyin": "hái"
+        },
+        {
+          "id": "l3p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "忙",
+          "text_translation": "band (sifat)",
+          "text_translation_ru": "занятой (прил.)",
+          "pinyin": "máng"
+        },
+        {
+          "id": "l3p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "吗",
+          "text_translation": "savol yuklamasi",
+          "text_translation_ru": "вопросительная частица",
+          "pinyin": "ma"
+        },
+        {
+          "id": "l3p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "对",
+          "text_translation": "to'g'ri (sifat)",
+          "text_translation_ru": "правильно (прил.)",
+          "pinyin": "duì"
+        },
+        {
+          "id": "l3p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "太",
+          "text_translation": "juda (ravish)",
+          "text_translation_ru": "слишком (нареч.)",
+          "pinyin": "tài"
+        },
+        {
+          "id": "l3p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "我们",
+          "text_translation": "biz (olmosh)",
+          "text_translation_ru": "мы (мест.)",
+          "pinyin": "wǒmen"
+        },
+        {
+          "id": "l3p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "想",
+          "text_translation": "sog'inmoq (fe'l)",
+          "text_translation_ru": "скучать (гл.)",
+          "pinyin": "xiǎng"
+        }
+      ]
+    },
+    {
+      "id": "l3p3-sec-grammar",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l3p3-g-s1",
+          "section": "grammar",
+          "text_original": "用\"吗\"的是非问句",
+          "text_translation": "\"吗\" yordamida ha-yo'q savollari",
+          "text_translation_ru": "Вопросы типа «да-нет» с «吗»",
+          "pinyin": "Yòng \"ma\" de shìfēi wènjù"
+        },
+        {
+          "id": "l3p3-g-s2",
+          "section": "grammar",
+          "text_original": "\"吗\"是语气助词，通常在句子末尾，表示疑问。基本结构：……吗？",
+          "text_translation": "\"吗\" modal yordamchi so'z bo'lib, odatda gap oxirida qo'yiladi va savol bildiradi. Asosiy tuzilma: ……吗？",
+          "text_translation_ru": "«吗» — модальная частица, обычно ставится в конце предложения для обозначения вопроса. Базовая структура: ……吗？",
+          "pinyin": "\"Ma\" shì yǔqì zhùcí, tōngcháng zài jùzi mòwěi, biǎoshì yíwèn. Jīběn jiégòu: ……ma?"
+        },
+        {
+          "id": "l3p3-g-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Baland ovozda o'qing.",
+          "text_translation_ru": "Читайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p3-g-s4",
+          "section": "grammar",
+          "text_original": "(1) 你也很忙吗？",
+          "text_translation": "Sen ham juda bandmisan?",
+          "text_translation_ru": "Ты тоже очень занят?",
+          "pinyin": "Nǐ yě hěn máng ma?"
+        },
+        {
+          "id": "l3p3-g-s5",
+          "section": "grammar",
+          "text_original": "(2) 你是他的中文老师吗？",
+          "text_translation": "Siz uning xitoy tili o'qituvchimisiz?",
+          "text_translation_ru": "Вы его учитель китайского?",
+          "pinyin": "Nǐ shì tā de Zhōngwén lǎoshī ma?"
+        },
+        {
+          "id": "l3p3-g-s6",
+          "section": "grammar",
+          "text_original": "(3) 你有（yǒu, have）姐姐吗？",
+          "text_translation": "Sening opang bormi?",
+          "text_translation_ru": "У тебя есть старшая сестра?",
+          "pinyin": "Nǐ yǒu jiějie ma?"
+        }
+      ]
+    },
+    {
+      "id": "l3p3-sec-exercise",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。Choose the proper words/phrases to fill in the blanks.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          { "id": "A", "label": "A", "word": "哪", "pinyin": "nǎ" },
+          { "id": "B", "label": "B", "word": "吗", "pinyin": "ma" },
+          { "id": "C", "label": "C", "word": "谁", "pinyin": "shéi" },
+          { "id": "D", "label": "D", "word": "中国人", "pinyin": "Zhōngguó rén" },
+          { "id": "E", "label": "E", "word": "想", "pinyin": "xiǎng" }
+        ],
+        "sentences": [
+          {
+            "id": "l3p3-fb-s1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "你工作忙" },
+              { "type": "blank" },
+              { "type": "text", "content": "？" }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l3p3-fb-s2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "我很" },
+              { "type": "blank" },
+              { "type": "text", "content": "你们。" }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l3p3-fb-s3",
+            "number": 3,
+            "parts": [
+              { "type": "text", "content": "你是" },
+              { "type": "blank" },
+              { "type": "text", "content": "国人？" }
+            ],
+            "correctOptionId": "A",
+            "speaker": "白家月"
+          },
+          {
+            "id": "l3p3-fb-s4",
+            "parts": [
+              { "type": "text", "content": "我是" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "correctOptionId": "D",
+            "speaker": "李　文"
+          },
+          {
+            "id": "l3p3-fb-s5",
+            "number": 4,
+            "parts": [
+              { "type": "text", "content": "她是" },
+              { "type": "blank" },
+              { "type": "text", "content": "？" }
+            ],
+            "correctOptionId": "C",
+            "speaker": "白家月"
+          },
+          {
+            "id": "l3p3-fb-s6",
+            "parts": [
+              { "type": "text", "content": "她是陈天中的女朋友。" }
+            ],
+            "correctOptionId": "",
+            "speaker": "安　妮"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l3p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-2.jpg",
+            "parts": [
+              { "type": "text", "content": "他" },
+              { "type": "blank" },
+              { "type": "text", "content": "陈天中，是泰国人，他" },
+              { "type": "blank" },
+              { "type": "text", "content": "也" },
+              { "type": "blank" },
+              { "type": "text", "content": "泰国人。" }
+            ],
+            "answers": ["叫", "女朋友", "是"]
+          },
+          {
+            "id": "l3p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-3.jpg",
+            "parts": [
+              { "type": "text", "content": "王一飞是" },
+              { "type": "blank" },
+              { "type": "text", "content": "中文老师，她" },
+              { "type": "blank" },
+              { "type": "text", "content": "很" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "answers": ["我们的", "工作", "忙"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "sentences": [
+        {
+          "id": "l3p3-act-s1",
+          "section": "activity",
+          "text_original": "多人活动",
+          "text_translation": "Guruh ishi",
+          "text_translation_ru": "Групповая работа",
+          "pinyin": "Duō rén huódòng",
+          "isCheckbox": true
+        },
+        {
+          "id": "l3p3-act-s2",
+          "section": "activity",
+          "text_original": "3~4人一组，互相介绍，然后请一组同学展示。",
+          "text_translation": "3-4 kishidan iborat guruhda bir-biringizni tanishtiring, so'ng bir guruh sinfga namoyish qiladi.",
+          "text_translation_ru": "Разделитесь на группы по 3-4 человека, представьтесь друг другу, затем одна группа выступит перед классом.",
+          "pinyin": "3~4 rén yī zǔ, hùxiāng jièshào, ránhòu qǐng yī zǔ tóngxué zhǎnshì."
+        },
+        {
+          "id": "l3p3-act-s4",
+          "section": "activity",
+          "text_original": "我叫白家月，我是法国人。陈天中是我同学，他是……。……",
+          "text_translation": "Mening ismim Bai Jiayue, men fransuzman. Chen Tianzhong mening kursdoshim, u ……. ……",
+          "text_translation_ru": "Меня зовут Бай Цзяюэ, я француженка. Чэнь Тяньчжун мой одноклассник, он ……. ……",
+          "pinyin": "Wǒ jiào Bái Jiāyuè, wǒ shì Fǎguó rén. Chén Tiānzhōng shì wǒ tóngxué, tā shì……. ……"
+        }
+      ]
+    },
+    {
+      "id": "l3p3-sec-tonguetwister",
+      "type": "tonguetwister",
+      "heading": "跟读绕口令",
+      "subheading": "Tez aytishni takrorlang",
+      "subheading_ru": "Повторите скороговорку",
+      "audio_url": "/audio/l3p3-tonguetwister.mp3",
+      "sentences": [
+        {
+          "id": "l3p3-tt-s1",
+          "section": "tonguetwister",
+          "text_original": "四是四，十是十。",
+          "text_translation": "To'rt - to'rt, o'n - o'n.",
+          "text_translation_ru": "Четыре — это четыре, десять — это десять.",
+          "pinyin": "Sì shì sì, shí shì shí."
+        },
+        {
+          "id": "l3p3-tt-s2",
+          "section": "tonguetwister",
+          "text_original": "十四是十四，四十是四十。",
+          "text_translation": "O'n to'rt - o'n to'rt, qirq - qirq.",
+          "text_translation_ru": "Четырнадцать — это четырнадцать, сорок — это сорок.",
+          "pinyin": "Shísì shì shísì, sìshí shì sìshí."
+        }
+      ]
+    }
+  ]
+}
