@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageParams) {
   const { lessonId, pageNum } = await params;
 
   return {
-    title: `${lessonId}-dars, ${pageNum}-sahifa - HSK 1 - Kitobee`,
+    title: `${lessonId}-dars, ${pageNum}-sahifa - HSK 1 - ReadVo`,
   };
 }
 

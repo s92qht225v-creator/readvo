@@ -6,7 +6,7 @@ export default function NotFound() {
       <header className="home__hero">
         <h1 className="home__logo">
           <span className="home__logo-icon">📖</span>
-          Kitobee
+          ReadVo
         </h1>
         <p className="home__tagline">Sahifa topilmadi</p>
       </header>

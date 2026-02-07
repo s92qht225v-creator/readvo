@@ -73,24 +73,42 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
     [sentence.id, sentence.audio_url, onAudioClick]
   );
 
+  // Image-only sentence (e.g., textbook table scan in grammar sections)
+  if (sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '')) {
+    return (
+      <div className="sentence sentence--image-only" data-sentence-id={sentence.id}>
+        <img
+          src={sentence.image_url}
+          alt="Textbook content"
+          className="sentence__inline-image"
+        />
+      </div>
+    );
+  }
+
   // Dialogue layout with number inline with text
   if (hasDialogueNumber) {
     return (
       <div
-        className="sentence sentence--dialogue-grid"
+        className={`sentence sentence--dialogue-grid${sentence.dialogueNumber ? ' sentence--dialogue-start' : ' sentence--dialogue-reply'}`}
         data-sentence-id={sentence.id}
         data-section={sentence.section}
       >
-        <div className="sentence__main-line">
-          <span className="sentence__number">{sentence.dialogueNumber ? `(${sentence.dialogueNumber})` : ''}</span>
-          <span className="sentence__text">{sentence.text_original}</span>
+        <span className="sentence__number">{sentence.dialogueNumber ? `(${sentence.dialogueNumber})` : ''}</span>
+        <div className="sentence__dialogue-content">
+          {sentence.speaker && (
+            <span className="sentence__speaker">{sentence.speaker}</span>
+          )}
+          <div className="sentence__text-block">
+            <span className="sentence__text">{sentence.text_original}</span>
+            {sentence.pinyin && isPinyinVisible && (
+              <div className="sentence__pinyin">{sentence.pinyin}</div>
+            )}
+            {isTranslationVisible && (
+              <div className="sentence__translation-inline">{translation}</div>
+            )}
+          </div>
         </div>
-        {sentence.pinyin && isPinyinVisible && (
-          <div className="sentence__pinyin">{sentence.pinyin}</div>
-        )}
-        {isTranslationVisible && (
-          <div className="sentence__translation-inline">{translation}</div>
-        )}
       </div>
     );
   }

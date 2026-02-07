@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '@/styles/reading.css';
 
 export const metadata: Metadata = {
-  title: 'Kitobee - Interaktiv o\'qish',
+  title: 'ReadVo - Interaktiv o\'qish',
   description: 'Interaktiv til darsligi o\'quvchisi',
 };
 

@@ -1,5 +1,5 @@
 /**
- * Kitobee Reading System - Core Data Types
+ * ReadVo Reading System - Core Data Types
  *
  * Hierarchy: Page → Section → Sentence → Word
  *
@@ -109,6 +109,9 @@ export interface Sentence {
 
   /** Optional: grammar point number (e.g., "1", "2") - displayed in red badge before text */
   readonly grammarNumber?: string;
+
+  /** Optional: inline image URL (e.g., textbook table scan within a grammar section) */
+  readonly image_url?: string;
 }
 
 // =============================================================================
@@ -194,6 +197,9 @@ export interface Section {
 
   /** Image description exercise data (only for type: 'imagedescribe') */
   readonly imageDescribeData?: ImageDescribeData;
+
+  /** Table fill exercise data (only for type: 'activity') */
+  readonly tableFillData?: TableFillData;
 }
 
 // =============================================================================
@@ -361,6 +367,99 @@ export interface ImageDescribeCard {
 export interface ImageDescribeData {
   /** Cards with images and sentences */
   readonly cards: readonly ImageDescribeCard[];
+}
+
+// =============================================================================
+// TABLE FILL EXERCISE
+// =============================================================================
+
+/**
+ * An option in a table fill exercise (e.g., A 包子, B 面条儿).
+ */
+export interface TableFillOption {
+  /** Unique identifier (e.g., "A", "B") */
+  readonly id: string;
+
+  /** Display label (e.g., "A", "B") */
+  readonly label: string;
+
+  /** The word/phrase */
+  readonly word: string;
+
+  /** Pinyin romanization */
+  readonly pinyin: string;
+}
+
+/**
+ * A column in a table fill exercise (e.g., 星期一).
+ */
+export interface TableFillColumn {
+  /** Unique identifier */
+  readonly id: string;
+
+  /** Column header label (Chinese) */
+  readonly label: string;
+
+  /** Pinyin romanization */
+  readonly pinyin: string;
+}
+
+/**
+ * Complete data for a table fill exercise.
+ */
+export interface TableFillData {
+  /** Options to choose from */
+  readonly options: readonly TableFillOption[];
+
+  /** Column headers */
+  readonly columns: readonly TableFillColumn[];
+}
+
+// =============================================================================
+// FLASHCARD
+// =============================================================================
+
+/**
+ * A single flashcard word entry.
+ */
+export interface FlashcardWord {
+  /** Stable unique identifier (e.g., "fc-hsk1-001") */
+  readonly id: string;
+
+  /** Chinese character(s) */
+  readonly text_original: string;
+
+  /** Pinyin romanization with tone marks */
+  readonly pinyin: string;
+
+  /** Translation in Uzbek */
+  readonly text_translation: string;
+
+  /** Translation in Russian */
+  readonly text_translation_ru?: string;
+
+  /** Which lesson this word comes from */
+  readonly lesson?: number;
+
+  /** Optional audio URL for pronunciation */
+  readonly audio_url?: string;
+}
+
+/**
+ * A flashcard deck for an HSK level.
+ */
+export interface FlashcardDeckData {
+  /** Deck identifier */
+  readonly id: string;
+
+  /** Deck title (Uzbek) */
+  readonly title: string;
+
+  /** Deck title (Russian) */
+  readonly title_ru?: string;
+
+  /** All words in the deck */
+  readonly words: readonly FlashcardWord[];
 }
 
 // =============================================================================

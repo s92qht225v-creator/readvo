@@ -1,0 +1,542 @@
+{
+  "id": "lesson6-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l6p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在家里，王一雪全家在讨论周末晚餐安排。",
+      "contextPinyin": "Zài jiā lǐ, Wáng Yīxuě quánjiā zài tǎolùn zhōumò wǎncān ānpái.",
+      "contextTranslation": "Uyda Wang Yisyuening oilasi dam olish kunlari kechki ovqatni muhokama qilmoqda.",
+      "contextTranslation_ru": "Дома семья Ван Исюэ обсуждает планы на ужин в выходные.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%205.mp3",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l6p3-mc-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "王一雪一家人想去西安饭店吃（　　）。" }
+            ],
+            "options": [
+              { "label": "A", "word": "早饭", "pinyin": "chī zǎofàn" },
+              { "label": "B", "word": "午饭", "pinyin": "chī wǔfàn" },
+              { "label": "C", "word": "晚饭", "pinyin": "chī wǎnfàn" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l6p3-mc-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "刘小明不想吃（　　）。" }
+            ],
+            "options": [
+              { "label": "A", "word": "米饭", "pinyin": "mǐfàn" },
+              { "label": "B", "word": "包子", "pinyin": "bāozi" },
+              { "label": "C", "word": "面条儿", "pinyin": "miàntiáor" }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l6p3-sec-text3",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l6p3-t3-s1",
+          "section": "text",
+          "text_original": "星期天我们去哪儿吃晚饭？",
+          "text_translation": "Yakshanba kuni kechki ovqatni qayerda yeymiz?",
+          "text_translation_ru": "Куда мы пойдём ужинать в воскресенье?",
+          "pinyin": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l6p3-t3-s2",
+          "section": "text",
+          "text_original": "我还想去西安饭店。",
+          "text_translation": "Men yana Xi'an restoraniga bormoqchiman.",
+          "text_translation_ru": "Я ещё хочу пойти в ресторан «Сиань».",
+          "pinyin": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l6p3-t3-s3",
+          "section": "text",
+          "text_original": "那边的包子非常好吃，我想吃包子。",
+          "text_translation": "U yerdagi mantisi juda mazali, men manti yemoqchiman.",
+          "text_translation_ru": "Тамошние пирожки баоцзы очень вкусные, я хочу есть баоцзы.",
+          "pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
+          "speaker": "刘小雪"
+        },
+        {
+          "id": "l6p3-t3-s4",
+          "section": "text",
+          "text_original": "妈妈，我想吃米饭，不想吃包子。",
+          "text_translation": "Onajon, men guruch yemoqchiman, manti yegim kelmaydi.",
+          "text_translation_ru": "Мама, я хочу рис, не хочу баоцзы.",
+          "pinyin": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+          "speaker": "刘小明"
+        },
+        {
+          "id": "l6p3-t3-s5",
+          "section": "text",
+          "text_original": "好的。我们怎么去？",
+          "text_translation": "Yaxshi. Qanday qilib boramiz?",
+          "text_translation_ru": "Хорошо. Как мы туда доберёмся?",
+          "pinyin": "Hǎo de. Wǒmen zěnme qù?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l6p3-t3-s6",
+          "section": "text",
+          "text_original": "坐出租车去。",
+          "text_translation": "Taksida boramiz.",
+          "text_translation_ru": "Поедем на такси.",
+          "pinyin": "Zuò chūzūchē qù.",
+          "speaker": "刘　明"
+        }
+      ]
+    },
+    {
+      "id": "l6p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "sentences": [
+        {
+          "id": "l6p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "早饭",
+          "text_translation": "nonushta",
+          "text_translation_ru": "завтрак",
+          "pinyin": "zǎofàn",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "午饭",
+          "text_translation": "tushlik",
+          "text_translation_ru": "обед",
+          "pinyin": "wǔfàn",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "吃",
+          "text_translation": "yemoq",
+          "text_translation_ru": "есть; кушать",
+          "pinyin": "chī",
+          "wordClass": "v."
+        },
+        {
+          "id": "l6p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "晚饭",
+          "text_translation": "kechki ovqat",
+          "text_translation_ru": "ужин",
+          "pinyin": "wǎnfàn",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "那边",
+          "text_translation": "u yer; u taraf",
+          "text_translation_ru": "там; та сторона",
+          "pinyin": "nàbiān",
+          "wordClass": "pron."
+        },
+        {
+          "id": "l6p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "包子",
+          "text_translation": "baozi (go'shtli mantiga o'xshash taom)",
+          "text_translation_ru": "баоцзы (паровой пирожок с начинкой)",
+          "pinyin": "bāozi",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "非常",
+          "text_translation": "juda; nihoyatda",
+          "text_translation_ru": "очень; чрезвычайно",
+          "pinyin": "fēicháng",
+          "wordClass": "adv."
+        },
+        {
+          "id": "l6p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "好吃",
+          "text_translation": "mazali",
+          "text_translation_ru": "вкусный",
+          "pinyin": "hǎochī",
+          "wordClass": "adj."
+        },
+        {
+          "id": "l6p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "米饭",
+          "text_translation": "guruch",
+          "text_translation_ru": "рис (варёный)",
+          "pinyin": "mǐfàn",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "怎么",
+          "text_translation": "qanday; qanday qilib",
+          "text_translation_ru": "как; каким образом",
+          "pinyin": "zěnme",
+          "wordClass": "pron."
+        },
+        {
+          "id": "l6p3-v-s11",
+          "section": "vocabulary",
+          "text_original": "坐",
+          "text_translation": "minmoq; (transport) bilan bormoq",
+          "text_translation_ru": "ехать (на транспорте); сидеть",
+          "pinyin": "zuò",
+          "wordClass": "v."
+        },
+        {
+          "id": "l6p3-v-s12",
+          "section": "vocabulary",
+          "text_original": "出租车",
+          "text_translation": "taksi",
+          "text_translation_ru": "такси",
+          "pinyin": "chūzūchē",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p3-v-s13",
+          "section": "vocabulary",
+          "text_original": "西安饭店",
+          "text_translation": "Xi'an restorani",
+          "text_translation_ru": "Ресторан «Сиань»",
+          "pinyin": "Xī'ān Fàndiàn",
+          "wordClass": "proper n."
+        }
+      ]
+    },
+    {
+      "id": "l6p3-sec-grammar2",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l6p3-g2-s1",
+          "section": "grammar",
+          "text_original": "连动句（1）",
+          "text_translation": "Ketma-ket fe'lli gap (1)",
+          "text_translation_ru": "Предложения с последовательными глаголами (1)",
+          "pinyin": "Liándòngjù (1)"
+        },
+        {
+          "id": "l6p3-g2-s2",
+          "section": "grammar",
+          "text_original": "连动句的谓语部分由两个或两个以上动词性短语构成。连动句有两种意义：",
+          "text_translation": "Ketma-ket fe'lli gapning kesim qismi ikki yoki undan ko'p fe'l iboralaridan tashkil topadi. Ketma-ket fe'lli gapning ikki xil ma'nosi bor:",
+          "text_translation_ru": "Сказуемое предложения с последовательными глаголами состоит из двух или более глагольных словосочетаний. Такие предложения имеют два значения:",
+          "pinyin": "Liándòngjù de wèiyǔ bùfen yóu liǎng gè huò liǎng gè yǐshàng dòngcíxìng duǎnyǔ gòuchéng. Liándòngjù yǒu liǎng zhǒng yìyì:"
+        },
+        {
+          "id": "l6p3-g2-s3",
+          "section": "grammar",
+          "text_original": "（1）表示动作的目的",
+          "text_translation": "(1) Harakatning maqsadini bildiradi",
+          "text_translation_ru": "(1) Указывает на цель действия",
+          "pinyin": "(1) Biǎoshì dòngzuò de mùdì"
+        },
+        {
+          "id": "l6p3-g2-s4",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p3-g2-s5",
+          "section": "grammar",
+          "text_original": "（1）我想去超市买东西。",
+          "text_translation": "(1) Men supermarketga borib narsa sotib olmoqchiman.",
+          "text_translation_ru": "(1) Я хочу пойти в супермаркет за покупками.",
+          "pinyin": "(1) Wǒ xiǎng qù chāoshì mǎi dōngxi."
+        },
+        {
+          "id": "l6p3-g2-s6",
+          "section": "grammar",
+          "text_original": "（2）我们去西安饭店吃晚饭。",
+          "text_translation": "(2) Biz Xi'an restoraniga kechki ovqat yegani boramiz.",
+          "text_translation_ru": "(2) Мы идём в ресторан «Сиань» ужинать.",
+          "pinyin": "(2) Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn."
+        },
+        {
+          "id": "l6p3-g2-s7",
+          "section": "grammar",
+          "text_original": "（2）表示动作的方式",
+          "text_translation": "(2) Harakatning usulini bildiradi",
+          "text_translation_ru": "(2) Указывает на способ действия",
+          "pinyin": "(2) Biǎoshì dòngzuò de fāngshì"
+        },
+        {
+          "id": "l6p3-g2-s8",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p3-g2-s9",
+          "section": "grammar",
+          "text_original": "（1）我们坐出租车去西安饭店。",
+          "text_translation": "(1) Biz taksida Xi'an restoraniga boramiz.",
+          "text_translation_ru": "(1) Мы поедем на такси в ресторан «Сиань».",
+          "pinyin": "(1) Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn."
+        },
+        {
+          "id": "l6p3-g2-s10",
+          "section": "grammar",
+          "text_original": "（2）她坐出租车去超市。",
+          "text_translation": "(2) U taksida supermarketga boradi.",
+          "text_translation_ru": "(2) Она поедет на такси в супермаркет.",
+          "pinyin": "(2) Tā zuò chūzūchē qù chāoshì."
+        }
+      ]
+    },
+    {
+      "id": "l6p3-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l6p3-g3-s1",
+          "section": "grammar",
+          "text_original": "疑问代词「怎么」",
+          "text_translation": "So'roq olmoshi \"怎么\"",
+          "text_translation_ru": "Вопросительное местоимение «怎么»",
+          "pinyin": "Yíwèn dàicí 'zěnme'"
+        },
+        {
+          "id": "l6p3-g3-s2",
+          "section": "grammar",
+          "text_original": "疑问代词「怎么」用在动词前，询问方式。",
+          "text_translation": "So'roq olmoshi \"怎么\" fe'ldan oldin ishlatiladi va usulni so'raydi.",
+          "text_translation_ru": "Вопросительное местоимение «怎么» ставится перед глаголом и используется для вопроса о способе действия.",
+          "pinyin": "Yíwèn dàicí 'zěnme' yòng zài dòngcí qián, xúnwèn fāngshì."
+        },
+        {
+          "id": "l6p3-g3-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух.",
+          "pinyin": "Dàshēng lǎngdú.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l6p3-g3-s4",
+          "section": "grammar",
+          "text_original": "（1）我们怎么去？",
+          "text_translation": "(1) Biz qanday qilib boramiz?",
+          "text_translation_ru": "(1) Как мы поедем?",
+          "pinyin": "(1) Wǒmen zěnme qù?"
+        },
+        {
+          "id": "l6p3-g3-s5",
+          "section": "grammar",
+          "text_original": "（2）她怎么去超市？",
+          "text_translation": "(2) U supermarketga qanday boradi?",
+          "text_translation_ru": "(2) Как она доберётся до супермаркета?",
+          "pinyin": "(2) Tā zěnme qù chāoshì?"
+        }
+      ]
+    },
+    {
+      "id": "l6p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。Bo'sh joylarga mos so'zlarni tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          { "id": "A", "label": "A", "word": "多少", "pinyin": "duōshao" },
+          { "id": "B", "label": "B", "word": "买", "pinyin": "mǎi" },
+          { "id": "C", "label": "C", "word": "米饭", "pinyin": "mǐfàn" },
+          { "id": "D", "label": "D", "word": "坐", "pinyin": "zuò" },
+          { "id": "E", "label": "E", "word": "去", "pinyin": "qù" }
+        ],
+        "sentences": [
+          {
+            "id": "l6p3-fb-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "我想" },
+              { "type": "blank" },
+              { "type": "text", "content": "超市" },
+              { "type": "blank" },
+              { "type": "text", "content": "牛奶。" }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l6p3-fb-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "我们" },
+              { "type": "blank" },
+              { "type": "text", "content": "出租车去西安饭店吃晚饭。" }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l6p3-fb-q3a",
+            "number": 3,
+            "parts": [
+              { "type": "text", "content": "妈妈：你想吃什么？孩子：我想吃" },
+              { "type": "blank" },
+              { "type": "text", "content": "。" }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l6p3-fb-q4a",
+            "number": 4,
+            "parts": [
+              { "type": "text", "content": "老师：你的手机号是" },
+              { "type": "blank" },
+              { "type": "text", "content": "？" }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l6p3-fb-q4b",
+            "parts": [
+              { "type": "text", "content": "学生：我的手机号是13126975002。" }
+            ],
+            "correctOptionId": "_static"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l6p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l6p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-2.jpg",
+            "parts": [
+              { "type": "text", "content": "她的" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "是多少？" }
+            ],
+            "answers": ["手机号"]
+          },
+          {
+            "id": "l6p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-3.jpg",
+            "parts": [
+              { "type": "text", "content": "我想" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "超市" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "牛奶。" }
+            ],
+            "answers": ["去", "买"]
+          },
+          {
+            "id": "l6p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-4.jpg",
+            "parts": [
+              { "type": "text", "content": "王一雪想" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "去超市。" }
+            ],
+            "answers": ["坐出租车"]
+          },
+          {
+            "id": "l6p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-5.jpg",
+            "parts": [
+              { "type": "text", "content": "这些包子非常" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "。" }
+            ],
+            "answers": ["好吃"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l6p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "填写表格。Jadvalni to'ldiring.",
+      "instruction_ru": "填写表格。Заполните таблицу.",
+      "sentences": [
+        {
+          "id": "l6p3-act-s1",
+          "section": "activity",
+          "text_original": "两人一组，填写星期一、星期二和星期六早饭吃什么，填好后分享。",
+          "text_translation": "Ikkitadan juftlikda ishlang, dushanba, seshanba va shanba kunlari nonushtaga nima yeyishingizni yozing, so'ng javoblaringizni ulashing.",
+          "text_translation_ru": "Работайте в парах, запишите, что вы едите на завтрак в понедельник, вторник и субботу, затем поделитесь ответами.",
+          "pinyin": "Liǎng rén yī zǔ, tiánxiě xīngqīyī, xīngqī'èr hé xīngqīliù zǎofàn chī shénme, tián hǎo hòu fēnxiǎng."
+        }
+      ],
+      "tableFillData": {
+        "options": [
+          { "id": "A", "label": "A", "word": "包子", "pinyin": "bāozi" },
+          { "id": "B", "label": "B", "word": "面条儿", "pinyin": "miàntiáor" },
+          { "id": "C", "label": "C", "word": "饺子", "pinyin": "jiǎozi" },
+          { "id": "D", "label": "D", "word": "米饭", "pinyin": "mǐfàn" }
+        ],
+        "columns": [
+          { "id": "l6p3-tf-mon", "label": "星期一", "pinyin": "xīngqīyī" },
+          { "id": "l6p3-tf-tue", "label": "星期二", "pinyin": "xīngqī'èr" },
+          { "id": "l6p3-tf-sat", "label": "星期六", "pinyin": "xīngqīliù" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /**
- * Kitobee Reading System Styles
+ * ReadVo Reading System Styles
  *
  * Design principles:
  * - Screen-first, no PDF recreation
@@ -500,21 +500,65 @@ body {
   padding-left: calc(var(--spacing-md) + 3em) !important;
 }
 
+/* Image-only sentence (textbook table scans, etc.) */
+.sentence--image-only {
+  padding: var(--spacing-sm) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sentence__inline-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
 /* Dialogue layout - number inline with text, pinyin/translation below aligned to text */
 .sentence--dialogue-grid {
   display: flex;
-  flex-direction: column;
-  padding: var(--spacing-sm) var(--spacing-md);
+  flex-direction: row;
+  padding: var(--spacing-xs) var(--spacing-md);
 }
 
-.sentence--dialogue-grid .sentence__main-line {
-  display: flex;
+/* Extra top spacing before A lines (start of new dialogue pair) */
+.sentence--dialogue-start {
+  padding-top: var(--spacing-sm) !important;
 }
 
-.sentence--dialogue-grid .sentence__number {
+/* Tight spacing for B reply lines */
+.sentence--dialogue-reply {
+  padding-top: 0 !important;
+}
+
+.sentence--dialogue-grid > .sentence__number {
   min-width: 2.5em;
   flex-shrink: 0;
   font-weight: 400;
+  padding-top: 2px;
+}
+
+.sentence--dialogue-grid .sentence__dialogue-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.sentence--dialogue-grid .sentence__speaker {
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-right: 0.5em;
+  padding-top: 2px;
+}
+
+.sentence--dialogue-grid .sentence__speaker::after {
+  content: "：";
+}
+
+.sentence--dialogue-grid .sentence__text-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sentence--dialogue-grid .sentence__text {
@@ -525,15 +569,13 @@ body {
   color: var(--color-accent);
   font-style: italic;
   font-size: calc(var(--font-size-small) * var(--font-scale, 1));
-  margin-top: var(--spacing-xs);
-  margin-left: 2.5em;
+  margin-top: 2px;
 }
 
 .sentence--dialogue-grid .sentence__translation-inline {
   color: var(--color-text-translation);
   font-size: calc(var(--font-size-small) * var(--font-scale, 1));
-  margin-top: var(--spacing-xs);
-  margin-left: 2.5em;
+  margin-top: 2px;
 }
 
 .section--instruction .section__sentences {
@@ -556,9 +598,6 @@ body {
   background: #fef2f2;
 }
 
-.section--activity .section__sentences {
-  background: #ecfdf5;
-}
 
 .section--tonguetwister .section__sentences {
   background: #fdf4ff;
@@ -1346,6 +1385,86 @@ body {
 }
 
 /* =========================================================================
+   TABLE FILL EXERCISE (课堂活动 - 填写表格)
+   ========================================================================= */
+
+.section--activity .section__sentences {
+  background: transparent;
+}
+
+.tablefill {
+  padding: var(--spacing-md);
+}
+
+.tablefill__table {
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: var(--spacing-lg);
+}
+
+.tablefill__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.tablefill__row--header {
+  background: #f0fdf4;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tablefill__cell {
+  padding: var(--spacing-md);
+  text-align: center;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.tablefill__cell + .tablefill__cell {
+  border-left: 1px solid var(--color-border);
+}
+
+.tablefill__cell--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.tablefill__cell-label {
+  font-size: calc(var(--font-size-base) * var(--font-scale, 1));
+  font-weight: 600;
+}
+
+.tablefill__cell-pinyin {
+  font-size: calc(var(--font-size-small) * var(--font-scale, 1));
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.tablefill__cell--input {
+  min-height: 3em;
+  cursor: pointer;
+  font-size: calc(var(--font-size-base) * var(--font-scale, 1));
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.tablefill__cell--input:hover {
+  background: #f9fafb;
+}
+
+.tablefill__cell--selected {
+  background: #eff6ff;
+  box-shadow: inset 0 0 0 2px var(--color-accent);
+}
+
+.tablefill__cell--filled {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* =========================================================================
    BONUS CONTENT (小语的彩蛋)
    ========================================================================= */
 
@@ -1786,6 +1905,407 @@ body {
 }
 
 /* =============================================================================
+   FLASHCARD
+   ============================================================================= */
+
+.flashcard-page {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+@media (min-width: 1200px) {
+  .flashcard-page { max-width: 1000px; }
+}
+
+@media (min-width: 1600px) {
+  .flashcard-page { max-width: 1100px; }
+}
+
+/* Header */
+.flashcard-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+.flashcard-page__back {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: calc(var(--font-size-small) * var(--font-scale, 1));
+  flex-shrink: 0;
+}
+
+.flashcard-page__back:hover {
+  text-decoration: underline;
+}
+
+.flashcard-page__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  flex: 1;
+  text-align: center;
+}
+
+.flashcard-page__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.flashcard-page__toggle {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  background: white;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcard-page__toggle--active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #ebf8ff;
+}
+
+.flashcard-page__toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.flashcard-page__toggle--dir {
+  width: auto;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Progress bar */
+.flashcard__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.flashcard__progress-text {
+  font-size: calc(var(--font-size-small) * var(--font-scale, 1));
+  font-weight: 600;
+  color: var(--color-accent);
+  min-width: 3em;
+}
+
+.flashcard__progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.flashcard__progress-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Card container with perspective for 3D flip */
+.flashcard__card-container {
+  perspective: 1000px;
+  margin: 0 auto var(--spacing-lg);
+  max-width: 400px;
+  width: 100%;
+}
+
+.flashcard__card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.flashcard__card--flipped {
+  transform: rotateY(180deg);
+}
+
+/* Shared face styles */
+.flashcard__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  border-radius: 16px;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Front face */
+.flashcard__face--front {
+  background: white;
+  justify-content: space-between;
+}
+
+/* Groups Chinese + audio + pinyin in the center of the face */
+.flashcard__front-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.flashcard__chinese {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Audio button on flashcard front */
+.flashcard__audio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.flashcard__audio-btn:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+.flashcard__audio-btn--playing {
+  background: var(--color-accent);
+  color: white;
+}
+
+.flashcard__audio-btn--loading {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.flashcard__pinyin {
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  font-style: italic;
+  text-align: center;
+}
+
+.flashcard__tap-hint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  padding-bottom: var(--spacing-sm);
+}
+
+/* Back face */
+.flashcard__face--back {
+  background: #f0fdf4;
+  transform: rotateY(180deg);
+}
+
+.flashcard__translation {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.flashcard__back-chinese {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-md);
+}
+
+.flashcard__back-pinyin {
+  font-size: var(--font-size-small);
+  color: var(--color-accent);
+  font-style: italic;
+  margin-top: var(--spacing-xs);
+}
+
+.flashcard__back-translation {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+}
+
+/* Action buttons */
+.flashcard__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  transition: opacity 0.2s ease;
+}
+
+.flashcard__actions--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flashcard__action-btn {
+  flex: 1;
+  max-width: 180px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flashcard__action-btn--know {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+.flashcard__action-btn--know:hover {
+  background: #16a34a;
+  color: white;
+}
+
+.flashcard__action-btn--unknown {
+  background: #fef2f2;
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.flashcard__action-btn--unknown:hover {
+  background: #dc2626;
+  color: white;
+}
+
+/* Completion screen */
+.flashcard__complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  background: #dcfce7;
+  border: 2px solid #16a34a;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+  text-align: center;
+}
+
+.flashcard__complete-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.flashcard__stats {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-md);
+}
+
+.flashcard__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.flashcard__stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.flashcard__stat-value--known { color: #16a34a; }
+.flashcard__stat-value--unknown { color: #dc2626; }
+
+.flashcard__stat-label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.flashcard__restart-btns {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flashcard__restart-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  background: white;
+  color: var(--color-accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: calc(var(--font-size-small) * var(--font-scale, 1));
+}
+
+.flashcard__restart-btn:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .flashcard-page {
+    padding: var(--spacing-md);
+  }
+
+  .flashcard-page__title {
+    font-size: 1.2rem;
+  }
+
+  .flashcard__chinese {
+    font-size: 2.5rem;
+  }
+
+  .flashcard__card-container {
+    max-width: 320px;
+  }
+
+  .flashcard__action-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* =============================================================================
    ACCESSIBILITY
    ============================================================================= */
 
@@ -2019,6 +2539,58 @@ body {
   text-transform: lowercase;
 }
 
+/* Flashcards link */
+.home__flashcards-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  background: linear-gradient(135deg, #3182ce 0%, #2563eb 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
+}
+
+.home__flashcards-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(49, 130, 206, 0.4);
+}
+
+.home__flashcards-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.home__flashcards-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__flashcards-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.home__flashcards-desc {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.home__flashcards-arrow {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.home__flashcards-link:hover .home__flashcards-arrow {
+  transform: translateX(4px);
+}
+
 /* Stats */
 .home__stats {
   display: flex;
@@ -2084,8 +2656,6 @@ body {
 
 /* Back link in hero */
 .home__back-link {
-  display: inline-block;
-  margin-bottom: var(--spacing-md);
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.9rem;
@@ -2094,6 +2664,30 @@ body {
 
 .home__back-link:hover {
   color: white;
+}
+
+/* Hero top row: back link + language toggle */
+.home__hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.home__lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.home__lang-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Language Groups */

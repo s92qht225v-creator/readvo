@@ -24,6 +24,7 @@ import { MatchingExercise } from './MatchingExercise';
 import { FillBlankExercise } from './FillBlankExercise';
 import { MultipleChoiceExercise } from './MultipleChoiceExercise';
 import { ImageDescribeExercise } from './ImageDescribeExercise';
+import { TableFillExercise } from './TableFillExercise';
 
 export interface SectionProps {
   /** The section data */
@@ -247,6 +248,21 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 image_url: card.image_url,
                 parts: card.parts.map((p) => ({ type: p.type, content: p.content })),
                 answers: [...card.answers],
+              }))}
+              language={language}
+            />
+          ) : section.type === 'activity' && section.tableFillData ? (
+            <TableFillExercise
+              options={section.tableFillData.options.map((opt) => ({
+                id: opt.id,
+                label: opt.label,
+                word: opt.word,
+                pinyin: opt.pinyin,
+              }))}
+              columns={section.tableFillData.columns.map((col) => ({
+                id: col.id,
+                label: col.label,
+                pinyin: col.pinyin,
               }))}
               language={language}
             />

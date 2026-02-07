@@ -5,7 +5,7 @@
     "lessonNumber": 6,
     "pinyin": "Nǐ de shǒujīhào shì duōshao?",
     "title": "你的手机号是多少？",
-    "titleTranslation": "Telefon raqamingiz qancha?",
+    "titleTranslation": "Telefon raqamingiz nechchi?",
     "titleTranslation_ru": "Какой у тебя номер телефона?"
   },
   "sections": [
@@ -51,6 +51,176 @@
           "text_translation_ru": "Овладеть употреблением вопросительного местоимения «怎么» для вопроса о способе или методе действия.",
           "pinyin": "Zhǎngwò yíwèn dàicí 'zěnme' xúnwèn fāngshì de yòngfǎ.",
           "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l6p1-sec-warmup",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l6p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-chaoshi.jpg",
+          "word": "超市",
+          "pinyin": "chāoshì",
+          "translation": "supermarket",
+          "translation_ru": "супермаркет"
+        },
+        {
+          "id": "l6p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-shouji.jpg",
+          "word": "手机",
+          "pinyin": "shǒujī",
+          "translation": "telefon",
+          "translation_ru": "мобильный телефон"
+        },
+        {
+          "id": "l6p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-niunai.jpg",
+          "word": "牛奶",
+          "pinyin": "niúnǎi",
+          "translation": "sut",
+          "translation_ru": "молоко"
+        },
+        {
+          "id": "l6p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-mifan.jpg",
+          "word": "米饭",
+          "pinyin": "mǐfàn",
+          "translation": "guruch",
+          "translation_ru": "рис"
+        },
+        {
+          "id": "l6p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-chuzuche.jpg",
+          "word": "出租车",
+          "pinyin": "chūzūchē",
+          "translation": "taksi",
+          "translation_ru": "такси"
+        },
+        {
+          "id": "l6p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-warmup-wanfan.jpg",
+          "word": "晚饭",
+          "pinyin": "wǎnfàn",
+          "translation": "kechki ovqat",
+          "translation_ru": "ужин"
+        }
+      ]
+    },
+    {
+      "id": "l6p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在校园里，李文向白家月要手机号。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén xiàng Bái Jiāyuè yào shǒujīhào.",
+      "contextTranslation": "Kampusda Li Ven Bai Jiyayueden telefon raqamini so'ramoqda.",
+      "contextTranslation_ru": "В кампусе Ли Вэнь просит у Бай Цзяюэ номер телефона.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-1-1.jpg",
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "现在人们有时也用「电话」指代「手机」。",
+        "pinyin": "Xiànzài rénmen yǒushí yě yòng 'diànhuà' zhǐdài 'shǒujī'.",
+        "translation": "Hozirda odamlar ba'zan \"电话\" so'zini \"手机\" o'rnida ham ishlatishadi.",
+        "translation_ru": "В наше время люди иногда используют слово «电话» вместо «手机»."
+      },
+      "sentences": [
+        {
+          "id": "l6p1-t1-s1",
+          "section": "text",
+          "text_original": "家月，你的手机号是多少？",
+          "text_translation": "Jiyayue, telefon raqaming nechchi?",
+          "text_translation_ru": "Цзяюэ, какой у тебя номер телефона?",
+          "pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l6p1-t1-s2",
+          "section": "text",
+          "text_original": "我的手机号是+33 601493190。",
+          "text_translation": "Mening telefon raqamim +33 601493190.",
+          "text_translation_ru": "Мой номер телефона +33 601493190.",
+          "pinyin": "Wǒ de shǒujīhào shì sān sān liù líng yāo sì jiǔ sān yāo jiǔ líng.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l6p1-t1-s3",
+          "section": "text",
+          "text_original": "我的手机号是+86 13552721160。",
+          "text_translation": "Mening telefon raqamim +86 13552721160.",
+          "text_translation_ru": "Мой номер телефона +86 13552721160.",
+          "pinyin": "Wǒ de shǒujīhào shì bā liù yāo sān wǔ wǔ èr qī èr yāo yāo liù líng.",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l6p1-t1-s4",
+          "section": "text",
+          "text_original": "好的。",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "pinyin": "Hǎo de.",
+          "speaker": "白家月"
+        }
+      ]
+    },
+    {
+      "id": "l6p1-sec-tip2",
+      "type": "tip",
+      "heading": "",
+      "sentences": [],
+      "tip": {
+        "label": "小语助力 Xiaoyu's Tip",
+        "text": "手机号要一位一位地读，而且数字「1」要读成「yāo」。",
+        "pinyin": "Shǒujīhào yào yí wèi yí wèi de dú, érqiě shùzì '1' yào dú chéng 'yāo'.",
+        "translation": "Telefon raqamlarini raqam-raqam o'qish kerak, va \"1\" raqami \"yāo\" deb o'qiladi.",
+        "translation_ru": "Номера телефонов читаются по одной цифре, а цифра «1» произносится как «yāo»."
+      }
+    },
+    {
+      "id": "l6p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%202.mp3",
+      "sentences": [
+        {
+          "id": "l6p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "手机",
+          "text_translation": "uyali telefon",
+          "text_translation_ru": "мобильный телефон",
+          "pinyin": "shǒujī",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "电话",
+          "text_translation": "telefon; telefon qo'ng'irog'i",
+          "text_translation_ru": "телефон; телефонный звонок",
+          "pinyin": "diànhuà",
+          "wordClass": "n."
+        },
+        {
+          "id": "l6p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "号",
+          "text_translation": "raqam",
+          "text_translation_ru": "номер",
+          "pinyin": "hào",
+          "wordClass": "n."
         }
       ]
     }

@@ -4,7 +4,7 @@
  * ReaderLayout - Client Component for Reader Page
  *
  * Handles the entire reader layout including:
- * - Fixed header with Kitobee logo and controls
+ * - Fixed header with ReadVo logo and controls
  * - Page content
  * - Fixed bottom navigation
  *
@@ -16,10 +16,9 @@
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import type { Page as PageType } from '@/types';
-import type { Language } from '@/types/ui-state';
-import { DEFAULT_LANGUAGE } from '@/types/ui-state';
 import { Page } from './Page';
 import { ReaderControls } from './ReaderControls';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface NavLink {
   lessonId: string;
@@ -52,8 +51,8 @@ export function ReaderLayout({
   // Font size: percentage scale (100 = default, range 80-150)
   const [fontSize, setFontSize] = useState(100);
 
-  // Language selection
-  const [language, setLanguage] = useState<Language>(DEFAULT_LANGUAGE);
+  // Language selection (persisted via localStorage)
+  const [language, toggleLanguage] = useLanguage();
 
   // Handlers
   const handlePinyinToggle = useCallback(() => {
@@ -72,9 +71,7 @@ export function ReaderLayout({
     setFontSize((prev) => Math.max(prev - 10, 80));
   }, []);
 
-  const handleLanguageToggle = useCallback(() => {
-    setLanguage((prev) => (prev === 'uz' ? 'ru' : 'uz'));
-  }, []);
+  const handleLanguageToggle = toggleLanguage;
 
   return (
     <div className="reader">
@@ -82,7 +79,7 @@ export function ReaderLayout({
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={bookPath || '/'} className="reader__home">
-            Kitobee
+            ReadVo
           </Link>
           <ReaderControls
             isPinyinVisible={isPinyinVisible}

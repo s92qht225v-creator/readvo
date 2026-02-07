@@ -18,7 +18,7 @@ export default function Error({
       <header className="home__hero">
         <h1 className="home__logo">
           <span className="home__logo-icon">📖</span>
-          Kitobee
+          ReadVo
         </h1>
         <p className="home__tagline">Xatolik yuz berdi</p>
       </header>

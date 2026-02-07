@@ -191,7 +191,7 @@ export class PageValidator {
     // Sentences - allow empty if section has an image or is a matching/fillblank exercise
     if (!section.sentences || section.sentences.length === 0) {
       // Only error if section has no image and is not a matching/fillblank section
-      if (!section.image_url && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus') {
+      if (!section.image_url && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus' && section.type !== 'tip' && section.type !== 'activity') {
         this.addError('EMPTY_SENTENCES', 'Section has no sentences', path);
       }
       return;
@@ -206,8 +206,11 @@ export class PageValidator {
     // Sentence ID
     this.checkUniqueId(sentence.id, `${path}.id`);
 
+    // Image-only sentences (placeholders for textbook scans) skip text checks
+    const isImageOnly = sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '');
+
     // Original text
-    if (!sentence.text_original || sentence.text_original.trim() === '') {
+    if (!isImageOnly && (!sentence.text_original || sentence.text_original.trim() === '')) {
       this.addError(
         'EMPTY_ORIGINAL_TEXT',
         'Sentence has empty original text',
@@ -216,7 +219,7 @@ export class PageValidator {
     }
 
     // Translation
-    if (!sentence.text_translation || sentence.text_translation.trim() === '') {
+    if (!isImageOnly && (!sentence.text_translation || sentence.text_translation.trim() === '')) {
       if (this.options.allowEmptyTranslations) {
         this.addWarning(
           'EMPTY_TRANSLATION',

@@ -11,3 +11,5 @@ export {
 } from './content';
 
 export type { ContentEntry, BookManifest, LessonInfo } from './content';
+
+export { loadFlashcardDeck } from './flashcards';
