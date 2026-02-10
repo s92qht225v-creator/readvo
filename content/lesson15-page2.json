@@ -1,0 +1,251 @@
+{
+  "id": "lesson15-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l15p2-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在李文家，大家边吃饭边谈论假期计划。",
+      "contextPinyin": "Zài Lǐ Wén jiā, dàjiā biān chīfàn biān tánlùn jiàqī jìhuà.",
+      "contextTranslation": "Li Wenning uyida, hamma ovqatlanib, ta'til rejalarini muhokama qilmoqda.",
+      "contextTranslation_ru": "В доме Ли Вэня все обедают и обсуждают планы на каникулы.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l15p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "安妮和她男朋友去年去了("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "西安",
+                "pinyin": "Xī'ān"
+              },
+              {
+                "label": "B",
+                "word": "北京",
+                "pinyin": "Běijīng"
+              },
+              {
+                "label": "C",
+                "word": "学校",
+                "pinyin": "xuéxiào"
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l15p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王老师和李文都是("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "西安人",
+                "pinyin": "Xī'ān rén"
+              },
+              {
+                "label": "B",
+                "word": "北京人",
+                "pinyin": "Běijīng rén"
+              },
+              {
+                "label": "C",
+                "word": "哪里人",
+                "pinyin": "nǎlǐ rén"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l15p2-sec-text2",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l15p2-t2-s1",
+          "section": "text",
+          "text_original": "你们都想去哪儿？",
+          "text_translation": "Sizlar hammangiz qayerga bormoqchisizlar?",
+          "text_translation_ru": "Куда вы все хотите поехать?",
+          "pinyin": "Nǐmen dōu xiǎng qù nǎr?",
+          "speaker": "李文"
+        },
+        {
+          "id": "l15p2-t2-s2",
+          "section": "text",
+          "text_original": "去年我和男朋友去了西安，今年我想去北京。",
+          "text_translation": "O'tgan yili men yigitim bilan Si'anga bordim, bu yil Beyjinga bormoqchiman.",
+          "text_translation_ru": "В прошлом году мы с парнем ездили в Сиань, в этом году я хочу поехать в Пекин.",
+          "pinyin": "Qùnián wǒ hé nánpéngyou qù le Xī'ān, jīnnián wǒ xiǎng qù Běijīng.",
+          "speaker": "安妮"
+        },
+        {
+          "id": "l15p2-t2-s3",
+          "section": "text",
+          "text_original": "前几年我去了西安，非常好玩儿。今年我也想去北京。",
+          "text_translation": "Bir necha yil oldin men Si'anga bordim, juda qiziqarli edi. Bu yil men ham Beyjinga bormoqchiman.",
+          "text_translation_ru": "Несколько лет назад я ездил в Сиань, было очень интересно. В этом году я тоже хочу поехать в Пекин.",
+          "pinyin": "Qián jǐ nián wǒ qù le Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l15p2-t2-s4",
+          "section": "text",
+          "text_original": "我和王老师都是北京人，北京非常漂亮。",
+          "text_translation": "Men va Vang o'qituvchi ikkalamiz Beyjinglikmiz, Beyijng juda chiroyli.",
+          "text_translation_ru": "Мы с учителем Ваном оба из Пекина, Пекин очень красивый.",
+          "pinyin": "Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
+          "speaker": "李文"
+        }
+      ]
+    },
+    {
+      "id": "l15p2-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l15p2-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 安妮今年想去哪儿？",
+          "text_translation": "Anni bu yil qayerga bormoqchi?",
+          "text_translation_ru": "Куда Анни хочет поехать в этом году?",
+          "pinyin": "Ānnī jīnnián xiǎng qù nǎr?"
+        },
+        {
+          "id": "l15p2-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 前几年白家月去了哪儿？",
+          "text_translation": "Bir necha yil oldin Bai Jiyayue qayerga borgan?",
+          "text_translation_ru": "Куда ездила Бай Цзяюэ несколько лет назад?",
+          "pinyin": "Qián jǐ nián Bái Jiāyuè qù le nǎr?"
+        }
+      ]
+    },
+    {
+      "id": "l15p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%204.mp3",
+      "sentences": [
+        {
+          "id": "l15p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "去年",
+          "text_translation": "o'tgan yil (ot)",
+          "text_translation_ru": "прошлый год (сущ.)",
+          "pinyin": "qùnián",
+          "wordClass": "n.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l15p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "男朋友",
+          "text_translation": "yigit; sevgilisi (ot)",
+          "text_translation_ru": "парень; молодой человек (сущ.)",
+          "pinyin": "nánpéngyou",
+          "wordClass": "n.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l15p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "几",
+          "text_translation": "bir necha; nechta (son)",
+          "text_translation_ru": "несколько; сколько (числ.)",
+          "pinyin": "jǐ",
+          "wordClass": "num.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l15p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "年",
+          "text_translation": "yil (ot)",
+          "text_translation_ru": "год (сущ.)",
+          "pinyin": "nián",
+          "wordClass": "n.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l15p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "好玩儿",
+          "text_translation": "qiziqarli; ko'ngilchali (sifat)",
+          "text_translation_ru": "интересный; весёлый (прил.)",
+          "pinyin": "hǎowánr",
+          "wordClass": "adj.",
+          "vocabNumber": 7
+        }
+      ]
+    },
+    {
+      "id": "l15p2-sec-vocab-proper",
+      "type": "vocabulary",
+      "heading": "专有名词",
+      "subheading": "Atoqli otlar",
+      "subheading_ru": "Имена собственные",
+      "sentences": [
+        {
+          "id": "l15p2-vp-s1",
+          "section": "vocabulary",
+          "text_original": "西安",
+          "text_translation": "Si'an (shahar nomi)",
+          "text_translation_ru": "Сиань (название города)",
+          "pinyin": "Xī'ān",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l15p2-vp-s2",
+          "section": "vocabulary",
+          "text_original": "北京",
+          "text_translation": "Beyijng (shahar nomi)",
+          "text_translation_ru": "Пекин (название города)",
+          "pinyin": "Běijīng",
+          "vocabNumber": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "id": "lesson14-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l14p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在家里，刘明和王一雪在谈论孩子的升学情况。",
+      "contextPinyin": "Zài jiālǐ, Liú Míng hé Wáng Yīxuě zài tánlùn háizi de shēngxué qíngkuàng.",
+      "contextTranslation": "Uyda Liu Ming va Wang Yixue bolalarning maktabga kirishi haqida gaplashyapti.",
+      "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ обсуждают поступление детей в школу.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l14p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "明年刘明和王一雪的女儿("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "上小学",
+                "pinyin": "shàng xiǎoxué"
+              },
+              {
+                "label": "B",
+                "word": "上中学",
+                "pinyin": "shàng zhōngxué"
+              },
+              {
+                "label": "C",
+                "word": "上大学",
+                "pinyin": "shàng dàxué"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l14p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")孩子们都忙了。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "上学",
+                "pinyin": "Shàngxué"
+              },
+              {
+                "label": "B",
+                "word": "上学前",
+                "pinyin": "Shàngxué qián"
+              },
+              {
+                "label": "C",
+                "word": "上学后",
+                "pinyin": "Shàngxué hòu"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p3-sec-text3",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l14p3-t3-s1",
+          "section": "text",
+          "text_original": "明年女儿上中学。",
+          "text_translation": "Kelasi yili qizimiz o'rta maktabga boradi.",
+          "text_translation_ru": "В следующем году дочь пойдёт в среднюю школу.",
+          "pinyin": "Míngnián nǚ'ér shàng zhōngxué.",
+          "speaker": "刘明"
+        },
+        {
+          "id": "l14p3-t3-s2",
+          "section": "text",
+          "text_original": "对。儿子也上小学了。",
+          "text_translation": "To'g'ri. O'g'limiz ham boshlang'ich maktabga boradi.",
+          "text_translation_ru": "Верно. И сын тоже пойдёт в начальную школу.",
+          "pinyin": "Duì. Érzi yě shàng xiǎoxué le.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l14p3-t3-s3",
+          "section": "text",
+          "text_original": "我们家有了一个中学生。",
+          "text_translation": "Bizning oilamizda o'rta maktab o'quvchisi paydo bo'ldi.",
+          "text_translation_ru": "В нашей семье появился ученик средней школы.",
+          "pinyin": "Wǒmen jiā yǒule yí gè zhōngxuéshēng.",
+          "speaker": "刘明"
+        },
+        {
+          "id": "l14p3-t3-s4",
+          "section": "text",
+          "text_original": "还有了一个小学生。",
+          "text_translation": "Va yana bir boshlang'ich maktab o'quvchisi ham.",
+          "text_translation_ru": "И ещё один ученик начальной школы.",
+          "pinyin": "Hái yǒule yí gè xiǎoxuéshēng.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l14p3-t3-s5",
+          "section": "text",
+          "text_original": "上学后，他们都忙了。",
+          "text_translation": "Maktabga borgandan keyin, ularning hammasi band bo'ladi.",
+          "text_translation_ru": "После начала учёбы они все станут занятыми.",
+          "pinyin": "Shàngxué hòu, tāmen dōu máng le.",
+          "speaker": "刘明"
+        },
+        {
+          "id": "l14p3-t3-s6",
+          "section": "text",
+          "text_original": "是的。太晚了，睡觉吧。",
+          "text_translation": "Ha. Juda kech bo'ldi, uxlaylik.",
+          "text_translation_ru": "Да. Уже слишком поздно, давай спать.",
+          "pinyin": "Shì de. Tài wǎn le, shuìjiào ba.",
+          "speaker": "王一雪"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "还有两个近似的代词，一个是\"她们\"，指称自己和对方以外的若干女性；另一个是\"它们\"，指称不止一个的事物等。三个词读音一样，但所指意义不同。",
+        "translation": "Yana ikkita o'xshash olmosh bor: biri \"她们\" — o'zingiz va suhbatdoshingizdan boshqa bir nechta ayollarni bildiradi; ikkinchisi \"它们\" — bir nechta narsa va boshqalarni bildiradi. Uch so'zning talaffuzi bir xil, lekin ma'nolari farq qiladi.",
+        "translation_ru": "Есть ещё два похожих местоимения: одно — «她们», обозначающее нескольких женщин, кроме говорящего и собеседника; другое — «它们», обозначающее несколько предметов и т. д. Все три слова произносятся одинаково, но имеют разные значения."
+      }
+    },
+    {
+      "id": "l14p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%206.mp3",
+      "sentences": [
+        {
+          "id": "l14p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "明年",
+          "text_translation": "kelasi yil (ot)",
+          "text_translation_ru": "следующий год (сущ.)",
+          "pinyin": "míngnián",
+          "wordClass": "n.",
+          "vocabNumber": 16
+        },
+        {
+          "id": "l14p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "上",
+          "text_translation": "boshlamoq; ...ga bormoq (belgilangan vaqtda) (fe'l)",
+          "text_translation_ru": "начинать; приступать (к чему-л. в определённое время) (глагол)",
+          "pinyin": "shàng",
+          "wordClass": "v.",
+          "vocabNumber": 17
+        },
+        {
+          "id": "l14p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "中学",
+          "text_translation": "o'rta maktab (ot)",
+          "text_translation_ru": "средняя школа (сущ.)",
+          "pinyin": "zhōngxué",
+          "wordClass": "n.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l14p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "小学",
+          "text_translation": "boshlang'ich maktab (ot)",
+          "text_translation_ru": "начальная школа (сущ.)",
+          "pinyin": "xiǎoxué",
+          "wordClass": "n.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l14p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "中学生",
+          "text_translation": "o'rta maktab o'quvchisi (ot)",
+          "text_translation_ru": "ученик средней школы (сущ.)",
+          "pinyin": "zhōngxuéshēng",
+          "wordClass": "n.",
+          "vocabNumber": 20
+        },
+        {
+          "id": "l14p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "小学生",
+          "text_translation": "boshlang'ich maktab o'quvchisi (ot)",
+          "text_translation_ru": "ученик начальной школы (сущ.)",
+          "pinyin": "xiǎoxuéshēng",
+          "wordClass": "n.",
+          "vocabNumber": 21
+        },
+        {
+          "id": "l14p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "上学",
+          "text_translation": "maktabga bormoq; o'qishga kirmoq (fe'l)",
+          "text_translation_ru": "ходить в школу; начать учёбу (глагол)",
+          "pinyin": "shàngxué",
+          "wordClass": "v.",
+          "vocabNumber": 22
+        },
+        {
+          "id": "l14p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "他们",
+          "text_translation": "ular (olmosh)",
+          "text_translation_ru": "они (мест.)",
+          "pinyin": "tāmen",
+          "wordClass": "pron.",
+          "vocabNumber": 23
+        },
+        {
+          "id": "l14p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "她们",
+          "text_translation": "ular (ayollar haqida) (olmosh)",
+          "text_translation_ru": "они (о женщинах) (мест.)",
+          "pinyin": "tāmen",
+          "wordClass": "pron.",
+          "vocabNumber": 24
+        },
+        {
+          "id": "l14p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "它们",
+          "text_translation": "ular (narsalar haqida) (olmosh)",
+          "text_translation_ru": "они (о предметах) (мест.)",
+          "pinyin": "tāmen",
+          "wordClass": "pron.",
+          "vocabNumber": 25
+        },
+        {
+          "id": "l14p3-v-s11",
+          "section": "vocabulary",
+          "text_original": "晚",
+          "text_translation": "kech (sifat)",
+          "text_translation_ru": "поздно (прил.)",
+          "pinyin": "wǎn",
+          "wordClass": "adj.",
+          "vocabNumber": 26
+        }
+      ]
+    },
+    {
+      "id": "l14p3-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l14p3-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 明年女儿和儿子都上小学吗？",
+          "text_translation": "Kelasi yili qiz va o'g'il ikkalasi ham boshlang'ich maktabga boradimi?",
+          "text_translation_ru": "В следующем году и дочь, и сын пойдут в начальную школу?",
+          "pinyin": "Míngnián nǚ'ér hé érzi dōu shàng xiǎoxué ma?"
+        },
+        {
+          "id": "l14p3-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 上学后，他们忙不忙？",
+          "text_translation": "Maktabga borgandan keyin, ular bandmi yoki yo'qmi?",
+          "text_translation_ru": "После начала учёбы они будут заняты или нет?",
+          "pinyin": "Shàngxué hòu, tāmen máng bu máng?"
+        }
+      ]
+    },
+    {
+      "id": "l14p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "上学",
+            "pinyin": "shàngxué"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "了",
+            "pinyin": "le"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "都",
+            "pinyin": "dōu"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "听见",
+            "pinyin": "tīngjiàn"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "有的",
+            "pinyin": "yǒude"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l14p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "我写("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")很多汉字。"
+              }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l14p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "他没("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")老师说什么。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l14p3-fb-q3a",
+            "number": 3,
+            "speaker": "白家月",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你们昨天在车上做什么了？"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l14p3-fb-q3b",
+            "speaker": "陈天中",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我看了一本书，("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")人在睡觉。"
+              }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l14p3-fb-q4a",
+            "number": 4,
+            "speaker": "刘　明",
+            "parts": [
+              {
+                "type": "text",
+                "content": "明年("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")后，他们("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")忙了。"
+              }
+            ],
+            "correctOptionId": "A",
+            "correctOptionIds": [
+              "A",
+              "C"
+            ]
+          },
+          {
+            "id": "l14p3-fb-q4b",
+            "speaker": "王一雪",
+            "parts": [
+              {
+                "type": "text",
+                "content": "是的。"
+              }
+            ],
+            "correctOptionId": "_static"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l14p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "姐姐和弟弟"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "都上学了"
+            ]
+          },
+          {
+            "id": "l14p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们昨天"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "，没去看电影。"
+              }
+            ],
+            "answers": [
+              "上了课"
+            ]
+          },
+          {
+            "id": "l14p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "鸡蛋、面包我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "都要了"
+            ]
+          },
+          {
+            "id": "l14p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "老师说：\""
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "！\""
+              }
+            ],
+            "answers": [
+              "请大家不要说话"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "双人活动。两人一组，说一说上星期六或星期日你都做了什么。Juft bo'lib ishlang. O'tgan shanba yoki yakshanba kuni nima qilganingizni aytib bering.",
+      "instruction_ru": "双人活动。两人一组，说一说上星期六或星期日你都做了什么。Работа в парах. Расскажите друг другу, что вы делали в прошлую субботу или воскресенье.",
+      "sentences": [
+        {
+          "id": "l14p3-act-s1",
+          "section": "activity",
+          "text_original": "我星期六上午上了中文课，中午吃了饭后休息了一下，下午去商店买了一些东西，晚上和朋友吃了晚饭。……",
+          "text_translation": "Men shanba kuni ertalab xitoycha darsga bordim, tushda ovqatlangandan keyin biroz dam oldim, tushdan keyin do'konga borib narsa sotib oldim, kechqurun do'stlarim bilan kechki ovqat yedim. ……",
+          "text_translation_ru": "В субботу утром я ходил на урок китайского, в обед поел и немного отдохнул, днём сходил в магазин за покупками, вечером поужинал с друзьями. ……",
+          "pinyin": "Wǒ xīngqīliù shàngwǔ shàngle Zhōngwén kè, zhōngwǔ chīle fàn hòu xiūxile yíxià, xiàwǔ qù shāngdiàn mǎile yìxiē dōngxi, wǎnshang hé péngyǒu chīle wǎnfàn. ……",
+          "speaker": "小语的例子"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "id": "lesson14-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l14p2-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在课堂上，王一飞询问学生们的学习情况。",
+      "contextPinyin": "Zài kètáng shàng, Wáng Yīfēi xúnwèn xuéshēngmen de xuéxí qíngkuàng.",
+      "contextTranslation": "Darsda Vang Ifey talabalardan o'qish holati haqida so'rayapti.",
+      "contextTranslation_ru": "На уроке Ван Ифэй спрашивает студентов об их успехах в учёбе.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l14p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "同学们("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")汉语了。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "想说",
+                "pinyin": "xiǎng shuō"
+              },
+              {
+                "label": "B",
+                "word": "不会说",
+                "pinyin": "bú huì shuō"
+              },
+              {
+                "label": "C",
+                "word": "都会说",
+                "pinyin": "dōu huì shuō"
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l14p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "陈天中("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")王老师在说什么。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "听见了",
+                "pinyin": "tīngjiànle"
+              },
+              {
+                "label": "B",
+                "word": "没听见",
+                "pinyin": "méi tīngjiàn"
+              },
+              {
+                "label": "C",
+                "word": "不想听",
+                "pinyin": "bù xiǎng tīng"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p2-sec-text2",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l14p2-t2-s1",
+          "section": "text",
+          "text_original": "你们会说汉语了，也会写汉字了吗？",
+          "text_translation": "Sizlar xitoycha gapirishni o'rgandingizlar, xitoy hierogliflarini yozishni ham bilar bo'ldingizlarmi?",
+          "text_translation_ru": "Вы уже умеете говорить по-китайски, а писать иероглифы тоже научились?",
+          "pinyin": "Nǐmen huì shuō Hànyǔ le, yě huì xiě Hànzì le ma?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l14p2-t2-s2",
+          "section": "text",
+          "text_original": "我们都会写了。",
+          "text_translation": "Biz hammamiz yozishni bilamiz.",
+          "text_translation_ru": "Мы все уже умеем писать.",
+          "pinyin": "Wǒmen dōu huì xiě le.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l14p2-t2-s3",
+          "section": "text",
+          "text_original": "老师，我听不见。",
+          "text_translation": "O'qituvchi, men eshitmayapman.",
+          "text_translation_ru": "Учитель, я не слышу.",
+          "pinyin": "Lǎoshī, wǒ tīng bú jiàn.",
+          "speaker": "陈天中"
+        },
+        {
+          "id": "l14p2-t2-s4",
+          "section": "text",
+          "text_original": "请大家不要说话！请听老师的问题：你们都会写哪些汉字了？",
+          "text_translation": "Iltimos, hamma gaplashmang! O'qituvchining savolini tinglang: sizlar qaysi hierogliflarni yozishni bilasizlar?",
+          "text_translation_ru": "Пожалуйста, не разговаривайте! Послушайте вопрос учителя: какие иероглифы вы уже умеете писать?",
+          "pinyin": "Qǐng dàjiā búyào shuōhuà! Qǐng tīng lǎoshī de wèntí: Nǐmen dōu huì xiě nǎxiē Hànzì le?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l14p2-t2-s5",
+          "section": "text",
+          "text_original": "我会写这些字了，您看！",
+          "text_translation": "Men mana bu hierogliflarni yozishni bildim, qarang!",
+          "text_translation_ru": "Я уже умею писать эти иероглифы, посмотрите!",
+          "pinyin": "Wǒ huì xiě zhèxiē zì le, nín kàn!",
+          "speaker": "陈天中"
+        }
+      ]
+    },
+    {
+      "id": "l14p2-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l14p2-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 白家月会写汉字了吗？",
+          "text_translation": "Bay Jyayue xitoy hierogliflarini yozishni biladimi?",
+          "text_translation_ru": "Бай Цзяюэ уже умеет писать иероглифы?",
+          "pinyin": "Bái Jiāyuè huì xiě Hànzì le ma?"
+        },
+        {
+          "id": "l14p2-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 陈天中会写汉字了吗？",
+          "text_translation": "Chen Tianzhong xitoy hierogliflarini yozishni biladimi?",
+          "text_translation_ru": "Чэнь Тяньчжун уже умеет писать иероглифы?",
+          "pinyin": "Chén Tiānzhōng huì xiě Hànzì le ma?"
+        }
+      ]
+    },
+    {
+      "id": "l14p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%204.mp3",
+      "sentences": [
+        {
+          "id": "l14p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "写",
+          "text_translation": "yozmoq (fe'l)",
+          "text_translation_ru": "писать (глагол)",
+          "pinyin": "xiě",
+          "wordClass": "v.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l14p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "都",
+          "text_translation": "hammasi; barchasi (ravish)",
+          "text_translation_ru": "все; оба (нареч.)",
+          "pinyin": "dōu",
+          "wordClass": "adv.",
+          "vocabNumber": 9
+        },
+        {
+          "id": "l14p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "听见",
+          "text_translation": "eshitmoq (fe'l)",
+          "text_translation_ru": "услышать (глагол)",
+          "pinyin": "tīngjiàn",
+          "wordClass": "v.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l14p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "不要",
+          "text_translation": "...ma; qilma (ravish)",
+          "text_translation_ru": "не надо; не нужно (нареч.)",
+          "pinyin": "búyào",
+          "wordClass": "adv.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l14p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "说话",
+          "text_translation": "gapirmoq; so'zlamoq (fe'l)",
+          "text_translation_ru": "говорить; разговаривать (глагол)",
+          "pinyin": "shuōhuà",
+          "wordClass": "v.",
+          "vocabNumber": 12
+        },
+        {
+          "id": "l14p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "听",
+          "text_translation": "tinglamoq; eshitmoq (fe'l)",
+          "text_translation_ru": "слушать; слышать (глагол)",
+          "pinyin": "tīng",
+          "wordClass": "v.",
+          "vocabNumber": 13
+        },
+        {
+          "id": "l14p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "哪些",
+          "text_translation": "qaysilari; qaysi (olmosh)",
+          "text_translation_ru": "какие; которые (мест.)",
+          "pinyin": "nǎxiē",
+          "wordClass": "pron.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l14p2-v-s8",
+          "section": "vocabulary",
+          "text_original": "字",
+          "text_translation": "harf; hieroglif (ot)",
+          "text_translation_ru": "иероглиф; буква (сущ.)",
+          "pinyin": "zì",
+          "wordClass": "n.",
+          "vocabNumber": 15
+        }
+      ]
+    },
+    {
+      "id": "l14p2-sec-vocab-proper",
+      "type": "vocabulary",
+      "heading": "专有名词",
+      "subheading": "Atoqli otlar",
+      "subheading_ru": "Имена собственные",
+      "sentences": [
+        {
+          "id": "l14p2-vp-s1",
+          "section": "vocabulary",
+          "text_original": "汉语",
+          "text_translation": "xitoy tili",
+          "text_translation_ru": "китайский язык",
+          "pinyin": "Hànyǔ",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l14p2-vp-s2",
+          "section": "vocabulary",
+          "text_original": "汉字",
+          "text_translation": "xitoy hieroglifi",
+          "text_translation_ru": "китайский иероглиф",
+          "pinyin": "Hànzì",
+          "vocabNumber": 2
+        }
+      ]
+    },
+    {
+      "id": "l14p2-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l14p2-g3-title",
+          "section": "grammar",
+          "text_original": "范围副词\"都\"",
+          "text_translation": "Umumlashtiruvchi ravish \"都\"",
+          "text_translation_ru": "Обобщающее наречие «都»",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l14p2-g3-explain",
+          "section": "grammar",
+          "text_original": "范围副词\"都\"表示全部、总括，总括的对象在\"都\"前。否定时，否定词在\"都\"后。",
+          "text_translation": "Umumlashtiruvchi ravish \"都\" barcha, hammasini anglatadi, umumlashtirilgan ob'yekt \"都\" oldida keladi. Inkor qilishda inkor so'zi \"都\" dan keyin keladi.",
+          "text_translation_ru": "Обобщающее наречие «都» означает «все, в целом». Обобщаемый объект ставится перед «都». При отрицании отрицательное слово ставится после «都»."
+        },
+        {
+          "id": "l14p2-g3-ex1",
+          "section": "grammar",
+          "text_original": "(1) 我们都会写了。",
+          "pinyin": "Wǒmen dōu huì xiě le.",
+          "text_translation": "Biz hammamiz yozishni bilamiz.",
+          "text_translation_ru": "Мы все уже умеем писать."
+        },
+        {
+          "id": "l14p2-g3-ex2",
+          "section": "grammar",
+          "text_original": "(2) 我和我的朋友们都去。",
+          "pinyin": "Wǒ hé wǒ de péngyoumen dōu qù.",
+          "text_translation": "Men va do'stlarim hammamiz boramiz.",
+          "text_translation_ru": "Я и мои друзья — все пойдём."
+        },
+        {
+          "id": "l14p2-g3-ex3",
+          "section": "grammar",
+          "text_original": "(3) 同学们都没听见。",
+          "pinyin": "Tóngxuémen dōu méi tīngjiàn.",
+          "text_translation": "Talabalarning hammasi eshitmadi.",
+          "text_translation_ru": "Все одноклассники не услышали."
+        }
+      ]
+    }
+  ]
+}

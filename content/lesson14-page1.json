@@ -1,0 +1,558 @@
+{
+  "id": "lesson14-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 14,
+    "title": "我看了一个电影",
+    "pinyin": "Wǒ kànle yí gè diànyǐng",
+    "titleTranslation": "Men bir kino ko'rdim",
+    "titleTranslation_ru": "Я посмотрел фильм"
+  },
+  "sections": [
+    {
+      "id": "l14p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l14p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用动态助词\"了(2)\"表示动作行为已经发生或完成。",
+          "text_translation": "Dinamik yordamchi so'z \"了(2)\" ni eshitib tushunish va harakat yoki ish allaqachon sodir bo'lganini yoki tugaganini ifodalash uchun ishlatish.",
+          "text_translation_ru": "Уметь воспринимать на слух и использовать динамическую частицу «了(2)» для выражения того, что действие уже произошло или завершилось.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng dòngtài zhùcí 'le (2)' biǎoshì dòngzuò xíngwéi yǐjīng fāshēng huò wánchéng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l14p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握范围副词\"都\"的用法。",
+          "text_translation": "\"都\" qamrov ravishining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование наречия охвата «都».",
+          "pinyin": "Zhǎngwò fànwéi fùcí 'dōu' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l14p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握部分离合词的基本用法。",
+          "text_translation": "Ba'zi ajraladigan so'zlarning asosiy ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить основные правила использования разделяемых слов.",
+          "pinyin": "Zhǎngwò bùfen líhécí de jīběn yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l14p1-obj-s4",
+          "section": "objectives",
+          "text_original": "了解并能描述学习情况。",
+          "text_translation": "O'quv holatini tushunish va tasvirlay olish.",
+          "text_translation_ru": "Уметь понимать и описывать ситуацию с учёбой.",
+          "pinyin": "Liǎojiě bìng néng miáoshù xuéxí qíngkuàng.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l14p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l14p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-train.jpg",
+          "word": "火车",
+          "pinyin": "huǒchē",
+          "translation": "poyezd",
+          "translation_ru": "поезд"
+        },
+        {
+          "id": "l14p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-see.jpg",
+          "word": "看见",
+          "pinyin": "kànjiàn",
+          "translation": "ko'rmoq",
+          "translation_ru": "увидеть"
+        },
+        {
+          "id": "l14p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-hanzi.jpg",
+          "word": "汉字",
+          "pinyin": "Hànzì",
+          "translation": "xitoy iyeroglifi",
+          "translation_ru": "иероглиф"
+        },
+        {
+          "id": "l14p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-listen.jpg",
+          "word": "听",
+          "pinyin": "tīng",
+          "translation": "tinglamoq",
+          "translation_ru": "слушать"
+        },
+        {
+          "id": "l14p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-student.jpg",
+          "word": "小学生",
+          "pinyin": "xiǎoxuéshēng",
+          "translation": "boshlang'ich sinf o'quvchisi",
+          "translation_ru": "ученик начальной школы"
+        },
+        {
+          "id": "l14p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-warmup-speak.jpg",
+          "word": "说话",
+          "pinyin": "shuōhuà",
+          "translation": "gapirmoq",
+          "translation_ru": "разговаривать"
+        }
+      ]
+    },
+    {
+      "id": "l14p1-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在教室里，下课后，白家月和陈天中在谈论上一次课外旅行。",
+      "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Bái Jiāyuè hé Chén Tiānzhōng zài tánlùn shàng yí cì kèwài lǚxíng.",
+      "contextTranslation": "Sinfxonada, darsdan keyin, Bai Jiyayue va Chen Tianzhong o'tgan safar haqida gaplashyapti.",
+      "contextTranslation_ru": "В классе, после урока, Бай Цзяюэ и Чэнь Тяньчжун обсуждают прошлую школьную поездку.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l14p1-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "陈天中("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")王老师。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "正在看",
+                "pinyin": "zhèngzài kàn"
+              },
+              {
+                "label": "B",
+                "word": "没看见",
+                "pinyin": "méi kànjiàn"
+              },
+              {
+                "label": "C",
+                "word": "看见了",
+                "pinyin": "kànjiànle"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l14p1-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "陈天中在火车上("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "读书",
+                "pinyin": "dúshū"
+              },
+              {
+                "label": "B",
+                "word": "找王老师",
+                "pinyin": "zhǎo Wáng lǎoshī"
+              },
+              {
+                "label": "C",
+                "word": "看了一个电影",
+                "pinyin": "kànle yí gè diànyǐng"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p1-sec-text1",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l14p1-t1-s1",
+          "section": "text",
+          "text_original": "你们上火车后看见王老师了吗？",
+          "text_translation": "Sizlar poyezdga chiqqandan keyin Vang o'qituvchini ko'rdingizlarmi?",
+          "text_translation_ru": "Вы видели учителя Вана после посадки на поезд?",
+          "pinyin": "Nǐmen shàng huǒchē hòu kànjiàn Wáng lǎoshī le ma?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l14p1-t1-s2",
+          "section": "text",
+          "text_original": "没看见。中午车开后，有些人在看书，有些人睡觉了。",
+          "text_translation": "Ko'rmadik. Tushda poyezd jo'nagandan keyin, ba'zilar kitob o'qiyotgan edi, ba'zilari uxlab qoldi.",
+          "text_translation_ru": "Не видели. После отправления поезда в полдень некоторые читали книги, а некоторые уснули.",
+          "pinyin": "Méi kànjiàn. Zhōngwǔ chē kāi hòu, yǒuxiē rén zài kàn shū, yǒuxiē rén shuìjiào le.",
+          "speaker": "陈天中"
+        },
+        {
+          "id": "l14p1-t1-s3",
+          "section": "text",
+          "text_original": "你呢？",
+          "text_translation": "Senga nima?",
+          "text_translation_ru": "А ты?",
+          "pinyin": "Nǐ ne?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l14p1-t1-s4",
+          "section": "text",
+          "text_original": "我看了一个电影。",
+          "text_translation": "Men bir kino ko'rdim.",
+          "text_translation_ru": "Я посмотрел фильм.",
+          "pinyin": "Wǒ kànle yí gè diànyǐng.",
+          "speaker": "陈天中"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "本课\"有些\"也可以说\"有的\"。",
+        "translation": "Bu darsdagi \"有些\" ni \"有的\" deb ham aytish mumkin.",
+        "translation_ru": "В этом уроке «有些» можно также сказать «有的»."
+      }
+    },
+    {
+      "id": "l14p1-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l14p1-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 车开后，大家在做什么？",
+          "text_translation": "Poyezd jo'nagandan keyin, hamma nima qilayotgan edi?",
+          "text_translation_ru": "Что все делали после отправления поезда?",
+          "pinyin": "Chē kāi hòu, dàjiā zài zuò shénme?"
+        },
+        {
+          "id": "l14p1-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 陈天中为什么没看见王老师？",
+          "text_translation": "Chen Tianzhong nega Vang o'qituvchini ko'rmadi?",
+          "text_translation_ru": "Почему Чэнь Тяньчжун не видел учителя Вана?",
+          "pinyin": "Chén Tiānzhōng wèi shénme méi kànjiàn Wáng lǎoshī?"
+        }
+      ]
+    },
+    {
+      "id": "l14p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%202.mp3",
+      "sentences": [
+        {
+          "id": "l14p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "上",
+          "text_translation": "chiqmoq; minmoq (fe'l)",
+          "text_translation_ru": "подниматься; садиться (на транспорт) (глагол)",
+          "pinyin": "shàng",
+          "wordClass": "v.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l14p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "火车",
+          "text_translation": "poyezd (ot)",
+          "text_translation_ru": "поезд (сущ.)",
+          "pinyin": "huǒchē",
+          "wordClass": "n.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l14p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "中午",
+          "text_translation": "tush; peshin (ot)",
+          "text_translation_ru": "полдень (сущ.)",
+          "pinyin": "zhōngwǔ",
+          "wordClass": "n.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l14p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "开",
+          "text_translation": "jo'namoq; harakatga kelmoq (transport haqida) (fe'l)",
+          "text_translation_ru": "отправляться; уезжать (о транспорте) (глагол)",
+          "pinyin": "kāi",
+          "wordClass": "v.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l14p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "有些",
+          "text_translation": "ba'zi; ba'zilari (olmosh)",
+          "text_translation_ru": "некоторые (мест.)",
+          "pinyin": "yǒuxiē",
+          "wordClass": "pron.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l14p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "有的",
+          "text_translation": "ba'zi; ba'zilari (olmosh)",
+          "text_translation_ru": "некоторые (мест.)",
+          "pinyin": "yǒude",
+          "wordClass": "pron.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l14p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "了",
+          "text_translation": "fe'ldan keyin kelib, harakatning tugaganini bildiruvchi yuklama",
+          "text_translation_ru": "частица после глагола, указывающая на завершённость действия",
+          "pinyin": "le",
+          "wordClass": "part.",
+          "vocabNumber": 7
+        }
+      ]
+    },
+    {
+      "id": "l14p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l14p1-g1-s1",
+          "section": "grammar",
+          "text_original": "动态助词\"了(2)\"",
+          "text_translation": "Dinamik yordamchi so'z \"了 (2)\"",
+          "text_translation_ru": "Динамическая частица «了 (2)»",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l14p1-g1-s2",
+          "section": "grammar",
+          "text_original": "动态助词\"了(2)\"在动词后，表示动作行为已经发生或完成。否定时用\"没\"，不加\"了\"。",
+          "text_translation": "\"了 (2)\" dinamik yordamchi so'zi fe'ldan keyin kelib, harakat allaqachon sodir bo'lganini yoki tugaganini bildiradi. Inkor shaklda \"没\" ishlatiladi, \"了\" qo'shilmaydi.",
+          "text_translation_ru": "Динамическая частица «了 (2)» ставится после глагола и указывает на то, что действие уже произошло или завершилось. При отрицании используется «没», а «了» опускается."
+        },
+        {
+          "id": "l14p1-g1-s3",
+          "section": "grammar",
+          "text_original": "(1) 我看了一个电影。",
+          "pinyin": "Wǒ kànle yí gè diànyǐng.",
+          "text_translation": "Men bir kino ko'rdim.",
+          "text_translation_ru": "Я посмотрел фильм."
+        },
+        {
+          "id": "l14p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(2) 我买了一个新电脑。",
+          "pinyin": "Wǒ mǎile yí gè xīn diànnǎo.",
+          "text_translation": "Men yangi kompyuter sotib oldim.",
+          "text_translation_ru": "Я купил новый компьютер."
+        },
+        {
+          "id": "l14p1-g1-s5",
+          "section": "grammar",
+          "text_original": "(3) 我昨天没去商店买东西。",
+          "pinyin": "Wǒ zuótiān méi qù shāngdiàn mǎi dōngxi.",
+          "text_translation": "Men kecha do'konga narsa sotib olishga bormadim.",
+          "text_translation_ru": "Я вчера не ходил в магазин за покупками."
+        }
+      ]
+    },
+    {
+      "id": "l14p1-sec-dialogue-exercise",
+      "type": "imagedescribe",
+      "instruction": "完成对话。Dialoglarni to'ldiring.",
+      "instruction_ru": "完成对话。Дополните диалоги.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l14p1-dex-s1a",
+            "speaker": "A",
+            "dialogueNumber": "1",
+            "parts": [
+              { "type": "text", "content": "你去哪儿" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "？" }
+            ],
+            "pinyin": "Nǐ qù nǎr ___?",
+            "translation": "Qayerga boryapsan ___?",
+            "translation_ru": "Куда ты идёшь ___?",
+            "answers": ["了"]
+          },
+          {
+            "id": "l14p1-dex-s1b",
+            "speaker": "B",
+            "dialogueNumber": "",
+            "parts": [
+              { "type": "text", "content": "我今天有课，去学校上" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "课，还在那儿吃" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "午饭。" }
+            ],
+            "pinyin": "Wǒ jīntiān yǒu kè, qù xuéxiào shàng ___ kè, hái zài nàr chī ___ wǔfàn.",
+            "translation": "Bugun darsim bor, maktabga ___ darsga boraman, u yerda ___ tushlik ham qilaman.",
+            "translation_ru": "У меня сегодня занятия, иду в школу на ___ урок, ещё там ___ пообедаю.",
+            "answers": ["了", "了"]
+          },
+          {
+            "id": "l14p1-dex-s2a",
+            "speaker": "A",
+            "dialogueNumber": "2",
+            "parts": [
+              { "type": "text", "content": "我昨天看" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "电影，" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "去超市。你呢？" }
+            ],
+            "pinyin": "Wǒ zuótiān kàn ___ diànyǐng, ___ qù chāoshì. Nǐ ne?",
+            "translation": "Men kecha ___ kino ko'rdim, ___ supermarketga bordim. Senga nima?",
+            "translation_ru": "Я вчера посмотрел(а) ___ фильм, ___ сходил(а) в супермаркет. А ты?",
+            "answers": ["了", "了"]
+          },
+          {
+            "id": "l14p1-dex-s2b",
+            "speaker": "B",
+            "dialogueNumber": "",
+            "parts": [
+              { "type": "text", "content": "我昨天去" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "超市，" },
+              { "type": "blank", "content": "" },
+              { "type": "text", "content": "看电影。" }
+            ],
+            "pinyin": "Wǒ zuótiān qù ___ chāoshì, ___ kàn diànyǐng.",
+            "translation": "Men kecha ___ supermarketga bordim, ___ kino ko'rdim.",
+            "translation_ru": "Я вчера сходил(а) ___ в супермаркет, ___ посмотрел(а) фильм.",
+            "answers": ["了", "没"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l14p1-sec-grammar2",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l14p1-g2-s1",
+          "section": "grammar",
+          "text_original": "离合词(1)",
+          "text_translation": "Ajraladigan so'zlar (1)",
+          "text_translation_ru": "Разделяемые слова (1)",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l14p1-g2-s2",
+          "section": "grammar",
+          "text_original": "本册中的\"上课、下课、上班、下班、说话、读书、睡觉、看病、生病\"等是一类特殊的动词结构，可分可合，合在一起时是词，中间加其他成分则变成短语，所以被称为离合词。离合词分离时，可插入的成分有限。",
+          "text_translation": "Bu kitobdagi \"上课, 下课, 上班, 下班, 说话, 读书, 睡觉, 看病, 生病\" kabi so'zlar maxsus fe'l tuzilmalari bo'lib, ajralishi ham, birlashishi ham mumkin. Birlashganda so'z, orasiga boshqa element qo'shilganda esa ibora bo'ladi, shuning uchun ular ajraladigan so'zlar deb ataladi. Ajraladigan so'zlar ajralganda, orasiga qo'shilishi mumkin bo'lgan elementlar cheklangan.",
+          "text_translation_ru": "Такие слова в этом учебнике, как «上课, 下课, 上班, 下班, 说话, 读书, 睡觉, 看病, 生病», представляют собой особый тип глагольных структур, которые могут разделяться и соединяться. В соединённом виде они являются словами, а при добавлении других элементов между ними превращаются в словосочетания, поэтому их называют разделяемыми словами. При разделении количество вставляемых элементов ограничено."
+        },
+        {
+          "id": "l14p1-g2-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух.",
+          "pinyin": "Dàshēng lǎngdú."
+        }
+      ],
+      "grammarTableData": {
+        "headers": [
+          "合",
+          "分"
+        ],
+        "subHeaders": [
+          "birlashgan shakl",
+          "ajratilgan shakl"
+        ],
+        "subHeaders_ru": [
+          "слитная форма",
+          "раздельная форма"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "睡觉",
+              "睡了觉；睡了一觉"
+            ]
+          },
+          {
+            "cells": [
+              "上课",
+              "上了课；上中文课"
+            ]
+          },
+          {
+            "cells": [
+              "下班",
+              "下了班"
+            ]
+          },
+          {
+            "cells": [
+              "生病",
+              "生了病；生了大病"
+            ]
+          },
+          {
+            "cells": [
+              "说话",
+              "说了话；说了很多话"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

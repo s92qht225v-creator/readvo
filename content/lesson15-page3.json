@@ -1,0 +1,592 @@
+{
+  "id": "lesson15-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l15p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在教室外，白家月、安妮和王老师在谈论去北京旅游的事。",
+      "contextPinyin": "Zài jiàoshì wài, Bái Jiāyuè, Ānnī hé Wáng lǎoshī zài tánlùn qù Běijīng lǚyóu de shì.",
+      "contextTranslation": "Sinf tashqarisida Bai Jiyayue, Anni va Vang o'qituvchi Beyjinga sayohat qilish haqida gaplashmoqda.",
+      "contextTranslation_ru": "За пределами класса Бай Цзяюэ, Анни и учитель Ван обсуждают поездку в Пекин.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l15p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "白家月和安妮坐("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")去北京。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "火车",
+                "pinyin": "huǒchē"
+              },
+              {
+                "label": "B",
+                "word": "飞机",
+                "pinyin": "fēijī"
+              },
+              {
+                "label": "C",
+                "word": "出租车",
+                "pinyin": "chūzūchē"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l15p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王老师的("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")都在北京。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "家人",
+                "pinyin": "jiārén"
+              },
+              {
+                "label": "B",
+                "word": "朋友",
+                "pinyin": "péngyou"
+              },
+              {
+                "label": "C",
+                "word": "学生",
+                "pinyin": "xuéshēng"
+              }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l15p3-sec-text3",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l15p3-t3-s1",
+          "section": "text",
+          "text_original": "你们的飞机到北京要几个小时？",
+          "text_translation": "Sizlarning samolyotingiz Beyjinga necha soat uchadi?",
+          "text_translation_ru": "Сколько часов ваш самолёт летит до Пекина?",
+          "pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l15p3-t3-s2",
+          "section": "text",
+          "text_original": "九个小时。",
+          "text_translation": "To'qqiz soat.",
+          "text_translation_ru": "Девять часов.",
+          "pinyin": "Jiǔ gè xiǎoshí.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l15p3-t3-s3",
+          "section": "text",
+          "text_original": "我家人都在北京，星期天我姐姐也有时间，她可以去机场接你们。你们也可以住我家。",
+          "text_translation": "Oilamdagilarning hammasi Beyjingda, yakshanba kuni opam ham bo'sh, u aeroportga sizlarni kutib olishga borishi mumkin. Sizlar bizning uyda ham yashashingiz mumkin.",
+          "text_translation_ru": "Вся моя семья в Пекине, в воскресенье моя старшая сестра тоже свободна, она может встретить вас в аэропорту. Вы также можете остановиться у нас дома.",
+          "pinyin": "Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen. Nǐmen yě kěyǐ zhù wǒ jiā.",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l15p3-t3-s4",
+          "section": "text",
+          "text_original": "我们星期日早上八点到大兴机场，早不早？",
+          "text_translation": "Biz yakshanba kuni ertalab soat sakkizda Dashin aeroportiga yetib boramiz, ertami?",
+          "text_translation_ru": "Мы прилетаем в воскресенье утром в восемь часов в аэропорт Дасин, не рано ли?",
+          "pinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo?",
+          "speaker": "安妮"
+        },
+        {
+          "id": "l15p3-t3-s5",
+          "section": "text",
+          "text_original": "不早。",
+          "text_translation": "Erta emas.",
+          "text_translation_ru": "Не рано.",
+          "pinyin": "Bù zǎo.",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l15p3-t3-s6",
+          "section": "text",
+          "text_original": "谢谢老师！那我们和您姐姐在大兴机场见！",
+          "text_translation": "Rahmat, o'qituvchi! Unday bo'lsa biz opangiz bilan Dashin aeroportida ko'rishamiz!",
+          "text_translation_ru": "Спасибо, учитель! Тогда мы встретимся с вашей сестрой в аэропорту Дасин!",
+          "pinyin": "Xièxie lǎoshī! Nà wǒmen hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+          "speaker": "白家月"
+        }
+      ]
+    },
+    {
+      "id": "l15p3-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l15p3-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 大兴机场在哪儿？",
+          "text_translation": "Dashin aeroporti qayerda?",
+          "text_translation_ru": "Где находится аэропорт Дасин?",
+          "pinyin": "Dàxīng Jīchǎng zài nǎr?"
+        },
+        {
+          "id": "l15p3-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 王老师的姐姐可以去接白家月和安妮吗？",
+          "text_translation": "Vang o'qituvchining opasi Bai Jiyayue va Annini kutib olishga borishi mumkinmi?",
+          "text_translation_ru": "Может ли старшая сестра учителя Вана встретить Бай Цзяюэ и Анни?",
+          "pinyin": "Wáng lǎoshī de jiějie kěyǐ qù jiē Bái Jiāyuè hé Ānnī ma?"
+        }
+      ]
+    },
+    {
+      "id": "l15p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%206.mp3",
+      "sentences": [
+        {
+          "id": "l15p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "飞机",
+          "text_translation": "samolyot (ot)",
+          "text_translation_ru": "самолёт (сущ.)",
+          "pinyin": "fēijī",
+          "wordClass": "n.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l15p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "要",
+          "text_translation": "kerak; ...ga vaqt ketadi (fe'l)",
+          "text_translation_ru": "нужно; требуется (глагол)",
+          "pinyin": "yào",
+          "wordClass": "v.",
+          "vocabNumber": 9
+        },
+        {
+          "id": "l15p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "小时",
+          "text_translation": "soat (ot)",
+          "text_translation_ru": "час (сущ.)",
+          "pinyin": "xiǎoshí",
+          "wordClass": "n.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l15p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "家人",
+          "text_translation": "oila a'zolari (ot)",
+          "text_translation_ru": "члены семьи (сущ.)",
+          "pinyin": "jiārén",
+          "wordClass": "n.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l15p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "时间",
+          "text_translation": "vaqt (ot)",
+          "text_translation_ru": "время (сущ.)",
+          "pinyin": "shíjiān",
+          "wordClass": "n.",
+          "vocabNumber": 12
+        },
+        {
+          "id": "l15p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "机场",
+          "text_translation": "aeroport (ot)",
+          "text_translation_ru": "аэропорт (сущ.)",
+          "pinyin": "jīchǎng",
+          "wordClass": "n.",
+          "vocabNumber": 13
+        },
+        {
+          "id": "l15p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "接",
+          "text_translation": "kutib olmoq; uchratmoq (fe'l)",
+          "text_translation_ru": "встречать; принимать (глагол)",
+          "pinyin": "jiē",
+          "wordClass": "v.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l15p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "住",
+          "text_translation": "yashamoq; turmoq (fe'l)",
+          "text_translation_ru": "жить; проживать (глагол)",
+          "pinyin": "zhù",
+          "wordClass": "v.",
+          "vocabNumber": 15
+        },
+        {
+          "id": "l15p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "早",
+          "text_translation": "erta (sifat)",
+          "text_translation_ru": "рано (прил.)",
+          "pinyin": "zǎo",
+          "wordClass": "adj.",
+          "vocabNumber": 16
+        },
+        {
+          "id": "l15p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "那",
+          "text_translation": "unday bo'lsa; u holda (bog'lovchi)",
+          "text_translation_ru": "тогда; в таком случае (союз)",
+          "pinyin": "nà",
+          "wordClass": "conj.",
+          "vocabNumber": 17
+        }
+      ]
+    },
+    {
+      "id": "l15p3-sec-vocab-proper",
+      "type": "vocabulary",
+      "heading": "专有名词",
+      "subheading": "Atoqli otlar",
+      "subheading_ru": "Имена собственные",
+      "sentences": [
+        {
+          "id": "l15p3-vp-s1",
+          "section": "vocabulary",
+          "text_original": "大兴机场",
+          "text_translation": "Dashin aeroporti",
+          "text_translation_ru": "Аэропорт Дасин",
+          "pinyin": "Dàxīng Jīchǎng",
+          "vocabNumber": 3
+        }
+      ]
+    },
+    {
+      "id": "l15p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "爱",
+            "pinyin": "ài"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "时间",
+            "pinyin": "shíjiān"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "早不早",
+            "pinyin": "zǎo bu zǎo"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "都",
+            "pinyin": "dōu"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "飞机",
+            "pinyin": "fēijī"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l15p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "这本书有15课，我们("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")学了。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l15p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "我的家人都("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")喝茶。"
+              }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l15p3-fb-q3a",
+            "number": 3,
+            "speaker": "陈天中",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们明天晚上六点到，你觉得("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")？"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l15p3-fb-q3b",
+            "speaker": "李　文",
+            "parts": [
+              {
+                "type": "text",
+                "content": "不早。"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l15p3-fb-q4a",
+            "number": 4,
+            "speaker": "王一飞",
+            "parts": [
+              {
+                "type": "text",
+                "content": "她们想坐("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")去北京，你们呢？"
+              }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l15p3-fb-q4b",
+            "speaker": "陈天中",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们没有("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")，不能出去玩。"
+              }
+            ],
+            "correctOptionId": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l15p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l15p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我爱吃面包，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "也爱喝牛奶"
+            ]
+          },
+          {
+            "id": "l15p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "去年我去"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "北京了"
+            ]
+          },
+          {
+            "id": "l15p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "王一飞的姐姐"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "去机场接她们"
+            ]
+          },
+          {
+            "id": "l15p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "王老师是"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "人，她"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "北京",
+              "家人都在北京"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l15p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "角色扮演。三个人分别扮演李文、陈天中和白家月，李文邀请陈天中和白家月做客，一起做中国菜。Rol o'yini. Uch kishi Li Wen, Chen Tianzhong va Bai Jiyayue rollarini o'ynaydi. Li Wen Chen Tianzhong va Bai Jiyayueni mehmon qilib chaqiradi, birga xitoy taomini tayyorlaydi.",
+      "instruction_ru": "角色扮演。三个人分别扮演李文、陈天中和白家月，李文邀请陈天中和白家月做客，一起做中国菜。Ролевая игра. Три человека играют роли Ли Вэня, Чэнь Тяньчжуна и Бай Цзяюэ. Ли Вэнь приглашает Чэнь Тяньчжуна и Бай Цзяюэ в гости, вместе готовить китайскую еду.",
+      "sentences": [
+        {
+          "id": "l15p3-act-s1",
+          "section": "activity",
+          "text_original": "李　文：天中、家月，你们星期六有时间吗？\n陈天中：我有时间。\n白家月：我也有时间。\n李　文：太好了！你们都来我家吧，我们做中国菜吃，怎么样？\n……",
+          "text_translation": "Li Wen: Tyandjung, Jiyayue, sizlar shanba kuni bo'shmisilzar?\nChen Tianzhong: Mening vaqtim bor.\nBai Jiyayue: Mening ham vaqtim bor.\nLi Wen: Juda yaxshi! Hammangiz mening uyimga kelinglar, xitoy taomini tayyorlab yeylik, qanday?\n……",
+          "text_translation_ru": "Ли Вэнь: Тяньчжун, Цзяюэ, вы свободны в субботу?\nЧэнь Тяньчжун: У меня есть время.\nБай Цзяюэ: У меня тоже есть время.\nЛи Вэнь: Отлично! Приходите все ко мне домой, будем вместе готовить китайскую еду, как вам?\n……",
+          "pinyin": "Lǐ Wén: Tiānzhōng, Jiāyuè, nǐmen xīngqīliù yǒu shíjiān ma?\nChén Tiānzhōng: Wǒ yǒu shíjiān.\nBái Jiāyuè: Wǒ yě yǒu shíjiān.\nLǐ Wén: Tài hǎo le! Nǐmen dōu lái wǒ jiā ba, wǒmen zuò Zhōngguó cài chī, zěnmeyàng?\n……",
+          "speaker": "小语的例子"
+        }
+      ]
+    },
+    {
+      "id": "l15p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyudan bonus",
+      "subheading_ru": "Бонус от Сяоюй",
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201%2015-1.mp4",
+      "sentences": []
+    }
+  ]
+}

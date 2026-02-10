@@ -1,0 +1,450 @@
+{
+  "id": "lesson13-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 13,
+    "title": "请给我一杯茶",
+    "pinyin": "Qǐng gěi wǒ yì bēi chá",
+    "titleTranslation": "Menga bir piyola choy bering",
+    "titleTranslation_ru": "Дайте мне, пожалуйста, чашку чая"
+  },
+  "sections": [
+    {
+      "id": "l13p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l13p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用双宾语句(1)表示向别人提问或给予别人东西等。",
+          "text_translation": "Ikki to'ldiruvchili gap (1) ni eshitib tushunish va birovga savol berish yoki birovga narsa berish kabi ma'nolarni ifodalash uchun ishlatish.",
+          "text_translation_ru": "Уметь воспринимать на слух и использовать предложения с двойным дополнением (1) для выражения обращения с вопросом или передачи чего-либо кому-либо.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng shuāng bīnyǔ jù (1) biǎoshì xiàng biérén tíwèn huò jǐyǔ biérén dōngxi děng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l13p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握能愿动词\"可以\"的用法。",
+          "text_translation": "\"可以\" modal fe'lining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование модального глагола «可以».",
+          "pinyin": "Zhǎngwò néngyuàn dòngcí 'kěyǐ' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l13p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握\"动词+一下\"结构的用法。",
+          "text_translation": "\"Fe'l+一下\" tuzilmasining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование конструкции «глагол+一下».",
+          "pinyin": "Zhǎngwò 'dòngcí + yíxià' jiégòu de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l13p1-obj-s4",
+          "section": "objectives",
+          "text_original": "了解点餐常用语。",
+          "text_translation": "Ovqat buyurtma qilishda ishlatiladigan umumiy iboralarni tushunish.",
+          "text_translation_ru": "Познакомиться с типичными выражениями для заказа еды.",
+          "pinyin": "Liǎojiě diǎncān chángyòng yǔ.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l13p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-bread.jpg",
+          "word": "面包",
+          "pinyin": "miànbāo",
+          "translation": "non",
+          "translation_ru": "хлеб"
+        },
+        {
+          "id": "l13p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-speak.jpg",
+          "word": "说",
+          "pinyin": "shuō",
+          "translation": "gapirmoq",
+          "translation_ru": "говорить"
+        },
+        {
+          "id": "l13p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-give.jpg",
+          "word": "给",
+          "pinyin": "gěi",
+          "translation": "bermoq",
+          "translation_ru": "давать"
+        },
+        {
+          "id": "l13p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-tea.jpg",
+          "word": "茶",
+          "pinyin": "chá",
+          "translation": "choy",
+          "translation_ru": "чай"
+        },
+        {
+          "id": "l13p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-half.jpg",
+          "word": "一半",
+          "pinyin": "yíbàn",
+          "translation": "yarmi",
+          "translation_ru": "половина"
+        },
+        {
+          "id": "l13p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-warmup-invite.jpg",
+          "word": "请",
+          "pinyin": "qǐng",
+          "translation": "iltimos qilmoq; taklif qilmoq",
+          "translation_ru": "просить; приглашать"
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在教室里，下课后，白家月问王老师问题。",
+      "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Bái Jiāyuè wèn Wáng lǎoshī wèntí.",
+      "contextTranslation": "Sinfxonada, darsdan keyin, Bai Jiyayue Vang o'qituvchidan savol so'radi.",
+      "contextTranslation_ru": "В классе, после урока, Бай Цзяюэ задала вопрос учителю Вану.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l13p1-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "白家月想再问王老师("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "一个问题",
+                "pinyin": "yí gè wèntí"
+              },
+              {
+                "label": "B",
+                "word": "两个问题",
+                "pinyin": "liǎng gè wèntí"
+              },
+              {
+                "label": "C",
+                "word": "这个问题",
+                "pinyin": "zhège wèntí"
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l13p1-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王老师("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")那里卖不卖手机。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "知道",
+                "pinyin": "zhīdào"
+              },
+              {
+                "label": "B",
+                "word": "不知道",
+                "pinyin": "bù zhīdào"
+              },
+              {
+                "label": "C",
+                "word": "也想知道",
+                "pinyin": "yě xiǎng zhīdào"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l13p1-sec-text1",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l13p1-t1-s1",
+          "section": "text",
+          "text_original": "王老师，我可以再问您一个问题吗？",
+          "text_translation": "Vang o'qituvchi, men sizga yana bitta savol berishim mumkinmi?",
+          "text_translation_ru": "Учитель Ван, можно задать вам ещё один вопрос?",
+          "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l13p1-t1-s2",
+          "section": "text",
+          "text_original": "可以。你有什么问题？",
+          "text_translation": "Bo'ladi. Qanday savoling bor?",
+          "text_translation_ru": "Можно. Какой у тебя вопрос?",
+          "pinyin": "Kěyǐ. Nǐ yǒu shénme wèntí?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l13p1-t1-s3",
+          "section": "text",
+          "text_original": "那个小店卖不卖手机？",
+          "text_translation": "O'sha kichik do'konda telefon sotiladimi?",
+          "text_translation_ru": "В том магазинчике продаются телефоны?",
+          "pinyin": "Nàge xiǎo diàn mài bu mài shǒujī?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l13p1-t1-s4",
+          "section": "text",
+          "text_original": "我不知道。你可以打电话问一下。",
+          "text_translation": "Bilmayman. Telefon qilib so'rab ko'rishingiz mumkin.",
+          "text_translation_ru": "Я не знаю. Ты можешь позвонить и спросить.",
+          "pinyin": "Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "speaker": "王一飞"
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l13p1-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 白家月还有什么问题？",
+          "text_translation": "Bai Jiyayuening yana qanday savoli bor?",
+          "text_translation_ru": "Какой ещё вопрос есть у Бай Цзяюэ?",
+          "pinyin": "Bái Jiāyuè hái yǒu shénme wèntí?"
+        },
+        {
+          "id": "l13p1-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 王老师对白家月说什么了？",
+          "text_translation": "Vang o'qituvchi Bai Jiyayuega nima dedi?",
+          "text_translation_ru": "Что учитель Ван сказал Бай Цзяюэ?",
+          "pinyin": "Wáng lǎoshī duì Bái Jiāyuè shuō shénme le?"
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%202.mp3",
+      "sentences": [
+        {
+          "id": "l13p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "可以",
+          "text_translation": "mumkin; bo'ladi (modal fe'l)",
+          "text_translation_ru": "можно; разрешено (мод. глагол)",
+          "pinyin": "kěyǐ",
+          "wordClass": "mod.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l13p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "再",
+          "text_translation": "yana; qayta (ravish)",
+          "text_translation_ru": "ещё раз; снова (нареч.)",
+          "pinyin": "zài",
+          "wordClass": "adv.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l13p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "问题",
+          "text_translation": "savol; muammo (ot)",
+          "text_translation_ru": "вопрос; проблема (сущ.)",
+          "pinyin": "wèntí",
+          "wordClass": "n.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l13p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "卖",
+          "text_translation": "sotmoq (fe'l)",
+          "text_translation_ru": "продавать (глагол)",
+          "pinyin": "mài",
+          "wordClass": "v.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l13p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "打电话",
+          "text_translation": "telefon qilmoq",
+          "text_translation_ru": "звонить по телефону",
+          "pinyin": "dǎ diànhuà",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l13p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "一下",
+          "text_translation": "bir marta; bir oz (fe'ldan keyin to'ldiruvchi sifatida ishlatiladi, harakat yoki urinishni bildiradi) (son-o'lchov)",
+          "text_translation_ru": "один раз; разок (используется после глагола как дополнение, указывая на действие или попытку) (числ.-сч. сл.)",
+          "pinyin": "yíxià",
+          "wordClass": "num.-m.",
+          "vocabNumber": 6
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l13p1-g1-s1",
+          "section": "grammar",
+          "text_original": "能愿动词\"可以\"",
+          "text_translation": "Modal fe'l \"可以\"",
+          "text_translation_ru": "Модальный глагол «可以»",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l13p1-g1-s2",
+          "section": "grammar",
+          "text_original": "能愿动词\"可以\"位于动词前，表示可能、能够或许可。",
+          "text_translation": "\"可以\" modal fe'li fe'l oldida kelib, imkoniyat, qobiliyat yoki ruxsatni bildiradi.",
+          "text_translation_ru": "Модальный глагол «可以» ставится перед глаголом и выражает возможность, способность или разрешение."
+        },
+        {
+          "id": "l13p1-g1-s3",
+          "section": "grammar",
+          "text_original": "(1) 我可以再问您一个问题吗？",
+          "pinyin": "Wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+          "text_translation": "Men sizga yana bitta savol berishim mumkinmi?",
+          "text_translation_ru": "Можно задать вам ещё один вопрос?"
+        },
+        {
+          "id": "l13p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(2) 你们可以看这本书。",
+          "pinyin": "Nǐmen kěyǐ kàn zhè běn shū.",
+          "text_translation": "Siz bu kitobni ko'rishingiz mumkin.",
+          "text_translation_ru": "Вы можете посмотреть эту книгу."
+        },
+        {
+          "id": "l13p1-g1-s5a",
+          "section": "grammar",
+          "text_original": "A：我可以坐吗？",
+          "pinyin": "Wǒ kěyǐ zuò ma?",
+          "text_translation": "O'tirishim mumkinmi?",
+          "text_translation_ru": "Можно сесть?",
+          "speaker": "A",
+          "dialogueNumber": "3"
+        },
+        {
+          "id": "l13p1-g1-s5b",
+          "section": "grammar",
+          "text_original": "B：可以，请坐！",
+          "pinyin": "Kěyǐ, qǐng zuò!",
+          "text_translation": "Bo'ladi, marhamat o'tiring!",
+          "text_translation_ru": "Можно, садитесь, пожалуйста!",
+          "speaker": "B",
+          "dialogueNumber": ""
+        }
+      ]
+    },
+    {
+      "id": "l13p1-sec-grammar2",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l13p1-g2-s1",
+          "section": "grammar",
+          "text_original": "\"动词+一下\"结构",
+          "text_translation": "\"Fe'l+一下\" tuzilmasi",
+          "text_translation_ru": "Конструкция «глагол+一下»",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l13p1-g2-s2",
+          "section": "grammar",
+          "text_original": "本课\"动词+一下\"结构表示做一次或试着做，动作时间短。",
+          "text_translation": "Bu darsdagi \"fe'l+一下\" tuzilmasi bir marta qilish yoki sinab ko'rishni bildiradi, harakat vaqti qisqa.",
+          "text_translation_ru": "В этом уроке конструкция «глагол+一下» означает выполнение действия один раз или попытку, действие кратковременное."
+        },
+        {
+          "id": "l13p1-g2-s3",
+          "section": "grammar",
+          "text_original": "(1) 你可以打电话问一下。",
+          "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "text_translation": "Telefon qilib so'rab ko'rishingiz mumkin.",
+          "text_translation_ru": "Ты можешь позвонить и спросить."
+        },
+        {
+          "id": "l13p1-g2-s4",
+          "section": "grammar",
+          "text_original": "(2) 请休息一下。",
+          "pinyin": "Qǐng xiūxi yíxià.",
+          "text_translation": "Iltimos, biroz dam oling.",
+          "text_translation_ru": "Пожалуйста, немного отдохните."
+        },
+        {
+          "id": "l13p1-g2-s5",
+          "section": "grammar",
+          "text_original": "(3) 你看一下吧。",
+          "pinyin": "Nǐ kàn yíxià ba.",
+          "text_translation": "Bir ko'rib ko'ring.",
+          "text_translation_ru": "Посмотри-ка."
+        }
+      ]
+    }
+  ]
+}

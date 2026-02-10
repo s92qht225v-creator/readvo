@@ -1,0 +1,360 @@
+{
+  "id": "lesson15-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 15,
+    "title": "大兴机场见！",
+    "pinyin": "Dàxīng Jīchǎng jiàn!",
+    "titleTranslation": "Dashin aeroportida ko'rishamiz!",
+    "titleTranslation_ru": "Увидимся в аэропорту Дасин!"
+  },
+  "sections": [
+    {
+      "id": "l15p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l15p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用有关出行的基本词汇和句式。",
+          "text_translation": "Sayohatga oid asosiy so'z va gap tuzilmalarini eshitib tushunish va ishlatish.",
+          "text_translation_ru": "Уметь воспринимать на слух и использовать основную лексику и конструкции, связанные с путешествиями.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng yǒuguān chūxíng de jīběn cíhuì hé jùshì.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l15p1-obj-s2",
+          "section": "objectives",
+          "text_original": "能听懂并使用复合趋向补语。",
+          "text_translation": "Murakkab yo'nalish to'ldiruvchisini eshitib tushunish va ishlatish.",
+          "text_translation_ru": "Уметь воспринимать на слух и использовать составные направительные дополнения.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng fùhé qūxiàng bǔyǔ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l15p1-obj-s3",
+          "section": "objectives",
+          "text_original": "了解中国人的饮食文化。",
+          "text_translation": "Xitoy ovqatlanish madaniyatini bilish.",
+          "text_translation_ru": "Познакомиться с китайской культурой питания.",
+          "pinyin": "Liǎojiě Zhōngguórén de yǐnshí wénhuà.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l15p1-obj-s4",
+          "section": "objectives",
+          "text_original": "了解北京。",
+          "text_translation": "Pekin haqida bilish.",
+          "text_translation_ru": "Узнать о Пекине.",
+          "pinyin": "Liǎojiě Běijīng.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l15p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l15p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-beijing.jpg",
+          "word": "北京",
+          "pinyin": "Běijīng",
+          "translation": "Pekin",
+          "translation_ru": "Пекин"
+        },
+        {
+          "id": "l15p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-fun.jpg",
+          "word": "好玩儿",
+          "pinyin": "hǎowánr",
+          "translation": "qiziqarli",
+          "translation_ru": "интересно; весело"
+        },
+        {
+          "id": "l15p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-airplane.jpg",
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "translation": "samolyot",
+          "translation_ru": "самолёт"
+        },
+        {
+          "id": "l15p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-breakfast.jpg",
+          "word": "早饭",
+          "pinyin": "zǎofàn",
+          "translation": "nonushta",
+          "translation_ru": "завтрак"
+        },
+        {
+          "id": "l15p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-early.jpg",
+          "word": "早",
+          "pinyin": "zǎo",
+          "translation": "erta",
+          "translation_ru": "рано; утренний"
+        },
+        {
+          "id": "l15p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-warmup-boyfriend.jpg",
+          "word": "男朋友",
+          "pinyin": "nánpéngyou",
+          "translation": "yigit do'st",
+          "translation_ru": "парень; молодой человек"
+        }
+      ]
+    },
+    {
+      "id": "l15p1-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在李文家，李文邀请陈天中、白家月等朋友品尝中餐。",
+      "contextPinyin": "Zài Lǐ Wén jiā, Lǐ Wén yāoqǐng Chén Tiānzhōng, Bái Jiāyuè děng péngyǒu pǐncháng zhōngcān.",
+      "contextTranslation": "Li Wenning uyida, Li Wen Chen Tianzhong, Bai Jiyayue va boshqa do'stlarini xitoy taomini tatib ko'rishga taklif qildi.",
+      "contextTranslation_ru": "Дома у Ли Вэня Ли Вэнь пригласил Чэнь Тяньчжуна, Бай Цзяюэ и других друзей попробовать китайскую еду.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l15p1-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "李文问大家("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")吃哪个菜。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "好",
+                "pinyin": "hǎo"
+              },
+              {
+                "label": "B",
+                "word": "爱",
+                "pinyin": "ài"
+              },
+              {
+                "label": "C",
+                "word": "不爱",
+                "pinyin": "bú ài"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l15p1-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "李文说：\"大家("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。\""
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "吃点儿",
+                "pinyin": "chī diǎnr"
+              },
+              {
+                "label": "B",
+                "word": "少吃点儿",
+                "pinyin": "shǎo chī diǎnr"
+              },
+              {
+                "label": "C",
+                "word": "多吃点儿",
+                "pinyin": "duō chī diǎnr"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l15p1-sec-text1",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l15p1-t1-s1",
+          "section": "text",
+          "text_original": "你们爱吃哪个菜？",
+          "text_translation": "Sizlar qaysi taomni yoqtirasizlar?",
+          "text_translation_ru": "Какое блюдо вам нравится?",
+          "pinyin": "Nǐmen ài chī nǎge cài?",
+          "speaker": "李文"
+        },
+        {
+          "id": "l15p1-t1-s2",
+          "section": "text",
+          "text_original": "我喜欢这个，也喜欢那个。",
+          "text_translation": "Men buni ham yoqtiraman, uni ham yoqtiraman.",
+          "text_translation_ru": "Мне нравится и это, и то.",
+          "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l15p1-t1-s3",
+          "section": "text",
+          "text_original": "这些菜都好吃，还很好看。",
+          "text_translation": "Bu taomlarning hammasi mazali, yana juda chiroyli.",
+          "text_translation_ru": "Все эти блюда вкусные и ещё очень красивые.",
+          "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+          "speaker": "陈天中"
+        },
+        {
+          "id": "l15p1-t1-s4",
+          "section": "text",
+          "text_original": "我爱吃中国菜，也喜欢做。大家多吃点儿。",
+          "text_translation": "Men xitoy taomini yoqtiraman, tayyorlashni ham yaxshi ko'raman. Hamma ko'proq yeyishsin.",
+          "text_translation_ru": "Я люблю китайскую еду и люблю готовить. Ешьте побольше.",
+          "pinyin": "Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
+          "speaker": "李文"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "劝饭是一种中式餐桌文化，体现了中国人的热情好客。",
+        "translation": "Ovqatga undash xitoy dasturxon madaniyatining bir turi bo'lib, xitoyliklarning mehmon do'stligini aks ettiradi.",
+        "translation_ru": "Уговаривать гостей есть больше — часть китайской застольной культуры, отражающая гостеприимство китайцев."
+      }
+    },
+    {
+      "id": "l15p1-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l15p1-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 白家月爱吃哪个菜？",
+          "text_translation": "Bai Jiyayue qaysi taomni yoqtiradi?",
+          "text_translation_ru": "Какое блюдо нравится Бай Цзяюэ?",
+          "pinyin": "Bái Jiāyuè ài chī nǎge cài?"
+        },
+        {
+          "id": "l15p1-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 李文做饭好吃不好吃？",
+          "text_translation": "Li Wen tayyorlagan ovqat mazalimi yoki yo'qmi?",
+          "text_translation_ru": "Вкусно ли готовит Ли Вэнь?",
+          "pinyin": "Lǐ Wén zuòfàn hǎochī bu hǎochī?"
+        }
+      ]
+    },
+    {
+      "id": "l15p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%202.mp3",
+      "sentences": [
+        {
+          "id": "l15p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "爱",
+          "text_translation": "yoqtirmoq; sevmoq (fe'l)",
+          "text_translation_ru": "любить; нравиться (глагол)",
+          "pinyin": "ài",
+          "wordClass": "v.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l15p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "哪个",
+          "text_translation": "qaysi (olmosh)",
+          "text_translation_ru": "какой; который (мест.)",
+          "pinyin": "nǎge",
+          "wordClass": "pron.",
+          "vocabNumber": 2
+        }
+      ]
+    },
+    {
+      "id": "l15p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l15p1-g1-title",
+          "section": "grammar",
+          "text_original": "并列复句\"……，还/也……\"",
+          "text_translation": "Teng bog'langan qo'shma gap \"……, 还/也……\"",
+          "text_translation_ru": "Сочинительное сложное предложение «……, 还/也……»",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l15p1-g1-explain",
+          "section": "grammar",
+          "text_original": "并列复句由两个或两个以上逻辑关联、结构对称的小句构成。本册学习并列复句\"……，还/也……\"。",
+          "text_translation": "Teng bog'langan qo'shma gap ikki yoki undan ortiq mantiqiy bog'liq, tuzilishi simmetrik bo'lgan kichik gaplardan tuziladi. Bu kitobda \"……, 还/也……\" teng bog'langan qo'shma gap o'rganiladi.",
+          "text_translation_ru": "Сочинительное сложное предложение состоит из двух или более логически связанных и структурно параллельных частей. В этом учебнике изучается сочинительное сложное предложение «……, 还/也……»."
+        },
+        {
+          "id": "l15p1-g1-ex1",
+          "section": "grammar",
+          "text_original": "(1) 我喜欢这个，也喜欢那个。",
+          "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+          "text_translation": "Men buni yoqtiraman, uni ham yoqtiraman.",
+          "text_translation_ru": "Мне нравится это, а также то."
+        },
+        {
+          "id": "l15p1-g1-ex2",
+          "section": "grammar",
+          "text_original": "(2) 王老师是北京人，李文也是北京人。",
+          "pinyin": "Wáng lǎoshī shì Běijīng rén, Lǐ Wén yě shì Běijīng rén.",
+          "text_translation": "Vang o'qituvchi Pekinlik, Li Wen ham Pekinlik.",
+          "text_translation_ru": "Учитель Ван из Пекина, Ли Вэнь тоже из Пекина."
+        },
+        {
+          "id": "l15p1-g1-ex3",
+          "section": "grammar",
+          "text_original": "(3) 我喜欢喝中国茶，还喜欢吃中国菜。",
+          "pinyin": "Wǒ xǐhuan hē Zhōngguó chá, hái xǐhuan chī Zhōngguó cài.",
+          "text_translation": "Men xitoy choyini ichishni yoqtiraman, xitoy taomini yeyishni ham yoqtiraman.",
+          "text_translation_ru": "Я люблю пить китайский чай, а ещё люблю есть китайскую еду."
+        }
+      ]
+    }
+  ]
+}

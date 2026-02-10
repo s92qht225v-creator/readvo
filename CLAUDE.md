@@ -69,9 +69,9 @@ Example routes:
 │   │   └── ui-state.ts        # UI state type definitions
 │   └── validation/             # Content validation
 ├── content/                    # JSON lesson data (HSK 1)
-│   ├── lesson1-page1.json     # Lessons 1-6: complete (3 pages each)
-│   ├── ...                    # Lesson 7: page 1 complete
-│   ├── lesson7-page1.json
+│   ├── lesson1-page1.json     # Lessons 1-15: complete (3 pages each)
+│   ├── ...
+│   ├── lesson15-page3.json
 │   └── flashcards/
 │       └── hsk1.json          # HSK 1 flashcard word list
 ├── .env.local                  # Supabase credentials
@@ -115,8 +115,9 @@ Page → Section → Sentence → Word
 
 ### Audio Playback
 - Sentence-level audio with play/pause toggle (button appears after Chinese text)
-- Section-level "Play All" button next to instruction text (e.g., "朗读对话。Read the dialogue aloud.")
-- Loading state with spinner
+- Section-level "Play All" button next to instruction text (e.g., "朗读对话。Dialogni ovoz chiqarib o'qing.")
+- Instruction row and play button are always visible (independent of translation toggle)
+- Loading state with animated spinner (`@keyframes spin`)
 - Singleton player (only one audio at a time)
 - Audio files stored in Supabase Storage (`/audio/` bucket)
 
@@ -184,7 +185,7 @@ Page → Section → Sentence → Word
 ```json
 {
   "tip": {
-    "label": "小语助力 Xiaoyu's Tip",
+    "label": "小语助力",
     "text": "「您」，敬称，对年长者或尊敬的人使用。",
     "pinyin": "「Nín」, jìngchēng, duì niánzhǎng zhě...",
     "translation": "「您」hurmatli olmosh bo'lib..."
@@ -232,18 +233,28 @@ Page → Section → Sentence → Word
 ```
 
 #### Fill-Blank Exercise (`fillBlankData`)
-- Only supports ONE `correctOptionId` per sentence
+- Supports single or multiple blanks per sentence
+- Single blank: use `correctOptionId`
+- Multiple blanks: use `correctOptionIds` array (ordered by blank position)
 - Use `"_static"` correctOptionId for non-interactive dialogue lines
 ```json
 {
   "type": "fillblank",
   "fillBlankData": {
-    "options": [{"id": "opt1", "text": "喝"}],
-    "sentences": [{
-      "id": "...",
-      "parts": [{"type": "text", "content": "我想"}, {"type": "blank"}],
-      "correctOptionId": "opt1"
-    }]
+    "options": [{"id": "A", "text": "喝"}, {"id": "B", "text": "见"}],
+    "sentences": [
+      {
+        "id": "single-blank",
+        "parts": [{"type": "text", "content": "我想"}, {"type": "blank"}],
+        "correctOptionId": "A"
+      },
+      {
+        "id": "multi-blank",
+        "parts": [{"type": "text", "content": "我们（"}, {"type": "blank"}, {"type": "text", "content": "）下课，下午（"}, {"type": "blank"}, {"type": "text", "content": "）吧。"}],
+        "correctOptionId": "A",
+        "correctOptionIds": ["A", "B"]
+      }
+    ]
   }
 }
 ```
@@ -291,7 +302,7 @@ Page → Section → Sentence → Word
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
-- Language toggle: UZ/RU button in header
+- Language toggle: UZ/RU button in header (shows target language to switch to, e.g., "RU" when currently on Uzbek)
 
 ## Bilingual Support (Uzbek/Russian)
 All content supports both Uzbek and Russian translations:
@@ -416,12 +427,63 @@ main.flashcard-page
 - Header inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
 - Bottom nav inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
 
-## Development Notes
+## Content Conventions
 - Content is loaded from `/content/*.json` files
 - Audio/images stored in Supabase Storage (URLs in JSON)
 - All pinyin should use tone marks (not numbers)
 - Translations should be in Uzbek with proper apostrophes (o', g', etc.)
 - Russian translations use standard Cyrillic
+- `dialogueNumber` should be plain numbers (e.g., `"1"`, `"2"`) — the component wraps them in parentheses
+- All exercise progress bars use `var(--color-accent)` for consistency
+- Do NOT include "分角色朗读对话。" (read dialogue by roles) sentences in exercise sections
+- Do NOT include "大声朗读。Read aloud." sentences in grammar sections
+- Do NOT add pinyin to grammar headings, grammar explanations, or instruction sentences (non-learning content)
+- Pinyin is ONLY for learning content: Chinese example sentences, vocabulary, dialogues, tongue twisters
+- Numbered sentences like `(1) 四口` use inline numbering in `text_original` (not `dialogueNumber`)
+- Pinyin/translation for numbered sentences in grammar and exercise sections auto-indent via CSS (`padding-left: 2.2em`)
+- For pages with MC listening exercises: split text section into 3 parts: (1) heading+context, (2) MC exercise, (3) instruction+audio+image+dialogue
+- Tongue twister subheadings: Uzbek = "Tez aytishni takrorlang", Russian = "Повторите скороговорку"
+
+## Content Formatting Standards
+
+### Multiple Choice Questions
+- **NEVER** include question numbers like "(1)" or "(2)" in the `content` field of question `parts`
+- The `number` field already handles numbering automatically
+- Correct format: `"content": "李文问大家("` (no number prefix)
+- Incorrect format: `"content": "(1)李文问大家("` (has number prefix)
+
+### Exercise Sentences
+- **Keep** numbers in `text_original` with a space: `"(1) 白家月爱吃哪个菜？"`
+- **Remove** number prefixes from `pinyin` and translations
+- Correct format:
+  ```json
+  {
+    "text_original": "(1) 白家月爱吃哪个菜？",
+    "pinyin": "Bái Jiāyuè ài chī nǎge cài?",
+    "text_translation": "Bai Jiyayue qaysi taomni yoqtiradi?"
+  }
+  ```
+- Incorrect format: `"pinyin": "(1) Bái Jiāyuè ài chī nǎge cài?"`
+
+### Grammar Example Sentences
+- **Must** have `pinyin` field for all example sentences
+- **Must NOT** have `dialogueNumber` fields (use inline numbering instead)
+- **Must** include inline numbering in `text_original`: `"(1) 我喜欢这个，也喜欢那个。"`
+- Correct format:
+  ```json
+  {
+    "text_original": "(1) 我喜欢这个，也喜欢那个。",
+    "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+    "text_translation": "Men buni yoqtiraman, uni ham yoqtiraman."
+  }
+  ```
+- **NO** pinyin for grammar explanations (only for example sentences)
+- Grammar dialogues use `speaker` + `dialogueNumber` fields for A/B exchanges
+
+### CSS Auto-Indentation
+- Numbered sentences in grammar and exercise sections automatically indent via CSS
+- `padding-left: 2.2em` applies to `[data-numbered="true"]` sentences
+- Works for both `.section--grammar` and `.section--exercise`
 
 ## CRITICAL: Chinese Quotation Marks in JSON
 

@@ -1,0 +1,488 @@
+{
+  "id": "lesson13-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l13p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在餐馆里，刘明在点餐。",
+      "contextPinyin": "Zài cānguǎn lǐ, Liú Míng zài diǎncān.",
+      "contextTranslation": "Restoranda Liu Ming ovqat buyurtiryapti.",
+      "contextTranslation_ru": "В ресторане Лю Мин делает заказ.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l13p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "刘明想吃("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "米饭",
+                "pinyin": "mǐfàn"
+              },
+              {
+                "label": "B",
+                "word": "饺子",
+                "pinyin": "jiǎozi"
+              },
+              {
+                "label": "C",
+                "word": "米饭和饺子",
+                "pinyin": "mǐfàn hé jiǎozi"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l13p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "刘明想喝("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "水",
+                "pinyin": "shuǐ"
+              },
+              {
+                "label": "B",
+                "word": "茶",
+                "pinyin": "chá"
+              },
+              {
+                "label": "C",
+                "word": "牛奶",
+                "pinyin": "niúnǎi"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l13p3-sec-text3",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l13p3-t3-s1",
+          "section": "text",
+          "text_original": "先生，请坐！您要什么？",
+          "text_translation": "Janob, marhamat o'tiring! Nima buyurtma qilasiz?",
+          "text_translation_ru": "Сэр, садитесь, пожалуйста! Что будете заказывать?",
+          "pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme?",
+          "speaker": "服务员"
+        },
+        {
+          "id": "l13p3-t3-s2",
+          "section": "text",
+          "text_original": "我要一斤饺子。",
+          "text_translation": "Menga bir jin chuchvara bering.",
+          "text_translation_ru": "Мне один цзинь пельменей.",
+          "pinyin": "Wǒ yào yì jīn jiǎozi.",
+          "speaker": "刘明"
+        },
+        {
+          "id": "l13p3-t3-s3",
+          "section": "text",
+          "text_original": "好的。一斤饺子四十个。",
+          "text_translation": "Yaxshi. Bir jin chuchvara qirqta bo'ladi.",
+          "text_translation_ru": "Хорошо. Один цзинь пельменей — сорок штук.",
+          "pinyin": "Hǎo de. Yì jīn jiǎozi sìshí gè.",
+          "speaker": "服务员"
+        },
+        {
+          "id": "l13p3-t3-s4",
+          "section": "text",
+          "text_original": "四十个太多了，我要一半吧。",
+          "text_translation": "Qirqta juda ko'p, yarmini bering.",
+          "text_translation_ru": "Сорок штук — слишком много, возьму половину.",
+          "pinyin": "Sìshí gè tài duō le, wǒ yào yíbàn ba.",
+          "speaker": "刘明"
+        },
+        {
+          "id": "l13p3-t3-s5",
+          "section": "text",
+          "text_original": "半斤二十个。您想喝什么？",
+          "text_translation": "Yarim jin yigirmata bo'ladi. Nima ichmoqchisiz?",
+          "text_translation_ru": "Полцзиня — двадцать штук. Что будете пить?",
+          "pinyin": "Bàn jīn èrshí gè. Nín xiǎng hē shénme?",
+          "speaker": "服务员"
+        },
+        {
+          "id": "l13p3-t3-s6",
+          "section": "text",
+          "text_original": "请给我一杯茶吧。",
+          "text_translation": "Menga bir piyola choy bering.",
+          "text_translation_ru": "Дайте мне, пожалуйста, чашку чая.",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
+          "speaker": "刘明"
+        }
+      ]
+    },
+    {
+      "id": "l13p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%206.mp3",
+      "sentences": [
+        {
+          "id": "l13p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "先生",
+          "text_translation": "janob (ot)",
+          "text_translation_ru": "господин (сущ.)",
+          "pinyin": "xiānsheng",
+          "wordClass": "n.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l13p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "一半",
+          "text_translation": "yarmi (son)",
+          "text_translation_ru": "половина (числ.)",
+          "pinyin": "yíbàn",
+          "wordClass": "num.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l13p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "茶",
+          "text_translation": "choy (ot)",
+          "text_translation_ru": "чай (сущ.)",
+          "pinyin": "chá",
+          "wordClass": "n.",
+          "vocabNumber": 20
+        }
+      ]
+    },
+    {
+      "id": "l13p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "一下",
+            "pinyin": "yíxià"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "可以",
+            "pinyin": "kěyǐ"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "给",
+            "pinyin": "gěi"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "问题",
+            "pinyin": "wèntí"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "要",
+            "pinyin": "yào"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l13p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "请("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")我一杯热水。"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l13p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")一斤饺子。"
+              }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l13p3-fb-q3a",
+            "number": 3,
+            "speaker": "A",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")坐这儿吗？"
+              }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l13p3-fb-q3b",
+            "speaker": "B",
+            "parts": [
+              {
+                "type": "text",
+                "content": "没("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")，请坐。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l13p3-fb-q4a",
+            "number": 4,
+            "speaker": "A",
+            "parts": [
+              {
+                "type": "text",
+                "content": "这个商店卖不卖手机？"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l13p3-fb-q4b",
+            "speaker": "B",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你可以去问("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "correctOptionId": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l13p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l13p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
+            ],
+            "answers": [
+              "可以问一下吗"
+            ]
+          },
+          {
+            "id": "l13p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你好！我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "坐这儿吗？"
+              }
+            ],
+            "answers": [
+              "可以"
+            ]
+          },
+          {
+            "id": "l13p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "热水，请"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "要",
+              "给",
+              "一杯热水"
+            ]
+          },
+          {
+            "id": "l13p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "服务员：请问，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "？\n刘　明：我要"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "您要什么",
+              "一斤饺子"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l13p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "角色扮演。三人一组，一个人扮演服务员，两个人扮演顾客，表演在咖啡馆点餐。Rol o'yini. Uch kishidan iborat guruhda bir kishi ofitsiant, ikki kishi mijoz rolini o'ynaydi, kofe xonasida ovqat buyurtma qilishni ko'rsating.",
+      "instruction_ru": "角色扮演。三人一组，一个人扮演服务员，两个人扮演顾客，表演在咖啡馆点餐。Ролевая игра. Работайте в группах по три человека. Один играет роль официанта, двое — роль клиентов. Разыграйте заказ еды в кафе.",
+      "sentences": []
+    },
+    {
+      "id": "l13p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyudan bonus",
+      "subheading_ru": "Бонус от Сяоюй",
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201%2013-1.mp4",
+      "sentences": []
+    }
+  ]
+}
