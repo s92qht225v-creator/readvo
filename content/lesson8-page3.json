@@ -1,0 +1,537 @@
+{
+  "id": "lesson8-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l8p3-sec-text3-header",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在医院里，刘明和同事胡医生在聊天儿。",
+      "contextPinyin": "Zài yīyuàn lǐ, Liú Míng hé tóngshì Hú yīshēng zài liáotiānr.",
+      "contextTranslation": "Kasalxonada Liu Ming hamkasbi doktor Xu bilan suhbatlashyapti.",
+      "contextTranslation_ru": "В больнице Лю Мин беседует с коллегой доктором Ху.",
+      "sentences": []
+    },
+    {
+      "id": "l8p3-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l8p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "大医院里（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "医生多",
+                "pinyin": "yīshēng duō"
+              },
+              {
+                "label": "B",
+                "word": "病人多",
+                "pinyin": "bìngrén duō"
+              },
+              {
+                "label": "C",
+                "word": "病人少",
+                "pinyin": "bìngrén shǎo"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l8p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "胡医生家有（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）医生。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "一个",
+                "pinyin": "yí gè"
+              },
+              {
+                "label": "B",
+                "word": "两个",
+                "pinyin": "liǎng gè"
+              },
+              {
+                "label": "C",
+                "word": "三个",
+                "pinyin": "sān gè"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l8p3-sec-text3-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l8p3-t3-s1",
+          "section": "text",
+          "text_original": "小胡，吃饭了吗？",
+          "text_translation": "Xu, ovqatlandingizmi?",
+          "text_translation_ru": "Сяо Ху, ты поел?",
+          "pinyin": "Xiǎo Hú, chī fàn le ma?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l8p3-t3-s2",
+          "section": "text",
+          "text_original": "还没呢，大医院里病人多。",
+          "text_translation": "Hali yo'q, katta kasalxonada bemorlar ko'p.",
+          "text_translation_ru": "Ещё нет, в большой больнице много пациентов.",
+          "pinyin": "Hái méi ne, dà yīyuàn lǐ bìngrén duō.",
+          "speaker": "胡医生"
+        },
+        {
+          "id": "l8p3-t3-s3",
+          "section": "text",
+          "text_original": "你爸爸也是医生吧？",
+          "text_translation": "Otangiz ham shifokormi?",
+          "text_translation_ru": "Твой папа тоже врач?",
+          "pinyin": "Nǐ bàba yě shì yīshēng ba?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l8p3-t3-s4",
+          "section": "text",
+          "text_original": "是，我爸爸也在医院工作。",
+          "text_translation": "Ha, otam ham kasalxonada ishlaydi.",
+          "text_translation_ru": "Да, мой папа тоже работает в больнице.",
+          "pinyin": "Shì, wǒ bàba yě zài yīyuàn gōngzuò.",
+          "speaker": "胡医生"
+        },
+        {
+          "id": "l8p3-t3-s5",
+          "section": "text",
+          "text_original": "你爸爸也在这个医院吗？",
+          "text_translation": "Otangiz ham shu kasalxonadami?",
+          "text_translation_ru": "Твой папа тоже в этой больнице?",
+          "pinyin": "Nǐ bàba yě zài zhège yīyuàn ma?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l8p3-t3-s6",
+          "section": "text",
+          "text_original": "不是，他在前边那个小医院。",
+          "text_translation": "Yo'q, u oldinroqdagi kichik kasalxonada.",
+          "text_translation_ru": "Нет, он в той маленькой больнице впереди.",
+          "pinyin": "Bù shì, tā zài qiánbian nàge xiǎo yīyuàn.",
+          "speaker": "胡医生"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "「小」+姓，是一种常用的称呼方式，多用于同辈之间。如：小胡、小王。",
+        "translation": "\"小\" + familiya — bu keng tarqalgan murojaat shakli bo'lib, ko'pincha tengdoshlar orasida ishlatiladi. Masalan: Xiao Xu, Xiao Vang.",
+        "translation_ru": "«小» + фамилия — распространённая форма обращения, чаще используется среди ровесников. Например: Сяо Ху, Сяо Ван."
+      }
+    },
+    {
+      "id": "l8p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%206.mp3",
+      "sentences": [
+        {
+          "id": "l8p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "饭",
+          "text_translation": "ovqat; taom (ot)",
+          "text_translation_ru": "еда; пища (сущ.)",
+          "pinyin": "fàn",
+          "wordClass": "n.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l8p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "大",
+          "text_translation": "katta (sifat)",
+          "text_translation_ru": "большой (прил.)",
+          "pinyin": "dà",
+          "wordClass": "adj.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l8p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "病人",
+          "text_translation": "bemor; kasallik (ot)",
+          "text_translation_ru": "больной; пациент (сущ.)",
+          "pinyin": "bìngrén",
+          "wordClass": "n.",
+          "vocabNumber": 20
+        },
+        {
+          "id": "l8p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "多",
+          "text_translation": "ko'p (sifat)",
+          "text_translation_ru": "много; многочисленный (прил.)",
+          "pinyin": "duō",
+          "wordClass": "adj.",
+          "vocabNumber": 21
+        },
+        {
+          "id": "l8p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "医生",
+          "text_translation": "shifokor; doktor (ot)",
+          "text_translation_ru": "врач; доктор (сущ.)",
+          "pinyin": "yīshēng",
+          "wordClass": "n.",
+          "vocabNumber": 22
+        },
+        {
+          "id": "l8p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "工作",
+          "text_translation": "ishlamoq (fe'l); ish (ot)",
+          "text_translation_ru": "работать (глагол); работа (сущ.)",
+          "pinyin": "gōngzuò",
+          "wordClass": "v./n.",
+          "vocabNumber": 23
+        }
+      ]
+    },
+    {
+      "id": "l8p3-sec-propernoun",
+      "type": "vocabulary",
+      "heading": "专有名词",
+      "subheading": "Atoqli otlar",
+      "subheading_ru": "Имена собственные",
+      "sentences": [
+        {
+          "id": "l8p3-pn-s1",
+          "section": "vocabulary",
+          "text_original": "胡医生",
+          "text_translation": "doktor Xu (atoqli ot)",
+          "text_translation_ru": "доктор Ху (имя собств.)",
+          "pinyin": "Hú yīshēng",
+          "wordClass": "pn.",
+          "vocabNumber": ""
+        }
+      ]
+    },
+    {
+      "id": "l8p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'zni tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "哪儿",
+            "pinyin": "nǎr"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "在",
+            "pinyin": "zài"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "桌子",
+            "pinyin": "zhuōzi"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "书店",
+            "pinyin": "shūdiàn"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "能",
+            "pinyin": "néng"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l8p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "胡医生的爸爸（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）医院工作。"
+              }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l8p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "我下午两点（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）到学校。"
+              }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l8p3-fb-q3a",
+            "number": 3,
+            "speaker": "陈天中",
+            "parts": [
+              {
+                "type": "text",
+                "content": "小猫在（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）呢？"
+              }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l8p3-fb-q3b",
+            "speaker": "白家月",
+            "parts": [
+              {
+                "type": "text",
+                "content": "小猫在（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）下。"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l8p3-fb-q4a",
+            "number": 4,
+            "speaker": "白家月",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们去（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "），你去吗？"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l8p3-fb-q4b",
+            "speaker": "李　文",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我现在有事，不能去。"
+              }
+            ],
+            "correctOptionId": "_static"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l8p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l8p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "医生"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "在医院工作"
+            ]
+          },
+          {
+            "id": "l8p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们在"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "见吧。"
+              }
+            ],
+            "answers": [
+              "书店"
+            ]
+          },
+          {
+            "id": "l8p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "去"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "吗？"
+              }
+            ],
+            "answers": [
+              "能",
+              "超市"
+            ]
+          },
+          {
+            "id": "l8p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "桌子上"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "有一只小猫"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l8p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "双人活动。Juft bo'lib ishlang.",
+      "instruction_ru": "双人活动。Работа в парах.",
+      "sentences": [
+        {
+          "id": "l8p3-act-s1",
+          "section": "activity",
+          "text_original": "两人一组，使用以下词语对话。",
+          "text_translation": "Juft bo'lib ishlang, quyidagi so'zlardan foydalanib dialog tuzing.",
+          "text_translation_ru": "Работайте в парах, используя следующие слова для составления диалога."
+        },
+        {
+          "id": "l8p3-act-s2",
+          "section": "activity",
+          "text_original": "哪儿　　东西　　呢　　下　　小猫　　吃　　在",
+          "text_translation": "qayerda / narsa / -chi / tag / mushukcha / yemoq / -da",
+          "text_translation_ru": "где / вещь / а? / низ / котёнок / есть / в",
+          "pinyin": "nǎr　　dōngxi　　ne　　xià　　xiǎo māo　　chī　　zài"
+        }
+      ]
+    }
+  ]
+}

@@ -187,49 +187,38 @@
           "section": "grammar",
           "text_original": "用\"吗\"的是非问句",
           "text_translation": "\"吗\" yordamida ha-yo'q savollari",
-          "text_translation_ru": "Вопросы типа «да-нет» с «吗»",
-          "pinyin": "Yòng \"ma\" de shìfēi wènjù"
+          "text_translation_ru": "Вопросы типа «да-нет» с «吗»"
         },
         {
           "id": "l3p3-g-s2",
           "section": "grammar",
           "text_original": "\"吗\"是语气助词，通常在句子末尾，表示疑问。基本结构：……吗？",
           "text_translation": "\"吗\" modal yordamchi so'z bo'lib, odatda gap oxirida qo'yiladi va savol bildiradi. Asosiy tuzilma: ……吗？",
-          "text_translation_ru": "«吗» — модальная частица, обычно ставится в конце предложения для обозначения вопроса. Базовая структура: ……吗？",
-          "pinyin": "\"Ma\" shì yǔqì zhùcí, tōngcháng zài jùzi mòwěi, biǎoshì yíwèn. Jīběn jiégòu: ……ma?"
-        },
-        {
-          "id": "l3p3-g-s3",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Baland ovozda o'qing.",
-          "text_translation_ru": "Читайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_translation_ru": "«吗» — модальная частица, обычно ставится в конце предложения для обозначения вопроса. Базовая структура: ……吗？"
         },
         {
           "id": "l3p3-g-s4",
           "section": "grammar",
           "text_original": "(1) 你也很忙吗？",
+          "pinyin": "Nǐ yě hěn máng ma?",
           "text_translation": "Sen ham juda bandmisan?",
-          "text_translation_ru": "Ты тоже очень занят?",
-          "pinyin": "Nǐ yě hěn máng ma?"
+          "text_translation_ru": "Ты тоже очень занят?"
         },
         {
           "id": "l3p3-g-s5",
           "section": "grammar",
           "text_original": "(2) 你是他的中文老师吗？",
+          "pinyin": "Nǐ shì tā de Zhōngwén lǎoshī ma?",
           "text_translation": "Siz uning xitoy tili o'qituvchimisiz?",
-          "text_translation_ru": "Вы его учитель китайского?",
-          "pinyin": "Nǐ shì tā de Zhōngwén lǎoshī ma?"
+          "text_translation_ru": "Вы его учитель китайского?"
         },
         {
           "id": "l3p3-g-s6",
           "section": "grammar",
-          "text_original": "(3) 你有（yǒu, have）姐姐吗？",
+          "text_original": "(3) 你有姐姐吗？",
+          "pinyin": "Nǐ yǒu jiějie ma?",
           "text_translation": "Sening opang bormi?",
-          "text_translation_ru": "У тебя есть старшая сестра?",
-          "pinyin": "Nǐ yǒu jiějie ma?"
+          "text_translation_ru": "У тебя есть старшая сестра?"
         }
       ]
     },
@@ -244,20 +233,53 @@
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "哪", "pinyin": "nǎ" },
-          { "id": "B", "label": "B", "word": "吗", "pinyin": "ma" },
-          { "id": "C", "label": "C", "word": "谁", "pinyin": "shéi" },
-          { "id": "D", "label": "D", "word": "中国人", "pinyin": "Zhōngguó rén" },
-          { "id": "E", "label": "E", "word": "想", "pinyin": "xiǎng" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "哪",
+            "pinyin": "nǎ"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "吗",
+            "pinyin": "ma"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "谁",
+            "pinyin": "shéi"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "中国人",
+            "pinyin": "Zhōngguó rén"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "想",
+            "pinyin": "xiǎng"
+          }
         ],
         "sentences": [
           {
             "id": "l3p3-fb-s1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "你工作忙" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "你工作忙"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "B"
           },
@@ -265,9 +287,17 @@
             "id": "l3p3-fb-s2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "我很" },
-              { "type": "blank" },
-              { "type": "text", "content": "你们。" }
+              {
+                "type": "text",
+                "content": "我很"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "你们。"
+              }
             ],
             "correctOptionId": "E"
           },
@@ -275,9 +305,17 @@
             "id": "l3p3-fb-s3",
             "number": 3,
             "parts": [
-              { "type": "text", "content": "你是" },
-              { "type": "blank" },
-              { "type": "text", "content": "国人？" }
+              {
+                "type": "text",
+                "content": "你是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "国人？"
+              }
             ],
             "correctOptionId": "A",
             "speaker": "白家月"
@@ -285,9 +323,17 @@
           {
             "id": "l3p3-fb-s4",
             "parts": [
-              { "type": "text", "content": "我是" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "我是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "correctOptionId": "D",
             "speaker": "李　文"
@@ -296,9 +342,17 @@
             "id": "l3p3-fb-s5",
             "number": 4,
             "parts": [
-              { "type": "text", "content": "她是" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "她是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "C",
             "speaker": "白家月"
@@ -306,7 +360,10 @@
           {
             "id": "l3p3-fb-s6",
             "parts": [
-              { "type": "text", "content": "她是陈天中的女朋友。" }
+              {
+                "type": "text",
+                "content": "她是陈天中的女朋友。"
+              }
             ],
             "correctOptionId": "",
             "speaker": "安　妮"
@@ -317,9 +374,6 @@
     {
       "id": "l3p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "heading": "综合练习",
-      "subheading": "Umumiy mashqlar",
-      "subheading_ru": "Комплексные упражнения",
       "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
       "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
@@ -329,29 +383,73 @@
             "id": "l3p3-img-1",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-2.jpg",
             "parts": [
-              { "type": "text", "content": "他" },
-              { "type": "blank" },
-              { "type": "text", "content": "陈天中，是泰国人，他" },
-              { "type": "blank" },
-              { "type": "text", "content": "也" },
-              { "type": "blank" },
-              { "type": "text", "content": "泰国人。" }
+              {
+                "type": "text",
+                "content": "他"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "陈天中，是泰国人，他"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "也"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "泰国人。"
+              }
             ],
-            "answers": ["叫", "女朋友", "是"]
+            "answers": [
+              "叫",
+              "女朋友",
+              "是"
+            ]
           },
           {
             "id": "l3p3-img-2",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-3.jpg",
             "parts": [
-              { "type": "text", "content": "王一飞是" },
-              { "type": "blank" },
-              { "type": "text", "content": "中文老师，她" },
-              { "type": "blank" },
-              { "type": "text", "content": "很" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "王一飞是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "中文老师，她"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "很"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["我们的", "工作", "忙"]
+            "answers": [
+              "我们的",
+              "工作",
+              "忙"
+            ]
           }
         ]
       }
@@ -364,29 +462,19 @@
       "subheading_ru": "Классное занятие",
       "sentences": [
         {
-          "id": "l3p3-act-s1",
-          "section": "activity",
-          "text_original": "多人活动",
-          "text_translation": "Guruh ishi",
-          "text_translation_ru": "Групповая работа",
-          "pinyin": "Duō rén huódòng",
-          "isCheckbox": true
-        },
-        {
           "id": "l3p3-act-s2",
           "section": "activity",
           "text_original": "3~4人一组，互相介绍，然后请一组同学展示。",
           "text_translation": "3-4 kishidan iborat guruhda bir-biringizni tanishtiring, so'ng bir guruh sinfga namoyish qiladi.",
-          "text_translation_ru": "Разделитесь на группы по 3-4 человека, представьтесь друг другу, затем одна группа выступит перед классом.",
-          "pinyin": "3~4 rén yī zǔ, hùxiāng jièshào, ránhòu qǐng yī zǔ tóngxué zhǎnshì."
+          "text_translation_ru": "Разделитесь на группы по 3-4 человека, представьтесь друг другу, затем одна группа выступит перед классом."
         },
         {
           "id": "l3p3-act-s4",
           "section": "activity",
           "text_original": "我叫白家月，我是法国人。陈天中是我同学，他是……。……",
+          "pinyin": "Wǒ jiào Bái Jiāyuè, wǒ shì Fǎguó rén. Chén Tiānzhōng shì wǒ tóngxué, tā shì……. ……",
           "text_translation": "Mening ismim Bai Jiayue, men fransuzman. Chen Tianzhong mening kursdoshim, u ……. ……",
-          "text_translation_ru": "Меня зовут Бай Цзяюэ, я француженка. Чэнь Тяньчжун мой одноклассник, он ……. ……",
-          "pinyin": "Wǒ jiào Bái Jiāyuè, wǒ shì Fǎguó rén. Chén Tiānzhōng shì wǒ tóngxué, tā shì……. ……"
+          "text_translation_ru": "Меня зовут Бай Цзяюэ, я француженка. Чэнь Тяньчжун мой одноклассник, он ……. ……"
         }
       ]
     },

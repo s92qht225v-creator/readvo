@@ -1,0 +1,320 @@
+{
+  "id": "lesson8-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 8,
+    "pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò",
+    "title": "我爸爸也在医院工作",
+    "titleTranslation": "Mening otam ham kasalxonada ishlaydi",
+    "titleTranslation_ru": "Мой папа тоже работает в больнице"
+  },
+  "sections": [
+    {
+      "id": "l8p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l8p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并描述处所、位置等信息。",
+          "text_translation": "Joy, o'rin va tegishli ma'lumotlarni tushunish va tasvirlay olish.",
+          "text_translation_ru": "Понимать и описывать места, расположение и связанную информацию.",
+          "pinyin": "Néng tīng dǒng bìng miáoshù chùsuǒ, wèizhì děng xìnxī.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l8p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握介词\"在\"表示方位的用法。",
+          "text_translation": "Ko'makchi \"在\" ning yo'nalish/o'rinni bildirish uchun ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить употребление предлога «在» для указания направления/местоположения.",
+          "pinyin": "Zhǎngwò jiècí 'zài' biǎoshì fāngwèi de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l8p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握能愿动词\"能\"的用法。",
+          "text_translation": "Modal fe'l \"能\" ning ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить употребление модального глагола «能».",
+          "pinyin": "Zhǎngwò néngyuàn dòngcí 'néng' de yòngfǎ.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l8p1-sec-warmup",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки, соответствующие словам.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l8p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-bookstore.jpg",
+          "word": "书店",
+          "pinyin": "shūdiàn",
+          "translation": "kitob do'koni",
+          "translation_ru": "книжный магазин"
+        },
+        {
+          "id": "l8p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-room.jpg",
+          "word": "房间",
+          "pinyin": "fángjiān",
+          "translation": "xona",
+          "translation_ru": "комната"
+        },
+        {
+          "id": "l8p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-school.jpg",
+          "word": "学校",
+          "pinyin": "xuéxiào",
+          "translation": "maktab",
+          "translation_ru": "школа"
+        },
+        {
+          "id": "l8p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-doctor.jpg",
+          "word": "医生",
+          "pinyin": "yīshēng",
+          "translation": "shifokor",
+          "translation_ru": "врач"
+        },
+        {
+          "id": "l8p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-cat.jpg",
+          "word": "小猫",
+          "pinyin": "xiǎo māo",
+          "translation": "mushukcha",
+          "translation_ru": "котёнок"
+        },
+        {
+          "id": "l8p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-warmup-table.jpg",
+          "word": "桌子",
+          "pinyin": "zhuōzi",
+          "translation": "stol",
+          "translation_ru": "стол"
+        }
+      ]
+    },
+    {
+      "id": "l8p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在王一飞家，白家月和陈天中来做客。",
+      "contextPinyin": "Zài Wáng Yīfēi jiā, Bái Jiāyuè hé Chén Tiānzhōng lái zuòkè.",
+      "contextTranslation": "Vang Ifey uyida Bai Jiyayue va Chen Tianzhong mehmon bo'lib kelishdi.",
+      "contextTranslation_ru": "В доме Ван Ифэя Бай Цзяюэ и Чэнь Тяньчжун пришли в гости.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l8p1-t1-s1",
+          "section": "text",
+          "text_original": "房间外有一只小猫。",
+          "text_translation": "Xona tashqarisida bitta mushukcha bor.",
+          "text_translation_ru": "За дверью комнаты есть котёнок.",
+          "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l8p1-t1-s2",
+          "section": "text",
+          "text_original": "我没看见，它在哪儿呢？",
+          "text_translation": "Men ko'rmadim, u qayerda ekan?",
+          "text_translation_ru": "Я не видел, где он?",
+          "pinyin": "Wǒ méi kànjiàn, tā zài nǎr ne?",
+          "speaker": "陈天中"
+        },
+        {
+          "id": "l8p1-t1-s3",
+          "section": "text",
+          "text_original": "它在桌子下呢。",
+          "text_translation": "U stol tagida.",
+          "text_translation_ru": "Он под столом.",
+          "pinyin": "Tā zài zhuōzi xià ne.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l8p1-t1-s4",
+          "section": "text",
+          "text_original": "这只小猫真漂亮！",
+          "text_translation": "Bu mushukcha juda chiroyli!",
+          "text_translation_ru": "Какой красивый котёнок!",
+          "pinyin": "Zhè zhī xiǎo māo zhēn piàoliang!",
+          "speaker": "陈天中"
+        }
+      ]
+    },
+    {
+      "id": "l8p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%202.mp3",
+      "sentences": [
+        {
+          "id": "l8p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "房间",
+          "text_translation": "xona (ot)",
+          "text_translation_ru": "комната (сущ.)",
+          "pinyin": "fángjiān",
+          "wordClass": "n.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l8p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "外",
+          "text_translation": "tashqari (ot)",
+          "text_translation_ru": "снаружи (сущ.)",
+          "pinyin": "wài",
+          "wordClass": "n.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l8p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "只",
+          "text_translation": "dona (hayvonlar uchun son birlik)",
+          "text_translation_ru": "счётное слово (для некоторых животных)",
+          "pinyin": "zhī",
+          "wordClass": "m.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l8p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "小",
+          "text_translation": "kichik (sifat)",
+          "text_translation_ru": "маленький (прил.)",
+          "pinyin": "xiǎo",
+          "wordClass": "adj.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l8p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "猫",
+          "text_translation": "mushuk (ot)",
+          "text_translation_ru": "кошка (сущ.)",
+          "pinyin": "māo",
+          "wordClass": "n.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l8p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "没",
+          "text_translation": "yo'q; emas; hali... emas (ravish)",
+          "text_translation_ru": "нет; не; ещё не (нареч.)",
+          "pinyin": "méi",
+          "wordClass": "adv.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l8p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "看见",
+          "text_translation": "ko'rmoq (fe'l)",
+          "text_translation_ru": "видеть; увидеть (глагол)",
+          "pinyin": "kànjiàn",
+          "wordClass": "v.",
+          "vocabNumber": 7
+        },
+        {
+          "id": "l8p1-v-s8",
+          "section": "vocabulary",
+          "text_original": "桌子",
+          "text_translation": "stol (ot)",
+          "text_translation_ru": "стол (сущ.)",
+          "pinyin": "zhuōzi",
+          "wordClass": "n.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l8p1-v-s9",
+          "section": "vocabulary",
+          "text_original": "下",
+          "text_translation": "past; tag (ot)",
+          "text_translation_ru": "низ; нижний (сущ.)",
+          "pinyin": "xià",
+          "wordClass": "n.",
+          "vocabNumber": 9
+        },
+        {
+          "id": "l8p1-v-s10",
+          "section": "vocabulary",
+          "text_original": "漂亮",
+          "text_translation": "chiroyli; go'zal (sifat)",
+          "text_translation_ru": "красивый (прил.)",
+          "pinyin": "piàoliang",
+          "wordClass": "adj.",
+          "vocabNumber": 10
+        }
+      ]
+    },
+    {
+      "id": "l8p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l8p1-g1-s1",
+          "section": "grammar",
+          "text_original": "方位词",
+          "text_translation": "O'rin-joy so'zlari",
+          "text_translation_ru": "Слова, обозначающие местоположение",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l8p1-g1-s2",
+          "section": "grammar",
+          "text_original": "本册学习的表达方向、位置的方位词有：上、下、里、外、前、后、外边。",
+          "text_translation": "Ushbu jildda o'rganiladigan yo'nalish va o'rinni bildiruvchi so'zlar: 上, 下, 里, 外, 前, 后, 外边.",
+          "text_translation_ru": "Слова, обозначающие направление и местоположение, изучаемые в этом томе: 上, 下, 里, 外, 前, 后, 外边."
+        },
+        {
+          "id": "l8p1-g1-s3",
+          "section": "grammar",
+          "text_original": "(1) 房间里有一只小猫。",
+          "text_translation": "Xona ichida bitta mushukcha bor.",
+          "text_translation_ru": "В комнате есть котёнок.",
+          "pinyin": "Fángjiān lǐ yǒu yī zhī xiǎo māo."
+        },
+        {
+          "id": "l8p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(2) 我们去书店外吧。",
+          "text_translation": "Kitob do'koni tashqarisiga boraylik.",
+          "text_translation_ru": "Давай выйдем из книжного магазина.",
+          "pinyin": "Wǒmen qù shūdiàn wài ba."
+        },
+        {
+          "id": "l8p1-g1-s5",
+          "section": "grammar",
+          "text_original": "(3) 小雪的手机在桌子上呢。",
+          "text_translation": "Xiaosyuening telefoni stol ustida.",
+          "text_translation_ru": "Телефон Сяосюэ на столе.",
+          "pinyin": "Xiǎoxuě de shǒujī zài zhuōzi shàng ne."
+        }
+      ]
+    }
+  ]
+}

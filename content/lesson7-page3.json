@@ -1,0 +1,646 @@
+{
+  "id": "lesson7-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l7p3-sec-text3-header",
+      "type": "text",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "王一雪在办公室给刘明打电话。",
+      "contextPinyin": "Wáng Yīxuě zài bàngōngshì gěi Liú Míng dǎ diànhuà.",
+      "contextTranslation": "Wang Yixue ofisda Liu Mingga telefon qilmoqda.",
+      "contextTranslation_ru": "Ван Исюэ звонит Лю Мину из офиса.",
+      "sentences": []
+    },
+    {
+      "id": "l7p3-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l7p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "刘明（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）呢。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "上班",
+                "pinyin": "shàngbān"
+              },
+              {
+                "label": "B",
+                "word": "买菜",
+                "pinyin": "mǎi cài"
+              },
+              {
+                "label": "C",
+                "word": "在家里",
+                "pinyin": "zài jiā li"
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l7p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王一雪（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）下班。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "五点",
+                "pinyin": "wǔ diǎn"
+              },
+              {
+                "label": "B",
+                "word": "六点",
+                "pinyin": "liù diǎn"
+              },
+              {
+                "label": "C",
+                "word": "六点半",
+                "pinyin": "liù diǎn bàn"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p3-sec-text3-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l7p3-t3-s1",
+          "section": "text",
+          "text_original": "喂，你在哪儿呢？",
+          "text_translation": "Alo, qayerdasiz?",
+          "text_translation_ru": "Алло, ты где?",
+          "pinyin": "Wèi, nǐ zài nǎr ne?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l7p3-t3-s2",
+          "section": "text",
+          "text_original": "我在家里呢。",
+          "text_translation": "Men uydaman.",
+          "text_translation_ru": "Я дома.",
+          "pinyin": "Wǒ zài jiā li ne.",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l7p3-t3-s3",
+          "section": "text",
+          "text_original": "我晚上六点半下班。",
+          "text_translation": "Men kechqurun soat olti yarimda ishdan chiqaman.",
+          "text_translation_ru": "Я заканчиваю работу в половине седьмого вечера.",
+          "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l7p3-t3-s4",
+          "section": "text",
+          "text_original": "我八点去医院上班。",
+          "text_translation": "Men soat sakkizda kasalxonaga ishga boraman.",
+          "text_translation_ru": "Я в восемь часов иду на работу в больницу.",
+          "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l7p3-t3-s5",
+          "section": "text",
+          "text_original": "好的，你去店里买些菜吧。",
+          "text_translation": "Yaxshi, do'konga borib oziq-ovqat sotib ol.",
+          "text_translation_ru": "Хорошо, сходи в магазин, купи овощей.",
+          "pinyin": "Hǎo de, nǐ qù diàn li mǎi xiē cài ba.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l7p3-t3-s6",
+          "section": "text",
+          "text_original": "好，我十分钟后去。",
+          "text_translation": "Yaxshi, o'n minutdan keyin boraman.",
+          "text_translation_ru": "Хорошо, пойду через десять минут.",
+          "pinyin": "Hǎo, wǒ shí fēnzhōng hòu qù.",
+          "speaker": "刘　明"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "「里」作方位词时，在「家、超市」等名词性词语后，一般读轻声\"li\"；在「里边」等词语中，需读第三声\"lǐ\"。",
+        "translation": "\"里\" o'rin so'zi sifatida ishlatilganda, \"家\", \"超市\" kabi otlardan keyin odatda yengil ohangda \"li\" deb o'qiladi; \"里边\" kabi so'zlarda esa uchinchi ohangda \"lǐ\" deb o'qilishi kerak.",
+        "translation_ru": "Когда «里» используется как слово-локатив, после существительных вроде «家» и «超市» оно обычно произносится нейтральным тоном «li»; в словах вроде «里边» произносится третьим тоном «lǐ»."
+      }
+    },
+    {
+      "id": "l7p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%206.mp3",
+      "sentences": [
+        {
+          "id": "l7p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "在",
+          "text_translation": "...da bo'lmoq (fe'l)",
+          "text_translation_ru": "быть; находиться (глагол)",
+          "pinyin": "zài",
+          "wordClass": "v.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l7p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "家",
+          "text_translation": "uy; oila (ot)",
+          "text_translation_ru": "дом; семья (сущ.)",
+          "pinyin": "jiā",
+          "wordClass": "n.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l7p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "里",
+          "text_translation": "ichida; ichkari (ot)",
+          "text_translation_ru": "внутри; в (сущ.)",
+          "pinyin": "li/lǐ",
+          "wordClass": "n.",
+          "vocabNumber": 20
+        },
+        {
+          "id": "l7p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "晚上",
+          "text_translation": "kechqurun (ot)",
+          "text_translation_ru": "вечер (сущ.)",
+          "pinyin": "wǎnshang",
+          "wordClass": "n.",
+          "vocabNumber": 21
+        },
+        {
+          "id": "l7p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "医院",
+          "text_translation": "kasalxona (ot)",
+          "text_translation_ru": "больница (сущ.)",
+          "pinyin": "yīyuàn",
+          "wordClass": "n.",
+          "vocabNumber": 22
+        },
+        {
+          "id": "l7p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "上班",
+          "text_translation": "ishga bormoq (fe'l)",
+          "text_translation_ru": "идти на работу (глагол)",
+          "pinyin": "shàngbān",
+          "wordClass": "v.",
+          "vocabNumber": 23
+        },
+        {
+          "id": "l7p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "店",
+          "text_translation": "do'kon (ot)",
+          "text_translation_ru": "магазин (сущ.)",
+          "pinyin": "diàn",
+          "wordClass": "n.",
+          "vocabNumber": 24
+        },
+        {
+          "id": "l7p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "菜",
+          "text_translation": "sabzavot; taom (ot)",
+          "text_translation_ru": "овощи; блюдо (сущ.)",
+          "pinyin": "cài",
+          "wordClass": "n.",
+          "vocabNumber": 25
+        },
+        {
+          "id": "l7p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "分钟",
+          "text_translation": "minut (o'lch.)",
+          "text_translation_ru": "минута (мера)",
+          "pinyin": "fēnzhōng",
+          "wordClass": "m.",
+          "vocabNumber": 26
+        },
+        {
+          "id": "l7p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "后",
+          "text_translation": "keyin; so'ng (ot)",
+          "text_translation_ru": "после; потом (сущ.)",
+          "pinyin": "hòu",
+          "wordClass": "n.",
+          "vocabNumber": 27
+        }
+      ]
+    },
+    {
+      "id": "l7p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "医院",
+            "pinyin": "yīyuàn"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "十二点半",
+            "pinyin": "shí'èr diǎn bàn"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "课",
+            "pinyin": "kè"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "现在",
+            "pinyin": "xiànzài"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "见",
+            "pinyin": "jiàn"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l7p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "她星期天没有（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l7p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们中午（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）下课，下午两点（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）吧。"
+              }
+            ],
+            "correctOptionId": "B",
+            "correctOptionIds": [
+              "B",
+              "E"
+            ]
+          },
+          {
+            "id": "l7p3-fb-q3a",
+            "number": 3,
+            "speaker": "白家月",
+            "parts": [
+              {
+                "type": "text",
+                "content": "对不起，我（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）有事呢，你去吧。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l7p3-fb-q3b",
+            "speaker": "李　文",
+            "parts": [
+              {
+                "type": "text",
+                "content": "好的，你忙吧。"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l7p3-fb-q4a",
+            "number": 4,
+            "speaker": "王一雪",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你今天晚上几点去（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）上班？"
+              }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l7p3-fb-q4b",
+            "speaker": "刘　明",
+            "parts": [
+              {
+                "type": "text",
+                "content": "晚上八点。"
+              }
+            ],
+            "correctOptionId": "_static"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l7p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "现在是"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "点"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "分。"
+              }
+            ],
+            "answers": [
+              "三",
+              "十五"
+            ]
+          },
+          {
+            "id": "l7p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们上午"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "吧。"
+              }
+            ],
+            "answers": [
+              "十点见"
+            ]
+          },
+          {
+            "id": "l7p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我今天晚上"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "还"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "呢。"
+              }
+            ],
+            "answers": [
+              "六点",
+              "上班"
+            ]
+          },
+          {
+            "id": "l7p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "妹妹"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "有课。"
+              }
+            ],
+            "answers": [
+              "下午两点"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "填写表格。Jadvalni to'ldiring.",
+      "instruction_ru": "填写表格。Заполните таблицу.",
+      "sentences": [
+        {
+          "id": "l7p3-act-s1",
+          "section": "activity",
+          "text_original": "三人一组，每人根据自己的情况填写时间，填好后分享。",
+          "text_translation": "Uch kishidan iborat guruhda ishlang, har bir kishi o'z jadvaliga vaqtni yozsin, so'ng javoblarni ulashing.",
+          "text_translation_ru": "Работайте в группах по три человека, каждый заполняет время по своему расписанию, затем поделитесь ответами.",
+          "pinyin": "Sān rén yī zǔ, měi rén gēnjù zìjǐ de qíngkuàng tiánxiě shíjiān, tián hǎo hòu fēnxiǎng."
+        }
+      ],
+      "tableFillData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "十一点半",
+            "pinyin": "shíyī diǎn bàn"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "十二点",
+            "pinyin": "shí'èr diǎn"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "一点",
+            "pinyin": "yī diǎn"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "两点半",
+            "pinyin": "liǎng diǎn bàn"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "四点",
+            "pinyin": "sì diǎn"
+          },
+          {
+            "id": "F",
+            "label": "F",
+            "word": "五点半",
+            "pinyin": "wǔ diǎn bàn"
+          }
+        ],
+        "columns": [
+          {
+            "id": "l7p3-tf-lunch",
+            "label": "午饭",
+            "pinyin": "wǔfàn"
+          },
+          {
+            "id": "l7p3-tf-rest",
+            "label": "休息",
+            "pinyin": "xiūxi"
+          },
+          {
+            "id": "l7p3-tf-classend",
+            "label": "下课",
+            "pinyin": "xiàkè"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p3-sec-tip",
+      "type": "tip",
+      "heading": "小语助力",
+      "subheading": "Xiaoyudan maslahat",
+      "subheading_ru": "Совет от Сяоюй",
+      "sentences": [
+        {
+          "id": "l7p3-tip-s1",
+          "section": "tip",
+          "text_original": "你会写数字了，是不是还想写汉字呢？那就去敲敲「小语的彩蛋」吧！",
+          "text_translation": "Siz raqamlarni yoza olasiz, xitoy hierogliflarini ham yozmoqchimisiz? Xiaoyu'ning bonus kontentiga o'ting!",
+          "text_translation_ru": "Вы уже умеете писать цифры, хотите попробовать писать иероглифы? Тогда загляните в «Бонусный контент Сяоюй»!"
+        }
+      ]
+    },
+    {
+      "id": "l7p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyudan Bonus Kontent 7-1",
+      "subheading_ru": "Бонусный контент Сяоюй 7-1",
+      "sentences": [],
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201/HSK-7-bonus-1.mp4"
+    }
+  ]
+}

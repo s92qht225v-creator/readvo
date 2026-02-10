@@ -19,7 +19,6 @@
       "tip": {
         "label": "小语助力",
         "text": "\"谁\"也可以读成\"shuí\"。",
-        "pinyin": "\"Shéi\" yě kěyǐ dú chéng \"shuí\".",
         "translation": "\"谁\" so'zini \"shuí\" deb ham o'qish mumkin.",
         "translation_ru": "«谁» также можно произносить как «shuí»."
       },
@@ -133,30 +132,6 @@
           "text_translation": "Tailand (atoqli ot)",
           "text_translation_ru": "Таиланд (имя собств.)",
           "pinyin": "Tàiguó"
-        }
-      ]
-    },
-    {
-      "id": "l3p2-sec-exercise",
-      "type": "exercise",
-      "sentences": [
-        {
-          "id": "l3p2-ex-s1",
-          "section": "exercise",
-          "text_original": "分角色朗读对话。",
-          "text_translation": "Dialogni rollarga bo'lib o'qing.",
-          "text_translation_ru": "Прочитайте диалог по ролям.",
-          "pinyin": "Fēn juésè lǎngdú duìhuà.",
-          "isCheckbox": true
-        },
-        {
-          "id": "l3p2-ex-s2",
-          "section": "exercise",
-          "text_original": "两人一组，根据老师给出的图片模仿课文互相问答。",
-          "text_translation": "Ikki kishidan iborat guruhda, o'qituvchi bergan suratlarga asoslanib, matnni taqlid qilib bir-biringizga savol bering va javob bering.",
-          "text_translation_ru": "В парах задавайте друг другу вопросы и отвечайте, подражая тексту, используя картинки, данные учителем.",
-          "pinyin": "Liǎng rén yī zǔ, gēnjù lǎoshī gěi chū de túpiàn mófǎng kèwén hùxiāng wèndá.",
-          "isCheckbox": true
         }
       ]
     }

@@ -10,16 +10,15 @@
       "subheading_ru": "Текст 3",
       "context": "在校园里，李文和白家月第一次相遇。",
       "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè dì yī cì xiāngyù.",
-      "contextTranslation": "Kampusda Li Ven va Bai Jiayue birinchi marta uchrashdi.",
+      "contextTranslation": "Kampusda Li Wen va Bai Jiayue birinchi marta uchrashdi.",
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые.",
       "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
       "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
       "audio_url": "/audio/l2p3-text3.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-3-1.jpg",
       "tip": {
-        "label": "小语助力 Xiaoyu's Tip",
+        "label": "小语助力",
         "text": "中国人的姓名：姓+名",
-        "pinyin": "Zhōngguó rén de xìngmíng: xìng + míng",
         "translation": "Xitoyliklarning ismlari: familiya + ism",
         "translation_ru": "Китайские имена: фамилия + имя"
       },
@@ -28,7 +27,7 @@
           "id": "l2p3-t3-s1",
           "section": "text",
           "text_original": "你好！我叫李文。",
-          "text_translation": "Salom! Mening ismim Li Ven.",
+          "text_translation": "Salom! Mening ismim Li Wen.",
           "text_translation_ru": "Привет! Меня зовут Ли Вэнь.",
           "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
           "speaker": "李文",
@@ -113,38 +112,11 @@
       ]
     },
     {
-      "id": "l2p3-sec-exercise",
-      "type": "exercise",
-      "heading": "练习",
-      "subheading": "Mashqlar",
-      "subheading_ru": "Упражнения",
-      "sentences": [
-        {
-          "id": "l2p3-ex-s1",
-          "section": "exercise",
-          "text_original": "分角色朗读对话。",
-          "text_translation": "Dialogni rollarga bo'lib o'qing.",
-          "text_translation_ru": "Прочитайте диалог по ролям.",
-          "pinyin": "Fēn juésè lǎngdú duìhuà.",
-          "isCheckbox": true
-        },
-        {
-          "id": "l2p3-ex-s2",
-          "section": "exercise",
-          "text_original": "两人一组，用自己的名字自我介绍。",
-          "text_translation": "Ikki kishidan iborat guruhda o'z ismlaringiz bilan o'zingizni tanishtiring.",
-          "text_translation_ru": "В парах представьтесь, используя свои имена.",
-          "pinyin": "Liǎng rén yī zǔ, yòng zìjǐ de míngzi zìwǒ jièshào.",
-          "isCheckbox": true
-        }
-      ]
-    },
-    {
       "id": "l2p3-sec-tonguetwister",
       "type": "grammar",
       "heading": "跟读绕口令",
-      "subheading": "Tez aytish",
-      "subheading_ru": "Скороговорка",
+      "subheading": "Tez aytishni takrorlang",
+      "subheading_ru": "Повторите скороговорку",
       "audio_url": "/audio/l2p3-tonguetwister.mp3",
       "sentences": [
         {

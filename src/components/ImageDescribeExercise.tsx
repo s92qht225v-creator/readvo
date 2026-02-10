@@ -18,9 +18,13 @@ import React, { useState, useCallback, useRef } from 'react';
 
 export interface ImageDescribeCard {
   id: string;
-  image_url: string;
+  image_url?: string; // optional - for text-only exercises
   parts: { type: 'text' | 'blank'; content?: string }[];
   answers: string[]; // correct answers for each blank, in order
+  speaker?: string; // optional - for dialogue exercises
+  dialogueNumber?: string; // optional - for numbered dialogues
+  pinyin?: string; // optional - pinyin for the sentence
+  translation?: string; // optional - translation
 }
 
 export interface ImageDescribeExerciseProps {
@@ -139,71 +143,86 @@ export const ImageDescribeExercise: React.FC<ImageDescribeExerciseProps> = ({
       <div className="imgdesc__grid">
         {cards.map((card) => {
           let blankIndex = 0;
+          const hasDialogue = card.speaker || card.dialogueNumber;
 
           return (
             <div key={card.id} className="imgdesc__card">
-              <div className="imgdesc__image">
-                <img
-                  src={card.image_url}
-                  alt=""
-                  className="imgdesc__image-img"
-                />
-              </div>
-              <div className="imgdesc__sentence">
-                {card.parts.map((part, idx) => {
-                  if (part.type === 'text') {
-                    return <span key={idx}>{part.content}</span>;
-                  }
-
-                  const currentBlankIndex = blankIndex;
-                  blankIndex++;
-                  const key = getBlankKey(card.id, currentBlankIndex);
-                  const state = getBlankState(key);
-
-                  return (
-                    <span
-                      key={idx}
-                      className={`imgdesc__blank-wrapper ${state.status === 'correct' ? 'imgdesc__blank-wrapper--correct' : ''} ${state.status === 'wrong' ? 'imgdesc__blank-wrapper--wrong' : ''}`}
-                    >
-                      <input
-                        ref={(el) => {
-                          if (el) inputRefs.current.set(key, el);
-                        }}
-                        type="text"
-                        className={`imgdesc__input ${state.status === 'correct' ? 'imgdesc__input--correct' : ''} ${state.status === 'wrong' ? 'imgdesc__input--wrong' : ''}`}
-                        value={state.value}
-                        onChange={(e) =>
-                          handleInputChange(
-                            card.id,
-                            currentBlankIndex,
-                            e.target.value
-                          )
-                        }
-                        onKeyDown={(e) =>
-                          handleKeyDown(e, card.id, currentBlankIndex)
-                        }
-                        disabled={state.status === 'correct'}
-                        placeholder="______"
-                        autoComplete="off"
-                        autoCapitalize="off"
-                        spellCheck={false}
-                      />
-                      {state.status !== 'correct' && state.value.trim() && (
-                        <button
-                          className="imgdesc__check-btn"
-                          onClick={() =>
-                            handleCheck(card.id, currentBlankIndex)
-                          }
-                          aria-label={
-                            language === 'ru' ? 'Проверить' : 'Tekshirish'
-                          }
-                        >
-                          ✓
-                        </button>
-                      )}
+              {card.image_url && (
+                <div className="imgdesc__image">
+                  <img
+                    src={card.image_url}
+                    alt=""
+                    className="imgdesc__image-img"
+                  />
+                </div>
+              )}
+              <div className={`imgdesc__sentence ${hasDialogue ? 'imgdesc__sentence--dialogue' : ''}`}>
+                {hasDialogue && (
+                  <>
+                    <span className="sentence__dialogue-number">
+                      {card.dialogueNumber ? `(${card.dialogueNumber})` : ''}
                     </span>
-                  );
-                })}
+                    <span className="sentence__speaker">
+                      {card.speaker ? `${card.speaker}:` : ''}
+                    </span>
+                  </>
+                )}
+                <div className="imgdesc__text-content">
+                  {card.parts.map((part, idx) => {
+                    if (part.type === 'text') {
+                      return <span key={idx}>{part.content}</span>;
+                    }
+
+                    const currentBlankIndex = blankIndex;
+                    blankIndex++;
+                    const key = getBlankKey(card.id, currentBlankIndex);
+                    const state = getBlankState(key);
+
+                    return (
+                      <span
+                        key={idx}
+                        className={`imgdesc__blank-wrapper ${state.status === 'correct' ? 'imgdesc__blank-wrapper--correct' : ''} ${state.status === 'wrong' ? 'imgdesc__blank-wrapper--wrong' : ''}`}
+                      >
+                        <input
+                          ref={(el) => {
+                            if (el) inputRefs.current.set(key, el);
+                          }}
+                          type="text"
+                          className={`imgdesc__input ${state.status === 'correct' ? 'imgdesc__input--correct' : ''} ${state.status === 'wrong' ? 'imgdesc__input--wrong' : ''}`}
+                          value={state.value}
+                          onChange={(e) =>
+                            handleInputChange(
+                              card.id,
+                              currentBlankIndex,
+                              e.target.value
+                            )
+                          }
+                          onKeyDown={(e) =>
+                            handleKeyDown(e, card.id, currentBlankIndex)
+                          }
+                          disabled={state.status === 'correct'}
+                          placeholder="______"
+                          autoComplete="off"
+                          autoCapitalize="off"
+                          spellCheck={false}
+                        />
+                        {state.status !== 'correct' && state.value.trim() && (
+                          <button
+                            className="imgdesc__check-btn"
+                            onClick={() =>
+                              handleCheck(card.id, currentBlankIndex)
+                            }
+                            aria-label={
+                              language === 'ru' ? 'Проверить' : 'Tekshirish'
+                            }
+                          >
+                            ✓
+                          </button>
+                        )}
+                      </span>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           );

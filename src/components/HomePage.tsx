@@ -56,7 +56,7 @@ export function HomePage() {
             onClick={toggleLanguage}
             type="button"
           >
-            {language === 'uz' ? 'UZ' : 'RU'}
+            {language === 'uz' ? 'RU' : 'UZ'}
           </button>
         </div>
         <h1 className="home__logo">

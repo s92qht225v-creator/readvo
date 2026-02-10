@@ -1,0 +1,472 @@
+{
+  "id": "lesson7-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l7p2-sec-text2-header",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在校园里，李文遇到白家月。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén yùdào Bái Jiāyuè.",
+      "contextTranslation": "Kampusda Li Wen Bai Jiyayueni uchratdi.",
+      "contextTranslation_ru": "На территории кампуса Ли Вэнь встретил Бай Цзяюэ.",
+      "sentences": []
+    },
+    {
+      "id": "l7p2-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l7p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "李文下午想去（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "超市",
+                "pinyin": "chāoshì"
+              },
+              {
+                "label": "B",
+                "word": "看电影",
+                "pinyin": "kàn diànyǐng"
+              },
+              {
+                "label": "C",
+                "word": "西安饭店",
+                "pinyin": "Xī'ān Fàndiàn"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l7p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "白家月明天下午还（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "上课",
+                "pinyin": "shàngkè"
+              },
+              {
+                "label": "B",
+                "word": "有事",
+                "pinyin": "yǒu shì"
+              },
+              {
+                "label": "C",
+                "word": "去超市",
+                "pinyin": "qù chāoshì"
+              }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p2-sec-text2-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l7p2-t2-s1",
+          "section": "text",
+          "text_original": "下午我想去电影院看电影，你去吗？",
+          "text_translation": "Tushdan keyin men kinoteatrga kino ko'rgani bormoqchiman, borasan(mi)?",
+          "text_translation_ru": "Днём я хочу пойти в кинотеатр посмотреть фильм, пойдёшь?",
+          "pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn diànyǐng, nǐ qù ma?",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l7p2-t2-s2",
+          "section": "text",
+          "text_original": "我不想去，下午还有事。",
+          "text_translation": "Men bormoqchi emasman, tushdan keyin hali ishim bor.",
+          "text_translation_ru": "Не хочу идти, днём ещё есть дела.",
+          "pinyin": "Wǒ bù xiǎng qù, xiàwǔ hái yǒu shì.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l7p2-t2-s3",
+          "section": "text",
+          "text_original": "好的。明天呢？",
+          "text_translation": "Yaxshi. Ertaga-chi?",
+          "text_translation_ru": "Хорошо. А завтра?",
+          "pinyin": "Hǎo de. Míngtiān ne?",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l7p2-t2-s4",
+          "section": "text",
+          "text_original": "我明天下午两点还上课呢，四点半下课。",
+          "text_translation": "Ertaga tushdan keyin soat ikkida hali darsim bor, to'rt yarimda dars tugaydi.",
+          "text_translation_ru": "Завтра днём у меня ещё занятия в два часа, заканчиваются в полпятого.",
+          "pinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne, sì diǎn bàn xiàkè.",
+          "speaker": "白家月"
+        }
+      ]
+    },
+    {
+      "id": "l7p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%204.mp3",
+      "sentences": [
+        {
+          "id": "l7p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "电影院",
+          "text_translation": "kinoteatr (ot)",
+          "text_translation_ru": "кинотеатр (сущ.)",
+          "pinyin": "diànyǐngyuàn",
+          "wordClass": "n.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l7p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "看",
+          "text_translation": "ko'rmoq; o'qimoq; qaramoq (fe'l)",
+          "text_translation_ru": "смотреть; видеть; читать (глагол)",
+          "pinyin": "kàn",
+          "wordClass": "v.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l7p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "电影",
+          "text_translation": "kino; film (ot)",
+          "text_translation_ru": "фильм; кино (сущ.)",
+          "pinyin": "diànyǐng",
+          "wordClass": "n.",
+          "vocabNumber": 12
+        },
+        {
+          "id": "l7p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "事",
+          "text_translation": "ish; gap (ot)",
+          "text_translation_ru": "дело; событие (сущ.)",
+          "pinyin": "shì",
+          "wordClass": "n.",
+          "vocabNumber": 13
+        },
+        {
+          "id": "l7p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "上课",
+          "text_translation": "darsga bormoq (fe'l)",
+          "text_translation_ru": "посещать урок (глагол)",
+          "pinyin": "shàngkè",
+          "wordClass": "v.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l7p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "呢",
+          "text_translation": "tasdiqlash yuklamasi (yukl.)",
+          "text_translation_ru": "частица подтверждения (част.)",
+          "pinyin": "ne",
+          "wordClass": "part.",
+          "vocabNumber": 15
+        },
+        {
+          "id": "l7p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "半",
+          "text_translation": "yarim (son)",
+          "text_translation_ru": "половина (числ.)",
+          "pinyin": "bàn",
+          "wordClass": "num.",
+          "vocabNumber": 16
+        },
+        {
+          "id": "l7p2-v-s8",
+          "section": "vocabulary",
+          "text_original": "下课",
+          "text_translation": "dars tugamoq (fe'l)",
+          "text_translation_ru": "закончить урок (глагол)",
+          "pinyin": "xiàkè",
+          "wordClass": "v.",
+          "vocabNumber": 17
+        }
+      ]
+    },
+    {
+      "id": "l7p2-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l7p2-g3-s1",
+          "section": "grammar",
+          "text_original": "副词、时间词语作状语的位置",
+          "text_translation": "Ravish va vaqt so'zlarining hol bo'lagi sifatida o'rni",
+          "text_translation_ru": "Позиция наречий и слов времени в роли обстоятельств",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l7p2-g3-s2",
+          "section": "grammar",
+          "text_original": "副词、时间词语作状语时，一般都要在动词或形容词前。",
+          "text_translation": "Ravish va vaqt so'zlari hol bo'lagi bo'lganda, odatda fe'l yoki sifat oldida keladi.",
+          "text_translation_ru": "Когда наречия и слова времени выступают в роли обстоятельств, они обычно ставятся перед глаголами или прилагательными."
+        },
+        {
+          "id": "l7p2-g3-s3",
+          "section": "grammar",
+          "text_original": "（1）我不想去。",
+          "text_translation": "(1) Men bormoqchi emasman.",
+          "text_translation_ru": "(1) Я не хочу идти."
+        },
+        {
+          "id": "l7p2-g3-s4",
+          "section": "grammar",
+          "text_original": "（2）妹妹很高兴。",
+          "text_translation": "(2) Singlim juda xursand.",
+          "text_translation_ru": "(2) Младшая сестра очень рада."
+        },
+        {
+          "id": "l7p2-g3-s5",
+          "section": "grammar",
+          "text_original": "（3）她上午十点半上课。",
+          "text_translation": "(3) U tushdan oldin soat o'n yarimda darsga boradi.",
+          "text_translation_ru": "(3) Она идёт на занятия в половине одиннадцатого утра."
+        }
+      ]
+    },
+    {
+      "id": "l7p2-sec-fillblank",
+      "type": "fillblank",
+      "instruction": "完成对话。Dialoglarni to'ldiring.",
+      "instruction_ru": "完成对话。Завершите диалоги.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "几",
+            "pinyin": "jǐ"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "三点",
+            "pinyin": "sān diǎn"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "上午",
+            "pinyin": "shàngwǔ"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "明天下午",
+            "pinyin": "míngtiān xiàwǔ"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "下午三点",
+            "pinyin": "xiàwǔ sān diǎn"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l7p2-fb-q1a",
+            "number": 1,
+            "speaker": "A",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）点见？"
+              }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l7p2-fb-q1b",
+            "speaker": "B",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们下午（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）见吧。"
+              }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l7p2-fb-q2a",
+            "number": 2,
+            "speaker": "A",
+            "parts": [
+              {
+                "type": "text",
+                "content": "你上午去上课，是吗？"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l7p2-fb-q2b",
+            "speaker": "B",
+            "parts": [
+              {
+                "type": "text",
+                "content": "对，我（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）有课。"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l7p2-fb-q3a",
+            "number": 3,
+            "speaker": "A",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）去超市吧。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l7p2-fb-q3b",
+            "speaker": "B",
+            "parts": [
+              {
+                "type": "text",
+                "content": "对不起，我（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）有课。"
+              }
+            ],
+            "correctOptionId": "E"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l7p2-sec-grammar4",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l7p2-g4-s1",
+          "section": "grammar",
+          "text_original": "语气助词「呢」Modal Particle \"呢\" (ne) (2)",
+          "text_translation": "Modal yuklamasi \"呢\" (2)",
+          "text_translation_ru": "Модальная частица «呢» (2)",
+          "grammarNumber": "4"
+        },
+        {
+          "id": "l7p2-g4-s2",
+          "section": "grammar",
+          "text_original": "本课语气助词「呢」位于句子末尾，表示确认的事实。基本结构：……呢。",
+          "text_translation": "Bu darsdagi modal yuklamasi \"呢\" gap oxirida keladi va tasdiqlangan faktni bildiradi. Asosiy tuzilma: ……呢.",
+          "text_translation_ru": "Модальная частица «呢» в этом уроке ставится в конце предложения и указывает на подтверждённый факт. Основная структура: ……呢."
+        },
+        {
+          "id": "l7p2-g4-s3",
+          "section": "grammar",
+          "text_original": "(1) 我明天下午两点还上课呢。",
+          "text_translation": "Ertaga tushdan keyin soat ikkida hali darsim bor-ku.",
+          "text_translation_ru": "Завтра днём у меня ещё занятия в два часа.",
+          "pinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne."
+        },
+        {
+          "id": "l7p2-g4-s4",
+          "section": "grammar",
+          "text_original": "(2) 妹妹会做两个菜呢。",
+          "text_translation": "Singlim ikki xil taom tayyorlay oladi-ku.",
+          "text_translation_ru": "Младшая сестра умеет готовить два блюда.",
+          "pinyin": "Mèimei huì zuò liǎng gè cài ne."
+        },
+        {
+          "id": "l7p2-g4-s5",
+          "section": "grammar",
+          "text_original": "(3) 李文晚上还有事呢。",
+          "text_translation": "Li Wenning kechqurun hali ishi bor-ku.",
+          "text_translation_ru": "У Ли Вэня вечером ещё есть дела.",
+          "pinyin": "Lǐ Wén wǎnshang hái yǒu shì ne."
+        }
+      ]
+    }
+  ]
+}

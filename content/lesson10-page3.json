@@ -1,0 +1,665 @@
+{
+  "id": "lesson10-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l10p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "在商场里，刘明和王一雪在给孩子买衣服。",
+      "contextPinyin": "Zài shāngchǎng lǐ, Liú Míng hé Wáng Yīxuě zài gěi háizi mǎi yīfu.",
+      "contextTranslation": "Savdo markazida Liu Ming va Wang Yixue bolalarga kiyim sotib olyapti.",
+      "contextTranslation_ru": "В торговом центре Лю Мин и Ван Исюэ покупают одежду для детей.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l10p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（1）这件衣服（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "二十元",
+                "pinyin": "èrshí yuán"
+              },
+              {
+                "label": "B",
+                "word": "一百元",
+                "pinyin": "yìbǎi yuán"
+              },
+              {
+                "label": "C",
+                "word": "一百一十元",
+                "pinyin": "yìbǎi yīshí yuán"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l10p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（2）这件衣服（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "太贵",
+                "pinyin": "tài guì"
+              },
+              {
+                "label": "B",
+                "word": "很贵",
+                "pinyin": "hěn guì"
+              },
+              {
+                "label": "C",
+                "word": "不贵",
+                "pinyin": "bú guì"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l10p3-sec-text3",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l10p3-t3-s1",
+          "section": "text",
+          "text_original": "这家商店衣服真多！这件一百元，怎么样？",
+          "text_translation": "Bu do'konda kiyimlar juda ko'p! Bu donasi yuz yuan, qanday?",
+          "text_translation_ru": "В этом магазине столько одежды! Эта вещь сто юаней, как тебе?",
+          "pinyin": "Zhè jiā shāngdiàn yīfu zhēn duō! Zhè jiàn yìbǎi yuán, zěnmeyàng?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l10p3-t3-s2",
+          "section": "text",
+          "text_original": "好看，也不贵。",
+          "text_translation": "Chiroyli, qimmat ham emas.",
+          "text_translation_ru": "Красиво, и недорого.",
+          "pinyin": "Hǎokàn, yě bú guì.",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l10p3-t3-s3",
+          "section": "text",
+          "text_original": "小雪能穿，买一件吧。",
+          "text_translation": "Syaosyue kiya oladi, bitta sotib olaylik.",
+          "text_translation_ru": "Сяосюэ может носить, давай купим одну.",
+          "pinyin": "Xiǎoxuě néng chuān, mǎi yí jiàn ba.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l10p3-t3-s4",
+          "section": "text",
+          "text_original": "好的。小明能穿吗？",
+          "text_translation": "Yaxshi. Syaoming kiya oladimi?",
+          "text_translation_ru": "Хорошо. А Сяомин может носить?",
+          "pinyin": "Hǎo de. Xiǎomíng néng chuān ma?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l10p3-t3-s5",
+          "section": "text",
+          "text_original": "不能。这些是女孩子穿的衣服，男孩子的衣服在那儿。",
+          "text_translation": "Kiya olmaydi. Bular qiz bolalar kiyimi, o'g'il bolalar kiyimi anavi yoqda.",
+          "text_translation_ru": "Нет. Это одежда для девочек, одежда для мальчиков вон там.",
+          "pinyin": "Bù néng. Zhèxiē shì nǚ háizi chuān de yīfu, nán háizi de yīfu zài nàr.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l10p3-t3-s6",
+          "section": "text",
+          "text_original": "好的。",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "pinyin": "Hǎo de.",
+          "speaker": "刘　明"
+        }
+      ]
+    },
+    {
+      "id": "l10p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%206.mp3",
+      "sentences": [
+        {
+          "id": "l10p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "商店",
+          "text_translation": "do'kon (ot)",
+          "text_translation_ru": "магазин (сущ.)",
+          "pinyin": "shāngdiàn",
+          "wordClass": "n.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l10p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "衣服",
+          "text_translation": "kiyim (ot)",
+          "text_translation_ru": "одежда (сущ.)",
+          "pinyin": "yīfu",
+          "wordClass": "n.",
+          "vocabNumber": 15
+        },
+        {
+          "id": "l10p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "件",
+          "text_translation": "dona (kiyim uchun son birlik)",
+          "text_translation_ru": "штука (счётное слово для одежды)",
+          "pinyin": "jiàn",
+          "wordClass": "m.",
+          "vocabNumber": 16
+        },
+        {
+          "id": "l10p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "元",
+          "text_translation": "yuan (pul birligi)",
+          "text_translation_ru": "юань (денежная единица)",
+          "pinyin": "yuán",
+          "wordClass": "m.",
+          "vocabNumber": 17
+        },
+        {
+          "id": "l10p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "怎么样",
+          "text_translation": "qanday; qanaqa (olmosh)",
+          "text_translation_ru": "как; какой (мест.)",
+          "pinyin": "zěnmeyàng",
+          "wordClass": "pron.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l10p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "贵",
+          "text_translation": "qimmat (sifat)",
+          "text_translation_ru": "дорогой (прил.)",
+          "pinyin": "guì",
+          "wordClass": "adj.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l10p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "穿",
+          "text_translation": "kiymoq (fe'l)",
+          "text_translation_ru": "носить; надевать (глаг.)",
+          "pinyin": "chuān",
+          "wordClass": "v.",
+          "vocabNumber": 20
+        },
+        {
+          "id": "l10p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "女",
+          "text_translation": "ayol; qiz (sifat)",
+          "text_translation_ru": "женский; женщина (прил.)",
+          "pinyin": "nǚ",
+          "wordClass": "adj.",
+          "vocabNumber": 21
+        },
+        {
+          "id": "l10p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "男",
+          "text_translation": "erkak; o'g'il (sifat)",
+          "text_translation_ru": "мужской; мужчина (прил.)",
+          "pinyin": "nán",
+          "wordClass": "adj.",
+          "vocabNumber": 22
+        },
+        {
+          "id": "l10p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "那儿",
+          "text_translation": "u yer; o'sha yer (olmosh)",
+          "text_translation_ru": "там; то место (мест.)",
+          "pinyin": "nàr",
+          "wordClass": "pron.",
+          "vocabNumber": 23
+        }
+      ]
+    },
+    {
+      "id": "l10p3-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l10p3-ex-s1",
+          "section": "exercise",
+          "text_original": "(1) 那件衣服王一雪想买几件？",
+          "pinyin": "Nà jiàn yīfu Wáng Yīxuě xiǎng mǎi jǐ jiàn?",
+          "text_translation": "O'sha kiyimdan Wang Yixue nechta sotib olmoqchi?",
+          "text_translation_ru": "Сколько штук той одежды Ван Исюэ хочет купить?"
+        },
+        {
+          "id": "l10p3-ex-s2",
+          "section": "exercise",
+          "text_original": "(2) 男孩子的衣服在哪儿？",
+          "pinyin": "Nán háizi de yīfu zài nǎr?",
+          "text_translation": "O'g'il bolalar kiyimi qayerda?",
+          "text_translation_ru": "Где находится одежда для мальчиков?"
+        }
+      ]
+    },
+    {
+      "id": "l10p3-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "instruction": "朗读对话。Dialoglarni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалоги вслух.",
+      "sentences": [
+        {
+          "id": "l10p3-g3-s1",
+          "section": "grammar",
+          "text_original": "疑问代词\"怎么样\"",
+          "text_translation": "So'roq olmoshi \"怎么样\"",
+          "text_translation_ru": "Вопросительное местоимение «怎么样»",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l10p3-g3-s2",
+          "section": "grammar",
+          "text_original": "疑问代词\"怎么样\"用于征求意见、询问状况等。基本结构：……怎么样？",
+          "text_translation": "\"怎么样\" so'roq olmoshi fikr so'rash, holat haqida so'rash va hokazolarda ishlatiladi. Asosiy tuzilma: ……怎么样？",
+          "text_translation_ru": "Вопросительное местоимение «怎么样» используется для запроса мнения, выяснения ситуации и т. д. Основная структура: ……怎么样？"
+        },
+        {
+          "id": "l10p3-g3-s3a",
+          "section": "grammar",
+          "text_original": "A：这个杯子怎么样？",
+          "pinyin": "Zhège bēizi zěnmeyàng?",
+          "text_translation": "Bu stakan qanday?",
+          "text_translation_ru": "Как тебе эта чашка?",
+          "speaker": "A",
+          "dialogueNumber": "1"
+        },
+        {
+          "id": "l10p3-g3-s3b",
+          "section": "grammar",
+          "text_original": "B：我很喜欢，也不贵。",
+          "pinyin": "Wǒ hěn xǐhuan, yě bú guì.",
+          "text_translation": "Menga juda yoqdi, qimmat ham emas.",
+          "text_translation_ru": "Мне очень нравится, и недорого.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l10p3-g3-s4a",
+          "section": "grammar",
+          "text_original": "A：这本书怎么样？",
+          "pinyin": "Zhè běn shū zěnmeyàng?",
+          "text_translation": "Bu kitob qanday?",
+          "text_translation_ru": "Как тебе эта книга?",
+          "speaker": "A",
+          "dialogueNumber": "2"
+        },
+        {
+          "id": "l10p3-g3-s4b",
+          "section": "grammar",
+          "text_original": "B：很好看。",
+          "pinyin": "Hěn hǎokàn.",
+          "text_translation": "Juda chiroyli.",
+          "text_translation_ru": "Очень красивая.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l10p3-g3-s5a",
+          "section": "grammar",
+          "text_original": "A：这个菜怎么样？",
+          "pinyin": "Zhège cài zěnmeyàng?",
+          "text_translation": "Bu taom qanday?",
+          "text_translation_ru": "Как тебе это блюдо?",
+          "speaker": "A",
+          "dialogueNumber": "3"
+        },
+        {
+          "id": "l10p3-g3-s5b",
+          "section": "grammar",
+          "text_original": "B：这个菜不太好吃，我不喜欢。",
+          "pinyin": "Zhège cài bú tài hǎochī, wǒ bù xǐhuan.",
+          "text_translation": "Bu taom unchalik mazali emas, menga yoqmadi.",
+          "text_translation_ru": "Это блюдо не очень вкусное, мне не нравится.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        }
+      ]
+    },
+    {
+      "id": "l10p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "杯子",
+            "pinyin": "bēizi"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "怎么样",
+            "pinyin": "zěnmeyàng"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "多少",
+            "pinyin": "duōshao"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "这些",
+            "pinyin": "zhèxiē"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "块",
+            "pinyin": "kuài"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l10p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "请问，这本书（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）钱？"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l10p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "这个（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）不便宜，六十五（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）钱一个。"
+              }
+            ],
+            "correctOptionId": "A",
+            "correctOptionIds": [
+              "A",
+              "E"
+            ]
+          },
+          {
+            "id": "l10p3-fb-q3a",
+            "number": 3,
+            "speaker": "售货员",
+            "parts": [
+              {
+                "type": "text",
+                "content": "（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）苹果很好吃，你买一些吧。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l10p3-fb-q3b",
+            "speaker": "王一雪",
+            "parts": [
+              {
+                "type": "text",
+                "content": "好的，我买五个。"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l10p3-fb-q4a",
+            "number": 4,
+            "speaker": "安　妮",
+            "parts": [
+              {
+                "type": "text",
+                "content": "这件衣服（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）？"
+              }
+            ],
+            "correctOptionId": "B"
+          },
+          {
+            "id": "l10p3-fb-q4b",
+            "speaker": "白家月",
+            "parts": [
+              {
+                "type": "text",
+                "content": "很好看。"
+              }
+            ],
+            "correctOptionId": "_static"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l10p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l10p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "这儿的苹果"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "真便宜"
+            ]
+          },
+          {
+            "id": "l10p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "这个电影"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
+            ],
+            "answers": [
+              "怎么样"
+            ]
+          },
+          {
+            "id": "l10p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "那些杯子"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "，非常"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "好看",
+              "便宜"
+            ]
+          },
+          {
+            "id": "l10p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "这件衣服"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "，一件"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "块。"
+              }
+            ],
+            "answers": [
+              "不贵",
+              "一百"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l10p3-sec-activity2",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "角色扮演。三人一组，一个人扮演售货员，两个人扮演顾客，仿照本课三篇课文的内容对话。Rol o'yini. Uch kishidan iborat guruhda biri sotuvchi, ikkitasi xaridor rolini o'ynab, ushbu darsdagi uchta matn asosida dialog tuzing.",
+      "instruction_ru": "角色扮演。三人一组，一个人扮演售货员，两个人扮演顾客，仿照本课三篇课文的内容对话。Ролевая игра. Работайте в группах по три человека. Один играет продавца, двое — покупателей. Составьте диалог по образцу трёх текстов этого урока.",
+      "sentences": []
+    },
+    {
+      "id": "l10p3-sec-bonus",
+      "type": "bonus",
+      "heading": "小语的彩蛋",
+      "subheading": "Xiaoyuning sovg'asi",
+      "subheading_ru": "Бонус от Сяоюй",
+      "instruction": "认识人民币。Xitoy yuanini tanish.",
+      "instruction_ru": "认识人民币。Познакомьтесь с юанем (жэньминьби).",
+      "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201%2010-1.mp4",
+      "sentences": []
+    }
+  ]
+}

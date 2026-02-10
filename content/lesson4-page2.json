@@ -12,6 +12,95 @@
       "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiūxi shí liáotiānr.",
       "contextTranslation": "Kompaniyada, Wang Yixue va Yang Tongle tanaffusda suhbatlashmoqda.",
       "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ беседуют на перерыве.",
+      "sentences": []
+    },
+    {
+      "id": "l4p2-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l4p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "杨同乐有一个"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "妹妹",
+                "pinyin": "mèimei"
+              },
+              {
+                "label": "B",
+                "word": "姐姐",
+                "pinyin": "jiějie"
+              },
+              {
+                "label": "C",
+                "word": "哥哥",
+                "pinyin": "gēge"
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l4p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "杨同乐家有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "两口人",
+                "pinyin": "liǎng kǒu rén"
+              },
+              {
+                "label": "B",
+                "word": "四口人",
+                "pinyin": "sì kǒu rén"
+              },
+              {
+                "label": "C",
+                "word": "五口人",
+                "pinyin": "wǔ kǒu rén"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l4p2-sec-text2-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%203.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-2-1.jpg",
       "sentences": [
         {
@@ -55,48 +144,6 @@
           "speakerName": "Yáng Tónglè"
         }
       ]
-    },
-    {
-      "id": "l4p2-sec-mc",
-      "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%203.mp3",
-      "sentences": [],
-      "multipleChoiceData": {
-        "questions": [
-          {
-            "id": "l4p2-mc-q1",
-            "number": 1,
-            "parts": [
-              { "type": "text", "content": "杨同乐有一个" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
-            ],
-            "options": [
-              { "label": "A", "word": "妹妹", "pinyin": "mèimei" },
-              { "label": "B", "word": "姐姐", "pinyin": "jiějie" },
-              { "label": "C", "word": "哥哥", "pinyin": "gēge" }
-            ],
-            "correctOptionLabel": "A"
-          },
-          {
-            "id": "l4p2-mc-q2",
-            "number": 2,
-            "parts": [
-              { "type": "text", "content": "杨同乐家有" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
-            ],
-            "options": [
-              { "label": "A", "word": "两口人", "pinyin": "liǎng kǒu rén" },
-              { "label": "B", "word": "四口人", "pinyin": "sì kǒu rén" },
-              { "label": "C", "word": "五口人", "pinyin": "wǔ kǒu rén" }
-            ],
-            "correctOptionLabel": "B"
-          }
-        ]
-      }
     },
     {
       "id": "l4p2-sec-vocab",
@@ -200,7 +247,6 @@
           "text_original": "语气助词\"呢\"（1） Modal Particle \"呢\" (1)",
           "text_translation": "Modal yuklama \"呢\" (1)",
           "text_translation_ru": "Модальная частица «呢» (1)",
-          "pinyin": "Yǔqì zhùcí \"ne\" (1)",
           "grammarNumber": "3"
         },
         {
@@ -208,32 +254,31 @@
           "section": "grammar",
           "text_original": "本课\"呢\"在句末，表示疑问，询问上文提到的情况。基本结构：A……，B呢？",
           "text_translation": "Ushbu darsda \"呢\" gap oxirida qo'llaniladi, savol bildiradi va yuqorida aytib o'tilgan vaziyat haqida so'raydi. Asosiy tuzilma: A……, B ne?",
-          "text_translation_ru": "В этом уроке «呢» используется в конце предложения для обозначения вопроса о ранее упомянутой ситуации. Основная структура: A……, B呢?",
-          "pinyin": "Běn kè \"ne\" zài jùmò, biǎoshì yíwèn, xúnwèn shàngwén tídào de qíngkuàng. Jīběn jiégòu: A……, B ne?"
+          "text_translation_ru": "В этом уроке «呢» используется в конце предложения для обозначения вопроса о ранее упомянутой ситуации. Основная структура: A……, B呢?"
         },
         {
           "id": "l4p2-g3-s3",
           "section": "grammar",
           "text_original": "(1) 我有两个哥哥，你呢？",
+          "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
           "text_translation": "Mening ikkita akam bor, seninchi?",
-          "text_translation_ru": "У меня два старших брата, а у тебя?",
-          "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?"
+          "text_translation_ru": "У меня два старших брата, а у тебя?"
         },
         {
           "id": "l4p2-g3-s4",
           "section": "grammar",
           "text_original": "(2) 我叫白家月，你呢？",
+          "pinyin": "Wǒ jiào Bái Jiāyuè, nǐ ne?",
           "text_translation": "Mening ismim Bai Jiayue, seninchi?",
-          "text_translation_ru": "Меня зовут Бай Цзяюэ, а тебя?",
-          "pinyin": "Wǒ jiào Bái Jiāyuè, nǐ ne?"
+          "text_translation_ru": "Меня зовут Бай Цзяюэ, а тебя?"
         },
         {
           "id": "l4p2-g3-s5",
           "section": "grammar",
           "text_original": "(3) 我是中国人，你呢？",
+          "pinyin": "Wǒ shì Zhōngguó rén, nǐ ne?",
           "text_translation": "Men xitoylikman, seninchi?",
-          "text_translation_ru": "Я китаец, а ты?",
-          "pinyin": "Wǒ shì Zhōngguó rén, nǐ ne?"
+          "text_translation_ru": "Я китаец, а ты?"
         }
       ]
     },
@@ -247,7 +292,6 @@
           "text_original": "名量词和名量结构 Nominal Measure Words and [Num+M+(N)] Structure",
           "text_translation": "Ot o'lchov so'zlari va [Son+O'lchov+(Ot)] tuzilmasi",
           "text_translation_ru": "Именные счётные слова и структура [Числ.+Сч.сл.+(Сущ.)]",
-          "pinyin": "Míngliàngcí hé míngliàng jiégòu",
           "grammarNumber": "4"
         },
         {
@@ -255,8 +299,7 @@
           "section": "grammar",
           "text_original": "表达数量时，汉语数词后一般要带量词。本课学习表示人或物数量的名量词，如\"口\"、\"个\"等，以及名量结构，如\"四口人\"、\"两个哥哥\"等。",
           "text_translation": "Miqdorni ifodalashda xitoy tilida sonlardan keyin odatda o'lchov so'zi qo'yiladi. Ushbu darsda odamlar yoki narsalar sonini bildiruvchi ot o'lchov so'zlari, masalan \"口\", \"个\" va boshqalar, hamda ot o'lchov tuzilmalari, masalan \"四口人\", \"两个哥哥\" va boshqalar o'rganiladi.",
-          "text_translation_ru": "При выражении количества в китайском языке после числительных обычно ставится счётное слово. В этом уроке изучаются именные счётные слова для людей и предметов, такие как «口», «个» и др., а также именные счётные структуры, например «四口人», «两个哥哥» и др.",
-          "pinyin": "Biǎodá shùliàng shí, Hànyǔ shùcí hòu yībān yào dài liàngcí. Běn kè xuéxí biǎoshì rén huò wù shùliàng de míngliàngcí, rú \"kǒu\", \"gè\" děng, yǐjí míngliàng jiégòu, rú \"sì kǒu rén\", \"liǎng gè gēge\" děng."
+          "text_translation_ru": "При выражении количества в китайском языке после числительных обычно ставится счётное слово. В этом уроке изучаются именные счётные слова для людей и предметов, такие как «口», «个» и др., а также именные счётные структуры, например «四口人», «两个哥哥» и др."
         },
         {
           "id": "l4p2-g4-s3",
@@ -300,9 +343,24 @@
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "几口人", "pinyin": "jǐ kǒu rén" },
-          { "id": "B", "label": "B", "word": "两口人", "pinyin": "liǎng kǒu rén" },
-          { "id": "C", "label": "C", "word": "一个", "pinyin": "yí gè" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "几口人",
+            "pinyin": "jǐ kǒu rén"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "两口人",
+            "pinyin": "liǎng kǒu rén"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "一个",
+            "pinyin": "yí gè"
+          }
         ],
         "sentences": [
           {
@@ -310,9 +368,17 @@
             "number": 1,
             "speaker": "A",
             "parts": [
-              { "type": "text", "content": "你家有" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "你家有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "A"
           },
@@ -320,7 +386,10 @@
             "id": "l4p2-fb-q1b",
             "speaker": "B",
             "parts": [
-              { "type": "text", "content": "我家有三口人，你家呢？" }
+              {
+                "type": "text",
+                "content": "我家有三口人，你家呢？"
+              }
             ],
             "correctOptionId": "_static"
           },
@@ -328,9 +397,17 @@
             "id": "l4p2-fb-q1c",
             "speaker": "A",
             "parts": [
-              { "type": "text", "content": "我家有" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "我家有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "correctOptionId": "B"
           },
@@ -339,7 +416,10 @@
             "number": 2,
             "speaker": "A",
             "parts": [
-              { "type": "text", "content": "你有姐姐吗？" }
+              {
+                "type": "text",
+                "content": "你有姐姐吗？"
+              }
             ],
             "correctOptionId": "_static"
           },
@@ -347,9 +427,17 @@
             "id": "l4p2-fb-q2b",
             "speaker": "B",
             "parts": [
-              { "type": "text", "content": "我有" },
-              { "type": "blank" },
-              { "type": "text", "content": "姐姐，你呢？" }
+              {
+                "type": "text",
+                "content": "我有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "姐姐，你呢？"
+              }
             ],
             "correctOptionId": "C"
           },
@@ -357,7 +445,10 @@
             "id": "l4p2-fb-q2c",
             "speaker": "A",
             "parts": [
-              { "type": "text", "content": "我有两个姐姐。" }
+              {
+                "type": "text",
+                "content": "我有两个姐姐。"
+              }
             ],
             "correctOptionId": "_static"
           }

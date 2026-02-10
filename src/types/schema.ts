@@ -112,6 +112,12 @@ export interface Sentence {
 
   /** Optional: inline image URL (e.g., textbook table scan within a grammar section) */
   readonly image_url?: string;
+
+  /** Optional: word class abbreviation for vocabulary (e.g., "n.", "v.", "adj.") */
+  readonly wordClass?: string;
+
+  /** Optional: vocabulary item number within the lesson */
+  readonly vocabNumber?: number;
 }
 
 // =============================================================================
@@ -200,6 +206,9 @@ export interface Section {
 
   /** Table fill exercise data (only for type: 'activity') */
   readonly tableFillData?: TableFillData;
+
+  /** Grammar table data (only for type: 'grammar') */
+  readonly grammarTableData?: GrammarTableData;
 }
 
 // =============================================================================
@@ -278,6 +287,9 @@ export interface FillBlankSentence {
   /** ID of the correct option */
   readonly correctOptionId: string;
 
+  /** Ordered correct option IDs for multi-blank sentences */
+  readonly correctOptionIds?: readonly string[];
+
   /** Optional speaker name for dialogues */
   readonly speaker?: string;
 }
@@ -345,20 +357,36 @@ export interface MultipleChoiceData {
 
 /**
  * A card in an image description exercise.
- * Each card has an image and a sentence with blanks to fill by typing.
+ * Each card has an optional image and a sentence with blanks to fill by typing.
+ * Can also be used for text-only fill-in-the-blank exercises without images.
  */
 export interface ImageDescribeCard {
   /** Unique identifier */
   readonly id: string;
 
-  /** Image URL */
-  readonly image_url: string;
+  /** Image URL (optional - for text-only exercises) */
+  readonly image_url?: string;
 
   /** Sentence parts (text and blanks) */
   readonly parts: readonly FillBlankSentencePart[];
 
   /** Correct answers for each blank, in order */
   readonly answers: readonly string[];
+
+  /** Speaker name (optional - for dialogue exercises) */
+  readonly speaker?: string;
+
+  /** Dialogue number (optional - for numbered dialogues) */
+  readonly dialogueNumber?: string;
+
+  /** Pinyin for the sentence (optional) */
+  readonly pinyin?: string;
+
+  /** Translation in Uzbek (optional) */
+  readonly translation?: string;
+
+  /** Translation in Russian (optional) */
+  readonly translation_ru?: string;
 }
 
 /**
@@ -413,6 +441,35 @@ export interface TableFillData {
 
   /** Column headers */
   readonly columns: readonly TableFillColumn[];
+}
+
+// =============================================================================
+// GRAMMAR TABLE
+// =============================================================================
+
+/**
+ * A row in a grammar table (e.g., currency denominations).
+ */
+export interface GrammarTableRow {
+  /** Values for each column, in order */
+  readonly cells: readonly string[];
+}
+
+/**
+ * Complete data for a grammar table (display-only).
+ */
+export interface GrammarTableData {
+  /** Column headers (Chinese) */
+  readonly headers: readonly string[];
+
+  /** Column sub-headers (Uzbek translation) */
+  readonly subHeaders?: readonly string[];
+
+  /** Column sub-headers (Russian translation) */
+  readonly subHeaders_ru?: readonly string[];
+
+  /** Table rows */
+  readonly rows: readonly GrammarTableRow[];
 }
 
 // =============================================================================

@@ -171,8 +171,8 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
             )}
           </span>
 
-          {/* Pinyin below the text (always visible for vocabulary, otherwise conditionally) */}
-          {sentence.pinyin && (sentence.section === 'vocabulary' || isPinyinVisible) && (
+          {/* Pinyin below the text (always visible for vocabulary, hidden for objectives, otherwise conditionally) */}
+          {sentence.pinyin && sentence.section !== 'objectives' && (sentence.section === 'vocabulary' || isPinyinVisible) && (
             <span className="sentence__pinyin">{sentence.pinyin}</span>
           )}
 

@@ -1,0 +1,489 @@
+{
+  "id": "lesson12-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 12,
+    "title": "昨天下雪了",
+    "pinyin": "Zuótiān xià xuě le",
+    "titleTranslation": "Kecha qor yog'di",
+    "titleTranslation_ru": "Вчера выпал снег"
+  },
+  "sections": [
+    {
+      "id": "l12p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l12p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并描述天气情况。",
+          "text_translation": "Ob-havo sharoitini eshitib tushunish va tasvirlay olish.",
+          "text_translation_ru": "Уметь воспринимать на слух и описывать погодные условия.",
+          "pinyin": "Néng tīng dǒng bìng miáoshù tiānqì qíngkuàng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l12p1-obj-s2",
+          "section": "objectives",
+          "text_original": "能听懂并简单描述病情。",
+          "text_translation": "Kasallik holatini eshitib tushunish va qisqacha tasvirlay olish.",
+          "text_translation_ru": "Уметь воспринимать на слух и кратко описывать состояние здоровья.",
+          "pinyin": "Néng tīng dǒng bìng jiǎndān miáoshù bìngqíng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l12p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握语气助词\"了(1)\"的用法。",
+          "text_translation": "\"了 (1)\" yuklamasi ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование модальной частицы «了 (1)».",
+          "pinyin": "Zhǎngwò yǔqì zhùcí 'le (1)' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l12p1-obj-s4",
+          "section": "objectives",
+          "text_original": "掌握\"太……了\"格式的用法。",
+          "text_translation": "\"太……了\" shakli ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование конструкции «太……了».",
+          "pinyin": "Zhǎngwò 'tài……le' géshì de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l12p1-obj-s5",
+          "section": "objectives",
+          "text_original": "了解生病时中国人建议\"喝些热水\"的好处。",
+          "text_translation": "Kasal bo'lganda xitoyliklarning \"issiq suv iching\" maslahati foydasini tushunish.",
+          "text_translation_ru": "Узнать о пользе совета китайцев «пить тёплую воду» во время болезни.",
+          "pinyin": "Liǎojiě shēngbìng shí Zhōngguó rén jiànyì 'hē xiē rè shuǐ' de hǎochù.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l12p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l12p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-water.jpg",
+          "word": "水",
+          "pinyin": "shuǐ",
+          "translation": "suv",
+          "translation_ru": "вода"
+        },
+        {
+          "id": "l12p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-doctor.jpg",
+          "word": "看病",
+          "pinyin": "kànbìng",
+          "translation": "shifokorga ko'rinmoq",
+          "translation_ru": "обратиться к врачу"
+        },
+        {
+          "id": "l12p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-cold.jpg",
+          "word": "冷",
+          "pinyin": "lěng",
+          "translation": "sovuq",
+          "translation_ru": "холодно"
+        },
+        {
+          "id": "l12p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-snow.jpg",
+          "word": "雪",
+          "pinyin": "xuě",
+          "translation": "qor",
+          "translation_ru": "снег"
+        },
+        {
+          "id": "l12p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-sick.jpg",
+          "word": "生病",
+          "pinyin": "shēngbìng",
+          "translation": "kasal bo'lmoq",
+          "translation_ru": "заболеть"
+        },
+        {
+          "id": "l12p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-warmup-rain.jpg",
+          "word": "下雨",
+          "pinyin": "xià yǔ",
+          "translation": "yomg'ir yog'moq",
+          "translation_ru": "идёт дождь"
+        }
+      ]
+    },
+    {
+      "id": "l12p1-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "王一雪给王一飞打电话，询问王一飞那边的情况。",
+      "contextPinyin": "Wáng Yīxuě gěi Wáng Yīfēi dǎ diànhuà, xúnwèn Wáng Yīfēi nàbiān de qíngkuàng.",
+      "contextTranslation": "Wang Yixue Vang Ifeyga telefon qilib, uning tomonidagi vaziyatni so'radi.",
+      "contextTranslation_ru": "Ван Исюэ позвонила Ван Ифэю, чтобы узнать о ситуации на его стороне.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l12p1-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "(1)王一飞那儿的天气("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "很好",
+                "pinyin": "hěn hǎo"
+              },
+              {
+                "label": "B",
+                "word": "很不好",
+                "pinyin": "hěn bù hǎo"
+              },
+              {
+                "label": "C",
+                "word": "不太好",
+                "pinyin": "bú tài hǎo"
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l12p1-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "(2)王一飞觉得("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "不冷",
+                "pinyin": "bù lěng"
+              },
+              {
+                "label": "B",
+                "word": "很冷",
+                "pinyin": "hěn lěng"
+              },
+              {
+                "label": "C",
+                "word": "有点儿冷",
+                "pinyin": "yǒudiǎnr lěng"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l12p1-sec-text1",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l12p1-t1-s1",
+          "section": "text",
+          "text_original": "今天天气怎么样？",
+          "text_translation": "Bugun ob-havo qanday?",
+          "text_translation_ru": "Какая сегодня погода?",
+          "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l12p1-t1-s2",
+          "section": "text",
+          "text_original": "这里的天不太好，下雨了。",
+          "text_translation": "Bu yerda ob-havo unchalik yaxshi emas, yomg'ir yog'di.",
+          "text_translation_ru": "Здесь погода не очень хорошая, пошёл дождь.",
+          "pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l12p1-t1-s3",
+          "section": "text",
+          "text_original": "雨大吗？",
+          "text_translation": "Yomg'ir kuchliimi?",
+          "text_translation_ru": "Дождь сильный?",
+          "pinyin": "Yǔ dà ma?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l12p1-t1-s4",
+          "section": "text",
+          "text_original": "有点儿大，我觉得很冷。",
+          "text_translation": "Biroz kuchli, menga juda sovuq tuyulyapti.",
+          "text_translation_ru": "Немного сильный, мне кажется, очень холодно.",
+          "pinyin": "Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+          "speaker": "王一飞"
+        }
+      ]
+    },
+    {
+      "id": "l12p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%202.mp3",
+      "sentences": [
+        {
+          "id": "l12p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "天气",
+          "text_translation": "ob-havo (ot)",
+          "text_translation_ru": "погода (сущ.)",
+          "pinyin": "tiānqì",
+          "wordClass": "n.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l12p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "这里",
+          "text_translation": "bu yer; shu yer (olmosh)",
+          "text_translation_ru": "здесь; тут (мест.)",
+          "pinyin": "zhèlǐ",
+          "wordClass": "pron.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l12p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "天",
+          "text_translation": "ob-havo; kun (ot)",
+          "text_translation_ru": "погода; день (сущ.)",
+          "pinyin": "tiān",
+          "wordClass": "n.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l12p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "下雨",
+          "text_translation": "yomg'ir yog'moq",
+          "text_translation_ru": "идёт дождь",
+          "pinyin": "xià yǔ",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l12p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "了",
+          "text_translation": "holat o'zgarganini bildiruvchi yuklama",
+          "text_translation_ru": "частица, указывающая на изменение ситуации или состояния",
+          "pinyin": "le",
+          "wordClass": "part.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l12p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "雨",
+          "text_translation": "yomg'ir (ot)",
+          "text_translation_ru": "дождь (сущ.)",
+          "pinyin": "yǔ",
+          "wordClass": "n.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l12p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "有点儿",
+          "text_translation": "biroz; sal (ravish)",
+          "text_translation_ru": "немного; чуть-чуть (нареч.)",
+          "pinyin": "yǒudiǎnr",
+          "wordClass": "adv.",
+          "vocabNumber": 7
+        },
+        {
+          "id": "l12p1-v-s8",
+          "section": "vocabulary",
+          "text_original": "觉得",
+          "text_translation": "his qilmoq; ...deb o'ylamoq (fe'l)",
+          "text_translation_ru": "чувствовать; считать (глагол)",
+          "pinyin": "juéde",
+          "wordClass": "v.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l12p1-v-s9",
+          "section": "vocabulary",
+          "text_original": "冷",
+          "text_translation": "sovuq (sifat)",
+          "text_translation_ru": "холодный (прил.)",
+          "pinyin": "lěng",
+          "wordClass": "adj.",
+          "vocabNumber": 9
+        }
+      ]
+    },
+    {
+      "id": "l12p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l12p1-g1-s1",
+          "section": "grammar",
+          "text_original": "非主谓句",
+          "text_translation": "Egasiz-kesimli gaplar",
+          "text_translation_ru": "Бесподлежащно-сказуемостные предложения",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l12p1-g1-s2",
+          "section": "grammar",
+          "text_original": "非主谓句是由词或短语构成、不分主语和谓语的句子，口语中常用。",
+          "text_translation": "Egasiz-kesimli gaplar so'z yoki iboralardan tuzilgan, ega va kesim ajratilmaydigan gaplar bo'lib, og'zaki nutqda ko'p ishlatiladi.",
+          "text_translation_ru": "Бесподлежащно-сказуемостные предложения состоят из слов или словосочетаний без разделения на подлежащее и сказуемое и часто используются в разговорной речи."
+        },
+        {
+          "id": "l12p1-g1-s3",
+          "section": "grammar",
+          "text_original": "(1) 下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "text_translation": "Yomg'ir yog'di.",
+          "text_translation_ru": "Пошёл дождь."
+        },
+        {
+          "id": "l12p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(2) 下雪了。",
+          "pinyin": "Xià xuě le.",
+          "text_translation": "Qor yog'di.",
+          "text_translation_ru": "Пошёл снег."
+        },
+        {
+          "id": "l12p1-g1-s5",
+          "section": "grammar",
+          "text_original": "(3) 上课了。",
+          "pinyin": "Shàngkè le.",
+          "text_translation": "Dars boshlandi.",
+          "text_translation_ru": "Урок начался."
+        },
+        {
+          "id": "l12p1-g1-s6",
+          "section": "grammar",
+          "text_original": "(4) 真漂亮！",
+          "pinyin": "Zhēn piàoliang!",
+          "text_translation": "Juda chiroyli!",
+          "text_translation_ru": "Очень красиво!"
+        },
+        {
+          "id": "l12p1-g1-s7",
+          "section": "grammar",
+          "text_original": "(5) 对不起！",
+          "pinyin": "Duìbuqǐ!",
+          "text_translation": "Kechirasiz!",
+          "text_translation_ru": "Извините!"
+        },
+        {
+          "id": "l12p1-g1-s8",
+          "section": "grammar",
+          "text_original": "(6) 没关系！",
+          "pinyin": "Méi guānxi!",
+          "text_translation": "Hech gap emas!",
+          "text_translation_ru": "Ничего страшного!"
+        }
+      ]
+    },
+    {
+      "id": "l12p1-sec-grammar2",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l12p1-g2-s1",
+          "section": "grammar",
+          "text_original": "语气助词\"了(1)\"",
+          "text_translation": "Yuklama \"了 (1)\"",
+          "text_translation_ru": "Модальная частица «了 (1)»",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l12p1-g2-s2",
+          "section": "grammar",
+          "text_original": "语气助词\"了(1)\"位于句子末尾或句中停顿的地方，表示有变化或出现新情况。否定回答时，用副词\"没\"，句子末尾不用\"了\"。",
+          "text_translation": "\"了 (1)\" yuklamasi gap oxirida yoki gap ichidagi to'xtash joyida kelib, o'zgarish yoki yangi holatni bildiradi. Inkor javobda \"没\" ravishi ishlatiladi, gap oxirida \"了\" qo'yilmaydi.",
+          "text_translation_ru": "Модальная частица «了 (1)» ставится в конце предложения или на паузе внутри предложения и указывает на изменение или появление новой ситуации. В отрицательном ответе используется наречие «没», а «了» в конце предложения опускается."
+        },
+        {
+          "id": "l12p1-g2-s3",
+          "section": "grammar",
+          "text_original": "(1) 下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "text_translation": "Yomg'ir yog'di.",
+          "text_translation_ru": "Пошёл дождь."
+        },
+        {
+          "id": "l12p1-g2-s4",
+          "section": "grammar",
+          "text_original": "(2) 十二点了，吃午饭吧。",
+          "pinyin": "Shí'èr diǎn le, chī wǔfàn ba.",
+          "text_translation": "Soat o'n ikki bo'ldi, tushlik qilaylik.",
+          "text_translation_ru": "Уже двенадцать часов, давай пообедаем."
+        },
+        {
+          "id": "l12p1-g2-s5a",
+          "section": "grammar",
+          "text_original": "A：弟弟起床了吗？",
+          "pinyin": "Dìdi qǐchuáng le ma?",
+          "text_translation": "Ukang turdimi?",
+          "text_translation_ru": "Братик встал?",
+          "speaker": "A",
+          "dialogueNumber": "3"
+        },
+        {
+          "id": "l12p1-g2-s5b",
+          "section": "grammar",
+          "text_original": "B：没起床呢。",
+          "pinyin": "Méi qǐchuáng ne.",
+          "text_translation": "Hali turmadi.",
+          "text_translation_ru": "Ещё не встал.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        }
+      ]
+    }
+  ]
+}

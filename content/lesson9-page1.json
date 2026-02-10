@@ -1,0 +1,387 @@
+{
+  "id": "lesson9-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 9,
+    "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí",
+    "title": "我明天上午在学校学习",
+    "titleTranslation": "Men ertaga ertalab maktabda o'qiyman",
+    "titleTranslation_ru": "Завтра утром я буду учиться в школе"
+  },
+  "sections": [
+    {
+      "id": "l9p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l9p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用\"有/是\"表达存在。",
+          "text_translation": "\"有/是\" yordamida mavjudlikni tushunish va ifodalay olish.",
+          "text_translation_ru": "Понимать и использовать «有/是» для выражения существования.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng 'yǒu/shì' biǎodá cúnzài.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l9p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握时间词语和处所词语同现时的顺序。",
+          "text_translation": "Vaqt va joy-o'rin so'zlari birga kelganda ularning tartibini o'zlashtirish.",
+          "text_translation_ru": "Освоить порядок слов при одновременном использовании выражений времени и места.",
+          "pinyin": "Zhǎngwò shíjiān cíyǔ hé chùsuǒ cíyǔ tóngxiàn shí de shùnxù.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l9p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握\"第\"的用法。",
+          "text_translation": "\"第\" ning ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить употребление «第».",
+          "pinyin": "Zhǎngwò 'dì' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l9p1-obj-s4",
+          "section": "objectives",
+          "text_original": "了解当代中国人的休闲活动。",
+          "text_translation": "Zamonaviy xitoyliklarning bo'sh vaqt mashg'ulotlari bilan tanishish.",
+          "text_translation_ru": "Узнать о досуге современных китайцев.",
+          "pinyin": "Liǎojiě dāngdài Zhōngguó rén de xiūxián huódòng.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l9p1-sec-warmup",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки, соответствующие словам.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l9p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-dog.jpg",
+          "word": "小狗",
+          "pinyin": "xiǎo gǒu",
+          "translation": "kuchukcha",
+          "translation_ru": "щенок"
+        },
+        {
+          "id": "l9p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-tv.jpg",
+          "word": "电视",
+          "pinyin": "diànshì",
+          "translation": "televizor",
+          "translation_ru": "телевизор"
+        },
+        {
+          "id": "l9p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-study.jpg",
+          "word": "学习",
+          "pinyin": "xuéxí",
+          "translation": "o'qimoq",
+          "translation_ru": "учиться"
+        },
+        {
+          "id": "l9p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-play.jpg",
+          "word": "玩",
+          "pinyin": "wán",
+          "translation": "o'ynamoq",
+          "translation_ru": "играть"
+        },
+        {
+          "id": "l9p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-chair.jpg",
+          "word": "椅子",
+          "pinyin": "yǐzi",
+          "translation": "stul",
+          "translation_ru": "стул"
+        },
+        {
+          "id": "l9p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-warmup-book.jpg",
+          "word": "书",
+          "pinyin": "shū",
+          "translation": "kitob",
+          "translation_ru": "книга"
+        }
+      ]
+    },
+    {
+      "id": "l9p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在校园里，李文和白家月在聊天儿。",
+      "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè zài liáotiānr.",
+      "contextTranslation": "Kampusda Li Wen va Bai Jiyayue suhbatlashyapti.",
+      "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ беседуют.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-1-1.jpg",
+      "tip": {
+        "label": "小语助力",
+        "text": "\"前边\"可儿化，说成\"前边儿\"。\"边\"是后缀，读轻声。\"边\"做名词时，读成\"biān\"。",
+        "translation": "\"前边\" so'ziga \"儿\" qo'shimchasi qo'shib \"前边儿\" deb aytish mumkin. \"边\" bu yerda qo'shimcha bo'lib, yengil tovush bilan o'qiladi. \"边\" ot sifatida ishlatilganda \"biān\" deb o'qiladi.",
+        "translation_ru": "«前边» может произноситься с эризацией как «前边儿». «边» здесь является суффиксом и читается нейтральным тоном. Когда «边» выступает как существительное, читается «biān»."
+      },
+      "sentences": [
+        {
+          "id": "l9p1-t1-s1",
+          "section": "text",
+          "text_original": "学校前边有一家电影院。",
+          "text_translation": "Maktab oldida bitta kinoteatr bor.",
+          "text_translation_ru": "Перед школой есть кинотеатр.",
+          "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l9p1-t1-s2",
+          "section": "text",
+          "text_original": "对。我们晚上去那个电影院看电影吧。",
+          "text_translation": "To'g'ri. Kechqurun o'sha kinoteatrga kino ko'rgani boraylik.",
+          "text_translation_ru": "Верно. Давай вечером сходим в тот кинотеатр посмотреть фильм.",
+          "pinyin": "Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l9p1-t1-s3",
+          "section": "text",
+          "text_original": "好！我们七点在电影院外边见，好吗？",
+          "text_translation": "Yaxshi! Soat yettida kinoteatr tashqarisida uchrashaylik, bo'ladimi?",
+          "text_translation_ru": "Хорошо! Давай встретимся в семь у кинотеатра, ладно?",
+          "pinyin": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l9p1-t1-s4",
+          "section": "text",
+          "text_original": "好的，晚上七点见！",
+          "text_translation": "Yaxshi, kechqurun soat yettida ko'rishamiz!",
+          "text_translation_ru": "Хорошо, увидимся в семь вечера!",
+          "pinyin": "Hǎo de, wǎnshang qī diǎn jiàn!",
+          "speaker": "白家月",
+          "tip": {
+            "label": "小语助力",
+            "text": "\"那个\"在口语中也说成\"nèige\"。",
+            "pinyin": "'Nàge' zài kǒuyǔ zhōng yě shuō chéng 'nèige'.",
+            "translation": "\"那个\" og'zaki nutqda \"nèige\" deb ham aytiladi.",
+            "translation_ru": "«那个» в разговорной речи также произносится как «nèige»."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l9p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%202.mp3",
+      "sentences": [
+        {
+          "id": "l9p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "前边",
+          "text_translation": "old; old tomon (ot)",
+          "text_translation_ru": "перед; впереди (сущ.)",
+          "pinyin": "qiánbian",
+          "wordClass": "n.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l9p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "边",
+          "text_translation": "tomon; chekka (qo'shimcha/ot)",
+          "text_translation_ru": "сторона; край (суф./сущ.)",
+          "pinyin": "bian/biān",
+          "wordClass": "suf./n.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l9p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "家",
+          "text_translation": "dona (oila yoki korxona uchun son birlik)",
+          "text_translation_ru": "счётное слово (для семей или предприятий)",
+          "pinyin": "jiā",
+          "wordClass": "m.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l9p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "那个",
+          "text_translation": "o'sha; u (olmosh)",
+          "text_translation_ru": "тот; та; то (мест.)",
+          "pinyin": "nàge",
+          "wordClass": "pron.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l9p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "外边",
+          "text_translation": "tashqari (ot)",
+          "text_translation_ru": "снаружи (сущ.)",
+          "pinyin": "wàibian",
+          "wordClass": "n.",
+          "vocabNumber": 5
+        }
+      ]
+    },
+    {
+      "id": "l9p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l9p1-g1-s1",
+          "section": "grammar",
+          "text_original": "存现句（1）",
+          "text_translation": "Mavjudlik gaplari (1)",
+          "text_translation_ru": "Экзистенциальные предложения (1)",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l9p1-g1-s2",
+          "section": "grammar",
+          "text_original": "存现句是表示某个地方或位置存在某人或某物的句子，一般以\"有\"或\"是\"为标记。否定时，宾语前不能使用数量词语。",
+          "text_translation": "Mavjudlik gaplari biror joyda biror kishi yoki narsaning mavjudligini bildiradi, odatda \"有\" yoki \"是\" bilan belgilanadi. Inkor shaklida to'ldiruvchi oldida son-miqdor so'zlari ishlatilmaydi.",
+          "text_translation_ru": "Экзистенциальные предложения указывают на наличие кого-либо или чего-либо в определённом месте, обычно с маркерами «有» или «是». В отрицательной форме перед дополнением не используются счётные слова."
+        },
+        {
+          "id": "l9p1-g1-s3",
+          "section": "grammar",
+          "text_original": "(1) 学校前边有一家电影院。",
+          "text_translation": "Maktab oldida bitta kinoteatr bor.",
+          "text_translation_ru": "Перед школой есть кинотеатр.",
+          "pinyin": "Xuéxiào qiánbian yǒu yī jiā diànyǐngyuàn."
+        },
+        {
+          "id": "l9p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(2) 电影院前边是一家超市。",
+          "text_translation": "Kinoteatr oldida bitta supermarket bor.",
+          "text_translation_ru": "Перед кинотеатром — супермаркет.",
+          "pinyin": "Diànyǐngyuàn qiánbian shì yī jiā chāoshì."
+        },
+        {
+          "id": "l9p1-g1-s5",
+          "section": "grammar",
+          "text_original": "(3) 电影院前边不是超市。",
+          "text_translation": "Kinoteatr oldida supermarket emas.",
+          "text_translation_ru": "Перед кинотеатром не супермаркет.",
+          "pinyin": "Diànyǐngyuàn qiánbian bú shì chāoshì."
+        },
+        {
+          "id": "l9p1-g1-s6",
+          "section": "grammar",
+          "text_original": "(4) 桌子上没有小猫。",
+          "text_translation": "Stol ustida mushukcha yo'q.",
+          "text_translation_ru": "На столе нет котёнка.",
+          "pinyin": "Zhuōzi shàng méiyǒu xiǎo māo."
+        }
+      ]
+    },
+    {
+      "id": "l9p1-sec-grammar2",
+      "type": "grammar",
+      "sentences": [
+        {
+          "id": "l9p1-g2-s1",
+          "section": "grammar",
+          "text_original": "时间词语和处所词语同时作状语的顺序",
+          "text_translation": "Vaqt va joy-o'rin so'zlari bir vaqtda hol bo'lgandagi tartib",
+          "text_translation_ru": "Порядок слов при одновременном использовании обстоятельств времени и места",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l9p1-g2-s2",
+          "section": "grammar",
+          "text_original": "时间词语和处所词语同时作状语时，时间词语要在处所词语前。",
+          "text_translation": "Vaqt va joy-o'rin so'zlari bir vaqtda hol bo'lganda, vaqt so'zi joy-o'rin so'zidan oldin keladi.",
+          "text_translation_ru": "Когда обстоятельства времени и места используются одновременно, выражение времени ставится перед выражением места."
+        },
+        {
+          "id": "l9p1-g2-s3",
+          "section": "grammar",
+          "text_original": "(1) 我们七点在电影院外边见。",
+          "text_translation": "Biz soat yettida kinoteatr tashqarisida uchrashaylik.",
+          "text_translation_ru": "Мы встретимся в семь у кинотеатра.",
+          "pinyin": "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn."
+        },
+        {
+          "id": "l9p1-g2-s4",
+          "section": "grammar",
+          "text_original": "(2) 安妮下午在家里学中文。",
+          "text_translation": "Anni tushdan keyin uyda xitoy tilini o'rganadi.",
+          "text_translation_ru": "Анни днём дома учит китайский.",
+          "pinyin": "Ānnī xiàwǔ zài jiā lǐ xué Zhōngwén."
+        },
+        {
+          "id": "l9p1-g2-s5",
+          "section": "grammar",
+          "text_original": "(3) 陈天中明天中午在学校吃午饭。",
+          "text_translation": "Chen Tianzhong ertaga tushda maktabda tushlik qiladi.",
+          "text_translation_ru": "Чэнь Тяньчжун завтра днём пообедает в школе.",
+          "pinyin": "Chén Tiānzhōng míngtiān zhōngwǔ zài xuéxiào chī wǔfàn."
+        }
+      ],
+      "exercise": {
+        "instruction": "完成对话。Dialoglarni to'ldiring.",
+        "instruction_ru": "完成对话。Завершите диалоги.",
+        "items": [
+          {
+            "id": "l9p1-g2-ex1",
+            "parts_a": [
+              {
+                "type": "text",
+                "content": "（1）A：你们今天下午两点（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）上课？"
+              }
+            ],
+            "answer_a": "在学校",
+            "text_b": "B：在学校。"
+          },
+          {
+            "id": "l9p1-g2-ex2",
+            "parts_a": [
+              {
+                "type": "text",
+                "content": "（2）A：你们（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）在超市买什么呢？"
+              }
+            ],
+            "answer_a": "现在",
+            "text_b": "B：买菜呢。"
+          }
+        ]
+      }
+    }
+  ]
+}

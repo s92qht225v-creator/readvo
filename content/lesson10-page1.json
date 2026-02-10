@@ -1,0 +1,352 @@
+{
+  "id": "lesson10-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 10,
+    "title": "这儿的苹果真便宜！",
+    "pinyin": "Zhèr de píngguǒ zhēn piányi!",
+    "titleTranslation": "Bu yerdagi olmalar juda arzon!",
+    "titleTranslation_ru": "Яблоки здесь очень дешёвые!"
+  },
+  "sections": [
+    {
+      "id": "l10p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l10p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂、看懂并简单谈论商品价格。",
+          "text_translation": "Mahsulot narxlarini eshitib va ko'rib tushunish hamda oddiy suhbat qilish.",
+          "text_translation_ru": "Уметь воспринимать на слух и понимать, а также просто обсуждать цены на товары.",
+          "pinyin": "Néng tīng dǒng, kàn dǒng bìng jiǎndān tánlùn shāngpǐn jiàgé.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l10p1-obj-s2",
+          "section": "objectives",
+          "text_original": "掌握形容词谓语句的用法。",
+          "text_translation": "Sifat kesimli gaplarning ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование предложений с прилагательным в роли сказуемого.",
+          "pinyin": "Zhǎngwò xíngróngcí wèiyǔ jù de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l10p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握疑问代词\"怎么样\"的用法。",
+          "text_translation": "\"怎么样\" so'roq olmoshining ishlatilishini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование вопросительного местоимения «怎么样».",
+          "pinyin": "Zhǎngwò yíwèn dàicí 'zěnmeyàng' de yòngfǎ.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l10p1-obj-s4",
+          "section": "objectives",
+          "text_original": "认识人民币。",
+          "text_translation": "Xitoy yuanini tanish.",
+          "text_translation_ru": "Познакомиться с юанем (жэньминьби).",
+          "pinyin": "Rènshi Rénmínbì.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l10p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l10p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-apple.jpg",
+          "word": "苹果",
+          "pinyin": "píngguǒ",
+          "translation": "olma",
+          "translation_ru": "яблоко"
+        },
+        {
+          "id": "l10p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-clothes.jpg",
+          "word": "衣服",
+          "pinyin": "yīfu",
+          "translation": "kiyim",
+          "translation_ru": "одежда"
+        },
+        {
+          "id": "l10p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-cup.jpg",
+          "word": "杯子",
+          "pinyin": "bēizi",
+          "translation": "stakan; piyola",
+          "translation_ru": "чашка; стакан"
+        },
+        {
+          "id": "l10p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-wear.jpg",
+          "word": "穿",
+          "pinyin": "chuān",
+          "translation": "kiymoq",
+          "translation_ru": "носить; надевать"
+        },
+        {
+          "id": "l10p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-shop.jpg",
+          "word": "商店",
+          "pinyin": "shāngdiàn",
+          "translation": "do'kon",
+          "translation_ru": "магазин"
+        },
+        {
+          "id": "l10p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-warmup-cheap.jpg",
+          "word": "便宜",
+          "pinyin": "piányi",
+          "translation": "arzon",
+          "translation_ru": "дешёвый"
+        }
+      ]
+    },
+    {
+      "id": "l10p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在一家小店，王一雪在买杯子。",
+      "contextPinyin": "Zài yì jiā xiǎo diàn, Wáng Yīxuě zài mǎi bēizi.",
+      "contextTranslation": "Kichik do'konda Wang Yixue stakan sotib olyapti.",
+      "contextTranslation_ru": "В маленьком магазине Ван Исюэ покупает чашку.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l10p1-t1-s1",
+          "section": "text",
+          "text_original": "请问，有杯子吗？",
+          "text_translation": "Kechirasiz, stakanlar bormi?",
+          "text_translation_ru": "Извините, есть ли чашки?",
+          "pinyin": "Qǐngwèn, yǒu bēizi ma?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l10p1-t1-s2",
+          "section": "text",
+          "text_original": "有，杯子在这边。",
+          "text_translation": "Bor, stakanlar bu yoqda.",
+          "text_translation_ru": "Есть, чашки вот здесь.",
+          "pinyin": "Yǒu, bēizi zài zhèbiān.",
+          "speaker": "售货员"
+        },
+        {
+          "id": "l10p1-t1-s3",
+          "section": "text",
+          "text_original": "多少钱一个？",
+          "text_translation": "Donasi necha pul?",
+          "text_translation_ru": "Сколько стоит одна штука?",
+          "pinyin": "Duōshao qián yí gè?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l10p1-t1-s4",
+          "section": "text",
+          "text_original": "这些五块钱一个，那些十块钱一个。",
+          "text_translation": "Bulari donasi besh yuan, anolari donasi o'n yuan.",
+          "text_translation_ru": "Эти — пять юаней за штуку, те — десять юаней за штуку.",
+          "pinyin": "Zhèxiē wǔ kuài qián yí gè, nàxiē shí kuài qián yí gè.",
+          "speaker": "售货员"
+        },
+        {
+          "id": "l10p1-t1-s5",
+          "section": "text",
+          "text_original": "我买这个吧。",
+          "text_translation": "Men buni sotib olaman.",
+          "text_translation_ru": "Я куплю вот эту.",
+          "pinyin": "Wǒ mǎi zhège ba.",
+          "speaker": "王一雪"
+        }
+      ]
+    },
+    {
+      "id": "l10p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%202.mp3",
+      "sentences": [
+        {
+          "id": "l10p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "杯子",
+          "text_translation": "stakan; piyola (ot)",
+          "text_translation_ru": "чашка; стакан (сущ.)",
+          "pinyin": "bēizi",
+          "wordClass": "n.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l10p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "售货员",
+          "text_translation": "sotuvchi (ot)",
+          "text_translation_ru": "продавец (сущ.)",
+          "pinyin": "shòuhuòyuán",
+          "wordClass": "n.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l10p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "这边",
+          "text_translation": "bu yer; bu tomon (olmosh)",
+          "text_translation_ru": "здесь; эта сторона (мест.)",
+          "pinyin": "zhèbiān",
+          "wordClass": "pron.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l10p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "钱",
+          "text_translation": "pul (ot)",
+          "text_translation_ru": "деньги (сущ.)",
+          "pinyin": "qián",
+          "wordClass": "n.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l10p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "这些",
+          "text_translation": "bular (olmosh)",
+          "text_translation_ru": "эти (мест.)",
+          "pinyin": "zhèxiē",
+          "wordClass": "pron.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l10p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "块",
+          "text_translation": "yuan (pul birligi uchun son birlik)",
+          "text_translation_ru": "юань (счётное слово для денег)",
+          "pinyin": "kuài",
+          "wordClass": "m.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l10p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "那些",
+          "text_translation": "anolar; o'shalar (olmosh)",
+          "text_translation_ru": "те (мест.)",
+          "pinyin": "nàxiē",
+          "wordClass": "pron.",
+          "vocabNumber": 7
+        }
+      ]
+    },
+    {
+      "id": "l10p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l10p1-g1-s1",
+          "section": "grammar",
+          "text_original": "钱数的表达",
+          "text_translation": "Pul miqdorini ifodalash",
+          "text_translation_ru": "Выражение денежных сумм",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l10p1-g1-s2",
+          "section": "grammar",
+          "text_original": "人民币的基本单位是\"元\"，辅币单位是\"角\"和\"分\"。口语中\"元\"也叫\"块\"，\"角\"也叫\"毛\"。",
+          "text_translation": "Xitoy yuanining asosiy birligi \"元\" (yuan), yordamchi birliklari \"角\" (jiao) va \"分\" (fen). Og'zaki nutqda \"元\" \"块\" (kuay), \"角\" esa \"毛\" (mao) deb ham aytiladi.",
+          "text_translation_ru": "Основная единица юаня — «元» (юань), вспомогательные единицы — «角» (цзяо) и «分» (фэнь). В разговорной речи «元» также называют «块» (куай), а «角» — «毛» (мао)."
+        },
+        {
+          "id": "l10p1-g1-s3",
+          "section": "grammar",
+          "text_original": "表达方式按\"元/块→角/毛→分\"的顺序。",
+          "text_translation": "Ifodalash tartibi: \"元/块→角/毛→分\".",
+          "text_translation_ru": "Порядок выражения: «元/块→角/毛→分»."
+        }
+      ],
+      "grammarTableData": {
+        "headers": [
+          "写法1",
+          "写法2",
+          "读法"
+        ],
+        "subHeaders": [
+          "yozuv shakli 1",
+          "yozuv shakli 2",
+          "talaffuz"
+        ],
+        "subHeaders_ru": [
+          "письменная форма 1",
+          "письменная форма 2",
+          "произношение"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "0.02元",
+              "两分",
+              "liǎng fēn"
+            ]
+          },
+          {
+            "cells": [
+              "0.2元",
+              "两毛",
+              "liǎng máo"
+            ]
+          },
+          {
+            "cells": [
+              "3元",
+              "三块",
+              "sān kuài"
+            ]
+          },
+          {
+            "cells": [
+              "3.2元",
+              "三块二",
+              "sān kuài èr"
+            ]
+          },
+          {
+            "cells": [
+              "6.02元",
+              "六块零两分",
+              "liù kuài líng liǎng fēn"
+            ]
+          },
+          {
+            "cells": [
+              "202.2元",
+              "二百零二块两毛",
+              "èrbǎi líng èr kuài liǎng máo"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@
  */
 
 import React, { useState, useCallback, useEffect } from 'react';
+import { shuffleArray } from '../utils/shuffle';
 
 export interface MatchingItem {
   id: string;
@@ -36,16 +37,6 @@ interface MatchState {
   selectedImageId: string | null;
   matchedPairs: Set<string>;
   wrongAttempt: string | null;
-}
-
-// Stable shuffle function using Fisher-Yates algorithm
-function shuffleArray<T>(array: T[]): T[] {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
 }
 
 export const MatchingExercise: React.FC<MatchingExerciseProps> = ({

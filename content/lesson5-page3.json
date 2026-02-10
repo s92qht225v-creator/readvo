@@ -4,7 +4,7 @@
   "sections": [
     {
       "id": "l5p3-sec-text3",
-      "type": "multiplechoice",
+      "type": "text",
       "heading": "课文 3",
       "subheading": "Text 3",
       "subheading_ru": "Текст 3",
@@ -12,9 +12,13 @@
       "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiàbān shí liáotiānr.",
       "contextTranslation": "Kompaniyada Wang Yixue va Yang Tongle ishdan keyin suhbatlashmoqda.",
       "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ болтают после работы.",
+      "sentences": []
+    },
+    {
+      "id": "l5p3-sec-mc",
+      "type": "multiplechoice",
       "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
       "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%205.mp3",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -54,6 +58,9 @@
     {
       "id": "l5p3-sec-dialogue3",
       "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%205.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-3-1.jpg",
       "sentences": [
         {
@@ -347,34 +354,16 @@
       "subheading_ru": "Классное занятие",
       "sentences": [
         {
-          "id": "l5p3-act-s1",
-          "section": "activity",
-          "text_original": "小组游戏 Group Game",
-          "text_translation": "Guruh o'yini",
-          "text_translation_ru": "Групповая игра",
-          "pinyin": "Xiǎozǔ yóuxì",
-          "isCheckbox": true
-        },
-        {
           "id": "l5p3-act-s2",
           "section": "activity",
           "text_original": "一个人拿着词语卡片，询问其他人会不会做这件事，其他人抢答。抢答最少者成为下一轮的提问者。",
           "text_translation": "Bir kishi so'z kartalarini ushlab, boshqalardan bu ishni qila olish-olmasligini so'raydi. Boshqalar tezda javob beradi. Eng kam javob bergan kishi keyingi turda savol beruvchi bo'ladi.",
-          "text_translation_ru": "Один человек держит карточки со словами и спрашивает других, умеют ли они выполнять эти действия. Остальные отвечают наперегонки. Тот, кто ответил меньше всех, становится следующим ведущим.",
-          "pinyin": "Yí gè rén názhe cíyǔ kǎpiàn, xúnwèn qítā rén huì bú huì zuò zhè jiàn shì, qítā rén qiǎngdá. Qiǎngdá zuìshǎo zhě chéngwéi xià yì lún de tíwèn zhě."
-        },
-        {
-          "id": "l5p3-act-s3",
-          "section": "activity",
-          "text_original": "小语的例子 Xiaoyu's Example",
-          "text_translation": "Xiaoyuning namunasi",
-          "text_translation_ru": "Пример Сяоюй",
-          "pinyin": "Xiǎoyǔ de lìzi"
+          "text_translation_ru": "Один человек держит карточки со словами и спрашивает других, умеют ли они выполнять эти действия. Остальные отвечают наперегонки. Тот, кто ответил меньше всех, становится следующим ведущим."
         },
         {
           "id": "l5p3-act-s4",
           "section": "activity",
-          "text_original": "A：你们会做饭吗？",
+          "text_original": "你们会做饭吗？",
           "text_translation": "Sizlar ovqat tayyorlashni bilasizlarmi?",
           "text_translation_ru": "Вы умеете готовить?",
           "pinyin": "Nǐmen huì zuò fàn ma?",
@@ -383,7 +372,7 @@
         {
           "id": "l5p3-act-s5",
           "section": "activity",
-          "text_original": "B：我会。",
+          "text_original": "我会。",
           "text_translation": "Bilaman.",
           "text_translation_ru": "Умею.",
           "pinyin": "Wǒ huì.",
@@ -392,7 +381,7 @@
         {
           "id": "l5p3-act-s6",
           "section": "activity",
-          "text_original": "A：你们会做这个菜吗？",
+          "text_original": "你们会做这个菜吗？",
           "text_translation": "Sizlar bu taomni tayyorlashni bilasizlarmi?",
           "text_translation_ru": "Вы умеете готовить это блюдо?",
           "pinyin": "Nǐmen huì zuò zhège cài ma?",
@@ -401,19 +390,11 @@
         {
           "id": "l5p3-act-s7",
           "section": "activity",
-          "text_original": "C：我不会做。",
+          "text_original": "我不会做。",
           "text_translation": "Bilmayman.",
           "text_translation_ru": "Не умею.",
           "pinyin": "Wǒ bú huì zuò.",
           "speaker": "C"
-        },
-        {
-          "id": "l5p3-act-s8",
-          "section": "activity",
-          "text_original": "……",
-          "text_translation": "……",
-          "text_translation_ru": "……",
-          "pinyin": "……"
         }
       ]
     },

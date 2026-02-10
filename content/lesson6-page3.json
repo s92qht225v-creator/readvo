@@ -3,8 +3,8 @@
   "pageNumber": 3,
   "sections": [
     {
-      "id": "l6p3-sec-mc",
-      "type": "multiplechoice",
+      "id": "l6p3-sec-text3-heading",
+      "type": "text",
       "heading": "课文 3",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
@@ -12,9 +12,13 @@
       "contextPinyin": "Zài jiā lǐ, Wáng Yīxuě quánjiā zài tǎolùn zhōumò wǎncān ānpái.",
       "contextTranslation": "Uyda Wang Yisyuening oilasi dam olish kunlari kechki ovqatni muhokama qilmoqda.",
       "contextTranslation_ru": "Дома семья Ван Исюэ обсуждает планы на ужин в выходные.",
+      "sentences": []
+    },
+    {
+      "id": "l6p3-sec-mc",
+      "type": "multiplechoice",
       "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
       "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%205.mp3",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -22,12 +26,26 @@
             "id": "l6p3-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "王一雪一家人想去西安饭店吃（　　）。" }
+              { "type": "text", "content": "王一雪一家人想去西安饭店吃（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）。" }
             ],
             "options": [
-              { "label": "A", "word": "早饭", "pinyin": "chī zǎofàn" },
-              { "label": "B", "word": "午饭", "pinyin": "chī wǔfàn" },
-              { "label": "C", "word": "晚饭", "pinyin": "chī wǎnfàn" }
+              {
+                "label": "A",
+                "word": "早饭",
+                "pinyin": "chī zǎofàn"
+              },
+              {
+                "label": "B",
+                "word": "午饭",
+                "pinyin": "chī wǔfàn"
+              },
+              {
+                "label": "C",
+                "word": "晚饭",
+                "pinyin": "chī wǎnfàn"
+              }
             ],
             "correctOptionLabel": "C"
           },
@@ -35,12 +53,26 @@
             "id": "l6p3-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "刘小明不想吃（　　）。" }
+              { "type": "text", "content": "刘小明不想吃（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）。" }
             ],
             "options": [
-              { "label": "A", "word": "米饭", "pinyin": "mǐfàn" },
-              { "label": "B", "word": "包子", "pinyin": "bāozi" },
-              { "label": "C", "word": "面条儿", "pinyin": "miàntiáor" }
+              {
+                "label": "A",
+                "word": "米饭",
+                "pinyin": "mǐfàn"
+              },
+              {
+                "label": "B",
+                "word": "包子",
+                "pinyin": "bāozi"
+              },
+              {
+                "label": "C",
+                "word": "面条儿",
+                "pinyin": "miàntiáor"
+              }
             ],
             "correctOptionLabel": "A"
           }
@@ -50,11 +82,9 @@
     {
       "id": "l6p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
-      "subheading": "Tekst 3",
-      "subheading_ru": "Текст 3",
       "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
       "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%205.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-1.jpg",
       "sentences": [
         {
@@ -249,84 +279,63 @@
         {
           "id": "l6p3-g2-s1",
           "section": "grammar",
-          "text_original": "连动句（1）",
-          "text_translation": "Ketma-ket fe'lli gap (1)",
-          "text_translation_ru": "Предложения с последовательными глаголами (1)",
-          "pinyin": "Liándòngjù (1)"
+          "text_original": "连动句 Serial Verb Sentences",
+          "text_translation": "Ketma-ket fe'lli gap",
+          "text_translation_ru": "Предложения с последовательными глаголами",
+          "grammarNumber": "6"
         },
         {
           "id": "l6p3-g2-s2",
           "section": "grammar",
           "text_original": "连动句的谓语部分由两个或两个以上动词性短语构成。连动句有两种意义：",
           "text_translation": "Ketma-ket fe'lli gapning kesim qismi ikki yoki undan ko'p fe'l iboralaridan tashkil topadi. Ketma-ket fe'lli gapning ikki xil ma'nosi bor:",
-          "text_translation_ru": "Сказуемое предложения с последовательными глаголами состоит из двух или более глагольных словосочетаний. Такие предложения имеют два значения:",
-          "pinyin": "Liándòngjù de wèiyǔ bùfen yóu liǎng gè huò liǎng gè yǐshàng dòngcíxìng duǎnyǔ gòuchéng. Liándòngjù yǒu liǎng zhǒng yìyì:"
+          "text_translation_ru": "Сказуемое предложения с последовательными глаголами состоит из двух или более глагольных словосочетаний. Такие предложения имеют два значения:"
         },
         {
           "id": "l6p3-g2-s3",
           "section": "grammar",
-          "text_original": "（1）表示动作的目的",
-          "text_translation": "(1) Harakatning maqsadini bildiradi",
-          "text_translation_ru": "(1) Указывает на цель действия",
-          "pinyin": "(1) Biǎoshì dòngzuò de mùdì"
-        },
-        {
-          "id": "l6p3-g2-s4",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_original": "(1) 表示动作的目的",
+          "text_translation": "Harakatning maqsadini bildiradi",
+          "text_translation_ru": "Указывает на цель действия"
         },
         {
           "id": "l6p3-g2-s5",
           "section": "grammar",
-          "text_original": "（1）我想去超市买东西。",
-          "text_translation": "(1) Men supermarketga borib narsa sotib olmoqchiman.",
-          "text_translation_ru": "(1) Я хочу пойти в супермаркет за покупками.",
-          "pinyin": "(1) Wǒ xiǎng qù chāoshì mǎi dōngxi."
+          "text_original": "(1) 我想去超市买东西。",
+          "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+          "text_translation": "Men supermarketga borib narsa sotib olmoqchiman.",
+          "text_translation_ru": "Я хочу пойти в супермаркет за покупками."
         },
         {
           "id": "l6p3-g2-s6",
           "section": "grammar",
-          "text_original": "（2）我们去西安饭店吃晚饭。",
-          "text_translation": "(2) Biz Xi'an restoraniga kechki ovqat yegani boramiz.",
-          "text_translation_ru": "(2) Мы идём в ресторан «Сиань» ужинать.",
-          "pinyin": "(2) Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn."
+          "text_original": "(2) 我们去西安饭店吃晚饭。",
+          "pinyin": "Wǒmen qù Xī'ān fàndiàn chī wǎnfàn.",
+          "text_translation": "Biz Xi'an restoraniga kechki ovqat yegani boramiz.",
+          "text_translation_ru": "Мы идём в ресторан «Сиань» ужинать."
         },
         {
           "id": "l6p3-g2-s7",
           "section": "grammar",
-          "text_original": "（2）表示动作的方式",
-          "text_translation": "(2) Harakatning usulini bildiradi",
-          "text_translation_ru": "(2) Указывает на способ действия",
-          "pinyin": "(2) Biǎoshì dòngzuò de fāngshì"
-        },
-        {
-          "id": "l6p3-g2-s8",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_original": "(2) 表示动作的方式",
+          "text_translation": "Harakatning usulini bildiradi",
+          "text_translation_ru": "Указывает на способ действия"
         },
         {
           "id": "l6p3-g2-s9",
           "section": "grammar",
-          "text_original": "（1）我们坐出租车去西安饭店。",
-          "text_translation": "(1) Biz taksida Xi'an restoraniga boramiz.",
-          "text_translation_ru": "(1) Мы поедем на такси в ресторан «Сиань».",
-          "pinyin": "(1) Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn."
+          "text_original": "(1) 我们坐出租车去西安饭店。",
+          "pinyin": "Wǒmen zuò chūzūchē qù Xī'ān fàndiàn.",
+          "text_translation": "Biz taksida Xi'an restoraniga boramiz.",
+          "text_translation_ru": "Мы поедем на такси в ресторан «Сиань»."
         },
         {
           "id": "l6p3-g2-s10",
           "section": "grammar",
-          "text_original": "（2）她坐出租车去超市。",
-          "text_translation": "(2) U taksida supermarketga boradi.",
-          "text_translation_ru": "(2) Она поедет на такси в супермаркет.",
-          "pinyin": "(2) Tā zuò chūzūchē qù chāoshì."
+          "text_original": "(2) 她坐出租车去超市。",
+          "pinyin": "Tā zuò chūzūchē qù chāoshì.",
+          "text_translation": "U taksida supermarketga boradi.",
+          "text_translation_ru": "Она поедет на такси в супермаркет."
         }
       ]
     },
@@ -340,43 +349,33 @@
         {
           "id": "l6p3-g3-s1",
           "section": "grammar",
-          "text_original": "疑问代词「怎么」",
+          "text_original": "疑问代词「怎么」Interrogative Pronoun \"怎么\" (zěnme)",
           "text_translation": "So'roq olmoshi \"怎么\"",
           "text_translation_ru": "Вопросительное местоимение «怎么»",
-          "pinyin": "Yíwèn dàicí 'zěnme'"
+          "grammarNumber": "7"
         },
         {
           "id": "l6p3-g3-s2",
           "section": "grammar",
           "text_original": "疑问代词「怎么」用在动词前，询问方式。",
           "text_translation": "So'roq olmoshi \"怎么\" fe'ldan oldin ishlatiladi va usulni so'raydi.",
-          "text_translation_ru": "Вопросительное местоимение «怎么» ставится перед глаголом и используется для вопроса о способе действия.",
-          "pinyin": "Yíwèn dàicí 'zěnme' yòng zài dòngcí qián, xúnwèn fāngshì."
-        },
-        {
-          "id": "l6p3-g3-s3",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_translation_ru": "Вопросительное местоимение «怎么» ставится перед глаголом и используется для вопроса о способе действия."
         },
         {
           "id": "l6p3-g3-s4",
           "section": "grammar",
-          "text_original": "（1）我们怎么去？",
-          "text_translation": "(1) Biz qanday qilib boramiz?",
-          "text_translation_ru": "(1) Как мы поедем?",
-          "pinyin": "(1) Wǒmen zěnme qù?"
+          "text_original": "(1) 我们怎么去？",
+          "pinyin": "Wǒmen zěnme qù?",
+          "text_translation": "Biz qanday qilib boramiz?",
+          "text_translation_ru": "Как мы поедем?"
         },
         {
           "id": "l6p3-g3-s5",
           "section": "grammar",
-          "text_original": "（2）她怎么去超市？",
-          "text_translation": "(2) U supermarketga qanday boradi?",
-          "text_translation_ru": "(2) Как она доберётся до супермаркета?",
-          "pinyin": "(2) Tā zěnme qù chāoshì?"
+          "text_original": "(2) 她怎么去超市？",
+          "pinyin": "Tā zěnme qù chāoshì?",
+          "text_translation": "U supermarketga qanday boradi?",
+          "text_translation_ru": "Как она доберётся до супермаркета?"
         }
       ]
     },
@@ -391,22 +390,60 @@
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "多少", "pinyin": "duōshao" },
-          { "id": "B", "label": "B", "word": "买", "pinyin": "mǎi" },
-          { "id": "C", "label": "C", "word": "米饭", "pinyin": "mǐfàn" },
-          { "id": "D", "label": "D", "word": "坐", "pinyin": "zuò" },
-          { "id": "E", "label": "E", "word": "去", "pinyin": "qù" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "多少",
+            "pinyin": "duōshao"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "买",
+            "pinyin": "mǎi"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "米饭",
+            "pinyin": "mǐfàn"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "坐",
+            "pinyin": "zuò"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "去",
+            "pinyin": "qù"
+          }
         ],
         "sentences": [
           {
             "id": "l6p3-fb-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "我想" },
-              { "type": "blank" },
-              { "type": "text", "content": "超市" },
-              { "type": "blank" },
-              { "type": "text", "content": "牛奶。" }
+              {
+                "type": "text",
+                "content": "我想"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "超市"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "牛奶。"
+              }
             ],
             "correctOptionId": "E"
           },
@@ -414,9 +451,17 @@
             "id": "l6p3-fb-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "我们" },
-              { "type": "blank" },
-              { "type": "text", "content": "出租车去西安饭店吃晚饭。" }
+              {
+                "type": "text",
+                "content": "我们"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "出租车去西安饭店吃晚饭。"
+              }
             ],
             "correctOptionId": "D"
           },
@@ -424,9 +469,17 @@
             "id": "l6p3-fb-q3a",
             "number": 3,
             "parts": [
-              { "type": "text", "content": "妈妈：你想吃什么？孩子：我想吃" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "妈妈：你想吃什么？孩子：我想吃"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "correctOptionId": "C"
           },
@@ -434,16 +487,27 @@
             "id": "l6p3-fb-q4a",
             "number": 4,
             "parts": [
-              { "type": "text", "content": "老师：你的手机号是" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "老师：你的手机号是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "A"
           },
           {
             "id": "l6p3-fb-q4b",
             "parts": [
-              { "type": "text", "content": "学生：我的手机号是13126975002。" }
+              {
+                "type": "text",
+                "content": "学生：我的手机号是13126975002。"
+              }
             ],
             "correctOptionId": "_static"
           }
@@ -465,43 +529,94 @@
             "id": "l6p3-img-1",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-2.jpg",
             "parts": [
-              { "type": "text", "content": "她的" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "是多少？" }
+              {
+                "type": "text",
+                "content": "她的"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "是多少？"
+              }
             ],
-            "answers": ["手机号"]
+            "answers": [
+              "手机号"
+            ]
           },
           {
             "id": "l6p3-img-2",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-3.jpg",
             "parts": [
-              { "type": "text", "content": "我想" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "超市" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "牛奶。" }
+              {
+                "type": "text",
+                "content": "我想"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "超市"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "牛奶。"
+              }
             ],
-            "answers": ["去", "买"]
+            "answers": [
+              "去",
+              "买"
+            ]
           },
           {
             "id": "l6p3-img-3",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-4.jpg",
             "parts": [
-              { "type": "text", "content": "王一雪想" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "去超市。" }
+              {
+                "type": "text",
+                "content": "王一雪想"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "去超市。"
+              }
             ],
-            "answers": ["坐出租车"]
+            "answers": [
+              "坐出租车"
+            ]
           },
           {
             "id": "l6p3-img-4",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-5.jpg",
             "parts": [
-              { "type": "text", "content": "这些包子非常" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "这些包子非常"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["好吃"]
+            "answers": [
+              "好吃"
+            ]
           }
         ]
       }
@@ -526,15 +641,47 @@
       ],
       "tableFillData": {
         "options": [
-          { "id": "A", "label": "A", "word": "包子", "pinyin": "bāozi" },
-          { "id": "B", "label": "B", "word": "面条儿", "pinyin": "miàntiáor" },
-          { "id": "C", "label": "C", "word": "饺子", "pinyin": "jiǎozi" },
-          { "id": "D", "label": "D", "word": "米饭", "pinyin": "mǐfàn" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "包子",
+            "pinyin": "bāozi"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "面条儿",
+            "pinyin": "miàntiáor"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "饺子",
+            "pinyin": "jiǎozi"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "米饭",
+            "pinyin": "mǐfàn"
+          }
         ],
         "columns": [
-          { "id": "l6p3-tf-mon", "label": "星期一", "pinyin": "xīngqīyī" },
-          { "id": "l6p3-tf-tue", "label": "星期二", "pinyin": "xīngqī'èr" },
-          { "id": "l6p3-tf-sat", "label": "星期六", "pinyin": "xīngqīliù" }
+          {
+            "id": "l6p3-tf-mon",
+            "label": "星期一",
+            "pinyin": "xīngqīyī"
+          },
+          {
+            "id": "l6p3-tf-tue",
+            "label": "星期二",
+            "pinyin": "xīngqī'èr"
+          },
+          {
+            "id": "l6p3-tf-sat",
+            "label": "星期六",
+            "pinyin": "xīngqīliù"
+          }
         ]
       }
     }

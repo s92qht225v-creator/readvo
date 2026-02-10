@@ -16,9 +16,9 @@
 
 import React, { useState, useCallback } from 'react';
 import type { Page as PageType } from '@/types';
-import type { Language } from '@/types/ui-state';
 import { Page } from './Page';
 import { ReaderControls } from './ReaderControls';
+import { useLanguage } from '../hooks/useLanguage';
 
 export interface PageReaderProps {
   page: PageType;
@@ -34,8 +34,8 @@ export function PageReader({ page }: PageReaderProps) {
   // Font size: percentage scale (100 = default, range 80-150)
   const [fontSize, setFontSize] = useState(100);
 
-  // Language: Uzbek by default
-  const [language, setLanguage] = useState<Language>('uz');
+  // Language: persisted to localStorage via useLanguage hook
+  const [language, toggleLanguage] = useLanguage();
 
   // Handlers
   const handlePinyinToggle = useCallback(() => {
@@ -54,9 +54,7 @@ export function PageReader({ page }: PageReaderProps) {
     setFontSize((prev) => Math.max(prev - 10, 80));
   }, []);
 
-  const handleLanguageToggle = useCallback(() => {
-    setLanguage((prev) => (prev === 'uz' ? 'ru' : 'uz'));
-  }, []);
+  const handleLanguageToggle = toggleLanguage;
 
   return (
     <>

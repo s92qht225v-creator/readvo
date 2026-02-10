@@ -268,27 +268,24 @@
         {
           "id": "l7p1-g1-s1",
           "section": "grammar",
-          "text_original": "时间的表达（2）",
+          "text_original": "时间的表达 Expressing Time (2)",
           "text_translation": "Vaqtni ifodalash (2)",
           "text_translation_ru": "Выражение времени (2)",
-          "pinyin": "Shíjiān de biǎodá (2)",
           "grammarNumber": "1"
         },
         {
           "id": "l7p1-g1-s2",
           "section": "grammar",
-          "text_original": "（1）使用\"点、分\"表达时间点",
-          "text_translation": "(1) \"点\" va \"分\" yordamida aniq vaqtni ifodalash",
-          "text_translation_ru": "(1) Использование «点» и «分» для выражения точного времени",
-          "pinyin": "(1) Shǐyòng 'diǎn, fēn' biǎodá shíjiān diǎn"
+          "text_original": "(1) 使用\"点、分\"表达时间点",
+          "text_translation": "\"点\" va \"分\" yordamida aniq vaqtni ifodalash",
+          "text_translation_ru": "Использование «点» и «分» для выражения точного времени"
         },
         {
           "id": "l7p1-g1-s3",
           "section": "grammar",
           "text_original": "\"点、分\"表示具体时间点，整点使用\"点\"，不是整点使用\"分\"，\"分\"可以省略。但是，当时间为\"十分\"时，不能省略\"分\"；当时间为十分以下时，要读出\"零\"。",
           "text_translation": "\"点\" va \"分\" aniq vaqtni bildiradi. Butun soatlar uchun \"点\" ishlatiladi, butun soat bo'lmasa \"分\" ishlatiladi. \"分\" ni tushirib qoldirish mumkin. Ammo vaqt \"十分\" bo'lganda \"分\" ni tushirib qoldirish mumkin emas; vaqt o'n minutdan kam bo'lganda \"零\" o'qilishi kerak.",
-          "text_translation_ru": "«点» и «分» обозначают конкретное время. Для целых часов используется «点», для минут — «分». «分» можно опустить. Однако когда время ровно «十分», «分» нельзя опускать; когда время меньше десяти минут, нужно произносить «零».",
-          "pinyin": "'Diǎn, fēn' biǎoshì jùtǐ shíjiān diǎn, zhěng diǎn shǐyòng 'diǎn', bú shì zhěng diǎn shǐyòng 'fēn', 'fēn' kěyǐ shěnglüè. Dànshì, dāng shíjiān wéi 'shí fēn' shí, bù néng shěnglüè 'fēn'; dāng shíjiān wéi shí fēn yǐxià shí, yào dú chū 'líng'."
+          "text_translation_ru": "«点» и «分» обозначают конкретное время. Для целых часов используется «点», для минут — «分». «分» можно опустить. Однако когда время ровно «十分», «分» нельзя опускать; когда время меньше десяти минут, нужно произносить «零»."
         },
         {
           "id": "l7p1-g1-s4",
@@ -296,56 +293,53 @@
           "text_original": "",
           "text_translation": "",
           "text_translation_ru": "",
-          "pinyin": "",
           "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-1-table.jpg"
         },
         {
           "id": "l7p1-g1-s5",
           "section": "grammar",
-          "text_original": "（2）使用\"上午、中午、下午、晚上\"等时间名词表达时间段",
-          "text_translation": "(2) \"上午\", \"中午\", \"下午\", \"晚上\" kabi vaqt otlaridan foydalanib vaqt oralig'ini ifodalash",
-          "text_translation_ru": "(2) Использование временных существительных «上午», «中午», «下午», «晚上» для выражения периодов времени",
-          "pinyin": "(2) Shǐyòng 'shàngwǔ, zhōngwǔ, xiàwǔ, wǎnshang' děng shíjiān míngcí biǎodá shíjiān duàn"
+          "text_original": "(2) 使用\"上午、中午、下午、晚上\"等时间名词表达时间段",
+          "text_translation": "\"上午\", \"中午\", \"下午\", \"晚上\" kabi vaqt otlaridan foydalanib vaqt oralig'ini ifodalash",
+          "text_translation_ru": "Использование временных существительных «上午», «中午», «下午», «晚上» для выражения периодов времени"
         },
         {
           "id": "l7p1-g1-s6",
           "section": "grammar",
           "text_original": "\"上午、中午、下午、晚上\"等时间名词可以表达时间段。这些时间名词后还可以直接加时间点。",
           "text_translation": "\"上午\", \"中午\", \"下午\", \"晚上\" kabi vaqt otlari vaqt oralig'ini bildiradi. Bu vaqt otlaridan keyin to'g'ridan-to'g'ri aniq vaqtni qo'shish mumkin.",
-          "text_translation_ru": "Временные существительные «上午», «中午», «下午», «晚上» выражают периоды времени. После них можно напрямую добавлять точное время.",
-          "pinyin": "'Shàngwǔ, zhōngwǔ, xiàwǔ, wǎnshang' děng shíjiān míngcí kěyǐ biǎodá shíjiān duàn. Zhèxiē shíjiān míngcí hòu hái kěyǐ zhíjiē jiā shíjiān diǎn."
+          "text_translation_ru": "Временные существительные «上午», «中午», «下午», «晚上» выражают периоды времени. После них можно напрямую добавлять точное время."
         },
         {
           "id": "l7p1-g1-s7",
           "section": "grammar",
-          "text_original": "（1）上午",
-          "text_translation": "(1) tushdan oldin",
-          "text_translation_ru": "(1) утро",
-          "pinyin": "(1) shàngwǔ"
+          "text_original": "(1) 上午",
+          "pinyin": "shàngwǔ",
+          "text_translation": "tushdan oldin",
+          "text_translation_ru": "утро"
         },
         {
           "id": "l7p1-g1-s8",
           "section": "grammar",
-          "text_original": "（2）中午十二点",
-          "text_translation": "(2) tush paytida soat o'n ikki",
-          "text_translation_ru": "(2) полдень, двенадцать часов",
-          "pinyin": "(2) zhōngwǔ shí'èr diǎn"
+          "text_original": "(2) 中午十二点",
+          "pinyin": "zhōngwǔ shí'èr diǎn",
+          "text_translation": "tush paytida soat o'n ikki",
+          "text_translation_ru": "полдень, двенадцать часов"
         },
         {
           "id": "l7p1-g1-s9",
           "section": "grammar",
-          "text_original": "（3）下午两点半",
-          "text_translation": "(3) tushdan keyin soat ikki yarim",
-          "text_translation_ru": "(3) половина третьего дня",
-          "pinyin": "(3) xiàwǔ liǎng diǎn bàn"
+          "text_original": "(3) 下午两点半",
+          "pinyin": "xiàwǔ liǎng diǎn bàn",
+          "text_translation": "tushdan keyin soat ikki yarim",
+          "text_translation_ru": "половина третьего дня"
         },
         {
           "id": "l7p1-g1-s10",
           "section": "grammar",
-          "text_original": "（4）晚上九点十分",
-          "text_translation": "(4) kechqurun soat to'qqiz o'n minut",
-          "text_translation_ru": "(4) девять десять вечера",
-          "pinyin": "(4) wǎnshang jiǔ diǎn shí fēn"
+          "text_original": "(4) 晚上九点十分",
+          "pinyin": "wǎnshang jiǔ diǎn shí fēn",
+          "text_translation": "kechqurun soat to'qqiz o'n minut",
+          "text_translation_ru": "девять десять вечера"
         }
       ]
     },
@@ -356,10 +350,9 @@
         {
           "id": "l7p1-g2-s1",
           "section": "grammar",
-          "text_original": "语气助词「吧」（1）",
+          "text_original": "语气助词「吧」Modal Particle \"吧\" (ba) (1)",
           "text_translation": "Modal yuklamasi \"吧\" (1)",
           "text_translation_ru": "Модальная частица «吧» (1)",
-          "pinyin": "Yǔqì zhùcí 'ba' (1)",
           "grammarNumber": "2"
         },
         {
@@ -367,17 +360,7 @@
           "section": "grammar",
           "text_original": "本课语气助词「吧」读轻声（ba），在句子末尾，表示建议、商量、劝告、请求。",
           "text_translation": "Bu darsdagi modal yuklamasi \"吧\" yengil ohangda (ba) o'qiladi, gap oxirida keladi va taklif, maslahatlashish, nasihat yoki iltimosni bildiradi.",
-          "text_translation_ru": "Модальная частица «吧» в этом уроке произносится нейтральным тоном (ba), ставится в конце предложения и выражает предложение, обсуждение, совет или просьбу.",
-          "pinyin": "Běn kè yǔqì zhùcí 'ba' dú qīngshēng (ba), zài jùzi mòwěi, biǎoshì jiànyì, shāngliáng, quàngào, qǐngqiú."
-        },
-        {
-          "id": "l7p1-g2-s3",
-          "section": "grammar",
-          "text_original": "朗读对话。",
-          "text_translation": "Dialoglarni ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте диалоги вслух.",
-          "pinyin": "Lǎngdú duìhuà.",
-          "isCheckbox": true
+          "text_translation_ru": "Модальная частица «吧» в этом уроке произносится нейтральным тоном (ba), ставится в конце предложения и выражает предложение, обсуждение, совет или просьбу."
         },
         {
           "id": "l7p1-g2-s4",

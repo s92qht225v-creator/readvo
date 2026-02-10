@@ -6,19 +6,11 @@ import type { FlashcardDeckData, FlashcardWord } from '../types';
 import { FlashcardCard } from './FlashcardCard';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useLanguage } from '../hooks/useLanguage';
+import { shuffleArray } from '../utils/shuffle';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
   bookPath: string;
-}
-
-function shuffleArray<T>(array: T[]): T[] {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
 }
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) => {
@@ -128,7 +120,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
             onClick={toggleLanguage}
             type="button"
           >
-            {language === 'uz' ? 'UZ' : 'RU'}
+            {language === 'uz' ? 'RU' : 'UZ'}
           </button>
         </div>
       </div>

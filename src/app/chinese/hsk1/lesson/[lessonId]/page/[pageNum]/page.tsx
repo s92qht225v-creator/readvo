@@ -3,16 +3,6 @@ import { loadPage, getContentManifest, getPageNavigation } from '@/services';
 import { ReaderLayout } from '@/components/ReaderLayout';
 
 /**
- * Force dynamic rendering for this route
- */
-export const dynamic = 'force-dynamic';
-
-/**
- * Allow dynamic routes not generated at build time
- */
-export const dynamicParams = true;
-
-/**
  * Route params
  */
 interface PageParams {

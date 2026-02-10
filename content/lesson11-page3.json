@@ -1,0 +1,608 @@
+{
+  "id": "lesson11-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "l11p3-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 3",
+      "subheading": "Tekst 3",
+      "subheading_ru": "Текст 3",
+      "context": "星期六早上，刘明要去医院加班，出门前和女儿对话。",
+      "contextPinyin": "Xīngqīliù zǎoshang, Liú Míng yào qù yīyuàn jiābān, chūmén qián hé nǚ'ér duìhuà.",
+      "contextTranslation": "Shanba kuni ertalab Liu Ming kasalxonaga qo'shimcha ishga bormoqchi, chiqishdan oldin qizi bilan gaplashdi.",
+      "contextTranslation_ru": "В субботу утром Лю Мин собирался на сверхурочную работу в больницу и перед выходом поговорил с дочерью.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l11p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（1）弟弟正在（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "玩",
+                "pinyin": "wán"
+              },
+              {
+                "label": "B",
+                "word": "起床",
+                "pinyin": "qǐchuáng"
+              },
+              {
+                "label": "C",
+                "word": "睡觉",
+                "pinyin": "shuìjiào"
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l11p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（2）爸爸问姐姐，弟弟（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）超市。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "在",
+                "pinyin": "zài"
+              },
+              {
+                "label": "B",
+                "word": "去",
+                "pinyin": "qù"
+              },
+              {
+                "label": "C",
+                "word": "去不去",
+                "pinyin": "qù bu qù"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l11p3-sec-text3",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-1.jpg",
+      "sentences": [
+        {
+          "id": "l11p3-t3-s1",
+          "section": "text",
+          "text_original": "弟弟起床没起床呢？",
+          "text_translation": "Ukang turdi-turmadimi?",
+          "text_translation_ru": "Братик встал или нет?",
+          "pinyin": "Dìdi qǐchuáng méi qǐchuáng ne?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l11p3-t3-s2",
+          "section": "text",
+          "text_original": "没起床呢，还在睡觉。",
+          "text_translation": "Turmadi hali, hali uxlayapti.",
+          "text_translation_ru": "Ещё не встал, всё ещё спит.",
+          "pinyin": "Méi qǐchuáng ne, hái zài shuìjiào.",
+          "speaker": "刘小雪"
+        },
+        {
+          "id": "l11p3-t3-s3",
+          "section": "text",
+          "text_original": "还睡呢？他今天去不去那里？",
+          "text_translation": "Hali uxlayaptimi? U bugun u yerga boradi-bormaydimi?",
+          "text_translation_ru": "Всё ещё спит? Он сегодня пойдёт туда или нет?",
+          "pinyin": "Hái shuì ne? Tā jīntiān qù bu qù nàlǐ?",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l11p3-t3-s4",
+          "section": "text",
+          "text_original": "去哪里？",
+          "text_translation": "Qayerga?",
+          "text_translation_ru": "Куда?",
+          "pinyin": "Qù nǎlǐ?",
+          "speaker": "刘小雪"
+        },
+        {
+          "id": "l11p3-t3-s5",
+          "section": "text",
+          "text_original": "去超市。",
+          "text_translation": "Supermarketga.",
+          "text_translation_ru": "В супермаркет.",
+          "pinyin": "Qù chāoshì.",
+          "speaker": "刘　明"
+        },
+        {
+          "id": "l11p3-t3-s6",
+          "section": "text",
+          "text_original": "我昨天问他，他对我说，他不去，他今天要和小朋友玩。",
+          "text_translation": "Men kecha undan so'radim, u menga aytdi, bormaydi, bugun do'stlari bilan o'ynaydi.",
+          "text_translation_ru": "Я вчера его спрашивала, он мне сказал, что не пойдёт, сегодня хочет поиграть с друзьями.",
+          "pinyin": "Wǒ zuótiān wèn tā, tā duì wǒ shuō, tā bú qù, tā jīntiān yào hé xiǎopéngyou wán.",
+          "speaker": "刘小雪"
+        }
+      ]
+    },
+    {
+      "id": "l11p3-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%206.mp3",
+      "sentences": [
+        {
+          "id": "l11p3-v-s1",
+          "section": "vocabulary",
+          "text_original": "弟弟",
+          "text_translation": "uka (ot)",
+          "text_translation_ru": "младший брат (сущ.)",
+          "pinyin": "dìdi",
+          "wordClass": "n.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l11p3-v-s2",
+          "section": "vocabulary",
+          "text_original": "起床",
+          "text_translation": "turmoq; o'rnidan turmoq (fe'l)",
+          "text_translation_ru": "вставать; подниматься с кровати (глагол)",
+          "pinyin": "qǐchuáng",
+          "wordClass": "v.",
+          "vocabNumber": 15
+        },
+        {
+          "id": "l11p3-v-s3",
+          "section": "vocabulary",
+          "text_original": "睡觉",
+          "text_translation": "uxlamoq (fe'l)",
+          "text_translation_ru": "спать (глагол)",
+          "pinyin": "shuìjiào",
+          "wordClass": "v.",
+          "vocabNumber": 16
+        },
+        {
+          "id": "l11p3-v-s4",
+          "section": "vocabulary",
+          "text_original": "睡",
+          "text_translation": "uxlamoq (fe'l)",
+          "text_translation_ru": "спать (глагол)",
+          "pinyin": "shuì",
+          "wordClass": "v.",
+          "vocabNumber": 17
+        },
+        {
+          "id": "l11p3-v-s5",
+          "section": "vocabulary",
+          "text_original": "那里",
+          "text_translation": "u yer; o'sha yer (olmosh)",
+          "text_translation_ru": "там; то место (мест.)",
+          "pinyin": "nàlǐ",
+          "wordClass": "pron.",
+          "vocabNumber": 18
+        },
+        {
+          "id": "l11p3-v-s6",
+          "section": "vocabulary",
+          "text_original": "哪里",
+          "text_translation": "qayer (olmosh)",
+          "text_translation_ru": "где; куда (мест.)",
+          "pinyin": "nǎlǐ",
+          "wordClass": "pron.",
+          "vocabNumber": 19
+        },
+        {
+          "id": "l11p3-v-s7",
+          "section": "vocabulary",
+          "text_original": "昨天",
+          "text_translation": "kecha (ot)",
+          "text_translation_ru": "вчера (сущ.)",
+          "pinyin": "zuótiān",
+          "wordClass": "n.",
+          "vocabNumber": 20
+        },
+        {
+          "id": "l11p3-v-s8",
+          "section": "vocabulary",
+          "text_original": "问",
+          "text_translation": "so'ramoq (fe'l)",
+          "text_translation_ru": "спрашивать (глагол)",
+          "pinyin": "wèn",
+          "wordClass": "v.",
+          "vocabNumber": 21
+        },
+        {
+          "id": "l11p3-v-s9",
+          "section": "vocabulary",
+          "text_original": "对",
+          "text_translation": "...ga; ...ga qarab (ko'makchi)",
+          "text_translation_ru": "к; по отношению к (предлог)",
+          "pinyin": "duì",
+          "wordClass": "prep.",
+          "vocabNumber": 22
+        },
+        {
+          "id": "l11p3-v-s10",
+          "section": "vocabulary",
+          "text_original": "说",
+          "text_translation": "gapirmoq; aytmoq (fe'l)",
+          "text_translation_ru": "говорить; сказать (глагол)",
+          "pinyin": "shuō",
+          "wordClass": "v.",
+          "vocabNumber": 23
+        },
+        {
+          "id": "l11p3-v-s11",
+          "section": "vocabulary",
+          "text_original": "要",
+          "text_translation": "xohlamoq; ...moqchi (modal fe'l)",
+          "text_translation_ru": "хотеть; собираться (мод. глагол)",
+          "pinyin": "yào",
+          "wordClass": "mod.",
+          "vocabNumber": 24
+        },
+        {
+          "id": "l11p3-v-s12",
+          "section": "vocabulary",
+          "text_original": "小朋友",
+          "text_translation": "bola; do'st bolalar (ot)",
+          "text_translation_ru": "ребёнок; дети (сущ.)",
+          "pinyin": "xiǎopéngyou",
+          "wordClass": "n.",
+          "vocabNumber": 25
+        }
+      ]
+    },
+    {
+      "id": "l11p3-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l11p3-g3-s1",
+          "section": "grammar",
+          "text_original": "能愿动词\"要\"",
+          "text_translation": "Modal fe'l \"要\"",
+          "text_translation_ru": "Модальный глагол «要»",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l11p3-g3-s2",
+          "section": "grammar",
+          "text_original": "能愿动词\"要\"在动词前，表示想做、打算做。",
+          "text_translation": "\"要\" modal fe'li fe'l oldida kelib, biror narsani qilishni xohlash yoki niyat qilishni bildiradi.",
+          "text_translation_ru": "Модальный глагол «要» ставится перед глаголом и выражает желание или намерение что-либо сделать."
+        },
+        {
+          "id": "l11p3-g3-s3",
+          "section": "grammar",
+          "text_original": "(1) 他今天要和小朋友玩。",
+          "pinyin": "Tā jīntiān yào hé xiǎopéngyou wán.",
+          "text_translation": "U bugun do'stlari bilan o'ynamoqchi.",
+          "text_translation_ru": "Он сегодня хочет поиграть с друзьями."
+        },
+        {
+          "id": "l11p3-g3-s4",
+          "section": "grammar",
+          "text_original": "(2) 妈妈要去超市。",
+          "pinyin": "Māma yào qù chāoshì.",
+          "text_translation": "Onam supermarketga bormoqchi.",
+          "text_translation_ru": "Мама собирается в супермаркет."
+        },
+        {
+          "id": "l11p3-g3-s5",
+          "section": "grammar",
+          "text_original": "(3) 白家月要在家里学中文。",
+          "pinyin": "Bái Jiāyuè yào zài jiā lǐ xué Zhōngwén.",
+          "text_translation": "Bai Jiyayue uyda xitoy tilini o'rganmoqchi.",
+          "text_translation_ru": "Бай Цзяюэ хочет учить китайский дома."
+        }
+      ]
+    },
+    {
+      "id": "l11p3-sec-fillblank",
+      "type": "fillblank",
+      "heading": "综合练习",
+      "subheading": "Umumiy mashqlar",
+      "subheading_ru": "Комплексные упражнения",
+      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {
+            "id": "A",
+            "label": "A",
+            "word": "那里",
+            "pinyin": "nàlǐ"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "睡觉",
+            "pinyin": "shuìjiào"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "去不去",
+            "pinyin": "qù bu qù"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "要",
+            "pinyin": "yào"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "正在",
+            "pinyin": "zhèngzài"
+          }
+        ],
+        "sentences": [
+          {
+            "id": "l11p3-fb-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "你（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）超市？"
+              }
+            ],
+            "correctOptionId": "C"
+          },
+          {
+            "id": "l11p3-fb-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "她没在看电视，（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）学习呢。"
+              }
+            ],
+            "correctOptionId": "E"
+          },
+          {
+            "id": "l11p3-fb-q3a",
+            "number": 3,
+            "speaker": "弟弟",
+            "parts": [
+              {
+                "type": "text",
+                "content": "姐姐，我们去（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）玩吧，好不好？"
+              }
+            ],
+            "correctOptionId": "A"
+          },
+          {
+            "id": "l11p3-fb-q3b",
+            "speaker": "姐姐",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我不去，我（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）读书。"
+              }
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l11p3-fb-q4a",
+            "number": 4,
+            "speaker": "妈妈",
+            "parts": [
+              {
+                "type": "text",
+                "content": "爸爸在做什么？"
+              }
+            ],
+            "correctOptionId": "_static"
+          },
+          {
+            "id": "l11p3-fb-q4b",
+            "speaker": "孩子",
+            "parts": [
+              {
+                "type": "text",
+                "content": "他在（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）呢。"
+              }
+            ],
+            "correctOptionId": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l11p3-sec-imagedescribe",
+      "type": "imagedescribe",
+      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "sentences": [],
+      "imageDescribeData": {
+        "cards": [
+          {
+            "id": "l11p3-img-1",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-2.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "我们"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "要去超市"
+            ]
+          },
+          {
+            "id": "l11p3-img-2",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-3.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "桌子上"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "书？"
+              }
+            ],
+            "answers": [
+              "有没有"
+            ]
+          },
+          {
+            "id": "l11p3-img-3",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-4.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "弟弟"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "睡觉，在学习呢，他明天"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "没在",
+              "要考试"
+            ]
+          },
+          {
+            "id": "l11p3-img-4",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-5.jpg",
+            "parts": [
+              {
+                "type": "text",
+                "content": "她"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "看电视，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
+            ],
+            "answers": [
+              "没在",
+              "在读书呢"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l11p3-sec-activity",
+      "type": "activity",
+      "heading": "课堂活动",
+      "subheading": "Sinf mashg'uloti",
+      "subheading_ru": "Классное занятие",
+      "instruction": "双人活动。两人一组，互相问答做不做某事。Juft bo'lib ishlang. Ikki kishidan iborat guruhda navbatma-navbat biror ishni qilish-qilmasligingiz haqida so'rang va javob bering.",
+      "instruction_ru": "双人活动。两人一组，互相问答做不做某事。Работа в парах. Работайте в парах, по очереди спрашивая и отвечая, собираетесь ли вы что-то делать.",
+      "sentences": []
+    }
+  ]
+}

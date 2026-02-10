@@ -126,9 +126,6 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       {section.context && (
         <div className="section__context">
           <p className="section__context-text">{section.context}</p>
-          {section.contextPinyin && isPinyinVisible && (
-            <p className="section__context-pinyin">{section.contextPinyin}</p>
-          )}
           {getContextTranslation() && isTranslationVisible && (
             <p className="section__context-translation">{getContextTranslation()}</p>
           )}
@@ -136,7 +133,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       )}
 
       {/* Instruction (optional, e.g., "Read the dialogue aloud") */}
-      {getInstruction() && isTranslationVisible && (
+      {getInstruction() && (
         <div className="section__instruction-row">
           <span className="section__instruction-checkbox" aria-hidden="true">■</span>
           <p className="section__instruction">{getInstruction()}</p>
@@ -165,23 +162,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         </div>
       )}
 
-      {/* Tip box (optional, e.g., "小语助力") */}
-      {section.tip && (
-        <div className="section__tip">
-          {section.tip.label && (
-            <span className="section__tip-label">{section.tip.label}</span>
-          )}
-          <p className="section__tip-text">{section.tip.text}</p>
-          {section.tip.pinyin && isPinyinVisible && (
-            <p className="section__tip-pinyin">{section.tip.pinyin}</p>
-          )}
-          {getTipTranslation() && isTranslationVisible && (
-            <p className="section__tip-translation">{getTipTranslation()}</p>
-          )}
-        </div>
-      )}
-
       {/* Content: image + sentences */}
+      {(section.image_url || section.tip || section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || (section.type === 'bonus' && section.video_url) || section.grammarTableData || section.image_url_bottom || (section.images_bottom && section.images_bottom.length > 0)) && (
       <div className={`section__content ${section.image_url ? 'section__content--with-image' : ''}`}>
         {/* Top image (optional, original textbook scan) */}
         {section.image_url && (
@@ -194,7 +176,24 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
           </div>
         )}
 
+        {/* Tip box (optional, e.g., "小语助力") — rendered after image */}
+        {section.tip && (
+          <div className="section__tip">
+            {section.tip.label && (
+              <span className="section__tip-label">{section.tip.label}</span>
+            )}
+            <p className="section__tip-text">{section.tip.text}</p>
+            {section.tip.pinyin && isPinyinVisible && (
+              <p className="section__tip-pinyin">{section.tip.pinyin}</p>
+            )}
+            {getTipTranslation() && isTranslationVisible && (
+              <p className="section__tip-translation">{getTipTranslation()}</p>
+            )}
+          </div>
+        )}
+
         {/* Sentences, Matching Exercise, or Fill-Blank Exercise */}
+        {(section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || (section.type === 'bonus' && section.video_url)) && (
         <div className="section__sentences">
           {section.type === 'matching' && section.matchingItems ? (
             <MatchingExercise
@@ -237,6 +236,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                   content: part.content,
                 })),
                 correctOptionId: sent.correctOptionId,
+                correctOptionIds: sent.correctOptionIds,
                 speaker: sent.speaker,
               }))}
               language={language}
@@ -248,6 +248,10 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 image_url: card.image_url,
                 parts: card.parts.map((p) => ({ type: p.type, content: p.content })),
                 answers: [...card.answers],
+                speaker: card.speaker,
+                dialogueNumber: card.dialogueNumber,
+                pinyin: card.pinyin,
+                translation: card.translation,
               }))}
               language={language}
             />
@@ -292,6 +296,35 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
             ))
           )}
         </div>
+        )}
+
+        {/* Grammar table (optional, for grammar sections with tabular data) */}
+        {section.grammarTableData && (
+          <div className="grammar-table">
+            <div className="grammar-table__row grammar-table__row--header" style={{ gridTemplateColumns: `repeat(${section.grammarTableData.headers.length}, 1fr)` }}>
+              {section.grammarTableData.headers.map((header, i) => (
+                <div key={i} className="grammar-table__cell grammar-table__cell--header">
+                  <span className="grammar-table__cell-label">{header}</span>
+                  {(() => {
+                    const sub = language === 'ru' && section.grammarTableData!.subHeaders_ru?.[i]
+                      ? section.grammarTableData!.subHeaders_ru[i]
+                      : section.grammarTableData!.subHeaders?.[i];
+                    return sub ? <span className="grammar-table__cell-sub">{sub}</span> : null;
+                  })()}
+                </div>
+              ))}
+            </div>
+            {section.grammarTableData.rows.map((row, rowIdx) => (
+              <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
+                {row.cells.map((cell, cellIdx) => (
+                  <div key={cellIdx} className="grammar-table__cell">
+                    {cell}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Bottom image (optional, appears after sentences) */}
         {section.image_url_bottom && (
@@ -319,6 +352,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
           </div>
         )}
       </div>
+      )}
     </section>
   );
 });

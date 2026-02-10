@@ -17,9 +17,8 @@
       "audio_url": "/audio/l1p2-text2.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-2-1.jpg",
       "tip": {
-        "label": "小语助力 Xiaoyu's Tip",
+        "label": "小语助力",
         "text": "「您」，敬称，对年长者或尊敬的人使用。",
-        "pinyin": "「Nín」, jìngchēng, duì niánzhǎng zhě huò zūnjìng de rén shǐyòng.",
         "translation": "「您」hurmat olmoshi bo'lib, kattalar yoki hurmat qilinadigan kishilarga nisbatan ishlatiladi.",
         "translation_ru": "「您」— вежливое местоимение, используется при обращении к старшим или уважаемым людям."
       },
@@ -133,31 +132,6 @@
           "text_translation": "sizlar, siz (ko'plik)",
           "text_translation_ru": "вы (множественное число)",
           "pinyin": "nǐmen"
-        }
-      ]
-    },
-    {
-      "id": "l1p2-sec-exercise",
-      "type": "exercise",
-      "subheading_ru": "Упражнения",
-      "sentences": [
-        {
-          "id": "l1p2-ex-s1",
-          "section": "exercise",
-          "text_original": "分角色朗读对话。",
-          "text_translation": "Dialogni rollarga bo'lib o'qing.",
-          "text_translation_ru": "Прочитайте диалог по ролям.",
-          "pinyin": "Fēn juésè lǎngdú duìhuà.",
-          "isCheckbox": true
-        },
-        {
-          "id": "l1p2-ex-s2",
-          "section": "exercise",
-          "text_original": "两人一组或多人一组，用真实姓名对话。",
-          "text_translation": "Ikki yoki undan ko'p kishidan iborat guruhda haqiqiy ismlaringiz bilan suhbatlashing.",
-          "text_translation_ru": "В парах или группах поговорите, используя настоящие имена.",
-          "pinyin": "Liǎng rén yī zǔ huò duō rén yī zǔ, yòng zhēnshí xìngmíng duìhuà.",
-          "isCheckbox": true
         }
       ]
     }

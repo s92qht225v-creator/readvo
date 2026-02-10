@@ -12,7 +12,96 @@
       "contextPinyin": "Zài jiē shàng, Wáng Yīxuě dàizhe érzi ǒuyù Yáng Tónglè.",
       "contextTranslation": "Ko'chada Wang Yixue o'g'li bilan Yan Tongleni tasodifan uchratdi.",
       "contextTranslation_ru": "На улице Ван Исюэ случайно встретила Ян Тунлэ, гуляя с сыном.",
-      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-1.png",
+      "sentences": []
+    },
+    {
+      "id": "l4p3-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l4p3-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王一雪有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "孩子。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "一个",
+                "pinyin": "yí gè"
+              },
+              {
+                "label": "B",
+                "word": "两个",
+                "pinyin": "liǎng gè"
+              },
+              {
+                "label": "C",
+                "word": "三个",
+                "pinyin": "sān gè"
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l4p3-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "王一雪女儿今年"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "岁。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "五",
+                "pinyin": "wǔ"
+              },
+              {
+                "label": "B",
+                "word": "十二",
+                "pinyin": "shí'èr"
+              },
+              {
+                "label": "C",
+                "word": "二十",
+                "pinyin": "èrshí"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l4p3-sec-text3-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%205.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-1.jpg",
       "sentences": [
         {
           "id": "l4p3-t3-s1",
@@ -76,53 +165,10 @@
         }
       ],
       "tip": {
-        "label": "小语助力 Xiaoyu's Tip",
+        "label": "小语助力",
         "text": "十岁以下时的问法。This is how to ask about the age of children under ten years old. 十岁以上一般不问\"几岁\"，要问\"多大\"。For people over ten years old, we generally ask \"多大\" instead of \"几岁\".",
-        "pinyin": "Shí suì yǐxià shí de wènfǎ. Shí suì yǐshàng yībān bú wèn \"jǐ suì\", yào wèn \"duō dà\".",
         "translation": "10 yoshgacha bo'lgan bolalarning yoshini so'rash usuli. 10 yoshdan katta odamlarning yoshini so'rashda odatda \"几岁\" emas, \"多大\" ishlatiladi.",
         "translation_ru": "Так спрашивают о возрасте детей до десяти лет. Для людей старше десяти лет обычно спрашивают «多大» вместо «几岁»."
-      }
-    },
-    {
-      "id": "l4p3-sec-mc",
-      "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%205.mp3",
-      "sentences": [],
-      "multipleChoiceData": {
-        "questions": [
-          {
-            "id": "l4p3-mc-q1",
-            "number": 1,
-            "parts": [
-              { "type": "text", "content": "王一雪有" },
-              { "type": "blank" },
-              { "type": "text", "content": "孩子。" }
-            ],
-            "options": [
-              { "label": "A", "word": "一个", "pinyin": "yí gè" },
-              { "label": "B", "word": "两个", "pinyin": "liǎng gè" },
-              { "label": "C", "word": "三个", "pinyin": "sān gè" }
-            ],
-            "correctOptionLabel": "B"
-          },
-          {
-            "id": "l4p3-mc-q2",
-            "number": 2,
-            "parts": [
-              { "type": "text", "content": "王一雪女儿今年" },
-              { "type": "blank" },
-              { "type": "text", "content": "岁。" }
-            ],
-            "options": [
-              { "label": "A", "word": "五", "pinyin": "wǔ" },
-              { "label": "B", "word": "十二", "pinyin": "shí'èr" },
-              { "label": "C", "word": "二十", "pinyin": "èrshí" }
-            ],
-            "correctOptionLabel": "B"
-          }
-        ]
       }
     },
     {
@@ -208,7 +254,6 @@
           "text_original": "根据课文内容回答问题。",
           "text_translation": "Matn mazmuniga ko'ra savollarga javob bering.",
           "text_translation_ru": "Ответьте на вопросы по содержанию текста.",
-          "pinyin": "Gēnjù kèwén nèiróng huídá wèntí.",
           "isCheckbox": true
         },
         {
@@ -240,20 +285,53 @@
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "呢", "pinyin": "ne" },
-          { "id": "B", "label": "B", "word": "二十", "pinyin": "èrshí" },
-          { "id": "C", "label": "C", "word": "没", "pinyin": "méi" },
-          { "id": "D", "label": "D", "word": "口", "pinyin": "kǒu" },
-          { "id": "E", "label": "E", "word": "大", "pinyin": "dà" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "呢",
+            "pinyin": "ne"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "二十",
+            "pinyin": "èrshí"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "没",
+            "pinyin": "méi"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "口",
+            "pinyin": "kǒu"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "大",
+            "pinyin": "dà"
+          }
         ],
         "sentences": [
           {
             "id": "l4p3-comp-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "王一飞老师有" },
-              { "type": "blank" },
-              { "type": "text", "content": "个学生。" }
+              {
+                "type": "text",
+                "content": "王一飞老师有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "个学生。"
+              }
             ],
             "correctOptionId": "B"
           },
@@ -261,9 +339,17 @@
             "id": "l4p3-comp-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "杨同乐家有四" },
-              { "type": "blank" },
-              { "type": "text", "content": "人。" }
+              {
+                "type": "text",
+                "content": "杨同乐家有四"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "人。"
+              }
             ],
             "correctOptionId": "D"
           },
@@ -272,9 +358,17 @@
             "number": 3,
             "speaker": "王一雪",
             "parts": [
-              { "type": "text", "content": "我有两个孩子，你" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "我有两个孩子，你"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "A"
           },
@@ -282,9 +376,17 @@
             "id": "l4p3-comp-q3b",
             "speaker": "杨同乐",
             "parts": [
-              { "type": "text", "content": "我" },
-              { "type": "blank" },
-              { "type": "text", "content": "孩子。" }
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "孩子。"
+              }
             ],
             "correctOptionId": "C"
           },
@@ -293,9 +395,17 @@
             "number": 4,
             "speaker": "杨同乐",
             "parts": [
-              { "type": "text", "content": "您女儿今年多" },
-              { "type": "blank" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "您女儿今年多"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "E"
           },
@@ -303,7 +413,10 @@
             "id": "l4p3-comp-q4b",
             "speaker": "王一雪",
             "parts": [
-              { "type": "text", "content": "我女儿今年十二。" }
+              {
+                "type": "text",
+                "content": "我女儿今年十二。"
+              }
             ],
             "correctOptionId": "_static"
           }
@@ -322,43 +435,89 @@
             "id": "l4p3-img-1",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-2a.jpg",
             "parts": [
-              { "type": "text", "content": "他家有" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "他家有"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["五口人"]
+            "answers": [
+              "五口人"
+            ]
           },
           {
             "id": "l4p3-img-2",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-2b.jpg",
             "parts": [
-              { "type": "text", "content": "这是李文的" },
-              { "type": "blank" },
-              { "type": "text", "content": "和" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "这是李文的"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "和"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["爸爸", "妈妈"]
+            "answers": [
+              "爸爸",
+              "妈妈"
+            ]
           },
           {
             "id": "l4p3-img-3",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-2c.jpg",
             "parts": [
-              { "type": "text", "content": "我儿子今年" },
-              { "type": "blank" },
-              { "type": "text", "content": "岁。" }
+              {
+                "type": "text",
+                "content": "我儿子今年"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "岁。"
+              }
             ],
-            "answers": ["十"]
+            "answers": [
+              "十"
+            ]
           },
           {
             "id": "l4p3-img-4",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-2d.jpg",
             "parts": [
-              { "type": "text", "content": "我有一个" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "我有一个"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["哥哥"]
+            "answers": [
+              "哥哥"
+            ]
           }
         ]
       }
@@ -371,29 +530,11 @@
       "subheading_ru": "Классное занятие",
       "sentences": [
         {
-          "id": "l4p3-act-s1",
-          "section": "activity",
-          "text_original": "双人活动 Pair Work",
-          "text_translation": "Juftlikda ishlash",
-          "text_translation_ru": "Работа в парах",
-          "pinyin": "Shuāngrén huódòng",
-          "isCheckbox": true
-        },
-        {
           "id": "l4p3-act-s2",
           "section": "activity",
           "text_original": "两人一组，互相询问个人和家庭情况（年龄、家庭人口等），可虚拟。",
           "text_translation": "Ikki kishidan iborat guruhda bir-biringizdan shaxsiy va oilaviy ma'lumotlarni (yoshi, oila a'zolari soni va h.k.) so'rang. Ma'lumotlarni o'ylab topish mumkin.",
-          "text_translation_ru": "Работайте в парах, расспрашивайте друг друга о личной и семейной информации (возраст, количество членов семьи и т.д.). Можно выдумывать детали.",
-          "pinyin": "Liǎng rén yì zǔ, hùxiāng xúnwèn gèrén hé jiātíng qíngkuàng (niánlíng, jiātíng rénkǒu děng), kě xūnǐ."
-        },
-        {
-          "id": "l4p3-act-s3",
-          "section": "activity",
-          "text_original": "小语的例子 Xiaoyu's Example",
-          "text_translation": "Xiaoyuning namunasi",
-          "text_translation_ru": "Пример Сяоюй",
-          "pinyin": "Xiǎoyǔ de lìzi"
+          "text_translation_ru": "Работайте в парах, расспрашивайте друг друга о личной и семейной информации (возраст, количество членов семьи и т.д.). Можно выдумывать детали."
         },
         {
           "id": "l4p3-act-s4",
@@ -421,14 +562,6 @@
           "text_translation_ru": "Сколько человек в твоей семье?",
           "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
           "speaker": "A"
-        },
-        {
-          "id": "l4p3-act-s7",
-          "section": "activity",
-          "text_original": "……",
-          "text_translation": "……",
-          "text_translation_ru": "……",
-          "pinyin": "……"
         }
       ]
     },

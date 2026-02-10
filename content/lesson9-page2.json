@@ -1,0 +1,279 @@
+{
+  "id": "lesson9-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l9p2-sec-text2-header",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在教室里，下课后，白家月和陈天中在对话。",
+      "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Bái Jiāyuè hé Chén Tiānzhōng zài duìhuà.",
+      "contextTranslation": "Sinfxonada, darsdan keyin, Bai Jiyayue va Chen Tianzhong suhbatlashyapti.",
+      "contextTranslation_ru": "В классе после урока Бай Цзяюэ и Чэнь Тяньчжун разговаривают.",
+      "sentences": []
+    },
+    {
+      "id": "l9p2-sec-mc",
+      "type": "multiplechoice",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l9p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "椅子上有（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "一本书",
+                "pinyin": "yì běn shū"
+              },
+              {
+                "label": "B",
+                "word": "一只猫",
+                "pinyin": "yì zhī māo"
+              },
+              {
+                "label": "C",
+                "word": "一个手机",
+                "pinyin": "yí gè shǒujī"
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l9p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "这是陈天中的（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）中文书。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "第一本",
+                "pinyin": "dì-yī běn"
+              },
+              {
+                "label": "B",
+                "word": "第二本",
+                "pinyin": "dì-èr běn"
+              },
+              {
+                "label": "C",
+                "word": "第三本",
+                "pinyin": "dì-sān běn"
+              }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l9p2-sec-text2-dialogue",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l9p2-t2-s1",
+          "section": "text",
+          "text_original": "椅子上有一本中文书，那是谁的书？",
+          "text_translation": "Stul ustida bitta xitoycha kitob bor, u kimning kitobi?",
+          "text_translation_ru": "На стуле лежит книга на китайском, чья это книга?",
+          "pinyin": "Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l9p2-t2-s2",
+          "section": "text",
+          "text_original": "是我的书，谢谢。这是我的第二本中文书。",
+          "text_translation": "Bu mening kitobim, rahmat. Bu mening ikkinchi xitoycha kitobim.",
+          "text_translation_ru": "Это моя книга, спасибо. Это моя вторая книга на китайском.",
+          "pinyin": "Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+          "speaker": "陈天中"
+        },
+        {
+          "id": "l9p2-t2-s3",
+          "section": "text",
+          "text_original": "不客气。你明天上午在哪儿？",
+          "text_translation": "Arzimaydi. Sen ertaga ertalab qayerda bo'lasan?",
+          "text_translation_ru": "Не за что. Где ты будешь завтра утром?",
+          "pinyin": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
+          "speaker": "白家月"
+        },
+        {
+          "id": "l9p2-t2-s4",
+          "section": "text",
+          "text_original": "我明天上午在学校学习。",
+          "text_translation": "Men ertaga ertalab maktabda o'qiyman.",
+          "text_translation_ru": "Завтра утром я буду учиться в школе.",
+          "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+          "speaker": "陈天中"
+        }
+      ],
+      "tip": {
+        "label": "小语助力",
+        "text": "作方位词时，\"上\"在名词后，比如\"椅子上\"\"书上\"，读轻声；表示位置在高处，或次序、时间在前时，比如\"上方\"\"上半年\"，\"上\"读四声。",
+        "translation": "O'rin-joy so'zi sifatida ishlatilganda \"上\" otdan keyin keladi, masalan \"椅子上\" \"书上\", yengil tovush bilan o'qiladi; yuqori o'rinni yoki tartib, vaqtda oldingi ekanligini bildirganda, masalan \"上方\" \"上半年\", \"上\" to'rtinchi tovush bilan o'qiladi.",
+        "translation_ru": "При использовании как слова местоположения «上» ставится после существительного, например «椅子上» «书上», и читается нейтральным тоном; при обозначении высокого положения или предшествования в порядке/времени, например «上方» «上半年», «上» читается четвёртым тоном."
+      }
+    },
+    {
+      "id": "l9p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%204.mp3",
+      "sentences": [
+        {
+          "id": "l9p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "椅子",
+          "text_translation": "stul (ot)",
+          "text_translation_ru": "стул (сущ.)",
+          "pinyin": "yǐzi",
+          "wordClass": "n.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l9p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "上",
+          "text_translation": "ust; yuqori (ot sifatida o'rin bildiradi)",
+          "text_translation_ru": "верх; на (сущ., указывает положение)",
+          "pinyin": "shang/shàng",
+          "wordClass": "n.",
+          "vocabNumber": 7
+        },
+        {
+          "id": "l9p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "本",
+          "text_translation": "dona (kitoblar uchun son birlik)",
+          "text_translation_ru": "счётное слово (для книг)",
+          "pinyin": "běn",
+          "wordClass": "m.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l9p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "书",
+          "text_translation": "kitob (ot)",
+          "text_translation_ru": "книга (сущ.)",
+          "pinyin": "shū",
+          "wordClass": "n.",
+          "vocabNumber": 9
+        },
+        {
+          "id": "l9p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "那",
+          "text_translation": "o'sha; u (olmosh)",
+          "text_translation_ru": "тот; та; то (мест.)",
+          "pinyin": "nà",
+          "wordClass": "pron.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l9p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "第",
+          "text_translation": "tartib son yasovchi qo'shimcha",
+          "text_translation_ru": "префикс порядковых числительных",
+          "pinyin": "dì",
+          "wordClass": "pref.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l9p2-v-s7",
+          "section": "vocabulary",
+          "text_original": "学习",
+          "text_translation": "o'qimoq; o'rganmoq (fe'l)",
+          "text_translation_ru": "учиться; изучать (глагол)",
+          "pinyin": "xuéxí",
+          "wordClass": "v.",
+          "vocabNumber": 12
+        }
+      ]
+    },
+    {
+      "id": "l9p2-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l9p2-g3-s1",
+          "section": "grammar",
+          "text_original": "表示序数的\"第\"",
+          "text_translation": "Tartib sonlarni bildiruvchi \"第\"",
+          "text_translation_ru": "«第» для обозначения порядковых числительных",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l9p2-g3-s2",
+          "section": "grammar",
+          "text_original": "\"第\"位于整数的数词前，表示序数。基本结构：（1）第+数词；（2）第+数词+量词+（名词）。",
+          "text_translation": "\"第\" butun sonlar oldida kelib, tartib sonni bildiradi. Asosiy tuzilma: (1) 第+son; (2) 第+son+son birlik+(ot).",
+          "text_translation_ru": "«第» ставится перед целым числом для обозначения порядкового числительного. Основные структуры: (1) 第+числительное; (2) 第+числительное+счётное слово+(существительное)."
+        },
+        {
+          "id": "l9p2-g3-s3",
+          "section": "grammar",
+          "text_original": "(1) 第一，第二，第三",
+          "pinyin": "Dì-yī, dì-èr, dì-sān",
+          "text_translation": "Birinchi, ikkinchi, uchinchi",
+          "text_translation_ru": "Первый, второй, третий"
+        },
+        {
+          "id": "l9p2-g3-s4",
+          "section": "grammar",
+          "text_original": "(2) 第一个，第二个，第一本",
+          "pinyin": "Dì-yī ge, dì-èr ge, dì-yī běn",
+          "text_translation": "Birinchi (dona), ikkinchi (dona), birinchi (kitob)",
+          "text_translation_ru": "Первый (штука), второй (штука), первый (книга)"
+        },
+        {
+          "id": "l9p2-g3-s5",
+          "section": "grammar",
+          "text_original": "(3) 第一个学生，第一本书",
+          "pinyin": "Dì-yī ge xuésheng, dì-yī běn shū",
+          "text_translation": "Birinchi talaba, birinchi kitob",
+          "text_translation_ru": "Первый студент, первая книга"
+        }
+      ]
+    }
+  ]
+}

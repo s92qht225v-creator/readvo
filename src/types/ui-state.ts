@@ -64,36 +64,3 @@ export const INITIAL_WORD_POPUP_STATE: WordPopupState = {
 export type TranslationVisibility = ReadonlySet<string>;
 
 export const INITIAL_TRANSLATION_VISIBILITY: TranslationVisibility = new Set();
-
-// =============================================================================
-// AUDIO PLAYBACK STATE
-// =============================================================================
-
-export interface AudioState {
-  /** Currently playing sentence ID (null if nothing playing) */
-  readonly playingSentenceId: string | null;
-
-  /** Whether audio is currently loading */
-  readonly isLoading: boolean;
-}
-
-export const INITIAL_AUDIO_STATE: AudioState = {
-  playingSentenceId: null,
-  isLoading: false,
-};
-
-// =============================================================================
-// COMBINED PAGE UI STATE
-// =============================================================================
-
-export interface PageUIState {
-  readonly wordPopup: WordPopupState;
-  readonly translationVisibility: TranslationVisibility;
-  readonly audio: AudioState;
-}
-
-export const INITIAL_PAGE_UI_STATE: PageUIState = {
-  wordPopup: INITIAL_WORD_POPUP_STATE,
-  translationVisibility: INITIAL_TRANSLATION_VISIBILITY,
-  audio: INITIAL_AUDIO_STATE,
-};

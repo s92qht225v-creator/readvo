@@ -3,8 +3,8 @@
   "pageNumber": 2,
   "sections": [
     {
-      "id": "l6p2-sec-mc",
-      "type": "multiplechoice",
+      "id": "l6p2-sec-text2-heading",
+      "type": "text",
       "heading": "课文 2",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
@@ -12,9 +12,13 @@
       "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Bái Jiāyuè hé Chén Tiānzhōng zài liáotiānr.",
       "contextTranslation": "Sinfxonada, darsdan keyin, Bai Jiyayue va Chen Tyanjung suhbatlashmoqda.",
       "contextTranslation_ru": "В классе, после урока, Бай Цзяюэ и Чэнь Тяньчжун болтают.",
+      "sentences": []
+    },
+    {
+      "id": "l6p2-sec-mc",
+      "type": "multiplechoice",
       "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
       "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%203.mp3",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -22,12 +26,26 @@
             "id": "l6p2-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "白家月（　　）想去超市。" }
+              { "type": "text", "content": "白家月（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）想去超市。" }
             ],
             "options": [
-              { "label": "A", "word": "现在", "pinyin": "xiànzài" },
-              { "label": "B", "word": "今天", "pinyin": "jīntiān" },
-              { "label": "C", "word": "明天", "pinyin": "míngtiān" }
+              {
+                "label": "A",
+                "word": "现在",
+                "pinyin": "xiànzài"
+              },
+              {
+                "label": "B",
+                "word": "今天",
+                "pinyin": "jīntiān"
+              },
+              {
+                "label": "C",
+                "word": "明天",
+                "pinyin": "míngtiān"
+              }
             ],
             "correctOptionLabel": "C"
           },
@@ -35,12 +53,26 @@
             "id": "l6p2-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "白家月想买（　　）。" }
+              { "type": "text", "content": "白家月想买（" },
+              { "type": "blank" },
+              { "type": "text", "content": "）。" }
             ],
             "options": [
-              { "label": "A", "word": "菜", "pinyin": "cài" },
-              { "label": "B", "word": "牛奶", "pinyin": "niúnǎi" },
-              { "label": "C", "word": "面条儿和牛奶", "pinyin": "miàntiáor hé niúnǎi" }
+              {
+                "label": "A",
+                "word": "菜",
+                "pinyin": "cài"
+              },
+              {
+                "label": "B",
+                "word": "牛奶",
+                "pinyin": "niúnǎi"
+              },
+              {
+                "label": "C",
+                "word": "面条儿和牛奶",
+                "pinyin": "miàntiáor hé niúnǎi"
+              }
             ],
             "correctOptionLabel": "C"
           }
@@ -50,11 +82,9 @@
     {
       "id": "l6p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
-      "subheading": "Tekst 2",
-      "subheading_ru": "Текст 2",
       "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
       "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%203.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-2-1.jpg",
       "sentences": [
         {
@@ -214,43 +244,33 @@
         {
           "id": "l6p2-g-s1",
           "section": "grammar",
-          "text_original": "能愿动词「想」",
+          "text_original": "能愿动词「想」Modal Verb \"想\" (xiǎng)",
           "text_translation": "Modal fe'l \"想\"",
           "text_translation_ru": "Модальный глагол «想»",
-          "pinyin": "Néngyuàn dòngcí 'xiǎng'"
+          "grammarNumber": "5"
         },
         {
           "id": "l6p2-g-s2",
           "section": "grammar",
           "text_original": "能愿动词「想」用在动词前，表示希望、打算。",
           "text_translation": "Modal fe'l \"想\" fe'ldan oldin ishlatiladi va xohish yoki niyatni bildiradi.",
-          "text_translation_ru": "Модальный глагол «想» ставится перед глаголом и выражает желание или намерение.",
-          "pinyin": "Néngyuàn dòngcí 'xiǎng' yòng zài dòngcí qián, biǎoshì xīwàng, dǎsuàn."
-        },
-        {
-          "id": "l6p2-g-s3",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_translation_ru": "Модальный глагол «想» ставится перед глаголом и выражает желание или намерение."
         },
         {
           "id": "l6p2-g-s4",
           "section": "grammar",
-          "text_original": "（1）我想去超市。",
-          "text_translation": "(1) Men supermarketga bormoqchiman.",
-          "text_translation_ru": "(1) Я хочу пойти в супермаркет.",
-          "pinyin": "(1) Wǒ xiǎng qù chāoshì."
+          "text_original": "(1) 我想去超市。",
+          "pinyin": "Wǒ xiǎng qù chāoshì.",
+          "text_translation": "Men supermarketga bormoqchiman.",
+          "text_translation_ru": "Я хочу пойти в супермаркет."
         },
         {
           "id": "l6p2-g-s5",
           "section": "grammar",
-          "text_original": "（2）我哥哥不想休息。",
-          "text_translation": "(2) Akam dam olishni istamaydi.",
-          "text_translation_ru": "(2) Мой старший брат не хочет отдыхать.",
-          "pinyin": "(2) Wǒ gēge bù xiǎng xiūxi."
+          "text_original": "(2) 我哥哥不想休息。",
+          "pinyin": "Wǒ gēge bù xiǎng xiūxi.",
+          "text_translation": "Akam dam olishni istamaydi.",
+          "text_translation_ru": "Мой старший брат не хочет отдыхать."
         }
       ]
     }

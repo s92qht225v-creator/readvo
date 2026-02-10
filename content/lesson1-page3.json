@@ -106,36 +106,11 @@
       ]
     },
     {
-      "id": "l1p3-sec-exercise",
-      "type": "exercise",
-      "subheading_ru": "Упражнения",
-      "sentences": [
-        {
-          "id": "l1p3-ex-s1",
-          "section": "exercise",
-          "text_original": "分角色朗读对话。",
-          "text_translation": "Dialogni rollarga bo'lib o'qing.",
-          "text_translation_ru": "Прочитайте диалог по ролям.",
-          "pinyin": "Fēn juésè lǎngdú duìhuà.",
-          "isCheckbox": true
-        },
-        {
-          "id": "l1p3-ex-s2",
-          "section": "exercise",
-          "text_original": "两人一组，用对方的名字对话。",
-          "text_translation": "Ikki kishidan iborat guruhda bir-biringizning ismlaringiz bilan suhbatlashing.",
-          "text_translation_ru": "В парах поговорите, используя имена друг друга.",
-          "pinyin": "Liǎng rén yī zǔ, yòng duìfāng de míngzi duìhuà.",
-          "isCheckbox": true
-        }
-      ]
-    },
-    {
       "id": "l1p4-sec-tonguetwister",
       "type": "text",
       "heading": "跟读绕口令",
-      "subheading": "Tez aytishni qaytaring",
-      "subheading_ru": "Повторяйте скороговорку",
+      "subheading": "Tez aytishni takrorlang",
+      "subheading_ru": "Повторите скороговорку",
       "audio_url": "/audio/l1p4-tonguetwister.mp3",
       "sentences": [
         {
@@ -170,8 +145,7 @@
           "section": "tip",
           "text_original": "你还想学习更多的汉语拼音知识吗？那就去敲敲「小语的彩蛋」吧，惊喜等着你。",
           "text_translation": "Xitoy pinyini haqida ko'proq o'rganmoqchimisiz? Xiaoyu'ning bonus kontentiga o'ting. Sizni kutayotgan ajoyib surpriz bor.",
-          "text_translation_ru": "Хотите узнать больше о китайском пиньине? Тогда загляните в «Бонусный контент Сяоюй». Вас ждёт сюрприз.",
-          "pinyin": "Nǐ hái xiǎng xuéxí gèng duō de Hànyǔ pīnyīn zhīshi ma? Nà jiù qù qiāoqiāo「Xiǎoyǔ de cǎidàn」ba, jīngxǐ děngzhe nǐ."
+          "text_translation_ru": "Хотите узнать больше о китайском пиньине? Тогда загляните в «Бонусный контент Сяоюй». Вас ждёт сюрприз."
         }
       ]
     },

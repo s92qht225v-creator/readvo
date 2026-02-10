@@ -4,7 +4,7 @@
   "sections": [
     {
       "id": "l5p2-sec-text2",
-      "type": "multiplechoice",
+      "type": "text",
       "heading": "课文 2",
       "subheading": "Text 2",
       "subheading_ru": "Текст 2",
@@ -12,9 +12,13 @@
       "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiūxi shí liáotiānr.",
       "contextTranslation": "Kompaniyada Wang Yixue va Yang Tongle tanaffus paytida suhbatlashmoqda.",
       "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ болтают во время перерыва.",
+      "sentences": []
+    },
+    {
+      "id": "l5p2-sec-mc",
+      "type": "multiplechoice",
       "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
       "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%203.mp3",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -22,14 +26,34 @@
             "id": "l5p2-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "杨同乐（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）做饭。" }
+              {
+                "type": "text",
+                "content": "杨同乐（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）做饭。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "会", "pinyin": "huì" },
-              { "label": "B", "word": "不", "pinyin": "bú" },
-              { "label": "C", "word": "不会", "pinyin": "bú huì" }
+              {
+                "label": "A",
+                "word": "会",
+                "pinyin": "huì"
+              },
+              {
+                "label": "B",
+                "word": "不",
+                "pinyin": "bú"
+              },
+              {
+                "label": "C",
+                "word": "不会",
+                "pinyin": "bú huì"
+              }
             ],
             "correctOptionLabel": "A"
           },
@@ -37,14 +61,34 @@
             "id": "l5p2-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "杨同乐（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）也做饭。" }
+              {
+                "type": "text",
+                "content": "杨同乐（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）也做饭。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "星期三", "pinyin": "Xīngqīsān" },
-              { "label": "B", "word": "星期六", "pinyin": "Xīngqīliù" },
-              { "label": "C", "word": "星期日", "pinyin": "Xīngqīrì" }
+              {
+                "label": "A",
+                "word": "星期三",
+                "pinyin": "Xīngqīsān"
+              },
+              {
+                "label": "B",
+                "word": "星期六",
+                "pinyin": "Xīngqīliù"
+              },
+              {
+                "label": "C",
+                "word": "星期日",
+                "pinyin": "Xīngqīrì"
+              }
             ],
             "correctOptionLabel": "C"
           }
@@ -54,6 +98,9 @@
     {
       "id": "l5p2-sec-dialogue2",
       "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%203.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-2-1.jpg",
       "sentences": [
         {
@@ -170,16 +217,13 @@
       "heading": "小语讲堂",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
-      "instruction": "大声朗读。Read aloud.",
-      "instruction_ru": "大声朗读。Читайте вслух.",
       "sentences": [
         {
           "id": "l5p2-g3-s1",
           "section": "grammar",
-          "text_original": "能愿动词\"会\"",
+          "text_original": "能愿动词\"会\" Modal Verb \"会\" (huì)",
           "text_translation": "Modal fe'l \"会\"",
           "text_translation_ru": "Модальный глагол «会»",
-          "pinyin": "Néngyuàn dòngcí \"huì\"",
           "grammarNumber": "3"
         },
         {
@@ -187,32 +231,31 @@
           "section": "grammar",
           "text_original": "\"会\"用在动词前，表示通过学习后，懂得怎样做或有能力做。",
           "text_translation": "\"会\" fe'ldan oldin qo'llaniladi va o'rganish orqali biror narsani qanday qilishni bilish yoki qila olish qobiliyatini bildiradi.",
-          "text_translation_ru": "«会» ставится перед глаголом и указывает на умение или способность выполнять действие, приобретённые в результате обучения.",
-          "pinyin": "\"Huì\" yòng zài dòngcí qián, biǎoshì tōngguò xuéxí hòu, dǒngde zěnyàng zuò huò yǒu nénglì zuò."
+          "text_translation_ru": "«会» ставится перед глаголом и указывает на умение или способность выполнять действие, приобретённые в результате обучения."
         },
         {
           "id": "l5p2-g3-s3",
           "section": "grammar",
           "text_original": "(1) 你会做饭吗？",
-          "text_translation": "(1) Sen ovqat tayyorlashni bilasanmi?",
-          "text_translation_ru": "(1) Ты умеешь готовить?",
-          "pinyin": "(1) Nǐ huì zuò fàn ma?"
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "text_translation": "Sen ovqat tayyorlashni bilasanmi?",
+          "text_translation_ru": "Ты умеешь готовить?"
         },
         {
           "id": "l5p2-g3-s4",
           "section": "grammar",
           "text_original": "(2) 我会做面条儿。",
-          "text_translation": "(2) Men lapsha tayyorlashni bilaman.",
-          "text_translation_ru": "(2) Я умею готовить лапшу.",
-          "pinyin": "(2) Wǒ huì zuò miàntiáor."
+          "pinyin": "Wǒ huì zuò miàntiáor.",
+          "text_translation": "Men lapsha tayyorlashni bilaman.",
+          "text_translation_ru": "Я умею готовить лапшу."
         },
         {
           "id": "l5p2-g3-s5",
           "section": "grammar",
           "text_original": "(3) 我不会做菜。",
-          "text_translation": "(3) Men ovqat tayorlashni bilmayman.",
-          "text_translation_ru": "(3) Я не умею готовить блюда.",
-          "pinyin": "(3) Wǒ bú huì zuò cài."
+          "pinyin": "Wǒ bú huì zuò cài.",
+          "text_translation": "Men ovqat tayorlashni bilmayman.",
+          "text_translation_ru": "Я не умею готовить блюда."
         }
       ]
     }

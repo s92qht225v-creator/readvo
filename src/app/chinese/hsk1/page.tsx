@@ -8,5 +8,5 @@ import { BookPage } from '@/components/BookPage';
 export default async function HSK1BookPage() {
   const lessons = await getLessonsWithInfo();
 
-  return <BookPage lessons={lessons} />;
+  return <BookPage lessons={lessons} bookPath="/chinese/hsk1" />;
 }

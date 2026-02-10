@@ -17,9 +17,8 @@
       "audio_url": "/audio/l2p2-text2.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-2-1.jpg",
       "tip": {
-        "label": "小语助力 Xiaoyu's Tip",
+        "label": "小语助力",
         "text": "在口语中也说「没事」或「没事没事」。",
-        "pinyin": "Zài kǒuyǔ zhōng yě shuō「méi shì」huò「méi shì méi shì」.",
         "translation": "Og'zaki nutqda「没事」yoki「没事没事」ham ishlatiladi.",
         "translation_ru": "В разговорной речи также говорят「没事」или「没事没事」."
       },
@@ -121,31 +120,6 @@
       ]
     },
     {
-      "id": "l2p2-sec-exercise",
-      "type": "exercise",
-      "subheading_ru": "Упражнения",
-      "sentences": [
-        {
-          "id": "l2p2-ex-s1",
-          "section": "exercise",
-          "text_original": "分角色朗读对话。",
-          "text_translation": "Dialogni rollarga bo'lib o'qing.",
-          "text_translation_ru": "Прочитайте диалог по ролям.",
-          "pinyin": "Fēn juésè lǎngdú duìhuà.",
-          "isCheckbox": true
-        },
-        {
-          "id": "l2p2-ex-s2",
-          "section": "exercise",
-          "text_original": "两人一组，用真实姓名对话。",
-          "text_translation": "Ikki kishidan iborat guruhda haqiqiy ismlaringiz bilan suhbatlashing.",
-          "text_translation_ru": "В парах поговорите, используя настоящие имена.",
-          "pinyin": "Liǎng rén yī zǔ, yòng zhēnshí xìngmíng duìhuà.",
-          "isCheckbox": true
-        }
-      ]
-    },
-    {
       "id": "l2p2-sec-grammar",
       "type": "grammar",
       "heading": "小语讲堂",
@@ -157,49 +131,38 @@
           "section": "grammar",
           "text_original": "汉语的基本语序",
           "text_translation": "Xitoy tilining asosiy so'z tartibi",
-          "text_translation_ru": "Базовый порядок слов в китайском языке",
-          "pinyin": "Hànyǔ de jīběn yǔxù"
+          "text_translation_ru": "Базовый порядок слов в китайском языке"
         },
         {
           "id": "l2p2-g-s2",
           "section": "grammar",
           "text_original": "汉语的基本语序是：主语+谓语+宾语。例如：我（主语）叫（谓语）陈天中（宾语）。",
           "text_translation": "Xitoy tilining asosiy so'z tartibi: Ega + Kesim + To'ldiruvchi. Masalan: 我 (Ega) 叫 (Kesim) 陈天中 (To'ldiruvchi).",
-          "text_translation_ru": "Базовый порядок слов в китайском: Подлежащее + Сказуемое + Дополнение. Например: 我 (Подлежащее) 叫 (Сказуемое) 陈天中 (Дополнение).",
-          "pinyin": "Hànyǔ de jīběn yǔxù shì: zhǔyǔ + wèiyǔ + bīnyǔ. Lìrú: wǒ (zhǔyǔ) jiào (wèiyǔ) Chén Tiānzhōng (bīnyǔ)."
-        },
-        {
-          "id": "l2p2-g-s3",
-          "section": "grammar",
-          "text_original": "大声朗读。",
-          "text_translation": "Ovoz chiqarib o'qing.",
-          "text_translation_ru": "Прочитайте вслух.",
-          "pinyin": "Dàshēng lǎngdú.",
-          "isCheckbox": true
+          "text_translation_ru": "Базовый порядок слов в китайском: Подлежащее + Сказуемое + Дополнение. Например: 我 (Подлежащее) 叫 (Сказуемое) 陈天中 (Дополнение)."
         },
         {
           "id": "l2p2-g-s4",
           "section": "grammar",
           "text_original": "(1) 你叫什么名字？",
+          "pinyin": "Nǐ jiào shénme míngzi?",
           "text_translation": "Ismingiz nima?",
-          "text_translation_ru": "Как тебя зовут?",
-          "pinyin": "Nǐ jiào shénme míngzi?"
+          "text_translation_ru": "Как тебя зовут?"
         },
         {
           "id": "l2p2-g-s5",
           "section": "grammar",
           "text_original": "(2) 我叫白家月。",
+          "pinyin": "Wǒ jiào Bái Jiāyuè.",
           "text_translation": "Mening ismim Bai Jiayue.",
-          "text_translation_ru": "Меня зовут Бай Цзяюэ.",
-          "pinyin": "Wǒ jiào Bái Jiāyuè."
+          "text_translation_ru": "Меня зовут Бай Цзяюэ."
         },
         {
           "id": "l2p2-g-s6",
           "section": "grammar",
           "text_original": "(3) 我是学生。",
+          "pinyin": "Wǒ shì xuéshēng.",
           "text_translation": "Men talabaman.",
-          "text_translation_ru": "Я студент.",
-          "pinyin": "Wǒ shì xuéshēng."
+          "text_translation_ru": "Я студент."
         }
       ]
     }

@@ -1,0 +1,325 @@
+{
+  "id": "lesson11-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l11p2-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在饭店里，王一飞和李文见面后聊天儿。",
+      "contextPinyin": "Zài fàndiàn lǐ, Wáng Yīfēi hé Lǐ Wén jiànmiàn hòu liáotiānr.",
+      "contextTranslation": "Restoranda Vang Ifey va Li Wen uchrashgandan keyin suhbatlashyapti.",
+      "contextTranslation_ru": "В ресторане Ван Ифэй и Ли Вэнь встретились и беседуют.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l11p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（1）李文（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）读大学。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "不",
+                "pinyin": "bù"
+              },
+              {
+                "label": "B",
+                "word": "没",
+                "pinyin": "méi"
+              },
+              {
+                "label": "C",
+                "word": "在",
+                "pinyin": "zài"
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "l11p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "（2）李文很忙，有很多（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "课",
+                "pinyin": "kè"
+              },
+              {
+                "label": "B",
+                "word": "书",
+                "pinyin": "shū"
+              },
+              {
+                "label": "C",
+                "word": "椅子",
+                "pinyin": "yǐzi"
+              }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l11p2-sec-text2",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l11p2-t2-s1",
+          "section": "text",
+          "text_original": "你还在读大学吗？",
+          "text_translation": "Sen hali universitetda o'qiyapsanmi?",
+          "text_translation_ru": "Ты всё ещё учишься в университете?",
+          "pinyin": "Nǐ hái zài dú dàxué ma?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l11p2-t2-s2",
+          "section": "text",
+          "text_original": "对，我读大学呢，还是大学生。",
+          "text_translation": "Ha, men universitetda o'qiyapman, hali talabaman.",
+          "text_translation_ru": "Да, я учусь в университете, всё ещё студент.",
+          "pinyin": "Duì, wǒ dú dàxué ne, hái shì dàxuéshēng.",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l11p2-t2-s3",
+          "section": "text",
+          "text_original": "你们学习忙不忙？",
+          "text_translation": "O'qishlaringiz bandmi?",
+          "text_translation_ru": "Вы заняты учёбой?",
+          "pinyin": "Nǐmen xuéxí máng bu máng?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l11p2-t2-s4",
+          "section": "text",
+          "text_original": "非常忙，我学医，我们的课很多。",
+          "text_translation": "Juda band, men tibbiyot o'qiyapman, darslarimiz juda ko'p.",
+          "text_translation_ru": "Очень заняты, я изучаю медицину, у нас очень много занятий.",
+          "pinyin": "Fēicháng máng, wǒ xué yī, wǒmen de kè hěn duō.",
+          "speaker": "李　文"
+        }
+      ]
+    },
+    {
+      "id": "l11p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%204.mp3",
+      "sentences": [
+        {
+          "id": "l11p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "在",
+          "text_translation": "davom etayotgan harakatni bildiradi (ravish)",
+          "text_translation_ru": "указывает на действие в процессе (нареч.)",
+          "pinyin": "zài",
+          "wordClass": "adv.",
+          "vocabNumber": 8
+        },
+        {
+          "id": "l11p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "读",
+          "text_translation": "o'qimoq (fe'l)",
+          "text_translation_ru": "учиться; читать (глагол)",
+          "pinyin": "dú",
+          "wordClass": "v.",
+          "vocabNumber": 9
+        },
+        {
+          "id": "l11p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "大学",
+          "text_translation": "universitet (ot)",
+          "text_translation_ru": "университет (сущ.)",
+          "pinyin": "dàxué",
+          "wordClass": "n.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l11p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "大学生",
+          "text_translation": "talaba (ot)",
+          "text_translation_ru": "студент (сущ.)",
+          "pinyin": "dàxuéshēng",
+          "wordClass": "n.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l11p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "学",
+          "text_translation": "o'rganmoq (fe'l)",
+          "text_translation_ru": "учить; изучать (глагол)",
+          "pinyin": "xué",
+          "wordClass": "v.",
+          "vocabNumber": 12
+        },
+        {
+          "id": "l11p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "医",
+          "text_translation": "tibbiyot (ot)",
+          "text_translation_ru": "медицина (сущ.)",
+          "pinyin": "yī",
+          "wordClass": "n.",
+          "vocabNumber": 13
+        }
+      ]
+    },
+    {
+      "id": "l11p2-sec-grammar2",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l11p2-g2-s1",
+          "section": "grammar",
+          "text_original": "时间副词\"在/正在\"",
+          "text_translation": "Vaqt ravishi \"在/正在\"",
+          "text_translation_ru": "Наречия времени «在/正在»",
+          "grammarNumber": "2"
+        },
+        {
+          "id": "l11p2-g2-s2",
+          "section": "grammar",
+          "text_original": "时间副词\"在/正在\"位于动词前，表示动作正在进行或情况在继续。本课有两种形式：（1）在/正在+动词；（2）在/正在+动词+呢。此外，表达正在做的事情还有第三种形式：（3）动词+呢。否定回答时，使用副词\"没（有）\"。",
+          "text_translation": "\"在/正在\" vaqt ravishi fe'l oldida kelib, harakat davom etayotganini yoki holat davom etayotganini bildiradi. Bu darsda ikki shakl o'rganiladi: (1) 在/正在+fe'l; (2) 在/正在+fe'l+呢. Bundan tashqari, davom etayotgan harakatni ifodalashning uchinchi shakli ham bor: (3) fe'l+呢. Inkor javobda \"没（有）\" ravishi ishlatiladi.",
+          "text_translation_ru": "Наречия времени «在/正在» ставятся перед глаголом и указывают на то, что действие продолжается или ситуация длится. В этом уроке представлены две формы: (1) 在/正在+глагол; (2) 在/正在+глагол+呢. Кроме того, есть третья форма для выражения продолжающегося действия: (3) глагол+呢. Для отрицательного ответа используется наречие «没（有）»."
+        },
+        {
+          "id": "l11p2-g2-s3",
+          "section": "grammar",
+          "text_original": "(1) 你还在读大学吗？",
+          "pinyin": "Nǐ hái zài dú dàxué ma?",
+          "text_translation": "Sen hali universitetda o'qiyapsanmi?",
+          "text_translation_ru": "Ты всё ещё учишься в университете?"
+        },
+        {
+          "id": "l11p2-g2-s4",
+          "section": "grammar",
+          "text_original": "(2) 学生们在/正在上课呢。",
+          "pinyin": "Xuéshengmen zài/zhèngzài shàngkè ne.",
+          "text_translation": "Talabalar dars o'tayapti.",
+          "text_translation_ru": "Студенты сейчас на занятиях."
+        },
+        {
+          "id": "l11p2-g2-s5",
+          "section": "grammar",
+          "text_original": "(3) 我们读书呢。",
+          "pinyin": "Wǒmen dúshū ne.",
+          "text_translation": "Biz kitob o'qiyapmiz.",
+          "text_translation_ru": "Мы читаем книгу."
+        },
+        {
+          "id": "l11p2-g2-s6",
+          "section": "grammar",
+          "text_original": "朗读对话。",
+          "text_translation": "Dialoglarni ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте диалоги вслух."
+        },
+        {
+          "id": "l11p2-g2-s7a",
+          "section": "grammar",
+          "text_original": "A：你在做什么呢？",
+          "pinyin": "Nǐ zài zuò shénme ne?",
+          "text_translation": "Nima qilyapsan?",
+          "text_translation_ru": "Что ты делаешь?",
+          "speaker": "A",
+          "dialogueNumber": "1"
+        },
+        {
+          "id": "l11p2-g2-s7b",
+          "section": "grammar",
+          "text_original": "B：我正在看电视。",
+          "pinyin": "Wǒ zhèngzài kàn diànshì.",
+          "text_translation": "Men televizor ko'ryapman.",
+          "text_translation_ru": "Я смотрю телевизор.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l11p2-g2-s8a",
+          "section": "grammar",
+          "text_original": "A：我去看电影，你去不去？",
+          "pinyin": "Wǒ qù kàn diànyǐng, nǐ qù bu qù?",
+          "text_translation": "Men kinoga boraman, borasan-bormasanmi?",
+          "text_translation_ru": "Я иду в кино, ты пойдёшь?",
+          "speaker": "A",
+          "dialogueNumber": "2"
+        },
+        {
+          "id": "l11p2-g2-s8b",
+          "section": "grammar",
+          "text_original": "B：我在学习呢，不想去。",
+          "pinyin": "Wǒ zài xuéxí ne, bù xiǎng qù.",
+          "text_translation": "Men o'qiyapman, borishni xohlamayman.",
+          "text_translation_ru": "Я учусь, не хочу идти.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l11p2-g2-s9a",
+          "section": "grammar",
+          "text_original": "A：你在买菜吗？",
+          "pinyin": "Nǐ zài mǎi cài ma?",
+          "text_translation": "Sen sabzavot sotib olyapsanmi?",
+          "text_translation_ru": "Ты покупаешь продукты?",
+          "speaker": "A",
+          "dialogueNumber": "3"
+        },
+        {
+          "id": "l11p2-g2-s9b",
+          "section": "grammar",
+          "text_original": "B：我没买菜，买水果呢。",
+          "pinyin": "Wǒ méi mǎi cài, mǎi shuǐguǒ ne.",
+          "text_translation": "Men sabzavot sotib olmayapman, meva sotib olyapman.",
+          "text_translation_ru": "Я не покупаю овощи, покупаю фрукты.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        }
+      ]
+    }
+  ]
+}

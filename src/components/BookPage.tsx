@@ -7,9 +7,10 @@ import { useLanguage } from '../hooks/useLanguage';
 
 interface BookPageProps {
   lessons: LessonInfo[];
+  bookPath: string;
 }
 
-export function BookPage({ lessons }: BookPageProps) {
+export function BookPage({ lessons, bookPath }: BookPageProps) {
   const [language, toggleLanguage] = useLanguage();
   const hasContent = lessons.length > 0;
 
@@ -26,7 +27,7 @@ export function BookPage({ lessons }: BookPageProps) {
             onClick={toggleLanguage}
             type="button"
           >
-            {language === 'uz' ? 'UZ' : 'RU'}
+            {language === 'uz' ? 'RU' : 'UZ'}
           </button>
         </div>
         <h1 className="home__logo">
@@ -75,7 +76,7 @@ export function BookPage({ lessons }: BookPageProps) {
                   {lesson.pages.map((pageNum) => (
                     <Link
                       key={pageNum}
-                      href={`/chinese/hsk1/lesson/${lesson.lessonId}/page/${pageNum}`}
+                      href={`${bookPath}/lesson/${lesson.lessonId}/page/${pageNum}`}
                       className="lesson-card__page-link"
                     >
                       <span className="lesson-card__page-num">{pageNum}</span>
@@ -90,7 +91,7 @@ export function BookPage({ lessons }: BookPageProps) {
           </div>
 
           {/* Flashcards */}
-          <Link href="/chinese/hsk1/flashcards" className="home__flashcards-link">
+          <Link href={`${bookPath}/flashcards`} className="home__flashcards-link">
             <span className="home__flashcards-icon">📇</span>
             <div className="home__flashcards-text">
               <span className="home__flashcards-title">

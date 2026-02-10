@@ -1,0 +1,282 @@
+{
+  "id": "lesson12-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l12p2-sec-mc",
+      "type": "multiplechoice",
+      "heading": "课文 2",
+      "subheading": "Tekst 2",
+      "subheading_ru": "Текст 2",
+      "context": "在公司电梯里，王一雪和杨同乐在聊天儿。",
+      "contextPinyin": "Zài gōngsī diàntī lǐ, Wáng Yīxuě hé Yáng Tónglè zài liáotiānr.",
+      "contextTranslation": "Kompaniya liftida Wang Yixue va Yang Tungle suhbatlashyapti.",
+      "contextTranslation_ru": "В лифте компании Ван Исюэ и Ян Тунлэ беседуют.",
+      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l12p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {
+                "type": "text",
+                "content": "(1)杨同乐昨天("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")了。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "生病",
+                "pinyin": "shēngbìng"
+              },
+              {
+                "label": "B",
+                "word": "上班",
+                "pinyin": "shàngbān"
+              },
+              {
+                "label": "C",
+                "word": "去公司",
+                "pinyin": "qù gōngsī"
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "l12p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {
+                "type": "text",
+                "content": "(2)杨同乐今天("
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ")了。"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "在家里",
+                "pinyin": "zài jiā li"
+              },
+              {
+                "label": "B",
+                "word": "去医院",
+                "pinyin": "qù yīyuàn"
+              },
+              {
+                "label": "C",
+                "word": "来公司",
+                "pinyin": "lái gōngsī"
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l12p2-sec-text2",
+      "type": "text",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%203.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-2-1.jpg",
+      "sentences": [
+        {
+          "id": "l12p2-t2-s1",
+          "section": "text",
+          "text_original": "昨天下雪了。",
+          "text_translation": "Kecha qor yog'di.",
+          "text_translation_ru": "Вчера выпал снег.",
+          "pinyin": "Zuótiān xià xuě le.",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l12p2-t2-s2",
+          "section": "text",
+          "text_original": "是的，太冷了。",
+          "text_translation": "Ha, juda sovuq bo'ldi.",
+          "text_translation_ru": "Да, очень холодно стало.",
+          "pinyin": "Shì de, tài lěng le.",
+          "speaker": "杨同乐"
+        },
+        {
+          "id": "l12p2-t2-s3",
+          "section": "text",
+          "text_original": "你昨天没来公司，生病了？",
+          "text_translation": "Sen kecha kompaniyaga kelmading, kasal bo'ldingmi?",
+          "text_translation_ru": "Ты вчера не пришёл на работу, заболел?",
+          "pinyin": "Nǐ zuótiān méi lái gōngsī, shēngbìng le?",
+          "speaker": "王一雪"
+        },
+        {
+          "id": "l12p2-t2-s4",
+          "section": "text",
+          "text_original": "对，我昨天去医院看病了。",
+          "text_translation": "Ha, men kecha kasalxonaga borib ko'rik qildirdim.",
+          "text_translation_ru": "Да, я вчера ходил в больницу на приём.",
+          "pinyin": "Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
+          "speaker": "杨同乐"
+        }
+      ]
+    },
+    {
+      "id": "l12p2-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%204.mp3",
+      "sentences": [
+        {
+          "id": "l12p2-v-s1",
+          "section": "vocabulary",
+          "text_original": "下",
+          "text_translation": "yog'moq; tushmoq (yomg'ir, qor haqida) (fe'l)",
+          "text_translation_ru": "падать; идти (о дожде, снеге и т.д.) (глагол)",
+          "pinyin": "xià",
+          "wordClass": "v.",
+          "vocabNumber": 10
+        },
+        {
+          "id": "l12p2-v-s2",
+          "section": "vocabulary",
+          "text_original": "雪",
+          "text_translation": "qor (ot)",
+          "text_translation_ru": "снег (сущ.)",
+          "pinyin": "xuě",
+          "wordClass": "n.",
+          "vocabNumber": 11
+        },
+        {
+          "id": "l12p2-v-s3",
+          "section": "vocabulary",
+          "text_original": "来",
+          "text_translation": "kelmoq (fe'l)",
+          "text_translation_ru": "приходить (глагол)",
+          "pinyin": "lái",
+          "wordClass": "v.",
+          "vocabNumber": 12
+        },
+        {
+          "id": "l12p2-v-s4",
+          "section": "vocabulary",
+          "text_original": "公司",
+          "text_translation": "kompaniya (ot)",
+          "text_translation_ru": "компания (сущ.)",
+          "pinyin": "gōngsī",
+          "wordClass": "n.",
+          "vocabNumber": 13
+        },
+        {
+          "id": "l12p2-v-s5",
+          "section": "vocabulary",
+          "text_original": "生病",
+          "text_translation": "kasal bo'lmoq (fe'l)",
+          "text_translation_ru": "заболеть (глагол)",
+          "pinyin": "shēngbìng",
+          "wordClass": "v.",
+          "vocabNumber": 14
+        },
+        {
+          "id": "l12p2-v-s6",
+          "section": "vocabulary",
+          "text_original": "看病",
+          "text_translation": "shifokorga ko'rinmoq (fe'l)",
+          "text_translation_ru": "обратиться к врачу (глагол)",
+          "pinyin": "kànbìng",
+          "wordClass": "v.",
+          "vocabNumber": 15
+        }
+      ]
+    },
+    {
+      "id": "l12p2-sec-exercise",
+      "type": "exercise",
+      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "sentences": [
+        {
+          "id": "l12p2-ex-s1",
+          "section": "exercise",
+          "text_original": "(1)昨天天气怎么样？",
+          "text_translation": "(1) Kecha ob-havo qanday edi?",
+          "text_translation_ru": "(1) Какая была погода вчера?",
+          "pinyin": "(1) Zuótiān tiānqì zěnmeyàng?"
+        },
+        {
+          "id": "l12p2-ex-s2",
+          "section": "exercise",
+          "text_original": "(2)杨同乐昨天做什么了？",
+          "text_translation": "(2) Yang Tungle kecha nima qildi?",
+          "text_translation_ru": "(2) Что Ян Тунлэ делал вчера?",
+          "pinyin": "(2) Yáng Tónglè zuótiān zuò shénme le?"
+        }
+      ]
+    },
+    {
+      "id": "l12p2-sec-grammar3",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l12p2-g3-s1",
+          "section": "grammar",
+          "text_original": "\"太……了\"格式",
+          "text_translation": "\"太……了\" shakli",
+          "text_translation_ru": "Конструкция «太……了»",
+          "grammarNumber": "3"
+        },
+        {
+          "id": "l12p2-g3-s2",
+          "section": "grammar",
+          "text_original": "\"太……了\"用于感叹程度很高或很深。",
+          "text_translation": "\"太……了\" darajaning juda yuqori yoki chuqurligini ifodalash uchun ishlatiladi.",
+          "text_translation_ru": "Конструкция «太……了» используется для выражения очень высокой или глубокой степени восклицания."
+        },
+        {
+          "id": "l12p2-g3-s3",
+          "section": "grammar",
+          "text_original": "(1) 太冷了！",
+          "pinyin": "Tài lěng le!",
+          "text_translation": "Juda sovuq!",
+          "text_translation_ru": "Слишком холодно!"
+        },
+        {
+          "id": "l12p2-g3-s4",
+          "section": "grammar",
+          "text_original": "(2) 这个杯子太小了。",
+          "pinyin": "Zhège bēizi tài xiǎo le.",
+          "text_translation": "Bu stakan juda kichik.",
+          "text_translation_ru": "Эта чашка слишком маленькая."
+        },
+        {
+          "id": "l12p2-g3-s5",
+          "section": "grammar",
+          "text_original": "(3) 我们今天太高兴了！",
+          "pinyin": "Wǒmen jīntiān tài gāoxìng le!",
+          "text_translation": "Biz bugun juda xursandmiz!",
+          "text_translation_ru": "Мы сегодня так рады!"
+        }
+      ]
+    }
+  ]
+}

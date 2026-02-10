@@ -191,7 +191,7 @@ export class PageValidator {
     // Sentences - allow empty if section has an image or is a matching/fillblank exercise
     if (!section.sentences || section.sentences.length === 0) {
       // Only error if section has no image and is not a matching/fillblank section
-      if (!section.image_url && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus' && section.type !== 'tip' && section.type !== 'activity') {
+      if (!section.image_url && !section.context && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus' && section.type !== 'tip' && section.type !== 'activity' && section.type !== 'text') {
         this.addError('EMPTY_SENTENCES', 'Section has no sentences', path);
       }
       return;

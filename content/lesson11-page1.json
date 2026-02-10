@@ -1,0 +1,364 @@
+{
+  "id": "lesson11-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 11,
+    "title": "我读大学呢",
+    "pinyin": "Wǒ dú dàxué ne",
+    "titleTranslation": "Men universitetda o'qiyapman",
+    "titleTranslation_ru": "Я учусь в университете"
+  },
+  "sections": [
+    {
+      "id": "l11p1-sec-objectives",
+      "type": "objectives",
+      "heading": "目标",
+      "subheading": "Maqsadlar",
+      "subheading_ru": "Цели",
+      "sentences": [
+        {
+          "id": "l11p1-obj-s1",
+          "section": "objectives",
+          "text_original": "能听懂并使用三种结构表达正在做的事情。",
+          "text_translation": "Hozir bajarilayotgan ishni ifodalovchi uchta tuzilmani eshitib tushunish va qo'llash.",
+          "text_translation_ru": "Уметь воспринимать на слух и использовать три конструкции для выражения действий в процессе.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng sān zhǒng jiégòu biǎodá zhèngzài zuò de shìqíng.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l11p1-obj-s2",
+          "section": "objectives",
+          "text_original": "能听懂并使用正反问格式进行提问。",
+          "text_translation": "Ijobiy-inkor so'roq shaklini eshitib tushunish va savol berish uchun qo'llash.",
+          "text_translation_ru": "Уметь воспринимать на слух и задавать вопросы в утвердительно-отрицательной форме.",
+          "pinyin": "Néng tīng dǒng bìng shǐyòng zhèngfǎn wèn géshì jìnxíng tíwèn.",
+          "isCheckbox": true
+        },
+        {
+          "id": "l11p1-obj-s3",
+          "section": "objectives",
+          "text_original": "掌握能愿动词\"要\"表达想做、打算做的用法。",
+          "text_translation": "\"要\" modal fe'lining xohish va niyatni ifodalash usulini o'zlashtirish.",
+          "text_translation_ru": "Освоить использование модального глагола «要» для выражения желания или намерения.",
+          "pinyin": "Zhǎngwò néngyuàn dòngcí 'yào' biǎodá xiǎng zuò, dǎsuàn zuò de yòngfǎ.",
+          "isCheckbox": true
+        }
+      ]
+    },
+    {
+      "id": "l11p1-sec-matching",
+      "type": "matching",
+      "heading": "热身",
+      "subheading": "Kirish mashqi",
+      "subheading_ru": "Разминка",
+      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "sentences": [],
+      "matchingItems": [
+        {
+          "id": "l11p1-m1",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-drive.jpg",
+          "word": "开车",
+          "pinyin": "kāichē",
+          "translation": "mashina haydamoq",
+          "translation_ru": "водить машину"
+        },
+        {
+          "id": "l11p1-m2",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-sleep.jpg",
+          "word": "睡觉",
+          "pinyin": "shuìjiào",
+          "translation": "uxlamoq",
+          "translation_ru": "спать"
+        },
+        {
+          "id": "l11p1-m3",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-ask.jpg",
+          "word": "问",
+          "pinyin": "wèn",
+          "translation": "so'ramoq",
+          "translation_ru": "спрашивать"
+        },
+        {
+          "id": "l11p1-m4",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-restaurant.jpg",
+          "word": "饭店",
+          "pinyin": "fàndiàn",
+          "translation": "restoran",
+          "translation_ru": "ресторан"
+        },
+        {
+          "id": "l11p1-m5",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-find.jpg",
+          "word": "找",
+          "pinyin": "zhǎo",
+          "translation": "qidirmoq; izlamoq",
+          "translation_ru": "искать"
+        },
+        {
+          "id": "l11p1-m6",
+          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-warmup-student.jpg",
+          "word": "大学生",
+          "pinyin": "dàxuéshēng",
+          "translation": "talaba",
+          "translation_ru": "студент"
+        }
+      ]
+    },
+    {
+      "id": "l11p1-sec-text1",
+      "type": "text",
+      "heading": "课文 1",
+      "subheading": "Tekst 1",
+      "subheading_ru": "Текст 1",
+      "context": "在路上，李文在找饭店，王一飞给他打电话。",
+      "contextPinyin": "Zài lù shàng, Lǐ Wén zài zhǎo fàndiàn, Wáng Yīfēi gěi tā dǎ diànhuà.",
+      "contextTranslation": "Yo'lda Li Wen restoran qidiryapti, Vang Ifey unga qo'ng'iroq qildi.",
+      "contextTranslation_ru": "В дороге Ли Вэнь ищет ресторан, Ван Ифэй звонит ему.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%201.mp3",
+      "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-1-1.jpg",
+      "sentences": [
+        {
+          "id": "l11p1-t1-s1",
+          "section": "text",
+          "text_original": "喂，李文，你什么时候能到饭店？",
+          "text_translation": "Alo, Li Wen, restoranga qachon yetib kelasan?",
+          "text_translation_ru": "Алло, Ли Вэнь, когда ты сможешь добраться до ресторана?",
+          "pinyin": "Wèi, Lǐ Wén, nǐ shénme shíhou néng dào fàndiàn?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l11p1-t1-s2",
+          "section": "text",
+          "text_original": "还不知道，正在找呢。它是不是在超市后边？",
+          "text_translation": "Hali bilmayman, hozir qidiryapman. U supermarketning orqasidami?",
+          "text_translation_ru": "Ещё не знаю, сейчас ищу. Он за супермаркетом?",
+          "pinyin": "Hái bù zhīdào, zhèngzài zhǎo ne. Tā shì bu shì zài chāoshì hòubian?",
+          "speaker": "李　文"
+        },
+        {
+          "id": "l11p1-t1-s3",
+          "section": "text",
+          "text_original": "是的。你开车没开车？",
+          "text_translation": "Ha. Sen mashina haydayapsanmi?",
+          "text_translation_ru": "Да. Ты на машине?",
+          "pinyin": "Shì de. Nǐ kāichē méi kāichē?",
+          "speaker": "王一飞"
+        },
+        {
+          "id": "l11p1-t1-s4",
+          "section": "text",
+          "text_original": "我没开车，坐车呢。",
+          "text_translation": "Men mashina haydamayapman, mashinada kelyapman.",
+          "text_translation_ru": "Я не за рулём, еду на машине.",
+          "pinyin": "Wǒ méi kāichē, zuò chē ne.",
+          "speaker": "李　文"
+        }
+      ]
+    },
+    {
+      "id": "l11p1-sec-vocab",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar",
+      "subheading_ru": "Новые слова",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%202.mp3",
+      "sentences": [
+        {
+          "id": "l11p1-v-s1",
+          "section": "vocabulary",
+          "text_original": "时候",
+          "text_translation": "vaqt; payt (ot)",
+          "text_translation_ru": "время; момент (сущ.)",
+          "pinyin": "shíhou",
+          "wordClass": "n.",
+          "vocabNumber": 1
+        },
+        {
+          "id": "l11p1-v-s2",
+          "section": "vocabulary",
+          "text_original": "饭店",
+          "text_translation": "restoran (ot)",
+          "text_translation_ru": "ресторан (сущ.)",
+          "pinyin": "fàndiàn",
+          "wordClass": "n.",
+          "vocabNumber": 2
+        },
+        {
+          "id": "l11p1-v-s3",
+          "section": "vocabulary",
+          "text_original": "知道",
+          "text_translation": "bilmoq (fe'l)",
+          "text_translation_ru": "знать; понимать (глагол)",
+          "pinyin": "zhīdào",
+          "wordClass": "v.",
+          "vocabNumber": 3
+        },
+        {
+          "id": "l11p1-v-s4",
+          "section": "vocabulary",
+          "text_original": "正在",
+          "text_translation": "hozir; ayni paytda (ravish)",
+          "text_translation_ru": "в процессе; сейчас (нареч.)",
+          "pinyin": "zhèngzài",
+          "wordClass": "adv.",
+          "vocabNumber": 4
+        },
+        {
+          "id": "l11p1-v-s5",
+          "section": "vocabulary",
+          "text_original": "找",
+          "text_translation": "qidirmoq; izlamoq (fe'l)",
+          "text_translation_ru": "искать (глагол)",
+          "pinyin": "zhǎo",
+          "wordClass": "v.",
+          "vocabNumber": 5
+        },
+        {
+          "id": "l11p1-v-s6",
+          "section": "vocabulary",
+          "text_original": "开车",
+          "text_translation": "mashina haydamoq (fe'l)",
+          "text_translation_ru": "водить машину (глагол)",
+          "pinyin": "kāichē",
+          "wordClass": "v.",
+          "vocabNumber": 6
+        },
+        {
+          "id": "l11p1-v-s7",
+          "section": "vocabulary",
+          "text_original": "车",
+          "text_translation": "mashina; transport (ot)",
+          "text_translation_ru": "машина; транспорт (сущ.)",
+          "pinyin": "chē",
+          "wordClass": "n.",
+          "vocabNumber": 7
+        }
+      ]
+    },
+    {
+      "id": "l11p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Xiaoyudan dars",
+      "subheading_ru": "Класс Сяоюй",
+      "sentences": [
+        {
+          "id": "l11p1-g1-s1",
+          "section": "grammar",
+          "text_original": "正反问",
+          "text_translation": "Ijobiy-inkor so'roq gaplar",
+          "text_translation_ru": "Утвердительно-отрицательные вопросы",
+          "grammarNumber": "1"
+        },
+        {
+          "id": "l11p1-g1-s2",
+          "section": "grammar",
+          "text_original": "正反问格式是\"×+不/没+×\"，\"×\"是动词或形容词。动词正反问使用\"不/没\"，形容词正反问使用\"不\"。",
+          "text_translation": "Ijobiy-inkor so'roq shakli \"×+不/没+×\" bo'lib, \"×\" fe'l yoki sifatdir. Fe'l uchun \"不/没\", sifat uchun \"不\" ishlatiladi.",
+          "text_translation_ru": "Утвердительно-отрицательные вопросы строятся по схеме «×+不/没+×», где «×» — глагол или прилагательное. Для глаголов используется «不/没», для прилагательных — «不»."
+        },
+        {
+          "id": "l11p1-g1-s3",
+          "section": "grammar",
+          "text_original": "大声朗读。",
+          "text_translation": "Ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте вслух."
+        },
+        {
+          "id": "l11p1-g1-s4",
+          "section": "grammar",
+          "text_original": "(1) 它是不是在超市后边？",
+          "pinyin": "Tā shì bu shì zài chāoshì hòubian?",
+          "text_translation": "U supermarketning orqasidami?",
+          "text_translation_ru": "Он за супермаркетом?"
+        },
+        {
+          "id": "l11p1-g1-s5",
+          "section": "grammar",
+          "text_original": "(2) 你去没去学校？",
+          "pinyin": "Nǐ qù méi qù xuéxiào?",
+          "text_translation": "Sen maktabga bordingmi?",
+          "text_translation_ru": "Ты ходил в школу?"
+        },
+        {
+          "id": "l11p1-g1-s6",
+          "section": "grammar",
+          "text_original": "(3) 这件衣服好看不好看？",
+          "pinyin": "Zhè jiàn yīfu hǎokàn bù hǎokàn?",
+          "text_translation": "Bu kiyim chirolimi?",
+          "text_translation_ru": "Эта одежда красивая?"
+        },
+        {
+          "id": "l11p1-g1-s7",
+          "section": "grammar",
+          "text_original": "朗读对话。",
+          "text_translation": "Dialoglarni ovoz chiqarib o'qing.",
+          "text_translation_ru": "Прочитайте диалоги вслух."
+        },
+        {
+          "id": "l11p1-g1-s8a",
+          "section": "grammar",
+          "text_original": "A：他去哪儿了？你知道不知道？",
+          "pinyin": "Tā qù nǎr le? Nǐ zhīdào bu zhīdào?",
+          "text_translation": "U qayerga ketdi? Bilasanmi?",
+          "text_translation_ru": "Куда он ушёл? Ты знаешь?",
+          "speaker": "A",
+          "dialogueNumber": "1"
+        },
+        {
+          "id": "l11p1-g1-s8b",
+          "section": "grammar",
+          "text_original": "B：我不知道。",
+          "pinyin": "Wǒ bù zhīdào.",
+          "text_translation": "Bilmayman.",
+          "text_translation_ru": "Я не знаю.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l11p1-g1-s9a",
+          "section": "grammar",
+          "text_original": "A：昨天你去没去书店？",
+          "pinyin": "Zuótiān nǐ qù méi qù shūdiàn?",
+          "text_translation": "Kecha kitob do'koniga bordingmi?",
+          "text_translation_ru": "Ты вчера ходил в книжный?",
+          "speaker": "A",
+          "dialogueNumber": "2"
+        },
+        {
+          "id": "l11p1-g1-s9b",
+          "section": "grammar",
+          "text_original": "B：我没去。",
+          "pinyin": "Wǒ méi qù.",
+          "text_translation": "Bormadim.",
+          "text_translation_ru": "Я не ходил.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        },
+        {
+          "id": "l11p1-g1-s10a",
+          "section": "grammar",
+          "text_original": "A：这件衣服贵不贵？",
+          "pinyin": "Zhè jiàn yīfu guì bu guì?",
+          "text_translation": "Bu kiyim qimmatmi?",
+          "text_translation_ru": "Эта одежда дорогая?",
+          "speaker": "A",
+          "dialogueNumber": "3"
+        },
+        {
+          "id": "l11p1-g1-s10b",
+          "section": "grammar",
+          "text_original": "B：不贵。",
+          "pinyin": "Bú guì.",
+          "text_translation": "Qimmat emas.",
+          "text_translation_ru": "Недорогая.",
+          "speaker": "B",
+          "dialogueNumber": ""
+        }
+      ]
+    }
+  ]
+}

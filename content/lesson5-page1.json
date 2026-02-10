@@ -22,7 +22,6 @@
           "text_original": "能听懂、看懂并按照中文习惯描述事件、行为发生的日期。",
           "text_translation": "Xitoy tili an'analariga ko'ra voqealar va harakatlar sodir bo'lgan sanalarni tushunish, o'qish va tasvirlash.",
           "text_translation_ru": "Понимать, читать и описывать даты событий и действий в соответствии с китайскими языковыми нормами.",
-          "pinyin": "Néng tīng dǒng, kàn dǒng bìng ànzhào Zhōngwén xíguàn miáoshù shìjiàn, xíngwéi fāshēng de rìqī.",
           "isCheckbox": true
         },
         {
@@ -31,7 +30,6 @@
           "text_original": "能听懂并使用能愿动词\"会\"表达懂得或有能力做事情。",
           "text_translation": "Modal fe'l \"会\" ni tushunish va biror narsani bilish yoki qila olishni ifodalash uchun ishlatish.",
           "text_translation_ru": "Понимать и использовать модальный глагол «会» для выражения умения или способности что-либо делать.",
-          "pinyin": "Néng tīng dǒng bìng shǐyòng néngyuàn dòngcí 'huì' biǎodá dǒngde huò yǒu nénglì zuò shìqíng.",
           "isCheckbox": true
         },
         {
@@ -40,7 +38,6 @@
           "text_original": "掌握名词谓语句的用法。",
           "text_translation": "Ot kesimli gaplarning ishlatilishini o'zlashtirish.",
           "text_translation_ru": "Овладеть употреблением предложений с именным сказуемым.",
-          "pinyin": "Zhǎngwò míngcí wèiyǔjù de yòngfǎ.",
           "isCheckbox": true
         }
       ]
@@ -120,9 +117,8 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%201.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-1-1.jpg",
       "tip": {
-        "label": "小语助力 Xiaoyu's Tip",
+        "label": "小语助力",
         "text": "也说\"9月8日\"。",
-        "pinyin": "Yě shuō \"jiǔ yuè bā rì\".",
         "translation": "\"9月8日\" deb ham aytiladi.",
         "translation_ru": "Можно также сказать «9月8日»."
       },
@@ -178,8 +174,7 @@
           "section": "tip",
           "text_original": "也说\"星期天\"。",
           "text_translation": "\"星期天\" deb ham aytiladi.",
-          "text_translation_ru": "Можно также сказать «星期天».",
-          "pinyin": "Yě shuō \"Xīngqītiān\"."
+          "text_translation_ru": "Можно также сказать «星期天»."
         }
       ]
     },
@@ -270,7 +265,6 @@
           "text_original": "时间的表达（1） ",
           "text_translation": "Vaqtni ifodalash (1)",
           "text_translation_ru": "Выражение времени (1)",
-          "pinyin": "Shíjiān de biǎodá (1)",
           "grammarNumber": "1"
         },
         {
@@ -278,8 +272,7 @@
           "section": "grammar",
           "text_original": "本课学习日期、星期的表达。汉语日期、星期的表达顺序是：年→月→日/号→星期。",
           "text_translation": "Ushbu darsda sana va hafta kunlarini ifodalash o'rganiladi. Xitoy tilida sana va hafta kunlarini ifodalash tartibi: yil→oy→kun/sana→hafta kuni.",
-          "text_translation_ru": "В этом уроке изучается выражение дат и дней недели. Порядок выражения дат и дней недели в китайском языке: год→месяц→день/число→день недели.",
-          "pinyin": "Běn kè xuéxí rìqī, xīngqī de biǎodá. Hànyǔ rìqī, xīngqī de biǎodá shùnxù shì: nián→yuè→rì/hào→xīngqī."
+          "text_translation_ru": "В этом уроке изучается выражение дат и дней недели. Порядок выражения дат и дней недели в китайском языке: год→месяц→день/число→день недели."
         }
       ],
       "images_bottom": [
@@ -296,10 +289,9 @@
         {
           "id": "l5p1-g2-s1",
           "section": "grammar",
-          "text_original": "名词谓语句 ",
+          "text_original": "名词谓语句",
           "text_translation": "Ot kesimli gaplar",
           "text_translation_ru": "Предложения с именным сказуемым",
-          "pinyin": "Míngcí wèiyǔjù",
           "grammarNumber": "2"
         },
         {
@@ -307,24 +299,23 @@
           "section": "grammar",
           "text_original": "名词谓语句谓语部分只有名词或名词性成分，这部分词语一般是表达时间、日期、年龄等的词语。",
           "text_translation": "Ot kesimli gaplarda kesim qismi faqat ot yoki otga oid tarkiblardan iborat bo'ladi. Bu tarkiblar odatda vaqt, sana, yosh va boshqalarni ifodalovchi so'zlardir.",
-          "text_translation_ru": "В предложениях с именным сказуемым сказуемое состоит только из существительного или именной группы. Обычно это слова, выражающие время, дату, возраст и т.д.",
-          "pinyin": "Míngcí wèiyǔjù wèiyǔ bùfèn zhǐ yǒu míngcí huò míngcíxìng chéngfèn, zhè bùfèn cíyǔ yībān shì biǎodá shíjiān, rìqī, niánlíng děng de cíyǔ."
+          "text_translation_ru": "В предложениях с именным сказуемым сказуемое состоит только из существительного или именной группы. Обычно это слова, выражающие время, дату, возраст и т.д."
         },
         {
           "id": "l5p1-g2-s3",
           "section": "grammar",
           "text_original": "(1) A：今天几号？ B：今天5月1号。",
-          "text_translation": "(1) A: Bugun nechanchi sana? B: Bugun 5-oyning 1-sanasi.",
-          "text_translation_ru": "(1) A: Какое сегодня число? B: Сегодня 1 мая.",
-          "pinyin": "(1) A: Jīntiān jǐ hào? B: Jīntiān wǔ yuè yī hào."
+          "text_translation": "A: Bugun nechanchi sana? B: Bugun 5-oyning 1-sanasi.",
+          "text_translation_ru": "A: Какое сегодня число? B: Сегодня 1 мая.",
+          "pinyin": "A: Jīntiān jǐ hào? B: Jīntiān wǔ yuè yī hào."
         },
         {
           "id": "l5p1-g2-s4",
           "section": "grammar",
           "text_original": "(2) 我妹妹12岁。",
-          "text_translation": "(2) Mening singlim 12 yoshda.",
-          "text_translation_ru": "(2) Моей младшей сестре 12 лет.",
-          "pinyin": "(2) Wǒ mèimei shí'èr suì."
+          "text_translation": "Mening singlim 12 yoshda.",
+          "text_translation_ru": "Моей младшей сестре 12 лет.",
+          "pinyin": "Wǒ mèimei shí'èr suì."
         }
       ]
     }
