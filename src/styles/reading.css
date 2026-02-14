@@ -2023,7 +2023,7 @@ body {
 /* Character-aligned pinyin below text (ruby) */
 .sentence__text ruby {
   ruby-position: under;
-  margin: 0 0.5em;
+  margin: 0 0.1em;
 }
 
 .sentence__text rt {
@@ -2031,6 +2031,7 @@ body {
   color: var(--color-accent);
   font-style: normal;
   font-weight: normal;
+  padding-top: 0.3em;
 }
 
 .sentence__text rp {
