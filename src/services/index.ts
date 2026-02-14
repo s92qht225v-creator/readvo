@@ -13,3 +13,6 @@ export {
 export type { ContentEntry, BookManifest, LessonInfo } from './content';
 
 export { loadFlashcardDeck } from './flashcards';
+
+export { loadStoriesForBook, loadStory } from './stories';
+export type { StoryInfo, StoryPage } from './stories';

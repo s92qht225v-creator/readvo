@@ -31,6 +31,10 @@ export interface ReaderControlsProps {
   onLanguageToggle: () => void;
   /** Current page number */
   pageNumber: number;
+  /** Whether focus mode is active (optional, story reader only) */
+  isFocusMode?: boolean;
+  /** Callback to toggle focus mode (optional, story reader only) */
+  onFocusModeToggle?: () => void;
 }
 
 export const ReaderControls: React.FC<ReaderControlsProps> = ({
@@ -44,9 +48,12 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
   language,
   onLanguageToggle,
   pageNumber,
+  isFocusMode,
+  onFocusModeToggle,
 }) => {
   // UI text based on language
   const text = language === 'ru' ? {
+    pinyinLabel: 'Пиньинь',
     pinyinHide: 'Скрыть пиньинь',
     pinyinShow: 'Показать пиньинь',
     translationLabel: 'Перевод',
@@ -55,7 +62,11 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
     langSwitch: "O'zbek tiliga o'tish",
     fontDecrease: 'Уменьшить шрифт',
     fontIncrease: 'Увеличить шрифт',
+    focusLabel: 'Фокус',
+    focusHide: 'Выключить режим фокуса',
+    focusShow: 'Включить режим фокуса',
   } : {
+    pinyinLabel: 'Pinyin',
     pinyinHide: 'Pinyinni yashirish',
     pinyinShow: "Pinyinni ko'rsatish",
     translationLabel: 'Tarjima',
@@ -64,6 +75,9 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
     langSwitch: 'Переключить на русский',
     fontDecrease: 'Shriftni kichiklashtirish',
     fontIncrease: 'Shriftni kattalashtirish',
+    focusLabel: 'Fokus',
+    focusHide: 'Fokus rejimini o\'chirish',
+    focusShow: 'Fokus rejimini yoqish',
   };
 
   return (
@@ -75,7 +89,7 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
         title={isPinyinVisible ? text.pinyinHide : text.pinyinShow}
         type="button"
       >
-        <span className="page__toggle-label">拼音</span>
+        <span className="page__toggle-label">{text.pinyinLabel}</span>
       </button>
       <button
         className={`page__toggle-btn ${isTranslationVisible ? 'page__toggle-btn--active' : ''}`}
@@ -86,6 +100,17 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
       >
         <span className="page__toggle-label">{text.translationLabel}</span>
       </button>
+      {onFocusModeToggle && (
+        <button
+          className={`page__toggle-btn ${isFocusMode ? 'page__toggle-btn--active' : ''}`}
+          onClick={onFocusModeToggle}
+          aria-pressed={isFocusMode}
+          title={isFocusMode ? text.focusHide : text.focusShow}
+          type="button"
+        >
+          <span className="page__toggle-label">{text.focusLabel}</span>
+        </button>
+      )}
       <button
         className="page__lang-btn"
         onClick={onLanguageToggle}

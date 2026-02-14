@@ -129,7 +129,7 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%201.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-1-1.jpg",
       "tip": {
-        "label": "小语助力",
+        "label": "Xiao Yu dan maslahat",
         "text": "\"前边\"可儿化，说成\"前边儿\"。\"边\"是后缀，读轻声。\"边\"做名词时，读成\"biān\"。",
         "translation": "\"前边\" so'ziga \"儿\" qo'shimchasi qo'shib \"前边儿\" deb aytish mumkin. \"边\" bu yerda qo'shimcha bo'lib, yengil tovush bilan o'qiladi. \"边\" ot sifatida ishlatilganda \"biān\" deb o'qiladi.",
         "translation_ru": "«前边» может произноситься с эризацией как «前边儿». «边» здесь является суффиксом и читается нейтральным тоном. Когда «边» выступает как существительное, читается «biān»."
@@ -171,7 +171,7 @@
           "pinyin": "Hǎo de, wǎnshang qī diǎn jiàn!",
           "speaker": "白家月",
           "tip": {
-            "label": "小语助力",
+            "label": "Xiao Yu dan maslahat",
             "text": "\"那个\"在口语中也说成\"nèige\"。",
             "pinyin": "'Nàge' zài kǒuyǔ zhōng yě shuō chéng 'nèige'.",
             "translation": "\"那个\" og'zaki nutqda \"nèige\" deb ham aytiladi.",

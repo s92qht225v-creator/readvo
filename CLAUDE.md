@@ -13,30 +13,40 @@ ReadVo (originally Kitobee) is a DOM-based interactive reading system for langua
 
 ## URL Structure
 ```
-/                                           # Home - language/book selection
+/                                           # Home - language selection
+/[language]                                 # Language page - tabbed catalog (HSK, Stories, Flashcards, Tests)
 /[language]/[book]                          # Book page - lesson list
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
 /[language]/[book]/flashcards               # Flashcard practice page
+/[language]/[book]/stories                  # Stories list page
+/[language]/[book]/stories/[storyId]        # Story reader page
 ```
 
 Example routes:
-- `/` - Home page with language categories
+- `/` - Home page with language cards (Xitoy tili, Ingliz tili)
+- `/chinese` - Chinese language page with tabs (HSK, Stories, Flashcards, Tests)
 - `/chinese/hsk1` - HSK 1 book with lesson list
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
 - `/chinese/hsk1/flashcards` - HSK 1 flashcard practice
+- `/chinese/hsk1/stories` - HSK 1 stories list
+- `/chinese/hsk1/stories/hsk1-story1` - Story reader
 
 ## Project Structure
 ```
-/Users/ali/Kitobee/
+/Users/ali/ReadVo/
 ├── src/
 │   ├── app/                    # Next.js App Router pages
 │   │   ├── page.tsx           # Home page (language selection)
 │   │   ├── error.tsx          # Error boundary
 │   │   ├── not-found.tsx      # 404 page
 │   │   └── chinese/
+│   │       ├── page.tsx       # Language page (tabbed catalog)
 │   │       └── hsk1/
 │   │           ├── page.tsx   # Book page (lesson list)
 │   │           ├── flashcards/page.tsx  # Flashcard practice page
+│   │           ├── stories/
+│   │           │   ├── page.tsx       # Stories list page
+│   │           │   └── [storyId]/page.tsx  # Story reader page
 │   │           └── lesson/[lessonId]/page/[pageNum]/page.tsx
 │   ├── components/             # React components
 │   │   ├── Page.tsx           # Top-level page container
@@ -46,8 +56,11 @@ Example routes:
 │   │   ├── LessonHeader.tsx   # Lesson banner (1 DARS format)
 │   │   ├── ReaderLayout.tsx   # Layout with fixed header/footer
 │   │   ├── ReaderControls.tsx # Pinyin/translation/font controls
-│   │   ├── HomePage.tsx       # Home page (language/book selection)
+│   │   ├── HomePage.tsx       # Home page (language selection cards)
+│   │   ├── LanguagePage.tsx   # Language page (tabbed: HSK, Stories, Flashcards, Tests)
 │   │   ├── BookPage.tsx       # Book page (lesson list with pages)
+│   │   ├── StoriesPage.tsx     # Stories list page
+│   │   ├── StoryReader.tsx    # Story reader with ruby pinyin, translation panel, audio bar
 │   │   ├── FlashcardDeck.tsx  # Flashcard session manager (client)
 │   │   ├── FlashcardCard.tsx  # Flashcard with 3D flip animation
 │   │   ├── MatchingExercise.tsx      # Image-word matching
@@ -58,9 +71,12 @@ Example routes:
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
 │   │   └── useLanguage.ts     # UZ/RU language toggle (localStorage)
+│   ├── utils/                    # Utility functions
+│   │   └── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
 │   ├── services/               # Data loading
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
+│   │   ├── stories.ts        # Loads story JSON from /content/stories
 │   │   └── flashcards.ts     # Loads flashcard decks from /content/flashcards
 │   ├── styles/
 │   │   └── reading.css        # All styles
@@ -72,8 +88,11 @@ Example routes:
 │   ├── lesson1-page1.json     # Lessons 1-15: complete (3 pages each)
 │   ├── ...
 │   ├── lesson15-page3.json
-│   └── flashcards/
-│       └── hsk1.json          # HSK 1 flashcard word list
+│   ├── flashcards/
+│   │   └── hsk1.json          # HSK 1 flashcard word list
+│   └── stories/
+│       └── hsk1/
+│           └── story1.json    # Story content files
 ├── .env.local                  # Supabase credentials
 └── public/
     └── audio/                  # Local MP3 audio files (legacy)
@@ -128,7 +147,7 @@ Page → Section → Sentence → Word
 - Section's `image_url` field for Supabase URLs
 
 ### Flashcard Practice
-- Standalone page at `/chinese/hsk1/flashcards`
+- Accessible from Language Page → Flashcards tab → HSK 1 card (`/chinese/hsk1/flashcards`)
 - Cards show Chinese + pinyin (front) → translation (back) with CSS 3D flip animation
 - Self-grading: "Bilaman" (Know) / "Bilmayman" (Don't Know) buttons appear after flip
 - Session progress bar, completion screen with stats (known vs unknown count)
@@ -139,11 +158,68 @@ Page → Section → Sentence → Word
 - Cards shuffled on mount via `useEffect` to avoid hydration mismatch
 - Data loaded from `content/flashcards/{bookId}.json`
 
+### Story Reader
+- Accessible from Language Page → Stories tab (future) or `/chinese/hsk1/stories`
+- Stories are graded reading texts using vocabulary from the corresponding HSK level
+- **Ruby pinyin**: Each pinyin syllable appears directly above its corresponding Chinese character using HTML `<ruby>/<rt>/<rp>` tags
+- **Pinyin-character alignment**: `src/utils/rubyText.ts` splits compound pinyin (e.g., "Jīntiān" → "Jīn" + "tiān") and maps syllables to CJK characters
+- **Erhua handling**: Characters like 玩儿 and 点儿 are merged under one ruby element with pinyin "wánr"/"diǎnr". Works in compound words too (e.g., "Yǒudiǎnr" → ["Yǒu", "diǎnr"])
+- **Pinyin quote stripping**: `stripPunct()` removes leading `"'"(` and trailing `.,!?:;"""''()` from pinyin tokens before splitting, so quotes in pinyin like `"Jiālǐ` don't get attached to syllables
+- **Pinyin toggle stability**: When pinyin is toggled off, `<ruby>` tags remain but `<rt>` gets `visibility: hidden` to prevent layout shift
+- **Tap-to-translate**: Tapping a sentence changes its color to blue (`color: var(--color-accent)`) and shows its translation in a fixed panel below the header
+- **Translation panel**: Fixed position below header (`z-index: 99`), only visible when a sentence is active and translation toggle is on
+- **No inline translations**: Unlike lessons, story translations only appear in the panel (not inline below text)
+- **Sentence spacing**: A space character is inserted between adjacent sentence `<span>`s in the same paragraph to prevent quotes/punctuation from visually merging
+- **Independent CSS**: Stories use `.story` class (not `.page`), completely independent from lesson page styles
+- **Floating audio player**:
+  - Play FAB (56px blue circle) at bottom-right when audio is idle
+  - Expands to full audio bar at bottom when playing
+  - Audio bar has: -15s skip, play/pause (center), +15s skip, seekable progress bar with time display
+  - Uses direct `HTMLAudioElement` via `useRef` (not `useAudioPlayer` hook) for progress/duration tracking
+  - `story--with-audio` class adds bottom padding to prevent last sentence from being blocked
+- **Audio-text sync**: When sentences have `start`/`end` timestamps (in seconds), the currently playing sentence is automatically highlighted during audio playback
+  - `audioSentenceId` is derived via `useMemo` from `currentTime` — finds which sentence's `start ≤ time < end`
+  - Audio-synced highlight takes priority over manual tap highlight (`displaySentenceId = audioSentenceId ?? activeSentenceId`)
+  - When audio starts playing, manual tap selection is cleared (`setActiveSentenceId(null)`)
+  - Translation panel shows the currently playing sentence's translation
+  - Timestamps are optional — stories without `start`/`end` work exactly as before (tap-only)
+- **One sentence per JSON entry**: Each tappable sentence must be its own entry in the `sentences` array (don't combine two sentences in one `text_original`)
+- **Press-and-hold word translation**: Long-press (300ms) on a Chinese word shows its individual pinyin + translation in the translation panel (overrides sentence translation)
+  - Word data stored in `words[]` array per sentence with compact format: `{ i: [start, end], p, t, tr, h?, l? }`
+  - `i`: character index range in `text_original` (exclusive end), `p`: pinyin, `t`: Uzbek, `tr`: Russian
+  - `h`: HSK level (1-6), `l`: lesson number where word's **contextual meaning** was first introduced
+  - Translation panel shows: **字** pinyin — translation `[HSK 1]` `[10-dars]` (two separate badge spans)
+  - Panel shows regardless of translation toggle when a word is pressed (always useful for learners)
+  - Audio pauses during word press, resumes on release
+  - Words wrapped in `<span class="story__word">` with `story__word--active` highlight (background, not color)
+  - Focus mode: dims non-active sentences to 0.35 opacity, toggled via header button
+- Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
+
 ### Styling Conventions
-- Section headers: Red gradient tab with rounded top corners
+- Section headers: Red gradient tab with rounded top corners (hidden for objectives and text sections)
 - Section content: Colored background based on type
 - Pinyin: Accent color (blue), italic
 - Translation: Secondary text color, italic
+
+### Card Design (Objectives & Text Sections)
+Objectives and text sections use a modern floating card design:
+
+**Objectives section** (`.section--objectives`):
+- Header hidden (`display: none`)
+- All sentences in one white card with rounded corners (`border-radius: 16px`) and shadow
+- Red accent strip (`border-left: 6px solid #C43A35`) on Chinese text only (`.sentence__text`)
+- Uzbek translation aligned with Chinese text (`padding-left: 22px`)
+- Translations always visible (no toggle needed), pinyin hidden
+- No checkboxes, no dividers between sentences
+
+**Text section** (`.section--text`):
+- Header hidden (`display: none`)
+- Context block styled as floating white card with shadow and rounded corners
+- Subtle divider (`border-top: 1px solid #e5e5e5`) between Chinese text and translation
+- Translation always visible in context card (no toggle needed)
+- Instruction rendered above the context card (without play button)
+- Play button moved inside the context card, inline at end of translation text (`.section__audio-btn--inline`)
+- Non-text sections keep the original layout (instruction with play button below context)
 
 ## Content JSON Format
 
@@ -297,6 +373,52 @@ Page → Section → Sentence → Word
 }
 ```
 
+### Story JSON
+```json
+{
+  "id": "hsk1-story1",
+  "title": "小猫在哪儿？",
+  "pinyin": "Xiǎo māo zài nǎr?",
+  "titleTranslation": "Mushukcha qayerda?",
+  "titleTranslation_ru": "Где котёнок?",
+  "level": 1,
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/story1.mp3",
+  "sections": [
+    {
+      "id": "s1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s1",
+          "text_original": "我有一个小猫。",
+          "pinyin": "Wǒ yǒu yí ge xiǎo māo.",
+          "text_translation": "Mening bir mushukcham bor.",
+          "text_translation_ru": "У меня есть котёнок.",
+          "start": 0,
+          "end": 3,
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [2, 4], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1, "l": 4 },
+            { "i": [4, 6], "p": "xiǎo māo", "t": "mushukcha", "tr": "котёнок", "h": 1, "l": 8 }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+- Each section represents a paragraph (visual grouping of sentences)
+- Each sentence must be a single Chinese sentence (one tappable unit for translation)
+- `audio_url` is optional; when present, the floating audio player appears
+- `start`/`end` are optional timestamps in seconds for audio-text sync (e.g., `"start": 6.5, "end": 10`)
+- When timestamps are present, the sentence auto-highlights during audio playback
+- Each sentence's `end` should match the next sentence's `start` (no gaps)
+- For sentences sharing an audio segment, split the time proportionally
+- Sections use `"type": "text"` with empty `heading`/`subheading`
+
 ## UI Text Language
 - Section headings: Chinese + Uzbek/Russian (e.g., "目标 Maqsadlar", "生词 Yangi so'zlar")
 - Lesson badge: "1 DARS" format (number on top, label below)
@@ -345,7 +467,7 @@ This applies to:
 - `.page` (lesson page container)
 - `.reader__header-inner` (header content)
 
-### Home Page Structure (HomePage.tsx — language/book selection)
+### Home Page Structure (HomePage.tsx — language selection)
 ```
 main.home (max-width container + padding)
 ├── header.home__hero (red gradient banner, rounded corners)
@@ -355,23 +477,37 @@ main.home (max-width container + padding)
 ├── section.home__content
 │   ├── h2.home__section-title
 │   └── div.home__languages
-│       └── div.language-group (per language)
+│       └── Link.language-group.language-group--link (per language)
 │           ├── div.language-group__header (flag + name)
-│           └── div.language-group__books
-│               └── Link.book-card (per book)
+│           └── span.language-group__arrow
+└── footer.home__footer
+```
+
+### Language Page Structure (LanguagePage.tsx — tabbed catalog)
+```
+main.home (reuses home styling)
+├── header.home__hero (back link to "/" + language toggle)
+│   ├── h1.home__logo (🇨🇳 Xitoy tili)
+│   └── p.home__tagline (中文)
+├── section.home__content
+│   ├── div.lang-page__tabs (horizontal tab bar)
+│   │   └── button.lang-page__tab (HSK | Stories | Flashcards | Tests)
+│   └── div.lang-page__books (grid of cards, for HSK and Flashcards tabs)
+│       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
+│   └── div.lang-page__placeholder (for Stories/Tests tabs — "Tez kunda...")
 └── footer.home__footer
 ```
 
 ### Book Page Structure (BookPage.tsx — lesson list)
 ```
 main.home (reuses home styling)
-├── header.home__hero (with back link + language toggle)
+├── header.home__hero (back link to /chinese + language toggle)
 ├── section.home__content
 │   ├── h2.home__section-title
 │   ├── div.home__lessons
 │   │   └── article.lesson-card (per lesson)
 │   │       └── div.lesson-card__pages (page links)
-│   └── Link.home__flashcards-link (flashcard practice)
+│   └── div.home__stats
 └── footer.home__footer
 ```
 
@@ -406,10 +542,36 @@ main.flashcard-page
     └── div.flashcard__actions (know/don't know buttons)
 ```
 
+### Story Reader Page Structure (StoryReader.tsx)
+```
+div.reader
+├── header.reader__header (fixed, reuses lesson header)
+│   └── div.reader__header-inner
+│       ├── Link.reader__home ("← Hikoyalar")
+│       └── ReaderControls (pinyin/translation/font/language toggles)
+├── div.story__translation-panel (fixed below header, shown on sentence tap)
+│   └── p.story__translation-panel-text
+├── article.story (independent container, NOT .page)
+│   └── div.story__paragraph (per section)
+│       └── p.story__text
+│           └── span.story__sentence (per sentence, clickable)
+│               └── span.story__word (per word, long-pressable)
+│                   └── ruby > rt (pinyin above each character)
+├── button.story__play-fab (when audio idle, bottom-right FAB)
+└── div.story__audio-bar (when audio active, fixed bottom bar)
+    ├── div.story__audio-controls (-15, play/pause, +15)
+    └── div.story__audio-progress-row (time + seekable bar + time)
+```
+
 ### Key CSS Classes
-- `.home` - Home/book page container (matches `.page` width)
-- `.language-group` - Language grouping on home page
-- `.book-card` - Book card on home page
+- `.home` - Home/book/language page container (matches `.page` width)
+- `.language-group` - Language card on home page
+- `.language-group--link` - Clickable language card (adds hover, arrow)
+- `.lang-page__tabs` - Horizontal tab bar on language page
+- `.lang-page__tab` / `.lang-page__tab--active` - Tab buttons with red active underline
+- `.lang-page__books` - Responsive grid for HSK/flashcard level cards
+- `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
+- `.lang-page__placeholder` - Centered placeholder for empty tabs
 - `.lesson-card` - Lesson card on book page
 - `.page` - Lesson content container
 - `.reader__header` - Fixed header (full-width background)
@@ -421,6 +583,29 @@ main.flashcard-page
 - `.flashcard__face` - Card face (`backface-visibility: hidden`)
 - `.flashcard__front-content` - Centers Chinese + audio + pinyin vertically on front
 - `.flashcard__audio-btn` - Circular audio play button on card front
+- `.story` - Story content container (independent from `.page`, own max-width/padding)
+- `.story--with-panel` - Extra top padding when translation panel is visible
+- `.story--with-audio` - Extra bottom padding when audio bar is visible
+- `.story__sentence` - Clickable sentence span (cursor pointer)
+- `.story__sentence--active` - Blue color for tapped/active sentence
+- `.story__sentence--playing` - Blue color for audio-synced sentence
+- `.story__translation-panel` - Fixed translation panel below header (z-index 99)
+- `.story__play-fab` - Floating action button (56px blue circle, bottom-right)
+- `.story__audio-bar` - Fixed bottom audio bar with backdrop blur
+- `.story__audio-play` - Central play/pause button (48px blue circle)
+- `.story__audio-skip` - Skip buttons (-15/+15, 40px bordered circle)
+- `.story__audio-progress` - Seekable progress bar track
+- `.story__audio-progress-fill` - Blue progress fill bar
+- `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
+- `.story__word--active` - Blue background highlight for pressed word
+- `.story__word-hsk` - HSK level/lesson badge in translation panel (small pill-shaped tag)
+- `.story--focus .story__sentence:not(.story__sentence--active)` - Dimmed non-active sentences (opacity 0.35)
+- `.section--objectives .section__sentences` - Single white card container (border-radius 16px, shadow)
+- `.section--objectives .sentence__text` - Red accent strip via `border-left: 6px solid #C43A35` + `padding-left: 16px`
+- `.section--objectives .sentence__translation-inline` - Aligned to Chinese text (`padding-left: 22px`)
+- `.section--text .section__context` - Floating white card with shadow for context narration
+- `.section--text .section__context-translation` - Divider above translation + flex layout for inline play button
+- `.section__audio-btn--inline` - Play button positioned inline at end of context translation text
 
 ### Padding
 - Page side padding: `var(--spacing-xl)` (32px)
@@ -484,6 +669,41 @@ main.flashcard-page
 - Numbered sentences in grammar and exercise sections automatically indent via CSS
 - `padding-left: 2.2em` applies to `[data-numbered="true"]` sentences
 - Works for both `.section--grammar` and `.section--exercise`
+
+## Story Content Conventions
+- Each sentence in a story must be its own entry in `sentences[]` — never combine two sentences in one `text_original`
+- Sections represent visual paragraphs; use multiple sections to break the story into readable chunks
+- Story IDs follow the pattern `hsk1-story1`, `hsk1-story2`, etc.
+- Sentence IDs follow the pattern `s1-s1`, `s1-s2` (or `s1-s8a`, `s1-s8b` when splitting)
+- All sentences must have `pinyin` (stories are learning content)
+- `words` array contains word-level data for press-and-hold translation (see format below)
+- Audio URL is one file for the entire story (not per-sentence)
+- Audio-text sync: add `start`/`end` (seconds) to each sentence for auto-highlighting during playback
+- Ruby text utility (`rubyText.ts`) handles:
+  - Compound pinyin splitting: "Jīntiān" → ["Jīn", "tiān"], "xīngqīliù" → ["xīng", "qī", "liù"]
+  - Apostrophe-separated syllables: "kě'ài" → ["kě", "ài"]
+  - Erhua merging: 玩儿/点儿 with pinyin "wánr"/"diǎnr" renders as one ruby element (works in compounds like "Yǒudiǎnr" too)
+  - Quote stripping: leading/trailing `"` `'` `(` `)` stripped from pinyin tokens before splitting
+  - Punctuation passthrough: 。，？！ get no pinyin annotation
+
+### Word-Level Data (`words[]`)
+Each sentence has a `words` array with compact word entries for press-and-hold translation:
+```json
+{ "i": [0, 2], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 }
+```
+- `i`: `[startCharIdx, endCharIdx]` — character range in `text_original` (exclusive end)
+- `p`: pinyin for this word
+- `t`: Uzbek translation
+- `tr`: Russian translation
+- `h`: HSK level (1-6), currently all `1` for HSK 1 stories
+- `l`: lesson number — ONLY when the **exact word** exists in the flashcard deck with the **same meaning**
+  - Exact match required: 猫 (in deck) → `"l": 5` ✓ / 小猫 (not in deck) → no `l` ✓
+  - No compound inference: 一个, 看看, 星期六, 家里 etc. → no `l` (not exact deck entries)
+  - Contextual meaning must match: 贵 as "expensive" → `"l": 10`, NOT `"l": 1` (你贵姓 honorific)
+  - Words not in the deck (supplementary vocab like 厨房, 笑, 走, compounds like 小猫) have no `l` field
+  - Validate with: `python3 scripts/populate-words.py validate-all`
+- Punctuation (。，！？) is excluded — only meaningful Chinese words
+- All 3 stories (74 sentences, ~400 words) have complete word data
 
 ## CRITICAL: Chinese Quotation Marks in JSON
 

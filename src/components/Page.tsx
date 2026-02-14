@@ -36,6 +36,12 @@ export interface PageProps {
 
   /** Selected language for translations */
   language: Language;
+
+  /** Currently active/selected sentence ID (for translation panel) */
+  activeSentenceId?: string | null;
+
+  /** Callback when a sentence is tapped */
+  onSentenceClick?: (sentenceId: string) => void;
 }
 
 export const Page: React.FC<PageProps> = React.memo(function Page({
@@ -44,6 +50,8 @@ export const Page: React.FC<PageProps> = React.memo(function Page({
   isTranslationVisible,
   fontSize,
   language,
+  activeSentenceId,
+  onSentenceClick,
 }) {
   // Audio player - uses singleton with concurrency guard
   const audioPlayer = useAudioPlayer();
@@ -116,6 +124,8 @@ export const Page: React.FC<PageProps> = React.memo(function Page({
             playingSectionId={audioPlayer.state.playingSentenceId}
             loadingSectionId={audioPlayer.state.loadingSentenceId}
             onSectionAudioClick={handleSectionAudioClick}
+            activeSentenceId={activeSentenceId}
+            onSentenceClick={onSentenceClick}
           />
         ))}
       </div>

@@ -56,6 +56,12 @@ export interface SectionProps {
 
   /** Callback when section audio button is clicked */
   onSectionAudioClick: (sectionId: string, audioUrl: string) => void;
+
+  /** Currently active/selected sentence ID (for translation panel) */
+  activeSentenceId?: string | null;
+
+  /** Callback when a sentence is tapped */
+  onSentenceClick?: (sentenceId: string) => void;
 }
 
 export const Section: React.FC<SectionProps> = React.memo(function Section({
@@ -69,6 +75,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
   playingSectionId,
   loadingSectionId,
   onSectionAudioClick,
+  activeSentenceId,
+  onSentenceClick,
 }) {
   // Helper to get translation based on language
   const getContextTranslation = () => {
@@ -122,18 +130,47 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         </div>
       )}
 
+      {/* For text sections: instruction above context card (with play button) */}
+      {section.type === 'text' && getInstruction() && (
+        <div className="section__instruction-row">
+          <span className="section__instruction-checkbox" aria-hidden="true">■</span>
+          <p className="section__instruction">{getInstruction()}</p>
+          {section.audio_url && (
+            <button
+              className={`section__audio-btn ${playingSectionId === section.id ? 'section__audio-btn--playing' : ''}`}
+              onClick={() => onSectionAudioClick(section.id, section.audio_url!)}
+              disabled={loadingSectionId === section.id}
+              aria-label={playingSectionId === section.id ? 'Stop audio' : 'Play all'}
+            >
+              {loadingSectionId === section.id ? (
+                <span className="section__audio-loading" />
+              ) : playingSectionId === section.id ? (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16" />
+                  <rect x="14" y="4" width="4" height="16" />
+                </svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Context/narration (optional, for text sections) */}
       {section.context && (
         <div className="section__context">
           <p className="section__context-text">{section.context}</p>
-          {getContextTranslation() && isTranslationVisible && (
+          {getContextTranslation() && (
             <p className="section__context-translation">{getContextTranslation()}</p>
           )}
         </div>
       )}
 
-      {/* Instruction (optional, e.g., "Read the dialogue aloud") */}
-      {getInstruction() && (
+      {/* Instruction for non-text sections (original position with play button) */}
+      {section.type !== 'text' && getInstruction() && (
         <div className="section__instruction-row">
           <span className="section__instruction-checkbox" aria-hidden="true">■</span>
           <p className="section__instruction">{getInstruction()}</p>
@@ -186,7 +223,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
             {section.tip.pinyin && isPinyinVisible && (
               <p className="section__tip-pinyin">{section.tip.pinyin}</p>
             )}
-            {getTipTranslation() && isTranslationVisible && (
+            {getTipTranslation() && (
               <p className="section__tip-translation">{getTipTranslation()}</p>
             )}
           </div>
@@ -292,6 +329,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 isAudioPlaying={playingSentenceId === sentence.id}
                 isAudioLoading={loadingAudioSentenceId === sentence.id}
                 onAudioClick={onAudioClick}
+                onSentenceClick={onSentenceClick}
+                isActive={activeSentenceId === sentence.id}
               />
             ))
           )}

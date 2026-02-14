@@ -129,7 +129,7 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%201.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-1-1.jpg",
       "tip": {
-        "label": "小语助力",
+        "label": "Xiao Yu dan maslahat",
         "text": "现在人们有时也用「电话」指代「手机」。",
         "translation": "Hozirda odamlar ba'zan \"电话\" so'zini \"手机\" o'rnida ham ishlatishadi.",
         "translation_ru": "В наше время люди иногда используют слово «电话» вместо «手机»."
@@ -179,7 +179,7 @@
       "heading": "",
       "sentences": [],
       "tip": {
-        "label": "小语助力",
+        "label": "Xiao Yu dan maslahat",
         "text": "手机号要一位一位地读，而且数字「1」要读成「yāo」。",
         "translation": "Telefon raqamlarini raqam-raqam o'qish kerak, va \"1\" raqami \"yāo\" deb o'qiladi.",
         "translation_ru": "Номера телефонов читаются по одной цифре, а цифра «1» произносится как «yāo»."

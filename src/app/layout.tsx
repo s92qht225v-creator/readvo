@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/reading.css';
+import { AuthProvider } from '@/hooks/useAuth';
 
 export const metadata: Metadata = {
   title: 'ReadVo - Interaktiv o\'qish',
@@ -19,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

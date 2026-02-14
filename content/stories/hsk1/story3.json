@@ -1,0 +1,2218 @@
+{
+  "id": "hsk1-story3",
+  "title": "我想买水果",
+  "pinyin": "Wǒ xiǎng mǎi shuǐguǒ",
+  "titleTranslation": "Men meva sotib olmoqchiman",
+  "titleTranslation_ru": "Я хочу купить фрукты",
+  "level": 1,
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20stories/HSK1-story-3.mp3",
+  "sections": [
+    {
+      "id": "s3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s1",
+          "text_original": "今天是星期天。",
+          "pinyin": "Jīntiān shì xīngqītiān.",
+          "text_translation": "Bugun yakshanba kuni.",
+          "text_translation_ru": "Сегодня воскресенье.",
+          "start": 0,
+          "end": 2.1,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "xīngqītiān",
+              "t": "yakshanba",
+              "tr": "воскресенье",
+              "h": 1,
+              "l": 5
+            }
+          ]
+        },
+        {
+          "id": "s3-s2",
+          "text_original": "天气很好，不冷也不热。",
+          "pinyin": "Tiānqì hěn hǎo, bù lěng yě bú rè.",
+          "text_translation": "Ob-havo juda yaxshi, sovuq ham emas, issiq ham emas.",
+          "text_translation_ru": "Погода очень хорошая, не холодно и не жарко.",
+          "start": 2.1,
+          "end": 6.4,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "tiānqì",
+              "t": "ob-havo",
+              "tr": "погода",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хороший",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "lěng",
+              "t": "sovuq",
+              "tr": "холодный",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "rè",
+              "t": "issiq",
+              "tr": "жаркий",
+              "h": 1,
+              "l": 12
+            }
+          ]
+        },
+        {
+          "id": "s3-s3",
+          "text_original": "妈妈说：\"家里没有水果了。\"",
+          "pinyin": "Māma shuō: \"Jiālǐ méiyǒu shuǐguǒ le.\"",
+          "text_translation": "Oyim aytdi: \"Uyda meva qolmadi.\"",
+          "text_translation_ru": "Мама сказала: «Дома нет фруктов.»",
+          "start": 6.4,
+          "end": 9.5,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "jiālǐ",
+              "t": "uyda",
+              "tr": "дома",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "shuǐguǒ",
+              "t": "meva",
+              "tr": "фрукты",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                11,
+                12
+              ],
+              "p": "le",
+              "t": "(o'zgarish)",
+              "tr": "(изменение)",
+              "h": 1,
+              "l": 6
+            }
+          ]
+        },
+        {
+          "id": "s3-s4",
+          "text_original": "\"你去超市买一些吧。\"",
+          "pinyin": "\"Nǐ qù chāoshì mǎi yìxiē ba.\"",
+          "text_translation": "\"Sen supermarketga borib bir oz sotib ol.\"",
+          "text_translation_ru": "«Сходи в супермаркет и купи немного.»",
+          "start": 9.5,
+          "end": 11.9,
+          "words": [
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "chāoshì",
+              "t": "supermarket",
+              "tr": "супермаркет",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "yìxiē",
+              "t": "bir oz",
+              "tr": "немного",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "ba",
+              "t": "(taklif)",
+              "tr": "(частица)",
+              "h": 1,
+              "l": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec2",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s5",
+          "text_original": "我说：\"好的！要买什么水果？\"",
+          "pinyin": "Wǒ shuō: \"Hǎo de! Yào mǎi shénme shuǐguǒ?\"",
+          "text_translation": "Men aytdim: \"Xo'p! Qanday meva olish kerak?\"",
+          "text_translation_ru": "Я сказал: «Хорошо! Какие фрукты купить?»",
+          "start": 11.9,
+          "end": 15.5,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "hǎo de",
+              "t": "xo'p",
+              "tr": "хорошо",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "yào",
+              "t": "kerak",
+              "tr": "нужно",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                11,
+                13
+              ],
+              "p": "shuǐguǒ",
+              "t": "meva",
+              "tr": "фрукты",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s6",
+          "text_original": "妈妈说：\"买一些苹果。\"",
+          "pinyin": "Māma shuō: \"Mǎi yìxiē píngguǒ.\"",
+          "text_translation": "Oyim aytdi: \"Bir oz olma ol.\"",
+          "text_translation_ru": "Мама сказала: «Купи немного яблок.»",
+          "start": 15.5,
+          "end": 19,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "yìxiē",
+              "t": "bir oz",
+              "tr": "немного",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                8,
+                10
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s7",
+          "text_original": "\"你爸爸和弟弟都喜欢吃苹果。\"",
+          "pinyin": "\"Nǐ bàba hé dìdi dōu xǐhuan chī píngguǒ.\"",
+          "text_translation": "\"Dadang va ukang ikkalasi ham olma yeyishni yoqtiradi.\"",
+          "text_translation_ru": "«Папа и младший брат оба любят есть яблоки.»",
+          "start": 19,
+          "end": 22,
+          "words": [
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "bàba",
+              "t": "dada",
+              "tr": "папа",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "hé",
+              "t": "va",
+              "tr": "и",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "dìdi",
+              "t": "uka",
+              "tr": "младший брат",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "dōu",
+              "t": "hammasi",
+              "tr": "все",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                8,
+                10
+              ],
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "любить",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                11,
+                13
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s8",
+          "text_original": "\"还要买牛奶。\"",
+          "pinyin": "\"Hái yào mǎi niúnǎi.\"",
+          "text_translation": "\"Yana sut ham kerak.\"",
+          "text_translation_ru": "«Ещё нужно купить молоко.»",
+          "start": 22,
+          "end": 24,
+          "words": [
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "hái",
+              "t": "yana",
+              "tr": "ещё",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "yào",
+              "t": "kerak",
+              "tr": "нужно",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "niúnǎi",
+              "t": "sut",
+              "tr": "молоко",
+              "h": 1,
+              "l": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec3",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s9",
+          "text_original": "我走到超市。",
+          "pinyin": "Wǒ zǒu dào chāoshì.",
+          "text_translation": "Men supermarketga bordim.",
+          "text_translation_ru": "Я дошёл до супермаркета.",
+          "start": 24,
+          "end": 26,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zǒu dào",
+              "t": "yetib bormoq",
+              "tr": "дойти до",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "chāoshì",
+              "t": "supermarket",
+              "tr": "супермаркет",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s10",
+          "text_original": "超市里人很多。",
+          "pinyin": "Chāoshì lǐ rén hěn duō.",
+          "text_translation": "Supermarketda odam juda ko'p.",
+          "text_translation_ru": "В супермаркете очень много людей.",
+          "start": 26,
+          "end": 28,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "chāoshì",
+              "t": "supermarket",
+              "tr": "супермаркет",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "lǐ",
+              "t": "-da",
+              "tr": "внутри",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "rén",
+              "t": "odam",
+              "tr": "человек",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "duō",
+              "t": "ko'p",
+              "tr": "много",
+              "h": 1,
+              "l": 4
+            }
+          ]
+        },
+        {
+          "id": "s3-s11",
+          "text_original": "我先去买水果。",
+          "pinyin": "Wǒ xiān qù mǎi shuǐguǒ.",
+          "text_translation": "Men avval meva olishga bordim.",
+          "text_translation_ru": "Сначала я пошёл покупать фрукты.",
+          "start": 28,
+          "end": 31.5,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xiān",
+              "t": "avval",
+              "tr": "сначала",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shuǐguǒ",
+              "t": "meva",
+              "tr": "фрукты",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s12",
+          "text_original": "苹果很漂亮，红红的。",
+          "pinyin": "Píngguǒ hěn piàoliang, hónghóng de.",
+          "text_translation": "Olmalar juda chiroyli, qip-qizil.",
+          "text_translation_ru": "Яблоки очень красивые, красные-красные.",
+          "start": 31.5,
+          "end": 35,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "piàoliang",
+              "t": "chiroyli",
+              "tr": "красивый",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                6,
+                9
+              ],
+              "p": "hónghóng de",
+              "t": "qip-qizil",
+              "tr": "красные-красные",
+              "h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec4",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s13",
+          "text_original": "我问售货员：\"苹果多少钱一斤？\"",
+          "pinyin": "Wǒ wèn shòuhuòyuán: \"Píngguǒ duōshao qián yì jīn?\"",
+          "text_translation": "Men sotuvchidan so'radim: \"Olma bir jinga qancha?\"",
+          "text_translation_ru": "Я спросил продавца: «Сколько стоит яблоко за цзинь?»",
+          "start": 35,
+          "end": 40,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "wèn",
+              "t": "so'ramoq",
+              "tr": "спрашивать",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                2,
+                5
+              ],
+              "p": "shòuhuòyuán",
+              "t": "sotuvchi",
+              "tr": "продавец",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                11,
+                12
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                12,
+                13
+              ],
+              "p": "yì",
+              "t": "bir",
+              "tr": "один",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                13,
+                14
+              ],
+              "p": "jīn",
+              "t": "jin",
+              "tr": "цзинь",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s14",
+          "text_original": "售货员说：\"五块钱一斤。\"",
+          "pinyin": "Shòuhuòyuán shuō: \"Wǔ kuài qián yì jīn.\"",
+          "text_translation": "Sotuvchi aytdi: \"Bir jin besh yuan.\"",
+          "text_translation_ru": "Продавец сказал: «Пять юаней за цзинь.»",
+          "start": 40,
+          "end": 43,
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "shòuhuòyuán",
+              "t": "sotuvchi",
+              "tr": "продавец",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "wǔ",
+              "t": "besh",
+              "tr": "пять",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "yì",
+              "t": "bir",
+              "tr": "один",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "jīn",
+              "t": "jin",
+              "tr": "цзинь",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s15",
+          "text_original": "不贵！",
+          "pinyin": "Bú guì!",
+          "text_translation": "Qimmat emas!",
+          "text_translation_ru": "Недорого!",
+          "start": 43,
+          "end": 45,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "guì",
+              "t": "qimmat",
+              "tr": "дорогой",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s16",
+          "text_original": "我买了三斤苹果。",
+          "pinyin": "Wǒ mǎi le sān jīn píngguǒ.",
+          "text_translation": "Men uch jin olma oldim.",
+          "text_translation_ru": "Я купил три цзиня яблок.",
+          "start": 45,
+          "end": 47,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прошедшее)",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "sān",
+              "t": "uch",
+              "tr": "три",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jīn",
+              "t": "jin",
+              "tr": "цзинь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec5",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s17",
+          "text_original": "我又去买了两瓶牛奶。",
+          "pinyin": "Wǒ yòu qù mǎi le liǎng píng niúnǎi.",
+          "text_translation": "Men yana ikki shisha sut oldim.",
+          "text_translation_ru": "Я ещё купил две бутылки молока.",
+          "start": 47,
+          "end": 50.3,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yòu",
+              "t": "yana",
+              "tr": "ещё",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прошедшее)",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "liǎng",
+              "t": "ikki",
+              "tr": "два",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "píng",
+              "t": "shisha",
+              "tr": "бутылка",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "niúnǎi",
+              "t": "sut",
+              "tr": "молоко",
+              "h": 1,
+              "l": 6
+            }
+          ]
+        },
+        {
+          "id": "s3-s18",
+          "text_original": "然后我看见了一些很好看的东西。",
+          "pinyin": "Ránhòu wǒ kànjiàn le yìxiē hěn hǎokàn de dōngxi.",
+          "text_translation": "Keyin men juda chiroyli narsalarni ko'rdim.",
+          "text_translation_ru": "Потом я увидел несколько очень красивых вещей.",
+          "start": 50.3,
+          "end": 53.7,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "ránhòu",
+              "t": "keyin",
+              "tr": "потом",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "kànjiàn",
+              "t": "ko'rmoq",
+              "tr": "увидеть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прошедшее)",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "yìxiē",
+              "t": "bir necha",
+              "tr": "несколько",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "hǎokàn",
+              "t": "chiroyli",
+              "tr": "красивый",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                11,
+                12
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "(определение)",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                12,
+                14
+              ],
+              "p": "dōngxi",
+              "t": "narsa",
+              "tr": "вещь",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s19",
+          "text_original": "是一些小杯子，非常漂亮。",
+          "pinyin": "Shì yìxiē xiǎo bēizi, fēicháng piàoliang.",
+          "text_translation": "Kichkina piyolalar ekan, juda go'zal.",
+          "text_translation_ru": "Это были маленькие чашки, очень красивые.",
+          "start": 53.7,
+          "end": 58,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yìxiē",
+              "t": "bir necha",
+              "tr": "несколько",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "xiǎo",
+              "t": "kichkina",
+              "tr": "маленький",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "bēizi",
+              "t": "piyola",
+              "tr": "чашка",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "fēicháng",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "piàoliang",
+              "t": "go'zal",
+              "tr": "красивый",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s20",
+          "text_original": "我想买一个给妈妈。",
+          "pinyin": "Wǒ xiǎng mǎi yí ge gěi māma.",
+          "text_translation": "Men oyimga bitta sotib olmoqchi bo'ldim.",
+          "text_translation_ru": "Я хочу купить одну для мамы.",
+          "start": 58,
+          "end": 61,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yí ge",
+              "t": "bitta",
+              "tr": "один",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "gěi",
+              "t": "uchun",
+              "tr": "для",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec6",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s21",
+          "text_original": "\"这个杯子多少钱？\"",
+          "pinyin": "\"Zhège bēizi duōshao qián?\"",
+          "text_translation": "\"Bu piyola qancha turadi?\"",
+          "text_translation_ru": "«Сколько стоит эта чашка?»",
+          "start": 61,
+          "end": 63,
+          "words": [
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zhège",
+              "t": "bu",
+              "tr": "этот",
+              "h": 1,
+              "l": 13
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "bēizi",
+              "t": "piyola",
+              "tr": "чашка",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s22",
+          "text_original": "\"二十块。\"",
+          "pinyin": "\"Èrshí kuài.\"",
+          "text_translation": "\"Yigirma yuan.\"",
+          "text_translation_ru": "«Двадцать юаней.»",
+          "start": 63,
+          "end": 65,
+          "words": [
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "èrshí",
+              "t": "yigirma",
+              "tr": "двадцать",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s23",
+          "text_original": "有点儿贵。",
+          "pinyin": "Yǒudiǎnr guì.",
+          "text_translation": "Biroz qimmat.",
+          "text_translation_ru": "Немного дорого.",
+          "start": 65,
+          "end": 67.5,
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "yǒudiǎnr",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "guì",
+              "t": "qimmat",
+              "tr": "дорогой",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s24",
+          "text_original": "可是妈妈一定会喜欢的。",
+          "pinyin": "Kěshì māma yídìng huì xǐhuan de.",
+          "text_translation": "Lekin oyim albatta yoqtiradi.",
+          "text_translation_ru": "Но маме точно понравится.",
+          "start": 67.5,
+          "end": 70,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěshì",
+              "t": "lekin",
+              "tr": "но",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "yídìng",
+              "t": "albatta",
+              "tr": "обязательно",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "huì",
+              "t": "bo'ladi",
+              "tr": "будет",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "нравиться",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "de",
+              "t": "(ta'kid)",
+              "tr": "(утверждение)",
+              "h": 1,
+              "l": 3
+            }
+          ]
+        },
+        {
+          "id": "s3-s25",
+          "text_original": "我买了！",
+          "pinyin": "Wǒ mǎi le!",
+          "text_translation": "Men sotib oldim!",
+          "text_translation_ru": "Я купил!",
+          "start": 70,
+          "end": 72,
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прошедшее)",
+              "h": 1,
+              "l": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-sec7",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s3-s26",
+          "text_original": "回到家，我给妈妈看杯子。",
+          "pinyin": "Huí dào jiā, wǒ gěi māma kàn bēizi.",
+          "text_translation": "Uyga qaytib, oyimga piyolani ko'rsatdim.",
+          "text_translation_ru": "Вернувшись домой, я показал маме чашку.",
+          "start": 72,
+          "end": 75,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "huí dào",
+              "t": "qaytib kelmoq",
+              "tr": "вернуться",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "gěi",
+              "t": "-ga",
+              "tr": "(дательный)",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "kàn",
+              "t": "ko'rsatmoq",
+              "tr": "показать",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "bēizi",
+              "t": "piyola",
+              "tr": "чашка",
+              "h": 1,
+              "l": 8
+            }
+          ]
+        },
+        {
+          "id": "s3-s27",
+          "text_original": "妈妈说：\"太漂亮了！谢谢你！\"",
+          "pinyin": "Māma shuō: \"Tài piàoliang le! Xièxie nǐ!\"",
+          "text_translation": "Oyim aytdi: \"Juda chiroyli! Rahmat!\"",
+          "text_translation_ru": "Мама сказала: «Какая красивая! Спасибо тебе!»",
+          "start": 75,
+          "end": 80,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "tài",
+              "t": "juda",
+              "tr": "слишком",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "piàoliang",
+              "t": "chiroyli",
+              "tr": "красивый",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "le",
+              "t": "(undov)",
+              "tr": "(восклицание)",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                10,
+                12
+              ],
+              "p": "xièxie",
+              "t": "rahmat",
+              "tr": "спасибо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                12,
+                13
+              ],
+              "p": "nǐ",
+              "t": "senga",
+              "tr": "тебе",
+              "h": 1,
+              "l": 1
+            }
+          ]
+        },
+        {
+          "id": "s3-s28",
+          "text_original": "弟弟看见苹果，高兴地说：\"我要吃苹果！\"",
+          "pinyin": "Dìdi kànjiàn píngguǒ, gāoxìng de shuō: \"Wǒ yào chī píngguǒ!\"",
+          "text_translation": "Ukam olmani ko'rib, xursand bo'lib aytdi: \"Men olma yemoqchiman!\"",
+          "text_translation_ru": "Младший брат увидел яблоки и радостно сказал: «Я хочу есть яблоко!»",
+          "start": 80,
+          "end": 84,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "dìdi",
+              "t": "uka",
+              "tr": "младший брат",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "kànjiàn",
+              "t": "ko'rmoq",
+              "tr": "увидеть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "gāoxìng",
+              "t": "xursand",
+              "tr": "радостный",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "de",
+              "t": "-lab",
+              "tr": "(наречие)",
+              "h": 1
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                13,
+                14
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                14,
+                15
+              ],
+              "p": "yào",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                15,
+                16
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                16,
+                18
+              ],
+              "p": "píngguǒ",
+              "t": "olma",
+              "tr": "яблоко",
+              "h": 1,
+              "l": 10
+            }
+          ]
+        },
+        {
+          "id": "s3-s29",
+          "text_original": "我们都笑了。",
+          "pinyin": "Wǒmen dōu xiào le.",
+          "text_translation": "Biz hammamiz kuldik.",
+          "text_translation_ru": "Мы все засмеялись.",
+          "start": 84,
+          "end": 86,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dōu",
+              "t": "hammasi",
+              "tr": "все",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "xiào",
+              "t": "kulmoq",
+              "tr": "смеяться",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прошедшее)",
+              "h": 1,
+              "l": 6
+            }
+          ]
+        },
+        {
+          "id": "s3-s30",
+          "text_original": "今天真是好的一天！",
+          "pinyin": "Jīntiān zhēn shì hǎo de yì tiān!",
+          "text_translation": "Bugun rostdan yaxshi kun bo'ldi!",
+          "text_translation_ru": "Сегодня действительно хороший день!",
+          "start": 86,
+          "end": 90,
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zhēn",
+              "t": "rostdan",
+              "tr": "действительно",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хороший",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "(определение)",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "yì tiān",
+              "t": "bir kun",
+              "tr": "один день",
+              "h": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

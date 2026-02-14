@@ -98,7 +98,7 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%205.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-3-1.jpg",
       "tip": {
-        "label": "小语助力",
+        "label": "Xiao Yu dan maslahat",
         "text": "\"看看\"是\"看\"的重叠式，表示动作时间短。",
         "translation": "\"看看\" — \"看\" fe'lining takroriy shakli bo'lib, harakatning qisqa vaqt davom etishini bildiradi.",
         "translation_ru": "«看看» — это редуплицированная форма глагола «看», указывающая на кратковременность действия."
@@ -165,7 +165,7 @@
       "type": "tip",
       "sentences": [],
       "tip": {
-        "label": "小语助力",
+        "label": "Xiao Yu dan maslahat",
         "text": "中国人喜欢喝热水，认为喝热水更健康。",
         "translation": "Xitoyliklar issiq suv ichishni yaxshi ko'radi, issiq suv ichish sog'liqqa foydaliroq deb hisoblaydi.",
         "translation_ru": "Китайцы любят пить тёплую воду и считают, что пить тёплую воду полезнее для здоровья."

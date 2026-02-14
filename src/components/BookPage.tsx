@@ -1,26 +1,48 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { LessonInfo } from '../services/content';
 import { useLanguage } from '../hooks/useLanguage';
+import { useAuth } from '../hooks/useAuth';
+
+interface ProgressEntry {
+  lesson_id: string;
+  page_num: string;
+  completed: boolean;
+}
 
 interface BookPageProps {
   lessons: LessonInfo[];
   bookPath: string;
+  languagePath?: string;
 }
 
-export function BookPage({ lessons, bookPath }: BookPageProps) {
+export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
   const [language, toggleLanguage] = useLanguage();
+  const { user } = useAuth();
+  const [progress, setProgress] = useState<ProgressEntry[]>([]);
   const hasContent = lessons.length > 0;
+
+  // Fetch progress when user is logged in
+  useEffect(() => {
+    if (!user) return;
+    fetch('/api/progress')
+      .then((res) => res.json())
+      .then((data) => setProgress(data.progress || []))
+      .catch(() => {});
+  }, [user]);
+
+  const isPageCompleted = (lessonId: string, pageNum: number) =>
+    progress.some((p) => p.lesson_id === lessonId && p.page_num === String(pageNum) && p.completed);
 
   return (
     <main className="home">
       {/* Hero Section */}
       <header className="home__hero">
         <div className="home__hero-top">
-          <Link href="/" className="home__back-link">
-            ← {language === 'ru' ? 'Главная' : 'Bosh sahifa'}
+          <Link href={languagePath || '/'} className="home__back-link">
+            ← {language === 'ru' ? 'Китайский' : 'Xitoy tili'}
           </Link>
           <button
             className="home__lang-btn"
@@ -77,32 +99,21 @@ export function BookPage({ lessons, bookPath }: BookPageProps) {
                     <Link
                       key={pageNum}
                       href={`${bookPath}/lesson/${lesson.lessonId}/page/${pageNum}`}
-                      className="lesson-card__page-link"
+                      className={`lesson-card__page-link${isPageCompleted(lesson.lessonId, pageNum) ? ' lesson-card__page-link--done' : ''}`}
                     >
                       <span className="lesson-card__page-num">{pageNum}</span>
                       <span className="lesson-card__page-label">
                         {language === 'ru' ? 'стр.' : 'sahifa'}
                       </span>
+                      {isPageCompleted(lesson.lessonId, pageNum) && (
+                        <span className="lesson-card__check" aria-label="completed">&#10003;</span>
+                      )}
                     </Link>
                   ))}
                 </div>
               </article>
             ))}
           </div>
-
-          {/* Flashcards */}
-          <Link href={`${bookPath}/flashcards`} className="home__flashcards-link">
-            <span className="home__flashcards-icon">📇</span>
-            <div className="home__flashcards-text">
-              <span className="home__flashcards-title">
-                {language === 'ru' ? 'Флэшкарты' : 'Fleshkartalar'}
-              </span>
-              <span className="home__flashcards-desc">
-                {language === 'ru' ? 'Практикуйте слова' : "So'zlarni mashq qiling"}
-              </span>
-            </div>
-            <span className="home__flashcards-arrow">&rarr;</span>
-          </Link>
 
           {/* Stats */}
           <div className="home__stats">

@@ -3,54 +3,56 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { useAuth } from '../hooks/useAuth';
+import { TelegramLoginButton } from './TelegramLoginButton';
 
-interface BookInfo {
-  id: string;
-  title: string;
-  subtitle: string;
-  subtitle_ru: string;
-  description: string;
-  description_ru: string;
-}
-
-interface LanguageGroup {
+interface LanguageInfo {
   id: string;
   name: string;
   name_ru: string;
   nameOriginal: string;
   flag: string;
-  books: BookInfo[];
 }
 
-const languages: LanguageGroup[] = [
+const languages: LanguageInfo[] = [
   {
     id: 'chinese',
     name: 'Xitoy tili',
     name_ru: 'Китайский язык',
     nameOriginal: '中文',
     flag: '🇨🇳',
-    books: [
-      {
-        id: 'hsk1',
-        title: 'HSK 1',
-        subtitle: "Boshlang'ich daraja",
-        subtitle_ru: 'Начальный уровень',
-        description: "Xitoy tilini o'rganishni boshlang",
-        description_ru: 'Начните изучать китайский язык',
-      },
-    ],
+  },
+  {
+    id: 'english',
+    name: 'Ingliz tili',
+    name_ru: 'Английский язык',
+    nameOriginal: 'English',
+    flag: '🇬🇧',
   },
 ];
 
 export function HomePage() {
   const [language, toggleLanguage] = useLanguage();
+  const { user, isLoading, logout } = useAuth();
+
+  const botName = process.env.NEXT_PUBLIC_TELEGRAM_BOT_NAME || '';
 
   return (
     <main className="home">
       {/* Hero Section */}
       <header className="home__hero">
         <div className="home__hero-top">
-          <span />
+          {/* User info or login */}
+          {!isLoading && user ? (
+            <button className="home__user-btn" onClick={logout} type="button">
+              {user.photo_url && (
+                <img src={user.photo_url} alt="" className="home__user-avatar" />
+              )}
+              <span className="home__user-name">{user.first_name}</span>
+            </button>
+          ) : (
+            <span />
+          )}
           <button
             className="home__lang-btn"
             onClick={toggleLanguage}
@@ -68,6 +70,12 @@ export function HomePage() {
             ? 'Интерактивные учебники языков'
             : 'Interaktiv til darsliklari'}
         </p>
+        {/* Telegram login button */}
+        {!isLoading && !user && botName && (
+          <div className="home__login">
+            <TelegramLoginButton botName={botName} size="large" radius={12} />
+          </div>
+        )}
       </header>
 
       {/* Language Categories */}
@@ -77,7 +85,7 @@ export function HomePage() {
         </h2>
         <div className="home__languages">
           {languages.map((lang) => (
-            <div key={lang.id} className="language-group">
+            <Link key={lang.id} href={`/${lang.id}`} className="language-group language-group--link">
               <div className="language-group__header">
                 <span className="language-group__flag">{lang.flag}</span>
                 <div className="language-group__title">
@@ -87,27 +95,8 @@ export function HomePage() {
                   <span className="language-group__original">{lang.nameOriginal}</span>
                 </div>
               </div>
-              <div className="language-group__books">
-                {lang.books.map((book) => (
-                  <Link
-                    key={book.id}
-                    href={`/${lang.id}/${book.id}`}
-                    className="book-card"
-                  >
-                    <div className="book-card__content">
-                      <h4 className="book-card__title">{book.title}</h4>
-                      <p className="book-card__subtitle">
-                        {language === 'ru' ? book.subtitle_ru : book.subtitle}
-                      </p>
-                      <p className="book-card__description">
-                        {language === 'ru' ? book.description_ru : book.description}
-                      </p>
-                    </div>
-                    <span className="book-card__arrow">→</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+              <span className="language-group__arrow">→</span>
+            </Link>
           ))}
         </div>
       </section>

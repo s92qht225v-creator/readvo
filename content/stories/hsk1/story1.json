@@ -1,0 +1,964 @@
+{
+  "id": "hsk1-story1",
+  "title": "小猫在哪儿？",
+  "pinyin": "Xiǎo māo zài nǎr?",
+  "titleTranslation": "Mushukcha qayerda?",
+  "titleTranslation_ru": "Где котёнок?",
+  "level": 1,
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201.mp3",
+  "sections": [
+    {
+      "id": "s1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s1",
+          "text_original": "我有一个小猫。",
+          "pinyin": "Wǒ yǒu yí ge xiǎo māo.",
+          "text_translation": "Mening bir mushukcham bor.",
+          "text_translation_ru": "У меня есть котёнок.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yí ge",
+              "t": "bitta",
+              "tr": "один",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "xiǎo māo",
+              "t": "mushukcha",
+              "tr": "котёнок",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s2",
+          "text_original": "它叫小白。",
+          "pinyin": "Tā jiào Xiǎo Bái.",
+          "text_translation": "Uning ismi Xiaobay.",
+          "text_translation_ru": "Его зовут Сяобай.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "он/оно",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiào",
+              "t": "deb atalmoq",
+              "tr": "зовут",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s3",
+          "text_original": "小白很小，也很可爱。",
+          "pinyin": "Xiǎo Bái hěn xiǎo, yě hěn kě'ài.",
+          "text_translation": "Xiaobay juda kichkina, juda yoqimtoy ham.",
+          "text_translation_ru": "Сяобай очень маленький и очень милый.",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "xiǎo",
+              "t": "kichkina",
+              "tr": "маленький",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "kě'ài",
+              "t": "yoqimtoy",
+              "tr": "милый",
+              "h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec2",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s4",
+          "text_original": "今天是星期六。",
+          "pinyin": "Jīntiān shì xīngqīliù.",
+          "text_translation": "Bugun shanba kuni.",
+          "text_translation_ru": "Сегодня суббота.",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "xīngqīliù",
+              "t": "shanba",
+              "tr": "суббота",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s5",
+          "text_original": "我不上学。",
+          "pinyin": "Wǒ bú shàng xué.",
+          "text_translation": "Men maktabga bormayman.",
+          "text_translation_ru": "Я не иду в школу.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "shàng xué",
+              "t": "maktabga bormoq",
+              "tr": "ходить в школу",
+              "h": 1,
+              "l": 7
+            }
+          ]
+        },
+        {
+          "id": "s1-s6",
+          "text_original": "我想和小白一起玩儿。",
+          "pinyin": "Wǒ xiǎng hé Xiǎo Bái yìqǐ wánr.",
+          "text_translation": "Men Xiaobay bilan birga o'ynamoqchiman.",
+          "text_translation_ru": "Я хочу поиграть с Сяобаем.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hé",
+              "t": "bilan",
+              "tr": "с",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "yìqǐ",
+              "t": "birga",
+              "tr": "вместе",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "wánr",
+              "t": "o'ynamoq",
+              "tr": "играть",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s7",
+          "text_original": "可是，小白在哪儿？",
+          "pinyin": "Kěshì, Xiǎo Bái zài nǎr?",
+          "text_translation": "Lekin, Xiaobay qayerda?",
+          "text_translation_ru": "Но где же Сяобай?",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěshì",
+              "t": "lekin",
+              "tr": "но",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "zài",
+              "t": "...da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "nǎr",
+              "t": "qayerda",
+              "tr": "где",
+              "h": 1,
+              "l": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec3",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s8a",
+          "text_original": "我去客厅看看。",
+          "pinyin": "Wǒ qù kètīng kànkan.",
+          "text_translation": "Men mehmonxonaga qarayman.",
+          "text_translation_ru": "Я иду в гостиную.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "kètīng",
+              "t": "mehmonxona",
+              "tr": "гостиная",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "kànkan",
+              "t": "qaramoq",
+              "tr": "посмотреть",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s8b",
+          "text_original": "小白不在客厅。",
+          "pinyin": "Xiǎo Bái bú zài kètīng.",
+          "text_translation": "Xiaobay mehmonxonada emas.",
+          "text_translation_ru": "Сяобая нет в гостиной.",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "...da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "kètīng",
+              "t": "mehmonxona",
+              "tr": "гостиная",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s9a",
+          "text_original": "我去厨房看看。",
+          "pinyin": "Wǒ qù chúfáng kànkan.",
+          "text_translation": "Men oshxonaga qarayman.",
+          "text_translation_ru": "Я иду на кухню.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "chúfáng",
+              "t": "oshxona",
+              "tr": "кухня",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "kànkan",
+              "t": "qaramoq",
+              "tr": "посмотреть",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s9b",
+          "text_original": "小白也不在厨房。",
+          "pinyin": "Xiǎo Bái yě bú zài chúfáng.",
+          "text_translation": "Xiaobay oshxonada ham emas.",
+          "text_translation_ru": "Сяобая нет и на кухне.",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "zài",
+              "t": "...da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "chúfáng",
+              "t": "oshxona",
+              "tr": "кухня",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s10",
+          "text_original": "小白在哪儿呢？",
+          "pinyin": "Xiǎo Bái zài nǎr ne?",
+          "text_translation": "Xiaobay qayerda ekan?",
+          "text_translation_ru": "Где же Сяобай?",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "...da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "nǎr",
+              "t": "qayerda",
+              "tr": "где",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ne",
+              "t": "ekan",
+              "tr": "частица",
+              "h": 1,
+              "l": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec4",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s11",
+          "text_original": "妈妈说：\"你看看你的房间。\"",
+          "pinyin": "Māma shuō: \"Nǐ kànkan nǐ de fángjiān.\"",
+          "text_translation": "Oyim aytdi: \"O'z xonangga qara.\"",
+          "text_translation_ru": "Мама сказала: «Посмотри в своей комнате.»",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "māma",
+              "t": "oyim",
+              "tr": "мама",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "сказать",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "kànkan",
+              "t": "qaramoq",
+              "tr": "посмотри",
+              "h": 1
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "притяжательная частица",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                10,
+                12
+              ],
+              "p": "fángjiān",
+              "t": "xona",
+              "tr": "комната",
+              "h": 1,
+              "l": 8
+            }
+          ]
+        },
+        {
+          "id": "s1-s12",
+          "text_original": "我去我的房间。",
+          "pinyin": "Wǒ qù wǒ de fángjiān.",
+          "text_translation": "Men xonamga bordim.",
+          "text_translation_ru": "Я иду в свою комнату.",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "притяжательная частица",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "fángjiān",
+              "t": "xona",
+              "tr": "комната",
+              "h": 1,
+              "l": 8
+            }
+          ]
+        },
+        {
+          "id": "s1-s13",
+          "text_original": "小白在我的床上睡觉呢！",
+          "pinyin": "Xiǎo Bái zài wǒ de chuáng shàng shuìjiào ne!",
+          "text_translation": "Xiaobay mening karavotimda uxlab yotibdi!",
+          "text_translation_ru": "Сяобай спит на моей кровати!",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "...da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "притяжательная частица",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "chuáng shàng",
+              "t": "karavotda",
+              "tr": "на кровати",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "shuìjiào",
+              "t": "uxlamoq",
+              "tr": "спать",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "ne",
+              "t": "(yukl.)",
+              "tr": "частица",
+              "h": 1,
+              "l": 1
+            }
+          ]
+        },
+        {
+          "id": "s1-s14",
+          "text_original": "哈哈，小白真可爱！",
+          "pinyin": "Hāhā, Xiǎo Bái zhēn kě'ài!",
+          "text_translation": "Haha, Xiaobay juda yoqimtoy!",
+          "text_translation_ru": "Ха-ха, Сяобай такой милый!",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hāhā",
+              "t": "haha",
+              "tr": "ха-ха",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiǎo bái",
+              "t": "Xiaobay",
+              "tr": "Сяобай",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "zhēn",
+              "t": "haqiqatan",
+              "tr": "действительно",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "kě'ài",
+              "t": "yoqimtoy",
+              "tr": "милый",
+              "h": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -55,6 +55,9 @@ export default async function LessonPage({ params }: PageParams) {
   // Get navigation links
   const nav = await getPageNavigation(lessonId, pageNumInt);
 
+  // Use guided flow for lesson 99 (original content prototype)
+  const isGuided = lessonId === '99';
+
   return (
     <ReaderLayout
       page={pageData}
@@ -63,6 +66,7 @@ export default async function LessonPage({ params }: PageParams) {
       prevNav={nav.prev}
       nextNav={nav.next}
       bookPath="/chinese/hsk1"
+      guided={isGuided}
     />
   );
 }

@@ -19,6 +19,28 @@
 import React, { useCallback, type MouseEvent } from 'react';
 import type { Sentence as SentenceType } from '../types';
 import type { Language } from '../types/ui-state';
+import { alignPinyinToText } from '../utils/rubyText';
+
+/** Renders Chinese text with character-aligned pinyin below using ruby tags */
+function RubyText({ text, pinyin, show }: { text: string; pinyin: string; show: boolean }) {
+  const pairs = alignPinyinToText(text, pinyin);
+  return (
+    <>
+      {pairs.map((p, i) =>
+        p.pinyin ? (
+          <ruby key={i}>
+            {p.char}
+            <rp>(</rp>
+            <rt style={show ? undefined : { visibility: 'hidden' }}>{p.pinyin}</rt>
+            <rp>)</rp>
+          </ruby>
+        ) : (
+          <span key={i}>{p.char}</span>
+        )
+      )}
+    </>
+  );
+}
 
 export interface SentenceProps {
   /** The sentence data */
@@ -41,6 +63,12 @@ export interface SentenceProps {
 
   /** Callback when audio button is clicked */
   onAudioClick: (sentenceId: string, audioUrl: string) => void;
+
+  /** Callback when sentence is tapped (for translation panel) */
+  onSentenceClick?: (sentenceId: string) => void;
+
+  /** Whether this sentence is currently active/selected */
+  isActive?: boolean;
 }
 
 export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
@@ -51,11 +79,17 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
   isAudioPlaying,
   isAudioLoading,
   onAudioClick,
+  onSentenceClick,
+  isActive,
 }) {
   // Get translation based on selected language
   const translation = language === 'ru' && sentence.text_translation_ru
     ? sentence.text_translation_ru
     : sentence.text_translation;
+
+  // Determine if pinyin should be shown
+  const showPinyin = sentence.section === 'objectives' ? false
+    : isPinyinVisible;
 
   // Check if sentence starts with a number pattern like (1), (2), etc.
   const isNumbered = /^[（(]\d+[)）]/.test(sentence.text_original);
@@ -72,6 +106,14 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
     },
     [sentence.id, sentence.audio_url, onAudioClick]
   );
+
+  const handleSentenceClick = useCallback(() => {
+    onSentenceClick?.(sentence.id);
+    // Auto-play audio when sentence is tapped (if it has audio)
+    if (sentence.audio_url) {
+      onAudioClick(sentence.id, sentence.audio_url);
+    }
+  }, [sentence.id, sentence.audio_url, onSentenceClick, onAudioClick]);
 
   // Image-only sentence (e.g., textbook table scan in grammar sections)
   if (sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '')) {
@@ -90,9 +132,10 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
   if (hasDialogueNumber) {
     return (
       <div
-        className={`sentence sentence--dialogue-grid${sentence.dialogueNumber ? ' sentence--dialogue-start' : ' sentence--dialogue-reply'}`}
+        className={`sentence sentence--dialogue-grid${sentence.dialogueNumber ? ' sentence--dialogue-start' : ' sentence--dialogue-reply'}${isActive ? ' sentence--active' : ''}`}
         data-sentence-id={sentence.id}
         data-section={sentence.section}
+        onClick={handleSentenceClick}
       >
         <span className="sentence__number">{sentence.dialogueNumber ? `(${sentence.dialogueNumber})` : ''}</span>
         <div className="sentence__dialogue-content">
@@ -100,13 +143,11 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
             <span className="sentence__speaker">{sentence.speaker}</span>
           )}
           <div className="sentence__text-block">
-            <span className="sentence__text">{sentence.text_original}</span>
-            {sentence.pinyin && isPinyinVisible && (
-              <div className="sentence__pinyin">{sentence.pinyin}</div>
-            )}
-            {isTranslationVisible && (
-              <div className="sentence__translation-inline">{translation}</div>
-            )}
+            <span className="sentence__text">
+              {sentence.pinyin ? (
+                <RubyText text={sentence.text_original} pinyin={sentence.pinyin} show={showPinyin} />
+              ) : sentence.text_original}
+            </span>
           </div>
         </div>
       </div>
@@ -115,10 +156,11 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
 
   return (
     <div
-      className={`sentence sentence--${sentence.section}${sentence.isIndented ? ' sentence--indented' : ''}`}
+      className={`sentence sentence--${sentence.section}${sentence.isIndented ? ' sentence--indented' : ''}${isActive ? ' sentence--active' : ''}`}
       data-sentence-id={sentence.id}
       data-section={sentence.section}
       data-numbered={isNumbered ? 'true' : undefined}
+      onClick={handleSentenceClick}
     >
       {/* Speaker label (for dialogue) */}
       {sentence.speaker && (
@@ -141,7 +183,11 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
         <div className="sentence__text-block">
           {/* First line: Chinese text + audio button */}
           <span className="sentence__text-row">
-            <span className="sentence__text">{sentence.text_original}</span>
+            <span className="sentence__text">
+              {sentence.pinyin && sentence.section !== 'objectives' ? (
+                <RubyText text={sentence.text_original} pinyin={sentence.pinyin} show={showPinyin} />
+              ) : sentence.text_original}
+            </span>
             {/* Audio button (only if audio_url exists) */}
             {sentence.audio_url && (
               <button
@@ -171,13 +217,8 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
             )}
           </span>
 
-          {/* Pinyin below the text (always visible for vocabulary, hidden for objectives, otherwise conditionally) */}
-          {sentence.pinyin && sentence.section !== 'objectives' && (sentence.section === 'vocabulary' || isPinyinVisible) && (
-            <span className="sentence__pinyin">{sentence.pinyin}</span>
-          )}
-
-          {/* Translation below pinyin (always visible for vocabulary, otherwise conditionally) */}
-          {(sentence.section === 'vocabulary' || isTranslationVisible) && (
+          {/* Translation (always visible inline for vocabulary/objectives only; others use panel) */}
+          {(sentence.section === 'vocabulary' || sentence.section === 'objectives') && (
             <span className="sentence__translation-inline">{translation}</span>
           )}
         </div>

@@ -1,0 +1,272 @@
+{
+  "id": "lesson99-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "l99p2-sec-vocab3",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar (3)",
+      "subheading_ru": "Новые слова (3)",
+      "sentences": [
+        {
+          "id": "l99p2-v3-s1",
+          "section": "vocabulary",
+          "text_original": "谢谢",
+          "text_translation": "rahmat",
+          "text_translation_ru": "спасибо",
+          "pinyin": "xièxie"
+        },
+        {
+          "id": "l99p2-v3-s2",
+          "section": "vocabulary",
+          "text_original": "不客气",
+          "text_translation": "arzimaydi; hech gap emas",
+          "text_translation_ru": "пожалуйста; не за что",
+          "pinyin": "bú kèqi"
+        },
+        {
+          "id": "l99p2-v3-s3",
+          "section": "vocabulary",
+          "text_original": "请",
+          "text_translation": "iltimos; marhamat",
+          "text_translation_ru": "пожалуйста (просьба); прошу",
+          "pinyin": "qǐng"
+        },
+        {
+          "id": "l99p2-v3-s4",
+          "section": "vocabulary",
+          "text_original": "认识",
+          "text_translation": "tanishmoq",
+          "text_translation_ru": "знакомиться; знать",
+          "pinyin": "rènshi"
+        },
+        {
+          "id": "l99p2-v3-s5",
+          "section": "vocabulary",
+          "text_original": "高兴",
+          "text_translation": "xursand; xursand bo'lmoq",
+          "text_translation_ru": "рад; радоваться",
+          "pinyin": "gāoxìng"
+        }
+      ]
+    },
+    {
+      "id": "l99p2-sec-grammar2",
+      "type": "grammar",
+      "heading": "小语讲堂",
+      "subheading": "Grammatika",
+      "subheading_ru": "Грамматика",
+      "sentences": [
+        {
+          "id": "l99p2-g2-s1",
+          "section": "grammar",
+          "text_original": "你 + verb + 吗？",
+          "text_translation": "\"吗\" so'roq yuklamasi gap oxiriga qo'shiladi. Ha/yo'q savoli hosil qiladi.",
+          "text_translation_ru": "Вопросительная частица «吗» ставится в конце предложения. Образует вопрос «да/нет»."
+        },
+        {
+          "id": "l99p2-g2-s2",
+          "section": "grammar",
+          "text_original": "(1) 你好吗？",
+          "text_translation": "Yaxshimisiz?",
+          "text_translation_ru": "Как вы поживаете?",
+          "pinyin": "Nǐ hǎo ma?"
+        },
+        {
+          "id": "l99p2-g2-s3",
+          "section": "grammar",
+          "text_original": "(2) 你叫Aziz吗？",
+          "text_translation": "Sening isming Azizmi?",
+          "text_translation_ru": "Тебя зовут Азиз?",
+          "pinyin": "Nǐ jiào Aziz ma?"
+        },
+        {
+          "id": "l99p2-g2-s4",
+          "section": "grammar",
+          "text_original": "(3) 你认识他吗？",
+          "text_translation": "Sen uni taniysanmi?",
+          "text_translation_ru": "Ты его знаешь?",
+          "pinyin": "Nǐ rènshi tā ma?"
+        }
+      ]
+    },
+    {
+      "id": "l99p2-sec-vocab4",
+      "type": "vocabulary",
+      "heading": "生词",
+      "subheading": "Yangi so'zlar (4)",
+      "subheading_ru": "Новые слова (4)",
+      "sentences": [
+        {
+          "id": "l99p2-v4-s1",
+          "section": "vocabulary",
+          "text_original": "他",
+          "text_translation": "u (erkak)",
+          "text_translation_ru": "он",
+          "pinyin": "tā"
+        },
+        {
+          "id": "l99p2-v4-s2",
+          "section": "vocabulary",
+          "text_original": "她",
+          "text_translation": "u (ayol)",
+          "text_translation_ru": "она",
+          "pinyin": "tā"
+        }
+      ]
+    },
+    {
+      "id": "l99p2-sec-text2",
+      "type": "text",
+      "heading": "课文 2",
+      "subheading": "Dialog 2",
+      "subheading_ru": "Диалог 2",
+      "context": "Darsdan keyin. Li ustoz Azizni sinfdoshi Xiaomei bilan tanishtirmoqda.",
+      "contextTranslation": "",
+      "contextTranslation_ru": "После урока. Учитель Ли знакомит Азиза с одноклассницей Сяомэй.",
+      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
+      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
+      "image_url": "https://placehold.co/600x400/fef0e8/dd6b20?text=Li+laoshi+introduces\\nAziz+and+Xiaomei",
+      "sentences": [
+        {
+          "id": "l99p2-t2-s1",
+          "section": "text",
+          "text_original": "Aziz，请认识一下，她叫小美。",
+          "text_translation": "Aziz, tanishing, uning ismi Xiaomei.",
+          "text_translation_ru": "Азиз, познакомься, её зовут Сяомэй.",
+          "pinyin": "Aziz, qǐng rènshi yíxià, tā jiào Xiǎoměi.",
+          "speaker": "李老师",
+          "speakerName": "Lǐ lǎoshī"
+        },
+        {
+          "id": "l99p2-t2-s2",
+          "section": "text",
+          "text_original": "你好，小美！认识你很高兴。",
+          "text_translation": "Salom, Xiaomei! Tanishganimdan xursandman.",
+          "text_translation_ru": "Привет, Сяомэй! Рад познакомиться.",
+          "pinyin": "Nǐ hǎo, Xiǎoměi! Rènshi nǐ hěn gāoxìng.",
+          "speaker": "Aziz",
+          "speakerName": "Aziz"
+        },
+        {
+          "id": "l99p2-t2-s3",
+          "section": "text",
+          "text_original": "你好，Aziz！我也很高兴。",
+          "text_translation": "Salom, Aziz! Men ham xursandman.",
+          "text_translation_ru": "Привет, Азиз! Я тоже очень рада.",
+          "pinyin": "Nǐ hǎo, Aziz! Wǒ yě hěn gāoxìng.",
+          "speaker": "小美",
+          "speakerName": "Xiǎoměi"
+        },
+        {
+          "id": "l99p2-t2-s4",
+          "section": "text",
+          "text_original": "谢谢老师！",
+          "text_translation": "Rahmat, ustoz!",
+          "text_translation_ru": "Спасибо, учитель!",
+          "pinyin": "Xièxie lǎoshī!",
+          "speaker": "Aziz",
+          "speakerName": "Aziz"
+        },
+        {
+          "id": "l99p2-t2-s5",
+          "section": "text",
+          "text_original": "不客气！",
+          "text_translation": "Arzimaydi!",
+          "text_translation_ru": "Не за что!",
+          "pinyin": "Bú kèqi!",
+          "speaker": "李老师",
+          "speakerName": "Lǐ lǎoshī"
+        }
+      ]
+    },
+    {
+      "id": "l99p2-sec-exercise2",
+      "type": "fillblank",
+      "heading": "选词填空",
+      "subheading": "Bo'sh joyni to'ldiring",
+      "subheading_ru": "Заполните пропуски",
+      "sentences": [],
+      "fillBlankData": {
+        "options": [
+          {"id": "A", "label": "A", "word": "认识", "pinyin": "rènshi"},
+          {"id": "B", "label": "B", "word": "谢谢", "pinyin": "xièxie"},
+          {"id": "C", "label": "C", "word": "高兴", "pinyin": "gāoxìng"},
+          {"id": "D", "label": "D", "word": "吗", "pinyin": "ma"}
+        ],
+        "sentences": [
+          {
+            "id": "l99p2-fb-s1",
+            "number": 1,
+            "parts": [
+              {"type": "text", "content": "你好"},
+              {"type": "blank"},
+              {"type": "text", "content": "？"}
+            ],
+            "correctOptionId": "D"
+          },
+          {
+            "id": "l99p2-fb-s2",
+            "number": 2,
+            "parts": [
+              {"type": "blank"},
+              {"type": "text", "content": "你很"},
+              {"type": "blank"},
+              {"type": "text", "content": "。"}
+            ],
+            "correctOptionId": "A",
+            "correctOptionIds": ["A", "C"]
+          },
+          {
+            "id": "l99p2-fb-s3",
+            "number": 3,
+            "parts": [
+              {"type": "blank"},
+              {"type": "text", "content": "老师！"}
+            ],
+            "correctOptionId": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l99p2-sec-mc1",
+      "type": "multiplechoice",
+      "heading": "选择正确答案",
+      "subheading": "To'g'ri javobni tanlang",
+      "subheading_ru": "Выберите правильный ответ",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "l99p2-mc-q1",
+            "number": 1,
+            "parts": [
+              {"type": "text", "content": "\"你好吗？\" nimani bildiradi? "}
+            ],
+            "options": [
+              {"label": "A", "word": "Sening isming nima?"},
+              {"label": "B", "word": "Yaxshimisiz?"},
+              {"label": "C", "word": "U kim?"}
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "l99p2-mc-q2",
+            "number": 2,
+            "parts": [
+              {"type": "text", "content": "Kimdir \"谢谢\" desa, nima deb javob berasiz? "}
+            ],
+            "options": [
+              {"label": "A", "word": "你好"},
+              {"label": "B", "word": "再见"},
+              {"label": "C", "word": "不客气"}
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      }
+    }
+  ]
+}

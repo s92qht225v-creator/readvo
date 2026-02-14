@@ -29,7 +29,7 @@ export function PageReader({ page }: PageReaderProps) {
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
 
   // Translation visibility: global toggle for all sentences
-  const [isTranslationVisible, setIsTranslationVisible] = useState(true);
+  const [isTranslationVisible, setIsTranslationVisible] = useState(false);
 
   // Font size: percentage scale (100 = default, range 80-150)
   const [fontSize, setFontSize] = useState(100);
