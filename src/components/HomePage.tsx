@@ -37,6 +37,7 @@ const t = {
     footerText: 'ReadVo — Interaktiv til darsliklari',
     chinese: 'Xitoy tili',
     english: 'Ingliz tili',
+    tagline: 'Interaktiv til darsliklari',
   },
   ru: {
     login: 'Войти через Google',
@@ -69,10 +70,11 @@ const t = {
     footerText: 'ReadVo — Интерактивные учебники языков',
     chinese: 'Китайский язык',
     english: 'Английский язык',
+    tagline: 'Интерактивные учебники языков',
   },
 };
 
-const languages = [
+const languageList = [
   { id: 'chinese', nameOriginal: '中文', flag: '🇨🇳' },
   { id: 'english', nameOriginal: 'English', flag: '🇬🇧' },
 ];
@@ -88,11 +90,69 @@ function GoogleIcon() {
   );
 }
 
-export function HomePage() {
-  const [language, toggleLanguage] = useLanguage();
-  const { user, isLoading, loginWithGoogle, logout } = useAuth();
-  const s = t[language];
+/** Logged-in view: constrained width, hero + language cards */
+function AppHome({ language, toggleLanguage, user, logout, s }: {
+  language: string;
+  toggleLanguage: () => void;
+  user: { name: string; avatar_url?: string };
+  logout: () => Promise<void>;
+  s: typeof t.uz;
+}) {
+  return (
+    <main className="home">
+      <header className="home__hero">
+        <div className="home__hero-top">
+          <button className="home__user-btn" onClick={logout} type="button">
+            {user.avatar_url && (
+              <img src={user.avatar_url} alt="" className="home__user-avatar" />
+            )}
+            <span className="home__user-name">{user.name}</span>
+          </button>
+          <button className="home__lang-btn" onClick={toggleLanguage} type="button">
+            {language === 'uz' ? 'RU' : 'UZ'}
+          </button>
+        </div>
+        <h1 className="home__logo">
+          <span className="home__logo-icon">📖</span>
+          ReadVo
+        </h1>
+        <p className="home__tagline">{s.tagline}</p>
+      </header>
 
+      <section className="home__content">
+        <h2 className="home__section-title">{s.languages}</h2>
+        <div className="home__languages">
+          {languageList.map((lang) => (
+            <Link key={lang.id} href={`/${lang.id}`} className="language-group language-group--link">
+              <div className="language-group__header">
+                <span className="language-group__flag">{lang.flag}</span>
+                <div className="language-group__title">
+                  <h3 className="language-group__name">
+                    {s[lang.id as keyof typeof s]}
+                  </h3>
+                  <span className="language-group__original">{lang.nameOriginal}</span>
+                </div>
+              </div>
+              <span className="language-group__arrow">→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <footer className="home__footer">
+        <p>{s.footerText}</p>
+      </footer>
+    </main>
+  );
+}
+
+/** Landing page: full-width, marketing sections */
+function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
+  language: string;
+  toggleLanguage: () => void;
+  loginWithGoogle: () => Promise<void>;
+  s: typeof t.uz;
+}) {
   return (
     <div className="landing">
       {/* Nav */}
@@ -103,19 +163,10 @@ export function HomePage() {
             <button className="landing__lang-btn" onClick={toggleLanguage} type="button">
               {language === 'uz' ? 'RU' : 'UZ'}
             </button>
-            {!isLoading && user ? (
-              <button className="landing__user-btn" onClick={logout} type="button">
-                {user.avatar_url && (
-                  <img src={user.avatar_url} alt="" className="landing__user-avatar" />
-                )}
-                <span className="landing__user-name">{user.name}</span>
-              </button>
-            ) : !isLoading ? (
-              <button className="landing__login-btn" onClick={loginWithGoogle} type="button">
-                <GoogleIcon />
-                {s.login}
-              </button>
-            ) : null}
+            <button className="landing__login-btn" onClick={loginWithGoogle} type="button">
+              <GoogleIcon />
+              {s.login}
+            </button>
           </div>
         </div>
       </nav>
@@ -124,12 +175,10 @@ export function HomePage() {
       <section className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
         <p className="landing__hero-subtitle">{s.heroSubtitle}</p>
-        {!isLoading && !user && (
-          <button className="landing__hero-cta" onClick={loginWithGoogle} type="button">
-            <GoogleIcon />
-            {s.startFree}
-          </button>
-        )}
+        <button className="landing__hero-cta" onClick={loginWithGoogle} type="button">
+          <GoogleIcon />
+          {s.startFree}
+        </button>
         <div className="landing__hero-visual">
           <div className="landing__demo-card">
             <div className="landing__demo-line">
@@ -145,7 +194,7 @@ export function HomePage() {
       <section className="landing__section">
         <h2 className="landing__section-title">{s.languages}</h2>
         <div className="landing__languages">
-          {languages.map((lang) => (
+          {languageList.map((lang) => (
             <Link key={lang.id} href={`/${lang.id}`} className="landing__lang-card">
               <span className="landing__lang-flag">{lang.flag}</span>
               <span className="landing__lang-name">
@@ -204,16 +253,14 @@ export function HomePage() {
       </section>
 
       {/* CTA */}
-      {!isLoading && !user && (
-        <section className="landing__cta">
-          <h2 className="landing__cta-title">{s.ctaTitle}</h2>
-          <p className="landing__cta-subtitle">{s.ctaSubtitle}</p>
-          <button className="landing__cta-btn" onClick={loginWithGoogle} type="button">
-            <GoogleIcon />
-            {s.startFree}
-          </button>
-        </section>
-      )}
+      <section className="landing__cta">
+        <h2 className="landing__cta-title">{s.ctaTitle}</h2>
+        <p className="landing__cta-subtitle">{s.ctaSubtitle}</p>
+        <button className="landing__cta-btn" onClick={loginWithGoogle} type="button">
+          <GoogleIcon />
+          {s.startFree}
+        </button>
+      </section>
 
       {/* Footer */}
       <footer className="landing__footer">
@@ -221,4 +268,18 @@ export function HomePage() {
       </footer>
     </div>
   );
+}
+
+export function HomePage() {
+  const [language, toggleLanguage] = useLanguage();
+  const { user, isLoading, loginWithGoogle, logout } = useAuth();
+  const s = t[language];
+
+  if (isLoading) return null;
+
+  if (user) {
+    return <AppHome language={language} toggleLanguage={toggleLanguage} user={user} logout={logout} s={s} />;
+  }
+
+  return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithGoogle={loginWithGoogle} s={s} />;
 }
