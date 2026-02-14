@@ -20,18 +20,23 @@ interface BookPageProps {
 
 export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
   const [language, toggleLanguage] = useLanguage();
-  const { user } = useAuth();
+  const { user, getAccessToken } = useAuth();
   const [progress, setProgress] = useState<ProgressEntry[]>([]);
   const hasContent = lessons.length > 0;
 
   // Fetch progress when user is logged in
   useEffect(() => {
     if (!user) return;
-    fetch('/api/progress')
-      .then((res) => res.json())
-      .then((data) => setProgress(data.progress || []))
-      .catch(() => {});
-  }, [user]);
+    getAccessToken().then((token) => {
+      if (!token) return;
+      fetch('/api/progress', {
+        headers: { 'Authorization': `Bearer ${token}` },
+      })
+        .then((res) => res.json())
+        .then((data) => setProgress(data.progress || []))
+        .catch(() => {});
+    });
+  }, [user, getAccessToken]);
 
   const isPageCompleted = (lessonId: string, pageNum: number) =>
     progress.some((p) => p.lesson_id === lessonId && p.page_num === String(pageNum) && p.completed);

@@ -59,15 +59,21 @@ export function ReaderLayout({
   const [language, toggleLanguage] = useLanguage();
 
   // Auth - save progress when page is visited
-  const { user } = useAuth();
+  const { user, getAccessToken } = useAuth();
   useEffect(() => {
     if (!user) return;
-    fetch('/api/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lesson_id: lessonId, page_num: pageNum }),
-    }).catch(() => {});
-  }, [user, lessonId, pageNum]);
+    getAccessToken().then((token) => {
+      if (!token) return;
+      fetch('/api/progress', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ lesson_id: lessonId, page_num: pageNum }),
+      }).catch(() => {});
+    });
+  }, [user, lessonId, pageNum, getAccessToken]);
 
   // Active sentence for translation panel
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
