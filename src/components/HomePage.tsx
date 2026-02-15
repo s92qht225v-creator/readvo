@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
@@ -8,7 +8,7 @@ import { useAuth } from '../hooks/useAuth';
 const t = {
   uz: {
     login: 'Google orqali kirish',
-    heroTitle: 'Interaktiv kitoblardan til o\'rganing',
+    heroTitle: 'Chet tillarini interaktiv hikoyalar bilan o\'rganing',
     heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
     languages: 'Tillarni tanlang',
@@ -32,6 +32,10 @@ const t = {
     feat5Desc: 'Qaysi darslarni tugatganingizni kuzatib boring',
     feat6Title: 'Ikki tilli',
     feat6Desc: 'O\'zbek va rus tillarida tarjimalar mavjud',
+    showcaseTitle: 'Bosib tarjima qiling',
+    showcaseSubtitle: 'Matnda istalgan so\'zni bosing va tarjimasini ko\'ring',
+    showcaseLabel1: 'Flashkartalar bilan mashq qiling',
+    showcaseLabel2: 'Kontekstda tushunish',
     ctaTitle: 'Hoziroq boshlang',
     ctaSubtitle: 'Bepul ro\'yxatdan o\'ting va o\'qishni boshlang',
     footerText: 'ReadVo — Interaktiv til darsliklari',
@@ -41,7 +45,7 @@ const t = {
   },
   ru: {
     login: 'Войти через Google',
-    heroTitle: 'Учите языки по интерактивным учебникам',
+    heroTitle: 'Учите иностранные языки через интерактивные истории',
     heroSubtitle: 'Эффективно учите китайский с пиньинь, аудио, переводом и карточками',
     startFree: 'Начать бесплатно',
     languages: 'Выберите язык',
@@ -65,6 +69,10 @@ const t = {
     feat5Desc: 'Следите за пройденными уроками',
     feat6Title: 'Двуязычный',
     feat6Desc: 'Переводы на узбекском и русском языках',
+    showcaseTitle: 'Нажмите для перевода',
+    showcaseSubtitle: 'Просто нажмите на любое слово в тексте, чтобы увидеть перевод',
+    showcaseLabel1: 'Практикуйте с карточками',
+    showcaseLabel2: 'Понимайте в контексте',
     ctaTitle: 'Начните сейчас',
     ctaSubtitle: 'Зарегистрируйтесь бесплатно и начните читать',
     footerText: 'ReadVo — Интерактивные учебники языков',
@@ -153,32 +161,54 @@ function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
   loginWithGoogle: () => Promise<void>;
   s: typeof t.uz;
 }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="landing">
       {/* Nav */}
       <nav className="landing__nav">
         <div className="landing__nav-inner">
           <span className="landing__nav-logo">📖 ReadVo</span>
+          <div className="landing__nav-links">
+            <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>
+            <a href="#features" className="landing__nav-link">{s.features}</a>
+            <a href="#how" className="landing__nav-link">{s.howItWorks}</a>
+          </div>
           <div className="landing__nav-right">
             <button className="landing__lang-btn" onClick={toggleLanguage} type="button">
               {language === 'uz' ? 'RU' : 'UZ'}
             </button>
             <button className="landing__login-btn" onClick={loginWithGoogle} type="button">
-              <GoogleIcon />
               {s.login}
+            </button>
+            <button
+              className="landing__hamburger"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              type="button"
+              aria-label="Menu"
+            >
+              {mobileMenuOpen ? '✕' : <><span /><span /><span /></>}
             </button>
           </div>
         </div>
+        {mobileMenuOpen && (
+          <div className="landing__mobile-menu">
+            <a href="#hero" className="landing__mobile-link landing__mobile-link--active" onClick={() => setMobileMenuOpen(false)}>
+              {language === 'ru' ? 'Главная' : 'Bosh sahifa'}
+            </a>
+            <a href="#features" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
+              {s.features}
+            </a>
+            <a href="#how" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
+              {s.howItWorks}
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* Hero */}
-      <section className="landing__hero">
+      <section id="hero" className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
-        <p className="landing__hero-subtitle">{s.heroSubtitle}</p>
-        <button className="landing__hero-cta" onClick={loginWithGoogle} type="button">
-          <GoogleIcon />
-          {s.startFree}
-        </button>
         <div className="landing__hero-visual">
           <div className="landing__demo-card">
             <div className="landing__demo-line">
@@ -187,27 +217,47 @@ function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
             <div className="landing__demo-line landing__demo-line--pinyin">Nǐ hǎo, wǒ jiào Xiǎoyǔ.</div>
             <div className="landing__demo-line landing__demo-line--translation">Salom, mening ismim Xiaoyu.</div>
           </div>
+          <div className="landing__demo-card landing__demo-card--second">
+            <div className="landing__demo-line">
+              <span className="landing__demo-chinese">我家有四口人：爸爸、妈妈、姐姐和我。</span>
+            </div>
+            <div className="landing__demo-line landing__demo-line--pinyin">Wǒ jiā yǒu sì kǒu rén: bàba, māma, jiějie hé wǒ.</div>
+            <div className="landing__demo-line landing__demo-line--translation">В моей семье четыре человека: папа, мама, старшая сестра и я.</div>
+          </div>
+          <div className="landing__demo-card landing__demo-card--third">
+            <div className="landing__demo-line landing__demo-line--large">
+              我今天想去<span className="landing__demo-highlight"><span className="landing__demo-tooltip">oila</span>家<svg className="landing__demo-cursor" viewBox="0 0 32 32" fill="white" stroke="#333" strokeWidth="1"><path d="M10 2v18l4.5-4.5L18 24l4-2-3.5-8.5H26L10 2z"/></svg></span>里看书。
+            </div>
+          </div>
         </div>
-      </section>
-
-      {/* Languages */}
-      <section className="landing__section">
-        <h2 className="landing__section-title">{s.languages}</h2>
-        <div className="landing__languages">
-          {languageList.map((lang) => (
-            <Link key={lang.id} href={`/${lang.id}`} className="landing__lang-card">
-              <span className="landing__lang-flag">{lang.flag}</span>
-              <span className="landing__lang-name">
-                {s[lang.id as keyof typeof s]}
-              </span>
-              <span className="landing__lang-original">{lang.nameOriginal}</span>
-            </Link>
-          ))}
+        <div className="landing__hero-langs">
+          <div className="landing__hero-langs-inner">
+            <div className="landing__hero-langs-row">
+              {[
+                { code: 'uz', name: "O'zbek" },
+                { code: 'ru', name: 'Русский' },
+                { code: 'kz', name: 'Қазақ' },
+                { code: 'kg', name: 'Кыргыз' },
+              ].map((lang) => (
+                <div key={lang.name} className="landing__hero-lang">
+                  <img
+                    src={`https://flagcdn.com/w160/${lang.code}.png`}
+                    alt={lang.name}
+                    className="landing__hero-lang-flag"
+                  />
+                  <span className="landing__hero-lang-name">{lang.name}</span>
+                </div>
+              ))}
+            </div>
+            <p className="landing__hero-langs-more">
+              {language === 'ru' ? '+ Тоҷик, скоро...' : "+ Tojik, tez kunda..."}
+            </p>
+          </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="landing__section landing__section--gray">
+      <section id="how" className="landing__section landing__section--gray">
         <h2 className="landing__section-title">{s.howItWorks}</h2>
         <div className="landing__steps">
           <div className="landing__step">
@@ -232,7 +282,7 @@ function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
       </section>
 
       {/* Features */}
-      <section className="landing__section">
+      <section id="features" className="landing__section">
         <h2 className="landing__section-title">{s.features}</h2>
         <div className="landing__features">
           {[
@@ -275,7 +325,11 @@ export function HomePage() {
   const { user, isLoading, loginWithGoogle, logout } = useAuth();
   const s = t[language];
 
-  if (isLoading) return null;
+  if (isLoading) return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <p style={{ color: '#6b7280', fontSize: '1.1rem' }}>Loading...</p>
+    </div>
+  );
 
   if (user) {
     return <AppHome language={language} toggleLanguage={toggleLanguage} user={user} logout={logout} s={s} />;
