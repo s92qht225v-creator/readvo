@@ -5,7 +5,7 @@
     {
       "id": "l99p2-sec-vocab3",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar (3)",
       "subheading_ru": "Новые слова (3)",
       "sentences": [
@@ -54,7 +54,7 @@
     {
       "id": "l99p2-sec-grammar2",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Grammatika",
       "subheading_ru": "Грамматика",
       "sentences": [
@@ -94,7 +94,7 @@
     {
       "id": "l99p2-sec-vocab4",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar (4)",
       "subheading_ru": "Новые слова (4)",
       "sentences": [
@@ -119,7 +119,7 @@
     {
       "id": "l99p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Dialog 2",
       "subheading_ru": "Диалог 2",
       "context": "Darsdan keyin. Li ustoz Azizni sinfdoshi Xiaomei bilan tanishtirmoqda.",
@@ -184,25 +184,53 @@
     {
       "id": "l99p2-sec-exercise2",
       "type": "fillblank",
-      "heading": "选词填空",
+      "heading": "",
       "subheading": "Bo'sh joyni to'ldiring",
       "subheading_ru": "Заполните пропуски",
       "sentences": [],
       "fillBlankData": {
         "options": [
-          {"id": "A", "label": "A", "word": "认识", "pinyin": "rènshi"},
-          {"id": "B", "label": "B", "word": "谢谢", "pinyin": "xièxie"},
-          {"id": "C", "label": "C", "word": "高兴", "pinyin": "gāoxìng"},
-          {"id": "D", "label": "D", "word": "吗", "pinyin": "ma"}
+          {
+            "id": "A",
+            "label": "A",
+            "word": "认识",
+            "pinyin": "rènshi"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "谢谢",
+            "pinyin": "xièxie"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "高兴",
+            "pinyin": "gāoxìng"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "吗",
+            "pinyin": "ma"
+          }
         ],
         "sentences": [
           {
             "id": "l99p2-fb-s1",
             "number": 1,
             "parts": [
-              {"type": "text", "content": "你好"},
-              {"type": "blank"},
-              {"type": "text", "content": "？"}
+              {
+                "type": "text",
+                "content": "你好"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "correctOptionId": "D"
           },
@@ -210,20 +238,38 @@
             "id": "l99p2-fb-s2",
             "number": 2,
             "parts": [
-              {"type": "blank"},
-              {"type": "text", "content": "你很"},
-              {"type": "blank"},
-              {"type": "text", "content": "。"}
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "你很"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "correctOptionId": "A",
-            "correctOptionIds": ["A", "C"]
+            "correctOptionIds": [
+              "A",
+              "C"
+            ]
           },
           {
             "id": "l99p2-fb-s3",
             "number": 3,
             "parts": [
-              {"type": "blank"},
-              {"type": "text", "content": "老师！"}
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "老师！"
+              }
             ],
             "correctOptionId": "B"
           }
@@ -233,7 +279,7 @@
     {
       "id": "l99p2-sec-mc1",
       "type": "multiplechoice",
-      "heading": "选择正确答案",
+      "heading": "",
       "subheading": "To'g'ri javobni tanlang",
       "subheading_ru": "Выберите правильный ответ",
       "sentences": [],
@@ -243,12 +289,24 @@
             "id": "l99p2-mc-q1",
             "number": 1,
             "parts": [
-              {"type": "text", "content": "\"你好吗？\" nimani bildiradi? "}
+              {
+                "type": "text",
+                "content": "\"你好吗？\" nimani bildiradi? "
+              }
             ],
             "options": [
-              {"label": "A", "word": "Sening isming nima?"},
-              {"label": "B", "word": "Yaxshimisiz?"},
-              {"label": "C", "word": "U kim?"}
+              {
+                "label": "A",
+                "word": "Sening isming nima?"
+              },
+              {
+                "label": "B",
+                "word": "Yaxshimisiz?"
+              },
+              {
+                "label": "C",
+                "word": "U kim?"
+              }
             ],
             "correctOptionLabel": "B"
           },
@@ -256,12 +314,24 @@
             "id": "l99p2-mc-q2",
             "number": 2,
             "parts": [
-              {"type": "text", "content": "Kimdir \"谢谢\" desa, nima deb javob berasiz? "}
+              {
+                "type": "text",
+                "content": "Kimdir \"谢谢\" desa, nima deb javob berasiz? "
+              }
             ],
             "options": [
-              {"label": "A", "word": "你好"},
-              {"label": "B", "word": "再见"},
-              {"label": "C", "word": "不客气"}
+              {
+                "label": "A",
+                "word": "你好"
+              },
+              {
+                "label": "B",
+                "word": "再见"
+              },
+              {
+                "label": "C",
+                "word": "不客气"
+              }
             ],
             "correctOptionLabel": "C"
           }

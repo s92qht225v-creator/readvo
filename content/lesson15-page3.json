@@ -5,15 +5,15 @@
     {
       "id": "l15p3-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在教室外，白家月、安妮和王老师在谈论去北京旅游的事。",
       "contextPinyin": "Zài jiàoshì wài, Bái Jiāyuè, Ānnī hé Wáng lǎoshī zài tánlùn qù Běijīng lǚyóu de shì.",
       "contextTranslation": "Sinf tashqarisida Bai Jiyayue, Anni va Vang o'qituvchi Beyjinga sayohat qilish haqida gaplashmoqda.",
       "contextTranslation_ru": "За пределами класса Бай Цзяюэ, Анни и учитель Ван обсуждают поездку в Пекин.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l15p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Sizlarning samolyotingiz Beyjinga necha soat uchadi?",
           "text_translation_ru": "Сколько часов ваш самолёт летит до Пекина?",
           "pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí?",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue1.mp3"
         },
         {
           "id": "l15p3-t3-s2",
@@ -114,7 +115,8 @@
           "text_translation": "To'qqiz soat.",
           "text_translation_ru": "Девять часов.",
           "pinyin": "Jiǔ gè xiǎoshí.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue2.mp3"
         },
         {
           "id": "l15p3-t3-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Oilamdagilarning hammasi Beyjingda, yakshanba kuni opam ham bo'sh, u aeroportga sizlarni kutib olishga borishi mumkin. Sizlar bizning uyda ham yashashingiz mumkin.",
           "text_translation_ru": "Вся моя семья в Пекине, в воскресенье моя старшая сестра тоже свободна, она может встретить вас в аэропорту. Вы также можете остановиться у нас дома.",
           "pinyin": "Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen. Nǐmen yě kěyǐ zhù wǒ jiā.",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue3.mp3"
         },
         {
           "id": "l15p3-t3-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Biz yakshanba kuni ertalab soat sakkizda Dashin aeroportiga yetib boramiz, ertami?",
           "text_translation_ru": "Мы прилетаем в воскресенье утром в восемь часов в аэропорт Дасин, не рано ли?",
           "pinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo?",
-          "speaker": "安妮"
+          "speaker": "安妮",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue4.mp3"
         },
         {
           "id": "l15p3-t3-s5",
@@ -141,7 +145,8 @@
           "text_translation": "Erta emas.",
           "text_translation_ru": "Не рано.",
           "pinyin": "Bù zǎo.",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue5.mp3"
         },
         {
           "id": "l15p3-t3-s6",
@@ -150,15 +155,16 @@
           "text_translation": "Rahmat, o'qituvchi! Unday bo'lsa biz opangiz bilan Dashin aeroportida ko'rishamiz!",
           "text_translation_ru": "Спасибо, учитель! Тогда мы встретимся с вашей сестрой в аэропорту Дасин!",
           "pinyin": "Xièxie lǎoshī! Nà wǒmen hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l15p3-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l15p3-ex-s1",
@@ -181,7 +187,7 @@
     {
       "id": "l15p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%206.mp3",
@@ -194,7 +200,8 @@
           "text_translation_ru": "самолёт (сущ.)",
           "pinyin": "fēijī",
           "wordClass": "n.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/feiji.mp3"
         },
         {
           "id": "l15p3-v-s2",
@@ -204,7 +211,8 @@
           "text_translation_ru": "нужно; требуется (глагол)",
           "pinyin": "yào",
           "wordClass": "v.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/yao.mp3"
         },
         {
           "id": "l15p3-v-s3",
@@ -214,7 +222,8 @@
           "text_translation_ru": "час (сущ.)",
           "pinyin": "xiǎoshí",
           "wordClass": "n.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/xiaoshi.mp3"
         },
         {
           "id": "l15p3-v-s4",
@@ -224,7 +233,8 @@
           "text_translation_ru": "члены семьи (сущ.)",
           "pinyin": "jiārén",
           "wordClass": "n.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jiaren.mp3"
         },
         {
           "id": "l15p3-v-s5",
@@ -234,7 +244,8 @@
           "text_translation_ru": "время (сущ.)",
           "pinyin": "shíjiān",
           "wordClass": "n.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/shijian.mp3"
         },
         {
           "id": "l15p3-v-s6",
@@ -244,7 +255,8 @@
           "text_translation_ru": "аэропорт (сущ.)",
           "pinyin": "jīchǎng",
           "wordClass": "n.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jichang.mp3"
         },
         {
           "id": "l15p3-v-s7",
@@ -254,7 +266,8 @@
           "text_translation_ru": "встречать; принимать (глагол)",
           "pinyin": "jiē",
           "wordClass": "v.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jie.mp3"
         },
         {
           "id": "l15p3-v-s8",
@@ -264,7 +277,8 @@
           "text_translation_ru": "жить; проживать (глагол)",
           "pinyin": "zhù",
           "wordClass": "v.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zhu.mp3"
         },
         {
           "id": "l15p3-v-s9",
@@ -274,7 +288,8 @@
           "text_translation_ru": "рано (прил.)",
           "pinyin": "zǎo",
           "wordClass": "adj.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zao.mp3"
         },
         {
           "id": "l15p3-v-s10",
@@ -284,14 +299,15 @@
           "text_translation_ru": "тогда; в таком случае (союз)",
           "pinyin": "nà",
           "wordClass": "conj.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/na.mp3"
         }
       ]
     },
     {
       "id": "l15p3-sec-vocab-proper",
       "type": "vocabulary",
-      "heading": "专有名词",
+      "heading": "",
       "subheading": "Atoqli otlar",
       "subheading_ru": "Имена собственные",
       "sentences": [
@@ -302,18 +318,19 @@
           "text_translation": "Dashin aeroporti",
           "text_translation_ru": "Аэропорт Дасин",
           "pinyin": "Dàxīng Jīchǎng",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/daxingjichang.mp3"
         }
       ]
     },
     {
       "id": "l15p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -458,8 +475,8 @@
     {
       "id": "l15p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -562,11 +579,9 @@
     {
       "id": "l15p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
-      "instruction": "角色扮演。三个人分别扮演李文、陈天中和白家月，李文邀请陈天中和白家月做客，一起做中国菜。Rol o'yini. Uch kishi Li Wen, Chen Tianzhong va Bai Jiyayue rollarini o'ynaydi. Li Wen Chen Tianzhong va Bai Jiyayueni mehmon qilib chaqiradi, birga xitoy taomini tayyorlaydi.",
-      "instruction_ru": "角色扮演。三个人分别扮演李文、陈天中和白家月，李文邀请陈天中和白家月做客，一起做中国菜。Ролевая игра. Три человека играют роли Ли Вэня, Чэнь Тяньчжуна и Бай Цзяюэ. Ли Вэнь приглашает Чэнь Тяньчжуна и Бай Цзяюэ в гости, вместе готовить китайскую еду.",
       "sentences": [
         {
           "id": "l15p3-act-s1",
@@ -582,7 +597,7 @@
     {
       "id": "l15p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
+      "heading": "",
       "subheading": "Xiaoyudan bonus",
       "subheading_ru": "Бонус от Сяоюй",
       "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201%2015-1.mp4",

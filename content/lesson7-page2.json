@@ -5,7 +5,7 @@
     {
       "id": "l7p2-sec-text2-header",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在校园里，李文遇到白家月。",
@@ -17,8 +17,8 @@
     {
       "id": "l7p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l7p2-sec-text2-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-2-1.jpg",
       "sentences": [
         {
@@ -110,7 +110,8 @@
           "text_translation": "Tushdan keyin men kinoteatrga kino ko'rgani bormoqchiman, borasan(mi)?",
           "text_translation_ru": "Днём я хочу пойти в кинотеатр посмотреть фильм, пойдёшь?",
           "pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn diànyǐng, nǐ qù ma?",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue1.mp3"
         },
         {
           "id": "l7p2-t2-s2",
@@ -119,7 +120,8 @@
           "text_translation": "Men bormoqchi emasman, tushdan keyin hali ishim bor.",
           "text_translation_ru": "Не хочу идти, днём ещё есть дела.",
           "pinyin": "Wǒ bù xiǎng qù, xiàwǔ hái yǒu shì.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue2.mp3"
         },
         {
           "id": "l7p2-t2-s3",
@@ -128,7 +130,8 @@
           "text_translation": "Yaxshi. Ertaga-chi?",
           "text_translation_ru": "Хорошо. А завтра?",
           "pinyin": "Hǎo de. Míngtiān ne?",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue3.mp3"
         },
         {
           "id": "l7p2-t2-s4",
@@ -137,14 +140,15 @@
           "text_translation": "Ertaga tushdan keyin soat ikkida hali darsim bor, to'rt yarimda dars tugaydi.",
           "text_translation_ru": "Завтра днём у меня ещё занятия в два часа, заканчиваются в полпятого.",
           "pinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne, sì diǎn bàn xiàkè.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l7p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%204.mp3",
@@ -157,7 +161,8 @@
           "text_translation_ru": "кинотеатр (сущ.)",
           "pinyin": "diànyǐngyuàn",
           "wordClass": "n.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianyingyuan.mp3"
         },
         {
           "id": "l7p2-v-s2",
@@ -167,7 +172,8 @@
           "text_translation_ru": "смотреть; видеть; читать (глагол)",
           "pinyin": "kàn",
           "wordClass": "v.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/kan.mp3"
         },
         {
           "id": "l7p2-v-s3",
@@ -177,7 +183,8 @@
           "text_translation_ru": "фильм; кино (сущ.)",
           "pinyin": "diànyǐng",
           "wordClass": "n.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianying.mp3"
         },
         {
           "id": "l7p2-v-s4",
@@ -187,7 +194,8 @@
           "text_translation_ru": "дело; событие (сущ.)",
           "pinyin": "shì",
           "wordClass": "n.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shi.mp3"
         },
         {
           "id": "l7p2-v-s5",
@@ -197,7 +205,8 @@
           "text_translation_ru": "посещать урок (глагол)",
           "pinyin": "shàngkè",
           "wordClass": "v.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shangke.mp3"
         },
         {
           "id": "l7p2-v-s6",
@@ -207,7 +216,8 @@
           "text_translation_ru": "частица подтверждения (част.)",
           "pinyin": "ne",
           "wordClass": "part.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ne.mp3"
         },
         {
           "id": "l7p2-v-s7",
@@ -217,7 +227,8 @@
           "text_translation_ru": "половина (числ.)",
           "pinyin": "bàn",
           "wordClass": "num.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ban.mp3"
         },
         {
           "id": "l7p2-v-s8",
@@ -227,21 +238,21 @@
           "text_translation_ru": "закончить урок (глагол)",
           "pinyin": "xiàkè",
           "wordClass": "v.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/xiake.mp3"
         }
       ]
     },
     {
       "id": "l7p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l7p2-g3-s1",
           "section": "grammar",
-          "text_original": "副词、时间词语作状语的位置",
           "text_translation": "Ravish va vaqt so'zlarining hol bo'lagi sifatida o'rni",
           "text_translation_ru": "Позиция наречий и слов времени в роли обстоятельств",
           "grammarNumber": "3"
@@ -249,28 +260,30 @@
         {
           "id": "l7p2-g3-s2",
           "section": "grammar",
-          "text_original": "副词、时间词语作状语时，一般都要在动词或形容词前。",
           "text_translation": "Ravish va vaqt so'zlari hol bo'lagi bo'lganda, odatda fe'l yoki sifat oldida keladi.",
           "text_translation_ru": "Когда наречия и слова времени выступают в роли обстоятельств, они обычно ставятся перед глаголами или прилагательными."
         },
         {
           "id": "l7p2-g3-s3",
           "section": "grammar",
-          "text_original": "（1）我不想去。",
+          "text_original": "(1) 我不想去。",
+          "pinyin": "Wǒ bù xiǎng qù.",
           "text_translation": "(1) Men bormoqchi emasman.",
           "text_translation_ru": "(1) Я не хочу идти."
         },
         {
           "id": "l7p2-g3-s4",
           "section": "grammar",
-          "text_original": "（2）妹妹很高兴。",
+          "text_original": "(2) 妹妹很高兴。",
+          "pinyin": "Mèimei hěn gāoxìng.",
           "text_translation": "(2) Singlim juda xursand.",
           "text_translation_ru": "(2) Младшая сестра очень рада."
         },
         {
           "id": "l7p2-g3-s5",
           "section": "grammar",
-          "text_original": "（3）她上午十点半上课。",
+          "text_original": "(3) 她上午十点半上课。",
+          "pinyin": "Tā shàngwǔ shí diǎn bàn shàngkè.",
           "text_translation": "(3) U tushdan oldin soat o'n yarimda darsga boradi.",
           "text_translation_ru": "(3) Она идёт на занятия в половине одиннадцатого утра."
         }
@@ -279,8 +292,8 @@
     {
       "id": "l7p2-sec-fillblank",
       "type": "fillblank",
-      "instruction": "完成对话。Dialoglarni to'ldiring.",
-      "instruction_ru": "完成对话。Завершите диалоги.",
+      "instruction": "Dialoglarni to'ldiring.",
+      "instruction_ru": "Завершите диалоги.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -430,7 +443,6 @@
         {
           "id": "l7p2-g4-s1",
           "section": "grammar",
-          "text_original": "语气助词「呢」Modal Particle \"呢\" (ne) (2)",
           "text_translation": "Modal yuklamasi \"呢\" (2)",
           "text_translation_ru": "Модальная частица «呢» (2)",
           "grammarNumber": "4"
@@ -438,7 +450,6 @@
         {
           "id": "l7p2-g4-s2",
           "section": "grammar",
-          "text_original": "本课语气助词「呢」位于句子末尾，表示确认的事实。基本结构：……呢。",
           "text_translation": "Bu darsdagi modal yuklamasi \"呢\" gap oxirida keladi va tasdiqlangan faktni bildiradi. Asosiy tuzilma: ……呢.",
           "text_translation_ru": "Модальная частица «呢» в этом уроке ставится в конце предложения и указывает на подтверждённый факт. Основная структура: ……呢."
         },

@@ -82,24 +82,6 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
 
   return (
     <div className="reader__controls">
-      <button
-        className={`page__toggle-btn ${isPinyinVisible ? 'page__toggle-btn--active' : ''}`}
-        onClick={onPinyinToggle}
-        aria-pressed={isPinyinVisible}
-        title={isPinyinVisible ? text.pinyinHide : text.pinyinShow}
-        type="button"
-      >
-        <span className="page__toggle-label">{text.pinyinLabel}</span>
-      </button>
-      <button
-        className={`page__toggle-btn ${isTranslationVisible ? 'page__toggle-btn--active' : ''}`}
-        onClick={onTranslationToggle}
-        aria-pressed={isTranslationVisible}
-        title={isTranslationVisible ? text.translationHide : text.translationShow}
-        type="button"
-      >
-        <span className="page__toggle-label">{text.translationLabel}</span>
-      </button>
       {onFocusModeToggle && (
         <button
           className={`page__toggle-btn ${isFocusMode ? 'page__toggle-btn--active' : ''}`}
@@ -141,7 +123,6 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
           A+
         </button>
       </div>
-      <div className="page__number-badge">{pageNumber}</div>
     </div>
   );
 };

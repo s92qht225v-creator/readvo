@@ -5,15 +5,15 @@
     {
       "id": "l14p3-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在家里，刘明和王一雪在谈论孩子的升学情况。",
       "contextPinyin": "Zài jiālǐ, Liú Míng hé Wáng Yīxuě zài tánlùn háizi de shēngxué qíngkuàng.",
       "contextTranslation": "Uyda Liu Ming va Wang Yixue bolalarning maktabga kirishi haqida gaplashyapti.",
       "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ обсуждают поступление детей в школу.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l14p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-3-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Kelasi yili qizimiz o'rta maktabga boradi.",
           "text_translation_ru": "В следующем году дочь пойдёт в среднюю школу.",
           "pinyin": "Míngnián nǚ'ér shàng zhōngxué.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue1.mp3"
         },
         {
           "id": "l14p3-t3-s2",
@@ -114,7 +115,8 @@
           "text_translation": "To'g'ri. O'g'limiz ham boshlang'ich maktabga boradi.",
           "text_translation_ru": "Верно. И сын тоже пойдёт в начальную школу.",
           "pinyin": "Duì. Érzi yě shàng xiǎoxué le.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue2.mp3"
         },
         {
           "id": "l14p3-t3-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Bizning oilamizda o'rta maktab o'quvchisi paydo bo'ldi.",
           "text_translation_ru": "В нашей семье появился ученик средней школы.",
           "pinyin": "Wǒmen jiā yǒule yí gè zhōngxuéshēng.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue3.mp3"
         },
         {
           "id": "l14p3-t3-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Va yana bir boshlang'ich maktab o'quvchisi ham.",
           "text_translation_ru": "И ещё один ученик начальной школы.",
           "pinyin": "Hái yǒule yí gè xiǎoxuéshēng.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue4.mp3"
         },
         {
           "id": "l14p3-t3-s5",
@@ -141,7 +145,8 @@
           "text_translation": "Maktabga borgandan keyin, ularning hammasi band bo'ladi.",
           "text_translation_ru": "После начала учёбы они все станут занятыми.",
           "pinyin": "Shàngxué hòu, tāmen dōu máng le.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue5.mp3"
         },
         {
           "id": "l14p3-t3-s6",
@@ -150,7 +155,8 @@
           "text_translation": "Ha. Juda kech bo'ldi, uxlaylik.",
           "text_translation_ru": "Да. Уже слишком поздно, давай спать.",
           "pinyin": "Shì de. Tài wǎn le, shuìjiào ba.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -163,7 +169,7 @@
     {
       "id": "l14p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%206.mp3",
@@ -176,7 +182,8 @@
           "text_translation_ru": "следующий год (сущ.)",
           "pinyin": "míngnián",
           "wordClass": "n.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/mingnian.mp3"
         },
         {
           "id": "l14p3-v-s2",
@@ -186,7 +193,8 @@
           "text_translation_ru": "начинать; приступать (к чему-л. в определённое время) (глагол)",
           "pinyin": "shàng",
           "wordClass": "v.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/shang.mp3"
         },
         {
           "id": "l14p3-v-s3",
@@ -196,7 +204,8 @@
           "text_translation_ru": "средняя школа (сущ.)",
           "pinyin": "zhōngxué",
           "wordClass": "n.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/zhongxue.mp3"
         },
         {
           "id": "l14p3-v-s4",
@@ -206,7 +215,8 @@
           "text_translation_ru": "начальная школа (сущ.)",
           "pinyin": "xiǎoxué",
           "wordClass": "n.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/xiaoxue.mp3"
         },
         {
           "id": "l14p3-v-s5",
@@ -216,7 +226,8 @@
           "text_translation_ru": "ученик средней школы (сущ.)",
           "pinyin": "zhōngxuéshēng",
           "wordClass": "n.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/zhongxuesheng.mp3"
         },
         {
           "id": "l14p3-v-s6",
@@ -226,7 +237,8 @@
           "text_translation_ru": "ученик начальной школы (сущ.)",
           "pinyin": "xiǎoxuéshēng",
           "wordClass": "n.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/xiaoxuesheng.mp3"
         },
         {
           "id": "l14p3-v-s7",
@@ -236,7 +248,8 @@
           "text_translation_ru": "ходить в школу; начать учёбу (глагол)",
           "pinyin": "shàngxué",
           "wordClass": "v.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/shangxue.mp3"
         },
         {
           "id": "l14p3-v-s8",
@@ -246,7 +259,8 @@
           "text_translation_ru": "они (мест.)",
           "pinyin": "tāmen",
           "wordClass": "pron.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
         },
         {
           "id": "l14p3-v-s9",
@@ -256,7 +270,8 @@
           "text_translation_ru": "они (о женщинах) (мест.)",
           "pinyin": "tāmen",
           "wordClass": "pron.",
-          "vocabNumber": 24
+          "vocabNumber": 24,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
         },
         {
           "id": "l14p3-v-s10",
@@ -266,7 +281,8 @@
           "text_translation_ru": "они (о предметах) (мест.)",
           "pinyin": "tāmen",
           "wordClass": "pron.",
-          "vocabNumber": 25
+          "vocabNumber": 25,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
         },
         {
           "id": "l14p3-v-s11",
@@ -276,15 +292,16 @@
           "text_translation_ru": "поздно (прил.)",
           "pinyin": "wǎn",
           "wordClass": "adj.",
-          "vocabNumber": 26
+          "vocabNumber": 26,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/wan.mp3"
         }
       ]
     },
     {
       "id": "l14p3-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l14p3-ex-s1",
@@ -307,11 +324,11 @@
     {
       "id": "l14p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -460,8 +477,8 @@
     {
       "id": "l14p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -555,11 +572,9 @@
     {
       "id": "l14p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
-      "instruction": "双人活动。两人一组，说一说上星期六或星期日你都做了什么。Juft bo'lib ishlang. O'tgan shanba yoki yakshanba kuni nima qilganingizni aytib bering.",
-      "instruction_ru": "双人活动。两人一组，说一说上星期六或星期日你都做了什么。Работа в парах. Расскажите друг другу, что вы делали в прошлую субботу или воскресенье.",
       "sentences": [
         {
           "id": "l14p3-act-s1",

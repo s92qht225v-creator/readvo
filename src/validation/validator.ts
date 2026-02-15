@@ -209,8 +209,11 @@ export class PageValidator {
     // Image-only sentences (placeholders for textbook scans) skip text checks
     const isImageOnly = sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '');
 
+    // Grammar explanations may have only translation (no Chinese text)
+    const isGrammarExplanation = sentence.section === 'grammar' && !sentence.pinyin && sentence.text_translation;
+
     // Original text
-    if (!isImageOnly && (!sentence.text_original || sentence.text_original.trim() === '')) {
+    if (!isImageOnly && !isGrammarExplanation && (!sentence.text_original || sentence.text_original.trim() === '')) {
       this.addError(
         'EMPTY_ORIGINAL_TEXT',
         'Sentence has empty original text',

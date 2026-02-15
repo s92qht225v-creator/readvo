@@ -12,7 +12,7 @@
     {
       "id": "l2p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,16 +57,16 @@
     {
       "id": "l2p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在教室里，王一飞在认识学生。",
       "contextPinyin": "Zài jiàoshì lǐ, Wáng Yīfēi zài rènshi xuéshēng.",
       "contextTranslation": "Sinfda Wang Yifei talabalar bilan tanishmoqda.",
       "contextTranslation_ru": "В классе Ван Ифэй знакомится со студентами.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l2p1-text1.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-1-1.jpg",
       "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-1-2.jpg",
       "sentences": [
@@ -79,7 +79,7 @@
           "pinyin": "Qǐngwèn, nǐ jiào shénme míngzi?",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l2p1-t1-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/dialogue1.mp3"
         },
         {
           "id": "l2p1-t1-s2",
@@ -90,14 +90,14 @@
           "pinyin": "Wǒ jiào Chén Tiānzhōng.",
           "speaker": "陈天中",
           "speakerName": "Chén Tiānzhōng",
-          "audio_url": "/audio/l2p1-t1-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/dialogue2.mp3"
         }
       ]
     },
     {
       "id": "l2p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l2p1-vocab.mp3",
@@ -108,7 +108,8 @@
           "text_original": "请问",
           "text_translation": "kechirasiz (fe'l)",
           "text_translation_ru": "извините (глагол)",
-          "pinyin": "qǐngwèn"
+          "pinyin": "qǐngwèn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/qingwen.mp3"
         },
         {
           "id": "l2p1-v-s2",
@@ -116,7 +117,8 @@
           "text_original": "你",
           "text_translation": "sen (olmosh)",
           "text_translation_ru": "ты (местоимение)",
-          "pinyin": "nǐ"
+          "pinyin": "nǐ",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/ni.mp3"
         },
         {
           "id": "l2p1-v-s3",
@@ -124,7 +126,8 @@
           "text_original": "叫",
           "text_translation": "deb atalmoq, nomlamoq, chaqirmoq (fe'l)",
           "text_translation_ru": "называться,звать (глагол)",
-          "pinyin": "jiào"
+          "pinyin": "jiào",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/jiao.mp3"
         },
         {
           "id": "l2p1-v-s4",
@@ -132,7 +135,8 @@
           "text_original": "什么",
           "text_translation": "nima (olmosh)",
           "text_translation_ru": "что (местоимение)",
-          "pinyin": "shénme"
+          "pinyin": "shénme",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/shenme.mp3"
         },
         {
           "id": "l2p1-v-s5",
@@ -140,7 +144,8 @@
           "text_original": "名字",
           "text_translation": "ism (ot)",
           "text_translation_ru": "имя (сущ.)",
-          "pinyin": "míngzi"
+          "pinyin": "míngzi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/mingzi.mp3"
         },
         {
           "id": "l2p1-v-s6",
@@ -148,7 +153,8 @@
           "text_original": "我",
           "text_translation": "men (olmosh)",
           "text_translation_ru": "я (местоимение)",
-          "pinyin": "wǒ"
+          "pinyin": "wǒ",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/wo.mp3"
         }
       ]
     }

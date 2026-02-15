@@ -12,7 +12,7 @@
     {
       "id": "l4p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,11 +57,11 @@
     {
       "id": "l4p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "instruction": "So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки к словам.",
       "sentences": [],
       "matchingItems": [
         {
@@ -117,16 +117,16 @@
     {
       "id": "l4p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在家里，刘明和王一雪在聊天儿。",
       "contextPinyin": "Zài jiā lǐ, Liú Míng hé Wáng Yīxuě zài liáotiānr.",
       "contextTranslation": "Uyda Liu Ming va Wang Yixue suhbatlashmoqda.",
       "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ беседуют.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "TODO",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-1.jpg",
       "sentences": [
         {
@@ -137,7 +137,8 @@
           "text_translation_ru": "Ифэй занята?",
           "pinyin": "Yīfēi máng ma?",
           "speaker": "刘明",
-          "speakerName": "Liú Míng"
+          "speakerName": "Liú Míng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue1.mp3"
         },
         {
           "id": "l4p1-t1-s2",
@@ -147,7 +148,8 @@
           "text_translation_ru": "Она очень занята.",
           "pinyin": "Tā hěn máng.",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue2.mp3"
         },
         {
           "id": "l4p1-t1-s3",
@@ -157,7 +159,8 @@
           "text_translation_ru": "Сколько у неё учеников?",
           "pinyin": "Tā yǒu duōshao gè xuéshēng?",
           "speaker": "刘明",
-          "speakerName": "Liú Míng"
+          "speakerName": "Liú Míng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue3.mp3"
         },
         {
           "id": "l4p1-t1-s4",
@@ -167,14 +170,15 @@
           "text_translation_ru": "У неё двадцать учеников.",
           "pinyin": "Tā yǒu èrshí gè xuéshēng.",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l4p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "sentences": [
@@ -184,7 +188,8 @@
           "text_original": "有",
           "text_translation": "bor, ega bo'lmoq (fe'l)",
           "text_translation_ru": "иметь (гл.)",
-          "pinyin": "yǒu"
+          "pinyin": "yǒu",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/you.mp3"
         },
         {
           "id": "l4p1-v-s2",
@@ -192,7 +197,8 @@
           "text_original": "多少",
           "text_translation": "qancha, nechta (olmosh)",
           "text_translation_ru": "сколько (мест.)",
-          "pinyin": "duōshao"
+          "pinyin": "duōshao",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/duoshao.mp3"
         },
         {
           "id": "l4p1-v-s3",
@@ -200,21 +206,21 @@
           "text_original": "个",
           "text_translation": "dona (o'lchov so'zi)",
           "text_translation_ru": "штука (счётное слово)",
-          "pinyin": "gè"
+          "pinyin": "gè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/ge.mp3"
         }
       ]
     },
     {
       "id": "l4p1-sec-grammar",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l4p1-g-s1",
           "section": "grammar",
-          "text_original": "\"有\"字句（1）\"有\" Sentence (1)",
           "text_translation": "\"有\" gap tuzilmasi (1)",
           "text_translation_ru": "Предложение с «有» (1)",
           "grammarNumber": "1"
@@ -222,7 +228,6 @@
         {
           "id": "l4p1-g-s2",
           "section": "grammar",
-          "text_original": "本课\"有\"表示领有，否定形式为\"没/没有\"。",
           "text_translation": "Ushbu darsda \"有\" egalikni bildiradi. Uning inkor shakli \"没/没有\".",
           "text_translation_ru": "В этом уроке «有» обозначает обладание. Его отрицательная форма — «没/没有»."
         },
@@ -260,7 +265,6 @@
         {
           "id": "l4p1-g2-s1",
           "section": "grammar",
-          "text_original": "数字的表达",
           "text_translation": "Raqamlarni ifodalash",
           "text_translation_ru": "Выражение чисел",
           "grammarNumber": "2"
@@ -268,14 +272,12 @@
         {
           "id": "l4p1-g2-s2",
           "section": "grammar",
-          "text_original": "汉语中，数字有阿拉伯数字和汉字两种写法，例如\"1\"和\"一\"。",
           "text_translation": "Xitoy tilida raqamlar ikki xil yoziladi: arab raqamlari (masalan, \"1\") va xitoy belgilari (masalan, \"一\").",
           "text_translation_ru": "В китайском языке числа можно записать двумя способами: арабскими цифрами (например, «1») и китайскими иероглифами (например, «一»)."
         },
         {
           "id": "l4p1-g2-s3",
           "section": "grammar",
-          "text_original": "（1）0~99的写法和读法  The writing and pronunciation of numbers 0–99",
           "text_translation": "0~99 raqamlarining yozilishi va o'qilishi",
           "text_translation_ru": "Написание и произношение чисел 0–99"
         }
@@ -289,7 +291,6 @@
         {
           "id": "l4p1-g2b-s1",
           "section": "grammar",
-          "text_original": "（2）\"百\"以上（含）、\"万\"以内数字的写法与读法  The writing and pronunciation of numbers from 100 (inclusive) to 10,000",
           "text_translation": "100 (shu jumladan) dan 10 000 gacha bo'lgan raqamlarning yozilishi va o'qilishi",
           "text_translation_ru": "Написание и произношение чисел от 100 (включительно) до 10 000"
         }
@@ -303,14 +304,12 @@
         {
           "id": "l4p1-g2c-s1",
           "section": "grammar",
-          "text_original": "（3）\"2\"的写法和读法  The writing and pronunciation of \"2\"",
           "text_translation": "\"2\" raqamining yozilishi va o'qilishi",
           "text_translation_ru": "Написание и произношение «2»"
         },
         {
           "id": "l4p1-g2c-s2",
           "section": "grammar",
-          "text_original": "数字\"2\"写作、读作\"二（èr）\"或\"两（liǎng）\"。一般情况下，在序数词里用\"二（èr）\"，如\"第二\"；在量词前用\"两（liǎng）\"。",
           "text_translation": "\"2\" raqami \"二 (èr)\" yoki \"两 (liǎng)\" deb yoziladi va o'qiladi. Odatda tartib sonlarida \"二 (èr)\" ishlatiladi, masalan \"第二\"; o'lchov so'zlaridan oldin esa \"两 (liǎng)\" ishlatiladi.",
           "text_translation_ru": "Число «2» может записываться и произноситься как «二 (èr)» или «两 (liǎng)». Обычно «二 (èr)» используется в порядковых числительных, например «第二», а «两 (liǎng)» — перед счётными словами."
         }

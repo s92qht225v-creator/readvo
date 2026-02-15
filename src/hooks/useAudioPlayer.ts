@@ -157,81 +157,82 @@ export function useAudioPlayer(): AudioPlayerControls {
     (sentenceId: string, audioUrl: string) => {
       const audio = getGlobalAudio();
 
-      // CRITICAL: Stop any current playback first
-      // This is the concurrency guard
-      stop();
+      // Toggle behavior: clicking the same sentence stops it
+      const wasSameSentence = globalCurrentSentenceId === sentenceId;
 
-      // If clicking the same sentence that was playing, just stop (toggle behavior)
-      if (globalCurrentSentenceId === sentenceId) {
+      // CRITICAL: Stop any current playback first
+      audio.oncanplaythrough = null;
+      audio.onended = null;
+      audio.onerror = null;
+      audio.onpause = null;
+      audio.pause();
+
+      if (wasSameSentence) {
+        globalCurrentSentenceId = null;
+        notifyListeners({
+          playingSentenceId: null,
+          loadingSentenceId: null,
+          error: null,
+        });
         return;
       }
 
       // Update to loading state
       globalCurrentSentenceId = sentenceId;
-
-      const loadingState: AudioState = {
+      notifyListeners({
         playingSentenceId: null,
         loadingSentenceId: sentenceId,
         error: null,
-      };
-      notifyListeners(loadingState);
+      });
 
-      // Set up event handlers BEFORE setting src
-      audio.oncanplaythrough = () => {
-        // Double-check this is still the current sentence
-        // (guards against rapid clicks)
-        if (globalCurrentSentenceId !== sentenceId) {
-          return;
-        }
-
-        const playingState: AudioState = {
-          playingSentenceId: sentenceId,
-          loadingSentenceId: null,
-          error: null,
-        };
-        notifyListeners(playingState);
-
-        // Actually start playback
-        audio.play().catch((err) => {
-          console.error('Audio play failed:', err);
-          const errorState: AudioState = {
-            playingSentenceId: null,
+      // Set up event handlers
+      audio.onplaying = () => {
+        if (globalCurrentSentenceId === sentenceId) {
+          notifyListeners({
+            playingSentenceId: sentenceId,
             loadingSentenceId: null,
-            error: `Failed to play: ${err.message}`,
-          };
-          notifyListeners(errorState);
-        });
+            error: null,
+          });
+        }
       };
 
       audio.onended = () => {
         if (globalCurrentSentenceId === sentenceId) {
           globalCurrentSentenceId = null;
-          const endedState: AudioState = {
+          notifyListeners({
             playingSentenceId: null,
             loadingSentenceId: null,
             error: null,
-          };
-          notifyListeners(endedState);
+          });
         }
       };
 
       audio.onerror = () => {
         if (globalCurrentSentenceId === sentenceId) {
           globalCurrentSentenceId = null;
-          const errorState: AudioState = {
+          notifyListeners({
             playingSentenceId: null,
             loadingSentenceId: null,
             error: `Failed to load audio: ${audioUrl}`,
-          };
-          notifyListeners(errorState);
+          });
         }
       };
 
-      // Start loading
+      // Play directly in user gesture call stack to avoid browser tap sound
       audio.src = audioUrl;
-      audio.load();
+      audio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        if (globalCurrentSentenceId === sentenceId) {
+          globalCurrentSentenceId = null;
+          notifyListeners({
+            playingSentenceId: null,
+            loadingSentenceId: null,
+            error: `Failed to play: ${err.message}`,
+          });
+        }
+      });
     },
-    [stop]
+    []
   );
 
   /**

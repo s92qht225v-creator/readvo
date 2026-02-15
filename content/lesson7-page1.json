@@ -12,7 +12,7 @@
     {
       "id": "l7p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,11 +57,11 @@
     {
       "id": "l7p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的时间选择对应的图片。Quyidagi vaqtlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的时间选择对应的图片。Подберите картинки, соответствующие указанному времени.",
+      "instruction": "Quyidagi vaqtlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки, соответствующие указанному времени.",
       "sentences": [],
       "matchingItems": [
         {
@@ -117,16 +117,16 @@
     {
       "id": "l7p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "白家月和安妮在打电话。",
       "contextPinyin": "Bái Jiāyuè hé Ānnī zài dǎ diànhuà.",
       "contextTranslation": "Bai Jiyayue va Anni telefonda gaplashmoqda.",
       "contextTranslation_ru": "Бай Цзяюэ и Анни разговаривают по телефону.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-1-1.jpg",
       "sentences": [
         {
@@ -136,7 +136,8 @@
           "text_translation": "Hozir soat nechchi?",
           "text_translation_ru": "Сколько сейчас времени?",
           "pinyin": "Xiànzài jǐ diǎn?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue1.mp3"
         },
         {
           "id": "l7p1-t1-s2",
@@ -145,7 +146,8 @@
           "text_translation": "Ertalab soat sakkiz qirq.",
           "text_translation_ru": "Восемь сорок утра.",
           "pinyin": "Zǎoshang bā diǎn sìshí.",
-          "speaker": "安　妮"
+          "speaker": "安　妮",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue2.mp3"
         },
         {
           "id": "l7p1-t1-s3",
@@ -154,7 +156,8 @@
           "text_translation": "Men tushdan oldin soat o'n o'n minutda darsim bor.",
           "text_translation_ru": "У меня занятия в десять десять утра.",
           "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue3.mp3"
         },
         {
           "id": "l7p1-t1-s4",
@@ -163,14 +166,15 @@
           "text_translation": "Yaxshi, tushdan keyin soat ikkida ko'rishamiz.",
           "text_translation_ru": "Хорошо, давай встретимся в два часа дня.",
           "pinyin": "Hǎo de, wǒmen xiàwǔ liǎng diǎn jiàn ba.",
-          "speaker": "安　妮"
+          "speaker": "安　妮",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l7p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%202.mp3",
@@ -182,7 +186,8 @@
           "text_translation": "hozir",
           "text_translation_ru": "сейчас",
           "pinyin": "xiànzài",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xianzai.mp3"
         },
         {
           "id": "l7p1-v-s2",
@@ -191,7 +196,8 @@
           "text_translation": "soat (vaqt birligi)",
           "text_translation_ru": "час (единица времени)",
           "pinyin": "diǎn",
-          "wordClass": "m."
+          "wordClass": "m.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dian.mp3"
         },
         {
           "id": "l7p1-v-s3",
@@ -200,7 +206,8 @@
           "text_translation": "ertalab",
           "text_translation_ru": "утро (раннее)",
           "pinyin": "zǎoshang",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/zaoshang.mp3"
         },
         {
           "id": "l7p1-v-s4",
@@ -209,7 +216,8 @@
           "text_translation": "tushdan oldin",
           "text_translation_ru": "утро; до полудня",
           "pinyin": "shàngwǔ",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/shangwu.mp3"
         },
         {
           "id": "l7p1-v-s5",
@@ -218,7 +226,8 @@
           "text_translation": "minut",
           "text_translation_ru": "минута",
           "pinyin": "fēn",
-          "wordClass": "m."
+          "wordClass": "m.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/fen.mp3"
         },
         {
           "id": "l7p1-v-s6",
@@ -227,7 +236,8 @@
           "text_translation": "dars",
           "text_translation_ru": "урок; занятие",
           "pinyin": "kè",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ke.mp3"
         },
         {
           "id": "l7p1-v-s7",
@@ -236,7 +246,8 @@
           "text_translation": "tushdan keyin",
           "text_translation_ru": "после полудня; день",
           "pinyin": "xiàwǔ",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xiawu.mp3"
         },
         {
           "id": "l7p1-v-s8",
@@ -245,7 +256,8 @@
           "text_translation": "ko'rishmoq; uchrashmoq",
           "text_translation_ru": "видеть; встречать",
           "pinyin": "jiàn",
-          "wordClass": "v."
+          "wordClass": "v.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/jian.mp3"
         },
         {
           "id": "l7p1-v-s9",
@@ -254,21 +266,21 @@
           "text_translation": "taklif, maslahat bildiruvchi yuklamasi",
           "text_translation_ru": "частица для выражения предложений, советов, просьб",
           "pinyin": "ba",
-          "wordClass": "part."
+          "wordClass": "part.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ba.mp3"
         }
       ]
     },
     {
       "id": "l7p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l7p1-g1-s1",
           "section": "grammar",
-          "text_original": "时间的表达 Expressing Time (2)",
           "text_translation": "Vaqtni ifodalash (2)",
           "text_translation_ru": "Выражение времени (2)",
           "grammarNumber": "1"
@@ -276,14 +288,12 @@
         {
           "id": "l7p1-g1-s2",
           "section": "grammar",
-          "text_original": "(1) 使用\"点、分\"表达时间点",
           "text_translation": "\"点\" va \"分\" yordamida aniq vaqtni ifodalash",
           "text_translation_ru": "Использование «点» и «分» для выражения точного времени"
         },
         {
           "id": "l7p1-g1-s3",
           "section": "grammar",
-          "text_original": "\"点、分\"表示具体时间点，整点使用\"点\"，不是整点使用\"分\"，\"分\"可以省略。但是，当时间为\"十分\"时，不能省略\"分\"；当时间为十分以下时，要读出\"零\"。",
           "text_translation": "\"点\" va \"分\" aniq vaqtni bildiradi. Butun soatlar uchun \"点\" ishlatiladi, butun soat bo'lmasa \"分\" ishlatiladi. \"分\" ni tushirib qoldirish mumkin. Ammo vaqt \"十分\" bo'lganda \"分\" ni tushirib qoldirish mumkin emas; vaqt o'n minutdan kam bo'lganda \"零\" o'qilishi kerak.",
           "text_translation_ru": "«点» и «分» обозначают конкретное время. Для целых часов используется «点», для минут — «分». «分» можно опустить. Однако когда время ровно «十分», «分» нельзя опускать; когда время меньше десяти минут, нужно произносить «零»."
         },
@@ -298,14 +308,12 @@
         {
           "id": "l7p1-g1-s5",
           "section": "grammar",
-          "text_original": "(2) 使用\"上午、中午、下午、晚上\"等时间名词表达时间段",
           "text_translation": "\"上午\", \"中午\", \"下午\", \"晚上\" kabi vaqt otlaridan foydalanib vaqt oralig'ini ifodalash",
           "text_translation_ru": "Использование временных существительных «上午», «中午», «下午», «晚上» для выражения периодов времени"
         },
         {
           "id": "l7p1-g1-s6",
           "section": "grammar",
-          "text_original": "\"上午、中午、下午、晚上\"等时间名词可以表达时间段。这些时间名词后还可以直接加时间点。",
           "text_translation": "\"上午\", \"中午\", \"下午\", \"晚上\" kabi vaqt otlari vaqt oralig'ini bildiradi. Bu vaqt otlaridan keyin to'g'ridan-to'g'ri aniq vaqtni qo'shish mumkin.",
           "text_translation_ru": "Временные существительные «上午», «中午», «下午», «晚上» выражают периоды времени. После них можно напрямую добавлять точное время."
         },
@@ -350,7 +358,6 @@
         {
           "id": "l7p1-g2-s1",
           "section": "grammar",
-          "text_original": "语气助词「吧」Modal Particle \"吧\" (ba) (1)",
           "text_translation": "Modal yuklamasi \"吧\" (1)",
           "text_translation_ru": "Модальная частица «吧» (1)",
           "grammarNumber": "2"
@@ -358,7 +365,6 @@
         {
           "id": "l7p1-g2-s2",
           "section": "grammar",
-          "text_original": "本课语气助词「吧」读轻声（ba），在句子末尾，表示建议、商量、劝告、请求。",
           "text_translation": "Bu darsdagi modal yuklamasi \"吧\" yengil ohangda (ba) o'qiladi, gap oxirida keladi va taklif, maslahatlashish, nasihat yoki iltimosni bildiradi.",
           "text_translation_ru": "Модальная частица «吧» в этом уроке произносится нейтральным тоном (ba), ставится в конце предложения и выражает предложение, обсуждение, совет или просьбу."
         },

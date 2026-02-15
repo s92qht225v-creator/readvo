@@ -16,7 +16,7 @@
  * - No page-level state management
  */
 
-import React, { useCallback, type MouseEvent } from 'react';
+import React, { useCallback } from 'react';
 import type { Sentence as SentenceType } from '../types';
 import type { Language } from '../types/ui-state';
 import { alignPinyinToText } from '../utils/rubyText';
@@ -92,28 +92,23 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
     : isPinyinVisible;
 
   // Check if sentence starts with a number pattern like (1), (2), etc.
-  const isNumbered = /^[（(]\d+[)）]/.test(sentence.text_original);
+  const isNumbered = sentence.text_original ? /^[（(]\d+[)）]/.test(sentence.text_original) : false;
 
   // Check if this is a dialogue item with separate number column
   const hasDialogueNumber = sentence.dialogueNumber !== undefined;
 
-  const handleAudioClick = useCallback(
-    (e: MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
-      if (sentence.audio_url) {
-        onAudioClick(sentence.id, sentence.audio_url);
-      }
-    },
-    [sentence.id, sentence.audio_url, onAudioClick]
-  );
+  // Sentences with always-visible inline translations don't need the panel
+  const hasInlineTranslation = sentence.section === 'vocabulary' || sentence.section === 'objectives' || (sentence.section === 'grammar' && !sentence.pinyin);
 
   const handleSentenceClick = useCallback(() => {
-    onSentenceClick?.(sentence.id);
+    if (!hasInlineTranslation) {
+      onSentenceClick?.(sentence.id);
+    }
     // Auto-play audio when sentence is tapped (if it has audio)
     if (sentence.audio_url) {
       onAudioClick(sentence.id, sentence.audio_url);
     }
-  }, [sentence.id, sentence.audio_url, onSentenceClick, onAudioClick]);
+  }, [sentence.id, sentence.audio_url, onSentenceClick, onAudioClick, hasInlineTranslation]);
 
   // Image-only sentence (e.g., textbook table scan in grammar sections)
   if (sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '')) {
@@ -156,7 +151,7 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
 
   return (
     <div
-      className={`sentence sentence--${sentence.section}${sentence.isIndented ? ' sentence--indented' : ''}${isActive ? ' sentence--active' : ''}`}
+      className={`sentence sentence--${sentence.section}${sentence.isIndented ? ' sentence--indented' : ''}${isActive ? ' sentence--active' : ''}${isAudioPlaying ? ' sentence--playing' : ''}${sentence.audio_url ? ' sentence--has-audio' : ''}`}
       data-sentence-id={sentence.id}
       data-section={sentence.section}
       data-numbered={isNumbered ? 'true' : undefined}
@@ -181,44 +176,17 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
 
         {/* Text block with Chinese, pinyin, and translation below */}
         <div className="sentence__text-block">
-          {/* First line: Chinese text + audio button */}
-          <span className="sentence__text-row">
+          {/* Chinese text (tap sentence to play audio) */}
+          {sentence.text_original && (
             <span className="sentence__text">
               {sentence.pinyin && sentence.section !== 'objectives' ? (
                 <RubyText text={sentence.text_original} pinyin={sentence.pinyin} show={showPinyin} />
               ) : sentence.text_original}
             </span>
-            {/* Audio button (only if audio_url exists) */}
-            {sentence.audio_url && (
-              <button
-                className={`sentence__audio-btn ${isAudioPlaying ? 'sentence__audio-btn--playing' : ''} ${isAudioLoading ? 'sentence__audio-btn--loading' : ''}`}
-                onClick={handleAudioClick}
-                aria-label={isAudioPlaying ? 'Audioni to\'xtatish' : 'Audioni tinglash'}
-                disabled={isAudioLoading}
-                type="button"
-              >
-                {isAudioLoading ? (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10" strokeDasharray="32" strokeDashoffset="12">
-                      <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
-                    </circle>
-                  </svg>
-                ) : isAudioPlaying ? (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <rect x="6" y="4" width="4" height="16"/>
-                    <rect x="14" y="4" width="4" height="16"/>
-                  </svg>
-                ) : (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                  </svg>
-                )}
-              </button>
-            )}
-          </span>
+          )}
 
-          {/* Translation (always visible inline for vocabulary/objectives only; others use panel) */}
-          {(sentence.section === 'vocabulary' || sentence.section === 'objectives') && (
+          {/* Translation (always visible inline for vocabulary/objectives/grammar explanations; examples use panel) */}
+          {(sentence.section === 'vocabulary' || sentence.section === 'objectives' || (sentence.section === 'grammar' && !sentence.pinyin)) && (
             <span className="sentence__translation-inline">{translation}</span>
           )}
         </div>

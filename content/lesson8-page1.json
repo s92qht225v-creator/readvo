@@ -12,7 +12,7 @@
     {
       "id": "l8p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -48,11 +48,11 @@
     {
       "id": "l8p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки, соответствующие словам.",
+      "instruction": "Quyidagi so'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки, соответствующие словам.",
       "sentences": [],
       "matchingItems": [
         {
@@ -108,16 +108,16 @@
     {
       "id": "l8p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在王一飞家，白家月和陈天中来做客。",
       "contextPinyin": "Zài Wáng Yīfēi jiā, Bái Jiāyuè hé Chén Tiānzhōng lái zuòkè.",
       "contextTranslation": "Vang Ifey uyida Bai Jiyayue va Chen Tianzhong mehmon bo'lib kelishdi.",
       "contextTranslation_ru": "В доме Ван Ифэя Бай Цзяюэ и Чэнь Тяньчжун пришли в гости.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-1-1.jpg",
       "sentences": [
         {
@@ -127,7 +127,8 @@
           "text_translation": "Xona tashqarisida bitta mushukcha bor.",
           "text_translation_ru": "За дверью комнаты есть котёнок.",
           "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/dialogue1.mp3"
         },
         {
           "id": "l8p1-t1-s2",
@@ -136,7 +137,8 @@
           "text_translation": "Men ko'rmadim, u qayerda ekan?",
           "text_translation_ru": "Я не видел, где он?",
           "pinyin": "Wǒ méi kànjiàn, tā zài nǎr ne?",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/dialogue2.mp3"
         },
         {
           "id": "l8p1-t1-s3",
@@ -145,7 +147,8 @@
           "text_translation": "U stol tagida.",
           "text_translation_ru": "Он под столом.",
           "pinyin": "Tā zài zhuōzi xià ne.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/dialogue3.mp3"
         },
         {
           "id": "l8p1-t1-s4",
@@ -154,14 +157,15 @@
           "text_translation": "Bu mushukcha juda chiroyli!",
           "text_translation_ru": "Какой красивый котёнок!",
           "pinyin": "Zhè zhī xiǎo māo zhēn piàoliang!",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l8p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%202.mp3",
@@ -174,7 +178,8 @@
           "text_translation_ru": "комната (сущ.)",
           "pinyin": "fángjiān",
           "wordClass": "n.",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/fangjian.mp3"
         },
         {
           "id": "l8p1-v-s2",
@@ -184,7 +189,8 @@
           "text_translation_ru": "снаружи (сущ.)",
           "pinyin": "wài",
           "wordClass": "n.",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/wai.mp3"
         },
         {
           "id": "l8p1-v-s3",
@@ -194,7 +200,8 @@
           "text_translation_ru": "счётное слово (для некоторых животных)",
           "pinyin": "zhī",
           "wordClass": "m.",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/zhi.mp3"
         },
         {
           "id": "l8p1-v-s4",
@@ -204,7 +211,8 @@
           "text_translation_ru": "маленький (прил.)",
           "pinyin": "xiǎo",
           "wordClass": "adj.",
-          "vocabNumber": 4
+          "vocabNumber": 4,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/xiao.mp3"
         },
         {
           "id": "l8p1-v-s5",
@@ -214,7 +222,8 @@
           "text_translation_ru": "кошка (сущ.)",
           "pinyin": "māo",
           "wordClass": "n.",
-          "vocabNumber": 5
+          "vocabNumber": 5,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/mao.mp3"
         },
         {
           "id": "l8p1-v-s6",
@@ -224,7 +233,8 @@
           "text_translation_ru": "нет; не; ещё не (нареч.)",
           "pinyin": "méi",
           "wordClass": "adv.",
-          "vocabNumber": 6
+          "vocabNumber": 6,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/mei.mp3"
         },
         {
           "id": "l8p1-v-s7",
@@ -234,7 +244,8 @@
           "text_translation_ru": "видеть; увидеть (глагол)",
           "pinyin": "kànjiàn",
           "wordClass": "v.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/kanjian.mp3"
         },
         {
           "id": "l8p1-v-s8",
@@ -244,7 +255,8 @@
           "text_translation_ru": "стол (сущ.)",
           "pinyin": "zhuōzi",
           "wordClass": "n.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/zhuozi.mp3"
         },
         {
           "id": "l8p1-v-s9",
@@ -254,7 +266,8 @@
           "text_translation_ru": "низ; нижний (сущ.)",
           "pinyin": "xià",
           "wordClass": "n.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/xia.mp3"
         },
         {
           "id": "l8p1-v-s10",
@@ -264,21 +277,21 @@
           "text_translation_ru": "красивый (прил.)",
           "pinyin": "piàoliang",
           "wordClass": "adj.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/piaoliang.mp3"
         }
       ]
     },
     {
       "id": "l8p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l8p1-g1-s1",
           "section": "grammar",
-          "text_original": "方位词",
           "text_translation": "O'rin-joy so'zlari",
           "text_translation_ru": "Слова, обозначающие местоположение",
           "grammarNumber": "1"
@@ -286,7 +299,6 @@
         {
           "id": "l8p1-g1-s2",
           "section": "grammar",
-          "text_original": "本册学习的表达方向、位置的方位词有：上、下、里、外、前、后、外边。",
           "text_translation": "Ushbu jildda o'rganiladigan yo'nalish va o'rinni bildiruvchi so'zlar: 上, 下, 里, 外, 前, 后, 外边.",
           "text_translation_ru": "Слова, обозначающие направление и местоположение, изучаемые в этом томе: 上, 下, 里, 外, 前, 后, 外边."
         },

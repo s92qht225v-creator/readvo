@@ -5,7 +5,7 @@
     {
       "id": "l6p2-sec-text2-heading",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在教室里，下课后，白家月和陈天中在聊天儿。",
@@ -17,8 +17,8 @@
     {
       "id": "l6p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -26,9 +26,17 @@
             "id": "l6p2-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "白家月（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）想去超市。" }
+              {
+                "type": "text",
+                "content": "白家月（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）想去超市。"
+              }
             ],
             "options": [
               {
@@ -53,9 +61,17 @@
             "id": "l6p2-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "白家月想买（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "白家月想买（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
               {
@@ -82,9 +98,9 @@
     {
       "id": "l6p2-sec-text2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-2-1.jpg",
       "sentences": [
         {
@@ -94,7 +110,8 @@
           "text_translation": "Jiyayue, ertaga qayerga borasan?",
           "text_translation_ru": "Цзяюэ, куда ты пойдёшь завтра?",
           "pinyin": "Jiāyuè, míngtiān nǐ qù nǎr?",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue1.mp3"
         },
         {
           "id": "l6p2-t2-s2",
@@ -103,7 +120,8 @@
           "text_translation": "Supermarketga borib, narsa sotib olmoqchiman.",
           "text_translation_ru": "Хочу пойти в супермаркет за покупками.",
           "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue2.mp3"
         },
         {
           "id": "l6p2-t2-s3",
@@ -112,7 +130,8 @@
           "text_translation": "Supermarketdan nima sotib olasan?",
           "text_translation_ru": "Что ты купишь в супермаркете?",
           "pinyin": "Nǐ qù chāoshì mǎi shénme?",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue3.mp3"
         },
         {
           "id": "l6p2-t2-s4",
@@ -121,14 +140,15 @@
           "text_translation": "Bir oz sut sotib olmoqchiman.",
           "text_translation_ru": "Хочу купить немного молока.",
           "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l6p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%204.mp3",
@@ -140,7 +160,8 @@
           "text_translation": "hozir",
           "text_translation_ru": "сейчас",
           "pinyin": "xiànzài",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xianzai.mp3"
         },
         {
           "id": "l6p2-v-s1",
@@ -149,7 +170,8 @@
           "text_translation": "ertaga",
           "text_translation_ru": "завтра",
           "pinyin": "míngtiān",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mingtian.mp3"
         },
         {
           "id": "l6p2-v-s2",
@@ -158,7 +180,8 @@
           "text_translation": "bormoq",
           "text_translation_ru": "идти; ехать",
           "pinyin": "qù",
-          "wordClass": "v."
+          "wordClass": "v.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/qu.mp3"
         },
         {
           "id": "l6p2-v-s3",
@@ -167,7 +190,8 @@
           "text_translation": "qayerda",
           "text_translation_ru": "где; куда",
           "pinyin": "nǎr",
-          "wordClass": "pron."
+          "wordClass": "pron.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/nar.mp3"
         },
         {
           "id": "l6p2-v-s4",
@@ -176,7 +200,8 @@
           "text_translation": "xohlamoq; istamoq",
           "text_translation_ru": "хотеть; желать",
           "pinyin": "xiǎng",
-          "wordClass": "mod."
+          "wordClass": "mod.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xiang.mp3"
         },
         {
           "id": "l6p2-v-s5",
@@ -185,7 +210,8 @@
           "text_translation": "supermarket",
           "text_translation_ru": "супермаркет",
           "pinyin": "chāoshì",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/chaoshi.mp3"
         },
         {
           "id": "l6p2-v-s6",
@@ -194,7 +220,8 @@
           "text_translation": "sotib olmoq",
           "text_translation_ru": "покупать",
           "pinyin": "mǎi",
-          "wordClass": "v."
+          "wordClass": "v.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mai.mp3"
         },
         {
           "id": "l6p2-v-s7",
@@ -203,7 +230,8 @@
           "text_translation": "narsa",
           "text_translation_ru": "вещь",
           "pinyin": "dōngxi",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dongxi.mp3"
         },
         {
           "id": "l6p2-v-s8",
@@ -212,7 +240,8 @@
           "text_translation": "bir nechta; bir oz",
           "text_translation_ru": "немного; несколько",
           "pinyin": "xiē",
-          "wordClass": "m."
+          "wordClass": "m.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xie.mp3"
         },
         {
           "id": "l6p2-v-s9",
@@ -221,7 +250,8 @@
           "text_translation": "sut",
           "text_translation_ru": "молоко",
           "pinyin": "niúnǎi",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/niunai.mp3"
         },
         {
           "id": "l6p2-v-s10",
@@ -230,21 +260,21 @@
           "text_translation": "sabzavot",
           "text_translation_ru": "овощ",
           "pinyin": "cài",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/cai.mp3"
         }
       ]
     },
     {
       "id": "l6p2-sec-grammar",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l6p2-g-s1",
           "section": "grammar",
-          "text_original": "能愿动词「想」Modal Verb \"想\" (xiǎng)",
           "text_translation": "Modal fe'l \"想\"",
           "text_translation_ru": "Модальный глагол «想»",
           "grammarNumber": "5"
@@ -252,7 +282,6 @@
         {
           "id": "l6p2-g-s2",
           "section": "grammar",
-          "text_original": "能愿动词「想」用在动词前，表示希望、打算。",
           "text_translation": "Modal fe'l \"想\" fe'ldan oldin ishlatiladi va xohish yoki niyatni bildiradi.",
           "text_translation_ru": "Модальный глагол «想» ставится перед глаголом и выражает желание или намерение."
         },

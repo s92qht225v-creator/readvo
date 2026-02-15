@@ -12,7 +12,7 @@
     {
       "id": "l3p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -48,16 +48,16 @@
     {
       "id": "l3p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在校园里，李文和白家月第一次相遇，两人继续聊天儿。",
       "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè dì yī cì xiāngyù, liǎng rén jìxù liáotiānr.",
       "contextTranslation": "Kampusda Li Wen va Bai Jiayue birinchi marta uchrashdi va suhbatni davom ettirdi.",
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые и продолжили беседу.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l3p1-text1.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-1-1.jpg",
       "sentences": [
         {
@@ -69,7 +69,7 @@
           "pinyin": "Wǒ shì Zhōngguó rén.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "/audio/l3p1-t1-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue1.mp3"
         },
         {
           "id": "l3p1-t1-s2",
@@ -80,14 +80,14 @@
           "pinyin": "Wǒ shì Fǎguó rén. Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "/audio/l3p1-t1-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue2.mp3"
         }
       ]
     },
     {
       "id": "l3p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l3p1-vocab.mp3",
@@ -98,7 +98,8 @@
           "text_original": "人",
           "text_translation": "odam, kishi (ot)",
           "text_translation_ru": "человек (сущ.)",
-          "pinyin": "rén"
+          "pinyin": "rén",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/ren.mp3"
         },
         {
           "id": "l3p1-v-s2",
@@ -106,7 +107,8 @@
           "text_original": "的",
           "text_translation": "ning (yuklamasi)",
           "text_translation_ru": "притяжательная частица",
-          "pinyin": "de"
+          "pinyin": "de",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/de.mp3"
         },
         {
           "id": "l3p1-v-s3",
@@ -114,7 +116,8 @@
           "text_original": "中国",
           "text_translation": "Xitoy (atoqli ot)",
           "text_translation_ru": "Китай (имя собств.)",
-          "pinyin": "Zhōngguó"
+          "pinyin": "Zhōngguó",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/zhongguo.mp3"
         },
         {
           "id": "l3p1-v-s4",
@@ -122,7 +125,8 @@
           "text_original": "法国",
           "text_translation": "Fransiya (atoqli ot)",
           "text_translation_ru": "Франция (имя собств.)",
-          "pinyin": "Fǎguó"
+          "pinyin": "Fǎguó",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/faguo.mp3"
         },
         {
           "id": "l3p1-v-s5",
@@ -130,21 +134,21 @@
           "text_original": "中文",
           "text_translation": "xitoy tili (atoqli ot)",
           "text_translation_ru": "китайский язык (имя собств.)",
-          "pinyin": "Zhōngwén"
+          "pinyin": "Zhōngwén",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/zhongwen.mp3"
         }
       ]
     },
     {
       "id": "l3p1-sec-grammar",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l3p1-g-s1",
           "section": "grammar",
-          "text_original": "\"是\"字句表示人或事物等同什么或类属什么，否定形式是「不是」。",
           "text_translation": "\"是\" gap tuzilmasi biror kishi yoki narsa nimaga teng yoki qaysi turkumga tegishli ekanini bildiradi. Inkor shakli \"不是\".",
           "text_translation_ru": "Предложение с «是» используется для указания, чему равен человек или предмет, или к какой категории принадлежит. Отрицательная форма — «不是»."
         },
@@ -175,7 +179,6 @@
         {
           "id": "l3p1-g-s7",
           "section": "grammar",
-          "text_original": "结构助词「的」在定语和中心语之间，表达领属关系。",
           "text_translation": "\"的\" strukturaviy yordamchi so'zi aniqlovchi va bosh so'z o'rtasida qo'yilib, egalik munosabatini bildiradi.",
           "text_translation_ru": "Структурная частица «的» ставится между определением и главным словом, выражая принадлежность."
         },
@@ -198,7 +201,6 @@
         {
           "id": "l3p1-g-s12",
           "section": "grammar",
-          "text_original": "如果「的」前边是人称代词，后边是亲属称谓或指人的名词，「的」可省略。",
           "text_translation": "Agar \"的\" oldida kishilik olmoshi, keyin esa qarindoshlik atamasi yoki kishini bildiruvchi ot kelsa, \"的\" tushirib qoldirilishi mumkin.",
           "text_translation_ru": "Если перед «的» стоит личное местоимение, а после него — термин родства или существительное, обозначающее человека, «的» можно опустить."
         },
@@ -239,8 +241,8 @@
     {
       "id": "l3p1-sec-fillblank",
       "type": "imagedescribe",
-      "instruction": "完成对话。Dialoglarni to'ldiring.",
-      "instruction_ru": "完成对话。Завершите диалоги.",
+      "instruction": "Dialoglarni to'ldiring.",
+      "instruction_ru": "Завершите диалоги.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -249,21 +251,35 @@
             "speaker": "A",
             "dialogueNumber": "1",
             "parts": [
-              { "type": "text", "content": "这是我" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "这是我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "pinyin": "Zhè shì wǒ ___.",
             "translation": "Bu mening ___.",
             "translation_ru": "Это мой ___.",
-            "answers": ["老师"]
+            "answers": [
+              "老师"
+            ]
           },
           {
             "id": "l3p1-fb-s1b",
             "speaker": "B",
             "dialogueNumber": "",
             "parts": [
-              { "type": "text", "content": "老师，您好！" }
+              {
+                "type": "text",
+                "content": "老师，您好！"
+              }
             ],
             "pinyin": "Lǎoshī, nín hǎo!",
             "translation": "O'qituvchi, salom!",
@@ -275,28 +291,50 @@
             "speaker": "李文",
             "dialogueNumber": "2",
             "parts": [
-              { "type": "text", "content": "请问，你" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "叫什么名字？" }
+              {
+                "type": "text",
+                "content": "请问，你"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "叫什么名字？"
+              }
             ],
             "pinyin": "Qǐngwèn, nǐ ___ jiào shénme míngzi?",
             "translation": "Kechirasiz, sizning ___ ismi nima?",
             "translation_ru": "Извините, как зовут вашего ___?",
-            "answers": ["同学"]
+            "answers": [
+              "同学"
+            ]
           },
           {
             "id": "l3p1-fb-s2b",
             "speaker": "白家月",
             "dialogueNumber": "",
             "parts": [
-              { "type": "text", "content": "我" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "叫王一飞。" }
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "叫王一飞。"
+              }
             ],
             "pinyin": "Wǒ ___ jiào Wáng Yīfēi.",
             "translation": "Mening ___ ismi Wang Yifei.",
             "translation_ru": "Моего ___ зовут Ван Ифэй.",
-            "answers": ["同学"]
+            "answers": [
+              "同学"
+            ]
           }
         ]
       }

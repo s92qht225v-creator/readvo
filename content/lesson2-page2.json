@@ -5,16 +5,16 @@
     {
       "id": "l2p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在校园里，陈天中和白家月打招呼时认错了人。",
       "contextPinyin": "Zài xiàoyuán lǐ, Chén Tiānzhōng hé Bái Jiāyuè dǎ zhāohu shí rèn cuò le rén.",
       "contextTranslation": "Kampusda Chen Tianzhong Bai Jiayue bilan salomlashayotganda uni boshqa odam deb o'yladi.",
       "contextTranslation_ru": "На территории кампуса Чэнь Тяньчжун поздоровался с Бай Цзяюэ, но перепутал её с кем-то другим.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l2p2-text2.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-2-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -32,7 +32,7 @@
           "pinyin": "Nǐ hǎo, Ānnī!",
           "speaker": "陈天中",
           "speakerName": "Chén Tiānzhōng",
-          "audio_url": "/audio/l2p2-t2-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/dialogue1.mp3"
         },
         {
           "id": "l2p2-t2-s2",
@@ -43,7 +43,7 @@
           "pinyin": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "/audio/l2p2-t2-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/dialogue2.mp3"
         },
         {
           "id": "l2p2-t2-s3",
@@ -54,7 +54,7 @@
           "pinyin": "Duìbuqǐ!",
           "speaker": "陈天中",
           "speakerName": "Chén Tiānzhōng",
-          "audio_url": "/audio/l2p2-t2-s3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/dialogue3.mp3"
         },
         {
           "id": "l2p2-t2-s4",
@@ -65,14 +65,14 @@
           "pinyin": "Méi guānxi!",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "/audio/l2p2-t2-s4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l2p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l2p2-vocab.mp3",
@@ -83,7 +83,8 @@
           "text_original": "不",
           "text_translation": "yo'q, emas (ravish)",
           "text_translation_ru": "не, нет (наречие)",
-          "pinyin": "bù"
+          "pinyin": "bù",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/bu.mp3"
         },
         {
           "id": "l2p2-v-s2",
@@ -91,7 +92,8 @@
           "text_original": "是",
           "text_translation": "bo'lmoq (fe'l)",
           "text_translation_ru": "быть (глагол)",
-          "pinyin": "shì"
+          "pinyin": "shì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/shi.mp3"
         },
         {
           "id": "l2p2-v-s3",
@@ -99,7 +101,8 @@
           "text_original": "对不起",
           "text_translation": "kechirasiz (fe'l)",
           "text_translation_ru": "извините (глагол)",
-          "pinyin": "duìbuqǐ"
+          "pinyin": "duìbuqǐ",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/duibuqi.mp3"
         },
         {
           "id": "l2p2-v-s4",
@@ -107,7 +110,8 @@
           "text_original": "没关系",
           "text_translation": "hech gap emas, xavotir olmang",
           "text_translation_ru": "ничего страшного, всё в порядке",
-          "pinyin": "méi guānxi"
+          "pinyin": "méi guānxi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/meiguanxi.mp3"
         },
         {
           "id": "l2p2-v-s5",
@@ -115,28 +119,27 @@
           "text_original": "没事",
           "text_translation": "hech gap emas (fe'l)",
           "text_translation_ru": "ничего, неважно (глагол)",
-          "pinyin": "méishì"
+          "pinyin": "méishì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/meishi.mp3"
         }
       ]
     },
     {
       "id": "l2p2-sec-grammar",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l2p2-g-s1",
           "section": "grammar",
-          "text_original": "汉语的基本语序",
           "text_translation": "Xitoy tilining asosiy so'z tartibi",
           "text_translation_ru": "Базовый порядок слов в китайском языке"
         },
         {
           "id": "l2p2-g-s2",
           "section": "grammar",
-          "text_original": "汉语的基本语序是：主语+谓语+宾语。例如：我（主语）叫（谓语）陈天中（宾语）。",
           "text_translation": "Xitoy tilining asosiy so'z tartibi: Ega + Kesim + To'ldiruvchi. Masalan: 我 (Ega) 叫 (Kesim) 陈天中 (To'ldiruvchi).",
           "text_translation_ru": "Базовый порядок слов в китайском: Подлежащее + Сказуемое + Дополнение. Например: 我 (Подлежащее) 叫 (Сказуемое) 陈天中 (Дополнение)."
         },

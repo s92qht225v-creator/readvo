@@ -5,7 +5,7 @@
     {
       "id": "l6p3-sec-text3-heading",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在家里，王一雪全家在讨论周末晚餐安排。",
@@ -17,8 +17,8 @@
     {
       "id": "l6p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -26,9 +26,17 @@
             "id": "l6p3-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "王一雪一家人想去西安饭店吃（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "王一雪一家人想去西安饭店吃（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
               {
@@ -53,9 +61,17 @@
             "id": "l6p3-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "刘小明不想吃（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "刘小明不想吃（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
               {
@@ -82,9 +98,9 @@
     {
       "id": "l6p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-1.jpg",
       "sentences": [
         {
@@ -94,7 +110,8 @@
           "text_translation": "Yakshanba kuni kechki ovqatni qayerda yeymiz?",
           "text_translation_ru": "Куда мы пойдём ужинать в воскресенье?",
           "pinyin": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue1.mp3"
         },
         {
           "id": "l6p3-t3-s2",
@@ -103,7 +120,8 @@
           "text_translation": "Men yana Xi'an restoraniga bormoqchiman.",
           "text_translation_ru": "Я ещё хочу пойти в ресторан «Сиань».",
           "pinyin": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue2.mp3"
         },
         {
           "id": "l6p3-t3-s3",
@@ -112,7 +130,8 @@
           "text_translation": "U yerdagi mantisi juda mazali, men manti yemoqchiman.",
           "text_translation_ru": "Тамошние пирожки баоцзы очень вкусные, я хочу есть баоцзы.",
           "pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
-          "speaker": "刘小雪"
+          "speaker": "刘小雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue3.mp3"
         },
         {
           "id": "l6p3-t3-s4",
@@ -121,7 +140,8 @@
           "text_translation": "Onajon, men guruch yemoqchiman, manti yegim kelmaydi.",
           "text_translation_ru": "Мама, я хочу рис, не хочу баоцзы.",
           "pinyin": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
-          "speaker": "刘小明"
+          "speaker": "刘小明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue4.mp3"
         },
         {
           "id": "l6p3-t3-s5",
@@ -130,7 +150,8 @@
           "text_translation": "Yaxshi. Qanday qilib boramiz?",
           "text_translation_ru": "Хорошо. Как мы туда доберёмся?",
           "pinyin": "Hǎo de. Wǒmen zěnme qù?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue5.mp3"
         },
         {
           "id": "l6p3-t3-s6",
@@ -139,14 +160,15 @@
           "text_translation": "Taksida boramiz.",
           "text_translation_ru": "Поедем на такси.",
           "pinyin": "Zuò chūzūchē qù.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l6p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "sentences": [
@@ -157,7 +179,8 @@
           "text_translation": "nonushta",
           "text_translation_ru": "завтрак",
           "pinyin": "zǎofàn",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zaofan.mp3"
         },
         {
           "id": "l6p3-v-s2",
@@ -166,7 +189,8 @@
           "text_translation": "tushlik",
           "text_translation_ru": "обед",
           "pinyin": "wǔfàn",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/wufan.mp3"
         },
         {
           "id": "l6p3-v-s3",
@@ -175,7 +199,8 @@
           "text_translation": "yemoq",
           "text_translation_ru": "есть; кушать",
           "pinyin": "chī",
-          "wordClass": "v."
+          "wordClass": "v.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chi.mp3"
         },
         {
           "id": "l6p3-v-s4",
@@ -184,7 +209,8 @@
           "text_translation": "kechki ovqat",
           "text_translation_ru": "ужин",
           "pinyin": "wǎnfàn",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/wanfan.mp3"
         },
         {
           "id": "l6p3-v-s5",
@@ -193,7 +219,8 @@
           "text_translation": "u yer; u taraf",
           "text_translation_ru": "там; та сторона",
           "pinyin": "nàbiān",
-          "wordClass": "pron."
+          "wordClass": "pron.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/nabian.mp3"
         },
         {
           "id": "l6p3-v-s6",
@@ -202,7 +229,8 @@
           "text_translation": "baozi (go'shtli mantiga o'xshash taom)",
           "text_translation_ru": "баоцзы (паровой пирожок с начинкой)",
           "pinyin": "bāozi",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/baozi.mp3"
         },
         {
           "id": "l6p3-v-s7",
@@ -211,7 +239,8 @@
           "text_translation": "juda; nihoyatda",
           "text_translation_ru": "очень; чрезвычайно",
           "pinyin": "fēicháng",
-          "wordClass": "adv."
+          "wordClass": "adv.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/feichang.mp3"
         },
         {
           "id": "l6p3-v-s8",
@@ -220,7 +249,8 @@
           "text_translation": "mazali",
           "text_translation_ru": "вкусный",
           "pinyin": "hǎochī",
-          "wordClass": "adj."
+          "wordClass": "adj.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/haochi.mp3"
         },
         {
           "id": "l6p3-v-s9",
@@ -229,7 +259,8 @@
           "text_translation": "guruch",
           "text_translation_ru": "рис (варёный)",
           "pinyin": "mǐfàn",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/mifan.mp3"
         },
         {
           "id": "l6p3-v-s10",
@@ -238,7 +269,8 @@
           "text_translation": "qanday; qanday qilib",
           "text_translation_ru": "как; каким образом",
           "pinyin": "zěnme",
-          "wordClass": "pron."
+          "wordClass": "pron.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zenme.mp3"
         },
         {
           "id": "l6p3-v-s11",
@@ -247,7 +279,8 @@
           "text_translation": "minmoq; (transport) bilan bormoq",
           "text_translation_ru": "ехать (на транспорте); сидеть",
           "pinyin": "zuò",
-          "wordClass": "v."
+          "wordClass": "v.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zuo.mp3"
         },
         {
           "id": "l6p3-v-s12",
@@ -256,7 +289,8 @@
           "text_translation": "taksi",
           "text_translation_ru": "такси",
           "pinyin": "chūzūchē",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chuzuche.mp3"
         },
         {
           "id": "l6p3-v-s13",
@@ -265,21 +299,21 @@
           "text_translation": "Xi'an restorani",
           "text_translation_ru": "Ресторан «Сиань»",
           "pinyin": "Xī'ān Fàndiàn",
-          "wordClass": "proper n."
+          "wordClass": "proper n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/xianfandian.mp3"
         }
       ]
     },
     {
       "id": "l6p3-sec-grammar2",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l6p3-g2-s1",
           "section": "grammar",
-          "text_original": "连动句 Serial Verb Sentences",
           "text_translation": "Ketma-ket fe'lli gap",
           "text_translation_ru": "Предложения с последовательными глаголами",
           "grammarNumber": "6"
@@ -287,14 +321,12 @@
         {
           "id": "l6p3-g2-s2",
           "section": "grammar",
-          "text_original": "连动句的谓语部分由两个或两个以上动词性短语构成。连动句有两种意义：",
           "text_translation": "Ketma-ket fe'lli gapning kesim qismi ikki yoki undan ko'p fe'l iboralaridan tashkil topadi. Ketma-ket fe'lli gapning ikki xil ma'nosi bor:",
           "text_translation_ru": "Сказуемое предложения с последовательными глаголами состоит из двух или более глагольных словосочетаний. Такие предложения имеют два значения:"
         },
         {
           "id": "l6p3-g2-s3",
           "section": "grammar",
-          "text_original": "(1) 表示动作的目的",
           "text_translation": "Harakatning maqsadini bildiradi",
           "text_translation_ru": "Указывает на цель действия"
         },
@@ -317,7 +349,6 @@
         {
           "id": "l6p3-g2-s7",
           "section": "grammar",
-          "text_original": "(2) 表示动作的方式",
           "text_translation": "Harakatning usulini bildiradi",
           "text_translation_ru": "Указывает на способ действия"
         },
@@ -342,14 +373,13 @@
     {
       "id": "l6p3-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l6p3-g3-s1",
           "section": "grammar",
-          "text_original": "疑问代词「怎么」Interrogative Pronoun \"怎么\" (zěnme)",
           "text_translation": "So'roq olmoshi \"怎么\"",
           "text_translation_ru": "Вопросительное местоимение «怎么»",
           "grammarNumber": "7"
@@ -357,7 +387,6 @@
         {
           "id": "l6p3-g3-s2",
           "section": "grammar",
-          "text_original": "疑问代词「怎么」用在动词前，询问方式。",
           "text_translation": "So'roq olmoshi \"怎么\" fe'ldan oldin ishlatiladi va usulni so'raydi.",
           "text_translation_ru": "Вопросительное местоимение «怎么» ставится перед глаголом и используется для вопроса о способе действия."
         },
@@ -382,11 +411,11 @@
     {
       "id": "l6p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。Bo'sh joylarga mos so'zlarni tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "Bo'sh joylarga mos so'zlarni tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -517,11 +546,11 @@
     {
       "id": "l6p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -624,21 +653,10 @@
     {
       "id": "l6p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
-      "instruction": "填写表格。Jadvalni to'ldiring.",
-      "instruction_ru": "填写表格。Заполните таблицу.",
-      "sentences": [
-        {
-          "id": "l6p3-act-s1",
-          "section": "activity",
-          "text_original": "两人一组，填写星期一、星期二和星期六早饭吃什么，填好后分享。",
-          "text_translation": "Ikkitadan juftlikda ishlang, dushanba, seshanba va shanba kunlari nonushtaga nima yeyishingizni yozing, so'ng javoblaringizni ulashing.",
-          "text_translation_ru": "Работайте в парах, запишите, что вы едите на завтрак в понедельник, вторник и субботу, затем поделитесь ответами.",
-          "pinyin": "Liǎng rén yī zǔ, tiánxiě xīngqīyī, xīngqī'èr hé xīngqīliù zǎofàn chī shénme, tián hǎo hòu fēnxiǎng."
-        }
-      ],
+      "sentences": [],
       "tableFillData": {
         "options": [
           {

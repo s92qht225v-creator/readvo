@@ -12,7 +12,7 @@
     {
       "id": "l6p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,11 +57,11 @@
     {
       "id": "l6p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "instruction": "So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки к словам.",
       "sentences": [],
       "matchingItems": [
         {
@@ -117,16 +117,16 @@
     {
       "id": "l6p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在校园里，李文向白家月要手机号。",
       "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén xiàng Bái Jiāyuè yào shǒujīhào.",
       "contextTranslation": "Kampusda Li Wen Bai Jiyayueden telefon raqamini so'ramoqda.",
       "contextTranslation_ru": "В кампусе Ли Вэнь просит у Бай Цзяюэ номер телефона.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -142,7 +142,8 @@
           "text_translation": "Jiyayue, telefon raqaming nechchi?",
           "text_translation_ru": "Цзяюэ, какой у тебя номер телефона?",
           "pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue1.mp3"
         },
         {
           "id": "l6p1-t1-s2",
@@ -151,7 +152,8 @@
           "text_translation": "Mening telefon raqamim +33 601493190.",
           "text_translation_ru": "Мой номер телефона +33 601493190.",
           "pinyin": "Wǒ de shǒujīhào shì sān sān liù líng yāo sì jiǔ sān yāo jiǔ líng.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue2.mp3"
         },
         {
           "id": "l6p1-t1-s3",
@@ -160,7 +162,8 @@
           "text_translation": "Mening telefon raqamim +86 13552721160.",
           "text_translation_ru": "Мой номер телефона +86 13552721160.",
           "pinyin": "Wǒ de shǒujīhào shì bā liù yāo sān wǔ wǔ èr qī èr yāo yāo liù líng.",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue3.mp3"
         },
         {
           "id": "l6p1-t1-s4",
@@ -169,7 +172,8 @@
           "text_translation": "Yaxshi.",
           "text_translation_ru": "Хорошо.",
           "pinyin": "Hǎo de.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue4.mp3"
         }
       ]
     },
@@ -188,7 +192,7 @@
     {
       "id": "l6p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%202.mp3",
@@ -200,7 +204,8 @@
           "text_translation": "uyali telefon",
           "text_translation_ru": "мобильный телефон",
           "pinyin": "shǒujī",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/shouji.mp3"
         },
         {
           "id": "l6p1-v-s2",
@@ -209,7 +214,8 @@
           "text_translation": "telefon; telefon qo'ng'irog'i",
           "text_translation_ru": "телефон; телефонный звонок",
           "pinyin": "diànhuà",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dianhua.mp3"
         },
         {
           "id": "l6p1-v-s3",
@@ -218,7 +224,8 @@
           "text_translation": "raqam",
           "text_translation_ru": "номер",
           "pinyin": "hào",
-          "wordClass": "n."
+          "wordClass": "n.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/hao.mp3"
         }
       ]
     }

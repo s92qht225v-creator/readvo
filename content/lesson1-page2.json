@@ -5,16 +5,16 @@
     {
       "id": "l1p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "开学第一天，课堂上，学生们学习打招呼用语。",
       "contextPinyin": "Kāixué dì yī tiān, kètáng shàng, xuéshēngmen xuéxí dǎ zhāohu yòngyǔ.",
       "contextTranslation": "O'quv yilining birinchi kuni, sinfda, talabalar salomlashish iboralarini o'rganmoqda.",
       "contextTranslation_ru": "В первый день учёбы в классе студенты изучают приветствия.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l1p2-text2.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-2-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -32,7 +32,7 @@
           "pinyin": "Dàjiā hǎo!",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l1p2-t2-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dialogue1.mp3"
         },
         {
           "id": "l1p2-t2-s2",
@@ -43,7 +43,7 @@
           "pinyin": "Lǎoshī, nín hǎo!",
           "speaker": "学生们",
           "speakerName": "xuéshēngmen",
-          "audio_url": "/audio/l1p2-t2-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dialogue2.mp3"
         },
         {
           "id": "l1p2-t2-s3",
@@ -54,7 +54,7 @@
           "pinyin": "Nǐmen hǎo!",
           "speaker": "小语",
           "speakerName": "Xiǎoyǔ",
-          "audio_url": "/audio/l1p2-t2-s3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dialogue3.mp3"
         },
         {
           "id": "l1p2-t2-s4",
@@ -65,14 +65,14 @@
           "pinyin": "Nǐ hǎo, Xiǎoyǔ!",
           "speaker": "学生们",
           "speakerName": "xuéshēngmen",
-          "audio_url": "/audio/l1p2-t2-s4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l1p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l1p2-vocab.mp3",
@@ -83,7 +83,8 @@
           "text_original": "大家",
           "text_translation": "hamma, barcha",
           "text_translation_ru": "все, всем",
-          "pinyin": "dàjiā"
+          "pinyin": "dàjiā",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/dajia.mp3"
         },
         {
           "id": "l1p2-v-s2",
@@ -91,7 +92,8 @@
           "text_original": "好",
           "text_translation": "yaxshi",
           "text_translation_ru": "хороший, хорошо",
-          "pinyin": "hǎo"
+          "pinyin": "hǎo",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/hao.mp3"
         },
         {
           "id": "l1p2-v-s3",
@@ -99,7 +101,8 @@
           "text_original": "学生",
           "text_translation": "talaba, o'quvchi",
           "text_translation_ru": "студент, ученик",
-          "pinyin": "xuéshēng"
+          "pinyin": "xuéshēng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/xuesheng.mp3"
         },
         {
           "id": "l1p2-v-s4",
@@ -107,7 +110,8 @@
           "text_original": "们",
           "text_translation": "ko'plik qo'shimchasi (shaxs olmoshlari va otlardan keyin)",
           "text_translation_ru": "суффикс множественного числа (для местоимений и существительных)",
-          "pinyin": "men"
+          "pinyin": "men",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/men.mp3"
         },
         {
           "id": "l1p2-v-s5",
@@ -115,7 +119,8 @@
           "text_original": "老师",
           "text_translation": "o'qituvchi",
           "text_translation_ru": "учитель",
-          "pinyin": "lǎoshī"
+          "pinyin": "lǎoshī",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/laoshi.mp3"
         },
         {
           "id": "l1p2-v-s6",
@@ -123,7 +128,8 @@
           "text_original": "您",
           "text_translation": "Siz (hurmatli)",
           "text_translation_ru": "Вы (вежливая форма)",
-          "pinyin": "nín"
+          "pinyin": "nín",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/nin.mp3"
         },
         {
           "id": "l1p2-v-s7",
@@ -131,7 +137,8 @@
           "text_original": "你们",
           "text_translation": "sizlar, siz (ko'plik)",
           "text_translation_ru": "вы (множественное число)",
-          "pinyin": "nǐmen"
+          "pinyin": "nǐmen",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-2/nimen.mp3"
         }
       ]
     }

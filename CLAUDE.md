@@ -109,32 +109,35 @@ Page → Section → Sentence → Word
 - **Word**: Tokenized words for future dictionary lookup
 
 ## Section Types
-- `objectives` - Learning goals with checkboxes (目标)
-- `text` - Main dialogue/reading with context narration (课文)
+- `objectives` - Learning goals
+- `text` - Main dialogue/reading with context narration
 - `dialogue` - Conversational exchanges
-- `vocabulary` - Word lists with pinyin and translation (生词)
+- `vocabulary` - Word lists with pinyin and translation
 - `grammar` - Grammar explanations
-- `tip` - Helper tips (小语助力)
+- `tip` - Helper tips
 - `exercise` - Practice activities with checkboxes
 - `instruction` - Meta-text instructions
-- `activity` - Classroom activities (课堂活动) → `TableFillExercise`
-- `tonguetwister` - Tongue twisters (跟读绕口令)
-- `matching` - Image-word matching (热身) → `MatchingExercise`
-- `fillblank` - Fill-in-the-blank with dropdowns (选词填空) → `FillBlankExercise`
-- `multiplechoice` - Multiple choice questions (选择正确答案) → `MultipleChoiceExercise`
-- `imagedescribe` - Image description with typed input (看图填空) → `ImageDescribeExercise`
-- `bonus` - Bonus content with video player (小语的彩蛋)
+- `activity` - Classroom activities → `TableFillExercise`
+- `tonguetwister` - Tongue twisters (floating white card, single merged sentence)
+- `matching` - Image-word matching → `MatchingExercise`
+- `fillblank` - Fill-in-the-blank with dropdowns → `FillBlankExercise`
+- `multiplechoice` - Multiple choice questions → `MultipleChoiceExercise`
+- `imagedescribe` - Image description with typed input → `ImageDescribeExercise`
+- `bonus` - Bonus content with video player
 
 ## Key Features
 
-### Toggle Controls (in fixed header)
-- **Pinyin toggle**: Shows/hides pinyin for all Chinese text
-- **Translation toggle**: Shows/hides Uzbek translations
-- **Font size**: A-/A+ buttons for accessibility
+### Toggle Controls
+- **Header controls**: Language toggle (RU/UZ), font size (A-/A+)
+- **Bottom nav toggles**: Pinyin and Translation (Tarjima) buttons in the center of the fixed bottom navigation bar, replacing the old lesson/page location text
+- **Translation panel**: Fixed panel below header showing translation of tapped sentence. Page has permanent extra `1em` top padding to prevent panel from overlapping content (padding does NOT change when panel toggles)
 
 ### Audio Playback
-- Sentence-level audio with play/pause toggle (button appears after Chinese text)
+- **Tap-to-play**: Tapping a sentence with `audio_url` auto-plays its audio (no per-sentence play buttons)
+- **Playing indicator**: Active sentence text turns blue (`color: var(--color-accent)`) via `.sentence--playing`
+- **Cursor**: Sentences with audio show `cursor: pointer` via `.sentence--has-audio`
 - Section-level "Play All" button next to instruction text (e.g., "朗读对话。Dialogni ovoz chiqarib o'qing.")
+- **Floating Play FAB**: When the section's "Play All" button scrolls behind the header, a floating action button (48x48, blue circle) appears at bottom-right (`position: fixed`, `bottom: 80px`, `right: 24px`, `z-index: 80`). FAB disappears when the section's sentence content scrolls out of view.
 - Instruction row and play button are always visible (independent of translation toggle)
 - Loading state with animated spinner (`@keyframes spin`)
 - Singleton player (only one audio at a time)
@@ -196,13 +199,13 @@ Page → Section → Sentence → Word
 - Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
 
 ### Styling Conventions
-- Section headers: Red gradient tab with rounded top corners (hidden for objectives and text sections)
+- Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
 - Section content: Colored background based on type
 - Pinyin: Accent color (blue), italic
 - Translation: Secondary text color, italic
 
-### Card Design (Objectives & Text Sections)
-Objectives and text sections use a modern floating card design:
+### Card Design (Objectives, Text, Exercise & Tongue Twister Sections)
+Objectives, text, exercise, and tongue twister sections use a modern floating card design:
 
 **Objectives section** (`.section--objectives`):
 - Header hidden (`display: none`)
@@ -220,6 +223,18 @@ Objectives and text sections use a modern floating card design:
 - Instruction rendered above the context card (without play button)
 - Play button moved inside the context card, inline at end of translation text (`.section__audio-btn--inline`)
 - Non-text sections keep the original layout (instruction with play button below context)
+
+**Exercise section** (`.section--exercise`):
+- Sentences in white floating card (`background: #fff`, `border-radius: 16px`, `box-shadow`, `padding: var(--spacing-sm) var(--spacing-md)`)
+- Instruction uses section-level `instruction` field (not a sentence with `isCheckbox`)
+- Instruction row indented (`padding-left: var(--spacing-md)`) to align ■ with card content
+
+**Tongue twister section** (`.section--tonguetwister`):
+- Header hidden (`display: none`), no subheading displayed
+- White floating card (`border-radius: 16px`, `box-shadow`, `padding: 20px`)
+- All tongue twister lines merged into a single sentence entry
+- Instruction + play button rendered above the card (non-text section layout)
+- Font size 18px, font-weight 500, line-height 1.7
 
 ## Content JSON Format
 
@@ -242,17 +257,17 @@ Objectives and text sections use a modern floating card design:
 {
   "id": "l1p1-sec-text1",
   "type": "text",
-  "heading": "课文 1",
-  "subheading": "Text 1",
+  "heading": "",
+  "subheading": "Tekst 1",
   "subheading_ru": "Текст 1",
   "context": "开学第一天，在办公室里...",
   "contextPinyin": "Kāixué dì yī tiān...",
   "contextTranslation": "O'quv yilining birinchi kuni...",
   "contextTranslation_ru": "В первый день учёбы...",
-  "instruction": "朗读对话。Read the dialogue aloud.",
-  "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%201%201.mp3",
-  "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK-1-1-1.jpg",
+  "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+  "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/dialogue.mp3",
+  "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-1-1.jpg",
   "sentences": [...]
 }
 ```
@@ -420,7 +435,9 @@ Objectives and text sections use a modern floating card design:
 - Sections use `"type": "text"` with empty `heading`/`subheading`
 
 ## UI Text Language
-- Section headings: Chinese + Uzbek/Russian (e.g., "目标 Maqsadlar", "生词 Yangi so'zlar")
+- Section headings: **Empty** (all Chinese headings removed — `heading` field is `""`)
+- Subheadings: Uzbek/Russian only (e.g., "Yangi so'zlar", "Новые слова")
+- Instructions: Uzbek/Russian only — **NO Chinese text** in any `instruction`/`instruction_ru` fields
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
@@ -444,15 +461,25 @@ npm run lint     # Run ESLint
 ## Supabase Storage
 - **Project URL**: https://miruwaeplbzfqmdwacsh.supabase.co
 - **Images bucket**: `/images/` - original textbook scans (HSK-1-1-1.jpg, HSK-1-2-1.jpg, etc.)
-- **Audio bucket**: `/audio/` - sentence and section audio files
-- URL format: `https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/{bucket}/{filename}`
+- **Audio bucket**: `/audio/` - organized by lesson and page
+- URL format: `https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20{lesson}/HSK%20{lesson}-{page}/{filename}.mp3`
+
+### Audio URL Patterns
+Folder structure: `HSK {lesson}/HSK {lesson}-{page}/`
+- **Section dialogue audio**: `dialogue.mp3` — full dialogue playback
+- **Per-sentence dialogue audio**: `dialogue1.mp3`, `dialogue2.mp3`, etc. — individual sentence playback
+- **Vocabulary word audio**: `{pinyin}.mp3` — pinyin stripped of tones/spaces, lowercase (e.g., `nihao.mp3`, `laoshi.mp3`)
+- **Tongue twister audio**: `tongue.mp3`
+- Example: Lesson 5, Page 2 dialogue sentence 3 → `HSK 5/HSK 5-2/dialogue3.mp3`
+- Example: Lesson 8, Page 1 vocab word 学校 (xuéxiào) → `HSK 8/HSK 8-1/xuexiao.mp3`
 
 ## Dialogue Layout
 - Speaker names in left column (grid layout, min-width 3em)
-- Dialogue text in right column with audio button inline after text
+- Dialogue text in right column (no per-sentence audio buttons — tap sentence to play)
 - Pinyin below text (when visible)
 - Translation below pinyin (when visible)
 - Grid ensures speaker names align vertically across all dialogue lines
+- Vocabulary and dialogue use the same font size and weight (`font-weight: 400`, base font size)
 
 ## Layout & Width Specifications
 
@@ -517,15 +544,17 @@ div.reader
 ├── header.reader__header (fixed, full-width background)
 │   └── div.reader__header-inner (constrained width)
 │       ├── Link.reader__home ("ReadVo")
-│       └── ReaderControls (buttons)
-├── article.page (constrained width)
+│       └── ReaderControls (RU/UZ toggle, A-/A+ font controls)
+├── div.page__translation-panel (fixed below header, shown when translation on + sentence tapped)
+├── article.page (constrained width, permanent 1em extra top padding for panel space)
 │   ├── LessonHeader (if present)
-│   └── div.page__content
-│       └── Section (multiple)
+│   ├── div.page__content
+│   │   └── Section (multiple)
+│   └── button.page__audio-fab (floating play button, shown when section play button scrolls away)
 └── nav.reader__bottom-nav (fixed, full-width background)
     └── div.reader__bottom-nav-inner (constrained width)
         ├── Link/span.reader__nav-btn (prev)
-        ├── span.reader__location
+        ├── div.reader__nav-toggles (Pinyin + Tarjima toggle buttons)
         └── Link/span.reader__nav-btn (next)
 ```
 
@@ -573,11 +602,18 @@ div.reader
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
 - `.lang-page__placeholder` - Centered placeholder for empty tabs
 - `.lesson-card` - Lesson card on book page
-- `.page` - Lesson content container
+- `.page` - Lesson content container (permanent `1em` extra top/bottom padding for translation panel space)
+- `.page__translation-panel` - Fixed translation panel below header (z-index 99)
+- `.page__audio-fab` - Floating play button (48x48, blue circle, `bottom: 80px`, `right: 24px`, `z-index: 80`)
+- `.page__audio-fab--playing` - Green background when audio playing
 - `.reader__header` - Fixed header (full-width background)
 - `.reader__header-inner` - Header content (constrained to match page width)
 - `.reader__bottom-nav` - Fixed bottom nav (full-width background)
 - `.reader__bottom-nav-inner` - Bottom nav content (constrained to match page width)
+- `.reader__nav-toggles` - Pinyin/Tarjima toggle button container in bottom nav
+- `.reader__nav-toggle` / `--active` - Toggle buttons (`border-radius: 4px`, active = blue bg)
+- `.sentence--has-audio` - `cursor: pointer` on tappable audio sentences
+- `.sentence--playing .sentence__text` - Blue text color for currently playing sentence
 - `.flashcard-page` - Flashcard page container
 - `.flashcard__card` - 3D flip card (`transform-style: preserve-3d`, `aspect-ratio: 3/4`)
 - `.flashcard__face` - Card face (`backface-visibility: hidden`)
@@ -606,6 +642,11 @@ div.reader
 - `.section--text .section__context` - Floating white card with shadow for context narration
 - `.section--text .section__context-translation` - Divider above translation + flex layout for inline play button
 - `.section__audio-btn--inline` - Play button positioned inline at end of context translation text
+- `.section--exercise .section__sentences` - White floating card (border-radius 16px, shadow)
+- `.section--exercise .section__instruction-row` - Indented (`padding-left: var(--spacing-md)`) to align with card content
+- `.section__instruction-checkbox` - Blue ■ with `flex-start` alignment and `margin-top: 0.1em` to align with Chinese text
+- `.section--tonguetwister` - Transparent background, no header/subheading
+- `.section--tonguetwister .section__sentences` - White floating card (border-radius 16px, shadow, padding 20px)
 
 ### Padding
 - Page side padding: `var(--spacing-xl)` (32px)
@@ -620,14 +661,20 @@ div.reader
 - Russian translations use standard Cyrillic
 - `dialogueNumber` should be plain numbers (e.g., `"1"`, `"2"`) — the component wraps them in parentheses
 - All exercise progress bars use `var(--color-accent)` for consistency
-- Do NOT include "分角色朗读对话。" (read dialogue by roles) sentences in exercise sections
-- Do NOT include "大声朗读。Read aloud." sentences in grammar sections
-- Do NOT add pinyin to grammar headings, grammar explanations, or instruction sentences (non-learning content)
+- Exercise instructions use section-level `instruction`/`instruction_ru` fields (NOT sentences with `isCheckbox`)
+- **NO Chinese in headings**: All `heading` fields are empty (`""`) — Chinese section titles removed
+- **NO Chinese in instructions**: All `instruction`/`instruction_ru` fields are Uzbek/Russian only
+- **NO Chinese in grammar explanations**: Grammar explanation sentences have no `text_original` (only `text_translation`/`text_translation_ru`)
 - Pinyin is ONLY for learning content: Chinese example sentences, vocabulary, dialogues, tongue twisters
 - Numbered sentences like `(1) 四口` use inline numbering in `text_original` (not `dialogueNumber`)
 - Pinyin/translation for numbered sentences in grammar and exercise sections auto-indent via CSS (`padding-left: 2.2em`)
 - For pages with MC listening exercises: split text section into 3 parts: (1) heading+context, (2) MC exercise, (3) instruction+audio+image+dialogue
-- Tongue twister subheadings: Uzbek = "Tez aytishni takrorlang", Russian = "Повторите скороговорку"
+- **Tongue twisters**: All lines merged into a single sentence entry. Type must be `tonguetwister` (not `text` or `grammar`). Section field must be `tonguetwister`.
+- Standard instruction texts:
+  - Dialogue: `"Dialogni tinglang va ovoz chiqarib o'qing."` / `"Послушайте диалог и прочитайте его вслух."`
+  - MC: `"Dialogni ikki marta tinglab, to'g'ri javobni tanlang."` / `"Прослушайте диалог дважды и выберите правильный ответ."`
+  - Fill-blank: `"To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring."` / `"Выберите подходящие слова для заполнения пропусков."`
+  - Tongue twister: `"Tez aytishni eshiting va aytishni mashq qiling."` / `"Послушайте скороговорку и потренируйтесь произносить."`
 
 ## Content Formatting Standards
 
@@ -662,8 +709,22 @@ div.reader
     "text_translation": "Men buni yoqtiraman, uni ham yoqtiraman."
   }
   ```
-- **NO** pinyin for grammar explanations (only for example sentences)
 - Grammar dialogues use `speaker` + `dialogueNumber` fields for A/B exchanges
+
+### Grammar Explanations (no Chinese)
+- Grammar explanation sentences have **no `text_original`** and **no `pinyin`** — only translations
+- Identified by: `section === 'grammar'` + no `pinyin` field + has `text_translation`
+- Validator allows these via `isGrammarExplanation` check
+- Sentence.tsx conditionally renders `sentence__text` only when `text_original` exists
+- Format:
+  ```json
+  {
+    "id": "l9p2-g3-s2",
+    "section": "grammar",
+    "text_translation": "\"第\" butun sonlar oldida kelib, tartib sonni bildiradi.",
+    "text_translation_ru": "«第» ставится перед целым числом для обозначения порядкового числительного."
+  }
+  ```
 
 ### CSS Auto-Indentation
 - Numbered sentences in grammar and exercise sections automatically indent via CSS

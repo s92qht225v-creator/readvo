@@ -5,15 +5,15 @@
     {
       "id": "l14p2-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在课堂上，王一飞询问学生们的学习情况。",
       "contextPinyin": "Zài kètáng shàng, Wáng Yīfēi xúnwèn xuéshēngmen de xuéxí qíngkuàng.",
       "contextTranslation": "Darsda Vang Ifey talabalardan o'qish holati haqida so'rayapti.",
       "contextTranslation_ru": "На уроке Ван Ифэй спрашивает студентов об их успехах в учёбе.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l14p2-sec-text2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-2-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Sizlar xitoycha gapirishni o'rgandingizlar, xitoy hierogliflarini yozishni ham bilar bo'ldingizlarmi?",
           "text_translation_ru": "Вы уже умеете говорить по-китайски, а писать иероглифы тоже научились?",
           "pinyin": "Nǐmen huì shuō Hànyǔ le, yě huì xiě Hànzì le ma?",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue1.mp3"
         },
         {
           "id": "l14p2-t2-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Biz hammamiz yozishni bilamiz.",
           "text_translation_ru": "Мы все уже умеем писать.",
           "pinyin": "Wǒmen dōu huì xiě le.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue2.mp3"
         },
         {
           "id": "l14p2-t2-s3",
@@ -123,7 +125,8 @@
           "text_translation": "O'qituvchi, men eshitmayapman.",
           "text_translation_ru": "Учитель, я не слышу.",
           "pinyin": "Lǎoshī, wǒ tīng bú jiàn.",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue3.mp3"
         },
         {
           "id": "l14p2-t2-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Iltimos, hamma gaplashmang! O'qituvchining savolini tinglang: sizlar qaysi hierogliflarni yozishni bilasizlar?",
           "text_translation_ru": "Пожалуйста, не разговаривайте! Послушайте вопрос учителя: какие иероглифы вы уже умеете писать?",
           "pinyin": "Qǐng dàjiā búyào shuōhuà! Qǐng tīng lǎoshī de wèntí: Nǐmen dōu huì xiě nǎxiē Hànzì le?",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue4.mp3"
         },
         {
           "id": "l14p2-t2-s5",
@@ -141,15 +145,16 @@
           "text_translation": "Men mana bu hierogliflarni yozishni bildim, qarang!",
           "text_translation_ru": "Я уже умею писать эти иероглифы, посмотрите!",
           "pinyin": "Wǒ huì xiě zhèxiē zì le, nín kàn!",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue5.mp3"
         }
       ]
     },
     {
       "id": "l14p2-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l14p2-ex-s1",
@@ -172,7 +177,7 @@
     {
       "id": "l14p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%204.mp3",
@@ -185,7 +190,8 @@
           "text_translation_ru": "писать (глагол)",
           "pinyin": "xiě",
           "wordClass": "v.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/xie.mp3"
         },
         {
           "id": "l14p2-v-s2",
@@ -195,7 +201,8 @@
           "text_translation_ru": "все; оба (нареч.)",
           "pinyin": "dōu",
           "wordClass": "adv.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dou.mp3"
         },
         {
           "id": "l14p2-v-s3",
@@ -205,7 +212,8 @@
           "text_translation_ru": "услышать (глагол)",
           "pinyin": "tīngjiàn",
           "wordClass": "v.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/tingjian.mp3"
         },
         {
           "id": "l14p2-v-s4",
@@ -215,7 +223,8 @@
           "text_translation_ru": "не надо; не нужно (нареч.)",
           "pinyin": "búyào",
           "wordClass": "adv.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/buyao.mp3"
         },
         {
           "id": "l14p2-v-s5",
@@ -225,7 +234,8 @@
           "text_translation_ru": "говорить; разговаривать (глагол)",
           "pinyin": "shuōhuà",
           "wordClass": "v.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/shuohua.mp3"
         },
         {
           "id": "l14p2-v-s6",
@@ -235,7 +245,8 @@
           "text_translation_ru": "слушать; слышать (глагол)",
           "pinyin": "tīng",
           "wordClass": "v.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/ting.mp3"
         },
         {
           "id": "l14p2-v-s7",
@@ -245,7 +256,8 @@
           "text_translation_ru": "какие; которые (мест.)",
           "pinyin": "nǎxiē",
           "wordClass": "pron.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/naxie.mp3"
         },
         {
           "id": "l14p2-v-s8",
@@ -255,14 +267,15 @@
           "text_translation_ru": "иероглиф; буква (сущ.)",
           "pinyin": "zì",
           "wordClass": "n.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/zi.mp3"
         }
       ]
     },
     {
       "id": "l14p2-sec-vocab-proper",
       "type": "vocabulary",
-      "heading": "专有名词",
+      "heading": "",
       "subheading": "Atoqli otlar",
       "subheading_ru": "Имена собственные",
       "sentences": [
@@ -273,7 +286,8 @@
           "text_translation": "xitoy tili",
           "text_translation_ru": "китайский язык",
           "pinyin": "Hànyǔ",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/hanyu.mp3"
         },
         {
           "id": "l14p2-vp-s2",
@@ -282,21 +296,21 @@
           "text_translation": "xitoy hieroglifi",
           "text_translation_ru": "китайский иероглиф",
           "pinyin": "Hànzì",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/hanzi.mp3"
         }
       ]
     },
     {
       "id": "l14p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l14p2-g3-title",
           "section": "grammar",
-          "text_original": "范围副词\"都\"",
           "text_translation": "Umumlashtiruvchi ravish \"都\"",
           "text_translation_ru": "Обобщающее наречие «都»",
           "grammarNumber": "3"
@@ -304,7 +318,6 @@
         {
           "id": "l14p2-g3-explain",
           "section": "grammar",
-          "text_original": "范围副词\"都\"表示全部、总括，总括的对象在\"都\"前。否定时，否定词在\"都\"后。",
           "text_translation": "Umumlashtiruvchi ravish \"都\" barcha, hammasini anglatadi, umumlashtirilgan ob'yekt \"都\" oldida keladi. Inkor qilishda inkor so'zi \"都\" dan keyin keladi.",
           "text_translation_ru": "Обобщающее наречие «都» означает «все, в целом». Обобщаемый объект ставится перед «都». При отрицании отрицательное слово ставится после «都»."
         },

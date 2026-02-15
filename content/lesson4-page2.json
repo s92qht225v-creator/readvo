@@ -5,10 +5,10 @@
     {
       "id": "l4p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
-      "context": "在公司里，王一雪和杨同乐休息时聊天儿。At the company, Wang Yixue and Yang Tongle were chatting during a break.",
+      "context": "在公司里，王一雪和杨同乐休息时聊天儿。",
       "contextPinyin": "Zài gōngsī lǐ, Wáng Yīxuě hé Yáng Tónglè xiūxi shí liáotiānr.",
       "contextTranslation": "Kompaniyada, Wang Yixue va Yang Tongle tanaffusda suhbatlashmoqda.",
       "contextTranslation_ru": "В компании Ван Исюэ и Ян Тунлэ беседуют на перерыве.",
@@ -17,8 +17,8 @@
     {
       "id": "l4p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l4p2-sec-text2-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,8 @@
           "text_translation_ru": "У меня два старших брата, а у тебя?",
           "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue1.mp3"
         },
         {
           "id": "l4p2-t2-s2",
@@ -121,7 +122,8 @@
           "text_translation_ru": "У меня нет старших братьев.",
           "pinyin": "Wǒ méiyǒu gēge.",
           "speaker": "杨同乐",
-          "speakerName": "Yáng Tónglè"
+          "speakerName": "Yáng Tónglè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue2.mp3"
         },
         {
           "id": "l4p2-t2-s3",
@@ -131,7 +133,8 @@
           "text_translation_ru": "Сколько человек в твоей семье?",
           "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue3.mp3"
         },
         {
           "id": "l4p2-t2-s4",
@@ -141,14 +144,15 @@
           "text_translation_ru": "В моей семье четыре человека: папа, мама, младшая сестра и я.",
           "pinyin": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
           "speaker": "杨同乐",
-          "speakerName": "Yáng Tónglè"
+          "speakerName": "Yáng Tónglè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l4p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "sentences": [
@@ -158,7 +162,8 @@
           "text_original": "哥哥",
           "text_translation": "aka (ot)",
           "text_translation_ru": "старший брат (сущ.)",
-          "pinyin": "gēge"
+          "pinyin": "gēge",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/gege.mp3"
         },
         {
           "id": "l4p2-v-s2",
@@ -166,7 +171,8 @@
           "text_original": "呢",
           "text_translation": "savol yuklamasi (yuklama)",
           "text_translation_ru": "вопросительная частица (част.)",
-          "pinyin": "ne"
+          "pinyin": "ne",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/ne.mp3"
         },
         {
           "id": "l4p2-v-s3",
@@ -174,7 +180,8 @@
           "text_original": "没有",
           "text_translation": "yo'q, ega bo'lmaslik (fe'l)",
           "text_translation_ru": "не иметь (гл.)",
-          "pinyin": "méiyǒu"
+          "pinyin": "méiyǒu",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meiyou.mp3"
         },
         {
           "id": "l4p2-v-s4",
@@ -182,7 +189,8 @@
           "text_original": "家",
           "text_translation": "oila, uy (ot)",
           "text_translation_ru": "семья, дом (сущ.)",
-          "pinyin": "jiā"
+          "pinyin": "jiā",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/jia.mp3"
         },
         {
           "id": "l4p2-v-s5",
@@ -190,7 +198,8 @@
           "text_original": "几",
           "text_translation": "necha, nechta (olmosh)",
           "text_translation_ru": "сколько (мест.)",
-          "pinyin": "jǐ"
+          "pinyin": "jǐ",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/ji.mp3"
         },
         {
           "id": "l4p2-v-s6",
@@ -198,7 +207,8 @@
           "text_original": "口",
           "text_translation": "og'iz; oila a'zolarini sanash uchun (o'lchov so'zi)",
           "text_translation_ru": "рот; счётное слово для членов семьи (сч. сл.)",
-          "pinyin": "kǒu"
+          "pinyin": "kǒu",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/kou.mp3"
         },
         {
           "id": "l4p2-v-s7",
@@ -206,7 +216,8 @@
           "text_original": "爸爸",
           "text_translation": "dada, ota (ot)",
           "text_translation_ru": "папа (сущ.)",
-          "pinyin": "bàba"
+          "pinyin": "bàba",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/baba.mp3"
         },
         {
           "id": "l4p2-v-s8",
@@ -214,7 +225,8 @@
           "text_original": "妈妈",
           "text_translation": "ona (ot)",
           "text_translation_ru": "мама (сущ.)",
-          "pinyin": "māma"
+          "pinyin": "māma",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/mama.mp3"
         },
         {
           "id": "l4p2-v-s9",
@@ -222,7 +234,8 @@
           "text_original": "妹妹",
           "text_translation": "singil (ot)",
           "text_translation_ru": "младшая сестра (сущ.)",
-          "pinyin": "mèimei"
+          "pinyin": "mèimei",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meimei.mp3"
         },
         {
           "id": "l4p2-v-s10",
@@ -230,21 +243,21 @@
           "text_original": "和",
           "text_translation": "va, bilan (bog'lovchi)",
           "text_translation_ru": "и, с (союз)",
-          "pinyin": "hé"
+          "pinyin": "hé",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/he.mp3"
         }
       ]
     },
     {
       "id": "l4p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l4p2-g3-s1",
           "section": "grammar",
-          "text_original": "语气助词\"呢\"（1） Modal Particle \"呢\" (1)",
           "text_translation": "Modal yuklama \"呢\" (1)",
           "text_translation_ru": "Модальная частица «呢» (1)",
           "grammarNumber": "3"
@@ -252,7 +265,6 @@
         {
           "id": "l4p2-g3-s2",
           "section": "grammar",
-          "text_original": "本课\"呢\"在句末，表示疑问，询问上文提到的情况。基本结构：A……，B呢？",
           "text_translation": "Ushbu darsda \"呢\" gap oxirida qo'llaniladi, savol bildiradi va yuqorida aytib o'tilgan vaziyat haqida so'raydi. Asosiy tuzilma: A……, B ne?",
           "text_translation_ru": "В этом уроке «呢» используется в конце предложения для обозначения вопроса о ранее упомянутой ситуации. Основная структура: A……, B呢?"
         },
@@ -289,7 +301,6 @@
         {
           "id": "l4p2-g4-s1",
           "section": "grammar",
-          "text_original": "名量词和名量结构 Nominal Measure Words and [Num+M+(N)] Structure",
           "text_translation": "Ot o'lchov so'zlari va [Son+O'lchov+(Ot)] tuzilmasi",
           "text_translation_ru": "Именные счётные слова и структура [Числ.+Сч.сл.+(Сущ.)]",
           "grammarNumber": "4"
@@ -297,7 +308,6 @@
         {
           "id": "l4p2-g4-s2",
           "section": "grammar",
-          "text_original": "表达数量时，汉语数词后一般要带量词。本课学习表示人或物数量的名量词，如\"口\"、\"个\"等，以及名量结构，如\"四口人\"、\"两个哥哥\"等。",
           "text_translation": "Miqdorni ifodalashda xitoy tilida sonlardan keyin odatda o'lchov so'zi qo'yiladi. Ushbu darsda odamlar yoki narsalar sonini bildiruvchi ot o'lchov so'zlari, masalan \"口\", \"个\" va boshqalar, hamda ot o'lchov tuzilmalari, masalan \"四口人\", \"两个哥哥\" va boshqalar o'rganiladi.",
           "text_translation_ru": "При выражении количества в китайском языке после числительных обычно ставится счётное слово. В этом уроке изучаются именные счётные слова для людей и предметов, такие как «口», «个» и др., а также именные счётные структуры, например «四口人», «两个哥哥» и др."
         },
@@ -338,8 +348,8 @@
     {
       "id": "l4p2-sec-fillblank",
       "type": "fillblank",
-      "instruction": "完成对话。Dialoglarni to'ldiring.",
-      "instruction_ru": "完成对话。Завершите диалоги.",
+      "instruction": "Dialoglarni to'ldiring.",
+      "instruction_ru": "Завершите диалоги.",
       "sentences": [],
       "fillBlankData": {
         "options": [

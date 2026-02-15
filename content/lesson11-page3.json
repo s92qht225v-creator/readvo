@@ -5,15 +5,15 @@
     {
       "id": "l11p3-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "星期六早上，刘明要去医院加班，出门前和女儿对话。",
       "contextPinyin": "Xīngqīliù zǎoshang, Liú Míng yào qù yīyuàn jiābān, chūmén qián hé nǚ'ér duìhuà.",
       "contextTranslation": "Shanba kuni ertalab Liu Ming kasalxonaga qo'shimcha ishga bormoqchi, chiqishdan oldin qizi bilan gaplashdi.",
       "contextTranslation_ru": "В субботу утром Лю Мин собирался на сверхурочную работу в больницу и перед выходом поговорил с дочерью.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l11p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Ukang turdi-turmadimi?",
           "text_translation_ru": "Братик встал или нет?",
           "pinyin": "Dìdi qǐchuáng méi qǐchuáng ne?",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue1.mp3"
         },
         {
           "id": "l11p3-t3-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Turmadi hali, hali uxlayapti.",
           "text_translation_ru": "Ещё не встал, всё ещё спит.",
           "pinyin": "Méi qǐchuáng ne, hái zài shuìjiào.",
-          "speaker": "刘小雪"
+          "speaker": "刘小雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue2.mp3"
         },
         {
           "id": "l11p3-t3-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Hali uxlayaptimi? U bugun u yerga boradi-bormaydimi?",
           "text_translation_ru": "Всё ещё спит? Он сегодня пойдёт туда или нет?",
           "pinyin": "Hái shuì ne? Tā jīntiān qù bu qù nàlǐ?",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue3.mp3"
         },
         {
           "id": "l11p3-t3-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Qayerga?",
           "text_translation_ru": "Куда?",
           "pinyin": "Qù nǎlǐ?",
-          "speaker": "刘小雪"
+          "speaker": "刘小雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue4.mp3"
         },
         {
           "id": "l11p3-t3-s5",
@@ -141,7 +145,8 @@
           "text_translation": "Supermarketga.",
           "text_translation_ru": "В супермаркет.",
           "pinyin": "Qù chāoshì.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue5.mp3"
         },
         {
           "id": "l11p3-t3-s6",
@@ -150,14 +155,15 @@
           "text_translation": "Men kecha undan so'radim, u menga aytdi, bormaydi, bugun do'stlari bilan o'ynaydi.",
           "text_translation_ru": "Я вчера его спрашивала, он мне сказал, что не пойдёт, сегодня хочет поиграть с друзьями.",
           "pinyin": "Wǒ zuótiān wèn tā, tā duì wǒ shuō, tā bú qù, tā jīntiān yào hé xiǎopéngyou wán.",
-          "speaker": "刘小雪"
+          "speaker": "刘小雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l11p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%206.mp3",
@@ -170,7 +176,8 @@
           "text_translation_ru": "младший брат (сущ.)",
           "pinyin": "dìdi",
           "wordClass": "n.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/didi.mp3"
         },
         {
           "id": "l11p3-v-s2",
@@ -180,7 +187,8 @@
           "text_translation_ru": "вставать; подниматься с кровати (глагол)",
           "pinyin": "qǐchuáng",
           "wordClass": "v.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/qichuang.mp3"
         },
         {
           "id": "l11p3-v-s3",
@@ -190,7 +198,8 @@
           "text_translation_ru": "спать (глагол)",
           "pinyin": "shuìjiào",
           "wordClass": "v.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuijiao.mp3"
         },
         {
           "id": "l11p3-v-s4",
@@ -200,7 +209,8 @@
           "text_translation_ru": "спать (глагол)",
           "pinyin": "shuì",
           "wordClass": "v.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shui.mp3"
         },
         {
           "id": "l11p3-v-s5",
@@ -210,7 +220,8 @@
           "text_translation_ru": "там; то место (мест.)",
           "pinyin": "nàlǐ",
           "wordClass": "pron.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
         },
         {
           "id": "l11p3-v-s6",
@@ -220,7 +231,8 @@
           "text_translation_ru": "где; куда (мест.)",
           "pinyin": "nǎlǐ",
           "wordClass": "pron.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
         },
         {
           "id": "l11p3-v-s7",
@@ -230,7 +242,8 @@
           "text_translation_ru": "вчера (сущ.)",
           "pinyin": "zuótiān",
           "wordClass": "n.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/zuotian.mp3"
         },
         {
           "id": "l11p3-v-s8",
@@ -240,7 +253,8 @@
           "text_translation_ru": "спрашивать (глагол)",
           "pinyin": "wèn",
           "wordClass": "v.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/wen.mp3"
         },
         {
           "id": "l11p3-v-s9",
@@ -250,7 +264,8 @@
           "text_translation_ru": "к; по отношению к (предлог)",
           "pinyin": "duì",
           "wordClass": "prep.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dui.mp3"
         },
         {
           "id": "l11p3-v-s10",
@@ -260,7 +275,8 @@
           "text_translation_ru": "говорить; сказать (глагол)",
           "pinyin": "shuō",
           "wordClass": "v.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuo.mp3"
         },
         {
           "id": "l11p3-v-s11",
@@ -270,7 +286,8 @@
           "text_translation_ru": "хотеть; собираться (мод. глагол)",
           "pinyin": "yào",
           "wordClass": "mod.",
-          "vocabNumber": 24
+          "vocabNumber": 24,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/yao.mp3"
         },
         {
           "id": "l11p3-v-s12",
@@ -280,21 +297,21 @@
           "text_translation_ru": "ребёнок; дети (сущ.)",
           "pinyin": "xiǎopéngyou",
           "wordClass": "n.",
-          "vocabNumber": 25
+          "vocabNumber": 25,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/xiaopengyou.mp3"
         }
       ]
     },
     {
       "id": "l11p3-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l11p3-g3-s1",
           "section": "grammar",
-          "text_original": "能愿动词\"要\"",
           "text_translation": "Modal fe'l \"要\"",
           "text_translation_ru": "Модальный глагол «要»",
           "grammarNumber": "3"
@@ -302,7 +319,6 @@
         {
           "id": "l11p3-g3-s2",
           "section": "grammar",
-          "text_original": "能愿动词\"要\"在动词前，表示想做、打算做。",
           "text_translation": "\"要\" modal fe'li fe'l oldida kelib, biror narsani qilishni xohlash yoki niyat qilishni bildiradi.",
           "text_translation_ru": "Модальный глагол «要» ставится перед глаголом и выражает желание или намерение что-либо сделать."
         },
@@ -335,11 +351,11 @@
     {
       "id": "l11p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -484,8 +500,8 @@
     {
       "id": "l11p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -593,16 +609,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "l11p3-sec-activity",
-      "type": "activity",
-      "heading": "课堂活动",
-      "subheading": "Sinf mashg'uloti",
-      "subheading_ru": "Классное занятие",
-      "instruction": "双人活动。两人一组，互相问答做不做某事。Juft bo'lib ishlang. Ikki kishidan iborat guruhda navbatma-navbat biror ishni qilish-qilmasligingiz haqida so'rang va javob bering.",
-      "instruction_ru": "双人活动。两人一组，互相问答做不做某事。Работа в парах. Работайте в парах, по очереди спрашивая и отвечая, собираетесь ли вы что-то делать.",
-      "sentences": []
     }
   ]
 }

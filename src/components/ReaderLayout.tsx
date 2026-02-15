@@ -52,8 +52,17 @@ export function ReaderLayout({
   // Translation visibility: global toggle for all sentences
   const [isTranslationVisible, setIsTranslationVisible] = useState(false);
 
-  // Font size: percentage scale (100 = default, range 80-150)
-  const [fontSize, setFontSize] = useState(100);
+  // Font size: percentage scale (100 = default, range 80-150), persisted
+  const [fontSize, setFontSize] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('readvo-font-size');
+      return saved ? Number(saved) : 100;
+    }
+    return 100;
+  });
+  useEffect(() => {
+    localStorage.setItem('readvo-font-size', String(fontSize));
+  }, [fontSize]);
 
   // Language selection (persisted via localStorage)
   const [language, toggleLanguage] = useLanguage();
@@ -113,7 +122,7 @@ export function ReaderLayout({
   }, []);
 
   return (
-    <div className="reader">
+    <div className={`reader${isTranslationVisible ? ' reader--with-panel' : ''}`}>
       {/* Fixed header with logo and controls */}
       <header className="reader__header">
         <div className="reader__header-inner">
@@ -193,12 +202,22 @@ export function ReaderLayout({
                 </span>
               )}
 
-              <span className="reader__location">
-                {language === 'ru'
-                  ? `урок ${lessonId} / стр. ${pageNum}`
-                  : `${lessonId}-dars / ${pageNum}-sahifa`
-                }
-              </span>
+              <div className="reader__nav-toggles">
+                <button
+                  className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`}
+                  onClick={handlePinyinToggle}
+                  type="button"
+                >
+                  Pinyin
+                </button>
+                <button
+                  className={`reader__nav-toggle ${isTranslationVisible ? 'reader__nav-toggle--active' : ''}`}
+                  onClick={handleTranslationToggle}
+                  type="button"
+                >
+                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
+                </button>
+              </div>
 
               {nextNav ? (
                 <Link

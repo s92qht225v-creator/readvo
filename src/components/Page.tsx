@@ -14,7 +14,7 @@
  * - audio: managed by useAudioPlayer hook (singleton, concurrency-safe)
  */
 
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect, useRef } from 'react';
 import type { Page as PageType } from '../types';
 import type { Language } from '../types/ui-state';
 import { Section } from './Section';
@@ -56,6 +56,49 @@ export const Page: React.FC<PageProps> = React.memo(function Page({
   // Audio player - uses singleton with concurrency guard
   const audioPlayer = useAudioPlayer();
 
+  // FAB state: track which section's play button is scrolled out of view
+  const [fabSection, setFabSection] = useState<{ id: string; audioUrl: string } | null>(null);
+  const pageRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = pageRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const allRows = el.querySelectorAll<HTMLElement>('[data-audio-section-id]');
+      let visibleFab: { id: string; audioUrl: string } | null = null;
+
+      allRows.forEach((row) => {
+        const id = row.getAttribute('data-audio-section-id')!;
+        const audioUrl = row.getAttribute('data-audio-url')!;
+        const rowRect = row.getBoundingClientRect();
+
+        // Check if instruction row is scrolled behind the fixed header (60px)
+        if (rowRect.bottom < 70) {
+          // Find the sentences container within this section
+          const sectionEl = el.querySelector(`[data-section-id="${id}"]`);
+          if (sectionEl) {
+            const sentencesEl = sectionEl.querySelector('.section__sentences');
+            const contentEl = sentencesEl || sectionEl;
+            const contentRect = contentEl.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            // Sentences are still visible: top is above viewport bottom AND bottom is below header+buffer
+            if (contentRect.top < viewportHeight && contentRect.bottom > 120) {
+              visibleFab = { id, audioUrl };
+            }
+          }
+        }
+      });
+
+      setFabSection(visibleFab);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [page.id]);
+
   /**
    * Handle audio button click → play/stop audio
    *
@@ -95,6 +138,7 @@ export const Page: React.FC<PageProps> = React.memo(function Page({
 
   return (
     <article
+      ref={pageRef}
       className="page"
       data-page-id={page.id}
       style={{ '--font-scale': `${fontSize / 100}` } as React.CSSProperties}
@@ -135,6 +179,30 @@ export const Page: React.FC<PageProps> = React.memo(function Page({
         <div className="page__audio-error" role="alert">
           {audioPlayer.state.error}
         </div>
+      )}
+
+      {/* Floating play button when section audio button is scrolled out of view */}
+      {fabSection && (
+        <button
+          className={`page__audio-fab ${audioPlayer.isPlaying(fabSection.id) ? 'page__audio-fab--playing' : ''}`}
+          onClick={() => handleSectionAudioClick(fabSection.id, fabSection.audioUrl)}
+          disabled={audioPlayer.state.loadingSentenceId === fabSection.id}
+          type="button"
+          aria-label={audioPlayer.isPlaying(fabSection.id) ? 'Stop audio' : 'Play all'}
+        >
+          {audioPlayer.state.loadingSentenceId === fabSection.id ? (
+            <span className="page__audio-fab-spinner" />
+          ) : audioPlayer.isPlaying(fabSection.id) ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </button>
       )}
     </article>
   );

@@ -12,7 +12,7 @@
     {
       "id": "l14p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,11 +57,11 @@
     {
       "id": "l14p1-sec-matching",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "instruction": "Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "Подберите к словам соответствующие картинки.",
       "sentences": [],
       "matchingItems": [
         {
@@ -117,15 +117,15 @@
     {
       "id": "l14p1-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在教室里，下课后，白家月和陈天中在谈论上一次课外旅行。",
       "contextPinyin": "Zài jiàoshì lǐ, xiàkè hòu, Bái Jiāyuè hé Chén Tiānzhōng zài tánlùn shàng yí cì kèwài lǚxíng.",
       "contextTranslation": "Sinfxonada, darsdan keyin, Bai Jiyayue va Chen Tianzhong o'tgan safar haqida gaplashyapti.",
       "contextTranslation_ru": "В классе, после урока, Бай Цзяюэ и Чэнь Тяньчжун обсуждают прошлую школьную поездку.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -205,9 +205,9 @@
     {
       "id": "l14p1-sec-text1",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-1-1.jpg",
       "sentences": [
         {
@@ -217,7 +217,8 @@
           "text_translation": "Sizlar poyezdga chiqqandan keyin Vang o'qituvchini ko'rdingizlarmi?",
           "text_translation_ru": "Вы видели учителя Вана после посадки на поезд?",
           "pinyin": "Nǐmen shàng huǒchē hòu kànjiàn Wáng lǎoshī le ma?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue1.mp3"
         },
         {
           "id": "l14p1-t1-s2",
@@ -226,7 +227,8 @@
           "text_translation": "Ko'rmadik. Tushda poyezd jo'nagandan keyin, ba'zilar kitob o'qiyotgan edi, ba'zilari uxlab qoldi.",
           "text_translation_ru": "Не видели. После отправления поезда в полдень некоторые читали книги, а некоторые уснули.",
           "pinyin": "Méi kànjiàn. Zhōngwǔ chē kāi hòu, yǒuxiē rén zài kàn shū, yǒuxiē rén shuìjiào le.",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue2.mp3"
         },
         {
           "id": "l14p1-t1-s3",
@@ -235,7 +237,8 @@
           "text_translation": "Senga nima?",
           "text_translation_ru": "А ты?",
           "pinyin": "Nǐ ne?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue3.mp3"
         },
         {
           "id": "l14p1-t1-s4",
@@ -244,7 +247,8 @@
           "text_translation": "Men bir kino ko'rdim.",
           "text_translation_ru": "Я посмотрел фильм.",
           "pinyin": "Wǒ kànle yí gè diànyǐng.",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue4.mp3"
         }
       ],
       "tip": {
@@ -257,8 +261,8 @@
     {
       "id": "l14p1-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l14p1-ex-s1",
@@ -281,7 +285,7 @@
     {
       "id": "l14p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%202.mp3",
@@ -294,7 +298,8 @@
           "text_translation_ru": "подниматься; садиться (на транспорт) (глагол)",
           "pinyin": "shàng",
           "wordClass": "v.",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/shang.mp3"
         },
         {
           "id": "l14p1-v-s2",
@@ -304,7 +309,8 @@
           "text_translation_ru": "поезд (сущ.)",
           "pinyin": "huǒchē",
           "wordClass": "n.",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/huoche.mp3"
         },
         {
           "id": "l14p1-v-s3",
@@ -314,7 +320,8 @@
           "text_translation_ru": "полдень (сущ.)",
           "pinyin": "zhōngwǔ",
           "wordClass": "n.",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/zhongwu.mp3"
         },
         {
           "id": "l14p1-v-s4",
@@ -324,7 +331,8 @@
           "text_translation_ru": "отправляться; уезжать (о транспорте) (глагол)",
           "pinyin": "kāi",
           "wordClass": "v.",
-          "vocabNumber": 4
+          "vocabNumber": 4,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/kai.mp3"
         },
         {
           "id": "l14p1-v-s5",
@@ -334,7 +342,8 @@
           "text_translation_ru": "некоторые (мест.)",
           "pinyin": "yǒuxiē",
           "wordClass": "pron.",
-          "vocabNumber": 5
+          "vocabNumber": 5,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youxie.mp3"
         },
         {
           "id": "l14p1-v-s6",
@@ -344,7 +353,8 @@
           "text_translation_ru": "некоторые (мест.)",
           "pinyin": "yǒude",
           "wordClass": "pron.",
-          "vocabNumber": 6
+          "vocabNumber": 6,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youde.mp3"
         },
         {
           "id": "l14p1-v-s7",
@@ -354,21 +364,21 @@
           "text_translation_ru": "частица после глагола, указывающая на завершённость действия",
           "pinyin": "le",
           "wordClass": "part.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/le.mp3"
         }
       ]
     },
     {
       "id": "l14p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l14p1-g1-s1",
           "section": "grammar",
-          "text_original": "动态助词\"了(2)\"",
           "text_translation": "Dinamik yordamchi so'z \"了 (2)\"",
           "text_translation_ru": "Динамическая частица «了 (2)»",
           "grammarNumber": "1"
@@ -376,7 +386,6 @@
         {
           "id": "l14p1-g1-s2",
           "section": "grammar",
-          "text_original": "动态助词\"了(2)\"在动词后，表示动作行为已经发生或完成。否定时用\"没\"，不加\"了\"。",
           "text_translation": "\"了 (2)\" dinamik yordamchi so'zi fe'ldan keyin kelib, harakat allaqachon sodir bo'lganini yoki tugaganini bildiradi. Inkor shaklda \"没\" ishlatiladi, \"了\" qo'shilmaydi.",
           "text_translation_ru": "Динамическая частица «了 (2)» ставится после глагола и указывает на то, что действие уже произошло или завершилось. При отрицании используется «没», а «了» опускается."
         },
@@ -409,8 +418,8 @@
     {
       "id": "l14p1-sec-dialogue-exercise",
       "type": "imagedescribe",
-      "instruction": "完成对话。Dialoglarni to'ldiring.",
-      "instruction_ru": "完成对话。Дополните диалоги.",
+      "instruction": "Dialoglarni to'ldiring.",
+      "instruction_ru": "Дополните диалоги.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -419,62 +428,127 @@
             "speaker": "A",
             "dialogueNumber": "1",
             "parts": [
-              { "type": "text", "content": "你去哪儿" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "？" }
+              {
+                "type": "text",
+                "content": "你去哪儿"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "？"
+              }
             ],
             "pinyin": "Nǐ qù nǎr ___?",
             "translation": "Qayerga boryapsan ___?",
             "translation_ru": "Куда ты идёшь ___?",
-            "answers": ["了"]
+            "answers": [
+              "了"
+            ]
           },
           {
             "id": "l14p1-dex-s1b",
             "speaker": "B",
             "dialogueNumber": "",
             "parts": [
-              { "type": "text", "content": "我今天有课，去学校上" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "课，还在那儿吃" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "午饭。" }
+              {
+                "type": "text",
+                "content": "我今天有课，去学校上"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "课，还在那儿吃"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "午饭。"
+              }
             ],
             "pinyin": "Wǒ jīntiān yǒu kè, qù xuéxiào shàng ___ kè, hái zài nàr chī ___ wǔfàn.",
             "translation": "Bugun darsim bor, maktabga ___ darsga boraman, u yerda ___ tushlik ham qilaman.",
             "translation_ru": "У меня сегодня занятия, иду в школу на ___ урок, ещё там ___ пообедаю.",
-            "answers": ["了", "了"]
+            "answers": [
+              "了",
+              "了"
+            ]
           },
           {
             "id": "l14p1-dex-s2a",
             "speaker": "A",
             "dialogueNumber": "2",
             "parts": [
-              { "type": "text", "content": "我昨天看" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "电影，" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "去超市。你呢？" }
+              {
+                "type": "text",
+                "content": "我昨天看"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "电影，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "去超市。你呢？"
+              }
             ],
             "pinyin": "Wǒ zuótiān kàn ___ diànyǐng, ___ qù chāoshì. Nǐ ne?",
             "translation": "Men kecha ___ kino ko'rdim, ___ supermarketga bordim. Senga nima?",
             "translation_ru": "Я вчера посмотрел(а) ___ фильм, ___ сходил(а) в супермаркет. А ты?",
-            "answers": ["了", "了"]
+            "answers": [
+              "了",
+              "了"
+            ]
           },
           {
             "id": "l14p1-dex-s2b",
             "speaker": "B",
             "dialogueNumber": "",
             "parts": [
-              { "type": "text", "content": "我昨天去" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "超市，" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "看电影。" }
+              {
+                "type": "text",
+                "content": "我昨天去"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "超市，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "看电影。"
+              }
             ],
             "pinyin": "Wǒ zuótiān qù ___ chāoshì, ___ kàn diànyǐng.",
             "translation": "Men kecha ___ supermarketga bordim, ___ kino ko'rdim.",
             "translation_ru": "Я вчера сходил(а) ___ в супермаркет, ___ посмотрел(а) фильм.",
-            "answers": ["了", "没"]
+            "answers": [
+              "了",
+              "没"
+            ]
           }
         ]
       }
@@ -486,7 +560,6 @@
         {
           "id": "l14p1-g2-s1",
           "section": "grammar",
-          "text_original": "离合词(1)",
           "text_translation": "Ajraladigan so'zlar (1)",
           "text_translation_ru": "Разделяемые слова (1)",
           "grammarNumber": "2"
@@ -494,7 +567,6 @@
         {
           "id": "l14p1-g2-s2",
           "section": "grammar",
-          "text_original": "本册中的\"上课、下课、上班、下班、说话、读书、睡觉、看病、生病\"等是一类特殊的动词结构，可分可合，合在一起时是词，中间加其他成分则变成短语，所以被称为离合词。离合词分离时，可插入的成分有限。",
           "text_translation": "Bu kitobdagi \"上课, 下课, 上班, 下班, 说话, 读书, 睡觉, 看病, 生病\" kabi so'zlar maxsus fe'l tuzilmalari bo'lib, ajralishi ham, birlashishi ham mumkin. Birlashganda so'z, orasiga boshqa element qo'shilganda esa ibora bo'ladi, shuning uchun ular ajraladigan so'zlar deb ataladi. Ajraladigan so'zlar ajralganda, orasiga qo'shilishi mumkin bo'lgan elementlar cheklangan.",
           "text_translation_ru": "Такие слова в этом учебнике, как «上课, 下课, 上班, 下班, 说话, 读书, 睡觉, 看病, 生病», представляют собой особый тип глагольных структур, которые могут разделяться и соединяться. В соединённом виде они являются словами, а при добавлении других элементов между ними превращаются в словосочетания, поэтому их называют разделяемыми словами. При разделении количество вставляемых элементов ограничено."
         },

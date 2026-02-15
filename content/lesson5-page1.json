@@ -12,7 +12,7 @@
     {
       "id": "l5p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -45,11 +45,11 @@
     {
       "id": "l5p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。So'zlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки к словам.",
+      "instruction": "So'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки к словам.",
       "sentences": [],
       "matchingItems": [
         {
@@ -105,16 +105,16 @@
     {
       "id": "l5p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Text 1",
       "subheading_ru": "Текст 1",
       "context": "在家里，刘明和王一雪在聊天儿。",
       "contextPinyin": "Zài jiālǐ, Liú Míng hé Wáng Yīxuě zài liáotiānr.",
       "contextTranslation": "Uyda Liu Ming va Wang Yixue suhbatlashmoqda.",
       "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ болтают.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -131,7 +131,8 @@
           "text_translation_ru": "Какое сегодня число?",
           "pinyin": "Jīntiān jǐ hào?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue1.mp3"
         },
         {
           "id": "l5p1-t1-s2",
@@ -141,7 +142,8 @@
           "text_translation_ru": "Сегодня 8 сентября.",
           "pinyin": "Jīntiān jiǔ yuè bā hào.",
           "speaker": "刘明",
-          "speakerName": "刘明"
+          "speakerName": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue2.mp3"
         },
         {
           "id": "l5p1-t1-s3",
@@ -151,7 +153,8 @@
           "text_translation_ru": "Какой день недели?",
           "pinyin": "Xīngqī jǐ?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue3.mp3"
         },
         {
           "id": "l5p1-t1-s4",
@@ -161,7 +164,8 @@
           "text_translation_ru": "Воскресенье. Сегодня я отдыхаю.",
           "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
           "speaker": "刘明",
-          "speakerName": "刘明"
+          "speakerName": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue4.mp3"
         }
       ]
     },
@@ -181,7 +185,7 @@
     {
       "id": "l5p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%202.mp3",
@@ -192,7 +196,8 @@
           "text_original": "今天",
           "text_translation": "bugun (ot)",
           "text_translation_ru": "сегодня (сущ.)",
-          "pinyin": "jīntiān"
+          "pinyin": "jīntiān",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/jintian.mp3"
         },
         {
           "id": "l5p1-v-s2",
@@ -200,7 +205,8 @@
           "text_original": "号",
           "text_translation": "sana (o'lchov so'zi)",
           "text_translation_ru": "число (счётн. сл.)",
-          "pinyin": "hào"
+          "pinyin": "hào",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/hao.mp3"
         },
         {
           "id": "l5p1-v-s3",
@@ -208,7 +214,8 @@
           "text_original": "月",
           "text_translation": "oy (ot)",
           "text_translation_ru": "месяц (сущ.)",
-          "pinyin": "yuè"
+          "pinyin": "yuè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/yue.mp3"
         },
         {
           "id": "l5p1-v-s4",
@@ -216,7 +223,8 @@
           "text_original": "日",
           "text_translation": "kun (o'lchov so'zi)",
           "text_translation_ru": "день (счётн. сл.)",
-          "pinyin": "rì"
+          "pinyin": "rì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/ri.mp3"
         },
         {
           "id": "l5p1-v-s5",
@@ -224,7 +232,8 @@
           "text_original": "星期",
           "text_translation": "hafta (ot)",
           "text_translation_ru": "неделя (сущ.)",
-          "pinyin": "xīngqī"
+          "pinyin": "xīngqī",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqi.mp3"
         },
         {
           "id": "l5p1-v-s6",
@@ -232,7 +241,8 @@
           "text_original": "星期日",
           "text_translation": "yakshanba (ot)",
           "text_translation_ru": "воскресенье (сущ.)",
-          "pinyin": "Xīngqīrì"
+          "pinyin": "Xīngqīrì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqiri.mp3"
         },
         {
           "id": "l5p1-v-s7",
@@ -240,7 +250,8 @@
           "text_original": "星期天",
           "text_translation": "yakshanba (ot)",
           "text_translation_ru": "воскресенье (сущ.)",
-          "pinyin": "Xīngqītiān"
+          "pinyin": "Xīngqītiān",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqitian.mp3"
         },
         {
           "id": "l5p1-v-s8",
@@ -248,21 +259,21 @@
           "text_original": "休息",
           "text_translation": "dam olmoq (fe'l)",
           "text_translation_ru": "отдыхать (гл.)",
-          "pinyin": "xiūxi"
+          "pinyin": "xiūxi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xiuxi.mp3"
         }
       ]
     },
     {
       "id": "l5p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l5p1-g1-s1",
           "section": "grammar",
-          "text_original": "时间的表达（1） ",
           "text_translation": "Vaqtni ifodalash (1)",
           "text_translation_ru": "Выражение времени (1)",
           "grammarNumber": "1"
@@ -270,7 +281,6 @@
         {
           "id": "l5p1-g1-s2",
           "section": "grammar",
-          "text_original": "本课学习日期、星期的表达。汉语日期、星期的表达顺序是：年→月→日/号→星期。",
           "text_translation": "Ushbu darsda sana va hafta kunlarini ifodalash o'rganiladi. Xitoy tilida sana va hafta kunlarini ifodalash tartibi: yil→oy→kun/sana→hafta kuni.",
           "text_translation_ru": "В этом уроке изучается выражение дат и дней недели. Порядок выражения дат и дней недели в китайском языке: год→месяц→день/число→день недели."
         }
@@ -289,7 +299,6 @@
         {
           "id": "l5p1-g2-s1",
           "section": "grammar",
-          "text_original": "名词谓语句",
           "text_translation": "Ot kesimli gaplar",
           "text_translation_ru": "Предложения с именным сказуемым",
           "grammarNumber": "2"
@@ -297,7 +306,6 @@
         {
           "id": "l5p1-g2-s2",
           "section": "grammar",
-          "text_original": "名词谓语句谓语部分只有名词或名词性成分，这部分词语一般是表达时间、日期、年龄等的词语。",
           "text_translation": "Ot kesimli gaplarda kesim qismi faqat ot yoki otga oid tarkiblardan iborat bo'ladi. Bu tarkiblar odatda vaqt, sana, yosh va boshqalarni ifodalovchi so'zlardir.",
           "text_translation_ru": "В предложениях с именным сказуемым сказуемое состоит только из существительного или именной группы. Обычно это слова, выражающие время, дату, возраст и т.д."
         },

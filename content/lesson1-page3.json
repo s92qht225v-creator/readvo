@@ -5,16 +5,16 @@
     {
       "id": "l1p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "开学第一天，课堂上，学生们学习致谢语、告别语。",
       "contextPinyin": "Kāixué dì yī tiān, kètáng shàng, xuéshēngmen xuéxí zhìxiè yǔ, gàobié yǔ.",
       "contextTranslation": "O'quv yilining birinchi kuni, sinfda, talabalar minnatdorchilik va xayrlashish iboralarini o'rganmoqda.",
       "contextTranslation_ru": "В первый день учёбы в классе студенты изучают выражения благодарности и прощания.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l1p3-text3.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-3-1.jpg",
       "sentences": [
         {
@@ -26,7 +26,7 @@
           "pinyin": "Xièxie!",
           "speaker": "学生们",
           "speakerName": "xuéshēngmen",
-          "audio_url": "/audio/l1p3-t3-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/dialogue1.mp3"
         },
         {
           "id": "l1p3-t3-s2",
@@ -37,7 +37,7 @@
           "pinyin": "Bú kèqi!",
           "speaker": "小语",
           "speakerName": "Xiǎoyǔ",
-          "audio_url": "/audio/l1p3-t3-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/dialogue2.mp3"
         },
         {
           "id": "l1p3-t3-s3",
@@ -48,7 +48,7 @@
           "pinyin": "Tóngxuémen, zàijiàn!",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l1p3-t3-s3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/dialogue3.mp3"
         },
         {
           "id": "l1p3-t3-s4",
@@ -59,14 +59,14 @@
           "pinyin": "Lǎoshī, zàijiàn!",
           "speaker": "学生们",
           "speakerName": "xuéshēngmen",
-          "audio_url": "/audio/l1p3-t3-s4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l1p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l1p3-vocab.mp3",
@@ -77,7 +77,8 @@
           "text_original": "谢谢",
           "text_translation": "rahmat (fe'l)",
           "text_translation_ru": "спасибо (глагол)",
-          "pinyin": "xièxie"
+          "pinyin": "xièxie",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/xiexie.mp3"
         },
         {
           "id": "l1p3-v-s2",
@@ -85,7 +86,8 @@
           "text_original": "不客气",
           "text_translation": "arzimaydi, hech gap emas",
           "text_translation_ru": "пожалуйста, не за что",
-          "pinyin": "bú kèqi"
+          "pinyin": "bú kèqi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/bukeqi.mp3"
         },
         {
           "id": "l1p3-v-s3",
@@ -93,7 +95,8 @@
           "text_original": "同学",
           "text_translation": "sinfdosh (ot)",
           "text_translation_ru": "одноклассник (сущ.)",
-          "pinyin": "tóngxué"
+          "pinyin": "tóngxué",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/tongxue.mp3"
         },
         {
           "id": "l1p3-v-s4",
@@ -101,42 +104,35 @@
           "text_original": "再见",
           "text_translation": "xayr (fe'l)",
           "text_translation_ru": "до свидания (глагол)",
-          "pinyin": "zàijiàn"
+          "pinyin": "zàijiàn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/zaijian.mp3"
         }
       ]
     },
     {
       "id": "l1p4-sec-tonguetwister",
-      "type": "text",
-      "heading": "跟读绕口令",
+      "type": "tonguetwister",
+      "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
-      "audio_url": "/audio/l1p4-tonguetwister.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-3/tongue.mp3",
       "sentences": [
         {
           "id": "l1p4-tt-s1",
-          "section": "text",
-          "text_original": "妈种麻，我放马。",
-          "text_translation": "Onam kanop ekadi, men otni boqaman.",
-          "text_translation_ru": "Мама сажает коноплю, я пасу лошадь.",
-          "pinyin": "Mā zhòng má, wǒ fàng mǎ.",
-          "audio_url": "/audio/l1p4-tt-s1.mp3"
-        },
-        {
-          "id": "l1p4-tt-s2",
-          "section": "text",
-          "text_original": "马吃麻，妈骂马。",
-          "text_translation": "Ot kanopni yeydi, onam otni so'kadi.",
-          "text_translation_ru": "Лошадь ест коноплю, мама ругает лошадь.",
-          "pinyin": "Mǎ chī má, mà mà mǎ.",
-          "audio_url": "/audio/l1p4-tt-s2.mp3"
+          "section": "tonguetwister",
+          "text_original": "妈种麻，我放马。马吃麻，妈骂马。",
+          "text_translation": "Onam kanop ekadi, men otni boqaman. Ot kanopni yeydi, onam otni so'kadi.",
+          "text_translation_ru": "Мама сажает коноплю, я пасу лошадь. Лошадь ест коноплю, мама ругает лошадь.",
+          "pinyin": "Mā zhòng má, wǒ fàng mǎ. Mǎ chī má, mā mà mǎ."
         }
-      ]
+      ],
+      "instruction": "Tez aytishni eshiting va aytishni mashq qiling.",
+      "instruction_ru": "Послушайте скороговорку и потренируйтесь произносить."
     },
     {
       "id": "l1p4-sec-tip",
       "type": "tip",
-      "heading": "小语助力",
+      "heading": "",
       "subheading": "Xiaoyudan maslahat",
       "subheading_ru": "Совет от Сяоюй",
       "sentences": [
@@ -152,7 +148,7 @@
     {
       "id": "l1p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
+      "heading": "",
       "subheading": "Xiaoyudan Bonus Kontent 1-1",
       "subheading_ru": "Бонусный контент Сяоюй 1-1",
       "sentences": [],

@@ -132,7 +132,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
 
       {/* For text sections: instruction above context card (with play button) */}
       {section.type === 'text' && getInstruction() && (
-        <div className="section__instruction-row">
+        <div className="section__instruction-row" {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
           <span className="section__instruction-checkbox" aria-hidden="true">■</span>
           <p className="section__instruction">{getInstruction()}</p>
           {section.audio_url && (
@@ -171,7 +171,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
 
       {/* Instruction for non-text sections (original position with play button) */}
       {section.type !== 'text' && getInstruction() && (
-        <div className="section__instruction-row">
+        <div className="section__instruction-row" {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
           <span className="section__instruction-checkbox" aria-hidden="true">■</span>
           <p className="section__instruction">{getInstruction()}</p>
           {/* Play all button for section audio */}

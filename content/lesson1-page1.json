@@ -12,7 +12,7 @@
     {
       "id": "l1p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -39,16 +39,16 @@
     {
       "id": "l1p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "开学第一天，在办公室里，王一飞和AI助教小语打招呼。",
       "contextPinyin": "Kāixué dì yī tiān, zài bàngōngshì lǐ, Wáng Yīfēi hé AI zhùjiào Xiǎoyǔ dǎ zhāohu.",
       "contextTranslation": "O'quv yilining birinchi kuni, ofisda Wang Yifei AI yordamchisi Xiaoyu bilan salomlashmoqda.",
       "contextTranslation_ru": "В первый день учёбы в офисе Ван Ифэй приветствует ИИ-помощника Сяоюй.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-1-1.jpg",
       "sentences": [
         {
@@ -60,7 +60,7 @@
           "pinyin": "AI Xiǎoyǔ, nǐ hǎo!",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201a.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/dialogue1.mp3"
         },
         {
           "id": "l1p1-t1-s2",
@@ -71,14 +71,14 @@
           "pinyin": "Wáng lǎoshī, nǐ hǎo!",
           "speaker": "小语",
           "speakerName": "Xiǎoyǔ",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201%201%201b.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/dialogue2.mp3"
         }
       ]
     },
     {
       "id": "l1p1-sec-vocabulary",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l1p1-vocab.mp3",
@@ -89,7 +89,8 @@
           "text_original": "你好",
           "text_translation": "salom",
           "text_translation_ru": "привет",
-          "pinyin": "nǐ hǎo"
+          "pinyin": "nǐ hǎo",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/nihao.mp3"
         },
         {
           "id": "l1p1-v-s2",
@@ -97,7 +98,8 @@
           "text_original": "王老师",
           "text_translation": "Wang ustoz",
           "text_translation_ru": "учитель Ван",
-          "pinyin": "Wáng lǎoshī"
+          "pinyin": "Wáng lǎoshī",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/wanglaoshi.mp3"
         }
       ]
     }

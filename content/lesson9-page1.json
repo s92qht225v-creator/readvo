@@ -12,7 +12,7 @@
     {
       "id": "l9p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -57,11 +57,11 @@
     {
       "id": "l9p1-sec-warmup",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmlarni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите картинки, соответствующие словам.",
+      "instruction": "Quyidagi so'zlarga mos rasmlarni tanlang.",
+      "instruction_ru": "Подберите картинки, соответствующие словам.",
       "sentences": [],
       "matchingItems": [
         {
@@ -117,16 +117,16 @@
     {
       "id": "l9p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在校园里，李文和白家月在聊天儿。",
       "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè zài liáotiānr.",
       "contextTranslation": "Kampusda Li Wen va Bai Jiyayue suhbatlashyapti.",
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ беседуют.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -142,7 +142,8 @@
           "text_translation": "Maktab oldida bitta kinoteatr bor.",
           "text_translation_ru": "Перед школой есть кинотеатр.",
           "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue1.mp3"
         },
         {
           "id": "l9p1-t1-s2",
@@ -151,7 +152,8 @@
           "text_translation": "To'g'ri. Kechqurun o'sha kinoteatrga kino ko'rgani boraylik.",
           "text_translation_ru": "Верно. Давай вечером сходим в тот кинотеатр посмотреть фильм.",
           "pinyin": "Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue2.mp3"
         },
         {
           "id": "l9p1-t1-s3",
@@ -160,7 +162,8 @@
           "text_translation": "Yaxshi! Soat yettida kinoteatr tashqarisida uchrashaylik, bo'ladimi?",
           "text_translation_ru": "Хорошо! Давай встретимся в семь у кинотеатра, ладно?",
           "pinyin": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue3.mp3"
         },
         {
           "id": "l9p1-t1-s4",
@@ -176,14 +179,15 @@
             "pinyin": "'Nàge' zài kǒuyǔ zhōng yě shuō chéng 'nèige'.",
             "translation": "\"那个\" og'zaki nutqda \"nèige\" deb ham aytiladi.",
             "translation_ru": "«那个» в разговорной речи также произносится как «nèige»."
-          }
+          },
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l9p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%202.mp3",
@@ -196,7 +200,8 @@
           "text_translation_ru": "перед; впереди (сущ.)",
           "pinyin": "qiánbian",
           "wordClass": "n.",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/qianbian.mp3"
         },
         {
           "id": "l9p1-v-s2",
@@ -206,7 +211,8 @@
           "text_translation_ru": "сторона; край (суф./сущ.)",
           "pinyin": "bian/biān",
           "wordClass": "suf./n.",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/bianbian.mp3"
         },
         {
           "id": "l9p1-v-s3",
@@ -216,7 +222,8 @@
           "text_translation_ru": "счётное слово (для семей или предприятий)",
           "pinyin": "jiā",
           "wordClass": "m.",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/jia.mp3"
         },
         {
           "id": "l9p1-v-s4",
@@ -226,7 +233,8 @@
           "text_translation_ru": "тот; та; то (мест.)",
           "pinyin": "nàge",
           "wordClass": "pron.",
-          "vocabNumber": 4
+          "vocabNumber": 4,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/nage.mp3"
         },
         {
           "id": "l9p1-v-s5",
@@ -236,21 +244,21 @@
           "text_translation_ru": "снаружи (сущ.)",
           "pinyin": "wàibian",
           "wordClass": "n.",
-          "vocabNumber": 5
+          "vocabNumber": 5,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/waibian.mp3"
         }
       ]
     },
     {
       "id": "l9p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l9p1-g1-s1",
           "section": "grammar",
-          "text_original": "存现句（1）",
           "text_translation": "Mavjudlik gaplari (1)",
           "text_translation_ru": "Экзистенциальные предложения (1)",
           "grammarNumber": "1"
@@ -258,7 +266,6 @@
         {
           "id": "l9p1-g1-s2",
           "section": "grammar",
-          "text_original": "存现句是表示某个地方或位置存在某人或某物的句子，一般以\"有\"或\"是\"为标记。否定时，宾语前不能使用数量词语。",
           "text_translation": "Mavjudlik gaplari biror joyda biror kishi yoki narsaning mavjudligini bildiradi, odatda \"有\" yoki \"是\" bilan belgilanadi. Inkor shaklida to'ldiruvchi oldida son-miqdor so'zlari ishlatilmaydi.",
           "text_translation_ru": "Экзистенциальные предложения указывают на наличие кого-либо или чего-либо в определённом месте, обычно с маркерами «有» или «是». В отрицательной форме перед дополнением не используются счётные слова."
         },
@@ -303,7 +310,6 @@
         {
           "id": "l9p1-g2-s1",
           "section": "grammar",
-          "text_original": "时间词语和处所词语同时作状语的顺序",
           "text_translation": "Vaqt va joy-o'rin so'zlari bir vaqtda hol bo'lgandagi tartib",
           "text_translation_ru": "Порядок слов при одновременном использовании обстоятельств времени и места",
           "grammarNumber": "2"
@@ -311,7 +317,6 @@
         {
           "id": "l9p1-g2-s2",
           "section": "grammar",
-          "text_original": "时间词语和处所词语同时作状语时，时间词语要在处所词语前。",
           "text_translation": "Vaqt va joy-o'rin so'zlari bir vaqtda hol bo'lganda, vaqt so'zi joy-o'rin so'zidan oldin keladi.",
           "text_translation_ru": "Когда обстоятельства времени и места используются одновременно, выражение времени ставится перед выражением места."
         },

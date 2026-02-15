@@ -5,7 +5,7 @@
     {
       "id": "l5p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Text 3",
       "subheading_ru": "Текст 3",
       "context": "在公司里，王一雪和杨同乐下班时聊天儿。",
@@ -17,8 +17,8 @@
     {
       "id": "l5p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -26,14 +26,34 @@
             "id": "l5p3-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "杨同乐也（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "杨同乐也（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "上班", "pinyin": "shàngbān" },
-              { "label": "B", "word": "下班", "pinyin": "xiàbān" },
-              { "label": "C", "word": "休息", "pinyin": "xiūxi" }
+              {
+                "label": "A",
+                "word": "上班",
+                "pinyin": "shàngbān"
+              },
+              {
+                "label": "B",
+                "word": "下班",
+                "pinyin": "xiàbān"
+              },
+              {
+                "label": "C",
+                "word": "休息",
+                "pinyin": "xiūxi"
+              }
             ],
             "correctOptionLabel": "B"
           },
@@ -41,14 +61,34 @@
             "id": "l5p3-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "杨同乐有一个新（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "杨同乐有一个新（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "名字", "pinyin": "míngzi" },
-              { "label": "B", "word": "工作", "pinyin": "gōngzuò" },
-              { "label": "C", "word": "电脑", "pinyin": "diànnǎo" }
+              {
+                "label": "A",
+                "word": "名字",
+                "pinyin": "míngzi"
+              },
+              {
+                "label": "B",
+                "word": "工作",
+                "pinyin": "gōngzuò"
+              },
+              {
+                "label": "C",
+                "word": "电脑",
+                "pinyin": "diànnǎo"
+              }
             ],
             "correctOptionLabel": "C"
           }
@@ -58,9 +98,9 @@
     {
       "id": "l5p3-sec-dialogue3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-3-1.jpg",
       "sentences": [
         {
@@ -71,7 +111,8 @@
           "text_translation_ru": "Тунлэ, уходишь с работы?",
           "pinyin": "Tónglè, xiàbān ma?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue1.mp3"
         },
         {
           "id": "l5p3-t3-s2",
@@ -81,7 +122,8 @@
           "text_translation_ru": "Да, ухожу.",
           "pinyin": "Xiàbān.",
           "speaker": "杨同乐",
-          "speakerName": "杨同乐"
+          "speakerName": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue2.mp3"
         },
         {
           "id": "l5p3-t3-s3",
@@ -91,7 +133,8 @@
           "text_translation_ru": "Это твой новый компьютер?",
           "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue3.mp3"
         },
         {
           "id": "l5p3-t3-s4",
@@ -101,7 +144,8 @@
           "text_translation_ru": "Да, это мой новый компьютер.",
           "pinyin": "Shì de, shì wǒ de xīn diànnǎo.",
           "speaker": "杨同乐",
-          "speakerName": "杨同乐"
+          "speakerName": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue4.mp3"
         },
         {
           "id": "l5p3-t3-s5",
@@ -111,7 +155,8 @@
           "text_translation_ru": "Очень красивый!",
           "pinyin": "Zhēn hǎokàn!",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue5.mp3"
         },
         {
           "id": "l5p3-t3-s6",
@@ -121,14 +166,15 @@
           "text_translation_ru": "Мне тоже он очень нравится.",
           "pinyin": "Wǒ yě hěn xǐhuan tā.",
           "speaker": "杨同乐",
-          "speakerName": "杨同乐"
+          "speakerName": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l5p3-sec-vocab3",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%206.mp3",
@@ -139,7 +185,8 @@
           "text_original": "下班",
           "text_translation": "ishdan ketmoq",
           "text_translation_ru": "уходить с работы",
-          "pinyin": "xiàbān"
+          "pinyin": "xiàbān",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xiaban.mp3"
         },
         {
           "id": "l5p3-v-s2",
@@ -147,7 +194,8 @@
           "text_original": "新",
           "text_translation": "yangi (sifat)",
           "text_translation_ru": "новый (прил.)",
-          "pinyin": "xīn"
+          "pinyin": "xīn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xin.mp3"
         },
         {
           "id": "l5p3-v-s3",
@@ -155,7 +203,8 @@
           "text_original": "电脑",
           "text_translation": "kompyuter (ot)",
           "text_translation_ru": "компьютер (сущ.)",
-          "pinyin": "diànnǎo"
+          "pinyin": "diànnǎo",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/diannao.mp3"
         },
         {
           "id": "l5p3-v-s4",
@@ -163,7 +212,8 @@
           "text_original": "真",
           "text_translation": "haqiqatan, juda (ravish)",
           "text_translation_ru": "действительно, очень (нареч.)",
-          "pinyin": "zhēn"
+          "pinyin": "zhēn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/zhen.mp3"
         },
         {
           "id": "l5p3-v-s5",
@@ -171,7 +221,8 @@
           "text_original": "好看",
           "text_translation": "chiroyli, ko'rkam (sifat)",
           "text_translation_ru": "красивый, привлекательный (прил.)",
-          "pinyin": "hǎokàn"
+          "pinyin": "hǎokàn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/haokan.mp3"
         },
         {
           "id": "l5p3-v-s6",
@@ -179,7 +230,8 @@
           "text_original": "喜欢",
           "text_translation": "yoqtirmoq, yaxshi ko'rmoq (fe'l)",
           "text_translation_ru": "нравиться, любить (гл.)",
-          "pinyin": "xǐhuan"
+          "pinyin": "xǐhuan",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xihuan.mp3"
         },
         {
           "id": "l5p3-v-s7",
@@ -187,23 +239,17 @@
           "text_original": "它",
           "text_translation": "u (narsa uchun olmosh)",
           "text_translation_ru": "он/она/оно (для предметов, мест.)",
-          "pinyin": "tā"
+          "pinyin": "tā",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/ta.mp3"
         }
       ]
     },
     {
       "id": "l5p3-sec-exercise",
       "type": "exercise",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
-        {
-          "id": "l5p3-ex-s1",
-          "section": "exercise",
-          "text_original": "根据课文内容回答问题。",
-          "text_translation": "Matn mazmuniga ko'ra savollarga javob bering.",
-          "text_translation_ru": "Ответьте на вопросы по содержанию текста.",
-          "pinyin": "Gēnjù kèwén nèiróng huídá wèntí.",
-          "isCheckbox": true
-        },
         {
           "id": "l5p3-ex-s2",
           "section": "exercise",
@@ -225,28 +271,61 @@
     {
       "id": "l5p3-sec-comprehensive",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。Bo'sh joylarga mos so'zlarni tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "Bo'sh joylarga mos so'zlarni tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "菜", "pinyin": "cài" },
-          { "id": "B", "label": "B", "word": "喜欢", "pinyin": "xǐhuan" },
-          { "id": "C", "label": "C", "word": "6月22号", "pinyin": "liù yuè èrshí'èr hào" },
-          { "id": "D", "label": "D", "word": "新", "pinyin": "xīn" },
-          { "id": "E", "label": "E", "word": "真", "pinyin": "zhēn" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "菜",
+            "pinyin": "cài"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "喜欢",
+            "pinyin": "xǐhuan"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "6月22号",
+            "pinyin": "liù yuè èrshí'èr hào"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "新",
+            "pinyin": "xīn"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "真",
+            "pinyin": "zhēn"
+          }
         ],
         "sentences": [
           {
             "id": "l5p3-comp-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "今天是" },
-              { "type": "blank" },
-              { "type": "text", "content": "，星期三。" }
+              {
+                "type": "text",
+                "content": "今天是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "，星期三。"
+              }
             ],
             "correctOptionId": "C"
           },
@@ -254,9 +333,17 @@
             "id": "l5p3-comp-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "我会做面条儿，也会做一些" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "我会做面条儿，也会做一些"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
             "correctOptionId": "A"
           },
@@ -264,17 +351,30 @@
             "id": "l5p3-comp-q3a",
             "number": 3,
             "parts": [
-              { "type": "text", "content": "这是我的" },
-              { "type": "blank" },
-              { "type": "text", "content": "电脑，" }
+              {
+                "type": "text",
+                "content": "这是我的"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "电脑，"
+              }
             ],
             "correctOptionId": "D"
           },
           {
             "id": "l5p3-comp-q3b",
             "parts": [
-              { "type": "blank" },
-              { "type": "text", "content": "好看！" }
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "好看！"
+              }
             ],
             "correctOptionId": "E"
           },
@@ -282,9 +382,17 @@
             "id": "l5p3-comp-q4",
             "number": 4,
             "parts": [
-              { "type": "text", "content": "我很" },
-              { "type": "blank" },
-              { "type": "text", "content": "我的新电脑。" }
+              {
+                "type": "text",
+                "content": "我很"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "我的新电脑。"
+              }
             ],
             "correctOptionId": "B"
           }
@@ -294,8 +402,8 @@
     {
       "id": "l5p3-sec-imgdesc",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Rasmlarni shu darsda o'rganilgan so'z va grammatik qoidalar yordamida tasvirlab yozing.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Rasmlarni shu darsda o'rganilgan so'z va grammatik qoidalar yordamida tasvirlab yozing.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -303,45 +411,97 @@
             "id": "l5p3-img-1",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-1.jpg",
             "parts": [
-              { "type": "text", "content": "今天" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "今天"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["9月7号，星期六"]
+            "answers": [
+              "9月7号，星期六"
+            ]
           },
           {
             "id": "l5p3-img-2",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-2.jpg",
             "parts": [
-              { "type": "text", "content": "杨同乐会" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "杨同乐会"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["做饭"]
+            "answers": [
+              "做饭"
+            ]
           },
           {
             "id": "l5p3-img-3",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-3.jpg",
             "parts": [
-              { "type": "text", "content": "我" },
-              { "type": "blank" },
-              { "type": "text", "content": "两个菜。" }
+              {
+                "type": "text",
+                "content": "我"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "两个菜。"
+              }
             ],
-            "answers": ["会做"]
+            "answers": [
+              "会做"
+            ]
           },
           {
             "id": "l5p3-img-4",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-imgdesc-4.jpg",
             "parts": [
-              { "type": "text", "content": "今天是" },
-              { "type": "blank" },
-              { "type": "text", "content": "年" },
-              { "type": "blank" },
-              { "type": "text", "content": "月1号，" },
-              { "type": "blank" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "今天是"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "年"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "月1号，"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["2025", "5", "星期四"]
+            "answers": [
+              "2025",
+              "5",
+              "星期四"
+            ]
           }
         ]
       }
@@ -349,17 +509,10 @@
     {
       "id": "l5p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Dars mashg'uloti",
       "subheading_ru": "Классное занятие",
       "sentences": [
-        {
-          "id": "l5p3-act-s2",
-          "section": "activity",
-          "text_original": "一个人拿着词语卡片，询问其他人会不会做这件事，其他人抢答。抢答最少者成为下一轮的提问者。",
-          "text_translation": "Bir kishi so'z kartalarini ushlab, boshqalardan bu ishni qila olish-olmasligini so'raydi. Boshqalar tezda javob beradi. Eng kam javob bergan kishi keyingi turda savol beruvchi bo'ladi.",
-          "text_translation_ru": "Один человек держит карточки со словами и спрашивает других, умеют ли они выполнять эти действия. Остальные отвечают наперегонки. Тот, кто ответил меньше всех, становится следующим ведущим."
-        },
         {
           "id": "l5p3-act-s4",
           "section": "activity",
@@ -401,8 +554,8 @@
     {
       "id": "l5p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
-      "subheading": "Xiaoyu's Bonus Content 5-1",
+      "heading": "",
+      "subheading": "Xiaoyuning sovg'asi",
       "subheading_ru": "Бонусный контент Сяоюй 5-1",
       "sentences": [],
       "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201/HSK-5-bonus-1.mp4"

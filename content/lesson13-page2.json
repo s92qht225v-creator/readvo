@@ -5,15 +5,15 @@
     {
       "id": "l13p2-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在咖啡馆里，王一雪想吃早餐。",
       "contextPinyin": "Zài kāfēiguǎn lǐ, Wáng Yīxuě xiǎng chī zǎocān.",
       "contextTranslation": "Kofe xonasida Wang Yixue nonushta qilmoqchi.",
       "contextTranslation_ru": "В кафе Ван Исюэ хочет позавтракать.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l13p2-sec-text2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-2-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Xonim, marhamat o'tiring! Nima ichasiz?",
           "text_translation_ru": "Мадам, садитесь, пожалуйста! Что будете пить?",
           "pinyin": "Nǚshì, qǐng zuò! Nín hē shénme?",
-          "speaker": "服务员"
+          "speaker": "服务员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue1.mp3"
         },
         {
           "id": "l13p2-t2-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Bir ko'rib ko'ray. Menga bir stakan sut bering.",
           "text_translation_ru": "Я посмотрю. Дайте мне, пожалуйста, стакан молока.",
           "pinyin": "Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue2.mp3"
         },
         {
           "id": "l13p2-t2-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Yaxshi. Yana nima xohlaysiz?",
           "text_translation_ru": "Хорошо. Что-нибудь ещё?",
           "pinyin": "Hǎo de. Nín hái yào shénme?",
-          "speaker": "服务员"
+          "speaker": "服务员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue3.mp3"
         },
         {
           "id": "l13p2-t2-s4",
@@ -132,15 +135,16 @@
           "text_translation": "Men hali nonushta qilmadim, yana shu non bilan tuxum ham bo'lsin.",
           "text_translation_ru": "Я ещё не завтракала, ещё возьму этот хлеб и яйцо.",
           "pinyin": "Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l13p2-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l13p2-ex-s1",
@@ -163,7 +167,7 @@
     {
       "id": "l13p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%204.mp3",
@@ -176,7 +180,8 @@
           "text_translation_ru": "официант; обслуживающий персонал (сущ.)",
           "pinyin": "fúwùyuán",
           "wordClass": "n.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/fuwuyuan.mp3"
         },
         {
           "id": "l13p2-v-s2",
@@ -186,7 +191,8 @@
           "text_translation_ru": "дама; госпожа (сущ.)",
           "pinyin": "nǚshì",
           "wordClass": "n.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/nushi.mp3"
         },
         {
           "id": "l13p2-v-s3",
@@ -196,7 +202,8 @@
           "text_translation_ru": "просить; пожалуйста (глагол)",
           "pinyin": "qǐng",
           "wordClass": "v.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/qing.mp3"
         },
         {
           "id": "l13p2-v-s4",
@@ -206,7 +213,8 @@
           "text_translation_ru": "сидеть; садиться (глагол)",
           "pinyin": "zuò",
           "wordClass": "v.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zuo.mp3"
         },
         {
           "id": "l13p2-v-s5",
@@ -216,7 +224,8 @@
           "text_translation_ru": "давать (глагол)",
           "pinyin": "gěi",
           "wordClass": "v.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/gei.mp3"
         },
         {
           "id": "l13p2-v-s6",
@@ -226,7 +235,8 @@
           "text_translation_ru": "чашка; стакан (сущ.)",
           "pinyin": "bēi",
           "wordClass": "n.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/bei.mp3"
         },
         {
           "id": "l13p2-v-s7",
@@ -236,7 +246,8 @@
           "text_translation_ru": "хотеть; требовать (глагол)",
           "pinyin": "yào",
           "wordClass": "v.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/yao.mp3"
         },
         {
           "id": "l13p2-v-s8",
@@ -246,7 +257,8 @@
           "text_translation_ru": "завтрак (сущ.)",
           "pinyin": "zǎofàn",
           "wordClass": "n.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zaofan.mp3"
         },
         {
           "id": "l13p2-v-s9",
@@ -256,7 +268,8 @@
           "text_translation_ru": "этот; это (мест.)",
           "pinyin": "zhège",
           "wordClass": "pron.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zhege.mp3"
         },
         {
           "id": "l13p2-v-s10",
@@ -266,7 +279,8 @@
           "text_translation_ru": "хлеб (сущ.)",
           "pinyin": "miànbāo",
           "wordClass": "n.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/mianbao.mp3"
         },
         {
           "id": "l13p2-v-s11",
@@ -276,21 +290,21 @@
           "text_translation_ru": "яйцо (сущ.)",
           "pinyin": "jīdàn",
           "wordClass": "n.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/jidan.mp3"
         }
       ]
     },
     {
       "id": "l13p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l13p2-g3-s1",
           "section": "grammar",
-          "text_original": "双宾语句(1)",
           "text_translation": "Ikki to'ldiruvchili gap (1)",
           "text_translation_ru": "Предложения с двойным дополнением (1)",
           "grammarNumber": "3"
@@ -298,7 +312,6 @@
         {
           "id": "l13p2-g3-s2",
           "section": "grammar",
-          "text_original": "双宾语句是一个动词带两个宾语的句子。本册学习\"给、问\"构成的双宾语句。",
           "text_translation": "Ikki to'ldiruvchili gap — bu bitta fe'l ikki to'ldiruvchi olgan gapdir. Bu kitobda \"给\" va \"问\" fe'llari bilan tuzilgan ikki to'ldiruvchili gaplar o'rganiladi.",
           "text_translation_ru": "Предложение с двойным дополнением — это предложение, в котором один глагол управляет двумя дополнениями. В этом учебнике изучаются предложения с двойным дополнением, образованные глаголами «给» и «问»."
         },

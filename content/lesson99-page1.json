@@ -12,7 +12,7 @@
     {
       "id": "l99p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -47,7 +47,7 @@
     {
       "id": "l99p1-sec-vocab1",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar (1)",
       "subheading_ru": "Новые слова (1)",
       "sentences": [
@@ -96,7 +96,7 @@
     {
       "id": "l99p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Grammatika",
       "subheading_ru": "Грамматика",
       "sentences": [
@@ -136,7 +136,7 @@
     {
       "id": "l99p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Dialog 1",
       "subheading_ru": "Диалог 1",
       "context": "Birinchi kun. Aziz til maktabiga keldi. Li ustoz uni kutib olmoqda.",
@@ -191,7 +191,7 @@
     {
       "id": "l99p1-sec-vocab2",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar (2)",
       "subheading_ru": "Новые слова (2)",
       "sentences": [
@@ -232,24 +232,49 @@
     {
       "id": "l99p1-sec-exercise1",
       "type": "fillblank",
-      "heading": "选词填空",
+      "heading": "",
       "subheading": "Bo'sh joyni to'ldiring",
       "subheading_ru": "Заполните пропуски",
       "sentences": [],
       "fillBlankData": {
         "options": [
-          {"id": "A", "label": "A", "word": "你好", "pinyin": "nǐ hǎo"},
-          {"id": "B", "label": "B", "word": "叫", "pinyin": "jiào"},
-          {"id": "C", "label": "C", "word": "什么", "pinyin": "shénme"},
-          {"id": "D", "label": "D", "word": "我", "pinyin": "wǒ"}
+          {
+            "id": "A",
+            "label": "A",
+            "word": "你好",
+            "pinyin": "nǐ hǎo"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "叫",
+            "pinyin": "jiào"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "什么",
+            "pinyin": "shénme"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "我",
+            "pinyin": "wǒ"
+          }
         ],
         "sentences": [
           {
             "id": "l99p1-fb-s1",
             "number": 1,
             "parts": [
-              {"type": "blank"},
-              {"type": "text", "content": "！"}
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "！"
+              }
             ],
             "correctOptionId": "A"
           },
@@ -257,8 +282,13 @@
             "id": "l99p1-fb-s2",
             "number": 2,
             "parts": [
-              {"type": "blank"},
-              {"type": "text", "content": "叫Aziz。"}
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "叫Aziz。"
+              }
             ],
             "correctOptionId": "D"
           },
@@ -266,9 +296,17 @@
             "id": "l99p1-fb-s3",
             "number": 3,
             "parts": [
-              {"type": "text", "content": "你"},
-              {"type": "blank"},
-              {"type": "text", "content": "什么？"}
+              {
+                "type": "text",
+                "content": "你"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "什么？"
+              }
             ],
             "correctOptionId": "B"
           }

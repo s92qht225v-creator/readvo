@@ -5,16 +5,16 @@
     {
       "id": "l3p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在家里，王一雪给王一飞打视频电话。",
       "contextPinyin": "Zài jiā lǐ, Wáng Yīxuě gěi Wáng Yīfēi dǎ shìpín diànhuà.",
       "contextTranslation": "Uyda, Wang Yixue Wang Yifeiga video qo'ng'iroq qilmoqda.",
       "contextTranslation_ru": "Дома Ван Исюэ звонит по видеосвязи Ван Ифэю.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l3p3-text3.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-1.jpg",
       "sentences": [
         {
@@ -26,7 +26,7 @@
           "pinyin": "Wèi, Yīfēi!",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "/audio/l3p3-t3-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue1.mp3"
         },
         {
           "id": "l3p3-t3-s2",
@@ -37,7 +37,7 @@
           "pinyin": "Jiějie!",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l3p3-t3-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue2.mp3"
         },
         {
           "id": "l3p3-t3-s3",
@@ -48,7 +48,7 @@
           "pinyin": "Nǐ gōngzuò hái máng ma?",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "/audio/l3p3-t3-s3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue3.mp3"
         },
         {
           "id": "l3p3-t3-s4",
@@ -59,7 +59,7 @@
           "pinyin": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l3p3-t3-s4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue4.mp3"
         },
         {
           "id": "l3p3-t3-s5",
@@ -70,7 +70,7 @@
           "pinyin": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "/audio/l3p3-t3-s5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue5.mp3"
         },
         {
           "id": "l3p3-t3-s6",
@@ -81,14 +81,14 @@
           "pinyin": "Wǒ yě xiǎng nǐmen.",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "/audio/l3p3-t3-s6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l3p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l3p3-vocab.mp3",
@@ -99,7 +99,8 @@
           "text_original": "喂",
           "text_translation": "alo (undov)",
           "text_translation_ru": "алло (межд.)",
-          "pinyin": "wèi"
+          "pinyin": "wèi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/wei.mp3"
         },
         {
           "id": "l3p3-v-s2",
@@ -107,7 +108,8 @@
           "text_original": "姐姐",
           "text_translation": "opa (ot)",
           "text_translation_ru": "старшая сестра (сущ.)",
-          "pinyin": "jiějie"
+          "pinyin": "jiějie",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/jiejie.mp3"
         },
         {
           "id": "l3p3-v-s3",
@@ -115,7 +117,8 @@
           "text_original": "工作",
           "text_translation": "ish (ot)",
           "text_translation_ru": "работа (сущ.)",
-          "pinyin": "gōngzuò"
+          "pinyin": "gōngzuò",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/gongzuo.mp3"
         },
         {
           "id": "l3p3-v-s4",
@@ -123,7 +126,8 @@
           "text_original": "还",
           "text_translation": "hali (ravish)",
           "text_translation_ru": "ещё (нареч.)",
-          "pinyin": "hái"
+          "pinyin": "hái",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/hai.mp3"
         },
         {
           "id": "l3p3-v-s5",
@@ -131,7 +135,8 @@
           "text_original": "忙",
           "text_translation": "band (sifat)",
           "text_translation_ru": "занятой (прил.)",
-          "pinyin": "máng"
+          "pinyin": "máng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/mang.mp3"
         },
         {
           "id": "l3p3-v-s6",
@@ -139,7 +144,8 @@
           "text_original": "吗",
           "text_translation": "savol yuklamasi",
           "text_translation_ru": "вопросительная частица",
-          "pinyin": "ma"
+          "pinyin": "ma",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/ma.mp3"
         },
         {
           "id": "l3p3-v-s7",
@@ -147,7 +153,8 @@
           "text_original": "对",
           "text_translation": "to'g'ri (sifat)",
           "text_translation_ru": "правильно (прил.)",
-          "pinyin": "duì"
+          "pinyin": "duì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dui.mp3"
         },
         {
           "id": "l3p3-v-s8",
@@ -155,7 +162,8 @@
           "text_original": "太",
           "text_translation": "juda (ravish)",
           "text_translation_ru": "слишком (нареч.)",
-          "pinyin": "tài"
+          "pinyin": "tài",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/tai.mp3"
         },
         {
           "id": "l3p3-v-s9",
@@ -163,7 +171,8 @@
           "text_original": "我们",
           "text_translation": "biz (olmosh)",
           "text_translation_ru": "мы (мест.)",
-          "pinyin": "wǒmen"
+          "pinyin": "wǒmen",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/women.mp3"
         },
         {
           "id": "l3p3-v-s10",
@@ -171,28 +180,27 @@
           "text_original": "想",
           "text_translation": "sog'inmoq (fe'l)",
           "text_translation_ru": "скучать (гл.)",
-          "pinyin": "xiǎng"
+          "pinyin": "xiǎng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/xiang.mp3"
         }
       ]
     },
     {
       "id": "l3p3-sec-grammar",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l3p3-g-s1",
           "section": "grammar",
-          "text_original": "用\"吗\"的是非问句",
           "text_translation": "\"吗\" yordamida ha-yo'q savollari",
           "text_translation_ru": "Вопросы типа «да-нет» с «吗»"
         },
         {
           "id": "l3p3-g-s2",
           "section": "grammar",
-          "text_original": "\"吗\"是语气助词，通常在句子末尾，表示疑问。基本结构：……吗？",
           "text_translation": "\"吗\" modal yordamchi so'z bo'lib, odatda gap oxirida qo'yiladi va savol bildiradi. Asosiy tuzilma: ……吗？",
           "text_translation_ru": "«吗» — модальная частица, обычно ставится в конце предложения для обозначения вопроса. Базовая структура: ……吗？"
         },
@@ -225,11 +233,11 @@
     {
       "id": "l3p3-sec-exercise",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。Choose the proper words/phrases to fill in the blanks.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -374,8 +382,8 @@
     {
       "id": "l3p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -457,17 +465,10 @@
     {
       "id": "l3p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
       "sentences": [
-        {
-          "id": "l3p3-act-s2",
-          "section": "activity",
-          "text_original": "3~4人一组，互相介绍，然后请一组同学展示。",
-          "text_translation": "3-4 kishidan iborat guruhda bir-biringizni tanishtiring, so'ng bir guruh sinfga namoyish qiladi.",
-          "text_translation_ru": "Разделитесь на группы по 3-4 человека, представьтесь друг другу, затем одна группа выступит перед классом."
-        },
         {
           "id": "l3p3-act-s4",
           "section": "activity",
@@ -481,28 +482,22 @@
     {
       "id": "l3p3-sec-tonguetwister",
       "type": "tonguetwister",
-      "heading": "跟读绕口令",
+      "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
-      "audio_url": "/audio/l3p3-tonguetwister.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/tongue.mp3",
       "sentences": [
         {
           "id": "l3p3-tt-s1",
           "section": "tonguetwister",
-          "text_original": "四是四，十是十。",
-          "text_translation": "To'rt - to'rt, o'n - o'n.",
-          "text_translation_ru": "Четыре — это четыре, десять — это десять.",
-          "pinyin": "Sì shì sì, shí shì shí."
-        },
-        {
-          "id": "l3p3-tt-s2",
-          "section": "tonguetwister",
-          "text_original": "十四是十四，四十是四十。",
-          "text_translation": "O'n to'rt - o'n to'rt, qirq - qirq.",
-          "text_translation_ru": "Четырнадцать — это четырнадцать, сорок — это сорок.",
-          "pinyin": "Shísì shì shísì, sìshí shì sìshí."
+          "text_original": "四是四，十是十。十四是十四，四十是四十。",
+          "text_translation": "To'rt - to'rt, o'n - o'n. O'n to'rt - o'n to'rt, qirq - qirq.",
+          "text_translation_ru": "Четыре — это четыре, десять — это десять. Четырнадцать — это четырнадцать, сорок — это сорок.",
+          "pinyin": "Sì shì sì, shí shì shí. Shísì shì shísì, sìshí shì sìshí."
         }
-      ]
+      ],
+      "instruction": "Tez aytishni eshiting va aytishni mashq qiling.",
+      "instruction_ru": "Послушайте скороговорку и потренируйтесь произносить."
     }
   ]
 }

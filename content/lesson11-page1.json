@@ -12,7 +12,7 @@
     {
       "id": "l11p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -48,11 +48,11 @@
     {
       "id": "l11p1-sec-matching",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "instruction": "Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "Подберите к словам соответствующие картинки.",
       "sentences": [],
       "matchingItems": [
         {
@@ -108,16 +108,16 @@
     {
       "id": "l11p1-sec-text1",
       "type": "text",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "在路上，李文在找饭店，王一飞给他打电话。",
       "contextPinyin": "Zài lù shàng, Lǐ Wén zài zhǎo fàndiàn, Wáng Yīfēi gěi tā dǎ diànhuà.",
       "contextTranslation": "Yo'lda Li Wen restoran qidiryapti, Vang Ifey unga qo'ng'iroq qildi.",
       "contextTranslation_ru": "В дороге Ли Вэнь ищет ресторан, Ван Ифэй звонит ему.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-1-1.jpg",
       "sentences": [
         {
@@ -127,7 +127,8 @@
           "text_translation": "Alo, Li Wen, restoranga qachon yetib kelasan?",
           "text_translation_ru": "Алло, Ли Вэнь, когда ты сможешь добраться до ресторана?",
           "pinyin": "Wèi, Lǐ Wén, nǐ shénme shíhou néng dào fàndiàn?",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue1.mp3"
         },
         {
           "id": "l11p1-t1-s2",
@@ -136,7 +137,8 @@
           "text_translation": "Hali bilmayman, hozir qidiryapman. U supermarketning orqasidami?",
           "text_translation_ru": "Ещё не знаю, сейчас ищу. Он за супермаркетом?",
           "pinyin": "Hái bù zhīdào, zhèngzài zhǎo ne. Tā shì bu shì zài chāoshì hòubian?",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue2.mp3"
         },
         {
           "id": "l11p1-t1-s3",
@@ -145,7 +147,8 @@
           "text_translation": "Ha. Sen mashina haydayapsanmi?",
           "text_translation_ru": "Да. Ты на машине?",
           "pinyin": "Shì de. Nǐ kāichē méi kāichē?",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue3.mp3"
         },
         {
           "id": "l11p1-t1-s4",
@@ -154,14 +157,15 @@
           "text_translation": "Men mashina haydamayapman, mashinada kelyapman.",
           "text_translation_ru": "Я не за рулём, еду на машине.",
           "pinyin": "Wǒ méi kāichē, zuò chē ne.",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l11p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%202.mp3",
@@ -174,7 +178,8 @@
           "text_translation_ru": "время; момент (сущ.)",
           "pinyin": "shíhou",
           "wordClass": "n.",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/shihou.mp3"
         },
         {
           "id": "l11p1-v-s2",
@@ -184,7 +189,8 @@
           "text_translation_ru": "ресторан (сущ.)",
           "pinyin": "fàndiàn",
           "wordClass": "n.",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/fandian.mp3"
         },
         {
           "id": "l11p1-v-s3",
@@ -194,7 +200,8 @@
           "text_translation_ru": "знать; понимать (глагол)",
           "pinyin": "zhīdào",
           "wordClass": "v.",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhidao.mp3"
         },
         {
           "id": "l11p1-v-s4",
@@ -204,7 +211,8 @@
           "text_translation_ru": "в процессе; сейчас (нареч.)",
           "pinyin": "zhèngzài",
           "wordClass": "adv.",
-          "vocabNumber": 4
+          "vocabNumber": 4,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhengzai.mp3"
         },
         {
           "id": "l11p1-v-s5",
@@ -214,7 +222,8 @@
           "text_translation_ru": "искать (глагол)",
           "pinyin": "zhǎo",
           "wordClass": "v.",
-          "vocabNumber": 5
+          "vocabNumber": 5,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhao.mp3"
         },
         {
           "id": "l11p1-v-s6",
@@ -224,7 +233,8 @@
           "text_translation_ru": "водить машину (глагол)",
           "pinyin": "kāichē",
           "wordClass": "v.",
-          "vocabNumber": 6
+          "vocabNumber": 6,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/kaiche.mp3"
         },
         {
           "id": "l11p1-v-s7",
@@ -234,21 +244,21 @@
           "text_translation_ru": "машина; транспорт (сущ.)",
           "pinyin": "chē",
           "wordClass": "n.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/che.mp3"
         }
       ]
     },
     {
       "id": "l11p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l11p1-g1-s1",
           "section": "grammar",
-          "text_original": "正反问",
           "text_translation": "Ijobiy-inkor so'roq gaplar",
           "text_translation_ru": "Утвердительно-отрицательные вопросы",
           "grammarNumber": "1"
@@ -256,14 +266,12 @@
         {
           "id": "l11p1-g1-s2",
           "section": "grammar",
-          "text_original": "正反问格式是\"×+不/没+×\"，\"×\"是动词或形容词。动词正反问使用\"不/没\"，形容词正反问使用\"不\"。",
           "text_translation": "Ijobiy-inkor so'roq shakli \"×+不/没+×\" bo'lib, \"×\" fe'l yoki sifatdir. Fe'l uchun \"不/没\", sifat uchun \"不\" ishlatiladi.",
           "text_translation_ru": "Утвердительно-отрицательные вопросы строятся по схеме «×+不/没+×», где «×» — глагол или прилагательное. Для глаголов используется «不/没», для прилагательных — «不»."
         },
         {
           "id": "l11p1-g1-s3",
           "section": "grammar",
-          "text_original": "大声朗读。",
           "text_translation": "Ovoz chiqarib o'qing.",
           "text_translation_ru": "Прочитайте вслух."
         },
@@ -294,14 +302,13 @@
         {
           "id": "l11p1-g1-s7",
           "section": "grammar",
-          "text_original": "朗读对话。",
           "text_translation": "Dialoglarni ovoz chiqarib o'qing.",
           "text_translation_ru": "Прочитайте диалоги вслух."
         },
         {
           "id": "l11p1-g1-s8a",
           "section": "grammar",
-          "text_original": "A：他去哪儿了？你知道不知道？",
+          "text_original": "他去哪儿了？你知道不知道？",
           "pinyin": "Tā qù nǎr le? Nǐ zhīdào bu zhīdào?",
           "text_translation": "U qayerga ketdi? Bilasanmi?",
           "text_translation_ru": "Куда он ушёл? Ты знаешь?",
@@ -311,7 +318,7 @@
         {
           "id": "l11p1-g1-s8b",
           "section": "grammar",
-          "text_original": "B：我不知道。",
+          "text_original": "我不知道。",
           "pinyin": "Wǒ bù zhīdào.",
           "text_translation": "Bilmayman.",
           "text_translation_ru": "Я не знаю.",
@@ -321,7 +328,7 @@
         {
           "id": "l11p1-g1-s9a",
           "section": "grammar",
-          "text_original": "A：昨天你去没去书店？",
+          "text_original": "昨天你去没去书店？",
           "pinyin": "Zuótiān nǐ qù méi qù shūdiàn?",
           "text_translation": "Kecha kitob do'koniga bordingmi?",
           "text_translation_ru": "Ты вчера ходил в книжный?",
@@ -331,7 +338,7 @@
         {
           "id": "l11p1-g1-s9b",
           "section": "grammar",
-          "text_original": "B：我没去。",
+          "text_original": "我没去。",
           "pinyin": "Wǒ méi qù.",
           "text_translation": "Bormadim.",
           "text_translation_ru": "Я не ходил.",
@@ -341,7 +348,7 @@
         {
           "id": "l11p1-g1-s10a",
           "section": "grammar",
-          "text_original": "A：这件衣服贵不贵？",
+          "text_original": "这件衣服贵不贵？",
           "pinyin": "Zhè jiàn yīfu guì bu guì?",
           "text_translation": "Bu kiyim qimmatmi?",
           "text_translation_ru": "Эта одежда дорогая?",
@@ -351,7 +358,7 @@
         {
           "id": "l11p1-g1-s10b",
           "section": "grammar",
-          "text_original": "B：不贵。",
+          "text_original": "不贵。",
           "pinyin": "Bú guì.",
           "text_translation": "Qimmat emas.",
           "text_translation_ru": "Недорогая.",

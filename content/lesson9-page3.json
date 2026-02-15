@@ -5,7 +5,7 @@
     {
       "id": "l9p3-sec-text3-header",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在办公室里，休息时，王一雪和杨同乐谈论周末生活。",
@@ -17,8 +17,8 @@
     {
       "id": "l9p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -26,14 +26,34 @@
             "id": "l9p3-mc-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "杨同乐唱歌（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "杨同乐唱歌（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "不太好", "pinyin": "bú tài hǎo" },
-              { "label": "B", "word": "不好听", "pinyin": "bù hǎotīng" },
-              { "label": "C", "word": "很好听", "pinyin": "hěn hǎotīng" }
+              {
+                "label": "A",
+                "word": "不太好",
+                "pinyin": "bú tài hǎo"
+              },
+              {
+                "label": "B",
+                "word": "不好听",
+                "pinyin": "bù hǎotīng"
+              },
+              {
+                "label": "C",
+                "word": "很好听",
+                "pinyin": "hěn hǎotīng"
+              }
             ],
             "correctOptionLabel": "C"
           },
@@ -41,14 +61,34 @@
             "id": "l9p3-mc-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "王一雪家有一只（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "王一雪家有一只（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "options": [
-              { "label": "A", "word": "小猫", "pinyin": "xiǎo māo" },
-              { "label": "B", "word": "小狗", "pinyin": "xiǎo gǒu" },
-              { "label": "C", "word": "大狗", "pinyin": "dà gǒu" }
+              {
+                "label": "A",
+                "word": "小猫",
+                "pinyin": "xiǎo māo"
+              },
+              {
+                "label": "B",
+                "word": "小狗",
+                "pinyin": "xiǎo gǒu"
+              },
+              {
+                "label": "C",
+                "word": "大狗",
+                "pinyin": "dà gǒu"
+              }
             ],
             "correctOptionLabel": "B"
           }
@@ -58,9 +98,9 @@
     {
       "id": "l9p3-sec-text3-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-3-1.jpg",
       "sentences": [
         {
@@ -70,7 +110,8 @@
           "text_translation": "Ertaga shanba, sen nima qilasan?",
           "text_translation_ru": "Завтра суббота, что ты будешь делать?",
           "pinyin": "Míngtiān Xīngqīliù, nǐ zuò shénme?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue1.mp3"
         },
         {
           "id": "l9p3-t3-s2",
@@ -79,7 +120,8 @@
           "text_translation": "Men kunduz uyda kitob o'qiyman, kechqurun do'stlarim bilan tashqarida qo'shiq aytaman.",
           "text_translation_ru": "Днём я буду дома читать книги, а вечером пойду с друзьями петь на улицу.",
           "pinyin": "Wǒ báitiān zài jiā lǐ dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue2.mp3"
         },
         {
           "id": "l9p3-t3-s3",
@@ -88,7 +130,8 @@
           "text_translation": "Sen qo'shiq aytishing juda yoqimli.",
           "text_translation_ru": "Ты очень хорошо поёшь.",
           "pinyin": "Nǐ chàng gē hěn hǎotīng.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue3.mp3"
         },
         {
           "id": "l9p3-t3-s4",
@@ -97,7 +140,8 @@
           "text_translation": "Rahmat! Siz shanbada nima qilasiz?",
           "text_translation_ru": "Спасибо! А что вы делаете в субботу?",
           "pinyin": "Xièxie! Nín Xīngqīliù zuò shénme?",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue4.mp3"
         },
         {
           "id": "l9p3-t3-s5",
@@ -106,7 +150,8 @@
           "text_translation": "Men uyda ovqat tayyorlayman, televizor ko'raman, bolalar va kuchukcha bilan o'ynayman.",
           "text_translation_ru": "Я дома готовлю, смотрю телевизор, играю с детьми и щенком.",
           "pinyin": "Wǒ zài jiā lǐ zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue5.mp3"
         },
         {
           "id": "l9p3-t3-s6",
@@ -122,15 +167,16 @@
             "pinyin": "Zài kǒuyǔ zhōng cháng érhuà, shuō 'wánr'.",
             "translation": "Og'zaki nutqda ko'pincha \"玩儿\" deb aytiladi.",
             "translation_ru": "В разговорной речи часто произносится с эризацией как «玩儿»."
-          }
+          },
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l9p3-sec-questions",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l9p3-ex-s1",
@@ -153,7 +199,7 @@
     {
       "id": "l9p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%206.mp3",
@@ -166,7 +212,8 @@
           "text_translation_ru": "делать; заниматься (глагол)",
           "pinyin": "zuò",
           "wordClass": "v.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/zuo.mp3"
         },
         {
           "id": "l9p3-v-s2",
@@ -176,7 +223,8 @@
           "text_translation_ru": "день; дневное время (сущ.)",
           "pinyin": "báitiān",
           "wordClass": "n.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/baitian.mp3"
         },
         {
           "id": "l9p3-v-s3",
@@ -186,7 +234,8 @@
           "text_translation_ru": "читать книгу (глагол)",
           "pinyin": "dúshū",
           "wordClass": "v.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dushu.mp3"
         },
         {
           "id": "l9p3-v-s4",
@@ -196,7 +245,8 @@
           "text_translation_ru": "и; с (предлог)",
           "pinyin": "hé",
           "wordClass": "prep.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/he.mp3"
         },
         {
           "id": "l9p3-v-s5",
@@ -206,7 +256,8 @@
           "text_translation_ru": "друг (сущ.)",
           "pinyin": "péngyou",
           "wordClass": "n.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/pengyou.mp3"
         },
         {
           "id": "l9p3-v-s6",
@@ -216,7 +267,8 @@
           "text_translation_ru": "петь (глагол)",
           "pinyin": "chàng",
           "wordClass": "v.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/chang.mp3"
         },
         {
           "id": "l9p3-v-s7",
@@ -226,7 +278,8 @@
           "text_translation_ru": "песня (сущ.)",
           "pinyin": "gē",
           "wordClass": "n.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/ge.mp3"
         },
         {
           "id": "l9p3-v-s8",
@@ -236,7 +289,8 @@
           "text_translation_ru": "приятный на слух (прил.)",
           "pinyin": "hǎotīng",
           "wordClass": "adj.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/haoting.mp3"
         },
         {
           "id": "l9p3-v-s9",
@@ -246,7 +300,8 @@
           "text_translation_ru": "телевизор (сущ.)",
           "pinyin": "diànshì",
           "wordClass": "n.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dianshi.mp3"
         },
         {
           "id": "l9p3-v-s10",
@@ -256,7 +311,8 @@
           "text_translation_ru": "собака (сущ.)",
           "pinyin": "gǒu",
           "wordClass": "n.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/gou.mp3"
         },
         {
           "id": "l9p3-v-s11",
@@ -266,48 +322,98 @@
           "text_translation_ru": "играть; развлекаться (глагол)",
           "pinyin": "wán",
           "wordClass": "v.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/wan.mp3"
         }
       ]
     },
     {
       "id": "l9p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
-          { "id": "A", "label": "A", "word": "是", "pinyin": "shì" },
-          { "id": "B", "label": "B", "word": "好听", "pinyin": "hǎotīng" },
-          { "id": "C", "label": "C", "word": "在学校", "pinyin": "zài xuéxiào" },
-          { "id": "D", "label": "D", "word": "今天上午", "pinyin": "jīntiān shàngwǔ" },
-          { "id": "E", "label": "E", "word": "椅子", "pinyin": "yǐzi" }
+          {
+            "id": "A",
+            "label": "A",
+            "word": "是",
+            "pinyin": "shì"
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "word": "好听",
+            "pinyin": "hǎotīng"
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "word": "在学校",
+            "pinyin": "zài xuéxiào"
+          },
+          {
+            "id": "D",
+            "label": "D",
+            "word": "今天上午",
+            "pinyin": "jīntiān shàngwǔ"
+          },
+          {
+            "id": "E",
+            "label": "E",
+            "word": "椅子",
+            "pinyin": "yǐzi"
+          }
         ],
         "sentences": [
           {
             "id": "l9p3-fb-q1",
             "number": 1,
             "parts": [
-              { "type": "text", "content": "（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）上有一只小猫，房间外（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）一只小狗。" }
+              {
+                "type": "text",
+                "content": "（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）上有一只小猫，房间外（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）一只小狗。"
+              }
             ],
             "correctOptionId": "E",
-            "correctOptionIds": ["E", "A"]
+            "correctOptionIds": [
+              "E",
+              "A"
+            ]
           },
           {
             "id": "l9p3-fb-q2",
             "number": 2,
             "parts": [
-              { "type": "text", "content": "她（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）在家里学习。" }
+              {
+                "type": "text",
+                "content": "她（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）在家里学习。"
+              }
             ],
             "correctOptionId": "D"
           },
@@ -316,9 +422,17 @@
             "number": 3,
             "speaker": "王一雪",
             "parts": [
-              { "type": "text", "content": "你唱歌很（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）。" }
+              {
+                "type": "text",
+                "content": "你唱歌很（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）。"
+              }
             ],
             "correctOptionId": "B"
           },
@@ -326,7 +440,10 @@
             "id": "l9p3-fb-q3b",
             "speaker": "杨同乐",
             "parts": [
-              { "type": "text", "content": "谢谢！" }
+              {
+                "type": "text",
+                "content": "谢谢！"
+              }
             ],
             "correctOptionId": "_static"
           },
@@ -335,7 +452,10 @@
             "number": 4,
             "speaker": "陈天中",
             "parts": [
-              { "type": "text", "content": "你下午去哪儿？" }
+              {
+                "type": "text",
+                "content": "你下午去哪儿？"
+              }
             ],
             "correctOptionId": "_static"
           },
@@ -343,9 +463,17 @@
             "id": "l9p3-fb-q4b",
             "speaker": "安　妮",
             "parts": [
-              { "type": "text", "content": "我下午还（" },
-              { "type": "blank" },
-              { "type": "text", "content": "）上课。" }
+              {
+                "type": "text",
+                "content": "我下午还（"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "）上课。"
+              }
             ],
             "correctOptionId": "C"
           }
@@ -355,8 +483,8 @@
     {
       "id": "l9p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -364,43 +492,95 @@
             "id": "l9p3-img-1",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-3-2.jpg",
             "parts": [
-              { "type": "text", "content": "桌子上" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "桌子上"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["有一本书"]
+            "answers": [
+              "有一本书"
+            ]
           },
           {
             "id": "l9p3-img-2",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-3-3.jpg",
             "parts": [
-              { "type": "text", "content": "孩子们" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "在家里" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "。" }
+              {
+                "type": "text",
+                "content": "孩子们"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "在家里"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "。"
+              }
             ],
-            "answers": ["白天", "玩"]
+            "answers": [
+              "白天",
+              "玩"
+            ]
           },
           {
             "id": "l9p3-img-3",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-3-4.jpg",
             "parts": [
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "一只小狗是我的，" },
-              { "type": "blank", "content": "" },
-              { "type": "text", "content": "二只小狗是她的。" }
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "一只小狗是我的，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              },
+              {
+                "type": "text",
+                "content": "二只小狗是她的。"
+              }
             ],
-            "answers": ["第", "第"]
+            "answers": [
+              "第",
+              "第"
+            ]
           },
           {
             "id": "l9p3-img-4",
             "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-3-5.jpg",
             "parts": [
-              { "type": "text", "content": "学校外边是一家小店，" },
-              { "type": "blank", "content": "" }
+              {
+                "type": "text",
+                "content": "学校外边是一家小店，"
+              },
+              {
+                "type": "blank",
+                "content": ""
+              }
             ],
-            "answers": ["学校前边是一家书店"]
+            "answers": [
+              "学校前边是一家书店"
+            ]
           }
         ]
       }

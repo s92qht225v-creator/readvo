@@ -5,7 +5,7 @@
     {
       "id": "l8p3-sec-text3-header",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在医院里，刘明和同事胡医生在聊天儿。",
@@ -17,8 +17,8 @@
     {
       "id": "l8p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l8p3-sec-text3-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-3-1.jpg",
       "sentences": [
         {
@@ -110,7 +110,8 @@
           "text_translation": "Xu, ovqatlandingizmi?",
           "text_translation_ru": "Сяо Ху, ты поел?",
           "pinyin": "Xiǎo Hú, chī fàn le ma?",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue1.mp3"
         },
         {
           "id": "l8p3-t3-s2",
@@ -119,7 +120,8 @@
           "text_translation": "Hali yo'q, katta kasalxonada bemorlar ko'p.",
           "text_translation_ru": "Ещё нет, в большой больнице много пациентов.",
           "pinyin": "Hái méi ne, dà yīyuàn lǐ bìngrén duō.",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue2.mp3"
         },
         {
           "id": "l8p3-t3-s3",
@@ -128,7 +130,8 @@
           "text_translation": "Otangiz ham shifokormi?",
           "text_translation_ru": "Твой папа тоже врач?",
           "pinyin": "Nǐ bàba yě shì yīshēng ba?",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue3.mp3"
         },
         {
           "id": "l8p3-t3-s4",
@@ -137,7 +140,8 @@
           "text_translation": "Ha, otam ham kasalxonada ishlaydi.",
           "text_translation_ru": "Да, мой папа тоже работает в больнице.",
           "pinyin": "Shì, wǒ bàba yě zài yīyuàn gōngzuò.",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue4.mp3"
         },
         {
           "id": "l8p3-t3-s5",
@@ -146,7 +150,8 @@
           "text_translation": "Otangiz ham shu kasalxonadami?",
           "text_translation_ru": "Твой папа тоже в этой больнице?",
           "pinyin": "Nǐ bàba yě zài zhège yīyuàn ma?",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue5.mp3"
         },
         {
           "id": "l8p3-t3-s6",
@@ -155,7 +160,8 @@
           "text_translation": "Yo'q, u oldinroqdagi kichik kasalxonada.",
           "text_translation_ru": "Нет, он в той маленькой больнице впереди.",
           "pinyin": "Bù shì, tā zài qiánbian nàge xiǎo yīyuàn.",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -168,7 +174,7 @@
     {
       "id": "l8p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%206.mp3",
@@ -181,7 +187,8 @@
           "text_translation_ru": "еда; пища (сущ.)",
           "pinyin": "fàn",
           "wordClass": "n.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/fan.mp3"
         },
         {
           "id": "l8p3-v-s2",
@@ -191,7 +198,8 @@
           "text_translation_ru": "большой (прил.)",
           "pinyin": "dà",
           "wordClass": "adj.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/da.mp3"
         },
         {
           "id": "l8p3-v-s3",
@@ -201,7 +209,8 @@
           "text_translation_ru": "больной; пациент (сущ.)",
           "pinyin": "bìngrén",
           "wordClass": "n.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/bingren.mp3"
         },
         {
           "id": "l8p3-v-s4",
@@ -211,7 +220,8 @@
           "text_translation_ru": "много; многочисленный (прил.)",
           "pinyin": "duō",
           "wordClass": "adj.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/duo.mp3"
         },
         {
           "id": "l8p3-v-s5",
@@ -221,7 +231,8 @@
           "text_translation_ru": "врач; доктор (сущ.)",
           "pinyin": "yīshēng",
           "wordClass": "n.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/yisheng.mp3"
         },
         {
           "id": "l8p3-v-s6",
@@ -231,14 +242,15 @@
           "text_translation_ru": "работать (глагол); работа (сущ.)",
           "pinyin": "gōngzuò",
           "wordClass": "v./n.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/gongzuo.mp3"
         }
       ]
     },
     {
       "id": "l8p3-sec-propernoun",
       "type": "vocabulary",
-      "heading": "专有名词",
+      "heading": "",
       "subheading": "Atoqli otlar",
       "subheading_ru": "Имена собственные",
       "sentences": [
@@ -250,18 +262,19 @@
           "text_translation_ru": "доктор Ху (имя собств.)",
           "pinyin": "Hú yīshēng",
           "wordClass": "pn.",
-          "vocabNumber": ""
+          "vocabNumber": "",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/huyisheng.mp3"
         }
       ]
     },
     {
       "id": "l8p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'zni tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -406,8 +419,8 @@
     {
       "id": "l8p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -510,19 +523,10 @@
     {
       "id": "l8p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
-      "instruction": "双人活动。Juft bo'lib ishlang.",
-      "instruction_ru": "双人活动。Работа в парах.",
       "sentences": [
-        {
-          "id": "l8p3-act-s1",
-          "section": "activity",
-          "text_original": "两人一组，使用以下词语对话。",
-          "text_translation": "Juft bo'lib ishlang, quyidagi so'zlardan foydalanib dialog tuzing.",
-          "text_translation_ru": "Работайте в парах, используя следующие слова для составления диалога."
-        },
         {
           "id": "l8p3-act-s2",
           "section": "activity",

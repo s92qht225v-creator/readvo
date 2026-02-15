@@ -12,7 +12,7 @@
     {
       "id": "l12p1-sec-objectives",
       "type": "objectives",
-      "heading": "目标",
+      "heading": "",
       "subheading": "Maqsadlar",
       "subheading_ru": "Цели",
       "sentences": [
@@ -66,11 +66,11 @@
     {
       "id": "l12p1-sec-matching",
       "type": "matching",
-      "heading": "热身",
+      "heading": "",
       "subheading": "Kirish mashqi",
       "subheading_ru": "Разминка",
-      "instruction": "给下面的词语选择对应的图片。Quyidagi so'zlarga mos rasmni tanlang.",
-      "instruction_ru": "给下面的词语选择对应的图片。Подберите к словам соответствующие картинки.",
+      "instruction": "Quyidagi so'zlarga mos rasmni tanlang.",
+      "instruction_ru": "Подберите к словам соответствующие картинки.",
       "sentences": [],
       "matchingItems": [
         {
@@ -126,15 +126,15 @@
     {
       "id": "l12p1-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 1",
+      "heading": "",
       "subheading": "Tekst 1",
       "subheading_ru": "Текст 1",
       "context": "王一雪给王一飞打电话，询问王一飞那边的情况。",
       "contextPinyin": "Wáng Yīxuě gěi Wáng Yīfēi dǎ diànhuà, xúnwèn Wáng Yīfēi nàbiān de qíngkuàng.",
       "contextTranslation": "Wang Yixue Vang Ifeyga telefon qilib, uning tomonidagi vaziyatni so'radi.",
       "contextTranslation_ru": "Ван Исюэ позвонила Ван Ифэю, чтобы узнать о ситуации на его стороне.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -214,9 +214,9 @@
     {
       "id": "l12p1-sec-text1",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%201.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-1-1.jpg",
       "sentences": [
         {
@@ -226,7 +226,8 @@
           "text_translation": "Bugun ob-havo qanday?",
           "text_translation_ru": "Какая сегодня погода?",
           "pinyin": "Jīntiān tiānqì zěnmeyàng?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue1.mp3"
         },
         {
           "id": "l12p1-t1-s2",
@@ -235,7 +236,8 @@
           "text_translation": "Bu yerda ob-havo unchalik yaxshi emas, yomg'ir yog'di.",
           "text_translation_ru": "Здесь погода не очень хорошая, пошёл дождь.",
           "pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue2.mp3"
         },
         {
           "id": "l12p1-t1-s3",
@@ -244,7 +246,8 @@
           "text_translation": "Yomg'ir kuchliimi?",
           "text_translation_ru": "Дождь сильный?",
           "pinyin": "Yǔ dà ma?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue3.mp3"
         },
         {
           "id": "l12p1-t1-s4",
@@ -253,14 +256,15 @@
           "text_translation": "Biroz kuchli, menga juda sovuq tuyulyapti.",
           "text_translation_ru": "Немного сильный, мне кажется, очень холодно.",
           "pinyin": "Yǒudiǎnr dà, wǒ juéde hěn lěng.",
-          "speaker": "王一飞"
+          "speaker": "王一飞",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l12p1-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%202.mp3",
@@ -273,7 +277,8 @@
           "text_translation_ru": "погода (сущ.)",
           "pinyin": "tiānqì",
           "wordClass": "n.",
-          "vocabNumber": 1
+          "vocabNumber": 1,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/tianqi.mp3"
         },
         {
           "id": "l12p1-v-s2",
@@ -283,7 +288,8 @@
           "text_translation_ru": "здесь; тут (мест.)",
           "pinyin": "zhèlǐ",
           "wordClass": "pron.",
-          "vocabNumber": 2
+          "vocabNumber": 2,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/zheli.mp3"
         },
         {
           "id": "l12p1-v-s3",
@@ -293,7 +299,8 @@
           "text_translation_ru": "погода; день (сущ.)",
           "pinyin": "tiān",
           "wordClass": "n.",
-          "vocabNumber": 3
+          "vocabNumber": 3,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/tian.mp3"
         },
         {
           "id": "l12p1-v-s4",
@@ -302,7 +309,8 @@
           "text_translation": "yomg'ir yog'moq",
           "text_translation_ru": "идёт дождь",
           "pinyin": "xià yǔ",
-          "vocabNumber": 4
+          "vocabNumber": 4,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/xiayu.mp3"
         },
         {
           "id": "l12p1-v-s5",
@@ -312,7 +320,8 @@
           "text_translation_ru": "частица, указывающая на изменение ситуации или состояния",
           "pinyin": "le",
           "wordClass": "part.",
-          "vocabNumber": 5
+          "vocabNumber": 5,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/le.mp3"
         },
         {
           "id": "l12p1-v-s6",
@@ -322,7 +331,8 @@
           "text_translation_ru": "дождь (сущ.)",
           "pinyin": "yǔ",
           "wordClass": "n.",
-          "vocabNumber": 6
+          "vocabNumber": 6,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/yu.mp3"
         },
         {
           "id": "l12p1-v-s7",
@@ -332,7 +342,8 @@
           "text_translation_ru": "немного; чуть-чуть (нареч.)",
           "pinyin": "yǒudiǎnr",
           "wordClass": "adv.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/youdianr.mp3"
         },
         {
           "id": "l12p1-v-s8",
@@ -342,7 +353,8 @@
           "text_translation_ru": "чувствовать; считать (глагол)",
           "pinyin": "juéde",
           "wordClass": "v.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/juede.mp3"
         },
         {
           "id": "l12p1-v-s9",
@@ -352,21 +364,21 @@
           "text_translation_ru": "холодный (прил.)",
           "pinyin": "lěng",
           "wordClass": "adj.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/leng.mp3"
         }
       ]
     },
     {
       "id": "l12p1-sec-grammar1",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l12p1-g1-s1",
           "section": "grammar",
-          "text_original": "非主谓句",
           "text_translation": "Egasiz-kesimli gaplar",
           "text_translation_ru": "Бесподлежащно-сказуемостные предложения",
           "grammarNumber": "1"
@@ -374,7 +386,6 @@
         {
           "id": "l12p1-g1-s2",
           "section": "grammar",
-          "text_original": "非主谓句是由词或短语构成、不分主语和谓语的句子，口语中常用。",
           "text_translation": "Egasiz-kesimli gaplar so'z yoki iboralardan tuzilgan, ega va kesim ajratilmaydigan gaplar bo'lib, og'zaki nutqda ko'p ishlatiladi.",
           "text_translation_ru": "Бесподлежащно-сказуемостные предложения состоят из слов или словосочетаний без разделения на подлежащее и сказуемое и часто используются в разговорной речи."
         },
@@ -435,7 +446,6 @@
         {
           "id": "l12p1-g2-s1",
           "section": "grammar",
-          "text_original": "语气助词\"了(1)\"",
           "text_translation": "Yuklama \"了 (1)\"",
           "text_translation_ru": "Модальная частица «了 (1)»",
           "grammarNumber": "2"
@@ -443,7 +453,6 @@
         {
           "id": "l12p1-g2-s2",
           "section": "grammar",
-          "text_original": "语气助词\"了(1)\"位于句子末尾或句中停顿的地方，表示有变化或出现新情况。否定回答时，用副词\"没\"，句子末尾不用\"了\"。",
           "text_translation": "\"了 (1)\" yuklamasi gap oxirida yoki gap ichidagi to'xtash joyida kelib, o'zgarish yoki yangi holatni bildiradi. Inkor javobda \"没\" ravishi ishlatiladi, gap oxirida \"了\" qo'yilmaydi.",
           "text_translation_ru": "Модальная частица «了 (1)» ставится в конце предложения или на паузе внутри предложения и указывает на изменение или появление новой ситуации. В отрицательном ответе используется наречие «没», а «了» в конце предложения опускается."
         },
@@ -466,7 +475,7 @@
         {
           "id": "l12p1-g2-s5a",
           "section": "grammar",
-          "text_original": "A：弟弟起床了吗？",
+          "text_original": "弟弟起床了吗？",
           "pinyin": "Dìdi qǐchuáng le ma?",
           "text_translation": "Ukang turdimi?",
           "text_translation_ru": "Братик встал?",
@@ -476,7 +485,7 @@
         {
           "id": "l12p1-g2-s5b",
           "section": "grammar",
-          "text_original": "B：没起床呢。",
+          "text_original": "没起床呢。",
           "pinyin": "Méi qǐchuáng ne.",
           "text_translation": "Hali turmadi.",
           "text_translation_ru": "Ещё не встал.",

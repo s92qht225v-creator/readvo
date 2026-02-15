@@ -5,7 +5,7 @@
     {
       "id": "l5p2-sec-text2",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Text 2",
       "subheading_ru": "Текст 2",
       "context": "在公司里，王一雪和杨同乐休息时聊天儿。",
@@ -17,8 +17,8 @@
     {
       "id": "l5p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Listen to the dialogue twice and choose the correct answer.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l5p2-sec-dialogue2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,8 @@
           "text_translation_ru": "Ты умеешь готовить?",
           "pinyin": "Nǐ huì zuò fàn ma?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/dialogue1.mp3"
         },
         {
           "id": "l5p2-t2-s2",
@@ -121,7 +122,8 @@
           "text_translation_ru": "Умею.",
           "pinyin": "Wǒ huì zuò.",
           "speaker": "杨同乐",
-          "speakerName": "杨同乐"
+          "speakerName": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/dialogue2.mp3"
         },
         {
           "id": "l5p2-t2-s3",
@@ -131,7 +133,8 @@
           "text_translation_ru": "Что ты умеешь готовить?",
           "pinyin": "Nǐ huì zuò shénme?",
           "speaker": "王一雪",
-          "speakerName": "王一雪"
+          "speakerName": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/dialogue3.mp3"
         },
         {
           "id": "l5p2-t2-s4",
@@ -141,14 +144,15 @@
           "text_translation_ru": "Я умею готовить лапшу, пельмени, а также некоторые блюда. По воскресеньям я тоже готовлю.",
           "pinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài. Xīngqītiān wǒ yě zuò fàn.",
           "speaker": "杨同乐",
-          "speakerName": "杨同乐"
+          "speakerName": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l5p2-sec-vocab2",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%204.mp3",
@@ -159,7 +163,8 @@
           "text_original": "会",
           "text_translation": "qila olmoq, bilmoq (modal fe'l)",
           "text_translation_ru": "уметь, мочь (модальн. гл.)",
-          "pinyin": "huì"
+          "pinyin": "huì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/hui.mp3"
         },
         {
           "id": "l5p2-v-s2",
@@ -167,7 +172,8 @@
           "text_original": "做饭",
           "text_translation": "ovqat tayyorlamoq",
           "text_translation_ru": "готовить еду",
-          "pinyin": "zuò fàn"
+          "pinyin": "zuò fàn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/zuofan.mp3"
         },
         {
           "id": "l5p2-v-s3",
@@ -175,7 +181,8 @@
           "text_original": "做",
           "text_translation": "qilmoq, tayyorlamoq (fe'l)",
           "text_translation_ru": "делать, готовить (гл.)",
-          "pinyin": "zuò"
+          "pinyin": "zuò",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/zuo.mp3"
         },
         {
           "id": "l5p2-v-s4",
@@ -183,7 +190,8 @@
           "text_original": "面条儿",
           "text_translation": "noodle (ot)",
           "text_translation_ru": "лапша (сущ.)",
-          "pinyin": "miàntiáor"
+          "pinyin": "miàntiáor",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/miantiaor.mp3"
         },
         {
           "id": "l5p2-v-s5",
@@ -191,7 +199,8 @@
           "text_original": "饺子",
           "text_translation": "chuchvara (ot)",
           "text_translation_ru": "пельмени (сущ.)",
-          "pinyin": "jiǎozi"
+          "pinyin": "jiǎozi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/jiaozi.mp3"
         },
         {
           "id": "l5p2-v-s6",
@@ -199,7 +208,8 @@
           "text_original": "一些",
           "text_translation": "bir nechta (son-o'lchov so'zi)",
           "text_translation_ru": "несколько, некоторые (числ.-сч.сл.)",
-          "pinyin": "yìxiē"
+          "pinyin": "yìxiē",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/yixie.mp3"
         },
         {
           "id": "l5p2-v-s7",
@@ -207,21 +217,21 @@
           "text_original": "菜",
           "text_translation": "taom, ovqat (ot)",
           "text_translation_ru": "блюдо, кушанье (сущ.)",
-          "pinyin": "cài"
+          "pinyin": "cài",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/cai.mp3"
         }
       ]
     },
     {
       "id": "l5p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l5p2-g3-s1",
           "section": "grammar",
-          "text_original": "能愿动词\"会\" Modal Verb \"会\" (huì)",
           "text_translation": "Modal fe'l \"会\"",
           "text_translation_ru": "Модальный глагол «会»",
           "grammarNumber": "3"
@@ -229,7 +239,6 @@
         {
           "id": "l5p2-g3-s2",
           "section": "grammar",
-          "text_original": "\"会\"用在动词前，表示通过学习后，懂得怎样做或有能力做。",
           "text_translation": "\"会\" fe'ldan oldin qo'llaniladi va o'rganish orqali biror narsani qanday qilishni bilish yoki qila olish qobiliyatini bildiradi.",
           "text_translation_ru": "«会» ставится перед глаголом и указывает на умение или способность выполнять действие, приобретённые в результате обучения."
         },

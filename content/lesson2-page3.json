@@ -5,16 +5,16 @@
     {
       "id": "l2p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在校园里，李文和白家月第一次相遇。",
       "contextPinyin": "Zài xiàoyuán lǐ, Lǐ Wén hé Bái Jiāyuè dì yī cì xiāngyù.",
       "contextTranslation": "Kampusda Li Wen va Bai Jiayue birinchi marta uchrashdi.",
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые.",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "/audio/l2p3-text3.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-3-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -32,7 +32,7 @@
           "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "/audio/l2p3-t3-s1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue1.mp3"
         },
         {
           "id": "l2p3-t3-s2",
@@ -43,7 +43,7 @@
           "pinyin": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "/audio/l2p3-t3-s2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue2.mp3"
         },
         {
           "id": "l2p3-t3-s3",
@@ -54,7 +54,7 @@
           "pinyin": "Hěn gāoxìng rènshi nǐ.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "/audio/l2p3-t3-s3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue3.mp3"
         },
         {
           "id": "l2p3-t3-s4",
@@ -65,14 +65,14 @@
           "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "/audio/l2p3-t3-s4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l2p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "/audio/l2p3-vocab.mp3",
@@ -83,7 +83,8 @@
           "text_original": "很",
           "text_translation": "juda (ravish)",
           "text_translation_ru": "очень (наречие)",
-          "pinyin": "hěn"
+          "pinyin": "hěn",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/hen.mp3"
         },
         {
           "id": "l2p3-v-s2",
@@ -91,7 +92,8 @@
           "text_original": "高兴",
           "text_translation": "xursand, baxtli (sifat)",
           "text_translation_ru": "рад, счастливый (прил.)",
-          "pinyin": "gāoxìng"
+          "pinyin": "gāoxìng",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/gaoxing.mp3"
         },
         {
           "id": "l2p3-v-s3",
@@ -99,7 +101,8 @@
           "text_original": "认识",
           "text_translation": "bilmoq, tanishmoq (fe'l)",
           "text_translation_ru": "знать, познакомиться (глагол)",
-          "pinyin": "rènshi"
+          "pinyin": "rènshi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/renshi.mp3"
         },
         {
           "id": "l2p3-v-s4",
@@ -107,27 +110,30 @@
           "text_original": "也",
           "text_translation": "ham (ravish)",
           "text_translation_ru": "тоже (наречие)",
-          "pinyin": "yě"
+          "pinyin": "yě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/ye.mp3"
         }
       ]
     },
     {
       "id": "l2p3-sec-tonguetwister",
-      "type": "grammar",
-      "heading": "跟读绕口令",
+      "type": "tonguetwister",
+      "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
-      "audio_url": "/audio/l2p3-tonguetwister.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/tongue.mp3",
       "sentences": [
         {
           "id": "l2p3-tt-s2",
-          "section": "grammar",
+          "section": "tonguetwister",
           "text_original": "七加一，再减一，加完减完等于几？加完减完还是七。",
           "text_translation": "Yettiga bir qo'sh, yana birni ayir, qo'shib ayirgandan keyin nechaga teng? Qo'shib ayirgandan keyin baribir yetti.",
           "text_translation_ru": "Семь плюс один, минус один, сколько получится после сложения и вычитания? После сложения и вычитания всё равно семь.",
           "pinyin": "Qī jiā yī, zài jiǎn yī, jiāwán jiǎnwán děngyú jǐ? Jiāwán jiǎnwán háishì qī."
         }
-      ]
+      ],
+      "instruction": "Tez aytishni eshiting va aytishni mashq qiling.",
+      "instruction_ru": "Послушайте скороговорку и потренируйтесь произносить."
     }
   ]
 }

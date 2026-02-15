@@ -5,7 +5,7 @@
     {
       "id": "l8p2-sec-text2-header",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在教室里，下课后，白家月给李文打电话。",
@@ -17,8 +17,8 @@
     {
       "id": "l8p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l8p2-sec-text2-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-1.jpg",
       "sentences": [
         {
@@ -110,7 +110,8 @@
           "text_translation": "Biz qayerda uchrashaylik?",
           "text_translation_ru": "Где мы встретимся?",
           "pinyin": "Wǒmen zài nǎr jiàn ne?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue1.mp3"
         },
         {
           "id": "l8p2-t2-s2",
@@ -119,7 +120,8 @@
           "text_translation": "Maktab kitob do'koni oldida uchrashaylik.",
           "text_translation_ru": "Давай встретимся перед школьным книжным магазином.",
           "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba.",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue2.mp3"
         },
         {
           "id": "l8p2-t2-s3",
@@ -128,7 +130,8 @@
           "text_translation": "Yaxshi. Tushdan keyin soat ikkida yetib kela olasanmi?",
           "text_translation_ru": "Хорошо. Ты сможешь прийти в два часа дня?",
           "pinyin": "Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue3.mp3"
         },
         {
           "id": "l8p2-t2-s4",
@@ -137,14 +140,15 @@
           "text_translation": "Yetib kelaman. Men maktabda tushlik qilaman.",
           "text_translation_ru": "Смогу. Я пообедаю в школе.",
           "pinyin": "Wǒ néng dào. Wǒ zài xuéxiào chī wǔfàn.",
-          "speaker": "李　文"
+          "speaker": "李　文",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l8p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%204.mp3",
@@ -157,7 +161,8 @@
           "text_translation_ru": "в; на (предлог)",
           "pinyin": "zài",
           "wordClass": "prep.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/zai.mp3"
         },
         {
           "id": "l8p2-v-s2",
@@ -167,7 +172,8 @@
           "text_translation_ru": "школа (сущ.)",
           "pinyin": "xuéxiào",
           "wordClass": "n.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/xuexiao.mp3"
         },
         {
           "id": "l8p2-v-s3",
@@ -177,7 +183,8 @@
           "text_translation_ru": "книжный магазин (сущ.)",
           "pinyin": "shūdiàn",
           "wordClass": "n.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/shudian.mp3"
         },
         {
           "id": "l8p2-v-s4",
@@ -187,7 +194,8 @@
           "text_translation_ru": "перед; впереди (сущ.)",
           "pinyin": "qián",
           "wordClass": "n.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/qian.mp3"
         },
         {
           "id": "l8p2-v-s5",
@@ -197,7 +205,8 @@
           "text_translation_ru": "мочь; быть в состоянии (мод. глагол)",
           "pinyin": "néng",
           "wordClass": "mod.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/neng.mp3"
         },
         {
           "id": "l8p2-v-s6",
@@ -207,7 +216,8 @@
           "text_translation_ru": "прибыть; достичь (глагол)",
           "pinyin": "dào",
           "wordClass": "v.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dao.mp3"
         },
         {
           "id": "l8p2-v-s7",
@@ -217,21 +227,21 @@
           "text_translation_ru": "обед (сущ.)",
           "pinyin": "wǔfàn",
           "wordClass": "n.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/wufan.mp3"
         }
       ]
     },
     {
       "id": "l8p2-sec-grammar2",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l8p2-g2-s1",
           "section": "grammar",
-          "text_original": "介词\"在\"",
           "text_translation": "Ko'makchi \"在\"",
           "text_translation_ru": "Предлог «在»",
           "grammarNumber": "2"
@@ -239,7 +249,6 @@
         {
           "id": "l8p2-g2-s2",
           "section": "grammar",
-          "text_original": "\"在\"和表示处所的词语组合，放在动词前，说明动作发生的处所。",
           "text_translation": "\"在\" joy-o'rinni bildiruvchi so'zlar bilan birikib, fe'l oldida keladi va harakatning sodir bo'lgan joyini bildiradi.",
           "text_translation_ru": "«在» сочетается со словами, обозначающими место, ставится перед глаголом и указывает место совершения действия."
         },
@@ -276,7 +285,6 @@
         {
           "id": "l8p2-g3-s1",
           "section": "grammar",
-          "text_original": "能愿动词\"能\"",
           "text_translation": "Modal fe'l \"能\"",
           "text_translation_ru": "Модальный глагол «能»",
           "grammarNumber": "3"
@@ -284,7 +292,6 @@
         {
           "id": "l8p2-g3-s2",
           "section": "grammar",
-          "text_original": "\"能\"放在动词前，表示有能力或有条件做某事。",
           "text_translation": "\"能\" fe'l oldida kelib, biror ishni qilish qobiliyati yoki sharoiti borligini bildiradi.",
           "text_translation_ru": "«能» ставится перед глаголом и указывает на способность или возможность сделать что-либо."
         },

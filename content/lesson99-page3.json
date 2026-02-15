@@ -5,7 +5,7 @@
     {
       "id": "l99p3-sec-vocab5",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar (5)",
       "subheading_ru": "Новые слова (5)",
       "sentences": [
@@ -62,7 +62,7 @@
     {
       "id": "l99p3-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Grammatika",
       "subheading_ru": "Грамматика",
       "sentences": [
@@ -94,7 +94,7 @@
     {
       "id": "l99p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Dialog 3",
       "subheading_ru": "Диалог 3",
       "context": "Ertasi kuni. Dars boshlanmoqda. Li ustoz sinfga kirdi.",
@@ -189,7 +189,7 @@
     {
       "id": "l99p3-sec-exercise3",
       "type": "multiplechoice",
-      "heading": "选择正确答案",
+      "heading": "",
       "subheading": "To'g'ri javobni tanlang",
       "subheading_ru": "Выберите правильный ответ",
       "sentences": [],
@@ -199,12 +199,24 @@
             "id": "l99p3-mc-q1",
             "number": 1,
             "parts": [
-              {"type": "text", "content": "Ustozga salom berishda qaysi so'z ishlatiladi? "}
+              {
+                "type": "text",
+                "content": "Ustozga salom berishda qaysi so'z ishlatiladi? "
+              }
             ],
             "options": [
-              {"label": "A", "word": "你好"},
-              {"label": "B", "word": "您好"},
-              {"label": "C", "word": "大家好"}
+              {
+                "label": "A",
+                "word": "你好"
+              },
+              {
+                "label": "B",
+                "word": "您好"
+              },
+              {
+                "label": "C",
+                "word": "大家好"
+              }
             ],
             "correctOptionLabel": "B"
           },
@@ -212,12 +224,24 @@
             "id": "l99p3-mc-q2",
             "number": 2,
             "parts": [
-              {"type": "text", "content": "\"再见\" nimani bildiradi? "}
+              {
+                "type": "text",
+                "content": "\"再见\" nimani bildiradi? "
+              }
             ],
             "options": [
-              {"label": "A", "word": "Salom"},
-              {"label": "B", "word": "Rahmat"},
-              {"label": "C", "word": "Xayr"}
+              {
+                "label": "A",
+                "word": "Salom"
+              },
+              {
+                "label": "B",
+                "word": "Rahmat"
+              },
+              {
+                "label": "C",
+                "word": "Xayr"
+              }
             ],
             "correctOptionLabel": "C"
           },
@@ -225,12 +249,24 @@
             "id": "l99p3-mc-q3",
             "number": 3,
             "parts": [
-              {"type": "text", "content": "\"同学们\" deb kimga murojaat qilinadi? "}
+              {
+                "type": "text",
+                "content": "\"同学们\" deb kimga murojaat qilinadi? "
+              }
             ],
             "options": [
-              {"label": "A", "word": "Ustozlarga"},
-              {"label": "B", "word": "Talabalarga"},
-              {"label": "C", "word": "Oilaga"}
+              {
+                "label": "A",
+                "word": "Ustozlarga"
+              },
+              {
+                "label": "B",
+                "word": "Talabalarga"
+              },
+              {
+                "label": "C",
+                "word": "Oilaga"
+              }
             ],
             "correctOptionLabel": "B"
           }
@@ -239,33 +275,25 @@
     },
     {
       "id": "l99p3-sec-tonguetwister",
-      "type": "text",
-      "heading": "跟读绕口令",
+      "type": "tonguetwister",
+      "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
       "sentences": [
         {
           "id": "l99p3-tt-s1",
-          "section": "text",
-          "text_original": "妈种麻，我放马。",
-          "text_translation": "Onam kanop ekadi, men otni boqaman.",
-          "text_translation_ru": "Мама сажает коноплю, я пасу лошадь.",
-          "pinyin": "Mā zhòng má, wǒ fàng mǎ."
-        },
-        {
-          "id": "l99p3-tt-s2",
-          "section": "text",
-          "text_original": "马吃麻，妈骂马。",
-          "text_translation": "Ot kanopni yeydi, onam otni so'kadi.",
-          "text_translation_ru": "Лошадь ест коноплю, мама ругает лошадь.",
-          "pinyin": "Mǎ chī má, mā mà mǎ."
+          "section": "tonguetwister",
+          "text_original": "妈种麻，我放马。马吃麻，妈骂马。",
+          "text_translation": "Onam kanop ekadi, men otni boqaman. Ot kanopni yeydi, onam otni so'kadi.",
+          "text_translation_ru": "Мама сажает коноплю, я пасу лошадь. Лошадь ест коноплю, мама ругает лошадь.",
+          "pinyin": "Mā zhòng má, wǒ fàng mǎ. Mǎ chī má, mā mà mǎ."
         }
       ]
     },
     {
       "id": "l99p3-sec-tip",
       "type": "tip",
-      "heading": "小语助力",
+      "heading": "",
       "subheading": "Foydali maslahat",
       "subheading_ru": "Полезный совет",
       "sentences": [

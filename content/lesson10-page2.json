@@ -5,15 +5,15 @@
     {
       "id": "l10p2-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在菜市场，王一雪在买水果。",
       "contextPinyin": "Zài cài shìchǎng, Wáng Yīxuě zài mǎi shuǐguǒ.",
       "contextTranslation": "Bozorda Wang Yixue meva sotib olyapti.",
       "contextTranslation_ru": "На рынке Ван Исюэ покупает фрукты.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l10p2-sec-text2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-2-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Bu yerdagi mevalar juda ko'p-ku!",
           "text_translation_ru": "Здесь фруктов действительно немало!",
           "pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo!",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue1.mp3"
         },
         {
           "id": "l10p2-t2-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Nima sotib olmoqchisiz?",
           "text_translation_ru": "Что вы хотите купить?",
           "pinyin": "Nín xiǎng mǎi shénme?",
-          "speaker": "售货员"
+          "speaker": "售货员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue2.mp3"
         },
         {
           "id": "l10p2-t2-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Ikki jin olma sotib olmoqchiman.",
           "text_translation_ru": "Я хочу купить два цзиня яблок.",
           "pinyin": "Wǒ xiǎng mǎi liǎng jīn píngguǒ.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue3.mp3"
         },
         {
           "id": "l10p2-t2-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Olmaning jini uch yuan elli tiyin. Bulari yetti yuan yigirma tiyin, yetti yuan bo'lsin.",
           "text_translation_ru": "Яблоки три юаня пятьдесят за цзинь. Это будет семь юаней двадцать, пусть будет семь юаней.",
           "pinyin": "Píngguǒ sān kuài wǔ yì jīn. Zhèxiē qī kuài èr, qī kuài qián ba.",
-          "speaker": "售货员"
+          "speaker": "售货员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue4.mp3"
         },
         {
           "id": "l10p2-t2-s5",
@@ -141,14 +145,15 @@
           "text_translation": "Yaxshi, bu yerdagi olmalar juda arzon!",
           "text_translation_ru": "Хорошо, яблоки здесь действительно дешёвые!",
           "pinyin": "Hǎo de, zhèr de píngguǒ zhēn piányi!",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue5.mp3"
         }
       ]
     },
     {
       "id": "l10p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%204.mp3",
@@ -161,7 +166,8 @@
           "text_translation_ru": "здесь (мест.)",
           "pinyin": "zhèr",
           "wordClass": "pron.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/zher.mp3"
         },
         {
           "id": "l10p2-v-s2",
@@ -171,7 +177,8 @@
           "text_translation_ru": "фрукт (сущ.)",
           "pinyin": "shuǐguǒ",
           "wordClass": "n.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shuiguo.mp3"
         },
         {
           "id": "l10p2-v-s3",
@@ -181,7 +188,8 @@
           "text_translation_ru": "мало; немного (прил.)",
           "pinyin": "shǎo",
           "wordClass": "adj.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shao.mp3"
         },
         {
           "id": "l10p2-v-s4",
@@ -191,7 +199,8 @@
           "text_translation_ru": "цзинь (мера веса, 500 г)",
           "pinyin": "jīn",
           "wordClass": "m.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/jin.mp3"
         },
         {
           "id": "l10p2-v-s5",
@@ -201,7 +210,8 @@
           "text_translation_ru": "яблоко (сущ.)",
           "pinyin": "píngguǒ",
           "wordClass": "n.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pingguo.mp3"
         },
         {
           "id": "l10p2-v-s6",
@@ -211,28 +221,21 @@
           "text_translation_ru": "дешёвый (прил.)",
           "pinyin": "piányi",
           "wordClass": "adj.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pianyi.mp3"
         }
       ]
     },
     {
-      "id": "l10p2-sec-activity",
-      "type": "activity",
-      "instruction": "两人一组，一个人扮演顾客，一个人扮演售货员，进行购物问答。Ikki kishidan iborat guruhda biri xaridor, biri sotuvchi rolini o'ynab, xarid-savdo suhbatini o'tkazing.",
-      "instruction_ru": "两人一组，一个人扮演顾客，一个人扮演售货员，进行购物问答。Работайте в парах. Один играет покупателя, другой — продавца. Разыграйте диалог о покупках.",
-      "sentences": []
-    },
-    {
       "id": "l10p2-sec-grammar2",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l10p2-g2-s1",
           "section": "grammar",
-          "text_original": "形容词谓语句",
           "text_translation": "Sifat kesimli gaplar",
           "text_translation_ru": "Предложения с прилагательным в роли сказуемого",
           "grammarNumber": "2"
@@ -240,7 +243,6 @@
         {
           "id": "l10p2-g2-s2",
           "section": "grammar",
-          "text_original": "形容词可以直接作谓语，前面可用程度副词或否定副词。",
           "text_translation": "Sifatlar bevosita kesim bo'la oladi, oldiga daraja ravishi yoki inkor ravishi qo'yilishi mumkin.",
           "text_translation_ru": "Прилагательные могут непосредственно выступать в роли сказуемого, перед ними могут стоять наречия степени или отрицательные наречия."
         },

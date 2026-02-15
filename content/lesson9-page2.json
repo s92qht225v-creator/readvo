@@ -5,7 +5,7 @@
     {
       "id": "l9p2-sec-text2-header",
       "type": "text",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在教室里，下课后，白家月和陈天中在对话。",
@@ -17,8 +17,8 @@
     {
       "id": "l9p2-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l9p2-sec-text2-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-2-1.jpg",
       "sentences": [
         {
@@ -110,7 +110,8 @@
           "text_translation": "Stul ustida bitta xitoycha kitob bor, u kimning kitobi?",
           "text_translation_ru": "На стуле лежит книга на китайском, чья это книга?",
           "pinyin": "Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue1.mp3"
         },
         {
           "id": "l9p2-t2-s2",
@@ -119,7 +120,8 @@
           "text_translation": "Bu mening kitobim, rahmat. Bu mening ikkinchi xitoycha kitobim.",
           "text_translation_ru": "Это моя книга, спасибо. Это моя вторая книга на китайском.",
           "pinyin": "Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue2.mp3"
         },
         {
           "id": "l9p2-t2-s3",
@@ -128,7 +130,8 @@
           "text_translation": "Arzimaydi. Sen ertaga ertalab qayerda bo'lasan?",
           "text_translation_ru": "Не за что. Где ты будешь завтра утром?",
           "pinyin": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
-          "speaker": "白家月"
+          "speaker": "白家月",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue3.mp3"
         },
         {
           "id": "l9p2-t2-s4",
@@ -137,7 +140,8 @@
           "text_translation": "Men ertaga ertalab maktabda o'qiyman.",
           "text_translation_ru": "Завтра утром я буду учиться в школе.",
           "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
-          "speaker": "陈天中"
+          "speaker": "陈天中",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue4.mp3"
         }
       ],
       "tip": {
@@ -150,7 +154,7 @@
     {
       "id": "l9p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%204.mp3",
@@ -163,7 +167,8 @@
           "text_translation_ru": "стул (сущ.)",
           "pinyin": "yǐzi",
           "wordClass": "n.",
-          "vocabNumber": 6
+          "vocabNumber": 6,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/yizi.mp3"
         },
         {
           "id": "l9p2-v-s2",
@@ -173,7 +178,8 @@
           "text_translation_ru": "верх; на (сущ., указывает положение)",
           "pinyin": "shang/shàng",
           "wordClass": "n.",
-          "vocabNumber": 7
+          "vocabNumber": 7,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shangshang.mp3"
         },
         {
           "id": "l9p2-v-s3",
@@ -183,7 +189,8 @@
           "text_translation_ru": "счётное слово (для книг)",
           "pinyin": "běn",
           "wordClass": "m.",
-          "vocabNumber": 8
+          "vocabNumber": 8,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/ben.mp3"
         },
         {
           "id": "l9p2-v-s4",
@@ -193,7 +200,8 @@
           "text_translation_ru": "книга (сущ.)",
           "pinyin": "shū",
           "wordClass": "n.",
-          "vocabNumber": 9
+          "vocabNumber": 9,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shu.mp3"
         },
         {
           "id": "l9p2-v-s5",
@@ -203,7 +211,8 @@
           "text_translation_ru": "тот; та; то (мест.)",
           "pinyin": "nà",
           "wordClass": "pron.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/na.mp3"
         },
         {
           "id": "l9p2-v-s6",
@@ -213,7 +222,8 @@
           "text_translation_ru": "префикс порядковых числительных",
           "pinyin": "dì",
           "wordClass": "pref.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/di.mp3"
         },
         {
           "id": "l9p2-v-s7",
@@ -223,21 +233,21 @@
           "text_translation_ru": "учиться; изучать (глагол)",
           "pinyin": "xuéxí",
           "wordClass": "v.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/xuexi.mp3"
         }
       ]
     },
     {
       "id": "l9p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l9p2-g3-s1",
           "section": "grammar",
-          "text_original": "表示序数的\"第\"",
           "text_translation": "Tartib sonlarni bildiruvchi \"第\"",
           "text_translation_ru": "«第» для обозначения порядковых числительных",
           "grammarNumber": "3"
@@ -245,7 +255,6 @@
         {
           "id": "l9p2-g3-s2",
           "section": "grammar",
-          "text_original": "\"第\"位于整数的数词前，表示序数。基本结构：（1）第+数词；（2）第+数词+量词+（名词）。",
           "text_translation": "\"第\" butun sonlar oldida kelib, tartib sonni bildiradi. Asosiy tuzilma: (1) 第+son; (2) 第+son+son birlik+(ot).",
           "text_translation_ru": "«第» ставится перед целым числом для обозначения порядкового числительного. Основные структуры: (1) 第+числительное; (2) 第+числительное+счётное слово+(существительное)."
         },

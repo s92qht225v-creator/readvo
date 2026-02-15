@@ -5,7 +5,7 @@
     {
       "id": "l7p3-sec-text3-header",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "王一雪在办公室给刘明打电话。",
@@ -17,8 +17,8 @@
     {
       "id": "l7p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l7p3-sec-text3-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-3-1.jpg",
       "sentences": [
         {
@@ -110,7 +110,8 @@
           "text_translation": "Alo, qayerdasiz?",
           "text_translation_ru": "Алло, ты где?",
           "pinyin": "Wèi, nǐ zài nǎr ne?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue1.mp3"
         },
         {
           "id": "l7p3-t3-s2",
@@ -119,7 +120,8 @@
           "text_translation": "Men uydaman.",
           "text_translation_ru": "Я дома.",
           "pinyin": "Wǒ zài jiā li ne.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue2.mp3"
         },
         {
           "id": "l7p3-t3-s3",
@@ -128,7 +130,8 @@
           "text_translation": "Men kechqurun soat olti yarimda ishdan chiqaman.",
           "text_translation_ru": "Я заканчиваю работу в половине седьмого вечера.",
           "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue3.mp3"
         },
         {
           "id": "l7p3-t3-s4",
@@ -137,7 +140,8 @@
           "text_translation": "Men soat sakkizda kasalxonaga ishga boraman.",
           "text_translation_ru": "Я в восемь часов иду на работу в больницу.",
           "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue4.mp3"
         },
         {
           "id": "l7p3-t3-s5",
@@ -146,7 +150,8 @@
           "text_translation": "Yaxshi, do'konga borib oziq-ovqat sotib ol.",
           "text_translation_ru": "Хорошо, сходи в магазин, купи овощей.",
           "pinyin": "Hǎo de, nǐ qù diàn li mǎi xiē cài ba.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue5.mp3"
         },
         {
           "id": "l7p3-t3-s6",
@@ -155,7 +160,8 @@
           "text_translation": "Yaxshi, o'n minutdan keyin boraman.",
           "text_translation_ru": "Хорошо, пойду через десять минут.",
           "pinyin": "Hǎo, wǒ shí fēnzhōng hòu qù.",
-          "speaker": "刘　明"
+          "speaker": "刘　明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -168,7 +174,7 @@
     {
       "id": "l7p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%206.mp3",
@@ -181,7 +187,8 @@
           "text_translation_ru": "быть; находиться (глагол)",
           "pinyin": "zài",
           "wordClass": "v.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/zai.mp3"
         },
         {
           "id": "l7p3-v-s2",
@@ -191,7 +198,8 @@
           "text_translation_ru": "дом; семья (сущ.)",
           "pinyin": "jiā",
           "wordClass": "n.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/jia.mp3"
         },
         {
           "id": "l7p3-v-s3",
@@ -201,7 +209,8 @@
           "text_translation_ru": "внутри; в (сущ.)",
           "pinyin": "li/lǐ",
           "wordClass": "n.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/lili.mp3"
         },
         {
           "id": "l7p3-v-s4",
@@ -211,7 +220,8 @@
           "text_translation_ru": "вечер (сущ.)",
           "pinyin": "wǎnshang",
           "wordClass": "n.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/wanshang.mp3"
         },
         {
           "id": "l7p3-v-s5",
@@ -221,7 +231,8 @@
           "text_translation_ru": "больница (сущ.)",
           "pinyin": "yīyuàn",
           "wordClass": "n.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/yiyuan.mp3"
         },
         {
           "id": "l7p3-v-s6",
@@ -231,7 +242,8 @@
           "text_translation_ru": "идти на работу (глагол)",
           "pinyin": "shàngbān",
           "wordClass": "v.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/shangban.mp3"
         },
         {
           "id": "l7p3-v-s7",
@@ -241,7 +253,8 @@
           "text_translation_ru": "магазин (сущ.)",
           "pinyin": "diàn",
           "wordClass": "n.",
-          "vocabNumber": 24
+          "vocabNumber": 24,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dian.mp3"
         },
         {
           "id": "l7p3-v-s8",
@@ -251,7 +264,8 @@
           "text_translation_ru": "овощи; блюдо (сущ.)",
           "pinyin": "cài",
           "wordClass": "n.",
-          "vocabNumber": 25
+          "vocabNumber": 25,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/cai.mp3"
         },
         {
           "id": "l7p3-v-s9",
@@ -261,7 +275,8 @@
           "text_translation_ru": "минута (мера)",
           "pinyin": "fēnzhōng",
           "wordClass": "m.",
-          "vocabNumber": 26
+          "vocabNumber": 26,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/fenzhong.mp3"
         },
         {
           "id": "l7p3-v-s10",
@@ -271,18 +286,19 @@
           "text_translation_ru": "после; потом (сущ.)",
           "pinyin": "hòu",
           "wordClass": "n.",
-          "vocabNumber": 27
+          "vocabNumber": 27,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/hou.mp3"
         }
       ]
     },
     {
       "id": "l7p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'z yoki iborani tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -431,8 +447,8 @@
     {
       "id": "l7p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -544,21 +560,10 @@
     {
       "id": "l7p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Sinf mashg'uloti",
       "subheading_ru": "Классное занятие",
-      "instruction": "填写表格。Jadvalni to'ldiring.",
-      "instruction_ru": "填写表格。Заполните таблицу.",
-      "sentences": [
-        {
-          "id": "l7p3-act-s1",
-          "section": "activity",
-          "text_original": "三人一组，每人根据自己的情况填写时间，填好后分享。",
-          "text_translation": "Uch kishidan iborat guruhda ishlang, har bir kishi o'z jadvaliga vaqtni yozsin, so'ng javoblarni ulashing.",
-          "text_translation_ru": "Работайте в группах по три человека, каждый заполняет время по своему расписанию, затем поделитесь ответами.",
-          "pinyin": "Sān rén yī zǔ, měi rén gēnjù zìjǐ de qíngkuàng tiánxiě shíjiān, tián hǎo hòu fēnxiǎng."
-        }
-      ],
+      "sentences": [],
       "tableFillData": {
         "options": [
           {
@@ -620,7 +625,7 @@
     {
       "id": "l7p3-sec-tip",
       "type": "tip",
-      "heading": "小语助力",
+      "heading": "",
       "subheading": "Xiaoyudan maslahat",
       "subheading_ru": "Совет от Сяоюй",
       "sentences": [
@@ -636,7 +641,7 @@
     {
       "id": "l7p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
+      "heading": "",
       "subheading": "Xiaoyudan Bonus Kontent 7-1",
       "subheading_ru": "Бонусный контент Сяоюй 7-1",
       "sentences": [],

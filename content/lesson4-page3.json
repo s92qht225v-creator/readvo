@@ -5,10 +5,10 @@
     {
       "id": "l4p3-sec-text3",
       "type": "text",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
-      "context": "在街上，王一雪带着儿子偶遇杨同乐。On the street, Wang Yixue ran into Yang Tongle while she was out with her son.",
+      "context": "在街上，王一雪带着儿子偶遇杨同乐。",
       "contextPinyin": "Zài jiē shàng, Wáng Yīxuě dàizhe érzi ǒuyù Yáng Tónglè.",
       "contextTranslation": "Ko'chada Wang Yixue o'g'li bilan Yan Tongleni tasodifan uchratdi.",
       "contextTranslation_ru": "На улице Ван Исюэ случайно встретила Ян Тунлэ, гуляя с сыном.",
@@ -17,8 +17,8 @@
     {
       "id": "l4p3-sec-mc",
       "type": "multiplechoice",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -98,9 +98,9 @@
     {
       "id": "l4p3-sec-text3-dialogue",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%204%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,8 @@
           "text_translation_ru": "Это ваш сын?",
           "pinyin": "Zhè shì nín érzi ma?",
           "speaker": "杨同乐",
-          "speakerName": "Yáng Tónglè"
+          "speakerName": "Yáng Tónglè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue1.mp3"
         },
         {
           "id": "l4p3-t3-s2",
@@ -121,7 +122,8 @@
           "text_translation_ru": "Да. У меня двое детей — сын и дочь.",
           "pinyin": "Shì de. Wǒ yǒu liǎng gè háizi, yí gè érzi, yí gè nǚ'ér.",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue2.mp3"
         },
         {
           "id": "l4p3-t3-s3",
@@ -131,7 +133,8 @@
           "text_translation_ru": "Сколько лет вашему сыну?",
           "pinyin": "Nín érzi jǐ suì?",
           "speaker": "杨同乐",
-          "speakerName": "Yáng Tónglè"
+          "speakerName": "Yáng Tónglè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue3.mp3"
         },
         {
           "id": "l4p3-t3-s4",
@@ -141,7 +144,8 @@
           "text_translation_ru": "Ему в этом году пять лет.",
           "pinyin": "Tā jīnnián wǔ suì.",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue4.mp3"
         },
         {
           "id": "l4p3-t3-s5",
@@ -151,7 +155,8 @@
           "text_translation_ru": "Сколько лет вашей дочери?",
           "pinyin": "Nín nǚ'ér duō dà?",
           "speaker": "杨同乐",
-          "speakerName": "Yáng Tónglè"
+          "speakerName": "Yáng Tónglè",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue5.mp3"
         },
         {
           "id": "l4p3-t3-s6",
@@ -161,7 +166,8 @@
           "text_translation_ru": "Ей в этом году двенадцать.",
           "pinyin": "Tā jīnnián shí'èr.",
           "speaker": "王一雪",
-          "speakerName": "Wáng Yīxuě"
+          "speakerName": "Wáng Yīxuě",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -174,7 +180,7 @@
     {
       "id": "l4p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "sentences": [
@@ -184,7 +190,8 @@
           "text_original": "儿子",
           "text_translation": "o'g'il (ot)",
           "text_translation_ru": "сын (сущ.)",
-          "pinyin": "érzi"
+          "pinyin": "érzi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/erzi.mp3"
         },
         {
           "id": "l4p3-v-s2",
@@ -192,7 +199,8 @@
           "text_original": "孩子",
           "text_translation": "bolalar (ot)",
           "text_translation_ru": "дети (сущ.)",
-          "pinyin": "háizi"
+          "pinyin": "háizi",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/haizi.mp3"
         },
         {
           "id": "l4p3-v-s3",
@@ -200,7 +208,8 @@
           "text_original": "女儿",
           "text_translation": "qiz (ot)",
           "text_translation_ru": "дочь (сущ.)",
-          "pinyin": "nǚ'ér"
+          "pinyin": "nǚ'ér",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/nuer.mp3"
         },
         {
           "id": "l4p3-v-s4",
@@ -208,7 +217,8 @@
           "text_original": "岁",
           "text_translation": "yosh (o'lchov so'zi)",
           "text_translation_ru": "лет (сч. сл.)",
-          "pinyin": "suì"
+          "pinyin": "suì",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/sui.mp3"
         },
         {
           "id": "l4p3-v-s5",
@@ -216,7 +226,8 @@
           "text_original": "他",
           "text_translation": "u (olmosh)",
           "text_translation_ru": "он (мест.)",
-          "pinyin": "tā"
+          "pinyin": "tā",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/ta.mp3"
         },
         {
           "id": "l4p3-v-s6",
@@ -224,7 +235,8 @@
           "text_original": "今年",
           "text_translation": "bu yil (ot)",
           "text_translation_ru": "в этом году (сущ.)",
-          "pinyin": "jīnnián"
+          "pinyin": "jīnnián",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/jinnian.mp3"
         },
         {
           "id": "l4p3-v-s7",
@@ -232,7 +244,8 @@
           "text_original": "多",
           "text_translation": "qancha; qay darajada (olmosh)",
           "text_translation_ru": "сколько; насколько (мест.)",
-          "pinyin": "duō"
+          "pinyin": "duō",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/duo.mp3"
         },
         {
           "id": "l4p3-v-s8",
@@ -240,22 +253,17 @@
           "text_original": "大",
           "text_translation": "katta, ulg'aygan (sifat)",
           "text_translation_ru": "большой; взрослый (прил.)",
-          "pinyin": "dà"
+          "pinyin": "dà",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/da.mp3"
         }
       ]
     },
     {
       "id": "l4p3-sec-exercise",
       "type": "exercise",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
-        {
-          "id": "l4p3-ex-s1",
-          "section": "exercise",
-          "text_original": "根据课文内容回答问题。",
-          "text_translation": "Matn mazmuniga ko'ra savollarga javob bering.",
-          "text_translation_ru": "Ответьте на вопросы по содержанию текста.",
-          "isCheckbox": true
-        },
         {
           "id": "l4p3-ex-s2",
           "section": "exercise",
@@ -277,11 +285,11 @@
     {
       "id": "l4p3-sec-comprehensive",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。Bo'sh joylarga mos so'zlarni tanlang.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "Bo'sh joylarga mos so'zlarni tanlang.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -426,8 +434,8 @@
     {
       "id": "l4p3-sec-imgdesc",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Rasmlarni shu darsda o'rganilgan so'z va grammatik qoidalar yordamida tasvirlab yozing.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Rasmlarni shu darsda o'rganilgan so'z va grammatik qoidalar yordamida tasvirlab yozing.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -525,7 +533,7 @@
     {
       "id": "l4p3-sec-activity",
       "type": "activity",
-      "heading": "课堂活动",
+      "heading": "",
       "subheading": "Dars mashg'uloti",
       "subheading_ru": "Классное занятие",
       "sentences": [
@@ -539,7 +547,7 @@
         {
           "id": "l4p3-act-s4",
           "section": "activity",
-          "text_original": "A：你是哪国人？",
+          "text_original": "你是哪国人？",
           "text_translation": "Sen qaysi mamlakat fuqarosisan?",
           "text_translation_ru": "Ты из какой страны?",
           "pinyin": "Nǐ shì nǎ guó rén?",
@@ -548,7 +556,7 @@
         {
           "id": "l4p3-act-s5",
           "section": "activity",
-          "text_original": "B：我是中国人。",
+          "text_original": "我是中国人。",
           "text_translation": "Men xitoylikman.",
           "text_translation_ru": "Я китаец.",
           "pinyin": "Wǒ shì Zhōngguó rén.",
@@ -557,7 +565,7 @@
         {
           "id": "l4p3-act-s6",
           "section": "activity",
-          "text_original": "A：你家有几口人？",
+          "text_original": "你家有几口人？",
           "text_translation": "Oilangda necha kishi bor?",
           "text_translation_ru": "Сколько человек в твоей семье?",
           "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
@@ -568,8 +576,8 @@
     {
       "id": "l4p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
-      "subheading": "Xiaoyu's Bonus Content 4-1",
+      "heading": "",
+      "subheading": "Xiaoyuning sovg'asi",
       "subheading_ru": "Бонусный контент Сяоюй 4-1",
       "sentences": [],
       "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201/HSK-4-bonus-1.mp4"

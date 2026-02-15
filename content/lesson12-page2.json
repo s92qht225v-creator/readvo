@@ -5,15 +5,15 @@
     {
       "id": "l12p2-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 2",
+      "heading": "",
       "subheading": "Tekst 2",
       "subheading_ru": "Текст 2",
       "context": "在公司电梯里，王一雪和杨同乐在聊天儿。",
       "contextPinyin": "Zài gōngsī diàntī lǐ, Wáng Yīxuě hé Yáng Tónglè zài liáotiānr.",
       "contextTranslation": "Kompaniya liftida Wang Yixue va Yang Tungle suhbatlashyapti.",
       "contextTranslation_ru": "В лифте компании Ван Исюэ и Ян Тунлэ беседуют.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l12p2-sec-text2",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%203.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-2-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Kecha qor yog'di.",
           "text_translation_ru": "Вчера выпал снег.",
           "pinyin": "Zuótiān xià xuě le.",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/dialogue1.mp3"
         },
         {
           "id": "l12p2-t2-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Ha, juda sovuq bo'ldi.",
           "text_translation_ru": "Да, очень холодно стало.",
           "pinyin": "Shì de, tài lěng le.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/dialogue2.mp3"
         },
         {
           "id": "l12p2-t2-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Sen kecha kompaniyaga kelmading, kasal bo'ldingmi?",
           "text_translation_ru": "Ты вчера не пришёл на работу, заболел?",
           "pinyin": "Nǐ zuótiān méi lái gōngsī, shēngbìng le?",
-          "speaker": "王一雪"
+          "speaker": "王一雪",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/dialogue3.mp3"
         },
         {
           "id": "l12p2-t2-s4",
@@ -132,14 +135,15 @@
           "text_translation": "Ha, men kecha kasalxonaga borib ko'rik qildirdim.",
           "text_translation_ru": "Да, я вчера ходил в больницу на приём.",
           "pinyin": "Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/dialogue4.mp3"
         }
       ]
     },
     {
       "id": "l12p2-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%204.mp3",
@@ -152,7 +156,8 @@
           "text_translation_ru": "падать; идти (о дожде, снеге и т.д.) (глагол)",
           "pinyin": "xià",
           "wordClass": "v.",
-          "vocabNumber": 10
+          "vocabNumber": 10,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/xia.mp3"
         },
         {
           "id": "l12p2-v-s2",
@@ -162,7 +167,8 @@
           "text_translation_ru": "снег (сущ.)",
           "pinyin": "xuě",
           "wordClass": "n.",
-          "vocabNumber": 11
+          "vocabNumber": 11,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/xue.mp3"
         },
         {
           "id": "l12p2-v-s3",
@@ -172,7 +178,8 @@
           "text_translation_ru": "приходить (глагол)",
           "pinyin": "lái",
           "wordClass": "v.",
-          "vocabNumber": 12
+          "vocabNumber": 12,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/lai.mp3"
         },
         {
           "id": "l12p2-v-s4",
@@ -182,7 +189,8 @@
           "text_translation_ru": "компания (сущ.)",
           "pinyin": "gōngsī",
           "wordClass": "n.",
-          "vocabNumber": 13
+          "vocabNumber": 13,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/gongsi.mp3"
         },
         {
           "id": "l12p2-v-s5",
@@ -192,7 +200,8 @@
           "text_translation_ru": "заболеть (глагол)",
           "pinyin": "shēngbìng",
           "wordClass": "v.",
-          "vocabNumber": 14
+          "vocabNumber": 14,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/shengbing.mp3"
         },
         {
           "id": "l12p2-v-s6",
@@ -202,15 +211,16 @@
           "text_translation_ru": "обратиться к врачу (глагол)",
           "pinyin": "kànbìng",
           "wordClass": "v.",
-          "vocabNumber": 15
+          "vocabNumber": 15,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/kanbing.mp3"
         }
       ]
     },
     {
       "id": "l12p2-sec-exercise",
       "type": "exercise",
-      "instruction": "根据课文内容回答问题。Matn mazmuniga ko'ra savollarga javob bering.",
-      "instruction_ru": "根据课文内容回答问题。Ответьте на вопросы по содержанию текста.",
+      "instruction": "Matn mazmuniga ko'ra savollarga javob bering.",
+      "instruction_ru": "Ответьте на вопросы по содержанию текста.",
       "sentences": [
         {
           "id": "l12p2-ex-s1",
@@ -233,14 +243,13 @@
     {
       "id": "l12p2-sec-grammar3",
       "type": "grammar",
-      "heading": "小语讲堂",
+      "heading": "",
       "subheading": "Xiaoyudan dars",
       "subheading_ru": "Класс Сяоюй",
       "sentences": [
         {
           "id": "l12p2-g3-s1",
           "section": "grammar",
-          "text_original": "\"太……了\"格式",
           "text_translation": "\"太……了\" shakli",
           "text_translation_ru": "Конструкция «太……了»",
           "grammarNumber": "3"
@@ -248,7 +257,6 @@
         {
           "id": "l12p2-g3-s2",
           "section": "grammar",
-          "text_original": "\"太……了\"用于感叹程度很高或很深。",
           "text_translation": "\"太……了\" darajaning juda yuqori yoki chuqurligini ifodalash uchun ishlatiladi.",
           "text_translation_ru": "Конструкция «太……了» используется для выражения очень высокой или глубокой степени восклицания."
         },

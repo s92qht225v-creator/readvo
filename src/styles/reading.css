@@ -91,8 +91,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: var(--spacing-lg) var(--spacing-xl);
-  padding-top: calc(var(--header-height) + 18px + var(--spacing-lg) + env(safe-area-inset-top, 0px));
-  padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
+  padding-top: calc(var(--header-height) + 1em + var(--spacing-lg) + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(var(--bottom-nav-height) + 1em + var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
   font-family: var(--font-main);
   font-size: calc(var(--font-size-base) * var(--font-scale));
   line-height: var(--line-height);
@@ -456,8 +456,7 @@ body {
 }
 
 .section--vocabulary .sentence__text {
-  font-weight: 500;
-  font-size: calc(var(--font-size-base) * 1.1 * var(--font-scale, 1));
+  font-weight: 400;
 }
 
 /* Translation in column 2, aligned to top with Chinese text */
@@ -745,12 +744,52 @@ body {
 }
 
 .section--exercise .section__sentences {
-  background: #fef2f2;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 6px 24px rgba(0, 0, 0, 0.06);
+  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 
+/* --- Tongue twister: floating card design --- */
+.section--tonguetwister {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.section--tonguetwister .section__header {
+  display: none;
+}
+
+.section--tonguetwister .section__content {
+  border-radius: 0;
+  padding: 0;
+}
+
 .section--tonguetwister .section__sentences {
-  background: #fdf4ff;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 6px 24px rgba(0, 0, 0, 0.06);
+  gap: 0;
+}
+
+.section--tonguetwister .sentence {
+  display: block;
+  padding: 8px 0;
+}
+
+.section--tonguetwister .sentence__body {
+  display: block;
+}
+
+.section--tonguetwister .sentence__text {
+  display: block;
+}
+
+.section--matching .section__header {
+  display: none;
 }
 
 .section--matching .section__sentences {
@@ -1749,6 +1788,48 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* Floating audio FAB (appears when section play button is scrolled out of view) */
+.page__audio-fab {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent, #3182ce);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  z-index: 80;
+}
+
+.page__audio-fab:hover {
+  transform: scale(1.08);
+}
+
+.page__audio-fab--playing {
+  background: #16a34a;
+}
+
+.page__audio-fab:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.page__audio-fab-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
 /* Section context (scene description) */
 .section__context {
   margin-bottom: var(--spacing-md);
@@ -1780,7 +1861,7 @@ body {
 /* Section instruction row with play button */
 .section__instruction-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-sm);
   margin-top: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
@@ -1790,6 +1871,13 @@ body {
   color: var(--color-accent);
   font-size: calc(var(--font-size-small) * var(--font-scale, 1));
   flex-shrink: 0;
+  line-height: 1.6;
+  margin-top: 0.1em;
+}
+
+/* Exercise instruction alignment with card content */
+.section--exercise .section__instruction-row {
+  padding-left: var(--spacing-md);
 }
 
 .section__instruction {
@@ -1911,6 +1999,14 @@ body {
 
 
 .sentence--active {
+  color: var(--color-accent);
+}
+
+.sentence--has-audio {
+  cursor: pointer;
+}
+
+.sentence--playing .sentence__text {
   color: var(--color-accent);
 }
 
@@ -2101,8 +2197,8 @@ body {
 
   .page {
     padding: var(--spacing-md);
-    padding-top: calc(var(--header-height) + var(--spacing-md) + env(safe-area-inset-top, 0px));
-    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-md) + env(safe-area-inset-bottom, 0px));
+    padding-top: calc(var(--header-height) + 1em + var(--spacing-md) + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(var(--bottom-nav-height) + 1em + var(--spacing-md) + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -3696,6 +3792,29 @@ body {
 .reader__location {
   font-size: var(--font-size-small);
   color: var(--color-text-secondary);
+}
+
+.reader__nav-toggles {
+  display: flex;
+  gap: 8px;
+}
+
+.reader__nav-toggle {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.reader__nav-toggle--active {
+  color: white;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .reader__nav-btn {

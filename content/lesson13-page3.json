@@ -5,15 +5,15 @@
     {
       "id": "l13p3-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "在餐馆里，刘明在点餐。",
       "contextPinyin": "Zài cānguǎn lǐ, Liú Míng zài diǎncān.",
       "contextTranslation": "Restoranda Liu Ming ovqat buyurtiryapti.",
       "contextTranslation_ru": "В ресторане Лю Мин делает заказ.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l13p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-3-1.jpg",
       "sentences": [
         {
@@ -105,7 +105,8 @@
           "text_translation": "Janob, marhamat o'tiring! Nima buyurtma qilasiz?",
           "text_translation_ru": "Сэр, садитесь, пожалуйста! Что будете заказывать?",
           "pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme?",
-          "speaker": "服务员"
+          "speaker": "服务员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue1.mp3"
         },
         {
           "id": "l13p3-t3-s2",
@@ -114,7 +115,8 @@
           "text_translation": "Menga bir jin chuchvara bering.",
           "text_translation_ru": "Мне один цзинь пельменей.",
           "pinyin": "Wǒ yào yì jīn jiǎozi.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue2.mp3"
         },
         {
           "id": "l13p3-t3-s3",
@@ -123,7 +125,8 @@
           "text_translation": "Yaxshi. Bir jin chuchvara qirqta bo'ladi.",
           "text_translation_ru": "Хорошо. Один цзинь пельменей — сорок штук.",
           "pinyin": "Hǎo de. Yì jīn jiǎozi sìshí gè.",
-          "speaker": "服务员"
+          "speaker": "服务员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue3.mp3"
         },
         {
           "id": "l13p3-t3-s4",
@@ -132,7 +135,8 @@
           "text_translation": "Qirqta juda ko'p, yarmini bering.",
           "text_translation_ru": "Сорок штук — слишком много, возьму половину.",
           "pinyin": "Sìshí gè tài duō le, wǒ yào yíbàn ba.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue4.mp3"
         },
         {
           "id": "l13p3-t3-s5",
@@ -141,7 +145,8 @@
           "text_translation": "Yarim jin yigirmata bo'ladi. Nima ichmoqchisiz?",
           "text_translation_ru": "Полцзиня — двадцать штук. Что будете пить?",
           "pinyin": "Bàn jīn èrshí gè. Nín xiǎng hē shénme?",
-          "speaker": "服务员"
+          "speaker": "服务员",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue5.mp3"
         },
         {
           "id": "l13p3-t3-s6",
@@ -150,14 +155,15 @@
           "text_translation": "Menga bir piyola choy bering.",
           "text_translation_ru": "Дайте мне, пожалуйста, чашку чая.",
           "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
-          "speaker": "刘明"
+          "speaker": "刘明",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/dialogue6.mp3"
         }
       ]
     },
     {
       "id": "l13p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%206.mp3",
@@ -170,7 +176,8 @@
           "text_translation_ru": "господин (сущ.)",
           "pinyin": "xiānsheng",
           "wordClass": "n.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/xiansheng.mp3"
         },
         {
           "id": "l13p3-v-s2",
@@ -180,7 +187,8 @@
           "text_translation_ru": "половина (числ.)",
           "pinyin": "yíbàn",
           "wordClass": "num.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/yiban.mp3"
         },
         {
           "id": "l13p3-v-s3",
@@ -190,18 +198,19 @@
           "text_translation_ru": "чай (сущ.)",
           "pinyin": "chá",
           "wordClass": "n.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/cha.mp3"
         }
       ]
     },
     {
       "id": "l13p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -346,8 +355,8 @@
     {
       "id": "l13p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -466,19 +475,9 @@
       }
     },
     {
-      "id": "l13p3-sec-activity",
-      "type": "activity",
-      "heading": "课堂活动",
-      "subheading": "Sinf mashg'uloti",
-      "subheading_ru": "Классное занятие",
-      "instruction": "角色扮演。三人一组，一个人扮演服务员，两个人扮演顾客，表演在咖啡馆点餐。Rol o'yini. Uch kishidan iborat guruhda bir kishi ofitsiant, ikki kishi mijoz rolini o'ynaydi, kofe xonasida ovqat buyurtma qilishni ko'rsating.",
-      "instruction_ru": "角色扮演。三人一组，一个人扮演服务员，两个人扮演顾客，表演在咖啡馆点餐。Ролевая игра. Работайте в группах по три человека. Один играет роль официанта, двое — роль клиентов. Разыграйте заказ еды в кафе.",
-      "sentences": []
-    },
-    {
       "id": "l13p3-sec-bonus",
       "type": "bonus",
-      "heading": "小语的彩蛋",
+      "heading": "",
       "subheading": "Xiaoyudan bonus",
       "subheading_ru": "Бонус от Сяоюй",
       "video_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/video/HSK%201%2013-1.mp4",

@@ -5,15 +5,15 @@
     {
       "id": "l12p3-sec-mc",
       "type": "multiplechoice",
-      "heading": "课文 3",
+      "heading": "",
       "subheading": "Tekst 3",
       "subheading_ru": "Текст 3",
       "context": "昨天在医院，医生给杨同乐看病。",
       "contextPinyin": "Zuótiān zài yīyuàn, yīshēng gěi Yáng Tónglè kànbìng.",
       "contextTranslation": "Kecha kasalxonada shifokor Yang Tungleni ko'rikdan o'tkazdi.",
       "contextTranslation_ru": "Вчера в больнице врач осмотрел Ян Тунлэ.",
-      "instruction": "听两遍对话，选择正确答案。Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
-      "instruction_ru": "听两遍对话，选择正确答案。Прослушайте диалог дважды и выберите правильный ответ.",
+      "instruction": "Dialogni ikki marta tinglab, to'g'ri javobni tanlang.",
+      "instruction_ru": "Прослушайте диалог дважды и выберите правильный ответ.",
       "sentences": [],
       "multipleChoiceData": {
         "questions": [
@@ -93,9 +93,9 @@
     {
       "id": "l12p3-sec-text3",
       "type": "text",
-      "instruction": "朗读对话。Dialogni ovoz chiqarib o'qing.",
-      "instruction_ru": "朗读对话。Прочитайте диалог вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%205.mp3",
+      "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
+      "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-3-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -111,7 +111,8 @@
           "text_translation": "Doktor, men kasal bo'ldim.",
           "text_translation_ru": "Доктор, я заболел.",
           "pinyin": "Yīshēng, wǒ bìng le.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue1.mp3"
         },
         {
           "id": "l12p3-t3-s2",
@@ -120,7 +121,8 @@
           "text_translation": "Men ko'ray. O'zingizni qanday his qilyapsiz?",
           "text_translation_ru": "Давайте посмотрю. Как вы себя чувствуете?",
           "pinyin": "Wǒ kànkan. Nǐ juéde zěnmeyàng?",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue2.mp3"
         },
         {
           "id": "l12p3-t3-s3",
@@ -129,7 +131,8 @@
           "text_translation": "Menga juda sovuq.",
           "text_translation_ru": "Мне очень холодно.",
           "pinyin": "Wǒ hěn lěng.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue3.mp3"
         },
         {
           "id": "l12p3-t3-s4",
@@ -138,7 +141,8 @@
           "text_translation": "Yaxshi, biroz dori iching, bugun yarim kun dam oling.",
           "text_translation_ru": "Хорошо, примите немного лекарства и отдохните сегодня полдня.",
           "pinyin": "Hǎo de, chī yìdiǎnr yào, jīntiān xiūxi bàn tiān ba.",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue4.mp3"
         },
         {
           "id": "l12p3-t3-s5",
@@ -147,7 +151,8 @@
           "text_translation": "Yaxshi.",
           "text_translation_ru": "Хорошо.",
           "pinyin": "Hǎo de.",
-          "speaker": "杨同乐"
+          "speaker": "杨同乐",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue5.mp3"
         },
         {
           "id": "l12p3-t3-s6",
@@ -156,7 +161,8 @@
           "text_translation": "Uyga qaytgach yana biroz issiq suv iching.",
           "text_translation_ru": "После возвращения домой выпейте ещё тёплой воды.",
           "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
-          "speaker": "胡医生"
+          "speaker": "胡医生",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/dialogue6.mp3"
         }
       ]
     },
@@ -174,7 +180,7 @@
     {
       "id": "l12p3-sec-vocab",
       "type": "vocabulary",
-      "heading": "生词",
+      "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%206.mp3",
@@ -187,7 +193,8 @@
           "text_translation_ru": "заболеть; болеть (глагол)",
           "pinyin": "bìng",
           "wordClass": "v.",
-          "vocabNumber": 16
+          "vocabNumber": 16,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/bing.mp3"
         },
         {
           "id": "l12p3-v-s2",
@@ -197,7 +204,8 @@
           "text_translation_ru": "немного; чуть-чуть (числ.-мера)",
           "pinyin": "yìdiǎnr",
           "wordClass": "num.-m.",
-          "vocabNumber": 17
+          "vocabNumber": 17,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/yidianr.mp3"
         },
         {
           "id": "l12p3-v-s3",
@@ -207,7 +215,8 @@
           "text_translation_ru": "лекарство (сущ.)",
           "pinyin": "yào",
           "wordClass": "n.",
-          "vocabNumber": 18
+          "vocabNumber": 18,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/yao.mp3"
         },
         {
           "id": "l12p3-v-s4",
@@ -217,7 +226,8 @@
           "text_translation_ru": "день (счётное слово)",
           "pinyin": "tiān",
           "wordClass": "m.",
-          "vocabNumber": 19
+          "vocabNumber": 19,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/tian.mp3"
         },
         {
           "id": "l12p3-v-s5",
@@ -227,7 +237,8 @@
           "text_translation_ru": "возвращаться (глагол)",
           "pinyin": "huí",
           "wordClass": "v.",
-          "vocabNumber": 20
+          "vocabNumber": 20,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/hui.mp3"
         },
         {
           "id": "l12p3-v-s6",
@@ -237,7 +248,8 @@
           "text_translation_ru": "затем; потом (нареч.)",
           "pinyin": "zài",
           "wordClass": "adv.",
-          "vocabNumber": 21
+          "vocabNumber": 21,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/zai.mp3"
         },
         {
           "id": "l12p3-v-s7",
@@ -247,7 +259,8 @@
           "text_translation_ru": "пить (глагол)",
           "pinyin": "hē",
           "wordClass": "v.",
-          "vocabNumber": 22
+          "vocabNumber": 22,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/he.mp3"
         },
         {
           "id": "l12p3-v-s8",
@@ -257,7 +270,8 @@
           "text_translation_ru": "горячий; тёплый (прил.)",
           "pinyin": "rè",
           "wordClass": "adj.",
-          "vocabNumber": 23
+          "vocabNumber": 23,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/re.mp3"
         },
         {
           "id": "l12p3-v-s9",
@@ -267,18 +281,19 @@
           "text_translation_ru": "вода (сущ.)",
           "pinyin": "shuǐ",
           "wordClass": "n.",
-          "vocabNumber": 24
+          "vocabNumber": 24,
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/shui.mp3"
         }
       ]
     },
     {
       "id": "l12p3-sec-fillblank",
       "type": "fillblank",
-      "heading": "综合练习",
+      "heading": "",
       "subheading": "Umumiy mashqlar",
       "subheading_ru": "Комплексные упражнения",
-      "instruction": "选词填空。To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
-      "instruction_ru": "选词填空。Выберите подходящие слова для заполнения пропусков.",
+      "instruction": "To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Выберите подходящие слова для заполнения пропусков.",
       "sentences": [],
       "fillBlankData": {
         "options": [
@@ -427,8 +442,8 @@
     {
       "id": "l12p3-sec-imagedescribe",
       "type": "imagedescribe",
-      "instruction": "用本课新学的词语和语言点描述图片。Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
-      "instruction_ru": "用本课新学的词语和语言点描述图片。Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
+      "instruction": "Ushbu darsda o'rganilgan yangi so'zlar va til qoidalaridan foydalanib rasmlarni tasvirlang.",
+      "instruction_ru": "Опишите картинки, используя новые слова и языковые конструкции из этого урока.",
       "sentences": [],
       "imageDescribeData": {
         "cards": [
@@ -545,16 +560,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "l12p3-sec-activity",
-      "type": "activity",
-      "heading": "课堂活动",
-      "subheading": "Sinf mashg'uloti",
-      "subheading_ru": "Классное занятие",
-      "instruction": "角色扮演。两人一组，一个人扮演医生，另一个人扮演病人，病人来看病。Rol o'yini. Juft bo'lib ishlang. Bir kishi shifokor, ikkinchisi bemor rolini o'ynaydi, bemor shifokorga ko'rinishga keladi.",
-      "instruction_ru": "角色扮演。两人一组，一个人扮演医生，另一个人扮演病人，病人来看病。Ролевая игра. Работайте в парах. Один играет роль врача, другой — пациента, который приходит на приём.",
-      "sentences": []
     }
   ]
 }
