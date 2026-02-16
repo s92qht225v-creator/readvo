@@ -55,7 +55,7 @@ Example routes:
 │   │   ├── Sentence.tsx       # Atomic unit with words, audio
 │   │   ├── LessonHeader.tsx   # Lesson banner (1 DARS format)
 │   │   ├── ReaderLayout.tsx   # Layout with fixed header/footer
-│   │   ├── ReaderControls.tsx # Pinyin/translation/font controls
+│   │   ├── ReaderControls.tsx # Header controls (focus, language, font)
 │   │   ├── HomePage.tsx       # Home page (language selection cards)
 │   │   ├── LanguagePage.tsx   # Language page (tabbed: HSK, Stories, Flashcards, Tests)
 │   │   ├── BookPage.tsx       # Book page (lesson list with pages)
@@ -129,8 +129,10 @@ Page → Section → Sentence → Word
 
 ### Toggle Controls
 - **Header controls**: Language toggle (RU/UZ), font size (A-/A+)
-- **Bottom nav toggles**: Pinyin and Translation (Tarjima) buttons in the center of the fixed bottom navigation bar, replacing the old lesson/page location text
+- **Lesson bottom nav toggles**: Pinyin and Translation (Tarjima) buttons in the center of the fixed bottom navigation bar
+- **Story bottom bar toggles**: Three buttons in order: Tarjima, Fokus, Pinyin. Slim fixed bar at bottom (stories don't use lesson bottom nav)
 - **Translation panel**: Fixed panel below header showing translation of tapped sentence. Page has permanent extra `1em` top padding to prevent panel from overlapping content (padding does NOT change when panel toggles)
+- **Grey backgrounds**: Header, lesson bottom nav, and story bottom bar all use `rgba(245, 245, 245, 0.97)` to distinguish from page content
 
 ### Audio Playback
 - **Tap-to-play**: Tapping a sentence with `audio_url` auto-plays its audio (no per-sentence play buttons)
@@ -174,12 +176,15 @@ Page → Section → Sentence → Word
 - **No inline translations**: Unlike lessons, story translations only appear in the panel (not inline below text)
 - **Sentence spacing**: A space character is inserted between adjacent sentence `<span>`s in the same paragraph to prevent quotes/punctuation from visually merging
 - **Independent CSS**: Stories use `.story` class (not `.page`), completely independent from lesson page styles
-- **Floating audio player**:
-  - Play FAB (56px blue circle) at bottom-right when audio is idle
-  - Expands to full audio bar at bottom when playing
-  - Audio bar has: -15s skip, play/pause (center), +15s skip, seekable progress bar with time display
-  - Uses direct `HTMLAudioElement` via `useRef` (not `useAudioPlayer` hook) for progress/duration tracking
-  - `story--with-audio` class adds bottom padding to prevent last sentence from being blocked
+- **Per-sentence audio**: Sentences can have individual `audio_url` fields. Tapping a sentence plays its audio via `useAudioPlayer` singleton. Starting per-sentence audio stops full-story audio and vice versa.
+  - Per-sentence URLs: `HSK%201%20stories/{storyNum}/line{N}.mp3`
+  - Full-story URL: `HSK%201%20stories/{storyNum}/story.mp3`
+- **Bottom toggle bar**: Fixed slim bar at the bottom of the story reader with Pinyin and Tarjima toggle buttons (`.story__bottom-bar`). Stories don't use the lesson bottom nav, so toggles live here instead. Grey background (`rgba(245, 245, 245, 0.97)`) with backdrop blur.
+- **Full-story audio FAB** (normal mode only, hidden in focus mode):
+  - Play/pause FAB (56px blue circle) at bottom-right, positioned above the bottom toggle bar
+  - Toggles between play (▶) and pause (⏸) SVG icons
+  - No skip buttons, no progress bar — just a simple play/pause toggle
+  - Uses direct `HTMLAudioElement` via `useRef` (not `useAudioPlayer` hook)
 - **Audio-text sync**: When sentences have `start`/`end` timestamps (in seconds), the currently playing sentence is automatically highlighted during audio playback
   - `audioSentenceId` is derived via `useMemo` from `currentTime` — finds which sentence's `start ≤ time < end`
   - Audio-synced highlight takes priority over manual tap highlight (`displaySentenceId = audioSentenceId ?? activeSentenceId`)
@@ -195,7 +200,16 @@ Page → Section → Sentence → Word
   - Panel shows regardless of translation toggle when a word is pressed (always useful for learners)
   - Audio pauses during word press, resumes on release
   - Words wrapped in `<span class="story__word">` with `story__word--active` highlight (background, not color)
-  - Focus mode: dims non-active sentences to 0.35 opacity, toggled via header button
+- **Focus mode**: Shows one sentence at a time, centered. Toggled via Fokus button in bottom bar.
+  - Sentence text area has fixed `min-height: 9em` to prevent nav buttons from jumping on multi-line sentences
+  - Navigation row: ‹ (prev) | ▶/⏸ (play/pause) | › (next) — three symmetric buttons. SVG chevrons for nav, blue circle for play.
+  - Counter below nav buttons: "9 / 30" (small centered label)
+  - Prev/next navigation auto-plays the target sentence's audio
+  - Entering focus mode auto-plays the current (or first) sentence's audio
+  - Play button replays/pauses the current sentence's audio (not full-story audio)
+  - Full-story audio FAB is hidden in focus mode
+  - Entering focus mode stops any playing full-story audio
+  - CSS: `.story__focus-nav-btn` (48px grey circle, no border), `.story__focus-play-btn` (44px blue circle)
 - Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
 
 ### Styling Conventions
@@ -397,7 +411,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
   "titleTranslation": "Mushukcha qayerda?",
   "titleTranslation_ru": "Где котёнок?",
   "level": 1,
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/story1.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20stories/1/story.mp3",
   "sections": [
     {
       "id": "s1-sec1",
@@ -411,6 +425,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
           "pinyin": "Wǒ yǒu yí ge xiǎo māo.",
           "text_translation": "Mening bir mushukcham bor.",
           "text_translation_ru": "У меня есть котёнок.",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20stories/1/line1.mp3",
           "start": 0,
           "end": 3,
           "words": [
@@ -427,7 +442,8 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 ```
 - Each section represents a paragraph (visual grouping of sentences)
 - Each sentence must be a single Chinese sentence (one tappable unit for translation)
-- `audio_url` is optional; when present, the floating audio player appears
+- Story-level `audio_url` is optional; when present, the floating audio player appears (normal mode)
+- Per-sentence `audio_url` is optional; when present, tapping the sentence plays its audio. URL pattern: `HSK%201%20stories/{storyNum}/line{N}.mp3`
 - `start`/`end` are optional timestamps in seconds for audio-text sync (e.g., `"start": 6.5, "end": 10`)
 - When timestamps are present, the sentence auto-highlights during audio playback
 - Each sentence's `end` should match the next sentence's `start` (no gaps)
@@ -574,22 +590,29 @@ main.flashcard-page
 ### Story Reader Page Structure (StoryReader.tsx)
 ```
 div.reader
-├── header.reader__header (fixed, reuses lesson header)
+├── header.reader__header (fixed, grey bg, reuses lesson header)
 │   └── div.reader__header-inner
 │       ├── Link.reader__home ("← Hikoyalar")
-│       └── ReaderControls (pinyin/translation/font/language toggles)
+│       └── ReaderControls (language/font toggles only)
 ├── div.story__translation-panel (fixed below header, shown on sentence tap)
 │   └── p.story__translation-panel-text
 ├── article.story (independent container, NOT .page)
-│   └── div.story__paragraph (per section)
+│   ├── div.story__focus (focus mode: single sentence view)
+│   │   ├── p.story__focus-text (centered, min-height 9em)
+│   │   ├── div.story__focus-nav (← ▶ → buttons row)
+│   │   │   ├── button.story__focus-nav-btn (48px grey circle, SVG chevron)
+│   │   │   ├── button.story__focus-play-btn (44px blue circle, play/pause)
+│   │   │   └── button.story__focus-nav-btn
+│   │   └── span.story__focus-counter ("9 / 30")
+│   └── div.story__paragraph (normal mode: per section)
 │       └── p.story__text
-│           └── span.story__sentence (per sentence, clickable)
+│           └── span.story__sentence (per sentence, clickable, tap-to-play audio)
 │               └── span.story__word (per word, long-pressable)
 │                   └── ruby > rt (pinyin above each character)
-├── button.story__play-fab (when audio idle, bottom-right FAB)
-└── div.story__audio-bar (when audio active, fixed bottom bar)
-    ├── div.story__audio-controls (-15, play/pause, +15)
-    └── div.story__audio-progress-row (time + seekable bar + time)
+├── button.story__play-fab (normal mode only: play/pause full story audio)
+└── nav.story__bottom-bar (fixed, grey bg, Tarjima + Fokus + Pinyin toggles)
+    └── div.story__bottom-bar-inner
+        └── button.reader__nav-toggle (× 2)
 ```
 
 ### Key CSS Classes
@@ -606,9 +629,9 @@ div.reader
 - `.page__translation-panel` - Fixed translation panel below header (z-index 99)
 - `.page__audio-fab` - Floating play button (48x48, blue circle, `bottom: 80px`, `right: 24px`, `z-index: 80`)
 - `.page__audio-fab--playing` - Green background when audio playing
-- `.reader__header` - Fixed header (full-width background)
+- `.reader__header` - Fixed header (full-width, grey background `rgba(245, 245, 245, 0.97)`)
 - `.reader__header-inner` - Header content (constrained to match page width)
-- `.reader__bottom-nav` - Fixed bottom nav (full-width background)
+- `.reader__bottom-nav` - Fixed bottom nav (full-width, grey background `rgba(245, 245, 245, 0.97)`)
 - `.reader__bottom-nav-inner` - Bottom nav content (constrained to match page width)
 - `.reader__nav-toggles` - Pinyin/Tarjima toggle button container in bottom nav
 - `.reader__nav-toggle` / `--active` - Toggle buttons (`border-radius: 4px`, active = blue bg)
@@ -626,12 +649,15 @@ div.reader
 - `.story__sentence--active` - Blue color for tapped/active sentence
 - `.story__sentence--playing` - Blue color for audio-synced sentence
 - `.story__translation-panel` - Fixed translation panel below header (z-index 99)
-- `.story__play-fab` - Floating action button (56px blue circle, bottom-right)
-- `.story__audio-bar` - Fixed bottom audio bar with backdrop blur
-- `.story__audio-play` - Central play/pause button (48px blue circle)
-- `.story__audio-skip` - Skip buttons (-15/+15, 40px bordered circle)
-- `.story__audio-progress` - Seekable progress bar track
-- `.story__audio-progress-fill` - Blue progress fill bar
+- `.story__bottom-bar` - Fixed bottom toggle bar (grey bg, backdrop blur, z-index 90)
+- `.story__bottom-bar-inner` - Flex container for toggle buttons (Tarjima, Fokus, Pinyin)
+- `.story__play-fab` - Floating action button (56px blue circle, above bottom bar). Normal mode only: play/pause full-story audio.
+- `.story__focus` - Focus mode container (flex column, centered)
+- `.story__focus-text` - Centered sentence text (`font-size: 1.5em`, `min-height: 9em` for stable nav)
+- `.story__focus-nav` - Button row: prev, play, next (flex, centered, gap 16px)
+- `.story__focus-nav-btn` - Prev/next buttons (48px grey circle, no border, SVG chevrons)
+- `.story__focus-play-btn` - Inline play/pause button (44px blue circle, toggles ▶/⏸)
+- `.story__focus-counter` - Sentence counter label below nav ("9 / 30")
 - `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
 - `.story__word--active` - Blue background highlight for pressed word
 - `.story__word-hsk` - HSK level/lesson badge in translation panel (small pill-shaped tag)
@@ -738,7 +764,7 @@ div.reader
 - Sentence IDs follow the pattern `s1-s1`, `s1-s2` (or `s1-s8a`, `s1-s8b` when splitting)
 - All sentences must have `pinyin` (stories are learning content)
 - `words` array contains word-level data for press-and-hold translation (see format below)
-- Audio URL is one file for the entire story (not per-sentence)
+- Story-level `audio_url`: one `story.mp3` file for full playback. Per-sentence `audio_url`: individual `line{N}.mp3` files for tap-to-play.
 - Audio-text sync: add `start`/`end` (seconds) to each sentence for auto-highlighting during playback
 - Ruby text utility (`rubyText.ts`) handles:
   - Compound pinyin splitting: "Jīntiān" → ["Jīn", "tiān"], "xīngqīliù" → ["xīng", "qī", "liù"]

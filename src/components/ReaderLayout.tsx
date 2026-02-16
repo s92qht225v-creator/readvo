@@ -4,7 +4,7 @@
  * ReaderLayout - Client Component for Reader Page
  *
  * Handles the entire reader layout including:
- * - Fixed header with ReadVo logo and controls
+ * - Fixed header with ReadLink logo and controls
  * - Page content
  * - Fixed bottom navigation
  *
@@ -127,7 +127,7 @@ export function ReaderLayout({
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={bookPath || '/'} className="reader__home">
-            ReadVo
+            <img src="/logo.svg" alt="ReadLink" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={isPinyinVisible}

@@ -6,6 +6,7 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';
 import { alignPinyinToText } from '../utils/rubyText';
+import { useAudioPlayer } from '../hooks/useAudioPlayer';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -31,6 +32,7 @@ interface StorySentence {
   start?: number;
   end?: number;
   words?: StoryWord[];
+  audio_url?: string;
 }
 
 interface StorySection {
@@ -196,7 +198,9 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
   const [activeWord, setActiveWord] = useState<{ sentenceId: string; wordIdx: number } | null>(null);
   const longPressedRef = useRef(false);
   const audioPausedByWordRef = useRef(false);
-  // Audio state
+  // Per-sentence audio player (singleton, tap-to-play)
+  const sentenceAudio = useAudioPlayer();
+  // Full-story audio state
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -208,20 +212,33 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
   const toggleTranslation = useCallback(() => setShowTranslation((v) => !v), []);
   const increaseFontSize = useCallback(() => setFontSize((s) => Math.min(s + 10, 150)), []);
   const decreaseFontSize = useCallback(() => setFontSize((s) => Math.max(s - 10, 80)), []);
-  const toggleFocusMode = useCallback(() => {
-    setFocusMode((v) => {
-      if (!v) {
-        setActiveSentenceId((prev) => prev ?? story.sections[0]?.sentences[0]?.id ?? null);
-      }
-      return !v;
-    });
-  }, [story.sections]);
 
   // Flat list of all sentences (for lookups)
   const allSentences = useMemo(
     () => story.sections.flatMap((s) => s.sentences),
     [story.sections]
   );
+
+  const toggleFocusMode = useCallback(() => {
+    if (!focusMode) {
+      // Entering focus mode: stop full-story audio
+      if (audioRef.current && isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+        setAudioActive(false);
+      }
+      // Select first sentence if none active, and play its audio
+      const targetId = activeSentenceId ?? story.sections[0]?.sentences[0]?.id ?? null;
+      setActiveSentenceId(targetId);
+      if (targetId) {
+        const sentence = allSentences.find((s) => s.id === targetId);
+        if (sentence?.audio_url) {
+          sentenceAudio.play(targetId, sentence.audio_url);
+        }
+      }
+    }
+    setFocusMode((v) => !v);
+  }, [focusMode, story.sections, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
 
   // Build timed sentences list for audio sync
   const timedSentences = useMemo(
@@ -261,7 +278,18 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
       if (focusMode) return id;
       return prev === id ? null : id;
     });
-  }, [focusMode]);
+    // Play per-sentence audio if available
+    const sentence = allSentences.find((s) => s.id === id);
+    if (sentence?.audio_url) {
+      // Stop full-story audio if playing
+      if (audioRef.current && isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+        setAudioActive(false);
+      }
+      sentenceAudio.play(id, sentence.audio_url);
+    }
+  }, [focusMode, allSentences, isPlaying, sentenceAudio]);
 
   const handleWordPress = useCallback((sentenceId: string, wordIdx: number) => {
     longPressedRef.current = true;
@@ -292,9 +320,13 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
     if (idx === -1) return;
     const nextIdx = direction === 'next' ? idx + 1 : idx - 1;
     if (nextIdx >= 0 && nextIdx < allSentences.length) {
-      setActiveSentenceId(allSentences[nextIdx].id);
+      const nextSentence = allSentences[nextIdx];
+      setActiveSentenceId(nextSentence.id);
+      if (nextSentence.audio_url) {
+        sentenceAudio.play(nextSentence.id, nextSentence.audio_url);
+      }
     }
-  }, [displaySentenceId, allSentences]);
+  }, [displaySentenceId, allSentences, sentenceAudio]);
 
   // Initialize audio element
   useEffect(() => {
@@ -341,6 +373,8 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;
     if (!audio || !story.audio_url) return;
+    // Stop any per-sentence audio first
+    sentenceAudio.stop();
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
@@ -356,7 +390,7 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
         setAudioActive(false);
       });
     }
-  }, [isPlaying, audioActive, story.audio_url]);
+  }, [isPlaying, audioActive, story.audio_url, sentenceAudio]);
 
   const handleSkip = useCallback((seconds: number) => {
     const audio = audioRef.current;
@@ -392,8 +426,8 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
             language={language}
             onLanguageToggle={toggleLanguage}
             pageNumber={1}
-            isFocusMode={focusMode}
-            onFocusModeToggle={toggleFocusMode}
+            isFocusMode={undefined}
+            onFocusModeToggle={undefined}
           />
         </div>
       </header>
@@ -442,20 +476,42 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
                 disabled={allSentences[0]?.id === displaySentenceId}
                 type="button"
               >
-                ←
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
               </button>
-              <span className="story__focus-counter">
-                {allSentences.findIndex((s) => s.id === displaySentenceId) + 1} / {allSentences.length}
-              </span>
+              {activeSentence?.audio_url && (
+                <button
+                  className="story__focus-play-btn"
+                  onClick={() => sentenceAudio.play(activeSentence.id, activeSentence.audio_url!)}
+                  type="button"
+                  aria-label={sentenceAudio.isPlaying(activeSentence.id) ? 'Pause' : 'Play'}
+                >
+                  {sentenceAudio.isPlaying(activeSentence.id) ? (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                  ) : (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  )}
+                </button>
+              )}
               <button
                 className="story__focus-nav-btn"
                 onClick={() => handleFocusNav('next')}
                 disabled={allSentences[allSentences.length - 1]?.id === displaySentenceId}
                 type="button"
               >
-                →
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                </svg>
               </button>
             </div>
+            <span className="story__focus-counter">
+              {allSentences.findIndex((s) => s.id === displaySentenceId) + 1} / {allSentences.length}
+            </span>
           </div>
         ) : (
           story.sections.map((section) => (
@@ -486,60 +542,53 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
         )}
       </article>
 
-      {story.audio_url && !audioActive && (
+      {!focusMode && story.audio_url && (
         <button
           className={`story__play-fab ${isLoading ? 'story__play-fab--loading' : ''}`}
           onClick={handlePlay}
           type="button"
-          aria-label="Play"
+          aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           {isLoading ? (
             <span className="story__play-fab-spinner" />
+          ) : isPlaying ? (
+            <svg className="story__play-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
           ) : (
-            <span className="story__play-fab-icon">▶</span>
+            <svg className="story__play-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           )}
         </button>
       )}
 
-      {story.audio_url && audioActive && (
-        <div className="story__audio-bar">
-          <div className="story__audio-controls">
-            <button
-              className="story__audio-skip"
-              onClick={() => handleSkip(-15)}
-              type="button"
-              aria-label="Rewind 15 seconds"
-            >
-              -15
-            </button>
-            <button
-              className="story__audio-play"
-              onClick={handlePlay}
-              type="button"
-              aria-label={isPlaying ? 'Pause' : 'Play'}
-            >
-              {isLoading ? (
-                <span className="story__play-fab-spinner" />
-              ) : isPlaying ? '⏸' : '▶'}
-            </button>
-            <button
-              className="story__audio-skip"
-              onClick={() => handleSkip(15)}
-              type="button"
-              aria-label="Forward 15 seconds"
-            >
-              +15
-            </button>
-          </div>
-          <div className="story__audio-progress-row">
-            <span className="story__audio-time">{formatTime(currentTime)}</span>
-            <div className="story__audio-progress" onClick={handleSeek}>
-              <div className="story__audio-progress-fill" style={{ width: `${progress}%` }} />
-            </div>
-            <span className="story__audio-time">{formatTime(duration)}</span>
-          </div>
+      {/* Slim bottom bar with pinyin/translation toggles */}
+      <nav className="story__bottom-bar">
+        <div className="story__bottom-bar-inner">
+          <button
+            className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`}
+            onClick={toggleTranslation}
+            type="button"
+          >
+            {language === 'ru' ? 'Перевод' : 'Tarjima'}
+          </button>
+          <button
+            className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`}
+            onClick={toggleFocusMode}
+            type="button"
+          >
+            {language === 'ru' ? 'Фокус' : 'Fokus'}
+          </button>
+          <button
+            className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`}
+            onClick={togglePinyin}
+            type="button"
+          >
+            Pinyin
+          </button>
         </div>
-      )}
+      </nav>
     </div>
   );
 }

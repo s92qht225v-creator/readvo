@@ -80,8 +80,8 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
       <footer className="home__footer">
         <p>
           {language === 'ru'
-            ? 'ReadVo — Интерактивные учебники языков'
-            : 'ReadVo — Interaktiv til darsliklari'}
+            ? 'ReadLink — Интерактивные учебники языков'
+            : 'ReadLink — Interaktiv til darsliklari'}
         </p>
       </footer>
     </main>

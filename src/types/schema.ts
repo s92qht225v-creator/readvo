@@ -1,5 +1,5 @@
 /**
- * ReadVo Reading System - Core Data Types
+ * ReadLink Reading System - Core Data Types
  *
  * Hierarchy: Page → Section → Sentence → Word
  *
