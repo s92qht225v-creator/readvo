@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: story
-      ? `${story.title} - HSK 1 Hikoyalar - ReadLink`
-      : 'Hikoya - ReadLink',
+      ? `${story.title} - HSK 1 Hikoyalar - Blim`
+      : 'Hikoya - Blim',
   };
 }
 

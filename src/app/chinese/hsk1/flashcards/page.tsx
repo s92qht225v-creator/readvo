@@ -4,7 +4,7 @@ import { FlashcardDeck } from '@/components/FlashcardDeck';
 
 export async function generateMetadata() {
   return {
-    title: 'Fleshkartalar - HSK 1 - ReadLink',
+    title: 'Fleshkartalar - HSK 1 - Blim',
   };
 }
 

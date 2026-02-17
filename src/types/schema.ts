@@ -1,5 +1,5 @@
 /**
- * ReadLink Reading System - Core Data Types
+ * Blim Reading System - Core Data Types
  *
  * Hierarchy: Page → Section → Sentence → Word
  *

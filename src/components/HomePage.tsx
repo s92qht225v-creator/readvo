@@ -38,7 +38,7 @@ const t = {
     showcaseLabel2: 'Kontekstda tushunish',
     ctaTitle: 'Hoziroq boshlang',
     ctaSubtitle: 'Bepul ro\'yxatdan o\'ting va o\'qishni boshlang',
-    footerText: 'ReadLink — Interaktiv til darsliklari',
+    footerText: 'Blim — Interaktiv til darsliklari',
     chinese: 'Xitoy tili',
     english: 'Ingliz tili',
     tagline: 'Interaktiv til darsliklari',
@@ -75,7 +75,7 @@ const t = {
     showcaseLabel2: 'Понимайте в контексте',
     ctaTitle: 'Начните сейчас',
     ctaSubtitle: 'Зарегистрируйтесь бесплатно и начните читать',
-    footerText: 'ReadLink — Интерактивные учебники языков',
+    footerText: 'Blim — Интерактивные учебники языков',
     chinese: 'Китайский язык',
     english: 'Английский язык',
     tagline: 'Интерактивные учебники языков',
@@ -121,7 +121,7 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
           </button>
         </div>
         <h1 className="home__logo">
-          <img src="/logo.svg" alt="ReadLink" className="home__logo-img" />
+          <img src="/logo.svg" alt="Blim" className="home__logo-img" />
         </h1>
         <p className="home__tagline">{s.tagline}</p>
       </header>
@@ -168,7 +168,7 @@ function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
       <nav className="landing__nav">
         <div className="landing__nav-inner">
           <span className="landing__nav-logo">
-            <img src="/logo.svg" alt="ReadLink" className="landing__nav-logo-img" />
+            <img src="/logo.svg" alt="Blim" className="landing__nav-logo-img" />
           </span>
           <div className="landing__nav-links">
             <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>

@@ -3,7 +3,7 @@ import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 
 export const metadata: Metadata = {
-  title: 'ReadLink - Interaktiv o\'qish',
+  title: 'Blim - Interaktiv o\'qish',
   description: 'Interaktiv til darsligi o\'quvchisi',
 };
 

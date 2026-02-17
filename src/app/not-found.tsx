@@ -5,7 +5,7 @@ export default function NotFound() {
     <main className="home">
       <header className="home__hero">
         <h1 className="home__logo">
-          <img src="/logo.svg" alt="ReadLink" className="home__logo-img" />
+          <img src="/logo.svg" alt="Blim" className="home__logo-img" />
         </h1>
         <p className="home__tagline">Sahifa topilmadi</p>
       </header>

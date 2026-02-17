@@ -249,8 +249,8 @@ export function LanguagePage() {
       <footer className="home__footer">
         <p>
           {language === 'ru'
-            ? 'ReadLink — Интерактивные учебники языков'
-            : 'ReadLink — Interaktiv til darsliklari'}
+            ? 'Blim — Интерактивные учебники языков'
+            : 'Blim — Interaktiv til darsliklari'}
         </p>
       </footer>
     </main>
