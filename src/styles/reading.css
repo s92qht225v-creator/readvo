@@ -2257,6 +2257,9 @@ body {
 .story__word {
   border-radius: 2px;
   transition: background 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .story__word--active {

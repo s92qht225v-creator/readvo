@@ -118,6 +118,7 @@ function RubyText({ text, pinyin, showPinyin, words, activeWordIdx, onWordPress,
           <span
             key={wordKey}
             className={`story__word ${activeWordIdx === wIdx ? 'story__word--active' : ''}`}
+            onContextMenu={(e) => e.preventDefault()}
             onPointerDown={(e) => {
               e.stopPropagation();
               longPressFiredRef.current = false;
