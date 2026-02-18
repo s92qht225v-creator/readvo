@@ -10,7 +10,7 @@ const STORAGE_KEY = 'readvo-language';
  * Reads/writes to localStorage so the UZ/RU choice survives navigation.
  * Starts with 'uz' (SSR-safe), then syncs from localStorage on mount.
  */
-export function useLanguage(): [Language, () => void] {
+export function useLanguage(): [Language, () => void, (lang: Language) => void] {
   const [language, setLanguage] = useState<Language>('uz');
 
   useEffect(() => {
@@ -28,5 +28,10 @@ export function useLanguage(): [Language, () => void] {
     });
   }, []);
 
-  return [language, toggle];
+  const set = useCallback((lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+  }, []);
+
+  return [language, toggle, set];
 }

@@ -92,38 +92,22 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
 
   return (
     <main className="flashcard-page">
-      {/* Header */}
-      <div className="flashcard-page__header">
-        <Link href={bookPath} className="flashcard-page__back">
-          ← {language === 'ru' ? 'Назад' : 'Ortga'}
-        </Link>
-        <h1 className="flashcard-page__title">{title}</h1>
-        <div className="flashcard-page__controls">
-          <button
-            className="flashcard-page__toggle flashcard-page__toggle--dir"
-            onClick={() => setDirection((d) => d === 'cn' ? 'native' : 'cn')}
-            type="button"
-            title={language === 'ru' ? 'Направление' : 'Yo\'nalish'}
-          >
-            {direction === 'cn' ? `中→${language === 'ru' ? 'RU' : 'UZ'}` : `${language === 'ru' ? 'RU' : 'UZ'}→中`}
-          </button>
-          <button
-            className={`flashcard-page__toggle${isPinyinVisible ? ' flashcard-page__toggle--active' : ''}`}
-            onClick={() => setIsPinyinVisible((p) => !p)}
-            type="button"
-            title={language === 'ru' ? 'Пиньинь' : 'Pinyin'}
-          >
-            拼
-          </button>
-          <button
-            className="flashcard-page__toggle flashcard-page__toggle--lang"
-            onClick={toggleLanguage}
-            type="button"
-          >
-            {language === 'uz' ? 'RU' : 'UZ'}
-          </button>
+      <header className="reader__header">
+        <div className="reader__header-inner">
+          <Link href={`${bookPath}/flashcards`} className="reader__home">
+            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
+          </Link>
+          <div className="reader__controls">
+            <button
+              className="page__lang-btn"
+              onClick={toggleLanguage}
+              type="button"
+            >
+              {language === 'uz' ? 'RU' : 'UZ'}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* Progress */}
       <div className="flashcard__progress">
@@ -139,6 +123,29 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
       </div>
 
       {/* Card or completion */}
+      {/* Audio FAB - screen level, outside card */}
+      {!isComplete && currentCard?.audio_url && (
+        <button
+          className={`flashcard__audio-fab${audio.isPlaying(currentCard.id) ? ' flashcard__audio-fab--playing' : ''}${audio.isLoading(currentCard.id) ? ' flashcard__audio-fab--loading' : ''}`}
+          onClick={() => handleAudioClick(currentCard.id, currentCard.audio_url!)}
+          disabled={audio.isLoading(currentCard.id)}
+          type="button"
+          aria-label="Audio"
+        >
+          {audio.isLoading(currentCard.id) ? (
+            <span className="flashcard__audio-fab-spinner" />
+          ) : audio.isPlaying(currentCard.id) ? (
+            <svg className="flashcard__audio-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+          ) : (
+            <svg className="flashcard__audio-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </button>
+      )}
+
       {isComplete ? (
         <div className="flashcard__complete">
           <span className="flashcard__complete-text">
@@ -187,10 +194,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
             isPinyinVisible={isPinyinVisible}
             language={language}
             direction={direction}
-            isAudioPlaying={audio.isPlaying(currentCard.id)}
-            isAudioLoading={audio.isLoading(currentCard.id)}
             onFlip={handleFlip}
-            onAudioClick={handleAudioClick}
           />
 
           {/* Action buttons - visible only when flipped */}
@@ -212,6 +216,25 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
           </div>
         </>
       ) : null}
+
+      <nav className="story__bottom-bar">
+        <div className="story__bottom-bar-inner">
+          <button
+            className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`}
+            onClick={() => setIsPinyinVisible((p) => !p)}
+            type="button"
+          >
+            Pinyin
+          </button>
+          <button
+            className="reader__nav-toggle"
+            onClick={() => setDirection((d) => d === 'cn' ? 'native' : 'cn')}
+            type="button"
+          >
+            {direction === 'cn' ? `中→${language === 'ru' ? 'RU' : 'UZ'}` : `${language === 'ru' ? 'RU' : 'UZ'}→中`}
+          </button>
+        </div>
+      </nav>
     </main>
   );
 };

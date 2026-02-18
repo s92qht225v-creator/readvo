@@ -4,21 +4,20 @@ import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 
-interface StoryItem {
-  id: string;
-  title: string;
-  pinyin: string;
+interface FlashcardLessonItem {
+  lessonId: string;
+  lessonNumber: number;
   titleTranslation: string;
   titleTranslation_ru: string;
+  wordCount: number;
 }
 
-interface StoriesPageProps {
-  stories: StoryItem[];
+interface FlashcardListPageProps {
+  lessons: FlashcardLessonItem[];
   bookPath: string;
-  languagePath: string;
 }
 
-export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProps) {
+export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps) {
   const [language] = useLanguage();
 
   return (
@@ -26,12 +25,12 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
       <header className="home__hero">
         <div className="home__hero-inner">
           <div className="home__hero-top-row">
-            <Link href={languagePath} className="home__hero-logo">
+            <Link href="/chinese?tab=flashcards" className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
           </div>
           <div className="lang-page__tabs">
-            <Link href="/chinese/hsk1/stories" className="lang-page__tab lang-page__tab--active">
+            <Link href={`${bookPath}/flashcards`} className="lang-page__tab lang-page__tab--active">
               HSK 1
             </Link>
             {[2, 3, 4, 5, 6].map((level) => (
@@ -45,25 +44,25 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
 
       <section className="home__content">
         <div className="home__lessons">
-          {stories.map((story, index) => (
-            <article key={story.id} className="lesson-card">
+          {lessons.map((lesson) => (
+            <article key={lesson.lessonId} className="lesson-card">
               <div className="lesson-card__header">
-                <div className="lesson-card__number">{index + 1}</div>
+                <div className="lesson-card__number">{lesson.lessonNumber}</div>
                 <div className="lesson-card__title-group">
-                  <h3 className="lesson-card__title">{story.title}</h3>
-                  <p className="lesson-card__pinyin">{story.pinyin}</p>
                   <p className="lesson-card__translation">
-                    {language === 'ru' ? story.titleTranslation_ru : story.titleTranslation}
+                    {language === 'ru' && lesson.titleTranslation_ru
+                      ? lesson.titleTranslation_ru
+                      : lesson.titleTranslation}
                   </p>
                 </div>
               </div>
               <div className="lesson-card__pages">
                 <Link
-                  href={`${bookPath}/stories/${story.id}`}
+                  href={`${bookPath}/flashcards/${lesson.lessonId}`}
                   className="lesson-card__page-link"
                 >
                   <span className="lesson-card__page-num">
-                    {language === 'ru' ? 'Читать' : "O'qish"}
+                    {lesson.wordCount} {language === 'ru' ? 'слов' : "so'z"}
                   </span>
                 </Link>
               </div>

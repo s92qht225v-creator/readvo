@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { loadFlashcardDeck } from '@/services/flashcards';
-import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { getLessonsWithInfo } from '@/services';
+import { FlashcardListPage } from '@/components/FlashcardListPage';
 
 export async function generateMetadata() {
   return {
@@ -15,22 +16,28 @@ export default async function FlashcardsPage() {
     notFound();
   }
 
+  const lessons = await getLessonsWithInfo();
+
+  // Group word counts by lesson
+  const wordCountByLesson: Record<number, number> = {};
+  for (const word of deck.words) {
+    if (word.lesson) {
+      wordCountByLesson[word.lesson] = (wordCountByLesson[word.lesson] || 0) + 1;
+    }
+  }
+
+  // Build lesson list with word counts
+  const lessonItems = lessons.map((l) => ({
+    lessonId: l.lessonId,
+    lessonNumber: l.lessonNumber,
+    titleTranslation: l.titleTranslation,
+    titleTranslation_ru: l.titleTranslation_ru,
+    wordCount: wordCountByLesson[l.lessonNumber] || 0,
+  })).filter((l) => l.wordCount > 0);
+
   return (
-    <FlashcardDeck
-      deck={{
-        id: deck.id,
-        title: deck.title,
-        title_ru: deck.title_ru,
-        words: deck.words.map((w) => ({
-          id: w.id,
-          text_original: w.text_original,
-          pinyin: w.pinyin,
-          text_translation: w.text_translation,
-          text_translation_ru: w.text_translation_ru,
-          lesson: w.lesson,
-          audio_url: w.audio_url,
-        })),
-      }}
+    <FlashcardListPage
+      lessons={lessonItems}
       bookPath="/chinese/hsk1"
     />
   );

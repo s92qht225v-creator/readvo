@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 
@@ -325,16 +326,19 @@ export function HomePage() {
   const [language, toggleLanguage] = useLanguage();
   const { user, isLoading, loginWithGoogle, logout } = useAuth();
   const s = t[language];
+  const router = useRouter();
 
-  if (isLoading) return (
+  useEffect(() => {
+    if (!isLoading && user) {
+      router.replace('/chinese');
+    }
+  }, [isLoading, user, router]);
+
+  if (isLoading || user) return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <p style={{ color: '#6b7280', fontSize: '1.1rem' }}>Loading...</p>
     </div>
   );
-
-  if (user) {
-    return <AppHome language={language} toggleLanguage={toggleLanguage} user={user} logout={logout} s={s} />;
-  }
 
   return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithGoogle={loginWithGoogle} s={s} />;
 }

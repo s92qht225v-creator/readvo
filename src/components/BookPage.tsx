@@ -12,6 +12,15 @@ interface ProgressEntry {
   completed: boolean;
 }
 
+const hskLevels = [
+  { id: 'hsk1', level: 1, hasContent: true },
+  { id: 'hsk2', level: 2, hasContent: false },
+  { id: 'hsk3', level: 3, hasContent: false },
+  { id: 'hsk4', level: 4, hasContent: false },
+  { id: 'hsk5', level: 5, hasContent: false },
+  { id: 'hsk6', level: 6, hasContent: false },
+];
+
 interface BookPageProps {
   lessons: LessonInfo[];
   bookPath: string;
@@ -19,7 +28,8 @@ interface BookPageProps {
 }
 
 export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
-  const [language, toggleLanguage] = useLanguage();
+  const [language] = useLanguage();
+  const activeBook = bookPath.split('/').pop() || 'hsk1';
   const { user, getAccessToken } = useAuth();
   const [progress, setProgress] = useState<ProgressEntry[]>([]);
   const hasContent = lessons.length > 0;
@@ -45,27 +55,33 @@ export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
     <main className="home">
       {/* Hero Section */}
       <header className="home__hero">
-        <div className="home__hero-top">
-          <Link href={languagePath || '/'} className="home__back-link">
-            ← {language === 'ru' ? 'Китайский' : 'Xitoy tili'}
-          </Link>
-          <button
-            className="home__lang-btn"
-            onClick={toggleLanguage}
-            type="button"
-          >
-            {language === 'uz' ? 'RU' : 'UZ'}
-          </button>
+        <div className="home__hero-inner">
+          <div className="home__hero-top-row">
+            <Link href={languagePath || '/chinese'} className="home__hero-logo">
+              <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
+            </Link>
+          </div>
+          <div className="lang-page__tabs">
+            {hskLevels.map((hsk) =>
+              hsk.hasContent ? (
+                <Link
+                  key={hsk.id}
+                  href={`/chinese/${hsk.id}`}
+                  className={`lang-page__tab ${activeBook === hsk.id ? 'lang-page__tab--active' : ''}`}
+                >
+                  HSK {hsk.level}
+                </Link>
+              ) : (
+                <span
+                  key={hsk.id}
+                  className="lang-page__tab lang-page__tab--disabled"
+                >
+                  HSK {hsk.level}
+                </span>
+              )
+            )}
+          </div>
         </div>
-        <h1 className="home__logo">
-          <span className="home__logo-icon">🇨🇳</span>
-          HSK 1
-        </h1>
-        <p className="home__tagline">
-          {language === 'ru'
-            ? 'Китайский язык — Начальный уровень'
-            : "Xitoy tili — Boshlang'ich daraja"}
-        </p>
       </header>
 
       {!hasContent ? (
@@ -81,9 +97,6 @@ export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
         </div>
       ) : (
         <section className="home__content">
-          <h2 className="home__section-title">
-            {language === 'ru' ? 'Уроки' : 'Darslar'}
-          </h2>
           <div className="home__lessons">
             {lessons.map((lesson) => (
               <article key={lesson.lessonId} className="lesson-card">

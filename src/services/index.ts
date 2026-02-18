@@ -16,3 +16,6 @@ export { loadFlashcardDeck } from './flashcards';
 
 export { loadStoriesForBook, loadStory } from './stories';
 export type { StoryInfo, StoryPage } from './stories';
+
+export { loadKaraokeSong, loadKaraokeSongs } from './karaoke';
+export type { KaraokeSong, KaraokeLine, KaraokeChar } from './karaoke';

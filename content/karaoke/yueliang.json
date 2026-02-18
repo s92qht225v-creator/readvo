@@ -1,0 +1,422 @@
+{
+  "id": "yueliang",
+  "title": "月亮代表我的心",
+  "pinyin": "Yuèliàng Dàibiǎo Wǒ De Xīn",
+  "titleTranslation": "Oy mening yuragimni ifodalaydi",
+  "titleTranslation_ru": "Луна представляет моё сердце",
+  "artist": "邓丽君",
+  "artist_ru": "Дэн Лицзюнь",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/karaoke.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Sen meni qanchalik sevishimni so'raysan",
+      "translation_ru": "Ты спрашиваешь, как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 13.138, "duration": 0.432 },
+        { "id": 1, "text": "问", "p": "wèn", "timestamp": 13.58, "duration": 1.17 },
+        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 14.76, "duration": 0.441 },
+        { "id": 3, "text": "爱", "p": "ài", "timestamp": 15.211, "duration": 1.099 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 16.32, "duration": 0.37 },
+        { "id": 5, "text": "有", "p": "yǒu", "timestamp": 16.7, "duration": 1.11 },
+        { "id": 6, "text": "多", "p": "duō", "timestamp": 17.82, "duration": 0.33 },
+        { "id": 7, "text": "深", "p": "shēn", "timestamp": 18.16, "duration": 0.82 }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Men seni qanchalik sevaman",
+      "translation_ru": "Как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 19.34, "duration": 0.45 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 19.8, "duration": 1.09 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 20.9, "duration": 0.41 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 21.32, "duration": 1.07 },
+        { "id": 4, "text": "几", "p": "jǐ", "timestamp": 22.4, "duration": 0.61 },
+        { "id": 5, "text": "分", "p": "fēn", "timestamp": 23.02, "duration": 1.32 }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Mening hissiyotlarim ham chin",
+      "translation_ru": "Мои чувства тоже настоящие",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 25.06, "duration": 0.41 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 25.48, "duration": 0.33 },
+        { "id": 2, "text": "情", "p": "qíng", "timestamp": 25.82, "duration": 1.077 },
+        { "id": 3, "text": "也", "p": "yě", "timestamp": 26.907, "duration": 0.463 },
+        { "id": 4, "text": "真", "p": "zhēn", "timestamp": 27.38, "duration": 0.38 }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Mening sevgim ham chin",
+      "translation_ru": "Моя любовь тоже настоящая",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 28.18, "duration": 0.39 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 28.58, "duration": 0.41 },
+        { "id": 2, "text": "爱", "p": "ài", "timestamp": 29, "duration": 0.914 },
+        { "id": 3, "text": "也", "p": "yě", "timestamp": 29.924, "duration": 0.526 },
+        { "id": 4, "text": "真", "p": "zhēn", "timestamp": 30.46, "duration": 0.34 }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Oy mening yuragimni ifodalaydi",
+      "translation_ru": "Луна представляет моё сердце",
+      "words": [
+        { "id": 0, "text": "月", "p": "yuè", "timestamp": 31.286, "duration": 0.264 },
+        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 31.56, "duration": 0.53 },
+        { "id": 2, "text": "代", "p": "dài", "timestamp": 32.1, "duration": 1.086 },
+        { "id": 3, "text": "表", "p": "biǎo", "timestamp": 33.196, "duration": 0.394 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 33.6, "duration": 0.81 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 34.42, "duration": 0.685 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 35.115, "duration": 1.445 }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "Sen meni qanchalik sevishimni so'raysan",
+      "translation_ru": "Ты спрашиваешь, как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 37.796, "duration": 0.434 },
+        { "id": 1, "text": "问", "p": "wèn", "timestamp": 38.24, "duration": 1.09 },
+        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 39.34, "duration": 0.45 },
+        { "id": 3, "text": "爱", "p": "ài", "timestamp": 39.8, "duration": 1.13 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 40.94, "duration": 0.41 },
+        { "id": 5, "text": "有", "p": "yǒu", "timestamp": 41.36, "duration": 1.05 },
+        { "id": 6, "text": "多", "p": "duō", "timestamp": 42.42, "duration": 0.35 },
+        { "id": 7, "text": "深", "p": "shēn", "timestamp": 42.78, "duration": 0.78 }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Men seni qanchalik sevaman",
+      "translation_ru": "Как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 44, "duration": 0.41 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 44.42, "duration": 1.11 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 45.54, "duration": 0.39 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 45.94, "duration": 1.11 },
+        { "id": 4, "text": "几", "p": "jǐ", "timestamp": 47.06, "duration": 0.71 },
+        { "id": 5, "text": "分", "p": "fēn", "timestamp": 47.78, "duration": 1.48 }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Mening hissiyotlarim o'zgarmaydi",
+      "translation_ru": "Мои чувства не изменятся",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 49.7, "duration": 0.37 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 50.08, "duration": 0.35 },
+        { "id": 2, "text": "情", "p": "qíng", "timestamp": 50.44, "duration": 1.23 },
+        { "id": 3, "text": "不", "p": "bù", "timestamp": 51.681, "duration": 0.33 },
+        { "id": 4, "text": "移", "p": "yí", "timestamp": 52.021, "duration": 0.36 }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "Mening sevgim o'zgarmaydi",
+      "translation_ru": "Моя любовь не изменится",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 52.781, "duration": 0.39 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 53.181, "duration": 0.41 },
+        { "id": 2, "text": "爱", "p": "ài", "timestamp": 53.601, "duration": 1.11 },
+        { "id": 3, "text": "不", "p": "bù", "timestamp": 54.721, "duration": 0.39 },
+        { "id": 4, "text": "变", "p": "biàn", "timestamp": 55.121, "duration": 0.32 }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Oy mening yuragimni ifodalaydi",
+      "translation_ru": "Луна представляет моё сердце",
+      "words": [
+        { "id": 0, "text": "月", "p": "yuè", "timestamp": 55.897, "duration": 0.274 },
+        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 56.181, "duration": 0.51 },
+        { "id": 2, "text": "代", "p": "dài", "timestamp": 56.701, "duration": 1.05 },
+        { "id": 3, "text": "表", "p": "biǎo", "timestamp": 57.761, "duration": 0.39 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 58.161, "duration": 0.73 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 58.901, "duration": 0.75 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 59.661, "duration": 1.38 }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Engil bir o'pich",
+      "translation_ru": "Нежный поцелуй",
+      "words": [
+        { "id": 0, "text": "轻", "p": "qīng", "timestamp": 61.902, "duration": 0.769 },
+        { "id": 1, "text": "轻", "p": "qīng", "timestamp": 62.681, "duration": 1.21 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 63.901, "duration": 0.576 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 64.487, "duration": 0.662 },
+        { "id": 4, "text": "个", "p": "gè", "timestamp": 65.159, "duration": 0.764 },
+        { "id": 5, "text": "吻", "p": "wěn", "timestamp": 65.933, "duration": 1.568 }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "Allaqachon yuragimni larzaga soldi",
+      "translation_ru": "Уже тронул моё сердце",
+      "words": [
+        { "id": 0, "text": "已", "p": "yǐ", "timestamp": 68.161, "duration": 0.37 },
+        { "id": 1, "text": "经", "p": "jīng", "timestamp": 68.541, "duration": 0.39 },
+        { "id": 2, "text": "打", "p": "dǎ", "timestamp": 68.941, "duration": 1.15 },
+        { "id": 3, "text": "动", "p": "dòng", "timestamp": 70.101, "duration": 0.43 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 70.541, "duration": 1.09 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 71.641, "duration": 0.35 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 72.001, "duration": 1.66 }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "Chuqur bir muhabbat",
+      "translation_ru": "Глубокое чувство любви",
+      "words": [
+        { "id": 0, "text": "深", "p": "shēn", "timestamp": 74.207, "duration": 0.784 },
+        { "id": 1, "text": "深", "p": "shēn", "timestamp": 75.001, "duration": 1.21 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 76.221, "duration": 0.211 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 76.442, "duration": 0.949 },
+        { "id": 4, "text": "段", "p": "duàn", "timestamp": 77.401, "duration": 0.71 },
+        { "id": 5, "text": "情", "p": "qíng", "timestamp": 78.121, "duration": 1.34 }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Meni hozirgacha sog'intirib kelmoqda",
+      "translation_ru": "Заставляет меня скучать до сих пор",
+      "words": [
+        { "id": 0, "text": "教", "p": "jiào", "timestamp": 80.415, "duration": 0.456 },
+        { "id": 1, "text": "我", "p": "wǒ", "timestamp": 80.881, "duration": 0.33 },
+        { "id": 2, "text": "思", "p": "sī", "timestamp": 81.221, "duration": 1.19 },
+        { "id": 3, "text": "念", "p": "niàn", "timestamp": 82.421, "duration": 0.39 },
+        { "id": 4, "text": "到", "p": "dào", "timestamp": 82.821, "duration": 0.71 },
+        { "id": 5, "text": "如", "p": "rú", "timestamp": 83.541, "duration": 0.69 },
+        { "id": 6, "text": "今", "p": "jīn", "timestamp": 84.241, "duration": 1.54 }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Sen meni qanchalik sevishimni so'raysan",
+      "translation_ru": "Ты спрашиваешь, как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 86.957, "duration": 0.394 },
+        { "id": 1, "text": "问", "p": "wèn", "timestamp": 87.361, "duration": 1.127 },
+        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 88.498, "duration": 0.413 },
+        { "id": 3, "text": "爱", "p": "ài", "timestamp": 88.921, "duration": 1.17 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 90.101, "duration": 0.37 },
+        { "id": 5, "text": "有", "p": "yǒu", "timestamp": 90.481, "duration": 1.11 },
+        { "id": 6, "text": "多", "p": "duō", "timestamp": 91.601, "duration": 0.33 },
+        { "id": 7, "text": "深", "p": "shēn", "timestamp": 91.941, "duration": 0.88 }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Men seni qanchalik sevaman",
+      "translation_ru": "Как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 93.121, "duration": 0.43 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 93.561, "duration": 1.09 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 94.661, "duration": 0.41 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 95.081, "duration": 1.07 },
+        { "id": 4, "text": "几", "p": "jǐ", "timestamp": 96.161, "duration": 0.67 },
+        { "id": 5, "text": "分", "p": "fēn", "timestamp": 96.841, "duration": 1.64 }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "O'ylab ko'r",
+      "translation_ru": "Подумай",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 98.901, "duration": 0.33 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 99.241, "duration": 0.37 },
+        { "id": 2, "text": "想", "p": "xiǎng", "timestamp": 99.621, "duration": 1.13 },
+        { "id": 3, "text": "一", "p": "yì", "timestamp": 100.761, "duration": 0.33 },
+        { "id": 4, "text": "想", "p": "xiǎng", "timestamp": 101.101, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "Qarab ko'r",
+      "translation_ru": "Посмотри",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 101.981, "duration": 0.31 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 102.301, "duration": 0.37 },
+        { "id": 2, "text": "看", "p": "kàn", "timestamp": 102.681, "duration": 1.25 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 103.941, "duration": 0.25 },
+        { "id": 4, "text": "看", "p": "kàn", "timestamp": 104.201, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Oy mening yuragimni ifodalaydi",
+      "translation_ru": "Луна представляет моё сердце",
+      "words": [
+        { "id": 0, "text": "月", "p": "yuè", "timestamp": 105.061, "duration": 0.23 },
+        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 105.301, "duration": 0.55 },
+        { "id": 2, "text": "代", "p": "dài", "timestamp": 105.861, "duration": 1.11 },
+        { "id": 3, "text": "表", "p": "biǎo", "timestamp": 106.981, "duration": 0.33 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 107.321, "duration": 0.75 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 108.081, "duration": 0.71 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 108.801, "duration": 2.02 }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Engil bir o'pich",
+      "translation_ru": "Нежный поцелуй",
+      "words": [
+        { "id": 0, "text": "轻", "p": "qīng", "timestamp": 135.57, "duration": 0.757 },
+        { "id": 1, "text": "轻", "p": "qīng", "timestamp": 136.337, "duration": 1.274 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 137.621, "duration": 0.41 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 138.041, "duration": 0.69 },
+        { "id": 4, "text": "个", "p": "gè", "timestamp": 138.741, "duration": 0.73 },
+        { "id": 5, "text": "吻", "p": "wěn", "timestamp": 139.481, "duration": 1.66 }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Allaqachon yuragimni larzaga soldi",
+      "translation_ru": "Уже тронул моё сердце",
+      "words": [
+        { "id": 0, "text": "已", "p": "yǐ", "timestamp": 141.661, "duration": 0.39 },
+        { "id": 1, "text": "经", "p": "jīng", "timestamp": 142.061, "duration": 0.39 },
+        { "id": 2, "text": "打", "p": "dǎ", "timestamp": 142.461, "duration": 1.13 },
+        { "id": 3, "text": "动", "p": "dòng", "timestamp": 143.601, "duration": 0.39 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 144.001, "duration": 0.75 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 144.761, "duration": 0.67 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 145.441, "duration": 1.56 }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "Chuqur bir muhabbat",
+      "translation_ru": "Глубокое чувство любви",
+      "words": [
+        { "id": 0, "text": "深", "p": "shēn", "timestamp": 147.706, "duration": 0.745 },
+        { "id": 1, "text": "深", "p": "shēn", "timestamp": 148.461, "duration": 1.21 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 149.681, "duration": 0.318 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 150.009, "duration": 0.782 },
+        { "id": 4, "text": "段", "p": "duàn", "timestamp": 150.801, "duration": 0.67 },
+        { "id": 5, "text": "情", "p": "qíng", "timestamp": 151.481, "duration": 1.56 }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Meni hozirgacha sog'intirib kelmoqda",
+      "translation_ru": "Заставляет меня скучать до сих пор",
+      "words": [
+        { "id": 0, "text": "教", "p": "jiào", "timestamp": 153.856, "duration": 0.435 },
+        { "id": 1, "text": "我", "p": "wǒ", "timestamp": 154.302, "duration": 0.33 },
+        { "id": 2, "text": "思", "p": "sī", "timestamp": 154.642, "duration": 1.19 },
+        { "id": 3, "text": "念", "p": "niàn", "timestamp": 155.842, "duration": 0.33 },
+        { "id": 4, "text": "到", "p": "dào", "timestamp": 156.182, "duration": 0.79 },
+        { "id": 5, "text": "如", "p": "rú", "timestamp": 156.982, "duration": 0.71 },
+        { "id": 6, "text": "今", "p": "jīn", "timestamp": 157.702, "duration": 1.76 }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "Sen meni qanchalik sevishimni so'raysan",
+      "translation_ru": "Ты спрашиваешь, как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 160.318, "duration": 0.394 },
+        { "id": 1, "text": "问", "p": "wèn", "timestamp": 160.722, "duration": 1.21 },
+        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 161.942, "duration": 0.39 },
+        { "id": 3, "text": "爱", "p": "ài", "timestamp": 162.342, "duration": 1.13 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 163.482, "duration": 0.35 },
+        { "id": 5, "text": "有", "p": "yǒu", "timestamp": 163.842, "duration": 1.13 },
+        { "id": 6, "text": "多", "p": "duō", "timestamp": 164.982, "duration": 0.31 },
+        { "id": 7, "text": "深", "p": "shēn", "timestamp": 165.302, "duration": 0.76 }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Men seni qanchalik sevaman",
+      "translation_ru": "Как сильно я тебя люблю",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 166.462, "duration": 0.45 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 166.922, "duration": 1.09 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 168.022, "duration": 0.39 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 168.422, "duration": 1.09 },
+        { "id": 4, "text": "几", "p": "jǐ", "timestamp": 169.522, "duration": 0.65 },
+        { "id": 5, "text": "分", "p": "fēn", "timestamp": 170.182, "duration": 1.66 }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "O'ylab ko'r",
+      "translation_ru": "Подумай",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 172.262, "duration": 0.35 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 172.622, "duration": 0.35 },
+        { "id": 2, "text": "想", "p": "xiǎng", "timestamp": 172.982, "duration": 1.17 },
+        { "id": 3, "text": "一", "p": "yì", "timestamp": 174.162, "duration": 0.31 },
+        { "id": 4, "text": "想", "p": "xiǎng", "timestamp": 174.482, "duration": 0.38 }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Qarab ko'r",
+      "translation_ru": "Посмотри",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 175.33, "duration": 0.342 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 175.682, "duration": 0.37 },
+        { "id": 2, "text": "看", "p": "kàn", "timestamp": 176.062, "duration": 1.21 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 177.282, "duration": 0.27 },
+        { "id": 4, "text": "看", "p": "kàn", "timestamp": 177.562, "duration": 0.38 }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Oy mening yuragimni ifodalaydi",
+      "translation_ru": "Луна представляет моё сердце",
+      "words": [
+        { "id": 0, "text": "月", "p": "yuè", "timestamp": 178.402, "duration": 0.25 },
+        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 178.662, "duration": 0.55 },
+        { "id": 2, "text": "代", "p": "dài", "timestamp": 179.222, "duration": 1.05 },
+        { "id": 3, "text": "表", "p": "biǎo", "timestamp": 180.282, "duration": 0.37 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 180.662, "duration": 0.75 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 181.422, "duration": 0.69 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 182.122, "duration": 1.34 }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "O'ylab ko'r",
+      "translation_ru": "Подумай",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 184.394, "duration": 0.418 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 184.822, "duration": 0.37 },
+        { "id": 2, "text": "想", "p": "xiǎng", "timestamp": 185.202, "duration": 1.022 },
+        { "id": 3, "text": "一", "p": "yì", "timestamp": 186.234, "duration": 0.31 },
+        { "id": 4, "text": "想", "p": "xiǎng", "timestamp": 186.554, "duration": 0.662 }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Qarab ko'r",
+      "translation_ru": "Посмотри",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 187.48, "duration": 0.2 },
+        { "id": 1, "text": "去", "p": "qù", "timestamp": 187.69, "duration": 0.407 },
+        { "id": 2, "text": "看", "p": "kàn", "timestamp": 188.107, "duration": 1.251 },
+        { "id": 3, "text": "一", "p": "yí", "timestamp": 189.368, "duration": 0.395 },
+        { "id": 4, "text": "看", "p": "kàn", "timestamp": 189.773, "duration": 0.539 }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Oy mening yuragimni ifodalaydi",
+      "translation_ru": "Луна представляет моё сердце",
+      "words": [
+        { "id": 0, "text": "月", "p": "yuè", "timestamp": 190.522, "duration": 0.4 },
+        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 190.932, "duration": 0.4 },
+        { "id": 2, "text": "代", "p": "dài", "timestamp": 191.342, "duration": 1.057 },
+        { "id": 3, "text": "表", "p": "biǎo", "timestamp": 192.409, "duration": 0.446 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 192.865, "duration": 0.775 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 193.65, "duration": 0.657 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 194.317, "duration": 2.596 }
+      ]
+    }
+  ]
+}

@@ -414,7 +414,7 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={`${bookPath}/stories`} className="reader__home">
-            ← {language === 'ru' ? 'Рассказы' : 'Hikoyalar'}
+            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={showPinyin}

@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 
-type Tab = 'hsk' | 'stories' | 'flashcards' | 'tests';
+type Tab = 'hsk' | 'stories' | 'flashcards' | 'karaoke' | 'tests';
 
 interface TabInfo {
   id: Tab;
   label: string;
   label_ru: string;
-  icon: string;
 }
 
 interface HSKBook {
@@ -21,19 +21,12 @@ interface HSKBook {
   hasContent: boolean;
 }
 
-interface FlashcardDeckInfo {
-  id: string;
-  level: number;
-  title: string;
-  title_ru: string;
-  hasContent: boolean;
-}
-
 const tabs: TabInfo[] = [
-  { id: 'hsk', label: 'HSK', label_ru: 'HSK', icon: '📚' },
-  { id: 'stories', label: 'Hikoyalar', label_ru: 'Рассказы', icon: '📖' },
-  { id: 'flashcards', label: 'Fleshkartalar', label_ru: 'Флэшкарты', icon: '📇' },
-  { id: 'tests', label: 'Testlar', label_ru: 'Тесты', icon: '📝' },
+  { id: 'hsk', label: 'Kitoblar', label_ru: 'Книги' },
+  { id: 'stories', label: 'Matn', label_ru: 'Текст' },
+  { id: 'flashcards', label: 'Fleshkartalar', label_ru: 'Флэшкарты' },
+  { id: 'karaoke', label: 'Karaoke', label_ru: 'Караоке' },
+  { id: 'tests', label: 'Testlar', label_ru: 'Тесты' },
 ];
 
 const hskBooks: HSKBook[] = [
@@ -45,199 +38,186 @@ const hskBooks: HSKBook[] = [
   { id: 'hsk6', level: 6, subtitle: "Yuqori daraja", subtitle_ru: 'Продвинутый уровень', hasContent: false },
 ];
 
-interface StoryBook {
-  id: string;
-  level: number;
-  title: string;
-  title_ru: string;
-  hasContent: boolean;
-}
 
-const storyBooks: StoryBook[] = [
-  { id: 'hsk1', level: 1, title: "HSK 1", title_ru: 'HSK 1', hasContent: true },
-  { id: 'hsk2', level: 2, title: "HSK 2", title_ru: 'HSK 2', hasContent: false },
-  { id: 'hsk3', level: 3, title: "HSK 3", title_ru: 'HSK 3', hasContent: false },
-  { id: 'hsk4', level: 4, title: "HSK 4", title_ru: 'HSK 4', hasContent: false },
-  { id: 'hsk5', level: 5, title: "HSK 5", title_ru: 'HSK 5', hasContent: false },
-  { id: 'hsk6', level: 6, title: "HSK 6", title_ru: 'HSK 6', hasContent: false },
-];
 
-const flashcardDecks: FlashcardDeckInfo[] = [
-  { id: 'hsk1', level: 1, title: "HSK 1", title_ru: 'HSK 1', hasContent: true },
-  { id: 'hsk2', level: 2, title: "HSK 2", title_ru: 'HSK 2', hasContent: false },
-  { id: 'hsk3', level: 3, title: "HSK 3", title_ru: 'HSK 3', hasContent: false },
-  { id: 'hsk4', level: 4, title: "HSK 4", title_ru: 'HSK 4', hasContent: false },
-  { id: 'hsk5', level: 5, title: "HSK 5", title_ru: 'HSK 5', hasContent: false },
-  { id: 'hsk6', level: 6, title: "HSK 6", title_ru: 'HSK 6', hasContent: false },
-];
+const validTabs: Tab[] = ['hsk', 'stories', 'flashcards', 'karaoke', 'tests'];
 
 export function LanguagePage() {
-  const [language, toggleLanguage] = useLanguage();
-  const [activeTab, setActiveTab] = useState<Tab>('hsk');
+  const [language, , setLanguage] = useLanguage();
+  const searchParams = useSearchParams();
+  const initialTab = searchParams.get('tab') as Tab | null;
+  const [activeTab, setActiveTab] = useState<Tab>(
+    initialTab && validTabs.includes(initialTab) ? initialTab : 'hsk'
+  );
+  const [knowOpen, setKnowOpen] = useState(false);
+  const [learnOpen, setLearnOpen] = useState(false);
+  const selectorsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!knowOpen && !learnOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (selectorsRef.current && !selectorsRef.current.contains(e.target as Node)) {
+        setKnowOpen(false);
+        setLearnOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [knowOpen, learnOpen]);
 
   return (
     <main className="home">
       {/* Hero Section */}
       <header className="home__hero">
-        <div className="home__hero-top">
-          <Link href="/" className="home__back-link">
-            ← {language === 'ru' ? 'Главная' : 'Bosh sahifa'}
-          </Link>
-          <button
-            className="home__lang-btn"
-            onClick={toggleLanguage}
-            type="button"
-          >
-            {language === 'uz' ? 'RU' : 'UZ'}
-          </button>
-        </div>
-        <h1 className="home__logo">
-          <span className="home__logo-icon">🇨🇳</span>
-          {language === 'ru' ? 'Китайский язык' : 'Xitoy tili'}
-        </h1>
-        <p className="home__tagline">中文</p>
-      </header>
-
-      {/* Tabs */}
-      <section className="home__content">
-        <div className="lang-page__tabs">
-          {tabs.map((tab) => (
+        <div className="home__hero-inner">
+          <div className="home__hero-top-row">
+            <Link href="/" className="home__hero-logo">
+              <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
+            </Link>
+            <div className="home__lang-selectors" ref={selectorsRef}>
+              <div className="home__lang-selector">
+                <span className="home__lang-selector-label">
+                  {language === 'ru' ? 'Я знаю' : 'Men bilaman'}
+                </span>
+                <button
+                  className="home__lang-select-btn"
+                  onClick={() => { setKnowOpen(!knowOpen); setLearnOpen(false); }}
+                  type="button"
+                >
+                  {language === 'ru' ? 'Русский' : "O'zbekcha"} ▾
+                </button>
+                {knowOpen && (
+                  <div className="home__lang-dropdown">
+                    <button
+                      className={`home__lang-dropdown-item ${language === 'uz' ? 'home__lang-dropdown-item--active' : ''}`}
+                      onClick={() => { setLanguage('uz'); setKnowOpen(false); }}
+                      type="button"
+                    >
+                      O&apos;zbekcha
+                    </button>
+                    <button
+                      className={`home__lang-dropdown-item ${language === 'ru' ? 'home__lang-dropdown-item--active' : ''}`}
+                      onClick={() => { setLanguage('ru'); setKnowOpen(false); }}
+                      type="button"
+                    >
+                      Русский
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className="home__lang-selector">
+                <span className="home__lang-selector-label">
+                  {language === 'ru' ? 'Я изучаю' : "Men o'rganaman"}
+                </span>
+                <button
+                  className="home__lang-select-btn"
+                  onClick={() => { setLearnOpen(!learnOpen); setKnowOpen(false); }}
+                  type="button"
+                >
+                  {language === 'ru' ? 'Китайский' : 'Xitoycha'} ▾
+                </button>
+                {learnOpen && (
+                  <div className="home__lang-dropdown">
+                    <button
+                      className="home__lang-dropdown-item home__lang-dropdown-item--active"
+                      onClick={() => setLearnOpen(false)}
+                      type="button"
+                    >
+                      {language === 'ru' ? 'Китайский' : 'Xitoycha'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
             <button
-              key={tab.id}
-              className={`lang-page__tab ${activeTab === tab.id ? 'lang-page__tab--active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
+              className="home__avatar-btn"
               type="button"
             >
-              <span className="lang-page__tab-icon">{tab.icon}</span>
-              {language === 'ru' ? tab.label_ru : tab.label}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
             </button>
-          ))}
+          </div>
+          <div className="lang-page__tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`lang-page__tab ${activeTab === tab.id ? 'lang-page__tab--active' : ''}`}
+                onClick={() => setActiveTab(tab.id)}
+                type="button"
+              >
+                {language === 'ru' ? tab.label_ru : tab.label}
+              </button>
+            ))}
+          </div>
         </div>
+      </header>
 
-        {/* Tab Content */}
+      {/* Tab Content */}
+      <section className="home__content">
         {activeTab === 'hsk' && (
           <div className="lang-page__books">
-            {hskBooks.map((book) =>
-              book.hasContent ? (
-                <Link
-                  key={book.id}
-                  href={`/chinese/${book.id}`}
-                  className="lang-page__book-card"
-                >
-                  <span className="lang-page__book-level">{book.level}</span>
-                  <span className="lang-page__book-title">HSK {book.level}</span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru' ? book.subtitle_ru : book.subtitle}
-                  </span>
-                </Link>
-              ) : (
-                <div
-                  key={book.id}
-                  className="lang-page__book-card lang-page__book-card--disabled"
-                >
-                  <span className="lang-page__coming-soon">
-                    {language === 'ru' ? 'Скоро' : 'Tez kunda'}
-                  </span>
-                  <span className="lang-page__book-level">{book.level}</span>
-                  <span className="lang-page__book-title">HSK {book.level}</span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru' ? book.subtitle_ru : book.subtitle}
-                  </span>
-                </div>
-              )
-            )}
+            {hskBooks.filter((book) => book.hasContent).map((book) => (
+              <Link
+                key={book.id}
+                href={`/chinese/${book.id}`}
+                className="lang-page__book-card"
+              >
+                <span className="lang-page__book-level">HSK</span>
+              </Link>
+            ))}
           </div>
         )}
 
         {activeTab === 'flashcards' && (
           <div className="lang-page__books">
-            {flashcardDecks.map((deck) =>
-              deck.hasContent ? (
-                <Link
-                  key={deck.id}
-                  href={`/chinese/${deck.id}/flashcards`}
-                  className="lang-page__book-card"
-                >
-                  <span className="lang-page__book-level">📇</span>
-                  <span className="lang-page__book-title">
-                    {language === 'ru' ? deck.title_ru : deck.title}
-                  </span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru'
-                      ? `${deck.level} даражадаги сўзлар`
-                      : `${deck.level}-daraja so'zlari`}
-                  </span>
-                </Link>
-              ) : (
-                <div
-                  key={deck.id}
-                  className="lang-page__book-card lang-page__book-card--disabled"
-                >
-                  <span className="lang-page__coming-soon">
-                    {language === 'ru' ? 'Скоро' : 'Tez kunda'}
-                  </span>
-                  <span className="lang-page__book-level">📇</span>
-                  <span className="lang-page__book-title">
-                    {language === 'ru' ? deck.title_ru : deck.title}
-                  </span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru'
-                      ? `${deck.level} даражадаги сўзлар`
-                      : `${deck.level}-daraja so'zlari`}
-                  </span>
-                </div>
-              )
-            )}
+            <Link
+              href="/chinese/hsk1/flashcards"
+              className="lang-page__book-card"
+            >
+              <span className="lang-page__book-level">HSK</span>
+            </Link>
           </div>
         )}
 
         {activeTab === 'stories' && (
           <div className="lang-page__books">
-            {storyBooks.map((book) =>
-              book.hasContent ? (
-                <Link
-                  key={book.id}
-                  href={`/chinese/${book.id}/stories`}
-                  className="lang-page__book-card"
-                >
-                  <span className="lang-page__book-level">📖</span>
-                  <span className="lang-page__book-title">
-                    {language === 'ru' ? book.title_ru : book.title}
-                  </span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru'
-                      ? `${book.level}-daraja hikoyalari`
-                      : `${book.level}-daraja hikoyalari`}
-                  </span>
-                </Link>
-              ) : (
-                <div
-                  key={book.id}
-                  className="lang-page__book-card lang-page__book-card--disabled"
-                >
-                  <span className="lang-page__coming-soon">
-                    {language === 'ru' ? 'Скоро' : 'Tez kunda'}
-                  </span>
-                  <span className="lang-page__book-level">📖</span>
-                  <span className="lang-page__book-title">
-                    {language === 'ru' ? book.title_ru : book.title}
-                  </span>
-                  <span className="lang-page__book-subtitle">
-                    {language === 'ru'
-                      ? `${book.level}-daraja hikoyalari`
-                      : `${book.level}-daraja hikoyalari`}
-                  </span>
-                </div>
-              )
-            )}
+            <Link
+              href="/chinese/hsk1/stories"
+              className="lang-page__book-card"
+            >
+              <span className="lang-page__book-level">
+                {language === 'ru' ? 'Истории' : 'Hikoyalar'}
+              </span>
+            </Link>
+            <div className="lang-page__book-card lang-page__book-card--disabled">
+              <span className="lang-page__coming-soon">
+                {language === 'ru' ? 'Скоро' : 'Tez kunda'}
+              </span>
+              <span className="lang-page__book-level">
+                {language === 'ru' ? 'Диалоги' : 'Dialoglar'}
+              </span>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'karaoke' && (
+          <div className="lang-page__books">
+            <Link
+              href="/chinese/hsk1/karaoke/yueliang"
+              className="lang-page__book-card"
+            >
+              <span className="lang-page__book-level">月亮代表我的心</span>
+              <span className="lang-page__book-pinyin">Yuèliàng dàibiǎo wǒ de xīn</span>
+              <span className="lang-page__book-subtitle">
+                {language === 'ru' ? 'Луна представляет моё сердце' : 'Oy yuragimni ifodalaydi'}
+              </span>
+            </Link>
           </div>
         )}
 
         {activeTab === 'tests' && (
           <div className="lang-page__placeholder">
-            <div className="lang-page__placeholder-icon">
-              {tabs.find((t) => t.id === activeTab)?.icon}
-            </div>
             <p className="lang-page__placeholder-text">
               {language === 'ru' ? 'Скоро...' : 'Tez kunda...'}
             </p>

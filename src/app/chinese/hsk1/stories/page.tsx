@@ -8,7 +8,7 @@ export default async function HSK1StoriesPage() {
     <StoriesPage
       stories={stories}
       bookPath="/chinese/hsk1"
-      languagePath="/chinese"
+      languagePath="/chinese?tab=stories"
     />
   );
 }

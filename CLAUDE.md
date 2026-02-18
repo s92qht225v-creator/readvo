@@ -1,33 +1,39 @@
-# Kitobee - Interactive Language Textbook Reader
+# Blim - Interactive Language Textbook Reader
 
 ## Project Overview
-ReadVo (originally Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.
+Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.
 
 ## Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS (reading.css) with CSS custom properties
+- **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
 - **State Management**: React hooks (useState, useCallback, useMemo)
 - **Storage**: Supabase Storage (images and audio files)
 - **Database**: Supabase (project: miruwaeplbzfqmdwacsh)
 
 ## URL Structure
 ```
-/                                           # Home - language selection
-/[language]                                 # Language page - tabbed catalog (HSK, Stories, Flashcards, Tests)
+/                                           # Home/landing page (redirects logged-in users to /chinese)
+/[language]                                 # Language page - tabbed catalog (Kitoblar, Matn, Fleshkartalar, Karaoke, Testlar)
+/[language]?tab=[tabId]                     # Language page with specific tab pre-selected
 /[language]/[book]                          # Book page - lesson list
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
-/[language]/[book]/flashcards               # Flashcard practice page
+/[language]/[book]/flashcards               # Flashcard list page (per-lesson cards)
+/[language]/[book]/flashcards/[lessonId]    # Flashcard practice for specific lesson
 /[language]/[book]/stories                  # Stories list page
 /[language]/[book]/stories/[storyId]        # Story reader page
+/[language]/[book]/karaoke/[songId]         # Karaoke player page
 ```
 
 Example routes:
-- `/` - Home page with language cards (Xitoy tili, Ingliz tili)
-- `/chinese` - Chinese language page with tabs (HSK, Stories, Flashcards, Tests)
+- `/` - Landing page (logged-in users auto-redirect to `/chinese`)
+- `/chinese` - Chinese language page with tabs (Kitoblar, Matn, Fleshkartalar, Karaoke, Testlar)
+- `/chinese?tab=flashcards` - Language page with Flashcards tab active
 - `/chinese/hsk1` - HSK 1 book with lesson list
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
-- `/chinese/hsk1/flashcards` - HSK 1 flashcard practice
+- `/chinese/hsk1/flashcards` - HSK 1 flashcard list (per-lesson cards with word counts)
+- `/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
 - `/chinese/hsk1/stories` - HSK 1 stories list
 - `/chinese/hsk1/stories/hsk1-story1` - Story reader
 
@@ -43,10 +49,14 @@ Example routes:
 │   │       ├── page.tsx       # Language page (tabbed catalog)
 │   │       └── hsk1/
 │   │           ├── page.tsx   # Book page (lesson list)
-│   │           ├── flashcards/page.tsx  # Flashcard practice page
+│   │           ├── flashcards/
+│   │           │   ├── page.tsx       # Flashcard list page (per-lesson cards)
+│   │           │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
 │   │           ├── stories/
 │   │           │   ├── page.tsx       # Stories list page
 │   │           │   └── [storyId]/page.tsx  # Story reader page
+│   │           ├── karaoke/
+│   │           │   └── [songId]/page.tsx   # Karaoke player page
 │   │           └── lesson/[lessonId]/page/[pageNum]/page.tsx
 │   ├── components/             # React components
 │   │   ├── Page.tsx           # Top-level page container
@@ -61,8 +71,10 @@ Example routes:
 │   │   ├── BookPage.tsx       # Book page (lesson list with pages)
 │   │   ├── StoriesPage.tsx     # Stories list page
 │   │   ├── StoryReader.tsx    # Story reader with ruby pinyin, translation panel, audio bar
+│   │   ├── FlashcardListPage.tsx # Flashcard lesson list with banner+tabs
 │   │   ├── FlashcardDeck.tsx  # Flashcard session manager (client)
 │   │   ├── FlashcardCard.tsx  # Flashcard with 3D flip animation
+│   │   ├── KaraokePlayer.tsx  # Karaoke player with synced lyrics, ruby pinyin, controls
 │   │   ├── MatchingExercise.tsx      # Image-word matching
 │   │   ├── FillBlankExercise.tsx     # Dropdown fill-in-the-blank
 │   │   ├── MultipleChoiceExercise.tsx # Multiple choice questions
@@ -70,14 +82,15 @@ Example routes:
 │   │   └── TableFillExercise.tsx      # Table-based activity exercises
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
-│   │   └── useLanguage.ts     # UZ/RU language toggle (localStorage)
+│   │   └── useLanguage.ts     # UZ/RU language toggle/set (localStorage)
 │   ├── utils/                    # Utility functions
 │   │   └── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
 │   ├── services/               # Data loading
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
 │   │   ├── stories.ts        # Loads story JSON from /content/stories
-│   │   └── flashcards.ts     # Loads flashcard decks from /content/flashcards
+│   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
+│   │   └── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
 │   ├── styles/
 │   │   └── reading.css        # All styles
 │   ├── types/
@@ -90,9 +103,11 @@ Example routes:
 │   ├── lesson15-page3.json
 │   ├── flashcards/
 │   │   └── hsk1.json          # HSK 1 flashcard word list
-│   └── stories/
-│       └── hsk1/
-│           └── story1.json    # Story content files
+│   ├── stories/
+│   │   └── hsk1/
+│   │       └── story1.json    # Story content files
+│   └── karaoke/
+│       └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
 ├── .env.local                  # Supabase credentials
 └── public/
     └── audio/                  # Local MP3 audio files (legacy)
@@ -152,7 +167,8 @@ Page → Section → Sentence → Word
 - Section's `image_url` field for Supabase URLs
 
 ### Flashcard Practice
-- Accessible from Language Page → Flashcards tab → HSK 1 card (`/chinese/hsk1/flashcards`)
+- Accessible from Language Page → Flashcards tab → HSK card → `/chinese/hsk1/flashcards` (lesson list) → `/chinese/hsk1/flashcards/[lessonId]` (practice)
+- Flashcard list page shows per-lesson cards with word counts (e.g., "27 so'z"). Banner with logo + HSK 1-6 tabs.
 - Cards show Chinese + pinyin (front) → translation (back) with CSS 3D flip animation
 - Self-grading: "Bilaman" (Know) / "Bilmayman" (Don't Know) buttons appear after flip
 - Session progress bar, completion screen with stats (known vs unknown count)
@@ -211,6 +227,39 @@ Page → Section → Sentence → Word
   - Entering focus mode stops any playing full-story audio
   - CSS: `.story__focus-nav-btn` (48px grey circle, no border), `.story__focus-play-btn` (44px blue circle)
 - Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
+
+### Karaoke Player
+- Accessible from Language Page → Karaoke tab → song card → `/chinese/hsk1/karaoke/[songId]`
+- Per-character synced lyrics with timestamp-based highlighting (characters light up as they're sung)
+- **Dark theme**: Entire page uses `#0a0a0a` background with dark-themed overrides for all shared components (header, translation panel, bottom bar, toggle buttons)
+- **Ruby pinyin**: Each character gets `<ruby>/<rt>/<rp>` pinyin annotation. Pinyin uses `0.5em` font size, italic, white with reduced opacity. Punctuation characters skip pinyin automatically.
+- **Character spacing**: `margin: 0 0.08em` on each `ruby` element for visual separation between characters
+- **Pinyin toggle**: Hides pinyin via `visibility: hidden` on `<rt>` (no layout shift)
+- **Tap-to-translate**: Tapping a lyrics line shows its translation in the panel (like stories). Tapping again deselects. Audio-synced line (`audioLineIdx`) takes priority over tapped line (`tappedLineIdx`). Tapped selection is cleared when audio starts playing.
+- **No focus mode**: Karaoke doesn't need focus mode — per-character sync and auto-scroll already provide the focused experience.
+- **Translation panel**: Reuses `story__translation-panel` (fixed below header). Shows active line's UZ/RU translation (from audio sync or tap). Dark themed (`rgba(10, 10, 10, 0.95)`).
+- **Character highlight states**:
+  - Default: `rgba(255, 255, 255, 0.25)` (dimmed)
+  - Active line: `rgba(255, 255, 255, 0.5)` (brighter)
+  - Past lines: `rgba(255, 255, 255, 0.15)` (faded)
+  - Currently singing character: `#ffd54f` (gold) with text shadow glow
+  - Already sung character (active line): `#66bb6a` (green)
+- **No CSS transitions on lines**: `.karaoke__line` has no `transition` property — instant color changes prevent flickering when active line changes (transitions caused visible flicker between states)
+- **Auto-scroll**: Active line auto-scrolls to center via `scrollIntoView({ behavior: 'smooth', block: 'center' })`
+- **Font size**: Adjustable via A-/A+ buttons in header. Lyrics container uses inline `fontSize` percentage. Line font size uses `em` (not `rem`) to inherit from parent.
+- **Audio system**: Direct `HTMLAudioElement` via `useRef`. Lazy-loaded (`preload: 'none'`), src set on first play. `requestAnimationFrame` loop for smooth time tracking.
+- **Controls panel** (fixed, above bottom bar, z-index 91):
+  - Progress/seek bar (clickable, blue `#4fc3f7` fill)
+  - Time display (current / duration)
+  - Playback row: rewind 15s | play/pause (56px blue circle) | forward 15s
+  - Skip buttons: circular arrow SVG icons with "15" label overlay
+  - Separator line via `::after` pseudo-element (`bottom: 3px`)
+  - `border-top: 1px solid rgba(255, 255, 255, 0.1)` at top edge
+- **Bottom bar**: Reuses `story__bottom-bar` with Tarjima + Pinyin toggles. Dark themed.
+- **Header**: Reuses `reader__header` with `ReaderControls` (RU/UZ toggle, A-/A+ font). Logo inverted to white via `filter: brightness(0) invert(1)`. Dark themed.
+- **Fixed element stacking** (bottom to top): bottom bar (z-index 90) → controls (z-index 91) → header (z-index 100)
+- **Lyrics padding**: Top padding clears fixed header + translation panel (`calc(var(--header-height) + 60px + env(safe-area-inset-top))`). Bottom padding (200px) clears fixed controls.
+- Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
 ### Styling Conventions
 - Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
@@ -402,6 +451,36 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 }
 ```
 
+### Karaoke Song JSON
+```json
+{
+  "id": "yueliang",
+  "title": "月亮代表我的心",
+  "pinyin": "Yuèliàng Dàibiǎo Wǒ De Xīn",
+  "titleTranslation": "Oy mening yuragimni ifodalaydi",
+  "titleTranslation_ru": "Луна представляет моё сердце",
+  "artist": "邓丽君",
+  "artist_ru": "Дэн Лицзюнь",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/karaoke/yueliang.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 13.138, "duration": 0.432 },
+        { "id": 1, "text": "问", "p": "wèn", "timestamp": 13.57, "duration": 0.48 }
+      ],
+      "translation": "Sen meni qanchalik sevishimni so'raysan",
+      "translation_ru": "Ты спрашиваешь, как сильно я тебя люблю"
+    }
+  ]
+}
+```
+- Each `line` contains `words[]` (per-character entries with timestamps)
+- Each word/char: `id` (number), `text` (single character), `p` (pinyin, optional), `timestamp` (seconds), `duration` (seconds)
+- `translation` / `translation_ru` on each line for panel display
+- Song metadata: `title`, `pinyin`, `titleTranslation`, `titleTranslation_ru`, `artist`, `artist_ru`
+- Empty lines (no text) are skipped during rendering
+
 ### Story JSON
 ```json
 {
@@ -457,7 +536,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
-- Language toggle: UZ/RU button in header (shows target language to switch to, e.g., "RU" when currently on Uzbek)
+- Language toggle: Custom dropdown selectors on language page banner ("Men bilaman"/"Я знаю" for known language, "Men o'rganaman"/"Я изучаю" for target language). Lesson/story headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)
 All content supports both Uzbek and Russian translations:
@@ -513,42 +592,43 @@ This applies to:
 ### Home Page Structure (HomePage.tsx — language selection)
 ```
 main.home (max-width container + padding)
-├── header.home__hero (red gradient banner, rounded corners)
-│   ├── div.home__hero-top (language toggle button)
-│   ├── h1.home__logo (📖 ReadVo)
-│   └── p.home__tagline
-├── section.home__content
-│   ├── h2.home__section-title
-│   └── div.home__languages
-│       └── Link.language-group.language-group--link (per language)
-│           ├── div.language-group__header (flag + name)
-│           └── span.language-group__arrow
+├── Landing page content (logged-in users redirect to /chinese)
 └── footer.home__footer
 ```
 
 ### Language Page Structure (LanguagePage.tsx — tabbed catalog)
 ```
-main.home (reuses home styling)
-├── header.home__hero (back link to "/" + language toggle)
-│   ├── h1.home__logo (🇨🇳 Xitoy tili)
-│   └── p.home__tagline (中文)
+main.home (reuses home styling, no top padding)
+├── header.home__hero (full-width red gradient banner, z-index: 10)
+│   └── div.home__hero-inner (constrained max-width matching page)
+│       ├── div.home__hero-top-row (flex: logo | lang selectors | avatar)
+│       │   ├── Link.home__hero-logo > img.home__hero-logo-img (white logo, 32px)
+│       │   ├── div.home__lang-selectors (flex, gap between selectors)
+│       │   │   ├── div.home__lang-selector ("I know" dropdown — UZ/RU)
+│       │   │   └── div.home__lang-selector ("I'm learning" dropdown — Chinese)
+│       │   └── button.home__avatar-btn (36px circle, profile icon)
+│       └── div.lang-page__tabs (folder tabs on banner)
+│           └── button.lang-page__tab (Kitoblar | Matn | Fleshkartalar | Karaoke | Testlar)
 ├── section.home__content
-│   ├── div.lang-page__tabs (horizontal tab bar)
-│   │   └── button.lang-page__tab (HSK | Stories | Flashcards | Tests)
-│   └── div.lang-page__books (grid of cards, for HSK and Flashcards tabs)
+│   └── div.lang-page__books (responsive grid of cards)
 │       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
-│   └── div.lang-page__placeholder (for Stories/Tests tabs — "Tez kunda...")
+│           ├── span.lang-page__book-level > span.lang-page__book-level-label + number
+│           └── span.lang-page__book-subtitle
 └── footer.home__footer
 ```
 
 ### Book Page Structure (BookPage.tsx — lesson list)
 ```
 main.home (reuses home styling)
-├── header.home__hero (back link to /chinese + language toggle)
+├── header.home__hero (logo + HSK 1-6 folder tabs)
+│   └── div.home__hero-inner
+│       ├── div.home__hero-top-row
+│       │   └── Link.home__hero-logo > img (links to /chinese)
+│       └── div.lang-page__tabs (HSK 1 active, 2-6 disabled)
 ├── section.home__content
-│   ├── h2.home__section-title
 │   ├── div.home__lessons
 │   │   └── article.lesson-card (per lesson)
+│   │       ├── div.lesson-card__header (number + translation, no Chinese title/pinyin)
 │   │       └── div.lesson-card__pages (page links)
 │   └── div.home__stats
 └── footer.home__footer
@@ -559,7 +639,7 @@ main.home (reuses home styling)
 div.reader
 ├── header.reader__header (fixed, full-width background)
 │   └── div.reader__header-inner (constrained width)
-│       ├── Link.reader__home ("ReadVo")
+│       ├── Link.reader__home (logo img)
 │       └── ReaderControls (RU/UZ toggle, A-/A+ font controls)
 ├── div.page__translation-panel (fixed below header, shown when translation on + sentence tapped)
 ├── article.page (constrained width, permanent 1em extra top padding for panel space)
@@ -574,10 +654,31 @@ div.reader
         └── Link/span.reader__nav-btn (next)
 ```
 
-### Flashcard Page Structure
+### Flashcard List Page Structure (FlashcardListPage.tsx)
+```
+main.home
+├── header.home__hero (logo + HSK 1-6 folder tabs)
+│   └── div.home__hero-inner
+│       ├── div.home__hero-top-row
+│       │   └── Link.home__hero-logo > img (links to /chinese?tab=flashcards)
+│       └── div.lang-page__tabs (HSK 1 active, 2-6 disabled)
+├── section.home__content
+│   └── div.home__lessons
+│       └── article.lesson-card (per lesson)
+│           ├── div.lesson-card__header (number + translation)
+│           └── div.lesson-card__pages (word count link → /flashcards/[lessonId])
+└── footer.home__footer
+```
+
+### Flashcard Practice Page Structure (FlashcardDeck.tsx)
 ```
 main.flashcard-page
-├── div.flashcard-page__header (back link + title + toggles)
+├── header.home__hero (logo + HSK 1-6 folder tabs)
+│   └── div.home__hero-inner
+│       ├── div.home__hero-top-row
+│       │   └── Link.home__hero-logo > img (links to /[book]/flashcards)
+│       └── div.lang-page__tabs (HSK 1 active, 2-6 disabled)
+├── div.flashcard-page__header (controls: direction + pinyin + lang toggles)
 ├── div.flashcard__progress (progress bar)
 └── FlashcardCard OR div.flashcard__complete
     ├── div.flashcard__card-container (perspective)
@@ -592,7 +693,7 @@ main.flashcard-page
 div.reader
 ├── header.reader__header (fixed, grey bg, reuses lesson header)
 │   └── div.reader__header-inner
-│       ├── Link.reader__home ("← Hikoyalar")
+│       ├── Link.reader__home (logo img, links to /[book]/stories)
 │       └── ReaderControls (language/font toggles only)
 ├── div.story__translation-panel (fixed below header, shown on sentence tap)
 │   └── p.story__translation-panel-text
@@ -615,16 +716,57 @@ div.reader
         └── button.reader__nav-toggle (× 2)
 ```
 
+### Karaoke Player Page Structure (KaraokePlayer.tsx)
+```
+div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
+├── header.reader__header (fixed, dark bg, white logo, z-index 100)
+│   └── div.reader__header-inner
+│       ├── Link.reader__home > img.reader__home-logo (white via filter invert)
+│       └── ReaderControls (RU/UZ toggle, A-/A+ font size)
+├── div.story__translation-panel (fixed below header, dark bg, shows active line translation)
+│   └── p.story__translation-panel-text
+├── div.karaoke__lyrics (scrollable, flex:1, fontSize% inline style)
+│   └── div.karaoke__line (per line, centered text)
+│       └── ruby.karaoke__char (per character, timestamp-based highlighting)
+│           ├── character text
+│           └── rt.karaoke__rt (pinyin, toggleable via visibility)
+├── div.karaoke__controls (fixed, above bottom bar, z-index 91)
+│   ├── div.karaoke__progress (clickable seek bar)
+│   │   └── div.karaoke__progress-bar (blue fill, width = progress%)
+│   ├── div.karaoke__time (current time / duration)
+│   ├── div.karaoke__playback-row (flex, centered, gap 24px)
+│   │   ├── button.karaoke__skip-btn (rewind 15s, circular arrow SVG + "15" label)
+│   │   ├── button.karaoke__play-btn (56px blue circle, play/pause/spinner)
+│   │   └── button.karaoke__skip-btn (forward 15s, circular arrow SVG + "15" label)
+│   └── ::after pseudo-element (separator line, bottom: 3px)
+└── nav.story__bottom-bar (fixed, dark bg, z-index 90)
+    └── div.story__bottom-bar-inner
+        ├── button.reader__nav-toggle (Tarjima toggle)
+        └── button.reader__nav-toggle (Pinyin toggle)
+```
+
 ### Key CSS Classes
-- `.home` - Home/book/language page container (matches `.page` width)
-- `.language-group` - Language card on home page
-- `.language-group--link` - Clickable language card (adds hover, arrow)
-- `.lang-page__tabs` - Horizontal tab bar on language page
-- `.lang-page__tab` / `.lang-page__tab--active` - Tab buttons with red active underline
-- `.lang-page__books` - Responsive grid for HSK/flashcard level cards
+- `.home` - Home/book/language page container (matches `.page` width, no top padding)
+- `.home__hero` - Full-width red gradient banner (`width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
+- `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`)
+- `.home__hero-top-row` - Flex row: logo, language selectors, avatar
+- `.home__hero-logo-img` - White logo (`height: 32px`, `filter: brightness(0) invert(1)`)
+- `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
+- `.home__lang-selector` - Dropdown column (`position: relative` for dropdown positioning)
+- `.home__lang-select-btn` - Dropdown trigger button (transparent, white text)
+- `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered)
+- `.home__avatar-btn` - Profile circle (`36px`, `border-radius: 50%`, semi-transparent white)
+- `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`)
+- `.lang-page__tab` / `.lang-page__tab--active` - Folder tab buttons (`border-radius: 4px 4px 0 0`, active = white bg, inactive = semi-transparent white)
+- `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
+- `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
+- `.lang-page__book-level-label` - "HSK" prefix inside level (same size/color, `font-size: 1em`)
+- `.lang-page__book-pinyin` - Pinyin on karaoke cards (blue italic)
+- `.lang-page__book-subtitle` - Grey subtitle text
 - `.lang-page__placeholder` - Centered placeholder for empty tabs
-- `.lesson-card` - Lesson card on book page
+- `.lesson-card` - Lesson card on book page (number badge 36px/8px radius + translation, no Chinese title/pinyin)
+- `.reader__home-logo` - Logo image in reader headers (28px height)
 - `.page` - Lesson content container (permanent `1em` extra top/bottom padding for translation panel space)
 - `.page__translation-panel` - Fixed translation panel below header (z-index 99)
 - `.page__audio-fab` - Floating play button (48x48, blue circle, `bottom: 80px`, `right: 24px`, `z-index: 80`)
@@ -673,6 +815,33 @@ div.reader
 - `.section__instruction-checkbox` - Blue ■ with `flex-start` alignment and `margin-top: 0.1em` to align with Chinese text
 - `.section--tonguetwister` - Transparent background, no header/subheading
 - `.section--tonguetwister .section__sentences` - White floating card (border-radius 16px, shadow, padding 20px)
+- `.karaoke` - Full-viewport dark container (`#0a0a0a`, flex column)
+- `.karaoke__lyrics` - Scrollable lyrics area (`flex: 1`, `overflow-y: auto`, top padding clears header)
+- `.karaoke__line` - Centered line (`font-size: 1.8em`, `line-height: 2`, dimmed white)
+- `.karaoke__line--active` - Brighter white for current line
+- `.karaoke__line--past` - Faded for past lines
+- `.karaoke__char` - Ruby element per character (`margin: 0 0.08em` for spacing)
+- `.karaoke__char--singing` - Gold color (`#ffd54f`) with text shadow glow for currently singing character
+- `.karaoke__char--sung` - Green color (`#66bb6a`) for already sung characters in active line
+- `.karaoke__rt` - Pinyin annotation (`font-size: 0.5em`, italic, reduced opacity)
+- `.karaoke__rt--hidden` - `visibility: hidden` (toggle pinyin without layout shift)
+- `.karaoke__controls` - Fixed controls panel (above bottom bar, z-index 91, dark bg with border-top)
+- `.karaoke__controls::after` - Separator line pseudo-element (`bottom: 3px`)
+- `.karaoke__progress` - Clickable seek bar (4px height, `margin-top: 20px`)
+- `.karaoke__progress-bar` - Blue fill bar (`#4fc3f7`)
+- `.karaoke__playback-row` - Flex row for skip/play buttons (centered, gap 24px)
+- `.karaoke__play-btn` - Play/pause button (56px blue circle)
+- `.karaoke__skip-btn` - Rewind/forward 15s button (44px, transparent bg, circular arrow icon)
+- `.karaoke__skip-label` - "15" text overlay on skip buttons (8px, absolute centered)
+- `.karaoke .reader__header` - Dark header override (`rgba(10, 10, 10, 0.95)`)
+- `.karaoke .reader__home-logo` - White logo via `filter: brightness(0) invert(1)`
+- `.karaoke .story__translation-panel` - Dark translation panel override
+- `.karaoke .story__bottom-bar` - Dark bottom bar override
+- `.karaoke .reader__nav-toggle` - Dark toggle buttons (white text, `rgba(255,255,255,0.1)` bg)
+- `.karaoke .reader__nav-toggle--active` - Active toggle (`#4fc3f7` bg, white text)
+- `.karaoke .page__lang-btn` - Dark language button override
+- `.karaoke .page__font-controls` - Dark font controls override
+- `.karaoke .page__font-btn` - Dark font button override
 
 ### Padding
 - Page side padding: `var(--spacing-xl)` (32px)
