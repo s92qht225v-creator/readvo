@@ -3457,6 +3457,8 @@ body {
   margin: 0 auto;
   padding: 16px var(--spacing-xl) 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .home__hero-top-row {
@@ -4093,8 +4095,8 @@ body {
   display: flex;
   justify-content: flex-start;
   gap: 4px;
-  margin-top: -2px;
-  margin-bottom: var(--spacing-lg);
+  margin-top: auto;
+  margin-bottom: 0;
   border-bottom: none;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
