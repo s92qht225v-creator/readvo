@@ -22,11 +22,11 @@ interface HSKBook {
 }
 
 const tabs: TabInfo[] = [
-  { id: 'hsk', label: 'Kitoblar', label_ru: 'Книги' },
+  { id: 'hsk', label: 'Kitob', label_ru: 'Книги' },
   { id: 'stories', label: 'Matn', label_ru: 'Текст' },
-  { id: 'flashcards', label: 'Fleshkartalar', label_ru: 'Флэшкарты' },
+  { id: 'flashcards', label: 'Fleshkarta', label_ru: 'Флэшкарты' },
   { id: 'karaoke', label: 'Karaoke', label_ru: 'Караоке' },
-  { id: 'tests', label: 'Testlar', label_ru: 'Тесты' },
+  { id: 'tests', label: 'Test', label_ru: 'Тесты' },
 ];
 
 const hskBooks: HSKBook[] = [
@@ -55,14 +55,18 @@ export function LanguagePage() {
 
   useEffect(() => {
     if (!knowOpen && !learnOpen) return;
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e: MouseEvent | TouchEvent) => {
       if (selectorsRef.current && !selectorsRef.current.contains(e.target as Node)) {
         setKnowOpen(false);
         setLearnOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
+    document.addEventListener('touchstart', handleClick);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('touchstart', handleClick);
+    };
   }, [knowOpen, learnOpen]);
 
   return (
