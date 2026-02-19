@@ -15,7 +15,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 ## URL Structure
 ```
 /                                           # Home/landing page (redirects logged-in users to /chinese)
-/[language]                                 # Language page - tabbed catalog (Kitoblar, Matn, Fleshkartalar, Karaoke, Testlar)
+/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Fleshkarta, Karaoke, Test)
 /[language]?tab=[tabId]                     # Language page with specific tab pre-selected
 /[language]/[book]                          # Book page - lesson list
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
@@ -28,7 +28,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 
 Example routes:
 - `/` - Landing page (logged-in users auto-redirect to `/chinese`)
-- `/chinese` - Chinese language page with tabs (Kitoblar, Matn, Fleshkartalar, Karaoke, Testlar)
+- `/chinese` - Chinese language page with tabs (Kitob, Matn, Fleshkarta, Karaoke, Test)
 - `/chinese?tab=flashcards` - Language page with Flashcards tab active
 - `/chinese/hsk1` - HSK 1 book with lesson list
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
@@ -536,6 +536,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
+- Tab labels: Kitob, Matn, Fleshkarta, Karaoke, Test (short forms, no "-lar" suffix)
 - Language toggle: Custom dropdown selectors on language page banner ("Men bilaman"/"Я знаю" for known language, "Men o'rganaman"/"Я изучаю" for target language). Lesson/story headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)
@@ -606,9 +607,9 @@ main.home (reuses home styling, no top padding)
 │       │   ├── div.home__lang-selectors (flex, gap between selectors)
 │       │   │   ├── div.home__lang-selector ("I know" dropdown — UZ/RU)
 │       │   │   └── div.home__lang-selector ("I'm learning" dropdown — Chinese)
-│       │   └── button.home__avatar-btn (36px circle, profile icon)
-│       └── div.lang-page__tabs (folder tabs on banner)
-│           └── button.lang-page__tab (Kitoblar | Matn | Fleshkartalar | Karaoke | Testlar)
+│       │   └── button.home__avatar-btn (44px circle, profile icon)
+│       └── div.lang-page__tabs (folder tabs flush at banner bottom via margin-top: auto)
+│           └── button.lang-page__tab (Kitob | Matn | Fleshkarta | Karaoke | Test)
 ├── section.home__content
 │   └── div.lang-page__books (responsive grid of cards)
 │       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
@@ -746,18 +747,19 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 ```
 
 ### Key CSS Classes
-- `.home` - Home/book/language page container (matches `.page` width, no top padding)
+- `.home` - Home/book/language page container (matches `.page` width, no top padding, `background: #f5f5f5`)
 - `.home__hero` - Full-width red gradient banner (`width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
-- `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`)
+- `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`, `display: flex; flex-direction: column` so tabs push to bottom via `margin-top: auto`)
 - `.home__hero-top-row` - Flex row: logo, language selectors, avatar
 - `.home__hero-logo-img` - White logo (`height: 32px`, `filter: brightness(0) invert(1)`)
 - `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
-- `.home__lang-selector` - Dropdown column (`position: relative` for dropdown positioning)
-- `.home__lang-select-btn` - Dropdown trigger button (transparent, white text)
-- `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered)
-- `.home__avatar-btn` - Profile circle (`36px`, `border-radius: 50%`, semi-transparent white)
-- `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`)
-- `.lang-page__tab` / `.lang-page__tab--active` - Folder tab buttons (`border-radius: 4px 4px 0 0`, active = white bg, inactive = semi-transparent white)
+- `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
+- `.home__lang-select-btn` - Dropdown trigger button (transparent, white text, `min-height: 44px`, `padding: 8px 0`)
+- `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered, `border-radius: 8px`, `max-width: calc(100vw - 32px)` to prevent viewport clipping)
+- `.home__avatar-btn` - Profile circle (`44px`, `border-radius: 50%`, semi-transparent white)
+- `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`, `margin-top: auto` pushes tabs flush to banner bottom)
+- `.lang-page__tab` - Folder tab button (`border-radius: 4px 4px 0 0`, `background: rgba(255,255,255,0.45)`, `color: rgba(255,255,255,0.95)`, `min-height: 44px`)
+- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #333`, `margin-bottom: -1px` to eliminate seam with content area)
 - `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
 - `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
@@ -847,6 +849,20 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - Page side padding: `var(--spacing-xl)` (32px)
 - Header inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
 - Bottom nav inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
+
+### Mobile Responsive (≤600px)
+- **Page background**: `#f5f5f5` (grey) so white cards stand out
+- **Touch targets**: All interactive buttons have `min-height: 44px` (`.page__toggle-btn`, `.page__lang-btn`, `.page__font-btn`, `.reader__nav-toggle`, `.reader__nav-btn`, `.home__lang-select-btn`, `.home__lang-dropdown-item`, `.lang-page__tab`)
+- **Side padding**: `.home` uses `padding: 0 12px var(--spacing-lg)` at ≤600px (reduced from 32px)
+- **Banner inner**: `.home__hero-inner` uses `padding: 12px 12px 0` at ≤600px
+- **Hero override at ≤480px**: `.home__hero` uses `padding: 0` to avoid doubled padding with hero-inner
+- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 0.8rem`, `gap: 3px`
+- **Logo**: 28px height at ≤600px (down from 32px)
+- **Language selector labels**: `font-size: 0.7rem` at ≤600px
+- **Language selectors gap**: 16px at ≤600px (down from `clamp(24px, 5vw, 48px)`)
+- **Card border radius**: 8px at ≤600px
+- **Story reader**: `padding-left/right: var(--spacing-md)` at ≤600px
+- **Dropdown close**: Both `mousedown` and `touchstart` listeners for iOS Safari compatibility
 
 ## Content Conventions
 - Content is loaded from `/content/*.json` files
