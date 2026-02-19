@@ -1,0 +1,300 @@
+{
+  "id": "hsk2-story2",
+  "title": "生日聚会",
+  "pinyin": "Shēngrì jùhuì",
+  "titleTranslation": "Tug'ilgan kun bazmi",
+  "titleTranslation_ru": "День рождения",
+  "level": 2,
+  "audio_url": "",
+  "sections": [
+    {
+      "id": "s2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s2-s1",
+          "text_original": "明天是我妹妹的生日。",
+          "pinyin": "Míngtiān shì wǒ mèimei de shēngrì.",
+          "text_translation": "Ertaga singlimning tug'ilgan kuni.",
+          "text_translation_ru": "Завтра день рождения моей младшей сестры.",
+          "words": [
+            { "i": [0, 2], "p": "míngtiān", "t": "ertaga", "tr": "завтра", "h": 1, "l": 5 },
+            { "i": [2, 3], "p": "shì", "t": "edi", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [3, 4], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 2 },
+            { "i": [4, 6], "p": "mèimei", "t": "singlim", "tr": "младшая сестра", "h": 2 },
+            { "i": [6, 7], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [7, 9], "p": "shēngrì", "t": "tug'ilgan kun", "tr": "день рождения", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s2",
+          "text_original": "她今年二十岁了。",
+          "pinyin": "Tā jīnnián èrshí suì le.",
+          "text_translation": "U bu yil yigirma yoshga to'ladi.",
+          "text_translation_ru": "В этом году ей исполняется двадцать.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "jīnnián", "t": "bu yil", "tr": "в этом году", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "èrshí", "t": "yigirma", "tr": "двадцать", "h": 1 },
+            { "i": [5, 6], "p": "suì", "t": "yosh", "tr": "лет", "h": 1, "l": 7 },
+            { "i": [6, 7], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 }
+          ]
+        },
+        {
+          "id": "s2-s3",
+          "text_original": "我们准备在家里开一个聚会。",
+          "pinyin": "Wǒmen zhǔnbèi zài jiā lǐ kāi yí ge jùhuì.",
+          "text_translation": "Biz uyda bazm qilishga tayyorlanmoqdamiz.",
+          "text_translation_ru": "Мы готовимся устроить вечеринку дома.",
+          "words": [
+            { "i": [0, 2], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
+            { "i": [2, 4], "p": "zhǔnbèi", "t": "tayyorlanmoq", "tr": "готовиться", "h": 2 },
+            { "i": [4, 5], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [5, 6], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 },
+            { "i": [6, 7], "p": "lǐ", "t": "ichida", "tr": "внутри", "h": 1 },
+            { "i": [7, 8], "p": "kāi", "t": "ochmoq", "tr": "устроить", "h": 1, "l": 11 },
+            { "i": [8, 10], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [10, 12], "p": "jùhuì", "t": "bazm", "tr": "вечеринка", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s4",
+          "text_original": "妈妈已经买了很多好吃的东西。",
+          "pinyin": "Māma yǐjīng mǎi le hěn duō hǎochī de dōngxi.",
+          "text_translation": "Onam allaqachon ko'p mazali narsalar sotib oldi.",
+          "text_translation_ru": "Мама уже купила много вкусных вещей.",
+          "words": [
+            { "i": [0, 2], "p": "māma", "t": "ona", "tr": "мама", "h": 1, "l": 3 },
+            { "i": [2, 4], "p": "yǐjīng", "t": "allaqachon", "tr": "уже", "h": 2 },
+            { "i": [4, 5], "p": "mǎi", "t": "sotib oldi", "tr": "купила", "h": 1, "l": 9 },
+            { "i": [5, 6], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [6, 8], "p": "hěn duō", "t": "ko'p", "tr": "много", "h": 1 },
+            { "i": [8, 10], "p": "hǎochī", "t": "mazali", "tr": "вкусный", "h": 2 },
+            { "i": [10, 11], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [11, 13], "p": "dōngxi", "t": "narsalar", "tr": "вещи", "h": 1, "l": 9 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2-sec2",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s2-s5",
+          "text_original": "我给妹妹买了一份特别的礼物。",
+          "pinyin": "Wǒ gěi mèimei mǎi le yí fèn tèbié de lǐwù.",
+          "text_translation": "Men singlimga maxsus sovg'a sotib oldim.",
+          "text_translation_ru": "Я купил сестре особенный подарок.",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "gěi", "t": "-ga", "tr": "для", "h": 2 },
+            { "i": [2, 4], "p": "mèimei", "t": "singlim", "tr": "младшая сестра", "h": 2 },
+            { "i": [4, 5], "p": "mǎi", "t": "sotib oldi", "tr": "купил", "h": 1, "l": 9 },
+            { "i": [5, 6], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [6, 8], "p": "yí fèn", "t": "bitta", "tr": "один (экземпляр)", "h": 2 },
+            { "i": [8, 10], "p": "tèbié", "t": "maxsus", "tr": "особенный", "h": 2 },
+            { "i": [10, 11], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [11, 13], "p": "lǐwù", "t": "sovg'a", "tr": "подарок", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s6",
+          "text_original": "她一直想要一本画画的书。",
+          "pinyin": "Tā yìzhí xiǎng yào yì běn huà huà de shū.",
+          "text_translation": "U doim rasm chizish kitobi xohlagan.",
+          "text_translation_ru": "Она давно хотела книгу по рисованию.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "yìzhí", "t": "doim", "tr": "всё время", "h": 2 },
+            { "i": [3, 5], "p": "xiǎng yào", "t": "xohlamoq", "tr": "хотеть", "h": 2 },
+            { "i": [5, 7], "p": "yì běn", "t": "bitta", "tr": "один (том)", "h": 1 },
+            { "i": [7, 9], "p": "huà huà", "t": "rasm chizish", "tr": "рисование", "h": 2 },
+            { "i": [9, 10], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [10, 11], "p": "shū", "t": "kitob", "tr": "книга", "h": 1, "l": 6 }
+          ]
+        },
+        {
+          "id": "s2-s7",
+          "text_original": "所以我去书店给她挑了一本最好的。",
+          "pinyin": "Suǒyǐ wǒ qù shūdiàn gěi tā tiāo le yì běn zuì hǎo de.",
+          "text_translation": "Shuning uchun kitob do'koniga borib, eng yaxshisini tanlab oldim.",
+          "text_translation_ru": "Поэтому я пошёл в книжный и выбрал лучшую.",
+          "words": [
+            { "i": [0, 2], "p": "suǒyǐ", "t": "shuning uchun", "tr": "поэтому", "h": 2 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "qù", "t": "bordi", "tr": "пошёл", "h": 1, "l": 4 },
+            { "i": [4, 6], "p": "shūdiàn", "t": "kitob do'koni", "tr": "книжный магазин", "h": 2 },
+            { "i": [6, 7], "p": "gěi", "t": "-ga", "tr": "для", "h": 2 },
+            { "i": [7, 8], "p": "tā", "t": "unga", "tr": "ей", "h": 1, "l": 2 },
+            { "i": [8, 9], "p": "tiāo", "t": "tanladi", "tr": "выбрал", "h": 2 },
+            { "i": [9, 10], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [10, 12], "p": "yì běn", "t": "bitta", "tr": "один (том)", "h": 1 },
+            { "i": [12, 13], "p": "zuì", "t": "eng", "tr": "самый", "h": 2 },
+            { "i": [13, 14], "p": "hǎo", "t": "yaxshi", "tr": "хороший", "h": 1, "l": 1 },
+            { "i": [14, 15], "p": "de", "t": "(ta'kid)", "tr": "(частица)", "h": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2-sec3",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s2-s8",
+          "text_original": "聚会那天，朋友们都来了。",
+          "pinyin": "Jùhuì nà tiān, péngyoumen dōu lái le.",
+          "text_translation": "Bazm kuni do'stlarning hammasi keldi.",
+          "text_translation_ru": "В день вечеринки все друзья пришли.",
+          "words": [
+            { "i": [0, 2], "p": "jùhuì", "t": "bazm", "tr": "вечеринка", "h": 2 },
+            { "i": [2, 3], "p": "nà", "t": "o'sha", "tr": "тот", "h": 1, "l": 4 },
+            { "i": [3, 4], "p": "tiān", "t": "kun", "tr": "день", "h": 1, "l": 5 },
+            { "i": [5, 8], "p": "péngyoumen", "t": "do'stlar", "tr": "друзья", "h": 1, "l": 3 },
+            { "i": [8, 9], "p": "dōu", "t": "hammasi", "tr": "все", "h": 1, "l": 4 },
+            { "i": [9, 10], "p": "lái", "t": "keldi", "tr": "пришли", "h": 1, "l": 6 },
+            { "i": [10, 11], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 }
+          ]
+        },
+        {
+          "id": "s2-s9",
+          "text_original": "有的人带了水果，有的人带了蛋糕。",
+          "pinyin": "Yǒu de rén dài le shuǐguǒ, yǒu de rén dài le dàngāo.",
+          "text_translation": "Kimdir meva, kimdir tort olib keldi.",
+          "text_translation_ru": "Кто-то принёс фрукты, кто-то — торт.",
+          "words": [
+            { "i": [0, 2], "p": "yǒu de", "t": "ba'zilari", "tr": "некоторые", "h": 2 },
+            { "i": [2, 3], "p": "rén", "t": "odam", "tr": "человек", "h": 1, "l": 3 },
+            { "i": [3, 4], "p": "dài", "t": "olib keldi", "tr": "принёс", "h": 2 },
+            { "i": [4, 5], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [5, 7], "p": "shuǐguǒ", "t": "meva", "tr": "фрукты", "h": 1, "l": 6 },
+            { "i": [8, 10], "p": "yǒu de", "t": "ba'zilari", "tr": "некоторые", "h": 2 },
+            { "i": [10, 11], "p": "rén", "t": "odam", "tr": "человек", "h": 1, "l": 3 },
+            { "i": [11, 12], "p": "dài", "t": "olib keldi", "tr": "принёс", "h": 2 },
+            { "i": [12, 13], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [13, 15], "p": "dàngāo", "t": "tort", "tr": "торт", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s10",
+          "text_original": "大家一起唱了生日歌。",
+          "pinyin": "Dàjiā yìqǐ chàng le shēngrì gē.",
+          "text_translation": "Hamma birga tug'ilgan kun qo'shig'ini kuyladi.",
+          "text_translation_ru": "Все вместе спели песню \"С днём рождения\".",
+          "words": [
+            { "i": [0, 2], "p": "dàjiā", "t": "hamma", "tr": "все", "h": 2 },
+            { "i": [2, 4], "p": "yìqǐ", "t": "birga", "tr": "вместе", "h": 2 },
+            { "i": [4, 5], "p": "chàng", "t": "kuyladi", "tr": "спели", "h": 2 },
+            { "i": [5, 6], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [6, 8], "p": "shēngrì", "t": "tug'ilgan kun", "tr": "день рождения", "h": 2 },
+            { "i": [8, 9], "p": "gē", "t": "qo'shiq", "tr": "песня", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s11",
+          "text_original": "妹妹闭上眼睛许了一个愿望。",
+          "pinyin": "Mèimei bì shàng yǎnjing xǔ le yí ge yuànwàng.",
+          "text_translation": "Singlim ko'zlarini yumib, tilak tiladi.",
+          "text_translation_ru": "Сестра закрыла глаза и загадала желание.",
+          "words": [
+            { "i": [0, 2], "p": "mèimei", "t": "singlim", "tr": "младшая сестра", "h": 2 },
+            { "i": [2, 4], "p": "bì shàng", "t": "yumdi", "tr": "закрыла", "h": 2 },
+            { "i": [4, 6], "p": "yǎnjing", "t": "ko'zlarini", "tr": "глаза", "h": 1, "l": 10 },
+            { "i": [6, 7], "p": "xǔ", "t": "tiladi", "tr": "загадала", "h": 2 },
+            { "i": [7, 8], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [8, 10], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [10, 12], "p": "yuànwàng", "t": "tilak", "tr": "желание", "h": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2-sec4",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s2-s12",
+          "text_original": "她看到礼物的时候非常开心。",
+          "pinyin": "Tā kàn dào lǐwù de shíhou fēicháng kāixīn.",
+          "text_translation": "U sovg'ani ko'rganda juda xursand bo'ldi.",
+          "text_translation_ru": "Увидев подарок, она очень обрадовалась.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "kàn dào", "t": "ko'rdi", "tr": "увидела", "h": 2 },
+            { "i": [3, 5], "p": "lǐwù", "t": "sovg'a", "tr": "подарок", "h": 2 },
+            { "i": [5, 6], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [6, 8], "p": "shíhou", "t": "paytida", "tr": "когда", "h": 1, "l": 8 },
+            { "i": [8, 10], "p": "fēicháng", "t": "juda", "tr": "очень", "h": 2 },
+            { "i": [10, 12], "p": "kāixīn", "t": "xursand", "tr": "рада", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s13",
+          "text_original": "她说：\"这就是我一直想要的！\"",
+          "pinyin": "Tā shuō: \"Zhè jiù shì wǒ yìzhí xiǎng yào de!\"",
+          "text_translation": "U dedi: \"Bu men doim xohlagan narsa!\"",
+          "text_translation_ru": "Она сказала: \"Это именно то, что я хотела!\"",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shuō", "t": "dedi", "tr": "сказала", "h": 1, "l": 6 },
+            { "i": [4, 5], "p": "zhè", "t": "bu", "tr": "это", "h": 1, "l": 4 },
+            { "i": [5, 6], "p": "jiù", "t": "aynan", "tr": "именно", "h": 2 },
+            { "i": [6, 7], "p": "shì", "t": "edi", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [7, 8], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [8, 10], "p": "yìzhí", "t": "doim", "tr": "всё время", "h": 2 },
+            { "i": [10, 12], "p": "xiǎng yào", "t": "xohlagan", "tr": "хотела", "h": 2 },
+            { "i": [12, 13], "p": "de", "t": "(narsa)", "tr": "(то, что)", "h": 1 }
+          ]
+        },
+        {
+          "id": "s2-s14",
+          "text_original": "那天晚上，我们吃了很多菜，聊了很久。",
+          "pinyin": "Nà tiān wǎnshang, wǒmen chī le hěn duō cài, liáo le hěn jiǔ.",
+          "text_translation": "O'sha kuni kechqurun, biz ko'p taom yedik va uzoq suhbatlashdik.",
+          "text_translation_ru": "В тот вечер мы много ели и долго разговаривали.",
+          "words": [
+            { "i": [0, 1], "p": "nà", "t": "o'sha", "tr": "тот", "h": 1, "l": 4 },
+            { "i": [1, 2], "p": "tiān", "t": "kun", "tr": "день", "h": 1, "l": 5 },
+            { "i": [2, 4], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
+            { "i": [5, 7], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
+            { "i": [7, 8], "p": "chī", "t": "yedik", "tr": "ели", "h": 1, "l": 6 },
+            { "i": [8, 9], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [9, 11], "p": "hěn duō", "t": "ko'p", "tr": "много", "h": 1 },
+            { "i": [11, 12], "p": "cài", "t": "taom", "tr": "блюда", "h": 1, "l": 6 },
+            { "i": [13, 14], "p": "liáo", "t": "suhbatlashdi", "tr": "болтали", "h": 2 },
+            { "i": [14, 15], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [15, 17], "p": "hěn jiǔ", "t": "uzoq", "tr": "долго", "h": 2 }
+          ]
+        },
+        {
+          "id": "s2-s15",
+          "text_original": "妹妹说这是她最快乐的一天。",
+          "pinyin": "Mèimei shuō zhè shì tā zuì kuàilè de yì tiān.",
+          "text_translation": "Singlim bu uning eng baxtli kuni ekanligini aytdi.",
+          "text_translation_ru": "Сестра сказала, что это был её самый счастливый день.",
+          "words": [
+            { "i": [0, 2], "p": "mèimei", "t": "singlim", "tr": "младшая сестра", "h": 2 },
+            { "i": [2, 3], "p": "shuō", "t": "aytdi", "tr": "сказала", "h": 1, "l": 6 },
+            { "i": [3, 4], "p": "zhè", "t": "bu", "tr": "это", "h": 1, "l": 4 },
+            { "i": [4, 5], "p": "shì", "t": "edi", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [5, 6], "p": "tā", "t": "uning", "tr": "её", "h": 1, "l": 2 },
+            { "i": [6, 7], "p": "zuì", "t": "eng", "tr": "самый", "h": 2 },
+            { "i": [7, 9], "p": "kuàilè", "t": "baxtli", "tr": "счастливый", "h": 2 },
+            { "i": [9, 10], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [10, 11], "p": "yì", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [11, 12], "p": "tiān", "t": "kun", "tr": "день", "h": 1, "l": 5 }
+          ]
+        }
+      ]
+    }
+  ]
+}

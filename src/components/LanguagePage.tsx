@@ -188,21 +188,21 @@ export function LanguagePage() {
         {activeTab === 'stories' && (
           <div className="lang-page__books">
             <Link
-              href="/chinese/hsk1/stories"
+              href="/chinese/hsk2/stories"
               className="lang-page__book-card"
             >
               <span className="lang-page__book-level">
                 {language === 'ru' ? 'Истории' : 'Hikoyalar'}
               </span>
             </Link>
-            <div className="lang-page__book-card lang-page__book-card--disabled">
-              <span className="lang-page__coming-soon">
-                {language === 'ru' ? 'Скоро' : 'Tez kunda'}
-              </span>
+            <Link
+              href="/chinese/hsk1/dialogues"
+              className="lang-page__book-card"
+            >
               <span className="lang-page__book-level">
                 {language === 'ru' ? 'Диалоги' : 'Dialoglar'}
               </span>
-            </div>
+            </Link>
           </div>
         )}
 

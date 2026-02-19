@@ -1,0 +1,95 @@
+{
+  "id": "hsk1-dialogue10",
+  "title": "洗手间在哪儿？",
+  "pinyin": "Xǐshǒujiān zài nǎr?",
+  "titleTranslation": "Hojatxona qayerda?",
+  "titleTranslation_ru": "Где туалет?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d10-s1",
+          "text_original": "请问，洗手间在哪儿？",
+          "pinyin": "Qǐngwèn, xǐshǒujiān zài nǎr?",
+          "text_translation": "Kechirasiz, hojatxona qayerda?",
+          "text_translation_ru": "Извините, где туалет?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "qǐngwèn", "t": "kechirasiz", "tr": "извините", "h": 1 },
+            { "i": [3, 6], "p": "xǐshǒujiān", "t": "hojatxona", "tr": "туалет" },
+            { "i": [6, 7], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [7, 9], "p": "nǎr", "t": "qayerda", "tr": "где", "h": 1, "l": 4 }
+          ]
+        },
+        {
+          "id": "d10-s2",
+          "text_original": "洗手间在三楼。",
+          "pinyin": "Xǐshǒujiān zài sān lóu.",
+          "text_translation": "Hojatxona uchinchi qavatda.",
+          "text_translation_ru": "Туалет на третьем этаже.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 3], "p": "xǐshǒujiān", "t": "hojatxona", "tr": "туалет" },
+            { "i": [3, 4], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [4, 5], "p": "sān", "t": "uch", "tr": "три", "h": 1, "l": 4 },
+            { "i": [5, 6], "p": "lóu", "t": "qavat", "tr": "этаж" }
+          ]
+        },
+        {
+          "id": "d10-s3",
+          "text_original": "有电梯吗？",
+          "pinyin": "Yǒu diàntī ma?",
+          "text_translation": "Lift bormi?",
+          "text_translation_ru": "Есть лифт?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [1, 3], "p": "diàntī", "t": "lift", "tr": "лифт" },
+            { "i": [3, 4], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d10-s4",
+          "text_original": "有的，电梯在那边。",
+          "pinyin": "Yǒude, diàntī zài nàbiān.",
+          "text_translation": "Bor, lift u yoqda.",
+          "text_translation_ru": "Есть, лифт вон там.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "yǒude", "t": "bor", "tr": "есть", "h": 1 },
+            { "i": [3, 5], "p": "diàntī", "t": "lift", "tr": "лифт" },
+            { "i": [5, 6], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [6, 8], "p": "nàbiān", "t": "u yoqda", "tr": "вон там" }
+          ]
+        },
+        {
+          "id": "d10-s5",
+          "text_original": "谢谢。",
+          "pinyin": "Xièxie.",
+          "text_translation": "Rahmat.",
+          "text_translation_ru": "Спасибо.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d10-s6",
+          "text_original": "不用谢。",
+          "pinyin": "Bú yòng xiè.",
+          "text_translation": "Arzimaydi.",
+          "text_translation_ru": "Не за что.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 3], "p": "bú yòng xiè", "t": "arzimaydi", "tr": "не за что" }
+          ]
+        }
+      ]
+    }
+  ]
+}

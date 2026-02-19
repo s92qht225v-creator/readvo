@@ -10,22 +10,22 @@ interface PageParams {
 
 export async function generateMetadata({ params }: PageParams) {
   const { storyId } = await params;
-  const story = await loadStory('hsk1', storyId);
+  const story = await loadStory('hsk2', storyId);
 
   return {
     title: story
-      ? `${story.title} - HSK 1 Hikoyalar - Blim`
+      ? `${story.title} - HSK 2 Hikoyalar - Blim`
       : 'Hikoya - Blim',
   };
 }
 
 export default async function StoryPage({ params }: PageParams) {
   const { storyId } = await params;
-  const story = await loadStory('hsk1', storyId);
+  const story = await loadStory('hsk2', storyId);
 
   if (!story) {
     notFound();
   }
 
-  return <StoryReader story={story} bookPath="/chinese/hsk1" />;
+  return <StoryReader story={story} bookPath="/chinese/hsk2" />;
 }

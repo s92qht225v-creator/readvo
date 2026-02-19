@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 
-interface StoryItem {
+interface DialogueItem {
   id: string;
   title: string;
   pinyin: string;
@@ -12,13 +12,13 @@ interface StoryItem {
   titleTranslation_ru: string;
 }
 
-interface StoriesPageProps {
-  stories: StoryItem[];
+interface DialoguesPageProps {
+  dialogues: DialogueItem[];
   bookPath: string;
   languagePath: string;
 }
 
-export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProps) {
+export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPageProps) {
   const [language] = useLanguage();
 
   return (
@@ -33,13 +33,13 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
           <div className="lang-page__tabs">
             {[1, 2, 3, 4, 5, 6].map((level) => {
               const id = `hsk${level}`;
-              const hasContent = level === 2;
+              const hasContent = level === 1;
               const isActive = bookPath.includes(id);
               if (hasContent) {
                 return (
                   <Link
                     key={id}
-                    href={`/chinese/${id}/stories`}
+                    href={`/chinese/${id}/dialogues`}
                     className={`lang-page__tab ${isActive ? 'lang-page__tab--active' : ''}`}
                   >
                     HSK {level}
@@ -58,21 +58,21 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
 
       <section className="home__content">
         <div className="home__lessons">
-          {stories.map((story, index) => (
-            <article key={story.id} className="lesson-card">
+          {dialogues.map((dialogue, index) => (
+            <article key={dialogue.id} className="lesson-card">
               <div className="lesson-card__header">
                 <div className="lesson-card__number">{index + 1}</div>
                 <div className="lesson-card__title-group">
-                  <h3 className="lesson-card__title">{story.title}</h3>
-                  <p className="lesson-card__pinyin">{story.pinyin}</p>
+                  <h3 className="lesson-card__title">{dialogue.title}</h3>
+                  <p className="lesson-card__pinyin">{dialogue.pinyin}</p>
                   <p className="lesson-card__translation">
-                    {language === 'ru' ? story.titleTranslation_ru : story.titleTranslation}
+                    {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation}
                   </p>
                 </div>
               </div>
               <div className="lesson-card__pages">
                 <Link
-                  href={`${bookPath}/stories/${story.id}`}
+                  href={`${bookPath}/dialogues/${dialogue.id}`}
                   className="lesson-card__page-link"
                 >
                   <span className="lesson-card__page-num">

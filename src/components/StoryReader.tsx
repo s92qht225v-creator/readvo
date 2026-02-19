@@ -29,6 +29,7 @@ interface StorySentence {
   pinyin: string;
   text_translation: string;
   text_translation_ru: string;
+  speaker?: string;
   start?: number;
   end?: number;
   words?: StoryWord[];
@@ -53,6 +54,7 @@ interface StoryData {
 interface StoryReaderProps {
   story: StoryData;
   bookPath: string;
+  listPath?: string;
 }
 
 function RubyChar({ char, py, showPinyin }: { char: string; py?: string; showPinyin: boolean }) {
@@ -189,7 +191,7 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-export function StoryReader({ story, bookPath }: StoryReaderProps) {
+export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const [language, toggleLanguage] = useLanguage();
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -218,6 +220,11 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
   const allSentences = useMemo(
     () => story.sections.flatMap((s) => s.sentences),
     [story.sections]
+  );
+
+  const isDialogue = useMemo(
+    () => allSentences.some((s) => s.speaker),
+    [allSentences]
   );
 
   const toggleFocusMode = useCallback(() => {
@@ -413,7 +420,7 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
     <div className="reader">
       <header className="reader__header">
         <div className="reader__header-inner">
-          <Link href={`${bookPath}/stories`} className="reader__home">
+          <Link href={listPath || `${bookPath}/stories`} className="reader__home">
             <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
@@ -454,7 +461,10 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
       <article className={`story ${audioActive ? 'story--with-audio' : ''} ${focusMode ? 'story--focus' : ''}`} style={{ fontSize: `${fontSize}%` }}>
         {focusMode && activeSentence ? (
           <div className="story__focus">
-            <p className="story__text story__focus-text">
+            <div className="story__text story__focus-text">
+              {isDialogue && activeSentence.speaker && (
+                <span className="story__focus-speaker">{activeSentence.speaker}：</span>
+              )}
               <span
                 className="story__sentence story__sentence--active"
                 onClick={() => handleSentenceClick(activeSentence.id)}
@@ -469,7 +479,7 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
                   onWordRelease={handleWordRelease}
                 />
               </span>
-            </p>
+            </div>
             <div className="story__focus-nav">
               <button
                 className="story__focus-nav-btn"
@@ -516,15 +526,16 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
           </div>
         ) : (
           story.sections.map((section) => (
-            <div key={section.id} className="story__paragraph">
-              <p className="story__text">
-                {section.sentences.map((s, i) => (
-                  <React.Fragment key={s.id}>
-                    {i > 0 && ' '}
-                    <span
-                      className={`story__sentence ${displaySentenceId === s.id ? 'story__sentence--active' : ''} ${audioSentenceId === s.id ? 'story__sentence--playing' : ''}`}
-                      onClick={() => handleSentenceClick(s.id)}
-                    >
+            <div key={section.id} className={`story__paragraph ${isDialogue ? 'story__paragraph--dialogue' : ''}`}>
+              {isDialogue ? (
+                section.sentences.map((s) => (
+                  <div
+                    key={s.id}
+                    className={`story__dialogue-line ${displaySentenceId === s.id ? 'story__sentence--active' : ''} ${audioSentenceId === s.id ? 'story__sentence--playing' : ''}`}
+                    onClick={() => handleSentenceClick(s.id)}
+                  >
+                    {s.speaker && <span className="story__speaker">{s.speaker}</span>}
+                    <span className="story__dialogue-text">
                       <RubyText
                         text={s.text_original}
                         pinyin={s.pinyin}
@@ -535,9 +546,31 @@ export function StoryReader({ story, bookPath }: StoryReaderProps) {
                         onWordRelease={handleWordRelease}
                       />
                     </span>
-                  </React.Fragment>
-                ))}
-              </p>
+                  </div>
+                ))
+              ) : (
+                <p className="story__text">
+                  {section.sentences.map((s, i) => (
+                    <React.Fragment key={s.id}>
+                      {i > 0 && ' '}
+                      <span
+                        className={`story__sentence ${displaySentenceId === s.id ? 'story__sentence--active' : ''} ${audioSentenceId === s.id ? 'story__sentence--playing' : ''}`}
+                        onClick={() => handleSentenceClick(s.id)}
+                      >
+                        <RubyText
+                          text={s.text_original}
+                          pinyin={s.pinyin}
+                          showPinyin={showPinyin}
+                          words={s.words}
+                          activeWordIdx={activeWord?.sentenceId === s.id ? activeWord.wordIdx : null}
+                          onWordPress={(idx) => handleWordPress(s.id, idx)}
+                          onWordRelease={handleWordRelease}
+                        />
+                      </span>
+                    </React.Fragment>
+                  ))}
+                </p>
+              )}
             </div>
           ))
         )}

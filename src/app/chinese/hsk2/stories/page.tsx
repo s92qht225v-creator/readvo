@@ -1,13 +1,13 @@
 import { loadStoriesForBook } from '@/services';
 import { StoriesPage } from '@/components/StoriesPage';
 
-export default async function HSK1StoriesPage() {
-  const stories = await loadStoriesForBook('hsk1');
+export default async function HSK2StoriesPage() {
+  const stories = await loadStoriesForBook('hsk2');
 
   return (
     <StoriesPage
       stories={stories}
-      bookPath="/chinese/hsk1"
+      bookPath="/chinese/hsk2"
       languagePath="/chinese?tab=stories"
     />
   );

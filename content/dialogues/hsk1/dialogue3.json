@@ -1,0 +1,70 @@
+{
+  "id": "hsk1-dialogue3",
+  "title": "你喜欢中国吗？",
+  "pinyin": "Nǐ xǐhuan Zhōngguó ma?",
+  "titleTranslation": "Xitoyni yoqtirasizmi?",
+  "titleTranslation_ru": "Тебе нравится Китай?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d3-s1",
+          "text_original": "你喜欢中国吗？",
+          "pinyin": "Nǐ xǐhuan Zhōngguó ma?",
+          "text_translation": "Xitoyni yoqtirasizmi?",
+          "text_translation_ru": "Тебе нравится Китай?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "xǐhuan", "t": "yoqtirmoq", "tr": "нравиться", "h": 1, "l": 8 },
+            { "i": [3, 5], "p": "Zhōngguó", "t": "Xitoy", "tr": "Китай", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d3-s2",
+          "text_original": "喜欢。",
+          "pinyin": "Xǐhuan.",
+          "text_translation": "Yoqtiraman.",
+          "text_translation_ru": "Нравится.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "xǐhuan", "t": "yoqtirmoq", "tr": "нравиться", "h": 1, "l": 8 }
+          ]
+        },
+        {
+          "id": "d3-s3",
+          "text_original": "你喜欢什么？",
+          "pinyin": "Nǐ xǐhuan shénme?",
+          "text_translation": "Nimani yoqtirasiz?",
+          "text_translation_ru": "Что тебе нравится?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "xǐhuan", "t": "yoqtirmoq", "tr": "нравиться", "h": 1, "l": 8 },
+            { "i": [3, 5], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d3-s4",
+          "text_original": "我喜欢中国菜。",
+          "pinyin": "Wǒ xǐhuan Zhōngguó cài.",
+          "text_translation": "Men xitoy taomlarini yoqtiraman.",
+          "text_translation_ru": "Мне нравится китайская кухня.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "xǐhuan", "t": "yoqtirmoq", "tr": "нравиться", "h": 1, "l": 8 },
+            { "i": [3, 5], "p": "Zhōngguó", "t": "Xitoy", "tr": "Китай", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "cài", "t": "taom", "tr": "блюдо", "h": 1, "l": 12 }
+          ]
+        }
+      ]
+    }
+  ]
+}

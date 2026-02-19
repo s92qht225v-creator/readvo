@@ -1,0 +1,128 @@
+{
+  "id": "hsk1-dialogue8",
+  "title": "你在哪儿？",
+  "pinyin": "Nǐ zài nǎr?",
+  "titleTranslation": "Qayerdasiz?",
+  "titleTranslation_ru": "Ты где?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d8-s1",
+          "text_original": "喂，你在哪儿？",
+          "pinyin": "Wèi, nǐ zài nǎr?",
+          "text_translation": "Alo, qayerdasiz?",
+          "text_translation_ru": "Алло, ты где?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wèi", "t": "alo", "tr": "алло" },
+            { "i": [2, 3], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [3, 4], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [4, 6], "p": "nǎr", "t": "qayerda", "tr": "где", "h": 1, "l": 4 }
+          ]
+        },
+        {
+          "id": "d8-s2",
+          "text_original": "我在学校。",
+          "pinyin": "Wǒ zài xuéxiào.",
+          "text_translation": "Men maktabdaman.",
+          "text_translation_ru": "Я в школе.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [2, 4], "p": "xuéxiào", "t": "maktab", "tr": "школа", "h": 1, "l": 4 }
+          ]
+        },
+        {
+          "id": "d8-s3",
+          "text_original": "你在教室吗？",
+          "pinyin": "Nǐ zài jiàoshì ma?",
+          "text_translation": "Sinfdamisiz?",
+          "text_translation_ru": "Ты в классе?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [2, 4], "p": "jiàoshì", "t": "sinf", "tr": "класс" },
+            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d8-s4",
+          "text_original": "不在，我在图书馆。",
+          "pinyin": "Bú zài, wǒ zài túshūguǎn.",
+          "text_translation": "Yo'q, men kutubxonadaman.",
+          "text_translation_ru": "Нет, я в библиотеке.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 3 },
+            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [5, 8], "p": "túshūguǎn", "t": "kutubxona", "tr": "библиотека" }
+          ]
+        },
+        {
+          "id": "d8-s5",
+          "text_original": "你几点回家？",
+          "pinyin": "Nǐ jǐ diǎn huí jiā?",
+          "text_translation": "Soat nechada uyga qaytasiz?",
+          "text_translation_ru": "Во сколько вернёшься домой?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "jǐ", "t": "necha", "tr": "сколько", "h": 1, "l": 6 },
+            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
+            { "i": [3, 4], "p": "huí", "t": "qaytmoq", "tr": "вернуться", "h": 1, "l": 7 },
+            { "i": [4, 5], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 }
+          ]
+        },
+        {
+          "id": "d8-s6",
+          "text_original": "五点回家。",
+          "pinyin": "Wǔ diǎn huí jiā.",
+          "text_translation": "Soat beshda qaytaman.",
+          "text_translation_ru": "В пять вернусь.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǔ", "t": "besh", "tr": "пять", "h": 1, "l": 4 },
+            { "i": [1, 2], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
+            { "i": [2, 3], "p": "huí", "t": "qaytmoq", "tr": "вернуться", "h": 1, "l": 7 },
+            { "i": [3, 4], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 }
+          ]
+        },
+        {
+          "id": "d8-s7",
+          "text_original": "好，我等你。",
+          "pinyin": "Hǎo, wǒ děng nǐ.",
+          "text_translation": "Yaxshi, kutaman.",
+          "text_translation_ru": "Хорошо, жду тебя.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "děng", "t": "kutmoq", "tr": "ждать" },
+            { "i": [4, 5], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d8-s8",
+          "text_original": "好的。",
+          "pinyin": "Hǎode.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "hǎode", "t": "yaxshi", "tr": "хорошо", "h": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

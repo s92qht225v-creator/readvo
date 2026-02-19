@@ -21,6 +21,8 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
 /[language]/[book]/flashcards               # Flashcard list page (per-lesson cards)
 /[language]/[book]/flashcards/[lessonId]    # Flashcard practice for specific lesson
+/[language]/[book]/dialogues                # Dialogues list page
+/[language]/[book]/dialogues/[dialogueId]  # Dialogue reader page (uses StoryReader)
 /[language]/[book]/stories                  # Stories list page
 /[language]/[book]/stories/[storyId]        # Story reader page
 /[language]/[book]/karaoke/[songId]         # Karaoke player page
@@ -34,8 +36,10 @@ Example routes:
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
 - `/chinese/hsk1/flashcards` - HSK 1 flashcard list (per-lesson cards with word counts)
 - `/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
-- `/chinese/hsk1/stories` - HSK 1 stories list
-- `/chinese/hsk1/stories/hsk1-story1` - Story reader
+- `/chinese/hsk1/dialogues` - HSK 1 dialogues list
+- `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
+- `/chinese/hsk2/stories` - HSK 2 stories list
+- `/chinese/hsk2/stories/hsk2-story1` - Story reader
 
 ## Project Structure
 ```
@@ -52,6 +56,9 @@ Example routes:
 │   │           ├── flashcards/
 │   │           │   ├── page.tsx       # Flashcard list page (per-lesson cards)
 │   │           │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
+│   │           ├── dialogues/
+│   │           │   ├── page.tsx       # Dialogues list page
+│   │           │   └── [dialogueId]/page.tsx  # Dialogue reader (uses StoryReader)
 │   │           ├── stories/
 │   │           │   ├── page.tsx       # Stories list page
 │   │           │   └── [storyId]/page.tsx  # Story reader page
@@ -69,8 +76,9 @@ Example routes:
 │   │   ├── HomePage.tsx       # Home page (language selection cards)
 │   │   ├── LanguagePage.tsx   # Language page (tabbed: HSK, Stories, Flashcards, Tests)
 │   │   ├── BookPage.tsx       # Book page (lesson list with pages)
+│   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
 │   │   ├── StoriesPage.tsx     # Stories list page
-│   │   ├── StoryReader.tsx    # Story reader with ruby pinyin, translation panel, audio bar
+│   │   ├── StoryReader.tsx    # Story/dialogue reader with ruby pinyin, translation panel, audio bar
 │   │   ├── FlashcardListPage.tsx # Flashcard lesson list with banner+tabs
 │   │   ├── FlashcardDeck.tsx  # Flashcard session manager (client)
 │   │   ├── FlashcardCard.tsx  # Flashcard with 3D flip animation
@@ -89,6 +97,7 @@ Example routes:
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
 │   │   ├── stories.ts        # Loads story JSON from /content/stories
+│   │   ├── dialogues.ts     # Loads dialogue JSON from /content/dialogues
 │   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
 │   │   └── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
 │   ├── styles/
@@ -103,8 +112,11 @@ Example routes:
 │   ├── lesson15-page3.json
 │   ├── flashcards/
 │   │   └── hsk1.json          # HSK 1 flashcard word list
-│   ├── stories/
+│   ├── dialogues/
 │   │   └── hsk1/
+│   │       └── dialogue1.json # Dialogue content files (uses StoryReader format)
+│   ├── stories/
+│   │   └── hsk2/
 │   │       └── story1.json    # Story content files
 │   └── karaoke/
 │       └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
@@ -179,8 +191,23 @@ Page → Section → Sentence → Word
 - Cards shuffled on mount via `useEffect` to avoid hydration mismatch
 - Data loaded from `content/flashcards/{bookId}.json`
 
+### Dialogue Reader
+- Accessible from Language Page → Matn tab → Dialoglar card → `/chinese/hsk1/dialogues`
+- Dialogues are short A/B conversations using vocabulary from the corresponding HSK level
+- **Reuses StoryReader component** with `listPath` prop for correct back navigation
+- **Dialogue detection**: StoryReader checks if any sentence has a `speaker` field (`isDialogue` flag)
+- **Dialogue layout** (when `isDialogue` is true):
+  - Each sentence renders as its own block (`.story__dialogue-line`) instead of inline flowing text
+  - Speaker label (A/B) in blue on the left (`.story__speaker`) with `：` suffix via CSS `::after`
+  - Text on the right (`.story__dialogue-text`)
+  - Ruby pinyin with blue color, `padding-bottom: 0.15em` for spacing
+- **Focus mode**: Shows speaker label above the sentence text (`.story__focus-speaker`)
+- **Stories are unaffected** — the dialogue layout only activates when sentences have `speaker` fields
+- Data loaded from `content/dialogues/{bookId}/dialogue{N}.json` via `src/services/dialogues.ts`
+- **DialoguesPage** (`src/components/DialoguesPage.tsx`): List page with HSK level tabs, same pattern as StoriesPage
+
 ### Story Reader
-- Accessible from Language Page → Stories tab (future) or `/chinese/hsk1/stories`
+- Accessible from Language Page → Matn tab → Hikoyalar card → `/chinese/hsk2/stories`
 - Stories are graded reading texts using vocabulary from the corresponding HSK level
 - **Ruby pinyin**: Each pinyin syllable appears directly above its corresponding Chinese character using HTML `<ruby>/<rt>/<rp>` tags
 - **Pinyin-character alignment**: `src/utils/rubyText.ts` splits compound pinyin (e.g., "Jīntiān" → "Jīn" + "tiān") and maps syllables to CJK characters
@@ -481,6 +508,44 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Song metadata: `title`, `pinyin`, `titleTranslation`, `titleTranslation_ru`, `artist`, `artist_ru`
 - Empty lines (no text) are skipped during rendering
 
+### Dialogue JSON
+```json
+{
+  "id": "hsk1-dialogue1",
+  "title": "你叫什么名字？",
+  "pinyin": "Nǐ jiào shénme míngzi?",
+  "titleTranslation": "Ismingiz nima?",
+  "titleTranslation_ru": "Как тебя зовут?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d1-s1",
+          "text_original": "你好！",
+          "pinyin": "Nǐ hǎo!",
+          "text_translation": "Salom!",
+          "text_translation_ru": "Привет!",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+- Same format as Story JSON but with `speaker` field on each sentence (typically "A" or "B")
+- Dialogue IDs follow the pattern `hsk1-dialogue1`, `hsk1-dialogue2`, etc.
+- Sentence IDs follow the pattern `d1-s1`, `d1-s2`, etc.
+- The `speaker` field triggers dialogue layout in StoryReader (block layout with speaker labels)
+- Data loaded from `content/dialogues/{bookId}/dialogue{N}.json`
+
 ### Story JSON
 ```json
 {
@@ -537,6 +602,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
 - Tab labels: Kitob, Matn, Fleshkarta, Karaoke, Test (short forms, no "-lar" suffix)
+- Matn tab shows two cards: **Hikoyalar** (→ `/chinese/hsk2/stories`) and **Dialoglar** (→ `/chinese/hsk1/dialogues`)
 - Language toggle: Custom dropdown selectors on language page banner ("Men bilaman"/"Я знаю" for known language, "Men o'rganaman"/"Я изучаю" for target language). Lesson/story headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)
@@ -750,7 +816,7 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.home` - Home/book/language page container (matches `.page` width, no top padding, `background: #f5f5f5`)
 - `.home__hero` - Full-width red gradient banner (`width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
 - `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`, `display: flex; flex-direction: column` so tabs push to bottom via `margin-top: auto`)
-- `.home__hero-top-row` - Flex row: logo, language selectors, avatar
+- `.home__hero-top-row` - Flex row: logo, language selectors, avatar (`min-height: 66px` for consistent banner height across all pages)
 - `.home__hero-logo-img` - White logo (`height: 32px`, `filter: brightness(0) invert(1)`)
 - `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
 - `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
@@ -758,8 +824,8 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered, `border-radius: 8px`, `max-width: calc(100vw - 32px)` to prevent viewport clipping)
 - `.home__avatar-btn` - Profile circle (`44px`, `border-radius: 50%`, semi-transparent white)
 - `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`, `margin-top: auto` pushes tabs flush to banner bottom)
-- `.lang-page__tab` - Folder tab button (`border-radius: 4px 4px 0 0`, `background: rgba(255,255,255,0.45)`, `color: rgba(255,255,255,0.95)`, `min-height: 44px`)
-- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #333`, `margin-bottom: -1px` to eliminate seam with content area)
+- `.lang-page__tab` - Folder tab button (`border-radius: 4px 4px 0 0`, `background: rgba(255,255,255,0.35)`, `color: rgba(255,255,255,0.9)`, no hover/transition, `-webkit-tap-highlight-color: transparent`)
+- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #dc2626`, `margin-bottom: -1px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
 - `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
 - `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
@@ -805,6 +871,11 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
 - `.story__word--active` - Blue background highlight for pressed word
 - `.story__word-hsk` - HSK level/lesson badge in translation panel (small pill-shaped tag)
+- `.story__paragraph--dialogue` - Dialogue mode paragraph (flex column, gap 0.5em)
+- `.story__dialogue-line` - Single dialogue line (flex row: speaker + text, cursor pointer)
+- `.story__speaker` - Speaker label (bold, blue, min-width 2.5em, `::after` adds `：`)
+- `.story__dialogue-text` - Dialogue text container (flex: 1, ruby pinyin with blue color)
+- `.story__focus-speaker` - Speaker label in focus mode (bold, blue, smaller font above sentence)
 - `.story--focus .story__sentence:not(.story__sentence--active)` - Dimmed non-active sentences (opacity 0.35)
 - `.section--objectives .section__sentences` - Single white card container (border-radius 16px, shadow)
 - `.section--objectives .sentence__text` - Red accent strip via `border-left: 6px solid #C43A35` + `padding-left: 16px`
@@ -856,7 +927,7 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - **Side padding**: `.home` uses `padding: 0 12px var(--spacing-lg)` at ≤600px (reduced from 32px)
 - **Banner inner**: `.home__hero-inner` uses `padding: 12px 12px 0` at ≤600px
 - **Hero override at ≤480px**: `.home__hero` uses `padding: 0` to avoid doubled padding with hero-inner
-- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 0.8rem`, `gap: 3px`
+- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 0.8rem`, `gap: 3px`, `min-height: 36px`
 - **Logo**: 28px height at ≤600px (down from 32px)
 - **Language selector labels**: `font-size: 0.7rem` at ≤600px
 - **Language selectors gap**: 16px at ≤600px (down from `clamp(24px, 5vw, 48px)`)

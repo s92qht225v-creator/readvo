@@ -1,0 +1,74 @@
+{
+  "id": "hsk1-dialogue2",
+  "title": "你是中国人吗？",
+  "pinyin": "Nǐ shì Zhōngguó rén ma?",
+  "titleTranslation": "Siz xitoylikmisiz?",
+  "titleTranslation_ru": "Вы китаец?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d2-s1",
+          "text_original": "你是中国人吗？",
+          "pinyin": "Nǐ shì Zhōngguó rén ma?",
+          "text_translation": "Siz xitoylikmisiz?",
+          "text_translation_ru": "Вы китаец?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [2, 5], "p": "Zhōngguó rén", "t": "xitoylik", "tr": "китаец", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d2-s2",
+          "text_original": "是的，我是中国人，你呢？",
+          "pinyin": "Shìde, wǒ shì Zhōngguó rén, nǐ ne?",
+          "text_translation": "Ha, men xitoylikman, siz-chi?",
+          "text_translation_ru": "Да, я китаец, а вы?",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "shìde", "t": "ha", "tr": "да", "h": 1 },
+            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [5, 8], "p": "Zhōngguó rén", "t": "xitoylik", "tr": "китаец", "h": 1, "l": 2 },
+            { "i": [9, 10], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [10, 11], "p": "ne", "t": "-chi", "tr": "а (вы)?", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d2-s3",
+          "text_original": "我是乌兹别克斯坦人。",
+          "pinyin": "Wǒ shì Wūzībiékèsītǎn rén.",
+          "text_translation": "Men o'zbekistonlikman.",
+          "text_translation_ru": "Я узбек.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [2, 9], "p": "Wūzībiékèsītǎn rén", "t": "o'zbekistonlik", "tr": "узбек" }
+          ]
+        },
+        {
+          "id": "d2-s4",
+          "text_original": "哦，你好！你好！",
+          "pinyin": "Ó, nǐ hǎo! Nǐ hǎo!",
+          "text_translation": "O, salom! Salom!",
+          "text_translation_ru": "О, привет! Привет!",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "ó", "t": "o", "tr": "о" },
+            { "i": [2, 4], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 },
+            { "i": [5, 7], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

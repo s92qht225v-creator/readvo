@@ -1,0 +1,80 @@
+{
+  "id": "hsk1-dialogue6",
+  "title": "香蕉多少钱？",
+  "pinyin": "Xiāngjiāo duōshao qián?",
+  "titleTranslation": "Banan qancha?",
+  "titleTranslation_ru": "Сколько стоят бананы?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d6-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d6-s1",
+          "text_original": "有香蕉吗？",
+          "pinyin": "Yǒu xiāngjiāo ma?",
+          "text_translation": "Banan bormi?",
+          "text_translation_ru": "Есть бананы?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [1, 3], "p": "xiāngjiāo", "t": "banan", "tr": "банан" },
+            { "i": [3, 4], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d6-s2",
+          "text_original": "有的。",
+          "pinyin": "Yǒude.",
+          "text_translation": "Bor.",
+          "text_translation_ru": "Есть.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "yǒude", "t": "bor", "tr": "есть", "h": 1 }
+          ]
+        },
+        {
+          "id": "d6-s3",
+          "text_original": "多少钱？",
+          "pinyin": "Duōshao qián?",
+          "text_translation": "Qancha?",
+          "text_translation_ru": "Сколько стоит?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "duōshao", "t": "qancha", "tr": "сколько", "h": 1, "l": 10 },
+            { "i": [2, 3], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 10 }
+          ]
+        },
+        {
+          "id": "d6-s4",
+          "text_original": "五块钱一斤。",
+          "pinyin": "Wǔ kuài qián yì jīn.",
+          "text_translation": "Bir jinga besh yuan.",
+          "text_translation_ru": "Пять юаней за цзинь.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǔ", "t": "besh", "tr": "пять", "h": 1, "l": 4 },
+            { "i": [1, 2], "p": "kuài", "t": "yuan", "tr": "юань", "h": 1, "l": 10 },
+            { "i": [2, 3], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 10 },
+            { "i": [3, 4], "p": "yì", "t": "bir", "tr": "один", "h": 1, "l": 4 },
+            { "i": [4, 5], "p": "jīn", "t": "jin", "tr": "цзинь (500г)" }
+          ]
+        },
+        {
+          "id": "d6-s5",
+          "text_original": "好的。",
+          "pinyin": "Hǎode.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "hǎode", "t": "yaxshi", "tr": "хорошо", "h": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

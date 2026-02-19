@@ -1,0 +1,94 @@
+{
+  "id": "hsk1-dialogue9",
+  "title": "你的电话号码是多少？",
+  "pinyin": "Nǐ de diànhuà hàomǎ shì duōshao?",
+  "titleTranslation": "Telefon raqamingiz necha?",
+  "titleTranslation_ru": "Какой у тебя номер телефона?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d9-s1",
+          "text_original": "你的电话号码是多少？",
+          "pinyin": "Nǐ de diànhuà hàomǎ shì duōshao?",
+          "text_translation": "Telefon raqamingiz necha?",
+          "text_translation_ru": "Какой у тебя номер телефона?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [2, 4], "p": "diànhuà", "t": "telefon", "tr": "телефон", "h": 1, "l": 10 },
+            { "i": [4, 6], "p": "hàomǎ", "t": "raqam", "tr": "номер" },
+            { "i": [6, 7], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [7, 9], "p": "duōshao", "t": "necha", "tr": "сколько", "h": 1, "l": 10 }
+          ]
+        },
+        {
+          "id": "d9-s2",
+          "text_original": "我的电话号码是138 1234 5678。",
+          "pinyin": "Wǒ de diànhuà hàomǎ shì yāo sān bā yāo èr sān sì wǔ liù qī bā.",
+          "text_translation": "Mening telefon raqamim 138 1234 5678.",
+          "text_translation_ru": "Мой номер телефона 138 1234 5678.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [2, 4], "p": "diànhuà", "t": "telefon", "tr": "телефон", "h": 1, "l": 10 },
+            { "i": [4, 6], "p": "hàomǎ", "t": "raqam", "tr": "номер" },
+            { "i": [6, 7], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d9-s3",
+          "text_original": "请再说一遍。",
+          "pinyin": "Qǐng zài shuō yí biàn.",
+          "text_translation": "Iltimos, yana bir marta ayting.",
+          "text_translation_ru": "Пожалуйста, скажи ещё раз.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "qǐng", "t": "iltimos", "tr": "пожалуйста", "h": 1, "l": 9 },
+            { "i": [1, 2], "p": "zài", "t": "yana", "tr": "ещё", "h": 1 },
+            { "i": [2, 3], "p": "shuō", "t": "aytmoq", "tr": "сказать", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "yí biàn", "t": "bir marta", "tr": "один раз" }
+          ]
+        },
+        {
+          "id": "d9-s4",
+          "text_original": "138 1234 5678。",
+          "pinyin": "Yāo sān bā yāo èr sān sì wǔ liù qī bā.",
+          "text_translation": "138 1234 5678.",
+          "text_translation_ru": "138 1234 5678.",
+          "speaker": "B",
+          "words": []
+        },
+        {
+          "id": "d9-s5",
+          "text_original": "谢谢。",
+          "pinyin": "Xièxie.",
+          "text_translation": "Rahmat.",
+          "text_translation_ru": "Спасибо.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d9-s6",
+          "text_original": "不客气。",
+          "pinyin": "Bú kèqi.",
+          "text_translation": "Arzimaydi.",
+          "text_translation_ru": "Не за что.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 3], "p": "bú kèqi", "t": "arzimaydi", "tr": "не за что", "h": 1, "l": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

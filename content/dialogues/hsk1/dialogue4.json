@@ -1,0 +1,99 @@
+{
+  "id": "hsk1-dialogue4",
+  "title": "你有Telegram吗？",
+  "pinyin": "Nǐ yǒu Telegram ma?",
+  "titleTranslation": "Sening Telegramingiz bormi?",
+  "titleTranslation_ru": "У тебя есть Телеграм?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d4-s1",
+          "text_original": "你有Telegram吗？",
+          "pinyin": "Nǐ yǒu Telegram ma?",
+          "text_translation": "Sening Telegramingiz bormi?",
+          "text_translation_ru": "У тебя есть Телеграм?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [10, 11], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d4-s2",
+          "text_original": "没有，我没有Telegram。",
+          "pinyin": "Méiyǒu, wǒ méiyǒu Telegram.",
+          "text_translation": "Yo'q, mening Telegramim yo'q.",
+          "text_translation_ru": "Нет, у меня нет Телеграма.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "méiyǒu", "t": "yo'q", "tr": "нет", "h": 1, "l": 4 },
+            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [4, 6], "p": "méiyǒu", "t": "yo'q", "tr": "не иметь", "h": 1, "l": 4 }
+          ]
+        },
+        {
+          "id": "d4-s3",
+          "text_original": "你有微信吗？",
+          "pinyin": "Nǐ yǒu Wēixìn ma?",
+          "text_translation": "Sening WeChat bormi?",
+          "text_translation_ru": "У тебя есть WeChat?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [2, 4], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" },
+            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d4-s4",
+          "text_original": "有，我有微信。",
+          "pinyin": "Yǒu, wǒ yǒu Wēixìn.",
+          "text_translation": "Bor, mening WeChatim bor.",
+          "text_translation_ru": "Есть, у меня есть WeChat.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [4, 6], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" }
+          ]
+        },
+        {
+          "id": "d4-s5",
+          "text_original": "我加你微信，可以吗？",
+          "pinyin": "Wǒ jiā nǐ Wēixìn, kěyǐ ma?",
+          "text_translation": "Sizni WeChatga qo'shsam, bo'ladimi?",
+          "text_translation_ru": "Могу добавить тебя в WeChat?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "jiā", "t": "qo'shmoq", "tr": "добавить" },
+            { "i": [2, 3], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [3, 5], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" },
+            { "i": [6, 8], "p": "kěyǐ", "t": "bo'ladimi", "tr": "можно", "h": 1, "l": 9 },
+            { "i": [8, 9], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d4-s6",
+          "text_original": "可以。",
+          "pinyin": "Kěyǐ.",
+          "text_translation": "Bo'ladi.",
+          "text_translation_ru": "Можно.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "kěyǐ", "t": "bo'ladi", "tr": "можно", "h": 1, "l": 9 }
+          ]
+        }
+      ]
+    }
+  ]
+}

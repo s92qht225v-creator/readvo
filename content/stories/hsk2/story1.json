@@ -1,0 +1,356 @@
+{
+  "id": "hsk2-story1",
+  "title": "新的邻居",
+  "pinyin": "Xīn de línjū",
+  "titleTranslation": "Yangi qo'shni",
+  "titleTranslation_ru": "Новый сосед",
+  "level": 2,
+  "audio_url": "",
+  "sections": [
+    {
+      "id": "s1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s1",
+          "text_original": "我家住在一个安静的小区里。",
+          "pinyin": "Wǒ jiā zhù zài yí ge ānjìng de xiǎoqū lǐ.",
+          "text_translation": "Bizning uyimiz tinch bir mahallada joylashgan.",
+          "text_translation_ru": "Наш дом находится в тихом районе.",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 },
+            { "i": [2, 3], "p": "zhù", "t": "yashaydi", "tr": "жить", "h": 1, "l": 7 },
+            { "i": [3, 4], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [4, 6], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [6, 8], "p": "ānjìng", "t": "tinch", "tr": "тихий", "h": 2 },
+            { "i": [8, 9], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [9, 11], "p": "xiǎoqū", "t": "mahalla", "tr": "район", "h": 2 },
+            { "i": [11, 12], "p": "lǐ", "t": "ichida", "tr": "внутри", "h": 1 }
+          ]
+        },
+        {
+          "id": "s1-s2",
+          "text_original": "以前，我们楼上的邻居是一个老人。",
+          "pinyin": "Yǐqián, wǒmen lóu shàng de línjū shì yí ge lǎorén.",
+          "text_translation": "Ilgari, bizning ustki qavatdagi qo'shnimiz bir keksa odam edi.",
+          "text_translation_ru": "Раньше нашим соседом сверху был пожилой человек.",
+          "words": [
+            { "i": [0, 2], "p": "yǐqián", "t": "ilgari", "tr": "раньше", "h": 2 },
+            { "i": [3, 5], "p": "wǒmen", "t": "bizning", "tr": "наш", "h": 1, "l": 3 },
+            { "i": [5, 6], "p": "lóu", "t": "bino", "tr": "здание", "h": 2 },
+            { "i": [6, 7], "p": "shàng", "t": "ustida", "tr": "наверху", "h": 1, "l": 6 },
+            { "i": [7, 8], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [8, 10], "p": "línjū", "t": "qo'shni", "tr": "сосед", "h": 2 },
+            { "i": [10, 11], "p": "shì", "t": "edi", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [11, 13], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [13, 15], "p": "lǎorén", "t": "keksa odam", "tr": "пожилой человек", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s3",
+          "text_original": "上个月，老人搬走了。",
+          "pinyin": "Shàng ge yuè, lǎorén bān zǒu le.",
+          "text_translation": "O'tgan oy, keksa odam ko'chib ketdi.",
+          "text_translation_ru": "В прошлом месяце пожилой человек переехал.",
+          "words": [
+            { "i": [0, 1], "p": "shàng", "t": "o'tgan", "tr": "прошлый", "h": 1, "l": 6 },
+            { "i": [1, 2], "p": "ge", "t": "(son.)", "tr": "(счётн.)", "h": 1 },
+            { "i": [2, 3], "p": "yuè", "t": "oy", "tr": "месяц", "h": 1, "l": 5 },
+            { "i": [4, 6], "p": "lǎorén", "t": "keksa odam", "tr": "пожилой человек", "h": 2 },
+            { "i": [6, 8], "p": "bān zǒu", "t": "ko'chib ketdi", "tr": "переехал", "h": 2 },
+            { "i": [8, 9], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 }
+          ]
+        },
+        {
+          "id": "s1-s4",
+          "text_original": "昨天，一个新的邻居搬来了。",
+          "pinyin": "Zuótiān, yí ge xīn de línjū bān lái le.",
+          "text_translation": "Kecha, yangi qo'shni ko'chib keldi.",
+          "text_translation_ru": "Вчера приехал новый сосед.",
+          "words": [
+            { "i": [0, 2], "p": "zuótiān", "t": "kecha", "tr": "вчера", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [5, 6], "p": "xīn", "t": "yangi", "tr": "новый", "h": 1, "l": 11 },
+            { "i": [6, 7], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [7, 9], "p": "línjū", "t": "qo'shni", "tr": "сосед", "h": 2 },
+            { "i": [9, 11], "p": "bān lái", "t": "ko'chib keldi", "tr": "переехал (сюда)", "h": 2 },
+            { "i": [11, 12], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec2",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s5",
+          "text_original": "今天早上，我出门的时候碰到了他。",
+          "pinyin": "Jīntiān zǎoshang, wǒ chū mén de shíhou pèng dào le tā.",
+          "text_translation": "Bugun ertalab, men uydan chiqayotganda uni uchratib qoldim.",
+          "text_translation_ru": "Сегодня утром, выходя из дома, я столкнулся с ним.",
+          "words": [
+            { "i": [0, 2], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
+            { "i": [2, 4], "p": "zǎoshang", "t": "ertalab", "tr": "утром", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [6, 8], "p": "chū mén", "t": "uydan chiqmoq", "tr": "выходить из дома", "h": 2 },
+            { "i": [8, 9], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [9, 11], "p": "shíhou", "t": "paytida", "tr": "когда", "h": 1, "l": 8 },
+            { "i": [11, 13], "p": "pèng dào", "t": "uchratmoq", "tr": "столкнуться", "h": 2 },
+            { "i": [13, 14], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [14, 15], "p": "tā", "t": "uni", "tr": "его", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "s1-s6",
+          "text_original": "他很热情地跟我说：\"你好，我叫张明。\"",
+          "pinyin": "Tā hěn rèqíng de gēn wǒ shuō: \"Nǐ hǎo, wǒ jiào Zhāng Míng.\"",
+          "text_translation": "U juda iliq munosabat bilan menga dedi: \"Salom, mening ismim Jang Ming.\"",
+          "text_translation_ru": "Он тепло поздоровался со мной: \"Привет, меня зовут Чжан Мин.\"",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 1 },
+            { "i": [2, 4], "p": "rèqíng", "t": "iliq", "tr": "тёплый", "h": 2 },
+            { "i": [4, 5], "p": "de", "t": "(ravishda)", "tr": "(нареч.)", "h": 1 },
+            { "i": [5, 6], "p": "gēn", "t": "bilan", "tr": "с", "h": 2 },
+            { "i": [6, 7], "p": "wǒ", "t": "menga", "tr": "мне", "h": 1, "l": 2 },
+            { "i": [7, 8], "p": "shuō", "t": "dedi", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [10, 12], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 },
+            { "i": [13, 14], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 2 },
+            { "i": [14, 15], "p": "jiào", "t": "ism", "tr": "зовут", "h": 1, "l": 1 },
+            { "i": [15, 17], "p": "Zhāng Míng", "t": "Jang Ming", "tr": "Чжан Мин", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s7",
+          "text_original": "我也跟他说了我的名字。",
+          "pinyin": "Wǒ yě gēn tā shuō le wǒ de míngzi.",
+          "text_translation": "Men ham unga o'z ismimni aytdim.",
+          "text_translation_ru": "Я тоже назвал ему своё имя.",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
+            { "i": [2, 3], "p": "gēn", "t": "bilan", "tr": "с", "h": 2 },
+            { "i": [3, 4], "p": "tā", "t": "unga", "tr": "ему", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "shuō", "t": "aytdi", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [5, 6], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [6, 7], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 2 },
+            { "i": [7, 8], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
+            { "i": [8, 10], "p": "míngzi", "t": "ism", "tr": "имя", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "s1-s8",
+          "text_original": "他说他刚从南方搬来，在这个城市找到了新工作。",
+          "pinyin": "Tā shuō tā gāng cóng nánfāng bān lái, zài zhège chéngshì zhǎo dào le xīn gōngzuò.",
+          "text_translation": "U janubdan endigina ko'chib kelganini, bu shaharda yangi ish topganini aytdi.",
+          "text_translation_ru": "Он сказал, что только переехал с юга и нашёл здесь новую работу.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shuō", "t": "aytdi", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [2, 3], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "gāng", "t": "endigina", "tr": "только что", "h": 2 },
+            { "i": [4, 5], "p": "cóng", "t": "-dan", "tr": "из", "h": 2 },
+            { "i": [5, 7], "p": "nánfāng", "t": "janub", "tr": "юг", "h": 2 },
+            { "i": [7, 9], "p": "bān lái", "t": "ko'chib keldi", "tr": "переехал (сюда)", "h": 2 },
+            { "i": [10, 11], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
+            { "i": [11, 13], "p": "zhège", "t": "bu", "tr": "этот", "h": 1, "l": 4 },
+            { "i": [13, 15], "p": "chéngshì", "t": "shahar", "tr": "город", "h": 2 },
+            { "i": [15, 17], "p": "zhǎo dào", "t": "topdi", "tr": "нашёл", "h": 2 },
+            { "i": [17, 18], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [18, 19], "p": "xīn", "t": "yangi", "tr": "новый", "h": 1, "l": 11 },
+            { "i": [19, 21], "p": "gōngzuò", "t": "ish", "tr": "работа", "h": 1, "l": 8 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec3",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s9",
+          "text_original": "他笑着说：\"虽然天气比南方冷，但是人都很热情。\"",
+          "pinyin": "Tā xiào zhe shuō: \"Suīrán tiānqì bǐ nánfāng lěng, dànshì rén dōu hěn rèqíng.\"",
+          "text_translation": "U kulib dedi: \"Ob-havo janubga qaraganda sovuqroq bo'lsa ham, odamlar juda iliq.\"",
+          "text_translation_ru": "Он улыбнулся: \"Хотя погода холоднее, чем на юге, но люди очень приветливые.\"",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "xiào", "t": "kuldi", "tr": "улыбнулся", "h": 2 },
+            { "i": [2, 3], "p": "zhe", "t": "(-ayotib)", "tr": "(-ая)", "h": 2 },
+            { "i": [3, 4], "p": "shuō", "t": "dedi", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [6, 8], "p": "suīrán", "t": "garchi", "tr": "хотя", "h": 2 },
+            { "i": [8, 10], "p": "tiānqì", "t": "ob-havo", "tr": "погода", "h": 1, "l": 10 },
+            { "i": [10, 11], "p": "bǐ", "t": "-ga qaraganda", "tr": "по сравнению", "h": 1, "l": 10 },
+            { "i": [11, 13], "p": "nánfāng", "t": "janub", "tr": "юг", "h": 2 },
+            { "i": [13, 14], "p": "lěng", "t": "sovuq", "tr": "холодный", "h": 1, "l": 10 },
+            { "i": [15, 17], "p": "dànshì", "t": "lekin", "tr": "но", "h": 2 },
+            { "i": [17, 18], "p": "rén", "t": "odamlar", "tr": "люди", "h": 1, "l": 3 },
+            { "i": [18, 19], "p": "dōu", "t": "hammasi", "tr": "все", "h": 1, "l": 4 },
+            { "i": [19, 20], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 1 },
+            { "i": [20, 22], "p": "rèqíng", "t": "iliq", "tr": "приветливый", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s10",
+          "text_original": "我说：\"如果需要帮助，可以跟我说。\"",
+          "pinyin": "Wǒ shuō: \"Rúguǒ xūyào bāngzhù, kěyǐ gēn wǒ shuō.\"",
+          "text_translation": "Men dedim: \"Agar yordam kerak bo'lsa, menga ayting.\"",
+          "text_translation_ru": "Я сказал: \"Если нужна помощь, обращайся ко мне.\"",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shuō", "t": "dedim", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [4, 6], "p": "rúguǒ", "t": "agar", "tr": "если", "h": 2 },
+            { "i": [6, 8], "p": "xūyào", "t": "kerak", "tr": "нужно", "h": 2 },
+            { "i": [8, 10], "p": "bāngzhù", "t": "yordam", "tr": "помощь", "h": 2 },
+            { "i": [11, 13], "p": "kěyǐ", "t": "mumkin", "tr": "можно", "h": 2 },
+            { "i": [13, 14], "p": "gēn", "t": "bilan", "tr": "с", "h": 2 },
+            { "i": [14, 15], "p": "wǒ", "t": "menga", "tr": "мне", "h": 1, "l": 2 },
+            { "i": [15, 16], "p": "shuō", "t": "ayting", "tr": "скажи", "h": 1, "l": 6 }
+          ]
+        },
+        {
+          "id": "s1-s11",
+          "text_original": "他感谢了我，我们都笑了。",
+          "pinyin": "Tā gǎnxiè le wǒ, wǒmen dōu xiào le.",
+          "text_translation": "U menga minnatdorchilik bildirdi, ikkalamiz ham kuldik.",
+          "text_translation_ru": "Он поблагодарил меня, и мы оба рассмеялись.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "gǎnxiè", "t": "minnatdorchilik bildirdi", "tr": "поблагодарил", "h": 2 },
+            { "i": [3, 4], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 },
+            { "i": [4, 5], "p": "wǒ", "t": "meni", "tr": "меня", "h": 1, "l": 2 },
+            { "i": [6, 8], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
+            { "i": [8, 9], "p": "dōu", "t": "hammamiz", "tr": "все", "h": 1, "l": 4 },
+            { "i": [9, 10], "p": "xiào", "t": "kuldik", "tr": "рассмеялись", "h": 2 },
+            { "i": [10, 11], "p": "le", "t": "(tugadi)", "tr": "(завершение)", "h": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1-sec4",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "s1-s12",
+          "text_original": "下午，有人敲门。",
+          "pinyin": "Xiàwǔ, yǒu rén qiāo mén.",
+          "text_translation": "Tushdan keyin, kimdir eshikni taqillatdi.",
+          "text_translation_ru": "Днём кто-то постучал в дверь.",
+          "words": [
+            { "i": [0, 2], "p": "xiàwǔ", "t": "tushdan keyin", "tr": "днём", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "yǒu rén", "t": "kimdir", "tr": "кто-то", "h": 2 },
+            { "i": [5, 6], "p": "qiāo", "t": "taqillatdi", "tr": "постучал", "h": 2 },
+            { "i": [6, 7], "p": "mén", "t": "eshik", "tr": "дверь", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s13",
+          "text_original": "是张明！",
+          "pinyin": "Shì Zhāng Míng!",
+          "text_translation": "Jang Ming ekan!",
+          "text_translation_ru": "Это был Чжан Мин!",
+          "words": [
+            { "i": [0, 1], "p": "shì", "t": "edi", "tr": "быть", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "Zhāng Míng", "t": "Jang Ming", "tr": "Чжан Мин", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s14",
+          "text_original": "他手里拿着一个大蛋糕。",
+          "pinyin": "Tā shǒu lǐ ná zhe yí ge dà dàngāo.",
+          "text_translation": "Uning qo'lida katta tort bor edi.",
+          "text_translation_ru": "В руках у него был большой торт.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "uning", "tr": "его", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shǒu", "t": "qo'l", "tr": "рука", "h": 2 },
+            { "i": [2, 3], "p": "lǐ", "t": "ichida", "tr": "внутри", "h": 1 },
+            { "i": [3, 4], "p": "ná", "t": "ushlab turdi", "tr": "держал", "h": 2 },
+            { "i": [4, 5], "p": "zhe", "t": "(-ayotib)", "tr": "(-ая)", "h": 2 },
+            { "i": [5, 7], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [7, 8], "p": "dà", "t": "katta", "tr": "большой", "h": 1, "l": 4 },
+            { "i": [8, 10], "p": "dàngāo", "t": "tort", "tr": "торт", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s15",
+          "text_original": "他说：\"谢谢你今天早上对我那么热情！\"",
+          "pinyin": "Tā shuō: \"Xièxie nǐ jīntiān zǎoshang duì wǒ nàme rèqíng!\"",
+          "text_translation": "U dedi: \"Bugun ertalab menga shunday iliq munosabatda bo'lganingiz uchun rahmat!\"",
+          "text_translation_ru": "Он сказал: \"Спасибо за тёплый приём сегодня утром!\"",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "shuō", "t": "dedi", "tr": "сказал", "h": 1, "l": 6 },
+            { "i": [4, 6], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 },
+            { "i": [6, 7], "p": "nǐ", "t": "sizga", "tr": "тебе", "h": 1, "l": 1 },
+            { "i": [7, 9], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
+            { "i": [9, 11], "p": "zǎoshang", "t": "ertalab", "tr": "утром", "h": 1, "l": 5 },
+            { "i": [11, 12], "p": "duì", "t": "-ga nisbatan", "tr": "по отношению к", "h": 2 },
+            { "i": [12, 13], "p": "wǒ", "t": "menga", "tr": "мне", "h": 1, "l": 2 },
+            { "i": [13, 15], "p": "nàme", "t": "shunday", "tr": "так", "h": 2 },
+            { "i": [15, 17], "p": "rèqíng", "t": "iliq", "tr": "тёплый", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s16",
+          "text_original": "我特别高兴，请他进来喝茶。",
+          "pinyin": "Wǒ tèbié gāoxìng, qǐng tā jìnlái hē chá.",
+          "text_translation": "Men juda xursand bo'ldim, uni choyga taklif qildim.",
+          "text_translation_ru": "Я очень обрадовался и пригласил его на чай.",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "tèbié", "t": "juda", "tr": "особенно", "h": 2 },
+            { "i": [3, 5], "p": "gāoxìng", "t": "xursand", "tr": "рад", "h": 1, "l": 3 },
+            { "i": [6, 7], "p": "qǐng", "t": "taklif qildi", "tr": "пригласил", "h": 1, "l": 6 },
+            { "i": [7, 8], "p": "tā", "t": "uni", "tr": "его", "h": 1, "l": 2 },
+            { "i": [8, 10], "p": "jìnlái", "t": "kirmoq", "tr": "войти", "h": 2 },
+            { "i": [10, 11], "p": "hē", "t": "ichmoq", "tr": "пить", "h": 1, "l": 6 },
+            { "i": [11, 12], "p": "chá", "t": "choy", "tr": "чай", "h": 1, "l": 6 }
+          ]
+        },
+        {
+          "id": "s1-s17",
+          "text_original": "他喜欢看书，也喜欢运动。",
+          "pinyin": "Tā xǐhuan kàn shū, yě xǐhuan yùndòng.",
+          "text_translation": "U kitob o'qishni yoqtiradi, sportni ham yoqtiradi.",
+          "text_translation_ru": "Он любит читать книги и заниматься спортом.",
+          "words": [
+            { "i": [0, 1], "p": "tā", "t": "u", "tr": "он", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "xǐhuan", "t": "yoqtiradi", "tr": "любит", "h": 1, "l": 3 },
+            { "i": [3, 5], "p": "kàn shū", "t": "kitob o'qimoq", "tr": "читать книги", "h": 1, "l": 6 },
+            { "i": [6, 7], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
+            { "i": [7, 9], "p": "xǐhuan", "t": "yoqtiradi", "tr": "любит", "h": 1, "l": 3 },
+            { "i": [9, 11], "p": "yùndòng", "t": "sport", "tr": "спорт", "h": 2 }
+          ]
+        },
+        {
+          "id": "s1-s18",
+          "text_original": "我觉得我们会成为好朋友的。",
+          "pinyin": "Wǒ juéde wǒmen huì chéngwéi hǎo péngyou de.",
+          "text_translation": "O'ylaymanki, biz yaxshi do'st bo'lamiz.",
+          "text_translation_ru": "Думаю, мы станем хорошими друзьями.",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "juéde", "t": "o'ylayman", "tr": "думаю", "h": 1, "l": 9 },
+            { "i": [3, 5], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
+            { "i": [5, 6], "p": "huì", "t": "bo'ladi", "tr": "будет", "h": 1, "l": 8 },
+            { "i": [6, 8], "p": "chéngwéi", "t": "bo'lmoq", "tr": "стать", "h": 2 },
+            { "i": [8, 9], "p": "hǎo", "t": "yaxshi", "tr": "хороший", "h": 1, "l": 1 },
+            { "i": [9, 11], "p": "péngyou", "t": "do'st", "tr": "друг", "h": 1, "l": 3 },
+            { "i": [11, 12], "p": "de", "t": "(ta'kid)", "tr": "(уверенность)", "h": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

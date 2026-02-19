@@ -1,0 +1,120 @@
+{
+  "id": "hsk1-dialogue1",
+  "title": "你叫什么名字？",
+  "pinyin": "Nǐ jiào shénme míngzi?",
+  "titleTranslation": "Ismingiz nima?",
+  "titleTranslation_ru": "Как тебя зовут?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d1-s1",
+          "text_original": "你好！",
+          "pinyin": "Nǐ hǎo!",
+          "text_translation": "Salom!",
+          "text_translation_ru": "Привет!",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d1-s2",
+          "text_original": "你好！",
+          "pinyin": "Nǐ hǎo!",
+          "text_translation": "Salom!",
+          "text_translation_ru": "Привет!",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "你叫什么名字？",
+          "pinyin": "Nǐ jiào shénme míngzi?",
+          "text_translation": "Ismingiz nima?",
+          "text_translation_ru": "Как тебя зовут?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "jiào", "t": "deb ataladi", "tr": "зовут", "h": 1, "l": 1 },
+            { "i": [2, 4], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 2 },
+            { "i": [4, 6], "p": "míngzi", "t": "ism", "tr": "имя", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "我叫李明。",
+          "pinyin": "Wǒ jiào Lǐ Míng.",
+          "text_translation": "Mening ismim Li Ming.",
+          "text_translation_ru": "Меня зовут Ли Мин.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "jiào", "t": "deb ataladi", "tr": "зовут", "h": 1, "l": 1 },
+            { "i": [2, 4], "p": "Lǐ Míng", "t": "Li Ming", "tr": "Ли Мин" }
+          ]
+        },
+        {
+          "id": "d1-s5",
+          "text_original": "李明？",
+          "pinyin": "Lǐ Míng?",
+          "text_translation": "Li Mingmi?",
+          "text_translation_ru": "Ли Мин?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "Lǐ Míng", "t": "Li Ming", "tr": "Ли Мин" }
+          ]
+        },
+        {
+          "id": "d1-s6",
+          "text_original": "对，我叫李明。",
+          "pinyin": "Duì, wǒ jiào Lǐ Míng.",
+          "text_translation": "Ha, mening ismim Li Ming.",
+          "text_translation_ru": "Да, меня зовут Ли Мин.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "duì", "t": "ha", "tr": "да", "h": 1, "l": 4 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "jiào", "t": "deb ataladi", "tr": "зовут", "h": 1, "l": 1 },
+            { "i": [4, 6], "p": "Lǐ Míng", "t": "Li Ming", "tr": "Ли Мин" }
+          ]
+        },
+        {
+          "id": "d1-s7",
+          "text_original": "很高兴认识你。",
+          "pinyin": "Hěn gāoxìng rènshi nǐ.",
+          "text_translation": "Tanishganimdan xursandman.",
+          "text_translation_ru": "Очень рад познакомиться.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 3 },
+            { "i": [1, 3], "p": "gāoxìng", "t": "xursand", "tr": "рад", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "rènshi", "t": "tanishmoq", "tr": "познакомиться", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d1-s8",
+          "text_original": "我也很高兴。",
+          "pinyin": "Wǒ yě hěn gāoxìng.",
+          "text_translation": "Men ham juda xursandman.",
+          "text_translation_ru": "Я тоже очень рад.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
+            { "i": [2, 3], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 3 },
+            { "i": [3, 5], "p": "gāoxìng", "t": "xursand", "tr": "рад", "h": 1, "l": 5 }
+          ]
+        }
+      ]
+    }
+  ]
+}
