@@ -4256,7 +4256,7 @@ body {
 /* Mobile Responsive */
 @media (max-width: 480px) {
   .home__hero {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md) 0;
   }
 
   .home__logo {
