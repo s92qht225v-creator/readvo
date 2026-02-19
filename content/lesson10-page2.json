@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-2-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Здесь фруктов действительно немало!",
           "pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo!",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue1.mp3"
         },
         {
           "id": "l10p2-t2-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Что вы хотите купить?",
           "pinyin": "Nín xiǎng mǎi shénme?",
           "speaker": "售货员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue2.mp3"
         },
         {
           "id": "l10p2-t2-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Я хочу купить два цзиня яблок.",
           "pinyin": "Wǒ xiǎng mǎi liǎng jīn píngguǒ.",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue3.mp3"
         },
         {
           "id": "l10p2-t2-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Яблоки три юаня пятьдесят за цзинь. Это будет семь юаней двадцать, пусть будет семь юаней.",
           "pinyin": "Píngguǒ sān kuài wǔ yì jīn. Zhèxiē qī kuài èr, qī kuài qián ba.",
           "speaker": "售货员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue4.mp3"
         },
         {
           "id": "l10p2-t2-s5",
@@ -146,7 +146,7 @@
           "text_translation_ru": "Хорошо, яблоки здесь действительно дешёвые!",
           "pinyin": "Hǎo de, zhèr de píngguǒ zhēn piányi!",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/dialogue5.mp3"
         }
       ]
     },
@@ -156,7 +156,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%204.mp3",
       "sentences": [
         {
           "id": "l10p2-v-s1",
@@ -167,7 +166,7 @@
           "pinyin": "zhèr",
           "wordClass": "pron.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/zher.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/zher.mp3"
         },
         {
           "id": "l10p2-v-s2",
@@ -178,7 +177,7 @@
           "pinyin": "shuǐguǒ",
           "wordClass": "n.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shuiguo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/shuiguo.mp3"
         },
         {
           "id": "l10p2-v-s3",
@@ -189,7 +188,7 @@
           "pinyin": "shǎo",
           "wordClass": "adj.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/shao.mp3"
         },
         {
           "id": "l10p2-v-s4",
@@ -200,7 +199,7 @@
           "pinyin": "jīn",
           "wordClass": "m.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/jin.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/jin.mp3"
         },
         {
           "id": "l10p2-v-s5",
@@ -211,7 +210,7 @@
           "pinyin": "píngguǒ",
           "wordClass": "n.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pingguo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/pingguo.mp3"
         },
         {
           "id": "l10p2-v-s6",
@@ -222,7 +221,7 @@
           "pinyin": "piányi",
           "wordClass": "adj.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pianyi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/pianyi.mp3"
         }
       ]
     },

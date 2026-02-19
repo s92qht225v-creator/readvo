@@ -14,7 +14,7 @@
       "contextTranslation_ru": "В классе после урока Энни смотрит фотографии на телефоне Чэнь Тяньчжуна.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-2-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -32,7 +32,7 @@
           "pinyin": "Zhè shì shéi?",
           "speaker": "安妮",
           "speakerName": "Ānnī",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/dialogue1.mp3"
         },
         {
           "id": "l3p2-t2-s2",
@@ -43,7 +43,7 @@
           "pinyin": "Zhè shì wǒ nǚpéngyou.",
           "speaker": "陈天中",
           "speakerName": "Chén Tiānzhōng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/dialogue2.mp3"
         },
         {
           "id": "l3p2-t2-s3",
@@ -54,7 +54,7 @@
           "pinyin": "Nǐ nǚpéngyou shì nǎ guó rén?",
           "speaker": "安妮",
           "speakerName": "Ānnī",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/dialogue3.mp3"
         },
         {
           "id": "l3p2-t2-s4",
@@ -65,7 +65,7 @@
           "pinyin": "Tā yě shì Tàiguó rén.",
           "speaker": "陈天中",
           "speakerName": "Chén Tiānzhōng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/dialogue4.mp3"
         }
       ]
     },
@@ -75,7 +75,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "/audio/l3p2-vocab.mp3",
       "sentences": [
         {
           "id": "l3p2-v-s1",
@@ -84,7 +83,7 @@
           "text_translation": "bu (olmosh)",
           "text_translation_ru": "это (мест.)",
           "pinyin": "zhè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/zhe.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/zhe.mp3"
         },
         {
           "id": "l3p2-v-s2",
@@ -93,7 +92,7 @@
           "text_translation": "kim (olmosh)",
           "text_translation_ru": "кто (мест.)",
           "pinyin": "shéi/shuí",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/sheishui.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/sheishui.mp3"
         },
         {
           "id": "l3p2-v-s3",
@@ -102,7 +101,7 @@
           "text_translation": "qiz do'st (ot)",
           "text_translation_ru": "девушка (сущ.)",
           "pinyin": "nǚpéngyou",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/nupengyou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/nupengyou.mp3"
         },
         {
           "id": "l3p2-v-s4",
@@ -111,7 +110,7 @@
           "text_translation": "qaysi (olmosh)",
           "text_translation_ru": "какой, который (мест.)",
           "pinyin": "nǎ",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/na.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/na.mp3"
         },
         {
           "id": "l3p2-v-s5",
@@ -120,7 +119,7 @@
           "text_translation": "mamlakat (ot)",
           "text_translation_ru": "страна (сущ.)",
           "pinyin": "guó",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/guo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/guo.mp3"
         },
         {
           "id": "l3p2-v-s6",
@@ -129,7 +128,7 @@
           "text_translation": "u (ayol) (olmosh)",
           "text_translation_ru": "она (мест.)",
           "pinyin": "tā",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/ta.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/ta.mp3"
         },
         {
           "id": "l3p2-v-s7",
@@ -138,7 +137,7 @@
           "text_translation": "Tailand (atoqli ot)",
           "text_translation_ru": "Таиланд (имя собств.)",
           "pinyin": "Tàiguó",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/taiguo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/taiguo.mp3"
         }
       ]
     }

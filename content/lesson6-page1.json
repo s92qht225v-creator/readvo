@@ -126,7 +126,7 @@
       "contextTranslation_ru": "В кампусе Ли Вэнь просит у Бай Цзяюэ номер телефона.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -143,7 +143,7 @@
           "text_translation_ru": "Цзяюэ, какой у тебя номер телефона?",
           "pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dialogue1.mp3"
         },
         {
           "id": "l6p1-t1-s2",
@@ -153,7 +153,7 @@
           "text_translation_ru": "Мой номер телефона +33 601493190.",
           "pinyin": "Wǒ de shǒujīhào shì sān sān liù líng yāo sì jiǔ sān yāo jiǔ líng.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dialogue2.mp3"
         },
         {
           "id": "l6p1-t1-s3",
@@ -163,7 +163,7 @@
           "text_translation_ru": "Мой номер телефона +86 13552721160.",
           "pinyin": "Wǒ de shǒujīhào shì bā liù yāo sān wǔ wǔ èr qī èr yāo yāo liù líng.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dialogue3.mp3"
         },
         {
           "id": "l6p1-t1-s4",
@@ -173,7 +173,7 @@
           "text_translation_ru": "Хорошо.",
           "pinyin": "Hǎo de.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dialogue4.mp3"
         }
       ]
     },
@@ -195,7 +195,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%202.mp3",
       "sentences": [
         {
           "id": "l6p1-v-s1",
@@ -205,7 +204,7 @@
           "text_translation_ru": "мобильный телефон",
           "pinyin": "shǒujī",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/shouji.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/shouji.mp3"
         },
         {
           "id": "l6p1-v-s2",
@@ -215,7 +214,7 @@
           "text_translation_ru": "телефон; телефонный звонок",
           "pinyin": "diànhuà",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dianhua.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dianhua.mp3"
         },
         {
           "id": "l6p1-v-s3",
@@ -225,7 +224,7 @@
           "text_translation_ru": "номер",
           "pinyin": "hào",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/hao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/hao.mp3"
         }
       ]
     }

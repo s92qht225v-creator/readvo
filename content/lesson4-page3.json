@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-3-1.jpg",
       "sentences": [
         {
@@ -112,7 +112,7 @@
           "pinyin": "Zhè shì nín érzi ma?",
           "speaker": "杨同乐",
           "speakerName": "Yáng Tónglè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue1.mp3"
         },
         {
           "id": "l4p3-t3-s2",
@@ -123,7 +123,7 @@
           "pinyin": "Shì de. Wǒ yǒu liǎng gè háizi, yí gè érzi, yí gè nǚ'ér.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue2.mp3"
         },
         {
           "id": "l4p3-t3-s3",
@@ -134,7 +134,7 @@
           "pinyin": "Nín érzi jǐ suì?",
           "speaker": "杨同乐",
           "speakerName": "Yáng Tónglè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue3.mp3"
         },
         {
           "id": "l4p3-t3-s4",
@@ -145,7 +145,7 @@
           "pinyin": "Tā jīnnián wǔ suì.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue4.mp3"
         },
         {
           "id": "l4p3-t3-s5",
@@ -156,7 +156,7 @@
           "pinyin": "Nín nǚ'ér duō dà?",
           "speaker": "杨同乐",
           "speakerName": "Yáng Tónglè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue5.mp3"
         },
         {
           "id": "l4p3-t3-s6",
@@ -167,7 +167,7 @@
           "pinyin": "Tā jīnnián shí'èr.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -191,7 +191,7 @@
           "text_translation": "o'g'il (ot)",
           "text_translation_ru": "сын (сущ.)",
           "pinyin": "érzi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/erzi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/erzi.mp3"
         },
         {
           "id": "l4p3-v-s2",
@@ -200,7 +200,7 @@
           "text_translation": "bolalar (ot)",
           "text_translation_ru": "дети (сущ.)",
           "pinyin": "háizi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/haizi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/haizi.mp3"
         },
         {
           "id": "l4p3-v-s3",
@@ -209,7 +209,7 @@
           "text_translation": "qiz (ot)",
           "text_translation_ru": "дочь (сущ.)",
           "pinyin": "nǚ'ér",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/nuer.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/nuer.mp3"
         },
         {
           "id": "l4p3-v-s4",
@@ -218,7 +218,7 @@
           "text_translation": "yosh (o'lchov so'zi)",
           "text_translation_ru": "лет (сч. сл.)",
           "pinyin": "suì",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/sui.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/sui.mp3"
         },
         {
           "id": "l4p3-v-s5",
@@ -227,7 +227,7 @@
           "text_translation": "u (olmosh)",
           "text_translation_ru": "он (мест.)",
           "pinyin": "tā",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/ta.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/ta.mp3"
         },
         {
           "id": "l4p3-v-s6",
@@ -236,7 +236,7 @@
           "text_translation": "bu yil (ot)",
           "text_translation_ru": "в этом году (сущ.)",
           "pinyin": "jīnnián",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/jinnian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/jinnian.mp3"
         },
         {
           "id": "l4p3-v-s7",
@@ -245,7 +245,7 @@
           "text_translation": "qancha; qay darajada (olmosh)",
           "text_translation_ru": "сколько; насколько (мест.)",
           "pinyin": "duō",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/duo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/duo.mp3"
         },
         {
           "id": "l4p3-v-s8",
@@ -254,7 +254,7 @@
           "text_translation": "katta, ulg'aygan (sifat)",
           "text_translation_ru": "большой; взрослый (прил.)",
           "pinyin": "dà",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/da.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/da.mp3"
         }
       ]
     },

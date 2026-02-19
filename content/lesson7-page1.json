@@ -126,7 +126,7 @@
       "contextTranslation_ru": "Бай Цзяюэ и Анни разговаривают по телефону.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-1-1.jpg",
       "sentences": [
         {
@@ -137,7 +137,7 @@
           "text_translation_ru": "Сколько сейчас времени?",
           "pinyin": "Xiànzài jǐ diǎn?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dialogue1.mp3"
         },
         {
           "id": "l7p1-t1-s2",
@@ -147,7 +147,7 @@
           "text_translation_ru": "Восемь сорок утра.",
           "pinyin": "Zǎoshang bā diǎn sìshí.",
           "speaker": "安　妮",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dialogue2.mp3"
         },
         {
           "id": "l7p1-t1-s3",
@@ -157,7 +157,7 @@
           "text_translation_ru": "У меня занятия в десять десять утра.",
           "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dialogue3.mp3"
         },
         {
           "id": "l7p1-t1-s4",
@@ -167,7 +167,7 @@
           "text_translation_ru": "Хорошо, давай встретимся в два часа дня.",
           "pinyin": "Hǎo de, wǒmen xiàwǔ liǎng diǎn jiàn ba.",
           "speaker": "安　妮",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dialogue4.mp3"
         }
       ]
     },
@@ -177,7 +177,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%202.mp3",
       "sentences": [
         {
           "id": "l7p1-v-s1",
@@ -187,7 +186,7 @@
           "text_translation_ru": "сейчас",
           "pinyin": "xiànzài",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xianzai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/xianzai.mp3"
         },
         {
           "id": "l7p1-v-s2",
@@ -197,7 +196,7 @@
           "text_translation_ru": "час (единица времени)",
           "pinyin": "diǎn",
           "wordClass": "m.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dian.mp3"
         },
         {
           "id": "l7p1-v-s3",
@@ -207,7 +206,7 @@
           "text_translation_ru": "утро (раннее)",
           "pinyin": "zǎoshang",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/zaoshang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/zaoshang.mp3"
         },
         {
           "id": "l7p1-v-s4",
@@ -217,7 +216,7 @@
           "text_translation_ru": "утро; до полудня",
           "pinyin": "shàngwǔ",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/shangwu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/shangwu.mp3"
         },
         {
           "id": "l7p1-v-s5",
@@ -227,7 +226,7 @@
           "text_translation_ru": "минута",
           "pinyin": "fēn",
           "wordClass": "m.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/fen.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/fen.mp3"
         },
         {
           "id": "l7p1-v-s6",
@@ -237,7 +236,7 @@
           "text_translation_ru": "урок; занятие",
           "pinyin": "kè",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ke.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/ke.mp3"
         },
         {
           "id": "l7p1-v-s7",
@@ -247,7 +246,7 @@
           "text_translation_ru": "после полудня; день",
           "pinyin": "xiàwǔ",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xiawu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/xiawu.mp3"
         },
         {
           "id": "l7p1-v-s8",
@@ -257,7 +256,7 @@
           "text_translation_ru": "видеть; встречать",
           "pinyin": "jiàn",
           "wordClass": "v.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/jian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/jian.mp3"
         },
         {
           "id": "l7p1-v-s9",
@@ -267,7 +266,7 @@
           "text_translation_ru": "частица для выражения предложений, советов, просьб",
           "pinyin": "ba",
           "wordClass": "part.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ba.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/ba.mp3"
         }
       ]
     },

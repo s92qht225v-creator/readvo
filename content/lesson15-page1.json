@@ -207,7 +207,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-1-1.jpg",
       "sentences": [
         {
@@ -218,7 +218,7 @@
           "text_translation_ru": "Какое блюдо вам нравится?",
           "pinyin": "Nǐmen ài chī nǎge cài?",
           "speaker": "李文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/dialogue1.mp3"
         },
         {
           "id": "l15p1-t1-s2",
@@ -228,7 +228,7 @@
           "text_translation_ru": "Мне нравится и это, и то.",
           "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/dialogue2.mp3"
         },
         {
           "id": "l15p1-t1-s3",
@@ -238,7 +238,7 @@
           "text_translation_ru": "Все эти блюда вкусные и ещё очень красивые.",
           "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/dialogue3.mp3"
         },
         {
           "id": "l15p1-t1-s4",
@@ -248,7 +248,7 @@
           "text_translation_ru": "Я люблю китайскую еду и люблю готовить. Ешьте побольше.",
           "pinyin": "Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
           "speaker": "李文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/dialogue4.mp3"
         }
       ],
       "tip": {
@@ -288,7 +288,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%202.mp3",
       "sentences": [
         {
           "id": "l15p1-v-s1",
@@ -299,7 +298,7 @@
           "pinyin": "ài",
           "wordClass": "v.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/ai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/ai.mp3"
         },
         {
           "id": "l15p1-v-s2",
@@ -310,7 +309,7 @@
           "pinyin": "nǎge",
           "wordClass": "pron.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/nage.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/nage.mp3"
         }
       ]
     },

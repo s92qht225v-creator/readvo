@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "Цзяюэ, куда ты пойдёшь завтра?",
           "pinyin": "Jiāyuè, míngtiān nǐ qù nǎr?",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dialogue1.mp3"
         },
         {
           "id": "l6p2-t2-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Хочу пойти в супермаркет за покупками.",
           "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dialogue2.mp3"
         },
         {
           "id": "l6p2-t2-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Что ты купишь в супермаркете?",
           "pinyin": "Nǐ qù chāoshì mǎi shénme?",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dialogue3.mp3"
         },
         {
           "id": "l6p2-t2-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Хочу купить немного молока.",
           "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dialogue4.mp3"
         }
       ]
     },
@@ -151,7 +151,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%206%204.mp3",
       "sentences": [
         {
           "id": "l6p2-v-s0a",
@@ -161,7 +160,7 @@
           "text_translation_ru": "сейчас",
           "pinyin": "xiànzài",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xianzai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/xianzai.mp3"
         },
         {
           "id": "l6p2-v-s1",
@@ -171,7 +170,7 @@
           "text_translation_ru": "завтра",
           "pinyin": "míngtiān",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mingtian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/mingtian.mp3"
         },
         {
           "id": "l6p2-v-s2",
@@ -181,7 +180,7 @@
           "text_translation_ru": "идти; ехать",
           "pinyin": "qù",
           "wordClass": "v.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/qu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/qu.mp3"
         },
         {
           "id": "l6p2-v-s3",
@@ -191,7 +190,7 @@
           "text_translation_ru": "где; куда",
           "pinyin": "nǎr",
           "wordClass": "pron.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/nar.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/nar.mp3"
         },
         {
           "id": "l6p2-v-s4",
@@ -201,7 +200,7 @@
           "text_translation_ru": "хотеть; желать",
           "pinyin": "xiǎng",
           "wordClass": "mod.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xiang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/xiang.mp3"
         },
         {
           "id": "l6p2-v-s5",
@@ -211,7 +210,7 @@
           "text_translation_ru": "супермаркет",
           "pinyin": "chāoshì",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/chaoshi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/chaoshi.mp3"
         },
         {
           "id": "l6p2-v-s6",
@@ -221,7 +220,7 @@
           "text_translation_ru": "покупать",
           "pinyin": "mǎi",
           "wordClass": "v.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/mai.mp3"
         },
         {
           "id": "l6p2-v-s7",
@@ -231,7 +230,7 @@
           "text_translation_ru": "вещь",
           "pinyin": "dōngxi",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dongxi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dongxi.mp3"
         },
         {
           "id": "l6p2-v-s8",
@@ -241,7 +240,7 @@
           "text_translation_ru": "немного; несколько",
           "pinyin": "xiē",
           "wordClass": "m.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/xie.mp3"
         },
         {
           "id": "l6p2-v-s9",
@@ -251,7 +250,7 @@
           "text_translation_ru": "молоко",
           "pinyin": "niúnǎi",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/niunai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/niunai.mp3"
         },
         {
           "id": "l6p2-v-s10",
@@ -261,7 +260,7 @@
           "text_translation_ru": "овощ",
           "pinyin": "cài",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/cai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/cai.mp3"
         }
       ]
     },

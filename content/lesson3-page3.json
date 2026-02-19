@@ -14,7 +14,7 @@
       "contextTranslation_ru": "Дома Ван Исюэ звонит по видеосвязи Ван Ифэю.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-3-1.jpg",
       "sentences": [
         {
@@ -26,7 +26,7 @@
           "pinyin": "Wèi, Yīfēi!",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue1.mp3"
         },
         {
           "id": "l3p3-t3-s2",
@@ -37,7 +37,7 @@
           "pinyin": "Jiějie!",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue2.mp3"
         },
         {
           "id": "l3p3-t3-s3",
@@ -48,7 +48,7 @@
           "pinyin": "Nǐ gōngzuò hái máng ma?",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue3.mp3"
         },
         {
           "id": "l3p3-t3-s4",
@@ -59,7 +59,7 @@
           "pinyin": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue4.mp3"
         },
         {
           "id": "l3p3-t3-s5",
@@ -70,7 +70,7 @@
           "pinyin": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue5.mp3"
         },
         {
           "id": "l3p3-t3-s6",
@@ -81,7 +81,7 @@
           "pinyin": "Wǒ yě xiǎng nǐmen.",
           "speaker": "王一飞",
           "speakerName": "Wáng Yīfēi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dialogue6.mp3"
         }
       ]
     },
@@ -91,7 +91,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "/audio/l3p3-vocab.mp3",
       "sentences": [
         {
           "id": "l3p3-v-s1",
@@ -100,7 +99,7 @@
           "text_translation": "alo (undov)",
           "text_translation_ru": "алло (межд.)",
           "pinyin": "wèi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/wei.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/wei.mp3"
         },
         {
           "id": "l3p3-v-s2",
@@ -109,7 +108,7 @@
           "text_translation": "opa (ot)",
           "text_translation_ru": "старшая сестра (сущ.)",
           "pinyin": "jiějie",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/jiejie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/jiejie.mp3"
         },
         {
           "id": "l3p3-v-s3",
@@ -118,7 +117,7 @@
           "text_translation": "ish (ot)",
           "text_translation_ru": "работа (сущ.)",
           "pinyin": "gōngzuò",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/gongzuo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/gongzuo.mp3"
         },
         {
           "id": "l3p3-v-s4",
@@ -127,7 +126,7 @@
           "text_translation": "hali (ravish)",
           "text_translation_ru": "ещё (нареч.)",
           "pinyin": "hái",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/hai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/hai.mp3"
         },
         {
           "id": "l3p3-v-s5",
@@ -136,7 +135,7 @@
           "text_translation": "band (sifat)",
           "text_translation_ru": "занятой (прил.)",
           "pinyin": "máng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/mang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/mang.mp3"
         },
         {
           "id": "l3p3-v-s6",
@@ -145,7 +144,7 @@
           "text_translation": "savol yuklamasi",
           "text_translation_ru": "вопросительная частица",
           "pinyin": "ma",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/ma.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/ma.mp3"
         },
         {
           "id": "l3p3-v-s7",
@@ -154,7 +153,7 @@
           "text_translation": "to'g'ri (sifat)",
           "text_translation_ru": "правильно (прил.)",
           "pinyin": "duì",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dui.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dui.mp3"
         },
         {
           "id": "l3p3-v-s8",
@@ -163,7 +162,7 @@
           "text_translation": "juda (ravish)",
           "text_translation_ru": "слишком (нареч.)",
           "pinyin": "tài",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/tai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/tai.mp3"
         },
         {
           "id": "l3p3-v-s9",
@@ -172,7 +171,7 @@
           "text_translation": "biz (olmosh)",
           "text_translation_ru": "мы (мест.)",
           "pinyin": "wǒmen",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/women.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/women.mp3"
         },
         {
           "id": "l3p3-v-s10",
@@ -181,7 +180,7 @@
           "text_translation": "sog'inmoq (fe'l)",
           "text_translation_ru": "скучать (гл.)",
           "pinyin": "xiǎng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/xiang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/xiang.mp3"
         }
       ]
     },
@@ -485,7 +484,7 @@
       "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/tongue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/tongue.mp3",
       "sentences": [
         {
           "id": "l3p3-tt-s1",

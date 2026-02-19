@@ -126,7 +126,7 @@
       "contextTranslation_ru": "В маленьком магазине Ван Исюэ покупает чашку.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-10-1-1.jpg",
       "sentences": [
         {
@@ -137,7 +137,7 @@
           "text_translation_ru": "Извините, есть ли чашки?",
           "pinyin": "Qǐngwèn, yǒu bēizi ma?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue1.mp3"
         },
         {
           "id": "l10p1-t1-s2",
@@ -147,7 +147,7 @@
           "text_translation_ru": "Есть, чашки вот здесь.",
           "pinyin": "Yǒu, bēizi zài zhèbiān.",
           "speaker": "售货员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue2.mp3"
         },
         {
           "id": "l10p1-t1-s3",
@@ -157,7 +157,7 @@
           "text_translation_ru": "Сколько стоит одна штука?",
           "pinyin": "Duōshao qián yí gè?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue3.mp3"
         },
         {
           "id": "l10p1-t1-s4",
@@ -167,7 +167,7 @@
           "text_translation_ru": "Эти — пять юаней за штуку, те — десять юаней за штуку.",
           "pinyin": "Zhèxiē wǔ kuài qián yí gè, nàxiē shí kuài qián yí gè.",
           "speaker": "售货员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue4.mp3"
         },
         {
           "id": "l10p1-t1-s5",
@@ -177,7 +177,7 @@
           "text_translation_ru": "Я куплю вот эту.",
           "pinyin": "Wǒ mǎi zhège ba.",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/dialogue5.mp3"
         }
       ]
     },
@@ -187,7 +187,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2010%202.mp3",
       "sentences": [
         {
           "id": "l10p1-v-s1",
@@ -198,7 +197,7 @@
           "pinyin": "bēizi",
           "wordClass": "n.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/beizi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/beizi.mp3"
         },
         {
           "id": "l10p1-v-s2",
@@ -209,7 +208,7 @@
           "pinyin": "shòuhuòyuán",
           "wordClass": "n.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/shouhuoyuan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/shouhuoyuan.mp3"
         },
         {
           "id": "l10p1-v-s3",
@@ -220,7 +219,7 @@
           "pinyin": "zhèbiān",
           "wordClass": "pron.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/zhebian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/zhebian.mp3"
         },
         {
           "id": "l10p1-v-s4",
@@ -231,7 +230,7 @@
           "pinyin": "qián",
           "wordClass": "n.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/qian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/qian.mp3"
         },
         {
           "id": "l10p1-v-s5",
@@ -242,7 +241,7 @@
           "pinyin": "zhèxiē",
           "wordClass": "pron.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/zhexie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/zhexie.mp3"
         },
         {
           "id": "l10p1-v-s6",
@@ -253,7 +252,7 @@
           "pinyin": "kuài",
           "wordClass": "m.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/kuai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/kuai.mp3"
         },
         {
           "id": "l10p1-v-s7",
@@ -264,7 +263,7 @@
           "pinyin": "nàxiē",
           "wordClass": "pron.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/naxie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/naxie.mp3"
         }
       ]
     },

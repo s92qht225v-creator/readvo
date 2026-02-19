@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "На стуле лежит книга на китайском, чья это книга?",
           "pinyin": "Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/dialogue1.mp3"
         },
         {
           "id": "l9p2-t2-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Это моя книга, спасибо. Это моя вторая книга на китайском.",
           "pinyin": "Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/dialogue2.mp3"
         },
         {
           "id": "l9p2-t2-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Не за что. Где ты будешь завтра утром?",
           "pinyin": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/dialogue3.mp3"
         },
         {
           "id": "l9p2-t2-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Завтра утром я буду учиться в школе.",
           "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/dialogue4.mp3"
         }
       ],
       "tip": {
@@ -157,7 +157,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%204.mp3",
       "sentences": [
         {
           "id": "l9p2-v-s1",
@@ -168,7 +167,7 @@
           "pinyin": "yǐzi",
           "wordClass": "n.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/yizi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/yizi.mp3"
         },
         {
           "id": "l9p2-v-s2",
@@ -179,7 +178,7 @@
           "pinyin": "shang/shàng",
           "wordClass": "n.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shangshang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/shangshang.mp3"
         },
         {
           "id": "l9p2-v-s3",
@@ -190,7 +189,7 @@
           "pinyin": "běn",
           "wordClass": "m.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/ben.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/ben.mp3"
         },
         {
           "id": "l9p2-v-s4",
@@ -201,7 +200,7 @@
           "pinyin": "shū",
           "wordClass": "n.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/shu.mp3"
         },
         {
           "id": "l9p2-v-s5",
@@ -212,7 +211,7 @@
           "pinyin": "nà",
           "wordClass": "pron.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/na.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/na.mp3"
         },
         {
           "id": "l9p2-v-s6",
@@ -223,7 +222,7 @@
           "pinyin": "dì",
           "wordClass": "pref.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/di.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/di.mp3"
         },
         {
           "id": "l9p2-v-s7",
@@ -234,7 +233,7 @@
           "pinyin": "xuéxí",
           "wordClass": "v.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/xuexi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/xuexi.mp3"
         }
       ]
     },

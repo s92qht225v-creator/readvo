@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-3-1.jpg",
       "sentences": [
         {
@@ -112,7 +112,7 @@
           "pinyin": "Tónglè, xiàbān ma?",
           "speaker": "王一雪",
           "speakerName": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue1.mp3"
         },
         {
           "id": "l5p3-t3-s2",
@@ -123,7 +123,7 @@
           "pinyin": "Xiàbān.",
           "speaker": "杨同乐",
           "speakerName": "杨同乐",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue2.mp3"
         },
         {
           "id": "l5p3-t3-s3",
@@ -134,7 +134,7 @@
           "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
           "speaker": "王一雪",
           "speakerName": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue3.mp3"
         },
         {
           "id": "l5p3-t3-s4",
@@ -145,7 +145,7 @@
           "pinyin": "Shì de, shì wǒ de xīn diànnǎo.",
           "speaker": "杨同乐",
           "speakerName": "杨同乐",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue4.mp3"
         },
         {
           "id": "l5p3-t3-s5",
@@ -156,7 +156,7 @@
           "pinyin": "Zhēn hǎokàn!",
           "speaker": "王一雪",
           "speakerName": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue5.mp3"
         },
         {
           "id": "l5p3-t3-s6",
@@ -167,7 +167,7 @@
           "pinyin": "Wǒ yě hěn xǐhuan tā.",
           "speaker": "杨同乐",
           "speakerName": "杨同乐",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/dialogue6.mp3"
         }
       ]
     },
@@ -177,7 +177,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%206.mp3",
       "sentences": [
         {
           "id": "l5p3-v-s1",
@@ -186,7 +185,7 @@
           "text_translation": "ishdan ketmoq",
           "text_translation_ru": "уходить с работы",
           "pinyin": "xiàbān",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xiaban.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xiaban.mp3"
         },
         {
           "id": "l5p3-v-s2",
@@ -195,7 +194,7 @@
           "text_translation": "yangi (sifat)",
           "text_translation_ru": "новый (прил.)",
           "pinyin": "xīn",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xin.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xin.mp3"
         },
         {
           "id": "l5p3-v-s3",
@@ -204,7 +203,7 @@
           "text_translation": "kompyuter (ot)",
           "text_translation_ru": "компьютер (сущ.)",
           "pinyin": "diànnǎo",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/diannao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/diannao.mp3"
         },
         {
           "id": "l5p3-v-s4",
@@ -213,7 +212,7 @@
           "text_translation": "haqiqatan, juda (ravish)",
           "text_translation_ru": "действительно, очень (нареч.)",
           "pinyin": "zhēn",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/zhen.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/zhen.mp3"
         },
         {
           "id": "l5p3-v-s5",
@@ -222,7 +221,7 @@
           "text_translation": "chiroyli, ko'rkam (sifat)",
           "text_translation_ru": "красивый, привлекательный (прил.)",
           "pinyin": "hǎokàn",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/haokan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/haokan.mp3"
         },
         {
           "id": "l5p3-v-s6",
@@ -231,7 +230,7 @@
           "text_translation": "yoqtirmoq, yaxshi ko'rmoq (fe'l)",
           "text_translation_ru": "нравиться, любить (гл.)",
           "pinyin": "xǐhuan",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xihuan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xihuan.mp3"
         },
         {
           "id": "l5p3-v-s7",
@@ -240,7 +239,7 @@
           "text_translation": "u (narsa uchun olmosh)",
           "text_translation_ru": "он/она/оно (для предметов, мест.)",
           "pinyin": "tā",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/ta.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/ta.mp3"
         }
       ]
     },

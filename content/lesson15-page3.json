@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-3-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Сколько часов ваш самолёт летит до Пекина?",
           "pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue1.mp3"
         },
         {
           "id": "l15p3-t3-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Девять часов.",
           "pinyin": "Jiǔ gè xiǎoshí.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue2.mp3"
         },
         {
           "id": "l15p3-t3-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Вся моя семья в Пекине, в воскресенье моя старшая сестра тоже свободна, она может встретить вас в аэропорту. Вы также можете остановиться у нас дома.",
           "pinyin": "Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen. Nǐmen yě kěyǐ zhù wǒ jiā.",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue3.mp3"
         },
         {
           "id": "l15p3-t3-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Мы прилетаем в воскресенье утром в восемь часов в аэропорт Дасин, не рано ли?",
           "pinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo?",
           "speaker": "安妮",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue4.mp3"
         },
         {
           "id": "l15p3-t3-s5",
@@ -146,7 +146,7 @@
           "text_translation_ru": "Не рано.",
           "pinyin": "Bù zǎo.",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue5.mp3"
         },
         {
           "id": "l15p3-t3-s6",
@@ -156,7 +156,7 @@
           "text_translation_ru": "Спасибо, учитель! Тогда мы встретимся с вашей сестрой в аэропорту Дасин!",
           "pinyin": "Xièxie lǎoshī! Nà wǒmen hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/dialogue6.mp3"
         }
       ]
     },
@@ -190,7 +190,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%206.mp3",
       "sentences": [
         {
           "id": "l15p3-v-s1",
@@ -201,7 +200,7 @@
           "pinyin": "fēijī",
           "wordClass": "n.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/feiji.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/feiji.mp3"
         },
         {
           "id": "l15p3-v-s2",
@@ -212,7 +211,7 @@
           "pinyin": "yào",
           "wordClass": "v.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/yao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/yao.mp3"
         },
         {
           "id": "l15p3-v-s3",
@@ -223,7 +222,7 @@
           "pinyin": "xiǎoshí",
           "wordClass": "n.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/xiaoshi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/xiaoshi.mp3"
         },
         {
           "id": "l15p3-v-s4",
@@ -234,7 +233,7 @@
           "pinyin": "jiārén",
           "wordClass": "n.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jiaren.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jiaren.mp3"
         },
         {
           "id": "l15p3-v-s5",
@@ -245,7 +244,7 @@
           "pinyin": "shíjiān",
           "wordClass": "n.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/shijian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/shijian.mp3"
         },
         {
           "id": "l15p3-v-s6",
@@ -256,7 +255,7 @@
           "pinyin": "jīchǎng",
           "wordClass": "n.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jichang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jichang.mp3"
         },
         {
           "id": "l15p3-v-s7",
@@ -267,7 +266,7 @@
           "pinyin": "jiē",
           "wordClass": "v.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jie.mp3"
         },
         {
           "id": "l15p3-v-s8",
@@ -278,7 +277,7 @@
           "pinyin": "zhù",
           "wordClass": "v.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zhu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/zhu.mp3"
         },
         {
           "id": "l15p3-v-s9",
@@ -289,7 +288,7 @@
           "pinyin": "zǎo",
           "wordClass": "adj.",
           "vocabNumber": 16,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/zao.mp3"
         },
         {
           "id": "l15p3-v-s10",
@@ -300,7 +299,7 @@
           "pinyin": "nà",
           "wordClass": "conj.",
           "vocabNumber": 17,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/na.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/na.mp3"
         }
       ]
     },
@@ -319,7 +318,7 @@
           "text_translation_ru": "Аэропорт Дасин",
           "pinyin": "Dàxīng Jīchǎng",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/daxingjichang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/daxingjichang.mp3"
         }
       ]
     },

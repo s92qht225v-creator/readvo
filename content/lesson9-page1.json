@@ -126,7 +126,7 @@
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ беседуют.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-9-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -143,7 +143,7 @@
           "text_translation_ru": "Перед школой есть кинотеатр.",
           "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dialogue1.mp3"
         },
         {
           "id": "l9p1-t1-s2",
@@ -153,7 +153,7 @@
           "text_translation_ru": "Верно. Давай вечером сходим в тот кинотеатр посмотреть фильм.",
           "pinyin": "Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dialogue2.mp3"
         },
         {
           "id": "l9p1-t1-s3",
@@ -163,7 +163,7 @@
           "text_translation_ru": "Хорошо! Давай встретимся в семь у кинотеатра, ладно?",
           "pinyin": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dialogue3.mp3"
         },
         {
           "id": "l9p1-t1-s4",
@@ -180,7 +180,7 @@
             "translation": "\"那个\" og'zaki nutqda \"nèige\" deb ham aytiladi.",
             "translation_ru": "«那个» в разговорной речи также произносится как «nèige»."
           },
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dialogue4.mp3"
         }
       ]
     },
@@ -190,7 +190,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%209%202.mp3",
       "sentences": [
         {
           "id": "l9p1-v-s1",
@@ -201,7 +200,7 @@
           "pinyin": "qiánbian",
           "wordClass": "n.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/qianbian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/qianbian.mp3"
         },
         {
           "id": "l9p1-v-s2",
@@ -212,7 +211,7 @@
           "pinyin": "bian/biān",
           "wordClass": "suf./n.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/bianbian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/bianbian.mp3"
         },
         {
           "id": "l9p1-v-s3",
@@ -223,7 +222,7 @@
           "pinyin": "jiā",
           "wordClass": "m.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/jia.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/jia.mp3"
         },
         {
           "id": "l9p1-v-s4",
@@ -234,7 +233,7 @@
           "pinyin": "nàge",
           "wordClass": "pron.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/nage.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/nage.mp3"
         },
         {
           "id": "l9p1-v-s5",
@@ -245,7 +244,7 @@
           "pinyin": "wàibian",
           "wordClass": "n.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/waibian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/waibian.mp3"
         }
       ]
     },

@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-2-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Ты всё ещё учишься в университете?",
           "pinyin": "Nǐ hái zài dú dàxué ma?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/dialogue1.mp3"
         },
         {
           "id": "l11p2-t2-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Да, я учусь в университете, всё ещё студент.",
           "pinyin": "Duì, wǒ dú dàxué ne, hái shì dàxuéshēng.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/dialogue2.mp3"
         },
         {
           "id": "l11p2-t2-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Вы заняты учёбой?",
           "pinyin": "Nǐmen xuéxí máng bu máng?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/dialogue3.mp3"
         },
         {
           "id": "l11p2-t2-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Очень заняты, я изучаю медицину, у нас очень много занятий.",
           "pinyin": "Fēicháng máng, wǒ xué yī, wǒmen de kè hěn duō.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/dialogue4.mp3"
         }
       ]
     },
@@ -146,7 +146,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%204.mp3",
       "sentences": [
         {
           "id": "l11p2-v-s1",
@@ -157,7 +156,7 @@
           "pinyin": "zài",
           "wordClass": "adv.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/zai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/zai.mp3"
         },
         {
           "id": "l11p2-v-s2",
@@ -168,7 +167,7 @@
           "pinyin": "dú",
           "wordClass": "v.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/du.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/du.mp3"
         },
         {
           "id": "l11p2-v-s3",
@@ -179,7 +178,7 @@
           "pinyin": "dàxué",
           "wordClass": "n.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/daxue.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/daxue.mp3"
         },
         {
           "id": "l11p2-v-s4",
@@ -190,7 +189,7 @@
           "pinyin": "dàxuéshēng",
           "wordClass": "n.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/daxuesheng.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/daxuesheng.mp3"
         },
         {
           "id": "l11p2-v-s5",
@@ -201,7 +200,7 @@
           "pinyin": "xué",
           "wordClass": "v.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/xue.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/xue.mp3"
         },
         {
           "id": "l11p2-v-s6",
@@ -212,7 +211,7 @@
           "pinyin": "yī",
           "wordClass": "n.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/yi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/yi.mp3"
         }
       ]
     },

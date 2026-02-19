@@ -126,7 +126,7 @@
       "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ беседуют.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-1.jpg",
       "sentences": [
         {
@@ -138,7 +138,7 @@
           "pinyin": "Yīfēi máng ma?",
           "speaker": "刘明",
           "speakerName": "Liú Míng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/dialogue1.mp3"
         },
         {
           "id": "l4p1-t1-s2",
@@ -149,7 +149,7 @@
           "pinyin": "Tā hěn máng.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/dialogue2.mp3"
         },
         {
           "id": "l4p1-t1-s3",
@@ -160,7 +160,7 @@
           "pinyin": "Tā yǒu duōshao gè xuéshēng?",
           "speaker": "刘明",
           "speakerName": "Liú Míng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/dialogue3.mp3"
         },
         {
           "id": "l4p1-t1-s4",
@@ -171,7 +171,7 @@
           "pinyin": "Tā yǒu èrshí gè xuéshēng.",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/dialogue4.mp3"
         }
       ]
     },
@@ -189,7 +189,7 @@
           "text_translation": "bor, ega bo'lmoq (fe'l)",
           "text_translation_ru": "иметь (гл.)",
           "pinyin": "yǒu",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/you.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/you.mp3"
         },
         {
           "id": "l4p1-v-s2",
@@ -198,7 +198,7 @@
           "text_translation": "qancha, nechta (olmosh)",
           "text_translation_ru": "сколько (мест.)",
           "pinyin": "duōshao",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/duoshao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/duoshao.mp3"
         },
         {
           "id": "l4p1-v-s3",
@@ -207,7 +207,7 @@
           "text_translation": "dona (o'lchov so'zi)",
           "text_translation_ru": "штука (счётное слово)",
           "pinyin": "gè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/ge.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/ge.mp3"
         }
       ]
     },

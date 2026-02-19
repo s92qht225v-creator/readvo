@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "Где мы встретимся?",
           "pinyin": "Wǒmen zài nǎr jiàn ne?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dialogue1.mp3"
         },
         {
           "id": "l8p2-t2-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Давай встретимся перед школьным книжным магазином.",
           "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dialogue2.mp3"
         },
         {
           "id": "l8p2-t2-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Хорошо. Ты сможешь прийти в два часа дня?",
           "pinyin": "Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dialogue3.mp3"
         },
         {
           "id": "l8p2-t2-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Смогу. Я пообедаю в школе.",
           "pinyin": "Wǒ néng dào. Wǒ zài xuéxiào chī wǔfàn.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dialogue4.mp3"
         }
       ]
     },
@@ -151,7 +151,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%204.mp3",
       "sentences": [
         {
           "id": "l8p2-v-s1",
@@ -162,7 +161,7 @@
           "pinyin": "zài",
           "wordClass": "prep.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/zai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/zai.mp3"
         },
         {
           "id": "l8p2-v-s2",
@@ -173,7 +172,7 @@
           "pinyin": "xuéxiào",
           "wordClass": "n.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/xuexiao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/xuexiao.mp3"
         },
         {
           "id": "l8p2-v-s3",
@@ -184,7 +183,7 @@
           "pinyin": "shūdiàn",
           "wordClass": "n.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/shudian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/shudian.mp3"
         },
         {
           "id": "l8p2-v-s4",
@@ -195,7 +194,7 @@
           "pinyin": "qián",
           "wordClass": "n.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/qian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/qian.mp3"
         },
         {
           "id": "l8p2-v-s5",
@@ -206,7 +205,7 @@
           "pinyin": "néng",
           "wordClass": "mod.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/neng.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/neng.mp3"
         },
         {
           "id": "l8p2-v-s6",
@@ -217,7 +216,7 @@
           "pinyin": "dào",
           "wordClass": "v.",
           "vocabNumber": 16,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dao.mp3"
         },
         {
           "id": "l8p2-v-s7",
@@ -228,7 +227,7 @@
           "pinyin": "wǔfàn",
           "wordClass": "n.",
           "vocabNumber": 17,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/wufan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/wufan.mp3"
         }
       ]
     },

@@ -117,7 +117,7 @@
       "contextTranslation_ru": "В дороге Ли Вэнь ищет ресторан, Ван Ифэй звонит ему.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-1-1.jpg",
       "sentences": [
         {
@@ -128,7 +128,7 @@
           "text_translation_ru": "Алло, Ли Вэнь, когда ты сможешь добраться до ресторана?",
           "pinyin": "Wèi, Lǐ Wén, nǐ shénme shíhou néng dào fàndiàn?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/dialogue1.mp3"
         },
         {
           "id": "l11p1-t1-s2",
@@ -138,7 +138,7 @@
           "text_translation_ru": "Ещё не знаю, сейчас ищу. Он за супермаркетом?",
           "pinyin": "Hái bù zhīdào, zhèngzài zhǎo ne. Tā shì bu shì zài chāoshì hòubian?",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/dialogue2.mp3"
         },
         {
           "id": "l11p1-t1-s3",
@@ -148,7 +148,7 @@
           "text_translation_ru": "Да. Ты на машине?",
           "pinyin": "Shì de. Nǐ kāichē méi kāichē?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/dialogue3.mp3"
         },
         {
           "id": "l11p1-t1-s4",
@@ -158,7 +158,7 @@
           "text_translation_ru": "Я не за рулём, еду на машине.",
           "pinyin": "Wǒ méi kāichē, zuò chē ne.",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/dialogue4.mp3"
         }
       ]
     },
@@ -168,7 +168,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%202.mp3",
       "sentences": [
         {
           "id": "l11p1-v-s1",
@@ -179,7 +178,7 @@
           "pinyin": "shíhou",
           "wordClass": "n.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/shihou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/shihou.mp3"
         },
         {
           "id": "l11p1-v-s2",
@@ -190,7 +189,7 @@
           "pinyin": "fàndiàn",
           "wordClass": "n.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/fandian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/fandian.mp3"
         },
         {
           "id": "l11p1-v-s3",
@@ -201,7 +200,7 @@
           "pinyin": "zhīdào",
           "wordClass": "v.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhidao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhidao.mp3"
         },
         {
           "id": "l11p1-v-s4",
@@ -212,7 +211,7 @@
           "pinyin": "zhèngzài",
           "wordClass": "adv.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhengzai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhengzai.mp3"
         },
         {
           "id": "l11p1-v-s5",
@@ -223,7 +222,7 @@
           "pinyin": "zhǎo",
           "wordClass": "v.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhao.mp3"
         },
         {
           "id": "l11p1-v-s6",
@@ -234,7 +233,7 @@
           "pinyin": "kāichē",
           "wordClass": "v.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/kaiche.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/kaiche.mp3"
         },
         {
           "id": "l11p1-v-s7",
@@ -245,7 +244,7 @@
           "pinyin": "chē",
           "wordClass": "n.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/che.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/che.mp3"
         }
       ]
     },

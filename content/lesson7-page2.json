@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-2-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "Днём я хочу пойти в кинотеатр посмотреть фильм, пойдёшь?",
           "pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn diànyǐng, nǐ qù ma?",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dialogue1.mp3"
         },
         {
           "id": "l7p2-t2-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Не хочу идти, днём ещё есть дела.",
           "pinyin": "Wǒ bù xiǎng qù, xiàwǔ hái yǒu shì.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dialogue2.mp3"
         },
         {
           "id": "l7p2-t2-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Хорошо. А завтра?",
           "pinyin": "Hǎo de. Míngtiān ne?",
           "speaker": "李　文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dialogue3.mp3"
         },
         {
           "id": "l7p2-t2-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Завтра днём у меня ещё занятия в два часа, заканчиваются в полпятого.",
           "pinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne, sì diǎn bàn xiàkè.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dialogue4.mp3"
         }
       ]
     },
@@ -151,7 +151,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%207%204.mp3",
       "sentences": [
         {
           "id": "l7p2-v-s1",
@@ -162,7 +161,7 @@
           "pinyin": "diànyǐngyuàn",
           "wordClass": "n.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianyingyuan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dianyingyuan.mp3"
         },
         {
           "id": "l7p2-v-s2",
@@ -173,7 +172,7 @@
           "pinyin": "kàn",
           "wordClass": "v.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/kan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/kan.mp3"
         },
         {
           "id": "l7p2-v-s3",
@@ -184,7 +183,7 @@
           "pinyin": "diànyǐng",
           "wordClass": "n.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianying.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dianying.mp3"
         },
         {
           "id": "l7p2-v-s4",
@@ -195,7 +194,7 @@
           "pinyin": "shì",
           "wordClass": "n.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/shi.mp3"
         },
         {
           "id": "l7p2-v-s5",
@@ -206,7 +205,7 @@
           "pinyin": "shàngkè",
           "wordClass": "v.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shangke.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/shangke.mp3"
         },
         {
           "id": "l7p2-v-s6",
@@ -217,7 +216,7 @@
           "pinyin": "ne",
           "wordClass": "part.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ne.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/ne.mp3"
         },
         {
           "id": "l7p2-v-s7",
@@ -228,7 +227,7 @@
           "pinyin": "bàn",
           "wordClass": "num.",
           "vocabNumber": 16,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ban.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/ban.mp3"
         },
         {
           "id": "l7p2-v-s8",
@@ -239,7 +238,7 @@
           "pinyin": "xiàkè",
           "wordClass": "v.",
           "vocabNumber": 17,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/xiake.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/xiake.mp3"
         }
       ]
     },

@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-15-2-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Куда вы все хотите поехать?",
           "pinyin": "Nǐmen dōu xiǎng qù nǎr?",
           "speaker": "李文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/dialogue1.mp3"
         },
         {
           "id": "l15p2-t2-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "В прошлом году мы с парнем ездили в Сиань, в этом году я хочу поехать в Пекин.",
           "pinyin": "Qùnián wǒ hé nánpéngyou qù le Xī'ān, jīnnián wǒ xiǎng qù Běijīng.",
           "speaker": "安妮",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/dialogue2.mp3"
         },
         {
           "id": "l15p2-t2-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Несколько лет назад я ездил в Сиань, было очень интересно. В этом году я тоже хочу поехать в Пекин.",
           "pinyin": "Qián jǐ nián wǒ qù le Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/dialogue3.mp3"
         },
         {
           "id": "l15p2-t2-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Мы с учителем Ваном оба из Пекина, Пекин очень красивый.",
           "pinyin": "Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
           "speaker": "李文",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/dialogue4.mp3"
         }
       ]
     },
@@ -170,7 +170,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2015%204.mp3",
       "sentences": [
         {
           "id": "l15p2-v-s1",
@@ -181,7 +180,7 @@
           "pinyin": "qùnián",
           "wordClass": "n.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/qunian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/qunian.mp3"
         },
         {
           "id": "l15p2-v-s2",
@@ -192,7 +191,7 @@
           "pinyin": "nánpéngyou",
           "wordClass": "n.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/nanpengyou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/nanpengyou.mp3"
         },
         {
           "id": "l15p2-v-s3",
@@ -203,7 +202,7 @@
           "pinyin": "jǐ",
           "wordClass": "num.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/ji.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/ji.mp3"
         },
         {
           "id": "l15p2-v-s4",
@@ -214,7 +213,7 @@
           "pinyin": "nián",
           "wordClass": "n.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/nian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/nian.mp3"
         },
         {
           "id": "l15p2-v-s5",
@@ -225,7 +224,7 @@
           "pinyin": "hǎowánr",
           "wordClass": "adj.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/haowanr.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/haowanr.mp3"
         }
       ]
     },
@@ -244,7 +243,7 @@
           "text_translation_ru": "Сиань (название города)",
           "pinyin": "Xī'ān",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/xian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/xian.mp3"
         },
         {
           "id": "l15p2-vp-s2",
@@ -254,7 +253,7 @@
           "text_translation_ru": "Пекин (название города)",
           "pinyin": "Běijīng",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/beijing.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/beijing.mp3"
         }
       ]
     }

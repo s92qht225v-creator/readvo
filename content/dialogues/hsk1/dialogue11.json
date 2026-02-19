@@ -1,0 +1,129 @@
+{
+  "id": "hsk1-dialogue11",
+  "title": "你想吃什么？",
+  "pinyin": "Nǐ xiǎng chī shénme?",
+  "titleTranslation": "Nima yegingiz keladi?",
+  "titleTranslation_ru": "Что хочешь поесть?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d11-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d11-s1",
+          "text_original": "你饿吗？",
+          "pinyin": "Nǐ è ma?",
+          "text_translation": "Qorningiz ochmi?",
+          "text_translation_ru": "Ты голоден?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "è", "t": "och", "tr": "голодный" },
+            { "i": [2, 3], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d11-s2",
+          "text_original": "有一点。",
+          "pinyin": "Yǒu yìdiǎn.",
+          "text_translation": "Biroz.",
+          "text_translation_ru": "Немного.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [1, 3], "p": "yìdiǎn", "t": "biroz", "tr": "немного", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d11-s3",
+          "text_original": "你想吃什么？",
+          "pinyin": "Nǐ xiǎng chī shénme?",
+          "text_translation": "Nima yegingiz keladi?",
+          "text_translation_ru": "Что хочешь поесть?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть", "h": 1, "l": 9 },
+            { "i": [2, 3], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 12 },
+            { "i": [3, 5], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d11-s4",
+          "text_original": "我想吃面条。你呢？",
+          "pinyin": "Wǒ xiǎng chī miàntiáo. Nǐ ne?",
+          "text_translation": "Men lag'mon yegim keladi. Siz-chi?",
+          "text_translation_ru": "Я хочу лапшу. А ты?",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть", "h": 1, "l": 9 },
+            { "i": [2, 3], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 12 },
+            { "i": [3, 5], "p": "miàntiáo", "t": "lag'mon", "tr": "лапша" },
+            { "i": [6, 7], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [7, 8], "p": "ne", "t": "-chi", "tr": "а (ты)?", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d11-s5",
+          "text_original": "我想吃米饭。你喝什么？",
+          "pinyin": "Wǒ xiǎng chī mǐfàn. Nǐ hē shénme?",
+          "text_translation": "Men guruch yegim keladi. Nima ichasiz?",
+          "text_translation_ru": "Я хочу рис. Что будешь пить?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть", "h": 1, "l": 9 },
+            { "i": [2, 3], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 12 },
+            { "i": [3, 5], "p": "mǐfàn", "t": "guruch", "tr": "рис", "h": 1, "l": 12 },
+            { "i": [6, 7], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [7, 8], "p": "hē", "t": "ichmoq", "tr": "пить", "h": 1, "l": 12 },
+            { "i": [8, 10], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d11-s6",
+          "text_original": "我喝可乐。",
+          "pinyin": "Wǒ hē kělè.",
+          "text_translation": "Men kola ichaman.",
+          "text_translation_ru": "Я буду колу.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "hē", "t": "ichmoq", "tr": "пить", "h": 1, "l": 12 },
+            { "i": [2, 4], "p": "kělè", "t": "kola", "tr": "кола" }
+          ]
+        },
+        {
+          "id": "d11-s7",
+          "text_original": "我也喝可乐。",
+          "pinyin": "Wǒ yě hē kělè.",
+          "text_translation": "Men ham kola ichaman.",
+          "text_translation_ru": "Я тоже колу.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
+            { "i": [2, 3], "p": "hē", "t": "ichmoq", "tr": "пить", "h": 1, "l": 12 },
+            { "i": [3, 5], "p": "kělè", "t": "kola", "tr": "кола" }
+          ]
+        },
+        {
+          "id": "d11-s8",
+          "text_original": "好啊。",
+          "pinyin": "Hǎo a.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "a", "t": "(undov)", "tr": "(частица)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

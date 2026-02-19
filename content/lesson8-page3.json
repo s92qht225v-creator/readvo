@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-8-3-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "Сяо Ху, ты поел?",
           "pinyin": "Xiǎo Hú, chī fàn le ma?",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue1.mp3"
         },
         {
           "id": "l8p3-t3-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Ещё нет, в большой больнице много пациентов.",
           "pinyin": "Hái méi ne, dà yīyuàn lǐ bìngrén duō.",
           "speaker": "胡医生",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue2.mp3"
         },
         {
           "id": "l8p3-t3-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Твой папа тоже врач?",
           "pinyin": "Nǐ bàba yě shì yīshēng ba?",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue3.mp3"
         },
         {
           "id": "l8p3-t3-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Да, мой папа тоже работает в больнице.",
           "pinyin": "Shì, wǒ bàba yě zài yīyuàn gōngzuò.",
           "speaker": "胡医生",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue4.mp3"
         },
         {
           "id": "l8p3-t3-s5",
@@ -151,7 +151,7 @@
           "text_translation_ru": "Твой папа тоже в этой больнице?",
           "pinyin": "Nǐ bàba yě zài zhège yīyuàn ma?",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue5.mp3"
         },
         {
           "id": "l8p3-t3-s6",
@@ -161,7 +161,7 @@
           "text_translation_ru": "Нет, он в той маленькой больнице впереди.",
           "pinyin": "Bù shì, tā zài qiánbian nàge xiǎo yīyuàn.",
           "speaker": "胡医生",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/dialogue6.mp3"
         }
       ],
       "tip": {
@@ -177,7 +177,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%208%206.mp3",
       "sentences": [
         {
           "id": "l8p3-v-s1",
@@ -188,7 +187,7 @@
           "pinyin": "fàn",
           "wordClass": "n.",
           "vocabNumber": 18,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/fan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/fan.mp3"
         },
         {
           "id": "l8p3-v-s2",
@@ -199,7 +198,7 @@
           "pinyin": "dà",
           "wordClass": "adj.",
           "vocabNumber": 19,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/da.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/da.mp3"
         },
         {
           "id": "l8p3-v-s3",
@@ -210,7 +209,7 @@
           "pinyin": "bìngrén",
           "wordClass": "n.",
           "vocabNumber": 20,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/bingren.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/bingren.mp3"
         },
         {
           "id": "l8p3-v-s4",
@@ -221,7 +220,7 @@
           "pinyin": "duō",
           "wordClass": "adj.",
           "vocabNumber": 21,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/duo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/duo.mp3"
         },
         {
           "id": "l8p3-v-s5",
@@ -232,7 +231,7 @@
           "pinyin": "yīshēng",
           "wordClass": "n.",
           "vocabNumber": 22,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/yisheng.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/yisheng.mp3"
         },
         {
           "id": "l8p3-v-s6",
@@ -243,7 +242,7 @@
           "pinyin": "gōngzuò",
           "wordClass": "v./n.",
           "vocabNumber": 23,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/gongzuo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/gongzuo.mp3"
         }
       ]
     },
@@ -263,7 +262,7 @@
           "pinyin": "Hú yīshēng",
           "wordClass": "pn.",
           "vocabNumber": "",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/huyisheng.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/huyisheng.mp3"
         }
       ]
     },

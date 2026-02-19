@@ -14,7 +14,7 @@
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-2-3-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -32,7 +32,7 @@
           "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/dialogue1.mp3"
         },
         {
           "id": "l2p3-t3-s2",
@@ -43,7 +43,7 @@
           "pinyin": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/dialogue2.mp3"
         },
         {
           "id": "l2p3-t3-s3",
@@ -54,7 +54,7 @@
           "pinyin": "Hěn gāoxìng rènshi nǐ.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/dialogue3.mp3"
         },
         {
           "id": "l2p3-t3-s4",
@@ -65,7 +65,7 @@
           "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/dialogue4.mp3"
         }
       ]
     },
@@ -75,7 +75,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "/audio/l2p3-vocab.mp3",
       "sentences": [
         {
           "id": "l2p3-v-s1",
@@ -84,7 +83,7 @@
           "text_translation": "juda (ravish)",
           "text_translation_ru": "очень (наречие)",
           "pinyin": "hěn",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/hen.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/hen.mp3"
         },
         {
           "id": "l2p3-v-s2",
@@ -93,7 +92,7 @@
           "text_translation": "xursand, baxtli (sifat)",
           "text_translation_ru": "рад, счастливый (прил.)",
           "pinyin": "gāoxìng",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/gaoxing.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/gaoxing.mp3"
         },
         {
           "id": "l2p3-v-s3",
@@ -102,7 +101,7 @@
           "text_translation": "bilmoq, tanishmoq (fe'l)",
           "text_translation_ru": "знать, познакомиться (глагол)",
           "pinyin": "rènshi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/renshi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/renshi.mp3"
         },
         {
           "id": "l2p3-v-s4",
@@ -111,7 +110,7 @@
           "text_translation": "ham (ravish)",
           "text_translation_ru": "тоже (наречие)",
           "pinyin": "yě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/ye.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/ye.mp3"
         }
       ]
     },
@@ -121,7 +120,7 @@
       "heading": "",
       "subheading": "Tez aytishni takrorlang",
       "subheading_ru": "Повторите скороговорку",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/tongue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/tongue.mp3",
       "sentences": [
         {
           "id": "l2p3-tt-s2",

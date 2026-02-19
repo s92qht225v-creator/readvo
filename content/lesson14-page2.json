@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-2-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Вы уже умеете говорить по-китайски, а писать иероглифы тоже научились?",
           "pinyin": "Nǐmen huì shuō Hànyǔ le, yě huì xiě Hànzì le ma?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue1.mp3"
         },
         {
           "id": "l14p2-t2-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Мы все уже умеем писать.",
           "pinyin": "Wǒmen dōu huì xiě le.",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue2.mp3"
         },
         {
           "id": "l14p2-t2-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Учитель, я не слышу.",
           "pinyin": "Lǎoshī, wǒ tīng bú jiàn.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue3.mp3"
         },
         {
           "id": "l14p2-t2-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Пожалуйста, не разговаривайте! Послушайте вопрос учителя: какие иероглифы вы уже умеете писать?",
           "pinyin": "Qǐng dàjiā búyào shuōhuà! Qǐng tīng lǎoshī de wèntí: Nǐmen dōu huì xiě nǎxiē Hànzì le?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue4.mp3"
         },
         {
           "id": "l14p2-t2-s5",
@@ -146,7 +146,7 @@
           "text_translation_ru": "Я уже умею писать эти иероглифы, посмотрите!",
           "pinyin": "Wǒ huì xiě zhèxiē zì le, nín kàn!",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dialogue5.mp3"
         }
       ]
     },
@@ -180,7 +180,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%204.mp3",
       "sentences": [
         {
           "id": "l14p2-v-s1",
@@ -191,7 +190,7 @@
           "pinyin": "xiě",
           "wordClass": "v.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/xie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/xie.mp3"
         },
         {
           "id": "l14p2-v-s2",
@@ -202,7 +201,7 @@
           "pinyin": "dōu",
           "wordClass": "adv.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dou.mp3"
         },
         {
           "id": "l14p2-v-s3",
@@ -213,7 +212,7 @@
           "pinyin": "tīngjiàn",
           "wordClass": "v.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/tingjian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/tingjian.mp3"
         },
         {
           "id": "l14p2-v-s4",
@@ -224,7 +223,7 @@
           "pinyin": "búyào",
           "wordClass": "adv.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/buyao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/buyao.mp3"
         },
         {
           "id": "l14p2-v-s5",
@@ -235,7 +234,7 @@
           "pinyin": "shuōhuà",
           "wordClass": "v.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/shuohua.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/shuohua.mp3"
         },
         {
           "id": "l14p2-v-s6",
@@ -246,7 +245,7 @@
           "pinyin": "tīng",
           "wordClass": "v.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/ting.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/ting.mp3"
         },
         {
           "id": "l14p2-v-s7",
@@ -257,7 +256,7 @@
           "pinyin": "nǎxiē",
           "wordClass": "pron.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/naxie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/naxie.mp3"
         },
         {
           "id": "l14p2-v-s8",
@@ -268,7 +267,7 @@
           "pinyin": "zì",
           "wordClass": "n.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/zi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/zi.mp3"
         }
       ]
     },
@@ -287,7 +286,7 @@
           "text_translation_ru": "китайский язык",
           "pinyin": "Hànyǔ",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/hanyu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/hanyu.mp3"
         },
         {
           "id": "l14p2-vp-s2",
@@ -297,7 +296,7 @@
           "text_translation_ru": "китайский иероглиф",
           "pinyin": "Hànzì",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/hanzi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/hanzi.mp3"
         }
       ]
     },

@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-2-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Мадам, садитесь, пожалуйста! Что будете пить?",
           "pinyin": "Nǚshì, qǐng zuò! Nín hē shénme?",
           "speaker": "服务员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/dialogue1.mp3"
         },
         {
           "id": "l13p2-t2-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Я посмотрю. Дайте мне, пожалуйста, стакан молока.",
           "pinyin": "Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi.",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/dialogue2.mp3"
         },
         {
           "id": "l13p2-t2-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Хорошо. Что-нибудь ещё?",
           "pinyin": "Hǎo de. Nín hái yào shénme?",
           "speaker": "服务员",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/dialogue3.mp3"
         },
         {
           "id": "l13p2-t2-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Я ещё не завтракала, ещё возьму этот хлеб и яйцо.",
           "pinyin": "Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/dialogue4.mp3"
         }
       ]
     },
@@ -170,7 +170,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%204.mp3",
       "sentences": [
         {
           "id": "l13p2-v-s1",
@@ -181,7 +180,7 @@
           "pinyin": "fúwùyuán",
           "wordClass": "n.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/fuwuyuan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/fuwuyuan.mp3"
         },
         {
           "id": "l13p2-v-s2",
@@ -192,7 +191,7 @@
           "pinyin": "nǚshì",
           "wordClass": "n.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/nushi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/nushi.mp3"
         },
         {
           "id": "l13p2-v-s3",
@@ -203,7 +202,7 @@
           "pinyin": "qǐng",
           "wordClass": "v.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/qing.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/qing.mp3"
         },
         {
           "id": "l13p2-v-s4",
@@ -214,7 +213,7 @@
           "pinyin": "zuò",
           "wordClass": "v.",
           "vocabNumber": 10,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zuo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/zuo.mp3"
         },
         {
           "id": "l13p2-v-s5",
@@ -225,7 +224,7 @@
           "pinyin": "gěi",
           "wordClass": "v.",
           "vocabNumber": 11,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/gei.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/gei.mp3"
         },
         {
           "id": "l13p2-v-s6",
@@ -236,7 +235,7 @@
           "pinyin": "bēi",
           "wordClass": "n.",
           "vocabNumber": 12,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/bei.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/bei.mp3"
         },
         {
           "id": "l13p2-v-s7",
@@ -247,7 +246,7 @@
           "pinyin": "yào",
           "wordClass": "v.",
           "vocabNumber": 13,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/yao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/yao.mp3"
         },
         {
           "id": "l13p2-v-s8",
@@ -258,7 +257,7 @@
           "pinyin": "zǎofàn",
           "wordClass": "n.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zaofan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/zaofan.mp3"
         },
         {
           "id": "l13p2-v-s9",
@@ -269,7 +268,7 @@
           "pinyin": "zhège",
           "wordClass": "pron.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zhege.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/zhege.mp3"
         },
         {
           "id": "l13p2-v-s10",
@@ -280,7 +279,7 @@
           "pinyin": "miànbāo",
           "wordClass": "n.",
           "vocabNumber": 16,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/mianbao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/mianbao.mp3"
         },
         {
           "id": "l13p2-v-s11",
@@ -291,7 +290,7 @@
           "pinyin": "jīdàn",
           "wordClass": "n.",
           "vocabNumber": 17,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/jidan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/jidan.mp3"
         }
       ]
     },

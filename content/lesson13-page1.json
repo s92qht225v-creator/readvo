@@ -207,7 +207,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-13-1-1.jpg",
       "sentences": [
         {
@@ -218,7 +218,7 @@
           "text_translation_ru": "Учитель Ван, можно задать вам ещё один вопрос?",
           "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dialogue1.mp3"
         },
         {
           "id": "l13p1-t1-s2",
@@ -228,7 +228,7 @@
           "text_translation_ru": "Можно. Какой у тебя вопрос?",
           "pinyin": "Kěyǐ. Nǐ yǒu shénme wèntí?",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dialogue2.mp3"
         },
         {
           "id": "l13p1-t1-s3",
@@ -238,7 +238,7 @@
           "text_translation_ru": "В том магазинчике продаются телефоны?",
           "pinyin": "Nàge xiǎo diàn mài bu mài shǒujī?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dialogue3.mp3"
         },
         {
           "id": "l13p1-t1-s4",
@@ -248,7 +248,7 @@
           "text_translation_ru": "Я не знаю. Ты можешь позвонить и спросить.",
           "pinyin": "Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dialogue4.mp3"
         }
       ]
     },
@@ -282,7 +282,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2013%202.mp3",
       "sentences": [
         {
           "id": "l13p1-v-s1",
@@ -293,7 +292,7 @@
           "pinyin": "kěyǐ",
           "wordClass": "mod.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/keyi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/keyi.mp3"
         },
         {
           "id": "l13p1-v-s2",
@@ -304,7 +303,7 @@
           "pinyin": "zài",
           "wordClass": "adv.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/zai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/zai.mp3"
         },
         {
           "id": "l13p1-v-s3",
@@ -315,7 +314,7 @@
           "pinyin": "wèntí",
           "wordClass": "n.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/wenti.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/wenti.mp3"
         },
         {
           "id": "l13p1-v-s4",
@@ -326,7 +325,7 @@
           "pinyin": "mài",
           "wordClass": "v.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/mai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/mai.mp3"
         },
         {
           "id": "l13p1-v-s5",
@@ -336,7 +335,7 @@
           "text_translation_ru": "звонить по телефону",
           "pinyin": "dǎ diànhuà",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dadianhua.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dadianhua.mp3"
         },
         {
           "id": "l13p1-v-s6",
@@ -347,7 +346,7 @@
           "pinyin": "yíxià",
           "wordClass": "num.-m.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/yixia.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/yixia.mp3"
         }
       ]
     },

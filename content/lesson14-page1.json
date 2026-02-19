@@ -207,7 +207,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-14-1-1.jpg",
       "sentences": [
         {
@@ -218,7 +218,7 @@
           "text_translation_ru": "Вы видели учителя Вана после посадки на поезд?",
           "pinyin": "Nǐmen shàng huǒchē hòu kànjiàn Wáng lǎoshī le ma?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/dialogue1.mp3"
         },
         {
           "id": "l14p1-t1-s2",
@@ -228,7 +228,7 @@
           "text_translation_ru": "Не видели. После отправления поезда в полдень некоторые читали книги, а некоторые уснули.",
           "pinyin": "Méi kànjiàn. Zhōngwǔ chē kāi hòu, yǒuxiē rén zài kàn shū, yǒuxiē rén shuìjiào le.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/dialogue2.mp3"
         },
         {
           "id": "l14p1-t1-s3",
@@ -238,7 +238,7 @@
           "text_translation_ru": "А ты?",
           "pinyin": "Nǐ ne?",
           "speaker": "白家月",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/dialogue3.mp3"
         },
         {
           "id": "l14p1-t1-s4",
@@ -248,7 +248,7 @@
           "text_translation_ru": "Я посмотрел фильм.",
           "pinyin": "Wǒ kànle yí gè diànyǐng.",
           "speaker": "陈天中",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/dialogue4.mp3"
         }
       ],
       "tip": {
@@ -288,7 +288,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2014%202.mp3",
       "sentences": [
         {
           "id": "l14p1-v-s1",
@@ -299,7 +298,7 @@
           "pinyin": "shàng",
           "wordClass": "v.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/shang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/shang.mp3"
         },
         {
           "id": "l14p1-v-s2",
@@ -310,7 +309,7 @@
           "pinyin": "huǒchē",
           "wordClass": "n.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/huoche.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/huoche.mp3"
         },
         {
           "id": "l14p1-v-s3",
@@ -321,7 +320,7 @@
           "pinyin": "zhōngwǔ",
           "wordClass": "n.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/zhongwu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/zhongwu.mp3"
         },
         {
           "id": "l14p1-v-s4",
@@ -332,7 +331,7 @@
           "pinyin": "kāi",
           "wordClass": "v.",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/kai.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/kai.mp3"
         },
         {
           "id": "l14p1-v-s5",
@@ -343,7 +342,7 @@
           "pinyin": "yǒuxiē",
           "wordClass": "pron.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youxie.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/youxie.mp3"
         },
         {
           "id": "l14p1-v-s6",
@@ -354,7 +353,7 @@
           "pinyin": "yǒude",
           "wordClass": "pron.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youde.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/youde.mp3"
         },
         {
           "id": "l14p1-v-s7",
@@ -365,7 +364,7 @@
           "pinyin": "le",
           "wordClass": "part.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/le.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/le.mp3"
         }
       ]
     },

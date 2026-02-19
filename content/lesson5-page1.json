@@ -114,7 +114,7 @@
       "contextTranslation_ru": "Дома Лю Мин и Ван Исюэ болтают.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-5-1-1.jpg",
       "tip": {
         "label": "Xiao Yu dan maslahat",
@@ -132,7 +132,7 @@
           "pinyin": "Jīntiān jǐ hào?",
           "speaker": "王一雪",
           "speakerName": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/dialogue1.mp3"
         },
         {
           "id": "l5p1-t1-s2",
@@ -143,7 +143,7 @@
           "pinyin": "Jīntiān jiǔ yuè bā hào.",
           "speaker": "刘明",
           "speakerName": "刘明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/dialogue2.mp3"
         },
         {
           "id": "l5p1-t1-s3",
@@ -154,7 +154,7 @@
           "pinyin": "Xīngqī jǐ?",
           "speaker": "王一雪",
           "speakerName": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/dialogue3.mp3"
         },
         {
           "id": "l5p1-t1-s4",
@@ -165,7 +165,7 @@
           "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
           "speaker": "刘明",
           "speakerName": "刘明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/dialogue4.mp3"
         }
       ]
     },
@@ -188,7 +188,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%205%202.mp3",
       "sentences": [
         {
           "id": "l5p1-v-s1",
@@ -197,7 +196,7 @@
           "text_translation": "bugun (ot)",
           "text_translation_ru": "сегодня (сущ.)",
           "pinyin": "jīntiān",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/jintian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/jintian.mp3"
         },
         {
           "id": "l5p1-v-s2",
@@ -206,7 +205,7 @@
           "text_translation": "sana (o'lchov so'zi)",
           "text_translation_ru": "число (счётн. сл.)",
           "pinyin": "hào",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/hao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/hao.mp3"
         },
         {
           "id": "l5p1-v-s3",
@@ -215,7 +214,7 @@
           "text_translation": "oy (ot)",
           "text_translation_ru": "месяц (сущ.)",
           "pinyin": "yuè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/yue.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/yue.mp3"
         },
         {
           "id": "l5p1-v-s4",
@@ -224,7 +223,7 @@
           "text_translation": "kun (o'lchov so'zi)",
           "text_translation_ru": "день (счётн. сл.)",
           "pinyin": "rì",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/ri.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/ri.mp3"
         },
         {
           "id": "l5p1-v-s5",
@@ -233,7 +232,7 @@
           "text_translation": "hafta (ot)",
           "text_translation_ru": "неделя (сущ.)",
           "pinyin": "xīngqī",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqi.mp3"
         },
         {
           "id": "l5p1-v-s6",
@@ -242,7 +241,7 @@
           "text_translation": "yakshanba (ot)",
           "text_translation_ru": "воскресенье (сущ.)",
           "pinyin": "Xīngqīrì",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqiri.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqiri.mp3"
         },
         {
           "id": "l5p1-v-s7",
@@ -251,7 +250,7 @@
           "text_translation": "yakshanba (ot)",
           "text_translation_ru": "воскресенье (сущ.)",
           "pinyin": "Xīngqītiān",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqitian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqitian.mp3"
         },
         {
           "id": "l5p1-v-s8",
@@ -260,7 +259,7 @@
           "text_translation": "dam olmoq (fe'l)",
           "text_translation_ru": "отдыхать (гл.)",
           "pinyin": "xiūxi",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xiuxi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xiuxi.mp3"
         }
       ]
     },

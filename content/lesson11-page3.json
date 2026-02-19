@@ -95,7 +95,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-11-3-1.jpg",
       "sentences": [
         {
@@ -106,7 +106,7 @@
           "text_translation_ru": "Братик встал или нет?",
           "pinyin": "Dìdi qǐchuáng méi qǐchuáng ne?",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue1.mp3"
         },
         {
           "id": "l11p3-t3-s2",
@@ -116,7 +116,7 @@
           "text_translation_ru": "Ещё не встал, всё ещё спит.",
           "pinyin": "Méi qǐchuáng ne, hái zài shuìjiào.",
           "speaker": "刘小雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue2.mp3"
         },
         {
           "id": "l11p3-t3-s3",
@@ -126,7 +126,7 @@
           "text_translation_ru": "Всё ещё спит? Он сегодня пойдёт туда или нет?",
           "pinyin": "Hái shuì ne? Tā jīntiān qù bu qù nàlǐ?",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue3.mp3"
         },
         {
           "id": "l11p3-t3-s4",
@@ -136,7 +136,7 @@
           "text_translation_ru": "Куда?",
           "pinyin": "Qù nǎlǐ?",
           "speaker": "刘小雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue4.mp3"
         },
         {
           "id": "l11p3-t3-s5",
@@ -146,7 +146,7 @@
           "text_translation_ru": "В супермаркет.",
           "pinyin": "Qù chāoshì.",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue5.mp3"
         },
         {
           "id": "l11p3-t3-s6",
@@ -156,7 +156,7 @@
           "text_translation_ru": "Я вчера его спрашивала, он мне сказал, что не пойдёт, сегодня хочет поиграть с друзьями.",
           "pinyin": "Wǒ zuótiān wèn tā, tā duì wǒ shuō, tā bú qù, tā jīntiān yào hé xiǎopéngyou wán.",
           "speaker": "刘小雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dialogue6.mp3"
         }
       ]
     },
@@ -166,7 +166,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2011%206.mp3",
       "sentences": [
         {
           "id": "l11p3-v-s1",
@@ -177,7 +176,7 @@
           "pinyin": "dìdi",
           "wordClass": "n.",
           "vocabNumber": 14,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/didi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/didi.mp3"
         },
         {
           "id": "l11p3-v-s2",
@@ -188,7 +187,7 @@
           "pinyin": "qǐchuáng",
           "wordClass": "v.",
           "vocabNumber": 15,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/qichuang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/qichuang.mp3"
         },
         {
           "id": "l11p3-v-s3",
@@ -199,7 +198,7 @@
           "pinyin": "shuìjiào",
           "wordClass": "v.",
           "vocabNumber": 16,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuijiao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shuijiao.mp3"
         },
         {
           "id": "l11p3-v-s4",
@@ -210,7 +209,7 @@
           "pinyin": "shuì",
           "wordClass": "v.",
           "vocabNumber": 17,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shui.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shui.mp3"
         },
         {
           "id": "l11p3-v-s5",
@@ -221,7 +220,7 @@
           "pinyin": "nàlǐ",
           "wordClass": "pron.",
           "vocabNumber": 18,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/nali.mp3"
         },
         {
           "id": "l11p3-v-s6",
@@ -232,7 +231,7 @@
           "pinyin": "nǎlǐ",
           "wordClass": "pron.",
           "vocabNumber": 19,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/nali.mp3"
         },
         {
           "id": "l11p3-v-s7",
@@ -243,7 +242,7 @@
           "pinyin": "zuótiān",
           "wordClass": "n.",
           "vocabNumber": 20,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/zuotian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/zuotian.mp3"
         },
         {
           "id": "l11p3-v-s8",
@@ -254,7 +253,7 @@
           "pinyin": "wèn",
           "wordClass": "v.",
           "vocabNumber": 21,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/wen.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/wen.mp3"
         },
         {
           "id": "l11p3-v-s9",
@@ -265,7 +264,7 @@
           "pinyin": "duì",
           "wordClass": "prep.",
           "vocabNumber": 22,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/dui.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/dui.mp3"
         },
         {
           "id": "l11p3-v-s10",
@@ -276,7 +275,7 @@
           "pinyin": "shuō",
           "wordClass": "v.",
           "vocabNumber": 23,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shuo.mp3"
         },
         {
           "id": "l11p3-v-s11",
@@ -287,7 +286,7 @@
           "pinyin": "yào",
           "wordClass": "mod.",
           "vocabNumber": 24,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/yao.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/yao.mp3"
         },
         {
           "id": "l11p3-v-s12",
@@ -298,7 +297,7 @@
           "pinyin": "xiǎopéngyou",
           "wordClass": "n.",
           "vocabNumber": 25,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/xiaopengyou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/xiaopengyou.mp3"
         }
       ]
     },

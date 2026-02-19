@@ -216,7 +216,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-12-1-1.jpg",
       "sentences": [
         {
@@ -227,7 +227,7 @@
           "text_translation_ru": "Какая сегодня погода?",
           "pinyin": "Jīntiān tiānqì zěnmeyàng?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/dialogue1.mp3"
         },
         {
           "id": "l12p1-t1-s2",
@@ -237,7 +237,7 @@
           "text_translation_ru": "Здесь погода не очень хорошая, пошёл дождь.",
           "pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/dialogue2.mp3"
         },
         {
           "id": "l12p1-t1-s3",
@@ -247,7 +247,7 @@
           "text_translation_ru": "Дождь сильный?",
           "pinyin": "Yǔ dà ma?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/dialogue3.mp3"
         },
         {
           "id": "l12p1-t1-s4",
@@ -257,7 +257,7 @@
           "text_translation_ru": "Немного сильный, мне кажется, очень холодно.",
           "pinyin": "Yǒudiǎnr dà, wǒ juéde hěn lěng.",
           "speaker": "王一飞",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/dialogue4.mp3"
         }
       ]
     },
@@ -267,7 +267,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%2012%202.mp3",
       "sentences": [
         {
           "id": "l12p1-v-s1",
@@ -278,7 +277,7 @@
           "pinyin": "tiānqì",
           "wordClass": "n.",
           "vocabNumber": 1,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/tianqi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/tianqi.mp3"
         },
         {
           "id": "l12p1-v-s2",
@@ -289,7 +288,7 @@
           "pinyin": "zhèlǐ",
           "wordClass": "pron.",
           "vocabNumber": 2,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/zheli.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/zheli.mp3"
         },
         {
           "id": "l12p1-v-s3",
@@ -300,7 +299,7 @@
           "pinyin": "tiān",
           "wordClass": "n.",
           "vocabNumber": 3,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/tian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/tian.mp3"
         },
         {
           "id": "l12p1-v-s4",
@@ -310,7 +309,7 @@
           "text_translation_ru": "идёт дождь",
           "pinyin": "xià yǔ",
           "vocabNumber": 4,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/xiayu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/xiayu.mp3"
         },
         {
           "id": "l12p1-v-s5",
@@ -321,7 +320,7 @@
           "pinyin": "le",
           "wordClass": "part.",
           "vocabNumber": 5,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/le.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/le.mp3"
         },
         {
           "id": "l12p1-v-s6",
@@ -332,7 +331,7 @@
           "pinyin": "yǔ",
           "wordClass": "n.",
           "vocabNumber": 6,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/yu.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/yu.mp3"
         },
         {
           "id": "l12p1-v-s7",
@@ -343,7 +342,7 @@
           "pinyin": "yǒudiǎnr",
           "wordClass": "adv.",
           "vocabNumber": 7,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/youdianr.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/youdianr.mp3"
         },
         {
           "id": "l12p1-v-s8",
@@ -354,7 +353,7 @@
           "pinyin": "juéde",
           "wordClass": "v.",
           "vocabNumber": 8,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/juede.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/juede.mp3"
         },
         {
           "id": "l12p1-v-s9",
@@ -365,7 +364,7 @@
           "pinyin": "lěng",
           "wordClass": "adj.",
           "vocabNumber": 9,
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/leng.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/leng.mp3"
         }
       ]
     },

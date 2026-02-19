@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-2-1.jpg",
       "sentences": [
         {
@@ -112,7 +112,7 @@
           "pinyin": "Wǒ yǒu liǎng gè gēge, nǐ ne?",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/dialogue1.mp3"
         },
         {
           "id": "l4p2-t2-s2",
@@ -123,7 +123,7 @@
           "pinyin": "Wǒ méiyǒu gēge.",
           "speaker": "杨同乐",
           "speakerName": "Yáng Tónglè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/dialogue2.mp3"
         },
         {
           "id": "l4p2-t2-s3",
@@ -134,7 +134,7 @@
           "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
           "speaker": "王一雪",
           "speakerName": "Wáng Yīxuě",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/dialogue3.mp3"
         },
         {
           "id": "l4p2-t2-s4",
@@ -145,7 +145,7 @@
           "pinyin": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
           "speaker": "杨同乐",
           "speakerName": "Yáng Tónglè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/dialogue4.mp3"
         }
       ]
     },
@@ -163,7 +163,7 @@
           "text_translation": "aka (ot)",
           "text_translation_ru": "старший брат (сущ.)",
           "pinyin": "gēge",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/gege.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/gege.mp3"
         },
         {
           "id": "l4p2-v-s2",
@@ -172,7 +172,7 @@
           "text_translation": "savol yuklamasi (yuklama)",
           "text_translation_ru": "вопросительная частица (част.)",
           "pinyin": "ne",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/ne.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/ne.mp3"
         },
         {
           "id": "l4p2-v-s3",
@@ -181,7 +181,7 @@
           "text_translation": "yo'q, ega bo'lmaslik (fe'l)",
           "text_translation_ru": "не иметь (гл.)",
           "pinyin": "méiyǒu",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meiyou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/meiyou.mp3"
         },
         {
           "id": "l4p2-v-s4",
@@ -190,7 +190,7 @@
           "text_translation": "oila, uy (ot)",
           "text_translation_ru": "семья, дом (сущ.)",
           "pinyin": "jiā",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/jia.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/jia.mp3"
         },
         {
           "id": "l4p2-v-s5",
@@ -199,7 +199,7 @@
           "text_translation": "necha, nechta (olmosh)",
           "text_translation_ru": "сколько (мест.)",
           "pinyin": "jǐ",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/ji.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/ji.mp3"
         },
         {
           "id": "l4p2-v-s6",
@@ -208,7 +208,7 @@
           "text_translation": "og'iz; oila a'zolarini sanash uchun (o'lchov so'zi)",
           "text_translation_ru": "рот; счётное слово для членов семьи (сч. сл.)",
           "pinyin": "kǒu",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/kou.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/kou.mp3"
         },
         {
           "id": "l4p2-v-s7",
@@ -217,7 +217,7 @@
           "text_translation": "dada, ota (ot)",
           "text_translation_ru": "папа (сущ.)",
           "pinyin": "bàba",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/baba.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/baba.mp3"
         },
         {
           "id": "l4p2-v-s8",
@@ -226,7 +226,7 @@
           "text_translation": "ona (ot)",
           "text_translation_ru": "мама (сущ.)",
           "pinyin": "māma",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/mama.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/mama.mp3"
         },
         {
           "id": "l4p2-v-s9",
@@ -235,7 +235,7 @@
           "text_translation": "singil (ot)",
           "text_translation_ru": "младшая сестра (сущ.)",
           "pinyin": "mèimei",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meimei.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/meimei.mp3"
         },
         {
           "id": "l4p2-v-s10",
@@ -244,7 +244,7 @@
           "text_translation": "va, bilan (bog'lovchi)",
           "text_translation_ru": "и, с (союз)",
           "pinyin": "hé",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/he.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/he.mp3"
         }
       ]
     },

@@ -623,17 +623,19 @@ npm run lint     # Run ESLint
 ## Supabase Storage
 - **Project URL**: https://miruwaeplbzfqmdwacsh.supabase.co
 - **Images bucket**: `/images/` - original textbook scans (HSK-1-1-1.jpg, HSK-1-2-1.jpg, etc.)
-- **Audio bucket**: `/audio/` - organized by lesson and page
-- URL format: `https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20{lesson}/HSK%20{lesson}-{page}/{filename}.mp3`
+- **Audio bucket**: `/audio/` - all lesson audio under `HSK 1/` parent folder
+- URL format: `https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%20{lesson}-{page}/{filename}.mp3`
 
 ### Audio URL Patterns
-Folder structure: `HSK {lesson}/HSK {lesson}-{page}/`
+All HSK 1 lesson audio lives under a single parent folder `HSK 1/` in Supabase Storage.
+Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Section dialogue audio**: `dialogue.mp3` — full dialogue playback
 - **Per-sentence dialogue audio**: `dialogue1.mp3`, `dialogue2.mp3`, etc. — individual sentence playback
 - **Vocabulary word audio**: `{pinyin}.mp3` — pinyin stripped of tones/spaces, lowercase (e.g., `nihao.mp3`, `laoshi.mp3`)
 - **Tongue twister audio**: `tongue.mp3`
-- Example: Lesson 5, Page 2 dialogue sentence 3 → `HSK 5/HSK 5-2/dialogue3.mp3`
-- Example: Lesson 8, Page 1 vocab word 学校 (xuéxiào) → `HSK 8/HSK 8-1/xuexiao.mp3`
+- **No vocab section "Play All" audio**: Vocabulary sections do not have section-level `audio_url` (no `vocab.mp3` files exist). Individual word audio works via per-sentence URLs.
+- Example: Lesson 5, Page 2 dialogue sentence 3 → `HSK 1/HSK 5-2/dialogue3.mp3`
+- Example: Lesson 8, Page 1 vocab word 学校 (xuéxiào) → `HSK 1/HSK 8-1/xuexiao.mp3`
 
 ## Dialogue Layout
 - Speaker names in left column (grid layout, min-width 3em)

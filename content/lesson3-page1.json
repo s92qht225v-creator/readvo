@@ -57,7 +57,7 @@
       "contextTranslation_ru": "На территории кампуса Ли Вэнь и Бай Цзяюэ встретились впервые и продолжили беседу.",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-3-1-1.jpg",
       "sentences": [
         {
@@ -69,7 +69,7 @@
           "pinyin": "Wǒ shì Zhōngguó rén.",
           "speaker": "李文",
           "speakerName": "Lǐ Wén",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/dialogue1.mp3"
         },
         {
           "id": "l3p1-t1-s2",
@@ -80,7 +80,7 @@
           "pinyin": "Wǒ shì Fǎguó rén. Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
           "speaker": "白家月",
           "speakerName": "Bái Jiāyuè",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/dialogue2.mp3"
         }
       ]
     },
@@ -90,7 +90,6 @@
       "heading": "",
       "subheading": "Yangi so'zlar",
       "subheading_ru": "Новые слова",
-      "audio_url": "/audio/l3p1-vocab.mp3",
       "sentences": [
         {
           "id": "l3p1-v-s1",
@@ -99,7 +98,7 @@
           "text_translation": "odam, kishi (ot)",
           "text_translation_ru": "человек (сущ.)",
           "pinyin": "rén",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/ren.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/ren.mp3"
         },
         {
           "id": "l3p1-v-s2",
@@ -108,7 +107,7 @@
           "text_translation": "ning (yuklamasi)",
           "text_translation_ru": "притяжательная частица",
           "pinyin": "de",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/de.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/de.mp3"
         },
         {
           "id": "l3p1-v-s3",
@@ -117,7 +116,7 @@
           "text_translation": "Xitoy (atoqli ot)",
           "text_translation_ru": "Китай (имя собств.)",
           "pinyin": "Zhōngguó",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/zhongguo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/zhongguo.mp3"
         },
         {
           "id": "l3p1-v-s4",
@@ -126,7 +125,7 @@
           "text_translation": "Fransiya (atoqli ot)",
           "text_translation_ru": "Франция (имя собств.)",
           "pinyin": "Fǎguó",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/faguo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/faguo.mp3"
         },
         {
           "id": "l3p1-v-s5",
@@ -135,7 +134,7 @@
           "text_translation": "xitoy tili (atoqli ot)",
           "text_translation_ru": "китайский язык (имя собств.)",
           "pinyin": "Zhōngwén",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/zhongwen.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/zhongwen.mp3"
         }
       ]
     },

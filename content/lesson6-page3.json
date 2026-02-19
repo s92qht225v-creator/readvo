@@ -100,7 +100,7 @@
       "type": "text",
       "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
       "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue.mp3",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue.mp3",
       "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-6-3-1.jpg",
       "sentences": [
         {
@@ -111,7 +111,7 @@
           "text_translation_ru": "Куда мы пойдём ужинать в воскресенье?",
           "pinyin": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue1.mp3"
         },
         {
           "id": "l6p3-t3-s2",
@@ -121,7 +121,7 @@
           "text_translation_ru": "Я ещё хочу пойти в ресторан «Сиань».",
           "pinyin": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue2.mp3"
         },
         {
           "id": "l6p3-t3-s3",
@@ -131,7 +131,7 @@
           "text_translation_ru": "Тамошние пирожки баоцзы очень вкусные, я хочу есть баоцзы.",
           "pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
           "speaker": "刘小雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue3.mp3"
         },
         {
           "id": "l6p3-t3-s4",
@@ -141,7 +141,7 @@
           "text_translation_ru": "Мама, я хочу рис, не хочу баоцзы.",
           "pinyin": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
           "speaker": "刘小明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue4.mp3"
         },
         {
           "id": "l6p3-t3-s5",
@@ -151,7 +151,7 @@
           "text_translation_ru": "Хорошо. Как мы туда доберёмся?",
           "pinyin": "Hǎo de. Wǒmen zěnme qù?",
           "speaker": "王一雪",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue5.mp3"
         },
         {
           "id": "l6p3-t3-s6",
@@ -161,7 +161,7 @@
           "text_translation_ru": "Поедем на такси.",
           "pinyin": "Zuò chūzūchē qù.",
           "speaker": "刘　明",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/dialogue6.mp3"
         }
       ]
     },
@@ -180,7 +180,7 @@
           "text_translation_ru": "завтрак",
           "pinyin": "zǎofàn",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zaofan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zaofan.mp3"
         },
         {
           "id": "l6p3-v-s2",
@@ -190,7 +190,7 @@
           "text_translation_ru": "обед",
           "pinyin": "wǔfàn",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/wufan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/wufan.mp3"
         },
         {
           "id": "l6p3-v-s3",
@@ -200,7 +200,7 @@
           "text_translation_ru": "есть; кушать",
           "pinyin": "chī",
           "wordClass": "v.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/chi.mp3"
         },
         {
           "id": "l6p3-v-s4",
@@ -210,7 +210,7 @@
           "text_translation_ru": "ужин",
           "pinyin": "wǎnfàn",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/wanfan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/wanfan.mp3"
         },
         {
           "id": "l6p3-v-s5",
@@ -220,7 +220,7 @@
           "text_translation_ru": "там; та сторона",
           "pinyin": "nàbiān",
           "wordClass": "pron.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/nabian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/nabian.mp3"
         },
         {
           "id": "l6p3-v-s6",
@@ -230,7 +230,7 @@
           "text_translation_ru": "баоцзы (паровой пирожок с начинкой)",
           "pinyin": "bāozi",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/baozi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/baozi.mp3"
         },
         {
           "id": "l6p3-v-s7",
@@ -240,7 +240,7 @@
           "text_translation_ru": "очень; чрезвычайно",
           "pinyin": "fēicháng",
           "wordClass": "adv.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/feichang.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/feichang.mp3"
         },
         {
           "id": "l6p3-v-s8",
@@ -250,7 +250,7 @@
           "text_translation_ru": "вкусный",
           "pinyin": "hǎochī",
           "wordClass": "adj.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/haochi.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/haochi.mp3"
         },
         {
           "id": "l6p3-v-s9",
@@ -260,7 +260,7 @@
           "text_translation_ru": "рис (варёный)",
           "pinyin": "mǐfàn",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/mifan.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/mifan.mp3"
         },
         {
           "id": "l6p3-v-s10",
@@ -270,7 +270,7 @@
           "text_translation_ru": "как; каким образом",
           "pinyin": "zěnme",
           "wordClass": "pron.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zenme.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zenme.mp3"
         },
         {
           "id": "l6p3-v-s11",
@@ -280,7 +280,7 @@
           "text_translation_ru": "ехать (на транспорте); сидеть",
           "pinyin": "zuò",
           "wordClass": "v.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zuo.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zuo.mp3"
         },
         {
           "id": "l6p3-v-s12",
@@ -290,7 +290,7 @@
           "text_translation_ru": "такси",
           "pinyin": "chūzūchē",
           "wordClass": "n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chuzuche.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/chuzuche.mp3"
         },
         {
           "id": "l6p3-v-s13",
@@ -300,7 +300,7 @@
           "text_translation_ru": "Ресторан «Сиань»",
           "pinyin": "Xī'ān Fàndiàn",
           "wordClass": "proper n.",
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/xianfandian.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/xianfandian.mp3"
         }
       ]
     },
