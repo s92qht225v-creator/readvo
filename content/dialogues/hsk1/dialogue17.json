@@ -1,0 +1,121 @@
+{
+  "id": "hsk1-dialogue17",
+  "title": "你累吗？",
+  "pinyin": "Nǐ lèi ma?",
+  "titleTranslation": "Charchadingizmi?",
+  "titleTranslation_ru": "Ты устал?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d17-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d17-s1",
+          "text_original": "你在家吗？",
+          "pinyin": "Nǐ zài jiā ma?",
+          "text_translation": "Uydamisiz?",
+          "text_translation_ru": "Ты дома?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в/на", "h": 1, "l": 7 },
+            { "i": [2, 3], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 },
+            { "i": [3, 4], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d17-s2",
+          "text_original": "在家。",
+          "pinyin": "Zài jiā.",
+          "text_translation": "Uydaman.",
+          "text_translation_ru": "Дома.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "zài", "t": "-da", "tr": "в/на", "h": 1, "l": 7 },
+            { "i": [1, 2], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 }
+          ]
+        },
+        {
+          "id": "d17-s3",
+          "text_original": "在做什么？",
+          "pinyin": "Zài zuò shénme?",
+          "text_translation": "Nima qilyapsiz?",
+          "text_translation_ru": "Что делаешь?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
+            { "i": [1, 2], "p": "zuò", "t": "qilmoq", "tr": "делать", "h": 1, "l": 6 },
+            { "i": [2, 4], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 3 }
+          ]
+        },
+        {
+          "id": "d17-s4",
+          "text_original": "在休息。",
+          "pinyin": "Zài xiūxi.",
+          "text_translation": "Dam olyapman.",
+          "text_translation_ru": "Отдыхаю.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
+            { "i": [1, 3], "p": "xiūxi", "t": "dam olmoq", "tr": "отдыхать", "h": 1, "l": 5 }
+          ]
+        },
+        {
+          "id": "d17-s5",
+          "text_original": "你累吗？",
+          "pinyin": "Nǐ lèi ma?",
+          "text_translation": "Charchadingizmi?",
+          "text_translation_ru": "Ты устал?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "lèi", "t": "charchagan", "tr": "уставший" },
+            { "i": [2, 3], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d17-s6",
+          "text_original": "很累。",
+          "pinyin": "Hěn lèi.",
+          "text_translation": "Juda charchadim.",
+          "text_translation_ru": "Очень устал.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "lèi", "t": "charchagan", "tr": "уставший" }
+          ]
+        },
+        {
+          "id": "d17-s7",
+          "text_original": "那你早点休息。",
+          "pinyin": "Nà nǐ zǎo diǎn xiūxi.",
+          "text_translation": "Unda ertaroq dam oling.",
+          "text_translation_ru": "Тогда отдохни пораньше.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nà", "t": "unda", "tr": "тогда", "h": 1, "l": 10 },
+            { "i": [1, 2], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [2, 3], "p": "zǎo", "t": "erta", "tr": "рано" },
+            { "i": [3, 4], "p": "diǎn", "t": "biroz", "tr": "немного", "h": 1, "l": 6 },
+            { "i": [4, 6], "p": "xiūxi", "t": "dam olmoq", "tr": "отдыхать", "h": 1, "l": 5 }
+          ]
+        },
+        {
+          "id": "d17-s8",
+          "text_original": "好的。",
+          "pinyin": "Hǎo de.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "de", "t": "(yukl.)", "tr": "(част.)", "h": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

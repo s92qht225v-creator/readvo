@@ -1,0 +1,95 @@
+{
+  "id": "hsk1-dialogue23",
+  "title": "你带伞了吗？",
+  "pinyin": "Nǐ dài sǎn le ma?",
+  "titleTranslation": "Soyabon oldingizmi?",
+  "titleTranslation_ru": "Ты взял зонт?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d23-s1",
+          "text_original": "外面下雨吗？",
+          "pinyin": "Wàimiàn xià yǔ ma?",
+          "text_translation": "Tashqarida yomg'ir yog'yaptimu?",
+          "text_translation_ru": "На улице дождь идёт?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "wàimiàn", "t": "tashqarida", "tr": "снаружи" },
+            { "i": [2, 4], "p": "xià yǔ", "t": "yomg'ir yog'moq", "tr": "идёт дождь", "h": 1, "l": 12 },
+            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d23-s2",
+          "text_original": "是的。",
+          "pinyin": "Shì de.",
+          "text_translation": "Ha.",
+          "text_translation_ru": "Да.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "shì", "t": "ha", "tr": "да", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "de", "t": "(yukl.)", "tr": "(част.)", "h": 1 }
+          ]
+        },
+        {
+          "id": "d23-s3",
+          "text_original": "你带伞了吗？",
+          "pinyin": "Nǐ dài sǎn le ma?",
+          "text_translation": "Soyabon oldingizmi?",
+          "text_translation_ru": "Ты взял зонт?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "dài", "t": "olib kelmoq", "tr": "взять с собой" },
+            { "i": [2, 3], "p": "sǎn", "t": "soyabon", "tr": "зонт" },
+            { "i": [3, 4], "p": "le", "t": "(o'tgan zamon)", "tr": "(прош. время)", "h": 1, "l": 8 },
+            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d23-s4",
+          "text_original": "带了。",
+          "pinyin": "Dài le.",
+          "text_translation": "Oldim.",
+          "text_translation_ru": "Взял.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "dài", "t": "olib kelmoq", "tr": "взять с собой" },
+            { "i": [1, 2], "p": "le", "t": "(o'tgan zamon)", "tr": "(прош. время)", "h": 1, "l": 8 }
+          ]
+        },
+        {
+          "id": "d23-s5",
+          "text_original": "那我们走吧。",
+          "pinyin": "Nà wǒmen zǒu ba.",
+          "text_translation": "Unda ketdik.",
+          "text_translation_ru": "Тогда пойдём.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nà", "t": "unda", "tr": "тогда", "h": 1, "l": 10 },
+            { "i": [1, 3], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 4 },
+            { "i": [3, 4], "p": "zǒu", "t": "ketmoq", "tr": "идти" },
+            { "i": [4, 5], "p": "ba", "t": "(-ylik)", "tr": "(давай)", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d23-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

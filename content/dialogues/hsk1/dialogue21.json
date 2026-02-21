@@ -1,0 +1,96 @@
+{
+  "id": "hsk1-dialogue21",
+  "title": "我没带钱",
+  "pinyin": "Wǒ méi dài qián",
+  "titleTranslation": "Pul olib kelmadim",
+  "titleTranslation_ru": "Я не взял деньги",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d21-s1",
+          "text_original": "我没带钱，",
+          "pinyin": "Wǒ méi dài qián,",
+          "text_translation": "Pul olib kelmadim,",
+          "text_translation_ru": "Я не взял деньги,",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "méi", "t": "(-ma-)", "tr": "не (прош.)", "h": 1, "l": 4 },
+            { "i": [2, 3], "p": "dài", "t": "olib kelmoq", "tr": "взять с собой" },
+            { "i": [3, 4], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 9 }
+          ]
+        },
+        {
+          "id": "d21-s2",
+          "text_original": "啊？",
+          "pinyin": "Á?",
+          "text_translation": "Ha?",
+          "text_translation_ru": "А?",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "á", "t": "ha?", "tr": "а?" }
+          ]
+        },
+        {
+          "id": "d21-s3",
+          "text_original": "怎么办？",
+          "pinyin": "Zěnme bàn?",
+          "text_translation": "Nima qilaman?",
+          "text_translation_ru": "Что делать?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "zěnme", "t": "qanday", "tr": "как", "h": 1, "l": 7 },
+            { "i": [2, 3], "p": "bàn", "t": "qilmoq", "tr": "делать" }
+          ]
+        },
+        {
+          "id": "d21-s4",
+          "text_original": "没事，我请你。",
+          "pinyin": "Méi shì, wǒ qǐng nǐ.",
+          "text_translation": "Hech gap yo'q, men to'layman.",
+          "text_translation_ru": "Ничего, я угощаю.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "méi shì", "t": "hech gap yo'q", "tr": "ничего" },
+            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
+            { "i": [4, 5], "p": "qǐng", "t": "mehmon qilmoq", "tr": "угощать", "h": 1, "l": 1 },
+            { "i": [5, 6], "p": "nǐ", "t": "seni", "tr": "тебя", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d21-s5",
+          "text_original": "谢谢，下次我请你。",
+          "pinyin": "Xièxie, xià cì wǒ qǐng nǐ.",
+          "text_translation": "Rahmat, keyingi safar men to'layman.",
+          "text_translation_ru": "Спасибо, в следующий раз я угощаю.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 },
+            { "i": [3, 5], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
+            { "i": [5, 6], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
+            { "i": [6, 7], "p": "qǐng", "t": "mehmon qilmoq", "tr": "угощать", "h": 1, "l": 1 },
+            { "i": [7, 8], "p": "nǐ", "t": "seni", "tr": "тебя", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d21-s6",
+          "text_original": "好啊。",
+          "pinyin": "Hǎo a.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "a", "t": "(undov)", "tr": "(воскл.)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

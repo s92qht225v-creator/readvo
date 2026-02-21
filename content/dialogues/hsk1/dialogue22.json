@@ -1,0 +1,90 @@
+{
+  "id": "hsk1-dialogue22",
+  "title": "你冷吗？",
+  "pinyin": "Nǐ lěng ma?",
+  "titleTranslation": "Sovuq emasmi?",
+  "titleTranslation_ru": "Тебе холодно?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d22-s1",
+          "text_original": "你冷吗？",
+          "pinyin": "Nǐ lěng ma?",
+          "text_translation": "Sovuq emasmi?",
+          "text_translation_ru": "Тебе холодно?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "lěng", "t": "sovuq", "tr": "холодный", "h": 1, "l": 12 },
+            { "i": [2, 3], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d22-s2",
+          "text_original": "有一点。",
+          "pinyin": "Yǒu yìdiǎn.",
+          "text_translation": "Biroz.",
+          "text_translation_ru": "Немного.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [1, 3], "p": "yìdiǎn", "t": "biroz", "tr": "немного", "h": 1, "l": 12 }
+          ]
+        },
+        {
+          "id": "d22-s3",
+          "text_original": "要不要开空调？",
+          "pinyin": "Yào bu yào kāi kōngtiáo?",
+          "text_translation": "Konditsionerni yoqaymi?",
+          "text_translation_ru": "Включить кондиционер?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 3], "p": "yào bu yào", "t": "xohlaysizmi", "tr": "хочешь ли" },
+            { "i": [3, 4], "p": "kāi", "t": "yoqmoq", "tr": "включить", "h": 1, "l": 14 },
+            { "i": [4, 6], "p": "kōngtiáo", "t": "konditsioner", "tr": "кондиционер" }
+          ]
+        },
+        {
+          "id": "d22-s4",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 }
+          ]
+        },
+        {
+          "id": "d22-s5",
+          "text_original": "开了。",
+          "pinyin": "Kāi le.",
+          "text_translation": "Yoqdim.",
+          "text_translation_ru": "Включил.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "kāi", "t": "yoqmoq", "tr": "включить", "h": 1, "l": 14 },
+            { "i": [1, 2], "p": "le", "t": "(o'tgan zamon)", "tr": "(прош. время)", "h": 1, "l": 8 }
+          ]
+        },
+        {
+          "id": "d22-s6",
+          "text_original": "谢谢。",
+          "pinyin": "Xièxie.",
+          "text_translation": "Rahmat.",
+          "text_translation_ru": "Спасибо.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

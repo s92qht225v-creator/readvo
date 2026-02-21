@@ -2132,6 +2132,7 @@ body {
 }
 
 .sentence__text rt {
+  font-family: var(--font-pinyin);
   font-size: 0.6em;
   color: var(--color-accent);
   font-style: normal;
@@ -2150,7 +2151,7 @@ body {
   color: var(--color-accent);
   font-style: italic;
   margin-top: var(--spacing-xs);
-  font-family: var(--font-main);
+  font-family: var(--font-pinyin);
   letter-spacing: 0.5px;
 }
 
@@ -2265,6 +2266,7 @@ body {
 }
 
 .story__dialogue-text rt {
+  font-family: var(--font-pinyin);
   color: var(--color-accent);
   padding-bottom: 0.15em;
 }
@@ -2288,6 +2290,7 @@ body {
 }
 
 .story__text rt {
+  font-family: var(--font-pinyin);
   font-size: 0.5em;
   color: var(--color-accent);
   font-weight: normal;
@@ -3139,6 +3142,7 @@ body {
 }
 
 .karaoke__rt {
+  font-family: var(--font-pinyin);
   font-size: 0.5em;
   color: rgba(255, 255, 255, 0.35);
   font-weight: 400;
@@ -4186,8 +4190,8 @@ body {
   background: rgba(255, 255, 255, 0.35);
   border: none;
   border-radius: 4px 4px 0 0;
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-  font-weight: 600;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   font-family: var(--font-main);
