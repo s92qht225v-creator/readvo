@@ -1,0 +1,245 @@
+{
+  "id": "hsk1-dialogue44",
+  "title": "你今天加班吗？",
+  "pinyin": "Nǐ jīntiān jiābān ma?",
+  "titleTranslation": "Bugun qo'shimcha ishlaysizmi?",
+  "titleTranslation_ru": "Сегодня будешь работать сверхурочно?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d44-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d44-s1",
+          "text_original": "你今天几点下班？",
+          "pinyin": "Nǐ jīntiān jǐ diǎn xiàbān?",
+          "text_translation": "Bugun soat nechada ishdan chiqasiz?",
+          "text_translation_ru": "Во сколько сегодня заканчиваешь?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "jǐ diǎn",
+              "t": "soat nechada",
+              "tr": "во сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "xiàbān",
+              "t": "ishdan chiqmoq",
+              "tr": "закончить работу"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d44-s2",
+          "text_original": "六点。",
+          "pinyin": "Liù diǎn.",
+          "text_translation": "Soat oltida.",
+          "text_translation_ru": "В шесть.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "liù",
+              "t": "olti",
+              "tr": "шесть",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "часов",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d44-s3",
+          "text_original": "加班吗？",
+          "pinyin": "Jiābān ma?",
+          "text_translation": "Qo'shimcha ishlaysizmi?",
+          "text_translation_ru": "Будешь работать сверхурочно?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jiābān",
+              "t": "qo'shimcha ishlamoq",
+              "tr": "работать сверхурочно"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d44-s4",
+          "text_original": "不加班。",
+          "pinyin": "Bù jiābān.",
+          "text_translation": "Yo'q.",
+          "text_translation_ru": "Нет.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "yo'q",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "jiābān",
+              "t": "qo'shimcha ishlamoq",
+              "tr": "работать сверхурочно"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d44-s5",
+          "text_original": "那早点回来。",
+          "pinyin": "Nà zǎo diǎn huílái.",
+          "text_translation": "Unda ertaroq qayting.",
+          "text_translation_ru": "Тогда возвращайся пораньше.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zǎo",
+              "t": "erta",
+              "tr": "рано"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "huílái",
+              "t": "qaytmoq",
+              "tr": "вернуться",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d44-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "ish",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3"
+}

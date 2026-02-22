@@ -1,0 +1,318 @@
+{
+  "id": "hsk1-dialogue43",
+  "title": "你安全带系好了吗？",
+  "pinyin": "Nǐ ānquándài jì hǎo le ma?",
+  "titleTranslation": "Xavfsizlik kamaringizni taqib oldingizmi?",
+  "titleTranslation_ru": "Ты пристегнул ремень безопасности?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d43-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d43-s1",
+          "text_original": "你安全带系好了吗？",
+          "pinyin": "Nǐ ānquándài jì hǎo le ma?",
+          "text_translation": "Xavfsizlik kamaringizni taqib oldingizmi?",
+          "text_translation_ru": "Ты пристегнул ремень безопасности?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "ānquándài",
+              "t": "xavfsizlik kamari",
+              "tr": "ремень безопасности"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jì",
+              "t": "taqmoq",
+              "tr": "пристегнуть"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "hǎo",
+              "t": "tayyor",
+              "tr": "готово",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(tugadi)",
+              "tr": "(завершение)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d43-s2",
+          "text_original": "系好了。",
+          "pinyin": "Jì hǎo le.",
+          "text_translation": "Taqib oldim.",
+          "text_translation_ru": "Пристегнул.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "jì",
+              "t": "taqmoq",
+              "tr": "пристегнуть"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "hǎo",
+              "t": "tayyor",
+              "tr": "готово",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(tugadi)",
+              "tr": "(завершение)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d43-s3",
+          "text_original": "后面的人呢？",
+          "pinyin": "Hòumiàn de rén ne?",
+          "text_translation": "Orqadagilar-chi?",
+          "text_translation_ru": "А те, кто сзади?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hòumiàn",
+              "t": "orqada",
+              "tr": "сзади"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "de",
+              "t": "(-ning)",
+              "tr": "(притяж.)",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "rén",
+              "t": "odam",
+              "tr": "человек",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ne",
+              "t": "-chi",
+              "tr": "(а..?)",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d43-s4",
+          "text_original": "也系好了。",
+          "pinyin": "Yě jì hǎo le.",
+          "text_translation": "Ular ham taqib olishdi.",
+          "text_translation_ru": "Тоже пристегнулись.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jì",
+              "t": "taqmoq",
+              "tr": "пристегнуть"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hǎo",
+              "t": "tayyor",
+              "tr": "готово",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "le",
+              "t": "(tugadi)",
+              "tr": "(завершение)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d43-s5",
+          "text_original": "那我们出发吧。",
+          "pinyin": "Nà wǒmen chūfā ba.",
+          "text_translation": "Unda jo'naylik.",
+          "text_translation_ru": "Тогда поехали.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "chūfā",
+              "t": "jo'namoq",
+              "tr": "отправиться"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ba",
+              "t": "(-ylik)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d43-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "transport",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
+}

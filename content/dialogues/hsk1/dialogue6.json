@@ -20,10 +20,39 @@
           "text_translation_ru": "Есть бананы?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [1, 3], "p": "xiāngjiāo", "t": "banan", "tr": "банан" },
-            { "i": [3, 4], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "xiāngjiāo",
+              "t": "banan",
+              "tr": "банан"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue1.mp3"
         },
         {
           "id": "d6-s2",
@@ -33,8 +62,18 @@
           "text_translation_ru": "Есть.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "yǒude", "t": "bor", "tr": "есть", "h": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yǒude",
+              "t": "bor",
+              "tr": "есть",
+              "h": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue2.mp3"
         },
         {
           "id": "d6-s3",
@@ -44,9 +83,30 @@
           "text_translation_ru": "Сколько стоит?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "duōshao", "t": "qancha", "tr": "сколько", "h": 1, "l": 10 },
-            { "i": [2, 3], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 10 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue3.mp3"
         },
         {
           "id": "d6-s4",
@@ -56,12 +116,61 @@
           "text_translation_ru": "Пять юаней за цзинь.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǔ", "t": "besh", "tr": "пять", "h": 1, "l": 4 },
-            { "i": [1, 2], "p": "kuài", "t": "yuan", "tr": "юань", "h": 1, "l": 10 },
-            { "i": [2, 3], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 10 },
-            { "i": [3, 4], "p": "yì", "t": "bir", "tr": "один", "h": 1, "l": 4 },
-            { "i": [4, 5], "p": "jīn", "t": "jin", "tr": "цзинь (500г)" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǔ",
+              "t": "besh",
+              "tr": "пять",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "yì",
+              "t": "bir",
+              "tr": "один",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jīn",
+              "t": "jin",
+              "tr": "цзинь (500г)"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3"
         },
         {
           "id": "d6-s5",
@@ -71,10 +180,24 @@
           "text_translation_ru": "Хорошо.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "hǎode", "t": "yaxshi", "tr": "хорошо", "h": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎode",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue5.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "xaridlar",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3"
 }

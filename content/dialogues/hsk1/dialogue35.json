@@ -1,0 +1,304 @@
+{
+  "id": "hsk1-dialogue35",
+  "title": "我送你",
+  "pinyin": "Wǒ sòng nǐ",
+  "titleTranslation": "Men sizni kuzataman",
+  "titleTranslation_ru": "Я тебя провожу",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d35-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d35-s1",
+          "text_original": "你什么时候走？",
+          "pinyin": "Nǐ shénme shíhou zǒu?",
+          "text_translation": "Qachon ketasiz?",
+          "text_translation_ru": "Когда уезжаешь?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                5
+              ],
+              "p": "shénme shíhou",
+              "t": "qachon",
+              "tr": "когда",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "zǒu",
+              "t": "ketmoq",
+              "tr": "уходить"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue1.mp3"
+        },
+        {
+          "id": "d35-s2",
+          "text_original": "明天。",
+          "pinyin": "Míngtiān.",
+          "text_translation": "Ertaga.",
+          "text_translation_ru": "Завтра.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
+              "h": 1,
+              "l": 5
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue2.mp3"
+        },
+        {
+          "id": "d35-s3",
+          "text_original": "坐火车还是坐飞机？",
+          "pinyin": "Zuò huǒchē háishi zuò fēijī?",
+          "text_translation": "Poezdda ketasizmi yoki samolyotdami?",
+          "text_translation_ru": "На поезде или на самолёте?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zuò",
+              "t": "minmoq",
+              "tr": "ехать на",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "huǒchē",
+              "t": "poyezd",
+              "tr": "поезд",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "háishi",
+              "t": "yoki",
+              "tr": "или",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "zuò",
+              "t": "minmoq",
+              "tr": "ехать на",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "fēijī",
+              "t": "samolyot",
+              "tr": "самолёт",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue3.mp3"
+        },
+        {
+          "id": "d35-s4",
+          "text_original": "坐飞机。",
+          "pinyin": "Zuò fēijī.",
+          "text_translation": "Samolyotda.",
+          "text_translation_ru": "На самолёте.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zuò",
+              "t": "minmoq",
+              "tr": "ехать на",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "fēijī",
+              "t": "samolyot",
+              "tr": "самолёт",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue4.mp3"
+        },
+        {
+          "id": "d35-s5",
+          "text_original": "几点的飞机？我送你。",
+          "pinyin": "Jǐ diǎn de fēijī? Wǒ sòng nǐ.",
+          "text_translation": "Soat nechada? Men kuzataman.",
+          "text_translation_ru": "Во сколько рейс? Я тебя провожу.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jǐ diǎn",
+              "t": "soat nechada",
+              "tr": "во сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "de",
+              "t": "(-ning)",
+              "tr": "(притяж.)",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "fēijī",
+              "t": "samolyot",
+              "tr": "самолёт",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "sòng",
+              "t": "kuzatmoq",
+              "tr": "проводить"
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "nǐ",
+              "t": "seni",
+              "tr": "тебя",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue5.mp3"
+        },
+        {
+          "id": "d35-s6",
+          "text_original": "早上八点。",
+          "pinyin": "Zǎoshang bā diǎn.",
+          "text_translation": "Ertalab soat sakkizda.",
+          "text_translation_ru": "В восемь утра.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "zǎoshang",
+              "t": "ertalab",
+              "tr": "утром",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "bā",
+              "t": "sakkiz",
+              "tr": "восемь",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "часов",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue.mp3"
+    }
+  ],
+  "tag": "transport",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue.mp3"
+}

@@ -1,0 +1,246 @@
+{
+  "id": "hsk1-dialogue38",
+  "title": "我很紧张",
+  "pinyin": "Wǒ hěn jǐnzhāng",
+  "titleTranslation": "Men juda hayajonlanaman",
+  "titleTranslation_ru": "Я очень нервничаю",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d38-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d38-s1",
+          "text_original": "你最近怎么样？",
+          "pinyin": "Nǐ zuìjìn zěnmeyàng?",
+          "text_translation": "Yaqinda qalaysiz?",
+          "text_translation_ru": "Как у тебя дела в последнее время?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zuìjìn",
+              "t": "yaqinda",
+              "tr": "в последнее время"
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "zěnmeyàng",
+              "t": "qanday",
+              "tr": "как",
+              "h": 1,
+              "l": 7
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue1.mp3"
+        },
+        {
+          "id": "d38-s2",
+          "text_original": "我最近很忙。",
+          "pinyin": "Wǒ zuìjìn hěn máng.",
+          "text_translation": "Yaqinda juda bandman.",
+          "text_translation_ru": "В последнее время очень занят.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zuìjìn",
+              "t": "yaqinda",
+              "tr": "в последнее время"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "máng",
+              "t": "band",
+              "tr": "занят"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue2.mp3"
+        },
+        {
+          "id": "d38-s3",
+          "text_original": "忙什么？",
+          "pinyin": "Máng shénme?",
+          "text_translation": "Nima bilan bandsiz?",
+          "text_translation_ru": "Чем занят?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "máng",
+              "t": "band",
+              "tr": "занят"
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue3.mp3"
+        },
+        {
+          "id": "d38-s4",
+          "text_original": "下个月要考试了。",
+          "pinyin": "Xià ge yuè yào kǎoshì le.",
+          "text_translation": "Keyingi oyda imtihon bo'ladi.",
+          "text_translation_ru": "В следующем месяце экзамен.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "xià ge yuè",
+              "t": "keyingi oy",
+              "tr": "в следующем месяце"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "yào",
+              "t": "(-moqchi)",
+              "tr": "(скоро будет)"
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "kǎoshì",
+              "t": "imtihon",
+              "tr": "экзамен"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(tugadi)",
+              "tr": "(завершение)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue4.mp3"
+        },
+        {
+          "id": "d38-s5",
+          "text_original": "紧张吗？",
+          "pinyin": "Jǐnzhāng ma?",
+          "text_translation": "Hayajonlanayapsizmi?",
+          "text_translation_ru": "Волнуешься?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jǐnzhāng",
+              "t": "hayajonlanmoq",
+              "tr": "волноваться"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue5.mp3"
+        },
+        {
+          "id": "d38-s6",
+          "text_original": "紧张。",
+          "pinyin": "Jǐnzhāng.",
+          "text_translation": "Hayajonlanayapman.",
+          "text_translation_ru": "Волнуюсь.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jǐnzhāng",
+              "t": "hayajonlanmoq",
+              "tr": "волноваться"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue.mp3"
+    }
+  ],
+  "tag": "ish",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue.mp3"
+}

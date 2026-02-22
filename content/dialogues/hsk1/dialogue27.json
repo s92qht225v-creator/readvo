@@ -1,0 +1,278 @@
+{
+  "id": "hsk1-dialogue27",
+  "title": "你有现金吗？",
+  "pinyin": "Nǐ yǒu xiànjīn ma?",
+  "titleTranslation": "Naqd pulingiz bormi?",
+  "titleTranslation_ru": "У тебя есть наличные?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d27-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d27-s1",
+          "text_original": "你有现金吗？",
+          "pinyin": "Nǐ yǒu xiànjīn ma?",
+          "text_translation": "Naqd pulingiz bormi?",
+          "text_translation_ru": "У тебя есть наличные?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "xiànjīn",
+              "t": "naqd pul",
+              "tr": "наличные"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d27-s2",
+          "text_original": "有。",
+          "pinyin": "Yǒu.",
+          "text_translation": "Bor.",
+          "text_translation_ru": "Есть.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d27-s3",
+          "text_original": "可以借我二十块吗？",
+          "pinyin": "Kěyǐ jiè wǒ èrshí kuài ma?",
+          "text_translation": "Menga yigirma yuan qarz bera olasizmi?",
+          "text_translation_ru": "Можешь одолжить мне двадцать юаней?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěyǐ",
+              "t": "mumkin",
+              "tr": "можно",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "jiè",
+              "t": "qarz bermoq",
+              "tr": "одолжить"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "menga",
+              "tr": "мне",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "èrshí",
+              "t": "yigirma",
+              "tr": "двадцать"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d27-s4",
+          "text_original": "可以。",
+          "pinyin": "Kěyǐ.",
+          "text_translation": "Bo'ladi.",
+          "text_translation_ru": "Можно.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěyǐ",
+              "t": "bo'ladi",
+              "tr": "можно",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d27-s5",
+          "text_original": "我明天还你。",
+          "pinyin": "Wǒ míngtiān huán nǐ.",
+          "text_translation": "Ertaga qaytaraman.",
+          "text_translation_ru": "Завтра верну.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "huán",
+              "t": "qaytarmoq",
+              "tr": "вернуть"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "nǐ",
+              "t": "senga",
+              "tr": "тебе",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d27-s6",
+          "text_original": "没问题。",
+          "pinyin": "Méi wèntí.",
+          "text_translation": "Muammo yo'q.",
+          "text_translation_ru": "Без проблем.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "méi",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "wèntí",
+              "t": "muammo",
+              "tr": "проблема",
+              "h": 1,
+              "l": 13
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "xaridlar",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20xianjin%20ma/dialogue.mp3"
+}

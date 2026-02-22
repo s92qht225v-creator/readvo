@@ -1,0 +1,294 @@
+{
+  "id": "hsk1-dialogue31",
+  "title": "太吵了",
+  "pinyin": "Tài chǎo le",
+  "titleTranslation": "Juda shovqinli",
+  "titleTranslation_ru": "Слишком шумно",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d31-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d31-s1",
+          "text_original": "你听得清吗？",
+          "pinyin": "Nǐ tīng de qīng ma?",
+          "text_translation": "Eshita olyapsizmi?",
+          "text_translation_ru": "Тебе слышно?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "tīng",
+              "t": "eshitmoq",
+              "tr": "слушать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "de",
+              "t": "(imkoniyat)",
+              "tr": "(возможность)"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qīng",
+              "t": "aniq",
+              "tr": "чётко"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue1.mp3"
+        },
+        {
+          "id": "d31-s2",
+          "text_original": "听不清。",
+          "pinyin": "Tīng bu qīng.",
+          "text_translation": "Eshita olmayapman.",
+          "text_translation_ru": "Не слышно.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "tīng",
+              "t": "eshitmoq",
+              "tr": "слушать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "bu",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qīng",
+              "t": "aniq",
+              "tr": "чётко"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue2.mp3"
+        },
+        {
+          "id": "d31-s3",
+          "text_original": "这里太吵了。",
+          "pinyin": "Zhèlǐ tài chǎo le.",
+          "text_translation": "Bu yerda juda shovqinli.",
+          "text_translation_ru": "Здесь слишком шумно.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "zhèlǐ",
+              "t": "bu yerda",
+              "tr": "здесь"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "tài",
+              "t": "juda",
+              "tr": "слишком",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "chǎo",
+              "t": "shovqinli",
+              "tr": "шумный"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(kuchay.)",
+              "tr": "(усилит.)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue3.mp3"
+        },
+        {
+          "id": "d31-s4",
+          "text_original": "对，很吵。",
+          "pinyin": "Duì, hěn chǎo.",
+          "text_translation": "Ha, juda shovqinli.",
+          "text_translation_ru": "Да, очень шумно.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "верно",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "chǎo",
+              "t": "shovqinli",
+              "tr": "шумный"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue4.mp3"
+        },
+        {
+          "id": "d31-s5",
+          "text_original": "我们出去说吧。",
+          "pinyin": "Wǒmen chūqù shuō ba.",
+          "text_translation": "Tashqariga chiqib gaplashaylik.",
+          "text_translation_ru": "Давай выйдем поговорим.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "chūqù",
+              "t": "chiqmoq",
+              "tr": "выйти"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "shuō",
+              "t": "gapirmoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ba",
+              "t": "(-ylik)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue5.mp3"
+        },
+        {
+          "id": "d31-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Yaxshi.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue.mp3"
+    }
+  ],
+  "tag": "muloqot",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue.mp3"
+}

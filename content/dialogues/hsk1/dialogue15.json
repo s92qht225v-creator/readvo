@@ -1,9 +1,9 @@
 {
   "id": "hsk1-dialogue15",
-  "title": "你去哪儿？",
-  "pinyin": "Nǐ qù nǎr?",
-  "titleTranslation": "Qayerga ketyapsiz?",
-  "titleTranslation_ru": "Куда идёшь?",
+  "title": "我去超市",
+  "pinyin": "Wǒ qù chāoshì",
+  "titleTranslation": "Men supermarketga ketyapman",
+  "titleTranslation_ru": "Я иду в супермаркет",
   "level": 1,
   "sections": [
     {
@@ -20,23 +20,83 @@
           "text_translation_ru": "Куда идёшь?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [2, 4], "p": "nǎr", "t": "qayer", "tr": "где/куда", "h": 1, "l": 8 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "nǎr",
+              "t": "qayer",
+              "tr": "где/куда",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue1.mp3"
         },
         {
           "id": "d15-s2",
-          "text_original": "我去商场。",
-          "pinyin": "Wǒ qù shāngchǎng.",
-          "text_translation": "Men savdo markaziga ketyapman.",
-          "text_translation_ru": "Я иду в торговый центр.",
+          "text_original": "我去超市。",
+          "pinyin": "Wǒ qù chāoshì.",
+          "text_translation": "Men supermarketga ketyapman.",
+          "text_translation_ru": "Я иду в супермаркет.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [2, 4], "p": "shāngchǎng", "t": "savdo markazi", "tr": "торговый центр" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "chāoshì",
+              "t": "supermarket",
+              "tr": "супермаркет"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue2.mp3"
         },
         {
           "id": "d15-s3",
@@ -46,9 +106,30 @@
           "text_translation_ru": "Что покупаешь?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать", "h": 1, "l": 9 },
-            { "i": [1, 3], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue3.mp3"
         },
         {
           "id": "d15-s4",
@@ -58,9 +139,30 @@
           "text_translation_ru": "Покупаю одежду.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать", "h": 1, "l": 9 },
-            { "i": [1, 3], "p": "yīfu", "t": "kiyim", "tr": "одежда", "h": 1, "l": 9 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yīfu",
+              "t": "kiyim",
+              "tr": "одежда",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue4.mp3"
         },
         {
           "id": "d15-s5",
@@ -70,10 +172,41 @@
           "text_translation_ru": "Какую одежду покупаешь?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать", "h": 1, "l": 9 },
-            { "i": [1, 3], "p": "shénme", "t": "qanday", "tr": "какой", "h": 1, "l": 3 },
-            { "i": [3, 5], "p": "yīfu", "t": "kiyim", "tr": "одежда", "h": 1, "l": 9 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "shénme",
+              "t": "qanday",
+              "tr": "какой",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yīfu",
+              "t": "kiyim",
+              "tr": "одежда",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue5.mp3"
         },
         {
           "id": "d15-s6",
@@ -83,10 +216,37 @@
           "text_translation_ru": "Покупаю футболку.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать", "h": 1, "l": 9 },
-            { "i": [1, 3], "p": "yí jiàn", "t": "bitta (kiyim)", "tr": "одна (штука)" },
-            { "i": [3, 5], "p": "T xù", "t": "futbolka", "tr": "футболка" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yí jiàn",
+              "t": "bitta (kiyim)",
+              "tr": "одна (штука)"
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "T xù",
+              "t": "futbolka",
+              "tr": "футболка"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue6.mp3"
         },
         {
           "id": "d15-s7",
@@ -96,11 +256,50 @@
           "text_translation_ru": "Пойдём вместе.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 4 },
-            { "i": [2, 4], "p": "yìqǐ", "t": "birga", "tr": "вместе" },
-            { "i": [4, 5], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [5, 6], "p": "ba", "t": "(-ylik)", "tr": "(давай)", "h": 1, "l": 11 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yìqǐ",
+              "t": "birga",
+              "tr": "вместе"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ba",
+              "t": "(-ylik)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue7.mp3"
         },
         {
           "id": "d15-s8",
@@ -110,11 +309,34 @@
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "a", "t": "(undov)", "tr": "(воскл.)" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "a",
+              "t": "(undov)",
+              "tr": "(воскл.)"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue8.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "xaridlar",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qu%20chaoshi/dialogue.mp3"
 }

@@ -20,11 +20,50 @@
           "text_translation_ru": "Кто та девушка?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "nàge", "t": "o'sha", "tr": "тот", "h": 1, "l": 10 },
-            { "i": [2, 4], "p": "nǚhái", "t": "qiz", "tr": "девушка" },
-            { "i": [4, 5], "p": "shì", "t": "bo'lmoq", "tr": "быть", "h": 1, "l": 2 },
-            { "i": [5, 6], "p": "shéi", "t": "kim", "tr": "кто", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nàge",
+              "t": "o'sha",
+              "tr": "тот",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "nǚhái",
+              "t": "qiz",
+              "tr": "девушка"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "shéi",
+              "t": "kim",
+              "tr": "кто",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue1.mp3"
         },
         {
           "id": "d14-s2",
@@ -34,8 +73,19 @@
           "text_translation_ru": "Которая?",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "nǎge", "t": "qaysi", "tr": "который", "h": 1, "l": 10 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nǎge",
+              "t": "qaysi",
+              "tr": "который",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue2.mp3"
         },
         {
           "id": "d14-s3",
@@ -45,12 +95,59 @@
           "text_translation_ru": "Та, что в красной одежде.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "nàge", "t": "o'sha", "tr": "тот", "h": 1, "l": 10 },
-            { "i": [2, 3], "p": "chuān", "t": "kiymoq", "tr": "носить (одежду)" },
-            { "i": [3, 4], "p": "hóng", "t": "qizil", "tr": "красный" },
-            { "i": [4, 6], "p": "yīfu", "t": "kiyim", "tr": "одежда", "h": 1, "l": 9 },
-            { "i": [6, 7], "p": "de", "t": "(-ning)", "tr": "(прит. част.)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nàge",
+              "t": "o'sha",
+              "tr": "тот",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "chuān",
+              "t": "kiymoq",
+              "tr": "носить (одежду)"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "hóng",
+              "t": "qizil",
+              "tr": "красный"
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "yīfu",
+              "t": "kiyim",
+              "tr": "одежда",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "de",
+              "t": "(-ning)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue3.mp3"
         },
         {
           "id": "d14-s4",
@@ -60,13 +157,74 @@
           "text_translation_ru": "Она? Она моя подруга.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "shì", "t": "bo'lmoq", "tr": "быть", "h": 1, "l": 2 },
-            { "i": [5, 6], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 1 },
-            { "i": [6, 8], "p": "péngyou", "t": "do'st", "tr": "друг", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "она",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "она",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "shì",
+              "t": "bo'lmoq",
+              "tr": "быть",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "péngyou",
+              "t": "do'st",
+              "tr": "друг",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue4.mp3"
         },
         {
           "id": "d14-s5",
@@ -76,11 +234,50 @@
           "text_translation_ru": "О, она очень красивая.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "ó", "t": "voy", "tr": "о" },
-            { "i": [2, 3], "p": "tā", "t": "u", "tr": "она", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "hěn", "t": "juda", "tr": "очень", "h": 1, "l": 1 },
-            { "i": [4, 6], "p": "piàoliang", "t": "chiroyli", "tr": "красивый", "h": 1, "l": 9 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "ó",
+              "t": "voy",
+              "tr": "о"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "она",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "piàoliang",
+              "t": "chiroyli",
+              "tr": "красивый",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue5.mp3"
         },
         {
           "id": "d14-s6",
@@ -90,9 +287,30 @@
           "text_translation_ru": "Правда?",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "shì", "t": "ha", "tr": "да", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "shì",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue6.mp3"
         },
         {
           "id": "d14-s7",
@@ -102,11 +320,35 @@
           "text_translation_ru": "Да.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "shì", "t": "ha", "tr": "да", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "de", "t": "(yukl.)", "tr": "(част.)", "h": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "shì",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(yukl.)",
+              "tr": "(част.)",
+              "h": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue7.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "tanishuv",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue.mp3"
 }

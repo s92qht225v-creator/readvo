@@ -1,8 +1,31 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+
+const TAGS: Record<string, { uz: string; ru: string }> = {
+  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
+  kundalik: { uz: 'Kundalik', ru: 'Повседневное' },
+  xaridlar: { uz: 'Xaridlar', ru: 'Покупки' },
+  ovqat: { uz: 'Ovqat', ru: 'Еда' },
+  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье' },
+  transport: { uz: 'Transport', ru: 'Транспорт' },
+  telefon: { uz: 'Telefon', ru: 'Телефон' },
+  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба' },
+  reja: { uz: 'Reja', ru: 'Планы' },
+  muloqot: { uz: 'Muloqot', ru: 'Общение' },
+};
+
+const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
+const NEW_DAYS = 7;
+
+function isNew(dateAdded?: string): boolean {
+  if (!dateAdded) return false;
+  const added = new Date(dateAdded).getTime();
+  const now = Date.now();
+  return (now - added) < NEW_DAYS * 24 * 60 * 60 * 1000;
+}
 
 interface DialogueItem {
   id: string;
@@ -10,6 +33,8 @@ interface DialogueItem {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  tag?: string;
+  dateAdded?: string;
 }
 
 interface DialoguesPageProps {
@@ -20,6 +45,59 @@ interface DialoguesPageProps {
 
 export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPageProps) {
   const [language] = useLanguage();
+  const [search, setSearch] = useState('');
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [showBookmarked, setShowBookmarked] = useState(false);
+  const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(BOOKMARK_KEY);
+      if (saved) setBookmarks(new Set(JSON.parse(saved)));
+    } catch { /* ignore */ }
+  }, []);
+
+  const toggleBookmark = useCallback((e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setBookmarks((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      localStorage.setItem(BOOKMARK_KEY, JSON.stringify([...next]));
+      return next;
+    });
+  }, []);
+
+  const availableTags = useMemo(() => {
+    const tagSet = new Set<string>();
+    dialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
+    return Object.keys(TAGS).filter((t) => tagSet.has(t));
+  }, [dialogues]);
+
+  const filtered = useMemo(() => {
+    let result = dialogues;
+
+    if (showBookmarked) {
+      result = result.filter((d) => bookmarks.has(d.id));
+    }
+
+    if (activeTag) {
+      result = result.filter((d) => d.tag === activeTag);
+    }
+
+    const q = search.trim().toLowerCase();
+    if (q) {
+      result = result.filter((d) =>
+        d.title.toLowerCase().includes(q) ||
+        d.pinyin.toLowerCase().includes(q) ||
+        d.titleTranslation.toLowerCase().includes(q) ||
+        d.titleTranslation_ru.toLowerCase().includes(q)
+      );
+    }
+
+    return result;
+  }, [search, dialogues, activeTag, showBookmarked, bookmarks]);
 
   return (
     <main className="home">
@@ -57,31 +135,93 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
       </header>
 
       <section className="home__content">
+        <div className="dialogues__search">
+          <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            className="dialogues__search-input"
+            placeholder={language === 'ru' ? 'Поиск диалогов...' : 'Dialoglarni qidirish...'}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {search && (
+            <button className="dialogues__search-clear" onClick={() => setSearch('')} aria-label="Clear">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          )}
+        </div>
+
+        <div className="dialogues__tags">
+          <button
+            className={`dialogues__tag ${!activeTag && !showBookmarked ? 'dialogues__tag--active' : ''}`}
+            onClick={() => { setActiveTag(null); setShowBookmarked(false); }}
+          >
+            {language === 'ru' ? 'Все' : 'Hammasi'}
+          </button>
+          <button
+            className={`dialogues__tag dialogues__tag--bookmark ${showBookmarked ? 'dialogues__tag--active' : ''}`}
+            onClick={() => { setShowBookmarked(!showBookmarked); setActiveTag(null); }}
+          >
+            <svg viewBox="0 0 24 24" width="14" height="14" fill={showBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+            {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
+          </button>
+          {availableTags.map((tag) => (
+            <button
+              key={tag}
+              className={`dialogues__tag ${activeTag === tag ? 'dialogues__tag--active' : ''}`}
+              onClick={() => { setActiveTag(activeTag === tag ? null : tag); setShowBookmarked(false); }}
+            >
+              {language === 'ru' ? TAGS[tag].ru : TAGS[tag].uz}
+            </button>
+          ))}
+        </div>
+
         <div className="home__lessons">
-          {dialogues.map((dialogue, index) => (
-            <article key={dialogue.id} className="lesson-card">
-              <div className="lesson-card__header">
-                <div className="lesson-card__number">{index + 1}</div>
-                <div className="lesson-card__title-group">
-                  <h3 className="lesson-card__title">{dialogue.title}</h3>
-                  <p className="lesson-card__pinyin">{dialogue.pinyin}</p>
-                  <p className="lesson-card__translation">
+          {filtered.map((dialogue) => (
+            <Link key={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card">
+              <div className="dialogue-card__content">
+                <div className="dialogue-card__text">
+                  <h3 className="dialogue-card__title">
+                    {dialogue.title}
+                    {isNew(dialogue.dateAdded) && (
+                      <span className="dialogue-card__new">{language === 'ru' ? 'Новое' : 'Yangi'}</span>
+                    )}
+                  </h3>
+                  <p className="dialogue-card__pinyin">{dialogue.pinyin}</p>
+                  <p className="dialogue-card__translation">
                     {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation}
                   </p>
                 </div>
-              </div>
-              <div className="lesson-card__pages">
-                <Link
-                  href={`${bookPath}/dialogues/${dialogue.id}`}
-                  className="lesson-card__page-link"
+                <button
+                  className={`dialogue-card__bookmark ${bookmarks.has(dialogue.id) ? 'dialogue-card__bookmark--active' : ''}`}
+                  onClick={(e) => toggleBookmark(e, dialogue.id)}
+                  aria-label="Bookmark"
                 >
-                  <span className="lesson-card__page-num">
-                    {language === 'ru' ? 'Читать' : "O'qish"}
-                  </span>
-                </Link>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill={bookmarks.has(dialogue.id) ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                  </svg>
+                </button>
               </div>
-            </article>
+              {dialogue.tag && (
+                <span className="dialogue-card__tag">
+                  {language === 'ru' ? TAGS[dialogue.tag]?.ru : TAGS[dialogue.tag]?.uz}
+                </span>
+              )}
+            </Link>
           ))}
+          {filtered.length === 0 && (
+            <p className="dialogues__empty">
+              {language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}
+            </p>
+          )}
         </div>
       </section>
 

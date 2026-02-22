@@ -1,0 +1,232 @@
+{
+  "id": "hsk1-dialogue37",
+  "title": "等我一下",
+  "pinyin": "Děng wǒ yíxià",
+  "titleTranslation": "Meni kutib turing",
+  "titleTranslation_ru": "Подожди меня",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d37-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d37-s1",
+          "text_original": "你到了吗？",
+          "pinyin": "Nǐ dào le ma?",
+          "text_translation": "Yetib keldingizmi?",
+          "text_translation_ru": "Ты приехал?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "dào",
+              "t": "yetib kelmoq",
+              "tr": "прибыть"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue1.mp3"
+        },
+        {
+          "id": "d37-s2",
+          "text_original": "到了。",
+          "pinyin": "Dào le.",
+          "text_translation": "Yetib keldim.",
+          "text_translation_ru": "Приехал.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "dào",
+              "t": "yetib kelmoq",
+              "tr": "прибыть"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue2.mp3"
+        },
+        {
+          "id": "d37-s3",
+          "text_original": "在哪儿？",
+          "pinyin": "Zài nǎr?",
+          "text_translation": "Qayerdasiz?",
+          "text_translation_ru": "Где ты?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "nǎr",
+              "t": "qayerda",
+              "tr": "где",
+              "h": 1,
+              "l": 7
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue3.mp3"
+        },
+        {
+          "id": "d37-s4",
+          "text_original": "在门口。",
+          "pinyin": "Zài ménkǒu.",
+          "text_translation": "Eshik oldida.",
+          "text_translation_ru": "У входа.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "ménkǒu",
+              "t": "eshik oldi",
+              "tr": "у входа"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue4.mp3"
+        },
+        {
+          "id": "d37-s5",
+          "text_original": "等我一下。",
+          "pinyin": "Děng wǒ yíxià.",
+          "text_translation": "Meni kutib turing.",
+          "text_translation_ru": "Подожди меня.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "děng",
+              "t": "kutmoq",
+              "tr": "ждать"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "wǒ",
+              "t": "meni",
+              "tr": "меня",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yíxià",
+              "t": "biroz",
+              "tr": "немного"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue5.mp3"
+        },
+        {
+          "id": "d37-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3"
+    }
+  ],
+  "tag": "muloqot",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3"
+}

@@ -20,10 +20,41 @@
           "text_translation_ru": "Сколько тебе лет?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "duō", "t": "qancha", "tr": "сколько", "h": 1, "l": 3 },
-            { "i": [2, 3], "p": "dà", "t": "katta", "tr": "большой", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "duō",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dà",
+              "t": "katta",
+              "tr": "большой",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue1.mp3"
         },
         {
           "id": "d13-s2",
@@ -33,12 +64,61 @@
           "text_translation_ru": "Мне двадцать два года. А тебе?",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 4], "p": "èrshí'èr", "t": "yigirma ikki", "tr": "двадцать два" },
-            { "i": [4, 5], "p": "suì", "t": "yosh", "tr": "лет", "h": 1, "l": 3 },
-            { "i": [6, 7], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [7, 8], "p": "ne", "t": "-chi", "tr": "а (ты)?", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "èrshí'èr",
+              "t": "yigirma ikki",
+              "tr": "двадцать два"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "suì",
+              "t": "yosh",
+              "tr": "лет",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "ne",
+              "t": "-chi",
+              "tr": "а (ты)?",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue2.mp3"
         },
         {
           "id": "d13-s3",
@@ -48,10 +128,39 @@
           "text_translation_ru": "Мне двадцать один год.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 4], "p": "èrshíyī", "t": "yigirma bir", "tr": "двадцать один" },
-            { "i": [4, 5], "p": "suì", "t": "yosh", "tr": "лет", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "èrshíyī",
+              "t": "yigirma bir",
+              "tr": "двадцать один"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "suì",
+              "t": "yosh",
+              "tr": "лет",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue3.mp3"
         },
         {
           "id": "d13-s4",
@@ -61,11 +170,48 @@
           "text_translation_ru": "О, мы почти ровесники.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "ó", "t": "ha", "tr": "о" },
-            { "i": [2, 4], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 4 },
-            { "i": [4, 7], "p": "chàbuduō", "t": "deyarli", "tr": "почти" },
-            { "i": [7, 8], "p": "dà", "t": "katta", "tr": "большой", "h": 1, "l": 3 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "ó",
+              "t": "ha",
+              "tr": "о"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                7
+              ],
+              "p": "chàbuduō",
+              "t": "deyarli",
+              "tr": "почти"
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "dà",
+              "t": "katta",
+              "tr": "большой",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue4.mp3"
         },
         {
           "id": "d13-s5",
@@ -75,11 +221,35 @@
           "text_translation_ru": "Да.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "shì", "t": "ha", "tr": "да", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "de", "t": "(yukl.)", "tr": "(част.)", "h": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "shì",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(yukl.)",
+              "tr": "(част.)",
+              "h": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue5.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "tanishuv",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue.mp3"
 }

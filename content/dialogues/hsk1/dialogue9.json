@@ -20,13 +20,71 @@
           "text_translation_ru": "Какой у тебя номер телефона?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
-            { "i": [2, 4], "p": "diànhuà", "t": "telefon", "tr": "телефон", "h": 1, "l": 10 },
-            { "i": [4, 6], "p": "hàomǎ", "t": "raqam", "tr": "номер" },
-            { "i": [6, 7], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
-            { "i": [7, 9], "p": "duōshao", "t": "necha", "tr": "сколько", "h": 1, "l": 10 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "(частица)",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "diànhuà",
+              "t": "telefon",
+              "tr": "телефон",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "hàomǎ",
+              "t": "raqam",
+              "tr": "номер"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "shì",
+              "t": "-dir",
+              "tr": "быть",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "duōshao",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue1.mp3"
         },
         {
           "id": "d9-s2",
@@ -36,12 +94,60 @@
           "text_translation_ru": "Мой номер телефона 138 1234 5678.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "de", "t": "-ning", "tr": "(частица)", "h": 1 },
-            { "i": [2, 4], "p": "diànhuà", "t": "telefon", "tr": "телефон", "h": 1, "l": 10 },
-            { "i": [4, 6], "p": "hàomǎ", "t": "raqam", "tr": "номер" },
-            { "i": [6, 7], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "-ning",
+              "tr": "(частица)",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "diànhuà",
+              "t": "telefon",
+              "tr": "телефон",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "hàomǎ",
+              "t": "raqam",
+              "tr": "номер"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "shì",
+              "t": "-dir",
+              "tr": "быть",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue2.mp3"
         },
         {
           "id": "d9-s3",
@@ -51,11 +157,49 @@
           "text_translation_ru": "Пожалуйста, скажи ещё раз.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "qǐng", "t": "iltimos", "tr": "пожалуйста", "h": 1, "l": 9 },
-            { "i": [1, 2], "p": "zài", "t": "yana", "tr": "ещё", "h": 1 },
-            { "i": [2, 3], "p": "shuō", "t": "aytmoq", "tr": "сказать", "h": 1, "l": 5 },
-            { "i": [3, 5], "p": "yí biàn", "t": "bir marta", "tr": "один раз" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "qǐng",
+              "t": "iltimos",
+              "tr": "пожалуйста",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "yana",
+              "tr": "ещё",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "aytmoq",
+              "tr": "сказать",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yí biàn",
+              "t": "bir marta",
+              "tr": "один раз"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue3.mp3"
         },
         {
           "id": "d9-s4",
@@ -64,7 +208,8 @@
           "text_translation": "138 1234 5678.",
           "text_translation_ru": "138 1234 5678.",
           "speaker": "B",
-          "words": []
+          "words": [],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue4.mp3"
         },
         {
           "id": "d9-s5",
@@ -74,8 +219,19 @@
           "text_translation_ru": "Спасибо.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xièxie",
+              "t": "rahmat",
+              "tr": "спасибо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue5.mp3"
         },
         {
           "id": "d9-s6",
@@ -85,10 +241,25 @@
           "text_translation_ru": "Не за что.",
           "speaker": "B",
           "words": [
-            { "i": [0, 3], "p": "bú kèqi", "t": "arzimaydi", "tr": "не за что", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "bú kèqi",
+              "t": "arzimaydi",
+              "tr": "не за что",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "telefon",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3"
 }

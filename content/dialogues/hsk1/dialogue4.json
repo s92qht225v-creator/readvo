@@ -20,10 +20,41 @@
           "text_translation_ru": "У тебя есть Телеграм?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [10, 11], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue1.mp3"
         },
         {
           "id": "d4-s2",
@@ -33,10 +64,41 @@
           "text_translation_ru": "Нет, у меня нет Телеграма.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "méiyǒu", "t": "yo'q", "tr": "нет", "h": 1, "l": 4 },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [4, 6], "p": "méiyǒu", "t": "yo'q", "tr": "не иметь", "h": 1, "l": 4 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "не иметь",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue2.mp3"
         },
         {
           "id": "d4-s3",
@@ -46,25 +108,72 @@
           "text_translation_ru": "У тебя есть WeChat?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [2, 4], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" },
-            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "Wēixìn",
+              "t": "WeChat",
+              "tr": "WeChat"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue3.mp3"
         },
         {
           "id": "d4-s4",
-          "text_original": "有，我有微信。",
-          "pinyin": "Yǒu, wǒ yǒu Wēixìn.",
-          "text_translation": "Bor, mening WeChatim bor.",
-          "text_translation_ru": "Есть, у меня есть WeChat.",
+          "text_original": "有的。",
+          "pinyin": "Yǒu de.",
+          "text_translation": "Bor.",
+          "text_translation_ru": "Есть.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [4, 6], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yǒu de",
+              "t": "bor",
+              "tr": "есть",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue4.mp3"
         },
         {
           "id": "d4-s5",
@@ -74,13 +183,70 @@
           "text_translation_ru": "Могу добавить тебя в WeChat?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "jiā", "t": "qo'shmoq", "tr": "добавить" },
-            { "i": [2, 3], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [3, 5], "p": "Wēixìn", "t": "WeChat", "tr": "WeChat" },
-            { "i": [6, 8], "p": "kěyǐ", "t": "bo'ladimi", "tr": "можно", "h": 1, "l": 9 },
-            { "i": [8, 9], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiā",
+              "t": "qo'shmoq",
+              "tr": "добавить"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "Wēixìn",
+              "t": "WeChat",
+              "tr": "WeChat"
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "kěyǐ",
+              "t": "bo'ladimi",
+              "tr": "можно",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue5.mp3"
         },
         {
           "id": "d4-s6",
@@ -90,10 +256,25 @@
           "text_translation_ru": "Можно.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "kěyǐ", "t": "bo'ladi", "tr": "можно", "h": 1, "l": 9 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěyǐ",
+              "t": "bo'ladi",
+              "tr": "можно",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "telefon",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue.mp3"
 }

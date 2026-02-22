@@ -1,0 +1,325 @@
+{
+  "id": "hsk1-dialogue40",
+  "title": "点菜",
+  "pinyin": "Diǎn cài",
+  "titleTranslation": "Buyurtma berish",
+  "titleTranslation_ru": "Заказ еды",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d40-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d40-s1",
+          "text_original": "你好，点菜。",
+          "pinyin": "Nǐ hǎo, diǎn cài.",
+          "text_translation": "Salom, buyurtma beraman.",
+          "text_translation_ru": "Здравствуйте, хочу заказать.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nǐ hǎo",
+              "t": "salom",
+              "tr": "здравствуйте",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "diǎn",
+              "t": "buyurtma bermoq",
+              "tr": "заказать"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "cài",
+              "t": "taom",
+              "tr": "блюдо",
+              "h": 1,
+              "l": 14
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d40-s2",
+          "text_original": "你好，今天吃点什么？",
+          "pinyin": "Nǐ hǎo, jīntiān chī diǎn shénme?",
+          "text_translation": "Salom, bugun nima yeyasiz?",
+          "text_translation_ru": "Здравствуйте, что будете сегодня?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nǐ hǎo",
+              "t": "salom",
+              "tr": "здравствуйте",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "diǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d40-s3",
+          "text_original": "来一份大盘鸡。",
+          "pinyin": "Lái yí fèn dàpánjī.",
+          "text_translation": "Bitta dapanji bo'lsin.",
+          "text_translation_ru": "Одну порцию дапаньцзи.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "lái",
+              "t": "bermoq",
+              "tr": "дайте",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yí fèn",
+              "t": "bitta",
+              "tr": "одну порцию"
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "dàpánjī",
+              "t": "dapanji",
+              "tr": "дапаньцзи (курица с картошкой)"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d40-s4",
+          "text_original": "你能吃辣吗？",
+          "pinyin": "Nǐ néng chī là ma?",
+          "text_translation": "Achchiq yeya olasizmi?",
+          "text_translation_ru": "Ты можешь есть острое?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "néng",
+              "t": "(-a olmoq)",
+              "tr": "мочь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "là",
+              "t": "achchiq",
+              "tr": "острый"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d40-s5",
+          "text_original": "能。再来一瓶冰的百事可乐。",
+          "pinyin": "Néng. Zài lái yì píng bīng de Bǎishì Kělè.",
+          "text_translation": "Olaman. Yana bitta sovuq Pepsi ham bo'lsin.",
+          "text_translation_ru": "Могу. И ещё бутылку холодной Пепси.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "néng",
+              "t": "olaman",
+              "tr": "могу",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "yana",
+              "tr": "ещё"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "lái",
+              "t": "bermoq",
+              "tr": "дайте",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "yì píng",
+              "t": "bitta shisha",
+              "tr": "одну бутылку"
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "bīng de",
+              "t": "sovuq",
+              "tr": "холодный"
+            },
+            {
+              "i": [
+                8,
+                12
+              ],
+              "p": "Bǎishì Kělè",
+              "t": "Pepsi",
+              "tr": "Пепси"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d40-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "xo'p",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "ovqat",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3"
+}

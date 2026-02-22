@@ -20,13 +20,72 @@
           "text_translation_ru": "У моего телефона сел заряд.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "de", "t": "(-ning)", "tr": "(прит. част.)", "h": 1, "l": 2 },
-            { "i": [2, 4], "p": "shǒujī", "t": "telefon", "tr": "телефон", "h": 1, "l": 9 },
-            { "i": [4, 5], "p": "méi", "t": "yo'q", "tr": "нет", "h": 1, "l": 4 },
-            { "i": [5, 6], "p": "diàn", "t": "zaryadka", "tr": "электричество" },
-            { "i": [6, 7], "p": "le", "t": "(o'tgan zamon)", "tr": "(прош. время)", "h": 1, "l": 8 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(-ning)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "shǒujī",
+              "t": "telefon",
+              "tr": "телефон",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "méi",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "diàn",
+              "t": "zaryadka",
+              "tr": "электричество"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue1.mp3"
         },
         {
           "id": "d20-s2",
@@ -36,10 +95,39 @@
           "text_translation_ru": "У тебя есть зарядка?",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [1, 4], "p": "chōngdiànqì", "t": "zaryadka", "tr": "зарядное устройство" },
-            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "chōngdiànqì",
+              "t": "zaryadka",
+              "tr": "зарядное устройство"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue2.mp3"
         },
         {
           "id": "d20-s3",
@@ -49,8 +137,19 @@
           "text_translation_ru": "Нет.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "méiyǒu", "t": "yo'q", "tr": "нет", "h": 1, "l": 4 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue3.mp3"
         },
         {
           "id": "d20-s4",
@@ -60,11 +159,50 @@
           "text_translation_ru": "Пользуйся моей.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "yòng", "t": "ishlatmoq", "tr": "использовать" },
-            { "i": [1, 2], "p": "wǒ", "t": "mening", "tr": "мой", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "de", "t": "(-niki)", "tr": "(прит. част.)", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "ba", "t": "(-ng)", "tr": "(давай)", "h": 1, "l": 11 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yòng",
+              "t": "ishlatmoq",
+              "tr": "использовать"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "de",
+              "t": "(-niki)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ba",
+              "t": "(-ng)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue4.mp3"
         },
         {
           "id": "d20-s5",
@@ -74,8 +212,19 @@
           "text_translation_ru": "Спасибо.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xièxie",
+              "t": "rahmat",
+              "tr": "спасибо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue5.mp3"
         },
         {
           "id": "d20-s6",
@@ -85,11 +234,36 @@
           "text_translation_ru": "Не за что.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 3], "p": "kèqi", "t": "xushmuomala", "tr": "вежливый", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bú",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "kèqi",
+              "t": "xushmuomala",
+              "tr": "вежливый",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "telefon",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3"
 }

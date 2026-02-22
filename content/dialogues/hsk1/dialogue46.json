@@ -1,0 +1,241 @@
+{
+  "id": "hsk1-dialogue46",
+  "title": "减肥",
+  "pinyin": "Jiǎnféi",
+  "titleTranslation": "Ozish",
+  "titleTranslation_ru": "Похудение",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d46-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d46-s1",
+          "text_original": "你在干吗？",
+          "pinyin": "Nǐ zài gàn ma?",
+          "text_translation": "Nima qilyapsiz?",
+          "text_translation_ru": "Что делаешь?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "gàn",
+              "t": "qilmoq",
+              "tr": "делать"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "nima",
+              "tr": "что"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue1.mp3"
+        },
+        {
+          "id": "d46-s2",
+          "text_original": "减肥。",
+          "pinyin": "Jiǎnféi.",
+          "text_translation": "Ozayapman.",
+          "text_translation_ru": "Худею.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jiǎnféi",
+              "t": "ozmoq",
+              "tr": "худеть"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue2.mp3"
+        },
+        {
+          "id": "d46-s3",
+          "text_original": "手里那是什么？",
+          "pinyin": "Shǒu lǐ nà shì shénme?",
+          "text_translation": "Qo'lingizdagi nima?",
+          "text_translation_ru": "Что это у тебя в руке?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "shǒu lǐ",
+              "t": "qo'lda",
+              "tr": "в руке"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "nà",
+              "t": "o'sha",
+              "tr": "то",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "shì",
+              "t": "bu",
+              "tr": "это",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue3.mp3"
+        },
+        {
+          "id": "d46-s4",
+          "text_original": "蛋糕。",
+          "pinyin": "Dàngāo.",
+          "text_translation": "Tort.",
+          "text_translation_ru": "Торт.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "dàngāo",
+              "t": "tort",
+              "tr": "торт"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue4.mp3"
+        },
+        {
+          "id": "d46-s5",
+          "text_original": "这叫减肥？",
+          "pinyin": "Zhè jiào jiǎnféi?",
+          "text_translation": "Bunga ozish deysizmi?",
+          "text_translation_ru": "И это называется худеть?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zhè",
+              "t": "bu",
+              "tr": "это",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiào",
+              "t": "deyilmoq",
+              "tr": "называться",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "jiǎnféi",
+              "t": "ozmoq",
+              "tr": "худеть"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue5.mp3"
+        },
+        {
+          "id": "d46-s6",
+          "text_original": "明天开始。",
+          "pinyin": "Míngtiān kāishǐ.",
+          "text_translation": "Ertagadan boshlayman.",
+          "text_translation_ru": "С завтрашнего дня начну.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "kāishǐ",
+              "t": "boshlamoq",
+              "tr": "начать",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue.mp3"
+    }
+  ],
+  "tag": "ovqat",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue.mp3"
+}

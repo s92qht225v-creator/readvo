@@ -20,12 +20,62 @@
           "text_translation_ru": "Ты умеешь говорить по-китайски?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "huì", "t": "bilmoq", "tr": "уметь", "h": 1, "l": 9 },
-            { "i": [2, 3], "p": "shuō", "t": "gapirmoq", "tr": "говорить", "h": 1, "l": 5 },
-            { "i": [3, 5], "p": "Zhōngwén", "t": "xitoycha", "tr": "китайский язык", "h": 1 },
-            { "i": [5, 6], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "gapirmoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "Zhōngwén",
+              "t": "xitoycha",
+              "tr": "китайский язык",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue1.mp3"
         },
         {
           "id": "d5-s2",
@@ -35,17 +85,114 @@
           "text_translation_ru": "Я немного умею. Ты умеешь говорить по-узбекски?",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "huì", "t": "bilmoq", "tr": "уметь", "h": 1, "l": 9 },
-            { "i": [2, 3], "p": "shuō", "t": "gapirmoq", "tr": "говорить", "h": 1, "l": 5 },
-            { "i": [3, 5], "p": "yìdiǎn", "t": "biroz", "tr": "немного", "h": 1, "l": 11 },
-            { "i": [6, 7], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [7, 8], "p": "huì", "t": "bilmoq", "tr": "уметь", "h": 1, "l": 9 },
-            { "i": [8, 9], "p": "shuō", "t": "gapirmoq", "tr": "говорить", "h": 1, "l": 5 },
-            { "i": [9, 13], "p": "Wūzībiékè", "t": "o'zbek", "tr": "узбекский" },
-            { "i": [13, 14], "p": "yǔ", "t": "til", "tr": "язык" },
-            { "i": [14, 15], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "gapirmoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yìdiǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "shuō",
+              "t": "gapirmoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                9,
+                13
+              ],
+              "p": "Wūzībiékè",
+              "t": "o'zbek",
+              "tr": "узбекский"
+            },
+            {
+              "i": [
+                13,
+                14
+              ],
+              "p": "yǔ",
+              "t": "til",
+              "tr": "язык"
+            },
+            {
+              "i": [
+                14,
+                15
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue2.mp3"
         },
         {
           "id": "d5-s3",
@@ -55,15 +202,76 @@
           "text_translation_ru": "Узбекский? Не умею.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "Wū", "t": "o'zbek", "tr": "узбекский" },
-            { "i": [1, 2], "p": "yǔ", "t": "til", "tr": "язык" },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 3 },
-            { "i": [5, 6], "p": "huì", "t": "bilmoq", "tr": "уметь", "h": 1, "l": 9 },
-            { "i": [6, 7], "p": "shuō", "t": "gapirmoq", "tr": "говорить", "h": 1, "l": 5 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "Wū",
+              "t": "o'zbek",
+              "tr": "узбекский"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yǔ",
+              "t": "til",
+              "tr": "язык"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "bú",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "shuō",
+              "t": "gapirmoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 5
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue3.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "tanishuv",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue.mp3"
 }

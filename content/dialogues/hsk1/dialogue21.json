@@ -1,9 +1,9 @@
 {
   "id": "hsk1-dialogue21",
-  "title": "我没带钱",
-  "pinyin": "Wǒ méi dài qián",
-  "titleTranslation": "Pul olib kelmadim",
-  "titleTranslation_ru": "Я не взял деньги",
+  "title": "我请你",
+  "pinyin": "Wǒ qǐng nǐ",
+  "titleTranslation": "Men mehmon qilaman",
+  "titleTranslation_ru": "Я угощаю",
   "level": 1,
   "sections": [
     {
@@ -20,11 +20,50 @@
           "text_translation_ru": "Я не взял деньги,",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "méi", "t": "(-ma-)", "tr": "не (прош.)", "h": 1, "l": 4 },
-            { "i": [2, 3], "p": "dài", "t": "olib kelmoq", "tr": "взять с собой" },
-            { "i": [3, 4], "p": "qián", "t": "pul", "tr": "деньги", "h": 1, "l": 9 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "méi",
+              "t": "(-ma-)",
+              "tr": "не (прош.)",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dài",
+              "t": "olib kelmoq",
+              "tr": "взять с собой"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue1.mp3"
         },
         {
           "id": "d21-s2",
@@ -34,8 +73,17 @@
           "text_translation_ru": "А?",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "á", "t": "ha?", "tr": "а?" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "á",
+              "t": "ha?",
+              "tr": "а?"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue2.mp3"
         },
         {
           "id": "d21-s3",
@@ -45,9 +93,28 @@
           "text_translation_ru": "Что делать?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "zěnme", "t": "qanday", "tr": "как", "h": 1, "l": 7 },
-            { "i": [2, 3], "p": "bàn", "t": "qilmoq", "tr": "делать" }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "zěnme",
+              "t": "qanday",
+              "tr": "как",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "bàn",
+              "t": "qilmoq",
+              "tr": "делать"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue3.mp3"
         },
         {
           "id": "d21-s4",
@@ -57,11 +124,50 @@
           "text_translation_ru": "Ничего, я угощаю.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "méi shì", "t": "hech gap yo'q", "tr": "ничего" },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [4, 5], "p": "qǐng", "t": "mehmon qilmoq", "tr": "угощать", "h": 1, "l": 1 },
-            { "i": [5, 6], "p": "nǐ", "t": "seni", "tr": "тебя", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "méi shì",
+              "t": "hech gap yo'q",
+              "tr": "ничего"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "qǐng",
+              "t": "mehmon qilmoq",
+              "tr": "угощать",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "nǐ",
+              "t": "seni",
+              "tr": "тебя",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue4.mp3"
         },
         {
           "id": "d21-s5",
@@ -71,12 +177,63 @@
           "text_translation_ru": "Спасибо, в следующий раз я угощаю.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 },
-            { "i": [3, 5], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
-            { "i": [5, 6], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [6, 7], "p": "qǐng", "t": "mehmon qilmoq", "tr": "угощать", "h": 1, "l": 1 },
-            { "i": [7, 8], "p": "nǐ", "t": "seni", "tr": "тебя", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xièxie",
+              "t": "rahmat",
+              "tr": "спасибо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xià cì",
+              "t": "keyingi safar",
+              "tr": "в следующий раз",
+              "h": 1,
+              "l": 13
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "qǐng",
+              "t": "mehmon qilmoq",
+              "tr": "угощать",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "nǐ",
+              "t": "seni",
+              "tr": "тебя",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue5.mp3"
         },
         {
           "id": "d21-s6",
@@ -86,11 +243,34 @@
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "a", "t": "(undov)", "tr": "(воскл.)" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "a",
+              "t": "(undov)",
+              "tr": "(воскл.)"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "xaridlar",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue.mp3"
 }

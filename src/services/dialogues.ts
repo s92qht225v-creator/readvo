@@ -10,6 +10,8 @@ export interface DialogueInfo {
   titleTranslation: string;
   titleTranslation_ru: string;
   level: number;
+  tag?: string;
+  dateAdded?: string;
 }
 
 export interface DialoguePage {
@@ -19,12 +21,15 @@ export interface DialoguePage {
   titleTranslation: string;
   titleTranslation_ru: string;
   level: number;
+  tag?: string;
+  dateAdded?: string;
   audio_url?: string;
   sections: {
     id: string;
     type: string;
     heading: string;
     subheading: string;
+    audio_url?: string;
     sentences: {
       id: string;
       text_original: string;
@@ -32,6 +37,7 @@ export interface DialoguePage {
       text_translation: string;
       text_translation_ru: string;
       speaker?: string;
+      audio_url?: string;
       start?: number;
       end?: number;
       words?: { i: [number, number]; p: string; t: string; tr: string; h?: number; l?: number }[];
@@ -59,13 +65,18 @@ export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo
         titleTranslation: data.titleTranslation,
         titleTranslation_ru: data.titleTranslation_ru,
         level: data.level,
+        tag: data.tag,
+        dateAdded: data.dateAdded,
       });
     }
 
     dialogues.sort((a, b) => {
+      const dateA = a.dateAdded || '';
+      const dateB = b.dateAdded || '';
+      if (dateA !== dateB) return dateB.localeCompare(dateA);
       const numA = parseInt(a.id.replace(/\D/g, ''));
       const numB = parseInt(b.id.replace(/\D/g, ''));
-      return numA - numB;
+      return numB - numA;
     });
 
     return dialogues;

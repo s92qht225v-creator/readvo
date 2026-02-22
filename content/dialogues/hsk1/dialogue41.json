@@ -1,0 +1,219 @@
+{
+  "id": "hsk1-dialogue41",
+  "title": "可以刷卡吗？",
+  "pinyin": "Kěyǐ shuākǎ ma?",
+  "titleTranslation": "Karta bilan to'lasa bo'ladimi?",
+  "titleTranslation_ru": "Можно оплатить картой?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d41-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d41-s1",
+          "text_original": "服务员，买单。",
+          "pinyin": "Fúwùyuán, mǎidān.",
+          "text_translation": "Ofitsiant, hisob bo'lsin.",
+          "text_translation_ru": "Официант, счёт.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "fúwùyuán",
+              "t": "ofitsiant",
+              "tr": "официант",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "mǎidān",
+              "t": "hisob",
+              "tr": "счёт"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d41-s2",
+          "text_original": "好的。",
+          "pinyin": "Hǎo de.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎo de",
+              "t": "xo'p",
+              "tr": "хорошо"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d41-s3",
+          "text_original": "一共多少钱？",
+          "pinyin": "Yígòng duōshao qián?",
+          "text_translation": "Hammasi qancha?",
+          "text_translation_ru": "Сколько всего?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yígòng",
+              "t": "hammasi",
+              "tr": "всего"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d41-s4",
+          "text_original": "一百二十块。",
+          "pinyin": "Yìbǎi èrshí kuài.",
+          "text_translation": "Yuz yigirma yuan.",
+          "text_translation_ru": "Сто двадцать юаней.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yìbǎi",
+              "t": "yuz",
+              "tr": "сто"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "èrshí",
+              "t": "yigirma",
+              "tr": "двадцать"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d41-s5",
+          "text_original": "可以刷卡吗？",
+          "pinyin": "Kěyǐ shuākǎ ma?",
+          "text_translation": "Karta bilan to'lasa bo'ladimi?",
+          "text_translation_ru": "Можно оплатить картой?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěyǐ",
+              "t": "mumkin",
+              "tr": "можно",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "shuākǎ",
+              "t": "karta bilan to'lamoq",
+              "tr": "оплатить картой"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d41-s6",
+          "text_original": "可以。",
+          "pinyin": "Kěyǐ.",
+          "text_translation": "Bo'ladi.",
+          "text_translation_ru": "Можно.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "kěyǐ",
+              "t": "bo'ladi",
+              "tr": "можно",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "ovqat",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3"
+}

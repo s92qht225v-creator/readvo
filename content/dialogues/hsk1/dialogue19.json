@@ -1,9 +1,9 @@
 {
   "id": "hsk1-dialogue19",
-  "title": "你怎么去？",
-  "pinyin": "Nǐ zěnme qù?",
-  "titleTranslation": "Qanday borasiz?",
-  "titleTranslation_ru": "Как ты добираешься?",
+  "title": "你怎么去学校？",
+  "pinyin": "Nǐ zěnme qù xuéxiào?",
+  "titleTranslation": "Maktabga qanday borasiz?",
+  "titleTranslation_ru": "Как ты добираешься до школы?",
   "level": 1,
   "sections": [
     {
@@ -20,11 +20,52 @@
           "text_translation_ru": "Как ты добираешься до школы?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "zěnme", "t": "qanday", "tr": "как", "h": 1, "l": 7 },
-            { "i": [3, 4], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [4, 6], "p": "xuéxiào", "t": "maktab", "tr": "школа", "h": 1, "l": 8 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zěnme",
+              "t": "qanday",
+              "tr": "как",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "xuéxiào",
+              "t": "maktab",
+              "tr": "школа",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue1.mp3"
         },
         {
           "id": "d19-s2",
@@ -34,10 +75,39 @@
           "text_translation_ru": "Я езжу на автобусе.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "zuò", "t": "minmoq", "tr": "сидеть/ехать", "h": 1, "l": 14 },
-            { "i": [2, 5], "p": "gōngjiāochē", "t": "avtobus", "tr": "автобус" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zuò",
+              "t": "minmoq",
+              "tr": "сидеть/ехать",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [
+                2,
+                5
+              ],
+              "p": "gōngjiāochē",
+              "t": "avtobus",
+              "tr": "автобус"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue2.mp3"
         },
         {
           "id": "d19-s3",
@@ -47,9 +117,28 @@
           "text_translation_ru": "Далеко?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "yuǎn", "t": "uzoq", "tr": "далеко" },
-            { "i": [1, 2], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yuǎn",
+              "t": "uzoq",
+              "tr": "далеко"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue3.mp3"
         },
         {
           "id": "d19-s4",
@@ -59,9 +148,28 @@
           "text_translation_ru": "Не далеко.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "yuǎn", "t": "uzoq", "tr": "далеко" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "yuǎn",
+              "t": "uzoq",
+              "tr": "далеко"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue4.mp3"
         },
         {
           "id": "d19-s5",
@@ -71,9 +179,26 @@
           "text_translation_ru": "Сколько времени ехать?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "duō jiǔ", "t": "qancha vaqt", "tr": "как долго" },
-            { "i": [2, 3], "p": "dào", "t": "yetib bormoq", "tr": "добраться" }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "duō jiǔ",
+              "t": "qancha vaqt",
+              "tr": "как долго"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dào",
+              "t": "yetib bormoq",
+              "tr": "добраться"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue5.mp3"
         },
         {
           "id": "d19-s6",
@@ -83,11 +208,34 @@
           "text_translation_ru": "Двадцать минут.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "èrshí", "t": "yigirma", "tr": "двадцать" },
-            { "i": [2, 4], "p": "fēnzhōng", "t": "daqiqa", "tr": "минут", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "èrshí",
+              "t": "yigirma",
+              "tr": "двадцать"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "fēnzhōng",
+              "t": "daqiqa",
+              "tr": "минут",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "transport",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue.mp3"
 }

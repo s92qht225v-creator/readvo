@@ -1,0 +1,299 @@
+{
+  "id": "hsk1-dialogue39",
+  "title": "作业写完了吗？",
+  "pinyin": "Zuòyè xiě wán le ma?",
+  "titleTranslation": "Vazifani yozib bo'ldingizmi?",
+  "titleTranslation_ru": "Домашнее задание дописал?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d39-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d39-s1",
+          "text_original": "作业写完了吗？",
+          "pinyin": "Zuòyè xiě wán le ma?",
+          "text_translation": "Vazifani yozib bo'ldingizmi?",
+          "text_translation_ru": "Домашнее задание дописал?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "zuòyè",
+              "t": "vazifa",
+              "tr": "домашнее задание"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wán",
+              "t": "tugatmoq",
+              "tr": "закончить"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d39-s2",
+          "text_original": "还没写完。",
+          "pinyin": "Hái méi xiě wán.",
+          "text_translation": "Hali yozib bo'lmadim.",
+          "text_translation_ru": "Ещё не дописал.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hái",
+              "t": "hali",
+              "tr": "ещё"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "méi",
+              "t": "yo'q",
+              "tr": "не",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wán",
+              "t": "tugatmoq",
+              "tr": "закончить"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d39-s3",
+          "text_original": "还差多少？",
+          "pinyin": "Hái chà duōshao?",
+          "text_translation": "Yana qancha qoldi?",
+          "text_translation_ru": "Сколько ещё осталось?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hái",
+              "t": "hali",
+              "tr": "ещё"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "chà",
+              "t": "qolmoq",
+              "tr": "не хватать"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d39-s4",
+          "text_original": "还差一半。",
+          "pinyin": "Hái chà yíbàn.",
+          "text_translation": "Yana yarmi qoldi.",
+          "text_translation_ru": "Ещё половина.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hái",
+              "t": "hali",
+              "tr": "ещё"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "chà",
+              "t": "qolmoq",
+              "tr": "не хватать"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yíbàn",
+              "t": "yarmi",
+              "tr": "половина"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d39-s5",
+          "text_original": "今天能写完吗？",
+          "pinyin": "Jīntiān néng xiě wán ma?",
+          "text_translation": "Bugun yozib tugatoasizmi?",
+          "text_translation_ru": "Сегодня сможешь дописать?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "néng",
+              "t": "(-a olmoq)",
+              "tr": "мочь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "wán",
+              "t": "tugatmoq",
+              "tr": "закончить"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d39-s6",
+          "text_original": "能。",
+          "pinyin": "Néng.",
+          "text_translation": "Tugata olaman.",
+          "text_translation_ru": "Смогу.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "néng",
+              "t": "(-a olmoq)",
+              "tr": "мочь",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "ish",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue.mp3"
+}

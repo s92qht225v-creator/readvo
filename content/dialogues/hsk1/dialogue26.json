@@ -1,0 +1,318 @@
+{
+  "id": "hsk1-dialogue26",
+  "title": "学中文难不难？",
+  "pinyin": "Xué Zhōngwén nán bu nán?",
+  "titleTranslation": "Xitoy tilini o'rganish qiyinmi?",
+  "titleTranslation_ru": "Трудно учить китайский?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d26-s1",
+          "text_original": "你学中文多久了？",
+          "pinyin": "Nǐ xué Zhōngwén duō jiǔ le?",
+          "text_translation": "Xitoy tilini qancha vaqt o'rganyapsiz?",
+          "text_translation_ru": "Как долго ты учишь китайский?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xué",
+              "t": "o'rganmoq",
+              "tr": "учить",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "Zhōngwén",
+              "t": "xitoy tili",
+              "tr": "китайский язык"
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "duō jiǔ",
+              "t": "qancha vaqt",
+              "tr": "как долго"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue1.mp3"
+        },
+        {
+          "id": "d26-s2",
+          "text_original": "学了半年。",
+          "pinyin": "Xué le bàn nián.",
+          "text_translation": "Yarim yil o'rgandim.",
+          "text_translation_ru": "Учу полгода.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "xué",
+              "t": "o'rganmoq",
+              "tr": "учить",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "bàn",
+              "t": "yarim",
+              "tr": "половина",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "nián",
+              "t": "yil",
+              "tr": "год",
+              "h": 1,
+              "l": 5
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue2.mp3"
+        },
+        {
+          "id": "d26-s3",
+          "text_original": "学中文难不难？",
+          "pinyin": "Xué Zhōngwén nán bu nán?",
+          "text_translation": "Xitoy tilini o'rganish qiyinmi?",
+          "text_translation_ru": "Трудно учить китайский?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "xué",
+              "t": "o'rganmoq",
+              "tr": "учить",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "Zhōngwén",
+              "t": "xitoy tili",
+              "tr": "китайский язык"
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "nán bu nán",
+              "t": "qiyinmi",
+              "tr": "трудно ли"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue3.mp3"
+        },
+        {
+          "id": "d26-s4",
+          "text_original": "有一点难。",
+          "pinyin": "Yǒu yìdiǎn nán.",
+          "text_translation": "Biroz qiyin.",
+          "text_translation_ru": "Немного трудно.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yìdiǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "nán",
+              "t": "qiyin",
+              "tr": "трудный"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue4.mp3"
+        },
+        {
+          "id": "d26-s5",
+          "text_original": "你会写字吗？",
+          "pinyin": "Nǐ huì xiě zì ma?",
+          "text_translation": "Yoza olasizmi?",
+          "text_translation_ru": "Ты умеешь писать иероглифы?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zì",
+              "t": "harf",
+              "tr": "иероглиф"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue5.mp3"
+        },
+        {
+          "id": "d26-s6",
+          "text_original": "会一点。",
+          "pinyin": "Huì yìdiǎn.",
+          "text_translation": "Biroz bilaman.",
+          "text_translation_ru": "Немного умею.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yìdiǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 12
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3"
+    }
+  ],
+  "tag": "ish",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3"
+}

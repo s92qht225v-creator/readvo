@@ -1,0 +1,248 @@
+{
+  "id": "hsk1-dialogue36",
+  "title": "你打错了",
+  "pinyin": "Nǐ dǎ cuò le",
+  "titleTranslation": "Noto'g'ri terdingiz",
+  "titleTranslation_ru": "Вы ошиблись номером",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d36-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d36-s1",
+          "text_original": "喂？",
+          "pinyin": "Wèi?",
+          "text_translation": "Alo?",
+          "text_translation_ru": "Алло?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wèi",
+              "t": "alo",
+              "tr": "алло"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue1.mp3"
+        },
+        {
+          "id": "d36-s2",
+          "text_original": "喂，你哪位？",
+          "pinyin": "Wèi, nǐ nǎ wèi?",
+          "text_translation": "Alo, kim bo'ladi?",
+          "text_translation_ru": "Алло, кто это?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wèi",
+              "t": "alo",
+              "tr": "алло"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "nǎ",
+              "t": "qaysi",
+              "tr": "какой",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "wèi",
+              "t": "kishi",
+              "tr": "персона"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue2.mp3"
+        },
+        {
+          "id": "d36-s3",
+          "text_original": "请问是小李吗？",
+          "pinyin": "Qǐngwèn shì Xiǎo Lǐ ma?",
+          "text_translation": "Kechirasiz, siz Syao Limi?",
+          "text_translation_ru": "Скажите, это Сяо Ли?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "qǐngwèn",
+              "t": "kechirasiz",
+              "tr": "скажите пожалуйста"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shì",
+              "t": "(-mi)",
+              "tr": "это",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "Xiǎo Lǐ",
+              "t": "Syao Li",
+              "tr": "Сяо Ли"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue3.mp3"
+        },
+        {
+          "id": "d36-s4",
+          "text_original": "不是，你打错了。",
+          "pinyin": "Bú shì, nǐ dǎ cuò le.",
+          "text_translation": "Yo'q, noto'g'ri terdingiz.",
+          "text_translation_ru": "Нет, вы ошиблись номером.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "bú shì",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "dǎ",
+              "t": "termoq",
+              "tr": "набирать"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "cuò",
+              "t": "noto'g'ri",
+              "tr": "неправильно"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue4.mp3"
+        },
+        {
+          "id": "d36-s5",
+          "text_original": "不好意思。",
+          "pinyin": "Bù hǎoyìsi.",
+          "text_translation": "Uzr so'rayman.",
+          "text_translation_ru": "Извините.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                4
+              ],
+              "p": "bù hǎoyìsi",
+              "t": "uzr so'rayman",
+              "tr": "извините"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue5.mp3"
+        },
+        {
+          "id": "d36-s6",
+          "text_original": "没关系。",
+          "pinyin": "Méi guānxi.",
+          "text_translation": "Hech gap emas.",
+          "text_translation_ru": "Ничего страшного.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "méi guānxi",
+              "t": "hech gap emas",
+              "tr": "ничего страшного",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3"
+    }
+  ],
+  "tag": "telefon",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3"
+}

@@ -1,0 +1,239 @@
+{
+  "id": "hsk1-dialogue42",
+  "title": "外卖到了",
+  "pinyin": "Wàimài dào le",
+  "titleTranslation": "Yetkazib berish yetib keldi",
+  "titleTranslation_ru": "Доставка приехала",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d42-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d42-s1",
+          "text_original": "外卖到了吗？",
+          "pinyin": "Wàimài dào le ma?",
+          "text_translation": "Yetkazib berish yetib keldimi?",
+          "text_translation_ru": "Доставка приехала?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wàimài",
+              "t": "yetkazib berish",
+              "tr": "доставка еды"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dào",
+              "t": "yetib kelmoq",
+              "tr": "прибыть"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d42-s2",
+          "text_original": "到了。",
+          "pinyin": "Dào le.",
+          "text_translation": "Yetib keldi.",
+          "text_translation_ru": "Приехала.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "dào",
+              "t": "yetib kelmoq",
+              "tr": "прибыть"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d42-s3",
+          "text_original": "在哪儿？",
+          "pinyin": "Zài nǎr?",
+          "text_translation": "Qayerda?",
+          "text_translation_ru": "Где?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "nǎr",
+              "t": "qayerda",
+              "tr": "где",
+              "h": 1,
+              "l": 7
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d42-s4",
+          "text_original": "在楼下。",
+          "pinyin": "Zài lóuxià.",
+          "text_translation": "Pastda.",
+          "text_translation_ru": "Внизу.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "lóuxià",
+              "t": "pastda",
+              "tr": "внизу"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d42-s5",
+          "text_original": "好的，我下去拿。",
+          "pinyin": "Hǎo de, wǒ xiàqù ná.",
+          "text_translation": "Xo'p, men pastga tushib olaman.",
+          "text_translation_ru": "Хорошо, я спущусь и заберу.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎo de",
+              "t": "xo'p",
+              "tr": "хорошо"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "xiàqù",
+              "t": "pastga tushmoq",
+              "tr": "спуститься"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "ná",
+              "t": "olmoq",
+              "tr": "взять"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d42-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "ovqat",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
+}

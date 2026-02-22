@@ -1,0 +1,262 @@
+{
+  "id": "hsk1-dialogue28",
+  "title": "你在听吗？",
+  "pinyin": "Nǐ zài tīng ma?",
+  "titleTranslation": "Eshityapsizmi?",
+  "titleTranslation_ru": "Ты слушаешь?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d28-s1",
+          "text_original": "你在听吗？",
+          "pinyin": "Nǐ zài tīng ma?",
+          "text_translation": "Eshityapsizmi?",
+          "text_translation_ru": "Ты слушаешь?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "tīng",
+              "t": "eshitmoq",
+              "tr": "слушать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue1.mp3"
+        },
+        {
+          "id": "d28-s2",
+          "text_original": "在听。",
+          "pinyin": "Zài tīng.",
+          "text_translation": "Eshityapman.",
+          "text_translation_ru": "Слушаю.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "tīng",
+              "t": "eshitmoq",
+              "tr": "слушать",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue2.mp3"
+        },
+        {
+          "id": "d28-s3",
+          "text_original": "我刚才说什么？",
+          "pinyin": "Wǒ gāngcái shuō shénme?",
+          "text_translation": "Men hozirgina nima dedim?",
+          "text_translation_ru": "Что я только что сказал?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "gāngcái",
+              "t": "hozirgina",
+              "tr": "только что"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue3.mp3"
+        },
+        {
+          "id": "d28-s4",
+          "text_original": "你说明天见。",
+          "pinyin": "Nǐ shuō míngtiān jiàn.",
+          "text_translation": "Ertaga ko'rishamiz deding.",
+          "text_translation_ru": "Ты сказал «до завтра».",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "shuō",
+              "t": "demoq",
+              "tr": "говорить",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jiàn",
+              "t": "ko'rishmoq",
+              "tr": "встретиться",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue4.mp3"
+        },
+        {
+          "id": "d28-s5",
+          "text_original": "对。",
+          "pinyin": "Duì.",
+          "text_translation": "To'g'ri.",
+          "text_translation_ru": "Верно.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "верно",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue5.mp3"
+        },
+        {
+          "id": "d28-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue.mp3"
+    }
+  ],
+  "tag": "muloqot",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue.mp3"
+}

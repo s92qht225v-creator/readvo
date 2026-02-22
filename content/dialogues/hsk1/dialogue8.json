@@ -20,11 +20,50 @@
           "text_translation_ru": "Алло, ты где?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wèi", "t": "alo", "tr": "алло" },
-            { "i": [2, 3], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [3, 4], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
-            { "i": [4, 6], "p": "nǎr", "t": "qayerda", "tr": "где", "h": 1, "l": 4 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wèi",
+              "t": "alo",
+              "tr": "алло"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "nǎr",
+              "t": "qayerda",
+              "tr": "где",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue1.mp3"
         },
         {
           "id": "d8-s2",
@@ -34,10 +73,41 @@
           "text_translation_ru": "Я в школе.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
-            { "i": [2, 4], "p": "xuéxiào", "t": "maktab", "tr": "школа", "h": 1, "l": 4 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "xuéxiào",
+              "t": "maktab",
+              "tr": "школа",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue2.mp3"
         },
         {
           "id": "d8-s3",
@@ -47,26 +117,103 @@
           "text_translation_ru": "Ты в классе?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
-            { "i": [2, 4], "p": "jiàoshì", "t": "sinf", "tr": "класс" },
-            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "jiàoshì",
+              "t": "sinf",
+              "tr": "класс"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue3.mp3"
         },
         {
           "id": "d8-s4",
-          "text_original": "不在，我在图书馆。",
-          "pinyin": "Bú zài, wǒ zài túshūguǎn.",
+          "text_original": "不，我在图书馆。",
+          "pinyin": "Bù, wǒ zài túshūguǎn.",
           "text_translation": "Yo'q, men kutubxonadaman.",
           "text_translation_ru": "Нет, я в библиотеке.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 3 },
-            { "i": [1, 2], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "zài", "t": "-da", "tr": "в", "h": 1, "l": 4 },
-            { "i": [5, 8], "p": "túshūguǎn", "t": "kutubxona", "tr": "библиотека" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                7
+              ],
+              "p": "túshūguǎn",
+              "t": "kutubxona",
+              "tr": "библиотека"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue4.mp3"
         },
         {
           "id": "d8-s5",
@@ -76,12 +223,63 @@
           "text_translation_ru": "Во сколько вернёшься домой?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "jǐ", "t": "necha", "tr": "сколько", "h": 1, "l": 6 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 4], "p": "huí", "t": "qaytmoq", "tr": "вернуться", "h": 1, "l": 7 },
-            { "i": [4, 5], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jǐ",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "huí",
+              "t": "qaytmoq",
+              "tr": "вернуться",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 7
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue5.mp3"
         },
         {
           "id": "d8-s6",
@@ -91,11 +289,52 @@
           "text_translation_ru": "В пять вернусь.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǔ", "t": "besh", "tr": "пять", "h": 1, "l": 4 },
-            { "i": [1, 2], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [2, 3], "p": "huí", "t": "qaytmoq", "tr": "вернуться", "h": 1, "l": 7 },
-            { "i": [3, 4], "p": "jiā", "t": "uy", "tr": "дом", "h": 1, "l": 7 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǔ",
+              "t": "besh",
+              "tr": "пять",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "huí",
+              "t": "qaytmoq",
+              "tr": "вернуться",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 7
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue6.mp3"
         },
         {
           "id": "d8-s7",
@@ -105,11 +344,50 @@
           "text_translation_ru": "Хорошо, жду тебя.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "děng", "t": "kutmoq", "tr": "ждать" },
-            { "i": [4, 5], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "děng",
+              "t": "kutmoq",
+              "tr": "ждать"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue7.mp3"
         },
         {
           "id": "d8-s8",
@@ -119,10 +397,24 @@
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "hǎode", "t": "yaxshi", "tr": "хорошо", "h": 1 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎode",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue8.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "telefon",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue.mp3"
 }

@@ -1,0 +1,390 @@
+{
+  "id": "hsk1-dialogue25",
+  "title": "你家在哪儿？",
+  "pinyin": "Nǐ jiā zài nǎr?",
+  "titleTranslation": "Uyingiz qayerda?",
+  "titleTranslation_ru": "Где твой дом?",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d25-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d25-s1",
+          "text_original": "你家在哪儿？",
+          "pinyin": "Nǐ jiā zài nǎr?",
+          "text_translation": "Uyingiz qayerda?",
+          "text_translation_ru": "Где твой дом?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "nǎr",
+              "t": "qayer",
+              "tr": "где",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue1.mp3"
+        },
+        {
+          "id": "d25-s2",
+          "text_original": "我家在上海。",
+          "pinyin": "Wǒ jiā zài Shànghǎi.",
+          "text_translation": "Mening uyim Shanxayda.",
+          "text_translation_ru": "Мой дом в Шанхае.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "Shànghǎi",
+              "t": "Shanxay",
+              "tr": "Шанхай"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue2.mp3"
+        },
+        {
+          "id": "d25-s3",
+          "text_original": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "text_translation": "Oilangizda necha kishi bor?",
+          "text_translation_ru": "Сколько человек в твоей семье?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiā",
+              "t": "oila",
+              "tr": "семья",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "jǐ",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "kǒu",
+              "t": "(odam sanoq)",
+              "tr": "(счётн. сл. для людей)"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "rén",
+              "t": "kishi",
+              "tr": "человек",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue3.mp3"
+        },
+        {
+          "id": "d25-s4",
+          "text_original": "四口人。爸爸、妈妈、弟弟和我。",
+          "pinyin": "Sì kǒu rén. Bàba, māma, dìdi hé wǒ.",
+          "text_translation": "To'rt kishi. Dadam, oyim, ukam va men.",
+          "text_translation_ru": "Четыре человека. Папа, мама, младший брат и я.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "sì",
+              "t": "to'rt",
+              "tr": "четыре",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "kǒu",
+              "t": "(odam sanoq)",
+              "tr": "(счётн. сл.)"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "rén",
+              "t": "kishi",
+              "tr": "человек",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "bàba",
+              "t": "dada",
+              "tr": "папа",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                10,
+                12
+              ],
+              "p": "dìdi",
+              "t": "uka",
+              "tr": "младший брат",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                12,
+                13
+              ],
+              "p": "hé",
+              "t": "va",
+              "tr": "и",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                13,
+                14
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue4.mp3"
+        },
+        {
+          "id": "d25-s5",
+          "text_original": "你家大吗？",
+          "pinyin": "Nǐ jiā dà ma?",
+          "text_translation": "Uyingiz kattami?",
+          "text_translation_ru": "У тебя дом большой?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jiā",
+              "t": "uy",
+              "tr": "дом",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "dà",
+              "t": "katta",
+              "tr": "большой",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue5.mp3"
+        },
+        {
+          "id": "d25-s6",
+          "text_original": "不大。",
+          "pinyin": "Bú dà.",
+          "text_translation": "Katta emas.",
+          "text_translation_ru": "Не большой.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bú",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "dà",
+              "t": "katta",
+              "tr": "большой",
+              "h": 1,
+              "l": 3
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
+    }
+  ],
+  "tag": "kundalik",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
+}

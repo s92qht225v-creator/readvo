@@ -1,0 +1,268 @@
+{
+  "id": "hsk1-dialogue45",
+  "title": "下次说一声",
+  "pinyin": "Xià cì shuō yì shēng",
+  "titleTranslation": "Keyingi safar xabar bering",
+  "titleTranslation_ru": "В следующий раз предупреди",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d45-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d45-s1",
+          "text_original": "你怎么不接电话？",
+          "pinyin": "Nǐ zěnme bù jiē diànhuà?",
+          "text_translation": "Nega telefonga javob bermayapsiz?",
+          "text_translation_ru": "Почему не берёшь трубку?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zěnme",
+              "t": "nega",
+              "tr": "почему",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "yo'q",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "jiē",
+              "t": "javob bermoq",
+              "tr": "ответить (на звонок)"
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "diànhuà",
+              "t": "telefon",
+              "tr": "телефон",
+              "h": 1,
+              "l": 10
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3"
+        },
+        {
+          "id": "d45-s2",
+          "text_original": "刚才在开会。",
+          "pinyin": "Gāngcái zài kāihuì.",
+          "text_translation": "Hozirgina yig'ilishda edim.",
+          "text_translation_ru": "Только что был на собрании.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "gāngcái",
+              "t": "hozirgina",
+              "tr": "только что"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "kāihuì",
+              "t": "yig'ilish",
+              "tr": "собрание"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3"
+        },
+        {
+          "id": "d45-s3",
+          "text_original": "开这么久？",
+          "pinyin": "Kāi zhème jiǔ?",
+          "text_translation": "Shuncha uzoq davom etdimi?",
+          "text_translation_ru": "Так долго?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "kāi",
+              "t": "o'tkazmoq",
+              "tr": "проводить"
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zhème",
+              "t": "shuncha",
+              "tr": "так"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "jiǔ",
+              "t": "uzoq",
+              "tr": "долго"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3"
+        },
+        {
+          "id": "d45-s4",
+          "text_original": "事情有点多。",
+          "pinyin": "Shìqing yǒudiǎn duō.",
+          "text_translation": "Ishlar biroz ko'p edi.",
+          "text_translation_ru": "Дел было многовато.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "shìqing",
+              "t": "ish",
+              "tr": "дела"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yǒudiǎn",
+              "t": "biroz",
+              "tr": "немного"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "duō",
+              "t": "ko'p",
+              "tr": "много",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3"
+        },
+        {
+          "id": "d45-s5",
+          "text_original": "下次说一声。",
+          "pinyin": "Xià cì shuō yì shēng.",
+          "text_translation": "Keyingi safar xabar bering.",
+          "text_translation_ru": "В следующий раз предупреди.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xià cì",
+              "t": "keyingi safar",
+              "tr": "в следующий раз",
+              "h": 1,
+              "l": 13
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuō",
+              "t": "aytmoq",
+              "tr": "сказать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yì shēng",
+              "t": "bir og'iz",
+              "tr": "одно слово"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3"
+        },
+        {
+          "id": "d45-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
+    }
+  ],
+  "tag": "muloqot",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
+}

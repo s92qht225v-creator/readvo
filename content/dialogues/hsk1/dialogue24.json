@@ -1,0 +1,252 @@
+{
+  "id": "hsk1-dialogue24",
+  "title": "我渴了",
+  "pinyin": "Wǒ kě le",
+  "titleTranslation": "Chanqadim",
+  "titleTranslation_ru": "Я хочу пить",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d24-s1",
+          "text_original": "我渴了。",
+          "pinyin": "Wǒ kě le.",
+          "text_translation": "Chanqadim.",
+          "text_translation_ru": "Я хочу пить.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "kě",
+              "t": "chanqamoq",
+              "tr": "хотеть пить"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue1.mp3"
+        },
+        {
+          "id": "d24-s2",
+          "text_original": "要喝水吗？",
+          "pinyin": "Yào hē shuǐ ma?",
+          "text_translation": "Suv ichasizmi?",
+          "text_translation_ru": "Хочешь воды?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yào",
+              "t": "xohlamoq",
+              "tr": "хотеть"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "hē",
+              "t": "ichmoq",
+              "tr": "пить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shuǐ",
+              "t": "suv",
+              "tr": "вода",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue2.mp3"
+        },
+        {
+          "id": "d24-s3",
+          "text_original": "要。",
+          "pinyin": "Yào.",
+          "text_translation": "Ha.",
+          "text_translation_ru": "Да.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yào",
+              "t": "xohlamoq",
+              "tr": "хотеть"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue3.mp3"
+        },
+        {
+          "id": "d24-s4",
+          "text_original": "冰的还是热的？",
+          "pinyin": "Bīng de háishi rè de?",
+          "text_translation": "Muzlatilganmi yoki issiqmi?",
+          "text_translation_ru": "Холодную или горячую?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bīng",
+              "t": "muz",
+              "tr": "лёд"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(-li)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "háishi",
+              "t": "yoki",
+              "tr": "или"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "rè",
+              "t": "issiq",
+              "tr": "горячий",
+              "h": 1,
+              "l": 12
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "de",
+              "t": "(-li)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue4.mp3"
+        },
+        {
+          "id": "d24-s5",
+          "text_original": "常温的。",
+          "pinyin": "Chángwēn de.",
+          "text_translation": "Xona haroratidagi.",
+          "text_translation_ru": "Комнатной температуры.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "chángwēn",
+              "t": "xona harorati",
+              "tr": "комнатная температура"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "de",
+              "t": "(-li)",
+              "tr": "(прит. част.)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue5.mp3"
+        },
+        {
+          "id": "d24-s6",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
+          "text_translation_ru": "Хорошо.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue.mp3"
+    }
+  ],
+  "tag": "ovqat",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20ke%20le/dialogue.mp3"
+}

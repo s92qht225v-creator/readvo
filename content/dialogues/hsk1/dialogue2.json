@@ -20,11 +20,52 @@
           "text_translation_ru": "Вы китаец?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
-            { "i": [2, 5], "p": "Zhōngguó rén", "t": "xitoylik", "tr": "китаец", "h": 1, "l": 2 },
-            { "i": [5, 6], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "shì",
+              "t": "-dir",
+              "tr": "быть",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                5
+              ],
+              "p": "Zhōngguó rén",
+              "t": "xitoylik",
+              "tr": "китаец",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue1.mp3"
         },
         {
           "id": "d2-s2",
@@ -34,13 +75,73 @@
           "text_translation_ru": "Да, я китаец, а вы?",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "shìde", "t": "ha", "tr": "да", "h": 1 },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
-            { "i": [5, 8], "p": "Zhōngguó rén", "t": "xitoylik", "tr": "китаец", "h": 1, "l": 2 },
-            { "i": [9, 10], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [10, 11], "p": "ne", "t": "-chi", "tr": "а (вы)?", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "shìde",
+              "t": "ha",
+              "tr": "да",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "shì",
+              "t": "-dir",
+              "tr": "быть",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                8
+              ],
+              "p": "Zhōngguó rén",
+              "t": "xitoylik",
+              "tr": "китаец",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "ne",
+              "t": "-chi",
+              "tr": "а (вы)?",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue2.mp3"
         },
         {
           "id": "d2-s3",
@@ -50,10 +151,39 @@
           "text_translation_ru": "Я узбек.",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "shì", "t": "-dir", "tr": "быть", "h": 1, "l": 1 },
-            { "i": [2, 9], "p": "Wūzībiékèsītǎn rén", "t": "o'zbekistonlik", "tr": "узбек" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "shì",
+              "t": "-dir",
+              "tr": "быть",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                9
+              ],
+              "p": "Wūzībiékèsītǎn rén",
+              "t": "o'zbekistonlik",
+              "tr": "узбек"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue3.mp3"
         },
         {
           "id": "d2-s4",
@@ -63,12 +193,45 @@
           "text_translation_ru": "О, привет! Привет!",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "ó", "t": "o", "tr": "о" },
-            { "i": [2, 4], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 },
-            { "i": [5, 7], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "ó",
+              "t": "o",
+              "tr": "о"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "nǐ hǎo",
+              "t": "salom",
+              "tr": "привет",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "nǐ hǎo",
+              "t": "salom",
+              "tr": "привет",
+              "h": 1,
+              "l": 1
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue4.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "tanishuv",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue.mp3"
 }

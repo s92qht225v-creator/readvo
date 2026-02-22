@@ -1,0 +1,261 @@
+{
+  "id": "hsk1-dialogue29",
+  "title": "在银行",
+  "pinyin": "Zài yínháng",
+  "titleTranslation": "Bankda",
+  "titleTranslation_ru": "В банке",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d29-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d29-s1",
+          "text_original": "你来取钱吗？",
+          "pinyin": "Nǐ lái qǔ qián ma?",
+          "text_translation": "Pul olishga keldingizmi?",
+          "text_translation_ru": "Ты пришёл снять деньги?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "lái",
+              "t": "kelmoq",
+              "tr": "приходить",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qǔ",
+              "t": "olmoq",
+              "tr": "снять (деньги)"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qián",
+              "t": "pul",
+              "tr": "деньги",
+              "h": 1,
+              "l": 9
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue1.mp3"
+        },
+        {
+          "id": "d29-s2",
+          "text_original": "对。",
+          "pinyin": "Duì.",
+          "text_translation": "Ha.",
+          "text_translation_ru": "Да.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "верно",
+              "h": 1,
+              "l": 4
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue2.mp3"
+        },
+        {
+          "id": "d29-s3",
+          "text_original": "带银行卡了吗？",
+          "pinyin": "Dài yínháng kǎ le ma?",
+          "text_translation": "Bank kartangizni oldingizmi?",
+          "text_translation_ru": "Банковскую карту взял?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "dài",
+              "t": "olib kelmoq",
+              "tr": "взять с собой"
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "yínháng kǎ",
+              "t": "bank kartasi",
+              "tr": "банковская карта"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue3.mp3"
+        },
+        {
+          "id": "d29-s4",
+          "text_original": "带了。",
+          "pinyin": "Dài le.",
+          "text_translation": "Oldim.",
+          "text_translation_ru": "Взял.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "dài",
+              "t": "olib kelmoq",
+              "tr": "взять с собой"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue4.mp3"
+        },
+        {
+          "id": "d29-s5",
+          "text_original": "要取多少？",
+          "pinyin": "Yào qǔ duōshao?",
+          "text_translation": "Qancha olmoqchisiz?",
+          "text_translation_ru": "Сколько хочешь снять?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yào",
+              "t": "xohlamoq",
+              "tr": "хотеть"
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qǔ",
+              "t": "olmoq",
+              "tr": "снять (деньги)"
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "duōshao",
+              "t": "qancha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue5.mp3"
+        },
+        {
+          "id": "d29-s6",
+          "text_original": "一千块。",
+          "pinyin": "Yìqiān kuài.",
+          "text_translation": "Ming yuan.",
+          "text_translation_ru": "Тысячу юаней.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yìqiān",
+              "t": "ming",
+              "tr": "тысяча"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "kuài",
+              "t": "yuan",
+              "tr": "юань",
+              "h": 1,
+              "l": 9
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue6.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue.mp3"
+    }
+  ],
+  "tag": "xaridlar",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue.mp3"
+}

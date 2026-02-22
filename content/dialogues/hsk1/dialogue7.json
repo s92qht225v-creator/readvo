@@ -1,7 +1,7 @@
 {
   "id": "hsk1-dialogue7",
-  "title": "几点了？",
-  "pinyin": "Jǐ diǎn le?",
+  "title": "现在几点？",
+  "pinyin": "Xiànzài jǐ diǎn?",
   "titleTranslation": "Soat necha?",
   "titleTranslation_ru": "Который час?",
   "level": 1,
@@ -20,10 +20,41 @@
           "text_translation_ru": "Сколько сейчас времени?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 6 },
-            { "i": [2, 3], "p": "jǐ", "t": "necha", "tr": "сколько", "h": 1, "l": 6 },
-            { "i": [3, 4], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiànzài",
+              "t": "hozir",
+              "tr": "сейчас",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "jǐ",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue1.mp3"
         },
         {
           "id": "d7-s2",
@@ -33,9 +64,30 @@
           "text_translation_ru": "Три часа.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "sān", "t": "uch", "tr": "три", "h": 1, "l": 4 },
-            { "i": [1, 2], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "sān",
+              "t": "uch",
+              "tr": "три",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue2.mp3"
         },
         {
           "id": "d7-s3",
@@ -45,11 +97,52 @@
           "text_translation_ru": "Во сколько у тебя урок?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "jǐ", "t": "necha", "tr": "сколько", "h": 1, "l": 6 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 5], "p": "shàngkè", "t": "darsga kirmoq", "tr": "идти на урок", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jǐ",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "shàngkè",
+              "t": "darsga kirmoq",
+              "tr": "идти на урок",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue3.mp3"
         },
         {
           "id": "d7-s4",
@@ -59,12 +152,63 @@
           "text_translation_ru": "У меня урок в полчетвёртого.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "sān", "t": "uch", "tr": "три", "h": 1, "l": 4 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 4], "p": "bàn", "t": "yarim", "tr": "половина", "h": 1, "l": 6 },
-            { "i": [4, 6], "p": "shàngkè", "t": "darsga kirmoq", "tr": "идти на урок", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "sān",
+              "t": "uch",
+              "tr": "три",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bàn",
+              "t": "yarim",
+              "tr": "половина",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shàngkè",
+              "t": "darsga kirmoq",
+              "tr": "идти на урок",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue4.mp3"
         },
         {
           "id": "d7-s5",
@@ -74,11 +218,52 @@
           "text_translation_ru": "Во сколько заканчивается урок?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "jǐ", "t": "necha", "tr": "сколько", "h": 1, "l": 6 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 5], "p": "xiàkè", "t": "dars tugamoq", "tr": "урок заканчивается", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "jǐ",
+              "t": "necha",
+              "tr": "сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiàkè",
+              "t": "dars tugamoq",
+              "tr": "урок заканчивается",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue5.mp3"
         },
         {
           "id": "d7-s6",
@@ -88,13 +273,58 @@
           "text_translation_ru": "Урок заканчивается в пять.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "wǔ", "t": "besh", "tr": "пять", "h": 1, "l": 4 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 5], "p": "xiàkè", "t": "dars tugamoq", "tr": "урок заканчивается", "h": 1, "l": 6 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "wǔ",
+              "t": "besh",
+              "tr": "пять",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiàkè",
+              "t": "dars tugamoq",
+              "tr": "урок заканчивается",
+              "h": 1,
+              "l": 6
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue6.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "reja",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue.mp3"
 }

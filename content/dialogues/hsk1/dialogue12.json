@@ -20,10 +20,41 @@
           "text_translation_ru": "Что с тобой?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "zěnme", "t": "qanday/nima", "tr": "как/что", "h": 1, "l": 7 },
-            { "i": [3, 4], "p": "le", "t": "(o'tgan zamon)", "tr": "(прош. время)", "h": 1, "l": 8 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zěnme",
+              "t": "qanday/nima",
+              "tr": "как/что",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue1.mp3"
         },
         {
           "id": "d12-s2",
@@ -33,10 +64,39 @@
           "text_translation_ru": "Мне нехорошо.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [2, 4], "p": "shūfu", "t": "qulay/yaxshi", "tr": "комфортно" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "shūfu",
+              "t": "qulay/yaxshi",
+              "tr": "комфортно"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue2.mp3"
         },
         {
           "id": "d12-s3",
@@ -46,11 +106,50 @@
           "text_translation_ru": "Где болит?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "nǎr", "t": "qayer", "tr": "где", "h": 1, "l": 8 },
-            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [4, 6], "p": "shūfu", "t": "qulay/yaxshi", "tr": "комфортно" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "nǎr",
+              "t": "qayer",
+              "tr": "где",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shūfu",
+              "t": "qulay/yaxshi",
+              "tr": "комфортно"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue3.mp3"
         },
         {
           "id": "d12-s4",
@@ -60,10 +159,37 @@
           "text_translation_ru": "У меня болит голова.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "tóu", "t": "bosh", "tr": "голова" },
-            { "i": [2, 3], "p": "téng", "t": "og'rimoq", "tr": "болеть" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "tóu",
+              "t": "bosh",
+              "tr": "голова"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "téng",
+              "t": "og'rimoq",
+              "tr": "болеть"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue4.mp3"
         },
         {
           "id": "d12-s5",
@@ -73,9 +199,28 @@
           "text_translation_ru": "Температура есть?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "fāshāo", "t": "isitma chiqmoq", "tr": "температура" },
-            { "i": [2, 3], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "fāshāo",
+              "t": "isitma chiqmoq",
+              "tr": "температура"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue5.mp3"
         },
         {
           "id": "d12-s6",
@@ -85,9 +230,28 @@
           "text_translation_ru": "Нет, температуры нет.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 3], "p": "fāshāo", "t": "isitma chiqmoq", "tr": "температура" }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "fāshāo",
+              "t": "isitma chiqmoq",
+              "tr": "температура"
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue6.mp3"
         },
         {
           "id": "d12-s7",
@@ -97,11 +261,52 @@
           "text_translation_ru": "Пойдёшь в больницу?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [2, 4], "p": "yīyuàn", "t": "kasalxona", "tr": "больница", "h": 1, "l": 15 },
-            { "i": [4, 5], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "yīyuàn",
+              "t": "kasalxona",
+              "tr": "больница",
+              "h": 1,
+              "l": 15
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue7.mp3"
         },
         {
           "id": "d12-s8",
@@ -111,15 +316,80 @@
           "text_translation_ru": "Нет, хочу немного отдохнуть.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 1 },
-            { "i": [4, 5], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть", "h": 1, "l": 11 },
-            { "i": [5, 7], "p": "xiūxi", "t": "dam olmoq", "tr": "отдыхать", "h": 1, "l": 5 },
-            { "i": [7, 9], "p": "yíxià", "t": "biroz", "tr": "немного", "h": 1, "l": 12 }
-          ]
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "xiūxi",
+              "t": "dam olmoq",
+              "tr": "отдыхать",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "yíxià",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1,
+              "l": 12
+            }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue8.mp3"
         }
-      ]
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3"
     }
-  ]
+  ],
+  "tag": "salomatlik",
+  "dateAdded": "2026-02-22",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3"
 }
