@@ -1,0 +1,526 @@
+{
+  "id": "pengyou",
+  "title": "朋友",
+  "pinyin": "Péngyou",
+  "titleTranslation": "Do'st",
+  "titleTranslation_ru": "Друг",
+  "artist": "周华健",
+  "artist_ru": "Чжоу Хуацзянь",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/pengyou.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Bu yillar yolg'iz",
+      "translation_ru": "Все эти годы один",
+      "words": [
+        { "id": 0, "text": "这", "p": "zhè", "timestamp": 13.441, "duration": 0.39 },
+        { "id": 1, "text": "些", "p": "xiē", "timestamp": 13.841, "duration": 0.45 },
+        { "id": 2, "text": "年", "p": "nián", "timestamp": 14.301, "duration": 0.79 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 15.101, "duration": 0.43 },
+        { "id": 4, "text": "个", "p": "gè", "timestamp": 15.541, "duration": 0.37 },
+        { "id": 5, "text": "人", "p": "rén", "timestamp": 15.921, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Shamol ham o'tdi, yomg'ir ham ketdi",
+      "translation_ru": "И ветер прошёл, и дождь ушёл",
+      "words": [
+        { "id": 0, "text": "风", "p": "fēng", "timestamp": 16.781, "duration": 0.41 },
+        { "id": 1, "text": "也", "p": "yě", "timestamp": 17.201, "duration": 0.37 },
+        { "id": 2, "text": "过", "p": "guò", "timestamp": 17.581, "duration": 0.83 },
+        { "id": 3, "text": "雨", "p": "yǔ", "timestamp": 18.421, "duration": 0.25 },
+        { "id": 4, "text": "也", "p": "yě", "timestamp": 18.681, "duration": 0.53 },
+        { "id": 5, "text": "走", "p": "zǒu", "timestamp": 19.221, "duration": 0.46 }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Ko'z yoshlar ham bo'ldi, xatolar ham",
+      "translation_ru": "Были слёзы, были ошибки",
+      "words": [
+        { "id": 0, "text": "有", "p": "yǒu", "timestamp": 20.081, "duration": 0.41 },
+        { "id": 1, "text": "过", "p": "guò", "timestamp": 20.501, "duration": 0.39 },
+        { "id": 2, "text": "泪", "p": "lèi", "timestamp": 20.901, "duration": 0.81 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 21.721, "duration": 0.41 },
+        { "id": 4, "text": "过", "p": "guò", "timestamp": 22.141, "duration": 0.39 },
+        { "id": 5, "text": "错", "p": "cuò", "timestamp": 22.541, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Nimani maqsad qilganingni eslaysanmi?",
+      "translation_ru": "Ещё помнишь, ради чего держался?",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 23.381, "duration": 0.43 },
+        { "id": 1, "text": "记", "p": "jì", "timestamp": 23.821, "duration": 0.39 },
+        { "id": 2, "text": "得", "p": "de", "timestamp": 24.221, "duration": 0.39 },
+        { "id": 3, "text": "坚", "p": "jiān", "timestamp": 24.621, "duration": 0.39 },
+        { "id": 4, "text": "持", "p": "chí", "timestamp": 25.021, "duration": 0.41 },
+        { "id": 5, "text": "什", "p": "shén", "timestamp": 25.441, "duration": 0.45 },
+        { "id": 6, "text": "么？", "p": "me", "timestamp": 25.901, "duration": 0.48 }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Chin sevgan kishigina tushunadi",
+      "translation_ru": "Только по-настоящему любивший поймёт",
+      "words": [
+        { "id": 0, "text": "真", "p": "zhēn", "timestamp": 26.681, "duration": 0.47 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 27.161, "duration": 0.37 },
+        { "id": 2, "text": "过", "p": "guò", "timestamp": 27.541, "duration": 0.81 },
+        { "id": 3, "text": "才", "p": "cái", "timestamp": 28.362, "duration": 0.39 },
+        { "id": 4, "text": "会", "p": "huì", "timestamp": 28.762, "duration": 0.43 },
+        { "id": 5, "text": "懂", "p": "dǒng", "timestamp": 29.202, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "Yolg'izlik ham bo'ladi, o'tmishga nazar ham",
+      "translation_ru": "Будет одиночество, будут воспоминания",
+      "words": [
+        { "id": 0, "text": "会", "p": "huì", "timestamp": 30.062, "duration": 0.35 },
+        { "id": 1, "text": "寂", "p": "jì", "timestamp": 30.422, "duration": 0.41 },
+        { "id": 2, "text": "寞", "p": "mò", "timestamp": 30.842, "duration": 0.81 },
+        { "id": 3, "text": "会", "p": "huì", "timestamp": 31.662, "duration": 0.39 },
+        { "id": 4, "text": "回", "p": "huí", "timestamp": 32.062, "duration": 0.39 },
+        { "id": 5, "text": "首", "p": "shǒu", "timestamp": 32.462, "duration": 0.48 }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Oxiri orzu bor, oxiri sen yurakda",
+      "translation_ru": "В конце есть мечта, в конце есть ты в сердце",
+      "words": [
+        { "id": 0, "text": "终", "p": "zhōng", "timestamp": 33.322, "duration": 0.45 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 33.782, "duration": 0.37 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 34.162, "duration": 0.81 },
+        { "id": 3, "text": "终", "p": "zhōng", "timestamp": 34.982, "duration": 0.45 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 35.442, "duration": 0.39 },
+        { "id": 5, "text": "你", "p": "nǐ", "timestamp": 35.842, "duration": 0.83 },
+        { "id": 6, "text": "在", "p": "zài", "timestamp": 36.682, "duration": 0.39 },
+        { "id": 7, "text": "心", "p": "xīn", "timestamp": 37.082, "duration": 0.79 },
+        { "id": 8, "text": "中", "p": "zhōng", "timestamp": 37.882, "duration": 1.24 }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Do'stlar umr bo'yi birga yuradi",
+      "translation_ru": "Друзья идут вместе всю жизнь",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 39.962, "duration": 0.41 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 40.382, "duration": 0.37 },
+        { "id": 2, "text": "一", "p": "yī", "timestamp": 40.762, "duration": 0.37 },
+        { "id": 3, "text": "生", "p": "shēng", "timestamp": 41.142, "duration": 0.45 },
+        { "id": 4, "text": "一", "p": "yī", "timestamp": 41.602, "duration": 0.35 },
+        { "id": 5, "text": "起", "p": "qǐ", "timestamp": 41.962, "duration": 0.45 },
+        { "id": 6, "text": "走", "p": "zǒu", "timestamp": 42.422, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "O'sha kunlar boshqa qaytmaydi",
+      "translation_ru": "Тех дней больше не будет",
+      "words": [
+        { "id": 0, "text": "那", "p": "nà", "timestamp": 43.302, "duration": 0.35 },
+        { "id": 1, "text": "些", "p": "xiē", "timestamp": 43.662, "duration": 0.43 },
+        { "id": 2, "text": "日", "p": "rì", "timestamp": 44.102, "duration": 0.39 },
+        { "id": 3, "text": "子", "p": "zi", "timestamp": 44.502, "duration": 0.43 },
+        { "id": 4, "text": "不", "p": "bù", "timestamp": 44.942, "duration": 0.37 },
+        { "id": 5, "text": "再", "p": "zài", "timestamp": 45.322, "duration": 0.43 },
+        { "id": 6, "text": "有", "p": "yǒu", "timestamp": 45.762, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Bir so'z — butun umr",
+      "translation_ru": "Одно слово — на всю жизнь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 46.582, "duration": 0.39 },
+        { "id": 1, "text": "句", "p": "jù", "timestamp": 46.983, "duration": 0.43 },
+        { "id": 2, "text": "话", "p": "huà", "timestamp": 47.423, "duration": 0.77 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 48.203, "duration": 0.25 },
+        { "id": 4, "text": "辈", "p": "bèi", "timestamp": 48.463, "duration": 0.61 },
+        { "id": 5, "text": "子", "p": "zi", "timestamp": 49.083, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Umrlik muhabbat — bir piyola sharob",
+      "translation_ru": "Любовь на всю жизнь — один бокал вина",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 49.923, "duration": 0.35 },
+        { "id": 1, "text": "生", "p": "shēng", "timestamp": 50.283, "duration": 0.41 },
+        { "id": 2, "text": "情", "p": "qíng", "timestamp": 50.703, "duration": 0.91 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 51.623, "duration": 0.15 },
+        { "id": 4, "text": "杯", "p": "bēi", "timestamp": 51.783, "duration": 0.57 },
+        { "id": 5, "text": "酒", "p": "jiǔ", "timestamp": 52.363, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "Do'stlar hech qachon yolg'iz bo'lmagan",
+      "translation_ru": "Друзья никогда не были одиноки",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 53.223, "duration": 0.41 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 53.643, "duration": 0.43 },
+        { "id": 2, "text": "不", "p": "bù", "timestamp": 54.083, "duration": 0.33 },
+        { "id": 3, "text": "曾", "p": "céng", "timestamp": 54.423, "duration": 0.45 },
+        { "id": 4, "text": "孤", "p": "gū", "timestamp": 54.883, "duration": 0.37 },
+        { "id": 5, "text": "单", "p": "dān", "timestamp": 55.263, "duration": 0.41 },
+        { "id": 6, "text": "过", "p": "guò", "timestamp": 55.683, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "Bir marta 'do'st' desa, tushunasan",
+      "translation_ru": "Скажешь раз 'друг' — и ты поймёшь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 56.503, "duration": 0.39 },
+        { "id": 1, "text": "声", "p": "shēng", "timestamp": 56.903, "duration": 0.45 },
+        { "id": 2, "text": "朋", "p": "péng", "timestamp": 57.363, "duration": 0.41 },
+        { "id": 3, "text": "友", "p": "yǒu", "timestamp": 57.783, "duration": 0.41 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 58.203, "duration": 0.41 },
+        { "id": 5, "text": "会", "p": "huì", "timestamp": 58.623, "duration": 0.39 },
+        { "id": 6, "text": "懂", "p": "dǒng", "timestamp": 59.023, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Yaralari ham bor, og'riqlari ham",
+      "translation_ru": "Ещё есть раны, ещё есть боль",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 59.803, "duration": 0.45 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 60.263, "duration": 0.37 },
+        { "id": 2, "text": "伤", "p": "shāng", "timestamp": 60.643, "duration": 0.81 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 61.463, "duration": 0.27 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 61.743, "duration": 0.59 },
+        { "id": 5, "text": "痛", "p": "tòng", "timestamp": 62.343, "duration": 0.52 }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Yana yurish kerak, men ham borman",
+      "translation_ru": "Ещё надо идти, и я ещё есть",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 63.143, "duration": 0.43 },
+        { "id": 1, "text": "要", "p": "yào", "timestamp": 63.583, "duration": 0.39 },
+        { "id": 2, "text": "走", "p": "zǒu", "timestamp": 63.983, "duration": 0.79 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 64.783, "duration": 0.44 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 65.233, "duration": 0.378 },
+        { "id": 5, "text": "我", "p": "wǒ", "timestamp": 65.621, "duration": 1.588 }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Bu yillar yolg'iz",
+      "translation_ru": "Все эти годы один",
+      "words": [
+        { "id": 0, "text": "这", "p": "zhè", "timestamp": 97.835, "duration": 0.48 },
+        { "id": 1, "text": "些", "p": "xiē", "timestamp": 98.325, "duration": 0.43 },
+        { "id": 2, "text": "年", "p": "nián", "timestamp": 98.765, "duration": 0.85 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 99.625, "duration": 0.37 },
+        { "id": 4, "text": "个", "p": "gè", "timestamp": 100.005, "duration": 0.41 },
+        { "id": 5, "text": "人", "p": "rén", "timestamp": 100.425, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "Shamol ham o'tdi, yomg'ir ham ketdi",
+      "translation_ru": "И ветер прошёл, и дождь ушёл",
+      "words": [
+        { "id": 0, "text": "风", "p": "fēng", "timestamp": 101.233, "duration": 0.422 },
+        { "id": 1, "text": "也", "p": "yě", "timestamp": 101.665, "duration": 0.39 },
+        { "id": 2, "text": "过", "p": "guò", "timestamp": 102.065, "duration": 0.83 },
+        { "id": 3, "text": "雨", "p": "yǔ", "timestamp": 102.906, "duration": 0.23 },
+        { "id": 4, "text": "也", "p": "yě", "timestamp": 103.146, "duration": 0.55 },
+        { "id": 5, "text": "走", "p": "zǒu", "timestamp": 103.706, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "Ko'z yoshlar ham bo'ldi, xatolar ham",
+      "translation_ru": "Были слёзы, были ошибки",
+      "words": [
+        { "id": 0, "text": "有", "p": "yǒu", "timestamp": 104.566, "duration": 0.41 },
+        { "id": 1, "text": "过", "p": "guò", "timestamp": 104.986, "duration": 0.39 },
+        { "id": 2, "text": "泪", "p": "lèi", "timestamp": 105.386, "duration": 0.81 },
+        { "id": 3, "text": "有", "p": "yǒu", "timestamp": 106.206, "duration": 0.41 },
+        { "id": 4, "text": "过", "p": "guò", "timestamp": 106.626, "duration": 0.37 },
+        { "id": 5, "text": "错", "p": "cuò", "timestamp": 107.006, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Nimani maqsad qilganingni eslaysanmi?",
+      "translation_ru": "Ещё помнишь, ради чего держался?",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 107.906, "duration": 0.39 },
+        { "id": 1, "text": "记", "p": "jì", "timestamp": 108.306, "duration": 0.39 },
+        { "id": 2, "text": "得", "p": "de", "timestamp": 108.706, "duration": 0.39 },
+        { "id": 3, "text": "坚", "p": "jiān", "timestamp": 109.106, "duration": 0.39 },
+        { "id": 4, "text": "持", "p": "chí", "timestamp": 109.506, "duration": 0.39 },
+        { "id": 5, "text": "什", "p": "shén", "timestamp": 109.906, "duration": 0.45 },
+        { "id": 6, "text": "么？", "p": "me", "timestamp": 110.366, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Chin sevgan kishigina tushunadi",
+      "translation_ru": "Только по-настоящему любивший поймёт",
+      "words": [
+        { "id": 0, "text": "真", "p": "zhēn", "timestamp": 111.114, "duration": 0.502 },
+        { "id": 1, "text": "爱", "p": "ài", "timestamp": 111.626, "duration": 0.37 },
+        { "id": 2, "text": "过", "p": "guò", "timestamp": 112.006, "duration": 0.83 },
+        { "id": 3, "text": "才", "p": "cái", "timestamp": 112.846, "duration": 0.43 },
+        { "id": 4, "text": "会", "p": "huì", "timestamp": 113.286, "duration": 0.37 },
+        { "id": 5, "text": "懂", "p": "dǒng", "timestamp": 113.666, "duration": 0.52 }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Yolg'izlik ham bo'ladi, o'tmishga nazar ham",
+      "translation_ru": "Будет одиночество, будут воспоминания",
+      "words": [
+        { "id": 0, "text": "会", "p": "huì", "timestamp": 114.526, "duration": 0.37 },
+        { "id": 1, "text": "寂", "p": "jì", "timestamp": 114.906, "duration": 0.41 },
+        { "id": 2, "text": "寞", "p": "mò", "timestamp": 115.326, "duration": 0.81 },
+        { "id": 3, "text": "会", "p": "huì", "timestamp": 116.146, "duration": 0.41 },
+        { "id": 4, "text": "回", "p": "huí", "timestamp": 116.566, "duration": 0.35 },
+        { "id": 5, "text": "首", "p": "shǒu", "timestamp": 116.926, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "Oxiri orzu bor, oxiri sen yurakda",
+      "translation_ru": "В конце есть мечта, в конце есть ты в сердце",
+      "words": [
+        { "id": 0, "text": "终", "p": "zhōng", "timestamp": 117.76, "duration": 0.476 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 118.246, "duration": 0.41 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 118.666, "duration": 0.77 },
+        { "id": 3, "text": "终", "p": "zhōng", "timestamp": 119.446, "duration": 0.45 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 119.906, "duration": 0.41 },
+        { "id": 5, "text": "你", "p": "nǐ", "timestamp": 120.326, "duration": 0.79 },
+        { "id": 6, "text": "在", "p": "zài", "timestamp": 121.126, "duration": 0.39 },
+        { "id": 7, "text": "心", "p": "xīn", "timestamp": 121.527, "duration": 0.742 },
+        { "id": 8, "text": "中", "p": "zhōng", "timestamp": 122.279, "duration": 1.108 }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Do'stlar umr bo'yi birga yuradi",
+      "translation_ru": "Друзья идут вместе всю жизнь",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 124.447, "duration": 0.41 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 124.867, "duration": 0.37 },
+        { "id": 2, "text": "一", "p": "yī", "timestamp": 125.247, "duration": 0.37 },
+        { "id": 3, "text": "生", "p": "shēng", "timestamp": 125.627, "duration": 0.41 },
+        { "id": 4, "text": "一", "p": "yī", "timestamp": 126.047, "duration": 0.37 },
+        { "id": 5, "text": "起", "p": "qǐ", "timestamp": 126.427, "duration": 0.47 },
+        { "id": 6, "text": "走", "p": "zǒu", "timestamp": 126.907, "duration": 0.48 }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "O'sha kunlar boshqa qaytmaydi",
+      "translation_ru": "Тех дней больше не будет",
+      "words": [
+        { "id": 0, "text": "那", "p": "nà", "timestamp": 127.686, "duration": 0.451 },
+        { "id": 1, "text": "些", "p": "xiē", "timestamp": 128.147, "duration": 0.55 },
+        { "id": 2, "text": "日", "p": "rì", "timestamp": 128.707, "duration": 0.27 },
+        { "id": 3, "text": "子", "p": "zi", "timestamp": 128.987, "duration": 0.43 },
+        { "id": 4, "text": "不", "p": "bù", "timestamp": 129.427, "duration": 0.37 },
+        { "id": 5, "text": "再", "p": "zài", "timestamp": 129.807, "duration": 0.43 },
+        { "id": 6, "text": "有", "p": "yǒu", "timestamp": 130.247, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Bir so'z — butun umr",
+      "translation_ru": "Одно слово — на всю жизнь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 131.067, "duration": 0.39 },
+        { "id": 1, "text": "句", "p": "jù", "timestamp": 131.467, "duration": 0.43 },
+        { "id": 2, "text": "话", "p": "huà", "timestamp": 131.907, "duration": 0.77 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 132.687, "duration": 0.27 },
+        { "id": 4, "text": "辈", "p": "bèi", "timestamp": 132.967, "duration": 0.57 },
+        { "id": 5, "text": "子", "p": "zi", "timestamp": 133.547, "duration": 0.48 }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "Umrlik muhabbat — bir piyola sharob",
+      "translation_ru": "Любовь на всю жизнь — один бокал вина",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 134.387, "duration": 0.37 },
+        { "id": 1, "text": "生", "p": "shēng", "timestamp": 134.767, "duration": 0.41 },
+        { "id": 2, "text": "情", "p": "qíng", "timestamp": 135.187, "duration": 0.83 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 136.027, "duration": 0.25 },
+        { "id": 4, "text": "杯", "p": "bēi", "timestamp": 136.287, "duration": 0.55 },
+        { "id": 5, "text": "酒", "p": "jiǔ", "timestamp": 136.847, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Do'stlar hech qachon yolg'iz bo'lmagan",
+      "translation_ru": "Друзья никогда не были одиноки",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 137.667, "duration": 0.43 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 138.107, "duration": 0.43 },
+        { "id": 2, "text": "不", "p": "bù", "timestamp": 138.547, "duration": 0.35 },
+        { "id": 3, "text": "曾", "p": "céng", "timestamp": 138.907, "duration": 0.45 },
+        { "id": 4, "text": "孤", "p": "gū", "timestamp": 139.367, "duration": 0.35 },
+        { "id": 5, "text": "单", "p": "dān", "timestamp": 139.727, "duration": 0.43 },
+        { "id": 6, "text": "过", "p": "guò", "timestamp": 140.168, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Bir marta 'do'st' desa, tushunasan",
+      "translation_ru": "Скажешь раз 'друг' — и ты поймёшь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 140.988, "duration": 0.39 },
+        { "id": 1, "text": "声", "p": "shēng", "timestamp": 141.388, "duration": 0.43 },
+        { "id": 2, "text": "朋", "p": "péng", "timestamp": 141.828, "duration": 0.43 },
+        { "id": 3, "text": "友", "p": "yǒu", "timestamp": 142.268, "duration": 0.41 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 142.688, "duration": 0.39 },
+        { "id": 5, "text": "会", "p": "huì", "timestamp": 143.088, "duration": 0.39 },
+        { "id": 6, "text": "懂", "p": "dǒng", "timestamp": 143.488, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "Yaralari ham bor, og'riqlari ham",
+      "translation_ru": "Ещё есть раны, ещё есть боль",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 144.288, "duration": 0.45 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 144.748, "duration": 0.37 },
+        { "id": 2, "text": "伤", "p": "shāng", "timestamp": 145.128, "duration": 0.79 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 145.928, "duration": 0.29 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 146.228, "duration": 0.57 },
+        { "id": 5, "text": "痛", "p": "tòng", "timestamp": 146.808, "duration": 0.52 }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Yana yurish kerak, men ham borman",
+      "translation_ru": "Ещё надо идти, и я ещё есть",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 147.608, "duration": 0.43 },
+        { "id": 1, "text": "要", "p": "yào", "timestamp": 148.048, "duration": 0.39 },
+        { "id": 2, "text": "走", "p": "zǒu", "timestamp": 148.448, "duration": 0.85 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 149.308, "duration": 0.41 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 149.728, "duration": 0.697 },
+        { "id": 5, "text": "我", "p": "wǒ", "timestamp": 150.435, "duration": 1.173 }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Do'stlar umr bo'yi birga yuradi",
+      "translation_ru": "Друзья идут вместе всю жизнь",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 152.588, "duration": 0.43 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 153.028, "duration": 0.39 },
+        { "id": 2, "text": "一", "p": "yī", "timestamp": 153.428, "duration": 0.33 },
+        { "id": 3, "text": "生", "p": "shēng", "timestamp": 153.768, "duration": 0.47 },
+        { "id": 4, "text": "一", "p": "yī", "timestamp": 154.248, "duration": 0.31 },
+        { "id": 5, "text": "起", "p": "qǐ", "timestamp": 154.568, "duration": 0.47 },
+        { "id": 6, "text": "走", "p": "zǒu", "timestamp": 155.048, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 31,
+      "translation": "O'sha kunlar boshqa qaytmaydi",
+      "translation_ru": "Тех дней больше не будет",
+      "words": [
+        { "id": 0, "text": "那", "p": "nà", "timestamp": 155.811, "duration": 0.467 },
+        { "id": 1, "text": "些", "p": "xiē", "timestamp": 156.288, "duration": 0.19 },
+        { "id": 2, "text": "日", "p": "rì", "timestamp": 156.488, "duration": 0.63 },
+        { "id": 3, "text": "子", "p": "zi", "timestamp": 157.128, "duration": 0.45 },
+        { "id": 4, "text": "不", "p": "bù", "timestamp": 157.588, "duration": 0.39 },
+        { "id": 5, "text": "再", "p": "zài", "timestamp": 157.988, "duration": 0.41 },
+        { "id": 6, "text": "有", "p": "yǒu", "timestamp": 158.408, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 32,
+      "translation": "Bir so'z — butun umr",
+      "translation_ru": "Одно слово — на всю жизнь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 159.229, "duration": 0.37 },
+        { "id": 1, "text": "句", "p": "jù", "timestamp": 159.609, "duration": 0.45 },
+        { "id": 2, "text": "话", "p": "huà", "timestamp": 160.069, "duration": 0.77 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 160.849, "duration": 0.23 },
+        { "id": 4, "text": "辈", "p": "bèi", "timestamp": 161.089, "duration": 0.61 },
+        { "id": 5, "text": "子", "p": "zi", "timestamp": 161.709, "duration": 0.62 }
+      ]
+    },
+    {
+      "id": 33,
+      "translation": "Umrlik muhabbat — bir piyola sharob",
+      "translation_ru": "Любовь на всю жизнь — один бокал вина",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 162.509, "duration": 0.37 },
+        { "id": 1, "text": "生", "p": "shēng", "timestamp": 162.889, "duration": 0.45 },
+        { "id": 2, "text": "情", "p": "qíng", "timestamp": 163.349, "duration": 0.83 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 164.189, "duration": 0.21 },
+        { "id": 4, "text": "杯", "p": "bēi", "timestamp": 164.409, "duration": 0.57 },
+        { "id": 5, "text": "酒", "p": "jiǔ", "timestamp": 164.989, "duration": 0.6 }
+      ]
+    },
+    {
+      "id": 34,
+      "translation": "Do'stlar hech qachon yolg'iz bo'lmagan",
+      "translation_ru": "Друзья никогда не были одиноки",
+      "words": [
+        { "id": 0, "text": "朋", "p": "péng", "timestamp": 165.849, "duration": 0.43 },
+        { "id": 1, "text": "友", "p": "yǒu", "timestamp": 166.289, "duration": 0.41 },
+        { "id": 2, "text": "不", "p": "bù", "timestamp": 166.709, "duration": 0.35 },
+        { "id": 3, "text": "曾", "p": "céng", "timestamp": 167.069, "duration": 0.43 },
+        { "id": 4, "text": "孤", "p": "gū", "timestamp": 167.509, "duration": 0.39 },
+        { "id": 5, "text": "单", "p": "dān", "timestamp": 167.909, "duration": 0.41 },
+        { "id": 6, "text": "过", "p": "guò", "timestamp": 168.329, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 35,
+      "translation": "Bir marta 'do'st' desa, tushunasan",
+      "translation_ru": "Скажешь раз 'друг' — и ты поймёшь",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 169.129, "duration": 0.41 },
+        { "id": 1, "text": "声", "p": "shēng", "timestamp": 169.549, "duration": 0.43 },
+        { "id": 2, "text": "朋", "p": "péng", "timestamp": 169.989, "duration": 0.43 },
+        { "id": 3, "text": "友", "p": "yǒu", "timestamp": 170.429, "duration": 0.41 },
+        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 170.849, "duration": 0.39 },
+        { "id": 5, "text": "会", "p": "huì", "timestamp": 171.249, "duration": 0.39 },
+        { "id": 6, "text": "懂", "p": "dǒng", "timestamp": 171.649, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 36,
+      "translation": "Yaralari ham bor, og'riqlari ham",
+      "translation_ru": "Ещё есть раны, ещё есть боль",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 172.449, "duration": 0.45 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 172.909, "duration": 0.37 },
+        { "id": 2, "text": "伤", "p": "shāng", "timestamp": 173.289, "duration": 0.79 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 174.089, "duration": 0.29 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 174.389, "duration": 0.57 },
+        { "id": 5, "text": "痛", "p": "tòng", "timestamp": 174.969, "duration": 0.54 }
+      ]
+    },
+    {
+      "id": 37,
+      "translation": "Yana yurish kerak, men ham borman",
+      "translation_ru": "Ещё надо идти, и я ещё есть",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 175.769, "duration": 0.45 },
+        { "id": 1, "text": "要", "p": "yào", "timestamp": 176.229, "duration": 0.37 },
+        { "id": 2, "text": "走", "p": "zǒu", "timestamp": 176.609, "duration": 0.81 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 177.43, "duration": 0.45 },
+        { "id": 4, "text": "有", "p": "yǒu", "timestamp": 177.89, "duration": 0.654 },
+        { "id": 5, "text": "我", "p": "wǒ", "timestamp": 178.554, "duration": 1.356 }
+      ]
+    }
+  ]
+}

@@ -3137,7 +3137,6 @@ body {
 
 /* Ruby pinyin */
 .karaoke__char {
-  transition: color 0.15s ease;
   margin: 0 0.08em;
 }
 
@@ -3167,8 +3166,7 @@ body {
 }
 
 .karaoke__char--singing {
-  color: #4fc3f7;
-  text-shadow: 0 0 12px rgba(79, 195, 247, 0.6);
+  color: #ffd54f;
 }
 
 .karaoke__char--singing .karaoke__rt {

@@ -218,6 +218,16 @@ export function LanguagePage() {
                 {language === 'ru' ? 'Луна представляет моё сердце' : 'Oy yuragimni ifodalaydi'}
               </span>
             </Link>
+            <Link
+              href="/chinese/hsk1/karaoke/pengyou"
+              className="lang-page__book-card"
+            >
+              <span className="lang-page__book-level">朋友</span>
+              <span className="lang-page__book-pinyin">Péngyou</span>
+              <span className="lang-page__book-subtitle">
+                {language === 'ru' ? 'Друг' : 'Do\'st'}
+              </span>
+            </Link>
           </div>
         )}
 
