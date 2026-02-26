@@ -59,16 +59,13 @@
         },
         {
           "id": "d47-s4",
-          "text_original": "是的，现在是斋月。",
-          "pinyin": "Shì de, xiànzài shì zhāiyuè.",
-          "text_translation": "Ha, hozir ro'za oyi.",
-          "text_translation_ru": "Да, сейчас Рамадан.",
+          "text_original": "是的。",
+          "pinyin": "Shì de.",
+          "text_translation": "Ha.",
+          "text_translation_ru": "Да.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 },
-            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
-            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
-            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" }
+            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3"
         },
