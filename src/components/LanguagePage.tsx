@@ -24,7 +24,7 @@ interface HSKBook {
 const tabs: TabInfo[] = [
   { id: 'hsk', label: 'Kitob', label_ru: 'Книги' },
   { id: 'stories', label: 'Matn', label_ru: 'Текст' },
-  { id: 'flashcards', label: 'Fleshkarta', label_ru: 'Флэшкарты' },
+  { id: 'flashcards', label: 'Fleshkarta', label_ru: 'Флешки' },
   { id: 'karaoke', label: 'Karaoke', label_ru: 'Караоке' },
   { id: 'tests', label: 'Test', label_ru: 'Тесты' },
 ];

@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Jost, Noto_Sans } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 
-const font = Jost({ subsets: ['latin', 'cyrillic'] });
-const pinyinFont = Noto_Sans({ subsets: ['latin'], weight: ['400'], variable: '--font-pinyin' });
+const font = Manrope({ subsets: ['latin', 'latin-ext', 'cyrillic'], variable: '--font-pinyin' });
 
 export const metadata: Metadata = {
   title: 'Blim - Interaktiv o\'qish',
@@ -24,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} ${pinyinFont.variable}`}>
+      <body className={`${font.className} ${font.variable}`}>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

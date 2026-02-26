@@ -122,6 +122,8 @@ Example routes:
 │       └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
 ├── .env.local                  # Supabase credentials
 └── public/
+    ├── logo.svg               # White text logo (for dark backgrounds: banner, karaoke)
+    ├── logo-blue.svg          # Blue text logo #71a3da (for light backgrounds: reader header, landing nav)
     └── audio/                  # Local MP3 audio files (legacy)
 ```
 
@@ -283,10 +285,20 @@ Page → Section → Sentence → Word
   - Separator line via `::after` pseudo-element (`bottom: 3px`)
   - `border-top: 1px solid rgba(255, 255, 255, 0.1)` at top edge
 - **Bottom bar**: Reuses `story__bottom-bar` with Tarjima + Pinyin toggles. Dark themed.
-- **Header**: Reuses `reader__header` with `ReaderControls` (RU/UZ toggle, A-/A+ font). Logo inverted to white via `filter: brightness(0) invert(1)`. Dark themed.
+- **Header**: Reuses `reader__header` with `ReaderControls` (RU/UZ toggle, A-/A+ font). Uses `/logo.svg` (white text) directly. Dark themed.
 - **Fixed element stacking** (bottom to top): bottom bar (z-index 90) → controls (z-index 91) → header (z-index 100)
 - **Lyrics padding**: Top padding clears fixed header + translation panel (`calc(var(--header-height) + 60px + env(safe-area-inset-top))`). Bottom padding (200px) clears fixed controls.
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
+
+### Branding & Colors
+- **Banner**: Soft blue `#4a7ab5` (replaces old red `#dc2626`)
+- **Active tab / book level text**: `#4a8af5`
+- **Lesson number badge**: `#4a7ab5`
+- **Logo (white)**: `/public/logo.svg` — white text, used on dark backgrounds (banner, karaoke)
+- **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` text, used on light backgrounds (reader header, landing nav)
+- **Logo SVG structure**: Two `<g>` layers — Layer_1 (hidden, old version) and Layer_2 (visible). Text uses `.st5` class.
+- **IMPORTANT**: `currentColor` does NOT work with `<img>` tags. Use separate SVG files for different logo colors.
+- **Russian tab labels**: Книги | Текст | Флешки | Караоке | Тесты
 
 ### Styling Conventions
 - Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
@@ -668,10 +680,10 @@ main.home (max-width container + padding)
 ### Language Page Structure (LanguagePage.tsx — tabbed catalog)
 ```
 main.home (reuses home styling, no top padding)
-├── header.home__hero (full-width red gradient banner, z-index: 10)
+├── header.home__hero (full-width soft blue banner #4a7ab5, z-index: 10)
 │   └── div.home__hero-inner (constrained max-width matching page)
 │       ├── div.home__hero-top-row (flex: logo | lang selectors | avatar)
-│       │   ├── Link.home__hero-logo > img.home__hero-logo-img (white logo, 32px)
+│       │   ├── Link.home__hero-logo > img.home__hero-logo-img (white logo, 80px)
 │       │   ├── div.home__lang-selectors (flex, gap between selectors)
 │       │   │   ├── div.home__lang-selector ("I know" dropdown — UZ/RU)
 │       │   │   └── div.home__lang-selector ("I'm learning" dropdown — Chinese)
@@ -816,10 +828,10 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 
 ### Key CSS Classes
 - `.home` - Home/book/language page container (matches `.page` width, no top padding, `background: #f5f5f5`)
-- `.home__hero` - Full-width red gradient banner (`width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
+- `.home__hero` - Full-width soft blue banner (`background: #4a7ab5`, `width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
 - `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`, `display: flex; flex-direction: column` so tabs push to bottom via `margin-top: auto`)
 - `.home__hero-top-row` - Flex row: logo, language selectors, avatar (`min-height: 66px` for consistent banner height across all pages)
-- `.home__hero-logo-img` - White logo (`height: 32px`, `filter: brightness(0) invert(1)`)
+- `.home__hero-logo-img` - White logo (`height: 80px`, mobile: `64px`). Uses `/logo.svg` (white text)
 - `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
 - `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
 - `.home__lang-select-btn` - Dropdown trigger button (transparent, white text, `min-height: 44px`, `padding: 8px 0`)
@@ -827,16 +839,16 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.home__avatar-btn` - Profile circle (`44px`, `border-radius: 50%`, semi-transparent white)
 - `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`, `margin-top: auto` pushes tabs flush to banner bottom)
 - `.lang-page__tab` - Folder tab button (`border-radius: 4px 4px 0 0`, `background: rgba(255,255,255,0.35)`, `color: rgba(255,255,255,0.9)`, no hover/transition, `-webkit-tap-highlight-color: transparent`)
-- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #dc2626`, `margin-bottom: -1px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
+- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #4a8af5`, `margin-bottom: -1px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
 - `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
-- `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
+- `.lang-page__book-level` - Big blue text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #4a8af5`)
 - `.lang-page__book-level-label` - "HSK" prefix inside level (same size/color, `font-size: 1em`)
 - `.lang-page__book-pinyin` - Pinyin on karaoke cards (blue italic)
 - `.lang-page__book-subtitle` - Grey subtitle text
 - `.lang-page__placeholder` - Centered placeholder for empty tabs
 - `.lesson-card` - Lesson card on book page (number badge 36px/8px radius + translation, no Chinese title/pinyin)
-- `.reader__home-logo` - Logo image in reader headers (28px height)
+- `.reader__home-logo` - Logo image in reader headers (64px height). Uses `/logo-blue.svg` (`#71a3da` text) on light backgrounds, `/logo.svg` (white) on karaoke
 - `.page` - Lesson content container (permanent `1em` extra top/bottom padding for translation panel space)
 - `.page__translation-panel` - Fixed translation panel below header (z-index 99)
 - `.page__audio-fab` - Floating play button (48x48, blue circle, `bottom: 80px`, `right: 24px`, `z-index: 80`)
@@ -909,7 +921,7 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.karaoke__skip-btn` - Rewind/forward 15s button (44px, transparent bg, circular arrow icon)
 - `.karaoke__skip-label` - "15" text overlay on skip buttons (8px, absolute centered)
 - `.karaoke .reader__header` - Dark header override (`rgba(10, 10, 10, 0.95)`)
-- `.karaoke .reader__home-logo` - White logo via `filter: brightness(0) invert(1)`
+- `.karaoke .reader__home-logo` - Uses `/logo.svg` (white text) directly, no filter needed
 - `.karaoke .story__translation-panel` - Dark translation panel override
 - `.karaoke .story__bottom-bar` - Dark bottom bar override
 - `.karaoke .reader__nav-toggle` - Dark toggle buttons (white text, `rgba(255,255,255,0.1)` bg)
@@ -929,9 +941,11 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - **Side padding**: `.home` uses `padding: 0 12px var(--spacing-lg)` at ≤600px (reduced from 32px)
 - **Banner inner**: `.home__hero-inner` uses `padding: 12px 12px 0` at ≤600px
 - **Hero override at ≤480px**: `.home__hero` uses `padding: 0` to avoid doubled padding with hero-inner
-- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 0.8rem`, `gap: 3px`, `min-height: 36px`
-- **Logo**: 28px height at ≤600px (down from 32px)
-- **Language selector labels**: `font-size: 0.7rem` at ≤600px
+- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 1rem`, `gap: 3px`, `min-height: 36px`
+- **Banner logo**: 64px height at ≤600px (desktop: 80px)
+- **Reader header logo**: 64px height
+- **Landing nav logo**: 64px height
+- **Language selector labels**: `font-size: 0.85rem` at ≤600px
 - **Language selectors gap**: 16px at ≤600px (down from `clamp(24px, 5vw, 48px)`)
 - **Card border radius**: 8px at ≤600px
 - **Story reader**: `padding-left/right: var(--spacing-md)` at ≤600px
