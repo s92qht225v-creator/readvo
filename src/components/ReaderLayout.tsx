@@ -127,7 +127,7 @@ export function ReaderLayout({
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={bookPath || '/'} className="reader__home">
-            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={isPinyinVisible}

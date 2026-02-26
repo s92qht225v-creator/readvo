@@ -3241,9 +3241,6 @@ body {
 }
 
 /* Dark header controls for karaoke */
-.karaoke .reader__home-logo {
-  filter: none;
-}
 
 .karaoke .reader__header {
   background: rgba(10, 10, 10, 0.95);
@@ -3515,7 +3512,7 @@ body {
 
 /* Hero Section */
 .home__hero {
-  background: #120c3d;
+  background: #4a7ab5;
   color: white;
   padding: 0;
   text-align: center;
@@ -3959,7 +3956,7 @@ body {
 .lesson-card__number {
   width: 36px;
   height: 36px;
-  background: #120c3d;
+  background: #4a7ab5;
   color: white;
   border-radius: 8px;
   display: flex;
@@ -4666,7 +4663,6 @@ body {
 .reader__home-logo {
   height: 64px;
   width: auto;
-  filter: brightness(0);
 }
 
 .reader__home:hover {

@@ -421,7 +421,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={listPath || `${bookPath}/stories`} className="reader__home">
-            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={showPinyin}

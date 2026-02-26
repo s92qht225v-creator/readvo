@@ -95,7 +95,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={`${bookPath}/flashcards`} className="reader__home">
-            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <div className="reader__controls">
             <button
