@@ -145,8 +145,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
-  min-height: 44px;
+  padding: 4px 10px;
+  min-height: 32px;
   background: #fef3c7;
   border: 1px solid #fcd34d;
   border-radius: 6px;
@@ -175,8 +175,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 10px;
-  min-height: 44px;
+  padding: 4px 8px;
+  min-height: 32px;
   background: transparent;
   border: none;
   font-size: 14px;
@@ -2542,11 +2542,21 @@ body {
   justify-content: center;
 }
 
+.story__focus-line {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .story__focus-speaker {
   font-weight: 700;
   color: var(--color-accent);
   font-size: 0.75em;
-  line-height: 1.5;
+  align-self: flex-start;
+  margin-top: 0.4em;
+  margin-right: 0.3em;
+  flex-shrink: 0;
 }
 
 .story__focus-nav {
@@ -4680,8 +4690,8 @@ body {
 }
 
 .reader__nav-toggle {
-  padding: 8px 14px;
-  min-height: 44px;
+  padding: 4px 12px;
+  min-height: 32px;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-secondary);

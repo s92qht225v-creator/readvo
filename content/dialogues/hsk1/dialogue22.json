@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue22",
   "title": "你冷吗？",
   "pinyin": "Nǐ lěng ma?",
-  "titleTranslation": "Sovuq emasmi?",
+  "titleTranslation": "Sovqatyapsanmi?",
   "titleTranslation_ru": "Тебе холодно?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d22-s1",
           "text_original": "你冷吗？",
           "pinyin": "Nǐ lěng ma?",
-          "text_translation": "Sovuq emasmi?",
+          "text_translation": "Sovqatyapsanmi?",
           "text_translation_ru": "Тебе холодно?",
           "speaker": "A",
           "words": [

@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue31",
   "title": "太吵了",
   "pinyin": "Tài chǎo le",
-  "titleTranslation": "Juda shovqinli",
+  "titleTranslation": "Juda shovqin ekan",
   "titleTranslation_ru": "Слишком шумно",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d31-s1",
           "text_original": "你听得清吗？",
           "pinyin": "Nǐ tīng de qīng ma?",
-          "text_translation": "Eshita olyapsizmi?",
+          "text_translation": "Senga eshitilyaptimi?",
           "text_translation_ru": "Тебе слышно?",
           "speaker": "A",
           "words": [
@@ -78,7 +78,7 @@
           "id": "d31-s2",
           "text_original": "听不清。",
           "pinyin": "Tīng bu qīng.",
-          "text_translation": "Eshita olmayapman.",
+          "text_translation": "Eshitilmayapti.",
           "text_translation_ru": "Не слышно.",
           "speaker": "B",
           "words": [
@@ -120,7 +120,7 @@
           "id": "d31-s3",
           "text_original": "这里太吵了。",
           "pinyin": "Zhèlǐ tài chǎo le.",
-          "text_translation": "Bu yerda juda shovqinli.",
+          "text_translation": "Bu yer juda shovqin ekan.",
           "text_translation_ru": "Здесь слишком шумно.",
           "speaker": "A",
           "words": [
@@ -171,7 +171,7 @@
           "id": "d31-s4",
           "text_original": "对，很吵。",
           "pinyin": "Duì, hěn chǎo.",
-          "text_translation": "Ha, juda shovqinli.",
+          "text_translation": "Ha, juda shovqin ekan.",
           "text_translation_ru": "Да, очень шумно.",
           "speaker": "B",
           "words": [

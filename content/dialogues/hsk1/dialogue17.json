@@ -1,7 +1,7 @@
 {
   "id": "hsk1-dialogue17",
-  "title": "你累吗？",
-  "pinyin": "Nǐ lèi ma?",
+  "title": "累吗？",
+  "pinyin": "Lèi ma?",
   "titleTranslation": "Charchadingizmi?",
   "titleTranslation_ru": "Ты устал?",
   "level": 1,
@@ -16,7 +16,7 @@
           "id": "d17-s1",
           "text_original": "你在家吗？",
           "pinyin": "Nǐ zài jiā ma?",
-          "text_translation": "Uydamisiz?",
+          "text_translation": "Uydamisan?",
           "text_translation_ru": "Ты дома?",
           "speaker": "A",
           "words": [
@@ -104,7 +104,7 @@
           "id": "d17-s3",
           "text_original": "在做什么？",
           "pinyin": "Zài zuò shénme?",
-          "text_translation": "Nima qilyapsiz?",
+          "text_translation": "Nima qilyapsan?",
           "text_translation_ru": "Что делаешь?",
           "speaker": "A",
           "words": [
@@ -179,36 +179,17 @@
         },
         {
           "id": "d17-s5",
-          "text_original": "你累吗？",
-          "pinyin": "Nǐ lèi ma?",
-          "text_translation": "Charchadingizmi?",
-          "text_translation_ru": "Ты устал?",
+          "text_original": "累吗？",
+          "pinyin": "Lèi ma?",
+          "text_translation": "Charchadingmi?",
+          "text_translation_ru": "Устала?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
+            { "i": [0, 1], "p": "lèi", "t": "charchagan", "tr": "уставший" },
             {
               "i": [
                 1,
                 2
-              ],
-              "p": "lèi",
-              "t": "charchagan",
-              "tr": "уставший"
-            },
-            {
-              "i": [
-                2,
-                3
               ],
               "p": "ma",
               "t": "-mi",
@@ -224,7 +205,7 @@
           "text_original": "很累。",
           "pinyin": "Hěn lèi.",
           "text_translation": "Juda charchadim.",
-          "text_translation_ru": "Очень устал.",
+          "text_translation_ru": "Очень устала.",
           "speaker": "B",
           "words": [
             {
@@ -255,7 +236,7 @@
           "text_original": "那你早点休息。",
           "pinyin": "Nà nǐ zǎo diǎn xiūxi.",
           "text_translation": "Unda ertaroq dam oling.",
-          "text_translation_ru": "Тогда отдохни пораньше.",
+          "text_translation_ru": "Тогда ложись пораньше.",
           "speaker": "A",
           "words": [
             {

@@ -1,0 +1,139 @@
+{
+  "id": "hsk1-dialogue47",
+  "title": "斋月",
+  "pinyin": "Zhāiyuè",
+  "titleTranslation": "Ro'za oyi",
+  "titleTranslation_ru": "Рамадан",
+  "level": 1,
+  "sections": [
+    {
+      "id": "d47-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d47-s1",
+          "text_original": "你为什么不吃饭？",
+          "pinyin": "Nǐ wèi shénme bù chīfàn?",
+          "text_translation": "Nega ovqat yemayapsan?",
+          "text_translation_ru": "Почему ты не ешь?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 4], "p": "wèi shénme", "t": "nega", "tr": "почему" },
+            { "i": [4, 5], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [5, 7], "p": "chīfàn", "t": "ovqat yemoq", "tr": "есть" }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue1.mp3"
+        },
+        {
+          "id": "d47-s2",
+          "text_original": "因为我在封斋。",
+          "pinyin": "Yīnwèi wǒ zài fēngzhāi.",
+          "text_translation": "Chunki men ro'za tutyapman.",
+          "text_translation_ru": "Потому что я держу пост.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "yīnwèi", "t": "chunki", "tr": "потому что" },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
+            { "i": [4, 6], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue2.mp3"
+        },
+        {
+          "id": "d47-s3",
+          "text_original": "现在是斋月吗？",
+          "pinyin": "Xiànzài shì zhāiyuè ma?",
+          "text_translation": "Hozir ro'za oyimi?",
+          "text_translation_ru": "Сейчас Рамадан?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
+            { "i": [2, 3], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
+            { "i": [3, 5], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" },
+            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue3.mp3"
+        },
+        {
+          "id": "d47-s4",
+          "text_original": "是的，现在是斋月。",
+          "pinyin": "Shì de, xiànzài shì zhāiyuè.",
+          "text_translation": "Ha, hozir ro'za oyi.",
+          "text_translation_ru": "Да, сейчас Рамадан.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 },
+            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
+            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3"
+        },
+        {
+          "id": "d47-s5",
+          "text_original": "你白天不吃，对吗？",
+          "pinyin": "Nǐ báitiān bù chī, duì ma?",
+          "text_translation": "Kunduz ovqat yemaysan, to'g'rimi?",
+          "text_translation_ru": "Ты днём не ешь, правда?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "báitiān", "t": "kunduz", "tr": "днём" },
+            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [6, 7], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [7, 8], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue5.mp3"
+        },
+        {
+          "id": "d47-s6",
+          "text_original": "对，晚上吃。",
+          "pinyin": "Duì, wǎnshang chī.",
+          "text_translation": "Ha, kechqurun yeyman.",
+          "text_translation_ru": "Да, вечером ем.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [2, 4], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
+            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue6.mp3"
+        },
+        {
+          "id": "d47-s7",
+          "text_original": "辛苦吗？",
+          "pinyin": "Xīnkǔ ma?",
+          "text_translation": "Qiyinmi?",
+          "text_translation_ru": "Тяжело?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" },
+            { "i": [2, 3], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue7.mp3"
+        },
+        {
+          "id": "d47-s8",
+          "text_original": "不辛苦。",
+          "pinyin": "Bù xīnkǔ.",
+          "text_translation": "Qiyin emas.",
+          "text_translation_ru": "Не тяжело.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" }
+          ],
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue8.mp3"
+        }
+      ],
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3"
+    }
+  ],
+  "tag": "kundalik",
+  "dateAdded": "2026-02-26",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3"
+}

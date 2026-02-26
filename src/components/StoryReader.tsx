@@ -462,23 +462,25 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
         {focusMode && activeSentence ? (
           <div className="story__focus">
             <div className="story__text story__focus-text">
-              {isDialogue && activeSentence.speaker && (
-                <span className="story__focus-speaker">{activeSentence.speaker}：</span>
-              )}
-              <span
-                className="story__sentence story__sentence--active"
-                onClick={() => handleSentenceClick(activeSentence.id)}
-              >
-                <RubyText
-                  text={activeSentence.text_original}
-                  pinyin={activeSentence.pinyin}
-                  showPinyin={showPinyin}
-                  words={activeSentence.words}
-                  activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
-                  onWordPress={(idx) => handleWordPress(activeSentence.id, idx)}
-                  onWordRelease={handleWordRelease}
-                />
-              </span>
+              <div className="story__focus-line">
+                {isDialogue && activeSentence.speaker && (
+                  <span className="story__focus-speaker">{activeSentence.speaker}：</span>
+                )}
+                <span
+                  className="story__sentence story__sentence--active"
+                  onClick={() => handleSentenceClick(activeSentence.id)}
+                >
+                  <RubyText
+                    text={activeSentence.text_original}
+                    pinyin={activeSentence.pinyin}
+                    showPinyin={showPinyin}
+                    words={activeSentence.words}
+                    activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
+                    onWordPress={(idx) => handleWordPress(activeSentence.id, idx)}
+                    onWordRelease={handleWordRelease}
+                  />
+                </span>
+              </div>
             </div>
             <div className="story__focus-nav">
               <button

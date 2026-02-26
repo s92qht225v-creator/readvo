@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue6",
   "title": "香蕉多少钱？",
   "pinyin": "Xiāngjiāo duōshao qián?",
-  "titleTranslation": "Banan qancha?",
+  "titleTranslation": "Banan necha pul?",
   "titleTranslation_ru": "Сколько стоят бананы?",
   "level": 1,
   "sections": [
@@ -79,7 +79,7 @@
           "id": "d6-s3",
           "text_original": "多少钱？",
           "pinyin": "Duōshao qián?",
-          "text_translation": "Qancha?",
+          "text_translation": "Necha pul?",
           "text_translation_ru": "Сколько стоит?",
           "speaker": "A",
           "words": [
@@ -112,8 +112,8 @@
           "id": "d6-s4",
           "text_original": "五块钱一斤。",
           "pinyin": "Wǔ kuài qián yì jīn.",
-          "text_translation": "Bir jinga besh yuan.",
-          "text_translation_ru": "Пять юаней за цзинь.",
+          "text_translation": "Yarim kilosi besh yuan.",
+          "text_translation_ru": "Пять юаней за пол кило.",
           "speaker": "B",
           "words": [
             {

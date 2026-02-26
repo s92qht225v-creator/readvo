@@ -2,8 +2,8 @@
   "id": "hsk1-dialogue34",
   "title": "你准备好了吗？",
   "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
-  "titleTranslation": "Tayyor bo'ldingizmi?",
-  "titleTranslation_ru": "Ты готов?",
+  "titleTranslation": "Tayyormisan?",
+  "titleTranslation_ru": "Ты готова?",
   "level": 1,
   "sections": [
     {
@@ -16,8 +16,8 @@
           "id": "d34-s1",
           "text_original": "你准备好了吗？",
           "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
-          "text_translation": "Tayyor bo'ldingizmi?",
-          "text_translation_ru": "Ты готов?",
+          "text_translation": "Tayyormisan?",
+          "text_translation_ru": "Ты готова?",
           "speaker": "A",
           "words": [
             {
@@ -112,7 +112,7 @@
           "text_original": "还要多久？",
           "pinyin": "Hái yào duō jiǔ?",
           "text_translation": "Yana qancha vaqt kerak?",
-          "text_translation_ru": "Ещё сколько времени нужно?",
+          "text_translation_ru": "Ещё как долго?",
           "speaker": "A",
           "words": [
             {
@@ -193,7 +193,7 @@
           "id": "d34-s5",
           "text_original": "快一点，我们要迟到了。",
           "pinyin": "Kuài yìdiǎn, wǒmen yào chídào le.",
-          "text_translation": "Tezroq qiling, kechikib qolamiz.",
+          "text_translation": "Tezroq bo'l, kech qolamiz.",
           "text_translation_ru": "Побыстрее, мы опоздаем.",
           "speaker": "A",
           "words": [

@@ -1,9 +1,9 @@
 {
   "id": "hsk1-dialogue43",
-  "title": "你安全带系好了吗？",
-  "pinyin": "Nǐ ānquándài jì hǎo le ma?",
-  "titleTranslation": "Xavfsizlik kamaringizni taqib oldingizmi?",
-  "titleTranslation_ru": "Ты пристегнул ремень безопасности?",
+  "title": "安全带系好了吗？",
+  "pinyin": "Ānquándài jì hǎo le ma?",
+  "titleTranslation": "Xavfsizlik kamaringizni taqib oldingmi?",
+  "titleTranslation_ru": "Ремень безопасности пристегнул?",
   "level": 1,
   "sections": [
     {
@@ -14,46 +14,26 @@
       "sentences": [
         {
           "id": "d43-s1",
-          "text_original": "你安全带系好了吗？",
-          "pinyin": "Nǐ ānquándài jì hǎo le ma?",
-          "text_translation": "Xavfsizlik kamaringizni taqib oldingizmi?",
-          "text_translation_ru": "Ты пристегнул ремень безопасности?",
+          "text_original": "安全带系好了吗？",
+          "pinyin": "Ānquándài jì hǎo le ma?",
+          "text_translation": "Xavfsizlik kamaringizni taqib oldingmi?",
+          "text_translation_ru": "Ремень безопасности пристегнула?",
           "speaker": "A",
           "words": [
             {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                4
-              ],
+              "i": [0, 3],
               "p": "ānquándài",
               "t": "xavfsizlik kamari",
               "tr": "ремень безопасности"
             },
             {
-              "i": [
-                4,
-                5
-              ],
+              "i": [3, 4],
               "p": "jì",
               "t": "taqmoq",
               "tr": "пристегнуть"
             },
             {
-              "i": [
-                5,
-                6
-              ],
+              "i": [4, 5],
               "p": "hǎo",
               "t": "tayyor",
               "tr": "готово",
@@ -61,10 +41,7 @@
               "l": 1
             },
             {
-              "i": [
-                6,
-                7
-              ],
+              "i": [5, 6],
               "p": "le",
               "t": "(tugadi)",
               "tr": "(завершение)",
@@ -72,10 +49,7 @@
               "l": 8
             },
             {
-              "i": [
-                7,
-                8
-              ],
+              "i": [6, 7],
               "p": "ma",
               "t": "-mi",
               "tr": "(вопрос)",
@@ -90,7 +64,7 @@
           "text_original": "系好了。",
           "pinyin": "Jì hǎo le.",
           "text_translation": "Taqib oldim.",
-          "text_translation_ru": "Пристегнул.",
+          "text_translation_ru": "Пристегнула.",
           "speaker": "B",
           "words": [
             {
@@ -131,7 +105,7 @@
           "id": "d43-s3",
           "text_original": "后面的人呢？",
           "pinyin": "Hòumiàn de rén ne?",
-          "text_translation": "Orqadagilar-chi?",
+          "text_translation": "Orqadagilarchi?",
           "text_translation_ru": "А те, кто сзади?",
           "speaker": "A",
           "words": [
@@ -237,7 +211,7 @@
           "id": "d43-s5",
           "text_original": "那我们出发吧。",
           "pinyin": "Nà wǒmen chūfā ba.",
-          "text_translation": "Unda jo'naylik.",
+          "text_translation": "Unda kettik.",
           "text_translation_ru": "Тогда поехали.",
           "speaker": "A",
           "words": [

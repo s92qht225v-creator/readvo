@@ -2,8 +2,8 @@
   "id": "hsk1-dialogue18",
   "title": "你明天有空吗？",
   "pinyin": "Nǐ míngtiān yǒu kòng ma?",
-  "titleTranslation": "Ertaga bo'shaysizmi?",
-  "titleTranslation_ru": "Ты завтра свободен?",
+  "titleTranslation": "Ertaga bo'sh vaqting bormi?",
+  "titleTranslation_ru": "У тебя завтра есть свободное время?",
   "level": 1,
   "sections": [
     {
@@ -16,8 +16,8 @@
           "id": "d18-s1",
           "text_original": "你明天有空吗？",
           "pinyin": "Nǐ míngtiān yǒu kòng ma?",
-          "text_translation": "Ertaga bo'shaysizmi?",
-          "text_translation_ru": "Ты завтра свободен?",
+          "text_translation": "Ertaga bo'sh vaqting bormi?",
+          "text_translation_ru": "У тебя завтра есть свободное время?",
           "speaker": "A",
           "words": [
             {
@@ -133,7 +133,7 @@
               ],
               "p": "chīfàn",
               "t": "ovqat yemoq",
-              "tr": "кушать",
+              "tr": "кушать,поесть",
               "h": 1,
               "l": 11
             },
@@ -186,7 +186,7 @@
           "id": "d18-s5",
           "text_original": "中午还是晚上？",
           "pinyin": "Zhōngwǔ háishi wǎnshang?",
-          "text_translation": "Tushlikdami yoki kechasimi?",
+          "text_translation": "Tushdami yoki kechdami?",
           "text_translation_ru": "В обед или вечером?",
           "speaker": "A",
           "words": [
@@ -228,7 +228,7 @@
           "id": "d18-s6",
           "text_original": "晚上吧。",
           "pinyin": "Wǎnshang ba.",
-          "text_translation": "Kechasi bo'lsin.",
+          "text_translation": "Kechda.",
           "text_translation_ru": "Вечером.",
           "speaker": "B",
           "words": [

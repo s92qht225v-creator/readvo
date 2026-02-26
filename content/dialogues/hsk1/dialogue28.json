@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue28",
   "title": "你在听吗？",
   "pinyin": "Nǐ zài tīng ma?",
-  "titleTranslation": "Eshityapsizmi?",
+  "titleTranslation": "Eshityapsanmi?",
   "titleTranslation_ru": "Ты слушаешь?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d28-s1",
           "text_original": "你在听吗？",
           "pinyin": "Nǐ zài tīng ma?",
-          "text_translation": "Eshityapsizmi?",
+          "text_translation": "Eshityapsanmi?",
           "text_translation_ru": "Ты слушаешь?",
           "speaker": "A",
           "words": [
@@ -104,8 +104,8 @@
           "id": "d28-s3",
           "text_original": "我刚才说什么？",
           "pinyin": "Wǒ gāngcái shuō shénme?",
-          "text_translation": "Men hozirgina nima dedim?",
-          "text_translation_ru": "Что я только что сказал?",
+          "text_translation": "Men endiroqda nima dedim?",
+          "text_translation_ru": "Что я только что сказала?",
           "speaker": "A",
           "words": [
             {
@@ -158,7 +158,7 @@
           "text_original": "你说明天见。",
           "pinyin": "Nǐ shuō míngtiān jiàn.",
           "text_translation": "Ertaga ko'rishamiz deding.",
-          "text_translation_ru": "Ты сказал «до завтра».",
+          "text_translation_ru": "Ты сказала что завтра встретимься.",
           "speaker": "B",
           "words": [
             {

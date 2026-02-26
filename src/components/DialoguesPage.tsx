@@ -18,10 +18,12 @@ const TAGS: Record<string, { uz: string; ru: string }> = {
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
-const NEW_DAYS = 7;
+const SEEN_KEY = 'blim-dialogue-seen';
+const NEW_DAYS = 3;
 
-function isNew(dateAdded?: string): boolean {
+function isNew(dateAdded?: string, seen?: Set<string>, id?: string): boolean {
   if (!dateAdded) return false;
+  if (seen && id && seen.has(id)) return false;
   const added = new Date(dateAdded).getTime();
   const now = Date.now();
   return (now - added) < NEW_DAYS * 24 * 60 * 60 * 1000;
@@ -49,12 +51,27 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
+  const [seen, setSeen] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(BOOKMARK_KEY);
       if (saved) setBookmarks(new Set(JSON.parse(saved)));
     } catch { /* ignore */ }
+    try {
+      const savedSeen = localStorage.getItem(SEEN_KEY);
+      if (savedSeen) setSeen(new Set(JSON.parse(savedSeen)));
+    } catch { /* ignore */ }
+  }, []);
+
+  const markSeen = useCallback((id: string) => {
+    setSeen((prev) => {
+      if (prev.has(id)) return prev;
+      const next = new Set(prev);
+      next.add(id);
+      localStorage.setItem(SEEN_KEY, JSON.stringify([...next]));
+      return next;
+    });
   }, []);
 
   const toggleBookmark = useCallback((e: React.MouseEvent, id: string) => {
@@ -186,12 +203,12 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
 
         <div className="home__lessons">
           {filtered.map((dialogue) => (
-            <Link key={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card">
+            <Link key={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card" onClick={() => markSeen(dialogue.id)}>
               <div className="dialogue-card__content">
                 <div className="dialogue-card__text">
                   <h3 className="dialogue-card__title">
                     {dialogue.title}
-                    {isNew(dialogue.dateAdded) && (
+                    {isNew(dialogue.dateAdded, seen, dialogue.id) && (
                       <span className="dialogue-card__new">{language === 'ru' ? 'Новое' : 'Yangi'}</span>
                     )}
                   </h3>

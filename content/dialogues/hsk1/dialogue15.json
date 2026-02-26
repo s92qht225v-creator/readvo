@@ -16,7 +16,7 @@
           "id": "d15-s1",
           "text_original": "你去哪儿？",
           "pinyin": "Nǐ qù nǎr?",
-          "text_translation": "Qayerga ketyapsiz?",
+          "text_translation": "Qayerga ketyapsan?",
           "text_translation_ru": "Куда идёшь?",
           "speaker": "A",
           "words": [
@@ -49,7 +49,7 @@
               ],
               "p": "nǎr",
               "t": "qayer",
-              "tr": "где/куда",
+              "tr": "где,куда",
               "h": 1,
               "l": 8
             }
@@ -102,7 +102,7 @@
           "id": "d15-s3",
           "text_original": "买什么？",
           "pinyin": "Mǎi shénme?",
-          "text_translation": "Nima olasiz?",
+          "text_translation": "Nima olasan?",
           "text_translation_ru": "Что покупаешь?",
           "speaker": "A",
           "words": [
@@ -136,7 +136,7 @@
           "text_original": "买衣服。",
           "pinyin": "Mǎi yīfu.",
           "text_translation": "Kiyim olaman.",
-          "text_translation_ru": "Покупаю одежду.",
+          "text_translation_ru": "Купить одежду.",
           "speaker": "B",
           "words": [
             {
@@ -168,8 +168,8 @@
           "id": "d15-s5",
           "text_original": "买什么衣服？",
           "pinyin": "Mǎi shénme yīfu?",
-          "text_translation": "Qanday kiyim olasiz?",
-          "text_translation_ru": "Какую одежду покупаешь?",
+          "text_translation": "Qanaqa kiyim olasan?",
+          "text_translation_ru": "Купить какую одежду?",
           "speaker": "A",
           "words": [
             {
@@ -213,7 +213,7 @@
           "text_original": "买一件T恤。",
           "pinyin": "Mǎi yí jiàn T xù.",
           "text_translation": "Bitta futbolka olaman.",
-          "text_translation_ru": "Покупаю футболку.",
+          "text_translation_ru": "Купить одну футболку.",
           "speaker": "B",
           "words": [
             {
@@ -253,7 +253,7 @@
           "text_original": "我们一起去吧。",
           "pinyin": "Wǒmen yìqǐ qù ba.",
           "text_translation": "Birga boraylik.",
-          "text_translation_ru": "Пойдём вместе.",
+          "text_translation_ru": "Давай вместе сходим.",
           "speaker": "A",
           "words": [
             {

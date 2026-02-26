@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue38",
   "title": "我很紧张",
   "pinyin": "Wǒ hěn jǐnzhāng",
-  "titleTranslation": "Men juda hayajonlanaman",
+  "titleTranslation": "Men juda hayajonlanyapman",
   "titleTranslation_ru": "Я очень нервничаю",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d38-s1",
           "text_original": "你最近怎么样？",
           "pinyin": "Nǐ zuìjìn zěnmeyàng?",
-          "text_translation": "Yaqinda qalaysiz?",
+          "text_translation": "Oxirgi paytlarda qalaysan?",
           "text_translation_ru": "Как у тебя дела в последнее время?",
           "speaker": "A",
           "words": [
@@ -58,8 +58,8 @@
           "id": "d38-s2",
           "text_original": "我最近很忙。",
           "pinyin": "Wǒ zuìjìn hěn máng.",
-          "text_translation": "Yaqinda juda bandman.",
-          "text_translation_ru": "В последнее время очень занят.",
+          "text_translation": "Men ohirgi paylarda juda bandman.",
+          "text_translation_ru": "В последнее время я очень занят.",
           "speaker": "B",
           "words": [
             {
@@ -109,7 +109,7 @@
           "id": "d38-s3",
           "text_original": "忙什么？",
           "pinyin": "Máng shénme?",
-          "text_translation": "Nima bilan bandsiz?",
+          "text_translation": "Nima bilan bandsan?",
           "text_translation_ru": "Чем занят?",
           "speaker": "A",
           "words": [
@@ -140,7 +140,7 @@
           "id": "d38-s4",
           "text_original": "下个月要考试了。",
           "pinyin": "Xià ge yuè yào kǎoshì le.",
-          "text_translation": "Keyingi oyda imtihon bo'ladi.",
+          "text_translation": "Keyingi oy imtihon topshirishim kerak.",
           "text_translation_ru": "В следующем месяце экзамен.",
           "speaker": "B",
           "words": [
@@ -189,7 +189,7 @@
           "id": "d38-s5",
           "text_original": "紧张吗？",
           "pinyin": "Jǐnzhāng ma?",
-          "text_translation": "Hayajonlanayapsizmi?",
+          "text_translation": "Hayajonlanyapsanmi?",
           "text_translation_ru": "Волнуешься?",
           "speaker": "A",
           "words": [

@@ -16,7 +16,7 @@
           "id": "d41-s1",
           "text_original": "服务员，买单。",
           "pinyin": "Fúwùyuán, mǎidān.",
-          "text_translation": "Ofitsiant, hisob bo'lsin.",
+          "text_translation": "Ofitsiant, hisob berib yuboring.",
           "text_translation_ru": "Официант, счёт.",
           "speaker": "A",
           "words": [
@@ -67,8 +67,8 @@
           "id": "d41-s3",
           "text_original": "一共多少钱？",
           "pinyin": "Yígòng duōshao qián?",
-          "text_translation": "Hammasi qancha?",
-          "text_translation_ru": "Сколько всего?",
+          "text_translation": "Hammasi bo'lib qancha bo'ldi?",
+          "text_translation_ru": "Какой общий счет?",
           "speaker": "A",
           "words": [
             {
@@ -109,7 +109,7 @@
           "id": "d41-s4",
           "text_original": "一百二十块。",
           "pinyin": "Yìbǎi èrshí kuài.",
-          "text_translation": "Yuz yigirma yuan.",
+          "text_translation": "Bir yuz yigirma yuan.",
           "text_translation_ru": "Сто двадцать юаней.",
           "speaker": "B",
           "words": [

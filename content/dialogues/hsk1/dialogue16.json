@@ -16,7 +16,7 @@
           "id": "d16-s1",
           "text_original": "你今天有时间吗？",
           "pinyin": "Nǐ jīntiān yǒu shíjiān ma?",
-          "text_translation": "Bugun vaqtingiz bormi?",
+          "text_translation": "Bugun vaqting bormi?",
           "text_translation_ru": "У тебя сегодня есть время?",
           "speaker": "A",
           "words": [
@@ -105,7 +105,7 @@
           "text_original": "我们去看电影吧。",
           "pinyin": "Wǒmen qù kàn diànyǐng ba.",
           "text_translation": "Kino ko'rgani boraylik.",
-          "text_translation_ru": "Пойдём в кино.",
+          "text_translation_ru": "Давай сходим в кино.",
           "speaker": "A",
           "words": [
             {
@@ -199,38 +199,28 @@
         },
         {
           "id": "d16-s5",
-          "text_original": "几点见？",
-          "pinyin": "Jǐ diǎn jiàn?",
-          "text_translation": "Soat nechida uchrashib?",
+          "text_original": "我们几点见？",
+          "pinyin": "Wǒmen jǐ diǎn jiàn?",
+          "text_translation": "Soat nechida uchrashamiz?",
           "text_translation_ru": "Во сколько встретимся?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "jǐ",
-              "t": "necha",
-              "tr": "сколько",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "час",
-              "h": 1,
-              "l": 6
-            },
+            { "i": [0, 2], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
             {
               "i": [
                 2,
-                3
+                4
+              ],
+              "p": "jǐ diǎn",
+              "t": "soat nechida",
+              "tr": "во сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                4,
+                5
               ],
               "p": "jiàn",
               "t": "ko'rishmoq",

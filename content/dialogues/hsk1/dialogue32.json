@@ -16,7 +16,7 @@
           "id": "d32-s1",
           "text_original": "你怎么才来？",
           "pinyin": "Nǐ zěnme cái lái?",
-          "text_translation": "Nega endi keldingiz?",
+          "text_translation": "Nega endi kelding?",
           "text_translation_ru": "Почему так поздно пришёл?",
           "speaker": "A",
           "words": [
@@ -69,7 +69,7 @@
           "id": "d32-s2",
           "text_original": "对不起，路上堵车。",
           "pinyin": "Duìbuqǐ, lùshang dǔchē.",
-          "text_translation": "Kechirasiz, yo'lda tirbandlik bor edi.",
+          "text_translation": "Kechirasan, yo'l tirband ekan.",
           "text_translation_ru": "Извини, на дороге была пробка.",
           "speaker": "B",
           "words": [
@@ -109,8 +109,8 @@
           "id": "d32-s3",
           "text_original": "我等了你很久。",
           "pinyin": "Wǒ děng le nǐ hěn jiǔ.",
-          "text_translation": "Sizni uzoq kutdim.",
-          "text_translation_ru": "Я тебя долго ждал.",
+          "text_translation": "Seni ancha kutdim.",
+          "text_translation_ru": "Я тебя долго ждала.",
           "speaker": "A",
           "words": [
             {
@@ -183,7 +183,7 @@
           "text_original": "不好意思。",
           "pinyin": "Bù hǎoyìsi.",
           "text_translation": "Uzr so'rayman.",
-          "text_translation_ru": "Мне неловко.",
+          "text_translation_ru": "Прости.",
           "speaker": "B",
           "words": [
             {
@@ -202,7 +202,7 @@
           "id": "d32-s5",
           "text_original": "下次早点出门。",
           "pinyin": "Xià cì zǎo diǎn chūmén.",
-          "text_translation": "Keyingi safar ertaroq chiqing.",
+          "text_translation": "Keyingi safar ertaroq yo'lga chiq.",
           "text_translation_ru": "В следующий раз выходи пораньше.",
           "speaker": "A",
           "words": [

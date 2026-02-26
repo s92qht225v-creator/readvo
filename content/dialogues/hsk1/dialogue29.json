@@ -16,7 +16,7 @@
           "id": "d29-s1",
           "text_original": "你来取钱吗？",
           "pinyin": "Nǐ lái qǔ qián ma?",
-          "text_translation": "Pul olishga keldingizmi?",
+          "text_translation": "Pul yechmoqchimisan?",
           "text_translation_ru": "Ты пришёл снять деньги?",
           "speaker": "A",
           "words": [
@@ -102,7 +102,7 @@
           "id": "d29-s3",
           "text_original": "带银行卡了吗？",
           "pinyin": "Dài yínháng kǎ le ma?",
-          "text_translation": "Bank kartangizni oldingizmi?",
+          "text_translation": "Bank kartangni olib keldingmi?",
           "text_translation_ru": "Банковскую карту взял?",
           "speaker": "A",
           "words": [
@@ -153,7 +153,7 @@
           "id": "d29-s4",
           "text_original": "带了。",
           "pinyin": "Dài le.",
-          "text_translation": "Oldim.",
+          "text_translation": "Olib keldim.",
           "text_translation_ru": "Взял.",
           "speaker": "B",
           "words": [
@@ -184,7 +184,7 @@
           "id": "d29-s5",
           "text_original": "要取多少？",
           "pinyin": "Yào qǔ duōshao?",
-          "text_translation": "Qancha olmoqchisiz?",
+          "text_translation": "Qancha yechmoqchisan?",
           "text_translation_ru": "Сколько хочешь снять?",
           "speaker": "A",
           "words": [

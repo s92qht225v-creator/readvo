@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue5",
   "title": "你会说中文吗？",
   "pinyin": "Nǐ huì shuō Zhōngwén ma?",
-  "titleTranslation": "Xitoycha gaplasha olasizmi?",
+  "titleTranslation": "Xitoycha gaplasha olasanmi?",
   "titleTranslation_ru": "Ты умеешь говорить по-китайски?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d5-s1",
           "text_original": "你会说中文吗？",
           "pinyin": "Nǐ huì shuō Zhōngwén ma?",
-          "text_translation": "Xitoycha gaplasha olasizmi?",
+          "text_translation": "Xitoycha gaplasha olasanmi?",
           "text_translation_ru": "Ты умеешь говорить по-китайски?",
           "speaker": "A",
           "words": [
@@ -81,7 +81,7 @@
           "id": "d5-s2",
           "text_original": "我会说一点。你会说乌兹别克语吗？",
           "pinyin": "Wǒ huì shuō yìdiǎn. Nǐ huì shuō Wūzībiékè yǔ ma?",
-          "text_translation": "Biroz gaplasha olaman. O'zbekcha gaplasha olasizmi?",
+          "text_translation": "Biroz gaplasha olaman. Sen O'zbekcha gaplasha olasanmi?",
           "text_translation_ru": "Я немного умею. Ты умеешь говорить по-узбекски?",
           "speaker": "B",
           "words": [

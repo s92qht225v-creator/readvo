@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue42",
   "title": "外卖到了",
   "pinyin": "Wàimài dào le",
-  "titleTranslation": "Yetkazib berish yetib keldi",
+  "titleTranslation": "Dostavka yetib keldi",
   "titleTranslation_ru": "Доставка приехала",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d42-s1",
           "text_original": "外卖到了吗？",
           "pinyin": "Wàimài dào le ma?",
-          "text_translation": "Yetkazib berish yetib keldimi?",
+          "text_translation": "Dostavka yetib keldimi?",
           "text_translation_ru": "Доставка приехала?",
           "speaker": "A",
           "words": [
@@ -163,7 +163,7 @@
           "text_original": "好的，我下去拿。",
           "pinyin": "Hǎo de, wǒ xiàqù ná.",
           "text_translation": "Xo'p, men pastga tushib olaman.",
-          "text_translation_ru": "Хорошо, я спущусь и заберу.",
+          "text_translation_ru": "Хорошо, я спущусь и возьму.",
           "speaker": "A",
           "words": [
             {

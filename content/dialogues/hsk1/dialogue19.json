@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue19",
   "title": "你怎么去学校？",
   "pinyin": "Nǐ zěnme qù xuéxiào?",
-  "titleTranslation": "Maktabga qanday borasiz?",
+  "titleTranslation": "Maktabga qanday borasan?",
   "titleTranslation_ru": "Как ты добираешься до школы?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d19-s1",
           "text_original": "你怎么去学校？",
           "pinyin": "Nǐ zěnme qù xuéxiào?",
-          "text_translation": "Maktabga qanday borasiz?",
+          "text_translation": "Maktabga qanday borasan?",
           "text_translation_ru": "Как ты добираешься до школы?",
           "speaker": "A",
           "words": [
@@ -175,8 +175,8 @@
           "id": "d19-s5",
           "text_original": "多久到？",
           "pinyin": "Duō jiǔ dào?",
-          "text_translation": "Qancha vaqtda yetib borasiz?",
-          "text_translation_ru": "Сколько времени ехать?",
+          "text_translation": "Qancha vaqtda yetib borasan?",
+          "text_translation_ru": "За сколько добираешься?",
           "speaker": "A",
           "words": [
             {
@@ -204,8 +204,8 @@
           "id": "d19-s6",
           "text_original": "二十分钟。",
           "pinyin": "Èrshí fēnzhōng.",
-          "text_translation": "Yigirma daqiqa.",
-          "text_translation_ru": "Двадцать минут.",
+          "text_translation": "Yigirma daqiqada.",
+          "text_translation_ru": "За двадцать минут.",
           "speaker": "B",
           "words": [
             {

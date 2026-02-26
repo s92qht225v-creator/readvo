@@ -399,37 +399,6 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3"
-        },
-        {
-          "id": "d11-s8",
-          "text_original": "好啊。",
-          "pinyin": "Hǎo a.",
-          "text_translation": "Yaxshi.",
-          "text_translation_ru": "Хорошо.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "a",
-              "t": "(undov)",
-              "tr": "(частица)"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue8.mp3"
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3"

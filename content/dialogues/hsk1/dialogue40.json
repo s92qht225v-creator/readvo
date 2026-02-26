@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue40",
   "title": "点菜",
   "pinyin": "Diǎn cài",
-  "titleTranslation": "Buyurtma berish",
+  "titleTranslation": "Ovqat buyurtma berish",
   "titleTranslation_ru": "Заказ еды",
   "level": 1,
   "sections": [
@@ -14,37 +14,26 @@
       "sentences": [
         {
           "id": "d40-s1",
-          "text_original": "你好，点菜。",
-          "pinyin": "Nǐ hǎo, diǎn cài.",
-          "text_translation": "Salom, buyurtma beraman.",
-          "text_translation_ru": "Здравствуйте, хочу заказать.",
+          "text_original": "服务员，点菜。",
+          "pinyin": "Fúwùyuán, diǎn cài.",
+          "text_translation": "Ofitsiant, buyurtma bermoqchiman.",
+          "text_translation_ru": "Официант, хочу сделать заказать.",
           "speaker": "A",
           "words": [
             {
-              "i": [
-                0,
-                2
-              ],
-              "p": "nǐ hǎo",
-              "t": "salom",
-              "tr": "здравствуйте",
-              "h": 1,
-              "l": 1
+              "i": [0, 3],
+              "p": "fúwùyuán",
+              "t": "ofitsiant",
+              "tr": "официант"
             },
             {
-              "i": [
-                3,
-                4
-              ],
+              "i": [4, 5],
               "p": "diǎn",
               "t": "buyurtma bermoq",
               "tr": "заказать"
             },
             {
-              "i": [
-                4,
-                5
-              ],
+              "i": [5, 6],
               "p": "cài",
               "t": "taom",
               "tr": "блюдо",
@@ -58,7 +47,7 @@
           "id": "d40-s2",
           "text_original": "你好，今天吃点什么？",
           "pinyin": "Nǐ hǎo, jīntiān chī diǎn shénme?",
-          "text_translation": "Salom, bugun nima yeyasiz?",
+          "text_translation": "Salom, bugun nima yeysiz?",
           "text_translation_ru": "Здравствуйте, что будете сегодня?",
           "speaker": "B",
           "words": [
@@ -124,7 +113,7 @@
           "id": "d40-s3",
           "text_original": "来一份大盘鸡。",
           "pinyin": "Lái yí fèn dàpánjī.",
-          "text_translation": "Bitta dapanji bo'lsin.",
+          "text_translation": "Bitta dapanji ob keling.",
           "text_translation_ru": "Одну порцию дапаньцзи.",
           "speaker": "A",
           "words": [
@@ -162,17 +151,34 @@
         },
         {
           "id": "d40-s4",
-          "text_original": "你能吃辣吗？",
-          "pinyin": "Nǐ néng chī là ma?",
-          "text_translation": "Achchiq yeya olasizmi?",
-          "text_translation_ru": "Ты можешь есть острое?",
+          "text_original": "大盘鸡很辣，你能吃辣吗？",
+          "pinyin": "Dàpánjī hěn là, nǐ néng chī là ma?",
+          "text_translation": "Dapanji juda achchiq, achchiq yeya olasizmi?",
+          "text_translation_ru": "Дапаньцзи очень острое, ты можешь есть острое?",
           "speaker": "B",
           "words": [
             {
-              "i": [
-                0,
-                1
-              ],
+              "i": [0, 3],
+              "p": "dàpánjī",
+              "t": "dapanji",
+              "tr": "дапаньцзи (курица с картошкой)"
+            },
+            {
+              "i": [3, 4],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [4, 5],
+              "p": "là",
+              "t": "achchiq",
+              "tr": "острый"
+            },
+            {
+              "i": [6, 7],
               "p": "nǐ",
               "t": "sen",
               "tr": "ты",
@@ -180,10 +186,7 @@
               "l": 1
             },
             {
-              "i": [
-                1,
-                2
-              ],
+              "i": [7, 8],
               "p": "néng",
               "t": "(-a olmoq)",
               "tr": "мочь",
@@ -191,10 +194,7 @@
               "l": 10
             },
             {
-              "i": [
-                2,
-                3
-              ],
+              "i": [8, 9],
               "p": "chī",
               "t": "yemoq",
               "tr": "есть",
@@ -202,19 +202,13 @@
               "l": 14
             },
             {
-              "i": [
-                3,
-                4
-              ],
+              "i": [9, 10],
               "p": "là",
               "t": "achchiq",
               "tr": "острый"
             },
             {
-              "i": [
-                4,
-                5
-              ],
+              "i": [10, 11],
               "p": "ma",
               "t": "-mi",
               "tr": "(вопрос)",
@@ -226,37 +220,50 @@
         },
         {
           "id": "d40-s5",
-          "text_original": "能。再来一瓶冰的百事可乐。",
-          "pinyin": "Néng. Zài lái yì píng bīng de Bǎishì Kělè.",
-          "text_translation": "Olaman. Yana bitta sovuq Pepsi ham bo'lsin.",
-          "text_translation_ru": "Могу. И ещё бутылку холодной Пепси.",
+          "text_original": "我能吃辣，再来一瓶冰的百事可乐。",
+          "pinyin": "Wǒ néng chī là, zài lái yì píng bīng de Bǎishì Kělè.",
+          "text_translation": "Achchiq yeya olaman, yana bitta sovuq Pepsi ham ob keling.",
+          "text_translation_ru": "Могу есть острое, и ещё бутылку холодного Пепси.",
           "speaker": "A",
           "words": [
             {
-              "i": [
-                0,
-                1
-              ],
+              "i": [0, 1],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [1, 2],
               "p": "néng",
-              "t": "olaman",
-              "tr": "могу",
+              "t": "(-a olmoq)",
+              "tr": "мочь",
               "h": 1,
               "l": 10
             },
             {
-              "i": [
-                2,
-                3
-              ],
+              "i": [2, 3],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 14
+            },
+            {
+              "i": [3, 4],
+              "p": "là",
+              "t": "achchiq",
+              "tr": "острый"
+            },
+            {
+              "i": [5, 6],
               "p": "zài",
               "t": "yana",
               "tr": "ещё"
             },
             {
-              "i": [
-                3,
-                4
-              ],
+              "i": [6, 7],
               "p": "lái",
               "t": "bermoq",
               "tr": "дайте",
@@ -264,28 +271,19 @@
               "l": 8
             },
             {
-              "i": [
-                4,
-                6
-              ],
+              "i": [7, 9],
               "p": "yì píng",
               "t": "bitta shisha",
               "tr": "одну бутылку"
             },
             {
-              "i": [
-                6,
-                8
-              ],
+              "i": [9, 11],
               "p": "bīng de",
               "t": "sovuq",
               "tr": "холодный"
             },
             {
-              "i": [
-                8,
-                12
-              ],
+              "i": [11, 15],
               "p": "Bǎishì Kělè",
               "t": "Pepsi",
               "tr": "Пепси"

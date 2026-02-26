@@ -1,8 +1,8 @@
 {
   "id": "hsk1-dialogue4",
-  "title": "你有Telegram吗？",
-  "pinyin": "Nǐ yǒu Telegram ma?",
-  "titleTranslation": "Sening Telegramingiz bormi?",
+  "title": "你有纸飞机吗？",
+  "pinyin": "Nǐ yǒu Zhǐfēijī ma?",
+  "titleTranslation": "Senda Telegram bormi?",
   "titleTranslation_ru": "У тебя есть Телеграм?",
   "level": 1,
   "sections": [
@@ -14,17 +14,14 @@
       "sentences": [
         {
           "id": "d4-s1",
-          "text_original": "你有Telegram吗？",
-          "pinyin": "Nǐ yǒu Telegram ma?",
-          "text_translation": "Sening Telegramingiz bormi?",
+          "text_original": "你有纸飞机吗？",
+          "pinyin": "Nǐ yǒu Zhǐfēijī ma?",
+          "text_translation": "Senda Telegram bormi?",
           "text_translation_ru": "У тебя есть Телеграм?",
           "speaker": "A",
           "words": [
             {
-              "i": [
-                0,
-                1
-              ],
+              "i": [0, 1],
               "p": "nǐ",
               "t": "sen",
               "tr": "ты",
@@ -32,10 +29,7 @@
               "l": 1
             },
             {
-              "i": [
-                1,
-                2
-              ],
+              "i": [1, 2],
               "p": "yǒu",
               "t": "bor",
               "tr": "иметь",
@@ -43,10 +37,13 @@
               "l": 4
             },
             {
-              "i": [
-                10,
-                11
-              ],
+              "i": [2, 5],
+              "p": "Zhǐfēijī",
+              "t": "Zhifeiji",
+              "tr": "Чжифэйцзи"
+            },
+            {
+              "i": [5, 6],
               "p": "ma",
               "t": "-mi",
               "tr": "(вопрос)",
@@ -58,10 +55,10 @@
         },
         {
           "id": "d4-s2",
-          "text_original": "没有，我没有Telegram。",
-          "pinyin": "Méiyǒu, wǒ méiyǒu Telegram.",
-          "text_translation": "Yo'q, mening Telegramim yo'q.",
-          "text_translation_ru": "Нет, у меня нет Телеграма.",
+          "text_original": "没有，我没有纸飞机。",
+          "pinyin": "Méiyǒu, wǒ méiyǒu Zhǐfēijī.",
+          "text_translation": "Yo'q, menda Telegram yo'q.",
+          "text_translation_ru": "Нет, у меня нет Телеграм.",
           "speaker": "B",
           "words": [
             {
@@ -87,15 +84,18 @@
               "l": 2
             },
             {
-              "i": [
-                4,
-                6
-              ],
+              "i": [4, 6],
               "p": "méiyǒu",
               "t": "yo'q",
               "tr": "не иметь",
               "h": 1,
               "l": 4
+            },
+            {
+              "i": [6, 9],
+              "p": "Zhǐfēijī",
+              "t": "Zhifeiji",
+              "tr": "Чжифэйцзи"
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue2.mp3"
@@ -104,7 +104,7 @@
           "id": "d4-s3",
           "text_original": "你有微信吗？",
           "pinyin": "Nǐ yǒu Wēixìn ma?",
-          "text_translation": "Sening WeChat bormi?",
+          "text_translation": "Senda WeChat bormi?",
           "text_translation_ru": "У тебя есть WeChat?",
           "speaker": "A",
           "words": [
@@ -179,7 +179,7 @@
           "id": "d4-s5",
           "text_original": "我加你微信，可以吗？",
           "pinyin": "Wǒ jiā nǐ Wēixìn, kěyǐ ma?",
-          "text_translation": "Sizni WeChatga qo'shsam, bo'ladimi?",
+          "text_translation": "Seni WeChatda qo'shsam, bo'ladimi?",
           "text_translation_ru": "Могу добавить тебя в WeChat?",
           "speaker": "A",
           "words": [

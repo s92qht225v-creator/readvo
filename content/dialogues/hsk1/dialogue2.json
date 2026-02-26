@@ -2,8 +2,8 @@
   "id": "hsk1-dialogue2",
   "title": "你是中国人吗？",
   "pinyin": "Nǐ shì Zhōngguó rén ma?",
-  "titleTranslation": "Siz xitoylikmisiz?",
-  "titleTranslation_ru": "Вы китаец?",
+  "titleTranslation": "Sen Xitoymisan?",
+  "titleTranslation_ru": "Ты Китаец?",
   "level": 1,
   "sections": [
     {
@@ -16,8 +16,8 @@
           "id": "d2-s1",
           "text_original": "你是中国人吗？",
           "pinyin": "Nǐ shì Zhōngguó rén ma?",
-          "text_translation": "Siz xitoylikmisiz?",
-          "text_translation_ru": "Вы китаец?",
+          "text_translation": "Siz Xitoymisan?",
+          "text_translation_ru": "Ты Китаец?",
           "speaker": "A",
           "words": [
             {
@@ -48,8 +48,8 @@
                 5
               ],
               "p": "Zhōngguó rén",
-              "t": "xitoylik",
-              "tr": "китаец",
+              "t": "Xitoylik",
+              "tr": "Китаец",
               "h": 1,
               "l": 2
             },
@@ -71,8 +71,8 @@
           "id": "d2-s2",
           "text_original": "是的，我是中国人，你呢？",
           "pinyin": "Shìde, wǒ shì Zhōngguó rén, nǐ ne?",
-          "text_translation": "Ha, men xitoylikman, siz-chi?",
-          "text_translation_ru": "Да, я китаец, а вы?",
+          "text_translation": "Ha, men Xitoyman, senchi?",
+          "text_translation_ru": "Да, я Китаец, а ты?",
           "speaker": "B",
           "words": [
             {
@@ -147,8 +147,8 @@
           "id": "d2-s3",
           "text_original": "我是乌兹别克斯坦人。",
           "pinyin": "Wǒ shì Wūzībiékèsītǎn rén.",
-          "text_translation": "Men o'zbekistonlikman.",
-          "text_translation_ru": "Я узбек.",
+          "text_translation": "Men O'zbekman.",
+          "text_translation_ru": "Я Узбек.",
           "speaker": "A",
           "words": [
             {
@@ -179,7 +179,7 @@
                 9
               ],
               "p": "Wūzībiékèsītǎn rén",
-              "t": "o'zbekistonlik",
+              "t": "O'zbekistonlik，O'zbek",
               "tr": "узбек"
             }
           ],

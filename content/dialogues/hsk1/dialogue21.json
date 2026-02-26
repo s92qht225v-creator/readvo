@@ -16,8 +16,8 @@
           "id": "d21-s1",
           "text_original": "我没带钱，",
           "pinyin": "Wǒ méi dài qián,",
-          "text_translation": "Pul olib kelmadim,",
-          "text_translation_ru": "Я не взял деньги,",
+          "text_translation": "Pul olib kelmabman,",
+          "text_translation_ru": "Я не взяла деньги,",
           "speaker": "A",
           "words": [
             {
@@ -69,7 +69,7 @@
           "id": "d21-s2",
           "text_original": "啊？",
           "pinyin": "Á?",
-          "text_translation": "Ha?",
+          "text_translation": "A?",
           "text_translation_ru": "А?",
           "speaker": "B",
           "words": [
@@ -120,7 +120,7 @@
           "id": "d21-s4",
           "text_original": "没事，我请你。",
           "pinyin": "Méi shì, wǒ qǐng nǐ.",
-          "text_translation": "Hech gap yo'q, men to'layman.",
+          "text_translation": "Hechqisi yoq, men mehmon qilaman.",
           "text_translation_ru": "Ничего, я угощаю.",
           "speaker": "B",
           "words": [
@@ -173,8 +173,8 @@
           "id": "d21-s5",
           "text_original": "谢谢，下次我请你。",
           "pinyin": "Xièxie, xià cì wǒ qǐng nǐ.",
-          "text_translation": "Rahmat, keyingi safar men to'layman.",
-          "text_translation_ru": "Спасибо, в следующий раз я угощаю.",
+          "text_translation": "Rahmat, keyingi safar men mehmon qilaman.",
+          "text_translation_ru": "Спасибо, в следующий раз я угощу.",
           "speaker": "A",
           "words": [
             {

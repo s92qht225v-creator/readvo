@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue23",
   "title": "你带伞了吗？",
   "pinyin": "Nǐ dài sǎn le ma?",
-  "titleTranslation": "Soyabon oldingizmi?",
+  "titleTranslation": "Soyabon oldingmi?",
   "titleTranslation_ru": "Ты взял зонт?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d23-s1",
           "text_original": "外面下雨吗？",
           "pinyin": "Wàimiàn xià yǔ ma?",
-          "text_translation": "Tashqarida yomg'ir yog'yaptimu?",
+          "text_translation": "Tashqarida yomg'ir yog'yaptimi?",
           "text_translation_ru": "На улице дождь идёт?",
           "speaker": "A",
           "words": [
@@ -90,7 +90,7 @@
           "id": "d23-s3",
           "text_original": "你带伞了吗？",
           "pinyin": "Nǐ dài sǎn le ma?",
-          "text_translation": "Soyabon oldingizmi?",
+          "text_translation": "Soyabon olganmisan?",
           "text_translation_ru": "Ты взял зонт?",
           "speaker": "A",
           "words": [
@@ -152,7 +152,7 @@
           "id": "d23-s4",
           "text_original": "带了。",
           "pinyin": "Dài le.",
-          "text_translation": "Oldim.",
+          "text_translation": "Olganman.",
           "text_translation_ru": "Взял.",
           "speaker": "B",
           "words": [

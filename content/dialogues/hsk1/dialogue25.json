@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue25",
   "title": "你家在哪儿？",
   "pinyin": "Nǐ jiā zài nǎr?",
-  "titleTranslation": "Uyingiz qayerda?",
+  "titleTranslation": "Uying qayerda?",
   "titleTranslation_ru": "Где твой дом?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d25-s1",
           "text_original": "你家在哪儿？",
           "pinyin": "Nǐ jiā zài nǎr?",
-          "text_translation": "Uyingiz qayerda?",
+          "text_translation": "Uying qayerda?",
           "text_translation_ru": "Где твой дом?",
           "speaker": "A",
           "words": [
@@ -124,7 +124,7 @@
           "id": "d25-s3",
           "text_original": "你家有几口人？",
           "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
-          "text_translation": "Oilangizda necha kishi bor?",
+          "text_translation": "Oilangda necha kishi bor?",
           "text_translation_ru": "Сколько человек в твоей семье?",
           "speaker": "A",
           "words": [
@@ -296,7 +296,7 @@
           "id": "d25-s5",
           "text_original": "你家大吗？",
           "pinyin": "Nǐ jiā dà ma?",
-          "text_translation": "Uyingiz kattami?",
+          "text_translation": "Uying kattami?",
           "text_translation_ru": "У тебя дом большой?",
           "speaker": "A",
           "words": [

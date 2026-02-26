@@ -16,7 +16,7 @@
           "id": "d9-s1",
           "text_original": "你的电话号码是多少？",
           "pinyin": "Nǐ de diànhuà hàomǎ shì duōshao?",
-          "text_translation": "Telefon raqamingiz necha?",
+          "text_translation": "Telefon raqaming necha?",
           "text_translation_ru": "Какой у тебя номер телефона?",
           "speaker": "A",
           "words": [
@@ -153,8 +153,8 @@
           "id": "d9-s3",
           "text_original": "请再说一遍。",
           "pinyin": "Qǐng zài shuō yí biàn.",
-          "text_translation": "Iltimos, yana bir marta ayting.",
-          "text_translation_ru": "Пожалуйста, скажи ещё раз.",
+          "text_translation": "Iltimos, yana bir marta aytib yubor.",
+          "text_translation_ru": "Пожалуйста, повтори ещё раз.",
           "speaker": "A",
           "words": [
             {

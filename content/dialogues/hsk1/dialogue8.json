@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue8",
   "title": "你在哪儿？",
   "pinyin": "Nǐ zài nǎr?",
-  "titleTranslation": "Qayerdasiz?",
+  "titleTranslation": "Qayerdasan?",
   "titleTranslation_ru": "Ты где?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d8-s1",
           "text_original": "喂，你在哪儿？",
           "pinyin": "Wèi, nǐ zài nǎr?",
-          "text_translation": "Alo, qayerdasiz?",
+          "text_translation": "Alo, qayerdasan?",
           "text_translation_ru": "Алло, ты где?",
           "speaker": "A",
           "words": [
@@ -113,7 +113,7 @@
           "id": "d8-s3",
           "text_original": "你在教室吗？",
           "pinyin": "Nǐ zài jiàoshì ma?",
-          "text_translation": "Sinfdamisiz?",
+          "text_translation": "Sinfdamisan?",
           "text_translation_ru": "Ты в классе?",
           "speaker": "A",
           "words": [
@@ -219,7 +219,7 @@
           "id": "d8-s5",
           "text_original": "你几点回家？",
           "pinyin": "Nǐ jǐ diǎn huí jiā?",
-          "text_translation": "Soat nechada uyga qaytasiz?",
+          "text_translation": "Uyga soat nechada qaytasan?",
           "text_translation_ru": "Во сколько вернёшься домой?",
           "speaker": "A",
           "words": [

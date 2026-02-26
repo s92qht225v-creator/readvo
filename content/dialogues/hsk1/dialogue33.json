@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue33",
   "title": "我忘了",
   "pinyin": "Wǒ wàng le",
-  "titleTranslation": "Unutibman",
+  "titleTranslation": "Yodimdan chiqibdi",
   "titleTranslation_ru": "Я забыл",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d33-s1",
           "text_original": "你带作业了吗？",
           "pinyin": "Nǐ dài zuòyè le ma?",
-          "text_translation": "Vazifangizni oldingizmi?",
+          "text_translation": "Uy vazifangni olib keldingmi?",
           "text_translation_ru": "Ты принёс домашнее задание?",
           "speaker": "A",
           "words": [
@@ -78,7 +78,7 @@
           "id": "d33-s2",
           "text_original": "忘了。",
           "pinyin": "Wàng le.",
-          "text_translation": "Unutibman.",
+          "text_translation": "Esimdan chiqibdi.",
           "text_translation_ru": "Забыл.",
           "speaker": "B",
           "words": [
@@ -109,7 +109,7 @@
           "id": "d33-s3",
           "text_original": "又忘了？",
           "pinyin": "Yòu wàng le?",
-          "text_translation": "Yana unutdingizmi?",
+          "text_translation": "Yana esingdan chiqdimi?",
           "text_translation_ru": "Опять забыл?",
           "speaker": "A",
           "words": [
@@ -150,7 +150,7 @@
           "text_original": "对不起。",
           "pinyin": "Duìbuqǐ.",
           "text_translation": "Kechirasiz.",
-          "text_translation_ru": "Извини.",
+          "text_translation_ru": "Извините.",
           "speaker": "B",
           "words": [
             {
@@ -171,8 +171,8 @@
           "id": "d33-s5",
           "text_original": "明天记得带。",
           "pinyin": "Míngtiān jìde dài.",
-          "text_translation": "Ertaga olib kelishni unutmang.",
-          "text_translation_ru": "Завтра не забудь принести.",
+          "text_translation": "Ertaga olib kelish esingdan chiqmasin.",
+          "text_translation_ru": "Не забудь завтра принести.",
           "speaker": "A",
           "words": [
             {

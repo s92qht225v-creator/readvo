@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue35",
   "title": "我送你",
   "pinyin": "Wǒ sòng nǐ",
-  "titleTranslation": "Men sizni kuzataman",
+  "titleTranslation": "Men seni kuzatib qo'yaman",
   "titleTranslation_ru": "Я тебя провожу",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d35-s1",
           "text_original": "你什么时候走？",
           "pinyin": "Nǐ shénme shíhou zǒu?",
-          "text_translation": "Qachon ketasiz?",
+          "text_translation": "Sen qachon ketasan?",
           "text_translation_ru": "Когда уезжаешь?",
           "speaker": "A",
           "words": [
@@ -80,7 +80,7 @@
           "id": "d35-s3",
           "text_original": "坐火车还是坐飞机？",
           "pinyin": "Zuò huǒchē háishi zuò fēijī?",
-          "text_translation": "Poezdda ketasizmi yoki samolyotdami?",
+          "text_translation": "Poezddami yoki samolyotdami?",
           "text_translation_ru": "На поезде или на самолёте?",
           "speaker": "A",
           "words": [
@@ -179,7 +179,7 @@
           "id": "d35-s5",
           "text_original": "几点的飞机？我送你。",
           "pinyin": "Jǐ diǎn de fēijī? Wǒ sòng nǐ.",
-          "text_translation": "Soat nechada? Men kuzataman.",
+          "text_translation": "Samalyot nechchida? Men kuzatib qo'yaman.",
           "text_translation_ru": "Во сколько рейс? Я тебя провожу.",
           "speaker": "A",
           "words": [

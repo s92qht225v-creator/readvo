@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue3",
   "title": "你喜欢中国吗？",
   "pinyin": "Nǐ xǐhuan Zhōngguó ma?",
-  "titleTranslation": "Xitoyni yoqtirasizmi?",
+  "titleTranslation": "Xitoyni yoqtirasanmi?",
   "titleTranslation_ru": "Тебе нравится Китай?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d3-s1",
           "text_original": "你喜欢中国吗？",
           "pinyin": "Nǐ xǐhuan Zhōngguó ma?",
-          "text_translation": "Xitoyni yoqtirasizmi?",
+          "text_translation": "Xitoyni yoqtirasanmi?",
           "text_translation_ru": "Тебе нравится Китай?",
           "speaker": "A",
           "words": [
@@ -93,7 +93,7 @@
           "id": "d3-s3",
           "text_original": "你喜欢什么？",
           "pinyin": "Nǐ xǐhuan shénme?",
-          "text_translation": "Nimani yoqtirasiz?",
+          "text_translation": "Nimasini yoqtirasan?",
           "text_translation_ru": "Что тебе нравится?",
           "speaker": "A",
           "words": [
@@ -137,8 +137,8 @@
           "id": "d3-s4",
           "text_original": "我喜欢中国菜。",
           "pinyin": "Wǒ xǐhuan Zhōngguó cài.",
-          "text_translation": "Men xitoy taomlarini yoqtiraman.",
-          "text_translation_ru": "Мне нравится китайская кухня.",
+          "text_translation": "Men Xitoy taomlarini yoqtiraman.",
+          "text_translation_ru": "Мне нравится Китайская кухня.",
           "speaker": "B",
           "words": [
             {

@@ -36,7 +36,7 @@
           "id": "d36-s2",
           "text_original": "喂，你哪位？",
           "pinyin": "Wèi, nǐ nǎ wèi?",
-          "text_translation": "Alo, kim bo'ladi?",
+          "text_translation": "Alo, kim bu?",
           "text_translation_ru": "Алло, кто это?",
           "speaker": "B",
           "words": [
@@ -87,7 +87,7 @@
           "id": "d36-s3",
           "text_original": "请问是小李吗？",
           "pinyin": "Qǐngwèn shì Xiǎo Lǐ ma?",
-          "text_translation": "Kechirasiz, siz Syao Limi?",
+          "text_translation": "Kechirasiz, bu Xiao Limi?",
           "text_translation_ru": "Скажите, это Сяо Ли?",
           "speaker": "A",
           "words": [
@@ -138,7 +138,7 @@
           "id": "d36-s4",
           "text_original": "不是，你打错了。",
           "pinyin": "Bú shì, nǐ dǎ cuò le.",
-          "text_translation": "Yo'q, noto'g'ri terdingiz.",
+          "text_translation": "Yo'q, adashdingiz.",
           "text_translation_ru": "Нет, вы ошиблись номером.",
           "speaker": "B",
           "words": [
@@ -220,7 +220,7 @@
           "id": "d36-s6",
           "text_original": "没关系。",
           "pinyin": "Méi guānxi.",
-          "text_translation": "Hech gap emas.",
+          "text_translation": "Hechqisi yoq.",
           "text_translation_ru": "Ничего страшного.",
           "speaker": "B",
           "words": [

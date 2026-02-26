@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue39",
   "title": "作业写完了吗？",
   "pinyin": "Zuòyè xiě wán le ma?",
-  "titleTranslation": "Vazifani yozib bo'ldingizmi?",
+  "titleTranslation": "Uy vazifani yozib bo'ldingmi?",
   "titleTranslation_ru": "Домашнее задание дописал?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d39-s1",
           "text_original": "作业写完了吗？",
           "pinyin": "Zuòyè xiě wán le ma?",
-          "text_translation": "Vazifani yozib bo'ldingizmi?",
+          "text_translation": "Uy vazifani yozib bo'ldingmi?",
           "text_translation_ru": "Домашнее задание дописал?",
           "speaker": "A",
           "words": [
@@ -72,7 +72,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3"
         },
         {
           "id": "d39-s2",
@@ -123,7 +123,7 @@
               "tr": "закончить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3"
         },
         {
           "id": "d39-s3",
@@ -163,7 +163,7 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3"
         },
         {
           "id": "d39-s4",
@@ -201,13 +201,13 @@
               "tr": "половина"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3"
         },
         {
           "id": "d39-s5",
           "text_original": "今天能写完吗？",
           "pinyin": "Jīntiān néng xiě wán ma?",
-          "text_translation": "Bugun yozib tugatoasizmi?",
+          "text_translation": "Bugun yozib tugata olasanmi?",
           "text_translation_ru": "Сегодня сможешь дописать?",
           "speaker": "A",
           "words": [
@@ -265,7 +265,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3"
         },
         {
           "id": "d39-s6",
@@ -287,13 +287,13 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3"
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuo%20ye%20xie%20wan%20le%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
 }

@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue1",
   "title": "你叫什么名字？",
   "pinyin": "Nǐ jiào shénme míngzi?",
-  "titleTranslation": "Ismingiz nima?",
+  "titleTranslation": "Isming nima?",
   "titleTranslation_ru": "Как тебя зовут?",
   "level": 1,
   "sections": [
@@ -32,7 +32,9 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue1.mp3",
+          "start": 0.017,
+          "end": 0.84
         },
         {
           "id": "d1-s2",
@@ -54,13 +56,15 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue2.mp3",
+          "start": 1.83,
+          "end": 2.64
         },
         {
           "id": "d1-s3",
           "text_original": "你叫什么名字？",
           "pinyin": "Nǐ jiào shénme míngzi?",
-          "text_translation": "Ismingiz nima?",
+          "text_translation": "Sening isming nima?",
           "text_translation_ru": "Как тебя зовут?",
           "speaker": "A",
           "words": [
@@ -109,7 +113,9 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue3.mp3",
+          "start": 3.7,
+          "end": 5.07
         },
         {
           "id": "d1-s4",
@@ -151,13 +157,15 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3",
+          "start": 5.52  ,
+          "end": 6.82
         },
         {
           "id": "d1-s5",
           "text_original": "李明？",
           "pinyin": "Lǐ Míng?",
-          "text_translation": "Li Mingmi?",
+          "text_translation": "Li Ming?",
           "text_translation_ru": "Ли Мин?",
           "speaker": "A",
           "words": [
@@ -171,7 +179,9 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue5.mp3",
+          "start": 7.32,
+          "end": 8.34
         },
         {
           "id": "d1-s6",
@@ -224,7 +234,9 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue6.mp3",
+          "start": 7.69,
+          "end": 8.44
         },
         {
           "id": "d1-s7",
@@ -279,7 +291,9 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue7.mp3",
+          "start": 10.44,
+          "end": 12.58
         },
         {
           "id": "d1-s8",
@@ -334,7 +348,9 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue8.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue8.mp3",
+          "start": 12.58,
+          "end": 14.34
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3"

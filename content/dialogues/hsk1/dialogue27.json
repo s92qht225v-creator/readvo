@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue27",
   "title": "你有现金吗？",
   "pinyin": "Nǐ yǒu xiànjīn ma?",
-  "titleTranslation": "Naqd pulingiz bormi?",
+  "titleTranslation": "Naqd puling bormi?",
   "titleTranslation_ru": "У тебя есть наличные?",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d27-s1",
           "text_original": "你有现金吗？",
           "pinyin": "Nǐ yǒu xiànjīn ma?",
-          "text_translation": "Naqd pulingiz bormi?",
+          "text_translation": "Naqd puling bormi?",
           "text_translation_ru": "У тебя есть наличные?",
           "speaker": "A",
           "words": [
@@ -91,7 +91,7 @@
           "id": "d27-s3",
           "text_original": "可以借我二十块吗？",
           "pinyin": "Kěyǐ jiè wǒ èrshí kuài ma?",
-          "text_translation": "Menga yigirma yuan qarz bera olasizmi?",
+          "text_translation": "Menga yigirma yuan qarz bera olasanmi?",
           "text_translation_ru": "Можешь одолжить мне двадцать юаней?",
           "speaker": "A",
           "words": [
@@ -187,7 +187,7 @@
           "text_original": "我明天还你。",
           "pinyin": "Wǒ míngtiān huán nǐ.",
           "text_translation": "Ertaga qaytaraman.",
-          "text_translation_ru": "Завтра верну.",
+          "text_translation_ru": "Я завтра верну.",
           "speaker": "A",
           "words": [
             {

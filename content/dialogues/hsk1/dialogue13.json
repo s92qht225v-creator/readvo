@@ -16,7 +16,7 @@
           "id": "d13-s1",
           "text_original": "你多大？",
           "pinyin": "Nǐ duō dà?",
-          "text_translation": "Yoshingiz nechida?",
+          "text_translation": "Yoshing nechida?",
           "text_translation_ru": "Сколько тебе лет?",
           "speaker": "A",
           "words": [
@@ -60,7 +60,7 @@
           "id": "d13-s2",
           "text_original": "我二十二岁。你呢？",
           "pinyin": "Wǒ èrshí'èr suì. Nǐ ne?",
-          "text_translation": "Men yigirma ikki yoshdaman. Siz-chi?",
+          "text_translation": "Men yigirma ikki yoshdaman. Senchi?",
           "text_translation_ru": "Мне двадцать два года. А тебе?",
           "speaker": "B",
           "words": [
@@ -166,7 +166,7 @@
           "id": "d13-s4",
           "text_original": "哦，我们差不多大。",
           "pinyin": "Ó, wǒmen chàbuduō dà.",
-          "text_translation": "Ha, biz deyarli tengqurdakanmiz.",
+          "text_translation": "Ha, biz deyarli teng ekanmiz.",
           "text_translation_ru": "О, мы почти ровесники.",
           "speaker": "B",
           "words": [

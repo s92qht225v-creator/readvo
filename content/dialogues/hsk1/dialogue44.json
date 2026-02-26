@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue44",
   "title": "你今天加班吗？",
   "pinyin": "Nǐ jīntiān jiābān ma?",
-  "titleTranslation": "Bugun qo'shimcha ishlaysizmi?",
+  "titleTranslation": "Bugun qo'shimcha ishlaysanmi?",
   "titleTranslation_ru": "Сегодня будешь работать сверхурочно?",
   "level": 1,
   "sections": [
@@ -16,8 +16,8 @@
           "id": "d44-s1",
           "text_original": "你今天几点下班？",
           "pinyin": "Nǐ jīntiān jǐ diǎn xiàbān?",
-          "text_translation": "Bugun soat nechada ishdan chiqasiz?",
-          "text_translation_ru": "Во сколько сегодня заканчиваешь?",
+          "text_translation": "Bugun soat nechada ishdan chiqasan?",
+          "text_translation_ru": "Во сколько сегодня заканчиваешь работу?",
           "speaker": "A",
           "words": [
             {
@@ -102,7 +102,7 @@
           "id": "d44-s3",
           "text_original": "加班吗？",
           "pinyin": "Jiābān ma?",
-          "text_translation": "Qo'shimcha ishlaysizmi?",
+          "text_translation": "Ishdan keyin qolib ishlaysanmi?",
           "text_translation_ru": "Будешь работать сверхурочно?",
           "speaker": "A",
           "words": [
@@ -164,7 +164,7 @@
           "id": "d44-s5",
           "text_original": "那早点回来。",
           "pinyin": "Nà zǎo diǎn huílái.",
-          "text_translation": "Unda ertaroq qayting.",
+          "text_translation": "Unda ertaroq qaytgin.",
           "text_translation_ru": "Тогда возвращайся пораньше.",
           "speaker": "A",
           "words": [

@@ -2,7 +2,7 @@
   "id": "hsk1-dialogue45",
   "title": "下次说一声",
   "pinyin": "Xià cì shuō yì shēng",
-  "titleTranslation": "Keyingi safar xabar bering",
+  "titleTranslation": "Keyingi safar bir o'giz aytib qo'y",
   "titleTranslation_ru": "В следующий раз предупреди",
   "level": 1,
   "sections": [
@@ -16,7 +16,7 @@
           "id": "d45-s1",
           "text_original": "你怎么不接电话？",
           "pinyin": "Nǐ zěnme bù jiē diànhuà?",
-          "text_translation": "Nega telefonga javob bermayapsiz?",
+          "text_translation": "Nega telefonga javob bermayapsan?",
           "text_translation_ru": "Почему не берёшь трубку?",
           "speaker": "A",
           "words": [
@@ -80,7 +80,7 @@
           "id": "d45-s2",
           "text_original": "刚才在开会。",
           "pinyin": "Gāngcái zài kāihuì.",
-          "text_translation": "Hozirgina yig'ilishda edim.",
+          "text_translation": "Endiroqda yig'ilishda edim.",
           "text_translation_ru": "Только что был на собрании.",
           "speaker": "B",
           "words": [
@@ -198,7 +198,7 @@
           "id": "d45-s5",
           "text_original": "下次说一声。",
           "pinyin": "Xià cì shuō yì shēng.",
-          "text_translation": "Keyingi safar xabar bering.",
+          "text_translation": "Keyingi safar bir og'iz aytib qo'y.",
           "text_translation_ru": "В следующий раз предупреди.",
           "speaker": "A",
           "words": [
