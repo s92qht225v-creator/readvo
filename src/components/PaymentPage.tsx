@@ -180,9 +180,9 @@ export default function PaymentPage() {
                 {perMonth(plan.price, plan.months)} / {isRu ? 'мес' : 'oy'}
               </span>
             )}
-            {plan.months >= 6 && (
+            {plan.months >= 3 && (
               <span className="payment__plan-badge">
-                {plan.months === 12 ? '-33%' : '-24%'}
+                {plan.months === 12 ? '-33%' : plan.months === 6 ? '-24%' : '-14%'}
               </span>
             )}
           </button>
