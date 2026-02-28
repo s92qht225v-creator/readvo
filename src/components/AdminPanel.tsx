@@ -105,6 +105,9 @@ export function AdminPanel({ password }: AdminPanelProps) {
 
     if (res.ok) {
       await fetchData();
+    } else {
+      const err = await res.json().catch(() => ({}));
+      alert(`Xato: ${err.error || res.status}`);
     }
     setActionLoading(null);
   }, [password, fetchData]);
@@ -312,7 +315,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                       </button>
                       <button
                         className="admin__sub-btn admin__sub-btn--cancel"
-                        onClick={() => handleAction('cancel_subscription', { subscriptionId: sub.id })}
+                        onClick={() => { if (confirm('Obunani bekor qilishni xohlaysizmi?')) handleAction('cancel_subscription', { subscriptionId: sub.id }); }}
                         disabled={actionLoading === sub.id}
                         type="button"
                       >
