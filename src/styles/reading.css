@@ -3700,6 +3700,7 @@ body {
   color: #333;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
 }
 
 .home__menu-item:hover {
@@ -6280,6 +6281,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 16px;
+  text-decoration: none;
 }
 
 .paywall__back {
@@ -6287,4 +6289,267 @@ body {
   font-size: 0.9rem;
   color: #888;
   text-decoration: none;
+}
+
+/* ============================================
+   PAYMENT PAGE
+   ============================================ */
+
+.payment {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+
+.payment__header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.payment__logo {
+  text-decoration: none;
+}
+
+.payment__title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 8px 0 20px;
+  color: #222;
+}
+
+.payment__plans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.payment__plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 12px;
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.payment__plan--selected {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.payment__plan-months {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.payment__plan-price {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.payment__plan-per-month {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.payment__plan-badge {
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.payment__section {
+  margin-bottom: 28px;
+}
+
+.payment__section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px;
+}
+
+.payment__card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.payment__card-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #222;
+  font-variant-numeric: tabular-nums;
+}
+
+.payment__copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.payment__card-amount {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0 0;
+}
+
+.payment__upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  overflow: hidden;
+}
+
+.payment__upload:hover {
+  border-color: #999;
+}
+
+.payment__upload--has-file {
+  border-style: solid;
+  border-color: #ddd;
+  padding: 8px;
+}
+
+.payment__upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.payment__preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.payment__file-input {
+  display: none;
+}
+
+.payment__remove-file {
+  display: block;
+  margin: 8px 0 0;
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.payment__error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+
+.payment__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.payment__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.payment__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.payment__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  gap: 16px;
+}
+
+.payment__success-icon {
+  margin-bottom: 8px;
+}
+
+.payment__success-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.payment__success-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.payment__back-btn {
+  display: inline-block;
+  margin-top: 16px;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .payment {
+    padding: 0 16px 40px;
+  }
+
+  .payment__card-number {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+  }
 }

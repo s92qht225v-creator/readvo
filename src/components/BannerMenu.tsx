@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -90,9 +91,9 @@ export function BannerMenu() {
             </button>
           </div>
           <div className="home__menu-divider" />
-          <button className="home__menu-item" type="button" onClick={() => setMenuOpen(false)}>
+          <Link href="/payment" className="home__menu-item" onClick={() => setMenuOpen(false)}>
             {language === 'ru' ? 'Оплата' : "To'lov"}
-          </button>
+          </Link>
           {user && (
             <button className="home__menu-item" type="button" onClick={() => { logout(); setMenuOpen(false); }}>
               {language === 'ru' ? 'Выйти' : 'Chiqish'}

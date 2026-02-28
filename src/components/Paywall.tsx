@@ -20,9 +20,9 @@ export function Paywall() {
             ? 'Оформите подписку, чтобы продолжить обучение.'
             : "Obunani rasmiylashtiring va o'qishni davom ettiring."}
         </p>
-        <button className="paywall__btn" type="button">
+        <Link href="/payment" className="paywall__btn">
           {language === 'ru' ? 'Оплата' : "To'lov"}
-        </button>
+        </Link>
         <Link href="/chinese" className="paywall__back">
           {language === 'ru' ? '← На главную' : '← Bosh sahifa'}
         </Link>
