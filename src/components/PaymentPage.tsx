@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
@@ -12,10 +12,32 @@ const PLANS = [
   { id: '12_months', months: 12, price: 399000 },
 ] as const;
 
+const PLAN_LABELS: Record<string, string> = {
+  '1_month': '1 oy',
+  '3_months': '3 oy',
+  '6_months': '6 oy',
+  '12_months': '12 oy',
+};
+
+const PLAN_LABELS_RU: Record<string, string> = {
+  '1_month': '1 месяц',
+  '3_months': '3 месяца',
+  '6_months': '6 месяцев',
+  '12_months': '12 месяцев',
+};
+
 const CARD_NUMBER = '9860 1234 5678 9012';
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 type PlanId = typeof PLANS[number]['id'];
+
+interface PaymentStatus {
+  id: string;
+  plan: string;
+  amount: number;
+  status: string;
+  created_at: string;
+}
 
 export default function PaymentPage() {
   const [language] = useLanguage();
@@ -27,9 +49,39 @@ export default function PaymentPage() {
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [existingPayment, setExistingPayment] = useState<PaymentStatus | null>(null);
+  const [subscription, setSubscription] = useState<{ plan: string; ends_at: string } | null>(null);
+  const [statusLoading, setStatusLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const isRu = language === 'ru';
+
+  useEffect(() => {
+    async function checkStatus() {
+      try {
+        const token = await getAccessToken();
+        if (!token) { setStatusLoading(false); return; }
+        const [paymentRes, subRes] = await Promise.all([
+          fetch('/api/payment/status', {
+            headers: { Authorization: `Bearer ${token}` },
+          }),
+          fetch('/api/subscription', {
+            headers: { Authorization: `Bearer ${token}` },
+          }),
+        ]);
+        if (paymentRes.ok) {
+          const data = await paymentRes.json();
+          if (data.payment) setExistingPayment(data.payment);
+        }
+        if (subRes.ok) {
+          const data = await subRes.json();
+          if (data.subscription) setSubscription(data.subscription);
+        }
+      } catch { /* ignore */ }
+      setStatusLoading(false);
+    }
+    checkStatus();
+  }, [getAccessToken]);
 
   const handleFileSelect = useCallback((selectedFile: File) => {
     if (!selectedFile.type.startsWith('image/')) {
@@ -100,10 +152,6 @@ export default function PaymentPage() {
     }
   }, [selectedPlan, file, isRu, getAccessToken]);
 
-  const formatPrice = (price: number) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  };
-
   const perMonth = (price: number, months: number) => {
     return formatPrice(Math.round(price / months));
   };
@@ -116,6 +164,137 @@ export default function PaymentPage() {
     }
     return 'oy';
   };
+
+  const formatPrice = (price: number) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  };
+
+  if (statusLoading) {
+    return (
+      <main className="payment">
+        <header className="payment__header">
+          <Link href="/chinese" className="payment__logo">
+            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+          </Link>
+        </header>
+      </main>
+    );
+  }
+
+  // Show active subscription
+  if (subscription) {
+    const subEnd = new Date(subscription.ends_at);
+    const subDaysLeft = Math.ceil((subEnd.getTime() - Date.now()) / (24 * 60 * 60 * 1000));
+    const subPlanLabel = isRu
+      ? PLAN_LABELS_RU[subscription.plan] || subscription.plan
+      : PLAN_LABELS[subscription.plan] || subscription.plan;
+
+    if (subDaysLeft > 0) {
+      return (
+        <main className="payment">
+          <header className="payment__header">
+            <Link href="/chinese" className="payment__logo">
+              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            </Link>
+          </header>
+          <div className="payment__status">
+            <div className="payment__status-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l3 3 5-5" />
+              </svg>
+            </div>
+            <h2 className="payment__success-title">
+              {isRu ? 'Подписка активна' : 'Obuna faol'}
+            </h2>
+            <p className="payment__success-text">
+              {isRu
+                ? `${subPlanLabel} — осталось ${subDaysLeft} дн.`
+                : `${subPlanLabel} — ${subDaysLeft} kun qoldi`}
+            </p>
+            <Link href="/chinese" className="payment__back-btn">
+              {isRu ? '← На главную' : '← Bosh sahifa'}
+            </Link>
+          </div>
+        </main>
+      );
+    }
+  }
+
+  // Show existing payment status (pending or rejected)
+  if (existingPayment && !success) {
+    const isPending = existingPayment.status === 'pending';
+    const isRejected = existingPayment.status === 'rejected';
+    const planLabel = isRu
+      ? PLAN_LABELS_RU[existingPayment.plan] || existingPayment.plan
+      : PLAN_LABELS[existingPayment.plan] || existingPayment.plan;
+
+    if (isPending) {
+      return (
+        <main className="payment">
+          <header className="payment__header">
+            <Link href="/chinese" className="payment__logo">
+              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            </Link>
+          </header>
+          <div className="payment__status">
+            <div className="payment__status-icon payment__status-icon--pending">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h2 className="payment__success-title">
+              {isRu ? 'Заявка на рассмотрении' : 'Ariza ko\'rib chiqilmoqda'}
+            </h2>
+            <p className="payment__success-text">
+              {isRu
+                ? `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) проверяется. Мы скоро активируем ваш аккаунт.`
+                : `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tekshirilmoqda. Hisobingiz tez orada faollashtiriladi.`}
+            </p>
+            <Link href="/chinese" className="payment__back-btn">
+              {isRu ? '← На главную' : '← Bosh sahifa'}
+            </Link>
+          </div>
+        </main>
+      );
+    }
+
+    if (isRejected) {
+      return (
+        <main className="payment">
+          <header className="payment__header">
+            <Link href="/chinese" className="payment__logo">
+              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            </Link>
+          </header>
+          <div className="payment__status">
+            <div className="payment__status-icon payment__status-icon--rejected">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M15 9l-6 6M9 9l6 6" />
+              </svg>
+            </div>
+            <h2 className="payment__success-title">
+              {isRu ? 'Платёж отклонён' : 'To\'lov rad etildi'}
+            </h2>
+            <p className="payment__success-text">
+              {isRu
+                ? `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) не был подтверждён. Пожалуйста, отправьте корректный чек.`
+                : `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tasdiqlanmadi. Iltimos, to'g'ri chekni yuboring.`}
+            </p>
+            <button
+              className="payment__back-btn"
+              onClick={() => setExistingPayment(null)}
+              type="button"
+            >
+              {isRu ? 'Отправить заново' : 'Qayta yuborish'}
+            </button>
+          </div>
+        </main>
+      );
+    }
+  }
 
   if (success) {
     return (
@@ -133,12 +312,12 @@ export default function PaymentPage() {
             </svg>
           </div>
           <h2 className="payment__success-title">
-            {isRu ? 'Заявка отправлена!' : 'Ariza yuborildi!'}
+            {isRu ? 'Чек отправлен!' : 'Chek yuborildi!'}
           </h2>
           <p className="payment__success-text">
             {isRu
-              ? 'Мы активируем ваш аккаунт в течение 24 часов.'
-              : 'Hisobingiz 24 soat ichida faollashtiriladi.'}
+              ? 'Ваш аккаунт будет активирован в ближайшее время.'
+              : 'Hisobingiz tez orada faollashtiriladi.'}
           </p>
           <Link href="/chinese" className="payment__back-btn">
             {isRu ? '← На главную' : '← Bosh sahifa'}

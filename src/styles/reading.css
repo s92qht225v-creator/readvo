@@ -3688,6 +3688,11 @@ body {
   font-weight: 600;
 }
 
+.home__menu-trial--subscribed {
+  color: #16a34a;
+  font-weight: 600;
+}
+
 .home__menu-item {
   display: block;
   width: 100%;
@@ -6541,6 +6546,23 @@ body {
   color: #888;
   text-decoration: none;
   font-size: 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.payment__status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  gap: 16px;
+}
+
+.payment__status-icon {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 600px) {

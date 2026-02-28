@@ -48,12 +48,16 @@ export function BannerMenu() {
                 <span className="home__menu-user-email">{user.email}</span>
               </div>
               {trial && (
-                <div className={`home__menu-trial${trial.isTrialExpired ? ' home__menu-trial--expired' : ''}`}>
-                  {trial.isTrialExpired
-                    ? (language === 'ru' ? 'Пробный период закончился' : 'Sinov muddati tugadi')
-                    : (language === 'ru'
-                        ? `Пробный: осталось ${trial.daysLeft} дн.`
-                        : `Sinov: ${trial.daysLeft} kun qoldi`)}
+                <div className={`home__menu-trial${trial.isTrialExpired ? ' home__menu-trial--expired' : ''}${trial.hasSubscription ? ' home__menu-trial--subscribed' : ''}`}>
+                  {trial.hasSubscription
+                    ? (language === 'ru'
+                        ? `Подписка: ${trial.subscriptionDaysLeft} дн.`
+                        : `Obuna: ${trial.subscriptionDaysLeft} kun qoldi`)
+                    : trial.isTrialExpired
+                      ? (language === 'ru' ? 'Пробный период закончился' : 'Sinov muddati tugadi')
+                      : (language === 'ru'
+                          ? `Пробный: осталось ${trial.daysLeft} дн.`
+                          : `Sinov: ${trial.daysLeft} kun qoldi`)}
                 </div>
               )}
               <div className="home__menu-divider" />
