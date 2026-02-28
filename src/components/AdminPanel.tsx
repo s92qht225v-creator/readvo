@@ -70,6 +70,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [expandedScreenshot, setExpandedScreenshot] = useState<string | null>(null);
+  const [search, setSearch] = useState('');
 
   const fetchData = useCallback(async () => {
     const res = await fetch('/api/admin', {
@@ -89,8 +90,9 @@ export function AdminPanel({ password }: AdminPanelProps) {
     fetchData();
   }, [fetchData]);
 
-  const handleAction = useCallback(async (action: 'approve' | 'reject', paymentId: string) => {
-    setActionLoading(paymentId);
+  const handleAction = useCallback(async (action: string, payload: Record<string, unknown>) => {
+    const loadingKey = (payload.paymentId || payload.subscriptionId || payload.userId || '') as string;
+    setActionLoading(loadingKey);
 
     const res = await fetch('/api/admin', {
       method: 'POST',
@@ -98,7 +100,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
         'x-admin-password': password,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ action, paymentId }),
+      body: JSON.stringify({ action, ...payload }),
     });
 
     if (res.ok) {
@@ -107,12 +109,36 @@ export function AdminPanel({ password }: AdminPanelProps) {
     setActionLoading(null);
   }, [password, fetchData]);
 
+  const handleDaysPrompt = useCallback((action: 'add_days' | 'remove_days', subscriptionId: string) => {
+    const input = prompt(action === 'add_days' ? 'Necha kun qo\'shish?' : 'Necha kun olib tashlash?');
+    if (!input) return;
+    const days = parseInt(input, 10);
+    if (isNaN(days) || days <= 0) return;
+    handleAction(action, { subscriptionId, days });
+  }, [handleAction]);
+
+  const handleGrantPrompt = useCallback((userId: string, userEmail: string) => {
+    const input = prompt('Necha kun obuna berish?');
+    if (!input) return;
+    const days = parseInt(input, 10);
+    if (isNaN(days) || days <= 0) return;
+    handleAction('grant_subscription', { userId, userEmail, days });
+  }, [handleAction]);
+
   const getUserSubscription = useCallback((userId: string) => {
     const now = new Date();
     return subscriptions.find(
       (s) => s.user_id === userId && new Date(s.ends_at) > now
     );
   }, [subscriptions]);
+
+  const searchLower = search.toLowerCase();
+  const filteredPayments = search
+    ? payments.filter((p) => p.user_email.toLowerCase().includes(searchLower))
+    : payments;
+  const filteredUsers = search
+    ? users.filter((u) => u.email.toLowerCase().includes(searchLower) || u.name.toLowerCase().includes(searchLower))
+    : users;
 
   if (loading) {
     return (
@@ -166,18 +192,34 @@ export function AdminPanel({ password }: AdminPanelProps) {
         </button>
       </div>
 
+      {/* Search */}
+      <div className="admin__search">
+        <input
+          className="admin__search-input"
+          type="text"
+          placeholder={tab === 'payments' ? 'Email bo\'yicha qidirish...' : 'Ism yoki email bo\'yicha qidirish...'}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {search && (
+          <button className="admin__search-clear" type="button" onClick={() => setSearch('')}>
+            &times;
+          </button>
+        )}
+      </div>
+
       {/* Payments Tab */}
       {tab === 'payments' && (
         <div className="admin__list">
-          {payments.length === 0 ? (
-            <p className="admin__empty">Hozircha to&apos;lovlar yo&apos;q</p>
+          {filteredPayments.length === 0 ? (
+            <p className="admin__empty">{search ? 'Natija topilmadi' : 'Hozircha to\'lovlar yo\'q'}</p>
           ) : (
-            payments.map((p) => (
+            filteredPayments.map((p) => (
               <div key={p.id} className={`admin__card admin__card--${p.status}`}>
                 <div className="admin__card-header">
                   <span className="admin__card-email">{p.user_email}</span>
                   <span className={`admin__badge admin__badge--${p.status}`}>
-                    {p.status === 'pending' ? 'Kutilmoqda' : p.status === 'approved' ? 'Tasdiqlangan' : 'Rad etilgan'}
+                    {p.status === 'pending' ? 'Kutilmoqda' : p.status === 'approved' ? 'Tasdiqlangan' : p.status === 'cancelled' ? 'Bekor qilingan' : 'Rad etilgan'}
                   </span>
                 </div>
                 <div className="admin__card-details">
@@ -201,7 +243,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                   <div className="admin__actions">
                     <button
                       className="admin__btn admin__btn--approve"
-                      onClick={() => handleAction('approve', p.id)}
+                      onClick={() => handleAction('approve', { paymentId: p.id })}
                       disabled={actionLoading === p.id}
                       type="button"
                     >
@@ -209,7 +251,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                     </button>
                     <button
                       className="admin__btn admin__btn--reject"
-                      onClick={() => handleAction('reject', p.id)}
+                      onClick={() => handleAction('reject', { paymentId: p.id })}
                       disabled={actionLoading === p.id}
                       type="button"
                     >
@@ -226,8 +268,11 @@ export function AdminPanel({ password }: AdminPanelProps) {
       {/* Users Tab */}
       {tab === 'users' && (
         <div className="admin__list">
-          {users.map((u) => {
+          {filteredUsers.length === 0 ? (
+            <p className="admin__empty">Natija topilmadi</p>
+          ) : filteredUsers.map((u) => {
             const sub = getUserSubscription(u.id);
+            const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - Date.now()) / (24 * 60 * 60 * 1000)) : 0;
             return (
               <div key={u.id} className="admin__card">
                 <div className="admin__card-header">
@@ -237,7 +282,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                   </div>
                   {sub ? (
                     <span className="admin__badge admin__badge--approved">
-                      {PLAN_LABELS[sub.plan] || sub.plan} &rarr; {formatDate(sub.ends_at)}
+                      {daysLeft} kun &rarr; {formatDate(sub.ends_at)}
                     </span>
                   ) : (
                     <span className="admin__badge admin__badge--none">Obuna yo&apos;q</span>
@@ -245,6 +290,45 @@ export function AdminPanel({ password }: AdminPanelProps) {
                 </div>
                 <div className="admin__card-details">
                   <span>Ro&apos;yxatdan o&apos;tgan: {formatDate(u.created_at)}</span>
+                </div>
+                <div className="admin__sub-actions">
+                  {sub ? (
+                    <>
+                      <button
+                        className="admin__sub-btn admin__sub-btn--add"
+                        onClick={() => handleDaysPrompt('add_days', sub.id)}
+                        disabled={actionLoading === sub.id}
+                        type="button"
+                      >
+                        + Kun
+                      </button>
+                      <button
+                        className="admin__sub-btn admin__sub-btn--remove"
+                        onClick={() => handleDaysPrompt('remove_days', sub.id)}
+                        disabled={actionLoading === sub.id}
+                        type="button"
+                      >
+                        - Kun
+                      </button>
+                      <button
+                        className="admin__sub-btn admin__sub-btn--cancel"
+                        onClick={() => handleAction('cancel_subscription', { subscriptionId: sub.id })}
+                        disabled={actionLoading === sub.id}
+                        type="button"
+                      >
+                        Bekor qilish
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      className="admin__sub-btn admin__sub-btn--grant"
+                      onClick={() => handleGrantPrompt(u.id, u.email)}
+                      disabled={actionLoading === u.id}
+                      type="button"
+                    >
+                      Obuna berish
+                    </button>
+                  )}
                 </div>
               </div>
             );
