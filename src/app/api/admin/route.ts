@@ -14,11 +14,11 @@ function verifyPassword(request: NextRequest) {
   return true;
 }
 
-const PLAN_MONTHS: Record<string, number> = {
-  '1_month': 1,
-  '3_months': 3,
-  '6_months': 6,
-  '12_months': 12,
+const PLAN_DAYS: Record<string, number> = {
+  '1_month': 30,
+  '3_months': 90,
+  '6_months': 180,
+  '12_months': 365,
 };
 
 export async function GET(request: NextRequest) {
@@ -68,14 +68,94 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
-  const { action, paymentId } = await request.json();
-  if (!action || !paymentId) {
-    return NextResponse.json({ error: 'Missing action or paymentId' }, { status: 400 });
+  const body = await request.json();
+  const { action } = body;
+  if (!action) {
+    return NextResponse.json({ error: 'Missing action' }, { status: 400 });
   }
 
   const admin = getSupabaseAdmin();
 
+  // Subscription management actions
+  if (action === 'cancel_subscription') {
+    const { subscriptionId } = body;
+    if (!subscriptionId) return NextResponse.json({ error: 'Missing subscriptionId' }, { status: 400 });
+
+    // Get subscription to find the user
+    const { data: sub, error: fetchErr } = await admin
+      .from('subscriptions')
+      .select('user_id')
+      .eq('id', subscriptionId)
+      .single();
+
+    if (fetchErr || !sub) return NextResponse.json({ error: 'Subscription not found' }, { status: 404 });
+
+    // End subscription immediately
+    const { error } = await admin
+      .from('subscriptions')
+      .update({ ends_at: new Date().toISOString() })
+      .eq('id', subscriptionId);
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+    // Set the user's approved payment back to 'cancelled' so it doesn't count in revenue
+    await admin
+      .from('payment_requests')
+      .update({ status: 'cancelled' })
+      .eq('user_id', sub.user_id)
+      .eq('status', 'approved')
+      .order('created_at', { ascending: false })
+      .limit(1);
+
+    return NextResponse.json({ ok: true });
+  }
+
+  if (action === 'add_days' || action === 'remove_days') {
+    const { subscriptionId, days } = body;
+    if (!subscriptionId || !days) return NextResponse.json({ error: 'Missing subscriptionId or days' }, { status: 400 });
+
+    const { data: sub, error: fetchErr } = await admin
+      .from('subscriptions')
+      .select('ends_at')
+      .eq('id', subscriptionId)
+      .single();
+
+    if (fetchErr || !sub) return NextResponse.json({ error: 'Subscription not found' }, { status: 404 });
+
+    const endsAt = new Date(sub.ends_at);
+    endsAt.setDate(endsAt.getDate() + (action === 'add_days' ? days : -days));
+
+    const { error } = await admin
+      .from('subscriptions')
+      .update({ ends_at: endsAt.toISOString() })
+      .eq('id', subscriptionId);
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ ok: true });
+  }
+
+  if (action === 'grant_subscription') {
+    const { userId, userEmail, plan, days } = body;
+    if (!userId || !days) return NextResponse.json({ error: 'Missing userId or days' }, { status: 400 });
+
+    const startsAt = new Date();
+    const endsAt = new Date();
+    endsAt.setDate(endsAt.getDate() + days);
+
+    const { error } = await admin.from('subscriptions').insert({
+      user_id: userId,
+      user_email: userEmail || '',
+      plan: plan || 'granted',
+      starts_at: startsAt.toISOString(),
+      ends_at: endsAt.toISOString(),
+    });
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ ok: true });
+  }
+
   if (action === 'approve') {
+    const { paymentId } = body;
     const { data: payment, error: fetchErr } = await admin
       .from('payment_requests')
       .select('*')
@@ -90,10 +170,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Already approved' }, { status: 400 });
     }
 
-    const months = PLAN_MONTHS[payment.plan] || 1;
+    const days = PLAN_DAYS[payment.plan] || 30;
     const startsAt = new Date();
     const endsAt = new Date();
-    endsAt.setMonth(endsAt.getMonth() + months);
+    endsAt.setDate(endsAt.getDate() + days);
 
     const { error: subErr } = await admin.from('subscriptions').insert({
       user_id: payment.user_id,
@@ -120,6 +200,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (action === 'reject') {
+    const { paymentId } = body;
     const { error: updateErr } = await admin
       .from('payment_requests')
       .update({ status: 'rejected' })
@@ -132,5 +213,5 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
-  return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
+  return NextResponse.json({ error: `Invalid action: ${action}` }, { status: 400 });
 }
