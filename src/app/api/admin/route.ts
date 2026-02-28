@@ -7,25 +7,11 @@ function getSupabaseAdmin() {
   return createClient(url, serviceKey);
 }
 
-function getSupabaseWithAuth(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-  const authHeader = request.headers.get('authorization');
-  const token = authHeader?.replace('Bearer ', '');
-  if (!token) return null;
-  return createClient(url, anonKey, {
-    global: { headers: { Authorization: `Bearer ${token}` } },
-  });
-}
-
-async function verifyAdmin(request: NextRequest) {
-  const supabase = getSupabaseWithAuth(request);
-  if (!supabase) return null;
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return null;
-  const adminEmail = process.env.ADMIN_EMAIL;
-  if (!adminEmail || user.email !== adminEmail) return null;
-  return user;
+function verifyPassword(request: NextRequest) {
+  const password = request.headers.get('x-admin-password');
+  const adminPassword = process.env.ADMIN_PASSWORD;
+  if (!adminPassword || password !== adminPassword) return false;
+  return true;
 }
 
 const PLAN_MONTHS: Record<string, number> = {
@@ -36,8 +22,7 @@ const PLAN_MONTHS: Record<string, number> = {
 };
 
 export async function GET(request: NextRequest) {
-  const user = await verifyAdmin(request);
-  if (!user) {
+  if (!verifyPassword(request)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -79,8 +64,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const user = await verifyAdmin(request);
-  if (!user) {
+  if (!verifyPassword(request)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 

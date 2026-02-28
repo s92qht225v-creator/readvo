@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { AdminPanel } from './AdminPanel';
 
 const t = {
   uz: {
@@ -327,12 +328,78 @@ export function HomePage() {
   const { user, isLoading, loginWithGoogle, logout } = useAuth();
   const s = t[language];
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const isAdminParam = searchParams.get('admin') === 'true';
+  const [adminPassword, setAdminPassword] = useState('');
+  const [adminAuthed, setAdminAuthed] = useState(false);
+  const [adminError, setAdminError] = useState(false);
+  const [adminLoading, setAdminLoading] = useState(false);
 
   useEffect(() => {
-    if (!isLoading && user) {
+    if (!isLoading && user && !isAdminParam) {
       router.replace('/chinese');
     }
-  }, [isLoading, user, router]);
+  }, [isLoading, user, router, isAdminParam]);
+
+  const handleAdminLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAdminLoading(true);
+    setAdminError(false);
+
+    const res = await fetch('/api/admin/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: adminPassword }),
+    });
+
+    const data = await res.json();
+    if (data.isAdmin) {
+      setAdminAuthed(true);
+    } else {
+      setAdminError(true);
+    }
+    setAdminLoading(false);
+  };
+
+  if (isAdminParam) {
+    if (adminAuthed) {
+      return (
+        <main className="home" style={{ background: '#f5f5f5', minHeight: '100vh' }}>
+          <meta name="robots" content="noindex, nofollow" />
+          <div style={{ padding: '24px 16px 0' }}>
+            <AdminPanel password={adminPassword} />
+          </div>
+        </main>
+      );
+    }
+
+    return (
+      <main className="admin-login">
+        <meta name="robots" content="noindex, nofollow" />
+        <form className="admin-login__form" onSubmit={handleAdminLogin}>
+          <h1 className="admin-login__title">Admin</h1>
+          <input
+            type="password"
+            className="admin-login__input"
+            placeholder="Parol"
+            value={adminPassword}
+            onChange={(e) => setAdminPassword(e.target.value)}
+            autoFocus
+          />
+          {adminError && (
+            <p className="admin-login__error">Noto&apos;g&apos;ri parol</p>
+          )}
+          <button
+            className="admin-login__btn"
+            type="submit"
+            disabled={!adminPassword || adminLoading}
+          >
+            {adminLoading ? '...' : 'Kirish'}
+          </button>
+        </form>
+      </main>
+    );
+  }
 
   if (isLoading || user) return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>

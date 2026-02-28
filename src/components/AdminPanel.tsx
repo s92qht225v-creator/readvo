@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../hooks/useAuth';
 
 type AdminTab = 'payments' | 'users';
 
@@ -58,8 +57,11 @@ function formatDate(dateStr: string) {
   });
 }
 
-export function AdminPanel() {
-  const { getAccessToken } = useAuth();
+interface AdminPanelProps {
+  password: string;
+}
+
+export function AdminPanel({ password }: AdminPanelProps) {
   const [tab, setTab] = useState<AdminTab>('payments');
   const [payments, setPayments] = useState<Payment[]>([]);
   const [users, setUsers] = useState<AdminUser[]>([]);
@@ -70,11 +72,8 @@ export function AdminPanel() {
   const [expandedScreenshot, setExpandedScreenshot] = useState<string | null>(null);
 
   const fetchData = useCallback(async () => {
-    const token = await getAccessToken();
-    if (!token) return;
-
     const res = await fetch('/api/admin', {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { 'x-admin-password': password },
     });
 
     if (!res.ok) return;
@@ -84,7 +83,7 @@ export function AdminPanel() {
     setSubscriptions(data.subscriptions);
     setStats(data.stats);
     setLoading(false);
-  }, [getAccessToken]);
+  }, [password]);
 
   useEffect(() => {
     fetchData();
@@ -92,13 +91,11 @@ export function AdminPanel() {
 
   const handleAction = useCallback(async (action: 'approve' | 'reject', paymentId: string) => {
     setActionLoading(paymentId);
-    const token = await getAccessToken();
-    if (!token) return;
 
     const res = await fetch('/api/admin', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${token}`,
+        'x-admin-password': password,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ action, paymentId }),
@@ -108,7 +105,7 @@ export function AdminPanel() {
       await fetchData();
     }
     setActionLoading(null);
-  }, [getAccessToken, fetchData]);
+  }, [password, fetchData]);
 
   const getUserSubscription = useCallback((userId: string) => {
     const now = new Date();
