@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { useAuth } from '../hooks/useAuth';
 import { BannerMenu } from './BannerMenu';
+import { AdminPanel } from './AdminPanel';
 
 type Tab = 'hsk' | 'stories' | 'flashcards' | 'karaoke' | 'tests';
 
@@ -45,11 +47,50 @@ const validTabs: Tab[] = ['hsk', 'stories', 'flashcards', 'karaoke', 'tests'];
 
 export function LanguagePage() {
   const [language] = useLanguage();
+  const { getAccessToken } = useAuth();
   const searchParams = useSearchParams();
+  const isAdminParam = searchParams.get('admin') === 'true';
+  const [isAdmin, setIsAdmin] = useState(false);
   const initialTab = searchParams.get('tab') as Tab | null;
   const [activeTab, setActiveTab] = useState<Tab>(
     initialTab && validTabs.includes(initialTab) ? initialTab : 'hsk'
   );
+
+  useEffect(() => {
+    if (!isAdminParam) return;
+    let cancelled = false;
+    (async () => {
+      const token = await getAccessToken();
+      if (!token || cancelled) return;
+      const res = await fetch('/api/admin/check', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (cancelled) return;
+      const data = await res.json();
+      setIsAdmin(data.isAdmin === true);
+    })();
+    return () => { cancelled = true; };
+  }, [isAdminParam, getAccessToken]);
+
+  if (isAdminParam && isAdmin) {
+    return (
+      <main className="home">
+        <header className="home__hero">
+          <div className="home__hero-inner">
+            <div className="home__hero-top-row">
+              <Link href="/chinese" className="home__hero-logo">
+                <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
+              </Link>
+              <BannerMenu />
+            </div>
+          </div>
+        </header>
+        <section className="home__content">
+          <AdminPanel />
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="home">

@@ -101,7 +101,7 @@ export default function PaymentPage() {
   }, [selectedPlan, file, isRu, getAccessToken]);
 
   const formatPrice = (price: number) => {
-    return price.toLocaleString('uz-UZ').replace(/,/g, ' ');
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   };
 
   const perMonth = (price: number, months: number) => {
@@ -177,7 +177,7 @@ export default function PaymentPage() {
             </span>
             {plan.months > 1 && (
               <span className="payment__plan-per-month">
-                {perMonth(plan.price, plan.months)} / {isRu ? 'мес' : 'oy'}
+                {perMonth(plan.price, plan.months)} / {isRu ? 'мес' : "oy"}
               </span>
             )}
             {plan.months >= 3 && (
