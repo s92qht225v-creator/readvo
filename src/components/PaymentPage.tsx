@@ -209,8 +209,8 @@ export default function PaymentPage() {
             </h2>
             <p className="payment__success-text">
               {isRu
-                ? `${subPlanLabel} — осталось ${subDaysLeft} дн.`
-                : `${subPlanLabel} — ${subDaysLeft} kun qoldi`}
+                ? `Осталось ${subDaysLeft} дн.`
+                : `${subDaysLeft} kun qoldi`}
             </p>
             <Link href="/chinese" className="payment__back-btn">
               {isRu ? '← На главную' : '← Bosh sahifa'}
