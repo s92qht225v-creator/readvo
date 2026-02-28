@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { LessonInfo } from '../services/content';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { BannerMenu } from './BannerMenu';
 
 interface ProgressEntry {
   lesson_id: string;
@@ -60,6 +61,7 @@ export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
             <Link href={languagePath || '/chinese'} className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
+            <BannerMenu />
           </div>
           <div className="lang-page__tabs">
             {hskLevels.map((hsk) =>

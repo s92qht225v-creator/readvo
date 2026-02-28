@@ -15,7 +15,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 ## URL Structure
 ```
 /                                           # Home/landing page (redirects logged-in users to /chinese)
-/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Fleshkarta, Karaoke, Test)
+/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Flesh, Karaoke, Test)
 /[language]?tab=[tabId]                     # Language page with specific tab pre-selected
 /[language]/[book]                          # Book page - lesson list
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
@@ -30,7 +30,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 
 Example routes:
 - `/` - Landing page (logged-in users auto-redirect to `/chinese`)
-- `/chinese` - Chinese language page with tabs (Kitob, Matn, Fleshkarta, Karaoke, Test)
+- `/chinese` - Chinese language page with tabs (Kitob, Matn, Flesh, Karaoke, Test)
 - `/chinese?tab=flashcards` - Language page with Flashcards tab active
 - `/chinese/hsk1` - HSK 1 book with lesson list
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
@@ -291,14 +291,16 @@ Page → Section → Sentence → Word
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
 ### Branding & Colors
-- **Banner**: Soft blue `#4a7ab5` (replaces old red `#dc2626`)
-- **Active tab / book level text**: `#4a8af5`
-- **Lesson number badge**: `#4a7ab5`
-- **Logo (white)**: `/public/logo.svg` — white text, used on dark backgrounds (banner, karaoke)
-- **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` text, used on light backgrounds (reader header, landing nav)
-- **Logo SVG structure**: Two `<g>` layers — Layer_1 (hidden, old version) and Layer_2 (visible). Text uses `.st5` class.
-- **IMPORTANT**: `currentColor` does NOT work with `<img>` tags. Use separate SVG files for different logo colors.
-- **Russian tab labels**: Книги | Текст | Флешки | Караоке | Тесты
+- **Banner**: Red `#dc2626`
+- **Accent color** (`--color-accent`): `#dc2626`
+- **Active tab text**: `#dc2626` (on white `#f5f5f5` background)
+- **Inactive tab text**: White (`#fff`) on red banner
+- **Book level text / Lesson number badge**: `#dc2626`
+- **Logo (dark)**: `/public/logo.svg` — dark letterforms with red accents (play triangle + "m" chevron). Used on banner, karaoke, landing hero.
+- **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` variant, used on light backgrounds (reader header, landing nav)
+- **Border-radius**: Globally reduced — 16→10, 12→8, 8→6, 6→4, 4→3px. Circles (50%) unchanged.
+- **Tab labels (UZ)**: Kitob | Matn | Flesh | Karaoke | Test
+- **Tab labels (RU)**: Книги | Текст | Флеш | Караоке | Тесты
 
 ### Styling Conventions
 - Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
@@ -613,7 +615,7 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
-- Tab labels: Kitob, Matn, Fleshkarta, Karaoke, Test (short forms, no "-lar" suffix)
+- Tab labels: Kitob, Matn, Flesh, Karaoke, Test (short forms, no "-lar" suffix)
 - Matn tab shows two cards: **Hikoyalar** (→ `/chinese/hsk2/stories`) and **Dialoglar** (→ `/chinese/hsk1/dialogues`)
 - Language toggle: Custom dropdown selectors on language page banner ("Men bilaman"/"Я знаю" for known language, "Men o'rganaman"/"Я изучаю" for target language). Lesson/story headers still use UZ/RU toggle button.
 
@@ -680,16 +682,18 @@ main.home (max-width container + padding)
 ### Language Page Structure (LanguagePage.tsx — tabbed catalog)
 ```
 main.home (reuses home styling, no top padding)
-├── header.home__hero (full-width soft blue banner #4a7ab5, z-index: 10)
+├── header.home__hero (full-width red banner #dc2626, z-index: 10)
 │   └── div.home__hero-inner (constrained max-width matching page)
-│       ├── div.home__hero-top-row (flex: logo | lang selectors | avatar)
-│       │   ├── Link.home__hero-logo > img.home__hero-logo-img (white logo, 80px)
+│       ├── div.home__hero-top-row (flex: logo | lang selectors | menu)
+│       │   ├── Link.home__hero-logo > img.home__hero-logo-img (logo, 64px)
 │       │   ├── div.home__lang-selectors (flex, gap between selectors)
 │       │   │   ├── div.home__lang-selector ("I know" dropdown — UZ/RU)
 │       │   │   └── div.home__lang-selector ("I'm learning" dropdown — Chinese)
-│       │   └── button.home__avatar-btn (44px circle, profile icon)
+│       │   └── div.home__menu (hamburger menu, position: relative)
+│       │       ├── button.home__menu-btn (44px, hamburger icon)
+│       │       └── div.home__menu-dropdown (right-aligned dropdown: user info, payment, logout)
 │       └── div.lang-page__tabs (folder tabs flush at banner bottom via margin-top: auto)
-│           └── button.lang-page__tab (Kitob | Matn | Fleshkarta | Karaoke | Test)
+│           └── button.lang-page__tab (Kitob | Matn | Flesh | Karaoke | Test)
 ├── section.home__content
 │   └── div.lang-page__books (responsive grid of cards)
 │       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
@@ -828,21 +832,26 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 
 ### Key CSS Classes
 - `.home` - Home/book/language page container (matches `.page` width, no top padding, `background: #f5f5f5`)
-- `.home__hero` - Full-width soft blue banner (`background: #4a7ab5`, `width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
+- `.home__hero` - Full-width red banner (`background: #dc2626`, `width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
 - `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`, `display: flex; flex-direction: column` so tabs push to bottom via `margin-top: auto`)
-- `.home__hero-top-row` - Flex row: logo, language selectors, avatar (`min-height: 66px` for consistent banner height across all pages)
+- `.home__hero-top-row` - Flex row: logo, language selectors, hamburger menu (`min-height: 66px` for consistent banner height across all pages)
 - `.home__hero-logo-img` - White logo (`height: 80px`, mobile: `64px`). Uses `/logo.svg` (white text)
 - `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
 - `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
 - `.home__lang-select-btn` - Dropdown trigger button (transparent, white text, `min-height: 44px`, `padding: 8px 0`)
 - `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered, `border-radius: 8px`, `max-width: calc(100vw - 32px)` to prevent viewport clipping)
-- `.home__avatar-btn` - Profile circle (`44px`, `border-radius: 50%`, semi-transparent white)
+- `.home__menu` - Hamburger menu wrapper (`position: relative`)
+- `.home__menu-btn` - Hamburger button (`44px`, `border-radius: 8px`, semi-transparent white on red banner)
+- `.home__menu-dropdown` - Right-aligned dropdown (`position: absolute`, `right: 0`, white bg, shadow, `min-width: 180px`)
+- `.home__menu-item` - Menu item button (`min-height: 44px`, full-width, hover `#f5f5f5`)
+- `.home__menu-user` - User info display (name + email, non-clickable, `#f9f9f9` bg)
+- `.home__menu-divider` - Thin separator line (`1px solid #e5e5e5`)
 - `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`, `margin-top: auto` pushes tabs flush to banner bottom)
-- `.lang-page__tab` - Folder tab button (`border-radius: 4px 4px 0 0`, `background: rgba(255,255,255,0.35)`, `color: rgba(255,255,255,0.9)`, no hover/transition, `-webkit-tap-highlight-color: transparent`)
-- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #4a8af5`, `margin-bottom: -1px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
+- `.lang-page__tab` - Folder tab button (`border-radius: 3px 3px 0 0`, `background: rgba(255,255,255,0.35)`, `color: #fff`, no hover/transition, `-webkit-tap-highlight-color: transparent`)
+- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #dc2626`, `margin-bottom: -2px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
 - `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
 - `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
-- `.lang-page__book-level` - Big blue text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #4a8af5`)
+- `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
 - `.lang-page__book-level-label` - "HSK" prefix inside level (same size/color, `font-size: 1em`)
 - `.lang-page__book-pinyin` - Pinyin on karaoke cards (blue italic)
 - `.lang-page__book-subtitle` - Grey subtitle text

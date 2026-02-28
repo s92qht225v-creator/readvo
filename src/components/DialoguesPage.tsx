@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { BannerMenu } from './BannerMenu';
 
 const TAGS: Record<string, { uz: string; ru: string }> = {
   tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
@@ -124,6 +125,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
             <Link href={languagePath} className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
+            <BannerMenu />
           </div>
           <div className="lang-page__tabs">
             {[1, 2, 3, 4, 5, 6].map((level) => {

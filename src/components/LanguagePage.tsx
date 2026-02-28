@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { BannerMenu } from './BannerMenu';
 
 type Tab = 'hsk' | 'stories' | 'flashcards' | 'karaoke' | 'tests';
 
@@ -24,8 +25,8 @@ interface HSKBook {
 const tabs: TabInfo[] = [
   { id: 'hsk', label: 'Kitob', label_ru: 'Книги' },
   { id: 'stories', label: 'Matn', label_ru: 'Текст' },
-  { id: 'flashcards', label: 'Fleshkarta', label_ru: 'Флешки' },
-  { id: 'karaoke', label: 'Karaoke', label_ru: 'Караоке' },
+  { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш' },
+  { id: 'karaoke', label: 'KTV', label_ru: 'KTV' },
   { id: 'tests', label: 'Test', label_ru: 'Тесты' },
 ];
 
@@ -43,31 +44,12 @@ const hskBooks: HSKBook[] = [
 const validTabs: Tab[] = ['hsk', 'stories', 'flashcards', 'karaoke', 'tests'];
 
 export function LanguagePage() {
-  const [language, , setLanguage] = useLanguage();
+  const [language] = useLanguage();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
   const [activeTab, setActiveTab] = useState<Tab>(
     initialTab && validTabs.includes(initialTab) ? initialTab : 'hsk'
   );
-  const [knowOpen, setKnowOpen] = useState(false);
-  const [learnOpen, setLearnOpen] = useState(false);
-  const selectorsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!knowOpen && !learnOpen) return;
-    const handleClick = (e: MouseEvent | TouchEvent) => {
-      if (selectorsRef.current && !selectorsRef.current.contains(e.target as Node)) {
-        setKnowOpen(false);
-        setLearnOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClick);
-    document.addEventListener('touchstart', handleClick);
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
-      document.removeEventListener('touchstart', handleClick);
-    };
-  }, [knowOpen, learnOpen]);
 
   return (
     <main className="home">
@@ -78,69 +60,7 @@ export function LanguagePage() {
             <Link href="/" className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
-            <div className="home__lang-selectors" ref={selectorsRef}>
-              <div className="home__lang-selector">
-                <span className="home__lang-selector-label">
-                  {language === 'ru' ? 'Я знаю' : 'Men bilaman'}
-                </span>
-                <button
-                  className="home__lang-select-btn"
-                  onClick={() => { setKnowOpen(!knowOpen); setLearnOpen(false); }}
-                  type="button"
-                >
-                  {language === 'ru' ? 'Русский' : "O'zbekcha"} ▾
-                </button>
-                {knowOpen && (
-                  <div className="home__lang-dropdown">
-                    <button
-                      className={`home__lang-dropdown-item ${language === 'uz' ? 'home__lang-dropdown-item--active' : ''}`}
-                      onClick={() => { setLanguage('uz'); setKnowOpen(false); }}
-                      type="button"
-                    >
-                      O&apos;zbekcha
-                    </button>
-                    <button
-                      className={`home__lang-dropdown-item ${language === 'ru' ? 'home__lang-dropdown-item--active' : ''}`}
-                      onClick={() => { setLanguage('ru'); setKnowOpen(false); }}
-                      type="button"
-                    >
-                      Русский
-                    </button>
-                  </div>
-                )}
-              </div>
-              <div className="home__lang-selector">
-                <span className="home__lang-selector-label">
-                  {language === 'ru' ? 'Я изучаю' : "Men o'rganaman"}
-                </span>
-                <button
-                  className="home__lang-select-btn"
-                  onClick={() => { setLearnOpen(!learnOpen); setKnowOpen(false); }}
-                  type="button"
-                >
-                  {language === 'ru' ? 'Китайский' : 'Xitoycha'} ▾
-                </button>
-                {learnOpen && (
-                  <div className="home__lang-dropdown">
-                    <button
-                      className="home__lang-dropdown-item home__lang-dropdown-item--active"
-                      onClick={() => setLearnOpen(false)}
-                      type="button"
-                    >
-                      {language === 'ru' ? 'Китайский' : 'Xitoycha'}
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-            <button
-              className="home__avatar-btn"
-              type="button"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-            </button>
+            <BannerMenu />
           </div>
           <div className="lang-page__tabs">
             {tabs.map((tab) => (
@@ -207,26 +127,34 @@ export function LanguagePage() {
         )}
 
         {activeTab === 'karaoke' && (
-          <div className="lang-page__books">
+          <div className="home__lessons">
             <Link
               href="/chinese/hsk1/karaoke/yueliang"
-              className="lang-page__book-card"
+              className="dialogue-card"
             >
-              <span className="lang-page__book-level">月亮代表我的心</span>
-              <span className="lang-page__book-pinyin">Yuèliàng dàibiǎo wǒ de xīn</span>
-              <span className="lang-page__book-subtitle">
-                {language === 'ru' ? 'Луна представляет моё сердце' : 'Oy yuragimni ifodalaydi'}
-              </span>
+              <div className="dialogue-card__content">
+                <div className="dialogue-card__text">
+                  <h3 className="dialogue-card__title">月亮代表我的心</h3>
+                  <p className="dialogue-card__pinyin">Yuèliàng dàibiǎo wǒ de xīn</p>
+                  <p className="dialogue-card__translation">
+                    {language === 'ru' ? 'Луна представляет моё сердце' : 'Oy yuragimni ifodalaydi'}
+                  </p>
+                </div>
+              </div>
             </Link>
             <Link
               href="/chinese/hsk1/karaoke/pengyou"
-              className="lang-page__book-card"
+              className="dialogue-card"
             >
-              <span className="lang-page__book-level">朋友</span>
-              <span className="lang-page__book-pinyin">Péngyou</span>
-              <span className="lang-page__book-subtitle">
-                {language === 'ru' ? 'Друг' : 'Do\'st'}
-              </span>
+              <div className="dialogue-card__content">
+                <div className="dialogue-card__text">
+                  <h3 className="dialogue-card__title">朋友</h3>
+                  <p className="dialogue-card__pinyin">Péngyou</p>
+                  <p className="dialogue-card__translation">
+                    {language === 'ru' ? 'Друг' : 'Do\'st'}
+                  </p>
+                </div>
+              </div>
             </Link>
           </div>
         )}

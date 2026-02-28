@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { BannerMenu } from './BannerMenu';
 
 interface FlashcardLessonItem {
   lessonId: string;
@@ -28,6 +29,7 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
             <Link href="/chinese?tab=flashcards" className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
+            <BannerMenu />
           </div>
           <div className="lang-page__tabs">
             <Link href={`${bookPath}/flashcards`} className="lang-page__tab lang-page__tab--active">

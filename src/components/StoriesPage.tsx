@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { BannerMenu } from './BannerMenu';
 
 interface StoryItem {
   id: string;
@@ -29,6 +30,7 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
             <Link href={languagePath} className="home__hero-logo">
               <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
             </Link>
+            <BannerMenu />
           </div>
           <div className="lang-page__tabs">
             {[1, 2, 3, 4, 5, 6].map((level) => {
