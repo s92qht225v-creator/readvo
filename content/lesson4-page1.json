@@ -260,7 +260,6 @@
     {
       "id": "l4p1-sec-grammar2",
       "type": "grammar",
-      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-2.jpg",
       "sentences": [
         {
           "id": "l4p1-g2-s1",
@@ -281,12 +280,26 @@
           "text_translation": "0~99 raqamlarining yozilishi va o'qilishi",
           "text_translation_ru": "Написание и произношение чисел 0–99"
         }
-      ]
+      ],
+      "grammarTableData": {
+        "headers": ["", "", "", "", "", "", "", "", "", ""],
+        "rows": [
+          { "cells": ["líng\n零\n0", "yī\n一\n1", "èr\n二\n2", "sān\n三\n3", "sì\n四\n4", "wǔ\n五\n5", "liù\n六\n6", "qī\n七\n7", "bā\n八\n8", "jiǔ\n九\n9"] },
+          { "cells": ["shí\n十\n10", "十一\n11", "", "", "", "", "", "", "", "十九\n19"] },
+          { "cells": ["二十\n20", "", "二十二\n22", "", "", "", "", "", "二十八\n28", ""] },
+          { "cells": ["三十\n30", "", "", "三十三\n33", "", "", "", "三十七\n37", "", ""] },
+          { "cells": ["四十\n40", "", "", "", "四十四\n44", "", "四十六\n46", "", "", ""] },
+          { "cells": ["五十\n50", "", "", "", "", "五十五\n55", "", "", "", ""] },
+          { "cells": ["六十\n60", "", "", "", "六十四\n64", "", "六十六\n66", "", "", ""] },
+          { "cells": ["七十\n70", "", "", "七十三\n73", "", "", "", "七十七\n77", "", ""] },
+          { "cells": ["八十\n80", "", "八十二\n82", "", "", "", "", "", "八十八\n88", ""] },
+          { "cells": ["九十\n90", "九十一\n91", "", "", "", "", "", "", "", "九十九\n99"] }
+        ]
+      }
     },
     {
       "id": "l4p1-sec-grammar2b",
       "type": "grammar",
-      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-3.jpg",
       "sentences": [
         {
           "id": "l4p1-g2b-s1",
@@ -294,12 +307,18 @@
           "text_translation": "100 (shu jumladan) dan 10 000 gacha bo'lgan raqamlarning yozilishi va o'qilishi",
           "text_translation_ru": "Написание и произношение чисел от 100 (включительно) до 10 000"
         }
-      ]
+      ],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["yìbǎi\n一百\n100", "èrbǎi líng bā\n二百零八\n208", "jiǔbǎi jiǔshíjiǔ\n九百九十九\n999"] },
+          { "cells": ["yìqiān\n一千\n1000", "yìqiān wǔbǎi èrshíbā\n一千五百二十八\n1528", "jiǔqiān jiǔbǎi jiǔshíjiǔ\n九千九百九十九\n9999"] }
+        ]
+      }
     },
     {
       "id": "l4p1-sec-grammar2c",
       "type": "grammar",
-      "image_url_bottom": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-4-1-4.jpg",
       "sentences": [
         {
           "id": "l4p1-g2c-s1",
@@ -313,7 +332,14 @@
           "text_translation": "\"2\" raqami \"二 (èr)\" yoki \"两 (liǎng)\" deb yoziladi va o'qiladi. Odatda tartib sonlarida \"二 (èr)\" ishlatiladi, masalan \"第二\"; o'lchov so'zlaridan oldin esa \"两 (liǎng)\" ishlatiladi.",
           "text_translation_ru": "Число «2» может записываться и произноситься как «二 (èr)» или «两 (liǎng)». Обычно «二 (èr)» используется в порядковых числительных, например «第二», а «两 (liǎng)» — перед счётными словами."
         }
-      ]
+      ],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["shí'èr\n十二\n12", "èrshí'èr\n二十二\n22", "yìbǎi èrshí'èr\n一百二十二\n122"] },
+          { "cells": ["liǎng gè rén\n两个人", "liǎng kǒu rén\n两口人", "liǎng běn shū\n两本书（two books）"] }
+        ]
+      }
     }
   ]
 }

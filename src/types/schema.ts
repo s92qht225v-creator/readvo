@@ -113,6 +113,12 @@ export interface Sentence {
   /** Optional: inline image URL (e.g., textbook table scan within a grammar section) */
   readonly image_url?: string;
 
+  /** Optional: table data for inline tables (e.g., grammar reference tables) */
+  readonly tableData?: {
+    readonly headers: readonly string[];
+    readonly rows: readonly (readonly string[])[];
+  };
+
   /** Optional: word class abbreviation for vocabulary (e.g., "n.", "v.", "adj.") */
   readonly wordClass?: string;
 

@@ -206,8 +206,8 @@ export class PageValidator {
     // Sentence ID
     this.checkUniqueId(sentence.id, `${path}.id`);
 
-    // Image-only sentences (placeholders for textbook scans) skip text checks
-    const isImageOnly = sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '');
+    // Image-only or table-only sentences skip text checks
+    const isImageOnly = (sentence.image_url || sentence.tableData) && (!sentence.text_original || sentence.text_original.trim() === '');
 
     // Grammar explanations may have only translation (no Chinese text)
     const isGrammarExplanation = sentence.section === 'grammar' && !sentence.pinyin && sentence.text_translation;

@@ -340,6 +340,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         {/* Grammar table (optional, for grammar sections with tabular data) */}
         {section.grammarTableData && (
           <div className="grammar-table">
+            {section.grammarTableData.headers.some(h => h.trim() !== '') && (
             <div className="grammar-table__row grammar-table__row--header" style={{ gridTemplateColumns: `repeat(${section.grammarTableData.headers.length}, 1fr)` }}>
               {section.grammarTableData.headers.map((header, i) => (
                 <div key={i} className="grammar-table__cell grammar-table__cell--header">
@@ -353,6 +354,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 </div>
               ))}
             </div>
+            )}
             {section.grammarTableData.rows.map((row, rowIdx) => (
               <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
                 {row.cells.map((cell, cellIdx) => (

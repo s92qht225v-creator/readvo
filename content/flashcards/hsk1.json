@@ -10,7 +10,7 @@
       "text_translation": "sevmoq; yoqtirmoq",
       "text_translation_ru": "любить; нравиться",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/ai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/ai.mp3"
     },
     {
       "id": "fc-hsk1-297",
@@ -27,7 +27,7 @@
       "text_translation": "(-chi; yuklatma)",
       "text_translation_ru": "модальная частица",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ba.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/ba.mp3"
     },
     {
       "id": "fc-hsk1-299",
@@ -44,7 +44,7 @@
       "text_translation": "kunduz; kun",
       "text_translation_ru": "днём; дневное время",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/baitian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/baitian.mp3"
     },
     {
       "id": "fc-hsk1-001",
@@ -52,8 +52,8 @@
       "pinyin": "bàn",
       "text_translation": "yarim",
       "text_translation_ru": "половина",
-      "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ban.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/ban.mp3"
     },
     {
       "id": "fc-hsk1-002",
@@ -61,8 +61,8 @@
       "pinyin": "bāozi",
       "text_translation": "baozi (xitoy pirojkasi)",
       "text_translation_ru": "баоцзы (пирожок)",
-      "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/baozi.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/baozi.mp3"
     },
     {
       "id": "fc-hsk1-003",
@@ -70,8 +70,8 @@
       "pinyin": "bēi",
       "text_translation": "stakan; piyola",
       "text_translation_ru": "стакан; чашка",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/bei.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/bei.mp3"
     },
     {
       "id": "fc-hsk1-004",
@@ -79,8 +79,8 @@
       "pinyin": "bēizi",
       "text_translation": "stakan; piyola",
       "text_translation_ru": "стакан; чашка",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/beizi.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/beizi.mp3"
     },
     {
       "id": "fc-hsk1-005",
@@ -89,7 +89,7 @@
       "text_translation": "dona (kitob sanash)",
       "text_translation_ru": "счётное слово (для книг)",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/ben.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/ben.mp3"
     },
     {
       "id": "fc-hsk1-006",
@@ -97,8 +97,8 @@
       "pinyin": "biān",
       "text_translation": "tomon; yoq",
       "text_translation_ru": "сторона",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/bianbian.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/bianbian.mp3"
     },
     {
       "id": "fc-hsk1-007",
@@ -106,8 +106,8 @@
       "pinyin": "bìng",
       "text_translation": "kasallik; kasal",
       "text_translation_ru": "болезнь; болеть",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/bing.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/bing.mp3"
     },
     {
       "id": "fc-hsk1-301",
@@ -116,7 +116,7 @@
       "text_translation": "bemor; kasalxona bemori",
       "text_translation_ru": "больной; пациент",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/bingren.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/bingren.mp3"
     },
     {
       "id": "fc-hsk1-008",
@@ -133,8 +133,8 @@
       "pinyin": "búyào",
       "text_translation": "kerak emas; qilma",
       "text_translation_ru": "не надо; не нужно",
-      "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/buyao.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/buyao.mp3"
     },
     {
       "id": "fc-hsk1-010",
@@ -143,7 +143,7 @@
       "text_translation": "emas; yo'q",
       "text_translation_ru": "не; нет",
       "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/bu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-2/bu.mp3"
     },
     {
       "id": "fc-hsk1-011",
@@ -151,8 +151,8 @@
       "pinyin": "cài",
       "text_translation": "taom; sabzavot",
       "text_translation_ru": "блюдо; овощи",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/cai.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/cai.mp3"
     },
     {
       "id": "fc-hsk1-012",
@@ -160,8 +160,8 @@
       "pinyin": "chá",
       "text_translation": "choy",
       "text_translation_ru": "чай",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/cha.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-3/cha.mp3"
     },
     {
       "id": "fc-hsk1-013",
@@ -170,7 +170,7 @@
       "text_translation": "qo'shiq aytmoq",
       "text_translation_ru": "петь",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/chang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/chang.mp3"
     },
     {
       "id": "fc-hsk1-014",
@@ -178,8 +178,8 @@
       "pinyin": "chāoshì",
       "text_translation": "supermarket",
       "text_translation_ru": "супермаркет",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/chaoshi.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/chaoshi.mp3"
     },
     {
       "id": "fc-hsk1-015",
@@ -187,8 +187,8 @@
       "pinyin": "chē",
       "text_translation": "mashina; transport",
       "text_translation_ru": "машина; транспорт",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/che.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/che.mp3"
     },
     {
       "id": "fc-hsk1-016",
@@ -197,7 +197,7 @@
       "text_translation": "yemoq",
       "text_translation_ru": "есть; кушать",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/chi.mp3"
     },
     {
       "id": "fc-hsk1-017",
@@ -205,8 +205,8 @@
       "pinyin": "chūzūchē",
       "text_translation": "taksi",
       "text_translation_ru": "такси",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/chuzuche.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/chuzuche.mp3"
     },
     {
       "id": "fc-hsk1-018",
@@ -215,7 +215,7 @@
       "text_translation": "kiymoq",
       "text_translation_ru": "надевать; носить",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/chuan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/chuan.mp3"
     },
     {
       "id": "fc-hsk1-019",
@@ -223,8 +223,8 @@
       "pinyin": "dǎ diànhuà",
       "text_translation": "telefon qilmoq",
       "text_translation_ru": "звонить по телефону",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/dadianhua.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/dadianhua.mp3"
     },
     {
       "id": "fc-hsk1-020",
@@ -232,8 +232,8 @@
       "pinyin": "dà",
       "text_translation": "katta",
       "text_translation_ru": "большой",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/da.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/da.mp3"
     },
     {
       "id": "fc-hsk1-021",
@@ -250,8 +250,8 @@
       "pinyin": "dàxué",
       "text_translation": "universitet",
       "text_translation_ru": "университет",
-      "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/daxue.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/daxue.mp3"
     },
     {
       "id": "fc-hsk1-023",
@@ -259,8 +259,8 @@
       "pinyin": "dàxuéshēng",
       "text_translation": "talaba",
       "text_translation_ru": "студент",
-      "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/daxuesheng.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/daxuesheng.mp3"
     },
     {
       "id": "fc-hsk1-024",
@@ -268,8 +268,8 @@
       "pinyin": "dào",
       "text_translation": "yetmoq; -gacha",
       "text_translation_ru": "прибывать; до",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/dao.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/dao.mp3"
     },
     {
       "id": "fc-hsk1-025",
@@ -278,7 +278,7 @@
       "text_translation": "-ning (egalik)",
       "text_translation_ru": "притяжательная частица",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/de.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/de.mp3"
     },
     {
       "id": "fc-hsk1-026",
@@ -286,8 +286,8 @@
       "pinyin": "dìdi",
       "text_translation": "uka",
       "text_translation_ru": "младший брат",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/didi.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/didi.mp3"
     },
     {
       "id": "fc-hsk1-027",
@@ -295,8 +295,8 @@
       "pinyin": "dì",
       "text_translation": "-chi (tartib)",
       "text_translation_ru": "порядковый префикс",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/di.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/di.mp3"
     },
     {
       "id": "fc-hsk1-028",
@@ -305,7 +305,7 @@
       "text_translation": "soat; nuqta",
       "text_translation_ru": "час; точка",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/dian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/dian.mp3"
     },
     {
       "id": "fc-hsk1-029",
@@ -314,7 +314,7 @@
       "text_translation": "telefon",
       "text_translation_ru": "телефон",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/dianhua.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/dianhua.mp3"
     },
     {
       "id": "fc-hsk1-030",
@@ -322,8 +322,8 @@
       "pinyin": "diànnǎo",
       "text_translation": "kompyuter",
       "text_translation_ru": "компьютер",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/diannao.mp3"
+      "lesson": 5,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/diannao.mp3"
     },
     {
       "id": "fc-hsk1-031",
@@ -332,7 +332,7 @@
       "text_translation": "televizor",
       "text_translation_ru": "телевизор",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dianshi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/dianshi.mp3"
     },
     {
       "id": "fc-hsk1-032",
@@ -340,8 +340,8 @@
       "pinyin": "diànyǐng",
       "text_translation": "kino",
       "text_translation_ru": "фильм; кино",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianying.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dianying.mp3"
     },
     {
       "id": "fc-hsk1-033",
@@ -349,8 +349,8 @@
       "pinyin": "diànyǐngyuàn",
       "text_translation": "kinoteatr",
       "text_translation_ru": "кинотеатр",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/dianyingyuan.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/dianyingyuan.mp3"
     },
     {
       "id": "fc-hsk1-034",
@@ -358,8 +358,8 @@
       "pinyin": "diàn",
       "text_translation": "do'kon",
       "text_translation_ru": "магазин",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/dian.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/dian.mp3"
     },
     {
       "id": "fc-hsk1-035",
@@ -367,8 +367,8 @@
       "pinyin": "dōngxi",
       "text_translation": "narsa",
       "text_translation_ru": "вещь; предмет",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/dongxi.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/dongxi.mp3"
     },
     {
       "id": "fc-hsk1-036",
@@ -376,8 +376,8 @@
       "pinyin": "dōu",
       "text_translation": "hammasi; barchasi",
       "text_translation_ru": "все; оба",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/dou.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/dou.mp3"
     },
     {
       "id": "fc-hsk1-037",
@@ -385,8 +385,8 @@
       "pinyin": "dú",
       "text_translation": "o'qimoq",
       "text_translation_ru": "читать",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/du.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/du.mp3"
     },
     {
       "id": "fc-hsk1-038",
@@ -395,7 +395,7 @@
       "text_translation": "kitob o'qimoq",
       "text_translation_ru": "читать книги",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/dushu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/dushu.mp3"
     },
     {
       "id": "fc-hsk1-039",
@@ -403,8 +403,8 @@
       "pinyin": "duì",
       "text_translation": "to'g'ri",
       "text_translation_ru": "правильно; верно",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/dui.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/dui.mp3"
     },
     {
       "id": "fc-hsk1-040",
@@ -412,8 +412,8 @@
       "pinyin": "duìbuqǐ",
       "text_translation": "kechirasiz",
       "text_translation_ru": "извините",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/duibuqi.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-2/duibuqi.mp3"
     },
     {
       "id": "fc-hsk1-041",
@@ -421,8 +421,8 @@
       "pinyin": "duō",
       "text_translation": "ko'p",
       "text_translation_ru": "много",
-      "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/duo.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/duo.mp3"
     },
     {
       "id": "fc-hsk1-042",
@@ -431,7 +431,7 @@
       "text_translation": "qancha",
       "text_translation_ru": "сколько",
       "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/duoshao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/duoshao.mp3"
     },
     {
       "id": "fc-hsk1-043",
@@ -439,8 +439,8 @@
       "pinyin": "érzi",
       "text_translation": "o'g'il",
       "text_translation_ru": "сын",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/erzi.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/erzi.mp3"
     },
     {
       "id": "fc-hsk1-044",
@@ -456,8 +456,8 @@
       "pinyin": "fàn",
       "text_translation": "ovqat; guruch",
       "text_translation_ru": "еда; рис",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/fan.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/fan.mp3"
     },
     {
       "id": "fc-hsk1-046",
@@ -465,8 +465,8 @@
       "pinyin": "fàndiàn",
       "text_translation": "restoran; mehmonxona",
       "text_translation_ru": "ресторан; гостиница",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/fandian.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/fandian.mp3"
     },
     {
       "id": "fc-hsk1-047",
@@ -475,7 +475,7 @@
       "text_translation": "xona",
       "text_translation_ru": "комната",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/fangjian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/fangjian.mp3"
     },
     {
       "id": "fc-hsk1-048",
@@ -484,7 +484,7 @@
       "text_translation": "samolyot",
       "text_translation_ru": "самолёт",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/feiji.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/feiji.mp3"
     },
     {
       "id": "fc-hsk1-049",
@@ -492,8 +492,8 @@
       "pinyin": "fēicháng",
       "text_translation": "juda",
       "text_translation_ru": "очень",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/feichang.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/feichang.mp3"
     },
     {
       "id": "fc-hsk1-050",
@@ -502,7 +502,7 @@
       "text_translation": "minut; ball",
       "text_translation_ru": "минута; балл",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/fen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/fen.mp3"
     },
     {
       "id": "fc-hsk1-051",
@@ -510,8 +510,8 @@
       "pinyin": "fēnzhōng",
       "text_translation": "minut",
       "text_translation_ru": "минута",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/fenzhong.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/fenzhong.mp3"
     },
     {
       "id": "fc-hsk1-052",
@@ -519,8 +519,8 @@
       "pinyin": "fúwùyuán",
       "text_translation": "ofitsiant; xizmatchi",
       "text_translation_ru": "официант; обслуживающий",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/fuwuyuan.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/fuwuyuan.mp3"
     },
     {
       "id": "fc-hsk1-053",
@@ -528,8 +528,8 @@
       "pinyin": "gāoxìng",
       "text_translation": "xursand; xushhal",
       "text_translation_ru": "рад; весёлый",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/gaoxing.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/gaoxing.mp3"
     },
     {
       "id": "fc-hsk1-054",
@@ -537,8 +537,8 @@
       "pinyin": "gēge",
       "text_translation": "aka",
       "text_translation_ru": "старший брат",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/gege.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/gege.mp3"
     },
     {
       "id": "fc-hsk1-055",
@@ -547,7 +547,7 @@
       "text_translation": "qo'shiq",
       "text_translation_ru": "песня",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/ge.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/ge.mp3"
     },
     {
       "id": "fc-hsk1-056",
@@ -555,8 +555,8 @@
       "pinyin": "gè",
       "text_translation": "dona (sanash so'zi)",
       "text_translation_ru": "счётное слово (универсальное)",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/ge.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/ge.mp3"
     },
     {
       "id": "fc-hsk1-057",
@@ -564,8 +564,8 @@
       "pinyin": "gěi",
       "text_translation": "bermoq; uchun",
       "text_translation_ru": "давать; для",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/gei.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/gei.mp3"
     },
     {
       "id": "fc-hsk1-058",
@@ -573,8 +573,8 @@
       "pinyin": "gōngzuò",
       "text_translation": "ish; ishlamoq",
       "text_translation_ru": "работа; работать",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/gongzuo.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/gongzuo.mp3"
     },
     {
       "id": "fc-hsk1-059",
@@ -582,8 +582,8 @@
       "pinyin": "gōngsī",
       "text_translation": "kompaniya",
       "text_translation_ru": "компания; фирма",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/gongsi.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-2/gongsi.mp3"
     },
     {
       "id": "fc-hsk1-060",
@@ -591,8 +591,8 @@
       "pinyin": "gǒu",
       "text_translation": "it",
       "text_translation_ru": "собака",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/gou.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/gou.mp3"
     },
     {
       "id": "fc-hsk1-061",
@@ -600,8 +600,8 @@
       "pinyin": "guì",
       "text_translation": "qimmat; hurmatli",
       "text_translation_ru": "дорогой; уважаемый",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/gui.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/gui.mp3"
     },
     {
       "id": "fc-hsk1-062",
@@ -610,7 +610,7 @@
       "text_translation": "davlat; mamlakat",
       "text_translation_ru": "страна; государство",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/guo.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/guo.mp3"
     },
     {
       "id": "fc-hsk1-063",
@@ -618,8 +618,8 @@
       "pinyin": "hái",
       "text_translation": "hali; yana",
       "text_translation_ru": "ещё; также",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/hai.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/hai.mp3"
     },
     {
       "id": "fc-hsk1-064",
@@ -627,8 +627,8 @@
       "pinyin": "háizi",
       "text_translation": "bola",
       "text_translation_ru": "ребёнок",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/haizi.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/haizi.mp3"
     },
     {
       "id": "fc-hsk1-065",
@@ -646,7 +646,7 @@
       "text_translation": "mazali",
       "text_translation_ru": "вкусный",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/haochi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/haochi.mp3"
     },
     {
       "id": "fc-hsk1-067",
@@ -654,8 +654,8 @@
       "pinyin": "hǎokàn",
       "text_translation": "chiroyli",
       "text_translation_ru": "красивый; интересный",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/haokan.mp3"
+      "lesson": 5,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/haokan.mp3"
     },
     {
       "id": "fc-hsk1-068",
@@ -664,7 +664,7 @@
       "text_translation": "yoqimli (eshitish)",
       "text_translation_ru": "приятный на слух",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/haoting.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/haoting.mp3"
     },
     {
       "id": "fc-hsk1-069",
@@ -672,8 +672,8 @@
       "pinyin": "hǎowánr",
       "text_translation": "qiziqarli",
       "text_translation_ru": "интересный; забавный",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/haowanr.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/haowanr.mp3"
     },
     {
       "id": "fc-hsk1-070",
@@ -681,8 +681,8 @@
       "pinyin": "hào",
       "text_translation": "raqam; sana",
       "text_translation_ru": "номер; число",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/hao.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/hao.mp3"
     },
     {
       "id": "fc-hsk1-071",
@@ -690,8 +690,8 @@
       "pinyin": "hē",
       "text_translation": "ichmoq",
       "text_translation_ru": "пить",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/he.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/he.mp3"
     },
     {
       "id": "fc-hsk1-072",
@@ -699,8 +699,8 @@
       "pinyin": "hé",
       "text_translation": "va; bilan",
       "text_translation_ru": "и; с",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/he.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/he.mp3"
     },
     {
       "id": "fc-hsk1-073",
@@ -708,8 +708,8 @@
       "pinyin": "hěn",
       "text_translation": "juda",
       "text_translation_ru": "очень",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/hen.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/hen.mp3"
     },
     {
       "id": "fc-hsk1-074",
@@ -717,8 +717,8 @@
       "pinyin": "hòu",
       "text_translation": "keyin; orqa",
       "text_translation_ru": "после; задний",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/hou.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/hou.mp3"
     },
     {
       "id": "fc-hsk1-075",
@@ -726,8 +726,8 @@
       "pinyin": "huí",
       "text_translation": "qaytmoq",
       "text_translation_ru": "возвращаться",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/hui.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/hui.mp3"
     },
     {
       "id": "fc-hsk1-076",
@@ -735,8 +735,8 @@
       "pinyin": "huì",
       "text_translation": "bilmoq; qila olmoq",
       "text_translation_ru": "уметь; мочь",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/hui.mp3"
+      "lesson": 5,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-2/hui.mp3"
     },
     {
       "id": "fc-hsk1-077",
@@ -744,8 +744,8 @@
       "pinyin": "huǒchē",
       "text_translation": "poyezd",
       "text_translation_ru": "поезд",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/huoche.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/huoche.mp3"
     },
     {
       "id": "fc-hsk1-302",
@@ -754,7 +754,7 @@
       "text_translation": "aeroport",
       "text_translation_ru": "аэропорт",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jichang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jichang.mp3"
     },
     {
       "id": "fc-hsk1-078",
@@ -763,7 +763,7 @@
       "text_translation": "tuxum",
       "text_translation_ru": "яйцо",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/jidan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/jidan.mp3"
     },
     {
       "id": "fc-hsk1-079",
@@ -771,8 +771,8 @@
       "pinyin": "jǐ",
       "text_translation": "necha; bir necha",
       "text_translation_ru": "сколько; несколько",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/ji.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/ji.mp3"
     },
     {
       "id": "fc-hsk1-080",
@@ -780,8 +780,8 @@
       "pinyin": "jiā",
       "text_translation": "uy; oila",
       "text_translation_ru": "дом; семья",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/jia.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/jia.mp3"
     },
     {
       "id": "fc-hsk1-081",
@@ -789,8 +789,8 @@
       "pinyin": "jiārén",
       "text_translation": "oila a'zolari",
       "text_translation_ru": "члены семьи",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jiaren.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jiaren.mp3"
     },
     {
       "id": "fc-hsk1-082",
@@ -798,8 +798,8 @@
       "pinyin": "jiàn",
       "text_translation": "ko'rmoq; uchrashoq",
       "text_translation_ru": "видеть; встречать",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/jian.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/jian.mp3"
     },
     {
       "id": "fc-hsk1-083",
@@ -808,7 +808,7 @@
       "text_translation": "dona (kiyim sanash)",
       "text_translation_ru": "счётное слово (для одежды)",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/jian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/jian.mp3"
     },
     {
       "id": "fc-hsk1-084",
@@ -816,8 +816,8 @@
       "pinyin": "jiǎozi",
       "text_translation": "chuchvara",
       "text_translation_ru": "пельмени (цзяоцзы)",
-      "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/jiaozi.mp3"
+      "lesson": 5,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-2/jiaozi.mp3"
     },
     {
       "id": "fc-hsk1-085",
@@ -825,8 +825,8 @@
       "pinyin": "jiào",
       "text_translation": "chaqirmoq; deb atalmoq",
       "text_translation_ru": "звать; называться",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/jiao.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/jiao.mp3"
     },
     {
       "id": "fc-hsk1-303",
@@ -835,7 +835,7 @@
       "text_translation": "qabul qilmoq; kutib olmoq",
       "text_translation_ru": "встречать; принимать",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/jie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/jie.mp3"
     },
     {
       "id": "fc-hsk1-086",
@@ -844,7 +844,7 @@
       "text_translation": "opa",
       "text_translation_ru": "старшая сестра",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/jiejie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/jiejie.mp3"
     },
     {
       "id": "fc-hsk1-304",
@@ -853,7 +853,7 @@
       "text_translation": "jin (og'irlik o'lchovi, 500g)",
       "text_translation_ru": "цзинь (мера веса, 500г)",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/jin.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/jin.mp3"
     },
     {
       "id": "fc-hsk1-087",
@@ -862,7 +862,7 @@
       "text_translation": "bu yil",
       "text_translation_ru": "этот год",
       "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/jinnian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/jinnian.mp3"
     },
     {
       "id": "fc-hsk1-088",
@@ -871,7 +871,7 @@
       "text_translation": "bugun",
       "text_translation_ru": "сегодня",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/jintian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/jintian.mp3"
     },
     {
       "id": "fc-hsk1-089",
@@ -888,7 +888,7 @@
       "text_translation": "deb o'ylamoq",
       "text_translation_ru": "думать; считать",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/juede.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/juede.mp3"
     },
     {
       "id": "fc-hsk1-091",
@@ -896,8 +896,8 @@
       "pinyin": "kāi",
       "text_translation": "ochmoq; boshlamoq",
       "text_translation_ru": "открывать; начинать",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/kai.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/kai.mp3"
     },
     {
       "id": "fc-hsk1-092",
@@ -905,8 +905,8 @@
       "pinyin": "kāichē",
       "text_translation": "mashina haydamoq",
       "text_translation_ru": "водить машину",
-      "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/kaiche.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/kaiche.mp3"
     },
     {
       "id": "fc-hsk1-093",
@@ -914,8 +914,8 @@
       "pinyin": "kàn",
       "text_translation": "qaramoq; ko'rmoq",
       "text_translation_ru": "смотреть; видеть",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/kan.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/kan.mp3"
     },
     {
       "id": "fc-hsk1-094",
@@ -923,8 +923,8 @@
       "pinyin": "kànbìng",
       "text_translation": "shifokorda ko'rinmoq",
       "text_translation_ru": "идти к врачу",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/kanbing.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-2/kanbing.mp3"
     },
     {
       "id": "fc-hsk1-095",
@@ -932,8 +932,8 @@
       "pinyin": "kànjiàn",
       "text_translation": "ko'rmoq",
       "text_translation_ru": "увидеть",
-      "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/kanjian.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/kanjian.mp3"
     },
     {
       "id": "fc-hsk1-096",
@@ -941,8 +941,8 @@
       "pinyin": "kěyǐ",
       "text_translation": "mumkin; bo'ladi",
       "text_translation_ru": "можно; разрешается",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/keyi.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/keyi.mp3"
     },
     {
       "id": "fc-hsk1-097",
@@ -951,7 +951,7 @@
       "text_translation": "dars",
       "text_translation_ru": "урок; занятие",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/ke.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/ke.mp3"
     },
     {
       "id": "fc-hsk1-098",
@@ -959,8 +959,8 @@
       "pinyin": "kǒu",
       "text_translation": "og'iz; kishi (sanash)",
       "text_translation_ru": "рот; счётное слово (для людей)",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/kou.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/kou.mp3"
     },
     {
       "id": "fc-hsk1-099",
@@ -969,7 +969,7 @@
       "text_translation": "so'm; bo'lak",
       "text_translation_ru": "юань; кусок",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/kuai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/kuai.mp3"
     },
     {
       "id": "fc-hsk1-100",
@@ -977,8 +977,8 @@
       "pinyin": "lái",
       "text_translation": "kelmoq",
       "text_translation_ru": "приходить",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/lai.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-2/lai.mp3"
     },
     {
       "id": "fc-hsk1-101",
@@ -995,8 +995,8 @@
       "pinyin": "le",
       "text_translation": "(o'tgan zamon yuklamasi)",
       "text_translation_ru": "(частица прошедшего времени)",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/le.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/le.mp3"
     },
     {
       "id": "fc-hsk1-103",
@@ -1005,7 +1005,7 @@
       "text_translation": "sovuq",
       "text_translation_ru": "холодный",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/leng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/leng.mp3"
     },
     {
       "id": "fc-hsk1-104",
@@ -1013,8 +1013,8 @@
       "pinyin": "lǐ",
       "text_translation": "ichida",
       "text_translation_ru": "внутри",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/lili.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/lili.mp3"
     },
     {
       "id": "fc-hsk1-105",
@@ -1046,8 +1046,8 @@
       "pinyin": "māma",
       "text_translation": "ona",
       "text_translation_ru": "мама",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/mama.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/mama.mp3"
     },
     {
       "id": "fc-hsk1-109",
@@ -1055,8 +1055,8 @@
       "pinyin": "ma",
       "text_translation": "(so'roq yuklamasi)",
       "text_translation_ru": "(вопросительная частица)",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/ma.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/ma.mp3"
     },
     {
       "id": "fc-hsk1-110",
@@ -1064,8 +1064,8 @@
       "pinyin": "mǎi",
       "text_translation": "sotib olmoq",
       "text_translation_ru": "покупать",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mai.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/mai.mp3"
     },
     {
       "id": "fc-hsk1-111",
@@ -1073,8 +1073,8 @@
       "pinyin": "mài",
       "text_translation": "sotmoq",
       "text_translation_ru": "продавать",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/mai.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/mai.mp3"
     },
     {
       "id": "fc-hsk1-112",
@@ -1082,8 +1082,8 @@
       "pinyin": "máng",
       "text_translation": "band",
       "text_translation_ru": "занятой",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/mang.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/mang.mp3"
     },
     {
       "id": "fc-hsk1-113",
@@ -1091,8 +1091,8 @@
       "pinyin": "māo",
       "text_translation": "mushuk",
       "text_translation_ru": "кошка",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/mao.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/mao.mp3"
     },
     {
       "id": "fc-hsk1-114",
@@ -1100,8 +1100,8 @@
       "pinyin": "méi",
       "text_translation": "yo'q (inkor)",
       "text_translation_ru": "не (отрицание)",
-      "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/mei.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/mei.mp3"
     },
     {
       "id": "fc-hsk1-115",
@@ -1109,8 +1109,8 @@
       "pinyin": "méi guānxi",
       "text_translation": "hech gap emas",
       "text_translation_ru": "ничего страшного",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/meiguanxi.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-2/meiguanxi.mp3"
     },
     {
       "id": "fc-hsk1-116",
@@ -1118,8 +1118,8 @@
       "pinyin": "méishì",
       "text_translation": "hech narsa emas",
       "text_translation_ru": "ничего; всё в порядке",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/meishi.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-2/meishi.mp3"
     },
     {
       "id": "fc-hsk1-117",
@@ -1128,7 +1128,7 @@
       "text_translation": "yo'q; ega emas",
       "text_translation_ru": "нет; не иметь",
       "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meiyou.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/meiyou.mp3"
     },
     {
       "id": "fc-hsk1-118",
@@ -1136,8 +1136,8 @@
       "pinyin": "mèimei",
       "text_translation": "singil",
       "text_translation_ru": "младшая сестра",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/meimei.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/meimei.mp3"
     },
     {
       "id": "fc-hsk1-119",
@@ -1155,7 +1155,7 @@
       "text_translation": "guruch (taom)",
       "text_translation_ru": "варёный рис",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/mifan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/mifan.mp3"
     },
     {
       "id": "fc-hsk1-121",
@@ -1164,7 +1164,7 @@
       "text_translation": "non",
       "text_translation_ru": "хлеб",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/mianbao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/mianbao.mp3"
     },
     {
       "id": "fc-hsk1-122",
@@ -1172,8 +1172,8 @@
       "pinyin": "miàntiáor",
       "text_translation": "lag'mon; noodle",
       "text_translation_ru": "лапша",
-      "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/miantiaor.mp3"
+      "lesson": 5,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-2/miantiaor.mp3"
     },
     {
       "id": "fc-hsk1-123",
@@ -1181,8 +1181,8 @@
       "pinyin": "míngzi",
       "text_translation": "ism",
       "text_translation_ru": "имя",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/mingzi.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/mingzi.mp3"
     },
     {
       "id": "fc-hsk1-124",
@@ -1190,8 +1190,8 @@
       "pinyin": "míngnián",
       "text_translation": "kelasi yil",
       "text_translation_ru": "следующий год",
-      "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/mingnian.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/mingnian.mp3"
     },
     {
       "id": "fc-hsk1-125",
@@ -1199,8 +1199,8 @@
       "pinyin": "míngtiān",
       "text_translation": "ertaga",
       "text_translation_ru": "завтра",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/mingtian.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/mingtian.mp3"
     },
     {
       "id": "fc-hsk1-126",
@@ -1209,7 +1209,7 @@
       "text_translation": "qaysi",
       "text_translation_ru": "какой; который",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/na.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/na.mp3"
     },
     {
       "id": "fc-hsk1-127",
@@ -1217,8 +1217,8 @@
       "pinyin": "nǎge",
       "text_translation": "qaysi biri",
       "text_translation_ru": "который",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-1/nage.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-1/nage.mp3"
     },
     {
       "id": "fc-hsk1-128",
@@ -1226,8 +1226,8 @@
       "pinyin": "nǎlǐ",
       "text_translation": "qayerda",
       "text_translation_ru": "где",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/nali.mp3"
     },
     {
       "id": "fc-hsk1-129",
@@ -1235,8 +1235,8 @@
       "pinyin": "nǎr",
       "text_translation": "qayerda",
       "text_translation_ru": "где",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/nar.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/nar.mp3"
     },
     {
       "id": "fc-hsk1-130",
@@ -1244,8 +1244,8 @@
       "pinyin": "nǎxiē",
       "text_translation": "qaysilari",
       "text_translation_ru": "какие; которые",
-      "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/naxie.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/naxie.mp3"
     },
     {
       "id": "fc-hsk1-131",
@@ -1253,8 +1253,8 @@
       "pinyin": "nà",
       "text_translation": "u; o",
       "text_translation_ru": "тот; то",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/na.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/na.mp3"
     },
     {
       "id": "fc-hsk1-132",
@@ -1262,8 +1262,8 @@
       "pinyin": "nàbiān",
       "text_translation": "u yoqda",
       "text_translation_ru": "там; та сторона",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/nabian.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/nabian.mp3"
     },
     {
       "id": "fc-hsk1-133",
@@ -1271,8 +1271,8 @@
       "pinyin": "nàge",
       "text_translation": "u; o narsa",
       "text_translation_ru": "тот (предмет)",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/nage.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/nage.mp3"
     },
     {
       "id": "fc-hsk1-134",
@@ -1280,8 +1280,8 @@
       "pinyin": "nàlǐ",
       "text_translation": "u yerda",
       "text_translation_ru": "там",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/nali.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/nali.mp3"
     },
     {
       "id": "fc-hsk1-135",
@@ -1289,8 +1289,8 @@
       "pinyin": "nàr",
       "text_translation": "u yerda",
       "text_translation_ru": "там",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/nar.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/nar.mp3"
     },
     {
       "id": "fc-hsk1-136",
@@ -1299,7 +1299,7 @@
       "text_translation": "ularga; o narsalar",
       "text_translation_ru": "те",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/naxie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/naxie.mp3"
     },
     {
       "id": "fc-hsk1-137",
@@ -1307,8 +1307,8 @@
       "pinyin": "nán",
       "text_translation": "erkak",
       "text_translation_ru": "мужской",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/nan.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/nan.mp3"
     },
     {
       "id": "fc-hsk1-138",
@@ -1316,8 +1316,8 @@
       "pinyin": "nánpéngyou",
       "text_translation": "yigit do'st",
       "text_translation_ru": "парень; бойфренд",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/nanpengyou.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/nanpengyou.mp3"
     },
     {
       "id": "fc-hsk1-139",
@@ -1325,8 +1325,8 @@
       "pinyin": "ne",
       "text_translation": "-chi? (so'roq)",
       "text_translation_ru": "(вопросительная частица) а...?",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/ne.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/ne.mp3"
     },
     {
       "id": "fc-hsk1-140",
@@ -1335,7 +1335,7 @@
       "text_translation": "qila olmoq",
       "text_translation_ru": "мочь; уметь",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/neng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/neng.mp3"
     },
     {
       "id": "fc-hsk1-141",
@@ -1343,8 +1343,8 @@
       "pinyin": "nǐ",
       "text_translation": "sen",
       "text_translation_ru": "ты",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/ni.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/ni.mp3"
     },
     {
       "id": "fc-hsk1-142",
@@ -1370,8 +1370,8 @@
       "pinyin": "nián",
       "text_translation": "yil",
       "text_translation_ru": "год",
-      "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/nian.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/nian.mp3"
     },
     {
       "id": "fc-hsk1-145",
@@ -1389,7 +1389,7 @@
       "text_translation": "sut",
       "text_translation_ru": "молоко",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/niunai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/niunai.mp3"
     },
     {
       "id": "fc-hsk1-147",
@@ -1397,8 +1397,8 @@
       "pinyin": "nǚ",
       "text_translation": "ayol",
       "text_translation_ru": "женский",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/nu.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/nu.mp3"
     },
     {
       "id": "fc-hsk1-148",
@@ -1406,8 +1406,8 @@
       "pinyin": "nǚ'ér",
       "text_translation": "qiz (farzand)",
       "text_translation_ru": "дочь",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/nuer.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/nuer.mp3"
     },
     {
       "id": "fc-hsk1-149",
@@ -1415,8 +1415,8 @@
       "pinyin": "nǚpéngyou",
       "text_translation": "qiz do'st",
       "text_translation_ru": "девушка; подруга",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/nupengyou.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/nupengyou.mp3"
     },
     {
       "id": "fc-hsk1-150",
@@ -1424,8 +1424,8 @@
       "pinyin": "nǚshì",
       "text_translation": "xonim",
       "text_translation_ru": "госпожа",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/nushi.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/nushi.mp3"
     },
     {
       "id": "fc-hsk1-151",
@@ -1433,8 +1433,8 @@
       "pinyin": "péngyou",
       "text_translation": "do'st",
       "text_translation_ru": "друг",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/pengyou.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/pengyou.mp3"
     },
     {
       "id": "fc-hsk1-152",
@@ -1443,7 +1443,7 @@
       "text_translation": "arzon",
       "text_translation_ru": "дешёвый",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pianyi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/pianyi.mp3"
     },
     {
       "id": "fc-hsk1-153",
@@ -1451,8 +1451,8 @@
       "pinyin": "piàoliang",
       "text_translation": "go'zal; chiroyli",
       "text_translation_ru": "красивый",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/piaoliang.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/piaoliang.mp3"
     },
     {
       "id": "fc-hsk1-154",
@@ -1461,7 +1461,7 @@
       "text_translation": "olma",
       "text_translation_ru": "яблоко",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/pingguo.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/pingguo.mp3"
     },
     {
       "id": "fc-hsk1-155",
@@ -1477,8 +1477,8 @@
       "pinyin": "qǐchuáng",
       "text_translation": "turmoq; uyg'onmoq",
       "text_translation_ru": "вставать (с кровати)",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/qichuang.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/qichuang.mp3"
     },
     {
       "id": "fc-hsk1-157",
@@ -1494,8 +1494,8 @@
       "pinyin": "qián",
       "text_translation": "oldin; old",
       "text_translation_ru": "перед; до",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/qian.mp3"
+      "lesson": 8,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/qian.mp3"
     },
     {
       "id": "fc-hsk1-159",
@@ -1503,8 +1503,8 @@
       "pinyin": "qiánbian",
       "text_translation": "old tomonda",
       "text_translation_ru": "впереди",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/qianbian.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/qianbian.mp3"
     },
     {
       "id": "fc-hsk1-160",
@@ -1513,7 +1513,7 @@
       "text_translation": "pul",
       "text_translation_ru": "деньги",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/qian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/qian.mp3"
     },
     {
       "id": "fc-hsk1-161",
@@ -1521,8 +1521,8 @@
       "pinyin": "qǐng",
       "text_translation": "iltimos; marhamat",
       "text_translation_ru": "пожалуйста; прошу",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/qing.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/qing.mp3"
     },
     {
       "id": "fc-hsk1-162",
@@ -1530,8 +1530,8 @@
       "pinyin": "qǐngwèn",
       "text_translation": "kechirasiz, so'rasam",
       "text_translation_ru": "скажите, пожалуйста",
-      "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/qingwen.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/qingwen.mp3"
     },
     {
       "id": "fc-hsk1-163",
@@ -1539,8 +1539,8 @@
       "pinyin": "qù",
       "text_translation": "bormoq",
       "text_translation_ru": "идти; ехать",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/qu.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/qu.mp3"
     },
     {
       "id": "fc-hsk1-164",
@@ -1548,8 +1548,8 @@
       "pinyin": "qùnián",
       "text_translation": "o'tgan yil",
       "text_translation_ru": "прошлый год",
-      "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-2/qunian.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-2/qunian.mp3"
     },
     {
       "id": "fc-hsk1-165",
@@ -1558,7 +1558,7 @@
       "text_translation": "issiq",
       "text_translation_ru": "горячий; жаркий",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/re.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/re.mp3"
     },
     {
       "id": "fc-hsk1-166",
@@ -1566,8 +1566,8 @@
       "pinyin": "rén",
       "text_translation": "odam; kishi",
       "text_translation_ru": "человек",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-1/ren.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/ren.mp3"
     },
     {
       "id": "fc-hsk1-167",
@@ -1575,8 +1575,8 @@
       "pinyin": "rènshi",
       "text_translation": "tanishmoq; bilmoq",
       "text_translation_ru": "знать; познакомиться",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/renshi.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/renshi.mp3"
     },
     {
       "id": "fc-hsk1-168",
@@ -1585,7 +1585,7 @@
       "text_translation": "kun; quyosh",
       "text_translation_ru": "день; солнце",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/ri.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/ri.mp3"
     },
     {
       "id": "fc-hsk1-169",
@@ -1602,7 +1602,7 @@
       "text_translation": "do'kon",
       "text_translation_ru": "магазин",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/shangdian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/shangdian.mp3"
     },
     {
       "id": "fc-hsk1-171",
@@ -1610,8 +1610,8 @@
       "pinyin": "shàng",
       "text_translation": "yuqori; ustida",
       "text_translation_ru": "верх; на",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shangshang.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/shangshang.mp3"
     },
     {
       "id": "fc-hsk1-172",
@@ -1620,7 +1620,7 @@
       "text_translation": "ishga bormoq",
       "text_translation_ru": "идти на работу",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/shangban.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/shangban.mp3"
     },
     {
       "id": "fc-hsk1-173",
@@ -1629,7 +1629,7 @@
       "text_translation": "darsga kirmoq",
       "text_translation_ru": "идти на занятия",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shangke.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/shangke.mp3"
     },
     {
       "id": "fc-hsk1-174",
@@ -1638,7 +1638,7 @@
       "text_translation": "tushdan oldin",
       "text_translation_ru": "утро; до обеда",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/shangwu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/shangwu.mp3"
     },
     {
       "id": "fc-hsk1-175",
@@ -1646,8 +1646,8 @@
       "pinyin": "shàngxué",
       "text_translation": "maktabga bormoq",
       "text_translation_ru": "ходить в школу",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/shangxue.mp3"
+      "lesson": 14,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/shangxue.mp3"
     },
     {
       "id": "fc-hsk1-176",
@@ -1655,8 +1655,8 @@
       "pinyin": "shǎo",
       "text_translation": "kam; oz",
       "text_translation_ru": "мало",
-      "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shao.mp3"
+      "lesson": 10,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/shao.mp3"
     },
     {
       "id": "fc-hsk1-177",
@@ -1664,8 +1664,8 @@
       "pinyin": "shéi",
       "text_translation": "kim",
       "text_translation_ru": "кто",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/sheishui.mp3"
+      "lesson": 3,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/sheishui.mp3"
     },
     {
       "id": "fc-hsk1-178",
@@ -1673,8 +1673,8 @@
       "pinyin": "shénme",
       "text_translation": "nima",
       "text_translation_ru": "что",
-      "lesson": 1,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/shenme.mp3"
+      "lesson": 2,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/shenme.mp3"
     },
     {
       "id": "fc-hsk1-179",
@@ -1682,8 +1682,8 @@
       "pinyin": "shēngbìng",
       "text_translation": "kasal bo'lmoq",
       "text_translation_ru": "заболеть",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/shengbing.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-2/shengbing.mp3"
     },
     {
       "id": "fc-hsk1-180",
@@ -1699,8 +1699,8 @@
       "pinyin": "shíhou",
       "text_translation": "vaqt; payt",
       "text_translation_ru": "время; момент",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/shihou.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/shihou.mp3"
     },
     {
       "id": "fc-hsk1-182",
@@ -1708,8 +1708,8 @@
       "pinyin": "shíjiān",
       "text_translation": "vaqt",
       "text_translation_ru": "время",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/shijian.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/shijian.mp3"
     },
     {
       "id": "fc-hsk1-183",
@@ -1717,8 +1717,8 @@
       "pinyin": "shì",
       "text_translation": "ish; narsa",
       "text_translation_ru": "дело; вещь",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/shi.mp3"
+      "lesson": 7,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/shi.mp3"
     },
     {
       "id": "fc-hsk1-184",
@@ -1727,7 +1727,7 @@
       "text_translation": "bo'lmoq; -dir",
       "text_translation_ru": "быть; являться",
       "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-2/shi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-2/shi.mp3"
     },
     {
       "id": "fc-hsk1-185",
@@ -1736,7 +1736,7 @@
       "text_translation": "telefon",
       "text_translation_ru": "мобильный телефон",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-1/shouji.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-1/shouji.mp3"
     },
     {
       "id": "fc-hsk1-305",
@@ -1745,7 +1745,7 @@
       "text_translation": "sotuvchi",
       "text_translation_ru": "продавец",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/shouhuoyuan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/shouhuoyuan.mp3"
     },
     {
       "id": "fc-hsk1-186",
@@ -1754,7 +1754,7 @@
       "text_translation": "kitob",
       "text_translation_ru": "книга",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/shu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/shu.mp3"
     },
     {
       "id": "fc-hsk1-187",
@@ -1763,7 +1763,7 @@
       "text_translation": "kitob do'koni",
       "text_translation_ru": "книжный магазин",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/shudian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/shudian.mp3"
     },
     {
       "id": "fc-hsk1-188",
@@ -1772,7 +1772,7 @@
       "text_translation": "suv",
       "text_translation_ru": "вода",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/shui.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/shui.mp3"
     },
     {
       "id": "fc-hsk1-189",
@@ -1781,7 +1781,7 @@
       "text_translation": "meva",
       "text_translation_ru": "фрукты",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/shuiguo.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/shuiguo.mp3"
     },
     {
       "id": "fc-hsk1-190",
@@ -1790,7 +1790,7 @@
       "text_translation": "uxlamoq",
       "text_translation_ru": "спать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shui.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shui.mp3"
     },
     {
       "id": "fc-hsk1-191",
@@ -1799,7 +1799,7 @@
       "text_translation": "uxlamoq",
       "text_translation_ru": "спать; ложиться спать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuijiao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shuijiao.mp3"
     },
     {
       "id": "fc-hsk1-192",
@@ -1808,7 +1808,7 @@
       "text_translation": "gapirmoq; demoq",
       "text_translation_ru": "говорить; сказать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/shuo.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/shuo.mp3"
     },
     {
       "id": "fc-hsk1-193",
@@ -1817,7 +1817,7 @@
       "text_translation": "gaplashmoq",
       "text_translation_ru": "разговаривать",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/shuohua.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/shuohua.mp3"
     },
     {
       "id": "fc-hsk1-194",
@@ -1834,7 +1834,7 @@
       "text_translation": "yosh",
       "text_translation_ru": "лет (возраст)",
       "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/sui.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/sui.mp3"
     },
     {
       "id": "fc-hsk1-196",
@@ -1842,8 +1842,8 @@
       "pinyin": "tā",
       "text_translation": "u (erkak)",
       "text_translation_ru": "он",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-3/ta.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-3/ta.mp3"
     },
     {
       "id": "fc-hsk1-197",
@@ -1852,7 +1852,7 @@
       "text_translation": "ular (erkak)",
       "text_translation_ru": "они (муж.)",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/tamen.mp3"
     },
     {
       "id": "fc-hsk1-198",
@@ -1861,7 +1861,7 @@
       "text_translation": "u (hayvon/narsa)",
       "text_translation_ru": "оно",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/ta.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/ta.mp3"
     },
     {
       "id": "fc-hsk1-199",
@@ -1870,7 +1870,7 @@
       "text_translation": "ular (narsa)",
       "text_translation_ru": "они (неодуш.)",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/tamen.mp3"
     },
     {
       "id": "fc-hsk1-200",
@@ -1879,7 +1879,7 @@
       "text_translation": "u (ayol)",
       "text_translation_ru": "она",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/ta.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/ta.mp3"
     },
     {
       "id": "fc-hsk1-201",
@@ -1888,7 +1888,7 @@
       "text_translation": "ular (ayol)",
       "text_translation_ru": "они (жен.)",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/tamen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/tamen.mp3"
     },
     {
       "id": "fc-hsk1-202",
@@ -1897,7 +1897,7 @@
       "text_translation": "juda; haddan tashqari",
       "text_translation_ru": "слишком; очень",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/tai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/tai.mp3"
     },
     {
       "id": "fc-hsk1-203",
@@ -1906,7 +1906,7 @@
       "text_translation": "kun; osmon",
       "text_translation_ru": "день; небо",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/tian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/tian.mp3"
     },
     {
       "id": "fc-hsk1-204",
@@ -1915,7 +1915,7 @@
       "text_translation": "ob-havo",
       "text_translation_ru": "погода",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/tianqi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/tianqi.mp3"
     },
     {
       "id": "fc-hsk1-205",
@@ -1924,7 +1924,7 @@
       "text_translation": "eshitmoq; tinglamoq",
       "text_translation_ru": "слушать",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/ting.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/ting.mp3"
     },
     {
       "id": "fc-hsk1-206",
@@ -1933,7 +1933,7 @@
       "text_translation": "eshitmoq",
       "text_translation_ru": "услышать",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/tingjian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/tingjian.mp3"
     },
     {
       "id": "fc-hsk1-207",
@@ -1951,7 +1951,7 @@
       "text_translation": "tashqari",
       "text_translation_ru": "снаружи; внешний",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/wai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/wai.mp3"
     },
     {
       "id": "fc-hsk1-209",
@@ -1960,7 +1960,7 @@
       "text_translation": "tashqarida",
       "text_translation_ru": "снаружи",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-1/waibian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/waibian.mp3"
     },
     {
       "id": "fc-hsk1-210",
@@ -1969,7 +1969,7 @@
       "text_translation": "o'ynamoq",
       "text_translation_ru": "играть; развлекаться",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/wan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/wan.mp3"
     },
     {
       "id": "fc-hsk1-211",
@@ -1978,7 +1978,7 @@
       "text_translation": "kech",
       "text_translation_ru": "поздний; вечер",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/wan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/wan.mp3"
     },
     {
       "id": "fc-hsk1-212",
@@ -1987,7 +1987,7 @@
       "text_translation": "kechki ovqat",
       "text_translation_ru": "ужин",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/wanfan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/wanfan.mp3"
     },
     {
       "id": "fc-hsk1-213",
@@ -1996,7 +1996,7 @@
       "text_translation": "kechqurun",
       "text_translation_ru": "вечер",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/wanshang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/wanshang.mp3"
     },
     {
       "id": "fc-hsk1-214",
@@ -2005,7 +2005,7 @@
       "text_translation": "alo",
       "text_translation_ru": "алло",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/wei.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/wei.mp3"
     },
     {
       "id": "fc-hsk1-215",
@@ -2014,7 +2014,7 @@
       "text_translation": "so'ramoq",
       "text_translation_ru": "спрашивать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/wen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/wen.mp3"
     },
     {
       "id": "fc-hsk1-216",
@@ -2023,7 +2023,7 @@
       "text_translation": "savol; muammo",
       "text_translation_ru": "вопрос; проблема",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/wenti.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/wenti.mp3"
     },
     {
       "id": "fc-hsk1-217",
@@ -2032,7 +2032,7 @@
       "text_translation": "men",
       "text_translation_ru": "я",
       "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-1/wo.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/wo.mp3"
     },
     {
       "id": "fc-hsk1-218",
@@ -2041,7 +2041,7 @@
       "text_translation": "biz",
       "text_translation_ru": "мы",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-3/women.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-3/women.mp3"
     },
     {
       "id": "fc-hsk1-219",
@@ -2058,7 +2058,7 @@
       "text_translation": "tushlik",
       "text_translation_ru": "обед",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/wufan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/wufan.mp3"
     },
     {
       "id": "fc-hsk1-221",
@@ -2067,7 +2067,7 @@
       "text_translation": "yoqtirmoq",
       "text_translation_ru": "любить; нравиться",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xihuan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xihuan.mp3"
     },
     {
       "id": "fc-hsk1-222",
@@ -2075,8 +2075,8 @@
       "pinyin": "xià",
       "text_translation": "pastga; keyingi",
       "text_translation_ru": "вниз; следующий",
-      "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/xia.mp3"
+      "lesson": 12,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/xia.mp3"
     },
     {
       "id": "fc-hsk1-223",
@@ -2085,7 +2085,7 @@
       "text_translation": "ishdan chiqmoq",
       "text_translation_ru": "уходить с работы",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xiaban.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xiaban.mp3"
     },
     {
       "id": "fc-hsk1-224",
@@ -2094,7 +2094,7 @@
       "text_translation": "dars tugamoq",
       "text_translation_ru": "конец урока",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-2/xiake.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-2/xiake.mp3"
     },
     {
       "id": "fc-hsk1-225",
@@ -2103,7 +2103,7 @@
       "text_translation": "tushdan keyin",
       "text_translation_ru": "после обеда",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xiawu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/xiawu.mp3"
     },
     {
       "id": "fc-hsk1-226",
@@ -2112,7 +2112,7 @@
       "text_translation": "yomg'ir yog'moq",
       "text_translation_ru": "идёт дождь",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/xiayu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/xiayu.mp3"
     },
     {
       "id": "fc-hsk1-227",
@@ -2121,7 +2121,7 @@
       "text_translation": "janob",
       "text_translation_ru": "господин",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/xiansheng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-3/xiansheng.mp3"
     },
     {
       "id": "fc-hsk1-228",
@@ -2130,7 +2130,7 @@
       "text_translation": "hozir",
       "text_translation_ru": "сейчас",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/xianzai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/xianzai.mp3"
     },
     {
       "id": "fc-hsk1-229",
@@ -2138,8 +2138,8 @@
       "pinyin": "xiǎng",
       "text_translation": "o'ylamoq; xohlamoq",
       "text_translation_ru": "думать; хотеть",
-      "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xiang.mp3"
+      "lesson": 6,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/xiang.mp3"
     },
     {
       "id": "fc-hsk1-230",
@@ -2148,7 +2148,7 @@
       "text_translation": "kichik",
       "text_translation_ru": "маленький",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/xiao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/xiao.mp3"
     },
     {
       "id": "fc-hsk1-231",
@@ -2157,7 +2157,7 @@
       "text_translation": "bolalar",
       "text_translation_ru": "дети; малыши",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/xiaopengyou.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/xiaopengyou.mp3"
     },
     {
       "id": "fc-hsk1-232",
@@ -2166,7 +2166,7 @@
       "text_translation": "soat (vaqt birligi)",
       "text_translation_ru": "час (единица времени)",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/xiaoshi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/xiaoshi.mp3"
     },
     {
       "id": "fc-hsk1-233",
@@ -2175,7 +2175,7 @@
       "text_translation": "boshlang'ich maktab",
       "text_translation_ru": "начальная школа",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/xiaoxue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/xiaoxue.mp3"
     },
     {
       "id": "fc-hsk1-234",
@@ -2184,7 +2184,7 @@
       "text_translation": "boshlang'ich sinf o'quvchisi",
       "text_translation_ru": "ученик начальной школы",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/xiaoxuesheng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/xiaoxuesheng.mp3"
     },
     {
       "id": "fc-hsk1-235",
@@ -2193,7 +2193,7 @@
       "text_translation": "bir necha; ba'zi",
       "text_translation_ru": "несколько; некоторые",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-2/xie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-2/xie.mp3"
     },
     {
       "id": "fc-hsk1-236",
@@ -2202,7 +2202,7 @@
       "text_translation": "yozmoq",
       "text_translation_ru": "писать",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/xie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/xie.mp3"
     },
     {
       "id": "fc-hsk1-237",
@@ -2220,7 +2220,7 @@
       "text_translation": "yangi",
       "text_translation_ru": "новый",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/xin.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/xin.mp3"
     },
     {
       "id": "fc-hsk1-239",
@@ -2229,7 +2229,7 @@
       "text_translation": "hafta",
       "text_translation_ru": "неделя",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqi.mp3"
     },
     {
       "id": "fc-hsk1-240",
@@ -2238,7 +2238,7 @@
       "text_translation": "yakshanba",
       "text_translation_ru": "воскресенье",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqiri.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqiri.mp3"
     },
     {
       "id": "fc-hsk1-241",
@@ -2247,7 +2247,7 @@
       "text_translation": "yakshanba",
       "text_translation_ru": "воскресенье",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xingqitian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xingqitian.mp3"
     },
     {
       "id": "fc-hsk1-242",
@@ -2256,7 +2256,7 @@
       "text_translation": "dam olmoq",
       "text_translation_ru": "отдыхать",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/xiuxi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/xiuxi.mp3"
     },
     {
       "id": "fc-hsk1-243",
@@ -2265,7 +2265,7 @@
       "text_translation": "o'rganmoq",
       "text_translation_ru": "учиться; изучать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/xue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/xue.mp3"
     },
     {
       "id": "fc-hsk1-244",
@@ -2283,7 +2283,7 @@
       "text_translation": "o'qimoq",
       "text_translation_ru": "учиться; заниматься",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/xuexi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/xuexi.mp3"
     },
     {
       "id": "fc-hsk1-246",
@@ -2292,7 +2292,7 @@
       "text_translation": "maktab",
       "text_translation_ru": "школа",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/xuexiao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/xuexiao.mp3"
     },
     {
       "id": "fc-hsk1-247",
@@ -2301,7 +2301,7 @@
       "text_translation": "qor",
       "text_translation_ru": "снег",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-2/xue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-2/xue.mp3"
     },
     {
       "id": "fc-hsk1-306",
@@ -2310,7 +2310,7 @@
       "text_translation": "dori",
       "text_translation_ru": "лекарство",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/yao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/yao.mp3"
     },
     {
       "id": "fc-hsk1-248",
@@ -2318,8 +2318,8 @@
       "pinyin": "yào",
       "text_translation": "kerak; xohlamoq",
       "text_translation_ru": "хотеть; нужно",
-      "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/yao.mp3"
+      "lesson": 15,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/yao.mp3"
     },
     {
       "id": "fc-hsk1-249",
@@ -2328,7 +2328,7 @@
       "text_translation": "ham",
       "text_translation_ru": "тоже; также",
       "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%202/HSK%202-3/ye.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-3/ye.mp3"
     },
     {
       "id": "fc-hsk1-250",
@@ -2345,7 +2345,7 @@
       "text_translation": "yarmi",
       "text_translation_ru": "половина",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-3/yiban.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-3/yiban.mp3"
     },
     {
       "id": "fc-hsk1-252",
@@ -2354,7 +2354,7 @@
       "text_translation": "bir oz",
       "text_translation_ru": "немного; разок",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/yixia.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/yixia.mp3"
     },
     {
       "id": "fc-hsk1-253",
@@ -2363,7 +2363,7 @@
       "text_translation": "ozgina",
       "text_translation_ru": "немного; чуть-чуть",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-3/yidianr.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-3/yidianr.mp3"
     },
     {
       "id": "fc-hsk1-254",
@@ -2372,7 +2372,7 @@
       "text_translation": "bir necha; bir oz",
       "text_translation_ru": "несколько; немного",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/yixie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-2/yixie.mp3"
     },
     {
       "id": "fc-hsk1-255",
@@ -2381,7 +2381,7 @@
       "text_translation": "kiyim",
       "text_translation_ru": "одежда",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/yifu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/yifu.mp3"
     },
     {
       "id": "fc-hsk1-307",
@@ -2390,7 +2390,7 @@
       "text_translation": "shifokor; tibbiyot",
       "text_translation_ru": "медицина; врач",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-2/yi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-2/yi.mp3"
     },
     {
       "id": "fc-hsk1-256",
@@ -2399,7 +2399,7 @@
       "text_translation": "shifokor",
       "text_translation_ru": "врач",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-3/yisheng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-3/yisheng.mp3"
     },
     {
       "id": "fc-hsk1-257",
@@ -2408,7 +2408,7 @@
       "text_translation": "kasalxona",
       "text_translation_ru": "больница",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-3/yiyuan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-3/yiyuan.mp3"
     },
     {
       "id": "fc-hsk1-258",
@@ -2417,7 +2417,7 @@
       "text_translation": "stul",
       "text_translation_ru": "стул",
       "lesson": 9,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-2/yizi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-2/yizi.mp3"
     },
     {
       "id": "fc-hsk1-259",
@@ -2426,7 +2426,7 @@
       "text_translation": "bor; ega bo'lmoq",
       "text_translation_ru": "иметь; есть",
       "lesson": 4,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-1/you.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/you.mp3"
     },
     {
       "id": "fc-hsk1-260",
@@ -2435,7 +2435,7 @@
       "text_translation": "ba'zilari",
       "text_translation_ru": "некоторые",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youde.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/youde.mp3"
     },
     {
       "id": "fc-hsk1-261",
@@ -2444,7 +2444,7 @@
       "text_translation": "biroz; sal",
       "text_translation_ru": "немного (негативный оттенок)",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/youdianr.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/youdianr.mp3"
     },
     {
       "id": "fc-hsk1-262",
@@ -2453,7 +2453,7 @@
       "text_translation": "ba'zilari",
       "text_translation_ru": "некоторые",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/youxie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/youxie.mp3"
     },
     {
       "id": "fc-hsk1-263",
@@ -2462,7 +2462,7 @@
       "text_translation": "yomg'ir",
       "text_translation_ru": "дождь",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/yu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/yu.mp3"
     },
     {
       "id": "fc-hsk1-264",
@@ -2471,7 +2471,7 @@
       "text_translation": "yuan (pul birligi)",
       "text_translation_ru": "юань",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/yuan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/yuan.mp3"
     },
     {
       "id": "fc-hsk1-265",
@@ -2480,7 +2480,7 @@
       "text_translation": "oy",
       "text_translation_ru": "месяц",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-1/yue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-1/yue.mp3"
     },
     {
       "id": "fc-hsk1-266",
@@ -2488,8 +2488,8 @@
       "pinyin": "zài",
       "text_translation": "yana",
       "text_translation_ru": "снова; ещё раз",
-      "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-1/zai.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-1/zai.mp3"
     },
     {
       "id": "fc-hsk1-267",
@@ -2506,8 +2506,8 @@
       "pinyin": "zài",
       "text_translation": "-da; joylashgan",
       "text_translation_ru": "в; находиться",
-      "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-2/zai.mp3"
+      "lesson": 11,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-2/zai.mp3"
     },
     {
       "id": "fc-hsk1-269",
@@ -2516,7 +2516,7 @@
       "text_translation": "erta",
       "text_translation_ru": "рано; раннее утро",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/zao.mp3"
     },
     {
       "id": "fc-hsk1-270",
@@ -2525,7 +2525,7 @@
       "text_translation": "nonushta",
       "text_translation_ru": "завтрак",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zaofan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zaofan.mp3"
     },
     {
       "id": "fc-hsk1-271",
@@ -2534,7 +2534,7 @@
       "text_translation": "ertalab",
       "text_translation_ru": "утро",
       "lesson": 7,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%207/HSK%207-1/zaoshang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%207-1/zaoshang.mp3"
     },
     {
       "id": "fc-hsk1-272",
@@ -2543,7 +2543,7 @@
       "text_translation": "qanday; nima uchun",
       "text_translation_ru": "как; почему",
       "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zenme.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zenme.mp3"
     },
     {
       "id": "fc-hsk1-273",
@@ -2552,7 +2552,7 @@
       "text_translation": "qanday",
       "text_translation_ru": "как; каково",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-3/zenmeyang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-3/zenmeyang.mp3"
     },
     {
       "id": "fc-hsk1-274",
@@ -2561,7 +2561,7 @@
       "text_translation": "qidirmoq; topmoq",
       "text_translation_ru": "искать; найти",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhao.mp3"
     },
     {
       "id": "fc-hsk1-275",
@@ -2570,7 +2570,7 @@
       "text_translation": "bu",
       "text_translation_ru": "это; этот",
       "lesson": 3,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%203/HSK%203-2/zhe.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-2/zhe.mp3"
     },
     {
       "id": "fc-hsk1-276",
@@ -2579,7 +2579,7 @@
       "text_translation": "bu yoqda",
       "text_translation_ru": "здесь; эта сторона",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/zhebian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/zhebian.mp3"
     },
     {
       "id": "fc-hsk1-277",
@@ -2588,7 +2588,7 @@
       "text_translation": "bu narsa",
       "text_translation_ru": "этот (предмет)",
       "lesson": 13,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2013/HSK%2013-2/zhege.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2013-2/zhege.mp3"
     },
     {
       "id": "fc-hsk1-278",
@@ -2597,7 +2597,7 @@
       "text_translation": "bu yerda",
       "text_translation_ru": "здесь",
       "lesson": 12,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2012/HSK%2012-1/zheli.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/zheli.mp3"
     },
     {
       "id": "fc-hsk1-279",
@@ -2606,7 +2606,7 @@
       "text_translation": "bu yerda",
       "text_translation_ru": "здесь",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-2/zher.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-2/zher.mp3"
     },
     {
       "id": "fc-hsk1-280",
@@ -2615,7 +2615,7 @@
       "text_translation": "bular",
       "text_translation_ru": "эти",
       "lesson": 10,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2010/HSK%2010-1/zhexie.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2010-1/zhexie.mp3"
     },
     {
       "id": "fc-hsk1-281",
@@ -2624,7 +2624,7 @@
       "text_translation": "haqiqatan; rostdan",
       "text_translation_ru": "действительно; правда",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-3/zhen.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-3/zhen.mp3"
     },
     {
       "id": "fc-hsk1-282",
@@ -2633,7 +2633,7 @@
       "text_translation": "hozir (davom etmoqda)",
       "text_translation_ru": "в данный момент (прогрессив)",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhengzai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhengzai.mp3"
     },
     {
       "id": "fc-hsk1-283",
@@ -2642,7 +2642,7 @@
       "text_translation": "faqat; dona (hayvon)",
       "text_translation_ru": "только; счётное слово (для животных)",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/zhi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/zhi.mp3"
     },
     {
       "id": "fc-hsk1-284",
@@ -2651,7 +2651,7 @@
       "text_translation": "bilmoq",
       "text_translation_ru": "знать",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-1/zhidao.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/zhidao.mp3"
     },
     {
       "id": "fc-hsk1-285",
@@ -2660,7 +2660,7 @@
       "text_translation": "tush payti",
       "text_translation_ru": "полдень",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-1/zhongwu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-1/zhongwu.mp3"
     },
     {
       "id": "fc-hsk1-286",
@@ -2669,7 +2669,7 @@
       "text_translation": "o'rta maktab",
       "text_translation_ru": "средняя школа",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/zhongxue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/zhongxue.mp3"
     },
     {
       "id": "fc-hsk1-287",
@@ -2678,7 +2678,7 @@
       "text_translation": "o'rta maktab o'quvchisi",
       "text_translation_ru": "ученик средней школы",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-3/zhongxuesheng.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-3/zhongxuesheng.mp3"
     },
     {
       "id": "fc-hsk1-288",
@@ -2687,7 +2687,7 @@
       "text_translation": "yashamoq",
       "text_translation_ru": "жить; проживать",
       "lesson": 15,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2015/HSK%2015-3/zhu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2015-3/zhu.mp3"
     },
     {
       "id": "fc-hsk1-289",
@@ -2696,7 +2696,7 @@
       "text_translation": "stol",
       "text_translation_ru": "стол",
       "lesson": 8,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%208/HSK%208-1/zhuozi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%208-1/zhuozi.mp3"
     },
     {
       "id": "fc-hsk1-290",
@@ -2705,7 +2705,7 @@
       "text_translation": "harf; belgi",
       "text_translation_ru": "иероглиф; знак",
       "lesson": 14,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2014/HSK%2014-2/zi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2014-2/zi.mp3"
     },
     {
       "id": "fc-hsk1-291",
@@ -2714,7 +2714,7 @@
       "text_translation": "kecha",
       "text_translation_ru": "вчера",
       "lesson": 11,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%2011/HSK%2011-3/zuotian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/zuotian.mp3"
     },
     {
       "id": "fc-hsk1-292",
@@ -2722,8 +2722,8 @@
       "pinyin": "zuò",
       "text_translation": "o'tirmoq; minmoq",
       "text_translation_ru": "сидеть; ехать (на транспорте)",
-      "lesson": 6,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%206/HSK%206-3/zuo.mp3"
+      "lesson": 13,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%206-3/zuo.mp3"
     },
     {
       "id": "fc-hsk1-293",
@@ -2731,8 +2731,8 @@
       "pinyin": "zuò",
       "text_translation": "qilmoq; yassamoq",
       "text_translation_ru": "делать; заниматься",
-      "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%209/HSK%209-3/zuo.mp3"
+      "lesson": 9,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-3/zuo.mp3"
     },
     {
       "id": "fc-hsk1-294",
@@ -2741,7 +2741,7 @@
       "text_translation": "ovqat pishirmoq",
       "text_translation_ru": "готовить еду",
       "lesson": 5,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%205/HSK%205-2/zuofan.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%205-2/zuofan.mp3"
     },
     {
       "id": "fc-hsk1-295",
@@ -2749,8 +2749,8 @@
       "pinyin": "bàba",
       "text_translation": "dada; ota",
       "text_translation_ru": "папа",
-      "lesson": 2,
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%204/HSK%204-2/baba.mp3"
+      "lesson": 4,
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-2/baba.mp3"
     }
   ]
 }

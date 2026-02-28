@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 
-const font = Manrope({ subsets: ['latin', 'latin-ext', 'cyrillic'], variable: '--font-pinyin' });
+const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
 
 export const metadata: Metadata = {
   title: 'Blim - Interaktiv o\'qish',

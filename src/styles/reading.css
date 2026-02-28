@@ -33,7 +33,6 @@ body {
   line-height: 1.6;
   color: #1a1a1a;
   background: #fff;
-  letter-spacing: 0.02em;
 }
 
 /* =============================================================================
@@ -49,7 +48,7 @@ body {
   --color-background-hover: #f5f5f5;
   --color-background-section: #fafafa;
   --color-border: #e2e8f0;
-  --color-accent: #3182ce;
+  --color-accent: #4a7ab5;
   --color-accent-light: #ebf8ff;
 
   /* Typography */
@@ -93,7 +92,7 @@ body {
   padding: var(--spacing-lg) var(--spacing-xl);
   padding-top: calc(var(--header-height) + 1em + var(--spacing-lg) + env(safe-area-inset-top, 0px));
   padding-bottom: calc(var(--bottom-nav-height) + 1em + var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
-  font-family: var(--font-main);
+  font-family: inherit;
   font-size: calc(var(--font-size-base) * var(--font-scale));
   line-height: var(--line-height);
   color: var(--color-text);
@@ -486,7 +485,7 @@ body {
 
 /* Grammar section - explanation sentences have green background */
 /* Only for sentences that are: not numbered, not checkbox, not indented, not dialogue, and not after a checkbox */
-.section--grammar .sentence:not([data-numbered="true"]):not(:has(.sentence__checkbox)):not(.sentence--indented):not(.sentence--dialogue-grid) {
+.section--grammar .sentence:not([data-numbered="true"]):not(:has(.sentence__checkbox)):not(.sentence--indented):not(.sentence--dialogue-grid):not(.sentence--table-only) {
   background: #f0fff4;
 }
 
@@ -518,7 +517,7 @@ body {
 .grammar-table {
   border: 2px solid var(--color-border);
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;
   margin: var(--spacing-md);
 }
 
@@ -536,9 +535,10 @@ body {
 }
 
 .grammar-table__cell {
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-xs);
   font-size: calc(var(--font-size-base) * var(--font-scale, 1));
   text-align: center;
+  white-space: pre-line;
 }
 
 .grammar-table__cell + .grammar-table__cell {
@@ -582,6 +582,37 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+/* Inline grammar table */
+.sentence--table-only {
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.sentence__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.sentence__table th,
+.sentence__table td {
+  border: 1px solid #d0d0d0;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.sentence__table th {
+  background: #fff;
+  font-weight: 600;
+}
+
+.sentence__table td {
+  background: #fff;
+}
+
+.sentence__table td:empty {
+  background: #fafafa;
 }
 
 /* Dialogue layout - number inline with text, pinyin/translation below aligned to text */
@@ -2163,7 +2194,6 @@ body {
   font-size: calc(var(--font-size-small) * var(--font-scale, 1));
   color: var(--color-text-translation);
   margin-top: var(--spacing-xs);
-  font-family: var(--font-main);
   font-style: italic;
 }
 
@@ -2174,7 +2204,7 @@ body {
   border-radius: 4px;
   color: var(--color-text-translation);
   font-size: var(--font-size-small);
-  font-family: var(--font-main);
+  font-family: inherit;
 }
 
 /* =============================================================================
@@ -3494,7 +3524,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 var(--spacing-xl) var(--spacing-lg);
-  font-family: var(--font-main);
+  font-family: inherit;
   background: #f5f5f5;
 }
 
@@ -3562,7 +3592,7 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
-  font-family: var(--font-main);
+  font-family: inherit;
   transition: all 0.15s ease;
 }
 
@@ -3600,7 +3630,7 @@ body {
   color: #fff;
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   font-weight: 700;
-  font-family: var(--font-main);
+  font-family: inherit;
   cursor: pointer;
   padding: 8px 0;
   min-height: 44px;
@@ -3630,7 +3660,7 @@ body {
   background: none;
   border: none;
   font-size: 0.9rem;
-  font-family: var(--font-main);
+  font-family: inherit;
   color: #333;
   cursor: pointer;
   text-align: left;
@@ -3646,7 +3676,7 @@ body {
 }
 
 .home__hero-logo-img {
-  height: 80px;
+  height: 64px;
   width: auto;
 }
 
@@ -4374,17 +4404,19 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
-  font-family: var(--font-main);
+  font-family: inherit;
   white-space: nowrap;
   flex-shrink: 0;
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  text-decoration: none;
 }
 
 .lang-page__tab--active {
   background: #f5f5f5;
-  color: #4a8af5;
+  color: #4a7ab5;
   margin-bottom: -1px;
+  text-decoration: none;
 }
 
 .lang-page__tab--disabled {
@@ -4430,7 +4462,7 @@ body {
 .lang-page__book-level {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: #4a8af5;
+  color: #4a7ab5;
   line-height: 1;
 }
 
@@ -4625,7 +4657,7 @@ body {
   height: calc(var(--header-height) + env(safe-area-inset-top, 0px));
   background: rgba(245, 245, 245, 0.97);
   border-bottom: 1px solid var(--color-border);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: inherit;
   z-index: 100;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -4746,7 +4778,7 @@ body {
   height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
   background: rgba(245, 245, 245, 0.97);
   border-top: 1px solid var(--color-border);
-  font-family: var(--font-main);
+  font-family: inherit;
   z-index: 100;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -4819,7 +4851,7 @@ body {
   margin: 0 auto;
   padding: 4rem var(--spacing-xl);
   text-align: center;
-  font-family: var(--font-main);
+  font-family: inherit;
 }
 
 .not-found h1 {
@@ -4861,7 +4893,7 @@ body {
   padding: var(--spacing-lg) var(--spacing-xl);
   padding-top: calc(var(--header-height) + var(--spacing-md) + env(safe-area-inset-top, 0px));
   padding-bottom: calc(var(--spacing-xl) + env(safe-area-inset-bottom, 0px));
-  font-family: var(--font-main);
+  font-family: inherit;
   font-size: calc(var(--font-size-base) * var(--font-scale));
   line-height: var(--line-height);
   color: var(--color-text);

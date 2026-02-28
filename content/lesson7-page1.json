@@ -302,7 +302,16 @@
           "text_original": "",
           "text_translation": "",
           "text_translation_ru": "",
-          "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-7-1-table.jpg"
+          "tableData": {
+            "headers": ["点", "分", "数字写法"],
+            "rows": [
+              ["九点", "", "9:00"],
+              ["二十点", "", "20:00"],
+              ["十五点", "四十", "15:40"],
+              ["二十一点", "十分", "21:10"],
+              ["二十二点", "零五", "22:05"]
+            ]
+          }
         },
         {
           "id": "l7p1-g1-s5",

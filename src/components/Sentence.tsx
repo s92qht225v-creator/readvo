@@ -110,6 +110,32 @@ export const Sentence: React.FC<SentenceProps> = React.memo(function Sentence({
     }
   }, [sentence.id, sentence.audio_url, onSentenceClick, onAudioClick, hasInlineTranslation]);
 
+  // Table-only sentence (e.g., grammar reference table)
+  if (sentence.tableData && (!sentence.text_original || sentence.text_original.trim() === '')) {
+    return (
+      <div className="sentence sentence--table-only" data-sentence-id={sentence.id}>
+        <table className="sentence__table">
+          <thead>
+            <tr>
+              {sentence.tableData.headers.map((header, i) => (
+                <th key={i}>{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {sentence.tableData.rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j}>{cell || ''}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
   // Image-only sentence (e.g., textbook table scan in grammar sections)
   if (sentence.image_url && (!sentence.text_original || sentence.text_original.trim() === '')) {
     return (
