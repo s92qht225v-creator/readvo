@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_PAYMENT_BOT_TOKEN!;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_PAYMENT_CHAT_ID!;
-
 function getSupabaseWithAuth(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -29,6 +26,14 @@ async function sendTelegramNotification(
   amount: number,
   screenshotUrl: string
 ) {
+  const botToken = process.env.TELEGRAM_PAYMENT_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_PAYMENT_CHAT_ID;
+
+  if (!botToken || !chatId) {
+    console.error('Telegram env vars missing:', { botToken: !!botToken, chatId: !!chatId });
+    return;
+  }
+
   const planLabels: Record<string, string> = {
     '1_month': '1 oy',
     '3_months': '3 oy',
@@ -39,14 +44,19 @@ async function sendTelegramNotification(
   const formattedAmount = amount.toLocaleString('uz-UZ').replace(/,/g, ' ');
   const message = `💳 Yangi to'lov!\n\n👤 ${email}\n📦 ${planLabels[plan] || plan}\n💰 ${formattedAmount} so'm\n📸 ${screenshotUrl}`;
 
-  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+  const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      chat_id: TELEGRAM_CHAT_ID,
+      chat_id: chatId,
       text: message,
     }),
   });
+
+  if (!res.ok) {
+    const body = await res.text();
+    console.error('Telegram API error:', res.status, body);
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -104,8 +114,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: dbError.message }, { status: 500 });
   }
 
-  // Send Telegram notification (non-blocking)
-  sendTelegramNotification(user.email!, plan, amount, screenshotUrl).catch(() => {});
+  // Send Telegram notification (await it so it completes before response)
+  await sendTelegramNotification(user.email!, plan, amount, screenshotUrl);
 
   return NextResponse.json({ ok: true });
 }
