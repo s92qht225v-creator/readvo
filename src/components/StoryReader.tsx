@@ -7,6 +7,8 @@ import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';
 import { alignPinyinToText } from '../utils/rubyText';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { useTrial } from '../hooks/useTrial';
+import { Paywall } from './Paywall';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -192,6 +194,12 @@ function formatTime(seconds: number): string {
 }
 
 export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
+  // Trial check — stories/dialogues are never free
+  const trial = useTrial();
+  if (trial?.isTrialExpired) {
+    return <Paywall />;
+  }
+
   const [language, toggleLanguage] = useLanguage();
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -421,7 +429,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={listPath || `${bookPath}/stories`} className="reader__home">
-            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={showPinyin}
@@ -588,11 +596,11 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
           {isLoading ? (
             <span className="story__play-fab-spinner" />
           ) : isPlaying ? (
-            <svg className="story__play-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
             </svg>
           ) : (
-            <svg className="story__play-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M8 5v14l11-7z" />
             </svg>
           )}

@@ -9,6 +9,7 @@ interface User {
   email: string;
   name: string;
   avatar_url?: string;
+  created_at: string;
 }
 
 interface AuthContextType {
@@ -33,6 +34,7 @@ function mapUser(supabaseUser: SupabaseUser): User {
     email: supabaseUser.email || '',
     name: supabaseUser.user_metadata?.full_name || supabaseUser.user_metadata?.name || supabaseUser.email || '',
     avatar_url: supabaseUser.user_metadata?.avatar_url || supabaseUser.user_metadata?.picture,
+    created_at: supabaseUser.created_at,
   };
 }
 

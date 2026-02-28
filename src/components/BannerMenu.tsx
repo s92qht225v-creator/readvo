@@ -3,10 +3,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { useTrial } from '../hooks/useTrial';
 
 export function BannerMenu() {
   const [language, , setLanguage] = useLanguage();
   const { user, logout } = useAuth();
+  const trial = useTrial();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -44,6 +46,15 @@ export function BannerMenu() {
                 <span className="home__menu-user-name">{user.name}</span>
                 <span className="home__menu-user-email">{user.email}</span>
               </div>
+              {trial && (
+                <div className={`home__menu-trial${trial.isTrialExpired ? ' home__menu-trial--expired' : ''}`}>
+                  {trial.isTrialExpired
+                    ? (language === 'ru' ? 'Пробный период закончился' : 'Sinov muddati tugadi')
+                    : (language === 'ru'
+                        ? `Пробный: осталось ${trial.daysLeft} дн.`
+                        : `Sinov: ${trial.daysLeft} kun qoldi`)}
+                </div>
+              )}
               <div className="home__menu-divider" />
             </>
           )}

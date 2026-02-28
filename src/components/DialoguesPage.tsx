@@ -20,6 +20,7 @@ const TAGS: Record<string, { uz: string; ru: string }> = {
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
 const SEEN_KEY = 'blim-dialogue-seen';
+const LAST_VISITED_KEY = 'blim-dialogue-last-visited';
 const NEW_DAYS = 3;
 
 function isNew(dateAdded?: string, seen?: Set<string>, id?: string): boolean {
@@ -63,6 +64,16 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
       const savedSeen = localStorage.getItem(SEEN_KEY);
       if (savedSeen) setSeen(new Set(JSON.parse(savedSeen)));
     } catch { /* ignore */ }
+
+    // Scroll to last visited dialogue
+    const lastVisited = sessionStorage.getItem(LAST_VISITED_KEY);
+    if (lastVisited) {
+      sessionStorage.removeItem(LAST_VISITED_KEY);
+      requestAnimationFrame(() => {
+        const el = document.getElementById(lastVisited);
+        if (el) el.scrollIntoView({ block: 'center' });
+      });
+    }
   }, []);
 
   const markSeen = useCallback((id: string) => {
@@ -205,7 +216,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
 
         <div className="home__lessons">
           {filtered.map((dialogue) => (
-            <Link key={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card" onClick={() => markSeen(dialogue.id)}>
+            <Link key={dialogue.id} id={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card" onClick={() => { markSeen(dialogue.id); sessionStorage.setItem(LAST_VISITED_KEY, dialogue.id); }}>
               <div className="dialogue-card__content">
                 <div className="dialogue-card__text">
                   <h3 className="dialogue-card__title">

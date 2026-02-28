@@ -7,6 +7,8 @@ import { FlashcardCard } from './FlashcardCard';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useLanguage } from '../hooks/useLanguage';
 import { shuffleArray } from '../utils/shuffle';
+import { useTrial } from '../hooks/useTrial';
+import { Paywall } from './Paywall';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
@@ -14,6 +16,13 @@ export interface FlashcardDeckProps {
 }
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) => {
+  // Trial check — lesson 1 flashcards are free
+  const trial = useTrial();
+  const isFreeContent = deck.words[0]?.lesson === 1;
+  if (trial?.isTrialExpired && !isFreeContent) {
+    return <Paywall />;
+  }
+
   const [cards, setCards] = useState<FlashcardWord[]>([...deck.words]);
   const [isShuffled, setIsShuffled] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,7 +104,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={`${bookPath}/flashcards`} className="reader__home">
-            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <div className="reader__controls">
             <button
@@ -135,11 +144,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
           {audio.isLoading(currentCard.id) ? (
             <span className="flashcard__audio-fab-spinner" />
           ) : audio.isPlaying(currentCard.id) ? (
-            <svg className="flashcard__audio-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <svg className="flashcard__audio-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
             </svg>
           ) : (
-            <svg className="flashcard__audio-fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <svg className="flashcard__audio-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M8 5v14l11-7z" />
             </svg>
           )}
@@ -197,8 +206,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
             onFlip={handleFlip}
           />
 
-          {/* Action buttons - visible only when flipped */}
-          <div className={`flashcard__actions${!isFlipped ? ' flashcard__actions--hidden' : ''}`}>
+          {/* Action buttons - always visible */}
+          <div className="flashcard__actions">
             <button
               className="flashcard__action-btn flashcard__action-btn--unknown"
               onClick={handleUnknown}
@@ -231,7 +240,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
             onClick={() => setDirection((d) => d === 'cn' ? 'native' : 'cn')}
             type="button"
           >
-            {direction === 'cn' ? `中→${language === 'ru' ? 'RU' : 'UZ'}` : `${language === 'ru' ? 'RU' : 'UZ'}→中`}
+            {direction === 'cn' ? `中 › ${language === 'ru' ? 'RU' : 'UZ'}` : `${language === 'ru' ? 'RU' : 'UZ'} › 中`}
           </button>
         </div>
       </nav>

@@ -4,6 +4,8 @@ import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react'
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { ReaderControls } from './ReaderControls';
+import { useTrial } from '../hooks/useTrial';
+import { Paywall } from './Paywall';
 
 interface KaraokeChar {
   id: number;
@@ -38,6 +40,12 @@ interface KaraokePlayerProps {
 }
 
 export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
+  // Trial check — karaoke is never free
+  const trial = useTrial();
+  if (trial?.isTrialExpired) {
+    return <Paywall />;
+  }
+
   const [language, toggleLanguage] = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);

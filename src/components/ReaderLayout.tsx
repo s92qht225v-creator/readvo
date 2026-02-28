@@ -21,6 +21,8 @@ import { GuidedLesson } from './GuidedLesson';
 import { ReaderControls } from './ReaderControls';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { useTrial } from '../hooks/useTrial';
+import { Paywall } from './Paywall';
 
 interface NavLink {
   lessonId: string;
@@ -84,6 +86,13 @@ export function ReaderLayout({
     });
   }, [user, lessonId, pageNum, getAccessToken]);
 
+  // Trial check — lesson 1 is always free
+  const trial = useTrial();
+  const isFreeContent = lessonId === '1';
+  if (trial?.isTrialExpired && !isFreeContent) {
+    return <Paywall />;
+  }
+
   // Active sentence for translation panel
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
 
@@ -127,7 +136,7 @@ export function ReaderLayout({
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={bookPath || '/'} className="reader__home">
-            <img src="/logo-blue.svg" alt="Blim" className="reader__home-logo" />
+            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
           </Link>
           <ReaderControls
             isPinyinVisible={isPinyinVisible}

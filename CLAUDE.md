@@ -15,7 +15,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 ## URL Structure
 ```
 /                                           # Home/landing page (redirects logged-in users to /chinese)
-/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Flesh, Karaoke, Test)
+/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Flesh, KTV, Test)
 /[language]?tab=[tabId]                     # Language page with specific tab pre-selected
 /[language]/[book]                          # Book page - lesson list
 /[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
@@ -30,7 +30,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 
 Example routes:
 - `/` - Landing page (logged-in users auto-redirect to `/chinese`)
-- `/chinese` - Chinese language page with tabs (Kitob, Matn, Flesh, Karaoke, Test)
+- `/chinese` - Chinese language page with tabs (Kitob, Matn, Flesh, KTV, Test)
 - `/chinese?tab=flashcards` - Language page with Flashcards tab active
 - `/chinese/hsk1` - HSK 1 book with lesson list
 - `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
@@ -74,7 +74,8 @@ Example routes:
 │   │   ├── ReaderLayout.tsx   # Layout with fixed header/footer
 │   │   ├── ReaderControls.tsx # Header controls (focus, language, font)
 │   │   ├── HomePage.tsx       # Home page (language selection cards)
-│   │   ├── LanguagePage.tsx   # Language page (tabbed: HSK, Stories, Flashcards, Tests)
+│   │   ├── BannerMenu.tsx    # Shared hamburger menu for all banner pages
+│   │   ├── LanguagePage.tsx   # Language page (tabbed: HSK, Stories, Flashcards, KTV, Tests)
 │   │   ├── BookPage.tsx       # Book page (lesson list with pages)
 │   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
 │   │   ├── StoriesPage.tsx     # Stories list page
@@ -123,7 +124,8 @@ Example routes:
 ├── .env.local                  # Supabase credentials
 └── public/
     ├── logo.svg               # White text logo (for dark backgrounds: banner, karaoke)
-    ├── logo-blue.svg          # Blue text logo #71a3da (for light backgrounds: reader header, landing nav)
+    ├── logo-blue.svg          # Blue text logo #71a3da (for light backgrounds: landing nav)
+    ├── logo-red.svg           # Red text logo #dc2626 (for grey backgrounds: reader headers)
     └── audio/                  # Local MP3 audio files (legacy)
 ```
 
@@ -258,7 +260,7 @@ Page → Section → Sentence → Word
 - Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
 
 ### Karaoke Player
-- Accessible from Language Page → Karaoke tab → song card → `/chinese/hsk1/karaoke/[songId]`
+- Accessible from Language Page → KTV tab → song card → `/chinese/hsk1/karaoke/[songId]`
 - Per-character synced lyrics with timestamp-based highlighting (characters light up as they're sung)
 - **Dark theme**: Entire page uses `#0a0a0a` background with dark-themed overrides for all shared components (header, translation panel, bottom bar, toggle buttons)
 - **Ruby pinyin**: Each character gets `<ruby>/<rt>/<rp>` pinyin annotation. Pinyin uses `0.5em` font size, italic, white with reduced opacity. Punctuation characters skip pinyin automatically.
@@ -297,10 +299,11 @@ Page → Section → Sentence → Word
 - **Inactive tab text**: White (`#fff`) on red banner
 - **Book level text / Lesson number badge**: `#dc2626`
 - **Logo (dark)**: `/public/logo.svg` — dark letterforms with red accents (play triangle + "m" chevron). Used on banner, karaoke, landing hero.
-- **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` variant, used on light backgrounds (reader header, landing nav)
+- **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` variant, used on light backgrounds (landing nav)
+- **Logo (red)**: `/public/logo-red.svg` — `#dc2626` variant, used on grey reader headers (lesson, story, flashcard)
 - **Border-radius**: Globally reduced — 16→10, 12→8, 8→6, 6→4, 4→3px. Circles (50%) unchanged.
-- **Tab labels (UZ)**: Kitob | Matn | Flesh | Karaoke | Test
-- **Tab labels (RU)**: Книги | Текст | Флеш | Караоке | Тесты
+- **Tab labels (UZ)**: Kitob | Matn | Flesh | KTV | Test
+- **Tab labels (RU)**: Книги | Текст | Флеш | KTV | Тесты
 
 ### Styling Conventions
 - Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
@@ -615,9 +618,9 @@ Objectives, text, exercise, and tongue twister sections use a modern floating ca
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
-- Tab labels: Kitob, Matn, Flesh, Karaoke, Test (short forms, no "-lar" suffix)
+- Tab labels: Kitob, Matn, Flesh, KTV, Test (short forms, no "-lar" suffix)
 - Matn tab shows two cards: **Hikoyalar** (→ `/chinese/hsk2/stories`) and **Dialoglar** (→ `/chinese/hsk1/dialogues`)
-- Language toggle: Custom dropdown selectors on language page banner ("Men bilaman"/"Я знаю" for known language, "Men o'rganaman"/"Я изучаю" for target language). Lesson/story headers still use UZ/RU toggle button.
+- Language toggle: Inside hamburger menu on banner pages (O'zbekcha/Русский toggle buttons under "Til" label, 中文 under "Men o'rganaman" label). Lesson/story reader headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)
 All content supports both Uzbek and Russian translations:
@@ -684,16 +687,20 @@ main.home (max-width container + padding)
 main.home (reuses home styling, no top padding)
 ├── header.home__hero (full-width red banner #dc2626, z-index: 10)
 │   └── div.home__hero-inner (constrained max-width matching page)
-│       ├── div.home__hero-top-row (flex: logo | lang selectors | menu)
+│       ├── div.home__hero-top-row (flex: logo | menu)
 │       │   ├── Link.home__hero-logo > img.home__hero-logo-img (logo, 64px)
-│       │   ├── div.home__lang-selectors (flex, gap between selectors)
-│       │   │   ├── div.home__lang-selector ("I know" dropdown — UZ/RU)
-│       │   │   └── div.home__lang-selector ("I'm learning" dropdown — Chinese)
-│       │   └── div.home__menu (hamburger menu, position: relative)
+│       │   └── BannerMenu (shared component, hamburger menu)
 │       │       ├── button.home__menu-btn (44px, hamburger icon)
-│       │       └── div.home__menu-dropdown (right-aligned dropdown: user info, payment, logout)
+│       │       └── div.home__menu-dropdown (right-aligned dropdown)
+│       │           ├── div.home__menu-user (name + email, if logged in)
+│       │           ├── div.home__menu-section-label ("Til" / "Язык")
+│       │           ├── div.home__menu-lang-row (O'zbekcha / Русский toggle buttons)
+│       │           ├── div.home__menu-section-label ("Men o'rganaman" / "Я изучаю")
+│       │           ├── div.home__menu-lang-row (中文 button)
+│       │           ├── button.home__menu-item (To'lov / Оплата)
+│       │           └── button.home__menu-item (Chiqish / Выйти, if logged in)
 │       └── div.lang-page__tabs (folder tabs flush at banner bottom via margin-top: auto)
-│           └── button.lang-page__tab (Kitob | Matn | Flesh | Karaoke | Test)
+│           └── button.lang-page__tab (Kitob | Matn | Flesh | KTV | Test)
 ├── section.home__content
 │   └── div.lang-page__books (responsive grid of cards)
 │       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
@@ -840,9 +847,12 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
 - `.home__lang-select-btn` - Dropdown trigger button (transparent, white text, `min-height: 44px`, `padding: 8px 0`)
 - `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered, `border-radius: 8px`, `max-width: calc(100vw - 32px)` to prevent viewport clipping)
-- `.home__menu` - Hamburger menu wrapper (`position: relative`)
+- `.home__menu` - Hamburger menu wrapper (`position: relative`). Shared via `BannerMenu.tsx` component.
 - `.home__menu-btn` - Hamburger button (`44px`, `border-radius: 8px`, semi-transparent white on red banner)
 - `.home__menu-dropdown` - Right-aligned dropdown (`position: absolute`, `right: 0`, white bg, shadow, `min-width: 180px`)
+- `.home__menu-section-label` - Section label in menu (uppercase grey, e.g., "Til", "Я изучаю")
+- `.home__menu-lang-row` - Flex row for language toggle buttons (`gap: 6px`, `padding: 6px 16px 10px`)
+- `.home__menu-lang-btn` / `--active` - Language toggle buttons (`flex: 1`, active = red `#dc2626` bg)
 - `.home__menu-item` - Menu item button (`min-height: 44px`, full-width, hover `#f5f5f5`)
 - `.home__menu-user` - User info display (name + email, non-clickable, `#f9f9f9` bg)
 - `.home__menu-divider` - Thin separator line (`1px solid #e5e5e5`)
@@ -857,11 +867,11 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - `.lang-page__book-subtitle` - Grey subtitle text
 - `.lang-page__placeholder` - Centered placeholder for empty tabs
 - `.lesson-card` - Lesson card on book page (number badge 36px/8px radius + translation, no Chinese title/pinyin)
-- `.reader__home-logo` - Logo image in reader headers (64px height). Uses `/logo-blue.svg` (`#71a3da` text) on light backgrounds, `/logo.svg` (white) on karaoke
+- `.reader__home-logo` - Logo image in reader headers (64px height). Uses `/logo-red.svg` (`#dc2626`) on grey reader headers, `/logo.svg` (white) on karaoke
 - `.page` - Lesson content container (permanent `1em` extra top/bottom padding for translation panel space)
 - `.page__translation-panel` - Fixed translation panel below header (z-index 99)
-- `.page__audio-fab` - Floating play button (48x48, blue circle, `bottom: 80px`, `right: 24px`, `z-index: 80`)
-- `.page__audio-fab--playing` - Green background when audio playing
+- `.page__audio-fab` - Floating play button (48x48, red circle, `bottom: 80px`, `right: 24px`, `z-index: 80`). All play FABs (lesson, story, flashcard) share same size/position.
+- `.page__audio-fab--playing` - Stays red (`var(--color-accent)`) when audio playing
 - `.reader__header` - Fixed header (full-width, grey background `rgba(245, 245, 245, 0.97)`)
 - `.reader__header-inner` - Header content (constrained to match page width)
 - `.reader__bottom-nav` - Fixed bottom nav (full-width, grey background `rgba(245, 245, 245, 0.97)`)
