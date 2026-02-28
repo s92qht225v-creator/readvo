@@ -149,7 +149,7 @@ export function LanguagePage() {
                 className={`lang-page__tab ${activeTab === tab.id ? 'lang-page__tab--active' : ''}`}
                 onClick={() => setActiveTab(tab.id)}
                 type="button"
-                style={activeTab === tab.id ? { background: '#f5f5f5', color: '#4a7ab5' } : undefined}
+                style={activeTab === tab.id ? { background: '#f5f5f5', color: '#3b7dd8' } : undefined}
               >
                 {language === 'ru' ? tab.label_ru : tab.label}
               </button>

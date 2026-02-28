@@ -169,7 +169,7 @@ function LandingPage({ language, toggleLanguage, loginWithGoogle, s }: {
       <nav className="landing__nav">
         <div className="landing__nav-inner">
           <span className="landing__nav-logo">
-            <img src="/logo-blue.svg" alt="Blim" className="landing__nav-logo-img" />
+            <img src="/logo.svg" alt="Blim" className="landing__nav-logo-img" />
           </span>
           <div className="landing__nav-links">
             <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>
