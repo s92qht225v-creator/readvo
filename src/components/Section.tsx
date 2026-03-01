@@ -25,6 +25,56 @@ import { FillBlankExercise } from './FillBlankExercise';
 import { MultipleChoiceExercise } from './MultipleChoiceExercise';
 import { ImageDescribeExercise } from './ImageDescribeExercise';
 import { TableFillExercise } from './TableFillExercise';
+import { TypedFillBlankExercise } from './TypedFillBlankExercise';
+import { ErrorCorrectionExercise } from './ErrorCorrectionExercise';
+
+/** Parse **bold** and _italic_ markdown in text, returning React nodes */
+function parseInlineMarkdown(text: string): React.ReactNode[] {
+  return text.split(/(\*\*[^*]+\*\*|_[^_\n]+_)/g).map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith('_') && part.endsWith('_') && part.length > 2) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
+    }
+    return part;
+  });
+}
+
+/** Renders tip translation with support for multi-bullet grid lines */
+function renderTipTranslation(text: string): React.ReactNode {
+  const lines = text.split('\n');
+  const result: React.ReactNode[] = [];
+  let gridLines: string[][] = [];
+
+  const flushGrid = () => {
+    if (gridLines.length === 0) return;
+    const maxCols = Math.max(...gridLines.map(l => l.length));
+    result.push(
+      <div key={`grid-${result.length}`} className="section__tip-grid" style={{ gridTemplateColumns: `repeat(${maxCols}, auto)` }}>
+        {gridLines.map((items, ri) =>
+          items.map((item, ci) => <span key={`${ri}-${ci}`}>{parseInlineMarkdown(item)}</span>)
+        )}
+      </div>
+    );
+    gridLines = [];
+  };
+
+  lines.forEach((line, i) => {
+    // Count bullet items on this line
+    const bulletItems = line.split('•').filter(s => s.trim()).map(s => '• ' + s.trim());
+    if (bulletItems.length >= 2) {
+      gridLines.push(bulletItems);
+    } else {
+      flushGrid();
+      if (i > 0) result.push(<br key={`br-${i}`} />);
+      result.push(<React.Fragment key={`line-${i}`}>{parseInlineMarkdown(line)}</React.Fragment>);
+    }
+  });
+  flushGrid();
+
+  return result;
+}
 
 export interface SectionProps {
   /** The section data */
@@ -124,6 +174,11 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       {section.heading && (
         <div className="section__header">
           <h2 className="section__heading">{getHeading()}</h2>
+          {section.heading_sub && (
+            <span className="section__heading-sub">
+              {language === 'ru' && section.heading_sub_ru ? section.heading_sub_ru : section.heading_sub}
+            </span>
+          )}
           {section.subheading && (
             <span className="section__subheading">{getSubheading()}</span>
           )}
@@ -200,7 +255,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       )}
 
       {/* Content: image + sentences */}
-      {(section.image_url || section.tip || section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || (section.type === 'bonus' && section.video_url) || section.grammarTableData || section.image_url_bottom || (section.images_bottom && section.images_bottom.length > 0)) && (
+      {(section.image_url || section.tip || section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || (section.type === 'bonus' && section.video_url) || section.grammarTableData || section.image_url_bottom || (section.images_bottom && section.images_bottom.length > 0)) && (
       <div className={`section__content ${section.image_url ? 'section__content--with-image' : ''}`}>
         {/* Top image (optional, original textbook scan) */}
         {section.image_url && (
@@ -213,24 +268,34 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
           </div>
         )}
 
-        {/* Tip box (optional, e.g., "小语助力") — rendered after image */}
-        {section.tip && (
+        {/* Tip box (optional) — rendered after image but before sentences, unless grammar table exists (then after table) */}
+        {section.tip && !section.grammarTableData && (
           <div className="section__tip">
             {section.tip.label && (
-              <span className="section__tip-label">{section.tip.label}</span>
+              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : (section.tip.label_uz || section.tip.label)}</span>
             )}
             <p className="section__tip-text">{section.tip.text}</p>
             {section.tip.pinyin && isPinyinVisible && (
               <p className="section__tip-pinyin">{section.tip.pinyin}</p>
             )}
             {getTipTranslation() && (
-              <p className="section__tip-translation">{getTipTranslation()}</p>
+              <div className="section__tip-translation">{renderTipTranslation(getTipTranslation()!)}</div>
+            )}
+            {section.tip.vocabList && (
+              <div className="section__tip-vocab">
+                {section.tip.vocabList.map((item, i) => (
+                  <div key={i} className="section__tip-vocab-row">
+                    <span className="section__tip-vocab-en">{item.en}</span>
+                    <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         )}
 
         {/* Sentences, Matching Exercise, or Fill-Blank Exercise */}
-        {(section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || (section.type === 'bonus' && section.video_url)) && (
+        {(section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || (section.type === 'bonus' && section.video_url)) && (
         <div className="section__sentences">
           {section.type === 'matching' && section.matchingItems ? (
             <MatchingExercise
@@ -307,6 +372,35 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
               }))}
               language={language}
             />
+          ) : section.type === 'typedfillblank' && section.typedFillBlankData ? (
+            <TypedFillBlankExercise
+              cards={section.typedFillBlankData.cards.map((card) => ({
+                id: card.id,
+                parts: card.parts.map((p) => ({ type: p.type, content: p.content })),
+                answers: [...card.answers],
+                alternateAnswers: card.alternateAnswers?.map((alts) => alts ? [...alts] : []),
+                prefilled: card.prefilled,
+                words: card.words?.map((w) => ({ w: w.w, t: w.t, tr: w.tr })),
+              }))}
+              images={section.typedFillBlankData.images?.map((img) => ({
+                label: img.label,
+                caption: img.caption,
+                image_url: img.image_url,
+              }))}
+              language={language}
+            />
+          ) : section.type === 'errorcorrection' && section.errorCorrectionData ? (
+            <ErrorCorrectionExercise
+              cards={section.errorCorrectionData.cards.map((card) => ({
+                id: card.id,
+                sentence: card.sentence,
+                errorStart: card.errorStart,
+                errorEnd: card.errorEnd,
+                correctAnswer: card.correctAnswer,
+                alternateAnswers: card.alternateAnswers ? [...card.alternateAnswers] : undefined,
+              }))}
+              language={language}
+            />
           ) : section.type === 'bonus' && section.video_url ? (
             <div className="bonus__video-wrapper">
               <video
@@ -340,30 +434,72 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         {/* Grammar table (optional, for grammar sections with tabular data) */}
         {section.grammarTableData && (
           <div className="grammar-table">
-            {section.grammarTableData.headers.some(h => h.trim() !== '') && (
-            <div className="grammar-table__row grammar-table__row--header" style={{ gridTemplateColumns: `repeat(${section.grammarTableData.headers.length}, 1fr)` }}>
-              {section.grammarTableData.headers.map((header, i) => (
-                <div key={i} className="grammar-table__cell grammar-table__cell--header">
-                  <span className="grammar-table__cell-label">{header}</span>
-                  {(() => {
-                    const sub = language === 'ru' && section.grammarTableData!.subHeaders_ru?.[i]
-                      ? section.grammarTableData!.subHeaders_ru[i]
-                      : section.grammarTableData!.subHeaders?.[i];
-                    return sub ? <span className="grammar-table__cell-sub">{sub}</span> : null;
-                  })()}
-                </div>
-              ))}
-            </div>
-            )}
-            {section.grammarTableData.rows.map((row, rowIdx) => (
-              <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
-                {row.cells.map((cell, cellIdx) => (
-                  <div key={cellIdx} className="grammar-table__cell">
-                    {cell}
+            {(() => {
+              const hasSubHeaders = section.grammarTableData!.subHeaders || section.grammarTableData!.subHeaders_ru;
+              const hasHeaders = section.grammarTableData!.headers.some(h => h.trim() !== '');
+              if (!hasHeaders && !hasSubHeaders) return null;
+              const displayHeaders = hasSubHeaders
+                ? (language === 'ru' && section.grammarTableData!.subHeaders_ru
+                  ? section.grammarTableData!.subHeaders_ru
+                  : section.grammarTableData!.subHeaders || section.grammarTableData!.headers)
+                : section.grammarTableData!.headers;
+              return (
+              <div className="grammar-table__row grammar-table__row--header" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
+                {displayHeaders.map((header, i) => (
+                  <div key={i} className="grammar-table__cell grammar-table__cell--header">
+                    <span className="grammar-table__cell-label">{header}</span>
                   </div>
                 ))}
               </div>
-            ))}
+              );
+            })()}
+            {section.grammarTableData.rows.map((row, rowIdx) => {
+              const cells = (language === 'ru' && row.cells_ru) ? row.cells_ru : (row.cells_uz || row.cells);
+              return (
+              <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
+                {cells.map((cell, cellIdx) => (
+                  <div key={cellIdx} className="grammar-table__cell">
+                    {(() => {
+                      const isItalic = cell.startsWith('_') && cell.endsWith('_') && cell.length > 2;
+                      const inner = isItalic ? cell.slice(1, -1) : cell;
+                      const parts = inner.split(/(\*\*[^*]+\*\*)/).map((part, pi) =>
+                        part.startsWith('**') && part.endsWith('**')
+                          ? <strong key={pi}>{part.slice(2, -2)}</strong>
+                          : part
+                      );
+                      return isItalic ? <em>{parts}</em> : parts;
+                    })()}
+                  </div>
+                ))}
+              </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Tip box — rendered after grammar table when both exist */}
+        {section.tip && section.grammarTableData && (
+          <div className="section__tip">
+            {section.tip.label && (
+              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : (section.tip.label_uz || section.tip.label)}</span>
+            )}
+            <p className="section__tip-text">{section.tip.text}</p>
+            {section.tip.pinyin && isPinyinVisible && (
+              <p className="section__tip-pinyin">{section.tip.pinyin}</p>
+            )}
+            {getTipTranslation() && (
+              <div className="section__tip-translation">{renderTipTranslation(getTipTranslation()!)}</div>
+            )}
+            {section.tip.vocabList && (
+              <div className="section__tip-vocab">
+                {section.tip.vocabList.map((item, i) => (
+                  <div key={i} className="section__tip-vocab-row">
+                    <span className="section__tip-vocab-en">{item.en}</span>
+                    <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 

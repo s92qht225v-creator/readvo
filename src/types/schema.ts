@@ -59,7 +59,9 @@ export type SectionType =
   | 'fillblank'       // Fill-in-the-blank exercises (选词填空)
   | 'multiplechoice'  // Multiple choice exercises (选择正确答案)
   | 'imagedescribe'   // Image description exercises (看图填空)
-  | 'bonus';          // Bonus content with video (小语的彩蛋)
+  | 'bonus'           // Bonus content with video (小语的彩蛋)
+  | 'typedfillblank'  // Typed fill-in-the-blank exercises (verb conjugation)
+  | 'errorcorrection'; // Error correction exercises (rewrite sentences)
 
 /**
  * A sentence - the atomic unit of the reading system.
@@ -147,6 +149,12 @@ export interface Section {
   /** Optional section heading (Russian) */
   readonly heading_ru?: string;
 
+  /** Optional heading subtitle (e.g., "Present simple, present continuous, stative verbs") */
+  readonly heading_sub?: string;
+
+  /** Optional heading subtitle (Russian) */
+  readonly heading_sub_ru?: string;
+
   /** Optional section subheading (e.g., "Text 1") */
   readonly subheading?: string;
 
@@ -174,10 +182,17 @@ export interface Section {
   /** Optional tip/note box within the section */
   readonly tip?: {
     readonly label?: string;           // e.g., "小语助力", "Xiaoyu's Tip"
+    readonly label_uz?: string;        // Label (Uzbek)
+    readonly label_ru?: string;        // Label (Russian)
     readonly text: string;             // Chinese text
     readonly pinyin?: string;          // Pinyin
     readonly translation?: string;     // Translation (Uzbek)
     readonly translation_ru?: string;  // Translation (Russian)
+    readonly vocabList?: ReadonlyArray<{
+      readonly en: string;
+      readonly uz: string;
+      readonly ru: string;
+    }>;
   };
 
   /** Optional audio URL for the entire section */
@@ -215,6 +230,12 @@ export interface Section {
 
   /** Grammar table data (only for type: 'grammar') */
   readonly grammarTableData?: GrammarTableData;
+
+  /** Typed fill-in-blank exercise data (only for type: 'typedfillblank') */
+  readonly typedFillBlankData?: TypedFillBlankData;
+
+  /** Error correction exercise data (only for type: 'errorcorrection') */
+  readonly errorCorrectionData?: ErrorCorrectionData;
 }
 
 // =============================================================================
@@ -459,6 +480,12 @@ export interface TableFillData {
 export interface GrammarTableRow {
   /** Values for each column, in order */
   readonly cells: readonly string[];
+
+  /** Uzbek translation of cells (optional, used instead of cells when language is UZ) */
+  readonly cells_uz?: readonly string[];
+
+  /** Russian translation of cells (optional, used instead of cells when language is RU) */
+  readonly cells_ru?: readonly string[];
 }
 
 /**
@@ -548,6 +575,12 @@ export interface LessonHeader {
 
   /** Title translation (Russian) */
   readonly titleTranslation_ru?: string;
+
+  /** Optional subtitle (e.g., "Present simple, present continuous, stative verbs") */
+  readonly subtitle?: string;
+
+  /** Optional subtitle (Russian) */
+  readonly subtitle_ru?: string;
 }
 
 // =============================================================================
@@ -626,4 +659,106 @@ export interface DictionaryEntry {
 
   /** Example sentences (optional) */
   readonly examples?: readonly string[];
+}
+
+// =============================================================================
+// TYPED FILL-IN-THE-BLANK EXERCISE
+// =============================================================================
+
+/**
+ * A part in a typed fill-blank sentence.
+ * 'hint' type shows a prompt in parentheses (e.g., "(go)" for verb conjugation).
+ */
+export interface TypedFillBlankPart {
+  readonly type: 'text' | 'blank' | 'hint';
+  readonly content?: string;
+}
+
+/**
+ * A card in a typed fill-in-the-blank exercise.
+ */
+export interface TypedFillBlankCard {
+  /** Unique identifier */
+  readonly id: string;
+
+  /** Sentence parts (text, blanks, and hints) */
+  readonly parts: readonly TypedFillBlankPart[];
+
+  /** Correct answers for each blank, in order */
+  readonly answers: readonly string[];
+
+  /** Alternative accepted answers for each blank */
+  readonly alternateAnswers?: readonly (readonly string[])[];
+
+  /** Pre-filled answer (shown as example, already marked correct) */
+  readonly prefilled?: string;
+
+  /** Optional image URL for the card */
+  readonly image_url?: string;
+
+  /** Per-word translations for tap-to-translate (English exercises) */
+  readonly words?: readonly TypedFillBlankWord[];
+}
+
+/**
+ * A word translation entry for typed fill-blank exercises.
+ */
+export interface TypedFillBlankWord {
+  /** The English word or phrase */
+  readonly w: string;
+  /** Uzbek translation */
+  readonly t: string;
+  /** Russian translation */
+  readonly tr: string;
+}
+
+/**
+ * Complete data for a typed fill-in-the-blank exercise.
+ */
+export interface TypedFillBlankImage {
+  readonly label: string;
+  readonly caption: string;
+  readonly image_url?: string;
+}
+
+export interface TypedFillBlankData {
+  /** Optional image grid shown above cards */
+  readonly images?: readonly TypedFillBlankImage[];
+  /** Cards with sentences */
+  readonly cards: readonly TypedFillBlankCard[];
+}
+
+// =============================================================================
+// ERROR CORRECTION EXERCISE
+// =============================================================================
+
+/**
+ * A card in an error correction exercise.
+ */
+export interface ErrorCorrectionCard {
+  /** Unique identifier */
+  readonly id: string;
+
+  /** The sentence with the error */
+  readonly sentence: string;
+
+  /** Start index of the error in the sentence */
+  readonly errorStart: number;
+
+  /** End index of the error in the sentence (exclusive) */
+  readonly errorEnd: number;
+
+  /** The correct replacement for the error portion */
+  readonly correctAnswer: string;
+
+  /** Alternative accepted answers */
+  readonly alternateAnswers?: readonly string[];
+}
+
+/**
+ * Complete data for an error correction exercise.
+ */
+export interface ErrorCorrectionData {
+  /** Cards with sentences */
+  readonly cards: readonly ErrorCorrectionCard[];
 }

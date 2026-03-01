@@ -1,0 +1,310 @@
+{
+  "id": "unit1-page2",
+  "pageNumber": 2,
+  "lessonHeader": {
+    "lessonNumber": 1,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Present simple, present continuous, stative verbs",
+    "titleTranslation_ru": "Present simple, present continuous, stative verbs"
+  },
+  "sections": [
+    {
+      "id": "u1p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Helenning rasmlariga qarang va berilgan so'zlardan foydalanib gaplar tuzing. Present Simple ning to'g'ri shaklini ishlating.",
+      "instruction_ru": "Посмотрите на картинки Хелен и составьте предложения, используя подсказки. Используйте правильную форму Present Simple.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "images": [
+          { "label": "1", "caption": "every day / get up / at half past seven", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image1.jpg" },
+          { "label": "4", "caption": "once a week / watch a film at the cinema", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image4.jpg" },
+          { "label": "2", "caption": "often / eat fast food for lunch", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image2.jpg" },
+          { "label": "5", "caption": "rarely / go to the gym", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image5.jpg" },
+          { "label": "3", "caption": "in the evening / usually / meet her friends for coffee", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image3.jpg" },
+          { "label": "6", "caption": "have a driving lesson / twice a week", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image6.jpg" }
+        ],
+        "cards": [
+          {
+            "id": "u1p2-ex1-1",
+            "parts": [
+              { "type": "hint", "content": "every day / get up / at half past seven" },
+              { "type": "blank" }
+            ],
+            "answers": ["Every day Helen gets up at half past seven."],
+            "alternateAnswers": [["Every day Helen gets up at half past seven.", "Helen gets up at half past seven every day.", "Every day, she gets up at half past seven.", "Every day she gets up at half past seven.", "She gets up at half past seven every day."]],
+            "prefilled": "Every day Helen gets up at half past seven.",
+            "words": [
+              { "w": "every day", "t": "har kuni", "tr": "каждый день" },
+              { "w": "get up", "t": "turmoq", "tr": "вставать" },
+              { "w": "at", "t": "-da", "tr": "в" },
+              { "w": "half past seven", "t": "yettidan yarim o'tganda", "tr": "половина восьмого" }
+            ]
+          },
+          {
+            "id": "u1p2-ex1-2",
+            "parts": [
+              { "type": "hint", "content": "often / eat fast food / for lunch" },
+              { "type": "blank" }
+            ],
+            "answers": ["She often eats fast food for lunch."],
+            "alternateAnswers": [["Helen often eats fast food for lunch."]],
+            "words": [
+              { "w": "often", "t": "tez-tez", "tr": "часто" },
+              { "w": "eat", "t": "yemoq", "tr": "есть" },
+              { "w": "fast food", "t": "tez taom", "tr": "фастфуд" },
+              { "w": "for", "t": "uchun", "tr": "на/для" },
+              { "w": "lunch", "t": "tushlik", "tr": "обед" }
+            ]
+          },
+          {
+            "id": "u1p2-ex1-3",
+            "parts": [
+              { "type": "hint", "content": "in the evening / usually / meet her friends for coffee" },
+              { "type": "blank" }
+            ],
+            "answers": ["In the evening, she usually meets her friends for coffee."],
+            "alternateAnswers": [["In the evening she usually meets her friends for coffee.", "She usually meets her friends for coffee in the evening.", "Helen usually meets her friends for coffee in the evening.", "In the evening, Helen usually meets her friends for coffee.", "In the evening Helen usually meets her friends for coffee."]],
+            "words": [
+              { "w": "in the evening", "t": "kechqurun", "tr": "вечером" },
+              { "w": "usually", "t": "odatda", "tr": "обычно" },
+              { "w": "meet", "t": "uchrashmoq", "tr": "встречаться" },
+              { "w": "her", "t": "uning", "tr": "её" },
+              { "w": "friends", "t": "do'stlar", "tr": "друзья" },
+              { "w": "for", "t": "uchun", "tr": "за/для" },
+              { "w": "coffee", "t": "kofe", "tr": "кофе" }
+            ]
+          },
+          {
+            "id": "u1p2-ex1-4",
+            "parts": [
+              { "type": "hint", "content": "once a week / watch a film / at the cinema" },
+              { "type": "blank" }
+            ],
+            "answers": ["Once a week, she watches a film at the cinema."],
+            "alternateAnswers": [["Once a week she watches a film at the cinema.", "She watches a film at the cinema once a week.", "Once a week, Helen watches a film at the cinema.", "Helen watches a film at the cinema once a week."]],
+            "words": [
+              { "w": "once a week", "t": "haftada bir marta", "tr": "раз в неделю" },
+              { "w": "watch", "t": "tomosha qilmoq", "tr": "смотреть" },
+              { "w": "a", "t": "bir", "tr": "один" },
+              { "w": "film", "t": "film", "tr": "фильм" },
+              { "w": "at the cinema", "t": "kinoteatrda", "tr": "в кинотеатре" }
+            ]
+          },
+          {
+            "id": "u1p2-ex1-5",
+            "parts": [
+              { "type": "hint", "content": "rarely / go to the gym" },
+              { "type": "blank" }
+            ],
+            "answers": ["She rarely goes to the gym."],
+            "alternateAnswers": [["Helen rarely goes to the gym."]],
+            "words": [
+              { "w": "rarely", "t": "kamdan-kam", "tr": "редко" },
+              { "w": "go to the gym", "t": "sport zalga bormoq", "tr": "ходить в спортзал" }
+            ]
+          },
+          {
+            "id": "u1p2-ex1-6",
+            "parts": [
+              { "type": "hint", "content": "have a driving lesson / twice a week" },
+              { "type": "blank" }
+            ],
+            "answers": ["She has a driving lesson twice a week."],
+            "alternateAnswers": [["Helen has a driving lesson twice a week.", "She has driving lessons twice a week.", "Helen has driving lessons twice a week."]],
+            "words": [
+              { "w": "have", "t": "olmoq", "tr": "иметь/брать" },
+              { "w": "a", "t": "bir", "tr": "один" },
+              { "w": "driving lesson", "t": "haydash darsi", "tr": "урок вождения" },
+              { "w": "twice a week", "t": "haftada ikki marta", "tr": "два раза в неделю" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u1p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi fe'llarning Present Continuous shaklini to'g'ri yozing. Ba'zi gaplar inkor shaklda bo'lishi mumkin.",
+      "instruction_ru": "Вставьте правильную форму Present Continuous глаголов в скобках. Возможно, вам придётся использовать отрицательные формы.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u1p2-ex2-1",
+            "parts": [
+              { "type": "text", "content": "Gordon? I think he " },
+              { "type": "blank" },
+              { "type": "text", "content": " a letter at the moment. " },
+              { "type": "hint", "content": "write" }
+            ],
+            "answers": ["is writing"],
+            "alternateAnswers": [["'s writing"]],
+            "words": [
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "think", "t": "o'ylamoq", "tr": "думать" },
+              { "w": "he", "t": "u", "tr": "он" },
+              { "w": "a", "t": "bir", "tr": "один" },
+              { "w": "letter", "t": "xat", "tr": "письмо" },
+              { "w": "at the moment", "t": "hozirgi paytda", "tr": "в данный момент" },
+              { "w": "write", "t": "yozmoq", "tr": "писать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-2",
+            "parts": [
+              { "type": "text", "content": "Yes, the match is on TV now, but we " },
+              { "type": "blank" },
+              { "type": "text", "content": ". " },
+              { "type": "hint", "content": "lose" }
+            ],
+            "answers": ["are losing"],
+            "alternateAnswers": [["'re losing"]],
+            "words": [
+              { "w": "yes", "t": "ha", "tr": "да" },
+              { "w": "the", "t": "-", "tr": "определённый артикль" },
+              { "w": "match", "t": "o'yin", "tr": "матч" },
+              { "w": "is", "t": "-dir", "tr": "есть/является" },
+              { "w": "on", "t": "-da", "tr": "на/по" },
+              { "w": "now", "t": "hozir", "tr": "сейчас" },
+              { "w": "but", "t": "lekin", "tr": "но" },
+              { "w": "we", "t": "biz", "tr": "мы" },
+              { "w": "lose", "t": "yutqazmoq", "tr": "проигрывать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-3",
+            "parts": [
+              { "type": "text", "content": "Right now, Margaret " },
+              { "type": "blank" },
+              { "type": "text", "content": " a shower. Do you want to ring later? " },
+              { "type": "hint", "content": "have" }
+            ],
+            "answers": ["is having"],
+            "alternateAnswers": [["'s having"]],
+            "words": [
+              { "w": "right now", "t": "hozir", "tr": "прямо сейчас" },
+              { "w": "a", "t": "bir", "tr": "один" },
+              { "w": "shower", "t": "dush", "tr": "душ" },
+              { "w": "Do", "t": "(yordamchi fe'l)", "tr": "(вспомогательный глагол)" },
+              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
+              { "w": "want", "t": "xohlamoq", "tr": "хотеть" },
+              { "w": "to", "t": "-ga", "tr": "(частица)" },
+              { "w": "ring", "t": "qo'ng'iroq qilmoq", "tr": "позвонить" },
+              { "w": "later", "t": "keyinroq", "tr": "позже" },
+              { "w": "have", "t": "qilmoq", "tr": "принимать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-4",
+            "parts": [
+              { "type": "text", "content": "Sally " },
+              { "type": "blank" },
+              { "type": "text", "content": " with her aunt for a few days. " },
+              { "type": "hint", "content": "stay" }
+            ],
+            "answers": ["is staying"],
+            "alternateAnswers": [["'s staying"]],
+            "words": [
+              { "w": "with", "t": "bilan", "tr": "с" },
+              { "w": "her", "t": "uning", "tr": "её" },
+              { "w": "aunt", "t": "xola/amma", "tr": "тётя" },
+              { "w": "for", "t": "davomida", "tr": "в течение" },
+              { "w": "a few", "t": "bir nechta", "tr": "несколько" },
+              { "w": "days", "t": "kunlar", "tr": "дни" },
+              { "w": "stay", "t": "qolmoq", "tr": "оставаться" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-5",
+            "parts": [
+              { "type": "text", "content": "I " },
+              { "type": "blank" },
+              { "type": "text", "content": "! It's true! I did see Madonna at the supermarket. " },
+              { "type": "hint", "content": "lie" }
+            ],
+            "answers": ["am not lying"],
+            "alternateAnswers": [["'m not lying"]],
+            "words": [
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "It's", "t": "bu", "tr": "это" },
+              { "w": "true", "t": "rost", "tr": "правда" },
+              { "w": "did", "t": "(ta'kidlash uchun)", "tr": "(для усиления)" },
+              { "w": "see", "t": "ko'rmoq", "tr": "видеть" },
+              { "w": "at", "t": "-da", "tr": "в" },
+              { "w": "the", "t": "-", "tr": "определённый артикль" },
+              { "w": "supermarket", "t": "supermarket", "tr": "супермаркет" },
+              { "w": "lie", "t": "yolg'on gapirmoq", "tr": "лгать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-6",
+            "parts": [
+              { "type": "text", "content": "Josh " },
+              { "type": "blank" },
+              { "type": "text", "content": " my bike! It's so annoying. " },
+              { "type": "hint", "content": "always / use" }
+            ],
+            "answers": ["is always using"],
+            "alternateAnswers": [["'s always using"]],
+            "words": [
+              { "w": "my", "t": "mening", "tr": "мой" },
+              { "w": "bike", "t": "velosiped", "tr": "велосипед" },
+              { "w": "It's", "t": "bu", "tr": "это" },
+              { "w": "so", "t": "juda", "tr": "так" },
+              { "w": "annoying", "t": "asabiylashtiradigan", "tr": "раздражающий" },
+              { "w": "always", "t": "har doim", "tr": "всегда" },
+              { "w": "use", "t": "ishlatmoq", "tr": "использовать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-7",
+            "parts": [
+              { "type": "text", "content": "We " },
+              { "type": "blank" },
+              { "type": "text", "content": " lunch, but I can come round and help you later. " },
+              { "type": "hint", "content": "have" }
+            ],
+            "answers": ["are having"],
+            "alternateAnswers": [["'re having"]],
+            "words": [
+              { "w": "We", "t": "biz", "tr": "мы" },
+              { "w": "lunch", "t": "tushlik", "tr": "обед" },
+              { "w": "but", "t": "lekin", "tr": "но" },
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "can", "t": "mumkin", "tr": "могу" },
+              { "w": "come round", "t": "kelmoq", "tr": "зайти" },
+              { "w": "and", "t": "va", "tr": "и" },
+              { "w": "help", "t": "yordam bermoq", "tr": "помочь" },
+              { "w": "you", "t": "senga/sizga", "tr": "тебе/вам" },
+              { "w": "later", "t": "keyinroq", "tr": "позже" },
+              { "w": "have", "t": "yemoq/ichmoq", "tr": "есть/пить" }
+            ]
+          },
+          {
+            "id": "u1p2-ex2-8",
+            "parts": [
+              { "type": "blank" },
+              { "type": "text", "content": " music up there? It's really noisy! " },
+              { "type": "hint", "content": "you / play" }
+            ],
+            "answers": ["Are you playing"],
+            "words": [
+              { "w": "music", "t": "musiqa", "tr": "музыка" },
+              { "w": "up there", "t": "u yerda / tepada", "tr": "там наверху" },
+              { "w": "It's", "t": "bu", "tr": "это" },
+              { "w": "really", "t": "juda/haqiqatan", "tr": "действительно" },
+              { "w": "noisy", "t": "shovqinli", "tr": "шумный" },
+              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
+              { "w": "play", "t": "chalmoq", "tr": "играть" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
