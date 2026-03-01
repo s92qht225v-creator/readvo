@@ -74,28 +74,12 @@ function TappableWord({
   );
 }
 
-function RenderTappableText({
-  text,
-  words,
-  language,
-  activeWord,
-  onWordTap,
-}: {
-  text: string;
-  words: WordEntry[] | undefined;
-  language: Language;
-  activeWord: string | null;
-  onWordTap: (entry: WordEntry) => void;
-}) {
-  if (!words || words.length === 0) {
-    return <span>{text}</span>;
-  }
+const isWordChar = (ch: string) => /\w/.test(ch);
 
+function segmentText(text: string, words: WordEntry[]): { text: string; entry?: WordEntry }[] {
   const sortedWords = [...words].sort((a, b) => b.w.length - a.w.length);
   const segments: { text: string; entry?: WordEntry }[] = [];
   let remaining = text;
-
-  const isWordChar = (ch: string) => /\w/.test(ch);
 
   while (remaining.length > 0) {
     let matched = false;
@@ -104,28 +88,15 @@ function RenderTappableText({
       const phrase = wordEntry.w.toLowerCase();
       const idx = remaining.toLowerCase().indexOf(phrase);
       if (idx !== -1) {
-        // Word boundary check: char before and after the match must not be a word char
         const charBefore = idx > 0 ? remaining[idx - 1] : '';
         const charAfter = remaining[idx + phrase.length] || '';
         if ((charBefore && isWordChar(charBefore)) || (charAfter && isWordChar(charAfter))) {
-          continue; // partial match inside another word, skip
+          continue;
         }
         if (idx > 0) {
-          // Process prefix text word-by-word so individual words get matched
+          // Recursively segment prefix so multi-word phrases in it also match
           const prefix = remaining.slice(0, idx);
-          let prefixRemaining = prefix;
-          while (prefixRemaining.length > 0) {
-            const wm = prefixRemaining.match(/^(\s*\S+)/);
-            if (wm) {
-              const token = wm[1];
-              const entry = findWordEntry(token.trim(), words);
-              segments.push({ text: token, entry: entry || undefined });
-              prefixRemaining = prefixRemaining.slice(token.length);
-            } else {
-              segments.push({ text: prefixRemaining });
-              prefixRemaining = '';
-            }
-          }
+          segments.push(...segmentText(prefix, words));
         }
         segments.push({
           text: remaining.slice(idx, idx + phrase.length),
@@ -150,6 +121,29 @@ function RenderTappableText({
       }
     }
   }
+
+  return segments;
+}
+
+function RenderTappableText({
+  text,
+  words,
+  language,
+  activeWord,
+  onWordTap,
+}: {
+  text: string;
+  words: WordEntry[] | undefined;
+  language: Language;
+  activeWord: string | null;
+  onWordTap: (entry: WordEntry) => void;
+}) {
+  if (!words || words.length === 0) {
+    return <span>{text}</span>;
+  }
+
+  const segments = segmentText(text, words);
+
 
   return (
     <>
