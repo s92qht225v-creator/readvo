@@ -40,6 +40,9 @@ Example routes:
 - `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
 - `/chinese/hsk2/stories` - HSK 2 stories list
 - `/chinese/hsk2/stories/hsk2-story1` - Story reader
+- `/english` - English language page with tabs (Kitob, Test)
+- `/english/destination-b1` - Destination B1 book with unit list
+- `/english/destination-b1/unit/1/page/1` - Unit 1, Page 1
 
 ## Project Structure
 ```
@@ -49,22 +52,38 @@ Example routes:
 │   │   ├── page.tsx           # Home page (language selection)
 │   │   ├── error.tsx          # Error boundary
 │   │   ├── not-found.tsx      # 404 page
-│   │   └── chinese/
-│   │       ├── page.tsx       # Language page (tabbed catalog)
-│   │       └── hsk1/
-│   │           ├── page.tsx   # Book page (lesson list)
-│   │           ├── flashcards/
-│   │           │   ├── page.tsx       # Flashcard list page (per-lesson cards)
-│   │           │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
-│   │           ├── dialogues/
-│   │           │   ├── page.tsx       # Dialogues list page
-│   │           │   └── [dialogueId]/page.tsx  # Dialogue reader (uses StoryReader)
-│   │           ├── stories/
-│   │           │   ├── page.tsx       # Stories list page
-│   │           │   └── [storyId]/page.tsx  # Story reader page
-│   │           ├── karaoke/
-│   │           │   └── [songId]/page.tsx   # Karaoke player page
-│   │           └── lesson/[lessonId]/page/[pageNum]/page.tsx
+│   │   ├── chinese/
+│   │   │   ├── page.tsx       # Language page (tabbed catalog)
+│   │   │   └── hsk1/
+│   │   │       ├── page.tsx   # Book page (lesson list)
+│   │   │       ├── flashcards/
+│   │   │       │   ├── page.tsx       # Flashcard list page (per-lesson cards)
+│   │   │       │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
+│   │   │       ├── dialogues/
+│   │   │       │   ├── page.tsx       # Dialogues list page
+│   │   │       │   └── [dialogueId]/page.tsx  # Dialogue reader (uses StoryReader)
+│   │   │       ├── stories/
+│   │   │       │   ├── page.tsx       # Stories list page
+│   │   │       │   └── [storyId]/page.tsx  # Story reader page
+│   │   │       ├── karaoke/
+│   │   │       │   └── [songId]/page.tsx   # Karaoke player page
+│   │   │       └── lesson/[lessonId]/page/[pageNum]/page.tsx
+│   │   ├── api/
+│   │   │   ├── admin/
+│   │   │   │   ├── route.ts       # Admin data + actions (GET/POST)
+│   │   │   │   └── check/route.ts # Admin password verification
+│   │   │   ├── payment/
+│   │   │   │   ├── route.ts       # Payment submission (POST)
+│   │   │   │   └── status/route.ts # Payment status (GET)
+│   │   │   ├── subscription/route.ts # Active subscription (GET)
+│   │   │   ├── progress/route.ts  # User progress (GET/POST)
+│   │   │   └── auth/callback/route.ts # OAuth callback
+│   │   ├── payment/page.tsx       # Payment page
+│   │   ├── english/
+│   │   │   ├── page.tsx       # English language page
+│   │   │   └── destination-b1/
+│   │   │       ├── page.tsx   # Book page (unit list)
+│   │   │       └── unit/[unitId]/page/[pageNum]/page.tsx  # Unit reader
 │   ├── components/             # React components
 │   │   ├── Page.tsx           # Top-level page container
 │   │   ├── PageReader.tsx     # Page reader wrapper
@@ -88,10 +107,21 @@ Example routes:
 │   │   ├── FillBlankExercise.tsx     # Dropdown fill-in-the-blank
 │   │   ├── MultipleChoiceExercise.tsx # Multiple choice questions
 │   │   ├── ImageDescribeExercise.tsx  # Image description with typed input
-│   │   └── TableFillExercise.tsx      # Table-based activity exercises
+│   │   ├── TableFillExercise.tsx      # Table-based activity exercises
+│   │   ├── TypedFillBlankExercise.tsx # Typed fill-in-blank (English exercises)
+│   │   ├── ErrorCorrectionExercise.tsx # Error correction (English exercises)
+│   │   ├── EnglishLanguagePage.tsx    # English language page (B1/B2 tabs)
+│   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
+│   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
+│   │   └── Paywall.tsx               # Paywall overlay (trial expired)
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
-│   │   └── useLanguage.ts     # UZ/RU language toggle/set (localStorage)
+│   │   ├── useLanguage.ts     # UZ/RU language toggle/set (localStorage)
+│   │   ├── useAuth.tsx        # Google OAuth auth provider + context
+│   │   └── useTrial.ts       # Trial/subscription status hook
+│   ├── lib/                      # Supabase clients
+│   │   ├── supabase-client.ts # Browser client (anon key, respects RLS)
+│   │   └── supabase-server.ts # Server client (service role, bypasses RLS)
 │   ├── utils/                    # Utility functions
 │   │   └── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
 │   ├── services/               # Data loading
@@ -100,7 +130,8 @@ Example routes:
 │   │   ├── stories.ts        # Loads story JSON from /content/stories
 │   │   ├── dialogues.ts     # Loads dialogue JSON from /content/dialogues
 │   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
-│   │   └── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
+│   │   ├── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
+│   │   └── english-content.ts # Loads English content from /content/english
 │   ├── styles/
 │   │   └── reading.css        # All styles
 │   ├── types/
@@ -119,8 +150,11 @@ Example routes:
 │   ├── stories/
 │   │   └── hsk2/
 │   │       └── story1.json    # Story content files
-│   └── karaoke/
-│       └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
+│   ├── karaoke/
+│   │   └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
+│   └── english/
+│       └── destination-b1/
+│           └── unit1-page1.json  # English grammar content (Destination B1)
 ├── .env.local                  # Supabase credentials
 └── public/
     ├── logo.svg               # White text logo (for dark backgrounds: banner, karaoke)
@@ -155,6 +189,8 @@ Page → Section → Sentence → Word
 - `multiplechoice` - Multiple choice questions → `MultipleChoiceExercise`
 - `imagedescribe` - Image description with typed input → `ImageDescribeExercise`
 - `bonus` - Bonus content with video player
+- `typedfillblank` - Typed fill-in-blank → `TypedFillBlankExercise` (English exercises)
+- `errorcorrection` - Error correction → `ErrorCorrectionExercise` (English exercises)
 
 ## Key Features
 
@@ -637,6 +673,74 @@ npm run build    # Production build
 npm run lint     # Run ESLint
 ```
 
+## Authentication & User Management
+- **Provider**: Supabase Google OAuth (`provider: 'google'`)
+- **Hook**: `src/hooks/useAuth.tsx` — `AuthProvider` wraps entire app in `layout.tsx`
+- **Auth callback**: `src/app/auth/callback/route.ts` — exchanges OAuth code for session
+- **User object**: `{ id, email, name, avatar_url, created_at }` from `user_metadata`
+- **Methods**: `loginWithGoogle()`, `logout()`, `getAccessToken()` (JWT for API calls)
+- **Supabase clients**:
+  - Client (anon key): `src/lib/supabase-client.ts` — for browser, respects RLS
+  - Server (service role): `src/lib/supabase-server.ts` — bypasses RLS for admin/payment ops
+
+## Trial & Subscription System
+- **Hook**: `src/hooks/useTrial.ts`
+- **Trial duration**: 7 days from `user.created_at`
+- **Free content** (always accessible): Lesson 1 (all pages), Flashcards lesson 1
+- **Paid content** (require active trial or subscription): Lessons 2-15, all stories, all dialogues, all karaoke songs, flashcards 2+
+- **Trial status**: `{ daysLeft, isTrialActive, isTrialExpired, hasSubscription, subscriptionDaysLeft }`
+- **Subscription takes priority**: If valid subscription exists, `isTrialActive = true`
+- **Paywall component**: `src/components/Paywall.tsx` — shown when `trial.isTrialExpired && !isFreeContent`
+- **Paywall locations**: ReaderLayout, StoryReader, FlashcardDeck, KaraokePlayer
+- **Subscription API**: `GET /api/subscription` — returns active subscription (ends_at > now)
+- **BannerMenu display**: Active subscription shows "Obuna: N kun qoldi", expired shows "Sinov muddati tugadi" (red), trial shows "Sinov: N kun qoldi" (yellow)
+
+## Payment System
+- **Component**: `src/components/PaymentPage.tsx`
+- **Route**: `/payment` (`src/app/payment/page.tsx`)
+- **Plans**: 1 month (50,000 so'm), 3 months (129,000, -14%), 6 months (229,000, -24%), 12 months (399,000, -33%)
+- **Flow**: User selects plan → uploads payment screenshot → screenshot stored in Supabase `/payments` bucket → `payment_requests` record created with `status: 'pending'` → Telegram notification sent to admin → admin approves/rejects in admin panel
+- **API endpoints**:
+  - `POST /api/payment` — accepts FormData (plan, amount, screenshot), uploads to Supabase, creates payment request, sends Telegram notification
+  - `GET /api/payment/status` — returns user's most recent payment request
+- **Status screens**: Active subscription, pending payment, rejected payment, success confirmation
+- **Database tables**:
+  - `payment_requests`: user_id, user_email, plan, amount, screenshot_url, status ('pending'|'approved'|'rejected'|'cancelled'), created_at
+  - `subscriptions`: user_id, user_email, plan, starts_at, ends_at, created_at
+
+## Telegram Integration
+- **Payment bot**: Sends notification to admin chat when user submits payment screenshot
+- **Message format**: 💳 Yangi to'lov! + email, plan label, formatted amount, screenshot URL
+- **Env vars**: `TELEGRAM_PAYMENT_BOT_TOKEN`, `TELEGRAM_PAYMENT_CHAT_ID`
+- **Called in**: `/api/payment` route immediately after payment request creation
+- **Error handling**: Logs to console if Telegram API fails, doesn't block payment creation
+
+## Admin Panel
+- **Component**: `src/components/AdminPanel.tsx`
+- **Access**: `/?admin=true` → password login via `POST /api/admin/check`
+- **API**: `src/app/api/admin/route.ts` (GET: fetch data, POST: perform actions)
+- **Auth**: Password verified via `x-admin-password` header, uses Supabase service role
+
+### Payments Tab
+- Lists all `payment_requests` with email, plan, amount, status, screenshot
+- Filter by email search
+- Screenshot preview overlay
+- Actions: Approve (creates subscription + updates status), Reject (updates status)
+
+### Users Tab
+- Lists all Supabase auth users with name, email, signup date
+- Shows active subscription status with days remaining
+- Actions: +Kun (add days), -Kun (remove days), Bekor qilish (cancel), Obuna berish (grant N-day subscription)
+
+### Dashboard Stats
+- Total users, active subscriptions, total revenue, pending payments count
+
+## User Progress Tracking
+- **API**: `src/app/api/progress/route.ts` (GET: retrieve, POST: save)
+- **Auto-saved**: ReaderLayout `useEffect` records page visit on load
+- **Database**: `user_progress` table — `user_id, lesson_id, page_num, completed, last_visited_at`
+- **Upsert**: Creates or updates on conflict `(user_id, lesson_id, page_num)`
+
 ## Supabase Storage
 - **Project URL**: https://miruwaeplbzfqmdwacsh.supabase.co
 - **Images bucket**: `/images/` - original textbook scans (HSK-1-1-1.jpg, HSK-1-2-1.jpg, etc.)
@@ -969,6 +1073,129 @@ div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
 - **Card border radius**: 8px at ≤600px
 - **Story reader**: `padding-left/right: var(--spacing-md)` at ≤600px
 - **Dropdown close**: Both `mousedown` and `touchstart` listeners for iOS Safari compatibility
+
+## English Content (Destination B1)
+
+### Architecture
+- **Separate routes**: `/english/...` alongside `/chinese/...` (hardcoded, not dynamic `[language]`)
+- **Separate content service**: `src/services/english-content.ts` reads from `/content/english/destination-b1/`
+- **Separate language page**: `src/components/EnglishLanguagePage.tsx`
+- **Reuses**: ReaderLayout (`hidePinyin={true}`, `navSegment="unit"`), BookPage (`tabConfig`, `unitLabel="Unit"`), Page, Section, Sentence
+- **Zero Chinese regression**: All existing Chinese files untouched
+
+### English Content JSON Format
+```json
+{
+  "id": "unit1-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 1,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Present simple, present continuous, stative verbs",
+    "titleTranslation_ru": "Present simple, present continuous, stative verbs"
+  },
+  "sections": [...]
+}
+```
+- `pinyin`: Always `""` (triggers "Unit" label in LessonHeader instead of "dars")
+- `title`: Section category (e.g., "Grammar", "Vocabulary")
+- `titleTranslation`: English grammar topic list — keep in English for BOTH languages
+
+### Grammar Table Data
+Tables support inline markdown: `**bold**` for emphasis, `_italic text_` for example sentences.
+Translated cells via `cells_uz` / `cells_ru` (first column labels translated, second column English content stays same).
+
+#### Form Table (no headers)
+```json
+{
+  "grammarTableData": {
+    "headers": ["", ""],
+    "rows": [
+      {
+        "cells": ["**statement**", "I/you/we/they **play** ..."],
+        "cells_uz": ["**darak gap**", "I/you/we/they **play** ..."],
+        "cells_ru": ["**утверждение**", "I/you/we/they **play** ..."]
+      }
+    ]
+  }
+}
+```
+
+#### Use/Example Table (with translated headers)
+```json
+{
+  "grammarTableData": {
+    "headers": ["Use", "Example"],
+    "subHeaders": ["Qo'llanilishi", "Misol"],
+    "subHeaders_ru": ["Употребление", "Пример"],
+    "rows": [
+      {
+        "cells": ["Present habits", "_Marsha **goes** to dance lessons._"],
+        "cells_uz": ["Odatiy harakatlar", "_Marsha **goes** to dance lessons._"],
+        "cells_ru": ["Привычки", "_Marsha **goes** to dance lessons._"]
+      }
+    ]
+  }
+}
+```
+When `subHeaders` exist, English headers are hidden — only translated headers shown.
+
+### Tips (Helpful Hints / Watch Out!)
+```json
+{
+  "tip": {
+    "label": "Helpful hints",
+    "label_uz": "Foydali maslahatlar",
+    "label_ru": "Полезные подсказки",
+    "text": "",
+    "translation": "Uzbek explanation with bullet points...",
+    "translation_ru": "Russian explanation with bullet points..."
+  }
+}
+```
+- `text`: Always `""` for English (no English explanation text)
+- Content goes in `translation` / `translation_ru`
+- Use `•` for bullet points, `\n` for line breaks
+- Tip renders AFTER grammar table when both exist in same section
+- Watch out! labels: UZ "Ehtiyot bo'ling!" / RU "Внимание!"
+
+### Typed Fill-in-Blank Exercise
+```json
+{
+  "type": "typedfillblank",
+  "typedFillBlankData": {
+    "cards": [{
+      "id": "card1",
+      "parts": [
+        {"type": "text", "content": "She "},
+        {"type": "blank"},
+        {"type": "text", "content": " to school. "},
+        {"type": "hint", "content": "go"}
+      ],
+      "answers": ["goes"],
+      "alternateAnswers": [["goes"]]
+    }]
+  }
+}
+```
+
+### Error Correction Exercise
+```json
+{
+  "type": "errorcorrection",
+  "errorCorrectionData": {
+    "cards": [{
+      "id": "card1",
+      "sentence": "She go to school every day.",
+      "errorStart": 4,
+      "errorEnd": 6,
+      "correctAnswer": "goes",
+      "alternateAnswers": ["goes"]
+    }]
+  }
+}
+```
 
 ## Content Conventions
 - Content is loaded from `/content/*.json` files

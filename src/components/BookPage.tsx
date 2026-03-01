@@ -22,13 +22,22 @@ const hskLevels = [
   { id: 'hsk6', level: 6, hasContent: false },
 ];
 
+interface TabConfig {
+  id: string;
+  label: string;
+  hasContent: boolean;
+}
+
 interface BookPageProps {
   lessons: LessonInfo[];
   bookPath: string;
   languagePath?: string;
+  tabConfig?: TabConfig[];
+  /** URL segment for page links: 'lesson' (default) or 'unit' */
+  unitLabel?: string;
 }
 
-export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
+export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel }: BookPageProps) {
   const [language] = useLanguage();
   const activeBook = bookPath.split('/').pop() || 'hsk1';
   const { user, getAccessToken } = useAuth();
@@ -64,24 +73,30 @@ export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
             <BannerMenu />
           </div>
           <div className="lang-page__tabs">
-            {hskLevels.map((hsk) =>
-              hsk.hasContent ? (
+            {(tabConfig || hskLevels).map((item) => {
+              const id = 'level' in item ? item.id : item.id;
+              const label = 'level' in item ? `HSK ${item.level}` : item.label;
+              const hasContent = item.hasContent;
+              const href = tabConfig
+                ? `${languagePath || '/english'}/${id}`
+                : `/chinese/${id}`;
+              return hasContent ? (
                 <Link
-                  key={hsk.id}
-                  href={`/chinese/${hsk.id}`}
-                  className={`lang-page__tab ${activeBook === hsk.id ? 'lang-page__tab--active' : ''}`}
+                  key={id}
+                  href={href}
+                  className={`lang-page__tab ${activeBook === id ? 'lang-page__tab--active' : ''}`}
                 >
-                  HSK {hsk.level}
+                  {label}
                 </Link>
               ) : (
                 <span
-                  key={hsk.id}
+                  key={id}
                   className="lang-page__tab lang-page__tab--disabled"
                 >
-                  HSK {hsk.level}
+                  {label}
                 </span>
-              )
-            )}
+              );
+            })}
           </div>
         </div>
       </header>
@@ -118,7 +133,7 @@ export function BookPage({ lessons, bookPath, languagePath }: BookPageProps) {
                   {lesson.pages.map((pageNum) => (
                     <Link
                       key={pageNum}
-                      href={`${bookPath}/lesson/${lesson.lessonId}/page/${pageNum}`}
+                      href={`${bookPath}/${unitLabel ? 'unit' : 'lesson'}/${lesson.lessonId}/page/${pageNum}`}
                       className={`lesson-card__page-link${isPageCompleted(lesson.lessonId, pageNum) ? ' lesson-card__page-link--done' : ''}`}
                     >
                       <span className="lesson-card__page-num">{pageNum}</span>

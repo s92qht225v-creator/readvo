@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -10,8 +11,10 @@ export function BannerMenu() {
   const [language, , setLanguage] = useLanguage();
   const { user, logout } = useAuth();
   const trial = useTrial();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const isEnglishPath = pathname.startsWith('/english');
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -87,12 +90,20 @@ export function BannerMenu() {
             {language === 'ru' ? 'Я изучаю' : "Men o'rganaman"}
           </div>
           <div className="home__menu-lang-row">
-            <button
-              className="home__menu-lang-btn home__menu-lang-btn--active"
-              type="button"
+            <Link
+              href="/chinese"
+              className={`home__menu-lang-btn ${!isEnglishPath ? 'home__menu-lang-btn--active' : ''}`}
+              onClick={() => setMenuOpen(false)}
             >
               中文
-            </button>
+            </Link>
+            <Link
+              href="/english"
+              className={`home__menu-lang-btn ${isEnglishPath ? 'home__menu-lang-btn--active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              English
+            </Link>
           </div>
           <div className="home__menu-divider" />
           <Link href="/payment" className="home__menu-item" onClick={() => setMenuOpen(false)}>

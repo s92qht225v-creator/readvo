@@ -37,6 +37,9 @@ export interface ReaderLayoutProps {
   nextNav: NavLink | null;
   bookPath?: string;
   guided?: boolean;
+  hidePinyin?: boolean;
+  /** URL segment for navigation: 'lesson' (default) or 'unit' */
+  navSegment?: string;
 }
 
 export function ReaderLayout({
@@ -47,9 +50,11 @@ export function ReaderLayout({
   nextNav,
   bookPath = '',
   guided = false,
+  hidePinyin = false,
+  navSegment = 'lesson',
 }: ReaderLayoutProps) {
   // Pinyin visibility: global toggle for all sentences
-  const [isPinyinVisible, setIsPinyinVisible] = useState(true);
+  const [isPinyinVisible, setIsPinyinVisible] = useState(!hidePinyin);
 
   // Translation visibility: global toggle for all sentences
   const [isTranslationVisible, setIsTranslationVisible] = useState(false);
@@ -200,7 +205,7 @@ export function ReaderLayout({
             <div className="reader__bottom-nav-inner">
               {prevNav ? (
                 <Link
-                  href={`${bookPath}/lesson/${prevNav.lessonId}/page/${prevNav.pageNum}`}
+                  href={`${bookPath}/${navSegment}/${prevNav.lessonId}/page/${prevNav.pageNum}`}
                   className="reader__nav-btn"
                 >
                   ← {language === 'ru' ? 'Назад' : 'Oldingi'}
@@ -212,13 +217,15 @@ export function ReaderLayout({
               )}
 
               <div className="reader__nav-toggles">
-                <button
-                  className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`}
-                  onClick={handlePinyinToggle}
-                  type="button"
-                >
-                  Pinyin
-                </button>
+                {!hidePinyin && (
+                  <button
+                    className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`}
+                    onClick={handlePinyinToggle}
+                    type="button"
+                  >
+                    Pinyin
+                  </button>
+                )}
                 <button
                   className={`reader__nav-toggle ${isTranslationVisible ? 'reader__nav-toggle--active' : ''}`}
                   onClick={handleTranslationToggle}
@@ -230,7 +237,7 @@ export function ReaderLayout({
 
               {nextNav ? (
                 <Link
-                  href={`${bookPath}/lesson/${nextNav.lessonId}/page/${nextNav.pageNum}`}
+                  href={`${bookPath}/${navSegment}/${nextNav.lessonId}/page/${nextNav.pageNum}`}
                   className="reader__nav-btn"
                 >
                   {language === 'ru' ? 'Далее' : 'Keyingi'} →

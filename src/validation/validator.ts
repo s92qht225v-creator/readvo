@@ -178,7 +178,7 @@ export class PageValidator {
     this.checkUniqueId(section.id, `${path}.id`);
 
     // Section type
-    const validTypes = ['objectives', 'text', 'dialogue', 'vocabulary', 'grammar', 'tip', 'exercise', 'instruction', 'activity', 'tonguetwister', 'matching', 'fillblank', 'multiplechoice', 'imagedescribe', 'bonus'];
+    const validTypes = ['objectives', 'text', 'dialogue', 'vocabulary', 'grammar', 'tip', 'exercise', 'instruction', 'activity', 'tonguetwister', 'matching', 'fillblank', 'multiplechoice', 'imagedescribe', 'bonus', 'typedfillblank', 'errorcorrection'];
     if (!validTypes.includes(section.type)) {
       this.addError(
         'INVALID_SECTION_TYPE',
@@ -191,7 +191,7 @@ export class PageValidator {
     // Sentences - allow empty if section has an image or is a matching/fillblank exercise
     if (!section.sentences || section.sentences.length === 0) {
       // Only error if section has no image and is not a matching/fillblank section
-      if (!section.image_url && !section.context && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus' && section.type !== 'tip' && section.type !== 'activity' && section.type !== 'text') {
+      if (!section.image_url && !section.context && section.type !== 'matching' && section.type !== 'fillblank' && section.type !== 'multiplechoice' && section.type !== 'imagedescribe' && section.type !== 'bonus' && section.type !== 'tip' && section.type !== 'activity' && section.type !== 'text' && section.type !== 'typedfillblank' && section.type !== 'errorcorrection' && section.type !== 'grammar') {
         this.addError('EMPTY_SENTENCES', 'Section has no sentences', path);
       }
       return;
