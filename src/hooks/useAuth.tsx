@@ -101,7 +101,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const { valid } = await res.json();
         if (!valid) {
           localStorage.removeItem('blim-session-nonce');
-          await supabase.auth.signOut();
+          await supabase.auth.signOut({ scope: 'local' });
           setUser(null);
           wasLoggedIn.current = false;
           router.push('/');
