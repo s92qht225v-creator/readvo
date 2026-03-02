@@ -21,6 +21,7 @@ import { GuidedLesson } from './GuidedLesson';
 import { ReaderControls } from './ReaderControls';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 
@@ -53,6 +54,8 @@ export function ReaderLayout({
   hidePinyin = false,
   navSegment = 'lesson',
 }: ReaderLayoutProps) {
+  const { isLoading: authLoading } = useRequireAuth();
+
   // Pinyin visibility: global toggle for all sentences
   const [isPinyinVisible, setIsPinyinVisible] = useState(!hidePinyin);
 
@@ -90,6 +93,9 @@ export function ReaderLayout({
       }).catch(() => {});
     });
   }, [user, lessonId, pageNum, getAccessToken]);
+
+  // Auth guard — redirect to landing if not logged in
+  if (authLoading) return null;
 
   // Trial check — lesson 1 is always free
   const trial = useTrial();

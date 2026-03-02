@@ -7,6 +7,7 @@ import { FlashcardCard } from './FlashcardCard';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useLanguage } from '../hooks/useLanguage';
 import { shuffleArray } from '../utils/shuffle';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 
@@ -16,6 +17,10 @@ export interface FlashcardDeckProps {
 }
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) => {
+  // Auth guard — redirect to landing if not logged in
+  const { isLoading: authLoading } = useRequireAuth();
+  if (authLoading) return null;
+
   // Trial check — lesson 1 flashcards are free
   const trial = useTrial();
   const isFreeContent = deck.words[0]?.lesson === 1;

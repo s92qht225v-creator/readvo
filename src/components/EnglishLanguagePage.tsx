@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 const books = [
@@ -11,7 +12,9 @@ const books = [
 ];
 
 export function EnglishLanguagePage() {
+  const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  if (isLoading) return null;
 
   return (
     <main className="home">

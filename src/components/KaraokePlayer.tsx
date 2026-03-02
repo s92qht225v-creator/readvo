@@ -4,6 +4,7 @@ import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react'
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { ReaderControls } from './ReaderControls';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 
@@ -40,6 +41,10 @@ interface KaraokePlayerProps {
 }
 
 export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
+  // Auth guard — redirect to landing if not logged in
+  const { isLoading: authLoading } = useRequireAuth();
+  if (authLoading) return null;
+
   // Trial check — karaoke is never free
   const trial = useTrial();
   if (trial?.isTrialExpired) {

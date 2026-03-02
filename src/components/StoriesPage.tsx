@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 interface StoryItem {
@@ -20,7 +21,9 @@ interface StoriesPageProps {
 }
 
 export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProps) {
+  const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  if (isLoading) return null;
 
   return (
     <main className="home">

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 interface FlashcardLessonItem {
@@ -19,7 +20,9 @@ interface FlashcardListPageProps {
 }
 
 export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps) {
+  const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  if (isLoading) return null;
 
   return (
     <main className="home">

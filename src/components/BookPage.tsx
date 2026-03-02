@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { LessonInfo } from '../services/content';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 interface ProgressEntry {
@@ -38,9 +39,11 @@ interface BookPageProps {
 }
 
 export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel }: BookPageProps) {
+  const { isLoading: authLoading } = useRequireAuth();
   const [language] = useLanguage();
   const activeBook = bookPath.split('/').pop() || 'hsk1';
   const { user, getAccessToken } = useAuth();
+  if (authLoading) return null;
   const [progress, setProgress] = useState<ProgressEntry[]>([]);
   const hasContent = lessons.length > 0;
 

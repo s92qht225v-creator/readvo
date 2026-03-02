@@ -7,6 +7,7 @@ import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';
 import { alignPinyinToText } from '../utils/rubyText';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 
@@ -194,6 +195,10 @@ function formatTime(seconds: number): string {
 }
 
 export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
+  // Auth guard — redirect to landing if not logged in
+  const { isLoading: authLoading } = useRequireAuth();
+  if (authLoading) return null;
+
   // Trial check — stories/dialogues are never free
   const trial = useTrial();
   if (trial?.isTrialExpired) {

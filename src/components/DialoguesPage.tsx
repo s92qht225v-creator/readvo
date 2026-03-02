@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 const TAGS: Record<string, { uz: string; ru: string }> = {
@@ -48,8 +49,10 @@ interface DialoguesPageProps {
 }
 
 export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPageProps) {
+  const { isLoading: authLoading } = useRequireAuth();
   const [language] = useLanguage();
   const [search, setSearch] = useState('');
+  if (authLoading) return null;
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
