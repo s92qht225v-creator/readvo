@@ -15,7 +15,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
-  loginWithGoogle: () => Promise<void>;
+  loginWithTelegram: () => Promise<void>;
   logout: () => Promise<void>;
   getAccessToken: () => Promise<string | null>;
 }
@@ -23,7 +23,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType>({
   user: null,
   isLoading: true,
-  loginWithGoogle: async () => {},
+  loginWithTelegram: async () => {},
   logout: async () => {},
   getAccessToken: async () => null,
 });
@@ -62,13 +62,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  const loginWithGoogle = useCallback(async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: window.location.origin,
-      },
-    });
+  const loginWithTelegram = useCallback(async () => {
+    const res = await fetch('/api/auth/telegram/init');
+    const { url } = await res.json();
+    window.location.href = url;
   }, []);
 
   const logout = useCallback(async () => {
@@ -82,7 +79,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, loginWithGoogle, logout, getAccessToken }}>
+    <AuthContext.Provider value={{ user, isLoading, loginWithTelegram, logout, getAccessToken }}>
       {children}
     </AuthContext.Provider>
   );
