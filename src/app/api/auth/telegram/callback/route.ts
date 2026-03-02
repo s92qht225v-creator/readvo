@@ -52,25 +52,28 @@ export async function POST(request: NextRequest) {
     // Find or create Supabase user
     const admin = getSupabaseAdmin();
     const syntheticEmail = `tg_${telegramId}@telegram.blim`;
+    const metadata = {
+      telegram_id: telegramId,
+      full_name: fullName,
+      name: fullName,
+      preferred_username: username,
+      avatar_url: photoUrl,
+      picture: photoUrl,
+      provider: 'telegram',
+    };
 
     // Try to create user; if already exists, update metadata
-    const { error: createError } = await admin.auth.admin.createUser({
+    const { data: createData, error: createError } = await admin.auth.admin.createUser({
       email: syntheticEmail,
       email_confirm: true,
-      user_metadata: {
-        telegram_id: telegramId,
-        full_name: fullName,
-        name: fullName,
-        preferred_username: username,
-        avatar_url: photoUrl,
-        picture: photoUrl,
-        provider: 'telegram',
-      },
+      user_metadata: metadata,
     });
+
+    let userId = createData?.user?.id;
 
     if (createError) {
       if (createError.message?.includes('already') || createError.message?.includes('exists')) {
-        // User exists — update metadata
+        // User exists — find, update metadata, and invalidate old sessions
         const { data: { users } } = await admin.auth.admin.listUsers();
         const existingUser = users.find(u => u.email === syntheticEmail);
 
@@ -78,17 +81,10 @@ export async function POST(request: NextRequest) {
           return NextResponse.json({ error: 'user_not_found' }, { status: 500 });
         }
 
-        await admin.auth.admin.updateUserById(existingUser.id, {
-          user_metadata: {
-            telegram_id: telegramId,
-            full_name: fullName,
-            name: fullName,
-            preferred_username: username,
-            avatar_url: photoUrl,
-            picture: photoUrl,
-            provider: 'telegram',
-          },
-        });
+        userId = existingUser.id;
+        await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
+        // Sign out all existing sessions so only the new one is active
+        await admin.auth.admin.signOut(userId, 'global');
       } else {
         console.error('Failed to create user:', createError);
         return NextResponse.json({ error: 'create_user' }, { status: 500 });

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 
@@ -41,12 +42,16 @@ function mapUser(supabaseUser: SupabaseUser): User {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
+  const wasLoggedIn = useRef(false);
 
   useEffect(() => {
     // Listen for auth changes (including token from URL hash)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ? mapUser(session.user) : null);
+      const newUser = session?.user ? mapUser(session.user) : null;
+      setUser(newUser);
       setIsLoading(false);
+      if (newUser) wasLoggedIn.current = true;
       // Clean up hash from URL after login
       if (_event === 'SIGNED_IN' && window.location.hash) {
         window.history.replaceState(null, '', window.location.pathname);
@@ -55,12 +60,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     // Check current session (for page refreshes)
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ? mapUser(session.user) : null);
+      const newUser = session?.user ? mapUser(session.user) : null;
+      setUser(newUser);
       setIsLoading(false);
+      if (newUser) wasLoggedIn.current = true;
     });
 
     return () => subscription.unsubscribe();
   }, []);
+
+  // Periodically verify the session is still valid (detects server-side sign-out)
+  useEffect(() => {
+    if (!user) return;
+    const interval = setInterval(async () => {
+      const { data: { session }, error } = await supabase.auth.getSession();
+      if (error || !session) {
+        setUser(null);
+        wasLoggedIn.current = false;
+        router.push('/');
+      }
+    }, 30_000); // check every 30 seconds
+    return () => clearInterval(interval);
+  }, [user, router]);
 
   const loginWithTelegram = useCallback(async () => {
     const res = await fetch('/api/auth/telegram/init');
