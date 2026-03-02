@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import { loadDialoguesForBook } from '@/services';
 import { DialoguesPage } from '@/components/DialoguesPage';
+
+export const metadata: Metadata = {
+  title: 'HSK 1 — Dialoglar',
+  description: 'HSK 1 darajali xitoy tili dialoglari. Tinglash va o\'qish mashqlari.',
+};
 
 export default async function HSK1DialoguesPage() {
   const dialogues = await loadDialoguesForBook('hsk1');

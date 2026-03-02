@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
@@ -429,7 +430,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={listPath || `${bookPath}/stories`} className="reader__home">
-            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
           <ReaderControls
             isPinyinVisible={showPinyin}

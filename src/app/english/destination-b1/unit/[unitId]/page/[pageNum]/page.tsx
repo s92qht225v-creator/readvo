@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: PageParams) {
   const { unitId, pageNum } = await params;
 
   return {
-    title: `Unit ${unitId}, Page ${pageNum} - Destination B1 - Blim`,
+    title: `Destination B1 — Unit ${unitId}, Page ${pageNum}`,
+    description: `Destination B1 ingliz tili grammatikasi. Unit ${unitId}, ${pageNum}-sahifa.`,
   };
 }
 

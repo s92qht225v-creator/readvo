@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
@@ -120,7 +121,7 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
           </button>
         </div>
         <h1 className="home__logo">
-          <img src="/logo.svg" alt="Blim" className="home__logo-img" />
+          <Image src="/logo.svg" alt="Blim" width={120} height={40} className="home__logo-img" priority />
         </h1>
         <p className="home__tagline">{s.tagline}</p>
       </header>
@@ -167,7 +168,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       <nav className="landing__nav">
         <div className="landing__nav-inner">
           <span className="landing__nav-logo">
-            <img src="/logo.svg" alt="Blim" className="landing__nav-logo-img" />
+            <Image src="/logo.svg" alt="Blim" width={100} height={34} className="landing__nav-logo-img" priority />
           </span>
           <div className="landing__nav-links">
             <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>
@@ -240,9 +241,11 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
                 { code: 'kg', name: 'Кыргыз' },
               ].map((lang) => (
                 <div key={lang.name} className="landing__hero-lang">
-                  <img
+                  <Image
                     src={`https://flagcdn.com/w160/${lang.code}.png`}
                     alt={lang.name}
+                    width={56}
+                    height={38}
                     className="landing__hero-lang-flag"
                   />
                   <span className="landing__hero-lang-name">{lang.name}</span>

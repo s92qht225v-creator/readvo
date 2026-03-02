@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
@@ -174,7 +175,7 @@ export default function PaymentPage() {
       <main className="payment">
         <header className="payment__header">
           <Link href="/chinese" className="payment__logo">
-            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
         </header>
       </main>
@@ -194,7 +195,7 @@ export default function PaymentPage() {
         <main className="payment">
           <header className="payment__header">
             <Link href="/chinese" className="payment__logo">
-              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+              <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
             </Link>
           </header>
           <div className="payment__status">
@@ -234,7 +235,7 @@ export default function PaymentPage() {
         <main className="payment">
           <header className="payment__header">
             <Link href="/chinese" className="payment__logo">
-              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+              <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
             </Link>
           </header>
           <div className="payment__status">
@@ -265,7 +266,7 @@ export default function PaymentPage() {
         <main className="payment">
           <header className="payment__header">
             <Link href="/chinese" className="payment__logo">
-              <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+              <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
             </Link>
           </header>
           <div className="payment__status">
@@ -301,7 +302,7 @@ export default function PaymentPage() {
       <main className="payment">
         <header className="payment__header">
           <Link href="/chinese" className="payment__logo">
-            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
         </header>
         <div className="payment__success">
@@ -331,7 +332,7 @@ export default function PaymentPage() {
     <main className="payment">
       <header className="payment__header">
         <Link href="/chinese" className="payment__logo">
-          <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+          <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
         </Link>
       </header>
 

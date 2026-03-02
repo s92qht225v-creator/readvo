@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function Error({
@@ -17,7 +18,7 @@ export default function Error({
     <main className="home">
       <header className="home__hero">
         <h1 className="home__logo">
-          <img src="/logo.svg" alt="Blim" className="home__logo-img" />
+          <Image src="/logo.svg" alt="Blim" width={120} height={40} className="home__logo-img" priority />
         </h1>
         <p className="home__tagline">Xatolik yuz berdi</p>
       </header>

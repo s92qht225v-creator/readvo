@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { ReaderControls } from './ReaderControls';
@@ -178,7 +179,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href="/chinese?tab=karaoke" className="reader__home">
-            <img src="/logo.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
           <ReaderControls
             isPinyinVisible={showPinyin}

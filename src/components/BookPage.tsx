@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { LessonInfo } from '../services/content';
 import { useLanguage } from '../hooks/useLanguage';
@@ -72,7 +73,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
         <div className="home__hero-inner">
           <div className="home__hero-top-row">
             <Link href={languagePath || '/chinese'} className="home__hero-logo">
-              <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
+              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
             </Link>
             <BannerMenu />
           </div>

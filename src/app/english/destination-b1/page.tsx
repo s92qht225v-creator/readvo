@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import { getEnglishLessonsWithInfo } from '@/services/english-content';
 import { BookPage } from '@/components/BookPage';
 
-export const metadata = {
-  title: 'Destination B1 - Blim',
+export const metadata: Metadata = {
+  title: 'Destination B1 — Ingliz tili grammatikasi',
+  description: 'Destination B1 ingliz tili grammatika darsligi. Unit-lar bo\'yicha mashqlar va tushuntirishlar.',
 };
 
 const tabConfig = [

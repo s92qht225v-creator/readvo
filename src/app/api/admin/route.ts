@@ -1,11 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-
-function getSupabaseAdmin() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-  return createClient(url, serviceKey);
-}
+import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 function verifyPassword(request: NextRequest) {
   const password = request.headers.get('x-admin-password');
@@ -28,15 +22,24 @@ export async function GET(request: NextRequest) {
 
   const admin = getSupabaseAdmin();
 
-  const [paymentsRes, subsRes, usersRes] = await Promise.all([
+  const [paymentsRes, subsRes] = await Promise.all([
     admin.from('payment_requests').select('*').order('created_at', { ascending: false }),
     admin.from('subscriptions').select('*').order('created_at', { ascending: false }),
-    admin.auth.admin.listUsers(),
   ]);
+
+  // Paginate through all users (listUsers returns max ~50 per page by default)
+  const allUsers = [];
+  let page = 1;
+  while (true) {
+    const { data: { users: batch } } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
+    allUsers.push(...batch);
+    if (batch.length < 1000) break;
+    page++;
+  }
 
   const payments = paymentsRes.data || [];
   const subscriptions = subsRes.data || [];
-  const users = usersRes.data?.users || [];
+  const users = allUsers;
 
   const now = new Date();
   const activeSubscriptions = subscriptions.filter(
@@ -213,5 +216,5 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
-  return NextResponse.json({ error: `Invalid action: ${action}` }, { status: 400 });
+  return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
 }

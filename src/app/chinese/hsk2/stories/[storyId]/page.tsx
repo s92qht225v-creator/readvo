@@ -14,8 +14,11 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: story
-      ? `${story.title} - HSK 2 Hikoyalar - Blim`
-      : 'Hikoya - Blim',
+      ? `${story.title} — HSK 2 hikoyalar`
+      : 'Hikoya',
+    description: story
+      ? `HSK 2 xitoy tili hikoyasi: ${story.title}. O'qish va tinglash mashqi.`
+      : 'HSK 2 xitoy tili hikoyasi.',
   };
 }
 

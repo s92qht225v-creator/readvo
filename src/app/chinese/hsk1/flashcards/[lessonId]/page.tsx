@@ -8,7 +8,8 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   return {
-    title: `${params.lessonId}-dars Fleshkartalari - HSK 1 - Blim`,
+    title: `HSK 1 — ${params.lessonId}-dars fleshkartalari`,
+    description: `HSK 1, ${params.lessonId}-dars so'zlarini fleshkartalar bilan o'rganing.`,
   };
 }
 

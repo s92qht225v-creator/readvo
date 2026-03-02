@@ -14,8 +14,11 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: song
-      ? `${song.title} - Karaoke - Blim`
-      : 'Karaoke - Blim',
+      ? `${song.title} — Karaoke`
+      : 'Karaoke',
+    description: song
+      ? `${song.title} — xitoy tili karaoke. Pinyin va tarjima bilan qo'shiq kuylang.`
+      : 'Xitoy tili karaoke.',
   };
 }
 

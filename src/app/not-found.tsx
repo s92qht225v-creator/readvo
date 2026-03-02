@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -5,7 +6,7 @@ export default function NotFound() {
     <main className="home">
       <header className="home__hero">
         <h1 className="home__logo">
-          <img src="/logo.svg" alt="Blim" className="home__logo-img" />
+          <Image src="/logo.svg" alt="Blim" width={120} height={40} className="home__logo-img" priority />
         </h1>
         <p className="home__tagline">Sahifa topilmadi</p>
       </header>

@@ -14,6 +14,7 @@
  */
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Page as PageType } from '@/types';
 import { Page } from './Page';
@@ -89,7 +90,7 @@ export function ReaderLayout({
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
         },
-        body: JSON.stringify({ lesson_id: lessonId, page_num: pageNum }),
+        body: JSON.stringify({ lesson_id: lessonId, page_num: Number(pageNum) }),
       }).catch(() => {});
     });
   }, [user, lessonId, pageNum, getAccessToken]);
@@ -148,7 +149,7 @@ export function ReaderLayout({
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={bookPath || '/'} className="reader__home">
-            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
           <ReaderControls
             isPinyinVisible={isPinyinVisible}

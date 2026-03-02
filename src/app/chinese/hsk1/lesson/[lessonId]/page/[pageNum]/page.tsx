@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: PageParams) {
   const { lessonId, pageNum } = await params;
 
   return {
-    title: `${lessonId}-dars, ${pageNum}-sahifa - HSK 1 - Blim`,
+    title: `HSK 1 — ${lessonId}-dars, ${pageNum}-sahifa`,
+    description: `HSK 1 xitoy tili darsligi. ${lessonId}-dars, ${pageNum}-sahifa. Dialog, lug'at va mashqlar.`,
   };
 }
 

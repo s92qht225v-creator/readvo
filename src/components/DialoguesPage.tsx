@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
@@ -138,7 +139,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
         <div className="home__hero-inner">
           <div className="home__hero-top-row">
             <Link href={languagePath} className="home__hero-logo">
-              <img src="/logo.svg" alt="Blim" className="home__hero-logo-img" />
+              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
             </Link>
             <BannerMenu />
           </div>

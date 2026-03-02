@@ -14,8 +14,11 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: dialogue
-      ? `${dialogue.title} - HSK 1 Dialoglar - Blim`
-      : 'Dialog - Blim',
+      ? `${dialogue.title} — HSK 1 dialoglar`
+      : 'Dialog',
+    description: dialogue
+      ? `HSK 1 xitoy tili dialogi: ${dialogue.title}. Tinglash va o'qish mashqi.`
+      : 'HSK 1 xitoy tili dialogi.',
   };
 }
 

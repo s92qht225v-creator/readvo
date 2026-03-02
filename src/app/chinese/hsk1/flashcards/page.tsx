@@ -5,7 +5,8 @@ import { FlashcardListPage } from '@/components/FlashcardListPage';
 
 export async function generateMetadata() {
   return {
-    title: 'Fleshkartalar - HSK 1 - Blim',
+    title: 'HSK 1 — Fleshkartalar',
+    description: 'HSK 1 so\'zlarini fleshkartalar yordamida o\'rganing. Dars bo\'yicha ajratilgan.',
   };
 }
 

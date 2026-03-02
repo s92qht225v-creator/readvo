@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 function getSupabaseWithAuth(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -12,12 +13,6 @@ function getSupabaseWithAuth(request: NextRequest) {
   return createClient(url, anonKey, {
     global: { headers: { Authorization: `Bearer ${token}` } },
   });
-}
-
-function getSupabaseAdmin() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-  return createClient(url, serviceKey);
 }
 
 async function sendTelegramNotification(
@@ -79,10 +74,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
   }
 
+  // Validate file type
+  const ALLOWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'heic'];
+  const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
+  const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
+  const ext = (screenshot.name.split('.').pop() || '').toLowerCase();
+  if (!ALLOWED_EXTENSIONS.includes(ext)) {
+    return NextResponse.json({ error: 'Invalid file type' }, { status: 400 });
+  }
+  if (!ALLOWED_MIME_TYPES.includes(screenshot.type)) {
+    return NextResponse.json({ error: 'Invalid file type' }, { status: 400 });
+  }
+  if (screenshot.size > MAX_FILE_SIZE) {
+    return NextResponse.json({ error: 'File too large (max 10MB)' }, { status: 400 });
+  }
+
   // Upload screenshot using admin client (bypasses RLS)
   const admin = getSupabaseAdmin();
+
   const timestamp = Date.now();
-  const ext = screenshot.name.split('.').pop() || 'jpg';
   const path = `${user.id}/${timestamp}.${ext}`;
 
   const { data: uploadData, error: uploadError } = await admin.storage

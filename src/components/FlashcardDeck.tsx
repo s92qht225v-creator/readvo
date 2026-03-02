@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { FlashcardDeckData, FlashcardWord } from '../types';
 import { FlashcardCard } from './FlashcardCard';
@@ -104,7 +105,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={`${bookPath}/flashcards`} className="reader__home">
-            <img src="/logo-red.svg" alt="Blim" className="reader__home-logo" />
+            <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
           </Link>
           <div className="reader__controls">
             <button
