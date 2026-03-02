@@ -64,8 +64,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const loginWithTelegram = useCallback(async () => {
     const res = await fetch('/api/auth/telegram/init');
-    const { url } = await res.json();
-    window.location.href = url;
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      console.error('Telegram init failed:', data);
+    }
   }, []);
 
   const logout = useCallback(async () => {
