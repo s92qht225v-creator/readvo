@@ -7,7 +7,7 @@ export async function GET() {
   }
 
   const origin = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const returnTo = `${origin}/api/auth/telegram/callback`;
+  const returnTo = `${origin}/auth/telegram/complete`;
 
   const params = new URLSearchParams({
     bot_id: botId,

@@ -14,9 +14,34 @@ export default function TelegramCompletePage() {
 
     (async () => {
       try {
-        const res = await fetch('/api/auth/telegram/session');
+        // Extract tgAuthResult from URL fragment
+        const hash = window.location.hash;
+        const match = hash.match(/tgAuthResult=([^&]+)/);
+        if (!match) {
+          router.replace('/?error=no_auth_result');
+          return;
+        }
+
+        // Decode base64url → JSON
+        const base64 = match[1].replace(/-/g, '+').replace(/_/g, '/');
+        const decoded = atob(base64);
+        const authData = JSON.parse(decoded);
+
+        if (!authData || authData === false || !authData.id) {
+          router.replace('/?error=auth_denied');
+          return;
+        }
+
+        // Send auth data to server for verification + session creation
+        const res = await fetch('/api/auth/telegram/callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(authData),
+        });
+
         if (!res.ok) {
-          router.replace('/?error=no_session');
+          const err = await res.json();
+          router.replace(`/?error=${err.error || 'callback_failed'}`);
           return;
         }
 

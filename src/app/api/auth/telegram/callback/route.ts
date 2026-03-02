@@ -2,15 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
-function verifyTelegramHash(params: URLSearchParams, botToken: string): boolean {
-  const hash = params.get('hash');
+function verifyTelegramHash(data: Record<string, string>, botToken: string): boolean {
+  const hash = data.hash;
   if (!hash) return false;
 
-  // Build data-check-string: all params except hash, sorted alphabetically, joined by \n
+  // Build data-check-string: all fields except hash, sorted alphabetically, joined by \n
   const checkArr: string[] = [];
-  params.forEach((value, key) => {
+  for (const [key, value] of Object.entries(data)) {
     if (key !== 'hash') checkArr.push(`${key}=${value}`);
-  });
+  }
   checkArr.sort();
   const dataCheckString = checkArr.join('\n');
 
@@ -22,32 +22,31 @@ function verifyTelegramHash(params: URLSearchParams, botToken: string): boolean 
   return hmac === hash;
 }
 
-export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const origin = new URL(request.url).origin;
-
+export async function POST(request: NextRequest) {
   const botToken = process.env.TELEGRAM_PAYMENT_BOT_TOKEN;
   if (!botToken) {
-    return NextResponse.redirect(`${origin}/?error=not_configured`);
+    return NextResponse.json({ error: 'not_configured' }, { status: 500 });
   }
 
+  const data: Record<string, string> = await request.json();
+
   // Verify HMAC hash
-  if (!verifyTelegramHash(searchParams, botToken)) {
-    return NextResponse.redirect(`${origin}/?error=invalid_hash`);
+  if (!verifyTelegramHash(data, botToken)) {
+    return NextResponse.json({ error: 'invalid_hash' }, { status: 401 });
   }
 
   // Check auth_date is not too old (10 minutes)
-  const authDate = parseInt(searchParams.get('auth_date') || '0', 10);
+  const authDate = parseInt(data.auth_date || '0', 10);
   if (Date.now() / 1000 - authDate > 600) {
-    return NextResponse.redirect(`${origin}/?error=expired`);
+    return NextResponse.json({ error: 'expired' }, { status: 401 });
   }
 
   try {
-    const telegramId = searchParams.get('id')!;
-    const firstName = searchParams.get('first_name') || '';
-    const lastName = searchParams.get('last_name') || '';
-    const username = searchParams.get('username') || '';
-    const photoUrl = searchParams.get('photo_url') || '';
+    const telegramId = data.id;
+    const firstName = data.first_name || '';
+    const lastName = data.last_name || '';
+    const username = data.username || '';
+    const photoUrl = data.photo_url || '';
     const fullName = [firstName, lastName].filter(Boolean).join(' ') || username || `Telegram User ${telegramId}`;
 
     // Find or create Supabase user
@@ -55,7 +54,7 @@ export async function GET(request: NextRequest) {
     const syntheticEmail = `tg_${telegramId}@telegram.blim`;
 
     // Try to create user; if already exists, update metadata
-    const { data: newUser, error: createError } = await admin.auth.admin.createUser({
+    const { error: createError } = await admin.auth.admin.createUser({
       email: syntheticEmail,
       email_confirm: true,
       user_metadata: {
@@ -76,7 +75,7 @@ export async function GET(request: NextRequest) {
         const existingUser = users.find(u => u.email === syntheticEmail);
 
         if (!existingUser) {
-          return NextResponse.redirect(`${origin}/?error=user_not_found`);
+          return NextResponse.json({ error: 'user_not_found' }, { status: 500 });
         }
 
         await admin.auth.admin.updateUserById(existingUser.id, {
@@ -92,7 +91,7 @@ export async function GET(request: NextRequest) {
         });
       } else {
         console.error('Failed to create user:', createError);
-        return NextResponse.redirect(`${origin}/?error=create_user`);
+        return NextResponse.json({ error: 'create_user' }, { status: 500 });
       }
     }
 
@@ -104,13 +103,13 @@ export async function GET(request: NextRequest) {
 
     if (linkError || !linkData) {
       console.error('Failed to generate link:', linkError);
-      return NextResponse.redirect(`${origin}/?error=generate_link`);
+      return NextResponse.json({ error: 'generate_link' }, { status: 500 });
     }
 
     const tokenHash = linkData.properties?.hashed_token;
     if (!tokenHash) {
       console.error('No hashed_token in link data');
-      return NextResponse.redirect(`${origin}/?error=no_token`);
+      return NextResponse.json({ error: 'no_token' }, { status: 500 });
     }
 
     const { data: sessionData, error: otpError } = await admin.auth.verifyOtp({
@@ -120,31 +119,15 @@ export async function GET(request: NextRequest) {
 
     if (otpError || !sessionData.session) {
       console.error('Failed to verify OTP:', otpError);
-      return NextResponse.redirect(`${origin}/?error=verify_otp`);
+      return NextResponse.json({ error: 'verify_otp' }, { status: 500 });
     }
 
-    // Set session tokens in httpOnly cookies for the client page to pick up
-    const response = NextResponse.redirect(`${origin}/auth/telegram/complete`);
-
-    response.cookies.set('tg_access_token', sessionData.session.access_token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 60,
-      path: '/',
+    return NextResponse.json({
+      access_token: sessionData.session.access_token,
+      refresh_token: sessionData.session.refresh_token,
     });
-
-    response.cookies.set('tg_refresh_token', sessionData.session.refresh_token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 60,
-      path: '/',
-    });
-
-    return response;
   } catch (err) {
     console.error('Telegram callback error:', err);
-    return NextResponse.redirect(`${origin}/?error=callback_failed`);
+    return NextResponse.json({ error: 'callback_failed' }, { status: 500 });
   }
 }
