@@ -63,7 +63,6 @@ export async function POST(request: NextRequest) {
       avatar_url: photoUrl,
       picture: photoUrl,
       provider: 'telegram',
-      session_nonce: sessionNonce,
     };
 
     // Try to create user; if already exists, update metadata
@@ -119,6 +118,13 @@ export async function POST(request: NextRequest) {
       console.error('Failed to verify OTP:', otpError);
       return NextResponse.json({ error: 'verify_otp' }, { status: 500 });
     }
+
+    // Store session nonce in dedicated table (not user_metadata, which has JWT caching issues)
+    await admin.from('active_sessions').upsert({
+      user_id: userId,
+      session_nonce: sessionNonce,
+      updated_at: new Date().toISOString(),
+    });
 
     return NextResponse.json({
       access_token: sessionData.session.access_token,
