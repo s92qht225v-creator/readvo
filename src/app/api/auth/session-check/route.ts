@@ -16,14 +16,21 @@ export async function POST(request: NextRequest) {
 
     const token = authHeader.slice(7);
     const admin = getSupabaseAdmin();
-    const { data: { user }, error } = await admin.auth.getUser(token);
 
-    if (error || !user) {
+    // First get user ID from the JWT
+    const { data: { user: jwtUser }, error } = await admin.auth.getUser(token);
+    if (error || !jwtUser) {
       return NextResponse.json({ valid: false });
     }
 
-    // Compare nonce with the one stored in user_metadata
-    const serverNonce = user.user_metadata?.session_nonce;
+    // Then fetch fresh user_metadata from database (not from JWT claims)
+    const { data: { user: dbUser }, error: dbError } = await admin.auth.admin.getUserById(jwtUser.id);
+    if (dbError || !dbUser) {
+      return NextResponse.json({ valid: false });
+    }
+
+    // Compare nonce with the one stored in database
+    const serverNonce = dbUser.user_metadata?.session_nonce;
     return NextResponse.json({ valid: serverNonce === nonce });
   } catch {
     return NextResponse.json({ valid: false });
