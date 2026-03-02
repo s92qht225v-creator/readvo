@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -12,6 +12,7 @@ export function BannerMenu() {
   const { user, logout } = useAuth();
   const trial = useTrial();
   const pathname = usePathname();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const isEnglishPath = pathname.startsWith('/english');
@@ -110,7 +111,7 @@ export function BannerMenu() {
             {language === 'ru' ? 'Оплата' : "To'lov"}
           </Link>
           {user && (
-            <button className="home__menu-item" type="button" onClick={() => { logout(); setMenuOpen(false); }}>
+            <button className="home__menu-item" type="button" onClick={() => { logout(); setMenuOpen(false); router.push('/'); }}>
               {language === 'ru' ? 'Выйти' : 'Chiqish'}
             </button>
           )}
