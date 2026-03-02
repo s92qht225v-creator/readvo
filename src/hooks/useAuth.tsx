@@ -44,6 +44,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const wasLoggedIn = useRef(false);
+  const loginGrace = useRef(false);
 
   useEffect(() => {
     // Listen for auth changes (including token from URL hash)
@@ -52,6 +53,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(newUser);
       setIsLoading(false);
       if (newUser) wasLoggedIn.current = true;
+      // Skip session checks for 60s after login to avoid race conditions
+      if (_event === 'SIGNED_IN') {
+        loginGrace.current = true;
+        setTimeout(() => { loginGrace.current = false; }, 60_000);
+      }
       // Clean up hash from URL after login
       if (_event === 'SIGNED_IN' && window.location.hash) {
         window.history.replaceState(null, '', window.location.pathname);
@@ -73,6 +79,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!user) return;
     const interval = setInterval(async () => {
+      if (loginGrace.current) return; // skip checks right after login
       const nonce = localStorage.getItem('blim-session-nonce');
       if (!nonce) return; // no nonce = old session before this feature, skip
       const { data: { session } } = await supabase.auth.getSession();

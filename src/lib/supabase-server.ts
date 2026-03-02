@@ -10,7 +10,12 @@ export function getSupabaseAdmin(): SupabaseClient {
     if (!url || !key) {
       throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
     }
-    _supabaseAdmin = createClient(url, key);
+    _supabaseAdmin = createClient(url, key, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false,
+      },
+    });
   }
   return _supabaseAdmin;
 }

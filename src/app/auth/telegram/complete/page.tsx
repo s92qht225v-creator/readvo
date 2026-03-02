@@ -47,15 +47,17 @@ export default function TelegramCompletePage() {
 
         const { access_token, refresh_token, session_nonce } = await res.json();
 
+        // Clear old nonce first, then store new one BEFORE setSession
+        // (setSession triggers onAuthStateChange which starts the session-check interval)
+        localStorage.removeItem('blim-session-nonce');
+        if (session_nonce) {
+          localStorage.setItem('blim-session-nonce', session_nonce);
+        }
+
         const { error } = await supabase.auth.setSession({
           access_token,
           refresh_token,
         });
-
-        // Store session nonce for single-device enforcement
-        if (session_nonce) {
-          localStorage.setItem('blim-session-nonce', session_nonce);
-        }
 
         if (error) {
           console.error('setSession error:', error);
