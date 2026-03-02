@@ -45,12 +45,17 @@ export default function TelegramCompletePage() {
           return;
         }
 
-        const { access_token, refresh_token } = await res.json();
+        const { access_token, refresh_token, session_nonce } = await res.json();
 
         const { error } = await supabase.auth.setSession({
           access_token,
           refresh_token,
         });
+
+        // Store session nonce for single-device enforcement
+        if (session_nonce) {
+          localStorage.setItem('blim-session-nonce', session_nonce);
+        }
 
         if (error) {
           console.error('setSession error:', error);

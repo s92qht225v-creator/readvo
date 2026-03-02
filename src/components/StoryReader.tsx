@@ -195,16 +195,8 @@ function formatTime(seconds: number): string {
 }
 
 export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
-  // Auth guard — redirect to landing if not logged in
   const { isLoading: authLoading } = useRequireAuth();
-  if (authLoading) return null;
-
-  // Trial check — stories/dialogues are never free
   const trial = useTrial();
-  if (trial?.isTrialExpired) {
-    return <Paywall />;
-  }
-
   const [language, toggleLanguage] = useLanguage();
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -428,6 +420,9 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   }, [duration]);
 
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+
+  if (authLoading) return null;
+  if (trial?.isTrialExpired) return <Paywall />;
 
   return (
     <div className="reader">

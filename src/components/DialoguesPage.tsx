@@ -52,7 +52,6 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
   const { isLoading: authLoading } = useRequireAuth();
   const [language] = useLanguage();
   const [search, setSearch] = useState('');
-  if (authLoading) return null;
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
@@ -130,6 +129,8 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
 
     return result;
   }, [search, dialogues, activeTag, showBookmarked, bookmarks]);
+
+  if (authLoading) return null;
 
   return (
     <main className="home">

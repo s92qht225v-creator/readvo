@@ -52,6 +52,9 @@ export async function POST(request: NextRequest) {
     // Find or create Supabase user
     const admin = getSupabaseAdmin();
     const syntheticEmail = `tg_${telegramId}@telegram.blim`;
+    // Generate a unique session nonce to enforce single-device login
+    const sessionNonce = crypto.randomBytes(16).toString('hex');
+
     const metadata = {
       telegram_id: telegramId,
       full_name: fullName,
@@ -60,6 +63,7 @@ export async function POST(request: NextRequest) {
       avatar_url: photoUrl,
       picture: photoUrl,
       provider: 'telegram',
+      session_nonce: sessionNonce,
     };
 
     // Try to create user; if already exists, update metadata
@@ -83,8 +87,6 @@ export async function POST(request: NextRequest) {
 
         userId = existingUser.id;
         await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
-        // Sign out all existing sessions so only the new one is active
-        await admin.auth.admin.signOut(userId, 'global');
       } else {
         console.error('Failed to create user:', createError);
         return NextResponse.json({ error: 'create_user' }, { status: 500 });
@@ -121,6 +123,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       access_token: sessionData.session.access_token,
       refresh_token: sessionData.session.refresh_token,
+      session_nonce: sessionNonce,
     });
   } catch (err) {
     console.error('Telegram callback error:', err);

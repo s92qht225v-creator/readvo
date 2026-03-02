@@ -43,7 +43,6 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
   const [language] = useLanguage();
   const activeBook = bookPath.split('/').pop() || 'hsk1';
   const { user, getAccessToken } = useAuth();
-  if (authLoading) return null;
   const [progress, setProgress] = useState<ProgressEntry[]>([]);
   const hasContent = lessons.length > 0;
 
@@ -60,6 +59,8 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
         .catch(() => {});
     });
   }, [user, getAccessToken]);
+
+  if (authLoading) return null;
 
   const isPageCompleted = (lessonId: string, pageNum: number) =>
     progress.some((p) => p.lesson_id === lessonId && p.page_num === String(pageNum) && p.completed);

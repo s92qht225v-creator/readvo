@@ -69,15 +69,38 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  // Periodically verify the session is still valid (detects server-side sign-out)
+  // Periodically verify single-device session via nonce check
   useEffect(() => {
     if (!user) return;
     const interval = setInterval(async () => {
-      const { data: { session }, error } = await supabase.auth.getSession();
-      if (error || !session) {
+      const nonce = localStorage.getItem('blim-session-nonce');
+      if (!nonce) return; // no nonce = old session before this feature, skip
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
         setUser(null);
         wasLoggedIn.current = false;
         router.push('/');
+        return;
+      }
+      try {
+        const res = await fetch('/api/auth/session-check', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${session.access_token}`,
+          },
+          body: JSON.stringify({ nonce }),
+        });
+        const { valid } = await res.json();
+        if (!valid) {
+          localStorage.removeItem('blim-session-nonce');
+          await supabase.auth.signOut();
+          setUser(null);
+          wasLoggedIn.current = false;
+          router.push('/');
+        }
+      } catch {
+        // Network error — don't kick out
       }
     }, 30_000); // check every 30 seconds
     return () => clearInterval(interval);
@@ -94,6 +117,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const logout = useCallback(async () => {
+    localStorage.removeItem('blim-session-nonce');
     await supabase.auth.signOut();
     setUser(null);
   }, []);

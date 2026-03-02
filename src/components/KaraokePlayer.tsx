@@ -41,16 +41,8 @@ interface KaraokePlayerProps {
 }
 
 export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
-  // Auth guard — redirect to landing if not logged in
   const { isLoading: authLoading } = useRequireAuth();
-  if (authLoading) return null;
-
-  // Trial check — karaoke is never free
   const trial = useTrial();
-  if (trial?.isTrialExpired) {
-    return <Paywall />;
-  }
-
   const [language, toggleLanguage] = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -176,6 +168,9 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     const s = Math.floor(seconds % 60);
     return `${m}:${s.toString().padStart(2, '0')}`;
   };
+
+  if (authLoading) return null;
+  if (trial?.isTrialExpired) return <Paywall />;
 
   return (
     <div className="karaoke">

@@ -48,11 +48,12 @@ export function LanguagePage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const searchParams = useSearchParams();
-  if (isLoading) return null;
   const initialTab = searchParams.get('tab') as Tab | null;
   const [activeTab, setActiveTab] = useState<Tab>(
     initialTab && validTabs.includes(initialTab) ? initialTab : 'hsk'
   );
+
+  if (isLoading) return null;
 
   return (
     <main className="home">

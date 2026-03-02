@@ -17,17 +17,8 @@ export interface FlashcardDeckProps {
 }
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) => {
-  // Auth guard — redirect to landing if not logged in
   const { isLoading: authLoading } = useRequireAuth();
-  if (authLoading) return null;
-
-  // Trial check — lesson 1 flashcards are free
   const trial = useTrial();
-  const isFreeContent = deck.words[0]?.lesson === 1;
-  if (trial?.isTrialExpired && !isFreeContent) {
-    return <Paywall />;
-  }
-
   const [cards, setCards] = useState<FlashcardWord[]>([...deck.words]);
   const [isShuffled, setIsShuffled] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -103,6 +94,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
   }, [deck.words]);
 
   const title = language === 'ru' && deck.title_ru ? deck.title_ru : deck.title;
+
+  if (authLoading) return null;
+  const isFreeContent = deck.words[0]?.lesson === 1;
+  if (trial?.isTrialExpired && !isFreeContent) return <Paywall />;
 
   return (
     <main className="flashcard-page">

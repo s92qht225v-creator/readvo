@@ -94,15 +94,7 @@ export function ReaderLayout({
     });
   }, [user, lessonId, pageNum, getAccessToken]);
 
-  // Auth guard — redirect to landing if not logged in
-  if (authLoading) return null;
-
-  // Trial check — lesson 1 is always free
   const trial = useTrial();
-  const isFreeContent = lessonId === '1';
-  if (trial?.isTrialExpired && !isFreeContent) {
-    return <Paywall />;
-  }
 
   // Active sentence for translation panel
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
@@ -140,6 +132,15 @@ export function ReaderLayout({
   const handleSentenceClick = useCallback((sentenceId: string) => {
     setActiveSentenceId((prev) => prev === sentenceId ? null : sentenceId);
   }, []);
+
+  // Auth guard — redirect to landing if not logged in
+  if (authLoading) return null;
+
+  // Trial check — lesson 1 is always free
+  const isFreeContent = lessonId === '1';
+  if (trial?.isTrialExpired && !isFreeContent) {
+    return <Paywall />;
+  }
 
   return (
     <div className={`reader${isTranslationVisible ? ' reader--with-panel' : ''}`}>
