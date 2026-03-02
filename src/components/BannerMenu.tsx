@@ -111,7 +111,7 @@ export function BannerMenu() {
             {language === 'ru' ? 'Оплата' : "To'lov"}
           </Link>
           {user && (
-            <button className="home__menu-item" type="button" onClick={() => { logout(); setMenuOpen(false); router.push('/'); }}>
+            <button className="home__menu-item" type="button" onClick={async () => { await logout(); setMenuOpen(false); router.push('/'); }}>
               {language === 'ru' ? 'Выйти' : 'Chiqish'}
             </button>
           )}
