@@ -24,7 +24,7 @@ interface StoriesPageProps {
 export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProps) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
-  if (isLoading) return null;
+  if (isLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">

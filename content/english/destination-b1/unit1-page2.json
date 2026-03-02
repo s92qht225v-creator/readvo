@@ -305,6 +305,156 @@
           }
         ]
       }
+    },
+    {
+      "id": "u1p2-sec-exercise3",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qalin yozilgan so'zlarni to'g'ri shaklga o'zgartiring.",
+      "instruction_ru": "Исправьте слова и фразы, выделенные жирным шрифтом.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u1p2-ex3-1",
+            "sentence": "Are top musicians studying for many years?",
+            "errorStart": 0,
+            "errorEnd": 26,
+            "correctAnswer": "Have top musicians studied",
+            "alternateAnswers": ["Have top musicians been studying"],
+            "words": [
+              { "w": "top", "t": "eng yaxshi", "tr": "лучшие" },
+              { "w": "musicians", "t": "musiqachilar", "tr": "музыканты" },
+              { "w": "studying", "t": "o'rganmoq", "tr": "учиться" },
+              { "w": "for", "t": "davomida", "tr": "в течение" },
+              { "w": "many", "t": "ko'p", "tr": "много" },
+              { "w": "years", "t": "yillar", "tr": "лет" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-2",
+            "sentence": "What's going on? I hope you don't touch my things!",
+            "errorStart": 28,
+            "errorEnd": 39,
+            "correctAnswer": "aren't touching",
+            "alternateAnswers": ["are not touching"],
+            "words": [
+              { "w": "going on", "t": "sodir bo'lmoq", "tr": "происходить" },
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "hope", "t": "umid qilmoq", "tr": "надеяться" },
+              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
+              { "w": "touch", "t": "tegmoq", "tr": "трогать" },
+              { "w": "my", "t": "mening", "tr": "мои" },
+              { "w": "things", "t": "narsalar", "tr": "вещи" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-3",
+            "sentence": "It's a small business, so each person is doing lots of different jobs.",
+            "errorStart": 38,
+            "errorEnd": 46,
+            "correctAnswer": "does",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "small", "t": "kichik", "tr": "маленький" },
+              { "w": "business", "t": "biznes", "tr": "бизнес" },
+              { "w": "so", "t": "shuning uchun", "tr": "поэтому" },
+              { "w": "each", "t": "har bir", "tr": "каждый" },
+              { "w": "person", "t": "odam", "tr": "человек" },
+              { "w": "lots of", "t": "ko'p", "tr": "много" },
+              { "w": "different", "t": "turli", "tr": "разные" },
+              { "w": "jobs", "t": "ishlar", "tr": "работы" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-4",
+            "sentence": "Does Christine listen to the radio, or is that the TV I can hear?",
+            "errorStart": 0,
+            "errorEnd": 21,
+            "correctAnswer": "Is Christine listening",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "listen", "t": "tinglamoq", "tr": "слушать" },
+              { "w": "radio", "t": "radio", "tr": "радио" },
+              { "w": "or", "t": "yoki", "tr": "или" },
+              { "w": "that", "t": "u", "tr": "то" },
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "can", "t": "mumkin", "tr": "могу" },
+              { "w": "hear", "t": "eshitmoq", "tr": "слышать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-5",
+            "sentence": "I am usually buying a special ticket each week for the bus because it's cheaper.",
+            "errorStart": 2,
+            "errorEnd": 19,
+            "correctAnswer": "usually buy",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "I", "t": "men", "tr": "я" },
+              { "w": "usually", "t": "odatda", "tr": "обычно" },
+              { "w": "buying", "t": "sotib olmoq", "tr": "покупать" },
+              { "w": "special", "t": "maxsus", "tr": "специальный" },
+              { "w": "ticket", "t": "chipta", "tr": "билет" },
+              { "w": "each week", "t": "har hafta", "tr": "каждую неделю" },
+              { "w": "bus", "t": "avtobus", "tr": "автобус" },
+              { "w": "because", "t": "chunki", "tr": "потому что" },
+              { "w": "cheaper", "t": "arzonroq", "tr": "дешевле" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-6",
+            "sentence": "Our washing machine is starting when you press this button.",
+            "errorStart": 20,
+            "errorEnd": 31,
+            "correctAnswer": "starts",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "our", "t": "bizning", "tr": "наша" },
+              { "w": "washing machine", "t": "kir yuvish mashinasi", "tr": "стиральная машина" },
+              { "w": "starting", "t": "ishga tushmoq", "tr": "запускаться" },
+              { "w": "when", "t": "qachonki", "tr": "когда" },
+              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
+              { "w": "press", "t": "bosmoq", "tr": "нажимать" },
+              { "w": "this", "t": "bu", "tr": "эту" },
+              { "w": "button", "t": "tugma", "tr": "кнопку" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-7",
+            "sentence": "How's the match going? Does our team win?",
+            "errorStart": 23,
+            "errorEnd": 41,
+            "correctAnswer": "Is our team winning?",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "match", "t": "o'yin", "tr": "матч" },
+              { "w": "going", "t": "bormoq/ketmoq", "tr": "идти" },
+              { "w": "our", "t": "bizning", "tr": "наша" },
+              { "w": "team", "t": "jamoa", "tr": "команда" },
+              { "w": "win", "t": "g'alaba qozonmoq", "tr": "побеждать" }
+            ]
+          },
+          {
+            "id": "u1p2-ex3-8",
+            "sentence": "Many people are enjoying spending time on the beach on holiday.",
+            "errorStart": 12,
+            "errorEnd": 24,
+            "correctAnswer": "enjoy",
+            "alternateAnswers": [],
+            "words": [
+              { "w": "many", "t": "ko'p", "tr": "много" },
+              { "w": "people", "t": "odamlar", "tr": "люди" },
+              { "w": "enjoying", "t": "zavqlanmoq", "tr": "наслаждаться" },
+              { "w": "spending", "t": "o'tkazmoq", "tr": "проводить" },
+              { "w": "time", "t": "vaqt", "tr": "время" },
+              { "w": "on the beach", "t": "plyajda", "tr": "на пляже" },
+              { "w": "on holiday", "t": "ta'tilda", "tr": "в отпуске" }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

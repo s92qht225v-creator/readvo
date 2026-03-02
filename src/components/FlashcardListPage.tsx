@@ -23,7 +23,7 @@ interface FlashcardListPageProps {
 export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
-  if (isLoading) return null;
+  if (isLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">

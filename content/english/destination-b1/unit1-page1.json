@@ -51,17 +51,21 @@
         "text": "",
         "translation": "Present Simple quyidagi so'z va iboralar bilan ishlatiladi:",
         "translation_ru": "Present Simple часто используется со следующими словами и фразами:",
+        "translationBottom": "Esda tuting: bu ravishlar odatda fe'ldan **oldin**, lekin **be** fe'lidan **keyin** keladi.\n• I **often** play football with my friends.\n• I am **often** late for my piano lessons.",
+        "translationBottom_ru": "Запомните: эти наречия обычно ставятся **перед** глаголом, но **после** глагола **be**.\n• I **often** play football with my friends.\n• I am **often** late for my piano lessons.",
         "vocabList": [
+          { "en": "adverbs", "uz": "ravishlar", "ru": "наречия", "header": true },
           { "en": "always", "uz": "har doim", "ru": "всегда" },
           { "en": "usually", "uz": "odatda", "ru": "обычно" },
           { "en": "often", "uz": "tez-tez", "ru": "часто" },
           { "en": "sometimes", "uz": "ba'zan", "ru": "иногда" },
           { "en": "rarely", "uz": "kamdan-kam", "ru": "редко" },
           { "en": "never", "uz": "hech qachon", "ru": "никогда" },
+          { "en": "phrases", "uz": "iboralar", "ru": "фразы", "header": true },
           { "en": "every Monday/week/etc", "uz": "har dushanba/hafta/h.k.", "ru": "каждый понедельник/неделю/и т.д." },
           { "en": "each Monday/week/etc", "uz": "har bir dushanba/hafta/h.k.", "ru": "каждый понедельник/неделю/и т.д." },
-          { "en": "once/twice a week", "uz": "haftada bir/ikki marta", "ru": "раз/два раза в неделю" },
-          { "en": "three times a week", "uz": "haftada uch marta", "ru": "три раза в неделю" }
+          { "en": "once/twice a week/month/etc", "uz": "haftada bir/ikki marta", "ru": "раз/два раза в неделю/месяц/и т.д." },
+          { "en": "three times a week/month/etc", "uz": "haftada uch marta", "ru": "три раза в неделю/месяц/и т.д." }
         ]
       }
     },

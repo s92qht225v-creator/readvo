@@ -43,7 +43,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  const wasLoggedIn = useRef(false);
   const loginGrace = useRef(false);
 
   useEffect(() => {
@@ -52,7 +51,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const newUser = session?.user ? mapUser(session.user) : null;
       setUser(newUser);
       setIsLoading(false);
-      if (newUser) wasLoggedIn.current = true;
       // Skip session checks for 60s after login to avoid race conditions
       if (_event === 'SIGNED_IN') {
         loginGrace.current = true;
@@ -69,7 +67,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const newUser = session?.user ? mapUser(session.user) : null;
       setUser(newUser);
       setIsLoading(false);
-      if (newUser) wasLoggedIn.current = true;
     });
 
     return () => subscription.unsubscribe();
@@ -85,7 +82,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
         setUser(null);
-        wasLoggedIn.current = false;
         router.push('/');
         return;
       }
@@ -103,7 +99,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem('blim-session-nonce');
           await supabase.auth.signOut({ scope: 'local' });
           setUser(null);
-          wasLoggedIn.current = false;
           router.push('/');
         }
       } catch {
@@ -124,6 +119,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const logout = useCallback(async () => {
+    // Clean up active_sessions row server-side
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      fetch('/api/auth/session-check', {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${session.access_token}` },
+      }).catch(() => {}); // fire-and-forget
+    }
     localStorage.removeItem('blim-session-nonce');
     await supabase.auth.signOut();
     setUser(null);

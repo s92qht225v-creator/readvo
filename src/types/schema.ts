@@ -192,7 +192,10 @@ export interface Section {
       readonly en: string;
       readonly uz: string;
       readonly ru: string;
+      readonly header?: boolean;
     }>;
+    readonly translationBottom?: string;
+    readonly translationBottom_ru?: string;
   };
 
   /** Optional audio URL for the entire section */
@@ -753,6 +756,9 @@ export interface ErrorCorrectionCard {
 
   /** Alternative accepted answers */
   readonly alternateAnswers?: readonly string[];
+
+  /** Word translations for tap-to-translate tooltips */
+  readonly words?: readonly TypedFillBlankWord[];
 }
 
 /**

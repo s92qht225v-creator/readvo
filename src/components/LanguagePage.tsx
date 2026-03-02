@@ -54,7 +54,7 @@ export function LanguagePage() {
     initialTab && validTabs.includes(initialTab) ? initialTab : 'hsk'
   );
 
-  if (isLoading) return null;
+  if (isLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">

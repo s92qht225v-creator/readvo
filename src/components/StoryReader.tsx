@@ -205,6 +205,12 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
   const [focusMode, setFocusMode] = useState(false);
   const [activeWord, setActiveWord] = useState<{ sentenceId: string; wordIdx: number } | null>(null);
+  const [showWordHint, setShowWordHint] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !localStorage.getItem('blim-word-hint-seen');
+    }
+    return false;
+  });
   const longPressedRef = useRef(false);
   const audioPausedByWordRef = useRef(false);
   // Per-sentence audio player (singleton, tap-to-play)
@@ -422,11 +428,14 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
 
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
-  if (authLoading) return null;
-  if (trial?.isTrialExpired) return <Paywall />;
+  const showPaywall = trial?.isTrialExpired;
+
+  if (authLoading) return <div className="loading-spinner" />;
 
   return (
-    <div className="reader">
+    <>
+      {showPaywall && <Paywall />}
+      <div className={`reader${showPaywall ? ' paywall-blur' : ''}`}>
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={listPath || `${bookPath}/stories`} className="reader__home">
@@ -448,6 +457,20 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
           />
         </div>
       </header>
+
+      {showWordHint && (
+        <div
+          className="story__word-hint"
+          onClick={() => {
+            setShowWordHint(false);
+            localStorage.setItem('blim-word-hint-seen', '1');
+          }}
+        >
+          {language === 'ru'
+            ? 'Удерживайте слово — увидите перевод'
+            : "So'zni bosib turing — tarjimani ko'ring"}
+        </div>
+      )}
 
       {activeSentence && (showTranslation || activeWord) && (
         <div className="story__translation-panel">
@@ -634,6 +657,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
           </button>
         </div>
       </nav>
-    </div>
+      </div>
+    </>
   );
 }

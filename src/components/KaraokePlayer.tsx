@@ -170,11 +170,14 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     return `${m}:${s.toString().padStart(2, '0')}`;
   };
 
-  if (authLoading) return null;
-  if (trial?.isTrialExpired) return <Paywall />;
+  const showPaywall = trial?.isTrialExpired;
+
+  if (authLoading) return <div className="loading-spinner" />;
 
   return (
-    <div className="karaoke">
+    <>
+      {showPaywall && <Paywall />}
+      <div className={`karaoke${showPaywall ? ' paywall-blur' : ''}`}>
       {/* Header */}
       <header className="reader__header">
         <div className="reader__header-inner">
@@ -325,6 +328,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
           </button>
         </div>
       </nav>
-    </div>
+      </div>
+    </>
   );
 }

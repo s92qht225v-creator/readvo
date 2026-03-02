@@ -283,13 +283,20 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
             )}
             {section.tip.vocabList && (
               <div className="section__tip-vocab">
-                {section.tip.vocabList.map((item, i) => (
-                  <div key={i} className="section__tip-vocab-row">
-                    <span className="section__tip-vocab-en">{item.en}</span>
-                    <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
-                  </div>
-                ))}
+                {section.tip.vocabList.map((item, i) =>
+                  item.header ? (
+                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : (item.uz || item.en)}</div>
+                  ) : (
+                    <div key={i} className="section__tip-vocab-row">
+                      <span className="section__tip-vocab-en">{item.en}</span>
+                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                    </div>
+                  )
+                )}
               </div>
+            )}
+            {(language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom) && (
+              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom)!)}</div>
             )}
           </div>
         )}
@@ -398,6 +405,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 errorEnd: card.errorEnd,
                 correctAnswer: card.correctAnswer,
                 alternateAnswers: card.alternateAnswers ? [...card.alternateAnswers] : undefined,
+                words: card.words?.map((w) => ({ w: w.w, t: w.t, tr: w.tr })),
               }))}
               language={language}
             />
@@ -492,13 +500,20 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
             )}
             {section.tip.vocabList && (
               <div className="section__tip-vocab">
-                {section.tip.vocabList.map((item, i) => (
-                  <div key={i} className="section__tip-vocab-row">
-                    <span className="section__tip-vocab-en">{item.en}</span>
-                    <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
-                  </div>
-                ))}
+                {section.tip.vocabList.map((item, i) =>
+                  item.header ? (
+                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : (item.uz || item.en)}</div>
+                  ) : (
+                    <div key={i} className="section__tip-vocab-row">
+                      <span className="section__tip-vocab-en">{item.en}</span>
+                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                    </div>
+                  )
+                )}
               </div>
+            )}
+            {(language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom) && (
+              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom)!)}</div>
             )}
           </div>
         )}

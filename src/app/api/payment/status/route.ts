@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 function getSupabaseWithAuth(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -25,9 +26,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
 
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-  const admin = createClient(url, serviceKey);
+  const admin = getSupabaseAdmin();
 
   // Get the user's most recent payment request
   const { data: payment } = await admin

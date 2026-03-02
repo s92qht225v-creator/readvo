@@ -43,13 +43,11 @@ export function BannerMenu() {
           <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
         </svg>
       </button>
-      {menuOpen && (
-        <div className="home__menu-dropdown">
+      <div className={`home__menu-dropdown${menuOpen ? ' home__menu-dropdown--open' : ''}`}>
           {user && (
             <>
               <div className="home__menu-user">
                 <span className="home__menu-user-name">{user.name}</span>
-                <span className="home__menu-user-email">{user.email}</span>
               </div>
               {trial && (
                 <div className={`home__menu-trial${trial.isTrialExpired ? ' home__menu-trial--expired' : ''}${trial.hasSubscription ? ' home__menu-trial--subscribed' : ''}`}>
@@ -115,8 +113,7 @@ export function BannerMenu() {
               {language === 'ru' ? 'Выйти' : 'Chiqish'}
             </button>
           )}
-        </div>
-      )}
+      </div>
     </div>
   );
 }

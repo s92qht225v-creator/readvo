@@ -84,7 +84,12 @@ Example routes:
 │   │   │   │   └── status/route.ts # Payment status (GET)
 │   │   │   ├── subscription/route.ts # Active subscription (GET)
 │   │   │   ├── progress/route.ts  # User progress (GET/POST)
-│   │   │   └── auth/callback/route.ts # OAuth callback
+│   │   │   └── auth/
+│   │   │       ├── telegram/
+│   │   │       │   ├── init/route.ts     # Telegram Widget auth URL (GET)
+│   │   │       │   └── callback/route.ts # HMAC verify + user create + session (POST)
+│   │   │       └── session-check/route.ts # Session nonce validation (POST/DELETE)
+│   │   ├── auth/telegram/complete/page.tsx  # Telegram login completion (client)
 │   │   ├── payment/page.tsx       # Payment page
 │   │   ├── english/
 │   │   │   ├── page.tsx       # English language page
@@ -124,7 +129,8 @@ Example routes:
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
 │   │   ├── useLanguage.ts     # UZ/RU language toggle/set (localStorage)
-│   │   ├── useAuth.tsx        # Google OAuth auth provider + context
+│   │   ├── useAuth.tsx        # Telegram auth provider + context
+│   │   ├── useRequireAuth.ts  # Auth guard (redirects to / if not logged in)
 │   │   └── useTrial.ts       # Trial/subscription status hook
 │   ├── lib/                      # Supabase clients
 │   │   ├── supabase-client.ts # Browser client (anon key, respects RLS)
@@ -352,3 +358,14 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Icons**: Dynamic favicon (`src/app/icon.tsx`) and Apple touch icon (`src/app/apple-icon.tsx`) via edge runtime
 - **`next/image`**: All logo `<img>` tags use `next/image` `<Image>`. Remote patterns configured in `next.config.js` for Supabase and flagcdn.
 - **Env var**: `NEXT_PUBLIC_SITE_URL` — defaults to `https://blim.uz`, used by sitemap and `metadataBase`
+
+## Security Hardening
+- **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.
+- **Payment upload validation** (`/api/payment`): File extension allowlist (`jpg, jpeg, png, webp, heic`), MIME type check, 10MB size limit. Validated server-side before Supabase upload.
+- **Admin rate limiting** (`/api/admin/check`): In-memory IP-based rate limiter. Max 5 failed password attempts per IP, 15-minute lockout window. Uses `x-forwarded-for` header.
+- **Error sanitization** (`/api/admin`): Invalid action responses return generic `"Invalid action"` without echoing user input (prevents reflected XSS / fingerprinting).
+- **Paywall enforcement**: All content components (ReaderLayout, StoryReader, FlashcardDeck, KaraokePlayer) use early-return `<Paywall />` pattern — paid content is never rendered to DOM when locked. Server-side content (JSON files) is loaded at build time, not fetched client-side.
+- **Known limitations**:
+  - Payment screenshots are publicly accessible in Supabase storage (would need private bucket + signed URLs to fix)
+  - No server-side bounds validation on admin `add_days`/`remove_days`/`grant_subscription` days parameter
+  - Next.js 15.x has known DoS CVEs (fixed in 16.x, breaking upgrade required)

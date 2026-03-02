@@ -61,7 +61,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
     });
   }, [user, getAccessToken]);
 
-  if (authLoading) return null;
+  if (authLoading) return <div className="loading-spinner" />;
 
   const isPageCompleted = (lessonId: string, pageNum: number) =>
     progress.some((p) => p.lesson_id === lessonId && p.page_num === String(pageNum) && p.completed);

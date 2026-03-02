@@ -65,34 +65,20 @@ export async function POST(request: NextRequest) {
       provider: 'telegram',
     };
 
-    // Try to create user; if already exists, update metadata
-    const { data: createData, error: createError } = await admin.auth.admin.createUser({
+    // Try to create user; if already exists, that's fine — we'll update metadata after session creation
+    const { error: createError } = await admin.auth.admin.createUser({
       email: syntheticEmail,
       email_confirm: true,
       user_metadata: metadata,
     });
 
-    let userId = createData?.user?.id;
-
-    if (createError) {
-      if (createError.message?.includes('already') || createError.message?.includes('exists')) {
-        // User exists — find, update metadata, and invalidate old sessions
-        const { data: { users } } = await admin.auth.admin.listUsers();
-        const existingUser = users.find(u => u.email === syntheticEmail);
-
-        if (!existingUser) {
-          return NextResponse.json({ error: 'user_not_found' }, { status: 500 });
-        }
-
-        userId = existingUser.id;
-        await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
-      } else {
-        console.error('Failed to create user:', createError);
-        return NextResponse.json({ error: 'create_user' }, { status: 500 });
-      }
+    if (createError && !createError.message?.includes('already') && !createError.message?.includes('exists')) {
+      console.error('Failed to create user:', createError);
+      return NextResponse.json({ error: 'create_user' }, { status: 500 });
     }
 
     // Generate a Supabase session via magiclink + verifyOtp
+    // generateLink resolves the user by email server-side (no listUsers needed)
     const { data: linkData, error: linkError } = await admin.auth.admin.generateLink({
       type: 'magiclink',
       email: syntheticEmail,
@@ -118,6 +104,12 @@ export async function POST(request: NextRequest) {
       console.error('Failed to verify OTP:', otpError);
       return NextResponse.json({ error: 'verify_otp' }, { status: 500 });
     }
+
+    // Get userId from the session (avoids listUsers which doesn't paginate past ~50 users)
+    const userId = sessionData.session.user.id;
+
+    // Update metadata for existing users (name/avatar changes)
+    await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
 
     // Store session nonce in dedicated table (not user_metadata, which has JWT caching issues)
     await admin.from('active_sessions').upsert({

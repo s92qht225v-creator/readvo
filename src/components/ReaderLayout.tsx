@@ -80,8 +80,11 @@ export function ReaderLayout({
 
   // Auth - save progress when page is visited
   const { user, getAccessToken } = useAuth();
+  const trial = useTrial();
+  const isFreeContent = lessonId === '1';
+  const showPaywall = trial?.isTrialExpired && !isFreeContent;
   useEffect(() => {
-    if (!user) return;
+    if (!user || showPaywall) return;
     getAccessToken().then((token) => {
       if (!token) return;
       fetch('/api/progress', {
@@ -93,9 +96,7 @@ export function ReaderLayout({
         body: JSON.stringify({ lesson_id: lessonId, page_num: Number(pageNum) }),
       }).catch(() => {});
     });
-  }, [user, lessonId, pageNum, getAccessToken]);
-
-  const trial = useTrial();
+  }, [user, lessonId, pageNum, getAccessToken, showPaywall]);
 
   // Active sentence for translation panel
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
@@ -135,16 +136,12 @@ export function ReaderLayout({
   }, []);
 
   // Auth guard — redirect to landing if not logged in
-  if (authLoading) return null;
-
-  // Trial check — lesson 1 is always free
-  const isFreeContent = lessonId === '1';
-  if (trial?.isTrialExpired && !isFreeContent) {
-    return <Paywall />;
-  }
+  if (authLoading) return <div className="loading-spinner" />;
 
   return (
-    <div className={`reader${isTranslationVisible ? ' reader--with-panel' : ''}`}>
+    <>
+      {showPaywall && <Paywall />}
+      <div className={`reader${isTranslationVisible ? ' reader--with-panel' : ''}${showPaywall ? ' paywall-blur' : ''}`}>
       {/* Fixed header with logo and controls */}
       <header className="reader__header">
         <div className="reader__header-inner">
@@ -259,6 +256,7 @@ export function ReaderLayout({
           </nav>
         </>
       )}
-    </div>
+      </div>
+    </>
   );
 }

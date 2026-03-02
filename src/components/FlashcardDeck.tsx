@@ -96,12 +96,14 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
 
   const title = language === 'ru' && deck.title_ru ? deck.title_ru : deck.title;
 
-  if (authLoading) return null;
+  if (authLoading) return <div className="loading-spinner" />;
   const isFreeContent = deck.words[0]?.lesson === 1;
-  if (trial?.isTrialExpired && !isFreeContent) return <Paywall />;
+  const showPaywall = trial?.isTrialExpired && !isFreeContent;
 
   return (
-    <main className="flashcard-page">
+    <>
+      {showPaywall && <Paywall />}
+      <main className={`flashcard-page${showPaywall ? ' paywall-blur' : ''}`}>
       <header className="reader__header">
         <div className="reader__header-inner">
           <Link href={`${bookPath}/flashcards`} className="reader__home">
@@ -245,7 +247,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath }) 
           </button>
         </div>
       </nav>
-    </main>
+      </main>
+    </>
   );
 };
 

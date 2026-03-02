@@ -131,7 +131,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
     return result;
   }, [search, dialogues, activeTag, showBookmarked, bookmarks]);
 
-  if (authLoading) return null;
+  if (authLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">
