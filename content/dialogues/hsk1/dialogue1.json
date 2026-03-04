@@ -158,7 +158,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3",
-          "start": 5.52  ,
+          "start": 5.52,
           "end": 6.82
         },
         {
@@ -463,43 +463,6 @@
       "expy": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ, wǒ jiào Zhāng Wěi.",
       "ex_uz": "Salom! Tanishganimdan xursandman, mening ismim Zhang Wei.",
       "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй."
-    }
-  ],
-  "quiz": [
-    {
-      "q_uz": "«Isming nima?» xitoycha qanday aytiladi?",
-      "q_ru": "Как по-китайски «Как тебя зовут?»",
-      "options_uz": ["你叫什么名字？", "你好吗？", "你在哪里？", "你是谁？"],
-      "options_ru": ["你叫什么名字？", "你好吗？", "你在哪里？", "你是谁？"],
-      "correct": 0
-    },
-    {
-      "q_uz": "«Mening ismim Li Ming» xitoycha qanday?",
-      "q_ru": "Как по-китайски «Меня зовут Ли Мин»?",
-      "options_uz": ["我是李明。", "我叫李明。", "我有李明。", "我在李明。"],
-      "options_ru": ["我是李明。", "我叫李明。", "我有李明。", "我在李明。"],
-      "correct": 1
-    },
-    {
-      "q_uz": "«Tanishganimdan xursandman» xitoycha qanday?",
-      "q_ru": "Как по-китайски «Очень рад познакомиться»?",
-      "options_uz": ["我很好。", "很高兴认识你。", "你好吗？", "谢谢你。"],
-      "options_ru": ["我很好。", "很高兴认识你。", "你好吗？", "谢谢你。"],
-      "correct": 1
-    },
-    {
-      "q_uz": "«也» so'zining ma'nosi nima?",
-      "q_ru": "Что означает слово «也»?",
-      "options_uz": ["juda", "ham", "emas", "va"],
-      "options_ru": ["очень", "тоже", "нет", "и"],
-      "correct": 1
-    },
-    {
-      "q_uz": "Dialogda B kim bilan tanishmoqda?",
-      "q_ru": "С кем знакомится B в диалоге?",
-      "options_uz": ["Zhang Wei bilan", "Li Ming bilan", "Wang Fang bilan", "noma'lum"],
-      "options_ru": ["с Чжан Вэем", "с Ли Мином", "с Ван Фан", "неизвестно"],
-      "correct": 1
     }
   ]
 }

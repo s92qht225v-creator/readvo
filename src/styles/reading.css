@@ -2718,8 +2718,8 @@ body {
 
 .dr-hero__watermark {
   position: absolute;
-  top: -10px;
-  right: -5px;
+  bottom: 60px;
+  right: 20px;
   font-size: 100px;
   opacity: 0.07;
   font-weight: 900;
@@ -2736,8 +2736,30 @@ body {
   padding: 14px 0 10px;
 }
 
+.dr-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+}
+
 .dr-hero__body {
-  padding-top: 4px;
+  padding-top: 0;
+}
+
+.dr-hero .dr-hero__body {
+  margin-top: -10px;
+}
+
+.home__hero .dr-hero__body {
+  margin-top: -22px;
+  text-align: center;
+  width: 100%;
 }
 
 .dr-hero__level {
@@ -3003,12 +3025,12 @@ body {
 }
 
 .dr-vocab-py {
-  font-size: 12px;
+  font-size: 14px;
   color: #dc2626;
 }
 
 .dr-vocab-tr {
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
   margin-left: auto;
 }
@@ -3020,18 +3042,18 @@ body {
 }
 
 .dr-vocab-example-zh {
-  font-size: 15px;
+  font-size: 17px;
   color: #1a1a2e;
 }
 
 .dr-vocab-example-py {
-  font-size: 11px;
+  font-size: 13px;
   color: #4338ca;
   margin-top: 1px;
 }
 
 .dr-vocab-example-tr {
-  font-size: 11px;
+  font-size: 13px;
   color: #888;
   margin-top: 1px;
 }
@@ -3126,14 +3148,14 @@ body {
   background: #fee2e2;
   border-radius: 6px;
   padding: 3px 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #dc2626;
   white-space: nowrap;
 }
 
 .dr-grammar-title {
-  font-size: 12px;
+  font-size: 14px;
   color: #1a1a2e;
   font-weight: 600;
   flex: 1;
@@ -3157,7 +3179,7 @@ body {
 
 .dr-grammar-formula {
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   padding: 10px 8px;
   background: #fff1f2;
   border-radius: 8px;
@@ -3179,7 +3201,7 @@ body {
 }
 
 .dr-grammar-desc {
-  font-size: 12px;
+  font-size: 14px;
   color: #555;
   line-height: 1.7;
 }
@@ -4044,6 +4066,82 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Floating pill bottom bar for dialogue reader */
+.dialogue-reader .story__bottom-bar {
+  background: transparent;
+  border-top: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0 0 calc(32px + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.dialogue-reader .story__bottom-bar-inner {
+  pointer-events: auto;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  gap: 0;
+  display: inline-flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dialogue-reader .reader__nav-toggle {
+  border: none;
+  border-radius: 0;
+  padding: 14px 22px;
+  min-height: 44px;
+  font-size: 0.85rem;
+  color: #888;
+  background: transparent;
+}
+
+.dialogue-reader .reader__nav-toggle--active {
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.dr-font-controls {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 89;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 6px 4px;
+}
+
+.dr-font-divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 2px 6px;
+}
+
+.dr-font-btn {
+  width: 40px;
+  height: 44px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Dark bottom bar for karaoke */
 .karaoke .story__bottom-bar {
   background: rgba(10, 10, 10, 0.95);
@@ -4356,12 +4454,13 @@ body {
   transform: translateX(-50%);
   margin-bottom: 0;
   z-index: 20;
+  min-height: 206px;
 }
 
 .home__hero-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 16px var(--spacing-xl) 0;
+  padding: 0 var(--spacing-xl) 0;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -4371,7 +4470,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
   min-height: 66px;
 }
 
@@ -5470,11 +5568,17 @@ body {
    LANGUAGE PAGE v2 (lp__ prefix)
    ============================================================================= */
 
-/* Ghost tabs inside red banner */
+/* Tab bar below hero banner */
 .lp__tabs {
   display: flex;
-  gap: 2px;
-  padding-bottom: 10px;
+  gap: 4px;
+  padding: 8px 16px 10px;
+  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .lp__tab {
@@ -5501,11 +5605,11 @@ body {
 
 .lp__hero-watermark {
   position: absolute;
-  bottom: -16px;
-  right: -8px;
+  top: 46px;
+  right: 20px;
   font-size: 160px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.07);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -6169,12 +6273,12 @@ body {
   }
 
   .home__hero-inner {
-    padding: 12px 12px 0;
+    padding: 0 12px 0;
     max-width: 100%;
   }
 
   .home__hero-top-row {
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
 
   .home__lang-selectors {

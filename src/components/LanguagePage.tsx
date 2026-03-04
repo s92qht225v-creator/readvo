@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useRequireAuth } from '../hooks/useRequireAuth';
+import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
 import type { DialogueInfo } from '../services/dialogues';
 import type { StoryInfo } from '../services/stories';
@@ -69,6 +70,7 @@ interface Props {
 
 export function LanguagePage({ dialogues, stories }: Props) {
   const { isLoading } = useRequireAuth();
+  const [language] = useLanguage();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
   const [activeTab, setActiveTab] = useState<Tab>(
@@ -132,20 +134,54 @@ export function LanguagePage({ dialogues, stories }: Props) {
             </Link>
             <BannerMenu />
           </div>
-          <nav className="lp__tabs">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
-                onClick={() => setActiveTab(tab.id)}
-                type="button"
-              >
-                {tab.label}
-              </button>
-            ))}
-          </nav>
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK 1</div>
+            <div className="dr-hero__title">{
+              activeTab === 'dialogues' ? '对话' :
+              activeTab === 'stories' ? '故事' :
+              activeTab === 'flashcards' ? '单词' :
+              activeTab === 'karaoke' ? '歌曲' :
+              activeTab === 'grammar' ? '语法' :
+              '测验'
+            }</div>
+            <div className="dr-hero__pinyin">{
+              activeTab === 'dialogues' ? 'duìhuà' :
+              activeTab === 'stories' ? 'gùshi' :
+              activeTab === 'flashcards' ? 'dāncí' :
+              activeTab === 'karaoke' ? 'gēqǔ' :
+              activeTab === 'grammar' ? 'yǔfǎ' :
+              'cèyàn'
+            }</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? (
+              activeTab === 'dialogues' ? 'Диалоги' :
+              activeTab === 'stories' ? 'Истории' :
+              activeTab === 'flashcards' ? 'Слова' :
+              activeTab === 'karaoke' ? 'Песни' :
+              activeTab === 'grammar' ? 'Грамматика' :
+              'Тесты'
+            ) : (
+              activeTab === 'dialogues' ? 'Dialoglar' :
+              activeTab === 'stories' ? 'Hikoyalar' :
+              activeTab === 'flashcards' ? 'So\'zlar' :
+              activeTab === 'karaoke' ? 'Qo\'shiqlar' :
+              activeTab === 'grammar' ? 'Grammatika' :
+              'Testlar'
+            )} —</div>
+          </div>
         </div>
       </header>
+      <nav className="lp__tabs">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+            type="button"
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
 
       {/* Segmented HSK level control */}
       {activeTab === 'dialogues' && (

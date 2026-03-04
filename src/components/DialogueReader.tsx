@@ -2,7 +2,6 @@
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -52,13 +51,6 @@ interface GrammarNote {
   ex_ru?: string;
 }
 
-interface QuizQuestion {
-  q_uz: string;
-  q_ru: string;
-  options_uz: string[];
-  options_ru: string[];
-  correct: number;
-}
 
 interface VocabEntry {
   zh: string;
@@ -101,7 +93,6 @@ interface DialogueData {
   extraVocabSubtitle_ru?: string;
   timeOfDay?: TimeOfDayEntry[];
   grammarNotes?: GrammarNote[];
-  quiz?: QuizQuestion[];
 }
 
 interface DialogueReaderProps {
@@ -208,7 +199,6 @@ const TABS = [
   { id: 'dialog', uz: 'Dialog', ru: 'Диалог' },
   { id: 'vocab', uz: 'So\'zlar', ru: 'Слова' },
   { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика' },
-  { id: 'quiz', uz: 'Mashq', ru: 'Тест' },
 ];
 
 export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderProps) {
@@ -242,10 +232,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
   // Grammatika tab state
   const [expandedGrammar, setExpandedGrammar] = useState<number | null>(null);
-
-  // Mashq tab state
-  const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [showResults, setShowResults] = useState(false);
 
   const allSentences = useMemo(() => dialogue.sections.flatMap(s => s.sentences), [dialogue.sections]);
 
@@ -362,10 +348,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [dialogue.vocab, allSentences]);
 
   const grammarNotes = dialogue.grammarNotes ?? [];
-  const quiz = dialogue.quiz ?? [];
-  const allAnswered = Object.keys(answers).length === quiz.length && quiz.length > 0;
-  const score = Object.entries(answers).filter(([qi, ai]) => quiz[+qi]?.correct === +ai).length;
-  const pick = (qi: number, ai: number) => { if (!showResults) setAnswers(p => ({ ...p, [qi]: ai })); };
 
   if (authLoading) return <div className="loading-spinner" />;
   const showPaywall = trial?.isTrialExpired;
@@ -379,8 +361,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         <div className="dr-hero">
           <div className="dr-hero__watermark">对话</div>
           <div className="dr-hero__top-row">
-            <Link href={listPath || `${bookPath}/dialogues`} className="home__hero-logo">
-              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
+            <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
             </Link>
             <BannerMenu />
           </div>
@@ -500,19 +482,23 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
-                <button className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
-                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
-                </button>
                 <button className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
                   {language === 'ru' ? 'Фокус' : 'Fokus'}
+                </button>
+                <button className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
+                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
                 </button>
                 <button className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
                   Pinyin
                 </button>
-                <button className="page__font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
-                <button className="page__font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
               </div>
             </nav>
+
+            <div className="dr-font-controls">
+              <button className="dr-font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+              <div className="dr-font-divider" />
+              <button className="dr-font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
+            </div>
           </>
         )}
 
@@ -653,60 +639,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
           </div>
         )}
 
-        {/* ── MASHQ TAB ── */}
-        {activeTab === 'quiz' && (
-          <div className="dr-panel">
-            {quiz.length === 0 ? (
-              <div className="dr-empty">
-                <div className="dr-empty__icon">🚧</div>
-                <div>{language === 'ru' ? 'Скоро будет' : 'Tez kunda'}</div>
-              </div>
-            ) : (
-              <div className="dr-card">
-                <div className="dr-label">{language === 'ru' ? 'Проверьте себя' : 'Tushunishni tekshiring'}</div>
-                {quiz.map((q, qi) => {
-                  const opts = language === 'ru' ? q.options_ru : q.options_uz;
-                  return (
-                    <div key={qi} className="dr-quiz-question">
-                      <div className="dr-quiz-q">{qi + 1}. {language === 'ru' ? q.q_ru : q.q_uz}</div>
-                      <div className="dr-quiz-options">
-                        {opts.map((opt, ai) => {
-                          const sel = answers[qi] === ai, correct = q.correct === ai;
-                          let cls = 'dr-quiz-option';
-                          if (showResults && sel && correct) cls += ' dr-quiz-option--correct';
-                          else if (showResults && sel) cls += ' dr-quiz-option--wrong';
-                          else if (showResults && correct) cls += ' dr-quiz-option--correct';
-                          else if (sel) cls += ' dr-quiz-option--selected';
-                          return <button key={ai} className={cls} onClick={() => pick(qi, ai)} type="button">{opt}</button>;
-                        })}
-                      </div>
-                    </div>
-                  );
-                })}
-                {!showResults ? (
-                  <button className={`dr-quiz-submit ${allAnswered ? 'dr-quiz-submit--ready' : ''}`} onClick={() => { if (allAnswered) setShowResults(true); }} type="button">
-                    {allAnswered ? (language === 'ru' ? 'Проверить' : 'Tekshirish') : `${Object.keys(answers).length} / ${quiz.length} ${language === 'ru' ? 'выбрано' : 'tanlandi'}`}
-                  </button>
-                ) : (
-                  <div className={`dr-quiz-result ${score === quiz.length ? 'dr-quiz-result--perfect' : ''}`}>
-                    <div className="dr-quiz-result-emoji">{score === quiz.length ? '🎉' : score >= Math.ceil(quiz.length * 0.6) ? '👍' : '📚'}</div>
-                    <div className="dr-quiz-result-score">{score} / {quiz.length}</div>
-                    <div className="dr-quiz-result-msg">
-                      {score === quiz.length
-                        ? (language === 'ru' ? 'Отлично! Всё правильно!' : 'Ajoyib! Barchasini to\'g\'ri topdingiz!')
-                        : score >= Math.ceil(quiz.length * 0.6)
-                        ? (language === 'ru' ? 'Хорошо! Повторите диалог.' : 'Yaxshi! Dialogni qayta o\'qing.')
-                        : (language === 'ru' ? 'Повторите диалог.' : 'Dialogni qayta o\'qib, takrorlang.')}
-                    </div>
-                    <button className="dr-quiz-retry" onClick={() => { setAnswers({}); setShowResults(false); }} type="button">
-                      {language === 'ru' ? 'Попробовать снова' : 'Qayta urinish'}
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
 
       </div>
     </>

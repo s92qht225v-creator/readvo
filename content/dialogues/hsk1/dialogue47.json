@@ -20,10 +20,46 @@
           "text_translation_ru": "Почему ты не ешь?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 4], "p": "wèi shénme", "t": "nega", "tr": "почему" },
-            { "i": [4, 5], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [5, 7], "p": "chīfàn", "t": "ovqat yemoq", "tr": "есть" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "wèi shénme",
+              "t": "nega",
+              "tr": "почему"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "chīfàn",
+              "t": "ovqat yemoq",
+              "tr": "есть"
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue1.mp3"
         },
@@ -35,10 +71,46 @@
           "text_translation_ru": "Потому что я держу пост.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "yīnwèi", "t": "chunki", "tr": "потому что" },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
-            { "i": [4, 6], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yīnwèi",
+              "t": "chunki",
+              "tr": "потому что"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "fēngzhāi",
+              "t": "ro'za tutmoq",
+              "tr": "держать пост"
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue2.mp3"
         },
@@ -50,10 +122,48 @@
           "text_translation_ru": "Сейчас Рамадан?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
-            { "i": [2, 3], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
-            { "i": [3, 5], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" },
-            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xiànzài",
+              "t": "hozir",
+              "tr": "сейчас",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shì",
+              "t": "bu",
+              "tr": "это",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "zhāiyuè",
+              "t": "ro'za oyi",
+              "tr": "Рамадан"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue3.mp3"
         },
@@ -65,7 +175,17 @@
           "text_translation_ru": "Да.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "shì de",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 2
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3"
         },
@@ -77,12 +197,70 @@
           "text_translation_ru": "Ты днём не ешь, правда?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "báitiān", "t": "kunduz", "tr": "днём" },
-            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [6, 7], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [7, 8], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "báitiān",
+              "t": "kunduz",
+              "tr": "днём"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue5.mp3"
         },
@@ -94,9 +272,39 @@
           "text_translation_ru": "Да, вечером ем.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [2, 4], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
-            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечером",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue6.mp3"
         },
@@ -108,8 +316,26 @@
           "text_translation_ru": "Тяжело?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" },
-            { "i": [2, 3], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xīnkǔ",
+              "t": "qiyin",
+              "tr": "тяжело"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue7.mp3"
         },
@@ -121,8 +347,26 @@
           "text_translation_ru": "Не тяжело.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 3], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "xīnkǔ",
+              "t": "qiyin",
+              "tr": "тяжело"
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue8.mp3"
         }
@@ -134,37 +378,162 @@
   "dateAdded": "2026-02-26",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3",
   "vocab": [
-    { "zh": "为什么", "py": "wèi shénme", "uz": "nega, nima uchun", "ru": "почему, зачем", "ex": "你为什么不去？", "expy": "Nǐ wèi shénme bù qù?", "ex_uz": "Nega bormayapsan?", "ex_ru": "Почему ты не идёшь?" },
-    { "zh": "因为", "py": "yīnwèi", "uz": "chunki", "ru": "потому что", "ex": "因为我很忙。", "expy": "Yīnwèi wǒ hěn máng.", "ex_uz": "Chunki men juda bandman.", "ex_ru": "Потому что я очень занят." },
-    { "zh": "封斋", "py": "fēng zhāi", "uz": "ro'za tutmoq", "ru": "соблюдать пост", "ex": "我在封斋。", "expy": "Wǒ zài fēng zhāi.", "ex_uz": "Men ro'za tutayapman.", "ex_ru": "Я соблюдаю пост." },
-    { "zh": "斋月", "py": "zhāi yuè", "uz": "Ramazon oyi", "ru": "месяц Рамадан", "ex": "现在是斋月。", "expy": "Xiànzài shì zhāi yuè.", "ex_uz": "Hozir Ramazon oyi.", "ex_ru": "Сейчас месяц Рамадан." },
-    { "zh": "白天", "py": "báitiān", "uz": "kunduz", "ru": "днём", "ex": "白天不吃饭。", "expy": "Báitiān bù chīfàn.", "ex_uz": "Kunduz ovqat yemaydi.", "ex_ru": "Днём не ест." },
-    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером", "ex": "晚上吃饭。", "expy": "Wǎnshang chīfàn.", "ex_uz": "Kechqurun ovqat yeydi.", "ex_ru": "Вечером ест." },
-    { "zh": "辛苦", "py": "xīnkǔ", "uz": "qiyin, mashaqqatli", "ru": "трудно, тяжело", "ex": "工作辛苦吗？", "expy": "Gōngzuò xīnkǔ ma?", "ex_uz": "Ish qiyinmi?", "ex_ru": "Работа тяжёлая?" },
-    { "zh": "对吗", "py": "duì ma", "uz": "shundaymi?", "ru": "правда?", "ex": "你是学生，对吗？", "expy": "Nǐ shì xuéshēng, duì ma?", "ex_uz": "Sen talabasan, shundaymi?", "ex_ru": "Ты студент, правда?" }
+    {
+      "zh": "为什么",
+      "py": "wèi shénme",
+      "uz": "nega, nima uchun",
+      "ru": "почему, зачем",
+      "ex": "你为什么不去？",
+      "expy": "Nǐ wèi shénme bù qù?",
+      "ex_uz": "Nega bormayapsan?",
+      "ex_ru": "Почему ты не идёшь?"
+    },
+    {
+      "zh": "因为",
+      "py": "yīnwèi",
+      "uz": "chunki",
+      "ru": "потому что",
+      "ex": "因为我很忙。",
+      "expy": "Yīnwèi wǒ hěn máng.",
+      "ex_uz": "Chunki men juda bandman.",
+      "ex_ru": "Потому что я очень занят."
+    },
+    {
+      "zh": "封斋",
+      "py": "fēng zhāi",
+      "uz": "ro'za tutmoq",
+      "ru": "соблюдать пост",
+      "ex": "我在封斋。",
+      "expy": "Wǒ zài fēng zhāi.",
+      "ex_uz": "Men ro'za tutayapman.",
+      "ex_ru": "Я соблюдаю пост."
+    },
+    {
+      "zh": "斋月",
+      "py": "zhāi yuè",
+      "uz": "Ramazon oyi",
+      "ru": "месяц Рамадан",
+      "ex": "现在是斋月。",
+      "expy": "Xiànzài shì zhāi yuè.",
+      "ex_uz": "Hozir Ramazon oyi.",
+      "ex_ru": "Сейчас месяц Рамадан."
+    },
+    {
+      "zh": "白天",
+      "py": "báitiān",
+      "uz": "kunduz",
+      "ru": "днём",
+      "ex": "白天不吃饭。",
+      "expy": "Báitiān bù chīfàn.",
+      "ex_uz": "Kunduz ovqat yemaydi.",
+      "ex_ru": "Днём не ест."
+    },
+    {
+      "zh": "晚上",
+      "py": "wǎnshang",
+      "uz": "kechqurun",
+      "ru": "вечером",
+      "ex": "晚上吃饭。",
+      "expy": "Wǎnshang chīfàn.",
+      "ex_uz": "Kechqurun ovqat yeydi.",
+      "ex_ru": "Вечером ест."
+    },
+    {
+      "zh": "辛苦",
+      "py": "xīnkǔ",
+      "uz": "qiyin, mashaqqatli",
+      "ru": "трудно, тяжело",
+      "ex": "工作辛苦吗？",
+      "expy": "Gōngzuò xīnkǔ ma?",
+      "ex_uz": "Ish qiyinmi?",
+      "ex_ru": "Работа тяжёлая?"
+    },
+    {
+      "zh": "对吗",
+      "py": "duì ma",
+      "uz": "shundaymi?",
+      "ru": "правда?",
+      "ex": "你是学生，对吗？",
+      "expy": "Nǐ shì xuéshēng, duì ma?",
+      "ex_uz": "Sen talabasan, shundaymi?",
+      "ex_ru": "Ты студент, правда?"
+    }
   ],
   "extraVocabSubtitle_uz": "Ro'za va ibodat mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме поста и молитвы",
   "extraVocab": [
-    { "zh": "斋月", "py": "zhāi yuè", "uz": "Ramazon oyi", "ru": "месяц Рамадан" },
-    { "zh": "开斋", "py": "kāi zhāi", "uz": "iftor qilmoq (ro'za ochmoq)", "ru": "разговеться" },
-    { "zh": "开斋节", "py": "kāi zhāi jié", "uz": "Ro'za hayiti", "ru": "Праздник разговения" },
-    { "zh": "做礼拜", "py": "zuò lǐbài", "uz": "namoz o'qimoq (ibodat qilmoq)", "ru": "молиться" },
-    { "zh": "清真寺", "py": "qīngzhēn sì", "uz": "masjid", "ru": "мечеть" },
-    { "zh": "古兰经", "py": "gǔlánjīng", "uz": "Qur'on", "ru": "Коран" },
-    { "zh": "早饭", "py": "zǎofàn", "uz": "nonushta (saharlik)", "ru": "завтрак (сухур)" },
-    { "zh": "晚饭", "py": "wǎnfàn", "uz": "kechki ovqat (iftor)", "ru": "ужин (ифтар)" },
-    { "zh": "喝水", "py": "hē shuǐ", "uz": "suv ichmoq", "ru": "пить воду" },
-    { "zh": "饿", "py": "è", "uz": "och (qorin)", "ru": "голодный" },
-    { "zh": "渴", "py": "kě", "uz": "chanqoq", "ru": "хочется пить" },
-    { "zh": "忍", "py": "rěn", "uz": "chidamoq, sabr qilmoq", "ru": "терпеть" }
-  ],
-  "timeOfDay": [
-    { "zh": "早上", "py": "zǎoshang", "uz": "ertalab", "ru": "утром", "icon": "🌅" },
-    { "zh": "上午", "py": "shàngwǔ", "uz": "tushdan oldin", "ru": "до полудня", "icon": "☀️" },
-    { "zh": "中午", "py": "zhōngwǔ", "uz": "tush", "ru": "полдень", "icon": "🌞" },
-    { "zh": "下午", "py": "xiàwǔ", "uz": "tushdan keyin", "ru": "после полудня", "icon": "🌤" },
-    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером", "icon": "🌙" }
+    {
+      "zh": "斋月",
+      "py": "zhāi yuè",
+      "uz": "Ramazon oyi",
+      "ru": "месяц Рамадан"
+    },
+    {
+      "zh": "开斋",
+      "py": "kāi zhāi",
+      "uz": "iftor qilmoq (ro'za ochmoq)",
+      "ru": "разговеться"
+    },
+    {
+      "zh": "开斋节",
+      "py": "kāi zhāi jié",
+      "uz": "Ro'za hayiti",
+      "ru": "Праздник разговения"
+    },
+    {
+      "zh": "做礼拜",
+      "py": "zuò lǐbài",
+      "uz": "namoz o'qimoq (ibodat qilmoq)",
+      "ru": "молиться"
+    },
+    {
+      "zh": "清真寺",
+      "py": "qīngzhēn sì",
+      "uz": "masjid",
+      "ru": "мечеть"
+    },
+    {
+      "zh": "古兰经",
+      "py": "gǔlánjīng",
+      "uz": "Qur'on",
+      "ru": "Коран"
+    },
+    {
+      "zh": "早饭",
+      "py": "zǎofàn",
+      "uz": "nonushta (saharlik)",
+      "ru": "завтрак (сухур)"
+    },
+    {
+      "zh": "晚饭",
+      "py": "wǎnfàn",
+      "uz": "kechki ovqat (iftor)",
+      "ru": "ужин (ифтар)"
+    },
+    {
+      "zh": "喝水",
+      "py": "hē shuǐ",
+      "uz": "suv ichmoq",
+      "ru": "пить воду"
+    },
+    {
+      "zh": "饿",
+      "py": "è",
+      "uz": "och (qorin)",
+      "ru": "голодный"
+    },
+    {
+      "zh": "渴",
+      "py": "kě",
+      "uz": "chanqoq",
+      "ru": "хочется пить"
+    },
+    {
+      "zh": "忍",
+      "py": "rěn",
+      "uz": "chidamoq, sabr qilmoq",
+      "ru": "терпеть"
+    }
   ],
   "grammarNotes": [
     {
@@ -176,9 +545,24 @@
       "formula": "Ega + 为什么 + Fe'l？",
       "formula_ru": "Подлеж. + 为什么 + Глагол？",
       "examples": [
-        { "zh": "你为什么不吃饭？", "py": "Nǐ wèi shénme bù chīfàn?", "uz": "Nega ovqat yemayapsan?", "ru": "Почему ты не ешь?" },
-        { "zh": "他为什么不来？", "py": "Tā wèi shénme bù lái?", "uz": "U nega kelmayapti?", "ru": "Почему он не приходит?" },
-        { "zh": "你为什么学中文？", "py": "Nǐ wèi shénme xué Zhōngwén?", "uz": "Nega xitoy tilini o'rganayapsan?", "ru": "Почему ты учишь китайский?" }
+        {
+          "zh": "你为什么不吃饭？",
+          "py": "Nǐ wèi shénme bù chīfàn?",
+          "uz": "Nega ovqat yemayapsan?",
+          "ru": "Почему ты не ешь?"
+        },
+        {
+          "zh": "他为什么不来？",
+          "py": "Tā wèi shénme bù lái?",
+          "uz": "U nega kelmayapti?",
+          "ru": "Почему он не приходит?"
+        },
+        {
+          "zh": "你为什么学中文？",
+          "py": "Nǐ wèi shénme xué Zhōngwén?",
+          "uz": "Nega xitoy tilini o'rganayapsan?",
+          "ru": "Почему ты учишь китайский?"
+        }
       ],
       "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
       "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!"
@@ -192,9 +576,24 @@
       "formula": "因为 + sabab",
       "formula_ru": "因为 + причина",
       "examples": [
-        { "zh": "因为我在封斋。", "py": "Yīnwèi wǒ zài fēng zhāi.", "uz": "Chunki men ro'za tutayapman.", "ru": "Потому что я соблюдаю пост." },
-        { "zh": "因为今天是斋月。", "py": "Yīnwèi jīntiān shì zhāi yuè.", "uz": "Chunki bugun Ramazon oyi.", "ru": "Потому что сегодня Рамадан." },
-        { "zh": "因为我很忙。", "py": "Yīnwèi wǒ hěn máng.", "uz": "Chunki men juda bandman.", "ru": "Потому что я очень занят." }
+        {
+          "zh": "因为我在封斋。",
+          "py": "Yīnwèi wǒ zài fēng zhāi.",
+          "uz": "Chunki men ro'za tutayapman.",
+          "ru": "Потому что я соблюдаю пост."
+        },
+        {
+          "zh": "因为今天是斋月。",
+          "py": "Yīnwèi jīntiān shì zhāi yuè.",
+          "uz": "Chunki bugun Ramazon oyi.",
+          "ru": "Потому что сегодня Рамадан."
+        },
+        {
+          "zh": "因为我很忙。",
+          "py": "Yīnwèi wǒ hěn máng.",
+          "uz": "Chunki men juda bandman.",
+          "ru": "Потому что я очень занят."
+        }
       ]
     },
     {
@@ -206,9 +605,24 @@
       "formula": "Ega + 在 + Fe'l",
       "formula_ru": "Подлеж. + 在 + Глагол",
       "examples": [
-        { "zh": "我在封斋。", "py": "Wǒ zài fēng zhāi.", "uz": "Men (hozir) ro'za tutayapman.", "ru": "Я (сейчас) соблюдаю пост." },
-        { "zh": "他在吃饭。", "py": "Tā zài chīfàn.", "uz": "U (hozir) ovqat yeyapti.", "ru": "Он (сейчас) ест." },
-        { "zh": "我们在学习。", "py": "Wǒmen zài xuéxí.", "uz": "Biz (hozir) o'qiyapmiz.", "ru": "Мы (сейчас) учимся." }
+        {
+          "zh": "我在封斋。",
+          "py": "Wǒ zài fēng zhāi.",
+          "uz": "Men (hozir) ro'za tutayapman.",
+          "ru": "Я (сейчас) соблюдаю пост."
+        },
+        {
+          "zh": "他在吃饭。",
+          "py": "Tā zài chīfàn.",
+          "uz": "U (hozir) ovqat yeyapti.",
+          "ru": "Он (сейчас) ест."
+        },
+        {
+          "zh": "我们在学习。",
+          "py": "Wǒmen zài xuéxí.",
+          "uz": "Biz (hozir) o'qiyapmiz.",
+          "ru": "Мы (сейчас) учимся."
+        }
       ]
     },
     {
@@ -220,9 +634,24 @@
       "formula": "Hozir + 是 + [narsa] + 吗？",
       "formula_ru": "Сейчас + 是 + [что-то] + 吗？",
       "examples": [
-        { "zh": "现在是斋月吗？", "py": "Xiànzài shì zhāi yuè ma?", "uz": "Hozir Ramazon oyi-mi?", "ru": "Сейчас Рамадан?" },
-        { "zh": "他是学生吗？", "py": "Tā shì xuéshēng ma?", "uz": "U talabami?", "ru": "Он студент?" },
-        { "zh": "这是你的书吗？", "py": "Zhè shì nǐ de shū ma?", "uz": "Bu sening kitobingmi?", "ru": "Это твоя книга?" }
+        {
+          "zh": "现在是斋月吗？",
+          "py": "Xiànzài shì zhāi yuè ma?",
+          "uz": "Hozir Ramazon oyi-mi?",
+          "ru": "Сейчас Рамадан?"
+        },
+        {
+          "zh": "他是学生吗？",
+          "py": "Tā shì xuéshēng ma?",
+          "uz": "U talabami?",
+          "ru": "Он студент?"
+        },
+        {
+          "zh": "这是你的书吗？",
+          "py": "Zhè shì nǐ de shū ma?",
+          "uz": "Bu sening kitobingmi?",
+          "ru": "Это твоя книга?"
+        }
       ]
     },
     {
@@ -234,9 +663,24 @@
       "formula": "Gap + ，对吗？",
       "formula_ru": "Предложение + ，对吗？",
       "examples": [
-        { "zh": "你白天不吃，对吗？", "py": "Nǐ báitiān bù chī, duì ma?", "uz": "Kunduz yemaysan, shundaymi?", "ru": "Ты днём не ешь, правда?" },
-        { "zh": "你是学生，对吗？", "py": "Nǐ shì xuéshēng, duì ma?", "uz": "Sen talabasan, shundaymi?", "ru": "Ты студент, правда?" },
-        { "zh": "他很忙，对吗？", "py": "Tā hěn máng, duì ma?", "uz": "U juda band, shundaymi?", "ru": "Он очень занят, правда?" }
+        {
+          "zh": "你白天不吃，对吗？",
+          "py": "Nǐ báitiān bù chī, duì ma?",
+          "uz": "Kunduz yemaysan, shundaymi?",
+          "ru": "Ты днём не ешь, правда?"
+        },
+        {
+          "zh": "你是学生，对吗？",
+          "py": "Nǐ shì xuéshēng, duì ma?",
+          "uz": "Sen talabasan, shundaymi?",
+          "ru": "Ты студент, правда?"
+        },
+        {
+          "zh": "他很忙，对吗？",
+          "py": "Tā hěn máng, duì ma?",
+          "uz": "U juda band, shundaymi?",
+          "ru": "Он очень занят, правда?"
+        }
       ]
     },
     {
@@ -248,19 +692,27 @@
       "formula": "不 + Sifat",
       "formula_ru": "不 + Прилагательное",
       "examples": [
-        { "zh": "不辛苦。", "py": "Bù xīnkǔ.", "uz": "Qiyin emas.", "ru": "Не тяжело." },
-        { "zh": "不忙。", "py": "Bù máng.", "uz": "Band emas.", "ru": "Не занят." },
-        { "zh": "不好。", "py": "Bù hǎo.", "uz": "Yaxshi emas.", "ru": "Нехорошо." }
+        {
+          "zh": "不辛苦。",
+          "py": "Bù xīnkǔ.",
+          "uz": "Qiyin emas.",
+          "ru": "Не тяжело."
+        },
+        {
+          "zh": "不忙。",
+          "py": "Bù máng.",
+          "uz": "Band emas.",
+          "ru": "Не занят."
+        },
+        {
+          "zh": "不好。",
+          "py": "Bù hǎo.",
+          "uz": "Yaxshi emas.",
+          "ru": "Нехорошо."
+        }
       ],
       "tip_uz": "Tasdiqda 很好 (hěn hǎo) deymiz, inkorida esa faqat 不好 (bù hǎo) — 很 kerak emas!",
       "tip_ru": "В утверждении говорим 很好 (hěn hǎo), в отрицании — только 不好 (bù hǎo), без 很!"
     }
-  ],
-  "quiz": [
-    { "q_uz": "B nega ovqat yemayapti?", "q_ru": "Почему B не ест?", "options_uz": ["Kasal", "Ro'za tutayapti", "Ovqat yo'q", "Ishtahasi yo'q"], "options_ru": ["Болен", "Соблюдает пост", "Нет еды", "Нет аппетита"], "correct": 1 },
-    { "q_uz": "Hozir qaysi oy?", "q_ru": "Какой сейчас месяц?", "options_uz": ["Yangi yil", "Ramazon oyi", "Noma'lum", "Yoz oyi"], "options_ru": ["Новый год", "Рамадан", "Неизвестно", "Летний месяц"], "correct": 1 },
-    { "q_uz": "B qachon ovqat yeydi?", "q_ru": "Когда B ест?", "options_uz": ["Ertalab", "Tushda", "Kechqurun", "Yemaydi"], "options_ru": ["Утром", "В обед", "Вечером", "Не ест"], "correct": 2 },
-    { "q_uz": "\"Nega?\" xitoycha qanday?", "q_ru": "Как «почему» по-китайски?", "options_uz": ["怎么", "什么", "为什么", "多少"], "options_ru": ["怎么", "什么", "为什么", "多少"], "correct": 2 },
-    { "q_uz": "B uchun ro'za qiyinmi?", "q_ru": "Тяжело ли B соблюдать пост?", "options_uz": ["Ha, juda qiyin", "Yo'q, qiyin emas", "Aytmadi", "Ba'zan qiyin"], "options_ru": ["Да, очень тяжело", "Нет, не тяжело", "Не сказал", "Иногда тяжело"], "correct": 1 }
   ]
 }
