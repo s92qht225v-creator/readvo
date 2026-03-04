@@ -1,0 +1,243 @@
+{
+  "id": "unit33-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 33,
+    "pinyin": "",
+    "title": "Vocabulary",
+    "titleTranslation": "Creating and building",
+    "titleTranslation_ru": "Creating and building"
+  },
+  "sections": [
+    {
+      "id": "u33p1-sec-vocab1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["ancient (adj)", "improvement (n)", "shape (n)"],
+            "cells_uz": ["ancient – qadimiy", "improvement – yaxshilanish", "shape – shakl"],
+            "cells_ru": ["ancient – древний", "improvement – улучшение", "shape – форма"]
+          },
+          {
+            "cells": ["checked (adj)", "loose (adj)", "silk (n)"],
+            "cells_uz": ["checked – katakli", "loose – bo'sh, keng", "silk – ipak"],
+            "cells_ru": ["checked – клетчатый", "loose – свободный", "silk – шёлк"]
+          },
+          {
+            "cells": ["cotton (n)", "maintain (v)", "sleeve (n)"],
+            "cells_uz": ["cotton – paxta, chit", "maintain – saqlash, ta'mirlash", "sleeve – yeng"],
+            "cells_ru": ["cotton – хлопок", "maintain – поддерживать", "sleeve – рукав"]
+          },
+          {
+            "cells": ["create (v)", "match (v)", "smooth (adj)"],
+            "cells_uz": ["create – yaratmoq", "match – mos kelmoq", "smooth – silliq"],
+            "cells_ru": ["create – создавать", "match – сочетаться", "smooth – гладкий"]
+          },
+          {
+            "cells": ["design (v, n)", "material (n)", "stretch (v)"],
+            "cells_uz": ["design – loyihalash; loyiha", "material – material, mato", "stretch – cho'zmoq"],
+            "cells_ru": ["design – проектировать; дизайн", "material – материал, ткань", "stretch – растягивать"]
+          },
+          {
+            "cells": ["fix (v)", "notice (v, n)", "striped (adj)"],
+            "cells_uz": ["fix – tuzatmoq", "notice – e'tibor bermoq", "striped – yo'l-yo'l"],
+            "cells_ru": ["fix – чинить", "notice – замечать", "striped – полосатый"]
+          },
+          {
+            "cells": ["fold (v)", "pattern (n)", "style (n)"],
+            "cells_uz": ["fold – buqmoq, qatlash", "pattern – naqsh, andoza", "style – uslub, stil"],
+            "cells_ru": ["fold – складывать", "pattern – узор, выкройка", "style – стиль"]
+          },
+          {
+            "cells": ["gallery (n)", "pile (n)", "suit (v, n)"],
+            "cells_uz": ["gallery – galereya", "pile – to'p, uyum", "suit – yarash; kostyum"],
+            "cells_ru": ["gallery – галерея", "pile – куча, стопка", "suit – подходить; костюм"]
+          },
+          {
+            "cells": ["practical (adj)", "rough (adj)", "suitable (adj)"],
+            "cells_uz": ["practical – amaliy", "rough – g'adir-budur, qo'pol", "suitable – mos, qulay"],
+            "cells_ru": ["practical – практичный", "rough – грубый, шершавый", "suitable – подходящий"]
+          },
+          {
+            "cells": ["tear (v, n)", "tight (adj)", "tool (n)"],
+            "cells_uz": ["tear – yirtmoq; yirtiq", "tight – tor, qattiq", "tool – asbob"],
+            "cells_ru": ["tear – рвать; разрыв", "tight – тесный, узкий", "tool – инструмент"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u33p1-sec-phrasal",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["**cut off**", "completely remove by cutting"],
+            "cells_uz": ["**cut off** – kesib olib tashlash", "completely remove by cutting"],
+            "cells_ru": ["**cut off** – полностью отрезать", "completely remove by cutting"]
+          },
+          {
+            "cells": ["**do up**", "button/zip up a piece of clothing"],
+            "cells_uz": ["**do up** – kiyimni tugmalab/fermuar bilan yopmoq", "button/zip up a piece of clothing"],
+            "cells_ru": ["**do up** – застёгивать одежду", "button/zip up a piece of clothing"]
+          },
+          {
+            "cells": ["**fill up**", "make sth completely full"],
+            "cells_uz": ["**fill up** – narsani to'liq to'ldirmoq", "make sth completely full"],
+            "cells_ru": ["**fill up** – заполнять что-либо полностью", "make sth completely full"]
+          },
+          {
+            "cells": ["**have on**", "wear (a piece of clothing)"],
+            "cells_uz": ["**have on** – kiyib yurmoq (kiyim)", "wear (a piece of clothing)"],
+            "cells_ru": ["**have on** – носить (предмет одежды)", "wear (a piece of clothing)"]
+          },
+          {
+            "cells": ["**leave out**", "not include"],
+            "cells_uz": ["**leave out** – qoldirmoq, kiritmaslik", "not include"],
+            "cells_ru": ["**leave out** – не включать, пропускать", "not include"]
+          },
+          {
+            "cells": ["**put on**", "start wearing (a piece of clothing)"],
+            "cells_uz": ["**put on** – kiyim kiymoq", "start wearing (a piece of clothing)"],
+            "cells_ru": ["**put on** – надевать (одежду)", "start wearing (a piece of clothing)"]
+          },
+          {
+            "cells": ["**take off**", "remove (a piece of clothing)"],
+            "cells_uz": ["**take off** – kiyimni yechmoq", "remove (a piece of clothing)"],
+            "cells_ru": ["**take off** – снимать (одежду)", "remove (a piece of clothing)"]
+          },
+          {
+            "cells": ["**try on**", "put on (a piece of clothing) to see how it looks and if it fits"],
+            "cells_uz": ["**try on** – kiyim ko'rinishini va o'lchamini tekshirish uchun kiyib ko'rmoq", "put on (a piece of clothing) to see how it looks and if it fits"],
+            "cells_ru": ["**try on** – примерять (одежду)", "put on (a piece of clothing) to see how it looks and if it fits"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u33p1-sec-prepositions",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Prepositional phrases",
+      "subheading_uz": "Predlogli iboralar",
+      "subheading_ru": "Предложные фразы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["at the back (of)", "orqasida"],
+            "cells_uz": ["at the back (of)", "orqasida"],
+            "cells_ru": ["at the back (of)", "сзади, на заднем плане"]
+          },
+          {
+            "cells": ["at the end (of)", "oxirida"],
+            "cells_uz": ["at the end (of)", "oxirida"],
+            "cells_ru": ["at the end (of)", "в конце (чего-либо)"]
+          },
+          {
+            "cells": ["in fashion/style", "modada/uslubda"],
+            "cells_uz": ["in fashion/style", "modada, uslubda"],
+            "cells_ru": ["in fashion/style", "в моде, в стиле"]
+          },
+          {
+            "cells": ["in front (of)", "oldida"],
+            "cells_uz": ["in front (of)", "oldida"],
+            "cells_ru": ["in front (of)", "перед (чем-либо)"]
+          },
+          {
+            "cells": ["in the corner (of)", "burchagida"],
+            "cells_uz": ["in the corner (of)", "burchagida"],
+            "cells_ru": ["in the corner (of)", "в углу (чего-либо)"]
+          },
+          {
+            "cells": ["out of fashion/style", "modadan chiqqan"],
+            "cells_uz": ["out of fashion/style", "modadan chiqqan"],
+            "cells_ru": ["out of fashion/style", "вышедший из моды"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u33p1-sec-wordformation",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word formation",
+      "subheading_uz": "So'z yasalishi",
+      "subheading_ru": "Словообразование",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", "", ""],
+        "rows": [
+          {
+            "cells": ["**art**", "artist, artistic", "**hand**", "handful, handle"],
+            "cells_uz": ["**art**", "rassom, badiiy", "**hand**", "hovuch, dasta"],
+            "cells_ru": ["**art**", "художник, художественный", "**hand**", "горсть, ручка"]
+          },
+          {
+            "cells": ["**break**", "broke, broken, (un)breakable", "**imagine**", "imagination, imaginative"],
+            "cells_uz": ["**break**", "sindirilgan, buzilgan, (yo'q)otilmas", "**imagine**", "tasavvur, ijodiy"],
+            "cells_ru": ["**break**", "сломал, сломанный, (не)ломкий", "**imagine**", "воображение, творческий"]
+          },
+          {
+            "cells": ["**compose**", "composition, composer", "**intelligent**", "intelligence"],
+            "cells_uz": ["**compose**", "asar, kompozitor", "**intelligent**", "aql-idrok"],
+            "cells_ru": ["**compose**", "сочинение, композитор", "**intelligent**", "интеллект"]
+          },
+          {
+            "cells": ["**exhibit**", "exhibition", "**perfect**", "perfection, imperfect"],
+            "cells_uz": ["**exhibit**", "ko'rgazma", "**perfect**", "mukammallik, nomukammal"],
+            "cells_ru": ["**exhibit**", "выставка", "**perfect**", "совершенство, несовершенный"]
+          },
+          {
+            "cells": ["**free**", "freedom", "**prepare**", "preparation"],
+            "cells_uz": ["**free**", "erkinlik", "**prepare**", "tayyorgarlik"],
+            "cells_ru": ["**free**", "свобода", "**prepare**", "подготовка"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u33p1-sec-wordpatterns",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word patterns",
+      "subheading_uz": "So'z birikmalari",
+      "subheading_ru": "Словосочетания",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["_adjectives_", "amazed at/by\ndisappointed with\nfamiliar with\ninvolved in\nsimilar to"],
+            "cells_uz": ["_sifatlar_", "amazed at/by – ...dan hayratda\ndisappointed with – ...dan hafsalasi pir\nfamiliar with – ...ga tanish, bilgan\ninvolved in – ...ga jalb qilingan\nsimilar to – ...ga o'xshash"],
+            "cells_ru": ["_прилагательные_", "amazed at/by – поражённый чем-либо\ndisappointed with – разочарованный чем-либо\nfamiliar with – знакомый с чем-либо\ninvolved in – вовлечённый в\nsimilar to – похожий на"]
+          },
+          {
+            "cells": ["_verbs_", "change sth (from sth) into\ndescribe sth as\nexplain sth to\nremind sb of\nremove sth from"],
+            "cells_uz": ["_fe'llar_", "change sth (from sth) into – narsani (nimadir)dan nimadirga o'zgartirmoq\ndescribe sth as – narsani ... deb ta'riflash\nexplain sth to – narsani kimgadir tushuntirmoq\nremind sb of – kimgadir nimanidir eslatmoq\nremove sth from – narsani joyidan olib tashlash"],
+            "cells_ru": ["_глаголы_", "change sth (from sth) into – изменить что-либо (из чего-либо) во что-либо\ndescribe sth as – описывать что-либо как\nexplain sth to – объяснять что-либо кому-либо\nremind sb of – напоминать кому-либо о чём-либо\nremove sth from – убирать что-либо откуда-либо"]
+          },
+          {
+            "cells": ["_nouns_", "an influence on\na picture of"],
+            "cells_uz": ["_otlar_", "an influence on – ...ga ta'sir\na picture of – ...ning rasmi/tasviri"],
+            "cells_ru": ["_существительные_", "an influence on – влияние на\na picture of – изображение чего-либо"]
+          }
+        ]
+      }
+    }
+  ]
+}

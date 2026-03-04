@@ -1,0 +1,115 @@
+{
+  "id": "unit28-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 28,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Conditionals 1: (zero, first, second)",
+    "titleTranslation_ru": "Conditionals 1: (zero, first, second)"
+  },
+  "sections": [
+    {
+      "id": "u28p1-sec-intro",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Introduction to conditional",
+      "subheading_uz": "Introduction to conditional",
+      "subheading_ru": "Shartli gaplarga kirish",
+      "sentences": [],
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• Agar gapni _if_ bilan boshlasak, vaziyat va natijani vergul bilan ajratamiz.\n✓ _If you join a gym, I'll join too._\n\n• Agar gapni natija bilan boshlasak, vergul ishlatmaymiz.\n✓ _I'll join too if you join a gym._",
+        "translation_ru": "• Когда мы начинаем предложение с _if_, мы отделяем условие и результат запятой.\n✓ _If you join a gym, I'll join too._\n\n• Когда мы начинаем предложение с результата, мы не используем запятую.\n✓ _I'll join too if you join a gym._"
+      }
+    },
+    {
+      "id": "u28p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Zero conditional",
+      "subheading_uz": "Zero conditional",
+      "subheading_ru": "Zero conditional",
+      "instruction": "if + present simple, present simple",
+      "instruction_ru": "if + present simple, present simple",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["General or scientific facts", "_If people **eat** too much, they often **get** fat._"],
+            "cells_uz": ["Umumiy yoki ilmiy faktlar", "_Agar odamlar **haddan ziyod yesalar**, ular ko'pincha **semiradi**._"],
+            "cells_ru": ["Общие или научные факты", "_Если люди **едят** слишком много, они часто **толстеют**._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u28p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "First conditional",
+      "subheading_uz": "First conditional",
+      "subheading_ru": "First conditional",
+      "instruction": "if + present simple, will + bare infinitive",
+      "instruction_ru": "if + present simple, will + bare infinitive",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["Real or likely situations in the present or future and their results", "_If you **take** these pills, you'**ll start** to feel better very soon._"],
+            "cells_uz": ["Hozirgi yoki kelajakdagi haqiqiy yoki ehtimoliy vaziyatlar va ularning natijalari", "_Agar siz bu tabletkalarni **ichsangiz**, tez orada o'zingizni yaxshiroq his qila **boshlaysiz**._"],
+            "cells_ru": ["Реальные или вероятные ситуации в настоящем или будущем и их результаты", "_Если вы **примете** эти таблетки, вы **начнёте** чувствовать себя лучше очень скоро._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• _will_ o'rniga ma'noga qarab boshqa modal fe'llarni ham ishlatishimiz mumkin.\n✓ _If you get some rest, you **might** feel better tomorrow._\n\n• Ko'rsatma berish uchun _will_ o'rniga buyruq mayli ishlatishimiz mumkin.\n✓ _If you don't feel well, **go** home!_",
+        "translation_ru": "• Мы также можем использовать другие модальные глаголы вместо _will_, в зависимости от значения.\n✓ _If you get some rest, you **might** feel better tomorrow._\n\n• Мы также можем использовать повелительное наклонение вместо _will_ для инструкций.\n✓ _If you don't feel well, **go** home!_"
+      }
+    },
+    {
+      "id": "u28p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Second conditional",
+      "subheading_uz": "Second conditional",
+      "subheading_ru": "Second conditional",
+      "instruction": "if + past simple, would + bare infinitive",
+      "instruction_ru": "if + past simple, would + bare infinitive",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["Impossible or unlikely situations in the present or future and their results", "_If my legs **were** longer, I **would be** a much faster runner!_"],
+            "cells_uz": ["Hozirgi yoki kelajakdagi imkonsiz yoki ehtimoli past vaziyatlar va ularning natijalari", "_Agar oyoqlarim **uzunroq bo'lganida**, men ancha tezroq yuguruvchi **bo'lardim**!_"],
+            "cells_ru": ["Невозможные или маловероятные ситуации в настоящем или будущем и их результаты", "_Если бы мои ноги **были** длиннее, я **был бы** намного более быстрым бегуном!_"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Second conditional maslahат berish uchun ham ishlatilishi mumkin. Buning uchun _If I were you ..._ yoki _If I was you ..._ iboralaridan foydalanamiz. _If I were you ..._ rasmiyroq.\n✓ _If I **were** you, I would eat less chocolate._ (rasmiyroq)\n✓ _If I **was** you, I'd eat less chocolate!_ (norasmiy)",
+        "translation_ru": "Second conditional также используется для советов. Мы используем фразы _If I were you ..._ или _If I was you ..._ для этого. _If I were you ..._ более формально.\n✓ _If I **were** you, I would eat less chocolate._ (более формально)\n✓ _If I **was** you, I'd eat less chocolate!_ (менее формально)"
+      }
+    }
+  ]
+}

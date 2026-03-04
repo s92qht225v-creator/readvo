@@ -1,0 +1,419 @@
+{
+  "id": "progress-test2-page3",
+  "pageNumber": 3,
+  "lessonHeader": {
+    "lessonNumber": 2,
+    "pinyin": "",
+    "title": "Progress Test",
+    "titleTranslation": "Units 22-42",
+    "titleTranslation_ru": "Units 22-42"
+  },
+  "sections": [
+    {
+      "id": "pt2p3-sec-exE",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "E",
+      "subheading_uz": "E",
+      "subheading_ru": "E",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Напишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card39",
+            "parts": [
+              { "type": "text", "content": "You shouldn't criticise people " },
+              { "type": "blank" },
+              { "type": "text", "content": " the way they look." }
+            ],
+            "answers": ["for"],
+            "words": [
+              { "w": "criticise", "t": "tanqid qilmoq", "tr": "критиковать" },
+              { "w": "the way they look", "t": "tashqi ko'rinishi", "tr": "их внешность" }
+            ]
+          },
+          {
+            "id": "card40",
+            "parts": [
+              { "type": "text", "content": "I'm really fed up " },
+              { "type": "blank" },
+              { "type": "text", "content": " studying all the time!" }
+            ],
+            "answers": ["with"],
+            "words": [
+              { "w": "fed up with", "t": "to'yib ketmoq", "tr": "быть сытым по горло" },
+              { "w": "studying", "t": "o'qish", "tr": "учёба" }
+            ]
+          },
+          {
+            "id": "card41",
+            "parts": [
+              { "type": "text", "content": "My brother is allergic " },
+              { "type": "blank" },
+              { "type": "text", "content": " milk." }
+            ],
+            "answers": ["to"],
+            "words": [
+              { "w": "allergic to", "t": "allergiyasi bor", "tr": "аллергия на" },
+              { "w": "milk", "t": "sut", "tr": "молоко" }
+            ]
+          },
+          {
+            "id": "card42",
+            "parts": [
+              { "type": "text", "content": "Would you describe her " },
+              { "type": "blank" },
+              { "type": "text", "content": " a shy person?" }
+            ],
+            "answers": ["as"],
+            "words": [
+              { "w": "describe as", "t": "deb ta'riflamoq", "tr": "описывать как" },
+              { "w": "shy", "t": "uyatchan", "tr": "застенчивый" }
+            ]
+          },
+          {
+            "id": "card43",
+            "parts": [
+              { "type": "text", "content": "Nothing is going to prevent me " },
+              { "type": "blank" },
+              { "type": "text", "content": " coming to the concert!" }
+            ],
+            "answers": ["from"],
+            "words": [
+              { "w": "prevent from", "t": "to'smoq", "tr": "не дать / помешать" },
+              { "w": "concert", "t": "konsert", "tr": "концерт" }
+            ]
+          },
+          {
+            "id": "card44",
+            "parts": [
+              { "type": "text", "content": "Congratulations " },
+              { "type": "blank" },
+              { "type": "text", "content": " passing your driving test!" }
+            ],
+            "answers": ["on"],
+            "words": [
+              { "w": "congratulations on", "t": "tabriklash", "tr": "поздравляю с" },
+              { "w": "driving test", "t": "haydovchilik imtihoni", "tr": "экзамен по вождению" }
+            ]
+          },
+          {
+            "id": "card45",
+            "parts": [
+              { "type": "text", "content": "I don't approve " },
+              { "type": "blank" },
+              { "type": "text", "content": " young children wearing earrings." }
+            ],
+            "answers": ["of"],
+            "words": [
+              { "w": "approve of", "t": "ma'qullamoq", "tr": "одобрять" },
+              { "w": "wearing earrings", "t": "sirg'a taqmoq", "tr": "носить серьги" }
+            ]
+          },
+          {
+            "id": "card46",
+            "parts": [
+              { "type": "text", "content": "Have you ever been accused " },
+              { "type": "blank" },
+              { "type": "text", "content": " doing something you didn't do?" }
+            ],
+            "answers": ["of"],
+            "words": [
+              { "w": "accused of", "t": "ayblangan", "tr": "обвинять в" }
+            ]
+          },
+          {
+            "id": "card47",
+            "parts": [
+              { "type": "text", "content": "I think I might apply " },
+              { "type": "blank" },
+              { "type": "text", "content": " that job at the local shop." }
+            ],
+            "answers": ["for"],
+            "words": [
+              { "w": "apply for", "t": "ariza bermoq", "tr": "подать заявку на" },
+              { "w": "local shop", "t": "mahalliy do'kon", "tr": "местный магазин" }
+            ]
+          },
+          {
+            "id": "card48",
+            "parts": [
+              { "type": "text", "content": "This song reminds me " },
+              { "type": "blank" },
+              { "type": "text", "content": " our holiday last summer." }
+            ],
+            "answers": ["of"],
+            "words": [
+              { "w": "reminds me of", "t": "eslatmoq", "tr": "напоминает мне о" },
+              { "w": "holiday", "t": "ta'til", "tr": "каникулы" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt2p3-sec-exF",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "F",
+      "subheading_uz": "F",
+      "subheading_ru": "F",
+      "instruction": "Gaplarning ikkinchi yarmini mos ravishda tanlang. Javob sifatida harf yozing (A-H).",
+      "instruction_ru": "Подберите вторую часть предложения. Впишите соответствующую букву (A-H).",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card49",
+            "parts": [
+              { "type": "text", "content": "What's going " },
+              { "type": "blank" },
+              { "type": "text", "content": "\n\nA  up this morning?\nB  off your jacket?\nC  out or is it still burning?\nD  on here?\nE  into the building?\nF  back my book?\nG  up until the film finishes?\nH  off or is it okay?" }
+            ],
+            "answers": ["D"],
+            "alternateAnswers": [["d"]],
+            "words": [
+              { "w": "going on", "t": "bo'layotgan narsa", "tr": "происходить" }
+            ]
+          },
+          {
+            "id": "card50",
+            "parts": [
+              { "type": "text", "content": "What time did you get " },
+              { "type": "blank" }
+            ],
+            "answers": ["A"],
+            "alternateAnswers": [["a"]],
+            "words": [
+              { "w": "get up", "t": "turmoq (uyqidan)", "tr": "встать" }
+            ]
+          },
+          {
+            "id": "card51",
+            "parts": [
+              { "type": "text", "content": "When are you going to give me " },
+              { "type": "blank" }
+            ],
+            "answers": ["F"],
+            "alternateAnswers": [["f"]],
+            "words": [
+              { "w": "give back", "t": "qaytarib bermoq", "tr": "вернуть" }
+            ]
+          },
+          {
+            "id": "card52",
+            "parts": [
+              { "type": "text", "content": "Has this milk gone " },
+              { "type": "blank" }
+            ],
+            "answers": ["H"],
+            "alternateAnswers": [["h"]],
+            "words": [
+              { "w": "gone off", "t": "buzilib ketmoq", "tr": "испортиться" },
+              { "w": "milk", "t": "sut", "tr": "молоко" }
+            ]
+          },
+          {
+            "id": "card53",
+            "parts": [
+              { "type": "text", "content": "Why don't you take " },
+              { "type": "blank" }
+            ],
+            "answers": ["B"],
+            "alternateAnswers": [["b"]],
+            "words": [
+              { "w": "take off", "t": "yechib olmoq", "tr": "снять" },
+              { "w": "jacket", "t": "kurtka", "tr": "куртка" }
+            ]
+          },
+          {
+            "id": "card54",
+            "parts": [
+              { "type": "text", "content": "Has the fire gone " },
+              { "type": "blank" }
+            ],
+            "answers": ["C"],
+            "alternateAnswers": [["c"]],
+            "words": [
+              { "w": "gone out", "t": "o'chib ketmoq", "tr": "погаснуть" },
+              { "w": "fire", "t": "olov", "tr": "огонь" },
+              { "w": "burning", "t": "yonmoq", "tr": "гореть" }
+            ]
+          },
+          {
+            "id": "card55",
+            "parts": [
+              { "type": "text", "content": "How did the burglars break " },
+              { "type": "blank" }
+            ],
+            "answers": ["E"],
+            "alternateAnswers": [["e"]],
+            "words": [
+              { "w": "break into", "t": "bostirib kirmoq", "tr": "вломиться" },
+              { "w": "burglars", "t": "o'g'rilar", "tr": "взломщики" },
+              { "w": "building", "t": "bino", "tr": "здание" }
+            ]
+          },
+          {
+            "id": "card56",
+            "parts": [
+              { "type": "text", "content": "Mum, can I stay " },
+              { "type": "blank" }
+            ],
+            "answers": ["G"],
+            "alternateAnswers": [["g"]],
+            "words": [
+              { "w": "stay up", "t": "kech yotmoq", "tr": "не ложиться спать" },
+              { "w": "film finishes", "t": "film tugamaguncha", "tr": "пока не закончится фильм" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt2p3-sec-exG",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "G",
+      "subheading_uz": "G",
+      "subheading_ru": "G",
+      "instruction": "Har bir gapda bitta so'z noto'g'ri shaklda berilgan. To'g'ri shaklini yozing.",
+      "instruction_ru": "В каждом предложении одно слово стоит в неправильной форме. Напишите правильную форму.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card57",
+            "parts": [
+              { "type": "text", "content": "I think we're all in agree about this." },
+              { "type": "blank" },
+              { "type": "hint", "content": "agree → ?" }
+            ],
+            "answers": ["agreement"],
+            "words": [
+              { "w": "agreement", "t": "kelishuv", "tr": "согласие" },
+              { "w": "in agreement", "t": "kelishgan holda", "tr": "в согласии" }
+            ]
+          },
+          {
+            "id": "card58",
+            "parts": [
+              { "type": "text", "content": "Carl is so boss – he's always telling us what to do." },
+              { "type": "blank" },
+              { "type": "hint", "content": "boss → ?" }
+            ],
+            "answers": ["bossy"],
+            "words": [
+              { "w": "bossy", "t": "buyruqboz", "tr": "властный" }
+            ]
+          },
+          {
+            "id": "card59",
+            "parts": [
+              { "type": "text", "content": "My dad is a very good cooker." },
+              { "type": "blank" },
+              { "type": "hint", "content": "cooker → ?" }
+            ],
+            "answers": ["cook"],
+            "words": [
+              { "w": "cook", "t": "oshpaz", "tr": "повар" },
+              { "w": "cooker", "t": "plita", "tr": "плита" }
+            ]
+          },
+          {
+            "id": "card60",
+            "parts": [
+              { "type": "text", "content": "Mozart is my favourite compose." },
+              { "type": "blank" },
+              { "type": "hint", "content": "compose → ?" }
+            ],
+            "answers": ["composer"],
+            "words": [
+              { "w": "composer", "t": "bastakor", "tr": "композитор" },
+              { "w": "Mozart", "t": "Motsart", "tr": "Моцарт" }
+            ]
+          },
+          {
+            "id": "card61",
+            "parts": [
+              { "type": "text", "content": "Motorbikes cause a lot of noise pollute." },
+              { "type": "blank" },
+              { "type": "hint", "content": "pollute → ?" }
+            ],
+            "answers": ["pollution"],
+            "words": [
+              { "w": "motorbikes", "t": "mototsikllar", "tr": "мотоциклы" },
+              { "w": "noise pollution", "t": "shovqin ifloslanishi", "tr": "шумовое загрязнение" }
+            ]
+          },
+          {
+            "id": "card62",
+            "parts": [
+              { "type": "text", "content": "Thank you for being so sympathy." },
+              { "type": "blank" },
+              { "type": "hint", "content": "sympathy → ?" }
+            ],
+            "answers": ["sympathetic"],
+            "words": [
+              { "w": "sympathetic", "t": "hamdard", "tr": "сочувствующий" },
+              { "w": "sympathy", "t": "hamdardlik", "tr": "сочувствие" }
+            ]
+          },
+          {
+            "id": "card63",
+            "parts": [
+              { "type": "text", "content": "He's one of the funniest comedies I've ever seen." },
+              { "type": "blank" },
+              { "type": "hint", "content": "comedies → ?" }
+            ],
+            "answers": ["comedians"],
+            "words": [
+              { "w": "comedian", "t": "komediyachi", "tr": "комик" },
+              { "w": "comedy", "t": "komediya", "tr": "комедия" }
+            ]
+          },
+          {
+            "id": "card64",
+            "parts": [
+              { "type": "text", "content": "Could I make a suggest?" },
+              { "type": "blank" },
+              { "type": "hint", "content": "suggest → ?" }
+            ],
+            "answers": ["suggestion"],
+            "words": [
+              { "w": "suggestion", "t": "taklif", "tr": "предложение" }
+            ]
+          },
+          {
+            "id": "card65",
+            "parts": [
+              { "type": "text", "content": "That shop assist wasn't very helpful, was he?" },
+              { "type": "blank" },
+              { "type": "hint", "content": "assist → ?" }
+            ],
+            "answers": ["assistant"],
+            "words": [
+              { "w": "shop assistant", "t": "do'kon sotuvchisi", "tr": "продавец" },
+              { "w": "helpful", "t": "foydali", "tr": "полезный" }
+            ]
+          },
+          {
+            "id": "card66",
+            "parts": [
+              { "type": "text", "content": "That's a very sense idea." },
+              { "type": "blank" },
+              { "type": "hint", "content": "sense → ?" }
+            ],
+            "answers": ["sensible"],
+            "words": [
+              { "w": "sensible", "t": "aqlli", "tr": "разумный" },
+              { "w": "idea", "t": "g'oya", "tr": "идея" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

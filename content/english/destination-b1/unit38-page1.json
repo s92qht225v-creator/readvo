@@ -1,0 +1,147 @@
+{
+  "id": "unit38-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 38,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Both, either, neither, so, nor",
+    "titleTranslation_ru": "Both, either, neither, so, nor"
+  },
+  "sections": [
+    {
+      "id": "u38p1-sec-both",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Both",
+      "subheading_uz": "Both",
+      "subheading_ru": "Both",
+      "instruction": "both + noun + and + noun\nboth + adjective + and + adjective",
+      "instruction_ru": "both + noun + and + noun\nboth + adjective + and + adjective",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To emphasise that each of two things is true", "**Both Adam** and Vicky said Colin was very kind.\nSimon is **both rude** and unkind."],
+            "cells_uz": ["Ikkala narsa ham haqiqat ekanini ta'kidlash uchun", "**Ham Adam**, ham Vicky Kolins juda mehribon ekanini aytdi.\nSimon **ham qo'pol**, ham berahm."],
+            "cells_ru": ["Чтобы подчеркнуть, что каждое из двух утверждений верно", "**И Адам**, и Вики сказали, что Колин очень добрый.\nСаймон **и груб**, и недобр."]
+          },
+          {
+            "cells": ["To say the same thing about two things", "_My sister and I were **both** shocked by what she said._\n_Jack and Jill **both** know lots of jokes._"],
+            "cells_uz": ["Ikki narsa haqida bir xil fikr bildirish uchun", "_Singlim ham, men ham uning so'zidan **ikkimiz ham** hayron bo'ldik._\n_Jack ham, Jill ham ko'plab hazillarni **ikkalasi ham** biladi._"],
+            "cells_ru": ["Чтобы сказать одно и то же о двух предметах", "_Мы с сестрой **оба** были шокированы её словами._\n_Джек и Джилл **оба** знают много анекдотов._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz ba'zan _of_ bilan _both_ ishlatamiz. Olmoshdan oldin kelganda biz doim _of_ ishlatamiz.\n✓ _I used to be good friends with Lisa and Mike, but I've had an argument with **both of** them._",
+        "translation_ru": "Мы иногда используем _of_ с _both_. Мы всегда используем _of_, когда оно стоит перед местоимением.\n✓ _I used to be good friends with Lisa and Mike, but I've had an argument with **both of** them._"
+      }
+    },
+    {
+      "id": "u38p1-sec-either",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Either",
+      "subheading_uz": "Either",
+      "subheading_ru": "Either",
+      "instruction": "either + noun + or + noun\neither + adjective + or + adjective\neither + verb + or + verb",
+      "instruction_ru": "either + noun + or + noun\neither + adjective + or + adjective\neither + verb + or + verb",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To talk about a choice between two things", "_I think I'll buy a Valentine's card with **either** a puppy **or** a kitten on it._\n_I'm not sure how Tom will react – he'll be **either** happy **or** shocked!_\n_You can **either** tell him how you feel **or** hope he notices._"],
+            "cells_uz": ["Ikkita narsa o'rtasida tanlov haqida gapirish uchun", "_O'ylaymanki, **yo** kuchukcha **yo** mushukcha rasmli Sevishganlar kuni kartochkasi sotib olaman._\n_Tom qanday munosabatda bo'lishini bilmayman — u **yo** xursand **yo** hayron bo'ladi!_\n_Siz **yo** his-tuyg'ularingizni ayting **yo** u sezishini umid qiling._"],
+            "cells_ru": ["Чтобы говорить о выборе между двумя вещами", "_Думаю, куплю открытку на День Валентина **либо** со щенком, **либо** с котёнком._\n_Не знаю, как отреагирует Том — он будет **либо** счастлив, **либо** шокирован!_\n_Вы можете **либо** сказать ему о своих чувствах, **либо** надеяться, что он заметит._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz ba'zan _of_ bilan _either_ ishlatamiz. Olmoshdan oldin kelganda biz doim _of_ ishlatamiz.\n✓ _I really like Robert and Martin – I'll go out with **either of** them!_",
+        "translation_ru": "Мы иногда используем _of_ с _either_. Мы всегда используем _of_, когда оно стоит перед местоимением.\n✓ _I really like Robert and Martin – I'll go out with **either of** them!_"
+      }
+    },
+    {
+      "id": "u38p1-sec-neither",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Neither",
+      "subheading_uz": "Neither",
+      "subheading_ru": "Neither",
+      "instruction": "neither + noun + nor + noun\nneither + adjective + nor + adjective\nneither + verb + nor + verb",
+      "instruction_ru": "neither + noun + nor + noun\nneither + adjective + nor + adjective\nneither + verb + nor + verb",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To emphasise that each of two negative things is true", "_I've got **neither** the time **nor** the energy to take up a new hobby at the moment._\n_What you said to Lucy was **neither** true **nor** fair._"],
+            "cells_uz": ["Ikkala inkor ham haqiqat ekanini ta'kidlash uchun", "_Hozir yangi hobbi boshlashga **na** vaqtim **na** kuchim bor._\n_Lucyga aytganingiz **na** haqiqat **na** adolatli edi._"],
+            "cells_ru": ["Чтобы подчеркнуть, что каждое из двух отрицаний верно", "_У меня нет **ни** времени, **ни** сил, чтобы заняться новым хобби._\n_То, что вы сказали Люси, **ни** правда, **ни** справедливо._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz ba'zan _of_ bilan _neither_ ishlatamiz. Olmoshdan oldin kelganda biz doim _of_ ishlatamiz.\n✓ _**Neither of** us found Jason's joke funny._",
+        "translation_ru": "Мы иногда используем _of_ с _neither_. Мы всегда используем _of_, когда оно стоит перед местоимением.\n✓ _**Neither of** us found Jason's joke funny._"
+      }
+    },
+    {
+      "id": "u38p1-sec-sonor",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "So, nor",
+      "subheading_uz": "So, nor",
+      "subheading_ru": "So, nor",
+      "instruction": "so + do/have/be/modal + subject\nnor + do/have/be/modal + subject",
+      "instruction_ru": "so + do/have/be/modal + subject\nnor + do/have/be/modal + subject",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To add more information to a positive statement", "_Lisa is really unkind, and **so** is Angela._\n_You're good at listening to people, and **so am I**._"],
+            "cells_uz": ["Ijobiy gapga qo'shimcha ma'lumot qo'shish uchun", "_Lisa haqiqatan ham yomon, Angela **ham** shunday._\n_Siz odamlarga yaxshi quloq solasiz, **men ham** shunday._"],
+            "cells_ru": ["Чтобы добавить информацию к утвердительному высказыванию", "_Лиза очень недобрая, и Анджела **тоже**._\n_Ты хорошо умеешь слушать людей, и **я тоже**._"]
+          },
+          {
+            "cells": ["To add more information to a negative statement", "_My brother hasn't been invited to the party, and **nor** has his friend._\n_Tom wouldn't forgive Jenny if she told everyone his secret, and **nor** would I._"],
+            "cells_uz": ["Inkor gapga qo'shimcha ma'lumot qo'shish uchun", "_Akam bayramga taklif qilinmadi, **uning do'sti ham** taklif qilinmadi._\n_Tom Jenni sirini hammaga aytsa kechirib yubormasdi, **men ham** kechirib yubormasdim._"],
+            "cells_ru": ["Чтобы добавить информацию к отрицательному высказыванию", "_Моего брата не пригласили на вечеринку, **и его друга тоже**._\n_Том не простил бы Дженни, если бы она рассказала всем его секрет, **и я бы тоже** не простил(а)._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Bu tuzilmalarni suhbatda ham ishlatishingiz mumkin.\n✓ _'I like Hannah's sense of humour.' '**So do I**.'_\n✓ _'I don't find Mark funny.' '**Nor do I**.'_",
+        "translation_ru": "Вы также можете использовать эти структуры самостоятельно в разговоре.\n✓ _'I like Hannah's sense of humour.' '**So do I**.'_\n✓ _'I don't find Mark funny.' '**Nor do I**.'_"
+      }
+    }
+  ]
+}

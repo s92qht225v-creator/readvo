@@ -132,5 +132,45 @@
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-26",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3",
+  "vocab": [
+    { "zh": "为什么", "py": "wèi shénme", "uz": "nega, nima uchun", "ru": "почему, зачем", "ex": "你为什么不去？", "expy": "Nǐ wèi shénme bù qù?", "ex_uz": "Nega bormayapsan?", "ex_ru": "Почему ты не идёшь?" },
+    { "zh": "因为", "py": "yīnwèi", "uz": "chunki", "ru": "потому что", "ex": "因为我很忙。", "expy": "Yīnwèi wǒ hěn máng.", "ex_uz": "Chunki men juda bandman.", "ex_ru": "Потому что я очень занят." },
+    { "zh": "封斋", "py": "fēng zhāi", "uz": "ro'za tutmoq", "ru": "соблюдать пост", "ex": "我在封斋。", "expy": "Wǒ zài fēng zhāi.", "ex_uz": "Men ro'za tutayapman.", "ex_ru": "Я соблюдаю пост." },
+    { "zh": "斋月", "py": "zhāi yuè", "uz": "Ramazon oyi", "ru": "месяц Рамадан", "ex": "现在是斋月。", "expy": "Xiànzài shì zhāi yuè.", "ex_uz": "Hozir Ramazon oyi.", "ex_ru": "Сейчас месяц Рамадан." },
+    { "zh": "白天", "py": "báitiān", "uz": "kunduz", "ru": "днём", "ex": "白天不吃饭。", "expy": "Báitiān bù chīfàn.", "ex_uz": "Kunduz ovqat yemaydi.", "ex_ru": "Днём не ест." },
+    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером", "ex": "晚上吃饭。", "expy": "Wǎnshang chīfàn.", "ex_uz": "Kechqurun ovqat yeydi.", "ex_ru": "Вечером ест." },
+    { "zh": "辛苦", "py": "xīnkǔ", "uz": "qiyin, mashaqqatli", "ru": "трудно, тяжело", "ex": "工作辛苦吗？", "expy": "Gōngzuò xīnkǔ ma?", "ex_uz": "Ish qiyinmi?", "ex_ru": "Работа тяжёлая?" },
+    { "zh": "对吗", "py": "duì ma", "uz": "shundaymi?", "ru": "правда?", "ex": "你是学生，对吗？", "expy": "Nǐ shì xuéshēng, duì ma?", "ex_uz": "Sen talabasan, shundaymi?", "ex_ru": "Ты студент, правда?" }
+  ],
+  "phrases": [
+    { "zh": "为什么", "py": "wèi shénme", "uz": "nega?", "ru": "почему?" },
+    { "zh": "因为", "py": "yīnwèi", "uz": "chunki", "ru": "потому что" },
+    { "zh": "对吗", "py": "duì ma", "uz": "shundaymi?", "ru": "правда?" },
+    { "zh": "是的", "py": "shì de", "uz": "ha, shunday", "ru": "да, именно" },
+    { "zh": "白天", "py": "báitiān", "uz": "kunduz", "ru": "днём" },
+    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером" }
+  ],
+  "timeOfDay": [
+    { "zh": "早上", "py": "zǎoshang", "uz": "ertalab", "ru": "утром", "icon": "🌅" },
+    { "zh": "上午", "py": "shàngwǔ", "uz": "tushdan oldin", "ru": "до полудня", "icon": "☀️" },
+    { "zh": "中午", "py": "zhōngwǔ", "uz": "tush", "ru": "полдень", "icon": "🌞" },
+    { "zh": "下午", "py": "xiàwǔ", "uz": "tushdan keyin", "ru": "после полудня", "icon": "🌤" },
+    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером", "icon": "🌙" }
+  ],
+  "grammarNotes": [
+    { "pattern": "为什么...？", "title_uz": "Sabab so'rash", "title_ru": "Спросить причину", "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.", "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.", "ex": "你为什么不吃饭？", "expy": "Nǐ wèi shénme bù chīfàn?", "ex_uz": "Nega ovqat yemayapsan?", "ex_ru": "Почему ты не ешь?" },
+    { "pattern": "因为...", "title_uz": "Sabab bildirish", "title_ru": "Выразить причину", "desc_uz": "因为 = chunki. 为什么 savoliga javob. Gapning boshida keladi.", "desc_ru": "因为 = потому что. Ответ на 为什么. Стоит в начале предложения.", "ex": "因为我在封斋。", "expy": "Yīnwèi wǒ zài fēng zhāi.", "ex_uz": "Chunki men ro'za tutayapman.", "ex_ru": "Потому что я соблюдаю пост." },
+    { "pattern": "在 + Глагол", "title_uz": "Davom etayotgan ish", "title_ru": "Продолжающееся действие", "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi.", "desc_ru": "在 перед глаголом обозначает действие в процессе.", "ex": "我在封斋。", "expy": "Wǒ zài fēng zhāi.", "ex_uz": "Men (hozir) ro'za tutayapman.", "ex_ru": "Я (сейчас) соблюдаю пост." },
+    { "pattern": "...是...吗？", "title_uz": "Ha/yo'q savol", "title_ru": "Вопрос да/нет", "desc_uz": "是...吗？ = ...mi? Biror narsani tasdiqlash yoki so'rash uchun.", "desc_ru": "是...吗？ = ...ли? Для подтверждения или уточнения.", "ex": "现在是斋月吗？", "expy": "Xiànzài shì zhāi yuè ma?", "ex_uz": "Hozir Ramazon oyi-mi?", "ex_ru": "Сейчас Рамадан?" },
+    { "pattern": "...，对吗？", "title_uz": "Tasdiqlash so'rovi", "title_ru": "Уточняющий вопрос", "desc_uz": "对吗？ = shundaymi? Gap oxiriga qo'shiladi.", "desc_ru": "对吗？ = правда? Добавляется в конец предложения.", "ex": "你白天不吃，对吗？", "expy": "Nǐ báitiān bù chī, duì ma?", "ex_uz": "Kunduz yemaysan, shundaymi?", "ex_ru": "Ты днём не ешь, правда?" },
+    { "pattern": "不 + Sifat", "title_uz": "Sifat inkori", "title_ru": "Отрицание прилагательного", "desc_uz": "不 sifatdan oldin kelib, «...emas» ma'nosini beradi.", "desc_ru": "不 перед прилагательным даёт значение «не...».", "ex": "不辛苦。", "expy": "Bù xīnkǔ.", "ex_uz": "Qiyin emas.", "ex_ru": "Не тяжело." }
+  ],
+  "quiz": [
+    { "q_uz": "B nega ovqat yemayapti?", "q_ru": "Почему B не ест?", "options_uz": ["Kasal", "Ro'za tutayapti", "Ovqat yo'q", "Ishtahasi yo'q"], "options_ru": ["Болен", "Соблюдает пост", "Нет еды", "Нет аппетита"], "correct": 1 },
+    { "q_uz": "Hozir qaysi oy?", "q_ru": "Какой сейчас месяц?", "options_uz": ["Yangi yil", "Ramazon oyi", "Noma'lum", "Yoz oyi"], "options_ru": ["Новый год", "Рамадан", "Неизвестно", "Летний месяц"], "correct": 1 },
+    { "q_uz": "B qachon ovqat yeydi?", "q_ru": "Когда B ест?", "options_uz": ["Ertalab", "Tushda", "Kechqurun", "Yemaydi"], "options_ru": ["Утром", "В обед", "Вечером", "Не ест"], "correct": 2 },
+    { "q_uz": "\"Nega?\" xitoycha qanday?", "q_ru": "Как «почему» по-китайски?", "options_uz": ["怎么", "什么", "为什么", "多少"], "options_ru": ["怎么", "什么", "为什么", "多少"], "correct": 2 },
+    { "q_uz": "B uchun ro'za qiyinmi?", "q_ru": "Тяжело ли B соблюдать пост?", "options_uz": ["Ha, juda qiyin", "Yo'q, qiyin emas", "Aytmadi", "Ba'zan qiyin"], "options_ru": ["Да, очень тяжело", "Нет, не тяжело", "Не сказал", "Иногда тяжело"], "correct": 1 }
+  ]
 }

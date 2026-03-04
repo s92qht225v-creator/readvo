@@ -1,0 +1,703 @@
+{
+  "id": "unit34-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u34p2-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Jumlalarni moslashtiring (1–8 va A–F). Agar mos kelmasa, X qo'ying.",
+      "instruction_ru": "Сопоставьте фразы (1–8 и A–F). Если соответствия нет, поставьте X.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "A the window!",
+          "B some money.",
+          "C a lovely picture.",
+          "D a tractor.",
+          "E lots of people?",
+          "F a party on Saturday."
+        ],
+        "cards": [
+          {
+            "id": "u34p2-exA-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've never driven "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "D"
+            ],
+            "alternateAnswers": [
+              [
+                "d"
+              ]
+            ],
+            "words": [
+              {
+                "w": "driven",
+                "t": "haydamoq",
+                "tr": "водить"
+              },
+              {
+                "w": "tractor",
+                "t": "traktor",
+                "tr": "трактор"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We're going to have "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "F"
+            ],
+            "alternateAnswers": [
+              [
+                "f"
+              ]
+            ],
+            "words": [
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              },
+              {
+                "w": "Saturday",
+                "t": "shanba",
+                "tr": "суббота"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't close "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "A"
+            ],
+            "alternateAnswers": [
+              [
+                "a"
+              ]
+            ],
+            "words": [
+              {
+                "w": "close",
+                "t": "yopmoq",
+                "tr": "закрывать"
+              },
+              {
+                "w": "window",
+                "t": "deraza",
+                "tr": "окно"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Have you invited "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "E"
+            ],
+            "alternateAnswers": [
+              [
+                "e"
+              ]
+            ],
+            "words": [
+              {
+                "w": "invited",
+                "t": "taklif qilmoq",
+                "tr": "пригласить"
+              },
+              {
+                "w": "lots of people",
+                "t": "ko'p odamlar",
+                "tr": "много людей"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our rabbit has run away "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "X"
+            ],
+            "alternateAnswers": [
+              [
+                "x"
+              ]
+            ],
+            "words": [
+              {
+                "w": "rabbit",
+                "t": "quyon",
+                "tr": "кролик"
+              },
+              {
+                "w": "run away",
+                "t": "qochib ketmoq",
+                "tr": "убежать"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Of course you can borrow "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "B"
+            ],
+            "alternateAnswers": [
+              [
+                "b"
+              ]
+            ],
+            "words": [
+              {
+                "w": "borrow",
+                "t": "qarz olmoq",
+                "tr": "одолжить"
+              },
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Clare has drawn "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "C"
+            ],
+            "alternateAnswers": [
+              [
+                "c"
+              ]
+            ],
+            "words": [
+              {
+                "w": "drawn",
+                "t": "chizmoq",
+                "tr": "нарисовать"
+              },
+              {
+                "w": "lovely picture",
+                "t": "chiroyli rasm",
+                "tr": "красивый рисунок"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exA-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think I'll sit down "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "X"
+            ],
+            "alternateAnswers": [
+              [
+                "x"
+              ]
+            ],
+            "words": [
+              {
+                "w": "sit down",
+                "t": "o'tirmoq",
+                "tr": "сесть"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u34p2-sec-exB",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapdagi ortiqcha so'zni toping va yozing.",
+      "instruction_ru": "Найдите и запишите лишнее слово в каждом предложении.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u34p2-exB-1",
+            "sentence": "My mum often makes for the old lady who lives next door some soup.",
+            "errorStart": 19,
+            "errorEnd": 22,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete for)",
+              "delete for",
+              "for"
+            ],
+            "words": [
+              {
+                "w": "old lady",
+                "t": "keksa ayol",
+                "tr": "пожилая женщина"
+              },
+              {
+                "w": "next door",
+                "t": "qo'shni",
+                "tr": "по соседству"
+              },
+              {
+                "w": "soup",
+                "t": "sho'rva",
+                "tr": "суп"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-2",
+            "sentence": "I won't tell to anyone your secret.",
+            "errorStart": 13,
+            "errorEnd": 15,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete to)",
+              "delete to",
+              "to"
+            ],
+            "words": [
+              {
+                "w": "tell",
+                "t": "aytmoq",
+                "tr": "рассказать"
+              },
+              {
+                "w": "secret",
+                "t": "sir",
+                "tr": "секрет"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-3",
+            "sentence": "Sing to us a song!",
+            "errorStart": 5,
+            "errorEnd": 7,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete to)",
+              "delete to",
+              "to"
+            ],
+            "words": [
+              {
+                "w": "sing",
+                "t": "kuylash",
+                "tr": "петь"
+              },
+              {
+                "w": "song",
+                "t": "qo'shiq",
+                "tr": "песня"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-4",
+            "sentence": "Could you bring for me some crisps when you come?",
+            "errorStart": 16,
+            "errorEnd": 19,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete for)",
+              "delete for",
+              "for"
+            ],
+            "words": [
+              {
+                "w": "bring",
+                "t": "olib kelmoq",
+                "tr": "принести"
+              },
+              {
+                "w": "crisps",
+                "t": "chips",
+                "tr": "чипсы"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-5",
+            "sentence": "I think I'll buy for Carl a computer game for his birthday.",
+            "errorStart": 17,
+            "errorEnd": 20,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete for)",
+              "delete for",
+              "for"
+            ],
+            "words": [
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "computer game",
+                "t": "kompyuter o'yini",
+                "tr": "компьютерная игра"
+              },
+              {
+                "w": "birthday",
+                "t": "tug'ilgan kun",
+                "tr": "день рождения"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-6",
+            "sentence": "That CD cost to me fifteen euros.",
+            "errorStart": 13,
+            "errorEnd": 15,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete to)",
+              "delete to",
+              "to"
+            ],
+            "words": [
+              {
+                "w": "cost",
+                "t": "turmoq",
+                "tr": "стоить"
+              },
+              {
+                "w": "fifteen euros",
+                "t": "o'n besh yevro",
+                "tr": "пятнадцать евро"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exB-7",
+            "sentence": "Dan showed to me his autograph book.",
+            "errorStart": 11,
+            "errorEnd": 13,
+            "correctAnswer": "",
+            "alternateAnswers": [
+              "(delete to)",
+              "delete to",
+              "to"
+            ],
+            "words": [
+              {
+                "w": "showed",
+                "t": "ko'rsatmoq",
+                "tr": "показать"
+              },
+              {
+                "w": "autograph book",
+                "t": "avtograf kitobi",
+                "tr": "книга автографов"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u34p2-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Gaplarni to'g'ridan-to'g'ri ob'ekt oxirida keladigan qilib qayta yozing.",
+      "instruction_ru": "Перепишите предложения так, чтобы прямое дополнение стояло в конце.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u34p2-exC-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I owe ten euros to Danny.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "I owe Danny ten euros."
+            ],
+            "alternateAnswers": [],
+            "prefilled": "I owe Danny ten euros.",
+            "words": [
+              {
+                "w": "owe",
+                "t": "qarzdor bo'lmoq",
+                "tr": "быть должным"
+              },
+              {
+                "w": "euros",
+                "t": "yevro",
+                "tr": "евро"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Susan hasn't bought a birthday present for her mum yet.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Susan hasn't bought her mum a birthday present yet."
+            ],
+            "alternateAnswers": [
+              [
+                "Susan hasn't bought her mum a birthday present yet"
+              ]
+            ],
+            "words": [
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "birthday present",
+                "t": "tug'ilgan kun sovg'asi",
+                "tr": "подарок на день рождения"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You should show your new guitar to Mike.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "You should show Mike your new guitar."
+            ],
+            "alternateAnswers": [
+              [
+                "You should show Mike your new guitar"
+              ]
+            ],
+            "words": [
+              {
+                "w": "show",
+                "t": "ko'rsatmoq",
+                "tr": "показать"
+              },
+              {
+                "w": "guitar",
+                "t": "gitara",
+                "tr": "гитара"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did you give that CD to Liz?\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Did you give Liz that CD?"
+            ],
+            "alternateAnswers": [
+              [
+                "Did you give Liz that CD"
+              ]
+            ],
+            "words": [
+              {
+                "w": "give",
+                "t": "bermoq",
+                "tr": "дать"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'd like to teach English to young teenagers.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "I'd like to teach young teenagers English."
+            ],
+            "alternateAnswers": [
+              [
+                "I'd like to teach young teenagers English"
+              ]
+            ],
+            "words": [
+              {
+                "w": "teach",
+                "t": "o'rgatmoq",
+                "tr": "учить"
+              },
+              {
+                "w": "teenagers",
+                "t": "o'smirlar",
+                "tr": "подростки"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Are you going to write a letter to your grandparents?\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Are you going to write your grandparents a letter?"
+            ],
+            "alternateAnswers": [
+              [
+                "Are you going to write your grandparents a letter"
+              ]
+            ],
+            "words": [
+              {
+                "w": "write",
+                "t": "yozmoq",
+                "tr": "написать"
+              },
+              {
+                "w": "letter",
+                "t": "xat",
+                "tr": "письмо"
+              },
+              {
+                "w": "grandparents",
+                "t": "buvalar",
+                "tr": "бабушка и дедушка"
+              }
+            ]
+          },
+          {
+            "id": "u34p2-exC-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you take this magazine to your dad?\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Could you take your dad this magazine?"
+            ],
+            "alternateAnswers": [
+              [
+                "Could you take your dad this magazine"
+              ]
+            ],
+            "words": [
+              {
+                "w": "take",
+                "t": "olib bormoq",
+                "tr": "отнести"
+              },
+              {
+                "w": "magazine",
+                "t": "jurnal",
+                "tr": "журнал"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

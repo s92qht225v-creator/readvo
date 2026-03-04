@@ -1,0 +1,680 @@
+'use client';
+
+import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useLanguage } from '../hooks/useLanguage';
+import { useRequireAuth } from '../hooks/useRequireAuth';
+import { useTrial } from '../hooks/useTrial';
+import { Paywall } from './Paywall';
+import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { alignPinyinToText } from '../utils/rubyText';
+import { BannerMenu } from './BannerMenu';
+
+// ── Types ──────────────────────────────────────────────────────────────────
+
+interface StoryWord {
+  i: [number, number];
+  p: string;
+  t: string;
+  tr: string;
+  h?: number;
+  l?: number;
+}
+
+interface Sentence {
+  id: string;
+  text_original: string;
+  pinyin: string;
+  text_translation: string;
+  text_translation_ru: string;
+  speaker?: string;
+  words?: StoryWord[];
+  audio_url?: string;
+  start?: number;
+  end?: number;
+}
+
+interface GrammarNote {
+  pattern: string;
+  title_uz: string;
+  title_ru: string;
+  desc_uz: string;
+  desc_ru: string;
+  ex: string;
+  expy: string;
+  ex_uz: string;
+  ex_ru: string;
+}
+
+interface QuizQuestion {
+  q_uz: string;
+  q_ru: string;
+  options_uz: string[];
+  options_ru: string[];
+  correct: number;
+}
+
+interface VocabEntry {
+  zh: string;
+  py: string;
+  uz: string;
+  ru: string;
+  ex: string;
+  expy: string;
+  ex_uz: string;
+  ex_ru: string;
+}
+
+interface PhraseEntry {
+  zh: string;
+  py: string;
+  uz: string;
+  ru: string;
+}
+
+interface TimeOfDayEntry {
+  zh: string;
+  py: string;
+  uz: string;
+  ru: string;
+  icon: string;
+}
+
+interface DialogueData {
+  id: string;
+  title: string;
+  pinyin: string;
+  titleTranslation: string;
+  titleTranslation_ru: string;
+  audio_url?: string;
+  sections: { id: string; sentences: Sentence[]; audio_url?: string }[];
+  vocab?: VocabEntry[];
+  phrases?: PhraseEntry[];
+  timeOfDay?: TimeOfDayEntry[];
+  grammarNotes?: GrammarNote[];
+  quiz?: QuizQuestion[];
+}
+
+interface DialogueReaderProps {
+  dialogue: DialogueData;
+  bookPath: string;
+  listPath?: string;
+}
+
+// ── Ruby text ──────────────────────────────────────────────────────────────
+
+function RubyChar({ char, py, show }: { char: string; py?: string; show: boolean }) {
+  if (py) {
+    return (
+      <ruby>
+        {char}
+        <rp>(</rp>
+        <rt style={show ? undefined : { visibility: 'hidden' }}>{py}</rt>
+        <rp>)</rp>
+      </ruby>
+    );
+  }
+  return <span>{char}</span>;
+}
+
+function RubyText({ text, pinyin, show, words, activeWordIdx, onWordPress, onWordRelease }: {
+  text: string; pinyin: string; show: boolean;
+  words?: StoryWord[]; activeWordIdx?: number | null;
+  onWordPress?: (idx: number) => void; onWordRelease?: () => void;
+}) {
+  const pairs = alignPinyinToText(text, pinyin);
+  const pressTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const longPressFiredRef = useRef(false);
+
+  const charToWord = useMemo(() => {
+    if (!words?.length) return null;
+    const map = new Map<number, number>();
+    words.forEach((w, wi) => { for (let c = w.i[0]; c < w.i[1]; c++) map.set(c, wi); });
+    return map;
+  }, [words]);
+
+  const elements: React.ReactNode[] = [];
+  let charIdx = 0;
+
+  if (!charToWord || !words || !onWordPress) {
+    pairs.forEach((p, i) => elements.push(<RubyChar key={i} char={p.char} py={p.pinyin} show={show} />));
+  } else {
+    let currentWordIdx: number | undefined;
+    let wordPairs: { pair: typeof pairs[0]; idx: number }[] = [];
+
+    const flush = () => {
+      if (!wordPairs.length) return;
+      const wIdx = currentWordIdx;
+      if (wIdx !== undefined) {
+        elements.push(
+          <span
+            key={`w${wIdx}`}
+            className={`story__word ${activeWordIdx === wIdx ? 'story__word--active' : ''}`}
+            onContextMenu={e => e.preventDefault()}
+            onPointerDown={e => {
+              e.stopPropagation();
+              longPressFiredRef.current = false;
+              pressTimerRef.current = setTimeout(() => {
+                longPressFiredRef.current = true;
+                onWordPress(wIdx);
+                pressTimerRef.current = null;
+              }, 300);
+            }}
+            onPointerUp={() => {
+              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
+              if (longPressFiredRef.current) { longPressFiredRef.current = false; onWordRelease?.(); }
+            }}
+            onPointerCancel={() => {
+              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
+              if (longPressFiredRef.current) { longPressFiredRef.current = false; onWordRelease?.(); }
+            }}
+            onPointerLeave={() => {
+              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
+            }}
+          >
+            {wordPairs.map(wp => <RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} show={show} />)}
+          </span>
+        );
+      } else {
+        wordPairs.forEach(wp => elements.push(<RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} show={show} />));
+      }
+      wordPairs = [];
+    };
+
+    pairs.forEach((pair, i) => {
+      const wIdx = charToWord.get(charIdx);
+      if (wIdx !== currentWordIdx) { flush(); currentWordIdx = wIdx; }
+      wordPairs.push({ pair, idx: i });
+      charIdx += pair.char.length;
+    });
+    flush();
+  }
+
+  return <>{elements}</>;
+}
+
+// ── Main component ─────────────────────────────────────────────────────────
+
+const TABS = [
+  { id: 'dialog', uz: 'Dialog', ru: 'Диалог' },
+  { id: 'vocab', uz: 'So\'zlar', ru: 'Слова' },
+  { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика' },
+  { id: 'quiz', uz: 'Mashq', ru: 'Тест' },
+];
+
+export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderProps) {
+  const { isLoading: authLoading } = useRequireAuth();
+  const trial = useTrial();
+  const [language] = useLanguage();
+
+  // Tab state
+  const [activeTab, setActiveTab] = useState('dialog');
+
+  // Dialog tab state (mirrors StoryReader)
+  const [showPinyin, setShowPinyin] = useState(true);
+  const [showTranslation, setShowTranslation] = useState(false);
+  const [focusMode, setFocusMode] = useState(false);
+  const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
+  const [activeWord, setActiveWord] = useState<{ sentenceId: string; wordIdx: number } | null>(null);
+  const longPressedRef = useRef(false);
+  const audioPausedByWordRef = useRef(false);
+  const sentenceAudio = useAudioPlayer();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isAudioLoading, setIsAudioLoading] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [audioActive, setAudioActive] = useState(false);
+
+  // So'zlar tab state
+  const [expandedVocab, setExpandedVocab] = useState<number | null>(null);
+
+  // Grammatika tab state
+  const [expandedGrammar, setExpandedGrammar] = useState<number | null>(null);
+
+  // Mashq tab state
+  const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [showResults, setShowResults] = useState(false);
+
+  const allSentences = useMemo(() => dialogue.sections.flatMap(s => s.sentences), [dialogue.sections]);
+
+  const timedSentences = useMemo(
+    () => allSentences.filter((s): s is Sentence & { start: number; end: number } => s.start !== undefined && s.end !== undefined),
+    [allSentences]
+  );
+
+  const audioSentenceId = useMemo(() => {
+    if (!isPlaying || !timedSentences.length) return null;
+    return timedSentences.find(s => currentTime >= s.start && currentTime < s.end)?.id ?? null;
+  }, [isPlaying, currentTime, timedSentences]);
+
+  useEffect(() => {
+    if (focusMode && audioSentenceId) setActiveSentenceId(audioSentenceId);
+  }, [focusMode, audioSentenceId]);
+
+  const displaySentenceId = audioSentenceId ?? activeSentenceId;
+  const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
+
+  const toggleFocusMode = useCallback(() => {
+    if (!focusMode) {
+      if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
+      const targetId = activeSentenceId ?? allSentences[0]?.id ?? null;
+      setActiveSentenceId(targetId);
+      if (targetId) {
+        const s = allSentences.find(s => s.id === targetId);
+        if (s?.audio_url) sentenceAudio.play(targetId, s.audio_url);
+      }
+    }
+    setFocusMode(v => !v);
+  }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
+
+  const handleSentenceClick = useCallback((id: string) => {
+    if (longPressedRef.current) { longPressedRef.current = false; return; }
+    setActiveWord(null);
+    setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
+    const sentence = allSentences.find(s => s.id === id);
+    if (sentence?.audio_url) {
+      if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
+      sentenceAudio.play(id, sentence.audio_url);
+    }
+  }, [focusMode, allSentences, isPlaying, sentenceAudio]);
+
+  const handleWordPress = useCallback((sentenceId: string, wordIdx: number) => {
+    longPressedRef.current = true;
+    if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); audioPausedByWordRef.current = true; }
+    setActiveWord({ sentenceId, wordIdx });
+    setActiveSentenceId(sentenceId);
+  }, [isPlaying]);
+
+  const handleWordRelease = useCallback(() => {
+    setActiveWord(null);
+    if (audioPausedByWordRef.current && audioRef.current) { audioPausedByWordRef.current = false; audioRef.current.play().catch(() => {}); }
+  }, []);
+
+  const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
+    const idx = allSentences.findIndex(s => s.id === displaySentenceId);
+    if (idx === -1) return;
+    const next = allSentences[dir === 'next' ? idx + 1 : idx - 1];
+    if (next) {
+      setActiveSentenceId(next.id);
+      if (next.audio_url) sentenceAudio.play(next.id, next.audio_url);
+    }
+  }, [displaySentenceId, allSentences, sentenceAudio]);
+
+  const handlePlay = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio || !dialogue.audio_url) return;
+    sentenceAudio.stop();
+    if (isPlaying) { audio.pause(); setIsPlaying(false); }
+    else if (audioActive) { audio.play(); }
+    else {
+      setIsAudioLoading(true); setAudioActive(true);
+      audio.src = dialogue.audio_url;
+      audio.play().catch(() => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); });
+    }
+  }, [isPlaying, audioActive, dialogue.audio_url, sentenceAudio]);
+
+  useEffect(() => {
+    if (!dialogue.audio_url) return;
+    const audio = new Audio();
+    audio.preload = 'none';
+    audioRef.current = audio;
+    audio.addEventListener('loadedmetadata', () => {});
+    audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
+    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); setActiveSentenceId(null); });
+    audio.addEventListener('ended', () => {
+      setIsPlaying(false); setCurrentTime(0); setAudioActive(false);
+      const lastId = allSentences[allSentences.length - 1]?.id ?? null;
+      setFocusMode(fm => { if (fm) setActiveSentenceId(lastId); return fm; });
+    });
+    audio.addEventListener('error', () => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); });
+    return () => { audio.pause(); audio.src = ''; };
+  }, [dialogue.audio_url, allSentences]);
+
+  // Vocab: use authored vocab if present, else auto-extract from sentences
+  const vocabList = useMemo(() => {
+    if (dialogue.vocab && dialogue.vocab.length > 0) {
+      return dialogue.vocab.map(v => ({ zh: v.zh, py: v.py, uz: v.uz, ru: v.ru, ex: v.ex, expy: v.expy, exuz: v.ex_uz, exru: v.ex_ru }));
+    }
+    const seen = new Set<string>();
+    const words: Array<{ zh: string; py: string; uz: string; ru: string; ex: string; expy: string; exuz: string; exru: string }> = [];
+    for (const s of allSentences) {
+      if (!s.words) continue;
+      for (const w of s.words) {
+        const zh = s.text_original.slice(w.i[0], w.i[1]);
+        if (seen.has(w.p) || !zh.trim() || /[，。？！、""''：；]/.test(zh)) continue;
+        seen.add(w.p);
+        words.push({ zh, py: w.p, uz: w.t, ru: w.tr, ex: s.text_original, expy: s.pinyin, exuz: s.text_translation, exru: s.text_translation_ru });
+      }
+    }
+    return words;
+  }, [dialogue.vocab, allSentences]);
+
+  const grammarNotes = dialogue.grammarNotes ?? [];
+  const quiz = dialogue.quiz ?? [];
+  const allAnswered = Object.keys(answers).length === quiz.length && quiz.length > 0;
+  const score = Object.entries(answers).filter(([qi, ai]) => quiz[+qi]?.correct === +ai).length;
+  const pick = (qi: number, ai: number) => { if (!showResults) setAnswers(p => ({ ...p, [qi]: ai })); };
+
+  if (authLoading) return <div className="loading-spinner" />;
+  const showPaywall = trial?.isTrialExpired;
+
+  return (
+    <>
+      {showPaywall && <Paywall />}
+      <div className={`dialogue-reader${showPaywall ? ' paywall-blur' : ''}`}>
+
+        {/* ── Hero banner ── */}
+        <div className="dr-hero">
+          <div className="dr-hero__watermark">对话</div>
+          <div className="dr-hero__top-row">
+            <Link href={listPath || `${bookPath}/dialogues`} className="home__hero-logo">
+              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
+            </Link>
+            <BannerMenu />
+          </div>
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Диалог' : 'Dialog'}</div>
+            <div className="dr-hero__title">{dialogue.title}</div>
+            <div className="dr-hero__pinyin">{dialogue.pinyin}</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation} —</div>
+          </div>
+        </div>
+
+        {/* ── Top tab bar ── */}
+        <div className="dr-tabs">
+          <div className="dr-tabs__inner">
+            {TABS.map(t => (
+              <button
+                key={t.id}
+                className={`dr-tabs__tab ${activeTab === t.id ? 'dr-tabs__tab--active' : ''}`}
+                onClick={() => setActiveTab(t.id)}
+                type="button"
+              >
+                {language === 'ru' ? t.ru : t.uz}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* ── DIALOG TAB ── */}
+        {activeTab === 'dialog' && (
+          <>
+            {activeSentence && (showTranslation || activeWord) && (
+              <div className="story__translation-panel">
+                <p className="story__translation-panel-text">
+                  {(() => {
+                    if (activeWord?.sentenceId === activeSentence.id) {
+                      const word = activeSentence.words?.[activeWord.wordIdx];
+                      if (word) {
+                        const chars = activeSentence.text_original.slice(word.i[0], word.i[1]);
+                        const tr = language === 'ru' ? word.tr : word.t;
+                        return <><strong>{chars}</strong> {word.p} — {tr}{word.h ? <span className="story__word-hsk">HSK {word.h}</span> : null}{word.l ? <span className="story__word-hsk">{word.l}-{language === 'ru' ? 'урок' : 'dars'}</span> : null}</>;
+                      }
+                    }
+                    return language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation;
+                  })()}
+                </p>
+              </div>
+            )}
+
+            <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
+              {focusMode && activeSentence ? (
+                <div className="story__focus">
+                  <div className="story__text story__focus-text">
+                    <div className="story__focus-line">
+                      {activeSentence.speaker && <span className="story__focus-speaker">{activeSentence.speaker}：</span>}
+                      <span className="story__sentence story__sentence--active" onClick={() => handleSentenceClick(activeSentence.id)}>
+                        <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} show={showPinyin}
+                          words={activeSentence.words} activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
+                          onWordPress={idx => handleWordPress(activeSentence.id, idx)} onWordRelease={handleWordRelease} />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="story__focus-nav">
+                    <button className="story__focus-nav-btn" onClick={() => handleFocusNav('prev')} disabled={allSentences[0]?.id === displaySentenceId} type="button">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+                    </button>
+                    {activeSentence?.audio_url && (
+                      <button className="story__focus-play-btn" onClick={() => sentenceAudio.play(activeSentence.id, activeSentence.audio_url!)} type="button">
+                        {sentenceAudio.isPlaying(activeSentence.id)
+                          ? <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                          : <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>}
+                      </button>
+                    )}
+                    <button className="story__focus-nav-btn" onClick={() => handleFocusNav('next')} disabled={allSentences[allSentences.length - 1]?.id === displaySentenceId} type="button">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
+                    </button>
+                  </div>
+                  <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
+                </div>
+              ) : (
+                dialogue.sections.map(section => (
+                  <div key={section.id} className="dr-lines">
+                    {section.sentences.map(s => {
+                      const pairs = alignPinyinToText(s.text_original, s.pinyin);
+                      const isActive = displaySentenceId === s.id;
+                      const isPlaying2 = audioSentenceId === s.id;
+                      return (
+                        <div
+                          key={s.id}
+                          className={`dr-line ${isActive ? 'dr-line--active' : ''} ${isPlaying2 ? 'dr-line--playing' : ''}`}
+                          onClick={() => handleSentenceClick(s.id)}
+                        >
+                          <div className="dr-line-main">
+                            {s.speaker && (
+                              <div className="dr-line-speaker" style={showPinyin ? { paddingTop: 14 } : undefined}>{s.speaker}:</div>
+                            )}
+                            <div className="dr-line-chars">
+                              {pairs.map((pair, ci) => {
+                                const isPunct = /[，。？！、,.\s]/.test(pair.char);
+                                return (
+                                  <div key={ci} className="dr-char">
+                                    {showPinyin && pair.pinyin && (
+                                      <div className="dr-char-py">{pair.pinyin}</div>
+                                    )}
+                                    {showPinyin && !pair.pinyin && !isPunct && (
+                                      <div className="dr-char-py dr-char-py--empty"> </div>
+                                    )}
+                                    <div className="dr-char-zh">{pair.char}</div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                          {showTranslation && (
+                            <div className="dr-line-tr">{language === 'ru' ? s.text_translation_ru : s.text_translation}</div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))
+              )}
+            </div>
+
+            {!focusMode && dialogue.audio_url && (
+              <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={handlePlay} type="button">
+                {isAudioLoading ? <span className="story__play-fab-spinner" /> :
+                  isPlaying
+                    ? <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                    : <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg>}
+              </button>
+            )}
+
+            {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
+            <nav className="story__bottom-bar">
+              <div className="story__bottom-bar-inner">
+                <button className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
+                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
+                </button>
+                <button className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
+                  {language === 'ru' ? 'Фокус' : 'Fokus'}
+                </button>
+                <button className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
+                  Pinyin
+                </button>
+              </div>
+            </nav>
+          </>
+        )}
+
+        {/* ── SO'ZLAR TAB ── */}
+        {activeTab === 'vocab' && (
+          <div className="dr-panel">
+            {vocabList.length === 0 && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
+              <div className="dr-empty">
+                <div className="dr-empty__icon">📖</div>
+                <div>{language === 'ru' ? 'Слова не найдены' : 'So\'zlar topilmadi'}</div>
+              </div>
+            ) : (
+              <>
+                {vocabList.length > 0 && (
+                  <div className="dr-card">
+                    <div className="dr-label">{language === 'ru' ? 'Новые слова' : 'Yangi so\'zlar'}</div>
+                    {vocabList.map((v, i) => (
+                      <div key={i} className={`dr-vocab-item ${expandedVocab === i ? 'dr-vocab-item--open' : ''}`} onClick={() => setExpandedVocab(expandedVocab === i ? null : i)}>
+                        <div className="dr-vocab-row">
+                          <span className="dr-vocab-zh">{v.zh}</span>
+                          <span className="dr-vocab-py">{v.py}</span>
+                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : v.uz}</span>
+                        </div>
+                        {expandedVocab === i && (
+                          <div className="dr-vocab-example">
+                            <div className="dr-vocab-example-zh">{v.ex}</div>
+                            <div className="dr-vocab-example-py">{v.expy}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : v.exuz}</div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите пример' : 'Bosing — misol ko\'rinadi'}</div>
+                  </div>
+                )}
+
+                {dialogue.phrases && dialogue.phrases.length > 0 && (
+                  <div className="dr-card">
+                    <div className="dr-label">{language === 'ru' ? 'Полезные фразы' : 'Foydali iboralar'}</div>
+                    <div className="dr-phrases-grid">
+                      {dialogue.phrases.map((p, i) => (
+                        <div key={i} className="dr-phrase-card">
+                          <div className="dr-phrase-zh">{p.zh}</div>
+                          <div className="dr-phrase-py">{p.py}</div>
+                          <div className="dr-phrase-tr">{language === 'ru' ? p.ru : p.uz}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {dialogue.timeOfDay && dialogue.timeOfDay.length > 0 && (
+                  <div className="dr-card">
+                    <div className="dr-label">{language === 'ru' ? 'Время суток' : 'Kun vaqtlari'}</div>
+                    <div className="dr-tod-row">
+                      {dialogue.timeOfDay.map((t, i) => (
+                        <div key={i} className="dr-tod-item">
+                          <div className="dr-tod-icon">{t.icon}</div>
+                          <div className="dr-tod-zh">{t.zh}</div>
+                          <div className="dr-tod-py">{t.py}</div>
+                          <div className="dr-tod-tr">{language === 'ru' ? t.ru : t.uz}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+
+        {/* ── GRAMMATIKA TAB ── */}
+        {activeTab === 'grammar' && (
+          <div className="dr-panel">
+            {grammarNotes.length === 0 ? (
+              <div className="dr-empty">
+                <div className="dr-empty__icon">🚧</div>
+                <div>{language === 'ru' ? 'Скоро будет' : 'Tez kunda'}</div>
+              </div>
+            ) : (
+              <>
+                {grammarNotes.map((g, i) => (
+                  <div key={i} className="dr-card dr-grammar-card" onClick={() => setExpandedGrammar(expandedGrammar === i ? null : i)}>
+                    <div className="dr-grammar-header">
+                      <span className="dr-grammar-pattern">{g.pattern}</span>
+                      <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : g.title_uz}</span>
+                    </div>
+                    <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : g.desc_uz}</div>
+                    {expandedGrammar === i && (
+                      <div className="dr-grammar-example">
+                        <div className="dr-vocab-example-zh">{g.ex}</div>
+                        <div className="dr-vocab-example-py">{g.expy}</div>
+                        <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : g.ex_uz}</div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите пример' : 'Bosing — misol ko\'rinadi'}</div>
+              </>
+            )}
+          </div>
+        )}
+
+        {/* ── MASHQ TAB ── */}
+        {activeTab === 'quiz' && (
+          <div className="dr-panel">
+            {quiz.length === 0 ? (
+              <div className="dr-empty">
+                <div className="dr-empty__icon">🚧</div>
+                <div>{language === 'ru' ? 'Скоро будет' : 'Tez kunda'}</div>
+              </div>
+            ) : (
+              <div className="dr-card">
+                <div className="dr-label">{language === 'ru' ? 'Проверьте себя' : 'Tushunishni tekshiring'}</div>
+                {quiz.map((q, qi) => {
+                  const opts = language === 'ru' ? q.options_ru : q.options_uz;
+                  return (
+                    <div key={qi} className="dr-quiz-question">
+                      <div className="dr-quiz-q">{qi + 1}. {language === 'ru' ? q.q_ru : q.q_uz}</div>
+                      <div className="dr-quiz-options">
+                        {opts.map((opt, ai) => {
+                          const sel = answers[qi] === ai, correct = q.correct === ai;
+                          let cls = 'dr-quiz-option';
+                          if (showResults && sel && correct) cls += ' dr-quiz-option--correct';
+                          else if (showResults && sel) cls += ' dr-quiz-option--wrong';
+                          else if (showResults && correct) cls += ' dr-quiz-option--correct';
+                          else if (sel) cls += ' dr-quiz-option--selected';
+                          return <button key={ai} className={cls} onClick={() => pick(qi, ai)} type="button">{opt}</button>;
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+                {!showResults ? (
+                  <button className={`dr-quiz-submit ${allAnswered ? 'dr-quiz-submit--ready' : ''}`} onClick={() => { if (allAnswered) setShowResults(true); }} type="button">
+                    {allAnswered ? (language === 'ru' ? 'Проверить' : 'Tekshirish') : `${Object.keys(answers).length} / ${quiz.length} ${language === 'ru' ? 'выбрано' : 'tanlandi'}`}
+                  </button>
+                ) : (
+                  <div className={`dr-quiz-result ${score === quiz.length ? 'dr-quiz-result--perfect' : ''}`}>
+                    <div className="dr-quiz-result-emoji">{score === quiz.length ? '🎉' : score >= Math.ceil(quiz.length * 0.6) ? '👍' : '📚'}</div>
+                    <div className="dr-quiz-result-score">{score} / {quiz.length}</div>
+                    <div className="dr-quiz-result-msg">
+                      {score === quiz.length
+                        ? (language === 'ru' ? 'Отлично! Всё правильно!' : 'Ajoyib! Barchasini to\'g\'ri topdingiz!')
+                        : score >= Math.ceil(quiz.length * 0.6)
+                        ? (language === 'ru' ? 'Хорошо! Повторите диалог.' : 'Yaxshi! Dialogni qayta o\'qing.')
+                        : (language === 'ru' ? 'Повторите диалог.' : 'Dialogni qayta o\'qib, takrorlang.')}
+                    </div>
+                    <button className="dr-quiz-retry" onClick={() => { setAnswers({}); setShowResults(false); }} type="button">
+                      {language === 'ru' ? 'Попробовать снова' : 'Qayta urinish'}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+      </div>
+    </>
+  );
+}

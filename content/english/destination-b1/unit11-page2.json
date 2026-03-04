@@ -1,0 +1,503 @@
+{
+  "id": "unit11-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u11p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'zni doira ichiga oling.",
+      "instruction_ru": "Обведите правильное слово.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The balloons had all been "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "blowing",
+                  "blown"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " up before the carnival started."
+              }
+            ],
+            "words": [
+              {
+                "w": "balloon",
+                "t": "shar",
+                "tr": "шарик"
+              },
+              {
+                "w": "carnival",
+                "t": "karnival",
+                "tr": "карнавал"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The bananas "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "haven't",
+                  "aren't"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " all been eaten yet."
+              }
+            ],
+            "words": [
+              {
+                "w": "banana",
+                "t": "banan",
+                "tr": "банан"
+              },
+              {
+                "w": "eaten",
+                "t": "yeyilgan",
+                "tr": "съеден"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The lorry isn't "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "been",
+                  "being"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " driven by the gorilla."
+              }
+            ],
+            "words": [
+              {
+                "w": "lorry",
+                "t": "yuk mashinasi",
+                "tr": "грузовик"
+              },
+              {
+                "w": "gorilla",
+                "t": "gorilla",
+                "tr": "горилла"
+              },
+              {
+                "w": "driven",
+                "t": "boshqarilmoq",
+                "tr": "управлять"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A young boy "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "was",
+                  "has"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " just taken a balloon from the astronaut."
+              }
+            ],
+            "words": [
+              {
+                "w": "astronaut",
+                "t": "astronavt",
+                "tr": "астронавт"
+              },
+              {
+                "w": "balloon",
+                "t": "shar",
+                "tr": "шарик"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A prize is going to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "have",
+                  "be"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " given to the person in the best fancy dress."
+              }
+            ],
+            "words": [
+              {
+                "w": "prize",
+                "t": "mukofot",
+                "tr": "приз"
+              },
+              {
+                "w": "fancy dress",
+                "t": "karnaval kiyimi",
+                "tr": "карнавальный костюм"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The prize might not be "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "awarding",
+                  "awarded"
+                ],
+                "correctIndex": 1
+              },
+              {
+                "type": "text",
+                "content": " to the clown."
+              }
+            ],
+            "words": [
+              {
+                "w": "awarded",
+                "t": "mukofotlangan",
+                "tr": "награждён"
+              },
+              {
+                "w": "clown",
+                "t": "masxaraboz",
+                "tr": "клоун"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "choice",
+                "options": [
+                  "Has",
+                  "Is"
+                ],
+                "correctIndex": 0
+              },
+              {
+                "type": "text",
+                "content": " the lorry been decorated well?"
+              }
+            ],
+            "words": [
+              {
+                "w": "lorry",
+                "t": "yuk mashinasi",
+                "tr": "грузовик"
+              },
+              {
+                "w": "decorated",
+                "t": "bezatilgan",
+                "tr": "украшен"
+              }
+            ]
+          },
+          {
+            "id": "card8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Can songs be sung "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "by",
+                  "with"
+                ],
+                "correctIndex": 0
+              },
+              {
+                "type": "text",
+                "content": " people in the crowd, too?"
+              }
+            ],
+            "words": [
+              {
+                "w": "crowd",
+                "t": "olomon",
+                "tr": "толпа"
+              },
+              {
+                "w": "sung",
+                "t": "kuylangan",
+                "tr": "спетый"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u11p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Bo'sh joylarni \"by\" yoki \"with\" so'zi bilan to'ldiring.",
+      "instruction_ru": "Заполните пропуски словом \"by\" или \"with\".",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "by",
+          "with"
+        ],
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "That book was written "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my uncle!"
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "written",
+                "t": "yozilgan",
+                "tr": "написан"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Are the best photos usually taken "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " digital cameras?"
+              }
+            ],
+            "answers": [
+              "with"
+            ],
+            "words": [
+              {
+                "w": "digital camera",
+                "t": "raqamli kamera",
+                "tr": "цифровая камера"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "That song has been sung "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " lots of famous singers."
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "famous",
+                "t": "mashhur",
+                "tr": "известный"
+              },
+              {
+                "w": "singer",
+                "t": "qo'shiqchi",
+                "tr": "певец"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is your hair cut "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a professional hairdresser?"
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "professional",
+                "t": "professional",
+                "tr": "профессиональный"
+              },
+              {
+                "w": "hairdresser",
+                "t": "sartarosh",
+                "tr": "парикмахер"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Should the paper be cut "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a pair of scissors?"
+              }
+            ],
+            "answers": [
+              "with"
+            ],
+            "words": [
+              {
+                "w": "scissors",
+                "t": "qaychi",
+                "tr": "ножницы"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "All the candles had been lit "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the same match."
+              }
+            ],
+            "answers": [
+              "with"
+            ],
+            "words": [
+              {
+                "w": "candle",
+                "t": "sham",
+                "tr": "свеча"
+              },
+              {
+                "w": "match",
+                "t": "gugurt",
+                "tr": "спичка"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The film isn't going to be directed "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Steven Spielberg after all."
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "directed",
+                "t": "boshqarilgan",
+                "tr": "снят (режиссёром)"
+              },
+              {
+                "w": "after all",
+                "t": "oxir-oqibat",
+                "tr": "в конце концов"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

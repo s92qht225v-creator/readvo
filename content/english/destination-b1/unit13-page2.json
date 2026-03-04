@@ -1,0 +1,696 @@
+{
+  "id": "unit13-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u13p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlarning ko'plik shaklini yozing.",
+      "instruction_ru": "Вставьте слова из рамки во множественном числе.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "child",
+          "foot",
+          "man",
+          "person",
+          "puppy",
+          "tooth",
+          "watch",
+          "woman"
+        ],
+        "cards": [
+          {
+            "id": "u13p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did you know that Jason's dog has had three beautiful "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ?"
+              }
+            ],
+            "answers": [
+              "puppies"
+            ],
+            "words": [
+              {
+                "w": "puppy",
+                "t": "kuchukcha",
+                "tr": "щенок"
+              },
+              {
+                "w": "beautiful",
+                "t": "chiroyli",
+                "tr": "красивый"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The Spice Girls was an all-girl band, so there weren't any "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "men"
+            ],
+            "words": [
+              {
+                "w": "band",
+                "t": "guruh",
+                "tr": "группа"
+              },
+              {
+                "w": "all-girl",
+                "t": "faqat qizlardan iborat",
+                "tr": "только из девушек"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's a bit strange that Victor wears two "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " – one on each arm."
+              }
+            ],
+            "answers": [
+              "watches"
+            ],
+            "words": [
+              {
+                "w": "watch",
+                "t": "soat",
+                "tr": "часы"
+              },
+              {
+                "w": "strange",
+                "t": "g'alati",
+                "tr": "странно"
+              },
+              {
+                "w": "wears",
+                "t": "kiymoq",
+                "tr": "носить"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " do the same jobs as their husbands, they should be paid the same."
+              }
+            ],
+            "answers": [
+              "women"
+            ],
+            "words": [
+              {
+                "w": "woman",
+                "t": "ayol",
+                "tr": "женщина"
+              },
+              {
+                "w": "same",
+                "t": "bir xil",
+                "tr": "одинаковый"
+              },
+              {
+                "w": "jobs",
+                "t": "ishlar",
+                "tr": "работа"
+              },
+              {
+                "w": "husbands",
+                "t": "erlar",
+                "tr": "мужья"
+              },
+              {
+                "w": "paid",
+                "t": "to'lamoq",
+                "tr": "платить"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The dentist says I have to have two "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " taken out!"
+              }
+            ],
+            "answers": [
+              "teeth"
+            ],
+            "words": [
+              {
+                "w": "dentist",
+                "t": "stomatolog",
+                "tr": "стоматолог"
+              },
+              {
+                "w": "tooth",
+                "t": "tish",
+                "tr": "зуб"
+              },
+              {
+                "w": "taken out",
+                "t": "olib tashlash",
+                "tr": "удалить"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How many "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " were there at the show?"
+              }
+            ],
+            "answers": [
+              "people"
+            ],
+            "words": [
+              {
+                "w": "person",
+                "t": "odam",
+                "tr": "человек"
+              },
+              {
+                "w": "show",
+                "t": "ko'rsatuv",
+                "tr": "шоу"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We've walked miles! My "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " are hurting!"
+              }
+            ],
+            "answers": [
+              "feet"
+            ],
+            "words": [
+              {
+                "w": "walked",
+                "t": "yurmoq",
+                "tr": "ходить"
+              },
+              {
+                "w": "miles",
+                "t": "millar",
+                "tr": "мили"
+              },
+              {
+                "w": "foot",
+                "t": "oyoq",
+                "tr": "ступня"
+              },
+              {
+                "w": "hurting",
+                "t": "og'riq",
+                "tr": "болеть"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mrs Jenkins has just had a baby, so she's got three "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " now."
+              }
+            ],
+            "answers": [
+              "children"
+            ],
+            "words": [
+              {
+                "w": "child",
+                "t": "bola",
+                "tr": "ребёнок"
+              },
+              {
+                "w": "just",
+                "t": "hozirgina",
+                "tr": "только что"
+              },
+              {
+                "w": "baby",
+                "t": "chaqaloq",
+                "tr": "малыш"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u13p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u13p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Your money "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "is",
+                  "are"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " on the table in the dining room."
+              }
+            ],
+            "words": [
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              },
+              {
+                "w": "table",
+                "t": "stol",
+                "tr": "стол"
+              },
+              {
+                "w": "dining room",
+                "t": "ovqat xonasi",
+                "tr": "столовая"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The advice you gave me "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "was",
+                  "were"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " really useful. Thanks!"
+              }
+            ],
+            "words": [
+              {
+                "w": "advice",
+                "t": "maslahat",
+                "tr": "совет"
+              },
+              {
+                "w": "gave",
+                "t": "bermoq",
+                "tr": "дать"
+              },
+              {
+                "w": "useful",
+                "t": "foydali",
+                "tr": "полезный"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The cakes in that shop "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "looks",
+                  "look"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " absolutely delicious."
+              }
+            ],
+            "words": [
+              {
+                "w": "cakes",
+                "t": "tortlar",
+                "tr": "торты"
+              },
+              {
+                "w": "absolutely",
+                "t": "mutlaqo",
+                "tr": "абсолютно"
+              },
+              {
+                "w": "delicious",
+                "t": "mazali",
+                "tr": "вкусный"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "has",
+                  "have"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " been a lot of bad news recently."
+              }
+            ],
+            "words": [
+              {
+                "w": "news",
+                "t": "yangiliklar",
+                "tr": "новости"
+              },
+              {
+                "w": "recently",
+                "t": "yaqinda",
+                "tr": "в последнее время"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Your homework "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "was",
+                  "were"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " late. Please do it sooner next time."
+              }
+            ],
+            "words": [
+              {
+                "w": "homework",
+                "t": "uy ishi",
+                "tr": "домашнее задание"
+              },
+              {
+                "w": "late",
+                "t": "kech",
+                "tr": "поздно"
+              },
+              {
+                "w": "sooner",
+                "t": "tezroq",
+                "tr": "раньше"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-6",
+            "parts": [
+              {
+                "type": "choice",
+                "options": [
+                  "Does",
+                  "Do"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the information about the museum include the opening times?"
+              }
+            ],
+            "words": [
+              {
+                "w": "information",
+                "t": "ma'lumot",
+                "tr": "информация"
+              },
+              {
+                "w": "museum",
+                "t": "muzey",
+                "tr": "музей"
+              },
+              {
+                "w": "include",
+                "t": "o'z ichiga olmoq",
+                "tr": "включать"
+              },
+              {
+                "w": "opening times",
+                "t": "ish vaqti",
+                "tr": "часы работы"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We need new furniture in the dining room. "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "It's",
+                  "They're"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " very old and scratched."
+              }
+            ],
+            "words": [
+              {
+                "w": "furniture",
+                "t": "mebel",
+                "tr": "мебель"
+              },
+              {
+                "w": "old",
+                "t": "eski",
+                "tr": "старый"
+              },
+              {
+                "w": "scratched",
+                "t": "tirnalgan",
+                "tr": "поцарапанный"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The fish in this tank all "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "seems",
+                  "seem"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " to be ill."
+              }
+            ],
+            "words": [
+              {
+                "w": "fish",
+                "t": "baliq",
+                "tr": "рыба"
+              },
+              {
+                "w": "tank",
+                "t": "akvarium",
+                "tr": "аквариум"
+              },
+              {
+                "w": "ill",
+                "t": "kasal",
+                "tr": "больной"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I love your hair. "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "It's",
+                  "They're"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " really soft."
+              }
+            ],
+            "words": [
+              {
+                "w": "hair",
+                "t": "soch",
+                "tr": "волосы"
+              },
+              {
+                "w": "soft",
+                "t": "yumshoq",
+                "tr": "мягкий"
+              }
+            ]
+          },
+          {
+            "id": "u13p2-ex2-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Oh, no! The rice "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "has",
+                  "have"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " gone all over the floor!"
+              }
+            ],
+            "words": [
+              {
+                "w": "rice",
+                "t": "guruch",
+                "tr": "рис"
+              },
+              {
+                "w": "floor",
+                "t": "pol",
+                "tr": "пол"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

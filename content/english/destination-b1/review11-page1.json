@@ -1,0 +1,1561 @@
+{
+  "id": "review11-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 11,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 31, 32 and 33",
+    "titleTranslation_ru": "Units 31, 32 and 33"
+  },
+  "sections": [
+    {
+      "id": "r11p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan, bo'sh joyga to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте от слова, данного заглавными буквами в конце строки, нужную форму и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r11-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dear Gemma,\n\nHi! How are you? I finally persuaded my mum to take me shopping yesterday. It was great! I tried (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " lots of clothes and I was amazed (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the choice in all the shops. It reminded me (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the time we went shopping when you came to stay. We had a lot of fun, didn't we?\n\nAnyway, I found one of those jackets that are (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fashion at the moment – but I couldn't do it (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! I needed a bigger size, but they didn't have any. Oh, well. Maybe I'll have another look (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the end of this week. I bought some shoes, though – they're similar (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the ones you've got, the pink ones. I have them (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at the moment and they look great!\n\nOh, and you know that old blouse I had? Well, I've changed it (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a T-shirt! I cut the sleeves (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and now it'll be perfect for the summer.\n\nI have to go now. Write soon and tell me all your news.\nLots of love,\nOlivia"
+              },
+              {
+                "type": "hint",
+                "content": "ON / BY / OF / IN / UP / BY / TO / ON / INTO / OFF"
+              }
+            ],
+            "answers": [
+              "on",
+              "by",
+              "of",
+              "in",
+              "up",
+              "by",
+              "to",
+              "on",
+              "into",
+              "off"
+            ],
+            "alternateAnswers": [
+              [
+                "ON"
+              ],
+              [
+                "BY"
+              ],
+              [
+                "OF"
+              ],
+              [
+                "IN"
+              ],
+              [
+                "UP"
+              ],
+              [
+                "BY"
+              ],
+              [
+                "TO"
+              ],
+              [
+                "ON"
+              ],
+              [
+                "INTO"
+              ],
+              [
+                "OFF"
+              ]
+            ],
+            "words": [
+              {
+                "w": "persuaded",
+                "t": "ishontirdi",
+                "tr": "убедила"
+              },
+              {
+                "w": "amazed by",
+                "t": "hayratda qoldi",
+                "tr": "был поражён"
+              },
+              {
+                "w": "reminded of",
+                "t": "eslatdi",
+                "tr": "напомнило о"
+              },
+              {
+                "w": "in fashion",
+                "t": "modada",
+                "tr": "в моде"
+              },
+              {
+                "w": "do up",
+                "t": "yopmoq/tugmamoq",
+                "tr": "застёгивать"
+              },
+              {
+                "w": "by the end",
+                "t": "oxiriga qadar",
+                "tr": "к концу"
+              },
+              {
+                "w": "similar to",
+                "t": "o'xshash",
+                "tr": "похожий на"
+              },
+              {
+                "w": "on at the moment",
+                "t": "hozir kiyib yuribman",
+                "tr": "сейчас на мне"
+              },
+              {
+                "w": "changed into",
+                "t": "aylantirib oldi",
+                "tr": "переделала в"
+              },
+              {
+                "w": "cut off",
+                "t": "kesib tushirdi",
+                "tr": "отрезала"
+              },
+              {
+                "w": "sleeves",
+                "t": "yenglar",
+                "tr": "рукава"
+              },
+              {
+                "w": "blouse",
+                "t": "bluzka",
+                "tr": "блузка"
+              }
+            ],
+            "number": 1
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r11p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Gaplarning ikkinchi yarmini mos ravishda tanlang. Javob sifatida harf yozing (A-H).",
+      "instruction_ru": "Подберите вторую часть предложения. Впишите соответствующую букву (A-H).",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r11-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "11  She described the picture she was painting "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "\n\nA  in designing buildings.\nB  to Martin, but he didn't understand.\nC  from the exhibition because it was damaged.\nD  from a winter scene into a spring scene.\nE  of a horse and it was brilliant.\nF  on many other painters.\nG  as modern, but it looked quite old-fashioned to me.\nH  with his sculptures."
+              }
+            ],
+            "answers": [
+              "B"
+            ],
+            "alternateAnswers": [
+              [
+                "b"
+              ]
+            ],
+            "words": [
+              {
+                "w": "described",
+                "t": "tasvirlab berdi",
+                "tr": "описала"
+              },
+              {
+                "w": "painting",
+                "t": "rasm chizish",
+                "tr": "рисовала"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r11-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "12  My sister's an architect, so she's involved "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "A"
+            ],
+            "alternateAnswers": [
+              [
+                "a"
+              ]
+            ],
+            "words": [
+              {
+                "w": "architect",
+                "t": "me'mor",
+                "tr": "архитектор"
+              },
+              {
+                "w": "involved in",
+                "t": "ishtirok etmoq",
+                "tr": "участвовать в"
+              },
+              {
+                "w": "designing buildings",
+                "t": "binolar loyihalash",
+                "tr": "проектирование зданий"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r11-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "13  I like Picasso's paintings, but I'm not familiar "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "H"
+            ],
+            "alternateAnswers": [
+              [
+                "h"
+              ]
+            ],
+            "words": [
+              {
+                "w": "not familiar with",
+                "t": "tanish emas",
+                "tr": "не знаком с"
+              },
+              {
+                "w": "sculptures",
+                "t": "haykaltaroshlik",
+                "tr": "скульптуры"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r11-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "14  I tried to explain how to use oil paints "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "B"
+            ],
+            "alternateAnswers": [
+              [
+                "b"
+              ]
+            ],
+            "words": [
+              {
+                "w": "explain",
+                "t": "tushuntirdi",
+                "tr": "объяснить"
+              },
+              {
+                "w": "oil paints",
+                "t": "moy bo'yoqlari",
+                "tr": "масляные краски"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r11-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "15  They had to remove one of the paintings "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "C"
+            ],
+            "alternateAnswers": [
+              [
+                "c"
+              ]
+            ],
+            "words": [
+              {
+                "w": "remove",
+                "t": "olib ketmoq",
+                "tr": "убрать"
+              },
+              {
+                "w": "exhibition",
+                "t": "ko'rgazma",
+                "tr": "выставка"
+              },
+              {
+                "w": "damaged",
+                "t": "shikastlangan",
+                "tr": "повреждённый"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r11-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "16  Vincent Van Gogh has had an influence "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "F"
+            ],
+            "alternateAnswers": [
+              [
+                "f"
+              ]
+            ],
+            "words": [
+              {
+                "w": "influence on",
+                "t": "ta'sir",
+                "tr": "влияние на"
+              },
+              {
+                "w": "painters",
+                "t": "rassomlar",
+                "tr": "художники"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r11-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "17  Darren drew a picture "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "E"
+            ],
+            "alternateAnswers": [
+              [
+                "e"
+              ]
+            ],
+            "words": [
+              {
+                "w": "drew a picture",
+                "t": "rasm chizdi",
+                "tr": "нарисовал картинку"
+              },
+              {
+                "w": "brilliant",
+                "t": "ajoyib",
+                "tr": "блестящий"
+              }
+            ],
+            "number": 8
+          },
+          {
+            "id": "r11-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "18  Adding flowers to my picture changed it "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "D"
+            ],
+            "alternateAnswers": [
+              [
+                "d"
+              ]
+            ],
+            "words": [
+              {
+                "w": "adding",
+                "t": "qo'shish",
+                "tr": "добавление"
+              },
+              {
+                "w": "changed into",
+                "t": "aylantirdi",
+                "tr": "превратило в"
+              },
+              {
+                "w": "winter scene",
+                "t": "qishki manzara",
+                "tr": "зимний пейзаж"
+              },
+              {
+                "w": "spring scene",
+                "t": "bahorgi manzara",
+                "tr": "весенний пейзаж"
+              }
+            ],
+            "number": 9
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r11p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r11-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "19  'I want to learn how to paint,' Janet said. "
+              },
+              {
+                "type": "hint",
+                "content": "said"
+              },
+              {
+                "type": "text",
+                "content": "\nJanet "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to learn how to paint."
+              }
+            ],
+            "answers": [
+              "said she wanted"
+            ],
+            "alternateAnswers": [
+              [
+                "said that she wanted"
+              ]
+            ],
+            "words": [
+              {
+                "w": "said she wanted",
+                "t": "o'rganishni xohlashini aytdi",
+                "tr": "сказала, что хотела"
+              },
+              {
+                "w": "learn how to paint",
+                "t": "rasm chizishni o'rganmoq",
+                "tr": "научиться рисовать"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r11-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "20  'We're building a house outside town,' said Mrs Turner. "
+              },
+              {
+                "type": "hint",
+                "content": "they"
+              },
+              {
+                "type": "text",
+                "content": "\nMrs Turner "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a house outside town."
+              }
+            ],
+            "answers": [
+              "said they were building"
+            ],
+            "alternateAnswers": [
+              [
+                "said that they were building"
+              ]
+            ],
+            "words": [
+              {
+                "w": "building a house",
+                "t": "uy qurayotgan",
+                "tr": "строят дом"
+              },
+              {
+                "w": "outside town",
+                "t": "shahar tashqarisida",
+                "tr": "за городом"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r11-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "21  'We're working on our website tomorrow,' Keith said. "
+              },
+              {
+                "type": "hint",
+                "content": "day"
+              },
+              {
+                "type": "text",
+                "content": "\nKeith said they were working on their website "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "the following day"
+            ],
+            "alternateAnswers": [
+              [
+                "the next day"
+              ]
+            ],
+            "words": [
+              {
+                "w": "working on",
+                "t": "ustida ishlamoq",
+                "tr": "работать над"
+              },
+              {
+                "w": "website",
+                "t": "veb-sayt",
+                "tr": "веб-сайт"
+              },
+              {
+                "w": "the following day",
+                "t": "ertasi kuni",
+                "tr": "на следующий день"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r11-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "22  'Will you draw me a picture?' Jenny asked. "
+              },
+              {
+                "type": "hint",
+                "content": "draw"
+              },
+              {
+                "type": "text",
+                "content": "\nJenny asked "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a picture."
+              }
+            ],
+            "answers": [
+              "me to draw her"
+            ],
+            "alternateAnswers": [
+              [
+                "if I would draw her"
+              ]
+            ],
+            "words": [
+              {
+                "w": "draw a picture",
+                "t": "rasm chizmoq",
+                "tr": "нарисовать картинку"
+              },
+              {
+                "w": "asked",
+                "t": "so'radi",
+                "tr": "попросила"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r11-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "23  'We have to paint a picture for art class,' John said. "
+              },
+              {
+                "type": "hint",
+                "content": "they"
+              },
+              {
+                "type": "text",
+                "content": "\nJohn "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to paint a picture for art class."
+              }
+            ],
+            "answers": [
+              "said they had"
+            ],
+            "alternateAnswers": [
+              [
+                "said that they had"
+              ]
+            ],
+            "words": [
+              {
+                "w": "have to paint",
+                "t": "rasm chizishlari kerak",
+                "tr": "должны нарисовать"
+              },
+              {
+                "w": "art class",
+                "t": "rasm darsi",
+                "tr": "урок рисования"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r11-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "24  'Can I see your drawing?' I asked Amy. "
+              },
+              {
+                "type": "hint",
+                "content": "if"
+              },
+              {
+                "type": "text",
+                "content": "\nI asked Amy "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " see her drawing."
+              }
+            ],
+            "answers": [
+              "if I could"
+            ],
+            "alternateAnswers": [
+              [
+                "whether I could"
+              ]
+            ],
+            "words": [
+              {
+                "w": "asked if",
+                "t": "so'radi",
+                "tr": "спросил(а), можно ли"
+              },
+              {
+                "w": "drawing",
+                "t": "rasm/chizma",
+                "tr": "рисунок"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r11-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "25  'You'll enjoy the show,' Belinda said to me. "
+              },
+              {
+                "type": "hint",
+                "content": "I"
+              },
+              {
+                "type": "text",
+                "content": "\nBelinda said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the show."
+              }
+            ],
+            "answers": [
+              "I would enjoy"
+            ],
+            "alternateAnswers": [
+              [
+                "that I would enjoy"
+              ]
+            ],
+            "words": [
+              {
+                "w": "enjoy the show",
+                "t": "tomoshadan zavqlanmoq",
+                "tr": "получить удовольствие от шоу"
+              },
+              {
+                "w": "said I would",
+                "t": "yoqishini aytdi",
+                "tr": "сказала, что мне понравится"
+              }
+            ],
+            "number": 16
+          },
+          {
+            "id": "r11-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "26  'Please don't take my photograph,' Hans said. "
+              },
+              {
+                "type": "hint",
+                "content": "take"
+              },
+              {
+                "type": "text",
+                "content": "\nHans asked me "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " photograph."
+              }
+            ],
+            "answers": [
+              "not to take his"
+            ],
+            "words": [
+              {
+                "w": "asked not to",
+                "t": "olmasligini so'radi",
+                "tr": "попросил не делать"
+              },
+              {
+                "w": "take a photograph",
+                "t": "surat olmoq",
+                "tr": "фотографировать"
+              }
+            ],
+            "number": 17
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r11p2-sec-exD",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "r11p2-d1",
+            "number": 18,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I asked her when "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " finish making her model."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "will she",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "she will",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "would she",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "she would",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r11p2-d2",
+            "number": 19,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don said he had an art lesson "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " night."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "that",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "the",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "this",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "those",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r11p2-d3",
+            "number": 20,
+            "parts": [
+              {
+                "type": "text",
+                "content": "My mum told "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my paints."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "that I move",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "to move to me",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "me to move",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "to move me",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r11p2-d4",
+            "number": 21,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tom apologised "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ink on my picture."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "for getting",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "that he got",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "to get",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "for he gets",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r11p2-d5",
+            "number": 22,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Molly denied "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my camera."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "to lose",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "for losing",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "losing",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "on losing",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r11p2-d6",
+            "number": 23,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Gary promised "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me paint the outside of the house."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "helping",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "to help",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "that he helps",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "for helping",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r11p2-d7",
+            "number": 24,
+            "parts": [
+              {
+                "type": "text",
+                "content": "My brother refused "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me use his digital camera."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "to let",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "that he let",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "letting",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "for letting",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r11p2-d8",
+            "number": 25,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I suggest "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a new architect who will understand what you want."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "to find",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "you to find",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "for finding",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "finding",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r11p2-sec-exE",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "r11p2-e1",
+            "number": 26,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Just put the statue "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the corner of the room for now."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "over",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r11p2-e2",
+            "number": 27,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do these shoes "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my new skirt?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "suit",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "go",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "match",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "look",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r11p2-e3",
+            "number": 28,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't get that colour – green went out "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fashion last year!"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "from",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "of",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "with",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "on",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r11p2-e4",
+            "number": 29,
+            "parts": [
+              {
+                "type": "text",
+                "content": "This shirt is too "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " around the neck. I can't breathe!"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "tight",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "smooth",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "rough",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "practical",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r11p2-e5",
+            "number": 30,
+            "parts": [
+              {
+                "type": "text",
+                "content": "The gallery was too big to see it all in one day, so we "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " out the modern paintings."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "put",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "left",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "went",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "made",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r11p2-e6",
+            "number": 31,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why don't you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " your clothes in half before you put them in the drawer?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "fix",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "stretch",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "create",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "fold",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r11p2-e7",
+            "number": 32,
+            "parts": [
+              {
+                "type": "text",
+                "content": "My new shirt has a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " like a Chinese dragon on the back."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "tear",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "pile",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "design",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "cotton",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r11p2-e8",
+            "number": 33,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I filled the bucket "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with water."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "out",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "up",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

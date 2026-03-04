@@ -1,0 +1,1745 @@
+{
+  "id": "review4-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 4,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 10, 11 and 12",
+    "titleTranslation_ru": "Units 10, 11 and 12"
+  },
+  "sections": [
+    {
+      "id": "r4p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi fe'llarni ishlatib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски, используя глаголы из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "apologise",
+          "defend",
+          "introduce",
+          "recognise",
+          "rent",
+          "respect",
+          "trust"
+        ],
+        "cards": [
+          {
+            "id": "r4-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Who's that over there?'\n'That's Graham Western, the actor. Let me "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you.'"
+              }
+            ],
+            "answers": [
+              "introduce"
+            ],
+            "words": [
+              {
+                "w": "That's",
+                "t": "bu",
+                "tr": "это"
+              },
+              {
+                "w": "actor",
+                "t": "aktyor",
+                "tr": "актёр"
+              },
+              {
+                "w": "introduce",
+                "t": "tanishtirmoq",
+                "tr": "познакомить"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r4-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Hi, Harry!'\n'Oh! Hi, Rita! I didn't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you with your new hair style!'"
+              }
+            ],
+            "answers": [
+              "recognise"
+            ],
+            "words": [
+              {
+                "w": "recognise",
+                "t": "tanib olmoq",
+                "tr": "узнать"
+              },
+              {
+                "w": "hair style",
+                "t": "soch turmagi",
+                "tr": "причёска"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r4-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm really sorry!'\n'There's no need to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ".'"
+              }
+            ],
+            "answers": [
+              "apologise"
+            ],
+            "words": [
+              {
+                "w": "really sorry",
+                "t": "juda afsusdaman",
+                "tr": "очень жаль"
+              },
+              {
+                "w": "There's no need to",
+                "t": "kerak emas",
+                "tr": "нет необходимости"
+              },
+              {
+                "w": "apologise",
+                "t": "uzr so'ramoq",
+                "tr": "извиниться"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r4-a-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm thinking of moving house soon.'\n'Do you want to buy or "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a place?'"
+              }
+            ],
+            "answers": [
+              "rent"
+            ],
+            "words": [
+              {
+                "w": "thinking of",
+                "t": "o'ylamoq",
+                "tr": "думать о"
+              },
+              {
+                "w": "moving house",
+                "t": "ko'chirmoq",
+                "tr": "переезжать"
+              },
+              {
+                "w": "soon",
+                "t": "tez orada",
+                "tr": "скоро"
+              },
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "rent",
+                "t": "ijaraga olmoq",
+                "tr": "снять (жильё)"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r4-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I wish I hadn't told Rebecca some of my secrets.'\n'Don't worry. You can "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Rebecca. She won't tell anyone.'"
+              }
+            ],
+            "answers": [
+              "trust"
+            ],
+            "words": [
+              {
+                "w": "I wish I hadn't",
+                "t": "aytmasam edi",
+                "tr": "жаль, что я сказал"
+              },
+              {
+                "w": "secrets",
+                "t": "sirlar",
+                "tr": "секреты"
+              },
+              {
+                "w": "Don't worry",
+                "t": "xavotir olmang",
+                "tr": "не беспокойтесь"
+              },
+              {
+                "w": "trust",
+                "t": "ishonmoq",
+                "tr": "доверять"
+              },
+              {
+                "w": "tell anyone",
+                "t": "hech kimga aytmoq",
+                "tr": "рассказать кому-либо"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r4-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Mr Parker is going to run a marathon for charity.'\n'Yes, I really "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Mr Parker. He does such a lot of charity work.'"
+              }
+            ],
+            "answers": [
+              "respect"
+            ],
+            "words": [
+              {
+                "w": "run a marathon",
+                "t": "marafon yugurmoq",
+                "tr": "пробежать марафон"
+              },
+              {
+                "w": "charity",
+                "t": "xayriya",
+                "tr": "благотворительность"
+              },
+              {
+                "w": "respect",
+                "t": "hurmat qilmoq",
+                "tr": "уважать"
+              },
+              {
+                "w": "such a lot of",
+                "t": "juda ko'p",
+                "tr": "очень много"
+              },
+              {
+                "w": "charity work",
+                "t": "xayriya ishi",
+                "tr": "благотворительная работа"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r4-a-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm sure Billy didn't say that!'\n'Why do you always "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Billy? He's not perfect, you know!'"
+              }
+            ],
+            "answers": [
+              "defend"
+            ],
+            "words": [
+              {
+                "w": "I'm sure",
+                "t": "aminman",
+                "tr": "я уверен"
+              },
+              {
+                "w": "always",
+                "t": "doim",
+                "tr": "всегда"
+              },
+              {
+                "w": "defend",
+                "t": "himoya qilmoq",
+                "tr": "защищать"
+              },
+              {
+                "w": "perfect",
+                "t": "mukammal",
+                "tr": "идеальный"
+              }
+            ],
+            "number": 7
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r4p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Впишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r4-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you look "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " our rabbit while we're on holiday?"
+              }
+            ],
+            "answers": [
+              "after"
+            ],
+            "words": [
+              {
+                "w": "look after",
+                "t": "g'amxo'rlik qilmoq",
+                "tr": "присматривать"
+              },
+              {
+                "w": "rabbit",
+                "t": "quyon",
+                "tr": "кролик"
+              },
+              {
+                "w": "on holiday",
+                "t": "ta'tilda",
+                "tr": "в отпуске"
+              }
+            ],
+            "number": 8
+          },
+          {
+            "id": "r4-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tim was Sandy's boyfriend, but they split "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " last month."
+              }
+            ],
+            "answers": [
+              "up"
+            ],
+            "words": [
+              {
+                "w": "boyfriend",
+                "t": "yigit do'st",
+                "tr": "парень"
+              },
+              {
+                "w": "split up",
+                "t": "ajrashmoq",
+                "tr": "расстаться"
+              },
+              {
+                "w": "last month",
+                "t": "o'tgan oy",
+                "tr": "в прошлом месяце"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r4-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Kim and Katy have fallen "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with each other, so Kim isn't going to invite Katy to her party."
+              }
+            ],
+            "answers": [
+              "out"
+            ],
+            "words": [
+              {
+                "w": "fallen out",
+                "t": "janjallashmoq",
+                "tr": "поссориться"
+              },
+              {
+                "w": "with each other",
+                "t": "bir-biri bilan",
+                "tr": "друг с другом"
+              },
+              {
+                "w": "invite",
+                "t": "taklif qilmoq",
+                "tr": "пригласить"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r4-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Phil was brought "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " by his uncle and aunt."
+              }
+            ],
+            "answers": [
+              "up"
+            ],
+            "words": [
+              {
+                "w": "brought up",
+                "t": "tarbiyalamoq",
+                "tr": "воспитать"
+              },
+              {
+                "w": "uncle",
+                "t": "tog'a/amaki",
+                "tr": "дядя"
+              },
+              {
+                "w": "aunt",
+                "t": "xola/amaki",
+                "tr": "тётя"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r4-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is Gareth really going "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with Liz?"
+              }
+            ],
+            "answers": [
+              "out"
+            ],
+            "words": [
+              {
+                "w": "really",
+                "t": "haqiqatan",
+                "tr": "правда"
+              },
+              {
+                "w": "going out with",
+                "t": "bilan uchrashmoq",
+                "tr": "встречаться с"
+              }
+            ],
+            "number": 12
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r4p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Bosh harflar bilan berilgan so'zning shaklini o'zgartirib, bo'sh joyga yozing.",
+      "instruction_ru": "Измените форму слова, данного заглавными буквами, и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r4-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've got so much "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for Darren. "
+              },
+              {
+                "type": "hint",
+                "content": "ADMIRE"
+              }
+            ],
+            "answers": [
+              "admiration"
+            ],
+            "words": [
+              {
+                "w": "admiration",
+                "t": "hayrat/hurmat",
+                "tr": "восхищение"
+              },
+              {
+                "w": "got so much",
+                "t": "juda ko'p",
+                "tr": "так много"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r4-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Susie is so "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". She's always breaking things! "
+              },
+              {
+                "type": "hint",
+                "content": "CARE"
+              }
+            ],
+            "answers": [
+              "careless"
+            ],
+            "words": [
+              {
+                "w": "careless",
+                "t": "ehtiyotsiz",
+                "tr": "небрежный"
+              },
+              {
+                "w": "always",
+                "t": "doim",
+                "tr": "всегда"
+              },
+              {
+                "w": "breaking",
+                "t": "sindirmoq",
+                "tr": "ломать"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r4-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tony said his dad is a millionaire, but he's such a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "LIE"
+              }
+            ],
+            "answers": [
+              "liar"
+            ],
+            "words": [
+              {
+                "w": "millionaire",
+                "t": "millioner",
+                "tr": "миллионер"
+              },
+              {
+                "w": "liar",
+                "t": "yolg'onchi",
+                "tr": "лжец"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r4-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Lots of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " people live full and happy lives. "
+              },
+              {
+                "type": "hint",
+                "content": "ABLE"
+              }
+            ],
+            "answers": [
+              "disabled"
+            ],
+            "words": [
+              {
+                "w": "disabled",
+                "t": "nogironlar",
+                "tr": "люди с ограниченными возможностями"
+              },
+              {
+                "w": "full and happy",
+                "t": "to'liq va baxtli",
+                "tr": "полноценная и счастливая"
+              },
+              {
+                "w": "lives",
+                "t": "hayot",
+                "tr": "жизни"
+              }
+            ],
+            "number": 16
+          },
+          {
+            "id": "r4-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Karen apologised, so I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " her immediately. "
+              },
+              {
+                "type": "hint",
+                "content": "FORGIVE"
+              }
+            ],
+            "answers": [
+              "forgave"
+            ],
+            "words": [
+              {
+                "w": "apologised",
+                "t": "uzr so'radi",
+                "tr": "извинилась"
+              },
+              {
+                "w": "forgave",
+                "t": "kechirdim",
+                "tr": "простил"
+              },
+              {
+                "w": "immediately",
+                "t": "darhol",
+                "tr": "немедленно"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r4-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Andrea has got a great "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". You'll really like her! "
+              },
+              {
+                "type": "hint",
+                "content": "PERSON"
+              }
+            ],
+            "answers": [
+              "personality"
+            ],
+            "words": [
+              {
+                "w": "great personality",
+                "t": "ajoyib shaxsiyat",
+                "tr": "замечательная личность"
+              },
+              {
+                "w": "really",
+                "t": "haqiqatan",
+                "tr": "действительно"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r4-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm not sure I've got the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to sing in public! "
+              },
+              {
+                "type": "hint",
+                "content": "CONFIDENT"
+              }
+            ],
+            "answers": [
+              "confidence"
+            ],
+            "words": [
+              {
+                "w": "not sure",
+                "t": "ishonchim komil emas",
+                "tr": "не уверен"
+              },
+              {
+                "w": "confidence",
+                "t": "ishonch",
+                "tr": "уверенность"
+              },
+              {
+                "w": "sing in public",
+                "t": "jamoat oldida qo'shiq aytmoq",
+                "tr": "петь публично"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r4-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I hate people who are "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "HONEST"
+              }
+            ],
+            "answers": [
+              "dishonest"
+            ],
+            "words": [
+              {
+                "w": "hate",
+                "t": "yomon ko'rmoq",
+                "tr": "ненавидеть"
+              },
+              {
+                "w": "dishonest",
+                "t": "halol bo'lmagan",
+                "tr": "нечестный"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r4-c-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We gave my dad a surprise party on his fortieth birthday. "
+              },
+              {
+                "type": "hint",
+                "content": "was"
+              },
+              {
+                "type": "text",
+                "content": "\nMy dad "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a surprise party on his fortieth birthday."
+              }
+            ],
+            "answers": [
+              "was given"
+            ],
+            "words": [
+              {
+                "w": "gave",
+                "t": "berdik",
+                "tr": "устроили"
+              },
+              {
+                "w": "surprise party",
+                "t": "kutilmagan bayram",
+                "tr": "сюрпризная вечеринка"
+              },
+              {
+                "w": "fortieth birthday",
+                "t": "qirqinchi tug'ilgan kun",
+                "tr": "сорокалетие"
+              },
+              {
+                "w": "was given",
+                "t": "berildi",
+                "tr": "был дан/устроен"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r4-c-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "After the play, they introduced us to all the actors. "
+              },
+              {
+                "type": "hint",
+                "content": "we"
+              },
+              {
+                "type": "text",
+                "content": "\nAfter the play, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to all the actors."
+              }
+            ],
+            "answers": [
+              "we were introduced"
+            ],
+            "words": [
+              {
+                "w": "After the play",
+                "t": "spektakldan keyin",
+                "tr": "после спектакля"
+              },
+              {
+                "w": "introduced",
+                "t": "tanishtirdi",
+                "tr": "познакомили"
+              },
+              {
+                "w": "actors",
+                "t": "aktvorlar",
+                "tr": "актёры"
+              },
+              {
+                "w": "were introduced",
+                "t": "tanishtirildi",
+                "tr": "были представлены"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r4-c-11",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They've caught the person who stole your bike! "
+              },
+              {
+                "type": "hint",
+                "content": "has"
+              },
+              {
+                "type": "text",
+                "content": "\nThe person who stole your bike "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " caught!"
+              }
+            ],
+            "answers": [
+              "has been"
+            ],
+            "words": [
+              {
+                "w": "caught",
+                "t": "ushlashdi",
+                "tr": "поймали"
+              },
+              {
+                "w": "stole",
+                "t": "o'g'irladi",
+                "tr": "украл"
+              },
+              {
+                "w": "bike",
+                "t": "velosiped",
+                "tr": "велосипед"
+              },
+              {
+                "w": "has been caught",
+                "t": "ushlandi",
+                "tr": "был пойман"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "r4-c-12",
+            "parts": [
+              {
+                "type": "text",
+                "content": "No one had told me that Jill was coming! "
+              },
+              {
+                "type": "hint",
+                "content": "been"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that Jill was coming!"
+              }
+            ],
+            "answers": [
+              "hadn't been told"
+            ],
+            "alternateAnswers": [
+              [
+                "had not been told"
+              ]
+            ],
+            "words": [
+              {
+                "w": "No one had told",
+                "t": "hech kim aytmagan edi",
+                "tr": "никто не говорил"
+              },
+              {
+                "w": "hadn't been told",
+                "t": "aytilmagan edi",
+                "tr": "мне не сообщили"
+              }
+            ],
+            "number": 24
+          },
+          {
+            "id": "r4-c-13",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our English teacher and our German teacher are husband and wife. "
+              },
+              {
+                "type": "hint",
+                "content": "married"
+              },
+              {
+                "type": "text",
+                "content": "\nOur English teacher "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " our German teacher."
+              }
+            ],
+            "answers": [
+              "is married to"
+            ],
+            "words": [
+              {
+                "w": "English teacher",
+                "t": "ingliz tili o'qituvchisi",
+                "tr": "учитель английского"
+              },
+              {
+                "w": "German teacher",
+                "t": "nemis tili o'qituvchisi",
+                "tr": "учитель немецкого"
+              },
+              {
+                "w": "husband and wife",
+                "t": "er va xotin",
+                "tr": "муж и жена"
+              },
+              {
+                "w": "is married to",
+                "t": "bilan turmush qurgan",
+                "tr": "женат/замужем за"
+              }
+            ],
+            "number": 25
+          },
+          {
+            "id": "r4-c-14",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A neighbour is feeding our dog while we're away. "
+              },
+              {
+                "type": "hint",
+                "content": "being"
+              },
+              {
+                "type": "text",
+                "content": "\nOur dog "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a neighbour while we're away."
+              }
+            ],
+            "answers": [
+              "is being fed by"
+            ],
+            "words": [
+              {
+                "w": "neighbour",
+                "t": "qo'shni",
+                "tr": "сосед"
+              },
+              {
+                "w": "feeding",
+                "t": "boqmoq",
+                "tr": "кормить"
+              },
+              {
+                "w": "while we're away",
+                "t": "bizning yo'qligimizda",
+                "tr": "пока нас нет"
+              },
+              {
+                "w": "is being fed by",
+                "t": "tomonidan boqilmoqda",
+                "tr": "кормится соседом"
+              }
+            ],
+            "number": 26
+          },
+          {
+            "id": "r4-c-15",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Use a sharp knife to cut the cake. "
+              },
+              {
+                "type": "hint",
+                "content": "should"
+              },
+              {
+                "type": "text",
+                "content": "\nThe cake "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a sharp knife."
+              }
+            ],
+            "answers": [
+              "should be cut with"
+            ],
+            "words": [
+              {
+                "w": "sharp knife",
+                "t": "o'tkir pichoq",
+                "tr": "острый нож"
+              },
+              {
+                "w": "cut the cake",
+                "t": "tortni kesmoq",
+                "tr": "разрезать торт"
+              },
+              {
+                "w": "should be cut with",
+                "t": "bilan kesilishi kerak",
+                "tr": "следует резать"
+              }
+            ],
+            "number": 27
+          },
+          {
+            "id": "r4-c-16",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm not interested in what you think! "
+              },
+              {
+                "type": "hint",
+                "content": "care"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " what you think!"
+              }
+            ],
+            "answers": [
+              "don't care"
+            ],
+            "alternateAnswers": [
+              [
+                "do not care"
+              ]
+            ],
+            "words": [
+              {
+                "w": "not interested in",
+                "t": "qiziqmayman",
+                "tr": "не интересуюсь"
+              },
+              {
+                "w": "don't care",
+                "t": "ahamiyat bermayman",
+                "tr": "не заботит"
+              }
+            ],
+            "number": 28
+          },
+          {
+            "id": "r4-c-17",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My parents don't let me watch much TV at home. "
+              },
+              {
+                "type": "hint",
+                "content": "allowed"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " watch much TV at home."
+              }
+            ],
+            "answers": [
+              "am not allowed to"
+            ],
+            "alternateAnswers": [
+              [
+                "'m not allowed to"
+              ]
+            ],
+            "words": [
+              {
+                "w": "don't let me",
+                "t": "ruxsat bermaydi",
+                "tr": "не разрешают"
+              },
+              {
+                "w": "watch much TV",
+                "t": "ko'p televizor ko'rmoq",
+                "tr": "много смотреть телевизор"
+              },
+              {
+                "w": "am not allowed to",
+                "t": "ruxsat berilmagan",
+                "tr": "мне не разрешено"
+              }
+            ],
+            "number": 29
+          },
+          {
+            "id": "r4-c-18",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They're going to invite over a hundred people to the wedding reception. "
+              },
+              {
+                "type": "hint",
+                "content": "going"
+              },
+              {
+                "type": "text",
+                "content": "\nOver a hundred people "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the wedding reception."
+              }
+            ],
+            "answers": [
+              "are going to be invited"
+            ],
+            "words": [
+              {
+                "w": "invite",
+                "t": "taklif qilmoq",
+                "tr": "пригласить"
+              },
+              {
+                "w": "over a hundred",
+                "t": "yuzdan ortiq",
+                "tr": "более ста"
+              },
+              {
+                "w": "wedding reception",
+                "t": "to'y ziyofati",
+                "tr": "свадебный приём"
+              },
+              {
+                "w": "are going to be invited",
+                "t": "taklif qilinadi",
+                "tr": "будут приглашены"
+              }
+            ],
+            "number": 30
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r4p2-sec-exE",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "r4p2-e1",
+            "number": 31,
+            "parts": [
+              {
+                "type": "text",
+                "content": "We can choose our friends, but we can't choose our "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "couples",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "guests",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "strangers",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "relations",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r4p2-e2",
+            "number": 32,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Many children have such a good relationship "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " their parents that they see them as friends."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "by",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "for",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "with",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "from",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r4p2-e3",
+            "number": 33,
+            "parts": [
+              {
+                "type": "text",
+                "content": "When you're a teenager, you'll have times "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with your parents."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "moods",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "arguments",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "lies",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "dishonesty",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r4p2-e4",
+            "number": 34,
+            "parts": [
+              {
+                "type": "text",
+                "content": "There will be times when you don't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on very well with them."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "get",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "take",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "put",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "set",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r4p2-e5",
+            "number": 35,
+            "parts": [
+              {
+                "type": "text",
+                "content": "There will be times when you want to be "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and solve your problems yourself."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "divorced",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "single",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "grateful",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "independent",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r4p2-e6",
+            "number": 36,
+            "parts": [
+              {
+                "type": "text",
+                "content": "You'll also sort yourself out "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " yourself."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "by",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "for",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "set",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r4p2-e7",
+            "number": 37,
+            "parts": [
+              {
+                "type": "text",
+                "content": "You'll also "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " your parents down sometimes."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "let",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "make",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "take",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "fall",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r4p2-e8",
+            "number": 38,
+            "parts": [
+              {
+                "type": "text",
+                "content": "And as you grow "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and become an adult, you'll probably realise you have lots of things in common with your mum and dad."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "over",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "out",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "up",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r4p2-e9",
+            "number": 39,
+            "parts": [
+              {
+                "type": "text",
+                "content": "You'll have lots of things in "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with your mum and dad."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "private",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "common",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "contact",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "love",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "r4p2-e10",
+            "number": 40,
+            "parts": [
+              {
+                "type": "text",
+                "content": "And become even "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to them."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "fonder",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "more proud",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "closer",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "more ordinary",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    }
+  ]
+}

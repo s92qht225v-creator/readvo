@@ -1,0 +1,547 @@
+{
+  "id": "unit19-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u19p2-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapdagi xatoni toping va to'g'ri so'zni yozing.",
+      "instruction_ru": "Найдите ошибку в каждом предложении и напишите правильное слово.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u19p2-ex1-1",
+            "sentence": "My older brother can to ride a motorbike, but I can't.",
+            "errorStart": 21,
+            "errorEnd": 23,
+            "correctAnswer": "",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "older brother",
+                "t": "katta aka",
+                "tr": "старший брат"
+              },
+              {
+                "w": "ride",
+                "t": "minmoq",
+                "tr": "ездить"
+              },
+              {
+                "w": "motorbike",
+                "t": "mototsikl",
+                "tr": "мотоцикл"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-2",
+            "sentence": "He'll has his dinner early today because he's going out.",
+            "errorStart": 6,
+            "errorEnd": 9,
+            "correctAnswer": "have",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "dinner",
+                "t": "kechki ovqat",
+                "tr": "ужин"
+              },
+              {
+                "w": "early",
+                "t": "erta",
+                "tr": "рано"
+              },
+              {
+                "w": "going out",
+                "t": "tashqariga chiqmoq",
+                "tr": "выходить"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-3",
+            "sentence": "Do you can come to my party?",
+            "errorStart": 0,
+            "errorEnd": 2,
+            "correctAnswer": "Can",
+            "alternateAnswers": [
+              "can"
+            ],
+            "words": [
+              {
+                "w": "come",
+                "t": "kelmoq",
+                "tr": "приходить"
+              },
+              {
+                "w": "party",
+                "t": "bayram",
+                "tr": "вечеринка"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-4",
+            "sentence": "You should to see a doctor about your foot.",
+            "errorStart": 11,
+            "errorEnd": 13,
+            "correctAnswer": "",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "see a doctor",
+                "t": "shifokorga bormoq",
+                "tr": "обратиться к врачу"
+              },
+              {
+                "w": "foot",
+                "t": "oyoq",
+                "tr": "нога/ступня"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-5",
+            "sentence": "I couldn't bought any bread because the baker's was closed.",
+            "errorStart": 11,
+            "errorEnd": 17,
+            "correctAnswer": "buy",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "bread",
+                "t": "non",
+                "tr": "хлеб"
+              },
+              {
+                "w": "baker's",
+                "t": "nonvoyxona",
+                "tr": "булочная"
+              },
+              {
+                "w": "closed",
+                "t": "yopiq",
+                "tr": "закрытый"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-6",
+            "sentence": "You needn't to do the washing-up. I've already done it.",
+            "errorStart": 12,
+            "errorEnd": 14,
+            "correctAnswer": "",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "needn't",
+                "t": "kerak emas",
+                "tr": "не нужно"
+              },
+              {
+                "w": "washing-up",
+                "t": "idish yuvish",
+                "tr": "мытьё посуды"
+              },
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-7",
+            "sentence": "The school ought listen to pupils' opinions.",
+            "errorStart": 17,
+            "errorEnd": 23,
+            "correctAnswer": "to listen",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "ought to",
+                "t": "kerak",
+                "tr": "следует"
+              },
+              {
+                "w": "listen",
+                "t": "tinglаmoq",
+                "tr": "слушать"
+              },
+              {
+                "w": "pupils",
+                "t": "o'quvchilar",
+                "tr": "ученики"
+              },
+              {
+                "w": "opinions",
+                "t": "fikrlar",
+                "tr": "мнения"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex1-8",
+            "sentence": "People shouldn't to drop their rubbish in the street.",
+            "errorStart": 17,
+            "errorEnd": 19,
+            "correctAnswer": "",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "shouldn't",
+                "t": "kerak emas",
+                "tr": "не следует"
+              },
+              {
+                "w": "drop",
+                "t": "tashlamoq",
+                "tr": "бросать"
+              },
+              {
+                "w": "rubbish",
+                "t": "axlat",
+                "tr": "мусор"
+              },
+              {
+                "w": "street",
+                "t": "ko'cha",
+                "tr": "улица"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u19p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zni ishlatib, gapni yozing. Ruxsat so'rash yoki berish uchun can, could yoki may dan foydalaning.",
+      "instruction_ru": "Напишите предложение, используя данное слово. Для запроса или предоставления разрешения используйте can, could или may.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u19p2-ex2-1",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "could — Tony wants to borrow his friend's pencil."
+              }
+            ],
+            "answers": [
+              "Could I borrow your pencil?"
+            ],
+            "alternateAnswers": [
+              [
+                "Could I borrow your pencil"
+              ],
+              [
+                "Can I borrow your pencil?"
+              ],
+              [
+                "Can I borrow your pencil"
+              ],
+              [
+                "May I borrow your pencil?"
+              ],
+              [
+                "May I borrow your pencil"
+              ]
+            ],
+            "words": [
+              {
+                "w": "borrow",
+                "t": "qarz olmoq",
+                "tr": "одолжить"
+              },
+              {
+                "w": "pencil",
+                "t": "qalam",
+                "tr": "карандаш"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-2",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "can — Alex wants to allow her friend to use her dictionary."
+              }
+            ],
+            "answers": [
+              "You can use my dictionary."
+            ],
+            "alternateAnswers": [
+              [
+                "You can use my dictionary"
+              ],
+              [
+                "You may use my dictionary."
+              ],
+              [
+                "You may use my dictionary"
+              ]
+            ],
+            "words": [
+              {
+                "w": "allow",
+                "t": "ruxsat bermoq",
+                "tr": "разрешить"
+              },
+              {
+                "w": "dictionary",
+                "t": "lug'at",
+                "tr": "словарь"
+              },
+              {
+                "w": "use",
+                "t": "ishlatmoq",
+                "tr": "использовать"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-3",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "may — Julie wants permission from her teacher to leave the classroom."
+              }
+            ],
+            "answers": [
+              "May I leave the classroom?"
+            ],
+            "alternateAnswers": [
+              [
+                "May I leave the classroom"
+              ],
+              [
+                "Could I leave the classroom?"
+              ],
+              [
+                "Could I leave the classroom"
+              ],
+              [
+                "Can I leave the classroom?"
+              ],
+              [
+                "Can I leave the classroom"
+              ]
+            ],
+            "words": [
+              {
+                "w": "permission",
+                "t": "ruxsat",
+                "tr": "разрешение"
+              },
+              {
+                "w": "leave",
+                "t": "chiqib ketmoq",
+                "tr": "выйти"
+              },
+              {
+                "w": "classroom",
+                "t": "sinf xonasi",
+                "tr": "классная комната"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-4",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "can — Lou wants to wear his brother's new trainers."
+              }
+            ],
+            "answers": [
+              "Can I wear your new trainers?"
+            ],
+            "alternateAnswers": [
+              [
+                "Can I wear your new trainers"
+              ],
+              [
+                "Could I wear your new trainers?"
+              ],
+              [
+                "Could I wear your new trainers"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wear",
+                "t": "kiymoq",
+                "tr": "надеть/носить"
+              },
+              {
+                "w": "trainers",
+                "t": "sport poyabzal",
+                "tr": "кроссовки"
+              },
+              {
+                "w": "new",
+                "t": "yangi",
+                "tr": "новый"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-5",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "could — Terry wants to ask his boss for permission to take the day off work."
+              }
+            ],
+            "answers": [
+              "Could I take the day off work?"
+            ],
+            "alternateAnswers": [
+              [
+                "Could I take the day off work"
+              ],
+              [
+                "Could I take a day off work?"
+              ],
+              [
+                "Could I take a day off work"
+              ]
+            ],
+            "words": [
+              {
+                "w": "boss",
+                "t": "xo'jayin",
+                "tr": "начальник"
+              },
+              {
+                "w": "permission",
+                "t": "ruxsat",
+                "tr": "разрешение"
+              },
+              {
+                "w": "take the day off",
+                "t": "dam olish kuni olmoq",
+                "tr": "взять выходной"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-6",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "can — Diane wants to use her dad's car this weekend."
+              }
+            ],
+            "answers": [
+              "Can I use your car this weekend?"
+            ],
+            "alternateAnswers": [
+              [
+                "Can I use your car this weekend"
+              ],
+              [
+                "Could I use your car this weekend?"
+              ],
+              [
+                "Could I use your car this weekend"
+              ]
+            ],
+            "words": [
+              {
+                "w": "use",
+                "t": "ishlatmoq",
+                "tr": "использовать"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              },
+              {
+                "w": "car",
+                "t": "mashina",
+                "tr": "машина"
+              }
+            ]
+          },
+          {
+            "id": "u19p2-ex2-7",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "may — A teacher wants to give her students five extra minutes to finish the test."
+              }
+            ],
+            "answers": [
+              "You may have five extra minutes to finish the test."
+            ],
+            "alternateAnswers": [
+              [
+                "You may have five extra minutes to finish the test"
+              ],
+              [
+                "You can have five extra minutes to finish the test."
+              ],
+              [
+                "You can have five extra minutes to finish the test"
+              ]
+            ],
+            "words": [
+              {
+                "w": "extra",
+                "t": "qo'shimcha",
+                "tr": "дополнительный"
+              },
+              {
+                "w": "finish",
+                "t": "tugatmoq",
+                "tr": "закончить"
+              },
+              {
+                "w": "test",
+                "t": "test",
+                "tr": "тест"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

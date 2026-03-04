@@ -1,0 +1,1790 @@
+{
+  "id": "review12-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 12,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 34, 35 and 36",
+    "titleTranslation_ru": "Units 34, 35 and 36"
+  },
+  "sections": [
+    {
+      "id": "r12p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlarni ishlatib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски, используя слова из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "extinct",
+          "freezing",
+          "global",
+          "local",
+          "mild",
+          "wild"
+        ],
+        "cards": [
+          {
+            "id": "r12-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Britain generally has very "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " winters. It never gets very cold."
+              }
+            ],
+            "answers": [
+              "mild"
+            ],
+            "words": [
+              {
+                "w": "generally",
+                "t": "odatda",
+                "tr": "как правило"
+              },
+              {
+                "w": "mild",
+                "t": "iliq/mo'tadil",
+                "tr": "мягкий (о климате)"
+              },
+              {
+                "w": "winters",
+                "t": "qishlar",
+                "tr": "зимы"
+              },
+              {
+                "w": "never",
+                "t": "hech qachon",
+                "tr": "никогда"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r12-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! Do you think it might snow tonight?"
+              }
+            ],
+            "answers": [
+              "freezing"
+            ],
+            "words": [
+              {
+                "w": "freezing",
+                "t": "muzlatuvchi sovuq",
+                "tr": "ужасно холодно"
+              },
+              {
+                "w": "snow",
+                "t": "qor yog'moq",
+                "tr": "снег (идёт)"
+              },
+              {
+                "w": "tonight",
+                "t": "bu kecha",
+                "tr": "сегодня вечером"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r12-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Save the polar bears before they become "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "!"
+              }
+            ],
+            "answers": [
+              "extinct"
+            ],
+            "words": [
+              {
+                "w": "save",
+                "t": "qutqarmoq",
+                "tr": "спасти"
+              },
+              {
+                "w": "polar bears",
+                "t": "qutb ayiqlari",
+                "tr": "полярные медведи"
+              },
+              {
+                "w": "extinct",
+                "t": "yo'q bo'lib ketgan",
+                "tr": "вымерший"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r12-a-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " problem is a problem that affects the whole world."
+              }
+            ],
+            "answers": [
+              "global"
+            ],
+            "words": [
+              {
+                "w": "global",
+                "t": "global/jahon miqyosidagi",
+                "tr": "глобальный"
+              },
+              {
+                "w": "problem",
+                "t": "muammo",
+                "tr": "проблема"
+              },
+              {
+                "w": "affects",
+                "t": "ta'sir qiladi",
+                "tr": "влияет на"
+              },
+              {
+                "w": "whole world",
+                "t": "butun dunyo",
+                "tr": "весь мир"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r12-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "What kind of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " animals live in the mountains round here?"
+              }
+            ],
+            "answers": [
+              "wild"
+            ],
+            "words": [
+              {
+                "w": "wild animals",
+                "t": "yovvoyi hayvonlar",
+                "tr": "дикие животные"
+              },
+              {
+                "w": "live",
+                "t": "yashaydi",
+                "tr": "живут"
+              },
+              {
+                "w": "mountains",
+                "t": "toglar",
+                "tr": "горы"
+              },
+              {
+                "w": "round here",
+                "t": "shu atrofda",
+                "tr": "здесь поблизости"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r12-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There are several large forests in the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " area."
+              }
+            ],
+            "answers": [
+              "local"
+            ],
+            "words": [
+              {
+                "w": "several",
+                "t": "bir nechta",
+                "tr": "несколько"
+              },
+              {
+                "w": "large forests",
+                "t": "katta o'rmonlar",
+                "tr": "большие леса"
+              },
+              {
+                "w": "local area",
+                "t": "mahalliy hudud",
+                "tr": "местный район"
+              }
+            ],
+            "number": 6
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r12p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan, bo'sh joyga to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте от слова, данного заглавными буквами в конце строки, нужную форму и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r12-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They closed the airport because it was so "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "FOG"
+              }
+            ],
+            "answers": [
+              "foggy"
+            ],
+            "words": [
+              {
+                "w": "closed",
+                "t": "yopdi",
+                "tr": "закрыли"
+              },
+              {
+                "w": "airport",
+                "t": "aeroport",
+                "tr": "аэропорт"
+              },
+              {
+                "w": "foggy",
+                "t": "tumanli",
+                "tr": "туманный"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r12-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "High winds can be very "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "DESTROY"
+              }
+            ],
+            "answers": [
+              "destructive"
+            ],
+            "words": [
+              {
+                "w": "high winds",
+                "t": "kuchli shamollar",
+                "tr": "сильные ветры"
+              },
+              {
+                "w": "destructive",
+                "t": "halokatli",
+                "tr": "разрушительный"
+              }
+            ],
+            "number": 8
+          },
+          {
+            "id": "r12-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Lots of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " things are poisonous to humans. "
+              },
+              {
+                "type": "hint",
+                "content": "NATURE"
+              }
+            ],
+            "answers": [
+              "natural"
+            ],
+            "words": [
+              {
+                "w": "lots of",
+                "t": "ko'p",
+                "tr": "множество"
+              },
+              {
+                "w": "natural",
+                "t": "tabiiy",
+                "tr": "натуральный/природный"
+              },
+              {
+                "w": "poisonous",
+                "t": "zaharli",
+                "tr": "ядовитый"
+              },
+              {
+                "w": "humans",
+                "t": "insonlar",
+                "tr": "люди"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r12-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Air "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " isn't really a serious problem where we live. "
+              },
+              {
+                "type": "hint",
+                "content": "POLLUTE"
+              }
+            ],
+            "answers": [
+              "pollution"
+            ],
+            "words": [
+              {
+                "w": "air pollution",
+                "t": "havo ifloslanishi",
+                "tr": "загрязнение воздуха"
+              },
+              {
+                "w": "serious problem",
+                "t": "jiddiy muammo",
+                "tr": "серьёзная проблема"
+              },
+              {
+                "w": "where we live",
+                "t": "biz yashaydigan joyda",
+                "tr": "там, где мы живём"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r12-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Isn't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a bit of a boring hobby? "
+              },
+              {
+                "type": "hint",
+                "content": "GARDEN"
+              }
+            ],
+            "answers": [
+              "gardening"
+            ],
+            "words": [
+              {
+                "w": "gardening",
+                "t": "bog'dorchilik",
+                "tr": "садоводство"
+              },
+              {
+                "w": "boring hobby",
+                "t": "zerikarli hobbi",
+                "tr": "скучное хобби"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r12-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The submarine went down to a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of 200 metres. "
+              },
+              {
+                "type": "hint",
+                "content": "DEEP"
+              }
+            ],
+            "answers": [
+              "depth"
+            ],
+            "words": [
+              {
+                "w": "submarine",
+                "t": "suv osti kemasi",
+                "tr": "подводная лодка"
+              },
+              {
+                "w": "went down",
+                "t": "pastga tushdi",
+                "tr": "опустилась"
+              },
+              {
+                "w": "depth",
+                "t": "chuqurlik",
+                "tr": "глубина"
+              },
+              {
+                "w": "metres",
+                "t": "metr",
+                "tr": "метры"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r12-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The island isn't square – it's almost completely "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "CIRCLE"
+              }
+            ],
+            "answers": [
+              "circular"
+            ],
+            "words": [
+              {
+                "w": "island",
+                "t": "orol",
+                "tr": "остров"
+              },
+              {
+                "w": "square",
+                "t": "kvadrat shaklida",
+                "tr": "квадратный"
+              },
+              {
+                "w": "almost completely",
+                "t": "deyarli to'liq",
+                "tr": "почти полностью"
+              },
+              {
+                "w": "circular",
+                "t": "doira shaklida",
+                "tr": "круглый"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r12-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to swim in that lake? "
+              },
+              {
+                "type": "hint",
+                "content": "DANGER"
+              }
+            ],
+            "answers": [
+              "dangerous"
+            ],
+            "words": [
+              {
+                "w": "dangerous",
+                "t": "xavfli",
+                "tr": "опасный"
+              },
+              {
+                "w": "swim",
+                "t": "suzmoq",
+                "tr": "плавать"
+              },
+              {
+                "w": "lake",
+                "t": "ko'l",
+                "tr": "озеро"
+              }
+            ],
+            "number": 14
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r12p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r12-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "15  Not more than a thousand people live in the village. "
+              },
+              {
+                "type": "hint",
+                "content": "most"
+              },
+              {
+                "type": "text",
+                "content": "\nA thousand people "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " live in the village."
+              }
+            ],
+            "answers": [
+              "at most"
+            ],
+            "words": [
+              {
+                "w": "not more than",
+                "t": "dan ko'p emas",
+                "tr": "не более"
+              },
+              {
+                "w": "a thousand people",
+                "t": "ming kishi",
+                "tr": "тысяча человек"
+              },
+              {
+                "w": "at most",
+                "t": "ko'pi bilan",
+                "tr": "самое большее"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r12-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "16  In the film, the car explodes and we don't know if Murray is alive or not. "
+              },
+              {
+                "type": "hint",
+                "content": "up"
+              },
+              {
+                "type": "text",
+                "content": "\nIn the film, the car "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and we don't know if Murray is alive or not."
+              }
+            ],
+            "answers": [
+              "blows up"
+            ],
+            "words": [
+              {
+                "w": "explodes",
+                "t": "portlaydi",
+                "tr": "взрывается"
+              },
+              {
+                "w": "blows up",
+                "t": "portlamoq",
+                "tr": "взорваться"
+              },
+              {
+                "w": "alive or not",
+                "t": "tirik yoki yo'q",
+                "tr": "жив или нет"
+              }
+            ],
+            "number": 16
+          },
+          {
+            "id": "r12-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "17  There are lots of strange fish on the sea bed. "
+              },
+              {
+                "type": "hint",
+                "content": "bottom"
+              },
+              {
+                "type": "text",
+                "content": "\nThere are lots of strange fish "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the sea."
+              }
+            ],
+            "answers": [
+              "at the bottom of"
+            ],
+            "words": [
+              {
+                "w": "sea bed",
+                "t": "dengiz tubi",
+                "tr": "дно моря"
+              },
+              {
+                "w": "strange fish",
+                "t": "g'alati baliqlar",
+                "tr": "странные рыбы"
+              },
+              {
+                "w": "at the bottom of",
+                "t": "tubida",
+                "tr": "на дне"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r12-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "18  The fire stopped burning in the middle of the night. "
+              },
+              {
+                "type": "hint",
+                "content": "out"
+              },
+              {
+                "type": "text",
+                "content": "\nThe fire "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in the middle of the night."
+              }
+            ],
+            "answers": [
+              "went out"
+            ],
+            "words": [
+              {
+                "w": "stopped burning",
+                "t": "yonishdan to'xtadi",
+                "tr": "перестал гореть"
+              },
+              {
+                "w": "went out",
+                "t": "o'chib qoldi",
+                "tr": "погас"
+              },
+              {
+                "w": "in the middle of",
+                "t": "o'rtasida",
+                "tr": "в середине"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r12-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "19  Could you help me hang this 'DO NOT LITTER' sign? "
+              },
+              {
+                "type": "hint",
+                "content": "up"
+              },
+              {
+                "type": "text",
+                "content": "\nCould you help me "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " this 'DO NOT LITTER' sign?"
+              }
+            ],
+            "answers": [
+              "put up"
+            ],
+            "words": [
+              {
+                "w": "hang",
+                "t": "osilmoq/osmoq",
+                "tr": "повесить"
+              },
+              {
+                "w": "put up",
+                "t": "osmoq",
+                "tr": "повесить"
+              },
+              {
+                "w": "litter",
+                "t": "axlat tashlamoq",
+                "tr": "мусорить"
+              },
+              {
+                "w": "sign",
+                "t": "belgi/tablichka",
+                "tr": "знак/табличка"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r12-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "20  We need to increase people's awareness about the environment. "
+              },
+              {
+                "type": "hint",
+                "content": "build"
+              },
+              {
+                "type": "text",
+                "content": "\nWe need to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " people's awareness about the environment."
+              }
+            ],
+            "answers": [
+              "build up"
+            ],
+            "words": [
+              {
+                "w": "increase",
+                "t": "oshirmoq",
+                "tr": "повышать"
+              },
+              {
+                "w": "build up",
+                "t": "oshirmoq/mustahkamlamoq",
+                "tr": "наращивать"
+              },
+              {
+                "w": "awareness",
+                "t": "xabardorlik",
+                "tr": "осведомлённость"
+              },
+              {
+                "w": "environment",
+                "t": "atrof-muhit",
+                "tr": "окружающая среда"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r12-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "21  One small sign isn't going to stop people from entering the wood! "
+              },
+              {
+                "type": "hint",
+                "content": "keep"
+              },
+              {
+                "type": "text",
+                "content": "\nOne small sign isn't going to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of the wood!"
+              }
+            ],
+            "answers": [
+              "keep people out"
+            ],
+            "alternateAnswers": [
+              [
+                "keep them out"
+              ]
+            ],
+            "words": [
+              {
+                "w": "sign",
+                "t": "belgi/tablichka",
+                "tr": "знак/табличка"
+              },
+              {
+                "w": "stop people from entering",
+                "t": "odamlarni kirishdan to'xtatmoq",
+                "tr": "помешать людям войти"
+              },
+              {
+                "w": "wood",
+                "t": "o'rmon",
+                "tr": "лес"
+              },
+              {
+                "w": "keep out",
+                "t": "kiritmaslik",
+                "tr": "не пускать"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r12-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "22  Please extinguish that cigarette right now! "
+              },
+              {
+                "type": "hint",
+                "content": "out"
+              },
+              {
+                "type": "text",
+                "content": "\nPlease "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that cigarette right now!"
+              }
+            ],
+            "answers": [
+              "put out"
+            ],
+            "words": [
+              {
+                "w": "extinguish",
+                "t": "o'chirmoq",
+                "tr": "потушить"
+              },
+              {
+                "w": "put out",
+                "t": "o'chirmoq",
+                "tr": "потушить"
+              },
+              {
+                "w": "cigarette",
+                "t": "sigaret",
+                "tr": "сигарета"
+              },
+              {
+                "w": "right now",
+                "t": "hoziroq",
+                "tr": "прямо сейчас"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r12-c-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "23  Are you okay carrying that box or do you want to stop carrying it for a while? "
+              },
+              {
+                "type": "hint",
+                "content": "down"
+              },
+              {
+                "type": "text",
+                "content": "\nAre you okay carrying that box or do you want to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for a while?"
+              }
+            ],
+            "answers": [
+              "put it down"
+            ],
+            "words": [
+              {
+                "w": "okay carrying",
+                "t": "ko'tarib yurish yaxshimi",
+                "tr": "нормально нести"
+              },
+              {
+                "w": "stop carrying",
+                "t": "ko'tarishni to'xtatmoq",
+                "tr": "прекратить нести"
+              },
+              {
+                "w": "put it down",
+                "t": "qo'yib yubormoq",
+                "tr": "поставить/положить"
+              },
+              {
+                "w": "for a while",
+                "t": "bir muddat",
+                "tr": "на время"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "r12-c-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "24  Let's tidy these clothes before Mum gets home. "
+              },
+              {
+                "type": "hint",
+                "content": "clear"
+              },
+              {
+                "type": "text",
+                "content": "\nLet's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " before Mum gets home."
+              }
+            ],
+            "answers": [
+              "clear these clothes up"
+            ],
+            "alternateAnswers": [
+              [
+                "clear up these clothes"
+              ]
+            ],
+            "words": [
+              {
+                "w": "tidy",
+                "t": "yig'ishtirmoq",
+                "tr": "убрать"
+              },
+              {
+                "w": "clothes",
+                "t": "kiyimlar",
+                "tr": "одежда"
+              },
+              {
+                "w": "clear up",
+                "t": "yig'ishtirmoq",
+                "tr": "убрать"
+              },
+              {
+                "w": "before Mum gets home",
+                "t": "onam uyga kelmasidan oldin",
+                "tr": "до того как мама придёт домой"
+              }
+            ],
+            "number": 24
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r12p2-sec-exD",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qalin yozilgan so'z yoki ibora to'g'ri bo'lsa, belgi (✓) qo'ying. Noto'g'ri bo'lsa, to'g'ri so'z yoki iborani yozing.",
+      "instruction_ru": "Если слово или фраза, выделенная жирным, верна, поставьте галочку (✓). Если нет — напишите правильное слово или фразу.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r12-d-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "25  Could you show "
+              },
+              {
+                "type": "hint",
+                "content": "to me"
+              },
+              {
+                "type": "text",
+                "content": " your book about the moon?\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "me"
+            ],
+            "words": [
+              {
+                "w": "show me",
+                "t": "menga ko'rsatmoq",
+                "tr": "показать мне"
+              },
+              {
+                "w": "book about",
+                "t": "haqida kitob",
+                "tr": "книга о"
+              },
+              {
+                "w": "the moon",
+                "t": "oy",
+                "tr": "луна"
+              }
+            ],
+            "number": 25
+          },
+          {
+            "id": "r12-d-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "26  Do you sometimes wish you "
+              },
+              {
+                "type": "hint",
+                "content": "have"
+              },
+              {
+                "type": "text",
+                "content": " a bigger boat?\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "words": [
+              {
+                "w": "sometimes wish",
+                "t": "ba'zan tilamoq",
+                "tr": "иногда хотеть"
+              },
+              {
+                "w": "bigger boat",
+                "t": "kattaroq qayiq",
+                "tr": "лодка побольше"
+              },
+              {
+                "w": "wish + had",
+                "t": "wish + o'tgan zamon (hozirgi orzular)",
+                "tr": "wish + прошедшее время (нереальное желание)"
+              }
+            ],
+            "number": 26
+          },
+          {
+            "id": "r12-d-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "27  I wish people "
+              },
+              {
+                "type": "hint",
+                "content": "didn't cause"
+              },
+              {
+                "type": "text",
+                "content": " so much damage to the environment.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish people didn't cause",
+                "t": "odamlar bunday zarar keltirmasligini tilamoq",
+                "tr": "желаю, чтобы люди не причиняли"
+              },
+              {
+                "w": "damage",
+                "t": "zarar",
+                "tr": "ущерб"
+              },
+              {
+                "w": "environment",
+                "t": "atrof-muhit",
+                "tr": "окружающая среда"
+              }
+            ],
+            "number": 27
+          },
+          {
+            "id": "r12-d-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "28  Harry wishes that he "
+              },
+              {
+                "type": "hint",
+                "content": "has studied"
+              },
+              {
+                "type": "text",
+                "content": " astrophysics instead of Latin when he was at university.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "had studied"
+            ],
+            "words": [
+              {
+                "w": "wishes that",
+                "t": "tilaydi",
+                "tr": "желает, чтобы"
+              },
+              {
+                "w": "had studied",
+                "t": "o'rgangan bo'lishini tilamoq",
+                "tr": "учил бы (о прошлом)"
+              },
+              {
+                "w": "astrophysics",
+                "t": "astrofizika",
+                "tr": "астрофизика"
+              },
+              {
+                "w": "instead of",
+                "t": "o'rniga",
+                "tr": "вместо"
+              },
+              {
+                "w": "Latin",
+                "t": "lotin tili",
+                "tr": "латынь"
+              }
+            ],
+            "number": 28
+          },
+          {
+            "id": "r12-d-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "29  I wish you "
+              },
+              {
+                "type": "hint",
+                "content": "wouldn't throw"
+              },
+              {
+                "type": "text",
+                "content": " rubbish out of the car window!\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish you wouldn't throw",
+                "t": "atmasligingizni tilamoq",
+                "tr": "хотеть, чтобы вы не бросали"
+              },
+              {
+                "w": "rubbish",
+                "t": "axlat",
+                "tr": "мусор"
+              },
+              {
+                "w": "car window",
+                "t": "mashina oynasi",
+                "tr": "окно машины"
+              }
+            ],
+            "number": 29
+          },
+          {
+            "id": "r12-d-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "30  Laura sometimes wishes she "
+              },
+              {
+                "type": "hint",
+                "content": "can"
+              },
+              {
+                "type": "text",
+                "content": " breathe underwater for hours.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "could"
+            ],
+            "words": [
+              {
+                "w": "wishes she could",
+                "t": "qila olishini tilamoq",
+                "tr": "хотела бы мочь"
+              },
+              {
+                "w": "breathe",
+                "t": "nafas olmoq",
+                "tr": "дышать"
+              },
+              {
+                "w": "underwater",
+                "t": "suv ostida",
+                "tr": "под водой"
+              }
+            ],
+            "number": 30
+          },
+          {
+            "id": "r12-d-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "31  I bought a new telescope "
+              },
+              {
+                "type": "hint",
+                "content": "for my"
+              },
+              {
+                "type": "text",
+                "content": " dad.\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "bought",
+                "t": "sotib oldim",
+                "tr": "купил"
+              },
+              {
+                "w": "telescope",
+                "t": "teleskop",
+                "tr": "телескоп"
+              },
+              {
+                "w": "for my dad",
+                "t": "dadam uchun",
+                "tr": "для моего папы"
+              }
+            ],
+            "number": 31
+          },
+          {
+            "id": "r12-d-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "32  I "
+              },
+              {
+                "type": "hint",
+                "content": "wish"
+              },
+              {
+                "type": "text",
+                "content": " it snows during the night!\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "hope"
+            ],
+            "words": [
+              {
+                "w": "hope",
+                "t": "umid qilmoq",
+                "tr": "надеяться"
+              },
+              {
+                "w": "wish vs hope",
+                "t": "wish (amalga oshmaydigan orzu) / hope (kelajakdagi orzu)",
+                "tr": "wish (нереальное) / hope (реальное желание)"
+              },
+              {
+                "w": "snows",
+                "t": "qor yog'adi",
+                "tr": "идёт снег"
+              }
+            ],
+            "number": 32
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r12p2-sec-exE",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qator to'g'ri bo'lsa, belgi (✓) qo'ying. Agar qatorda ortiqcha so'z bo'lsa, o'sha so'zni yozing.\n\nSaving the rainforests of South America",
+      "instruction_ru": "Если строка верна, поставьте галочку (✓). Если в строке есть лишнее слово, напишите его.\n\nSaving the rainforests of South America",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r12-e-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "33  Every day, thousands and thousands of trees are cut down in the Amazonian\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "thousands and thousands",
+                "t": "minglab",
+                "tr": "тысячи и тысячи"
+              },
+              {
+                "w": "are cut down",
+                "t": "kesilmoqda",
+                "tr": "вырубаются"
+              },
+              {
+                "w": "Amazonian",
+                "t": "Amazonkaga oid",
+                "tr": "амазонский"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "34  rainforest. This does enormous damage to the local environment, and also\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "rainforest",
+                "t": "tropik o'rmon",
+                "tr": "тропический лес"
+              },
+              {
+                "w": "enormous damage",
+                "t": "katta zarar",
+                "tr": "огромный ущерб"
+              },
+              {
+                "w": "local environment",
+                "t": "mahalliy atrof-muhit",
+                "tr": "местная окружающая среда"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "35  possibly affects the world's climate. But how can we save up the rainforests\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "up"
+            ],
+            "words": [
+              {
+                "w": "possibly",
+                "t": "ehtimol",
+                "tr": "возможно"
+              },
+              {
+                "w": "affects",
+                "t": "ta'sir qiladi",
+                "tr": "влияет"
+              },
+              {
+                "w": "climate",
+                "t": "iqlim",
+                "tr": "климат"
+              },
+              {
+                "w": "save the rainforests",
+                "t": "tropik o'rmonlarni saqlamoq",
+                "tr": "спасти тропические леса"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "36  from destruction? First of all, we have to make the local people aware that of\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "of"
+            ],
+            "alternateAnswers": [
+              [
+                "that"
+              ]
+            ],
+            "words": [
+              {
+                "w": "destruction",
+                "t": "yo'q qilish",
+                "tr": "уничтожение"
+              },
+              {
+                "w": "first of all",
+                "t": "avvalo",
+                "tr": "прежде всего"
+              },
+              {
+                "w": "make people aware",
+                "t": "odamlarni xabardor qilmoq",
+                "tr": "информировать людей"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "37  the damage to they're doing. Secondly, there need to be more police in the\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "to"
+            ],
+            "words": [
+              {
+                "w": "damage they're doing",
+                "t": "ular keltirgan zarar",
+                "tr": "ущерб, который они наносят"
+              },
+              {
+                "w": "Secondly",
+                "t": "ikkinchidan",
+                "tr": "во-вторых"
+              },
+              {
+                "w": "police",
+                "t": "politsiya",
+                "tr": "полиция"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "38  area preventing people from cutting down trees. A lot of the people who cut\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "v",
+                "tick",
+                "correct"
+              ]
+            ],
+            "words": [
+              {
+                "w": "preventing people from",
+                "t": "odamlarni to'xtatmoq",
+                "tr": "препятствовать"
+              },
+              {
+                "w": "cutting down trees",
+                "t": "daraxtlarni kesmoq",
+                "tr": "рубить деревья"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "39  them down do it illegally. If they were more afraid for of getting caught, they\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "for"
+            ],
+            "words": [
+              {
+                "w": "illegally",
+                "t": "noqonuniy",
+                "tr": "незаконно"
+              },
+              {
+                "w": "afraid of getting caught",
+                "t": "ushlanyishidan qo'rqmoq",
+                "tr": "бояться быть пойманным"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "r12-e-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "40  might stop. It's a very serious about problem, and there's no easy solution,\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "about"
+            ],
+            "words": [
+              {
+                "w": "serious problem",
+                "t": "jiddiy muammo",
+                "tr": "серьёзная проблема"
+              },
+              {
+                "w": "no easy solution",
+                "t": "oson yechim yo'q",
+                "tr": "нет лёгкого решения"
+              }
+            ],
+            "number": ""
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

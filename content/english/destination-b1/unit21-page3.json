@@ -1,0 +1,837 @@
+{
+  "id": "unit21-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u21p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi frazal fe'llarning to'g'ri shaklini bo'sh joylarga yozing.",
+      "instruction_ru": "Вставьте правильную форму фразовых глаголов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "call back",
+          "come out",
+          "cut off",
+          "fill in",
+          "hang up",
+          "log off",
+          "log on",
+          "print out"
+        ],
+        "cards": [
+          {
+            "id": "u21p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've got an e-mail from Mick! Wait a second and I'll "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so you don't have to read it on the screen."
+              }
+            ],
+            "answers": [
+              "print",
+              "out"
+            ],
+            "words": [
+              {
+                "w": "e-mail",
+                "t": "elektron xat",
+                "tr": "электронное письмо"
+              },
+              {
+                "w": "wait a second",
+                "t": "bir soniya kuting",
+                "tr": "подождите секунду"
+              },
+              {
+                "w": "screen",
+                "t": "ekran",
+                "tr": "экран"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I was talking to Matt on the phone when the train went into a tunnel and we were "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "cut off"
+            ],
+            "words": [
+              {
+                "w": "talking",
+                "t": "gaplashmoq",
+                "tr": "разговаривать"
+              },
+              {
+                "w": "phone",
+                "t": "telefon",
+                "tr": "телефон"
+              },
+              {
+                "w": "train",
+                "t": "poyezd",
+                "tr": "поезд"
+              },
+              {
+                "w": "tunnel",
+                "t": "tunnel",
+                "tr": "туннель"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You need to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " this form and we'll send the money for you."
+              }
+            ],
+            "answers": [
+              "fill in"
+            ],
+            "words": [
+              {
+                "w": "form",
+                "t": "blank, ariza",
+                "tr": "бланк"
+              },
+              {
+                "w": "send",
+                "t": "yubormoq",
+                "tr": "отправить"
+              },
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My favourite magazine, _Teen Scene_, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " every Friday."
+              }
+            ],
+            "answers": [
+              "comes out"
+            ],
+            "words": [
+              {
+                "w": "favourite",
+                "t": "sevimli",
+                "tr": "любимый"
+              },
+              {
+                "w": "magazine",
+                "t": "jurnal",
+                "tr": "журнал"
+              },
+              {
+                "w": "every Friday",
+                "t": "har juma",
+                "tr": "каждую пятницу"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Len was talking on the phone, but when I entered the room he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "hung up"
+            ],
+            "words": [
+              {
+                "w": "talking",
+                "t": "gaplashmoq",
+                "tr": "разговаривал"
+              },
+              {
+                "w": "entered",
+                "t": "kirmoq",
+                "tr": "вошёл"
+              },
+              {
+                "w": "room",
+                "t": "xona",
+                "tr": "комната"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I can't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " because I can't remember my password."
+              }
+            ],
+            "answers": [
+              "log on"
+            ],
+            "alternateAnswers": [
+              [
+                "log on",
+                "log onto"
+              ]
+            ],
+            "words": [
+              {
+                "w": "remember",
+                "t": "eslamoq",
+                "tr": "вспомнить"
+              },
+              {
+                "w": "password",
+                "t": "parol",
+                "tr": "пароль"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm afraid Mr Brown isn't here. Could you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in an hour?"
+              }
+            ],
+            "answers": [
+              "call back"
+            ],
+            "words": [
+              {
+                "w": "afraid",
+                "t": "afsuski",
+                "tr": "боюсь"
+              },
+              {
+                "w": "hour",
+                "t": "soat",
+                "tr": "час"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tom surfed the Internet for hours and "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at three in the morning!"
+              }
+            ],
+            "answers": [
+              "logged off"
+            ],
+            "words": [
+              {
+                "w": "surfed the Internet",
+                "t": "internetda gezmoq",
+                "tr": "сёрфил в интернете"
+              },
+              {
+                "w": "hours",
+                "t": "soatlab",
+                "tr": "часами"
+              },
+              {
+                "w": "morning",
+                "t": "ertalab",
+                "tr": "утро"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "News travels fast",
+      "subheading_uz": "News travels fast",
+      "subheading_ru": "News travels fast",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u21p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "These days, there's no excuse for not knowing what's happening in the world. (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " TV and on (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " radio, news programmes keep us up to date with all the important events."
+              }
+            ],
+            "answers": [
+              "On",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "excuse",
+                "t": "bahona",
+                "tr": "оправдание"
+              },
+              {
+                "w": "happening",
+                "t": "sodir bo'layotgan",
+                "tr": "происходящее"
+              },
+              {
+                "w": "news programmes",
+                "t": "yangiliklar dasturi",
+                "tr": "новостные программы"
+              },
+              {
+                "w": "up to date",
+                "t": "yangi ma'lumotli",
+                "tr": "в курсе событий"
+              },
+              {
+                "w": "important",
+                "t": "muhim",
+                "tr": "важный"
+              },
+              {
+                "w": "events",
+                "t": "voqealar",
+                "tr": "события"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We read about problems on the other side of the world (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the Internet as soon as they happen, and we see live pictures (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the news 24 hours a day."
+              }
+            ],
+            "answers": [
+              "on",
+              "on"
+            ],
+            "words": [
+              {
+                "w": "problems",
+                "t": "muammolar",
+                "tr": "проблемы"
+              },
+              {
+                "w": "other side",
+                "t": "boshqa tomoni",
+                "tr": "другая сторона"
+              },
+              {
+                "w": "as soon as",
+                "t": "zahoti",
+                "tr": "как только"
+              },
+              {
+                "w": "happen",
+                "t": "sodir bo'lmoq",
+                "tr": "происходить"
+              },
+              {
+                "w": "live pictures",
+                "t": "jonli suratlar",
+                "tr": "прямые трансляции"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Even personal news travels fast today. Whether we keep in touch (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " phone or e-mail, we're never more than a few seconds away from friends and family."
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "personal",
+                "t": "shaxsiy",
+                "tr": "личный"
+              },
+              {
+                "w": "keep in touch",
+                "t": "aloqada bo'lmoq",
+                "tr": "оставаться на связи"
+              },
+              {
+                "w": "whether",
+                "t": "xoh ... xoh",
+                "tr": "будь то"
+              },
+              {
+                "w": "seconds",
+                "t": "soniyalar",
+                "tr": "секунды"
+              },
+              {
+                "w": "friends",
+                "t": "do'stlar",
+                "tr": "друзья"
+              },
+              {
+                "w": "family",
+                "t": "oila",
+                "tr": "семья"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The days when the only means of communication was (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " letter are gone forever. So, the next time you're (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the phone, just remember how things have changed."
+              }
+            ],
+            "answers": [
+              "by",
+              "on"
+            ],
+            "words": [
+              {
+                "w": "days",
+                "t": "kunlar",
+                "tr": "дни"
+              },
+              {
+                "w": "means",
+                "t": "vosita",
+                "tr": "средство"
+              },
+              {
+                "w": "communication",
+                "t": "muloqot, aloqa",
+                "tr": "общение, связь"
+              },
+              {
+                "w": "gone forever",
+                "t": "abadiy ketdi",
+                "tr": "ушли навсегда"
+              },
+              {
+                "w": "next time",
+                "t": "keyingi safar",
+                "tr": "в следующий раз"
+              },
+              {
+                "w": "remember",
+                "t": "eslamoq",
+                "tr": "вспомнить"
+              },
+              {
+                "w": "changed",
+                "t": "o'zgardi",
+                "tr": "изменилось"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Bosh harflar bilan yozilgan so'zning shaklini o'zgartirib, bo'sh joyni to'ldiring.",
+      "instruction_ru": "Измените форму слова, написанного заглавными буквами, и заполните пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u21p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " is that one day all phone calls will be free."
+              },
+              {
+                "type": "hint",
+                "content": "PREDICT"
+              }
+            ],
+            "answers": [
+              "prediction"
+            ],
+            "words": [
+              {
+                "w": "one day",
+                "t": "bir kun",
+                "tr": "однажды"
+              },
+              {
+                "w": "phone calls",
+                "t": "telefon qo'ng'iroqlari",
+                "tr": "телефонные звонки"
+              },
+              {
+                "w": "free",
+                "t": "bepul",
+                "tr": "бесплатный"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Politicians often have a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with them when they go to other countries."
+              },
+              {
+                "type": "hint",
+                "content": "TRANSLATE"
+              }
+            ],
+            "answers": [
+              "translator"
+            ],
+            "words": [
+              {
+                "w": "politicians",
+                "t": "siyosatchilar",
+                "tr": "политики"
+              },
+              {
+                "w": "often",
+                "t": "tez-tez",
+                "tr": "часто"
+              },
+              {
+                "w": "countries",
+                "t": "mamlakatlar",
+                "tr": "страны"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I would hate to give a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in front of hundreds of people!"
+              },
+              {
+                "type": "hint",
+                "content": "SPEAK"
+              }
+            ],
+            "answers": [
+              "speech"
+            ],
+            "words": [
+              {
+                "w": "hate",
+                "t": "yoqtirmaslik",
+                "tr": "ненавидеть"
+              },
+              {
+                "w": "give a speech",
+                "t": "nutq so'zlamoq",
+                "tr": "произносить речь"
+              },
+              {
+                "w": "in front of",
+                "t": "oldida",
+                "tr": "перед"
+              },
+              {
+                "w": "hundreds",
+                "t": "yuzlab",
+                "tr": "сотни"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Who knows what means of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " will be invented in the future?"
+              },
+              {
+                "type": "hint",
+                "content": "COMMUNICATE"
+              }
+            ],
+            "answers": [
+              "communication"
+            ],
+            "words": [
+              {
+                "w": "who knows",
+                "t": "kim bilsin",
+                "tr": "кто знает"
+              },
+              {
+                "w": "means",
+                "t": "vosita",
+                "tr": "средство"
+              },
+              {
+                "w": "invented",
+                "t": "ixtiro qilinmoq",
+                "tr": "изобретено"
+              },
+              {
+                "w": "future",
+                "t": "kelajak",
+                "tr": "будущее"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There's something wrong with my "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the Internet, so I can't send and receive e-mails."
+              },
+              {
+                "type": "hint",
+                "content": "CONNECT"
+              }
+            ],
+            "answers": [
+              "connection"
+            ],
+            "words": [
+              {
+                "w": "something wrong",
+                "t": "nimadir noto'g'ri",
+                "tr": "что-то не так"
+              },
+              {
+                "w": "receive",
+                "t": "olmoq",
+                "tr": "получать"
+              },
+              {
+                "w": "e-mails",
+                "t": "elektron xatlar",
+                "tr": "электронные письма"
+              }
+            ]
+          },
+          {
+            "id": "u21p3-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The mobile phone has "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " made life a lot easier."
+              },
+              {
+                "type": "hint",
+                "content": "CERTAIN"
+              }
+            ],
+            "answers": [
+              "certainly"
+            ],
+            "words": [
+              {
+                "w": "mobile phone",
+                "t": "mobil telefon",
+                "tr": "мобильный телефон"
+              },
+              {
+                "w": "made",
+                "t": "qildi",
+                "tr": "сделал"
+              },
+              {
+                "w": "life",
+                "t": "hayot",
+                "tr": "жизнь"
+              },
+              {
+                "w": "easier",
+                "t": "osonroq",
+                "tr": "легче"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

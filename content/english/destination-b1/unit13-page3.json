@@ -1,0 +1,623 @@
+{
+  "id": "unit13-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u13p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zni ishlating va birinchi gapga o'xshash ma'noli ikkinchi gapni to'ldiring. Uch so'zdan ko'p yozmang.",
+      "instruction_ru": "Используя данное слово, завершите второе предложение так, чтобы оно имело схожее значение с первым. Напишите не более трёх слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u13p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We don't know anything about the problem. **information**\nWe don't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about the problem."
+              }
+            ],
+            "answers": [
+              "have any information"
+            ],
+            "alternateAnswers": [
+              [
+                "have any info"
+              ]
+            ],
+            "words": [
+              {
+                "w": "information",
+                "t": "ma'lumot",
+                "tr": "информация"
+              },
+              {
+                "w": "problem",
+                "t": "muammo",
+                "tr": "проблема"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is it okay if I have some cheese? **bit**\nIs it okay if I have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cheese?"
+              }
+            ],
+            "answers": [
+              "a bit of"
+            ],
+            "words": [
+              {
+                "w": "cheese",
+                "t": "pishloq",
+                "tr": "сыр"
+              },
+              {
+                "w": "a bit of",
+                "t": "biroz",
+                "tr": "немного"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There's only a little coffee left in the jar. **much**\nThere "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " coffee left in the jar."
+              }
+            ],
+            "answers": [
+              "isn't much"
+            ],
+            "alternateAnswers": [
+              [
+                "is not much"
+              ]
+            ],
+            "words": [
+              {
+                "w": "coffee",
+                "t": "qahva",
+                "tr": "кофе"
+              },
+              {
+                "w": "jar",
+                "t": "shisha idish",
+                "tr": "банка"
+              },
+              {
+                "w": "left",
+                "t": "qolgan",
+                "tr": "оставшийся"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I try not to drink too much Coca-Cola in a week. **cans**\nI try not to drink too "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of Coca-Cola in a week."
+              }
+            ],
+            "answers": [
+              "many cans"
+            ],
+            "words": [
+              {
+                "w": "drink",
+                "t": "ichmoq",
+                "tr": "пить"
+              },
+              {
+                "w": "can",
+                "t": "banka",
+                "tr": "банка"
+              },
+              {
+                "w": "week",
+                "t": "hafta",
+                "tr": "неделя"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Would you like some more chocolate? **piece**\nWould you like "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " chocolate?"
+              }
+            ],
+            "answers": [
+              "another piece of"
+            ],
+            "alternateAnswers": [
+              [
+                "a piece of"
+              ]
+            ],
+            "words": [
+              {
+                "w": "chocolate",
+                "t": "shokolad",
+                "tr": "шоколад"
+              },
+              {
+                "w": "piece",
+                "t": "bo'lak",
+                "tr": "кусочек"
+              },
+              {
+                "w": "another",
+                "t": "yana bir",
+                "tr": "ещё один"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't want a lot of cream on my strawberries. **cream**\nI only want "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on my strawberries."
+              }
+            ],
+            "answers": [
+              "a little cream"
+            ],
+            "words": [
+              {
+                "w": "cream",
+                "t": "qaymoq",
+                "tr": "сливки"
+              },
+              {
+                "w": "strawberries",
+                "t": "qulupnaylar",
+                "tr": "клубника"
+              },
+              {
+                "w": "a little",
+                "t": "ozgina",
+                "tr": "немного"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u13p3-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u13p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Be careful with that vase because it's made of "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "glass",
+                  "a glass"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " !"
+              }
+            ],
+            "words": [
+              {
+                "w": "careful",
+                "t": "ehtiyotkor",
+                "tr": "осторожный"
+              },
+              {
+                "w": "vase",
+                "t": "vaza",
+                "tr": "ваза"
+              },
+              {
+                "w": "glass",
+                "t": "shisha",
+                "tr": "стекло/стакан"
+              },
+              {
+                "w": "made of",
+                "t": "dan yasalgan",
+                "tr": "сделан из"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I started coughing because I had "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "hair",
+                  "a hair"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " at the back of my throat."
+              }
+            ],
+            "words": [
+              {
+                "w": "coughing",
+                "t": "yo'talmoq",
+                "tr": "кашлять"
+              },
+              {
+                "w": "hair",
+                "t": "soch/tuk",
+                "tr": "волос"
+              },
+              {
+                "w": "throat",
+                "t": "tomoq",
+                "tr": "горло"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't put your hot cup on my new table! It's "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "wood",
+                  "a wood"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " and I don't want you to burn it."
+              }
+            ],
+            "words": [
+              {
+                "w": "table",
+                "t": "stol",
+                "tr": "стол"
+              },
+              {
+                "w": "wood",
+                "t": "yog'och",
+                "tr": "дерево"
+              },
+              {
+                "w": "burn",
+                "t": "kuymoq",
+                "tr": "обжечь"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We should all recycle "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "paper",
+                  "a paper"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " so that it can be used again."
+              }
+            ],
+            "words": [
+              {
+                "w": "recycle",
+                "t": "qayta ishlash",
+                "tr": "перерабатывать"
+              },
+              {
+                "w": "paper",
+                "t": "qog'oz",
+                "tr": "бумага"
+              },
+              {
+                "w": "used again",
+                "t": "qayta ishlatmoq",
+                "tr": "использовать повторно"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My dad gets "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "paper",
+                  "a paper"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " every day on his way to work."
+              }
+            ],
+            "words": [
+              {
+                "w": "paper",
+                "t": "gazeta",
+                "tr": "газета"
+              },
+              {
+                "w": "every day",
+                "t": "har kuni",
+                "tr": "каждый день"
+              },
+              {
+                "w": "on his way to work",
+                "t": "ishga ketayotganda",
+                "tr": "по дороге на работу"
+              }
+            ]
+          },
+          {
+            "id": "u13p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Of course you can have some milk. Get "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "glass",
+                  "a glass"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " out of the cupboard."
+              }
+            ],
+            "words": [
+              {
+                "w": "milk",
+                "t": "sut",
+                "tr": "молоко"
+              },
+              {
+                "w": "glass",
+                "t": "stakan",
+                "tr": "стакан"
+              },
+              {
+                "w": "cupboard",
+                "t": "shkaf",
+                "tr": "шкаф"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u13p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте по одному слову в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u13p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Even if you only have a (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " money, you can still have a great time at your local open-air market. The clothes (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cheap, and the fruit (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cheap, too! Often, the food in your local supermarket (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " travelled a long way, but at the market you know that you're buying food which has been produced locally. The vegetables (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fresh, even if you go late in the day when there are only a (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " left. Support your local market and help local farmers. Contact your Town Hall to find out if there are (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " open-air markets in your area."
+              }
+            ],
+            "answers": [
+              "little",
+              "are",
+              "is",
+              "has",
+              "are",
+              "few",
+              "any"
+            ],
+            "words": [
+              {
+                "w": "open-air market",
+                "t": "ochiq bozor",
+                "tr": "рынок под открытым небом"
+              },
+              {
+                "w": "local",
+                "t": "mahalliy",
+                "tr": "местный"
+              },
+              {
+                "w": "clothes",
+                "t": "kiyim-kechak",
+                "tr": "одежда"
+              },
+              {
+                "w": "cheap",
+                "t": "arzon",
+                "tr": "дешёвый"
+              },
+              {
+                "w": "fruit",
+                "t": "meva",
+                "tr": "фрукт"
+              },
+              {
+                "w": "supermarket",
+                "t": "supermarket",
+                "tr": "супермаркет"
+              },
+              {
+                "w": "produced locally",
+                "t": "mahalliy ishlab chiqarilgan",
+                "tr": "произведено местно"
+              },
+              {
+                "w": "vegetables",
+                "t": "sabzavotlar",
+                "tr": "овощи"
+              },
+              {
+                "w": "fresh",
+                "t": "yangi",
+                "tr": "свежий"
+              },
+              {
+                "w": "farmers",
+                "t": "dehqonlar",
+                "tr": "фермеры"
+              },
+              {
+                "w": "Town Hall",
+                "t": "shahar hokimiyati",
+                "tr": "городская администрация"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

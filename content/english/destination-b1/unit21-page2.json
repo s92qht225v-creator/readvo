@@ -1,0 +1,571 @@
+{
+  "id": "unit21-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u21p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi fe'llarning to'g'ri shaklini bo'sh joylarga yozing.",
+      "instruction_ru": "Вставьте правильную форму глаголов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "broadcast",
+          "click",
+          "interrupt",
+          "pause",
+          "publish",
+          "ring",
+          "swear",
+          "type"
+        ],
+        "cards": [
+          {
+            "id": "u21p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You have to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on the picture by pressing the left button on your mouse."
+              }
+            ],
+            "answers": [
+              "click"
+            ],
+            "words": [
+              {
+                "w": "picture",
+                "t": "rasm",
+                "tr": "картинка"
+              },
+              {
+                "w": "pressing",
+                "t": "bosmoq",
+                "tr": "нажимая"
+              },
+              {
+                "w": "left button",
+                "t": "chap tugma",
+                "tr": "левая кнопка"
+              },
+              {
+                "w": "mouse",
+                "t": "sichqoncha",
+                "tr": "мышь"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Writing and sending e-mails is a lot faster if you learn how to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " properly."
+              }
+            ],
+            "answers": [
+              "type"
+            ],
+            "words": [
+              {
+                "w": "writing",
+                "t": "yozish",
+                "tr": "написание"
+              },
+              {
+                "w": "sending",
+                "t": "yuborish",
+                "tr": "отправка"
+              },
+              {
+                "w": "faster",
+                "t": "tezroq",
+                "tr": "быстрее"
+              },
+              {
+                "w": "learn",
+                "t": "o'rganmoq",
+                "tr": "учиться"
+              },
+              {
+                "w": "properly",
+                "t": "to'g'ri",
+                "tr": "правильно"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I couldn't believe it when Greg "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in front of the head teacher!"
+              }
+            ],
+            "answers": [
+              "swore"
+            ],
+            "alternateAnswers": [
+              [
+                "swore",
+                "sweared"
+              ]
+            ],
+            "words": [
+              {
+                "w": "couldn't believe",
+                "t": "ishonolmadim",
+                "tr": "не мог поверить"
+              },
+              {
+                "w": "in front of",
+                "t": "oldida",
+                "tr": "перед"
+              },
+              {
+                "w": "head teacher",
+                "t": "direktor",
+                "tr": "директор"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The man on the telephone "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for a moment and then said, 'Tell no one!'"
+              }
+            ],
+            "answers": [
+              "paused"
+            ],
+            "words": [
+              {
+                "w": "telephone",
+                "t": "telefon",
+                "tr": "телефон"
+              },
+              {
+                "w": "moment",
+                "t": "bir lahza",
+                "tr": "момент"
+              },
+              {
+                "w": "then",
+                "t": "keyin",
+                "tr": "потом"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This programme was first "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in 1967 and hasn't been shown on TV since then."
+              }
+            ],
+            "answers": [
+              "broadcast"
+            ],
+            "words": [
+              {
+                "w": "programme",
+                "t": "dastur",
+                "tr": "программа"
+              },
+              {
+                "w": "shown",
+                "t": "ko'rsatilgan",
+                "tr": "показан"
+              },
+              {
+                "w": "since then",
+                "t": "o'shandan beri",
+                "tr": "с тех пор"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Please don't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me. Let me finish what I wanted to say."
+              }
+            ],
+            "answers": [
+              "interrupt"
+            ],
+            "words": [
+              {
+                "w": "please",
+                "t": "iltimos",
+                "tr": "пожалуйста"
+              },
+              {
+                "w": "finish",
+                "t": "tugatmoq",
+                "tr": "закончить"
+              },
+              {
+                "w": "wanted to say",
+                "t": "aytmoqchi bo'lgan",
+                "tr": "хотел сказать"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our school might "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a weekly magazine to keep parents and students informed about what's happening."
+              }
+            ],
+            "answers": [
+              "publish"
+            ],
+            "words": [
+              {
+                "w": "weekly",
+                "t": "haftalik",
+                "tr": "еженедельный"
+              },
+              {
+                "w": "magazine",
+                "t": "jurnal",
+                "tr": "журнал"
+              },
+              {
+                "w": "keep informed",
+                "t": "xabardor qilmoq",
+                "tr": "держать в курсе"
+              },
+              {
+                "w": "parents",
+                "t": "ota-onalar",
+                "tr": "родители"
+              },
+              {
+                "w": "happening",
+                "t": "sodir bo'layotgan",
+                "tr": "происходящее"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Michael and let him know about the plan for this evening."
+              }
+            ],
+            "answers": [
+              "ring"
+            ],
+            "words": [
+              {
+                "w": "should",
+                "t": "kerak",
+                "tr": "следует"
+              },
+              {
+                "w": "let him know",
+                "t": "unga xabar bermoq",
+                "tr": "дать ему знать"
+              },
+              {
+                "w": "plan",
+                "t": "reja",
+                "tr": "план"
+              },
+              {
+                "w": "evening",
+                "t": "kechqurun",
+                "tr": "вечер"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u21p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "What John said on the phone wasn't very "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "clear",
+                  "online"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " so I asked him to repeat it."
+              }
+            ],
+            "words": [
+              {
+                "w": "said",
+                "t": "aytdi",
+                "tr": "сказал"
+              },
+              {
+                "w": "phone",
+                "t": "telefon",
+                "tr": "телефон"
+              },
+              {
+                "w": "asked",
+                "t": "so'radim",
+                "tr": "попросил"
+              },
+              {
+                "w": "repeat",
+                "t": "qaytarmoq",
+                "tr": "повторить"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Sandy waited until the teacher was looking the other way. 'Meet me after school,' he "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "whispered",
+                  "requested"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " quietly in my ear."
+              }
+            ],
+            "words": [
+              {
+                "w": "waited",
+                "t": "kutdi",
+                "tr": "ждал"
+              },
+              {
+                "w": "until",
+                "t": "tokiga",
+                "tr": "пока"
+              },
+              {
+                "w": "looking the other way",
+                "t": "boshqa tomonga qaragan",
+                "tr": "смотрел в другую сторону"
+              },
+              {
+                "w": "meet",
+                "t": "uchrashmoq",
+                "tr": "встретиться"
+              },
+              {
+                "w": "quietly",
+                "t": "jimgina",
+                "tr": "тихо"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How do you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "persuade",
+                  "pronounce"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " your name?"
+              }
+            ],
+            "words": [
+              {
+                "w": "name",
+                "t": "ism",
+                "tr": "имя"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You should use "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "formal",
+                  "informal"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " language when you're writing to someone you don't know personally."
+              }
+            ],
+            "words": [
+              {
+                "w": "language",
+                "t": "til",
+                "tr": "язык"
+              },
+              {
+                "w": "writing",
+                "t": "yozmoq",
+                "tr": "писать"
+              },
+              {
+                "w": "someone",
+                "t": "kimdir",
+                "tr": "кто-то"
+              },
+              {
+                "w": "personally",
+                "t": "shaxsan",
+                "tr": "лично"
+              }
+            ]
+          },
+          {
+            "id": "u21p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why do you keep on switching "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "channels",
+                  "mobile phones"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": "? I'm trying to watch this film!"
+              }
+            ],
+            "words": [
+              {
+                "w": "keep on",
+                "t": "davom ettirmoq",
+                "tr": "продолжать"
+              },
+              {
+                "w": "switching",
+                "t": "almashtirmoq",
+                "tr": "переключать"
+              },
+              {
+                "w": "trying",
+                "t": "urinmoq",
+                "tr": "пытаться"
+              },
+              {
+                "w": "film",
+                "t": "film",
+                "tr": "фильм"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

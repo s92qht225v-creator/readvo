@@ -1,0 +1,1499 @@
+{
+  "id": "review14-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 14,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 40, 41 and 42",
+    "titleTranslation_ru": "Units 40, 41 and 42"
+  },
+  "sections": [
+    {
+      "id": "r14p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi fe'llarning to'g'ri shaklini qo'yib, jumlalarni to'ldiring.",
+      "instruction_ru": "Вставьте правильную форму глаголов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "complain",
+          "convince",
+          "criticise",
+          "deny",
+          "doubt",
+          "praise",
+          "refuse",
+          "warn"
+        ],
+        "cards": [
+          {
+            "id": "r14-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "1  It took a long time to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Lee that poetry isn't boring."
+              }
+            ],
+            "answers": [
+              "convince"
+            ],
+            "words": [
+              {
+                "w": "convince",
+                "t": "ishontirmoq",
+                "tr": "убедить"
+              },
+              {
+                "w": "poetry",
+                "t": "she'riyat",
+                "tr": "поэзия"
+              },
+              {
+                "w": "boring",
+                "t": "zerikarli",
+                "tr": "скучный"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r14-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "2  My dad has just "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to increase my pocket money again. It's not fair!"
+              }
+            ],
+            "answers": [
+              "refused"
+            ],
+            "words": [
+              {
+                "w": "refused",
+                "t": "rad etdi",
+                "tr": "отказал"
+              },
+              {
+                "w": "increase",
+                "t": "oshirmoq",
+                "tr": "увеличить"
+              },
+              {
+                "w": "pocket money",
+                "t": "xarajat puli",
+                "tr": "карманные деньги"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r14-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "3  Stop "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about how much work you have and just get on with it!"
+              }
+            ],
+            "answers": [
+              "complaining"
+            ],
+            "words": [
+              {
+                "w": "complaining",
+                "t": "shikoyat qilish",
+                "tr": "жаловаться"
+              },
+              {
+                "w": "get on with it",
+                "t": "davom ettirmoq",
+                "tr": "продолжать"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r14-a-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "4  I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it'll be warm enough to go to the beach tomorrow."
+              }
+            ],
+            "answers": [
+              "doubt"
+            ],
+            "words": [
+              {
+                "w": "doubt",
+                "t": "shubhalanmoq",
+                "tr": "сомневаться"
+              },
+              {
+                "w": "warm enough",
+                "t": "yetarlicha issiq",
+                "tr": "достаточно тепло"
+              },
+              {
+                "w": "beach",
+                "t": "plyaj",
+                "tr": "пляж"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r14-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "5  We all "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you not to trust Jerry, but you didn't listen!"
+              }
+            ],
+            "answers": [
+              "warned"
+            ],
+            "words": [
+              {
+                "w": "warned",
+                "t": "ogohlantirdi",
+                "tr": "предупредили"
+              },
+              {
+                "w": "trust",
+                "t": "ishonmoq",
+                "tr": "доверять"
+              },
+              {
+                "w": "listen",
+                "t": "eshitmoq",
+                "tr": "слушать"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r14-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "6  Paul Fletcher, do you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " stealing €1,000 from Leicester Stores on 24th September?"
+              }
+            ],
+            "answers": [
+              "deny"
+            ],
+            "words": [
+              {
+                "w": "deny",
+                "t": "inkor qilmoq",
+                "tr": "отрицать"
+              },
+              {
+                "w": "stealing",
+                "t": "o'g'irlamoq",
+                "tr": "красть"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r14-a-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "7  You should always "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a puppy when it does something good."
+              }
+            ],
+            "answers": [
+              "praise"
+            ],
+            "words": [
+              {
+                "w": "praise",
+                "t": "maqtamoq",
+                "tr": "хвалить"
+              },
+              {
+                "w": "puppy",
+                "t": "kuchukcha",
+                "tr": "щенок"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r14-a-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "8  I wish Alex wouldn't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me all the time. It makes me feel useless."
+              }
+            ],
+            "answers": [
+              "criticise"
+            ],
+            "alternateAnswers": [
+              [
+                "criticize"
+              ]
+            ],
+            "words": [
+              {
+                "w": "criticise",
+                "t": "tanqid qilmoq",
+                "tr": "критиковать"
+              },
+              {
+                "w": "useless",
+                "t": "befoyda",
+                "tr": "бесполезный"
+              }
+            ],
+            "number": 8
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r14p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте по одному слову в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r14-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "9  "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my view, every problem has a solution."
+              }
+            ],
+            "answers": [
+              "In"
+            ],
+            "words": [
+              {
+                "w": "In my view",
+                "t": "mening fikrimcha",
+                "tr": "по моему мнению"
+              },
+              {
+                "w": "solution",
+                "t": "yechim",
+                "tr": "решение"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r14-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "10  Your room is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a terrible mess! Tidy it up!"
+              }
+            ],
+            "answers": [
+              "such"
+            ],
+            "words": [
+              {
+                "w": "such a mess",
+                "t": "bunday tartibsizlik",
+                "tr": "такой беспорядок"
+              },
+              {
+                "w": "tidy up",
+                "t": "tartibga solmoq",
+                "tr": "убрать"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r14-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "11  My mum is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a lot of pressure at work at the moment."
+              }
+            ],
+            "answers": [
+              "under"
+            ],
+            "words": [
+              {
+                "w": "under pressure",
+                "t": "bosim ostida",
+                "tr": "под давлением"
+              },
+              {
+                "w": "at the moment",
+                "t": "hozirda",
+                "tr": "в данный момент"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r14-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "12  Oh no! Are you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " trouble with the police again?"
+              }
+            ],
+            "answers": [
+              "in"
+            ],
+            "words": [
+              {
+                "w": "in trouble",
+                "t": "muammoda",
+                "tr": "в неприятностях"
+              },
+              {
+                "w": "police",
+                "t": "politsiya",
+                "tr": "полиция"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r14-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "13  We weren't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " any real danger, I promise!"
+              }
+            ],
+            "answers": [
+              "in"
+            ],
+            "words": [
+              {
+                "w": "in danger",
+                "t": "xavfda",
+                "tr": "в опасности"
+              },
+              {
+                "w": "promise",
+                "t": "va'da bermoq",
+                "tr": "обещаю"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r14-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "14  I got on the wrong train "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " mistake!"
+              }
+            ],
+            "answers": [
+              "by"
+            ],
+            "words": [
+              {
+                "w": "by mistake",
+                "t": "xato bilan",
+                "tr": "по ошибке"
+              },
+              {
+                "w": "wrong train",
+                "t": "noto'g'ri poyezd",
+                "tr": "не тот поезд"
+              }
+            ],
+            "number": 14
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r14p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r14-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "15  Let's throw these old clothes away. "
+              },
+              {
+                "type": "hint",
+                "content": "rid"
+              },
+              {
+                "type": "text",
+                "content": "\nLet's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " these old clothes."
+              }
+            ],
+            "answers": [
+              "get rid of"
+            ],
+            "words": [
+              {
+                "w": "throw away",
+                "t": "tashlash",
+                "tr": "выбросить"
+              },
+              {
+                "w": "get rid of",
+                "t": "xalos bo'lmoq",
+                "tr": "избавиться от"
+              },
+              {
+                "w": "old clothes",
+                "t": "eski kiyimlar",
+                "tr": "старая одежда"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r14-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "16  I don't think people should drive fast through the town centre. "
+              },
+              {
+                "type": "hint",
+                "content": "approve"
+              },
+              {
+                "type": "text",
+                "content": "\nI don't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fast through the town centre."
+              }
+            ],
+            "answers": [
+              "approve of people driving"
+            ],
+            "alternateAnswers": [
+              [
+                "approve of anyone driving"
+              ]
+            ],
+            "words": [
+              {
+                "w": "approve of",
+                "t": "ma'qullash",
+                "tr": "одобрять"
+              },
+              {
+                "w": "town centre",
+                "t": "shahar markazi",
+                "tr": "центр города"
+              }
+            ],
+            "number": 16
+          },
+          {
+            "id": "r14-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "17  Do you think that ghosts exist? "
+              },
+              {
+                "type": "hint",
+                "content": "believe"
+              },
+              {
+                "type": "text",
+                "content": "\nDo you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ghosts?"
+              }
+            ],
+            "answers": [
+              "believe in"
+            ],
+            "words": [
+              {
+                "w": "ghosts",
+                "t": "arvohlar",
+                "tr": "привидения"
+              },
+              {
+                "w": "exist",
+                "t": "mavjud bo'lmoq",
+                "tr": "существовать"
+              },
+              {
+                "w": "believe in",
+                "t": "ishonmoq",
+                "tr": "верить в"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r14-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "18  You should solve that problem as quickly as you can. "
+              },
+              {
+                "type": "hint",
+                "content": "sort"
+              },
+              {
+                "type": "text",
+                "content": "\nYou should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " as quickly as you can."
+              }
+            ],
+            "answers": [
+              "sort out that problem"
+            ],
+            "alternateAnswers": [
+              [
+                "sort that problem out"
+              ]
+            ],
+            "words": [
+              {
+                "w": "solve",
+                "t": "hal qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "sort out",
+                "t": "hal qilmoq",
+                "tr": "разобраться"
+              },
+              {
+                "w": "as quickly as you can",
+                "t": "imkon qadar tez",
+                "tr": "как можно быстрее"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r14-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "19  I'm afraid we haven't got any sandwiches left. "
+              },
+              {
+                "type": "hint",
+                "content": "run"
+              },
+              {
+                "type": "text",
+                "content": "\nI'm afraid we've "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " sandwiches."
+              }
+            ],
+            "answers": [
+              "run out of"
+            ],
+            "words": [
+              {
+                "w": "run out of",
+                "t": "tugamoq",
+                "tr": "закончиться"
+              },
+              {
+                "w": "sandwiches",
+                "t": "sendvichlar",
+                "tr": "бутерброды"
+              },
+              {
+                "w": "haven't got any left",
+                "t": "qolmadi",
+                "tr": "не осталось"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r14-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "20  How should teachers handle badly-behaved students? "
+              },
+              {
+                "type": "hint",
+                "content": "deal"
+              },
+              {
+                "type": "text",
+                "content": "\nHow should teachers "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " badly-behaved students?"
+              }
+            ],
+            "answers": [
+              "deal with"
+            ],
+            "words": [
+              {
+                "w": "handle",
+                "t": "boshqarmoq",
+                "tr": "справляться"
+              },
+              {
+                "w": "deal with",
+                "t": "kurashmoq",
+                "tr": "справляться с"
+              },
+              {
+                "w": "badly-behaved",
+                "t": "yomon xulqli",
+                "tr": "плохо ведущий себя"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r14-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "21  If you're not careful, you'll fall! "
+              },
+              {
+                "type": "hint",
+                "content": "watch"
+              },
+              {
+                "type": "text",
+                "content": "\nIf you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", you'll fall!"
+              }
+            ],
+            "answers": [
+              "don't watch out"
+            ],
+            "words": [
+              {
+                "w": "careful",
+                "t": "ehtiyotkor",
+                "tr": "осторожный"
+              },
+              {
+                "w": "watch out",
+                "t": "ehtiyot bo'lmoq",
+                "tr": "беречься"
+              },
+              {
+                "w": "fall",
+                "t": "yiqilmoq",
+                "tr": "упасть"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r14-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "22  I wouldn't buy that computer if I were you. "
+              },
+              {
+                "type": "hint",
+                "content": "advise"
+              },
+              {
+                "type": "text",
+                "content": "\nI would "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that computer."
+              }
+            ],
+            "answers": [
+              "advise you not to buy"
+            ],
+            "words": [
+              {
+                "w": "advise",
+                "t": "maslahat bermoq",
+                "tr": "советовать"
+              },
+              {
+                "w": "advise not to buy",
+                "t": "sotib olmaslikni maslahat bermoq",
+                "tr": "советовать не покупать"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r14-c-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "23  I can't understand why Jake would have said that. "
+              },
+              {
+                "type": "hint",
+                "content": "work"
+              },
+              {
+                "type": "text",
+                "content": "\nI can't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " why Jake would have said that."
+              }
+            ],
+            "answers": [
+              "work out"
+            ],
+            "words": [
+              {
+                "w": "understand",
+                "t": "tushunmoq",
+                "tr": "понять"
+              },
+              {
+                "w": "work out",
+                "t": "tushunmoq/aniqlash",
+                "tr": "разобраться"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "r14-c-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "24  You can always trust Souli. "
+              },
+              {
+                "type": "hint",
+                "content": "rely"
+              },
+              {
+                "type": "text",
+                "content": "\nYou can always "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Souli."
+              }
+            ],
+            "answers": [
+              "rely on"
+            ],
+            "words": [
+              {
+                "w": "trust",
+                "t": "ishonmoq",
+                "tr": "доверять"
+              },
+              {
+                "w": "rely on",
+                "t": "tayanmoq",
+                "tr": "полагаться на"
+              }
+            ],
+            "number": 24
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r14p2-sec-exD",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "r14p2-d1",
+            "number": 25,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'll buy a ticket as soon as I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my pocket money."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "will get",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "would get",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "get",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "got",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r14p2-d2",
+            "number": 26,
+            "parts": [
+              {
+                "type": "text",
+                "content": "The food was great, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it was very expensive."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "although",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "despite",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "however",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "in spite",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "r14p2-d3",
+            "number": 27,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'll get my dad a book for his birthday "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " I find something better."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "if",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "until",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "although",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "unless",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r14p2-d4",
+            "number": 28,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'll send you a text message "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " I'm on the bus."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "before",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "while",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "until",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "as soon as",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r14p2-d5",
+            "number": 29,
+            "parts": [
+              {
+                "type": "text",
+                "content": "We're going to have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " down."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "knocked that wall",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "that wall knocking",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "knocking that wall",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "that wall knocked",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r14p2-d6",
+            "number": 30,
+            "parts": [
+              {
+                "type": "text",
+                "content": "We decided to go for a walk "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of the rain."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "although",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "despite",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "however",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "in spite",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "r14p2-d7",
+            "number": 31,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the windows cleaned about twice a year."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "get",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "put",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "am",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "do",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "r14p2-d8",
+            "number": 32,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Most students did very well. "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", a few students did very badly."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "Although",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "Despite",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "However",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "In spite of",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r14p2-sec-exE",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan, shu qatordagi bo'sh joyga to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте от слова, данного заглавными буквами в конце строки, нужную форму и впишите в пропуск в той же строке.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r14-e-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Careers advice\n\nDo you know what job or career you want to do when you leave school? Maybe you know exactly what you want to do. If so, you're (33) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! For most teenagers, thinking about future jobs can lead to (34) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". That's what careers (35) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " are for. They're people who ask you questions about your (36) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and help you with your choices. They can make (37) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about jobs which might suit you, and can also make (38) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about where to find more information. They're not there to tell you what to do, they're just there to be (39) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". Choosing the right career can be a problem, but you don't need to search for the (40) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on your own!"
+              },
+              {
+                "type": "hint",
+                "content": "LUCK / CONFUSE / ADVICE / PREFER / SUGGEST / RECOMMEND / HELP / SOLVE"
+              }
+            ],
+            "answers": [
+              "lucky",
+              "confusion",
+              "advisers",
+              "preferences",
+              "suggestions",
+              "recommendations",
+              "helpful",
+              "solution"
+            ],
+            "alternateAnswers": [
+              [
+                "lucky"
+              ],
+              [
+                "confusion"
+              ],
+              [
+                "advisors"
+              ],
+              [
+                "preferences"
+              ],
+              [
+                "suggestions"
+              ],
+              [
+                "recommendations"
+              ],
+              [
+                "helpful"
+              ],
+              [
+                "solution"
+              ]
+            ],
+            "words": [
+              {
+                "w": "career",
+                "t": "kasb",
+                "tr": "карьера"
+              },
+              {
+                "w": "leave school",
+                "t": "maktabni tugatmoq",
+                "tr": "окончить школу"
+              },
+              {
+                "w": "exactly",
+                "t": "aynan",
+                "tr": "именно"
+              },
+              {
+                "w": "lucky",
+                "t": "omadli",
+                "tr": "удачливый"
+              },
+              {
+                "w": "confusion",
+                "t": "chalkashlik",
+                "tr": "путаница"
+              },
+              {
+                "w": "advisers",
+                "t": "maslahatchilar",
+                "tr": "советники"
+              },
+              {
+                "w": "preferences",
+                "t": "afzalliklar",
+                "tr": "предпочтения"
+              },
+              {
+                "w": "suggestions",
+                "t": "takliflar",
+                "tr": "предложения"
+              },
+              {
+                "w": "suit",
+                "t": "mos kelmoq",
+                "tr": "подходить"
+              },
+              {
+                "w": "recommendations",
+                "t": "tavsiyalar",
+                "tr": "рекомендации"
+              },
+              {
+                "w": "helpful",
+                "t": "foydali",
+                "tr": "полезный"
+              },
+              {
+                "w": "solution",
+                "t": "yechim",
+                "tr": "решение"
+              },
+              {
+                "w": "on your own",
+                "t": "o'z-o'zingiz",
+                "tr": "самостоятельно"
+              }
+            ],
+            "number": ""
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

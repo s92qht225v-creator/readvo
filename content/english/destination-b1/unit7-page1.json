@@ -1,0 +1,138 @@
+{
+  "id": "unit7-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 7,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Future time (present continuous, will, be going to, present simple)",
+    "titleTranslation_ru": "Future time (present continuous, will, be going to, present simple)"
+  },
+  "sections": [
+    {
+      "id": "u7p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Present continuous",
+      "subheading_uz": "Present continuous",
+      "subheading_ru": "Present continuous",
+      "instruction": "Present Continuous shakli uchun 1-bo'limga qarang.",
+      "instruction_ru": "Форму Present Continuous смотрите в разделе 1.",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Arrangements", "_We're **driving** to Berlin this weekend._"], "cells_uz": ["Kelishilgan rejalar", "_Biz bu hafta oxirida Berlinga **haydab** boramiz._"], "cells_ru": ["Договорённости", "_Мы **едем** в Берлин в эти выходные._"] }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Kelajakda qilmoqchi bo'lgan, lekin hali kelishilmagan (niyatlar) ishlarni aytganda Present Continuous ishlatmaymiz. Be going to ishlatamiz.\n✗ _I'm becoming an explorer when I grow up._\n✓ _I'm **going to** become an explorer when I grow up._\n\n• Bashoratlar uchun Present Continuous ishlatmaymiz. Will yoki be going to ishlatamiz.\n✗ _Do you think you're enjoying your trip to Berlin next week?_\n✓ _Do you think you **will** enjoy your trip to Berlin next week?_",
+        "translation_ru": "• Мы не используем Present Continuous для намерений, которые ещё не согласованы. Мы используем be going to.\n✗ _I'm becoming an explorer when I grow up._\n✓ _I'm **going to** become an explorer when I grow up._\n\n• Мы не используем Present Continuous для предсказаний. Мы используем will или be going to.\n✗ _Do you think you're enjoying your trip to Berlin next week?_\n✓ _Do you think you **will** enjoy your trip to Berlin next week?_"
+      }
+    },
+    {
+      "id": "u7p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "will",
+      "subheading_uz": "will",
+      "subheading_ru": "will",
+      "instruction": "will + bare infinitive",
+      "instruction_ru": "will + инфинитив без частицы to",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["**statement**", "**negative**", "**question**"], "cells_uz": ["**darak gap**", "**inkor gap**", "**so'roq gap**"], "cells_ru": ["**утверждение**", "**отрицание**", "**вопрос**"] },
+          { "cells": ["I/you/he/she/it/we/they will ('ll) go ...", "I/you/he/she/it/we/they will not (won't) go ...", "**Will** I/you/he/she/it/we/they go ...?"], "cells_uz": ["I/you/he/she/it/we/they will ('ll) go ...", "I/you/he/she/it/we/they will not (won't) go ...", "**Will** I/you/he/she/it/we/they go ...?"], "cells_ru": ["I/you/he/she/it/we/they will ('ll) go ...", "I/you/he/she/it/we/they will not (won't) go ...", "**Will** I/you/he/she/it/we/they go ...?"] }
+        ]
+      }
+    },
+    {
+      "id": "u7p1-sec-use1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Facts about the future", "_The new airport **will** be the biggest in Europe._"], "cells_uz": ["Kelajak haqidagi faktlar", "_Yangi aeroport Evropadagi eng kattasi **bo'ladi**._"], "cells_ru": ["Факты о будущем", "_Новый аэропорт **будет** самым большим в Европе._"] },
+          { "cells": ["Predictions", "_You'll have a great time in the Bahamas._"], "cells_uz": ["Bashoratlar", "_Siz Bahamada ajoyib vaqt o'tkazasiz._"], "cells_ru": ["Предсказания", "_Вам прекрасно понравится на Багамах._"] },
+          { "cells": ["Offers and requests", "_We'll help you get ready for your holiday._"], "cells_uz": ["Takliflar va iltimoslar", "_Biz sizga ta'tilga tayyorlanishingizga yordam beramiz._"], "cells_ru": ["Предложения и просьбы", "_Мы поможем вам подготовиться к отпуску._"] },
+          { "cells": ["Decisions made now", "_I know! I'll go to China this summer!_"], "cells_uz": ["Hozir qilingan qarorlar", "_Bilaman! Bu yoz Xitoyga boraman!_"], "cells_ru": ["Решения, принятые в данный момент", "_Знаю! Этим летом поеду в Китай!_"] }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Taklif va iltimoslar so'roq gap bo'lsa, will bilan emas, shall bilan ishlatamiz (I va we bilan).\n✓ _**Shall** I drive you to the airport?_\n\n• Kelishilgan rejalar (arrangements) uchun will ishlatmaymiz:\n✗ _We'll visit my grandma this weekend._",
+        "translation_ru": "• С предложениями и просьбами в вопросах мы используем shall (с I и we), а не will.\n✓ _**Shall** I drive you to the airport?_\n\n• Мы не используем will для договорённостей:\n✗ _We'll visit my grandma this weekend._"
+      }
+    },
+    {
+      "id": "u7p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "be going to",
+      "subheading_uz": "be going to",
+      "subheading_ru": "be going to",
+      "instruction": "be going to + bare infinitive",
+      "instruction_ru": "be going to + инфинитив без частицы to",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["**statement**", "**negative**", "**question**"], "cells_uz": ["**darak gap**", "**inkor gap**", "**so'roq gap**"], "cells_ru": ["**утверждение**", "**отрицание**", "**вопрос**"] },
+          { "cells": ["I **am ('m) going to** travel ...\nHe/she/it **is ('s) going to** travel ...\nYou/we/they **are ('re) going to** travel ...", "I **am ('m) not going to** travel ...\nHe/she/it **is not (isn't / 's not) going to** travel ...\nYou/we/they **are not (aren't / 're not) going to** travel ...", "**Am** I **going to** travel ...?\n**Is** he/she/it **going to** travel ...?\n**Are** you/we/they **going to** travel ...?"], "cells_uz": ["I **am ('m) going to** travel ...\nHe/she/it **is ('s) going to** travel ...\nYou/we/they **are ('re) going to** travel ...", "I **am ('m) not going to** travel ...\nHe/she/it **is not (isn't / 's not) going to** travel ...\nYou/we/they **are not (aren't / 're not) going to** travel ...", "**Am** I **going to** travel ...?\n**Is** he/she/it **going to** travel ...?\n**Are** you/we/they **going to** travel ...?"], "cells_ru": ["I **am ('m) going to** travel ...\nHe/she/it **is ('s) going to** travel ...\nYou/we/they **are ('re) going to** travel ...", "I **am ('m) not going to** travel ...\nHe/she/it **is not (isn't / 's not) going to** travel ...\nYou/we/they **are not (aren't / 're not) going to** travel ...", "**Am** I **going to** travel ...?\n**Is** he/she/it **going to** travel ...?\n**Are** you/we/they **going to** travel ...?"] }
+        ]
+      }
+    },
+    {
+      "id": "u7p1-sec-use2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Intentions", "_I'm **going to** become an explorer when I grow up._"], "cells_uz": ["Niyatlar", "_Katta bo'lganimda sayyoh **bo'lmoqchiman**._"], "cells_ru": ["Намерения", "_Я **собираюсь** стать путешественником, когда вырасту._"] },
+          { "cells": ["Predictions (often with evidence we can see)", "_It's **going to** rain, so take an umbrella._"], "cells_uz": ["Bashoratlar (ko'pincha ko'rish mumkin bo'lgan dalillar bilan)", "_Yomg'ir **yog'adi**, shuning uchun soyabon oling._"], "cells_ru": ["Предсказания (часто с видимыми признаками)", "_**Пойдёт** дождь, возьмите зонт._"] },
+          { "cells": ["Facts about the future", "_The new airport **is going to** be the biggest in Europe._"], "cells_uz": ["Kelajak haqidagi faktlar", "_Yangi aeroport Evropadagi eng kattasi **bo'ladi**._"], "cells_ru": ["Факты о будущем", "_Новый аэропорт **станет** самым большим в Европе._"] }
+        ]
+      }
+    },
+    {
+      "id": "u7p1-sec-grammar4",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Present simple",
+      "subheading_uz": "Present simple",
+      "subheading_ru": "Present simple",
+      "instruction": "Present Simple shakli uchun 1-bo'limga qarang.",
+      "instruction_ru": "Форму Present Simple смотрите в разделе 1.",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Timetables", "_My plane **leaves** at six._"], "cells_uz": ["Jadvallar", "_Mening samolyotim soat oltida **jo'naydi**._"], "cells_ru": ["Расписания", "_Мой самолёт **отправляется** в шесть._"] }
+        ]
+      }
+    }
+  ]
+}

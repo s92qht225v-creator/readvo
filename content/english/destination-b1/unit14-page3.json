@@ -1,0 +1,732 @@
+{
+  "id": "unit14-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u14p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapda bitta so'z tushib qolgan. Qayerda tushib qolganini ko'rsatib, o'sha so'zni yozing.",
+      "instruction_ru": "В каждом предложении пропущено одно слово. Укажите, где оно должно стоять, и напишите его.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u14p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "English music was popular in America in "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " 1960s."
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "popular",
+                "t": "mashhur",
+                "tr": "популярный"
+              },
+              {
+                "w": "1960s",
+                "t": "1960-yillar",
+                "tr": "1960-е годы"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Would you prefer to read "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " book or watch television?"
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "prefer",
+                "t": "afzal ko'rmoq",
+                "tr": "предпочитать"
+              },
+              {
+                "w": "television",
+                "t": "televizor",
+                "tr": "телевизор"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We had maths at school yesterday and our teacher gave us "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " surprise test!"
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "maths",
+                "t": "matematika",
+                "tr": "математика"
+              },
+              {
+                "w": "surprise test",
+                "t": "kutilmagan test",
+                "tr": "неожиданный тест"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Peter joined "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " police and caught ten thieves in his first month!"
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "joined",
+                "t": "qo'shilmoq",
+                "tr": "вступить"
+              },
+              {
+                "w": "police",
+                "t": "politsiya",
+                "tr": "полиция"
+              },
+              {
+                "w": "caught",
+                "t": "tutmoq",
+                "tr": "поймать"
+              },
+              {
+                "w": "thieves",
+                "t": "o'g'rilar",
+                "tr": "воры"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Gordon wanted to be "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " writer, so he studied English at university."
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "writer",
+                "t": "yozuvchi",
+                "tr": "писатель"
+              },
+              {
+                "w": "studied",
+                "t": "o'qimoq",
+                "tr": "учиться"
+              },
+              {
+                "w": "university",
+                "t": "universitet",
+                "tr": "университет"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Suddenly, two UFOs appeared in "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " sky over Washington."
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "suddenly",
+                "t": "to'satdan",
+                "tr": "вдруг"
+              },
+              {
+                "w": "appeared",
+                "t": "paydo bo'lmoq",
+                "tr": "появиться"
+              },
+              {
+                "w": "sky",
+                "t": "osmon",
+                "tr": "небо"
+              },
+              {
+                "w": "Washington",
+                "t": "Vashington",
+                "tr": "Вашингтон"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Gaplarni to'g'ri qayta yozing, kerakli joylarga artikl qo'shing.",
+      "instruction_ru": "Перепишите предложения правильно, добавив артикли там, где необходимо.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u14p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We had "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " great time in "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " USA."
+              }
+            ],
+            "answers": [
+              "a",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "great time",
+                "t": "ajoyib vaqt",
+                "tr": "отличное время"
+              },
+              {
+                "w": "USA",
+                "t": "AQSH",
+                "tr": "США"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Let's go to Belgium for "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " week this summer."
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "Belgium",
+                "t": "Belgiya",
+                "tr": "Бельгия"
+              },
+              {
+                "w": "week",
+                "t": "hafta",
+                "tr": "неделя"
+              },
+              {
+                "w": "summer",
+                "t": "yoz",
+                "tr": "лето"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Where's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " money I gave you on "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fifteenth of last month?"
+              }
+            ],
+            "answers": [
+              "the",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "fifteenth",
+                "t": "o'n beshinchi",
+                "tr": "пятнадцатое"
+              },
+              {
+                "w": "last month",
+                "t": "o'tgan oy",
+                "tr": "в прошлом месяце"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'd like to join "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " army and become "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " soldier."
+              }
+            ],
+            "answers": [
+              "the",
+              "a"
+            ],
+            "words": [
+              {
+                "w": "join",
+                "t": "qo'shilmoq",
+                "tr": "вступить"
+              },
+              {
+                "w": "army",
+                "t": "armiya",
+                "tr": "армия"
+              },
+              {
+                "w": "soldier",
+                "t": "askar",
+                "tr": "солдат"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "For Christmas, I got "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " book, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " DVD and "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " latest CD by my favourite band."
+              }
+            ],
+            "answers": [
+              "a",
+              "a",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "Christmas",
+                "t": "Rojdestvo",
+                "tr": "Рождество"
+              },
+              {
+                "w": "favourite band",
+                "t": "sevimli guruh",
+                "tr": "любимая группа"
+              },
+              {
+                "w": "latest",
+                "t": "so'nggi",
+                "tr": "последний"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They say that "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " English drink "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " lot of tea."
+              }
+            ],
+            "answers": [
+              "the",
+              "a"
+            ],
+            "words": [
+              {
+                "w": "the English",
+                "t": "inglizlar",
+                "tr": "англичане"
+              },
+              {
+                "w": "drink",
+                "t": "ichmoq",
+                "tr": "пить"
+              },
+              {
+                "w": "lot of tea",
+                "t": "ko'p choy",
+                "tr": "много чая"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I heard "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " song on "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " radio that I really liked."
+              }
+            ],
+            "answers": [
+              "a",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "song",
+                "t": "qo'shiq",
+                "tr": "песня"
+              },
+              {
+                "w": "radio",
+                "t": "radio",
+                "tr": "радио"
+              }
+            ]
+          },
+          {
+            "id": "u14p3-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Japanese and other people in Asia eat cheese?"
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "the Japanese",
+                "t": "yaponlar",
+                "tr": "японцы"
+              },
+              {
+                "w": "cheese",
+                "t": "pishloq",
+                "tr": "сыр"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p3-sec-exercise3",
+      "type": "texterror",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Dialogdagi o'nta xatoni toping va to'g'rilang.",
+      "instruction_ru": "Найдите десять ошибок в диалоге и исправьте их.",
+      "sentences": [],
+      "textErrorData": {
+        "passage": "Gary: It's the lovely day, isn't it? Let's walk down to a shops and look around.\nHelen: That's an good idea. I'll just have a look in a kitchen and see what we need.\nGary: I got a milk yesterday, so we don't need any more. We might need a bread, though.\nHelen: Okay. Bread … oh, and the packet of sugar. After shopping, we could go to a new market in a town centre and see what they have.\nGary: Right. You get your coat and I'll get a car keys.",
+        "errors": [
+          {
+            "id": 1,
+            "errorStart": 11,
+            "errorEnd": 14,
+            "correctAnswer": "a",
+            "alternateAnswers": []
+          },
+          {
+            "id": 2,
+            "errorStart": 56,
+            "errorEnd": 57,
+            "correctAnswer": "the",
+            "alternateAnswers": []
+          },
+          {
+            "id": 3,
+            "errorStart": 95,
+            "errorEnd": 97,
+            "correctAnswer": "a",
+            "alternateAnswers": []
+          },
+          {
+            "id": 4,
+            "errorStart": 134,
+            "errorEnd": 135,
+            "correctAnswer": "the",
+            "alternateAnswers": []
+          },
+          {
+            "id": 5,
+            "errorStart": 178,
+            "errorEnd": 179,
+            "correctAnswer": "some",
+            "alternateAnswers": [
+              "–"
+            ]
+          },
+          {
+            "id": 6,
+            "errorStart": 237,
+            "errorEnd": 238,
+            "correctAnswer": "some",
+            "alternateAnswers": [
+              "–"
+            ]
+          },
+          {
+            "id": 7,
+            "errorStart": 283,
+            "errorEnd": 286,
+            "correctAnswer": "a",
+            "alternateAnswers": []
+          },
+          {
+            "id": 8,
+            "errorStart": 335,
+            "errorEnd": 336,
+            "correctAnswer": "the",
+            "alternateAnswers": []
+          },
+          {
+            "id": 9,
+            "errorStart": 351,
+            "errorEnd": 352,
+            "correctAnswer": "the",
+            "alternateAnswers": []
+          },
+          {
+            "id": 10,
+            "errorStart": 433,
+            "errorEnd": 434,
+            "correctAnswer": "the",
+            "alternateAnswers": []
+          }
+        ],
+        "words": [
+          {
+            "w": "lovely",
+            "t": "ajoyib",
+            "tr": "прекрасный"
+          },
+          {
+            "w": "walk down",
+            "t": "pastga yurmoq",
+            "tr": "пройти"
+          },
+          {
+            "w": "shops",
+            "t": "do'konlar",
+            "tr": "магазины"
+          },
+          {
+            "w": "look around",
+            "t": "atrofga qaramoq",
+            "tr": "осмотреться"
+          },
+          {
+            "w": "idea",
+            "t": "fikr",
+            "tr": "идея"
+          },
+          {
+            "w": "kitchen",
+            "t": "oshxona",
+            "tr": "кухня"
+          },
+          {
+            "w": "milk",
+            "t": "sut",
+            "tr": "молоко"
+          },
+          {
+            "w": "bread",
+            "t": "non",
+            "tr": "хлеб"
+          },
+          {
+            "w": "packet",
+            "t": "paket",
+            "tr": "пакет"
+          },
+          {
+            "w": "sugar",
+            "t": "shakar",
+            "tr": "сахар"
+          },
+          {
+            "w": "shopping",
+            "t": "xarid qilish",
+            "tr": "шопинг"
+          },
+          {
+            "w": "market",
+            "t": "bozor",
+            "tr": "рынок"
+          },
+          {
+            "w": "town centre",
+            "t": "shahar markazi",
+            "tr": "центр города"
+          },
+          {
+            "w": "coat",
+            "t": "palto",
+            "tr": "пальто"
+          },
+          {
+            "w": "car keys",
+            "t": "mashina kalitlari",
+            "tr": "ключи от машины"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "unit35-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u35p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi fe'llarning to'g'ri shaklini yozing.",
+      "instruction_ru": "Вставьте правильную форму глаголов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u35p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a million euros! I'd buy lots of great things. "
+              },
+              {
+                "type": "hint",
+                "content": "have"
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "a million euros",
+                "t": "bir million evro",
+                "tr": "миллион евро"
+              },
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish we "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in a bigger house. This one is too small. "
+              },
+              {
+                "type": "hint",
+                "content": "live"
+              }
+            ],
+            "answers": [
+              "lived"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "bigger",
+                "t": "kattaroq",
+                "tr": "больший"
+              },
+              {
+                "w": "small",
+                "t": "kichik",
+                "tr": "маленький"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Becca wishes she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " old enough to drive a car. "
+              },
+              {
+                "type": "hint",
+                "content": "be"
+              }
+            ],
+            "answers": [
+              "was"
+            ],
+            "alternateAnswers": [
+              [
+                "were"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wishes",
+                "t": "istaydi",
+                "tr": "желает"
+              },
+              {
+                "w": "old enough",
+                "t": "yoshi yetarli",
+                "tr": "достаточно взрослый"
+              },
+              {
+                "w": "drive a car",
+                "t": "mashina haydamoq",
+                "tr": "водить машину"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you wish you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " more confident about the exam tomorrow? "
+              },
+              {
+                "type": "hint",
+                "content": "feel"
+              }
+            ],
+            "answers": [
+              "felt"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "confident",
+                "t": "ishonchli",
+                "tr": "уверенный"
+              },
+              {
+                "w": "exam",
+                "t": "imtihon",
+                "tr": "экзамен"
+              },
+              {
+                "w": "tomorrow",
+                "t": "ertaga",
+                "tr": "завтра"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish my computer "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " broken. I can't check my e-mail. "
+              },
+              {
+                "type": "hint",
+                "content": "not / be"
+              }
+            ],
+            "answers": [
+              "wasn't"
+            ],
+            "alternateAnswers": [
+              [
+                "were not",
+                "wasn't",
+                "weren't",
+                "was not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "broken",
+                "t": "buzilib qolgan",
+                "tr": "сломанный"
+              },
+              {
+                "w": "check",
+                "t": "tekshirmoq",
+                "tr": "проверять"
+              },
+              {
+                "w": "e-mail",
+                "t": "elektron pochta",
+                "tr": "электронная почта"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " chocolate so much! I eat three bars a day! "
+              },
+              {
+                "type": "hint",
+                "content": "not / like"
+              }
+            ],
+            "answers": [
+              "didn't like"
+            ],
+            "alternateAnswers": [
+              [
+                "did not like"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "chocolate",
+                "t": "shokolad",
+                "tr": "шоколад"
+              },
+              {
+                "w": "bars",
+                "t": "plitka",
+                "tr": "плитка"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Grant wishes he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so many mistakes all the time. "
+              },
+              {
+                "type": "hint",
+                "content": "not / make"
+              }
+            ],
+            "answers": [
+              "didn't make"
+            ],
+            "alternateAnswers": [
+              [
+                "did not make"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wishes",
+                "t": "istaydi",
+                "tr": "желает"
+              },
+              {
+                "w": "mistakes",
+                "t": "xatolar",
+                "tr": "ошибки"
+              },
+              {
+                "w": "all the time",
+                "t": "doim",
+                "tr": "всё время"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Look what they're wearing! I bet they wish they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so silly! "
+              },
+              {
+                "type": "hint",
+                "content": "not / look"
+              }
+            ],
+            "answers": [
+              "didn't look"
+            ],
+            "alternateAnswers": [
+              [
+                "did not look"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wearing",
+                "t": "kiyib yurmoq",
+                "tr": "носить"
+              },
+              {
+                "w": "I bet",
+                "t": "ishonchim komilki",
+                "tr": "готов поспорить"
+              },
+              {
+                "w": "silly",
+                "t": "ahmoqona",
+                "tr": "глупый"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u35p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi fe'llardan to'g'ri shaklini tanlang. Ba'zida inkorni ishlatishingiz kerak bo'ladi.",
+      "instruction_ru": "Вставьте правильную форму глаголов из рамки. Иногда нужно использовать отрицательную форму.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "feel",
+          "give",
+          "have",
+          "live",
+          "spend",
+          "wear"
+        ],
+        "cards": [
+          {
+            "id": "u35p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in the countryside. The city is so noisy!"
+              }
+            ],
+            "answers": [
+              "lived"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "countryside",
+                "t": "qishloq",
+                "tr": "сельская местность"
+              },
+              {
+                "w": "noisy",
+                "t": "shovqinli",
+                "tr": "шумный"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tracy has got curly hair but she often wishes she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " straight hair."
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "curly hair",
+                "t": "jingalak soch",
+                "tr": "вьющиеся волосы"
+              },
+              {
+                "w": "straight hair",
+                "t": "to'g'ri soch",
+                "tr": "прямые волосы"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish our teachers "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " us less homework every day, but there's nothing I can do about it."
+              }
+            ],
+            "answers": [
+              "gave"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "teachers",
+                "t": "o'qituvchilar",
+                "tr": "учителя"
+              },
+              {
+                "w": "homework",
+                "t": "uy vazifalari",
+                "tr": "домашнее задание"
+              },
+              {
+                "w": "nothing",
+                "t": "hech narsa",
+                "tr": "ничего"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so scared, but I do!"
+              }
+            ],
+            "answers": [
+              "didn't feel"
+            ],
+            "alternateAnswers": [
+              [
+                "did not feel"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "scared",
+                "t": "qo'rqqan",
+                "tr": "испуганный"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you wish you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " contact lenses or are you happy with glasses?"
+              }
+            ],
+            "answers": [
+              "wore"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "contact lenses",
+                "t": "kontakt linzalar",
+                "tr": "контактные линзы"
+              },
+              {
+                "w": "glasses",
+                "t": "ko'zoynak",
+                "tr": "очки"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jake's mum wishes he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so much money on clothes whenever he goes shopping."
+              }
+            ],
+            "answers": [
+              "didn't spend"
+            ],
+            "alternateAnswers": [
+              [
+                "did not spend"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wishes",
+                "t": "istaydi",
+                "tr": "желает"
+              },
+              {
+                "w": "spend money",
+                "t": "pul sarflamoq",
+                "tr": "тратить деньги"
+              },
+              {
+                "w": "clothes",
+                "t": "kiyimlar",
+                "tr": "одежда"
+              },
+              {
+                "w": "whenever",
+                "t": "qachon",
+                "tr": "каждый раз когда"
+              },
+              {
+                "w": "goes shopping",
+                "t": "xarid qilgani bormoq",
+                "tr": "идти за покупками"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u35p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Rasmlarga qarab gaplarni to'ldiring.",
+      "instruction_ru": "Посмотрите на картинки и завершите предложения.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u35p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "win"
+              }
+            ],
+            "answers": [
+              "had won"
+            ],
+            "alternateAnswers": [
+              [
+                "won"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "win",
+                "t": "g'alaba qozonmoq",
+                "tr": "выиграть"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to my mother. "
+              },
+              {
+                "type": "hint",
+                "content": "listen"
+              }
+            ],
+            "answers": [
+              "had listened"
+            ],
+            "alternateAnswers": [
+              [
+                "listened"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "listen",
+                "t": "tinglash",
+                "tr": "слушать"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish we "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a camera with us. "
+              },
+              {
+                "type": "hint",
+                "content": "bring"
+              }
+            ],
+            "answers": [
+              "had brought"
+            ],
+            "alternateAnswers": [
+              [
+                "brought"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "bring",
+                "t": "olib kelmoq",
+                "tr": "принести"
+              },
+              {
+                "w": "camera",
+                "t": "kamera",
+                "tr": "фотоаппарат"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a bit harder for this test. "
+              },
+              {
+                "type": "hint",
+                "content": "study"
+              }
+            ],
+            "answers": [
+              "had studied"
+            ],
+            "alternateAnswers": [
+              [
+                "studied"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "study",
+                "t": "o'qimoq",
+                "tr": "учиться"
+              },
+              {
+                "w": "harder",
+                "t": "ko'proq",
+                "tr": "усерднее"
+              },
+              {
+                "w": "test",
+                "t": "test",
+                "tr": "тест"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so many phone calls last month! "
+              },
+              {
+                "type": "hint",
+                "content": "not / make"
+              }
+            ],
+            "answers": [
+              "hadn't made"
+            ],
+            "alternateAnswers": [
+              [
+                "had not made"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "phone calls",
+                "t": "qo'ng'iroqlar",
+                "tr": "звонки"
+              },
+              {
+                "w": "last month",
+                "t": "o'tgan oy",
+                "tr": "в прошлом месяце"
+              }
+            ]
+          },
+          {
+            "id": "u35p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me! "
+              },
+              {
+                "type": "hint",
+                "content": "not / choose"
+              }
+            ],
+            "answers": [
+              "hadn't chosen"
+            ],
+            "alternateAnswers": [
+              [
+                "had not chosen"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "choose",
+                "t": "tanlash",
+                "tr": "выбирать"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

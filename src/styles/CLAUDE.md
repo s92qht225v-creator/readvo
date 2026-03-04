@@ -1,0 +1,159 @@
+# CSS Reference
+
+All styles live in `src/styles/reading.css`.
+
+## Key CSS Classes
+
+### Home & Banner
+- `.home` - Home/book/language page container (matches `.page` width, no top padding, `background: #f5f5f5`)
+- `.home__hero` - Full-width red banner (`background: #dc2626`, `width: 100vw`, `transform: translateX(-50%)`, `z-index: 10`)
+- `.home__hero-inner` - Banner content wrapper (constrained `max-width` matching `.home`, `display: flex; flex-direction: column` so tabs push to bottom via `margin-top: auto`)
+- `.home__hero-top-row` - Flex row: logo, language selectors, hamburger menu (`min-height: 66px` for consistent banner height across all pages)
+- `.home__hero-logo-img` - White logo (`height: 80px`, mobile: `64px`). Uses `/logo.svg` (white text)
+- `.home__lang-selectors` - Flex container for language dropdowns (`gap: clamp(24px, 5vw, 48px)`)
+- `.home__lang-selector` - Dropdown column (`position: relative`, `align-items: flex-start` for left-aligned labels/buttons)
+- `.home__lang-select-btn` - Dropdown trigger button (transparent, white text, `min-height: 44px`, `padding: 8px 0`)
+- `.home__lang-dropdown` - Custom dropdown menu (`position: absolute`, `top: 100%`, centered, `border-radius: 8px`, `max-width: calc(100vw - 32px)` to prevent viewport clipping)
+
+### Hamburger Menu
+- `.home__menu` - Hamburger menu wrapper (`position: relative`). Shared via `BannerMenu.tsx` component.
+- `.home__menu-btn` - Hamburger button (`44px`, `border-radius: 8px`, semi-transparent white on red banner)
+- `.home__menu-dropdown` - Right-aligned dropdown (`position: absolute`, `right: 0`, white bg, shadow, `min-width: 180px`)
+- `.home__menu-section-label` - Section label in menu (uppercase grey, e.g., "Til", "Я изучаю")
+- `.home__menu-lang-row` - Flex row for language toggle buttons (`gap: 6px`, `padding: 6px 16px 10px`)
+- `.home__menu-lang-btn` / `--active` - Language toggle buttons (`flex: 1`, active = red `#dc2626` bg)
+- `.home__menu-item` - Menu item button (`min-height: 44px`, full-width, hover `#f5f5f5`)
+- `.home__menu-user` - User info display (name + email, non-clickable, `#f9f9f9` bg)
+- `.home__menu-divider` - Thin separator line (`1px solid #e5e5e5`)
+
+### Tabs & Cards
+- `.lang-page__tabs` - Folder tabs container inside banner (`display: flex`, `gap: 4px`, `margin-top: auto` pushes tabs flush to banner bottom)
+- `.lang-page__tab` - Folder tab button (`border-radius: 3px 3px 0 0`, `background: rgba(255,255,255,0.35)`, `color: #fff`, no hover/transition, `-webkit-tap-highlight-color: transparent`)
+- `.lang-page__tab--active` - Active tab (`background: #f5f5f5`, `color: #dc2626`, `margin-bottom: -2px`). Also has inline `style` override in LanguagePage.tsx for reliable mobile rendering.
+- `.lang-page__books` - Responsive grid for cards (`clamp()` sizing, stacks on mobile ≤600px)
+- `.lang-page__book-card` / `--disabled` - Level card with optional "Tez kunda" badge
+- `.lang-page__book-level` - Big red text (`clamp(1.8rem, 4vw, 2.5rem)`, `color: #dc2626`)
+- `.lang-page__book-level-label` - "HSK" prefix inside level (same size/color, `font-size: 1em`)
+- `.lang-page__book-pinyin` - Pinyin on karaoke cards (blue italic)
+- `.lang-page__book-subtitle` - Grey subtitle text
+- `.lang-page__placeholder` - Centered placeholder for empty tabs
+- `.lesson-card` - Lesson card on book page (number badge 36px/8px radius + translation, no Chinese title/pinyin)
+
+### Reader
+- `.reader__home-logo` - Logo image in reader headers (64px height). Uses `/logo-red.svg` (`#dc2626`) on grey reader headers, `/logo.svg` (white) on karaoke
+- `.page` - Lesson content container (permanent `1em` extra top/bottom padding for translation panel space)
+- `.page__translation-panel` - Fixed translation panel below header (z-index 99)
+- `.page__audio-fab` - Floating play button (48x48, red circle, `bottom: 80px`, `right: 24px`, `z-index: 80`). All play FABs (lesson, story, flashcard) share same size/position.
+- `.page__audio-fab--playing` - Stays red (`var(--color-accent)`) when audio playing
+- `.reader__header` - Fixed header (full-width, grey background `rgba(245, 245, 245, 0.97)`)
+- `.reader__header-inner` - Header content (constrained to match page width)
+- `.reader__bottom-nav` - Fixed bottom nav (full-width, grey background `rgba(245, 245, 245, 0.97)`)
+- `.reader__bottom-nav-inner` - Bottom nav content (constrained to match page width)
+- `.reader__nav-toggles` - Pinyin/Tarjima toggle button container in bottom nav
+- `.reader__nav-toggle` / `--active` - Toggle buttons (`border-radius: 4px`, active = blue bg)
+- `.sentence--has-audio` - `cursor: pointer` on tappable audio sentences
+- `.sentence--playing .sentence__text` - Blue text color for currently playing sentence
+
+### Flashcards
+- `.flashcard-page` - Flashcard page container
+- `.flashcard__card` - 3D flip card (`transform-style: preserve-3d`, `aspect-ratio: 3/4`)
+- `.flashcard__face` - Card face (`backface-visibility: hidden`)
+- `.flashcard__front-content` - Centers Chinese + audio + pinyin vertically on front
+- `.flashcard__audio-btn` - Circular audio play button on card front
+
+### Story Reader
+- `.story` - Story content container (independent from `.page`, own max-width/padding)
+- `.story--with-panel` - Extra top padding when translation panel is visible
+- `.story--with-audio` - Extra bottom padding when audio bar is visible
+- `.story__sentence` - Clickable sentence span (cursor pointer)
+- `.story__sentence--active` - Blue color for tapped/active sentence
+- `.story__sentence--playing` - Blue color for audio-synced sentence
+- `.story__translation-panel` - Fixed translation panel below header (z-index 99)
+- `.story__bottom-bar` - Fixed bottom toggle bar (grey bg, backdrop blur, z-index 90)
+- `.story__bottom-bar-inner` - Flex container for toggle buttons (Tarjima, Fokus, Pinyin)
+- `.story__play-fab` - Floating action button (56px blue circle, above bottom bar). Normal mode only: play/pause full-story audio.
+- `.story__focus` - Focus mode container (flex column, centered)
+- `.story__focus-text` - Centered sentence text (`font-size: 1.5em`, `min-height: 9em` for stable nav)
+- `.story__focus-nav` - Button row: prev, play, next (flex, centered, gap 16px)
+- `.story__focus-nav-btn` - Prev/next buttons (48px grey circle, no border, SVG chevrons)
+- `.story__focus-play-btn` - Inline play/pause button (44px blue circle, toggles ▶/⏸)
+- `.story__focus-counter` - Sentence counter label below nav ("9 / 30")
+- `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
+- `.story__word--active` - Blue background highlight for pressed word
+- `.story__word-hsk` - HSK level/lesson badge in translation panel (small pill-shaped tag)
+- `.story__paragraph--dialogue` - Dialogue mode paragraph (flex column, gap 0.5em)
+- `.story__dialogue-line` - Single dialogue line (flex row: speaker + text, cursor pointer)
+- `.story__speaker` - Speaker label (bold, blue, min-width 2.5em, `::after` adds `：`)
+- `.story__dialogue-text` - Dialogue text container (flex: 1, ruby pinyin with blue color)
+- `.story__focus-speaker` - Speaker label in focus mode (bold, blue, smaller font above sentence)
+- `.story--focus .story__sentence:not(.story__sentence--active)` - Dimmed non-active sentences (opacity 0.35)
+
+### Section Cards
+- `.section--objectives .section__sentences` - Single white card container (border-radius 16px, shadow)
+- `.section--objectives .sentence__text` - Red accent strip via `border-left: 6px solid #C43A35` + `padding-left: 16px`
+- `.section--objectives .sentence__translation-inline` - Aligned to Chinese text (`padding-left: 22px`)
+- `.section--text .section__context` - Floating white card with shadow for context narration
+- `.section--text .section__context-translation` - Divider above translation + flex layout for inline play button
+- `.section__audio-btn--inline` - Play button positioned inline at end of context translation text
+- `.section--exercise .section__sentences` - White floating card (border-radius 16px, shadow)
+- `.section--exercise .section__instruction-row` - Indented (`padding-left: var(--spacing-md)`) to align with card content
+- `.section__instruction-checkbox` - Blue ■ with `flex-start` alignment and `margin-top: 0.1em` to align with Chinese text
+- `.section--tonguetwister` - Transparent background, no header/subheading
+- `.section--tonguetwister .section__sentences` - White floating card (border-radius 16px, shadow, padding 20px)
+
+### Karaoke
+- `.karaoke` - Full-viewport dark container (`#0a0a0a`, flex column)
+- `.karaoke__lyrics` - Scrollable lyrics area (`flex: 1`, `overflow-y: auto`, top padding clears header)
+- `.karaoke__line` - Centered line (`font-size: 1.8em`, `line-height: 2`, dimmed white)
+- `.karaoke__line--active` - Brighter white for current line
+- `.karaoke__line--past` - Faded for past lines
+- `.karaoke__char` - Ruby element per character (`margin: 0 0.08em` for spacing)
+- `.karaoke__char--singing` - Gold color (`#ffd54f`) with text shadow glow for currently singing character
+- `.karaoke__char--sung` - Green color (`#66bb6a`) for already sung characters in active line
+- `.karaoke__rt` - Pinyin annotation (`font-size: 0.5em`, italic, reduced opacity)
+- `.karaoke__rt--hidden` - `visibility: hidden` (toggle pinyin without layout shift)
+- `.karaoke__controls` - Fixed controls panel (above bottom bar, z-index 91, dark bg with border-top)
+- `.karaoke__controls::after` - Separator line pseudo-element (`bottom: 3px`)
+- `.karaoke__progress` - Clickable seek bar (4px height, `margin-top: 20px`)
+- `.karaoke__progress-bar` - Blue fill bar (`#4fc3f7`)
+- `.karaoke__playback-row` - Flex row for skip/play buttons (centered, gap 24px)
+- `.karaoke__play-btn` - Play/pause button (56px blue circle)
+- `.karaoke__skip-btn` - Rewind/forward 15s button (44px, transparent bg, circular arrow icon)
+- `.karaoke__skip-label` - "15" text overlay on skip buttons (8px, absolute centered)
+- `.karaoke .reader__header` - Dark header override (`rgba(10, 10, 10, 0.95)`)
+- `.karaoke .reader__home-logo` - Uses `/logo.svg` (white text) directly, no filter needed
+- `.karaoke .story__translation-panel` - Dark translation panel override
+- `.karaoke .story__bottom-bar` - Dark bottom bar override
+- `.karaoke .reader__nav-toggle` - Dark toggle buttons (white text, `rgba(255,255,255,0.1)` bg)
+- `.karaoke .reader__nav-toggle--active` - Active toggle (`#4fc3f7` bg, white text)
+- `.karaoke .page__lang-btn` - Dark language button override
+- `.karaoke .page__font-controls` - Dark font controls override
+- `.karaoke .page__font-btn` - Dark font button override
+
+## Padding
+- Page side padding: `var(--spacing-xl)` (32px)
+- Header inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
+- Bottom nav inner padding: `var(--spacing-md) var(--spacing-xl)` (16px 32px)
+
+## Mobile Responsive (≤600px)
+- **Page background**: `#f5f5f5` (grey) so white cards stand out
+- **Touch targets**: All interactive buttons have `min-height: 44px` (`.page__toggle-btn`, `.page__lang-btn`, `.page__font-btn`, `.reader__nav-toggle`, `.reader__nav-btn`, `.home__lang-select-btn`, `.home__lang-dropdown-item`, `.lang-page__tab`)
+- **Side padding**: `.home` uses `padding: 0 12px var(--spacing-lg)` at ≤600px (reduced from 32px)
+- **Banner inner**: `.home__hero-inner` uses `padding: 12px 12px 0` at ≤600px
+- **Hero override at ≤480px**: `.home__hero` uses `padding: 0` to avoid doubled padding with hero-inner
+- **Tabs**: `flex: 1` for equal width, `justify-content: center`, `font-size: 1rem`, `gap: 3px`, `min-height: 36px`
+- **Banner logo**: 64px height at ≤600px (desktop: 80px)
+- **Reader header logo**: 64px height
+- **Landing nav logo**: 64px height
+- **Language selector labels**: `font-size: 0.85rem` at ≤600px
+- **Language selectors gap**: 16px at ≤600px (down from `clamp(24px, 5vw, 48px)`)
+- **Card border radius**: 8px at ≤600px
+- **Story reader**: `padding-left/right: var(--spacing-md)` at ≤600px
+- **Dropdown close**: Both `mousedown` and `touchstart` listeners for iOS Safari compatibility
+
+## Reader Button Sizes (NEVER change without asking user)
+These sizes apply across ALL reader pages (lessons, stories, dialogues, karaoke):
+- `.reader__nav-toggle`: `padding: 4px 12px; min-height: 32px` (Pinyin/Tarjima/Fokus toggles)
+- `.page__lang-btn`: `padding: 4px 10px; min-height: 32px; background: #dc2626; color: #fff` (RU/UZ language toggle, red with white text, no hover change)
+- `.page__font-btn`: `padding: 4px 8px; min-height: 32px` (A-/A+ font size buttons)
+- Karaoke inherits these base sizes (no karaoke-specific size overrides needed)

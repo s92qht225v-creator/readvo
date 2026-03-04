@@ -1,0 +1,238 @@
+{
+  "id": "unit21-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 21,
+    "pinyin": "",
+    "title": "Vocabulary",
+    "titleTranslation": "Sending and receiving",
+    "titleTranslation_ru": "Sending and receiving"
+  },
+  "sections": [
+    {
+      "id": "u21p1-sec-vocab1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["accent (n)", "informal (adj)", "publish (v)"],
+            "cells_uz": ["accent – lahja, urg'u", "informal – norasmiy", "publish – nashr qilmoq"],
+            "cells_ru": ["accent – акцент", "informal – неформальный", "publish – публиковать"]
+          },
+          {
+            "cells": ["announcement (n)", "Internet (n)", "report (v, n)"],
+            "cells_uz": ["announcement – e'lon", "Internet – internet", "report – xabar bermoq; hisobot"],
+            "cells_ru": ["announcement – объявление", "Internet – интернет", "report – сообщать; отчёт"]
+          },
+          {
+            "cells": ["broadcast (v, n)", "interrupt (v)", "request (v, n)"],
+            "cells_uz": ["broadcast – efirga uzatmoq; ko'rsatuv", "interrupt – to'xtatmoq, xalal bermoq", "request – so'ramoq; so'rov"],
+            "cells_ru": ["broadcast – транслировать; передача", "interrupt – прерывать", "request – просить; запрос"]
+          },
+          {
+            "cells": ["channel (n)", "link (v, n)", "ring (v)"],
+            "cells_uz": ["channel – kanal", "link – bog'lamoq; havola", "ring – qo'ng'iroq qilmoq"],
+            "cells_ru": ["channel – канал", "link – соединять; ссылка", "ring – звонить"]
+          },
+          {
+            "cells": ["clear (adj)", "media (n)", "signal (n)"],
+            "cells_uz": ["clear – aniq, ravshan", "media – ommaviy axborot vositalari", "signal – signal"],
+            "cells_ru": ["clear – чёткий, ясный", "media – СМИ", "signal – сигнал"]
+          },
+          {
+            "cells": ["click (v)", "mobile phone (n phr)", "swear (v)"],
+            "cells_uz": ["click – bosmoq, kliklarmoq", "mobile phone – mobil telefon", "swear – qasam ichmoq; so'kinmoq"],
+            "cells_ru": ["click – нажимать", "mobile phone – мобильный телефон", "swear – клясться; ругаться"]
+          },
+          {
+            "cells": ["contact (v, n)", "online (adj, adv)", "type (v)"],
+            "cells_uz": ["contact – bog'lanmoq; aloqa", "online – onlayn", "type – yozmoq (klaviaturada)"],
+            "cells_ru": ["contact – связываться; контакт", "online – онлайн", "type – печатать"]
+          },
+          {
+            "cells": ["file (n)", "pause (v, n)", "viewer (n)"],
+            "cells_uz": ["file – fayl", "pause – to'xtatmoq; pauza", "viewer – tomoshabin"],
+            "cells_ru": ["file – файл", "pause – делать паузу; пауза", "viewer – зритель"]
+          },
+          {
+            "cells": ["formal (adj)", "persuade (v)", "website (n)"],
+            "cells_uz": ["formal – rasmiy", "persuade – ishontirmoq", "website – veb-sayt"],
+            "cells_ru": ["formal – официальный", "persuade – убеждать", "website – веб-сайт"]
+          },
+          {
+            "cells": ["image (n)", "pronounce (v)", "whisper (v, n)"],
+            "cells_uz": ["image – tasvir, obraz", "pronounce – talaffuz qilmoq", "whisper – shivirlamoq; shivirish"],
+            "cells_ru": ["image – образ, изображение", "pronounce – произносить", "whisper – шептать; шёпот"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p1-sec-phrasal",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["**call back**", "ring again on the phone"],
+            "cells_uz": ["**call back** – qayta qo'ng'iroq qilmoq", "telefonda qayta qo'ng'iroq qilmoq"],
+            "cells_ru": ["**call back** – перезвонить", "позвонить снова по телефону"]
+          },
+          {
+            "cells": ["**come out**", "be published"],
+            "cells_uz": ["**come out** – nashr qilinmoq, chiqmoq", "nashr qilinmoq"],
+            "cells_ru": ["**come out** – выходить (о книге/газете)", "быть опубликованным"]
+          },
+          {
+            "cells": ["**cut off**", "disconnect (phone, electricity, etc)"],
+            "cells_uz": ["**cut off** – uzib qo'ymoq (telefon, elektr)", "aloqani uzmoq (telefon, elektr va boshqalar)"],
+            "cells_ru": ["**cut off** – отключить (телефон, электричество)", "прервать соединение (телефон, электричество и т.д.)"]
+          },
+          {
+            "cells": ["**fill in**", "add information in the spaces on a form, etc"],
+            "cells_uz": ["**fill in** – blankni to'ldirmoq", "shakl, blank va hokazolardagi bo'shliqlarni to'ldirmoq"],
+            "cells_ru": ["**fill in** – заполнять (бланк и т.п.)", "вносить информацию в поля формы и т.п."]
+          },
+          {
+            "cells": ["**hang up**", "put the receiver down to end a phone call"],
+            "cells_uz": ["**hang up** – telefonni qo'ymoq (suhbatni tugatmoq)", "telefon suhbatini tugatish uchun trubkani qo'ymoq"],
+            "cells_ru": ["**hang up** – положить трубку", "положить трубку, чтобы завершить телефонный разговор"]
+          },
+          {
+            "cells": ["**log off**", "disconnect from the Internet/a website"],
+            "cells_uz": ["**log off** – internetdan/saytdan chiqmoq", "internet yoki veb-saytdan uzilmoq"],
+            "cells_ru": ["**log off** – выйти из интернета/сайта", "отключиться от интернета или сайта"]
+          },
+          {
+            "cells": ["**log on(to)**", "connect to the Internet/a website"],
+            "cells_uz": ["**log on(to)** – internetga/saytga kirmoq", "internet yoki veb-saytga ulanmoq"],
+            "cells_ru": ["**log on(to)** – войти в интернет/на сайт", "подключиться к интернету или сайту"]
+          },
+          {
+            "cells": ["**print out**", "make a paper copy of sth on a computer"],
+            "cells_uz": ["**print out** – chop etmoq, printer orqali bosmoq", "kompyuterdagi biror narsaning qog'oz nusxasini olmoq"],
+            "cells_ru": ["**print out** – распечатать", "сделать бумажную копию чего-либо с компьютера"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p1-sec-prepositions",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Prepositional phrases",
+      "subheading_uz": "Predlogli iboralar",
+      "subheading_ru": "Предложные фразы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": [""],
+        "rows": [
+          {
+            "cells": ["by e-mail/phone/letter"],
+            "cells_uz": ["elektron pochta/telefon/xat orqali"],
+            "cells_ru": ["по электронной почте/телефону/письмом"]
+          },
+          {
+            "cells": ["on the Internet"],
+            "cells_uz": ["internetda"],
+            "cells_ru": ["в интернете"]
+          },
+          {
+            "cells": ["on the news"],
+            "cells_uz": ["yangiliklarda"],
+            "cells_ru": ["в новостях"]
+          },
+          {
+            "cells": ["on the phone"],
+            "cells_uz": ["telefonda"],
+            "cells_ru": ["по телефону"]
+          },
+          {
+            "cells": ["on the radio"],
+            "cells_uz": ["radioda"],
+            "cells_ru": ["по радио"]
+          },
+          {
+            "cells": ["on TV"],
+            "cells_uz": ["televizorda"],
+            "cells_ru": ["по телевизору"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p1-sec-wordformation",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word formation",
+      "subheading_uz": "So'z yasalishi",
+      "subheading_ru": "Словообразование",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", "", ""],
+        "rows": [
+          {
+            "cells": ["**certain**", "certainly, certainty", "**inform**", "informative, information"],
+            "cells_uz": ["**certain**", "albatta, ishonch", "**inform**", "ma'lumotli, ma'lumot"],
+            "cells_ru": ["**certain**", "конечно, уверенность", "**inform**", "информативный, информация"]
+          },
+          {
+            "cells": ["**communicate**", "communication", "**predict**", "prediction, (un)predictable"],
+            "cells_uz": ["**communicate**", "muloqot", "**predict**", "bashorat, (no)bashorat qilinadigan"],
+            "cells_ru": ["**communicate**", "общение", "**predict**", "предсказание, (не)предсказуемый"]
+          },
+          {
+            "cells": ["**connect**", "connection, disconnect", "**secret**", "secretly, secrecy"],
+            "cells_uz": ["**connect**", "aloqa, uzmoq", "**secret**", "yashirincha, sir saqlash"],
+            "cells_ru": ["**connect**", "связь, отключить", "**secret**", "тайно, секретность"]
+          },
+          {
+            "cells": ["**deliver**", "delivery", "**speak**", "spoke, spoken, speaker, speech"],
+            "cells_uz": ["**deliver**", "yetkazib berish", "**speak**", "gapirdi, gapiriladigan, notiq, nutq"],
+            "cells_ru": ["**deliver**", "доставка", "**speak**", "говорил, сказанный, диктор, речь"]
+          },
+          {
+            "cells": ["**express**", "expression, expressive", "**translate**", "translation, translator"],
+            "cells_uz": ["**express**", "ifoda, ifodalovchi", "**translate**", "tarjima, tarjimon"],
+            "cells_ru": ["**express**", "выражение, выразительный", "**translate**", "перевод, переводчик"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u21p1-sec-wordpatterns",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word patterns",
+      "subheading_uz": "So'z birikmalari",
+      "subheading_ru": "Словосочетания",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["_verbs_", "comment on\ncommunicate with\nglance at\nreceive sth from\nreply to\nsend sth to sb\ntalk (to sb) about\ntell sb about\ntranslate (from sth) into\nwrite (to sb) about"],
+            "cells_uz": ["_fe'llar_", "comment on – haqida izoh qoldirmoq\ncommunicate with – bilan muloqot qilmoq\nglance at – ga bir qarash\nreceive sth from – dan nimadir olmoq\nreply to – ga javob bermoq\nsend sth to sb – birovga nimadir yubormoq\ntalk (to sb) about – (birov bilan) haqida gaplashmoq\ntell sb about – birovga haqida aytmoq\ntranslate (from sth) into – (narsadan) ga tarjima qilmoq\nwrite (to sb) about – (birovga) haqida yozmoq"],
+            "cells_ru": ["_глаголы_", "comment on – комментировать что-либо\ncommunicate with – общаться с кем-либо\nglance at – взглянуть на\nreceive sth from – получить что-либо от\nreply to – ответить на\nsend sth to sb – отправить что-либо кому-либо\ntalk (to sb) about – говорить (с кем-либо) о\ntell sb about – рассказывать кому-либо о\ntranslate (from sth) into – переводить (с чего-либо) на\nwrite (to sb) about – писать (кому-либо) о"]
+          },
+          {
+            "cells": ["_nouns_", "information about\na letter (from sb) about"],
+            "cells_uz": ["_otlar_", "information about – haqida ma'lumot\na letter (from sb) about – (birovdan) haqida xat"],
+            "cells_ru": ["_существительные_", "information about – информация о\na letter (from sb) about – письмо (от кого-либо) о"]
+          }
+        ]
+      }
+    }
+  ]
+}

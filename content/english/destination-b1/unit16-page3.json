@@ -1,0 +1,985 @@
+{
+  "id": "unit16-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u16p3-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Gap to'g'ri bo'lsa, belgi (✓) qo'ying. Gapda ortiqcha so'z bo'lsa, o'sha so'zni yozing.",
+      "instruction_ru": "Если предложение верное, поставьте галочку (✓). Если в предложении есть лишнее слово, напишите его.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u16p3-ex1-1",
+            "sentence": "Is that my milkshake or yours milkshake?",
+            "errorStart": 30,
+            "errorEnd": 39,
+            "correctAnswer": "milkshake",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "milkshake",
+                "t": "milkshake",
+                "tr": "молочный коктейль"
+              },
+              {
+                "w": "yours",
+                "t": "sizniki/seniki",
+                "tr": "ваш/твой"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-2",
+            "sentence": "Look where the dog has put its bone!",
+            "errorStart": -1,
+            "errorEnd": -1,
+            "correctAnswer": "✓",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "Look",
+                "t": "qarang",
+                "tr": "посмотрите"
+              },
+              {
+                "w": "dog",
+                "t": "it",
+                "tr": "собака"
+              },
+              {
+                "w": "put",
+                "t": "qo'ymoq",
+                "tr": "положить"
+              },
+              {
+                "w": "bone",
+                "t": "suyak",
+                "tr": "кость"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-3",
+            "sentence": "I haven't got a camera with me because I've lent mine to my brother.",
+            "errorStart": -1,
+            "errorEnd": -1,
+            "correctAnswer": "✓",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "haven't got",
+                "t": "yo'q",
+                "tr": "нет"
+              },
+              {
+                "w": "camera",
+                "t": "kamera",
+                "tr": "фотоаппарат"
+              },
+              {
+                "w": "lent",
+                "t": "qarz bermoq",
+                "tr": "одолжить"
+              },
+              {
+                "w": "mine",
+                "t": "meniki",
+                "tr": "мой/моя"
+              },
+              {
+                "w": "brother",
+                "t": "aka/uka",
+                "tr": "брат"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-4",
+            "sentence": "Your DVD player is just the same as theirs is.",
+            "errorStart": 43,
+            "errorEnd": 45,
+            "correctAnswer": "is",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "DVD player",
+                "t": "DVD pleyer",
+                "tr": "DVD-плеер"
+              },
+              {
+                "w": "just the same",
+                "t": "xuddi shunday",
+                "tr": "точно такой же"
+              },
+              {
+                "w": "theirs",
+                "t": "ularniki",
+                "tr": "их/их собственность"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-5",
+            "sentence": "Was it your decision or hers decision?",
+            "errorStart": 29,
+            "errorEnd": 37,
+            "correctAnswer": "decision",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "decision",
+                "t": "qaror",
+                "tr": "решение"
+              },
+              {
+                "w": "hers",
+                "t": "uniki (ayol)",
+                "tr": "её/её собственность"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-6",
+            "sentence": "You can borrow my laptop, but why aren't you using yours laptop?",
+            "errorStart": 57,
+            "errorEnd": 63,
+            "correctAnswer": "laptop",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "borrow",
+                "t": "qarz olmoq",
+                "tr": "одолжить/взять в долг"
+              },
+              {
+                "w": "laptop",
+                "t": "noutbuk",
+                "tr": "ноутбук"
+              },
+              {
+                "w": "yours",
+                "t": "sizniki/seniki",
+                "tr": "ваш/твой"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-7",
+            "sentence": "I think those are your CDs and these are ours.",
+            "errorStart": -1,
+            "errorEnd": -1,
+            "correctAnswer": "✓",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "those",
+                "t": "o'sha/ular",
+                "tr": "те"
+              },
+              {
+                "w": "CDs",
+                "t": "disklar",
+                "tr": "диски"
+              },
+              {
+                "w": "ours",
+                "t": "bizniki",
+                "tr": "наш/наши"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-8",
+            "sentence": "This is her book, these are your books and these two are mine books.",
+            "errorStart": 62,
+            "errorEnd": 67,
+            "correctAnswer": "books",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "her",
+                "t": "uning (ayol)",
+                "tr": "её"
+              },
+              {
+                "w": "book",
+                "t": "kitob",
+                "tr": "книга"
+              },
+              {
+                "w": "mine",
+                "t": "meniki",
+                "tr": "мой/моя"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex1-9",
+            "sentence": "That video belongs to Carol and Doug – at least, I think it's theirs video.",
+            "errorStart": 69,
+            "errorEnd": 74,
+            "correctAnswer": "video",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "video",
+                "t": "video",
+                "tr": "видео"
+              },
+              {
+                "w": "belongs to",
+                "t": "tegishli bo'lmoq",
+                "tr": "принадлежать"
+              },
+              {
+                "w": "at least",
+                "t": "hech bo'lmaganda",
+                "tr": "по крайней мере"
+              },
+              {
+                "w": "theirs",
+                "t": "ularniki",
+                "tr": "их/их собственность"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u16p3-sec-exercise2",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qalin yozilgan har bir so'z noto'g'ri gapda. To'g'ri so'zni yozing.",
+      "instruction_ru": "Каждое слово, выделенное жирным шрифтом, находится в неправильном предложении. Напишите правильное слово.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u16p3-ex2-1",
+            "sentence": "That's great, Cathy. Did you make that herself?",
+            "errorStart": 39,
+            "errorEnd": 46,
+            "correctAnswer": "yourself",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "great",
+                "t": "ajoyib",
+                "tr": "отлично"
+              },
+              {
+                "w": "make",
+                "t": "qilmoq/yasatmoq",
+                "tr": "сделать"
+              },
+              {
+                "w": "herself",
+                "t": "o'zi (ayol)",
+                "tr": "она сама"
+              },
+              {
+                "w": "yourself",
+                "t": "o'zing/o'zingiz",
+                "tr": "ты сам/вы сами"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-2",
+            "sentence": "Doug hit myself in the eye by mistake with his toothbrush!",
+            "errorStart": 9,
+            "errorEnd": 15,
+            "correctAnswer": "himself",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "hit",
+                "t": "urmoq",
+                "tr": "ударить"
+              },
+              {
+                "w": "in the eye",
+                "t": "ko'zga",
+                "tr": "в глаз"
+              },
+              {
+                "w": "by mistake",
+                "t": "xato bilan",
+                "tr": "по ошибке"
+              },
+              {
+                "w": "toothbrush",
+                "t": "tish cho'tkasi",
+                "tr": "зубная щётка"
+              },
+              {
+                "w": "himself",
+                "t": "o'zi (erkak)",
+                "tr": "он сам"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-3",
+            "sentence": "Cats can look after yourself, can't they?",
+            "errorStart": 20,
+            "errorEnd": 28,
+            "correctAnswer": "themselves",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "Cats",
+                "t": "mushuklar",
+                "tr": "кошки"
+              },
+              {
+                "w": "look after",
+                "t": "g'amxo'rlik qilmoq",
+                "tr": "заботиться"
+              },
+              {
+                "w": "themselves",
+                "t": "o'zlari",
+                "tr": "они сами"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-4",
+            "sentence": "I hope you all enjoy himself on holiday!",
+            "errorStart": 21,
+            "errorEnd": 28,
+            "correctAnswer": "yourselves",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "hope",
+                "t": "umid qilmoq",
+                "tr": "надеяться"
+              },
+              {
+                "w": "enjoy",
+                "t": "zavqlanmoq",
+                "tr": "наслаждаться/хорошо провести"
+              },
+              {
+                "w": "on holiday",
+                "t": "ta'tilda",
+                "tr": "на каникулах/в отпуске"
+              },
+              {
+                "w": "yourselves",
+                "t": "o'zlaringiz",
+                "tr": "вы сами"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-5",
+            "sentence": "Dad didn't help me. I did it all themselves!",
+            "errorStart": 33,
+            "errorEnd": 43,
+            "correctAnswer": "myself",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "didn't help",
+                "t": "yordam bermadi",
+                "tr": "не помог"
+              },
+              {
+                "w": "did it all",
+                "t": "hammasini qildim",
+                "tr": "сделал всё сам"
+              },
+              {
+                "w": "myself",
+                "t": "o'zim",
+                "tr": "я сам/сама"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-6",
+            "sentence": "We painted the room yourselves; we didn't pay anyone to do it.",
+            "errorStart": 20,
+            "errorEnd": 30,
+            "correctAnswer": "ourselves",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "painted",
+                "t": "bo'yamoq",
+                "tr": "покрасить"
+              },
+              {
+                "w": "room",
+                "t": "xona",
+                "tr": "комната"
+              },
+              {
+                "w": "pay",
+                "t": "to'lamoq",
+                "tr": "платить"
+              },
+              {
+                "w": "anyone",
+                "t": "hech kim",
+                "tr": "никого"
+              },
+              {
+                "w": "ourselves",
+                "t": "o'zimiz",
+                "tr": "мы сами"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-7",
+            "sentence": "This kitchen isn't going to clean ourselves, you know!",
+            "errorStart": 34,
+            "errorEnd": 43,
+            "correctAnswer": "itself",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "kitchen",
+                "t": "oshxona",
+                "tr": "кухня"
+              },
+              {
+                "w": "clean",
+                "t": "tozalamoq",
+                "tr": "убирать/мыть"
+              },
+              {
+                "w": "itself",
+                "t": "o'zi",
+                "tr": "само"
+              },
+              {
+                "w": "you know",
+                "t": "bilasizku",
+                "tr": "знаете ли"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex2-8",
+            "sentence": "Wendy decided that she would buy itself a new dress in the sales.",
+            "errorStart": 33,
+            "errorEnd": 39,
+            "correctAnswer": "herself",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "decided",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "dress",
+                "t": "ko'ylak",
+                "tr": "платье"
+              },
+              {
+                "w": "in the sales",
+                "t": "chegirmada",
+                "tr": "на распродаже"
+              },
+              {
+                "w": "herself",
+                "t": "o'zi (ayol)",
+                "tr": "она сама/себе"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u16p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri olmosh yoki determinatorlarni qo'yib, matnni to'ldiring.",
+      "instruction_ru": "Заполните текст, вставив правильные местоимения или определители.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u16p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Inventions. If you invented something important, (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " would want to make money out of (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", right?"
+              }
+            ],
+            "answers": [
+              "you",
+              "it"
+            ],
+            "words": [
+              {
+                "w": "invented",
+                "t": "ixtiro qilmoq",
+                "tr": "изобрести"
+              },
+              {
+                "w": "something",
+                "t": "biror narsa",
+                "tr": "что-нибудь"
+              },
+              {
+                "w": "important",
+                "t": "muhim",
+                "tr": "важный"
+              },
+              {
+                "w": "make money",
+                "t": "pul ishlash",
+                "tr": "зарабатывать деньги"
+              },
+              {
+                "w": "out of",
+                "t": "dan",
+                "tr": "на/из"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Most of us would want to make some money from (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " invention."
+              }
+            ],
+            "answers": [
+              "our"
+            ],
+            "words": [
+              {
+                "w": "most of us",
+                "t": "ko'pchiligimiz",
+                "tr": "большинство из нас"
+              },
+              {
+                "w": "make",
+                "t": "ishlash",
+                "tr": "заработать"
+              },
+              {
+                "w": "invention",
+                "t": "ixtiro",
+                "tr": "изобретение"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It seems only fair – we did the work, so the money should be (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " too."
+              }
+            ],
+            "answers": [
+              "ours"
+            ],
+            "words": [
+              {
+                "w": "seems",
+                "t": "ko'rinmoq",
+                "tr": "казаться"
+              },
+              {
+                "w": "only fair",
+                "t": "adolatli",
+                "tr": "справедливо"
+              },
+              {
+                "w": "work",
+                "t": "ish",
+                "tr": "работа"
+              },
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Many inventors who have had (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " inventions produced, have become rich and famous and we shouldn't blame (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for that."
+              }
+            ],
+            "answers": [
+              "their",
+              "them"
+            ],
+            "words": [
+              {
+                "w": "inventors",
+                "t": "ixtirochi",
+                "tr": "изобретатели"
+              },
+              {
+                "w": "produced",
+                "t": "ishlab chiqarilgan",
+                "tr": "воплощённых"
+              },
+              {
+                "w": "rich",
+                "t": "boy",
+                "tr": "богатый"
+              },
+              {
+                "w": "famous",
+                "t": "mashhur",
+                "tr": "знаменитый"
+              },
+              {
+                "w": "blame",
+                "t": "ayblash",
+                "tr": "винить"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "But have (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " heard of Tim Berners-Lee? (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " invented the World Wide Web on the Internet, one of the most important inventions of the last fifty years."
+              }
+            ],
+            "answers": [
+              "you",
+              "He"
+            ],
+            "words": [
+              {
+                "w": "heard of",
+                "t": "haqida eshitmoq",
+                "tr": "слышать о"
+              },
+              {
+                "w": "invented",
+                "t": "ixtiro qilmoq",
+                "tr": "изобрести"
+              },
+              {
+                "w": "World Wide Web",
+                "t": "Jahon to'ri",
+                "tr": "Всемирная паутина"
+              },
+              {
+                "w": "Internet",
+                "t": "internet",
+                "tr": "Интернет"
+              },
+              {
+                "w": "important",
+                "t": "muhim",
+                "tr": "важный"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Millions of lives have been changed by (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " introduction."
+              }
+            ],
+            "answers": [
+              "its"
+            ],
+            "words": [
+              {
+                "w": "millions",
+                "t": "millionlar",
+                "tr": "миллионы"
+              },
+              {
+                "w": "lives",
+                "t": "hayotlar",
+                "tr": "жизни"
+              },
+              {
+                "w": "changed",
+                "t": "o'zgartirmoq",
+                "tr": "изменить"
+              },
+              {
+                "w": "introduction",
+                "t": "joriy etilishi",
+                "tr": "введение/появление"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When Tim Berners-Lee invented the Web, he made a promise to (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " – that he wouldn't make any money out of it, and that he would give (11) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " invention to the world."
+              }
+            ],
+            "answers": [
+              "us",
+              "his"
+            ],
+            "words": [
+              {
+                "w": "made a promise",
+                "t": "va'da bermoq",
+                "tr": "дать обещание"
+              },
+              {
+                "w": "wouldn't",
+                "t": "olmaydi",
+                "tr": "не будет"
+              },
+              {
+                "w": "give",
+                "t": "bermoq",
+                "tr": "отдать"
+              },
+              {
+                "w": "invention",
+                "t": "ixtiro",
+                "tr": "изобретение"
+              },
+              {
+                "w": "world",
+                "t": "dunyo",
+                "tr": "мир"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "He did, and now the Web belongs to all of (12) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "us"
+            ],
+            "words": [
+              {
+                "w": "belongs to",
+                "t": "tegishli bo'lmoq",
+                "tr": "принадлежать"
+              },
+              {
+                "w": "all of us",
+                "t": "barchamiz",
+                "tr": "все мы"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Ask (13) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " what life would be like if the World Wide Web wasn't free."
+              }
+            ],
+            "answers": [
+              "yourself"
+            ],
+            "words": [
+              {
+                "w": "Ask yourself",
+                "t": "o'zingizdan so'rang",
+                "tr": "спросите себя"
+              },
+              {
+                "w": "life",
+                "t": "hayot",
+                "tr": "жизнь"
+              },
+              {
+                "w": "would be like",
+                "t": "qanday bo'lardi",
+                "tr": "каким бы был"
+              },
+              {
+                "w": "free",
+                "t": "bepul",
+                "tr": "бесплатный"
+              }
+            ]
+          },
+          {
+            "id": "u16p3-ex3-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We should be grateful to Tim Berners-Lee, and thank (14) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for (15) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " amazing gift to the world."
+              }
+            ],
+            "answers": [
+              "him",
+              "his"
+            ],
+            "words": [
+              {
+                "w": "grateful",
+                "t": "minnatdor",
+                "tr": "благодарный"
+              },
+              {
+                "w": "thank",
+                "t": "minnatdorchilik bildirmoq",
+                "tr": "благодарить"
+              },
+              {
+                "w": "amazing",
+                "t": "ajoyib",
+                "tr": "удивительный"
+              },
+              {
+                "w": "gift",
+                "t": "sovg'a",
+                "tr": "подарок"
+              },
+              {
+                "w": "world",
+                "t": "dunyo",
+                "tr": "мир"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

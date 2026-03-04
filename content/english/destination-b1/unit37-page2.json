@@ -1,0 +1,773 @@
+{
+  "id": "unit37-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u37p2-sec-exercise1",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Обведите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u37p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My dad finally gave up "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "smoking",
+                  "to smoke"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " at the age of forty-nine."
+              }
+            ],
+            "words": [
+              {
+                "w": "give up",
+                "t": "voz kechmoq",
+                "tr": "бросить"
+              },
+              {
+                "w": "at the age of",
+                "t": "yoshida",
+                "tr": "в возрасте"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I really enjoyed "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "listening",
+                  "to listen"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to those MP3s you sent me. Thanks."
+              }
+            ],
+            "words": [
+              {
+                "w": "enjoy",
+                "t": "yoqtirmoq",
+                "tr": "наслаждаться"
+              },
+              {
+                "w": "sent",
+                "t": "yuborganingiz",
+                "tr": "которые вы отправили"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Can you afford "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "buying",
+                  "to buy"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " so many presents?"
+              }
+            ],
+            "words": [
+              {
+                "w": "afford",
+                "t": "imkoni bo'lmoq",
+                "tr": "позволить себе"
+              },
+              {
+                "w": "presents",
+                "t": "sovg'alar",
+                "tr": "подарки"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You should practise "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "juggling",
+                  "to juggle"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " every day or you'll never learn."
+              }
+            ],
+            "words": [
+              {
+                "w": "practise",
+                "t": "mashq qilmoq",
+                "tr": "практиковать"
+              },
+              {
+                "w": "juggling",
+                "t": "jonglyor qilish",
+                "tr": "жонглировать"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How did you learn "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "speaking",
+                  "to speak"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " Japanese so well?"
+              }
+            ],
+            "words": [
+              {
+                "w": "learn",
+                "t": "o'rganmoq",
+                "tr": "научиться"
+              },
+              {
+                "w": "Japanese",
+                "t": "yaponcha",
+                "tr": "японский"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I thought we discussed "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "going",
+                  "to go"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to India and now you want to go to China!"
+              }
+            ],
+            "words": [
+              {
+                "w": "discuss",
+                "t": "muhokama qilmoq",
+                "tr": "обсуждать"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We finally managed "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "finding",
+                  "to find"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " my passport and then left for the airport."
+              }
+            ],
+            "words": [
+              {
+                "w": "manage",
+                "t": "uddasidan chiqmoq",
+                "tr": "суметь"
+              },
+              {
+                "w": "passport",
+                "t": "pasport",
+                "tr": "паспорт"
+              },
+              {
+                "w": "airport",
+                "t": "aeroport",
+                "tr": "аэропорт"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I look forward to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "seeing",
+                  "see"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " you when I come next week."
+              }
+            ],
+            "words": [
+              {
+                "w": "look forward to",
+                "t": "intizor bo'lmoq",
+                "tr": "ожидать с нетерпением"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It was very kind of Jack to offer "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to baby-sit",
+                  "baby-sitting"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " this weekend."
+              }
+            ],
+            "words": [
+              {
+                "w": "offer",
+                "t": "taklif qilmoq",
+                "tr": "предложить"
+              },
+              {
+                "w": "baby-sit",
+                "t": "bolalar bilan qolmoq",
+                "tr": "сидеть с детьми"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex1-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "No! I refuse "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "waiting",
+                  "to wait"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " a moment longer!"
+              }
+            ],
+            "words": [
+              {
+                "w": "refuse",
+                "t": "rad etmoq",
+                "tr": "отказываться"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u37p2-sec-exercise2",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapdagi qalin fe'l to'g'ri bo'lsa, belgi (✓) qo'ying. Agar noto'g'ri bo'lsa, to'g'ri shaklini (-ing, to'liq yoki bare infinitive) yozing.",
+      "instruction_ru": "Если глагол, выделенный жирным шрифтом, правильный — поставьте галочку (✓). Если неправильный — напишите верную форму (-ing, полный или голый инфинитив).",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u37p2-ex2-1",
+            "sentence": "I hope to start driving as soon as I'm seventeen.",
+            "errorStart": 16,
+            "errorEnd": 23,
+            "correctAnswer": "driving",
+            "alternateAnswers": [
+              "✓"
+            ],
+            "words": [
+              {
+                "w": "hope",
+                "t": "umid qilmoq",
+                "tr": "надеяться"
+              },
+              {
+                "w": "as soon as",
+                "t": "cuanto prima bo'lsa",
+                "tr": "как только"
+              },
+              {
+                "w": "seventeen",
+                "t": "o'n yetti",
+                "tr": "семнадцать"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-2",
+            "sentence": "Stop pretending being asleep. I saw you open your eyes!",
+            "errorStart": 16,
+            "errorEnd": 21,
+            "correctAnswer": "to be",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "pretend",
+                "t": "bahona qilmoq",
+                "tr": "притворяться"
+              },
+              {
+                "w": "asleep",
+                "t": "uxlab yotgan",
+                "tr": "спящий"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-3",
+            "sentence": "My mum suggested to go bowling, but I didn't think that was a good idea.",
+            "errorStart": 17,
+            "errorEnd": 22,
+            "correctAnswer": "going",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "suggest",
+                "t": "taklif qilmoq",
+                "tr": "предлагать"
+              },
+              {
+                "w": "bowling",
+                "t": "bouling o'ynash",
+                "tr": "боулинг"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-4",
+            "sentence": "Quentin will do anything to avoid to walk to school. He's so lazy!",
+            "errorStart": 34,
+            "errorEnd": 41,
+            "correctAnswer": "walking",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "avoid",
+                "t": "qochmoq",
+                "tr": "избегать"
+              },
+              {
+                "w": "lazy",
+                "t": "dangasa",
+                "tr": "ленивый"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-5",
+            "sentence": "I'd really like visiting New York one day.",
+            "errorStart": 16,
+            "errorEnd": 24,
+            "correctAnswer": "to visit",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "would like",
+                "t": "xohlamoq",
+                "tr": "хотел бы"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-6",
+            "sentence": "Do you like watching TV or do you prefer play computer games?",
+            "errorStart": 41,
+            "errorEnd": 45,
+            "correctAnswer": "playing",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "prefer",
+                "t": "afzal ko'rmoq",
+                "tr": "предпочитать"
+              },
+              {
+                "w": "computer games",
+                "t": "kompyuter o'yinlari",
+                "tr": "компьютерные игры"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-7",
+            "sentence": "The weather seems being better. What about a picnic this weekend?",
+            "errorStart": 18,
+            "errorEnd": 23,
+            "correctAnswer": "to be",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "seem",
+                "t": "ko'rinmoq",
+                "tr": "казаться"
+              },
+              {
+                "w": "picnic",
+                "t": "piknik",
+                "tr": "пикник"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-8",
+            "sentence": "I expect to be home at nine o'clock, so have dinner without me.",
+            "errorStart": 9,
+            "errorEnd": 14,
+            "correctAnswer": "to be",
+            "alternateAnswers": [
+              "✓"
+            ],
+            "words": [
+              {
+                "w": "expect",
+                "t": "kutmoq",
+                "tr": "ожидать"
+              },
+              {
+                "w": "have dinner",
+                "t": "kechki ovqat yemoq",
+                "tr": "ужинать"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-9",
+            "sentence": "Our head teacher makes us all to wear jackets – even in summer!",
+            "errorStart": 30,
+            "errorEnd": 37,
+            "correctAnswer": "wear",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "head teacher",
+                "t": "direktor",
+                "tr": "директор"
+              },
+              {
+                "w": "jackets",
+                "t": "kurtka",
+                "tr": "куртка"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex2-10",
+            "sentence": "Don't let the dog sitting on the sofa!",
+            "errorStart": 18,
+            "errorEnd": 25,
+            "correctAnswer": "sit",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "let",
+                "t": "ruxsat bermoq",
+                "tr": "позволять"
+              },
+              {
+                "w": "sofa",
+                "t": "divan",
+                "tr": "диван"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u37p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u37p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "He tried to deny "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the money, but no one believed him."
+              }
+            ],
+            "answers": [
+              "taking"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "deny",
+                "t": "inkor qilmoq",
+                "tr": "отрицать"
+              },
+              {
+                "w": "believe",
+                "t": "ishonmoq",
+                "tr": "верить"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I hope "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a pilot when I grow up."
+              }
+            ],
+            "answers": [
+              "to become"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "pilot",
+                "t": "uchuvchi",
+                "tr": "лётчик"
+              },
+              {
+                "w": "grow up",
+                "t": "katta bo'lmoq",
+                "tr": "вырасти"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mr Foster has decided "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", so we're going to have a party."
+              }
+            ],
+            "answers": [
+              "to retire"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "decide",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "retire",
+                "t": "nafaqaga chiqmoq",
+                "tr": "уйти на пенсию"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you remember "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to Germany when you were two years old?"
+              }
+            ],
+            "answers": [
+              "going"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "remember",
+                "t": "eslamoq",
+                "tr": "помнить"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You can make the dog "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to you by shouting 'come'."
+              }
+            ],
+            "answers": [
+              "come"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "make",
+                "t": "majbur qilmoq",
+                "tr": "заставить"
+              },
+              {
+                "w": "shout",
+                "t": "qichqirmoq",
+                "tr": "кричать"
+              }
+            ]
+          },
+          {
+            "id": "u37p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There's no answer at the office. Let's try "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Roger's mobile."
+              }
+            ],
+            "answers": [
+              "to call"
+            ],
+            "alternateAnswers": [
+              "calling"
+            ],
+            "words": [
+              {
+                "w": "answer",
+                "t": "javob",
+                "tr": "ответ"
+              },
+              {
+                "w": "office",
+                "t": "ofis",
+                "tr": "офис"
+              },
+              {
+                "w": "mobile",
+                "t": "mobil telefon",
+                "tr": "мобильный телефон"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

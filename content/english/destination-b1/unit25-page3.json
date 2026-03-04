@@ -1,0 +1,696 @@
+{
+  "id": "unit25-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u25p3-sec-exercise1",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Обведите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u25p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This soup is "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "very salty",
+                  "too salty"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " to eat."
+              }
+            ],
+            "words": [
+              {
+                "w": "soup",
+                "t": "sho'rva",
+                "tr": "суп"
+              },
+              {
+                "w": "salty",
+                "t": "sho'r",
+                "tr": "солёный"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you run "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too fast",
+                  "fast enough"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ", you might win the race."
+              }
+            ],
+            "words": [
+              {
+                "w": "run",
+                "t": "yugurmoq",
+                "tr": "бежать"
+              },
+              {
+                "w": "race",
+                "t": "poyga",
+                "tr": "гонка"
+              },
+              {
+                "w": "win",
+                "t": "g'alaba qozonmoq",
+                "tr": "победить"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't drive "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too fast",
+                  "fast enough"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " or you might have an accident."
+              }
+            ],
+            "words": [
+              {
+                "w": "drive",
+                "t": "haydamoq",
+                "tr": "ехать"
+              },
+              {
+                "w": "accident",
+                "t": "baxtsiz hodisa",
+                "tr": "авария"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Have we got "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too much",
+                  "enough"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " time or do we need more?"
+              }
+            ],
+            "words": [
+              {
+                "w": "time",
+                "t": "vaqt",
+                "tr": "время"
+              },
+              {
+                "w": "need",
+                "t": "kerak",
+                "tr": "нужно"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you think you're "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too strong",
+                  "strong enough"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " to lift this heavy chair?"
+              }
+            ],
+            "words": [
+              {
+                "w": "strong",
+                "t": "kuchli",
+                "tr": "сильный"
+              },
+              {
+                "w": "lift",
+                "t": "ko'tarmoq",
+                "tr": "поднять"
+              },
+              {
+                "w": "heavy",
+                "t": "og'ir",
+                "tr": "тяжёлый"
+              },
+              {
+                "w": "chair",
+                "t": "stul",
+                "tr": "стул"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There are "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too many",
+                  "enough"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " questions here! I can't do all of them in five minutes!"
+              }
+            ],
+            "words": [
+              {
+                "w": "questions",
+                "t": "savollar",
+                "tr": "вопросы"
+              },
+              {
+                "w": "five minutes",
+                "t": "besh daqiqa",
+                "tr": "пять минут"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Are you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "enough warm",
+                  "warm enough"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "? Shall I put the heating on?"
+              }
+            ],
+            "words": [
+              {
+                "w": "warm",
+                "t": "iliq",
+                "tr": "тёплый"
+              },
+              {
+                "w": "heating",
+                "t": "isitish",
+                "tr": "отопление"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This tea is "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "too",
+                  "enough"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " hot to drink. I'll wait for it to cool down."
+              }
+            ],
+            "words": [
+              {
+                "w": "tea",
+                "t": "choy",
+                "tr": "чай"
+              },
+              {
+                "w": "drink",
+                "t": "ichmoq",
+                "tr": "пить"
+              },
+              {
+                "w": "cool down",
+                "t": "sovumoq",
+                "tr": "остыть"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "A qutisidagi so'z va B qutisidagi so'z yoki iborani ishlatib to'ldiring. A qutisidagi so'zlarni bir necha marta ishlatishingiz mumkin.\n\nA: enough • so • such • too\nB: a long time • a lot of fun • beautiful • early • hard • hot • many things • sweets",
+      "instruction_ru": "Заполните, используя слово из блока A и слово или фразу из блока B. Слова из блока A можно использовать несколько раз.\n\nA: enough • so • such • too\nB: a long time • a lot of fun • beautiful • early • hard • hot • many things • sweets",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u25p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We were having "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at the party that I didn't want to come home."
+              }
+            ],
+            "answers": [
+              "such a lot of fun"
+            ],
+            "words": [
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              },
+              {
+                "w": "fun",
+                "t": "qiziq",
+                "tr": "веселье"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I put "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in the plastic bag and it broke."
+              }
+            ],
+            "answers": [
+              "too many things"
+            ],
+            "words": [
+              {
+                "w": "plastic bag",
+                "t": "polietilen paket",
+                "tr": "пластиковый пакет"
+              },
+              {
+                "w": "broke",
+                "t": "yirtilmoq",
+                "tr": "порвался"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We didn't have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for everyone to have one."
+              }
+            ],
+            "answers": [
+              "enough sweets"
+            ],
+            "words": [
+              {
+                "w": "sweets",
+                "t": "shirinliklar",
+                "tr": "конфеты"
+              },
+              {
+                "w": "everyone",
+                "t": "hammaga",
+                "tr": "каждый"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Nancy is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that I think I'm falling in love with her."
+              }
+            ],
+            "answers": [
+              "so beautiful"
+            ],
+            "words": [
+              {
+                "w": "beautiful",
+                "t": "go'zal",
+                "tr": "красивый"
+              },
+              {
+                "w": "falling in love",
+                "t": "sevib qolmoq",
+                "tr": "влюбляться"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's raining "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to go out. Let's stay in and watch TV."
+              }
+            ],
+            "answers": [
+              "too hard"
+            ],
+            "words": [
+              {
+                "w": "raining",
+                "t": "yomg'ir yog'moqda",
+                "tr": "идёт дождь"
+              },
+              {
+                "w": "hard",
+                "t": "qattiq",
+                "tr": "сильно"
+              },
+              {
+                "w": "stay in",
+                "t": "uyda qolmoq",
+                "tr": "остаться дома"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When the milk is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", pour it into the cup and stir with a spoon."
+              }
+            ],
+            "answers": [
+              "hot enough"
+            ],
+            "words": [
+              {
+                "w": "milk",
+                "t": "sut",
+                "tr": "молоко"
+              },
+              {
+                "w": "pour",
+                "t": "quymoq",
+                "tr": "налить"
+              },
+              {
+                "w": "stir",
+                "t": "aralashtimoq",
+                "tr": "перемешать"
+              },
+              {
+                "w": "spoon",
+                "t": "qoshiq",
+                "tr": "ложка"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We waited for "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that I thought the bus was never going to come!"
+              }
+            ],
+            "answers": [
+              "such a long time"
+            ],
+            "words": [
+              {
+                "w": "waited",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "bus",
+                "t": "avtobus",
+                "tr": "автобус"
+              }
+            ]
+          },
+          {
+            "id": "u25p3-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Stacy got to the theatre "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that there was no one there."
+              }
+            ],
+            "answers": [
+              "so early"
+            ],
+            "words": [
+              {
+                "w": "theatre",
+                "t": "teatr",
+                "tr": "театр"
+              },
+              {
+                "w": "early",
+                "t": "erta",
+                "tr": "рано"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p3-sec-exercise3",
+      "type": "texterror",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'shliqqa so, such, too yoki enough yozing.",
+      "instruction_ru": "Вставьте so, such, too или enough в каждый пропуск.",
+      "sentences": [],
+      "textErrorData": {
+        "passage": "My first – and last! – day at work\n\nI'll never forget my first day at work. It was (1) ________ a disaster that I lost my job! The boss explained what I had to do, but she did it (2) ________ quickly that I didn't understand. I wasn't brave (3) ________ to ask her to repeat it, so I pretended I knew what to do. It wasn't difficult at first – just putting numbers into a computer. Soon, though, I was (4) ________ busy that I started making more and more mistakes. I made (5) ________ a lot of mistakes that the other workers noticed. They tried to help me, but it was (6) ________ late. In the end, I just had (7) ________ much to do that I gave up. I sat there and stared at my computer for two hours! The boss came back and she was (8) ________ shocked that she fired me immediately! My first day was also my last!",
+        "errors": [
+          {
+            "id": 1,
+            "errorStart": 78,
+            "errorEnd": 86,
+            "correctAnswer": "such",
+            "alternateAnswers": []
+          },
+          {
+            "id": 2,
+            "errorStart": 155,
+            "errorEnd": 163,
+            "correctAnswer": "so",
+            "alternateAnswers": []
+          },
+          {
+            "id": 3,
+            "errorStart": 194,
+            "errorEnd": 202,
+            "correctAnswer": "enough",
+            "alternateAnswers": []
+          },
+          {
+            "id": 4,
+            "errorStart": 289,
+            "errorEnd": 297,
+            "correctAnswer": "so",
+            "alternateAnswers": []
+          },
+          {
+            "id": 5,
+            "errorStart": 350,
+            "errorEnd": 358,
+            "correctAnswer": "such",
+            "alternateAnswers": []
+          },
+          {
+            "id": 6,
+            "errorStart": 419,
+            "errorEnd": 427,
+            "correctAnswer": "too",
+            "alternateAnswers": []
+          },
+          {
+            "id": 7,
+            "errorStart": 449,
+            "errorEnd": 457,
+            "correctAnswer": "too",
+            "alternateAnswers": []
+          },
+          {
+            "id": 8,
+            "errorStart": 543,
+            "errorEnd": 551,
+            "correctAnswer": "so",
+            "alternateAnswers": []
+          }
+        ],
+        "words": [
+          {
+            "w": "disaster",
+            "t": "faloat",
+            "tr": "катастрофа"
+          },
+          {
+            "w": "explained",
+            "t": "tushuntirmoq",
+            "tr": "объяснять"
+          },
+          {
+            "w": "brave",
+            "t": "jasur",
+            "tr": "смелый"
+          },
+          {
+            "w": "pretended",
+            "t": "ko'rsatmoq",
+            "tr": "притворяться"
+          },
+          {
+            "w": "mistakes",
+            "t": "xatolar",
+            "tr": "ошибки"
+          },
+          {
+            "w": "noticed",
+            "t": "payqamoq",
+            "tr": "заметить"
+          },
+          {
+            "w": "stared",
+            "t": "tikilib qaramoq",
+            "tr": "уставиться"
+          },
+          {
+            "w": "fired",
+            "t": "ishdan bo'shamoq",
+            "tr": "уволить"
+          },
+          {
+            "w": "immediately",
+            "t": "darhol",
+            "tr": "немедленно"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "unit33-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u33p2-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "instruction": "Qalin yozilgan so'zlar noto'g'ri. To'g'ri so'zni yozing.",
+      "instruction_ru": "Слова, выделенные жирным шрифтом, неправильные. Напишите правильное слово.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u33p2-ex1-1",
+            "sentence": "These jeans are too ancient. Do you have a smaller size?",
+            "errorStart": 20,
+            "errorEnd": 27,
+            "correctAnswer": "tight",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "jeans",
+                "t": "jinsi shim",
+                "tr": "джинсы"
+              },
+              {
+                "w": "too tight",
+                "t": "juda tor",
+                "tr": "слишком тесные"
+              },
+              {
+                "w": "smaller size",
+                "t": "kichikroq o'lcham",
+                "tr": "меньший размер"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-2",
+            "sentence": "I don't like your smooth dress. It makes you look like a zebra!",
+            "errorStart": 18,
+            "errorEnd": 24,
+            "correctAnswer": "striped",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "don't like",
+                "t": "yoqtirmayman",
+                "tr": "не нравится"
+              },
+              {
+                "w": "striped dress",
+                "t": "yo'l-yo'l ko'ylak",
+                "tr": "полосатое платье"
+              },
+              {
+                "w": "look like",
+                "t": "o'xshash",
+                "tr": "выглядеть как"
+              },
+              {
+                "w": "zebra",
+                "t": "zebra",
+                "tr": "зебра"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-3",
+            "sentence": "It's good to have rough skills, like being able to make your own clothes.",
+            "errorStart": 18,
+            "errorEnd": 23,
+            "correctAnswer": "practical",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "good",
+                "t": "yaxshi",
+                "tr": "хорошо"
+              },
+              {
+                "w": "practical skills",
+                "t": "amaliy ko'nikmalar",
+                "tr": "практические навыки"
+              },
+              {
+                "w": "being able to",
+                "t": "uddalay olish",
+                "tr": "уметь"
+              },
+              {
+                "w": "make your own clothes",
+                "t": "o'z kiyimlarini tikmoq",
+                "tr": "шить одежду самостоятельно"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-4",
+            "sentence": "Ouch! These shoes are far too checked. Have you got any in a bigger size?",
+            "errorStart": 30,
+            "errorEnd": 37,
+            "correctAnswer": "tight",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "shoes",
+                "t": "poyabzal",
+                "tr": "туфли"
+              },
+              {
+                "w": "far too tight",
+                "t": "juda ham tor",
+                "tr": "слишком тесные"
+              },
+              {
+                "w": "bigger size",
+                "t": "kattaroq o'lcham",
+                "tr": "больший размер"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-5",
+            "sentence": "Wear that suitable shirt, the one with the red and white squares.",
+            "errorStart": 10,
+            "errorEnd": 18,
+            "correctAnswer": "checked",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wear",
+                "t": "kiymoq",
+                "tr": "надень"
+              },
+              {
+                "w": "checked shirt",
+                "t": "katakli ko'ylak",
+                "tr": "клетчатая рубашка"
+              },
+              {
+                "w": "red and white squares",
+                "t": "qizil va oq kataklar",
+                "tr": "красные и белые квадраты"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-6",
+            "sentence": "The woman asked the assistant if they had any jackets loose for a one-year-old girl.",
+            "errorStart": 54,
+            "errorEnd": 59,
+            "correctAnswer": "suitable",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "woman",
+                "t": "ayol",
+                "tr": "женщина"
+              },
+              {
+                "w": "asked",
+                "t": "so'radi",
+                "tr": "спросила"
+              },
+              {
+                "w": "assistant",
+                "t": "sotuvchi",
+                "tr": "продавец"
+              },
+              {
+                "w": "suitable",
+                "t": "mos",
+                "tr": "подходящий"
+              },
+              {
+                "w": "one-year-old",
+                "t": "bir yoshli",
+                "tr": "годовалый"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-7",
+            "sentence": "This woollen jumper is really striped. I don't like wearing it because it makes me itch!",
+            "errorStart": 30,
+            "errorEnd": 37,
+            "correctAnswer": "rough",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "woollen",
+                "t": "jun",
+                "tr": "шерстяной"
+              },
+              {
+                "w": "jumper",
+                "t": "sviter",
+                "tr": "свитер"
+              },
+              {
+                "w": "really rough",
+                "t": "juda g'adir-budur",
+                "tr": "очень грубый"
+              },
+              {
+                "w": "wearing",
+                "t": "kiyish",
+                "tr": "носить"
+              },
+              {
+                "w": "makes me itch",
+                "t": "qichitadi",
+                "tr": "чешется"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-8",
+            "sentence": "The practical Egyptians almost always wore white clothes.",
+            "errorStart": 4,
+            "errorEnd": 13,
+            "correctAnswer": "ancient",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "ancient Egyptians",
+                "t": "qadimgi misrliklar",
+                "tr": "древние египтяне"
+              },
+              {
+                "w": "almost always",
+                "t": "deyarli doim",
+                "tr": "почти всегда"
+              },
+              {
+                "w": "wore",
+                "t": "kiyishgan",
+                "tr": "носили"
+              },
+              {
+                "w": "white clothes",
+                "t": "oq kiyim",
+                "tr": "белую одежду"
+              }
+            ]
+          },
+          {
+            "id": "u33p2-ex1-9",
+            "sentence": "Feel this material. It's so soft and tight. I bet it's really expensive.",
+            "errorStart": 37,
+            "errorEnd": 42,
+            "correctAnswer": "smooth",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "feel",
+                "t": "his qiling",
+                "tr": "потрогайте"
+              },
+              {
+                "w": "material",
+                "t": "mato",
+                "tr": "ткань"
+              },
+              {
+                "w": "soft",
+                "t": "yumshoq",
+                "tr": "мягкая"
+              },
+              {
+                "w": "smooth",
+                "t": "silliq",
+                "tr": "гладкая"
+              },
+              {
+                "w": "I bet",
+                "t": "ishonaman",
+                "tr": "держу пари"
+              },
+              {
+                "w": "expensive",
+                "t": "qimmat",
+                "tr": "дорогая"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

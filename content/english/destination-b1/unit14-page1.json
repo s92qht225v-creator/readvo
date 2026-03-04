@@ -1,0 +1,156 @@
+{
+  "id": "unit14-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 14,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Articles",
+    "titleTranslation_ru": "Articles"
+  },
+  "sections": [
+    {
+      "id": "u14p1-sec-art1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "a (indefinite article)",
+      "subheading_uz": "a (noaniq artikl)",
+      "subheading_ru": "a (неопределённый артикль)",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["singular countable nouns (not specific)", "_I need to get **a** new coat._"],
+            "cells_uz": ["birlik sanaladigan otlar (noaniq)", "_I need to get **a** new coat._"],
+            "cells_ru": ["единственное число исчисляемых существительных (неопределённых)", "_I need to get **a** new coat._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p1-sec-art2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "an (indefinite article)",
+      "subheading_uz": "an (noaniq artikl)",
+      "subheading_ru": "an (неопределённый артикль)",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["instead of a when the next word begins with a vowel sound", "_I don't have enough money for **an** expensive dress._"],
+            "cells_uz": ["keyingi so'z unli tovush bilan boshlanganida a o'rnida ishlatiladi", "_I don't have enough money for **an** expensive dress._"],
+            "cells_ru": ["вместо a, когда следующее слово начинается с гласного звука", "_I don't have enough money for **an** expensive dress._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "a yoki an ishlatish so'zning imlosi emas, **tovushi**ga bog'liq. Quyidagi so'zlarga e'tibor bering:\n• _**an** honest person_ • _**an** hour_ • _**a** euro_ • _**a** uniform",
+        "translation_ru": "Выбор между a и an зависит от **звука**, а не от написания слова. Обратите внимание на следующие слова:\n• _**an** honest person_ • _**an** hour_ • _**a** euro_ • _**a** uniform"
+      }
+    },
+    {
+      "id": "u14p1-sec-art3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "the (definite article)",
+      "subheading_uz": "the (aniq artikl)",
+      "subheading_ru": "the (определённый артикль)",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["singular countable nouns (specific)", "_Let's go to **the** new shopping centre._"],
+            "cells_uz": ["birlik sanaladigan otlar (aniq)", "_Let's go to **the** new shopping centre._"],
+            "cells_ru": ["единственное число исчисляемых существительных (определённых)", "_Let's go to **the** new shopping centre._"]
+          },
+          {
+            "cells": ["plural countable nouns (specific)", "_Where are **the** books I ordered?_"],
+            "cells_uz": ["ko'plik sanaladigan otlar (aniq)", "_Where are **the** books I ordered?_"],
+            "cells_ru": ["множественное число исчисляемых существительных (определённых)", "_Where are **the** books I ordered?_"]
+          },
+          {
+            "cells": ["uncountable nouns (specific)", "_I gave the shop assistant **the** money and then left._"],
+            "cells_uz": ["sanalmaydigan otlar (aniq)", "_I gave the shop assistant **the** money and then left._"],
+            "cells_ru": ["неисчисляемые существительные (определённые)", "_I gave the shop assistant **the** money and then left._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p1-sec-art4",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "No article (zero article)",
+      "subheading_uz": "Artiklsiz (nol artikl)",
+      "subheading_ru": "Без артикля (нулевой артикль)",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["plural countable nouns (general)", "_Prices have gone up a lot recently._"],
+            "cells_uz": ["ko'plik sanaladigan otlar (umumiy)", "_Prices have gone up a lot recently._"],
+            "cells_ru": ["множественное число исчисляемых существительных (в общем смысле)", "_Prices have gone up a lot recently._"]
+          },
+          {
+            "cells": ["uncountable nouns (general)", "_Fresh fruit is really good for you._"],
+            "cells_uz": ["sanalmaydigan otlar (umumiy)", "_Fresh fruit is really good for you._"],
+            "cells_ru": ["неисчисляемые существительные (в общем смысле)", "_Fresh fruit is really good for you._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p1-sec-art5",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Special rules",
+      "subheading_uz": "Maxsus qoidalar",
+      "subheading_ru": "Особые правила",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["**places**\n**the**: seas, rivers, areas, some countries, the UK, public buildings, the Earth, the world, the sky, the moon, the sun, the sea, the environment\n**no article**: towns and cities, most countries, continents, streets, planets", "_**the** Atlantic, **the** Amazon, **the** Antarctic, **the** USA, **the** theatre_\n_Moscow, France, Europe, Baker Street, Mars_"],
+            "cells_uz": ["**joylar**\n**the**: dengizlar, daryolar, hududlar, ba'zi mamlakatlar, UK, jamoat binolari, Yer, dunyo, osmon, oy, quyosh, dengiz, atrof-muhit\n**artiklsiz**: shahar va qishloqlar, aksariyat mamlakatlar, qit'alar, ko'chalar, sayyoralar", "_**the** Atlantic, **the** Amazon, **the** Antarctic, **the** USA, **the** theatre_\n_Moscow, France, Europe, Baker Street, Mars_"],
+            "cells_ru": ["**места**\n**the**: моря, реки, районы, некоторые страны, Великобритания, общественные здания, Земля, мир, небо, луна, солнце, море, окружающая среда\n**без артикля**: города и сёла, большинство стран, континенты, улицы, планеты", "_**the** Atlantic, **the** Amazon, **the** Antarctic, **the** USA, **the** theatre_\n_Moscow, France, Europe, Baker Street, Mars_"]
+          },
+          {
+            "cells": ["**activities**\n**a/an**: have a job, work as a ...\n**the**: on the radio, the media, play the piano\n**no article**: go to work, on TV, go shopping, play tennis, listen to music, go to work, go to school, be at school, be at university, school subjects", "_have **a** job, work as **a** teacher_\n_on **the** radio, play **the** piano_\n_go to work, on TV, play tennis_"],
+            "cells_uz": ["**faoliyatlar**\n**a/an**: have a job, work as a ...\n**the**: on the radio, the media, play the piano\n**artiklsiz**: go to work, on TV, go shopping, play tennis, listen to music, go to school, be at school, be at university, maktab fanlari", "_have **a** job, work as **a** teacher_\n_on **the** radio, play **the** piano_\n_go to work, on TV, play tennis_"],
+            "cells_ru": ["**виды деятельности**\n**a/an**: have a job, work as a ...\n**the**: on the radio, the media, play the piano\n**без артикля**: go to work, on TV, go shopping, play tennis, listen to music, go to school, be at school, be at university, школьные предметы", "_have **a** job, work as **a** teacher_\n_on **the** radio, play **the** piano_\n_go to work, on TV, play tennis_"]
+          },
+          {
+            "cells": ["**time**\n**the**: in the morning/afternoon/evening, on the 20th March, in the 1950s\n**no article**: days (Thursday), months (May), years (2009), at night", "_in **the** morning, on **the** 20th March, in **the** 1950s_\n_on Thursday, in May, in 2009, at night_"],
+            "cells_uz": ["**vaqt**\n**the**: in the morning/afternoon/evening, on the 20th March, in the 1950s\n**artiklsiz**: kunlar (Thursday), oylar (May), yillar (2009), at night", "_in **the** morning, on **the** 20th March, in **the** 1950s_\n_on Thursday, in May, in 2009, at night_"],
+            "cells_ru": ["**время**\n**the**: in the morning/afternoon/evening, on the 20th March, in the 1950s\n**без артикля**: дни недели (Thursday), месяцы (May), годы (2009), at night", "_in **the** morning, on **the** 20th March, in **the** 1950s_\n_on Thursday, in May, in 2009, at night_"]
+          },
+          {
+            "cells": ["**people**\n**the**: the King, the Prime Minister, the army, the navy, the police, the Germans, the English\n**no article**: become king, he's English, speak English", "_**the** King, **the** Prime Minister, **the** army, **the** Germans_\n_become king, he's English, speak English_"],
+            "cells_uz": ["**odamlar**\n**the**: the King, the Prime Minister, the army, the navy, the police, the Germans, the English\n**artiklsiz**: become king, he's English, speak English", "_**the** King, **the** Prime Minister, **the** army, **the** Germans_\n_become king, he's English, speak English_"],
+            "cells_ru": ["**люди**\n**the**: the King, the Prime Minister, the army, the navy, the police, the Germans, the English\n**без артикля**: become king, he's English, speak English", "_**the** King, **the** Prime Minister, **the** army, **the** Germans_\n_become king, he's English, speak English_"]
+          }
+        ]
+      }
+    }
+  ]
+}

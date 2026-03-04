@@ -1,0 +1,454 @@
+{
+  "id": "progress-test1-page3",
+  "pageNumber": 3,
+  "lessonHeader": {
+    "lessonNumber": 1,
+    "pinyin": "",
+    "title": "Progress Test",
+    "titleTranslation": "Units 1 – 21",
+    "titleTranslation_ru": "Units 1 – 21"
+  },
+  "sections": [
+    {
+      "id": "pt1p3-sec-exE",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "E",
+      "subheading_uz": "E",
+      "subheading_ru": "E",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Напишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card39",
+            "parts": [
+              { "type": "text", "content": "Why don't you borrow a pencil " },
+              { "type": "blank" },
+              { "type": "text", "content": " someone else?" }
+            ],
+            "answers": ["from"],
+            "words": [
+              { "w": "borrow", "t": "qarz olmoq", "tr": "одолжить" },
+              { "w": "pencil", "t": "qalam", "tr": "карандаш" },
+              { "w": "someone else", "t": "boshqa birov", "tr": "кто-то другой" }
+            ]
+          },
+          {
+            "id": "card40",
+            "parts": [
+              { "type": "text", "content": "I don't think I can cope " },
+              { "type": "blank" },
+              { "type": "text", "content": " studying and having a job at the same time." }
+            ],
+            "answers": ["with"],
+            "words": [
+              { "w": "cope with", "t": "uddalay olmoq", "tr": "справляться с" },
+              { "w": "at the same time", "t": "bir vaqtda", "tr": "одновременно" }
+            ]
+          },
+          {
+            "id": "card41",
+            "parts": [
+              { "type": "text", "content": "I finally succeeded " },
+              { "type": "blank" },
+              { "type": "text", "content": " jumping over the box on my skateboard." }
+            ],
+            "answers": ["in"],
+            "words": [
+              { "w": "finally", "t": "nihoyat", "tr": "наконец" },
+              { "w": "succeeded in", "t": "muvaffaqiyat qilmoq", "tr": "преуспеть в" },
+              { "w": "jumping over", "t": "ustidan sakrab o'tmoq", "tr": "перепрыгнуть через" },
+              { "w": "skateboard", "t": "skeytbord", "tr": "скейтборд" }
+            ]
+          },
+          {
+            "id": "card42",
+            "parts": [
+              { "type": "text", "content": "My uncle asked me to help him translate a menu " },
+              { "type": "blank" },
+              { "type": "text", "content": " English." }
+            ],
+            "answers": ["into"],
+            "words": [
+              { "w": "uncle", "t": "tog'a / amaki", "tr": "дядя" },
+              { "w": "translate", "t": "tarjima qilmoq", "tr": "переводить" },
+              { "w": "menu", "t": "menyu", "tr": "меню" },
+              { "w": "into English", "t": "inglizchaga", "tr": "на английский" }
+            ]
+          },
+          {
+            "id": "card43",
+            "parts": [
+              { "type": "text", "content": "Ed glanced " },
+              { "type": "blank" },
+              { "type": "text", "content": " the message on his mobile phone and then carried on talking." }
+            ],
+            "answers": ["at"],
+            "words": [
+              { "w": "glanced at", "t": "bir qarab olmoq", "tr": "бросить взгляд на" },
+              { "w": "message", "t": "xabar", "tr": "сообщение" },
+              { "w": "mobile phone", "t": "mobil telefon", "tr": "мобильный телефон" },
+              { "w": "carried on talking", "t": "gaplashishni davom ettirdi", "tr": "продолжил разговор" }
+            ]
+          },
+          {
+            "id": "card44",
+            "parts": [
+              { "type": "text", "content": "Did you know that our head teacher is married " },
+              { "type": "blank" },
+              { "type": "text", "content": " an actress? I had no idea." }
+            ],
+            "answers": ["to"],
+            "words": [
+              { "w": "head teacher", "t": "direktor", "tr": "директор школы" },
+              { "w": "married to", "t": "ga turmushga chiqqan", "tr": "женат на / замужем за" },
+              { "w": "actress", "t": "aktrisa", "tr": "актриса" },
+              { "w": "had no idea", "t": "bilmagan edim", "tr": "понятия не имел" }
+            ]
+          },
+          {
+            "id": "card45",
+            "parts": [
+              { "type": "text", "content": "This area is famous " },
+              { "type": "blank" },
+              { "type": "text", "content": " its cheese and its bread." }
+            ],
+            "answers": ["for"],
+            "words": [
+              { "w": "area", "t": "hudud", "tr": "район" },
+              { "w": "famous for", "t": "mashhur bo'lmoq", "tr": "знаменит" },
+              { "w": "cheese", "t": "pishloq", "tr": "сыр" }
+            ]
+          },
+          {
+            "id": "card46",
+            "parts": [
+              { "type": "text", "content": "I don't know very much " },
+              { "type": "blank" },
+              { "type": "text", "content": " cooking, but I can make an omelette!" }
+            ],
+            "answers": ["about"],
+            "words": [
+              { "w": "know about", "t": "haqida bilmoq", "tr": "знать о" },
+              { "w": "cooking", "t": "ovqat pishirish", "tr": "кулинария" },
+              { "w": "omelette", "t": "tuxum qaynatma", "tr": "омлет" }
+            ]
+          },
+          {
+            "id": "card47",
+            "parts": [
+              { "type": "text", "content": "I've always been interested " },
+              { "type": "blank" },
+              { "type": "text", "content": " insects and spiders. I don't know why!" }
+            ],
+            "answers": ["in"],
+            "words": [
+              { "w": "interested in", "t": "qiziqmoq", "tr": "интересоваться" },
+              { "w": "insects", "t": "hasharotlar", "tr": "насекомые" },
+              { "w": "spiders", "t": "o'rgimchaklar", "tr": "пауки" }
+            ]
+          },
+          {
+            "id": "card48",
+            "parts": [
+              { "type": "text", "content": "Jessie seemed to be getting a bit bored " },
+              { "type": "blank" },
+              { "type": "text", "content": " the game, so I suggested watching TV." }
+            ],
+            "answers": ["with"],
+            "words": [
+              { "w": "seemed", "t": "ko'rindi", "tr": "казалось" },
+              { "w": "getting bored with", "t": "zerikib qolmoq", "tr": "устать от" },
+              { "w": "suggested", "t": "taklif qildi", "tr": "предложил" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt1p3-sec-exF",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "F",
+      "subheading_uz": "F",
+      "subheading_ru": "F",
+      "instruction": "Gaplarning ikkinchi yarmini mos ravishda tanlang. Javob sifatida harf yozing (A-H).",
+      "instruction_ru": "Подберите вторую часть предложения. Впишите соответствующую букву (A-H).",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card49",
+            "parts": [
+              { "type": "text", "content": "I think I'm going to take " },
+              { "type": "blank" },
+              { "type": "text", "content": "\n\nA  off, I held my dad's hand tightly.\nB  after my younger sister when she was small.\nC  out where the concert is going to happen.\nD  off the TV and find something else to do.\nE  up me and my brother because my parents worked.\nF  up a musical instrument, maybe the violin.\nG  out with Kelly because she hurt my feelings.\nH  up after more than twenty years together." }
+            ],
+            "answers": ["F"],
+            "alternateAnswers": [["f"]],
+            "words": [
+              { "w": "take up", "t": "boshlamoq (ish/mashg'ulot)", "tr": "начать заниматься" },
+              { "w": "musical instrument", "t": "musiqa asbobi", "tr": "музыкальный инструмент" },
+              { "w": "violin", "t": "skripka", "tr": "скрипка" }
+            ]
+          },
+          {
+            "id": "card50",
+            "parts": [
+              { "type": "text", "content": "As our plane took " },
+              { "type": "blank" }
+            ],
+            "answers": ["A"],
+            "alternateAnswers": [["a"]],
+            "words": [
+              { "w": "plane", "t": "samolyot", "tr": "самолёт" },
+              { "w": "took off", "t": "uchib ketdi", "tr": "взлетел" },
+              { "w": "tightly", "t": "mahkam", "tr": "крепко" }
+            ]
+          },
+          {
+            "id": "card51",
+            "parts": [
+              { "type": "text", "content": "Mr and Mrs Davies have split " },
+              { "type": "blank" }
+            ],
+            "answers": ["H"],
+            "alternateAnswers": [["h"]],
+            "words": [
+              { "w": "split up", "t": "ajrashmoq", "tr": "расстаться" },
+              { "w": "twenty years", "t": "yigirma yil", "tr": "двадцать лет" },
+              { "w": "together", "t": "birga", "tr": "вместе" }
+            ]
+          },
+          {
+            "id": "card52",
+            "parts": [
+              { "type": "text", "content": "I hope we manage to find " },
+              { "type": "blank" }
+            ],
+            "answers": ["C"],
+            "alternateAnswers": [["c"]],
+            "words": [
+              { "w": "manage to", "t": "uddalay olmoq", "tr": "суметь" },
+              { "w": "find out", "t": "bilib olmoq", "tr": "узнать" },
+              { "w": "concert", "t": "konsert", "tr": "концерт" }
+            ]
+          },
+          {
+            "id": "card53",
+            "parts": [
+              { "type": "text", "content": "I often had to look " },
+              { "type": "blank" }
+            ],
+            "answers": ["B"],
+            "alternateAnswers": [["b"]],
+            "words": [
+              { "w": "look after", "t": "qaramoq", "tr": "присматривать за" },
+              { "w": "younger sister", "t": "kichik singlisi", "tr": "младшая сестра" }
+            ]
+          },
+          {
+            "id": "card54",
+            "parts": [
+              { "type": "text", "content": "You should turn " },
+              { "type": "blank" }
+            ],
+            "answers": ["D"],
+            "alternateAnswers": [["d"]],
+            "words": [
+              { "w": "turn off", "t": "o'chirmoq", "tr": "выключить" },
+              { "w": "find something else to do", "t": "boshqa narsa topmoq", "tr": "найти себе другое занятие" }
+            ]
+          },
+          {
+            "id": "card55",
+            "parts": [
+              { "type": "text", "content": "I've fallen " },
+              { "type": "blank" }
+            ],
+            "answers": ["G"],
+            "alternateAnswers": [["g"]],
+            "words": [
+              { "w": "fallen out with", "t": "janjallashib qolmoq", "tr": "поссориться с" },
+              { "w": "hurt my feelings", "t": "xafa qildi", "tr": "обидела мои чувства" }
+            ]
+          },
+          {
+            "id": "card56",
+            "parts": [
+              { "type": "text", "content": "My grandmother brought " },
+              { "type": "blank" }
+            ],
+            "answers": ["E"],
+            "alternateAnswers": [["e"]],
+            "words": [
+              { "w": "brought up", "t": "tarbiyalamoq", "tr": "воспитать" },
+              { "w": "grandmother", "t": "buvi", "tr": "бабушка" },
+              { "w": "parents worked", "t": "ota-onalar ishlar edi", "tr": "родители работали" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt1p3-sec-exG",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "G",
+      "subheading_uz": "G",
+      "subheading_ru": "G",
+      "instruction": "Har bir gapda bitta so'z noto'g'ri shaklda berilgan. To'g'ri shaklini yozing.",
+      "instruction_ru": "В каждом предложении одно слово стоит в неправильной форме. Напишите правильную форму.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card57",
+            "parts": [
+              { "type": "text", "content": "It's true! Don't call me a " },
+              { "type": "blank" },
+              { "type": "text", "content": "." },
+              { "type": "hint", "content": "lie → ?" }
+            ],
+            "answers": ["liar"],
+            "words": [
+              { "w": "lie", "t": "yolg'on", "tr": "ложь" },
+              { "w": "liar", "t": "yolg'onchi", "tr": "лжец" }
+            ]
+          },
+          {
+            "id": "card58",
+            "parts": [
+              { "type": "text", "content": "I need a new chair for my bedroom – this one is so " },
+              { "type": "blank" },
+              { "type": "text", "content": "!" },
+              { "type": "hint", "content": "comfort → ?" }
+            ],
+            "answers": ["comfortable"],
+            "words": [
+              { "w": "comfort", "t": "qulay", "tr": "комфорт" },
+              { "w": "comfortable", "t": "qulay", "tr": "удобный" },
+              { "w": "bedroom", "t": "yotoqxona", "tr": "спальня" }
+            ]
+          },
+          {
+            "id": "card59",
+            "parts": [
+              { "type": "text", "content": "After not speaking to her for a week, I finally " },
+              { "type": "blank" },
+              { "type": "text", "content": " Gemma for not inviting me." },
+              { "type": "hint", "content": "forgive → ?" }
+            ],
+            "answers": ["forgave"],
+            "words": [
+              { "w": "forgave", "t": "kechirdi", "tr": "простил" },
+              { "w": "not speaking", "t": "gaplashmaslik", "tr": "не разговаривать" },
+              { "w": "inviting", "t": "taklif qilmoq", "tr": "приглашать" }
+            ]
+          },
+          {
+            "id": "card60",
+            "parts": [
+              { "type": "text", "content": "It's important to get a good " },
+              { "type": "blank" },
+              { "type": "text", "content": " if you want a good job." },
+              { "type": "hint", "content": "educate → ?" }
+            ],
+            "answers": ["education"],
+            "words": [
+              { "w": "education", "t": "ta'lim", "tr": "образование" },
+              { "w": "important", "t": "muhim", "tr": "важно" }
+            ]
+          },
+          {
+            "id": "card61",
+            "parts": [
+              { "type": "text", "content": "The book is €10 and you have to pay €2 for " },
+              { "type": "blank" },
+              { "type": "text", "content": "." },
+              { "type": "hint", "content": "deliver → ?" }
+            ],
+            "answers": ["delivery"],
+            "words": [
+              { "w": "delivery", "t": "yetkazib berish", "tr": "доставка" }
+            ]
+          },
+          {
+            "id": "card62",
+            "parts": [
+              { "type": "text", "content": "Losing your keys while playing football was really " },
+              { "type": "blank" },
+              { "type": "text", "content": "!" },
+              { "type": "hint", "content": "care → ?" }
+            ],
+            "answers": ["careless"],
+            "words": [
+              { "w": "losing", "t": "yo'qotmoq", "tr": "потерять" },
+              { "w": "keys", "t": "kalitlar", "tr": "ключи" },
+              { "w": "careless", "t": "beparvo", "tr": "безрассудный" }
+            ]
+          },
+          {
+            "id": "card63",
+            "parts": [
+              { "type": "text", "content": "I would love to be a " },
+              { "type": "blank" },
+              { "type": "text", "content": ", but I don't play any instruments." },
+              { "type": "hint", "content": "music → ?" }
+            ],
+            "answers": ["musician"],
+            "words": [
+              { "w": "musician", "t": "musiqachi", "tr": "музыкант" },
+              { "w": "instruments", "t": "asboblar", "tr": "инструменты" }
+            ]
+          },
+          {
+            "id": "card64",
+            "parts": [
+              { "type": "text", "content": "Mum can speak four languages and she works as a " },
+              { "type": "blank" },
+              { "type": "text", "content": "." },
+              { "type": "hint", "content": "translate → ?" }
+            ],
+            "answers": ["translator"],
+            "words": [
+              { "w": "translator", "t": "tarjimon", "tr": "переводчик" },
+              { "w": "speak languages", "t": "tillarni bilmoq", "tr": "говорить на языках" }
+            ]
+          },
+          {
+            "id": "card65",
+            "parts": [
+              { "type": "text", "content": "I spent my " },
+              { "type": "blank" },
+              { "type": "text", "content": " on a farm, so I know a lot about animals." },
+              { "type": "hint", "content": "child → ?" }
+            ],
+            "answers": ["childhood"],
+            "words": [
+              { "w": "childhood", "t": "bolalik", "tr": "детство" },
+              { "w": "farm", "t": "ferma", "tr": "ферма" },
+              { "w": "animals", "t": "hayvonlar", "tr": "животные" }
+            ]
+          },
+          {
+            "id": "card66",
+            "parts": [
+              { "type": "text", "content": "Do we have to " },
+              { "type": "blank" },
+              { "type": "text", "content": " all these words?" },
+              { "type": "hint", "content": "memory → ?" }
+            ],
+            "answers": ["memorise"],
+            "alternateAnswers": [["memorize"]],
+            "words": [
+              { "w": "memorise", "t": "yod olmoq", "tr": "запомнить" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

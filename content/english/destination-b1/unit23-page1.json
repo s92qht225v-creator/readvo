@@ -1,0 +1,176 @@
+{
+  "id": "unit23-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 23,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Questions, question tags, indirect questions",
+    "titleTranslation_ru": "Questions, question tags, indirect questions"
+  },
+  "sections": [
+    {
+      "id": "u23p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Questions",
+      "subheading_uz": "So'roq gaplar",
+      "subheading_ru": "Вопросы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "Form", "Example"],
+        "subHeaders": ["", "Shakl", "Misol"],
+        "subHeaders_ru": ["", "Форма", "Пример"],
+        "rows": [
+          {
+            "cells": ["Normal main verbs", "Simple tenses\nContinuous tenses\nPerfect tenses", "• **Do** you feel cold? • **Did** they go shopping?\n• **Am** I annoying you? • **Were** they waiting for you?\n• **Have** you seen this film? • **Had** it started?"],
+            "cells_uz": ["Oddiy asosiy fe'llar", "Oddiy zamonlar\nDavomli zamonlar\nPerfect zamonlar", "• **Do** you feel cold? • **Did** they go shopping?\n• **Am** I annoying you? • **Were** they waiting for you?\n• **Have** you seen this film? • **Had** it started?"],
+            "cells_ru": ["Обычные основные глаголы", "Простые времена\nДлительные времена\nВремена Perfect", "• **Do** you feel cold? • **Did** they go shopping?\n• **Am** I annoying you? • **Were** they waiting for you?\n• **Have** you seen this film? • **Had** it started?"]
+          },
+          {
+            "cells": ["Be as a main verb", "", "• **Am** I late? • **Were** you all right? • **Have** you been ill?"],
+            "cells_uz": ["Be asosiy fe'l sifatida", "", "• **Am** I late? • **Were** you all right? • **Have** you been ill?"],
+            "cells_ru": ["Be как основной глагол", "", "• **Am** I late? • **Were** you all right? • **Have** you been ill?"]
+          },
+          {
+            "cells": ["Have as a main verb", "", "• **Does** she **have** a bath every day? • **Did** they have lunch at one o'clock?"],
+            "cells_uz": ["Have asosiy fe'l sifatida", "", "• **Does** she **have** a bath every day? • **Did** they have lunch at one o'clock?"],
+            "cells_ru": ["Have как основной глагол", "", "• **Does** she **have** a bath every day? • **Did** they have lunch at one o'clock?"]
+          },
+          {
+            "cells": ["Modals", "", "• **Should** I call the police? • **Could** you call me later?"],
+            "cells_uz": ["Modal fe'llar", "", "• **Should** I call the police? • **Could** you call me later?"],
+            "cells_ru": ["Модальные глаголы", "", "• **Should** I call the police? • **Could** you call me later?"]
+          },
+          {
+            "cells": ["Question words", "", "• **Who** was in prison? • **What's** your name? • **Where** do they live?\n• **Why** did you do that?"],
+            "cells_uz": ["So'roq so'zlari", "", "• **Who** was in prison? • **What's** your name? • **Where** do they live?\n• **Why** did you do that?"],
+            "cells_ru": ["Вопросительные слова", "", "• **Who** was in prison? • **What's** your name? • **Where** do they live?\n• **Why** did you do that?"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Passiv gaplarda so'roq so'zini subyektdan oldin qo'yamiz. Agar bir nechta yordamchi fe'l bo'lsa, faqat birinchisi subyektdan oldin keladi.\n✓ _**Was** Mr Jenkins arrested yesterday?_\n✓ _**Has** Mr Jenkins **been** arrested?_\n\n• Who va what so'roq so'zlari bilan, agar so'roq so'zi gap ob'ektiga tegishli bo'lsa, do yordamchi fe'lidan foydalanamiz.\n✓ _Who **told** you?_ (= Someone told you. Who?)\n✓ _Who **did** you **tell**?_ (= You told someone. Who?)",
+        "translation_ru": "• В пассивных вопросах вспомогательный глагол ставится перед подлежащим. Если вспомогательных глаголов несколько, перед подлежащим идёт только первый.\n✓ _**Was** Mr Jenkins arrested yesterday?_\n✓ _**Has** Mr Jenkins **been** arrested?_\n\n• С вопросительными словами who и what, когда вопросительное слово относится к объекту глагола, используем do.\n✓ _Who **told** you?_ (= Someone told you. Who?)\n✓ _Who **did** you **tell**?_ (= You told someone. Who?)"
+      }
+    },
+    {
+      "id": "u23p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Question tags",
+      "subheading_uz": "Tasdiq so'rovlari (question tags)",
+      "subheading_ru": "Разделительные вопросы (question tags)",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To ask someone to agree with us", "_It's confusing, **isn't it**?_"],
+            "cells_uz": ["Kimnidir biz bilan rozi bo'lishini so'rash uchun", "_It's confusing, **isn't it**?_"],
+            "cells_ru": ["Чтобы попросить кого-то согласиться с нами", "_It's confusing, **isn't it**?_"]
+          },
+          {
+            "cells": ["To check whether something is true", "_You haven't been to prison, **have you**?_"],
+            "cells_uz": ["Biror narsa haqiqatligini tekshirish uchun", "_You haven't been to prison, **have you**?_"],
+            "cells_ru": ["Чтобы проверить, верно ли что-то", "_You haven't been to prison, **have you**?_"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u23p1-sec-grammar2b",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "Form", "Example"],
+        "subHeaders": ["", "Shakl", "Misol"],
+        "subHeaders_ru": ["", "Форма", "Пример"],
+        "rows": [
+          {
+            "cells": ["Normal main verbs", "Simple tenses\nContinuous tenses\nPerfect tenses", "• Phil **works** here, **doesn't he**? • They **didn't leave**, **did they**?\n• You **are coming**, **aren't you**? • They **weren't looking**, **were they**?\n• They'**ve gone**, **haven't they**? • You **hadn't seen** it, **had you**?"],
+            "cells_uz": ["Oddiy asosiy fe'llar", "Oddiy zamonlar\nDavomli zamonlar\nPerfect zamonlar", "• Phil **works** here, **doesn't he**? • They **didn't leave**, **did they**?\n• You **are coming**, **aren't you**? • They **weren't looking**, **were they**?\n• They'**ve gone**, **haven't they**? • You **hadn't seen** it, **had you**?"],
+            "cells_ru": ["Обычные основные глаголы", "Простые времена\nДлительные времена\nВремена Perfect", "• Phil **works** here, **doesn't he**? • They **didn't leave**, **did they**?\n• You **are coming**, **aren't you**? • They **weren't looking**, **were they**?\n• They'**ve gone**, **haven't they**? • You **hadn't seen** it, **had you**?"]
+          },
+          {
+            "cells": ["Be as a main verb", "", "• He's new here, **isn't he**? • You **weren't** old enough, **were you**?"],
+            "cells_uz": ["Be asosiy fe'l sifatida", "", "• He's new here, **isn't he**? • You **weren't** old enough, **were you**?"],
+            "cells_ru": ["Be как основной глагол", "", "• He's new here, **isn't he**? • You **weren't** old enough, **were you**?"]
+          },
+          {
+            "cells": ["Have as a main verb", "", "• They **have** a car, **haven't / don't** they? • You **didn't have** a shower every day, **did you**?"],
+            "cells_uz": ["Have asosiy fe'l sifatida", "", "• They **have** a car, **haven't / don't** they? • You **didn't have** a shower every day, **did you**?"],
+            "cells_ru": ["Have как основной глагол", "", "• They **have** a car, **haven't / don't** they? • You **didn't have** a shower every day, **did you**?"]
+          },
+          {
+            "cells": ["Modals", "", "• Jan **should** be here by now, **shouldn't she**? • You **won't** make a mess, **will you**?"],
+            "cells_uz": ["Modal fe'llar", "", "• Jan **should** be here by now, **shouldn't she**? • You **won't** make a mess, **will you**?"],
+            "cells_ru": ["Модальные глаголы", "", "• Jan **should** be here by now, **shouldn't she**? • You **won't** make a mess, **will you**?"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• _I am_ bilan gap tuzilganda, question tag sifatida _aren't I?_ ishlatamiz. _I'm not_ bilan esa _am I?_ ishlatamiz.\n✓ _I'm right, **aren't I**?_\n✓ _I'm **not** stupid, **am I**?_",
+        "translation_ru": "• В предложениях с _I am_ используем question tag _aren't I?_ В предложениях с _I'm not_ используем _am I?_\n✓ _I'm right, **aren't I**?_\n✓ _I'm **not** stupid, **am I**?_"
+      }
+    },
+    {
+      "id": "u23p1-sec-watchout2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• _Let's_ bilan question tag sifatida _shall we_ ishlatamiz.\n✓ _**Let's** do the washing-up later, **shall we**?_",
+        "translation_ru": "• С _Let's_ используем question tag _shall we_.\n✓ _**Let's** do the washing-up later, **shall we**?_"
+      }
+    },
+    {
+      "id": "u23p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Indirect questions",
+      "subheading_uz": "Bilvosita so'roq gaplar",
+      "subheading_ru": "Косвенные вопросы",
+      "instruction": "Ibora + oddiy so'z tartibidagi gap",
+      "instruction_ru": "Фраза + придаточное предложение с обычным порядком слов",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To ask questions politely", "**Can/Could you tell me** where the bank is?\n**Can/Could you let me know** what time the film starts?\n**Do you know** if Alison lives there?\n**I wonder if you could tell me** where the toilets are.\n**I wonder if you know** how much this costs."],
+            "cells_uz": ["Savollarni muloyim tarzda berish uchun", "**Can/Could you tell me** where the bank is?\n**Can/Could you let me know** what time the film starts?\n**Do you know** if Alison lives there?\n**I wonder if you could tell me** where the toilets are.\n**I wonder if you know** how much this costs."],
+            "cells_ru": ["Чтобы задавать вопросы вежливо", "**Can/Could you tell me** where the bank is?\n**Can/Could you let me know** what time the film starts?\n**Do you know** if Alison lives there?\n**I wonder if you could tell me** where the toilets are.\n**I wonder if you know** how much this costs."]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Jumlaning ikkinchi qismida so'roq tartibidan foydalanmaymiz.\n✓ _Do you know **if Alison lives** there?_ (emas: _if does Alison live_)",
+        "translation_ru": "• Во второй части предложения не используем порядок слов вопроса.\n✓ _Do you know **if Alison lives** there?_ (не: _if does Alison live_)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "unit41-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 41,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "The causative",
+    "titleTranslation_ru": "The causative"
+  },
+  "sections": [
+    {
+      "id": "u41p1-sec-form1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "The causative",
+      "subheading_uz": "The causative",
+      "subheading_ru": "The causative",
+      "instruction": "subject + have to'g'ri shaklda + object + past participle",
+      "instruction_ru": "subject + have в нужной форме + object + past participle",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", ""],
+        "subHeaders": ["Qo'llanilishi", ""],
+        "subHeaders_ru": ["Употребление", ""],
+        "rows": [
+          {
+            "cells": ["To show that someone arranges for someone else to do something for them", ""],
+            "cells_uz": ["Biror kishi boshqa birovga o'zi uchun biror narsa qildirishi uchun ishlatiladi", ""],
+            "cells_ru": ["Используется, когда кто-то организует выполнение чего-либо другим человеком для себя", ""]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u41p1-sec-table1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Tense / modal", "Example"],
+        "subHeaders": ["Zamon / modal", "Misol"],
+        "subHeaders_ru": ["Время / модальный", "Пример"],
+        "rows": [
+          {
+            "cells": ["present simple", "_Mrs Taylor **has her car cleaned** once a month._"],
+            "cells_uz": ["present simple", "_Missis Taylor oyiga bir marta **mashinasini yuvdiradi**._"],
+            "cells_ru": ["present simple", "_Миссис Тейлор **отдаёт машину на мойку** раз в месяц._"]
+          },
+          {
+            "cells": ["present continuous", "_She **is having the tyres checked** at the moment._"],
+            "cells_uz": ["present continuous", "_U hozir **shinalarni tekshirtirmoqda**._"],
+            "cells_ru": ["present continuous", "_Сейчас она **проверяет шины** (у специалиста)._"]
+          },
+          {
+            "cells": ["present perfect simple", "_She **has had the windscreen replaced**._"],
+            "cells_uz": ["present perfect simple", "_U **old oynasini almashtirtirdi**._"],
+            "cells_ru": ["present perfect simple", "_Она **заменила лобовое стекло** (через мастера)._"]
+          },
+          {
+            "cells": ["present perfect continuous", "This is not usually used in the causative."],
+            "cells_uz": ["present perfect continuous", "Bu odatda causative bilan ishlatilmaydi."],
+            "cells_ru": ["present perfect continuous", "Обычно не используется в causative."]
+          },
+          {
+            "cells": ["past simple", "_She **had the car filled up** with petrol yesterday._"],
+            "cells_uz": ["past simple", "_U kecha **mashinasiga benzin quydirib berdi**._"],
+            "cells_ru": ["past simple", "_Вчера она **заправила машину** (через заправщика)._"]
+          },
+          {
+            "cells": ["past continuous", "_She **was having the car repaired** when I last saw her._"],
+            "cells_uz": ["past continuous", "_Men uni oxirgi ko'rganimda, **mashinasini ta'mirilatayotgan edi**._"],
+            "cells_ru": ["past continuous", "_Когда я видел(а) её в последний раз, она **ремонтировала машину** (у мастера)._"]
+          },
+          {
+            "cells": ["past perfect simple", "_She **had had the engine checked**._"],
+            "cells_uz": ["past perfect simple", "_U **dvigatelni tekshirtirgan edi**._"],
+            "cells_ru": ["past perfect simple", "_Она **проверила двигатель** (через механика)._"]
+          },
+          {
+            "cells": ["past perfect continuous", "This is not usually used in the causative."],
+            "cells_uz": ["past perfect continuous", "Bu odatda causative bilan ishlatilmaydi."],
+            "cells_ru": ["past perfect continuous", "Обычно не используется в causative."]
+          },
+          {
+            "cells": ["_will_ and other modals", "_She **will have a car alarm fitted** when she can afford it._\n_She **would have air bags put in** but it's too expensive._"],
+            "cells_uz": ["_will_ va boshqa modallar", "_U imkoni bo'lganda **mashina signalizatsiyasini o'rnattiradi**._\n_U **havo yostiqlarini qo'ydirardi**, lekin bu juda qimmat._"],
+            "cells_ru": ["_will_ и другие модальные", "_Когда сможет себе позволить, она **установит автосигнализацию**._\n_Она **вставила бы подушки безопасности**, но это слишком дорого._"]
+          },
+          {
+            "cells": ["_be going to_", "_She **is going to have a new car radio installed**._"],
+            "cells_uz": ["_be going to_", "_U yangi **avtomobil radiosini o'rnattirmoqchi**._"],
+            "cells_ru": ["_be going to_", "_Она **собирается установить** новое автомобильное радио._"]
+          },
+          {
+            "cells": ["-ing form", "_She might stop **having the car cleaned** so often._"],
+            "cells_uz": ["-ing shakli", "_U mashinasini bu qadar tez-tez **yuvdirish**ni to'xtatishi mumkin._"],
+            "cells_ru": ["-ing форма", "_Она, возможно, перестанет так часто **отдавать машину на мойку**._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u41p1-sec-hints1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• Oddiy aktiv gap va causative gap o'rtasidagi farqga e'tibor bering:\n  Oddiy aktiv gap: _**Someone cleans** Mrs Taylor's **car** every week._\n  Causative: _Mrs Taylor **has** her **car cleaned** every week._\n\n• **have** o'rnida **get** ham ishlatish mumkin. **get** **have**dan ko'ra ko'proq so'zlashuv tiliga xos.\n  ✓ _I'm going to **have** my hair cut tomorrow._ (rasmiyroq)\n  ✓ _I'm going to **get** my hair cut tomorrow._ (kamroq rasmiy)\n\n• Passivda bo'lgani kabi (11-darsga qarang), kim harakatni bajarganini ko'rsatish uchun **by** ishlatish mumkin.\n  ✓ _We're having a family photo taken **by** a local photographer._",
+        "translation_ru": "• Обратите внимание на разницу между обычным активным предложением и causative:\n  Обычное активное предложение: _**Someone cleans** Mrs Taylor's **car** every week._\n  Causative: _Mrs Taylor **has** her **car cleaned** every week._\n\n• Вместо **have** можно использовать **get**. **get** более разговорное, чем **have**.\n  ✓ _I'm going to **have** my hair cut tomorrow._ (более формально)\n  ✓ _I'm going to **get** my hair cut tomorrow._ (менее формально)\n\n• Как и в пассиве (см. Unit 11), можно использовать **by**, чтобы указать, кто выполняет действие.\n  ✓ _We're having a family photo taken **by** a local photographer._"
+      }
+    },
+    {
+      "id": "u41p1-sec-watchout1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Causative da **have** har doim otdan **oldin**, past participle esa har doim otdan **keyin** keladi.\n\n• Causative bilan so'roq gap tuzganda, past participle otdan keyin qoladi.\n  ✓ _Did you have the furniture **delivered** yesterday?_\n  ✗ _Did you have **delivered** the furniture yesterday?_\n\n• Ba'zi fe'llarning noto'g'ri past participle shakllari bor. 182-sahifaga qarang.",
+        "translation_ru": "• В causative **have** всегда стоит **перед** существительным, а past participle всегда стоит **после** существительного.\n\n• В вопросах с causative past participle остаётся после существительного.\n  ✓ _Did you have the furniture **delivered** yesterday?_\n  ✗ _Did you have **delivered** the furniture yesterday?_\n\n• У некоторых глаголов неправильные формы past participle. См. стр. 182."
+      }
+    }
+  ]
+}

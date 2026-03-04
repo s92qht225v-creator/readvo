@@ -1,0 +1,529 @@
+{
+  "id": "unit17-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u17p3-sec-exercise1",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Quyidagi gaplarda nisbiy olmosh o'rniga 'that' ishlatish mumkinmi? To'g'ri variantni tanlang.",
+      "instruction_ru": "В каких предложениях относительное местоимение можно заменить на 'that'? Выберите правильный вариант.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u17p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A tree "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "which",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " is tall doesn't have any leaves."
+              }
+            ],
+            "words": [
+              {
+                "w": "tree",
+                "t": "daraxt",
+                "tr": "дерево"
+              },
+              {
+                "w": "tall",
+                "t": "baland",
+                "tr": "высокий"
+              },
+              {
+                "w": "leaves",
+                "t": "barglar",
+                "tr": "листья"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Trees "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "which",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " have leaves are short."
+              }
+            ],
+            "words": [
+              {
+                "w": "trees",
+                "t": "daraxtlar",
+                "tr": "деревья"
+              },
+              {
+                "w": "short",
+                "t": "past",
+                "tr": "низкий"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A bottle "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "which",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " is big is full."
+              }
+            ],
+            "words": [
+              {
+                "w": "bottle",
+                "t": "shisha",
+                "tr": "бутылка"
+              },
+              {
+                "w": "full",
+                "t": "to'la",
+                "tr": "полная"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Bottles "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "which",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " are small are empty."
+              }
+            ],
+            "words": [
+              {
+                "w": "bottles",
+                "t": "shishalar",
+                "tr": "бутылки"
+              },
+              {
+                "w": "empty",
+                "t": "bo'sh",
+                "tr": "пустой"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A girl "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "who",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " has short hair is called Melissa."
+              }
+            ],
+            "words": [
+              {
+                "w": "short hair",
+                "t": "qisqa soch",
+                "tr": "короткие волосы"
+              },
+              {
+                "w": "called",
+                "t": "ismi",
+                "tr": "зовут"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Girls "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "whose",
+                  "that"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " hair is long are called Lucy, Tina and Debbi."
+              }
+            ],
+            "words": [
+              {
+                "w": "long hair",
+                "t": "uzun soch",
+                "tr": "длинные волосы"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A boy "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "who",
+                  "that"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " holds a black basketball wears a school uniform."
+              }
+            ],
+            "words": [
+              {
+                "w": "holds",
+                "t": "ushlamoq",
+                "tr": "держать"
+              },
+              {
+                "w": "basketball",
+                "t": "basketbol to'pi",
+                "tr": "баскетбольный мяч"
+              },
+              {
+                "w": "school uniform",
+                "t": "maktab formasi",
+                "tr": "школьная форма"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Boys "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "whose",
+                  "that"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " basketballs are white wear tracksuits."
+              }
+            ],
+            "words": [
+              {
+                "w": "basketballs",
+                "t": "basketbol to'plari",
+                "tr": "баскетбольные мячи"
+              },
+              {
+                "w": "white",
+                "t": "oq",
+                "tr": "белый"
+              },
+              {
+                "w": "tracksuits",
+                "t": "sport kostyumi",
+                "tr": "спортивный костюм"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u17p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "Actuaries",
+      "subheading_uz": "Actuaries",
+      "subheading_ru": "Actuaries",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u17p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did you know that there are people (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " are paid to predict the future? They're called 'actuaries'. I'd never heard of actuaries until my friend Greg, (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " mother is an actuary, told me about them. It's a job (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " sounds quite interesting."
+              }
+            ],
+            "answers": [
+              "who",
+              "whose",
+              "which"
+            ],
+            "alternateAnswers": [
+              [
+                "that",
+                "whose",
+                "which"
+              ],
+              [
+                "who",
+                "whose",
+                "that"
+              ]
+            ],
+            "words": [
+              {
+                "w": "paid",
+                "t": "to'lanadigan",
+                "tr": "платить"
+              },
+              {
+                "w": "predict",
+                "t": "bashorat qilmoq",
+                "tr": "предсказывать"
+              },
+              {
+                "w": "future",
+                "t": "kelajak",
+                "tr": "будущее"
+              },
+              {
+                "w": "actuary",
+                "t": "aktuar (baxtsiz hodisalarni hisoblovchi)",
+                "tr": "актуарий"
+              },
+              {
+                "w": "heard of",
+                "t": "haqida eshitmoq",
+                "tr": "слышать о"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Actuaries usually work for companies, like insurance companies, (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " deal with the chances of things happening in the future. Actuaries have to decide how probable it is that something will happen. For example, it's more probable that buildings will be flooded in places (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it rains a lot."
+              }
+            ],
+            "answers": [
+              "which",
+              "where"
+            ],
+            "alternateAnswers": [
+              [
+                "that",
+                "where"
+              ]
+            ],
+            "words": [
+              {
+                "w": "insurance companies",
+                "t": "sug'urta kompaniyalari",
+                "tr": "страховые компании"
+              },
+              {
+                "w": "deal with",
+                "t": "shug'ullanmoq",
+                "tr": "заниматься"
+              },
+              {
+                "w": "chances",
+                "t": "ehtimollar",
+                "tr": "шансы"
+              },
+              {
+                "w": "probable",
+                "t": "ehtimoliy",
+                "tr": "вероятный"
+              },
+              {
+                "w": "flooded",
+                "t": "suv bosmoq",
+                "tr": "затопить"
+              }
+            ]
+          },
+          {
+            "id": "u17p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Greg's mum, (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " has been an actuary for about five years, is involved with car insurance. She works in an office (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " they decide how much car insurance people should pay. It's more probable that a car (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " is new is safer and more reliable than a very old car, so people (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cars are new pay less insurance. If there are drivers (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " she thinks will probably have more accidents, she makes them pay more insurance!"
+              }
+            ],
+            "answers": [
+              "who",
+              "where",
+              "which",
+              "whose",
+              "who"
+            ],
+            "alternateAnswers": [
+              [
+                "who",
+                "where",
+                "that",
+                "whose",
+                "who"
+              ]
+            ],
+            "words": [
+              {
+                "w": "involved with",
+                "t": "bilan shug'ullanmoq",
+                "tr": "заниматься"
+              },
+              {
+                "w": "car insurance",
+                "t": "avtomobil sug'urtasi",
+                "tr": "страхование автомобиля"
+              },
+              {
+                "w": "reliable",
+                "t": "ishonchli",
+                "tr": "надёжный"
+              },
+              {
+                "w": "pay less",
+                "t": "kam to'lamoq",
+                "tr": "платить меньше"
+              },
+              {
+                "w": "accidents",
+                "t": "baxtsiz hodisalar",
+                "tr": "аварии"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "unit2-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 2,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Past simple, past continuous, used to",
+    "titleTranslation_ru": "Past simple, past continuous, used to"
+  },
+  "sections": [
+    {
+      "id": "u2p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Past Simple",
+      "subheading_uz": "Past Simple",
+      "subheading_ru": "Past Simple",
+      "instruction": "Past Simple shakli",
+      "instruction_ru": "Форма Past Simple",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["**statement**", "**negative**", "**question**"], "cells_uz": ["**darak gap**", "**inkor gap**", "**so'roq gap**"], "cells_ru": ["**утверждение**", "**отрицание**", "**вопрос**"] },
+          { "cells": ["I/you/he/she/it/we/they **played** ...", "I/you/he/she/it/we/they **did not (didn't) play** ...", "**Did** I/you/he/she/it/we/they **play** ...?"], "cells_uz": ["I/you/he/she/it/we/they **played** ...", "I/you/he/she/it/we/they **did not (didn't) play** ...", "**Did** I/you/he/she/it/we/they **play** ...?"], "cells_ru": ["I/you/he/she/it/we/they **played** ...", "I/you/he/she/it/we/they **did not (didn't) play** ...", "**Did** I/you/he/she/it/we/they **play** ...?"] }
+        ]
+      }
+    },
+    {
+      "id": "u2p1-sec-use1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Completed actions", "_I **saw** the new James Bond film yesterday._"], "cells_uz": ["Tugallangan harakatlar", "_Men kecha yangi Jeyms Bond filmini **ko'rdim**._"], "cells_ru": ["Завершённые действия", "_Я **видел** новый фильм о Джеймсе Бонде вчера._"] },
+          { "cells": ["Repeated actions in the past", "_I **went** to the theatre four times last month._"], "cells_uz": ["O'tmishda takrorlangan harakatlar", "_Men o'tgan oy to'rt marta teatrga **bordim**._"], "cells_ru": ["Повторяющиеся действия в прошлом", "_В прошлом месяце я **ходил** в театр четыре раза._"] },
+          { "cells": ["General truths about the past", "_Fifty years ago, people **didn't spend** as much on entertainment as they do today._"], "cells_uz": ["O'tmishdagi umumiy haqiqatlar", "_Ellik yil oldin odamlar ko'ngil ochar narsalarga bugungi kabi ko'p **sarflamasdi**._"], "cells_ru": ["Общие истины о прошлом", "_Пятьдесят лет назад люди **не тратили** столько на развлечения, сколько сегодня._"] },
+          { "cells": ["Main events in a story", "_Josh **pushed** the door open and **looked** inside the room._"], "cells_uz": ["Hikoyalardagi asosiy voqealar", "_Josh eshikni **itarib ochdi** va xona ichiga **qaradi**._"], "cells_ru": ["Главные события в рассказе", "_Джош **толкнул** дверь и **заглянул** в комнату._"] }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Past Simple ko'pincha quyidagi so'z va iboralar bilan ishlatiladi:",
+        "translation_ru": "Past Simple часто используется со следующими словами и фразами:",
+        "vocabList": [
+          { "en": "yesterday", "uz": "kecha", "ru": "вчера" },
+          { "en": "last week/summer/year/etc", "uz": "o'tgan hafta/yoz/yil/h.k.", "ru": "на прошлой неделе/прошлым летом/в прошлом году/и т.д." },
+          { "en": "in January/2001/etc", "uz": "yanvar oyida/2001 yilda/h.k.", "ru": "в январе/в 2001 году/и т.д." },
+          { "en": "an hour/a week/a year ago", "uz": "bir soat/hafta/yil oldin", "ru": "час/неделю/год назад" }
+        ]
+      }
+    },
+    {
+      "id": "u2p1-sec-watchout1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "Ba'zi fe'llar noto'g'ri Past Simple shakllariga ega. 182-sahifaga qarang.",
+        "translation_ru": "Некоторые глаголы имеют неправильные формы Past Simple. См. стр. 182."
+      }
+    },
+    {
+      "id": "u2p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Past Continuous",
+      "subheading_uz": "Past Continuous",
+      "subheading_ru": "Past Continuous",
+      "instruction": "Past Continuous shakli",
+      "instruction_ru": "Форма Past Continuous",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["**statement**", "**negative**", "**question**"], "cells_uz": ["**darak gap**", "**inkor gap**", "**so'roq gap**"], "cells_ru": ["**утверждение**", "**отрицание**", "**вопрос**"] },
+          { "cells": ["I/he/she/it **was playing** ...\nYou/we/they **were playing** ...", "I/he/she/it **was not (wasn't) playing** ...\nYou/we/they **were not (weren't) playing** ...", "**Was** I/he/she/it **playing**?\n**Were** you/we/they **playing**?"], "cells_uz": ["I/he/she/it **was playing** ...\nYou/we/they **were playing** ...", "I/he/she/it **was not (wasn't) playing** ...\nYou/we/they **were not (weren't) playing** ...", "**Was** I/he/she/it **playing**?\n**Were** you/we/they **playing**?"], "cells_ru": ["I/he/she/it **was playing** ...\nYou/we/they **were playing** ...", "I/he/she/it **was not (wasn't) playing** ...\nYou/we/they **were not (weren't) playing** ...", "**Was** I/he/she/it **playing**?\n**Were** you/we/they **playing**?"] }
+        ]
+      }
+    },
+    {
+      "id": "u2p1-sec-use2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Actions happening at a moment in the past", "_At nine o'clock last night, I **was watching** TV._"], "cells_uz": ["O'tmishdagi ma'lum bir paytda sodir bo'lgan harakatlar", "_Kecha kechqurun soat to'qqizda men televizor **ko'rayotgan edim**._"], "cells_ru": ["Действия, происходившие в определённый момент в прошлом", "_Вчера в девять часов вечера я **смотрел** телевизор._"] },
+          { "cells": ["Two actions in progress at the same time", "_I **was reading** a book while you **were doing** the washing-up._"], "cells_uz": ["Bir vaqtda sodir bo'lgan ikki harakat", "_Sen idish **yuvayotgan** paytda men kitob **o'qiyotgan edim**._"], "cells_ru": ["Два действия, происходившие одновременно", "_Я **читал** книгу, пока ты **мыл** посуду._"] },
+          { "cells": ["Background information in a story", "_It **was raining** so Wendy decided to go to the cinema._"], "cells_uz": ["Hikoyalardagi fon ma'lumotlari", "_Yomg'ir **yog'ayotgani** uchun Wendy kinoga borishga qaror qildi._"], "cells_ru": ["Фоновая информация в рассказе", "_**Шёл** дождь, поэтому Уэнди решила пойти в кино._"] }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Past Continuous ko'pincha quyidagi so'z va iboralar bilan ishlatiladi:",
+        "translation_ru": "Past Continuous часто используется со следующими словами и фразами:",
+        "vocabList": [
+          { "en": "at that moment", "uz": "o'sha paytda", "ru": "в тот момент" },
+          { "en": "at one/two/etc o'clock", "uz": "soat birda/ikkida/h.k.", "ru": "в час/два/и т.д." },
+          { "en": "while", "uz": "paytida", "ru": "пока/в то время как" }
+        ]
+      }
+    },
+    {
+      "id": "u2p1-sec-watchout2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• O'tmishda bir harakat boshqa harakatning o'rtasida sodir bo'lganda, Past Simple va Past Continuous birga ishlatiladi.\n✓ _The phone **rang** while I **was watching** a DVD._\n\n• Past Continuous o'tmishdagi muntazam yoki takroriy harakatlar uchun ishlatilmaydi.\n✗ _Last year, I **was going** to the cinema every weekend._",
+        "translation_ru": "• Когда одно действие в прошлом происходит в середине другого, мы используем Past Simple и Past Continuous вместе.\n✓ _The phone **rang** while I **was watching** a DVD._\n\n• Past Continuous не используется для регулярных или повторяющихся действий в прошлом.\n✗ _Last year, I **was going** to the cinema every weekend._"
+      }
+    },
+    {
+      "id": "u2p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "used to",
+      "subheading_uz": "used to",
+      "subheading_ru": "used to",
+      "instruction": "used to + to'liqsiz mastar shakli",
+      "instruction_ru": "Форма used to + инфинитив",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          { "cells": ["**statement**", "**negative**", "**question**"], "cells_uz": ["**darak gap**", "**inkor gap**", "**so'roq gap**"], "cells_ru": ["**утверждение**", "**отрицание**", "**вопрос**"] },
+          { "cells": ["I/you/he/she/it/we/they **used to** ...", "I/you/he/she/it/we/they **didn't use to** ...\nI/you/he/she/it/we/they **never used to** ...", "**Did** I/you/he/she/it/we/they **use to** ...?"], "cells_uz": ["I/you/he/she/it/we/they **used to** ...", "I/you/he/she/it/we/they **didn't use to** ...\nI/you/he/she/it/we/they **never used to** ...", "**Did** I/you/he/she/it/we/they **use to** ...?"], "cells_ru": ["I/you/he/she/it/we/they **used to** ...", "I/you/he/she/it/we/they **didn't use to** ...\nI/you/he/she/it/we/they **never used to** ...", "**Did** I/you/he/she/it/we/they **use to** ...?"] }
+        ]
+      }
+    },
+    {
+      "id": "u2p1-sec-use3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          { "cells": ["Distant past habits and states", "_When I was four, I **used to** eat ice cream every day._"], "cells_uz": ["O'tmishdagi odatlar va holatlar", "_To'rt yoshimda men har kuni muzqaymoq **yeyar edim**._"], "cells_ru": ["Привычки и состояния в далёком прошлом", "_Когда мне было четыре года, я **ел** мороженое каждый день._"] }
+        ]
+      }
+    }
+  ]
+}

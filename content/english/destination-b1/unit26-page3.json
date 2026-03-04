@@ -1,0 +1,501 @@
+{
+  "id": "unit26-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u26p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlarning to'g'ri shaklini ishlatib gaplarni to'ldiring.",
+      "instruction_ru": "Заполните предложения, используя правильную форму слов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "bad",
+          "big",
+          "far",
+          "funny",
+          "hard",
+          "kind",
+          "scary",
+          "tasty"
+        ],
+        "cards": [
+          {
+            "id": "u26p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This really is the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " song I've ever heard! It's terrible!"
+              }
+            ],
+            "answers": [
+              "worst"
+            ],
+            "words": [
+              {
+                "w": "terrible",
+                "t": "dahshatli",
+                "tr": "ужасный"
+              },
+              {
+                "w": "song",
+                "t": "qo'shiq",
+                "tr": "песня"
+              },
+              {
+                "w": "bad",
+                "t": "yomon",
+                "tr": "плохой"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Ivy is the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " woman I know. She'll do anything for anybody."
+              }
+            ],
+            "answers": [
+              "kindest"
+            ],
+            "words": [
+              {
+                "w": "kind",
+                "t": "mehribon",
+                "tr": "добрый"
+              },
+              {
+                "w": "anything",
+                "t": "istalgan narsa",
+                "tr": "всё что угодно"
+              },
+              {
+                "w": "anybody",
+                "t": "har kim uchun",
+                "tr": "для кого угодно"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Listen! I promise you, this is the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " joke ever! Well, a man goes into a shop …"
+              }
+            ],
+            "answers": [
+              "funniest"
+            ],
+            "words": [
+              {
+                "w": "promise",
+                "t": "va'da bermoq",
+                "tr": "обещать"
+              },
+              {
+                "w": "funny",
+                "t": "kulgili",
+                "tr": "смешной"
+              },
+              {
+                "w": "joke",
+                "t": "hazil",
+                "tr": "шутка"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mmm! This is the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " soup you've made so far."
+              }
+            ],
+            "answers": [
+              "tastiest"
+            ],
+            "words": [
+              {
+                "w": "tasty",
+                "t": "mazali",
+                "tr": "вкусный"
+              },
+              {
+                "w": "soup",
+                "t": "sho'rva",
+                "tr": "суп"
+              },
+              {
+                "w": "so far",
+                "t": "hozirgacha",
+                "tr": "до сих пор"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "What's the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " thing about English grammar for you?"
+              }
+            ],
+            "answers": [
+              "hardest"
+            ],
+            "words": [
+              {
+                "w": "hard",
+                "t": "qiyin",
+                "tr": "трудный"
+              },
+              {
+                "w": "English grammar",
+                "t": "ingliz grammatikasi",
+                "tr": "английская грамматика"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Ben appeared and he was carrying the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " present I'd ever seen. It was huge!"
+              }
+            ],
+            "answers": [
+              "biggest"
+            ],
+            "words": [
+              {
+                "w": "appeared",
+                "t": "paydo bo'lmoq",
+                "tr": "появиться"
+              },
+              {
+                "w": "carrying",
+                "t": "ko'tarmoq",
+                "tr": "нести"
+              },
+              {
+                "w": "present",
+                "t": "sovg'a",
+                "tr": "подарок"
+              },
+              {
+                "w": "huge",
+                "t": "ulkan",
+                "tr": "огромный"
+              },
+              {
+                "w": "big",
+                "t": "katta",
+                "tr": "большой"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We had a competition to see who could swim the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "farthest"
+            ],
+            "alternateAnswers": [
+              [
+                "furthest"
+              ]
+            ],
+            "words": [
+              {
+                "w": "competition",
+                "t": "musobaqa",
+                "tr": "соревнование"
+              },
+              {
+                "w": "swim",
+                "t": "suzmoq",
+                "tr": "плавать"
+              },
+              {
+                "w": "far",
+                "t": "uzoq",
+                "tr": "далеко"
+              }
+            ]
+          },
+          {
+            "id": "u26p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Sandra told us the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ghost story she could, and it was really frightening!"
+              }
+            ],
+            "answers": [
+              "scariest"
+            ],
+            "words": [
+              {
+                "w": "ghost story",
+                "t": "arvoh haqida hikoya",
+                "tr": "страшная история"
+              },
+              {
+                "w": "scary",
+                "t": "qo'rqinchli",
+                "tr": "страшный"
+              },
+              {
+                "w": "frightening",
+                "t": "dahshatli",
+                "tr": "пугающий"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u26p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi so'zlarning to'g'ri qiyosiy yoki orttirma shaklini yozing.",
+      "instruction_ru": "Вставьте правильную сравнительную или превосходную форму слов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u26p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think this is the (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "bad"
+              },
+              {
+                "type": "text",
+                "content": " job I've ever had. My last job was much (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "good"
+              },
+              {
+                "type": "text",
+                "content": " than this one. I had a lot (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "little"
+              },
+              {
+                "type": "text",
+                "content": " work there and my boss was really nice. My boss here is the (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "strict"
+              },
+              {
+                "type": "text",
+                "content": " in the whole firm, and the working day is (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "long"
+              },
+              {
+                "type": "text",
+                "content": " than in my last job, too. The (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "good"
+              },
+              {
+                "type": "text",
+                "content": " thing about it is that the office is (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "close"
+              },
+              {
+                "type": "text",
+                "content": " to my house than the old one. At least now I get home (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "early"
+              },
+              {
+                "type": "text",
+                "content": " than I used to."
+              }
+            ],
+            "answers": [
+              "worst",
+              "better",
+              "less",
+              "strictest",
+              "longer",
+              "best",
+              "closer",
+              "earlier"
+            ],
+            "alternateAnswers": [
+              [
+                "worst"
+              ],
+              [
+                "better"
+              ],
+              [
+                "less"
+              ],
+              [
+                "strictest"
+              ],
+              [
+                "longer"
+              ],
+              [
+                "best"
+              ],
+              [
+                "closer",
+                "nearer"
+              ],
+              [
+                "earlier"
+              ]
+            ],
+            "words": [
+              {
+                "w": "strict",
+                "t": "qat'iy",
+                "tr": "строгий"
+              },
+              {
+                "w": "firm",
+                "t": "firma/kompaniya",
+                "tr": "фирма/компания"
+              },
+              {
+                "w": "working day",
+                "t": "ish kuni",
+                "tr": "рабочий день"
+              },
+              {
+                "w": "at least",
+                "t": "hech bo'lmaganda",
+                "tr": "по крайней мере"
+              },
+              {
+                "w": "used to",
+                "t": "ilgari",
+                "tr": "раньше"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -43,6 +43,47 @@ export interface DialoguePage {
       words?: { i: [number, number]; p: string; t: string; tr: string; h?: number; l?: number }[];
     }[];
   }[];
+  vocab?: {
+    zh: string;
+    py: string;
+    uz: string;
+    ru: string;
+    ex: string;
+    expy: string;
+    ex_uz: string;
+    ex_ru: string;
+  }[];
+  phrases?: {
+    zh: string;
+    py: string;
+    uz: string;
+    ru: string;
+  }[];
+  timeOfDay?: {
+    zh: string;
+    py: string;
+    uz: string;
+    ru: string;
+    icon: string;
+  }[];
+  grammarNotes?: {
+    pattern: string;
+    title_uz: string;
+    title_ru: string;
+    desc_uz: string;
+    desc_ru: string;
+    ex: string;
+    expy: string;
+    ex_uz: string;
+    ex_ru: string;
+  }[];
+  quiz?: {
+    q_uz: string;
+    q_ru: string;
+    options_uz: string[];
+    options_ru: string[];
+    correct: number;
+  }[];
 }
 
 export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo[]> {

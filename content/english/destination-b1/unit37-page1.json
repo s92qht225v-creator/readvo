@@ -1,0 +1,146 @@
+{
+  "id": "unit37-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 37,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "-ing and infinitive",
+    "titleTranslation_ru": "-ing and infinitive"
+  },
+  "sections": [
+    {
+      "id": "u37p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "-ing",
+      "subheading_uz": "-ing",
+      "subheading_ru": "-ing",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["Ba'zi fe'llar -ing shaklidan keyin keladi.", "_He enjoys **making** other people laugh._"],
+            "cells_uz": ["Ba'zi fe'llar -ing shaklidan keyin keladi.", "_U boshqalarni **kuldirish**dan zavq oladi._"],
+            "cells_ru": ["Некоторые глаголы сопровождаются формой -ing.", "_Ему нравится **смешить** других людей._"]
+          },
+          {
+            "cells": ["Bularga quyidagilar kiradi: **admit • avoid • deny • discuss • dislike • enjoy • feel like • finish • give up • mention • mind • practise • suggest • take up**", ""],
+            "cells_uz": ["Bularga quyidagilar kiradi: **admit • avoid • deny • discuss • dislike • enjoy • feel like • finish • give up • mention • mind • practise • suggest • take up**", ""],
+            "cells_ru": ["К ним относятся: **admit • avoid • deny • discuss • dislike • enjoy • feel like • finish • give up • mention • mind • practise • suggest • take up**", ""]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• Predlogdan keyin odatda -ing shaklini ishlatamiz.\n✓ _I'm afraid of **flying**._\n\n• Ba'zi iboralar _to_ predlogi bilan tugaydi. Ular ham -ing shaklini qabul qiladi, to'liq infinitiv emas.\n✓ _I look forward to **hearing** from you._\nX ~~I look forward to hear from you.~~\n\n• -ing shaklini gap egasi sifatida ham ishlatish mumkin.\n✓ _**Cooking** is great fun!_",
+        "translation_ru": "• После предлога обычно используем форму -ing.\n✓ _I'm afraid of **flying**._\n\n• Некоторые фразы оканчиваются предлогом _to_. После них тоже используется -ing, а не полный инфинитив.\n✓ _I look forward to **hearing** from you._\nX ~~I look forward to hear from you.~~\n\n• Форму -ing также можно использовать как подлежащее предложения.\n✓ _**Cooking** is great fun!_"
+      }
+    },
+    {
+      "id": "u37p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Infinitive",
+      "subheading_uz": "Infinitive",
+      "subheading_ru": "Infinitive",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["Ba'zi fe'llar to'liq infinitivdan keyin keladi.", "_I decided **to apologise** to Emma._"],
+            "cells_uz": ["Ba'zi fe'llar to'liq infinitivdan keyin keladi.", "_Men Emmadan **kechirim so'rashga** qaror qildim._"],
+            "cells_ru": ["Некоторые глаголы сопровождаются полным инфинитивом.", "_Я решил(а) **извиниться** перед Эммой._"]
+          },
+          {
+            "cells": ["Bularga quyidagilar kiradi: **advise • afford • agree • choose • decide • expect • help • hope • invite • learn • manage • offer • plan • promise • refuse • teach • tell • want • would like**", ""],
+            "cells_uz": ["Bularga quyidagilar kiradi: **advise • afford • agree • choose • decide • expect • help • hope • invite • learn • manage • offer • plan • promise • refuse • teach • tell • want • would like**", ""],
+            "cells_ru": ["К ним относятся: **advise • afford • agree • choose • decide • expect • help • hope • invite • learn • manage • offer • plan • promise • refuse • teach • tell • want • would like**", ""]
+          },
+          {
+            "cells": ["Ba'zi fe'llar odatda to + infinitivisiz (bare infinitive) ob'ekt bilan birga keladi. Bularga quyidagilar kiradi: **let • make**", ""],
+            "cells_uz": ["Ba'zi fe'llar odatda to + infinitivisiz (bare infinitive) ob'ekt bilan birga keladi. Bularga quyidagilar kiradi: **let • make**", ""],
+            "cells_ru": ["Некоторые глаголы обычно используются с объектом + инфинитив без _to_ (bare infinitive). К ним относятся: **let • make**", ""]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Passiv mayli bilan _make_ to'liq infinitiv bilan keladi.\n✓ _Michael **was made to apologise** by his mother._\n\n• Ba'zi fe'llar faqat to'liq infinitiv bilan, ba'zilari esa ob'ekt + to'liq infinitiv bilan ham kelishi mumkin.\n✓ _He **wants me to tell** him a joke._",
+        "translation_ru": "• В пассивном залоге глагол _make_ сопровождается полным инфинитивом.\n✓ _Michael **was made to apologise** by his mother._\n\n• Некоторые глаголы сочетаются только с полным инфинитивом, а некоторые — также с объектом + полным инфинитивом.\n✓ _He **wants me to tell** him a joke._"
+      }
+    },
+    {
+      "id": "u37p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "-ing or infinitive",
+      "subheading_uz": "-ing or infinitive",
+      "subheading_ru": "-ing or infinitive",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["Ba'zi fe'llar -ing yoki to'liq infinitiv bilan kelishi mumkin.", "_I started **liking / to like** James after he helped me with my problem._"],
+            "cells_uz": ["Ba'zi fe'llar -ing yoki to'liq infinitiv bilan kelishi mumkin.", "_James muammomni hal qilishga yordam bergach, uni **yaxshi ko'ra boshladim**._"],
+            "cells_ru": ["Некоторые глаголы могут сочетаться как с -ing, так и с полным инфинитивом.", "_Я начал(а) **симпатизировать** Джеймсу после того, как он помог с моей проблемой._"]
+          },
+          {
+            "cells": ["Ba'zi fe'llar bilan ma'no bir xil yoki deyarli bir xil. Bularga quyidagilar kiradi: **begin • continue • hate • like • love • prefer • start**", ""],
+            "cells_uz": ["Ba'zi fe'llar bilan ma'no bir xil yoki deyarli bir xil. Bularga quyidagilar kiradi: **begin • continue • hate • like • love • prefer • start**", ""],
+            "cells_ru": ["С некоторыми глаголами значение одинаковое или почти одинаковое. К ним относятся: **begin • continue • hate • like • love • prefer • start**", ""]
+          },
+          {
+            "cells": ["Ba'zi fe'llar bilan ma'no farqlanadi. Bularga quyidagilar kiradi:", ""],
+            "cells_uz": ["Ba'zi fe'llar bilan ma'no farqlanadi. Bularga quyidagilar kiradi:", ""],
+            "cells_ru": ["С некоторыми глаголами значение меняется. К ним относятся:", ""]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u37p1-sec-grammar4",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "subheading_ru": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "+ -ing", "+ full infinitive"],
+        "subHeaders": ["", "+ -ing", "+ to'liq infinitiv"],
+        "subHeaders_ru": ["", "+ -ing", "+ полный инфинитив"],
+        "rows": [
+          {
+            "cells": ["**remember**", "xotirangizda saqlamoq\n_Do you **remember seeing** that comedy?_", "qilmoqchi bo'lgan narsani bajarmoq\n_Did you **remember to say** sorry to James?_"],
+            "cells_uz": ["**remember**", "xotirangizda saqlamoq\n_O'sha komediyani **ko'rganingizni eslaysizmi**?_", "qilmoqchi bo'lgan narsani bajarmoq\n_Jamesdan kechirim **so'rashni esladingizmi**?_"],
+            "cells_ru": ["**remember**", "иметь воспоминание\n_Вы **помните, как смотрели** эту комедию?_", "сделать то, что планировалось\n_Ты **не забыл(а) извиниться** перед Джеймсом?_"]
+          },
+          {
+            "cells": ["**forget**", "o'tgan voqeani eslay olmaslik\n_I'd **forgotten hearing** that joke._", "rejalashtirilgan narsani bajarmaslik\n_Oh no! I **forgot to invite** Shelly!_"],
+            "cells_uz": ["**forget**", "o'tgan voqeani eslay olmaslik\n_Men bu hazilni **eshitganligimni unutib qo'ygan edim**._", "rejalashtirilgan narsani bajarmaslik\n_Voy! Men Shellyni **taklif qilishni unutdim**!_"],
+            "cells_ru": ["**forget**", "не помнить прошлое событие\n_Я **забыл(а), что слышал(а)** эту шутку._", "не сделать то, что планировалось\n_О нет! Я **забыл(а) пригласить** Шелли!_"]
+          },
+          {
+            "cells": ["**stop**", "harakatni to'xtatmoq\n_**Stop crying** – it's not that bad._", "boshqa ish qilish uchun harakatni to'xtatmoq\n_I was on my way to see Maria and I **stopped to get** her some flowers._"],
+            "cells_uz": ["**stop**", "harakatni to'xtatmoq\n_**Yig'lashni to'xtat** — bu shuncha ham yomon emas._", "boshqa ish qilish uchun harakatni to'xtatmoq\n_Mariya oldiga borayotganda, unga gul **olish uchun to'xtadim**._"],
+            "cells_ru": ["**stop**", "остановить действие\n_**Перестань плакать** — всё не так плохо._", "остановиться, чтобы сделать что-то другое\n_По дороге к Марии я **остановился(лась), чтобы купить** ей цветы._"]
+          },
+          {
+            "cells": ["**try**", "hal qilishga urinib ko'rmoq\n_Have you **tried talking** to her?_", "sa'y-harakat qilmoq\n_I'm **trying to say** I'm sorry, but you won't listen!_"],
+            "cells_uz": ["**try**", "hal qilishga urinib ko'rmoq\n_Siz u bilan **gaplashishga urib ko'rdingizmi**?_", "sa'y-harakat qilmoq\n_Men kechirim so'rashga **harakat qilayapman**, lekin siz tinglashni istamasiz!_"],
+            "cells_ru": ["**try**", "попробовать, чтобы решить проблему\n_Вы **пробовали поговорить** с ней?_", "приложить усилие\n_Я **стараюсь сказать**, что сожалею, но вы не слушаете!_"]
+          }
+        ]
+      }
+    }
+  ]
+}

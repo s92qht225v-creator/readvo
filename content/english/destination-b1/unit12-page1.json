@@ -1,0 +1,268 @@
+{
+  "id": "unit12-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 12,
+    "pinyin": "",
+    "title": "Vocabulary",
+    "titleTranslation": "Friends and relations",
+    "titleTranslation_ru": "Friends and relations"
+  },
+  "sections": [
+    {
+      "id": "u12p1-sec-vocab1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["apologise (v)", "generous (adj)", "ordinary (adj)"],
+            "cells_uz": ["apologise – kechirim so'ramoq", "generous – saxiy", "ordinary – oddiy"],
+            "cells_ru": ["apologise – извиняться", "generous – щедрый", "ordinary – обычный"]
+          },
+          {
+            "cells": ["boyfriend (n)", "girlfriend (n)", "patient (adj)"],
+            "cells_uz": ["boyfriend – yigit do'st", "girlfriend – qiz do'st", "patient – sabr-toqatli"],
+            "cells_ru": ["boyfriend – парень/возлюбленный", "girlfriend – подруга/возлюбленная", "patient – терпеливый"]
+          },
+          {
+            "cells": ["close (adj)", "grateful (adj)", "private (adj)"],
+            "cells_uz": ["close – yaqin", "grateful – minnatdor", "private – shaxsiy"],
+            "cells_ru": ["close – близкий", "grateful – благодарный", "private – личный"]
+          },
+          {
+            "cells": ["confident (adj)", "guest (n)", "recognise (v)"],
+            "cells_uz": ["confident – ishonchli", "guest – mehmon", "recognise – tanib olmoq"],
+            "cells_ru": ["confident – уверенный", "guest – гость", "recognise – узнавать"]
+          },
+          {
+            "cells": ["cool (adj)", "independent (adj)", "relation (n)"],
+            "cells_uz": ["cool – munosib/ajoyib", "independent – mustaqil", "relation – qarindosh"],
+            "cells_ru": ["cool – крутой/классный", "independent – независимый", "relation – родственник"]
+          },
+          {
+            "cells": ["couple (n)", "introduce (v)", "rent (v, n)"],
+            "cells_uz": ["couple – juftlik", "introduce – tanishtirmoq", "rent – ijara"],
+            "cells_ru": ["couple – пара", "introduce – знакомить", "rent – аренда/снимать"]
+          },
+          {
+            "cells": ["decorate (v)", "loving (adj)", "respect (v, n)"],
+            "cells_uz": ["decorate – bezatmoq", "loving – mehribon", "respect – hurmat qilmoq"],
+            "cells_ru": ["decorate – украшать", "loving – любящий", "respect – уважение/уважать"]
+          },
+          {
+            "cells": ["defend (v)", "loyal (adj)", "single (adj)"],
+            "cells_uz": ["defend – himoya qilmoq", "loyal – sodiq", "single – yolg'iz/turmush qurmagan"],
+            "cells_ru": ["defend – защищать", "loyal – верный", "single – одинокий/холостой"]
+          },
+          {
+            "cells": ["divorced (adj)", "mood (n)", "stranger (n)"],
+            "cells_uz": ["divorced – ajrashgan", "mood – kayfiyat", "stranger – begona"],
+            "cells_ru": ["divorced – разведённый", "mood – настроение", "stranger – незнакомец"]
+          },
+          {
+            "cells": ["flat (n)", "neighbourhood (n)", "trust (v, n)"],
+            "cells_uz": ["flat – kvartira", "neighbourhood – qo'shnilik/mahalla", "trust – ishonch/ishonmoq"],
+            "cells_ru": ["flat – квартира", "neighbourhood – район/соседство", "trust – доверие/доверять"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u12p1-sec-phrasal",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["**bring up**", "take care of a child until he or she becomes an adult"],
+            "cells_uz": ["**bring up** – bola voyaga yetguncha parvarishlash", "bolani voyaga yetguncha parvarishlash"],
+            "cells_ru": ["**bring up** – воспитывать ребёнка до совершеннолетия", "заботиться о ребёнке, пока он не вырастет"]
+          },
+          {
+            "cells": ["**fall out (with)**", "have an argument with sb and stop being friends"],
+            "cells_uz": ["**fall out (with)** – kimdir bilan janjallashib, do'stlikni to'xtatmoq", "kimdir bilan janjallashib, do'stlikka chek qo'ymoq"],
+            "cells_ru": ["**fall out (with)** – поссориться с кем-то и перестать дружить", "поссориться с кем-то и прекратить дружбу"]
+          },
+          {
+            "cells": ["**get on (with)**", "have a good relationship (with)"],
+            "cells_uz": ["**get on (with)** – yaxshi munosabatda bo'lmoq", "yaxshi munosabatda bo'lmoq (bilan)"],
+            "cells_ru": ["**get on (with)** – ладить (с кем-то)", "хорошо ладить (с кем-то)"]
+          },
+          {
+            "cells": ["**go out with**", "be the boyfriend/girlfriend of"],
+            "cells_uz": ["**go out with** – sevgilisi bo'lmoq", "birovning yigit do'sti / qiz do'sti bo'lmoq"],
+            "cells_ru": ["**go out with** – встречаться с кем-то", "быть парнем / девушкой кого-то"]
+          },
+          {
+            "cells": ["**grow up**", "become older (for children)"],
+            "cells_uz": ["**grow up** – kattaroq bo'lmoq (bolalar haqida)", "kattaroq bo'lmoq (bolalar haqida)"],
+            "cells_ru": ["**grow up** – вырасти (о детях)", "становиться старше (о детях)"]
+          },
+          {
+            "cells": ["**let down**", "disappoint"],
+            "cells_uz": ["**let down** – umidini puchga chiqarmoq/xafa qilmoq", "umidini puchga chiqarmoq"],
+            "cells_ru": ["**let down** – разочаровывать", "разочаровывать"]
+          },
+          {
+            "cells": ["**look after**", "take care of"],
+            "cells_uz": ["**look after** – g'amxo'rlik qilmoq", "g'amxo'rlik qilmoq"],
+            "cells_ru": ["**look after** – заботиться о", "заботиться о ком-то"]
+          },
+          {
+            "cells": ["**split up**", "end a relationship"],
+            "cells_uz": ["**split up** – munosabatni tugatmoq/ajralmoq", "munosabatni tugatmoq"],
+            "cells_ru": ["**split up** – расстаться/разойтись", "прекратить отношения"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u12p1-sec-prepositions",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Prepositional phrases",
+      "subheading_uz": "Predlogli iboralar",
+      "subheading_ru": "Предложные фразы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": [""],
+        "rows": [
+          {
+            "cells": ["by yourself"],
+            "cells_uz": ["o'zing/o'zingiz yolg'iz"],
+            "cells_ru": ["в одиночку"]
+          },
+          {
+            "cells": ["in common (with)"],
+            "cells_uz": ["umumiy (bilan)"],
+            "cells_ru": ["общего (с)"]
+          },
+          {
+            "cells": ["in contact (with)"],
+            "cells_uz": ["aloqada bo'lmoq (bilan)"],
+            "cells_ru": ["в контакте (с)"]
+          },
+          {
+            "cells": ["in love (with)"],
+            "cells_uz": ["oshiq bo'lmoq (ga)"],
+            "cells_ru": ["влюблённый (в)"]
+          },
+          {
+            "cells": ["on purpose"],
+            "cells_uz": ["ataylab/qasddan"],
+            "cells_ru": ["намеренно/специально"]
+          },
+          {
+            "cells": ["on your own"],
+            "cells_uz": ["o'z-o'zingcha"],
+            "cells_ru": ["самостоятельно/самому"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u12p1-sec-wordformation",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word formation",
+      "subheading_uz": "So'z yasalishi",
+      "subheading_ru": "Словообразование",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["**able**", "ability, disabled, unable"],
+            "cells_uz": ["**able**", "ability – qobiliyat, disabled – nogironlik, unable – qodir emas"],
+            "cells_ru": ["**able**", "ability – способность, disabled – инвалид, unable – неспособный"]
+          },
+          {
+            "cells": ["**admire**", "admiration"],
+            "cells_uz": ["**admire**", "admiration – hayrat/ehtirom"],
+            "cells_ru": ["**admire**", "admiration – восхищение"]
+          },
+          {
+            "cells": ["**care**", "careful, careless"],
+            "cells_uz": ["**care**", "careful – ehtiyotkor, careless – beparvo"],
+            "cells_ru": ["**care**", "careful – осторожный, careless – небрежный"]
+          },
+          {
+            "cells": ["**confident**", "confidence"],
+            "cells_uz": ["**confident**", "confidence – ishonch"],
+            "cells_ru": ["**confident**", "confidence – уверенность"]
+          },
+          {
+            "cells": ["**forgive**", "forgave, forgiven, forgiveness"],
+            "cells_uz": ["**forgive**", "forgave – kechirdi, forgiven – kechirilgan, forgiveness – kechirim"],
+            "cells_ru": ["**forgive**", "forgave – простил, forgiven – прощённый, forgiveness – прощение"]
+          },
+          {
+            "cells": ["**honest**", "dishonest, honesty"],
+            "cells_uz": ["**honest**", "dishonest – noto'g'ri/yolg'onchi, honesty – halollik"],
+            "cells_ru": ["**honest**", "dishonest – нечестный, honesty – честность"]
+          },
+          {
+            "cells": ["**introduce**", "introduction"],
+            "cells_uz": ["**introduce**", "introduction – kirish/tanishtirish"],
+            "cells_ru": ["**introduce**", "introduction – введение/знакомство"]
+          },
+          {
+            "cells": ["**lie**", "liar, lying"],
+            "cells_uz": ["**lie**", "liar – yolg'onchi, lying – yolg'on gapirish"],
+            "cells_ru": ["**lie**", "liar – лжец, lying – ложь/лгать"]
+          },
+          {
+            "cells": ["**person**", "personality, personal"],
+            "cells_uz": ["**person**", "personality – shaxsiyat, personal – shaxsiy"],
+            "cells_ru": ["**person**", "personality – личность, personal – личный"]
+          },
+          {
+            "cells": ["**relate**", "relative, relation, relationship"],
+            "cells_uz": ["**relate**", "relative – qarindosh, relation – munosabat, relationship – munosabat/aloqa"],
+            "cells_ru": ["**relate**", "relative – родственник, relation – родство, relationship – отношения"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u12p1-sec-wordpatterns",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word patterns",
+      "subheading_uz": "So'z birikmalari",
+      "subheading_ru": "Словосочетания",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["_adjectives_", "fond of\njealous of\nkind to\nmarried to\nproud of"],
+            "cells_uz": ["_sifatlar_", "fond of – ... ni yaxshi ko'rmoq\njealous of – ... ga hasad qilmoq\nkind to – ... ga mehribon\nmarried to – ... ga turmushga chiqqan/uylanган\nproud of – ... dan faxrlanmoq"],
+            "cells_ru": ["_прилагательные_", "fond of – любить что-то/кого-то\njealous of – завидовать кому-то\nkind to – добрый к кому-то\nmarried to – женат/замужем за кем-то\nproud of – гордиться кем-то/чем-то"]
+          },
+          {
+            "cells": ["_verbs_", "admire sb for\napologise (to sb) for\nargue (with sb) about\ncare about\nchat (to sb) about"],
+            "cells_uz": ["_fe'llar_", "admire sb for – birovni ... uchun hayran bo'lmoq\napologise (to sb) for – birovdan ... uchun kechirim so'ramoq\nargue (with sb) about – birov bilan ... haqida bahslashmoq\ncare about – ... haqida qayg'urmoq\nchat (to sb) about – birov bilan ... haqida suhbatlashmoq"],
+            "cells_ru": ["_глаголы_", "admire sb for – восхищаться кем-то за что-то\napologise (to sb) for – извиняться перед кем-то за что-то\nargue (with sb) about – спорить с кем-то о чём-то\ncare about – заботиться о чём-то/ком-то\nchat (to sb) about – болтать с кем-то о чём-то"]
+          },
+          {
+            "cells": ["_nouns_", "an argument (with sb) about\na relationship with"],
+            "cells_uz": ["_otlar_", "an argument (with sb) about – birov bilan ... haqida janjal\na relationship with – ... bilan munosabat"],
+            "cells_ru": ["_существительные_", "an argument (with sb) about – спор с кем-то о чём-то\na relationship with – отношения с кем-то"]
+          }
+        ]
+      }
+    }
+  ]
+}

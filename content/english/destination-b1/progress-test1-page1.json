@@ -1,0 +1,326 @@
+{
+  "id": "progress-test1-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 1,
+    "pinyin": "",
+    "title": "Progress Test",
+    "titleTranslation": "Units 1 – 21",
+    "titleTranslation_ru": "Units 1 – 21"
+  },
+  "sections": [
+    {
+      "id": "pt1p1-sec-exA",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "A",
+      "subheading_uz": "A",
+      "subheading_ru": "A",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "pt1p1-q1",
+            "number": 1,
+            "parts": [
+              { "type": "text", "content": "When you get to your " },
+              { "type": "blank" },
+              { "type": "text", "content": ", you have to show your ticket to leave the station." }
+            ],
+            "options": [
+              { "label": "A", "word": "destination", "pinyin": "" },
+              { "label": "B", "word": "harbour", "pinyin": "" },
+              { "label": "C", "word": "souvenir", "pinyin": "" },
+              { "label": "D", "word": "passport", "pinyin": "" }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "pt1p1-q2",
+            "number": 2,
+            "parts": [
+              { "type": "text", "content": "Brazil " },
+              { "type": "blank" },
+              { "type": "text", "content": " coffee all over the world." }
+            ],
+            "options": [
+              { "label": "A", "word": "invests", "pinyin": "" },
+              { "label": "B", "word": "demands", "pinyin": "" },
+              { "label": "C", "word": "exports", "pinyin": "" },
+              { "label": "D", "word": "affords", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt1p1-q3",
+            "number": 3,
+            "parts": [
+              { "type": "text", "content": "How do you " },
+              { "type": "blank" },
+              { "type": "text", "content": " 'csar'?" }
+            ],
+            "options": [
+              { "label": "A", "word": "interrupt", "pinyin": "" },
+              { "label": "B", "word": "swear", "pinyin": "" },
+              { "label": "C", "word": "guess", "pinyin": "" },
+              { "label": "D", "word": "pronounce", "pinyin": "" }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "pt1p1-q4",
+            "number": 4,
+            "parts": [
+              { "type": "text", "content": "Dogs make very " },
+              { "type": "blank" },
+              { "type": "text", "content": " pets. They'll always stay by your side." }
+            ],
+            "options": [
+              { "label": "A", "word": "mental", "pinyin": "" },
+              { "label": "B", "word": "private", "pinyin": "" },
+              { "label": "C", "word": "loyal", "pinyin": "" },
+              { "label": "D", "word": "digital", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt1p1-q5",
+            "number": 5,
+            "parts": [
+              { "type": "text", "content": "Let's go for a swim as soon as we " },
+              { "type": "blank" },
+              { "type": "text", "content": " the hotel!" }
+            ],
+            "options": [
+              { "label": "A", "word": "arrive", "pinyin": "" },
+              { "label": "B", "word": "get", "pinyin": "" },
+              { "label": "C", "word": "reach", "pinyin": "" },
+              { "label": "D", "word": "meet", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt1p1-q6",
+            "number": 6,
+            "parts": [
+              { "type": "text", "content": "You have to " },
+              { "type": "blank" },
+              { "type": "text", "content": " or you won't understand the explanation." }
+            ],
+            "options": [
+              { "label": "A", "word": "concentrate", "pinyin": "" },
+              { "label": "B", "word": "contact", "pinyin": "" },
+              { "label": "C", "word": "consider", "pinyin": "" },
+              { "label": "D", "word": "involve", "pinyin": "" }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "pt1p1-q7",
+            "number": 7,
+            "parts": [
+              { "type": "text", "content": "There's a train coming. Don't stand at the edge of the " },
+              { "type": "blank" },
+              { "type": "text", "content": "." }
+            ],
+            "options": [
+              { "label": "A", "word": "property", "pinyin": "" },
+              { "label": "B", "word": "link", "pinyin": "" },
+              { "label": "C", "word": "platform", "pinyin": "" },
+              { "label": "D", "word": "resort", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt1p1-q8",
+            "number": 8,
+            "parts": [
+              { "type": "text", "content": "I " },
+              { "type": "blank" },
+              { "type": "text", "content": " a lot of money on my credit cards and I don't know if I can pay it back." }
+            ],
+            "options": [
+              { "label": "A", "word": "own", "pinyin": "" },
+              { "label": "B", "word": "obtain", "pinyin": "" },
+              { "label": "C", "word": "cost", "pinyin": "" },
+              { "label": "D", "word": "owe", "pinyin": "" }
+            ],
+            "correctOptionLabel": "D"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt1p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "B",
+      "subheading_uz": "B",
+      "subheading_ru": "B",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Напишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card9",
+            "parts": [
+              { "type": "text", "content": "Sometimes, scientists know what they (9) " },
+              { "type": "blank" },
+              { "type": "text", "content": " looking for and they find it." }
+            ],
+            "answers": ["are"],
+            "words": [
+              { "w": "scientists", "t": "olimlar", "tr": "учёные" },
+              { "w": "looking for", "t": "qidirmoq", "tr": "искать" }
+            ]
+          },
+          {
+            "id": "card10",
+            "parts": [
+              { "type": "text", "content": "At other times, things (10) " },
+              { "type": "blank" },
+              { "type": "text", "content": " discovered by accident." }
+            ],
+            "answers": ["are"],
+            "words": [
+              { "w": "discovered", "t": "kashf etilgan", "tr": "открыт" },
+              { "w": "by accident", "t": "tasodifan", "tr": "случайно" }
+            ]
+          },
+          {
+            "id": "card11",
+            "parts": [
+              { "type": "text", "content": "Isaac Newton, (11) " },
+              { "type": "blank" },
+              { "type": "text", "content": " first used maths to describe gravity, was sitting (12) " },
+              { "type": "blank" },
+              { "type": "text", "content": " his garden when he saw (13) " },
+              { "type": "blank" },
+              { "type": "text", "content": " apple fall." }
+            ],
+            "answers": ["who", "in", "an"],
+            "words": [
+              { "w": "Isaac Newton", "t": "Isaak Nyuton", "tr": "Исаак Ньютон" },
+              { "w": "maths", "t": "matematika", "tr": "математика" },
+              { "w": "describe", "t": "tasvirlamoq", "tr": "описывать" },
+              { "w": "gravity", "t": "tortishish kuchi", "tr": "гравитация" },
+              { "w": "garden", "t": "bog'", "tr": "сад" }
+            ]
+          },
+          {
+            "id": "card14",
+            "parts": [
+              { "type": "text", "content": "This made him think about why, and he realised he (14) " },
+              { "type": "blank" },
+              { "type": "text", "content": " explain it using maths." }
+            ],
+            "answers": ["could"],
+            "words": [
+              { "w": "realised", "t": "anglab yetdi", "tr": "понял" },
+              { "w": "explain", "t": "tushuntirmoq", "tr": "объяснить" }
+            ]
+          },
+          {
+            "id": "card15",
+            "parts": [
+              { "type": "text", "content": "Alexander Fleming discovered penicillin, (15) " },
+              { "type": "blank" },
+              { "type": "text", "content": " was the first antibiotic." }
+            ],
+            "answers": ["which"],
+            "words": [
+              { "w": "Alexander Fleming", "t": "Aleksandr Fleming", "tr": "Александр Флеминг" },
+              { "w": "discovered", "t": "kashf etdi", "tr": "открыл" },
+              { "w": "penicillin", "t": "penitsillin", "tr": "пенициллин" },
+              { "w": "antibiotic", "t": "antibiotik", "tr": "антибиотик" }
+            ]
+          },
+          {
+            "id": "card16",
+            "parts": [
+              { "type": "text", "content": "It completely changed medicine. He was working (16) " },
+              { "type": "blank" },
+              { "type": "text", "content": " his laboratory when he saw that something (17) " },
+              { "type": "blank" },
+              { "type": "text", "content": " started growing on one of his experiments." }
+            ],
+            "answers": ["in", "had"],
+            "words": [
+              { "w": "changed", "t": "o'zgartirdi", "tr": "изменил" },
+              { "w": "medicine", "t": "tibbiyot", "tr": "медицина" },
+              { "w": "laboratory", "t": "laboratoriya", "tr": "лаборатория" },
+              { "w": "growing", "t": "o'smoq", "tr": "расти" },
+              { "w": "experiments", "t": "tajribalar", "tr": "эксперименты" }
+            ]
+          },
+          {
+            "id": "card18",
+            "parts": [
+              { "type": "text", "content": "He analysed it and realised that it (18) " },
+              { "type": "blank" },
+              { "type": "text", "content": " be very useful in fighting disease." }
+            ],
+            "answers": ["could"],
+            "words": [
+              { "w": "analysed", "t": "tahlil qildi", "tr": "проанализировал" },
+              { "w": "useful", "t": "foydali", "tr": "полезный" },
+              { "w": "fighting disease", "t": "kasallikka qarshi kurashish", "tr": "борьба с болезнью" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt1p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "C",
+      "subheading_uz": "C",
+      "subheading_ru": "C",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card19",
+            "parts": [
+              { "type": "text", "content": "My computer doesn't work, so I can't e-mail you. " },
+              { "type": "hint", "content": "wrong" },
+              { "type": "text", "content": "\nThere's " },
+              { "type": "blank" },
+              { "type": "text", "content": " my computer, so I can't e-mail you." }
+            ],
+            "answers": ["something wrong with"],
+            "words": [
+              { "w": "doesn't work", "t": "ishlamaydi", "tr": "не работает" },
+              { "w": "e-mail", "t": "elektron pochta yubormoq", "tr": "написать по электронной почте" },
+              { "w": "something wrong with", "t": "bilan muammo bor", "tr": "что-то не так с" }
+            ]
+          },
+          {
+            "id": "card20",
+            "parts": [
+              { "type": "text", "content": "When we started our journey towards the mountains, the sun was shining. " },
+              { "type": "hint", "content": "off" },
+              { "type": "text", "content": "\nWhen we " },
+              { "type": "blank" },
+              { "type": "text", "content": " towards the mountains, the sun was shining." }
+            ],
+            "answers": ["set off"],
+            "words": [
+              { "w": "started our journey", "t": "yo'lga chiqdik", "tr": "отправились в путь" },
+              { "w": "towards", "t": "tomon", "tr": "в направлении" },
+              { "w": "mountains", "t": "tog'lar", "tr": "горы" },
+              { "w": "sun was shining", "t": "quyosh chiqib turardi", "tr": "светило солнце" },
+              { "w": "set off", "t": "yo'lga chiqmoq", "tr": "отправиться в путь" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "id": "unit28-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u28p2-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapda qalin yozilgan so'z yoki ibora noto'g'ri. To'g'ri so'z yoki iborani yozing.",
+      "instruction_ru": "Слова и фразы, выделенные жирным шрифтом, неправильные. Напишите правильное слово или фразу.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u28p2-ex1-1",
+            "sentence": "If we will go shopping tomorrow, I'll probably buy a new top.",
+            "errorStart": 6,
+            "errorEnd": 13,
+            "correctAnswer": "go",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "go shopping",
+                "t": "xarid qilgani bormoq",
+                "tr": "идти за покупками"
+              },
+              {
+                "w": "tomorrow",
+                "t": "ertaga",
+                "tr": "завтра"
+              },
+              {
+                "w": "probably",
+                "t": "ehtimol",
+                "tr": "вероятно"
+              },
+              {
+                "w": "top",
+                "t": "ko'ylak",
+                "tr": "топ/блузка"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-2",
+            "sentence": "If Mum is tired tonight, I cook dinner.",
+            "errorStart": 27,
+            "errorEnd": 31,
+            "correctAnswer": "will cook",
+            "alternateAnswers": [
+              "'ll cook"
+            ],
+            "words": [
+              {
+                "w": "tired",
+                "t": "charchagan",
+                "tr": "усталый"
+              },
+              {
+                "w": "tonight",
+                "t": "bu kecha",
+                "tr": "сегодня вечером"
+              },
+              {
+                "w": "cook",
+                "t": "ovqat pishirmoq",
+                "tr": "готовить"
+              },
+              {
+                "w": "dinner",
+                "t": "kechki ovqat",
+                "tr": "ужин"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-3",
+            "sentence": "John will tell us if there will be any news.",
+            "errorStart": 27,
+            "errorEnd": 34,
+            "correctAnswer": "is",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "tell",
+                "t": "aytmoq",
+                "tr": "сказать"
+              },
+              {
+                "w": "news",
+                "t": "yangilik",
+                "tr": "новость"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-4",
+            "sentence": "If I won't get a good mark in the geography test, I'll be very annoyed!",
+            "errorStart": 5,
+            "errorEnd": 14,
+            "correctAnswer": "don't get",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "get a good mark",
+                "t": "yaxshi baho olmoq",
+                "tr": "получить хорошую оценку"
+              },
+              {
+                "w": "geography test",
+                "t": "geografiya testi",
+                "tr": "тест по географии"
+              },
+              {
+                "w": "annoyed",
+                "t": "xafa",
+                "tr": "раздражённый"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-5",
+            "sentence": "You are tired in the morning if you don't go to bed soon.",
+            "errorStart": 4,
+            "errorEnd": 7,
+            "correctAnswer": "will be",
+            "alternateAnswers": [
+              "'ll be"
+            ],
+            "words": [
+              {
+                "w": "tired",
+                "t": "charchagan",
+                "tr": "усталый"
+              },
+              {
+                "w": "in the morning",
+                "t": "ertalab",
+                "tr": "утром"
+              },
+              {
+                "w": "go to bed",
+                "t": "yotmoq",
+                "tr": "ложиться спать"
+              },
+              {
+                "w": "soon",
+                "t": "tez orada",
+                "tr": "скоро"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-6",
+            "sentence": "If you see Karen, do you ask her to call me?",
+            "errorStart": 18,
+            "errorEnd": 20,
+            "correctAnswer": "will",
+            "alternateAnswers": [
+              "could"
+            ],
+            "words": [
+              {
+                "w": "see",
+                "t": "ko'rmoq",
+                "tr": "увидеть"
+              },
+              {
+                "w": "ask",
+                "t": "so'ramoq",
+                "tr": "попросить"
+              },
+              {
+                "w": "call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-7",
+            "sentence": "Does Frank come with us if we go to the beach at the weekend?",
+            "errorStart": 0,
+            "errorEnd": 4,
+            "correctAnswer": "Will",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "come with",
+                "t": "birga bormoq",
+                "tr": "идти вместе"
+              },
+              {
+                "w": "beach",
+                "t": "plyaj",
+                "tr": "пляж"
+              },
+              {
+                "w": "at the weekend",
+                "t": "dam olish kunlarida",
+                "tr": "в выходные"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex1-8",
+            "sentence": "If you need help, will tell me!",
+            "errorStart": 18,
+            "errorEnd": 27,
+            "correctAnswer": "tell",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "need",
+                "t": "kerak bo'lmoq",
+                "tr": "нуждаться"
+              },
+              {
+                "w": "help",
+                "t": "yordam",
+                "tr": "помощь"
+              },
+              {
+                "w": "tell",
+                "t": "aytmoq",
+                "tr": "сказать"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u28p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi fe'llarning to'g'ri shaklini yozing.",
+      "instruction_ru": "Вставьте правильную форму глаголов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u28p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " well in the exam, my parents will buy me an MP3 player. "
+              },
+              {
+                "type": "hint",
+                "content": "do"
+              }
+            ],
+            "answers": [
+              "do"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "do well",
+                "t": "yaxshi bajarmoq",
+                "tr": "справиться хорошо"
+              },
+              {
+                "w": "exam",
+                "t": "imtihon",
+                "tr": "экзамен"
+              },
+              {
+                "w": "buy",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If my sister borrows my clothes again, I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! "
+              },
+              {
+                "type": "hint",
+                "content": "scream"
+              }
+            ],
+            "answers": [
+              "will scream"
+            ],
+            "alternateAnswers": [
+              [
+                "'ll scream"
+              ]
+            ],
+            "words": [
+              {
+                "w": "borrows",
+                "t": "qarz olmoq",
+                "tr": "брать взаймы"
+              },
+              {
+                "w": "clothes",
+                "t": "kiyimlar",
+                "tr": "одежда"
+              },
+              {
+                "w": "scream",
+                "t": "qichqirmoq",
+                "tr": "кричать"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We'll leave at six o'clock if the weather "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " bad. "
+              },
+              {
+                "type": "hint",
+                "content": "be"
+              }
+            ],
+            "answers": [
+              "isn't"
+            ],
+            "alternateAnswers": [
+              [
+                "is not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "leave",
+                "t": "ketmoq",
+                "tr": "уехать"
+              },
+              {
+                "w": "o'clock",
+                "t": "soat",
+                "tr": "часов"
+              },
+              {
+                "w": "weather",
+                "t": "ob-havo",
+                "tr": "погода"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " if we're a bit late this afternoon. "
+              },
+              {
+                "type": "hint",
+                "content": "not / mind"
+              }
+            ],
+            "answers": [
+              "won't mind"
+            ],
+            "alternateAnswers": [
+              [
+                "will not mind"
+              ]
+            ],
+            "words": [
+              {
+                "w": "mind",
+                "t": "e'tiroz qilmoq",
+                "tr": "возражать"
+              },
+              {
+                "w": "a bit late",
+                "t": "biroz kech",
+                "tr": "немного опоздать"
+              },
+              {
+                "w": "this afternoon",
+                "t": "bugun tushdan keyin",
+                "tr": "сегодня после обеда"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Sarah will be very annoyed if Dave "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " her this evening. "
+              },
+              {
+                "type": "hint",
+                "content": "not / call"
+              }
+            ],
+            "answers": [
+              "doesn't call"
+            ],
+            "alternateAnswers": [
+              [
+                "does not call"
+              ]
+            ],
+            "words": [
+              {
+                "w": "annoyed",
+                "t": "xafa",
+                "tr": "раздражённый"
+              },
+              {
+                "w": "call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "this evening",
+                "t": "bu kecha",
+                "tr": "сегодня вечером"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Will you still go to the concert if the tickets "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " 60 euros? "
+              },
+              {
+                "type": "hint",
+                "content": "cost"
+              }
+            ],
+            "answers": [
+              "cost"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "concert",
+                "t": "konsert",
+                "tr": "концерт"
+              },
+              {
+                "w": "tickets",
+                "t": "chiptalar",
+                "tr": "билеты"
+              },
+              {
+                "w": "cost",
+                "t": "turmoq",
+                "tr": "стоить"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If Rania doesn't come to the party, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " upset? "
+              },
+              {
+                "type": "hint",
+                "content": "Greg / be"
+              }
+            ],
+            "answers": [
+              "will Greg be"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "come to",
+                "t": "kelmoq",
+                "tr": "прийти на"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              },
+              {
+                "w": "upset",
+                "t": "xafa",
+                "tr": "расстроенный"
+              }
+            ]
+          },
+          {
+            "id": "u28p2-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'll be surprised if Doug and Dana "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a new car soon. "
+              },
+              {
+                "type": "hint",
+                "content": "not / get"
+              }
+            ],
+            "answers": [
+              "don't get"
+            ],
+            "alternateAnswers": [
+              [
+                "do not get"
+              ]
+            ],
+            "words": [
+              {
+                "w": "surprised",
+                "t": "hayron",
+                "tr": "удивлённый"
+              },
+              {
+                "w": "get",
+                "t": "olmoq",
+                "tr": "получить"
+              },
+              {
+                "w": "soon",
+                "t": "tez orada",
+                "tr": "скоро"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

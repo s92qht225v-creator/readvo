@@ -1,0 +1,1011 @@
+{
+  "id": "unit36-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u36p2-sec-exerciseA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlardan foydalanib bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски словами из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "climate",
+          "forecast",
+          "heatwave",
+          "lightning",
+          "shower",
+          "thunder",
+          "insect",
+          "mammal",
+          "reptile",
+          "species",
+          "wildlife"
+        ],
+        "cards": [
+          {
+            "id": "u36p2-exA-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Have you heard what the weather "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " is for tomorrow?"
+              }
+            ],
+            "answers": [
+              "forecast"
+            ],
+            "words": [
+              {
+                "w": "heard",
+                "t": "eshitdingizmi",
+                "tr": "слышали"
+              },
+              {
+                "w": "weather forecast",
+                "t": "ob-havo ma'lumoti",
+                "tr": "прогноз погоды"
+              },
+              {
+                "w": "tomorrow",
+                "t": "ertaga",
+                "tr": "завтра"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Britain is experiencing a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at the moment. It's unusually hot and it hasn't rained for several weeks."
+              }
+            ],
+            "answers": [
+              "heatwave"
+            ],
+            "words": [
+              {
+                "w": "experiencing",
+                "t": "boshdan kechirmoqda",
+                "tr": "переживает"
+              },
+              {
+                "w": "heatwave",
+                "t": "issiqlik to'lqini",
+                "tr": "волна жары"
+              },
+              {
+                "w": "at the moment",
+                "t": "hozirda",
+                "tr": "в данный момент"
+              },
+              {
+                "w": "unusually",
+                "t": "odatdan tashqari",
+                "tr": "необычно"
+              },
+              {
+                "w": "several",
+                "t": "bir necha",
+                "tr": "несколько"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's not going to rain much, but there might be the occasional "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "shower"
+            ],
+            "words": [
+              {
+                "w": "occasional",
+                "t": "vaqti-vaqti bilan",
+                "tr": "временами"
+              },
+              {
+                "w": "shower",
+                "t": "yomg'ir",
+                "tr": "ливень"
+              },
+              {
+                "w": "might be",
+                "t": "bo'lishi mumkin",
+                "tr": "возможно будет"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "During the thunderstorm, the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " was so loud I hid under the bed!"
+              }
+            ],
+            "answers": [
+              "thunder"
+            ],
+            "words": [
+              {
+                "w": "during",
+                "t": "paytida",
+                "tr": "во время"
+              },
+              {
+                "w": "thunderstorm",
+                "t": "momaqaldiroqli bo'ron",
+                "tr": "гроза"
+              },
+              {
+                "w": "thunder",
+                "t": "momaqaldiroq",
+                "tr": "гром"
+              },
+              {
+                "w": "loud",
+                "t": "baland ovozli",
+                "tr": "громкий"
+              },
+              {
+                "w": "hid",
+                "t": "yashirdim",
+                "tr": "спрятался"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-5",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " hit a tree in the garden during the thunderstorm and a branch came off."
+              }
+            ],
+            "answers": [
+              "Lightning"
+            ],
+            "words": [
+              {
+                "w": "lightning",
+                "t": "chaqmoq",
+                "tr": "молния"
+              },
+              {
+                "w": "hit",
+                "t": "urdi",
+                "tr": "ударила"
+              },
+              {
+                "w": "branch",
+                "t": "shox",
+                "tr": "ветка"
+              },
+              {
+                "w": "came off",
+                "t": "sinib tushdi",
+                "tr": "отломилась"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I lived in a country with a warmer "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "climate"
+            ],
+            "words": [
+              {
+                "w": "I wish",
+                "t": "qaniydi",
+                "tr": "хотел бы"
+              },
+              {
+                "w": "lived",
+                "t": "yashaganimda",
+                "tr": "жил"
+              },
+              {
+                "w": "warmer",
+                "t": "iliqroq",
+                "tr": "более тёплым"
+              },
+              {
+                "w": "climate",
+                "t": "iqlim",
+                "tr": "климат"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't see a lot of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " because I live in a big city."
+              }
+            ],
+            "answers": [
+              "wildlife"
+            ],
+            "words": [
+              {
+                "w": "wildlife",
+                "t": "yovvoyi tabiat",
+                "tr": "дикая природа"
+              },
+              {
+                "w": "big city",
+                "t": "katta shahar",
+                "tr": "большой город"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's very unusual to see this "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of bird round here at this time of year."
+              }
+            ],
+            "answers": [
+              "species"
+            ],
+            "words": [
+              {
+                "w": "unusual",
+                "t": "g'ayrioddiy",
+                "tr": "необычно"
+              },
+              {
+                "w": "species",
+                "t": "tur",
+                "tr": "вид"
+              },
+              {
+                "w": "round here",
+                "t": "bu atrofda",
+                "tr": "в этих местах"
+              },
+              {
+                "w": "time of year",
+                "t": "yilning bu paytida",
+                "tr": "в это время года"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If it's got six legs, it's probably a/an "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "insect"
+            ],
+            "words": [
+              {
+                "w": "legs",
+                "t": "oyoqlar",
+                "tr": "ног"
+              },
+              {
+                "w": "probably",
+                "t": "ehtimol",
+                "tr": "вероятно"
+              },
+              {
+                "w": "insect",
+                "t": "hasharot",
+                "tr": "насекомое"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Humans and monkeys are different types of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "mammal"
+            ],
+            "words": [
+              {
+                "w": "humans",
+                "t": "odamlar",
+                "tr": "люди"
+              },
+              {
+                "w": "monkeys",
+                "t": "maymunlar",
+                "tr": "обезьяны"
+              },
+              {
+                "w": "different types",
+                "t": "turli xillar",
+                "tr": "разные виды"
+              },
+              {
+                "w": "mammal",
+                "t": "sutemizuvchi",
+                "tr": "млекопитающее"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exA-11",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Snakes and lizards are different kinds of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "reptile"
+            ],
+            "words": [
+              {
+                "w": "snakes",
+                "t": "ilonlar",
+                "tr": "змеи"
+              },
+              {
+                "w": "lizards",
+                "t": "kaltakesaklar",
+                "tr": "ящерицы"
+              },
+              {
+                "w": "reptile",
+                "t": "sudralib yuruvchi",
+                "tr": "рептилия"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u36p2-sec-exerciseB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing. Birinchi harf berilgan.",
+      "instruction_ru": "Впишите одно слово в каждый пропуск. Первая буква дана.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u36p2-exB-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If we all r"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " our paper, fewer trees would be cut down."
+              }
+            ],
+            "answers": [
+              "ecycled"
+            ],
+            "words": [
+              {
+                "w": "recycle",
+                "t": "qayta ishlash",
+                "tr": "перерабатывать"
+              },
+              {
+                "w": "paper",
+                "t": "qog'oz",
+                "tr": "бумагу"
+              },
+              {
+                "w": "fewer",
+                "t": "kamroq",
+                "tr": "меньше"
+              },
+              {
+                "w": "trees",
+                "t": "daraxtlar",
+                "tr": "деревьев"
+              },
+              {
+                "w": "cut down",
+                "t": "kesib tashlash",
+                "tr": "вырубать"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The castle is perfectly p"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", so it's just like it was four hundred years ago."
+              }
+            ],
+            "answers": [
+              "reserved"
+            ],
+            "words": [
+              {
+                "w": "castle",
+                "t": "qal'a",
+                "tr": "замок"
+              },
+              {
+                "w": "perfectly",
+                "t": "mukammal",
+                "tr": "прекрасно"
+              },
+              {
+                "w": "preserved",
+                "t": "saqlanib qolgan",
+                "tr": "сохранился"
+              },
+              {
+                "w": "four hundred years ago",
+                "t": "to'rt yuz yil oldin",
+                "tr": "четыреста лет назад"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If only we could go to the c"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to get some fresh air."
+              }
+            ],
+            "answers": [
+              "ountryside"
+            ],
+            "words": [
+              {
+                "w": "countryside",
+                "t": "qishloq joyi",
+                "tr": "загород, природа"
+              },
+              {
+                "w": "fresh air",
+                "t": "toza havo",
+                "tr": "свежий воздух"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Many plants and animals are in danger of becoming e"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". If they do, we'll never see them again."
+              }
+            ],
+            "answers": [
+              "xtinct"
+            ],
+            "words": [
+              {
+                "w": "plants",
+                "t": "o'simliklar",
+                "tr": "растения"
+              },
+              {
+                "w": "in danger of",
+                "t": "xavf ostida",
+                "tr": "под угрозой"
+              },
+              {
+                "w": "extinct",
+                "t": "yo'q bo'lib ketmoq",
+                "tr": "вымереть"
+              },
+              {
+                "w": "never",
+                "t": "hech qachon",
+                "tr": "никогда"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Zoos give us the opportunity to see w"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " animals up close."
+              }
+            ],
+            "answers": [
+              "ild"
+            ],
+            "words": [
+              {
+                "w": "zoos",
+                "t": "hayvonot bog'lari",
+                "tr": "зоопарки"
+              },
+              {
+                "w": "opportunity",
+                "t": "imkoniyat",
+                "tr": "возможность"
+              },
+              {
+                "w": "wild",
+                "t": "yovvoyi",
+                "tr": "дикий"
+              },
+              {
+                "w": "up close",
+                "t": "yaqindan",
+                "tr": "вблизи"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The weather is quite m"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " here, even in the winter. It rarely snows."
+              }
+            ],
+            "answers": [
+              "ild"
+            ],
+            "words": [
+              {
+                "w": "mild",
+                "t": "yumshoq, mo'tadil",
+                "tr": "мягкий"
+              },
+              {
+                "w": "even in",
+                "t": "hatto qishda ham",
+                "tr": "даже зимой"
+              },
+              {
+                "w": "rarely",
+                "t": "kamdan-kam",
+                "tr": "редко"
+              },
+              {
+                "w": "snows",
+                "t": "qor yog'adi",
+                "tr": "идёт снег"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The l"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " weather forecast is usually much more accurate than the national one."
+              }
+            ],
+            "answers": [
+              "ocal"
+            ],
+            "words": [
+              {
+                "w": "local",
+                "t": "mahalliy",
+                "tr": "местный"
+              },
+              {
+                "w": "accurate",
+                "t": "aniq",
+                "tr": "точный"
+              },
+              {
+                "w": "national",
+                "t": "milliy, umummamlakat",
+                "tr": "национальный"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish you wouldn't drop your l"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on the ground. Put it in the bin!"
+              }
+            ],
+            "answers": [
+              "itter"
+            ],
+            "words": [
+              {
+                "w": "drop",
+                "t": "tashlash",
+                "tr": "бросать"
+              },
+              {
+                "w": "litter",
+                "t": "axlat",
+                "tr": "мусор"
+              },
+              {
+                "w": "ground",
+                "t": "yer",
+                "tr": "земля"
+              },
+              {
+                "w": "bin",
+                "t": "axlat qutisi",
+                "tr": "мусорное ведро"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Scientists have n"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the new planet 'Sedna'."
+              }
+            ],
+            "answers": [
+              "amed"
+            ],
+            "words": [
+              {
+                "w": "scientists",
+                "t": "olimlar",
+                "tr": "учёные"
+              },
+              {
+                "w": "named",
+                "t": "nomlashdi",
+                "tr": "назвали"
+              },
+              {
+                "w": "planet",
+                "t": "sayyora",
+                "tr": "планету"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Looking down at the Earth from space must be an a"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " experience."
+              }
+            ],
+            "answers": [
+              "mazing"
+            ],
+            "words": [
+              {
+                "w": "looking down",
+                "t": "pastga qarash",
+                "tr": "смотреть вниз"
+              },
+              {
+                "w": "space",
+                "t": "fazo",
+                "tr": "космос"
+              },
+              {
+                "w": "amazing",
+                "t": "ajoyib",
+                "tr": "удивительный"
+              },
+              {
+                "w": "experience",
+                "t": "tajriba, his",
+                "tr": "опыт, ощущение"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-11",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's f"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in here! Let's put the heating on."
+              }
+            ],
+            "answers": [
+              "reezing"
+            ],
+            "words": [
+              {
+                "w": "freezing",
+                "t": "muzlaydigan darajada sovuq",
+                "tr": "очень холодно"
+              },
+              {
+                "w": "heating",
+                "t": "isitish",
+                "tr": "отопление"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-12",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The wildlife park is l"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " 15 km outside the town."
+              }
+            ],
+            "answers": [
+              "ocated"
+            ],
+            "words": [
+              {
+                "w": "wildlife park",
+                "t": "yovvoyi tabiat bog'i",
+                "tr": "заповедник"
+              },
+              {
+                "w": "located",
+                "t": "joylashgan",
+                "tr": "расположен"
+              },
+              {
+                "w": "outside",
+                "t": "tashqarisida",
+                "tr": "за пределами"
+              },
+              {
+                "w": "town",
+                "t": "shahar",
+                "tr": "город"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-13",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you get lost in the desert, there will be no one around to r"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you!"
+              }
+            ],
+            "answers": [
+              "escue"
+            ],
+            "words": [
+              {
+                "w": "get lost",
+                "t": "adashmoq",
+                "tr": "заблудиться"
+              },
+              {
+                "w": "desert",
+                "t": "cho'l",
+                "tr": "пустыня"
+              },
+              {
+                "w": "rescue",
+                "t": "qutqarmoq",
+                "tr": "спасти"
+              }
+            ]
+          },
+          {
+            "id": "u36p2-exB-14",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Climate change is a g"
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " problem. Every country in the world is affected."
+              }
+            ],
+            "answers": [
+              "lobal"
+            ],
+            "words": [
+              {
+                "w": "climate change",
+                "t": "iqlim o'zgarishi",
+                "tr": "изменение климата"
+              },
+              {
+                "w": "global",
+                "t": "global",
+                "tr": "глобальная"
+              },
+              {
+                "w": "affected",
+                "t": "ta'sirlangan",
+                "tr": "затронута"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

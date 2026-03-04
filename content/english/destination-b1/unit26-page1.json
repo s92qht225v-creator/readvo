@@ -1,0 +1,165 @@
+{
+  "id": "unit26-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 26,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Comparatives and superlatives",
+    "titleTranslation_ru": "Comparatives and superlatives"
+  },
+  "sections": [
+    {
+      "id": "u26p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Comparatives",
+      "subheading_uz": "Comparatives",
+      "subheading_ru": "Comparatives",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To compare things/people/actions that are different", "_My new job is **more enjoyable** than my old one._\n_I'd like you to get to the office **earlier** tomorrow._"],
+            "cells_uz": ["Farqli narsa/odam/harakatlarni solishtirish uchun", "_Mening yangi ishim eski ishimdan **ko'proq qiziqarli**._\n_Ertaga ofisga **ertaroq** kelishingizni xohlayman._"],
+            "cells_ru": ["Для сравнения различных вещей/людей/действий", "_Моя новая работа **более интересная**, чем старая._\n_Я хотел бы, чтобы вы пришли в офис **раньше** завтра._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u26p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["**adjective**", "", "**comparative**"],
+            "cells_uz": ["**sifat**", "", "**qiyosiy daraja**"],
+            "cells_ru": ["**прилагательное**", "", "**сравнительная степень**"]
+          },
+          {
+            "cells": ["one syllable", "hard\nlate\nbig\npretty", "+ -er\n+ -r\ndouble last letter + -er\n-y → -ier\n\nharder\nlater\nbigger\nprettier"],
+            "cells_uz": ["bir bo'g'inli", "hard\nlate\nbig\npretty", "+ -er\n+ -r\noxirgi harf ikkilanadi + -er\n-y → -ier\n\nharder\nlater\nbigger\nprettier"],
+            "cells_ru": ["один слог", "hard\nlate\nbig\npretty", "+ -er\n+ -r\nудвоить последнюю букву + -er\n-y → -ier\n\nharder\nlater\nbigger\nprettier"]
+          },
+          {
+            "cells": ["two or more syllables", "interesting", "more/less + adjective\n\nmore/less interesting"],
+            "cells_uz": ["ikki va undan ko'p bo'g'inli", "interesting", "more/less + sifat\n\nmore/less interesting"],
+            "cells_ru": ["два и более слога", "interesting", "more/less + прилагательное\n\nmore/less interesting"]
+          },
+          {
+            "cells": ["irregular adjectives / quantifiers", "good → better\nbad → worse\nfar → farther/further\nlittle → less\nmany → more\nmuch → more", ""],
+            "cells_uz": ["irregular sifatlar / miqdor so'zlar", "good → better\nbad → worse\nfar → farther/further\nlittle → less\nmany → more\nmuch → more", ""],
+            "cells_ru": ["неправильные прилагательные / кванторы", "good → better\nbad → worse\nfar → farther/further\nlittle → less\nmany → more\nmuch → more", ""]
+          },
+          {
+            "cells": ["**adverb**", "", "**comparative**"],
+            "cells_uz": ["**ravish**", "", "**qiyosiy daraja**"],
+            "cells_ru": ["**наречие**", "", "**сравнительная степень**"]
+          },
+          {
+            "cells": ["regular adverbs", "carefully", "more/less + adverb\n\nmore/less carefully"],
+            "cells_uz": ["to'g'ri ravishlar", "carefully", "more/less + ravish\n\nmore/less carefully"],
+            "cells_ru": ["правильные наречия", "carefully", "more/less + наречие\n\nmore/less carefully"]
+          },
+          {
+            "cells": ["irregular adverbs", "well → better\nbadly → worse\nearly → earlier\nnear → nearer\nlate → later\nfast → faster\nfar → farther/further", ""],
+            "cells_uz": ["irregular ravishlar", "well → better\nbadly → worse\nearly → earlier\nnear → nearer\nlate → later\nfast → faster\nfar → farther/further", ""],
+            "cells_ru": ["неправильные наречия", "well → better\nbadly → worse\nearly → earlier\nnear → nearer\nlate → later\nfast → faster\nfar → farther/further", ""]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Qiyosiy daraja ko'pincha **than** bilan ishlatiladi.\n✓ _My working day is **longer than** it used to be._",
+        "translation_ru": "Сравнительная степень часто употребляется с **than**.\n✓ _My working day is **longer than** it used to be._"
+      }
+    },
+    {
+      "id": "u26p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Superlatives",
+      "subheading_uz": "Superlatives",
+      "subheading_ru": "Superlatives",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To compare one member of a group of things/people/actions with the whole group", "_Out of all the jobs in the company, John's is the **hardest**._\n_The person who does **best** will get a pay rise._"],
+            "cells_uz": ["Guruhning bitta a'zosini butun guruh bilan solishtirish uchun", "_Kompaniyadagi barcha ishlar ichida Jonning ishi **eng qiyin**._\n_**Eng yaxshi** natija ko'rsatgan odam maosh oshirishiga erishadi._"],
+            "cells_ru": ["Для сравнения одного члена группы с остальными", "_Из всех должностей в компании работа Джона **самая трудная**._\n_Тот, кто работает **лучше всех**, получит прибавку к зарплате._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u26p1-sec-grammar4",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["**adjective**", "", "**superlative**"],
+            "cells_uz": ["**sifat**", "", "**orttirma daraja**"],
+            "cells_ru": ["**прилагательное**", "", "**превосходная степень**"]
+          },
+          {
+            "cells": ["one syllable", "hard\nlate\nbig\npretty", "+ -est\n+ -st\ndouble last letter + -est\n-y → -iest\n\nhardest\nlatest\nbiggest\nprettiest"],
+            "cells_uz": ["bir bo'g'inli", "hard\nlate\nbig\npretty", "+ -est\n+ -st\noxirgi harf ikkilanadi + -est\n-y → -iest\n\nhardest\nlatest\nbiggest\nprettiest"],
+            "cells_ru": ["один слог", "hard\nlate\nbig\npretty", "+ -est\n+ -st\nудвоить последнюю букву + -est\n-y → -iest\n\nhardest\nlatest\nbiggest\nprettiest"]
+          },
+          {
+            "cells": ["two or more syllables", "interesting", "most/least + adjective\n\nmost/least interesting"],
+            "cells_uz": ["ikki va undan ko'p bo'g'inli", "interesting", "most/least + sifat\n\nmost/least interesting"],
+            "cells_ru": ["два и более слога", "interesting", "most/least + прилагательное\n\nmost/least interesting"]
+          },
+          {
+            "cells": ["irregular adjectives / quantifiers", "good → best\nbad → worst\nfar → farthest/furthest\nlittle → least\nmany → most\nmuch → most", ""],
+            "cells_uz": ["irregular sifatlar / miqdor so'zlar", "good → best\nbad → worst\nfar → farthest/furthest\nlittle → least\nmany → most\nmuch → most", ""],
+            "cells_ru": ["неправильные прилагательные / кванторы", "good → best\nbad → worst\nfar → farthest/furthest\nlittle → least\nmany → most\nmuch → most", ""]
+          },
+          {
+            "cells": ["**adverb**", "", "**superlative**"],
+            "cells_uz": ["**ravish**", "", "**orttirma daraja**"],
+            "cells_ru": ["**наречие**", "", "**превосходная степень**"]
+          },
+          {
+            "cells": ["regular adverbs", "carefully", "most/least + adverb\n\nmost/least carefully"],
+            "cells_uz": ["to'g'ri ravishlar", "carefully", "most/least + ravish\n\nmost/least carefully"],
+            "cells_ru": ["правильные наречия", "carefully", "most/least + наречие\n\nmost/least carefully"]
+          },
+          {
+            "cells": ["irregular adverbs", "well → best\nbadly → worst\nearly → earliest\nnear → nearest\nlate → latest\nfast → fastest\nfar → farthest/furthest", ""],
+            "cells_uz": ["irregular ravishlar", "well → best\nbadly → worst\nearly → earliest\nnear → nearest\nlate → latest\nfast → fastest\nfar → farthest/furthest", ""],
+            "cells_ru": ["неправильные наречия", "well → best\nbadly → worst\nearly → earliest\nnear → nearest\nlate → latest\nfast → fastest\nfar → farthest/furthest", ""]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Orttirma darajadan oldin odatda **the** ishlatiladi.\n✓ _Today was **the worst** day since I started working there._",
+        "translation_ru": "Перед превосходной степенью обычно используется **the**.\n✓ _Today was **the worst** day since I started working there._"
+      }
+    }
+  ]
+}

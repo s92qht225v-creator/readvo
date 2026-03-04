@@ -1,0 +1,1974 @@
+{
+  "id": "unit5-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u5p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "A",
+      "instruction": "Qavslar ichidagi fe'llarning to'g'ri Past Perfect Simple shaklini yozing.",
+      "instruction_ru": "Вставьте правильную форму Past Perfect Simple глаголов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u5p2-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "By the time I arrived, everyone "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "leave"
+              }
+            ],
+            "answers": [
+              "had left"
+            ],
+            "alternateAnswers": [
+              [
+                "'d left"
+              ]
+            ],
+            "words": [
+              {
+                "w": "by the time",
+                "t": "vaqtiga kelib",
+                "tr": "к тому времени как"
+              },
+              {
+                "w": "arrived",
+                "t": "kelmoq",
+                "tr": "прибыть"
+              },
+              {
+                "w": "everyone",
+                "t": "hamma",
+                "tr": "все"
+              },
+              {
+                "w": "leave",
+                "t": "ketmoq",
+                "tr": "уходить"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "u5p2-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Steve "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the film, so he didn't come with us to the cinema. "
+              },
+              {
+                "type": "hint",
+                "content": "already / see"
+              }
+            ],
+            "answers": [
+              "had already seen"
+            ],
+            "alternateAnswers": [
+              [
+                "'d already seen"
+              ]
+            ],
+            "words": [
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "see",
+                "t": "ko'rmoq",
+                "tr": "видеть"
+              },
+              {
+                "w": "film",
+                "t": "film",
+                "tr": "фильм"
+              },
+              {
+                "w": "so",
+                "t": "shuning uchun",
+                "tr": "поэтому"
+              },
+              {
+                "w": "come with",
+                "t": "birga kelmoq",
+                "tr": "пойти с"
+              },
+              {
+                "w": "cinema",
+                "t": "kinoteatr",
+                "tr": "кинотеатр"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "u5p2-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tina "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " doing the housework by seven o'clock, so she called Andrea to tell her she would be late. "
+              },
+              {
+                "type": "hint",
+                "content": "not / finish"
+              }
+            ],
+            "answers": [
+              "hadn't finished"
+            ],
+            "alternateAnswers": [
+              [
+                "had not finished"
+              ]
+            ],
+            "words": [
+              {
+                "w": "finish",
+                "t": "tugatmoq",
+                "tr": "закончить"
+              },
+              {
+                "w": "housework",
+                "t": "uy ishlari",
+                "tr": "домашняя работа"
+              },
+              {
+                "w": "by",
+                "t": "-gacha",
+                "tr": "к"
+              },
+              {
+                "w": "seven o'clock",
+                "t": "soat yettida",
+                "tr": "семь часов"
+              },
+              {
+                "w": "called",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "tell",
+                "t": "aytmoq",
+                "tr": "сказать"
+              },
+              {
+                "w": "late",
+                "t": "kech",
+                "tr": "поздно"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "u5p2-a-4",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to Billy when I rang? "
+              },
+              {
+                "type": "hint",
+                "content": "you / just / speak"
+              }
+            ],
+            "answers": [
+              "Had you just spoken"
+            ],
+            "words": [
+              {
+                "w": "just",
+                "t": "hozirgina",
+                "tr": "только что"
+              },
+              {
+                "w": "speak",
+                "t": "gaplashmoq",
+                "tr": "говорить"
+              },
+              {
+                "w": "rang",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "u5p2-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The car broke down just after "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "we / set off"
+              }
+            ],
+            "answers": [
+              "we had set off"
+            ],
+            "alternateAnswers": [
+              [
+                "we'd set off"
+              ]
+            ],
+            "words": [
+              {
+                "w": "car",
+                "t": "mashina",
+                "tr": "машина"
+              },
+              {
+                "w": "broke down",
+                "t": "buzilmoq",
+                "tr": "сломаться"
+              },
+              {
+                "w": "just after",
+                "t": "dan keyin darhol",
+                "tr": "сразу после"
+              },
+              {
+                "w": "set off",
+                "t": "yo'lga chiqmoq",
+                "tr": "отправиться"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "u5p2-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't eat anything at the party because "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at home. "
+              },
+              {
+                "type": "hint",
+                "content": "I / already / eat"
+              }
+            ],
+            "answers": [
+              "I had already eaten"
+            ],
+            "alternateAnswers": [
+              [
+                "I'd already eaten"
+              ]
+            ],
+            "words": [
+              {
+                "w": "eat",
+                "t": "yemoq",
+                "tr": "есть"
+              },
+              {
+                "w": "anything",
+                "t": "hech narsa",
+                "tr": "ничего"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "at home",
+                "t": "uyda",
+                "tr": "дома"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "u5p2-a-7",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about the accident before you saw it on TV? "
+              },
+              {
+                "type": "hint",
+                "content": "you / hear"
+              }
+            ],
+            "answers": [
+              "Had you heard"
+            ],
+            "words": [
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "слышать"
+              },
+              {
+                "w": "accident",
+                "t": "baxtsiz hodisa",
+                "tr": "авария"
+              },
+              {
+                "w": "before",
+                "t": "oldin",
+                "tr": "до"
+              },
+              {
+                "w": "saw",
+                "t": "ko'rmoq",
+                "tr": "видеть"
+              }
+            ],
+            "number": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "u5p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "B",
+      "instruction": "Birinchi gap bilan bir xil ma'noga ega bo'lgan gapni (A yoki B) tanlang.",
+      "instruction_ru": "Выберите предложение (A или B), которое имеет то же значение, что и первое.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u5p2-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We'd had dinner when Wendy arrived.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "Wendy arrived and then we had dinner.",
+                  "We had dinner and then Wendy arrived."
+                ],
+                "correct": 1
+              }
+            ],
+            "words": [
+              {
+                "w": "had dinner",
+                "t": "kechki ovqat yemoq",
+                "tr": "поужинать"
+              },
+              {
+                "w": "arrived",
+                "t": "kelmoq",
+                "tr": "прибыть"
+              },
+              {
+                "w": "then",
+                "t": "keyin",
+                "tr": "затем"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I read the book after I'd seen the film.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "I saw the film and then I read the book.",
+                  "I read the book and then I saw the film."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "read",
+                "t": "o'qimoq",
+                "tr": "читать"
+              },
+              {
+                "w": "book",
+                "t": "kitob",
+                "tr": "книга"
+              },
+              {
+                "w": "after",
+                "t": "keyin",
+                "tr": "после"
+              },
+              {
+                "w": "seen",
+                "t": "ko'rmoq",
+                "tr": "видеть"
+              },
+              {
+                "w": "film",
+                "t": "film",
+                "tr": "фильм"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "By the time Dad came home, I'd gone to bed.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "I went to bed before Dad came home.",
+                  "I went to bed after Dad came home."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "by the time",
+                "t": "vaqtiga kelib",
+                "tr": "к тому времени как"
+              },
+              {
+                "w": "came home",
+                "t": "uyga kelmoq",
+                "tr": "прийти домой"
+              },
+              {
+                "w": "gone to bed",
+                "t": "uxlashga yotmoq",
+                "tr": "лечь спать"
+              },
+              {
+                "w": "before",
+                "t": "oldin",
+                "tr": "до"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She didn't go to bed until her mum had come home.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "She went to bed and then her mum came home.",
+                  "Her mum came home and then she went to bed."
+                ],
+                "correct": 1
+              }
+            ],
+            "words": [
+              {
+                "w": "go to bed",
+                "t": "uxlashga yotmoq",
+                "tr": "лечь спать"
+              },
+              {
+                "w": "until",
+                "t": "-gacha",
+                "tr": "до тех пор пока"
+              },
+              {
+                "w": "mum",
+                "t": "ona",
+                "tr": "мама"
+              },
+              {
+                "w": "come home",
+                "t": "uyga kelmoq",
+                "tr": "прийти домой"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mr Banks hadn't arrived at the office by the time I got there.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "I arrived before Mr Banks.",
+                  "Mr Banks arrived before me."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "arrived",
+                "t": "kelmoq",
+                "tr": "прибыть"
+              },
+              {
+                "w": "office",
+                "t": "ofis",
+                "tr": "офис"
+              },
+              {
+                "w": "by the time",
+                "t": "vaqtiga kelib",
+                "tr": "к тому времени как"
+              },
+              {
+                "w": "got there",
+                "t": "u yerga bormoq",
+                "tr": "добраться туда"
+              },
+              {
+                "w": "before",
+                "t": "oldin",
+                "tr": "до/раньше"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They'd bought the plane tickets before they heard about the cheaper flight.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "They bought the plane tickets and later they heard about the cheaper flight.",
+                  "They heard about the cheaper flight and then they bought the plane tickets."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "plane tickets",
+                "t": "samolyot chiptalari",
+                "tr": "билеты на самолёт"
+              },
+              {
+                "w": "heard",
+                "t": "eshitmoq",
+                "tr": "услышать"
+              },
+              {
+                "w": "cheaper",
+                "t": "arzonroq",
+                "tr": "дешевле"
+              },
+              {
+                "w": "flight",
+                "t": "reys",
+                "tr": "рейс"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The girls had tidied the house when the visitors arrived.\n"
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "The visitors arrived and later the girls tidied the house.",
+                  "The girls tidied the house and then the visitors arrived."
+                ],
+                "correct": 1
+              }
+            ],
+            "words": [
+              {
+                "w": "tidied",
+                "t": "tartibga keltirmoq",
+                "tr": "убрать/прибрать"
+              },
+              {
+                "w": "house",
+                "t": "uy",
+                "tr": "дом"
+              },
+              {
+                "w": "visitors",
+                "t": "mehmonlar",
+                "tr": "гости"
+              },
+              {
+                "w": "arrived",
+                "t": "kelmoq",
+                "tr": "прибыть"
+              }
+            ]
+          }
+        ],
+        "layout": "ab-choice"
+      }
+    },
+    {
+      "id": "u5p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "C",
+      "instruction": "Quyidagi so'zlardan foydalanib gaplar tuzing. Fe'llardan biri Past Perfect Simple da bo'lishi kerak.",
+      "instruction_ru": "Напишите предложения, используя данные слова. Один из глаголов должен быть в Past Perfect Simple.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u5p2-c-1",
+            "parts": [
+              {
+                "type": "hint",
+                "content": "we / just / hear / the news / when / you / ring"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "We had just heard the news when you rang."
+            ],
+            "alternateAnswers": [
+              [
+                "We'd just heard the news when you rang."
+              ]
+            ],
+            "words": [
+              {
+                "w": "just",
+                "t": "hozirgina",
+                "tr": "только что"
+              },
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "слышать"
+              },
+              {
+                "w": "news",
+                "t": "yangilik",
+                "tr": "новость"
+              },
+              {
+                "w": "when",
+                "t": "qachonki",
+                "tr": "когда"
+              },
+              {
+                "w": "ring",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "u5p2-c-2",
+            "parts": [
+              {
+                "type": "hint",
+                "content": "I / already / think / of / that / before / you / suggest / it"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "I had already thought of that before you suggested it."
+            ],
+            "alternateAnswers": [
+              [
+                "I'd already thought of that before you suggested it."
+              ]
+            ],
+            "words": [
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "think of",
+                "t": "o'ylamoq",
+                "tr": "думать о"
+              },
+              {
+                "w": "before",
+                "t": "oldin",
+                "tr": "до"
+              },
+              {
+                "w": "suggest",
+                "t": "taklif qilmoq",
+                "tr": "предложить"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "u5p2-c-3",
+            "parts": [
+              {
+                "type": "hint",
+                "content": "when / I / turn on / the TV / the programme / already / start"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "When I turned on the TV, the programme had already started."
+            ],
+            "alternateAnswers": [
+              [
+                "When I turned on the TV the programme had already started.",
+                "When I turned on the TV, the programme'd already started."
+              ]
+            ],
+            "words": [
+              {
+                "w": "turn on",
+                "t": "yoqmoq",
+                "tr": "включить"
+              },
+              {
+                "w": "TV",
+                "t": "televizor",
+                "tr": "телевизор"
+              },
+              {
+                "w": "programme",
+                "t": "dastur",
+                "tr": "программа"
+              },
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "start",
+                "t": "boshlanmoq",
+                "tr": "начаться"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "u5p2-c-4",
+            "parts": [
+              {
+                "type": "hint",
+                "content": "she / be / hungry / because / she / not / eat / anything / all day"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "She was hungry because she hadn't eaten anything all day."
+            ],
+            "alternateAnswers": [
+              [
+                "She was hungry because she had not eaten anything all day."
+              ]
+            ],
+            "words": [
+              {
+                "w": "hungry",
+                "t": "och",
+                "tr": "голодный"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "eat",
+                "t": "yemoq",
+                "tr": "есть"
+              },
+              {
+                "w": "anything",
+                "t": "hech narsa",
+                "tr": "ничего"
+              },
+              {
+                "w": "all day",
+                "t": "kun bo'yi",
+                "tr": "весь день"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "u5p2-c-5",
+            "parts": [
+              {
+                "type": "hint",
+                "content": "by the time / I / leave / school / I / decide / to become / a musician"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "By the time I left school, I had decided to become a musician."
+            ],
+            "alternateAnswers": [
+              [
+                "By the time I left school I had decided to become a musician.",
+                "By the time I left school, I'd decided to become a musician.",
+                "By the time I left school I'd decided to become a musician."
+              ]
+            ],
+            "words": [
+              {
+                "w": "by the time",
+                "t": "vaqtiga kelib",
+                "tr": "к тому времени как"
+              },
+              {
+                "w": "leave",
+                "t": "tark etmoq",
+                "tr": "покинуть"
+              },
+              {
+                "w": "school",
+                "t": "maktab",
+                "tr": "школа"
+              },
+              {
+                "w": "decide",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "become",
+                "t": "bo'lmoq",
+                "tr": "стать"
+              },
+              {
+                "w": "musician",
+                "t": "musiqachi",
+                "tr": "музыкант"
+              }
+            ],
+            "number": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "u5p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "D",
+      "instruction": "Rasmlarga qarang va gaplarni to'ldiring. Past Perfect Continuous shaklini ishlating.",
+      "instruction_ru": "Посмотрите на картинки и дополните предложения. Используйте форму Past Perfect Continuous.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "images": [
+          {
+            "label": "1",
+            "caption": ""
+          },
+          {
+            "label": "2",
+            "caption": ""
+          },
+          {
+            "label": "3",
+            "caption": ""
+          },
+          {
+            "label": "4",
+            "caption": ""
+          },
+          {
+            "label": "5",
+            "caption": ""
+          },
+          {
+            "label": "6",
+            "caption": ""
+          }
+        ],
+        "cards": [
+          {
+            "id": "u5p2-d-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She was tired because she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "run"
+              }
+            ],
+            "answers": [
+              "had been running"
+            ],
+            "alternateAnswers": [
+              [
+                "'d been running"
+              ]
+            ],
+            "words": [
+              {
+                "w": "tired",
+                "t": "charchagan",
+                "tr": "уставшая"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "run",
+                "t": "yugurmoq",
+                "tr": "бежать"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "u5p2-d-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They were hot because they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "dance"
+              }
+            ],
+            "answers": [
+              "had been dancing"
+            ],
+            "alternateAnswers": [
+              [
+                "'d been dancing"
+              ]
+            ],
+            "words": [
+              {
+                "w": "hot",
+                "t": "issiq",
+                "tr": "жарко"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "dance",
+                "t": "raqsga tushmoq",
+                "tr": "танцевать"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "u5p2-d-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The garden was flooded because "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "it / rain / all night"
+              }
+            ],
+            "answers": [
+              "it had been raining all night"
+            ],
+            "alternateAnswers": [
+              [
+                "it'd been raining all night"
+              ]
+            ],
+            "words": [
+              {
+                "w": "garden",
+                "t": "bog'",
+                "tr": "сад"
+              },
+              {
+                "w": "flooded",
+                "t": "suv bosgan",
+                "tr": "затоплен"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "rain",
+                "t": "yomg'ir yog'moq",
+                "tr": "идти (о дожде)"
+              },
+              {
+                "w": "all night",
+                "t": "tun bo'yi",
+                "tr": "всю ночь"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "u5p2-d-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did they crash because "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "? "
+              },
+              {
+                "type": "hint",
+                "content": "drive / too fast"
+              }
+            ],
+            "answers": [
+              "they had been driving too fast"
+            ],
+            "alternateAnswers": [
+              [
+                "they'd been driving too fast"
+              ]
+            ],
+            "words": [
+              {
+                "w": "crash",
+                "t": "to'qnashmoq",
+                "tr": "врезаться"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "drive",
+                "t": "haydamoq",
+                "tr": "ехать/вести"
+              },
+              {
+                "w": "too fast",
+                "t": "juda tez",
+                "tr": "слишком быстро"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "u5p2-d-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When I arrived, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "they / wait / for over half an hour"
+              }
+            ],
+            "answers": [
+              "they had been waiting for over half an hour"
+            ],
+            "alternateAnswers": [
+              [
+                "they'd been waiting for over half an hour"
+              ]
+            ],
+            "words": [
+              {
+                "w": "arrived",
+                "t": "kelmoq",
+                "tr": "прибыть"
+              },
+              {
+                "w": "wait",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "for over half an hour",
+                "t": "yarim soatdan ko'proq",
+                "tr": "более получаса"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "u5p2-d-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When I got there, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "they / not / wait / long"
+              }
+            ],
+            "answers": [
+              "they hadn't been waiting long"
+            ],
+            "alternateAnswers": [
+              [
+                "they had not been waiting long"
+              ]
+            ],
+            "words": [
+              {
+                "w": "got there",
+                "t": "u yerga yetib bormoq",
+                "tr": "добраться туда"
+              },
+              {
+                "w": "wait",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "long",
+                "t": "uzoq",
+                "tr": "долго"
+              }
+            ],
+            "number": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "u5p3-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "E",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u5p2-e-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'd only "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "done",
+                  "been doing"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the washing-up for a few minutes when Clare came home, so she offered to finish it."
+              }
+            ],
+            "words": [
+              {
+                "w": "washing-up",
+                "t": "idish yuvish",
+                "tr": "мытьё посуды"
+              },
+              {
+                "w": "a few minutes",
+                "t": "bir necha daqiqa",
+                "tr": "несколько минут"
+              },
+              {
+                "w": "came home",
+                "t": "uyga kelmoq",
+                "tr": "прийти домой"
+              },
+              {
+                "w": "offered",
+                "t": "taklif qilmoq",
+                "tr": "предложить"
+              },
+              {
+                "w": "finish",
+                "t": "tugatmoq",
+                "tr": "закончить"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-e-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Had you already "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "given",
+                  "been giving"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " James his birthday present when we gave him ours?"
+              }
+            ],
+            "words": [
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "birthday present",
+                "t": "tug'ilgan kun sovg'asi",
+                "tr": "подарок на день рождения"
+              },
+              {
+                "w": "gave",
+                "t": "bermoq",
+                "tr": "дать"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-e-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Gail hadn't "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "told",
+                  "been telling"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " me that she would help me, so I wasn't angry when she didn't."
+              }
+            ],
+            "words": [
+              {
+                "w": "told",
+                "t": "aytmoq",
+                "tr": "сказать"
+              },
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помочь"
+              },
+              {
+                "w": "angry",
+                "t": "g'azablangan",
+                "tr": "злой"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-e-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mum had "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "drunk",
+                  "been drinking"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " her cup of tea for several minutes before she realised it had salt in it!"
+              }
+            ],
+            "words": [
+              {
+                "w": "cup of tea",
+                "t": "bir piyola choy",
+                "tr": "чашка чая"
+              },
+              {
+                "w": "several minutes",
+                "t": "bir necha daqiqa",
+                "tr": "несколько минут"
+              },
+              {
+                "w": "realised",
+                "t": "tushunmoq",
+                "tr": "осознать"
+              },
+              {
+                "w": "salt",
+                "t": "tuz",
+                "tr": "соль"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-e-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We'd "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "got",
+                  "been getting"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " ready all day when they called to say the party had been cancelled."
+              }
+            ],
+            "words": [
+              {
+                "w": "ready",
+                "t": "tayyor",
+                "tr": "готовый"
+              },
+              {
+                "w": "all day",
+                "t": "kun bo'yi",
+                "tr": "весь день"
+              },
+              {
+                "w": "called",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "cancelled",
+                "t": "bekor qilingan",
+                "tr": "отменена"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              }
+            ]
+          },
+          {
+            "id": "u5p2-e-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It was a fantastic experience because I'd never "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "flown",
+                  "been flying"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " in a plane before."
+              }
+            ],
+            "words": [
+              {
+                "w": "fantastic",
+                "t": "ajoyib",
+                "tr": "фантастический"
+              },
+              {
+                "w": "experience",
+                "t": "tajriba",
+                "tr": "опыт"
+              },
+              {
+                "w": "never",
+                "t": "hech qachon",
+                "tr": "никогда"
+              },
+              {
+                "w": "plane",
+                "t": "samolyot",
+                "tr": "самолёт"
+              },
+              {
+                "w": "before",
+                "t": "oldin",
+                "tr": "раньше"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u5p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "F",
+      "instruction": "Agar satr to'g'ri bo'lsa, (✓) belgisini qo'ying. Agar satrda ortiqcha so'z bo'lsa, uni yozing.",
+      "instruction_ru": "Если строка правильная, поставьте галочку (✓). Если в строке есть лишнее слово, напишите его.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "layout": "passage",
+        "cards": [
+          {
+            "id": "u5p2-f-1",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "This morning my exam results finally had came."
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "words": [
+              {
+                "w": "exam results",
+                "t": "imtihon natijalari",
+                "tr": "результаты экзамена"
+              },
+              {
+                "w": "finally",
+                "t": "nihoyat",
+                "tr": "наконец"
+              },
+              {
+                "w": "came",
+                "t": "kelmoq",
+                "tr": "пришли"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-2",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "I'd been expecting them for the last week. I knew I'd been done quite well, but I was"
+              }
+            ],
+            "answers": [
+              "been"
+            ],
+            "alternateAnswers": [
+              ["I'd done", "i'd done"]
+            ],
+            "words": [
+              {
+                "w": "expecting",
+                "t": "kutmoq",
+                "tr": "ожидать"
+              },
+              {
+                "w": "the last week",
+                "t": "o'tgan hafta",
+                "tr": "прошлая неделя"
+              },
+              {
+                "w": "knew",
+                "t": "bilmoq",
+                "tr": "знать"
+              },
+              {
+                "w": "quite well",
+                "t": "juda yaxshi",
+                "tr": "довольно хорошо"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-3",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "still nervous as I had opened the envelope. Before I'd had a chance to"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "words": [
+              {
+                "w": "nervous",
+                "t": "xavotirli",
+                "tr": "нервный"
+              },
+              {
+                "w": "opened",
+                "t": "ochmoq",
+                "tr": "открыть"
+              },
+              {
+                "w": "envelope",
+                "t": "konvert",
+                "tr": "конверт"
+              },
+              {
+                "w": "chance",
+                "t": "imkoniyat",
+                "tr": "шанс"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-4",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "look at them, my sister ran up and pulled them out of my hand! She"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "correct",
+                "tick"
+              ]
+            ],
+            "words": [
+              {
+                "w": "look at",
+                "t": "qaramoq",
+                "tr": "посмотреть на"
+              },
+              {
+                "w": "sister",
+                "t": "opa/singil",
+                "tr": "сестра"
+              },
+              {
+                "w": "ran up",
+                "t": "yugurib kelmoq",
+                "tr": "подбежать"
+              },
+              {
+                "w": "pulled",
+                "t": "tortmoq",
+                "tr": "вытащить"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-5",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "had read them out one by one. 'English A, maths A, biology A,"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "correct",
+                "tick"
+              ]
+            ],
+            "words": [
+              {
+                "w": "read out",
+                "t": "ovoz chiqarib o'qimoq",
+                "tr": "зачитать вслух"
+              },
+              {
+                "w": "one by one",
+                "t": "birma-bir",
+                "tr": "по одному"
+              },
+              {
+                "w": "maths",
+                "t": "matematika",
+                "tr": "математика"
+              },
+              {
+                "w": "biology",
+                "t": "biologiya",
+                "tr": "биология"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-6",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "French A ...' This was the news I'd been waiting for. I'd got As in"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "correct",
+                "tick"
+              ]
+            ],
+            "words": [
+              {
+                "w": "news",
+                "t": "yangilik",
+                "tr": "новость"
+              },
+              {
+                "w": "waiting for",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "got",
+                "t": "olmoq",
+                "tr": "получить"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-7",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "every subject – even geography, which I hadn't been making sure"
+              }
+            ],
+            "answers": [
+              "been"
+            ],
+            "words": [
+              {
+                "w": "every subject",
+                "t": "har bir fan",
+                "tr": "каждый предмет"
+              },
+              {
+                "w": "even",
+                "t": "hatto",
+                "tr": "даже"
+              },
+              {
+                "w": "geography",
+                "t": "geografiya",
+                "tr": "география"
+              },
+              {
+                "w": "making sure",
+                "t": "ishonch hosil qilmoq",
+                "tr": "убедиться"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-8",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "about! When Mum and Dad heard the news, they immediately started"
+              }
+            ],
+            "answers": [
+              "✓"
+            ],
+            "alternateAnswers": [
+              [
+                "correct",
+                "tick"
+              ]
+            ],
+            "words": [
+              {
+                "w": "heard",
+                "t": "eshitmoq",
+                "tr": "услышать"
+              },
+              {
+                "w": "news",
+                "t": "yangilik",
+                "tr": "новость"
+              },
+              {
+                "w": "immediately",
+                "t": "darhol",
+                "tr": "немедленно"
+              },
+              {
+                "w": "started",
+                "t": "boshlamoq",
+                "tr": "начать"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-9",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "been shouting for joy. By the time I'd had breakfast, Mum had"
+              }
+            ],
+            "answers": [
+              "been"
+            ],
+            "words": [
+              {
+                "w": "shouting",
+                "t": "baqirmoq",
+                "tr": "кричать"
+              },
+              {
+                "w": "for joy",
+                "t": "xursandlikdan",
+                "tr": "от радости"
+              },
+              {
+                "w": "by the time",
+                "t": "-gacha",
+                "tr": "к тому времени как"
+              },
+              {
+                "w": "breakfast",
+                "t": "nonushta",
+                "tr": "завтрак"
+              }
+            ],
+            "number": ""
+          },
+          {
+            "id": "u5p2-f-10",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "already called Grandma and Grandpa and had yet told the neighbours!"
+              }
+            ],
+            "answers": [
+              "yet"
+            ],
+            "words": [
+              {
+                "w": "already",
+                "t": "allaqachon",
+                "tr": "уже"
+              },
+              {
+                "w": "called",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "Grandma",
+                "t": "buvi",
+                "tr": "бабушка"
+              },
+              {
+                "w": "Grandpa",
+                "t": "bobo",
+                "tr": "дедушка"
+              },
+              {
+                "w": "told",
+                "t": "aytmoq",
+                "tr": "рассказать"
+              },
+              {
+                "w": "neighbours",
+                "t": "qo'shnilar",
+                "tr": "соседи"
+              }
+            ],
+            "number": ""
+          }
+        ]
+      }
+    }
+  ]
+}

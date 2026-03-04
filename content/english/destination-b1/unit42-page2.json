@@ -1,0 +1,624 @@
+{
+  "id": "unit42-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u42p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "instruction": "Qutidagi fe'llardan mos keladigan birini topib, gaplarga moslang.",
+      "instruction_ru": "Подберите подходящий глагол из рамки к каждому высказыванию.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "complain",
+          "criticise",
+          "deny",
+          "encourage",
+          "gossip",
+          "insult",
+          "praise",
+          "refuse",
+          "warn"
+        ],
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "1  'I didn't take your jacket!' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "deny"
+            ],
+            "words": [
+              {
+                "w": "jacket",
+                "t": "kurtka",
+                "tr": "куртка"
+              },
+              {
+                "w": "deny",
+                "t": "inkor qilmoq",
+                "tr": "отрицать"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "2  'Well done! You did that really well.' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "praise"
+            ],
+            "words": [
+              {
+                "w": "well done",
+                "t": "barakalla, yaxshi",
+                "tr": "молодец"
+              },
+              {
+                "w": "praise",
+                "t": "maqtamoq",
+                "tr": "хвалить"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "3  'No, I'm not going to help you clean your room.' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "refuse"
+            ],
+            "words": [
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помогать"
+              },
+              {
+                "w": "clean",
+                "t": "tozalamoq",
+                "tr": "убирать"
+              },
+              {
+                "w": "refuse",
+                "t": "rad etmoq",
+                "tr": "отказываться"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "4  'Be careful or you'll cut yourself.' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "warn"
+            ],
+            "words": [
+              {
+                "w": "careful",
+                "t": "ehtiyot bo'lmoq",
+                "tr": "осторожный"
+              },
+              {
+                "w": "cut yourself",
+                "t": "o'zingizni kesib olmoq",
+                "tr": "порезаться"
+              },
+              {
+                "w": "warn",
+                "t": "ogohlantirmoq",
+                "tr": "предупреждать"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "5  'Mum, that's not fair!' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "complain"
+            ],
+            "words": [
+              {
+                "w": "fair",
+                "t": "adolatli, to'g'ri",
+                "tr": "справедливый"
+              },
+              {
+                "w": "complain",
+                "t": "shikoyat qilmoq",
+                "tr": "жаловаться"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "6  'I thought his singing was awful!' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "criticise"
+            ],
+            "words": [
+              {
+                "w": "singing",
+                "t": "qo'shiq aytish",
+                "tr": "пение"
+              },
+              {
+                "w": "awful",
+                "t": "dahshatli, juda yomon",
+                "tr": "ужасный"
+              },
+              {
+                "w": "criticise",
+                "t": "tanqid qilmoq",
+                "tr": "критиковать"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "7  'Did you hear what Becca told Lizzy about Robert?' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "gossip"
+            ],
+            "words": [
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "слышать"
+              },
+              {
+                "w": "gossip",
+                "t": "g'iybat qilmoq",
+                "tr": "сплетничать"
+              }
+            ]
+          },
+          {
+            "id": "card8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "8  'Go on! You can do it! I know you can!' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "encourage"
+            ],
+            "words": [
+              {
+                "w": "go on",
+                "t": "davom eting",
+                "tr": "давай"
+              },
+              {
+                "w": "encourage",
+                "t": "rag'batlantirmoq",
+                "tr": "поощрять"
+              }
+            ]
+          },
+          {
+            "id": "card9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "9  'You stupid lazy idiot!' – "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "insult"
+            ],
+            "words": [
+              {
+                "w": "stupid",
+                "t": "ahmoq, tentak",
+                "tr": "тупой"
+              },
+              {
+                "w": "lazy",
+                "t": "dangasa",
+                "tr": "ленивый"
+              },
+              {
+                "w": "idiot",
+                "t": "ahmoq",
+                "tr": "идиот"
+              },
+              {
+                "w": "insult",
+                "t": "haqorat qilmoq",
+                "tr": "оскорблять"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u42p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "instruction": "To'g'ri so'zni tanlang.",
+      "instruction_ru": "Обведите правильное слово.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "pretend",
+                  "claim"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to be asleep. I know you're awake really!"
+              }
+            ],
+            "words": [
+              {
+                "w": "pretend",
+                "t": "bahona qilmoq, ko'rsatib qo'ymoq",
+                "tr": "притворяться"
+              },
+              {
+                "w": "awake",
+                "t": "uyg'oq",
+                "tr": "проснувшийся"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've been trying to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "doubt",
+                  "convince"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " Kathy that Jacob isn't a liar, but she doesn't believe me."
+              }
+            ],
+            "words": [
+              {
+                "w": "convince",
+                "t": "ishontirmoq, ko'ndirmoq",
+                "tr": "убеждать"
+              },
+              {
+                "w": "liar",
+                "t": "yolg'onchi",
+                "tr": "лжец"
+              },
+              {
+                "w": "believe",
+                "t": "ishonmoq",
+                "tr": "верить"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Police are investigating the "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "cause",
+                  "purpose"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " of the accident."
+              }
+            ],
+            "words": [
+              {
+                "w": "police",
+                "t": "politsiya",
+                "tr": "полиция"
+              },
+              {
+                "w": "investigating",
+                "t": "tekshirayapti",
+                "tr": "расследует"
+              },
+              {
+                "w": "cause",
+                "t": "sabab",
+                "tr": "причина"
+              },
+              {
+                "w": "accident",
+                "t": "baxtsiz hodisa",
+                "tr": "несчастный случай"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've just had a "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "thought",
+                  "theory"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": ". Why don't we have the party at your place?"
+              }
+            ],
+            "words": [
+              {
+                "w": "thought",
+                "t": "fikr, o'y",
+                "tr": "мысль, идея"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat, bayram",
+                "tr": "вечеринка"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There's a "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "discussion",
+                  "rumour"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " going round the school that Mrs Tibbs is leaving at the end of term. I wonder if it's true."
+              }
+            ],
+            "words": [
+              {
+                "w": "rumour",
+                "t": "mish-mish, gap-so'z",
+                "tr": "слух, молва"
+              },
+              {
+                "w": "going round",
+                "t": "tarqalmoq",
+                "tr": "ходить, распространяться"
+              },
+              {
+                "w": "leaving",
+                "t": "ketmoq",
+                "tr": "уходить"
+              },
+              {
+                "w": "end of term",
+                "t": "semestr oxiri",
+                "tr": "конец семестра"
+              },
+              {
+                "w": "wonder",
+                "t": "qiziqmoq",
+                "tr": "интересоваться"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm going to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "get",
+                  "become"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " rid of these shoes. They're really old."
+              }
+            ],
+            "words": [
+              {
+                "w": "get rid of",
+                "t": "xalos bo'lmoq",
+                "tr": "избавиться от"
+              },
+              {
+                "w": "shoes",
+                "t": "poyabzal",
+                "tr": "туфли, обувь"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "result",
+                  "accident"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " of the experiment wasn't what I'd expected at all."
+              }
+            ],
+            "words": [
+              {
+                "w": "result",
+                "t": "natija",
+                "tr": "результат"
+              },
+              {
+                "w": "experiment",
+                "t": "tajriba, eksperiment",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "expected",
+                "t": "kutgandim",
+                "tr": "ожидал"
+              }
+            ]
+          },
+          {
+            "id": "card8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The detective "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "assumed",
+                  "investigated"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " that the burglar had got in through an open window."
+              }
+            ],
+            "words": [
+              {
+                "w": "detective",
+                "t": "detektiv, tergovchi",
+                "tr": "детектив"
+              },
+              {
+                "w": "investigated",
+                "t": "tekshirdi",
+                "tr": "расследовал"
+              },
+              {
+                "w": "burglar",
+                "t": "o'g'ri, buzg'unchi",
+                "tr": "взломщик"
+              },
+              {
+                "w": "open window",
+                "t": "ochiq darcha",
+                "tr": "открытое окно"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

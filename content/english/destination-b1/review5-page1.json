@@ -1,0 +1,1781 @@
+{
+  "id": "review5-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 5,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 13, 14 and 15",
+    "titleTranslation_ru": "Units 13, 14 and 15"
+  },
+  "sections": [
+    {
+      "id": "r5p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте по одному слову в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r5-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "One of (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " websites that has been very successful in recent years is eBay."
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "one of",
+                "t": "dan biri",
+                "tr": "один из"
+              },
+              {
+                "w": "websites",
+                "t": "veb-saytlar",
+                "tr": "веб-сайты"
+              },
+              {
+                "w": "successful",
+                "t": "muvaffaqiyatli",
+                "tr": "успешный"
+              },
+              {
+                "w": "in recent years",
+                "t": "so'nggi yillarda",
+                "tr": "в последние годы"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r5-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "On eBay, people take things that belong (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " them and offer them for sale."
+              }
+            ],
+            "answers": [
+              "to"
+            ],
+            "words": [
+              {
+                "w": "belong to",
+                "t": "tegishli bo'lmoq",
+                "tr": "принадлежать"
+              },
+              {
+                "w": "offer for sale",
+                "t": "sotishga taklif etmoq",
+                "tr": "предлагать на продажу"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r5-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Other people offer (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " amount of money, and (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " person who offers the most money wins the item."
+              }
+            ],
+            "answers": [
+              "an",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "offer",
+                "t": "taklif qilmoq",
+                "tr": "предлагать"
+              },
+              {
+                "w": "amount of money",
+                "t": "pul miqdori",
+                "tr": "сумма денег"
+              },
+              {
+                "w": "wins",
+                "t": "yutmoq",
+                "tr": "выиграть"
+              },
+              {
+                "w": "item",
+                "t": "narsa/tovar",
+                "tr": "товар"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r5-a-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They then pay (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the item (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cheque or credit card."
+              }
+            ],
+            "answers": [
+              "for",
+              "by"
+            ],
+            "words": [
+              {
+                "w": "pay for",
+                "t": "to'lamoq",
+                "tr": "платить за"
+              },
+              {
+                "w": "by cheque",
+                "t": "chek orqali",
+                "tr": "чеком"
+              },
+              {
+                "w": "credit card",
+                "t": "kredit karta",
+                "tr": "кредитная карта"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r5-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " simple idea, but it's become a very popular way of buying and selling."
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "simple idea",
+                "t": "oddiy g'oya",
+                "tr": "простая идея"
+              },
+              {
+                "w": "become",
+                "t": "bo'lmoq",
+                "tr": "стать"
+              },
+              {
+                "w": "popular",
+                "t": "mashhur",
+                "tr": "популярный"
+              },
+              {
+                "w": "buying and selling",
+                "t": "oldi-sotdi",
+                "tr": "купля-продажа"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r5-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Even if you only have a (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " amount of money, you can often find something you want on eBay."
+              }
+            ],
+            "answers": [
+              "small"
+            ],
+            "alternateAnswers": [
+              [
+                "little"
+              ]
+            ],
+            "words": [
+              {
+                "w": "even if",
+                "t": "hatto agar ham",
+                "tr": "даже если"
+              },
+              {
+                "w": "only",
+                "t": "faqat",
+                "tr": "только"
+              },
+              {
+                "w": "a small amount",
+                "t": "kichik miqdor",
+                "tr": "небольшая сумма"
+              },
+              {
+                "w": "often",
+                "t": "ko'pincha",
+                "tr": "часто"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r5-a-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Most of the items are (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " good condition, and eBay has a (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of happy users."
+              }
+            ],
+            "answers": [
+              "in",
+              "lot"
+            ],
+            "alternateAnswers": [
+              null,
+              [
+                "millions"
+              ]
+            ],
+            "words": [
+              {
+                "w": "most of",
+                "t": "ko'pchilik",
+                "tr": "большинство"
+              },
+              {
+                "w": "in good condition",
+                "t": "yaxshi holatda",
+                "tr": "в хорошем состоянии"
+              },
+              {
+                "w": "a lot of",
+                "t": "ko'p",
+                "tr": "много"
+              },
+              {
+                "w": "happy users",
+                "t": "mamnun foydalanuvchilar",
+                "tr": "довольные пользователи"
+              }
+            ],
+            "number": 7
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r5p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Zarur bo'lganda bosh harflar bilan berilgan so'zning shaklini o'zgartirib, bo'sh joyga yozing.",
+      "instruction_ru": "Измените форму слова, данного заглавными буквами, если необходимо, и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r5-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've made my "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". I'm going to buy the blue one. "
+              },
+              {
+                "type": "hint",
+                "content": "DECIDE"
+              }
+            ],
+            "answers": [
+              "decision"
+            ],
+            "words": [
+              {
+                "w": "made my decision",
+                "t": "qaror qildim",
+                "tr": "принял решение"
+              },
+              {
+                "w": "going to buy",
+                "t": "sotib olmoqchi",
+                "tr": "собираюсь купить"
+              }
+            ],
+            "number": 8
+          },
+          {
+            "id": "r5-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This dress is wonderful – but it's a little too "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for me. "
+              },
+              {
+                "type": "hint",
+                "content": "EXPENSE"
+              }
+            ],
+            "answers": [
+              "expensive"
+            ],
+            "words": [
+              {
+                "w": "dress",
+                "t": "ko'ylak",
+                "tr": "платье"
+              },
+              {
+                "w": "wonderful",
+                "t": "ajoyib",
+                "tr": "замечательный"
+              },
+              {
+                "w": "a little too",
+                "t": "biroz haddan tashqari",
+                "tr": "немного слишком"
+              },
+              {
+                "w": "expensive",
+                "t": "qimmat",
+                "tr": "дорогой"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r5-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've broken my new CD player and now it's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! "
+              },
+              {
+                "type": "hint",
+                "content": "USE"
+              }
+            ],
+            "answers": [
+              "useless"
+            ],
+            "words": [
+              {
+                "w": "broken",
+                "t": "sindirmoq",
+                "tr": "сломать"
+              },
+              {
+                "w": "CD player",
+                "t": "CD pleyer",
+                "tr": "CD-плеер"
+              },
+              {
+                "w": "useless",
+                "t": "befoyda",
+                "tr": "бесполезный"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r5-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "In the past, rich people often had "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to do everything for them. "
+              },
+              {
+                "type": "hint",
+                "content": "SERVE"
+              }
+            ],
+            "answers": [
+              "servants"
+            ],
+            "words": [
+              {
+                "w": "in the past",
+                "t": "o'tmishda",
+                "tr": "в прошлом"
+              },
+              {
+                "w": "rich people",
+                "t": "boy odamlar",
+                "tr": "богатые люди"
+              },
+              {
+                "w": "often",
+                "t": "ko'pincha",
+                "tr": "часто"
+              },
+              {
+                "w": "servants",
+                "t": "xizmatkorlar",
+                "tr": "слуги"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r5-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We offer top quality products at "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " prices! "
+              },
+              {
+                "type": "hint",
+                "content": "AFFORD"
+              }
+            ],
+            "answers": [
+              "affordable"
+            ],
+            "words": [
+              {
+                "w": "offer",
+                "t": "taklif qilmoq",
+                "tr": "предлагать"
+              },
+              {
+                "w": "top quality",
+                "t": "yuqori sifatli",
+                "tr": "высококачественный"
+              },
+              {
+                "w": "products",
+                "t": "mahsulotlar",
+                "tr": "продукты"
+              },
+              {
+                "w": "affordable",
+                "t": "arzon",
+                "tr": "доступный по цене"
+              },
+              {
+                "w": "prices",
+                "t": "narxlar",
+                "tr": "цены"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r5-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The advert was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", so I complained to the manager. "
+              },
+              {
+                "type": "hint",
+                "content": "TRUE"
+              }
+            ],
+            "answers": [
+              "untrue"
+            ],
+            "alternateAnswers": [
+              [
+                "misleading",
+                "false"
+              ]
+            ],
+            "words": [
+              {
+                "w": "advert",
+                "t": "reklama",
+                "tr": "реклама"
+              },
+              {
+                "w": "untrue",
+                "t": "yolg'on",
+                "tr": "неправдивый"
+              },
+              {
+                "w": "complained",
+                "t": "shikoyat qilmoq",
+                "tr": "пожаловаться"
+              },
+              {
+                "w": "manager",
+                "t": "menejer",
+                "tr": "менеджер"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r5-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Please be careful with that painting – it's extremely "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "VALUE"
+              }
+            ],
+            "answers": [
+              "valuable"
+            ],
+            "words": [
+              {
+                "w": "be careful with",
+                "t": "ehtiyot bo'lmoq",
+                "tr": "быть осторожным с"
+              },
+              {
+                "w": "painting",
+                "t": "rasm",
+                "tr": "картина"
+              },
+              {
+                "w": "extremely",
+                "t": "juda",
+                "tr": "крайне"
+              },
+              {
+                "w": "valuable",
+                "t": "qimmatli",
+                "tr": "ценный"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r5-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " our prices with other shops, we're the cheapest! "
+              },
+              {
+                "type": "hint",
+                "content": "COMPARE"
+              }
+            ],
+            "answers": [
+              "compare"
+            ],
+            "words": [
+              {
+                "w": "compare",
+                "t": "taqqoslash",
+                "tr": "сравнивать"
+              },
+              {
+                "w": "prices",
+                "t": "narxlar",
+                "tr": "цены"
+              },
+              {
+                "w": "cheapest",
+                "t": "eng arzon",
+                "tr": "самый дешёвый"
+              }
+            ],
+            "number": 15
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r5p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r5-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you lend some money to me until the weekend? "
+              },
+              {
+                "type": "hint",
+                "content": "from"
+              },
+              {
+                "type": "text",
+                "content": "\nCould I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you until the weekend?"
+              }
+            ],
+            "answers": [
+              "borrow some money from"
+            ],
+            "alternateAnswers": [
+              [
+                "borrow money from"
+              ]
+            ],
+            "words": [
+              {
+                "w": "lend",
+                "t": "qarz bermoq",
+                "tr": "одолжить"
+              },
+              {
+                "w": "borrow from",
+                "t": "qarz olmoq",
+                "tr": "занять у"
+              },
+              {
+                "w": "until the weekend",
+                "t": "hafta oxirigacha",
+                "tr": "до выходных"
+              }
+            ],
+            "number": 16
+          },
+          {
+            "id": "r5-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I can't decide which shoes I like most, the blue ones or the green ones. "
+              },
+              {
+                "type": "hint",
+                "content": "choose"
+              },
+              {
+                "type": "text",
+                "content": "\nI can't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the blue shoes and the green ones."
+              }
+            ],
+            "answers": [
+              "choose between"
+            ],
+            "words": [
+              {
+                "w": "decide",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "choose between",
+                "t": "orasida tanlash",
+                "tr": "выбирать между"
+              },
+              {
+                "w": "like most",
+                "t": "ko'proq yoqtirmoq",
+                "tr": "нравится больше всего"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r5-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why don't you return the sweater to the shop you got it from? "
+              },
+              {
+                "type": "hint",
+                "content": "back"
+              },
+              {
+                "type": "text",
+                "content": "\nWhy don't you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the shop you got it from?"
+              }
+            ],
+            "answers": [
+              "take the sweater back"
+            ],
+            "alternateAnswers": [
+              [
+                "take it back"
+              ]
+            ],
+            "words": [
+              {
+                "w": "return",
+                "t": "qaytarmoq",
+                "tr": "вернуть"
+              },
+              {
+                "w": "sweater",
+                "t": "sviter",
+                "tr": "свитер"
+              },
+              {
+                "w": "take back",
+                "t": "qaytarib olib bormoq",
+                "tr": "отнести обратно"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r5-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It can be very worrying when you owe money to the bank. "
+              },
+              {
+                "type": "hint",
+                "content": "debt"
+              },
+              {
+                "type": "text",
+                "content": "\nIt can be very worrying when you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the bank."
+              }
+            ],
+            "answers": [
+              "are in debt"
+            ],
+            "alternateAnswers": [
+              [
+                "owe a debt"
+              ]
+            ],
+            "words": [
+              {
+                "w": "worrying",
+                "t": "tashvishli",
+                "tr": "беспокоящий"
+              },
+              {
+                "w": "owe money",
+                "t": "qarz bo'lmoq",
+                "tr": "быть должным деньги"
+              },
+              {
+                "w": "in debt",
+                "t": "qarzda",
+                "tr": "в долгу"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r5-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We need to go quickly or the shops will be closed. "
+              },
+              {
+                "type": "hint",
+                "content": "up"
+              },
+              {
+                "type": "text",
+                "content": "\nWe need to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " or the shops will be closed."
+              }
+            ],
+            "answers": [
+              "hurry up"
+            ],
+            "words": [
+              {
+                "w": "go quickly",
+                "t": "tez bormoq",
+                "tr": "идти быстро"
+              },
+              {
+                "w": "hurry up",
+                "t": "shoshilmoq",
+                "tr": "поторопиться"
+              },
+              {
+                "w": "shops will be closed",
+                "t": "do'konlar yopiladi",
+                "tr": "магазины закроются"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r5-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I paid for the CD using notes and coins and then left the shop. "
+              },
+              {
+                "type": "hint",
+                "content": "cash"
+              },
+              {
+                "type": "text",
+                "content": "\nI paid for the CD "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and then left the shop."
+              }
+            ],
+            "answers": [
+              "in cash"
+            ],
+            "words": [
+              {
+                "w": "paid for",
+                "t": "to'lamoq",
+                "tr": "платить за"
+              },
+              {
+                "w": "using notes and coins",
+                "t": "qog'oz pul va tangalar bilan",
+                "tr": "купюрами и монетами"
+              },
+              {
+                "w": "in cash",
+                "t": "naqd pul bilan",
+                "tr": "наличными"
+              },
+              {
+                "w": "left the shop",
+                "t": "do'kondan chiqmoq",
+                "tr": "ушёл из магазина"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r5-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't agree with your opinion of the new shopping centre. "
+              },
+              {
+                "type": "hint",
+                "content": "wrong"
+              },
+              {
+                "type": "text",
+                "content": "\nI think you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the new shopping centre."
+              }
+            ],
+            "answers": [
+              "are wrong about"
+            ],
+            "words": [
+              {
+                "w": "don't agree with",
+                "t": "rozi emas",
+                "tr": "не соглашаться с"
+              },
+              {
+                "w": "opinion",
+                "t": "fikr",
+                "tr": "мнение"
+              },
+              {
+                "w": "shopping centre",
+                "t": "savdo markazi",
+                "tr": "торговый центр"
+              },
+              {
+                "w": "wrong about",
+                "t": "noto'g'ri fikrda",
+                "tr": "не правы насчёт"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r5-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do they rent cars here? "
+              },
+              {
+                "type": "hint",
+                "content": "rent"
+              },
+              {
+                "type": "text",
+                "content": "\nDo they have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " here?"
+              }
+            ],
+            "answers": [
+              "cars for rent"
+            ],
+            "alternateAnswers": [
+              [
+                "cars to rent"
+              ]
+            ],
+            "words": [
+              {
+                "w": "rent",
+                "t": "ijaraga olmoq",
+                "tr": "арендовать"
+              },
+              {
+                "w": "cars for rent",
+                "t": "ijaraga beriladigan mashinalar",
+                "tr": "машины напрокат"
+              }
+            ],
+            "number": 23
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r5p2-sec-exD",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "card1",
+            "number": 24,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I heard there's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " new sports shop in town. Let's see what they have."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "a",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "the",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "an",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "one",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card2",
+            "number": 25,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " money, so I'll have to wait to get a new coat."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "a piece of",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "a few",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "much",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "many",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card3",
+            "number": 26,
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's going to be very expensive to send a person to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "a Mars",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "one Mars",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "the Mars",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "Mars",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card4",
+            "number": 27,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't know much about computers, so I asked the assistant for "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " advice."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "a lot",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "many",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "a few",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "a little",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card5",
+            "number": 28,
+            "parts": [
+              {
+                "type": "text",
+                "content": "In my experience, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " are very friendly."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "Chinese",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "a Chinese",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "the Chinese",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "this Chinese",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card6",
+            "number": 29,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dad has to go to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " early tomorrow to meet an important customer."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "work",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "the work",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "a work",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "that work",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "card7",
+            "number": 30,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Which is more important – money or "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "environment",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "the environment",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "an environment",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "one environment",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card8",
+            "number": 31,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Apparently, it's the largest computer store in "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "a Europe",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "an Europe",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "the Europe",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "Europe",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r5p2-sec-exE",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "card1",
+            "number": 32,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Let me just add "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " what I'm buying to see if I've got enough money."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "up",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "over",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "in",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card2",
+            "number": 33,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Bob "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a lot of money in his brother's business and made a profit."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "spent",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "invested",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "saved",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "owed",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card3",
+            "number": 34,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm saving all my pocket money "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to buy a new PlayStation."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "out",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "down",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "up",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "away",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card4",
+            "number": 35,
+            "parts": [
+              {
+                "type": "text",
+                "content": "The old man took the book "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " from the shelf and looked at the price."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "up",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "down",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "out",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "back",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card5",
+            "number": 36,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I couldn't sell my old magazines, so I gave them "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "over",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "off",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "up",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "away",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card6",
+            "number": 37,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I gave the waiter a €50 note and waited for my "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "change",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "supply",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "cash",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "cost",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "card7",
+            "number": 38,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Home Lovers have got lots of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in their sale this year."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "debts",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "fortunes",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "bargains",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "fees",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card8",
+            "number": 39,
+            "parts": [
+              {
+                "type": "text",
+                "content": "I usually spend any money I have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " sweets and video games."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "for",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

@@ -42,7 +42,19 @@ const grammarItems = [
   { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', color: '#7c3aed', active: true },
   { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', color: '#0891b2', active: true },
   { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', color: '#d97706', active: true },
-  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', color: '#059669', active: false },
+  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', color: '#059669', active: true },
+  { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', color: '#0891b2', active: true },
+  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', color: '#7c3aed', active: true },
+  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', color: '#7c3aed', active: true },
+  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', color: '#059669', active: true },
+  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', color: '#2563eb', active: true },
+  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', color: '#7c3aed', active: true },
+  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', color: '#e11d48', active: true },
+  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', color: '#dc2626', active: true },
+  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', color: '#dc2626', active: true },
+  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', color: '#dc2626', active: true },
+  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', color: '#dc2626', active: true },
+  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', color: '#dc2626', active: true },
 ];
 
 const karaokeItems = [

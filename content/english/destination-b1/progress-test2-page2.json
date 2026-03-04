@@ -1,0 +1,316 @@
+{
+  "id": "progress-test2-page2",
+  "pageNumber": 2,
+  "lessonHeader": {
+    "lessonNumber": 2,
+    "pinyin": "",
+    "title": "Progress Test",
+    "titleTranslation": "Units 22-42",
+    "titleTranslation_ru": "Units 22-42"
+  },
+  "sections": [
+    {
+      "id": "pt2p2-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "C",
+      "subheading_uz": "C",
+      "subheading_ru": "C",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card19",
+            "parts": [
+              { "type": "text", "content": "Henry was three when he first performed in public. " },
+              { "type": "hint", "content": "age" },
+              { "type": "text", "content": "\nHenry first performed in public " },
+              { "type": "blank" },
+              { "type": "text", "content": " three." }
+            ],
+            "answers": ["at the age of"],
+            "words": [
+              { "w": "performed in public", "t": "ommaviy chiqish qilmoq", "tr": "выступать публично" },
+              { "w": "at the age of", "t": "yoshida", "tr": "в возрасте" }
+            ]
+          },
+          {
+            "id": "card20",
+            "parts": [
+              { "type": "text", "content": "Why don't you start a youth club? " },
+              { "type": "hint", "content": "set" },
+              { "type": "text", "content": "\nYou should " },
+              { "type": "blank" },
+              { "type": "text", "content": " a youth club." }
+            ],
+            "answers": ["set up"],
+            "words": [
+              { "w": "youth club", "t": "yoshlar klubi", "tr": "молодёжный клуб" },
+              { "w": "set up", "t": "tashkil etmoq", "tr": "основать" }
+            ]
+          },
+          {
+            "id": "card21",
+            "parts": [
+              { "type": "text", "content": "How long did it take you to recover from your illness? " },
+              { "type": "hint", "content": "over" },
+              { "type": "text", "content": "\nHow long did it take you to " },
+              { "type": "blank" },
+              { "type": "text", "content": " your illness?" }
+            ],
+            "answers": ["get over"],
+            "words": [
+              { "w": "recover from", "t": "tuzalmoq", "tr": "выздороветь от" },
+              { "w": "illness", "t": "kasallik", "tr": "болезнь" },
+              { "w": "get over", "t": "tuzalib ketmoq", "tr": "оправиться от" }
+            ]
+          },
+          {
+            "id": "card22",
+            "parts": [
+              { "type": "text", "content": "Are you helping to organise the celebrations? " },
+              { "type": "hint", "content": "involved" },
+              { "type": "text", "content": "\nAre you " },
+              { "type": "blank" },
+              { "type": "text", "content": " the celebrations?" }
+            ],
+            "answers": ["involved in organising"],
+            "alternateAnswers": [["involved in organizing"]],
+            "words": [
+              { "w": "organise", "t": "tashkil etmoq", "tr": "организовывать" },
+              { "w": "celebrations", "t": "bayram tadbirlari", "tr": "торжества" },
+              { "w": "involved in", "t": "ishtirokchi bo'lmoq", "tr": "участвовать в" }
+            ]
+          },
+          {
+            "id": "card23",
+            "parts": [
+              { "type": "text", "content": "We don't have enough time. " },
+              { "type": "hint", "content": "short" },
+              { "type": "text", "content": "\nWe " },
+              { "type": "blank" },
+              { "type": "text", "content": " time." }
+            ],
+            "answers": ["are short of"],
+            "words": [
+              { "w": "enough time", "t": "yetarli vaqt", "tr": "достаточно времени" },
+              { "w": "short of", "t": "yetishmaydigan", "tr": "не хватать" }
+            ]
+          },
+          {
+            "id": "card24",
+            "parts": [
+              { "type": "text", "content": "She carried on playing despite her injury. " },
+              { "type": "hint", "content": "spite" },
+              { "type": "text", "content": "\nShe carried on playing " },
+              { "type": "blank" },
+              { "type": "text", "content": " her injury." }
+            ],
+            "answers": ["in spite of"],
+            "words": [
+              { "w": "carried on playing", "t": "o'ynashni davom ettirdi", "tr": "продолжила играть" },
+              { "w": "despite", "t": "qaramay", "tr": "несмотря на" },
+              { "w": "injury", "t": "shikast", "tr": "травма" },
+              { "w": "in spite of", "t": "qaramay", "tr": "несмотря на" }
+            ]
+          },
+          {
+            "id": "card25",
+            "parts": [
+              { "type": "text", "content": "They haven't got any bread at the supermarket. " },
+              { "type": "hint", "content": "run" },
+              { "type": "text", "content": "\nThey " },
+              { "type": "blank" },
+              { "type": "text", "content": " bread at the supermarket." }
+            ],
+            "answers": ["have run out of"],
+            "words": [
+              { "w": "haven't got any", "t": "yo'q", "tr": "нет" },
+              { "w": "supermarket", "t": "supermarket", "tr": "супермаркет" },
+              { "w": "run out of", "t": "tugab ketmoq", "tr": "закончиться" }
+            ]
+          },
+          {
+            "id": "card26",
+            "parts": [
+              { "type": "text", "content": "It's illegal to take a gun onto a plane in most countries. " },
+              { "type": "hint", "content": "against" },
+              { "type": "text", "content": "\nTaking a gun onto a plane " },
+              { "type": "blank" },
+              { "type": "text", "content": " in most countries." }
+            ],
+            "answers": ["is against the law"],
+            "words": [
+              { "w": "illegal", "t": "qonunga xilof", "tr": "незаконно" },
+              { "w": "gun", "t": "qurol", "tr": "оружие" },
+              { "w": "against the law", "t": "qonunga zid", "tr": "против закона" }
+            ]
+          },
+          {
+            "id": "card27",
+            "parts": [
+              { "type": "text", "content": "We had to cancel the meeting because Paul was ill. " },
+              { "type": "hint", "content": "called" },
+              { "type": "text", "content": "\nThe meeting had to " },
+              { "type": "blank" },
+              { "type": "text", "content": " because Paul was ill." }
+            ],
+            "answers": ["be called off"],
+            "words": [
+              { "w": "cancel", "t": "bekor qilmoq", "tr": "отменить" },
+              { "w": "meeting", "t": "yig'ilish", "tr": "встреча" },
+              { "w": "call off", "t": "bekor qilmoq", "tr": "отменить" }
+            ]
+          },
+          {
+            "id": "card28",
+            "parts": [
+              { "type": "text", "content": "Spiders don't frighten me. " },
+              { "type": "hint", "content": "afraid" },
+              { "type": "text", "content": "\nI " },
+              { "type": "blank" },
+              { "type": "text", "content": " spiders!" }
+            ],
+            "answers": ["am not afraid of"],
+            "alternateAnswers": [["'m not afraid of"]],
+            "words": [
+              { "w": "frighten", "t": "qo'rqitmoq", "tr": "пугать" },
+              { "w": "spiders", "t": "o'rgimchaklar", "tr": "пауки" },
+              { "w": "afraid of", "t": "dan qo'rqmoq", "tr": "бояться" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt2p2-sec-exD",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "D",
+      "subheading_uz": "D",
+      "subheading_ru": "D",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan, bo'sh joyga to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте от слова, данного заглавными буквами в конце строки, нужную форму и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card29",
+            "parts": [
+              { "type": "text", "content": "Were you (29) " },
+              { "type": "blank" },
+              { "type": "text", "content": " enough to be invited to the opening of the Winchester Art Gallery last Thursday evening? " },
+              { "type": "hint", "content": "LUCK" }
+            ],
+            "answers": ["lucky"],
+            "words": [
+              { "w": "lucky", "t": "omadli", "tr": "удачливый" },
+              { "w": "invited", "t": "taklif qilingan", "tr": "приглашённый" },
+              { "w": "opening", "t": "ochilish", "tr": "открытие" },
+              { "w": "Art Gallery", "t": "san'at galereyasi", "tr": "художественная галерея" }
+            ]
+          },
+          {
+            "id": "card30",
+            "parts": [
+              { "type": "text", "content": "I was, and therefore had the pleasure of seeing the new (30) " },
+              { "type": "blank" },
+              { "type": "text", "content": " of Daniella Warner's paintings. " },
+              { "type": "hint", "content": "EXHIBIT" }
+            ],
+            "answers": ["exhibition"],
+            "words": [
+              { "w": "exhibition", "t": "ko'rgazma", "tr": "выставка" },
+              { "w": "pleasure", "t": "mamnuniyat", "tr": "удовольствие" },
+              { "w": "paintings", "t": "rasmlar", "tr": "картины" }
+            ]
+          },
+          {
+            "id": "card31",
+            "parts": [
+              { "type": "text", "content": "Daniella Warner is not (31) " },
+              { "type": "blank" },
+              { "type": "text", "content": " yet – but she's clearly an (32) " },
+              { "type": "blank" },
+              { "type": "text", "content": " who has a very bright future. " },
+              { "type": "hint", "content": "FAME / IMAGINE" }
+            ],
+            "answers": ["famous", "imaginative"],
+            "words": [
+              { "w": "famous", "t": "mashhur", "tr": "знаменитый" },
+              { "w": "imaginative", "t": "ijodkor", "tr": "творческий" },
+              { "w": "bright future", "t": "porloq kelajak", "tr": "светлое будущее" }
+            ]
+          },
+          {
+            "id": "card33",
+            "parts": [
+              { "type": "text", "content": "All Daniella Warner's paintings – without (33) " },
+              { "type": "blank" },
+              { "type": "text", "content": " – are " },
+              { "type": "hint", "content": "EXCEPT" }
+            ],
+            "answers": ["exception"],
+            "words": [
+              { "w": "without exception", "t": "istisnoisiz", "tr": "без исключения" }
+            ]
+          },
+          {
+            "id": "card34",
+            "parts": [
+              { "type": "text", "content": "(34) " },
+              { "type": "blank" },
+              { "type": "text", "content": ". She very often paints areas of outstanding " },
+              { "type": "hint", "content": "NATURE" }
+            ],
+            "answers": ["natural"],
+            "words": [
+              { "w": "natural", "t": "tabiiy", "tr": "природный" },
+              { "w": "outstanding", "t": "ajoyib", "tr": "выдающийся" }
+            ]
+          },
+          {
+            "id": "card35",
+            "parts": [
+              { "type": "text", "content": "(35) " },
+              { "type": "blank" },
+              { "type": "text", "content": " beauty, such as lakes and forests, but she makes them (36) " },
+              { "type": "blank" },
+              { "type": "text", "content": ", lively places. " },
+              { "type": "hint", "content": "EXCITE" }
+            ],
+            "answers": ["exciting"],
+            "words": [
+              { "w": "beauty", "t": "go'zallik", "tr": "красота" },
+              { "w": "lakes", "t": "ko'llar", "tr": "озёра" },
+              { "w": "forests", "t": "o'rmonlar", "tr": "леса" },
+              { "w": "exciting", "t": "hayajonli", "tr": "захватывающий" },
+              { "w": "lively", "t": "jonli", "tr": "живой" }
+            ]
+          },
+          {
+            "id": "card37",
+            "parts": [
+              { "type": "text", "content": "Her paintings often focus on the subjects of (37) " },
+              { "type": "blank" },
+              { "type": "text", "content": " and peace. It's certainly not easy to be a (38) " },
+              { "type": "blank" },
+              { "type": "text", "content": " artist these days, but if anyone deserves it, Daniella Warner does. " },
+              { "type": "hint", "content": "FREE / SUCCESS" }
+            ],
+            "answers": ["freedom", "successful"],
+            "words": [
+              { "w": "focus on", "t": "e'tibor qaratmoq", "tr": "сосредоточиться на" },
+              { "w": "peace", "t": "tinchlik", "tr": "мир" },
+              { "w": "freedom", "t": "ozodlik", "tr": "свобода" },
+              { "w": "successful", "t": "muvaffaqiyatli", "tr": "успешный" },
+              { "w": "deserves", "t": "layoqatli", "tr": "заслуживает" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

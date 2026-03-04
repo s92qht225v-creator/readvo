@@ -1,0 +1,551 @@
+{
+  "id": "unit32-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u32p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Rasmlarga qarang va gaplarni to'ldiring.",
+      "instruction_ru": "Посмотрите на картинки и дополните предложения.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u32p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My mum told "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "me to tidy my room"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "tidy",
+                "t": "yig'ishtirmoq",
+                "tr": "убирать"
+              },
+              {
+                "w": "room",
+                "t": "xona",
+                "tr": "комната"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "told him not to follow me"
+            ],
+            "alternateAnswers": [
+              [
+                "asked him to stop following me"
+              ],
+              [
+                "told her not to follow me"
+              ]
+            ],
+            "words": [
+              {
+                "w": "follow",
+                "t": "kuzatmoq",
+                "tr": "следовать"
+              },
+              {
+                "w": "not to",
+                "t": "... qilmaslikni",
+                "tr": "не + инфинитив"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The man "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "told me to listen carefully"
+            ],
+            "alternateAnswers": [
+              [
+                "asked me to listen carefully"
+              ]
+            ],
+            "words": [
+              {
+                "w": "listen carefully",
+                "t": "diqqat bilan tinglash",
+                "tr": "слушать внимательно"
+              },
+              {
+                "w": "told",
+                "t": "aytdi",
+                "tr": "сказал"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The parrot "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "told me to shut up"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "parrot",
+                "t": "to'tiqush",
+                "tr": "попугай"
+              },
+              {
+                "w": "shut up",
+                "t": "jim bo'l",
+                "tr": "замолчи"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jenny's grandma "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "told her to push harder"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "grandma",
+                "t": "buvi",
+                "tr": "бабушка"
+              },
+              {
+                "w": "push harder",
+                "t": "kuchliroq itarmoq",
+                "tr": "толкать сильнее"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The magician "
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "asked me to pick a card"
+            ],
+            "alternateAnswers": [
+              [
+                "told me to pick a card"
+              ]
+            ],
+            "words": [
+              {
+                "w": "magician",
+                "t": "sehrgar",
+                "tr": "фокусник"
+              },
+              {
+                "w": "pick a card",
+                "t": "kartochka olmoq",
+                "tr": "выбрать карту"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u32p3-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u32p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Could you pass me the salt, please?' I asked the man next to me.\nI asked the man next to me "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to pass",
+                  "if he passes"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " me the salt."
+              }
+            ],
+            "words": [
+              {
+                "w": "pass the salt",
+                "t": "tuzni uzatmoq",
+                "tr": "передать соль"
+              },
+              {
+                "w": "to pass",
+                "t": "uzatishini so'ramoq",
+                "tr": "передать (просьба)"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Would you mind waiting a moment?' the shop assistant asked the woman.\nThe shop assistant asked the woman "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to wait",
+                  "waiting"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " for a moment."
+              }
+            ],
+            "words": [
+              {
+                "w": "shop assistant",
+                "t": "do'kon xodimi",
+                "tr": "продавец"
+              },
+              {
+                "w": "wait a moment",
+                "t": "bir oz kutmoq",
+                "tr": "подождать момент"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Please don't leave your dirty football boots in the hall,' Mum said to Doug.\nMum told Doug "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "not to leave",
+                  "don't leave"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " his dirty football boots in the hall."
+              }
+            ],
+            "words": [
+              {
+                "w": "football boots",
+                "t": "futbol etiklari",
+                "tr": "футбольные бутсы"
+              },
+              {
+                "w": "hall",
+                "t": "koridor",
+                "tr": "прихожая"
+              },
+              {
+                "w": "not to leave",
+                "t": "qoldirmaslikni",
+                "tr": "не оставлять"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Could you tell us where you were at six o'clock?' the police officers asked Barry.\nThe police officers asked Barry "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to tell them where",
+                  "where he tells them"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " he had been at six o'clock."
+              }
+            ],
+            "words": [
+              {
+                "w": "police officers",
+                "t": "politsiya xodimlari",
+                "tr": "полицейские"
+              },
+              {
+                "w": "to tell",
+                "t": "aytishini so'ramoq",
+                "tr": "сказать (просьба)"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Could I have your e-mail address?' I asked Mariella.\nI asked Mariella "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to give me her",
+                  "give me your"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " e-mail address."
+              }
+            ],
+            "words": [
+              {
+                "w": "e-mail address",
+                "t": "elektron pochta manzili",
+                "tr": "адрес электронной почты"
+              },
+              {
+                "w": "to give",
+                "t": "berishini so'ramoq",
+                "tr": "дать (просьба)"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Can I have a new Xbox for my birthday?' I asked my mum.\nI asked my mum "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "to get me",
+                  "get me"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " a new Xbox."
+              }
+            ],
+            "words": [
+              {
+                "w": "birthday",
+                "t": "tug'ilgan kun",
+                "tr": "день рождения"
+              },
+              {
+                "w": "to get",
+                "t": "olishini so'ramoq",
+                "tr": "купить (просьба)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u32p3-sec-exercise3",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qalin yozilgan so'z yoki ibora to'g'ri bo'lsa, belgi (✓) qo'ying. Noto'g'ri bo'lsa, to'g'ri so'z yoki iborani yozing.",
+      "instruction_ru": "Если слово или фраза, выделенная жирным, правильная — поставьте галочку (✓). Если нет — напишите правильное слово или фразу.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u32p3-ex3-1",
+            "sentence": "I asked Toni why had she taken my CD without asking me.",
+            "errorStart": 17,
+            "errorEnd": 30,
+            "correctAnswer": "she had taken",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "taken",
+                "t": "olib ketgan",
+                "tr": "взять"
+              },
+              {
+                "w": "without asking",
+                "t": "so'ramasdan",
+                "tr": "не спросив"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex3-2",
+            "sentence": "Roger told Isabelle don't make any plans for the weekend.",
+            "errorStart": 20,
+            "errorEnd": 30,
+            "correctAnswer": "not to make",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "make plans",
+                "t": "reja tuzmoq",
+                "tr": "строить планы"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex3-3",
+            "sentence": "Madison asked me how much my new jeans had cost.",
+            "errorStart": 39,
+            "errorEnd": 47,
+            "correctAnswer": "had cost",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "jeans",
+                "t": "jinsi shim",
+                "tr": "джинсы"
+              },
+              {
+                "w": "had cost",
+                "t": "qanchaga tushgan",
+                "tr": "сколько стоили"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex3-4",
+            "sentence": "Alexander asked his dad giving him some money for his school trip.",
+            "errorStart": 24,
+            "errorEnd": 30,
+            "correctAnswer": "to give",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "school trip",
+                "t": "maktab safari",
+                "tr": "школьная поездка"
+              },
+              {
+                "w": "to give",
+                "t": "berishini",
+                "tr": "дать (просьба)"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex3-5",
+            "sentence": "I told Jeremy you don't move while I took his photograph.",
+            "errorStart": 14,
+            "errorEnd": 28,
+            "correctAnswer": "not to move",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "move",
+                "t": "harakat qilmoq",
+                "tr": "двигаться"
+              },
+              {
+                "w": "took his photograph",
+                "t": "uning rasmini olmoq",
+                "tr": "фотографировать его"
+              }
+            ]
+          },
+          {
+            "id": "u32p3-ex3-6",
+            "sentence": "Annie told her dog to sit, but it didn't.",
+            "errorStart": 19,
+            "errorEnd": 25,
+            "correctAnswer": "to sit",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "dog",
+                "t": "it",
+                "tr": "собака"
+              },
+              {
+                "w": "to sit",
+                "t": "o'tirishni",
+                "tr": "сидеть"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

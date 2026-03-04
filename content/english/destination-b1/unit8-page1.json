@@ -1,0 +1,200 @@
+{
+  "id": "unit8-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 8,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Prepositions of time and place",
+    "titleTranslation_ru": "Prepositions of time and place"
+  },
+  "sections": [
+    {
+      "id": "u8p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "in",
+      "subheading_uz": "in",
+      "subheading_ru": "in",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Time", "Place"],
+        "subHeaders": ["Vaqt", "Joy"],
+        "subHeaders_ru": ["Время", "Место"],
+        "rows": [
+          {
+            "cells": ["months\n_Paris is wonderful **in** April._", "towns and cities\n_There's a famous castle **in** Edinburgh._"],
+            "cells_uz": ["oylar\n_Paris aprel oyida ajoyib._", "shahar va shaharlar\n_Edinburgda mashhur qal'a bor._"],
+            "cells_ru": ["месяцы\n_Париж прекрасен **в** апреле._", "города\n_**В** Эдинбурге есть знаменитый замок._"]
+          },
+          {
+            "cells": ["years\n_I first went to Russia **in** 2005._", "countries and continents\n_My brother is **in** Mexico._"],
+            "cells_uz": ["yillar\n_Men birinchi marta Rossiyaga 2005-yilda bordim._", "mamlakatlar va qit'alar\n_Akam Meksikada._"],
+            "cells_ru": ["годы\n_Я впервые поехал в Россию **в** 2005 году._", "страны и континенты\n_Мой брат **в** Мексике._"]
+          },
+          {
+            "cells": ["seasons\n_We often go skiing **in** winter._", "areas and regions\n_What's life like **in** the desert?_"],
+            "cells_uz": ["fasllar\n_Biz ko'pincha qishda chang'i uchramiz._", "hududlar va mintaqalar\n_Sahroда hayot qanday?_"],
+            "cells_ru": ["времена года\n_Мы часто ездим кататься на лыжах **зимой**._", "районы и регионы\n_Какова жизнь **в** пустыне?_"]
+          },
+          {
+            "cells": ["parts of the day\n_My train leaves **in** the afternoon._", "inside an object\n_Your passport is **in** the drawer._"],
+            "cells_uz": ["kunning qismlari\n_Mening poyezdim tushdan keyin jo'naydi._", "biror narsa ichida\n_Pasportingiz tortmachada._"],
+            "cells_ru": ["части дня\n_Мой поезд отправляется **днём**._", "внутри предмета\n_Ваш паспорт **в** ящике._"]
+          },
+          {
+            "cells": ["", "inside a room\n_I've left the tickets **in** the living room._"],
+            "cells_uz": ["", "xona ichida\n_Men chiptalarni yashash xonasida qoldirdim._"],
+            "cells_ru": ["", "внутри комнаты\n_Я оставил билеты **в** гостиной._"]
+          },
+          {
+            "cells": ["", "inside a building\n_Sharon has been **in** the travel agent's for an hour!_"],
+            "cells_uz": ["", "bino ichida\n_Sharon bir soatdan beri sayohat agentligida!_"],
+            "cells_ru": ["", "внутри здания\n_Шэрон находится **в** туристическом агентстве уже час!_"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz in predlogini quyidagi iboralarda ham ishlatamiz:\n• in a minute/an hour\n• in front of\n• in the middle (of)\n• in the future",
+        "translation_ru": "Мы также используем in в следующих фразах:\n• in a minute/an hour\n• in front of\n• in the middle (of)\n• in the future"
+      }
+    },
+    {
+      "id": "u8p1-sec-watchout1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "Harakat fe'llari (come, go, move, run, walk va boshqalar) bilan biz odatda in, on yoki at o'rniga **to** ishlatamiz.\n✓ _Was it hot when you went **to** Japan?_",
+        "translation_ru": "С глаголами движения (come, go, move, run, walk и др.) мы обычно используем **to** вместо in, on или at.\n✓ _Was it hot when you went **to** Japan?_"
+      }
+    },
+    {
+      "id": "u8p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "on",
+      "subheading_uz": "on",
+      "subheading_ru": "on",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Time", "Place"],
+        "subHeaders": ["Vaqt", "Joy"],
+        "subHeaders_ru": ["Время", "Место"],
+        "rows": [
+          {
+            "cells": ["days\n_I got a new car **on** Saturday._", "islands\n_Last year, we stayed **on** Mykonos._"],
+            "cells_uz": ["kunlar\n_Shanba kuni yangi mashina oldim._", "orollar\n_O'tgan yili biz Mikonosdа bo'ldik._"],
+            "cells_ru": ["дни\n_Я купил новую машину **в** субботу._", "острова\n_В прошлом году мы останавливались **на** Миконосе._"]
+          },
+          {
+            "cells": ["dates\n_My birthday is **on** 19th March._", "pages\n_There are some useful Italian phrases **on** page 97._"],
+            "cells_uz": ["sanalar\n_Tug'ilgan kunim mart oyining 19-sida._", "sahifalar\n_97-sahifada foydali italyancha iboralar bor._"],
+            "cells_ru": ["даты\n_Мой день рождения **19** марта._", "страницы\n_**На** странице 97 есть полезные итальянские фразы._"]
+          },
+          {
+            "cells": ["", "on top of an object\n_Did you put your car keys **on** the kitchen table?_"],
+            "cells_uz": ["", "biror narsa ustida\n_Mashina kalitlarini oshxona stoliga qo'ydingizmi?_"],
+            "cells_ru": ["", "на поверхности предмета\n_Вы положили ключи от машины **на** кухонный стол?_"]
+          },
+          {
+            "cells": ["", "on a surface\n_There's a timetable **on** the wall._"],
+            "cells_uz": ["", "sirt ustida\n_Devorда dars jadvali bor._"],
+            "cells_ru": ["", "на поверхности\n_**На** стене висит расписание._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz on predlogini quyidagi iboralarda ham ishlatamiz:\n• on the beach\n• on the left/right\n• on my birthday",
+        "translation_ru": "Мы также используем on в следующих фразах:\n• on the beach\n• on the left/right\n• on my birthday"
+      }
+    },
+    {
+      "id": "u8p1-sec-watchout2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Biz **in the morning/afternoon/evening** deymiz, lekin **on Monday morning/Wednesday evening** va hokazo deymiz.\n✓ _We're flying to Washington **in the morning** / **on Tuesday morning**._\n\n• Biz tomorrow, yesterday, tomorrow morning, yesterday evening va shu kabi so'zlar bilan predlog ishlatmaymiz.\n✓ _We're flying to Washington **tomorrow afternoon**._",
+        "translation_ru": "• Мы говорим **in the morning/afternoon/evening**, но **on Monday morning/Wednesday evening** и т.д.\n✓ _We're flying to Washington **in the morning** / **on Tuesday morning**._\n\n• Мы не используем предлог с tomorrow, yesterday, tomorrow morning, yesterday evening и т.д.\n✓ _We're flying to Washington **tomorrow afternoon**._"
+      }
+    },
+    {
+      "id": "u8p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "at",
+      "subheading_uz": "at",
+      "subheading_ru": "at",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Time", "Place"],
+        "subHeaders": ["Vaqt", "Joy"],
+        "subHeaders_ru": ["Время", "Место"],
+        "rows": [
+          {
+            "cells": ["clock times\n_There's a bus **at** ten past three._", "exact places\n_What's it like **at** the North Pole?_"],
+            "cells_uz": ["soat vaqtlari\n_Uchdan o'n daqiqa o'tganda avtobus bor._", "aniq joylar\n_Shimoliy qutbda qanday?_"],
+            "cells_ru": ["время по часам\n_**В** десять минут четвёртого есть автобус._", "точные места\n_Каково это — **на** Северном полюсе?_"]
+          },
+          {
+            "cells": ["holiday periods\n_What are you doing **at** Christmas?_", "addresses\n_My cousin lives **at** 132 London Road._"],
+            "cells_uz": ["bayram davrlari\n_Rojdestvoda nima qilasiz?_", "manzillar\n_Amakivachcam London Road, 132-uyda yashaydi._"],
+            "cells_ru": ["праздничные периоды\n_Что вы делаете **на** Рождество?_", "адреса\n_Мой двоюродный брат живёт **по** адресу: 132 London Road._"]
+          },
+          {
+            "cells": ["", "buildings, when we are talking about the activities that happen there\n_I think John is **at** the cinema, watching Titanic._"],
+            "cells_uz": ["", "binolar — u yerda sodir bo'ladigan faoliyat haqida gapirganda\n_Menimcha, Jon kinoteatrda, Titanikni tomosha qilyapti._"],
+            "cells_ru": ["", "здания — когда мы говорим о деятельности, которая там происходит\n_Думаю, Джон **в** кинотеатре, смотрит Титаник._"]
+          },
+          {
+            "cells": ["", "activities\n_Rania isn't here. She's **at** a party._"],
+            "cells_uz": ["", "tadbirlar\n_Rania bu yerda emas. U ziyofatda._"],
+            "cells_ru": ["", "мероприятия\n_Рании здесь нет. Она **на** вечеринке._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz at predlogini quyidagi iboralarda ham ishlatamiz:\n• at the moment\n• at night\n• at the top/bottom\n• at the door/window",
+        "translation_ru": "Мы также используем at в следующих фразах:\n• at the moment\n• at night\n• at the top/bottom\n• at the door/window"
+      }
+    },
+    {
+      "id": "u8p1-sec-watchout3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "**in** va **at** ni joy uchun ishlatishni solishtiring. Biz **in** ni atrofimizdagi kattaroq hududlar uchun ishlatamiz. Biz **at** ni kichikroq joylar va sayohat yo'lidagi nuqtalar uchun ishlatamiz.\n✓ _We're spending our next holiday **in** the countryside._\n✓ _Let's meet **at** the train station._",
+        "translation_ru": "Сравните использование **in** и **at** для мест. Мы используем **in** для больших территорий вокруг нас. Мы используем **at** для небольших мест и точек на маршруте путешествия.\n✓ _We're spending our next holiday **in** the countryside._\n✓ _Let's meet **at** the train station._"
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "unit31-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 31,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Reported speech",
+    "titleTranslation_ru": "Reported speech"
+  },
+  "sections": [
+    {
+      "id": "u31p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Reported speech",
+      "subheading_uz": "Reported speech",
+      "subheading_ru": "Reported speech",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Misol"],
+        "subHeaders_ru": ["Употребление", "Пример"],
+        "rows": [
+          {
+            "cells": ["To report what someone else said", "_My dad said that he'**d written** a song._"],
+            "cells_uz": ["Boshqa birovning so'zlarini yetkazish uchun", "_Dadam qo'shiq **yozganini** aytdi._"],
+            "cells_ru": ["Для передачи чужих слов", "_Папа сказал, что **написал** песню._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u31p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Form: tense backshift",
+      "subheading_uz": "Shakl: zamon o'zgarishi",
+      "subheading_ru": "Форма: сдвиг времени",
+      "instruction": "Direct speech → Reported speech",
+      "instruction_ru": "Direct speech → Reported speech",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Direct speech", "Reported speech"],
+        "rows": [
+          {
+            "cells": ["**present simple**\n_'I **want** to build a new house,' said Jill._", "**past simple**\n_Jill said she **wanted** to build a new house._"],
+            "cells_uz": ["**present simple**\n_'Men yangi uy **qurmoqchi**,' dedi Jill._", "**past simple**\n_Jill yangi uy **qurmoqchiligi**ni aytdi._"],
+            "cells_ru": ["**present simple**\n_'Я **хочу** построить новый дом,' сказала Джилл._", "**past simple**\n_Джилл сказала, что **хочет** построить новый дом._"]
+          },
+          {
+            "cells": ["**present continuous**\n_'We **are making** a dress,' they said._", "**past continuous**\n_They said they **were making** a dress._"],
+            "cells_uz": ["**present continuous**\n_'Biz ko'ylak **tikayapmiz**,' deyishdi._", "**past continuous**\n_Ular ko'ylak **tikayotganliklarini** aytishdi._"],
+            "cells_ru": ["**present continuous**\n_'Мы **шьём** платье,' сказали они._", "**past continuous**\n_Они сказали, что **шили** платье._"]
+          },
+          {
+            "cells": ["**present perfect continuous**\n_'I **have been drawing** all day,' said Debbie._", "**past perfect continuous**\n_Debbie said she **had been drawing** all day._"],
+            "cells_uz": ["**present perfect continuous**\n_'Men butun kun rasm **chizib keldim**,' dedi Debbie._", "**past perfect continuous**\n_Debbie butun kun rasm **chizib kelganini** aytdi._"],
+            "cells_ru": ["**present perfect continuous**\n_'Я **рисую** весь день,' сказала Дебби._", "**past perfect continuous**\n_Дебби сказала, что **рисовала** весь день._"]
+          },
+          {
+            "cells": ["**past simple**\n_'Jim **made** a card for me yesterday,' Amy said._", "**past perfect simple**\n_Amy said Jim **had made** a card for her the day before._"],
+            "cells_uz": ["**past simple**\n_'Jim kecha menga otkritka **yasadi**,' dedi Amy._", "**past perfect simple**\n_Amy Jimning bir kun oldin unga otkritka **yasaganini** aytdi._"],
+            "cells_ru": ["**past simple**\n_'Джим **сделал** мне открытку вчера,' сказала Эми._", "**past perfect simple**\n_Эми сказала, что Джим **сделал** ей открытку накануне._"]
+          },
+          {
+            "cells": ["**past continuous**\n_'I **was writing** a poem,' said Tina._", "**past perfect continuous**\n_Tina said she **had been writing** a poem._"],
+            "cells_uz": ["**past continuous**\n_'Men she'r **yozayotgan edim**,' dedi Tina._", "**past perfect continuous**\n_Tina she'r **yozayotganini** aytdi._"],
+            "cells_ru": ["**past continuous**\n_'Я **писала** стихотворение,' сказала Тина._", "**past perfect continuous**\n_Тина сказала, что **писала** стихотворение._"]
+          },
+          {
+            "cells": ["**will**\n_'I **will** make you a scarf,' my grandma said._", "**would**\n_My grandma said she **would** make me a scarf._"],
+            "cells_uz": ["**will**\n_'Men seni uchun ro'mol **to'qib beraman**,' dedi buvim._", "**would**\n_Buvim menga ro'mol **to'qib berishini** aytdi._"],
+            "cells_ru": ["**will**\n_'Я **свяжу** тебе шарф,' сказала бабушка._", "**would**\n_Бабушка сказала, что **свяжет** мне шарф._"]
+          },
+          {
+            "cells": ["**am/is/are going to**\n_'They **are going to** make a new one,' said Joe._", "**was/were going to**\n_Joe said they **were going to** make a new one._"],
+            "cells_uz": ["**am/is/are going to**\n_'Ular yangi birini **yasashmoqchi**,' dedi Joe._", "**was/were going to**\n_Joe ularning yangi birini **yasashmoqchiligini** aytdi._"],
+            "cells_ru": ["**am/is/are going to**\n_'Они **собираются** сделать новый,' сказал Джо._", "**was/were going to**\n_Джо сказал, что они **собирались** сделать новый._"]
+          },
+          {
+            "cells": ["**can**\n_'I **can** draw quite well,' Emma said._", "**could**\n_Emma said she **could** draw quite well._"],
+            "cells_uz": ["**can**\n_'Men juda yaxshi rasm **chiza olaman**,' dedi Emma._", "**could**\n_Emma juda yaxshi rasm **chiza olishini** aytdi._"],
+            "cells_ru": ["**can**\n_'Я довольно хорошо **умею** рисовать,' сказала Эмма._", "**could**\n_Эмма сказала, что довольно хорошо **умеет** рисовать._"]
+          },
+          {
+            "cells": ["**must / have to**\n_'You **have to** visit the fashion show,' she said._", "**had to**\n_She said we **had to** visit the fashion show._"],
+            "cells_uz": ["**must / have to**\n_'Siz moda ko'rgazmasiga **borishingiz kerak**,' dedi u._", "**had to**\n_U biz moda ko'rgazmasiga **borishimiz kerakligini** aytdi._"],
+            "cells_ru": ["**must / have to**\n_'Вы **должны** посетить показ мод,' сказала она._", "**had to**\n_Она сказала, что мы **должны** посетить показ мод._"]
+          },
+          {
+            "cells": ["**may**\n_'I **may** visit the White House next week,' said Polly._", "**might**\n_Polly said she **might** visit the White House the following week._"],
+            "cells_uz": ["**may**\n_'Men keyingi hafta Oq uyga **tashrif buyurishim mumkin**,' dedi Polly._", "**might**\n_Polly keyingi hafta Oq uyga **tashrif buyurishi mumkinligini** aytdi._"],
+            "cells_ru": ["**may**\n_'На следующей неделе я, **возможно, посещу** Белый дом,' сказала Полли._", "**might**\n_Полли сказала, что на следующей неделе **может** посетить Белый дом._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u31p1-sec-grammar3",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Pronoun and time changes",
+      "subheading_uz": "Olmosh va vaqt o'zgarishlari",
+      "subheading_ru": "Изменения местоимений и времени",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Pronouns", ""],
+        "rows": [
+          {
+            "cells": ["I → he/she", "we → they"],
+            "cells_uz": ["I → he/she", "we → they"],
+            "cells_ru": ["I → he/she", "we → they"]
+          },
+          {
+            "cells": ["you → I/me/they/them", "us → them"],
+            "cells_uz": ["you → I/me/they/them", "us → them"],
+            "cells_ru": ["you → I/me/they/them", "us → them"]
+          },
+          {
+            "cells": ["my → his/her", "your → my/their"],
+            "cells_uz": ["my → his/her", "your → my/their"],
+            "cells_ru": ["my → his/her", "your → my/their"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Biz ko'pincha fe'l shaklidan tashqari boshqa so'zlarni ham o'zgartiramiz.\n\nOlmoshlar:\n• I → he/she\n• you → I/me/they/them\n• we → they\n• us → them\n• my → his/her\n• your → my/their\n\nVaqt va joy:\n• here → there\n• now → then/at that moment\n• tomorrow → the next day\n• tonight → that night\n• next week → the following week\n• yesterday → the day before\n• last week → the week before\n• ago → before",
+        "translation_ru": "Мы часто меняем и другие слова, помимо формы глагола.\n\nМестоимения:\n• I → he/she\n• you → I/me/they/them\n• we → they\n• us → them\n• my → his/her\n• your → my/their\n\nВремя и место:\n• here → there\n• now → then/at that moment\n• tomorrow → the next day\n• tonight → that night\n• next week → the following week\n• yesterday → the day before\n• last week → the week before\n• ago → before"
+      }
+    },
+    {
+      "id": "u31p1-sec-watchout",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Xabar qiluvchi fe'l (say, va boshqalar) hozirgi zamonda bo'lsa, zamon o'zgarmaydi.\n✓ _Tony **says** he **is going** to study architecture._\n✗ _Tony says he was going to study architecture._\n\n• Biz past perfect simple va past perfect continuous shakllarini o'zgartirmaymiz.\n✓ _'I **had seen** the picture before.' → He said he **had seen** the picture before._\n\n• Biz _would, should, could_ va _might_ shakllarini ham o'zgartirmaymiz.\n✓ _'I **might** take up painting.' → She said she **might** take up painting._\n\n• Biz reported speech da _apologise, deny, promise, refuse_ va _suggest_ kabi fe'llarni ishlatishimiz mumkin.\n✓ _Jan **apologised for losing** the picture._\n✓ _Charlotte **refused to** let me see her painting._\n✓ _He **denied breaking** the statue._\n✓ _My dad **suggested going** to an art gallery._\n✓ _Terence **promised to** help me decorate the house._",
+        "translation_ru": "• Если глагол, вводящий reported speech (say и т. д.), стоит в настоящем времени, мы не меняем время.\n✓ _Tony **says** he **is going** to study architecture._\n✗ _Tony says he was going to study architecture._\n\n• Мы не меняем past perfect simple и past perfect continuous.\n✓ _'I **had seen** the picture before.' → He said he **had seen** the picture before._\n\n• Мы также не меняем _would, should, could_ и _might_.\n✓ _'I **might** take up painting.' → She said she **might** take up painting._\n\n• Мы можем использовать в reported speech глаголы _apologise, deny, promise, refuse_ и _suggest_.\n✓ _Jan **apologised for losing** the picture._\n✓ _Charlotte **refused to** let me see her painting._\n✓ _He **denied breaking** the statue._\n✓ _My dad **suggested going** to an art gallery._\n✓ _Terence **promised to** help me decorate the house._"
+      }
+    }
+  ]
+}

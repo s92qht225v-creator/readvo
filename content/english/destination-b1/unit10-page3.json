@@ -1,0 +1,724 @@
+{
+  "id": "unit10-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u10p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Birinchi gap bilan o'xshash ma'noli ikkinchi gapni to'ldiring. Ikki-besh so'zdan foydalaning.",
+      "instruction_ru": "Закончите второе предложение так, чтобы оно имело похожее значение с первым. Используйте от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Will they send the letters first class?\nWill "
+              },
+              {
+                "type": "blank",
+                "hint": "sent"
+              },
+              {
+                "type": "text",
+                "content": " first class?"
+              }
+            ],
+            "answers": [
+              "the letters be sent"
+            ],
+            "words": [
+              {
+                "w": "send",
+                "t": "jo'natmoq",
+                "tr": "отправлять"
+              },
+              {
+                "w": "letters",
+                "t": "xatlar",
+                "tr": "письма"
+              },
+              {
+                "w": "first class",
+                "t": "birinchi sinf",
+                "tr": "первым классом"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm not sure if they eat pizza in China.\nI'm not sure if "
+              },
+              {
+                "type": "blank",
+                "hint": "is"
+              },
+              {
+                "type": "text",
+                "content": " in China."
+              }
+            ],
+            "answers": [
+              "pizza is eaten"
+            ],
+            "words": [
+              {
+                "w": "pizza",
+                "t": "pitsa",
+                "tr": "пицца"
+              },
+              {
+                "w": "eat",
+                "t": "yemoq",
+                "tr": "есть"
+              },
+              {
+                "w": "China",
+                "t": "Xitoy",
+                "tr": "Китай"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Someone told me that they don't make cars in the UK anymore.\nSomeone told me that "
+              },
+              {
+                "type": "blank",
+                "hint": "made"
+              },
+              {
+                "type": "text",
+                "content": " in the UK anymore."
+              }
+            ],
+            "answers": [
+              "cars aren't made"
+            ],
+            "alternateAnswers": [
+              [
+                "cars are not made"
+              ]
+            ],
+            "words": [
+              {
+                "w": "make",
+                "t": "ishlab chiqarmoq",
+                "tr": "производить"
+              },
+              {
+                "w": "cars",
+                "t": "mashinalar",
+                "tr": "автомобили"
+              },
+              {
+                "w": "UK",
+                "t": "Buyuk Britaniya",
+                "tr": "Великобритания"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do they usually feed the animals three times a day?\n"
+              },
+              {
+                "type": "blank",
+                "hint": "fed"
+              },
+              {
+                "type": "text",
+                "content": " three times a day?"
+              }
+            ],
+            "answers": [
+              "Are the animals usually fed"
+            ],
+            "words": [
+              {
+                "w": "feed",
+                "t": "oziqlantimoq",
+                "tr": "кормить"
+              },
+              {
+                "w": "animals",
+                "t": "hayvonlar",
+                "tr": "животные"
+              },
+              {
+                "w": "three times a day",
+                "t": "kuniga uch marta",
+                "tr": "три раза в день"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mr Jones is ill, so he won't give us a geography test today!\nMr Jones is ill, so we "
+              },
+              {
+                "type": "blank",
+                "hint": "be"
+              },
+              {
+                "type": "text",
+                "content": " a geography test today!"
+              }
+            ],
+            "answers": [
+              "won't be given"
+            ],
+            "alternateAnswers": [
+              [
+                "will not be given"
+              ]
+            ],
+            "words": [
+              {
+                "w": "ill",
+                "t": "kasal",
+                "tr": "больной"
+              },
+              {
+                "w": "geography",
+                "t": "geografiya",
+                "tr": "география"
+              },
+              {
+                "w": "test",
+                "t": "test",
+                "tr": "тест"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did they take her to hospital in an ambulance?\nWas "
+              },
+              {
+                "type": "blank",
+                "hint": "she"
+              },
+              {
+                "type": "text",
+                "content": " to hospital in an ambulance?"
+              }
+            ],
+            "answers": [
+              "she taken"
+            ],
+            "words": [
+              {
+                "w": "take",
+                "t": "olib bormoq",
+                "tr": "отвезти"
+              },
+              {
+                "w": "hospital",
+                "t": "kasalxona",
+                "tr": "больница"
+              },
+              {
+                "w": "ambulance",
+                "t": "tez yordam",
+                "tr": "скорая помощь"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u10p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте по одному слову в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There are lots of beautiful, large houses in Britain. Many of them (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " built hundreds of years ago."
+              }
+            ],
+            "answers": [
+              "were"
+            ],
+            "words": [
+              {
+                "w": "built",
+                "t": "qurilgan",
+                "tr": "построены"
+              },
+              {
+                "w": "hundreds of years ago",
+                "t": "yuzlab yillar oldin",
+                "tr": "сотни лет назад"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "In the past, they (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " owned by very rich families."
+              }
+            ],
+            "answers": [
+              "were"
+            ],
+            "words": [
+              {
+                "w": "owned",
+                "t": "egalik qilmoq",
+                "tr": "принадлежать"
+              },
+              {
+                "w": "rich",
+                "t": "boy",
+                "tr": "богатый"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Today, many of them (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " owned by an organisation called The National Trust,"
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "organisation",
+                "t": "tashkilot",
+                "tr": "организация"
+              },
+              {
+                "w": "National Trust",
+                "t": "Milliy Ishonch",
+                "tr": "Национальный трест"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "which (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " created to look after them."
+              }
+            ],
+            "answers": [
+              "was"
+            ],
+            "words": [
+              {
+                "w": "created",
+                "t": "tashkil etilgan",
+                "tr": "создан"
+              },
+              {
+                "w": "look after",
+                "t": "g'amxo'rlik qilmoq",
+                "tr": "заботиться"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The houses (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " kept in perfect condition,"
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "condition",
+                "t": "holat",
+                "tr": "состояние"
+              },
+              {
+                "w": "perfect",
+                "t": "mukammal",
+                "tr": "идеальный"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "and visitors (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " allowed to look round them."
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "visitors",
+                "t": "mehmonlar",
+                "tr": "посетители"
+              },
+              {
+                "w": "allowed",
+                "t": "ruxsat berilgan",
+                "tr": "разрешено"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Milk was (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " kept in the fridge, because they didn't have fridges!"
+              }
+            ],
+            "answers": [
+              "not"
+            ],
+            "words": [
+              {
+                "w": "milk",
+                "t": "sut",
+                "tr": "молоко"
+              },
+              {
+                "w": "fridge",
+                "t": "muzlatgich",
+                "tr": "холодильник"
+              }
+            ]
+          },
+          {
+            "id": "card8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Washing machines (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " only invented very recently,"
+              }
+            ],
+            "answers": [
+              "were"
+            ],
+            "words": [
+              {
+                "w": "washing machine",
+                "t": "kir yuvish mashinasi",
+                "tr": "стиральная машина"
+              },
+              {
+                "w": "invented",
+                "t": "ixtiro qilingan",
+                "tr": "изобретён"
+              }
+            ]
+          },
+          {
+            "id": "card9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "so washing (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " done by hand."
+              }
+            ],
+            "answers": [
+              "was"
+            ],
+            "words": [
+              {
+                "w": "washing",
+                "t": "kir yuvish",
+                "tr": "стирка"
+              },
+              {
+                "w": "done by hand",
+                "t": "qo'lda bajarilgan",
+                "tr": "вручную"
+              }
+            ]
+          },
+          {
+            "id": "card10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "In some cases, the house (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " still lived in today."
+              }
+            ],
+            "answers": [
+              "is"
+            ],
+            "words": [
+              {
+                "w": "still",
+                "t": "hali ham",
+                "tr": "всё ещё"
+              }
+            ]
+          },
+          {
+            "id": "card11",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When this happens, visitors (11) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " only shown part of the house."
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "shown",
+                "t": "ko'rsatilmoq",
+                "tr": "показывать"
+              }
+            ]
+          },
+          {
+            "id": "card12",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The private rooms (12) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " kept closed to the public."
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "private",
+                "t": "shaxsiy",
+                "tr": "частный"
+              },
+              {
+                "w": "public",
+                "t": "jamoat",
+                "tr": "публика"
+              }
+            ]
+          },
+          {
+            "id": "card13",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The gardens (13) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " looked after by professional gardeners."
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "gardens",
+                "t": "bog'lar",
+                "tr": "сады"
+              },
+              {
+                "w": "professional",
+                "t": "professional",
+                "tr": "профессиональный"
+              }
+            ]
+          },
+          {
+            "id": "card14",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Members of the National Trust (14) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " given a discount."
+              }
+            ],
+            "answers": [
+              "are"
+            ],
+            "words": [
+              {
+                "w": "members",
+                "t": "a'zolar",
+                "tr": "члены"
+              },
+              {
+                "w": "discount",
+                "t": "chegirma",
+                "tr": "скидка"
+              }
+            ]
+          },
+          {
+            "id": "card15",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This year, millions of people (15) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " be given the chance to see what life in an old country house was like."
+              }
+            ],
+            "answers": [
+              "will"
+            ],
+            "words": [
+              {
+                "w": "millions",
+                "t": "millionlab",
+                "tr": "миллионы"
+              },
+              {
+                "w": "chance",
+                "t": "imkon",
+                "tr": "возможность"
+              },
+              {
+                "w": "country house",
+                "t": "qishloq uyi",
+                "tr": "загородный дом"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

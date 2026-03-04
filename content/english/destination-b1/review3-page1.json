@@ -1,0 +1,1324 @@
+{
+  "id": "review3-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 3,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 7, 8 and 9",
+    "titleTranslation_ru": "Units 7, 8 and 9"
+  },
+  "sections": [
+    {
+      "id": "r3p1-sec-exA",
+      "type": "texterror",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Agar qator to'g'ri bo'lsa, belgi (✓) qo'ying. Agar qatorda ortiqcha so'z bo'lsa, o'sha so'zni yozing.",
+      "instruction_ru": "Если строка правильная, поставьте галочку (✓). Если в строке есть лишнее слово, напишите его.",
+      "sentences": [],
+      "textErrorData": {
+        "title": "Unseen London",
+        "lines": [
+          {
+            "id": "line1",
+            "text": "Of course, London is famous for that its attractions like Big Ben",
+            "extraWord": "that"
+          },
+          {
+            "id": "line2",
+            "text": "and the Tower of London. Millions of tourists look at these",
+            "extraWord": null
+          },
+          {
+            "id": "line3",
+            "text": "buildings every year – but not far distance from these places,",
+            "extraWord": "distance"
+          },
+          {
+            "id": "line4",
+            "text": "there are other interesting sights. Next time you set off to visit",
+            "extraWord": null
+          },
+          {
+            "id": "line5",
+            "text": "London, why not plan to go to some of the places close in to the",
+            "extraWord": "in"
+          },
+          {
+            "id": "line6",
+            "text": "centre of the city that tourists rarely go to? Get into of a taxi and",
+            "extraWord": "of"
+          },
+          {
+            "id": "line7",
+            "text": "ask the driver to take you to Billingsgate fish market, for",
+            "extraWord": null
+          },
+          {
+            "id": "line8",
+            "text": "example. When you arrive there at the market, you'll be amazed",
+            "extraWord": "there"
+          },
+          {
+            "id": "line9",
+            "text": "at the sights and sounds of real London. You can ask to the fish",
+            "extraWord": "to"
+          },
+          {
+            "id": "line10",
+            "text": "sellers about their work – and you don't have to wait on for hours to get a ticket!",
+            "extraWord": "on"
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r3p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchisiga o'xshash ma'noda to'ldiring. Ikki-besh so'z yozing.",
+      "instruction_ru": "Закончите второе предложение так, чтобы оно имело похожее значение с первым, используя данное слово. Используйте от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r3-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did they give you a map of the area? **provide**\nDid they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a map of the area?"
+              }
+            ],
+            "answers": [
+              "provide you with"
+            ],
+            "words": [
+              {
+                "w": "provide",
+                "t": "ta'minlamoq",
+                "tr": "обеспечивать"
+              },
+              {
+                "w": "map",
+                "t": "xarita",
+                "tr": "карта"
+              },
+              {
+                "w": "area",
+                "t": "hudud",
+                "tr": "район"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r3-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My intention is to travel to Malta by ferry. **going**\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " travel to Malta by ferry."
+              }
+            ],
+            "answers": [
+              "am going to"
+            ],
+            "words": [
+              {
+                "w": "intention",
+                "t": "niyat",
+                "tr": "намерение"
+              },
+              {
+                "w": "travel",
+                "t": "sayohat qilmoq",
+                "tr": "путешествовать"
+              },
+              {
+                "w": "ferry",
+                "t": "parom",
+                "tr": "паром"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r3-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I like staying by the sea when I'm on holiday. **coast**\nI like staying "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " when I'm on holiday."
+              }
+            ],
+            "answers": [
+              "at the coast"
+            ],
+            "words": [
+              {
+                "w": "coast",
+                "t": "qirg'oq",
+                "tr": "побережье"
+              },
+              {
+                "w": "sea",
+                "t": "dengiz",
+                "tr": "море"
+              },
+              {
+                "w": "holiday",
+                "t": "dam olish",
+                "tr": "отдых"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r3-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Be careful when you leave the bus. **off**\nBe careful when you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the bus."
+              }
+            ],
+            "answers": [
+              "get off"
+            ],
+            "words": [
+              {
+                "w": "get off",
+                "t": "tushmoq",
+                "tr": "выходить"
+              },
+              {
+                "w": "careful",
+                "t": "ehtiyotkor",
+                "tr": "осторожный"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r3-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The beach is close to the hotel, so we can walk there. **foot**\nWe can "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " from the hotel to the beach because it's close."
+              }
+            ],
+            "answers": [
+              "go on foot"
+            ],
+            "words": [
+              {
+                "w": "on foot",
+                "t": "piyoda",
+                "tr": "пешком"
+              },
+              {
+                "w": "beach",
+                "t": "plyaj",
+                "tr": "пляж"
+              },
+              {
+                "w": "close",
+                "t": "yaqin",
+                "tr": "близко"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r3-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why don't you drive to Brighton this weekend? **car**\nWhy don't you go to Brighton "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " this weekend?"
+              }
+            ],
+            "answers": [
+              "by car"
+            ],
+            "words": [
+              {
+                "w": "drive",
+                "t": "mashina haydamoq",
+                "tr": "ехать на машине"
+              },
+              {
+                "w": "by car",
+                "t": "mashina bilan",
+                "tr": "на машине"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r3-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We're going to return to Bali again this summer. **back**\nWe're going to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Bali again this summer."
+              }
+            ],
+            "answers": [
+              "go back to"
+            ],
+            "words": [
+              {
+                "w": "return",
+                "t": "qaytmoq",
+                "tr": "возвращаться"
+              },
+              {
+                "w": "go back",
+                "t": "qaytib bormoq",
+                "tr": "вернуться"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r3-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I like to watch the planes leaving the ground when I'm at the airport. **off**\nI like to watch the planes "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " when I'm at the airport."
+              }
+            ],
+            "answers": [
+              "take off"
+            ],
+            "words": [
+              {
+                "w": "take off",
+                "t": "ko'tarilmoq",
+                "tr": "взлетать"
+              },
+              {
+                "w": "airport",
+                "t": "aeroport",
+                "tr": "аэропорт"
+              }
+            ],
+            "number": 8
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r3p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Bosh harflar bilan yozilgan so'zning shaklini o'zgartirib, bo'sh joyni to'ldiring.",
+      "instruction_ru": "Заполните пропуск, изменив форму слова, написанного заглавными буквами.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r3-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We thought of driving to Berlin, but in the end we "
+              },
+              {
+                "type": "blank",
+                "hint": "FLY"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "flew"
+            ],
+            "words": [
+              {
+                "w": "fly",
+                "t": "uchmoq",
+                "tr": "летать"
+              },
+              {
+                "w": "drive",
+                "t": "mashina haydamoq",
+                "tr": "ехать на машине"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r3-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you ask the "
+              },
+              {
+                "type": "blank",
+                "hint": "DRIVE"
+              },
+              {
+                "type": "text",
+                "content": " to slow down a bit, please?"
+              }
+            ],
+            "answers": [
+              "driver"
+            ],
+            "words": [
+              {
+                "w": "driver",
+                "t": "haydovchi",
+                "tr": "водитель"
+              },
+              {
+                "w": "slow down",
+                "t": "sekinlashtirmoq",
+                "tr": "замедлиться"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r3-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Experienced "
+              },
+              {
+                "type": "blank",
+                "hint": "TRAVEL"
+              },
+              {
+                "type": "text",
+                "content": " will enjoy our hotel's comfortable double rooms."
+              }
+            ],
+            "answers": [
+              "travellers"
+            ],
+            "words": [
+              {
+                "w": "traveller",
+                "t": "sayohatchi",
+                "tr": "путешественник"
+              },
+              {
+                "w": "experienced",
+                "t": "tajribali",
+                "tr": "опытный"
+              },
+              {
+                "w": "comfortable",
+                "t": "qulay",
+                "tr": "удобный"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r3-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Paris is really "
+              },
+              {
+                "type": "blank",
+                "hint": "ATTRACT"
+              },
+              {
+                "type": "text",
+                "content": " in the spring. Shall we go?"
+              }
+            ],
+            "answers": [
+              "attractive"
+            ],
+            "words": [
+              {
+                "w": "attractive",
+                "t": "jozibali",
+                "tr": "привлекательный"
+              },
+              {
+                "w": "spring",
+                "t": "bahor",
+                "tr": "весна"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r3-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Let's fly in business class – it's much more "
+              },
+              {
+                "type": "blank",
+                "hint": "COMFORT"
+              },
+              {
+                "type": "text",
+                "content": " than the cheap seats!"
+              }
+            ],
+            "answers": [
+              "comfortable"
+            ],
+            "words": [
+              {
+                "w": "comfortable",
+                "t": "qulay",
+                "tr": "удобный"
+              },
+              {
+                "w": "business class",
+                "t": "biznes sinf",
+                "tr": "бизнес-класс"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r3-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Please check the "
+              },
+              {
+                "type": "blank",
+                "hint": "DEPART"
+              },
+              {
+                "type": "text",
+                "content": " time on your ticket carefully."
+              }
+            ],
+            "answers": [
+              "departure"
+            ],
+            "words": [
+              {
+                "w": "departure",
+                "t": "jo'nash",
+                "tr": "отправление"
+              },
+              {
+                "w": "ticket",
+                "t": "chipta",
+                "tr": "билет"
+              },
+              {
+                "w": "carefully",
+                "t": "diqqat bilan",
+                "tr": "внимательно"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r3-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We looked at all the hotels and in the end we "
+              },
+              {
+                "type": "blank",
+                "hint": "CHOOSE"
+              },
+              {
+                "type": "text",
+                "content": " the Majestic."
+              }
+            ],
+            "answers": [
+              "chose"
+            ],
+            "words": [
+              {
+                "w": "choose",
+                "t": "tanlash",
+                "tr": "выбирать"
+              },
+              {
+                "w": "hotel",
+                "t": "mehmonxona",
+                "tr": "отель"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r3-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think we went in the wrong "
+              },
+              {
+                "type": "blank",
+                "hint": "DIRECT"
+              },
+              {
+                "type": "text",
+                "content": " at the last turning and now we're lost."
+              }
+            ],
+            "answers": [
+              "direction"
+            ],
+            "words": [
+              {
+                "w": "direction",
+                "t": "yo'nalish",
+                "tr": "направление"
+              },
+              {
+                "w": "turning",
+                "t": "burilish",
+                "tr": "поворот"
+              },
+              {
+                "w": "lost",
+                "t": "adashgan",
+                "tr": "заблудиться"
+              }
+            ],
+            "number": 16
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r3p2-sec-exD",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "q27",
+            "questionText": "I ........................... around the world one day.",
+            "options": [
+              {
+                "label": "A",
+                "word": "travel",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "am going to travel",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "am travelling",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "travelled",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B",
+            "words": [
+              {
+                "w": "travel",
+                "t": "sayohat qilmoq",
+                "tr": "путешествовать"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "q28",
+            "questionText": "Do you think Curtis ........................... the car race tomorrow?",
+            "options": [
+              {
+                "label": "A",
+                "word": "will win",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "wins",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "is winning",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "won",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A",
+            "words": [
+              {
+                "w": "win",
+                "t": "g'olib chiqmoq",
+                "tr": "выигрывать"
+              },
+              {
+                "w": "car race",
+                "t": "avtomobil yarishi",
+                "tr": "автогонки"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "q29",
+            "questionText": "What's the weather like ........................... Russia at the moment?",
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "to",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C",
+            "words": [
+              {
+                "w": "weather",
+                "t": "ob-havo",
+                "tr": "погода"
+              },
+              {
+                "w": "Russia",
+                "t": "Rossiya",
+                "tr": "Россия"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "q30",
+            "questionText": "I can't come to your party because I ........................... my cousin that week.",
+            "options": [
+              {
+                "label": "A",
+                "word": "visit",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "will visit",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "visited",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "am visiting",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D",
+            "words": [
+              {
+                "w": "cousin",
+                "t": "amakivachcha",
+                "tr": "двоюродный брат/сестра"
+              },
+              {
+                "w": "visit",
+                "t": "tashrif buyurmoq",
+                "tr": "навещать"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "q31",
+            "questionText": "I think there's a picture of the hotel ........................... the first page.",
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "to",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A",
+            "words": [
+              {
+                "w": "picture",
+                "t": "rasm",
+                "tr": "картинка"
+              },
+              {
+                "w": "hotel",
+                "t": "mehmonxona",
+                "tr": "отель"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "q32",
+            "questionText": "We usually go away somewhere on holiday ........................... New Year.",
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "to",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B",
+            "words": [
+              {
+                "w": "New Year",
+                "t": "Yangi yil",
+                "tr": "Новый год"
+              },
+              {
+                "w": "holiday",
+                "t": "dam olish",
+                "tr": "каникулы"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "q33",
+            "questionText": "Watch out, or you ........................... off the boat!",
+            "options": [
+              {
+                "label": "A",
+                "word": "fall",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "are going to fall",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "are falling",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "fell",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B",
+            "words": [
+              {
+                "w": "watch out",
+                "t": "ehtiyot bo'ling",
+                "tr": "осторожно"
+              },
+              {
+                "w": "fall",
+                "t": "tushib ketmoq",
+                "tr": "упасть"
+              },
+              {
+                "w": "boat",
+                "t": "qayiq",
+                "tr": "лодка"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "q34",
+            "questionText": "It's my birthday ........................... Friday, so we're spending the weekend in London.",
+            "options": [
+              {
+                "label": "A",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "at",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "to",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A",
+            "words": [
+              {
+                "w": "birthday",
+                "t": "tug'ilgan kun",
+                "tr": "день рождения"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              }
+            ],
+            "number": 24
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r3p2-sec-exE",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "q35",
+            "questionText": "I got ........................... the car, turned the key and realised I didn't have any petrol!",
+            "options": [
+              {
+                "label": "A",
+                "word": "into",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "off",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "onto",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "on",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A",
+            "words": [
+              {
+                "w": "petrol",
+                "t": "benzin",
+                "tr": "бензин"
+              },
+              {
+                "w": "get into",
+                "t": "ichiga kirmoq",
+                "tr": "сесть в"
+              }
+            ],
+            "number": 25
+          },
+          {
+            "id": "q36",
+            "questionText": "I hope our plane leaves on ........................... .",
+            "options": [
+              {
+                "label": "A",
+                "word": "timetable",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "plan",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "schedule",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "hour",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C",
+            "words": [
+              {
+                "w": "schedule",
+                "t": "jadval",
+                "tr": "расписание"
+              },
+              {
+                "w": "plane",
+                "t": "samolyot",
+                "tr": "самолёт"
+              }
+            ],
+            "number": 26
+          },
+          {
+            "id": "q37",
+            "questionText": "My mum ........................... the bus to work every morning, but Dad drives.",
+            "options": [
+              {
+                "label": "A",
+                "word": "catches",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "does",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "runs",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "goes",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A",
+            "words": [
+              {
+                "w": "catch the bus",
+                "t": "avtobusga ulgurib etishmoq",
+                "tr": "успеть на автобус"
+              }
+            ],
+            "number": 27
+          },
+          {
+            "id": "q38",
+            "questionText": "We had a long way to go so we ........................... off very early.",
+            "options": [
+              {
+                "label": "A",
+                "word": "made",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "set",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "put",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "had",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B",
+            "words": [
+              {
+                "w": "set off",
+                "t": "yo'lga chiqmoq",
+                "tr": "отправляться в путь"
+              }
+            ],
+            "number": 28
+          },
+          {
+            "id": "q39",
+            "questionText": "I prepared ........................... my trip very carefully, and I still forgot my toothbrush!",
+            "options": [
+              {
+                "label": "A",
+                "word": "with",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "about",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "for",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D",
+            "words": [
+              {
+                "w": "prepare for",
+                "t": "tayyorgarlik ko'rmoq",
+                "tr": "готовиться к"
+              },
+              {
+                "w": "toothbrush",
+                "t": "tish cho'tkasi",
+                "tr": "зубная щётка"
+              }
+            ],
+            "number": 29
+          },
+          {
+            "id": "q40",
+            "questionText": "Public ........................... in this city is quite good, and it's not expensive.",
+            "options": [
+              {
+                "label": "A",
+                "word": "travel",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "journey",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "vehicle",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "transport",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D",
+            "words": [
+              {
+                "w": "public transport",
+                "t": "jamoat transporti",
+                "tr": "общественный транспорт"
+              },
+              {
+                "w": "expensive",
+                "t": "qimmat",
+                "tr": "дорогой"
+              }
+            ],
+            "number": 30
+          },
+          {
+            "id": "q41",
+            "questionText": "Mum ........................... away on business quite often.",
+            "options": [
+              {
+                "label": "A",
+                "word": "sets",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "takes",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "does",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "goes",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D",
+            "words": [
+              {
+                "w": "go away",
+                "t": "ketmoq",
+                "tr": "уезжать"
+              },
+              {
+                "w": "business",
+                "t": "ish",
+                "tr": "дела"
+              }
+            ],
+            "number": 31
+          },
+          {
+            "id": "q42",
+            "questionText": "It's easier to travel abroad when you can speak ........................... language like English.",
+            "options": [
+              {
+                "label": "A",
+                "word": "a strange",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "a foreign",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "an unknown",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "an outside",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B",
+            "words": [
+              {
+                "w": "foreign",
+                "t": "chet el",
+                "tr": "иностранный"
+              },
+              {
+                "w": "abroad",
+                "t": "xorijda",
+                "tr": "за рубежом"
+              }
+            ],
+            "number": 32
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

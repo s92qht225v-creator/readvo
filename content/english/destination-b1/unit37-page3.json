@@ -1,0 +1,634 @@
+{
+  "id": "unit37-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u37p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Ikkinchi gapni birinchi gapga o'xshash ma'noda to'ldiring. Ikki va besh orasida so'z yozing.",
+      "instruction_ru": "Дополните второе предложение так, чтобы оно имело похожее значение с первым. Используйте от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u37p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They finally succeeded in escaping from the room.\nThey finally "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " from the room."
+              },
+              {
+                "type": "hint",
+                "content": "managed"
+              }
+            ],
+            "answers": [
+              "managed to escape"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "succeed in",
+                "t": "muvaffaqiyatga erishmoq",
+                "tr": "преуспеть в"
+              },
+              {
+                "w": "escape",
+                "t": "qochib chiqmoq",
+                "tr": "сбежать"
+              },
+              {
+                "w": "manage",
+                "t": "uddasidan chiqmoq",
+                "tr": "суметь"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I bought a new notebook on the way to school.\nOn the way to school, I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a new notebook."
+              },
+              {
+                "type": "hint",
+                "content": "stopped"
+              }
+            ],
+            "answers": [
+              "stopped to buy"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "on the way to",
+                "t": "yo'lida",
+                "tr": "по дороге в"
+              },
+              {
+                "w": "notebook",
+                "t": "daftar",
+                "tr": "тетрадь"
+              },
+              {
+                "w": "stop to do",
+                "t": "biror narsa qilish uchun to'xtamoq",
+                "tr": "остановиться, чтобы сделать"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We're staying in Milan for a night before flying home.\nWe "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in Milan for a night before flying home."
+              },
+              {
+                "type": "hint",
+                "content": "planning"
+              }
+            ],
+            "answers": [
+              "are planning to stay"
+            ],
+            "alternateAnswers": [
+              [
+                "were planning to stay"
+              ]
+            ],
+            "words": [
+              {
+                "w": "Milan",
+                "t": "Milan",
+                "tr": "Милан"
+              },
+              {
+                "w": "plan to",
+                "t": "rejalashtirilmoq",
+                "tr": "планировать"
+              },
+              {
+                "w": "flying home",
+                "t": "uyga uchib ketish",
+                "tr": "лететь домой"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I don't want to cook tonight – let's have a takeaway.\nI don't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " tonight – let's have a takeaway."
+              },
+              {
+                "type": "hint",
+                "content": "feel"
+              }
+            ],
+            "answers": [
+              "feel like cooking"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "feel like",
+                "t": "istagi bo'lmoq",
+                "tr": "хотеть"
+              },
+              {
+                "w": "cook",
+                "t": "ovqat pishirmoq",
+                "tr": "готовить"
+              },
+              {
+                "w": "takeaway",
+                "t": "olib ketish uchun ovqat",
+                "tr": "еда навынос"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm going to get annoyed if you don't stop making that noise!\nIf you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that noise, I'm going to get annoyed!"
+              },
+              {
+                "type": "hint",
+                "content": "continue"
+              }
+            ],
+            "answers": [
+              "continue making"
+            ],
+            "alternateAnswers": [
+              [
+                "continue to make"
+              ]
+            ],
+            "words": [
+              {
+                "w": "annoyed",
+                "t": "bezovtalangan",
+                "tr": "раздражённый"
+              },
+              {
+                "w": "continue",
+                "t": "davom ettirmoq",
+                "tr": "продолжать"
+              },
+              {
+                "w": "noise",
+                "t": "shovqin",
+                "tr": "шум"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you ask Francis to come into my office, please?\nDo you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Francis to come into my office, please?"
+              },
+              {
+                "type": "hint",
+                "content": "mind"
+              }
+            ],
+            "answers": [
+              "mind asking"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "mind",
+                "t": "e'tirozingiz bormi",
+                "tr": "не возражаете"
+              },
+              {
+                "w": "ask",
+                "t": "so'ramoq",
+                "tr": "попросить"
+              },
+              {
+                "w": "office",
+                "t": "ofis",
+                "tr": "офис"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u37p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi fe'llarning to'g'ri shaklidan foydalanib, gaplarni to'ldiring. Kerak bo'lsa boshqa so'zlar ham qo'shing.",
+      "instruction_ru": "Дополните предложения, используя правильную форму глаголов из рамки. При необходимости добавьте другие слова.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "ask",
+          "be",
+          "bring",
+          "tidy",
+          "turn",
+          "win"
+        ],
+        "cards": [
+          {
+            "id": "u37p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Oh no! I forgot "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my homework!"
+              }
+            ],
+            "answers": [
+              "to bring"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "forget to do",
+                "t": "qilishni unutmoq",
+                "tr": "забыть сделать"
+              },
+              {
+                "w": "homework",
+                "t": "uy ishi",
+                "tr": "домашнее задание"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I remember "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on holiday."
+              }
+            ],
+            "answers": [
+              "being"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "remember doing",
+                "t": "qilganini eslamoq",
+                "tr": "помнить, как делал"
+              },
+              {
+                "w": "holiday",
+                "t": "dam olish",
+                "tr": "каникулы"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I tried "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my room, but I couldn't find it!"
+              }
+            ],
+            "answers": [
+              "tidying"
+            ],
+            "alternateAnswers": [
+              "to tidy"
+            ],
+            "words": [
+              {
+                "w": "try doing",
+                "t": "hal qilish uchun urinib ko'rmoq",
+                "tr": "попробовать сделать"
+              },
+              {
+                "w": "tidy",
+                "t": "tartibga solmoq",
+                "tr": "убирать"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did you remember "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the tap off?"
+              }
+            ],
+            "answers": [
+              "to turn"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "remember to do",
+                "t": "qilishni eslamoq",
+                "tr": "не забыть сделать"
+              },
+              {
+                "w": "turn off",
+                "t": "o'chirmoq",
+                "tr": "выключить"
+              },
+              {
+                "w": "tap",
+                "t": "kran",
+                "tr": "кран"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'll never forget "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the lottery."
+              }
+            ],
+            "answers": [
+              "winning"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "forget doing",
+                "t": "qilganini unutmaslik",
+                "tr": "не забыть, как делал"
+              },
+              {
+                "w": "lottery",
+                "t": "lotereya",
+                "tr": "лотерея"
+              }
+            ]
+          },
+          {
+            "id": "u37p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Try "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " her to take it off!"
+              }
+            ],
+            "answers": [
+              "asking"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "try doing",
+                "t": "urinib ko'rmoq",
+                "tr": "попробовать"
+              },
+              {
+                "w": "ask",
+                "t": "so'ramoq",
+                "tr": "попросить"
+              },
+              {
+                "w": "take off",
+                "t": "yechib olmoq",
+                "tr": "снять"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u37p3-sec-exercise3",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Обведите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u37p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The next time you're feeling ill, try (1) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "watching",
+                  "to watch"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " a comedy instead of just doing nothing. At least, that's what some doctors suggest (2) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "doing",
+                  "to do"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": ". If you want (3) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "getting",
+                  "to get"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " better, there's nothing like laughter. First of all, an activity you enjoy (4) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "doing",
+                  "to do"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " takes your mind off your illness. Time seems (5) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "passing",
+                  "to pass"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " more quickly and you stop (6) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "worrying",
+                  "to worry"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " about how you feel."
+              }
+            ],
+            "words": [
+              {
+                "w": "feeling ill",
+                "t": "kasal his qilmoq",
+                "tr": "чувствовать себя больным"
+              },
+              {
+                "w": "comedy",
+                "t": "komediya",
+                "tr": "комедия"
+              },
+              {
+                "w": "instead of",
+                "t": "o'rniga",
+                "tr": "вместо"
+              },
+              {
+                "w": "suggest",
+                "t": "taklif qilmoq",
+                "tr": "предлагать"
+              },
+              {
+                "w": "laughter",
+                "t": "kulgi",
+                "tr": "смех"
+              },
+              {
+                "w": "illness",
+                "t": "kasallik",
+                "tr": "болезнь"
+              },
+              {
+                "w": "quickly",
+                "t": "tez",
+                "tr": "быстро"
+              },
+              {
+                "w": "worry",
+                "t": "tashvishlanamoq",
+                "tr": "беспокоиться"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

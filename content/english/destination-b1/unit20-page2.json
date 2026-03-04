@@ -1,0 +1,751 @@
+{
+  "id": "unit20-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u20p2-sec-exercise1",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Birinchi gap bilan bir xil ma'noga ega bo'lgan gapni (A, B yoki C) tanlang.",
+      "instruction_ru": "Выберите предложение (A, B или C), которое имеет то же значение, что и первое предложение.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "u20p2-ex1-1",
+            "question": "We have to pay the electricity bill before Friday.",
+            "options": [
+              {
+                "id": "a",
+                "text": "We can pay it if we want to."
+              },
+              {
+                "id": "b",
+                "text": "We must pay it."
+              },
+              {
+                "id": "c",
+                "text": "We've already paid it."
+              }
+            ],
+            "correctOptionId": "b"
+          },
+          {
+            "id": "u20p2-ex1-2",
+            "question": "You don't need to buy me a birthday present.",
+            "options": [
+              {
+                "id": "a",
+                "text": "You must buy me a birthday present."
+              },
+              {
+                "id": "b",
+                "text": "It's not necessary to buy me a birthday present."
+              },
+              {
+                "id": "c",
+                "text": "You mustn't buy me a birthday present."
+              }
+            ],
+            "correctOptionId": "b"
+          },
+          {
+            "id": "u20p2-ex1-3",
+            "question": "I have to do some work on my project this evening.",
+            "options": [
+              {
+                "id": "a",
+                "text": "I haven't got time to do the work."
+              },
+              {
+                "id": "b",
+                "text": "I've already done the work."
+              },
+              {
+                "id": "c",
+                "text": "I need to do the work."
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u20p2-ex1-4",
+            "question": "Lenny didn't have to see the head teacher after all.",
+            "options": [
+              {
+                "id": "a",
+                "text": "It wasn't necessary for Lenny to see the head teacher."
+              },
+              {
+                "id": "b",
+                "text": "Lenny went to see the head teacher."
+              },
+              {
+                "id": "c",
+                "text": "Lenny is waiting to see the head teacher."
+              }
+            ],
+            "correctOptionId": "a"
+          },
+          {
+            "id": "u20p2-ex1-5",
+            "question": "Students mustn't run in school buildings.",
+            "options": [
+              {
+                "id": "a",
+                "text": "They can run if they want to."
+              },
+              {
+                "id": "b",
+                "text": "Students don't like running."
+              },
+              {
+                "id": "c",
+                "text": "Running isn't allowed."
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u20p2-ex1-6",
+            "question": "All passengers must fasten their seatbelts.",
+            "options": [
+              {
+                "id": "a",
+                "text": "They have to fasten their seatbelts now."
+              },
+              {
+                "id": "b",
+                "text": "They don't have to fasten their seatbelts."
+              },
+              {
+                "id": "c",
+                "text": "They can fasten their seatbelts."
+              }
+            ],
+            "correctOptionId": "a"
+          },
+          {
+            "id": "u20p2-ex1-7",
+            "question": "Mr Reed had to go to the police station to answer some questions.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Mr Reed was able to go to the police station."
+              },
+              {
+                "id": "b",
+                "text": "Mr Reed forgot to go to the police station."
+              },
+              {
+                "id": "c",
+                "text": "Mr Reed was obliged to go to the police station."
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u20p2-ex1-8",
+            "question": "It's kind of you to offer to help, but you really don't need to.",
+            "options": [
+              {
+                "id": "a",
+                "text": "I don't want you to help me."
+              },
+              {
+                "id": "b",
+                "text": "Your help isn't necessary."
+              },
+              {
+                "id": "c",
+                "text": "You won't be able to help me."
+              }
+            ],
+            "correctOptionId": "b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "u20p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Обведите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u20p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Smoking isn't allowed in the airport.' You "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "mustn't",
+                  "don't have to"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " smoke in the airport."
+              }
+            ],
+            "words": [
+              {
+                "w": "smoking",
+                "t": "chekish",
+                "tr": "курение"
+              },
+              {
+                "w": "allowed",
+                "t": "ruxsat berilgan",
+                "tr": "разрешено"
+              },
+              {
+                "w": "airport",
+                "t": "aeroport",
+                "tr": "аэропорт"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'It's not necessary to come to the train station to meet me.' You "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "have to",
+                  "don't have to"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " meet her at the train station."
+              }
+            ],
+            "words": [
+              {
+                "w": "necessary",
+                "t": "zarur",
+                "tr": "необходимо"
+              },
+              {
+                "w": "train station",
+                "t": "temir yo'l stantsiyasi",
+                "tr": "железнодорожная станция"
+              },
+              {
+                "w": "meet",
+                "t": "kutib olmoq",
+                "tr": "встречать"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'We were forced to wait for over two hours in the rain!' They "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "had to",
+                  "didn't need to"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " wait for over two hours in the rain."
+              }
+            ],
+            "words": [
+              {
+                "w": "forced",
+                "t": "majbur qilingan",
+                "tr": "вынужден"
+              },
+              {
+                "w": "wait",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "over two hours",
+                "t": "ikki soatdan ortiq",
+                "tr": "более двух часов"
+              },
+              {
+                "w": "rain",
+                "t": "yomg'ir",
+                "tr": "дождь"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'The instructions tell you to write in pencil.' You "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "must",
+                  "needn't"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " write in pencil."
+              }
+            ],
+            "words": [
+              {
+                "w": "instructions",
+                "t": "ko'rsatmalar",
+                "tr": "инструкции"
+              },
+              {
+                "w": "write",
+                "t": "yozmoq",
+                "tr": "писать"
+              },
+              {
+                "w": "pencil",
+                "t": "qalam",
+                "tr": "карандаш"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'You can contact us by either phone or e-mail.' You "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "mustn't",
+                  "don't have to"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " phone them."
+              }
+            ],
+            "words": [
+              {
+                "w": "contact",
+                "t": "bog'lanmoq",
+                "tr": "связаться"
+              },
+              {
+                "w": "either",
+                "t": "istalgan",
+                "tr": "любой из двух"
+              },
+              {
+                "w": "phone",
+                "t": "telefon qilmoq",
+                "tr": "позвонить"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'In my country, you can carry your passport with you if you want, but it's not necessary.' In her country, you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "don't need to",
+                  "mustn't"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " carry your passport with you."
+              }
+            ],
+            "words": [
+              {
+                "w": "carry",
+                "t": "olib yurmoq",
+                "tr": "носить с собой"
+              },
+              {
+                "w": "passport",
+                "t": "pasport",
+                "tr": "паспорт"
+              },
+              {
+                "w": "necessary",
+                "t": "zarur",
+                "tr": "необходимо"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'My grandfather was made to start work when he was just fourteen years old.' He "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "had to",
+                  "must"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " start work when he was just fourteen years old."
+              }
+            ],
+            "words": [
+              {
+                "w": "grandfather",
+                "t": "buva",
+                "tr": "дедушка"
+              },
+              {
+                "w": "start work",
+                "t": "ishga kirmoq",
+                "tr": "начать работать"
+              },
+              {
+                "w": "fourteen",
+                "t": "o'n to'rt",
+                "tr": "четырнадцать"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'It's not necessary to book a hotel; you can stay in our spare room.' You "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "mustn't",
+                  "don't have to"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " stay in a hotel."
+              }
+            ],
+            "words": [
+              {
+                "w": "necessary",
+                "t": "zarur",
+                "tr": "необходимо"
+              },
+              {
+                "w": "book",
+                "t": "bron qilmoq",
+                "tr": "забронировать"
+              },
+              {
+                "w": "hotel",
+                "t": "mehmonxona",
+                "tr": "отель"
+              },
+              {
+                "w": "spare room",
+                "t": "bo'sh xona",
+                "tr": "свободная комната"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u20p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "have to fe'lining to'g'ri shaklini yozing. Ba'zi hollarda inkor shaklini ishlatishingiz kerak bo'lishi mumkin.",
+      "instruction_ru": "Вставьте правильную форму глагола have to. Возможно, вам придётся использовать отрицательные формы.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u20p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jade can't come out tonight. She "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " look after her little brother."
+              }
+            ],
+            "answers": [
+              "has to"
+            ],
+            "alternateAnswers": [
+              [
+                "has got to"
+              ]
+            ],
+            "words": [
+              {
+                "w": "come out",
+                "t": "chiqmoq",
+                "tr": "выйти"
+              },
+              {
+                "w": "tonight",
+                "t": "bugun kechqurun",
+                "tr": "сегодня вечером"
+              },
+              {
+                "w": "look after",
+                "t": "qaramoq",
+                "tr": "присматривать"
+              },
+              {
+                "w": "little brother",
+                "t": "ukasi",
+                "tr": "младший брат"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't have enough money, so I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " borrow some from Yuri."
+              }
+            ],
+            "answers": [
+              "had to"
+            ],
+            "words": [
+              {
+                "w": "enough",
+                "t": "yetarli",
+                "tr": "достаточно"
+              },
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              },
+              {
+                "w": "borrow",
+                "t": "qarz olmoq",
+                "tr": "занять"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's raining really hard, but luckily we "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " go out this evening."
+              }
+            ],
+            "answers": [
+              "don't have to"
+            ],
+            "alternateAnswers": [
+              [
+                "do not have to"
+              ]
+            ],
+            "words": [
+              {
+                "w": "raining hard",
+                "t": "kuchli yomg'ir yog'moqda",
+                "tr": "сильный дождь"
+              },
+              {
+                "w": "luckily",
+                "t": "baxtimizga",
+                "tr": "к счастью"
+              },
+              {
+                "w": "go out",
+                "t": "chiqmoq",
+                "tr": "выходить"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "To start the laptop you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " press the power button."
+              }
+            ],
+            "answers": [
+              "have to"
+            ],
+            "alternateAnswers": [
+              [
+                "need to"
+              ]
+            ],
+            "words": [
+              {
+                "w": "start",
+                "t": "yoqmoq",
+                "tr": "запустить"
+              },
+              {
+                "w": "laptop",
+                "t": "noutbuk",
+                "tr": "ноутбук"
+              },
+              {
+                "w": "press",
+                "t": "bosmoq",
+                "tr": "нажать"
+              },
+              {
+                "w": "power button",
+                "t": "quvvat tugmasi",
+                "tr": "кнопка питания"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Robbie worked last weekend, but I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "didn't have to"
+            ],
+            "alternateAnswers": [
+              [
+                "did not have to"
+              ]
+            ],
+            "words": [
+              {
+                "w": "worked",
+                "t": "ishladi",
+                "tr": "работал"
+              },
+              {
+                "w": "last weekend",
+                "t": "o'tgan dam olish kuni",
+                "tr": "в прошлые выходные"
+              }
+            ]
+          },
+          {
+            "id": "u20p2-ex3-6",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " go to piano lessons when you were younger?"
+              }
+            ],
+            "answers": [
+              "Did",
+              "have to"
+            ],
+            "words": [
+              {
+                "w": "piano lessons",
+                "t": "pianino darslari",
+                "tr": "уроки пианино"
+              },
+              {
+                "w": "younger",
+                "t": "yoshroq",
+                "tr": "моложе"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

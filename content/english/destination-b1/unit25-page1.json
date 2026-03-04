@@ -1,0 +1,121 @@
+{
+  "id": "unit25-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 25,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "So and such, too and enough",
+    "titleTranslation_ru": "So and such, too and enough"
+  },
+  "sections": [
+    {
+      "id": "u25p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "so and such",
+      "subheading_uz": "so and such",
+      "subheading_ru": "so and such",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", ""],
+        "subHeaders": ["Qo'llanilishi", ""],
+        "subHeaders_ru": ["Употребление", ""],
+        "rows": [
+          {
+            "cells": ["Both _so ... that_ and _such ... that_ are used to show the results of a situation or action. They take the following structures:", ""],
+            "cells_uz": ["Ikkalasi ham — _so ... that_ va _such ... that_ — biror holat yoki harakatning natijasini bildiradi. Ular quyidagi tuzilishlarda ishlatiladi:", ""],
+            "cells_ru": ["Оба — _so ... that_ и _such ... that_ — используются для описания результатов ситуации или действия. Они имеют следующие структуры:", ""]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p1-sec-grammar1-table",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Form", "Example"],
+        "subHeaders": ["Shakl", "Misol"],
+        "subHeaders_ru": ["Форма", "Пример"],
+        "rows": [
+          {
+            "cells": ["with an adjective:\nso + adjective + that", "_Al is **so good** that he was made manager._"],
+            "cells_uz": ["sifat bilan:\nso + sifat + that", "_Al **shunchalik yaxshi** ediki, uni menejer qilib tayinlashdi._"],
+            "cells_ru": ["с прилагательным:\nso + прилагательное + that", "_Al **настолько хорош**, что его назначили менеджером._"]
+          },
+          {
+            "cells": ["with a noun:\nso many/much + noun + that\nsuch + a/an + adjective + noun + that\nsuch + adjective + plural noun + that\nsuch + a lot of + noun + that", "_Al sells **so many cars** that he was made manager._\n_Al is **such a good worker** that he was made manager._\n_Al gets **such good results** that he was made manager._\n_Al makes **such a lot of money** for the company that he was made manager._"],
+            "cells_uz": ["ot bilan:\nso many/much + ot + that\nsuch + a/an + sifat + ot + that\nsuch + sifat + ko'plik ot + that\nsuch + a lot of + ot + that", "_Al **shunchalik ko'p mashina** sotadiki, uni menejer qilib tayinlashdi._\n_Al **shunchalik yaxshi ishchi** ediki, uni menejer qilib tayinlashdi._\n_Al **shunchalik yaxshi natijalar** ko'rsatadiki, uni menejer qilib tayinlashdi._\n_Al kompaniya uchun **shunchalik ko'p pul** topib beradiki, uni menejer qilib tayinlashdi._"],
+            "cells_ru": ["с существительным:\nso many/much + существительное + that\nsuch + a/an + прилагательное + существительное + that\nsuch + прилагательное + существительное мн.ч. + that\nsuch + a lot of + существительное + that", "_Al продаёт **так много машин**, что его назначили менеджером._\n_Al — **такой хороший работник**, что его назначили менеджером._\n_Al добивается **таких хороших результатов**, что его назначили менеджером._\n_Al зарабатывает **так много денег** для компании, что его назначили менеджером._"]
+          },
+          {
+            "cells": ["with an adverb:\nso + adverb + that", "_Al works **so well** that he was made manager._"],
+            "cells_uz": ["ravish bilan:\nso + ravish + that", "_Al **shunchalik yaxshi** ishlaydiki, uni menejer qilib tayinlashdi._"],
+            "cells_ru": ["с наречием:\nso + наречие + that", "_Al работает **так хорошо**, что его назначили менеджером._"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p1-sec-grammar2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "too and enough",
+      "subheading_uz": "too and enough",
+      "subheading_ru": "too and enough",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", ""],
+        "subHeaders": ["Qo'llanilishi", ""],
+        "subHeaders_ru": ["Употребление", ""],
+        "rows": [
+          {
+            "cells": ["Both _too_ and _enough_ are used to talk about how much or how little of something there is. We use _too_ to describe the negative effect of having more than necessary. We use _enough_ to describe the effects of having/not having the right amount of something.", ""],
+            "cells_uz": ["Ikkalasi ham — _too_ va _enough_ — biror narsaning qancha yoki qanchalik oz ekanini bildiradi. _Too_ keragidan ortiq narsaning salbiy ta'sirini bildirish uchun ishlatiladi. _Enough_ esa biror narsa yetarli yoki yetarli emasligini bildirish uchun ishlatiladi.", ""],
+            "cells_ru": ["Оба — _too_ и _enough_ — используются для описания количества чего-либо. _Too_ описывает негативный эффект от наличия большего, чем необходимо. _Enough_ описывает наличие/отсутствие нужного количества чего-либо.", ""]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p1-sec-grammar2-table",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Form", "Example"],
+        "subHeaders": ["Shakl", "Misol"],
+        "subHeaders_ru": ["Форма", "Пример"],
+        "rows": [
+          {
+            "cells": ["with an adjective:\ntoo + adjective (+ full infinitive)\nadjective + enough (+ full infinitive)", "_It's **too cold** to work in the garden._\n_Carol isn't **patient enough** to work as a teacher._"],
+            "cells_uz": ["sifat bilan:\ntoo + sifat (+ to'liq infinitiv)\nsifat + enough (+ to'liq infinitiv)", "_Bog'da ishlash uchun **juda sovuq**._\n_Carol o'qituvchi bo'lib ishlash uchun **yetarlicha sabr-toqatli** emas._"],
+            "cells_ru": ["с прилагательным:\ntoo + прилагательное (+ полный инфинитив)\nприлагательное + enough (+ полный инфинитив)", "_**Слишком холодно** для работы в саду._\n_Кэрол недостаточно **терпелива**, чтобы работать учителем._"]
+          },
+          {
+            "cells": ["with a noun:\ntoo + many/much + noun (+ full infinitive)\nenough + noun (+ full infinitive)", "_Jonty works **too many hours** to have any hobbies._\n_We don't have **enough money** to pay our bills._"],
+            "cells_uz": ["ot bilan:\ntoo + many/much + ot (+ to'liq infinitiv)\nenough + ot (+ to'liq infinitiv)", "_Jonty hech qanday hobbiga ega bo'lmaslik uchun **haddan ziyod ko'p soat** ishlaydi._\n_Bizda hisob-fakturalarni to'lash uchun **yetarli pul** yo'q._"],
+            "cells_ru": ["с существительным:\ntoo + many/much + существительное (+ полный инфинитив)\nenough + существительное (+ полный инфинитив)", "_Джонти работает **слишком много часов**, поэтому у него нет никаких хобби._\n_У нас нет **достаточно денег**, чтобы оплатить счета._"]
+          },
+          {
+            "cells": ["with an adverb:\ntoo + adverb (+ full infinitive)\nadverb + enough (+ full infinitive)", "_I got there **too late** to see the manager._\n_Jack did the work **quickly enough** to finish half an hour early._"],
+            "cells_uz": ["ravish bilan:\ntoo + ravish (+ to'liq infinitiv)\nravish + enough (+ to'liq infinitiv)", "_Men u yerga menejerni ko'rish uchun **juda kech** keldim._\n_Jek ishni yarim soat erta tugatish uchun **yetarlicha tez** bajardi._"],
+            "cells_ru": ["с наречием:\ntoo + наречие (+ полный инфинитив)\nнаречие + enough (+ полный инфинитив)", "_Я пришёл туда **слишком поздно**, чтобы увидеть менеджера._\n_Джек выполнил работу **достаточно быстро**, чтобы закончить на полчаса раньше._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• _Too_ va _very_ bir xil emas. Biz _too_ ni faqat biror narsa **salbiy** ekanini tavsiflaganda ishlatamiz.\n✓ _I've got **too** much work. I can't come out tonight._\n✗ _This job is great because you get paid **too** much money._\n\n• _Enough_ har doim sifatdan **keyin** keladi.\n✓ _You're not old **enough** to work here._\n✗ _You're not **enough** old to work here._\n\n• _Too_ va _enough_ ikkalasi ham _for_ bilan ishlatilishi mumkin.\n✓ _It's too hot **for** me in this office._\n✓ _You're not old enough **for** the army._",
+        "translation_ru": "• _Too_ и _very_ — не одно и то же. Мы используем _too_ только когда описываем что-то **негативное**.\n✓ _I've got **too** much work. I can't come out tonight._\n✗ _This job is great because you get paid **too** much money._\n\n• _Enough_ всегда ставится **после** прилагательного.\n✓ _You're not old **enough** to work here._\n✗ _You're not **enough** old to work here._\n\n• После _too_ и _enough_ может использоваться _for_.\n✓ _It's too hot **for** me in this office._\n✓ _You're not old enough **for** the army._"
+      }
+    }
+  ]
+}

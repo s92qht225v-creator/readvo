@@ -1,0 +1,1020 @@
+{
+  "id": "unit26-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u26p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi so'zlarning to'g'ri qiyosiy shaklini yozing.",
+      "instruction_ru": "Вставьте правильную сравнительную форму слов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u26p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Wait! Your bicycle is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than mine! "
+              },
+              {
+                "type": "hint",
+                "content": "fast"
+              }
+            ],
+            "answers": [
+              "faster"
+            ],
+            "words": [
+              {
+                "w": "bicycle",
+                "t": "velosiped",
+                "tr": "велосипед"
+              },
+              {
+                "w": "fast",
+                "t": "tez",
+                "tr": "быстрый/быстро"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Phew! It's much "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than it was yesterday, isn't it? "
+              },
+              {
+                "type": "hint",
+                "content": "hot"
+              }
+            ],
+            "answers": [
+              "hotter"
+            ],
+            "words": [
+              {
+                "w": "much",
+                "t": "ancha",
+                "tr": "намного"
+              },
+              {
+                "w": "yesterday",
+                "t": "kecha",
+                "tr": "вчера"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think you look "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " when you wear your hair up. "
+              },
+              {
+                "type": "hint",
+                "content": "pretty"
+              }
+            ],
+            "answers": [
+              "prettier"
+            ],
+            "words": [
+              {
+                "w": "look",
+                "t": "ko'rinmoq",
+                "tr": "выглядеть"
+              },
+              {
+                "w": "wear",
+                "t": "kiymoq",
+                "tr": "носить"
+              },
+              {
+                "w": "hair",
+                "t": "soch",
+                "tr": "волосы"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The price of batteries has gone up. They're a lot "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than last time. "
+              },
+              {
+                "type": "hint",
+                "content": "expensive"
+              }
+            ],
+            "answers": [
+              "more expensive"
+            ],
+            "words": [
+              {
+                "w": "price",
+                "t": "narx",
+                "tr": "цена"
+              },
+              {
+                "w": "batteries",
+                "t": "batareyalar",
+                "tr": "батарейки"
+              },
+              {
+                "w": "a lot",
+                "t": "ancha",
+                "tr": "намного"
+              },
+              {
+                "w": "expensive",
+                "t": "qimmat",
+                "tr": "дорогой"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Angus hasn't been practising the piano and he's got a lot "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "bad"
+              }
+            ],
+            "answers": [
+              "worse"
+            ],
+            "words": [
+              {
+                "w": "practising",
+                "t": "mashq qilmoq",
+                "tr": "заниматься"
+              },
+              {
+                "w": "piano",
+                "t": "pianino",
+                "tr": "пианино"
+              },
+              {
+                "w": "a lot",
+                "t": "ancha",
+                "tr": "намного"
+              },
+              {
+                "w": "bad",
+                "t": "yomon",
+                "tr": "плохой"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "His new film is much "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than his last one. I loved that one! "
+              },
+              {
+                "type": "hint",
+                "content": "entertaining"
+              }
+            ],
+            "answers": [
+              "more entertaining"
+            ],
+            "words": [
+              {
+                "w": "film",
+                "t": "film",
+                "tr": "фильм"
+              },
+              {
+                "w": "much",
+                "t": "ancha",
+                "tr": "намного"
+              },
+              {
+                "w": "entertaining",
+                "t": "qiziqarli",
+                "tr": "развлекательный"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tell us another joke – but a "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " one this time! That one took forever! "
+              },
+              {
+                "type": "hint",
+                "content": "short"
+              }
+            ],
+            "answers": [
+              "shorter"
+            ],
+            "words": [
+              {
+                "w": "joke",
+                "t": "hazil",
+                "tr": "шутка"
+              },
+              {
+                "w": "short",
+                "t": "qisqa",
+                "tr": "короткий"
+              },
+              {
+                "w": "took forever",
+                "t": "juda uzoq davom etdi",
+                "tr": "длилось вечность"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't win the lottery. Maybe I'll be "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " next time. "
+              },
+              {
+                "type": "hint",
+                "content": "lucky"
+              }
+            ],
+            "answers": [
+              "luckier"
+            ],
+            "words": [
+              {
+                "w": "win",
+                "t": "yutmoq",
+                "tr": "выиграть"
+              },
+              {
+                "w": "lottery",
+                "t": "lotereya",
+                "tr": "лотерея"
+              },
+              {
+                "w": "lucky",
+                "t": "omadli",
+                "tr": "удачливый"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The Russian athlete threw the discus "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than all the others and won gold. "
+              },
+              {
+                "type": "hint",
+                "content": "far"
+              }
+            ],
+            "answers": [
+              "farther",
+              "further"
+            ],
+            "alternateAnswers": [
+              [
+                "farther"
+              ],
+              [
+                "further"
+              ]
+            ],
+            "words": [
+              {
+                "w": "athlete",
+                "t": "sportchi",
+                "tr": "спортсмен"
+              },
+              {
+                "w": "threw",
+                "t": "otmoq",
+                "tr": "бросать"
+              },
+              {
+                "w": "discus",
+                "t": "disk",
+                "tr": "диск"
+              },
+              {
+                "w": "far",
+                "t": "uzoq",
+                "tr": "далеко"
+              },
+              {
+                "w": "won gold",
+                "t": "oltin medal olmoq",
+                "tr": "завоевать золото"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex1-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think these biscuits are even "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " than the last ones you made! "
+              },
+              {
+                "type": "hint",
+                "content": "nice"
+              }
+            ],
+            "answers": [
+              "nicer"
+            ],
+            "words": [
+              {
+                "w": "biscuits",
+                "t": "pechenye",
+                "tr": "печенье"
+              },
+              {
+                "w": "even",
+                "t": "hatto",
+                "tr": "даже"
+              },
+              {
+                "w": "nice",
+                "t": "yaxshi",
+                "tr": "хороший/вкусный"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u26p2-sec-exercise2",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapda qalin yozilgan so'z noto'g'ri. To'g'ri so'zni yozing.",
+      "instruction_ru": "Выделенное жирным слово в каждом предложении неверно. Напишите правильное слово.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u26p2-ex2-1",
+            "sentence": "We lost the match because we played badly than the other team did.",
+            "errorStart": 46,
+            "errorEnd": 51,
+            "correctAnswer": "worse",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "lost",
+                "t": "yutqazmoq",
+                "tr": "проиграть"
+              },
+              {
+                "w": "match",
+                "t": "o'yin",
+                "tr": "матч"
+              },
+              {
+                "w": "played",
+                "t": "o'ynamoq",
+                "tr": "играть"
+              },
+              {
+                "w": "team",
+                "t": "jamoa",
+                "tr": "команда"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-2",
+            "sentence": "It rains a lot in England, so the countryside is a lot green than in Greece.",
+            "errorStart": 53,
+            "errorEnd": 58,
+            "correctAnswer": "greener",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "rains",
+                "t": "yomg'ir yog'moq",
+                "tr": "идёт дождь"
+              },
+              {
+                "w": "countryside",
+                "t": "qishloq joyi",
+                "tr": "сельская местность"
+              },
+              {
+                "w": "green",
+                "t": "yashil",
+                "tr": "зелёный"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-3",
+            "sentence": "You gave Sarah a really small piece of cake – and you've given me even little!",
+            "errorStart": 71,
+            "errorEnd": 77,
+            "correctAnswer": "less",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "gave",
+                "t": "bermoq",
+                "tr": "дать"
+              },
+              {
+                "w": "piece",
+                "t": "bo'lak",
+                "tr": "кусок"
+              },
+              {
+                "w": "cake",
+                "t": "tort",
+                "tr": "торт"
+              },
+              {
+                "w": "even",
+                "t": "hatto",
+                "tr": "даже"
+              },
+              {
+                "w": "little",
+                "t": "oz",
+                "tr": "мало"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-4",
+            "sentence": "I must have lost weight. These jeans seem large than they were before.",
+            "errorStart": 52,
+            "errorEnd": 57,
+            "correctAnswer": "larger",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "lost weight",
+                "t": "vazn yo'qotmoq",
+                "tr": "похудеть"
+              },
+              {
+                "w": "jeans",
+                "t": "jinsi shim",
+                "tr": "джинсы"
+              },
+              {
+                "w": "seem",
+                "t": "ko'rinmoq",
+                "tr": "казаться"
+              },
+              {
+                "w": "large",
+                "t": "katta",
+                "tr": "большой"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-5",
+            "sentence": "I got to the party early than everyone else, so I had to wait.",
+            "errorStart": 22,
+            "errorEnd": 27,
+            "correctAnswer": "earlier",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              },
+              {
+                "w": "early",
+                "t": "erta",
+                "tr": "рано"
+              },
+              {
+                "w": "everyone else",
+                "t": "boshqalar",
+                "tr": "все остальные"
+              },
+              {
+                "w": "wait",
+                "t": "kutmoq",
+                "tr": "ждать"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-6",
+            "sentence": "I hear her new CD is good than her last one. What do you think?",
+            "errorStart": 23,
+            "errorEnd": 27,
+            "correctAnswer": "better",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "слышать"
+              },
+              {
+                "w": "good",
+                "t": "yaxshi",
+                "tr": "хороший"
+              },
+              {
+                "w": "last",
+                "t": "oxirgi",
+                "tr": "последний"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-7",
+            "sentence": "Our cat seems to be getting fat every day – maybe she should go on a diet!",
+            "errorStart": 34,
+            "errorEnd": 37,
+            "correctAnswer": "fatter",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "seems",
+                "t": "ko'rinmoq",
+                "tr": "казаться"
+              },
+              {
+                "w": "getting fat",
+                "t": "semirmoq",
+                "tr": "толстеть"
+              },
+              {
+                "w": "every day",
+                "t": "har kuni",
+                "tr": "каждый день"
+              },
+              {
+                "w": "diet",
+                "t": "parhez",
+                "tr": "диета"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex2-8",
+            "sentence": "I'm disappointed. I think you could have done a lot well on this test.",
+            "errorStart": 52,
+            "errorEnd": 56,
+            "correctAnswer": "better",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "disappointed",
+                "t": "xafa",
+                "tr": "разочарованный"
+              },
+              {
+                "w": "could have done",
+                "t": "qila olardi",
+                "tr": "мог бы сделать"
+              },
+              {
+                "w": "a lot",
+                "t": "ancha",
+                "tr": "намного"
+              },
+              {
+                "w": "well",
+                "t": "yaxshi",
+                "tr": "хорошо"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u26p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlarning to'g'ri qiyosiy shaklini ishlatib gaplarni qayta yozing.",
+      "instruction_ru": "Перепишите предложения, используя правильную сравнительную форму слов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "bad",
+          "beautiful",
+          "confident",
+          "fat",
+          "happy",
+          "near (to)",
+          "short",
+          "young"
+        ],
+        "cards": [
+          {
+            "id": "u26p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Joshua is much taller than Alex. Alex is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "much shorter than Joshua"
+            ],
+            "alternateAnswers": [
+              [
+                "shorter than Joshua"
+              ],
+              [
+                "a lot shorter than Joshua"
+              ]
+            ],
+            "words": [
+              {
+                "w": "taller",
+                "t": "balandroq",
+                "tr": "выше"
+              },
+              {
+                "w": "shorter",
+                "t": "pastroq",
+                "tr": "ниже/короче"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Theresa is more confident than Amy. Amy is a lot "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "less confident than Theresa"
+            ],
+            "words": [
+              {
+                "w": "confident",
+                "t": "o'ziga ishonchli",
+                "tr": "уверенный"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Your house is further from the school than mine. My house is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "nearer (to) the school than yours",
+              "nearer to the school than yours",
+              "closer to the school than yours"
+            ],
+            "alternateAnswers": [
+              [
+                "nearer (to) the school than yours"
+              ],
+              [
+                "nearer to the school than yours"
+              ],
+              [
+                "closer to the school than yours"
+              ]
+            ],
+            "words": [
+              {
+                "w": "further",
+                "t": "uzoqroq",
+                "tr": "дальше"
+              },
+              {
+                "w": "nearer",
+                "t": "yaqinroq",
+                "tr": "ближе"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jude is less happy than Andy about the decision. Andy is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "happier than Jude about the decision"
+            ],
+            "alternateAnswers": [
+              [
+                "a lot happier than Jude about the decision"
+              ],
+              [
+                "much happier than Jude about the decision"
+              ]
+            ],
+            "words": [
+              {
+                "w": "decision",
+                "t": "qaror",
+                "tr": "решение"
+              },
+              {
+                "w": "happy",
+                "t": "xursand",
+                "tr": "счастливый"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Bill is thinner than Simon. Simon is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "fatter than Bill"
+            ],
+            "alternateAnswers": [
+              [
+                "a lot fatter than Bill"
+              ],
+              [
+                "much fatter than Bill"
+              ]
+            ],
+            "words": [
+              {
+                "w": "thinner",
+                "t": "ozg'inroq",
+                "tr": "стройнее"
+              },
+              {
+                "w": "fatter",
+                "t": "semizroq",
+                "tr": "толще"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Terry is older than Sarah-Jane. Sarah-Jane is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "younger than Terry"
+            ],
+            "alternateAnswers": [
+              [
+                "a lot younger than Terry"
+              ],
+              [
+                "much younger than Terry"
+              ]
+            ],
+            "words": [
+              {
+                "w": "older",
+                "t": "kattaroq",
+                "tr": "старше"
+              },
+              {
+                "w": "younger",
+                "t": "yoshroq",
+                "tr": "моложе"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Patricia is better than her sister on the clarinet. Patricia's sister is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "worse than Patricia on the clarinet"
+            ],
+            "alternateAnswers": [
+              [
+                "a lot worse than Patricia on the clarinet"
+              ]
+            ],
+            "words": [
+              {
+                "w": "clarinet",
+                "t": "klarnet",
+                "tr": "кларнет"
+              },
+              {
+                "w": "worse",
+                "t": "yomonroq",
+                "tr": "хуже"
+              }
+            ]
+          },
+          {
+            "id": "u26p2-ex3-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The houses here are uglier than in my grandparents' village. The houses in my grandparents' village "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "are more beautiful than the ones here"
+            ],
+            "alternateAnswers": [
+              [
+                "are more beautiful than here"
+              ],
+              [
+                "are much more beautiful than the ones here"
+              ]
+            ],
+            "words": [
+              {
+                "w": "uglier",
+                "t": "xunukroq",
+                "tr": "уродливее"
+              },
+              {
+                "w": "grandparents",
+                "t": "buvilar",
+                "tr": "бабушка и дедушка"
+              },
+              {
+                "w": "village",
+                "t": "qishloq",
+                "tr": "деревня"
+              },
+              {
+                "w": "beautiful",
+                "t": "chiroyli",
+                "tr": "красивый"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

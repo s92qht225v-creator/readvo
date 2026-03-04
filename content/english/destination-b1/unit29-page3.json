@@ -1,0 +1,328 @@
+{
+  "id": "unit29-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u29p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Hikoyani o'qing va gaplarni to'ldiring.",
+      "instruction_ru": "Прочитайте рассказ и дополните предложения.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "passage": "Vida loved to keep fit. Whenever she could, she went to the gym after work. But one evening, Vida got home late. 'It's too late to go to the gym now,' she said to herself. 'I'll just watch TV instead.'\nShe made herself a nice, fresh, healthy salad and sat down in front of the TV. Suddenly, she saw something on TV that caught her attention. It was an advert for an exercise bike called the Fitmaster 5000.\n'That looks fantastic!' thought Vida. 'I think I'll buy that!'\nShe phoned the number and ordered the machine. It came the next day. It was much bigger than it looked on TV, and the only place Vida could put it was at the top of the stairs.\nShe loved the Fitmaster 5000 so much, though, that from that day on, she only exercised at home. She didn't go to the gym any more. She spent hours every evening on her exercise bike, and every evening she went faster and faster. One evening, she was going so fast that the exercise bike began to move forwards. Before she knew what had happened, she – and the bike – fell down the stairs. All sixteen of them. Right to the bottom. Ouch!\nThe Fitmaster 5000 was broken, and so was Vida's leg.\n'I think that's enough exercise for a while,' thought Vida, as she lay in her hospital bed. 'And that's enough watching adverts on TV too.'",
+        "cards": [
+          {
+            "id": "u29p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If Vida had got home earlier, she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the gym."
+              }
+            ],
+            "answers": [
+              "would have gone"
+            ],
+            "alternateAnswers": [
+              [
+                "'d have gone"
+              ]
+            ],
+            "words": [
+              {
+                "w": "get home",
+                "t": "uyga kelmoq",
+                "tr": "вернуться домой"
+              },
+              {
+                "w": "earlier",
+                "t": "ertaroq",
+                "tr": "раньше"
+              },
+              {
+                "w": "gym",
+                "t": "sport zali",
+                "tr": "спортзал"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If she'd gone to the gym that evening, she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " TV."
+              }
+            ],
+            "answers": [
+              "wouldn't have watched"
+            ],
+            "alternateAnswers": [
+              [
+                "would not have watched"
+              ]
+            ],
+            "words": [
+              {
+                "w": "gone to the gym",
+                "t": "sport zaliga bormoq",
+                "tr": "пойти в спортзал"
+              },
+              {
+                "w": "that evening",
+                "t": "o'sha kechqurun",
+                "tr": "тем вечером"
+              },
+              {
+                "w": "watch TV",
+                "t": "televizor ko'rmoq",
+                "tr": "смотреть телевизор"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If she hadn't watched TV, she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the advert."
+              }
+            ],
+            "answers": [
+              "wouldn't have seen"
+            ],
+            "alternateAnswers": [
+              [
+                "would not have seen"
+              ]
+            ],
+            "words": [
+              {
+                "w": "watch TV",
+                "t": "televizor ko'rmoq",
+                "tr": "смотреть телевизор"
+              },
+              {
+                "w": "advert",
+                "t": "reklama",
+                "tr": "реклама"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She wouldn't have bought the Fitmaster 5000 if she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the advert."
+              }
+            ],
+            "answers": [
+              "hadn't seen"
+            ],
+            "alternateAnswers": [
+              [
+                "had not seen"
+              ]
+            ],
+            "words": [
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "Fitmaster",
+                "t": "Fitmaster",
+                "tr": "Fitmaster"
+              },
+              {
+                "w": "advert",
+                "t": "reklama",
+                "tr": "реклама"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She wouldn't have put it at the top of the stairs if it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " so big."
+              }
+            ],
+            "answers": [
+              "hadn't been"
+            ],
+            "alternateAnswers": [
+              [
+                "had not been"
+              ]
+            ],
+            "words": [
+              {
+                "w": "put",
+                "t": "qo'ymoq",
+                "tr": "поставить"
+              },
+              {
+                "w": "top of the stairs",
+                "t": "zinapoya tepasi",
+                "tr": "верх лестницы"
+              },
+              {
+                "w": "big",
+                "t": "katta",
+                "tr": "большой"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She'd have continued going to the gym if she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the Fitmaster 5000."
+              }
+            ],
+            "answers": [
+              "hadn't bought"
+            ],
+            "alternateAnswers": [
+              [
+                "had not bought"
+              ]
+            ],
+            "words": [
+              {
+                "w": "continued",
+                "t": "davom ettirmoq",
+                "tr": "продолжать"
+              },
+              {
+                "w": "going to the gym",
+                "t": "sport zaliga bormoq",
+                "tr": "ходить в спортзал"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If she hadn't gone so fast, the bike "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " forwards."
+              }
+            ],
+            "answers": [
+              "wouldn't have moved"
+            ],
+            "alternateAnswers": [
+              [
+                "would not have moved"
+              ]
+            ],
+            "words": [
+              {
+                "w": "fast",
+                "t": "tez",
+                "tr": "быстро"
+              },
+              {
+                "w": "moved forwards",
+                "t": "oldinga siljib ketmoq",
+                "tr": "двигаться вперёд"
+              }
+            ]
+          },
+          {
+            "id": "u29p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If she hadn't fallen down the stairs, she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " her leg."
+              }
+            ],
+            "answers": [
+              "wouldn't have broken"
+            ],
+            "alternateAnswers": [
+              [
+                "would not have broken"
+              ]
+            ],
+            "words": [
+              {
+                "w": "fallen down the stairs",
+                "t": "zinapoyadan yiqilmoq",
+                "tr": "упасть с лестницы"
+              },
+              {
+                "w": "broken her leg",
+                "t": "oyog'ini sindirmoq",
+                "tr": "сломать ногу"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

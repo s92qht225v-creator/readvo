@@ -1,0 +1,115 @@
+{
+  "id": "unit13-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 13,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "Countable and uncountable nouns",
+    "titleTranslation_ru": "Countable and uncountable nouns"
+  },
+  "sections": [
+    {
+      "id": "u13p1-sec-countable1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Countable nouns",
+      "subheading_uz": "Sanaladigan otlar",
+      "subheading_ru": "Исчисляемые существительные",
+      "instruction": "Sanaladigan otlar birlik va ko'plik shaklga ega bo'lib, birlik yoki ko'plik fe'l bilan ishlatiladi.",
+      "instruction_ru": "Исчисляемые существительные имеют единственное и множественное число и сочетаются с глаголом в единственном или множественном числе.",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Countable nouns", "Example"],
+        "subHeaders": ["Sanaladigan otlar", "Misol"],
+        "subHeaders_ru": ["Исчисляемые существительные", "Пример"],
+        "rows": [
+          {
+            "cells": ["shop / shop**s**", "_There are over 100 **shops** in the new shopping centre._"],
+            "cells_uz": ["shop / shop**s**", "_Yangi savdo markazida 100 dan ortiq **do'kon** bor._"],
+            "cells_ru": ["shop / shop**s**", "_В новом торговом центре более 100 **магазинов**._"]
+          },
+          {
+            "cells": ["baby / bab**ies**", "_They've got some great toys for **babies** in there._"],
+            "cells_uz": ["baby / bab**ies**", "_U yerda **chaqaloqlar** uchun ajoyib o'yinchoqlar bor._"],
+            "cells_ru": ["baby / bab**ies**", "_Там есть отличные игрушки для **малышей**._"]
+          },
+          {
+            "cells": ["dish / dish**es**", "_We need to get some new **dishes** for this evening._"],
+            "cells_uz": ["dish / dish**es**", "_Bu kechga yangi **idishlar** olishimiz kerak._"],
+            "cells_ru": ["dish / dish**es**", "_Нам нужно купить новые **тарелки** на этот вечер._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Sanaladigan otlar bilan quyidagi so'zlarni ishlatamiz:\n• a, an\n• many\n• a few • one, two, etc",
+        "translation_ru": "С исчисляемыми существительными используем:\n• a, an\n• many\n• a few • one, two, etc"
+      }
+    },
+    {
+      "id": "u13p1-sec-watchout1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "Ba'zi sanaladigan otlarning ko'pligi noto'g'ri shaklda bo'ladi. Masalan:\n• one child, two **children**\n• one foot, two **feet**\n• one man, two **men**\n• one person, two **people**\n• one tooth, two **teeth**\n• one woman, two **women**",
+        "translation_ru": "Некоторые исчисляемые существительные образуют нестандартное множественное число. Например:\n• one child, two **children**\n• one foot, two **feet**\n• one man, two **men**\n• one person, two **people**\n• one tooth, two **teeth**\n• one woman, two **women**"
+      }
+    },
+    {
+      "id": "u13p1-sec-uncountable1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Uncountable nouns",
+      "subheading_uz": "Sanalmaydigan otlar",
+      "subheading_ru": "Неисчисляемые существительные",
+      "instruction": "Ba'zi otlarni sanaolmaymiz (sanalmaydigan otlar). Ular ko'plik shaklga ega emas va birlik fe'l bilan ishlatiladi, hatto -s bilan tugasa ham.",
+      "instruction_ru": "Некоторые существительные нельзя сосчитать (несчитаемые существительные). Они не имеют формы множественного числа и сочетаются с глаголом в единственном числе, даже если заканчиваются на -s.",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Some uncountable nouns", "Example"],
+        "subHeaders": ["Ba'zi sanalmaydigan otlar", "Misol"],
+        "subHeaders_ru": ["Некоторые несчитаемые существительные", "Пример"],
+        "rows": [
+          {
+            "cells": ["advice, bread, fruit, furniture, hair, homework, information, money, news, paper, rice, work", "_My **money is** in my wallet._\n\n_Your **hair is** really long!_\n\n_The **news was** a complete shock._"],
+            "cells_uz": ["maslahat, non, meva, mebel, soch, uy vazifasi, ma'lumot, pul, yangilik, qog'oz, guruch, ish", "_Mening **pulim** hamyonda._\n\n_Sening **sochingiz** juda uzun!_\n\n_Bu **yangilik** to'liq zarba bo'ldi._"],
+            "cells_ru": ["совет, хлеб, фрукты, мебель, волосы, домашнее задание, информация, деньги, новости, бумага, рис, работа", "_Мои **деньги** в кошельке._\n\n_Твои **волосы** очень длинные!_\n\n_Эта **новость** стала полной неожиданностью._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "Sanalmaydigan otlar bilan quyidagi so'zlarni ishlatamiz:\n• a little • much\n• a bit of • a piece of\n\nHam sanaladigan, ham sanalmaydigan otlar bilan:\n• a lot of • some • lots of • the\n\nSo'roq va inkor gaplarda sanaladigan ko'plik va sanalmaydigan otlar bilan any ishlatiladi:\n• _Have we got **any** homework today?_\n• _There aren't **any** eggs left._",
+        "translation_ru": "С несчитаемыми существительными используем:\n• a little • much\n• a bit of • a piece of\n\nС обоими типами существительных:\n• a lot of • some • lots of • the\n\nВ вопросах и отрицаниях с несчитаемыми и мн. ч. исчисляемых используем any:\n• _Have we got **any** homework today?_\n• _There aren't **any** eggs left._"
+      }
+    },
+    {
+      "id": "u13p1-sec-watchout2",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• Ba'zi sanalmaydigan otlar ko'plikda bo'lib, ko'plik fe'l bilan ishlatiladi. Quyidagi so'zlarga e'tibor bering:\n  - clothes — _Your clean **clothes are** on the bed._\n  - jeans — _Your new **jeans look** great!_\n\n• Ba'zi otlar bir ma'noda sanalmaydigan, boshqa ma'noda sanaladigan bo'ladi.\n  ✓ _Get me some **paper** when you go to the shops._ (= yozish uchun qog'oz to'plami)\n  ✓ _Get me **a paper** when you go to the shops._ (= gazeta)",
+        "translation_ru": "• Некоторые несчитаемые существительные стоят во множественном числе и сочетаются с глаголом мн. ч. Обратите внимание на следующие слова:\n  - clothes — _Your clean **clothes are** on the bed._\n  - jeans — _Your new **jeans look** great!_\n\n• Некоторые существительные в одном значении несчитаемые, а в другом — считаемые.\n  ✓ _Get me some **paper** when you go to the shops._ (= пачка бумаги для письма)\n  ✓ _Get me **a paper** when you go to the shops._ (= газета)"
+      }
+    }
+  ]
+}

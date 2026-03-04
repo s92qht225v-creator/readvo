@@ -1,0 +1,737 @@
+{
+  "id": "unit25-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u25p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "So yoki such bilan to'ldiring.",
+      "instruction_ru": "Заполните, используя so или such.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u25p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The pan was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " hot that I nearly dropped it!"
+              }
+            ],
+            "answers": [
+              "so"
+            ],
+            "words": [
+              {
+                "w": "pan",
+                "t": "tova",
+                "tr": "сковорода"
+              },
+              {
+                "w": "nearly",
+                "t": "deyarli",
+                "tr": "почти"
+              },
+              {
+                "w": "dropped",
+                "t": "tushirib yubormoq",
+                "tr": "уронить"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mr Jones was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a kind man that I was sad when he moved to another town."
+              }
+            ],
+            "answers": [
+              "such"
+            ],
+            "words": [
+              {
+                "w": "kind",
+                "t": "mehribon",
+                "tr": "добрый"
+              },
+              {
+                "w": "moved",
+                "t": "ko'chib ketmoq",
+                "tr": "переехать"
+              },
+              {
+                "w": "another town",
+                "t": "boshqa shahar",
+                "tr": "другой город"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " many pets that sometimes it's really noisy!"
+              }
+            ],
+            "answers": [
+              "so"
+            ],
+            "words": [
+              {
+                "w": "pets",
+                "t": "uy hayvonlari",
+                "tr": "домашние животные"
+              },
+              {
+                "w": "noisy",
+                "t": "shovqinli",
+                "tr": "шумный"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Alicia is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " good at basketball that I think she could be a professional."
+              }
+            ],
+            "answers": [
+              "so"
+            ],
+            "words": [
+              {
+                "w": "basketball",
+                "t": "basketbol",
+                "tr": "баскетбол"
+              },
+              {
+                "w": "professional",
+                "t": "professional",
+                "tr": "профессионал"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a lot of smoke that I couldn't see."
+              }
+            ],
+            "answers": [
+              "such"
+            ],
+            "words": [
+              {
+                "w": "smoke",
+                "t": "tutun",
+                "tr": "дым"
+              },
+              {
+                "w": "couldn't",
+                "t": "qilolmadim",
+                "tr": "не мог"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Tyrone ran "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fast that no one had a chance in the race."
+              }
+            ],
+            "answers": [
+              "so"
+            ],
+            "words": [
+              {
+                "w": "ran",
+                "t": "yugurmoq",
+                "tr": "бежать"
+              },
+              {
+                "w": "fast",
+                "t": "tez",
+                "tr": "быстро"
+              },
+              {
+                "w": "chance",
+                "t": "imkon",
+                "tr": "шанс"
+              },
+              {
+                "w": "race",
+                "t": "poyga",
+                "tr": "гонка"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Cherie is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " popular that everyone wants to be friends with her."
+              }
+            ],
+            "answers": [
+              "so"
+            ],
+            "words": [
+              {
+                "w": "popular",
+                "t": "mashhur",
+                "tr": "популярный"
+              },
+              {
+                "w": "friends",
+                "t": "do'st",
+                "tr": "друзья"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Would you like to have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " long hair that you can sit on it?"
+              }
+            ],
+            "answers": [
+              "such"
+            ],
+            "words": [
+              {
+                "w": "long hair",
+                "t": "uzun soch",
+                "tr": "длинные волосы"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p2-sec-exercise2",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qalin harfdagi ibora to'g'ri bo'lsa, belgi qo'ying (✓). Noto'g'ri bo'lsa, to'g'ri iborani yozing.",
+      "instruction_ru": "Если выделенная жирным фраза верна, поставьте галочку (✓). Если она неверна, напишите правильную фразу.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u25p2-ex2-1",
+            "sentence": "Paris Hilton is such famous that she gets recognised wherever she goes.",
+            "errorStart": 16,
+            "errorEnd": 28,
+            "correctAnswer": "so famous",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "famous",
+                "t": "mashhur",
+                "tr": "знаменитый"
+              },
+              {
+                "w": "recognised",
+                "t": "tanib olmoq",
+                "tr": "узнать"
+              },
+              {
+                "w": "wherever",
+                "t": "qaerda bo'lsa ham",
+                "tr": "где бы ни"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-2",
+            "sentence": "There were so many customers in the shop that I couldn't move!",
+            "errorStart": 11,
+            "errorEnd": 40,
+            "correctAnswer": "✓",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "customers",
+                "t": "mijozlar",
+                "tr": "покупатели"
+              },
+              {
+                "w": "shop",
+                "t": "do'kon",
+                "tr": "магазин"
+              },
+              {
+                "w": "move",
+                "t": "harakatlanmoq",
+                "tr": "двигаться"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-3",
+            "sentence": "The man spoke such quickly that I couldn't understand a word he said.",
+            "errorStart": 14,
+            "errorEnd": 26,
+            "correctAnswer": "so quickly",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "spoke",
+                "t": "gapirmoq",
+                "tr": "говорить"
+              },
+              {
+                "w": "quickly",
+                "t": "tez",
+                "tr": "быстро"
+              },
+              {
+                "w": "understand",
+                "t": "tushunmoq",
+                "tr": "понять"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-4",
+            "sentence": "I had so good marks that my dad bought me a new computer!",
+            "errorStart": 6,
+            "errorEnd": 18,
+            "correctAnswer": "such good marks",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "marks",
+                "t": "baholar",
+                "tr": "оценки"
+              },
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-5",
+            "sentence": "Victoria is so old that she can remember seeing a car for the first time.",
+            "errorStart": 13,
+            "errorEnd": 19,
+            "correctAnswer": "✓",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "remember",
+                "t": "eslemoq",
+                "tr": "помнить"
+              },
+              {
+                "w": "seeing",
+                "t": "ko'rmoq",
+                "tr": "видеть"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-6",
+            "sentence": "There was so a long queue that we decided to go home.",
+            "errorStart": 10,
+            "errorEnd": 24,
+            "correctAnswer": "such a long queue",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "queue",
+                "t": "navbat",
+                "tr": "очередь"
+              },
+              {
+                "w": "decided",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-7",
+            "sentence": "I've got so a lot of friends that I don't have time to see them all.",
+            "errorStart": 10,
+            "errorEnd": 23,
+            "correctAnswer": "such a lot of friends",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "got",
+                "t": "bor",
+                "tr": "есть"
+              },
+              {
+                "w": "friends",
+                "t": "do'stlar",
+                "tr": "друзья"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex2-8",
+            "sentence": "Big Brother was such successful that they're making another series.",
+            "errorStart": 15,
+            "errorEnd": 30,
+            "correctAnswer": "so successful",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "successful",
+                "t": "muvaffaqiyatli",
+                "tr": "успешный"
+              },
+              {
+                "w": "series",
+                "t": "serial",
+                "tr": "сериал"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u25p2-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zni ishlatib, ikkinchi jumlani birinchi jumla bilan bir xil ma'noga ega bo'lishi uchun to'ldiring. Ikki-besh so'z yozing.",
+      "instruction_ru": "Дополните второе предложение так, чтобы оно имело схожее значение с первым, используя данное слово. Напишите от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u25p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I have a lot of money and I don't know what to do with it. "
+              },
+              {
+                "type": "hint",
+                "content": "such"
+              },
+              {
+                "type": "text",
+                "content": "\nI have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that I don't know what to do with it."
+              }
+            ],
+            "answers": [
+              "such a lot of money"
+            ],
+            "words": [
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              },
+              {
+                "w": "know",
+                "t": "bilmoq",
+                "tr": "знать"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Adrian fell asleep during the film because he was very tired. "
+              },
+              {
+                "type": "hint",
+                "content": "so"
+              },
+              {
+                "type": "text",
+                "content": "\nAdrian was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " he fell asleep during the film."
+              }
+            ],
+            "answers": [
+              "so tired that"
+            ],
+            "words": [
+              {
+                "w": "fell asleep",
+                "t": "uxlab qolmoq",
+                "tr": "заснуть"
+              },
+              {
+                "w": "during",
+                "t": "davomida",
+                "tr": "во время"
+              },
+              {
+                "w": "tired",
+                "t": "charchagan",
+                "tr": "уставший"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Today was so hot that I didn't want to do anything. "
+              },
+              {
+                "type": "hint",
+                "content": "such"
+              },
+              {
+                "type": "text",
+                "content": "\nToday was "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that I didn't want to do anything."
+              }
+            ],
+            "answers": [
+              "such a hot day"
+            ],
+            "words": [
+              {
+                "w": "hot",
+                "t": "issiq",
+                "tr": "жарко"
+              },
+              {
+                "w": "anything",
+                "t": "hech narsa",
+                "tr": "ничего"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't have time to open all my Christmas presents because I got so many! "
+              },
+              {
+                "type": "hint",
+                "content": "such"
+              },
+              {
+                "type": "text",
+                "content": "\nI got "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Christmas presents that I didn't have time to open them all!"
+              }
+            ],
+            "answers": [
+              "such a lot of"
+            ],
+            "alternateAnswers": [
+              [
+                "so many"
+              ]
+            ],
+            "words": [
+              {
+                "w": "Christmas presents",
+                "t": "Rojdestvo sovg'alari",
+                "tr": "рождественские подарки"
+              },
+              {
+                "w": "open",
+                "t": "ochmoq",
+                "tr": "открыть"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They closed the funfair because it was very dangerous. "
+              },
+              {
+                "type": "hint",
+                "content": "that"
+              },
+              {
+                "type": "text",
+                "content": "\nThe funfair "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " they closed it."
+              }
+            ],
+            "answers": [
+              "was so dangerous that"
+            ],
+            "words": [
+              {
+                "w": "funfair",
+                "t": "ko'ngilochar park",
+                "tr": "парк аттракционов"
+              },
+              {
+                "w": "closed",
+                "t": "yopmoq",
+                "tr": "закрыть"
+              },
+              {
+                "w": "dangerous",
+                "t": "xavfli",
+                "tr": "опасный"
+              }
+            ]
+          },
+          {
+            "id": "u25p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The food was so spicy that I couldn't eat it. "
+              },
+              {
+                "type": "hint",
+                "content": "such"
+              },
+              {
+                "type": "text",
+                "content": "\nWe had "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that I couldn't eat it."
+              }
+            ],
+            "answers": [
+              "such spicy food"
+            ],
+            "words": [
+              {
+                "w": "spicy",
+                "t": "achchiq",
+                "tr": "острый"
+              },
+              {
+                "w": "food",
+                "t": "ovqat",
+                "tr": "еда"
+              },
+              {
+                "w": "couldn't",
+                "t": "qilolmadim",
+                "tr": "не мог"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

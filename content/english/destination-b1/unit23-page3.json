@@ -1,0 +1,439 @@
+{
+  "id": "unit23-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u23p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Question tag-larni to'ldiring.",
+      "instruction_ru": "Дополните вопросительные хвостики.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u23p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mark doesn't eat meat, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " he?"
+              }
+            ],
+            "answers": [
+              "does"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "eat meat",
+                "t": "go'sht yemoq",
+                "tr": "есть мясо"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We should phone Grandma, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " we?"
+              }
+            ],
+            "answers": [
+              "shouldn't"
+            ],
+            "alternateAnswers": [
+              [
+                "should not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "phone",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "Grandma",
+                "t": "buvi",
+                "tr": "бабушка"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't get you into trouble, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " I?"
+              }
+            ],
+            "answers": [
+              "did"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "get into trouble",
+                "t": "muammoga solib qo'ymoq",
+                "tr": "причинить неприятности"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You weren't waiting for me, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you?"
+              }
+            ],
+            "answers": [
+              "were"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "waiting for",
+                "t": "kutmoq",
+                "tr": "ждать"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jill has finished her homework, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " she?"
+              }
+            ],
+            "answers": [
+              "hasn't"
+            ],
+            "alternateAnswers": [
+              [
+                "has not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "finished",
+                "t": "tugatmoq",
+                "tr": "закончить"
+              },
+              {
+                "w": "homework",
+                "t": "uy vazifasi",
+                "tr": "домашнее задание"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You'll call me later, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you?"
+              }
+            ],
+            "answers": [
+              "won't"
+            ],
+            "alternateAnswers": [
+              [
+                "will not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "later",
+                "t": "keyinroq",
+                "tr": "позже"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Let's go out tonight, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " we?"
+              }
+            ],
+            "answers": [
+              "shall"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "go out",
+                "t": "chiqmoq",
+                "tr": "выйти"
+              },
+              {
+                "w": "tonight",
+                "t": "bu kecha",
+                "tr": "сегодня вечером"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm going to pass the exam, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " I?"
+              }
+            ],
+            "answers": [
+              "aren't"
+            ],
+            "alternateAnswers": [
+              [
+                "am not"
+              ]
+            ],
+            "words": [
+              {
+                "w": "pass the exam",
+                "t": "imtihondan o'tmoq",
+                "tr": "сдать экзамен"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u23p3-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u23p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Excuse me. Could you tell me how much "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "are these jeans",
+                  "these jeans are"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ", please?"
+              }
+            ],
+            "words": [
+              {
+                "w": "jeans",
+                "t": "jinsi shim",
+                "tr": "джинсы"
+              },
+              {
+                "w": "how much",
+                "t": "qancha",
+                "tr": "сколько стоит"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Can you let me know what time "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "does the train arrive",
+                  "the train arrives"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "words": [
+              {
+                "w": "train",
+                "t": "poyezd",
+                "tr": "поезд"
+              },
+              {
+                "w": "arrive",
+                "t": "kelmoq",
+                "tr": "прибывать"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you know if "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the show starts",
+                  "does the show start"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " at seven o'clock?"
+              }
+            ],
+            "words": [
+              {
+                "w": "show",
+                "t": "shou",
+                "tr": "шоу"
+              },
+              {
+                "w": "starts",
+                "t": "boshlanmoq",
+                "tr": "начинаться"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wonder if you could tell me what "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "is the difference",
+                  "the difference is"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "words": [
+              {
+                "w": "difference",
+                "t": "farq",
+                "tr": "разница"
+              }
+            ]
+          },
+          {
+            "id": "u23p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wonder if you know who "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "I should",
+                  "should I"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " ask."
+              }
+            ],
+            "words": [
+              {
+                "w": "ask",
+                "t": "so'ramoq",
+                "tr": "спросить"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

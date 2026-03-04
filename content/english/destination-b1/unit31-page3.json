@@ -1,0 +1,744 @@
+{
+  "id": "unit31-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u31p3-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir ikkinchi gapda noto'g'ri so'z yoki iborani toping va to'g'ri so'zni yozing.",
+      "instruction_ru": "В каждом втором предложении найдите ошибку и напишите правильное слово или фразу.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u31p3-ex1-1",
+            "sentence": "Martha said there had been a mouse in the kitchen.",
+            "errorStart": 18,
+            "errorEnd": 26,
+            "correctAnswer": "was",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "mouse",
+                "t": "sichqon",
+                "tr": "мышь"
+              },
+              {
+                "w": "kitchen",
+                "t": "oshxona",
+                "tr": "кухня"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex1-2",
+            "sentence": "Amy said they won every match that year.",
+            "errorStart": 14,
+            "errorEnd": 17,
+            "correctAnswer": "had won",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "won",
+                "t": "yutdi",
+                "tr": "выиграл"
+              },
+              {
+                "w": "match",
+                "t": "o'yin",
+                "tr": "матч"
+              },
+              {
+                "w": "every",
+                "t": "har bir",
+                "tr": "каждый"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex1-3",
+            "sentence": "Spencer said he had broken his leg two weeks ago.",
+            "errorStart": 45,
+            "errorEnd": 48,
+            "correctAnswer": "before",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "broken",
+                "t": "sindirgan",
+                "tr": "сломал"
+              },
+              {
+                "w": "leg",
+                "t": "oyoq",
+                "tr": "нога"
+              },
+              {
+                "w": "two weeks ago",
+                "t": "ikki hafta oldin",
+                "tr": "две недели назад"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex1-4",
+            "sentence": "Rory said he had heard the song before.",
+            "errorStart": 10,
+            "errorEnd": 12,
+            "correctAnswer": "they",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "heard",
+                "t": "eshitgan",
+                "tr": "слышал"
+              },
+              {
+                "w": "song",
+                "t": "qo'shiq",
+                "tr": "песня"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex1-5",
+            "sentence": "Dad said he was working since four o'clock.",
+            "errorStart": 12,
+            "errorEnd": 23,
+            "correctAnswer": "had been working",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "working",
+                "t": "ishlayapti",
+                "tr": "работающий"
+              },
+              {
+                "w": "since",
+                "t": "boshlab",
+                "tr": "с"
+              },
+              {
+                "w": "four o'clock",
+                "t": "to'rt soat",
+                "tr": "четыре часа"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex1-6",
+            "sentence": "Belinda said they have spent the next day by the swimming pool.",
+            "errorStart": 18,
+            "errorEnd": 28,
+            "correctAnswer": "were spending",
+            "alternateAnswers": [
+              "would spend"
+            ],
+            "words": [
+              {
+                "w": "spent",
+                "t": "o'tkazgan",
+                "tr": "провёл"
+              },
+              {
+                "w": "swimming pool",
+                "t": "suzish havzasi",
+                "tr": "бассейн"
+              },
+              {
+                "w": "the next day",
+                "t": "keyingi kun",
+                "tr": "на следующий день"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u31p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan kalit so'zdan foydalanib, birinchi jumlaga o'xshash ma'noda ikkinchi jumlani to'ldiring. Ikki dan besh tagacha so'z yozing.",
+      "instruction_ru": "Используя данное ключевое слово, заполните второе предложение так, чтобы оно имело похожее значение с первым. Напишите от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u31p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm going to bake a cake,' said Mum. "
+              },
+              {
+                "type": "hint",
+                "content": "she"
+              },
+              {
+                "type": "text",
+                "content": "\nMum said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to bake a cake."
+              }
+            ],
+            "answers": [
+              "she was going"
+            ],
+            "alternateAnswers": [
+              [
+                "she was going to bake a cake — she was going"
+              ]
+            ],
+            "words": [
+              {
+                "w": "bake a cake",
+                "t": "tort pishirmoq",
+                "tr": "печь торт"
+              },
+              {
+                "w": "going to",
+                "t": "... qilmoqchi",
+                "tr": "собираться"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Richard has passed his driving test,' Andy said. "
+              },
+              {
+                "type": "hint",
+                "content": "passed"
+              },
+              {
+                "type": "text",
+                "content": "\nAndy said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " his driving test."
+              }
+            ],
+            "answers": [
+              "Richard had passed"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "passed",
+                "t": "topshirdi",
+                "tr": "сдал"
+              },
+              {
+                "w": "driving test",
+                "t": "haydovchilik imtihoni",
+                "tr": "экзамен по вождению"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'We're staying in tonight to watch TV,' Jim said. "
+              },
+              {
+                "type": "hint",
+                "content": "that"
+              },
+              {
+                "type": "text",
+                "content": "\nJim said they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to watch TV."
+              }
+            ],
+            "answers": [
+              "were staying in that night"
+            ],
+            "alternateAnswers": [
+              [
+                "were staying in that evening"
+              ]
+            ],
+            "words": [
+              {
+                "w": "staying in",
+                "t": "uyda qolmoq",
+                "tr": "оставаться дома"
+              },
+              {
+                "w": "tonight",
+                "t": "bu kecha",
+                "tr": "сегодня вечером"
+              },
+              {
+                "w": "watch TV",
+                "t": "televizor ko'rmoq",
+                "tr": "смотреть телевизор"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm thinking of going on a diet,' said George. "
+              },
+              {
+                "type": "hint",
+                "content": "he"
+              },
+              {
+                "type": "text",
+                "content": "\nGeorge said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of going on a diet."
+              }
+            ],
+            "answers": [
+              "he was thinking"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "thinking of",
+                "t": "haqida o'ylayapti",
+                "tr": "думать о"
+              },
+              {
+                "w": "go on a diet",
+                "t": "parhez qilmoq",
+                "tr": "сесть на диету"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'My sister lived in Russia for a year,' Carol said. "
+              },
+              {
+                "type": "hint",
+                "content": "lived"
+              },
+              {
+                "type": "text",
+                "content": "\nCarol said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in Russia for a year."
+              }
+            ],
+            "answers": [
+              "her sister had lived"
+            ],
+            "alternateAnswers": [
+              [
+                "her sister lived"
+              ]
+            ],
+            "words": [
+              {
+                "w": "lived",
+                "t": "yashagan",
+                "tr": "жила"
+              },
+              {
+                "w": "Russia",
+                "t": "Rossiya",
+                "tr": "Россия"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I went snowboarding last year,' Jill said. "
+              },
+              {
+                "type": "hint",
+                "content": "year"
+              },
+              {
+                "type": "text",
+                "content": "\nJill said she "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " before."
+              }
+            ],
+            "answers": [
+              "had gone snowboarding the year"
+            ],
+            "alternateAnswers": [
+              [
+                "went snowboarding the year"
+              ]
+            ],
+            "words": [
+              {
+                "w": "went snowboarding",
+                "t": "snoubord uchdi",
+                "tr": "каталась на сноуборде"
+              },
+              {
+                "w": "last year",
+                "t": "o'tgan yil",
+                "tr": "в прошлом году"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'll call you tomorrow,' Karl said to me. "
+              },
+              {
+                "type": "hint",
+                "content": "next"
+              },
+              {
+                "type": "text",
+                "content": "\nKarl said he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " day."
+              }
+            ],
+            "answers": [
+              "would call me the next"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "tomorrow",
+                "t": "ertaga",
+                "tr": "завтра"
+              },
+              {
+                "w": "the next day",
+                "t": "keyingi kun",
+                "tr": "на следующий день"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'We're flying home next week,' said Arthur. "
+              },
+              {
+                "type": "hint",
+                "content": "the"
+              },
+              {
+                "type": "text",
+                "content": "\nArthur said they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " week."
+              }
+            ],
+            "answers": [
+              "were flying home the following"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "flying home",
+                "t": "uyga uchmoq",
+                "tr": "лететь домой"
+              },
+              {
+                "w": "next week",
+                "t": "kelasi hafta",
+                "tr": "на следующей неделе"
+              },
+              {
+                "w": "the following week",
+                "t": "keyingi hafta",
+                "tr": "на следующей неделе"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u31p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan fe'ldan foydalanib, jumlalarni reported speech da qayta yozing.",
+      "instruction_ru": "Перепишите предложения в косвенной речи, используя данный глагол.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u31p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm sorry I told everyone your secret,' my sister said. "
+              },
+              {
+                "type": "hint",
+                "content": "apologised"
+              },
+              {
+                "type": "text",
+                "content": "\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "My sister apologised for telling everyone my secret."
+            ],
+            "alternateAnswers": [
+              [
+                "My sister apologised for telling everyone my secret"
+              ]
+            ],
+            "words": [
+              {
+                "w": "apologised",
+                "t": "kechirim so'radi",
+                "tr": "извинился"
+              },
+              {
+                "w": "secret",
+                "t": "sir",
+                "tr": "секрет"
+              },
+              {
+                "w": "told",
+                "t": "aytdi",
+                "tr": "рассказал"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I didn't give the money to John,' said Ali. "
+              },
+              {
+                "type": "hint",
+                "content": "denied"
+              },
+              {
+                "type": "text",
+                "content": "\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Ali denied giving the money to John."
+            ],
+            "alternateAnswers": [
+              [
+                "Ali denied giving the money to John"
+              ]
+            ],
+            "words": [
+              {
+                "w": "denied",
+                "t": "inkor qildi",
+                "tr": "отрицал"
+              },
+              {
+                "w": "give the money",
+                "t": "pulni bermoq",
+                "tr": "отдать деньги"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'll love you forever!' Francis said to Elizabeth. "
+              },
+              {
+                "type": "hint",
+                "content": "promised"
+              },
+              {
+                "type": "text",
+                "content": "\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Francis promised to love Elizabeth forever."
+            ],
+            "alternateAnswers": [
+              [
+                "Francis promised to love Elizabeth forever"
+              ]
+            ],
+            "words": [
+              {
+                "w": "promised",
+                "t": "va'da berdi",
+                "tr": "пообещал"
+              },
+              {
+                "w": "forever",
+                "t": "abadiy",
+                "tr": "навсегда"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'No, I won't open the door!' said Mandy. "
+              },
+              {
+                "type": "hint",
+                "content": "refused"
+              },
+              {
+                "type": "text",
+                "content": "\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Mandy refused to open the door."
+            ],
+            "alternateAnswers": [
+              [
+                "Mandy refused to open the door"
+              ]
+            ],
+            "words": [
+              {
+                "w": "refused",
+                "t": "rad etdi",
+                "tr": "отказалась"
+              },
+              {
+                "w": "open the door",
+                "t": "eshikni ochmoq",
+                "tr": "открыть дверь"
+              }
+            ]
+          },
+          {
+            "id": "u31p3-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Why don't we give Jenny a call?' Albert said. "
+              },
+              {
+                "type": "hint",
+                "content": "suggested"
+              },
+              {
+                "type": "text",
+                "content": "\n"
+              },
+              {
+                "type": "blank"
+              }
+            ],
+            "answers": [
+              "Albert suggested giving Jenny a call."
+            ],
+            "alternateAnswers": [
+              [
+                "Albert suggested calling Jenny.",
+                "Albert suggested giving Jenny a call"
+              ]
+            ],
+            "words": [
+              {
+                "w": "suggested",
+                "t": "taklif qildi",
+                "tr": "предложил"
+              },
+              {
+                "w": "give a call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

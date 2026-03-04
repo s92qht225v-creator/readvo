@@ -1,0 +1,827 @@
+{
+  "id": "unit24-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u24p2-sec-exercise1",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "instruction": "To'g'ri so'zni tanlang.",
+      "instruction_ru": "Выберите правильное слово.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u24p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is it "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "illegal",
+                  "familiar"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to drive without wearing a seatbelt?"
+              }
+            ],
+            "words": [
+              {
+                "w": "drive",
+                "t": "haydamoq",
+                "tr": "водить"
+              },
+              {
+                "w": "without",
+                "t": "siz",
+                "tr": "без"
+              },
+              {
+                "w": "wearing",
+                "t": "kiymoq",
+                "tr": "носить/надевать"
+              },
+              {
+                "w": "seatbelt",
+                "t": "xavfsizlik kamari",
+                "tr": "ремень безопасности"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Rob is very "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "typical",
+                  "responsible"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ". You can trust him completely."
+              }
+            ],
+            "words": [
+              {
+                "w": "trust",
+                "t": "ishonmoq",
+                "tr": "доверять"
+              },
+              {
+                "w": "completely",
+                "t": "to'liq/mutlaqo",
+                "tr": "полностью"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The area where I live has a lot of "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "illegal",
+                  "social"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " problems."
+              }
+            ],
+            "words": [
+              {
+                "w": "area",
+                "t": "hudud/joy",
+                "tr": "район"
+              },
+              {
+                "w": "problems",
+                "t": "muammolar",
+                "tr": "проблемы"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Her face looked "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "responsible",
+                  "familiar"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " but I wasn't sure who she was."
+              }
+            ],
+            "words": [
+              {
+                "w": "face",
+                "t": "yuz",
+                "tr": "лицо"
+              },
+              {
+                "w": "looked",
+                "t": "ko'rinmoq",
+                "tr": "выглядеть"
+              },
+              {
+                "w": "sure",
+                "t": "ishonch",
+                "tr": "уверен"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It was just another "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "typical",
+                  "social"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " day at the office."
+              }
+            ],
+            "words": [
+              {
+                "w": "just",
+                "t": "faqat/shunchaki",
+                "tr": "просто"
+              },
+              {
+                "w": "another",
+                "t": "yana bir",
+                "tr": "ещё один"
+              },
+              {
+                "w": "office",
+                "t": "ofis",
+                "tr": "офис"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u24p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavsdagi so'zlarning to'g'ri shaklini bo'sh joylarga yozing.",
+      "instruction_ru": "Вставьте правильную форму глаголов из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "admit",
+          "arrest",
+          "commit",
+          "protest",
+          "rob",
+          "steal",
+          "vote"
+        ],
+        "cards": [
+          {
+            "id": "u24p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You've never "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a crime, have you?"
+              }
+            ],
+            "answers": [
+              "committed"
+            ],
+            "words": [
+              {
+                "w": "never",
+                "t": "hech qachon",
+                "tr": "никогда"
+              },
+              {
+                "w": "crime",
+                "t": "jinoyat",
+                "tr": "преступление"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Most people who "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " banks get caught eventually."
+              }
+            ],
+            "answers": [
+              "rob"
+            ],
+            "words": [
+              {
+                "w": "most",
+                "t": "ko'pchilik",
+                "tr": "большинство"
+              },
+              {
+                "w": "people",
+                "t": "odamlar",
+                "tr": "люди"
+              },
+              {
+                "w": "banks",
+                "t": "banklar",
+                "tr": "банки"
+              },
+              {
+                "w": "caught",
+                "t": "ushlangan",
+                "tr": "пойманы"
+              },
+              {
+                "w": "eventually",
+                "t": "oxir-oqibat",
+                "tr": "в конечном счёте"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think we should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " about the council's plans to close the playground."
+              }
+            ],
+            "answers": [
+              "protest"
+            ],
+            "words": [
+              {
+                "w": "think",
+                "t": "o'ylamoq",
+                "tr": "думать"
+              },
+              {
+                "w": "should",
+                "t": "kerak",
+                "tr": "следует"
+              },
+              {
+                "w": "council",
+                "t": "mahalliy kengash",
+                "tr": "совет/муниципалитет"
+              },
+              {
+                "w": "plans",
+                "t": "rejalar",
+                "tr": "планы"
+              },
+              {
+                "w": "close",
+                "t": "yopmoq",
+                "tr": "закрыть"
+              },
+              {
+                "w": "playground",
+                "t": "o'yin maydoni",
+                "tr": "детская площадка"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "John finally "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that he had broken the window after all."
+              }
+            ],
+            "answers": [
+              "admitted"
+            ],
+            "words": [
+              {
+                "w": "finally",
+                "t": "nihoyat",
+                "tr": "наконец"
+              },
+              {
+                "w": "broken",
+                "t": "sindirgan",
+                "tr": "разбил"
+              },
+              {
+                "w": "window",
+                "t": "oyna",
+                "tr": "окно"
+              },
+              {
+                "w": "after all",
+                "t": "oxir-oqibat",
+                "tr": "всё-таки"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you didn't have enough money for food, would you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " from a supermarket?"
+              }
+            ],
+            "answers": [
+              "steal"
+            ],
+            "words": [
+              {
+                "w": "enough",
+                "t": "yetarli",
+                "tr": "достаточно"
+              },
+              {
+                "w": "money",
+                "t": "pul",
+                "tr": "деньги"
+              },
+              {
+                "w": "food",
+                "t": "oziq-ovqat",
+                "tr": "еда"
+              },
+              {
+                "w": "supermarket",
+                "t": "supermarket",
+                "tr": "супермаркет"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A man has been "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in connection with the bank robbery last Tuesday."
+              }
+            ],
+            "answers": [
+              "arrested"
+            ],
+            "words": [
+              {
+                "w": "man",
+                "t": "erkak",
+                "tr": "мужчина"
+              },
+              {
+                "w": "connection",
+                "t": "bog'liq",
+                "tr": "в связи"
+              },
+              {
+                "w": "bank robbery",
+                "t": "bank talaon",
+                "tr": "ограбление банка"
+              },
+              {
+                "w": "last Tuesday",
+                "t": "o'tgan seshanba",
+                "tr": "в прошлый вторник"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Are you going to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in the local elections next week?"
+              }
+            ],
+            "answers": [
+              "vote"
+            ],
+            "words": [
+              {
+                "w": "going to",
+                "t": "niyat qilmoq",
+                "tr": "собираться"
+              },
+              {
+                "w": "local",
+                "t": "mahalliy",
+                "tr": "местный"
+              },
+              {
+                "w": "elections",
+                "t": "saylovlar",
+                "tr": "выборы"
+              },
+              {
+                "w": "next week",
+                "t": "keyingi hafta",
+                "tr": "на следующей неделе"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u24p2-sec-exercise3",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "instruction": "Jumlalarni to'ldiring.",
+      "instruction_ru": "Составьте предложения.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u24p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Someone has broken "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "into my car and stolen the CD player.",
+                  "those plates up, aren't you?"
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "someone",
+                "t": "kimdir",
+                "tr": "кто-то"
+              },
+              {
+                "w": "broken into",
+                "t": "buzib kirmoq",
+                "tr": "взломать"
+              },
+              {
+                "w": "stolen",
+                "t": "o'g'irlagan",
+                "tr": "украли"
+              },
+              {
+                "w": "CD player",
+                "t": "CD pleyer",
+                "tr": "CD-плеер"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I missed a few lessons but I'm catching "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "up with the rest of the class quite quickly.",
+                  "away with this!"
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "missed",
+                "t": "qoldirgan",
+                "tr": "пропустил"
+              },
+              {
+                "w": "lessons",
+                "t": "darslar",
+                "tr": "уроки"
+              },
+              {
+                "w": "catching up with",
+                "t": "yetib olmoq",
+                "tr": "догонять"
+              },
+              {
+                "w": "rest",
+                "t": "qolgan qismi",
+                "tr": "остальные"
+              },
+              {
+                "w": "class",
+                "t": "sinf",
+                "tr": "класс"
+              },
+              {
+                "w": "quickly",
+                "t": "tez",
+                "tr": "быстро"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You'll never get "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "away with this!",
+                  "up when the alarm clock rang this morning."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "never",
+                "t": "hech qachon",
+                "tr": "никогда"
+              },
+              {
+                "w": "get away with",
+                "t": "jazosiz qolmoq",
+                "tr": "остаться безнаказанным"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I didn't want to get "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "up when the alarm clock rang this morning.",
+                  "in next door today."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "didn't want",
+                "t": "istamaslik",
+                "tr": "не хотел"
+              },
+              {
+                "w": "alarm clock",
+                "t": "uyg'otuvchi soat",
+                "tr": "будильник"
+              },
+              {
+                "w": "rang",
+                "t": "jiringlamoq",
+                "tr": "зазвонил"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our new neighbours moved "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "in next door today.",
+                  "up, I realised I was late for school."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "new",
+                "t": "yangi",
+                "tr": "новые"
+              },
+              {
+                "w": "neighbours",
+                "t": "qo'shnilar",
+                "tr": "соседи"
+              },
+              {
+                "w": "moved in",
+                "t": "ko'chib kirmoq",
+                "tr": "въехать"
+              },
+              {
+                "w": "next door",
+                "t": "qo'shni",
+                "tr": "по соседству"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you want me to help you put "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "all these clothes away?",
+                  "those plates up, aren't you?"
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помочь"
+              },
+              {
+                "w": "put away",
+                "t": "joyiga qo'ymoq",
+                "tr": "убирать"
+              },
+              {
+                "w": "clothes",
+                "t": "kiyimlar",
+                "tr": "одежда"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When I woke "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "up, I realised I was late for school.",
+                  "away with this!"
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "woke up",
+                "t": "uyg'onmoq",
+                "tr": "проснулся"
+              },
+              {
+                "w": "realised",
+                "t": "anglamoq",
+                "tr": "понял"
+              },
+              {
+                "w": "late for school",
+                "t": "maktabga kech qolmoq",
+                "tr": "опоздал в школу"
+              }
+            ]
+          },
+          {
+            "id": "u24p2-ex3-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You're going to wash "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "those plates up, aren't you?",
+                  "in next door today."
+                ],
+                "correct": 0
+              }
+            ],
+            "words": [
+              {
+                "w": "going to",
+                "t": "niyat qilmoq",
+                "tr": "собираешься"
+              },
+              {
+                "w": "wash up",
+                "t": "idish yuvmoq",
+                "tr": "мыть посуду"
+              },
+              {
+                "w": "plates",
+                "t": "likoplar",
+                "tr": "тарелки"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

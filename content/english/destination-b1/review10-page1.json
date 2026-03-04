@@ -1,0 +1,1552 @@
+{
+  "id": "review10-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 10,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 28, 29 and 30",
+    "titleTranslation_ru": "Units 28, 29 and 30"
+  },
+  "sections": [
+    {
+      "id": "r10p1-sec-exA",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'zni doira ichiga oling.",
+      "instruction_ru": "Обведите правильное слово.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "r10p1-wc1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "1  You don't need to go on a "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "diet",
+                  "cure"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": ". You're not fat!"
+              }
+            ],
+            "words": [
+              {
+                "w": "diet",
+                "t": "parhez/dieta",
+                "tr": "диета"
+              },
+              {
+                "w": "cure",
+                "t": "davolash",
+                "tr": "лечение"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "2  "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "Chew",
+                  "Chop"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the meat into small pieces with a sharp knife."
+              }
+            ],
+            "words": [
+              {
+                "w": "chew",
+                "t": "chaynash",
+                "tr": "жевать"
+              },
+              {
+                "w": "chop",
+                "t": "to'g'ramoq",
+                "tr": "рубить"
+              },
+              {
+                "w": "sharp knife",
+                "t": "o'tkir pichoq",
+                "tr": "острый нож"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "3  What "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "infections",
+                  "ingredients"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " do we need for this recipe?"
+              }
+            ],
+            "words": [
+              {
+                "w": "infections",
+                "t": "kasalliklar/infeksiyalar",
+                "tr": "инфекции"
+              },
+              {
+                "w": "ingredients",
+                "t": "ingredientlar/tarkibiy qismlar",
+                "tr": "ингредиенты"
+              },
+              {
+                "w": "recipe",
+                "t": "retsept",
+                "tr": "рецепт"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "4  "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "Stir",
+                  "Slice"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " the soup with a wooden spoon."
+              }
+            ],
+            "words": [
+              {
+                "w": "stir",
+                "t": "aralashtirib qo'ymoq",
+                "tr": "мешать"
+              },
+              {
+                "w": "slice",
+                "t": "tilim qilmoq",
+                "tr": "нарезать"
+              },
+              {
+                "w": "wooden spoon",
+                "t": "yog'och qoshiq",
+                "tr": "деревянная ложка"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "5  If the grapefruit is too "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "sour",
+                  "spicy"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": ", add some sugar."
+              }
+            ],
+            "words": [
+              {
+                "w": "grapefruit",
+                "t": "greypfrut",
+                "tr": "грейпфрут"
+              },
+              {
+                "w": "sour",
+                "t": "nordon",
+                "tr": "кислый"
+              },
+              {
+                "w": "spicy",
+                "t": "achchiq/ziravorli",
+                "tr": "острый/пряный"
+              },
+              {
+                "w": "add",
+                "t": "qo'shing",
+                "tr": "добавьте"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "6  In "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "benefit",
+                  "comparison"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " to me, you get lots of exercise!"
+              }
+            ],
+            "words": [
+              {
+                "w": "benefit",
+                "t": "foyda",
+                "tr": "польза"
+              },
+              {
+                "w": "comparison",
+                "t": "taqqoslash",
+                "tr": "сравнение"
+              },
+              {
+                "w": "in comparison to",
+                "t": "nisbatan",
+                "tr": "по сравнению с"
+              },
+              {
+                "w": "get lots of exercise",
+                "t": "ko'p jismoniy mashq qilmoq",
+                "tr": "много заниматься спортом"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "7  Does this drink "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "limit",
+                  "contain"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " any sugar?"
+              }
+            ],
+            "words": [
+              {
+                "w": "limit",
+                "t": "cheklash",
+                "tr": "ограничивать"
+              },
+              {
+                "w": "contain",
+                "t": "o'z ichiga olmoq/tarkibida saqlash",
+                "tr": "содержать"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "8  Sam's in bed with "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "flu",
+                  "cough"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": ", so he's not going to school today."
+              }
+            ],
+            "words": [
+              {
+                "w": "flu",
+                "t": "gripp",
+                "tr": "грипп"
+              },
+              {
+                "w": "cough",
+                "t": "yo'tal",
+                "tr": "кашель"
+              },
+              {
+                "w": "in bed with",
+                "t": "kasal bo'lib yotmoq",
+                "tr": "лежит с"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "9  Have you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "suffered",
+                  "recovered"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " from bad headaches for a long time?"
+              }
+            ],
+            "words": [
+              {
+                "w": "suffered",
+                "t": "azob chekmoq",
+                "tr": "страдать"
+              },
+              {
+                "w": "recovered",
+                "t": "tuzalmoq",
+                "tr": "выздоравливать"
+              },
+              {
+                "w": "headaches",
+                "t": "bosh og'rig'i",
+                "tr": "головные боли"
+              }
+            ]
+          },
+          {
+            "id": "r10p1-wc10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "10  You shouldn't "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "affect",
+                  "ignore"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the problem. See a doctor!"
+              }
+            ],
+            "words": [
+              {
+                "w": "affect",
+                "t": "ta'sir qilmoq",
+                "tr": "влиять"
+              },
+              {
+                "w": "ignore",
+                "t": "e'tiborsiz qoldirmoq",
+                "tr": "игнорировать"
+              },
+              {
+                "w": "see a doctor",
+                "t": "shifokorga ko'rinmoq",
+                "tr": "обратиться к врачу"
+              }
+            ]
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r10p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan, bo'sh joyga to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте от слова, данного заглавными буквами в конце строки, нужную форму и впишите в пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r10-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "11  My skin is very "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "SENSE"
+              },
+              {
+                "type": "text",
+                "content": ", so I shouldn't stay out in the sun all day."
+              }
+            ],
+            "answers": [
+              "sensitive"
+            ],
+            "words": [
+              {
+                "w": "sensitive",
+                "t": "sezgir/nozik",
+                "tr": "чувствительный"
+              },
+              {
+                "w": "stay out in the sun",
+                "t": "quyoshda qolmoq",
+                "tr": "оставаться на солнце"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r10-b-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "12  Do you want to come "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "JOG"
+              },
+              {
+                "type": "text",
+                "content": " with me?"
+              }
+            ],
+            "answers": [
+              "jogging"
+            ],
+            "words": [
+              {
+                "w": "jogging",
+                "t": "yugurish/jog qilish",
+                "tr": "бег трусцой"
+              },
+              {
+                "w": "go jogging",
+                "t": "jog qilgani bormoq",
+                "tr": "пойти на пробежку"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r10-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "13  When I broke my arm, it was very "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "PAIN"
+              },
+              {
+                "type": "text",
+                "content": ", but now it doesn't hurt at all."
+              }
+            ],
+            "answers": [
+              "painful"
+            ],
+            "words": [
+              {
+                "w": "broke my arm",
+                "t": "qo'lim sindi",
+                "tr": "сломал руку"
+              },
+              {
+                "w": "painful",
+                "t": "og'riqli",
+                "tr": "болезненный"
+              },
+              {
+                "w": "hurt",
+                "t": "og'rish",
+                "tr": "болеть"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r10-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "14  There are lots of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "MEDICINE"
+              },
+              {
+                "type": "text",
+                "content": " encyclopaedias on the Internet."
+              }
+            ],
+            "answers": [
+              "medical"
+            ],
+            "words": [
+              {
+                "w": "medical",
+                "t": "tibbiy",
+                "tr": "медицинский"
+              },
+              {
+                "w": "encyclopaedias",
+                "t": "entsiklopediyalar",
+                "tr": "энциклопедии"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r10-b-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "15  What's the best way to lose "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "WEIGH"
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "answers": [
+              "weight"
+            ],
+            "words": [
+              {
+                "w": "lose weight",
+                "t": "vazn yo'qotmoq",
+                "tr": "похудеть"
+              },
+              {
+                "w": "the best way",
+                "t": "eng yaxshi yo'l",
+                "tr": "лучший способ"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r10-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "16  I put salt in the coffee by mistake! It wasn't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "INTEND"
+              },
+              {
+                "type": "text",
+                "content": "!"
+              }
+            ],
+            "answers": [
+              "intentional"
+            ],
+            "alternateAnswers": [
+              [
+                "intended"
+              ]
+            ],
+            "words": [
+              {
+                "w": "by mistake",
+                "t": "xato bilan/tasodifan",
+                "tr": "по ошибке"
+              },
+              {
+                "w": "intentional",
+                "t": "qasddan qilingan",
+                "tr": "намеренный"
+              },
+              {
+                "w": "intended",
+                "t": "mo'ljallangan",
+                "tr": "задуманный"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r10-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "17  All the knives and forks are "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "BEND"
+              },
+              {
+                "type": "text",
+                "content": ". We'll have to buy some new ones."
+              }
+            ],
+            "answers": [
+              "bent"
+            ],
+            "words": [
+              {
+                "w": "knives and forks",
+                "t": "pichoq va vilkalar",
+                "tr": "ножи и вилки"
+              },
+              {
+                "w": "bent",
+                "t": "egilgan/bukilgan",
+                "tr": "согнутый/кривой"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r10-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "18  My mum prefers cooking on a gas "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "COOK"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "cooker"
+            ],
+            "words": [
+              {
+                "w": "prefers",
+                "t": "afzal ko'radi",
+                "tr": "предпочитает"
+              },
+              {
+                "w": "gas cooker",
+                "t": "gaz plitasi",
+                "tr": "газовая плита"
+              }
+            ],
+            "number": 8
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r10p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r10-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "19  I think I've gained a few kilos over the last few months! "
+              },
+              {
+                "type": "hint",
+                "content": "on"
+              },
+              {
+                "type": "text",
+                "content": "\nI think I've "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a few kilos over the last few months!"
+              }
+            ],
+            "answers": [
+              "put on"
+            ],
+            "words": [
+              {
+                "w": "gained",
+                "t": "qo'shildi/ortdi",
+                "tr": "набрал"
+              },
+              {
+                "w": "put on",
+                "t": "qo'shmoq/orttirmoq",
+                "tr": "набрать (вес)"
+              },
+              {
+                "w": "kilos",
+                "t": "kilogram",
+                "tr": "килограмм"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r10-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "20  You should reduce the amount of fast food you eat. "
+              },
+              {
+                "type": "hint",
+                "content": "down"
+              },
+              {
+                "type": "text",
+                "content": "\nYou should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the amount of fast food you eat."
+              }
+            ],
+            "answers": [
+              "cut down on"
+            ],
+            "words": [
+              {
+                "w": "reduce",
+                "t": "kamaytirmoq",
+                "tr": "уменьшить"
+              },
+              {
+                "w": "cut down on",
+                "t": "miqdorini kamaytirmoq",
+                "tr": "сократить"
+              },
+              {
+                "w": "fast food",
+                "t": "tez taom",
+                "tr": "фастфуд"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r10-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "21  This milk isn't fresh, so I'll throw it away. "
+              },
+              {
+                "type": "hint",
+                "content": "gone"
+              },
+              {
+                "type": "text",
+                "content": "\nThis milk "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", so I'll throw it away."
+              }
+            ],
+            "answers": [
+              "has gone off"
+            ],
+            "words": [
+              {
+                "w": "fresh",
+                "t": "yangi/toza",
+                "tr": "свежий"
+              },
+              {
+                "w": "throw it away",
+                "t": "tashlab yubormoq",
+                "tr": "выбросить"
+              },
+              {
+                "w": "gone off",
+                "t": "buzilmoq/eskirmoq",
+                "tr": "испортиться"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r10-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "22  If I eat tomatoes, I get bad stomach problems. "
+              },
+              {
+                "type": "hint",
+                "content": "allergic"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " tomatoes; if I eat them, I get bad stomach problems."
+              }
+            ],
+            "answers": [
+              "am allergic to"
+            ],
+            "words": [
+              {
+                "w": "stomach problems",
+                "t": "me'da muammolari",
+                "tr": "проблемы с желудком"
+              },
+              {
+                "w": "allergic to",
+                "t": "allergiyasi bor",
+                "tr": "аллергия на"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r10-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "23  I hope your mum recovers from her illness soon. "
+              },
+              {
+                "type": "hint",
+                "content": "over"
+              },
+              {
+                "type": "text",
+                "content": "\nI hope your mum "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " her illness soon."
+              }
+            ],
+            "answers": [
+              "gets over"
+            ],
+            "words": [
+              {
+                "w": "recovers from",
+                "t": "tuzalmoq",
+                "tr": "выздоравливает от"
+              },
+              {
+                "w": "gets over",
+                "t": "bartaraf etmoq/tuzalmoq",
+                "tr": "оправляется от"
+              },
+              {
+                "w": "illness",
+                "t": "kasallik",
+                "tr": "болезнь"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r10-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "24  There are red spots all over her body. "
+              },
+              {
+                "type": "hint",
+                "content": "covered"
+              },
+              {
+                "type": "text",
+                "content": "\nHer body "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " red spots."
+              }
+            ],
+            "answers": [
+              "is covered in"
+            ],
+            "alternateAnswers": [
+              [
+                "is covered with"
+              ]
+            ],
+            "words": [
+              {
+                "w": "spots",
+                "t": "dog'lar/toshmalar",
+                "tr": "пятна/сыпь"
+              },
+              {
+                "w": "covered in",
+                "t": "qoplangan",
+                "tr": "покрытый"
+              },
+              {
+                "w": "all over",
+                "t": "hamma joyida",
+                "tr": "по всему"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r10-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "25  I like the new gym I'm going to. "
+              },
+              {
+                "type": "hint",
+                "content": "pleased"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the new gym I'm going to."
+              }
+            ],
+            "answers": [
+              "am pleased with"
+            ],
+            "words": [
+              {
+                "w": "gym",
+                "t": "sport zali",
+                "tr": "спортзал"
+              },
+              {
+                "w": "pleased with",
+                "t": "mamnun/xursand",
+                "tr": "доволен"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r10-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "26  Could you tell me how to make a really good curry? "
+              },
+              {
+                "type": "hint",
+                "content": "recipe"
+              },
+              {
+                "type": "text",
+                "content": "\nCould you give me "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a really good curry?"
+              }
+            ],
+            "answers": [
+              "the recipe for"
+            ],
+            "words": [
+              {
+                "w": "curry",
+                "t": "kari (ziravorli ovqat)",
+                "tr": "карри"
+              },
+              {
+                "w": "recipe for",
+                "t": "retsepti",
+                "tr": "рецепт для"
+              }
+            ],
+            "number": 16
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r10p2-sec-exD",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavs ichidagi fe'llarning to'g'ri shaklini qo'yib, gaplarni to'ldiring.",
+      "instruction_ru": "Вставьте правильную форму глагола в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r10-d-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "27  If I'm still ill tomorrow, I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "miss"
+              },
+              {
+                "type": "text",
+                "content": " the chemistry test!"
+              }
+            ],
+            "answers": [
+              "will miss"
+            ],
+            "words": [
+              {
+                "w": "still ill",
+                "t": "hali ham kasal",
+                "tr": "ещё болен"
+              },
+              {
+                "w": "will miss",
+                "t": "o'tkazib yuboraman",
+                "tr": "пропущу"
+              },
+              {
+                "w": "chemistry test",
+                "t": "kimyo testi",
+                "tr": "тест по химии"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r10-d-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "28  If I was your doctor, I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "tell"
+              },
+              {
+                "type": "text",
+                "content": " you to stop worrying!"
+              }
+            ],
+            "answers": [
+              "would tell"
+            ],
+            "words": [
+              {
+                "w": "would tell",
+                "t": "aytgan bo'lardim",
+                "tr": "сказал бы"
+              },
+              {
+                "w": "stop worrying",
+                "t": "tashvishlanishni to'xtat",
+                "tr": "перестань беспокоиться"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r10-d-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "29  It "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "be"
+              },
+              {
+                "type": "text",
+                "content": " awful if any of us had become ill on holiday."
+              }
+            ],
+            "answers": [
+              "would have been"
+            ],
+            "words": [
+              {
+                "w": "would have been",
+                "t": "bo'lgan bo'lardi",
+                "tr": "было бы"
+              },
+              {
+                "w": "awful",
+                "t": "dahshatli",
+                "tr": "ужасный"
+              },
+              {
+                "w": "on holiday",
+                "t": "ta'tilda",
+                "tr": "в отпуске"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r10-d-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "30  If you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "go"
+              },
+              {
+                "type": "text",
+                "content": " to the chemist's, can you get me some vitamin pills?"
+              }
+            ],
+            "answers": [
+              "go"
+            ],
+            "words": [
+              {
+                "w": "chemist's",
+                "t": "dorixona",
+                "tr": "аптека"
+              },
+              {
+                "w": "vitamin pills",
+                "t": "vitamin tabletkalar",
+                "tr": "витаминные таблетки"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r10-d-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "31  If you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "not / have"
+              },
+              {
+                "type": "text",
+                "content": " a healthy diet, you get tired easily."
+              }
+            ],
+            "answers": [
+              "don't have"
+            ],
+            "words": [
+              {
+                "w": "healthy diet",
+                "t": "sog'lom ovqatlanish",
+                "tr": "здоровое питание"
+              },
+              {
+                "w": "get tired easily",
+                "t": "tez charchamoq",
+                "tr": "легко устаёт"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r10-d-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "32  If he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "not / do"
+              },
+              {
+                "type": "text",
+                "content": " some research on the Internet, he wouldn't have found out what was wrong with him."
+              }
+            ],
+            "answers": [
+              "hadn't done"
+            ],
+            "words": [
+              {
+                "w": "research",
+                "t": "tadqiqot",
+                "tr": "исследование"
+              },
+              {
+                "w": "found out",
+                "t": "bilib olmoq",
+                "tr": "узнать"
+              },
+              {
+                "w": "what was wrong with him",
+                "t": "u bilan nima bo'layotganini",
+                "tr": "что с ним не так"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r10-d-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "33  It would be great if everyone in the world "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "have"
+              },
+              {
+                "type": "text",
+                "content": " enough to eat."
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "words": [
+              {
+                "w": "it would be great",
+                "t": "ajoyib bo'lardi",
+                "tr": "было бы здорово"
+              },
+              {
+                "w": "enough to eat",
+                "t": "yemoqqa yetarli",
+                "tr": "достаточно еды"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "r10-d-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "34  If you see the doctor, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "hint",
+                "content": "ask"
+              },
+              {
+                "type": "text",
+                "content": " her when you can go back to school!"
+              }
+            ],
+            "answers": [
+              "ask"
+            ],
+            "words": [
+              {
+                "w": "go back to school",
+                "t": "maktabga qaytmoq",
+                "tr": "вернуться в школу"
+              }
+            ],
+            "number": 24
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r10p2-sec-exE",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlardan foydalanib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Используйте слова из рамки, чтобы заполнить пропуски.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "addition",
+          "balance",
+          "exercise",
+          "fight",
+          "injury",
+          "operation",
+          "shape",
+          "treatment"
+        ],
+        "cards": [
+          {
+            "id": "r10-e-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Help yourself to stay healthy\n\nDoctors are useful. If you've had a/an (35) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " while doing sport, they can fix it. If you're ill, they can tell you what the best (36) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " is. If you're very ill, you might have to have a/an (37) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " in hospital. We need doctors for all of these things. But in (38) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to what doctors do, there are things that you can do yourself in the (39) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " against ill health. Getting regular (40) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at school or at a gym will help you to stay in (41) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". Having a healthy diet will also keep you strong. A healthy diet is all about (42) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". It doesn't mean never eating chocolate. It means not eating too much. And eating vegetables, too! The more we can look after ourselves, the less we'll need doctors to look after us. And that must be good!"
+              }
+            ],
+            "answers": [
+              "injury",
+              "treatment",
+              "operation",
+              "addition",
+              "fight",
+              "exercise",
+              "shape",
+              "balance"
+            ],
+            "words": [
+              {
+                "w": "injury",
+                "t": "jarohat/shikast",
+                "tr": "травма"
+              },
+              {
+                "w": "treatment",
+                "t": "davolash",
+                "tr": "лечение"
+              },
+              {
+                "w": "operation",
+                "t": "operatsiya/jarrohlik",
+                "tr": "операция"
+              },
+              {
+                "w": "in addition to",
+                "t": "qo'shimcha ravishda",
+                "tr": "в дополнение к"
+              },
+              {
+                "w": "fight against",
+                "t": "kurash",
+                "tr": "борьба против"
+              },
+              {
+                "w": "exercise",
+                "t": "jismoniy mashq",
+                "tr": "упражнение/физкультура"
+              },
+              {
+                "w": "in shape",
+                "t": "shakl/forma saqlash",
+                "tr": "в форме"
+              },
+              {
+                "w": "balance",
+                "t": "muvozanat",
+                "tr": "баланс"
+              },
+              {
+                "w": "look after",
+                "t": "g'amxo'rlik qilmoq",
+                "tr": "заботиться"
+              },
+              {
+                "w": "ourselves",
+                "t": "o'zimiz haqimizda",
+                "tr": "о себе"
+              }
+            ],
+            "number": ""
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

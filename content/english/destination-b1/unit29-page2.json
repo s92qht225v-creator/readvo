@@ -1,0 +1,520 @@
+{
+  "id": "unit29-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u29p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qavslar ichidagi so'zlarning to'g'ri shaklini yozing.",
+      "instruction_ru": "Вставьте правильную форму слов в скобках.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u29p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me you were going to the beach, I'd have come with you. "
+              },
+              {
+                "type": "hint",
+                "content": "tell"
+              }
+            ],
+            "answers": [
+              "had told"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "tell",
+                "t": "aytmoq",
+                "tr": "сказать"
+              },
+              {
+                "w": "going to the beach",
+                "t": "plyajga bormoq",
+                "tr": "идти на пляж"
+              },
+              {
+                "w": "come with",
+                "t": "birga bormoq",
+                "tr": "пойти вместе"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If Dan had missed the plane, he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " very annoyed. "
+              },
+              {
+                "type": "hint",
+                "content": "be"
+              }
+            ],
+            "answers": [
+              "would have been"
+            ],
+            "alternateAnswers": [
+              [
+                "'d have been"
+              ]
+            ],
+            "words": [
+              {
+                "w": "missed",
+                "t": "o'tkazib yubormoq",
+                "tr": "пропустить"
+              },
+              {
+                "w": "plane",
+                "t": "samolyot",
+                "tr": "самолёт"
+              },
+              {
+                "w": "annoyed",
+                "t": "xafa",
+                "tr": "раздражённый"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'd have got you a present if I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it was your birthday. "
+              },
+              {
+                "type": "hint",
+                "content": "know"
+              }
+            ],
+            "answers": [
+              "had known"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "got a present",
+                "t": "sovg'a olmoq",
+                "tr": "купить подарок"
+              },
+              {
+                "w": "birthday",
+                "t": "tug'ilgan kun",
+                "tr": "день рождения"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " lost if we'd taken a map with us. "
+              },
+              {
+                "type": "hint",
+                "content": "not / get"
+              }
+            ],
+            "answers": [
+              "wouldn't have got"
+            ],
+            "alternateAnswers": [
+              [
+                "wouldn't have gotten",
+                "would not have got",
+                "would not have gotten"
+              ]
+            ],
+            "words": [
+              {
+                "w": "get lost",
+                "t": "adashmoq",
+                "tr": "заблудиться"
+              },
+              {
+                "w": "taken a map",
+                "t": "xarita olmoq",
+                "tr": "взять карту"
+              },
+              {
+                "w": "with us",
+                "t": "biz bilan",
+                "tr": "с собой"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If the car "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", I wouldn't have been late. "
+              },
+              {
+                "type": "hint",
+                "content": "not / break down"
+              }
+            ],
+            "answers": [
+              "hadn't broken down"
+            ],
+            "alternateAnswers": [
+              [
+                "had not broken down"
+              ]
+            ],
+            "words": [
+              {
+                "w": "break down",
+                "t": "buzilmoq",
+                "tr": "сломаться"
+              },
+              {
+                "w": "late",
+                "t": "kech",
+                "tr": "опоздать"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " me, I wouldn't have finished in time. "
+              },
+              {
+                "type": "hint",
+                "content": "not / help"
+              }
+            ],
+            "answers": [
+              "hadn't helped"
+            ],
+            "alternateAnswers": [
+              [
+                "had not helped"
+              ]
+            ],
+            "words": [
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помочь"
+              },
+              {
+                "w": "finished in time",
+                "t": "o'z vaqtida tugatmoq",
+                "tr": "закончить вовремя"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If Baz "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you what to do, what "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "? "
+              },
+              {
+                "type": "hint",
+                "content": "not / show"
+              },
+              {
+                "type": "text",
+                "content": " "
+              },
+              {
+                "type": "hint",
+                "content": "you / do"
+              }
+            ],
+            "answers": [
+              "hadn't shown",
+              "would you have done"
+            ],
+            "alternateAnswers": [
+              [
+                "had not shown"
+              ],
+              []
+            ],
+            "words": [
+              {
+                "w": "show",
+                "t": "ko'rsatmoq",
+                "tr": "показать"
+              },
+              {
+                "w": "what to do",
+                "t": "nima qilishni",
+                "tr": "что делать"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u29p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Ikkinchi gapni birinchi gapga o'xshash ma'noda to'ldiring. Ikki yoki uch so'z yozing.",
+      "instruction_ru": "Дополните второе предложение так, чтобы оно имело похожее значение с первым. Напишите от двух до пяти слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u29p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It wasn't cold, so we didn't light a fire.\nIf it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cold, we'd have lit a fire."
+              }
+            ],
+            "answers": [
+              "had been"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "cold",
+                "t": "sovuq",
+                "tr": "холодный"
+              },
+              {
+                "w": "light a fire",
+                "t": "olov yoqmoq",
+                "tr": "разжечь огонь"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "John didn't come, so we didn't do any painting.\nIf John "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", we'd have done some painting."
+              }
+            ],
+            "answers": [
+              "had come"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "come",
+                "t": "kelmoq",
+                "tr": "прийти"
+              },
+              {
+                "w": "painting",
+                "t": "rasm chizmoq",
+                "tr": "рисовать"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Claire didn't buy any clothes because she didn't see anything she liked.\nClaire "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " some clothes if she'd seen something she liked."
+              }
+            ],
+            "answers": [
+              "would have bought"
+            ],
+            "alternateAnswers": [
+              [
+                "'d have bought"
+              ]
+            ],
+            "words": [
+              {
+                "w": "buy clothes",
+                "t": "kiyim sotib olmoq",
+                "tr": "купить одежду"
+              },
+              {
+                "w": "seen something she liked",
+                "t": "yoqqan narsani ko'rmoq",
+                "tr": "увидеть что-то понравившееся"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The audience laughed because the joke was very funny.\nIf the joke "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " very funny, the audience wouldn't have laughed."
+              }
+            ],
+            "answers": [
+              "hadn't been"
+            ],
+            "alternateAnswers": [
+              [
+                "had not been"
+              ]
+            ],
+            "words": [
+              {
+                "w": "audience",
+                "t": "tomoshabinlar",
+                "tr": "аудитория"
+              },
+              {
+                "w": "laughed",
+                "t": "kulmoq",
+                "tr": "смеяться"
+              },
+              {
+                "w": "joke",
+                "t": "hazil",
+                "tr": "шутка"
+              },
+              {
+                "w": "funny",
+                "t": "kulgili",
+                "tr": "смешной"
+              }
+            ]
+          },
+          {
+            "id": "u29p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We decided to leave because it was really noisy.\nWe "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to leave if it hadn't been really noisy."
+              }
+            ],
+            "answers": [
+              "wouldn't have decided"
+            ],
+            "alternateAnswers": [
+              [
+                "would not have decided"
+              ]
+            ],
+            "words": [
+              {
+                "w": "decided to leave",
+                "t": "ketishga qaror qilmoq",
+                "tr": "решить уйти"
+              },
+              {
+                "w": "noisy",
+                "t": "shovqinli",
+                "tr": "шумный"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

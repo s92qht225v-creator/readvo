@@ -1,0 +1,638 @@
+{
+  "id": "unit35-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u35p3-sec-exercise1",
+      "type": "errorcorrection",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapda qalin yozilgan so'z yoki ibora noto'g'ri. To'g'ri so'z yoki iborani yozing.",
+      "instruction_ru": "Слова и фразы, выделенные жирным шрифтом, неправильные. Напишите правильное слово или фразу.",
+      "sentences": [],
+      "errorCorrectionData": {
+        "cards": [
+          {
+            "id": "u35p3-ex1-1",
+            "sentence": "I wish I can speak German, but I never learnt it at school.",
+            "errorStart": 9,
+            "errorEnd": 12,
+            "correctAnswer": "could",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "speak",
+                "t": "gapirmoq",
+                "tr": "говорить"
+              },
+              {
+                "w": "German",
+                "t": "nemis tili",
+                "tr": "немецкий язык"
+              },
+              {
+                "w": "learnt",
+                "t": "o'rgandim",
+                "tr": "учил"
+              },
+              {
+                "w": "school",
+                "t": "maktab",
+                "tr": "школа"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-2",
+            "sentence": "I wish you will put your toys away! It's not difficult!",
+            "errorStart": 11,
+            "errorEnd": 15,
+            "correctAnswer": "would",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "put away",
+                "t": "yig'ishtirib qo'ymoq",
+                "tr": "убирать"
+              },
+              {
+                "w": "toys",
+                "t": "o'yinchoqlar",
+                "tr": "игрушки"
+              },
+              {
+                "w": "difficult",
+                "t": "qiyin",
+                "tr": "трудный"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-3",
+            "sentence": "Do you sometimes wish you can fly?",
+            "errorStart": 26,
+            "errorEnd": 29,
+            "correctAnswer": "could",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "sometimes",
+                "t": "ba'zida",
+                "tr": "иногда"
+              },
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "fly",
+                "t": "uchmoq",
+                "tr": "летать"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-4",
+            "sentence": "I wish I won't lie to me all the time!",
+            "errorStart": 9,
+            "errorEnd": 14,
+            "correctAnswer": "didn't",
+            "alternateAnswers": [
+              "wouldn't"
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "lie",
+                "t": "yolg'on aytmoq",
+                "tr": "лгать"
+              },
+              {
+                "w": "all the time",
+                "t": "doim",
+                "tr": "всё время"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-5",
+            "sentence": "I wish the neighbours won't make so much noise.",
+            "errorStart": 22,
+            "errorEnd": 27,
+            "correctAnswer": "wouldn't",
+            "alternateAnswers": [
+              "didn't"
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "neighbours",
+                "t": "qo'shnilar",
+                "tr": "соседи"
+              },
+              {
+                "w": "noise",
+                "t": "shovqin",
+                "tr": "шум"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-6",
+            "sentence": "If only she will ask me to go to the disco with her!",
+            "errorStart": 12,
+            "errorEnd": 16,
+            "correctAnswer": "would",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "if only",
+                "t": "qaniydi",
+                "tr": "если бы только"
+              },
+              {
+                "w": "ask",
+                "t": "taklif qilmoq",
+                "tr": "пригласить"
+              },
+              {
+                "w": "disco",
+                "t": "diskoteka",
+                "tr": "дискотека"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex1-7",
+            "sentence": "If only you can come with us!",
+            "errorStart": 12,
+            "errorEnd": 15,
+            "correctAnswer": "could",
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "if only",
+                "t": "qaniydi",
+                "tr": "если бы только"
+              },
+              {
+                "w": "come with",
+                "t": "birga kelmoq",
+                "tr": "прийти вместе"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u35p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u35p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " an MP3 player."
+              }
+            ],
+            "answers": [
+              "had"
+            ],
+            "alternateAnswers": [
+              [
+                "have",
+                "would have"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "MP3 player",
+                "t": "MP3 pleyer",
+                "tr": "MP3-плеер"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We all wish Tim "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with the housework."
+              }
+            ],
+            "answers": [
+              "would help"
+            ],
+            "alternateAnswers": [
+              [
+                "helped"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "housework",
+                "t": "uy ishlari",
+                "tr": "работа по дому"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to buy a lottery ticket last night."
+              }
+            ],
+            "answers": [
+              "had remembered"
+            ],
+            "alternateAnswers": [
+              [
+                "remembered"
+              ]
+            ],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "remember",
+                "t": "eslamoq",
+                "tr": "вспомнить"
+              },
+              {
+                "w": "lottery ticket",
+                "t": "lotereya chiptasi",
+                "tr": "лотерейный билет"
+              },
+              {
+                "w": "last night",
+                "t": "kecha kechqurun",
+                "tr": "вчера вечером"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " live so far away."
+              }
+            ],
+            "answers": [
+              "didn't"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "live",
+                "t": "yashash",
+                "tr": "жить"
+              },
+              {
+                "w": "far away",
+                "t": "uzoqda",
+                "tr": "далеко"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish they "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " keep changing the time of this programme."
+              }
+            ],
+            "answers": [
+              "wouldn't"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "keep changing",
+                "t": "doim o'zgartirmoq",
+                "tr": "постоянно менять"
+              },
+              {
+                "w": "programme",
+                "t": "dastur",
+                "tr": "программа"
+              }
+            ]
+          },
+          {
+            "id": "u35p3-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you wish you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to help Michael in the shop last weekend?"
+              }
+            ],
+            "answers": [
+              "hadn't offered"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "wish",
+                "t": "istamoq",
+                "tr": "желать"
+              },
+              {
+                "w": "offer",
+                "t": "taklif qilmoq",
+                "tr": "предложить"
+              },
+              {
+                "w": "last weekend",
+                "t": "o'tgan dam olish kunlari",
+                "tr": "в прошлые выходные"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u35p3-sec-exercise3",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u35p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wish today (1) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "has",
+                  "had"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " never happened! If only I (2) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "could",
+                  "would"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " start the day again, I'd do everything differently. Why did I forget to set the alarm last night? I really wish I (3) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "haven't",
+                  "hadn't"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " done that! I also wish I (4) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "live",
+                  "lived"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " nearer the Earth. It takes such a long time to get there from Mars – especially when the traffic is bad. (5) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "If only",
+                  "Only if"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " I (6) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "have",
+                  "had"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " a faster spaceship. Anyway, the point is, I was late for my job interview. The first question they asked was why I wanted to be an Environmental Officer on the moon. Do you know what I said? Because I really wanted to look at the aliens in the Super Alien Zoo. Oh, I wish I (7) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "didn't say",
+                  "hadn't said"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " that. Why am I so stupid? I (8) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "wish",
+                  "hope"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " now that I'd never applied for the job in the first place. I'm sure I won't get the job. I just (9) "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "wish",
+                  "hope"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " tomorrow is better than today was."
+              }
+            ],
+            "words": [
+              {
+                "w": "happened",
+                "t": "sodir bo'lmoq",
+                "tr": "случилось"
+              },
+              {
+                "w": "differently",
+                "t": "boshqacha",
+                "tr": "иначе"
+              },
+              {
+                "w": "alarm",
+                "t": "signalizatsiya",
+                "tr": "будильник"
+              },
+              {
+                "w": "nearer",
+                "t": "yaqinroq",
+                "tr": "ближе"
+              },
+              {
+                "w": "traffic",
+                "t": "trafik",
+                "tr": "трафик"
+              },
+              {
+                "w": "spaceship",
+                "t": "kosmik kema",
+                "tr": "космический корабль"
+              },
+              {
+                "w": "job interview",
+                "t": "ish suhbati",
+                "tr": "собеседование"
+              },
+              {
+                "w": "Environmental Officer",
+                "t": "ekologiya bo'yicha mutaxassis",
+                "tr": "инспектор по охране окружающей среды"
+              },
+              {
+                "w": "aliens",
+                "t": "begona mavjudotlar",
+                "tr": "инопланетяне"
+              },
+              {
+                "w": "stupid",
+                "t": "ahmoq",
+                "tr": "глупый"
+              },
+              {
+                "w": "applied",
+                "t": "murojaat qilmoq",
+                "tr": "подать заявку"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

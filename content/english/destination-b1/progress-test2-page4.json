@@ -1,0 +1,393 @@
+{
+  "id": "progress-test2-page4",
+  "pageNumber": 4,
+  "lessonHeader": {
+    "lessonNumber": 2,
+    "pinyin": "",
+    "title": "Progress Test",
+    "titleTranslation": "Units 22-42",
+    "titleTranslation_ru": "Units 22-42"
+  },
+  "sections": [
+    {
+      "id": "pt2p4-sec-exH",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "H",
+      "subheading_uz": "H",
+      "subheading_ru": "H",
+      "instruction": "Qutidagi so'zlardan foydalanib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски словами из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": ["diet", "distance", "fashion", "least", "mistake", "strike", "tears", "touch"],
+        "cards": [
+          {
+            "id": "card67",
+            "parts": [
+              { "type": "text", "content": "Do you think I need to go on a " },
+              { "type": "blank" },
+              { "type": "text", "content": "?" }
+            ],
+            "answers": ["diet"],
+            "words": [
+              { "w": "go on a diet", "t": "parhez tutmoq", "tr": "сидеть на диете" }
+            ]
+          },
+          {
+            "id": "card68",
+            "parts": [
+              { "type": "text", "content": "John was in " },
+              { "type": "blank" },
+              { "type": "text", "content": " earlier. Do you know why he was crying?" }
+            ],
+            "answers": ["tears"],
+            "words": [
+              { "w": "in tears", "t": "yig'lab", "tr": "в слезах" }
+            ]
+          },
+          {
+            "id": "card69",
+            "parts": [
+              { "type": "text", "content": "Wearing clothes that are in " },
+              { "type": "blank" },
+              { "type": "text", "content": " isn't very important to me." }
+            ],
+            "answers": ["fashion"],
+            "words": [
+              { "w": "in fashion", "t": "modada", "tr": "в моде" },
+              { "w": "wearing clothes", "t": "kiyim kiyish", "tr": "носить одежду" }
+            ]
+          },
+          {
+            "id": "card70",
+            "parts": [
+              { "type": "text", "content": "We could give Doug a long way ahead in the " },
+              { "type": "blank" },
+              { "type": "text", "content": "." }
+            ],
+            "answers": ["distance"],
+            "words": [
+              { "w": "in the distance", "t": "uzoqda", "tr": "вдали" }
+            ]
+          },
+          {
+            "id": "card71",
+            "parts": [
+              { "type": "text", "content": "I failed the history test, but at " },
+              { "type": "blank" },
+              { "type": "text", "content": " I passed the geography test." }
+            ],
+            "answers": ["least"],
+            "words": [
+              { "w": "at least", "t": "kamida / hech bo'lmasa", "tr": "по крайней мере" },
+              { "w": "failed", "t": "qoldi (imtihonda)", "tr": "провалить" },
+              { "w": "geography test", "t": "geografiya imtihoni", "tr": "тест по географии" }
+            ]
+          },
+          {
+            "id": "card72",
+            "parts": [
+              { "type": "text", "content": "I did the wrong exercise by " },
+              { "type": "blank" },
+              { "type": "text", "content": "." }
+            ],
+            "answers": ["mistake"],
+            "words": [
+              { "w": "by mistake", "t": "xato bo'lib", "tr": "по ошибке" },
+              { "w": "wrong exercise", "t": "noto'g'ri mashq", "tr": "неправильное упражнение" }
+            ]
+          },
+          {
+            "id": "card73",
+            "parts": [
+              { "type": "text", "content": "Are you still in " },
+              { "type": "blank" },
+              { "type": "text", "content": " with your friends from your old school?" }
+            ],
+            "answers": ["touch"],
+            "words": [
+              { "w": "in touch with", "t": "aloqada bo'lmoq", "tr": "поддерживать связь" },
+              { "w": "old school", "t": "eski maktab", "tr": "прежняя школа" }
+            ]
+          },
+          {
+            "id": "card74",
+            "parts": [
+              { "type": "text", "content": "The bus drivers are on " },
+              { "type": "blank" },
+              { "type": "text", "content": " today, so there are no buses." }
+            ],
+            "answers": ["strike"],
+            "words": [
+              { "w": "on strike", "t": "ish tashlash", "tr": "в забастовке" },
+              { "w": "bus drivers", "t": "avtobus haydovchilari", "tr": "водители автобусов" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt2p4-sec-exI",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "I",
+      "subheading_uz": "I",
+      "subheading_ru": "I",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Напишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card75",
+            "parts": [
+              { "type": "text", "content": "I wonder who's going to move " },
+              { "type": "blank" },
+              { "type": "text", "content": " next door." }
+            ],
+            "answers": ["in"],
+            "words": [
+              { "w": "move in", "t": "ko'chib kirmoq", "tr": "въезжать" },
+              { "w": "next door", "t": "qo'shni", "tr": "по соседству" }
+            ]
+          },
+          {
+            "id": "card76",
+            "parts": [
+              { "type": "text", "content": "We'll have to put the match " },
+              { "type": "blank" },
+              { "type": "text", "content": " until next Saturday." }
+            ],
+            "answers": ["off"],
+            "words": [
+              { "w": "put off", "t": "kechiktirmoq", "tr": "перенести" },
+              { "w": "match", "t": "o'yin / match", "tr": "матч" }
+            ]
+          },
+          {
+            "id": "card77",
+            "parts": [
+              { "type": "text", "content": "I'm going to cut " },
+              { "type": "blank" },
+              { "type": "text", "content": " on the amount of coffee I drink." }
+            ],
+            "answers": ["down"],
+            "words": [
+              { "w": "cut down on", "t": "kamaytirmoq", "tr": "сократить" },
+              { "w": "amount", "t": "miqdor", "tr": "количество" }
+            ]
+          },
+          {
+            "id": "card78",
+            "parts": [
+              { "type": "text", "content": "We filled the car " },
+              { "type": "blank" },
+              { "type": "text", "content": " with petrol before leaving." }
+            ],
+            "answers": ["up"],
+            "words": [
+              { "w": "fill up", "t": "to'ldirmoq", "tr": "заправить" },
+              { "w": "petrol", "t": "benzin", "tr": "бензин" }
+            ]
+          },
+          {
+            "id": "card79",
+            "parts": [
+              { "type": "text", "content": "Excuse me, can I try these shoes " },
+              { "type": "blank" },
+              { "type": "text", "content": ", please?" }
+            ],
+            "answers": ["on"],
+            "words": [
+              { "w": "try on", "t": "kiyib ko'rmoq", "tr": "примерить" },
+              { "w": "shoes", "t": "oyoq kiyim", "tr": "туфли / ботинки" }
+            ]
+          },
+          {
+            "id": "card80",
+            "parts": [
+              { "type": "text", "content": "I'm going to put that poster " },
+              { "type": "blank" },
+              { "type": "text", "content": " on my bedroom wall." }
+            ],
+            "answers": ["up"],
+            "words": [
+              { "w": "put up", "t": "ilib qo'ymoq", "tr": "повесить" },
+              { "w": "poster", "t": "plakat", "tr": "плакат" },
+              { "w": "bedroom wall", "t": "yotoqxona devori", "tr": "стена спальни" }
+            ]
+          },
+          {
+            "id": "card81",
+            "parts": [
+              { "type": "text", "content": "Hang " },
+              { "type": "blank" },
+              { "type": "text", "content": "! I'm not quite ready yet." }
+            ],
+            "answers": ["on"],
+            "words": [
+              { "w": "hang on", "t": "bir daqiqa kuting", "tr": "подождите" },
+              { "w": "not quite ready", "t": "hali tayyor emas", "tr": "ещё не готов" }
+            ]
+          },
+          {
+            "id": "card82",
+            "parts": [
+              { "type": "text", "content": "Watch " },
+              { "type": "blank" },
+              { "type": "text", "content": "! There's a car coming!" }
+            ],
+            "answers": ["out"],
+            "words": [
+              { "w": "watch out", "t": "ehtiyot bo'ling", "tr": "осторожно" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pt2p4-sec-exJ",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "J",
+      "subheading_uz": "J",
+      "subheading_ru": "J",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "pt2p4-q83",
+            "number": 83,
+            "parts": [
+              { "type": "text", "content": "I'm going to have a part in the play, " },
+              { "type": "blank" },
+              { "type": "text", "content": " I?" }
+            ],
+            "options": [
+              { "label": "A", "word": "am not", "pinyin": "" },
+              { "label": "B", "word": "don't", "pinyin": "" },
+              { "label": "C", "word": "haven't", "pinyin": "" },
+              { "label": "D", "word": "aren't", "pinyin": "" }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "pt2p4-q84",
+            "number": 84,
+            "parts": [
+              { "type": "text", "content": "Sophie " },
+              { "type": "blank" },
+              { "type": "text", "content": " have been ill today because she didn't come to school." }
+            ],
+            "options": [
+              { "label": "A", "word": "can't", "pinyin": "" },
+              { "label": "B", "word": "should", "pinyin": "" },
+              { "label": "C", "word": "must", "pinyin": "" },
+              { "label": "D", "word": "would", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt2p4-q85",
+            "number": 85,
+            "parts": [
+              { "type": "text", "content": "I'm " },
+              { "type": "blank" },
+              { "type": "text", "content": " to go on holiday on my own! I'm nineteen!" }
+            ],
+            "options": [
+              { "label": "A", "word": "so old", "pinyin": "" },
+              { "label": "B", "word": "such an old", "pinyin": "" },
+              { "label": "C", "word": "too old", "pinyin": "" },
+              { "label": "D", "word": "old enough", "pinyin": "" }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "pt2p4-q86",
+            "number": 86,
+            "parts": [
+              { "type": "text", "content": "My MP3 player is better " },
+              { "type": "blank" },
+              { "type": "text", "content": " yours!" }
+            ],
+            "options": [
+              { "label": "A", "word": "from", "pinyin": "" },
+              { "label": "B", "word": "to", "pinyin": "" },
+              { "label": "C", "word": "than", "pinyin": "" },
+              { "label": "D", "word": "that", "pinyin": "" }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "pt2p4-q87",
+            "number": 87,
+            "parts": [
+              { "type": "text", "content": "If you " },
+              { "type": "blank" },
+              { "type": "text", "content": " helped me, I would never have finished on time." }
+            ],
+            "options": [
+              { "label": "A", "word": "hadn't", "pinyin": "" },
+              { "label": "B", "word": "haven't", "pinyin": "" },
+              { "label": "C", "word": "don't", "pinyin": "" },
+              { "label": "D", "word": "wouldn't", "pinyin": "" }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "pt2p4-q88",
+            "number": 88,
+            "parts": [
+              { "type": "text", "content": "Carol asked me if you " },
+              { "type": "blank" },
+              { "type": "text", "content": " the film." }
+            ],
+            "options": [
+              { "label": "A", "word": "already see", "pinyin": "" },
+              { "label": "B", "word": "had already seen", "pinyin": "" },
+              { "label": "C", "word": "already saw", "pinyin": "" },
+              { "label": "D", "word": "has already seen", "pinyin": "" }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "pt2p4-q89",
+            "number": 89,
+            "parts": [
+              { "type": "text", "content": "I wish you " },
+              { "type": "blank" },
+              { "type": "text", "content": " be quiet for five minutes!" }
+            ],
+            "options": [
+              { "label": "A", "word": "must", "pinyin": "" },
+              { "label": "B", "word": "would", "pinyin": "" },
+              { "label": "C", "word": "can", "pinyin": "" },
+              { "label": "D", "word": "should", "pinyin": "" }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "pt2p4-q90",
+            "number": 90,
+            "parts": [
+              { "type": "text", "content": "We were made " },
+              { "type": "blank" },
+              { "type": "text", "content": " up all the mess we'd made." }
+            ],
+            "options": [
+              { "label": "A", "word": "clear", "pinyin": "" },
+              { "label": "B", "word": "to clear", "pinyin": "" },
+              { "label": "C", "word": "clearing", "pinyin": "" },
+              { "label": "D", "word": "cleared", "pinyin": "" }
+            ],
+            "correctOptionLabel": "B"
+          }
+        ]
+      }
+    }
+  ]
+}

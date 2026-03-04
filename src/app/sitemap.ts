@@ -18,13 +18,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     loadFlashcardDeck('hsk1'),
   ]);
 
-  // Static pages
+  // Grammar pages
+  const grammarPages: MetadataRoute.Sitemap = ['shi', 'you', 'zai', 'de', 'bu', 'ma', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci'].map((slug) => ({
+    url: `${siteUrl}/chinese/hsk1/grammar/${slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Static pages (/chinese/hsk1/dialogues removed — now redirects to /chinese?tab=dialogues)
   const staticPages: MetadataRoute.Sitemap = [
     { url: siteUrl, changeFrequency: 'monthly', priority: 1 },
     { url: `${siteUrl}/chinese`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/chinese/hsk1`, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${siteUrl}/chinese/hsk1/flashcards`, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${siteUrl}/chinese/hsk1/dialogues`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/chinese/hsk2/stories`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/english`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/english/destination-b1`, changeFrequency: 'monthly', priority: 0.7 },
@@ -75,6 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...grammarPages,
     ...lessonPages,
     ...englishPages,
     ...dialoguePages,

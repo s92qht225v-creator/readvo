@@ -1,0 +1,1785 @@
+{
+  "id": "review6-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 6,
+    "pinyin": "",
+    "title": "Review",
+    "titleTranslation": "Units 16, 17 and 18",
+    "titleTranslation_ru": "Units 16, 17 and 18"
+  },
+  "sections": [
+    {
+      "id": "r6p1-sec-exA",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Berilgan so'zdan foydalanib, ikkinchi gapni birinchi gap ma'nosiga yaqin qilib to'ldiring. 2 dan 5 tagacha so'z yozing.",
+      "instruction_ru": "Используя данное слово, дополните второе предложение так, чтобы оно было близко по смыслу к первому. Напишите от 2 до 5 слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r6-a-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I found the photo by chance when I was tidying my room. "
+              },
+              {
+                "type": "hint",
+                "content": "across"
+              },
+              {
+                "type": "text",
+                "content": "\nI "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the photo when I was tidying my room."
+              }
+            ],
+            "answers": [
+              "came across"
+            ],
+            "words": [
+              {
+                "w": "found",
+                "t": "topdim",
+                "tr": "нашёл"
+              },
+              {
+                "w": "by chance",
+                "t": "tasodifan",
+                "tr": "случайно"
+              },
+              {
+                "w": "tidying my room",
+                "t": "xonamni tartibga solish",
+                "tr": "убираясь в комнате"
+              },
+              {
+                "w": "came across",
+                "t": "tasodifan topdim",
+                "tr": "наткнулся на"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "r6-a-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Fridges and freezers are not the same thing. "
+              },
+              {
+                "type": "hint",
+                "content": "difference"
+              },
+              {
+                "type": "text",
+                "content": "\nThere "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " fridges and freezers."
+              }
+            ],
+            "answers": [
+              "is a difference between"
+            ],
+            "words": [
+              {
+                "w": "fridges",
+                "t": "muzlatgichlar",
+                "tr": "холодильники"
+              },
+              {
+                "w": "freezers",
+                "t": "muzlatgich-muzlatgichlar",
+                "tr": "морозильники"
+              },
+              {
+                "w": "not the same",
+                "t": "bir xil emas",
+                "tr": "не одно и то же"
+              },
+              {
+                "w": "a difference between",
+                "t": "o'rtasida farq",
+                "tr": "разница между"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "r6-a-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Scientists should never invent their results. "
+              },
+              {
+                "type": "hint",
+                "content": "made"
+              },
+              {
+                "type": "text",
+                "content": "\nResults should never "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " scientists."
+              }
+            ],
+            "answers": [
+              "be made up by"
+            ],
+            "words": [
+              {
+                "w": "invent their results",
+                "t": "natijalarini to'qib chiqarmoq",
+                "tr": "выдумывать результаты"
+              },
+              {
+                "w": "should never",
+                "t": "hech qachon ... bo'lmasligi kerak",
+                "tr": "никогда не должны"
+              },
+              {
+                "w": "made up by",
+                "t": "tomonidan to'qib chiqarilgan",
+                "tr": "выдуманы"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "r6-a-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Don't put those plastic bags in the bin – use them again! "
+              },
+              {
+                "type": "hint",
+                "content": "away"
+              },
+              {
+                "type": "text",
+                "content": "\nDon't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " – use them again!"
+              }
+            ],
+            "answers": [
+              "throw them away"
+            ],
+            "alternateAnswers": [
+              [
+                "throw those plastic bags away"
+              ]
+            ],
+            "words": [
+              {
+                "w": "plastic bags",
+                "t": "plastik xaltalar",
+                "tr": "пластиковые пакеты"
+              },
+              {
+                "w": "bin",
+                "t": "axlat qutisi",
+                "tr": "мусорное ведро"
+              },
+              {
+                "w": "throw away",
+                "t": "tashlash",
+                "tr": "выбросить"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "r6-a-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our car stopped working on the motorway, so we had to call a mechanic. "
+              },
+              {
+                "type": "hint",
+                "content": "down"
+              },
+              {
+                "type": "text",
+                "content": "\nWe had to call a mechanic when our car "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " on the motorway."
+              }
+            ],
+            "answers": [
+              "broke down"
+            ],
+            "words": [
+              {
+                "w": "stopped working",
+                "t": "ishlamaydigan bo'ldi",
+                "tr": "перестала работать"
+              },
+              {
+                "w": "motorway",
+                "t": "avtomobil yo'li",
+                "tr": "автострада"
+              },
+              {
+                "w": "mechanic",
+                "t": "mexanik",
+                "tr": "механик"
+              },
+              {
+                "w": "broke down",
+                "t": "buzildi",
+                "tr": "сломалась"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "r6-a-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "A new medicine was developed because of the work Dr Wang did. "
+              },
+              {
+                "type": "hint",
+                "content": "resulted"
+              },
+              {
+                "type": "text",
+                "content": "\nDr Wang's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a new medicine being developed."
+              }
+            ],
+            "answers": [
+              "work resulted in"
+            ],
+            "words": [
+              {
+                "w": "was developed",
+                "t": "ishlab chiqildi",
+                "tr": "было разработано"
+              },
+              {
+                "w": "because of",
+                "t": "tufayli",
+                "tr": "благодаря"
+              },
+              {
+                "w": "resulted in",
+                "t": "olib keldi",
+                "tr": "привело к"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "r6-a-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There are quite a few things that I'd like to invent! "
+              },
+              {
+                "type": "hint",
+                "content": "number"
+              },
+              {
+                "type": "text",
+                "content": "\nThere are "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " things that I'd like to invent!"
+              }
+            ],
+            "answers": [
+              "a number of"
+            ],
+            "words": [
+              {
+                "w": "quite a few",
+                "t": "ancha ko'p",
+                "tr": "довольно много"
+              },
+              {
+                "w": "invent",
+                "t": "ixtiro qilmoq",
+                "tr": "изобрести"
+              },
+              {
+                "w": "a number of",
+                "t": "bir qancha",
+                "tr": "ряд/несколько"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "r6-a-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Make sure you fill the bottle with water before you start the experiment. "
+              },
+              {
+                "type": "hint",
+                "content": "full"
+              },
+              {
+                "type": "text",
+                "content": "\nMake sure the bottle "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " water before you start the experiment."
+              }
+            ],
+            "answers": [
+              "is full of"
+            ],
+            "words": [
+              {
+                "w": "fill",
+                "t": "to'ldirmoq",
+                "tr": "наполнить"
+              },
+              {
+                "w": "bottle",
+                "t": "shisha",
+                "tr": "бутылка"
+              },
+              {
+                "w": "experiment",
+                "t": "tajriba",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "full of",
+                "t": "to'la",
+                "tr": "полна"
+              }
+            ],
+            "number": 8
+          }
+        ]
+      },
+      "exerciseLetter": "A"
+    },
+    {
+      "id": "r6p1-sec-exB",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Вставьте по одному слову в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r6-b-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Turn all the lights "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " when you leave the room. We don't want to waste electricity!"
+              }
+            ],
+            "answers": [
+              "off"
+            ],
+            "words": [
+              {
+                "w": "turn off",
+                "t": "o'chirmoq",
+                "tr": "выключить"
+              },
+              {
+                "w": "leave the room",
+                "t": "xonadan chiqib ketmoq",
+                "tr": "покидать комнату"
+              },
+              {
+                "w": "waste",
+                "t": "isrof qilmoq",
+                "tr": "тратить впустую"
+              },
+              {
+                "w": "electricity",
+                "t": "elektr energiyasi",
+                "tr": "электричество"
+              }
+            ],
+            "number": 9
+          },
+          {
+            "id": "r6-b-2",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my opinion, modern technology has improved all our lives."
+              }
+            ],
+            "answers": [
+              "In"
+            ],
+            "alternateAnswers": [
+              [
+                "in"
+              ]
+            ],
+            "words": [
+              {
+                "w": "in my opinion",
+                "t": "mening fikrimcha",
+                "tr": "по моему мнению"
+              },
+              {
+                "w": "modern technology",
+                "t": "zamonaviy texnologiya",
+                "tr": "современные технологии"
+              },
+              {
+                "w": "improved",
+                "t": "yaxshiladi",
+                "tr": "улучшила"
+              }
+            ],
+            "number": 10
+          },
+          {
+            "id": "r6-b-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you disconnect your laptop "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the Internet when you've finished checking your e-mail?"
+              }
+            ],
+            "answers": [
+              "from"
+            ],
+            "words": [
+              {
+                "w": "disconnect",
+                "t": "uzmoq",
+                "tr": "отключить"
+              },
+              {
+                "w": "laptop",
+                "t": "noutbuk",
+                "tr": "ноутбук"
+              },
+              {
+                "w": "finished",
+                "t": "tugatdingiz",
+                "tr": "закончили"
+              },
+              {
+                "w": "checking",
+                "t": "tekshirish",
+                "tr": "проверять"
+              }
+            ],
+            "number": 11
+          },
+          {
+            "id": "r6-b-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We thought the experiment would work, but "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the end it didn't."
+              }
+            ],
+            "answers": [
+              "in"
+            ],
+            "words": [
+              {
+                "w": "thought",
+                "t": "o'ylagandik",
+                "tr": "думали"
+              },
+              {
+                "w": "experiment",
+                "t": "tajriba",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "in the end",
+                "t": "oxir-oqibat",
+                "tr": "в конце концов"
+              }
+            ],
+            "number": 12
+          },
+          {
+            "id": "r6-b-5",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " last, someone has built a battery-powered skateboard!"
+              }
+            ],
+            "answers": [
+              "At"
+            ],
+            "alternateAnswers": [
+              [
+                "at"
+              ]
+            ],
+            "words": [
+              {
+                "w": "at last",
+                "t": "nihoyat",
+                "tr": "наконец-то"
+              },
+              {
+                "w": "built",
+                "t": "qurdi",
+                "tr": "построил"
+              },
+              {
+                "w": "battery-powered",
+                "t": "batareyali",
+                "tr": "на батарейках"
+              },
+              {
+                "w": "skateboard",
+                "t": "skeytbord",
+                "tr": "скейтборд"
+              }
+            ],
+            "number": 13
+          },
+          {
+            "id": "r6-b-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How many different types "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " building can you think of?"
+              }
+            ],
+            "answers": [
+              "of"
+            ],
+            "words": [
+              {
+                "w": "types of",
+                "t": "turlari",
+                "tr": "виды"
+              },
+              {
+                "w": "building",
+                "t": "bino",
+                "tr": "здание"
+              },
+              {
+                "w": "think of",
+                "t": "eslamoq",
+                "tr": "вспомнить"
+              }
+            ],
+            "number": 14
+          },
+          {
+            "id": "r6-b-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "That programme is about to start, so I'll turn "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the TV."
+              }
+            ],
+            "answers": [
+              "on"
+            ],
+            "words": [
+              {
+                "w": "programme",
+                "t": "dastur",
+                "tr": "программа"
+              },
+              {
+                "w": "about to start",
+                "t": "boshlanmoqchi",
+                "tr": "вот-вот начнётся"
+              },
+              {
+                "w": "turn on",
+                "t": "yoqmoq",
+                "tr": "включить"
+              }
+            ],
+            "number": 15
+          },
+          {
+            "id": "r6-b-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Ice floats in water. Can you think of a reason "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that?"
+              }
+            ],
+            "answers": [
+              "for"
+            ],
+            "words": [
+              {
+                "w": "ice",
+                "t": "muz",
+                "tr": "лёд"
+              },
+              {
+                "w": "floats",
+                "t": "suzadi",
+                "tr": "плавает"
+              },
+              {
+                "w": "a reason for",
+                "t": "sabab",
+                "tr": "причина для"
+              }
+            ],
+            "number": 16
+          }
+        ]
+      },
+      "exerciseLetter": "B"
+    },
+    {
+      "id": "r6p1-sec-exC",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har satr oxiridagi bosh harflar bilan berilgan so'zdan to'g'ri shaklini yozing.",
+      "instruction_ru": "Образуйте нужную форму от слова, написанного заглавными буквами в конце строки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "r6-c-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of the train is exactly 100 metres. "
+              },
+              {
+                "type": "hint",
+                "content": "LONG"
+              }
+            ],
+            "answers": [
+              "length"
+            ],
+            "words": [
+              {
+                "w": "length",
+                "t": "uzunlik",
+                "tr": "длина"
+              },
+              {
+                "w": "exactly",
+                "t": "aynan",
+                "tr": "ровно"
+              },
+              {
+                "w": "metres",
+                "t": "metr",
+                "tr": "метров"
+              }
+            ],
+            "number": 17
+          },
+          {
+            "id": "r6-c-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think astronomy is absolutely "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! "
+              },
+              {
+                "type": "hint",
+                "content": "FASCINATE"
+              }
+            ],
+            "answers": [
+              "fascinating"
+            ],
+            "words": [
+              {
+                "w": "astronomy",
+                "t": "astronomiya",
+                "tr": "астрономия"
+              },
+              {
+                "w": "absolutely",
+                "t": "mutlaqo",
+                "tr": "абсолютно"
+              },
+              {
+                "w": "fascinating",
+                "t": "hayratlanarli",
+                "tr": "захватывающая"
+              }
+            ],
+            "number": 18
+          },
+          {
+            "id": "r6-c-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Lee and Greg are twins, but they don't dress "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "IDENTICAL"
+              }
+            ],
+            "answers": [
+              "identically"
+            ],
+            "words": [
+              {
+                "w": "twins",
+                "t": "egizaklar",
+                "tr": "близнецы"
+              },
+              {
+                "w": "dress",
+                "t": "kiyinmoq",
+                "tr": "одеваться"
+              },
+              {
+                "w": "identically",
+                "t": "bir xil tarzda",
+                "tr": "одинаково"
+              }
+            ],
+            "number": 19
+          },
+          {
+            "id": "r6-c-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I've come to the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " that no one should have a car. "
+              },
+              {
+                "type": "hint",
+                "content": "CONCLUDE"
+              }
+            ],
+            "answers": [
+              "conclusion"
+            ],
+            "words": [
+              {
+                "w": "come to the conclusion",
+                "t": "xulosaga keldim",
+                "tr": "пришёл к выводу"
+              },
+              {
+                "w": "no one",
+                "t": "hech kim",
+                "tr": "никто"
+              },
+              {
+                "w": "should have",
+                "t": "bo'lmasligi kerak",
+                "tr": "не должны иметь"
+              }
+            ],
+            "number": 20
+          },
+          {
+            "id": "r6-c-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why do all "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " have untidy hair? "
+              },
+              {
+                "type": "hint",
+                "content": "SCIENCE"
+              }
+            ],
+            "answers": [
+              "scientists"
+            ],
+            "words": [
+              {
+                "w": "scientists",
+                "t": "olimlar",
+                "tr": "учёные"
+              },
+              {
+                "w": "untidy",
+                "t": "tartibsiz",
+                "tr": "неопрятный"
+              },
+              {
+                "w": "hair",
+                "t": "soch",
+                "tr": "волосы"
+              }
+            ],
+            "number": 21
+          },
+          {
+            "id": "r6-c-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Pour the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " water over the tea bag and leave for a few minutes. "
+              },
+              {
+                "type": "hint",
+                "content": "BOIL"
+              }
+            ],
+            "answers": [
+              "boiling"
+            ],
+            "words": [
+              {
+                "w": "pour",
+                "t": "quymoq",
+                "tr": "налить"
+              },
+              {
+                "w": "boiling water",
+                "t": "qaynagan suv",
+                "tr": "кипящая вода"
+              },
+              {
+                "w": "tea bag",
+                "t": "choy paketi",
+                "tr": "чайный пакетик"
+              },
+              {
+                "w": "leave for a few minutes",
+                "t": "bir necha daqiqa qoldirmoq",
+                "tr": "оставить на несколько минут"
+              }
+            ],
+            "number": 22
+          },
+          {
+            "id": "r6-c-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Make sure your "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " are accurate. "
+              },
+              {
+                "type": "hint",
+                "content": "MEASURE"
+              }
+            ],
+            "answers": [
+              "measurements"
+            ],
+            "words": [
+              {
+                "w": "measurements",
+                "t": "o'lchovlar",
+                "tr": "измерения"
+              },
+              {
+                "w": "accurate",
+                "t": "aniq",
+                "tr": "точные"
+              }
+            ],
+            "number": 23
+          },
+          {
+            "id": "r6-c-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My brother is studying "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at university. "
+              },
+              {
+                "type": "hint",
+                "content": "CHEMIST"
+              }
+            ],
+            "answers": [
+              "chemistry"
+            ],
+            "words": [
+              {
+                "w": "studying",
+                "t": "o'qimoqda",
+                "tr": "изучает"
+              },
+              {
+                "w": "chemistry",
+                "t": "kimyo",
+                "tr": "химия"
+              },
+              {
+                "w": "university",
+                "t": "universitet",
+                "tr": "университет"
+              }
+            ],
+            "number": 24
+          }
+        ]
+      },
+      "exerciseLetter": "C"
+    },
+    {
+      "id": "r6p2-sec-exD",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "card1",
+            "number": 25,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Did someone help Alison or did she do all the calculations "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "her",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "hers",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "herself",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card2",
+            "number": 26,
+            "parts": [
+              {
+                "type": "text",
+                "content": "That's not your calculator. It's "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "me",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "mine",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "my",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card3",
+            "number": 27,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Einstein is the person "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " showed that time can speed up and slow down."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "which",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "who",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "whose",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card4",
+            "number": 28,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you know "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " idea it was? Was it Greg's or Fiona's?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "who",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "which",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "whose",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card5",
+            "number": 29,
+            "parts": [
+              {
+                "type": "text",
+                "content": "This is the laboratory "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " we do all the experiments."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "that",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "which",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "where",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card6",
+            "number": 30,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Novosibirsk, "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " is a big city in Siberia, is famous for its university."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "who",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "which",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "where",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card7",
+            "number": 31,
+            "parts": [
+              {
+                "type": "text",
+                "content": "That's the girl "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " father says he's invented a time machine!"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "who",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "whose",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "that",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card8",
+            "number": 32,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Is this our DVD or is it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "them",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "their",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "theirs",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          }
+        ]
+      },
+      "exerciseLetter": "D"
+    },
+    {
+      "id": "r6p2-sec-exE",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "card1",
+            "number": 33,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Every month, scientists "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " new gadgets and equipment to help us with our daily lives."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "estimate",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "invent",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "involve",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "experiment",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card2",
+            "number": 34,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Every month, scientists invent new gadgets and "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to help us with our daily lives."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "experiments",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "effects",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "discover",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "equipment",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card3",
+            "number": 35,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Scientists also "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ways to make existing technology faster and better."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "involve",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "discover",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "decrease",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "connect",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card4",
+            "number": 36,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our homes are full of hardware (such as DVD players and computers) and "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " (such as computer games and MP3s)."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "screens",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "gadgets",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "software",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "laptops",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "C"
+          },
+          {
+            "id": "card5",
+            "number": 37,
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " suggests, however, that it's young people who are best able to deal with this change."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "Research",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "Experiment",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "Program",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "Technology",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          },
+          {
+            "id": "card6",
+            "number": 38,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Whereas teenagers have no problem "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a DVD player, their mums and dads often find using new technology difficult."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "involving",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "operating",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "discovering",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "inventing",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card7",
+            "number": 39,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Their mums and dads and grandparents often find using new technology "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and difficult."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "automatic",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "unique",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "sudden",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "complicated",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card8",
+            "number": 40,
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you're a teenager who criticises your parents for their "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " of technological awareness, don't be too hard on them!"
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "research",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "experiment",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "effect",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "lack",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "D"
+          },
+          {
+            "id": "card9",
+            "number": 41,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Some time "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the future, when you've got children of your own, your ability to deal with new technology will probably decrease."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "to",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "in",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "on",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "at",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "B"
+          },
+          {
+            "id": "card10",
+            "number": 42,
+            "parts": [
+              {
+                "type": "text",
+                "content": "Your ability to deal with new technology will probably "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " and your children will feel more comfortable with new technology than you do."
+              }
+            ],
+            "options": [
+              {
+                "label": "A",
+                "word": "decrease",
+                "pinyin": ""
+              },
+              {
+                "label": "B",
+                "word": "involve",
+                "pinyin": ""
+              },
+              {
+                "label": "C",
+                "word": "lack",
+                "pinyin": ""
+              },
+              {
+                "label": "D",
+                "word": "estimate",
+                "pinyin": ""
+              }
+            ],
+            "correctOptionLabel": "A"
+          }
+        ]
+      },
+      "exerciseLetter": "E"
+    }
+  ]
+}

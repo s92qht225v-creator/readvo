@@ -358,5 +358,148 @@
   ],
   "tag": "tanishuv",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "你好",
+      "py": "nǐ hǎo",
+      "uz": "salom",
+      "ru": "привет / здравствуйте",
+      "ex": "你好！我叫李明。",
+      "expy": "Nǐ hǎo! Wǒ jiào Lǐ Míng.",
+      "ex_uz": "Salom! Mening ismim Li Ming.",
+      "ex_ru": "Привет! Меня зовут Ли Мин."
+    },
+    {
+      "zh": "叫",
+      "py": "jiào",
+      "uz": "deb atalmoq / ismim ... bo'lmoq",
+      "ru": "звать / называться",
+      "ex": "你叫什么名字？",
+      "expy": "Nǐ jiào shénme míngzi?",
+      "ex_uz": "Sening isming nima?",
+      "ex_ru": "Как тебя зовут?"
+    },
+    {
+      "zh": "什么",
+      "py": "shénme",
+      "uz": "nima",
+      "ru": "что / какой",
+      "ex": "你叫什么名字？",
+      "expy": "Nǐ jiào shénme míngzi?",
+      "ex_uz": "Sening isming nima?",
+      "ex_ru": "Как тебя зовут?"
+    },
+    {
+      "zh": "名字",
+      "py": "míngzi",
+      "uz": "ism",
+      "ru": "имя",
+      "ex": "你的名字很好听。",
+      "expy": "Nǐ de míngzi hěn hǎotīng.",
+      "ex_uz": "Sening isming juda chiroyli.",
+      "ex_ru": "У тебя очень красивое имя."
+    },
+    {
+      "zh": "对",
+      "py": "duì",
+      "uz": "ha, to'g'ri",
+      "ru": "да, верно",
+      "ex": "对，我叫李明。",
+      "expy": "Duì, wǒ jiào Lǐ Míng.",
+      "ex_uz": "Ha, mening ismim Li Ming.",
+      "ex_ru": "Да, меня зовут Ли Мин."
+    },
+    {
+      "zh": "很高兴",
+      "py": "hěn gāoxìng",
+      "uz": "juda xursand",
+      "ru": "очень рад(а)",
+      "ex": "很高兴认识你！",
+      "expy": "Hěn gāoxìng rènshi nǐ!",
+      "ex_uz": "Tanishganimdan juda xursandman!",
+      "ex_ru": "Очень рад познакомиться!"
+    },
+    {
+      "zh": "认识",
+      "py": "rènshi",
+      "uz": "tanishmoq",
+      "ru": "познакомиться / знать",
+      "ex": "很高兴认识你。",
+      "expy": "Hěn gāoxìng rènshi nǐ.",
+      "ex_uz": "Tanishganimdan xursandman.",
+      "ex_ru": "Очень рад познакомиться."
+    },
+    {
+      "zh": "也",
+      "py": "yě",
+      "uz": "ham",
+      "ru": "тоже",
+      "ex": "我也很高兴。",
+      "expy": "Wǒ yě hěn gāoxìng.",
+      "ex_uz": "Men ham juda xursandman.",
+      "ex_ru": "Я тоже очень рад."
+    }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "我叫 + 名字",
+      "title_uz": "Ismni aytish",
+      "title_ru": "Как представиться",
+      "desc_uz": "Xitoycha o'zini tanishtirish uchun «我叫» (wǒ jiào) — «mening ismim» iborasini ishlating.",
+      "desc_ru": "Для представления по-китайски используйте «我叫» (wǒ jiào) — «меня зовут».",
+      "ex": "我叫王芳。你叫什么名字？",
+      "expy": "Wǒ jiào Wáng Fāng. Nǐ jiào shénme míngzi?",
+      "ex_uz": "Mening ismim Van Fan. Sening isming nima?",
+      "ex_ru": "Меня зовут Ван Фан. Как тебя зовут?"
+    },
+    {
+      "pattern": "很高兴认识你",
+      "title_uz": "Tanishish iborasi",
+      "title_ru": "Фраза при знакомстве",
+      "desc_uz": "«很高兴认识你» (hěn gāoxìng rènshi nǐ) — «Tanishganimdan xursandman» iborasi yangi odamni uchratganda qo'llanadi.",
+      "desc_ru": "Фраза «很高兴认识你» (hěn gāoxìng rènshi nǐ) — «очень рад познакомиться» используется при первом знакомстве.",
+      "ex": "你好！很高兴认识你，我叫张伟。",
+      "expy": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ, wǒ jiào Zhāng Wěi.",
+      "ex_uz": "Salom! Tanishganimdan xursandman, mening ismim Zhang Wei.",
+      "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй."
+    }
+  ],
+  "quiz": [
+    {
+      "q_uz": "«Isming nima?» xitoycha qanday aytiladi?",
+      "q_ru": "Как по-китайски «Как тебя зовут?»",
+      "options_uz": ["你叫什么名字？", "你好吗？", "你在哪里？", "你是谁？"],
+      "options_ru": ["你叫什么名字？", "你好吗？", "你在哪里？", "你是谁？"],
+      "correct": 0
+    },
+    {
+      "q_uz": "«Mening ismim Li Ming» xitoycha qanday?",
+      "q_ru": "Как по-китайски «Меня зовут Ли Мин»?",
+      "options_uz": ["我是李明。", "我叫李明。", "我有李明。", "我在李明。"],
+      "options_ru": ["我是李明。", "我叫李明。", "我有李明。", "我在李明。"],
+      "correct": 1
+    },
+    {
+      "q_uz": "«Tanishganimdan xursandman» xitoycha qanday?",
+      "q_ru": "Как по-китайски «Очень рад познакомиться»?",
+      "options_uz": ["我很好。", "很高兴认识你。", "你好吗？", "谢谢你。"],
+      "options_ru": ["我很好。", "很高兴认识你。", "你好吗？", "谢谢你。"],
+      "correct": 1
+    },
+    {
+      "q_uz": "«也» so'zining ma'nosi nima?",
+      "q_ru": "Что означает слово «也»?",
+      "options_uz": ["juda", "ham", "emas", "va"],
+      "options_ru": ["очень", "тоже", "нет", "и"],
+      "correct": 1
+    },
+    {
+      "q_uz": "Dialogda B kim bilan tanishmoqda?",
+      "q_ru": "С кем знакомится B в диалоге?",
+      "options_uz": ["Zhang Wei bilan", "Li Ming bilan", "Wang Fang bilan", "noma'lum"],
+      "options_ru": ["с Чжан Вэем", "с Ли Мином", "с Ван Фан", "неизвестно"],
+      "correct": 1
+    }
+  ]
 }

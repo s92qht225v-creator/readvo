@@ -1,0 +1,455 @@
+{
+  "id": "unit31-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u31p2-sec-exercise1",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "u31p2-mc-1",
+            "question": "'I'm a big fan of U2,' Derek said. Derek said he __________________ a big fan of U2.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A was"
+              },
+              {
+                "id": "b",
+                "text": "B has been"
+              },
+              {
+                "id": "c",
+                "text": "C had been"
+              }
+            ],
+            "correctOptionId": "a"
+          },
+          {
+            "id": "u31p2-mc-2",
+            "question": "'We're watching TV,' said the twins. The twins said they __________________ TV.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A watched"
+              },
+              {
+                "id": "b",
+                "text": "B were watching"
+              },
+              {
+                "id": "c",
+                "text": "C had watched"
+              }
+            ],
+            "correctOptionId": "b"
+          },
+          {
+            "id": "u31p2-mc-3",
+            "question": "'You've been annoying me all day!' my mum said. My mum said I __________________ her all day.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A annoyed"
+              },
+              {
+                "id": "b",
+                "text": "B was annoying"
+              },
+              {
+                "id": "c",
+                "text": "C had been annoying"
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u31p2-mc-4",
+            "question": "'The dog ate my homework!' said Ivan. Ivan said the dog __________________ his homework.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A was eating"
+              },
+              {
+                "id": "b",
+                "text": "B had eaten"
+              },
+              {
+                "id": "c",
+                "text": "C has eaten"
+              }
+            ],
+            "correctOptionId": "b"
+          },
+          {
+            "id": "u31p2-mc-5",
+            "question": "'At one o'clock, I was having lunch,' said Molly. Molly said she __________________ lunch at one o'clock.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A had been having"
+              },
+              {
+                "id": "b",
+                "text": "B has had"
+              },
+              {
+                "id": "c",
+                "text": "C is having"
+              }
+            ],
+            "correctOptionId": "a"
+          },
+          {
+            "id": "u31p2-mc-6",
+            "question": "'You'll get wet without an umbrella,' Dad said. Dad said I __________________ wet without an umbrella.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A will be getting"
+              },
+              {
+                "id": "b",
+                "text": "B got"
+              },
+              {
+                "id": "c",
+                "text": "C would get"
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u31p2-mc-7",
+            "question": "'He can juggle five balls!' said Angie. Angie said he __________________ five balls.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A juggled"
+              },
+              {
+                "id": "b",
+                "text": "B would juggle"
+              },
+              {
+                "id": "c",
+                "text": "C could juggle"
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u31p2-mc-8",
+            "question": "'You must give me your essays,' Mrs Vine said. Mrs Vine said we __________________ give her our essays.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A were having to"
+              },
+              {
+                "id": "b",
+                "text": "B had to"
+              },
+              {
+                "id": "c",
+                "text": "C would have to"
+              }
+            ],
+            "correctOptionId": "b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "u31p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutuchalardagi so'z va iboralardan foydalanib, jumlalarni to'ldiring.",
+      "instruction_ru": "Заполните предложения, используя слова и фразы из рамок.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "his",
+          "their",
+          "them",
+          "there",
+          "before",
+          "that night",
+          "the day before",
+          "the next day"
+        ],
+        "cards": [
+          {
+            "id": "u31p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'm seeing Simon tomorrow,' Mary said. Mary said she was seeing Simon "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "the next day"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "seeing",
+                "t": "uchrashmoq",
+                "tr": "встречаться"
+              },
+              {
+                "w": "tomorrow",
+                "t": "ertaga",
+                "tr": "завтра"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'We moved into the area two years ago,' Bella said. Bella said they had moved into the area two years "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "before"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "moved into",
+                "t": "ko'chib kelmoq",
+                "tr": "переехать"
+              },
+              {
+                "w": "area",
+                "t": "hudud",
+                "tr": "район"
+              },
+              {
+                "w": "ago",
+                "t": "oldin",
+                "tr": "назад"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'Our teacher is giving us a test!' said Michelle. Michelle said their teacher was giving "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a test."
+              }
+            ],
+            "answers": [
+              "them"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "teacher",
+                "t": "o'qituvchi",
+                "tr": "учитель"
+              },
+              {
+                "w": "giving a test",
+                "t": "test o'tkazmoq",
+                "tr": "давать тест"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'My dad gave me fifty pounds!' said Neil. Neil said "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " dad had given him fifty pounds."
+              }
+            ],
+            "answers": [
+              "his"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "gave",
+                "t": "berdi",
+                "tr": "дал"
+              },
+              {
+                "w": "fifty pounds",
+                "t": "ellik funt",
+                "tr": "пятьдесят фунтов"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I scored a great goal yesterday,' Marina said. Marina said she had scored a great goal "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "the day before"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "scored a goal",
+                "t": "gol urmoq",
+                "tr": "забить гол"
+              },
+              {
+                "w": "yesterday",
+                "t": "kecha",
+                "tr": "вчера"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'We saw our cousin at the fair,' said Ben. Ben said they had seen "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " cousin at the fair."
+              }
+            ],
+            "answers": [
+              "their"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "cousin",
+                "t": "amakivachcha/xolavacha",
+                "tr": "двоюродный брат/сестра"
+              },
+              {
+                "w": "fair",
+                "t": "yarmarqa",
+                "tr": "ярмарка"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I left my wallet here,' Frank said. Frank said he had left his wallet "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "there"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "left",
+                "t": "qoldirdi",
+                "tr": "оставил"
+              },
+              {
+                "w": "wallet",
+                "t": "hamyon",
+                "tr": "кошелёк"
+              }
+            ]
+          },
+          {
+            "id": "u31p2-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "'I'll sleep well tonight!' said Arnie. Arnie said he would sleep well "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "that night"
+            ],
+            "alternateAnswers": [],
+            "words": [
+              {
+                "w": "sleep well",
+                "t": "yaxshi uxlamoq",
+                "tr": "хорошо спать"
+              },
+              {
+                "w": "tonight",
+                "t": "bu kecha",
+                "tr": "сегодня ночью"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

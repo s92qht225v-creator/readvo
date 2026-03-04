@@ -1,0 +1,1412 @@
+{
+  "id": "unit18-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u18p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Qutidagi so'zlardan foydalanib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски словами из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "artificial",
+          "automatic",
+          "complicated",
+          "digital",
+          "exact",
+          "maximum",
+          "minimum",
+          "plastic",
+          "sudden",
+          "unique"
+        ],
+        "cards": [
+          {
+            "id": "u18p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's not a/an "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " watch. It's got hands."
+              }
+            ],
+            "answers": [
+              "digital"
+            ],
+            "words": [
+              {
+                "w": "watch",
+                "t": "soat",
+                "tr": "часы"
+              },
+              {
+                "w": "hands",
+                "t": "millar (soat)",
+                "tr": "стрелки"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "If you play this stereo on "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " volume, you'll go deaf!"
+              }
+            ],
+            "answers": [
+              "maximum"
+            ],
+            "words": [
+              {
+                "w": "stereo",
+                "t": "stereo",
+                "tr": "стерео"
+              },
+              {
+                "w": "volume",
+                "t": "ovoz balandligi",
+                "tr": "громкость"
+              },
+              {
+                "w": "go deaf",
+                "t": "kar bo'lib qolmoq",
+                "tr": "оглохнуть"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's not a/an "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " experiment. In fact, it's really simple."
+              }
+            ],
+            "answers": [
+              "complicated"
+            ],
+            "words": [
+              {
+                "w": "experiment",
+                "t": "tajriba",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "in fact",
+                "t": "aslida",
+                "tr": "на самом деле"
+              },
+              {
+                "w": "simple",
+                "t": "oddiy",
+                "tr": "простой"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Are leather chairs more comfortable than "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ones?"
+              }
+            ],
+            "answers": [
+              "plastic"
+            ],
+            "words": [
+              {
+                "w": "leather",
+                "t": "charm",
+                "tr": "кожаный"
+              },
+              {
+                "w": "chairs",
+                "t": "stullar",
+                "tr": "стулья"
+              },
+              {
+                "w": "comfortable",
+                "t": "qulay",
+                "tr": "удобный"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There aren't any windows in the lab, so all the light is "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "artificial"
+            ],
+            "words": [
+              {
+                "w": "windows",
+                "t": "derazalar",
+                "tr": "окна"
+              },
+              {
+                "w": "lab",
+                "t": "laboratoriya",
+                "tr": "лаборатория"
+              },
+              {
+                "w": "light",
+                "t": "yorug'lik",
+                "tr": "свет"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Was it a/an "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " decision, or had you thought about it for a long time?"
+              }
+            ],
+            "answers": [
+              "sudden"
+            ],
+            "words": [
+              {
+                "w": "decision",
+                "t": "qaror",
+                "tr": "решение"
+              },
+              {
+                "w": "thought about",
+                "t": "o'ylamoq",
+                "tr": "думать о"
+              },
+              {
+                "w": "long time",
+                "t": "uzoq vaqt",
+                "tr": "долгое время"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The lights are "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " – they come on when you enter the room, and go off when you leave."
+              }
+            ],
+            "answers": [
+              "automatic"
+            ],
+            "words": [
+              {
+                "w": "lights",
+                "t": "chiroqlar",
+                "tr": "огни/лампы"
+              },
+              {
+                "w": "come on",
+                "t": "yonib ketmoq",
+                "tr": "включаться"
+              },
+              {
+                "w": "enter",
+                "t": "kirmoq",
+                "tr": "входить"
+              },
+              {
+                "w": "go off",
+                "t": "o'chib ketmoq",
+                "tr": "выключаться"
+              },
+              {
+                "w": "leave",
+                "t": "chiqmoq",
+                "tr": "выходить"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Each person's fingerprints are "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". No two people have the same fingerprints."
+              }
+            ],
+            "answers": [
+              "unique"
+            ],
+            "words": [
+              {
+                "w": "person's",
+                "t": "kishining",
+                "tr": "человека"
+              },
+              {
+                "w": "fingerprints",
+                "t": "barmoq izlari",
+                "tr": "отпечатки пальцев"
+              },
+              {
+                "w": "same",
+                "t": "bir xil",
+                "tr": "одинаковый"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " number of patients necessary to test the new drug is 50. Any less than that and the scientists won't know if it works properly or not."
+              }
+            ],
+            "answers": [
+              "minimum"
+            ],
+            "words": [
+              {
+                "w": "patients",
+                "t": "bemorlar",
+                "tr": "пациенты"
+              },
+              {
+                "w": "necessary",
+                "t": "zaruriy",
+                "tr": "необходимый"
+              },
+              {
+                "w": "test",
+                "t": "sinamoq",
+                "tr": "тестировать"
+              },
+              {
+                "w": "drug",
+                "t": "dori",
+                "tr": "лекарство"
+              },
+              {
+                "w": "scientists",
+                "t": "olimlar",
+                "tr": "учёные"
+              },
+              {
+                "w": "properly",
+                "t": "to'g'ri",
+                "tr": "правильно"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex1-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I can't remember the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " year it was discovered, but it was around 1976."
+              }
+            ],
+            "answers": [
+              "exact"
+            ],
+            "words": [
+              {
+                "w": "remember",
+                "t": "eslamoq",
+                "tr": "помнить"
+              },
+              {
+                "w": "year",
+                "t": "yil",
+                "tr": "год"
+              },
+              {
+                "w": "discovered",
+                "t": "kashf etilgan",
+                "tr": "открытый"
+              },
+              {
+                "w": "around",
+                "t": "taxminan",
+                "tr": "примерно"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u18p2-sec-exercise2",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri so'zni tanlang.",
+      "instruction_ru": "Обведите правильное слово.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u18p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you know who "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "invented",
+                  "discovered"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the planet Mars?"
+              }
+            ],
+            "words": [
+              {
+                "w": "planet",
+                "t": "sayyora",
+                "tr": "планета"
+              },
+              {
+                "w": "Mars",
+                "t": "Mars",
+                "tr": "Марс"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The number of people dying of malaria has "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "run",
+                  "decreased"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " enormously over the last 100 years."
+              }
+            ],
+            "words": [
+              {
+                "w": "number",
+                "t": "son",
+                "tr": "число"
+              },
+              {
+                "w": "dying",
+                "t": "o'lmoq",
+                "tr": "умирающих"
+              },
+              {
+                "w": "malaria",
+                "t": "bezgak",
+                "tr": "малярия"
+              },
+              {
+                "w": "enormously",
+                "t": "katta darajada",
+                "tr": "значительно"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You need at least three people to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "operate",
+                  "estimate"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " this machine safely."
+              }
+            ],
+            "words": [
+              {
+                "w": "need",
+                "t": "kerak",
+                "tr": "нужно"
+              },
+              {
+                "w": "at least",
+                "t": "kamida",
+                "tr": "по меньшей мере"
+              },
+              {
+                "w": "machine",
+                "t": "mashina",
+                "tr": "машина"
+              },
+              {
+                "w": "safely",
+                "t": "xavfsiz tarzda",
+                "tr": "безопасно"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Modern "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "technology",
+                  "equipment"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " makes all our lives easier."
+              }
+            ],
+            "words": [
+              {
+                "w": "modern",
+                "t": "zamonaviy",
+                "tr": "современный"
+              },
+              {
+                "w": "lives",
+                "t": "hayot",
+                "tr": "жизнь"
+              },
+              {
+                "w": "easier",
+                "t": "osonroq",
+                "tr": "легче"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We've done a lot of "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "research",
+                  "experiment"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " into why people are scared of spiders."
+              }
+            ],
+            "words": [
+              {
+                "w": "done",
+                "t": "qilmoq",
+                "tr": "сделали"
+              },
+              {
+                "w": "lot of",
+                "t": "ko'p",
+                "tr": "много"
+              },
+              {
+                "w": "scared",
+                "t": "qo'rqmoq",
+                "tr": "бояться"
+              },
+              {
+                "w": "spiders",
+                "t": "o'rgimchaklar",
+                "tr": "пауки"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm using a computer "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "research",
+                  "program"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " that translates from English into Greek."
+              }
+            ],
+            "words": [
+              {
+                "w": "using",
+                "t": "ishlatmoq",
+                "tr": "использую"
+              },
+              {
+                "w": "translates",
+                "t": "tarjima qilmoq",
+                "tr": "переводит"
+              },
+              {
+                "w": "Greek",
+                "t": "yunon tili",
+                "tr": "греческий язык"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This drug seems to have no "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "effect",
+                  "lack"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " on humans at all."
+              }
+            ],
+            "words": [
+              {
+                "w": "drug",
+                "t": "dori",
+                "tr": "лекарство"
+              },
+              {
+                "w": "seems",
+                "t": "ko'rinadi",
+                "tr": "кажется"
+              },
+              {
+                "w": "humans",
+                "t": "odamlar",
+                "tr": "люди"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The experiment just "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "involves",
+                  "operates"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " answering a few questions."
+              }
+            ],
+            "words": [
+              {
+                "w": "experiment",
+                "t": "tajriba",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "just",
+                "t": "shunchaki",
+                "tr": "просто"
+              },
+              {
+                "w": "answering",
+                "t": "javob bermoq",
+                "tr": "отвечать"
+              },
+              {
+                "w": "questions",
+                "t": "savollar",
+                "tr": "вопросы"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Could you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "program",
+                  "estimate"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " how many times a week you eat cheese?"
+              }
+            ],
+            "words": [
+              {
+                "w": "times",
+                "t": "marta",
+                "tr": "раз"
+              },
+              {
+                "w": "week",
+                "t": "hafta",
+                "tr": "неделя"
+              },
+              {
+                "w": "eat",
+                "t": "yemoq",
+                "tr": "есть"
+              },
+              {
+                "w": "cheese",
+                "t": "pishloq",
+                "tr": "сыр"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you think anyone will ever "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "invent",
+                  "discover"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " a time machine?"
+              }
+            ],
+            "words": [
+              {
+                "w": "think",
+                "t": "o'ylamoq",
+                "tr": "думать"
+              },
+              {
+                "w": "anyone",
+                "t": "biror kishi",
+                "tr": "кто-нибудь"
+              },
+              {
+                "w": "ever",
+                "t": "hech qachon",
+                "tr": "когда-нибудь"
+              },
+              {
+                "w": "time machine",
+                "t": "vaqt mashinasi",
+                "tr": "машина времени"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-11",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Professor Reinhart "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "decreases",
+                  "runs"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " the computer lab with her three assistants."
+              }
+            ],
+            "words": [
+              {
+                "w": "professor",
+                "t": "professor",
+                "tr": "профессор"
+              },
+              {
+                "w": "computer lab",
+                "t": "kompyuter laboratoriyasi",
+                "tr": "компьютерная лаборатория"
+              },
+              {
+                "w": "assistants",
+                "t": "yordamchilar",
+                "tr": "ассистенты"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex2-12",
+            "parts": [
+              {
+                "type": "text",
+                "content": "There's "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "a lack",
+                  "an effect"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " of phones in this office. We need some more!"
+              }
+            ],
+            "words": [
+              {
+                "w": "phones",
+                "t": "telefonlar",
+                "tr": "телефоны"
+              },
+              {
+                "w": "office",
+                "t": "ofis",
+                "tr": "офис"
+              },
+              {
+                "w": "need",
+                "t": "kerak",
+                "tr": "нужно"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u18p2-sec-exercise3",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u18p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I ...................... across this book about the moon in the library. It's really interesting!"
+              }
+            ],
+            "words": [
+              {
+                "w": "across",
+                "t": "uchramoq",
+                "tr": "наткнуться"
+              },
+              {
+                "w": "moon",
+                "t": "oy",
+                "tr": "луна"
+              },
+              {
+                "w": "library",
+                "t": "kutubxona",
+                "tr": "библиотека"
+              },
+              {
+                "w": "really",
+                "t": "juda",
+                "tr": "очень"
+              },
+              {
+                "w": "interesting",
+                "t": "qiziqarli",
+                "tr": "интересный"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Jenny pulled ...................... the handle so we can't open the cupboard now."
+              }
+            ],
+            "words": [
+              {
+                "w": "pulled",
+                "t": "tortmoq",
+                "tr": "потянула"
+              },
+              {
+                "w": "handle",
+                "t": "tutqich",
+                "tr": "ручка"
+              },
+              {
+                "w": "open",
+                "t": "ochmoq",
+                "tr": "открыть"
+              },
+              {
+                "w": "cupboard",
+                "t": "shkaf",
+                "tr": "шкаф"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'd like to find ...................... more about being a computer programmer."
+              }
+            ],
+            "words": [
+              {
+                "w": "find out",
+                "t": "bilib olmoq",
+                "tr": "узнать"
+              },
+              {
+                "w": "computer programmer",
+                "t": "dasturchi",
+                "tr": "программист"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Our car has broken ...................... again."
+              }
+            ],
+            "words": [
+              {
+                "w": "broken down",
+                "t": "buzilib qolmoq",
+                "tr": "сломалась"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dean was late for physics so he ...................... up a story about being attacked by a cat!"
+              }
+            ],
+            "words": [
+              {
+                "w": "late",
+                "t": "kech qolmoq",
+                "tr": "опоздал"
+              },
+              {
+                "w": "physics",
+                "t": "fizika",
+                "tr": "физика"
+              },
+              {
+                "w": "story",
+                "t": "hikoya / bahona",
+                "tr": "история / отговорка"
+              },
+              {
+                "w": "attacked",
+                "t": "hujum qilmoq",
+                "tr": "напавший"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "...................... the TV off. This show is boring."
+              }
+            ],
+            "words": [
+              {
+                "w": "turn off",
+                "t": "o'chirmoq",
+                "tr": "выключить"
+              },
+              {
+                "w": "show",
+                "t": "ko'rsatuv",
+                "tr": "шоу"
+              },
+              {
+                "w": "boring",
+                "t": "zerikarli",
+                "tr": "скучный"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm going to throw these old shoes ...................... . I never wear them anymore."
+              }
+            ],
+            "words": [
+              {
+                "w": "throw away",
+                "t": "otib yubormoq",
+                "tr": "выбросить"
+              },
+              {
+                "w": "old",
+                "t": "eski",
+                "tr": "старый"
+              },
+              {
+                "w": "shoes",
+                "t": "poyabzallar",
+                "tr": "ботинки"
+              },
+              {
+                "w": "wear",
+                "t": "kiymoq",
+                "tr": "носить"
+              },
+              {
+                "w": "anymore",
+                "t": "endi emas",
+                "tr": "больше"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex3-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I turned ...................... the tap but no water came out."
+              }
+            ],
+            "words": [
+              {
+                "w": "turned on",
+                "t": "ochmoq (jo'mrak)",
+                "tr": "открыл (кран)"
+              },
+              {
+                "w": "tap",
+                "t": "jo'mrak",
+                "tr": "кран"
+              },
+              {
+                "w": "water",
+                "t": "suv",
+                "tr": "вода"
+              },
+              {
+                "w": "came out",
+                "t": "chiqmoq",
+                "tr": "вышла"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u18p2-sec-exercise4",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "Prepositional phrases",
+      "subheading_uz": "Predlogli iboralar",
+      "subheading_ru": "Предложные фразы",
+      "instruction": "Qutidagi so'zlardan foydalanib, bo'sh joylarni to'ldiring.",
+      "instruction_ru": "Заполните пропуски словами из рамки.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "chance",
+          "end",
+          "future",
+          "last",
+          "opinion",
+          "order"
+        ],
+        "cards": [
+          {
+            "id": "u18p2-ex4-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "These toilets have been out of "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for a week now. When are they going to fix them?"
+              }
+            ],
+            "answers": [
+              "order"
+            ],
+            "words": [
+              {
+                "w": "toilets",
+                "t": "hojatxona",
+                "tr": "туалеты"
+              },
+              {
+                "w": "out of order",
+                "t": "ishlamaydi",
+                "tr": "не работает"
+              },
+              {
+                "w": "week",
+                "t": "hafta",
+                "tr": "неделю"
+              },
+              {
+                "w": "fix",
+                "t": "ta'mirlash",
+                "tr": "починить"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex4-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "In my "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ", humans will never live on other planets."
+              }
+            ],
+            "answers": [
+              "opinion"
+            ],
+            "words": [
+              {
+                "w": "in my opinion",
+                "t": "mening fikrimcha",
+                "tr": "по моему мнению"
+              },
+              {
+                "w": "humans",
+                "t": "odamlar",
+                "tr": "люди"
+              },
+              {
+                "w": "planets",
+                "t": "sayyoralar",
+                "tr": "планеты"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex4-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Alexander Fleming discovered penicillin by "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". He didn't expect to find it at all."
+              }
+            ],
+            "answers": [
+              "chance"
+            ],
+            "words": [
+              {
+                "w": "discovered",
+                "t": "kashf etdi",
+                "tr": "открыл"
+              },
+              {
+                "w": "penicillin",
+                "t": "penisilin",
+                "tr": "пенициллин"
+              },
+              {
+                "w": "by chance",
+                "t": "tasodifan",
+                "tr": "случайно"
+              },
+              {
+                "w": "expect",
+                "t": "kutmoq",
+                "tr": "ожидать"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex4-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I wonder what new technology will be invented in the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "future"
+            ],
+            "words": [
+              {
+                "w": "wonder",
+                "t": "qiziqmoq",
+                "tr": "интересоваться"
+              },
+              {
+                "w": "technology",
+                "t": "texnologiya",
+                "tr": "технология"
+              },
+              {
+                "w": "invented",
+                "t": "ixtiro qilinmoq",
+                "tr": "изобретена"
+              },
+              {
+                "w": "in the future",
+                "t": "kelajakda",
+                "tr": "в будущем"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex4-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Helen couldn't get the experiment to work for ages, but in the "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " it was fine."
+              }
+            ],
+            "answers": [
+              "end"
+            ],
+            "words": [
+              {
+                "w": "experiment",
+                "t": "tajriba",
+                "tr": "эксперимент"
+              },
+              {
+                "w": "work",
+                "t": "ishlash",
+                "tr": "работать"
+              },
+              {
+                "w": "for ages",
+                "t": "uzoq vaqt",
+                "tr": "долгое время"
+              },
+              {
+                "w": "in the end",
+                "t": "oxir-oqibat",
+                "tr": "в конце концов"
+              }
+            ]
+          },
+          {
+            "id": "u18p2-ex4-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's so nice to have my own computer at "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "last"
+            ],
+            "words": [
+              {
+                "w": "own",
+                "t": "o'z",
+                "tr": "собственный"
+              },
+              {
+                "w": "computer",
+                "t": "kompyuter",
+                "tr": "компьютер"
+              },
+              {
+                "w": "at last",
+                "t": "nihoyat",
+                "tr": "наконец"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

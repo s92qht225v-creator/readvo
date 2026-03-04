@@ -1,0 +1,695 @@
+{
+  "id": "unit22-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u22p3-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Birinchi gapga o'xshash ma'noli ikkinchi gapni to'ldiring.",
+      "instruction_ru": "Завершите второе предложение так, чтобы оно имело похожее значение с первым.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u22p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We were expecting Dave to call, but he hasn't.\nDave should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "have called"
+            ],
+            "words": [
+              {
+                "w": "expecting",
+                "t": "kutmoq",
+                "tr": "ожидать"
+              },
+              {
+                "w": "call",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They said they were going to deliver the computer at lunchtime, but they didn't.\nThey should "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "have delivered the computer at lunchtime"
+            ],
+            "alternateAnswers": [
+              [
+                "have delivered it at lunchtime",
+                "have delivered the computer"
+              ]
+            ],
+            "words": [
+              {
+                "w": "deliver",
+                "t": "yetkazib bermoq",
+                "tr": "доставить"
+              },
+              {
+                "w": "computer",
+                "t": "kompyuter",
+                "tr": "компьютер"
+              },
+              {
+                "w": "lunchtime",
+                "t": "tushlik vaqti",
+                "tr": "время обеда"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I was expecting the film to come out at the cinema last week.\nThe film ought "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "to have come out at the cinema last week"
+            ],
+            "alternateAnswers": [
+              [
+                "to have come out last week"
+              ]
+            ],
+            "words": [
+              {
+                "w": "expecting",
+                "t": "kutmoq",
+                "tr": "ожидать"
+              },
+              {
+                "w": "come out",
+                "t": "chiqmoq",
+                "tr": "выйти"
+              },
+              {
+                "w": "cinema",
+                "t": "kinoteatr",
+                "tr": "кино"
+              },
+              {
+                "w": "last week",
+                "t": "o'tgan hafta",
+                "tr": "на прошлой неделе"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "The shop wasn't supposed to close so early.\nThe shop shouldn't "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ."
+              }
+            ],
+            "answers": [
+              "have closed so early"
+            ],
+            "words": [
+              {
+                "w": "supposed to",
+                "t": "kerak edi",
+                "tr": "должен был"
+              },
+              {
+                "w": "close",
+                "t": "yopmoq",
+                "tr": "закрыть"
+              },
+              {
+                "w": "early",
+                "t": "erta",
+                "tr": "рано"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Was the programme supposed to start at eight o'clock?\nShould "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " ?"
+              }
+            ],
+            "answers": [
+              "the programme have started at eight o'clock"
+            ],
+            "alternateAnswers": [
+              [
+                "the programme have started at 8 o'clock"
+              ]
+            ],
+            "words": [
+              {
+                "w": "programme",
+                "t": "dastur",
+                "tr": "программа"
+              },
+              {
+                "w": "supposed to",
+                "t": "kerak edi",
+                "tr": "должна была"
+              },
+              {
+                "w": "start",
+                "t": "boshlanoq",
+                "tr": "начаться"
+              },
+              {
+                "w": "eight o'clock",
+                "t": "soat sakkiz",
+                "tr": "восемь часов"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u22p3-sec-exercise2",
+      "type": "multiplechoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "To'g'ri javobni tanlang.",
+      "instruction_ru": "Выберите правильный ответ.",
+      "sentences": [],
+      "multipleChoiceData": {
+        "questions": [
+          {
+            "id": "u22p3-mc-1",
+            "question": "Ronny ________ have gone to Switzerland, but I'm not totally sure.",
+            "options": [
+              {
+                "id": "a",
+                "text": "must"
+              },
+              {
+                "id": "b",
+                "text": "could"
+              },
+              {
+                "id": "c",
+                "text": "can't"
+              },
+              {
+                "id": "d",
+                "text": "should"
+              }
+            ],
+            "correctOptionId": "b"
+          },
+          {
+            "id": "u22p3-mc-2",
+            "question": "You ________ have lied to me! Why didn't you tell me the truth?",
+            "options": [
+              {
+                "id": "a",
+                "text": "mustn't"
+              },
+              {
+                "id": "b",
+                "text": "might not"
+              },
+              {
+                "id": "c",
+                "text": "shouldn't"
+              },
+              {
+                "id": "d",
+                "text": "couldn't"
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u22p3-mc-3",
+            "question": "Helen ________ to have seen a doctor weeks ago. Why didn't she?",
+            "options": [
+              {
+                "id": "a",
+                "text": "ought"
+              },
+              {
+                "id": "b",
+                "text": "should"
+              },
+              {
+                "id": "c",
+                "text": "must"
+              },
+              {
+                "id": "d",
+                "text": "can't"
+              }
+            ],
+            "correctOptionId": "a"
+          },
+          {
+            "id": "u22p3-mc-4",
+            "question": "They ________ have seen the play last night as they went to a football match instead.",
+            "options": [
+              {
+                "id": "a",
+                "text": "could"
+              },
+              {
+                "id": "b",
+                "text": "must"
+              },
+              {
+                "id": "c",
+                "text": "might"
+              },
+              {
+                "id": "d",
+                "text": "can't"
+              }
+            ],
+            "correctOptionId": "d"
+          },
+          {
+            "id": "u22p3-mc-5",
+            "question": "Carl ________ have been here by now. Maybe he got stuck in traffic.",
+            "options": [
+              {
+                "id": "a",
+                "text": "might"
+              },
+              {
+                "id": "b",
+                "text": "must"
+              },
+              {
+                "id": "c",
+                "text": "should"
+              },
+              {
+                "id": "d",
+                "text": "can't"
+              }
+            ],
+            "correctOptionId": "c"
+          },
+          {
+            "id": "u22p3-mc-6",
+            "question": "You ________ have been really excited when you heard you'd won the competition!",
+            "options": [
+              {
+                "id": "a",
+                "text": "must"
+              },
+              {
+                "id": "b",
+                "text": "should"
+              },
+              {
+                "id": "c",
+                "text": "might"
+              },
+              {
+                "id": "d",
+                "text": "could"
+              }
+            ],
+            "correctOptionId": "a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "u22p3-sec-exercise3",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir bo'sh joyga bitta so'z yozing.",
+      "instruction_ru": "Напишите одно слово в каждый пропуск.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "been",
+          "could",
+          "have",
+          "might",
+          "must",
+          "ought",
+          "should"
+        ],
+        "cards": [
+          {
+            "id": "u22p3-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "My cousin Tina is a professional dancer. Her mum – my aunt – says that Tina (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " dance really well even before she was able to walk!"
+              }
+            ],
+            "answers": [
+              "could"
+            ],
+            "words": [
+              {
+                "w": "professional",
+                "t": "professional",
+                "tr": "профессиональный"
+              },
+              {
+                "w": "dancer",
+                "t": "raqqosa",
+                "tr": "танцор"
+              },
+              {
+                "w": "aunt",
+                "t": "xola / amaki",
+                "tr": "тётя"
+              },
+              {
+                "w": "dance",
+                "t": "raqsga tushmoq",
+                "tr": "танцевать"
+              },
+              {
+                "w": "able to",
+                "t": "qodirli",
+                "tr": "способен"
+              },
+              {
+                "w": "walk",
+                "t": "yurmoq",
+                "tr": "ходить"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When Tina was ten, she could (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " gone to a special school for dancers in New York, but she decided not to because she didn't want to leave her friends."
+              }
+            ],
+            "answers": [
+              "have"
+            ],
+            "words": [
+              {
+                "w": "special school",
+                "t": "maxsus maktab",
+                "tr": "специальная школа"
+              },
+              {
+                "w": "dancers",
+                "t": "raqqoslar",
+                "tr": "танцоры"
+              },
+              {
+                "w": "decided",
+                "t": "qaror qilmoq",
+                "tr": "решить"
+              },
+              {
+                "w": "leave",
+                "t": "tark etmoq",
+                "tr": "покинуть"
+              },
+              {
+                "w": "friends",
+                "t": "do'stlar",
+                "tr": "друзья"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Even today, Tina's mum thinks that Tina (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " have gone to the school."
+              }
+            ],
+            "answers": [
+              "should"
+            ],
+            "words": [
+              {
+                "w": "thinks",
+                "t": "o'ylaydi",
+                "tr": "думает"
+              },
+              {
+                "w": "school",
+                "t": "maktab",
+                "tr": "школа"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm sure it (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " have been a very difficult decision for Tina to make, but she says that she doesn't regret not going."
+              }
+            ],
+            "answers": [
+              "must"
+            ],
+            "words": [
+              {
+                "w": "difficult",
+                "t": "qiyin",
+                "tr": "трудный"
+              },
+              {
+                "w": "decision",
+                "t": "qaror",
+                "tr": "решение"
+              },
+              {
+                "w": "regret",
+                "t": "afsuslanmoq",
+                "tr": "сожалеть"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She carried on dancing in her spare time, often getting up at five o'clock in the morning for a dance lesson before school. That can't have (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " much fun!"
+              }
+            ],
+            "answers": [
+              "been"
+            ],
+            "words": [
+              {
+                "w": "carried on",
+                "t": "davom ettirmoq",
+                "tr": "продолжала"
+              },
+              {
+                "w": "spare time",
+                "t": "bo'sh vaqt",
+                "tr": "свободное время"
+              },
+              {
+                "w": "getting up",
+                "t": "turmoq",
+                "tr": "вставать"
+              },
+              {
+                "w": "dance lesson",
+                "t": "raqs darsi",
+                "tr": "урок танца"
+              },
+              {
+                "w": "fun",
+                "t": "qiziqarli",
+                "tr": "весело"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Today, she's really successful. She's been in lots of shows and she's even appeared on TV a few times. In fact, she (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " have got the main part in a new show in London."
+              }
+            ],
+            "answers": [
+              "might"
+            ],
+            "words": [
+              {
+                "w": "successful",
+                "t": "muvaffaqiyatli",
+                "tr": "успешный"
+              },
+              {
+                "w": "appeared",
+                "t": "ko'rinmoq",
+                "tr": "появиться"
+              },
+              {
+                "w": "main part",
+                "t": "bosh rol",
+                "tr": "главная роль"
+              },
+              {
+                "w": "show",
+                "t": "spektakl",
+                "tr": "шоу"
+              }
+            ]
+          },
+          {
+            "id": "u22p3-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "She's not sure yet. They (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to have contacted her yesterday about it, but they didn't. Hopefully she'll hear in the next few days. Whether she gets the part or not, I'm really proud of my cousin!"
+              }
+            ],
+            "answers": [
+              "ought"
+            ],
+            "words": [
+              {
+                "w": "contacted",
+                "t": "bog'lanmoq",
+                "tr": "связаться"
+              },
+              {
+                "w": "yesterday",
+                "t": "kecha",
+                "tr": "вчера"
+              },
+              {
+                "w": "hopefully",
+                "t": "umid qilamanki",
+                "tr": "надеюсь"
+              },
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "услышать"
+              },
+              {
+                "w": "proud",
+                "t": "g'ururli",
+                "tr": "гордый"
+              },
+              {
+                "w": "cousin",
+                "t": "amakivachcha / xolavacha",
+                "tr": "двоюродная сестра"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

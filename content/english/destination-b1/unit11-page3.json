@@ -1,0 +1,513 @@
+{
+  "id": "unit11-page3",
+  "pageNumber": 3,
+  "sections": [
+    {
+      "id": "u11p3-sec-exercise4",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Birinchi gap bilan o'xshash ma'noli ikkinchi gapni to'ldiring. To'rt so'zdan ko'p yozmang.",
+      "instruction_ru": "Закончите второе предложение так, чтобы оно имело похожее значение с первым. Используйте не более четырёх слов.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I think John has taken my jacket.\nI think my jacket "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " John."
+              }
+            ],
+            "answers": [
+              "has been taken by"
+            ],
+            "words": [
+              {
+                "w": "jacket",
+                "t": "ko'ylak",
+                "tr": "куртка"
+              },
+              {
+                "w": "taken",
+                "t": "olingan",
+                "tr": "взят"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You should cook the chicken for at least an hour.\nThe chicken "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " for at least an hour."
+              }
+            ],
+            "answers": [
+              "should be cooked"
+            ],
+            "words": [
+              {
+                "w": "chicken",
+                "t": "tovuq",
+                "tr": "курица"
+              },
+              {
+                "w": "cook",
+                "t": "pishirmoq",
+                "tr": "готовить"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They're showing that film at the cinema in town.\nThat film "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " at the cinema in town."
+              }
+            ],
+            "answers": [
+              "is being shown"
+            ],
+            "words": [
+              {
+                "w": "show",
+                "t": "ko'rsatmoq",
+                "tr": "показывать"
+              },
+              {
+                "w": "cinema",
+                "t": "kinoteatr",
+                "tr": "кинотеатр"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They hadn't invented digital cameras when we took that photo.\nDigital cameras "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " when that photo was taken."
+              }
+            ],
+            "answers": [
+              "hadn't been invented"
+            ],
+            "words": [
+              {
+                "w": "invent",
+                "t": "ixtiro qilmoq",
+                "tr": "изобретать"
+              },
+              {
+                "w": "digital camera",
+                "t": "raqamli kamera",
+                "tr": "цифровая камера"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When I got there, Carly was doing the ironing, so I didn't have to do it!\nWhen I got there, the ironing "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Carly, so I didn't have to do it!"
+              }
+            ],
+            "answers": [
+              "was being done by"
+            ],
+            "words": [
+              {
+                "w": "ironing",
+                "t": "dazmol bosish",
+                "tr": "глажка"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "They were using hot soapy water to wash all the cars.\nAll the cars "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " hot soapy water."
+              }
+            ],
+            "answers": [
+              "were being washed with"
+            ],
+            "words": [
+              {
+                "w": "soapy",
+                "t": "ko'pikli",
+                "tr": "мыльный"
+              },
+              {
+                "w": "wash",
+                "t": "yuvmoq",
+                "tr": "мыть"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u11p3-sec-exercise5",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Matnni o'qing va savollarni passiv shaklda javoblang.",
+      "instruction_ru": "Прочитайте текст и ответьте на вопросы, используя пассивный залог.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "card1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Does only one person do the housework in Lisa's house?\nNo, the housework "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "is shared by everyone"
+            ],
+            "words": [
+              {
+                "w": "housework",
+                "t": "uy ishlari",
+                "tr": "домашние дела"
+              },
+              {
+                "w": "shared",
+                "t": "taqsimlanmoq",
+                "tr": "разделяться"
+              }
+            ]
+          },
+          {
+            "id": "card2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Who cooks the food?\nThe food "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "is cooked by Lisa's dad"
+            ],
+            "words": [
+              {
+                "w": "cook",
+                "t": "pishirmoq",
+                "tr": "готовить"
+              }
+            ]
+          },
+          {
+            "id": "card3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Who is going to help Lisa's dad next weekend?\nThe food "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "is going to be cooked by Lisa"
+            ],
+            "alternateAnswers": [
+              [
+                "is going to be helped to be cooked by Lisa"
+              ]
+            ],
+            "words": [
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помогать"
+              },
+              {
+                "w": "weekend",
+                "t": "dam olish kuni",
+                "tr": "выходные"
+              }
+            ]
+          },
+          {
+            "id": "card4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Who did all the shopping until about a year ago?\nUntil about a year ago, the shopping "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "was done by Lisa's mum"
+            ],
+            "words": [
+              {
+                "w": "shopping",
+                "t": "xarid qilmoq",
+                "tr": "покупки"
+              }
+            ]
+          },
+          {
+            "id": "card5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Who has done most of the shopping since then?\nSince then, most of the shopping "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "has been done by Lisa"
+            ],
+            "words": [
+              {
+                "w": "since then",
+                "t": "o'shandan beri",
+                "tr": "с тех пор"
+              }
+            ]
+          },
+          {
+            "id": "card6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Does Lisa take the shopping home from the supermarket?\nNo, it "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "is delivered by the supermarket"
+            ],
+            "words": [
+              {
+                "w": "deliver",
+                "t": "yetkazib bermoq",
+                "tr": "доставлять"
+              },
+              {
+                "w": "supermarket",
+                "t": "supermarket",
+                "tr": "супермаркет"
+              }
+            ]
+          },
+          {
+            "id": "card7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How often does someone clean the bathroom?\nIt "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "is cleaned nearly every day"
+            ],
+            "words": [
+              {
+                "w": "clean",
+                "t": "tozalamoq",
+                "tr": "убирать"
+              },
+              {
+                "w": "bathroom",
+                "t": "hammom",
+                "tr": "ванная"
+              }
+            ]
+          },
+          {
+            "id": "card8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When might someone next clean the bathroom?\nIt "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "might be cleaned later today"
+            ],
+            "words": [
+              {
+                "w": "might",
+                "t": "ehtimol",
+                "tr": "может быть"
+              },
+              {
+                "w": "later",
+                "t": "keyinroq",
+                "tr": "позже"
+              }
+            ]
+          },
+          {
+            "id": "card9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "How does Angelina sweep the floors?\nThe floors "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "are swept with a really old brush"
+            ],
+            "words": [
+              {
+                "w": "sweep",
+                "t": "supurmoq",
+                "tr": "мести"
+              },
+              {
+                "w": "brush",
+                "t": "cho'tka",
+                "tr": "щётка"
+              }
+            ]
+          },
+          {
+            "id": "card10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "What does Lisa think Angelina should use?\nLisa thinks a vacuum cleaner "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "answers": [
+              "should be used"
+            ],
+            "words": [
+              {
+                "w": "vacuum cleaner",
+                "t": "changyutgich",
+                "tr": "пылесос"
+              },
+              {
+                "w": "should",
+                "t": "kerak",
+                "tr": "должен"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

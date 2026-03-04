@@ -1,0 +1,787 @@
+{
+  "id": "unit14-page2",
+  "pageNumber": 2,
+  "sections": [
+    {
+      "id": "u14p2-sec-exercise1",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Bo'sh joylarga a, an yoki the ni yozing.",
+      "instruction_ru": "Вставьте a, an или the в пропуски.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u14p2-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We had "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " really good science lesson at school today."
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "science lesson",
+                "t": "fan darsi",
+                "tr": "урок науки"
+              },
+              {
+                "w": "school",
+                "t": "maktab",
+                "tr": "школа"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I found "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " unusual insect on the wall outside our house."
+              }
+            ],
+            "answers": [
+              "an"
+            ],
+            "words": [
+              {
+                "w": "unusual",
+                "t": "g'ayrioddiy",
+                "tr": "необычный"
+              },
+              {
+                "w": "insect",
+                "t": "hasharot",
+                "tr": "насекомое"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "It's your birthday next week. Are you going to have "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " party?"
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "birthday",
+                "t": "tug'ilgan kun",
+                "tr": "день рождения"
+              },
+              {
+                "w": "party",
+                "t": "ziyofat",
+                "tr": "вечеринка"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We waited for hours, but we finally saw "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Queen."
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "waited",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "finally",
+                "t": "nihoyat",
+                "tr": "наконец"
+              },
+              {
+                "w": "Queen",
+                "t": "qirolicha",
+                "tr": "Королева"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Why don't we listen to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " radio?"
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "listen to",
+                "t": "eshitmoq",
+                "tr": "слушать"
+              },
+              {
+                "w": "radio",
+                "t": "radio",
+                "tr": "радио"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Have you got "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " euro I could borrow?"
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "borrow",
+                "t": "qarz olmoq",
+                "tr": "одолжить"
+              },
+              {
+                "w": "euro",
+                "t": "evro",
+                "tr": "евро"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Mum has gone to "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " bank, but she'll be back soon."
+              }
+            ],
+            "answers": [
+              "the"
+            ],
+            "words": [
+              {
+                "w": "bank",
+                "t": "bank",
+                "tr": "банк"
+              },
+              {
+                "w": "back soon",
+                "t": "tez qaytmoq",
+                "tr": "скоро вернётся"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Where have you been? I've been waiting for over "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " hour!"
+              }
+            ],
+            "answers": [
+              "an"
+            ],
+            "words": [
+              {
+                "w": "waiting",
+                "t": "kutmoq",
+                "tr": "ждать"
+              },
+              {
+                "w": "hour",
+                "t": "soat",
+                "tr": "час"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p2-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Kerak bo'lgan joylarga artikl yozing. Artikl kerak bo'lmasa, chiziqcha (–) qo'ying.",
+      "instruction_ru": "Вставьте артикль там, где это необходимо. Если артикль не нужен, поставьте тире (–).",
+      "sentences": [],
+      "typedFillBlankData": {
+        "cards": [
+          {
+            "id": "u14p2-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I had (1) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " really bad day on (2) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Tuesday."
+              }
+            ],
+            "answers": [
+              "a",
+              "–"
+            ],
+            "words": [
+              {
+                "w": "really bad day",
+                "t": "juda yomon kun",
+                "tr": "очень плохой день"
+              },
+              {
+                "w": "Tuesday",
+                "t": "seshanba",
+                "tr": "вторник"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex2-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I bought (3) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " new game on CD-ROM for my computer, but (4) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " game didn't work properly."
+              }
+            ],
+            "answers": [
+              "a",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купить"
+              },
+              {
+                "w": "CD-ROM",
+                "t": "CD-ROM",
+                "tr": "CD-ROM"
+              },
+              {
+                "w": "properly",
+                "t": "to'g'ri",
+                "tr": "правильно"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I took it back to (5) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " shop on (6) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " North Street, but (7) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " manager blamed me!"
+              }
+            ],
+            "answers": [
+              "the",
+              "–",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "took back",
+                "t": "qaytarib olib bormoq",
+                "tr": "вернуть"
+              },
+              {
+                "w": "North Street",
+                "t": "Shimoliy ko'cha",
+                "tr": "Северная улица"
+              },
+              {
+                "w": "manager",
+                "t": "menejer",
+                "tr": "менеджер"
+              },
+              {
+                "w": "blamed",
+                "t": "ayblamoq",
+                "tr": "обвинять"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "He pointed to (8) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " scratch on (9) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " CD-ROM and said I'd done it."
+              }
+            ],
+            "answers": [
+              "a",
+              "the"
+            ],
+            "words": [
+              {
+                "w": "pointed to",
+                "t": "ko'rsatmoq",
+                "tr": "указать на"
+              },
+              {
+                "w": "scratch",
+                "t": "tirnalgan iz",
+                "tr": "царапина"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex2-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I couldn't believe it! I had to buy (10) "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " new one!"
+              }
+            ],
+            "answers": [
+              "a"
+            ],
+            "words": [
+              {
+                "w": "believe",
+                "t": "ishonmoq",
+                "tr": "верить"
+              },
+              {
+                "w": "new one",
+                "t": "yangi birta",
+                "tr": "новый"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u14p2-sec-exercise3",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "instruction": "Har bir gapda ortiqcha so'zni toping va chizib tashlang (to'g'ri so'z yoki artiklni tanlang).",
+      "instruction_ru": "Найдите лишнее слово в каждом предложении (выберите правильный вариант без лишнего артикля).",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u14p2-ex3-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Do you think we will ever send a person to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the Mars",
+                  "Mars"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "?"
+              }
+            ],
+            "words": [
+              {
+                "w": "send",
+                "t": "yubormoq",
+                "tr": "отправить"
+              },
+              {
+                "w": "Mars",
+                "t": "Mars",
+                "tr": "Марс"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When you go to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the London",
+                  "London"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ", don't forget to see the London Eye."
+              }
+            ],
+            "words": [
+              {
+                "w": "London",
+                "t": "London",
+                "tr": "Лондон"
+              },
+              {
+                "w": "London Eye",
+                "t": "London Ko'zi",
+                "tr": "Лондонский глаз"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "When we use "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the cars",
+                  "cars"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ", we damage the environment."
+              }
+            ],
+            "words": [
+              {
+                "w": "damage",
+                "t": "zarar yetkazmoq",
+                "tr": "наносить вред"
+              },
+              {
+                "w": "environment",
+                "t": "atrof-muhit",
+                "tr": "окружающая среда"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm not telling "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "a lies",
+                  "lies"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "! It's the truth."
+              }
+            ],
+            "words": [
+              {
+                "w": "telling lies",
+                "t": "yolg'on gapirmoq",
+                "tr": "говорить ложь"
+              },
+              {
+                "w": "truth",
+                "t": "haqiqat",
+                "tr": "правда"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-5",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I'm looking for a teacher who can teach me "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the German",
+                  "German"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "words": [
+              {
+                "w": "looking for",
+                "t": "qidirmoq",
+                "tr": "искать"
+              },
+              {
+                "w": "German",
+                "t": "nemis tili",
+                "tr": "немецкий язык"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Ray needs a warm hat and a new coat for his visit to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "the Russia",
+                  "Russia"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": "."
+              }
+            ],
+            "words": [
+              {
+                "w": "warm hat",
+                "t": "issiq qalpoq",
+                "tr": "тёплая шапка"
+              },
+              {
+                "w": "visit",
+                "t": "tashrif",
+                "tr": "визит"
+              },
+              {
+                "w": "Russia",
+                "t": "Rossiya",
+                "tr": "Россия"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dad has gone to "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "a work",
+                  "work"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " and forgotten the car keys."
+              }
+            ],
+            "words": [
+              {
+                "w": "forgotten",
+                "t": "unutmoq",
+                "tr": "забыть"
+              },
+              {
+                "w": "car keys",
+                "t": "mashina kalitlari",
+                "tr": "ключи от машины"
+              }
+            ]
+          },
+          {
+            "id": "u14p2-ex3-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Some people have "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "an unusual pets",
+                  "unusual pets"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": ", such as lions or tigers."
+              }
+            ],
+            "words": [
+              {
+                "w": "unusual pets",
+                "t": "g'ayrioddiy uy hayvonlari",
+                "tr": "необычные домашние животные"
+              },
+              {
+                "w": "such as",
+                "t": "masalan",
+                "tr": "например"
+              },
+              {
+                "w": "lions",
+                "t": "arslonlar",
+                "tr": "львы"
+              },
+              {
+                "w": "tigers",
+                "t": "yo'lbarslar",
+                "tr": "тигры"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

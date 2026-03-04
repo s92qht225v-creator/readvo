@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { loadDialogue } from '@/services';
-import { StoryReader } from '@/components/StoryReader';
+import { DialogueReader } from '@/components/DialogueReader';
 
 interface PageParams {
   params: Promise<{
@@ -30,5 +30,5 @@ export default async function DialoguePage({ params }: PageParams) {
     notFound();
   }
 
-  return <StoryReader story={dialogue} bookPath="/chinese/hsk1" listPath="/chinese/hsk1/dialogues" />;
+  return <DialogueReader dialogue={dialogue} bookPath="/chinese/hsk1" listPath="/chinese/hsk1/dialogues" />;
 }

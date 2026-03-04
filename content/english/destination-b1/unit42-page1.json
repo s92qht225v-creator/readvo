@@ -1,0 +1,243 @@
+{
+  "id": "unit42-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 42,
+    "pinyin": "",
+    "title": "Vocabulary",
+    "titleTranslation": "Problems and solutions",
+    "titleTranslation_ru": "Problems and solutions"
+  },
+  "sections": [
+    {
+      "id": "u42p1-sec-vocab1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Topic vocabulary",
+      "subheading_uz": "Mavzu lug'ati",
+      "subheading_ru": "Тематическая лексика",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", ""],
+        "rows": [
+          {
+            "cells": ["accident (n)", "encourage (v)", "purpose (n)"],
+            "cells_uz": ["accident – baxtsiz hodisa, tasodif", "encourage – rag'batlantirmoq, ilhomlantirmoq", "purpose – maqsad, niyat"],
+            "cells_ru": ["accident – несчастный случай, случайность", "encourage – поощрять, вдохновлять", "purpose – цель, намерение"]
+          },
+          {
+            "cells": ["assume (v)", "get rid of (v phr)", "refuse (v)"],
+            "cells_uz": ["assume – taxmin qilmoq, o'ylamoq", "get rid of – xalos bo'lmoq, bartaraf etmoq", "refuse – rad etmoq, inkor qilmoq"],
+            "cells_ru": ["assume – предполагать, считать", "get rid of – избавиться от", "refuse – отказываться"]
+          },
+          {
+            "cells": ["cause (v, n)", "gossip (v, n)", "result (v, n)"],
+            "cells_uz": ["cause – sabab bo'lmoq, sabab", "gossip – g'iybat qilmoq, g'iybat", "result – natija, olib kelmoq"],
+            "cells_ru": ["cause – причинять, причина", "gossip – сплетничать, сплетни", "result – результат, приводить к"]
+          },
+          {
+            "cells": ["claim (v)", "ideal (adj)", "rumour (n)"],
+            "cells_uz": ["claim – da'vo qilmoq, aytmoq", "ideal – ideal, eng yaxshi", "rumour – mish-mish, gap-so'z"],
+            "cells_ru": ["claim – утверждать, заявлять", "ideal – идеальный", "rumour – слух, молва"]
+          },
+          {
+            "cells": ["complain (v)", "insult (v, n)", "sensible (adj)"],
+            "cells_uz": ["complain – shikoyat qilmoq, norozilik bildirmoq", "insult – haqorat qilmoq, haqorat", "sensible – aqlli, oqilona"],
+            "cells_ru": ["complain – жаловаться", "insult – оскорблять, оскорбление", "sensible – разумный, здравомыслящий"]
+          },
+          {
+            "cells": ["convince (v)", "investigate (v)", "serious (adj)"],
+            "cells_uz": ["convince – ishontirmoq, ko'ndirmoq", "investigate – tekshirmoq, o'rganmoq", "serious – jiddiy, muhim"],
+            "cells_ru": ["convince – убеждать", "investigate – расследовать, исследовать", "serious – серьёзный"]
+          },
+          {
+            "cells": ["criticise (v)", "negative (adj)", "spare (adj)"],
+            "cells_uz": ["criticise – tanqid qilmoq", "negative – salbiy, manfiy", "spare – ortiqcha, zaxira"],
+            "cells_ru": ["criticise – критиковать", "negative – отрицательный, негативный", "spare – запасной, лишний"]
+          },
+          {
+            "cells": ["deny (v)", "positive (adj)", "theory (n)"],
+            "cells_uz": ["deny – inkor qilmoq, rad etmoq", "positive – ijobiy, musbat", "theory – nazariya, faraz"],
+            "cells_ru": ["deny – отрицать, отвергать", "positive – положительный, позитивный", "theory – теория"]
+          },
+          {
+            "cells": ["discussion (n)", "praise (v, n)", "thought (n)"],
+            "cells_uz": ["discussion – muhokama, munozara", "praise – maqtamoq, maqtov", "thought – fikr, o'y"],
+            "cells_ru": ["discussion – обсуждение, дискуссия", "praise – хвалить, похвала", "thought – мысль, идея"]
+          },
+          {
+            "cells": ["doubt (v, n)", "pretend (v)", "warn (v)"],
+            "cells_uz": ["doubt – shubha qilmoq, shubha", "pretend – bahona qilmoq, ko'rsatib qo'ymoq", "warn – ogohlantirmoq, ogohlantirishni bermoq"],
+            "cells_ru": ["doubt – сомневаться, сомнение", "pretend – притворяться, делать вид", "warn – предупреждать"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u42p1-sec-phrasal",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Phrasal verbs",
+      "subheading_uz": "Frazeologik fe'llar",
+      "subheading_ru": "Фразовые глаголы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["**hang up**", "put clothes in a wardrobe, etc"],
+            "cells_uz": ["**hang up** – kiyimlarni shkafga ilib qo'ymoq va hokazo", "put clothes in a wardrobe, etc"],
+            "cells_ru": ["**hang up** – повесить одежду в шкаф и т.д.", "put clothes in a wardrobe, etc"]
+          },
+          {
+            "cells": ["**pick up**", "lift something from the floor, a table, etc"],
+            "cells_uz": ["**pick up** – yerdan, stoldan va boshqa joydan ko'tarmoq", "lift something from the floor, a table, etc"],
+            "cells_ru": ["**pick up** – поднять что-либо с пола, стола и т.д.", "lift something from the floor, a table, etc"]
+          },
+          {
+            "cells": ["**put back**", "return something to where it was"],
+            "cells_uz": ["**put back** – narsani o'z joyiga qaytarmoq", "return something to where it was"],
+            "cells_ru": ["**put back** – вернуть что-либо на место", "return something to where it was"]
+          },
+          {
+            "cells": ["**run out (of)**", "not have any left"],
+            "cells_uz": ["**run out (of)** – tugamoq, qolmaslik", "not have any left"],
+            "cells_ru": ["**run out (of)** – закончиться, иссякнуть", "not have any left"]
+          },
+          {
+            "cells": ["**share out**", "give a part of sth to a group of people"],
+            "cells_uz": ["**share out** – bir guruh odamlar o'rtasida taqsimlamoq", "give a part of sth to a group of people"],
+            "cells_ru": ["**share out** – раздать что-либо группе людей", "give a part of sth to a group of people"]
+          },
+          {
+            "cells": ["**sort out**", "solve a problem"],
+            "cells_uz": ["**sort out** – muammoni hal etmoq", "solve a problem"],
+            "cells_ru": ["**sort out** – решить проблему", "solve a problem"]
+          },
+          {
+            "cells": ["**watch out**", "be careful"],
+            "cells_uz": ["**watch out** – ehtiyot bo'lmoq", "be careful"],
+            "cells_ru": ["**watch out** – быть осторожным, смотреть в оба", "be careful"]
+          },
+          {
+            "cells": ["**work out**", "find the solution to a problem, etc"],
+            "cells_uz": ["**work out** – muammoning yechimini topmoq va hokazo", "find the solution to a problem, etc"],
+            "cells_ru": ["**work out** – найти решение проблемы и т.д.", "find the solution to a problem, etc"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u42p1-sec-prepositions",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Prepositional phrases",
+      "subheading_uz": "Predlogli iboralar",
+      "subheading_ru": "Предложные фразы",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": [""],
+        "rows": [
+          {
+            "cells": ["by accident/mistake"],
+            "cells_uz": ["tasodifan / xato bilan"],
+            "cells_ru": ["случайно / по ошибке"]
+          },
+          {
+            "cells": ["in a mess"],
+            "cells_uz": ["tartibsizlikda, to'zg'in holatda"],
+            "cells_ru": ["в беспорядке"]
+          },
+          {
+            "cells": ["in danger (of)"],
+            "cells_uz": ["xavf ostida"],
+            "cells_ru": ["в опасности (от)"]
+          },
+          {
+            "cells": ["in my view"],
+            "cells_uz": ["mening fikrimcha, mening nazarimda"],
+            "cells_ru": ["по моему мнению"]
+          },
+          {
+            "cells": ["in trouble"],
+            "cells_uz": ["muammoda, qiyinchilikda"],
+            "cells_ru": ["в беде, в затруднении"]
+          },
+          {
+            "cells": ["under pressure"],
+            "cells_uz": ["bosim ostida"],
+            "cells_ru": ["под давлением"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u42p1-sec-wordformation",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word formation",
+      "subheading_uz": "So'z yasalishi",
+      "subheading_ru": "Словообразование",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", "", "", ""],
+        "rows": [
+          {
+            "cells": ["**advice**", "advise, adviser", "**prefer**", "preference, preferable"],
+            "cells_uz": ["**advice**", "maslahat bermoq, maslahatchi", "**prefer**", "afzal ko'rish, afzal"],
+            "cells_ru": ["**advice**", "советовать, советчик", "**prefer**", "предпочтение, предпочтительный"]
+          },
+          {
+            "cells": ["**confuse**", "confused, confusion", "**recommend**", "recommendation"],
+            "cells_uz": ["**confuse**", "chalkash, chalkashlik", "**recommend**", "tavsiya"],
+            "cells_ru": ["**confuse**", "растерянный, путаница", "**recommend**", "рекомендация"]
+          },
+          {
+            "cells": ["**except**", "exception", "**refuse**", "refusal"],
+            "cells_uz": ["**except**", "istisno", "**refuse**", "rad etish"],
+            "cells_ru": ["**except**", "исключение", "**refuse**", "отказ"]
+          },
+          {
+            "cells": ["**help**", "(un)helpful, helpless", "**solve**", "solution"],
+            "cells_uz": ["**help**", "foydali/foydasiz, ojiz", "**solve**", "yechim, echim"],
+            "cells_ru": ["**help**", "(не)полезный, беспомощный", "**solve**", "решение"]
+          },
+          {
+            "cells": ["**luck**", "(un)lucky, (un)luckily", "**suggest**", "suggestion"],
+            "cells_uz": ["**luck**", "omadli/omsiz, omadli/omsiz ravishda", "**suggest**", "taklif, maslahat"],
+            "cells_ru": ["**luck**", "(не)удачливый, (не)удачно", "**suggest**", "предложение, совет"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u42p1-sec-wordpatterns",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "Word patterns",
+      "subheading_uz": "So'z birikmalari",
+      "subheading_ru": "Словосочетания",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["", ""],
+        "rows": [
+          {
+            "cells": ["_adjectives_", "sure about/of"],
+            "cells_uz": ["_sifatlar_", "... haqida/dan ishonch"],
+            "cells_ru": ["_прилагательные_", "быть уверенным в чём-либо"]
+          },
+          {
+            "cells": ["_verbs_", "advise against\nagree (with sb) about\napprove of\nbelieve in\ndeal with\nhappen to\nhide sth from sb\ninsist on\nrely on"],
+            "cells_uz": ["_fe'llar_", "... ga qarshi maslahat bermoq\nbirov bilan ... haqida rozi bo'lmoq\n... ni ma'qullamoq\n... ga ishonmoq\n... bilan shug'ullanmoq\nbiror narsaga duch kelmoq\nbiror narsani birovdan yashirmoq\n... da turib olmoq\n... ga tayanmoq"],
+            "cells_ru": ["_глаголы_", "советовать против чего-либо\nсоглашаться с кем-либо о чём-либо\nодобрять что-либо\nверить во что-либо\nсправляться с чем-либо\nслучаться с кем-либо\nскрывать что-либо от кого-либо\nнастаивать на чём-либо\nполагаться на что-либо"]
+          },
+          {
+            "cells": ["_nouns_", "an advantage of\na solution to"],
+            "cells_uz": ["_otlar_", "biror narsaning afzalligi\nbiror narsaga yechim"],
+            "cells_ru": ["_существительные_", "преимущество чего-либо\nрешение чего-либо"]
+          }
+        ]
+      }
+    }
+  ]
+}

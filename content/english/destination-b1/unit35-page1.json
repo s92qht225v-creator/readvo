@@ -1,0 +1,73 @@
+{
+  "id": "unit35-page1",
+  "pageNumber": 1,
+  "lessonHeader": {
+    "lessonNumber": 35,
+    "pinyin": "",
+    "title": "Grammar",
+    "titleTranslation": "wish",
+    "titleTranslation_ru": "wish"
+  },
+  "sections": [
+    {
+      "id": "u35p1-sec-grammar1",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "wish",
+      "subheading_uz": "wish",
+      "subheading_ru": "wish",
+      "sentences": [],
+      "grammarTableData": {
+        "headers": ["Use", "Tense / modal", "Example"],
+        "subHeaders": ["Qo'llanilishi", "Zamon / modal", "Misol"],
+        "subHeaders_ru": ["Употребление", "Время / модальный", "Пример"],
+        "rows": [
+          {
+            "cells": ["To express wishes about now or generally", "wish + past simple", "_Carl **wishes** he **had** a telescope._\n_I wish I **wasn't** scared of spiders._"],
+            "cells_uz": ["Hozirgi yoki umumiy istaklarni ifodalash uchun", "wish + past simple", "_Carl teleskop **bo'lishini** istaydi._\n_O'rgimchakdan qo'rqmasligimni **istayman**._"],
+            "cells_ru": ["Для выражения желаний о настоящем или вообще", "wish + past simple", "_Карл **хотел бы**, чтобы у него **был** телескоп._\n_Я **хотел(а) бы** не бояться пауков._"]
+          },
+          {
+            "cells": ["To express wishes about the past", "wish + past perfect simple", "_Tracy **wishes** she'**d seen** that programme about the moon last night._\n_I wish they **hadn't cut down** so many trees._"],
+            "cells_uz": ["O'tmishtagi istaklarni ifodalash uchun", "wish + past perfect simple", "_Tracy kecha oy haqidagi dasturni **ko'rgan bo'lishini** istaydi._\n_Ular shuncha ko'p daraxtni **qulatmaganligini istayman**._"],
+            "cells_ru": ["Для выражения желаний о прошлом", "wish + past perfect simple", "_Трейси **хотела бы**, чтобы вчера **посмотрела** программу о луне._\n_Я **хотел(а) бы**, чтобы они **не вырубали** столько деревьев._"]
+          },
+          {
+            "cells": ["To criticise other people, or to complain about something", "wish + would + bare infinitive", "_I **wish** people **would throw** their litter in the bin and not on the ground!_\n_I **wish** you **wouldn't smoke** in here._"],
+            "cells_uz": ["Boshqa odamlarni tanqid qilish yoki narsadan shikoyat qilish uchun", "wish + would + bare infinitive", "_Odamlar axlatni yerga emas, axlat qutisiga **tashlaganini istayman**!_\n_Bu yerda chekmasligingizni **istayman**._"],
+            "cells_ru": ["Для критики других людей или жалоб на что-то", "wish + would + bare infinitive", "_Я **хотел(а) бы**, чтобы люди **бросали** мусор в урну, а не на землю!_\n_Я **хотел(а) бы**, чтобы ты **не курил(а)** здесь._"]
+          },
+          {
+            "cells": ["To express wishes about ability and permission now or in the future", "wish + could + bare infinitive", "_I **wish** I **could travel** through time!_\n_David **wishes** he **could come** with us, but his parents won't let him._"],
+            "cells_uz": ["Hozir yoki kelajakda qobiliyat va ruxsat haqida istaklarni ifodalash uchun", "wish + could + bare infinitive", "_Vaqt bo'ylab **sayohat qila olishimni istayman**!_\n_David biz bilan **kela olishini** istaydi, lekin ota-onasi ruxsat bermaydi._"],
+            "cells_ru": ["Для выражения желаний о способности и разрешении сейчас или в будущем", "wish + could + bare infinitive", "_Я **хотел(а) бы путешествовать** во времени!_\n_Дэвид **хотел бы прийти** с нами, но родители не разрешают._"]
+          }
+        ]
+      },
+      "tip": {
+        "label": "Helpful hints",
+        "label_uz": "Foydali maslahatlar",
+        "label_ru": "Полезные подсказки",
+        "text": "",
+        "translation": "• _wish_ + past simple ishlatganda, _I/he/she/it was ..._ yoki _I/he/she/it were ..._ deyishimiz mumkin. _Were_ rasmiyroq.\n✓ _I wish I **was** an astronaut._ (norasmiy)\n✓ _I wish I **were** an astronaut._ (rasmiyroq)\n\n• _if only_ iborasini _wish_ bilan bir xil ma'noda ishlatishimiz mumkin.\n✓ _If only I **was/were** an astronaut._",
+        "translation_ru": "• Когда мы используем _wish_ + past simple, мы можем сказать _I/he/she/it was ..._ или _I/he/she/it were ..._ _Were_ более формально.\n✓ _I wish I **was** an astronaut._ (менее формально)\n✓ _I wish I **were** an astronaut._ (более формально)\n\n• Мы можем использовать фразу _if only_ так же, как _wish_.\n✓ _If only I **was/were** an astronaut._"
+      }
+    },
+    {
+      "id": "u35p1-sec-watchout",
+      "type": "grammar",
+      "heading": "",
+      "subheading": "",
+      "subheading_ru": "",
+      "sentences": [],
+      "tip": {
+        "label": "Watch out!",
+        "label_uz": "Ehtiyot bo'ling!",
+        "label_ru": "Внимание!",
+        "text": "",
+        "translation": "• O'zimiz haqimizda istaklarni ifodalashda _would_ ishlatmaymiz.\n✓ _I wish I **lived** on Mars._\n✗ _I wish I **would live** on Mars._\n\n• Kelajakda biror narsa sodir bo'lishi ehtimoli bo'lsa, _wish_ emas, _hope_ ishlatamiz.\n✓ _I **hope** it doesn't snow tomorrow._\n✗ _I **wish** it doesn't snow tomorrow._",
+        "translation_ru": "• Мы не используем _would_ для выражения желаний о себе.\n✓ _I wish I **lived** on Mars._\n✗ _I wish I **would live** on Mars._\n\n• Мы используем _hope_, а не _wish_, если есть возможность, что что-то произойдёт в будущем.\n✓ _I **hope** it doesn't snow tomorrow._\n✗ _I **wish** it doesn't snow tomorrow._"
+      }
+    }
+  ]
+}
