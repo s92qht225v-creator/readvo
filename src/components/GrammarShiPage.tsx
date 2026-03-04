@@ -244,7 +244,7 @@ export function GrammarShiPage() {
                 <div key={qi} className="grammar-quiz__question">
                   <p className="grammar-quiz__q">{qi + 1}. {language === 'ru' ? q.q_ru : q.q_uz}</p>
                   <div className="grammar-quiz__options">
-                    {opts.map((opt, ai) => {
+                    {(opts ?? []).map((opt, ai) => {
                       const selected = answers[qi] === ai;
                       const correct = q.correct === ai;
                       let cls = 'grammar-quiz__option';
