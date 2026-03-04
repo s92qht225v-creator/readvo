@@ -143,13 +143,21 @@
     { "zh": "辛苦", "py": "xīnkǔ", "uz": "qiyin, mashaqqatli", "ru": "трудно, тяжело", "ex": "工作辛苦吗？", "expy": "Gōngzuò xīnkǔ ma?", "ex_uz": "Ish qiyinmi?", "ex_ru": "Работа тяжёлая?" },
     { "zh": "对吗", "py": "duì ma", "uz": "shundaymi?", "ru": "правда?", "ex": "你是学生，对吗？", "expy": "Nǐ shì xuéshēng, duì ma?", "ex_uz": "Sen talabasan, shundaymi?", "ex_ru": "Ты студент, правда?" }
   ],
-  "phrases": [
-    { "zh": "为什么", "py": "wèi shénme", "uz": "nega?", "ru": "почему?" },
-    { "zh": "因为", "py": "yīnwèi", "uz": "chunki", "ru": "потому что" },
-    { "zh": "对吗", "py": "duì ma", "uz": "shundaymi?", "ru": "правда?" },
-    { "zh": "是的", "py": "shì de", "uz": "ha, shunday", "ru": "да, именно" },
-    { "zh": "白天", "py": "báitiān", "uz": "kunduz", "ru": "днём" },
-    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером" }
+  "extraVocabSubtitle_uz": "Ro'za va ibodat mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме поста и молитвы",
+  "extraVocab": [
+    { "zh": "斋月", "py": "zhāi yuè", "uz": "Ramazon oyi", "ru": "месяц Рамадан" },
+    { "zh": "开斋", "py": "kāi zhāi", "uz": "iftor qilmoq (ro'za ochmoq)", "ru": "разговеться" },
+    { "zh": "开斋节", "py": "kāi zhāi jié", "uz": "Ro'za hayiti", "ru": "Праздник разговения" },
+    { "zh": "做礼拜", "py": "zuò lǐbài", "uz": "namoz o'qimoq (ibodat qilmoq)", "ru": "молиться" },
+    { "zh": "清真寺", "py": "qīngzhēn sì", "uz": "masjid", "ru": "мечеть" },
+    { "zh": "古兰经", "py": "gǔlánjīng", "uz": "Qur'on", "ru": "Коран" },
+    { "zh": "早饭", "py": "zǎofàn", "uz": "nonushta (saharlik)", "ru": "завтрак (сухур)" },
+    { "zh": "晚饭", "py": "wǎnfàn", "uz": "kechki ovqat (iftor)", "ru": "ужин (ифтар)" },
+    { "zh": "喝水", "py": "hē shuǐ", "uz": "suv ichmoq", "ru": "пить воду" },
+    { "zh": "饿", "py": "è", "uz": "och (qorin)", "ru": "голодный" },
+    { "zh": "渴", "py": "kě", "uz": "chanqoq", "ru": "хочется пить" },
+    { "zh": "忍", "py": "rěn", "uz": "chidamoq, sabr qilmoq", "ru": "терпеть" }
   ],
   "timeOfDay": [
     { "zh": "早上", "py": "zǎoshang", "uz": "ertalab", "ru": "утром", "icon": "🌅" },
@@ -159,12 +167,94 @@
     { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечером", "icon": "🌙" }
   ],
   "grammarNotes": [
-    { "pattern": "为什么...？", "title_uz": "Sabab so'rash", "title_ru": "Спросить причину", "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.", "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.", "ex": "你为什么不吃饭？", "expy": "Nǐ wèi shénme bù chīfàn?", "ex_uz": "Nega ovqat yemayapsan?", "ex_ru": "Почему ты не ешь?" },
-    { "pattern": "因为...", "title_uz": "Sabab bildirish", "title_ru": "Выразить причину", "desc_uz": "因为 = chunki. 为什么 savoliga javob. Gapning boshida keladi.", "desc_ru": "因为 = потому что. Ответ на 为什么. Стоит в начале предложения.", "ex": "因为我在封斋。", "expy": "Yīnwèi wǒ zài fēng zhāi.", "ex_uz": "Chunki men ro'za tutayapman.", "ex_ru": "Потому что я соблюдаю пост." },
-    { "pattern": "在 + Глагол", "title_uz": "Davom etayotgan ish", "title_ru": "Продолжающееся действие", "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi.", "desc_ru": "在 перед глаголом обозначает действие в процессе.", "ex": "我在封斋。", "expy": "Wǒ zài fēng zhāi.", "ex_uz": "Men (hozir) ro'za tutayapman.", "ex_ru": "Я (сейчас) соблюдаю пост." },
-    { "pattern": "...是...吗？", "title_uz": "Ha/yo'q savol", "title_ru": "Вопрос да/нет", "desc_uz": "是...吗？ = ...mi? Biror narsani tasdiqlash yoki so'rash uchun.", "desc_ru": "是...吗？ = ...ли? Для подтверждения или уточнения.", "ex": "现在是斋月吗？", "expy": "Xiànzài shì zhāi yuè ma?", "ex_uz": "Hozir Ramazon oyi-mi?", "ex_ru": "Сейчас Рамадан?" },
-    { "pattern": "...，对吗？", "title_uz": "Tasdiqlash so'rovi", "title_ru": "Уточняющий вопрос", "desc_uz": "对吗？ = shundaymi? Gap oxiriga qo'shiladi.", "desc_ru": "对吗？ = правда? Добавляется в конец предложения.", "ex": "你白天不吃，对吗？", "expy": "Nǐ báitiān bù chī, duì ma?", "ex_uz": "Kunduz yemaysan, shundaymi?", "ex_ru": "Ты днём не ешь, правда?" },
-    { "pattern": "不 + Sifat", "title_uz": "Sifat inkori", "title_ru": "Отрицание прилагательного", "desc_uz": "不 sifatdan oldin kelib, «...emas» ma'nosini beradi.", "desc_ru": "不 перед прилагательным даёт значение «не...».", "ex": "不辛苦。", "expy": "Bù xīnkǔ.", "ex_uz": "Qiyin emas.", "ex_ru": "Не тяжело." }
+    {
+      "pattern": "为什么...？",
+      "title_uz": "Sabab so'rash",
+      "title_ru": "Спросить причину",
+      "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.",
+      "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.",
+      "formula": "Ega + 为什么 + Fe'l？",
+      "formula_ru": "Подлеж. + 为什么 + Глагол？",
+      "examples": [
+        { "zh": "你为什么不吃饭？", "py": "Nǐ wèi shénme bù chīfàn?", "uz": "Nega ovqat yemayapsan?", "ru": "Почему ты не ешь?" },
+        { "zh": "他为什么不来？", "py": "Tā wèi shénme bù lái?", "uz": "U nega kelmayapti?", "ru": "Почему он не приходит?" },
+        { "zh": "你为什么学中文？", "py": "Nǐ wèi shénme xué Zhōngwén?", "uz": "Nega xitoy tilini o'rganayapsan?", "ru": "Почему ты учишь китайский?" }
+      ],
+      "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
+      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!"
+    },
+    {
+      "pattern": "因为...",
+      "title_uz": "Sabab bildirish",
+      "title_ru": "Выразить причину",
+      "desc_uz": "因为 = chunki. 为什么 savoliga javob. Gapning boshida keladi.",
+      "desc_ru": "因为 = потому что. Ответ на 为什么. Стоит в начале предложения.",
+      "formula": "因为 + sabab",
+      "formula_ru": "因为 + причина",
+      "examples": [
+        { "zh": "因为我在封斋。", "py": "Yīnwèi wǒ zài fēng zhāi.", "uz": "Chunki men ro'za tutayapman.", "ru": "Потому что я соблюдаю пост." },
+        { "zh": "因为今天是斋月。", "py": "Yīnwèi jīntiān shì zhāi yuè.", "uz": "Chunki bugun Ramazon oyi.", "ru": "Потому что сегодня Рамадан." },
+        { "zh": "因为我很忙。", "py": "Yīnwèi wǒ hěn máng.", "uz": "Chunki men juda bandman.", "ru": "Потому что я очень занят." }
+      ]
+    },
+    {
+      "pattern": "在 + Fe'l",
+      "title_uz": "Hozir davom etayotgan ish",
+      "title_ru": "Продолжающееся действие",
+      "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi. O'zbekcha: «...yapman».",
+      "desc_ru": "在 перед глаголом обозначает действие в процессе. Аналог «-ю/-ю сейчас».",
+      "formula": "Ega + 在 + Fe'l",
+      "formula_ru": "Подлеж. + 在 + Глагол",
+      "examples": [
+        { "zh": "我在封斋。", "py": "Wǒ zài fēng zhāi.", "uz": "Men (hozir) ro'za tutayapman.", "ru": "Я (сейчас) соблюдаю пост." },
+        { "zh": "他在吃饭。", "py": "Tā zài chīfàn.", "uz": "U (hozir) ovqat yeyapti.", "ru": "Он (сейчас) ест." },
+        { "zh": "我们在学习。", "py": "Wǒmen zài xuéxí.", "uz": "Biz (hozir) o'qiyapmiz.", "ru": "Мы (сейчас) учимся." }
+      ]
+    },
+    {
+      "pattern": "...是...吗？",
+      "title_uz": "Ha/yo'q savol",
+      "title_ru": "Вопрос да/нет",
+      "desc_uz": "是...吗？ = ...mi? Biror narsani tasdiqlash yoki so'rash uchun.",
+      "desc_ru": "是...吗？ = ...ли? Для подтверждения или уточнения.",
+      "formula": "Hozir + 是 + [narsa] + 吗？",
+      "formula_ru": "Сейчас + 是 + [что-то] + 吗？",
+      "examples": [
+        { "zh": "现在是斋月吗？", "py": "Xiànzài shì zhāi yuè ma?", "uz": "Hozir Ramazon oyi-mi?", "ru": "Сейчас Рамадан?" },
+        { "zh": "他是学生吗？", "py": "Tā shì xuéshēng ma?", "uz": "U talabami?", "ru": "Он студент?" },
+        { "zh": "这是你的书吗？", "py": "Zhè shì nǐ de shū ma?", "uz": "Bu sening kitobingmi?", "ru": "Это твоя книга?" }
+      ]
+    },
+    {
+      "pattern": "...，对吗？",
+      "title_uz": "Tasdiqlash so'rovi",
+      "title_ru": "Уточняющий вопрос",
+      "desc_uz": "对吗？ = shundaymi? / to'g'rimi? Gap oxiriga qo'shiladi — fikringizni tasdiqlatish uchun.",
+      "desc_ru": "对吗？ = правда? / верно? Добавляется в конец — для подтверждения своей мысли.",
+      "formula": "Gap + ，对吗？",
+      "formula_ru": "Предложение + ，对吗？",
+      "examples": [
+        { "zh": "你白天不吃，对吗？", "py": "Nǐ báitiān bù chī, duì ma?", "uz": "Kunduz yemaysan, shundaymi?", "ru": "Ты днём не ешь, правда?" },
+        { "zh": "你是学生，对吗？", "py": "Nǐ shì xuéshēng, duì ma?", "uz": "Sen talabasan, shundaymi?", "ru": "Ты студент, правда?" },
+        { "zh": "他很忙，对吗？", "py": "Tā hěn máng, duì ma?", "uz": "U juda band, shundaymi?", "ru": "Он очень занят, правда?" }
+      ]
+    },
+    {
+      "pattern": "不 + Sifat",
+      "title_uz": "Sifat inkori",
+      "title_ru": "Отрицание прилагательного",
+      "desc_uz": "不 sifatdan oldin kelib, «...emas» ma'nosini beradi. 很 tushib qoladi!",
+      "desc_ru": "不 перед прилагательным даёт значение «не...». 很 при этом опускается!",
+      "formula": "不 + Sifat",
+      "formula_ru": "不 + Прилагательное",
+      "examples": [
+        { "zh": "不辛苦。", "py": "Bù xīnkǔ.", "uz": "Qiyin emas.", "ru": "Не тяжело." },
+        { "zh": "不忙。", "py": "Bù máng.", "uz": "Band emas.", "ru": "Не занят." },
+        { "zh": "不好。", "py": "Bù hǎo.", "uz": "Yaxshi emas.", "ru": "Нехорошо." }
+      ],
+      "tip_uz": "Tasdiqda 很好 (hěn hǎo) deymiz, inkorida esa faqat 不好 (bù hǎo) — 很 kerak emas!",
+      "tip_ru": "В утверждении говорим 很好 (hěn hǎo), в отрицании — только 不好 (bù hǎo), без 很!"
+    }
   ],
   "quiz": [
     { "q_uz": "B nega ovqat yemayapti?", "q_ru": "Почему B не ест?", "options_uz": ["Kasal", "Ro'za tutayapti", "Ovqat yo'q", "Ishtahasi yo'q"], "options_ru": ["Болен", "Соблюдает пост", "Нет еды", "Нет аппетита"], "correct": 1 },

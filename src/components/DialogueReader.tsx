@@ -41,10 +41,15 @@ interface GrammarNote {
   title_ru: string;
   desc_uz: string;
   desc_ru: string;
-  ex: string;
-  expy: string;
-  ex_uz: string;
-  ex_ru: string;
+  formula?: string;
+  formula_ru?: string;
+  examples?: { zh: string; py: string; uz: string; ru: string }[];
+  tip_uz?: string;
+  tip_ru?: string;
+  ex?: string;
+  expy?: string;
+  ex_uz?: string;
+  ex_ru?: string;
 }
 
 interface QuizQuestion {
@@ -91,6 +96,9 @@ interface DialogueData {
   sections: { id: string; sentences: Sentence[]; audio_url?: string }[];
   vocab?: VocabEntry[];
   phrases?: PhraseEntry[];
+  extraVocab?: { zh: string; py: string; uz: string; ru: string; icon?: string }[];
+  extraVocabSubtitle_uz?: string;
+  extraVocabSubtitle_ru?: string;
   timeOfDay?: TimeOfDayEntry[];
   grammarNotes?: GrammarNote[];
   quiz?: QuizQuestion[];
@@ -207,6 +215,9 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   const { isLoading: authLoading } = useRequireAuth();
   const trial = useTrial();
   const [language] = useLanguage();
+
+  // Font size
+  const [fontSize, setFontSize] = useState(100);
 
   // Tab state
   const [activeTab, setActiveTab] = useState('dialog');
@@ -362,7 +373,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   return (
     <>
       {showPaywall && <Paywall />}
-      <div className={`dialogue-reader${showPaywall ? ' paywall-blur' : ''}`}>
+      <div className={`dialogue-reader${showPaywall ? ' paywall-blur' : ''}`} style={{ fontSize: `${fontSize}%` }}>
 
         {/* ── Hero banner ── */}
         <div className="dr-hero">
@@ -400,36 +411,20 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         {/* ── DIALOG TAB ── */}
         {activeTab === 'dialog' && (
           <>
-            {activeSentence && (showTranslation || activeWord) && (
-              <div className="story__translation-panel">
-                <p className="story__translation-panel-text">
-                  {(() => {
-                    if (activeWord?.sentenceId === activeSentence.id) {
-                      const word = activeSentence.words?.[activeWord.wordIdx];
-                      if (word) {
-                        const chars = activeSentence.text_original.slice(word.i[0], word.i[1]);
-                        const tr = language === 'ru' ? word.tr : word.t;
-                        return <><strong>{chars}</strong> {word.p} — {tr}{word.h ? <span className="story__word-hsk">HSK {word.h}</span> : null}{word.l ? <span className="story__word-hsk">{word.l}-{language === 'ru' ? 'урок' : 'dars'}</span> : null}</>;
-                      }
-                    }
-                    return language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation;
-                  })()}
-                </p>
-              </div>
-            )}
-
             <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
               {focusMode && activeSentence ? (
                 <div className="story__focus">
                   <div className="story__text story__focus-text">
                     <div className="story__focus-line">
-                      {activeSentence.speaker && <span className="story__focus-speaker">{activeSentence.speaker}：</span>}
                       <span className="story__sentence story__sentence--active" onClick={() => handleSentenceClick(activeSentence.id)}>
                         <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} show={showPinyin}
                           words={activeSentence.words} activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
                           onWordPress={idx => handleWordPress(activeSentence.id, idx)} onWordRelease={handleWordRelease} />
                       </span>
                     </div>
+                    {showTranslation && (
+                      <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation}</div>
+                    )}
                   </div>
                   <div className="story__focus-nav">
                     <button className="story__focus-nav-btn" onClick={() => handleFocusNav('prev')} disabled={allSentences[0]?.id === displaySentenceId} type="button">
@@ -463,7 +458,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                         >
                           <div className="dr-line-main">
                             {s.speaker && (
-                              <div className="dr-line-speaker" style={showPinyin ? { paddingTop: 14 } : undefined}>{s.speaker}:</div>
+                              <div className="dr-line-speaker">{s.speaker}:</div>
                             )}
                             <div className="dr-line-chars">
                               {pairs.map((pair, ci) => {
@@ -514,6 +509,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                 <button className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
                   Pinyin
                 </button>
+                <button className="page__font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
+                <button className="page__font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
               </div>
             </nav>
           </>
@@ -522,7 +519,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         {/* ── SO'ZLAR TAB ── */}
         {activeTab === 'vocab' && (
           <div className="dr-panel">
-            {vocabList.length === 0 && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
+            {vocabList.length === 0 && !dialogue.extraVocab?.length && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
               <div className="dr-empty">
                 <div className="dr-empty__icon">📖</div>
                 <div>{language === 'ru' ? 'Слова не найдены' : 'So\'zlar topilmadi'}</div>
@@ -549,6 +546,25 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                       </div>
                     ))}
                     <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите пример' : 'Bosing — misol ko\'rinadi'}</div>
+                  </div>
+                )}
+
+                {dialogue.extraVocab && dialogue.extraVocab.length > 0 && (
+                  <div className="dr-card">
+                    <div className="dr-label">{language === 'ru' ? 'Дополнительные слова по теме' : 'Mavzuga oid qo\'shimcha so\'zlar'}</div>
+                    {dialogue.extraVocabSubtitle_uz && (
+                      <div className="dr-sublabel">{language === 'ru' ? dialogue.extraVocabSubtitle_ru : dialogue.extraVocabSubtitle_uz}</div>
+                    )}
+                    {dialogue.extraVocab.map((v, i) => (
+                      <div key={i} className="dr-vocab-item dr-vocab-item--nohover">
+                        <div className="dr-vocab-row">
+                          {v.icon && <span className="dr-vocab-icon">{v.icon}</span>}
+                          <span className="dr-vocab-zh">{v.zh}</span>
+                          <span className="dr-vocab-py">{v.py}</span>
+                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : v.uz}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
 
@@ -602,18 +618,36 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                     <div className="dr-grammar-header">
                       <span className="dr-grammar-pattern">{g.pattern}</span>
                       <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : g.title_uz}</span>
+                      <span className={`dr-grammar-arrow${expandedGrammar === i ? ' dr-grammar-arrow--open' : ''}`}>▾</span>
                     </div>
                     <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : g.desc_uz}</div>
                     {expandedGrammar === i && (
-                      <div className="dr-grammar-example">
-                        <div className="dr-vocab-example-zh">{g.ex}</div>
-                        <div className="dr-vocab-example-py">{g.expy}</div>
-                        <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : g.ex_uz}</div>
+                      <div className="dr-grammar-expanded">
+                        {(g.formula || g.formula_ru) && (
+                          <div className="dr-grammar-formula">{language === 'ru' ? (g.formula_ru ?? g.formula) : g.formula}</div>
+                        )}
+                        {g.examples && g.examples.map((ex, ei) => (
+                          <div key={ei} className="dr-grammar-example">
+                            <div className="dr-vocab-example-zh">{ex.zh}</div>
+                            <div className="dr-vocab-example-py">{ex.py}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? ex.ru : ex.uz}</div>
+                          </div>
+                        ))}
+                        {!g.examples && g.ex && (
+                          <div className="dr-grammar-example">
+                            <div className="dr-vocab-example-zh">{g.ex}</div>
+                            <div className="dr-vocab-example-py">{g.expy}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : g.ex_uz}</div>
+                          </div>
+                        )}
+                        {(g.tip_uz || g.tip_ru) && (
+                          <div className="dr-grammar-tip">💡 {language === 'ru' ? g.tip_ru : g.tip_uz}</div>
+                        )}
                       </div>
                     )}
                   </div>
                 ))}
-                <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите пример' : 'Bosing — misol ko\'rinadi'}</div>
+                <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите формулу и примеры' : 'Bosing — formula va misollar ko\'rinadi'}</div>
               </>
             )}
           </div>
