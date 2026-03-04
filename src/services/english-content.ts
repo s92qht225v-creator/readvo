@@ -15,8 +15,61 @@ import type { ContentEntry, LessonInfo } from './content';
 const ENGLISH_CONTENT_DIR = path.join(process.cwd(), 'content', 'english');
 
 /**
+ * Book-order sort key for Destination B1.
+ * Units, reviews, and progress tests interleave in the textbook.
+ * Key format: units = number, reviews = "r{N}", progress tests = "pt{N}"
+ */
+const BOOK_ORDER: string[] = [
+  '1','2','3','r1',
+  '4','5','6','r2',
+  '7','8','9','r3',
+  '10','11','12','r4',
+  '13','14','15','r5',
+  '16','17','18','r6',
+  '19','20','21','r7','pt1',
+  '22','23','24','r8',
+  '25','26','27','r9',
+  '28','29','30','r10',
+  '31','32','33','r11',
+  '34','35','36','r12',
+  '37','38','39','r13',
+  '40','41','42','r14','pt2',
+];
+
+function getSortKey(lessonId: string): number {
+  const idx = BOOK_ORDER.indexOf(lessonId);
+  return idx >= 0 ? idx : 999;
+}
+
+/**
+ * Parse a content filename into lessonId and pageNum.
+ * Supports: unit{N}-page{M}.json, review{N}-page{M}.json, progress-test{N}-page{M}.json
+ */
+function parseContentFilename(file: string): { lessonId: string; pageNum: number } | null {
+  const unitMatch = file.match(/^unit(\d+)-page(\d+)\.json$/);
+  if (unitMatch) return { lessonId: unitMatch[1], pageNum: parseInt(unitMatch[2], 10) };
+
+  const reviewMatch = file.match(/^review(\d+)-page(\d+)\.json$/);
+  if (reviewMatch) return { lessonId: `r${reviewMatch[1]}`, pageNum: parseInt(reviewMatch[2], 10) };
+
+  const ptMatch = file.match(/^progress-test(\d+)-page(\d+)\.json$/);
+  if (ptMatch) return { lessonId: `pt${ptMatch[1]}`, pageNum: parseInt(ptMatch[2], 10) };
+
+  return null;
+}
+
+/**
+ * Construct filename from lessonId and pageNum.
+ */
+function buildContentFilename(lessonId: string, pageNum: number): string {
+  if (lessonId.startsWith('r')) return `review${lessonId.slice(1)}-page${pageNum}.json`;
+  if (lessonId.startsWith('pt')) return `progress-test${lessonId.slice(2)}-page${pageNum}.json`;
+  return `unit${lessonId}-page${pageNum}.json`;
+}
+
+/**
  * Get list of all available content files for an English book.
- * Filename pattern: unit{N}-page{M}.json
+ * Filename patterns: unit{N}-page{M}.json, review{N}-page{M}.json, progress-test{N}-page{M}.json
  */
 export async function getEnglishContentManifest(bookId: string): Promise<ContentEntry[]> {
   const entries: ContentEntry[] = [];
@@ -28,23 +81,23 @@ export async function getEnglishContentManifest(bookId: string): Promise<Content
     for (const file of files) {
       if (!file.endsWith('.json')) continue;
 
-      const match = file.match(/^unit(\d+)-page(\d+)\.json$/);
-      if (!match) {
+      const parsed = parseContentFilename(file);
+      if (!parsed) {
         console.warn(`Skipping malformed English content filename: ${file}`);
         continue;
       }
 
       entries.push({
-        lessonId: match[1],
-        pageNum: parseInt(match[2], 10),
+        lessonId: parsed.lessonId,
+        pageNum: parsed.pageNum,
         pageId: file.replace('.json', ''),
         filePath: path.join(bookDir, file),
       });
     }
 
     entries.sort((a, b) => {
-      const lessonDiff = parseInt(a.lessonId) - parseInt(b.lessonId);
-      if (lessonDiff !== 0) return lessonDiff;
+      const orderDiff = getSortKey(a.lessonId) - getSortKey(b.lessonId);
+      if (orderDiff !== 0) return orderDiff;
       return a.pageNum - b.pageNum;
     });
 
@@ -59,7 +112,7 @@ export async function getEnglishContentManifest(bookId: string): Promise<Content
  * Load and validate a single English page.
  */
 export async function loadEnglishPage(bookId: string, unitId: string, pageNum: number): Promise<Page> {
-  const filename = `unit${unitId}-page${pageNum}.json`;
+  const filename = buildContentFilename(unitId, pageNum);
   const filePath = path.join(ENGLISH_CONTENT_DIR, bookId, filename);
 
   try {
@@ -153,7 +206,7 @@ export async function getEnglishLessonsWithInfo(bookId: string): Promise<LessonI
     }
   }
 
-  lessons.sort((a, b) => a.lessonNumber - b.lessonNumber);
+  lessons.sort((a, b) => getSortKey(a.lessonId) - getSortKey(b.lessonId));
 
   return lessons;
 }

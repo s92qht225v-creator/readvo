@@ -122,6 +122,8 @@ Example routes:
 │   │   ├── TableFillExercise.tsx      # Table-based activity exercises
 │   │   ├── TypedFillBlankExercise.tsx # Typed fill-in-blank (English exercises)
 │   │   ├── ErrorCorrectionExercise.tsx # Error correction (English exercises)
+│   │   ├── WordChoiceExercise.tsx     # Word choice / circle correct word (English exercises)
+│   │   ├── TextErrorExercise.tsx      # Text error / find & correct errors in passage (English exercises)
 │   │   ├── EnglishLanguagePage.tsx    # English language page (B1/B2 tabs)
 │   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
 │   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
@@ -210,6 +212,8 @@ Page → Section → Sentence → Word
 - `bonus` - Bonus content with video player
 - `typedfillblank` - Typed fill-in-blank → `TypedFillBlankExercise` (English exercises)
 - `errorcorrection` - Error correction → `ErrorCorrectionExercise` (English exercises)
+- `wordchoice` - Word choice (circle correct word/phrase) → `WordChoiceExercise` (English exercises)
+- `texterror` - Text error (find & correct errors in passage) → `TextErrorExercise` (English exercises)
 
 ## UI Text Language
 - Section headings: **Empty** (all Chinese headings removed — `heading` field is `""`)

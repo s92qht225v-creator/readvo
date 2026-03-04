@@ -1,20 +1,5 @@
-import type { Metadata } from 'next';
-import { loadDialoguesForBook } from '@/services';
-import { DialoguesPage } from '@/components/DialoguesPage';
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: 'HSK 1 — Dialoglar',
-  description: 'HSK 1 darajali xitoy tili dialoglari. Tinglash va o\'qish mashqlari.',
-};
-
-export default async function HSK1DialoguesPage() {
-  const dialogues = await loadDialoguesForBook('hsk1');
-
-  return (
-    <DialoguesPage
-      dialogues={dialogues}
-      bookPath="/chinese/hsk1"
-      languagePath="/chinese?tab=stories"
-    />
-  );
+export default function HSK1DialoguesPage() {
+  redirect('/chinese?tab=dialogues');
 }

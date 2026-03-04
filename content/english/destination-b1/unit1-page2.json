@@ -1,125 +1,336 @@
 {
   "id": "unit1-page2",
   "pageNumber": 2,
-  "lessonHeader": {
-    "lessonNumber": 1,
-    "pinyin": "",
-    "title": "Grammar",
-    "titleTranslation": "Present simple, present continuous, stative verbs",
-    "titleTranslation_ru": "Present simple, present continuous, stative verbs"
-  },
   "sections": [
     {
       "id": "u1p2-sec-exercise1",
       "type": "typedfillblank",
       "heading": "",
       "subheading": "",
+      "exerciseLetter": "A",
       "instruction": "Helenning rasmlariga qarang va berilgan so'zlardan foydalanib gaplar tuzing. Present Simple ning to'g'ri shaklini ishlating.",
       "instruction_ru": "Посмотрите на картинки Хелен и составьте предложения, используя подсказки. Используйте правильную форму Present Simple.",
       "sentences": [],
       "typedFillBlankData": {
         "images": [
-          { "label": "1", "caption": "every day / get up / at half past seven", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image1.jpg" },
-          { "label": "4", "caption": "once a week / watch a film at the cinema", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image4.jpg" },
-          { "label": "2", "caption": "often / eat fast food for lunch", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image2.jpg" },
-          { "label": "5", "caption": "rarely / go to the gym", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image5.jpg" },
-          { "label": "3", "caption": "in the evening / usually / meet her friends for coffee", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image3.jpg" },
-          { "label": "6", "caption": "have a driving lesson / twice a week", "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image6.jpg" }
+          {
+            "label": "1",
+            "caption": "every day / get up / at half past seven",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image1.jpg"
+          },
+          {
+            "label": "4",
+            "caption": "once a week / watch a film at the cinema",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image4.jpg"
+          },
+          {
+            "label": "2",
+            "caption": "often / eat fast food for lunch",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image2.jpg"
+          },
+          {
+            "label": "5",
+            "caption": "rarely / go to the gym",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image5.jpg"
+          },
+          {
+            "label": "3",
+            "caption": "in the evening / usually / meet her friends for coffee",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image3.jpg"
+          },
+          {
+            "label": "6",
+            "caption": "have a driving lesson / twice a week",
+            "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/English/Destination%20B1/Page%202/image6.jpg"
+          }
         ],
         "cards": [
           {
             "id": "u1p2-ex1-1",
             "parts": [
-              { "type": "hint", "content": "every day / get up / at half past seven" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "every day / get up / at half past seven"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["Every day Helen gets up at half past seven."],
-            "alternateAnswers": [["Every day Helen gets up at half past seven.", "Helen gets up at half past seven every day.", "Every day, she gets up at half past seven.", "Every day she gets up at half past seven.", "She gets up at half past seven every day."]],
+            "answers": [
+              "Every day Helen gets up at half past seven."
+            ],
+            "alternateAnswers": [
+              [
+                "Every day Helen gets up at half past seven.",
+                "Helen gets up at half past seven every day.",
+                "Every day, she gets up at half past seven.",
+                "Every day she gets up at half past seven.",
+                "She gets up at half past seven every day."
+              ]
+            ],
             "prefilled": "Every day Helen gets up at half past seven.",
             "words": [
-              { "w": "every day", "t": "har kuni", "tr": "каждый день" },
-              { "w": "get up", "t": "turmoq", "tr": "вставать" },
-              { "w": "at", "t": "-da", "tr": "в" },
-              { "w": "half past seven", "t": "yettidan yarim o'tganda", "tr": "половина восьмого" }
-            ]
+              {
+                "w": "every day",
+                "t": "har kuni",
+                "tr": "каждый день"
+              },
+              {
+                "w": "get up",
+                "t": "turmoq",
+                "tr": "вставать"
+              },
+              {
+                "w": "at",
+                "t": "-da",
+                "tr": "в"
+              },
+              {
+                "w": "half past seven",
+                "t": "yettidan yarim o'tganda",
+                "tr": "половина восьмого"
+              }
+            ],
+            "number": 1
           },
           {
             "id": "u1p2-ex1-2",
             "parts": [
-              { "type": "hint", "content": "often / eat fast food / for lunch" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "often / eat fast food / for lunch"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["She often eats fast food for lunch."],
-            "alternateAnswers": [["Helen often eats fast food for lunch."]],
+            "answers": [
+              "She often eats fast food for lunch."
+            ],
+            "alternateAnswers": [
+              [
+                "Helen often eats fast food for lunch."
+              ]
+            ],
             "words": [
-              { "w": "often", "t": "tez-tez", "tr": "часто" },
-              { "w": "eat", "t": "yemoq", "tr": "есть" },
-              { "w": "fast food", "t": "tez taom", "tr": "фастфуд" },
-              { "w": "for", "t": "uchun", "tr": "на/для" },
-              { "w": "lunch", "t": "tushlik", "tr": "обед" }
-            ]
+              {
+                "w": "often",
+                "t": "tez-tez",
+                "tr": "часто"
+              },
+              {
+                "w": "eat",
+                "t": "yemoq",
+                "tr": "есть"
+              },
+              {
+                "w": "fast food",
+                "t": "tez taom",
+                "tr": "фастфуд"
+              },
+              {
+                "w": "for",
+                "t": "uchun",
+                "tr": "на/для"
+              },
+              {
+                "w": "lunch",
+                "t": "tushlik",
+                "tr": "обед"
+              }
+            ],
+            "number": 2
           },
           {
             "id": "u1p2-ex1-3",
             "parts": [
-              { "type": "hint", "content": "in the evening / usually / meet her friends for coffee" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "in the evening / usually / meet her friends for coffee"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["In the evening, she usually meets her friends for coffee."],
-            "alternateAnswers": [["In the evening she usually meets her friends for coffee.", "She usually meets her friends for coffee in the evening.", "Helen usually meets her friends for coffee in the evening.", "In the evening, Helen usually meets her friends for coffee.", "In the evening Helen usually meets her friends for coffee."]],
+            "answers": [
+              "In the evening, she usually meets her friends for coffee."
+            ],
+            "alternateAnswers": [
+              [
+                "In the evening she usually meets her friends for coffee.",
+                "She usually meets her friends for coffee in the evening.",
+                "Helen usually meets her friends for coffee in the evening.",
+                "In the evening, Helen usually meets her friends for coffee.",
+                "In the evening Helen usually meets her friends for coffee."
+              ]
+            ],
             "words": [
-              { "w": "in the evening", "t": "kechqurun", "tr": "вечером" },
-              { "w": "usually", "t": "odatda", "tr": "обычно" },
-              { "w": "meet", "t": "uchrashmoq", "tr": "встречаться" },
-              { "w": "her", "t": "uning", "tr": "её" },
-              { "w": "friends", "t": "do'stlar", "tr": "друзья" },
-              { "w": "for", "t": "uchun", "tr": "за/для" },
-              { "w": "coffee", "t": "kofe", "tr": "кофе" }
-            ]
+              {
+                "w": "in the evening",
+                "t": "kechqurun",
+                "tr": "вечером"
+              },
+              {
+                "w": "usually",
+                "t": "odatda",
+                "tr": "обычно"
+              },
+              {
+                "w": "meet",
+                "t": "uchrashmoq",
+                "tr": "встречаться"
+              },
+              {
+                "w": "her",
+                "t": "uning",
+                "tr": "её"
+              },
+              {
+                "w": "friends",
+                "t": "do'stlar",
+                "tr": "друзья"
+              },
+              {
+                "w": "for",
+                "t": "uchun",
+                "tr": "за/для"
+              },
+              {
+                "w": "coffee",
+                "t": "kofe",
+                "tr": "кофе"
+              }
+            ],
+            "number": 3
           },
           {
             "id": "u1p2-ex1-4",
             "parts": [
-              { "type": "hint", "content": "once a week / watch a film / at the cinema" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "once a week / watch a film / at the cinema"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["Once a week, she watches a film at the cinema."],
-            "alternateAnswers": [["Once a week she watches a film at the cinema.", "She watches a film at the cinema once a week.", "Once a week, Helen watches a film at the cinema.", "Helen watches a film at the cinema once a week."]],
+            "answers": [
+              "Once a week, she watches a film at the cinema."
+            ],
+            "alternateAnswers": [
+              [
+                "Once a week she watches a film at the cinema.",
+                "She watches a film at the cinema once a week.",
+                "Once a week, Helen watches a film at the cinema.",
+                "Helen watches a film at the cinema once a week."
+              ]
+            ],
             "words": [
-              { "w": "once a week", "t": "haftada bir marta", "tr": "раз в неделю" },
-              { "w": "watch", "t": "tomosha qilmoq", "tr": "смотреть" },
-              { "w": "a", "t": "bir", "tr": "один" },
-              { "w": "film", "t": "film", "tr": "фильм" },
-              { "w": "at the cinema", "t": "kinoteatrda", "tr": "в кинотеатре" }
-            ]
+              {
+                "w": "once a week",
+                "t": "haftada bir marta",
+                "tr": "раз в неделю"
+              },
+              {
+                "w": "watch",
+                "t": "tomosha qilmoq",
+                "tr": "смотреть"
+              },
+              {
+                "w": "a",
+                "t": "bir",
+                "tr": "один"
+              },
+              {
+                "w": "film",
+                "t": "film",
+                "tr": "фильм"
+              },
+              {
+                "w": "at the cinema",
+                "t": "kinoteatrda",
+                "tr": "в кинотеатре"
+              }
+            ],
+            "number": 4
           },
           {
             "id": "u1p2-ex1-5",
             "parts": [
-              { "type": "hint", "content": "rarely / go to the gym" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "rarely / go to the gym"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["She rarely goes to the gym."],
-            "alternateAnswers": [["Helen rarely goes to the gym."]],
+            "answers": [
+              "She rarely goes to the gym."
+            ],
+            "alternateAnswers": [
+              [
+                "Helen rarely goes to the gym."
+              ]
+            ],
             "words": [
-              { "w": "rarely", "t": "kamdan-kam", "tr": "редко" },
-              { "w": "go to the gym", "t": "sport zalga bormoq", "tr": "ходить в спортзал" }
-            ]
+              {
+                "w": "rarely",
+                "t": "kamdan-kam",
+                "tr": "редко"
+              },
+              {
+                "w": "go to the gym",
+                "t": "sport zalga bormoq",
+                "tr": "ходить в спортзал"
+              }
+            ],
+            "number": 5
           },
           {
             "id": "u1p2-ex1-6",
             "parts": [
-              { "type": "hint", "content": "have a driving lesson / twice a week" },
-              { "type": "blank" }
+              {
+                "type": "hint",
+                "content": "have a driving lesson / twice a week"
+              },
+              {
+                "type": "blank"
+              }
             ],
-            "answers": ["She has a driving lesson twice a week."],
-            "alternateAnswers": [["Helen has a driving lesson twice a week.", "She has driving lessons twice a week.", "Helen has driving lessons twice a week."]],
+            "answers": [
+              "She has a driving lesson twice a week."
+            ],
+            "alternateAnswers": [
+              [
+                "Helen has a driving lesson twice a week.",
+                "She has driving lessons twice a week.",
+                "Helen has driving lessons twice a week."
+              ]
+            ],
             "words": [
-              { "w": "have", "t": "olmoq", "tr": "иметь/брать" },
-              { "w": "a", "t": "bir", "tr": "один" },
-              { "w": "driving lesson", "t": "haydash darsi", "tr": "урок вождения" },
-              { "w": "twice a week", "t": "haftada ikki marta", "tr": "два раза в неделю" }
-            ]
+              {
+                "w": "have",
+                "t": "olmoq",
+                "tr": "иметь/брать"
+              },
+              {
+                "w": "a",
+                "t": "bir",
+                "tr": "один"
+              },
+              {
+                "w": "driving lesson",
+                "t": "haydash darsi",
+                "tr": "урок вождения"
+              },
+              {
+                "w": "twice a week",
+                "t": "haftada ikki marta",
+                "tr": "два раза в неделю"
+              }
+            ],
+            "number": 6
           }
         ]
       }
@@ -129,6 +340,7 @@
       "type": "typedfillblank",
       "heading": "",
       "subheading": "",
+      "exerciseLetter": "B",
       "instruction": "Qavslar ichidagi fe'llarning Present Continuous shaklini to'g'ri yozing. Ba'zi gaplar inkor shaklda bo'lishi mumkin.",
       "instruction_ru": "Вставьте правильную форму Present Continuous глаголов в скобках. Возможно, вам придётся использовать отрицательные формы.",
       "sentences": [],
@@ -137,171 +349,576 @@
           {
             "id": "u1p2-ex2-1",
             "parts": [
-              { "type": "text", "content": "Gordon? I think he " },
-              { "type": "blank" },
-              { "type": "text", "content": " a letter at the moment. " },
-              { "type": "hint", "content": "write" }
+              {
+                "type": "text",
+                "content": "Gordon? I think he "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a letter at the moment. "
+              },
+              {
+                "type": "hint",
+                "content": "write"
+              }
             ],
-            "answers": ["is writing"],
-            "alternateAnswers": [["'s writing"]],
+            "answers": [
+              "is writing"
+            ],
+            "alternateAnswers": [
+              [
+                "'s writing"
+              ]
+            ],
             "words": [
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "think", "t": "o'ylamoq", "tr": "думать" },
-              { "w": "he", "t": "u", "tr": "он" },
-              { "w": "a", "t": "bir", "tr": "один" },
-              { "w": "letter", "t": "xat", "tr": "письмо" },
-              { "w": "at the moment", "t": "hozirgi paytda", "tr": "в данный момент" },
-              { "w": "write", "t": "yozmoq", "tr": "писать" }
-            ]
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "think",
+                "t": "o'ylamoq",
+                "tr": "думать"
+              },
+              {
+                "w": "he",
+                "t": "u",
+                "tr": "он"
+              },
+              {
+                "w": "a",
+                "t": "bir",
+                "tr": "один"
+              },
+              {
+                "w": "letter",
+                "t": "xat",
+                "tr": "письмо"
+              },
+              {
+                "w": "at the moment",
+                "t": "hozirgi paytda",
+                "tr": "в данный момент"
+              },
+              {
+                "w": "write",
+                "t": "yozmoq",
+                "tr": "писать"
+              }
+            ],
+            "number": 1
           },
           {
             "id": "u1p2-ex2-2",
             "parts": [
-              { "type": "text", "content": "Yes, the match is on TV now, but we " },
-              { "type": "blank" },
-              { "type": "text", "content": ". " },
-              { "type": "hint", "content": "lose" }
+              {
+                "type": "text",
+                "content": "Yes, the match is on TV now, but we "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": ". "
+              },
+              {
+                "type": "hint",
+                "content": "lose"
+              }
             ],
-            "answers": ["are losing"],
-            "alternateAnswers": [["'re losing"]],
+            "answers": [
+              "are losing"
+            ],
+            "alternateAnswers": [
+              [
+                "'re losing"
+              ]
+            ],
             "words": [
-              { "w": "yes", "t": "ha", "tr": "да" },
-              { "w": "the", "t": "-", "tr": "определённый артикль" },
-              { "w": "match", "t": "o'yin", "tr": "матч" },
-              { "w": "is", "t": "-dir", "tr": "есть/является" },
-              { "w": "on", "t": "-da", "tr": "на/по" },
-              { "w": "now", "t": "hozir", "tr": "сейчас" },
-              { "w": "but", "t": "lekin", "tr": "но" },
-              { "w": "we", "t": "biz", "tr": "мы" },
-              { "w": "lose", "t": "yutqazmoq", "tr": "проигрывать" }
-            ]
+              {
+                "w": "yes",
+                "t": "ha",
+                "tr": "да"
+              },
+              {
+                "w": "the",
+                "t": "-",
+                "tr": "определённый артикль"
+              },
+              {
+                "w": "match",
+                "t": "o'yin",
+                "tr": "матч"
+              },
+              {
+                "w": "is",
+                "t": "-dir",
+                "tr": "есть/является"
+              },
+              {
+                "w": "on",
+                "t": "-da",
+                "tr": "на/по"
+              },
+              {
+                "w": "now",
+                "t": "hozir",
+                "tr": "сейчас"
+              },
+              {
+                "w": "but",
+                "t": "lekin",
+                "tr": "но"
+              },
+              {
+                "w": "we",
+                "t": "biz",
+                "tr": "мы"
+              },
+              {
+                "w": "lose",
+                "t": "yutqazmoq",
+                "tr": "проигрывать"
+              }
+            ],
+            "number": 2
           },
           {
             "id": "u1p2-ex2-3",
             "parts": [
-              { "type": "text", "content": "Right now, Margaret " },
-              { "type": "blank" },
-              { "type": "text", "content": " a shower. Do you want to ring later? " },
-              { "type": "hint", "content": "have" }
+              {
+                "type": "text",
+                "content": "Right now, Margaret "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " a shower. Do you want to ring later? "
+              },
+              {
+                "type": "hint",
+                "content": "have"
+              }
             ],
-            "answers": ["is having"],
-            "alternateAnswers": [["'s having"]],
+            "answers": [
+              "is having"
+            ],
+            "alternateAnswers": [
+              [
+                "'s having"
+              ]
+            ],
             "words": [
-              { "w": "right now", "t": "hozir", "tr": "прямо сейчас" },
-              { "w": "a", "t": "bir", "tr": "один" },
-              { "w": "shower", "t": "dush", "tr": "душ" },
-              { "w": "Do", "t": "(yordamchi fe'l)", "tr": "(вспомогательный глагол)" },
-              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
-              { "w": "want", "t": "xohlamoq", "tr": "хотеть" },
-              { "w": "to", "t": "-ga", "tr": "(частица)" },
-              { "w": "ring", "t": "qo'ng'iroq qilmoq", "tr": "позвонить" },
-              { "w": "later", "t": "keyinroq", "tr": "позже" },
-              { "w": "have", "t": "qilmoq", "tr": "принимать" }
-            ]
+              {
+                "w": "right now",
+                "t": "hozir",
+                "tr": "прямо сейчас"
+              },
+              {
+                "w": "a",
+                "t": "bir",
+                "tr": "один"
+              },
+              {
+                "w": "shower",
+                "t": "dush",
+                "tr": "душ"
+              },
+              {
+                "w": "Do",
+                "t": "(yordamchi fe'l)",
+                "tr": "(вспомогательный глагол)"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "want",
+                "t": "xohlamoq",
+                "tr": "хотеть"
+              },
+              {
+                "w": "to",
+                "t": "-ga",
+                "tr": "(частица)"
+              },
+              {
+                "w": "ring",
+                "t": "qo'ng'iroq qilmoq",
+                "tr": "позвонить"
+              },
+              {
+                "w": "later",
+                "t": "keyinroq",
+                "tr": "позже"
+              },
+              {
+                "w": "have",
+                "t": "qilmoq",
+                "tr": "принимать"
+              }
+            ],
+            "number": 3
           },
           {
             "id": "u1p2-ex2-4",
             "parts": [
-              { "type": "text", "content": "Sally " },
-              { "type": "blank" },
-              { "type": "text", "content": " with her aunt for a few days. " },
-              { "type": "hint", "content": "stay" }
+              {
+                "type": "text",
+                "content": "Sally "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " with her aunt for a few days. "
+              },
+              {
+                "type": "hint",
+                "content": "stay"
+              }
             ],
-            "answers": ["is staying"],
-            "alternateAnswers": [["'s staying"]],
+            "answers": [
+              "is staying"
+            ],
+            "alternateAnswers": [
+              [
+                "'s staying"
+              ]
+            ],
             "words": [
-              { "w": "with", "t": "bilan", "tr": "с" },
-              { "w": "her", "t": "uning", "tr": "её" },
-              { "w": "aunt", "t": "xola/amma", "tr": "тётя" },
-              { "w": "for", "t": "davomida", "tr": "в течение" },
-              { "w": "a few", "t": "bir nechta", "tr": "несколько" },
-              { "w": "days", "t": "kunlar", "tr": "дни" },
-              { "w": "stay", "t": "qolmoq", "tr": "оставаться" }
-            ]
+              {
+                "w": "with",
+                "t": "bilan",
+                "tr": "с"
+              },
+              {
+                "w": "her",
+                "t": "uning",
+                "tr": "её"
+              },
+              {
+                "w": "aunt",
+                "t": "xola/amma",
+                "tr": "тётя"
+              },
+              {
+                "w": "for",
+                "t": "davomida",
+                "tr": "в течение"
+              },
+              {
+                "w": "a few",
+                "t": "bir nechta",
+                "tr": "несколько"
+              },
+              {
+                "w": "days",
+                "t": "kunlar",
+                "tr": "дни"
+              },
+              {
+                "w": "stay",
+                "t": "qolmoq",
+                "tr": "оставаться"
+              }
+            ],
+            "number": 4
           },
           {
             "id": "u1p2-ex2-5",
             "parts": [
-              { "type": "text", "content": "I " },
-              { "type": "blank" },
-              { "type": "text", "content": "! It's true! I did see Madonna at the supermarket. " },
-              { "type": "hint", "content": "lie" }
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": "! It's true! I did see Madonna at the supermarket. "
+              },
+              {
+                "type": "hint",
+                "content": "lie"
+              }
             ],
-            "answers": ["am not lying"],
-            "alternateAnswers": [["'m not lying"]],
+            "answers": [
+              "am not lying"
+            ],
+            "alternateAnswers": [
+              [
+                "'m not lying"
+              ]
+            ],
             "words": [
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "It's", "t": "bu", "tr": "это" },
-              { "w": "true", "t": "rost", "tr": "правда" },
-              { "w": "did", "t": "(ta'kidlash uchun)", "tr": "(для усиления)" },
-              { "w": "see", "t": "ko'rmoq", "tr": "видеть" },
-              { "w": "at", "t": "-da", "tr": "в" },
-              { "w": "the", "t": "-", "tr": "определённый артикль" },
-              { "w": "supermarket", "t": "supermarket", "tr": "супермаркет" },
-              { "w": "lie", "t": "yolg'on gapirmoq", "tr": "лгать" }
-            ]
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "It's",
+                "t": "bu",
+                "tr": "это"
+              },
+              {
+                "w": "true",
+                "t": "rost",
+                "tr": "правда"
+              },
+              {
+                "w": "did",
+                "t": "(ta'kidlash uchun)",
+                "tr": "(для усиления)"
+              },
+              {
+                "w": "see",
+                "t": "ko'rmoq",
+                "tr": "видеть"
+              },
+              {
+                "w": "at",
+                "t": "-da",
+                "tr": "в"
+              },
+              {
+                "w": "the",
+                "t": "-",
+                "tr": "определённый артикль"
+              },
+              {
+                "w": "supermarket",
+                "t": "supermarket",
+                "tr": "супермаркет"
+              },
+              {
+                "w": "lie",
+                "t": "yolg'on gapirmoq",
+                "tr": "лгать"
+              }
+            ],
+            "number": 5
           },
           {
             "id": "u1p2-ex2-6",
             "parts": [
-              { "type": "text", "content": "Josh " },
-              { "type": "blank" },
-              { "type": "text", "content": " my bike! It's so annoying. " },
-              { "type": "hint", "content": "always / use" }
+              {
+                "type": "text",
+                "content": "Josh "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my bike! It's so annoying. "
+              },
+              {
+                "type": "hint",
+                "content": "always / use"
+              }
             ],
-            "answers": ["is always using"],
-            "alternateAnswers": [["'s always using"]],
+            "answers": [
+              "is always using"
+            ],
+            "alternateAnswers": [
+              [
+                "'s always using"
+              ]
+            ],
             "words": [
-              { "w": "my", "t": "mening", "tr": "мой" },
-              { "w": "bike", "t": "velosiped", "tr": "велосипед" },
-              { "w": "It's", "t": "bu", "tr": "это" },
-              { "w": "so", "t": "juda", "tr": "так" },
-              { "w": "annoying", "t": "asabiylashtiradigan", "tr": "раздражающий" },
-              { "w": "always", "t": "har doim", "tr": "всегда" },
-              { "w": "use", "t": "ishlatmoq", "tr": "использовать" }
-            ]
+              {
+                "w": "my",
+                "t": "mening",
+                "tr": "мой"
+              },
+              {
+                "w": "bike",
+                "t": "velosiped",
+                "tr": "велосипед"
+              },
+              {
+                "w": "It's",
+                "t": "bu",
+                "tr": "это"
+              },
+              {
+                "w": "so",
+                "t": "juda",
+                "tr": "так"
+              },
+              {
+                "w": "annoying",
+                "t": "asabiylashtiradigan",
+                "tr": "раздражающий"
+              },
+              {
+                "w": "always",
+                "t": "har doim",
+                "tr": "всегда"
+              },
+              {
+                "w": "use",
+                "t": "ishlatmoq",
+                "tr": "использовать"
+              }
+            ],
+            "number": 6
           },
           {
             "id": "u1p2-ex2-7",
             "parts": [
-              { "type": "text", "content": "We " },
-              { "type": "blank" },
-              { "type": "text", "content": " lunch, but I can come round and help you later. " },
-              { "type": "hint", "content": "have" }
+              {
+                "type": "text",
+                "content": "We "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " lunch, but I can come round and help you later. "
+              },
+              {
+                "type": "hint",
+                "content": "have"
+              }
             ],
-            "answers": ["are having"],
-            "alternateAnswers": [["'re having"]],
+            "answers": [
+              "are having"
+            ],
+            "alternateAnswers": [
+              [
+                "'re having"
+              ]
+            ],
             "words": [
-              { "w": "We", "t": "biz", "tr": "мы" },
-              { "w": "lunch", "t": "tushlik", "tr": "обед" },
-              { "w": "but", "t": "lekin", "tr": "но" },
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "can", "t": "mumkin", "tr": "могу" },
-              { "w": "come round", "t": "kelmoq", "tr": "зайти" },
-              { "w": "and", "t": "va", "tr": "и" },
-              { "w": "help", "t": "yordam bermoq", "tr": "помочь" },
-              { "w": "you", "t": "senga/sizga", "tr": "тебе/вам" },
-              { "w": "later", "t": "keyinroq", "tr": "позже" },
-              { "w": "have", "t": "yemoq/ichmoq", "tr": "есть/пить" }
-            ]
+              {
+                "w": "We",
+                "t": "biz",
+                "tr": "мы"
+              },
+              {
+                "w": "lunch",
+                "t": "tushlik",
+                "tr": "обед"
+              },
+              {
+                "w": "but",
+                "t": "lekin",
+                "tr": "но"
+              },
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "can",
+                "t": "mumkin",
+                "tr": "могу"
+              },
+              {
+                "w": "come round",
+                "t": "kelmoq",
+                "tr": "зайти"
+              },
+              {
+                "w": "and",
+                "t": "va",
+                "tr": "и"
+              },
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помочь"
+              },
+              {
+                "w": "you",
+                "t": "senga/sizga",
+                "tr": "тебе/вам"
+              },
+              {
+                "w": "later",
+                "t": "keyinroq",
+                "tr": "позже"
+              },
+              {
+                "w": "have",
+                "t": "yemoq/ichmoq",
+                "tr": "есть/пить"
+              }
+            ],
+            "number": 7
           },
           {
             "id": "u1p2-ex2-8",
             "parts": [
-              { "type": "blank" },
-              { "type": "text", "content": " music up there? It's really noisy! " },
-              { "type": "hint", "content": "you / play" }
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " music up there? It's really noisy! "
+              },
+              {
+                "type": "hint",
+                "content": "you / play"
+              }
             ],
-            "answers": ["Are you playing"],
+            "answers": [
+              "Are you playing"
+            ],
             "words": [
-              { "w": "music", "t": "musiqa", "tr": "музыка" },
-              { "w": "up there", "t": "u yerda / tepada", "tr": "там наверху" },
-              { "w": "It's", "t": "bu", "tr": "это" },
-              { "w": "really", "t": "juda/haqiqatan", "tr": "действительно" },
-              { "w": "noisy", "t": "shovqinli", "tr": "шумный" },
-              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
-              { "w": "play", "t": "chalmoq", "tr": "играть" }
-            ]
+              {
+                "w": "music",
+                "t": "musiqa",
+                "tr": "музыка"
+              },
+              {
+                "w": "up there",
+                "t": "u yerda / tepada",
+                "tr": "там наверху"
+              },
+              {
+                "w": "It's",
+                "t": "bu",
+                "tr": "это"
+              },
+              {
+                "w": "really",
+                "t": "juda/haqiqatan",
+                "tr": "действительно"
+              },
+              {
+                "w": "noisy",
+                "t": "shovqinli",
+                "tr": "шумный"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "play",
+                "t": "chalmoq",
+                "tr": "играть"
+              }
+            ],
+            "number": 8
           }
         ]
       }
@@ -311,6 +928,7 @@
       "type": "errorcorrection",
       "heading": "",
       "subheading": "",
+      "exerciseLetter": "C",
       "instruction": "Qalin yozilgan so'zlarni to'g'ri shaklga o'zgartiring.",
       "instruction_ru": "Исправьте слова и фразы, выделенные жирным шрифтом.",
       "sentences": [],
@@ -322,14 +940,40 @@
             "errorStart": 0,
             "errorEnd": 26,
             "correctAnswer": "Have top musicians studied",
-            "alternateAnswers": ["Have top musicians been studying"],
+            "alternateAnswers": [
+              "Have top musicians been studying"
+            ],
             "words": [
-              { "w": "top", "t": "eng yaxshi", "tr": "лучшие" },
-              { "w": "musicians", "t": "musiqachilar", "tr": "музыканты" },
-              { "w": "studying", "t": "o'rganmoq", "tr": "учиться" },
-              { "w": "for", "t": "davomida", "tr": "в течение" },
-              { "w": "many", "t": "ko'p", "tr": "много" },
-              { "w": "years", "t": "yillar", "tr": "лет" }
+              {
+                "w": "top",
+                "t": "eng yaxshi",
+                "tr": "лучшие"
+              },
+              {
+                "w": "musicians",
+                "t": "musiqachilar",
+                "tr": "музыканты"
+              },
+              {
+                "w": "studying",
+                "t": "o'rganmoq",
+                "tr": "учиться"
+              },
+              {
+                "w": "for",
+                "t": "davomida",
+                "tr": "в течение"
+              },
+              {
+                "w": "many",
+                "t": "ko'p",
+                "tr": "много"
+              },
+              {
+                "w": "years",
+                "t": "yillar",
+                "tr": "лет"
+              }
             ]
           },
           {
@@ -338,15 +982,45 @@
             "errorStart": 28,
             "errorEnd": 39,
             "correctAnswer": "aren't touching",
-            "alternateAnswers": ["are not touching"],
+            "alternateAnswers": [
+              "are not touching"
+            ],
             "words": [
-              { "w": "going on", "t": "sodir bo'lmoq", "tr": "происходить" },
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "hope", "t": "umid qilmoq", "tr": "надеяться" },
-              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
-              { "w": "touch", "t": "tegmoq", "tr": "трогать" },
-              { "w": "my", "t": "mening", "tr": "мои" },
-              { "w": "things", "t": "narsalar", "tr": "вещи" }
+              {
+                "w": "going on",
+                "t": "sodir bo'lmoq",
+                "tr": "происходить"
+              },
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "hope",
+                "t": "umid qilmoq",
+                "tr": "надеяться"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "touch",
+                "t": "tegmoq",
+                "tr": "трогать"
+              },
+              {
+                "w": "my",
+                "t": "mening",
+                "tr": "мои"
+              },
+              {
+                "w": "things",
+                "t": "narsalar",
+                "tr": "вещи"
+              }
             ]
           },
           {
@@ -357,14 +1031,46 @@
             "correctAnswer": "does",
             "alternateAnswers": [],
             "words": [
-              { "w": "small", "t": "kichik", "tr": "маленький" },
-              { "w": "business", "t": "biznes", "tr": "бизнес" },
-              { "w": "so", "t": "shuning uchun", "tr": "поэтому" },
-              { "w": "each", "t": "har bir", "tr": "каждый" },
-              { "w": "person", "t": "odam", "tr": "человек" },
-              { "w": "lots of", "t": "ko'p", "tr": "много" },
-              { "w": "different", "t": "turli", "tr": "разные" },
-              { "w": "jobs", "t": "ishlar", "tr": "работы" }
+              {
+                "w": "small",
+                "t": "kichik",
+                "tr": "маленький"
+              },
+              {
+                "w": "business",
+                "t": "biznes",
+                "tr": "бизнес"
+              },
+              {
+                "w": "so",
+                "t": "shuning uchun",
+                "tr": "поэтому"
+              },
+              {
+                "w": "each",
+                "t": "har bir",
+                "tr": "каждый"
+              },
+              {
+                "w": "person",
+                "t": "odam",
+                "tr": "человек"
+              },
+              {
+                "w": "lots of",
+                "t": "ko'p",
+                "tr": "много"
+              },
+              {
+                "w": "different",
+                "t": "turli",
+                "tr": "разные"
+              },
+              {
+                "w": "jobs",
+                "t": "ishlar",
+                "tr": "работы"
+              }
             ]
           },
           {
@@ -375,13 +1081,41 @@
             "correctAnswer": "Is Christine listening",
             "alternateAnswers": [],
             "words": [
-              { "w": "listen", "t": "tinglamoq", "tr": "слушать" },
-              { "w": "radio", "t": "radio", "tr": "радио" },
-              { "w": "or", "t": "yoki", "tr": "или" },
-              { "w": "that", "t": "u", "tr": "то" },
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "can", "t": "mumkin", "tr": "могу" },
-              { "w": "hear", "t": "eshitmoq", "tr": "слышать" }
+              {
+                "w": "listen",
+                "t": "tinglamoq",
+                "tr": "слушать"
+              },
+              {
+                "w": "radio",
+                "t": "radio",
+                "tr": "радио"
+              },
+              {
+                "w": "or",
+                "t": "yoki",
+                "tr": "или"
+              },
+              {
+                "w": "that",
+                "t": "u",
+                "tr": "то"
+              },
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "can",
+                "t": "mumkin",
+                "tr": "могу"
+              },
+              {
+                "w": "hear",
+                "t": "eshitmoq",
+                "tr": "слышать"
+              }
             ]
           },
           {
@@ -392,15 +1126,51 @@
             "correctAnswer": "usually buy",
             "alternateAnswers": [],
             "words": [
-              { "w": "I", "t": "men", "tr": "я" },
-              { "w": "usually", "t": "odatda", "tr": "обычно" },
-              { "w": "buying", "t": "sotib olmoq", "tr": "покупать" },
-              { "w": "special", "t": "maxsus", "tr": "специальный" },
-              { "w": "ticket", "t": "chipta", "tr": "билет" },
-              { "w": "each week", "t": "har hafta", "tr": "каждую неделю" },
-              { "w": "bus", "t": "avtobus", "tr": "автобус" },
-              { "w": "because", "t": "chunki", "tr": "потому что" },
-              { "w": "cheaper", "t": "arzonroq", "tr": "дешевле" }
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "usually",
+                "t": "odatda",
+                "tr": "обычно"
+              },
+              {
+                "w": "buying",
+                "t": "sotib olmoq",
+                "tr": "покупать"
+              },
+              {
+                "w": "special",
+                "t": "maxsus",
+                "tr": "специальный"
+              },
+              {
+                "w": "ticket",
+                "t": "chipta",
+                "tr": "билет"
+              },
+              {
+                "w": "each week",
+                "t": "har hafta",
+                "tr": "каждую неделю"
+              },
+              {
+                "w": "bus",
+                "t": "avtobus",
+                "tr": "автобус"
+              },
+              {
+                "w": "because",
+                "t": "chunki",
+                "tr": "потому что"
+              },
+              {
+                "w": "cheaper",
+                "t": "arzonroq",
+                "tr": "дешевле"
+              }
             ]
           },
           {
@@ -411,14 +1181,46 @@
             "correctAnswer": "starts",
             "alternateAnswers": [],
             "words": [
-              { "w": "our", "t": "bizning", "tr": "наша" },
-              { "w": "washing machine", "t": "kir yuvish mashinasi", "tr": "стиральная машина" },
-              { "w": "starting", "t": "ishga tushmoq", "tr": "запускаться" },
-              { "w": "when", "t": "qachonki", "tr": "когда" },
-              { "w": "you", "t": "sen/siz", "tr": "ты/вы" },
-              { "w": "press", "t": "bosmoq", "tr": "нажимать" },
-              { "w": "this", "t": "bu", "tr": "эту" },
-              { "w": "button", "t": "tugma", "tr": "кнопку" }
+              {
+                "w": "our",
+                "t": "bizning",
+                "tr": "наша"
+              },
+              {
+                "w": "washing machine",
+                "t": "kir yuvish mashinasi",
+                "tr": "стиральная машина"
+              },
+              {
+                "w": "starting",
+                "t": "ishga tushmoq",
+                "tr": "запускаться"
+              },
+              {
+                "w": "when",
+                "t": "qachonki",
+                "tr": "когда"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "press",
+                "t": "bosmoq",
+                "tr": "нажимать"
+              },
+              {
+                "w": "this",
+                "t": "bu",
+                "tr": "эту"
+              },
+              {
+                "w": "button",
+                "t": "tugma",
+                "tr": "кнопку"
+              }
             ]
           },
           {
@@ -429,11 +1231,31 @@
             "correctAnswer": "Is our team winning?",
             "alternateAnswers": [],
             "words": [
-              { "w": "match", "t": "o'yin", "tr": "матч" },
-              { "w": "going", "t": "bormoq/ketmoq", "tr": "идти" },
-              { "w": "our", "t": "bizning", "tr": "наша" },
-              { "w": "team", "t": "jamoa", "tr": "команда" },
-              { "w": "win", "t": "g'alaba qozonmoq", "tr": "побеждать" }
+              {
+                "w": "match",
+                "t": "o'yin",
+                "tr": "матч"
+              },
+              {
+                "w": "going",
+                "t": "bormoq/ketmoq",
+                "tr": "идти"
+              },
+              {
+                "w": "our",
+                "t": "bizning",
+                "tr": "наша"
+              },
+              {
+                "w": "team",
+                "t": "jamoa",
+                "tr": "команда"
+              },
+              {
+                "w": "win",
+                "t": "g'alaba qozonmoq",
+                "tr": "побеждать"
+              }
             ]
           },
           {
@@ -444,14 +1266,1362 @@
             "correctAnswer": "enjoy",
             "alternateAnswers": [],
             "words": [
-              { "w": "many", "t": "ko'p", "tr": "много" },
-              { "w": "people", "t": "odamlar", "tr": "люди" },
-              { "w": "enjoying", "t": "zavqlanmoq", "tr": "наслаждаться" },
-              { "w": "spending", "t": "o'tkazmoq", "tr": "проводить" },
-              { "w": "time", "t": "vaqt", "tr": "время" },
-              { "w": "on the beach", "t": "plyajda", "tr": "на пляже" },
-              { "w": "on holiday", "t": "ta'tilda", "tr": "в отпуске" }
+              {
+                "w": "many",
+                "t": "ko'p",
+                "tr": "много"
+              },
+              {
+                "w": "people",
+                "t": "odamlar",
+                "tr": "люди"
+              },
+              {
+                "w": "enjoying",
+                "t": "zavqlanmoq",
+                "tr": "наслаждаться"
+              },
+              {
+                "w": "spending",
+                "t": "o'tkazmoq",
+                "tr": "проводить"
+              },
+              {
+                "w": "time",
+                "t": "vaqt",
+                "tr": "время"
+              },
+              {
+                "w": "on the beach",
+                "t": "plyajda",
+                "tr": "на пляже"
+              },
+              {
+                "w": "on holiday",
+                "t": "ta'tilda",
+                "tr": "в отпуске"
+              }
             ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u1p3-sec-exercise1",
+      "type": "wordchoice",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "D",
+      "instruction": "To'g'ri so'z yoki iborani tanlang.",
+      "instruction_ru": "Выберите правильное слово или фразу.",
+      "sentences": [],
+      "wordChoiceData": {
+        "cards": [
+          {
+            "id": "u1p3-ex1-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "work",
+                  "am working"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " at the local library for the summer."
+              }
+            ],
+            "words": [
+              {
+                "w": "work",
+                "t": "ishlamoq",
+                "tr": "работать"
+              },
+              {
+                "w": "at",
+                "t": "-da",
+                "tr": "в"
+              },
+              {
+                "w": "local",
+                "t": "mahalliy",
+                "tr": "местная"
+              },
+              {
+                "w": "library",
+                "t": "kutubxona",
+                "tr": "библиотека"
+              },
+              {
+                "w": "for",
+                "t": "uchun",
+                "tr": "на"
+              },
+              {
+                "w": "the summer",
+                "t": "yoz",
+                "tr": "лето"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-2",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "don't go",
+                  "aren't going"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to the theatre very often."
+              }
+            ],
+            "words": [
+              {
+                "w": "We",
+                "t": "biz",
+                "tr": "мы"
+              },
+              {
+                "w": "go",
+                "t": "bormoq",
+                "tr": "ходить"
+              },
+              {
+                "w": "theatre",
+                "t": "teatr",
+                "tr": "театр"
+              },
+              {
+                "w": "very often",
+                "t": "juda tez-tez",
+                "tr": "очень часто"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Yolanda "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "has",
+                  "is having"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " three sisters and they all live in Santiago."
+              }
+            ],
+            "words": [
+              {
+                "w": "has",
+                "t": "bor / ega",
+                "tr": "имеет"
+              },
+              {
+                "w": "three",
+                "t": "uchta",
+                "tr": "три"
+              },
+              {
+                "w": "sisters",
+                "t": "opa-singillar",
+                "tr": "сёстры"
+              },
+              {
+                "w": "they",
+                "t": "ular",
+                "tr": "они"
+              },
+              {
+                "w": "all",
+                "t": "hammasi",
+                "tr": "все"
+              },
+              {
+                "w": "live",
+                "t": "yashamoq",
+                "tr": "жить"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "stay",
+                  "'m staying"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " with my aunt in London for a few days."
+              }
+            ],
+            "words": [
+              {
+                "w": "stay",
+                "t": "qolmoq",
+                "tr": "оставаться"
+              },
+              {
+                "w": "with",
+                "t": "bilan",
+                "tr": "с/у"
+              },
+              {
+                "w": "my",
+                "t": "mening",
+                "tr": "моя"
+              },
+              {
+                "w": "aunt",
+                "t": "xola/amma",
+                "tr": "тётя"
+              },
+              {
+                "w": "for",
+                "t": "davomida",
+                "tr": "в течение"
+              },
+              {
+                "w": "a few",
+                "t": "bir nechta",
+                "tr": "несколько"
+              },
+              {
+                "w": "days",
+                "t": "kunlar",
+                "tr": "дней"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-5",
+            "parts": [
+              {
+                "type": "choice",
+                "options": [
+                  "Do you like",
+                  "Are you liking"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " the jacket I'm wearing? I just bought it."
+              }
+            ],
+            "words": [
+              {
+                "w": "like",
+                "t": "yoqtirmoq",
+                "tr": "нравиться"
+              },
+              {
+                "w": "jacket",
+                "t": "kurtka",
+                "tr": "куртка"
+              },
+              {
+                "w": "wearing",
+                "t": "kiymoq",
+                "tr": "носить"
+              },
+              {
+                "w": "just",
+                "t": "hozirgina",
+                "tr": "только что"
+              },
+              {
+                "w": "bought",
+                "t": "sotib olmoq",
+                "tr": "купил"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-6",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "think",
+                  "'m thinking"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " of buying a new car, but I'm not sure yet."
+              }
+            ],
+            "words": [
+              {
+                "w": "think",
+                "t": "o'ylamoq",
+                "tr": "думать"
+              },
+              {
+                "w": "buying",
+                "t": "sotib olmoq",
+                "tr": "покупать"
+              },
+              {
+                "w": "new",
+                "t": "yangi",
+                "tr": "новый"
+              },
+              {
+                "w": "car",
+                "t": "mashina",
+                "tr": "машина"
+              },
+              {
+                "w": "but",
+                "t": "lekin",
+                "tr": "но"
+              },
+              {
+                "w": "not sure",
+                "t": "ishonchim komil emas",
+                "tr": "не уверен"
+              },
+              {
+                "w": "yet",
+                "t": "hali",
+                "tr": "ещё"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dean "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "finishes",
+                  "is finishing"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " work early on Fridays."
+              }
+            ],
+            "words": [
+              {
+                "w": "finishes",
+                "t": "tugatmoq",
+                "tr": "заканчивать"
+              },
+              {
+                "w": "work",
+                "t": "ish",
+                "tr": "работа"
+              },
+              {
+                "w": "early",
+                "t": "erta",
+                "tr": "рано"
+              },
+              {
+                "w": "on Fridays",
+                "t": "juma kunlari",
+                "tr": "по пятницам"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I know you "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "want",
+                  "are wanting"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " to help, but I'm fine on my own."
+              }
+            ],
+            "words": [
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "know",
+                "t": "bilmoq",
+                "tr": "знать"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "want",
+                "t": "xohlamoq",
+                "tr": "хотеть"
+              },
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помочь"
+              },
+              {
+                "w": "fine",
+                "t": "yaxshi",
+                "tr": "хорошо"
+              },
+              {
+                "w": "on my own",
+                "t": "o'zim",
+                "tr": "сам"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-9",
+            "parts": [
+              {
+                "type": "text",
+                "content": "We "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "have",
+                  "'re having"
+                ],
+                "correct": 1
+              },
+              {
+                "type": "text",
+                "content": " a wonderful time here in Budapest!"
+              }
+            ],
+            "words": [
+              {
+                "w": "We",
+                "t": "biz",
+                "tr": "мы"
+              },
+              {
+                "w": "have",
+                "t": "o'tkazmoq",
+                "tr": "проводить"
+              },
+              {
+                "w": "wonderful",
+                "t": "ajoyib",
+                "tr": "замечательное"
+              },
+              {
+                "w": "time",
+                "t": "vaqt",
+                "tr": "время"
+              },
+              {
+                "w": "here",
+                "t": "bu yerda",
+                "tr": "здесь"
+              }
+            ]
+          },
+          {
+            "id": "u1p3-ex1-10",
+            "parts": [
+              {
+                "type": "text",
+                "content": "This bread "
+              },
+              {
+                "type": "choice",
+                "options": [
+                  "tastes",
+                  "is tasting"
+                ],
+                "correct": 0
+              },
+              {
+                "type": "text",
+                "content": " a bit strange. How old is it?"
+              }
+            ],
+            "words": [
+              {
+                "w": "This",
+                "t": "bu",
+                "tr": "этот"
+              },
+              {
+                "w": "bread",
+                "t": "non",
+                "tr": "хлеб"
+              },
+              {
+                "w": "tastes",
+                "t": "ta'mi ... bo'lmoq",
+                "tr": "на вкус"
+              },
+              {
+                "w": "a bit",
+                "t": "biroz",
+                "tr": "немного"
+              },
+              {
+                "w": "strange",
+                "t": "g'alati",
+                "tr": "странный"
+              },
+              {
+                "w": "How old",
+                "t": "qancha vaqtlik",
+                "tr": "какой давности"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u1p3-sec-exercise2",
+      "type": "typedfillblank",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "E",
+      "instruction": "Qutidagi fe'llarni Present Simple yoki Present Continuous shaklida to'ldiring. Ba'zi gaplar inkor shaklda bo'lishi mumkin.",
+      "instruction_ru": "Дополните предложения правильной формой Present Simple или Present Continuous глаголов из рамки. Возможно, вам придётся использовать отрицательные формы.",
+      "sentences": [],
+      "typedFillBlankData": {
+        "wordBank": [
+          "belong",
+          "do",
+          "have",
+          "help",
+          "hold",
+          "move",
+          "use",
+          "watch"
+        ],
+        "cards": [
+          {
+            "id": "u1p3-ex2-1",
+            "parts": [
+              {
+                "type": "text",
+                "content": "In Monopoly, you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " around the board, buying houses and hotels."
+              }
+            ],
+            "answers": [
+              "move"
+            ],
+            "words": [
+              {
+                "w": "Monopoly",
+                "t": "Monopoliya (o'yin)",
+                "tr": "Монополия (игра)"
+              },
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "around",
+                "t": "atrofida",
+                "tr": "по/вокруг"
+              },
+              {
+                "w": "the board",
+                "t": "doska",
+                "tr": "доска/поле"
+              },
+              {
+                "w": "buying",
+                "t": "sotib olmoq",
+                "tr": "покупать"
+              },
+              {
+                "w": "houses",
+                "t": "uylar",
+                "tr": "дома"
+              },
+              {
+                "w": "hotels",
+                "t": "mehmonxonalar",
+                "tr": "отели"
+              }
+            ],
+            "number": 1
+          },
+          {
+            "id": "u1p3-ex2-2",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " this programme or can I turn the TV off?"
+              }
+            ],
+            "answers": [
+              "Are",
+              "watching"
+            ],
+            "alternateAnswers": [
+              [
+                "Are"
+              ],
+              [
+                "watching"
+              ]
+            ],
+            "words": [
+              {
+                "w": "you",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "programme",
+                "t": "dastur/ko'rsatuv",
+                "tr": "программа/передача"
+              },
+              {
+                "w": "or",
+                "t": "yoki",
+                "tr": "или"
+              },
+              {
+                "w": "can",
+                "t": "mumkin",
+                "tr": "могу"
+              },
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "turn the TV off",
+                "t": "televizorni o'chirmoq",
+                "tr": "выключить телевизор"
+              }
+            ],
+            "number": 2
+          },
+          {
+            "id": "u1p3-ex2-3",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Regular exercise "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you to stay healthy."
+              }
+            ],
+            "answers": [
+              "helps"
+            ],
+            "words": [
+              {
+                "w": "regular",
+                "t": "muntazam",
+                "tr": "регулярные"
+              },
+              {
+                "w": "exercise",
+                "t": "mashqlar",
+                "tr": "упражнения"
+              },
+              {
+                "w": "help",
+                "t": "yordam bermoq",
+                "tr": "помогать"
+              },
+              {
+                "w": "you",
+                "t": "senga/sizga",
+                "tr": "тебе/вам"
+              },
+              {
+                "w": "to stay",
+                "t": "qolmoq",
+                "tr": "оставаться"
+              },
+              {
+                "w": "healthy",
+                "t": "sog'lom",
+                "tr": "здоровым"
+              }
+            ],
+            "number": 3
+          },
+          {
+            "id": "u1p3-ex2-4",
+            "parts": [
+              {
+                "type": "text",
+                "content": "I "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " my brother's guitar until I get a new one."
+              }
+            ],
+            "answers": [
+              "am using"
+            ],
+            "alternateAnswers": [
+              [
+                "'m using"
+              ]
+            ],
+            "words": [
+              {
+                "w": "I",
+                "t": "men",
+                "tr": "я"
+              },
+              {
+                "w": "my",
+                "t": "mening",
+                "tr": "мой"
+              },
+              {
+                "w": "brother's",
+                "t": "akamning/ukamning",
+                "tr": "брата"
+              },
+              {
+                "w": "guitar",
+                "t": "gitara",
+                "tr": "гитара"
+              },
+              {
+                "w": "until",
+                "t": "-guncha",
+                "tr": "пока не"
+              },
+              {
+                "w": "get",
+                "t": "olmoq",
+                "tr": "получить"
+              },
+              {
+                "w": "a new one",
+                "t": "yangi birini",
+                "tr": "новую"
+              }
+            ],
+            "number": 4
+          },
+          {
+            "id": "u1p3-ex2-5",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " Simon always "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the washing-up after lunch?"
+              }
+            ],
+            "answers": [
+              "Does",
+              "do"
+            ],
+            "alternateAnswers": [
+              [
+                "Does"
+              ],
+              [
+                "do"
+              ]
+            ],
+            "words": [
+              {
+                "w": "always",
+                "t": "har doim",
+                "tr": "всегда"
+              },
+              {
+                "w": "the washing-up",
+                "t": "idish yuvish",
+                "tr": "мытьё посуды"
+              },
+              {
+                "w": "after",
+                "t": "keyin",
+                "tr": "после"
+              },
+              {
+                "w": "lunch",
+                "t": "tushlik",
+                "tr": "обеда"
+              }
+            ],
+            "number": 5
+          },
+          {
+            "id": "u1p3-ex2-6",
+            "parts": [
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " you "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " any sweaters in a larger size?"
+              }
+            ],
+            "answers": [
+              "Do",
+              "have"
+            ],
+            "alternateAnswers": [
+              [
+                "Do"
+              ],
+              [
+                "have"
+              ]
+            ],
+            "words": [
+              {
+                "w": "you",
+                "t": "sizda",
+                "tr": "у вас"
+              },
+              {
+                "w": "any",
+                "t": "biron",
+                "tr": "какие-нибудь"
+              },
+              {
+                "w": "sweaters",
+                "t": "sviterlar",
+                "tr": "свитера"
+              },
+              {
+                "w": "larger",
+                "t": "kattaroq",
+                "tr": "большего"
+              },
+              {
+                "w": "size",
+                "t": "o'lcham",
+                "tr": "размера"
+              }
+            ],
+            "number": 6
+          },
+          {
+            "id": "u1p3-ex2-7",
+            "parts": [
+              {
+                "type": "text",
+                "content": "You "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " the kite right. Let me show you."
+              }
+            ],
+            "answers": [
+              "aren't holding"
+            ],
+            "alternateAnswers": [
+              [
+                "are not holding",
+                "'re not holding"
+              ]
+            ],
+            "words": [
+              {
+                "w": "You",
+                "t": "sen/siz",
+                "tr": "ты/вы"
+              },
+              {
+                "w": "the kite",
+                "t": "varrak",
+                "tr": "воздушный змей"
+              },
+              {
+                "w": "right",
+                "t": "to'g'ri",
+                "tr": "правильно"
+              },
+              {
+                "w": "Let me",
+                "t": "menga ruxsat bering",
+                "tr": "позвольте мне"
+              },
+              {
+                "w": "show",
+                "t": "ko'rsatmoq",
+                "tr": "показать"
+              }
+            ],
+            "number": 7
+          },
+          {
+            "id": "u1p3-ex2-8",
+            "parts": [
+              {
+                "type": "text",
+                "content": "Dad "
+              },
+              {
+                "type": "blank"
+              },
+              {
+                "type": "text",
+                "content": " to the local astronomy club."
+              }
+            ],
+            "answers": [
+              "belongs"
+            ],
+            "words": [
+              {
+                "w": "Dad",
+                "t": "dada/ota",
+                "tr": "папа"
+              },
+              {
+                "w": "belong",
+                "t": "tegishli bo'lmoq",
+                "tr": "принадлежать/состоять"
+              },
+              {
+                "w": "local",
+                "t": "mahalliy",
+                "tr": "местный"
+              },
+              {
+                "w": "astronomy",
+                "t": "astronomiya",
+                "tr": "астрономия"
+              },
+              {
+                "w": "club",
+                "t": "klub",
+                "tr": "клуб"
+              }
+            ],
+            "number": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "u1p3-sec-exercise3",
+      "type": "texterror",
+      "heading": "",
+      "subheading": "",
+      "exerciseLetter": "F",
+      "instruction": "Matnda noto'g'ri zamonda ishlatilgan o'nta fe'lni toping va to'g'ri shaklini yozing.",
+      "instruction_ru": "Найдите в тексте десять глаголов в неправильном времени и напишите их правильную форму.",
+      "sentences": [],
+      "textErrorData": {
+        "passage": "One game I am loving is backgammon. You are throwing the dice and then you move your pieces around the board. It is seeming quite easy, but in fact you are needing to be quite careful. When your piece lands on one of the other person's pieces, you are taking it off the board and you send it back to the beginning. You are winning by getting all your pieces to the end and off the board. Some people are preferring chess, but I am not understanding that game. Right now, I wait to have a game with my brother. He does his homework. I usually win, so I think he doesn't want to play a game with me!",
+        "errors": [
+          {
+            "id": 1,
+            "errorStart": 11,
+            "errorEnd": 20,
+            "correctAnswer": "love",
+            "alternateAnswers": []
+          },
+          {
+            "id": 2,
+            "errorStart": 40,
+            "errorEnd": 52,
+            "correctAnswer": "throw",
+            "alternateAnswers": []
+          },
+          {
+            "id": 3,
+            "errorStart": 113,
+            "errorEnd": 123,
+            "correctAnswer": "seems",
+            "alternateAnswers": []
+          },
+          {
+            "id": 4,
+            "errorStart": 152,
+            "errorEnd": 163,
+            "correctAnswer": "need",
+            "alternateAnswers": []
+          },
+          {
+            "id": 5,
+            "errorStart": 248,
+            "errorEnd": 258,
+            "correctAnswer": "take",
+            "alternateAnswers": []
+          },
+          {
+            "id": 6,
+            "errorStart": 319,
+            "errorEnd": 330,
+            "correctAnswer": "win",
+            "alternateAnswers": []
+          },
+          {
+            "id": 7,
+            "errorStart": 400,
+            "errorEnd": 414,
+            "correctAnswer": "prefer",
+            "alternateAnswers": []
+          },
+          {
+            "id": 8,
+            "errorStart": 428,
+            "errorEnd": 448,
+            "correctAnswer": "don't understand",
+            "alternateAnswers": [
+              "do not understand"
+            ]
+          },
+          {
+            "id": 9,
+            "errorStart": 473,
+            "errorEnd": 477,
+            "correctAnswer": "am waiting",
+            "alternateAnswers": [
+              "'m waiting"
+            ]
+          },
+          {
+            "id": 10,
+            "errorStart": 513,
+            "errorEnd": 517,
+            "correctAnswer": "is doing",
+            "alternateAnswers": [
+              "'s doing"
+            ]
+          }
+        ],
+        "words": [
+          {
+            "w": "One",
+            "t": "bitta",
+            "tr": "одна"
+          },
+          {
+            "w": "game",
+            "t": "o'yin",
+            "tr": "игра"
+          },
+          {
+            "w": "loving",
+            "t": "sevmoq",
+            "tr": "любить"
+          },
+          {
+            "w": "backgammon",
+            "t": "nard",
+            "tr": "нарды"
+          },
+          {
+            "w": "throwing",
+            "t": "tashlamoq",
+            "tr": "бросать"
+          },
+          {
+            "w": "dice",
+            "t": "zar",
+            "tr": "кости"
+          },
+          {
+            "w": "then",
+            "t": "keyin",
+            "tr": "затем"
+          },
+          {
+            "w": "move",
+            "t": "siljitmoq",
+            "tr": "двигать"
+          },
+          {
+            "w": "pieces",
+            "t": "donalar",
+            "tr": "фишки"
+          },
+          {
+            "w": "around",
+            "t": "atrofida",
+            "tr": "по/вокруг"
+          },
+          {
+            "w": "the board",
+            "t": "doska",
+            "tr": "доска/поле"
+          },
+          {
+            "w": "seeming",
+            "t": "ko'rinmoq",
+            "tr": "казаться"
+          },
+          {
+            "w": "quite",
+            "t": "ancha",
+            "tr": "довольно"
+          },
+          {
+            "w": "easy",
+            "t": "oson",
+            "tr": "легко"
+          },
+          {
+            "w": "in fact",
+            "t": "aslida",
+            "tr": "на самом деле"
+          },
+          {
+            "w": "needing",
+            "t": "kerak bo'lmoq",
+            "tr": "нуждаться"
+          },
+          {
+            "w": "careful",
+            "t": "ehtiyotkor",
+            "tr": "осторожным"
+          },
+          {
+            "w": "When",
+            "t": "qachonki",
+            "tr": "когда"
+          },
+          {
+            "w": "piece",
+            "t": "dona",
+            "tr": "фишка"
+          },
+          {
+            "w": "lands on",
+            "t": "tushmoq",
+            "tr": "попадает на"
+          },
+          {
+            "w": "other",
+            "t": "boshqa",
+            "tr": "другого"
+          },
+          {
+            "w": "person's",
+            "t": "odamning",
+            "tr": "человека"
+          },
+          {
+            "w": "taking",
+            "t": "olmoq",
+            "tr": "брать/снимать"
+          },
+          {
+            "w": "off",
+            "t": "-dan",
+            "tr": "с/от"
+          },
+          {
+            "w": "send",
+            "t": "jo'natmoq",
+            "tr": "отправлять"
+          },
+          {
+            "w": "back",
+            "t": "orqaga",
+            "tr": "назад"
+          },
+          {
+            "w": "beginning",
+            "t": "boshlanish",
+            "tr": "начало"
+          },
+          {
+            "w": "winning",
+            "t": "g'alaba qozonmoq",
+            "tr": "побеждать"
+          },
+          {
+            "w": "getting",
+            "t": "olib bormoq",
+            "tr": "доводить"
+          },
+          {
+            "w": "end",
+            "t": "oxiri",
+            "tr": "конец"
+          },
+          {
+            "w": "Some",
+            "t": "ba'zi",
+            "tr": "некоторые"
+          },
+          {
+            "w": "people",
+            "t": "odamlar",
+            "tr": "люди"
+          },
+          {
+            "w": "preferring",
+            "t": "afzal ko'rmoq",
+            "tr": "предпочитать"
+          },
+          {
+            "w": "chess",
+            "t": "shaxmat",
+            "tr": "шахматы"
+          },
+          {
+            "w": "understanding",
+            "t": "tushunmoq",
+            "tr": "понимать"
+          },
+          {
+            "w": "right now",
+            "t": "hozir",
+            "tr": "прямо сейчас"
+          },
+          {
+            "w": "wait",
+            "t": "kutmoq",
+            "tr": "ждать"
+          },
+          {
+            "w": "have",
+            "t": "o'ynamoq",
+            "tr": "сыграть"
+          },
+          {
+            "w": "brother",
+            "t": "aka/uka",
+            "tr": "брат"
+          },
+          {
+            "w": "does",
+            "t": "qilmoq",
+            "tr": "делать"
+          },
+          {
+            "w": "homework",
+            "t": "uy vazifasi",
+            "tr": "домашнее задание"
+          },
+          {
+            "w": "usually",
+            "t": "odatda",
+            "tr": "обычно"
+          },
+          {
+            "w": "win",
+            "t": "g'alaba qozonmoq",
+            "tr": "побеждать"
+          },
+          {
+            "w": "think",
+            "t": "o'ylamoq",
+            "tr": "думать"
+          },
+          {
+            "w": "want",
+            "t": "xohlamoq",
+            "tr": "хотеть"
+          },
+          {
+            "w": "play",
+            "t": "o'ynamoq",
+            "tr": "играть"
           }
         ]
       }

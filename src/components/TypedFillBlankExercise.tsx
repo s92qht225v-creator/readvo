@@ -21,6 +21,7 @@ interface Card {
   alternateAnswers?: (string[])[];
   prefilled?: string;
   words?: WordEntry[];
+  number?: number | string;
 }
 
 interface ImageItem {
@@ -33,6 +34,8 @@ interface Props {
   cards: Card[];
   language: Language;
   images?: ImageItem[];
+  wordBank?: string[];
+  layout?: 'passage';
 }
 
 function findWordEntry(token: string, words: WordEntry[]): WordEntry | undefined {
@@ -94,7 +97,6 @@ function segmentText(text: string, words: WordEntry[]): { text: string; entry?: 
           continue;
         }
         if (idx > 0) {
-          // Recursively segment prefix so multi-word phrases in it also match
           const prefix = remaining.slice(0, idx);
           segments.push(...segmentText(prefix, words));
         }
@@ -144,7 +146,6 @@ function RenderTappableText({
 
   const segments = segmentText(text, words);
 
-
   return (
     <>
       {segments.map((seg, i) =>
@@ -165,7 +166,18 @@ function RenderTappableText({
   );
 }
 
-export function TypedFillBlankExercise({ cards, language, images }: Props) {
+function checkAnswers(card: Card, answers: string[]): (boolean | null)[] {
+  return card.answers.map((correct, i) => {
+    const userVal = (answers[i] || '').trim().toLowerCase();
+    if (!userVal) return null;
+    if (userVal === correct.toLowerCase()) return true;
+    const alts = card.alternateAnswers?.[i];
+    if (alts && alts.some((alt) => alt.toLowerCase() === userVal)) return true;
+    return false;
+  });
+}
+
+export function TypedFillBlankExercise({ cards, language, images, wordBank, layout }: Props) {
   const [userAnswers, setUserAnswers] = useState<Record<string, string[]>>(() => {
     const init: Record<string, string[]> = {};
     cards.forEach((card) => {
@@ -178,8 +190,8 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
     });
     return init;
   });
-  const [checked, setChecked] = useState<Record<string, boolean[]>>(() => {
-    const init: Record<string, boolean[]> = {};
+  const [checked, setChecked] = useState<Record<string, (boolean | null)[]>>(() => {
+    const init: Record<string, (boolean | null)[]> = {};
     cards.forEach((card) => {
       if (card.prefilled) {
         init[card.id] = [true];
@@ -205,35 +217,16 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
       return updated;
     });
     setChecked((prev) => {
+      const existing = prev[cardId];
+      if (!existing) return prev;
+      // Only clear this blank's result, preserve other blanks' correct status
       const updated = { ...prev };
-      delete updated[cardId];
+      const newResults = [...existing];
+      newResults[blankIdx] = null;
+      updated[cardId] = newResults;
       return updated;
     });
   }, []);
-
-  const checkCard = useCallback((card: Card, answers: string[]) => {
-    return card.answers.map((correct, i) => {
-      const userVal = (answers[i] || '').trim().toLowerCase();
-      if (userVal === correct.toLowerCase()) return true;
-      const alts = card.alternateAnswers?.[i];
-      if (alts && alts.some((alt) => alt.toLowerCase() === userVal)) return true;
-      return false;
-    });
-  }, []);
-
-  const handleCheckAll = useCallback(() => {
-    setChecked((prev) => {
-      const updated = { ...prev };
-      cards.forEach((card) => {
-        const existing = updated[card.id];
-        if (existing && existing.every((r) => r)) return;
-        const answers = userAnswers[card.id] || [];
-        if (!answers.some((a) => a.trim())) return;
-        updated[card.id] = checkCard(card, answers);
-      });
-      return updated;
-    });
-  }, [cards, userAnswers, checkCard]);
 
   const handleWordTap = useCallback((entry: WordEntry) => {
     setActiveWord((prev) => (prev === entry.w ? null : entry.w));
@@ -251,6 +244,21 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
     return answers.some((a) => a.trim());
   });
 
+  function handleCheckAll() {
+    const newChecked: Record<string, (boolean | null)[]> = {};
+    cards.forEach((card) => {
+      const existing = checked[card.id];
+      if (existing && existing.every((r) => r)) {
+        newChecked[card.id] = existing;
+        return;
+      }
+      const answers = userAnswers[card.id] || [];
+      if (!answers.some((a) => a.trim())) return;
+      newChecked[card.id] = checkAnswers(card, answers);
+    });
+    setChecked(newChecked);
+  }
+
   return (
     <div className="typedfillblank">
       {/* Progress */}
@@ -260,6 +268,17 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
           style={{ width: `${(completedCards / totalCards) * 100}%` }}
         />
       </div>
+
+      {wordBank && wordBank.length > 0 && (
+        <div className="typedfillblank__wordbank">
+          {wordBank.map((word, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && <span className="typedfillblank__wordbank-dot">&bull;</span>}
+              <span className="typedfillblank__wordbank-word">{word}</span>
+            </React.Fragment>
+          ))}
+        </div>
+      )}
 
       {images && images.length > 0 && (
         <div className="typedfillblank__images">
@@ -277,13 +296,56 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
       )}
 
       {cards.map((card, cardIdx) => {
-        let blankIdx = 0;
         const results = checked[card.id];
         const allCorrect = results && results.every((r) => r);
 
+        if (layout === 'passage') {
+          const isCorrect = results?.[0] === true;
+          const isWrong = results?.[0] === false;
+          const currentVal = userAnswers[card.id]?.[0] || '';
+          const isTicked = currentVal === '✓';
+          const textPart = card.parts.find((p) => p.type === 'text');
+          return (
+            <div key={card.id} className={`typedfillblank__card typedfillblank__card--passage${allCorrect ? ' typedfillblank__card--correct' : ''}`}>
+              <span className="typedfillblank__number">{card.number ?? cardIdx + 1}</span>
+              <input
+                type="text"
+                className={`typedfillblank__input${isCorrect && !isTicked ? ' typedfillblank__input--correct' : ''}${isWrong && !isTicked ? ' typedfillblank__input--wrong' : ''}`}
+                value={isTicked ? '' : currentVal}
+                onChange={(e) => handleInputChange(card.id, 0, e.target.value)}
+                disabled={allCorrect}
+                autoComplete="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                size={8}
+              />
+              <button
+                type="button"
+                className={`typedfillblank__tick-btn${isTicked ? ' typedfillblank__tick-btn--ticked' : ''}${isCorrect && isTicked ? ' typedfillblank__input--correct' : ''}${isWrong && isTicked ? ' typedfillblank__input--wrong' : ''}`}
+                onClick={(e) => { e.stopPropagation(); handleInputChange(card.id, 0, isTicked ? '' : '✓'); }}
+                disabled={allCorrect}
+              >
+                {isTicked ? '✓' : '○'}
+              </button>
+              <span className="typedfillblank__passage-text">
+                {textPart && (
+                  <RenderTappableText
+                    text={textPart.content || ''}
+                    words={card.words}
+                    language={language}
+                    activeWord={activeWord}
+                    onWordTap={handleWordTap}
+                  />
+                )}
+              </span>
+            </div>
+          );
+        }
+
+        let blankIdx = 0;
         return (
-          <div key={card.id} className={`typedfillblank__card${allCorrect ? ' typedfillblank__card--correct' : ''}`}>
-            <span className="typedfillblank__number">{cardIdx + 1}</span>
+          <div key={card.id} className={`typedfillblank__card${allCorrect ? ' typedfillblank__card--correct' : ''}${card.number === '' ? ' typedfillblank__card--nonumbered' : ''}`}>
+            {card.number !== '' && <span className="typedfillblank__number">{card.number ?? cardIdx + 1}</span>}
             <div className={`typedfillblank__sentence${card.parts.every((p) => p.type !== 'text') ? ' typedfillblank__sentence--hint-only' : ''}`}>
               {card.parts.map((part, partIdx) => {
                 if (part.type === 'text') {
@@ -314,8 +376,23 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
                 }
                 // blank
                 const currentBlankIdx = blankIdx++;
-                const isCorrect = results?.[currentBlankIdx];
-                const isWrong = results && !results[currentBlankIdx];
+                const isCorrect = results?.[currentBlankIdx] === true;
+                const isWrong = results?.[currentBlankIdx] === false;
+                // Tick answer: show a toggle button instead of text input
+                if (card.answers[currentBlankIdx] === '✓') {
+                  const ticked = userAnswers[card.id]?.[currentBlankIdx] === '✓';
+                  return (
+                    <button
+                      key={partIdx}
+                      type="button"
+                      className={`typedfillblank__tick-btn${ticked ? ' typedfillblank__tick-btn--ticked' : ''}${isCorrect ? ' typedfillblank__input--correct' : ''}${isWrong ? ' typedfillblank__input--wrong' : ''}`}
+                      onClick={() => handleInputChange(card.id, currentBlankIdx, ticked ? '' : '✓')}
+                      disabled={allCorrect}
+                    >
+                      {ticked ? '✓' : '○'}
+                    </button>
+                  );
+                }
                 return (
                   <input
                     key={partIdx}
@@ -323,10 +400,11 @@ export function TypedFillBlankExercise({ cards, language, images }: Props) {
                     className={`typedfillblank__input${isCorrect ? ' typedfillblank__input--correct' : ''}${isWrong ? ' typedfillblank__input--wrong' : ''}`}
                     value={userAnswers[card.id]?.[currentBlankIdx] || ''}
                     onChange={(e) => handleInputChange(card.id, currentBlankIdx, e.target.value)}
-                    disabled={allCorrect}
+                    disabled={isCorrect}
                     autoComplete="off"
                     autoCapitalize="off"
                     spellCheck={false}
+                    size={Math.max(10, card.answers[currentBlankIdx]?.length ?? 0) + 2}
                   />
                 );
               })}

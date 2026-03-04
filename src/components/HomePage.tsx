@@ -237,12 +237,10 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
               {[
                 { code: 'uz', name: "O'zbek" },
                 { code: 'ru', name: 'Русский' },
-                { code: 'kz', name: 'Қазақ' },
-                { code: 'kg', name: 'Кыргыз' },
               ].map((lang) => (
                 <div key={lang.name} className="landing__hero-lang">
                   <Image
-                    src={`https://flagcdn.com/w160/${lang.code}.png`}
+                    src={`https://flagcdn.com/w320/${lang.code}.png`}
                     alt={lang.name}
                     width={56}
                     height={38}

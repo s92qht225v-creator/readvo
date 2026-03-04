@@ -30,7 +30,9 @@ export const LessonHeader: React.FC<LessonHeaderProps> = React.memo(
 
     // Get label based on language — use "Unit" when no pinyin (English content)
     const isEnglish = !header.pinyin;
-    const lessonLabel = isEnglish ? 'Unit' : (language === 'ru' ? 'урок' : 'dars');
+    let lessonLabel = isEnglish ? 'Unit' : (language === 'ru' ? 'урок' : 'dars');
+    if (isEnglish && header.title === 'Review') lessonLabel = 'Review';
+    if (isEnglish && header.title === 'Progress Test') lessonLabel = 'Test';
     return (
       <header className="lesson-header">
         {/* Lesson badge with number */}

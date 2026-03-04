@@ -16,7 +16,7 @@
  * - No interaction handling (passed through to sentences)
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import type { Section as SectionType } from '../types';
 import type { Language } from '../types/ui-state';
 import { Sentence } from './Sentence';
@@ -27,15 +27,25 @@ import { ImageDescribeExercise } from './ImageDescribeExercise';
 import { TableFillExercise } from './TableFillExercise';
 import { TypedFillBlankExercise } from './TypedFillBlankExercise';
 import { ErrorCorrectionExercise } from './ErrorCorrectionExercise';
+import { WordChoiceExercise } from './WordChoiceExercise';
+import { TextErrorExercise } from './TextErrorExercise';
 
-/** Parse **bold** and _italic_ markdown in text, returning React nodes */
+/** Parse **bold** and _italic_ markdown in text, returning React nodes (supports bold inside italic) */
+function parseBold(text: string): React.ReactNode[] {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={i}>{part.slice(2, -2)}</strong>
+      : part
+  );
+}
+
 function parseInlineMarkdown(text: string): React.ReactNode[] {
   return text.split(/(\*\*[^*]+\*\*|_[^_\n]+_)/g).map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
     }
     if (part.startsWith('_') && part.endsWith('_') && part.length > 2) {
-      return <em key={i}>{part.slice(1, -1)}</em>;
+      return <em key={i}>{parseBold(part.slice(1, -1))}</em>;
     }
     return part;
   });
@@ -114,6 +124,44 @@ export interface SectionProps {
   onSentenceClick?: (sentenceId: string) => void;
 }
 
+function VocabPhrase({ text, translation }: { text: string; translation: string }) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(false);
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [open]);
+  return (
+    <span
+      className={`grammar-table__phrase${open ? ' grammar-table__phrase--open' : ''}`}
+      onClick={(e) => { e.stopPropagation(); setOpen(o => !o); }}
+    >
+      {parseInlineMarkdown(text)}
+      {open && <span className="grammar-table__cell-tooltip">{translation}</span>}
+    </span>
+  );
+}
+
+function VocabCell({ children, translation, multiline, translationLines }: { children: React.ReactNode; translation: string; multiline?: boolean; translationLines?: string[] }) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(false);
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [open]);
+  return (
+    <div
+      className={`grammar-table__cell grammar-table__cell--vocab${open ? ' grammar-table__cell--vocab-open' : ''}`}
+      onClick={(e) => { e.stopPropagation(); setOpen(o => !o); }}
+    >
+      {children}
+      {open && <span className="grammar-table__cell-tooltip">{translation}</span>}
+    </div>
+  );
+}
+
 export const Section: React.FC<SectionProps> = React.memo(function Section({
   section,
   isPinyinVisible,
@@ -161,6 +209,9 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
     if (language === 'ru' && section.subheading_ru) {
       return section.subheading_ru;
     }
+    if (language === 'uz' && section.subheading_uz) {
+      return section.subheading_uz;
+    }
     return section.subheading;
   };
 
@@ -171,9 +222,9 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       data-section-type={section.type}
     >
       {/* Section heading (optional) */}
-      {section.heading && (
-        <div className="section__header">
-          <h2 className="section__heading">{getHeading()}</h2>
+      {(section.heading || (section.subheading && !section.exerciseLetter)) && (
+        <div className={`section__header${!section.heading && section.subheading ? ' section__header--subheading-only' : ''}`}>
+          {section.heading && <h2 className="section__heading">{getHeading()}</h2>}
           {section.heading_sub && (
             <span className="section__heading-sub">
               {language === 'ru' && section.heading_sub_ru ? section.heading_sub_ru : section.heading_sub}
@@ -187,8 +238,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
 
       {/* For text sections: instruction above context card (with play button) */}
       {section.type === 'text' && getInstruction() && (
-        <div className="section__instruction-row" {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
-          <span className="section__instruction-checkbox" aria-hidden="true">■</span>
+        <div className={`section__instruction-row${!section.exerciseLetter ? ' section__instruction-row--bullet' : ''}`} {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
+          {section.exerciseLetter && <span className="section__instruction-checkbox" aria-hidden="true">{section.exerciseLetter}</span>}
           <p className="section__instruction">{getInstruction()}</p>
           {section.audio_url && (
             <button
@@ -217,7 +268,6 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
       {/* Context/narration (optional, for text sections) */}
       {section.context && (
         <div className="section__context">
-          <p className="section__context-text">{section.context}</p>
           {getContextTranslation() && (
             <p className="section__context-translation">{getContextTranslation()}</p>
           )}
@@ -226,8 +276,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
 
       {/* Instruction for non-text sections (original position with play button) */}
       {section.type !== 'text' && getInstruction() && (
-        <div className="section__instruction-row" {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
-          <span className="section__instruction-checkbox" aria-hidden="true">■</span>
+        <div className={`section__instruction-row${!section.exerciseLetter ? ' section__instruction-row--bullet' : ''}`} {...(section.audio_url ? { 'data-audio-section-id': section.id, 'data-audio-url': section.audio_url } : {})}>
+          {section.exerciseLetter && <span className="section__instruction-checkbox" aria-hidden="true">{section.exerciseLetter}</span>}
           <p className="section__instruction">{getInstruction()}</p>
           {/* Play all button for section audio */}
           {section.audio_url && (
@@ -254,17 +304,28 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         </div>
       )}
 
+      {/* Subheading after instruction (e.g. "Across" / "Down" for crosswords, where exerciseLetter is also set) */}
+      {section.subheading && section.exerciseLetter && (
+        <div className="section__header section__header--subheading-only">
+          <span className="section__subheading">{getSubheading()}</span>
+        </div>
+      )}
+
       {/* Content: image + sentences */}
-      {(section.image_url || section.tip || section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || (section.type === 'bonus' && section.video_url) || section.grammarTableData || section.image_url_bottom || (section.images_bottom && section.images_bottom.length > 0)) && (
+      {(section.image_url || section.tip || section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || section.wordChoiceData || section.textErrorData || (section.type === 'bonus' && section.video_url) || section.grammarTableData || section.image_url_bottom || (section.images_bottom && section.images_bottom.length > 0)) && (
       <div className={`section__content ${section.image_url ? 'section__content--with-image' : ''}`}>
         {/* Top image (optional, original textbook scan) */}
-        {section.image_url && (
+        {section.image_url !== undefined && (
           <div className="section__image">
-            <img
-              src={section.image_url}
-              alt={section.heading || 'Section image'}
-              className="section__image-img"
-            />
+            {section.image_url ? (
+              <img
+                src={section.image_url}
+                alt={section.heading || 'Section image'}
+                className="section__image-img"
+              />
+            ) : (
+              <div className="section__image-placeholder" />
+            )}
           </div>
         )}
 
@@ -302,7 +363,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         )}
 
         {/* Sentences, Matching Exercise, or Fill-Blank Exercise */}
-        {(section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || (section.type === 'bonus' && section.video_url)) && (
+        {(section.sentences.length > 0 || section.matchingItems || section.multipleChoiceData || section.fillBlankData || section.imageDescribeData || section.tableFillData || section.typedFillBlankData || section.errorCorrectionData || section.wordChoiceData || section.textErrorData || (section.type === 'bonus' && section.video_url)) && (
         <div className="section__sentences">
           {section.type === 'matching' && section.matchingItems ? (
             <MatchingExercise
@@ -383,6 +444,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
             <TypedFillBlankExercise
               cards={section.typedFillBlankData.cards.map((card) => ({
                 id: card.id,
+                number: card.number,
                 parts: card.parts.map((p) => ({ type: p.type, content: p.content })),
                 answers: [...card.answers],
                 alternateAnswers: card.alternateAnswers?.map((alts) => alts ? [...alts] : []),
@@ -394,6 +456,8 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 caption: img.caption,
                 image_url: img.image_url,
               }))}
+              wordBank={section.typedFillBlankData.wordBank ? [...section.typedFillBlankData.wordBank] : undefined}
+              layout={section.typedFillBlankData.layout}
               language={language}
             />
           ) : section.type === 'errorcorrection' && section.errorCorrectionData ? (
@@ -407,6 +471,29 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
                 alternateAnswers: card.alternateAnswers ? [...card.alternateAnswers] : undefined,
                 words: card.words?.map((w) => ({ w: w.w, t: w.t, tr: w.tr })),
               }))}
+              language={language}
+            />
+          ) : section.type === 'wordchoice' && section.wordChoiceData ? (
+            <WordChoiceExercise
+              cards={section.wordChoiceData.cards.map((card) => ({
+                id: card.id,
+                parts: card.parts.map((p) => ({ type: p.type, content: p.content, options: p.options ? [...p.options] : undefined, correct: p.correct })),
+                words: card.words?.map((w) => ({ w: w.w, t: w.t, tr: w.tr })),
+              }))}
+              language={language}
+              layout={section.wordChoiceData.layout as 'ab-choice' | undefined}
+            />
+          ) : section.type === 'texterror' && section.textErrorData ? (
+            <TextErrorExercise
+              passage={section.textErrorData.passage}
+              errors={section.textErrorData.errors.map((err) => ({
+                id: err.id,
+                errorStart: err.errorStart,
+                errorEnd: err.errorEnd,
+                correctAnswer: err.correctAnswer,
+                alternateAnswers: err.alternateAnswers ? [...err.alternateAnswers] : undefined,
+              }))}
+              words={section.textErrorData.words?.map((w) => ({ w: w.w, t: w.t, tr: w.tr }))}
               language={language}
             />
           ) : section.type === 'bonus' && section.video_url ? (
@@ -462,23 +549,64 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
               );
             })()}
             {section.grammarTableData.rows.map((row, rowIdx) => {
-              const cells = (language === 'ru' && row.cells_ru) ? row.cells_ru : (row.cells_uz || row.cells);
+              const translatedCells = (language === 'ru' && row.cells_ru) ? row.cells_ru : (row.cells_uz || row.cells);
               return (
               <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
-                {cells.map((cell, cellIdx) => (
-                  <div key={cellIdx} className="grammar-table__cell">
-                    {(() => {
-                      const isItalic = cell.startsWith('_') && cell.endsWith('_') && cell.length > 2;
-                      const inner = isItalic ? cell.slice(1, -1) : cell;
-                      const parts = inner.split(/(\*\*[^*]+\*\*)/).map((part, pi) =>
-                        part.startsWith('**') && part.endsWith('**')
-                          ? <strong key={pi}>{part.slice(2, -2)}</strong>
-                          : part
-                      );
-                      return isItalic ? <em>{parts}</em> : parts;
-                    })()}
-                  </div>
-                ))}
+                {row.cells.map((cell, cellIdx) => {
+                  const translatedCell = translatedCells[cellIdx] || cell;
+                  const addSlashBreaks = (s: string) => s.replace(/\//g, '/\u200B');
+
+                  // Multiline cell: render each line as its own clickable phrase
+                  const englishLines = cell.split('\n');
+                  const translatedLines = translatedCell.split('\n');
+                  if (englishLines.length > 1) {
+                    // Check if entire cell is wrapped in italic markers (e.g. multiline example sentence)
+                    const cellIsItalic = cell.startsWith('_') && cell.endsWith('_');
+                    // Strip outer italic markers from each line for rendering
+                    const stripItalic = (s: string) => s.replace(/^_/, '').replace(/_$/, '');
+                    return (
+                      <div key={cellIdx} className={`grammar-table__cell grammar-table__cell--phrases${cellIsItalic ? ' grammar-table__cell--italic' : ''}`}>
+                        {englishLines.map((line, li) => {
+                          const tLine = translatedLines[li] || line;
+                          const dashIdx = tLine.indexOf(' – ');
+                          const tr = dashIdx !== -1 ? tLine.slice(dashIdx + 3) : tLine !== line ? tLine : undefined;
+                          const displayLine = stripItalic(line);
+                          if (tr && !cellIsItalic) return <VocabPhrase key={li} text={displayLine} translation={tr} />;
+                          return <span key={li} className={tr && !cellIsItalic ? '' : 'grammar-table__phrase-plain'}>{parseInlineMarkdown(displayLine)}</span>;
+                        })}
+                      </div>
+                    );
+                  }
+
+                  const isItalic = cell.startsWith('_') && cell.endsWith('_') && cell.length > 2;
+                  // Italic label: first column italic (e.g. _adjectives_) — should show translated
+                  // Italic example: non-first column italic (e.g. _I saw the film_) — always English
+                  const isItalicLabel = isItalic && cellIdx === 0;
+                  const isItalicExample = isItalic && cellIdx !== 0;
+                  // Vocab tooltip pattern: translated cell has ' – ' suffix (e.g. "**act** – harakat qilmoq")
+                  const dashIdx = translatedCell.indexOf(' – ');
+                  const hasVocabTooltip = !isItalic && dashIdx !== -1;
+                  // "Use" description pattern: 2-column row where the OTHER cell is italic (example sentence)
+                  const isUseDescription = !isItalic && !hasVocabTooltip
+                    && row.cells.length === 2
+                    && row.cells.some(c => c.startsWith('_') && c.endsWith('_'));
+                  const displayCell = (isItalicLabel || isUseDescription) ? translatedCell : cell;
+                  const inner = displayCell.replace(/^_|_$/g, '');
+                  const parts = inner.split(/(\*\*[^*]+\*\*)/).map((part, pi) =>
+                    part.startsWith('**') && part.endsWith('**')
+                      ? <strong key={pi}>{addSlashBreaks(part.slice(2, -2))}</strong>
+                      : addSlashBreaks(part)
+                  );
+                  const content = isItalic ? <em>{parts}</em> : parts;
+                  // Show tooltip when translated cell differs from English (covers vocab tooltip + prepositional phrases)
+                  const tooltipText = hasVocabTooltip ? translatedCell.slice(dashIdx + 3)
+                    : (!isItalicLabel && !isUseDescription && !isItalicExample && translatedCell !== cell) ? translatedCell
+                    : undefined;
+                  if (tooltipText) {
+                    return <VocabCell key={cellIdx} translation={tooltipText}>{content}</VocabCell>;
+                  }
+                  return <div key={cellIdx} className="grammar-table__cell">{content}</div>;
+                })}
               </div>
               );
             })}

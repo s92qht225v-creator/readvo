@@ -12,11 +12,12 @@ export function useRequireAuth() {
   const { user, isLoading } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!isLoading && !user) {
-      router.replace('/');
-    }
-  }, [isLoading, user, router]);
+  // TODO: restore auth redirect after local testing
+  // useEffect(() => {
+  //   if (!isLoading && !user) {
+  //     router.replace('/');
+  //   }
+  // }, [isLoading, user, router]);
 
   return { user, isLoading };
 }

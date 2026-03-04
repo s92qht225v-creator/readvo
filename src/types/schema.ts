@@ -61,7 +61,9 @@ export type SectionType =
   | 'imagedescribe'   // Image description exercises (看图填空)
   | 'bonus'           // Bonus content with video (小语的彩蛋)
   | 'typedfillblank'  // Typed fill-in-the-blank exercises (verb conjugation)
-  | 'errorcorrection'; // Error correction exercises (rewrite sentences)
+  | 'errorcorrection' // Error correction exercises (rewrite sentences)
+  | 'wordchoice'      // Word choice exercises (circle the correct word/phrase)
+  | 'texterror';      // Text error exercises (find & correct errors in passage)
 
 /**
  * A sentence - the atomic unit of the reading system.
@@ -158,6 +160,9 @@ export interface Section {
   /** Optional section subheading (e.g., "Text 1") */
   readonly subheading?: string;
 
+  /** Optional section subheading (Uzbek) */
+  readonly subheading_uz?: string;
+
   /** Optional section subheading (Russian) */
   readonly subheading_ru?: string;
 
@@ -172,6 +177,9 @@ export interface Section {
 
   /** Optional context translation (Russian) */
   readonly contextTranslation_ru?: string;
+
+  /** Optional exercise letter label shown before the instruction (e.g., "A", "B", "C") */
+  readonly exerciseLetter?: string;
 
   /** Optional instruction line (e.g., "朗读对话。Read the dialogue aloud.") */
   readonly instruction?: string;
@@ -239,6 +247,12 @@ export interface Section {
 
   /** Error correction exercise data (only for type: 'errorcorrection') */
   readonly errorCorrectionData?: ErrorCorrectionData;
+
+  /** Word choice exercise data (only for type: 'wordchoice') */
+  readonly wordChoiceData?: WordChoiceData;
+
+  /** Text error exercise data (only for type: 'texterror') */
+  readonly textErrorData?: TextErrorData;
 }
 
 // =============================================================================
@@ -684,6 +698,9 @@ export interface TypedFillBlankCard {
   /** Unique identifier */
   readonly id: string;
 
+  /** Optional display number override (e.g., crossword clue numbers) */
+  readonly number?: number | string;
+
   /** Sentence parts (text, blanks, and hints) */
   readonly parts: readonly TypedFillBlankPart[];
 
@@ -727,8 +744,12 @@ export interface TypedFillBlankImage {
 export interface TypedFillBlankData {
   /** Optional image grid shown above cards */
   readonly images?: readonly TypedFillBlankImage[];
+  /** Optional word bank displayed above cards */
+  readonly wordBank?: readonly string[];
   /** Cards with sentences */
   readonly cards: readonly TypedFillBlankCard[];
+  /** Layout mode: 'passage' shows blank on left, text on right (like textbook passage exercises) */
+  readonly layout?: 'passage';
 }
 
 // =============================================================================
@@ -767,4 +788,75 @@ export interface ErrorCorrectionCard {
 export interface ErrorCorrectionData {
   /** Cards with sentences */
   readonly cards: readonly ErrorCorrectionCard[];
+}
+
+// =============================================================================
+// WORD CHOICE EXERCISE
+// =============================================================================
+
+/**
+ * A part of a word choice sentence (text or choice).
+ */
+export interface WordChoicePart {
+  readonly type: 'text' | 'choice';
+  /** Content (for text parts) */
+  readonly content?: string;
+  /** Options to choose from (for choice parts) */
+  readonly options?: readonly string[];
+  /** Index of the correct option (for choice parts) */
+  readonly correct?: number;
+}
+
+/**
+ * A card in a word choice exercise.
+ */
+export interface WordChoiceCard {
+  /** Unique identifier */
+  readonly id: string;
+  /** Sentence parts (text and choices) */
+  readonly parts: readonly WordChoicePart[];
+  /** Word translations for tap-to-translate tooltips */
+  readonly words?: readonly TypedFillBlankWord[];
+}
+
+/**
+ * Complete data for a word choice exercise.
+ */
+export interface WordChoiceData {
+  /** Cards with sentences */
+  readonly cards: readonly WordChoiceCard[];
+  /** Optional layout variant */
+  readonly layout?: 'ab-choice';
+}
+
+// =============================================================================
+// TEXT ERROR EXERCISE
+// =============================================================================
+
+/**
+ * An error in a passage that the student must correct.
+ */
+export interface TextErrorItem {
+  /** Display number (1-10) */
+  readonly id: number;
+  /** Character index where the error starts in the passage */
+  readonly errorStart: number;
+  /** Character index where the error ends (exclusive) */
+  readonly errorEnd: number;
+  /** The correct form */
+  readonly correctAnswer: string;
+  /** Alternative correct answers */
+  readonly alternateAnswers?: readonly string[];
+}
+
+/**
+ * Complete data for a text error exercise (find & correct errors in passage).
+ */
+export interface TextErrorData {
+  /** The full passage text containing errors */
+  readonly passage: string;
+  /** Error items with character positions and correct answers */
+  readonly errors: readonly TextErrorItem[];
+  /** Word translations for tap-to-translate tooltips */
+  readonly words?: readonly TypedFillBlankWord[];
 }
