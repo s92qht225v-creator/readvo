@@ -33,6 +33,7 @@ body {
   line-height: 1.6;
   color: #1a1a1a;
   background: #fff;
+  overflow-x: hidden;
 }
 
 /* =============================================================================
@@ -2711,12 +2712,11 @@ body {
 /* Hero banner */
 .dr-hero {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
-  padding: 0 16px 20px;
+  padding: 0 var(--spacing-xl) 20px;
   text-align: center;
   position: relative;
   width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
 }
 
 .dr-hero__watermark {
@@ -2736,7 +2736,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0 10px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .dr-hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dr-hero__top-row {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .dr-back-btn {
@@ -2796,20 +2815,19 @@ body {
 
 /* Tab bar (sticky, below hero) */
 .dr-tabs {
-  display: flex;
-  gap: 4px;
-  padding: 8px 10px 10px;
   background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
   position: sticky;
   top: 0;
   z-index: 40;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .dr-tabs__inner {
   display: flex;
   gap: 4px;
-  width: 100%;
-  max-width: 600px;
+  padding: 8px 10px 10px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -4216,6 +4234,18 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.karaoke .home__menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.karaoke .home__menu-btn svg {
+  fill: white;
+}
+
+.karaoke .home__menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* Progress bar */
 .karaoke__progress {
   width: 100%;
@@ -4433,7 +4463,6 @@ body {
   padding: 0 var(--spacing-xl) var(--spacing-lg);
   font-family: inherit;
   background: #f5f5f5;
-  overflow-x: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -4589,6 +4618,10 @@ body {
   font-size: 0.85rem;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home__menu-lang-btn--active {
@@ -5584,15 +5617,20 @@ body {
 
 /* Tab bar below hero banner */
 .lp__tabs {
-  display: flex;
-  gap: 4px;
-  padding: 8px 16px 10px;
   background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   position: sticky;
   top: 0;
   z-index: 20;
+}
+
+.lp__tabs-inner {
+  display: flex;
+  gap: 4px;
+  padding: 8px 16px 10px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .lp__tab {
@@ -5936,6 +5974,8 @@ body {
   padding: 0 0 24px;
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .grammar-page__hero-body {
@@ -5992,6 +6032,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .grammar-page__tab {
@@ -6522,6 +6564,18 @@ body {
 
 .reader__header * {
   font-family: inherit;
+}
+
+.reader__header .home__menu-btn {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.reader__header .home__menu-btn svg {
+  fill: #333;
+}
+
+.reader__header .home__menu-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .reader__home {
@@ -9474,4 +9528,315 @@ body {
   padding: var(--spacing-md);
   color: #4caf50;
   font-weight: 600;
+}
+
+/* =============================================================================
+   HANZI WRITER PRACTICE
+   ============================================================================= */
+
+.hanzi-practice {
+  padding: 8px 0 24px;
+  max-width: 900px;
+}
+
+.hanzi-practice__session-progress {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.hanzi-practice__layout {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .hanzi-practice__layout {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hanzi-practice__canvas-panel {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.hanzi-practice__grid-wrapper {
+  position: relative;
+}
+
+.hanzi-practice__crosshair {
+  position: absolute;
+  inset: 0;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.hanzi-practice__crosshair::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  border-left: 1px dashed #e0e0e0;
+}
+
+.hanzi-practice__crosshair::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 0;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.hanzi-practice__canvas {
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  transition: box-shadow 0.15s ease;
+}
+
+.hanzi-practice__canvas--flash-green {
+  box-shadow: 0 0 0 3px #22c55e;
+}
+
+.hanzi-practice__canvas--flash-red {
+  box-shadow: 0 0 0 3px #ef4444;
+}
+
+.hanzi-practice__action-btn {
+  padding: 8px 16px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #333;
+  min-height: 36px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.hanzi-practice__action-btn:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.hanzi-practice__info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  flex: 1;
+}
+
+.hanzi-practice__char-display {
+  font-size: 96px;
+  line-height: 1;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+.hanzi-practice__pinyin {
+  font-size: 24px;
+  color: #999;
+}
+
+.hanzi-practice__meaning {
+  font-size: 18px;
+  color: #555;
+}
+
+.hanzi-practice__stroke-count {
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hanzi-practice__stroke-count--animating {
+  color: #10b981;
+  font-size: 16px;
+  animation: hanzi-stroke-pulse 0.6s ease-out;
+}
+
+.hanzi-practice__stroke-current {
+  font-weight: 700;
+}
+
+@keyframes hanzi-stroke-pulse {
+  0% {
+    transform: scale(1);
+    color: #10b981;
+  }
+  50% {
+    transform: scale(1.15);
+    color: #059669;
+  }
+  100% {
+    transform: scale(1);
+    color: #aaa;
+  }
+}
+
+.hanzi-practice__grade-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hanzi-practice__grade-btn {
+  min-height: 48px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.hanzi-practice__grade-btn--forgot {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.hanzi-practice__grade-btn--gotit {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #fff;
+}
+
+/* Home view */
+
+.hanzi-home {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  padding: 8px 0 24px;
+}
+
+.hanzi-home__stats-row {
+  display: flex;
+  gap: 12px;
+}
+
+.hanzi-home__stat-card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px;
+  gap: 4px;
+}
+
+.hanzi-home__stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #dc2626;
+  line-height: 1;
+}
+
+.hanzi-home__stat-label {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+.hanzi-home__start-btn {
+  width: 100%;
+  min-height: 52px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.hanzi-home__start-btn:disabled {
+  background: #e0e0e6;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.hanzi-home__nothing-due {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+}
+
+.hanzi-home__reset-btn {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  color: #ccc;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+  text-align: center;
+  padding: 0;
+}
+
+.hanzi-home__reset-btn:hover {
+  color: #999;
+}
+
+/* Done view */
+
+.hanzi-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.hanzi-done__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.hanzi-done__stats {
+  font-size: 14px;
+  color: #888;
+}
+
+.hanzi-done__restart-btn {
+  min-height: 48px;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
 }

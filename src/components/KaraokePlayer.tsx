@@ -8,6 +8,7 @@ import { ReaderControls } from './ReaderControls';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
+import { BannerMenu } from './BannerMenu';
 
 interface KaraokeChar {
   id: number;
@@ -196,6 +197,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
             onLanguageToggle={toggleLanguage}
             pageNumber={0}
           />
+          <BannerMenu />
         </div>
       </header>
 

@@ -25,6 +25,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
+import { BannerMenu } from './BannerMenu';
 
 interface NavLink {
   lessonId: string;
@@ -160,6 +161,7 @@ export function ReaderLayout({
             onLanguageToggle={handleLanguageToggle}
             pageNumber={page.pageNumber}
           />
+          <BannerMenu />
         </div>
       </header>
 

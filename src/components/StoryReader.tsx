@@ -11,6 +11,7 @@ import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
+import { BannerMenu } from './BannerMenu';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -455,6 +456,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
             isFocusMode={undefined}
             onFocusModeToggle={undefined}
           />
+          <BannerMenu />
         </div>
       </header>
 

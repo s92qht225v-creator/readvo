@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -11,11 +11,9 @@ export function BannerMenu() {
   const [language, , setLanguage] = useLanguage();
   const { user, logout } = useAuth();
   const trial = useTrial();
-  const pathname = usePathname();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const isEnglishPath = pathname.startsWith('/english');
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -91,17 +89,10 @@ export function BannerMenu() {
           <div className="home__menu-lang-row">
             <Link
               href="/chinese"
-              className={`home__menu-lang-btn ${!isEnglishPath ? 'home__menu-lang-btn--active' : ''}`}
+              className="home__menu-lang-btn home__menu-lang-btn--active"
               onClick={() => setMenuOpen(false)}
             >
               中文
-            </Link>
-            <Link
-              href="/english"
-              className={`home__menu-lang-btn ${isEnglishPath ? 'home__menu-lang-btn--active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              English
             </Link>
           </div>
           <div className="home__menu-divider" />

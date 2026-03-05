@@ -8,7 +8,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
 import type { DialogueInfo } from '../services/dialogues';
-import type { StoryInfo } from '../services/stories';
+import { HanziWriterPractice } from './HanziWriterPractice';
 
 const TAGS: Record<string, { uz: string; ru: string }> = {
   tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
@@ -24,20 +24,19 @@ const TAGS: Record<string, { uz: string; ru: string }> = {
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
-const STORY_BOOKMARK_KEY = 'blim-story-bookmarks';
 
-type Tab = 'dialogues' | 'stories' | 'flashcards' | 'karaoke' | 'grammar' | 'tests';
+type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar' | 'tests';
 
-const tabs: { id: Tab; label: string }[] = [
-  { id: 'dialogues', label: 'Dialog' },
-  { id: 'stories', label: 'Hikoya' },
-  { id: 'flashcards', label: 'Flesh' },
+const tabs: { id: Tab; label: string; label_ru?: string }[] = [
+  { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог' },
+  { id: 'writing', label: 'Yozish', label_ru: 'Письмо' },
+  { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш' },
   { id: 'karaoke', label: 'KTV' },
-  { id: 'grammar', label: 'Tika' },
-  { id: 'tests', label: 'Test' },
+  { id: 'grammar', label: 'Tika', label_ru: 'Грамм' },
+  { id: 'tests', label: 'Test', label_ru: 'Тесты' },
 ];
 
-const validTabs: Tab[] = ['dialogues', 'stories', 'flashcards', 'karaoke', 'grammar', 'tests'];
+const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar', 'tests'];
 
 const grammarItems = [
   { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', color: '#dc2626', active: true },
@@ -185,11 +184,10 @@ interface FlashcardLesson {
 
 interface Props {
   dialogues: DialogueInfo[];
-  stories: StoryInfo[];
   flashcardLessons?: FlashcardLesson[];
 }
 
-export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Props) {
+export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -204,11 +202,6 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
-
-  // Story filters
-  const [storySearch, setStorySearch] = useState('');
-  const [showStoryBookmarked, setShowStoryBookmarked] = useState(false);
-  const [storyBookmarks, setStoryBookmarks] = useState<Set<string>>(new Set());
 
   // Flashcard mode
   const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
@@ -237,8 +230,6 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
     try {
       const saved = localStorage.getItem(BOOKMARK_KEY);
       if (saved) setBookmarks(new Set(JSON.parse(saved)));
-      const storySaved = localStorage.getItem(STORY_BOOKMARK_KEY);
-      if (storySaved) setStoryBookmarks(new Set(JSON.parse(storySaved)));
       const savedMode = localStorage.getItem(FLASHCARD_MODE_KEY);
       if (savedMode) setFlashcardMode(savedMode);
     } catch { /* ignore */ }
@@ -255,34 +246,11 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
     });
   }, []);
 
-  const toggleStoryBookmark = useCallback((e: React.MouseEvent, id: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setStoryBookmarks((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      localStorage.setItem(STORY_BOOKMARK_KEY, JSON.stringify([...next]));
-      return next;
-    });
-  }, []);
-
   const availableTags = useMemo(() => {
     const tagSet = new Set<string>();
     dialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
     return Object.keys(TAGS).filter((t) => tagSet.has(t));
   }, [dialogues]);
-
-  const filteredStories = useMemo(() => {
-    let result = stories;
-    if (showStoryBookmarked) result = result.filter((s) => storyBookmarks.has(s.id));
-    const q = storySearch.trim().toLowerCase();
-    if (q) result = result.filter((s) =>
-      s.title.toLowerCase().includes(q) ||
-      s.pinyin.toLowerCase().includes(q) ||
-      s.titleTranslation.toLowerCase().includes(q)
-    );
-    return result;
-  }, [storySearch, stories, showStoryBookmarked, storyBookmarks]);
 
   const filteredDialogues = useMemo(() => {
     let result = dialogues;
@@ -315,7 +283,7 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
             <div className="dr-hero__level">HSK 1</div>
             <div className="dr-hero__title">{
               activeTab === 'dialogues' ? '对话' :
-              activeTab === 'stories' ? '故事' :
+              activeTab === 'writing' ? '书写' :
               activeTab === 'flashcards' ? '词卡' :
               activeTab === 'karaoke' ? '歌曲' :
               activeTab === 'grammar' ? '语法' :
@@ -323,7 +291,7 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
             }</div>
             <div className="dr-hero__pinyin">{
               activeTab === 'dialogues' ? 'duìhuà' :
-              activeTab === 'stories' ? 'gùshi' :
+              activeTab === 'writing' ? 'shūxiě' :
               activeTab === 'flashcards' ? 'cíkǎ' :
               activeTab === 'karaoke' ? 'gēqǔ' :
               activeTab === 'grammar' ? 'yǔfǎ' :
@@ -331,14 +299,14 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
             }</div>
             <div className="dr-hero__translation">— {language === 'ru' ? (
               activeTab === 'dialogues' ? 'Диалоги' :
-              activeTab === 'stories' ? 'Истории' :
+              activeTab === 'writing' ? 'Письмо' :
               activeTab === 'flashcards' ? 'Флешкарты' :
               activeTab === 'karaoke' ? 'Песни' :
               activeTab === 'grammar' ? 'Грамматика' :
               'Тесты'
             ) : (
               activeTab === 'dialogues' ? 'Dialoglar' :
-              activeTab === 'stories' ? 'Hikoyalar' :
+              activeTab === 'writing' ? 'Yozish' :
               activeTab === 'flashcards' ? 'Fleshkartalar' :
               activeTab === 'karaoke' ? 'Qo\'shiqlar' :
               activeTab === 'grammar' ? 'Grammatika' :
@@ -348,20 +316,22 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
         </div>
       </header>
       <nav className="lp__tabs">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
-            onClick={() => setActiveTab(tab.id)}
-            type="button"
-          >
-            {tab.label}
-          </button>
-        ))}
+        <div className="lp__tabs-inner">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+              type="button"
+            >
+              {language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
+            </button>
+          ))}
+        </div>
       </nav>
 
       {/* HSK level pills */}
-      {activeTab !== 'karaoke' && (
+      {activeTab !== 'karaoke' && activeTab !== 'writing' && (
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
@@ -483,80 +453,7 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
           </>
         )}
 
-        {activeTab === 'stories' && (
-          <>
-            {/* Search */}
-            <div className="dialogues__search">
-              <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-              <input
-                type="text"
-                className="dialogues__search-input"
-                placeholder={language === 'ru' ? 'Поиск историй...' : 'Hikoyalarni qidirish...'}
-                value={storySearch}
-                onChange={(e) => setStorySearch(e.target.value)}
-              />
-              {storySearch && (
-                <button className="dialogues__search-clear" onClick={() => setStorySearch('')} aria-label="Clear">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-                  </svg>
-                </button>
-              )}
-            </div>
-
-            {/* Tag chips */}
-            <div className="dialogues__tags">
-              <button
-                className={`dialogues__tag ${!showStoryBookmarked ? 'dialogues__tag--active' : ''}`}
-                onClick={() => setShowStoryBookmarked(false)}
-                type="button"
-              >
-                {language === 'ru' ? 'Все' : 'Hammasi'}
-              </button>
-              <button
-                className={`dialogues__tag dialogues__tag--bookmark ${showStoryBookmarked ? 'dialogues__tag--active' : ''}`}
-                onClick={() => setShowStoryBookmarked(!showStoryBookmarked)}
-                type="button"
-              >
-                <svg viewBox="0 0 24 24" width="14" height="14" fill={showStoryBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
-                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                </svg>
-                {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
-              </button>
-            </div>
-
-            {/* Story cards */}
-            <div className="home__lessons">
-              {filteredStories.map((s) => (
-                <Link key={s.id} href={`/chinese/hsk2/stories/${s.id}`} className="dialogue-card">
-                  <span className="dialogue-card__deco" aria-hidden="true">{s.title}</span>
-                  <div className="dialogue-card__content">
-                    <div className="dialogue-card__text">
-                      <h3 className="dialogue-card__title">{s.title}</h3>
-                      <p className="dialogue-card__pinyin">{s.pinyin}</p>
-                      <p className="dialogue-card__translation">{language === 'ru' ? s.titleTranslation_ru : s.titleTranslation}</p>
-                    </div>
-                    <button
-                      className={`dialogue-card__bookmark ${storyBookmarks.has(s.id) ? 'dialogue-card__bookmark--active' : ''}`}
-                      onClick={(e) => toggleStoryBookmark(e, s.id)}
-                      aria-label="Bookmark"
-                      type="button"
-                    >
-                      <svg viewBox="0 0 24 24" width="20" height="20" fill={storyBookmarks.has(s.id) ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
-                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                      </svg>
-                    </button>
-                  </div>
-                </Link>
-              ))}
-              {filteredStories.length === 0 && (
-                <p className="dialogues__empty">Hech narsa topilmadi</p>
-              )}
-            </div>
-          </>
-        )}
+        {activeTab === 'writing' && <HanziWriterPractice lang={language} />}
 
         {activeTab === 'flashcards' && (
           <>

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { LanguagePage } from '@/components/LanguagePage';
 import { loadDialoguesForBook } from '@/services/dialogues';
-import { loadStoriesForBook } from '@/services/stories';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
 
@@ -12,9 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default async function ChinesePage() {
-  const [dialogues, stories, deck, lessonInfos] = await Promise.all([
+  const [dialogues, deck, lessonInfos] = await Promise.all([
     loadDialoguesForBook('hsk1'),
-    loadStoriesForBook('hsk2'),
     loadFlashcardDeck('hsk1'),
     getLessonsWithInfo(),
   ]);
@@ -36,7 +34,7 @@ export default async function ChinesePage() {
 
   return (
     <Suspense>
-      <LanguagePage dialogues={dialogues} stories={stories} flashcardLessons={flashcardLessons} />
+      <LanguagePage dialogues={dialogues} flashcardLessons={flashcardLessons} />
     </Suspense>
   );
 }
