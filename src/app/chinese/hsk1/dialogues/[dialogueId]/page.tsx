@@ -30,5 +30,5 @@ export default async function DialoguePage({ params }: PageParams) {
     notFound();
   }
 
-  return <DialogueReader dialogue={dialogue} bookPath="/chinese/hsk1" listPath="/chinese/hsk1/dialogues" />;
+  return <DialogueReader dialogue={dialogue} bookPath="/chinese/hsk1" listPath="/chinese?tab=dialogues" />;
 }

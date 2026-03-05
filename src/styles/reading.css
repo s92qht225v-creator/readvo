@@ -4421,6 +4421,7 @@ body {
   padding: 0 var(--spacing-xl) var(--spacing-lg);
   font-family: inherit;
   background: #f5f5f5;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1200px) {

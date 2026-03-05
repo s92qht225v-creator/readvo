@@ -30,5 +30,5 @@ export default async function StoryPage({ params }: PageParams) {
     notFound();
   }
 
-  return <StoryReader story={story} bookPath="/chinese/hsk2" />;
+  return <StoryReader story={story} bookPath="/chinese/hsk2" listPath="/chinese?tab=stories" />;
 }
