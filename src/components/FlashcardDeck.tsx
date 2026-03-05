@@ -390,20 +390,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               </button>
             </div>
 
-            {/* Back link */}
-            <Link
-              href={backHref ?? '/chinese?tab=flashcards'}
-              style={{
-                display: 'block', width: '100%', marginTop: 12, padding: 8,
-                background: 'transparent', border: 'none',
-                color: '#ccc', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit',
-                textAlign: 'center', textDecoration: 'none',
-              }}
-            >
-              ← {backHref?.includes('subtab=topics')
-                ? (language === 'ru' ? 'Назад к темам' : 'Mavzularga qaytish')
-                : (language === 'ru' ? 'К списку уроков' : 'Darslarga qaytish')}
-            </Link>
           </div>
         ) : null}
 

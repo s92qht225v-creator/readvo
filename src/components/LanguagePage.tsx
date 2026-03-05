@@ -364,15 +364,6 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
       {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
-            {activeTab === 'flashcards' && (
-              <button
-                type="button"
-                onClick={() => setFlashcardSubTab('topics')}
-                className={`lp__hsk-pill ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
-              >
-                {language === 'ru' ? 'Темы' : 'Mavzular'}
-              </button>
-            )}
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
               const hasContent = lv === 'HSK 1';
               const isActive = activeTab === 'flashcards' ? (flashcardSubTab === 'lessons' && lv === 'HSK 1') : hasContent;
@@ -388,6 +379,15 @@ export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Prop
                 </button>
               );
             })}
+            {activeTab === 'flashcards' && (
+              <button
+                type="button"
+                onClick={() => setFlashcardSubTab('topics')}
+                className={`lp__hsk-pill ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
+              >
+                {language === 'ru' ? 'Темы' : 'Mavzular'}
+              </button>
+            )}
           </div>
         </div>
       )}
