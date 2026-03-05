@@ -1,0 +1,147 @@
+{
+  "id": "topic-numbers",
+  "title": "Sonlar",
+  "title_ru": "Числа",
+  "words": [
+    {
+      "id": "tp-num-01",
+      "text_original": "零",
+      "pinyin": "líng",
+      "text_translation": "nol",
+      "text_translation_ru": "ноль"
+    },
+    {
+      "id": "tp-num-02",
+      "text_original": "一",
+      "pinyin": "yī",
+      "text_translation": "bir",
+      "text_translation_ru": "один"
+    },
+    {
+      "id": "tp-num-03",
+      "text_original": "二",
+      "pinyin": "èr",
+      "text_translation": "ikki",
+      "text_translation_ru": "два"
+    },
+    {
+      "id": "tp-num-04",
+      "text_original": "三",
+      "pinyin": "sān",
+      "text_translation": "uch",
+      "text_translation_ru": "три"
+    },
+    {
+      "id": "tp-num-05",
+      "text_original": "四",
+      "pinyin": "sì",
+      "text_translation": "to'rt",
+      "text_translation_ru": "четыре"
+    },
+    {
+      "id": "tp-num-06",
+      "text_original": "五",
+      "pinyin": "wǔ",
+      "text_translation": "besh",
+      "text_translation_ru": "пять"
+    },
+    {
+      "id": "tp-num-07",
+      "text_original": "六",
+      "pinyin": "liù",
+      "text_translation": "olti",
+      "text_translation_ru": "шесть"
+    },
+    {
+      "id": "tp-num-08",
+      "text_original": "七",
+      "pinyin": "qī",
+      "text_translation": "yetti",
+      "text_translation_ru": "семь"
+    },
+    {
+      "id": "tp-num-09",
+      "text_original": "八",
+      "pinyin": "bā",
+      "text_translation": "sakkiz",
+      "text_translation_ru": "восемь"
+    },
+    {
+      "id": "tp-num-10",
+      "text_original": "九",
+      "pinyin": "jiǔ",
+      "text_translation": "to'qqiz",
+      "text_translation_ru": "девять"
+    },
+    {
+      "id": "tp-num-11",
+      "text_original": "十",
+      "pinyin": "shí",
+      "text_translation": "o'n",
+      "text_translation_ru": "десять"
+    },
+    {
+      "id": "tp-num-12",
+      "text_original": "百",
+      "pinyin": "bǎi",
+      "text_translation": "yuz",
+      "text_translation_ru": "сто"
+    },
+    {
+      "id": "tp-num-13",
+      "text_original": "千",
+      "pinyin": "qiān",
+      "text_translation": "ming",
+      "text_translation_ru": "тысяча"
+    },
+    {
+      "id": "tp-num-14",
+      "text_original": "万",
+      "pinyin": "wàn",
+      "text_translation": "o'n ming",
+      "text_translation_ru": "десять тысяч"
+    },
+    {
+      "id": "tp-num-15",
+      "text_original": "两",
+      "pinyin": "liǎng",
+      "text_translation": "ikki (miqdor)",
+      "text_translation_ru": "два (количество)"
+    },
+    {
+      "id": "tp-num-16",
+      "text_original": "第一",
+      "pinyin": "dì yī",
+      "text_translation": "birinchi",
+      "text_translation_ru": "первый"
+    },
+    {
+      "id": "tp-num-17",
+      "text_original": "第二",
+      "pinyin": "dì èr",
+      "text_translation": "ikkinchi",
+      "text_translation_ru": "второй"
+    },
+    {
+      "id": "tp-num-18",
+      "text_original": "第三",
+      "pinyin": "dì sān",
+      "text_translation": "uchinchi",
+      "text_translation_ru": "третий"
+    },
+    {
+      "id": "tp-num-19",
+      "text_original": "多少",
+      "pinyin": "duōshao",
+      "text_translation": "qancha; nechta",
+      "text_translation_ru": "сколько"
+    },
+    {
+      "id": "tp-num-20",
+      "text_original": "几",
+      "pinyin": "jǐ",
+      "text_translation": "necha (kam son)",
+      "text_translation_ru": "сколько (небольшое число)"
+    }
+  ]
+}

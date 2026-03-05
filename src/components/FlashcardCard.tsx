@@ -39,10 +39,10 @@ export const FlashcardCard: React.FC<FlashcardCardProps> = ({
           <div className="flashcard__front-content">
             {direction === 'cn' ? (
               <>
-                <span className="flashcard__chinese">{word.text_original}</span>
                 {isPinyinVisible && (
                   <span className="flashcard__pinyin">{word.pinyin}</span>
                 )}
+                <span className="flashcard__chinese">{word.text_original}</span>
               </>
             ) : (
               <span className="flashcard__translation">{translation}</span>
@@ -58,17 +58,17 @@ export const FlashcardCard: React.FC<FlashcardCardProps> = ({
           <div className="flashcard__front-content">
             {direction === 'cn' ? (
               <>
-                <span className="flashcard__translation">{translation}</span>
                 <span className="flashcard__back-chinese">{word.text_original}</span>
+                <span className="flashcard__translation">{translation}</span>
                 <span className="flashcard__back-pinyin">{word.pinyin}</span>
               </>
             ) : (
               <>
-                <span className="flashcard__chinese">{word.text_original}</span>
+                <span className="flashcard__back-chinese">{word.text_original}</span>
+                <span className="flashcard__translation">{translation}</span>
                 {isPinyinVisible && (
-                  <span className="flashcard__pinyin">{word.pinyin}</span>
+                  <span className="flashcard__back-pinyin">{word.pinyin}</span>
                 )}
-                <span className="flashcard__back-translation">{translation}</span>
               </>
             )}
           </div>

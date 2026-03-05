@@ -1,0 +1,124 @@
+{
+  "id": "topic-professions",
+  "title": "Kasblar",
+  "title_ru": "Профессии",
+  "words": [
+    {
+      "id": "tp-prof-01",
+      "text_original": "老师",
+      "pinyin": "lǎoshī",
+      "text_translation": "o'qituvchi; muallim",
+      "text_translation_ru": "учитель; преподаватель",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/laoshi.mp3"
+    },
+    {
+      "id": "tp-prof-02",
+      "text_original": "学生",
+      "pinyin": "xuésheng",
+      "text_translation": "talaba; o'quvchi",
+      "text_translation_ru": "студент; ученик",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/xuesheng.mp3"
+    },
+    {
+      "id": "tp-prof-03",
+      "text_original": "医生",
+      "pinyin": "yīshēng",
+      "text_translation": "shifokor; doktor",
+      "text_translation_ru": "врач; доктор",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/yisheng.mp3"
+    },
+    {
+      "id": "tp-prof-04",
+      "text_original": "护士",
+      "pinyin": "hùshi",
+      "text_translation": "hamshira",
+      "text_translation_ru": "медсестра"
+    },
+    {
+      "id": "tp-prof-05",
+      "text_original": "工人",
+      "pinyin": "gōngrén",
+      "text_translation": "ishchi",
+      "text_translation_ru": "рабочий"
+    },
+    {
+      "id": "tp-prof-06",
+      "text_original": "司机",
+      "pinyin": "sījī",
+      "text_translation": "haydovchi",
+      "text_translation_ru": "водитель; шофёр"
+    },
+    {
+      "id": "tp-prof-07",
+      "text_original": "厨师",
+      "pinyin": "chúshī",
+      "text_translation": "oshpaz",
+      "text_translation_ru": "повар; кулинар"
+    },
+    {
+      "id": "tp-prof-08",
+      "text_original": "警察",
+      "pinyin": "jǐngchá",
+      "text_translation": "politsiyachi",
+      "text_translation_ru": "полицейский"
+    },
+    {
+      "id": "tp-prof-09",
+      "text_original": "商人",
+      "pinyin": "shāngrén",
+      "text_translation": "tadbirkor; savdogar",
+      "text_translation_ru": "бизнесмен; торговец"
+    },
+    {
+      "id": "tp-prof-10",
+      "text_original": "服务员",
+      "pinyin": "fúwùyuán",
+      "text_translation": "ofitsiant; xizmatchi",
+      "text_translation_ru": "официант; обслуживающий персонал",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/fuwuyuan.mp3"
+    },
+    {
+      "id": "tp-prof-11",
+      "text_original": "记者",
+      "pinyin": "jìzhě",
+      "text_translation": "jurnalist",
+      "text_translation_ru": "журналист"
+    },
+    {
+      "id": "tp-prof-12",
+      "text_original": "运动员",
+      "pinyin": "yùndòngyuán",
+      "text_translation": "sportchi",
+      "text_translation_ru": "спортсмен"
+    },
+    {
+      "id": "tp-prof-13",
+      "text_original": "演员",
+      "pinyin": "yǎnyuán",
+      "text_translation": "aktyor",
+      "text_translation_ru": "актёр; актриса"
+    },
+    {
+      "id": "tp-prof-14",
+      "text_original": "律师",
+      "pinyin": "lǜshī",
+      "text_translation": "advokat; huquqshunos",
+      "text_translation_ru": "адвокат; юрист"
+    },
+    {
+      "id": "tp-prof-15",
+      "text_original": "工作",
+      "pinyin": "gōngzuò",
+      "text_translation": "ish; ishlamoq",
+      "text_translation_ru": "работа; работать",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/gongzuo.mp3"
+    },
+    {
+      "id": "tp-prof-16",
+      "text_original": "职业",
+      "pinyin": "zhíyè",
+      "text_translation": "kasb; mutaxassislik",
+      "text_translation_ru": "профессия; специальность"
+    }
+  ]
+}

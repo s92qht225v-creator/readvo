@@ -1,0 +1,135 @@
+{
+  "id": "topic-animals",
+  "title": "Hayvonlar",
+  "title_ru": "Животные",
+  "words": [
+    {
+      "id": "tp-ani-01",
+      "text_original": "猫",
+      "pinyin": "māo",
+      "text_translation": "mushuk",
+      "text_translation_ru": "кошка",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/mao.mp3"
+    },
+    {
+      "id": "tp-ani-02",
+      "text_original": "狗",
+      "pinyin": "gǒu",
+      "text_translation": "it; kuchuk",
+      "text_translation_ru": "собака",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/gou.mp3"
+    },
+    {
+      "id": "tp-ani-03",
+      "text_original": "鸟",
+      "pinyin": "niǎo",
+      "text_translation": "qush",
+      "text_translation_ru": "птица"
+    },
+    {
+      "id": "tp-ani-04",
+      "text_original": "鱼",
+      "pinyin": "yú",
+      "text_translation": "baliq",
+      "text_translation_ru": "рыба"
+    },
+    {
+      "id": "tp-ani-05",
+      "text_original": "马",
+      "pinyin": "mǎ",
+      "text_translation": "ot",
+      "text_translation_ru": "лошадь"
+    },
+    {
+      "id": "tp-ani-06",
+      "text_original": "牛",
+      "pinyin": "niú",
+      "text_translation": "sigir; qoramol",
+      "text_translation_ru": "корова; бык"
+    },
+    {
+      "id": "tp-ani-07",
+      "text_original": "猪",
+      "pinyin": "zhū",
+      "text_translation": "cho'chqa",
+      "text_translation_ru": "свинья"
+    },
+    {
+      "id": "tp-ani-08",
+      "text_original": "羊",
+      "pinyin": "yáng",
+      "text_translation": "qo'y; echki",
+      "text_translation_ru": "овца; коза"
+    },
+    {
+      "id": "tp-ani-09",
+      "text_original": "鸡",
+      "pinyin": "jī",
+      "text_translation": "tovuq",
+      "text_translation_ru": "курица"
+    },
+    {
+      "id": "tp-ani-10",
+      "text_original": "兔子",
+      "pinyin": "tùzi",
+      "text_translation": "quyon",
+      "text_translation_ru": "кролик"
+    },
+    {
+      "id": "tp-ani-11",
+      "text_original": "熊猫",
+      "pinyin": "xióngmāo",
+      "text_translation": "panda",
+      "text_translation_ru": "панда"
+    },
+    {
+      "id": "tp-ani-12",
+      "text_original": "老虎",
+      "pinyin": "lǎohǔ",
+      "text_translation": "yo'lbars",
+      "text_translation_ru": "тигр"
+    },
+    {
+      "id": "tp-ani-13",
+      "text_original": "狮子",
+      "pinyin": "shīzi",
+      "text_translation": "sher",
+      "text_translation_ru": "лев"
+    },
+    {
+      "id": "tp-ani-14",
+      "text_original": "大象",
+      "pinyin": "dàxiàng",
+      "text_translation": "fil",
+      "text_translation_ru": "слон"
+    },
+    {
+      "id": "tp-ani-15",
+      "text_original": "猴子",
+      "pinyin": "hóuzi",
+      "text_translation": "maymun",
+      "text_translation_ru": "обезьяна"
+    },
+    {
+      "id": "tp-ani-16",
+      "text_original": "蛇",
+      "pinyin": "shé",
+      "text_translation": "ilon",
+      "text_translation_ru": "змея"
+    },
+    {
+      "id": "tp-ani-17",
+      "text_original": "青蛙",
+      "pinyin": "qīngwā",
+      "text_translation": "qurbaqa",
+      "text_translation_ru": "лягушка"
+    },
+    {
+      "id": "tp-ani-18",
+      "text_original": "动物",
+      "pinyin": "dòngwù",
+      "text_translation": "hayvon",
+      "text_translation_ru": "животное"
+    }
+  ]
+}

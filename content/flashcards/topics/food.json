@@ -1,0 +1,159 @@
+{
+  "id": "topic-food",
+  "title": "Oziq-ovqat",
+  "title_ru": "Еда",
+  "words": [
+    {
+      "id": "tp-food-01",
+      "text_original": "吃",
+      "pinyin": "chī",
+      "text_translation": "yemoq",
+      "text_translation_ru": "есть; кушать",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/chi.mp3"
+    },
+    {
+      "id": "tp-food-02",
+      "text_original": "喝",
+      "pinyin": "hē",
+      "text_translation": "ichmoq",
+      "text_translation_ru": "пить",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/he.mp3"
+    },
+    {
+      "id": "tp-food-03",
+      "text_original": "饭",
+      "pinyin": "fàn",
+      "text_translation": "ovqat; guruch",
+      "text_translation_ru": "еда; рис (варёный)",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/fan.mp3"
+    },
+    {
+      "id": "tp-food-04",
+      "text_original": "水",
+      "pinyin": "shuǐ",
+      "text_translation": "suv",
+      "text_translation_ru": "вода",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/shui.mp3"
+    },
+    {
+      "id": "tp-food-05",
+      "text_original": "茶",
+      "pinyin": "chá",
+      "text_translation": "choy",
+      "text_translation_ru": "чай",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/cha.mp3"
+    },
+    {
+      "id": "tp-food-06",
+      "text_original": "咖啡",
+      "pinyin": "kāfēi",
+      "text_translation": "qahva",
+      "text_translation_ru": "кофе",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/kafei.mp3"
+    },
+    {
+      "id": "tp-food-07",
+      "text_original": "牛奶",
+      "pinyin": "niúnǎi",
+      "text_translation": "sut",
+      "text_translation_ru": "молоко",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%202-1/niunai.mp3"
+    },
+    {
+      "id": "tp-food-08",
+      "text_original": "米饭",
+      "pinyin": "mǐfàn",
+      "text_translation": "guruch oshi; plov",
+      "text_translation_ru": "варёный рис"
+    },
+    {
+      "id": "tp-food-09",
+      "text_original": "面条",
+      "pinyin": "miàntiáo",
+      "text_translation": "makaron; lapsha",
+      "text_translation_ru": "лапша; макароны",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/miantiao.mp3"
+    },
+    {
+      "id": "tp-food-10",
+      "text_original": "包子",
+      "pinyin": "bāozi",
+      "text_translation": "go'shtli bug'lama pirogi",
+      "text_translation_ru": "паровой пирожок",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/baozi.mp3"
+    },
+    {
+      "id": "tp-food-11",
+      "text_original": "饺子",
+      "pinyin": "jiǎozi",
+      "text_translation": "xitoy dumplingi",
+      "text_translation_ru": "пельмени (китайские)",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/jiaozi.mp3"
+    },
+    {
+      "id": "tp-food-12",
+      "text_original": "苹果",
+      "pinyin": "píngguǒ",
+      "text_translation": "olma",
+      "text_translation_ru": "яблоко",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-1/pingguo.mp3"
+    },
+    {
+      "id": "tp-food-13",
+      "text_original": "鸡蛋",
+      "pinyin": "jīdàn",
+      "text_translation": "tuxum",
+      "text_translation_ru": "куриное яйцо",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/jidan.mp3"
+    },
+    {
+      "id": "tp-food-14",
+      "text_original": "肉",
+      "pinyin": "ròu",
+      "text_translation": "go'sht",
+      "text_translation_ru": "мясо"
+    },
+    {
+      "id": "tp-food-15",
+      "text_original": "鱼",
+      "pinyin": "yú",
+      "text_translation": "baliq",
+      "text_translation_ru": "рыба"
+    },
+    {
+      "id": "tp-food-16",
+      "text_original": "菜",
+      "pinyin": "cài",
+      "text_translation": "sabzavot; taom",
+      "text_translation_ru": "овощи; блюдо"
+    },
+    {
+      "id": "tp-food-17",
+      "text_original": "好吃",
+      "pinyin": "hǎochī",
+      "text_translation": "mazali",
+      "text_translation_ru": "вкусный"
+    },
+    {
+      "id": "tp-food-18",
+      "text_original": "饿",
+      "pinyin": "è",
+      "text_translation": "och",
+      "text_translation_ru": "голодный"
+    },
+    {
+      "id": "tp-food-19",
+      "text_original": "渴",
+      "pinyin": "kě",
+      "text_translation": "chanqoq",
+      "text_translation_ru": "хотеть пить; жаждать"
+    },
+    {
+      "id": "tp-food-20",
+      "text_original": "饱",
+      "pinyin": "bǎo",
+      "text_translation": "to'q",
+      "text_translation_ru": "сытый"
+    }
+  ]
+}

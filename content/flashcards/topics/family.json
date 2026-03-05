@@ -1,0 +1,150 @@
+{
+  "id": "topic-family",
+  "title": "Oila",
+  "title_ru": "Семья",
+  "words": [
+    {
+      "id": "tp-fam-01",
+      "text_original": "家",
+      "pinyin": "jiā",
+      "text_translation": "oila; uy",
+      "text_translation_ru": "семья; дом"
+    },
+    {
+      "id": "tp-fam-02",
+      "text_original": "爸爸",
+      "pinyin": "bàba",
+      "text_translation": "ota",
+      "text_translation_ru": "папа",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/baba.mp3"
+    },
+    {
+      "id": "tp-fam-03",
+      "text_original": "妈妈",
+      "pinyin": "māma",
+      "text_translation": "ona",
+      "text_translation_ru": "мама",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/mama.mp3"
+    },
+    {
+      "id": "tp-fam-04",
+      "text_original": "哥哥",
+      "pinyin": "gēge",
+      "text_translation": "aka (katta og'a)",
+      "text_translation_ru": "старший брат"
+    },
+    {
+      "id": "tp-fam-05",
+      "text_original": "姐姐",
+      "pinyin": "jiějie",
+      "text_translation": "opa (katta opa)",
+      "text_translation_ru": "старшая сестра"
+    },
+    {
+      "id": "tp-fam-06",
+      "text_original": "弟弟",
+      "pinyin": "dìdi",
+      "text_translation": "uka (kichik og'a)",
+      "text_translation_ru": "младший брат"
+    },
+    {
+      "id": "tp-fam-07",
+      "text_original": "妹妹",
+      "pinyin": "mèimei",
+      "text_translation": "singil (kichik opa)",
+      "text_translation_ru": "младшая сестра"
+    },
+    {
+      "id": "tp-fam-08",
+      "text_original": "儿子",
+      "pinyin": "érzi",
+      "text_translation": "o'g'il",
+      "text_translation_ru": "сын"
+    },
+    {
+      "id": "tp-fam-09",
+      "text_original": "女儿",
+      "pinyin": "nǚ'ér",
+      "text_translation": "qiz",
+      "text_translation_ru": "дочь"
+    },
+    {
+      "id": "tp-fam-10",
+      "text_original": "丈夫",
+      "pinyin": "zhàngfu",
+      "text_translation": "er; turmush o'rtog'i (erkak)",
+      "text_translation_ru": "муж"
+    },
+    {
+      "id": "tp-fam-11",
+      "text_original": "妻子",
+      "pinyin": "qīzi",
+      "text_translation": "xotin; turmush o'rtog'i (ayol)",
+      "text_translation_ru": "жена"
+    },
+    {
+      "id": "tp-fam-12",
+      "text_original": "爷爷",
+      "pinyin": "yéye",
+      "text_translation": "bobo (otaning otasi)",
+      "text_translation_ru": "дедушка (по отцу)"
+    },
+    {
+      "id": "tp-fam-13",
+      "text_original": "奶奶",
+      "pinyin": "nǎinai",
+      "text_translation": "buvi (otaning onasi)",
+      "text_translation_ru": "бабушка (по отцу)"
+    },
+    {
+      "id": "tp-fam-14",
+      "text_original": "外公",
+      "pinyin": "wàigōng",
+      "text_translation": "bobo (onaning otasi)",
+      "text_translation_ru": "дедушка (по матери)"
+    },
+    {
+      "id": "tp-fam-15",
+      "text_original": "外婆",
+      "pinyin": "wàipó",
+      "text_translation": "buvi (onaning onasi)",
+      "text_translation_ru": "бабушка (по матери)"
+    },
+    {
+      "id": "tp-fam-16",
+      "text_original": "孩子",
+      "pinyin": "háizi",
+      "text_translation": "bola; farzand",
+      "text_translation_ru": "ребёнок; дети"
+    },
+    {
+      "id": "tp-fam-17",
+      "text_original": "朋友",
+      "pinyin": "péngyou",
+      "text_translation": "do'st",
+      "text_translation_ru": "друг",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/pengyou.mp3"
+    },
+    {
+      "id": "tp-fam-18",
+      "text_original": "男人",
+      "pinyin": "nánrén",
+      "text_translation": "erkak",
+      "text_translation_ru": "мужчина"
+    },
+    {
+      "id": "tp-fam-19",
+      "text_original": "女人",
+      "pinyin": "nǚrén",
+      "text_translation": "ayol",
+      "text_translation_ru": "женщина"
+    },
+    {
+      "id": "tp-fam-20",
+      "text_original": "人",
+      "pinyin": "rén",
+      "text_translation": "odam; kishi",
+      "text_translation_ru": "человек; люди"
+    }
+  ]
+}

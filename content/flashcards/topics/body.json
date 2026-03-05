@@ -1,0 +1,133 @@
+{
+  "id": "topic-body",
+  "title": "Tana a'zolari",
+  "title_ru": "Части тела",
+  "words": [
+    {
+      "id": "tp-body-01",
+      "text_original": "头",
+      "pinyin": "tóu",
+      "text_translation": "bosh",
+      "text_translation_ru": "голова"
+    },
+    {
+      "id": "tp-body-02",
+      "text_original": "脸",
+      "pinyin": "liǎn",
+      "text_translation": "yuz",
+      "text_translation_ru": "лицо"
+    },
+    {
+      "id": "tp-body-03",
+      "text_original": "眼睛",
+      "pinyin": "yǎnjing",
+      "text_translation": "ko'z",
+      "text_translation_ru": "глаз; глаза"
+    },
+    {
+      "id": "tp-body-04",
+      "text_original": "鼻子",
+      "pinyin": "bízi",
+      "text_translation": "burun",
+      "text_translation_ru": "нос"
+    },
+    {
+      "id": "tp-body-05",
+      "text_original": "嘴",
+      "pinyin": "zuǐ",
+      "text_translation": "og'iz",
+      "text_translation_ru": "рот"
+    },
+    {
+      "id": "tp-body-06",
+      "text_original": "耳朵",
+      "pinyin": "ěrduo",
+      "text_translation": "quloq",
+      "text_translation_ru": "ухо; уши"
+    },
+    {
+      "id": "tp-body-07",
+      "text_original": "牙",
+      "pinyin": "yá",
+      "text_translation": "tish",
+      "text_translation_ru": "зуб; зубы"
+    },
+    {
+      "id": "tp-body-08",
+      "text_original": "头发",
+      "pinyin": "tóufa",
+      "text_translation": "soch",
+      "text_translation_ru": "волосы"
+    },
+    {
+      "id": "tp-body-09",
+      "text_original": "脖子",
+      "pinyin": "bózi",
+      "text_translation": "bo'yin",
+      "text_translation_ru": "шея"
+    },
+    {
+      "id": "tp-body-10",
+      "text_original": "肩膀",
+      "pinyin": "jiānbǎng",
+      "text_translation": "yelka",
+      "text_translation_ru": "плечо; плечи"
+    },
+    {
+      "id": "tp-body-11",
+      "text_original": "手",
+      "pinyin": "shǒu",
+      "text_translation": "qo'l (kaft)",
+      "text_translation_ru": "рука (кисть)"
+    },
+    {
+      "id": "tp-body-12",
+      "text_original": "手指",
+      "pinyin": "shǒuzhǐ",
+      "text_translation": "barmoq",
+      "text_translation_ru": "палец"
+    },
+    {
+      "id": "tp-body-13",
+      "text_original": "胳膊",
+      "pinyin": "gēbo",
+      "text_translation": "qo'l (bilak)",
+      "text_translation_ru": "рука (предплечье)"
+    },
+    {
+      "id": "tp-body-14",
+      "text_original": "腿",
+      "pinyin": "tuǐ",
+      "text_translation": "oyoq (son)",
+      "text_translation_ru": "нога (бедро)"
+    },
+    {
+      "id": "tp-body-15",
+      "text_original": "脚",
+      "pinyin": "jiǎo",
+      "text_translation": "oyoq (panja)",
+      "text_translation_ru": "стопа; нога"
+    },
+    {
+      "id": "tp-body-16",
+      "text_original": "肚子",
+      "pinyin": "dùzi",
+      "text_translation": "qorin",
+      "text_translation_ru": "живот"
+    },
+    {
+      "id": "tp-body-17",
+      "text_original": "背",
+      "pinyin": "bèi",
+      "text_translation": "orqa",
+      "text_translation_ru": "спина"
+    },
+    {
+      "id": "tp-body-18",
+      "text_original": "心",
+      "pinyin": "xīn",
+      "text_translation": "yurak; qalb",
+      "text_translation_ru": "сердце"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+import { NextResponse } from 'next/server';
+import fs from 'fs/promises';
+import path from 'path';
+import type { FlashcardDeckData } from '@/types';
+
+const TOPICS_DIR = path.join(process.cwd(), 'content', 'flashcards', 'topics');
+
+export async function GET(_req: Request, { params }: { params: { topicId: string } }) {
+  const filePath = path.join(TOPICS_DIR, `${params.topicId}.json`);
+  try {
+    const content = await fs.readFile(filePath, 'utf-8');
+    const deck = JSON.parse(content) as FlashcardDeckData;
+    return NextResponse.json(deck);
+  } catch {
+    return NextResponse.json({ error: 'not found' }, { status: 404 });
+  }
+}

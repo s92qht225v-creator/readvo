@@ -1,29 +1,30 @@
 'use client';
 
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
 import type { DialogueInfo } from '../services/dialogues';
 import type { StoryInfo } from '../services/stories';
 
-const TAGS: Record<string, string> = {
-  tanishuv: 'Tanishuv',
-  kundalik: 'Kundalik',
-  xaridlar: 'Xaridlar',
-  ovqat: 'Ovqat',
-  salomatlik: 'Salomatlik',
-  transport: 'Transport',
-  telefon: 'Telefon',
-  ish: 'Ish/O\'qish',
-  reja: 'Reja',
-  muloqot: 'Muloqot',
+const TAGS: Record<string, { uz: string; ru: string }> = {
+  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
+  kundalik: { uz: 'Kundalik', ru: 'Повседневное' },
+  xaridlar: { uz: 'Xaridlar', ru: 'Покупки' },
+  ovqat: { uz: 'Ovqat', ru: 'Еда' },
+  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье' },
+  transport: { uz: 'Transport', ru: 'Транспорт' },
+  telefon: { uz: 'Telefon', ru: 'Телефон' },
+  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба' },
+  reja: { uz: 'Reja', ru: 'Планы' },
+  muloqot: { uz: 'Muloqot', ru: 'Общение' },
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
+const STORY_BOOKMARK_KEY = 'blim-story-bookmarks';
 
 type Tab = 'dialogues' | 'stories' | 'flashcards' | 'karaoke' | 'grammar' | 'tests';
 
@@ -39,38 +40,159 @@ const tabs: { id: Tab; label: string }[] = [
 const validTabs: Tab[] = ['dialogues', 'stories', 'flashcards', 'karaoke', 'grammar', 'tests'];
 
 const grammarItems = [
-  { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', color: '#dc2626', active: true },
-  { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', color: '#7c3aed', active: true },
-  { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', color: '#0891b2', active: true },
-  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', color: '#d97706', active: true },
-  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', color: '#059669', active: true },
-  { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', color: '#0891b2', active: true },
-  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', color: '#7c3aed', active: true },
-  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', color: '#7c3aed', active: true },
-  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', color: '#059669', active: true },
-  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', color: '#2563eb', active: true },
-  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', color: '#7c3aed', active: true },
-  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', color: '#e11d48', active: true },
-  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', color: '#dc2626', active: true },
-  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', color: '#dc2626', active: true },
-  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', color: '#dc2626', active: true },
-  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', color: '#dc2626', active: true },
-  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', color: '#dc2626', active: true },
+  { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', color: '#dc2626', active: true },
+  { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', translation_ru: 'иметь', color: '#7c3aed', active: true },
+  { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', translation_ru: 'находиться', color: '#0891b2', active: true },
+  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', translation_ru: 'притяжательная частица', color: '#d97706', active: true },
+  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', translation_ru: 'отрицание', color: '#059669', active: true },
+  { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', translation_ru: 'вопросительная частица', color: '#0891b2', active: true },
+  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', translation_ru: 'продолжительная частица', color: '#7c3aed', active: true },
+  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', translation_ru: 'завершение / изменение', color: '#7c3aed', active: true },
+  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', translation_ru: 'тоже', color: '#059669', active: true },
+  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', translation_ru: 'все / всё', color: '#2563eb', active: true },
+  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', translation_ru: 'очень / связка', color: '#7c3aed', active: true },
+  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', translation_ru: 'хотеть / скучать', color: '#e11d48', active: true },
+  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', translation_ru: 'уметь (навык)', color: '#dc2626', active: true },
+  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', translation_ru: 'мочь (возможность)', color: '#dc2626', active: true },
+  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', translation_ru: 'не делал / нет', color: '#dc2626', active: true },
+  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', translation_ru: 'сколько?', color: '#dc2626', active: true },
+  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', translation_ru: 'счётные слова', color: '#dc2626', active: true },
 ];
 
 const karaokeItems = [
-  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', href: '/chinese/hsk1/karaoke/yueliang' },
-  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', href: '/chinese/hsk1/karaoke/pengyou' },
+  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', href: '/chinese/hsk1/karaoke/yueliang' },
+  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', href: '/chinese/hsk1/karaoke/pengyou' },
 ];
+
+const FLASHCARD_MODE_KEY = 'blim-flashcard-mode';
+
+function FlashcardModeBar({ flashcardMode, setFlashcardMode }: { flashcardMode: string; setFlashcardMode: (m: string) => void }) {
+  const [language] = useLanguage();
+  const modes = [
+    { id: 'zh-uz', label: language === 'ru' ? "汉字 → Русский" : "汉字 → O'zbekcha" },
+    { id: 'uz-zh', label: language === 'ru' ? "Русский → 汉字" : "O'zbekcha → 汉字" },
+  ];
+  return (
+    <div style={{ display: 'flex', background: '#f5f5f8', borderRadius: 10, overflow: 'hidden', marginBottom: 14, border: '1px solid #e0e0e6' }}>
+      {modes.map((m) => (
+        <button
+          key={m.id}
+          onClick={() => {
+            setFlashcardMode(m.id);
+            localStorage.setItem(FLASHCARD_MODE_KEY, m.id);
+          }}
+          style={{
+            flex: 1, padding: '10px 8px', border: 'none',
+            background: flashcardMode === m.id ? '#dc2626' : 'transparent',
+            color: flashcardMode === m.id ? '#fff' : '#666',
+            fontSize: 13, fontWeight: flashcardMode === m.id ? 600 : 400,
+            cursor: 'pointer', fontFamily: 'inherit',
+          }}
+          type="button"
+        >{m.label}</button>
+      ))}
+    </div>
+  );
+}
+
+const FLASHCARD_MIX_KEY = 'blim-flashcard-mix';
+
+function FlashcardUnitSelector({ lessons, onStart }: {
+  lessons: { lessonId: string; lessonNumber: number; wordCount: number; title?: string; title_ru?: string }[];
+  onStart: (selectedIds: string[]) => void;
+}) {
+  const [selected, setSelected] = React.useState<string[]>([]);
+  const [language] = useLanguage();
+
+  const toggle = (id: string) => setSelected((prev) =>
+    prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+  );
+
+  const totalWords = selected.reduce((sum, id) => {
+    return sum + (lessons.find((l) => l.lessonId === id)?.wordCount ?? 0);
+  }, 0);
+
+  const allSelected = selected.length === lessons.length;
+
+  return (
+    <div style={{ marginBottom: 18 }}>
+      <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
+        {language === 'ru' ? 'Выберите уроки' : 'Darslarni tanlang'}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+        {lessons.map((l) => {
+          const sel = selected.includes(l.lessonId);
+          return (
+            <div key={l.lessonId} onClick={() => toggle(l.lessonId)} style={{
+              display: 'flex', alignItems: 'center', gap: 10,
+              background: '#fff',
+              border: sel ? '2px solid #dc2626' : '2px solid transparent',
+              borderRadius: 10, padding: '12px 14px', cursor: 'pointer',
+              boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+            }}>
+              <span style={{
+                fontSize: 13, fontWeight: 700, color: '#fff',
+                background: '#dc2626', borderRadius: 8,
+                minWidth: 28, height: 28, flexShrink: 0,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>{l.lessonNumber}</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>{l.title ?? `第${l.lessonNumber}课`}</div>
+                <div style={{ fontSize: 11, color: '#999' }}>{l.wordCount} {language === 'ru' ? 'слов' : 'so\'z'}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div style={{ textAlign: 'center', marginTop: 10 }}>
+        <button
+          onClick={() => setSelected(allSelected ? [] : lessons.map((l) => l.lessonId))}
+          style={{ background: 'transparent', border: 'none', color: '#dc2626', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
+          type="button"
+        >
+          {language === 'ru'
+            ? (allSelected ? 'Снять все' : 'Выбрать все')
+            : (allSelected ? 'Barchasini bekor qilish' : 'Barchasini tanlash')}
+        </button>
+      </div>
+      <button
+        onClick={() => { if (selected.length > 0) onStart(selected); }}
+        disabled={selected.length === 0}
+        style={{
+          width: '100%', padding: 13, marginTop: 14,
+          background: selected.length > 0 ? 'linear-gradient(135deg, #dc2626, #b91c1c)' : '#e0e0e6',
+          border: 'none', borderRadius: 10,
+          color: selected.length > 0 ? '#fff' : '#999',
+          fontSize: 15, fontWeight: 600,
+          cursor: selected.length > 0 ? 'pointer' : 'not-allowed',
+          fontFamily: 'inherit',
+        }}
+        type="button"
+      >
+        {language === 'ru' ? `Начать (${totalWords} слов)` : `Boshlash (${totalWords} so'z)`}
+      </button>
+    </div>
+  );
+}
+
+interface FlashcardLesson {
+  lessonId: string;
+  lessonNumber: number;
+  wordCount: number;
+  title?: string;
+  title_ru?: string;
+}
 
 interface Props {
   dialogues: DialogueInfo[];
   stories: StoryInfo[];
+  flashcardLessons?: FlashcardLesson[];
 }
 
-export function LanguagePage({ dialogues, stories }: Props) {
+export function LanguagePage({ dialogues, stories, flashcardLessons = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
   const [activeTab, setActiveTab] = useState<Tab>(
@@ -83,10 +205,42 @@ export function LanguagePage({ dialogues, stories }: Props) {
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
 
+  // Story filters
+  const [storySearch, setStorySearch] = useState('');
+  const [showStoryBookmarked, setShowStoryBookmarked] = useState(false);
+  const [storyBookmarks, setStoryBookmarks] = useState<Set<string>>(new Set());
+
+  // Flashcard mode
+  const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
+  const initialSubTab = searchParams.get('subtab');
+  const [flashcardSubTab, setFlashcardSubTab] = useState<'lessons' | 'topics'>(initialSubTab === 'topics' ? 'topics' : 'lessons');
+
+  // HSK dropdown
+  const [hskDropdownOpen, setHskDropdownOpen] = useState(false);
+  const hskDropdownRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!hskDropdownOpen) return;
+    const handleClick = (e: MouseEvent | TouchEvent) => {
+      if (hskDropdownRef.current && !hskDropdownRef.current.contains(e.target as Node)) {
+        setHskDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('touchstart', handleClick);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('touchstart', handleClick);
+    };
+  }, [hskDropdownOpen]);
+
   useEffect(() => {
     try {
       const saved = localStorage.getItem(BOOKMARK_KEY);
       if (saved) setBookmarks(new Set(JSON.parse(saved)));
+      const storySaved = localStorage.getItem(STORY_BOOKMARK_KEY);
+      if (storySaved) setStoryBookmarks(new Set(JSON.parse(storySaved)));
+      const savedMode = localStorage.getItem(FLASHCARD_MODE_KEY);
+      if (savedMode) setFlashcardMode(savedMode);
     } catch { /* ignore */ }
   }, []);
 
@@ -101,11 +255,34 @@ export function LanguagePage({ dialogues, stories }: Props) {
     });
   }, []);
 
+  const toggleStoryBookmark = useCallback((e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setStoryBookmarks((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      localStorage.setItem(STORY_BOOKMARK_KEY, JSON.stringify([...next]));
+      return next;
+    });
+  }, []);
+
   const availableTags = useMemo(() => {
     const tagSet = new Set<string>();
     dialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
     return Object.keys(TAGS).filter((t) => tagSet.has(t));
   }, [dialogues]);
+
+  const filteredStories = useMemo(() => {
+    let result = stories;
+    if (showStoryBookmarked) result = result.filter((s) => storyBookmarks.has(s.id));
+    const q = storySearch.trim().toLowerCase();
+    if (q) result = result.filter((s) =>
+      s.title.toLowerCase().includes(q) ||
+      s.pinyin.toLowerCase().includes(q) ||
+      s.titleTranslation.toLowerCase().includes(q)
+    );
+    return result;
+  }, [storySearch, stories, showStoryBookmarked, storyBookmarks]);
 
   const filteredDialogues = useMemo(() => {
     let result = dialogues;
@@ -139,7 +316,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
             <div className="dr-hero__title">{
               activeTab === 'dialogues' ? '对话' :
               activeTab === 'stories' ? '故事' :
-              activeTab === 'flashcards' ? '单词' :
+              activeTab === 'flashcards' ? '词卡' :
               activeTab === 'karaoke' ? '歌曲' :
               activeTab === 'grammar' ? '语法' :
               '测验'
@@ -147,7 +324,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
             <div className="dr-hero__pinyin">{
               activeTab === 'dialogues' ? 'duìhuà' :
               activeTab === 'stories' ? 'gùshi' :
-              activeTab === 'flashcards' ? 'dāncí' :
+              activeTab === 'flashcards' ? 'cíkǎ' :
               activeTab === 'karaoke' ? 'gēqǔ' :
               activeTab === 'grammar' ? 'yǔfǎ' :
               'cèyàn'
@@ -155,14 +332,14 @@ export function LanguagePage({ dialogues, stories }: Props) {
             <div className="dr-hero__translation">— {language === 'ru' ? (
               activeTab === 'dialogues' ? 'Диалоги' :
               activeTab === 'stories' ? 'Истории' :
-              activeTab === 'flashcards' ? 'Слова' :
+              activeTab === 'flashcards' ? 'Флешкарты' :
               activeTab === 'karaoke' ? 'Песни' :
               activeTab === 'grammar' ? 'Грамматика' :
               'Тесты'
             ) : (
               activeTab === 'dialogues' ? 'Dialoglar' :
               activeTab === 'stories' ? 'Hikoyalar' :
-              activeTab === 'flashcards' ? 'So\'zlar' :
+              activeTab === 'flashcards' ? 'Fleshkartalar' :
               activeTab === 'karaoke' ? 'Qo\'shiqlar' :
               activeTab === 'grammar' ? 'Grammatika' :
               'Testlar'
@@ -183,26 +360,35 @@ export function LanguagePage({ dialogues, stories }: Props) {
         ))}
       </nav>
 
-      {/* Segmented HSK level control */}
-      {activeTab === 'dialogues' && (
+      {/* HSK level pills */}
+      {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
-          <div className="lp__seg-track">
-            {(['HSK 1', 'HSK 2', 'HSK 3'] as const).map((lv) => {
+          <div className="lp__hsk-pills">
+            {activeTab === 'flashcards' && (
+              <button
+                type="button"
+                onClick={() => setFlashcardSubTab('topics')}
+                className={`lp__hsk-pill ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
+              >
+                {language === 'ru' ? 'Темы' : 'Mavzular'}
+              </button>
+            )}
+            {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
               const hasContent = lv === 'HSK 1';
+              const isActive = activeTab === 'flashcards' ? (flashcardSubTab === 'lessons' && lv === 'HSK 1') : hasContent;
               return (
                 <button
                   key={lv}
-                  className={`lp__seg-btn ${hasContent ? 'lp__seg-btn--active' : 'lp__seg-btn--disabled'}`}
-                  disabled={!hasContent}
                   type="button"
+                  disabled={!hasContent}
+                  onClick={() => { if (hasContent && activeTab === 'flashcards') setFlashcardSubTab('lessons'); }}
+                  className={`lp__hsk-pill ${isActive ? 'lp__hsk-pill--active' : ''} ${!hasContent ? 'lp__hsk-pill--disabled' : ''}`}
                 >
                   {lv}
-                  {!hasContent && <span className="lp__seg-soon">tez kunda</span>}
                 </button>
               );
             })}
           </div>
-          <div className="lp__seg-count">{filteredDialogues.length}/{dialogues.length}</div>
         </div>
       )}
 
@@ -219,7 +405,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
               <input
                 type="text"
                 className="dialogues__search-input"
-                placeholder="Dialoglarni qidirish..."
+                placeholder={language === 'ru' ? 'Поиск диалогов...' : 'Dialoglarni qidirish...'}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -239,7 +425,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
                 onClick={() => { setActiveTag(null); setShowBookmarked(false); }}
                 type="button"
               >
-                Hammasi
+                {language === 'ru' ? 'Все' : 'Hammasi'}
               </button>
               <button
                 className={`dialogues__tag dialogues__tag--bookmark ${showBookmarked ? 'dialogues__tag--active' : ''}`}
@@ -249,7 +435,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
                 <svg viewBox="0 0 24 24" width="14" height="14" fill={showBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
                   <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
                 </svg>
-                Saqlangan
+                {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
               </button>
               {availableTags.map((tag) => (
                 <button
@@ -258,7 +444,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
                   onClick={() => { setActiveTag(activeTag === tag ? null : tag); setShowBookmarked(false); }}
                   type="button"
                 >
-                  {TAGS[tag]}
+                  {language === 'ru' ? TAGS[tag].ru : TAGS[tag].uz}
                 </button>
               ))}
             </div>
@@ -272,7 +458,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
                     <div className="dialogue-card__text">
                       <h3 className="dialogue-card__title">{d.title}</h3>
                       <p className="dialogue-card__pinyin">{d.pinyin}</p>
-                      <p className="dialogue-card__translation">{d.titleTranslation}</p>
+                      <p className="dialogue-card__translation">{language === 'ru' ? d.titleTranslation_ru : d.titleTranslation}</p>
                     </div>
                     <button
                       className={`dialogue-card__bookmark ${bookmarks.has(d.id) ? 'dialogue-card__bookmark--active' : ''}`}
@@ -286,42 +472,142 @@ export function LanguagePage({ dialogues, stories }: Props) {
                     </button>
                   </div>
                   {d.tag && (
-                    <span className="dialogue-card__tag">{TAGS[d.tag]}</span>
+                    <span className="dialogue-card__tag">{language === 'ru' ? TAGS[d.tag].ru : TAGS[d.tag].uz}</span>
                   )}
                 </Link>
               ))}
               {filteredDialogues.length === 0 && (
-                <p className="dialogues__empty">Hech narsa topilmadi</p>
+                <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
               )}
             </div>
           </>
         )}
 
         {activeTab === 'stories' && (
-          <div className="lp__list">
-            {stories.map((s) => (
-              <Link key={s.id} href={`/chinese/hsk2/stories/${s.id}`} className="lp__card">
-                <div className="lp__card-main">
-                  <div className="lp__card-title">{s.title}</div>
-                  <div className="lp__card-pinyin">{s.pinyin}</div>
-                  <div className="lp__card-sub">{s.titleTranslation}</div>
-                </div>
-                <div className="lp__card-arrow">›</div>
-              </Link>
-            ))}
-          </div>
+          <>
+            {/* Search */}
+            <div className="dialogues__search">
+              <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input
+                type="text"
+                className="dialogues__search-input"
+                placeholder={language === 'ru' ? 'Поиск историй...' : 'Hikoyalarni qidirish...'}
+                value={storySearch}
+                onChange={(e) => setStorySearch(e.target.value)}
+              />
+              {storySearch && (
+                <button className="dialogues__search-clear" onClick={() => setStorySearch('')} aria-label="Clear">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
+              )}
+            </div>
+
+            {/* Tag chips */}
+            <div className="dialogues__tags">
+              <button
+                className={`dialogues__tag ${!showStoryBookmarked ? 'dialogues__tag--active' : ''}`}
+                onClick={() => setShowStoryBookmarked(false)}
+                type="button"
+              >
+                {language === 'ru' ? 'Все' : 'Hammasi'}
+              </button>
+              <button
+                className={`dialogues__tag dialogues__tag--bookmark ${showStoryBookmarked ? 'dialogues__tag--active' : ''}`}
+                onClick={() => setShowStoryBookmarked(!showStoryBookmarked)}
+                type="button"
+              >
+                <svg viewBox="0 0 24 24" width="14" height="14" fill={showStoryBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                </svg>
+                {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
+              </button>
+            </div>
+
+            {/* Story cards */}
+            <div className="home__lessons">
+              {filteredStories.map((s) => (
+                <Link key={s.id} href={`/chinese/hsk2/stories/${s.id}`} className="dialogue-card">
+                  <span className="dialogue-card__deco" aria-hidden="true">{s.title}</span>
+                  <div className="dialogue-card__content">
+                    <div className="dialogue-card__text">
+                      <h3 className="dialogue-card__title">{s.title}</h3>
+                      <p className="dialogue-card__pinyin">{s.pinyin}</p>
+                      <p className="dialogue-card__translation">{language === 'ru' ? s.titleTranslation_ru : s.titleTranslation}</p>
+                    </div>
+                    <button
+                      className={`dialogue-card__bookmark ${storyBookmarks.has(s.id) ? 'dialogue-card__bookmark--active' : ''}`}
+                      onClick={(e) => toggleStoryBookmark(e, s.id)}
+                      aria-label="Bookmark"
+                      type="button"
+                    >
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill={storyBookmarks.has(s.id) ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                      </svg>
+                    </button>
+                  </div>
+                </Link>
+              ))}
+              {filteredStories.length === 0 && (
+                <p className="dialogues__empty">Hech narsa topilmadi</p>
+              )}
+            </div>
+          </>
         )}
 
         {activeTab === 'flashcards' && (
-          <div className="lp__list">
-            <Link href="/chinese/hsk1/flashcards" className="lp__card">
-              <div className="lp__card-main">
-                <div className="lp__card-title">HSK 1 — Flesh kartalar</div>
-                <div className="lp__card-sub">Barcha darslar bo&apos;yicha so&apos;zlar</div>
-              </div>
-              <div className="lp__card-arrow">›</div>
-            </Link>
-          </div>
+          <>
+            {/* Sub-tab pills: Darslar / Mavzular */}
+            {flashcardSubTab === 'lessons' && (
+              <>
+                <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
+                <FlashcardUnitSelector
+                  lessons={flashcardLessons}
+                  onStart={(selectedIds) => {
+                    localStorage.setItem(FLASHCARD_MIX_KEY, JSON.stringify(selectedIds));
+                    router.push('/chinese/hsk1/flashcards/mix');
+                  }}
+                />
+              </>
+            )}
+
+            {flashcardSubTab === 'topics' && (
+              <>
+                <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+                  {[
+                    { uz: 'Oila', ru: 'Семья', icon: '👨‍👩‍👧', slug: 'family' },
+                    { uz: 'Tana a\'zolari', ru: 'Части тела', icon: '🫀', slug: 'body' },
+                    { uz: 'Oziq-ovqat', ru: 'Еда', icon: '🍜', slug: 'food' },
+                    { uz: 'Hayvonlar', ru: 'Животные', icon: '🐼', slug: 'animals' },
+                    { uz: 'Ranglar', ru: 'Цвета', icon: '🎨', slug: 'colors' },
+                    { uz: 'Sonlar', ru: 'Числа', icon: '🔢', slug: 'numbers' },
+                    { uz: 'Vaqt', ru: 'Время', icon: '⏰', slug: 'time' },
+                    { uz: 'Kasblar', ru: 'Профессии', icon: '👩‍🏫', slug: 'professions' },
+                  ].map((topic) => (
+                    <Link
+                      key={topic.slug}
+                      href={`/chinese/hsk1/flashcards/topic/${topic.slug}`}
+                      style={{
+                        background: '#fff', borderRadius: 10, padding: '14px',
+                        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+                        display: 'flex', alignItems: 'center', gap: 10,
+                        textDecoration: 'none', color: 'inherit',
+                      }}
+                    >
+                      <span style={{ fontSize: 22 }}>{topic.icon}</span>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
+                        {language === 'ru' ? topic.ru : topic.uz}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+          </>
         )}
 
         {activeTab === 'karaoke' && (
@@ -331,7 +617,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
                 <div className="lp__card-main">
                   <div className="lp__card-title">{k.title}</div>
                   <div className="lp__card-pinyin">{k.pinyin}</div>
-                  <div className="lp__card-sub">{k.translation}</div>
+                  <div className="lp__card-sub">{language === 'ru' ? k.translation_ru : k.translation}</div>
                 </div>
                 <div className="lp__card-arrow">›</div>
               </Link>
@@ -347,9 +633,9 @@ export function LanguagePage({ dialogues, stories }: Props) {
                 <div className="grammar-card__top">
                   <div className="grammar-card__icon" style={{ background: item.color }}>{item.char}</div>
                   <p className="grammar-card__title">{item.char} {item.pinyin}</p>
-                  {!item.active && <span className="grammar-card__badge">Tez kunda</span>}
+                  {!item.active && <span className="grammar-card__badge">{language === 'ru' ? 'Скоро' : 'Tez kunda'}</span>}
                 </div>
-                <p className="grammar-card__translation">{item.translation}</p>
+                <p className="grammar-card__translation">{language === 'ru' ? item.translation_ru : item.translation}</p>
               </Link>
             ))}
           </div>
@@ -357,7 +643,7 @@ export function LanguagePage({ dialogues, stories }: Props) {
 
         {activeTab === 'tests' && (
           <div className="lang-page__placeholder">
-            <p className="lang-page__placeholder-text">Tez kunda...</p>
+            <p className="lang-page__placeholder-text">{language === 'ru' ? 'Скоро...' : 'Tez kunda...'}</p>
           </div>
         )}
 
