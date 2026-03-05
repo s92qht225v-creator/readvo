@@ -2,6 +2,8 @@
   "id": "topic-food",
   "title": "Oziq-ovqat",
   "title_ru": "Еда",
+  "title_zh": "食物",
+  "title_pinyin": "Shíwù",
   "words": [
     {
       "id": "tp-food-01",

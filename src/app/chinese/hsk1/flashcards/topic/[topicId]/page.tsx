@@ -35,6 +35,10 @@ export default function TopicFlashcardPage() {
       deck={deck}
       bookPath="/chinese/hsk1"
       backHref="/chinese?tab=flashcards&subtab=topics"
+      lessonTitle={deck.title_zh}
+      lessonPinyin={deck.title_pinyin}
+      lessonTitleTranslation={deck.title}
+      lessonTitleTranslation_ru={deck.title_ru}
     />
   );
 }

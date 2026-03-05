@@ -2,6 +2,8 @@
   "id": "topic-time",
   "title": "Vaqt",
   "title_ru": "Время",
+  "title_zh": "时间",
+  "title_pinyin": "Shíjiān",
   "words": [
     {
       "id": "tp-time-01",

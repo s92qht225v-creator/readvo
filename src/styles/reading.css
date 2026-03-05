@@ -2714,6 +2714,9 @@ body {
   padding: 0 16px 20px;
   text-align: center;
   position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .dr-hero__watermark {

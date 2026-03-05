@@ -2,6 +2,8 @@
   "id": "topic-numbers",
   "title": "Sonlar",
   "title_ru": "Числа",
+  "title_zh": "数字",
+  "title_pinyin": "Shùzì",
   "words": [
     {
       "id": "tp-num-01",

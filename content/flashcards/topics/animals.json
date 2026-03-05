@@ -2,6 +2,8 @@
   "id": "topic-animals",
   "title": "Hayvonlar",
   "title_ru": "Животные",
+  "title_zh": "动物",
+  "title_pinyin": "Dòngwù",
   "words": [
     {
       "id": "tp-ani-01",

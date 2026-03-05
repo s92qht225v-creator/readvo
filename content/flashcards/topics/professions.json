@@ -2,6 +2,8 @@
   "id": "topic-professions",
   "title": "Kasblar",
   "title_ru": "Профессии",
+  "title_zh": "职业",
+  "title_pinyin": "Zhíyè",
   "words": [
     {
       "id": "tp-prof-01",

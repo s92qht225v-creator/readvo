@@ -565,6 +565,12 @@ export interface FlashcardDeckData {
   /** Deck title (Russian) */
   readonly title_ru?: string;
 
+  /** Deck title (Chinese characters) */
+  readonly title_zh?: string;
+
+  /** Deck title pinyin */
+  readonly title_pinyin?: string;
+
   /** All words in the deck */
   readonly words: readonly FlashcardWord[];
 }
