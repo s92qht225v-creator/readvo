@@ -432,6 +432,12 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
                       const isActive = displaySentenceId === s.id;
                       const isPlaying2 = audioSentenceId === s.id;
+                      // build char→word index map
+                      const charToWord = new Map<number, number>();
+                      if (s.words) {
+                        s.words.forEach((w, wi) => { for (let c = w.i[0]; c < w.i[1]; c++) charToWord.set(c, wi); });
+                      }
+                      let charPos = 0;
                       return (
                         <div
                           key={s.id}
@@ -445,8 +451,18 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                             <div className="dr-line-chars">
                               {pairs.map((pair, ci) => {
                                 const isPunct = /[，。？！、,.\s]/.test(pair.char);
+                                const wIdx = charToWord.get(charPos);
+                                charPos += pair.char.length;
+                                const isWordActive = activeWord?.sentenceId === s.id && activeWord.wordIdx === wIdx;
                                 return (
-                                  <div key={ci} className="dr-char">
+                                  <div
+                                    key={ci}
+                                    className={`dr-char${isWordActive ? ' dr-char--active' : ''}`}
+                                    onPointerDown={wIdx !== undefined ? (e => { e.stopPropagation(); longPressedRef.current = true; handleWordPress(s.id, wIdx); }) : undefined}
+                                    onPointerUp={wIdx !== undefined ? (() => { longPressedRef.current = false; handleWordRelease(); }) : undefined}
+                                    onPointerCancel={wIdx !== undefined ? (() => { longPressedRef.current = false; handleWordRelease(); }) : undefined}
+                                    onContextMenu={e => e.preventDefault()}
+                                  >
                                     {showPinyin && pair.pinyin && (
                                       <div className="dr-char-py">{pair.pinyin}</div>
                                     )}
@@ -459,8 +475,17 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                               })}
                             </div>
                           </div>
-                          {showTranslation && (
-                            <div className="dr-line-tr">{language === 'ru' ? s.text_translation_ru : s.text_translation}</div>
+                          {(showTranslation || (activeWord?.sentenceId === s.id)) && (
+                            <div className="dr-line-tr">
+                              {activeWord?.sentenceId === s.id && (() => {
+                                const word = s.words?.[activeWord.wordIdx];
+                                if (word) {
+                                  const chars = s.text_original.slice(word.i[0], word.i[1]);
+                                  return <><strong>{chars}</strong> {word.p} — {language === 'ru' ? word.tr : word.t}</>;
+                                }
+                                return null;
+                              })() || (language === 'ru' ? s.text_translation_ru : s.text_translation)}
+                            </div>
                           )}
                         </div>
                       );

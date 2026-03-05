@@ -77,7 +77,15 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
             </Link>
             <BannerMenu />
           </div>
-          <div className="lang-page__tabs">
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">{tabConfig ? 'B1' : 'HSK 1'}</div>
+            <div className="dr-hero__title">{tabConfig ? 'Kitob' : '课本'}</div>
+            <div className="dr-hero__pinyin">{tabConfig ? '' : 'kèběn'}</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? 'Учебник' : 'Darslik'} —</div>
+          </div>
+        </div>
+      </header>
+      <nav className="lp__tabs">
             {(tabConfig || hskLevels).map((item) => {
               const id = 'level' in item ? item.id : item.id;
               const label = 'level' in item ? `HSK ${item.level}` : item.label;
@@ -89,22 +97,21 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
                 <Link
                   key={id}
                   href={href}
-                  className={`lang-page__tab ${activeBook === id ? 'lang-page__tab--active' : ''}`}
+                  className={`lp__tab ${activeBook === id ? 'lp__tab--active' : ''}`}
                 >
                   {label}
                 </Link>
               ) : (
                 <span
                   key={id}
-                  className="lang-page__tab lang-page__tab--disabled"
+                  className="lp__tab"
+                  style={{opacity: 0.4, cursor: 'default'}}
                 >
                   {label}
                 </span>
               );
             })}
-          </div>
-        </div>
-      </header>
+      </nav>
 
       {!hasContent ? (
         <div className="home__empty">

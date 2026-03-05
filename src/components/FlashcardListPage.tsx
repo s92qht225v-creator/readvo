@@ -35,18 +35,24 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
             </Link>
             <BannerMenu />
           </div>
-          <div className="lang-page__tabs">
-            <Link href={`${bookPath}/flashcards`} className="lang-page__tab lang-page__tab--active">
-              HSK 1
-            </Link>
-            {[2, 3, 4, 5, 6].map((level) => (
-              <span key={level} className="lang-page__tab lang-page__tab--disabled">
-                HSK {level}
-              </span>
-            ))}
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK 1</div>
+            <div className="dr-hero__title">词卡</div>
+            <div className="dr-hero__pinyin">cíkǎ</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? 'Флешкарты' : 'Fleshkartalar'} —</div>
           </div>
         </div>
       </header>
+      <nav className="lp__tabs">
+        <Link href={`${bookPath}/flashcards`} className="lp__tab lp__tab--active">
+          HSK 1
+        </Link>
+        {[2, 3, 4, 5, 6].map((level) => (
+          <span key={level} className="lp__tab" style={{opacity: 0.4, cursor: 'default'}}>
+            HSK {level}
+          </span>
+        ))}
+      </nav>
 
       <section className="home__content">
         <div className="home__lessons">

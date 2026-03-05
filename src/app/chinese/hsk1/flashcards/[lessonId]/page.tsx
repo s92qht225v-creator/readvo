@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { loadFlashcardDeck } from '@/services/flashcards';
+import { getLessonsWithInfo } from '@/services/content';
 import { FlashcardDeck } from '@/components/FlashcardDeck';
 
 interface Props {
@@ -22,7 +23,10 @@ export async function generateStaticParams() {
 }
 
 export default async function LessonFlashcardsPage({ params }: Props) {
-  const deck = await loadFlashcardDeck('hsk1');
+  const [deck, lessonInfos] = await Promise.all([
+    loadFlashcardDeck('hsk1'),
+    getLessonsWithInfo(),
+  ]);
   const lessonNum = parseInt(params.lessonId, 10);
 
   if (!deck || isNaN(lessonNum)) {
@@ -34,6 +38,8 @@ export default async function LessonFlashcardsPage({ params }: Props) {
   if (lessonWords.length === 0) {
     notFound();
   }
+
+  const info = lessonInfos.find((l) => l.lessonNumber === lessonNum);
 
   return (
     <FlashcardDeck
@@ -52,6 +58,10 @@ export default async function LessonFlashcardsPage({ params }: Props) {
         })),
       }}
       bookPath="/chinese/hsk1"
+      lessonTitle={info?.title}
+      lessonPinyin={info?.pinyin}
+      lessonTitleTranslation={info?.titleTranslation}
+      lessonTitleTranslation_ru={info?.titleTranslation_ru}
     />
   );
 }
