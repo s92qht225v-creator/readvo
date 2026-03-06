@@ -98,9 +98,11 @@ export async function POST(request: NextRequest) {
   }
 
   const tokens = await tokenRes.json();
+  console.log('Token response keys:', Object.keys(tokens));
+  console.log('Token response:', JSON.stringify(tokens).slice(0, 500));
   const idToken: string = tokens.id_token;
   if (!idToken) {
-    return NextResponse.json({ error: 'no_id_token' }, { status: 401 });
+    return NextResponse.json({ error: 'no_id_token', keys: Object.keys(tokens) }, { status: 401 });
   }
 
   // Verify and decode the ID token
