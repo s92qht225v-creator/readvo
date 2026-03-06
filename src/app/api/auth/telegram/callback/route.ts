@@ -74,26 +74,18 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'missing_params' }, { status: 400 });
   }
 
-  // Read PKCE verifier + CSRF state from httpOnly cookies set during init
-  const codeVerifier = request.cookies.get('tg_code_verifier')?.value;
-  const savedState = request.cookies.get('tg_state')?.value;
-  if (!codeVerifier) {
-    return NextResponse.json({ error: 'no_code_verifier' }, { status: 400 });
-  }
-
-  // Exchange authorization code for tokens
+  // Exchange authorization code for tokens using Basic Auth (no PKCE)
+  const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
   const tokenRes = await fetch('https://oauth.telegram.org/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${credentials}`,
     },
     body: new URLSearchParams({
       grant_type: 'authorization_code',
       code,
       redirect_uri: redirectUri,
-      client_id: clientId,
-      client_secret: clientSecret,
-      code_verifier: codeVerifier,
     }),
   });
 
@@ -106,6 +98,7 @@ export async function POST(request: NextRequest) {
   const tokens = await tokenRes.json();
   const idToken: string = tokens.id_token;
   if (!idToken) {
+    console.error('No id_token in response:', JSON.stringify(tokens));
     return NextResponse.json({ error: 'no_id_token' }, { status: 401 });
   }
 
@@ -194,8 +187,6 @@ export async function POST(request: NextRequest) {
       refresh_token: sessionData.session.refresh_token,
       session_nonce: sessionNonce,
     });
-    // Clear PKCE cookies
-    response.cookies.set('tg_code_verifier', '', { maxAge: 0, path: '/' });
     response.cookies.set('tg_state', '', { maxAge: 0, path: '/' });
     return response;
   } catch (err) {
