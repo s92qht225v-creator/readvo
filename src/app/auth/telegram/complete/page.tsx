@@ -25,7 +25,6 @@ function TelegramCompleteInner() {
     (async () => {
       try {
         const code = searchParams.get('code');
-        const state = searchParams.get('state');
         const error = searchParams.get('error');
 
         if (error) {
@@ -38,30 +37,14 @@ function TelegramCompleteInner() {
           return;
         }
 
-        // Retrieve PKCE verifier and state stored during init
-        const codeVerifier = localStorage.getItem('tg_code_verifier');
-        const savedState = localStorage.getItem('tg_state');
-        localStorage.removeItem('tg_code_verifier');
-        localStorage.removeItem('tg_state');
-
-        if (!codeVerifier) {
-          router.replace('/?error=no_code_verifier');
-          return;
-        }
-
-        // Verify CSRF state
-        if (savedState && state !== savedState) {
-          router.replace('/?error=state_mismatch');
-          return;
-        }
-
         const origin = window.location.origin;
         const redirectUri = `${origin}/auth/telegram/complete`;
 
+        // Callback reads code_verifier + state from httpOnly cookies server-side
         const res = await fetch('/api/auth/telegram/callback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code, codeVerifier, redirectUri }),
+          body: JSON.stringify({ code, redirectUri }),
         });
 
         if (!res.ok) {

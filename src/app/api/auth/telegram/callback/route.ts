@@ -69,9 +69,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'not_configured' }, { status: 500 });
   }
 
-  const { code, codeVerifier, redirectUri } = await request.json();
-  if (!code || !codeVerifier || !redirectUri) {
+  const { code, redirectUri } = await request.json();
+  if (!code || !redirectUri) {
     return NextResponse.json({ error: 'missing_params' }, { status: 400 });
+  }
+
+  // Read PKCE verifier + CSRF state from httpOnly cookies set during init
+  const codeVerifier = request.cookies.get('tg_code_verifier')?.value;
+  const savedState = request.cookies.get('tg_state')?.value;
+  if (!codeVerifier) {
+    return NextResponse.json({ error: 'no_code_verifier' }, { status: 400 });
   }
 
   // Exchange authorization code for tokens
@@ -97,11 +104,9 @@ export async function POST(request: NextRequest) {
   }
 
   const tokens = await tokenRes.json();
-  console.log('Token response keys:', Object.keys(tokens));
-  console.log('Token response:', JSON.stringify(tokens).slice(0, 500));
   const idToken: string = tokens.id_token;
   if (!idToken) {
-    return NextResponse.json({ error: 'no_id_token', keys: Object.keys(tokens) }, { status: 401 });
+    return NextResponse.json({ error: 'no_id_token' }, { status: 401 });
   }
 
   // Verify and decode the ID token
@@ -184,11 +189,15 @@ export async function POST(request: NextRequest) {
       updated_at: new Date().toISOString(),
     });
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       access_token: sessionData.session.access_token,
       refresh_token: sessionData.session.refresh_token,
       session_nonce: sessionNonce,
     });
+    // Clear PKCE cookies
+    response.cookies.set('tg_code_verifier', '', { maxAge: 0, path: '/' });
+    response.cookies.set('tg_state', '', { maxAge: 0, path: '/' });
+    return response;
   } catch (err) {
     console.error('Telegram callback error:', err);
     return NextResponse.json({ error: 'callback_failed' }, { status: 500 });

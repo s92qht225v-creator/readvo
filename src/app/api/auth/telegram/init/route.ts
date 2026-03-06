@@ -32,6 +32,22 @@ export async function GET() {
 
   const url = `https://oauth.telegram.org/auth?${params.toString()}`;
 
-  // Return url + PKCE verifier + state so the client can store them for the callback
-  return NextResponse.json({ url, codeVerifier, state });
+  // Store verifier + state in cookies so they survive the cross-origin redirect
+  const response = NextResponse.json({ url });
+  response.cookies.set('tg_code_verifier', codeVerifier, {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax',
+    maxAge: 600, // 10 minutes
+    path: '/',
+  });
+  response.cookies.set('tg_state', state, {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax',
+    maxAge: 600,
+    path: '/',
+  });
+
+  return response;
 }

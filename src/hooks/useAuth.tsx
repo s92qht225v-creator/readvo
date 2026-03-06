@@ -112,9 +112,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const res = await fetch('/api/auth/telegram/init');
     const data = await res.json();
     if (data.url) {
-      // Store PKCE verifier and state for the callback page to use
-      localStorage.setItem('tg_code_verifier', data.codeVerifier);
-      localStorage.setItem('tg_state', data.state);
       window.location.href = data.url;
     } else {
       console.error('Telegram init failed:', data);
