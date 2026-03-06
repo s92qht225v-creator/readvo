@@ -8,7 +8,6 @@ const DIRECTION_THRESHOLD = 0.45;
 const HINT_MISTAKES_THRESHOLD = 2;
 const GHOST_MISTAKES_THRESHOLD = 1; // show ghost outline after 1 mistake
 const ANIMATION_DURATION = 600;
-const REVEAL_DELAY = 200;
 const MAX_SLIDE_OFFSET = 40; // max px offset for slide-from-user-position
 
 interface Point {
@@ -822,14 +821,15 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     }
   }, [onCorrect, onWrong, onOutOfOrder]);
 
-  // Reveal all remaining strokes (Show button) — edge-triggered by counter
+  // Show current stroke only (dot travels, then stroke slides in) — edge-triggered by counter
   useEffect(() => {
-    if (!revealAll || revealAll === lastRevealRef.current || loading || loadError || revealingRef.current) return;
+    if (!revealAll || revealAll === lastRevealRef.current || loading || loadError || revealingRef.current || animatingRef.current) return;
     lastRevealRef.current = revealAll;
     const strokes = strokesRef.current;
-    if (completedRef.current >= strokes.length) return;
+    const idx = completedRef.current;
+    if (idx >= strokes.length) return;
 
-    // Cancel all active animations/timers before revealing
+    // Cancel all active animations/timers
     cancelAnimationFrame(hintDotRafRef.current);
     if (fadeIntervalRef.current) {
       clearInterval(fadeIntervalRef.current);
@@ -847,30 +847,24 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     const inputCtx = inputRef.current?.getContext('2d');
     if (inputCtx) inputCtx.clearRect(0, 0, sizeRef.current, sizeRef.current);
 
-    revealingRef.current = true;
-    const total = strokes.length;
-    const startMistakes = mistakesRef.current;
-    const startCompleted = completedRef.current;
+    currentInputRef.current = [];
+    mistakesRef.current += 1; // penalty for using Show
+    mistakesOnStrokeRef.current = 0;
+    animatingRef.current = true;
 
-    const revealNext = (idx: number) => {
+    animateReveal(idx, () => {
       if (unmountedRef.current) return;
-      if (idx >= total) {
-        revealingRef.current = false;
-        const penaltyStrokes = total - startCompleted;
-        setTimeout(() => onComplete(startMistakes + penaltyStrokes), 300);
-        return;
+      completedRef.current = idx + 1;
+      setCompletedCount(idx + 1);
+      animatingRef.current = false;
+      const dCtx = displayRef.current?.getContext('2d');
+      if (dCtx) redrawCompleted(dCtx, strokes, idx + 1, sizeRef.current);
+
+      // If all strokes done, trigger completion
+      if (idx + 1 >= strokes.length) {
+        setTimeout(() => onComplete(mistakesRef.current), 300);
       }
-
-      animateReveal(idx, () => {
-        completedRef.current = idx + 1;
-        setCompletedCount(idx + 1);
-        const dCtx = displayRef.current?.getContext('2d');
-        if (dCtx) redrawCompleted(dCtx, strokes, idx + 1, sizeRef.current);
-        setTimeout(() => revealNext(idx + 1), REVEAL_DELAY);
-      });
-    };
-
-    revealNext(completedRef.current);
+    });
   }, [revealAll, loading, loadError, animateReveal, onComplete]);
 
   // Stroke counter text
