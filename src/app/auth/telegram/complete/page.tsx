@@ -39,10 +39,10 @@ function TelegramCompleteInner() {
         }
 
         // Retrieve PKCE verifier and state stored during init
-        const codeVerifier = sessionStorage.getItem('tg_code_verifier');
-        const savedState = sessionStorage.getItem('tg_state');
-        sessionStorage.removeItem('tg_code_verifier');
-        sessionStorage.removeItem('tg_state');
+        const codeVerifier = localStorage.getItem('tg_code_verifier');
+        const savedState = localStorage.getItem('tg_state');
+        localStorage.removeItem('tg_code_verifier');
+        localStorage.removeItem('tg_state');
 
         if (!codeVerifier) {
           router.replace('/?error=no_code_verifier');
