@@ -1,10 +1,19 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
 
-export default function TelegramCompletePage() {
+const loadingStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minHeight: '100vh',
+  fontFamily: 'inherit',
+  color: '#666',
+} as const;
+
+function TelegramCompleteInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const ran = useRef(false);
@@ -88,16 +97,13 @@ export default function TelegramCompletePage() {
     })();
   }, [router, searchParams]);
 
+  return <div style={loadingStyle}>Kirish...</div>;
+}
+
+export default function TelegramCompletePage() {
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      minHeight: '100vh',
-      fontFamily: 'inherit',
-      color: '#666',
-    }}>
-      Kirish...
-    </div>
+    <Suspense fallback={<div style={loadingStyle}>Kirish...</div>}>
+      <TelegramCompleteInner />
+    </Suspense>
   );
 }
