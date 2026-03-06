@@ -8,7 +8,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
 import type { DialogueInfo } from '../services/dialogues';
-import { HanziWriterPractice } from './HanziWriterPractice';
+import { HanziWriterPractice, type HanziWord } from './HanziWriterPractice';
 
 const TAGS: Record<string, { uz: string; ru: string }> = {
   tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
@@ -61,6 +61,49 @@ const grammarItems = [
 const karaokeItems = [
   { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', href: '/chinese/hsk1/karaoke/yueliang' },
   { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', href: '/chinese/hsk1/karaoke/pengyou' },
+];
+
+const WRITING_SETS: { id: string; title: string; title_ru: string; subtitle: string; subtitle_ru: string; chars: string; words: HanziWord[] }[] = [
+  {
+    id: 'hsk1-set1',
+    title: "HSK 1 — 1-to'plam",
+    title_ru: 'HSK 1 — Набор 1',
+    subtitle: '10 ta belgi · 的 我 你 是 了 不 在 他 们 好',
+    subtitle_ru: '10 иероглифов · 的 我 你 是 了 不 在 他 们 好',
+    chars: '的我你是了不在他们好',
+    words: [
+      { char: '的', pinyin: 'de', uz: 'egalik yuklamasi', ru: 'частица принадлежности', strokes: 8 },
+      { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', strokes: 7 },
+      { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', strokes: 7 },
+      { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', strokes: 9 },
+      { char: '了', pinyin: 'le', uz: 'tugallash yuklamasi', ru: 'частица завершения', strokes: 2 },
+      { char: '不', pinyin: 'bù', uz: 'emas', ru: 'не', strokes: 4 },
+      { char: '在', pinyin: 'zài', uz: "bor / joylashgan", ru: 'находиться / в', strokes: 6 },
+      { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', strokes: 5 },
+      { char: '们', pinyin: 'men', uz: "ko'plik qo'shimchasi", ru: 'суффикс множества', strokes: 5 },
+      { char: '好', pinyin: 'hǎo', uz: 'yaxshi', ru: 'хороший', strokes: 6 },
+    ],
+  },
+  {
+    id: 'hsk1-set2',
+    title: "HSK 1 — 2-to'plam",
+    title_ru: 'HSK 1 — Набор 2',
+    subtitle: '10 ta belgi · 有 这 就 会 吗 要 什 么 说 她',
+    subtitle_ru: '10 иероглифов · 有 这 就 会 吗 要 什 么 说 她',
+    chars: '有这就会吗要什么说她',
+    words: [
+      { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', strokes: 6 },
+      { char: '这', pinyin: 'zhè', uz: 'bu', ru: 'это', strokes: 7 },
+      { char: '就', pinyin: 'jiù', uz: 'aynan / shu zahoti', ru: 'именно / сразу', strokes: 12 },
+      { char: '会', pinyin: 'huì', uz: '...a olmoq', ru: 'уметь', strokes: 6 },
+      { char: '吗', pinyin: 'ma', uz: 'savol yuklamasi', ru: 'вопросительная частица', strokes: 6 },
+      { char: '要', pinyin: 'yào', uz: 'kerak / xohlamoq', ru: 'нужно / хотеть', strokes: 9 },
+      { char: '什', pinyin: 'shén', uz: 'nima (什么)', ru: 'что (什么)', strokes: 4 },
+      { char: '么', pinyin: 'me', uz: 'nima (什么)', ru: 'что (什么)', strokes: 3 },
+      { char: '说', pinyin: 'shuō', uz: 'gapirmoq', ru: 'говорить', strokes: 9 },
+      { char: '她', pinyin: 'tā', uz: 'u (ayol)', ru: 'она', strokes: 6 },
+    ],
+  },
 ];
 
 const FLASHCARD_MODE_KEY = 'blim-flashcard-mode';
@@ -203,6 +246,9 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
   const [showBookmarked, setShowBookmarked] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
 
+  // Writing tab
+  const [selectedWritingSet, setSelectedWritingSet] = useState<string | null>(null);
+
   // Flashcard mode
   const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
   const initialSubTab = searchParams.get('subtab');
@@ -321,7 +367,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
             <button
               key={tab.id}
               className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => { setActiveTab(tab.id); if (tab.id !== 'writing') setSelectedWritingSet(null); }}
               type="button"
             >
               {language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
@@ -453,7 +499,46 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
           </>
         )}
 
-        {activeTab === 'writing' && <HanziWriterPractice lang={language} />}
+        {activeTab === 'writing' && (() => {
+          const activeSet = selectedWritingSet
+            ? WRITING_SETS.find((s) => s.id === selectedWritingSet)
+            : null;
+          if (activeSet) {
+            return (
+              <HanziWriterPractice
+                lang={language}
+                words={activeSet.words}
+                onBack={() => setSelectedWritingSet(null)}
+                autoStart
+              />
+            );
+          }
+          return (
+            <div className="lp__writing-sets">
+              {WRITING_SETS.map((set) => (
+                <button
+                  key={set.id}
+                  className="lp__writing-card"
+                  type="button"
+                  onClick={() => setSelectedWritingSet(set.id)}
+                >
+                  <div className="lp__writing-card__chars" aria-hidden="true">
+                    {set.chars}
+                  </div>
+                  <div className="lp__writing-card__body">
+                    <div className="lp__writing-card__title">
+                      {language === 'ru' ? set.title_ru : set.title}
+                    </div>
+                    <div className="lp__writing-card__sub">
+                      {language === 'ru' ? set.subtitle_ru : set.subtitle}
+                    </div>
+                  </div>
+                  <div className="lp__card-arrow">›</div>
+                </button>
+              ))}
+            </div>
+          );
+        })()}
 
         {activeTab === 'flashcards' && (
           <>

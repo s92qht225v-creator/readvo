@@ -2,57 +2,129 @@ import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
-function verifyTelegramHash(data: Record<string, string>, botToken: string): boolean {
-  const hash = data.hash;
-  if (!hash) return false;
+// Cache JWKS keys (in-memory, refreshed on cold start)
+let jwksCache: { keys: JWK[] } | null = null;
+let jwksCacheTime = 0;
+const JWKS_TTL = 3600_000; // 1 hour
 
-  // Build data-check-string: all fields except hash, sorted alphabetically, joined by \n
-  const checkArr: string[] = [];
-  for (const [key, value] of Object.entries(data)) {
-    if (key !== 'hash') checkArr.push(`${key}=${value}`);
-  }
-  checkArr.sort();
-  const dataCheckString = checkArr.join('\n');
+interface JWK {
+  kty: string;
+  kid: string;
+  n: string;
+  e: string;
+  alg: string;
+  use: string;
+}
 
-  // secret_key = SHA256(bot_token)
-  const secretKey = crypto.createHash('sha256').update(botToken).digest();
-  // hash = HMAC_SHA256(data_check_string, secret_key)
-  const hmac = crypto.createHmac('sha256', secretKey).update(dataCheckString).digest('hex');
+async function getJWKS(): Promise<{ keys: JWK[] }> {
+  if (jwksCache && Date.now() - jwksCacheTime < JWKS_TTL) return jwksCache;
+  const res = await fetch('https://oauth.telegram.org/.well-known/jwks.json');
+  if (!res.ok) throw new Error('Failed to fetch JWKS');
+  jwksCache = await res.json();
+  jwksCacheTime = Date.now();
+  return jwksCache!;
+}
 
-  return hmac === hash;
+function base64urlDecode(str: string): Buffer {
+  return Buffer.from(str.replace(/-/g, '+').replace(/_/g, '/'), 'base64');
+}
+
+async function verifyJWT(token: string, clientId: string): Promise<Record<string, unknown>> {
+  const parts = token.split('.');
+  if (parts.length !== 3) throw new Error('Invalid JWT format');
+
+  const [headerB64, payloadB64, signatureB64] = parts;
+  const header = JSON.parse(base64urlDecode(headerB64).toString());
+  const payload = JSON.parse(base64urlDecode(payloadB64).toString());
+
+  // Validate standard claims
+  if (payload.iss !== 'https://oauth.telegram.org') throw new Error('Invalid issuer');
+  if (String(payload.aud) !== String(clientId)) throw new Error('Invalid audience');
+  if (payload.exp < Math.floor(Date.now() / 1000)) throw new Error('Token expired');
+
+  // Fetch JWKS and find matching key
+  const { keys } = await getJWKS();
+  const jwk = keys.find((k) => k.kid === header.kid);
+  if (!jwk) throw new Error('No matching JWK found');
+
+  // Import public key from JWK
+  const publicKey = crypto.createPublicKey({
+    key: { kty: jwk.kty, n: jwk.n, e: jwk.e } as crypto.JsonWebKey,
+    format: 'jwk',
+  });
+
+  // Verify signature
+  const signingInput = `${headerB64}.${payloadB64}`;
+  const signature = base64urlDecode(signatureB64);
+  const valid = crypto.verify('sha256', Buffer.from(signingInput), publicKey, signature);
+  if (!valid) throw new Error('Invalid signature');
+
+  return payload;
 }
 
 export async function POST(request: NextRequest) {
-  const botToken = process.env.TELEGRAM_PAYMENT_BOT_TOKEN;
-  if (!botToken) {
+  const clientId = process.env.TELEGRAM_BOT_ID;
+  const clientSecret = process.env.TELEGRAM_CLIENT_SECRET;
+  if (!clientId || !clientSecret) {
     return NextResponse.json({ error: 'not_configured' }, { status: 500 });
   }
 
-  const data: Record<string, string> = await request.json();
-
-  // Verify HMAC hash
-  if (!verifyTelegramHash(data, botToken)) {
-    return NextResponse.json({ error: 'invalid_hash' }, { status: 401 });
+  const { code, codeVerifier, redirectUri } = await request.json();
+  if (!code || !codeVerifier || !redirectUri) {
+    return NextResponse.json({ error: 'missing_params' }, { status: 400 });
   }
 
-  // Check auth_date is not too old (10 minutes)
-  const authDate = parseInt(data.auth_date || '0', 10);
-  if (Date.now() / 1000 - authDate > 600) {
-    return NextResponse.json({ error: 'expired' }, { status: 401 });
+  // Exchange authorization code for tokens
+  const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+  const tokenRes = await fetch('https://oauth.telegram.org/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${credentials}`,
+    },
+    body: new URLSearchParams({
+      grant_type: 'authorization_code',
+      code,
+      redirect_uri: redirectUri,
+      client_id: clientId,
+      code_verifier: codeVerifier,
+    }),
+  });
+
+  if (!tokenRes.ok) {
+    const err = await tokenRes.text();
+    console.error('Token exchange failed:', err);
+    return NextResponse.json({ error: 'token_exchange_failed' }, { status: 401 });
+  }
+
+  const tokens = await tokenRes.json();
+  const idToken: string = tokens.id_token;
+  if (!idToken) {
+    return NextResponse.json({ error: 'no_id_token' }, { status: 401 });
+  }
+
+  // Verify and decode the ID token
+  let payload: Record<string, unknown>;
+  try {
+    payload = await verifyJWT(idToken, clientId);
+  } catch (err) {
+    console.error('JWT verification failed:', err);
+    return NextResponse.json({ error: 'invalid_id_token' }, { status: 401 });
+  }
+
+  // Extract user info from ID token payload
+  const telegramId = String(payload.id ?? payload.sub ?? '');
+  const fullName = String(payload.name ?? payload.preferred_username ?? `Telegram User ${telegramId}`);
+  const username = String(payload.preferred_username ?? '');
+  const photoUrl = String(payload.picture ?? '');
+
+  if (!telegramId) {
+    return NextResponse.json({ error: 'no_user_id' }, { status: 401 });
   }
 
   try {
-    const telegramId = data.id;
-    const firstName = data.first_name || '';
-    const lastName = data.last_name || '';
-    const username = data.username || '';
-    const photoUrl = data.photo_url || '';
-    const fullName = [firstName, lastName].filter(Boolean).join(' ') || username || `Telegram User ${telegramId}`;
-
-    // Find or create Supabase user
     const admin = getSupabaseAdmin();
     const syntheticEmail = `tg_${telegramId}@telegram.blim`;
-    // Generate a unique session nonce to enforce single-device login
     const sessionNonce = crypto.randomBytes(16).toString('hex');
 
     const metadata = {
@@ -65,7 +137,7 @@ export async function POST(request: NextRequest) {
       provider: 'telegram',
     };
 
-    // Try to create user; if already exists, that's fine — we'll update metadata after session creation
+    // Create user if not exists
     const { error: createError } = await admin.auth.admin.createUser({
       email: syntheticEmail,
       email_confirm: true,
@@ -77,8 +149,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'create_user' }, { status: 500 });
     }
 
-    // Generate a Supabase session via magiclink + verifyOtp
-    // generateLink resolves the user by email server-side (no listUsers needed)
+    // Generate Supabase session
     const { data: linkData, error: linkError } = await admin.auth.admin.generateLink({
       type: 'magiclink',
       email: syntheticEmail,
@@ -91,7 +162,6 @@ export async function POST(request: NextRequest) {
 
     const tokenHash = linkData.properties?.hashed_token;
     if (!tokenHash) {
-      console.error('No hashed_token in link data');
       return NextResponse.json({ error: 'no_token' }, { status: 500 });
     }
 
@@ -105,13 +175,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'verify_otp' }, { status: 500 });
     }
 
-    // Get userId from the session (avoids listUsers which doesn't paginate past ~50 users)
     const userId = sessionData.session.user.id;
-
-    // Update metadata for existing users (name/avatar changes)
     await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
-
-    // Store session nonce in dedicated table (not user_metadata, which has JWT caching issues)
     await admin.from('active_sessions').upsert({
       user_id: userId,
       session_nonce: sessionNonce,

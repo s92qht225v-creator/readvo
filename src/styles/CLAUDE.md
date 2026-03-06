@@ -101,6 +101,36 @@ All styles live in `src/styles/reading.css`.
 - `.section--tonguetwister` - Transparent background, no header/subheading
 - `.section--tonguetwister .section__sentences` - White floating card (border-radius 16px, shadow, padding 20px)
 
+### Hanzi Writing Practice
+- `.hanzi-home` — flex column, gap 16px, max-width 480px, margin auto, padding 24px
+- `.hanzi-home__stats-row` — flex row, gap 12px
+- `.hanzi-home__stat-card` — white card, shadow, border `#f0f0f0`, flex column center, padding 16px, flex 1
+- `.hanzi-home__stat-value` — 28px bold red (`#dc2626`)
+- `.hanzi-home__stat-label` — 12px `#888`
+- `.hanzi-home__start-btn` — red gradient (`#dc2626 → #b91c1c`), white text, full width, min-height 52px, border-radius 8px
+- `.hanzi-home__start-btn:disabled` — grey bg
+- `.hanzi-home__nothing-due` — centered text in white card
+- `.hanzi-home__reset-btn` — tiny, text-decoration underline, color `#ccc`, no bg
+- `.hanzi-done` — flex column center, gap 16px, text-align center, padding 40px 24px
+- `.hanzi-done__title` — 22px bold
+- `.hanzi-done__stats` — 14px `#888`
+- `.hanzi-done__restart-btn` — red gradient, same as start btn
+- `.hanzi-practice` — padding 24px, max-width 900px, margin auto
+- `.hanzi-practice__session-progress` — centered, 13px, color `#aaa`, margin-bottom 16px
+- `.hanzi-practice__layout` — flex row, gap 40px; `@media ≤768px` flex-column, align-items center
+- `.hanzi-practice__canvas-panel` — flex-shrink 0, flex column, gap 12px, align-items center
+- `.hanzi-practice__grid-wrapper` — position relative (wraps `HanziCanvas`)
+- `.hanzi-practice__action-btn` — white bg, border `#e0e0e0`, border-radius 6px, padding 8px 20px, min-height 36px; hover: border `#dc2626`, color `#dc2626`
+- `.hanzi-practice__info-panel` — flex column, gap 12px, padding-top 20px, flex 1
+- `.hanzi-practice__char-display` — font-size 96px, font-weight 300, line-height 1, color `#1a1a1a`
+- `.hanzi-practice__pinyin` — 24px, color `#999`, italic
+- `.hanzi-practice__meaning` — 18px, color `#555`
+- `.hanzi-practice__stroke-count` — 14px, color `#aaa`
+- `.hanzi-practice__grade-btns` — flex row, gap 12px, margin-top 8px
+- `.hanzi-practice__grade-btn` — min-height 48px, font-size 16px, font-weight 700, border-radius 8px, flex 1
+- `.hanzi-practice__grade-btn--forgot` — `background: #fee2e2; color: #dc2626; border: none`
+- `.hanzi-practice__grade-btn--gotit` — green gradient (`#16a34a → #15803d`), white text, border none
+
 ### Karaoke
 - `.karaoke` - Full-viewport dark container (`#0a0a0a`, flex column)
 - `.karaoke__lyrics` - Scrollable lyrics area (`flex: 1`, `overflow-y: auto`, top padding clears header)

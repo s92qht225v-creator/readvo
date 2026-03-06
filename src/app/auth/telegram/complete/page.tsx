@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
 
 export default function TelegramCompletePage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const ran = useRef(false);
 
   useEffect(() => {
@@ -14,29 +15,44 @@ export default function TelegramCompletePage() {
 
     (async () => {
       try {
-        // Extract tgAuthResult from URL fragment
-        const hash = window.location.hash;
-        const match = hash.match(/tgAuthResult=([^&]+)/);
-        if (!match) {
-          router.replace('/?error=no_auth_result');
+        const code = searchParams.get('code');
+        const state = searchParams.get('state');
+        const error = searchParams.get('error');
+
+        if (error) {
+          router.replace(`/?error=${error}`);
           return;
         }
 
-        // Decode base64url → JSON
-        const base64 = match[1].replace(/-/g, '+').replace(/_/g, '/');
-        const decoded = atob(base64);
-        const authData = JSON.parse(decoded);
-
-        if (!authData || authData === false || !authData.id) {
-          router.replace('/?error=auth_denied');
+        if (!code) {
+          router.replace('/?error=no_auth_code');
           return;
         }
 
-        // Send auth data to server for verification + session creation
+        // Retrieve PKCE verifier and state stored during init
+        const codeVerifier = sessionStorage.getItem('tg_code_verifier');
+        const savedState = sessionStorage.getItem('tg_state');
+        sessionStorage.removeItem('tg_code_verifier');
+        sessionStorage.removeItem('tg_state');
+
+        if (!codeVerifier) {
+          router.replace('/?error=no_code_verifier');
+          return;
+        }
+
+        // Verify CSRF state
+        if (savedState && state !== savedState) {
+          router.replace('/?error=state_mismatch');
+          return;
+        }
+
+        const origin = window.location.origin;
+        const redirectUri = `${origin}/auth/telegram/complete`;
+
         const res = await fetch('/api/auth/telegram/callback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(authData),
+          body: JSON.stringify({ code, codeVerifier, redirectUri }),
         });
 
         if (!res.ok) {
@@ -47,20 +63,19 @@ export default function TelegramCompletePage() {
 
         const { access_token, refresh_token, session_nonce } = await res.json();
 
-        // Clear old nonce first, then store new one BEFORE setSession
-        // (setSession triggers onAuthStateChange which starts the session-check interval)
+        // Store nonce BEFORE setSession (setSession triggers onAuthStateChange)
         localStorage.removeItem('blim-session-nonce');
         if (session_nonce) {
           localStorage.setItem('blim-session-nonce', session_nonce);
         }
 
-        const { error } = await supabase.auth.setSession({
+        const { error: sessionError } = await supabase.auth.setSession({
           access_token,
           refresh_token,
         });
 
-        if (error) {
-          console.error('setSession error:', error);
+        if (sessionError) {
+          console.error('setSession error:', sessionError);
           router.replace('/?error=set_session');
           return;
         }
@@ -71,7 +86,7 @@ export default function TelegramCompletePage() {
         router.replace('/?error=complete_failed');
       }
     })();
-  }, [router]);
+  }, [router, searchParams]);
 
   return (
     <div style={{

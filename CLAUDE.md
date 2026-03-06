@@ -47,9 +47,7 @@ Example routes:
 - `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
 - `/chinese/hsk2/stories` - HSK 2 stories list
 - `/chinese/hsk2/stories/hsk2-story1` - Story reader
-- `/english` - English language page with tabs (Kitob, Test)
-- `/english/destination-b1` - Destination B1 book with unit list
-- `/english/destination-b1/unit/1/page/1` - Unit 1, Page 1
+- `/chinese?tab=writing` - Writing tab (Hanzi character writing practice, SRS)
 
 ## Project Structure
 ```
@@ -62,7 +60,6 @@ Example routes:
 │   │   ├── chinese/
 │   │   │   ├── page.tsx       # Language page (tabbed catalog)
 │   │   │   └── hsk1/
-│   │   │       ├── page.tsx   # Book page (lesson list)
 │   │   │       ├── flashcards/
 │   │   │       │   ├── page.tsx       # Flashcard list page (per-lesson cards)
 │   │   │       │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
@@ -74,7 +71,7 @@ Example routes:
 │   │   │       │   └── [storyId]/page.tsx  # Story reader page
 │   │   │       ├── karaoke/
 │   │   │       │   └── [songId]/page.tsx   # Karaoke player page
-│   │   │       └── lesson/[lessonId]/page/[pageNum]/page.tsx
+│   │   │       └── grammar/[slug]/page.tsx # Grammar pages (shi/you/zai/de/bu/ma)
 │   │   ├── api/
 │   │   │   ├── admin/
 │   │   │   │   ├── route.ts       # Admin data + actions (GET/POST)
@@ -90,12 +87,7 @@ Example routes:
 │   │   │       │   └── callback/route.ts # HMAC verify + user create + session (POST)
 │   │   │       └── session-check/route.ts # Session nonce validation (POST/DELETE)
 │   │   ├── auth/telegram/complete/page.tsx  # Telegram login completion (client)
-│   │   ├── payment/page.tsx       # Payment page
-│   │   ├── english/
-│   │   │   ├── page.tsx       # English language page
-│   │   │   └── destination-b1/
-│   │   │       ├── page.tsx   # Book page (unit list)
-│   │   │       └── unit/[unitId]/page/[pageNum]/page.tsx  # Unit reader
+│   │   └── payment/page.tsx       # Payment page
 │   ├── components/             # React components (see src/components/CLAUDE.md)
 │   │   ├── Page.tsx           # Top-level page container
 │   │   ├── PageReader.tsx     # Page reader wrapper
@@ -106,7 +98,9 @@ Example routes:
 │   │   ├── ReaderControls.tsx # Header controls (focus, language, font)
 │   │   ├── HomePage.tsx       # Home page (language selection cards)
 │   │   ├── BannerMenu.tsx    # Shared hamburger menu for all banner pages
-│   │   ├── LanguagePage.tsx   # Language page (tabbed: Kitob, Matn, Flesh, KTV, Test)
+│   │   ├── LanguagePage.tsx   # Language page (tabbed: Dialog, Yozish, Flesh, KTV, Tika, Test)
+│   │   ├── HanziWriterPractice.tsx  # Writing tab: Leitner SRS character practice (home/practice/done views)
+│   │   ├── HanziCanvas.tsx          # Canvas-based hanzi stroke engine (retina, grading, hints, reveal)
 │   │   ├── BookPage.tsx       # Book page (lesson list with banner+tabs, reusable for English)
 │   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
 │   │   ├── StoriesPage.tsx     # Stories list page (banner+HSK tabs)
@@ -124,7 +118,6 @@ Example routes:
 │   │   ├── ErrorCorrectionExercise.tsx # Error correction (English exercises)
 │   │   ├── WordChoiceExercise.tsx     # Word choice / circle correct word (English exercises)
 │   │   ├── TextErrorExercise.tsx      # Text error / find & correct errors in passage (English exercises)
-│   │   ├── EnglishLanguagePage.tsx    # English language page (B1/B2 tabs)
 │   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
 │   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
 │   │   └── Paywall.tsx               # Paywall overlay (trial expired)
@@ -222,8 +215,9 @@ Page → Section → Sentence → Word
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Uzbek
 - Translations: Uzbek (default) and Russian (toggle with language button)
-- Tab labels: Kitob, Matn, Flesh, KTV, Test (short forms, no "-lar" suffix)
-- Matn tab shows two cards: **Hikoyalar** (→ `/chinese/hsk2/stories`) and **Dialoglar** (→ `/chinese/hsk1/dialogues`)
+- Tab labels (UZ): Dialog | Yozish | Flesh | KTV | Tika | Test
+- Tab labels (RU): Диалог | Письмо | Флеш | KTV | Грамм | Тесты
+- Tab IDs: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
 - Language toggle: Inside hamburger menu on banner pages (O'zbekcha/Русский toggle buttons under "Til" label, 中文 under "Men o'rganaman" label). Lesson/story reader headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)

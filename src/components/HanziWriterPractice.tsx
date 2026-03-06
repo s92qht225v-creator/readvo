@@ -3,11 +3,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { HanziCanvas } from './HanziCanvas';
 
+export type HanziWord = { char: string; pinyin: string; uz: string; ru: string; strokes: number };
+
 interface Props {
   lang: 'uz' | 'ru';
+  words?: HanziWord[];
+  onBack?: () => void;
+  autoStart?: boolean;
 }
 
-const WORDS = [
+const WORDS: HanziWord[] = [
   { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', strokes: 7 },
   { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', strokes: 6 },
   { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', strokes: 5 },
@@ -72,14 +77,34 @@ function getStartOfToday(): Date {
   return d;
 }
 
-export function HanziWriterPractice({ lang }: Props) {
+export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart }: Props) {
+  const activeWords = wordsProp ?? WORDS;
   const [view, setView] = useState<View>('home');
-  const [sessionQueue, setSessionQueue] = useState<typeof WORDS>([]);
+
+  // Auto-start: skip home screen and go directly to practice
+  useEffect(() => {
+    if (!autoStart) return;
+    const progress = loadProgress();
+    const today = getStartOfToday();
+    const due = activeWords.filter((w) => {
+      const entry = progress[w.char];
+      return !entry || new Date(entry.nextReviewDate) <= today;
+    });
+    if (due.length === 0) return; // nothing due, stay on home to show message
+    setSessionQueue(shuffle(due));
+    setSessionIndex(0);
+    setSessionMistakes(0);
+    setQuizComplete(false);
+    setView('practice');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // run once on mount
+  const [sessionQueue, setSessionQueue] = useState<HanziWord[]>([]);
   const [sessionIndex, setSessionIndex] = useState(0);
   const [quizComplete, setQuizComplete] = useState(false);
   const [sessionMistakes, setSessionMistakes] = useState(0);
   const [resetKey, setResetKey] = useState(0);
   const [showAnswer, setShowAnswer] = useState(0);
+  const [hiddenMode, setHiddenMode] = useState(false);
 
   // Home stats derived from progress
   const [dueCount, setDueCount] = useState(0);
@@ -90,15 +115,15 @@ export function HanziWriterPractice({ lang }: Props) {
     const today = getStartOfToday();
     let due = 0;
     let mastered = 0;
-    for (const word of WORDS) {
+    for (const word of activeWords) {
       const entry = progress[word.char];
       const isDue = !entry || new Date(entry.nextReviewDate) <= today;
       if (isDue) due++;
       if (entry && entry.box >= 5) mastered++;
     }
     setDueCount(due);
-    setMasteryPct(Math.round((mastered / WORDS.length) * 100));
-  }, []);
+    setMasteryPct(Math.round((mastered / activeWords.length) * 100));
+  }, [activeWords]);
 
   useEffect(() => {
     recomputeStats();
@@ -107,7 +132,7 @@ export function HanziWriterPractice({ lang }: Props) {
   const handleStart = useCallback(() => {
     const progress = loadProgress();
     const today = getStartOfToday();
-    const due = WORDS.filter((w) => {
+    const due = activeWords.filter((w) => {
       const entry = progress[w.char];
       return !entry || new Date(entry.nextReviewDate) <= today;
     });
@@ -116,7 +141,7 @@ export function HanziWriterPractice({ lang }: Props) {
     setSessionMistakes(0);
     setQuizComplete(false);
     setView('practice');
-  }, []);
+  }, [activeWords]);
 
   const advance = useCallback(() => {
     setShowAnswer(0);
@@ -168,8 +193,14 @@ export function HanziWriterPractice({ lang }: Props) {
   }, []);
 
   const handleShow = useCallback(() => {
-    setShowAnswer((c) => c + 1);
-  }, []);
+    if (quizComplete) {
+      setResetKey((k) => k + 1);
+      setQuizComplete(false);
+      setShowAnswer(1);
+    } else {
+      setShowAnswer((c) => c + 1);
+    }
+  }, [quizComplete]);
 
   const handleReset = useCallback(() => {
     const msg = lang === 'ru'
@@ -186,6 +217,11 @@ export function HanziWriterPractice({ lang }: Props) {
   if (view === 'home') {
     return (
       <div className="hanzi-home">
+          {onBack && (
+            <button className="hanzi-home__back-btn" type="button" onClick={onBack}>
+              ‹ {lang === 'ru' ? 'Назад' : 'Orqaga'}
+            </button>
+          )}
           <div className="hanzi-home__stats-row">
             <div className="hanzi-home__stat-card">
               <div className="hanzi-home__stat-value">{dueCount}</div>
@@ -200,7 +236,7 @@ export function HanziWriterPractice({ lang }: Props) {
               </div>
             </div>
             <div className="hanzi-home__stat-card">
-              <div className="hanzi-home__stat-value">{WORDS.length}</div>
+              <div className="hanzi-home__stat-value">{activeWords.length}</div>
               <div className="hanzi-home__stat-label">
                 {lang === 'ru' ? 'Всего иероглифов' : "Jami belgilar"}
               </div>
@@ -239,9 +275,9 @@ export function HanziWriterPractice({ lang }: Props) {
         <button
           className="hanzi-done__restart-btn"
           type="button"
-          onClick={() => { recomputeStats(); setView('home'); }}
+          onClick={() => { recomputeStats(); if (onBack) onBack(); else setView('home'); }}
         >
-          {lang === 'ru' ? 'К началу' : 'Boshiga qaytish'}
+          {lang === 'ru' ? (onBack ? 'Назад' : 'К началу') : (onBack ? 'Orqaga' : 'Boshiga qaytish')}
         </button>
       </div>
     );
@@ -265,6 +301,7 @@ export function HanziWriterPractice({ lang }: Props) {
                 lang={lang}
                 onComplete={handleCanvasComplete}
                 revealAll={showAnswer}
+                hidden={hiddenMode}
               />
             )}
           </div>
@@ -276,6 +313,18 @@ export function HanziWriterPractice({ lang }: Props) {
             <button className="hanzi-practice__action-btn" type="button" onClick={handleShow}>
               {lang === 'ru' ? 'Показать' : 'Ko\'rsatish'}
             </button>
+            <button
+              className={`hanzi-practice__action-btn${hiddenMode ? ' hanzi-practice__action-btn--active' : ''}`}
+              type="button"
+              onClick={() => {
+                setHiddenMode((h) => !h);
+                setResetKey((k) => k + 1);
+                setShowAnswer(0);
+                setQuizComplete(false);
+              }}
+            >
+              {lang === 'ru' ? 'Скрыть' : 'Yashirish'}
+            </button>
           </div>
         </div>
 
@@ -283,7 +332,6 @@ export function HanziWriterPractice({ lang }: Props) {
         <div className="hanzi-practice__info-panel">
           {currentWord && (
             <>
-              <div className="hanzi-practice__char-display">{currentWord.char}</div>
               <div className="hanzi-practice__pinyin">{currentWord.pinyin}</div>
               <div className="hanzi-practice__meaning">
                 {lang === 'ru' ? currentWord.ru : currentWord.uz}

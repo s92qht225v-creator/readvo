@@ -9633,6 +9633,18 @@ body {
   color: #dc2626;
 }
 
+.hanzi-practice__action-btn--active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+.hanzi-practice__action-btn--active:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  color: #fff;
+}
+
 .hanzi-practice__info-panel {
   display: flex;
   flex-direction: column;
@@ -9839,4 +9851,73 @@ body {
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
+}
+
+/* Writing back button */
+.hanzi-home__back-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+/* Writing set cards */
+.lp__writing-sets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lp__writing-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.lp__writing-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transform: translateY(-1px);
+}
+
+.lp__writing-card__chars {
+  font-size: 1.15rem;
+  color: #ccc;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lp__writing-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lp__writing-card__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.lp__writing-card__sub {
+  font-size: 0.78rem;
+  color: #888;
 }

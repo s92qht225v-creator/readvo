@@ -6,7 +6,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 const STROKE_TOLERANCE = 0.15;
 const DIRECTION_THRESHOLD = 0.45;
 const HINT_MISTAKES_THRESHOLD = 2;
-const GHOST_MISTAKES_THRESHOLD = 1; // show ghost outline after 1 mistake
 const ANIMATION_DURATION = 600;
 const MAX_SLIDE_OFFSET = 40; // max px offset for slide-from-user-position
 
@@ -25,6 +24,7 @@ interface Props {
   lang: 'uz' | 'ru';
   onComplete: (mistakes: number) => void;
   revealAll?: number; // increment to trigger reveal; 0 = idle
+  hidden?: boolean; // hide character outline (write from memory)
 }
 
 function distance(a: Point, b: Point): number {
@@ -184,7 +184,7 @@ function redrawCompleted(
 // Module-level cache: avoids re-fetching character data on revisit
 const strokeCache = new Map<string, StrokeData[]>();
 
-export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
+export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = false }: Props) {
   const [canvasSize, setCanvasSize] = useState(400);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
@@ -200,7 +200,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
   const mistakesOnStrokeRef = useRef(0);
   const isDrawingRef = useRef(false);
   const currentInputRef = useRef<Point[]>([]);
-  const revealingRef = useRef(false);
   const animatingRef = useRef(false); // blocks input during stroke reveal animation
   const animFrameRef = useRef<number | null>(null);
   const inputRafRef = useRef<number | null>(null);
@@ -208,13 +207,14 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
   const fadeIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const hintDotRafRef = useRef(0);
   const highlightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const ghostTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const sizeRef = useRef(400);
   const dprRef = useRef(1);
   const unmountedRef = useRef(false);
   const lastRevealRef = useRef(0); // track last-processed revealAll value
+  const guideModeRef = useRef(false); // Show → guide dot for each stroke, user still draws
+  const startGuideDotRef = useRef<((idx: number) => void) | null>(null);
 
-  // Keep sizeRef in sync
+  // Keep refs in sync
   useEffect(() => { sizeRef.current = canvasSize; }, [canvasSize]);
 
   // Track DPR
@@ -259,7 +259,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     setCompletedCount(0);
     mistakesRef.current = 0;
     mistakesOnStrokeRef.current = 0;
-    revealingRef.current = false;
+    guideModeRef.current = false;
     lastRevealRef.current = 0;
 
     // Use cached data if available
@@ -320,11 +320,13 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Faint outline
-    strokesRef.current.forEach((s) => {
-      drawSVGPath(ctx, s.path, canvasSize, '#c8b89a', 0.45);
-    });
-  }, [loading, canvasSize, setupCanvas]);
+    // Faint outline (skip in hidden mode — write from memory)
+    if (!hidden) {
+      strokesRef.current.forEach((s) => {
+        drawSVGPath(ctx, s.path, canvasSize, '#c8b89a', 0.45);
+      });
+    }
+  }, [loading, canvasSize, setupCanvas, hidden]);
 
   // Set up display and input canvases for retina
   useEffect(() => {
@@ -360,114 +362,70 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
       cancelAnimationFrame(hintDotRafRef.current);
       if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
       if (highlightTimerRef.current) clearTimeout(highlightTimerRef.current);
-      if (ghostTimerRef.current) clearTimeout(ghostTimerRef.current);
     };
   }, []);
 
-  // Show ghost outline of the correct next stroke (faint hint)
-  const showGhostStroke = useCallback(() => {
-    const dCtx = displayRef.current?.getContext('2d');
-    const strokes = strokesRef.current;
-    const idx = completedRef.current;
-    const size = sizeRef.current;
-    if (!dCtx || !strokes[idx]) return;
-
-    // Draw the correct next stroke as a faint outline
-    drawSVGPath(dCtx, strokes[idx].path, size, '#c8b89a', 0.35);
-
-    // Clear ghost after a moment and restore display
-    if (ghostTimerRef.current) clearTimeout(ghostTimerRef.current);
-    ghostTimerRef.current = setTimeout(() => {
-      if (!unmountedRef.current) {
-        redrawCompleted(dCtx, strokes, completedRef.current, size);
-      }
-      ghostTimerRef.current = null;
-    }, 1200);
-  }, []);
-
-  // Animate a single stroke: traveling dot along median, then snap full stroke (Show button)
-  const animateReveal = useCallback(
-    (strokeIdx: number, cb: () => void) => {
-      const ctx = displayRef.current?.getContext('2d');
+  // Show guide dot looping along a stroke's median until user draws it
+  const showGuideDot = useCallback(
+    (strokeIdx: number) => {
       const inputCtx = inputRef.current?.getContext('2d');
       const strokes = strokesRef.current;
       const size = sizeRef.current;
-      if (!ctx || !strokes[strokeIdx]) { cb(); return; }
+      if (!inputCtx || !strokes[strokeIdx]) return;
 
       const stroke = strokes[strokeIdx];
       const median = transformMedian(stroke.median, size);
-      if (median.length < 2) {
-        drawSVGPath(ctx, stroke.path, size, '#3d3d3d');
-        cb();
-        return;
-      }
+      if (median.length < 2) return;
 
       const DOT_RADIUS = size * 0.026;
       const DOT_COLOR = 'rgba(90, 75, 55, 0.85)';
-      const DOT_TRAVEL_MS = 1000; // slower than stroke animations
+      const DOT_TRAVEL_MS = 1000;
+      const PAUSE_MS = 400;
 
-      const startTime = performance.now();
+      cancelAnimationFrame(hintDotRafRef.current);
+      let startTime: number | null = null;
+      let phase: 'travel' | 'pause' = 'travel';
+      let pauseStart = 0;
 
       const tick = (now: number) => {
         if (unmountedRef.current) return;
-        const progress = Math.min((now - startTime) / DOT_TRAVEL_MS, 1);
+        if (!startTime) startTime = now;
 
-        // Draw traveling dot on input canvas
-        if (inputCtx) {
-          inputCtx.clearRect(0, 0, size, size);
-          if (progress < 1) {
-            const dotPos = samplePolyline(median, progress);
-            // Fade out dot in last 15%
-            const dotAlpha = progress > 0.85 ? (1 - progress) / 0.15 : 1;
-            inputCtx.save();
-            inputCtx.globalAlpha = dotAlpha;
-            inputCtx.beginPath();
-            inputCtx.arc(dotPos.x, dotPos.y, DOT_RADIUS, 0, Math.PI * 2);
-            inputCtx.fillStyle = DOT_COLOR;
-            inputCtx.fill();
-            inputCtx.restore();
+        inputCtx.clearRect(0, 0, size, size);
+
+        if (phase === 'travel') {
+          const progress = Math.min((now - startTime) / DOT_TRAVEL_MS, 1);
+          const dotPos = samplePolyline(median, progress);
+          const dotAlpha = progress > 0.85 ? (1 - progress) / 0.15 : 1;
+          inputCtx.save();
+          inputCtx.globalAlpha = dotAlpha;
+          inputCtx.beginPath();
+          inputCtx.arc(dotPos.x, dotPos.y, DOT_RADIUS, 0, Math.PI * 2);
+          inputCtx.fillStyle = DOT_COLOR;
+          inputCtx.fill();
+          inputCtx.restore();
+          if (progress >= 1) {
+            phase = 'pause';
+            pauseStart = now;
+          }
+        } else {
+          // Pause at end, then restart
+          if (now - pauseStart >= PAUSE_MS) {
+            phase = 'travel';
+            startTime = now;
           }
         }
 
-        if (progress < 1) {
-          animFrameRef.current = requestAnimationFrame(tick);
-        } else {
-          // Dot done — slide stroke in from median direction
-          if (inputCtx) inputCtx.clearRect(0, 0, size, size);
-          const SLIDE_MS = 500;
-          const SLIDE_PX = 20;
-          // Compute offset along stroke direction (start → end of median)
-          const dir = normalize({
-            x: median[median.length - 1].x - median[0].x,
-            y: median[median.length - 1].y - median[0].y,
-          });
-          const dx = -dir.x * SLIDE_PX;
-          const dy = -dir.y * SLIDE_PX;
-          const slideStart = performance.now();
-          const slideTick = (now2: number) => {
-            if (unmountedRef.current) return;
-            const t = Math.min((now2 - slideStart) / SLIDE_MS, 1);
-            const ease = 1 - (1 - t) ** 4; // easeOutQuart
-            const mul = 1 - ease;
-            redrawCompleted(ctx, strokes, completedRef.current, size);
-            ctx.save();
-            ctx.translate(dx * mul, dy * mul);
-            drawSVGPath(ctx, stroke.path, size, '#3d3d3d');
-            ctx.restore();
-            if (t < 1) {
-              animFrameRef.current = requestAnimationFrame(slideTick);
-            } else {
-              cb();
-            }
-          };
-          animFrameRef.current = requestAnimationFrame(slideTick);
-        }
+        hintDotRafRef.current = requestAnimationFrame(tick);
       };
 
-      animFrameRef.current = requestAnimationFrame(tick);
+      hintDotRafRef.current = requestAnimationFrame(tick);
     },
     []
   );
+
+  // Keep ref in sync so onRevealDone can call it without TDZ
+  startGuideDotRef.current = showGuideDot;
 
   // Post-reveal: increment completed, run completion effect if all done
   const onRevealDone = useCallback((strokes: StrokeData[], safetyTimer: ReturnType<typeof setTimeout>) => {
@@ -480,7 +438,17 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     const dCtx = displayRef.current?.getContext('2d');
     if (dCtx) redrawCompleted(dCtx, strokes, completedRef.current, sizeRef.current);
 
+    // Guide mode: auto-start dot for next stroke
+    if (guideModeRef.current && completedRef.current < strokes.length) {
+      setTimeout(() => {
+        if (!unmountedRef.current && guideModeRef.current && startGuideDotRef.current) {
+          startGuideDotRef.current(completedRef.current);
+        }
+      }, 300);
+    }
+
     if (completedRef.current >= strokes.length) {
+      guideModeRef.current = false;
       // Completion effect: scale up → back down, turn red and stay red
       if (dCtx) {
         const size = sizeRef.current;
@@ -528,11 +496,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
 
     // Cancel any hint dot animation
     cancelAnimationFrame(hintDotRafRef.current);
-    // Cancel any ghost outline
-    if (ghostTimerRef.current) {
-      clearTimeout(ghostTimerRef.current);
-      ghostTimerRef.current = null;
-    }
 
     const rawPoints = [...currentInputRef.current];
     currentInputRef.current = [];
@@ -699,13 +662,10 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     mistakesOnStrokeRef.current += 1;
     fadeOutStroke();
 
-    // Show ghost outline after GHOST_MISTAKES_THRESHOLD
-    if (mistakesOnStrokeRef.current >= GHOST_MISTAKES_THRESHOLD) {
-      showGhostStroke();
-    }
-
-    // Show traveling dot hint after HINT_MISTAKES_THRESHOLD
-    if (mistakesOnStrokeRef.current >= HINT_MISTAKES_THRESHOLD) {
+    // Restart guide dot or show traveling dot hint
+    if (guideModeRef.current) {
+      showGuideDot(completedRef.current);
+    } else if (mistakesOnStrokeRef.current >= HINT_MISTAKES_THRESHOLD) {
       const dCtx = displayRef.current?.getContext('2d');
       const strokes = strokesRef.current;
       const idx = completedRef.current;
@@ -713,7 +673,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
         showTravelingDot(dCtx, strokes[idx], sizeRef.current);
       }
     }
-  }, [fadeOutStroke, showGhostStroke, showTravelingDot]);
+  }, [fadeOutStroke, showTravelingDot, showGuideDot]);
 
   // Handle out-of-order stroke: briefly highlight the correct next stroke
   const onOutOfOrder = useCallback(() => {
@@ -721,27 +681,32 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     mistakesOnStrokeRef.current += 1;
     fadeOutStroke();
 
-    // Highlight the correct next stroke on the display canvas
-    const dCtx = displayRef.current?.getContext('2d');
-    const strokes = strokesRef.current;
-    const idx = completedRef.current;
-    const size = sizeRef.current;
-    if (dCtx && strokes[idx]) {
-      drawSVGPath(dCtx, strokes[idx].path, size, '#3b82f6', 0.5);
-      if (highlightTimerRef.current) clearTimeout(highlightTimerRef.current);
-      highlightTimerRef.current = setTimeout(() => {
-        if (!unmountedRef.current) {
-          redrawCompleted(dCtx, strokes, completedRef.current, size);
-        }
-        highlightTimerRef.current = null;
-      }, 800);
+    if (guideModeRef.current) {
+      // In guide mode, just restart the guide dot
+      showGuideDot(completedRef.current);
+    } else {
+      // Highlight the correct next stroke on the display canvas
+      const dCtx = displayRef.current?.getContext('2d');
+      const strokes = strokesRef.current;
+      const idx = completedRef.current;
+      const size = sizeRef.current;
+      if (dCtx && strokes[idx]) {
+        drawSVGPath(dCtx, strokes[idx].path, size, '#3b82f6', 0.5);
+        if (highlightTimerRef.current) clearTimeout(highlightTimerRef.current);
+        highlightTimerRef.current = setTimeout(() => {
+          if (!unmountedRef.current) {
+            redrawCompleted(dCtx, strokes, completedRef.current, size);
+          }
+          highlightTimerRef.current = null;
+        }, 800);
+      }
     }
-  }, [fadeOutStroke]);
+  }, [fadeOutStroke, showGuideDot]);
 
   // Pointer events
   const onPointerDown = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
     e.preventDefault();
-    if (revealingRef.current || animatingRef.current || completedRef.current >= strokesRef.current.length) return;
+    if (animatingRef.current || completedRef.current >= strokesRef.current.length) return;
 
     // Kill any running wrong-stroke fade so it doesn't erase our new drawing
     if (fadeIntervalRef.current) {
@@ -754,13 +719,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     if (highlightTimerRef.current) {
       clearTimeout(highlightTimerRef.current);
       highlightTimerRef.current = null;
-      const dCtx = displayRef.current?.getContext('2d');
-      if (dCtx) redrawCompleted(dCtx, strokesRef.current, completedRef.current, sizeRef.current);
-    }
-    // Cancel any ghost outline
-    if (ghostTimerRef.current) {
-      clearTimeout(ghostTimerRef.current);
-      ghostTimerRef.current = null;
       const dCtx = displayRef.current?.getContext('2d');
       if (dCtx) redrawCompleted(dCtx, strokesRef.current, completedRef.current, sizeRef.current);
     }
@@ -787,7 +745,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
   const handleStrokeEnd = useCallback(() => {
     if (!isDrawingRef.current) return;
     isDrawingRef.current = false;
-    if (animatingRef.current || revealingRef.current) return;
+    if (animatingRef.current) return;
 
     if (currentInputRef.current.length < 2) {
       // Too short — just clear the dot
@@ -821,9 +779,9 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
     }
   }, [onCorrect, onWrong, onOutOfOrder]);
 
-  // Show current stroke only (dot travels, then stroke slides in) — edge-triggered by counter
+  // Show button: enter guide mode — dot shows path for current stroke, user draws it
   useEffect(() => {
-    if (!revealAll || revealAll === lastRevealRef.current || loading || loadError || revealingRef.current || animatingRef.current) return;
+    if (!revealAll || revealAll === lastRevealRef.current || loading || loadError || animatingRef.current) return;
     lastRevealRef.current = revealAll;
     const strokes = strokesRef.current;
     const idx = completedRef.current;
@@ -839,33 +797,19 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0 }: Props) {
       clearTimeout(highlightTimerRef.current);
       highlightTimerRef.current = null;
     }
-    if (ghostTimerRef.current) {
-      clearTimeout(ghostTimerRef.current);
-      ghostTimerRef.current = null;
-    }
     // Clear input canvas
     const inputCtx = inputRef.current?.getContext('2d');
     if (inputCtx) inputCtx.clearRect(0, 0, sizeRef.current, sizeRef.current);
-
     currentInputRef.current = [];
-    mistakesRef.current += 1; // penalty for using Show
+
+    // Enter guide mode + penalty
+    guideModeRef.current = true;
+    mistakesRef.current += 1;
     mistakesOnStrokeRef.current = 0;
-    animatingRef.current = true;
 
-    animateReveal(idx, () => {
-      if (unmountedRef.current) return;
-      completedRef.current = idx + 1;
-      setCompletedCount(idx + 1);
-      animatingRef.current = false;
-      const dCtx = displayRef.current?.getContext('2d');
-      if (dCtx) redrawCompleted(dCtx, strokes, idx + 1, sizeRef.current);
-
-      // If all strokes done, trigger completion
-      if (idx + 1 >= strokes.length) {
-        setTimeout(() => onComplete(mistakesRef.current), 300);
-      }
-    });
-  }, [revealAll, loading, loadError, animateReveal, onComplete]);
+    // Show guide dot for current stroke — user must draw it
+    showGuideDot(idx);
+  }, [revealAll, loading, loadError, showGuideDot]);
 
   // Stroke counter text
   const strokeCount = strokesRef.current.length;

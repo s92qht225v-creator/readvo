@@ -136,6 +136,32 @@
 - **Lyrics padding**: Top padding clears fixed header + translation panel (`calc(var(--header-height) + 60px + env(safe-area-inset-top))`). Bottom padding (200px) clears fixed controls.
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
+### Hanzi Writing Practice (Writing Tab)
+- Accessible from Language Page → Yozish/Письмо tab (`?tab=writing`)
+- Two components: `HanziWriterPractice.tsx` (SRS session manager) + `HanziCanvas.tsx` (stroke drawing engine)
+- **No external CDN** — stroke data fetched from `https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/{char}.json`; module-level `strokeCache` Map avoids re-fetching on revisit
+- **SRS**: Leitner 5-box system, localStorage key `'blim-hanzi-progress'`, value `Record<char, {box:1|2|3|4|5, nextReviewDate:string}>` (ISO date). Box intervals: `{1:0, 2:1, 3:3, 4:7, 5:14}` days. Missing entry = always due.
+- **Word list**: 20 hardcoded HSK 1 characters in `WORDS` array (`char, pinyin, uz, ru, strokes`)
+- **View state machine**: `'home'` → Start button → `'practice'` → all cards graded → `'done'` → restart → `'home'`
+- **Home view**: stat cards (due count, mastery %, total); Start button (disabled if 0 due); reset link with `confirm()` dialog
+- **Practice view**: `HanziCanvas` (left panel) + info panel (right); Erase/Show buttons below canvas; grade buttons (Esimda yo'q / Bilaman!) appear after quiz complete; session progress counter
+- **Done view**: Barakalla!/Отлично!, cards reviewed + mistakes count, restart button
+- **`HanziWriterPractice` receives `lang: 'uz'|'ru'` as prop from `LanguagePage`** — does NOT call `useLanguage()` inside
+- **`revealAll`**: `number` prop on `HanziCanvas`; increment to trigger show-all animation. `showAnswer` state is a counter, not boolean.
+
+#### HanziCanvas Engine
+- Three stacked canvases (`position: absolute`): `bgRef` (background/outline/crosshair), `displayRef` (completed strokes), `inputRef` (live drawing + animations)
+- **Retina**: All canvases scaled by `devicePixelRatio` (capped at 3×). CSS `width/height = canvasSize`, physical size = `canvasSize × dpr`.
+- **Canvas size**: 400px desktop, 300px mobile (≤480px), via `window.innerWidth` `useEffect` + resize listener
+- **Coordinate system**: hanzi-writer-data uses 1024-wide × 900-tall y-up space. Transformed to canvas via `scale = size/1024`, `yOffset = (size - 900*scale)/2 + size*(-0.03)` (slight upward shift to prevent bottom clipping)
+- **Stroke grading** (`gradeStroke`): validates start/end proximity (tolerance `0.15 × size`), direction dot product (threshold 0.45), shape at 25%/50%/75% along path. Rejects strokes shorter than `0.04 × size`.
+- **Wrong stroke**: user stroke fades out in red; ghost outline of correct next stroke shown after 1 mistake; traveling dot hint along median after 2 mistakes
+- **Out-of-order stroke**: detected by checking all later strokes; correct next stroke briefly highlighted in blue
+- **Correct stroke**: canonical stroke slides into place from user's start position (easeOutQuart, 600ms). On all-strokes-complete: scale-up + color-to-red animation → calls `onComplete(totalMistakes)`.
+- **Show button** (revealAll): animates each remaining stroke in sequence — traveling dot along median (1000ms) then slide-in (500ms). Calls `onComplete(mistakes + penaltyStrokes)` after all revealed.
+- **`onComplete(mistakes: number)`**: called when all strokes done (naturally or via Show). `HanziWriterPractice` adds mistakes to session total and sets `quizComplete = true` after 800ms delay.
+- **Erase** (`resetKey` increment on `HanziCanvas` key): remounts canvas, resets all state. `showAnswer` reset to 0.
+
 ### Branding & Colors
 - **Banner**: Red `#dc2626`
 - **Accent color** (`--color-accent`): `#dc2626`
@@ -146,8 +172,9 @@
 - **Logo (blue)**: `/public/logo-blue.svg` — `#71a3da` variant, used on light backgrounds (landing nav)
 - **Logo (red)**: `/public/logo-red.svg` — `#dc2626` variant, used on grey reader headers (lesson, story, flashcard)
 - **Border-radius**: Globally reduced — 16→10, 12→8, 8→6, 6→4, 4→3px. Circles (50%) unchanged.
-- **Tab labels (UZ)**: Kitob | Matn | Flesh | KTV | Test
-- **Tab labels (RU)**: Книги | Текст | Флеш | KTV | Тесты
+- **Tab labels (UZ)**: Dialog | Yozish | Flesh | KTV | Tika | Test
+- **Tab labels (RU)**: Диалог | Письмо | Флеш | KTV | Грамм | Тесты
+- **Tab IDs**: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
 
 ### Styling Conventions
 - Section headers: Red gradient tab with rounded top corners (hidden for objectives, text, and tonguetwister sections)
@@ -232,13 +259,16 @@ main.home (reuses home styling, no top padding)
 │       │           ├── div.home__menu-lang-row (中文 button)
 │       │           ├── button.home__menu-item (To'lov / Оплата)
 │       │           └── button.home__menu-item (Chiqish / Выйти, if logged in)
-│       └── div.lang-page__tabs (folder tabs flush at banner bottom via margin-top: auto)
-│           └── button.lang-page__tab (Kitob | Matn | Flesh | KTV | Test)
-├── section.home__content
-│   └── div.lang-page__books (responsive grid of cards)
-│       └── Link/div.lang-page__book-card (per level, disabled = "Tez kunda" badge)
-│           ├── span.lang-page__book-level > span.lang-page__book-level-label + number
-│           └── span.lang-page__book-subtitle
+├── nav.lp__tabs (sticky below hero, red gradient, full-width)
+│   └── div.lp__tabs-inner > button.lp__tab (Dialog | Yozish | Flesh | KTV | Tika | Test)
+├── div.lp__seg-bar (HSK level pills, hidden for karaoke + writing tabs)
+└── section.home__content
+    ├── [dialogues tab] search bar + tag chips + bookmark toggle + dialogue cards grid
+    ├── [writing tab]   HanziWriterPractice (home/practice/done views, SRS)
+    ├── [flashcards tab] FlashcardModeBar + FlashcardUnitSelector / topic cards
+    ├── [karaoke tab]   KTV song cards
+    ├── [grammar tab]   Grammar cards grid (17 items)
+    └── [tests tab]     Test cards
 └── footer.home__footer
 ```
 
