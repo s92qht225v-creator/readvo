@@ -75,18 +75,17 @@ export async function POST(request: NextRequest) {
   }
 
   // Exchange authorization code for tokens
-  const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
   const tokenRes = await fetch('https://oauth.telegram.org/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': `Basic ${credentials}`,
     },
     body: new URLSearchParams({
       grant_type: 'authorization_code',
       code,
       redirect_uri: redirectUri,
       client_id: clientId,
+      client_secret: clientSecret,
       code_verifier: codeVerifier,
     }),
   });
