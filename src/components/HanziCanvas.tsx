@@ -6,7 +6,7 @@ import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from
 const STROKE_TOLERANCE = 0.15;
 const DIRECTION_THRESHOLD = 0.45;
 const HINT_MISTAKES_THRESHOLD = 2;
-const ANIMATION_DURATION = 600;
+const ANIMATION_DURATION = 350;
 const MAX_SLIDE_OFFSET = 40; // max px offset for slide-from-user-position
 
 interface Point {
@@ -56,7 +56,15 @@ function drawTaperedStroke(
   color: string,
   canvasSize: number
 ): void {
-  if (points.length < 2) return;
+  if (points.length === 0) return;
+  if (points.length === 1) {
+    const r = canvasSize * 0.008;
+    ctx.beginPath();
+    ctx.arc(points[0].x, points[0].y, r, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+    return;
+  }
   const maxW = canvasSize * 0.045;
   const minW = canvasSize * 0.008;
   for (let i = 1; i < points.length; i++) {
@@ -514,7 +522,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
 
     // Block input during slide animation
     animatingRef.current = true;
-    const safetyTimer = setTimeout(() => { animatingRef.current = false; }, ANIMATION_DURATION + 200);
+    const safetyTimer = setTimeout(() => { animatingRef.current = false; }, ANIMATION_DURATION + 100);
 
     // Clear user's raw stroke immediately
     const inputCtx = inputRef.current?.getContext('2d');
@@ -757,6 +765,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   const handleStrokeEnd = useCallback(() => {
     if (!isDrawingRef.current) return;
     isDrawingRef.current = false;
+    isDirtyRef.current = false;
     if (animatingRef.current) return;
 
     if (currentInputRef.current.length < 2) {

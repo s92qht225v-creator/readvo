@@ -2,12 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { HanziCanvas } from './HanziCanvas';
+import type { HanziWord } from '@/services/writing';
 
-export type HanziWord = {
-  char: string; pinyin: string; uz: string; ru: string; strokes: number;
-  radical?: string; radicalUz?: string; radicalRu?: string;
-  ex?: string; expy?: string; exuz?: string; exru?: string;
-};
+export type { HanziWord };
 
 interface Props {
   lang: 'uz' | 'ru';
