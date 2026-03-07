@@ -9,6 +9,7 @@ import { Paywall } from './Paywall';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { alignPinyinToText } from '../utils/rubyText';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -558,6 +559,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
 
       </div>
+      <PageFooter />
     </>
   );
 }

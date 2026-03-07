@@ -12,6 +12,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -662,6 +663,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
         </div>
       </nav>
       </div>
+      <PageFooter />
     </>
   );
 }

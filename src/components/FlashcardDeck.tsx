@@ -10,6 +10,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
@@ -405,6 +406,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           </div>
         </nav>
       </main>
+      <PageFooter />
     </>
   );
 };

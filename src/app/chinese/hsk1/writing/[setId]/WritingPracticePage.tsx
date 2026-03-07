@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useRequireAuth } from '@/hooks/useRequireAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 import { BannerMenu } from '@/components/BannerMenu';
+import { PageFooter } from '@/components/PageFooter';
 import { HanziWriterPractice } from '@/components/HanziWriterPractice';
 import type { HanziWord } from '@/services/writing';
 
@@ -77,6 +78,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
           onSubtabChange={setSubtab}
         />
       </section>
+      <PageFooter />
     </main>
   );
 }

@@ -26,6 +26,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 interface NavLink {
   lessonId: string;
@@ -259,6 +260,7 @@ export function ReaderLayout({
         </>
       )}
       </div>
+      <PageFooter />
     </>
   );
 }
