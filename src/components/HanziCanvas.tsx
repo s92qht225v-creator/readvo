@@ -22,7 +22,7 @@ interface StrokeData {
 interface Props {
   char: string;
   lang: 'uz' | 'ru';
-  onComplete: (mistakes: number) => void;
+  onComplete?: (mistakes: number) => void;
   revealAll?: number; // increment to trigger reveal; 0 = idle
   hidden?: boolean; // hide character outline (write from memory)
 }
@@ -477,12 +477,12 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
           if (t < 1) {
             animFrameRef.current = requestAnimationFrame(effectTick);
           } else {
-            onComplete(mistakesRef.current);
+            onComplete?.(mistakesRef.current);
           }
         };
         animFrameRef.current = requestAnimationFrame(effectTick);
       } else {
-        setTimeout(() => onComplete(mistakesRef.current), 800);
+        setTimeout(() => onComplete?.(mistakesRef.current), 800);
       }
     }
   }, [onComplete]);

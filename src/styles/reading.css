@@ -9838,34 +9838,6 @@ body {
   }
 }
 
-.hanzi-practice__grade-btns {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.hanzi-practice__grade-btn {
-  min-height: 48px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: inherit;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  flex: 1;
-}
-
-.hanzi-practice__grade-btn--forgot {
-  background: #fee2e2;
-  color: #dc2626;
-}
-
-.hanzi-practice__grade-btn--gotit {
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  color: #fff;
-}
-
 /* Home view */
 
 .hanzi-home {
@@ -9976,12 +9948,33 @@ body {
   color: #888;
 }
 
+.hanzi-done__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+}
+
 .hanzi-done__restart-btn {
   min-height: 48px;
   padding: 12px 32px;
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #fff;
   border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.hanzi-done__back-btn {
+  min-height: 48px;
+  padding: 12px 32px;
+  background: #fff;
+  color: #555;
+  border: 1px solid #e0e0e6;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 600;
