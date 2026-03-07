@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { GrammarNePage } from '@/components/GrammarNePage';
 
 export const metadata: Metadata = {
-  title: '呢 (ne) — Xitoy tili grammatikasi',
-  description: 'Xitoy tilidagi 呢 (ne) davom yuklamasini o\'rganing: savolni qaytarish, narsa/kishini qidirish, 呢 vs 吗 farqi va mashqlar.',
+  title: '呢 (ne) — Xitoy tili grammatikasi | HSK 1',
+  description: 'Xitoy tili grammatikasi: 呢 (ne) — "...chi?" savol yuklamasi. Misollar va tushuntirishlar. | Грамматика китайского: 呢 (ne) — вопросительная частица "а...?". Примеры и объяснения.',
 };
 
 export default function NePage() {

@@ -5,8 +5,8 @@ import { FlashcardListPage } from '@/components/FlashcardListPage';
 
 export async function generateMetadata() {
   return {
-    title: 'HSK 1 — Fleshkartalar',
-    description: 'HSK 1 so\'zlarini fleshkartalar yordamida o\'rganing. Dars bo\'yicha ajratilgan.',
+    title: 'HSK 1 so\'zlar — Xitoy tili fleshkartalar',
+    description: 'HSK 1 so\'zlar ro\'yxati: fleshkartalar bilan xitoy tili so\'zlarini yodlang. Dars bo\'yicha ajratilgan. Bepul sinab ko\'ring! | Флешкарты HSK 1: учите китайские слова по урокам.',
   };
 }
 

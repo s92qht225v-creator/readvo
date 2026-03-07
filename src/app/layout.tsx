@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans } from 'next/font/google';
+import Script from 'next/script';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 
@@ -10,21 +11,21 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Blim — Interaktiv til o\'rganish',
+    default: 'Xitoy tili o\'rganish — HSK darslari | Blim',
     template: '%s | Blim',
   },
-  description: 'Xitoy va ingliz tillarini interaktiv darsliklar, fleshkartalar, hikoyalar va karaoke orqali o\'rganing. O\'zbek tilidagi tarjimalar bilan.',
+  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke, ieroglif yozish va grammatika. Bepul 7 kunlik sinov! | Учите китайский язык: HSK 1-6 диалоги, флешкарты, караоке и грамматика.',
   openGraph: {
     type: 'website',
     locale: 'uz_UZ',
     siteName: 'Blim',
-    title: 'Blim — Interaktiv til o\'rganish',
-    description: 'Xitoy va ingliz tillarini interaktiv darsliklar, fleshkartalar, hikoyalar va karaoke orqali o\'rganing.',
+    title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
+    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blim — Interaktiv til o\'rganish',
-    description: 'Xitoy va ingliz tillarini interaktiv darsliklar, fleshkartalar, hikoyalar va karaoke orqali o\'rganing.',
+    title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
+    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
   },
   robots: {
     index: true,
@@ -44,7 +45,7 @@ const jsonLd = {
   '@type': 'WebApplication',
   name: 'Blim',
   url: siteUrl,
-  description: 'Xitoy va ingliz tillarini interaktiv darsliklar, fleshkartalar, hikoyalar va karaoke orqali o\'rganing.',
+  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika.',
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Web',
   inLanguage: ['uz', 'ru'],
@@ -62,6 +63,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="uz">
+      <head>
+        <meta name="yandex-verification" content="a66bf653e2117240" />
+        <meta name="msvalidate.01" content="1141CE3E734B8166DEA1C869556D38D1" />
+      </head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-1YH679LNRS" strategy="afterInteractive" />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1YH679LNRS');`}
+      </Script>
       <body className={`${font.className} ${font.variable}`}>
         <script
           type="application/ld+json"

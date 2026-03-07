@@ -1,17 +1,18 @@
 import type { MetadataRoute } from 'next';
 import { loadDialoguesForBook } from '@/services/dialogues';
-import { loadStoriesForBook } from '@/services/stories';
+
 import { loadKaraokeSongs } from '@/services/karaoke';
 import { loadFlashcardDeck } from '@/services/flashcards';
+import { loadBlogPosts } from '@/services/blog';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [dialogues, stories, songs, flashcardDeck] = await Promise.all([
+  const [dialogues, songs, flashcardDeck, blogPosts] = await Promise.all([
     loadDialoguesForBook('hsk1'),
-    loadStoriesForBook('hsk2'),
     loadKaraokeSongs(),
     loadFlashcardDeck('hsk1'),
+    loadBlogPosts(),
   ]);
 
   // Grammar pages
@@ -25,19 +26,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: siteUrl, changeFrequency: 'monthly', priority: 1 },
     { url: `${siteUrl}/chinese`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/chinese/hsk1/flashcards`, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${siteUrl}/chinese/hsk2/stories`, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   // Dialogue pages
   const dialoguePages: MetadataRoute.Sitemap = dialogues.map((d) => ({
     url: `${siteUrl}/chinese/hsk1/dialogues/${d.id}`,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }));
-
-  // Story pages
-  const storyPages: MetadataRoute.Sitemap = stories.map((s) => ({
-    url: `${siteUrl}/chinese/hsk2/stories/${s.id}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
@@ -57,12 +50,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
+  // Blog pages
+  const blogPages: MetadataRoute.Sitemap = [
+    { url: `${siteUrl}/blog`, changeFrequency: 'weekly', priority: 0.7 },
+    ...blogPosts.map((p) => ({
+      url: `${siteUrl}/blog/${p.slug}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
   return [
     ...staticPages,
     ...grammarPages,
     ...dialoguePages,
-    ...storyPages,
     ...karaokePages,
     ...flashcardPages,
+    ...blogPages,
   ];
 }

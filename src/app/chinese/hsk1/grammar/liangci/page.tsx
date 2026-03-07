@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { GrammarLiangciPage } from '@/components/GrammarLiangciPage';
 
 export const metadata: Metadata = {
-  title: '量词 (liàngcí) — Xitoy tili grammatikasi',
-  description: 'Xitoy tilidagi 量词 (sanash so\'zlari, measure words) ni o\'rganing: 个、本、杯、块、只、件、辆 va boshqa asosiy measure wordlar, formulalar va misollar.',
+  title: '量词 (liàngcí) — Xitoy tili grammatikasi | HSK 1',
+  description: 'Xitoy tili grammatikasi: 量词 (liàngcí) — sanash so\'zlari (measure words): 个、本、杯 va boshqalar. Misollar va tushuntirishlar. | Грамматика китайского: 量词 (liàngcí) — счётные слова (measure words): 个、本、杯 и другие. Примеры и объяснения.',
 };
 
 export default function LiangciPage() {

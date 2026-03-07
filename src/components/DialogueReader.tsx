@@ -117,80 +117,11 @@ function RubyChar({ char, py, show }: { char: string; py?: string; show: boolean
   return <span>{char}</span>;
 }
 
-function RubyText({ text, pinyin, show, words, activeWordIdx, onWordPress, onWordRelease }: {
+function RubyText({ text, pinyin, show }: {
   text: string; pinyin: string; show: boolean;
-  words?: StoryWord[]; activeWordIdx?: number | null;
-  onWordPress?: (idx: number) => void; onWordRelease?: () => void;
 }) {
   const pairs = alignPinyinToText(text, pinyin);
-  const pressTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const longPressFiredRef = useRef(false);
-
-  const charToWord = useMemo(() => {
-    if (!words?.length) return null;
-    const map = new Map<number, number>();
-    words.forEach((w, wi) => { for (let c = w.i[0]; c < w.i[1]; c++) map.set(c, wi); });
-    return map;
-  }, [words]);
-
-  const elements: React.ReactNode[] = [];
-  let charIdx = 0;
-
-  if (!charToWord || !words || !onWordPress) {
-    pairs.forEach((p, i) => elements.push(<RubyChar key={i} char={p.char} py={p.pinyin} show={show} />));
-  } else {
-    let currentWordIdx: number | undefined;
-    let wordPairs: { pair: typeof pairs[0]; idx: number }[] = [];
-
-    const flush = () => {
-      if (!wordPairs.length) return;
-      const wIdx = currentWordIdx;
-      if (wIdx !== undefined) {
-        elements.push(
-          <span
-            key={`w${wIdx}`}
-            className={`story__word ${activeWordIdx === wIdx ? 'story__word--active' : ''}`}
-            onContextMenu={e => e.preventDefault()}
-            onPointerDown={e => {
-              e.stopPropagation();
-              longPressFiredRef.current = false;
-              pressTimerRef.current = setTimeout(() => {
-                longPressFiredRef.current = true;
-                onWordPress(wIdx);
-                pressTimerRef.current = null;
-              }, 300);
-            }}
-            onPointerUp={() => {
-              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
-              if (longPressFiredRef.current) { longPressFiredRef.current = false; onWordRelease?.(); }
-            }}
-            onPointerCancel={() => {
-              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
-              if (longPressFiredRef.current) { longPressFiredRef.current = false; onWordRelease?.(); }
-            }}
-            onPointerLeave={() => {
-              if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
-            }}
-          >
-            {wordPairs.map(wp => <RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} show={show} />)}
-          </span>
-        );
-      } else {
-        wordPairs.forEach(wp => elements.push(<RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} show={show} />));
-      }
-      wordPairs = [];
-    };
-
-    pairs.forEach((pair, i) => {
-      const wIdx = charToWord.get(charIdx);
-      if (wIdx !== currentWordIdx) { flush(); currentWordIdx = wIdx; }
-      wordPairs.push({ pair, idx: i });
-      charIdx += pair.char.length;
-    });
-    flush();
-  }
-
-  return <>{elements}</>;
+  return <>{pairs.map((p, i) => <RubyChar key={i} char={p.char} py={p.pinyin} show={show} />)}</>;
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
@@ -217,9 +148,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   const [showTranslation, setShowTranslation] = useState(false);
   const [focusMode, setFocusMode] = useState(false);
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
-  const [activeWord, setActiveWord] = useState<{ sentenceId: string; wordIdx: number } | null>(null);
-  const longPressedRef = useRef(false);
-  const audioPausedByWordRef = useRef(false);
   const sentenceAudio = useAudioPlayer();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -266,8 +194,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
 
   const handleSentenceClick = useCallback((id: string) => {
-    if (longPressedRef.current) { longPressedRef.current = false; return; }
-    setActiveWord(null);
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     if (sentence?.audio_url) {
@@ -275,18 +201,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
       sentenceAudio.play(id, sentence.audio_url);
     }
   }, [focusMode, allSentences, isPlaying, sentenceAudio]);
-
-  const handleWordPress = useCallback((sentenceId: string, wordIdx: number) => {
-    longPressedRef.current = true;
-    if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); audioPausedByWordRef.current = true; }
-    setActiveWord({ sentenceId, wordIdx });
-    setActiveSentenceId(sentenceId);
-  }, [isPlaying]);
-
-  const handleWordRelease = useCallback(() => {
-    setActiveWord(null);
-    if (audioPausedByWordRef.current && audioRef.current) { audioPausedByWordRef.current = false; audioRef.current.play().catch(() => {}); }
-  }, []);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
     const idx = allSentences.findIndex(s => s.id === displaySentenceId);
@@ -399,9 +313,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                   <div className="story__text story__focus-text">
                     <div className="story__focus-line">
                       <span className="story__sentence story__sentence--active" onClick={() => handleSentenceClick(activeSentence.id)}>
-                        <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} show={showPinyin}
-                          words={activeSentence.words} activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
-                          onWordPress={idx => handleWordPress(activeSentence.id, idx)} onWordRelease={handleWordRelease} />
+                        <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} show={showPinyin} />
                       </span>
                     </div>
                     {showTranslation && (
@@ -432,12 +344,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
                       const isActive = displaySentenceId === s.id;
                       const isPlaying2 = audioSentenceId === s.id;
-                      // build char→word index map
-                      const charToWord = new Map<number, number>();
-                      if (s.words) {
-                        s.words.forEach((w, wi) => { for (let c = w.i[0]; c < w.i[1]; c++) charToWord.set(c, wi); });
-                      }
-                      let charPos = 0;
                       return (
                         <div
                           key={s.id}
@@ -451,17 +357,10 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                             <div className="dr-line-chars">
                               {pairs.map((pair, ci) => {
                                 const isPunct = /[，。？！、,.\s]/.test(pair.char);
-                                const wIdx = charToWord.get(charPos);
-                                charPos += pair.char.length;
-                                const isWordActive = activeWord?.sentenceId === s.id && activeWord.wordIdx === wIdx;
                                 return (
                                   <div
                                     key={ci}
-                                    className={`dr-char${isWordActive ? ' dr-char--active' : ''}`}
-                                    onPointerDown={wIdx !== undefined ? (e => { e.stopPropagation(); longPressedRef.current = true; handleWordPress(s.id, wIdx); }) : undefined}
-                                    onPointerUp={wIdx !== undefined ? (() => { longPressedRef.current = false; handleWordRelease(); }) : undefined}
-                                    onPointerCancel={wIdx !== undefined ? (() => { longPressedRef.current = false; handleWordRelease(); }) : undefined}
-                                    onContextMenu={e => e.preventDefault()}
+                                    className="dr-char"
                                   >
                                     {showPinyin && pair.pinyin && (
                                       <div className="dr-char-py">{pair.pinyin}</div>
@@ -475,16 +374,9 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                               })}
                             </div>
                           </div>
-                          {(showTranslation || (activeWord?.sentenceId === s.id)) && (
+                          {showTranslation && (
                             <div className="dr-line-tr">
-                              {activeWord?.sentenceId === s.id && (() => {
-                                const word = s.words?.[activeWord.wordIdx];
-                                if (word) {
-                                  const chars = s.text_original.slice(word.i[0], word.i[1]);
-                                  return <><strong>{chars}</strong> {word.p} — {language === 'ru' ? word.tr : word.t}</>;
-                                }
-                                return null;
-                              })() || (language === 'ru' ? s.text_translation_ru : s.text_translation)}
+                              {language === 'ru' ? s.text_translation_ru : s.text_translation}
                             </div>
                           )}
                         </div>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { GrammarMeiPage } from '@/components/GrammarMeiPage';
 
 export const metadata: Metadata = {
-  title: '没 (méi) — Xitoy tili grammatikasi',
-  description: 'Xitoy tilidagi 没 (méi) inkor yuklamasini o\'rganing: o\'tgan zamon inkori, yo\'qlik bildirish, 没 vs 不 taqqoslash va 没有 qisqartmasi.',
+  title: '没 (méi) — Xitoy tili grammatikasi | HSK 1',
+  description: 'Xitoy tili grammatikasi: 没 (méi) — o\'tgan zamondagi inkor shakli. Misollar va tushuntirishlar. | Грамматика китайского: 没 (méi) — отрицание в прошедшем времени. Примеры и объяснения.',
 };
 
 export default function MeiPage() {

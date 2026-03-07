@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: song
-      ? `${song.title} — Karaoke`
-      : 'Karaoke',
+      ? `${song.title} — Xitoy tili karaoke`
+      : 'Xitoy tili karaoke — KTV',
     description: song
-      ? `${song.title} — xitoy tili karaoke. Pinyin va tarjima bilan qo'shiq kuylang.`
-      : 'Xitoy tili karaoke.',
+      ? `${song.title} (${song.pinyin}) — xitoy tili karaoke (KTV). Pinyin va tarjima bilan xitoycha qo'shiq kuylang. | Караоке на китайском: ${song.titleTranslation_ru}. Пойте с пиньинь и переводом.`
+      : 'Xitoy tili karaoke (KTV) — pinyin bilan kuylang. | Караоке на китайском языке с пиньинь.',
   };
 }
 

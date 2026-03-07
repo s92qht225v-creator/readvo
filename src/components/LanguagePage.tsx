@@ -72,16 +72,16 @@ const WRITING_SETS: { id: string; title: string; title_ru: string; subtitle: str
     subtitle_ru: '10 иероглифов · 的 我 你 是 了 不 在 他 们 好',
     chars: '的我你是了不在他们好',
     words: [
-      { char: '的', pinyin: 'de', uz: 'egalik yuklamasi', ru: 'частица принадлежности', strokes: 8 },
-      { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', strokes: 7 },
-      { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', strokes: 7 },
-      { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', strokes: 9 },
-      { char: '了', pinyin: 'le', uz: 'tugallash yuklamasi', ru: 'частица завершения', strokes: 2 },
-      { char: '不', pinyin: 'bù', uz: 'emas', ru: 'не', strokes: 4 },
-      { char: '在', pinyin: 'zài', uz: "bor / joylashgan", ru: 'находиться / в', strokes: 6 },
-      { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', strokes: 5 },
-      { char: '们', pinyin: 'men', uz: "ko'plik qo'shimchasi", ru: 'суффикс множества', strokes: 5 },
-      { char: '好', pinyin: 'hǎo', uz: 'yaxshi', ru: 'хороший', strokes: 6 },
+      { char: '的', pinyin: 'de', uz: 'egalik yuklamasi', ru: 'частица принадлежности', strokes: 8, radical: '白', radicalUz: 'oq', radicalRu: 'белый', ex: '我的书。', expy: 'Wǒ de shū.', exuz: 'Mening kitobim.', exru: 'Моя книга.' },
+      { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', strokes: 7, radical: '戈', radicalUz: 'nayza', radicalRu: 'копьё', ex: '我是学生。', expy: 'Wǒ shì xuéshēng.', exuz: 'Men talabaman.', exru: 'Я студент.' },
+      { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', strokes: 7, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!' },
+      { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', strokes: 9, radical: '日', radicalUz: 'quyosh', radicalRu: 'солнце', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.' },
+      { char: '了', pinyin: 'le', uz: 'tugallash yuklamasi', ru: 'частица завершения', strokes: 2, radical: '乙', radicalUz: 'ikkinchi', radicalRu: 'второй', ex: '他来了。', expy: 'Tā lái le.', exuz: 'U keldi.', exru: 'Он пришёл.' },
+      { char: '不', pinyin: 'bù', uz: 'emas', ru: 'не', strokes: 4, radical: '一', radicalUz: 'bir', radicalRu: 'один', ex: '我不去。', expy: 'Wǒ bú qù.', exuz: 'Men bormayman.', exru: 'Я не пойду.' },
+      { char: '在', pinyin: 'zài', uz: "bor / joylashgan", ru: 'находиться / в', strokes: 6, radical: '土', radicalUz: 'tuproq', radicalRu: 'земля', ex: '他在家。', expy: 'Tā zài jiā.', exuz: 'U uyda.', exru: 'Он дома.' },
+      { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.' },
+      { char: '们', pinyin: 'men', uz: "ko'plik qo'shimchasi", ru: 'суффикс множества', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '我们是朋友。', expy: 'Wǒmen shì péngyou.', exuz: "Biz do'stmiz.", exru: 'Мы друзья.' },
+      { char: '好', pinyin: 'hǎo', uz: 'yaxshi', ru: 'хороший', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!' },
     ],
   },
   {
@@ -92,16 +92,16 @@ const WRITING_SETS: { id: string; title: string; title_ru: string; subtitle: str
     subtitle_ru: '10 иероглифов · 有 这 就 会 吗 要 什 么 说 她',
     chars: '有这就会吗要什么说她',
     words: [
-      { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', strokes: 6 },
-      { char: '这', pinyin: 'zhè', uz: 'bu', ru: 'это', strokes: 7 },
-      { char: '就', pinyin: 'jiù', uz: 'aynan / shu zahoti', ru: 'именно / сразу', strokes: 12 },
-      { char: '会', pinyin: 'huì', uz: '...a olmoq', ru: 'уметь', strokes: 6 },
-      { char: '吗', pinyin: 'ma', uz: 'savol yuklamasi', ru: 'вопросительная частица', strokes: 6 },
-      { char: '要', pinyin: 'yào', uz: 'kerak / xohlamoq', ru: 'нужно / хотеть', strokes: 9 },
-      { char: '什', pinyin: 'shén', uz: 'nima (什么)', ru: 'что (什么)', strokes: 4 },
-      { char: '么', pinyin: 'me', uz: 'nima (什么)', ru: 'что (什么)', strokes: 3 },
-      { char: '说', pinyin: 'shuō', uz: 'gapirmoq', ru: 'говорить', strokes: 9 },
-      { char: '她', pinyin: 'tā', uz: 'u (ayol)', ru: 'она', strokes: 6 },
+      { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', strokes: 6, radical: '月', radicalUz: 'oy', radicalRu: 'луна', ex: '我有一本书。', expy: 'Wǒ yǒu yì běn shū.', exuz: 'Mening bitta kitobim bor.', exru: 'У меня есть книга.' },
+      { char: '这', pinyin: 'zhè', uz: 'bu', ru: 'это', strokes: 7, radical: '辶', radicalUz: 'yurish', radicalRu: 'движение', ex: '这是什么？', expy: 'Zhè shì shénme?', exuz: 'Bu nima?', exru: 'Что это?' },
+      { char: '就', pinyin: 'jiù', uz: 'aynan / shu zahoti', ru: 'именно / сразу', strokes: 12, radical: '尢', radicalUz: 'cho\'loq', radicalRu: 'хромой', ex: '我就去。', expy: 'Wǒ jiù qù.', exuz: 'Men hoziroq boraman.', exru: 'Я сейчас пойду.' },
+      { char: '会', pinyin: 'huì', uz: '...a olmoq', ru: 'уметь', strokes: 6, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '你会说中文吗？', expy: 'Nǐ huì shuō Zhōngwén ma?', exuz: 'Siz xitoy tilini bilasizmi?', exru: 'Вы умеете говорить по-китайски?' },
+      { char: '吗', pinyin: 'ma', uz: 'savol yuklamasi', ru: 'вопросительная частица', strokes: 6, radical: '口', radicalUz: "og'iz", radicalRu: 'рот', ex: '你好吗？', expy: 'Nǐ hǎo ma?', exuz: 'Yaxshimisiz?', exru: 'Как дела?' },
+      { char: '要', pinyin: 'yào', uz: 'kerak / xohlamoq', ru: 'нужно / хотеть', strokes: 9, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', ex: '我要喝水。', expy: 'Wǒ yào hē shuǐ.', exuz: 'Men suv ichmoqchiman.', exru: 'Я хочу пить воду.' },
+      { char: '什', pinyin: 'shén', uz: 'nima (什么)', ru: 'что (什么)', strokes: 4, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '你叫什么名字？', expy: 'Nǐ jiào shénme míngzi?', exuz: 'Ismingiz nima?', exru: 'Как вас зовут?' },
+      { char: '么', pinyin: 'me', uz: 'nima (什么)', ru: 'что (什么)', strokes: 3, radical: '厶', radicalUz: 'xususiy', radicalRu: 'личный', ex: '什么时候？', expy: 'Shénme shíhou?', exuz: 'Qachon?', exru: 'Когда?' },
+      { char: '说', pinyin: 'shuō', uz: 'gapirmoq', ru: 'говорить', strokes: 9, radical: '讠', radicalUz: 'nutq', radicalRu: 'речь', ex: '他说中文。', expy: 'Tā shuō Zhōngwén.', exuz: 'U xitoy tilida gapiradi.', exru: 'Он говорит по-китайски.' },
+      { char: '她', pinyin: 'tā', uz: 'u (ayol)', ru: 'она', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', ex: '她很漂亮。', expy: 'Tā hěn piàoliang.', exuz: 'U juda chiroyli.', exru: 'Она очень красивая.' },
     ],
   },
 ];
@@ -248,6 +248,10 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
 
   // Writing tab
   const [selectedWritingSet, setSelectedWritingSet] = useState<string | null>(null);
+  const [writingSubtab, setWritingSubtab] = useState<'writing' | 'chars'>('writing');
+  const [writingSearch, setWritingSearch] = useState('');
+  const [grammarSearch, setGrammarSearch] = useState('');
+  const [topicSearch, setTopicSearch] = useState('');
 
   // Flashcard mode
   const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
@@ -320,9 +324,20 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
         <div className="home__hero-inner">
           <span className="lp__hero-watermark" aria-hidden="true">中</span>
           <div className="home__hero-top-row">
-            <Link href="/" className="home__hero-logo">
-              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
-            </Link>
+            {activeTab === 'writing' && selectedWritingSet ? (
+              <button
+                className="dr-back-btn"
+                type="button"
+                onClick={() => setSelectedWritingSet(null)}
+                aria-label="Orqaga"
+              >
+                ‹
+              </button>
+            ) : (
+              <Link href="/" className="home__hero-logo">
+                <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
+              </Link>
+            )}
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
@@ -361,23 +376,44 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
           </div>
         </div>
       </header>
-      <nav className="lp__tabs">
-        <div className="lp__tabs-inner">
-          {tabs.map((tab) => (
+      {activeTab === 'writing' && selectedWritingSet ? (
+        <nav className="lp__tabs">
+          <div className="lp__tabs-inner">
             <button
-              key={tab.id}
-              className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
-              onClick={() => { setActiveTab(tab.id); if (tab.id !== 'writing') setSelectedWritingSet(null); }}
+              className={`lp__tab ${writingSubtab === 'writing' ? 'lp__tab--active' : ''}`}
+              onClick={() => setWritingSubtab('writing')}
               type="button"
             >
-              {language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
+              {language === 'ru' ? 'Письмо' : 'Yozish'}
             </button>
-          ))}
-        </div>
-      </nav>
+            <button
+              className={`lp__tab ${writingSubtab === 'chars' ? 'lp__tab--active' : ''}`}
+              onClick={() => setWritingSubtab('chars')}
+              type="button"
+            >
+              {language === 'ru' ? 'Иероглифы' : 'Hierogliflar'}
+            </button>
+          </div>
+        </nav>
+      ) : (
+        <nav className="lp__tabs">
+          <div className="lp__tabs-inner">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
+                onClick={() => { setActiveTab(tab.id); if (tab.id !== 'writing') setSelectedWritingSet(null); }}
+                type="button"
+              >
+                {language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
+              </button>
+            ))}
+          </div>
+        </nav>
+      )}
 
       {/* HSK level pills */}
-      {activeTab !== 'karaoke' && activeTab !== 'writing' && (
+      {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
@@ -510,33 +546,62 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 words={activeSet.words}
                 onBack={() => setSelectedWritingSet(null)}
                 autoStart
+                hideSubtabs
+                subtab={writingSubtab}
+                onSubtabChange={setWritingSubtab}
               />
             );
           }
+          const wq = writingSearch.trim().toLowerCase();
+          const filteredSets = wq
+            ? WRITING_SETS.filter((s) =>
+                s.title.toLowerCase().includes(wq) ||
+                s.title_ru.toLowerCase().includes(wq) ||
+                s.chars.includes(wq) ||
+                s.subtitle.toLowerCase().includes(wq)
+              )
+            : WRITING_SETS;
           return (
-            <div className="lp__writing-sets">
-              {WRITING_SETS.map((set) => (
-                <button
-                  key={set.id}
-                  className="lp__writing-card"
-                  type="button"
-                  onClick={() => setSelectedWritingSet(set.id)}
-                >
-                  <div className="lp__writing-card__chars" aria-hidden="true">
-                    {set.chars}
-                  </div>
-                  <div className="lp__writing-card__body">
-                    <div className="lp__writing-card__title">
-                      {language === 'ru' ? set.title_ru : set.title}
+            <>
+              <div className="dialogues__search">
+                <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input
+                  type="text"
+                  className="dialogues__search-input"
+                  placeholder={language === 'ru' ? 'Поиск иероглифов...' : 'Belgilarni qidirish...'}
+                  value={writingSearch}
+                  onChange={(e) => setWritingSearch(e.target.value)}
+                />
+              </div>
+              <div className="lp__writing-sets">
+                {filteredSets.map((set) => (
+                  <button
+                    key={set.id}
+                    className="lp__writing-card"
+                    type="button"
+                    onClick={() => setSelectedWritingSet(set.id)}
+                  >
+                    <div className="lp__writing-card__chars" aria-hidden="true">
+                      {set.chars}
                     </div>
-                    <div className="lp__writing-card__sub">
-                      {language === 'ru' ? set.subtitle_ru : set.subtitle}
+                    <div className="lp__writing-card__body">
+                      <div className="lp__writing-card__title">
+                        {language === 'ru' ? set.title_ru : set.title}
+                      </div>
+                      <div className="lp__writing-card__sub">
+                        {language === 'ru' ? set.subtitle_ru : set.subtitle}
+                      </div>
                     </div>
-                  </div>
-                  <div className="lp__card-arrow">›</div>
-                </button>
-              ))}
-            </div>
+                    <div className="lp__card-arrow">›</div>
+                  </button>
+                ))}
+                {filteredSets.length === 0 && (
+                  <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                )}
+              </div>
+            </>
           );
         })()}
 
@@ -556,39 +621,65 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
               </>
             )}
 
-            {flashcardSubTab === 'topics' && (
-              <>
-                <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
-                  {[
-                    { uz: 'Oila', ru: 'Семья', icon: '👨‍👩‍👧', slug: 'family' },
-                    { uz: 'Tana a\'zolari', ru: 'Части тела', icon: '🫀', slug: 'body' },
-                    { uz: 'Oziq-ovqat', ru: 'Еда', icon: '🍜', slug: 'food' },
-                    { uz: 'Hayvonlar', ru: 'Животные', icon: '🐼', slug: 'animals' },
-                    { uz: 'Ranglar', ru: 'Цвета', icon: '🎨', slug: 'colors' },
-                    { uz: 'Sonlar', ru: 'Числа', icon: '🔢', slug: 'numbers' },
-                    { uz: 'Vaqt', ru: 'Время', icon: '⏰', slug: 'time' },
-                    { uz: 'Kasblar', ru: 'Профессии', icon: '👩‍🏫', slug: 'professions' },
-                  ].map((topic) => (
-                    <Link
-                      key={topic.slug}
-                      href={`/chinese/hsk1/flashcards/topic/${topic.slug}`}
-                      style={{
-                        background: '#fff', borderRadius: 10, padding: '14px',
-                        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
-                        display: 'flex', alignItems: 'center', gap: 10,
-                        textDecoration: 'none', color: 'inherit',
-                      }}
-                    >
-                      <span style={{ fontSize: 22 }}>{topic.icon}</span>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
-                        {language === 'ru' ? topic.ru : topic.uz}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
+            {flashcardSubTab === 'topics' && (() => {
+              const allTopics = [
+                { uz: 'Oila', ru: 'Семья', icon: '👨‍👩‍👧', slug: 'family' },
+                { uz: 'Tana a\'zolari', ru: 'Части тела', icon: '🫀', slug: 'body' },
+                { uz: 'Oziq-ovqat', ru: 'Еда', icon: '🍜', slug: 'food' },
+                { uz: 'Hayvonlar', ru: 'Животные', icon: '🐼', slug: 'animals' },
+                { uz: 'Ranglar', ru: 'Цвета', icon: '🎨', slug: 'colors' },
+                { uz: 'Sonlar', ru: 'Числа', icon: '🔢', slug: 'numbers' },
+                { uz: 'Vaqt', ru: 'Время', icon: '⏰', slug: 'time' },
+                { uz: 'Kasblar', ru: 'Профессии', icon: '👩‍🏫', slug: 'professions' },
+              ];
+              const tq = topicSearch.trim().toLowerCase();
+              const filteredTopics = tq
+                ? allTopics.filter((t) =>
+                    t.uz.toLowerCase().includes(tq) ||
+                    t.ru.toLowerCase().includes(tq) ||
+                    t.slug.includes(tq)
+                  )
+                : allTopics;
+              return (
+                <>
+                  <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
+                  <div className="dialogues__search">
+                    <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input
+                      type="text"
+                      className="dialogues__search-input"
+                      placeholder={language === 'ru' ? 'Поиск тем...' : 'Mavzularni qidirish...'}
+                      value={topicSearch}
+                      onChange={(e) => setTopicSearch(e.target.value)}
+                    />
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+                    {filteredTopics.map((topic) => (
+                      <Link
+                        key={topic.slug}
+                        href={`/chinese/hsk1/flashcards/topic/${topic.slug}`}
+                        style={{
+                          background: '#fff', borderRadius: 10, padding: '14px',
+                          boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+                          display: 'flex', alignItems: 'center', gap: 10,
+                          textDecoration: 'none', color: 'inherit',
+                        }}
+                      >
+                        <span style={{ fontSize: 22 }}>{topic.icon}</span>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
+                          {language === 'ru' ? topic.ru : topic.uz}
+                        </div>
+                      </Link>
+                    ))}
+                    {filteredTopics.length === 0 && (
+                      <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                    )}
+                  </div>
+                </>
+              );
+            })()}
           </>
         )}
 
@@ -607,21 +698,49 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
           </div>
         )}
 
-        {activeTab === 'grammar' && (
-          <div className="home__lessons">
-            {grammarItems.map((item) => (
-              <Link key={item.char} href={item.active ? item.href : '#'} className="grammar-card">
-                <span className="grammar-card__bg">{item.char}</span>
-                <div className="grammar-card__top">
-                  <div className="grammar-card__icon" style={{ background: item.color }}>{item.char}</div>
-                  <p className="grammar-card__title">{item.char} {item.pinyin}</p>
-                  {!item.active && <span className="grammar-card__badge">{language === 'ru' ? 'Скоро' : 'Tez kunda'}</span>}
-                </div>
-                <p className="grammar-card__translation">{language === 'ru' ? item.translation_ru : item.translation}</p>
-              </Link>
-            ))}
-          </div>
-        )}
+        {activeTab === 'grammar' && (() => {
+          const gq = grammarSearch.trim().toLowerCase();
+          const filteredGrammar = gq
+            ? grammarItems.filter((item) =>
+                item.char.includes(gq) ||
+                item.pinyin.toLowerCase().includes(gq) ||
+                item.translation.toLowerCase().includes(gq) ||
+                item.translation_ru.toLowerCase().includes(gq)
+              )
+            : grammarItems;
+          return (
+            <>
+              <div className="dialogues__search">
+                <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input
+                  type="text"
+                  className="dialogues__search-input"
+                  placeholder={language === 'ru' ? 'Поиск грамматики...' : 'Grammatikani qidirish...'}
+                  value={grammarSearch}
+                  onChange={(e) => setGrammarSearch(e.target.value)}
+                />
+              </div>
+              <div className="home__lessons">
+                {filteredGrammar.map((item) => (
+                  <Link key={item.char} href={item.active ? item.href : '#'} className="grammar-card">
+                    <span className="grammar-card__bg">{item.char}</span>
+                    <div className="grammar-card__top">
+                      <div className="grammar-card__icon" style={{ background: item.color }}>{item.char}</div>
+                      <p className="grammar-card__title">{item.char} {item.pinyin}</p>
+                      {!item.active && <span className="grammar-card__badge">{language === 'ru' ? 'Скоро' : 'Tez kunda'}</span>}
+                    </div>
+                    <p className="grammar-card__translation">{language === 'ru' ? item.translation_ru : item.translation}</p>
+                  </Link>
+                ))}
+                {filteredGrammar.length === 0 && (
+                  <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                )}
+              </div>
+            </>
+          );
+        })()}
 
         {activeTab === 'tests' && (
           <div className="lang-page__placeholder">

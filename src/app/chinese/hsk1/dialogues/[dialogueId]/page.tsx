@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: PageParams) {
 
   return {
     title: dialogue
-      ? `${dialogue.title} — HSK 1 dialoglar`
-      : 'Dialog',
+      ? `${dialogue.title} — ${dialogue.titleTranslation} | HSK 1 dialog`
+      : 'HSK 1 xitoy tili dialogi',
     description: dialogue
-      ? `HSK 1 xitoy tili dialogi: ${dialogue.title}. Tinglash va o'qish mashqi.`
-      : 'HSK 1 xitoy tili dialogi.',
+      ? `HSK 1 xitoy tili dialogi: ${dialogue.title} (${dialogue.pinyin}) — ${dialogue.titleTranslation}. Pinyin, audio va tarjima bilan tinglang va o'qing. | Диалог HSK 1: ${dialogue.titleTranslation_ru}. Слушайте и читайте с пиньинь и переводом.`
+      : 'HSK 1 xitoy tili dialoglari — pinyin va tarjima bilan. | Диалоги HSK 1 с пиньинь и переводом.',
   };
 }
 

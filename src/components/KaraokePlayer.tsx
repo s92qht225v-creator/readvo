@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
-import { ReaderControls } from './ReaderControls';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
@@ -179,157 +177,157 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     <>
       {showPaywall && <Paywall />}
       <div className={`karaoke${showPaywall ? ' paywall-blur' : ''}`}>
-      {/* Header */}
-      <header className="reader__header">
-        <div className="reader__header-inner">
-          <Link href="/chinese?tab=karaoke" className="reader__home">
-            <Image src="/logo.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
-          </Link>
-          <ReaderControls
-            isPinyinVisible={showPinyin}
-            onPinyinToggle={() => {}}
-            isTranslationVisible={showTranslation}
-            onTranslationToggle={() => {}}
-            fontSize={fontSize}
-            onFontIncrease={() => setFontSize((s) => Math.min(s + 10, 150))}
-            onFontDecrease={() => setFontSize((s) => Math.max(s - 10, 80))}
-            language={language}
-            onLanguageToggle={toggleLanguage}
-            pageNumber={0}
-          />
-          <BannerMenu />
-        </div>
-      </header>
-
-      {/* Translation panel - fixed below header */}
-      {showTranslation && activeLineIdx >= 0 && (() => {
-        const activeLine = song.lines[activeLineIdx];
-        const activeTranslation = language === 'ru' ? activeLine?.translation_ru : activeLine?.translation;
-        return activeTranslation ? (
-          <div className="story__translation-panel">
-            <p className="story__translation-panel-text">{activeTranslation}</p>
+        {/* Hero banner */}
+        <div className="dr-hero">
+          <div className="dr-hero__watermark">曲</div>
+          <div className="dr-hero__top-row">
+            <Link href="/chinese?tab=karaoke" className="dr-back-btn">
+              <span aria-hidden>&#8249;</span>
+            </Link>
+            <BannerMenu />
           </div>
-        ) : null;
-      })()}
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Караоке' : 'Karaoke'}</div>
+            <div className="dr-hero__title">{song.title}</div>
+            <div className="dr-hero__pinyin">{song.pinyin}</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? song.titleTranslation_ru : song.titleTranslation} —</div>
+          </div>
+        </div>
 
-      {/* Lyrics */}
-      <div className="karaoke__lyrics" ref={linesContainerRef} style={{ fontSize: `${fontSize}%` }}>
-        {song.lines.map((line, lineIdx) => {
-          const lineText = line.words.map((w) => w.text).join('');
-          if (!lineText) return null;
-
-          const isActive = lineIdx === activeLineIdx;
-          const isPast = lineIdx < activeLineIdx;
-
-          return (
-            <div
-              key={line.id}
-              className={`karaoke__line ${isActive ? 'karaoke__line--active' : ''} ${isPast ? 'karaoke__line--past' : ''}`}
-              onClick={() => setTappedLineIdx(lineIdx === tappedLineIdx ? -1 : lineIdx)}
-            >
-              {line.words.map((char) => {
-                const charStart = char.timestamp;
-                const charEnd = char.timestamp + char.duration;
-                const isSung = currentTime >= charStart;
-                const isSinging = currentTime >= charStart && currentTime < charEnd;
-                const isPunct = /^[，。！？、；：""''…—·\s.,!?;:'"()\-]$/.test(char.text);
-
-                return (
-                  <ruby
-                    key={char.id}
-                    className={`karaoke__char ${isSinging ? 'karaoke__char--singing' : ''} ${isSung && isActive ? 'karaoke__char--sung' : ''}`}
-                  >
-                    {char.text}
-                    <rp>(</rp>
-                    <rt className={`karaoke__rt ${!showPinyin || isPunct || !char.p ? 'karaoke__rt--hidden' : ''}`}>
-                      {char.p || ''}
-                    </rt>
-                    <rp>)</rp>
-                  </ruby>
-                );
-              })}
+        {/* Translation panel - below hero, sticky */}
+        {showTranslation && activeLineIdx >= 0 && (() => {
+          const activeLine = song.lines[activeLineIdx];
+          const activeTranslation = language === 'ru' ? activeLine?.translation_ru : activeLine?.translation;
+          return activeTranslation ? (
+            <div className="story__translation-panel">
+              <p className="story__translation-panel-text">{activeTranslation}</p>
             </div>
-          );
-        })}
-      </div>
+          ) : null;
+        })()}
 
-      {/* Audio controls */}
-      <div className="karaoke__controls">
-        {/* Progress bar */}
-        <div className="karaoke__progress" onClick={handleSeek}>
-          <div className="karaoke__progress-bar" style={{ width: `${progress}%` }} />
-        </div>
-        <div className="karaoke__time">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration)}</span>
+        {/* Lyrics */}
+        <div className="karaoke__lyrics" ref={linesContainerRef} style={{ fontSize: `${fontSize}%` }}>
+          {song.lines.map((line, lineIdx) => {
+            const lineText = line.words.map((w) => w.text).join('');
+            if (!lineText) return null;
+
+            const isActive = lineIdx === activeLineIdx;
+            const isPast = lineIdx < activeLineIdx;
+
+            return (
+              <div
+                key={line.id}
+                className={`karaoke__line ${isActive ? 'karaoke__line--active' : ''} ${isPast ? 'karaoke__line--past' : ''}`}
+                onClick={() => setTappedLineIdx(lineIdx === tappedLineIdx ? -1 : lineIdx)}
+              >
+                {line.words.map((char) => {
+                  const charStart = char.timestamp;
+                  const charEnd = char.timestamp + char.duration;
+                  const isSung = currentTime >= charStart;
+                  const isSinging = currentTime >= charStart && currentTime < charEnd;
+                  const isPunct = /^[，。！？、；：""''…—·\s.,!?;:'"()\-]$/.test(char.text);
+
+                  return (
+                    <ruby
+                      key={char.id}
+                      className={`karaoke__char ${isSinging ? 'karaoke__char--singing' : ''} ${isSung && isActive ? 'karaoke__char--sung' : ''}`}
+                    >
+                      {char.text}
+                      <rp>(</rp>
+                      <rt className={`karaoke__rt ${!showPinyin || isPunct || !char.p ? 'karaoke__rt--hidden' : ''}`}>
+                        {char.p || ''}
+                      </rt>
+                      <rp>)</rp>
+                    </ruby>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Playback buttons */}
-        <div className="karaoke__playback-row">
-          <button
-            className="karaoke__skip-btn"
-            onClick={() => handleSkip(-15)}
-            type="button"
-            aria-label="Rewind 15 seconds"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M1 4v6h6" />
-              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
-            </svg>
-            <span className="karaoke__skip-label">15</span>
-          </button>
-          <button
-            className={`karaoke__play-btn ${isLoading ? 'karaoke__play-btn--loading' : ''}`}
-            onClick={handlePlayPause}
-            type="button"
-            aria-label={isPlaying ? 'Pause' : 'Play'}
-          >
-            {isLoading ? (
-              <span className="karaoke__spinner" />
-            ) : isPlaying ? (
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        {/* Font controls - floating pill on right */}
+        <div className="dr-font-controls">
+          <button className="dr-font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+          <div className="dr-font-divider" />
+          <button className="dr-font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
+        </div>
+
+        {/* Audio controls + toggles */}
+        <div className="karaoke__controls">
+          {/* Toggle row */}
+          <div className="karaoke__toggle-row">
+            <button
+              className={`karaoke__toggle ${showTranslation ? 'karaoke__toggle--active' : ''}`}
+              onClick={() => setShowTranslation((v) => !v)}
+              type="button"
+            >
+              Tarjima
+            </button>
+            <button
+              className={`karaoke__toggle ${showPinyin ? 'karaoke__toggle--active' : ''}`}
+              onClick={() => setShowPinyin((v) => !v)}
+              type="button"
+            >
+              Pinyin
+            </button>
+          </div>
+
+          {/* Progress bar */}
+          <div className="karaoke__progress" onClick={handleSeek}>
+            <div className="karaoke__progress-bar" style={{ width: `${progress}%` }} />
+          </div>
+          <div className="karaoke__time">
+            <span>{formatTime(currentTime)}</span>
+            <span>{formatTime(duration)}</span>
+          </div>
+
+          {/* Playback buttons */}
+          <div className="karaoke__playback-row">
+            <button
+              className="karaoke__skip-btn"
+              onClick={() => handleSkip(-15)}
+              type="button"
+              aria-label="Rewind 15 seconds"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M1 4v6h6" />
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
               </svg>
-            ) : (
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                <path d="M8 5v14l11-7z" />
+              <span className="karaoke__skip-label">15</span>
+            </button>
+            <button
+              className={`karaoke__play-btn ${isLoading ? 'karaoke__play-btn--loading' : ''}`}
+              onClick={handlePlayPause}
+              type="button"
+              aria-label={isPlaying ? 'Pause' : 'Play'}
+            >
+              {isLoading ? (
+                <span className="karaoke__spinner" />
+              ) : isPlaying ? (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              ) : (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
+            </button>
+            <button
+              className="karaoke__skip-btn"
+              onClick={() => handleSkip(15)}
+              type="button"
+              aria-label="Forward 15 seconds"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M23 4v6h-6" />
+                <path d="M20.49 15a9 9 0 1 1-2.13-9.36L23 10" />
               </svg>
-            )}
-          </button>
-          <button
-            className="karaoke__skip-btn"
-            onClick={() => handleSkip(15)}
-            type="button"
-            aria-label="Forward 15 seconds"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M23 4v6h-6" />
-              <path d="M20.49 15a9 9 0 1 1-2.13-9.36L23 10" />
-            </svg>
-            <span className="karaoke__skip-label">15</span>
-          </button>
+              <span className="karaoke__skip-label">15</span>
+            </button>
+          </div>
         </div>
-      </div>
-
-      {/* Bottom bar with toggles */}
-      <nav className="story__bottom-bar">
-        <div className="story__bottom-bar-inner">
-          <button
-            className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`}
-            onClick={() => setShowTranslation((v) => !v)}
-            type="button"
-          >
-            Tarjima
-          </button>
-          <button
-            className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`}
-            onClick={() => setShowPinyin((v) => !v)}
-            type="button"
-          >
-            Pinyin
-          </button>
-        </div>
-      </nav>
       </div>
     </>
   );

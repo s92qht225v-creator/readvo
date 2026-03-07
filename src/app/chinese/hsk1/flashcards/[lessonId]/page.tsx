@@ -9,8 +9,8 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   return {
-    title: `HSK 1 — ${params.lessonId}-dars fleshkartalari`,
-    description: `HSK 1, ${params.lessonId}-dars so'zlarini fleshkartalar bilan o'rganing.`,
+    title: `HSK 1 ${params.lessonId}-dars so'zlari — Fleshkartalar`,
+    description: `HSK 1, ${params.lessonId}-dars xitoy tili so'zlarini fleshkartalar bilan yodlang. Audio va tarjima bilan. | Флешкарты HSK 1, урок ${params.lessonId}: учите китайские слова с аудио и переводом.`,
   };
 }
 
