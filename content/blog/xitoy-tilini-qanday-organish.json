@@ -1,0 +1,47 @@
+{
+  "slug": "xitoy-tilini-qanday-organish",
+  "title": "Xitoy tilini qanday o'rganish kerak? — To'liq qo'llanma",
+  "title_ru": "Как выучить китайский язык? — Полное руководство",
+  "description": "Xitoy tilini mustaqil o'rganishning eng samarali usullari: HSK imtihoniga tayyorgarlik, pinyin, ieroglif yozish va boshqalar.",
+  "description_ru": "Самые эффективные способы самостоятельного изучения китайского: подготовка к HSK, пиньинь, написание иероглифов.",
+  "date": "2026-03-07",
+  "published": false,
+  "sections": [
+    {
+      "heading": "Xitoy tilini o'rganish qiyinmi?",
+      "heading_ru": "Сложно ли учить китайский?",
+      "body": "Xitoy tili dunyodagi eng ko'p so'zlashiladigan tillardan biri. Ko'pchilik uni juda qiyin deb o'ylaydi, lekin to'g'ri usul bilan uni o'rganish mumkin. HSK (Hanyu Shuiping Kaoshi) — xitoy tili bilim darajasini belgilovchi xalqaro imtihon. HSK 1 dan boshlash eng yaxshi variant.",
+      "body_ru": "Китайский — один из самых распространённых языков мира. Многие считают его очень сложным, но при правильном подходе выучить его вполне реально. HSK (Hanyu Shuiping Kaoshi) — международный экзамен по китайскому. Начать лучше с HSK 1."
+    },
+    {
+      "heading": "1-qadam: Pinyin va tonlarni o'rganing",
+      "heading_ru": "Шаг 1: Выучите пиньинь и тоны",
+      "body": "Pinyin — xitoy tilining lotin alifbosidagi yozuvi. Xitoy tilida 4 ta ton bor va ular so'z ma'nosini o'zgartiradi. Masalan, 'mā' (ona) va 'mǎ' (ot) — bir xil tovush, lekin turli ton. Blim ilovasida har bir gapning pinyin va audio tinglash imkoniyati bor.",
+      "body_ru": "Пиньинь — латинская транскрипция китайского. В китайском 4 тона, которые меняют значение слов. Например, 'mā' (мама) и 'mǎ' (лошадь) — одинаковый звук, но разные тоны. В приложении Blim можно слушать аудио и видеть пиньинь для каждого предложения."
+    },
+    {
+      "heading": "2-qadam: Asosiy so'zlarni yodlang",
+      "heading_ru": "Шаг 2: Запомните базовые слова",
+      "body": "HSK 1 darajasida 150 ta so'z bor. Bu so'zlarni fleshkartalar yordamida yodlash eng samarali usul. Har kuni 5-10 ta yangi so'z o'rganing va eski so'zlarni takrorlang. Blim ilovasidagi aqlli takrorlash tizimi bilgan so'zlaringizni kamroq, bilmaganlarni ko'proq ko'rsatadi.",
+      "body_ru": "В HSK 1 — 150 слов. Флешкарты — самый эффективный способ их запоминать. Учите 5-10 новых слов в день и повторяйте старые. Система умного повторения в Blim показывает знакомые слова реже, а незнакомые — чаще."
+    },
+    {
+      "heading": "3-qadam: Dialoglarni tinglang",
+      "heading_ru": "Шаг 3: Слушайте диалоги",
+      "body": "Tinglash — til o'rganishning eng muhim qismi. HSK 1 darajasidagi dialoglarni qayta-qayta tinglang. Blim ilovasida 47 ta dialog mavjud — har birida pinyin, tarjima va audio bor. Fokus rejimida bitta gapni alohida tinglash mumkin.",
+      "body_ru": "Аудирование — важнейшая часть изучения языка. Слушайте диалоги HSK 1 снова и снова. В Blim есть 47 диалогов с пиньинь, переводом и аудио. В режиме фокуса можно слушать одно предложение отдельно."
+    },
+    {
+      "heading": "4-qadam: Ieroglif yozishni mashq qiling",
+      "heading_ru": "Шаг 4: Практикуйте написание иероглифов",
+      "body": "Ieroglif yozish xotirani mustahkamlaydi. Har bir ieroglifni to'g'ri tartibda (chiziq tartibida) yozish kerak. Blim ilovasidagi yozish bo'limida har bir ieroglifni qo'l bilan yozib mashq qilasiz. SRS tizimi yordamida unutilgan ierogliflar ko'proq takrorlanadi.",
+      "body_ru": "Написание иероглифов укрепляет память. Каждый иероглиф нужно писать в правильном порядке черт. В разделе письма Blim вы практикуете написание каждого иероглифа от руки. Система SRS показывает забытые иероглифы чаще."
+    },
+    {
+      "heading": "5-qadam: Karaoke bilan talaffuzni yaxshilang",
+      "heading_ru": "Шаг 5: Улучшайте произношение с караоке",
+      "body": "Xitoycha qo'shiq kuylash — talaffuzni yaxshilashning eng yoqimli usuli. Blim ilovasidagi karaoke bo'limida har bir belgi alohida ranglangan — qaysi so'zni qachon kuylash kerakligini ko'rasiz. Pinyin va tarjima ham ko'rsatiladi.",
+      "body_ru": "Петь китайские песни — самый приятный способ улучшить произношение. В караоке Blim каждый символ подсвечивается отдельно — вы видите, когда какое слово петь. Пиньинь и перевод тоже показываются."
+    }
+  ]
+}

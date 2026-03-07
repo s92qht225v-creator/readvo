@@ -96,6 +96,9 @@ export function BannerMenu() {
             </Link>
           </div>
           <div className="home__menu-divider" />
+          <Link href="/blog" className="home__menu-item" onClick={() => setMenuOpen(false)}>
+            Blog
+          </Link>
           <Link href="/payment" className="home__menu-item" onClick={() => setMenuOpen(false)}>
             {language === 'ru' ? 'Оплата' : "To'lov"}
           </Link>

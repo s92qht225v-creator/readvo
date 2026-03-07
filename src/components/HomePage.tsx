@@ -11,36 +11,38 @@ import { AdminPanel } from './AdminPanel';
 const t = {
   uz: {
     login: 'Telegram orqali kirish',
-    heroTitle: 'Chet tillarini interaktiv hikoyalar bilan o\'rganing',
+    heroTitle: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
     heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
     languages: 'Tillarni tanlang',
     howItWorks: 'Qanday ishlaydi?',
-    step1Title: 'Darslikni tanlang',
-    step1Desc: 'HSK darsliklari va hikoyalardan o\'zingizga mos bo\'lganini tanlang',
-    step2Title: 'O\'qing va tinglang',
-    step2Desc: 'Pinyin, tarjima va audio bilan har bir gapni tushunib o\'qing',
-    step3Title: 'Lug\'atni yodlang',
-    step3Desc: 'Flashkartalar va mashqlar bilan so\'zlarni mustahkamlang',
+    step1Title: 'Dialoglarni tinglang',
+    step1Desc: 'Pinyin, tarjima va audio bilan har bir gapni tushunib o\'qing',
+    step2Title: 'So\'zlarni yodlang',
+    step2Desc: 'Flashkartalar va ieroglif yozish mashqlari bilan mustahkamlang',
+    step3Title: 'Karaoke bilan mashq qiling',
+    step3Desc: 'Xitoycha qo\'shiqlarni kuylang va talaffuzingizni yaxshilang',
+    step4Title: 'Bilimingizni test qiling',
+    step4Desc: 'Testlar bilan o\'zingizni sinab ko\'ring va natijangizni kuzating',
     features: 'Imkoniyatlar',
-    feat1Title: 'Pinyin va tarjima',
-    feat1Desc: 'Har bir gap uchun pinyin va o\'zbek/rus tarjimasini yoqing yoki o\'chiring',
-    feat2Title: 'Audio tinglash',
-    feat2Desc: 'Har bir gapni alohida yoki butun dialogni tinglang',
-    feat3Title: 'Flashkartalar',
-    feat3Desc: 'HSK so\'zlarini 3D kartalar bilan yodlang va tekshiring',
-    feat4Title: 'Hikoyalar',
-    feat4Desc: 'Darajali hikoyalarni o\'qing, so\'zlarni bosib tarjimasini ko\'ring',
-    feat5Title: 'Progress kuzatuv',
-    feat5Desc: 'Qaysi darslarni tugatganingizni kuzatib boring',
+    feat1Title: 'Pinyin yoqish/o\'chirish',
+    feat1Desc: 'Har bir gap uchun pinyin va tarjimani alohida yoqing yoki o\'chiring',
+    feat2Title: 'Gapma-gap audio',
+    feat2Desc: 'Har bir gapni alohida bosib tinglang yoki butun dialogni ijro eting',
+    feat3Title: 'Grammatika',
+    feat3Desc: 'Grammatik mavzular: 是, 有, 在, 的, 不, 吗 va boshqalar',
+    feat4Title: 'Fokus rejimi',
+    feat4Desc: 'Bitta gapga e\'tiborni jamlang va uni qayta-qayta tinglang',
+    feat5Title: 'Aqlli takrorlash',
+    feat5Desc: 'Bilgan ierogliflaringiz kamroq, bilmaganlar ko\'proq takrorlanadi',
     feat6Title: 'Ikki tilli',
-    feat6Desc: 'O\'zbek va rus tillarida tarjimalar mavjud',
+    feat6Desc: 'Barcha tarjimalar o\'zbek va rus tillarida mavjud',
     showcaseTitle: 'Bosib tarjima qiling',
     showcaseSubtitle: 'Matnda istalgan so\'zni bosing va tarjimasini ko\'ring',
     showcaseLabel1: 'Flashkartalar bilan mashq qiling',
     showcaseLabel2: 'Kontekstda tushunish',
-    ctaTitle: 'Hoziroq boshlang',
-    ctaSubtitle: 'Bepul ro\'yxatdan o\'ting va o\'qishni boshlang',
+    ctaTitle: '7 kun bepul sinab ko\'ring',
+    ctaSubtitle: 'Ro\'yxatdan o\'ting va barcha imkoniyatlardan foydalaning — hech qanday to\'lov talab qilinmaydi',
     footerText: 'Blim — Interaktiv til darsliklari',
     chinese: 'Xitoy tili',
     english: 'Ingliz tili',
@@ -48,36 +50,38 @@ const t = {
   },
   ru: {
     login: 'Войти через Telegram',
-    heroTitle: 'Учите иностранные языки через интерактивные истории',
+    heroTitle: 'Учите китайский язык с интерактивными уроками',
     heroSubtitle: 'Эффективно учите китайский с пиньинь, аудио, переводом и карточками',
     startFree: 'Начать бесплатно',
     languages: 'Выберите язык',
     howItWorks: 'Как это работает?',
-    step1Title: 'Выберите учебник',
-    step1Desc: 'Выберите подходящий учебник HSK или историю',
-    step2Title: 'Читайте и слушайте',
-    step2Desc: 'Читайте каждое предложение с пиньинь, переводом и аудио',
-    step3Title: 'Запоминайте слова',
-    step3Desc: 'Закрепляйте слова с помощью карточек и упражнений',
+    step1Title: 'Слушайте диалоги',
+    step1Desc: 'Читайте каждое предложение с пиньинь, переводом и аудио',
+    step2Title: 'Запоминайте слова',
+    step2Desc: 'Закрепляйте с помощью карточек и упражнений по написанию иероглифов',
+    step3Title: 'Пойте караоке',
+    step3Desc: 'Пойте китайские песни и улучшайте произношение',
+    step4Title: 'Проверьте свои знания',
+    step4Desc: 'Проходите тесты и отслеживайте свой прогресс',
     features: 'Возможности',
-    feat1Title: 'Пиньинь и перевод',
+    feat1Title: 'Пиньинь вкл/выкл',
     feat1Desc: 'Включайте или выключайте пиньинь и перевод для каждого предложения',
-    feat2Title: 'Аудио',
-    feat2Desc: 'Слушайте каждое предложение или весь диалог целиком',
-    feat3Title: 'Карточки',
-    feat3Desc: 'Запоминайте слова HSK с помощью 3D-карточек',
-    feat4Title: 'Истории',
-    feat4Desc: 'Читайте адаптированные истории, нажимайте на слова для перевода',
-    feat5Title: 'Отслеживание прогресса',
-    feat5Desc: 'Следите за пройденными уроками',
+    feat2Title: 'Аудио по предложениям',
+    feat2Desc: 'Нажмите на предложение, чтобы прослушать, или включите весь диалог',
+    feat3Title: 'Грамматика',
+    feat3Desc: 'Грамматические темы: 是, 有, 在, 的, 不, 吗 и другие',
+    feat4Title: 'Режим фокуса',
+    feat4Desc: 'Сфокусируйтесь на одном предложении и слушайте его многократно',
+    feat5Title: 'Умное повторение',
+    feat5Desc: 'Знакомые иероглифы реже, незнакомые — чаще повторяются',
     feat6Title: 'Двуязычный',
     feat6Desc: 'Переводы на узбекском и русском языках',
     showcaseTitle: 'Нажмите для перевода',
     showcaseSubtitle: 'Просто нажмите на любое слово в тексте, чтобы увидеть перевод',
     showcaseLabel1: 'Практикуйте с карточками',
     showcaseLabel2: 'Понимайте в контексте',
-    ctaTitle: 'Начните сейчас',
-    ctaSubtitle: 'Зарегистрируйтесь бесплатно и начните читать',
+    ctaTitle: '7 дней бесплатно',
+    ctaSubtitle: 'Зарегистрируйтесь и получите полный доступ ко всем функциям — без оплаты',
     footerText: 'Blim — Интерактивные учебники языков',
     chinese: 'Китайский язык',
     english: 'Английский язык',
@@ -168,7 +172,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       <nav className="landing__nav">
         <div className="landing__nav-inner">
           <span className="landing__nav-logo">
-            <Image src="/logo.svg" alt="Blim" width={100} height={34} className="landing__nav-logo-img" priority />
+            <Image src="/logo-red.svg" alt="Blim" width={100} height={34} className="landing__nav-logo-img" priority />
           </span>
           <div className="landing__nav-links">
             <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>
@@ -226,8 +230,18 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
             <div className="landing__demo-line landing__demo-line--translation">В моей семье четыре человека: папа, мама, старшая сестра и я.</div>
           </div>
           <div className="landing__demo-card landing__demo-card--third">
-            <div className="landing__demo-line landing__demo-line--large">
-              我今天想去<span className="landing__demo-highlight"><span className="landing__demo-tooltip">oila</span>家<svg className="landing__demo-cursor" viewBox="0 0 32 32" fill="white" stroke="#333" strokeWidth="1"><path d="M10 2v18l4.5-4.5L18 24l4-2-3.5-8.5H26L10 2z"/></svg></span>里看书。
+            <div className="landing__demo-audio-row">
+              <div className="landing__demo-audio-btn">▶</div>
+              <div className="landing__demo-audio-text">
+                <div className="landing__demo-chinese">你想吃什么？</div>
+                <div className="landing__demo-line landing__demo-line--pinyin">Nǐ xiǎng chī shénme?</div>
+                <div className="landing__demo-line landing__demo-line--translation">{language === 'ru' ? 'Что ты хочешь поесть?' : 'Nima yemoqchisan?'}</div>
+              </div>
+            </div>
+            <div className="landing__demo-waveform">
+              {[3,5,8,12,7,10,14,9,6,11,15,8,5,9,13,7,4,8,11,6,3].map((h, i) => (
+                <div key={i} className="landing__demo-wave-bar" style={{ height: `${h * 2}px` }} />
+              ))}
             </div>
           </div>
         </div>
@@ -235,23 +249,24 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
           <div className="landing__hero-langs-inner">
             <div className="landing__hero-langs-row">
               {[
-                { code: 'uz', name: "O'zbek" },
-                { code: 'ru', name: 'Русский' },
+                { code: 'uz', name: "O'zbek tili" },
+                { code: 'ru', name: 'Русский язык' },
               ].map((lang) => (
                 <div key={lang.name} className="landing__hero-lang">
                   <Image
                     src={`https://flagcdn.com/w320/${lang.code}.png`}
                     alt={lang.name}
-                    width={56}
-                    height={38}
+                    width={120}
+                    height={80}
                     className="landing__hero-lang-flag"
+                    style={lang.code === 'uz' ? { objectPosition: 'left center' } : undefined}
                   />
                   <span className="landing__hero-lang-name">{lang.name}</span>
                 </div>
               ))}
             </div>
             <p className="landing__hero-langs-more">
-              {language === 'ru' ? '+ Тоҷик, скоро...' : "+ Tojik, tez kunda..."}
+              {language === 'ru' ? '+ Казахский, скоро...' : "+ Qozoq tili, tez kunda..."}
             </p>
           </div>
         </div>
@@ -262,22 +277,24 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
         <h2 className="landing__section-title">{s.howItWorks}</h2>
         <div className="landing__steps">
           <div className="landing__step">
-            <div className="landing__step-icon">📚</div>
             <div className="landing__step-num">1</div>
             <h3 className="landing__step-title">{s.step1Title}</h3>
             <p className="landing__step-desc">{s.step1Desc}</p>
           </div>
           <div className="landing__step">
-            <div className="landing__step-icon">🎧</div>
             <div className="landing__step-num">2</div>
             <h3 className="landing__step-title">{s.step2Title}</h3>
             <p className="landing__step-desc">{s.step2Desc}</p>
           </div>
           <div className="landing__step">
-            <div className="landing__step-icon">🃏</div>
             <div className="landing__step-num">3</div>
             <h3 className="landing__step-title">{s.step3Title}</h3>
             <p className="landing__step-desc">{s.step3Desc}</p>
+          </div>
+          <div className="landing__step">
+            <div className="landing__step-num">4</div>
+            <h3 className="landing__step-title">{s.step4Title}</h3>
+            <p className="landing__step-desc">{s.step4Desc}</p>
           </div>
         </div>
       </section>
@@ -287,17 +304,49 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
         <h2 className="landing__section-title">{s.features}</h2>
         <div className="landing__features">
           {[
-            { icon: '🔤', title: s.feat1Title, desc: s.feat1Desc },
-            { icon: '🔊', title: s.feat2Title, desc: s.feat2Desc },
-            { icon: '🎴', title: s.feat3Title, desc: s.feat3Desc },
-            { icon: '📖', title: s.feat4Title, desc: s.feat4Desc },
-            { icon: '📊', title: s.feat5Title, desc: s.feat5Desc },
-            { icon: '🌐', title: s.feat6Title, desc: s.feat6Desc },
+            { title: s.feat1Title, desc: s.feat1Desc },
+            { title: s.feat2Title, desc: s.feat2Desc },
+            { title: s.feat3Title, desc: s.feat3Desc },
+            { title: s.feat4Title, desc: s.feat4Desc },
+            { title: s.feat5Title, desc: s.feat5Desc },
+            { title: s.feat6Title, desc: s.feat6Desc },
           ].map((feat) => (
             <div key={feat.title} className="landing__feature">
-              <div className="landing__feature-icon">{feat.icon}</div>
               <h3 className="landing__feature-title">{feat.title}</h3>
               <p className="landing__feature-desc">{feat.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="landing__section landing__section--gray">
+        <h2 className="landing__section-title">{language === 'ru' ? 'Отзывы' : 'Foydalanuvchilar fikri'}</h2>
+        <div className="landing__testimonials">
+          {[
+            {
+              name: language === 'ru' ? 'Дилноза, 22' : 'Dilnoza, 22',
+              text: language === 'ru'
+                ? 'Караоке — мой любимый способ учить китайский. Теперь я пою песни и запоминаю слова легко!'
+                : 'Karaoke — xitoy tilini o\'rganishning eng yoqimli usuli. Endi qo\'shiq aytib so\'zlarni oson yodlayman!',
+            },
+            {
+              name: language === 'ru' ? 'Азиз, 19' : 'Aziz, 19',
+              text: language === 'ru'
+                ? 'Раньше я путался в тонах, но благодаря аудио к каждому предложению мое произношение стало намного лучше.'
+                : 'Oldin tonlarda adashardim, lekin har bir gapdagi audio tufayli talaffuzim ancha yaxshilandi.',
+            },
+            {
+              name: language === 'ru' ? 'Мадина, 25' : 'Madina, 25',
+              text: language === 'ru'
+                ? 'Флешкарты и написание иероглифов — очень удобно. За месяц выучила больше 200 слов!'
+                : 'Fleshkartalar va ieroglif yozish — juda qulay. Bir oyda 200 dan ortiq so\'z yodladim!',
+            },
+          ].map((t) => (
+            <div key={t.name} className="landing__testimonial">
+              <div className="landing__testimonial-stars">{'★★★★★'}</div>
+              <p className="landing__testimonial-text">&ldquo;{t.text}&rdquo;</p>
+              <p className="landing__testimonial-name">— {t.name}</p>
             </div>
           ))}
         </div>
@@ -315,7 +364,9 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
 
       {/* Footer */}
       <footer className="landing__footer">
+        <Image src="/logo.svg" alt="Blim" width={64} height={28} className="landing__footer-logo" />
         <p className="landing__footer-text">{s.footerText}</p>
+        <Link href="/blog" className="landing__footer-link">Blog</Link>
       </footer>
     </div>
   );
