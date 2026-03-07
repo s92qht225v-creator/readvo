@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: 'Xitoy tili o\'rganish — HSK darslari | Blim',
     template: '%s | Blim',
   },
-  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke, ieroglif yozish va grammatika. Bepul 7 kunlik sinov! | Учите китайский язык: HSK 1-6 диалоги, флешкарты, караоке и грамматика.',
+  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul boshlang! | Изучайте китайский: HSK 1-6, флешкарты, караоке.',
   openGraph: {
     type: 'website',
     locale: 'uz_UZ',
@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
     description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
+  },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'uz': '/',
+      'ru': '/',
+      'x-default': '/',
+    },
   },
   robots: {
     index: true,

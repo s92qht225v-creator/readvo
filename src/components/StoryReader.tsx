@@ -460,6 +460,8 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
         </div>
       </header>
 
+      <h1 className="sr-only">{story.title}</h1>
+
       {showWordHint && (
         <div
           className="story__word-hint"

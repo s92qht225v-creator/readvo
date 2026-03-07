@@ -342,14 +342,14 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1</div>
-            <div className="dr-hero__title">{
+            <h1 className="dr-hero__title">{
               activeTab === 'dialogues' ? '对话' :
               activeTab === 'writing' ? '书写' :
               activeTab === 'flashcards' ? '词卡' :
               activeTab === 'karaoke' ? '歌曲' :
               activeTab === 'grammar' ? '语法' :
               '测验'
-            }</div>
+            }</h1>
             <div className="dr-hero__pinyin">{
               activeTab === 'dialogues' ? 'duìhuà' :
               activeTab === 'writing' ? 'shūxiě' :

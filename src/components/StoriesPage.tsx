@@ -36,6 +36,12 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
             </Link>
             <BannerMenu />
           </div>
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK 2</div>
+            <h1 className="dr-hero__title">故事</h1>
+            <div className="dr-hero__pinyin">gùshi</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? 'Рассказы' : 'Hikoyalar'} —</div>
+          </div>
           <div className="lang-page__tabs">
             {[1, 2, 3, 4, 5, 6].map((level) => {
               const id = `hsk${level}`;

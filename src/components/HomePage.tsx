@@ -11,7 +11,7 @@ import { AdminPanel } from './AdminPanel';
 const t = {
   uz: {
     login: 'Telegram orqali kirish',
-    heroTitle: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
+    heroTitle: 'Xitoy tilini online o\'rganing — HSK 1–6 darslari, dialoglar va karaoke',
     heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
     languages: 'Tillarni tanlang',
@@ -50,7 +50,7 @@ const t = {
   },
   ru: {
     login: 'Войти через Telegram',
-    heroTitle: 'Учите китайский язык с интерактивными уроками',
+    heroTitle: 'Учите китайский онлайн — уроки HSK 1–6, диалоги и караоке',
     heroSubtitle: 'Эффективно учите китайский с пиньинь, аудио, переводом и карточками',
     startFree: 'Начать бесплатно',
     languages: 'Выберите язык',

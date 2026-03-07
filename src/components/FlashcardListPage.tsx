@@ -37,7 +37,7 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1</div>
-            <div className="dr-hero__title">词卡</div>
+            <h1 className="dr-hero__title">词卡</h1>
             <div className="dr-hero__pinyin">cíkǎ</div>
             <div className="dr-hero__translation">— {language === 'ru' ? 'Флешкарты' : 'Fleshkartalar'} —</div>
           </div>

@@ -282,7 +282,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Диалог' : 'Dialog'}</div>
-            <div className="dr-hero__title">{dialogue.title}</div>
+            <h1 className="dr-hero__title">{dialogue.title}</h1>
             <div className="dr-hero__pinyin">{dialogue.pinyin}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation} —</div>
           </div>

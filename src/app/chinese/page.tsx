@@ -7,7 +7,8 @@ import { getLessonsWithInfo } from '@/services/content';
 
 export const metadata: Metadata = {
   title: 'Xitoy tili darslari — HSK 1-6 dialoglar, fleshkartalar, karaoke',
-  description: 'Xitoy tili o\'rganish: HSK 1-6 dialoglar, fleshkartalar, karaoke, ieroglif yozish va grammatika. Online bepul boshlang! | Китайский язык: HSK 1-6 диалоги, флешкарты, караоке, написание иероглифов и грамматика.',
+  description: 'HSK 1-6 dialoglar, fleshkartalar, karaoke, ieroglif yozish va grammatika. Bepul boshlang! | HSK 1-6: диалоги, флешкарты, караоке и грамматика.',
+  alternates: { canonical: '/chinese' },
 };
 
 export default async function ChinesePage() {

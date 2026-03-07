@@ -188,7 +188,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Караоке' : 'Karaoke'}</div>
-            <div className="dr-hero__title">{song.title}</div>
+            <h1 className="dr-hero__title">{song.title}</h1>
             <div className="dr-hero__pinyin">{song.pinyin}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? song.titleTranslation_ru : song.titleTranslation} —</div>
           </div>

@@ -79,7 +79,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">{tabConfig ? 'B1' : 'HSK 1'}</div>
-            <div className="dr-hero__title">{tabConfig ? 'Kitob' : '课本'}</div>
+            <h1 className="dr-hero__title">{tabConfig ? 'Kitob' : '课本'}</h1>
             <div className="dr-hero__pinyin">{tabConfig ? '' : 'kèběn'}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? 'Учебник' : 'Darslik'} —</div>
           </div>

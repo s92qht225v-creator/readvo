@@ -17,7 +17,7 @@ export default async function BlogPage() {
         <Link href="/" className="blog__logo-link">
           <Image src="/logo-red.svg" alt="Blim" width={64} height={28} className="blog__logo-img" />
         </Link>
-        <p className="blog__subtitle">Xitoy tili o&apos;rganish bo&apos;yicha maqolalar</p>
+        <h1 className="blog__subtitle">Xitoy tili o&apos;rganish bo&apos;yicha maqolalar</h1>
       </div>
       <div className="blog__list">
         {posts.map((post) => (
