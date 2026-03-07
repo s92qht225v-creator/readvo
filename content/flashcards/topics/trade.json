@@ -1,0 +1,79 @@
+{
+  "id": "topic-trade",
+  "title": "Savdo atamalar",
+  "title_ru": "Торговля",
+  "title_zh": "贸易词汇",
+  "title_pinyin": "Màoyì cíhuì",
+  "words": [
+    {
+      "id": "tp-trd-01",
+      "text_original": "买",
+      "pinyin": "mǎi",
+      "text_translation": "sotib olmoq",
+      "text_translation_ru": "покупать"
+    },
+    {
+      "id": "tp-trd-02",
+      "text_original": "卖",
+      "pinyin": "mài",
+      "text_translation": "sotmoq",
+      "text_translation_ru": "продавать"
+    },
+    {
+      "id": "tp-trd-03",
+      "text_original": "采购",
+      "pinyin": "cǎigòu",
+      "text_translation": "xarid qilmoq; ta'minlash",
+      "text_translation_ru": "закупать; снабжать"
+    },
+    {
+      "id": "tp-trd-04",
+      "text_original": "批发",
+      "pinyin": "pīfā",
+      "text_translation": "ulgurji savdo",
+      "text_translation_ru": "оптовая торговля"
+    },
+    {
+      "id": "tp-trd-05",
+      "text_original": "零售",
+      "pinyin": "língshòu",
+      "text_translation": "chakana savdo",
+      "text_translation_ru": "розничная торговля"
+    },
+    {
+      "id": "tp-trd-06",
+      "text_original": "供应",
+      "pinyin": "gōngyìng",
+      "text_translation": "yetkazib bermoq; ta'minlamoq",
+      "text_translation_ru": "снабжать; поставлять"
+    },
+    {
+      "id": "tp-trd-07",
+      "text_original": "供应商",
+      "pinyin": "gōngyìngshāng",
+      "text_translation": "yetkazib beruvchi",
+      "text_translation_ru": "поставщик"
+    },
+    {
+      "id": "tp-trd-08",
+      "text_original": "经销商",
+      "pinyin": "jīngxiāoshāng",
+      "text_translation": "distribyutor; sotuvchi",
+      "text_translation_ru": "дистрибьютор; дилер"
+    },
+    {
+      "id": "tp-trd-09",
+      "text_original": "代理",
+      "pinyin": "dàilǐ",
+      "text_translation": "vakil; agent",
+      "text_translation_ru": "агент; представитель"
+    },
+    {
+      "id": "tp-trd-10",
+      "text_original": "代理商",
+      "pinyin": "dàilǐshāng",
+      "text_translation": "vakolatli vakil; agent firma",
+      "text_translation_ru": "агентская компания; представитель"
+    }
+  ]
+}

@@ -176,27 +176,22 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
         </div>
 
         {isComplete ? (
-          <div className="flashcard__complete">
-            <span className="flashcard__complete-text">
-              {language === 'ru' ? 'Отлично! Все карточки просмотрены!' : 'Ajoyib! Barcha kartalar ko\'rib chiqildi!'}
-            </span>
-            <div className="flashcard__stats">
-              <div className="flashcard__stat">
-                <span className="flashcard__stat-value flashcard__stat-value--known">{knownIds.size}</span>
-                <span className="flashcard__stat-label">{language === 'ru' ? 'Знаю' : 'Bilaman'}</span>
-              </div>
-              <div className="flashcard__stat">
-                <span className="flashcard__stat-value flashcard__stat-value--unknown">{unknownIds.size}</span>
-                <span className="flashcard__stat-label">{language === 'ru' ? 'Не знаю' : 'Bilmayman'}</span>
-              </div>
+          <div className="hanzi-done">
+            <div className="hanzi-done__title">
+              {language === 'ru' ? 'Отлично! 🎉' : 'Barakalla! 🎉'}
             </div>
-            <div className="flashcard__restart-btns">
+            <div className="hanzi-done__stats">
+              {language === 'ru'
+                ? `Знаю: ${knownIds.size} · Не знаю: ${unknownIds.size}`
+                : `Bilaman: ${knownIds.size} · Bilmayman: ${unknownIds.size}`}
+            </div>
+            <div className="hanzi-done__buttons">
               {unknownIds.size > 0 && (
-                <button className="flashcard__restart-btn" onClick={handleRestartUnknown} type="button">
+                <button className="hanzi-done__restart-btn" onClick={handleRestartUnknown} type="button">
                   {language === 'ru' ? `Повторить незнакомые (${unknownIds.size})` : `Bilmaganlarni takrorlash (${unknownIds.size})`}
                 </button>
               )}
-              <button className="flashcard__restart-btn" onClick={handleRestartAll} type="button">
+              <button className="hanzi-done__back-btn" onClick={handleRestartAll} type="button">
                 {language === 'ru' ? 'Начать сначала' : 'Boshidan boshlash'}
               </button>
             </div>

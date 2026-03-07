@@ -1,0 +1,114 @@
+{
+  "id": "topic-car-interior",
+  "title": "Mashina ichki qismlari",
+  "title_ru": "Салон автомобиля",
+  "title_zh": "汽车内部",
+  "title_pinyin": "Qìchē nèibù",
+  "words": [
+    {
+      "id": "tp-cin-01",
+      "text_original": "方向盘",
+      "pinyin": "fāngxiàngpán",
+      "text_translation": "rul",
+      "text_translation_ru": "руль"
+    },
+    {
+      "id": "tp-cin-02",
+      "text_original": "座椅",
+      "pinyin": "zuòyǐ",
+      "text_translation": "o'rindiq",
+      "text_translation_ru": "сиденье"
+    },
+    {
+      "id": "tp-cin-03",
+      "text_original": "安全带",
+      "pinyin": "ānquándài",
+      "text_translation": "xavfsizlik kamari",
+      "text_translation_ru": "ремень безопасности"
+    },
+    {
+      "id": "tp-cin-04",
+      "text_original": "仪表盘",
+      "pinyin": "yíbiǎopán",
+      "text_translation": "pribor paneli",
+      "text_translation_ru": "приборная панель"
+    },
+    {
+      "id": "tp-cin-05",
+      "text_original": "中控台",
+      "pinyin": "zhōngkòngtái",
+      "text_translation": "markaziy panel",
+      "text_translation_ru": "центральная консоль"
+    },
+    {
+      "id": "tp-cin-06",
+      "text_original": "空调",
+      "pinyin": "kōngtiáo",
+      "text_translation": "konditsioner",
+      "text_translation_ru": "кондиционер"
+    },
+    {
+      "id": "tp-cin-07",
+      "text_original": "音响",
+      "pinyin": "yīnxiǎng",
+      "text_translation": "musiqa tizimi",
+      "text_translation_ru": "аудиосистема"
+    },
+    {
+      "id": "tp-cin-08",
+      "text_original": "后视镜",
+      "pinyin": "hòushìjìng",
+      "text_translation": "ichki ko'zgu",
+      "text_translation_ru": "зеркало заднего вида (салонное)"
+    },
+    {
+      "id": "tp-cin-09",
+      "text_original": "手刹",
+      "pinyin": "shǒushā",
+      "text_translation": "qo'l tormozi",
+      "text_translation_ru": "ручной тормоз"
+    },
+    {
+      "id": "tp-cin-10",
+      "text_original": "挡位",
+      "pinyin": "dǎngwèi",
+      "text_translation": "uzatma; peredacha",
+      "text_translation_ru": "передача; режим КПП"
+    },
+    {
+      "id": "tp-cin-11",
+      "text_original": "油门",
+      "pinyin": "yóumén",
+      "text_translation": "gaz pedali",
+      "text_translation_ru": "педаль газа"
+    },
+    {
+      "id": "tp-cin-12",
+      "text_original": "刹车",
+      "pinyin": "shāchē",
+      "text_translation": "tormoz",
+      "text_translation_ru": "тормоз"
+    },
+    {
+      "id": "tp-cin-13",
+      "text_original": "离合器",
+      "pinyin": "líhéqì",
+      "text_translation": "stsepleniye",
+      "text_translation_ru": "сцепление"
+    },
+    {
+      "id": "tp-cin-14",
+      "text_original": "手套箱",
+      "pinyin": "shǒutàoxiāng",
+      "text_translation": "bardachok",
+      "text_translation_ru": "бардачок"
+    },
+    {
+      "id": "tp-cin-15",
+      "text_original": "后备箱",
+      "pinyin": "hòubèixiāng",
+      "text_translation": "bagajnik",
+      "text_translation_ru": "багажник"
+    }
+  ]
+}

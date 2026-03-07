@@ -1,0 +1,65 @@
+{
+  "id": "topic-contracts",
+  "title": "Shartnoma atamalar",
+  "title_ru": "Договоры",
+  "title_zh": "合同词汇",
+  "title_pinyin": "Hétong cíhuì",
+  "words": [
+    {
+      "id": "tp-ctr-01",
+      "text_original": "合同",
+      "pinyin": "hétong",
+      "text_translation": "shartnoma",
+      "text_translation_ru": "контракт; договор"
+    },
+    {
+      "id": "tp-ctr-02",
+      "text_original": "协议",
+      "pinyin": "xiéyì",
+      "text_translation": "kelishuv; bitim",
+      "text_translation_ru": "соглашение"
+    },
+    {
+      "id": "tp-ctr-03",
+      "text_original": "条款",
+      "pinyin": "tiáokuǎn",
+      "text_translation": "band; shart-sharoit",
+      "text_translation_ru": "пункт; статья (договора)"
+    },
+    {
+      "id": "tp-ctr-04",
+      "text_original": "条件",
+      "pinyin": "tiáojiàn",
+      "text_translation": "shart; talab",
+      "text_translation_ru": "условие; требование"
+    },
+    {
+      "id": "tp-ctr-05",
+      "text_original": "签字",
+      "pinyin": "qiānzì",
+      "text_translation": "imzo chekmoq",
+      "text_translation_ru": "подписать; расписаться"
+    },
+    {
+      "id": "tp-ctr-06",
+      "text_original": "盖章",
+      "pinyin": "gàizhāng",
+      "text_translation": "muhr bosmoq",
+      "text_translation_ru": "поставить печать"
+    },
+    {
+      "id": "tp-ctr-07",
+      "text_original": "有效期",
+      "pinyin": "yǒuxiàoqī",
+      "text_translation": "amal qilish muddati",
+      "text_translation_ru": "срок действия"
+    },
+    {
+      "id": "tp-ctr-08",
+      "text_original": "违约",
+      "pinyin": "wéiyuē",
+      "text_translation": "shartnomani buzmoq",
+      "text_translation_ru": "нарушение договора"
+    }
+  ]
+}

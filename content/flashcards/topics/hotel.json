@@ -1,0 +1,107 @@
+{
+  "id": "topic-hotel",
+  "title": "Mehmonxona",
+  "title_ru": "Гостиница",
+  "title_zh": "酒店住宿",
+  "title_pinyin": "Jiǔdiàn zhùsù",
+  "words": [
+    {
+      "id": "tp-htl-01",
+      "text_original": "酒店",
+      "pinyin": "jiǔdiàn",
+      "text_translation": "mehmonxona (yuqori)",
+      "text_translation_ru": "отель; гостиница"
+    },
+    {
+      "id": "tp-htl-02",
+      "text_original": "宾馆",
+      "pinyin": "bīnguǎn",
+      "text_translation": "mehmonxona",
+      "text_translation_ru": "гостиница"
+    },
+    {
+      "id": "tp-htl-03",
+      "text_original": "房间",
+      "pinyin": "fángjiān",
+      "text_translation": "xona",
+      "text_translation_ru": "номер; комната"
+    },
+    {
+      "id": "tp-htl-04",
+      "text_original": "单人间",
+      "pinyin": "dānrénjiān",
+      "text_translation": "bir kishilik xona",
+      "text_translation_ru": "одноместный номер"
+    },
+    {
+      "id": "tp-htl-05",
+      "text_original": "双人间",
+      "pinyin": "shuāngrénjiān",
+      "text_translation": "ikki kishilik xona",
+      "text_translation_ru": "двухместный номер"
+    },
+    {
+      "id": "tp-htl-06",
+      "text_original": "套房",
+      "pinyin": "tàofáng",
+      "text_translation": "lyuks xona",
+      "text_translation_ru": "люкс; сьют"
+    },
+    {
+      "id": "tp-htl-07",
+      "text_original": "前台",
+      "pinyin": "qiántái",
+      "text_translation": "resepshn",
+      "text_translation_ru": "ресепшн; стойка регистрации"
+    },
+    {
+      "id": "tp-htl-08",
+      "text_original": "入住",
+      "pinyin": "rùzhù",
+      "text_translation": "ro'yxatdan o'tmoq; joylashmoq",
+      "text_translation_ru": "заселиться; заехать"
+    },
+    {
+      "id": "tp-htl-09",
+      "text_original": "退房",
+      "pinyin": "tuìfáng",
+      "text_translation": "xonani topshirmoq",
+      "text_translation_ru": "выселиться; выехать"
+    },
+    {
+      "id": "tp-htl-10",
+      "text_original": "预订",
+      "pinyin": "yùdìng",
+      "text_translation": "bron qilmoq",
+      "text_translation_ru": "забронировать"
+    },
+    {
+      "id": "tp-htl-11",
+      "text_original": "空房",
+      "pinyin": "kòngfáng",
+      "text_translation": "bo'sh xona",
+      "text_translation_ru": "свободный номер"
+    },
+    {
+      "id": "tp-htl-12",
+      "text_original": "房卡",
+      "pinyin": "fángkǎ",
+      "text_translation": "xona kartasi",
+      "text_translation_ru": "карта-ключ от номера"
+    },
+    {
+      "id": "tp-htl-13",
+      "text_original": "早餐",
+      "pinyin": "zǎocān",
+      "text_translation": "nonushta",
+      "text_translation_ru": "завтрак"
+    },
+    {
+      "id": "tp-htl-14",
+      "text_original": "服务",
+      "pinyin": "fúwù",
+      "text_translation": "xizmat",
+      "text_translation_ru": "обслуживание; сервис"
+    }
+  ]
+}

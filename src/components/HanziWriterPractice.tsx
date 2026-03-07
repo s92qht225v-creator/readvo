@@ -60,6 +60,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
 
   const [sessionQueue, setSessionQueue] = useState<HanziWord[]>([]);
   const [sessionIndex, setSessionIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
   const [resetKey, setResetKey] = useState(0);
   const [showAnswer, setShowAnswer] = useState(0);
   const [hiddenMode, setHiddenMode] = useState(false);
@@ -69,6 +70,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     if (!autoStart) return;
     setSessionQueue(activeWords);
     setSessionIndex(0);
+    setCharIndex(0);
     setView('practice');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -76,17 +78,22 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const handleStart = useCallback(() => {
     setSessionQueue(shuffle(activeWords));
     setSessionIndex(0);
+    setCharIndex(0);
     setView('practice');
   }, [activeWords]);
 
   const advance = useCallback(() => {
     setShowAnswer(0);
-    if (sessionIndex + 1 >= sessionQueue.length) {
+    const currentChars = [...(sessionQueue[sessionIndex]?.char || '')];
+    if (charIndex < currentChars.length - 1) {
+      setCharIndex((i) => i + 1);
+    } else if (sessionIndex + 1 >= sessionQueue.length) {
       setView('done');
     } else {
+      setCharIndex(0);
       setSessionIndex((i) => i + 1);
     }
-  }, [sessionIndex, sessionQueue.length]);
+  }, [sessionIndex, sessionQueue, charIndex]);
 
   const handleErase = useCallback(() => {
     setResetKey((k) => k + 1);
@@ -106,6 +113,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const handleRestart = useCallback(() => {
     setSessionQueue(shuffle(sessionQueue));
     setSessionIndex(0);
+    setCharIndex(0);
     setShowAnswer(0);
     setResetKey(0);
     setHiddenMode(false);
@@ -113,6 +121,9 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   }, [sessionQueue]);
 
   const currentWord = sessionQueue[sessionIndex];
+  const wordChars = currentWord ? [...currentWord.char] : [];
+  const isMultiChar = wordChars.length > 1;
+  const currentChar = wordChars[charIndex] || '';
 
   const subtabBar = hideSubtabs ? null : (
     <div className="hanzi-practice__subtabs">
@@ -128,12 +139,12 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
         type="button"
         onClick={() => setSubtab('chars')}
       >
-        {lang === 'ru' ? 'Иероглифы' : 'Hierogliflar'}
+        {lang === 'ru' ? 'Иероглифы' : 'Ierogliflar'}
       </button>
     </div>
   );
 
-  // --- HIEROGLIFLAR TAB ---
+  // --- IEROGLIFLAR TAB ---
   if (subtab === 'chars') {
     return (
       <div className="hanzi-practice">
@@ -142,7 +153,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
           {/* Card 1: character list */}
           <div style={{ background: '#fff', borderRadius: 12, padding: 14, marginBottom: 10, border: '1px solid #e0e0e6', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
             <div style={{ fontSize: 10, textTransform: 'uppercase' as const, letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
-              {lang === 'ru' ? 'ВСЕ ИЕРОГЛИФЫ' : 'BARCHA HIEROGLIFLAR'}
+              {lang === 'ru' ? 'ВСЕ ИЕРОГЛИФЫ' : 'BARCHA IEROGLIFLAR'}
             </div>
             {activeWords.map((w) => (
               <div key={w.char} style={{ background: '#f5f5f8', borderRadius: 8, marginBottom: 5, overflow: 'hidden', borderLeft: '3px solid #fca5a5' }}>
@@ -183,7 +194,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               {lang === 'ru' ? 'ТИПЫ ЧЕРТ' : 'CHIZIQ TURLARI'}
             </div>
             <div style={{ fontSize: 12, color: '#555', lineHeight: 1.8, marginBottom: 8 }}>
-              {lang === 'ru' ? 'Китайские иероглифы состоят из нескольких основных типов черт:' : 'Xitoy hierogliflari bir nechta asosiy chiziq turlaridan tashkil topgan:'}
+              {lang === 'ru' ? 'Китайские иероглифы состоят из нескольких основных типов черт:' : 'Xitoy ierogliflari bir nechta asosiy chiziq turlaridan tashkil topgan:'}
             </div>
             {[
               { name: '横 héng', uz: 'gorizontal', ru: 'горизонталь', icon: '一', desc: lang === 'ru' ? 'Слева направо' : "Chapdan o'ngga" },
@@ -282,19 +293,41 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
         {/* Left: info + canvas */}
         <div className="hanzi-practice__canvas-panel">
           {currentWord && (
-            <div className="hanzi-practice__info-panel">
-              <div className="hanzi-practice__pinyin">{currentWord.pinyin}</div>
+            <div className="hanzi-practice__info-panel" style={hiddenMode ? { visibility: 'hidden' } : undefined}>
+              <div className="hanzi-practice__word-display">
+                {isMultiChar ? wordChars.map((c, i) => (
+                  <span
+                    key={i}
+                    className={`hanzi-practice__word-char${i === charIndex ? ' hanzi-practice__word-char--active' : i < charIndex ? ' hanzi-practice__word-char--done' : ''}`}
+                  >
+                    {c}
+                  </span>
+                )) : (
+                  <span className="hanzi-practice__word-char hanzi-practice__word-char--active">{currentWord.char}</span>
+                )}
+              </div>
+              <div className="hanzi-practice__pinyin">({currentWord.pinyin})</div>
               <div className="hanzi-practice__meaning">
                 {lang === 'ru' ? currentWord.ru : currentWord.uz}
               </div>
+              {isMultiChar && (
+                <div className="hanzi-practice__char-progress">
+                  {wordChars.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`hanzi-practice__char-dot${i === charIndex ? ' hanzi-practice__char-dot--active' : i < charIndex ? ' hanzi-practice__char-dot--done' : ''}`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
           <div className="hanzi-practice__grid-wrapper">
             {currentWord && (
               <HanziCanvas
-                key={`${currentWord.char}-${resetKey}`}
-                char={currentWord.char}
+                key={`${currentChar}-${charIndex}-${resetKey}`}
+                char={currentChar}
                 lang={lang}
                 revealAll={showAnswer}
                 hidden={hiddenMode}
@@ -326,10 +359,19 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
             <button
               className="hanzi-practice__nav-btn"
               type="button"
-              disabled={sessionIndex === 0}
-              onClick={() => keepScroll(() => { setSessionIndex((i) => i - 1); setShowAnswer(0); })}
+              disabled={sessionIndex === 0 && charIndex === 0}
+              onClick={() => keepScroll(() => {
+                setShowAnswer(0);
+                if (charIndex > 0) {
+                  setCharIndex((i) => i - 1);
+                } else if (sessionIndex > 0) {
+                  const prevWord = sessionQueue[sessionIndex - 1];
+                  setCharIndex([...prevWord.char].length - 1);
+                  setSessionIndex((i) => i - 1);
+                }
+              })}
             >
-              ← {lang === 'ru' ? 'Oldingi' : 'Oldingi'}
+              ← {lang === 'ru' ? 'Назад' : 'Oldingi'}
             </button>
             <span className="hanzi-practice__session-progress" style={{ margin: 0, whiteSpace: 'nowrap' }}>
               {sessionIndex + 1} / {sessionQueue.length}
@@ -339,7 +381,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               type="button"
               onClick={() => keepScroll(advance)}
             >
-              {lang === 'ru' ? 'Keyingi' : 'Keyingi'} →
+              {lang === 'ru' ? 'Далее' : 'Keyingi'} →
             </button>
           </div>
         </div>

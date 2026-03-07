@@ -192,7 +192,7 @@ export function GrammarXiangPage() {
         {activeTab === 'intro' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Иероглиф' : 'Hieroglif'}</div>
+              <div className="grammar-block__label">{language === 'ru' ? 'Иероглиф' : 'Ieroglif'}</div>
               <div className="grammar-block__char-row">
                 <div className="grammar-block__big-char" style={{ color: COLOR }}>想</div>
                 <div className="grammar-block__char-info">

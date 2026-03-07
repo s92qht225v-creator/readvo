@@ -1,0 +1,100 @@
+{
+  "id": "topic-vehicles",
+  "title": "Avtomobil turlari",
+  "title_ru": "Виды автомобилей",
+  "title_zh": "车辆种类",
+  "title_pinyin": "Chēliàng zhǒnglèi",
+  "words": [
+    {
+      "id": "tp-veh-01",
+      "text_original": "轿车",
+      "pinyin": "jiàochē",
+      "text_translation": "sedan",
+      "text_translation_ru": "седан"
+    },
+    {
+      "id": "tp-veh-02",
+      "text_original": "SUV",
+      "pinyin": "SUV",
+      "text_translation": "SUV",
+      "text_translation_ru": "внедорожник (SUV)"
+    },
+    {
+      "id": "tp-veh-03",
+      "text_original": "越野车",
+      "pinyin": "yuèyěchē",
+      "text_translation": "vnedorojnik; jip",
+      "text_translation_ru": "внедорожник; джип"
+    },
+    {
+      "id": "tp-veh-04",
+      "text_original": "跑车",
+      "pinyin": "pǎochē",
+      "text_translation": "sportkar",
+      "text_translation_ru": "спорткар"
+    },
+    {
+      "id": "tp-veh-05",
+      "text_original": "面包车",
+      "pinyin": "miànbāochē",
+      "text_translation": "mikroavtobus; miniven",
+      "text_translation_ru": "микроавтобус; минивэн"
+    },
+    {
+      "id": "tp-veh-06",
+      "text_original": "商务车",
+      "pinyin": "shāngwùchē",
+      "text_translation": "biznes avtomobil",
+      "text_translation_ru": "бизнес-автомобиль; представительский"
+    },
+    {
+      "id": "tp-veh-07",
+      "text_original": "皮卡",
+      "pinyin": "píkǎ",
+      "text_translation": "pikap",
+      "text_translation_ru": "пикап"
+    },
+    {
+      "id": "tp-veh-08",
+      "text_original": "掀背车",
+      "pinyin": "xiānbèichē",
+      "text_translation": "xetchbek",
+      "text_translation_ru": "хэтчбек"
+    },
+    {
+      "id": "tp-veh-09",
+      "text_original": "旅行车",
+      "pinyin": "lǚxíngchē",
+      "text_translation": "universal",
+      "text_translation_ru": "универсал"
+    },
+    {
+      "id": "tp-veh-10",
+      "text_original": "敞篷车",
+      "pinyin": "chǎngpéngchē",
+      "text_translation": "kabriolet",
+      "text_translation_ru": "кабриолет"
+    },
+    {
+      "id": "tp-veh-11",
+      "text_original": "电动车",
+      "pinyin": "diàndòngchē",
+      "text_translation": "elektromobil",
+      "text_translation_ru": "электромобиль"
+    },
+    {
+      "id": "tp-veh-12",
+      "text_original": "混动车",
+      "pinyin": "hùndòngchē",
+      "text_translation": "gibrid avtomobil",
+      "text_translation_ru": "гибридный автомобиль"
+    },
+    {
+      "id": "tp-veh-13",
+      "text_original": "燃油车",
+      "pinyin": "rányóuchē",
+      "text_translation": "benzinli avtomobil",
+      "text_translation_ru": "бензиновый автомобиль"
+    }
+  ]
+}

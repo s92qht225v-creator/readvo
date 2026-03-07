@@ -1,0 +1,72 @@
+{
+  "id": "topic-car-engine",
+  "title": "Dvigatel va mexanika",
+  "title_ru": "Двигатель и механика",
+  "title_zh": "发动机和机械",
+  "title_pinyin": "Fādòngjī hé jīxiè",
+  "words": [
+    {
+      "id": "tp-eng-01",
+      "text_original": "发动机",
+      "pinyin": "fādòngjī",
+      "text_translation": "dvigatel; motor",
+      "text_translation_ru": "двигатель; мотор"
+    },
+    {
+      "id": "tp-eng-02",
+      "text_original": "电池",
+      "pinyin": "diànchí",
+      "text_translation": "akkumulyator; batareya",
+      "text_translation_ru": "аккумулятор; батарея"
+    },
+    {
+      "id": "tp-eng-03",
+      "text_original": "油箱",
+      "pinyin": "yóuxiāng",
+      "text_translation": "yoqilg'i baki",
+      "text_translation_ru": "топливный бак"
+    },
+    {
+      "id": "tp-eng-04",
+      "text_original": "变速箱",
+      "pinyin": "biànsùxiāng",
+      "text_translation": "karobka; uzatmalar qutisi",
+      "text_translation_ru": "коробка передач"
+    },
+    {
+      "id": "tp-eng-05",
+      "text_original": "排气管",
+      "pinyin": "páiqìguǎn",
+      "text_translation": "chiqindi gaz trubasi",
+      "text_translation_ru": "выхлопная труба"
+    },
+    {
+      "id": "tp-eng-06",
+      "text_original": "散热器",
+      "pinyin": "sànrèqì",
+      "text_translation": "radiator",
+      "text_translation_ru": "радиатор"
+    },
+    {
+      "id": "tp-eng-07",
+      "text_original": "火花塞",
+      "pinyin": "huǒhuāsāi",
+      "text_translation": "svecha",
+      "text_translation_ru": "свеча зажигания"
+    },
+    {
+      "id": "tp-eng-08",
+      "text_original": "空气滤清器",
+      "pinyin": "kōngqì lǜqīngqì",
+      "text_translation": "havo filtri",
+      "text_translation_ru": "воздушный фильтр"
+    },
+    {
+      "id": "tp-eng-09",
+      "text_original": "机油",
+      "pinyin": "jīyóu",
+      "text_translation": "motor moyi",
+      "text_translation_ru": "моторное масло"
+    }
+  ]
+}

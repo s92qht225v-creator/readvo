@@ -63,7 +63,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
             onClick={() => setSubtab('chars')}
             type="button"
           >
-            {language === 'ru' ? 'Иероглифы' : 'Hierogliflar'}
+            {language === 'ru' ? 'Иероглифы' : 'Ierogliflar'}
           </button>
         </div>
       </nav>

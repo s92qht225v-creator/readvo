@@ -1,0 +1,79 @@
+{
+  "id": "topic-logistics",
+  "title": "Logistika",
+  "title_ru": "Логистика",
+  "title_zh": "物流运输",
+  "title_pinyin": "Wùliú yùnshū",
+  "words": [
+    {
+      "id": "tp-log-01",
+      "text_original": "运输",
+      "pinyin": "yùnshū",
+      "text_translation": "tashimoq; transport",
+      "text_translation_ru": "транспортировка; перевозка"
+    },
+    {
+      "id": "tp-log-02",
+      "text_original": "物流",
+      "pinyin": "wùliú",
+      "text_translation": "logistika",
+      "text_translation_ru": "логистика"
+    },
+    {
+      "id": "tp-log-03",
+      "text_original": "发货",
+      "pinyin": "fāhuò",
+      "text_translation": "tovar jo'natmoq",
+      "text_translation_ru": "отправить товар"
+    },
+    {
+      "id": "tp-log-04",
+      "text_original": "收货",
+      "pinyin": "shōuhuò",
+      "text_translation": "tovar qabul qilmoq",
+      "text_translation_ru": "получить товар"
+    },
+    {
+      "id": "tp-log-05",
+      "text_original": "仓库",
+      "pinyin": "cāngkù",
+      "text_translation": "ombor",
+      "text_translation_ru": "склад"
+    },
+    {
+      "id": "tp-log-06",
+      "text_original": "海运",
+      "pinyin": "hǎiyùn",
+      "text_translation": "dengiz transporti",
+      "text_translation_ru": "морская перевозка"
+    },
+    {
+      "id": "tp-log-07",
+      "text_original": "空运",
+      "pinyin": "kōngyùn",
+      "text_translation": "havo transporti",
+      "text_translation_ru": "воздушная перевозка"
+    },
+    {
+      "id": "tp-log-08",
+      "text_original": "快递",
+      "pinyin": "kuàidì",
+      "text_translation": "kuryer; tezkor pochta",
+      "text_translation_ru": "курьерская доставка; экспресс"
+    },
+    {
+      "id": "tp-log-09",
+      "text_original": "运费",
+      "pinyin": "yùnfèi",
+      "text_translation": "yuk tashish narxi",
+      "text_translation_ru": "стоимость доставки; фрахт"
+    },
+    {
+      "id": "tp-log-10",
+      "text_original": "陆运",
+      "pinyin": "lùyùn",
+      "text_translation": "quruqlik transporti",
+      "text_translation_ru": "наземная перевозка"
+    }
+  ]
+}

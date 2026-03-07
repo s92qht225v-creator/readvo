@@ -101,6 +101,16 @@ All styles live in `src/styles/reading.css`.
 - `.section--tonguetwister` - Transparent background, no header/subheading
 - `.section--tonguetwister .section__sentences` - White floating card (border-radius 16px, shadow, padding 20px)
 
+### Footer & Correction
+- `.home__footer` - Shared footer (`text-align: center`, `padding: var(--spacing-sm) var(--spacing-lg)`, `padding-bottom: calc(80px + var(--spacing-sm) + env(safe-area-inset-bottom))` to clear fixed bottom bars)
+- `.correction-inline` - Wrapper for correction button/form (`margin-bottom: 12px`)
+- `.correction-inline__btn` - Trigger button (`inline-flex`, border pill, muted grey, pencil icon + text)
+- `.correction-inline__form` - Expandable form (`max-width: 340px`, centered)
+- `.correction-inline__select` - Reason dropdown (full width, 6 options)
+- `.correction-inline__textarea` - Optional message input (max 500 chars)
+- `.correction-inline__submit` - Red submit button (`background: #dc2626`)
+- `.correction-inline__success` - Green checkmark + "Yuborildi!" confirmation
+
 ### Hanzi Writing Practice
 - `.hanzi-home` — flex column, gap 16px, max-width 480px, margin auto, padding 24px
 - `.hanzi-home__stats-row` — flex row, gap 12px

@@ -1,0 +1,121 @@
+{
+  "id": "topic-office-actions",
+  "title": "Ofis harakatlari",
+  "title_ru": "Офисные действия",
+  "title_zh": "办公室常见动作",
+  "title_pinyin": "Bàngōngshì chángjiàn dòngzuò",
+  "words": [
+    {
+      "id": "tp-ofa-01",
+      "text_original": "工作",
+      "pinyin": "gōngzuò",
+      "text_translation": "ishlamoq",
+      "text_translation_ru": "работать"
+    },
+    {
+      "id": "tp-ofa-02",
+      "text_original": "开会",
+      "pinyin": "kāihuì",
+      "text_translation": "yig'ilish o'tkazmoq",
+      "text_translation_ru": "проводить собрание"
+    },
+    {
+      "id": "tp-ofa-03",
+      "text_original": "打印",
+      "pinyin": "dǎyìn",
+      "text_translation": "chop etmoq",
+      "text_translation_ru": "печатать; распечатать"
+    },
+    {
+      "id": "tp-ofa-04",
+      "text_original": "复印",
+      "pinyin": "fùyìn",
+      "text_translation": "nusxa ko'chirmoq",
+      "text_translation_ru": "копировать; ксерокопировать"
+    },
+    {
+      "id": "tp-ofa-05",
+      "text_original": "扫描",
+      "pinyin": "sǎomiáo",
+      "text_translation": "skanerdan o'tkazmoq",
+      "text_translation_ru": "сканировать"
+    },
+    {
+      "id": "tp-ofa-06",
+      "text_original": "发邮件",
+      "pinyin": "fā yóujiàn",
+      "text_translation": "email jo'natmoq",
+      "text_translation_ru": "отправить электронное письмо"
+    },
+    {
+      "id": "tp-ofa-07",
+      "text_original": "收邮件",
+      "pinyin": "shōu yóujiàn",
+      "text_translation": "email olmoq",
+      "text_translation_ru": "получить электронное письмо"
+    },
+    {
+      "id": "tp-ofa-08",
+      "text_original": "接电话",
+      "pinyin": "jiē diànhuà",
+      "text_translation": "telefon ko'tarmoq",
+      "text_translation_ru": "ответить на звонок"
+    },
+    {
+      "id": "tp-ofa-09",
+      "text_original": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "text_translation": "telefon qilmoq",
+      "text_translation_ru": "позвонить"
+    },
+    {
+      "id": "tp-ofa-10",
+      "text_original": "安排",
+      "pinyin": "ānpái",
+      "text_translation": "rejalashtirmoq; tashkil qilmoq",
+      "text_translation_ru": "организовать; распланировать"
+    },
+    {
+      "id": "tp-ofa-11",
+      "text_original": "计划",
+      "pinyin": "jìhuà",
+      "text_translation": "reja; rejalashtirmoq",
+      "text_translation_ru": "план; планировать"
+    },
+    {
+      "id": "tp-ofa-12",
+      "text_original": "讨论",
+      "pinyin": "tǎolùn",
+      "text_translation": "muhokama qilmoq",
+      "text_translation_ru": "обсуждать"
+    },
+    {
+      "id": "tp-ofa-13",
+      "text_original": "报告",
+      "pinyin": "bàogào",
+      "text_translation": "hisobot; xabar bermoq",
+      "text_translation_ru": "доклад; докладывать"
+    },
+    {
+      "id": "tp-ofa-14",
+      "text_original": "申请",
+      "pinyin": "shēnqǐng",
+      "text_translation": "ariza bermoq; murojaat qilmoq",
+      "text_translation_ru": "подать заявку; обратиться"
+    },
+    {
+      "id": "tp-ofa-15",
+      "text_original": "批准",
+      "pinyin": "pīzhǔn",
+      "text_translation": "tasdiqlash; ruxsat bermoq",
+      "text_translation_ru": "утвердить; одобрить"
+    },
+    {
+      "id": "tp-ofa-16",
+      "text_original": "签字",
+      "pinyin": "qiānzì",
+      "text_translation": "imzo chekmoq",
+      "text_translation_ru": "подписать; расписаться"
+    }
+  ]
+}

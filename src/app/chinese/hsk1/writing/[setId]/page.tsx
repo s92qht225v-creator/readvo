@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props) {
   if (!set) return {};
   return {
     title: `${set.title} — Yozish mashqi`,
-    description: `${set.subtitle}. Xitoy hierogliflarini yozishni mashq qiling. | ${set.subtitle_ru}. Практика написания китайских иероглифов.`,
+    description: `${set.subtitle}. Xitoy ierogliflarini yozishni mashq qiling. | ${set.subtitle_ru}. Практика написания китайских иероглифов.`,
   };
 }
 

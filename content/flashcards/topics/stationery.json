@@ -1,0 +1,128 @@
+{
+  "id": "topic-stationery",
+  "title": "Ish-yozuv anjomlari",
+  "title_ru": "Канцтовары",
+  "title_zh": "办公文具",
+  "title_pinyin": "Bàngōng wénjù",
+  "words": [
+    {
+      "id": "tp-sta-01",
+      "text_original": "笔",
+      "pinyin": "bǐ",
+      "text_translation": "ruchka; qalam",
+      "text_translation_ru": "ручка; карандаш"
+    },
+    {
+      "id": "tp-sta-02",
+      "text_original": "铅笔",
+      "pinyin": "qiānbǐ",
+      "text_translation": "qalam (oddiy)",
+      "text_translation_ru": "карандаш"
+    },
+    {
+      "id": "tp-sta-03",
+      "text_original": "圆珠笔",
+      "pinyin": "yuánzhūbǐ",
+      "text_translation": "sharikli ruchka",
+      "text_translation_ru": "шариковая ручка"
+    },
+    {
+      "id": "tp-sta-04",
+      "text_original": "本子",
+      "pinyin": "běnzi",
+      "text_translation": "daftar",
+      "text_translation_ru": "тетрадь"
+    },
+    {
+      "id": "tp-sta-05",
+      "text_original": "纸",
+      "pinyin": "zhǐ",
+      "text_translation": "qog'oz",
+      "text_translation_ru": "бумага"
+    },
+    {
+      "id": "tp-sta-06",
+      "text_original": "文件",
+      "pinyin": "wénjiàn",
+      "text_translation": "hujjat; fayl",
+      "text_translation_ru": "документ; файл"
+    },
+    {
+      "id": "tp-sta-07",
+      "text_original": "文件夹",
+      "pinyin": "wénjiànjiā",
+      "text_translation": "papka",
+      "text_translation_ru": "папка"
+    },
+    {
+      "id": "tp-sta-08",
+      "text_original": "档案袋",
+      "pinyin": "dǎng'àndài",
+      "text_translation": "hujjat konverti",
+      "text_translation_ru": "конверт для документов"
+    },
+    {
+      "id": "tp-sta-09",
+      "text_original": "名片",
+      "pinyin": "míngpiàn",
+      "text_translation": "tashrif qog'ozi; vizitka",
+      "text_translation_ru": "визитная карточка"
+    },
+    {
+      "id": "tp-sta-10",
+      "text_original": "订书机",
+      "pinyin": "dìngshūjī",
+      "text_translation": "stepler",
+      "text_translation_ru": "степлер"
+    },
+    {
+      "id": "tp-sta-11",
+      "text_original": "订书钉",
+      "pinyin": "dìngshūdīng",
+      "text_translation": "stepler mixlari",
+      "text_translation_ru": "скобы для степлера"
+    },
+    {
+      "id": "tp-sta-12",
+      "text_original": "剪刀",
+      "pinyin": "jiǎndāo",
+      "text_translation": "qaychi",
+      "text_translation_ru": "ножницы"
+    },
+    {
+      "id": "tp-sta-13",
+      "text_original": "胶水",
+      "pinyin": "jiāoshuǐ",
+      "text_translation": "yelim",
+      "text_translation_ru": "клей"
+    },
+    {
+      "id": "tp-sta-14",
+      "text_original": "胶带",
+      "pinyin": "jiāodài",
+      "text_translation": "skotch",
+      "text_translation_ru": "скотч; клейкая лента"
+    },
+    {
+      "id": "tp-sta-15",
+      "text_original": "白板",
+      "pinyin": "báibǎn",
+      "text_translation": "oq doska",
+      "text_translation_ru": "белая доска; маркерная доска"
+    },
+    {
+      "id": "tp-sta-16",
+      "text_original": "白板笔",
+      "pinyin": "báibǎnbǐ",
+      "text_translation": "marker (doska uchun)",
+      "text_translation_ru": "маркер для доски"
+    },
+    {
+      "id": "tp-sta-17",
+      "text_original": "计算器",
+      "pinyin": "jìsuànqì",
+      "text_translation": "kalkulyator",
+      "text_translation_ru": "калькулятор"
+    }
+  ]
+}

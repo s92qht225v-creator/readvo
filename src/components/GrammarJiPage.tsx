@@ -159,7 +159,7 @@ export function GrammarJiPage() {
         {activeTab === 'intro' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Два иероглифа — одна тема' : 'Ikki hieroglif — bitta mavzu'}</div>
+              <div className="grammar-block__label">{language === 'ru' ? 'Два иероглифа — одна тема' : 'Ikki ieroglif — bitta mavzu'}</div>
               <div style={{ display: 'flex', gap: 12, marginBottom: 14 }}>
                 <div style={{ flex: 1, textAlign: 'center' }}>
                   <div style={{ fontSize: 48, color: COLOR, fontWeight: 400, lineHeight: 1.2 }}>几</div>
@@ -346,7 +346,7 @@ export function GrammarJiPage() {
               {[
                 { ex: '你们学校有多少学生？', py: 'Nǐmen xuéxiào yǒu duōshǎo xuéshēng?', uz: 'Maktabingizda nechta o\'quvchi bor?', ru: 'Сколько учеников в вашей школе?' },
                 { ex: '中国有多少人？', py: 'Zhōngguó yǒu duōshǎo rén?', uz: 'Xitoyda necha kishi bor?', ru: 'Сколько людей в Китае?' },
-                { ex: '你认识多少汉字？', py: 'Nǐ rènshi duōshǎo Hànzì?', uz: 'Nechta hieroglif bilasan?', ru: 'Сколько иероглифов ты знаешь?' },
+                { ex: '你认识多少汉字？', py: 'Nǐ rènshi duōshǎo Hànzì?', uz: 'Nechta ieroglif bilasan?', ru: 'Сколько иероглифов ты знаешь?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-zh">{x.ex}</div>

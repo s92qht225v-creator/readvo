@@ -137,12 +137,14 @@
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
 ### PageFooter (Shared Footer)
-- **Component**: `src/components/PageFooter.tsx` — used on ALL pages
+- **Component**: `src/components/PageFooter.tsx` — used on all pages except karaoke
 - Renders `<footer className="home__footer">` with:
-  - Inline correction button ("Xato haqida xabar berish") — only for logged-in users, hidden on `/`
+  - Inline correction button ("Xato haqida xabar berish") — visible to all users (logged-in and anonymous), hidden on `/`
   - Expandable form: reason dropdown (6 options) + textarea
   - "Blim — Interaktiv til darsliklari" bilingual footer text
-- **API**: `POST /api/corrections` — JWT auth, sends Telegram message to admin
+- **API**: `POST /api/corrections` — JWT auth, sends Telegram message to admin. Unauthenticated submissions return 401.
+- **Footer spacing**: `padding-bottom: calc(80px + ...)` clears fixed bottom bars on reader/story/dialogue pages
+- **Not in KaraokePlayer**: Excluded due to full-screen layout with fixed controls that overlap the footer
 - Replaces all individual `<footer className="home__footer">` blocks across the codebase
 
 ### Hanzi Writing Practice
@@ -152,7 +154,7 @@
 - Two core components: `HanziWriterPractice.tsx` (SRS session manager) + `HanziCanvas.tsx` (stroke drawing engine)
 - **No external CDN** — stroke data fetched from `https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/{char}.json`; module-level `strokeCache` Map avoids re-fetching on revisit
 - **SRS**: Leitner 5-box system, localStorage key `'blim-hanzi-progress'`, value `Record<char, {box:1|2|3|4|5, nextReviewDate:string}>` (ISO date). Box intervals: `{1:0, 2:1, 3:3, 4:7, 5:14}` days. Missing entry = always due.
-- **Word list**: 20 hardcoded HSK 1 characters in `WORDS` array (`char, pinyin, uz, ru, strokes`)
+- **Word list**: 6 sets of 10 characters each in `WRITING_SETS` array. Supports multi-char words (e.g., 我们, 什么, 怎么). Subtabs: Yozish/Ierogliflar (UZ), Письмо/Иероглифы (RU).
 - **View state machine**: `'home'` → Start button → `'practice'` → all cards graded → `'done'` → restart → `'home'`
 - **Home view**: stat cards (due count, mastery %, total); Start button (disabled if 0 due); reset link with `confirm()` dialog
 - **Practice view**: `HanziCanvas` (left panel) + info panel (right); Erase/Show buttons below canvas; grade buttons (Esimda yo'q / Bilaman!) appear after quiz complete; session progress counter

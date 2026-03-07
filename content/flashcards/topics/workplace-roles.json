@@ -1,0 +1,121 @@
+{
+  "id": "topic-workplace-roles",
+  "title": "Ofis lavozimlari",
+  "title_ru": "Должности в офисе",
+  "title_zh": "职场角色",
+  "title_pinyin": "Zhíchǎng juésè",
+  "words": [
+    {
+      "id": "tp-wr-01",
+      "text_original": "老板",
+      "pinyin": "lǎobǎn",
+      "text_translation": "xo'jayin; boss",
+      "text_translation_ru": "босс; хозяин"
+    },
+    {
+      "id": "tp-wr-02",
+      "text_original": "总经理",
+      "pinyin": "zǒngjīnglǐ",
+      "text_translation": "bosh direktor",
+      "text_translation_ru": "генеральный директор"
+    },
+    {
+      "id": "tp-wr-03",
+      "text_original": "经理",
+      "pinyin": "jīnglǐ",
+      "text_translation": "menejer; direktor",
+      "text_translation_ru": "менеджер; директор"
+    },
+    {
+      "id": "tp-wr-04",
+      "text_original": "部门经理",
+      "pinyin": "bùmén jīnglǐ",
+      "text_translation": "bo'lim boshlig'i",
+      "text_translation_ru": "начальник отдела"
+    },
+    {
+      "id": "tp-wr-05",
+      "text_original": "员工",
+      "pinyin": "yuángōng",
+      "text_translation": "xodim; ishchi",
+      "text_translation_ru": "сотрудник; работник"
+    },
+    {
+      "id": "tp-wr-06",
+      "text_original": "同事",
+      "pinyin": "tóngshì",
+      "text_translation": "hamkasb; ishdosh",
+      "text_translation_ru": "коллега"
+    },
+    {
+      "id": "tp-wr-07",
+      "text_original": "秘书",
+      "pinyin": "mìshū",
+      "text_translation": "kotib; sekretar",
+      "text_translation_ru": "секретарь"
+    },
+    {
+      "id": "tp-wr-08",
+      "text_original": "助理",
+      "pinyin": "zhùlǐ",
+      "text_translation": "yordamchi; assistent",
+      "text_translation_ru": "помощник; ассистент"
+    },
+    {
+      "id": "tp-wr-09",
+      "text_original": "客户",
+      "pinyin": "kèhù",
+      "text_translation": "mijoz (biznes)",
+      "text_translation_ru": "клиент (деловой)"
+    },
+    {
+      "id": "tp-wr-10",
+      "text_original": "顾客",
+      "pinyin": "gùkè",
+      "text_translation": "xaridor; mijoz",
+      "text_translation_ru": "покупатель; клиент"
+    },
+    {
+      "id": "tp-wr-11",
+      "text_original": "人力资源经理",
+      "pinyin": "rénlì zīyuán jīnglǐ",
+      "text_translation": "HR menejer",
+      "text_translation_ru": "менеджер по персоналу"
+    },
+    {
+      "id": "tp-wr-12",
+      "text_original": "会计",
+      "pinyin": "kuàijì",
+      "text_translation": "buxgalter",
+      "text_translation_ru": "бухгалтер"
+    },
+    {
+      "id": "tp-wr-13",
+      "text_original": "工程师",
+      "pinyin": "gōngchéngshī",
+      "text_translation": "muhandis",
+      "text_translation_ru": "инженер"
+    },
+    {
+      "id": "tp-wr-14",
+      "text_original": "程序员",
+      "pinyin": "chéngxùyuán",
+      "text_translation": "dasturchi",
+      "text_translation_ru": "программист"
+    },
+    {
+      "id": "tp-wr-15",
+      "text_original": "销售员",
+      "pinyin": "xiāoshòuyuán",
+      "text_translation": "sotuvchi; savdogar",
+      "text_translation_ru": "продавец; менеджер по продажам"
+    },
+    {
+      "id": "tp-wr-16",
+      "text_original": "实习生",
+      "pinyin": "shíxíshēng",
+      "text_translation": "stajiyor; amaliyotchi",
+      "text_translation_ru": "стажёр; практикант"
+    }
+  ]
+}

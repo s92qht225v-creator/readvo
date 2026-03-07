@@ -61,7 +61,7 @@ const examples = [
   {
     zh: '我不会写汉字。',
     pinyin: 'Wǒ bú huì xiě Hànzì.',
-    uz: 'Men hieroglif yoza olmayman.',
+    uz: 'Men ieroglif yoza olmayman.',
     ru: 'Я не умею писать иероглифы.',
     note_uz: '不会 = ...a olmayman (mahorat yo\'q). Ton: bú huì (ikkalasi 4-ton, shuning uchun 不 2-tonga o\'zgaradi)',
     note_ru: '不会 = не умею. Тон: bú huì (оба 4-й тон → 不 меняется на 2-й тон)',
@@ -182,7 +182,7 @@ export function GrammarHuiPage() {
         {activeTab === 'intro' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Иероглиф' : 'Hieroglif'}</div>
+              <div className="grammar-block__label">{language === 'ru' ? 'Иероглиф' : 'Ieroglif'}</div>
               <div className="grammar-block__char-row">
                 <div className="grammar-block__big-char" style={{ color: COLOR }}>会</div>
                 <div className="grammar-block__char-info">

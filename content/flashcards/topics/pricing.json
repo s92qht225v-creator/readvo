@@ -1,0 +1,79 @@
+{
+  "id": "topic-pricing",
+  "title": "Narx va to'lov",
+  "title_ru": "Цены и оплата",
+  "title_zh": "价格与付款",
+  "title_pinyin": "Jiàgé yǔ fùkuǎn",
+  "words": [
+    {
+      "id": "tp-prc-01",
+      "text_original": "价格",
+      "pinyin": "jiàgé",
+      "text_translation": "narx",
+      "text_translation_ru": "цена"
+    },
+    {
+      "id": "tp-prc-02",
+      "text_original": "报价",
+      "pinyin": "bàojià",
+      "text_translation": "narx taklifi",
+      "text_translation_ru": "ценовое предложение; котировка"
+    },
+    {
+      "id": "tp-prc-03",
+      "text_original": "成本",
+      "pinyin": "chéngběn",
+      "text_translation": "tannarx",
+      "text_translation_ru": "себестоимость; затраты"
+    },
+    {
+      "id": "tp-prc-04",
+      "text_original": "利润",
+      "pinyin": "lìrùn",
+      "text_translation": "foyda",
+      "text_translation_ru": "прибыль"
+    },
+    {
+      "id": "tp-prc-05",
+      "text_original": "折扣",
+      "pinyin": "zhékòu",
+      "text_translation": "chegirma",
+      "text_translation_ru": "скидка"
+    },
+    {
+      "id": "tp-prc-06",
+      "text_original": "付款",
+      "pinyin": "fùkuǎn",
+      "text_translation": "to'lov qilmoq",
+      "text_translation_ru": "оплата; платить"
+    },
+    {
+      "id": "tp-prc-07",
+      "text_original": "预付款",
+      "pinyin": "yùfùkuǎn",
+      "text_translation": "oldindan to'lov",
+      "text_translation_ru": "предоплата; аванс"
+    },
+    {
+      "id": "tp-prc-08",
+      "text_original": "尾款",
+      "pinyin": "wěikuǎn",
+      "text_translation": "qoldiq to'lov",
+      "text_translation_ru": "остаток платежа"
+    },
+    {
+      "id": "tp-prc-09",
+      "text_original": "发票",
+      "pinyin": "fāpiào",
+      "text_translation": "faktura; hisob-faktura",
+      "text_translation_ru": "счёт-фактура; инвойс"
+    },
+    {
+      "id": "tp-prc-10",
+      "text_original": "收据",
+      "pinyin": "shōujù",
+      "text_translation": "kvitansiya; chek",
+      "text_translation_ru": "квитанция; чек"
+    }
+  ]
+}

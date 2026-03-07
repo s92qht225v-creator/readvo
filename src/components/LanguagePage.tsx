@@ -338,7 +338,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
       </nav>
 
       {/* HSK level pills */}
-      {activeTab !== 'karaoke' && activeTab !== 'writing' && (
+      {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
@@ -539,6 +539,24 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 { uz: 'Sonlar', ru: 'Числа', icon: '🔢', slug: 'numbers' },
                 { uz: 'Vaqt', ru: 'Время', icon: '⏰', slug: 'time' },
                 { uz: 'Kasblar', ru: 'Профессии', icon: '👩‍🏫', slug: 'professions' },
+                { uz: 'Ofis jihozlari', ru: 'Офис. оборудование', icon: '🖨️', slug: 'office' },
+                { uz: 'Ofis harakatlari', ru: 'Офисные действия', icon: '📋', slug: 'office-actions' },
+                { uz: 'Biznes atamalar', ru: 'Бизнес-термины', icon: '💼', slug: 'business' },
+                { uz: 'Ofis lavozimlari', ru: 'Должности', icon: '👔', slug: 'workplace-roles' },
+                { uz: 'Ish-yozuv anjomlari', ru: 'Канцтовары', icon: '✏️', slug: 'stationery' },
+                { uz: 'Ofis xonalari', ru: 'Офис. помещения', icon: '🏢', slug: 'office-spaces' },
+                { uz: 'Savdo atamalar', ru: 'Торговля', icon: '🤝', slug: 'trade' },
+                { uz: "Narx va to'lov", ru: 'Цены и оплата', icon: '💰', slug: 'pricing' },
+                { uz: 'Shartnoma atamalar', ru: 'Договоры', icon: '📝', slug: 'contracts' },
+                { uz: 'Buyurtma va ishlab chiqarish', ru: 'Заказы и произв.', icon: '📦', slug: 'orders' },
+                { uz: 'Logistika', ru: 'Логистика', icon: '🚚', slug: 'logistics' },
+                { uz: 'Mehmonxona', ru: 'Гостиница', icon: '🏨', slug: 'hotel' },
+                { uz: 'Hujjatlar', ru: 'Документы', icon: '🪪', slug: 'documents' },
+                { uz: 'Transport turlari', ru: 'Виды транспорта', icon: '✈️', slug: 'transportation' },
+                { uz: 'Avtomobil turlari', ru: 'Виды автомобилей', icon: '🚗', slug: 'vehicles' },
+                { uz: 'Mashina tashqi qismlari', ru: 'Наруж. части авто', icon: '🚙', slug: 'car-exterior' },
+                { uz: 'Dvigatel va mexanika', ru: 'Двигатель и мех.', icon: '⚙️', slug: 'car-engine' },
+                { uz: 'Mashina ichki qismlari', ru: 'Салон авто', icon: '🪑', slug: 'car-interior' },
               ];
               const tq = topicSearch.trim().toLowerCase();
               const filteredTopics = tq

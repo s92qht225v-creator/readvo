@@ -1,0 +1,86 @@
+{
+  "id": "topic-transportation",
+  "title": "Transport turlari",
+  "title_ru": "Виды транспорта",
+  "title_zh": "交通工具",
+  "title_pinyin": "Jiāotōng gōngjù",
+  "words": [
+    {
+      "id": "tp-trn-01",
+      "text_original": "飞机",
+      "pinyin": "fēijī",
+      "text_translation": "samolyot",
+      "text_translation_ru": "самолёт"
+    },
+    {
+      "id": "tp-trn-02",
+      "text_original": "机场",
+      "pinyin": "jīchǎng",
+      "text_translation": "aeroport",
+      "text_translation_ru": "аэропорт"
+    },
+    {
+      "id": "tp-trn-03",
+      "text_original": "航班",
+      "pinyin": "hángbān",
+      "text_translation": "reys (samolyot)",
+      "text_translation_ru": "рейс; авиарейс"
+    },
+    {
+      "id": "tp-trn-04",
+      "text_original": "火车",
+      "pinyin": "huǒchē",
+      "text_translation": "poyezd",
+      "text_translation_ru": "поезд"
+    },
+    {
+      "id": "tp-trn-05",
+      "text_original": "高铁",
+      "pinyin": "gāotiě",
+      "text_translation": "tezkor poyezd",
+      "text_translation_ru": "скоростной поезд"
+    },
+    {
+      "id": "tp-trn-06",
+      "text_original": "地铁",
+      "pinyin": "dìtiě",
+      "text_translation": "metro",
+      "text_translation_ru": "метро"
+    },
+    {
+      "id": "tp-trn-07",
+      "text_original": "公交车",
+      "pinyin": "gōngjiāochē",
+      "text_translation": "avtobus",
+      "text_translation_ru": "автобус"
+    },
+    {
+      "id": "tp-trn-08",
+      "text_original": "出租车",
+      "pinyin": "chūzūchē",
+      "text_translation": "taksi",
+      "text_translation_ru": "такси"
+    },
+    {
+      "id": "tp-trn-09",
+      "text_original": "自行车",
+      "pinyin": "zìxíngchē",
+      "text_translation": "velosiped",
+      "text_translation_ru": "велосипед"
+    },
+    {
+      "id": "tp-trn-10",
+      "text_original": "摩托车",
+      "pinyin": "mótuōchē",
+      "text_translation": "mototsikl",
+      "text_translation_ru": "мотоцикл"
+    },
+    {
+      "id": "tp-trn-11",
+      "text_original": "轮船",
+      "pinyin": "lúnchuán",
+      "text_translation": "kema; paroxod",
+      "text_translation_ru": "корабль; пароход"
+    }
+  ]
+}
