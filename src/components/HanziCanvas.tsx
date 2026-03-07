@@ -6,7 +6,7 @@ import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from
 const STROKE_TOLERANCE = 0.15;
 const DIRECTION_THRESHOLD = 0.45;
 const HINT_MISTAKES_THRESHOLD = 2;
-const ANIMATION_DURATION = 350;
+const ANIMATION_DURATION = 200;
 const MAX_SLIDE_OFFSET = 40; // max px offset for slide-from-user-position
 
 interface Point {

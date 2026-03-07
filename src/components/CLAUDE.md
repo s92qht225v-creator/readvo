@@ -136,9 +136,20 @@
 - **Lyrics padding**: Top padding clears fixed header + translation panel (`calc(var(--header-height) + 60px + env(safe-area-inset-top))`). Bottom padding (200px) clears fixed controls.
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
-### Hanzi Writing Practice (Writing Tab)
-- Accessible from Language Page → Yozish/Письмо tab (`?tab=writing`)
-- Two components: `HanziWriterPractice.tsx` (SRS session manager) + `HanziCanvas.tsx` (stroke drawing engine)
+### PageFooter (Shared Footer)
+- **Component**: `src/components/PageFooter.tsx` — used on ALL pages
+- Renders `<footer className="home__footer">` with:
+  - Inline correction button ("Xato haqida xabar berish") — only for logged-in users, hidden on `/`
+  - Expandable form: reason dropdown (6 options) + textarea
+  - "Blim — Interaktiv til darsliklari" bilingual footer text
+- **API**: `POST /api/corrections` — JWT auth, sends Telegram message to admin
+- Replaces all individual `<footer className="home__footer">` blocks across the codebase
+
+### Hanzi Writing Practice
+- Accessible from Language Page → Yozish/Письмо tab (`?tab=writing`) → card links to `/chinese/hsk1/writing/[setId]`
+- Dedicated page: `WritingPracticePage.tsx` (client) + `page.tsx` (server with `generateStaticParams`)
+- Data: `src/services/writing.ts` — shared `WRITING_SETS` data + `HanziWord` type
+- Two core components: `HanziWriterPractice.tsx` (SRS session manager) + `HanziCanvas.tsx` (stroke drawing engine)
 - **No external CDN** — stroke data fetched from `https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/{char}.json`; module-level `strokeCache` Map avoids re-fetching on revisit
 - **SRS**: Leitner 5-box system, localStorage key `'blim-hanzi-progress'`, value `Record<char, {box:1|2|3|4|5, nextReviewDate:string}>` (ISO date). Box intervals: `{1:0, 2:1, 3:3, 4:7, 5:14}` days. Missing entry = always due.
 - **Word list**: 20 hardcoded HSK 1 characters in `WORDS` array (`char, pinyin, uz, ru, strokes`)
@@ -157,7 +168,9 @@
 - **Stroke grading** (`gradeStroke`): validates start/end proximity (tolerance `0.15 × size`), direction dot product (threshold 0.45), shape at 25%/50%/75% along path. Rejects strokes shorter than `0.04 × size`.
 - **Wrong stroke**: user stroke fades out in red; ghost outline of correct next stroke shown after 1 mistake; traveling dot hint along median after 2 mistakes
 - **Out-of-order stroke**: detected by checking all later strokes; correct next stroke briefly highlighted in blue
-- **Correct stroke**: canonical stroke slides into place from user's start position (easeOutQuart, 600ms). On all-strokes-complete: scale-up + color-to-red animation → calls `onComplete(totalMistakes)`.
+- **Correct stroke**: canonical stroke slides into place from user's start position (easeOutQuart, 200ms). On all-strokes-complete: scale-up + color-to-red animation → calls `onComplete(totalMistakes)`.
+- **Input blocking**: `animatingRef` blocks pointer input during slide animation (200ms + 100ms safety). Reduced from 600→350→200ms to minimize dead zone for fast writers.
+- **Single-point dot**: `drawTaperedStroke` handles `points.length === 1` by drawing a small circle (radius `canvasSize * 0.008`), giving immediate visual feedback on touch.
 - **Show button** (revealAll): animates each remaining stroke in sequence — traveling dot along median (1000ms) then slide-in (500ms). Calls `onComplete(mistakes + penaltyStrokes)` after all revealed.
 - **`onComplete(mistakes: number)`**: called when all strokes done (naturally or via Show). `HanziWriterPractice` adds mistakes to session total and sets `quizComplete = true` after 800ms delay.
 - **Erase** (`resetKey` increment on `HanziCanvas` key): remounts canvas, resets all state. `showAnswer` reset to 0.

@@ -33,6 +33,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 /[language]/[book]/stories                  # Stories list page
 /[language]/[book]/stories/[storyId]        # Story reader page
 /[language]/[book]/karaoke/[songId]         # Karaoke player page
+/[language]/[book]/writing/[setId]          # Writing practice page (per character set)
 ```
 
 Example routes:
@@ -47,7 +48,8 @@ Example routes:
 - `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
 - `/chinese/hsk2/stories` - HSK 2 stories list
 - `/chinese/hsk2/stories/hsk2-story1` - Story reader
-- `/chinese?tab=writing` - Writing tab (Hanzi character writing practice, SRS)
+- `/chinese?tab=writing` - Writing tab (Hanzi character set selection)
+- `/chinese/hsk1/writing/hsk1-set1` - Writing practice for character set 1
 
 ## Project Structure
 ```
@@ -71,6 +73,10 @@ Example routes:
 │   │   │       │   └── [storyId]/page.tsx  # Story reader page
 │   │   │       ├── karaoke/
 │   │   │       │   └── [songId]/page.tsx   # Karaoke player page
+│   │   │       ├── writing/
+│   │   │       │   └── [setId]/
+│   │   │       │       ├── page.tsx              # Writing practice (server component)
+│   │   │       │       └── WritingPracticePage.tsx # Writing practice (client component)
 │   │   │       └── grammar/[slug]/page.tsx # Grammar pages (shi/you/zai/de/bu/ma)
 │   │   ├── api/
 │   │   │   ├── admin/
@@ -81,6 +87,7 @@ Example routes:
 │   │   │   │   └── status/route.ts # Payment status (GET)
 │   │   │   ├── subscription/route.ts # Active subscription (GET)
 │   │   │   ├── progress/route.ts  # User progress (GET/POST)
+│   │   │   ├── corrections/route.ts # Correction reports via Telegram (POST)
 │   │   │   └── auth/
 │   │   │       ├── telegram/
 │   │   │       │   ├── init/route.ts     # Telegram Widget auth URL (GET)
@@ -97,6 +104,7 @@ Example routes:
 │   │   ├── ReaderLayout.tsx   # Layout with fixed header/footer
 │   │   ├── ReaderControls.tsx # Header controls (focus, language, font)
 │   │   ├── HomePage.tsx       # Home page (language selection cards)
+│   │   ├── PageFooter.tsx    # Shared footer: correction button + "Blim — ..." text
 │   │   ├── BannerMenu.tsx    # Shared hamburger menu for all banner pages
 │   │   ├── LanguagePage.tsx   # Language page (tabbed: Dialog, Yozish, Flesh, KTV, Tika, Test)
 │   │   ├── HanziWriterPractice.tsx  # Writing tab: Leitner SRS character practice (home/practice/done views)
@@ -139,6 +147,7 @@ Example routes:
 │   │   ├── dialogues.ts     # Loads dialogue JSON from /content/dialogues
 │   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
 │   │   ├── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
+│   │   ├── writing.ts        # Writing practice sets data (WRITING_SETS, HanziWord type)
 │   │   └── english-content.ts # Loads English content from /content/english
 │   ├── styles/
 │   │   └── reading.css        # All styles (see src/styles/CLAUDE.md)
@@ -356,6 +365,16 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Icons**: Dynamic favicon (`src/app/icon.tsx`) and Apple touch icon (`src/app/apple-icon.tsx`) via edge runtime
 - **`next/image`**: All logo `<img>` tags use `next/image` `<Image>`. Remote patterns configured in `next.config.js` for Supabase and flagcdn.
 - **Env var**: `NEXT_PUBLIC_SITE_URL` — defaults to `https://blim.uz`, used by sitemap and `metadataBase`
+
+## Correction Reporting System
+- **Component**: `src/components/PageFooter.tsx` — shared footer on ALL pages
+- **Button**: Inline text button "Xato haqida xabar berish" with pencil icon, above "Blim — Interaktiv til darsliklari" footer text
+- **Visibility**: Only for logged-in users (`!user` hides it), hidden on home page (`pathname === '/'`)
+- **Form**: Expandable inline — reason dropdown (6 options: pinyin/translation/audio/grammar/image/other) + free text textarea
+- **API**: `POST /api/corrections` — JWT auth (Bearer token), sends Telegram message to admin chat with user info, page URL, reason, and optional message
+- **Bilingual**: All labels support UZ/RU via `useLanguage()` hook
+- **CSS classes**: `.correction-inline__*` in reading.css
+- **Used in**: Every page component — LanguagePage, BookPage, StoriesPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, KaraokePlayer, ReaderLayout, WritingPracticePage
 
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.
