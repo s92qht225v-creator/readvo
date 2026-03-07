@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 
 // Tunable constants
 const STROKE_TOLERANCE = 0.15;
@@ -217,8 +217,8 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   // Keep refs in sync
   useEffect(() => { sizeRef.current = canvasSize; }, [canvasSize]);
 
-  // Track DPR
-  useEffect(() => {
+  // Track DPR — useLayoutEffect so it's ready before canvas setup
+  useLayoutEffect(() => {
     dprRef.current = Math.min(window.devicePixelRatio || 1, 3); // cap at 3x
   }, []);
 
@@ -298,7 +298,8 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   }, [char]);
 
   // Draw background (outline + crosshair) — retina-aware
-  useEffect(() => {
+  // useLayoutEffect: must run BEFORE paint so canvas is initialized before user can interact
+  useLayoutEffect(() => {
     if (loading || !bgRef.current || strokesRef.current.length === 0) return;
     const ctx = setupCanvas(bgRef.current, canvasSize);
     if (!ctx) return;
@@ -329,10 +330,20 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   }, [loading, canvasSize, setupCanvas, hidden]);
 
   // Set up display and input canvases for retina
-  useEffect(() => {
+  // useLayoutEffect: must run BEFORE paint so DPR transform is ready before user draws
+  useLayoutEffect(() => {
     if (loading) return;
     setupCanvas(displayRef.current, canvasSize);
     setupCanvas(inputRef.current, canvasSize);
+
+    // Native touchstart preventDefault — prevents browser from intercepting touch
+    // for scroll detection. React's onPointerDown preventDefault fires too late
+    // (via event delegation at root) — the browser decides during touchstart.
+    const canvas = inputRef.current;
+    if (!canvas) return;
+    const preventTouch = (e: TouchEvent) => e.preventDefault();
+    canvas.addEventListener('touchstart', preventTouch, { passive: false });
+    return () => canvas.removeEventListener('touchstart', preventTouch);
   }, [loading, canvasSize, setupCanvas]);
 
   // Persistent rAF loop for input canvas — decouples drawing from pointer events
@@ -727,11 +738,12 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     if (inputCtx) inputCtx.clearRect(0, 0, sizeRef.current, sizeRef.current);
 
     // Capture pointer so we get all events even if finger/cursor leaves canvas bounds
-    e.currentTarget.setPointerCapture(e.pointerId);
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* optional */ }
 
     isDrawingRef.current = true;
     const rect = inputRef.current!.getBoundingClientRect();
     currentInputRef.current = [{ x: e.clientX - rect.left, y: e.clientY - rect.top }];
+    isDirtyRef.current = true;
   }, []);
 
   const onPointerMove = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -851,8 +863,8 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={handleStrokeEnd}
-        onPointerLeave={handleStrokeEnd}
         onPointerCancel={handleStrokeEnd}
+        onLostPointerCapture={handleStrokeEnd}
       />
       {/* Stroke counter */}
       {strokeCount > 0 && (
