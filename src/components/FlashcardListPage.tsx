@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 interface FlashcardLessonItem {
   lessonId: string;
@@ -83,13 +84,7 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
         </div>
       </section>
 
-      <footer className="home__footer">
-        <p>
-          {language === 'ru'
-            ? 'Blim — Интерактивные учебники языков'
-            : 'Blim — Interaktiv til darsliklari'}
-        </p>
-      </footer>
+      <PageFooter />
     </main>
   );
 }

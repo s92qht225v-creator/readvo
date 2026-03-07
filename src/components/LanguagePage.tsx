@@ -7,6 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 import type { DialogueInfo } from '../services/dialogues';
 import { WRITING_SETS } from '@/services/writing';
 
@@ -657,9 +658,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
 
       </section>
 
-      <footer className="home__footer">
-        <p>Blim — Interaktiv til darsliklari</p>
-      </footer>
+      <PageFooter />
     </main>
   );
 }

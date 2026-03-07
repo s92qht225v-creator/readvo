@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 interface StoryItem {
   id: string;
@@ -97,13 +98,7 @@ export function StoriesPage({ stories, bookPath, languagePath }: StoriesPageProp
         </div>
       </section>
 
-      <footer className="home__footer">
-        <p>
-          {language === 'ru'
-            ? 'Blim — Интерактивные учебники языков'
-            : 'Blim — Interaktiv til darsliklari'}
-        </p>
-      </footer>
+      <PageFooter />
     </main>
   );
 }

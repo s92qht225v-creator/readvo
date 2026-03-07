@@ -8,6 +8,7 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 interface ProgressEntry {
   lesson_id: string;
@@ -182,14 +183,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
         </section>
       )}
 
-      {/* Footer */}
-      <footer className="home__footer">
-        <p>
-          {language === 'ru'
-            ? 'Blim — Интерактивные учебники языков'
-            : 'Blim — Interaktiv til darsliklari'}
-        </p>
-      </footer>
+      <PageFooter />
     </main>
   );
 }

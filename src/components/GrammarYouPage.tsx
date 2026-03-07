@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 const sections = [
   { id: 'intro', uz: 'Asosiy', ru: 'Основное' },
@@ -359,9 +360,7 @@ export function GrammarYouPage() {
 
       </div>
 
-      <footer className="home__footer">
-        <p>{language === 'ru' ? 'Blim — Интерактивные учебники языков' : 'Blim — Interaktiv til darsliklari'}</p>
-      </footer>
+      <PageFooter />
     </div>
   );
 }

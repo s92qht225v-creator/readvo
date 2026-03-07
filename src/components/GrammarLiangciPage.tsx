@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
+import { PageFooter } from './PageFooter';
 
 const COLOR = '#dc2626';
 const COLOR_DARK = '#b91c1c';
@@ -620,9 +621,7 @@ export function GrammarLiangciPage() {
 
       </div>
 
-      <footer className="home__footer">
-        <p>{language === 'ru' ? 'Blim — Интерактивные учебники языков' : 'Blim — Interaktiv til darsliklari'}</p>
-      </footer>
+      <PageFooter />
     </div>
   );
 }

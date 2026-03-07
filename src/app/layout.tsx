@@ -3,7 +3,6 @@ import { Noto_Sans } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
-import { CorrectionFAB } from '@/components/CorrectionFAB';
 import { YandexPageView } from '@/components/YandexPageView';
 
 const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
@@ -115,7 +114,6 @@ gtag('config', 'G-1YH679LNRS');`}
         <YandexPageView />
         <AuthProvider>
           {children}
-          <CorrectionFAB />
         </AuthProvider>
       </body>
     </html>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { PageFooter } from './PageFooter';
 import { useAuth } from '../hooks/useAuth';
 import { AdminPanel } from './AdminPanel';
 
@@ -150,9 +151,7 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
         </div>
       </section>
 
-      <footer className="home__footer">
-        <p>{s.footerText}</p>
-      </footer>
+      <PageFooter />
     </main>
   );
 }
