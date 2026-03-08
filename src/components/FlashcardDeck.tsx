@@ -45,6 +45,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const [dragX, setDragX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const startX = useRef(0);
+  const dragXRef = useRef(0);
   const audio = useAudioPlayer();
 
   useEffect(() => {
@@ -83,6 +84,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     setKnownIds((prev) => new Set(prev).add(currentCard.id));
     setIsFlipped(false);
     setDragX(0);
+    dragXRef.current = 0;
     setTimeout(() => setCurrentIndex((prev) => prev + 1), 100);
   }, [currentCard]);
 
@@ -91,6 +93,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     setUnknownIds((prev) => new Set(prev).add(currentCard.id));
     setIsFlipped(false);
     setDragX(0);
+    dragXRef.current = 0;
     setTimeout(() => setCurrentIndex((prev) => prev + 1), 100);
   }, [currentCard]);
 
@@ -101,32 +104,46 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
   const onTouchStart = useCallback((e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX;
+    dragXRef.current = 0;
     setIsDragging(true);
   }, []);
   const onTouchMove = useCallback((e: React.TouchEvent) => {
-    if (isDragging) setDragX(e.touches[0].clientX - startX.current);
+    if (isDragging) {
+      const dx = e.touches[0].clientX - startX.current;
+      dragXRef.current = dx;
+      setDragX(dx);
+    }
   }, [isDragging]);
   const onTouchEnd = useCallback(() => {
+    const dx = dragXRef.current;
     setIsDragging(false);
-    if (dragX > SWIPE_THRESHOLD) handleSwipe('right');
-    else if (dragX < -SWIPE_THRESHOLD) handleSwipe('left');
-    else setDragX(0);
-  }, [dragX, handleSwipe]);
+    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
+    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
+    setDragX(0);
+    dragXRef.current = 0;
+  }, [handleSwipe]);
 
   const onMouseDown = useCallback((e: React.MouseEvent) => {
     startX.current = e.clientX;
+    dragXRef.current = 0;
     setIsDragging(true);
     e.preventDefault();
   }, []);
   const onMouseMove = useCallback((e: React.MouseEvent) => {
-    if (isDragging) setDragX(e.clientX - startX.current);
+    if (isDragging) {
+      const dx = e.clientX - startX.current;
+      dragXRef.current = dx;
+      setDragX(dx);
+    }
   }, [isDragging]);
   const onMouseUp = useCallback(() => {
+    const dx = dragXRef.current;
     setIsDragging(false);
-    if (dragX > SWIPE_THRESHOLD) handleSwipe('right');
-    else if (dragX < -SWIPE_THRESHOLD) handleSwipe('left');
-    else setDragX(0);
-  }, [dragX, handleSwipe]);
+    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
+    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
+    setDragX(0);
+    dragXRef.current = 0;
+  }, [handleSwipe]);
 
   const handleRestartUnknown = useCallback(() => {
     const unknownCards = cards.filter((c) => unknownIds.has(c.id));
