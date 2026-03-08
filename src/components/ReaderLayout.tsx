@@ -27,6 +27,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { trackEvent } from '@/utils/fbq';
 
 interface NavLink {
   lessonId: string;
@@ -99,6 +100,15 @@ export function ReaderLayout({
       }).catch(() => {});
     });
   }, [user, lessonId, pageNum, getAccessToken, showPaywall]);
+
+  // Meta Pixel: track content view
+  useEffect(() => {
+    trackEvent('ViewContent', {
+      content_name: `Lesson ${lessonId} Page ${pageNum}`,
+      content_category: 'Lesson',
+      content_type: 'product',
+    });
+  }, [lessonId, pageNum]);
 
   // Active sentence for translation panel
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);

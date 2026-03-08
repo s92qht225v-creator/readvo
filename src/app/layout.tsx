@@ -4,6 +4,7 @@ import Script from 'next/script';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 import { YandexPageView } from '@/components/YandexPageView';
+import { MetaPageView } from '@/components/MetaPageView';
 
 const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
 
@@ -125,6 +126,7 @@ fbq('track', 'PageView');`}
           </div>
         </noscript>
         <YandexPageView />
+        <MetaPageView />
         <AuthProvider>
           {children}
         </AuthProvider>

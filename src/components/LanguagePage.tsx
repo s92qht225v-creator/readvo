@@ -8,6 +8,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { trackEvent } from '@/utils/fbq';
 import type { DialogueInfo } from '../services/dialogues';
 import { WRITING_SETS } from '@/services/writing';
 
@@ -258,6 +259,14 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
     dialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
     return Object.keys(TAGS).filter((t) => tagSet.has(t));
   }, [dialogues]);
+
+  // Meta Pixel: debounced search tracking
+  useEffect(() => {
+    const q = (search || topicSearch || writingSearch || grammarSearch).trim();
+    if (!q) return;
+    const t = setTimeout(() => trackEvent('Search', { search_string: q }), 800);
+    return () => clearTimeout(t);
+  }, [search, topicSearch, writingSearch, grammarSearch]);
 
   const filteredDialogues = useMemo(() => {
     let result = dialogues;

@@ -13,6 +13,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { trackEvent } from '@/utils/fbq';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -224,6 +225,16 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [audioActive, setAudioActive] = useState(false);
+
+  // Meta Pixel: track content view
+  useEffect(() => {
+    const type = story.sections.some((s) => s.sentences.some((se) => se.speaker)) ? 'Dialogue' : 'Story';
+    trackEvent('ViewContent', {
+      content_name: `${type}: ${story.title}`,
+      content_category: type,
+      content_type: 'product',
+    });
+  }, [story.title, story.sections]);
 
   const togglePinyin = useCallback(() => setShowPinyin((v) => !v), []);
   const toggleTranslation = useCallback(() => setShowTranslation((v) => !v), []);

@@ -11,6 +11,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { trackEvent } from '@/utils/fbq';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
@@ -52,6 +53,15 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       setIsShuffled(true);
     }
   }, [deck.words, isShuffled]);
+
+  // Meta Pixel: track flashcard view
+  useEffect(() => {
+    trackEvent('ViewContent', {
+      content_name: `Flashcards: ${deck.title}`,
+      content_category: 'Flashcards',
+      content_type: 'product',
+    });
+  }, [deck.title]);
 
   const totalCards = cards.length;
   const reviewedCount = knownIds.size + unknownIds.size;
@@ -320,7 +330,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         )}
                       </>
                     ) : (
-                      <div style={{ fontSize: 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center' }}>{translation}</div>
+                      <div style={{ fontSize: translation.length > 20 ? 18 : 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
                     )}
                     <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
                       {language === 'ru' ? 'нажмите — посмотрите ответ' : 'bosing — javobni ko\'ring'}
@@ -342,7 +352,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     {direction === 'cn' ? (
                       <>
                         <div style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{currentCard.text_original}</div>
-                        <div style={{ fontSize: 36, fontWeight: 600, color: '#fff', marginTop: 10, textAlign: 'center' }}>{translation}</div>
+                        <div style={{ fontSize: translation.length > 20 ? 22 : translation.length > 12 ? 28 : 36, fontWeight: 600, color: '#fff', marginTop: 10, textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
                         <div style={{ fontSize: 15, color: '#fca5a5', marginTop: 10 }}>{currentCard.pinyin}</div>
                       </>
                     ) : (

@@ -3685,6 +3685,7 @@ body {
   border-radius: 10px;
   border: 2px solid var(--color-border);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
 }
 
 /* Front face */
@@ -3704,11 +3705,12 @@ body {
 }
 
 .flashcard__chinese {
-  font-size: 3rem;
+  font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 700;
   color: var(--color-text);
   text-align: center;
   line-height: 1.4;
+  word-break: break-word;
 }
 
 /* Audio button on flashcard front */
@@ -3813,11 +3815,13 @@ body {
 }
 
 .flashcard__translation {
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-text);
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.15;
+  word-break: break-word;
+  padding: 0 var(--spacing-sm);
 }
 
 .flashcard__back-chinese {
@@ -3972,7 +3976,7 @@ body {
   }
 
   .flashcard__chinese {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
 
   .flashcard__card-container {

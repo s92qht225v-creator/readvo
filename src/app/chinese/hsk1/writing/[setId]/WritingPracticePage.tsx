@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useRequireAuth } from '@/hooks/useRequireAuth';
@@ -9,6 +9,7 @@ import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { HanziWriterPractice } from '@/components/HanziWriterPractice';
 import type { HanziWord } from '@/services/writing';
+import { trackEvent } from '@/utils/fbq';
 
 interface Props {
   setId: string;
@@ -22,6 +23,15 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const [language] = useLanguage();
   const router = useRouter();
   const [subtab, setSubtab] = useState<'writing' | 'chars'>('writing');
+
+  // Meta Pixel: track writing practice view
+  useEffect(() => {
+    trackEvent('ViewContent', {
+      content_name: `Writing: ${title}`,
+      content_category: 'Writing',
+      content_type: 'product',
+    });
+  }, [title]);
 
   if (isLoading) return <div className="loading-spinner" />;
 

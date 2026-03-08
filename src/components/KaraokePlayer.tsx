@@ -7,7 +7,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
-import { PageFooter } from './PageFooter';
+import { trackEvent } from '@/utils/fbq';
 
 interface KaraokeChar {
   id: number;
@@ -56,6 +56,15 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
   const [tappedLineIdx, setTappedLineIdx] = useState(-1);
   const animFrameRef = useRef<number | null>(null);
   const linesContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // Meta Pixel: track karaoke view
+  useEffect(() => {
+    trackEvent('ViewContent', {
+      content_name: `Karaoke: ${song.title}`,
+      content_category: 'Karaoke',
+      content_type: 'product',
+    });
+  }, [song.title]);
 
   // Compute the audio-synced line index based on currentTime
   const audioLineIdx = useMemo(() => {
@@ -330,7 +339,6 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
           </div>
         </div>
       </div>
-      <PageFooter />
     </>
   );
 }

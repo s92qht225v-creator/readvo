@@ -367,14 +367,15 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Env var**: `NEXT_PUBLIC_SITE_URL` — defaults to `https://blim.uz`, used by sitemap and `metadataBase`
 
 ## Correction Reporting System
-- **Component**: `src/components/PageFooter.tsx` — shared footer on ALL pages
+- **Component**: `src/components/PageFooter.tsx` — shared footer on ALL pages (except karaoke)
 - **Button**: Inline text button "Xato haqida xabar berish" with pencil icon, above "Blim — Interaktiv til darsliklari" footer text
-- **Visibility**: Only for logged-in users (`!user` hides it), hidden on home page (`pathname === '/'`)
+- **Visibility**: All users (logged-in and anonymous), hidden on home page (`pathname === '/'`). Unauthenticated submissions return 401 error.
 - **Form**: Expandable inline — reason dropdown (6 options: pinyin/translation/audio/grammar/image/other) + free text textarea
 - **API**: `POST /api/corrections` — JWT auth (Bearer token), sends Telegram message to admin chat with user info, page URL, reason, and optional message
 - **Bilingual**: All labels support UZ/RU via `useLanguage()` hook
 - **CSS classes**: `.correction-inline__*` in reading.css
-- **Used in**: Every page component — LanguagePage, BookPage, StoriesPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, KaraokePlayer, ReaderLayout, WritingPracticePage
+- **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (story/dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
+- **Used in**: Every page component — LanguagePage, BookPage, StoriesPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
 
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.

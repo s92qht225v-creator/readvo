@@ -14,9 +14,6 @@ export type { ContentEntry, BookManifest, LessonInfo } from './content';
 
 export { loadFlashcardDeck } from './flashcards';
 
-export { loadStoriesForBook, loadStory } from './stories';
-export type { StoryInfo, StoryPage } from './stories';
-
 export { loadDialoguesForBook, loadDialogue } from './dialogues';
 export type { DialogueInfo, DialoguePage } from './dialogues';
 

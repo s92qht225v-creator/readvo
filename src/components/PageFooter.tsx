@@ -26,7 +26,7 @@ export function PageFooter() {
   const [status, setStatus] = useState<Status>('idle');
 
   const isRu = language === 'ru';
-  const showCorrection = pathname !== '/' && !!user;
+  const showCorrection = pathname !== '/';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
