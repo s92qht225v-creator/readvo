@@ -11,7 +11,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
@@ -28,8 +28,7 @@ const SWIPE_THRESHOLD = 80;
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, backHref, lessonTitle, lessonPinyin, lessonTitleTranslation, lessonTitleTranslation_ru }) => {
   const { isLoading: authLoading } = useRequireAuth();
   const trial = useTrial();
-  const [cards, setCards] = useState<FlashcardWord[]>([...deck.words]);
-  const [isShuffled, setIsShuffled] = useState(false);
+  const [cards, setCards] = useState<FlashcardWord[]>(() => shuffleArray([...deck.words]));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [knownIds, setKnownIds] = useState<Set<string>>(new Set());
@@ -46,18 +45,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const [isDragging, setIsDragging] = useState(false);
   const startX = useRef(0);
   const dragXRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const isProcessingRef = useRef(false);
   const audio = useAudioPlayer();
 
+  // Analytics: track flashcard view
   useEffect(() => {
-    if (!isShuffled) {
-      setCards(shuffleArray([...deck.words]));
-      setIsShuffled(true);
-    }
-  }, [deck.words, isShuffled]);
-
-  // Meta Pixel: track flashcard view
-  useEffect(() => {
-    trackEvent('ViewContent', {
+    trackAll('ViewContent', 'flashcard_view', 'flashcard_view', {
       content_name: `Flashcards: ${deck.title}`,
       content_category: 'Flashcards',
       content_type: 'product',
@@ -80,21 +74,29 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   }, [audio, currentCard]);
 
   const handleKnow = useCallback(() => {
-    if (!currentCard) return;
+    if (!currentCard || isProcessingRef.current) return;
+    isProcessingRef.current = true;
     setKnownIds((prev) => new Set(prev).add(currentCard.id));
     setIsFlipped(false);
     setDragX(0);
     dragXRef.current = 0;
-    setTimeout(() => setCurrentIndex((prev) => prev + 1), 100);
+    setTimeout(() => {
+      setCurrentIndex((prev) => prev + 1);
+      isProcessingRef.current = false;
+    }, 100);
   }, [currentCard]);
 
   const handleUnknown = useCallback(() => {
-    if (!currentCard) return;
+    if (!currentCard || isProcessingRef.current) return;
+    isProcessingRef.current = true;
     setUnknownIds((prev) => new Set(prev).add(currentCard.id));
     setIsFlipped(false);
     setDragX(0);
     dragXRef.current = 0;
-    setTimeout(() => setCurrentIndex((prev) => prev + 1), 100);
+    setTimeout(() => {
+      setCurrentIndex((prev) => prev + 1);
+      isProcessingRef.current = false;
+    }, 100);
   }, [currentCard]);
 
   const handleSwipe = useCallback((dir: 'left' | 'right') => {
@@ -102,20 +104,23 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     else handleUnknown();
   }, [handleKnow, handleUnknown]);
 
+  // Touch handlers — use refs to avoid stale closures (Bug 2 fix)
   const onTouchStart = useCallback((e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX;
     dragXRef.current = 0;
+    isDraggingRef.current = true;
     setIsDragging(true);
   }, []);
   const onTouchMove = useCallback((e: React.TouchEvent) => {
-    if (isDragging) {
-      const dx = e.touches[0].clientX - startX.current;
-      dragXRef.current = dx;
-      setDragX(dx);
-    }
-  }, [isDragging]);
+    if (!isDraggingRef.current) return;
+    const dx = e.touches[0].clientX - startX.current;
+    dragXRef.current = dx;
+    setDragX(dx);
+  }, []);
   const onTouchEnd = useCallback(() => {
+    if (!isDraggingRef.current) return;
     const dx = dragXRef.current;
+    isDraggingRef.current = false;
     setIsDragging(false);
     if (dx > SWIPE_THRESHOLD) handleSwipe('right');
     else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
@@ -123,27 +128,46 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     dragXRef.current = 0;
   }, [handleSwipe]);
 
+  // Mouse handlers — attach move/up to document to fix Bug 3 (onMouseLeave accidental swipe)
+  const handleSwipeRef = useRef(handleSwipe);
+  handleSwipeRef.current = handleSwipe;
+
+  const onDocMouseMove = useCallback((e: MouseEvent) => {
+    if (!isDraggingRef.current) return;
+    const dx = e.clientX - startX.current;
+    dragXRef.current = dx;
+    setDragX(dx);
+  }, []);
+  const onDocMouseUp = useCallback(() => {
+    if (!isDraggingRef.current) return;
+    const dx = dragXRef.current;
+    isDraggingRef.current = false;
+    setIsDragging(false);
+    if (dx > SWIPE_THRESHOLD) handleSwipeRef.current('right');
+    else if (dx < -SWIPE_THRESHOLD) handleSwipeRef.current('left');
+    setDragX(0);
+    dragXRef.current = 0;
+    document.removeEventListener('mousemove', onDocMouseMove);
+    document.removeEventListener('mouseup', onDocMouseUp);
+  }, [onDocMouseMove]);
+
   const onMouseDown = useCallback((e: React.MouseEvent) => {
     startX.current = e.clientX;
     dragXRef.current = 0;
+    isDraggingRef.current = true;
     setIsDragging(true);
     e.preventDefault();
-  }, []);
-  const onMouseMove = useCallback((e: React.MouseEvent) => {
-    if (isDragging) {
-      const dx = e.clientX - startX.current;
-      dragXRef.current = dx;
-      setDragX(dx);
-    }
-  }, [isDragging]);
-  const onMouseUp = useCallback(() => {
-    const dx = dragXRef.current;
-    setIsDragging(false);
-    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
-    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
-    setDragX(0);
-    dragXRef.current = 0;
-  }, [handleSwipe]);
+    document.addEventListener('mousemove', onDocMouseMove);
+    document.addEventListener('mouseup', onDocMouseUp);
+  }, [onDocMouseMove, onDocMouseUp]);
+
+  // Cleanup document listeners on unmount
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('mousemove', onDocMouseMove);
+      document.removeEventListener('mouseup', onDocMouseUp);
+    };
+  }, [onDocMouseMove, onDocMouseUp]);
 
   const handleRestartUnknown = useCallback(() => {
     const unknownCards = cards.filter((c) => unknownIds.has(c.id));
@@ -173,7 +197,9 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       ? (language === 'ru' ? 'Не знаю ✗' : 'Bilmayman ✗')
       : dragX > 0
         ? (language === 'ru' ? 'Знаю?' : 'Bilaman?')
-        : (language === 'ru' ? 'Не знаю?' : 'Bilmayman?');
+        : dragX < 0
+          ? (language === 'ru' ? 'Не знаю?' : 'Bilmayman?')
+          : '';
   const swipeBg = dragX > SWIPE_THRESHOLD ? '#dcfce7' : dragX < -SWIPE_THRESHOLD ? '#fee2e2' : '#f5f5f8';
   const swipeBorder = dragX > SWIPE_THRESHOLD ? '#22c55e' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#e0e0e6';
   const swipeColor = dragX > SWIPE_THRESHOLD ? '#16a34a' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#999';
@@ -267,9 +293,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               onTouchMove={onTouchMove}
               onTouchEnd={onTouchEnd}
               onMouseDown={onMouseDown}
-              onMouseMove={onMouseMove}
-              onMouseUp={onMouseUp}
-              onMouseLeave={onMouseUp}
               style={{ userSelect: 'none', touchAction: 'pan-y' }}
             >
               <div style={{ perspective: 800, width: '100%', height: 260, position: 'relative', cursor: 'pointer' }}>

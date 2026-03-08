@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { trackEvent } from '@/utils/fbq';
+import { trackEvent } from '@/utils/analytics';
 
 export function MetaPageView() {
   const pathname = usePathname();

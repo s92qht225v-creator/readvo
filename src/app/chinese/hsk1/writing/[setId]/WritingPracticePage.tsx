@@ -9,7 +9,7 @@ import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { HanziWriterPractice } from '@/components/HanziWriterPractice';
 import type { HanziWord } from '@/services/writing';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 interface Props {
   setId: string;
@@ -24,9 +24,9 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const router = useRouter();
   const [subtab, setSubtab] = useState<'writing' | 'chars'>('writing');
 
-  // Meta Pixel: track writing practice view
+  // Analytics: track writing practice view
   useEffect(() => {
-    trackEvent('ViewContent', {
+    trackAll('ViewContent', 'writing_view', 'writing_view', {
       content_name: `Writing: ${title}`,
       content_category: 'Writing',
       content_type: 'product',

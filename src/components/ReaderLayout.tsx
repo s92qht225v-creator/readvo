@@ -27,7 +27,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 interface NavLink {
   lessonId: string;
@@ -101,9 +101,9 @@ export function ReaderLayout({
     });
   }, [user, lessonId, pageNum, getAccessToken, showPaywall]);
 
-  // Meta Pixel: track content view
+  // Analytics: track content view
   useEffect(() => {
-    trackEvent('ViewContent', {
+    trackAll('ViewContent', 'lesson_view', 'lesson_view', {
       content_name: `Lesson ${lessonId} Page ${pageNum}`,
       content_category: 'Lesson',
       content_type: 'product',

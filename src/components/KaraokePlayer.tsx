@@ -7,7 +7,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 interface KaraokeChar {
   id: number;
@@ -52,14 +52,23 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
   const [duration, setDuration] = useState(0);
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(true);
-  const [fontSize, setFontSize] = useState(100);
+  const [fontSize, setFontSize] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('readvo-font-size');
+      return saved ? Number(saved) : 100;
+    }
+    return 100;
+  });
+  useEffect(() => {
+    localStorage.setItem('readvo-font-size', String(fontSize));
+  }, [fontSize]);
   const [tappedLineIdx, setTappedLineIdx] = useState(-1);
   const animFrameRef = useRef<number | null>(null);
   const linesContainerRef = useRef<HTMLDivElement | null>(null);
 
-  // Meta Pixel: track karaoke view
+  // Analytics: track karaoke view
   useEffect(() => {
-    trackEvent('ViewContent', {
+    trackAll('ViewContent', 'karaoke_view', 'karaoke_view', {
       content_name: `Karaoke: ${song.title}`,
       content_category: 'Karaoke',
       content_type: 'product',
@@ -85,7 +94,8 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
   useEffect(() => {
     if (!song.audio_url) return;
     const audio = new Audio();
-    audio.preload = 'none';
+    audio.preload = 'metadata';
+    audio.src = song.audio_url;
     audioRef.current = audio;
 
     audio.addEventListener('loadedmetadata', () => setDuration(audio.duration));
@@ -97,7 +107,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     audio.addEventListener('pause', () => setIsPlaying(false));
     audio.addEventListener('ended', () => {
       setIsPlaying(false);
-      setCurrentTime(0);
+      setCurrentTime(audio.duration);
     });
     audio.addEventListener('error', () => {
       setIsLoading(false);
@@ -143,11 +153,8 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
 
     if (isPlaying) {
       audio.pause();
-    } else if (audio.src) {
-      audio.play();
     } else {
       setIsLoading(true);
-      audio.src = song.audio_url;
       audio.play().catch(() => {
         setIsLoading(false);
         setIsPlaying(false);
@@ -155,14 +162,58 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     }
   }, [isPlaying, song.audio_url]);
 
-  const handleSeek = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+  const progressRef = useRef<HTMLDivElement | null>(null);
+  const isScrubbing = useRef(false);
+
+  const seekToX = useCallback((clientX: number) => {
     const audio = audioRef.current;
-    if (!audio || !duration) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const ratio = (e.clientX - rect.left) / rect.width;
+    const bar = progressRef.current;
+    if (!audio || !duration || !bar) return;
+    const rect = bar.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
     audio.currentTime = ratio * duration;
     setCurrentTime(audio.currentTime);
   }, [duration]);
+
+  const onScrubMove = useCallback((e: MouseEvent) => {
+    if (!isScrubbing.current) return;
+    seekToX(e.clientX);
+  }, [seekToX]);
+
+  const onScrubUp = useCallback(() => {
+    isScrubbing.current = false;
+    document.removeEventListener('mousemove', onScrubMove);
+    document.removeEventListener('mouseup', onScrubUp);
+  }, [onScrubMove]);
+
+  const onScrubDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    isScrubbing.current = true;
+    seekToX(e.clientX);
+    document.addEventListener('mousemove', onScrubMove);
+    document.addEventListener('mouseup', onScrubUp);
+  }, [seekToX, onScrubMove, onScrubUp]);
+
+  const onScrubTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
+    isScrubbing.current = true;
+    seekToX(e.touches[0].clientX);
+  }, [seekToX]);
+
+  const onScrubTouchMove = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isScrubbing.current) return;
+    seekToX(e.touches[0].clientX);
+  }, [seekToX]);
+
+  const onScrubTouchEnd = useCallback(() => {
+    isScrubbing.current = false;
+  }, []);
+
+  // Cleanup scrub listeners on unmount
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('mousemove', onScrubMove);
+      document.removeEventListener('mouseup', onScrubUp);
+    };
+  }, [onScrubMove, onScrubUp]);
 
   const handleSkip = useCallback((seconds: number) => {
     const audio = audioRef.current;
@@ -284,11 +335,19 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
           </div>
 
           {/* Progress bar */}
-          <div className="karaoke__progress" onClick={handleSeek}>
+          <div
+            className="karaoke__progress"
+            ref={progressRef}
+            onMouseDown={onScrubDown}
+            onTouchStart={onScrubTouchStart}
+            onTouchMove={onScrubTouchMove}
+            onTouchEnd={onScrubTouchEnd}
+          >
             <div className="karaoke__progress-bar" style={{ width: `${progress}%` }} />
           </div>
           <div className="karaoke__time">
             <span>{formatTime(currentTime)}</span>
+            <span>/</span>
             <span>{formatTime(duration)}</span>
           </div>
 

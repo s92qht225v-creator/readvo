@@ -13,7 +13,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 interface StoryWord {
   /** Character range [startIdx, endIdx) in text_original */
@@ -226,10 +226,10 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const [duration, setDuration] = useState(0);
   const [audioActive, setAudioActive] = useState(false);
 
-  // Meta Pixel: track content view
+  // Analytics: track content view
   useEffect(() => {
     const type = story.sections.some((s) => s.sentences.some((se) => se.speaker)) ? 'Dialogue' : 'Story';
-    trackEvent('ViewContent', {
+    trackAll('ViewContent', 'dialogue_view', 'dialogue_view', {
       content_name: `${type}: ${story.title}`,
       content_category: type,
       content_type: 'product',

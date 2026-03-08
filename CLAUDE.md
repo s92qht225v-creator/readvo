@@ -30,8 +30,6 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 /[language]/[book]/flashcards/[lessonId]    # Flashcard practice for specific lesson
 /[language]/[book]/dialogues                # Dialogues list page
 /[language]/[book]/dialogues/[dialogueId]  # Dialogue reader page (uses StoryReader)
-/[language]/[book]/stories                  # Stories list page
-/[language]/[book]/stories/[storyId]        # Story reader page
 /[language]/[book]/karaoke/[songId]         # Karaoke player page
 /[language]/[book]/writing/[setId]          # Writing practice page (per character set)
 ```
@@ -46,8 +44,6 @@ Example routes:
 - `/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
 - `/chinese/hsk1/dialogues` - HSK 1 dialogues list
 - `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
-- `/chinese/hsk2/stories` - HSK 2 stories list
-- `/chinese/hsk2/stories/hsk2-story1` - Story reader
 - `/chinese?tab=writing` - Writing tab (Hanzi character set selection)
 - `/chinese/hsk1/writing/hsk1-set1` - Writing practice for character set 1
 
@@ -68,9 +64,6 @@ Example routes:
 │   │   │       ├── dialogues/
 │   │   │       │   ├── page.tsx       # Dialogues list page
 │   │   │       │   └── [dialogueId]/page.tsx  # Dialogue reader (uses StoryReader)
-│   │   │       ├── stories/
-│   │   │       │   ├── page.tsx       # Stories list page
-│   │   │       │   └── [storyId]/page.tsx  # Story reader page
 │   │   │       ├── karaoke/
 │   │   │       │   └── [songId]/page.tsx   # Karaoke player page
 │   │   │       ├── writing/
@@ -111,8 +104,7 @@ Example routes:
 │   │   ├── HanziCanvas.tsx          # Canvas-based hanzi stroke engine (retina, grading, hints, reveal)
 │   │   ├── BookPage.tsx       # Book page (lesson list with banner+tabs, reusable for English)
 │   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
-│   │   ├── StoriesPage.tsx     # Stories list page (banner+HSK tabs)
-│   │   ├── StoryReader.tsx    # Story/dialogue reader with ruby pinyin, translation panel, audio bar
+│   │   ├── StoryReader.tsx    # Dialogue reader with ruby pinyin, translation panel, audio bar
 │   │   ├── FlashcardListPage.tsx # Flashcard lesson list with banner+tabs
 │   │   ├── FlashcardDeck.tsx  # Flashcard session manager (client)
 │   │   ├── FlashcardCard.tsx  # Flashcard with 3D flip animation
@@ -143,7 +135,6 @@ Example routes:
 │   ├── services/               # Data loading
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
-│   │   ├── stories.ts        # Loads story JSON from /content/stories
 │   │   ├── dialogues.ts     # Loads dialogue JSON from /content/dialogues
 │   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
 │   │   ├── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
@@ -164,9 +155,6 @@ Example routes:
 │   ├── dialogues/
 │   │   └── hsk1/
 │   │       └── dialogue1.json # Dialogue content files (uses StoryReader format)
-│   ├── stories/
-│   │   └── hsk2/
-│   │       └── story1.json    # Story content files
 │   ├── karaoke/
 │   │   └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
 │   └── english/               # English content (see content/english/CLAUDE.md)
@@ -227,7 +215,7 @@ Page → Section → Sentence → Word
 - Tab labels (UZ): Dialog | Yozish | Flesh | KTV | Tika | Test
 - Tab labels (RU): Диалог | Письмо | Флеш | KTV | Грамм | Тесты
 - Tab IDs: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
-- Language toggle: Inside hamburger menu on banner pages (O'zbekcha/Русский toggle buttons under "Til" label, 中文 under "Men o'rganaman" label). Lesson/story reader headers still use UZ/RU toggle button.
+- Language toggle: Inside hamburger menu on banner pages (O'zbekcha/Русский toggle buttons under "Til" label, 中文 under "Men o'rganaman" label). Lesson/dialogue reader headers still use UZ/RU toggle button.
 
 ## Bilingual Support (Uzbek/Russian)
 All content supports both Uzbek and Russian translations:
@@ -282,7 +270,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Hook**: `src/hooks/useTrial.ts`
 - **Trial duration**: 7 days from `user.created_at`
 - **Free content** (always accessible): Lesson 1 (all pages), Flashcards lesson 1
-- **Paid content** (require active trial or subscription): Lessons 2-15, all stories, all dialogues, all karaoke songs, flashcards 2+
+- **Paid content** (require active trial or subscription): Lessons 2-15, all dialogues, all karaoke songs, flashcards 2+
 - **Trial status**: `{ daysLeft, isTrialActive, isTrialExpired, hasSubscription, subscriptionDaysLeft }`
 - **Subscription takes priority**: If valid subscription exists, `isTrialActive = true`
 - **Paywall component**: `src/components/Paywall.tsx` — shown when `trial.isTrialExpired && !isFreeContent`
@@ -359,7 +347,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Title template**: `%s | Blim` — set in root `layout.tsx`, all page titles auto-append "| Blim"
 - **Per-page metadata**: Every `page.tsx` exports `metadata` or `generateMetadata` with `title` + `description`
 - **OpenGraph / Twitter Cards**: Configured in root layout. Dynamic OG image via `src/app/opengraph-image.tsx` (edge runtime)
-- **Sitemap**: `src/app/sitemap.ts` — auto-generates all lesson, story, dialogue, karaoke, flashcard, and English unit URLs
+- **Sitemap**: `src/app/sitemap.ts` — auto-generates URLs for all content pages (lessons, dialogues, karaoke, flashcards, topic flashcards, writing sets, grammar, blog). **IMPORTANT**: When adding new content types or pages, always update `sitemap.ts` to include the new URLs. Topic flashcards are discovered automatically from `content/flashcards/topics/*.json`; writing sets from `WRITING_SETS` in `services/writing.ts`.
 - **robots.txt**: `public/robots.txt` — allows all, blocks `/api/` and `/*admin*`, includes `Sitemap:` directive
 - **JSON-LD**: `WebApplication` structured data in root layout
 - **Icons**: Dynamic favicon (`src/app/icon.tsx`) and Apple touch icon (`src/app/apple-icon.tsx`) via edge runtime
@@ -374,8 +362,8 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **API**: `POST /api/corrections` — JWT auth (Bearer token), sends Telegram message to admin chat with user info, page URL, reason, and optional message
 - **Bilingual**: All labels support UZ/RU via `useLanguage()` hook
 - **CSS classes**: `.correction-inline__*` in reading.css
-- **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (story/dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
-- **Used in**: Every page component — LanguagePage, BookPage, StoriesPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
+- **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
+- **Used in**: Every page component — LanguagePage, BookPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
 
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.

@@ -4,6 +4,9 @@ import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadKaraokeSongs } from '@/services/karaoke';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { loadBlogPosts } from '@/services/blog';
+import { WRITING_SETS } from '@/services/writing';
+import fs from 'fs';
+import path from 'path';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 
@@ -28,6 +31,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/chinese/hsk1/flashcards`, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
+  // Lesson pages (15 lessons × 3 pages)
+  const lessonPages: MetadataRoute.Sitemap = [];
+  for (let lesson = 1; lesson <= 15; lesson++) {
+    for (let page = 1; page <= 3; page++) {
+      lessonPages.push({
+        url: `${siteUrl}/chinese/hsk1/lesson/${lesson}/page/${page}`,
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      });
+    }
+  }
+
   // Dialogue pages
   const dialoguePages: MetadataRoute.Sitemap = dialogues.map((d) => ({
     url: `${siteUrl}/chinese/hsk1/dialogues/${d.id}`,
@@ -50,6 +65,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
+  // Topic flashcard pages
+  const topicsDir = path.join(process.cwd(), 'content', 'flashcards', 'topics');
+  let topicPages: MetadataRoute.Sitemap = [];
+  try {
+    const topicFiles = fs.readdirSync(topicsDir).filter((f) => f.endsWith('.json'));
+    topicPages = topicFiles.map((f) => ({
+      url: `${siteUrl}/chinese/hsk1/flashcards/topic/${f.replace('.json', '')}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }));
+  } catch { /* topics dir may not exist */ }
+
+  // Writing practice pages
+  const writingPages: MetadataRoute.Sitemap = WRITING_SETS.map((set) => ({
+    url: `${siteUrl}/chinese/hsk1/writing/${set.id}`,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }));
+
   // Blog pages
   const blogPages: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/blog`, changeFrequency: 'weekly', priority: 0.7 },
@@ -62,10 +96,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...lessonPages,
     ...grammarPages,
     ...dialoguePages,
     ...karaokePages,
     ...flashcardPages,
+    ...topicPages,
+    ...writingPages,
     ...blogPages,
   ];
 }

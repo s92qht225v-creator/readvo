@@ -2848,7 +2848,7 @@ body {
   display: flex;
   gap: 4px;
   padding: 8px 16px 10px;
-  max-width: 900px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -2889,7 +2889,7 @@ body {
 /* Content panels (vocab / grammar / quiz) */
 .dr-panel {
   padding: 14px 10px 40px;
-  max-width: 480px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -2937,9 +2937,14 @@ body {
 
 /* ── Dialog body ── */
 .dr-dialog-body {
-  padding: 30px 16px 16px;
-  max-width: 480px;
+  padding: 30px 16px 96px;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 90vw;
   margin: 0 auto;
+}
+.dr-dialog-body--with-audio {
+  padding-bottom: 120px;
 }
 
 .dr-lines {
@@ -4319,6 +4324,10 @@ body {
 
   .karaoke__controls {
     padding: 4px var(--spacing-md) 16px;
+  }
+
+  .karaoke .dr-font-controls {
+    display: none;
   }
 }
 
@@ -9610,6 +9619,7 @@ body {
 .hanzi-practice {
   padding: 0 0 24px;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .hanzi-practice__subtabs {

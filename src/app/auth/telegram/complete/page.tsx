@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
-import { trackEvent } from '@/utils/fbq';
+import { trackAll } from '@/utils/analytics';
 
 const loadingStyle = {
   display: 'flex',
@@ -73,8 +73,8 @@ function TelegramCompleteInner() {
           return;
         }
 
-        // Meta Pixel: track registration/login
-        trackEvent('CompleteRegistration', { status: 'success' });
+        // Analytics: track registration/login
+        trackAll('CompleteRegistration', 'registration', 'sign_up', { status: 'success' });
 
         router.replace('/chinese');
       } catch (err) {

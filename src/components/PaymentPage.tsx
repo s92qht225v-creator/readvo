@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
+import { trackAll } from '@/utils/analytics';
 
 const PLANS = [
   { id: '1_month', months: 1, price: 50000 },
@@ -146,6 +147,11 @@ export default function PaymentPage() {
       }
 
       setSuccess(true);
+      trackAll('Purchase', 'payment_submit', 'purchase', {
+        content_name: selectedPlan,
+        value: PLANS.find((p) => p.id === selectedPlan)!.price,
+        currency: 'UZS',
+      });
     } catch {
       setError(isRu ? 'Произошла ошибка' : 'Xatolik yuz berdi');
     } finally {
@@ -346,7 +352,14 @@ export default function PaymentPage() {
           <button
             key={plan.id}
             className={`payment__plan${selectedPlan === plan.id ? ' payment__plan--selected' : ''}`}
-            onClick={() => setSelectedPlan(plan.id)}
+            onClick={() => {
+              setSelectedPlan(plan.id);
+              trackAll('InitiateCheckout', 'payment_start', 'begin_checkout', {
+                content_name: plan.id,
+                value: plan.price,
+                currency: 'UZS',
+              });
+            }}
             type="button"
           >
             <span className="payment__plan-months">

@@ -168,6 +168,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     () => allSentences.filter((s): s is Sentence & { start: number; end: number } => s.start !== undefined && s.end !== undefined),
     [allSentences]
   );
+  const hasTimedRef = useRef(timedSentences.length > 0);
+  hasTimedRef.current = timedSentences.length > 0;
 
   const audioSentenceId = useMemo(() => {
     if (!isPlaying || !timedSentences.length) return null;
@@ -179,10 +181,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [focusMode, audioSentenceId]);
 
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
+  const displaySentenceIdRef = useRef(displaySentenceId);
+  displaySentenceIdRef.current = displaySentenceId;
   const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
 
   const toggleFocusMode = useCallback(() => {
     if (!focusMode) {
+      // Entering focus mode — stop full track, start sentence audio
       if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
       const targetId = activeSentenceId ?? allSentences[0]?.id ?? null;
       setActiveSentenceId(targetId);
@@ -190,6 +195,9 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         const s = allSentences.find(s => s.id === targetId);
         if (s?.audio_url) sentenceAudio.play(targetId, s.audio_url);
       }
+    } else {
+      // Exiting focus mode — stop sentence audio
+      sentenceAudio.stop();
     }
     setFocusMode(v => !v);
   }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
@@ -204,14 +212,14 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [focusMode, allSentences, isPlaying, sentenceAudio]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
-    const idx = allSentences.findIndex(s => s.id === displaySentenceId);
+    const idx = allSentences.findIndex(s => s.id === displaySentenceIdRef.current);
     if (idx === -1) return;
     const next = allSentences[dir === 'next' ? idx + 1 : idx - 1];
     if (next) {
       setActiveSentenceId(next.id);
       if (next.audio_url) sentenceAudio.play(next.id, next.audio_url);
     }
-  }, [displaySentenceId, allSentences, sentenceAudio]);
+  }, [allSentences, sentenceAudio]);
 
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -233,7 +241,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     audioRef.current = audio;
     audio.addEventListener('loadedmetadata', () => {});
     audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
-    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); setActiveSentenceId(null); });
+    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); if (hasTimedRef.current) setActiveSentenceId(null); });
     audio.addEventListener('ended', () => {
       setIsPlaying(false); setCurrentTime(0); setAudioActive(false);
       const lastId = allSentences[allSentences.length - 1]?.id ?? null;
@@ -254,8 +262,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
       if (!s.words) continue;
       for (const w of s.words) {
         const zh = s.text_original.slice(w.i[0], w.i[1]);
-        if (seen.has(w.p) || !zh.trim() || /[，。？！、""''：；]/.test(zh)) continue;
-        seen.add(w.p);
+        if (seen.has(zh) || !zh.trim() || /[，。？！、""''：；]/.test(zh)) continue;
+        seen.add(zh);
         words.push({ zh, py: w.p, uz: w.t, ru: w.tr, ex: s.text_original, expy: s.pinyin, exuz: s.text_translation, exru: s.text_translation_ru });
       }
     }
@@ -296,7 +304,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
               <button
                 key={t.id}
                 className={`dr-tabs__tab ${activeTab === t.id ? 'dr-tabs__tab--active' : ''}`}
-                onClick={() => setActiveTab(t.id)}
+                onClick={() => {
+                  setActiveTab(t.id);
+                  if (t.id !== 'dialog') {
+                    setFocusMode(false);
+                    sentenceAudio.stop();
+                  }
+                }}
                 type="button"
               >
                 {language === 'ru' ? t.ru : t.uz}
