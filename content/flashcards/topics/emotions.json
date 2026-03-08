@@ -1,0 +1,149 @@
+{
+  "id": "topic-emotions",
+  "title": "His-tuyg'ular",
+  "title_ru": "Эмоции и чувства",
+  "title_zh": "情绪与感受",
+  "title_pinyin": "Qíngxù yǔ gǎnshòu",
+  "words": [
+    {
+      "id": "tp-emo-01",
+      "text_original": "高兴",
+      "pinyin": "gāoxìng",
+      "text_translation": "xursand; xushhol",
+      "text_translation_ru": "радостный; довольный"
+    },
+    {
+      "id": "tp-emo-02",
+      "text_original": "开心",
+      "pinyin": "kāixīn",
+      "text_translation": "xursand; quvnoq",
+      "text_translation_ru": "весёлый; радостный"
+    },
+    {
+      "id": "tp-emo-03",
+      "text_original": "难过",
+      "pinyin": "nánguò",
+      "text_translation": "g'amgin; xafa",
+      "text_translation_ru": "грустный; печальный"
+    },
+    {
+      "id": "tp-emo-04",
+      "text_original": "生气",
+      "pinyin": "shēngqì",
+      "text_translation": "g'azablangan; jahli chiqqan",
+      "text_translation_ru": "злой; сердитый"
+    },
+    {
+      "id": "tp-emo-05",
+      "text_original": "害怕",
+      "pinyin": "hàipà",
+      "text_translation": "qo'rqmoq",
+      "text_translation_ru": "бояться; испуганный"
+    },
+    {
+      "id": "tp-emo-06",
+      "text_original": "紧张",
+      "pinyin": "jǐnzhāng",
+      "text_translation": "asabiy; hayajonlangan",
+      "text_translation_ru": "нервный; напряжённый"
+    },
+    {
+      "id": "tp-emo-07",
+      "text_original": "放松",
+      "pinyin": "fàngsōng",
+      "text_translation": "bo'shashgan; dam olgan",
+      "text_translation_ru": "расслабленный"
+    },
+    {
+      "id": "tp-emo-08",
+      "text_original": "激动",
+      "pinyin": "jīdòng",
+      "text_translation": "hayajonlangan; to'lqinlangan",
+      "text_translation_ru": "взволнованный"
+    },
+    {
+      "id": "tp-emo-09",
+      "text_original": "惊讶",
+      "pinyin": "jīngyà",
+      "text_translation": "hayron; ajablangan",
+      "text_translation_ru": "удивлённый"
+    },
+    {
+      "id": "tp-emo-10",
+      "text_original": "失望",
+      "pinyin": "shīwàng",
+      "text_translation": "umidsizlangan; ko'ngli qolgan",
+      "text_translation_ru": "разочарованный"
+    },
+    {
+      "id": "tp-emo-11",
+      "text_original": "担心",
+      "pinyin": "dānxīn",
+      "text_translation": "xavotirlanmoq; tashvishlanmoq",
+      "text_translation_ru": "беспокоиться; переживать"
+    },
+    {
+      "id": "tp-emo-12",
+      "text_original": "焦虑",
+      "pinyin": "jiāolǜ",
+      "text_translation": "tashvishli; bezovta",
+      "text_translation_ru": "тревожный; беспокойный"
+    },
+    {
+      "id": "tp-emo-13",
+      "text_original": "疲劳",
+      "pinyin": "píláo",
+      "text_translation": "charchagan; holdan toygan",
+      "text_translation_ru": "усталый; утомлённый"
+    },
+    {
+      "id": "tp-emo-14",
+      "text_original": "累",
+      "pinyin": "lèi",
+      "text_translation": "charchagan",
+      "text_translation_ru": "устал; уставший"
+    },
+    {
+      "id": "tp-emo-15",
+      "text_original": "烦",
+      "pinyin": "fán",
+      "text_translation": "bezor; zerikarli",
+      "text_translation_ru": "раздражённый; надоело"
+    },
+    {
+      "id": "tp-emo-16",
+      "text_original": "孤独",
+      "pinyin": "gūdú",
+      "text_translation": "yolg'iz; tang'o",
+      "text_translation_ru": "одинокий"
+    },
+    {
+      "id": "tp-emo-17",
+      "text_original": "羡慕",
+      "pinyin": "xiànmù",
+      "text_translation": "havas qilmoq; rashk qilmoq",
+      "text_translation_ru": "завидовать"
+    },
+    {
+      "id": "tp-emo-18",
+      "text_original": "满意",
+      "pinyin": "mǎnyì",
+      "text_translation": "mamnun; qoniqqan",
+      "text_translation_ru": "довольный; удовлетворённый"
+    },
+    {
+      "id": "tp-emo-19",
+      "text_original": "自豪",
+      "pinyin": "zìháo",
+      "text_translation": "g'ururli; faxrlangan",
+      "text_translation_ru": "гордый"
+    },
+    {
+      "id": "tp-emo-20",
+      "text_original": "感动",
+      "pinyin": "gǎndòng",
+      "text_translation": "ta'sirlangan; ko'ngli to'lgan",
+      "text_translation_ru": "растроганный; тронутый"
+    }
+  ]
+}

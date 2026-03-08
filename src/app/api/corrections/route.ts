@@ -45,7 +45,8 @@ export async function POST(request: NextRequest) {
   }
 
   const userName = user.user_metadata?.name || 'Unknown';
-  const userEmail = user.email || 'no-email';
+  const username = user.user_metadata?.preferred_username;
+  const userIdentifier = username ? `@${username}` : (user.email || 'no-email');
 
   const reasonLabels: Record<string, string> = {
     pinyin: 'Pinyin xatosi',
@@ -56,11 +57,37 @@ export async function POST(request: NextRequest) {
     other: 'Boshqa',
   };
 
+  // Parse page URL for human-readable location
+  let pageName = pageUrl;
+  try {
+    const url = new URL(pageUrl);
+    const path = url.pathname;
+    const tab = url.searchParams.get('tab');
+    const subtab = url.searchParams.get('subtab');
+    const parts: string[] = [];
+    if (path.includes('/writing/')) parts.push('Yozish: ' + path.split('/writing/')[1]);
+    else if (path.includes('/flashcards/topic/')) parts.push('Flesh/Mavzu: ' + path.split('/topic/')[1]);
+    else if (path.includes('/flashcards/')) parts.push('Flesh: dars ' + path.split('/flashcards/')[1]);
+    else if (path.includes('/dialogues/')) parts.push('Dialog: ' + path.split('/dialogues/')[1]);
+    else if (path.includes('/stories/')) parts.push('Hikoya: ' + path.split('/stories/')[1]);
+    else if (path.includes('/karaoke/')) parts.push('KTV: ' + path.split('/karaoke/')[1]);
+    else if (path.includes('/grammar/')) parts.push('Tika: ' + path.split('/grammar/')[1]);
+    else if (path.includes('/lesson/')) {
+      const match = path.match(/lesson\/(\d+)\/page\/(\d+)/);
+      if (match) parts.push(`Dars ${match[1]}, sahifa ${match[2]}`);
+    } else if (tab) {
+      parts.push(tab.charAt(0).toUpperCase() + tab.slice(1));
+      if (subtab) parts.push(subtab);
+    }
+    if (parts.length > 0) pageName = parts.join(' > ');
+  } catch { /* keep raw URL */ }
+
   const text = [
     `📝 Xato topildi!`,
     ``,
-    `👤 ${userName} (${userEmail})`,
-    `📄 ${pageUrl}`,
+    `👤 ${userName} (${userIdentifier})`,
+    `📄 ${pageName}`,
+    `🔗 ${pageUrl}`,
     `📌 Sabab: ${reasonLabels[reason] || reason}`,
     `💬 ${message?.trim() || '—'}`,
   ].join('\n');

@@ -557,6 +557,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 { uz: 'Mashina tashqi qismlari', ru: 'Наруж. части авто', icon: '🚙', slug: 'car-exterior' },
                 { uz: 'Dvigatel va mexanika', ru: 'Двигатель и мех.', icon: '⚙️', slug: 'car-engine' },
                 { uz: 'Mashina ichki qismlari', ru: 'Салон авто', icon: '🪑', slug: 'car-interior' },
+                { uz: "Yo'nalishlar", ru: 'Направления', icon: '🧭', slug: 'directions' },
+                { uz: "His-tuyg'ular", ru: 'Эмоции', icon: '😊', slug: 'emotions' },
               ];
               const tq = topicSearch.trim().toLowerCase();
               const filteredTopics = tq

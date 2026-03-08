@@ -1,0 +1,86 @@
+{
+  "id": "topic-directions",
+  "title": "Yo'nalishlar",
+  "title_ru": "Направления",
+  "title_zh": "方位词",
+  "title_pinyin": "Fāngwèicí",
+  "words": [
+    {
+      "id": "tp-dir-01",
+      "text_original": "上面",
+      "pinyin": "shàngmiàn",
+      "text_translation": "yuqorida; ustida",
+      "text_translation_ru": "наверху; сверху"
+    },
+    {
+      "id": "tp-dir-02",
+      "text_original": "下面",
+      "pinyin": "xiàmiàn",
+      "text_translation": "pastda; ostida",
+      "text_translation_ru": "внизу; снизу"
+    },
+    {
+      "id": "tp-dir-03",
+      "text_original": "里面",
+      "pinyin": "lǐmiàn",
+      "text_translation": "ichida; ichkarida",
+      "text_translation_ru": "внутри"
+    },
+    {
+      "id": "tp-dir-04",
+      "text_original": "外面",
+      "pinyin": "wàimiàn",
+      "text_translation": "tashqarida",
+      "text_translation_ru": "снаружи"
+    },
+    {
+      "id": "tp-dir-05",
+      "text_original": "前面",
+      "pinyin": "qiánmiàn",
+      "text_translation": "oldinda",
+      "text_translation_ru": "впереди; спереди"
+    },
+    {
+      "id": "tp-dir-06",
+      "text_original": "后面",
+      "pinyin": "hòumiàn",
+      "text_translation": "orqada",
+      "text_translation_ru": "сзади; позади"
+    },
+    {
+      "id": "tp-dir-07",
+      "text_original": "对面",
+      "pinyin": "duìmiàn",
+      "text_translation": "qarama-qarshi tomonda",
+      "text_translation_ru": "напротив"
+    },
+    {
+      "id": "tp-dir-08",
+      "text_original": "中间",
+      "pinyin": "zhōngjiān",
+      "text_translation": "o'rtada",
+      "text_translation_ru": "посередине; между"
+    },
+    {
+      "id": "tp-dir-09",
+      "text_original": "旁边",
+      "pinyin": "pángbiān",
+      "text_translation": "yonida",
+      "text_translation_ru": "рядом; сбоку"
+    },
+    {
+      "id": "tp-dir-10",
+      "text_original": "左边",
+      "pinyin": "zuǒbiān",
+      "text_translation": "chapda",
+      "text_translation_ru": "слева"
+    },
+    {
+      "id": "tp-dir-11",
+      "text_original": "右边",
+      "pinyin": "yòubiān",
+      "text_translation": "o'ngda",
+      "text_translation_ru": "справа"
+    }
+  ]
+}
