@@ -63,6 +63,7 @@ const grammarItems = [
 const karaokeItems = [
   { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', href: '/chinese/hsk1/karaoke/yueliang' },
   { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', href: '/chinese/hsk1/karaoke/pengyou' },
+  { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', href: '/chinese/hsk1/karaoke/tonghua' },
 ];
 
 
