@@ -7379,7 +7379,7 @@ body {
 }
 
 .landing__demo-card--second {
-  transform: translateX(-250px) translateY(230px);
+  transform: translateX(-250px) translateY(260px);
   animation-delay: 0.15s;
 }
 
