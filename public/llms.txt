@@ -1,0 +1,15 @@
+# Blim
+
+> Xitoy tilini online o'rganish platformasi. HSK 1-6 darslari, dialoglar, fleshkartalar va karaoke.
+
+## Sections
+
+- [Xitoy tili darslari](https://www.blim.uz/chinese): HSK 1-6 darajali dialoglar va darslar
+- [Fleshkartalar](https://www.blim.uz/chinese/hsk1/flashcards): So'z boyligi uchun fleshkartalar
+- [Karaoke](https://www.blim.uz/chinese/hsk1/karaoke/yueliang): Xitoy qo'shiqlari bilan o'rganish
+
+## Notes
+
+- Language: Uzbek and Russian
+- Target audience: Uzbek and Russian speakers learning Chinese
+- Pricing: 50,000 UZS/month
