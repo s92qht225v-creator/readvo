@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -141,6 +142,9 @@ export function PageFooter() {
         </div>
       )}
       <p>{isRu ? 'Blim — Интерактивные учебники языков' : 'Blim — Interaktiv til darsliklari'}</p>
+      {pathname !== '/blog' && !pathname?.startsWith('/blog/') && (
+        <Link href="/blog" className="home__footer-blog-link">Blog</Link>
+      )}
     </footer>
   );
 }

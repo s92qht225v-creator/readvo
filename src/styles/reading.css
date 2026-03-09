@@ -5232,6 +5232,19 @@ body {
   margin: 0;
 }
 
+.home__footer-blog-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.home__footer-blog-link:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
 /* Back link in hero */
 .home__back-link {
   color: rgba(255, 255, 255, 0.8);

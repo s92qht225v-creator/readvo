@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { PageFooter } from './PageFooter';
 import { useAuth } from '../hooks/useAuth';
@@ -377,15 +377,17 @@ export function HomePage() {
   const { user, isLoading, loginWithTelegram, logout } = useAuth();
   const s = t[language];
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const isAdminParam = searchParams.get('admin') === 'true';
   const [hasMounted, setHasMounted] = useState(false);
+  const [isAdminParam, setIsAdminParam] = useState(false);
   const [adminPassword, setAdminPassword] = useState('');
   const [adminAuthed, setAdminAuthed] = useState(false);
   const [adminError, setAdminError] = useState(false);
   const [adminLoading, setAdminLoading] = useState(false);
 
-  useEffect(() => setHasMounted(true), []);
+  useEffect(() => {
+    setHasMounted(true);
+    setIsAdminParam(new URLSearchParams(window.location.search).get('admin') === 'true');
+  }, []);
 
   useEffect(() => {
     if (!isLoading && user && !isAdminParam) {
