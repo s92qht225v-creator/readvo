@@ -10426,6 +10426,13 @@ body {
   font-weight: 400;
 }
 
+.blog__intro-text {
+  color: #9ca3af;
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .blog__list {
   display: flex;
   flex-direction: column;

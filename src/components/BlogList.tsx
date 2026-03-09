@@ -29,6 +29,11 @@ export function BlogList({ posts }: Props) {
             ? 'Статьи по изучению китайского языка'
             : 'Xitoy tili o\'rganish bo\'yicha maqolalar'}
         </h1>
+        <p className="blog__intro-text">
+          {isRu
+            ? 'Подготовка к HSK, методы запоминания слов, грамматика и другие полезные статьи. Руководства для тех, кто начинает изучать китайский язык.'
+            : 'HSK tayyorgarlik, so\'z yodlash usullari, grammatika va boshqa foydali maqolalar. Xitoy tilini o\'rganishni boshlamoqchi bo\'lganlar uchun qo\'llanmalar.'}
+        </p>
       </div>
       <div className="blog__list">
         {posts.map((post) => (

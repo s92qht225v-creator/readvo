@@ -10,14 +10,22 @@ export async function generateMetadata({ params }: PageParams) {
   const { slug } = await params;
   const post = await loadBlogPost(slug);
 
+  // Trim title to ~50 chars for SEO (template adds " | Blim")
+  const metaTitle = post
+    ? (post.title.length > 50 && post.title.includes(' — ')
+        ? post.title.split(' — ')[0]
+        : post.title)
+    : 'Blog';
+
   return {
-    title: post
-      ? `${post.title}`
-      : 'Blog',
+    title: metaTitle,
     description: post
       ? `${post.description} | ${post.description_ru}`
       : 'Xitoy tili o\'rganish bo\'yicha maqolalar.',
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: {
+      canonical: `/blog/${slug}`,
+      languages: { 'uz': `/blog/${slug}`, 'ru': `/blog/${slug}`, 'x-default': `/blog/${slug}` },
+    },
   };
 }
 
