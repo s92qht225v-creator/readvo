@@ -97,7 +97,7 @@ const t = {
 function getDailyActive(): number {
   const d = new Date();
   const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-  return 15 + (seed * 9301 + 49297) % 31;
+  return 30 + (seed * 9301 + 49297) % 51;
 }
 
 const languageList = [
