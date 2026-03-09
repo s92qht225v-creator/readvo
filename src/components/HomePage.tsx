@@ -213,6 +213,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       {/* Hero */}
       <section id="hero" className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
+        <p className="landing__hero-subtitle">{s.heroSubtitle}</p>
         <div className="landing__hero-visual">
           <div className="landing__demo-card">
             <div className="landing__demo-line">
@@ -378,10 +379,13 @@ export function HomePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const isAdminParam = searchParams.get('admin') === 'true';
+  const [hasMounted, setHasMounted] = useState(false);
   const [adminPassword, setAdminPassword] = useState('');
   const [adminAuthed, setAdminAuthed] = useState(false);
   const [adminError, setAdminError] = useState(false);
   const [adminLoading, setAdminLoading] = useState(false);
+
+  useEffect(() => setHasMounted(true), []);
 
   useEffect(() => {
     if (!isLoading && user && !isAdminParam) {
@@ -408,6 +412,15 @@ export function HomePage() {
     }
     setAdminLoading(false);
   };
+
+  /* ── SSR + initial hydration: always render landing page ──
+     This ensures crawlers (and Semrush) see the full content in
+     the HTML. Auth-based routing only kicks in after mount. */
+  if (!hasMounted) {
+    return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithTelegram={loginWithTelegram} s={s} />;
+  }
+
+  /* ── Client-side only from here ── */
 
   if (isAdminParam) {
     if (adminAuthed) {
@@ -449,11 +462,13 @@ export function HomePage() {
     );
   }
 
-  if (isLoading || user) return (
+  // Logged-in user: show loading while redirect fires
+  if (!isLoading && user) return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <p style={{ color: '#6b7280', fontSize: '1.1rem' }}>Loading...</p>
     </div>
   );
 
+  // Loading or logged-out: show landing page (no flash for logged-out users)
   return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithTelegram={loginWithTelegram} s={s} />;
 }

@@ -296,15 +296,19 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
+            <h1 className="sr-only">{language === 'ru'
+              ? 'Китайский язык — уроки HSK 1, диалоги и упражнения'
+              : 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar'
+            }</h1>
             <div className="dr-hero__level">HSK 1</div>
-            <h1 className="dr-hero__title">{
+            <div className="dr-hero__title" aria-hidden="true">{
               activeTab === 'dialogues' ? '对话' :
               activeTab === 'writing' ? '书写' :
               activeTab === 'flashcards' ? '词卡' :
               activeTab === 'karaoke' ? '歌曲' :
               activeTab === 'grammar' ? '语法' :
               '测验'
-            }</h1>
+            }</div>
             <div className="dr-hero__pinyin">{
               activeTab === 'dialogues' ? 'duìhuà' :
               activeTab === 'writing' ? 'shūxiě' :
