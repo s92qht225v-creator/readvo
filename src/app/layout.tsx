@@ -50,16 +50,6 @@ export const viewport: Viewport = {
   themeColor: '#dc2626',
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'Blim',
-  url: siteUrl,
-  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika.',
-  applicationCategory: 'EducationalApplication',
-  operatingSystem: 'Web',
-  inLanguage: ['uz', 'ru'],
-};
 
 export default function RootLayout({
   children,
@@ -110,10 +100,6 @@ fbq('track', 'PageView');`}
         });`}
       </Script>
       <body className={`${font.className} ${font.variable}`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <noscript>
           <div>
             <img src="https://mc.yandex.ru/watch/107194604" style={{ position: 'absolute', left: '-9999px' }} alt="" />
