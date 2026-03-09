@@ -12,7 +12,7 @@ import { AdminPanel } from './AdminPanel';
 const t = {
   uz: {
     login: 'Telegram orqali kirish',
-    heroTitle: 'Xitoy tilini online o\'rganing — HSK 1–6 darslari, dialoglar va karaoke',
+    heroTitle: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
     heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
     languages: 'Tillarni tanlang',
@@ -48,12 +48,11 @@ const t = {
     chinese: 'Xitoy tili',
     english: 'Ingliz tili',
     tagline: 'Interaktiv til darsliklari',
-    socialProof: '500+ o\'quvchi xitoy tilini o\'rganmoqda',
     liveNow: 'Hozir {n} kishi o\'qimoqda',
   },
   ru: {
     login: 'Войти через Telegram',
-    heroTitle: 'Учите китайский онлайн — уроки HSK 1–6, диалоги и караоке',
+    heroTitle: 'Учите китайский язык с интерактивными уроками',
     heroSubtitle: 'Эффективно учите китайский с пиньинь, аудио, переводом и карточками',
     startFree: 'Начать бесплатно',
     languages: 'Выберите язык',
@@ -89,15 +88,15 @@ const t = {
     chinese: 'Китайский язык',
     english: 'Английский язык',
     tagline: 'Интерактивные учебники языков',
-    socialProof: '500+ учеников изучают китайский',
     liveNow: 'Сейчас {n} человек занимаются',
   },
 };
 
-function getDailyActive(): number {
+function getActiveCount(): number {
   const d = new Date();
-  const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-  return 30 + (seed * 9301 + 49297) % 51;
+  const slot = Math.floor(d.getTime() / (5 * 60 * 1000)); // changes every 5 minutes
+  const seed = slot * 9301 + 49297;
+  return 30 + seed % 51;
 }
 
 const languageList = [
@@ -174,6 +173,11 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
   s: typeof t.uz;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeCount, setActiveCount] = useState(getActiveCount);
+  useEffect(() => {
+    const id = setInterval(() => setActiveCount(getActiveCount()), 5 * 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <div className="landing">
@@ -216,6 +220,9 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
             <a href="#how" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               {s.howItWorks}
             </a>
+            <a href="/blog" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
+              Blog
+            </a>
           </div>
         )}
       </nav>
@@ -223,8 +230,10 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       {/* Hero */}
       <section id="hero" className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
-        <p className="landing__hero-subtitle">{s.heroSubtitle}</p>
-        <p className="landing__social-proof">{s.socialProof}</p>
+        <button className="landing__hero-cta" onClick={loginWithTelegram} type="button">
+          <TelegramIcon />
+          {s.startFree}
+        </button>
         <div className="landing__hero-visual">
           <div className="landing__demo-card">
             <div className="landing__demo-line">
@@ -383,7 +392,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       {/* Floating live pill */}
       <div className="landing__live-pill">
         <span className="landing__live-dot" />
-        {s.liveNow.replace('{n}', String(getDailyActive()))}
+        {s.liveNow.replace('{n}', String(activeCount))}
       </div>
     </div>
   );

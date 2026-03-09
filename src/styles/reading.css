@@ -7139,7 +7139,7 @@ body {
 }
 
 .landing__nav-logo-img {
-  height: 64px;
+  height: 56px;
   width: auto;
 }
 
@@ -7294,20 +7294,15 @@ body {
   line-height: 1.2;
   margin: 0 0 16px;
   transform: translateY(250px);
+  position: relative;
+  z-index: 2;
 }
 
 .landing__hero-subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
-  margin: 0 0 12px;
-}
-
-.landing__social-proof {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 28px;
-  text-align: center;
+  margin: 0 0 32px;
 }
 
 .landing__live-pill {
@@ -7354,6 +7349,8 @@ body {
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.2s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
 }
 
 .landing__hero-cta:hover {
@@ -7387,7 +7384,7 @@ body {
 }
 
 .landing__demo-card--third {
-  transform: translateX(350px) translateY(-80px);
+  transform: translateX(280px) translateY(-80px);
   white-space: nowrap;
   animation-delay: 0.3s;
   padding-top: 48px;
@@ -7742,7 +7739,7 @@ body {
 /* Steps */
 .landing__steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -7932,65 +7929,17 @@ body {
   color: #fff;
 }
 
-/* Tablet responsive */
+/* Tablet — switch to stacked card layout (fixes card overflow + overlap) */
 @media (max-width: 1100px) {
   .landing__hero {
-    --hero-padding-bottom: 500px;
-  }
-
-  .landing__hero-visual {
-    overflow: hidden;
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .landing__hero {
-    max-width: none;
-    width: 100%;
-    margin: 0;
     --hero-padding-bottom: 67px;
     --hero-card-margin-bottom: -67px;
     --hero-card-translateY: 67px;
-    padding-top: 40px !important;
-    background: var(--color-accent);
   }
 
   .landing__hero-title {
-    font-size: 1.8rem;
-    color: #fff;
+    font-size: 2.2rem;
     transform: none;
-  }
-
-  .landing__hero-subtitle {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .landing__social-proof {
-    font-size: 0.85rem;
-  }
-
-  .landing__live-pill {
-    bottom: 16px;
-    left: 12px;
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-
-  .landing__hero-cta {
-    background: #fff;
-    color: #1a1a1a;
-    box-shadow: none;
-  }
-
-  .landing__hero-cta:hover {
-    box-shadow: none;
-    transform: none;
-  }
-
-  .landing__hero-cta svg path {
-    fill: currentColor;
   }
 
   .landing__hero-visual {
@@ -8011,22 +7960,6 @@ body {
     padding-top: 24px;
   }
 
-  .landing__demo-chinese {
-    color: #1a1a1a;
-  }
-
-  .landing__demo-line--pinyin {
-    color: var(--color-accent);
-  }
-
-  .landing__demo-line--translation {
-    color: #6b7280;
-  }
-
-  .landing__hero-langs-inner {
-    padding: 24px 20px;
-  }
-
   .landing__hero-langs {
     margin-left: 16px;
     margin-right: 16px;
@@ -8036,8 +7969,75 @@ body {
   .landing__hero-langs-inner {
     display: flex;
     width: 100%;
-    padding: 24px 16px;
+    padding: 24px 20px;
     gap: 16px;
+  }
+
+  #how {
+    padding-top: 100px;
+  }
+}
+
+/* Nav collapse — hamburger kicks in before items overlap */
+@media (max-width: 900px) {
+  .landing__nav-links {
+    display: none;
+  }
+
+  .landing__hamburger {
+    display: flex;
+  }
+
+  .landing__mobile-menu {
+    display: block;
+  }
+
+  .landing__login-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-width: 1.5px;
+  }
+
+  .landing__lang-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .landing__nav-logo-img {
+    height: 44px;
+  }
+
+  .landing__hero {
+    padding-top: 40px !important;
+  }
+
+  .landing__hero-title {
+    font-size: 1.8rem;
+  }
+
+  .landing__live-pill {
+    bottom: 16px;
+    left: 12px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .landing__hero-cta {
+    background: #fff;
+    color: #1a1a1a;
+    box-shadow: none;
+  }
+
+  .landing__hero-cta:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .landing__hero-langs-inner {
+    padding: 24px 16px;
   }
 
   .landing__hero-langs-row {
@@ -8074,10 +8074,6 @@ body {
 
   .landing__section {
     padding: 28px 20px;
-  }
-
-  #how {
-    padding-top: 100px;
   }
 
   .landing__showcase {
@@ -8121,29 +8117,6 @@ body {
   .landing__section-title {
     font-size: 1.4rem;
     margin-bottom: 24px;
-  }
-
-  .landing__nav-links {
-    display: none;
-  }
-
-  .landing__login-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    border-width: 1.5px;
-  }
-
-  .landing__lang-btn {
-    padding: 5px 10px;
-    font-size: 0.8rem;
-  }
-
-  .landing__hamburger {
-    display: flex;
-  }
-
-  .landing__mobile-menu {
-    display: block;
   }
 
   .landing__demo-card {
