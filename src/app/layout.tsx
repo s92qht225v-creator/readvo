@@ -29,14 +29,6 @@ export const metadata: Metadata = {
     title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
     description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
   },
-  alternates: {
-    canonical: '/',
-    languages: {
-      'uz': '/',
-      'ru': '/',
-      'x-default': '/',
-    },
-  },
   robots: {
     index: true,
     follow: true,

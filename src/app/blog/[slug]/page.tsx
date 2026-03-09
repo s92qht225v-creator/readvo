@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: PageParams) {
     description: post
       ? `${post.description} | ${post.description_ru}`
       : 'Xitoy tili o\'rganish bo\'yicha maqolalar.',
+    alternates: { canonical: `/blog/${slug}` },
   };
 }
 
