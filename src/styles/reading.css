@@ -7300,7 +7300,44 @@ body {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
-  margin: 0 0 32px;
+  margin: 0 0 12px;
+}
+
+.landing__social-proof {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.landing__live-pill {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing__live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 .landing__hero-cta {
@@ -7928,6 +7965,17 @@ body {
   .landing__hero-subtitle {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.85);
+  }
+
+  .landing__social-proof {
+    font-size: 0.85rem;
+  }
+
+  .landing__live-pill {
+    bottom: 16px;
+    left: 12px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
   .landing__hero-cta {

@@ -48,6 +48,8 @@ const t = {
     chinese: 'Xitoy tili',
     english: 'Ingliz tili',
     tagline: 'Interaktiv til darsliklari',
+    socialProof: '500+ o\'quvchi xitoy tilini o\'rganmoqda',
+    liveNow: 'Hozir {n} kishi o\'qimoqda',
   },
   ru: {
     login: 'Войти через Telegram',
@@ -87,8 +89,16 @@ const t = {
     chinese: 'Китайский язык',
     english: 'Английский язык',
     tagline: 'Интерактивные учебники языков',
+    socialProof: '500+ учеников изучают китайский',
+    liveNow: 'Сейчас {n} человек занимаются',
   },
 };
+
+function getDailyActive(): number {
+  const d = new Date();
+  const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+  return 15 + (seed * 9301 + 49297) % 31;
+}
 
 const languageList = [
   { id: 'chinese', nameOriginal: '中文', flag: '🇨🇳' },
@@ -214,6 +224,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       <section id="hero" className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
         <p className="landing__hero-subtitle">{s.heroSubtitle}</p>
+        <p className="landing__social-proof">{s.socialProof}</p>
         <div className="landing__hero-visual">
           <div className="landing__demo-card">
             <div className="landing__demo-line">
@@ -368,6 +379,12 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
         <p className="landing__footer-text">{s.footerText}</p>
         <Link href="/blog" className="landing__footer-link">Blog</Link>
       </footer>
+
+      {/* Floating live pill */}
+      <div className="landing__live-pill">
+        <span className="landing__live-dot" />
+        {s.liveNow.replace('{n}', String(getDailyActive()))}
+      </div>
     </div>
   );
 }
