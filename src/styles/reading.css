@@ -4326,9 +4326,6 @@ body {
     padding: 4px var(--spacing-md) 16px;
   }
 
-  .karaoke .dr-font-controls {
-    display: none;
-  }
 }
 
 /* =============================================================================

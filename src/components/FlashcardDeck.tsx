@@ -348,7 +348,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     width: '100%', height: '100%',
                     transformStyle: 'preserve-3d',
                     transition: dragX !== 0 ? 'none' : 'transform 0.45s',
-                    transform: `rotateY(${isFlipped ? 180 : 0}deg) translateX(${dragX}px) rotate(${dragX * 0.03}deg)`,
+                    transform: `translateX(${dragX}px) rotate(${dragX * 0.03}deg) rotateY(${isFlipped ? 180 : 0}deg)`,
                   }}
                 >
                   {/* Front */}
