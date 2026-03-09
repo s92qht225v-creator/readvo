@@ -59,11 +59,6 @@ const jsonLd = {
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Web',
   inLanguage: ['uz', 'ru'],
-  offers: {
-    '@type': 'Offer',
-    price: '50000',
-    priceCurrency: 'UZS',
-  },
 };
 
 export default function RootLayout({
