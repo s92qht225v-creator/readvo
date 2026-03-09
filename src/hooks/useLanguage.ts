@@ -19,6 +19,8 @@ export function useLanguage(): [Language, () => void, (lang: Language) => void] 
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'uz' || stored === 'ru') {
       setLanguage(stored);
+    } else if (navigator.language?.startsWith('ru')) {
+      setLanguage('ru');
     }
 
     const handleChange = (e: Event) => {
