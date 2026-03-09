@@ -8,7 +8,7 @@ import { MetaPageView } from '@/components/MetaPageView';
 
 const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

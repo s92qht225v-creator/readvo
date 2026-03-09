@@ -2,6 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /*admin*
-Disallow: /_next/static/
 
-Sitemap: https://blim.uz/sitemap.xml
+Sitemap: https://www.blim.uz/sitemap.xml

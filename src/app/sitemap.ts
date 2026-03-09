@@ -8,7 +8,7 @@ import { WRITING_SETS } from '@/services/writing';
 import fs from 'fs';
 import path from 'path';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [dialogues, songs, flashcardDeck, blogPosts] = await Promise.all([
