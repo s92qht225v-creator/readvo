@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue7",
+  "slug": "what-time-is-it",
   "title": "现在几点？",
   "pinyin": "Xiànzài jǐ diǎn?",
   "titleTranslation": "Soat necha bo'ldi?",
@@ -152,10 +153,50 @@
           "text_translation_ru": "У меня урок начинается в четыре.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "sì", "t": "to'rt", "tr": "четыре", "h": 1, "l": 4 },
-            { "i": [2, 3], "p": "diǎn", "t": "soat", "tr": "час", "h": 1, "l": 6 },
-            { "i": [3, 5], "p": "shàngkè", "t": "darsga kirmoq", "tr": "идти на урок", "h": 1, "l": 6 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "sì",
+              "t": "to'rt",
+              "tr": "четыре",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "час",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "shàngkè",
+              "t": "darsga kirmoq",
+              "tr": "идти на урок",
+              "h": 1,
+              "l": 6
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue4.mp3"
         },

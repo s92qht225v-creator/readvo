@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue12",
+  "slug": "i-feel-sick",
   "title": "我不舒服",
   "pinyin": "Wǒ bù shūfu",
   "titleTranslation": "O'zimni yomon his qilyapman",
@@ -261,9 +262,39 @@
           "text_translation_ru": "Пойдёшь в больницу?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 8 },
-            { "i": [1, 3], "p": "yīyuàn", "t": "kasalxona", "tr": "больница", "h": 1, "l": 15 },
-            { "i": [3, 4], "p": "ma", "t": "-mi", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yīyuàn",
+              "t": "kasalxona",
+              "tr": "больница",
+              "h": 1,
+              "l": 15
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue7.mp3"
         },

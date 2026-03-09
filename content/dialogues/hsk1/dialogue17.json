@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue17",
+  "slug": "are-you-tired",
   "title": "累吗？",
   "pinyin": "Lèi ma?",
   "titleTranslation": "Charchadingizmi?",
@@ -185,7 +186,15 @@
           "text_translation_ru": "Устала?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "lèi", "t": "charchagan", "tr": "уставший" },
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "lèi",
+              "t": "charchagan",
+              "tr": "уставший"
+            },
             {
               "i": [
                 1,

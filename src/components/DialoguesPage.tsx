@@ -36,6 +36,7 @@ function isNew(dateAdded?: string, seen?: Set<string>, id?: string): boolean {
 
 interface DialogueItem {
   id: string;
+  slug: string;
   title: string;
   pinyin: string;
   titleTranslation: string;
@@ -222,7 +223,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
 
         <div className="home__lessons">
           {filtered.map((dialogue) => (
-            <Link key={dialogue.id} id={dialogue.id} href={`${bookPath}/dialogues/${dialogue.id}`} className="dialogue-card" onClick={() => { markSeen(dialogue.id); sessionStorage.setItem(LAST_VISITED_KEY, dialogue.id); }}>
+            <Link key={dialogue.id} id={dialogue.id} href={`${bookPath}/dialogues/${dialogue.slug}`} className="dialogue-card" onClick={() => { markSeen(dialogue.id); sessionStorage.setItem(LAST_VISITED_KEY, dialogue.id); }}>
               <span className="dialogue-card__deco" aria-hidden="true">{dialogue.title}</span>
               <div className="dialogue-card__content">
                 <div className="dialogue-card__text">

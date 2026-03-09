@@ -5,6 +5,7 @@ const DIALOGUES_DIR = path.join(process.cwd(), 'content', 'dialogues');
 
 export interface DialogueInfo {
   id: string;
+  slug: string;
   title: string;
   pinyin: string;
   titleTranslation: string;
@@ -101,6 +102,7 @@ export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo
 
       dialogues.push({
         id: data.id,
+        slug: (data as DialoguePage & { slug?: string }).slug || data.id,
         title: data.title,
         pinyin: data.pinyin,
         titleTranslation: data.titleTranslation,
@@ -138,7 +140,8 @@ export async function loadDialogue(bookId: string, dialogueId: string): Promise<
       const content = await fs.readFile(path.join(bookDir, file), 'utf-8');
       const data = JSON.parse(content) as DialoguePage;
 
-      if (data.id === dialogueId) {
+      const slug = (data as DialoguePage & { slug?: string }).slug;
+      if (slug === dialogueId || data.id === dialogueId) {
         return data;
       }
     }

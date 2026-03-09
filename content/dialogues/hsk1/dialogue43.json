@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue43",
+  "slug": "fasten-your-seatbelt",
   "title": "安全带系好了吗？",
   "pinyin": "Ānquándài jì hǎo le ma?",
   "titleTranslation": "Xavfsizlik kamaringizni taqib oldingmi?",
@@ -21,19 +22,28 @@
           "speaker": "A",
           "words": [
             {
-              "i": [0, 3],
+              "i": [
+                0,
+                3
+              ],
               "p": "ānquándài",
               "t": "xavfsizlik kamari",
               "tr": "ремень безопасности"
             },
             {
-              "i": [3, 4],
+              "i": [
+                3,
+                4
+              ],
               "p": "jì",
               "t": "taqmoq",
               "tr": "пристегнуть"
             },
             {
-              "i": [4, 5],
+              "i": [
+                4,
+                5
+              ],
               "p": "hǎo",
               "t": "tayyor",
               "tr": "готово",
@@ -41,7 +51,10 @@
               "l": 1
             },
             {
-              "i": [5, 6],
+              "i": [
+                5,
+                6
+              ],
               "p": "le",
               "t": "(tugadi)",
               "tr": "(завершение)",
@@ -49,7 +62,10 @@
               "l": 8
             },
             {
-              "i": [6, 7],
+              "i": [
+                6,
+                7
+              ],
               "p": "ma",
               "t": "-mi",
               "tr": "(вопрос)",

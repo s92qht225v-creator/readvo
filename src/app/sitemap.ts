@@ -45,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dialogue pages
   const dialoguePages: MetadataRoute.Sitemap = dialogues.map((d) => ({
-    url: `${siteUrl}/chinese/hsk1/dialogues/${d.id}`,
+    url: `${siteUrl}/chinese/hsk1/dialogues/${d.slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));

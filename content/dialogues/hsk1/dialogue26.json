@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue26",
+  "slug": "is-chinese-hard",
   "title": "学中文难不难？",
   "pinyin": "Xué Zhōngwén nán bu nán?",
   "titleTranslation": "Xitoy tilini o'rganish qiyinmi?",
@@ -177,7 +178,15 @@
           "text_translation_ru": "Трудно.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "nán", "t": "qiyin", "tr": "трудный" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nán",
+              "t": "qiyin",
+              "tr": "трудный"
+            }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue4.mp3"
         },

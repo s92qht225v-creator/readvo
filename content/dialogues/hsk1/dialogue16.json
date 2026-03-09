@@ -1,5 +1,6 @@
 {
   "id": "hsk1-dialogue16",
+  "slug": "are-you-free-today",
   "title": "你今天有时间吗？",
   "pinyin": "Nǐ jīntiān yǒu shíjiān ma?",
   "titleTranslation": "Bugun vaqtingiz bormi?",
@@ -205,7 +206,17 @@
           "text_translation_ru": "Во сколько встретимся?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 3 },
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 3
+            },
             {
               "i": [
                 2,

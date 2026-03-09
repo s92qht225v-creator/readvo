@@ -438,7 +438,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
             {/* Dialogue cards */}
             <div className="home__lessons">
               {filteredDialogues.map((d) => (
-                <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.id}`} className="dialogue-card">
+                <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.slug}`} className="dialogue-card">
                   <span className="dialogue-card__deco" aria-hidden="true">{d.title}</span>
                   <div className="dialogue-card__content">
                     <div className="dialogue-card__text">
