@@ -1,0 +1,2672 @@
+{
+  "id": "tonghua",
+  "title": "童话",
+  "pinyin": "Tónghuà",
+  "titleTranslation": "Ertak",
+  "titleTranslation_ru": "Сказка",
+  "artist": "光良",
+  "artist_ru": "Гуан Лян",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/tonghua.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Qancha vaqt o'tganini unutdim",
+      "translation_ru": "Забыл, сколько прошло времени",
+      "words": [
+        {
+          "id": 0,
+          "text": "忘",
+          "p": "wàng",
+          "timestamp": 13.341,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "了",
+          "p": "le",
+          "timestamp": 13.761,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 14.181,
+          "duration": 0.35
+        },
+        {
+          "id": 3,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 14.541,
+          "duration": 0.83
+        },
+        {
+          "id": 4,
+          "text": "久",
+          "p": "jiǔ",
+          "timestamp": 15.381,
+          "duration": 0.7
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Seni boshqa eshitmadim",
+      "translation_ru": "Больше не слышал тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 16.821,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "没",
+          "p": "méi",
+          "timestamp": 17.261,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "听",
+          "p": "tīng",
+          "timestamp": 17.641,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 18.081,
+          "duration": 0.83
+        },
+        {
+          "id": 4,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 18.921,
+          "duration": 0.48
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Menga eng sevgan ertakingni aytishingni",
+      "translation_ru": "Рассказывающим мне свою любимую историю",
+      "words": [
+        {
+          "id": 0,
+          "text": "对",
+          "p": "duì",
+          "timestamp": 20.321,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 20.761,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 21.161,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 21.641,
+          "duration": 0.66
+        },
+        {
+          "id": 4,
+          "text": "最",
+          "p": "zuì",
+          "timestamp": 23.061,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 23.541,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 23.941,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 24.341,
+          "duration": 0.39
+        },
+        {
+          "id": 8,
+          "text": "事",
+          "p": "shì",
+          "timestamp": 24.741,
+          "duration": 1.62
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Uzoq o'yladim",
+      "translation_ru": "Я долго думал",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 27.441,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "想",
+          "p": "xiǎng",
+          "timestamp": 27.821,
+          "duration": 0.51
+        },
+        {
+          "id": 2,
+          "text": "了",
+          "p": "le",
+          "timestamp": 28.341,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "很",
+          "p": "hěn",
+          "timestamp": 28.721,
+          "duration": 0.81
+        },
+        {
+          "id": 4,
+          "text": "久",
+          "p": "jiǔ",
+          "timestamp": 29.541,
+          "duration": 0.6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Men vahimaga tushdim",
+      "translation_ru": "Я начал паниковать",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 30.921,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 31.301,
+          "duration": 0.65
+        },
+        {
+          "id": 2,
+          "text": "始",
+          "p": "shǐ",
+          "timestamp": 31.961,
+          "duration": 0.29
+        },
+        {
+          "id": 3,
+          "text": "慌",
+          "p": "huāng",
+          "timestamp": 32.261,
+          "duration": 0.83
+        },
+        {
+          "id": 4,
+          "text": "了",
+          "p": "le",
+          "timestamp": 33.101,
+          "duration": 0.42
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "Yana nimadir xato qildimmi",
+      "translation_ru": "Может, я опять сделал что-то не так",
+      "words": [
+        {
+          "id": 0,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 34.421,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "不",
+          "p": "bú",
+          "timestamp": 34.861,
+          "duration": 0.35
+        },
+        {
+          "id": 2,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 35.221,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 35.701,
+          "duration": 0.47
+        },
+        {
+          "id": 4,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 36.181,
+          "duration": 0.93
+        },
+        {
+          "id": 5,
+          "text": "做",
+          "p": "zuò",
+          "timestamp": 37.122,
+          "duration": 0.37
+        },
+        {
+          "id": 6,
+          "text": "错",
+          "p": "cuò",
+          "timestamp": 37.502,
+          "duration": 0.43
+        },
+        {
+          "id": 7,
+          "text": "了",
+          "p": "le",
+          "timestamp": 37.942,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "什",
+          "p": "shén",
+          "timestamp": 38.302,
+          "duration": 0.51
+        },
+        {
+          "id": 9,
+          "text": "么",
+          "p": "me",
+          "timestamp": 38.822,
+          "duration": 2.32
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Sen yig'lab menga deding",
+      "translation_ru": "Ты, плача, сказала мне",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 41.522,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "哭",
+          "p": "kū",
+          "timestamp": 41.902,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "着",
+          "p": "zhe",
+          "timestamp": 42.302,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "对",
+          "p": "duì",
+          "timestamp": 42.762,
+          "duration": 0.47
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 43.242,
+          "duration": 0.35
+        },
+        {
+          "id": 5,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 43.602,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Ertaklardagi hamma narsa yolg'on",
+      "translation_ru": "В сказках всё — обман",
+      "words": [
+        {
+          "id": 0,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 45.002,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 45.382,
+          "duration": 0.47
+        },
+        {
+          "id": 2,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 45.862,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 46.302,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 46.702,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "骗",
+          "p": "piàn",
+          "timestamp": 47.142,
+          "duration": 0.55
+        },
+        {
+          "id": 6,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 47.702,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 47.942,
+          "duration": 0.34
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "Men sening shahzodan bo'la olmayman",
+      "translation_ru": "Я не могу быть твоим принцем",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 48.622,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 49.042,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 49.422,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 49.902,
+          "duration": 0.8
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 51.222,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 51.682,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 52.082,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "王",
+          "p": "wáng",
+          "timestamp": 52.482,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "子",
+          "p": "zǐ",
+          "timestamp": 52.942,
+          "duration": 1.8
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Balki sen tushunmaysan",
+      "translation_ru": "Может, ты не поймёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "也",
+          "p": "yě",
+          "timestamp": 55.642,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 56.002,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 56.502,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "不",
+          "p": "bú",
+          "timestamp": 56.942,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 57.382,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "懂",
+          "p": "dǒng",
+          "timestamp": 57.822,
+          "duration": 0.88
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Sen meni sevaman deganingdan beri",
+      "translation_ru": "С тех пор как ты сказала, что любишь меня",
+      "words": [
+        {
+          "id": 0,
+          "text": "从",
+          "p": "cóng",
+          "timestamp": 59.122,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 59.562,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 59.962,
+          "duration": 0.55
+        },
+        {
+          "id": 3,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 60.522,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 60.942,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "以",
+          "p": "yǐ",
+          "timestamp": 61.363,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 61.783,
+          "duration": 0.58
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "Osmonimdagi yulduzlar yondi",
+      "translation_ru": "Все звёзды в моём небе засияли",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 62.683,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "的",
+          "p": "de",
+          "timestamp": 63.143,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 63.523,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "空",
+          "p": "kōng",
+          "timestamp": 64.003,
+          "duration": 1.31
+        },
+        {
+          "id": 4,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 65.323,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 65.723,
+          "duration": 0.49
+        },
+        {
+          "id": 6,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 66.223,
+          "duration": 0.33
+        },
+        {
+          "id": 7,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 66.563,
+          "duration": 0.53
+        },
+        {
+          "id": 8,
+          "text": "了",
+          "p": "le",
+          "timestamp": 67.103,
+          "duration": 2.26
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "Men ertakdagi",
+      "translation_ru": "Я хочу стать",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 69.783,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "愿",
+          "p": "yuàn",
+          "timestamp": 70.223,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 70.663,
+          "duration": 0.35
+        },
+        {
+          "id": 3,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 71.023,
+          "duration": 0.95
+        },
+        {
+          "id": 4,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 71.983,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 72.403,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 72.643,
+          "duration": 0.7
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Sen sevgan farishtaga aylanmoqchiman",
+      "translation_ru": "Тем ангелом, которого ты любишь",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 73.743,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 74.183,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 74.603,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 75.043,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "个",
+          "p": "ge",
+          "timestamp": 75.483,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 75.883,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "使",
+          "p": "shǐ",
+          "timestamp": 76.143,
+          "duration": 0.36
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Qo'llarimni yoyib",
+      "translation_ru": "Раскрою обе руки",
+      "words": [
+        {
+          "id": 0,
+          "text": "张",
+          "p": "zhāng",
+          "timestamp": 76.823,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 77.243,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "双",
+          "p": "shuāng",
+          "timestamp": 77.643,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "手",
+          "p": "shǒu",
+          "timestamp": 78.083,
+          "duration": 0.88
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Qanotga aylanib seni himoya qilaman",
+      "translation_ru": "Превращусь в крылья, чтобы защитить тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 79.003,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 79.423,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "翅",
+          "p": "chì",
+          "timestamp": 79.643,
+          "duration": 0.67
+        },
+        {
+          "id": 3,
+          "text": "膀",
+          "p": "bǎng",
+          "timestamp": 80.323,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "守",
+          "p": "shǒu",
+          "timestamp": 80.723,
+          "duration": 0.49
+        },
+        {
+          "id": 5,
+          "text": "护",
+          "p": "hù",
+          "timestamp": 81.223,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 81.443,
+          "duration": 1.68
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "Sen ishonishing kerak",
+      "translation_ru": "Ты должна верить",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 83.863,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 84.283,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 84.683,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 85.123,
+          "duration": 0.56
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "Biz ertak kabi bo'lamiz deb ishon",
+      "translation_ru": "Верь, что мы будем как в сказке",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 86.064,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 86.484,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 86.724,
+          "duration": 0.67
+        },
+        {
+          "id": 3,
+          "text": "们",
+          "p": "men",
+          "timestamp": 87.404,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 87.804,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 88.244,
+          "duration": 0.45
+        },
+        {
+          "id": 6,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 88.704,
+          "duration": 0.43
+        },
+        {
+          "id": 7,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 89.144,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 89.604,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "事",
+          "p": "shì",
+          "timestamp": 90.004,
+          "duration": 0.25
+        },
+        {
+          "id": 10,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 90.264,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Baxt va quvonch bizning yakun",
+      "translation_ru": "Счастье и радость — наш финал",
+      "words": [
+        {
+          "id": 0,
+          "text": "幸",
+          "p": "xìng",
+          "timestamp": 91.384,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "福",
+          "p": "fú",
+          "timestamp": 91.824,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "和",
+          "p": "hé",
+          "timestamp": 92.244,
+          "duration": 0.89
+        },
+        {
+          "id": 3,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 93.144,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "乐",
+          "p": "lè",
+          "timestamp": 93.584,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 93.984,
+          "duration": 0.93
+        },
+        {
+          "id": 6,
+          "text": "结",
+          "p": "jié",
+          "timestamp": 94.924,
+          "duration": 0.83
+        },
+        {
+          "id": 7,
+          "text": "局",
+          "p": "jú",
+          "timestamp": 95.764,
+          "duration": 2.18
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Sen yig'lab menga deding",
+      "translation_ru": "Ты, плача, сказала мне",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 108.604,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "哭",
+          "p": "kū",
+          "timestamp": 108.984,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "着",
+          "p": "zhe",
+          "timestamp": 109.404,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "对",
+          "p": "duì",
+          "timestamp": 109.864,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 110.305,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 110.705,
+          "duration": 1.08
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Ertaklardagi hamma narsa yolg'on",
+      "translation_ru": "В сказках всё — обман",
+      "words": [
+        {
+          "id": 0,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 112.105,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 112.525,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 112.965,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 113.445,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 113.845,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "骗",
+          "p": "piàn",
+          "timestamp": 114.245,
+          "duration": 0.51
+        },
+        {
+          "id": 6,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 114.765,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 115.025,
+          "duration": 0.32
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "Men sening shahzodan bo'la olmayman",
+      "translation_ru": "Я не могу быть твоим принцем",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 115.665,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 116.085,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 116.485,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 116.925,
+          "duration": 0.82
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 118.245,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 118.705,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 119.125,
+          "duration": 0.43
+        },
+        {
+          "id": 7,
+          "text": "王",
+          "p": "wáng",
+          "timestamp": 119.565,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "子",
+          "p": "zǐ",
+          "timestamp": 120.025,
+          "duration": 1.88
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Balki sen tushunmaysan",
+      "translation_ru": "Может, ты не поймёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "也",
+          "p": "yě",
+          "timestamp": 122.745,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 123.105,
+          "duration": 0.47
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 123.585,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "不",
+          "p": "bú",
+          "timestamp": 124.025,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 124.445,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "懂",
+          "p": "dǒng",
+          "timestamp": 124.925,
+          "duration": 0.92
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "Sen meni sevaman deganingdan beri",
+      "translation_ru": "С тех пор как ты сказала, что любишь меня",
+      "words": [
+        {
+          "id": 0,
+          "text": "从",
+          "p": "cóng",
+          "timestamp": 126.205,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 126.665,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 127.045,
+          "duration": 0.53
+        },
+        {
+          "id": 3,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 127.585,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 128.025,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "以",
+          "p": "yǐ",
+          "timestamp": 128.465,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 128.865,
+          "duration": 0.6
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Osmonimdagi yulduzlar yondi",
+      "translation_ru": "Все звёзды в моём небе засияли",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 129.725,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "的",
+          "p": "de",
+          "timestamp": 130.185,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 130.565,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "空",
+          "p": "kōng",
+          "timestamp": 131.045,
+          "duration": 1.31
+        },
+        {
+          "id": 4,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 132.365,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 132.785,
+          "duration": 0.47
+        },
+        {
+          "id": 6,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 133.265,
+          "duration": 0.33
+        },
+        {
+          "id": 7,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 133.605,
+          "duration": 0.55
+        },
+        {
+          "id": 8,
+          "text": "了",
+          "p": "le",
+          "timestamp": 134.165,
+          "duration": 2.3
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "Men ertakdagi",
+      "translation_ru": "Я хочу стать",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 136.806,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "愿",
+          "p": "yuàn",
+          "timestamp": 137.226,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 137.666,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 138.066,
+          "duration": 0.95
+        },
+        {
+          "id": 4,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 139.026,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 139.446,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 139.706,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Sen sevgan farishtaga aylanmoqchiman",
+      "translation_ru": "Тем ангелом, которого ты любишь",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 140.766,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 141.226,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 141.646,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 142.086,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "个",
+          "p": "ge",
+          "timestamp": 142.546,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 142.946,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "使",
+          "p": "shǐ",
+          "timestamp": 143.206,
+          "duration": 0.36
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Qo'llarimni yoyib",
+      "translation_ru": "Раскрою обе руки",
+      "words": [
+        {
+          "id": 0,
+          "text": "张",
+          "p": "zhāng",
+          "timestamp": 143.846,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 144.266,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "双",
+          "p": "shuāng",
+          "timestamp": 144.686,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "手",
+          "p": "shǒu",
+          "timestamp": 145.126,
+          "duration": 0.9
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "Qanotga aylanib seni himoya qilaman",
+      "translation_ru": "Превращусь в крылья, чтобы защитить тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 146.066,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 146.486,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "翅",
+          "p": "chì",
+          "timestamp": 146.726,
+          "duration": 0.63
+        },
+        {
+          "id": 3,
+          "text": "膀",
+          "p": "bǎng",
+          "timestamp": 147.366,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "守",
+          "p": "shǒu",
+          "timestamp": 147.786,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "护",
+          "p": "hù",
+          "timestamp": 148.266,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 148.506,
+          "duration": 1.94
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Sen ishonishing kerak",
+      "translation_ru": "Ты должна верить",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 150.926,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 151.346,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 151.766,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 152.186,
+          "duration": 0.6
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Biz ertak kabi bo'lamiz deb ishon",
+      "translation_ru": "Верь, что мы будем как в сказке",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 153.086,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 153.506,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 153.746,
+          "duration": 0.71
+        },
+        {
+          "id": 3,
+          "text": "们",
+          "p": "men",
+          "timestamp": 154.466,
+          "duration": 0.37
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 154.846,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 155.266,
+          "duration": 0.51
+        },
+        {
+          "id": 6,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 155.786,
+          "duration": 0.41
+        },
+        {
+          "id": 7,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 156.206,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 156.646,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "事",
+          "p": "shì",
+          "timestamp": 157.046,
+          "duration": 0.29
+        },
+        {
+          "id": 10,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 157.346,
+          "duration": 0.64
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "translation": "Baxt va quvonch bizning yakun",
+      "translation_ru": "Счастье и радость — наш финал",
+      "words": [
+        {
+          "id": 0,
+          "text": "幸",
+          "p": "xìng",
+          "timestamp": 158.386,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "福",
+          "p": "fú",
+          "timestamp": 158.846,
+          "duration": 0.45
+        },
+        {
+          "id": 2,
+          "text": "和",
+          "p": "hé",
+          "timestamp": 159.307,
+          "duration": 0.85
+        },
+        {
+          "id": 3,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 160.167,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "乐",
+          "p": "lè",
+          "timestamp": 160.627,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 161.007,
+          "duration": 0.91
+        },
+        {
+          "id": 6,
+          "text": "结",
+          "p": "jié",
+          "timestamp": 161.927,
+          "duration": 0.87
+        },
+        {
+          "id": 7,
+          "text": "局",
+          "p": "jú",
+          "timestamp": 162.807,
+          "duration": 1.82
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "translation": "Men ertakdagi",
+      "translation_ru": "Я хочу стать",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 165.007,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 165.467,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 165.887,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 166.287,
+          "duration": 0.93
+        },
+        {
+          "id": 4,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 167.227,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 167.647,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 167.907,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "translation": "Sen sevgan farishtaga aylanmoqchiman",
+      "translation_ru": "Тем ангелом, которого ты любишь",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 168.987,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 169.447,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 169.887,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 170.307,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "个",
+          "p": "ge",
+          "timestamp": 170.747,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 171.167,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "使",
+          "p": "shǐ",
+          "timestamp": 171.427,
+          "duration": 0.4
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "translation": "Qo'llarimni yoyib",
+      "translation_ru": "Раскрою обе руки",
+      "words": [
+        {
+          "id": 0,
+          "text": "张",
+          "p": "zhāng",
+          "timestamp": 172.067,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 172.507,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "双",
+          "p": "shuāng",
+          "timestamp": 172.907,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "手",
+          "p": "shǒu",
+          "timestamp": 173.347,
+          "duration": 0.94
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "translation": "Qanotga aylanib seni himoya qilaman",
+      "translation_ru": "Превращусь в крылья, чтобы защитить тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 174.307,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 174.727,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "翅",
+          "p": "chì",
+          "timestamp": 174.967,
+          "duration": 0.61
+        },
+        {
+          "id": 3,
+          "text": "膀",
+          "p": "bǎng",
+          "timestamp": 175.587,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "守",
+          "p": "shǒu",
+          "timestamp": 176.007,
+          "duration": 0.49
+        },
+        {
+          "id": 5,
+          "text": "护",
+          "p": "hù",
+          "timestamp": 176.507,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 176.747,
+          "duration": 1.96
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "translation": "Sen ishonishing kerak",
+      "translation_ru": "Ты должна верить",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 179.167,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 179.587,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 179.987,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 180.407,
+          "duration": 0.6
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "translation": "Biz ertak kabi bo'lamiz deb ishon",
+      "translation_ru": "Верь, что мы будем как в сказке",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 181.327,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 181.767,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 182.007,
+          "duration": 0.67
+        },
+        {
+          "id": 3,
+          "text": "们",
+          "p": "men",
+          "timestamp": 182.687,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 183.107,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 183.527,
+          "duration": 0.47
+        },
+        {
+          "id": 6,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 184.008,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 184.468,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 184.908,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "事",
+          "p": "shì",
+          "timestamp": 185.308,
+          "duration": 0.27
+        },
+        {
+          "id": 10,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 185.588,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "translation": "Baxt va quvonch bizning yakun",
+      "translation_ru": "Счастье и радость — наш финал",
+      "words": [
+        {
+          "id": 0,
+          "text": "幸",
+          "p": "xìng",
+          "timestamp": 186.628,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "福",
+          "p": "fú",
+          "timestamp": 187.068,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "和",
+          "p": "hé",
+          "timestamp": 187.508,
+          "duration": 0.89
+        },
+        {
+          "id": 3,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 188.408,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "乐",
+          "p": "lè",
+          "timestamp": 188.848,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 189.248,
+          "duration": 0.89
+        },
+        {
+          "id": 6,
+          "text": "结",
+          "p": "jié",
+          "timestamp": 190.148,
+          "duration": 0.89
+        },
+        {
+          "id": 7,
+          "text": "局",
+          "p": "jú",
+          "timestamp": 191.048,
+          "duration": 1.76
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "translation": "Men ertakdagi",
+      "translation_ru": "Я хочу стать",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 193.228,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 193.688,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 194.108,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 194.568,
+          "duration": 0.93
+        },
+        {
+          "id": 4,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 195.508,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 195.908,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 196.168,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "translation": "Sen sevgan farishtaga aylanmoqchiman",
+      "translation_ru": "Тем ангелом, которого ты любишь",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 197.248,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 197.708,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 198.108,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 198.548,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "个",
+          "p": "ge",
+          "timestamp": 198.988,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 199.408,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "使",
+          "p": "shǐ",
+          "timestamp": 199.648,
+          "duration": 0.4
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "translation": "Qo'llarimni yoyib",
+      "translation_ru": "Раскрою обе руки",
+      "words": [
+        {
+          "id": 0,
+          "text": "张",
+          "p": "zhāng",
+          "timestamp": 200.348,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 200.768,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "双",
+          "p": "shuāng",
+          "timestamp": 201.168,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "手",
+          "p": "shǒu",
+          "timestamp": 201.608,
+          "duration": 0.9
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "translation": "Qanotga aylanib seni himoya qilaman",
+      "translation_ru": "Превращусь в крылья, чтобы защитить тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 202.548,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 202.968,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "翅",
+          "p": "chì",
+          "timestamp": 203.208,
+          "duration": 0.61
+        },
+        {
+          "id": 3,
+          "text": "膀",
+          "p": "bǎng",
+          "timestamp": 203.828,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "守",
+          "p": "shǒu",
+          "timestamp": 204.248,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "护",
+          "p": "hù",
+          "timestamp": 204.728,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 204.968,
+          "duration": 1.92
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "translation": "Sen ishonishing kerak",
+      "translation_ru": "Ты должна верить",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 207.388,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 207.808,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 208.229,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 208.629,
+          "duration": 0.58
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "translation": "Biz ertak kabi bo'lamiz deb ishon",
+      "translation_ru": "Верь, что мы будем как в сказке",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 209.549,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 209.969,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 210.209,
+          "duration": 0.69
+        },
+        {
+          "id": 3,
+          "text": "们",
+          "p": "men",
+          "timestamp": 210.909,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 211.329,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 211.709,
+          "duration": 0.49
+        },
+        {
+          "id": 6,
+          "text": "童",
+          "p": "tóng",
+          "timestamp": 212.209,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "话",
+          "p": "huà",
+          "timestamp": 212.669,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 213.109,
+          "duration": 0.41
+        },
+        {
+          "id": 9,
+          "text": "事",
+          "p": "shì",
+          "timestamp": 213.529,
+          "duration": 0.27
+        },
+        {
+          "id": 10,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 213.809,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "translation": "Baxt va quvonch bizning yakun",
+      "translation_ru": "Счастье и радость — наш финал",
+      "words": [
+        {
+          "id": 0,
+          "text": "幸",
+          "p": "xìng",
+          "timestamp": 214.869,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "福",
+          "p": "fú",
+          "timestamp": 215.329,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "和",
+          "p": "hé",
+          "timestamp": 215.749,
+          "duration": 0.89
+        },
+        {
+          "id": 3,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 216.649,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "乐",
+          "p": "lè",
+          "timestamp": 217.089,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 217.469,
+          "duration": 0.91
+        },
+        {
+          "id": 6,
+          "text": "结",
+          "p": "jié",
+          "timestamp": 218.389,
+          "duration": 0.87
+        },
+        {
+          "id": 7,
+          "text": "局",
+          "p": "jú",
+          "timestamp": 219.269,
+          "duration": 2.62
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "translation": "Oh...",
+      "translation_ru": "О...",
+      "words": [
+        {
+          "id": 0,
+          "text": "哦...",
+          "p": "ó...",
+          "timestamp": 222.009,
+          "duration": 0.78
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "translation": "Birga yozamiz",
+      "translation_ru": "Вместе напишем",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 222.849,
+          "duration": 3
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 225.889,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "写",
+          "p": "xiě",
+          "timestamp": 226.329,
+          "duration": 0.62
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "translation": "Bizning",
+      "translation_ru": "Нашу",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 227.429,
+          "duration": 0.47
+        },
+        {
+          "id": 1,
+          "text": "们",
+          "p": "men",
+          "timestamp": 227.909,
+          "duration": 0.63
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 228.549,
+          "duration": 1.3
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "translation": "Yakunimizni",
+      "translation_ru": "Концовку",
+      "words": [
+        {
+          "id": 0,
+          "text": "结",
+          "p": "jié",
+          "timestamp": 229.969,
+          "duration": 1.67
+        },
+        {
+          "id": 1,
+          "text": "局",
+          "p": "jú",
+          "timestamp": 231.649,
+          "duration": 3
+        }
+      ]
+    }
+  ]
+}
