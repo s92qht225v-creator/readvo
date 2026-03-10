@@ -6,7 +6,7 @@
   "titleTranslation_ru": "Маленькое яблочко",
   "artist": "筷子兄弟 (Kuàizi Xiōngdì)",
   "artist_ru": "Куайцзы Сюнди",
-  "audioUrl": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/xiaopinguo.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/xiaopinguo.mp3",
   "lines": [
     {
       "id": 0,
