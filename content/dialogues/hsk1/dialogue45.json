@@ -361,15 +361,164 @@
   "extraVocabSubtitle_uz": "Eslatma va muloqot mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме напоминаний и общения",
   "extraVocab": [
-    { "zh": "提前", "py": "tíqián", "uz": "oldindan", "ru": "заранее" },
-    { "zh": "通知", "py": "tōngzhī", "uz": "xabardor qilmoq", "ru": "уведомить" },
-    { "zh": "消息", "py": "xiāoxi", "uz": "xabar", "ru": "новость / сообщение" },
-    { "zh": "告诉", "py": "gàosu", "uz": "aytmoq", "ru": "сказать / сообщить" },
-    { "zh": "解释", "py": "jiěshì", "uz": "tushuntirmoq", "ru": "объяснить" },
-    { "zh": "理由", "py": "lǐyóu", "uz": "sabab", "ru": "причина" },
-    { "zh": "答应", "py": "dāying", "uz": "rozi bo'lmoq", "ru": "согласиться" },
-    { "zh": "道歉", "py": "dàoqiàn", "uz": "uzr so'ramoq", "ru": "извиниться" },
-    { "zh": "原谅", "py": "yuánliàng", "uz": "kechirmoq", "ru": "простить" },
-    { "zh": "误会", "py": "wùhuì", "uz": "noto'g'ri tushunmoq", "ru": "недоразумение" }
+    { "zh": "手机", "py": "shǒujī", "uz": "telefon", "ru": "мобильный телефон" },
+    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "qo'ng'iroq qilmoq", "ru": "звонить" },
+    { "zh": "回电话", "py": "huí diànhuà", "uz": "qayta qo'ng'iroq qilmoq", "ru": "перезвонить" },
+    { "zh": "发短信", "py": "fā duǎnxìn", "uz": "SMS yubormoq", "ru": "отправить сообщение" },
+    { "zh": "对不起", "py": "duìbuqǐ", "uz": "kechirasiz", "ru": "извините" },
+    { "zh": "没关系", "py": "méi guānxi", "uz": "hech gap emas", "ru": "ничего страшного" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "怎么...？",
+      "title_uz": "Sabab so'rash (hayron qolish)",
+      "title_ru": "Спросить причину (удивление)",
+      "desc_uz": "怎么 = nega / qanday qilib. Biror narsaga hayron qolganda ishlatiladi.",
+      "desc_ru": "怎么 = почему / как так. Используется, когда удивляешься чему-то.",
+      "formula": "Ega + 怎么 + Fe'l？",
+      "formula_ru": "Подлеж. + 怎么 + Глагол？",
+      "examples": [
+        {
+          "zh": "你怎么不接电话？",
+          "py": "Nǐ zěnme bù jiē diànhuà?",
+          "uz": "Nega telefonga javob bermading?",
+          "ru": "Почему ты не отвечал на звонок?"
+        },
+        {
+          "zh": "你怎么不吃饭？",
+          "py": "Nǐ zěnme bù chīfàn?",
+          "uz": "Nega ovqat yemayapsan?",
+          "ru": "Почему ты не ешь?"
+        },
+        {
+          "zh": "你怎么来了？",
+          "py": "Nǐ zěnme lái le?",
+          "uz": "Qanday qilib kelding?",
+          "ru": "Как ты пришёл?"
+        }
+      ],
+      "tip_uz": "怎么 hayronlik bildirganda fe'ldan OLDIN keladi. Oddiy savol uchun 为什么 ishlating.",
+      "tip_ru": "怎么 в значении удивления стоит ПЕРЕД глаголом. Для обычного вопроса используйте 为什么."
+    },
+    {
+      "pattern": "在 + Fe'l",
+      "title_uz": "Hozir davom etayotgan ish",
+      "title_ru": "Продолжающееся действие",
+      "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi.",
+      "desc_ru": "在 перед глаголом обозначает действие, которое сейчас происходит.",
+      "formula": "Ega + 在 + Fe'l",
+      "formula_ru": "Подлеж. + 在 + Глагол",
+      "examples": [
+        {
+          "zh": "刚才在开会。",
+          "py": "Gāngcái zài kāihuì.",
+          "uz": "O'sha payt yig'ilishda edim.",
+          "ru": "Только что был на совещании."
+        },
+        {
+          "zh": "我在吃饭。",
+          "py": "Wǒ zài chīfàn.",
+          "uz": "Men ovqat yeyapman.",
+          "ru": "Я сейчас ем."
+        },
+        {
+          "zh": "她在看书。",
+          "py": "Tā zài kàn shū.",
+          "uz": "U kitob o'qiyapti.",
+          "ru": "Она сейчас читает."
+        }
+      ],
+      "tip_uz": "在 + fe'l = hozir shu ishni qilayotganlikni bildiradi. O'zbek tilida «-yapman/-yapsan» shakli.",
+      "tip_ru": "在 + глагол = действие происходит прямо сейчас. Аналог «-ю/-ешь» в настоящем."
+    },
+    {
+      "pattern": "这么 + Sifat",
+      "title_uz": "Bu qadar / shuncha",
+      "title_ru": "Так / настолько",
+      "desc_uz": "这么 = bu qadar / shuncha. Sifat yoki miqdordan oldin keladi.",
+      "desc_ru": "这么 = так / настолько. Ставится перед прилагательным или количеством.",
+      "formula": "这么 + Sifat / Miqdor",
+      "formula_ru": "这么 + Прилаг. / Количество",
+      "examples": [
+        {
+          "zh": "开这么久？",
+          "py": "Kāi zhème jiǔ?",
+          "uz": "Bu qadar uzoq yig'ilish bo'ldimi?",
+          "ru": "Так долго шло совещание?"
+        },
+        {
+          "zh": "你怎么这么忙？",
+          "py": "Nǐ zěnme zhème máng?",
+          "uz": "Sen nega bu qadar bandsan?",
+          "ru": "Почему ты так занят?"
+        },
+        {
+          "zh": "这么多事情！",
+          "py": "Zhème duō shìqing!",
+          "uz": "Bu qadar ko'p ish!",
+          "ru": "Столько дел!"
+        }
+      ]
+    },
+    {
+      "pattern": "有点 + Sifat",
+      "title_uz": "Biroz / sal",
+      "title_ru": "Немного / чуть-чуть",
+      "desc_uz": "有点 = biroz / sal. Sifatdan oldin keladi, ko'pincha salbiy ma'noda.",
+      "desc_ru": "有点 = немного. Ставится перед прилагательным, чаще в негативном контексте.",
+      "formula": "有点 + Sifat",
+      "formula_ru": "有点 + Прилагательное",
+      "examples": [
+        {
+          "zh": "事情有点多。",
+          "py": "Shìqing yǒudiǎn duō.",
+          "uz": "Ishlar biroz ko'p.",
+          "ru": "Дел немного многовато."
+        },
+        {
+          "zh": "我有点累。",
+          "py": "Wǒ yǒudiǎn lèi.",
+          "uz": "Men biroz charchadim.",
+          "ru": "Я немного устал."
+        },
+        {
+          "zh": "今天有点冷。",
+          "py": "Jīntiān yǒudiǎn lěng.",
+          "uz": "Bugun biroz sovuq.",
+          "ru": "Сегодня немного холодно."
+        }
+      ],
+      "tip_uz": "有点 ko'pincha SALBIY holatlar bilan ishlatiladi: charchagan, sovuq, qiyin. Ijobiy uchun 一点 ishlating.",
+      "tip_ru": "有点 чаще используется с НЕГАТИВНЫМИ значениями: устал, холодно, трудно. Для позитивных — 一点."
+    },
+    {
+      "pattern": "下次 + Fe'l",
+      "title_uz": "Keyingi safar",
+      "title_ru": "В следующий раз",
+      "desc_uz": "下次 = keyingi safar. Fe'ldan oldin kelib, kelajakdagi harakatni bildiradi.",
+      "desc_ru": "下次 = в следующий раз. Ставится перед глаголом для обозначения будущего действия.",
+      "formula": "下次 + Fe'l",
+      "formula_ru": "下次 + Глагол",
+      "examples": [
+        {
+          "zh": "下次说一声。",
+          "py": "Xià cì shuō yì shēng.",
+          "uz": "Keyingi safar xabar ber.",
+          "ru": "В следующий раз предупреди."
+        },
+        {
+          "zh": "下次早点来。",
+          "py": "Xià cì zǎo diǎn lái.",
+          "uz": "Keyingi safar ertaroq kel.",
+          "ru": "В следующий раз приходи раньше."
+        },
+        {
+          "zh": "下次我请你吃饭。",
+          "py": "Xià cì wǒ qǐng nǐ chīfàn.",
+          "uz": "Keyingi safar men seni ovqatga taklif qilaman.",
+          "ru": "В следующий раз я угощу тебя."
+        }
+      ]
+    }
   ]
 }

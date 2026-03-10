@@ -317,26 +317,185 @@
       "ex_ru": "Пожалуйста, пристегните ремень безопасности."
     },
     {
-      "zh": "安全",
-      "py": "ānquán",
-      "uz": "xavfsiz",
-      "ru": "безопасный",
-      "ex": "这里很安全。",
-      "expy": "Zhèlǐ hěn ānquán.",
-      "ex_uz": "Bu yer juda xavfsiz.",
-      "ex_ru": "Здесь очень безопасно."
+      "zh": "系",
+      "py": "jì",
+      "uz": "taqmoq / bog'lamoq",
+      "ru": "пристегнуть / завязать",
+      "ex": "你系好安全带了吗？",
+      "expy": "Nǐ jì hǎo ānquándài le ma?",
+      "ex_uz": "Xavfsizlik kamarini taqdingmi?",
+      "ex_ru": "Ты пристегнул ремень безопасности?"
+    },
+    {
+      "zh": "后面",
+      "py": "hòumiàn",
+      "uz": "orqada / keyinda",
+      "ru": "сзади / позади",
+      "ex": "后面的人也来了。",
+      "expy": "Hòumiàn de rén yě lái le.",
+      "ex_uz": "Orqadagilar ham keldi.",
+      "ex_ru": "Люди сзади тоже пришли."
+    },
+    {
+      "zh": "也",
+      "py": "yě",
+      "uz": "ham",
+      "ru": "тоже / также",
+      "ex": "我也喜欢中文。",
+      "expy": "Wǒ yě xǐhuan Zhōngwén.",
+      "ex_uz": "Men ham xitoy tilini yoqtiraman.",
+      "ex_ru": "Я тоже люблю китайский."
+    },
+    {
+      "zh": "出发",
+      "py": "chūfā",
+      "uz": "jo'namoq / yo'lga chiqmoq",
+      "ru": "отправиться / выехать",
+      "ex": "我们八点出发。",
+      "expy": "Wǒmen bā diǎn chūfā.",
+      "ex_uz": "Biz soat sakkizda jo'naymiz.",
+      "ex_ru": "Мы отправляемся в восемь."
+    },
+    {
+      "zh": "吧",
+      "py": "ba",
+      "uz": "(-ylik) taklif yuklamasi",
+      "ru": "частица предложения",
+      "ex": "我们走吧。",
+      "expy": "Wǒmen zǒu ba.",
+      "ex_uz": "Ketdik.",
+      "ex_ru": "Давай пойдём."
     }
   ],
   "extraVocabSubtitle_uz": "Avtomobil xavfsizligi va haydash mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме безопасности в автомобиле и вождения",
   "extraVocab": [
-    { "zh": "方向盘", "py": "fāngxiàngpán", "uz": "rul", "ru": "руль" },
-    { "zh": "刹车", "py": "shāchē", "uz": "tormoz", "ru": "тормоз" },
-    { "zh": "油门", "py": "yóumén", "uz": "gaz pedali", "ru": "педаль газа" },
-    { "zh": "后视镜", "py": "hòushìjìng", "uz": "orqa ko'zgu", "ru": "зеркало заднего вида" },
-    { "zh": "车门", "py": "chēmén", "uz": "mashina eshigi", "ru": "дверь автомобиля" },
-    { "zh": "限速", "py": "xiànsù", "uz": "tezlik cheklovi", "ru": "ограничение скорости" },
-    { "zh": "小心", "py": "xiǎoxīn", "uz": "ehtiyot bo'lmoq", "ru": "осторожно" },
-    { "zh": "驾照", "py": "jiàzhào", "uz": "haydovchilik guvohnomasi", "ru": "водительские права" }
+    { "zh": "开车", "py": "kāichē", "uz": "mashina haydamoq", "ru": "вести машину" },
+    { "zh": "上车", "py": "shàngchē", "uz": "mashinaga o'tirmoq", "ru": "сесть в машину" },
+    { "zh": "下车", "py": "xiàchē", "uz": "mashinadan tushmoq", "ru": "выйти из машины" },
+    { "zh": "驾照", "py": "jiàzhào", "uz": "haydovchilik guvohnomasi", "ru": "водительские права" },
+    { "zh": "小心", "py": "xiǎoxīn", "uz": "ehtiyot bo'lmoq", "ru": "осторожно" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "...好了吗？",
+      "title_uz": "Ish bajarilganini so'rash",
+      "title_ru": "Спросить о завершении действия",
+      "desc_uz": "Fe'l + 好了吗 = ... qildingmi? Biror ish tugaganini so'rash uchun.",
+      "desc_ru": "Глагол + 好了吗 = ты (уже) сделал? Для вопроса о завершённости действия.",
+      "formula": "Fe'l + 好了吗？",
+      "formula_ru": "Глагол + 好了吗？",
+      "examples": [
+        {
+          "zh": "安全带系好了吗？",
+          "py": "Ānquándài jì hǎo le ma?",
+          "uz": "Xavfsizlik kamarini taqdingmi?",
+          "ru": "Ремень безопасности пристегнул?"
+        },
+        {
+          "zh": "饭做好了吗？",
+          "py": "Fàn zuò hǎo le ma?",
+          "uz": "Ovqat tayyorlandi mi?",
+          "ru": "Еда готова?"
+        },
+        {
+          "zh": "作业写好了吗？",
+          "py": "Zuòyè xiě hǎo le ma?",
+          "uz": "Uy vazifani yozdingmi?",
+          "ru": "Домашнее задание написал?"
+        }
+      ],
+      "tip_uz": "好 bu yerda «tayyor / tugallangan» ma'nosida. 做好 = tayyorlab bo'lmoq, 写好 = yozib bo'lmoq.",
+      "tip_ru": "好 здесь означает «готово / завершено». 做好 = приготовить, 写好 = дописать."
+    },
+    {
+      "pattern": "...的人呢？",
+      "title_uz": "Boshqalar haqida so'rash",
+      "title_ru": "Спросить о других",
+      "desc_uz": "...的人呢？= ...dagi odamlar-chi? 呢 savol yuklamasi bo'lib, oldingi mavzuga asoslangan savol beradi.",
+      "desc_ru": "...的人呢？= а люди ...? 呢 — вопросительная частица, задаёт вопрос на основе предыдущего контекста.",
+      "formula": "[Joy/holat] + 的人呢？",
+      "formula_ru": "[Место/ситуация] + 的人呢？",
+      "examples": [
+        {
+          "zh": "后面的人呢？",
+          "py": "Hòumiàn de rén ne?",
+          "uz": "Orqadagilar-chi?",
+          "ru": "А люди сзади?"
+        },
+        {
+          "zh": "外面的人呢？",
+          "py": "Wàimiàn de rén ne?",
+          "uz": "Tashqaridagilar-chi?",
+          "ru": "А люди снаружи?"
+        },
+        {
+          "zh": "你的朋友呢？",
+          "py": "Nǐ de péngyou ne?",
+          "uz": "Sening do'sting-chi?",
+          "ru": "А твой друг?"
+        }
+      ]
+    },
+    {
+      "pattern": "也 + Fe'l",
+      "title_uz": "Ham / shuningdek",
+      "title_ru": "Тоже / также",
+      "desc_uz": "也 = ham. Fe'ldan OLDIN keladi. Bir xil harakatning takrorlanishini bildiradi.",
+      "desc_ru": "也 = тоже. Ставится ПЕРЕД глаголом. Показывает повторение действия.",
+      "formula": "Ega + 也 + Fe'l",
+      "formula_ru": "Подлеж. + 也 + Глагол",
+      "examples": [
+        {
+          "zh": "也系好了。",
+          "py": "Yě jì hǎo le.",
+          "uz": "Ular ham taqishdi.",
+          "ru": "Они тоже пристегнулись."
+        },
+        {
+          "zh": "我也想去。",
+          "py": "Wǒ yě xiǎng qù.",
+          "uz": "Men ham bormoqchiman.",
+          "ru": "Я тоже хочу пойти."
+        },
+        {
+          "zh": "他也是学生。",
+          "py": "Tā yě shì xuéshēng.",
+          "uz": "U ham talaba.",
+          "ru": "Он тоже студент."
+        }
+      ],
+      "tip_uz": "也 har doim fe'ldan OLDIN keladi. \"Men ham\" = 我也, \"U ham\" = 他也.",
+      "tip_ru": "也 всегда стоит ПЕРЕД глаголом. «Я тоже» = 我也, «Он тоже» = 他也."
+    },
+    {
+      "pattern": "那我们...吧",
+      "title_uz": "Taklif bildirish",
+      "title_ru": "Предложить действие",
+      "desc_uz": "那 = unda, 吧 = taklif yuklamasi. Birgalikda: «Unda ... qilaylik» ma'nosida.",
+      "desc_ru": "那 = тогда, 吧 = частица предложения. Вместе: «Тогда давай...».",
+      "formula": "那 + Ega + Fe'l + 吧",
+      "formula_ru": "那 + Подлеж. + Глагол + 吧",
+      "examples": [
+        {
+          "zh": "那我们出发吧。",
+          "py": "Nà wǒmen chūfā ba.",
+          "uz": "Unda jo'naymiz.",
+          "ru": "Тогда поехали."
+        },
+        {
+          "zh": "那我们吃饭吧。",
+          "py": "Nà wǒmen chīfàn ba.",
+          "uz": "Unda ovqat yeylik.",
+          "ru": "Тогда давай поедим."
+        },
+        {
+          "zh": "那我们开始吧。",
+          "py": "Nà wǒmen kāishǐ ba.",
+          "uz": "Unda boshlaymiz.",
+          "ru": "Тогда давай начнём."
+        }
+      ]
+    }
   ]
 }

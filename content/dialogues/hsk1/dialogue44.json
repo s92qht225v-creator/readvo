@@ -245,6 +245,26 @@
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3",
   "vocab": [
     {
+      "zh": "今天",
+      "py": "jīntiān",
+      "uz": "bugun",
+      "ru": "сегодня",
+      "ex": "今天天气很好。",
+      "expy": "Jīntiān tiānqì hěn hǎo.",
+      "ex_uz": "Bugun ob-havo juda yaxshi.",
+      "ex_ru": "Сегодня хорошая погода."
+    },
+    {
+      "zh": "几点",
+      "py": "jǐ diǎn",
+      "uz": "soat necha",
+      "ru": "который час / во сколько",
+      "ex": "现在几点了？",
+      "expy": "Xiànzài jǐ diǎn le?",
+      "ex_uz": "Hozir soat necha bo'ldi?",
+      "ex_ru": "Который сейчас час?"
+    },
+    {
       "zh": "下班",
       "py": "xiàbān",
       "uz": "ishdan chiqmoq",
@@ -263,6 +283,26 @@
       "expy": "Tā jīngcháng jiābān.",
       "ex_uz": "U tez-tez qo'shimcha ishlaydi.",
       "ex_ru": "Он часто работает сверхурочно."
+    },
+    {
+      "zh": "早点",
+      "py": "zǎo diǎn",
+      "uz": "ertaroq / tezroq",
+      "ru": "пораньше",
+      "ex": "明天早点来。",
+      "expy": "Míngtiān zǎo diǎn lái.",
+      "ex_uz": "Ertaga ertaroq kel.",
+      "ex_ru": "Завтра приходи пораньше."
+    },
+    {
+      "zh": "回来",
+      "py": "huílái",
+      "uz": "qaytib kelmoq",
+      "ru": "вернуться",
+      "ex": "你什么时候回来？",
+      "expy": "Nǐ shénme shíhòu huílái?",
+      "ex_uz": "Qachon qaytib kelasan?",
+      "ex_ru": "Когда ты вернёшься?"
     }
   ],
   "extraVocabSubtitle_uz": "Ish va ofis mavzusidagi foydali so'zlar",
@@ -276,5 +316,125 @@
     { "zh": "办公室", "py": "bàngōngshì", "uz": "ofis", "ru": "офис" },
     { "zh": "会议", "py": "huìyì", "uz": "yig'ilish", "ru": "совещание" },
     { "zh": "休息", "py": "xiūxi", "uz": "dam olmoq", "ru": "отдыхать" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "几点 + Fe'l？",
+      "title_uz": "Vaqt so'rash",
+      "title_ru": "Спросить время",
+      "desc_uz": "几点 = soat necha. Ish-harakatning vaqtini so'rash uchun ishlatiladi.",
+      "desc_ru": "几点 = который час / во сколько. Используется для вопроса о времени действия.",
+      "formula": "Ega + 几点 + Fe'l？",
+      "formula_ru": "Подлеж. + 几点 + Глагол？",
+      "examples": [
+        {
+          "zh": "你今天几点下班？",
+          "py": "Nǐ jīntiān jǐ diǎn xiàbān?",
+          "uz": "Bugun soat nechada ishdan chiqasan?",
+          "ru": "Во сколько сегодня заканчиваешь?"
+        },
+        {
+          "zh": "你几点起床？",
+          "py": "Nǐ jǐ diǎn qǐchuáng?",
+          "uz": "Soat nechada turasan?",
+          "ru": "Во сколько ты встаёшь?"
+        },
+        {
+          "zh": "我们几点见面？",
+          "py": "Wǒmen jǐ diǎn jiànmiàn?",
+          "uz": "Soat nechada uchrashamiz?",
+          "ru": "Во сколько мы встречаемся?"
+        }
+      ]
+    },
+    {
+      "pattern": "不 + Fe'l",
+      "title_uz": "Oddiy inkor",
+      "title_ru": "Простое отрицание",
+      "desc_uz": "不 fe'ldan oldin kelib, inkor ma'nosini beradi. Hozirgi va kelajak vaqt uchun ishlatiladi.",
+      "desc_ru": "不 перед глаголом выражает отрицание. Используется для настоящего и будущего времени.",
+      "formula": "Ega + 不 + Fe'l",
+      "formula_ru": "Подлеж. + 不 + Глагол",
+      "examples": [
+        {
+          "zh": "不加班。",
+          "py": "Bù jiābān.",
+          "uz": "Qo'shimcha ishlamayman.",
+          "ru": "Не работаю сверхурочно."
+        },
+        {
+          "zh": "我不去。",
+          "py": "Wǒ bù qù.",
+          "uz": "Men bormayman.",
+          "ru": "Я не пойду."
+        },
+        {
+          "zh": "他不吃肉。",
+          "py": "Tā bù chī ròu.",
+          "uz": "U go'sht yemaydi.",
+          "ru": "Он не ест мясо."
+        }
+      ],
+      "tip_uz": "不 hozirgi va kelajak vaqt uchun. O'tgan zamon uchun 没 ishlating: 没去 (bormadim).",
+      "tip_ru": "不 для настоящего и будущего. Для прошедшего используйте 没: 没去 (не ходил)."
+    },
+    {
+      "pattern": "那 + ...",
+      "title_uz": "Xulosa / natija bildirish",
+      "title_ru": "Вывод / следствие",
+      "desc_uz": "那 = unday bo'lsa / unda. Oldingi gapga asoslanib xulosa yoki taklif bildiradi.",
+      "desc_ru": "那 = тогда / в таком случае. Выражает вывод или предложение на основе предыдущего.",
+      "formula": "[Oldingi gap] → 那 + xulosa/taklif",
+      "formula_ru": "[Предыдущее] → 那 + вывод/предложение",
+      "examples": [
+        {
+          "zh": "那早点回来。",
+          "py": "Nà zǎo diǎn huílái.",
+          "uz": "Unday bo'lsa, ertaroq qaytib kel.",
+          "ru": "Тогда возвращайся пораньше."
+        },
+        {
+          "zh": "那我们走吧。",
+          "py": "Nà wǒmen zǒu ba.",
+          "uz": "Unday bo'lsa, ketdik.",
+          "ru": "Тогда пойдёмте."
+        },
+        {
+          "zh": "那明天见。",
+          "py": "Nà míngtiān jiàn.",
+          "uz": "Unday bo'lsa, ertaga ko'rishamiz.",
+          "ru": "Тогда до завтра."
+        }
+      ]
+    },
+    {
+      "pattern": "早点 + Fe'l",
+      "title_uz": "Ertaroq / tezroq bajarish",
+      "title_ru": "Сделать пораньше",
+      "desc_uz": "早点 = ertaroq / tezroq. Fe'ldan oldin kelib, harakatni oddatdagidan erta bajarishni bildiradi.",
+      "desc_ru": "早点 = пораньше. Перед глаголом означает сделать действие раньше обычного.",
+      "formula": "早点 + Fe'l",
+      "formula_ru": "早点 + Глагол",
+      "examples": [
+        {
+          "zh": "那早点回来。",
+          "py": "Nà zǎo diǎn huílái.",
+          "uz": "Unday bo'lsa, ertaroq qaytib kel.",
+          "ru": "Тогда возвращайся пораньше."
+        },
+        {
+          "zh": "早点睡觉。",
+          "py": "Zǎo diǎn shuìjiào.",
+          "uz": "Ertaroq uxla.",
+          "ru": "Ложись спать пораньше."
+        },
+        {
+          "zh": "明天早点来。",
+          "py": "Míngtiān zǎo diǎn lái.",
+          "uz": "Ertaga ertaroq kel.",
+          "ru": "Завтра приходи пораньше."
+        }
+      ]
+    }
   ]
 }
