@@ -1,0 +1,3162 @@
+{
+  "id": "shijiezhemeda",
+  "title": "世界这么大还是遇见你",
+  "pinyin": "Shìjiè Zhème Dà Háishi Yùjiàn Nǐ",
+  "titleTranslation": "Dunyo shuncha katta, baribir senga duch keldim",
+  "titleTranslation_ru": "Мир так велик, но я всё равно встретил тебя",
+  "artist": "程响",
+  "artist_ru": "Чэн Сян",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/shijiezhemeda.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Ryukzak yosh xotiralar bilan to‘la",
+      "translation_ru": "Рюкзак набит незрелыми воспоминаниями",
+      "words": [
+        {
+          "id": 0,
+          "text": "背",
+          "p": "bēi",
+          "timestamp": 14.88,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "包",
+          "p": "bāo",
+          "timestamp": 15.12,
+          "duration": 0.17
+        },
+        {
+          "id": 2,
+          "text": "塞",
+          "p": "sāi",
+          "timestamp": 15.3,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "满",
+          "p": "mǎn",
+          "timestamp": 15.52,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "青",
+          "p": "qīng",
+          "timestamp": 15.72,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "涩",
+          "p": "sè",
+          "timestamp": 16.14,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 16.42,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 17,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "忆",
+          "p": "yì",
+          "timestamp": 17.48,
+          "duration": 0.38
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Voyaga chiqish vaqti keldi",
+      "translation_ru": "Пора отправляться в путь взросления",
+      "words": [
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 18.28,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 18.5,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "踏",
+          "p": "tà",
+          "timestamp": 18.72,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "上",
+          "p": "shàng",
+          "timestamp": 18.94,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 19.16,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "长",
+          "p": "zhǎng",
+          "timestamp": 19.58,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 19.86,
+          "duration": 0.41
+        },
+        {
+          "id": 7,
+          "text": "旅",
+          "p": "lǚ",
+          "timestamp": 20.28,
+          "duration": 0.61
+        },
+        {
+          "id": 8,
+          "text": "程",
+          "p": "chéng",
+          "timestamp": 20.9,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Shu chorrahaga yetdim",
+      "translation_ru": "Дошёл до этого перекрёстка",
+      "words": [
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 21.74,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 22.2,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 22.58,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 22.82,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "路",
+          "p": "lù",
+          "timestamp": 23.04,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "口",
+          "p": "kǒu",
+          "timestamp": 23.241,
+          "duration": 0.64
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Meni kuzatma, tezroq qayt",
+      "translation_ru": "Не провожай меня, возвращайся скорей",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 24.321,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 24.721,
+          "duration": 0.45
+        },
+        {
+          "id": 2,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 25.181,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 25.581,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "送",
+          "p": "sòng",
+          "timestamp": 25.821,
+          "duration": 0.61
+        },
+        {
+          "id": 5,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 26.441,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 26.641,
+          "duration": 0.19
+        },
+        {
+          "id": 7,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 26.841,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 27.321,
+          "duration": 0.37
+        },
+        {
+          "id": 9,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 27.701,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Uchrashib yana xayrlashamiz",
+      "translation_ru": "Встретились и снова прощаемся",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 28.561,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 28.821,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 29.061,
+          "duration": 0.17
+        },
+        {
+          "id": 3,
+          "text": "告",
+          "p": "gào",
+          "timestamp": 29.241,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 29.481,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 29.861,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "句",
+          "p": "jù",
+          "timestamp": 30.081,
+          "duration": 0.61
+        },
+        {
+          "id": 7,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 30.701,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 31.121,
+          "duration": 0.44
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "O‘tgan narsalar qaytmaydi",
+      "translation_ru": "Прошлое не повторится",
+      "words": [
+        {
+          "id": 0,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 32.001,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 32.221,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 32.441,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 32.721,
+          "duration": 0.11
+        },
+        {
+          "id": 4,
+          "text": "切",
+          "p": "qiè",
+          "timestamp": 32.841,
+          "duration": 0.51
+        },
+        {
+          "id": 5,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 33.361,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 33.581,
+          "duration": 0.53
+        },
+        {
+          "id": 7,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 34.121,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "现",
+          "p": "xiàn",
+          "timestamp": 34.581,
+          "duration": 0.5
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Tushkunlikda",
+      "translation_ru": "Когда грустно",
+      "words": [
+        {
+          "id": 0,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 35.362,
+          "duration": 0.549
+        },
+        {
+          "id": 1,
+          "text": "落",
+          "p": "luò",
+          "timestamp": 35.921,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 36.301,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 36.701,
+          "duration": 0.29
+        },
+        {
+          "id": 4,
+          "text": "候",
+          "p": "hòu",
+          "timestamp": 37.001,
+          "duration": 0.52
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Menday o‘zingga ishon",
+      "translation_ru": "Верь в себя, как я верю",
+      "words": [
+        {
+          "id": 0,
+          "text": "请",
+          "p": "qǐng",
+          "timestamp": 37.801,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 38.021,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 38.461,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 38.901,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "样",
+          "p": "yàng",
+          "timestamp": 39.301,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 39.521,
+          "duration": 0.61
+        },
+        {
+          "id": 6,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 40.141,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 40.601,
+          "duration": 0.37
+        },
+        {
+          "id": 8,
+          "text": "自",
+          "p": "zì",
+          "timestamp": 40.981,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "己",
+          "p": "jǐ",
+          "timestamp": 41.441,
+          "duration": 0.48
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 42.202,
+          "duration": 0.309
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 42.521,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 42.721,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 42.941,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 43.181,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 43.641,
+          "duration": 0.13
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 43.781,
+          "duration": 0.31
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 44.101,
+          "duration": 0.29
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 44.401,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 44.861,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Necha marta telba bo‘ldik, necha marta sodda",
+      "translation_ru": "Сколько раз безумствовали, сколько раз наивничали",
+      "words": [
+        {
+          "id": 0,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 45.741,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 45.921,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "次",
+          "p": "cì",
+          "timestamp": 46.161,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "疯",
+          "p": "fēng",
+          "timestamp": 46.381,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "狂",
+          "p": "kuáng",
+          "timestamp": 46.601,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 47.021,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 47.221,
+          "duration": 0.59
+        },
+        {
+          "id": 7,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 47.821,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "真",
+          "p": "zhēn",
+          "timestamp": 48.301,
+          "duration": 0.8
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Birga orzu qildik",
+      "translation_ru": "Вместе мечтали",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 49.601,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 49.821,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "做",
+          "p": "zuò",
+          "timestamp": 50.061,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 50.461,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "梦",
+          "p": "mèng",
+          "timestamp": 50.701,
+          "duration": 0.54
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "Bir kun vatanda yana ko‘rishamiz",
+      "translation_ru": "Однажды мы встретимся на родине",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 51.501,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 51.741,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 52.121,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 52.581,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 53.001,
+          "duration": 0.29
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 53.301,
+          "duration": 0.53
+        },
+        {
+          "id": 6,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 53.841,
+          "duration": 0.47
+        },
+        {
+          "id": 7,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 54.321,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 54.741,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 55.181,
+          "duration": 0.44
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 55.911,
+          "duration": 0.32
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 56.241,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 56.441,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 56.661,
+          "duration": 0.17
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 56.841,
+          "duration": 0.05
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 56.901,
+          "duration": 0.63
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 57.541,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 57.821,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 58.181,
+          "duration": 0.41
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 58.601,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Birga ko‘p fasllarni o‘tkazdik",
+      "translation_ru": "Вместе прошли через многие времена года",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 59.481,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 59.681,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "走",
+          "p": "zǒu",
+          "timestamp": 59.901,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 60.121,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 60.321,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 60.741,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 60.981,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "四",
+          "p": "sì",
+          "timestamp": 61.561,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "季",
+          "p": "jì",
+          "timestamp": 62.001,
+          "duration": 0.72
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Shimoldan janubgacha",
+      "translation_ru": "На всех концах света",
+      "words": [
+        {
+          "id": 0,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 63.321,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "南",
+          "p": "nán",
+          "timestamp": 63.761,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "地",
+          "p": "dì",
+          "timestamp": 64.181,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "北",
+          "p": "běi",
+          "timestamp": 64.461,
+          "duration": 0.34
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Do‘stligimizni unutma",
+      "translation_ru": "Не забывай нашу дружбу",
+      "words": [
+        {
+          "id": 0,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 64.861,
+          "duration": 0.31
+        },
+        {
+          "id": 1,
+          "text": "忘",
+          "p": "wàng",
+          "timestamp": 65.181,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "记",
+          "p": "jì",
+          "timestamp": 65.441,
+          "duration": 1.1
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 67.181,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 67.421,
+          "duration": 0.17
+        },
+        {
+          "id": 5,
+          "text": "之",
+          "p": "zhī",
+          "timestamp": 67.601,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "间",
+          "p": "jiān",
+          "timestamp": 67.801,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 68.061,
+          "duration": 0.29
+        },
+        {
+          "id": 8,
+          "text": "情",
+          "p": "qíng",
+          "timestamp": 68.361,
+          "duration": 0.55
+        },
+        {
+          "id": 9,
+          "text": "谊",
+          "p": "yì",
+          "timestamp": 68.921,
+          "duration": 1.48
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "Ryukzak yosh xotiralar bilan to‘la",
+      "translation_ru": "Рюкзак набит незрелыми воспоминаниями",
+      "words": [
+        {
+          "id": 0,
+          "text": "背",
+          "p": "bēi",
+          "timestamp": 83.442,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "包",
+          "p": "bāo",
+          "timestamp": 83.702,
+          "duration": 0.15
+        },
+        {
+          "id": 2,
+          "text": "塞",
+          "p": "sāi",
+          "timestamp": 83.862,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "满",
+          "p": "mǎn",
+          "timestamp": 84.102,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "青",
+          "p": "qīng",
+          "timestamp": 84.302,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "涩",
+          "p": "sè",
+          "timestamp": 84.722,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 84.982,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 85.562,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "忆",
+          "p": "yì",
+          "timestamp": 86.042,
+          "duration": 0.38
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "Voyaga chiqish vaqti keldi",
+      "translation_ru": "Пора отправляться в путь взросления",
+      "words": [
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 86.842,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 87.082,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "踏",
+          "p": "tà",
+          "timestamp": 87.282,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "上",
+          "p": "shàng",
+          "timestamp": 87.502,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 87.742,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "长",
+          "p": "zhǎng",
+          "timestamp": 88.162,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 88.442,
+          "duration": 0.41
+        },
+        {
+          "id": 7,
+          "text": "旅",
+          "p": "lǚ",
+          "timestamp": 88.862,
+          "duration": 0.59
+        },
+        {
+          "id": 8,
+          "text": "程",
+          "p": "chéng",
+          "timestamp": 89.462,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Shu chorrahaga yetdim",
+      "translation_ru": "Дошёл до этого перекрёстка",
+      "words": [
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 90.322,
+          "duration": 0.45
+        },
+        {
+          "id": 1,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 90.782,
+          "duration": 0.35
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 91.142,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 91.402,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "路",
+          "p": "lù",
+          "timestamp": 91.622,
+          "duration": 0.17
+        },
+        {
+          "id": 5,
+          "text": "口",
+          "p": "kǒu",
+          "timestamp": 91.802,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Meni kuzatma, tezroq qayt",
+      "translation_ru": "Не провожай меня, возвращайся скорей",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 92.902,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 93.302,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 93.742,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 94.162,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "送",
+          "p": "sòng",
+          "timestamp": 94.402,
+          "duration": 0.59
+        },
+        {
+          "id": 5,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 95.002,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 95.242,
+          "duration": 0.17
+        },
+        {
+          "id": 7,
+          "text": "快",
+          "p": "kuài",
+          "timestamp": 95.422,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 95.882,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 96.282,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Uchrashib yana xayrlashamiz",
+      "translation_ru": "Встретились и снова прощаемся",
+      "words": [
+        {
+          "id": 0,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 97.142,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 97.402,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 97.642,
+          "duration": 0.17
+        },
+        {
+          "id": 3,
+          "text": "告",
+          "p": "gào",
+          "timestamp": 97.822,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 98.062,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 98.462,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "句",
+          "p": "jù",
+          "timestamp": 98.682,
+          "duration": 0.59
+        },
+        {
+          "id": 7,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 99.282,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 99.702,
+          "duration": 0.44
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "O‘tgan narsalar qaytmaydi",
+      "translation_ru": "Прошлое не повторится",
+      "words": [
+        {
+          "id": 0,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 100.582,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 100.802,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 101.022,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 101.302,
+          "duration": 0.11
+        },
+        {
+          "id": 4,
+          "text": "切",
+          "p": "qiè",
+          "timestamp": 101.422,
+          "duration": 0.49
+        },
+        {
+          "id": 5,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 101.922,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 102.162,
+          "duration": 0.53
+        },
+        {
+          "id": 7,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 102.702,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "现",
+          "p": "xiàn",
+          "timestamp": 103.162,
+          "duration": 0.48
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Tushkunlikda",
+      "translation_ru": "Когда грустно",
+      "words": [
+        {
+          "id": 0,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 103.947,
+          "duration": 0.245
+        },
+        {
+          "id": 1,
+          "text": "落",
+          "p": "luò",
+          "timestamp": 104.202,
+          "duration": 0.67
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 104.882,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 105.282,
+          "duration": 0.29
+        },
+        {
+          "id": 4,
+          "text": "候",
+          "p": "hòu",
+          "timestamp": 105.582,
+          "duration": 0.52
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "Menday o‘zingga ishon",
+      "translation_ru": "Верь в себя, как я верю",
+      "words": [
+        {
+          "id": 0,
+          "text": "请",
+          "p": "qǐng",
+          "timestamp": 106.382,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 106.602,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 107.022,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 107.462,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "样",
+          "p": "yàng",
+          "timestamp": 107.882,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 108.082,
+          "duration": 0.63
+        },
+        {
+          "id": 6,
+          "text": "信",
+          "p": "xìn",
+          "timestamp": 108.722,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 109.182,
+          "duration": 0.37
+        },
+        {
+          "id": 8,
+          "text": "自",
+          "p": "zì",
+          "timestamp": 109.562,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "己",
+          "p": "jǐ",
+          "timestamp": 110.022,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 110.763,
+          "duration": 0.329
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 111.102,
+          "duration": 0.17
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 111.282,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 111.522,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 111.742,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 112.202,
+          "duration": 0.15
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 112.362,
+          "duration": 0.33
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 112.702,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 112.982,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 113.442,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "Necha marta telba bo‘ldik, necha marta sodda",
+      "translation_ru": "Сколько раз безумствовали, сколько раз наивничали",
+      "words": [
+        {
+          "id": 0,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 114.322,
+          "duration": 0.15
+        },
+        {
+          "id": 1,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 114.482,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "次",
+          "p": "cì",
+          "timestamp": 114.722,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "疯",
+          "p": "fēng",
+          "timestamp": 114.942,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "狂",
+          "p": "kuáng",
+          "timestamp": 115.182,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 115.582,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 115.802,
+          "duration": 0.59
+        },
+        {
+          "id": 7,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 116.403,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "真",
+          "p": "zhēn",
+          "timestamp": 116.863,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Birga orzu qildik",
+      "translation_ru": "Вместе мечтали",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 118.163,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 118.383,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "做",
+          "p": "zuò",
+          "timestamp": 118.623,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 119.023,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "梦",
+          "p": "mèng",
+          "timestamp": 119.263,
+          "duration": 0.56
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Bir kun vatanda yana ko‘rishamiz",
+      "translation_ru": "Однажды мы встретимся на родине",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 120.063,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 120.323,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 120.703,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 121.163,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 121.583,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 121.863,
+          "duration": 0.55
+        },
+        {
+          "id": 6,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 122.423,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 122.883,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 123.323,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 123.763,
+          "duration": 0.42
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 124.486,
+          "duration": 0.327
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 124.823,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 125.023,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 125.243,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 125.483,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 125.943,
+          "duration": 0.13
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 126.083,
+          "duration": 0.33
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 126.423,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 126.703,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 127.163,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Birga ko‘p fasllarni o‘tkazdik",
+      "translation_ru": "Вместе прошли через многие времена года",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 128.043,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 128.243,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "走",
+          "p": "zǒu",
+          "timestamp": 128.463,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 128.683,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 128.883,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 129.303,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 129.563,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "四",
+          "p": "sì",
+          "timestamp": 130.143,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "季",
+          "p": "jì",
+          "timestamp": 130.563,
+          "duration": 0.72
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Shimoldan janubgacha",
+      "translation_ru": "На всех концах света",
+      "words": [
+        {
+          "id": 0,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 131.883,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "南",
+          "p": "nán",
+          "timestamp": 132.323,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "地",
+          "p": "dì",
+          "timestamp": 132.743,
+          "duration": 0.29
+        },
+        {
+          "id": 3,
+          "text": "北",
+          "p": "běi",
+          "timestamp": 133.043,
+          "duration": 0.34
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "translation": "Do‘stligimizni unutma",
+      "translation_ru": "Не забывай нашу дружбу",
+      "words": [
+        {
+          "id": 0,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 133.423,
+          "duration": 0.33
+        },
+        {
+          "id": 1,
+          "text": "忘",
+          "p": "wàng",
+          "timestamp": 133.763,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "记",
+          "p": "jì",
+          "timestamp": 134.023,
+          "duration": 1.08
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 135.763,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 135.983,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "之",
+          "p": "zhī",
+          "timestamp": 136.183,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "间",
+          "p": "jiān",
+          "timestamp": 136.363,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 136.643,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "情",
+          "p": "qíng",
+          "timestamp": 136.923,
+          "duration": 0.59
+        },
+        {
+          "id": 9,
+          "text": "谊",
+          "p": "yì",
+          "timestamp": 137.523,
+          "duration": 1.44
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 151.89,
+          "duration": 0.343
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 152.243,
+          "duration": 0.17
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 152.423,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 152.663,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 152.883,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 153.363,
+          "duration": 0.13
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 153.503,
+          "duration": 0.31
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 153.823,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 154.103,
+          "duration": 0.47
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 154.583,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "translation": "Necha marta telba bo‘ldik, necha marta sodda",
+      "translation_ru": "Сколько раз безумствовали, сколько раз наивничали",
+      "words": [
+        {
+          "id": 0,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 155.463,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 155.643,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "次",
+          "p": "cì",
+          "timestamp": 155.883,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "疯",
+          "p": "fēng",
+          "timestamp": 156.103,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "狂",
+          "p": "kuáng",
+          "timestamp": 156.323,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 156.723,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 156.943,
+          "duration": 0.59
+        },
+        {
+          "id": 7,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 157.543,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "真",
+          "p": "zhēn",
+          "timestamp": 158.003,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "translation": "Birga orzu qildik",
+      "translation_ru": "Вместе мечтали",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 159.343,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 159.543,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "做",
+          "p": "zuò",
+          "timestamp": 159.763,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 160.183,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "梦",
+          "p": "mèng",
+          "timestamp": 160.423,
+          "duration": 0.54
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "translation": "Bir kun vatanda yana ko‘rishamiz",
+      "translation_ru": "Однажды мы встретимся на родине",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 161.203,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 161.463,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 161.843,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 162.304,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 162.744,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 162.964,
+          "duration": 0.59
+        },
+        {
+          "id": 6,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 163.564,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 164.024,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 164.464,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 164.904,
+          "duration": 0.42
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 165.603,
+          "duration": 0.351
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 165.964,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 166.164,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 166.384,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 166.624,
+          "duration": 0.47
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 167.104,
+          "duration": 0.13
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 167.244,
+          "duration": 0.29
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 167.544,
+          "duration": 0.29
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 167.844,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 168.304,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "translation": "Birga ko‘p fasllarni o‘tkazdik",
+      "translation_ru": "Вместе прошли через многие времена года",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 169.204,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 169.384,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "走",
+          "p": "zǒu",
+          "timestamp": 169.604,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 169.824,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 170.024,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 170.444,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 170.704,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "四",
+          "p": "sì",
+          "timestamp": 171.284,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "季",
+          "p": "jì",
+          "timestamp": 171.724,
+          "duration": 0.7
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "translation": "Shimoldan janubgacha",
+      "translation_ru": "На всех концах света",
+      "words": [
+        {
+          "id": 0,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 173.024,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "南",
+          "p": "nán",
+          "timestamp": 173.464,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "地",
+          "p": "dì",
+          "timestamp": 173.884,
+          "duration": 0.29
+        },
+        {
+          "id": 3,
+          "text": "北",
+          "p": "běi",
+          "timestamp": 174.184,
+          "duration": 0.32
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "translation": "Do‘stligimizni unutma",
+      "translation_ru": "Не забывай нашу дружбу",
+      "words": [
+        {
+          "id": 0,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 174.564,
+          "duration": 0.33
+        },
+        {
+          "id": 1,
+          "text": "忘",
+          "p": "wàng",
+          "timestamp": 174.904,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "记",
+          "p": "jì",
+          "timestamp": 175.164,
+          "duration": 1.08
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 176.904,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 177.124,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "之",
+          "p": "zhī",
+          "timestamp": 177.324,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "间",
+          "p": "jiān",
+          "timestamp": 177.504,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 177.784,
+          "duration": 0.31
+        },
+        {
+          "id": 8,
+          "text": "情",
+          "p": "qíng",
+          "timestamp": 178.104,
+          "duration": 0.55
+        },
+        {
+          "id": 9,
+          "text": "谊",
+          "p": "yì",
+          "timestamp": 178.664,
+          "duration": 0.7
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 179.424,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 179.664,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 179.864,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 180.084,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 180.324,
+          "duration": 0.33
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 180.664,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 180.924,
+          "duration": 0.33
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 181.264,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 181.544,
+          "duration": 0.45
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 182.004,
+          "duration": 0.68
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "translation": "Necha marta telba bo‘ldik, necha marta sodda",
+      "translation_ru": "Сколько раз безумствовали, сколько раз наивничали",
+      "words": [
+        {
+          "id": 0,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 182.884,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 183.064,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "次",
+          "p": "cì",
+          "timestamp": 183.304,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "疯",
+          "p": "fēng",
+          "timestamp": 183.524,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "狂",
+          "p": "kuáng",
+          "timestamp": 183.764,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 184.164,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "少",
+          "p": "shǎo",
+          "timestamp": 184.384,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 184.964,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "真",
+          "p": "zhēn",
+          "timestamp": 185.444,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "translation": "Birga orzu qildik",
+      "translation_ru": "Вместе мечтали",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 186.744,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 186.964,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "做",
+          "p": "zuò",
+          "timestamp": 187.184,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 187.604,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "梦",
+          "p": "mèng",
+          "timestamp": 187.844,
+          "duration": 0.54
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "translation": "Bir kun vatanda yana ko‘rishamiz",
+      "translation_ru": "Однажды мы встретимся на родине",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 188.644,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 188.884,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 189.264,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 189.724,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 190.164,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 190.444,
+          "duration": 0.53
+        },
+        {
+          "id": 6,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 190.984,
+          "duration": 0.47
+        },
+        {
+          "id": 7,
+          "text": "逢",
+          "p": "féng",
+          "timestamp": 191.464,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "故",
+          "p": "gù",
+          "timestamp": 191.884,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 192.324,
+          "duration": 0.44
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "translation": "Dunyo shuncha katta, baribir senga duch keldim",
+      "translation_ru": "Мир так велик, но я встретил тебя",
+      "words": [
+        {
+          "id": 0,
+          "text": "世",
+          "p": "shì",
+          "timestamp": 193.043,
+          "duration": 0.331
+        },
+        {
+          "id": 1,
+          "text": "界",
+          "p": "jiè",
+          "timestamp": 193.384,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 193.584,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "么",
+          "p": "me",
+          "timestamp": 193.804,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 194.044,
+          "duration": 0.31
+        },
+        {
+          "id": 5,
+          "text": "还",
+          "p": "hái",
+          "timestamp": 194.364,
+          "duration": 0.29
+        },
+        {
+          "id": 6,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 194.664,
+          "duration": 0.31
+        },
+        {
+          "id": 7,
+          "text": "遇",
+          "p": "yù",
+          "timestamp": 194.984,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 195.264,
+          "duration": 0.47
+        },
+        {
+          "id": 9,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 195.744,
+          "duration": 0.66
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "translation": "Birga ko‘p fasllarni o‘tkazdik",
+      "translation_ru": "Вместе прошли через многие времена года",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 196.624,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 196.824,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "走",
+          "p": "zǒu",
+          "timestamp": 197.024,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 197.264,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "许",
+          "p": "xǔ",
+          "timestamp": 197.464,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 197.884,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 198.124,
+          "duration": 0.59
+        },
+        {
+          "id": 7,
+          "text": "四",
+          "p": "sì",
+          "timestamp": 198.724,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "季",
+          "p": "jì",
+          "timestamp": 199.144,
+          "duration": 0.72
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "translation": "Shimoldan janubgacha",
+      "translation_ru": "На всех концах света",
+      "words": [
+        {
+          "id": 0,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 200.464,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "南",
+          "p": "nán",
+          "timestamp": 200.904,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "地",
+          "p": "dì",
+          "timestamp": 201.324,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "北",
+          "p": "běi",
+          "timestamp": 201.604,
+          "duration": 0.34
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "translation": "Do‘stligimizni unutma",
+      "translation_ru": "Не забывай нашу дружбу",
+      "words": [
+        {
+          "id": 0,
+          "text": "别",
+          "p": "bié",
+          "timestamp": 202.004,
+          "duration": 0.31
+        },
+        {
+          "id": 1,
+          "text": "忘",
+          "p": "wàng",
+          "timestamp": 202.324,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "记",
+          "p": "jì",
+          "timestamp": 202.604,
+          "duration": 1.08
+        },
+        {
+          "id": 3,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 204.344,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "们",
+          "p": "men",
+          "timestamp": 204.564,
+          "duration": 0.17
+        },
+        {
+          "id": 5,
+          "text": "之",
+          "p": "zhī",
+          "timestamp": 204.744,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "间",
+          "p": "jiān",
+          "timestamp": 204.944,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "的",
+          "p": "de",
+          "timestamp": 205.204,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "情",
+          "p": "qíng",
+          "timestamp": 205.644,
+          "duration": 0.47
+        },
+        {
+          "id": 9,
+          "text": "谊",
+          "p": "yì",
+          "timestamp": 206.124,
+          "duration": 1.44
+        }
+      ]
+    }
+  ]
+}
