@@ -123,19 +123,20 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
   // Use requestAnimationFrame for smooth time updates
   useEffect(() => {
     if (isPlaying && audioRef.current) {
+      let cancelled = false;
       const tick = () => {
+        if (cancelled) return;
         if (audioRef.current) {
           setCurrentTime(audioRef.current.currentTime);
         }
         animFrameRef.current = requestAnimationFrame(tick);
       };
       animFrameRef.current = requestAnimationFrame(tick);
+      return () => {
+        cancelled = true;
+        if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+      };
     }
-    return () => {
-      if (animFrameRef.current) {
-        cancelAnimationFrame(animFrameRef.current);
-      }
-    };
   }, [isPlaying]);
 
   // Auto-scroll to active line

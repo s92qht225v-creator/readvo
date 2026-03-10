@@ -142,17 +142,17 @@ All styles live in `src/styles/reading.css`.
 - `.hanzi-practice__grade-btn--gotit` — green gradient (`#16a34a → #15803d`), white text, border none
 
 ### Karaoke
-- `.karaoke` - Full-viewport dark container (`#0a0a0a`, flex column)
-- `.karaoke__lyrics` - Scrollable lyrics area (`flex: 1`, `overflow-y: auto`, top padding clears header)
-- `.karaoke__line` - Centered line (`font-size: 1.8em`, `line-height: 2`, dimmed white)
-- `.karaoke__line--active` - Brighter white for current line
-- `.karaoke__line--past` - Faded for past lines
+- `.karaoke` - Light-themed container (`background: #f5f5f5`, flex column, `max-width: 900px`)
+- `.karaoke__lyrics` - Scrollable lyrics area (`flex: 1`, `overflow-y: auto`, `padding: 48px 0`, `padding-bottom: 220px`)
+- `.karaoke__line` - Centered line (`font-size: 1.8em`, `line-height: 2`, `color: rgba(0,0,0,0.2)`)
+- `.karaoke__line--active` - Darker text for current line (`rgba(0,0,0,0.55)`)
+- `.karaoke__line--past` - Faded for past lines (`rgba(0,0,0,0.12)`)
 - `.karaoke__char` - Ruby element per character (`margin: 0 0.08em` for spacing)
 - `.karaoke__char--singing` - Gold color (`#ffd54f`) with text shadow glow for currently singing character
 - `.karaoke__char--sung` - Green color (`#66bb6a`) for already sung characters in active line
-- `.karaoke__rt` - Pinyin annotation (`font-size: 0.5em`, italic, reduced opacity)
+- `.karaoke__rt` - Pinyin annotation (`font-size: 0.5em`, italic, `color: rgba(0,0,0,0.3)`)
 - `.karaoke__rt--hidden` - `visibility: hidden` (toggle pinyin without layout shift)
-- `.karaoke__controls` - Fixed controls panel (above bottom bar, z-index 91, dark bg with border-top)
+- `.karaoke__controls` - Fixed controls panel (above bottom bar, z-index 91, border-top)
 - `.karaoke__controls::after` - Separator line pseudo-element (`bottom: 3px`)
 - `.karaoke__progress` - Clickable seek bar (4px height, `margin-top: 20px`)
 - `.karaoke__progress-bar` - Blue fill bar (`#4fc3f7`)
@@ -160,15 +160,10 @@ All styles live in `src/styles/reading.css`.
 - `.karaoke__play-btn` - Play/pause button (56px blue circle)
 - `.karaoke__skip-btn` - Rewind/forward 15s button (44px, transparent bg, circular arrow icon)
 - `.karaoke__skip-label` - "15" text overlay on skip buttons (8px, absolute centered)
-- `.karaoke .reader__header` - Dark header override (`rgba(10, 10, 10, 0.95)`)
-- `.karaoke .reader__home-logo` - Uses `/logo.svg` (white text) directly, no filter needed
-- `.karaoke .story__translation-panel` - Dark translation panel override
-- `.karaoke .story__bottom-bar` - Dark bottom bar override
-- `.karaoke .reader__nav-toggle` - Dark toggle buttons (white text, `rgba(255,255,255,0.1)` bg)
-- `.karaoke .reader__nav-toggle--active` - Active toggle (`#4fc3f7` bg, white text)
-- `.karaoke .page__lang-btn` - Dark language button override
-- `.karaoke .page__font-controls` - Dark font controls override
-- `.karaoke .page__font-btn` - Dark font button override
+- `.karaoke .story__translation-panel` - Sticky below hero (`position: sticky; top: 0; margin-bottom: -45px`) — no layout shift
+- `.dr-font-controls` - Fixed right-center pill (`position: fixed; right: 16px; top: 50%`). Transparent + `opacity: 0.35` by default; on hover: `opacity: 1`, white bg, box-shadow
+- `.dr-font-btn` - Font size button (40×44px, transparent bg, `color: #555`)
+- `.dr-font-divider` - Divider between A+/A- (transparent by default, `#e5e5e5` on hover)
 
 ## Padding
 - Page side padding: `var(--spacing-xl)` (32px)

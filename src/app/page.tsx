@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { HomePage } from '@/components/HomePage';
 
 export const metadata: Metadata = {
-  title: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
+  title: 'Xitoy tilini onlayn o\'rganing | Blim.uz',
   description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul boshlang! | Изучайте китайский: HSK 1-6, флешкарты, караоке.',
   alternates: { canonical: '/' },
 };

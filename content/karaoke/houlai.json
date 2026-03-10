@@ -1,0 +1,3204 @@
+{
+  "id": "houlai",
+  "title": "后来",
+  "pinyin": "Hòulái",
+  "titleTranslation": "Keyinroq",
+  "titleTranslation_ru": "Потом",
+  "artist": "刘若英",
+  "artist_ru": "Лю Жоин",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/houlai.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 12.58,
+          "duration": 0.81
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 13.4,
+          "duration": 1.15
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Men nihoyat sevishni o'rgandim",
+      "translation_ru": "Я наконец научился любить",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 14.56,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "总",
+          "p": "zǒng",
+          "timestamp": 15,
+          "duration": 0.33
+        },
+        {
+          "id": 2,
+          "text": "算",
+          "p": "suàn",
+          "timestamp": 15.34,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "学",
+          "p": "xué",
+          "timestamp": 15.72,
+          "duration": 0.47
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 16.2,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 16.58,
+          "duration": 1.19
+        },
+        {
+          "id": 6,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 17.78,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 18.18,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 18.54,
+          "duration": 0.29
+        },
+        {
+          "id": 9,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 18.84,
+          "duration": 0.5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Afsuski sen allaqachon ketding",
+      "translation_ru": "Жаль, ты давно ушла",
+      "words": [
+        {
+          "id": 0,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 19.4,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "惜",
+          "p": "xī",
+          "timestamp": 19.62,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 19.82,
+          "duration": 0.97
+        },
+        {
+          "id": 3,
+          "text": "早",
+          "p": "zǎo",
+          "timestamp": 20.8,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "已",
+          "p": "yǐ",
+          "timestamp": 21.02,
+          "duration": 0.15
+        },
+        {
+          "id": 5,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 21.179,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 21.439,
+          "duration": 0.75
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Olomon orasida yo'qolding",
+      "translation_ru": "Исчезла в толпе",
+      "words": [
+        {
+          "id": 0,
+          "text": "消",
+          "p": "xiāo",
+          "timestamp": 22.199,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 22.599,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 22.999,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 23.399,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "海",
+          "p": "hǎi",
+          "timestamp": 23.639,
+          "duration": 1.32
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 25.319,
+          "duration": 0.85
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 26.179,
+          "duration": 1.17
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "Nihoyat ko'z yoshlarim orasida tushundim",
+      "translation_ru": "Наконец в слезах понял",
+      "words": [
+        {
+          "id": 0,
+          "text": "终",
+          "p": "zhōng",
+          "timestamp": 27.359,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "于",
+          "p": "yú",
+          "timestamp": 27.779,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 28.199,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "眼",
+          "p": "yǎn",
+          "timestamp": 28.599,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "泪",
+          "p": "lèi",
+          "timestamp": 29.019,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "中",
+          "p": "zhōng",
+          "timestamp": 29.399,
+          "duration": 1.19
+        },
+        {
+          "id": 6,
+          "text": "明",
+          "p": "míng",
+          "timestamp": 30.599,
+          "duration": 0.43
+        },
+        {
+          "id": 7,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 31.039,
+          "duration": 0.8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Ba'zi odamlarni boy berganingda qaytib kelmaydi",
+      "translation_ru": "Некоторых людей, раз упустив, уже не вернёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 32.159,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 32.359,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 32.619,
+          "duration": 1.17
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 33.799,
+          "duration": 0.17
+        },
+        {
+          "id": 4,
+          "text": "旦",
+          "p": "dàn",
+          "timestamp": 33.979,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "错",
+          "p": "cuò",
+          "timestamp": 34.219,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 34.619,
+          "duration": 0.37
+        },
+        {
+          "id": 7,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 34.999,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 35.419,
+          "duration": 0.25
+        },
+        {
+          "id": 9,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 35.679,
+          "duration": 2.18
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Gardenianing oq gullari",
+      "translation_ru": "Белые лепестки гардении",
+      "words": [
+        {
+          "id": 0,
+          "text": "栀",
+          "p": "zhī",
+          "timestamp": 39.819,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "子",
+          "p": "zi",
+          "timestamp": 40.199,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 40.479,
+          "duration": 0.91
+        },
+        {
+          "id": 3,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 41.399,
+          "duration": 0.35
+        },
+        {
+          "id": 4,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 41.759,
+          "duration": 0.29
+        },
+        {
+          "id": 5,
+          "text": "瓣",
+          "p": "bàn",
+          "timestamp": 42.059,
+          "duration": 0.94
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "Ko'k plisse yubkamga tushdi",
+      "translation_ru": "Упали на мою синюю плиссированную юбку",
+      "words": [
+        {
+          "id": 0,
+          "text": "落",
+          "p": "luò",
+          "timestamp": 46.179,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 46.559,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 46.819,
+          "duration": 0.57
+        },
+        {
+          "id": 3,
+          "text": "蓝",
+          "p": "lán",
+          "timestamp": 47.399,
+          "duration": 0.37
+        },
+        {
+          "id": 4,
+          "text": "色",
+          "p": "sè",
+          "timestamp": 47.779,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "百",
+          "p": "bǎi",
+          "timestamp": 48.179,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "褶",
+          "p": "zhě",
+          "timestamp": 48.599,
+          "duration": 0.35
+        },
+        {
+          "id": 7,
+          "text": "裙",
+          "p": "qún",
+          "timestamp": 48.959,
+          "duration": 0.29
+        },
+        {
+          "id": 8,
+          "text": "上",
+          "p": "shàng",
+          "timestamp": 49.259,
+          "duration": 0.96
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Sevaman deding ohista",
+      "translation_ru": "«Люблю тебя» — ты тихо сказал",
+      "words": [
+        {
+          "id": 0,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 51.819,
+          "duration": 1.51
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 53.339,
+          "duration": 0.54
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 54.619,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "轻",
+          "p": "qīng",
+          "timestamp": 54.899,
+          "duration": 1.23
+        },
+        {
+          "id": 4,
+          "text": "声",
+          "p": "shēng",
+          "timestamp": 56.139,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "说",
+          "p": "shuō",
+          "timestamp": 56.539,
+          "duration": 0.78
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Boshimni egib, xushbo'y hid sezdim",
+      "translation_ru": "Я опустила голову и почувствовала аромат",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 58.999,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "低",
+          "p": "dī",
+          "timestamp": 59.419,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 59.799,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "头",
+          "p": "tóu",
+          "timestamp": 60.199,
+          "duration": 0.79
+        },
+        {
+          "id": 4,
+          "text": "闻",
+          "p": "wén",
+          "timestamp": 60.999,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "见",
+          "p": "jiàn",
+          "timestamp": 61.259,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 61.499,
+          "duration": 0.31
+        },
+        {
+          "id": 7,
+          "text": "阵",
+          "p": "zhèn",
+          "timestamp": 61.819,
+          "duration": 0.39
+        },
+        {
+          "id": 8,
+          "text": "芬",
+          "p": "fēn",
+          "timestamp": 62.219,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "芳",
+          "p": "fāng",
+          "timestamp": 62.659,
+          "duration": 0.72
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "O'sha abadiy kecha",
+      "translation_ru": "Тот вечный вечер",
+      "words": [
+        {
+          "id": 0,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 65.398,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 65.798,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "永",
+          "p": "yǒng",
+          "timestamp": 66.018,
+          "duration": 0.59
+        },
+        {
+          "id": 3,
+          "text": "恒",
+          "p": "héng",
+          "timestamp": 66.618,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "的",
+          "p": "de",
+          "timestamp": 67.038,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "夜",
+          "p": "yè",
+          "timestamp": 67.438,
+          "duration": 0.37
+        },
+        {
+          "id": 6,
+          "text": "晚",
+          "p": "wǎn",
+          "timestamp": 67.818,
+          "duration": 0.92
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "O'n yetti yoshlik yoz o'rtasi",
+      "translation_ru": "Середина лета, семнадцать лет",
+      "words": [
+        {
+          "id": 0,
+          "text": "十",
+          "p": "shí",
+          "timestamp": 69.418,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "七",
+          "p": "qī",
+          "timestamp": 69.798,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "岁",
+          "p": "suì",
+          "timestamp": 70.198,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "仲",
+          "p": "zhòng",
+          "timestamp": 70.618,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "夏",
+          "p": "xià",
+          "timestamp": 71.038,
+          "duration": 1.23
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Sen meni o'pgan o'sha kecha",
+      "translation_ru": "Тот вечер, когда ты поцеловал меня",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 72.278,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "吻",
+          "p": "wěn",
+          "timestamp": 72.458,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 72.698,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 73.138,
+          "duration": 0.55
+        },
+        {
+          "id": 4,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 73.698,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 73.978,
+          "duration": 0.29
+        },
+        {
+          "id": 6,
+          "text": "夜",
+          "p": "yè",
+          "timestamp": 74.278,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "晚",
+          "p": "wǎn",
+          "timestamp": 74.558,
+          "duration": 1.54
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Keyingi kunlarimda",
+      "translation_ru": "В последующие дни",
+      "words": [
+        {
+          "id": 0,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 78.218,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 78.638,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "往",
+          "p": "wǎng",
+          "timestamp": 79.018,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 79.458,
+          "duration": 0.37
+        },
+        {
+          "id": 4,
+          "text": "的",
+          "p": "de",
+          "timestamp": 79.838,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 80.218,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "光",
+          "p": "guāng",
+          "timestamp": 80.618,
+          "duration": 1.25
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Har gal iztirob chekganimda",
+      "translation_ru": "Каждый раз, когда вздыхаю",
+      "words": [
+        {
+          "id": 0,
+          "text": "每",
+          "p": "měi",
+          "timestamp": 81.878,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "当",
+          "p": "dāng",
+          "timestamp": 82.238,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 82.658,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "感",
+          "p": "gǎn",
+          "timestamp": 83.038,
+          "duration": 0.67
+        },
+        {
+          "id": 4,
+          "text": "叹",
+          "p": "tàn",
+          "timestamp": 83.718,
+          "duration": 0.84
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "O'sha kungi yulduzlarni eslardim",
+      "translation_ru": "Всегда вспоминаю тот звёздный свет",
+      "words": [
+        {
+          "id": 0,
+          "text": "总",
+          "p": "zǒng",
+          "timestamp": 84.958,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "想",
+          "p": "xiǎng",
+          "timestamp": 85.198,
+          "duration": 0.31
+        },
+        {
+          "id": 2,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 85.518,
+          "duration": 0.73
+        },
+        {
+          "id": 3,
+          "text": "当",
+          "p": "dāng",
+          "timestamp": 86.258,
+          "duration": 0.33
+        },
+        {
+          "id": 4,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 86.598,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "的",
+          "p": "de",
+          "timestamp": 86.858,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 87.098,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "光",
+          "p": "guāng",
+          "timestamp": 87.678,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "O'sha paytdagi sevgi",
+      "translation_ru": "Любовь тех времён",
+      "words": [
+        {
+          "id": 0,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 91.058,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 91.438,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "候",
+          "p": "hòu",
+          "timestamp": 91.678,
+          "duration": 0.97
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 92.658,
+          "duration": 0.41
+        },
+        {
+          "id": 4,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 93.078,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "情",
+          "p": "qíng",
+          "timestamp": 93.458,
+          "duration": 1.3
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Nega shunday oddiy edi",
+      "translation_ru": "Почему была такой простой",
+      "words": [
+        {
+          "id": 0,
+          "text": "为",
+          "p": "wèi",
+          "timestamp": 97.438,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "什",
+          "p": "shén",
+          "timestamp": 97.798,
+          "duration": 0.29
+        },
+        {
+          "id": 2,
+          "text": "么",
+          "p": "me",
+          "timestamp": 98.098,
+          "duration": 0.59
+        },
+        {
+          "id": 3,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 98.698,
+          "duration": 0.33
+        },
+        {
+          "id": 4,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 99.038,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 99.438,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "样",
+          "p": "yàng",
+          "timestamp": 99.858,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "简",
+          "p": "jiǎn",
+          "timestamp": 100.258,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "单",
+          "p": "dān",
+          "timestamp": 100.678,
+          "duration": 1.2
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Va nega yoshlikda odamlar",
+      "translation_ru": "И почему в молодости люди",
+      "words": [
+        {
+          "id": 0,
+          "text": "而",
+          "p": "ér",
+          "timestamp": 102.698,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 103.058,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 103.478,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "为",
+          "p": "wèi",
+          "timestamp": 103.858,
+          "duration": 0.33
+        },
+        {
+          "id": 4,
+          "text": "什",
+          "p": "shén",
+          "timestamp": 104.198,
+          "duration": 0.45
+        },
+        {
+          "id": 5,
+          "text": "么",
+          "p": "me",
+          "timestamp": 104.658,
+          "duration": 1.19
+        },
+        {
+          "id": 6,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 105.857,
+          "duration": 0.35
+        },
+        {
+          "id": 7,
+          "text": "年",
+          "p": "nián",
+          "timestamp": 106.217,
+          "duration": 1.21
+        },
+        {
+          "id": 8,
+          "text": "少",
+          "p": "shào",
+          "timestamp": 107.437,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 107.837,
+          "duration": 1.28
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Sevgan odamni albatta ranjitadi",
+      "translation_ru": "Непременно ранят того, кого любят",
+      "words": [
+        {
+          "id": 0,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 110.277,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "定",
+          "p": "dìng",
+          "timestamp": 110.717,
+          "duration": 0.35
+        },
+        {
+          "id": 2,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 111.077,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 111.517,
+          "duration": 0.33
+        },
+        {
+          "id": 4,
+          "text": "深",
+          "p": "shēn",
+          "timestamp": 111.857,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 112.297,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 112.717,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 113.117,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "受",
+          "p": "shòu",
+          "timestamp": 113.477,
+          "duration": 0.32
+        },
+        {
+          "id": 9,
+          "text": "伤",
+          "p": "shāng",
+          "timestamp": 113.807,
+          "duration": 0.34
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "Shunga o'xshash tunda",
+      "translation_ru": "В такую же глубокую ночь",
+      "words": [
+        {
+          "id": 0,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 116.275,
+          "duration": 0.27
+        },
+        {
+          "id": 1,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 116.598,
+          "duration": 0.429
+        },
+        {
+          "id": 2,
+          "text": "相",
+          "p": "xiāng",
+          "timestamp": 117.037,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "似",
+          "p": "sì",
+          "timestamp": 117.457,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "的",
+          "p": "de",
+          "timestamp": 117.897,
+          "duration": 0.31
+        },
+        {
+          "id": 5,
+          "text": "深",
+          "p": "shēn",
+          "timestamp": 118.217,
+          "duration": 0.45
+        },
+        {
+          "id": 6,
+          "text": "夜",
+          "p": "yè",
+          "timestamp": 118.677,
+          "duration": 0.41
+        },
+        {
+          "id": 7,
+          "text": "里",
+          "p": "lǐ",
+          "timestamp": 119.097,
+          "duration": 1.06
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Sen ham xuddi shunday",
+      "translation_ru": "Ты тоже так же",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 120.677,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 121.077,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "否",
+          "p": "fǒu",
+          "timestamp": 121.497,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 121.877,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "样",
+          "p": "yàng",
+          "timestamp": 122.277,
+          "duration": 1.19
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "Jimgina pushaymon bo'lyapsanmi",
+      "translation_ru": "Тихо сожалеешь и грустишь",
+      "words": [
+        {
+          "id": 0,
+          "text": "也",
+          "p": "yě",
+          "timestamp": 123.477,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 123.657,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "静",
+          "p": "jìng",
+          "timestamp": 123.917,
+          "duration": 0.51
+        },
+        {
+          "id": 3,
+          "text": "静",
+          "p": "jìng",
+          "timestamp": 124.437,
+          "duration": 0.51
+        },
+        {
+          "id": 4,
+          "text": "追",
+          "p": "zhuī",
+          "timestamp": 124.957,
+          "duration": 0.29
+        },
+        {
+          "id": 5,
+          "text": "悔",
+          "p": "huǐ",
+          "timestamp": 125.257,
+          "duration": 0.29
+        },
+        {
+          "id": 6,
+          "text": "感",
+          "p": "gǎn",
+          "timestamp": 125.557,
+          "duration": 0.37
+        },
+        {
+          "id": 7,
+          "text": "伤",
+          "p": "shāng",
+          "timestamp": 125.937,
+          "duration": 1.16
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Agar o'shanda biz shunchalik o'jar bo'lmaganimizda",
+      "translation_ru": "Если бы тогда мы не были такими упрямыми",
+      "words": [
+        {
+          "id": 0,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 129.557,
+          "duration": 0.33
+        },
+        {
+          "id": 1,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 129.897,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "当",
+          "p": "dāng",
+          "timestamp": 130.297,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "时",
+          "p": "shí",
+          "timestamp": 130.737,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 131.137,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "们",
+          "p": "men",
+          "timestamp": 131.537,
+          "duration": 0.35
+        },
+        {
+          "id": 6,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 131.897,
+          "duration": 1.19
+        },
+        {
+          "id": 7,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 133.097,
+          "duration": 0.37
+        },
+        {
+          "id": 8,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 133.477,
+          "duration": 0.43
+        },
+        {
+          "id": 9,
+          "text": "么",
+          "p": "me",
+          "timestamp": 133.917,
+          "duration": 0.35
+        },
+        {
+          "id": 10,
+          "text": "倔",
+          "p": "jué",
+          "timestamp": 134.277,
+          "duration": 0.79
+        },
+        {
+          "id": 11,
+          "text": "强",
+          "p": "jiàng",
+          "timestamp": 135.077,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "Hozir buncha afsuslanmasdik",
+      "translation_ru": "Сейчас бы так не сожалели",
+      "words": [
+        {
+          "id": 0,
+          "text": "现",
+          "p": "xiàn",
+          "timestamp": 136.177,
+          "duration": 0.35
+        },
+        {
+          "id": 1,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 136.537,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "也",
+          "p": "yě",
+          "timestamp": 136.777,
+          "duration": 0.73
+        },
+        {
+          "id": 3,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 137.517,
+          "duration": 0.33
+        },
+        {
+          "id": 4,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 137.857,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "么",
+          "p": "me",
+          "timestamp": 138.117,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "遗",
+          "p": "yí",
+          "timestamp": 138.357,
+          "duration": 0.57
+        },
+        {
+          "id": 7,
+          "text": "憾",
+          "p": "hàn",
+          "timestamp": 138.937,
+          "duration": 1.84
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Sen meni qanday eslaysan",
+      "translation_ru": "Как ты вспоминаешь обо мне",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 141.137,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 141.337,
+          "duration": 0.17
+        },
+        {
+          "id": 2,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 141.517,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 141.897,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 142.297,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "忆",
+          "p": "yì",
+          "timestamp": 142.737,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 143.017,
+          "duration": 1.09
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Tabassumlanib yoki jimgina",
+      "translation_ru": "С улыбкой или молча",
+      "words": [
+        {
+          "id": 0,
+          "text": "带",
+          "p": "dài",
+          "timestamp": 144.117,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "着",
+          "p": "zhe",
+          "timestamp": 144.317,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "笑",
+          "p": "xiào",
+          "timestamp": 144.517,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "或",
+          "p": "huò",
+          "timestamp": 144.757,
+          "duration": 0.31
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 145.077,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "很",
+          "p": "hěn",
+          "timestamp": 145.517,
+          "duration": 0.37
+        },
+        {
+          "id": 6,
+          "text": "沉",
+          "p": "chén",
+          "timestamp": 145.897,
+          "duration": 0.29
+        },
+        {
+          "id": 7,
+          "text": "默",
+          "p": "mò",
+          "timestamp": 146.197,
+          "duration": 0.84
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "Bu yillar davomida bor edi birov",
+      "translation_ru": "За эти годы был ли кто-то",
+      "words": [
+        {
+          "id": 0,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 147.337,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 147.577,
+          "duration": 0.13
+        },
+        {
+          "id": 2,
+          "text": "年",
+          "p": "nián",
+          "timestamp": 147.717,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 147.976,
+          "duration": 0.99
+        },
+        {
+          "id": 4,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 148.976,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "没",
+          "p": "méi",
+          "timestamp": 149.176,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 149.356,
+          "duration": 0.17
+        },
+        {
+          "id": 7,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 149.536,
+          "duration": 0.41
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Seni yolg'izlikdan qutqargan",
+      "translation_ru": "Кто избавил тебя от одиночества",
+      "words": [
+        {
+          "id": 0,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 149.956,
+          "duration": 0.37
+        },
+        {
+          "id": 1,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 150.336,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 150.776,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 151.156,
+          "duration": 0.37
+        },
+        {
+          "id": 4,
+          "text": "寂",
+          "p": "jì",
+          "timestamp": 151.536,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "寞",
+          "p": "mò",
+          "timestamp": 151.796,
+          "duration": 1.44
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 153.556,
+          "duration": 0.83
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 154.396,
+          "duration": 1.09
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "translation": "Men nihoyat sevishni o'rgandim",
+      "translation_ru": "Я наконец научился любить",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 155.496,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "总",
+          "p": "zǒng",
+          "timestamp": 155.936,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "算",
+          "p": "suàn",
+          "timestamp": 156.316,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "学",
+          "p": "xué",
+          "timestamp": 156.696,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 157.156,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 157.556,
+          "duration": 1.17
+        },
+        {
+          "id": 6,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 158.736,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 159.136,
+          "duration": 0.39
+        },
+        {
+          "id": 8,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 159.536,
+          "duration": 0.27
+        },
+        {
+          "id": 9,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 159.816,
+          "duration": 0.48
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "translation": "Afsuski sen allaqachon ketding",
+      "translation_ru": "Жаль, ты давно ушла",
+      "words": [
+        {
+          "id": 0,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 160.336,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "惜",
+          "p": "xī",
+          "timestamp": 160.576,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 160.776,
+          "duration": 1.01
+        },
+        {
+          "id": 3,
+          "text": "早",
+          "p": "zǎo",
+          "timestamp": 161.796,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "已",
+          "p": "yǐ",
+          "timestamp": 162.016,
+          "duration": 0.17
+        },
+        {
+          "id": 5,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 162.196,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 162.436,
+          "duration": 0.71
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "translation": "Olomon orasida yo'qolding",
+      "translation_ru": "Исчезла в толпе",
+      "words": [
+        {
+          "id": 0,
+          "text": "消",
+          "p": "xiāo",
+          "timestamp": 163.156,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 163.556,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 163.956,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 164.336,
+          "duration": 0.27
+        },
+        {
+          "id": 4,
+          "text": "海",
+          "p": "hǎi",
+          "timestamp": 164.616,
+          "duration": 1.26
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 166.336,
+          "duration": 0.85
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 167.196,
+          "duration": 1.15
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "translation": "Nihoyat ko'z yoshlarim orasida tushundim",
+      "translation_ru": "Наконец в слезах понял",
+      "words": [
+        {
+          "id": 0,
+          "text": "终",
+          "p": "zhōng",
+          "timestamp": 168.356,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "于",
+          "p": "yú",
+          "timestamp": 168.756,
+          "duration": 0.39
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 169.156,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "眼",
+          "p": "yǎn",
+          "timestamp": 169.576,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "泪",
+          "p": "lèi",
+          "timestamp": 169.976,
+          "duration": 0.35
+        },
+        {
+          "id": 5,
+          "text": "中",
+          "p": "zhōng",
+          "timestamp": 170.336,
+          "duration": 1.23
+        },
+        {
+          "id": 6,
+          "text": "明",
+          "p": "míng",
+          "timestamp": 171.576,
+          "duration": 0.41
+        },
+        {
+          "id": 7,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 171.996,
+          "duration": 0.86
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "translation": "Ba'zi odamlarni boy berganingda qaytib kelmaydi",
+      "translation_ru": "Некоторых людей, раз упустив, уже не вернёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 173.136,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 173.336,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 173.596,
+          "duration": 1.15
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 174.756,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "旦",
+          "p": "dàn",
+          "timestamp": 174.956,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "错",
+          "p": "cuò",
+          "timestamp": 175.196,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 175.596,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 175.996,
+          "duration": 0.37
+        },
+        {
+          "id": 8,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 176.376,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 176.616,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "translation": "Sen meni qanday eslaysan",
+      "translation_ru": "Как ты вспоминаешь обо мне",
+      "words": [
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 205.076,
+          "duration": 0.258
+        },
+        {
+          "id": 1,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 205.344,
+          "duration": 0.241
+        },
+        {
+          "id": 2,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 205.595,
+          "duration": 0.39
+        },
+        {
+          "id": 3,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 205.995,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "回",
+          "p": "huí",
+          "timestamp": 206.395,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "忆",
+          "p": "yì",
+          "timestamp": 206.815,
+          "duration": 0.29
+        },
+        {
+          "id": 6,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 207.115,
+          "duration": 1.09
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "translation": "Tabassumlanib yoki jimgina",
+      "translation_ru": "С улыбкой или молча",
+      "words": [
+        {
+          "id": 0,
+          "text": "带",
+          "p": "dài",
+          "timestamp": 208.215,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "着",
+          "p": "zhe",
+          "timestamp": 208.395,
+          "duration": 0.13
+        },
+        {
+          "id": 2,
+          "text": "笑",
+          "p": "xiào",
+          "timestamp": 208.535,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "或",
+          "p": "huò",
+          "timestamp": 208.795,
+          "duration": 0.35
+        },
+        {
+          "id": 4,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 209.155,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "很",
+          "p": "hěn",
+          "timestamp": 209.575,
+          "duration": 0.37
+        },
+        {
+          "id": 6,
+          "text": "沉",
+          "p": "chén",
+          "timestamp": 209.955,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "默",
+          "p": "mò",
+          "timestamp": 210.235,
+          "duration": 0.86
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "translation": "Bu yillar davomida bor edi birov",
+      "translation_ru": "За эти годы был ли кто-то",
+      "words": [
+        {
+          "id": 0,
+          "text": "这",
+          "p": "zhè",
+          "timestamp": 211.415,
+          "duration": 0.15
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 211.575,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "年",
+          "p": "nián",
+          "timestamp": 211.795,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 212.035,
+          "duration": 1.01
+        },
+        {
+          "id": 4,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 213.055,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "没",
+          "p": "méi",
+          "timestamp": 213.255,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 213.435,
+          "duration": 0.17
+        },
+        {
+          "id": 7,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 213.615,
+          "duration": 0.39
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "translation": "Seni yolg'izlikdan qutqargan",
+      "translation_ru": "Кто избавил тебя от одиночества",
+      "words": [
+        {
+          "id": 0,
+          "text": "能",
+          "p": "néng",
+          "timestamp": 214.015,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 214.415,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 214.855,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 215.275,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "寂",
+          "p": "jì",
+          "timestamp": 215.675,
+          "duration": 0.31
+        },
+        {
+          "id": 5,
+          "text": "寞",
+          "p": "mò",
+          "timestamp": 215.995,
+          "duration": 1.58
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 217.615,
+          "duration": 0.87
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 218.495,
+          "duration": 1.13
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "translation": "Men nihoyat sevishni o'rgandim",
+      "translation_ru": "Я наконец научился любить",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 219.635,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "总",
+          "p": "zǒng",
+          "timestamp": 220.035,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "算",
+          "p": "suàn",
+          "timestamp": 220.415,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "学",
+          "p": "xué",
+          "timestamp": 220.795,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 221.235,
+          "duration": 0.41
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 221.655,
+          "duration": 1.15
+        },
+        {
+          "id": 6,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 222.815,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 223.215,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 223.575,
+          "duration": 0.33
+        },
+        {
+          "id": 9,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 223.915,
+          "duration": 0.46
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "translation": "Afsuski sen allaqachon ketding",
+      "translation_ru": "Жаль, ты давно ушла",
+      "words": [
+        {
+          "id": 0,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 224.435,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "惜",
+          "p": "xī",
+          "timestamp": 224.675,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 224.875,
+          "duration": 0.99
+        },
+        {
+          "id": 3,
+          "text": "早",
+          "p": "zǎo",
+          "timestamp": 225.875,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "已",
+          "p": "yǐ",
+          "timestamp": 226.095,
+          "duration": 0.15
+        },
+        {
+          "id": 5,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 226.255,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 226.495,
+          "duration": 0.71
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "translation": "Olomon orasida yo'qolding",
+      "translation_ru": "Исчезла в толпе",
+      "words": [
+        {
+          "id": 0,
+          "text": "消",
+          "p": "xiāo",
+          "timestamp": 227.215,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 227.615,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 228.035,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 228.455,
+          "duration": 0.31
+        },
+        {
+          "id": 4,
+          "text": "海",
+          "p": "hǎi",
+          "timestamp": 228.775,
+          "duration": 0.88
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 230.435,
+          "duration": 0.83
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 231.275,
+          "duration": 1.13
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "translation": "Nihoyat ko'z yoshlarim orasida tushundim",
+      "translation_ru": "Наконец в слезах понял",
+      "words": [
+        {
+          "id": 0,
+          "text": "终",
+          "p": "zhōng",
+          "timestamp": 232.415,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "于",
+          "p": "yú",
+          "timestamp": 232.834,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 233.214,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "眼",
+          "p": "yǎn",
+          "timestamp": 233.654,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "泪",
+          "p": "lèi",
+          "timestamp": 234.054,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "中",
+          "p": "zhōng",
+          "timestamp": 234.434,
+          "duration": 1.17
+        },
+        {
+          "id": 6,
+          "text": "明",
+          "p": "míng",
+          "timestamp": 235.614,
+          "duration": 0.43
+        },
+        {
+          "id": 7,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 236.054,
+          "duration": 0.78
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "translation": "Ba'zi odamlarni boy berganingda qaytib kelmaydi",
+      "translation_ru": "Некоторых людей, раз упустив, уже не вернёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 237.214,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 237.414,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 237.654,
+          "duration": 1.15
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 238.814,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "旦",
+          "p": "dàn",
+          "timestamp": 239.014,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "错",
+          "p": "cuò",
+          "timestamp": 239.234,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 239.654,
+          "duration": 0.37
+        },
+        {
+          "id": 7,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 240.034,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 240.474,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 240.714,
+          "duration": 2.18
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 243.254,
+          "duration": 0.81
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 244.074,
+          "duration": 1.15
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "translation": "Men nihoyat sevishni o'rgandim",
+      "translation_ru": "Я наконец научился любить",
+      "words": [
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 245.234,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "总",
+          "p": "zǒng",
+          "timestamp": 245.654,
+          "duration": 0.35
+        },
+        {
+          "id": 2,
+          "text": "算",
+          "p": "suàn",
+          "timestamp": 246.014,
+          "duration": 0.37
+        },
+        {
+          "id": 3,
+          "text": "学",
+          "p": "xué",
+          "timestamp": 246.394,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 246.854,
+          "duration": 0.39
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 247.254,
+          "duration": 1.21
+        },
+        {
+          "id": 6,
+          "text": "如",
+          "p": "rú",
+          "timestamp": 248.474,
+          "duration": 0.35
+        },
+        {
+          "id": 7,
+          "text": "何",
+          "p": "hé",
+          "timestamp": 248.834,
+          "duration": 0.35
+        },
+        {
+          "id": 8,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 249.194,
+          "duration": 0.31
+        },
+        {
+          "id": 9,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 249.514,
+          "duration": 0.5
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "translation": "Afsuski sen allaqachon ketding",
+      "translation_ru": "Жаль, ты давно ушла",
+      "words": [
+        {
+          "id": 0,
+          "text": "可",
+          "p": "kě",
+          "timestamp": 250.054,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "惜",
+          "p": "xī",
+          "timestamp": 250.314,
+          "duration": 0.19
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 250.514,
+          "duration": 0.95
+        },
+        {
+          "id": 3,
+          "text": "早",
+          "p": "zǎo",
+          "timestamp": 251.474,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "已",
+          "p": "yǐ",
+          "timestamp": 251.734,
+          "duration": 0.15
+        },
+        {
+          "id": 5,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 251.894,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "去",
+          "p": "qù",
+          "timestamp": 252.094,
+          "duration": 0.73
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "translation": "Olomon orasida yo'qolding",
+      "translation_ru": "Исчезла в толпе",
+      "words": [
+        {
+          "id": 0,
+          "text": "消",
+          "p": "xiāo",
+          "timestamp": 252.834,
+          "duration": 0.39
+        },
+        {
+          "id": 1,
+          "text": "失",
+          "p": "shī",
+          "timestamp": 253.234,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 253.654,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 254.074,
+          "duration": 0.29
+        },
+        {
+          "id": 4,
+          "text": "海",
+          "p": "hǎi",
+          "timestamp": 254.374,
+          "duration": 1.26
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "translation": "Keyinroq",
+      "translation_ru": "Потом",
+      "words": [
+        {
+          "id": 0,
+          "text": "后",
+          "p": "hòu",
+          "timestamp": 256.034,
+          "duration": 0.83
+        },
+        {
+          "id": 1,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 256.874,
+          "duration": 1.15
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "translation": "Nihoyat ko'z yoshlarim orasida tushundim",
+      "translation_ru": "Наконец в слезах понял",
+      "words": [
+        {
+          "id": 0,
+          "text": "终",
+          "p": "zhōng",
+          "timestamp": 258.034,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "于",
+          "p": "yú",
+          "timestamp": 258.474,
+          "duration": 0.37
+        },
+        {
+          "id": 2,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 258.854,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "眼",
+          "p": "yǎn",
+          "timestamp": 259.294,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "泪",
+          "p": "lèi",
+          "timestamp": 259.694,
+          "duration": 0.37
+        },
+        {
+          "id": 5,
+          "text": "中",
+          "p": "zhōng",
+          "timestamp": 260.074,
+          "duration": 1.21
+        },
+        {
+          "id": 6,
+          "text": "明",
+          "p": "míng",
+          "timestamp": 261.294,
+          "duration": 0.39
+        },
+        {
+          "id": 7,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 261.694,
+          "duration": 0.82
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "translation": "Ba'zi odamlarni boy berganingda qaytib kelmaydi",
+      "translation_ru": "Некоторых людей, раз упустив, уже не вернёшь",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 262.874,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "些",
+          "p": "xiē",
+          "timestamp": 263.074,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "人",
+          "p": "rén",
+          "timestamp": 263.314,
+          "duration": 1.11
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 264.434,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "旦",
+          "p": "dàn",
+          "timestamp": 264.654,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "错",
+          "p": "cuò",
+          "timestamp": 264.894,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "过",
+          "p": "guò",
+          "timestamp": 265.294,
+          "duration": 0.35
+        },
+        {
+          "id": 7,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 265.654,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 266.094,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 266.334,
+          "duration": 2.58
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "translation": "Hech qachon qaytib kelmaydi",
+      "translation_ru": "Никогда не повторится вновь",
+      "words": [
+        {
+          "id": 0,
+          "text": "永",
+          "p": "yǒng",
+          "timestamp": 269.674,
+          "duration": 1.19
+        },
+        {
+          "id": 1,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 270.874,
+          "duration": 0.41
+        },
+        {
+          "id": 2,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 271.294,
+          "duration": 0.75
+        },
+        {
+          "id": 3,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 272.054,
+          "duration": 0.39
+        },
+        {
+          "id": 4,
+          "text": "再",
+          "p": "zài",
+          "timestamp": 272.454,
+          "duration": 0.35
+        },
+        {
+          "id": 5,
+          "text": "重",
+          "p": "chóng",
+          "timestamp": 272.814,
+          "duration": 0.69
+        },
+        {
+          "id": 6,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 273.514,
+          "duration": 1.78
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "translation": "Bir yigit o'sha qizni sevar edi",
+      "translation_ru": "Один мальчик любил ту девочку",
+      "words": [
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 275.693,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "一",
+          "p": "yī",
+          "timestamp": 275.893,
+          "duration": 0.17
+        },
+        {
+          "id": 2,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 276.073,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "男",
+          "p": "nán",
+          "timestamp": 276.513,
+          "duration": 0.27
+        },
+        {
+          "id": 4,
+          "text": "孩",
+          "p": "hái",
+          "timestamp": 276.793,
+          "duration": 0.89
+        },
+        {
+          "id": 5,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 277.693,
+          "duration": 0.59
+        },
+        {
+          "id": 6,
+          "text": "着",
+          "p": "zhe",
+          "timestamp": 278.293,
+          "duration": 0.51
+        },
+        {
+          "id": 7,
+          "text": "那",
+          "p": "nà",
+          "timestamp": 278.813,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 279.233,
+          "duration": 0.35
+        },
+        {
+          "id": 9,
+          "text": "女",
+          "p": "nǚ",
+          "timestamp": 279.593,
+          "duration": 0.35
+        },
+        {
+          "id": 10,
+          "text": "孩",
+          "p": "hái",
+          "timestamp": 279.953,
+          "duration": 3
+        }
+      ]
+    }
+  ]
+}

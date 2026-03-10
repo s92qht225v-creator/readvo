@@ -106,22 +106,22 @@
 ### Karaoke Player
 - Accessible from Language Page → KTV tab → song card → `/chinese/hsk1/karaoke/[songId]`
 - Per-character synced lyrics with timestamp-based highlighting (characters light up as they're sung)
-- **Dark theme**: Entire page uses `#0a0a0a` background with dark-themed overrides for all shared components (header, translation panel, bottom bar, toggle buttons)
-- **Ruby pinyin**: Each character gets `<ruby>/<rt>/<rp>` pinyin annotation. Pinyin uses `0.5em` font size, italic, white with reduced opacity. Punctuation characters skip pinyin automatically.
+- **Light theme**: Page uses `#f5f5f5` background with red hero banner. Text colors are `rgba(0,0,0,...)`.
+- **Ruby pinyin**: Each character gets `<ruby>/<rt>/<rp>` pinyin annotation. Pinyin uses `0.5em` font size, italic, `rgba(0,0,0,0.3)`. Punctuation characters skip pinyin automatically.
 - **Character spacing**: `margin: 0 0.08em` on each `ruby` element for visual separation between characters
 - **Pinyin toggle**: Hides pinyin via `visibility: hidden` on `<rt>` (no layout shift)
 - **Tap-to-translate**: Tapping a lyrics line shows its translation in the panel (like stories). Tapping again deselects. Audio-synced line (`audioLineIdx`) takes priority over tapped line (`tappedLineIdx`). Tapped selection is cleared when audio starts playing.
 - **No focus mode**: Karaoke doesn't need focus mode — per-character sync and auto-scroll already provide the focused experience.
-- **Translation panel**: Reuses `story__translation-panel` (fixed below header). Shows active line's UZ/RU translation (from audio sync or tap). Dark themed (`rgba(10, 10, 10, 0.95)`).
+- **Translation panel**: Reuses `story__translation-panel` (`position: sticky; top: 0; margin-bottom: -45px`). Shows active line's UZ/RU translation (from audio sync or tap). The negative margin prevents lyrics from shifting when panel appears/disappears.
 - **Character highlight states**:
-  - Default: `rgba(255, 255, 255, 0.25)` (dimmed)
-  - Active line: `rgba(255, 255, 255, 0.5)` (brighter)
-  - Past lines: `rgba(255, 255, 255, 0.15)` (faded)
+  - Default: `rgba(0, 0, 0, 0.2)` (dimmed)
+  - Active line: `rgba(0, 0, 0, 0.55)` (darker)
+  - Past lines: `rgba(0, 0, 0, 0.12)` (faded)
   - Currently singing character: `#ffd54f` (gold) with text shadow glow
   - Already sung character (active line): `#66bb6a` (green)
 - **No CSS transitions on lines**: `.karaoke__line` has no `transition` property — instant color changes prevent flickering when active line changes (transitions caused visible flicker between states)
 - **Auto-scroll**: Active line auto-scrolls to center via `scrollIntoView({ behavior: 'smooth', block: 'center' })`
-- **Font size**: Adjustable via A-/A+ buttons in header. Lyrics container uses inline `fontSize` percentage. Line font size uses `em` (not `rem`) to inherit from parent.
+- **Font size**: Adjustable via A-/A+ floating pill (`.dr-font-controls`, fixed right-center). Transparent + faded by default, visible on hover. Lyrics container uses inline `fontSize` percentage. Line font size uses `em` (not `rem`) to inherit from parent.
 - **Audio system**: Direct `HTMLAudioElement` via `useRef`. Lazy-loaded (`preload: 'none'`), src set on first play. `requestAnimationFrame` loop for smooth time tracking.
 - **Controls panel** (fixed, above bottom bar, z-index 91):
   - Progress/seek bar (clickable, blue `#4fc3f7` fill)
@@ -130,10 +130,11 @@
   - Skip buttons: circular arrow SVG icons with "15" label overlay
   - Separator line via `::after` pseudo-element (`bottom: 3px`)
   - `border-top: 1px solid rgba(255, 255, 255, 0.1)` at top edge
-- **Bottom bar**: Reuses `story__bottom-bar` with Tarjima + Pinyin toggles. Dark themed.
-- **Header**: Reuses `reader__header` with `ReaderControls` (RU/UZ toggle, A-/A+ font). Uses `/logo.svg` (white text) directly. Dark themed.
+- **Bottom bar**: Reuses `story__bottom-bar` with Tarjima + Pinyin toggles.
+- **Header**: Red hero banner (`.dr-hero`) with back button, hamburger menu, song title/pinyin/translation.
 - **Fixed element stacking** (bottom to top): bottom bar (z-index 90) → controls (z-index 91) → header (z-index 100)
-- **Lyrics padding**: Top padding clears fixed header + translation panel (`calc(var(--header-height) + 60px + env(safe-area-inset-top))`). Bottom padding (200px) clears fixed controls.
+- **Lyrics padding**: Top `padding: 48px 0`. Bottom `padding-bottom: 220px` clears fixed controls.
+- **Songs**: yueliang, pengyou, tonghua. Listed in `karaokeItems` array in `LanguagePage.tsx`. Service auto-discovers from `content/karaoke/*.json`.
 - Data loaded from `content/karaoke/{songId}.json` via `src/services/karaoke.ts`
 
 ### PageFooter (Shared Footer)
@@ -388,29 +389,31 @@ div.reader
 
 ### Karaoke Player Page Structure (KaraokePlayer.tsx)
 ```
-div.karaoke (dark theme: #0a0a0a bg, full viewport flex column)
-├── header.reader__header (fixed, dark bg, white logo, z-index 100)
-│   └── div.reader__header-inner
-│       ├── Link.reader__home > img.reader__home-logo (white via filter invert)
-│       └── ReaderControls (RU/UZ toggle, A-/A+ font size)
-├── div.story__translation-panel (fixed below header, dark bg, shows active line translation)
+div.karaoke (light theme: #f5f5f5 bg, flex column, max-width 900px)
+├── div.dr-hero (red gradient banner with back btn, hamburger menu, song title)
+├── div.story__translation-panel (sticky below hero, margin-bottom: -45px, no layout shift)
 │   └── p.story__translation-panel-text
-├── div.karaoke__lyrics (scrollable, flex:1, fontSize% inline style)
+├── div.karaoke__lyrics (scrollable, flex:1, padding: 48px 0, fontSize% inline style)
 │   └── div.karaoke__line (per line, centered text)
 │       └── ruby.karaoke__char (per character, timestamp-based highlighting)
 │           ├── character text
 │           └── rt.karaoke__rt (pinyin, toggleable via visibility)
+├── div.dr-font-controls (fixed right-center pill, transparent by default, visible on hover)
+│   ├── button.dr-font-btn (A+)
+│   ├── div.dr-font-divider
+│   └── button.dr-font-btn (A-)
+├── nav (Tarjima + Pinyin toggle buttons, fixed bottom)
 ├── div.karaoke__controls (fixed, above bottom bar, z-index 91)
 │   ├── div.karaoke__progress (clickable seek bar)
 │   │   └── div.karaoke__progress-bar (blue fill, width = progress%)
 │   ├── div.karaoke__time (current time / duration)
 │   ├── div.karaoke__playback-row (flex, centered, gap 24px)
-│   │   ├── button.karaoke__skip-btn (rewind 15s, circular arrow SVG + "15" label)
-│   │   ├── button.karaoke__play-btn (56px blue circle, play/pause/spinner)
-│   │   └── button.karaoke__skip-btn (forward 15s, circular arrow SVG + "15" label)
+│   │   ├── button.karaoke__skip-btn (rewind 15s)
+│   │   ├── button.karaoke__play-btn (56px red circle, play/pause/spinner)
+│   │   └── button.karaoke__skip-btn (forward 15s)
 │   └── ::after pseudo-element (separator line, bottom: 3px)
-└── nav.story__bottom-bar (fixed, dark bg, z-index 90)
+└── nav.story__bottom-bar (fixed, z-index 90)
     └── div.story__bottom-bar-inner
-        ├── button.reader__nav-toggle (Tarjima toggle)
-        └── button.reader__nav-toggle (Pinyin toggle)
+        ├── button (Tarjima toggle)
+        └── button (Pinyin toggle)
 ```
