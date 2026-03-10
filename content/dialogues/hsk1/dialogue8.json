@@ -418,10 +418,21 @@
   "tag": "telefon",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20nar/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "学校",
+      "py": "xuéxiào",
+      "uz": "maktab",
+      "ru": "школа",
+      "ex": "我们的学校很大。",
+      "expy": "Wǒmen de xuéxiào hěn dà.",
+      "ex_uz": "Bizning maktabimiz juda katta.",
+      "ex_ru": "Наша школа очень большая."
+    }
+  ],
   "extraVocabSubtitle_uz": "Joylar va manzillar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме мест и локаций",
   "extraVocab": [
-    { "zh": "学校", "py": "xuéxiào", "uz": "maktab", "ru": "школа" },
     { "zh": "医院", "py": "yīyuàn", "uz": "kasalxona", "ru": "больница" },
     { "zh": "银行", "py": "yínháng", "uz": "bank", "ru": "банк" },
     { "zh": "机场", "py": "jīchǎng", "uz": "aeroport", "ru": "аэропорт" },

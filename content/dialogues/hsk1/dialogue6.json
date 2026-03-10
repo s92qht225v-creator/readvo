@@ -201,6 +201,18 @@
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "斤",
+      "py": "jīn",
+      "uz": "jin (0,5 kg)",
+      "ru": "цзинь (0,5 кг)",
+      "ex": "苹果多少钱一斤？",
+      "expy": "Píngguǒ duōshao qián yì jīn?",
+      "ex_uz": "Olma yarim kilosi necha pul?",
+      "ex_ru": "Сколько стоит полкило яблок?"
+    }
+  ],
   "extraVocabSubtitle_uz": "Mevalar va bozor xaridlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме фруктов и покупок на рынке",
   "extraVocab": [
@@ -211,7 +223,6 @@
     { "zh": "橘子", "py": "júzi", "uz": "mandarin", "ru": "мандарин" },
     { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
     { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой" },
-    { "zh": "斤", "py": "jīn", "uz": "jin (0,5 kg)", "ru": "цзинь (0,5 кг)" },
     { "zh": "新鲜", "py": "xīnxiān", "uz": "yangi / toza", "ru": "свежий" },
     { "zh": "找钱", "py": "zhǎoqián", "uz": "qaytim bermoq", "ru": "дать сдачу" }
   ]

@@ -217,11 +217,22 @@
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "刷卡",
+      "py": "shuākǎ",
+      "uz": "karta bilan to'lamoq",
+      "ru": "оплатить картой",
+      "ex": "这里可以刷卡吗？",
+      "expy": "Zhèlǐ kěyǐ shuākǎ ma?",
+      "ex_uz": "Bu yerda karta bilan to'lasa bo'ladimi?",
+      "ex_ru": "Здесь можно оплатить картой?"
+    }
+  ],
   "extraVocabSubtitle_uz": "To'lov usullari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме способов оплаты",
   "extraVocab": [
     { "zh": "现金", "py": "xiànjīn", "uz": "naqd pul", "ru": "наличные" },
-    { "zh": "刷卡", "py": "shuākǎ", "uz": "karta bilan to'lamoq", "ru": "оплатить картой" },
     { "zh": "扫码", "py": "sǎomǎ", "uz": "QR kod skanerlash", "ru": "сканировать QR-код" },
     { "zh": "找零", "py": "zhǎolíng", "uz": "qaytim bermoq", "ru": "сдача" },
     { "zh": "发票", "py": "fāpiào", "uz": "kvitansiya", "ru": "чек / квитанция" },

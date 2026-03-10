@@ -290,10 +290,31 @@
   "tag": "reja",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "准备",
+      "py": "zhǔnbèi",
+      "uz": "tayyorlanmoq",
+      "ru": "готовиться",
+      "ex": "我准备好了。",
+      "expy": "Wǒ zhǔnbèi hǎo le.",
+      "ex_uz": "Men tayyorman.",
+      "ex_ru": "Я готов."
+    },
+    {
+      "zh": "迟到",
+      "py": "chídào",
+      "uz": "kechikmoq",
+      "ru": "опоздать",
+      "ex": "他今天迟到了。",
+      "expy": "Tā jīntiān chídào le.",
+      "ex_uz": "U bugun kechikdi.",
+      "ex_ru": "Он сегодня опоздал."
+    }
+  ],
   "extraVocabSubtitle_uz": "Tayyorgarlik va tadbirlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме подготовки и мероприятий",
   "extraVocab": [
-    { "zh": "准备", "py": "zhǔnbèi", "uz": "tayyorlanmoq", "ru": "готовиться" },
     { "zh": "来得及", "py": "láidejí", "uz": "ulgurmoq", "ru": "успевать" },
     { "zh": "来不及", "py": "láibují", "uz": "ulgurmaslik", "ru": "не успевать" },
     { "zh": "着急", "py": "zháojí", "uz": "shoshilmoq", "ru": "торопиться" },
@@ -301,7 +322,6 @@
     { "zh": "换衣服", "py": "huàn yīfu", "uz": "kiyim almashtirmoq", "ru": "переодеться" },
     { "zh": "出门", "py": "chūmén", "uz": "uydan chiqmoq", "ru": "выйти из дома" },
     { "zh": "赶时间", "py": "gǎn shíjiān", "uz": "vaqtga ulgurmoq", "ru": "спешить / торопиться" },
-    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "свидание / встреча" },
-    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" }
+    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "свидание / встреча" }
   ]
 }

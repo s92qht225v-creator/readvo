@@ -244,10 +244,21 @@
   "tag": "ish",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "紧张",
+      "py": "jǐnzhāng",
+      "uz": "hayajonlanmoq",
+      "ru": "нервничать",
+      "ex": "考试前我很紧张。",
+      "expy": "Kǎoshì qián wǒ hěn jǐnzhāng.",
+      "ex_uz": "Imtihon oldidan men juda hayajonlanaman.",
+      "ex_ru": "Перед экзаменом я очень нервничаю."
+    }
+  ],
   "extraVocabSubtitle_uz": "His-tuyg'ular mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме эмоций и чувств",
   "extraVocab": [
-    { "zh": "紧张", "py": "jǐnzhāng", "uz": "hayajonlanmoq", "ru": "нервничать" },
     { "zh": "放松", "py": "fàngsōng", "uz": "dam olmoq", "ru": "расслабиться" },
     { "zh": "担心", "py": "dānxīn", "uz": "xavotirlanmoq", "ru": "беспокоиться" },
     { "zh": "害怕", "py": "hàipà", "uz": "qo'rqmoq", "ru": "бояться" },

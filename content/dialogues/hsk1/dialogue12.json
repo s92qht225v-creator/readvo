@@ -382,16 +382,45 @@
   "tag": "salomatlik",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "头疼",
+      "py": "tóuténg",
+      "uz": "bosh og'rig'i",
+      "ru": "головная боль",
+      "ex": "我今天头疼。",
+      "expy": "Wǒ jīntiān tóuténg.",
+      "ex_uz": "Bugun boshim og'riyapti.",
+      "ex_ru": "У меня сегодня болит голова."
+    },
+    {
+      "zh": "发烧",
+      "py": "fāshāo",
+      "uz": "isitma chiqmoq",
+      "ru": "температура / жар",
+      "ex": "他发烧了。",
+      "expy": "Tā fāshāo le.",
+      "ex_uz": "Uning isitmasi chiqdi.",
+      "ex_ru": "У него поднялась температура."
+    },
+    {
+      "zh": "休息",
+      "py": "xiūxi",
+      "uz": "dam olmoq",
+      "ru": "отдыхать",
+      "ex": "你休息一下吧。",
+      "expy": "Nǐ xiūxi yíxià ba.",
+      "ex_uz": "Biroz dam oling.",
+      "ex_ru": "Отдохни немного."
+    }
+  ],
   "extraVocabSubtitle_uz": "Salomatlik va tana alomatlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме здоровья и симптомов",
   "extraVocab": [
-    { "zh": "头疼", "py": "tóuténg", "uz": "bosh og'rig'i", "ru": "головная боль" },
     { "zh": "肚子疼", "py": "dùzi téng", "uz": "qorin og'rig'i", "ru": "боль в животе" },
-    { "zh": "发烧", "py": "fāshāo", "uz": "isitma chiqmoq", "ru": "температура / жар" },
     { "zh": "感冒", "py": "gǎnmào", "uz": "shamollamoq", "ru": "простуда" },
     { "zh": "咳嗽", "py": "késou", "uz": "yo'talmoq", "ru": "кашель" },
     { "zh": "药", "py": "yào", "uz": "dori", "ru": "лекарство" },
-    { "zh": "休息", "py": "xiūxi", "uz": "dam olmoq", "ru": "отдыхать" },
     { "zh": "看病", "py": "kànbìng", "uz": "shifokorda ko'rinmoq", "ru": "обратиться к врачу" },
     { "zh": "身体", "py": "shēntǐ", "uz": "tana / salomatlik", "ru": "тело / здоровье" },
     { "zh": "打针", "py": "dǎzhēn", "uz": "ukol qilmoq", "ru": "делать укол" }

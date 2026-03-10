@@ -263,6 +263,18 @@
   "tag": "telefon",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "号码",
+      "py": "hàomǎ",
+      "uz": "raqam / nomer",
+      "ru": "номер",
+      "ex": "你的号码是多少？",
+      "expy": "Nǐ de hàomǎ shì duōshao?",
+      "ex_uz": "Raqamingiz necha?",
+      "ex_ru": "Какой у тебя номер?"
+    }
+  ],
   "extraVocabSubtitle_uz": "Telefon va aloqa mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме телефона и связи",
   "extraVocab": [
@@ -274,7 +286,6 @@
     { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
     { "zh": "充电", "py": "chōngdiàn", "uz": "zaryadlamoq", "ru": "зарядить" },
     { "zh": "联系", "py": "liánxì", "uz": "bog'lanmoq", "ru": "связаться" },
-    { "zh": "号码", "py": "hàomǎ", "uz": "raqam / nomer", "ru": "номер" },
     { "zh": "通话", "py": "tōnghuà", "uz": "suhbat (telefonda)", "ru": "телефонный разговор" }
   ]
 }

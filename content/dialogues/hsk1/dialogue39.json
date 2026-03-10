@@ -297,10 +297,21 @@
   "tag": "ish",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "作业",
+      "py": "zuòyè",
+      "uz": "uy vazifasi",
+      "ru": "домашнее задание",
+      "ex": "老师给了很多作业。",
+      "expy": "Lǎoshī gěi le hěn duō zuòyè.",
+      "ex_uz": "O'qituvchi ko'p uy vazifa berdi.",
+      "ex_ru": "Учитель задал много домашнего задания."
+    }
+  ],
   "extraVocabSubtitle_uz": "Maktab va uy vazifasi mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме школы и домашнего задания",
   "extraVocab": [
-    { "zh": "作业", "py": "zuòyè", "uz": "uy vazifasi", "ru": "домашнее задание" },
     { "zh": "课文", "py": "kèwén", "uz": "dars matni", "ru": "текст урока" },
     { "zh": "练习", "py": "liànxí", "uz": "mashq", "ru": "упражнение" },
     { "zh": "复习", "py": "fùxí", "uz": "takrorlamoq", "ru": "повторять" },

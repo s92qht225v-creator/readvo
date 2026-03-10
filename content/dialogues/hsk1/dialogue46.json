@@ -241,6 +241,16 @@
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue.mp3",
   "vocab": [
     {
+      "zh": "干嘛",
+      "py": "gànma",
+      "uz": "nima qilyapsan",
+      "ru": "что делаешь / зачем",
+      "ex": "你干嘛呢？",
+      "expy": "Nǐ gànma ne?",
+      "ex_uz": "Nima qilyapsan?",
+      "ex_ru": "Что ты делаешь?"
+    },
+    {
       "zh": "减肥",
       "py": "jiǎnféi",
       "uz": "ozmoq / vazn tashlamoq",
@@ -251,24 +261,14 @@
       "ex_ru": "Она каждый день бегает, чтобы похудеть."
     },
     {
-      "zh": "胖",
-      "py": "pàng",
-      "uz": "semiz / to'la",
-      "ru": "толстый / полный",
-      "ex": "我觉得我太胖了。",
-      "expy": "Wǒ juéde wǒ tài pàng le.",
-      "ex_uz": "Menimcha, men juda semizman.",
-      "ex_ru": "Мне кажется, я слишком толстый."
-    },
-    {
-      "zh": "瘦",
-      "py": "shòu",
-      "uz": "ozg'in / oriq",
-      "ru": "худой / стройный",
-      "ex": "你比以前瘦了。",
-      "expy": "Nǐ bǐ yǐqián shòu le.",
-      "ex_uz": "Sen avvalgiga qaraganda ozg'inroqsan.",
-      "ex_ru": "Ты похудел(а) по сравнению с раньше."
+      "zh": "手里",
+      "py": "shǒu lǐ",
+      "uz": "qo'lda",
+      "ru": "в руке",
+      "ex": "你手里拿的是什么？",
+      "expy": "Nǐ shǒu lǐ ná de shì shénme?",
+      "ex_uz": "Qo'lingdagi nima?",
+      "ex_ru": "Что у тебя в руке?"
     },
     {
       "zh": "蛋糕",
@@ -281,34 +281,14 @@
       "ex_ru": "Этот торт очень вкусный."
     },
     {
-      "zh": "甜",
-      "py": "tián",
-      "uz": "shirin",
-      "ru": "сладкий",
-      "ex": "蛋糕太甜了。",
-      "expy": "Dàngāo tài tián le.",
-      "ex_uz": "Tort juda shirin.",
-      "ex_ru": "Торт слишком сладкий."
-    },
-    {
-      "zh": "运动",
-      "py": "yùndòng",
-      "uz": "sport / mashq qilmoq",
-      "ru": "спорт / заниматься спортом",
-      "ex": "多运动对身体好。",
-      "expy": "Duō yùndòng duì shēntǐ hǎo.",
-      "ex_uz": "Ko'p sport qilish sog'liq uchun foydali.",
-      "ex_ru": "Больше двигаться — полезно для здоровья."
-    },
-    {
-      "zh": "健康",
-      "py": "jiànkāng",
-      "uz": "sog'lom / sog'lik",
-      "ru": "здоровый / здоровье",
-      "ex": "健康最重要。",
-      "expy": "Jiànkāng zuì zhòngyào.",
-      "ex_uz": "Sog'lik eng muhim.",
-      "ex_ru": "Здоровье — самое важное."
+      "zh": "明天",
+      "py": "míngtiān",
+      "uz": "ertaga",
+      "ru": "завтра",
+      "ex": "明天你有空吗？",
+      "expy": "Míngtiān nǐ yǒu kòng ma?",
+      "ex_uz": "Ertaga bo'shsan?",
+      "ex_ru": "Завтра ты свободен?"
     },
     {
       "zh": "开始",
@@ -324,6 +304,11 @@
   "extraVocabSubtitle_uz": "Ozish va sog'lom ovqatlanish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме похудения и здорового питания",
   "extraVocab": [
+    { "zh": "胖", "py": "pàng", "uz": "semiz / to'la", "ru": "толстый / полный" },
+    { "zh": "瘦", "py": "shòu", "uz": "ozg'in / oriq", "ru": "худой / стройный" },
+    { "zh": "甜", "py": "tián", "uz": "shirin", "ru": "сладкий" },
+    { "zh": "运动", "py": "yùndòng", "uz": "sport / mashq qilmoq", "ru": "спорт / заниматься спортом" },
+    { "zh": "健康", "py": "jiànkāng", "uz": "sog'lom / sog'lik", "ru": "здоровый / здоровье" },
     { "zh": "体重", "py": "tǐzhòng", "uz": "tana og'irligi", "ru": "вес тела" },
     { "zh": "节食", "py": "jiéshí", "uz": "parhez qilmoq", "ru": "сидеть на диете" },
     { "zh": "跑步", "py": "pǎobù", "uz": "yugurmoq", "ru": "бегать" },
