@@ -266,6 +266,98 @@
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "接电话",
+      "py": "jiē diànhuà",
+      "uz": "telefonga javob bermoq",
+      "ru": "ответить на звонок",
+      "ex": "我正在开会，不能接电话。",
+      "expy": "Wǒ zhèngzài kāihuì, bù néng jiē diànhuà.",
+      "ex_uz": "Men yig'ilishdaman, telefonga javob bera olmayman.",
+      "ex_ru": "Я на совещании, не могу ответить на звонок."
+    },
+    {
+      "zh": "刚才",
+      "py": "gāngcái",
+      "uz": "hozirgina",
+      "ru": "только что",
+      "ex": "刚才谁打电话了？",
+      "expy": "Gāngcái shéi dǎ diànhuà le?",
+      "ex_uz": "Hozirgina kim qo'ng'iroq qildi?",
+      "ex_ru": "Кто только что звонил?"
+    },
+    {
+      "zh": "开会",
+      "py": "kāihuì",
+      "uz": "yig'ilish o'tkazmoq",
+      "ru": "проводить совещание",
+      "ex": "我们下午两点开会。",
+      "expy": "Wǒmen xiàwǔ liǎng diǎn kāihuì.",
+      "ex_uz": "Biz soat ikkida yig'ilish o'tkazamiz.",
+      "ex_ru": "У нас совещание в два часа дня."
+    },
+    {
+      "zh": "这么",
+      "py": "zhème",
+      "uz": "shuncha / buncha",
+      "ru": "так / настолько",
+      "ex": "你怎么来这么晚？",
+      "expy": "Nǐ zěnme lái zhème wǎn?",
+      "ex_uz": "Nega buncha kech kelding?",
+      "ex_ru": "Почему ты пришёл так поздно?"
+    },
+    {
+      "zh": "久",
+      "py": "jiǔ",
+      "uz": "uzoq",
+      "ru": "долго",
+      "ex": "你等了很久吗？",
+      "expy": "Nǐ děng le hěn jiǔ ma?",
+      "ex_uz": "Uzoq kutdingmi?",
+      "ex_ru": "Ты долго ждал?"
+    },
+    {
+      "zh": "事情",
+      "py": "shìqing",
+      "uz": "ish / narsa",
+      "ru": "дело / вещь",
+      "ex": "今天事情很多。",
+      "expy": "Jīntiān shìqing hěn duō.",
+      "ex_uz": "Bugun ishlar ko'p.",
+      "ex_ru": "Сегодня много дел."
+    },
+    {
+      "zh": "有点",
+      "py": "yǒudiǎn",
+      "uz": "biroz",
+      "ru": "немного",
+      "ex": "我有点累。",
+      "expy": "Wǒ yǒudiǎn lèi.",
+      "ex_uz": "Men biroz charchadim.",
+      "ex_ru": "Я немного устал."
+    },
+    {
+      "zh": "下次",
+      "py": "xià cì",
+      "uz": "keyingi safar",
+      "ru": "в следующий раз",
+      "ex": "下次我请你吃饭。",
+      "expy": "Xià cì wǒ qǐng nǐ chīfàn.",
+      "ex_uz": "Keyingi safar men seni ovqatga taklif qilaman.",
+      "ex_ru": "В следующий раз я угощу тебя."
+    },
+    {
+      "zh": "说一声",
+      "py": "shuō yì shēng",
+      "uz": "bir og'iz aytmoq",
+      "ru": "предупредить / сказать",
+      "ex": "你走之前说一声。",
+      "expy": "Nǐ zǒu zhīqián shuō yì shēng.",
+      "ex_uz": "Ketishdan oldin bir og'iz ayt.",
+      "ex_ru": "Скажи перед тем, как уйдёшь."
+    }
+  ],
   "extraVocabSubtitle_uz": "Eslatma va muloqot mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме напоминаний и общения",
   "extraVocab": [

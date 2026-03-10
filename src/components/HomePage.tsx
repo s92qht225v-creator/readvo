@@ -412,7 +412,15 @@ export function HomePage() {
 
   useEffect(() => {
     setHasMounted(true);
-    setIsAdminParam(new URLSearchParams(window.location.search).get('admin') === 'true');
+    const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+    setIsAdminParam(isAdmin);
+    if (isAdmin) {
+      const saved = sessionStorage.getItem('blim-admin-pw');
+      if (saved) {
+        setAdminPassword(saved);
+        setAdminAuthed(true);
+      }
+    }
   }, []);
 
   useEffect(() => {
@@ -434,6 +442,7 @@ export function HomePage() {
 
     const data = await res.json();
     if (data.isAdmin) {
+      sessionStorage.setItem('blim-admin-pw', adminPassword);
       setAdminAuthed(true);
     } else {
       setAdminError(true);
