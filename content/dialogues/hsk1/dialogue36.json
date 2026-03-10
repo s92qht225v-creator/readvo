@@ -245,5 +245,19 @@
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Telefon qo'ng'iroqlari mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме телефонных звонков",
+  "extraVocab": [
+    { "zh": "电话", "py": "diànhuà", "uz": "telefon", "ru": "телефон" },
+    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "telefon qilmoq", "ru": "звонить" },
+    { "zh": "接电话", "py": "jiē diànhuà", "uz": "telefonga javob bermoq", "ru": "ответить на звонок" },
+    { "zh": "挂电话", "py": "guà diànhuà", "uz": "telefon qo'ymoq", "ru": "положить трубку" },
+    { "zh": "号码", "py": "hàomǎ", "uz": "raqam", "ru": "номер" },
+    { "zh": "短信", "py": "duǎnxìn", "uz": "SMS xabar", "ru": "СМС-сообщение" },
+    { "zh": "占线", "py": "zhànxiàn", "uz": "band (telefon)", "ru": "занято (линия)" },
+    { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
+    { "zh": "联系", "py": "liánxì", "uz": "bog'lanmoq", "ru": "связаться" },
+    { "zh": "回电话", "py": "huí diànhuà", "uz": "qayta qo'ng'iroq qilmoq", "ru": "перезвонить" }
+  ]
 }

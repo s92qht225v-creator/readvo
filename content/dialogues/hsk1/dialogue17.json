@@ -332,5 +332,19 @@
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "His-tuyg'ular va kundalik holat mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме чувств и повседневного состояния",
+  "extraVocab": [
+    { "zh": "困", "py": "kùn", "uz": "uyqusi kelgan", "ru": "сонный" },
+    { "zh": "舒服", "py": "shūfu", "uz": "qulay / yaxshi", "ru": "комфортный / удобный" },
+    { "zh": "难受", "py": "nánshòu", "uz": "o'zini yomon his qilmoq", "ru": "чувствовать себя плохо" },
+    { "zh": "精神", "py": "jīngshén", "uz": "tetik", "ru": "бодрый / энергичный" },
+    { "zh": "心情", "py": "xīnqíng", "uz": "kayfiyat", "ru": "настроение" },
+    { "zh": "生气", "py": "shēngqì", "uz": "g'azablanmoq", "ru": "злиться" },
+    { "zh": "开心", "py": "kāixīn", "uz": "xursand", "ru": "радостный" },
+    { "zh": "伤心", "py": "shāngxīn", "uz": "g'amgin", "ru": "грустный" },
+    { "zh": "着急", "py": "zháojí", "uz": "xavotirlanmoq", "ru": "волноваться" },
+    { "zh": "睡觉", "py": "shuìjiào", "uz": "uxlamoq", "ru": "спать" }
+  ]
 }

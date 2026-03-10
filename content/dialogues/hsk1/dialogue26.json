@@ -293,5 +293,19 @@
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3",
+  "extraVocabSubtitle_uz": "O'qish va til o'rganish mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме учёбы и изучения языка",
+  "extraVocab": [
+    { "zh": "语法", "py": "yǔfǎ", "uz": "grammatika", "ru": "грамматика" },
+    { "zh": "发音", "py": "fāyīn", "uz": "talaffuz", "ru": "произношение" },
+    { "zh": "词汇", "py": "cíhuì", "uz": "lug'at boyligi", "ru": "словарный запас" },
+    { "zh": "考试", "py": "kǎoshì", "uz": "imtihon", "ru": "экзамен" },
+    { "zh": "练习", "py": "liànxí", "uz": "mashq qilmoq", "ru": "упражняться" },
+    { "zh": "复习", "py": "fùxí", "uz": "takrorlamoq", "ru": "повторять" },
+    { "zh": "作业", "py": "zuòyè", "uz": "uy vazifasi", "ru": "домашнее задание" },
+    { "zh": "容易", "py": "róngyì", "uz": "oson", "ru": "лёгкий / простой" },
+    { "zh": "课本", "py": "kèběn", "uz": "darslik", "ru": "учебник" },
+    { "zh": "进步", "py": "jìnbù", "uz": "rivojlanmoq", "ru": "прогрессировать" }
+  ]
 }

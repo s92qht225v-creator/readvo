@@ -236,5 +236,19 @@
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20wang%20le/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20wang%20le/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Xotira va kundalik vazifalar mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме памяти и повседневных дел",
+  "extraVocab": [
+    { "zh": "忘记", "py": "wàngjì", "uz": "unutmoq", "ru": "забыть" },
+    { "zh": "记住", "py": "jìzhù", "uz": "eslab qolmoq", "ru": "запомнить" },
+    { "zh": "提醒", "py": "tíxǐng", "uz": "eslatmoq", "ru": "напомнить" },
+    { "zh": "钥匙", "py": "yàoshi", "uz": "kalit", "ru": "ключ" },
+    { "zh": "钱包", "py": "qiánbāo", "uz": "hamyon", "ru": "кошелёк" },
+    { "zh": "手机", "py": "shǒujī", "uz": "telefon", "ru": "мобильный телефон" },
+    { "zh": "雨伞", "py": "yǔsǎn", "uz": "soyabon", "ru": "зонт" },
+    { "zh": "带上", "py": "dàishàng", "uz": "o'zi bilan olmoq", "ru": "взять с собой" },
+    { "zh": "重要", "py": "zhòngyào", "uz": "muhim", "ru": "важный" },
+    { "zh": "马虎", "py": "mǎhu", "uz": "ehtiyotsiz", "ru": "невнимательный" }
+  ]
 }

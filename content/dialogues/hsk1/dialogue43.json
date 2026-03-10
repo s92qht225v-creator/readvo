@@ -304,5 +304,19 @@
   ],
   "tag": "transport",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Avtomobil xavfsizligi va haydash mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме безопасности в автомобиле и вождения",
+  "extraVocab": [
+    { "zh": "安全带", "py": "ānquándài", "uz": "xavfsizlik kamari", "ru": "ремень безопасности" },
+    { "zh": "方向盘", "py": "fāngxiàngpán", "uz": "rul", "ru": "руль" },
+    { "zh": "刹车", "py": "shāchē", "uz": "tormoz", "ru": "тормоз" },
+    { "zh": "油门", "py": "yóumén", "uz": "gaz pedali", "ru": "педаль газа" },
+    { "zh": "后视镜", "py": "hòushìjìng", "uz": "orqa ko'zgu", "ru": "зеркало заднего вида" },
+    { "zh": "车门", "py": "chēmén", "uz": "mashina eshigi", "ru": "дверь автомобиля" },
+    { "zh": "限速", "py": "xiànsù", "uz": "tezlik cheklovi", "ru": "ограничение скорости" },
+    { "zh": "安全", "py": "ānquán", "uz": "xavfsiz", "ru": "безопасный" },
+    { "zh": "小心", "py": "xiǎoxīn", "uz": "ehtiyot bo'lmoq", "ru": "осторожно" },
+    { "zh": "驾照", "py": "jiàzhào", "uz": "haydovchilik guvohnomasi", "ru": "водительские права" }
+  ]
 }

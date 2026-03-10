@@ -216,5 +216,19 @@
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "To'lov usullari mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме способов оплаты",
+  "extraVocab": [
+    { "zh": "现金", "py": "xiànjīn", "uz": "naqd pul", "ru": "наличные" },
+    { "zh": "刷卡", "py": "shuākǎ", "uz": "karta bilan to'lamoq", "ru": "оплатить картой" },
+    { "zh": "扫码", "py": "sǎomǎ", "uz": "QR kod skanerlash", "ru": "сканировать QR-код" },
+    { "zh": "找零", "py": "zhǎolíng", "uz": "qaytim bermoq", "ru": "сдача" },
+    { "zh": "发票", "py": "fāpiào", "uz": "kvitansiya", "ru": "чек / квитанция" },
+    { "zh": "打折", "py": "dǎzhé", "uz": "chegirma", "ru": "скидка" },
+    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой" },
+    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
+    { "zh": "账单", "py": "zhàngdān", "uz": "hisob", "ru": "счёт" },
+    { "zh": "小费", "py": "xiǎofèi", "uz": "choy puli", "ru": "чаевые" }
+  ]
 }

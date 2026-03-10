@@ -266,5 +266,19 @@
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Telefon va elektronika mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме телефона и электроники",
+  "extraVocab": [
+    { "zh": "电脑", "py": "diànnǎo", "uz": "kompyuter", "ru": "компьютер" },
+    { "zh": "充电", "py": "chōngdiàn", "uz": "zaryadka qilmoq", "ru": "заряжать" },
+    { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
+    { "zh": "上网", "py": "shàngwǎng", "uz": "internetga kirmoq", "ru": "выходить в интернет" },
+    { "zh": "拍照", "py": "pāizhào", "uz": "surat olmoq", "ru": "фотографировать" },
+    { "zh": "发短信", "py": "fā duǎnxìn", "uz": "SMS yubormoq", "ru": "отправить SMS" },
+    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "qo'ng'iroq qilmoq", "ru": "звонить" },
+    { "zh": "电池", "py": "diànchí", "uz": "batareya", "ru": "батарея" },
+    { "zh": "屏幕", "py": "píngmù", "uz": "ekran", "ru": "экран" },
+    { "zh": "关机", "py": "guānjī", "uz": "o'chirmoq", "ru": "выключить (телефон)" }
+  ]
 }

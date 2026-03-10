@@ -265,5 +265,19 @@
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Eslatma va muloqot mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме напоминаний и общения",
+  "extraVocab": [
+    { "zh": "提前", "py": "tíqián", "uz": "oldindan", "ru": "заранее" },
+    { "zh": "通知", "py": "tōngzhī", "uz": "xabardor qilmoq", "ru": "уведомить" },
+    { "zh": "消息", "py": "xiāoxi", "uz": "xabar", "ru": "новость / сообщение" },
+    { "zh": "告诉", "py": "gàosu", "uz": "aytmoq", "ru": "сказать / сообщить" },
+    { "zh": "解释", "py": "jiěshì", "uz": "tushuntirmoq", "ru": "объяснить" },
+    { "zh": "理由", "py": "lǐyóu", "uz": "sabab", "ru": "причина" },
+    { "zh": "答应", "py": "dāying", "uz": "rozi bo'lmoq", "ru": "согласиться" },
+    { "zh": "道歉", "py": "dàoqiàn", "uz": "uzr so'ramoq", "ru": "извиниться" },
+    { "zh": "原谅", "py": "yuánliàng", "uz": "kechirmoq", "ru": "простить" },
+    { "zh": "误会", "py": "wùhuì", "uz": "noto'g'ri tushunmoq", "ru": "недоразумение" }
+  ]
 }

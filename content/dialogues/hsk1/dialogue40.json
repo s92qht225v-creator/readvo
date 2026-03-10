@@ -380,5 +380,19 @@
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Restoran va ovqat buyurtmasi mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме ресторана и заказа еды",
+  "extraVocab": [
+    { "zh": "菜单", "py": "càidān", "uz": "menyu", "ru": "меню" },
+    { "zh": "服务员", "py": "fúwùyuán", "uz": "ofitsiant", "ru": "официант" },
+    { "zh": "米饭", "py": "mǐfàn", "uz": "guruch", "ru": "рис" },
+    { "zh": "面条", "py": "miàntiáo", "uz": "lag'mon", "ru": "лапша" },
+    { "zh": "饮料", "py": "yǐnliào", "uz": "ichimlik", "ru": "напиток" },
+    { "zh": "甜", "py": "tián", "uz": "shirin", "ru": "сладкий" },
+    { "zh": "咸", "py": "xián", "uz": "sho'r", "ru": "солёный" },
+    { "zh": "辣", "py": "là", "uz": "achchiq", "ru": "острый" },
+    { "zh": "汤", "py": "tāng", "uz": "sho'rva", "ru": "суп" },
+    { "zh": "筷子", "py": "kuàizi", "uz": "tayoqcha", "ru": "палочки для еды" }
+  ]
 }

@@ -242,5 +242,19 @@
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Ish va ofis mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме работы и офиса",
+  "extraVocab": [
+    { "zh": "上班", "py": "shàngbān", "uz": "ishga bormoq", "ru": "идти на работу" },
+    { "zh": "下班", "py": "xiàbān", "uz": "ishdan chiqmoq", "ru": "закончить работу" },
+    { "zh": "加班", "py": "jiābān", "uz": "qo'shimcha ishlamoq", "ru": "работать сверхурочно" },
+    { "zh": "请假", "py": "qǐngjià", "uz": "dam olish so'ramoq", "ru": "взять отгул" },
+    { "zh": "工资", "py": "gōngzī", "uz": "maosh", "ru": "зарплата" },
+    { "zh": "同事", "py": "tóngshì", "uz": "hamkasb", "ru": "коллега" },
+    { "zh": "老板", "py": "lǎobǎn", "uz": "boss / rahbar", "ru": "начальник / босс" },
+    { "zh": "办公室", "py": "bàngōngshì", "uz": "ofis", "ru": "офис" },
+    { "zh": "会议", "py": "huìyì", "uz": "yig'ilish", "ru": "совещание" },
+    { "zh": "休息", "py": "xiūxi", "uz": "dam olmoq", "ru": "отдыхать" }
+  ]
 }

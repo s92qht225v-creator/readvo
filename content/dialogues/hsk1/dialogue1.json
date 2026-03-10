@@ -465,5 +465,19 @@
       "ex_uz": "Salom! Tanishganimdan xursandman, mening ismim Zhang Wei.",
       "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй."
     }
+  ],
+  "extraVocabSubtitle_uz": "Salomlashish va tanishuv mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме приветствия и знакомства",
+  "extraVocab": [
+    { "zh": "您好", "py": "nín hǎo", "uz": "salom (hurmatli)", "ru": "здравствуйте (вежл.)" },
+    { "zh": "再见", "py": "zàijiàn", "uz": "xayr", "ru": "до свидания" },
+    { "zh": "谢谢", "py": "xièxie", "uz": "rahmat", "ru": "спасибо" },
+    { "zh": "不客气", "py": "bú kèqi", "uz": "arzimaydi", "ru": "не за что" },
+    { "zh": "请问", "py": "qǐngwèn", "uz": "kechirasiz (so'ramoqchi)", "ru": "извините (вопрос)" },
+    { "zh": "贵姓", "py": "guìxìng", "uz": "familiyangiz nima", "ru": "как ваша фамилия (вежл.)" },
+    { "zh": "先生", "py": "xiānsheng", "uz": "janob", "ru": "господин" },
+    { "zh": "女士", "py": "nǚshì", "uz": "xonim", "ru": "госпожа" },
+    { "zh": "朋友", "py": "péngyou", "uz": "do'st", "ru": "друг" },
+    { "zh": "欢迎", "py": "huānyíng", "uz": "xush kelibsiz", "ru": "добро пожаловать" }
   ]
 }

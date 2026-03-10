@@ -256,5 +256,19 @@
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Yo'nalishlar va bino joylashuvi mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме направлений и расположения в здании",
+  "extraVocab": [
+    { "zh": "左边", "py": "zuǒbian", "uz": "chap tomon", "ru": "слева" },
+    { "zh": "右边", "py": "yòubian", "uz": "o'ng tomon", "ru": "справа" },
+    { "zh": "前面", "py": "qiánmiàn", "uz": "old tomon", "ru": "впереди" },
+    { "zh": "后面", "py": "hòumiàn", "uz": "orqa tomon", "ru": "сзади" },
+    { "zh": "楼上", "py": "lóushàng", "uz": "yuqori qavat", "ru": "наверху / верхний этаж" },
+    { "zh": "楼下", "py": "lóuxià", "uz": "pastki qavat", "ru": "внизу / нижний этаж" },
+    { "zh": "电梯", "py": "diàntī", "uz": "lift", "ru": "лифт" },
+    { "zh": "楼梯", "py": "lóutī", "uz": "zinalar", "ru": "лестница" },
+    { "zh": "出口", "py": "chūkǒu", "uz": "chiqish", "ru": "выход" },
+    { "zh": "入口", "py": "rùkǒu", "uz": "kirish", "ru": "вход" }
+  ]
 }

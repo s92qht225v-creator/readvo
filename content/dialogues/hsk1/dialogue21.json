@@ -273,5 +273,19 @@
   ],
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20qing%20ni/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Restoran va mehmon qilish mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме ресторана и угощений",
+  "extraVocab": [
+    { "zh": "菜单", "py": "càidān", "uz": "menyu", "ru": "меню" },
+    { "zh": "点菜", "py": "diǎncài", "uz": "taom buyurtma qilmoq", "ru": "заказать блюдо" },
+    { "zh": "服务员", "py": "fúwùyuán", "uz": "ofitsiant", "ru": "официант" },
+    { "zh": "买单", "py": "mǎidān", "uz": "hisob-kitob qilmoq", "ru": "попросить счёт" },
+    { "zh": "好吃", "py": "hǎochī", "uz": "mazali", "ru": "вкусный" },
+    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
+    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой" },
+    { "zh": "筷子", "py": "kuàizi", "uz": "tayoqchalar", "ru": "палочки (для еды)" },
+    { "zh": "外卖", "py": "wàimài", "uz": "yetkazib berish", "ru": "доставка еды" },
+    { "zh": "小费", "py": "xiǎofèi", "uz": "choy puli", "ru": "чаевые" }
+  ]
 }

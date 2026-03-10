@@ -195,5 +195,19 @@
   ],
   "tag": "tanishuv",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Hobbilar va qiziqishlar mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме хобби и интересов",
+  "extraVocab": [
+    { "zh": "运动", "py": "yùndòng", "uz": "sport", "ru": "спорт / упражнения" },
+    { "zh": "音乐", "py": "yīnyuè", "uz": "musiqa", "ru": "музыка" },
+    { "zh": "电影", "py": "diànyǐng", "uz": "kino", "ru": "фильм / кино" },
+    { "zh": "旅游", "py": "lǚyóu", "uz": "sayohat", "ru": "путешествие" },
+    { "zh": "唱歌", "py": "chànggē", "uz": "qo'shiq aytmoq", "ru": "петь" },
+    { "zh": "跳舞", "py": "tiàowǔ", "uz": "raqsga tushmoq", "ru": "танцевать" },
+    { "zh": "画画", "py": "huàhuà", "uz": "rasm chizmoq", "ru": "рисовать" },
+    { "zh": "游泳", "py": "yóuyǒng", "uz": "suzmoq", "ru": "плавать" },
+    { "zh": "爱好", "py": "àihào", "uz": "hobbi", "ru": "хобби / увлечение" },
+    { "zh": "有意思", "py": "yǒu yìsi", "uz": "qiziqarli", "ru": "интересный" }
+  ]
 }

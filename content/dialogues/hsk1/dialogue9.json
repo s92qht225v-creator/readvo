@@ -262,5 +262,19 @@
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Telefon va aloqa mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме телефона и связи",
+  "extraVocab": [
+    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "telefon qilmoq", "ru": "звонить" },
+    { "zh": "接电话", "py": "jiē diànhuà", "uz": "telefonga javob bermoq", "ru": "ответить на звонок" },
+    { "zh": "挂电话", "py": "guà diànhuà", "uz": "telefonni qo'ymoq", "ru": "повесить трубку" },
+    { "zh": "短信", "py": "duǎnxìn", "uz": "SMS xabar", "ru": "СМС-сообщение" },
+    { "zh": "占线", "py": "zhànxiàn", "uz": "band (telefon)", "ru": "линия занята" },
+    { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
+    { "zh": "充电", "py": "chōngdiàn", "uz": "zaryadlamoq", "ru": "зарядить" },
+    { "zh": "联系", "py": "liánxì", "uz": "bog'lanmoq", "ru": "связаться" },
+    { "zh": "号码", "py": "hàomǎ", "uz": "raqam / nomer", "ru": "номер" },
+    { "zh": "通话", "py": "tōnghuà", "uz": "suhbat (telefonda)", "ru": "телефонный разговор" }
+  ]
 }

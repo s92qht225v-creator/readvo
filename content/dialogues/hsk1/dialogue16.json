@@ -281,5 +281,19 @@
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Reja va vaqt mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме планов и времени",
+  "extraVocab": [
+    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "встреча / свидание" },
+    { "zh": "计划", "py": "jìhuà", "uz": "reja", "ru": "план" },
+    { "zh": "周末", "py": "zhōumò", "uz": "dam olish kuni", "ru": "выходные" },
+    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" },
+    { "zh": "准时", "py": "zhǔnshí", "uz": "o'z vaqtida", "ru": "вовремя" },
+    { "zh": "空闲", "py": "kòngxián", "uz": "bo'sh vaqt", "ru": "свободное время" },
+    { "zh": "安排", "py": "ānpái", "uz": "rejalashtirmoq", "ru": "планировать" },
+    { "zh": "忙", "py": "máng", "uz": "band", "ru": "занятой" },
+    { "zh": "等", "py": "děng", "uz": "kutmoq", "ru": "ждать" },
+    { "zh": "半", "py": "bàn", "uz": "yarim", "ru": "половина" }
+  ]
 }

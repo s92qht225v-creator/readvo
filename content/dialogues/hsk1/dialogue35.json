@@ -301,5 +301,19 @@
   ],
   "tag": "transport",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Xayrlashish va kuzatish mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме прощания и проводов",
+  "extraVocab": [
+    { "zh": "机场", "py": "jīchǎng", "uz": "aeroport", "ru": "аэропорт" },
+    { "zh": "火车站", "py": "huǒchēzhàn", "uz": "temir yo'l vokzali", "ru": "вокзал" },
+    { "zh": "行李", "py": "xínglǐ", "uz": "yuk / bagaj", "ru": "багаж" },
+    { "zh": "护照", "py": "hùzhào", "uz": "pasport", "ru": "паспорт" },
+    { "zh": "登机牌", "py": "dēngjīpái", "uz": "chiptasi", "ru": "посадочный талон" },
+    { "zh": "起飞", "py": "qǐfēi", "uz": "uchib ketmoq", "ru": "взлететь" },
+    { "zh": "降落", "py": "jiàngluò", "uz": "qo'nmoq", "ru": "приземлиться" },
+    { "zh": "再见", "py": "zàijiàn", "uz": "xayr", "ru": "до свидания" },
+    { "zh": "路上小心", "py": "lùshang xiǎoxīn", "uz": "yo'lda ehtiyot bo'l", "ru": "будь осторожен в пути" },
+    { "zh": "一路平安", "py": "yílù píng'ān", "uz": "yaxshi safar!", "ru": "счастливого пути" }
+  ]
 }

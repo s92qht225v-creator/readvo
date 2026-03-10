@@ -236,5 +236,19 @@
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Ovqat yetkazib berish mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме доставки еды",
+  "extraVocab": [
+    { "zh": "外卖", "py": "wàimài", "uz": "dostavka taomi", "ru": "доставка еды" },
+    { "zh": "送餐", "py": "sòngcān", "uz": "ovqat yetkazish", "ru": "доставка еды" },
+    { "zh": "下单", "py": "xiàdān", "uz": "buyurtma bermoq", "ru": "сделать заказ" },
+    { "zh": "骑手", "py": "qíshǒu", "uz": "kuryer", "ru": "курьер" },
+    { "zh": "地址", "py": "dìzhǐ", "uz": "manzil", "ru": "адрес" },
+    { "zh": "楼下", "py": "lóuxià", "uz": "bino pastida", "ru": "внизу (у дома)" },
+    { "zh": "楼上", "py": "lóushàng", "uz": "bino ustida", "ru": "наверху" },
+    { "zh": "包装", "py": "bāozhuāng", "uz": "qadoq", "ru": "упаковка" },
+    { "zh": "评价", "py": "píngjià", "uz": "baho bermoq", "ru": "оценить / оставить отзыв" },
+    { "zh": "超时", "py": "chāoshí", "uz": "vaqtdan kechikish", "ru": "задержка / просрочка" }
+  ]
 }

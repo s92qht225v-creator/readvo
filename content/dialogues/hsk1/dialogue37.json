@@ -229,5 +229,19 @@
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Kutish va vaqt ifodalari mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме ожидания и выражений времени",
+  "extraVocab": [
+    { "zh": "等一等", "py": "děng yì děng", "uz": "biroz kuting", "ru": "подождите немного" },
+    { "zh": "马上", "py": "mǎshàng", "uz": "hozir / darhol", "ru": "сейчас / сразу" },
+    { "zh": "快点", "py": "kuài diǎn", "uz": "tezroq", "ru": "побыстрее" },
+    { "zh": "慢慢", "py": "mànmàn", "uz": "sekin-sekin", "ru": "медленно / не спеша" },
+    { "zh": "耐心", "py": "nàixīn", "uz": "sabr", "ru": "терпение" },
+    { "zh": "约定", "py": "yuēdìng", "uz": "kelishmoq", "ru": "договориться" },
+    { "zh": "准时", "py": "zhǔnshí", "uz": "vaqtida", "ru": "вовремя" },
+    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" },
+    { "zh": "半小时", "py": "bàn xiǎoshí", "uz": "yarim soat", "ru": "полчаса" },
+    { "zh": "一会儿", "py": "yíhuìr", "uz": "biroz vaqtdan keyin", "ru": "через некоторое время" }
+  ]
 }

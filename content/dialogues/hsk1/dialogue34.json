@@ -289,5 +289,19 @@
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3",
+  "extraVocabSubtitle_uz": "Tayyorgarlik va tadbirlar mavzusidagi foydali so'zlar",
+  "extraVocabSubtitle_ru": "Полезные слова по теме подготовки и мероприятий",
+  "extraVocab": [
+    { "zh": "准备", "py": "zhǔnbèi", "uz": "tayyorlanmoq", "ru": "готовиться" },
+    { "zh": "来得及", "py": "láidejí", "uz": "ulgurmoq", "ru": "успевать" },
+    { "zh": "来不及", "py": "láibují", "uz": "ulgurmaslik", "ru": "не успевать" },
+    { "zh": "着急", "py": "zháojí", "uz": "shoshilmoq", "ru": "торопиться" },
+    { "zh": "化妆", "py": "huàzhuāng", "uz": "bo'yanmoq", "ru": "краситься" },
+    { "zh": "换衣服", "py": "huàn yīfu", "uz": "kiyim almashtirmoq", "ru": "переодеться" },
+    { "zh": "出门", "py": "chūmén", "uz": "uydan chiqmoq", "ru": "выйти из дома" },
+    { "zh": "赶时间", "py": "gǎn shíjiān", "uz": "vaqtga ulgurmoq", "ru": "спешить / торопиться" },
+    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "свидание / встреча" },
+    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" }
+  ]
 }
