@@ -306,8 +306,8 @@
         },
         {
           "id": "d17-s8",
-          "text_original": "好的。",
-          "pinyin": "Hǎo de.",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
           "text_translation": "Xo'p.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
@@ -322,16 +322,6 @@
               "tr": "хорошо",
               "h": 1,
               "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "de",
-              "t": "(yukl.)",
-              "tr": "(част.)",
-              "h": 1
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue8.mp3"

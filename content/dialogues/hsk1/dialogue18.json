@@ -154,9 +154,9 @@
         },
         {
           "id": "d18-s4",
-          "text_original": "好啊。",
-          "pinyin": "Hǎo a.",
-          "text_translation": "Yaxshi.",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
+          "text_translation": "Xo'p.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
@@ -170,15 +170,6 @@
               "tr": "хорошо",
               "h": 1,
               "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "a",
-              "t": "(undov)",
-              "tr": "(воскл.)"
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3"

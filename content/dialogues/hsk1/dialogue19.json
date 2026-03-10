@@ -112,16 +112,27 @@
         },
         {
           "id": "d19-s3",
-          "text_original": "远吗？",
-          "pinyin": "Yuǎn ma?",
-          "text_translation": "Uzoqmi?",
-          "text_translation_ru": "Далеко?",
+          "text_original": "学校远吗？",
+          "pinyin": "Xuéxiào yuǎn ma?",
+          "text_translation": "Maktab uzoqmi?",
+          "text_translation_ru": "Школа далеко?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                1
+                2
+              ],
+              "p": "xuéxiào",
+              "t": "maktab",
+              "tr": "школа",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                2,
+                3
               ],
               "p": "yuǎn",
               "t": "uzoq",
@@ -129,8 +140,8 @@
             },
             {
               "i": [
-                1,
-                2
+                3,
+                4
               ],
               "p": "ma",
               "t": "-mi",
