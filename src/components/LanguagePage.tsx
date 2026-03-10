@@ -65,6 +65,7 @@ const karaokeItems = [
   { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', href: '/chinese/hsk1/karaoke/pengyou' },
   { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', href: '/chinese/hsk1/karaoke/tonghua' },
   { title: '后来', pinyin: 'Hòulái', translation: 'Keyinroq', translation_ru: 'Потом', href: '/chinese/hsk1/karaoke/houlai' },
+  { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', href: '/chinese/hsk1/karaoke/laoshuaidami' },
 ];
 
 

@@ -63,6 +63,13 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     localStorage.setItem('readvo-font-size', String(fontSize));
   }, [fontSize]);
   const [tappedLineIdx, setTappedLineIdx] = useState(-1);
+  const [fontActive, setFontActive] = useState(false);
+  const fontTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const flashFont = useCallback(() => {
+    setFontActive(true);
+    if (fontTimerRef.current) clearTimeout(fontTimerRef.current);
+    fontTimerRef.current = setTimeout(() => setFontActive(false), 1500);
+  }, []);
   const animFrameRef = useRef<number | null>(null);
   const linesContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -309,10 +316,10 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
         </div>
 
         {/* Font controls - floating pill on right */}
-        <div className="dr-font-controls">
-          <button className="dr-font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+        <div className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}`}>
+          <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.min(s + 10, 150)); flashFont(); }} type="button">A+</button>
           <div className="dr-font-divider" />
-          <button className="dr-font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
+          <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.max(s - 10, 80)); flashFont(); }} type="button">A-</button>
         </div>
 
         {/* Audio controls + toggles */}

@@ -4152,7 +4152,8 @@ body {
 }
 
 .dr-font-controls:hover,
-.dr-font-controls:active {
+.dr-font-controls:active,
+.dr-font-controls--active {
   opacity: 1;
   background: #fff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -4166,7 +4167,8 @@ body {
 }
 
 .dr-font-controls:hover .dr-font-divider,
-.dr-font-controls:active .dr-font-divider {
+.dr-font-controls:active .dr-font-divider,
+.dr-font-controls--active .dr-font-divider {
   background: #e5e5e5;
 }
 
