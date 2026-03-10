@@ -4151,8 +4151,14 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.dr-font-controls:hover,
-.dr-font-controls:active,
+@media (hover: hover) {
+  .dr-font-controls:hover {
+    opacity: 1;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
 .dr-font-controls--active {
   opacity: 1;
   background: #fff;
@@ -4166,8 +4172,12 @@ body {
   transition: background 0.2s ease;
 }
 
-.dr-font-controls:hover .dr-font-divider,
-.dr-font-controls:active .dr-font-divider,
+@media (hover: hover) {
+  .dr-font-controls:hover .dr-font-divider {
+    background: #e5e5e5;
+  }
+}
+
 .dr-font-controls--active .dr-font-divider {
   background: #e5e5e5;
 }
