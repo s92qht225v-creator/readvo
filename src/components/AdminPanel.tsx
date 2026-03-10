@@ -19,6 +19,7 @@ interface AdminUser {
   id: string;
   email: string;
   name: string;
+  username: string;
   created_at: string;
 }
 
@@ -140,7 +141,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
     ? payments.filter((p) => p.user_email.toLowerCase().includes(searchLower))
     : payments;
   const filteredUsers = search
-    ? users.filter((u) => u.email.toLowerCase().includes(searchLower) || u.name.toLowerCase().includes(searchLower))
+    ? users.filter((u) => u.email.toLowerCase().includes(searchLower) || u.name.toLowerCase().includes(searchLower) || u.username.toLowerCase().includes(searchLower))
     : users;
 
   if (loading) {
@@ -281,7 +282,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                 <div className="admin__card-header">
                   <div>
                     <span className="admin__card-name">{u.name}</span>
-                    <span className="admin__card-email">{u.email}</span>
+                    <span className="admin__card-email">{u.username ? `@${u.username}` : u.email}</span>
                   </div>
                   {sub ? (
                     <span className="admin__badge admin__badge--approved">
