@@ -98,7 +98,7 @@ export function GrammarMaPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">吗</div>
+          <h1 className="grammar-page__hero-char">吗</h1>
           <div className="grammar-page__hero-pinyin">ma</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'savol yuklamasi', ru: 'вопросительная частица', en: 'savol yuklamasi' } as Record<string, string>)[language]} —</div>
         </div>

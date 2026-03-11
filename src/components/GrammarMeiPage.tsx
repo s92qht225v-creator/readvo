@@ -156,7 +156,7 @@ export function GrammarMeiPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">没</div>
+          <h1 className="grammar-page__hero-char">没</h1>
           <div className="grammar-page__hero-pinyin">méi</div>
           <div className="grammar-page__hero-meaning">— {({ uz: '...madim / yo\'q', ru: 'не (прошлое) / нет', en: '...madim / yo\'q' } as Record<string, string>)[language]} —</div>
         </div>

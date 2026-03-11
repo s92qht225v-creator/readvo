@@ -97,7 +97,7 @@ export function GrammarDouPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">都</div>
+          <h1 className="grammar-page__hero-char">都</h1>
           <div className="grammar-page__hero-pinyin">dōu</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'hammasi / barchasi', ru: 'все / всё', en: 'hammasi / barchasi' } as Record<string, string>)[language]} —</div>
         </div>

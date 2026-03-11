@@ -13,7 +13,10 @@ const locales = routing.locales;
 
 /** Build alternates.languages object for a given path */
 function langAlternates(urlPath: string): Record<string, string> {
-  return Object.fromEntries(locales.map((l) => [l, `${siteUrl}/${l}${urlPath}`]));
+  const alts: Record<string, string> = {};
+  for (const l of locales) alts[l] = `${siteUrl}/${l}${urlPath}`;
+  alts['x-default'] = `${siteUrl}/uz${urlPath}`;
+  return alts;
 }
 
 /** Create a sitemap entry for each locale with hreflang alternates */
@@ -42,12 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
   entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.7 }));
 
-  // Lesson pages (15 lessons × 3 pages)
-  for (let lesson = 1; lesson <= 15; lesson++) {
-    for (let page = 1; page <= 3; page++) {
-      entries.push(...localeEntries(`/chinese/hsk1/lesson/${lesson}/page/${page}`, { changeFrequency: 'monthly', priority: 0.6 }));
-    }
-  }
+  // Payment page
+  entries.push(...localeEntries('/payment', { changeFrequency: 'monthly', priority: 0.4 }));
 
   // Grammar pages
   for (const slug of ['shi', 'you', 'zai', 'de', 'bu', 'ma', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci']) {

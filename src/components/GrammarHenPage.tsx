@@ -97,7 +97,7 @@ export function GrammarHenPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">很</div>
+          <h1 className="grammar-page__hero-char">很</h1>
           <div className="grammar-page__hero-pinyin">hěn</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'juda / bog\'lovchi', ru: 'очень / связка', en: 'juda / bog\'lovchi' } as Record<string, string>)[language]} —</div>
         </div>

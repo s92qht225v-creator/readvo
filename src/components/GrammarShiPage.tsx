@@ -69,7 +69,7 @@ export function GrammarShiPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">是</div>
+          <h1 className="grammar-page__hero-char">是</h1>
           <div className="grammar-page__hero-pinyin">shì</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'bo\'lmoq', ru: 'быть, являться', en: 'bo\'lmoq' } as Record<string, string>)[language]} —</div>
         </div>

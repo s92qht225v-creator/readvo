@@ -108,7 +108,7 @@ export function GrammarBuPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">不</div>
+          <h1 className="grammar-page__hero-char">不</h1>
           <div className="grammar-page__hero-pinyin">bù</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'inkor yuklamasi / «emas»', ru: 'отрицательная частица / «не»', en: 'inkor yuklamasi / «emas»' } as Record<string, string>)[language]} —</div>
         </div>

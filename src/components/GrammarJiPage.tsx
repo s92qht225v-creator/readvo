@@ -133,7 +133,7 @@ export function GrammarJiPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">几/多少</div>
+          <h1 className="grammar-page__hero-char">几/多少</h1>
           <div className="grammar-page__hero-pinyin">jǐ / duōshǎo</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'necha? / qancha?', ru: 'сколько? / как много?', en: 'necha? / qancha?' } as Record<string, string>)[language]} —</div>
         </div>

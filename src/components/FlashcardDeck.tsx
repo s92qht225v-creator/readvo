@@ -223,7 +223,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           </div>
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1 · {({ uz: 'FLESHKARTALAR', ru: 'ФЛЕШКАРТЫ', en: 'FLASHCARDS' } as Record<string, string>)[language]}</div>
-            <h1 className="dr-hero__title">{lessonTitle ?? '词卡'}</h1>
+            <h1 className="dr-hero__title">{lessonTitle ?? ({ uz: 'Fleshkartalar', ru: 'Флешкарты', en: 'Flashcards' } as Record<string, string>)[language]}</h1>
             <div className="dr-hero__pinyin">{lessonPinyin ?? 'cíkǎ'}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? (lessonTitleTranslation_ru || 'Флешкарты') : language === 'en' ? (lessonTitleTranslation || 'Flashcards') : (lessonTitleTranslation || 'Fleshkartalar')} —</div>
           </div>

@@ -33,28 +33,29 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebSite',
-      name: 'Blim',
-      url: siteUrl,
-      description: 'Learn Chinese online: HSK 1-6 dialogues, flashcards, karaoke and grammar.',
-      inLanguage: ['uz', 'ru', 'en'],
-    },
-    {
-      '@type': 'Organization',
-      name: 'Blim',
-      url: siteUrl,
-      logo: `${siteUrl}/logo.svg`,
-    },
-  ],
-};
-
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const m = pageMeta[locale] || pageMeta.uz;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        name: 'Blim',
+        url: siteUrl,
+        description: m.description,
+        inLanguage: ['uz', 'ru', 'en'],
+      },
+      {
+        '@type': 'Organization',
+        name: 'Blim',
+        url: siteUrl,
+        logo: `${siteUrl}/logo.svg`,
+      },
+    ],
+  };
 
   return (
     <>

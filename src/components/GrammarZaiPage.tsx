@@ -95,7 +95,7 @@ export function GrammarZaiPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">在</div>
+          <h1 className="grammar-page__hero-char">在</h1>
           <div className="grammar-page__hero-pinyin">zài</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'bo\'lmoq / joylashgan bo\'lmoq', ru: 'находиться, быть (где-то)', en: 'bo\'lmoq / joylashgan bo\'lmoq' } as Record<string, string>)[language]} —</div>
         </div>

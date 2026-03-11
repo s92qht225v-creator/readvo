@@ -155,7 +155,7 @@ export function GrammarLiangciPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">量词</div>
+          <h1 className="grammar-page__hero-char">量词</h1>
           <div className="grammar-page__hero-pinyin">liàngcí</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'sanash so\'zlari', ru: 'счётные слова', en: 'sanash so\'zlari' } as Record<string, string>)[language]} —</div>
         </div>

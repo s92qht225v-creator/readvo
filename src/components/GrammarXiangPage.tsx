@@ -166,7 +166,7 @@ export function GrammarXiangPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">想</div>
+          <h1 className="grammar-page__hero-char">想</h1>
           <div className="grammar-page__hero-pinyin">xiǎng</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'xohlamoq / sog\'inmoq / o\'ylamoq', ru: 'хотеть / скучать / думать', en: 'xohlamoq / sog\'inmoq / o\'ylamoq' } as Record<string, string>)[language]} —</div>
         </div>

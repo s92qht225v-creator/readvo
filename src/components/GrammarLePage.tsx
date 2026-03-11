@@ -96,7 +96,7 @@ export function GrammarLePage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">了</div>
+          <h1 className="grammar-page__hero-char">了</h1>
           <div className="grammar-page__hero-pinyin">le</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'tugallash / holat o\'zgardi', ru: 'завершение / изменение состояния', en: 'tugallash / holat o\'zgardi' } as Record<string, string>)[language]} —</div>
         </div>

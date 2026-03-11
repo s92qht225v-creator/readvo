@@ -39,13 +39,9 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       locale: m.ogLocale,
       siteName: 'Blim',
-      title: m.title,
-      description: m.description,
     },
     twitter: {
       card: 'summary_large_image',
-      title: m.title,
-      description: m.description,
     },
     robots: { index: true, follow: true },
   };

@@ -175,7 +175,7 @@ export function GrammarDePage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">的</div>
+          <h1 className="grammar-page__hero-char">的</h1>
           <div className="grammar-page__hero-pinyin">de</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'egalik / sifat bog\'lovchi', ru: 'egalik / sifat bog\'lovchi', en: 'egalik / sifat bog\'lovchi' } as Record<string, string>)[language]} —</div>
         </div>

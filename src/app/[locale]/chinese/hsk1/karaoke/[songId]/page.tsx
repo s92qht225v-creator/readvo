@@ -14,13 +14,32 @@ export async function generateMetadata({ params }: PageParams) {
   const { locale, songId } = await params;
   const song = await loadKaraokeSong(songId);
 
+  const titleLabel: Record<string, string> = {
+    uz: 'Xitoy tili karaoke',
+    ru: 'Караоке на китайском',
+    en: 'Chinese Karaoke',
+  };
+  const fallbackTitle: Record<string, string> = {
+    uz: 'Xitoy tili karaoke — KTV',
+    ru: 'Караоке на китайском — KTV',
+    en: 'Chinese Karaoke — KTV',
+  };
+  const translation = song
+    ? locale === 'ru' ? song.titleTranslation_ru
+    : locale === 'en' ? (song.titleTranslation || song.titleTranslation)
+    : song.titleTranslation
+    : '';
+  const descMeta: Record<string, string> = {
+    uz: song ? `${song.title} (${song.pinyin}) — xitoy tili karaoke (KTV). Pinyin va tarjima bilan xitoycha qo'shiq kuylang.` : 'Xitoy tili karaoke (KTV) — pinyin bilan kuylang.',
+    ru: song ? `${song.title} (${song.pinyin}) — караоке на китайском (KTV). Пойте с пиньинь и переводом.` : 'Караоке на китайском языке с пиньинь.',
+    en: song ? `${song.title} (${song.pinyin}) — Chinese karaoke (KTV). Sing along with pinyin and translation.` : 'Chinese karaoke (KTV) — sing along with pinyin.',
+  };
+
   return {
     title: song
-      ? `${song.title} — Xitoy tili karaoke`
-      : 'Xitoy tili karaoke — KTV',
-    description: song
-      ? `${song.title} (${song.pinyin}) — xitoy tili karaoke (KTV). Pinyin va tarjima bilan xitoycha qo'shiq kuylang. | Караоке на китайском: ${song.titleTranslation_ru}. Пойте с пиньинь и переводом.`
-      : 'Xitoy tili karaoke (KTV) — pinyin bilan kuylang. | Караоке на китайском языке с пиньинь.',
+      ? `${song.title} — ${titleLabel[locale] || titleLabel.uz}`
+      : fallbackTitle[locale] || fallbackTitle.uz,
+    description: descMeta[locale] || descMeta.uz,
     alternates: {
       canonical: `/${locale}/chinese/hsk1/karaoke/${songId}`,
       languages: {

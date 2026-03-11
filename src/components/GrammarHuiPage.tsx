@@ -156,7 +156,7 @@ export function GrammarHuiPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">会</div>
+          <h1 className="grammar-page__hero-char">会</h1>
           <div className="grammar-page__hero-pinyin">huì</div>
           <div className="grammar-page__hero-meaning">— {({ uz: '...a olmoq (mahorat)', ru: 'уметь / мочь (навык)', en: '...a olmoq (mahorat)' } as Record<string, string>)[language]} —</div>
         </div>

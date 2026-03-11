@@ -95,7 +95,7 @@ export function GrammarYouPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">有</div>
+          <h1 className="grammar-page__hero-char">有</h1>
           <div className="grammar-page__hero-pinyin">yǒu</div>
           <div className="grammar-page__hero-meaning">— {({ uz: 'bor bo\'lmoq / ega bo\'lmoq', ru: 'иметь, существовать', en: 'bor bo\'lmoq / ega bo\'lmoq' } as Record<string, string>)[language]} —</div>
         </div>

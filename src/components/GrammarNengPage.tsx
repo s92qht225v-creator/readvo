@@ -157,7 +157,7 @@ export function GrammarNengPage() {
         </div>
         <div className="grammar-page__hero-body">
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <div className="grammar-page__hero-char">能</div>
+          <h1 className="grammar-page__hero-char">能</h1>
           <div className="grammar-page__hero-pinyin">néng</div>
           <div className="grammar-page__hero-meaning">— {({ uz: '...a olmoq (imkoniyat)', ru: 'мочь (возможность)', en: '...a olmoq (imkoniyat)' } as Record<string, string>)[language]} —</div>
         </div>
