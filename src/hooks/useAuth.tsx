@@ -17,6 +17,7 @@ interface AuthContextType {
   user: User | null;
   isLoading: boolean;
   loginWithTelegram: () => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
   logout: () => Promise<void>;
   getAccessToken: () => Promise<string | null>;
 }
@@ -25,6 +26,7 @@ const AuthContext = createContext<AuthContextType>({
   user: null,
   isLoading: true,
   loginWithTelegram: async () => {},
+  loginWithGoogle: async () => {},
   logout: async () => {},
   getAccessToken: async () => null,
 });
@@ -118,6 +120,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  const loginWithGoogle = useCallback(async () => {
+    const res = await fetch('/api/auth/google/init');
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      console.error('Google init failed:', data);
+    }
+  }, []);
+
   const logout = useCallback(async () => {
     // Clean up active_sessions row server-side
     const { data: { session } } = await supabase.auth.getSession();
@@ -138,7 +150,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, loginWithTelegram, logout, getAccessToken }}>
+    <AuthContext.Provider value={{ user, isLoading, loginWithTelegram, loginWithGoogle, logout, getAccessToken }}>
       {children}
     </AuthContext.Provider>
   );

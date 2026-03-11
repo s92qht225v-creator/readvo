@@ -11,7 +11,7 @@ import { AdminPanel } from './AdminPanel';
 
 const t = {
   uz: {
-    login: 'Telegram orqali kirish',
+    login: 'Kirish',
     heroTitle: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
     heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
@@ -51,7 +51,7 @@ const t = {
     liveNow: 'Hozir {n} kishi o\'qimoqda',
   },
   ru: {
-    login: 'Войти через Telegram',
+    login: 'Войти',
     heroTitle: 'Учите китайский язык с интерактивными уроками',
     heroSubtitle: 'Эффективно учите китайский с пиньинь, аудио, переводом и карточками',
     startFree: 'Начать бесплатно',
@@ -104,13 +104,6 @@ const languageList = [
   { id: 'english', nameOriginal: 'English', flag: '🇬🇧' },
 ];
 
-function TelegramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="20" height="20" style={{ flexShrink: 0 }}>
-      <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.16l-1.8 8.48c-.13.6-.5.74-.99.46l-2.74-2.02-1.32 1.27c-.15.15-.27.27-.55.27l.2-2.78 5.07-4.58c.22-.2-.05-.3-.34-.12l-6.27 3.95-2.7-.84c-.59-.18-.6-.59.12-.87l10.55-4.07c.49-.18.92.12.76.85z" fill="#2AABEE"/>
-    </svg>
-  );
-}
 
 /** Logged-in view: constrained width, hero + language cards */
 function AppHome({ language, toggleLanguage, user, logout, s }: {
@@ -166,12 +159,12 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
 }
 
 /** Landing page: full-width, marketing sections */
-function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
+function LandingPage({ language, toggleLanguage, s }: {
   language: string;
   toggleLanguage: () => void;
-  loginWithTelegram: () => Promise<void>;
   s: typeof t.uz;
 }) {
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCount, setActiveCount] = useState(getActiveCount);
   useEffect(() => {
@@ -196,7 +189,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
             <button className="landing__lang-btn" onClick={toggleLanguage} type="button">
               {language === 'uz' ? 'RU' : 'UZ'}
             </button>
-            <button className="landing__login-btn" onClick={loginWithTelegram} type="button">
+            <button className="landing__login-btn" onClick={() => router.push('/login')} type="button">
               {s.login}
             </button>
             <button
@@ -230,8 +223,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       {/* Hero */}
       <section id="hero" className="landing__hero">
         <h1 className="landing__hero-title">{s.heroTitle}</h1>
-        <button className="landing__hero-cta" onClick={loginWithTelegram} type="button">
-          <TelegramIcon />
+        <button className="landing__hero-cta" onClick={() => router.push('/login')} type="button">
           {s.startFree}
         </button>
         <div className="landing__hero-visual">
@@ -376,8 +368,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
       <section className="landing__cta">
         <h2 className="landing__cta-title">{s.ctaTitle}</h2>
         <p className="landing__cta-subtitle">{s.ctaSubtitle}</p>
-        <button className="landing__cta-btn" onClick={loginWithTelegram} type="button">
-          <TelegramIcon />
+        <button className="landing__cta-btn" onClick={() => router.push('/login')} type="button">
           {s.startFree}
         </button>
       </section>
@@ -400,7 +391,7 @@ function LandingPage({ language, toggleLanguage, loginWithTelegram, s }: {
 
 export function HomePage() {
   const [language, toggleLanguage] = useLanguage();
-  const { user, isLoading, loginWithTelegram, logout } = useAuth();
+  const { user, isLoading, logout } = useAuth();
   const s = t[language];
   const router = useRouter();
   const [hasMounted, setHasMounted] = useState(false);
@@ -454,7 +445,7 @@ export function HomePage() {
      This ensures crawlers (and Semrush) see the full content in
      the HTML. Auth-based routing only kicks in after mount. */
   if (!hasMounted) {
-    return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithTelegram={loginWithTelegram} s={s} />;
+    return <LandingPage language={language} toggleLanguage={toggleLanguage} s={s} />;
   }
 
   /* ── Client-side only from here ── */
@@ -507,5 +498,5 @@ export function HomePage() {
   );
 
   // Loading or logged-out: show landing page (no flash for logged-out users)
-  return <LandingPage language={language} toggleLanguage={toggleLanguage} loginWithTelegram={loginWithTelegram} s={s} />;
+  return <LandingPage language={language} toggleLanguage={toggleLanguage} s={s} />;
 }
