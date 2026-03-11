@@ -21,15 +21,45 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   },
 };
 
-export async function generateMetadata(): Promise<Metadata> {
+const tabMeta: Record<string, Record<string, { title: string; description: string }>> = {
+  grammar: {
+    uz: { title: 'Xitoy tili grammatikasi — HSK 1', description: 'HSK 1 grammatika qoidalari: 是, 有, 在, 的, 不, 吗, 了 va boshqalar. Misollar bilan o\'rganing.' },
+    ru: { title: 'Грамматика китайского — HSK 1', description: 'Грамматика HSK 1: 是, 有, 在, 的, 不, 吗, 了 и другие. Учите с примерами.' },
+    en: { title: 'Chinese Grammar — HSK 1', description: 'HSK 1 grammar patterns: 是, 有, 在, 的, 不, 吗, 了 and more. Learn with examples.' },
+  },
+  writing: {
+    uz: { title: 'Ieroglif yozish mashqi — HSK 1', description: 'HSK 1 ierogliflarini yozishni o\'rganing. Interaktiv mashqlar va SRS takrorlash tizimi.' },
+    ru: { title: 'Написание иероглифов — HSK 1', description: 'Учитесь писать иероглифы HSK 1. Интерактивные упражнения и система повторения SRS.' },
+    en: { title: 'Character Writing Practice — HSK 1', description: 'Learn to write HSK 1 characters. Interactive stroke practice with SRS review system.' },
+  },
+  karaoke: {
+    uz: { title: 'Xitoycha karaoke — KTV qo\'shiqlar', description: 'Xitoy tilida karaoke qo\'shiqlar: so\'z bilan sinxronlashtirilgan matn, pinyin va tarjima.' },
+    ru: { title: 'Китайское караоке — KTV песни', description: 'Караоке на китайском: синхронизированный текст, пиньинь и перевод.' },
+    en: { title: 'Chinese Karaoke — KTV Songs', description: 'Chinese karaoke songs: synced lyrics with pinyin and translation.' },
+  },
+};
+
+const indexableTabs = ['grammar', 'writing', 'karaoke'];
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const locale = await getLocale();
-  const m = pageMeta[locale] || pageMeta.uz;
+  const sp = await searchParams;
+  const tab = typeof sp.tab === 'string' && indexableTabs.includes(sp.tab) ? sp.tab : null;
+
+  const m = tab ? (tabMeta[tab]?.[locale] || tabMeta[tab]?.uz) : (pageMeta[locale] || pageMeta.uz);
+  const suffix = tab ? `?tab=${tab}` : '';
+
   return {
     title: m.title,
     description: m.description,
     alternates: {
-      canonical: `/${locale}/chinese`,
-      languages: { uz: '/uz/chinese', ru: '/ru/chinese', en: '/en/chinese', 'x-default': '/uz/chinese' },
+      canonical: `/${locale}/chinese${suffix}`,
+      languages: {
+        uz: `/uz/chinese${suffix}`,
+        ru: `/ru/chinese${suffix}`,
+        en: `/en/chinese${suffix}`,
+        'x-default': `/uz/chinese${suffix}`,
+      },
     },
   };
 }
