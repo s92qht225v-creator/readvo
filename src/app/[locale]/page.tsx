@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         name: 'Blim',
         url: siteUrl,
         description: m.description,
-        inLanguage: ['uz', 'ru', 'en'],
+        inLanguage: locale,
       },
       {
         '@type': 'Organization',

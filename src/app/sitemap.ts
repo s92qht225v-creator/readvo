@@ -43,6 +43,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
   entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
+  // Tab variants (skip dialogues=default, flashcards/tests=auth-gated)
+  for (const tab of ['grammar', 'writing', 'karaoke']) {
+    entries.push(...localeEntries(`/chinese?tab=${tab}`, { changeFrequency: 'monthly', priority: 0.7 }));
+  }
   entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.7 }));
 
   // Payment page
