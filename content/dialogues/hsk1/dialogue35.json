@@ -5,6 +5,7 @@
   "pinyin": "Wǒ sòng nǐ",
   "titleTranslation": "Men seni kuzatib qo'yaman",
   "titleTranslation_ru": "Я тебя провожу",
+  "titleTranslation_en": "I'll walk you out",
   "level": 1,
   "sections": [
     {
@@ -302,6 +303,68 @@
   "tag": "transport",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20song%20ni/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "走",
+      "py": "zǒu",
+      "uz": "ketmoq / yurmoq",
+      "ru": "уходить / идти",
+      "ex": "你什么时候走？",
+      "expy": "Nǐ shénme shíhou zǒu?",
+      "ex_uz": "Sen qachon ketasan?",
+      "ex_ru": "Когда ты уезжаешь?"
+    },
+    {
+      "zh": "坐",
+      "py": "zuò",
+      "uz": "minmoq (transport)",
+      "ru": "ехать на (транспорте)",
+      "ex": "我坐飞机去北京。",
+      "expy": "Wǒ zuò fēijī qù Běijīng.",
+      "ex_uz": "Men samolyotda Pekinga boraman.",
+      "ex_ru": "Я лечу в Пекин на самолёте."
+    },
+    {
+      "zh": "火车",
+      "py": "huǒchē",
+      "uz": "poyezd",
+      "ru": "поезд",
+      "ex": "火车几点开？",
+      "expy": "Huǒchē jǐ diǎn kāi?",
+      "ex_uz": "Poyezd soat nechada jo'naydi?",
+      "ex_ru": "Во сколько отправляется поезд?"
+    },
+    {
+      "zh": "飞机",
+      "py": "fēijī",
+      "uz": "samolyot",
+      "ru": "самолёт",
+      "ex": "飞机很快。",
+      "expy": "Fēijī hěn kuài.",
+      "ex_uz": "Samolyot juda tez.",
+      "ex_ru": "Самолёт очень быстрый."
+    },
+    {
+      "zh": "还是",
+      "py": "háishi",
+      "uz": "yoki (tanlash savoli)",
+      "ru": "или (в вопросе выбора)",
+      "ex": "你喝茶还是喝咖啡？",
+      "expy": "Nǐ hē chá háishi hē kāfēi?",
+      "ex_uz": "Choy ichasanmi yoki kofe?",
+      "ex_ru": "Ты будешь чай или кофе?"
+    },
+    {
+      "zh": "送",
+      "py": "sòng",
+      "uz": "kuzatmoq / olib bormoq",
+      "ru": "проводить / отвезти",
+      "ex": "我送你到门口。",
+      "expy": "Wǒ sòng nǐ dào ménkǒu.",
+      "ex_uz": "Men seni eshik oldigacha kuzataman.",
+      "ex_ru": "Я провожу тебя до двери."
+    }
+  ],
   "extraVocabSubtitle_uz": "Xayrlashish va kuzatish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме прощания и проводов",
   "extraVocab": [
@@ -309,11 +372,69 @@
     { "zh": "火车站", "py": "huǒchēzhàn", "uz": "temir yo'l vokzali", "ru": "вокзал" },
     { "zh": "行李", "py": "xínglǐ", "uz": "yuk / bagaj", "ru": "багаж" },
     { "zh": "护照", "py": "hùzhào", "uz": "pasport", "ru": "паспорт" },
-    { "zh": "登机牌", "py": "dēngjīpái", "uz": "chiptasi", "ru": "посадочный талон" },
-    { "zh": "起飞", "py": "qǐfēi", "uz": "uchib ketmoq", "ru": "взлететь" },
-    { "zh": "降落", "py": "jiàngluò", "uz": "qo'nmoq", "ru": "приземлиться" },
     { "zh": "再见", "py": "zàijiàn", "uz": "xayr", "ru": "до свидания" },
-    { "zh": "路上小心", "py": "lùshang xiǎoxīn", "uz": "yo'lda ehtiyot bo'l", "ru": "будь осторожен в пути" },
     { "zh": "一路平安", "py": "yílù píng'ān", "uz": "yaxshi safar!", "ru": "счастливого пути" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "什么时候 + Fe'l？",
+      "title_uz": "什么时候 + Fe'l？ — qachonligini so'rash",
+      "title_ru": "什么时候 + Глагол？ — спросить «когда»",
+      "desc_uz": "\"什么时候\" (qachon) fe'l oldida kelib, ish qachon bo'lishini so'raydi.",
+      "desc_ru": "\"什么时候\" (когда) ставится перед глаголом, чтобы спросить о времени действия.",
+      "formula": "Sen + 什么时候 + Fe'l？",
+      "formula_ru": "Ты + 什么时候 + Глагол？",
+      "examples": [
+        { "zh": "你什么时候走？", "py": "Nǐ shénme shíhou zǒu?", "uz": "Sen qachon ketasan?", "ru": "Когда ты уезжаешь?" },
+        { "zh": "你什么时候来？", "py": "Nǐ shénme shíhou lái?", "uz": "Sen qachon kelasan?", "ru": "Когда ты придёшь?" }
+      ],
+      "tip_uz": "Javob sifatida vaqt so'zi ishlatiladi: \"明天\" (ertaga), \"下午\" (tushdan keyin).",
+      "tip_ru": "В ответе используется слово времени: \"明天\" (завтра), \"下午\" (после обеда)."
+    },
+    {
+      "pattern": "A 还是 B？",
+      "title_uz": "A 还是 B？ — tanlash savoli",
+      "title_ru": "A 还是 B？ — вопрос выбора",
+      "desc_uz": "\"还是\" ikki variant orasidan birini tanlash uchun savolda ishlatiladi. \"吗\" qo'shilmaydi.",
+      "desc_ru": "\"还是\" используется в вопросе для выбора между двумя вариантами. \"吗\" не добавляется.",
+      "formula": "A 还是 B？",
+      "formula_ru": "A 还是 B？",
+      "examples": [
+        { "zh": "坐火车还是坐飞机？", "py": "Zuò huǒchē háishi zuò fēijī?", "uz": "Poezddami yoki samolyotdami?", "ru": "На поезде или на самолёте?" },
+        { "zh": "你喝茶还是喝水？", "py": "Nǐ hē chá háishi hē shuǐ?", "uz": "Choy ichasanmi yoki suv?", "ru": "Ты будешь чай или воду?" }
+      ],
+      "tip_uz": "\"还是\" faqat savolda. \"或者\" (yoki) — darak gapda ishlatiladi.",
+      "tip_ru": "\"还是\" только в вопросе. \"或者\" (или) — в утвердительном предложении."
+    },
+    {
+      "pattern": "坐 + Transport",
+      "title_uz": "坐 + Transport — transportda bormoq",
+      "title_ru": "坐 + Транспорт — ехать на транспорте",
+      "desc_uz": "\"坐\" transport so'zi oldida kelib, \"...da bormoq/minmoq\" ma'nosini beradi.",
+      "desc_ru": "\"坐\" перед транспортом означает \"ехать на...\".",
+      "formula": "坐 + Transport (+ ketish joyi)",
+      "formula_ru": "坐 + Транспорт (+ куда)",
+      "examples": [
+        { "zh": "坐飞机。", "py": "Zuò fēijī.", "uz": "Samolyotda.", "ru": "На самолёте." },
+        { "zh": "我坐火车去上海。", "py": "Wǒ zuò huǒchē qù Shànghǎi.", "uz": "Men poyezdda Shanxayga boraman.", "ru": "Я еду в Шанхай на поезде." }
+      ],
+      "tip_uz": "\"坐\" so'zma-so'z \"o'tirmoq\" demak, lekin transport bilan \"minmoq\" ma'nosida ishlatiladi.",
+      "tip_ru": "\"坐\" буквально означает \"сидеть\", но с транспортом значит \"ехать на\"."
+    },
+    {
+      "pattern": "我送你",
+      "title_uz": "我送你 — kuzatib qo'ymoq",
+      "title_ru": "我送你 — проводить кого-то",
+      "desc_uz": "\"送\" kuzatmoq yoki olib bormoq ma'nosida. \"我送你\" — men seni kuzatib qo'yaman.",
+      "desc_ru": "\"送\" значит проводить или отвезти. \"我送你\" — я тебя провожу.",
+      "formula": "Men + 送 + Sen",
+      "formula_ru": "Я + 送 + Тебя",
+      "examples": [
+        { "zh": "我送你。", "py": "Wǒ sòng nǐ.", "uz": "Men seni kuzataman.", "ru": "Я тебя провожу." },
+        { "zh": "他送我到学校。", "py": "Tā sòng wǒ dào xuéxiào.", "uz": "U meni maktabga olib bordi.", "ru": "Он отвёз меня в школу." }
+      ],
+      "tip_uz": "\"送\" sovg'a berish ma'nosida ham ishlatiladi: \"送你一本书\" — senga kitob sovg'a qilaman.",
+      "tip_ru": "\"送\" также значит дарить: \"送你一本书\" — подарю тебе книгу."
+    }
   ]
 }

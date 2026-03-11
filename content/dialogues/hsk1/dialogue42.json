@@ -5,6 +5,7 @@
   "pinyin": "Wàimài dào le",
   "titleTranslation": "Dostavka yetib keldi",
   "titleTranslation_ru": "Доставка приехала",
+  "titleTranslation_en": "The delivery has arrived",
   "level": 1,
   "sections": [
     {
@@ -249,6 +250,26 @@
       "ex_ru": "Давай закажем доставку."
     },
     {
+      "zh": "到",
+      "py": "dào",
+      "uz": "yetib kelmoq",
+      "ru": "прибыть, приехать",
+      "ex": "他到了吗？",
+      "expy": "Tā dào le ma?",
+      "ex_uz": "U yetib keldimi?",
+      "ex_ru": "Он приехал?"
+    },
+    {
+      "zh": "哪儿",
+      "py": "nǎr",
+      "uz": "qayerda",
+      "ru": "где",
+      "ex": "你在哪儿？",
+      "expy": "Nǐ zài nǎr?",
+      "ex_uz": "Sen qayerdasen?",
+      "ex_ru": "Ты где?"
+    },
+    {
       "zh": "楼下",
       "py": "lóuxià",
       "uz": "bino pastida",
@@ -257,6 +278,26 @@
       "expy": "Tā zài lóuxià děng nǐ.",
       "ex_uz": "U pastda seni kutyapti.",
       "ex_ru": "Он ждёт тебя внизу."
+    },
+    {
+      "zh": "下去",
+      "py": "xiàqù",
+      "uz": "pastga tushmoq",
+      "ru": "спуститься",
+      "ex": "你先下去，我马上来。",
+      "expy": "Nǐ xiān xiàqù, wǒ mǎshàng lái.",
+      "ex_uz": "Avval sen tush, men hozir kelaman.",
+      "ex_ru": "Сначала ты спустись, я сейчас приду."
+    },
+    {
+      "zh": "拿",
+      "py": "ná",
+      "uz": "olmoq, ko'tarmoq",
+      "ru": "взять, нести",
+      "ex": "请帮我拿一下。",
+      "expy": "Qǐng bāng wǒ ná yíxià.",
+      "ex_uz": "Iltimos, menga olib bering.",
+      "ex_ru": "Пожалуйста, помоги мне взять."
     }
   ],
   "extraVocabSubtitle_uz": "Ovqat yetkazib berish mavzusidagi foydali so'zlar",
@@ -270,5 +311,71 @@
     { "zh": "包装", "py": "bāozhuāng", "uz": "qadoq", "ru": "упаковка" },
     { "zh": "评价", "py": "píngjià", "uz": "baho bermoq", "ru": "оценить / оставить отзыв" },
     { "zh": "超时", "py": "chāoshí", "uz": "vaqtdan kechikish", "ru": "задержка / просрочка" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "...到了",
+      "title_uz": "到了 — yetib keldi (tugallangan harakat)",
+      "title_ru": "到了 — прибыл (завершённое действие)",
+      "desc_uz": "\"到\" fe'li \"了\" bilan birgalikda ishlatilganda, biror narsa yoki kishi manzilga yetib kelganini bildiradi.",
+      "desc_ru": "Глагол \"到\" с частицей \"了\" указывает на завершённое прибытие — что-то или кто-то уже на месте.",
+      "formula": "Ot + 到了",
+      "formula_ru": "Сущ. + 到了",
+      "examples": [
+        { "zh": "外卖到了。", "py": "Wàimài dào le.", "uz": "Dostavka yetib keldi.", "ru": "Доставка приехала." },
+        { "zh": "他到了吗？", "py": "Tā dào le ma?", "uz": "U yetib keldimi?", "ru": "Он приехал?" },
+        { "zh": "快递到了。", "py": "Kuàidì dào le.", "uz": "Pochta yetib keldi.", "ru": "Посылка пришла." }
+      ],
+      "tip_uz": "\"到了\" ko'pincha yetkazib berish, transport yoki odamlar haqida ishlatiladi.",
+      "tip_ru": "\"到了\" часто используется для доставки, транспорта или прибытия людей."
+    },
+    {
+      "pattern": "在 + Joy",
+      "title_uz": "在 + joy — qayerdaligini bildirish",
+      "title_ru": "在 + место — указание местоположения",
+      "desc_uz": "\"在\" predlogi joyni ko'rsatish uchun ishlatiladi. Savol \"在哪儿？\" (qayerda?) shaklida beriladi.",
+      "desc_ru": "Предлог \"在\" используется для указания местоположения. Вопрос задаётся как \"在哪儿？\" (где?).",
+      "formula": "在 + Joy nomi",
+      "formula_ru": "在 + Место",
+      "examples": [
+        { "zh": "在楼下。", "py": "Zài lóuxià.", "uz": "Pastda.", "ru": "Внизу." },
+        { "zh": "你在哪儿？", "py": "Nǐ zài nǎr?", "uz": "Sen qayerdasen?", "ru": "Ты где?" },
+        { "zh": "他在家。", "py": "Tā zài jiā.", "uz": "U uyda.", "ru": "Он дома." }
+      ],
+      "tip_uz": "\"在哪儿\" — eng ko'p ishlatiladigan joy savol so'zi.",
+      "tip_ru": "\"在哪儿\" — самый частый вопрос о местоположении."
+    },
+    {
+      "pattern": "...了吗？",
+      "title_uz": "了吗？ — tugallangan harakatni so'rash",
+      "title_ru": "了吗？ — вопрос о завершённом действии",
+      "desc_uz": "Fe'l + \"了吗\" tuzilmasi biror ish allaqachon bajarilganmi yoki yo'qligini so'rash uchun ishlatiladi.",
+      "desc_ru": "Конструкция глагол + \"了吗\" используется для вопроса о том, произошло ли действие.",
+      "formula": "Fe'l + 了吗？",
+      "formula_ru": "Глагол + 了吗？",
+      "examples": [
+        { "zh": "外卖到了吗？", "py": "Wàimài dào le ma?", "uz": "Dostavka yetib keldimi?", "ru": "Доставка приехала?" },
+        { "zh": "你吃了吗？", "py": "Nǐ chī le ma?", "uz": "Ovqat yedingmi?", "ru": "Ты поел?" },
+        { "zh": "他走了吗？", "py": "Tā zǒu le ma?", "uz": "U ketdimi?", "ru": "Он ушёл?" }
+      ],
+      "tip_uz": "\"了吗\" — o'tgan zamondagi eng oddiy savol shakli.",
+      "tip_ru": "\"了吗\" — самый простой способ задать вопрос о прошлом."
+    },
+    {
+      "pattern": "下去 + Fe'l",
+      "title_uz": "下去 — pastga tushib (biror narsa qilmoq)",
+      "title_ru": "下去 — спуститься (и сделать что-то)",
+      "desc_uz": "\"下去\" pastga yo'nalishni bildiradi. Undan keyin boshqa fe'l qo'shilsa, pastga tushib nima qilishni ko'rsatadi.",
+      "desc_ru": "\"下去\" обозначает направление вниз. Если после него идёт глагол, это показывает, что нужно спуститься и выполнить действие.",
+      "formula": "下去 + Fe'l",
+      "formula_ru": "下去 + Глагол",
+      "examples": [
+        { "zh": "我下去拿。", "py": "Wǒ xiàqù ná.", "uz": "Men pastga tushib olaman.", "ru": "Я спущусь и возьму." },
+        { "zh": "你下去看看。", "py": "Nǐ xiàqù kànkan.", "uz": "Pastga tushib ko'r.", "ru": "Спустись и посмотри." },
+        { "zh": "他下去买东西了。", "py": "Tā xiàqù mǎi dōngxi le.", "uz": "U pastga tushib narsa sotib oldi.", "ru": "Он спустился и купил кое-что." }
+      ],
+      "tip_uz": "\"下去\" — binoning pastiga tushishni, \"上去\" — tepaga chiqishni bildiradi.",
+      "tip_ru": "\"下去\" — спуститься вниз, \"上去\" — подняться наверх."
+    }
   ]
 }

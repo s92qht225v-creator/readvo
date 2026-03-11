@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
@@ -41,6 +41,7 @@ interface DialogueItem {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   tag?: string;
   dateAdded?: string;
 }
@@ -235,7 +236,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
                   </h3>
                   <p className="dialogue-card__pinyin">{dialogue.pinyin}</p>
                   <p className="dialogue-card__translation">
-                    {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation}
+                    {language === 'ru' ? dialogue.titleTranslation_ru : language === 'en' ? (dialogue.titleTranslation_en || dialogue.titleTranslation) : dialogue.titleTranslation}
                   </p>
                 </div>
                 <button

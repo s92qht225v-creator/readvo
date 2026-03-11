@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
@@ -41,8 +41,9 @@ export function BlogPostView({ post }: Props) {
   const [language, toggleLanguage] = useLanguage();
   const isRu = language === 'ru';
 
-  const title = isRu ? post.title_ru : post.title;
-  const intro = isRu ? post.intro_ru : post.intro;
+  const title = language === 'ru' ? post.title_ru : language === 'en' ? (post.title_en || post.title) : post.title;
+  const intro = language === 'ru' ? post.intro_ru : language === 'en' ? (post.intro_en || post.intro) : post.intro;
+  const dateLocale = language === 'ru' ? 'ru-RU' : language === 'en' ? 'en-US' : 'uz-UZ';
 
   return (
     <main className="blog">
@@ -52,12 +53,12 @@ export function BlogPostView({ post }: Props) {
             <Image src="/logo-red.svg" alt="Blim" width={64} height={28} className="blog__logo-img" />
           </Link>
           <button className="page__lang-btn" onClick={toggleLanguage} type="button">
-            {isRu ? 'UZ' : 'RU'}
+            {language.toUpperCase()}
           </button>
         </div>
         <h1 className="blog__post-title">{title}</h1>
-        <p className="blog__post-date">
-          {new Date(post.date).toLocaleDateString(isRu ? 'ru-RU' : 'uz-UZ', {
+        <p className="blog__post-date" suppressHydrationWarning>
+          {new Date(post.date).toLocaleDateString(dateLocale, {
             year: 'numeric', month: 'long', day: 'numeric',
           })}
         </p>
@@ -83,14 +84,14 @@ export function BlogPostView({ post }: Props) {
         {post.sections.map((section, i) => (
           <section key={i} className="blog__section">
             <h2 className="blog__section-heading">
-              {isRu ? section.heading_ru : section.heading}
+              {language === 'ru' ? section.heading_ru : language === 'en' ? (section.heading_en || section.heading) : section.heading}
             </h2>
-            {renderBody(isRu ? section.body_ru : section.body)}
+            {renderBody(language === 'ru' ? section.body_ru : language === 'en' ? (section.body_en || section.body) : section.body)}
             {section.image && (
               <div className="blog__section-image">
                 <Image
                   src={section.image}
-                  alt={section.imageAlt || (isRu ? section.heading_ru : section.heading)}
+                  alt={section.imageAlt || (language === 'ru' ? section.heading_ru : language === 'en' ? (section.heading_en || section.heading) : section.heading)}
                   width={800}
                   height={450}
                   style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
@@ -102,12 +103,10 @@ export function BlogPostView({ post }: Props) {
       </article>
       <div className="blog__cta">
         <p className="blog__cta-text">
-          {isRu
-            ? 'Учите китайский с Blim — 7 дней бесплатно!'
-            : 'Xitoy tilini Blim ilovasi bilan o\'rganing — 7 kun bepul!'}
+          {({ uz: 'Xitoy tilini Blim ilovasi bilan o\'rganing — 7 kun bepul!', ru: 'Учите китайский с Blim — 7 дней бесплатно!', en: 'Learn Chinese with Blim — 7 days free!' } as Record<string, string>)[language]}
         </p>
         <Link href="/" className="blog__cta-btn">
-          {isRu ? 'Начать бесплатно' : 'Bepul boshlang'}
+          {({ uz: 'Bepul boshlang', ru: 'Начать бесплатно', en: 'Start for free' } as Record<string, string>)[language]}
         </Link>
       </div>
     </main>

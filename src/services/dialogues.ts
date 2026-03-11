@@ -10,6 +10,7 @@ export interface DialogueInfo {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   level: number;
   tag?: string;
   dateAdded?: string;
@@ -21,6 +22,7 @@ export interface DialoguePage {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   level: number;
   tag?: string;
   dateAdded?: string;
@@ -107,6 +109,7 @@ export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo
         pinyin: data.pinyin,
         titleTranslation: data.titleTranslation,
         titleTranslation_ru: data.titleTranslation_ru,
+        titleTranslation_en: data.titleTranslation_en,
         level: data.level,
         tag: data.tag,
         dateAdded: data.dateAdded,

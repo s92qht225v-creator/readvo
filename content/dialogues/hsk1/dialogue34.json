@@ -5,6 +5,7 @@
   "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
   "titleTranslation": "Tayyormisan?",
   "titleTranslation_ru": "Ты готова?",
+  "titleTranslation_en": "Are you ready?",
   "level": 1,
   "sections": [
     {
@@ -302,6 +303,46 @@
       "ex_ru": "Я готов."
     },
     {
+      "zh": "还",
+      "py": "hái",
+      "uz": "hali / yana",
+      "ru": "ещё",
+      "ex": "他还没来。",
+      "expy": "Tā hái méi lái.",
+      "ex_uz": "U hali kelmadi.",
+      "ex_ru": "Он ещё не пришёл."
+    },
+    {
+      "zh": "久",
+      "py": "jiǔ",
+      "uz": "uzoq (vaqt)",
+      "ru": "долго",
+      "ex": "你等了多久？",
+      "expy": "Nǐ děng le duō jiǔ?",
+      "ex_uz": "Qancha vaqt kutding?",
+      "ex_ru": "Как долго ты ждал?"
+    },
+    {
+      "zh": "快",
+      "py": "kuài",
+      "uz": "tez / tezroq",
+      "ru": "быстро / быстрее",
+      "ex": "快点走！",
+      "expy": "Kuài diǎn zǒu!",
+      "ex_uz": "Tezroq yur!",
+      "ex_ru": "Пошли быстрее!"
+    },
+    {
+      "zh": "分钟",
+      "py": "fēnzhōng",
+      "uz": "daqiqa",
+      "ru": "минута",
+      "ex": "还有十分钟。",
+      "expy": "Hái yǒu shí fēnzhōng.",
+      "ex_uz": "Yana o'n daqiqa bor.",
+      "ex_ru": "Ещё десять минут."
+    },
+    {
       "zh": "迟到",
       "py": "chídào",
       "uz": "kechikmoq",
@@ -320,8 +361,68 @@
     { "zh": "着急", "py": "zháojí", "uz": "shoshilmoq", "ru": "торопиться" },
     { "zh": "化妆", "py": "huàzhuāng", "uz": "bo'yanmoq", "ru": "краситься" },
     { "zh": "换衣服", "py": "huàn yīfu", "uz": "kiyim almashtirmoq", "ru": "переодеться" },
-    { "zh": "出门", "py": "chūmén", "uz": "uydan chiqmoq", "ru": "выйти из дома" },
-    { "zh": "赶时间", "py": "gǎn shíjiān", "uz": "vaqtga ulgurmoq", "ru": "спешить / торопиться" },
-    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "свидание / встреча" }
+    { "zh": "出门", "py": "chūmén", "uz": "uydan chiqmoq", "ru": "выйти из дома" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "Fe'l + 好了吗？",
+      "title_uz": "Fe'l + 好了吗？ — tayyor bo'lganini so'rash",
+      "title_ru": "Глагол + 好了吗？ — спросить о готовности",
+      "desc_uz": "Fe'l + \"好了\" (tayyor bo'ldi) + \"吗\" (savol) — biror ish tayyor bo'lganini so'rash uchun ishlatiladi.",
+      "desc_ru": "Глагол + \"好了\" (готово) + \"吗\" (вопрос) — спросить, завершено ли действие.",
+      "formula": "Fe'l + 好了吗？",
+      "formula_ru": "Глагол + 好了吗？",
+      "examples": [
+        { "zh": "你准备好了吗？", "py": "Nǐ zhǔnbèi hǎo le ma?", "uz": "Tayyormisan?", "ru": "Ты готов?" },
+        { "zh": "你吃好了吗？", "py": "Nǐ chī hǎo le ma?", "uz": "Yeb bo'ldingmi?", "ru": "Ты поел?" }
+      ],
+      "tip_uz": "Javob: \"好了。\" (tayyor) yoki \"还没有。\" (hali yo'q).",
+      "tip_ru": "Ответ: \"好了。\" (готово) или \"还没有。\" (ещё нет)."
+    },
+    {
+      "pattern": "还没有",
+      "title_uz": "还没有 — hali yo'q / hali qilmadim",
+      "title_ru": "还没有 — ещё нет",
+      "desc_uz": "\"还没有\" hali biror narsa qilinmaganini bildiradi. \"还没\" qisqa shakli ham ishlatiladi.",
+      "desc_ru": "\"还没有\" означает, что действие ещё не выполнено. Краткая форма — \"还没\".",
+      "formula": "还没有 (+ Fe'l)",
+      "formula_ru": "还没有 (+ Глагол)",
+      "examples": [
+        { "zh": "还没有。", "py": "Hái méiyǒu.", "uz": "Hali yo'q.", "ru": "Ещё нет." },
+        { "zh": "我还没吃饭。", "py": "Wǒ hái méi chī fàn.", "uz": "Men hali ovqat yemedim.", "ru": "Я ещё не ел." }
+      ],
+      "tip_uz": "\"没有\" — o'tgan zamonda inkor. \"不\" — hozirgi/kelajakda inkor.",
+      "tip_ru": "\"没有\" — отрицание в прошлом. \"不\" — отрицание в настоящем/будущем."
+    },
+    {
+      "pattern": "还要多久？",
+      "title_uz": "还要多久？ — yana qancha vaqt?",
+      "title_ru": "还要多久？ — сколько ещё?",
+      "desc_uz": "\"还要\" (yana kerak) + \"多久\" (qancha vaqt) — biror ish yana qancha vaqt olishini so'raydi.",
+      "desc_ru": "\"还要\" (ещё нужно) + \"多久\" (как долго) — спросить, сколько ещё времени нужно.",
+      "formula": "还要多久？",
+      "formula_ru": "还要多久？",
+      "examples": [
+        { "zh": "还要多久？", "py": "Hái yào duō jiǔ?", "uz": "Yana qancha vaqt kerak?", "ru": "Сколько ещё?" },
+        { "zh": "还要等多久？", "py": "Hái yào děng duō jiǔ?", "uz": "Yana qancha kutish kerak?", "ru": "Сколько ещё ждать?" }
+      ],
+      "tip_uz": "Javob: vaqt so'zi bilan, masalan \"五分钟\" (besh daqiqa).",
+      "tip_ru": "Ответ: со словом времени, например \"五分钟\" (пять минут)."
+    },
+    {
+      "pattern": "快一点",
+      "title_uz": "快一点 — tezroq bo'l",
+      "title_ru": "快一点 — побыстрее",
+      "desc_uz": "\"快\" (tez) + \"一点\" (biroz) — biror kishini tezroq qilishga undash. Yumshoq buyruq.",
+      "desc_ru": "\"快\" (быстро) + \"一点\" (немного) — попросить кого-то поторопиться. Мягкая просьба.",
+      "formula": "快一点 (+ Fe'l)",
+      "formula_ru": "快一点 (+ Глагол)",
+      "examples": [
+        { "zh": "快一点！", "py": "Kuài yìdiǎn!", "uz": "Tezroq bo'l!", "ru": "Побыстрее!" },
+        { "zh": "快一点走吧。", "py": "Kuài yìdiǎn zǒu ba.", "uz": "Tezroq yuraylik.", "ru": "Давай пойдём побыстрее." }
+      ],
+      "tip_uz": "\"快点\" ham xuddi shu ma'noda ishlatiladi. \"慢一点\" — sekinroq.",
+      "tip_ru": "\"快点\" используется в том же значении. \"慢一点\" — помедленнее."
+    }
   ]
 }

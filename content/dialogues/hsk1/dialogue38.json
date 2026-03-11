@@ -5,6 +5,7 @@
   "pinyin": "Wǒ hěn jǐnzhāng",
   "titleTranslation": "Men juda hayajonlanyapman",
   "titleTranslation_ru": "Я очень нервничаю",
+  "titleTranslation_en": "I'm so nervous",
   "level": 1,
   "sections": [
     {
@@ -254,6 +255,56 @@
       "expy": "Kǎoshì qián wǒ hěn jǐnzhāng.",
       "ex_uz": "Imtihon oldidan men juda hayajonlanaman.",
       "ex_ru": "Перед экзаменом я очень нервничаю."
+    },
+    {
+      "zh": "最近",
+      "py": "zuìjìn",
+      "uz": "yaqinda / oxirgi paytlarda",
+      "ru": "в последнее время / недавно",
+      "ex": "你最近忙吗？",
+      "expy": "Nǐ zuìjìn máng ma?",
+      "ex_uz": "Yaqinda bandmisan?",
+      "ex_ru": "В последнее время занят?"
+    },
+    {
+      "zh": "忙",
+      "py": "máng",
+      "uz": "band",
+      "ru": "занят",
+      "ex": "他每天都很忙。",
+      "expy": "Tā měi tiān dōu hěn máng.",
+      "ex_uz": "U har kuni juda band.",
+      "ex_ru": "Он каждый день очень занят."
+    },
+    {
+      "zh": "考试",
+      "py": "kǎoshì",
+      "uz": "imtihon",
+      "ru": "экзамен",
+      "ex": "明天有考试。",
+      "expy": "Míngtiān yǒu kǎoshì.",
+      "ex_uz": "Ertaga imtihon bor.",
+      "ex_ru": "Завтра экзамен."
+    },
+    {
+      "zh": "要",
+      "py": "yào",
+      "uz": "(-moqchi) / tez orada",
+      "ru": "собираться / скоро",
+      "ex": "我要回家了。",
+      "expy": "Wǒ yào huí jiā le.",
+      "ex_uz": "Men uyga qaytmoqchiman.",
+      "ex_ru": "Я собираюсь домой."
+    },
+    {
+      "zh": "下个月",
+      "py": "xià ge yuè",
+      "uz": "keyingi oy",
+      "ru": "в следующем месяце",
+      "ex": "下个月我去北京。",
+      "expy": "Xià ge yuè wǒ qù Běijīng.",
+      "ex_uz": "Keyingi oy men Pekinga boraman.",
+      "ex_ru": "В следующем месяце я еду в Пекин."
     }
   ],
   "extraVocabSubtitle_uz": "His-tuyg'ular mavzusidagi foydali so'zlar",
@@ -262,11 +313,70 @@
     { "zh": "放松", "py": "fàngsōng", "uz": "dam olmoq", "ru": "расслабиться" },
     { "zh": "担心", "py": "dānxīn", "uz": "xavotirlanmoq", "ru": "беспокоиться" },
     { "zh": "害怕", "py": "hàipà", "uz": "qo'rqmoq", "ru": "бояться" },
-    { "zh": "生气", "py": "shēngqì", "uz": "jahli chiqmoq", "ru": "злиться" },
-    { "zh": "难过", "py": "nánguò", "uz": "xafa bo'lmoq", "ru": "грустить" },
     { "zh": "开心", "py": "kāixīn", "uz": "xursand", "ru": "радостный" },
     { "zh": "压力", "py": "yālì", "uz": "bosim / stress", "ru": "давление / стресс" },
-    { "zh": "信心", "py": "xìnxīn", "uz": "ishonch", "ru": "уверенность" },
     { "zh": "加油", "py": "jiāyóu", "uz": "qo'llab-quvvatlamoq", "ru": "давай / вперёд!" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "最近 + 怎么样？",
+      "title_uz": "最近怎么样？ — yaqingi ahvolni so'rash",
+      "title_ru": "最近怎么样？ — спросить о последних делах",
+      "desc_uz": "\"最近\" (yaqinda) + \"怎么样\" (qanday) bilan suhbatdoshning oxirgi paytlardagi ahvolini so'rashadi.",
+      "desc_ru": "\"最近\" (в последнее время) + \"怎么样\" (как дела) — вопрос о том, как дела в последнее время.",
+      "formula": "(你) 最近 + 怎么样？",
+      "formula_ru": "(Ты) 最近 + 怎么样？",
+      "examples": [
+        { "zh": "你最近怎么样？", "py": "Nǐ zuìjìn zěnmeyàng?", "uz": "Oxirgi paytlarda qalaysan?", "ru": "Как у тебя дела в последнее время?" },
+        { "zh": "他最近怎么样？", "py": "Tā zuìjìn zěnmeyàng?", "uz": "U yaqinda qanday?", "ru": "Как у него дела в последнее время?" }
+      ],
+      "tip_uz": "Bu savol yaqin do'stlar va tanishlar orasida ishlatiladi. Rasmiy emas.",
+      "tip_ru": "Этот вопрос используется между друзьями и знакомыми. Неформальный."
+    },
+    {
+      "pattern": "很 + Sifat",
+      "title_uz": "很 + sifat — holat tavsiflash",
+      "title_ru": "很 + прилагательное — описание состояния",
+      "desc_uz": "\"很\" sifat oldida kelib \"juda\" ma'nosini beradi. Xitoy tilida sifat oldida ko'pincha \"很\" qo'yiladi.",
+      "desc_ru": "\"很\" ставится перед прилагательным и означает \"очень\". В китайском перед прилагательным обычно ставят \"很\".",
+      "formula": "很 + Sifat",
+      "formula_ru": "很 + Прилагательное",
+      "examples": [
+        { "zh": "我最近很忙。", "py": "Wǒ zuìjìn hěn máng.", "uz": "Men yaqinda juda bandman.", "ru": "В последнее время я очень занят." },
+        { "zh": "她很紧张。", "py": "Tā hěn jǐnzhāng.", "uz": "U juda hayajonlanyapti.", "ru": "Она очень нервничает." }
+      ],
+      "tip_uz": "\"很\" ba'zan \"juda\" ma'nosini yo'qotib, oddiygina bog'lovchi vazifasini bajaradi.",
+      "tip_ru": "\"很\" иногда теряет значение \"очень\" и просто связывает подлежащее с прилагательным."
+    },
+    {
+      "pattern": "要...了",
+      "title_uz": "要...了 — tez orada bo'ladigan hodisa",
+      "title_ru": "要...了 — скоро произойдёт",
+      "desc_uz": "\"要...了\" biror narsa tez orada bo'lishini bildiradi. Kelajakdagi yaqin hodisa uchun ishlatiladi.",
+      "desc_ru": "\"要...了\" указывает, что что-то скоро произойдёт. Используется для ближайших будущих событий.",
+      "formula": "(Vaqt +) 要 + Fe'l + 了",
+      "formula_ru": "(Время +) 要 + Глагол + 了",
+      "examples": [
+        { "zh": "下个月要考试了。", "py": "Xià ge yuè yào kǎoshì le.", "uz": "Keyingi oy imtihon bo'ladi.", "ru": "В следующем месяце экзамен." },
+        { "zh": "要下雨了。", "py": "Yào xià yǔ le.", "uz": "Yomg'ir yog'moqchi.", "ru": "Скоро пойдёт дождь." }
+      ],
+      "tip_uz": "\"要...了\" = tez orada. \"快要...了\" ham xuddi shu ma'noda ishlatiladi, lekin yanada tezroqni anglatadi.",
+      "tip_ru": "\"要...了\" = скоро. \"快要...了\" — то же значение, но подчёркивает, что совсем скоро."
+    },
+    {
+      "pattern": "Sifat + 吗？",
+      "title_uz": "Sifat + 吗？ — holat haqida savol",
+      "title_ru": "Прил. + 吗？ — вопрос о состоянии",
+      "desc_uz": "Sifatdan keyin \"吗\" qo'shib, biror holatni so'rash mumkin. Javob sifatning o'zi bilan beriladi.",
+      "desc_ru": "Добавив \"吗\" после прилагательного, можно спросить о состоянии. Ответ — само прилагательное.",
+      "formula": "Sifat + 吗？ → Sifat / 不 + Sifat",
+      "formula_ru": "Прил. + 吗？ → Прил. / 不 + Прил.",
+      "examples": [
+        { "zh": "紧张吗？", "py": "Jǐnzhāng ma?", "uz": "Hayajonlanyapsanmi?", "ru": "Волнуешься?" },
+        { "zh": "忙吗？", "py": "Máng ma?", "uz": "Bandmisan?", "ru": "Занят?" }
+      ],
+      "tip_uz": "Javob qisqa bo'lishi mumkin: \"紧张。\" (ha) yoki \"不紧张。\" (yo'q).",
+      "tip_ru": "Ответ может быть кратким: \"紧张。\" (да) или \"不紧张。\" (нет)."
+    }
   ]
 }

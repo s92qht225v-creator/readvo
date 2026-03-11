@@ -2,46 +2,60 @@
   "slug": "xitoy-tilini-qanday-organish",
   "title": "Xitoy tilini qanday o'rganish kerak? — To'liq qo'llanma",
   "title_ru": "Как выучить китайский язык? — Полное руководство",
+  "title_en": "How to Learn Chinese? — Complete Guide",
   "description": "Xitoy tilini mustaqil o'rganishning eng samarali usullari: HSK imtihoniga tayyorgarlik, pinyin, ieroglif yozish va boshqalar.",
   "description_ru": "Самые эффективные способы самостоятельного изучения китайского: подготовка к HSK, пиньинь, написание иероглифов.",
+  "description_en": "The most effective ways to learn Chinese independently: HSK preparation, pinyin, writing characters and more.",
   "date": "2026-03-07",
   "published": false,
   "sections": [
     {
       "heading": "Xitoy tilini o'rganish qiyinmi?",
       "heading_ru": "Сложно ли учить китайский?",
+      "heading_en": "Is Learning Chinese Difficult?",
       "body": "Xitoy tili dunyodagi eng ko'p so'zlashiladigan tillardan biri. Ko'pchilik uni juda qiyin deb o'ylaydi, lekin to'g'ri usul bilan uni o'rganish mumkin. HSK (Hanyu Shuiping Kaoshi) — xitoy tili bilim darajasini belgilovchi xalqaro imtihon. HSK 1 dan boshlash eng yaxshi variant.",
-      "body_ru": "Китайский — один из самых распространённых языков мира. Многие считают его очень сложным, но при правильном подходе выучить его вполне реально. HSK (Hanyu Shuiping Kaoshi) — международный экзамен по китайскому. Начать лучше с HSK 1."
+      "body_ru": "Китайский — один из самых распространённых языков мира. Многие считают его очень сложным, но при правильном подходе выучить его вполне реально. HSK (Hanyu Shuiping Kaoshi) — международный экзамен по китайскому. Начать лучше с HSK 1.",
+      "body_en": "Chinese is one of the most widely spoken languages in the world. Many people think it is very difficult, but with the right approach it is absolutely learnable. HSK (Hanyu Shuiping Kaoshi) is the international Chinese proficiency exam. Starting with HSK 1 is the best option."
     },
     {
       "heading": "1-qadam: Pinyin va tonlarni o'rganing",
       "heading_ru": "Шаг 1: Выучите пиньинь и тоны",
+      "heading_en": "Step 1: Learn Pinyin and Tones",
       "body": "Pinyin — xitoy tilining lotin alifbosidagi yozuvi. Xitoy tilida 4 ta ton bor va ular so'z ma'nosini o'zgartiradi. Masalan, 'mā' (ona) va 'mǎ' (ot) — bir xil tovush, lekin turli ton. Blim ilovasida har bir gapning pinyin va audio tinglash imkoniyati bor.",
-      "body_ru": "Пиньинь — латинская транскрипция китайского. В китайском 4 тона, которые меняют значение слов. Например, 'mā' (мама) и 'mǎ' (лошадь) — одинаковый звук, но разные тоны. В приложении Blim можно слушать аудио и видеть пиньинь для каждого предложения."
+      "body_ru": "Пиньинь — латинская транскрипция китайского. В китайском 4 тона, которые меняют значение слов. Например, 'mā' (мама) и 'mǎ' (лошадь) — одинаковый звук, но разные тоны. В приложении Blim можно слушать аудио и видеть пиньинь для каждого предложения.",
+      "body_en": "Pinyin is the romanized writing system for Chinese. Chinese has 4 tones that change the meaning of words. For example, 'mā' (mother) and 'mǎ' (horse) sound the same but have different tones. In the Blim app, you can listen to audio and see pinyin for every sentence."
     },
     {
       "heading": "2-qadam: Asosiy so'zlarni yodlang",
       "heading_ru": "Шаг 2: Запомните базовые слова",
+      "heading_en": "Step 2: Memorize Basic Words",
       "body": "HSK 1 darajasida 150 ta so'z bor. Bu so'zlarni fleshkartalar yordamida yodlash eng samarali usul. Har kuni 5-10 ta yangi so'z o'rganing va eski so'zlarni takrorlang. Blim ilovasidagi aqlli takrorlash tizimi bilgan so'zlaringizni kamroq, bilmaganlarni ko'proq ko'rsatadi.",
-      "body_ru": "В HSK 1 — 150 слов. Флешкарты — самый эффективный способ их запоминать. Учите 5-10 новых слов в день и повторяйте старые. Система умного повторения в Blim показывает знакомые слова реже, а незнакомые — чаще."
+      "body_ru": "В HSK 1 — 150 слов. Флешкарты — самый эффективный способ их запоминать. Учите 5-10 новых слов в день и повторяйте старые. Система умного повторения в Blim показывает знакомые слова реже, а незнакомые — чаще.",
+      "body_en": "HSK 1 has 150 words. Flashcards are the most effective way to memorize them. Learn 5-10 new words per day and review the old ones. The smart repetition system in Blim shows familiar words less often and unfamiliar ones more frequently."
     },
     {
       "heading": "3-qadam: Dialoglarni tinglang",
       "heading_ru": "Шаг 3: Слушайте диалоги",
+      "heading_en": "Step 3: Listen to Dialogues",
       "body": "Tinglash — til o'rganishning eng muhim qismi. HSK 1 darajasidagi dialoglarni qayta-qayta tinglang. Blim ilovasida 47 ta dialog mavjud — har birida pinyin, tarjima va audio bor. Fokus rejimida bitta gapni alohida tinglash mumkin.",
-      "body_ru": "Аудирование — важнейшая часть изучения языка. Слушайте диалоги HSK 1 снова и снова. В Blim есть 47 диалогов с пиньинь, переводом и аудио. В режиме фокуса можно слушать одно предложение отдельно."
+      "body_ru": "Аудирование — важнейшая часть изучения языка. Слушайте диалоги HSK 1 снова и снова. В Blim есть 47 диалогов с пиньинь, переводом и аудио. В режиме фокуса можно слушать одно предложение отдельно.",
+      "body_en": "Listening is the most important part of language learning. Listen to HSK 1 dialogues again and again. Blim has 47 dialogues with pinyin, translation and audio. In focus mode you can listen to one sentence at a time."
     },
     {
       "heading": "4-qadam: Ieroglif yozishni mashq qiling",
       "heading_ru": "Шаг 4: Практикуйте написание иероглифов",
+      "heading_en": "Step 4: Practice Writing Characters",
       "body": "Ieroglif yozish xotirani mustahkamlaydi. Har bir ieroglifni to'g'ri tartibda (chiziq tartibida) yozish kerak. Blim ilovasidagi yozish bo'limida har bir ieroglifni qo'l bilan yozib mashq qilasiz. SRS tizimi yordamida unutilgan ierogliflar ko'proq takrorlanadi.",
-      "body_ru": "Написание иероглифов укрепляет память. Каждый иероглиф нужно писать в правильном порядке черт. В разделе письма Blim вы практикуете написание каждого иероглифа от руки. Система SRS показывает забытые иероглифы чаще."
+      "body_ru": "Написание иероглифов укрепляет память. Каждый иероглиф нужно писать в правильном порядке черт. В разделе письма Blim вы практикуете написание каждого иероглифа от руки. Система SRS показывает забытые иероглифы чаще.",
+      "body_en": "Writing characters strengthens memory. Each character must be written in the correct stroke order. In the writing section of Blim, you practice writing each character by hand. The SRS system shows forgotten characters more frequently."
     },
     {
       "heading": "5-qadam: Karaoke bilan talaffuzni yaxshilang",
       "heading_ru": "Шаг 5: Улучшайте произношение с караоке",
+      "heading_en": "Step 5: Improve Pronunciation with Karaoke",
       "body": "Xitoycha qo'shiq kuylash — talaffuzni yaxshilashning eng yoqimli usuli. Blim ilovasidagi karaoke bo'limida har bir belgi alohida ranglangan — qaysi so'zni qachon kuylash kerakligini ko'rasiz. Pinyin va tarjima ham ko'rsatiladi.",
-      "body_ru": "Петь китайские песни — самый приятный способ улучшить произношение. В караоке Blim каждый символ подсвечивается отдельно — вы видите, когда какое слово петь. Пиньинь и перевод тоже показываются."
+      "body_ru": "Петь китайские песни — самый приятный способ улучшить произношение. В караоке Blim каждый символ подсвечивается отдельно — вы видите, когда какое слово петь. Пиньинь и перевод тоже показываются.",
+      "body_en": "Singing Chinese songs is the most enjoyable way to improve pronunciation. In Blim's karaoke section, each character is highlighted individually so you can see when to sing each word. Pinyin and translation are also displayed."
     }
   ]
 }

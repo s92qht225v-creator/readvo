@@ -117,7 +117,7 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
         title={text.langSwitch}
         type="button"
       >
-        {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
+        {language.toUpperCase()}
       </button>
       <div className="page__font-controls">
         <button

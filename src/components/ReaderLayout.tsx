@@ -15,7 +15,7 @@
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import type { Page as PageType } from '@/types';
 import { Page } from './Page';
 import { GuidedLesson } from './GuidedLesson';

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import type { FlashcardDeckData, FlashcardWord } from '../types';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useLanguage } from '../hooks/useLanguage';

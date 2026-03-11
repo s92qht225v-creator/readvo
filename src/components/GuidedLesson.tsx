@@ -14,7 +14,7 @@
  */
 
 import React, { useState, useCallback, useMemo } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import type { Page as PageType } from '../types';
 import type { Language } from '../types/ui-state';
 import { Section } from './Section';

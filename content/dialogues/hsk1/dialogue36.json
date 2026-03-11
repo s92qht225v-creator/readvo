@@ -5,6 +5,7 @@
   "pinyin": "Nǐ dǎ cuò le",
   "titleTranslation": "Noto'g'ri terdingiz",
   "titleTranslation_ru": "Вы ошиблись номером",
+  "titleTranslation_en": "You dialed the wrong number",
   "level": 1,
   "sections": [
     {
@@ -246,18 +247,138 @@
   "tag": "telefon",
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3",
+  "vocab": [
+    {
+      "zh": "喂",
+      "py": "wèi",
+      "uz": "alo",
+      "ru": "алло",
+      "ex": "喂，你好！",
+      "expy": "Wèi, nǐ hǎo!",
+      "ex_uz": "Alo, salom!",
+      "ex_ru": "Алло, здравствуйте!"
+    },
+    {
+      "zh": "请问",
+      "py": "qǐngwèn",
+      "uz": "kechirasiz / aytingchi",
+      "ru": "скажите пожалуйста",
+      "ex": "请问，这是哪儿？",
+      "expy": "Qǐngwèn, zhè shì nǎr?",
+      "ex_uz": "Kechirasiz, bu qayer?",
+      "ex_ru": "Скажите, где это?"
+    },
+    {
+      "zh": "打",
+      "py": "dǎ",
+      "uz": "termoq / qo'ng'iroq qilmoq",
+      "ru": "набирать / звонить",
+      "ex": "我给你打电话。",
+      "expy": "Wǒ gěi nǐ dǎ diànhuà.",
+      "ex_uz": "Men senga telefon qilaman.",
+      "ex_ru": "Я тебе позвоню."
+    },
+    {
+      "zh": "错",
+      "py": "cuò",
+      "uz": "noto'g'ri / xato",
+      "ru": "неправильно / ошибка",
+      "ex": "这个字写错了。",
+      "expy": "Zhège zì xiě cuò le.",
+      "ex_uz": "Bu harf noto'g'ri yozilgan.",
+      "ex_ru": "Этот иероглиф написан неправильно."
+    },
+    {
+      "zh": "不好意思",
+      "py": "bù hǎoyìsi",
+      "uz": "uzr so'rayman",
+      "ru": "извините / простите",
+      "ex": "不好意思，我来晚了。",
+      "expy": "Bù hǎoyìsi, wǒ lái wǎn le.",
+      "ex_uz": "Uzr, men kech keldim.",
+      "ex_ru": "Извините, я опоздал."
+    },
+    {
+      "zh": "没关系",
+      "py": "méi guānxi",
+      "uz": "hech gap emas",
+      "ru": "ничего страшного",
+      "ex": "没关系，下次注意。",
+      "expy": "Méi guānxi, xià cì zhùyì.",
+      "ex_uz": "Hech gap emas, keyingi safar ehtiyot bo'ling.",
+      "ex_ru": "Ничего, в следующий раз будь внимательнее."
+    }
+  ],
   "extraVocabSubtitle_uz": "Telefon qo'ng'iroqlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме телефонных звонков",
   "extraVocab": [
     { "zh": "电话", "py": "diànhuà", "uz": "telefon", "ru": "телефон" },
-    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "telefon qilmoq", "ru": "звонить" },
     { "zh": "接电话", "py": "jiē diànhuà", "uz": "telefonga javob bermoq", "ru": "ответить на звонок" },
     { "zh": "挂电话", "py": "guà diànhuà", "uz": "telefon qo'ymoq", "ru": "положить трубку" },
     { "zh": "号码", "py": "hàomǎ", "uz": "raqam", "ru": "номер" },
     { "zh": "短信", "py": "duǎnxìn", "uz": "SMS xabar", "ru": "СМС-сообщение" },
-    { "zh": "占线", "py": "zhànxiàn", "uz": "band (telefon)", "ru": "занято (линия)" },
-    { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
-    { "zh": "联系", "py": "liánxì", "uz": "bog'lanmoq", "ru": "связаться" },
     { "zh": "回电话", "py": "huí diànhuà", "uz": "qayta qo'ng'iroq qilmoq", "ru": "перезвонить" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "请问 + 是...吗？",
+      "title_uz": "请问是...吗？ — muloyimlik bilan so'rash",
+      "title_ru": "请问是...吗？ — вежливо спросить",
+      "desc_uz": "\"请问\" (kechirasiz) bilan gap boshlab, \"是...吗？\" bilan savol berish — muloyim so'rov shakli.",
+      "desc_ru": "\"请问\" (скажите) в начале + \"是...吗？\" — вежливая форма вопроса.",
+      "formula": "请问 + 是 + Ism + 吗？",
+      "formula_ru": "请问 + 是 + Имя + 吗？",
+      "examples": [
+        { "zh": "请问是小李吗？", "py": "Qǐngwèn shì Xiǎo Lǐ ma?", "uz": "Kechirasiz, bu Xiao Limi?", "ru": "Скажите, это Сяо Ли?" },
+        { "zh": "请问是王老师吗？", "py": "Qǐngwèn shì Wáng lǎoshī ma?", "uz": "Kechirasiz, bu Wang o'qituvchimi?", "ru": "Скажите, это учитель Ван?" }
+      ],
+      "tip_uz": "\"请问\" telefon suhbatlarida va notanish odamlardan so'rashda ishlatiladi.",
+      "tip_ru": "\"请问\" используется в телефонных разговорах и при обращении к незнакомым людям."
+    },
+    {
+      "pattern": "Fe'l + 错了",
+      "title_uz": "Fe'l + 错了 — noto'g'ri qilmoq",
+      "title_ru": "Глагол + 错了 — сделать неправильно",
+      "desc_uz": "\"错\" fe'ldan keyin kelib, ish noto'g'ri bajarilganini bildiradi. \"了\" o'tgan zamonni ko'rsatadi.",
+      "desc_ru": "\"错\" после глагола показывает, что действие выполнено неправильно. \"了\" указывает на прошедшее время.",
+      "formula": "Fe'l + 错 + 了",
+      "formula_ru": "Глагол + 错 + 了",
+      "examples": [
+        { "zh": "你打错了。", "py": "Nǐ dǎ cuò le.", "uz": "Noto'g'ri terdingiz.", "ru": "Вы ошиблись номером." },
+        { "zh": "我写错了。", "py": "Wǒ xiě cuò le.", "uz": "Men noto'g'ri yozdim.", "ru": "Я написал неправильно." }
+      ],
+      "tip_uz": "\"打错了\" telefonda eng ko'p ishlatiladigan ibora — noto'g'ri raqam terilganda.",
+      "tip_ru": "\"打错了\" — самая частая фраза по телефону, когда набрали неправильный номер."
+    },
+    {
+      "pattern": "不好意思",
+      "title_uz": "不好意思 — kechirim so'rash",
+      "title_ru": "不好意思 — извиниться",
+      "desc_uz": "\"不好意思\" — yengil uzr so'rash uchun ishlatiladi. \"对不起\" dan yengilroq.",
+      "desc_ru": "\"不好意思\" — лёгкое извинение. Мягче, чем \"对不起\".",
+      "formula": "不好意思 (+ sabab)",
+      "formula_ru": "不好意思 (+ причина)",
+      "examples": [
+        { "zh": "不好意思。", "py": "Bù hǎoyìsi.", "uz": "Uzr so'rayman.", "ru": "Извините." },
+        { "zh": "不好意思，我来晚了。", "py": "Bù hǎoyìsi, wǒ lái wǎn le.", "uz": "Uzr, men kech keldim.", "ru": "Извините, я опоздал." }
+      ],
+      "tip_uz": "\"不好意思\" — kundalik hayotda eng ko'p ishlatiladigan uzr so'zi. \"对不起\" — jiddiyroq holatlar uchun.",
+      "tip_ru": "\"不好意思\" — самое частое извинение в быту. \"对不起\" — для более серьёзных ситуаций."
+    },
+    {
+      "pattern": "没关系",
+      "title_uz": "没关系 — javob: hech gap emas",
+      "title_ru": "没关系 — ответ: ничего страшного",
+      "desc_uz": "\"没关系\" — uzr so'raganda javob sifatida ishlatiladi. \"Hech gap emas\" degan ma'noni beradi.",
+      "desc_ru": "\"没关系\" — ответ на извинение. Означает \"ничего страшного\".",
+      "formula": "没关系 (+ qo'shimcha gap)",
+      "formula_ru": "没关系 (+ дополнение)",
+      "examples": [
+        { "zh": "没关系。", "py": "Méi guānxi.", "uz": "Hech gap emas.", "ru": "Ничего страшного." },
+        { "zh": "没关系，我不急。", "py": "Méi guānxi, wǒ bù jí.", "uz": "Hech gap emas, men shoshilmayapman.", "ru": "Ничего, я не тороплюсь." }
+      ],
+      "tip_uz": "\"没关系\" va \"不好意思\" juftligi xitoy tilida eng ko'p ishlatiladigan uzr-javob juftligi.",
+      "tip_ru": "Пара \"不好意思\" — \"没关系\" — самая частая формула извинения и ответа в китайском."
+    }
   ]
 }

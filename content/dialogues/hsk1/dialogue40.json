@@ -5,6 +5,7 @@
   "pinyin": "Diǎn cài",
   "titleTranslation": "Ovqat buyurtma berish",
   "titleTranslation_ru": "Заказ еды",
+  "titleTranslation_en": "Ordering food",
   "level": 1,
   "sections": [
     {
@@ -383,14 +384,34 @@
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3",
   "vocab": [
     {
-      "zh": "服务员",
-      "py": "fúwùyuán",
-      "uz": "ofitsiant",
-      "ru": "официант",
-      "ex": "服务员，请来一杯水。",
-      "expy": "Fúwùyuán, qǐng lái yì bēi shuǐ.",
-      "ex_uz": "Ofitsiant, bir stakan suv olib keling.",
-      "ex_ru": "Официант, принесите стакан воды, пожалуйста."
+      "zh": "点菜",
+      "py": "diǎn cài",
+      "uz": "ovqat buyurtma bermoq",
+      "ru": "заказать еду",
+      "ex": "我们先看菜单再点菜。",
+      "expy": "Wǒmen xiān kàn càidān zài diǎn cài.",
+      "ex_uz": "Avval menyuni ko'raylik, keyin buyurtma beramiz.",
+      "ex_ru": "Сначала посмотрим меню, потом закажем."
+    },
+    {
+      "zh": "来",
+      "py": "lái",
+      "uz": "olib keling (buyurtma)",
+      "ru": "дайте, принесите (при заказе)",
+      "ex": "来一杯茶。",
+      "expy": "Lái yì bēi chá.",
+      "ex_uz": "Bir piyola choy olib keling.",
+      "ex_ru": "Принесите чашку чая."
+    },
+    {
+      "zh": "一份",
+      "py": "yí fèn",
+      "uz": "bir porsiya",
+      "ru": "одна порция",
+      "ex": "来一份炒饭。",
+      "expy": "Lái yí fèn chǎofàn.",
+      "ex_uz": "Bir porsiya qovurilgan guruch olib keling.",
+      "ex_ru": "Одну порцию жареного риса."
     },
     {
       "zh": "辣",
@@ -401,6 +422,26 @@
       "expy": "Zhège cài tài là le.",
       "ex_uz": "Bu taom juda achchiq.",
       "ex_ru": "Это блюдо слишком острое."
+    },
+    {
+      "zh": "能",
+      "py": "néng",
+      "uz": "-a olmoq (qobiliyat)",
+      "ru": "мочь (способность)",
+      "ex": "你能喝冰水吗？",
+      "expy": "Nǐ néng hē bīng shuǐ ma?",
+      "ex_uz": "Muzli suv icha olasanmi?",
+      "ex_ru": "Ты можешь пить ледяную воду?"
+    },
+    {
+      "zh": "再",
+      "py": "zài",
+      "uz": "yana, qayta",
+      "ru": "ещё, снова",
+      "ex": "再来一碗米饭。",
+      "expy": "Zài lái yì wǎn mǐfàn.",
+      "ex_uz": "Yana bir kosa guruch olib keling.",
+      "ex_ru": "Ещё одну тарелку риса."
     }
   ],
   "extraVocabSubtitle_uz": "Restoran va ovqat buyurtmasi mavzusidagi foydali so'zlar",
@@ -414,5 +455,71 @@
     { "zh": "咸", "py": "xián", "uz": "sho'r", "ru": "солёный" },
     { "zh": "汤", "py": "tāng", "uz": "sho'rva", "ru": "суп" },
     { "zh": "筷子", "py": "kuàizi", "uz": "tayoqcha", "ru": "палочки для еды" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "来 + Miqdor + Ot",
+      "title_uz": "来 — restoranda buyurtma berish",
+      "title_ru": "来 — заказ в ресторане",
+      "desc_uz": "\"来\" restoranda buyurtma berishda \"olib keling\" ma'nosida ishlatiladi. Undan keyin miqdor so'zi va taom nomi keladi.",
+      "desc_ru": "\"来\" используется при заказе в ресторане в значении \"принесите\". После него идёт счётное слово и название блюда.",
+      "formula": "来 + Miqdor + Ot",
+      "formula_ru": "来 + Счётное слово + Сущ.",
+      "examples": [
+        { "zh": "来一份大盘鸡。", "py": "Lái yí fèn dàpánjī.", "uz": "Bir porsiya dapanji olib keling.", "ru": "Одну порцию дапаньцзи." },
+        { "zh": "来两杯咖啡。", "py": "Lái liǎng bēi kāfēi.", "uz": "Ikki piyola qahva olib keling.", "ru": "Два кофе, пожалуйста." },
+        { "zh": "来一碗面条。", "py": "Lái yì wǎn miàntiáo.", "uz": "Bir kosa lag'mon olib keling.", "ru": "Одну тарелку лапши." }
+      ],
+      "tip_uz": "\"来\" — norasmiy buyurtma usuli. Rasmiyroq: \"请给我...\" (menga bering).",
+      "tip_ru": "\"来\" — неформальный способ заказа. Формальнее: \"请给我...\" (дайте мне)."
+    },
+    {
+      "pattern": "能...吗？",
+      "title_uz": "能...吗？ — qobiliyatni so'rash",
+      "title_ru": "能...吗？ — спросить о способности",
+      "desc_uz": "\"能\" biror narsa qila olish qobiliyatini bildiradi. \"吗\" bilan savol tuziladi.",
+      "desc_ru": "\"能\" обозначает способность или возможность что-то сделать. С \"吗\" образует вопрос.",
+      "formula": "Ot + 能 + Fe'l + 吗？",
+      "formula_ru": "Сущ. + 能 + Глагол + 吗？",
+      "examples": [
+        { "zh": "你能吃辣吗？", "py": "Nǐ néng chī là ma?", "uz": "Achchiq yeya olasanmi?", "ru": "Ты можешь есть острое?" },
+        { "zh": "你能来吗？", "py": "Nǐ néng lái ma?", "uz": "Kela olasanmi?", "ru": "Ты сможешь прийти?" },
+        { "zh": "他能喝酒吗？", "py": "Tā néng hē jiǔ ma?", "uz": "U spirtli ichimlik icha oladimi?", "ru": "Он может пить алкоголь?" }
+      ],
+      "tip_uz": "\"能\" — jismoniy qobiliyat. \"可以\" — ruxsat. Farqi muhim!",
+      "tip_ru": "\"能\" — физическая способность. \"可以\" — разрешение. Разница важна!"
+    },
+    {
+      "pattern": "很 + Sifat",
+      "title_uz": "很 + sifat — ta'mni/xususiyatni tavsiflash",
+      "title_ru": "很 + прилагательное — описание вкуса/свойства",
+      "desc_uz": "\"很\" sifat oldida kelib \"juda\" ma'nosini beradi. Xitoy tilida sifat oldida ko'pincha \"很\" qo'yiladi.",
+      "desc_ru": "\"很\" перед прилагательным означает \"очень\". В китайском языке \"很\" часто ставится перед прилагательными.",
+      "formula": "Ot + 很 + Sifat",
+      "formula_ru": "Сущ. + 很 + Прил.",
+      "examples": [
+        { "zh": "大盘鸡很辣。", "py": "Dàpánjī hěn là.", "uz": "Dapanji juda achchiq.", "ru": "Дапаньцзи очень острое." },
+        { "zh": "今天很冷。", "py": "Jīntiān hěn lěng.", "uz": "Bugun juda sovuq.", "ru": "Сегодня очень холодно." },
+        { "zh": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "uz": "Bu taom juda mazali.", "ru": "Это блюдо очень вкусное." }
+      ],
+      "tip_uz": "Xitoy tilida \"很\" ko'pincha \"juda\" emas, oddiy ta'rif sifatida ishlatiladi.",
+      "tip_ru": "В китайском \"很\" часто используется не как \"очень\", а просто как связка перед прилагательным."
+    },
+    {
+      "pattern": "再来...",
+      "title_uz": "再来 — yana buyurtma berish",
+      "title_ru": "再来 — заказать ещё",
+      "desc_uz": "\"再\" (yana) + \"来\" (olib keling) — qo'shimcha buyurtma berishda ishlatiladi.",
+      "desc_ru": "\"再\" (ещё) + \"来\" (принесите) — используется для дополнительного заказа.",
+      "formula": "再来 + Miqdor + Ot",
+      "formula_ru": "再来 + Счётное слово + Сущ.",
+      "examples": [
+        { "zh": "再来一瓶冰的百事可乐。", "py": "Zài lái yì píng bīng de Bǎishì Kělè.", "uz": "Yana bitta sovuq Pepsi olib keling.", "ru": "Ещё одну бутылку холодного Пепси." },
+        { "zh": "再来一碗米饭。", "py": "Zài lái yì wǎn mǐfàn.", "uz": "Yana bir kosa guruch.", "ru": "Ещё одну тарелку риса." },
+        { "zh": "再来两杯啤酒。", "py": "Zài lái liǎng bēi píjiǔ.", "uz": "Yana ikki stakan pivo.", "ru": "Ещё два бокала пива." }
+      ],
+      "tip_uz": "\"再来\" — asosiy buyurtmadan keyin qo'shimcha so'rashda qulay.",
+      "tip_ru": "\"再来\" — удобное выражение для дополнительного заказа после основного."
+    }
   ]
 }

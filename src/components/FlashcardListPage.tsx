@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';

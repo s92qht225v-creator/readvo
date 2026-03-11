@@ -4,8 +4,10 @@ import path from 'path';
 export interface BlogSection {
   heading: string;
   heading_ru: string;
+  heading_en?: string;
   body: string;
   body_ru: string;
+  body_en?: string;
   image?: string;
   imageAlt?: string;
 }
@@ -14,12 +16,15 @@ export interface BlogPost {
   slug: string;
   title: string;
   title_ru: string;
+  title_en?: string;
   description: string;
   description_ru: string;
+  description_en?: string;
   date: string;
   heroImage?: string;
   intro?: string;
   intro_ru?: string;
+  intro_en?: string;
   published?: boolean;
   sections: BlogSection[];
 }

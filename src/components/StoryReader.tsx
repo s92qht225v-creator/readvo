@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';

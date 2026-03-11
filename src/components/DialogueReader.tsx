@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -85,6 +85,7 @@ interface DialogueData {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   audio_url?: string;
   sections: { id: string; sentences: Sentence[]; audio_url?: string }[];
   vocab?: VocabEntry[];
@@ -293,7 +294,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             <div className="dr-hero__level">HSK 1 · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{dialogue.title}</h1>
             <div className="dr-hero__pinyin">{dialogue.pinyin}</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation} —</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : language === 'en' ? (dialogue.titleTranslation_en || dialogue.titleTranslation) : dialogue.titleTranslation} —</div>
           </div>
         </div>
 

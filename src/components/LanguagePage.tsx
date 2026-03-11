@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
@@ -34,7 +34,7 @@ const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] =
   { id: 'writing', label: 'Yozish', label_ru: 'Письмо', label_en: 'Writing' },
   { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
   { id: 'karaoke', label: 'KTV' },
-  { id: 'grammar', label: 'Tika', label_ru: 'Грамм', label_en: 'Grammar' },
+  { id: 'grammar', label: 'Tika', label_ru: 'Грамматика', label_en: 'Grammar' },
   { id: 'tests', label: 'Test', label_ru: 'Тесты', label_en: 'Tests' },
 ];
 
@@ -499,10 +499,10 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     </div>
                     <div className="lp__writing-card__body">
                       <div className="lp__writing-card__title">
-                        {language === 'ru' ? set.title_ru : set.title}
+                        {language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title}
                       </div>
                       <div className="lp__writing-card__sub">
-                        {language === 'ru' ? set.subtitle_ru : set.subtitle}
+                        {language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle}
                       </div>
                     </div>
                     <div className="lp__card-arrow">›</div>

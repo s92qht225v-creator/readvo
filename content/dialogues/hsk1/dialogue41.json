@@ -5,6 +5,7 @@
   "pinyin": "Kěyǐ shuākǎ ma?",
   "titleTranslation": "Karta bilan to'lasa bo'ladimi?",
   "titleTranslation_ru": "Можно оплатить картой?",
+  "titleTranslation_en": "Can I pay by card?",
   "level": 1,
   "sections": [
     {
@@ -219,6 +220,56 @@
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3",
   "vocab": [
     {
+      "zh": "服务员",
+      "py": "fúwùyuán",
+      "uz": "ofitsiant",
+      "ru": "официант",
+      "ex": "服务员，请给我菜单。",
+      "expy": "Fúwùyuán, qǐng gěi wǒ càidān.",
+      "ex_uz": "Ofitsiant, menga menyuni bering.",
+      "ex_ru": "Официант, дайте мне меню."
+    },
+    {
+      "zh": "买单",
+      "py": "mǎidān",
+      "uz": "hisob so'ramoq",
+      "ru": "попросить счёт",
+      "ex": "吃完了，我们买单吧。",
+      "expy": "Chī wán le, wǒmen mǎidān ba.",
+      "ex_uz": "Yeb bo'ldik, hisob so'raylik.",
+      "ex_ru": "Мы доели, давай попросим счёт."
+    },
+    {
+      "zh": "一共",
+      "py": "yígòng",
+      "uz": "hammasi bo'lib",
+      "ru": "всего, итого",
+      "ex": "一共三个人。",
+      "expy": "Yígòng sān ge rén.",
+      "ex_uz": "Hammasi bo'lib uch kishi.",
+      "ex_ru": "Всего три человека."
+    },
+    {
+      "zh": "多少钱",
+      "py": "duōshao qián",
+      "uz": "qancha pul",
+      "ru": "сколько стоит",
+      "ex": "这个多少钱？",
+      "expy": "Zhège duōshao qián?",
+      "ex_uz": "Bu qancha turadi?",
+      "ex_ru": "Сколько это стоит?"
+    },
+    {
+      "zh": "可以",
+      "py": "kěyǐ",
+      "uz": "mumkin, bo'ladi",
+      "ru": "можно, разрешается",
+      "ex": "我可以坐这儿吗？",
+      "expy": "Wǒ kěyǐ zuò zhèr ma?",
+      "ex_uz": "Bu yerga o'tirsam bo'ladimi?",
+      "ex_ru": "Можно мне сесть здесь?"
+    },
+    {
       "zh": "刷卡",
       "py": "shuākǎ",
       "uz": "karta bilan to'lamoq",
@@ -241,5 +292,71 @@
     { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
     { "zh": "账单", "py": "zhàngdān", "uz": "hisob", "ru": "счёт" },
     { "zh": "小费", "py": "xiǎofèi", "uz": "choy puli", "ru": "чаевые" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "可以...吗？",
+      "title_uz": "可以...吗？ — ruxsat so'rash",
+      "title_ru": "可以...吗？ — просить разрешение",
+      "desc_uz": "\"可以\" so'zi \"吗\" bilan birgalikda biror narsa qilishga ruxsat so'rash uchun ishlatiladi.",
+      "desc_ru": "\"可以\" с \"吗\" используется для вежливого вопроса о разрешении что-либо сделать.",
+      "formula": "可以 + Fe'l + 吗？",
+      "formula_ru": "可以 + Глагол + 吗？",
+      "examples": [
+        { "zh": "可以刷卡吗？", "py": "Kěyǐ shuākǎ ma?", "uz": "Karta bilan to'lasa bo'ladimi?", "ru": "Можно оплатить картой?" },
+        { "zh": "可以坐这儿吗？", "py": "Kěyǐ zuò zhèr ma?", "uz": "Bu yerga o'tirsam bo'ladimi?", "ru": "Можно здесь сесть?" },
+        { "zh": "可以看一下吗？", "py": "Kěyǐ kàn yíxià ma?", "uz": "Bir ko'rsam bo'ladimi?", "ru": "Можно посмотреть?" }
+      ],
+      "tip_uz": "Javob: \"可以\" (bo'ladi) yoki \"不可以\" (bo'lmaydi).",
+      "tip_ru": "Ответ: \"可以\" (можно) или \"不可以\" (нельзя)."
+    },
+    {
+      "pattern": "一共 + Son + 块",
+      "title_uz": "一共...块 — umumiy narxni aytish",
+      "title_ru": "一共...块 — назвать общую сумму",
+      "desc_uz": "\"一共\" (hammasi bo'lib) narx yoki miqdorni umumlashtirishda ishlatiladi. \"块\" — xitoy yuanining og'zaki shakli.",
+      "desc_ru": "\"一共\" (всего) используется для обобщения суммы или количества. \"块\" — разговорная форма юаня.",
+      "formula": "一共 + Son + 块",
+      "formula_ru": "一共 + Число + 块",
+      "examples": [
+        { "zh": "一共一百二十块。", "py": "Yígòng yìbǎi èrshí kuài.", "uz": "Hammasi bo'lib 120 yuan.", "ru": "Всего сто двадцать юаней." },
+        { "zh": "一共五十块。", "py": "Yígòng wǔshí kuài.", "uz": "Hammasi bo'lib 50 yuan.", "ru": "Всего пятьдесят юаней." },
+        { "zh": "一共三个人。", "py": "Yígòng sān ge rén.", "uz": "Hammasi bo'lib uch kishi.", "ru": "Всего три человека." }
+      ],
+      "tip_uz": "\"块\" — og'zaki nutqda, \"元\" — rasmiy hujjatlarda ishlatiladi.",
+      "tip_ru": "\"块\" — в разговорной речи, \"元\" — в официальных документах."
+    },
+    {
+      "pattern": "多少钱？",
+      "title_uz": "多少钱？ — narxni so'rash",
+      "title_ru": "多少钱？ — спросить цену",
+      "desc_uz": "\"多少钱\" — narxni so'rashning eng oddiy va ko'p ishlatiladigan usuli. Oldiga predmet yoki \"一共\" qo'shilishi mumkin.",
+      "desc_ru": "\"多少钱\" — самый простой и частый способ спросить цену. Перед ним может стоять предмет или \"一共\".",
+      "formula": "(Ot / 一共) + 多少钱？",
+      "formula_ru": "(Сущ. / 一共) + 多少钱？",
+      "examples": [
+        { "zh": "一共多少钱？", "py": "Yígòng duōshao qián?", "uz": "Hammasi bo'lib qancha?", "ru": "Сколько всего?" },
+        { "zh": "这个多少钱？", "py": "Zhège duōshao qián?", "uz": "Bu qancha turadi?", "ru": "Сколько это стоит?" },
+        { "zh": "一杯咖啡多少钱？", "py": "Yì bēi kāfēi duōshao qián?", "uz": "Bir piyola qahva qancha?", "ru": "Сколько стоит чашка кофе?" }
+      ],
+      "tip_uz": "Do'konda, restoranda, taksida — har qanday joyda ishlatiladi.",
+      "tip_ru": "Используется везде: в магазине, ресторане, такси."
+    },
+    {
+      "pattern": "好的",
+      "title_uz": "好的 — rozilик bildirish",
+      "title_ru": "好的 — выразить согласие",
+      "desc_uz": "\"好的\" — iltimoс yoki so'rovga rozilik bildirish uchun ishlatiladi. \"好\" dan ko'ra rasmiyroq.",
+      "desc_ru": "\"好的\" — вежливое выражение согласия на просьбу или предложение. Чуть более формальное, чем просто \"好\".",
+      "formula": "好的 (mustaqil javob)",
+      "formula_ru": "好的 (самостоятельный ответ)",
+      "examples": [
+        { "zh": "好的，马上来。", "py": "Hǎo de, mǎshàng lái.", "uz": "Xo'p, hozir kelaman.", "ru": "Хорошо, сейчас приду." },
+        { "zh": "好的，没问题。", "py": "Hǎo de, méi wèntí.", "uz": "Xo'p, muammo yo'q.", "ru": "Хорошо, без проблем." },
+        { "zh": "好的，我知道了。", "py": "Hǎo de, wǒ zhīdào le.", "uz": "Xo'p, tushundim.", "ru": "Хорошо, понял." }
+      ],
+      "tip_uz": "Ofitsiantlar, xizmat ko'rsatuvchilar \"好的\" ni ko'p ishlatadi.",
+      "tip_ru": "Официанты и обслуживающий персонал часто используют \"好的\"."
+    }
   ]
 }

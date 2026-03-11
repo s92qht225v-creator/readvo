@@ -5,6 +5,16 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
 import { trackAll } from '@/utils/analytics';
 
+const VALID_LOCALES = ['uz', 'ru', 'en'];
+
+function getLocalePrefix(): string {
+  try {
+    const stored = localStorage.getItem('readvo-language');
+    if (stored && VALID_LOCALES.includes(stored)) return `/${stored}`;
+  } catch { /* ignore */ }
+  return '/uz';
+}
+
 const loadingStyle = {
   display: 'flex',
   justifyContent: 'center',
@@ -24,17 +34,19 @@ function TelegramCompleteInner() {
     ran.current = true;
 
     (async () => {
+      const lp = getLocalePrefix();
+
       try {
         const code = searchParams.get('code');
         const error = searchParams.get('error');
 
         if (error) {
-          router.replace(`/?error=${error}`);
+          router.replace(`${lp}/?error=${error}`);
           return;
         }
 
         if (!code) {
-          router.replace('/?error=no_auth_code');
+          router.replace(`${lp}/?error=no_auth_code`);
           return;
         }
 
@@ -50,7 +62,7 @@ function TelegramCompleteInner() {
 
         if (!res.ok) {
           const err = await res.json();
-          router.replace(`/?error=${err.error || 'callback_failed'}`);
+          router.replace(`${lp}/?error=${err.error || 'callback_failed'}`);
           return;
         }
 
@@ -69,17 +81,17 @@ function TelegramCompleteInner() {
 
         if (sessionError) {
           console.error('setSession error:', sessionError);
-          router.replace('/?error=set_session');
+          router.replace(`${lp}/?error=set_session`);
           return;
         }
 
         // Analytics: track registration/login
         trackAll('CompleteRegistration', 'registration', 'sign_up', { status: 'success' });
 
-        router.replace('/chinese');
+        router.replace(`${lp}/chinese`);
       } catch (err) {
         console.error('Telegram complete error:', err);
-        router.replace('/?error=complete_failed');
+        router.replace(`${lp}/?error=complete_failed`);
       }
     })();
   }, [router, searchParams]);

@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import Script from 'next/script';
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+import { getLocale } from 'next-intl/server';
 import '@/styles/reading.css';
-import { AuthProvider } from '@/hooks/useAuth';
 import { YandexPageView } from '@/components/YandexPageView';
 import { MetaPageView } from '@/components/MetaPageView';
 
@@ -12,30 +10,46 @@ const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: 'Xitoy tili o\'rganish — HSK darslari | Blim',
-    template: '%s | Blim',
-  },
-  description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul boshlang! | Изучайте китайский: HSK 1-6, флешкарты, караоке.',
-  openGraph: {
-    type: 'website',
-    locale: 'uz_UZ',
-    siteName: 'Blim',
+const meta: Record<string, { title: string; description: string; ogLocale: string }> = {
+  uz: {
     title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
-    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
+    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul boshlang!',
+    ogLocale: 'uz_UZ',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Xitoy tili o\'rganish — HSK darslari | Blim',
-    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul sinab ko\'ring!',
+  ru: {
+    title: 'Изучайте китайский язык — уроки HSK | Blim',
+    description: 'Изучайте китайский онлайн: HSK 1-6 диалоги, флешкарты, караоке и грамматика. Начните бесплатно!',
+    ogLocale: 'ru_RU',
   },
-  robots: {
-    index: true,
-    follow: true,
+  en: {
+    title: 'Learn Chinese — HSK Lessons | Blim',
+    description: 'Learn Chinese online: HSK 1-6 dialogues, flashcards, karaoke and grammar. Start for free!',
+    ogLocale: 'en_US',
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const m = meta[locale] || meta.uz;
+  return {
+    metadataBase: new URL(siteUrl),
+    title: { default: m.title, template: '%s | Blim' },
+    description: m.description,
+    openGraph: {
+      type: 'website',
+      locale: m.ogLocale,
+      siteName: 'Blim',
+      title: m.title,
+      description: m.description,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: m.title,
+      description: m.description,
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -44,14 +58,12 @@ export const viewport: Viewport = {
   themeColor: '#dc2626',
 };
 
-
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
-  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -105,11 +117,7 @@ fbq('track', 'PageView');`}
         </noscript>
         <YandexPageView />
         <MetaPageView />
-        <NextIntlClientProvider messages={messages}>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );

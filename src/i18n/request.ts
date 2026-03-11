@@ -1,21 +1,12 @@
 import { getRequestConfig } from 'next-intl/server';
-import { cookies, headers } from 'next/headers';
+import { routing } from './routing';
 
-const VALID_LOCALES = ['uz', 'ru', 'en'] as const;
+export default getRequestConfig(async ({ requestLocale }) => {
+  let locale = await requestLocale;
 
-export default getRequestConfig(async () => {
-  const cookieStore = await cookies();
-  let locale = cookieStore.get('blim-language')?.value;
-
-  if (!locale || !VALID_LOCALES.includes(locale as typeof VALID_LOCALES[number])) {
-    const accept = (await headers()).get('accept-language') || '';
-    if (accept.startsWith('ru')) {
-      locale = 'ru';
-    } else if (accept.startsWith('uz')) {
-      locale = 'uz';
-    } else {
-      locale = 'en';
-    }
+  // Validate locale — fall back to default if invalid
+  if (!locale || !routing.locales.includes(locale as (typeof routing.locales)[number])) {
+    locale = routing.defaultLocale;
   }
 
   return {

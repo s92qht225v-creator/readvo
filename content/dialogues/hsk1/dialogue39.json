@@ -5,6 +5,7 @@
   "pinyin": "Zuòyè xiě wán le ma?",
   "titleTranslation": "Uy vazifani yozib bo'ldingmi?",
   "titleTranslation_ru": "Домашнее задание дописал?",
+  "titleTranslation_en": "Did you finish your homework?",
   "level": 1,
   "sections": [
     {
@@ -307,6 +308,56 @@
       "expy": "Lǎoshī gěi le hěn duō zuòyè.",
       "ex_uz": "O'qituvchi ko'p uy vazifa berdi.",
       "ex_ru": "Учитель задал много домашнего задания."
+    },
+    {
+      "zh": "写",
+      "py": "xiě",
+      "uz": "yozmoq",
+      "ru": "писать",
+      "ex": "你在写什么？",
+      "expy": "Nǐ zài xiě shénme?",
+      "ex_uz": "Sen nima yozyapsan?",
+      "ex_ru": "Что ты пишешь?"
+    },
+    {
+      "zh": "完",
+      "py": "wán",
+      "uz": "tugatmoq / bitmoq",
+      "ru": "закончить / завершить",
+      "ex": "你吃完了吗？",
+      "expy": "Nǐ chī wán le ma?",
+      "ex_uz": "Yeb bo'ldingmi?",
+      "ex_ru": "Ты доел?"
+    },
+    {
+      "zh": "还",
+      "py": "hái",
+      "uz": "hali, yana",
+      "ru": "ещё",
+      "ex": "他还在学校。",
+      "expy": "Tā hái zài xuéxiào.",
+      "ex_uz": "U hali maktabda.",
+      "ex_ru": "Он ещё в школе."
+    },
+    {
+      "zh": "差",
+      "py": "chà",
+      "uz": "yetishmaslik / qolmoq",
+      "ru": "не хватать / осталось",
+      "ex": "还差两个人。",
+      "expy": "Hái chà liǎng ge rén.",
+      "ex_uz": "Yana ikki kishi yetishmayapti.",
+      "ex_ru": "Ещё не хватает двух человек."
+    },
+    {
+      "zh": "一半",
+      "py": "yíbàn",
+      "uz": "yarmi",
+      "ru": "половина",
+      "ex": "我吃了一半。",
+      "expy": "Wǒ chī le yíbàn.",
+      "ex_uz": "Men yarmini yedim.",
+      "ex_ru": "Я съел половину."
     }
   ],
   "extraVocabSubtitle_uz": "Maktab va uy vazifasi mavzusidagi foydali so'zlar",
@@ -315,11 +366,70 @@
     { "zh": "课文", "py": "kèwén", "uz": "dars matni", "ru": "текст урока" },
     { "zh": "练习", "py": "liànxí", "uz": "mashq", "ru": "упражнение" },
     { "zh": "复习", "py": "fùxí", "uz": "takrorlamoq", "ru": "повторять" },
-    { "zh": "预习", "py": "yùxí", "uz": "oldindan tayyorlanmoq", "ru": "готовиться заранее" },
     { "zh": "笔记", "py": "bǐjì", "uz": "yozuv / konspekt", "ru": "заметки / конспект" },
     { "zh": "成绩", "py": "chéngjì", "uz": "baho / natija", "ru": "оценка / результат" },
-    { "zh": "考试", "py": "kǎoshì", "uz": "imtihon", "ru": "экзамен" },
-    { "zh": "及格", "py": "jígé", "uz": "o'tmoq (imtihondan)", "ru": "сдать (экзамен)" },
-    { "zh": "不及格", "py": "bù jígé", "uz": "o'ta olmaslik", "ru": "не сдать (экзамен)" }
+    { "zh": "及格", "py": "jígé", "uz": "o'tmoq (imtihondan)", "ru": "сдать (экзамен)" }
+  ],
+  "grammarNotes": [
+    {
+      "pattern": "Fe'l + 完",
+      "title_uz": "Fe'l + 完 — ishni tugatish",
+      "title_ru": "Глагол + 完 — завершение действия",
+      "desc_uz": "\"完\" fe'ldan keyin kelib, ish tugaganini bildiradi. Bu natija to'ldiruvchisi (result complement) hisoblanadi.",
+      "desc_ru": "\"完\" ставится после глагола и показывает, что действие завершено. Это результативное дополнение.",
+      "formula": "Fe'l + 完 (+ 了)",
+      "formula_ru": "Глагол + 完 (+ 了)",
+      "examples": [
+        { "zh": "作业写完了。", "py": "Zuòyè xiě wán le.", "uz": "Uy vazifa yozib bo'ldi.", "ru": "Домашнее задание дописано." },
+        { "zh": "书看完了吗？", "py": "Shū kàn wán le ma?", "uz": "Kitobni o'qib bo'ldingmi?", "ru": "Книгу дочитал?" }
+      ],
+      "tip_uz": "\"完\" faqat tugashi mumkin bo'lgan ishlar bilan ishlatiladi: yozmoq, o'qimoq, yemoq va h.k.",
+      "tip_ru": "\"完\" используется только с действиями, которые можно завершить: писать, читать, есть и т.д."
+    },
+    {
+      "pattern": "还没 + Fe'l",
+      "title_uz": "还没 + Fe'l — hali qilmadim",
+      "title_ru": "还没 + Глагол — ещё не сделал",
+      "desc_uz": "\"还没\" hali biror narsa qilinmaganini bildiradi. Ish kutilmoqda, lekin hali tugamagan.",
+      "desc_ru": "\"还没\" указывает, что действие ещё не выполнено. Ожидается, но пока не завершено.",
+      "formula": "还没 + Fe'l (+ 完)",
+      "formula_ru": "还没 + Глагол (+ 完)",
+      "examples": [
+        { "zh": "还没写完。", "py": "Hái méi xiě wán.", "uz": "Hali yozib bo'lmadim.", "ru": "Ещё не дописал." },
+        { "zh": "他还没来。", "py": "Tā hái méi lái.", "uz": "U hali kelmadi.", "ru": "Он ещё не пришёл." }
+      ],
+      "tip_uz": "\"还没\" — inkor shakl. \"已经...了\" — tasdiqlash shakl: \"已经写完了\" (allaqachon yozib bo'ldi).",
+      "tip_ru": "\"还没\" — отрицание. Утверждение: \"已经...了\" — \"已经写完了\" (уже дописал)."
+    },
+    {
+      "pattern": "还差 + Miqdor",
+      "title_uz": "还差 + Miqdor — yana qancha qoldi",
+      "title_ru": "还差 + Количество — сколько ещё осталось",
+      "desc_uz": "\"还差\" biror narsaning yetishmasligini yoki qolganini bildiradi. Undan keyin miqdor keladi.",
+      "desc_ru": "\"还差\" показывает нехватку или оставшееся количество. После него идёт количество.",
+      "formula": "还差 + Miqdor / 多少",
+      "formula_ru": "还差 + Количество / 多少",
+      "examples": [
+        { "zh": "还差多少？", "py": "Hái chà duōshao?", "uz": "Yana qancha qoldi?", "ru": "Сколько ещё осталось?" },
+        { "zh": "还差一半。", "py": "Hái chà yíbàn.", "uz": "Yana yarmi qoldi.", "ru": "Ещё половина." }
+      ],
+      "tip_uz": "\"还差\" vaqt uchun ham ishlatiladi: \"还差五分钟\" (yana 5 daqiqa qoldi).",
+      "tip_ru": "\"还差\" также используется для времени: \"还差五分钟\" (ещё 5 минут осталось)."
+    },
+    {
+      "pattern": "能 + Fe'l + 吗？",
+      "title_uz": "能...吗？ — qobiliyatni so'rash",
+      "title_ru": "能...吗？ — спросить о возможности",
+      "desc_uz": "\"能\" biror ishni qila olish qobiliyatini bildiradi. \"吗\" bilan savol tuziladi.",
+      "desc_ru": "\"能\" выражает способность или возможность что-то сделать. С \"吗\" образует вопрос.",
+      "formula": "能 + Fe'l (+ Natija) + 吗？",
+      "formula_ru": "能 + Глагол (+ Результат) + 吗？",
+      "examples": [
+        { "zh": "今天能写完吗？", "py": "Jīntiān néng xiě wán ma?", "uz": "Bugun yozib tugata olasanmi?", "ru": "Сегодня сможешь дописать?" },
+        { "zh": "你能来吗？", "py": "Nǐ néng lái ma?", "uz": "Kela olasanmi?", "ru": "Ты сможешь прийти?" }
+      ],
+      "tip_uz": "\"能\" qisqa javob uchun ham ishlatiladi: \"能。\" (olaman) yoki \"不能。\" (ololmayman).",
+      "tip_ru": "\"能\" можно использовать как краткий ответ: \"能。\" (смогу) или \"不能。\" (не смогу)."
+    }
   ]
 }

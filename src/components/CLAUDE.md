@@ -3,7 +3,7 @@
 ## Key Features
 
 ### Toggle Controls
-- **Header controls**: Language toggle (RU/UZ), font size (A-/A+)
+- **Header controls**: Language toggle (3-way cycle: UZ→RU→EN→UZ, button shows current language label), font size (A-/A+)
 - **Lesson bottom nav toggles**: Pinyin and Translation (Tarjima) buttons in the center of the fixed bottom navigation bar
 - **Story bottom bar toggles**: Three buttons in order: Tarjima, Fokus, Pinyin. Slim fixed bar at bottom (stories don't use lesson bottom nav)
 - **Translation panel**: Fixed panel below header showing translation of tapped sentence. Page has permanent extra `1em` top padding to prevent panel from overlapping content (padding does NOT change when panel toggles)
@@ -34,7 +34,7 @@
 - Session progress bar, completion screen with stats (known vs unknown count)
 - Restart options: all cards or only unknown cards (reshuffled)
 - Pinyin toggle: hide/show pinyin on front face
-- UZ/RU language toggle for translations
+- UZ/RU/EN language toggle for translations
 - Optional audio playback button per card (uses `useAudioPlayer` singleton)
 - Cards shuffled on mount via `useEffect` to avoid hydration mismatch
 - Data loaded from `content/flashcards/{bookId}.json`
@@ -92,7 +92,7 @@
   - Audio pauses during word press, resumes on release
   - Words wrapped in `<span class="story__word">` with `story__word--active` highlight (background, not color)
 - **Focus mode**: Shows one sentence at a time, centered. Toggled via Fokus button in bottom bar.
-  - Sentence text area has fixed `min-height: 9em` to prevent nav buttons from jumping on multi-line sentences
+  - Sentence text area has `min-height: 35vh; justify-content: center` to vertically center text on screen
   - Navigation row: ‹ (prev) | ▶/⏸ (play/pause) | › (next) — three symmetric buttons. SVG chevrons for nav, blue circle for play.
   - Counter below nav buttons: "9 / 30" (small centered label)
   - Prev/next navigation auto-plays the target sentence's audio
@@ -121,7 +121,7 @@
   - Already sung character (active line): `#66bb6a` (green)
 - **No CSS transitions on lines**: `.karaoke__line` has no `transition` property — instant color changes prevent flickering when active line changes (transitions caused visible flicker between states)
 - **Auto-scroll**: Active line auto-scrolls to center via `scrollIntoView({ behavior: 'smooth', block: 'center' })`
-- **Font size**: Adjustable via A-/A+ floating pill (`.dr-font-controls`, fixed right-center). Transparent + faded by default, visible on hover. Lyrics container uses inline `fontSize` percentage. Line font size uses `em` (not `rem`) to inherit from parent.
+- **Font size**: Adjustable via A-/A+ floating pill (`.dr-font-controls`, fixed right at `top: 58%`). Transparent + faded by default, visible on hover. Lyrics container uses inline `fontSize` percentage. Line font size uses `em` (not `rem`) to inherit from parent.
 - **Audio system**: Direct `HTMLAudioElement` via `useRef`. Lazy-loaded (`preload: 'none'`), src set on first play. `requestAnimationFrame` loop for smooth time tracking.
 - **Controls panel** (fixed, above bottom bar, z-index 91):
   - Progress/seek bar (clickable, blue `#4fc3f7` fill)
@@ -142,7 +142,7 @@
 - Renders `<footer className="home__footer">` with:
   - Inline correction button ("Xato haqida xabar berish") — visible to all users (logged-in and anonymous), hidden on `/`
   - Expandable form: reason dropdown (6 options) + textarea
-  - "Blim — Interaktiv til darsliklari" bilingual footer text
+  - "Blim — Interaktiv til darsliklari" trilingual footer text
 - **API**: `POST /api/corrections` — JWT auth, sends Telegram message to admin. Unauthenticated submissions return 401.
 - **Footer spacing**: `padding-bottom: calc(80px + ...)` clears fixed bottom bars on reader/story/dialogue pages
 - **Not in KaraokePlayer**: Excluded due to full-screen layout with fixed controls that overlap the footer
@@ -160,7 +160,7 @@
 - **Home view**: stat cards (due count, mastery %, total); Start button (disabled if 0 due); reset link with `confirm()` dialog
 - **Practice view**: `HanziCanvas` (left panel) + info panel (right); Erase/Show buttons below canvas; grade buttons (Esimda yo'q / Bilaman!) appear after quiz complete; session progress counter
 - **Done view**: Barakalla!/Отлично!, cards reviewed + mistakes count, restart button
-- **`HanziWriterPractice` receives `lang: 'uz'|'ru'` as prop from `LanguagePage`** — does NOT call `useLanguage()` inside
+- **`HanziWriterPractice` receives `lang: 'uz'|'ru'|'en'` as prop from `LanguagePage`** — does NOT call `useLanguage()` inside
 - **`revealAll`**: `number` prop on `HanziCanvas`; increment to trigger show-all animation. `showAnswer` state is a counter, not boolean.
 
 #### HanziCanvas Engine
@@ -190,6 +190,7 @@
 - **Border-radius**: Globally reduced — 16→10, 12→8, 8→6, 6→4, 4→3px. Circles (50%) unchanged.
 - **Tab labels (UZ)**: Dialog | Yozish | Flesh | KTV | Tika | Test
 - **Tab labels (RU)**: Диалог | Письмо | Флеш | KTV | Грамм | Тесты
+- **Tab labels (EN)**: Dialogue | Writing | Flash | KTV | Grammar | Tests
 - **Tab IDs**: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
 
 ### Styling Conventions
@@ -269,12 +270,12 @@ main.home (reuses home styling, no top padding)
 │       │       ├── button.home__menu-btn (44px, hamburger icon)
 │       │       └── div.home__menu-dropdown (right-aligned dropdown)
 │       │           ├── div.home__menu-user (name + email, if logged in)
-│       │           ├── div.home__menu-section-label ("Til" / "Язык")
-│       │           ├── div.home__menu-lang-row (O'zbekcha / Русский toggle buttons)
-│       │           ├── div.home__menu-section-label ("Men o'rganaman" / "Я изучаю")
+│       │           ├── div.home__menu-section-label ("Til" / "Язык" / "Language")
+│       │           ├── div.home__menu-lang-row > select.home__menu-lang-select (O'zbekcha / Русский / English dropdown)
+│       │           ├── div.home__menu-section-label ("Men o'rganaman" / "Я изучаю" / "I'm learning")
 │       │           ├── div.home__menu-lang-row (中文 button)
-│       │           ├── button.home__menu-item (To'lov / Оплата)
-│       │           └── button.home__menu-item (Chiqish / Выйти, if logged in)
+│       │           ├── button.home__menu-item (To'lov / Оплата / Payment)
+│       │           └── button.home__menu-item (Chiqish / Выйти / Log out, if logged in)
 ├── nav.lp__tabs (sticky below hero, red gradient, full-width)
 │   └── div.lp__tabs-inner > button.lp__tab (Dialog | Yozish | Flesh | KTV | Tika | Test)
 ├── div.lp__seg-bar (HSK level pills, hidden for karaoke + writing tabs)
@@ -370,7 +371,7 @@ div.reader
 │   └── p.story__translation-panel-text
 ├── article.story (independent container, NOT .page)
 │   ├── div.story__focus (focus mode: single sentence view)
-│   │   ├── p.story__focus-text (centered, min-height 9em)
+│   │   ├── p.story__focus-text (centered, min-height 35vh)
 │   │   ├── div.story__focus-nav (← ▶ → buttons row)
 │   │   │   ├── button.story__focus-nav-btn (48px grey circle, SVG chevron)
 │   │   │   ├── button.story__focus-play-btn (44px blue circle, play/pause)
@@ -398,7 +399,7 @@ div.karaoke (light theme: #f5f5f5 bg, flex column, max-width 900px)
 │       └── ruby.karaoke__char (per character, timestamp-based highlighting)
 │           ├── character text
 │           └── rt.karaoke__rt (pinyin, toggleable via visibility)
-├── div.dr-font-controls (fixed right-center pill, transparent by default, visible on hover)
+├── div.dr-font-controls (fixed right pill at top: 58%, transparent by default, visible on hover)
 │   ├── button.dr-font-btn (A+)
 │   ├── div.dr-font-divider
 │   └── button.dr-font-btn (A-)

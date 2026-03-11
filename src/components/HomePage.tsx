@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { PageFooter } from './PageFooter';
@@ -164,7 +164,7 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
             <span className="home__user-name">{user.name}</span>
           </button>
           <button className="home__lang-btn" onClick={toggleLanguage} type="button">
-            {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
+            {language.toUpperCase()}
           </button>
         </div>
         <h1 className="home__logo">
@@ -227,7 +227,7 @@ function LandingPage({ language, toggleLanguage, s }: {
           </div>
           <div className="landing__nav-right">
             <button className="landing__lang-btn" onClick={toggleLanguage} type="button">
-              {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
+              {language.toUpperCase()}
             </button>
             <button className="landing__login-btn" onClick={() => router.push('/login')} type="button">
               {s.login}

@@ -19,9 +19,10 @@ All styles live in `src/styles/reading.css`.
 - `.home__menu` - Hamburger menu wrapper (`position: relative`). Shared via `BannerMenu.tsx` component.
 - `.home__menu-btn` - Hamburger button (`44px`, `border-radius: 8px`, semi-transparent white on red banner)
 - `.home__menu-dropdown` - Right-aligned dropdown (`position: absolute`, `right: 0`, white bg, shadow, `min-width: 180px`)
-- `.home__menu-section-label` - Section label in menu (uppercase grey, e.g., "Til", "Я изучаю")
-- `.home__menu-lang-row` - Flex row for language toggle buttons (`gap: 6px`, `padding: 6px 16px 10px`)
-- `.home__menu-lang-btn` / `--active` - Language toggle buttons (`flex: 1`, active = red `#dc2626` bg)
+- `.home__menu-section-label` - Section label in menu (uppercase grey, e.g., "Til", "Язык", "Language")
+- `.home__menu-lang-row` - Flex row for language selector (`gap: 6px`, `padding: 6px 16px 10px`)
+- `.home__menu-lang-select` - Native `<select>` dropdown for 3-language selection (O'zbekcha / Русский / English). No custom CSS class in reading.css — uses browser-default `<select>` styling.
+- `.home__menu-lang-btn` / `--active` - Language buttons (used for 中文 target language link, `flex: 1`, active = red `#dc2626` bg)
 - `.home__menu-item` - Menu item button (`min-height: 44px`, full-width, hover `#f5f5f5`)
 - `.home__menu-user` - User info display (name + email, non-clickable, `#f9f9f9` bg)
 - `.home__menu-divider` - Thin separator line (`1px solid #e5e5e5`)
@@ -72,8 +73,8 @@ All styles live in `src/styles/reading.css`.
 - `.story__bottom-bar` - Fixed bottom toggle bar (grey bg, backdrop blur, z-index 90)
 - `.story__bottom-bar-inner` - Flex container for toggle buttons (Tarjima, Fokus, Pinyin)
 - `.story__play-fab` - Floating action button (56px blue circle, above bottom bar). Normal mode only: play/pause full-story audio.
-- `.story__focus` - Focus mode container (flex column, centered)
-- `.story__focus-text` - Centered sentence text (`font-size: 1.5em`, `min-height: 9em` for stable nav)
+- `.story__focus` - Focus mode container (flex column, centered, `gap: 16px`)
+- `.story__focus-text` - Centered sentence text (`font-size: 1.5em`, `min-height: 35vh`, `justify-content: center`)
 - `.story__focus-nav` - Button row: prev, play, next (flex, centered, gap 16px)
 - `.story__focus-nav-btn` - Prev/next buttons (48px grey circle, no border, SVG chevrons)
 - `.story__focus-play-btn` - Inline play/pause button (44px blue circle, toggles ▶/⏸)
@@ -161,7 +162,7 @@ All styles live in `src/styles/reading.css`.
 - `.karaoke__skip-btn` - Rewind/forward 15s button (44px, transparent bg, circular arrow icon)
 - `.karaoke__skip-label` - "15" text overlay on skip buttons (8px, absolute centered)
 - `.karaoke .story__translation-panel` - Sticky below hero (`position: sticky; top: 0; margin-bottom: -45px`) — no layout shift
-- `.dr-font-controls` - Fixed right-center pill (`position: fixed; right: 16px; top: 50%`). Transparent + `opacity: 0.35` by default; on hover: `opacity: 1`, white bg, box-shadow
+- `.dr-font-controls` - Fixed right pill (`position: fixed; right: 16px; top: 58%`). Transparent + `opacity: 0.35` by default; on hover: `opacity: 1`, white bg, box-shadow
 - `.dr-font-btn` - Font size button (40×44px, transparent bg, `color: #555`)
 - `.dr-font-divider` - Divider between A+/A- (transparent by default, `#e5e5e5` on hover)
 
@@ -189,6 +190,6 @@ All styles live in `src/styles/reading.css`.
 ## Reader Button Sizes (NEVER change without asking user)
 These sizes apply across ALL reader pages (lessons, stories, dialogues, karaoke):
 - `.reader__nav-toggle`: `padding: 4px 12px; min-height: 32px` (Pinyin/Tarjima/Fokus toggles)
-- `.page__lang-btn`: `padding: 4px 10px; min-height: 32px; background: #dc2626; color: #fff` (RU/UZ language toggle, red with white text, no hover change)
+- `.page__lang-btn`: `padding: 4px 10px; min-height: 32px; background: #dc2626; color: #fff` (3-way language cycle toggle UZ→RU→EN→UZ, shows next language label: RU/EN/UZ, red with white text, no hover change)
 - `.page__font-btn`: `padding: 4px 8px; min-height: 32px` (A-/A+ font size buttons)
 - Karaoke inherits these base sizes (no karaoke-specific size overrides needed)

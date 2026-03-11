@@ -40,13 +40,13 @@ const nextConfig = {
       45:'tell-me-next-time',46:'losing-weight',47:'ramadan',
     };
     const dialogueRedirects = Object.entries(slugMap).map(([n, slug]) => ({
-      source: `/chinese/hsk1/dialogues/hsk1-dialogue${n}`,
-      destination: `/chinese/hsk1/dialogues/${slug}`,
+      source: `/:locale/chinese/hsk1/dialogues/hsk1-dialogue${n}`,
+      destination: `/:locale/chinese/hsk1/dialogues/${slug}`,
       permanent: true,
     }));
     return [
       ...dialogueRedirects,
-      { source: '/chinese/hsk1', destination: '/chinese', permanent: true },
+      { source: '/:locale/chinese/hsk1', destination: '/:locale/chinese', permanent: true },
     ];
   },
 

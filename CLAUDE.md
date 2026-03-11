@@ -8,13 +8,14 @@ Always read the relevant CLAUDE.md file(s) before modifying any code. Check whic
 - Editing `src/styles/` files → read `src/styles/CLAUDE.md`
 
 ## Project Overview
-Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.
+Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek, Russian, and English-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.
 
 ## Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS (reading.css) with CSS custom properties
 - **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
+- **i18n**: next-intl ^4.8.3 (cookie-based locale, no i18n routing)
 - **State Management**: React hooks (useState, useCallback, useMemo)
 - **Storage**: Supabase Storage (images and audio files)
 - **Database**: Supabase (project: miruwaeplbzfqmdwacsh)
@@ -121,9 +122,11 @@ Example routes:
 │   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
 │   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
 │   │   └── Paywall.tsx               # Paywall overlay (trial expired)
+│   ├── i18n/
+│   │   └── request.ts         # next-intl server config (reads blim-language cookie)
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
-│   │   ├── useLanguage.ts     # UZ/RU language toggle/set (localStorage)
+│   │   ├── useLanguage.ts     # UZ/RU/EN language toggle/set (localStorage + cookie)
 │   │   ├── useAuth.tsx        # Telegram auth provider + context
 │   │   ├── useRequireAuth.ts  # Auth guard (redirects to / if not logged in)
 │   │   └── useTrial.ts       # Trial/subscription status hook
@@ -160,6 +163,10 @@ Example routes:
 │   └── english/               # English content (see content/english/CLAUDE.md)
 │       └── destination-b1/
 │           └── unit1-page1.json  # English grammar content (Destination B1)
+├── messages/                   # next-intl translation files (22 namespaces, ~348 lines each)
+│   ├── uz.json                # Uzbek UI translations
+│   ├── ru.json                # Russian UI translations
+│   └── en.json                # English UI translations
 ├── .env.local                  # Supabase credentials
 └── public/
     ├── logo.svg               # White text logo (for dark backgrounds: banner, karaoke)
@@ -206,24 +213,40 @@ Page → Section → Sentence → Word
 - `texterror` - Text error (find & correct errors in passage) → `TextErrorExercise` (English exercises)
 
 ## UI Text Language
+- **Three UI languages**: Uzbek (uz), Russian (ru), English (en)
+- **Default language**: English (`DEFAULT_LANGUAGE = 'en'` in `ui-state.ts`)
 - Section headings: **Empty** (all Chinese headings removed — `heading` field is `""`)
 - Subheadings: Uzbek/Russian only (e.g., "Yangi so'zlar", "Новые слова")
 - Instructions: Uzbek/Russian only — **NO Chinese text** in any `instruction`/`instruction_ru` fields
 - Lesson badge: "1 DARS" format (number on top, label below)
-- Button tooltips: Uzbek
-- Translations: Uzbek (default) and Russian (toggle with language button)
+- Button tooltips: Language-dependent (Uzbek/Russian/English)
+- Translations: Uzbek (default), Russian, or English (toggle with language button)
 - Tab labels (UZ): Dialog | Yozish | Flesh | KTV | Tika | Test
 - Tab labels (RU): Диалог | Письмо | Флеш | KTV | Грамм | Тесты
+- Tab labels (EN): Dialogue | Writing | Flash | KTV | Grammar | Tests
 - Tab IDs: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
-- Language toggle: Inside hamburger menu on banner pages (O'zbekcha/Русский toggle buttons under "Til" label, 中文 under "Men o'rganaman" label). Lesson/dialogue reader headers still use UZ/RU toggle button.
+- Language selector: Inside hamburger menu on banner pages (`<select>` dropdown with O'zbekcha/Русский/English options under "Til"/"Язык"/"Language" label, 中文 under "Men o'rganaman"/"Я изучаю"/"I'm learning" label). Lesson/dialogue reader headers use 3-way cycle toggle button (UZ→RU→EN→UZ, showing the CURRENT language label: UZ/RU/EN).
+- **Content translation fallback**: English users see Uzbek translations (`text_translation`) — there are no `text_translation_en` fields in content JSON. English only applies to UI chrome, not lesson content.
 
-## Bilingual Support (Uzbek/Russian)
-All content supports both Uzbek and Russian translations:
-- `text_translation` / `text_translation_ru` - sentence translations
+## Trilingual UI / Bilingual Content
+The **UI** supports three languages (Uzbek, Russian, English). **Content** translations remain bilingual (Uzbek/Russian only — English users see Uzbek translations as fallback):
+- `text_translation` / `text_translation_ru` - sentence translations (English falls back to `text_translation`)
 - `contextTranslation` / `contextTranslation_ru` - context translations
 - `instruction` / `instruction_ru` - instruction text
 - `subheading` / `subheading_ru` - section subheadings
 - `tip.translation` / `tip.translation_ru` - tip translations
+
+### Internationalization (i18n) Architecture
+- **Library**: next-intl ^4.8.3 (without i18n routing — no `/uz/`, `/ru/`, `/en/` URL prefixes)
+- **Locale detection**: Cookie `blim-language` → `Accept-Language` header → default `'en'`
+- **Server-side**: `src/i18n/request.ts` reads the `blim-language` cookie via `next/headers`, imports the matching JSON from `messages/{locale}.json`
+- **Client-side**: `NextIntlClientProvider` wraps the app in `layout.tsx`, passing `messages` from server
+- **`<html lang>`**: Dynamic — set to current locale from `getLocale()` (was hardcoded `"uz"`)
+- **Message files**: `messages/uz.json`, `messages/ru.json`, `messages/en.json` — 22 namespaces (HomePage, LanguagePage, BookPage, etc.), ~348 lines each
+- **Current usage**: Message files exist but are **NOT yet consumed by components**. All ~48 components currently use inline trilingual objects: `({ uz: '...', ru: '...', en: '...' } as Record<string, string>)[language]`. Future migration will replace inline objects with `useTranslations()` from next-intl.
+- **Cookie sync**: `useLanguage` hook writes both `localStorage('readvo-language')` and cookie `blim-language` (1-year expiry, `SameSite=Lax`) on every language change, ensuring server-side rendering matches client preference
+- **Language type**: `Language = 'uz' | 'ru' | 'en'` (defined in `src/types/ui-state.ts`)
+- **LANGUAGES constant**: `[{ code: 'uz', label: 'Uzbek', nativeLabel: "O'zbek" }, { code: 'ru', label: 'Russian', nativeLabel: 'Русский' }, { code: 'en', label: 'English', nativeLabel: 'English' }]`
 
 ## Commands
 ```bash
@@ -276,7 +299,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Paywall component**: `src/components/Paywall.tsx` — shown when `trial.isTrialExpired && !isFreeContent`
 - **Paywall locations**: ReaderLayout, StoryReader, FlashcardDeck, KaraokePlayer
 - **Subscription API**: `GET /api/subscription` — returns active subscription (ends_at > now)
-- **BannerMenu display**: Active subscription shows "Obuna: N kun qoldi", expired shows "Sinov muddati tugadi" (red), trial shows "Sinov: N kun qoldi" (yellow)
+- **BannerMenu display**: Active subscription shows "Obuna: N kun qoldi" / "Subscription: N days left", expired shows "Sinov muddati tugadi" / "Trial period expired" (red), trial shows "Sinov: N kun qoldi" / "Trial: N days left" (yellow)
 
 ## Payment System
 - **Component**: `src/components/PaymentPage.tsx`
@@ -343,7 +366,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - Example: Lesson 8, Page 1 vocab word 学校 (xuéxiào) → `HSK 1/HSK 8-1/xuexiao.mp3`
 
 ## SEO & Metadata
-- **`<html lang="uz">`** — primary audience is Uzbek-speaking
+- **`<html lang="{locale}">`** — dynamic, set to current locale from `getLocale()` (uz/ru/en)
 - **Title template**: `%s | Blim` — set in root `layout.tsx`, all page titles auto-append "| Blim"
 - **Per-page metadata**: Every `page.tsx` exports `metadata` or `generateMetadata` with `title` + `description`
 - **OpenGraph / Twitter Cards**: Configured in root layout. Dynamic OG image via `src/app/opengraph-image.tsx` (edge runtime)
@@ -360,7 +383,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Visibility**: All users (logged-in and anonymous), hidden on home page (`pathname === '/'`). Unauthenticated submissions return 401 error.
 - **Form**: Expandable inline — reason dropdown (6 options: pinyin/translation/audio/grammar/image/other) + free text textarea
 - **API**: `POST /api/corrections` — JWT auth (Bearer token), sends Telegram message to admin chat with user info, page URL, reason, and optional message
-- **Bilingual**: All labels support UZ/RU via `useLanguage()` hook
+- **Trilingual**: All labels support UZ/RU/EN via `useLanguage()` hook
 - **CSS classes**: `.correction-inline__*` in reading.css
 - **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
 - **Used in**: Every page component — LanguagePage, BookPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
