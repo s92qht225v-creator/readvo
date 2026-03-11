@@ -57,6 +57,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (_event === 'SIGNED_IN') {
         loginGrace.current = true;
         setTimeout(() => { loginGrace.current = false; }, 60_000);
+
+        // Register nonce for OAuth providers (Google) that don't have a custom callback
+        // Telegram sets nonce BEFORE setSession, so it already has one by now
+        const existingNonce = localStorage.getItem('blim-session-nonce');
+        if (!existingNonce && session?.access_token) {
+          fetch('/api/auth/register-nonce', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${session.access_token}`,
+            },
+          })
+            .then(res => res.json())
+            .then(data => {
+              if (data.session_nonce) {
+                localStorage.setItem('blim-session-nonce', data.session_nonce);
+              }
+            })
+            .catch(() => {}); // non-critical
+        }
       }
       // Clean up hash from URL after login
       if (_event === 'SIGNED_IN' && window.location.hash) {
@@ -121,13 +141,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const loginWithGoogle = useCallback(async () => {
-    const res = await fetch('/api/auth/google/init');
-    const data = await res.json();
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
-      console.error('Google init failed:', data);
-    }
+    const origin = window.location.origin;
+    await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: `${origin}/chinese` },
+    });
   }, []);
 
   const logout = useCallback(async () => {
