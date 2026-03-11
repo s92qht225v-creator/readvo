@@ -189,16 +189,17 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const translation = currentCard
     ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : currentCard.text_translation)
     : '';
+  // Note: English users see Uzbek translations (text_translation) as there's no separate English field
 
   const swipeOpacity = Math.min(Math.abs(dragX) / SWIPE_THRESHOLD, 1);
   const swipeLabel = dragX > SWIPE_THRESHOLD
-    ? (language === 'ru' ? 'Знаю ✓' : 'Bilaman ✓')
+    ? ({ uz: 'Bilaman ✓', ru: 'Знаю ✓', en: 'I know ✓' } as Record<string, string>)[language]
     : dragX < -SWIPE_THRESHOLD
-      ? (language === 'ru' ? 'Не знаю ✗' : 'Bilmayman ✗')
+      ? ({ uz: 'Bilmayman ✗', ru: 'Не знаю ✗', en: "Don't know ✗" } as Record<string, string>)[language]
       : dragX > 0
-        ? (language === 'ru' ? 'Знаю?' : 'Bilaman?')
+        ? ({ uz: 'Bilaman?', ru: 'Знаю?', en: 'I know?' } as Record<string, string>)[language]
         : dragX < 0
-          ? (language === 'ru' ? 'Не знаю?' : 'Bilmayman?')
+          ? ({ uz: 'Bilmayman?', ru: 'Не знаю?', en: "Don't know?" } as Record<string, string>)[language]
           : '';
   const swipeBg = dragX > SWIPE_THRESHOLD ? '#dcfce7' : dragX < -SWIPE_THRESHOLD ? '#fee2e2' : '#f5f5f8';
   const swipeBorder = dragX > SWIPE_THRESHOLD ? '#22c55e' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#e0e0e6';
@@ -221,31 +222,29 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'ФЛЕШКАРТЫ' : 'FLESHKARTALAR'}</div>
+            <div className="dr-hero__level">HSK 1 · {({ uz: 'FLESHKARTALAR', ru: 'ФЛЕШКАРТЫ', en: 'FLASHCARDS' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{lessonTitle ?? '词卡'}</h1>
             <div className="dr-hero__pinyin">{lessonPinyin ?? 'cíkǎ'}</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? (lessonTitleTranslation_ru || 'Флешкарты') : (lessonTitleTranslation || 'Fleshkartalar')} —</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? (lessonTitleTranslation_ru || 'Флешкарты') : language === 'en' ? (lessonTitleTranslation || 'Flashcards') : (lessonTitleTranslation || 'Fleshkartalar')} —</div>
           </div>
         </div>
 
         {isComplete ? (
           <div className="hanzi-done">
             <div className="hanzi-done__title">
-              {language === 'ru' ? 'Отлично! 🎉' : 'Barakalla! 🎉'}
+              {({ uz: 'Barakalla! 🎉', ru: 'Отлично! 🎉', en: 'Well done! 🎉' } as Record<string, string>)[language]}
             </div>
             <div className="hanzi-done__stats">
-              {language === 'ru'
-                ? `Знаю: ${knownIds.size} · Не знаю: ${unknownIds.size}`
-                : `Bilaman: ${knownIds.size} · Bilmayman: ${unknownIds.size}`}
+              {({ uz: `Bilaman: ${knownIds.size} · Bilmayman: ${unknownIds.size}`, ru: `Знаю: ${knownIds.size} · Не знаю: ${unknownIds.size}`, en: `Know: ${knownIds.size} · Don't know: ${unknownIds.size}` } as Record<string, string>)[language]}
             </div>
             <div className="hanzi-done__buttons">
               {unknownIds.size > 0 && (
                 <button className="hanzi-done__restart-btn" onClick={handleRestartUnknown} type="button">
-                  {language === 'ru' ? `Повторить незнакомые (${unknownIds.size})` : `Bilmaganlarni takrorlash (${unknownIds.size})`}
+                  {({ uz: `Bilmaganlarni takrorlash (${unknownIds.size})`, ru: `Повторить незнакомые (${unknownIds.size})`, en: `Review unknown (${unknownIds.size})` } as Record<string, string>)[language]}
                 </button>
               )}
               <button className="hanzi-done__back-btn" onClick={handleRestartAll} type="button">
-                {language === 'ru' ? 'Начать сначала' : 'Boshidan boshlash'}
+                {({ uz: 'Boshidan boshlash', ru: 'Начать сначала', en: 'Restart all' } as Record<string, string>)[language]}
               </button>
             </div>
           </div>
@@ -277,7 +276,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                 <span style={{ fontSize: 12, color: '#ef4444' }}>✗</span>
                 <span style={{ fontSize: 13, fontWeight: 600, color: '#ef4444' }}>{unknownIds.size}</span>
               </div>
-              <div style={{ fontSize: 11, color: '#ccc' }}>{language === 'ru' ? '← листать →' : '← suring →'}</div>
+              <div style={{ fontSize: 11, color: '#ccc' }}>{({ uz: '← suring →', ru: '← листать →', en: '← swipe →' } as Record<string, string>)[language]}</div>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 6,
                 background: '#dcfce7', borderRadius: 8, padding: '5px 12px',
@@ -373,7 +372,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                       <div style={{ fontSize: translation.length > 20 ? 18 : 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
                     )}
                     <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
-                      {language === 'ru' ? 'нажмите — посмотрите ответ' : 'bosing — javobni ko\'ring'}
+                      {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
                     </div>
                   </div>
 
@@ -404,7 +403,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         <div style={{ fontSize: 18, color: '#fca5a5', marginTop: 8, textAlign: 'center' }}>{translation}</div>
                       </>
                     )}
-                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{language === 'ru' ? '← не знаю | знаю →' : '← bilmayman | bilaman →'}</div>
+                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← bilmayman | bilaman →', ru: '← не знаю | знаю →', en: "← don't know | know →" } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
               </div>
@@ -421,7 +420,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                 }}
                 type="button"
               >
-                ✗ {language === 'ru' ? 'Не знаю' : 'Bilmayman'}
+                ✗ {({ uz: 'Bilmayman', ru: 'Не знаю', en: "Don't know" } as Record<string, string>)[language]}
               </button>
               <button
                 onClick={handleKnow}
@@ -432,7 +431,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                 }}
                 type="button"
               >
-                {language === 'ru' ? 'Знаю' : 'Bilaman'} ✓
+                {({ uz: 'Bilaman', ru: 'Знаю', en: 'I know' } as Record<string, string>)[language]} ✓
               </button>
             </div>
 

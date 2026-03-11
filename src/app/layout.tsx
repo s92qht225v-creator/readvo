@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import Script from 'next/script';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import '@/styles/reading.css';
 import { AuthProvider } from '@/hooks/useAuth';
 import { YandexPageView } from '@/components/YandexPageView';
@@ -43,13 +45,16 @@ export const viewport: Viewport = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="uz">
+    <html lang={locale}>
       <head>
         <meta name="google-site-verification" content="IOvKyDyZC0mR42xZeSCIVndhzKqnqhM9JVMlQvFiJT0" />
         <meta name="yandex-verification" content="a66bf653e2117240" />
@@ -100,9 +105,11 @@ fbq('track', 'PageView');`}
         </noscript>
         <YandexPageView />
         <MetaPageView />
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <NextIntlClientProvider messages={messages}>
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 
-const labels = {
+const labels: Record<string, { google: string; telegram: string; or: string }> = {
   uz: {
     google: 'Google orqali kirish',
     telegram: 'Telegram orqali kirish',
@@ -16,6 +16,11 @@ const labels = {
     google: 'Войти через Google',
     telegram: 'Войти через Telegram',
     or: 'или',
+  },
+  en: {
+    google: 'Sign in with Google',
+    telegram: 'Sign in with Telegram',
+    or: 'or',
   },
 };
 

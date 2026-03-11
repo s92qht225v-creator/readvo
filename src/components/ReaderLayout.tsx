@@ -183,10 +183,10 @@ export function ReaderLayout({
             {activeSentence
               ? (language === 'ru' && activeSentence.text_translation_ru
                   ? activeSentence.text_translation_ru
+                  : language === 'en' && activeSentence.text_translation_en
+                  ? activeSentence.text_translation_en
                   : activeSentence.text_translation)
-              : (language === 'ru'
-                  ? 'Нажмите на предложение для перевода'
-                  : 'Tarjima uchun gapni bosing')}
+              : ({ uz: 'Tarjima uchun gapni bosing', ru: 'Нажмите на предложение для перевода', en: 'Tap a sentence to translate' } as Record<string, string>)[language]}
           </p>
         </div>
       )}
@@ -226,11 +226,11 @@ export function ReaderLayout({
                   href={`${bookPath}/${navSegment}/${prevNav.lessonId}/page/${prevNav.pageNum}`}
                   className="reader__nav-btn"
                 >
-                  ← {language === 'ru' ? 'Назад' : 'Oldingi'}
+                  ← {({ uz: 'Oldingi', ru: 'Назад', en: 'Prev' } as Record<string, string>)[language]}
                 </Link>
               ) : (
                 <span className="reader__nav-btn reader__nav-btn--disabled">
-                  ← {language === 'ru' ? 'Назад' : 'Oldingi'}
+                  ← {({ uz: 'Oldingi', ru: 'Назад', en: 'Prev' } as Record<string, string>)[language]}
                 </span>
               )}
 
@@ -249,7 +249,7 @@ export function ReaderLayout({
                   onClick={handleTranslationToggle}
                   type="button"
                 >
-                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
+                  {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
                 </button>
               </div>
 
@@ -258,11 +258,11 @@ export function ReaderLayout({
                   href={`${bookPath}/${navSegment}/${nextNav.lessonId}/page/${nextNav.pageNum}`}
                   className="reader__nav-btn"
                 >
-                  {language === 'ru' ? 'Далее' : 'Keyingi'} →
+                  {({ uz: 'Keyingi', ru: 'Далее', en: 'Next' } as Record<string, string>)[language]} →
                 </Link>
               ) : (
                 <span className="reader__nav-btn reader__nav-btn--disabled">
-                  {language === 'ru' ? 'Далее' : 'Keyingi'} →
+                  {({ uz: 'Keyingi', ru: 'Далее', en: 'Next' } as Record<string, string>)[language]} →
                 </span>
               )}
             </div>

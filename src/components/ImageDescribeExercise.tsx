@@ -29,7 +29,7 @@ export interface ImageDescribeCard {
 
 export interface ImageDescribeExerciseProps {
   cards: ImageDescribeCard[];
-  language: 'uz' | 'ru';
+  language: 'uz' | 'ru' | 'en';
 }
 
 interface BlankState {
@@ -213,7 +213,7 @@ export const ImageDescribeExercise: React.FC<ImageDescribeExerciseProps> = ({
                               handleCheck(card.id, currentBlankIndex)
                             }
                             aria-label={
-                              language === 'ru' ? 'Проверить' : 'Tekshirish'
+                              ({ uz: 'Tekshirish', ru: 'Проверить', en: 'Check' } as Record<string, string>)[language]
                             }
                           >
                             ✓
@@ -234,7 +234,7 @@ export const ImageDescribeExercise: React.FC<ImageDescribeExerciseProps> = ({
         <div className="imgdesc__complete">
           <span className="imgdesc__complete-icon">🎉</span>
           <span className="imgdesc__complete-text">
-            {language === 'ru' ? 'Отлично!' : 'Ajoyib!'}
+            {({ uz: 'Ajoyib!', ru: 'Отлично!', en: 'Excellent!' } as Record<string, string>)[language]}
           </span>
         </div>
       )}

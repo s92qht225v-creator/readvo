@@ -7,11 +7,11 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 
 const sections = [
-  { id: 'intro', uz: 'Asosiy', ru: 'Основное' },
-  { id: 'usage', uz: 'Grammatika', ru: 'Грамматика' },
-  { id: 'examples', uz: 'Misollar', ru: 'Примеры' },
+  { id: 'intro', uz: 'Asosiy', ru: 'Основное', en: 'Overview' },
+  { id: 'usage', uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' },
+  { id: 'examples', uz: 'Misollar', ru: 'Примеры', en: 'Examples' },
   { id: 'position', uz: 'O\'rni', ru: 'Позиция' },
-  { id: 'quiz', uz: 'Mashq', ru: 'Тест' },
+  { id: 'quiz', uz: 'Mashq', ru: 'Тест', en: 'Quiz' },
 ];
 
 const examples = [
@@ -96,10 +96,10 @@ export function GrammarDouPage() {
           </div>
         </div>
         <div className="grammar-page__hero-body">
-          <div className="grammar-page__hero-label">HSK 1 · {language === 'ru' ? 'Грамматика' : 'Grammatika'}</div>
+          <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
           <div className="grammar-page__hero-char">都</div>
           <div className="grammar-page__hero-pinyin">dōu</div>
-          <div className="grammar-page__hero-meaning">— {language === 'ru' ? 'все / всё' : 'hammasi / barchasi'} —</div>
+          <div className="grammar-page__hero-meaning">— {({ uz: 'hammasi / barchasi', ru: 'все / всё', en: 'hammasi / barchasi' } as Record<string, string>)[language]} —</div>
         </div>
       </div>
 
@@ -111,7 +111,7 @@ export function GrammarDouPage() {
             className={`grammar-page__tab ${activeTab === s.id ? 'grammar-page__tab--active' : ''}`}
             type="button"
           >
-            {language === 'ru' ? s.ru : s.uz}
+            {({ uz: s.uz, ru: s.ru, en: s.en } as Record<string, string>)[language]}
           </button>
         ))}
       </div>
@@ -122,7 +122,7 @@ export function GrammarDouPage() {
         {activeTab === 'intro' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Иероглиф' : 'Ieroglif'}</div>
+              <div className="grammar-block__label">{({ uz: 'Ieroglif', ru: 'Иероглиф', en: 'Character' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__char-row">
                 <div className="grammar-block__big-char">都</div>
                 <div className="grammar-block__char-info">
@@ -131,79 +131,73 @@ export function GrammarDouPage() {
                     <span className="grammar-block__info-val">dōu</span>
                   </div>
                   <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{language === 'ru' ? 'Тон' : 'Ton'}</span>
-                    <span className="grammar-block__tone">{language === 'ru' ? '1-й тон (ровный, высокий) ¯' : '1-ton (tekis, baland) ¯'}</span>
+                    <span className="grammar-block__info-key">{({ uz: 'Ton', ru: 'Тон', en: 'Tone' } as Record<string, string>)[language]}</span>
+                    <span className="grammar-block__tone">{({ uz: '1-ton (tekis, baland) ¯', ru: '1-й тон (ровный, высокий) ¯', en: '1-ton (tekis, baland) ¯' } as Record<string, string>)[language]}</span>
                   </div>
                   <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{language === 'ru' ? 'Перевод' : 'Ma\'nosi'}</span>
-                    <span className="grammar-block__info-val">{language === 'ru' ? 'все, всё, оба' : 'hammasi, barchasi'}</span>
+                    <span className="grammar-block__info-key">{({ uz: 'Ma\'nosi', ru: 'Перевод', en: 'Meaning' } as Record<string, string>)[language]}</span>
+                    <span className="grammar-block__info-val">{({ uz: 'hammasi, barchasi', ru: 'все, всё, оба', en: 'hammasi, barchasi' } as Record<string, string>)[language]}</span>
                   </div>
                   <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{language === 'ru' ? 'Черт' : 'Chiziqlar'}</span>
+                    <span className="grammar-block__info-key">{({ uz: 'Chiziqlar', ru: 'Черт', en: 'Strokes' } as Record<string, string>)[language]}</span>
                     <span className="grammar-block__info-val">10</span>
                   </div>
                   <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{language === 'ru' ? 'Тип слова' : 'Turi'}</span>
-                    <span className="grammar-block__info-val">{language === 'ru' ? 'Наречие' : 'Ravish (adverb)'}</span>
+                    <span className="grammar-block__info-key">{({ uz: 'Turi', ru: 'Тип слова', en: 'Word Type' } as Record<string, string>)[language]}</span>
+                    <span className="grammar-block__info-val">{({ uz: 'Ravish (adverb)', ru: 'Наречие', en: 'Adverb' } as Record<string, string>)[language]}</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{language === 'ru' ? 'Почему важно?' : 'Nima uchun muhim?'}</div>
+              <div className="grammar-block__label">{({ uz: 'Nima uchun muhim?', ru: 'Почему важно?', en: 'Why is it important?' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {language === 'ru'
-                  ? '都 — одно из самых частых слов в китайском. Используется для обобщения нескольких людей или вещей:'
-                  : '都 — xitoy tilida «hammasi» ma\'nosini beruvchi eng muhim so\'z. Bir necha kishi yoki narsa haqida umumlashtirib gapirganda ishlatiladi:'}
+                {({ uz: '都 — xitoy tilida «hammasi» ma\'nosini beruvchi eng muhim so\'z. Bir necha kishi yoki narsa haqida umumlashtirib gapirganda ishlatiladi:', ru: '都 — одно из самых частых слов в китайском. Используется для обобщения нескольких людей или вещей:', en: '都 — xitoy tilida «hammasi» ma\'nosini beruvchi eng muhim so\'z. Bir necha kishi yoki narsa haqida umumlashtirib gapirganda ishlatiladi:' } as Record<string, string>)[language]}
               </p>
               <div className="grammar-block__usage-item" style={{ textAlign: 'center', marginTop: 8 }}>
                 <div className="grammar-block__usage-zh">
                   他们喜欢茶。→ 他们<span className="grammar-block__highlight">都</span>喜欢茶。
                 </div>
                 <div className="grammar-block__usage-tr">
-                  {language === 'ru'
-                    ? 'Они любят чай. → Они все любят чай.'
-                    : 'Ular choy yoqtiradi. → Ularning hammasi choy yoqtiradi.'}
+                  {({ uz: 'Ular choy yoqtiradi. → Ularning hammasi choy yoqtiradi.', ru: 'Они любят чай. → Они все любят чай.', en: 'Ular choy yoqtiradi. → Ularning hammasi choy yoqtiradi.' } as Record<string, string>)[language]}
                 </div>
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Основное правило' : 'Asosiy qoida'}</div>
+              <div className="grammar-block__label">{({ uz: 'Asosiy qoida', ru: 'Основное правило', en: 'Basic Rule' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-a">{language === 'ru' ? 'Подлеж. (мн.ч.)' : 'Ega (ko\'plik)'}</span>
+                <span className="grammar-block__formula-a">{({ uz: 'Ega (ko\'plik)', ru: 'Подлеж. (мн.ч.)', en: 'Subj. (plural)' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол / Прилаг.' : 'Fe\'l / Sifat'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l / Sifat', ru: 'Глагол / Прилаг.', en: 'Fe\'l / Sifat' } as Record<string, string>)[language]}</span>
               </div>
               <p className="grammar-block__formula-desc">
-                {language === 'ru'
-                  ? '都 всегда после подлежащего, перед глаголом — как и 也.'
-                  : '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi.'}
+                {({ uz: '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi.', ru: '都 всегда после подлежащего, перед глаголом — как и 也.', en: '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi.' } as Record<string, string>)[language]}
               </p>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '都 vs 也 — отличие' : '都 vs 也 — farqi'}</div>
+              <div className="grammar-block__label">{({ uz: '都 vs 也 — farqi', ru: '都 vs 也 — отличие', en: '都 vs 也 — farqi' } as Record<string, string>)[language]}</div>
               <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
                 <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#f0fdfa', border: '1px solid #99f6e4' }}>
                   <div style={{ fontSize: 28, color: '#0d9488', fontWeight: 600, marginBottom: 2 }}>也</div>
                   <div style={{ fontSize: 10, color: '#0d9488', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
-                    {language === 'ru' ? 'ТОЖЕ' : 'HAM'}
+                    {({ uz: 'HAM', ru: 'ТОЖЕ', en: 'HAM' } as Record<string, string>)[language]}
                   </div>
                   <div style={{ fontSize: 11, color: '#555' }}>
-                    {language === 'ru' ? 'A делает, B тоже делает' : 'A qiladi, B ham qiladi'}
+                    {({ uz: 'A qiladi, B ham qiladi', ru: 'A делает, B тоже делает', en: 'A qiladi, B ham qiladi' } as Record<string, string>)[language]}
                   </div>
                 </div>
                 <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#eff6ff', border: '1px solid #93c5fd' }}>
                   <div style={{ fontSize: 28, color: '#2563eb', fontWeight: 600, marginBottom: 2 }}>都</div>
                   <div style={{ fontSize: 10, color: '#2563eb', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
-                    {language === 'ru' ? 'ВСЕ' : 'HAMMASI'}
+                    {({ uz: 'HAMMASI', ru: 'ВСЕ', en: 'HAMMASI' } as Record<string, string>)[language]}
                   </div>
                   <div style={{ fontSize: 11, color: '#555' }}>
-                    {language === 'ru' ? 'A и B оба делают' : 'A va B hammasi qiladi'}
+                    {({ uz: 'A va B hammasi qiladi', ru: 'A и B оба делают', en: 'A va B hammasi qiladi' } as Record<string, string>)[language]}
                   </div>
                 </div>
               </div>
@@ -212,13 +206,13 @@ export function GrammarDouPage() {
                   他<span style={{ color: '#0d9488', fontWeight: 700 }}>也</span>是学生。
                 </div>
                 <div className="grammar-block__usage-tr">
-                  {language === 'ru' ? 'Он тоже студент. (ещё один человек)' : 'U ham talaba. (yana bir kishi)'}
+                  {({ uz: 'U ham talaba. (yana bir kishi)', ru: 'Он тоже студент. (ещё один человек)', en: 'U ham talaba. (yana bir kishi)' } as Record<string, string>)[language]}
                 </div>
                 <div className="grammar-block__usage-zh" style={{ marginTop: 6 }}>
                   他们<span style={{ color: '#2563eb', fontWeight: 700 }}>都</span>是学生。
                 </div>
                 <div className="grammar-block__usage-tr">
-                  {language === 'ru' ? 'Они все студенты. (вся группа)' : 'Ularning hammasi talaba. (butun guruh)'}
+                  {({ uz: 'Ularning hammasi talaba. (butun guruh)', ru: 'Они все студенты. (вся группа)', en: 'Ularning hammasi talaba. (butun guruh)' } as Record<string, string>)[language]}
                 </div>
               </div>
             </div>
@@ -229,15 +223,15 @@ export function GrammarDouPage() {
         {activeTab === 'usage' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '1. Все в группе' : '1. Guruhdagi hamma (hammasi)'}</div>
+              <div className="grammar-block__label">{({ uz: '1. Guruhdagi hamma (hammasi)', ru: '1. Все в группе', en: '1. Guruhdagi hamma (hammasi)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-a">{language === 'ru' ? '我们/他们/大家' : '我们/他们/大家'}</span>
+                <span className="grammar-block__formula-a">{({ uz: '我们/他们/大家', ru: '我们/他们/大家', en: '我们/他们/大家' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол' : 'Fe\'l'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{language === 'ru' ? 'Все делают одно и то же' : 'Hammasi bir xil ish qiladi'}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'Hammasi bir xil ish qiladi', ru: 'Все делают одно и то же', en: 'Hammasi bir xil ish qiladi' } as Record<string, string>)[language]}</p>
               {[
                 { zh: '我们都喜欢吃中国菜。', py: 'Wǒmen dōu xǐhuan chī Zhōngguó cài.', uz: 'Biz hammamiz xitoy ovqatini yoqtiramiz.', ru: 'Мы все любим есть китайскую еду.' },
                 { zh: '他们都是我的朋友。', py: 'Tāmen dōu shì wǒ de péngyǒu.', uz: 'Ularning hammasi mening do\'stim.', ru: 'Они все мои друзья.' },
@@ -246,13 +240,13 @@ export function GrammarDouPage() {
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
-                  <div className="grammar-block__usage-tr">{language === 'ru' ? x.ru : x.uz}</div>
+                  <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '2. A и B — оба' : '2. A va B — ikkalasi ham'}</div>
+              <div className="grammar-block__label">{({ uz: '2. A va B — ikkalasi ham', ru: '2. A и B — оба', en: '2. A va B — ikkalasi ham' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span className="grammar-block__formula-a">A</span>
                 {' + '}
@@ -262,9 +256,9 @@ export function GrammarDouPage() {
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол' : 'Fe\'l'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{language === 'ru' ? 'И A, и B' : 'A va B ikkalasi ham'}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'A va B ikkalasi ham', ru: 'И A, и B', en: 'A va B ikkalasi ham' } as Record<string, string>)[language]}</p>
               {[
                 { zh: '爸爸和妈妈都工作。', py: 'Bàba hé māma dōu gōngzuò.', uz: 'Otam va onam ikkalasi ham ishlaydi.', ru: 'Папа и мама оба работают.' },
                 { zh: '茶和咖啡我都喜欢。', py: 'Chá hé kāfēi wǒ dōu xǐhuan.', uz: 'Choy va qahva — ikkalasini ham yoqtiraman.', ru: 'Чай и кофе — оба люблю.' },
@@ -273,30 +267,28 @@ export function GrammarDouPage() {
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
-                  <div className="grammar-block__usage-tr">{language === 'ru' ? x.ru : x.uz}</div>
+                  <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
               <div className="grammar-block grammar-block--tip" style={{ margin: '10px 0 0' }}>
                 <p className="grammar-block__tip-text">
-                  💡 {language === 'ru'
-                    ? '«茶和咖啡我都喜欢» — объект вынесен вперёд, но 都 всё равно стоит перед глаголом!'
-                    : '«茶和咖啡我都喜欢» — ob\'yekt oldinga chiqsa ham, 都 fe\'ldan oldin turadi!'}
+                  💡 {({ uz: '«茶和咖啡我都喜欢» — ob\'yekt oldinga chiqsa ham, 都 fe\'ldan oldin turadi!', ru: '«茶和咖啡我都喜欢» — объект вынесен вперёд, но 都 всё равно стоит перед глаголом!', en: '«茶和咖啡我都喜欢» — ob\'yekt oldinga chiqsa ham, 都 fe\'ldan oldin turadi!' } as Record<string, string>)[language]}
                 </p>
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '3. 都不 — вообще не (сильное отрицание)' : '3. 都不 — umuman ...maydi (kuchli inkor)'}</div>
+              <div className="grammar-block__label">{({ uz: '3. 都不 — umuman ...maydi (kuchli inkor)', ru: '3. 都不 — вообще не (сильное отрицание)', en: '3. 都不 — umuman ...maydi (kuchli inkor)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-a">{language === 'ru' ? 'Подлеж.' : 'Ega'}</span>
+                <span className="grammar-block__formula-a">{({ uz: 'Ega', ru: 'Подлеж.', en: 'Subj.' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">不</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол' : 'Fe\'l'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{language === 'ru' ? '都不 = никто не / вообще не' : '都不 = umuman ...maydi / hech biri ...maydi'}</p>
+              <p className="grammar-block__formula-desc">{({ uz: '都不 = umuman ...maydi / hech biri ...maydi', ru: '都不 = никто не / вообще не', en: '都不 = umuman ...maydi / hech biri ...maydi' } as Record<string, string>)[language]}</p>
               {[
                 { zh: '我什么都不想吃。', py: 'Wǒ shénme dōu bù xiǎng chī.', uz: 'Men umuman hech narsa yegim kelmayapti.', ru: 'Я вообще ничего не хочу есть.' },
                 { zh: '他们都不喝酒。', py: 'Tāmen dōu bù hē jiǔ.', uz: 'Ularning hech biri ichkilik ichmaydi.', ru: 'Никто из них не пьёт алкоголь.' },
@@ -305,23 +297,23 @@ export function GrammarDouPage() {
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
-                  <div className="grammar-block__usage-tr">{language === 'ru' ? x.ru : x.uz}</div>
+                  <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '4. 不都 — не все (частичное отрицание)' : '4. 不都 — hammasi emas (qisman inkor)'}</div>
+              <div className="grammar-block__label">{({ uz: '4. 不都 — hammasi emas (qisman inkor)', ru: '4. 不都 — не все (частичное отрицание)', en: '4. 不都 — hammasi emas (qisman inkor)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-a">{language === 'ru' ? 'Подлеж.' : 'Ega'}</span>
+                <span className="grammar-block__formula-a">{({ uz: 'Ega', ru: 'Подлеж.', en: 'Subj.' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">不</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол' : 'Fe\'l'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{language === 'ru' ? '不都 = не все, только некоторые' : '不都 = hammasi emas, bir qismi'}</p>
+              <p className="grammar-block__formula-desc">{({ uz: '不都 = hammasi emas, bir qismi', ru: '不都 = не все, только некоторые', en: '不都 = hammasi emas, bir qismi' } as Record<string, string>)[language]}</p>
               {[
                 { zh: '他们不都是学生。', py: 'Tāmen bù dōu shì xuésheng.', uz: 'Ularning hammasi talaba emas. (ba\'zilari)', ru: 'Не все из них студенты. (некоторые)' },
                 { zh: '我们不都喜欢。', py: 'Wǒmen bù dōu xǐhuan.', uz: 'Biz hammamiz ham yoqtirmaydi. (ba\'zilar yoqtiradi)', ru: 'Нам не всем нравится. (некоторым нравится)' },
@@ -329,42 +321,42 @@ export function GrammarDouPage() {
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
-                  <div className="grammar-block__usage-tr">{language === 'ru' ? x.ru : x.uz}</div>
+                  <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
               <div className="grammar-block grammar-block--warning" style={{ margin: '10px 0 0' }}>
                 <p className="grammar-block__tip-text" style={{ color: '#dc2626' }}>
-                  ⚠️ <strong>{language === 'ru' ? 'Порядок меняет смысл!' : 'Tartib juda muhim — ma\'no o\'zgaradi!'}</strong>
+                  ⚠️ <strong>{({ uz: 'Tartib juda muhim — ma\'no o\'zgaradi!', ru: 'Порядок меняет смысл!', en: 'Tartib juda muhim — ma\'no o\'zgaradi!' } as Record<string, string>)[language]}</strong>
                 </p>
                 <div style={{ display: 'flex', gap: 6, marginTop: 8 }}>
                   <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#eff6ff' }}>
                     <div style={{ fontSize: 9, color: '#2563eb', fontWeight: 700, marginBottom: 3 }}>
-                      {language === 'ru' ? '都不 = ВООБЩЕ НЕ' : '都不 = UMUMAN EMAS'}
+                      {({ uz: '都不 = UMUMAN EMAS', ru: '都不 = ВООБЩЕ НЕ', en: '都不 = UMUMAN EMAS' } as Record<string, string>)[language]}
                     </div>
                     <div className="grammar-block__usage-zh">他们<strong style={{ color: '#2563eb' }}>都不</strong>去</div>
-                    <div className="grammar-block__usage-tr">{language === 'ru' ? 'Никто не идёт' : 'Hech biri bormaydi'}</div>
+                    <div className="grammar-block__usage-tr">{({ uz: 'Hech biri bormaydi', ru: 'Никто не идёт', en: 'Hech biri bormaydi' } as Record<string, string>)[language]}</div>
                   </div>
                   <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#fff7ed' }}>
                     <div style={{ fontSize: 9, color: '#d97706', fontWeight: 700, marginBottom: 3 }}>
-                      {language === 'ru' ? '不都 = НЕ ВСЕ' : '不都 = HAMMASI EMAS'}
+                      {({ uz: '不都 = HAMMASI EMAS', ru: '不都 = НЕ ВСЕ', en: '不都 = HAMMASI EMAS' } as Record<string, string>)[language]}
                     </div>
                     <div className="grammar-block__usage-zh">他们<strong style={{ color: '#d97706' }}>不都</strong>去</div>
-                    <div className="grammar-block__usage-tr">{language === 'ru' ? 'Не все идут' : 'Hammasi bormaydi (ba\'zilari boradi)'}</div>
+                    <div className="grammar-block__usage-tr">{({ uz: 'Hammasi bormaydi (ba\'zilari boradi)', ru: 'Не все идут', en: 'Hammasi bormaydi (ba\'zilari boradi)' } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? '5. Вопросительное слово + 都 (всё/все)' : '5. Savol so\'zi + 都 (hamma narsa)'}</div>
+              <div className="grammar-block__label">{({ uz: '5. Savol so\'zi + 都 (hamma narsa)', ru: '5. Вопросительное слово + 都 (всё/все)', en: '5. Savol so\'zi + 都 (hamma narsa)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span style={{ color: '#9333ea', fontWeight: 700 }}>{language === 'ru' ? 'Вопр. слово' : 'Savol so\'zi'}</span>
+                <span style={{ color: '#9333ea', fontWeight: 700 }}>{({ uz: 'Savol so\'zi', ru: 'Вопр. слово', en: 'Savol so\'zi' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-neg">都</span>
                 {' + '}
-                <span className="grammar-block__formula-b">{language === 'ru' ? 'Глагол' : 'Fe\'l'}</span>
+                <span className="grammar-block__formula-b">{({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{language === 'ru' ? '= все / всё / что угодно' : '= hamma / hammasi / har qanday'}</p>
+              <p className="grammar-block__formula-desc">{({ uz: '= hamma / hammasi / har qanday', ru: '= все / всё / что угодно', en: '= hamma / hammasi / har qanday' } as Record<string, string>)[language]}</p>
               {[
                 { zh: '我什么都吃。', py: 'Wǒ shénme dōu chī.', uz: 'Men hammasini yeyman.', ru: 'Я ем всё что угодно.', word: '什么都 = что угодно' },
                 { zh: '谁都知道。', py: 'Shéi dōu zhīdào.', uz: 'Hamma biladi.', ru: 'Все знают.', word: '谁都 = кто угодно' },
@@ -373,7 +365,7 @@ export function GrammarDouPage() {
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
-                  <div className="grammar-block__usage-tr">{language === 'ru' ? x.ru : x.uz}</div>
+                  <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                   <div style={{ fontSize: '0.75em', color: '#7c3aed', marginTop: 3, fontStyle: 'italic' }}>{x.word}</div>
                 </div>
               ))}
@@ -385,7 +377,7 @@ export function GrammarDouPage() {
         {activeTab === 'examples' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Примеры предложений' : 'Namuna gaplar'}</div>
+              <div className="grammar-block__label">{({ uz: 'Namuna gaplar', ru: 'Примеры предложений', en: 'Example Sentences' } as Record<string, string>)[language]}</div>
               {examples.map((ex, i) => (
                 <button
                   key={i}
@@ -395,19 +387,19 @@ export function GrammarDouPage() {
                 >
                   <div className="grammar-block__example-zh">{ex.zh}</div>
                   <div className="grammar-block__example-py">{ex.pinyin}</div>
-                  <div className="grammar-block__example-tr">{language === 'ru' ? ex.ru : ex.uz}</div>
+                  <div className="grammar-block__example-tr">{({ uz: ex.uz, ru: ex.ru, en: (ex as any).en || ex.uz } as Record<string, string>)[language]}</div>
                   {expandedEx === i && (
                     <div className="grammar-block__example-note">
-                      💡 {language === 'ru' ? ex.note_ru : ex.note_uz}
+                      💡 {({ uz: ex.note_uz, ru: ex.note_ru, en: (ex as any).note_en || ex.note_uz } as Record<string, string | undefined>)[language]}
                     </div>
                   )}
                 </button>
               ))}
-              <p className="grammar-block__hint">{language === 'ru' ? 'Нажмите — увидите пояснение' : 'Bosing — izoh ko\'rinadi'}</p>
+              <p className="grammar-block__hint">{({ uz: 'Bosing — izoh ko\'rinadi', ru: 'Нажмите — увидите пояснение', en: 'Tap to see explanation' } as Record<string, string>)[language]}</p>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Мини-диалог 1: О семье' : 'Mini dialog 1: Oila haqida'}</div>
+              <div className="grammar-block__label">{({ uz: 'Mini dialog 1: Oila haqida', ru: 'Мини-диалог 1: О семье', en: 'Mini dialog 1: Oila haqida' } as Record<string, string>)[language]}</div>
               <div style={{ background: '#f5f5f8', borderRadius: 8, padding: 12 }}>
                 {[
                   { speaker: 'A', zh: '你家有几个人？', py: 'Nǐ jiā yǒu jǐ gè rén?', uz: 'Oilangda necha kishi bor?', ru: 'Сколько человек в твоей семье?' },
@@ -421,14 +413,14 @@ export function GrammarDouPage() {
                       <span className="grammar-block__usage-zh">{line.zh}</span>
                     </div>
                     <div className="grammar-block__usage-py" style={{ marginLeft: 20 }}>{line.py}</div>
-                    <div className="grammar-block__usage-tr" style={{ marginLeft: 20 }}>{language === 'ru' ? line.ru : line.uz}</div>
+                    <div className="grammar-block__usage-tr" style={{ marginLeft: 20 }}>{({ uz: line.uz, ru: line.ru, en: (line as any).en || line.uz } as Record<string, string>)[language]}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Мини-диалог 2: Заказ еды' : 'Mini dialog 2: Ovqat buyurtma'}</div>
+              <div className="grammar-block__label">{({ uz: 'Mini dialog 2: Ovqat buyurtma', ru: 'Мини-диалог 2: Заказ еды', en: 'Mini dialog 2: Ovqat buyurtma' } as Record<string, string>)[language]}</div>
               <div style={{ background: '#f5f5f8', borderRadius: 8, padding: 12 }}>
                 {[
                   { speaker: 'A', zh: '你们想吃什么？', py: 'Nǐmen xiǎng chī shénme?', uz: 'Nima yemoqchisiz?', ru: 'Что вы хотите есть?' },
@@ -442,7 +434,7 @@ export function GrammarDouPage() {
                       <span className="grammar-block__usage-zh">{line.zh}</span>
                     </div>
                     <div className="grammar-block__usage-py" style={{ marginLeft: 20 }}>{line.py}</div>
-                    <div className="grammar-block__usage-tr" style={{ marginLeft: 20 }}>{language === 'ru' ? line.ru : line.uz}</div>
+                    <div className="grammar-block__usage-tr" style={{ marginLeft: 20 }}>{({ uz: line.uz, ru: line.ru, en: (line as any).en || line.uz } as Record<string, string>)[language]}</div>
                   </div>
                 ))}
               </div>
@@ -454,38 +446,34 @@ export function GrammarDouPage() {
         {activeTab === 'position' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Точная позиция 都' : '都 ning aniq o\'rni'}</div>
+              <div className="grammar-block__label">{({ uz: '都 ning aniq o\'rni', ru: 'Точная позиция 都', en: '都 ning aniq o\'rni' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text" style={{ marginBottom: 12 }}>
-                {language === 'ru'
-                  ? '都 всегда после подлежащего, перед глаголом — как и 也. Но важно: 都 обобщает то, что стоит ПЕРЕД ним!'
-                  : '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi. Lekin muhim: 都 o\'zidan OLDINGI narsalarni umumlashtiradi!'}
+                {({ uz: '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi. Lekin muhim: 都 o\'zidan OLDINGI narsalarni umumlashtiradi!', ru: '都 всегда после подлежащего, перед глаголом — как и 也. Но важно: 都 обобщает то, что стоит ПЕРЕД ним!', en: '都 har doim egadan keyin, fe\'ldan oldin turadi — xuddi 也 kabi. Lekin muhim: 都 o\'zidan OLDINGI narsalarni umumlashtiradi!' } as Record<string, string>)[language]}
               </p>
               <div style={{ textAlign: 'center', marginBottom: 12 }}>
                 <div style={{ display: 'inline-flex', gap: 4, alignItems: 'center', background: '#f5f5f8', borderRadius: 8, padding: '10px 14px' }}>
                   <span style={{ background: '#dcfce7', borderRadius: 6, padding: '4px 10px', fontSize: 14, fontWeight: 600, color: '#16a34a' }}>
-                    {language === 'ru' ? 'Подлеж. (мн.ч.)' : 'Ega (ko\'plik)'}
+                    {({ uz: 'Ega (ko\'plik)', ru: 'Подлеж. (мн.ч.)', en: 'Subj. (plural)' } as Record<string, string>)[language]}
                   </span>
                   <span style={{ fontSize: 18, color: '#ccc' }}>→</span>
                   <span style={{ background: '#dbeafe', borderRadius: 6, padding: '4px 10px', fontSize: 14, fontWeight: 700, color: '#2563eb', border: '2px solid #2563eb' }}>都</span>
                   <span style={{ fontSize: 18, color: '#ccc' }}>→</span>
                   <span style={{ background: '#fee2e2', borderRadius: 6, padding: '4px 10px', fontSize: 14, fontWeight: 600, color: '#dc2626' }}>
-                    {language === 'ru' ? 'Глагол' : 'Fe\'l'}
+                    {({ uz: 'Fe\'l', ru: 'Глагол', en: 'Verb' } as Record<string, string>)[language]}
                   </span>
                 </div>
               </div>
               <div className="grammar-block grammar-block--warning">
                 <p className="grammar-block__tip-text">
-                  ⚠️ {language === 'ru'
-                    ? '都 обобщает только то, что стоит ПЕРЕД ним!'
-                    : '都 faqat o\'zidan OLDINGI narsalarni umumlashtiradi!'}
+                  ⚠️ {({ uz: '都 faqat o\'zidan OLDINGI narsalarni umumlashtiradi!', ru: '都 обобщает только то, что стоит ПЕРЕД ним!', en: '都 faqat o\'zidan OLDINGI narsalarni umumlashtiradi!' } as Record<string, string>)[language]}
                   <br />
-                  他们<strong style={{ color: '#2563eb' }}>都</strong>喜欢茶 ✓ = {language === 'ru' ? 'Они все любят чай' : 'Ular hammasi choy yoqtiradi'}
+                  他们<strong style={{ color: '#2563eb' }}>都</strong>喜欢茶 ✓ = {({ uz: 'Ular hammasi choy yoqtiradi', ru: 'Они все любят чай', en: 'Ular hammasi choy yoqtiradi' } as Record<string, string>)[language]}
                 </p>
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Ошибки и правильные варианты' : 'Xato va to\'g\'ri joylashtirish'}</div>
+              <div className="grammar-block__label">{({ uz: 'Xato va to\'g\'ri joylashtirish', ru: 'Ошибки и правильные варианты', en: 'Xato va to\'g\'ri joylashtirish' } as Record<string, string>)[language]}</div>
               {[
                 { wrong: '都我们是学生。', right: '我们都是学生。', rule_uz: '都 gap boshiga qo\'yilmaydi — egadan keyin!', rule_ru: '都 не ставится в начало — только после подлежащего!' },
                 { wrong: '我们是都学生。', right: '我们都是学生。', rule_uz: '都 fe\'l va ob\'yekt orasiga tushmaydi — fe\'ldan oldin!', rule_ru: '都 не между глаголом и объектом — только перед глаголом!' },
@@ -494,21 +482,21 @@ export function GrammarDouPage() {
                 <div key={i} style={{ marginBottom: 10 }}>
                   <div style={{ display: 'flex', gap: 6, marginBottom: 4 }}>
                     <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#fee2e2' }}>
-                      <div style={{ fontSize: '0.65em', color: '#ef4444', fontWeight: 700, marginBottom: 2 }}>✗ {language === 'ru' ? 'ОШИБКА' : 'XATO'}</div>
+                      <div style={{ fontSize: '0.65em', color: '#ef4444', fontWeight: 700, marginBottom: 2 }}>✗ {({ uz: 'XATO', ru: 'ОШИБКА', en: 'ERROR' } as Record<string, string>)[language]}</div>
                       <div className="grammar-block__usage-zh" style={{ textDecoration: 'line-through' }}>{ex.wrong}</div>
                     </div>
                     <div className="grammar-block__usage-item" style={{ flex: 1, textAlign: 'center', background: '#dcfce7' }}>
-                      <div style={{ fontSize: '0.65em', color: '#16a34a', fontWeight: 700, marginBottom: 2 }}>✓ {language === 'ru' ? 'ВЕРНО' : 'TO\'G\'RI'}</div>
+                      <div style={{ fontSize: '0.65em', color: '#16a34a', fontWeight: 700, marginBottom: 2 }}>✓ {({ uz: 'TO\'G\'RI', ru: 'ВЕРНО', en: 'CORRECT' } as Record<string, string>)[language]}</div>
                       <div className="grammar-block__usage-zh">{ex.right}</div>
                     </div>
                   </div>
-                  <p className="grammar-block__formula-desc" style={{ paddingLeft: 4 }}>{language === 'ru' ? ex.rule_ru : ex.rule_uz}</p>
+                  <p className="grammar-block__formula-desc" style={{ paddingLeft: 4 }}>{({ uz: ex.rule_uz, ru: ex.rule_ru, en: (ex as any).rule_en || ex.rule_uz } as Record<string, string>)[language]}</p>
                 </div>
               ))}
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{language === 'ru' ? 'Порядок с другими словами' : 'Boshqa so\'zlar bilan tartib'}</div>
+              <div className="grammar-block__label">{({ uz: 'Boshqa so\'zlar bilan tartib', ru: 'Порядок с другими словами', en: 'Boshqa so\'zlar bilan tartib' } as Record<string, string>)[language]}</div>
               {[
                 { combo: '也 + 都', ex: '他们也都去了', ex_uz: 'Ular ham hammasi bordi', ex_ru: 'Они тоже все пошли' },
                 { combo: '都 + 不', ex: '他们都不去', ex_uz: 'Hech biri bormaydi', ex_ru: 'Никто не идёт' },
@@ -521,15 +509,13 @@ export function GrammarDouPage() {
                   <span style={{ minWidth: 60, background: '#eff6ff', borderRadius: 4, padding: '2px 6px', textAlign: 'center', fontSize: '0.85em', fontWeight: 700, color: '#2563eb' }}>{r.combo}</span>
                   <div style={{ flex: 1, fontSize: '0.85em' }}>
                     <span className="grammar-block__usage-zh" style={{ fontSize: '1em' }}>{r.ex}</span>
-                    <span className="grammar-block__usage-tr" style={{ display: 'inline', marginLeft: 6 }}>— {language === 'ru' ? r.ex_ru : r.ex_uz}</span>
+                    <span className="grammar-block__usage-tr" style={{ display: 'inline', marginLeft: 6 }}>— {({ uz: r.ex_uz, ru: r.ex_ru, en: (r as any).ex_en || r.ex_uz } as Record<string, string>)[language]}</span>
                   </div>
                 </div>
               ))}
               <div className="grammar-block grammar-block--tip" style={{ margin: '10px 0 0' }}>
                 <p className="grammar-block__tip-text">
-                  {language === 'ru'
-                    ? '💡 Если 也 и 都 вместе — порядок 也都, никогда 都也.'
-                    : '💡 Agar 也 va 都 birga kelsa — tartib 也都, hech qachon 都也.'}
+                  {({ uz: '💡 Agar 也 va 都 birga kelsa — tartib 也都, hech qachon 都也.', ru: '💡 Если 也 и 都 вместе — порядок 也都, никогда 都也.', en: '💡 Agar 也 va 都 birga kelsa — tartib 也都, hech qachon 都也.' } as Record<string, string>)[language]}
                 </p>
               </div>
             </div>
@@ -539,13 +525,13 @@ export function GrammarDouPage() {
         {/* ── QUIZ ── */}
         {activeTab === 'quiz' && (
           <div className="grammar-block">
-            <div className="grammar-block__label">{language === 'ru' ? 'Проверьте себя' : 'O\'zingizni sinang'}</div>
+            <div className="grammar-block__label">{({ uz: 'O\'zingizni sinang', ru: 'Проверьте себя', en: 'Test Yourself' } as Record<string, string>)[language]}</div>
             {quizQuestions.map((q, qi) => {
-              const opts = 'options' in q ? q.options : (language === 'ru' ? q.options_ru : q.options_uz);
+              const opts = 'options' in q ? q.options : ({ uz: q.options_uz, ru: q.options_ru, en: (q as any).options_en || q.options_uz } as Record<string, string[]>)[language]!;
               return (
                 <div key={qi} className="grammar-quiz__question">
                   <div className="grammar-quiz__q">
-                    {qi + 1}. {language === 'ru' ? q.q_ru : q.q_uz}
+                    {qi + 1}. {({ uz: q.q_uz, ru: q.q_ru, en: (q as any).q_en || q.q_uz } as Record<string, string>)[language]}
                   </div>
                   <div className="grammar-quiz__options">
                     {(opts as string[]).map((opt, ai) => {
@@ -572,8 +558,8 @@ export function GrammarDouPage() {
                 type="button"
               >
                 {allAnswered
-                  ? (language === 'ru' ? 'Проверить' : 'Tekshirish')
-                  : `${Object.keys(answers).length} / ${quizQuestions.length} ${language === 'ru' ? 'выбрано' : 'tanlandi'}`}
+                  ? (({ uz: 'Tekshirish', ru: 'Проверить', en: 'Check' } as Record<string, string>)[language])
+                  : `${Object.keys(answers).length} / ${quizQuestions.length} ${({ uz: 'tanlandi', ru: 'выбрано', en: 'selected' } as Record<string, string>)[language]}`}
               </button>
             ) : (
               <div className={`grammar-quiz__result ${score === quizQuestions.length ? 'grammar-quiz__result--perfect' : ''}`}>
@@ -581,17 +567,17 @@ export function GrammarDouPage() {
                 <div className="grammar-quiz__result-score">{score} / {quizQuestions.length}</div>
                 <div className="grammar-quiz__result-msg">
                   {score === quizQuestions.length
-                    ? (language === 'ru' ? 'Отлично! Всё правильно!' : 'Ajoyib! Barchasini to\'g\'ri topdingiz!')
+                    ? (({ uz: 'Ajoyib! Barchasini to\'g\'ri topdingiz!', ru: 'Отлично! Всё правильно!', en: 'Excellent! All correct!' } as Record<string, string>)[language])
                     : score >= 4
-                    ? (language === 'ru' ? 'Хорошо! Повторите немного.' : 'Yaxshi! Biroz takrorlang.')
-                    : (language === 'ru' ? 'Повторите урок.' : 'Darsni qayta ko\'ring.')}
+                    ? (({ uz: 'Yaxshi! Biroz takrorlang.', ru: 'Хорошо! Повторите немного.', en: 'Good! Review a bit more.' } as Record<string, string>)[language])
+                    : (({ uz: 'Darsni qayta ko\'ring.', ru: 'Повторите урок.', en: 'Review the lesson.' } as Record<string, string>)[language])}
                 </div>
                 <button
                   className="grammar-quiz__retry"
                   onClick={() => { setAnswers({}); setShowResults(false); }}
                   type="button"
                 >
-                  {language === 'ru' ? 'Попробовать снова' : 'Qayta urinish'}
+                  {({ uz: 'Qayta urinish', ru: 'Попробовать снова', en: 'Try again' } as Record<string, string>)[language]}
                 </button>
               </div>
             )}

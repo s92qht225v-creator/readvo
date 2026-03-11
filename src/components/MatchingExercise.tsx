@@ -30,7 +30,7 @@ export interface MatchingExerciseProps {
   items: MatchingItem[];
   instruction?: string;
   instruction_ru?: string;
-  language: 'uz' | 'ru';
+  language: 'uz' | 'ru' | 'en';
 }
 
 interface MatchState {
@@ -181,7 +181,7 @@ export const MatchingExercise: React.FC<MatchingExerciseProps> = ({
         <div className="matching__complete">
           <span className="matching__complete-icon">🎉</span>
           <span className="matching__complete-text">
-            {language === 'ru' ? 'Отлично!' : 'Ajoyib!'}
+            {({ uz: 'Ajoyib!', ru: 'Отлично!', en: 'Excellent!' } as Record<string, string>)[language]}
           </span>
         </div>
       )}

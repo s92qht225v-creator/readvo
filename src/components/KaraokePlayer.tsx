@@ -256,7 +256,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Караоке' : 'Karaoke'}</div>
+            <div className="dr-hero__level">HSK 1 · {({ uz: 'Karaoke', ru: 'Караоке', en: 'Karaoke' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{song.title}</h1>
             <div className="dr-hero__pinyin">{song.pinyin}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? song.titleTranslation_ru : song.titleTranslation} —</div>
@@ -331,7 +331,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
               onClick={() => setShowTranslation((v) => !v)}
               type="button"
             >
-              Tarjima
+              {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
             </button>
             <button
               className={`karaoke__toggle ${showPinyin ? 'karaoke__toggle--active' : ''}`}

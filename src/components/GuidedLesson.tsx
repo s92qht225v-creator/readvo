@@ -40,15 +40,15 @@ export interface GuidedLessonProps {
 }
 
 /** Default step instructions by section type */
-const STEP_INSTRUCTIONS: Record<string, { uz: string; ru: string }> = {
-  objectives: { uz: 'Dars maqsadlari', ru: 'Цели урока' },
-  vocabulary: { uz: 'Yangi so\'zlarni o\'rganing', ru: 'Выучите новые слова' },
-  grammar: { uz: 'Grammatikani o\'rganing', ru: 'Изучите грамматику' },
-  text: { uz: 'Dialogni o\'qing va tinglang', ru: 'Прочитайте и послушайте' },
-  fillblank: { uz: 'Mashqni bajaring', ru: 'Выполните упражнение' },
-  multiplechoice: { uz: 'To\'g\'ri javobni tanlang', ru: 'Выберите правильный ответ' },
-  tip: { uz: 'Foydali maslahat', ru: 'Полезный совет' },
-  tonguetwister: { uz: 'Tez aytishni takrorlang', ru: 'Повторите скороговорку' },
+const STEP_INSTRUCTIONS: Record<string, { uz: string; ru: string; en: string }> = {
+  objectives: { uz: 'Dars maqsadlari', ru: 'Цели урока', en: 'Lesson objectives' },
+  vocabulary: { uz: 'Yangi so\'zlarni o\'rganing', ru: 'Выучите новые слова', en: 'Learn new words' },
+  grammar: { uz: 'Grammatikani o\'rganing', ru: 'Изучите грамматику', en: 'Study grammar' },
+  text: { uz: 'Dialogni o\'qing va tinglang', ru: 'Прочитайте и послушайте', en: 'Read and listen' },
+  fillblank: { uz: 'Mashqni bajaring', ru: 'Выполните упражнение', en: 'Complete the exercise' },
+  multiplechoice: { uz: 'To\'g\'ri javobni tanlang', ru: 'Выберите правильный ответ', en: 'Choose the correct answer' },
+  tip: { uz: 'Foydali maslahat', ru: 'Полезный совет', en: 'Helpful tip' },
+  tonguetwister: { uz: 'Tez aytishni takrorlang', ru: 'Повторите скороговорку', en: 'Practice the tongue twister' },
 };
 
 export const GuidedLesson: React.FC<GuidedLessonProps> = React.memo(function GuidedLesson({
@@ -90,9 +90,9 @@ export const GuidedLesson: React.FC<GuidedLessonProps> = React.memo(function Gui
         const ruParts = section.instruction_ru.split('。');
         return ruParts.length > 1 ? ruParts.slice(1).join('。').trim() : section.instruction_ru;
       }
-      return localPart || (defaults ? (language === 'ru' ? defaults.ru : defaults.uz) : '');
+      return localPart || (defaults ? (defaults as Record<string, string>)[language] || defaults.uz : '');
     }
-    return defaults ? (language === 'ru' ? defaults.ru : defaults.uz) : '';
+    return defaults ? (defaults as Record<string, string>)[language] || defaults.uz : '';
   }, [section, language]);
 
   // Audio handlers (same as Page.tsx)
@@ -161,7 +161,7 @@ export const GuidedLesson: React.FC<GuidedLessonProps> = React.memo(function Gui
             key={i}
             className={`guided__dot${i === currentStep ? ' guided__dot--active' : ''}${i < currentStep ? ' guided__dot--done' : ''}`}
             onClick={() => goToStep(i)}
-            aria-label={`${language === 'ru' ? 'Шаг' : 'Qadam'} ${i + 1}`}
+            aria-label={`${({ uz: 'Qadam', ru: 'Шаг', en: 'Step' } as Record<string, string>)[language]} ${i + 1}`}
           />
         ))}
       </div>
@@ -212,14 +212,14 @@ export const GuidedLesson: React.FC<GuidedLessonProps> = React.memo(function Gui
       <div className="guided__nav">
         {!isFirstStep ? (
           <button className="guided__nav-btn guided__nav-btn--secondary" onClick={goBack}>
-            ← {language === 'ru' ? 'Назад' : 'Orqaga'}
+            ← {({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}
           </button>
         ) : prevNav ? (
           <Link
             href={`${bookPath}/lesson/${prevNav.lessonId}/page/${prevNav.pageNum}`}
             className="guided__nav-btn guided__nav-btn--secondary"
           >
-            ← {language === 'ru' ? 'Пред. стр.' : 'Oldingi sahifa'}
+            ← {({ uz: 'Oldingi sahifa', ru: 'Пред. стр.', en: 'Prev page' } as Record<string, string>)[language]}
           </Link>
         ) : (
           <span />
@@ -231,21 +231,21 @@ export const GuidedLesson: React.FC<GuidedLessonProps> = React.memo(function Gui
 
         {!isLastStep ? (
           <button className="guided__nav-btn guided__nav-btn--primary" onClick={goNext}>
-            {language === 'ru' ? 'Далее' : 'Keyingi'} →
+            {({ uz: 'Keyingi', ru: 'Далее', en: 'Next' } as Record<string, string>)[language]} →
           </button>
         ) : nextNav ? (
           <Link
             href={`${bookPath}/lesson/${nextNav.lessonId}/page/${nextNav.pageNum}`}
             className="guided__nav-btn guided__nav-btn--primary"
           >
-            {language === 'ru' ? 'След. стр.' : 'Keyingi sahifa'} →
+            {({ uz: 'Keyingi sahifa', ru: 'След. стр.', en: 'Next page' } as Record<string, string>)[language]} →
           </Link>
         ) : (
           <Link
             href={bookPath}
             className="guided__nav-btn guided__nav-btn--primary"
           >
-            {language === 'ru' ? 'Завершить' : 'Tugatish'} ✓
+            {({ uz: 'Tugatish', ru: 'Завершить', en: 'Finish' } as Record<string, string>)[language]} ✓
           </Link>
         )}
       </div>

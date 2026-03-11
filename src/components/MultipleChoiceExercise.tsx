@@ -25,7 +25,7 @@ export interface MCQuestion {
 
 export interface MultipleChoiceExerciseProps {
   questions: MCQuestion[];
-  language: 'uz' | 'ru';
+  language: 'uz' | 'ru' | 'en';
 }
 
 export const MultipleChoiceExercise: React.FC<MultipleChoiceExerciseProps> = ({
@@ -144,7 +144,7 @@ export const MultipleChoiceExercise: React.FC<MultipleChoiceExerciseProps> = ({
         <div className="mc__complete">
           <span className="mc__complete-icon">🎉</span>
           <span className="mc__complete-text">
-            {language === 'ru' ? 'Отлично!' : 'Ajoyib!'}
+            {({ uz: 'Ajoyib!', ru: 'Отлично!', en: 'Excellent!' } as Record<string, string>)[language]}
           </span>
         </div>
       )}

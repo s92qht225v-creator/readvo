@@ -181,12 +181,18 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
     if (language === 'ru' && section.contextTranslation_ru) {
       return section.contextTranslation_ru;
     }
+    if (language === 'en' && section.contextTranslation_en) {
+      return section.contextTranslation_en;
+    }
     return section.contextTranslation;
   };
 
   const getInstruction = () => {
     if (language === 'ru' && section.instruction_ru) {
       return section.instruction_ru;
+    }
+    if (language === 'en' && section.instruction_en) {
+      return section.instruction_en;
     }
     return section.instruction;
   };
@@ -195,6 +201,9 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
     if (language === 'ru' && section.tip?.translation_ru) {
       return section.tip.translation_ru;
     }
+    if (language === 'en' && section.tip?.translation_en) {
+      return section.tip.translation_en;
+    }
     return section.tip?.translation;
   };
 
@@ -202,12 +211,18 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
     if (language === 'ru' && section.heading_ru) {
       return section.heading_ru;
     }
+    if (language === 'en' && section.heading_en) {
+      return section.heading_en;
+    }
     return section.heading;
   };
 
   const getSubheading = () => {
     if (language === 'ru' && section.subheading_ru) {
       return section.subheading_ru;
+    }
+    if (language === 'en' && section.subheading_en) {
+      return section.subheading_en;
     }
     if (language === 'uz' && section.subheading_uz) {
       return section.subheading_uz;
@@ -227,7 +242,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
           {section.heading && <h2 className="section__heading">{getHeading()}</h2>}
           {section.heading_sub && (
             <span className="section__heading-sub">
-              {language === 'ru' && section.heading_sub_ru ? section.heading_sub_ru : section.heading_sub}
+              {language === 'ru' && section.heading_sub_ru ? section.heading_sub_ru : language === 'en' && section.heading_sub_en ? section.heading_sub_en : section.heading_sub}
             </span>
           )}
           {section.subheading && (
@@ -333,7 +348,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         {section.tip && !section.grammarTableData && (
           <div className="section__tip">
             {section.tip.label && (
-              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : (section.tip.label_uz || section.tip.label)}</span>
+              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : language === 'en' && section.tip.label_en ? section.tip.label_en : (section.tip.label_uz || section.tip.label)}</span>
             )}
             <p className="section__tip-text">{section.tip.text}</p>
             {section.tip.pinyin && isPinyinVisible && (
@@ -346,18 +361,18 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
               <div className="section__tip-vocab">
                 {section.tip.vocabList.map((item, i) =>
                   item.header ? (
-                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : (item.uz || item.en)}</div>
+                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : language === 'en' ? (item.en || item.uz) : (item.uz || item.en)}</div>
                   ) : (
                     <div key={i} className="section__tip-vocab-row">
                       <span className="section__tip-vocab-en">{item.en}</span>
-                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : language === 'en' ? (item.en || item.uz) : item.uz}</span>
                     </div>
                   )
                 )}
               </div>
             )}
-            {(language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom) && (
-              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom)!)}</div>
+            {(language === 'ru' ? section.tip.translationBottom_ru : language === 'en' ? (section.tip.translationBottom_en || section.tip.translationBottom) : section.tip.translationBottom) && (
+              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : language === 'en' ? (section.tip.translationBottom_en || section.tip.translationBottom) : section.tip.translationBottom)!)}</div>
             )}
           </div>
         )}
@@ -530,12 +545,14 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         {section.grammarTableData && (
           <div className="grammar-table">
             {(() => {
-              const hasSubHeaders = section.grammarTableData!.subHeaders || section.grammarTableData!.subHeaders_ru;
+              const hasSubHeaders = section.grammarTableData!.subHeaders || section.grammarTableData!.subHeaders_ru || section.grammarTableData!.subHeaders_en;
               const hasHeaders = section.grammarTableData!.headers.some(h => h.trim() !== '');
               if (!hasHeaders && !hasSubHeaders) return null;
               const displayHeaders = hasSubHeaders
                 ? (language === 'ru' && section.grammarTableData!.subHeaders_ru
                   ? section.grammarTableData!.subHeaders_ru
+                  : language === 'en' && section.grammarTableData!.subHeaders_en
+                  ? section.grammarTableData!.subHeaders_en
                   : section.grammarTableData!.subHeaders || section.grammarTableData!.headers)
                 : section.grammarTableData!.headers;
               return (
@@ -549,7 +566,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
               );
             })()}
             {section.grammarTableData.rows.map((row, rowIdx) => {
-              const translatedCells = (language === 'ru' && row.cells_ru) ? row.cells_ru : (row.cells_uz || row.cells);
+              const translatedCells = (language === 'ru' && row.cells_ru) ? row.cells_ru : (language === 'en' && row.cells_en) ? row.cells_en : (row.cells_uz || row.cells);
               return (
               <div key={rowIdx} className="grammar-table__row" style={{ gridTemplateColumns: `repeat(${section.grammarTableData!.headers.length}, 1fr)` }}>
                 {row.cells.map((cell, cellIdx) => {
@@ -617,7 +634,7 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
         {section.tip && section.grammarTableData && (
           <div className="section__tip">
             {section.tip.label && (
-              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : (section.tip.label_uz || section.tip.label)}</span>
+              <span className="section__tip-label">{language === 'ru' && section.tip.label_ru ? section.tip.label_ru : language === 'en' && section.tip.label_en ? section.tip.label_en : (section.tip.label_uz || section.tip.label)}</span>
             )}
             <p className="section__tip-text">{section.tip.text}</p>
             {section.tip.pinyin && isPinyinVisible && (
@@ -630,18 +647,18 @@ export const Section: React.FC<SectionProps> = React.memo(function Section({
               <div className="section__tip-vocab">
                 {section.tip.vocabList.map((item, i) =>
                   item.header ? (
-                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : (item.uz || item.en)}</div>
+                    <div key={i} className="section__tip-vocab-header">{language === 'ru' ? (item.ru || item.en) : language === 'en' ? (item.en || item.uz) : (item.uz || item.en)}</div>
                   ) : (
                     <div key={i} className="section__tip-vocab-row">
                       <span className="section__tip-vocab-en">{item.en}</span>
-                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : item.uz}</span>
+                      <span className="section__tip-vocab-tr">{language === 'ru' ? item.ru : language === 'en' ? (item.en || item.uz) : item.uz}</span>
                     </div>
                   )
                 )}
               </div>
             )}
-            {(language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom) && (
-              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : section.tip.translationBottom)!)}</div>
+            {(language === 'ru' ? section.tip.translationBottom_ru : language === 'en' ? (section.tip.translationBottom_en || section.tip.translationBottom) : section.tip.translationBottom) && (
+              <div className="section__tip-translation">{renderTipTranslation((language === 'ru' ? section.tip.translationBottom_ru : language === 'en' ? (section.tip.translationBottom_en || section.tip.translationBottom) : section.tip.translationBottom)!)}</div>
             )}
           </div>
         )}

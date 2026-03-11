@@ -28,6 +28,13 @@ const PLAN_LABELS_RU: Record<string, string> = {
   '12_months': '12 месяцев',
 };
 
+const PLAN_LABELS_EN: Record<string, string> = {
+  '1_month': '1 month',
+  '3_months': '3 months',
+  '6_months': '6 months',
+  '12_months': '12 months',
+};
+
 const CARD_NUMBER = '9860 1234 5678 9012';
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
@@ -57,6 +64,8 @@ export default function PaymentPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const isRu = language === 'ru';
+  const isEn = language === 'en';
+  const t = (uz: string, ru: string, en: string) => isEn ? en : isRu ? ru : uz;
 
   useEffect(() => {
     async function checkStatus() {
@@ -87,11 +96,11 @@ export default function PaymentPage() {
 
   const handleFileSelect = useCallback((selectedFile: File) => {
     if (!selectedFile.type.startsWith('image/')) {
-      setError(isRu ? 'Выберите изображение' : 'Rasm tanlang');
+      setError(t('Rasm tanlang', 'Выберите изображение', 'Select an image'));
       return;
     }
     if (selectedFile.size > MAX_FILE_SIZE) {
-      setError(isRu ? 'Файл слишком большой (макс. 5 МБ)' : 'Fayl juda katta (maks. 5 MB)');
+      setError(t('Fayl juda katta (maks. 5 MB)', 'Файл слишком большой (макс. 5 МБ)', 'File too large (max 5 MB)'));
       return;
     }
     setError(null);
@@ -99,7 +108,7 @@ export default function PaymentPage() {
     const reader = new FileReader();
     reader.onload = (e) => setPreview(e.target?.result as string);
     reader.readAsDataURL(selectedFile);
-  }, [isRu]);
+  }, [t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -123,7 +132,7 @@ export default function PaymentPage() {
       const plan = PLANS.find((p) => p.id === selectedPlan)!;
       const token = await getAccessToken();
       if (!token) {
-        setError(isRu ? 'Войдите в аккаунт' : 'Hisobga kiring');
+        setError(t('Hisobga kiring', 'Войдите в аккаунт', 'Please log in'));
         setUploading(false);
         return;
       }
@@ -141,7 +150,7 @@ export default function PaymentPage() {
 
       if (!res.ok) {
         const data = await res.json();
-        setError(data.error || (isRu ? 'Произошла ошибка' : 'Xatolik yuz berdi'));
+        setError(data.error || t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
         setUploading(false);
         return;
       }
@@ -153,11 +162,11 @@ export default function PaymentPage() {
         currency: 'UZS',
       });
     } catch {
-      setError(isRu ? 'Произошла ошибка' : 'Xatolik yuz berdi');
+      setError(t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
     } finally {
       setUploading(false);
     }
-  }, [selectedPlan, file, isRu, getAccessToken]);
+  }, [selectedPlan, file, t, getAccessToken]);
 
   const perMonth = (price: number, months: number) => {
     return formatPrice(Math.round(price / months));
@@ -168,6 +177,9 @@ export default function PaymentPage() {
       if (months === 1) return 'месяц';
       if (months >= 2 && months <= 4) return 'месяца';
       return 'месяцев';
+    }
+    if (isEn) {
+      return months === 1 ? 'month' : 'months';
     }
     return 'oy';
   };
@@ -194,7 +206,9 @@ export default function PaymentPage() {
     const subDaysLeft = Math.ceil((subEnd.getTime() - Date.now()) / (24 * 60 * 60 * 1000));
     const subPlanLabel = isRu
       ? PLAN_LABELS_RU[subscription.plan] || subscription.plan
-      : PLAN_LABELS[subscription.plan] || subscription.plan;
+      : isEn
+        ? PLAN_LABELS_EN[subscription.plan] || subscription.plan
+        : PLAN_LABELS[subscription.plan] || subscription.plan;
 
     if (subDaysLeft > 0) {
       return (
@@ -212,15 +226,13 @@ export default function PaymentPage() {
               </svg>
             </div>
             <h2 className="payment__success-title">
-              {isRu ? 'Подписка активна' : 'Obuna faol'}
+              {t('Obuna faol', 'Подписка активна', 'Subscription active')}
             </h2>
             <p className="payment__success-text">
-              {isRu
-                ? `Осталось ${subDaysLeft} дн.`
-                : `${subDaysLeft} kun qoldi`}
+              {t(`${subDaysLeft} kun qoldi`, `Осталось ${subDaysLeft} дн.`, `${subDaysLeft} days left`)}
             </p>
             <Link href="/chinese" className="payment__back-btn">
-              {isRu ? '← На главную' : '← Bosh sahifa'}
+              {t('← Bosh sahifa', '← На главную', '← Home')}
             </Link>
           </div>
         </main>
@@ -234,7 +246,9 @@ export default function PaymentPage() {
     const isRejected = existingPayment.status === 'rejected';
     const planLabel = isRu
       ? PLAN_LABELS_RU[existingPayment.plan] || existingPayment.plan
-      : PLAN_LABELS[existingPayment.plan] || existingPayment.plan;
+      : isEn
+        ? PLAN_LABELS_EN[existingPayment.plan] || existingPayment.plan
+        : PLAN_LABELS[existingPayment.plan] || existingPayment.plan;
 
     if (isPending) {
       return (
@@ -252,15 +266,17 @@ export default function PaymentPage() {
               </svg>
             </div>
             <h2 className="payment__success-title">
-              {isRu ? 'Заявка на рассмотрении' : 'Ariza ko\'rib chiqilmoqda'}
+              {t('Ariza ko\'rib chiqilmoqda', 'Заявка на рассмотрении', 'Payment under review')}
             </h2>
             <p className="payment__success-text">
-              {isRu
-                ? `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) проверяется. Мы скоро активируем ваш аккаунт.`
-                : `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tekshirilmoqda. Hisobingiz tez orada faollashtiriladi.`}
+              {t(
+                `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tekshirilmoqda. Hisobingiz tez orada faollashtiriladi.`,
+                `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) проверяется. Мы скоро активируем ваш аккаунт.`,
+                `Your payment for ${planLabel} (${formatPrice(existingPayment.amount)} UZS) is being reviewed. Your account will be activated soon.`
+              )}
             </p>
             <Link href="/chinese" className="payment__back-btn">
-              {isRu ? '← На главную' : '← Bosh sahifa'}
+              {t('← Bosh sahifa', '← На главную', '← Home')}
             </Link>
           </div>
         </main>
@@ -283,19 +299,21 @@ export default function PaymentPage() {
               </svg>
             </div>
             <h2 className="payment__success-title">
-              {isRu ? 'Платёж отклонён' : 'To\'lov rad etildi'}
+              {t('To\'lov rad etildi', 'Платёж отклонён', 'Payment rejected')}
             </h2>
             <p className="payment__success-text">
-              {isRu
-                ? `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) не был подтверждён. Пожалуйста, отправьте корректный чек.`
-                : `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tasdiqlanmadi. Iltimos, to'g'ri chekni yuboring.`}
+              {t(
+                `${planLabel} uchun to'lovingiz (${formatPrice(existingPayment.amount)} so'm) tasdiqlanmadi. Iltimos, to'g'ri chekni yuboring.`,
+                `Ваш платёж за ${planLabel} (${formatPrice(existingPayment.amount)} сум) не был подтверждён. Пожалуйста, отправьте корректный чек.`,
+                `Your payment for ${planLabel} (${formatPrice(existingPayment.amount)} UZS) was not confirmed. Please submit a valid receipt.`
+              )}
             </p>
             <button
               className="payment__back-btn"
               onClick={() => setExistingPayment(null)}
               type="button"
             >
-              {isRu ? 'Отправить заново' : 'Qayta yuborish'}
+              {t('Qayta yuborish', 'Отправить заново', 'Resubmit')}
             </button>
           </div>
         </main>
@@ -319,15 +337,13 @@ export default function PaymentPage() {
             </svg>
           </div>
           <h2 className="payment__success-title">
-            {isRu ? 'Чек отправлен!' : 'Chek yuborildi!'}
+            {t('Chek yuborildi!', 'Чек отправлен!', 'Receipt sent!')}
           </h2>
           <p className="payment__success-text">
-            {isRu
-              ? 'Ваш аккаунт будет активирован в ближайшее время.'
-              : 'Hisobingiz tez orada faollashtiriladi.'}
+            {t('Hisobingiz tez orada faollashtiriladi.', 'Ваш аккаунт будет активирован в ближайшее время.', 'Your account will be activated shortly.')}
           </p>
           <Link href="/chinese" className="payment__back-btn">
-            {isRu ? '← На главную' : '← Bosh sahifa'}
+            {t('← Bosh sahifa', '← На главную', '← Home')}
           </Link>
         </div>
       </main>
@@ -343,7 +359,7 @@ export default function PaymentPage() {
       </header>
 
       <h1 className="payment__title">
-        {isRu ? 'Выберите план' : 'Rejani tanlang'}
+        {t('Rejani tanlang', 'Выберите план', 'Choose a plan')}
       </h1>
 
       {/* Plan cards */}
@@ -366,11 +382,11 @@ export default function PaymentPage() {
               {plan.months} {monthLabel(plan.months)}
             </span>
             <span className="payment__plan-price">
-              {formatPrice(plan.price)} {isRu ? 'сум' : "so'm"}
+              {formatPrice(plan.price)} {t("so'm", 'сум', 'UZS')}
             </span>
             {plan.months > 1 && (
               <span className="payment__plan-per-month">
-                {perMonth(plan.price, plan.months)} / {isRu ? 'мес' : "oy"}
+                {perMonth(plan.price, plan.months)} / {t('oy', 'мес', 'mo')}
               </span>
             )}
             {plan.months >= 3 && (
@@ -385,7 +401,7 @@ export default function PaymentPage() {
       {/* Card number */}
       <div className="payment__section">
         <h2 className="payment__section-title">
-          {isRu ? 'Переведите на карту' : 'Kartaga o\'tkazing'}
+          {t('Kartaga o\'tkazing', 'Переведите на карту', 'Transfer to card')}
         </h2>
         <div className="payment__card-info">
           <span className="payment__card-number">{CARD_NUMBER}</span>
@@ -408,9 +424,9 @@ export default function PaymentPage() {
         </div>
         {selectedPlan && (
           <p className="payment__card-amount">
-            {isRu ? 'Сумма' : 'Summa'}:{' '}
+            {t('Summa', 'Сумма', 'Amount')}:{' '}
             <strong>
-              {formatPrice(PLANS.find((p) => p.id === selectedPlan)!.price)} {isRu ? 'сум' : "so'm"}
+              {formatPrice(PLANS.find((p) => p.id === selectedPlan)!.price)} {t("so'm", 'сум', 'UZS')}
             </strong>
           </p>
         )}
@@ -419,7 +435,7 @@ export default function PaymentPage() {
       {/* Screenshot upload */}
       <div className="payment__section">
         <h2 className="payment__section-title">
-          {isRu ? 'Загрузите скриншот оплаты' : "To'lov skrinshotini yuklang"}
+          {t("To'lov skrinshotini yuklang", 'Загрузите скриншот оплаты', 'Upload payment screenshot')}
         </h2>
         <div
           className={`payment__upload${preview ? ' payment__upload--has-file' : ''}`}
@@ -436,7 +452,7 @@ export default function PaymentPage() {
                 <polyline points="17 8 12 3 7 8" />
                 <line x1="12" y1="3" x2="12" y2="15" />
               </svg>
-              <span>{isRu ? 'Нажмите или перетащите файл' : 'Bosing yoki faylni tashlang'}</span>
+              <span>{t('Bosing yoki faylni tashlang', 'Нажмите или перетащите файл', 'Click or drop file here')}</span>
             </div>
           )}
           <input
@@ -456,7 +472,7 @@ export default function PaymentPage() {
             onClick={() => { setFile(null); setPreview(null); }}
             type="button"
           >
-            {isRu ? 'Удалить' : "O'chirish"}
+            {t("O'chirish", 'Удалить', 'Remove')}
           </button>
         )}
       </div>
@@ -474,7 +490,7 @@ export default function PaymentPage() {
         {uploading ? (
           <span className="payment__spinner" />
         ) : (
-          isRu ? 'Отправить' : 'Yuborish'
+          t('Yuborish', 'Отправить', 'Submit')
         )}
       </button>
     </main>

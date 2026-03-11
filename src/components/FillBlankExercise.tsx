@@ -34,7 +34,7 @@ export interface SentencePart {
 export interface FillBlankExerciseProps {
   options: FillBlankOption[];
   sentences: FillBlankSentence[];
-  language: 'uz' | 'ru';
+  language: 'uz' | 'ru' | 'en';
 }
 
 interface FillState {
@@ -243,7 +243,7 @@ export const FillBlankExercise: React.FC<FillBlankExerciseProps> = ({
         <div className="fillblank__complete">
           <span className="fillblank__complete-icon">🎉</span>
           <span className="fillblank__complete-text">
-            {language === 'ru' ? 'Отлично!' : 'Ajoyib!'}
+            {({ uz: 'Ajoyib!', ru: 'Отлично!', en: 'Excellent!' } as Record<string, string>)[language]}
           </span>
         </div>
       )}

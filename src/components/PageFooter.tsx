@@ -7,12 +7,12 @@ import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 
 const REASONS = [
-  { id: 'pinyin', uz: 'Pinyin xatosi', ru: 'Ошибка пиньинь' },
-  { id: 'translation', uz: 'Tarjima xatosi', ru: 'Ошибка перевода' },
-  { id: 'audio', uz: 'Audio xatosi', ru: 'Ошибка аудио' },
-  { id: 'grammar', uz: 'Grammatika xatosi', ru: 'Ошибка грамматики' },
-  { id: 'image', uz: 'Rasm xatosi', ru: 'Ошибка изображения' },
-  { id: 'other', uz: 'Boshqa', ru: 'Другое' },
+  { id: 'pinyin', uz: 'Pinyin xatosi', ru: 'Ошибка пиньинь', en: 'Pinyin error' },
+  { id: 'translation', uz: 'Tarjima xatosi', ru: 'Ошибка перевода', en: 'Translation error' },
+  { id: 'audio', uz: 'Audio xatosi', ru: 'Ошибка аудио', en: 'Audio error' },
+  { id: 'grammar', uz: 'Grammatika xatosi', ru: 'Ошибка грамматики', en: 'Grammar error' },
+  { id: 'image', uz: 'Rasm xatosi', ru: 'Ошибка изображения', en: 'Image error' },
+  { id: 'other', uz: 'Boshqa', ru: 'Другое', en: 'Other' },
 ];
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -26,7 +26,6 @@ export function PageFooter() {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<Status>('idle');
 
-  const isRu = language === 'ru';
   const showCorrection = pathname !== '/';
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -81,19 +80,19 @@ export function PageFooter() {
                 <path d="M12 20h9" />
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
               </svg>
-              {isRu ? 'Сообщить об ошибке' : 'Xato haqida xabar berish'}
+              {({ uz: 'Xato haqida xabar berish', ru: 'Сообщить об ошибке', en: 'Report an error' } as Record<string, string>)[language]}
             </button>
           ) : status === 'success' ? (
             <div className="correction-inline__success">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 6L9 17l-5-5" />
               </svg>
-              <span>{isRu ? 'Отправлено!' : 'Yuborildi!'}</span>
+              <span>{({ uz: 'Yuborildi!', ru: 'Отправлено!', en: 'Sent!' } as Record<string, string>)[language]}</span>
             </div>
           ) : (
             <form className="correction-inline__form" onSubmit={handleSubmit}>
               <div className="correction-inline__title">
-                {isRu ? 'Сообщить об ошибке' : 'Xato haqida xabar berish'}
+                {({ uz: 'Xato haqida xabar berish', ru: 'Сообщить об ошибке', en: 'Report an error' } as Record<string, string>)[language]}
                 <button
                   type="button"
                   className="correction-inline__close"
@@ -110,17 +109,17 @@ export function PageFooter() {
                 required
               >
                 <option value="" disabled>
-                  {isRu ? 'Выберите причину...' : 'Sababni tanlang...'}
+                  {({ uz: 'Sababni tanlang...', ru: 'Выберите причину...', en: 'Select a reason...' } as Record<string, string>)[language]}
                 </option>
                 {REASONS.map((r) => (
                   <option key={r.id} value={r.id}>
-                    {isRu ? r.ru : r.uz}
+                    {(r as Record<string, string>)[language] || r.uz}
                   </option>
                 ))}
               </select>
               <textarea
                 className="correction-inline__textarea"
-                placeholder={isRu ? 'Что ещё нам следует знать?' : 'Yana nima bilishimiz kerak?'}
+                placeholder={({ uz: 'Yana nima bilishimiz kerak?', ru: 'Что ещё нам следует знать?', en: 'What else should we know?' } as Record<string, string>)[language]}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 maxLength={500}
@@ -132,16 +131,16 @@ export function PageFooter() {
                 disabled={!reason || status === 'submitting'}
               >
                 {status === 'submitting'
-                  ? (isRu ? 'Отправка...' : 'Yuborilmoqda...')
+                  ? ({ uz: 'Yuborilmoqda...', ru: 'Отправка...', en: 'Sending...' } as Record<string, string>)[language]
                   : status === 'error'
-                  ? (isRu ? 'Ошибка, попробуйте снова' : 'Xatolik, qayta urinib ko\'ring')
-                  : (isRu ? 'Отправить' : 'Yuborish')}
+                  ? ({ uz: 'Xatolik, qayta urinib ko\'ring', ru: 'Ошибка, попробуйте снова', en: 'Error, try again' } as Record<string, string>)[language]
+                  : ({ uz: 'Yuborish', ru: 'Отправить', en: 'Submit' } as Record<string, string>)[language]}
               </button>
             </form>
           )}
         </div>
       )}
-      <p>{isRu ? 'Blim — Интерактивные учебники языков' : 'Blim — Interaktiv til darsliklari'}</p>
+      <p>{({ uz: 'Blim — Interaktiv til darsliklari', ru: 'Blim — Интерактивные учебники языков', en: 'Blim — Interactive language textbooks' } as Record<string, string>)[language]}</p>
       {pathname !== '/blog' && !pathname?.startsWith('/blog/') && (
         <Link href="/blog" className="home__footer-blog-link">Blog</Link>
       )}

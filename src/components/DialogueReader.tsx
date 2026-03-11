@@ -128,9 +128,9 @@ function RubyText({ text, pinyin, show }: {
 // ── Main component ─────────────────────────────────────────────────────────
 
 const TABS = [
-  { id: 'dialog', uz: 'Dialog', ru: 'Диалог' },
-  { id: 'vocab', uz: 'So\'zlar', ru: 'Слова' },
-  { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика' },
+  { id: 'dialog', uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' },
+  { id: 'vocab', uz: 'So\'zlar', ru: 'Слова', en: 'Words' },
+  { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' },
 ];
 
 export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderProps) {
@@ -290,7 +290,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">HSK 1 · {language === 'ru' ? 'Диалог' : 'Dialog'}</div>
+            <div className="dr-hero__level">HSK 1 · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{dialogue.title}</h1>
             <div className="dr-hero__pinyin">{dialogue.pinyin}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : dialogue.titleTranslation} —</div>
@@ -313,7 +313,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                 }}
                 type="button"
               >
-                {language === 'ru' ? t.ru : t.uz}
+                {(t as Record<string, string>)[language] ?? t.uz}
               </button>
             ))}
           </div>
@@ -415,10 +415,10 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
                 <button className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
-                  {language === 'ru' ? 'Фокус' : 'Fokus'}
+                  {({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}
                 </button>
                 <button className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
-                  {language === 'ru' ? 'Перевод' : 'Tarjima'}
+                  {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
                 </button>
                 <button className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
                   Pinyin
@@ -440,13 +440,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             {vocabList.length === 0 && !dialogue.extraVocab?.length && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
               <div className="dr-empty">
                 <div className="dr-empty__icon">📖</div>
-                <div>{language === 'ru' ? 'Слова не найдены' : 'So\'zlar topilmadi'}</div>
+                <div>{({ uz: 'So\'zlar topilmadi', ru: 'Слова не найдены', en: 'No words found' } as Record<string, string>)[language]}</div>
               </div>
             ) : (
               <>
                 {vocabList.length > 0 && (
                   <div className="dr-card">
-                    <div className="dr-label">{language === 'ru' ? 'Новые слова' : 'Yangi so\'zlar'}</div>
+                    <div className="dr-label">{({ uz: 'Yangi so\'zlar', ru: 'Новые слова', en: 'New Words' } as Record<string, string>)[language]}</div>
                     {vocabList.map((v, i) => (
                       <div key={i} className={`dr-vocab-item ${expandedVocab === i ? 'dr-vocab-item--open' : ''}`} onClick={() => setExpandedVocab(expandedVocab === i ? null : i)}>
                         <div className="dr-vocab-row">
@@ -463,13 +463,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                         )}
                       </div>
                     ))}
-                    <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите пример' : 'Bosing — misol ko\'rinadi'}</div>
+                    <div className="dr-hint">{({ uz: 'Bosing — misol ko\'rinadi', ru: 'Нажмите — увидите пример', en: 'Tap to see an example' } as Record<string, string>)[language]}</div>
                   </div>
                 )}
 
                 {dialogue.extraVocab && dialogue.extraVocab.length > 0 && (
                   <div className="dr-card">
-                    <div className="dr-label">{language === 'ru' ? 'Дополнительные слова по теме' : 'Mavzuga oid qo\'shimcha so\'zlar'}</div>
+                    <div className="dr-label">{({ uz: 'Mavzuga oid qo\'shimcha so\'zlar', ru: 'Дополнительные слова по теме', en: 'Additional Topic Words' } as Record<string, string>)[language]}</div>
                     {dialogue.extraVocabSubtitle_uz && (
                       <div className="dr-sublabel">{language === 'ru' ? dialogue.extraVocabSubtitle_ru : dialogue.extraVocabSubtitle_uz}</div>
                     )}
@@ -488,7 +488,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
                 {dialogue.phrases && dialogue.phrases.length > 0 && (
                   <div className="dr-card">
-                    <div className="dr-label">{language === 'ru' ? 'Полезные фразы' : 'Foydali iboralar'}</div>
+                    <div className="dr-label">{({ uz: 'Foydali iboralar', ru: 'Полезные фразы', en: 'Useful Phrases' } as Record<string, string>)[language]}</div>
                     <div className="dr-phrases-grid">
                       {dialogue.phrases.map((p, i) => (
                         <div key={i} className="dr-phrase-card">
@@ -503,7 +503,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
                 {dialogue.timeOfDay && dialogue.timeOfDay.length > 0 && (
                   <div className="dr-card">
-                    <div className="dr-label">{language === 'ru' ? 'Время суток' : 'Kun vaqtlari'}</div>
+                    <div className="dr-label">{({ uz: 'Kun vaqtlari', ru: 'Время суток', en: 'Times of Day' } as Record<string, string>)[language]}</div>
                     <div className="dr-tod-row">
                       {dialogue.timeOfDay.map((t, i) => (
                         <div key={i} className="dr-tod-item">
@@ -527,7 +527,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             {grammarNotes.length === 0 ? (
               <div className="dr-empty">
                 <div className="dr-empty__icon">🚧</div>
-                <div>{language === 'ru' ? 'Скоро будет' : 'Tez kunda'}</div>
+                <div>{({ uz: 'Tez kunda', ru: 'Скоро будет', en: 'Coming soon' } as Record<string, string>)[language]}</div>
               </div>
             ) : (
               <>
@@ -565,7 +565,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                     )}
                   </div>
                 ))}
-                <div className="dr-hint">{language === 'ru' ? 'Нажмите — увидите формулу и примеры' : 'Bosing — formula va misollar ko\'rinadi'}</div>
+                <div className="dr-hint">{({ uz: 'Bosing — formula va misollar ko\'rinadi', ru: 'Нажмите — увидите формулу и примеры', en: 'Tap to see formula and examples' } as Record<string, string>)[language]}</div>
               </>
             )}
           </div>

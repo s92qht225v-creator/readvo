@@ -87,6 +87,9 @@ export interface Sentence {
   /** Translation in Russian (optional) */
   readonly text_translation_ru?: string;
 
+  /** Translation in English (optional) */
+  readonly text_translation_en?: string;
+
   /** Pre-tokenized words for click interaction (optional, for future features) */
   readonly words?: readonly WordToken[];
 
@@ -151,11 +154,17 @@ export interface Section {
   /** Optional section heading (Russian) */
   readonly heading_ru?: string;
 
+  /** Optional section heading (English) */
+  readonly heading_en?: string;
+
   /** Optional heading subtitle (e.g., "Present simple, present continuous, stative verbs") */
   readonly heading_sub?: string;
 
   /** Optional heading subtitle (Russian) */
   readonly heading_sub_ru?: string;
+
+  /** Optional heading subtitle (English) */
+  readonly heading_sub_en?: string;
 
   /** Optional section subheading (e.g., "Text 1") */
   readonly subheading?: string;
@@ -165,6 +174,9 @@ export interface Section {
 
   /** Optional section subheading (Russian) */
   readonly subheading_ru?: string;
+
+  /** Optional section subheading (English) */
+  readonly subheading_en?: string;
 
   /** Optional context/narration before the sentences (e.g., scene description) */
   readonly context?: string;
@@ -178,6 +190,9 @@ export interface Section {
   /** Optional context translation (Russian) */
   readonly contextTranslation_ru?: string;
 
+  /** Optional context translation (English) */
+  readonly contextTranslation_en?: string;
+
   /** Optional exercise letter label shown before the instruction (e.g., "A", "B", "C") */
   readonly exerciseLetter?: string;
 
@@ -187,15 +202,20 @@ export interface Section {
   /** Optional instruction line (Russian) */
   readonly instruction_ru?: string;
 
+  /** Optional instruction line (English) */
+  readonly instruction_en?: string;
+
   /** Optional tip/note box within the section */
   readonly tip?: {
     readonly label?: string;           // e.g., "小语助力", "Xiaoyu's Tip"
     readonly label_uz?: string;        // Label (Uzbek)
     readonly label_ru?: string;        // Label (Russian)
+    readonly label_en?: string;        // Label (English)
     readonly text: string;             // Chinese text
     readonly pinyin?: string;          // Pinyin
     readonly translation?: string;     // Translation (Uzbek)
     readonly translation_ru?: string;  // Translation (Russian)
+    readonly translation_en?: string;  // Translation (English)
     readonly vocabList?: ReadonlyArray<{
       readonly en: string;
       readonly uz: string;
@@ -204,6 +224,7 @@ export interface Section {
     }>;
     readonly translationBottom?: string;
     readonly translationBottom_ru?: string;
+    readonly translationBottom_en?: string;
   };
 
   /** Optional audio URL for the entire section */
@@ -503,6 +524,9 @@ export interface GrammarTableRow {
 
   /** Russian translation of cells (optional, used instead of cells when language is RU) */
   readonly cells_ru?: readonly string[];
+
+  /** English translation of cells (optional, used instead of cells when language is EN) */
+  readonly cells_en?: readonly string[];
 }
 
 /**
@@ -517,6 +541,9 @@ export interface GrammarTableData {
 
   /** Column sub-headers (Russian translation) */
   readonly subHeaders_ru?: readonly string[];
+
+  /** Column sub-headers (English translation) */
+  readonly subHeaders_en?: readonly string[];
 
   /** Table rows */
   readonly rows: readonly GrammarTableRow[];
@@ -598,6 +625,9 @@ export interface LessonHeader {
 
   /** Title translation (Russian) */
   readonly titleTranslation_ru?: string;
+
+  /** Title translation (English) */
+  readonly titleTranslation_en?: string;
 
   /** Optional subtitle (e.g., "Present simple, present continuous, stative verbs") */
   readonly subtitle?: string;

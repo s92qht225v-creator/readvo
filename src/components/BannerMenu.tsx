@@ -50,41 +50,32 @@ export function BannerMenu() {
               {trial && (
                 <div className={`home__menu-trial${trial.isTrialExpired ? ' home__menu-trial--expired' : ''}${trial.hasSubscription ? ' home__menu-trial--subscribed' : ''}`}>
                   {trial.hasSubscription
-                    ? (language === 'ru'
-                        ? `Подписка: ${trial.subscriptionDaysLeft} дн.`
-                        : `Obuna: ${trial.subscriptionDaysLeft} kun qoldi`)
+                    ? ({ uz: `Obuna: ${trial.subscriptionDaysLeft} kun qoldi`, ru: `Подписка: ${trial.subscriptionDaysLeft} дн.`, en: `Subscription: ${trial.subscriptionDaysLeft} days left` } as Record<string, string>)[language]
                     : trial.isTrialExpired
-                      ? (language === 'ru' ? 'Пробный период закончился' : 'Sinov muddati tugadi')
-                      : (language === 'ru'
-                          ? `Пробный: осталось ${trial.daysLeft} дн.`
-                          : `Sinov: ${trial.daysLeft} kun qoldi`)}
+                      ? ({ uz: 'Sinov muddati tugadi', ru: 'Пробный период закончился', en: 'Trial period expired' } as Record<string, string>)[language]
+                      : ({ uz: `Sinov: ${trial.daysLeft} kun qoldi`, ru: `Пробный: осталось ${trial.daysLeft} дн.`, en: `Trial: ${trial.daysLeft} days left` } as Record<string, string>)[language]}
                 </div>
               )}
               <div className="home__menu-divider" />
             </>
           )}
           <div className="home__menu-section-label">
-            {language === 'ru' ? 'Язык' : 'Til'}
+            {({ uz: 'Til', ru: 'Язык', en: 'Language' } as Record<string, string>)[language]}
           </div>
           <div className="home__menu-lang-row">
-            <button
-              className={`home__menu-lang-btn ${language === 'uz' ? 'home__menu-lang-btn--active' : ''}`}
-              type="button"
-              onClick={() => setLanguage('uz')}
+            <select
+              className="home__menu-lang-select"
+              value={language}
+              onChange={(e) => setLanguage(e.target.value as 'uz' | 'ru' | 'en')}
             >
-              O&apos;zbekcha
-            </button>
-            <button
-              className={`home__menu-lang-btn ${language === 'ru' ? 'home__menu-lang-btn--active' : ''}`}
-              type="button"
-              onClick={() => setLanguage('ru')}
-            >
-              Русский
-            </button>
+              <option value="uz">O&apos;zbekcha</option>
+              <option value="ru">Русский</option>
+              <option value="en">English</option>
+            </select>
           </div>
           <div className="home__menu-divider" />
           <div className="home__menu-section-label">
-            {language === 'ru' ? 'Я изучаю' : "Men o'rganaman"}
+            {({ uz: "Men o'rganaman", ru: 'Я изучаю', en: "I'm learning" } as Record<string, string>)[language]}
           </div>
           <div className="home__menu-lang-row">
             <Link
@@ -100,11 +91,11 @@ export function BannerMenu() {
             Blog
           </Link>
           <Link href="/payment" className="home__menu-item" onClick={() => setMenuOpen(false)}>
-            {language === 'ru' ? 'Оплата' : "To'lov"}
+            {({ uz: "To'lov", ru: 'Оплата', en: 'Payment' } as Record<string, string>)[language]}
           </Link>
           {user && (
             <button className="home__menu-item" type="button" onClick={async () => { await logout(); setMenuOpen(false); router.push('/'); }}>
-              {language === 'ru' ? 'Выйти' : 'Chiqish'}
+              {({ uz: 'Chiqish', ru: 'Выйти', en: 'Log out' } as Record<string, string>)[language]}
             </button>
           )}
       </div>

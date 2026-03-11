@@ -109,7 +109,7 @@ function TappableWord({
       </span>
       {isActive && (
         <span className="typedfillblank__tooltip">
-          {language === 'ru' ? entry.tr : entry.t}
+          {({ uz: entry.t, ru: entry.tr, en: entry.t } as Record<string, string>)[language]}
         </span>
       )}
     </span>
@@ -391,13 +391,13 @@ export function WordChoiceExercise({ cards, language, layout }: Props) {
           onClick={handleCheckAll}
           disabled={!hasUncheckedSelections}
         >
-          {language === 'ru' ? 'Проверить' : 'Tekshirish'}
+          {({ uz: 'Tekshirish', ru: 'Проверить', en: 'Check' } as Record<string, string>)[language]}
         </button>
       )}
 
       {completedChoices === totalChoices && totalChoices > 0 && (
         <div className="wordchoice__complete">
-          {language === 'ru' ? 'Все правильно!' : "Hammasi to'g'ri!"}
+          {({ uz: "Hammasi to'g'ri!", ru: 'Все правильно!', en: 'All correct!' } as Record<string, string>)[language]}
         </div>
       )}
     </div>

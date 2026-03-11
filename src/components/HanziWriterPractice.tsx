@@ -7,7 +7,7 @@ import type { HanziWord } from '@/services/writing';
 export type { HanziWord };
 
 interface Props {
-  lang: 'uz' | 'ru';
+  lang: 'uz' | 'ru' | 'en';
   words?: HanziWord[];
   onBack?: () => void;
   autoStart?: boolean;
@@ -132,14 +132,14 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
         type="button"
         onClick={() => setSubtab('writing')}
       >
-        {lang === 'ru' ? 'Письмо' : 'Yozish'}
+        {({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[lang]}
       </button>
       <button
         className={`hanzi-practice__subtab${subtab === 'chars' ? ' hanzi-practice__subtab--active' : ''}`}
         type="button"
         onClick={() => setSubtab('chars')}
       >
-        {lang === 'ru' ? 'Иероглифы' : 'Ierogliflar'}
+        {({ uz: 'Ierogliflar', ru: 'Иероглифы', en: 'Characters' } as Record<string, string>)[lang]}
       </button>
     </div>
   );
@@ -153,7 +153,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
           {/* Card 1: character list */}
           <div style={{ background: '#fff', borderRadius: 12, padding: 14, marginBottom: 10, border: '1px solid #e0e0e6', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
             <div style={{ fontSize: 10, textTransform: 'uppercase' as const, letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
-              {lang === 'ru' ? 'ВСЕ ИЕРОГЛИФЫ' : 'BARCHA IEROGLIFLAR'}
+              {({ uz: 'BARCHA IEROGLIFLAR', ru: 'ВСЕ ИЕРОГЛИФЫ', en: 'ALL CHARACTERS' } as Record<string, string>)[lang]}
             </div>
             {activeWords.map((w) => (
               <div key={w.char} style={{ background: '#f5f5f8', borderRadius: 8, marginBottom: 5, overflow: 'hidden', borderLeft: '3px solid #fca5a5' }}>
@@ -165,8 +165,8 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                       <span style={{ fontSize: 12, color: '#888' }}>{lang === 'ru' ? w.ru : w.uz}</span>
                     </div>
                     <div style={{ display: 'flex', gap: 8, marginTop: 3 }}>
-                      <span style={{ fontSize: 10, color: '#dc2626', background: '#fee2e2', borderRadius: 4, padding: '1px 6px' }}>{w.strokes} {lang === 'ru' ? 'черт' : 'chiziq'}</span>
-                      {w.radical && <span style={{ fontSize: 10, color: '#555', background: '#f0f0f3', borderRadius: 4, padding: '1px 6px' }}>{lang === 'ru' ? 'ключ' : 'kalit'}: {w.radical} ({lang === 'ru' ? w.radicalRu : w.radicalUz})</span>}
+                      <span style={{ fontSize: 10, color: '#dc2626', background: '#fee2e2', borderRadius: 4, padding: '1px 6px' }}>{w.strokes} {({ uz: 'chiziq', ru: 'черт', en: 'strokes' } as Record<string, string>)[lang]}</span>
+                      {w.radical && <span style={{ fontSize: 10, color: '#555', background: '#f0f0f3', borderRadius: 4, padding: '1px 6px' }}>{({ uz: 'kalit', ru: 'ключ', en: 'radical' } as Record<string, string>)[lang]}: {w.radical} ({lang === 'ru' ? w.radicalRu : lang === 'en' ? w.radicalUz : w.radicalUz})</span>}
                     </div>
                   </div>
                   <span style={{ fontSize: 16, color: '#ccc', fontWeight: 300, transition: 'transform 0.2s', display: 'inline-block', transform: expandedChar === w.char ? 'rotate(180deg)' : 'rotate(0deg)' }}>▾</span>
@@ -179,44 +179,44 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                       <div style={{ fontSize: 11, color: '#888' }}>{lang === 'ru' ? w.exru : w.exuz}</div>
                     </div>
                     <button type="button" onClick={(e) => { e.stopPropagation(); setSubtab('writing'); handleStart(); }} style={{ marginTop: 8, width: '100%', padding: 8, background: 'linear-gradient(135deg, #dc2626, #b91c1c)', border: 'none', borderRadius: 6, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
-                      ✎ {lang === 'ru' ? 'Практиковать написание' : 'Yozishni mashq qilish'}
+                      ✎ {({ uz: 'Yozishni mashq qilish', ru: 'Практиковать написание', en: 'Practice writing' } as Record<string, string>)[lang]}
                     </button>
                   </div>
                 )}
               </div>
             ))}
-            <div style={{ fontSize: 10, color: '#bbb', textAlign: 'center' as const, marginTop: 4 }}>▾ {lang === 'ru' ? 'нажмите — покажет пример' : "bosing — misol ko'rinadi"}</div>
+            <div style={{ fontSize: 10, color: '#bbb', textAlign: 'center' as const, marginTop: 4 }}>▾ {({ uz: "bosing — misol ko'rinadi", ru: 'нажмите — покажет пример', en: 'tap to see example' } as Record<string, string>)[lang]}</div>
           </div>
 
           {/* Card 2: stroke types */}
           <div style={{ background: '#fff', borderRadius: 12, padding: 14, marginBottom: 10, border: '1px solid #e0e0e6', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
             <div style={{ fontSize: 10, textTransform: 'uppercase' as const, letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
-              {lang === 'ru' ? 'ТИПЫ ЧЕРТ' : 'CHIZIQ TURLARI'}
+              {({ uz: 'CHIZIQ TURLARI', ru: 'ТИПЫ ЧЕРТ', en: 'STROKE TYPES' } as Record<string, string>)[lang]}
             </div>
             <div style={{ fontSize: 12, color: '#555', lineHeight: 1.8, marginBottom: 8 }}>
-              {lang === 'ru' ? 'Китайские иероглифы состоят из нескольких основных типов черт:' : 'Xitoy ierogliflari bir nechta asosiy chiziq turlaridan tashkil topgan:'}
+              {({ uz: 'Xitoy ierogliflari bir nechta asosiy chiziq turlaridan tashkil topgan:', ru: 'Китайские иероглифы состоят из нескольких основных типов черт:', en: 'Chinese characters are made up of several basic stroke types:' } as Record<string, string>)[lang]}
             </div>
             {[
-              { name: '横 héng', uz: 'gorizontal', ru: 'горизонталь', icon: '一', desc: lang === 'ru' ? 'Слева направо' : "Chapdan o'ngga" },
-              { name: '竖 shù', uz: 'vertikal', ru: 'вертикаль', icon: '丨', desc: lang === 'ru' ? 'Сверху вниз' : 'Yuqoridan pastga' },
-              { name: '撇 piě', uz: 'chap pastga', ru: 'влево вниз', icon: '丿', desc: lang === 'ru' ? 'Справа налево вниз' : "O'ngdan chapga pastga" },
-              { name: '捺 nà', uz: "o'ng pastga", ru: 'вправо вниз', icon: '㇏', desc: lang === 'ru' ? 'Слева направо вниз' : "Chapdan o'ngga pastga" },
-              { name: '点 diǎn', uz: 'nuqta', ru: 'точка', icon: '丶', desc: lang === 'ru' ? 'Короткое нажатие' : 'Qisqa bosish' },
-              { name: '折 zhé', uz: 'burilish', ru: 'поворот', icon: '𠃍', desc: lang === 'ru' ? 'Смена направления' : "Yo'nalish o'zgarishi" },
+              { name: '横 héng', uz: 'gorizontal', ru: 'горизонталь', en: 'horizontal', icon: '一', desc: { uz: "Chapdan o'ngga", ru: 'Слева направо', en: 'Left to right' } },
+              { name: '竖 shù', uz: 'vertikal', ru: 'вертикаль', en: 'vertical', icon: '丨', desc: { uz: 'Yuqoridan pastga', ru: 'Сверху вниз', en: 'Top to bottom' } },
+              { name: '撇 piě', uz: 'chap pastga', ru: 'влево вниз', en: 'left-falling', icon: '丿', desc: { uz: "O'ngdan chapga pastga", ru: 'Справа налево вниз', en: 'Right to left down' } },
+              { name: '捺 nà', uz: "o'ng pastga", ru: 'вправо вниз', en: 'right-falling', icon: '㇏', desc: { uz: "Chapdan o'ngga pastga", ru: 'Слева направо вниз', en: 'Left to right down' } },
+              { name: '点 diǎn', uz: 'nuqta', ru: 'точка', en: 'dot', icon: '丶', desc: { uz: 'Qisqa bosish', ru: 'Короткое нажатие', en: 'Short press' } },
+              { name: '折 zhé', uz: 'burilish', ru: 'поворот', en: 'turning', icon: '𠃍', desc: { uz: "Yo'nalish o'zgarishi", ru: 'Смена направления', en: 'Change of direction' } },
             ].map((s, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '6px 0', borderBottom: i < 5 ? '1px solid #f5f5f8' : 'none' }}>
                 <span style={{ fontSize: 24, color: '#1a1a2e', minWidth: 32, textAlign: 'center' as const }}>{s.icon}</span>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
                     <span style={{ fontSize: 12, fontWeight: 600, color: '#dc2626' }}>{s.name}</span>
-                    <span style={{ fontSize: 11, color: '#888' }}>{lang === 'ru' ? s.ru : s.uz}</span>
+                    <span style={{ fontSize: 11, color: '#888' }}>{({ uz: s.uz, ru: s.ru, en: s.en } as Record<string, string>)[lang]}</span>
                   </div>
-                  <div style={{ fontSize: 10, color: '#999' }}>{s.desc}</div>
+                  <div style={{ fontSize: 10, color: '#999' }}>{(s.desc as Record<string, string>)[lang]}</div>
                 </div>
               </div>
             ))}
             <div style={{ marginTop: 10, background: '#fef3c7', borderRadius: 8, padding: 10, borderLeft: '3px solid #f59e0b', fontSize: 11, lineHeight: 1.6 as const, color: '#555' }}>
-              💡 {lang === 'ru' ? 'Правило порядка черт: сверху вниз, слева направо, снаружи внутрь.' : "Chiziq tartibi qoidasi: yuqoridan pastga, chapdan o'ngga, tashqaridan ichkariga."}
+              💡 {({ uz: "Chiziq tartibi qoidasi: yuqoridan pastga, chapdan o'ngga, tashqaridan ichkariga.", ru: 'Правило порядка черт: сверху вниз, слева направо, снаружи внутрь.', en: 'Stroke order rule: top to bottom, left to right, outside to inside.' } as Record<string, string>)[lang]}
             </div>
           </div>
         </div>
@@ -232,20 +232,20 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
         <div className="hanzi-home">
           {onBack && (
             <button className="hanzi-home__back-btn" type="button" onClick={onBack}>
-              ‹ {lang === 'ru' ? 'Назад' : 'Orqaga'}
+              ‹ {({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[lang]}
             </button>
           )}
           <div className="hanzi-home__stats-row">
             <div className="hanzi-home__stat-card">
               <div className="hanzi-home__stat-value">{activeWords.length}</div>
               <div className="hanzi-home__stat-label">
-                {lang === 'ru' ? 'Всего иероглифов' : "Jami belgilar"}
+                {({ uz: 'Jami belgilar', ru: 'Всего иероглифов', en: 'Total characters' } as Record<string, string>)[lang]}
               </div>
             </div>
           </div>
 
           <button className="hanzi-home__start-btn" type="button" onClick={handleStart}>
-            {lang === 'ru' ? `Начать (${activeWords.length})` : `Boshlash (${activeWords.length})`}
+            {({ uz: `Boshlash (${activeWords.length})`, ru: `Начать (${activeWords.length})`, en: `Start (${activeWords.length})` } as Record<string, string>)[lang]}
           </button>
         </div>
       </div>
@@ -257,12 +257,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     return (
       <div className="hanzi-done">
         <div className="hanzi-done__title">
-          {lang === 'ru' ? 'Отлично! 🎉' : 'Barakalla! 🎉'}
+          {({ uz: 'Barakalla! 🎉', ru: 'Отлично! 🎉', en: 'Well done! 🎉' } as Record<string, string>)[lang]}
         </div>
         <div className="hanzi-done__stats">
-          {lang === 'ru'
-            ? `Повторено: ${sessionQueue.length} иероглифов`
-            : `Takrorlandi: ${sessionQueue.length} belgi`}
+          {({ uz: `Takrorlandi: ${sessionQueue.length} belgi`, ru: `Повторено: ${sessionQueue.length} иероглифов`, en: `Reviewed: ${sessionQueue.length} characters` } as Record<string, string>)[lang]}
         </div>
         <div className="hanzi-done__buttons">
           <button
@@ -270,14 +268,14 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
             type="button"
             onClick={handleRestart}
           >
-            {lang === 'ru' ? 'Ещё раз' : 'Yana takrorlash'}
+            {({ uz: 'Yana takrorlash', ru: 'Ещё раз', en: 'Restart' } as Record<string, string>)[lang]}
           </button>
           <button
             className="hanzi-done__back-btn"
             type="button"
             onClick={() => { if (onBack) onBack(); else setView('home'); }}
           >
-            {lang === 'ru' ? 'В главное меню' : 'Bosh menuga qaytish'}
+            {({ uz: 'Bosh menuga qaytish', ru: 'В главное меню', en: 'Back to menu' } as Record<string, string>)[lang]}
           </button>
         </div>
       </div>
@@ -337,10 +335,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
 
           <div style={{ display: 'flex', gap: 8 }}>
             <button className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
-              {lang === 'ru' ? 'Стереть' : 'O\'chirish'}
+              {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>
             <button className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleShow)}>
-              {lang === 'ru' ? 'Показать' : 'Ko\'rsatish'}
+              {({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
             </button>
             <button
               className={`hanzi-practice__action-btn${hiddenMode ? ' hanzi-practice__action-btn--active' : ''}`}
@@ -351,7 +349,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 setShowAnswer(0);
               })}
             >
-              {lang === 'ru' ? 'Скрыть' : 'Yashirish'}
+              {({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]}
             </button>
           </div>
 
@@ -371,7 +369,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 }
               })}
             >
-              ← {lang === 'ru' ? 'Назад' : 'Oldingi'}
+              ← {({ uz: 'Oldingi', ru: 'Назад', en: 'Back' } as Record<string, string>)[lang]}
             </button>
             <span className="hanzi-practice__session-progress" style={{ margin: 0, whiteSpace: 'nowrap' }}>
               {sessionIndex + 1} / {sessionQueue.length}
@@ -381,7 +379,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               type="button"
               onClick={() => keepScroll(advance)}
             >
-              {lang === 'ru' ? 'Далее' : 'Keyingi'} →
+              {({ uz: 'Keyingi', ru: 'Далее', en: 'Next' } as Record<string, string>)[lang]} →
             </button>
           </div>
         </div>

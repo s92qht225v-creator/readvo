@@ -11,20 +11,16 @@ export function Paywall() {
     <div className="paywall">
       <div className="paywall__card">
         <h2 className="paywall__title">
-          {language === 'ru'
-            ? 'Пробный период закончился'
-            : 'Sinov muddati tugadi'}
+          {({ uz: 'Sinov muddati tugadi', ru: 'Пробный период закончился', en: 'Trial period expired' } as Record<string, string>)[language]}
         </h2>
         <p className="paywall__text">
-          {language === 'ru'
-            ? 'Оформите подписку, чтобы продолжить обучение.'
-            : "Obunani rasmiylashtiring va o'qishni davom ettiring."}
+          {({ uz: "Obunani rasmiylashtiring va o'qishni davom ettiring.", ru: 'Оформите подписку, чтобы продолжить обучение.', en: 'Subscribe to continue learning.' } as Record<string, string>)[language]}
         </p>
         <Link href="/payment" className="paywall__btn">
-          {language === 'ru' ? 'Оплата' : "To'lov"}
+          {({ uz: "To'lov", ru: 'Оплата', en: 'Payment' } as Record<string, string>)[language]}
         </Link>
         <Link href="/chinese" className="paywall__back">
-          {language === 'ru' ? '← На главную' : '← Bosh sahifa'}
+          {({ uz: '← Bosh sahifa', ru: '← На главную', en: '← Home' } as Record<string, string>)[language]}
         </Link>
       </div>
     </div>

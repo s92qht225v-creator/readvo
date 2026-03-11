@@ -105,7 +105,7 @@ function TappableWord({
       </span>
       {isActive && (
         <span className="typedfillblank__tooltip">
-          {language === 'ru' ? entry.tr : entry.t}
+          {({ uz: entry.t, ru: entry.tr, en: entry.t } as Record<string, string>)[language]}
         </span>
       )}
     </span>
@@ -272,13 +272,13 @@ export function TextErrorExercise({ passage, errors, words, language }: Props) {
           onClick={handleCheckAll}
           disabled={!hasFilledUnchecked}
         >
-          {language === 'ru' ? 'Проверить' : 'Tekshirish'}
+          {({ uz: 'Tekshirish', ru: 'Проверить', en: 'Check' } as Record<string, string>)[language]}
         </button>
       )}
 
       {completedErrors === totalErrors && totalErrors > 0 && (
         <div className="texterror__complete">
-          {language === 'ru' ? 'Все правильно!' : "Hammasi to'g'ri!"}
+          {({ uz: "Hammasi to'g'ri!", ru: 'Все правильно!', en: 'All correct!' } as Record<string, string>)[language]}
         </div>
       )}
     </div>

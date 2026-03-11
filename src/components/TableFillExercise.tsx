@@ -27,7 +27,7 @@ export interface TableFillColumn {
 export interface TableFillExerciseProps {
   options: TableFillOption[];
   columns: TableFillColumn[];
-  language: 'uz' | 'ru';
+  language: 'uz' | 'ru' | 'en';
 }
 
 export const TableFillExercise: React.FC<TableFillExerciseProps> = ({
@@ -127,7 +127,7 @@ export const TableFillExercise: React.FC<TableFillExerciseProps> = ({
         <div className="fillblank__complete">
           <span className="fillblank__complete-icon">🎉</span>
           <span className="fillblank__complete-text">
-            {language === 'ru' ? 'Отлично!' : 'Ajoyib!'}
+            {({ uz: 'Ajoyib!', ru: 'Отлично!', en: 'Excellent!' } as Record<string, string>)[language]}
           </span>
         </div>
       )}

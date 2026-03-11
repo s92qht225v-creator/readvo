@@ -82,7 +82,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
             <div className="dr-hero__level">{tabConfig ? 'B1' : 'HSK 1'}</div>
             <h1 className="dr-hero__title">{tabConfig ? 'Kitob' : '课本'}</h1>
             <div className="dr-hero__pinyin">{tabConfig ? '' : 'kèběn'}</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? 'Учебник' : 'Darslik'} —</div>
+            <div className="dr-hero__translation">— {({ uz: 'Darslik', ru: 'Учебник', en: 'Textbook' } as Record<string, string>)[language]} —</div>
           </div>
         </div>
       </header>
@@ -117,12 +117,10 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
       {!hasContent ? (
         <div className="home__empty">
           <div className="home__empty-icon">📚</div>
-          <p>{language === 'ru' ? 'Контент не найден.' : 'Kontent topilmadi.'}</p>
+          <p>{({ uz: 'Kontent topilmadi.', ru: 'Контент не найден.', en: 'Content not found.' } as Record<string, string>)[language]}</p>
           <p>
             <code>content/</code>{' '}
-            {language === 'ru'
-              ? 'Добавьте JSON файлы в папку.'
-              : "papkasiga JSON fayllarini qo'shing."}
+            {({ uz: "papkasiga JSON fayllarini qo'shing.", ru: 'Добавьте JSON файлы в папку.', en: 'Add JSON files to the folder.' } as Record<string, string>)[language]}
           </p>
         </div>
       ) : (
@@ -151,7 +149,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
                     >
                       <span className="lesson-card__page-num">{pageNum}</span>
                       <span className="lesson-card__page-label">
-                        {language === 'ru' ? 'стр.' : 'sahifa'}
+                        {({ uz: 'sahifa', ru: 'стр.', en: 'p.' } as Record<string, string>)[language]}
                       </span>
                       {isPageCompleted(lesson.lessonId, pageNum) && (
                         <span className="lesson-card__check" aria-label="completed">&#10003;</span>
@@ -168,7 +166,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
             <div className="home__stat">
               <span className="home__stat-value">{lessons.length}</span>
               <span className="home__stat-label">
-                {language === 'ru' ? 'уроков' : 'darslar'}
+                {({ uz: 'darslar', ru: 'уроков', en: 'lessons' } as Record<string, string>)[language]}
               </span>
             </div>
             <div className="home__stat">
@@ -176,7 +174,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
                 {lessons.reduce((sum, l) => sum + l.pages.length, 0)}
               </span>
               <span className="home__stat-label">
-                {language === 'ru' ? 'страниц' : 'sahifalar'}
+                {({ uz: 'sahifalar', ru: 'страниц', en: 'pages' } as Record<string, string>)[language]}
               </span>
             </div>
           </div>

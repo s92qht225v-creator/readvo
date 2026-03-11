@@ -90,6 +90,46 @@ const t = {
     tagline: 'Интерактивные учебники языков',
     liveNow: 'Сейчас {n} человек занимаются',
   },
+  en: {
+    login: 'Log in',
+    heroTitle: 'Learn Chinese with interactive lessons',
+    heroSubtitle: 'Learn Chinese effectively with pinyin, audio, translation and flashcards',
+    startFree: 'Start for free',
+    languages: 'Choose a language',
+    howItWorks: 'How it works',
+    step1Title: 'Listen to dialogues',
+    step1Desc: 'Read each sentence with pinyin, translation and audio',
+    step2Title: 'Memorize words',
+    step2Desc: 'Practice with flashcards and character writing exercises',
+    step3Title: 'Sing karaoke',
+    step3Desc: 'Sing Chinese songs and improve your pronunciation',
+    step4Title: 'Test your knowledge',
+    step4Desc: 'Take tests and track your progress',
+    features: 'Features',
+    feat1Title: 'Pinyin on/off',
+    feat1Desc: 'Toggle pinyin and translation for each sentence individually',
+    feat2Title: 'Sentence-by-sentence audio',
+    feat2Desc: 'Tap a sentence to listen, or play the entire dialogue',
+    feat3Title: 'Grammar',
+    feat3Desc: 'Grammar topics: 是, 有, 在, 的, 不, 吗 and more',
+    feat4Title: 'Focus mode',
+    feat4Desc: 'Focus on one sentence and listen to it repeatedly',
+    feat5Title: 'Smart repetition',
+    feat5Desc: 'Known characters repeat less, unknown ones repeat more',
+    feat6Title: 'Multilingual',
+    feat6Desc: 'Translations available in Uzbek, Russian and English',
+    showcaseTitle: 'Tap to translate',
+    showcaseSubtitle: 'Tap any word in the text to see its translation',
+    showcaseLabel1: 'Practice with flashcards',
+    showcaseLabel2: 'Understand in context',
+    ctaTitle: '7 days free trial',
+    ctaSubtitle: 'Sign up and get full access to all features — no payment required',
+    footerText: 'Blim — Interactive language textbooks',
+    chinese: 'Chinese',
+    english: 'English',
+    tagline: 'Interactive language textbooks',
+    liveNow: '{n} people studying right now',
+  },
 };
 
 function getActiveCount(): number {
@@ -124,7 +164,7 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
             <span className="home__user-name">{user.name}</span>
           </button>
           <button className="home__lang-btn" onClick={toggleLanguage} type="button">
-            {language === 'uz' ? 'RU' : 'UZ'}
+            {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
           </button>
         </div>
         <h1 className="home__logo">
@@ -181,13 +221,13 @@ function LandingPage({ language, toggleLanguage, s }: {
             <Image src="/logo-red.svg" alt="Blim" width={100} height={34} className="landing__nav-logo-img" priority />
           </span>
           <div className="landing__nav-links">
-            <a href="#hero" className="landing__nav-link">{language === 'ru' ? 'Главная' : 'Bosh sahifa'}</a>
+            <a href="#hero" className="landing__nav-link">{({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[language]}</a>
             <a href="#features" className="landing__nav-link">{s.features}</a>
             <a href="#how" className="landing__nav-link">{s.howItWorks}</a>
           </div>
           <div className="landing__nav-right">
             <button className="landing__lang-btn" onClick={toggleLanguage} type="button">
-              {language === 'uz' ? 'RU' : 'UZ'}
+              {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
             </button>
             <button className="landing__login-btn" onClick={() => router.push('/login')} type="button">
               {s.login}
@@ -205,7 +245,7 @@ function LandingPage({ language, toggleLanguage, s }: {
         {mobileMenuOpen && (
           <div className="landing__mobile-menu">
             <a href="#hero" className="landing__mobile-link landing__mobile-link--active" onClick={() => setMobileMenuOpen(false)}>
-              {language === 'ru' ? 'Главная' : 'Bosh sahifa'}
+              {({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[language]}
             </a>
             <a href="#features" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               {s.features}
@@ -232,14 +272,14 @@ function LandingPage({ language, toggleLanguage, s }: {
               <span className="landing__demo-chinese">你好，我叫小语。</span>
             </div>
             <div className="landing__demo-line landing__demo-line--pinyin">Nǐ hǎo, wǒ jiào Xiǎoyǔ.</div>
-            <div className="landing__demo-line landing__demo-line--translation">Salom, mening ismim Xiaoyu.</div>
+            <div className="landing__demo-line landing__demo-line--translation">{({ uz: 'Salom, mening ismim Xiaoyu.', ru: 'Привет, меня зовут Сяоюй.', en: 'Hello, my name is Xiaoyu.' } as Record<string, string>)[language]}</div>
           </div>
           <div className="landing__demo-card landing__demo-card--second">
             <div className="landing__demo-line">
               <span className="landing__demo-chinese">我家有四口人：爸爸、妈妈、姐姐和我。</span>
             </div>
             <div className="landing__demo-line landing__demo-line--pinyin">Wǒ jiā yǒu sì kǒu rén: bàba, māma, jiějie hé wǒ.</div>
-            <div className="landing__demo-line landing__demo-line--translation">В моей семье четыре человека: папа, мама, старшая сестра и я.</div>
+            <div className="landing__demo-line landing__demo-line--translation">{({ uz: 'Oilamda to\'rt kishi bor: dadam, oyim, opam va men.', ru: 'В моей семье четыре человека: папа, мама, старшая сестра и я.', en: 'There are four people in my family: dad, mom, older sister and me.' } as Record<string, string>)[language]}</div>
           </div>
           <div className="landing__demo-card landing__demo-card--third">
             <div className="landing__demo-audio-row">
@@ -247,7 +287,7 @@ function LandingPage({ language, toggleLanguage, s }: {
               <div className="landing__demo-audio-text">
                 <div className="landing__demo-chinese">你想吃什么？</div>
                 <div className="landing__demo-line landing__demo-line--pinyin">Nǐ xiǎng chī shénme?</div>
-                <div className="landing__demo-line landing__demo-line--translation">{language === 'ru' ? 'Что ты хочешь поесть?' : 'Nima yemoqchisan?'}</div>
+                <div className="landing__demo-line landing__demo-line--translation">{({ uz: 'Nima yemoqchisan?', ru: 'Что ты хочешь поесть?', en: 'What do you want to eat?' } as Record<string, string>)[language]}</div>
               </div>
             </div>
             <div className="landing__demo-waveform">
@@ -261,8 +301,9 @@ function LandingPage({ language, toggleLanguage, s }: {
           <div className="landing__hero-langs-inner">
             <div className="landing__hero-langs-row">
               {[
-                { code: 'uz', name: "O'zbek tili" },
-                { code: 'ru', name: 'Русский язык' },
+                { code: 'uz', name: ({ uz: "O'zbek tili", ru: 'Узбекский язык', en: 'Uzbek' } as Record<string, string>)[language] ?? "O'zbek tili" },
+                { code: 'ru', name: ({ uz: 'Русский язык', ru: 'Русский язык', en: 'Russian' } as Record<string, string>)[language] ?? 'Русский язык' },
+                { code: 'gb', name: ({ uz: 'Ingliz tili', ru: 'Английский язык', en: 'English' } as Record<string, string>)[language] ?? 'English' },
               ].map((lang) => (
                 <div key={lang.name} className="landing__hero-lang">
                   <Image
@@ -278,7 +319,7 @@ function LandingPage({ language, toggleLanguage, s }: {
               ))}
             </div>
             <p className="landing__hero-langs-more">
-              {language === 'ru' ? '+ Казахский, скоро...' : "+ Qozoq tili, tez kunda..."}
+              {({ uz: '+ Qozoq tili, tez kunda...', ru: '+ Казахский, скоро...', en: '+ Kazakh, coming soon...' } as Record<string, string>)[language]}
             </p>
           </div>
         </div>
@@ -333,26 +374,20 @@ function LandingPage({ language, toggleLanguage, s }: {
 
       {/* Testimonials */}
       <section className="landing__section landing__section--gray">
-        <h2 className="landing__section-title">{language === 'ru' ? 'Отзывы' : 'Foydalanuvchilar fikri'}</h2>
+        <h2 className="landing__section-title">{({ uz: 'Foydalanuvchilar fikri', ru: 'Отзывы', en: 'Testimonials' } as Record<string, string>)[language]}</h2>
         <div className="landing__testimonials">
           {[
             {
-              name: language === 'ru' ? 'Дилноза, 22' : 'Dilnoza, 22',
-              text: language === 'ru'
-                ? 'Караоке — мой любимый способ учить китайский. Теперь я пою песни и запоминаю слова легко!'
-                : 'Karaoke — xitoy tilini o\'rganishning eng yoqimli usuli. Endi qo\'shiq aytib so\'zlarni oson yodlayman!',
+              name: ({ uz: 'Dilnoza, 22', ru: 'Дилноза, 22', en: 'Dilnoza, 22' } as Record<string, string>)[language] ?? 'Dilnoza, 22',
+              text: ({ uz: "Karaoke — xitoy tilini o'rganishning eng yoqimli usuli. Endi qo'shiq aytib so'zlarni oson yodlayman!", ru: 'Караоке — мой любимый способ учить китайский. Теперь я пою песни и запоминаю слова легко!', en: 'Karaoke is my favorite way to learn Chinese. Now I sing songs and memorize words easily!' } as Record<string, string>)[language] ?? '',
             },
             {
-              name: language === 'ru' ? 'Азиз, 19' : 'Aziz, 19',
-              text: language === 'ru'
-                ? 'Раньше я путался в тонах, но благодаря аудио к каждому предложению мое произношение стало намного лучше.'
-                : 'Oldin tonlarda adashardim, lekin har bir gapdagi audio tufayli talaffuzim ancha yaxshilandi.',
+              name: ({ uz: 'Aziz, 19', ru: 'Азиз, 19', en: 'Aziz, 19' } as Record<string, string>)[language] ?? 'Aziz, 19',
+              text: ({ uz: 'Oldin tonlarda adashardim, lekin har bir gapdagi audio tufayli talaffuzim ancha yaxshilandi.', ru: 'Раньше я путался в тонах, но благодаря аудио к каждому предложению мое произношение стало намного лучше.', en: 'I used to confuse tones, but thanks to audio for each sentence, my pronunciation improved greatly.' } as Record<string, string>)[language] ?? '',
             },
             {
-              name: language === 'ru' ? 'Мадина, 25' : 'Madina, 25',
-              text: language === 'ru'
-                ? 'Флешкарты и написание иероглифов — очень удобно. За месяц выучила больше 200 слов!'
-                : 'Fleshkartalar va ieroglif yozish — juda qulay. Bir oyda 200 dan ortiq so\'z yodladim!',
+              name: ({ uz: 'Madina, 25', ru: 'Мадина, 25', en: 'Madina, 25' } as Record<string, string>)[language] ?? 'Madina, 25',
+              text: ({ uz: "Fleshkartalar va ieroglif yozish — juda qulay. Bir oyda 200 dan ortiq so'z yodladim!", ru: 'Флешкарты и написание иероглифов — очень удобно. За месяц выучила больше 200 слов!', en: 'Flashcards and character writing are very convenient. I learned over 200 words in a month!' } as Record<string, string>)[language] ?? '',
             },
           ].map((t) => (
             <div key={t.name} className="landing__testimonial">

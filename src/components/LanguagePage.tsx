@@ -12,62 +12,62 @@ import { trackAll } from '@/utils/analytics';
 import type { DialogueInfo } from '../services/dialogues';
 import { WRITING_SETS } from '@/services/writing';
 
-const TAGS: Record<string, { uz: string; ru: string }> = {
-  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
-  kundalik: { uz: 'Kundalik', ru: 'Повседневное' },
-  xaridlar: { uz: 'Xaridlar', ru: 'Покупки' },
-  ovqat: { uz: 'Ovqat', ru: 'Еда' },
-  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье' },
-  transport: { uz: 'Transport', ru: 'Транспорт' },
-  telefon: { uz: 'Telefon', ru: 'Телефон' },
-  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба' },
-  reja: { uz: 'Reja', ru: 'Планы' },
-  muloqot: { uz: 'Muloqot', ru: 'Общение' },
+const TAGS: Record<string, { uz: string; ru: string; en: string }> = {
+  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство', en: 'Introductions' },
+  kundalik: { uz: 'Kundalik', ru: 'Повседневное', en: 'Daily Life' },
+  xaridlar: { uz: 'Xaridlar', ru: 'Покупки', en: 'Shopping' },
+  ovqat: { uz: 'Ovqat', ru: 'Еда', en: 'Food' },
+  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье', en: 'Health' },
+  transport: { uz: 'Transport', ru: 'Транспорт', en: 'Transport' },
+  telefon: { uz: 'Telefon', ru: 'Телефон', en: 'Phone' },
+  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба', en: 'Work/Study' },
+  reja: { uz: 'Reja', ru: 'Планы', en: 'Plans' },
+  muloqot: { uz: 'Muloqot', ru: 'Общение', en: 'Communication' },
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
 
 type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar' | 'tests';
 
-const tabs: { id: Tab; label: string; label_ru?: string }[] = [
-  { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог' },
-  { id: 'writing', label: 'Yozish', label_ru: 'Письмо' },
-  { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш' },
+const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] = [
+  { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог', label_en: 'Dialogues' },
+  { id: 'writing', label: 'Yozish', label_ru: 'Письмо', label_en: 'Writing' },
+  { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
   { id: 'karaoke', label: 'KTV' },
-  { id: 'grammar', label: 'Tika', label_ru: 'Грамм' },
-  { id: 'tests', label: 'Test', label_ru: 'Тесты' },
+  { id: 'grammar', label: 'Tika', label_ru: 'Грамм', label_en: 'Grammar' },
+  { id: 'tests', label: 'Test', label_ru: 'Тесты', label_en: 'Tests' },
 ];
 
 const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar', 'tests'];
 
 const grammarItems = [
-  { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', color: '#dc2626', active: true },
-  { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', translation_ru: 'иметь', color: '#7c3aed', active: true },
-  { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', translation_ru: 'находиться', color: '#0891b2', active: true },
-  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', translation_ru: 'притяжательная частица', color: '#d97706', active: true },
-  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', translation_ru: 'отрицание', color: '#059669', active: true },
-  { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', translation_ru: 'вопросительная частица', color: '#0891b2', active: true },
-  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', translation_ru: 'продолжительная частица', color: '#7c3aed', active: true },
-  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', translation_ru: 'завершение / изменение', color: '#7c3aed', active: true },
-  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', translation_ru: 'тоже', color: '#059669', active: true },
-  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', translation_ru: 'все / всё', color: '#2563eb', active: true },
-  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', translation_ru: 'очень / связка', color: '#7c3aed', active: true },
-  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', translation_ru: 'хотеть / скучать', color: '#e11d48', active: true },
-  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', translation_ru: 'уметь (навык)', color: '#dc2626', active: true },
-  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', translation_ru: 'мочь (возможность)', color: '#dc2626', active: true },
-  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', translation_ru: 'не делал / нет', color: '#dc2626', active: true },
-  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', translation_ru: 'сколько?', color: '#dc2626', active: true },
-  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', translation_ru: 'счётные слова', color: '#dc2626', active: true },
+  { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', translation_en: 'to be', color: '#dc2626', active: true },
+  { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', translation_ru: 'иметь', translation_en: 'to have', color: '#7c3aed', active: true },
+  { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', translation_ru: 'находиться', translation_en: 'to be at/in', color: '#0891b2', active: true },
+  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', translation_ru: 'притяжательная частица', translation_en: 'possessive / adjective particle', color: '#d97706', active: true },
+  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', translation_ru: 'отрицание', translation_en: 'negation', color: '#059669', active: true },
+  { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', translation_ru: 'вопросительная частица', translation_en: 'question particle', color: '#0891b2', active: true },
+  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', translation_ru: 'продолжительная частица', translation_en: 'continuation particle', color: '#7c3aed', active: true },
+  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', translation_ru: 'завершение / изменение', translation_en: 'completion / change', color: '#7c3aed', active: true },
+  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', translation_ru: 'тоже', translation_en: 'also', color: '#059669', active: true },
+  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', translation_ru: 'все / всё', translation_en: 'all / both', color: '#2563eb', active: true },
+  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', translation_ru: 'очень / связка', translation_en: 'very / linking word', color: '#7c3aed', active: true },
+  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', translation_ru: 'хотеть / скучать', translation_en: 'to want / to miss', color: '#e11d48', active: true },
+  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', translation_ru: 'уметь (навык)', translation_en: 'can (learned skill)', color: '#dc2626', active: true },
+  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', translation_ru: 'мочь (возможность)', translation_en: 'can (ability)', color: '#dc2626', active: true },
+  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', translation_ru: 'не делал / нет', translation_en: 'did not / not have', color: '#dc2626', active: true },
+  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', translation_ru: 'сколько?', translation_en: 'how many?', color: '#dc2626', active: true },
+  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', translation_ru: 'счётные слова', translation_en: 'measure words', color: '#dc2626', active: true },
 ];
 
 const karaokeItems = [
-  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', href: '/chinese/hsk1/karaoke/yueliang' },
-  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', href: '/chinese/hsk1/karaoke/pengyou' },
-  { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', href: '/chinese/hsk1/karaoke/tonghua' },
-  { title: '后来', pinyin: 'Hòulái', translation: 'Keyinroq', translation_ru: 'Потом', href: '/chinese/hsk1/karaoke/houlai' },
-  { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', href: '/chinese/hsk1/karaoke/laoshuaidami' },
-  { title: '小苹果', pinyin: 'Xiǎo Píngguǒ', translation: 'Kichkina olma', translation_ru: 'Маленькое яблочко', href: '/chinese/hsk1/karaoke/xiaopinguo' },
-  { title: '世界这么大还是遇见你', pinyin: 'Shìjiè Zhème Dà Háishi Yùjiàn Nǐ', translation: 'Dunyo shuncha katta, baribir senga duch keldim', translation_ru: 'Мир так велик, но я встретил тебя', href: '/chinese/hsk1/karaoke/shijiezhemeda' },
+  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', translation_en: 'The Moon Represents My Heart', href: '/chinese/hsk1/karaoke/yueliang' },
+  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', translation_en: 'Friend', href: '/chinese/hsk1/karaoke/pengyou' },
+  { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', translation_en: 'Fairy Tale', href: '/chinese/hsk1/karaoke/tonghua' },
+  { title: '后来', pinyin: 'Hòulái', translation: 'Keyinroq', translation_ru: 'Потом', translation_en: 'Later', href: '/chinese/hsk1/karaoke/houlai' },
+  { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', translation_en: 'Mouse Loves Rice', href: '/chinese/hsk1/karaoke/laoshuaidami' },
+  { title: '小苹果', pinyin: 'Xiǎo Píngguǒ', translation: 'Kichkina olma', translation_ru: 'Маленькое яблочко', translation_en: 'Little Apple', href: '/chinese/hsk1/karaoke/xiaopinguo' },
+  { title: '世界这么大还是遇见你', pinyin: 'Shìjiè Zhème Dà Háishi Yùjiàn Nǐ', translation: 'Dunyo shuncha katta, baribir senga duch keldim', translation_ru: 'Мир так велик, но я встретил тебя', translation_en: 'The World Is So Big, Yet I Met You', href: '/chinese/hsk1/karaoke/shijiezhemeda' },
 ];
 
 
@@ -76,8 +76,8 @@ const FLASHCARD_MODE_KEY = 'blim-flashcard-mode';
 function FlashcardModeBar({ flashcardMode, setFlashcardMode }: { flashcardMode: string; setFlashcardMode: (m: string) => void }) {
   const [language] = useLanguage();
   const modes = [
-    { id: 'zh-uz', label: language === 'ru' ? "汉字 → Русский" : "汉字 → O'zbekcha" },
-    { id: 'uz-zh', label: language === 'ru' ? "Русский → 汉字" : "O'zbekcha → 汉字" },
+    { id: 'zh-uz', label: ({ uz: "汉字 → O'zbekcha", ru: "汉字 → Русский", en: "汉字 → English" } as Record<string, string>)[language] },
+    { id: 'uz-zh', label: ({ uz: "O'zbekcha → 汉字", ru: "Русский → 汉字", en: "English → 汉字" } as Record<string, string>)[language] },
   ];
   return (
     <div style={{ display: 'flex', background: '#f5f5f8', borderRadius: 10, overflow: 'hidden', marginBottom: 14, border: '1px solid #e0e0e6' }}>
@@ -124,7 +124,7 @@ function FlashcardUnitSelector({ lessons, onStart }: {
   return (
     <div style={{ marginBottom: 18 }}>
       <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
-        {language === 'ru' ? 'Выберите уроки' : 'Darslarni tanlang'}
+        {({ uz: 'Darslarni tanlang', ru: 'Выберите уроки', en: 'Select lessons' } as Record<string, string>)[language]}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
         {lessons.map((l) => {
@@ -145,7 +145,7 @@ function FlashcardUnitSelector({ lessons, onStart }: {
               }}>{l.lessonNumber}</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>{l.title ?? `第${l.lessonNumber}课`}</div>
-                <div style={{ fontSize: 11, color: '#999' }}>{l.wordCount} {language === 'ru' ? 'слов' : 'so\'z'}</div>
+                <div style={{ fontSize: 11, color: '#999' }}>{l.wordCount} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}</div>
               </div>
             </div>
           );
@@ -157,9 +157,7 @@ function FlashcardUnitSelector({ lessons, onStart }: {
           style={{ background: 'transparent', border: 'none', color: '#dc2626', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
           type="button"
         >
-          {language === 'ru'
-            ? (allSelected ? 'Снять все' : 'Выбрать все')
-            : (allSelected ? 'Barchasini bekor qilish' : 'Barchasini tanlash')}
+          {({ uz: allSelected ? 'Barchasini bekor qilish' : 'Barchasini tanlash', ru: allSelected ? 'Снять все' : 'Выбрать все', en: allSelected ? 'Deselect all' : 'Select all' } as Record<string, string>)[language]}
         </button>
       </div>
       <button
@@ -176,7 +174,7 @@ function FlashcardUnitSelector({ lessons, onStart }: {
         }}
         type="button"
       >
-        {language === 'ru' ? `Начать (${totalWords} слов)` : `Boshlash (${totalWords} so'z)`}
+        {({ uz: `Boshlash (${totalWords} so'z)`, ru: `Начать (${totalWords} слов)`, en: `Start (${totalWords} words)` } as Record<string, string>)[language]}
       </button>
     </div>
   );
@@ -301,10 +299,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <h1 className="sr-only">{language === 'ru'
-              ? 'Китайский язык — уроки HSK 1, диалоги и упражнения'
-              : 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar'
-            }</h1>
+            <h1 className="sr-only">{({ uz: 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar', ru: 'Китайский язык — уроки HSK 1, диалоги и упражнения', en: 'Chinese — HSK 1 lessons, dialogues and exercises' } as Record<string, string>)[language]}</h1>
             <div className="dr-hero__level">HSK 1</div>
             <div className="dr-hero__title" aria-hidden="true">{
               activeTab === 'dialogues' ? '对话' :
@@ -322,21 +317,11 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
               activeTab === 'grammar' ? 'yǔfǎ' :
               'cèyàn'
             }</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? (
-              activeTab === 'dialogues' ? 'Диалоги' :
-              activeTab === 'writing' ? 'Письмо' :
-              activeTab === 'flashcards' ? 'Флешкарты' :
-              activeTab === 'karaoke' ? 'Песни' :
-              activeTab === 'grammar' ? 'Грамматика' :
-              'Тесты'
-            ) : (
-              activeTab === 'dialogues' ? 'Dialoglar' :
-              activeTab === 'writing' ? 'Yozish' :
-              activeTab === 'flashcards' ? 'Fleshkartalar' :
-              activeTab === 'karaoke' ? 'Qo\'shiqlar' :
-              activeTab === 'grammar' ? 'Grammatika' :
-              'Testlar'
-            )} —</div>
+            <div className="dr-hero__translation">— {({
+              uz: activeTab === 'dialogues' ? 'Dialoglar' : activeTab === 'writing' ? 'Yozish' : activeTab === 'flashcards' ? 'Fleshkartalar' : activeTab === 'karaoke' ? 'Qo\'shiqlar' : activeTab === 'grammar' ? 'Grammatika' : 'Testlar',
+              ru: activeTab === 'dialogues' ? 'Диалоги' : activeTab === 'writing' ? 'Письмо' : activeTab === 'flashcards' ? 'Флешкарты' : activeTab === 'karaoke' ? 'Песни' : activeTab === 'grammar' ? 'Грамматика' : 'Тесты',
+              en: activeTab === 'dialogues' ? 'Dialogues' : activeTab === 'writing' ? 'Writing' : activeTab === 'flashcards' ? 'Flashcards' : activeTab === 'karaoke' ? 'Songs' : activeTab === 'grammar' ? 'Grammar' : 'Tests',
+            } as Record<string, string>)[language]} —</div>
           </div>
         </div>
       </header>
@@ -349,7 +334,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
               onClick={() => setActiveTab(tab.id)}
               type="button"
             >
-              {language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
+              {language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
             </button>
           ))}
         </div>
@@ -380,7 +365,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 onClick={() => setFlashcardSubTab('topics')}
                 className={`lp__hsk-pill ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
               >
-                {language === 'ru' ? 'Темы' : 'Mavzular'}
+                {({ uz: 'Mavzular', ru: 'Темы', en: 'Topics' } as Record<string, string>)[language]}
               </button>
             )}
           </div>
@@ -400,7 +385,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
               <input
                 type="text"
                 className="dialogues__search-input"
-                placeholder={language === 'ru' ? 'Поиск диалогов...' : 'Dialoglarni qidirish...'}
+                placeholder={({ uz: 'Dialoglarni qidirish...', ru: 'Поиск диалогов...', en: 'Search dialogues...' } as Record<string, string>)[language]}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -420,7 +405,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 onClick={() => { setActiveTag(null); setShowBookmarked(false); }}
                 type="button"
               >
-                {language === 'ru' ? 'Все' : 'Hammasi'}
+                {({ uz: 'Hammasi', ru: 'Все', en: 'All' } as Record<string, string>)[language]}
               </button>
               <button
                 className={`dialogues__tag dialogues__tag--bookmark ${showBookmarked ? 'dialogues__tag--active' : ''}`}
@@ -430,7 +415,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 <svg viewBox="0 0 24 24" width="14" height="14" fill={showBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
                   <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
                 </svg>
-                {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
+                {({ uz: 'Saqlangan', ru: 'Сохранённые', en: 'Saved' } as Record<string, string>)[language]}
               </button>
               {availableTags.map((tag) => (
                 <button
@@ -439,7 +424,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                   onClick={() => { setActiveTag(activeTag === tag ? null : tag); setShowBookmarked(false); }}
                   type="button"
                 >
-                  {language === 'ru' ? TAGS[tag].ru : TAGS[tag].uz}
+                  {(TAGS[tag] as Record<string, string>)[language] ?? TAGS[tag].uz}
                 </button>
               ))}
             </div>
@@ -467,12 +452,12 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     </button>
                   </div>
                   {d.tag && (
-                    <span className="dialogue-card__tag">{language === 'ru' ? TAGS[d.tag].ru : TAGS[d.tag].uz}</span>
+                    <span className="dialogue-card__tag">{(TAGS[d.tag] as Record<string, string>)[language] ?? TAGS[d.tag].uz}</span>
                   )}
                 </Link>
               ))}
               {filteredDialogues.length === 0 && (
-                <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                <p className="dialogues__empty">{({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}</p>
               )}
             </div>
           </>
@@ -497,7 +482,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 <input
                   type="text"
                   className="dialogues__search-input"
-                  placeholder={language === 'ru' ? 'Поиск иероглифов...' : 'Belgilarni qidirish...'}
+                  placeholder={({ uz: 'Belgilarni qidirish...', ru: 'Поиск иероглифов...', en: 'Search characters...' } as Record<string, string>)[language]}
                   value={writingSearch}
                   onChange={(e) => setWritingSearch(e.target.value)}
                 />
@@ -524,7 +509,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                   </Link>
                 ))}
                 {filteredSets.length === 0 && (
-                  <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                  <p className="dialogues__empty">{({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}</p>
                 )}
               </div>
             </>
@@ -549,40 +534,41 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
 
             {flashcardSubTab === 'topics' && (() => {
               const allTopics = [
-                { uz: 'Oila', ru: 'Семья', icon: '👨‍👩‍👧', slug: 'family' },
-                { uz: 'Tana a\'zolari', ru: 'Части тела', icon: '🫀', slug: 'body' },
-                { uz: 'Oziq-ovqat', ru: 'Еда', icon: '🍜', slug: 'food' },
-                { uz: 'Hayvonlar', ru: 'Животные', icon: '🐼', slug: 'animals' },
-                { uz: 'Ranglar', ru: 'Цвета', icon: '🎨', slug: 'colors' },
-                { uz: 'Sonlar', ru: 'Числа', icon: '🔢', slug: 'numbers' },
-                { uz: 'Vaqt', ru: 'Время', icon: '⏰', slug: 'time' },
-                { uz: 'Kasblar', ru: 'Профессии', icon: '👩‍🏫', slug: 'professions' },
-                { uz: 'Ofis jihozlari', ru: 'Офис. оборудование', icon: '🖨️', slug: 'office' },
-                { uz: 'Ofis harakatlari', ru: 'Офисные действия', icon: '📋', slug: 'office-actions' },
-                { uz: 'Biznes atamalar', ru: 'Бизнес-термины', icon: '💼', slug: 'business' },
-                { uz: 'Ofis lavozimlari', ru: 'Должности', icon: '👔', slug: 'workplace-roles' },
-                { uz: 'Ish-yozuv anjomlari', ru: 'Канцтовары', icon: '✏️', slug: 'stationery' },
-                { uz: 'Ofis xonalari', ru: 'Офис. помещения', icon: '🏢', slug: 'office-spaces' },
-                { uz: 'Savdo atamalar', ru: 'Торговля', icon: '🤝', slug: 'trade' },
-                { uz: "Narx va to'lov", ru: 'Цены и оплата', icon: '💰', slug: 'pricing' },
-                { uz: 'Shartnoma atamalar', ru: 'Договоры', icon: '📝', slug: 'contracts' },
-                { uz: 'Buyurtma va ishlab chiqarish', ru: 'Заказы и произв.', icon: '📦', slug: 'orders' },
-                { uz: 'Logistika', ru: 'Логистика', icon: '🚚', slug: 'logistics' },
-                { uz: 'Mehmonxona', ru: 'Гостиница', icon: '🏨', slug: 'hotel' },
-                { uz: 'Hujjatlar', ru: 'Документы', icon: '🪪', slug: 'documents' },
-                { uz: 'Transport turlari', ru: 'Виды транспорта', icon: '✈️', slug: 'transportation' },
-                { uz: 'Avtomobil turlari', ru: 'Виды автомобилей', icon: '🚗', slug: 'vehicles' },
-                { uz: 'Mashina tashqi qismlari', ru: 'Наруж. части авто', icon: '🚙', slug: 'car-exterior' },
-                { uz: 'Dvigatel va mexanika', ru: 'Двигатель и мех.', icon: '⚙️', slug: 'car-engine' },
-                { uz: 'Mashina ichki qismlari', ru: 'Салон авто', icon: '🪑', slug: 'car-interior' },
-                { uz: "Yo'nalishlar", ru: 'Направления', icon: '🧭', slug: 'directions' },
-                { uz: "His-tuyg'ular", ru: 'Эмоции', icon: '😊', slug: 'emotions' },
+                { uz: 'Oila', ru: 'Семья', en: 'Family', icon: '👨‍👩‍👧', slug: 'family' },
+                { uz: 'Tana a\'zolari', ru: 'Части тела', en: 'Body Parts', icon: '🫀', slug: 'body' },
+                { uz: 'Oziq-ovqat', ru: 'Еда', en: 'Food', icon: '🍜', slug: 'food' },
+                { uz: 'Hayvonlar', ru: 'Животные', en: 'Animals', icon: '🐼', slug: 'animals' },
+                { uz: 'Ranglar', ru: 'Цвета', en: 'Colors', icon: '🎨', slug: 'colors' },
+                { uz: 'Sonlar', ru: 'Числа', en: 'Numbers', icon: '🔢', slug: 'numbers' },
+                { uz: 'Vaqt', ru: 'Время', en: 'Time', icon: '⏰', slug: 'time' },
+                { uz: 'Kasblar', ru: 'Профессии', en: 'Professions', icon: '👩‍🏫', slug: 'professions' },
+                { uz: 'Ofis jihozlari', ru: 'Офис. оборудование', en: 'Office Equipment', icon: '🖨️', slug: 'office' },
+                { uz: 'Ofis harakatlari', ru: 'Офисные действия', en: 'Office Actions', icon: '📋', slug: 'office-actions' },
+                { uz: 'Biznes atamalar', ru: 'Бизнес-термины', en: 'Business Terms', icon: '💼', slug: 'business' },
+                { uz: 'Ofis lavozimlari', ru: 'Должности', en: 'Workplace Roles', icon: '👔', slug: 'workplace-roles' },
+                { uz: 'Ish-yozuv anjomlari', ru: 'Канцтовары', en: 'Stationery', icon: '✏️', slug: 'stationery' },
+                { uz: 'Ofis xonalari', ru: 'Офис. помещения', en: 'Office Spaces', icon: '🏢', slug: 'office-spaces' },
+                { uz: 'Savdo atamalar', ru: 'Торговля', en: 'Trade', icon: '🤝', slug: 'trade' },
+                { uz: "Narx va to'lov", ru: 'Цены и оплата', en: 'Pricing & Payment', icon: '💰', slug: 'pricing' },
+                { uz: 'Shartnoma atamalar', ru: 'Договоры', en: 'Contracts', icon: '📝', slug: 'contracts' },
+                { uz: 'Buyurtma va ishlab chiqarish', ru: 'Заказы и произв.', en: 'Orders & Production', icon: '📦', slug: 'orders' },
+                { uz: 'Logistika', ru: 'Логистика', en: 'Logistics', icon: '🚚', slug: 'logistics' },
+                { uz: 'Mehmonxona', ru: 'Гостиница', en: 'Hotel', icon: '🏨', slug: 'hotel' },
+                { uz: 'Hujjatlar', ru: 'Документы', en: 'Documents', icon: '🪪', slug: 'documents' },
+                { uz: 'Transport turlari', ru: 'Виды транспорта', en: 'Transportation', icon: '✈️', slug: 'transportation' },
+                { uz: 'Avtomobil turlari', ru: 'Виды автомобилей', en: 'Vehicle Types', icon: '🚗', slug: 'vehicles' },
+                { uz: 'Mashina tashqi qismlari', ru: 'Наруж. части авто', en: 'Car Exterior', icon: '🚙', slug: 'car-exterior' },
+                { uz: 'Dvigatel va mexanika', ru: 'Двигатель и мех.', en: 'Engine & Mechanics', icon: '⚙️', slug: 'car-engine' },
+                { uz: 'Mashina ichki qismlari', ru: 'Салон авто', en: 'Car Interior', icon: '🪑', slug: 'car-interior' },
+                { uz: "Yo'nalishlar", ru: 'Направления', en: 'Directions', icon: '🧭', slug: 'directions' },
+                { uz: "His-tuyg'ular", ru: 'Эмоции', en: 'Emotions', icon: '😊', slug: 'emotions' },
               ];
               const tq = topicSearch.trim().toLowerCase();
               const filteredTopics = tq
                 ? allTopics.filter((t) =>
                     t.uz.toLowerCase().includes(tq) ||
                     t.ru.toLowerCase().includes(tq) ||
+                    t.en.toLowerCase().includes(tq) ||
                     t.slug.includes(tq)
                   )
                 : allTopics;
@@ -596,7 +582,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     <input
                       type="text"
                       className="dialogues__search-input"
-                      placeholder={language === 'ru' ? 'Поиск тем...' : 'Mavzularni qidirish...'}
+                      placeholder={({ uz: 'Mavzularni qidirish...', ru: 'Поиск тем...', en: 'Search topics...' } as Record<string, string>)[language]}
                       value={topicSearch}
                       onChange={(e) => setTopicSearch(e.target.value)}
                     />
@@ -615,12 +601,12 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                       >
                         <span style={{ fontSize: 22 }}>{topic.icon}</span>
                         <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
-                          {language === 'ru' ? topic.ru : topic.uz}
+                          {(topic as Record<string, string>)[language] ?? topic.uz}
                         </div>
                       </Link>
                     ))}
                     {filteredTopics.length === 0 && (
-                      <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                      <p className="dialogues__empty">{({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}</p>
                     )}
                   </div>
                 </>
@@ -636,7 +622,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 <div className="lp__card-main">
                   <div className="lp__card-title">{k.title}</div>
                   <div className="lp__card-pinyin">{k.pinyin}</div>
-                  <div className="lp__card-sub">{language === 'ru' ? k.translation_ru : k.translation}</div>
+                  <div className="lp__card-sub">{({ uz: k.translation, ru: k.translation_ru, en: k.translation_en } as Record<string, string>)[language]}</div>
                 </div>
                 <div className="lp__card-arrow">›</div>
               </Link>
@@ -651,7 +637,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 item.char.includes(gq) ||
                 item.pinyin.toLowerCase().includes(gq) ||
                 item.translation.toLowerCase().includes(gq) ||
-                item.translation_ru.toLowerCase().includes(gq)
+                item.translation_ru.toLowerCase().includes(gq) ||
+                item.translation_en.toLowerCase().includes(gq)
               )
             : grammarItems;
           return (
@@ -663,7 +650,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                 <input
                   type="text"
                   className="dialogues__search-input"
-                  placeholder={language === 'ru' ? 'Поиск грамматики...' : 'Grammatikani qidirish...'}
+                  placeholder={({ uz: 'Grammatikani qidirish...', ru: 'Поиск грамматики...', en: 'Search grammar...' } as Record<string, string>)[language]}
                   value={grammarSearch}
                   onChange={(e) => setGrammarSearch(e.target.value)}
                 />
@@ -675,13 +662,13 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     <div className="grammar-card__top">
                       <div className="grammar-card__icon" style={{ background: item.color }}>{item.char}</div>
                       <p className="grammar-card__title">{item.char} {item.pinyin}</p>
-                      {!item.active && <span className="grammar-card__badge">{language === 'ru' ? 'Скоро' : 'Tez kunda'}</span>}
+                      {!item.active && <span className="grammar-card__badge">{({ uz: 'Tez kunda', ru: 'Скоро', en: 'Soon' } as Record<string, string>)[language]}</span>}
                     </div>
-                    <p className="grammar-card__translation">{language === 'ru' ? item.translation_ru : item.translation}</p>
+                    <p className="grammar-card__translation">{({ uz: item.translation, ru: item.translation_ru, en: item.translation_en } as Record<string, string>)[language]}</p>
                   </Link>
                 ))}
                 {filteredGrammar.length === 0 && (
-                  <p className="dialogues__empty">{language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}</p>
+                  <p className="dialogues__empty">{({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}</p>
                 )}
               </div>
             </>
@@ -690,7 +677,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
 
         {activeTab === 'tests' && (
           <div className="lang-page__placeholder">
-            <p className="lang-page__placeholder-text">{language === 'ru' ? 'Скоро...' : 'Tez kunda...'}</p>
+            <p className="lang-page__placeholder-text">{({ uz: 'Tez kunda...', ru: 'Скоро...', en: 'Coming soon...' } as Record<string, string>)[language]}</p>
           </div>
         )}
 

@@ -21,7 +21,7 @@ interface StrokeData {
 
 interface Props {
   char: string;
-  lang: 'uz' | 'ru';
+  lang: 'uz' | 'ru' | 'en';
   onComplete?: (mistakes: number) => void;
   revealAll?: number; // increment to trigger reveal; 0 = idle
   hidden?: boolean; // hide character outline (write from memory)

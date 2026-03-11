@@ -8,17 +8,17 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 
-const TAGS: Record<string, { uz: string; ru: string }> = {
-  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство' },
-  kundalik: { uz: 'Kundalik', ru: 'Повседневное' },
-  xaridlar: { uz: 'Xaridlar', ru: 'Покупки' },
-  ovqat: { uz: 'Ovqat', ru: 'Еда' },
-  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье' },
-  transport: { uz: 'Transport', ru: 'Транспорт' },
-  telefon: { uz: 'Telefon', ru: 'Телефон' },
-  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба' },
-  reja: { uz: 'Reja', ru: 'Планы' },
-  muloqot: { uz: 'Muloqot', ru: 'Общение' },
+const TAGS: Record<string, { uz: string; ru: string; en: string }> = {
+  tanishuv: { uz: 'Tanishuv', ru: 'Знакомство', en: 'Introductions' },
+  kundalik: { uz: 'Kundalik', ru: 'Повседневное', en: 'Daily Life' },
+  xaridlar: { uz: 'Xaridlar', ru: 'Покупки', en: 'Shopping' },
+  ovqat: { uz: 'Ovqat', ru: 'Еда', en: 'Food' },
+  salomatlik: { uz: 'Salomatlik', ru: 'Здоровье', en: 'Health' },
+  transport: { uz: 'Transport', ru: 'Транспорт', en: 'Transport' },
+  telefon: { uz: 'Telefon', ru: 'Телефон', en: 'Phone' },
+  ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба', en: 'Work/Study' },
+  reja: { uz: 'Reja', ru: 'Планы', en: 'Plans' },
+  muloqot: { uz: 'Muloqot', ru: 'Общение', en: 'Communication' },
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
@@ -180,7 +180,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
           <input
             type="text"
             className="dialogues__search-input"
-            placeholder={language === 'ru' ? 'Поиск диалогов...' : 'Dialoglarni qidirish...'}
+            placeholder={({ uz: 'Dialoglarni qidirish...', ru: 'Поиск диалогов...', en: 'Search dialogues...' } as Record<string, string>)[language]}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -199,7 +199,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
             className={`dialogues__tag ${!activeTag && !showBookmarked ? 'dialogues__tag--active' : ''}`}
             onClick={() => { setActiveTag(null); setShowBookmarked(false); }}
           >
-            {language === 'ru' ? 'Все' : 'Hammasi'}
+            {({ uz: 'Hammasi', ru: 'Все', en: 'All' } as Record<string, string>)[language]}
           </button>
           <button
             className={`dialogues__tag dialogues__tag--bookmark ${showBookmarked ? 'dialogues__tag--active' : ''}`}
@@ -208,7 +208,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
             <svg viewBox="0 0 24 24" width="14" height="14" fill={showBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
             </svg>
-            {language === 'ru' ? 'Сохранённые' : 'Saqlangan'}
+            {({ uz: 'Saqlangan', ru: 'Сохранённые', en: 'Saved' } as Record<string, string>)[language]}
           </button>
           {availableTags.map((tag) => (
             <button
@@ -216,7 +216,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
               className={`dialogues__tag ${activeTag === tag ? 'dialogues__tag--active' : ''}`}
               onClick={() => { setActiveTag(activeTag === tag ? null : tag); setShowBookmarked(false); }}
             >
-              {language === 'ru' ? TAGS[tag].ru : TAGS[tag].uz}
+              {(TAGS[tag] as Record<string, string>)[language] ?? TAGS[tag].uz}
             </button>
           ))}
         </div>
@@ -230,7 +230,7 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
                   <h3 className="dialogue-card__title">
                     {dialogue.title}
                     {isNew(dialogue.dateAdded, seen, dialogue.id) && (
-                      <span className="dialogue-card__new">{language === 'ru' ? 'Новое' : 'Yangi'}</span>
+                      <span className="dialogue-card__new">{({ uz: 'Yangi', ru: 'Новое', en: 'New' } as Record<string, string>)[language]}</span>
                     )}
                   </h3>
                   <p className="dialogue-card__pinyin">{dialogue.pinyin}</p>
@@ -250,14 +250,14 @@ export function DialoguesPage({ dialogues, bookPath, languagePath }: DialoguesPa
               </div>
               {dialogue.tag && (
                 <span className="dialogue-card__tag">
-                  {language === 'ru' ? TAGS[dialogue.tag]?.ru : TAGS[dialogue.tag]?.uz}
+                  {(TAGS[dialogue.tag] as Record<string, string> | undefined)?.[language] ?? TAGS[dialogue.tag]?.uz}
                 </span>
               )}
             </Link>
           ))}
           {filtered.length === 0 && (
             <p className="dialogues__empty">
-              {language === 'ru' ? 'Ничего не найдено' : 'Hech narsa topilmadi'}
+              {({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}
             </p>
           )}
         </div>

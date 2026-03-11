@@ -52,33 +52,51 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
   onFocusModeToggle,
 }) => {
   // UI text based on language
-  const text = language === 'ru' ? {
-    pinyinLabel: 'Пиньинь',
-    pinyinHide: 'Скрыть пиньинь',
-    pinyinShow: 'Показать пиньинь',
-    translationLabel: 'Перевод',
-    translationHide: 'Скрыть перевод',
-    translationShow: 'Показать перевод',
-    langSwitch: "O'zbek tiliga o'tish",
-    fontDecrease: 'Уменьшить шрифт',
-    fontIncrease: 'Увеличить шрифт',
-    focusLabel: 'Фокус',
-    focusHide: 'Выключить режим фокуса',
-    focusShow: 'Включить режим фокуса',
-  } : {
-    pinyinLabel: 'Pinyin',
-    pinyinHide: 'Pinyinni yashirish',
-    pinyinShow: "Pinyinni ko'rsatish",
-    translationLabel: 'Tarjima',
-    translationHide: 'Tarjimani yashirish',
-    translationShow: "Tarjimani ko'rsatish",
-    langSwitch: 'Переключить на русский',
-    fontDecrease: 'Shriftni kichiklashtirish',
-    fontIncrease: 'Shriftni kattalashtirish',
-    focusLabel: 'Fokus',
-    focusHide: 'Fokus rejimini o\'chirish',
-    focusShow: 'Fokus rejimini yoqish',
+  const texts: Record<string, Record<string, string>> = {
+    uz: {
+      pinyinLabel: 'Pinyin',
+      pinyinHide: 'Pinyinni yashirish',
+      pinyinShow: "Pinyinni ko'rsatish",
+      translationLabel: 'Tarjima',
+      translationHide: 'Tarjimani yashirish',
+      translationShow: "Tarjimani ko'rsatish",
+      langSwitch: 'Переключить на русский',
+      fontDecrease: 'Shriftni kichiklashtirish',
+      fontIncrease: 'Shriftni kattalashtirish',
+      focusLabel: 'Fokus',
+      focusHide: 'Fokus rejimini o\'chirish',
+      focusShow: 'Fokus rejimini yoqish',
+    },
+    ru: {
+      pinyinLabel: 'Пиньинь',
+      pinyinHide: 'Скрыть пиньинь',
+      pinyinShow: 'Показать пиньинь',
+      translationLabel: 'Перевод',
+      translationHide: 'Скрыть перевод',
+      translationShow: 'Показать перевод',
+      langSwitch: 'Switch to English',
+      fontDecrease: 'Уменьшить шрифт',
+      fontIncrease: 'Увеличить шрифт',
+      focusLabel: 'Фокус',
+      focusHide: 'Выключить режим фокуса',
+      focusShow: 'Включить режим фокуса',
+    },
+    en: {
+      pinyinLabel: 'Pinyin',
+      pinyinHide: 'Hide pinyin',
+      pinyinShow: 'Show pinyin',
+      translationLabel: 'Translation',
+      translationHide: 'Hide translation',
+      translationShow: 'Show translation',
+      langSwitch: "O'zbek tiliga o'tish",
+      fontDecrease: 'Decrease font',
+      fontIncrease: 'Increase font',
+      focusLabel: 'Focus',
+      focusHide: 'Disable focus mode',
+      focusShow: 'Enable focus mode',
+    },
   };
+  const text = texts[language] || texts.en;
 
   return (
     <div className="reader__controls">
@@ -99,7 +117,7 @@ export const ReaderControls: React.FC<ReaderControlsProps> = ({
         title={text.langSwitch}
         type="button"
       >
-        {language === 'uz' ? 'RU' : 'UZ'}
+        {({ uz: 'RU', ru: 'EN', en: 'UZ' } as Record<string, string>)[language]}
       </button>
       <div className="page__font-controls">
         <button

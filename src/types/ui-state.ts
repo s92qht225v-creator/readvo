@@ -12,14 +12,15 @@ import type { DictionaryEntry } from './schema';
 // =============================================================================
 
 /** Supported translation languages */
-export type Language = 'uz' | 'ru';
+export type Language = 'uz' | 'ru' | 'en';
 
 export const LANGUAGES: readonly { code: Language; label: string; nativeLabel: string }[] = [
   { code: 'uz', label: 'Uzbek', nativeLabel: "O'zbek" },
   { code: 'ru', label: 'Russian', nativeLabel: 'Русский' },
+  { code: 'en', label: 'English', nativeLabel: 'English' },
 ];
 
-export const DEFAULT_LANGUAGE: Language = 'uz';
+export const DEFAULT_LANGUAGE: Language = 'en';
 
 // =============================================================================
 // WORD POPUP STATE

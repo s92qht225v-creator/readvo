@@ -49,7 +49,7 @@ export const FlashcardCard: React.FC<FlashcardCardProps> = ({
             )}
           </div>
           <span className="flashcard__tap-hint">
-            {language === 'ru' ? 'Нажмите, чтобы перевернуть' : 'Kartani aylantirish uchun bosing'}
+            {({ uz: 'Kartani aylantirish uchun bosing', ru: 'Нажмите, чтобы перевернуть', en: 'Tap to flip' } as Record<string, string>)[language]}
           </span>
         </div>
 

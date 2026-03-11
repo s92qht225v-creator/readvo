@@ -482,9 +482,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
             localStorage.setItem('blim-word-hint-seen', '1');
           }}
         >
-          {language === 'ru'
-            ? 'Удерживайте слово — увидите перевод'
-            : "So'zni bosib turing — tarjimani ko'ring"}
+          {({ uz: "So'zni bosib turing — tarjimani ko'ring", ru: 'Удерживайте слово — увидите перевод', en: 'Hold a word to see its translation' } as Record<string, string>)[language]}
         </div>
       )}
 
@@ -497,7 +495,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
                 if (word) {
                   const chars = activeSentence.text_original.slice(word.i[0], word.i[1]);
                   const translation = language === 'ru' ? word.tr : word.t;
-                  return <><strong>{chars}</strong> {word.p} — {translation}{word.h ? <span className="story__word-hsk">HSK {word.h}</span> : null}{word.l ? <span className="story__word-hsk">{word.l}-{language === 'ru' ? 'урок' : 'dars'}</span> : null}</>;
+                  return <><strong>{chars}</strong> {word.p} — {translation}{word.h ? <span className="story__word-hsk">HSK {word.h}</span> : null}{word.l ? <span className="story__word-hsk">{word.l}-{({ uz: 'dars', ru: 'урок', en: 'lesson' } as Record<string, string>)[language]}</span> : null}</>;
                 }
               }
               return language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation;
@@ -655,14 +653,14 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
             onClick={toggleTranslation}
             type="button"
           >
-            {language === 'ru' ? 'Перевод' : 'Tarjima'}
+            {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
           </button>
           <button
             className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`}
             onClick={toggleFocusMode}
             type="button"
           >
-            {language === 'ru' ? 'Фокус' : 'Fokus'}
+            {({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}
           </button>
           <button
             className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`}

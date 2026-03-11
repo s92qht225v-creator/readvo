@@ -8002,7 +8002,9 @@ body {
   .landing__hero-langs-inner {
     display: inline-flex;
     width: auto;
-    padding: 24px 40px;
+    padding: 24px 32px;
+    max-width: 100%;
+    box-sizing: border-box;
     gap: 16px;
   }
 
@@ -8070,7 +8072,9 @@ body {
   }
 
   .landing__hero-langs-inner {
-    padding: 24px 16px;
+    padding: 24px 12px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .landing__hero-langs-row {
