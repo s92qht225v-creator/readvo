@@ -15,63 +15,74 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 - **Language**: TypeScript
 - **Styling**: CSS (reading.css) with CSS custom properties
 - **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
-- **i18n**: next-intl ^4.8.3 (cookie-based locale, no i18n routing)
+- **i18n**: next-intl ^4.8.3 (URL-based locale routing, `localePrefix: 'always'`)
 - **State Management**: React hooks (useState, useCallback, useMemo)
 - **Storage**: Supabase Storage (images and audio files)
 - **Database**: Supabase (project: miruwaeplbzfqmdwacsh)
 
 ## URL Structure
+All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect to `/uz/...` (default locale).
 ```
-/                                           # Home/landing page (redirects logged-in users to /chinese)
-/[language]                                 # Language page - tabbed catalog (Kitob, Matn, Flesh, KTV, Test)
-/[language]?tab=[tabId]                     # Language page with specific tab pre-selected
-/[language]/[book]                          # Book page - lesson list
-/[language]/[book]/lesson/[lessonId]/page/[pageNum]  # Lesson page
-/[language]/[book]/flashcards               # Flashcard list page (per-lesson cards)
-/[language]/[book]/flashcards/[lessonId]    # Flashcard practice for specific lesson
-/[language]/[book]/dialogues                # Dialogues list page
-/[language]/[book]/dialogues/[dialogueId]  # Dialogue reader page (uses StoryReader)
-/[language]/[book]/karaoke/[songId]         # Karaoke player page
-/[language]/[book]/writing/[setId]          # Writing practice page (per character set)
+/                                           # Redirects to /uz (default locale)
+/{locale}                                   # Landing (unauthenticated) or redirect to /{locale}/chinese
+/{locale}/chinese                           # Language page - tabbed catalog (6 tabs)
+/{locale}/chinese?tab=[tabId]               # Language page with specific tab pre-selected
+/{locale}/chinese/hsk1/lesson/[lessonId]/page/[pageNum]  # Lesson page
+/{locale}/chinese/hsk1/flashcards           # Flashcard list page (per-lesson cards)
+/{locale}/chinese/hsk1/flashcards/[lessonId] # Flashcard practice for specific lesson
+/{locale}/chinese/hsk1/dialogues            # Dialogues list page
+/{locale}/chinese/hsk1/dialogues/[dialogueId] # Dialogue reader page (uses StoryReader)
+/{locale}/chinese/hsk1/karaoke/[songId]     # Karaoke player page
+/{locale}/chinese/hsk1/writing/[setId]      # Writing practice page (per character set)
+/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (17 slugs)
+/{locale}/login                             # Login page
+/{locale}/payment                           # Payment page
+/{locale}/blog                              # Blog list
+/{locale}/blog/[slug]                       # Blog post
 ```
 
 Example routes:
-- `/` - Landing page (logged-in users auto-redirect to `/chinese`)
-- `/chinese` - Chinese language page with tabs (Kitob, Matn, Flesh, KTV, Test)
-- `/chinese?tab=flashcards` - Language page with Flashcards tab active
-- `/chinese/hsk1` - HSK 1 book with lesson list
-- `/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
-- `/chinese/hsk1/flashcards` - HSK 1 flashcard list (per-lesson cards with word counts)
-- `/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
-- `/chinese/hsk1/dialogues` - HSK 1 dialogues list
-- `/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
-- `/chinese?tab=writing` - Writing tab (Hanzi character set selection)
-- `/chinese/hsk1/writing/hsk1-set1` - Writing practice for character set 1
+- `/uz` - Landing page in Uzbek
+- `/en/chinese` - Chinese language page with tabs (English UI)
+- `/ru/chinese?tab=flashcards` - Language page with Flashcards tab active (Russian UI)
+- `/uz/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
+- `/en/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
+- `/uz/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
+- `/en/chinese/hsk1/writing/hsk1-set1` - Writing practice for character set 1
+- `/en/blog/hsk-1-sozlar-royxati` - Blog post in English
 
 ## Project Structure
 ```
 /Users/ali/ReadVo/
 ├── src/
 │   ├── app/                    # Next.js App Router pages
-│   │   ├── page.tsx           # Home page (language selection)
-│   │   ├── error.tsx          # Error boundary
-│   │   ├── not-found.tsx      # 404 page
-│   │   ├── chinese/
-│   │   │   ├── page.tsx       # Language page (tabbed catalog)
-│   │   │   └── hsk1/
-│   │   │       ├── flashcards/
-│   │   │       │   ├── page.tsx       # Flashcard list page (per-lesson cards)
-│   │   │       │   └── [lessonId]/page.tsx  # Flashcard practice for lesson
-│   │   │       ├── dialogues/
-│   │   │       │   ├── page.tsx       # Dialogues list page
-│   │   │       │   └── [dialogueId]/page.tsx  # Dialogue reader (uses StoryReader)
-│   │   │       ├── karaoke/
-│   │   │       │   └── [songId]/page.tsx   # Karaoke player page
-│   │   │       ├── writing/
-│   │   │       │   └── [setId]/
-│   │   │       │       ├── page.tsx              # Writing practice (server component)
-│   │   │       │       └── WritingPracticePage.tsx # Writing practice (client component)
-│   │   │       └── grammar/[slug]/page.tsx # Grammar pages (shi/you/zai/de/bu/ma)
+│   │   ├── layout.tsx         # Root layout (html, font, analytics)
+│   │   ├── [locale]/          # Locale-prefixed routes
+│   │   │   ├── layout.tsx     # Locale layout (NextIntlClientProvider + AuthProvider)
+│   │   │   ├── page.tsx       # Landing page / home
+│   │   │   ├── error.tsx      # Error boundary
+│   │   │   ├── not-found.tsx  # 404 page
+│   │   │   ├── login/page.tsx # Login page
+│   │   │   ├── payment/page.tsx # Payment page
+│   │   │   ├── blog/
+│   │   │   │   ├── page.tsx       # Blog list
+│   │   │   │   └── [slug]/page.tsx # Blog post
+│   │   │   └── chinese/
+│   │   │       ├── page.tsx       # Language page (tabbed catalog)
+│   │   │       └── hsk1/
+│   │   │           ├── flashcards/
+│   │   │           │   ├── page.tsx       # Flashcard list page
+│   │   │           │   └── [lessonId]/page.tsx  # Flashcard practice
+│   │   │           ├── dialogues/
+│   │   │           │   ├── page.tsx       # Dialogues list page
+│   │   │           │   └── [dialogueId]/page.tsx  # Dialogue reader
+│   │   │           ├── karaoke/
+│   │   │           │   └── [songId]/page.tsx   # Karaoke player
+│   │   │           ├── writing/
+│   │   │           │   └── [setId]/
+│   │   │           │       ├── page.tsx              # Writing practice (server)
+│   │   │           │       └── WritingPracticePage.tsx # Writing practice (client)
+│   │   │           └── grammar/[slug]/page.tsx # Grammar pages (17 slugs)
 │   │   ├── api/
 │   │   │   ├── admin/
 │   │   │   │   ├── route.ts       # Admin data + actions (GET/POST)
@@ -87,8 +98,7 @@ Example routes:
 │   │   │       │   ├── init/route.ts     # Telegram Widget auth URL (GET)
 │   │   │       │   └── callback/route.ts # HMAC verify + user create + session (POST)
 │   │   │       └── session-check/route.ts # Session nonce validation (POST/DELETE)
-│   │   ├── auth/telegram/complete/page.tsx  # Telegram login completion (client)
-│   │   └── payment/page.tsx       # Payment page
+│   │   └── auth/telegram/complete/page.tsx  # Telegram login completion (outside [locale])
 │   ├── components/             # React components (see src/components/CLAUDE.md)
 │   │   ├── Page.tsx           # Top-level page container
 │   │   ├── PageReader.tsx     # Page reader wrapper
@@ -123,10 +133,12 @@ Example routes:
 │   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
 │   │   └── Paywall.tsx               # Paywall overlay (trial expired)
 │   ├── i18n/
-│   │   └── request.ts         # next-intl server config (reads blim-language cookie)
+│   │   ├── request.ts         # next-intl server config (reads locale from URL)
+│   │   ├── routing.ts         # Locale routing config (locales, defaultLocale, localePrefix)
+│   │   └── navigation.ts      # createNavigation exports (Link, redirect, usePathname, useRouter)
 │   ├── hooks/                  # Custom React hooks
 │   │   ├── useAudioPlayer.ts  # Singleton audio player
-│   │   ├── useLanguage.ts     # UZ/RU/EN language toggle/set (localStorage + cookie)
+│   │   ├── useLanguage.ts     # UZ/RU/EN language toggle (wraps useLocale + useRouter from @/i18n/navigation)
 │   │   ├── useAuth.tsx        # Telegram auth provider + context
 │   │   ├── useRequireAuth.ts  # Auth guard (redirects to / if not logged in)
 │   │   └── useTrial.ts       # Trial/subscription status hook
@@ -222,31 +234,44 @@ Page → Section → Sentence → Word
 - Button tooltips: Language-dependent (Uzbek/Russian/English)
 - Translations: Uzbek (default), Russian, or English (toggle with language button)
 - Tab labels (UZ): Dialog | Yozish | Flesh | KTV | Tika | Test
-- Tab labels (RU): Диалог | Письмо | Флеш | KTV | Грамм | Тесты
+- Tab labels (RU): Диалог | Письмо | Флеш | KTV | Грамматика | Тесты
 - Tab labels (EN): Dialogue | Writing | Flash | KTV | Grammar | Tests
 - Tab IDs: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
 - Language selector: Inside hamburger menu on banner pages (`<select>` dropdown with O'zbekcha/Русский/English options under "Til"/"Язык"/"Language" label, 中文 under "Men o'rganaman"/"Я изучаю"/"I'm learning" label). Lesson/dialogue reader headers use 3-way cycle toggle button (UZ→RU→EN→UZ, showing the CURRENT language label: UZ/RU/EN).
 - **Content translation fallback**: English users see Uzbek translations (`text_translation`) — there are no `text_translation_en` fields in content JSON. English only applies to UI chrome, not lesson content.
 
 ## Trilingual UI / Bilingual Content
-The **UI** supports three languages (Uzbek, Russian, English). **Content** translations remain bilingual (Uzbek/Russian only — English users see Uzbek translations as fallback):
+The **UI** supports three languages (Uzbek, Russian, English). **Lesson content** translations remain bilingual (Uzbek/Russian only — English users see Uzbek translations as fallback):
 - `text_translation` / `text_translation_ru` - sentence translations (English falls back to `text_translation`)
 - `contextTranslation` / `contextTranslation_ru` - context translations
 - `instruction` / `instruction_ru` - instruction text
 - `subheading` / `subheading_ru` - section subheadings
 - `tip.translation` / `tip.translation_ru` - tip translations
 
+### Trilingual Content (Blog & Dialogues)
+Some content types support full trilingual translations with optional `_en` fields:
+- **Blog posts**: `title_en`, `description_en`, `intro_en`, section `heading_en` / `body_en` — all optional, fallback to Uzbek
+- **Dialogue titles**: `titleTranslation_en` — English subtitle for all 47 dialogue JSONs
+- **Blog service**: `src/services/blog.ts` — `BlogPost` and `BlogSection` interfaces include optional `_en` fields
+- **Dialogue service**: `src/services/dialogues.ts` — `DialogueInfo` and `DialoguePage` include `titleTranslation_en?`
+
 ### Internationalization (i18n) Architecture
-- **Library**: next-intl ^4.8.3 (without i18n routing — no `/uz/`, `/ru/`, `/en/` URL prefixes)
-- **Locale detection**: Cookie `blim-language` → `Accept-Language` header → default `'en'`
-- **Server-side**: `src/i18n/request.ts` reads the `blim-language` cookie via `next/headers`, imports the matching JSON from `messages/{locale}.json`
-- **Client-side**: `NextIntlClientProvider` wraps the app in `layout.tsx`, passing `messages` from server
-- **`<html lang>`**: Dynamic — set to current locale from `getLocale()` (was hardcoded `"uz"`)
-- **Message files**: `messages/uz.json`, `messages/ru.json`, `messages/en.json` — 22 namespaces (HomePage, LanguagePage, BookPage, etc.), ~348 lines each
-- **Current usage**: Message files exist but are **NOT yet consumed by components**. All ~48 components currently use inline trilingual objects: `({ uz: '...', ru: '...', en: '...' } as Record<string, string>)[language]`. Future migration will replace inline objects with `useTranslations()` from next-intl.
-- **Cookie sync**: `useLanguage` hook writes both `localStorage('readvo-language')` and cookie `blim-language` (1-year expiry, `SameSite=Lax`) on every language change, ensuring server-side rendering matches client preference
+- **Library**: next-intl ^4.8.3 with URL-based locale routing (`localePrefix: 'always'`)
+- **Locales**: `['uz', 'ru', 'en']`, default: `'uz'`
+- **URL pattern**: `/{locale}/...` (e.g. `/uz/chinese`, `/en/blog`). Unprefixed URLs auto-redirect to `/uz/...`
+- **Routing config**: `src/i18n/routing.ts` — `defineRouting()` with locales, defaultLocale, localePrefix
+- **Navigation**: `src/i18n/navigation.ts` — `createNavigation(routing)` exports `{ Link, redirect, usePathname, useRouter }`. All components use these instead of `next/link` and `next/navigation`.
+- **Middleware**: `src/middleware.ts` — wraps `createMiddleware(routing)` with custom logic to redirect invalid 2-letter locale prefixes (e.g. `/fr/chinese` → `/uz/chinese`)
+- **Server-side**: `src/i18n/request.ts` uses `getRequestConfig()` from next-intl, reads locale from URL
+- **Root layout**: `src/app/layout.tsx` — minimal shell: `<html>`, font, analytics. Dynamic `<html lang>` from `getLocale()`
+- **Locale layout**: `src/app/[locale]/layout.tsx` — `NextIntlClientProvider` + `AuthProvider` + `setRequestLocale()`
+- **Message files**: `messages/uz.json`, `messages/ru.json`, `messages/en.json` — 22 namespaces, ~348 lines each
+- **Current usage**: Message files exist but are **NOT yet consumed by components**. All ~48 components use inline trilingual objects: `({ uz: '...', ru: '...', en: '...' } as Record<string, string>)[language]`. Future migration will replace with `useTranslations()`.
+- **useLanguage hook**: Thin wrapper around `useLocale()` + `useRouter().replace(pathname, { locale })` from `@/i18n/navigation`. URL is single source of truth. Returns `[Language, toggle, set]`.
 - **Language type**: `Language = 'uz' | 'ru' | 'en'` (defined in `src/types/ui-state.ts`)
 - **LANGUAGES constant**: `[{ code: 'uz', label: 'Uzbek', nativeLabel: "O'zbek" }, { code: 'ru', label: 'Russian', nativeLabel: 'Русский' }, { code: 'en', label: 'English', nativeLabel: 'English' }]`
+- **Auth callback**: `src/app/auth/telegram/complete/page.tsx` lives outside `[locale]`, reads locale from localStorage to construct redirect URL
+- **Metadata**: All pages use `generateMetadata()` with trilingual titles/descriptions and `alternates.languages` for hreflang
 
 ## Commands
 ```bash
@@ -367,7 +392,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 
 ## SEO & Metadata
 - **`<html lang="{locale}">`** — dynamic, set to current locale from `getLocale()` (uz/ru/en)
-- **Title template**: `%s | Blim` — set in root `layout.tsx`, all page titles auto-append "| Blim"
+- **Title template**: `%s | Blim` — set in root `layout.tsx`, all page titles auto-append "| Blim". **IMPORTANT**: Pages must NOT include "| Blim" in their own title (causes double "| Blim | Blim")
 - **Per-page metadata**: Every `page.tsx` exports `metadata` or `generateMetadata` with `title` + `description`
 - **OpenGraph / Twitter Cards**: Configured in root layout. Dynamic OG image via `src/app/opengraph-image.tsx` (edge runtime)
 - **Sitemap**: `src/app/sitemap.ts` — auto-generates URLs for all content pages (lessons, dialogues, karaoke, flashcards, topic flashcards, writing sets, grammar, blog). **IMPORTANT**: When adding new content types or pages, always update `sitemap.ts` to include the new URLs. Topic flashcards are discovered automatically from `content/flashcards/topics/*.json`; writing sets from `WRITING_SETS` in `services/writing.ts`.

@@ -63,15 +63,16 @@ export function BannerMenu() {
             {({ uz: 'Til', ru: 'Язык', en: 'Language' } as Record<string, string>)[language]}
           </div>
           <div className="home__menu-lang-row">
-            <select
-              className="home__menu-lang-select"
-              value={language}
-              onChange={(e) => setLanguage(e.target.value as 'uz' | 'ru' | 'en')}
-            >
-              <option value="uz">O&apos;zbekcha</option>
-              <option value="ru">Русский</option>
-              <option value="en">English</option>
-            </select>
+            {(['uz', 'ru', 'en'] as const).map((code) => (
+              <button
+                key={code}
+                className={`home__menu-lang-btn${language === code ? ' home__menu-lang-btn--active' : ''}`}
+                type="button"
+                onClick={() => setLanguage(code)}
+              >
+                {code.toUpperCase()}
+              </button>
+            ))}
           </div>
           <div className="home__menu-divider" />
           <div className="home__menu-section-label">

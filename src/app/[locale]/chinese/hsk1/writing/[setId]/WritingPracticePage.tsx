@@ -66,14 +66,14 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
             onClick={() => setSubtab('writing')}
             type="button"
           >
-            {language === 'ru' ? 'Письмо' : 'Yozish'}
+            {({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[language]}
           </button>
           <button
             className={`lp__tab ${subtab === 'chars' ? 'lp__tab--active' : ''}`}
             onClick={() => setSubtab('chars')}
             type="button"
           >
-            {language === 'ru' ? 'Иероглифы' : 'Ierogliflar'}
+            {({ uz: 'Ierogliflar', ru: 'Иероглифы', en: 'Characters' } as Record<string, string>)[language]}
           </button>
         </div>
       </nav>
