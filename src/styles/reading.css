@@ -8082,7 +8082,8 @@ body {
   }
 
   .landing__hero-lang-flag {
-    width: 100%;
+    width: 80px !important;
+    height: 53px !important;
     border-radius: 4px;
   }
 
@@ -8177,6 +8178,11 @@ body {
 
   .landing__nav-inner {
     padding: 10px 16px;
+  }
+
+  .landing__hero-lang-flag {
+    width: 64px !important;
+    height: 43px !important;
   }
 }
 
