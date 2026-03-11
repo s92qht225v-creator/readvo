@@ -101,8 +101,7 @@
     "back": "← Bosh sahifa"
   },
   "LessonHeader": {
-    "lesson": "dars",
-    "lessonRu": "урок"
+    "lesson": "dars"
   },
   "LanguagePage": {
     "pageTitle": "Xitoy tili — HSK 1 darslari, dialoglar va mashqlar",
@@ -132,8 +131,8 @@
     "selectAll": "Barchasini tanlash",
     "deselectAll": "Barchasini bekor qilish",
     "startWithCount": "Boshlash ({n} so'z)",
-    "flashcardModeZhUz": "汉字 → O'zbekcha",
-    "flashcardModeUzZh": "O'zbekcha → 汉字",
+    "flashcardModeZhLocal": "汉字 → O'zbekcha",
+    "flashcardModeLocalZh": "O'zbekcha → 汉字",
     "tag_tanishuv": "Tanishuv",
     "tag_kundalik": "Kundalik",
     "tag_xaridlar": "Xaridlar",

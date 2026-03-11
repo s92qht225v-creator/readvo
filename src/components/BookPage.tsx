@@ -134,9 +134,7 @@ export function BookPage({ lessons, bookPath, languagePath, tabConfig, unitLabel
                     <h3 className="lesson-card__title">{lesson.title}</h3>
                     <p className="lesson-card__pinyin">{lesson.pinyin}</p>
                     <p className="lesson-card__translation">
-                      {language === 'ru' && lesson.titleTranslation_ru
-                        ? lesson.titleTranslation_ru
-                        : lesson.titleTranslation}
+                      {language === 'ru' ? lesson.titleTranslation_ru : lesson.titleTranslation}
                     </p>
                   </div>
                 </div>

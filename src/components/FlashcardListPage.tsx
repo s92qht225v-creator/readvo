@@ -63,9 +63,7 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
                 <div className="lesson-card__number">{lesson.lessonNumber}</div>
                 <div className="lesson-card__title-group">
                   <p className="lesson-card__translation">
-                    {language === 'ru' && lesson.titleTranslation_ru
-                      ? lesson.titleTranslation_ru
-                      : lesson.titleTranslation}
+                    {language === 'ru' ? lesson.titleTranslation_ru : lesson.titleTranslation}
                   </p>
                 </div>
               </div>

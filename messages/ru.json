@@ -101,8 +101,7 @@
     "back": "← На главную"
   },
   "LessonHeader": {
-    "lesson": "урок",
-    "lessonRu": "урок"
+    "lesson": "урок"
   },
   "LanguagePage": {
     "pageTitle": "Китайский язык — уроки HSK 1, диалоги и упражнения",
@@ -132,8 +131,8 @@
     "selectAll": "Выбрать все",
     "deselectAll": "Снять все",
     "startWithCount": "Начать ({n} слов)",
-    "flashcardModeZhUz": "汉字 → Русский",
-    "flashcardModeUzZh": "Русский → 汉字",
+    "flashcardModeZhLocal": "汉字 → Русский",
+    "flashcardModeLocalZh": "Русский → 汉字",
     "tag_tanishuv": "Знакомство",
     "tag_kundalik": "Повседневное",
     "tag_xaridlar": "Покупки",

@@ -101,8 +101,7 @@
     "back": "← Home"
   },
   "LessonHeader": {
-    "lesson": "lesson",
-    "lessonRu": "урок"
+    "lesson": "lesson"
   },
   "LanguagePage": {
     "pageTitle": "Chinese — HSK 1 lessons, dialogues, and exercises",
@@ -132,8 +131,8 @@
     "selectAll": "Select all",
     "deselectAll": "Deselect all",
     "startWithCount": "Start ({n} words)",
-    "flashcardModeZhUz": "汉字 → English",
-    "flashcardModeUzZh": "English → 汉字",
+    "flashcardModeZhLocal": "汉字 → English",
+    "flashcardModeLocalZh": "English → 汉字",
     "tag_tanishuv": "Greetings",
     "tag_kundalik": "Daily life",
     "tag_xaridlar": "Shopping",
