@@ -11,9 +11,24 @@ export async function generateMetadata({ params }: Props) {
   const { locale, setId } = await params;
   const set = getWritingSet(setId);
   if (!set) return {};
+  const pageMeta: Record<string, { title: string; description: string }> = {
+    uz: {
+      title: `${set.title} — Yozish mashqi`,
+      description: `${set.subtitle}. Xitoy ierogliflarini yozishni mashq qiling.`,
+    },
+    ru: {
+      title: `${set.title_ru} — Практика письма`,
+      description: `${set.subtitle_ru}. Практика написания китайских иероглифов.`,
+    },
+    en: {
+      title: `Set ${set.id.replace('hsk1-set', '')} — Writing Practice`,
+      description: `${set.subtitle.replace(/ta so'z/, 'words')}. Practice writing Chinese characters.`,
+    },
+  };
+  const m = pageMeta[locale] || pageMeta.uz;
   return {
-    title: `${set.title} — Yozish mashqi`,
-    description: `${set.subtitle}. Xitoy ierogliflarini yozishni mashq qiling. | ${set.subtitle_ru}. Практика написания китайских иероглифов.`,
+    title: m.title,
+    description: m.description,
     alternates: {
       canonical: `/${locale}/chinese/hsk1/writing/${setId}`,
       languages: {

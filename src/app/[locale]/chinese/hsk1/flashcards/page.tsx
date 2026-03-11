@@ -6,9 +6,24 @@ import { FlashcardListPage } from '@/components/FlashcardListPage';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const pageMeta: Record<string, { title: string; description: string }> = {
+    uz: {
+      title: 'HSK 1 so\'zlar — Xitoy tili fleshkartalar',
+      description: 'HSK 1 so\'zlar ro\'yxati: fleshkartalar bilan xitoy tili so\'zlarini yodlang. Dars bo\'yicha ajratilgan. Bepul sinab ko\'ring!',
+    },
+    ru: {
+      title: 'Слова HSK 1 — Флешкарты китайского языка',
+      description: 'Список слов HSK 1: учите китайские слова с флешкартами. Разделены по урокам. Попробуйте бесплатно!',
+    },
+    en: {
+      title: 'HSK 1 Words — Chinese Flashcards',
+      description: 'HSK 1 word list: learn Chinese vocabulary with flashcards. Organized by lesson. Try for free!',
+    },
+  };
+  const m = pageMeta[locale] || pageMeta.uz;
   return {
-    title: 'HSK 1 so\'zlar — Xitoy tili fleshkartalar',
-    description: 'HSK 1 so\'zlar ro\'yxati: fleshkartalar bilan xitoy tili so\'zlarini yodlang. Dars bo\'yicha ajratilgan. Bepul sinab ko\'ring! | Флешкарты HSK 1: учите китайские слова по урокам.',
+    title: m.title,
+    description: m.description,
     alternates: {
       canonical: `/${locale}/chinese/hsk1/flashcards`,
       languages: {

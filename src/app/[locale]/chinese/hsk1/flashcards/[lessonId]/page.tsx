@@ -10,9 +10,24 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { locale, lessonId } = await params;
+  const pageMeta: Record<string, { title: string; description: string }> = {
+    uz: {
+      title: `HSK 1 ${lessonId}-dars so'zlari — Fleshkartalar`,
+      description: `HSK 1, ${lessonId}-dars xitoy tili so'zlarini fleshkartalar bilan yodlang. Audio va tarjima bilan.`,
+    },
+    ru: {
+      title: `Слова урока ${lessonId} HSK 1 — Флешкарты`,
+      description: `Учите китайские слова HSK 1, урок ${lessonId} с флешкартами. С аудио и переводом.`,
+    },
+    en: {
+      title: `HSK 1 Lesson ${lessonId} Words — Flashcards`,
+      description: `Learn Chinese words from HSK 1 lesson ${lessonId} with flashcards. With audio and translation.`,
+    },
+  };
+  const m = pageMeta[locale] || pageMeta.uz;
   return {
-    title: `HSK 1 ${lessonId}-dars so'zlari — Fleshkartalar`,
-    description: `HSK 1, ${lessonId}-dars xitoy tili so'zlarini fleshkartalar bilan yodlang. Audio va tarjima bilan. | Флешкарты HSK 1, урок ${lessonId}: учите китайские слова с аудио и переводом.`,
+    title: m.title,
+    description: m.description,
     alternates: {
       canonical: `/${locale}/chinese/hsk1/flashcards/${lessonId}`,
       languages: {

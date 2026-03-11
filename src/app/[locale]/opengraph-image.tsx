@@ -1,11 +1,34 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Blim — Interaktiv til o\'rganish';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function Image() {
+const meta: Record<string, { alt: string; tagline: string; subjects: string }> = {
+  uz: {
+    alt: "Blim — Interaktiv til o'rganish",
+    tagline: "Interaktiv til o\u2019rganish",
+    subjects: 'Xitoy tili \u2022 Ingliz tili \u2022 Darsliklar \u2022 Fleshkartalar \u2022 Karaoke',
+  },
+  ru: {
+    alt: 'Blim — Интерактивное изучение языков',
+    tagline: 'Интерактивное изучение языков',
+    subjects: 'Китайский \u2022 Английский \u2022 Учебники \u2022 Флешкарты \u2022 Караоке',
+  },
+  en: {
+    alt: 'Blim — Interactive language learning',
+    tagline: 'Interactive language learning',
+    subjects: 'Chinese \u2022 English \u2022 Textbooks \u2022 Flashcards \u2022 Karaoke',
+  },
+};
+
+export function generateImageMetadata({ params }: { params: { locale: string } }) {
+  const m = meta[params.locale] || meta.uz;
+  return [{ id: 'og', alt: m.alt, size, contentType }];
+}
+
+export default function Image({ params }: { params: { locale: string } }) {
+  const m = meta[params.locale] || meta.uz;
   return new ImageResponse(
     (
       <div
@@ -39,7 +62,7 @@ export default function Image() {
             maxWidth: 800,
           }}
         >
-          Interaktiv til o&apos;rganish
+          {m.tagline}
         </div>
         <div
           style={{
@@ -48,7 +71,7 @@ export default function Image() {
             marginTop: 16,
           }}
         >
-          Xitoy tili &bull; Ingliz tili &bull; Darsliklar &bull; Fleshkartalar &bull; Karaoke
+          {m.subjects}
         </div>
       </div>
     ),
