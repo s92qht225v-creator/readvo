@@ -47,7 +47,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const tab of ['grammar', 'writing', 'karaoke']) {
     entries.push(...localeEntries(`/chinese?tab=${tab}`, { changeFrequency: 'monthly', priority: 0.7 }));
   }
-  entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.7 }));
 
   // Grammar pages
   for (const slug of ['shi', 'you', 'zai', 'de', 'bu', 'ma', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci']) {

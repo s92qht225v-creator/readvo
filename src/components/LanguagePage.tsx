@@ -411,7 +411,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
             <div className="dr-hero__level">HSK 1</div>
             <div className="dr-hero__title" aria-hidden="true">{
               activeTab === 'dialogues' ? '对话' :
-              activeTab === 'writing' ? '书写' :
+              activeTab === 'writing' ? '写字' :
               activeTab === 'flashcards' ? '词卡' :
               activeTab === 'karaoke' ? '歌曲' :
               activeTab === 'grammar' ? '语法' :

@@ -54,7 +54,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
           <div className="dr-hero__body">
             <div className="dr-hero__level">HSK 1</div>
             <h1 className="dr-hero__title">{({ uz: 'Ieroglif yozish', ru: 'Писать иероглифы', en: 'Writing Characters' } as Record<string, string>)[language] || 'Writing Characters'}</h1>
-            <div className="dr-hero__pinyin">书写 · shūxiě</div>
+            <div className="dr-hero__pinyin">写字 · xiězì</div>
             <div className="dr-hero__translation">— {language === 'ru' ? title_ru : language === 'en' ? `Set ${setId.replace('hsk1-set', '')}` : title} —</div>
           </div>
         </div>
