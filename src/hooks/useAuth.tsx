@@ -107,6 +107,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Periodically verify single-device session via nonce check
+  const routerRef = useRef(router);
+  routerRef.current = router;
   useEffect(() => {
     if (!user) return;
     const interval = setInterval(async () => {
@@ -116,7 +118,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
         setUser(null);
-        router.push('/');
+        routerRef.current.push('/');
         return;
       }
       try {
@@ -133,14 +135,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem('blim-session-nonce');
           await supabase.auth.signOut({ scope: 'local' });
           setUser(null);
-          router.push('/');
+          routerRef.current.push('/');
         }
       } catch {
         // Network error — don't kick out
       }
-    }, 30_000); // check every 30 seconds
+    }, 120_000); // check every 2 minutes
     return () => clearInterval(interval);
-  }, [user, router]);
+  }, [user]);
 
   // Fetch subscription ONCE when user is available — shared via context
   useEffect(() => {

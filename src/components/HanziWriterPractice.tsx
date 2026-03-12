@@ -5,7 +5,6 @@ import { HanziCanvas } from './HanziCanvas';
 import { CoachMarkTour } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import type { HanziWord } from '@/services/writing';
-import { WRITING_AUDIO } from '@/services/writing';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export type { HanziWord };
@@ -57,6 +56,10 @@ function shuffle<T>(arr: T[]): T[] {
 export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart, hideSubtabs, subtab: subtabProp, onSubtabChange }: Props) {
   const activeWords = wordsProp ?? WORDS;
   const audio = useAudioPlayer();
+  const audioMapRef = useRef<Record<string, string>>({});
+  useEffect(() => {
+    import('@/services/writing-audio').then((m) => { audioMapRef.current = m.WRITING_AUDIO; });
+  }, []);
   const [view, setView] = useState<View>('home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
   const subtab = subtabProp ?? subtabInternal;
@@ -73,9 +76,9 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const showBtnRef = useRef<HTMLButtonElement>(null);
   const hideBtnRef = useRef<HTMLButtonElement>(null);
 
-  /** Play audio for a word (looks up from WRITING_AUDIO map) */
+  /** Play audio for a word (looks up from dynamically-loaded audio map) */
   const playWordAudio = useCallback((word: HanziWord) => {
-    const url = WRITING_AUDIO[word.char];
+    const url = audioMapRef.current[word.char];
     if (url) audio.play(`writing-${word.char}`, url);
   }, [audio]);
 

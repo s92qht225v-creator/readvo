@@ -2,5 +2,5 @@
  * Hooks exports
  */
 
-export { useAudioPlayer, stopAllAudio } from './useAudioPlayer';
+export { useAudioPlayer } from './useAudioPlayer';
 export type { AudioState, AudioPlayerControls } from './useAudioPlayer';

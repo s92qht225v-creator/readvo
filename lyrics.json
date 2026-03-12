@@ -1,0 +1,1315 @@
+[
+  {
+    "id": 0,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 13.138,
+        "duration": 0.432
+      },
+      {
+        "id": 1,
+        "text": "问",
+        "timestamp": 13.58,
+        "duration": 1.17
+      },
+      {
+        "id": 2,
+        "text": "我",
+        "timestamp": 14.76,
+        "duration": 0.441
+      },
+      {
+        "id": 3,
+        "text": "爱",
+        "timestamp": 15.211,
+        "duration": 1.099
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 16.32,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "有",
+        "timestamp": 16.7,
+        "duration": 1.11
+      },
+      {
+        "id": 6,
+        "text": "多",
+        "timestamp": 17.82,
+        "duration": 0.33
+      },
+      {
+        "id": 7,
+        "text": "深",
+        "timestamp": 18.16,
+        "duration": 0.82
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 19.34,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 19.8,
+        "duration": 1.09
+      },
+      {
+        "id": 2,
+        "text": "你",
+        "timestamp": 20.9,
+        "duration": 0.41
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 21.32,
+        "duration": 1.07
+      },
+      {
+        "id": 4,
+        "text": "几",
+        "timestamp": 22.4,
+        "duration": 0.61
+      },
+      {
+        "id": 5,
+        "text": "分",
+        "timestamp": 23.02,
+        "duration": 1.32
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 25.06,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "的",
+        "timestamp": 25.48,
+        "duration": 0.33
+      },
+      {
+        "id": 2,
+        "text": "情",
+        "timestamp": 25.82,
+        "duration": 1.077
+      },
+      {
+        "id": 3,
+        "text": "也",
+        "timestamp": 26.907,
+        "duration": 0.463
+      },
+      {
+        "id": 4,
+        "text": "真",
+        "timestamp": 27.38,
+        "duration": 0.38
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 28.18,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "的",
+        "timestamp": 28.58,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "爱",
+        "timestamp": 29,
+        "duration": 0.914
+      },
+      {
+        "id": 3,
+        "text": "也",
+        "timestamp": 29.924,
+        "duration": 0.526
+      },
+      {
+        "id": 4,
+        "text": "真",
+        "timestamp": 30.46,
+        "duration": 0.34
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "words": [
+      {
+        "id": 0,
+        "text": "月",
+        "timestamp": 31.286,
+        "duration": 0.264
+      },
+      {
+        "id": 1,
+        "text": "亮",
+        "timestamp": 31.56,
+        "duration": 0.53
+      },
+      {
+        "id": 2,
+        "text": "代",
+        "timestamp": 32.1,
+        "duration": 1.086
+      },
+      {
+        "id": 3,
+        "text": "表",
+        "timestamp": 33.196,
+        "duration": 0.394
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 33.6,
+        "duration": 0.81
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 34.42,
+        "duration": 0.685
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 35.115,
+        "duration": 1.445
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 37.796,
+        "duration": 0.434
+      },
+      {
+        "id": 1,
+        "text": "问",
+        "timestamp": 38.24,
+        "duration": 1.09
+      },
+      {
+        "id": 2,
+        "text": "我",
+        "timestamp": 39.34,
+        "duration": 0.45
+      },
+      {
+        "id": 3,
+        "text": "爱",
+        "timestamp": 39.8,
+        "duration": 1.13
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 40.94,
+        "duration": 0.41
+      },
+      {
+        "id": 5,
+        "text": "有",
+        "timestamp": 41.36,
+        "duration": 1.05
+      },
+      {
+        "id": 6,
+        "text": "多",
+        "timestamp": 42.42,
+        "duration": 0.35
+      },
+      {
+        "id": 7,
+        "text": "深",
+        "timestamp": 42.78,
+        "duration": 0.78
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 44,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 44.42,
+        "duration": 1.11
+      },
+      {
+        "id": 2,
+        "text": "你",
+        "timestamp": 45.54,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 45.94,
+        "duration": 1.11
+      },
+      {
+        "id": 4,
+        "text": "几",
+        "timestamp": 47.06,
+        "duration": 0.71
+      },
+      {
+        "id": 5,
+        "text": "分",
+        "timestamp": 47.78,
+        "duration": 1.48
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 49.7,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "的",
+        "timestamp": 50.08,
+        "duration": 0.35
+      },
+      {
+        "id": 2,
+        "text": "情",
+        "timestamp": 50.44,
+        "duration": 1.23
+      },
+      {
+        "id": 3,
+        "text": "不",
+        "timestamp": 51.681,
+        "duration": 0.33
+      },
+      {
+        "id": 4,
+        "text": "移",
+        "timestamp": 52.021,
+        "duration": 0.36
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 52.781,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "的",
+        "timestamp": 53.181,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "爱",
+        "timestamp": 53.601,
+        "duration": 1.11
+      },
+      {
+        "id": 3,
+        "text": "不",
+        "timestamp": 54.721,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "变",
+        "timestamp": 55.121,
+        "duration": 0.32
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "words": [
+      {
+        "id": 0,
+        "text": "月",
+        "timestamp": 55.897,
+        "duration": 0.274
+      },
+      {
+        "id": 1,
+        "text": "亮",
+        "timestamp": 56.181,
+        "duration": 0.51
+      },
+      {
+        "id": 2,
+        "text": "代",
+        "timestamp": 56.701,
+        "duration": 1.05
+      },
+      {
+        "id": 3,
+        "text": "表",
+        "timestamp": 57.761,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 58.161,
+        "duration": 0.73
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 58.901,
+        "duration": 0.75
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 59.661,
+        "duration": 1.38
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "words": [
+      {
+        "id": 0,
+        "text": "轻",
+        "timestamp": 61.902,
+        "duration": 0.769
+      },
+      {
+        "id": 1,
+        "text": "轻",
+        "timestamp": 62.681,
+        "duration": 1.21
+      },
+      {
+        "id": 2,
+        "text": "的",
+        "timestamp": 63.901,
+        "duration": 0.576
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 64.487,
+        "duration": 0.662
+      },
+      {
+        "id": 4,
+        "text": "个",
+        "timestamp": 65.159,
+        "duration": 0.764
+      },
+      {
+        "id": 5,
+        "text": "吻",
+        "timestamp": 65.933,
+        "duration": 1.568
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "words": [
+      {
+        "id": 0,
+        "text": "已",
+        "timestamp": 68.161,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "经",
+        "timestamp": 68.541,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "打",
+        "timestamp": 68.941,
+        "duration": 1.15
+      },
+      {
+        "id": 3,
+        "text": "动",
+        "timestamp": 70.101,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 70.541,
+        "duration": 1.09
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 71.641,
+        "duration": 0.35
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 72.001,
+        "duration": 1.66
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "words": [
+      {
+        "id": 0,
+        "text": "深",
+        "timestamp": 74.207,
+        "duration": 0.784
+      },
+      {
+        "id": 1,
+        "text": "深",
+        "timestamp": 75.001,
+        "duration": 1.21
+      },
+      {
+        "id": 2,
+        "text": "的",
+        "timestamp": 76.221,
+        "duration": 0.211
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 76.442,
+        "duration": 0.949
+      },
+      {
+        "id": 4,
+        "text": "段",
+        "timestamp": 77.401,
+        "duration": 0.71
+      },
+      {
+        "id": 5,
+        "text": "情",
+        "timestamp": 78.121,
+        "duration": 1.34
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "words": [
+      {
+        "id": 0,
+        "text": "教",
+        "timestamp": 80.415,
+        "duration": 0.456
+      },
+      {
+        "id": 1,
+        "text": "我",
+        "timestamp": 80.881,
+        "duration": 0.33
+      },
+      {
+        "id": 2,
+        "text": "思",
+        "timestamp": 81.221,
+        "duration": 1.19
+      },
+      {
+        "id": 3,
+        "text": "念",
+        "timestamp": 82.421,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "到",
+        "timestamp": 82.821,
+        "duration": 0.71
+      },
+      {
+        "id": 5,
+        "text": "如",
+        "timestamp": 83.541,
+        "duration": 0.69
+      },
+      {
+        "id": 6,
+        "text": "今",
+        "timestamp": 84.241,
+        "duration": 1.54
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 86.957,
+        "duration": 0.394
+      },
+      {
+        "id": 1,
+        "text": "问",
+        "timestamp": 87.361,
+        "duration": 1.127
+      },
+      {
+        "id": 2,
+        "text": "我",
+        "timestamp": 88.498,
+        "duration": 0.413
+      },
+      {
+        "id": 3,
+        "text": "爱",
+        "timestamp": 88.921,
+        "duration": 1.17
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 90.101,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "有",
+        "timestamp": 90.481,
+        "duration": 1.11
+      },
+      {
+        "id": 6,
+        "text": "多",
+        "timestamp": 91.601,
+        "duration": 0.33
+      },
+      {
+        "id": 7,
+        "text": "深",
+        "timestamp": 91.941,
+        "duration": 0.88
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 93.121,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 93.561,
+        "duration": 1.09
+      },
+      {
+        "id": 2,
+        "text": "你",
+        "timestamp": 94.661,
+        "duration": 0.41
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 95.081,
+        "duration": 1.07
+      },
+      {
+        "id": 4,
+        "text": "几",
+        "timestamp": 96.161,
+        "duration": 0.67
+      },
+      {
+        "id": 5,
+        "text": "分",
+        "timestamp": 96.841,
+        "duration": 1.64
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 98.901,
+        "duration": 0.33
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 99.241,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "想",
+        "timestamp": 99.621,
+        "duration": 1.13
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 100.761,
+        "duration": 0.33
+      },
+      {
+        "id": 4,
+        "text": "想",
+        "timestamp": 101.101,
+        "duration": 0.4
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 101.981,
+        "duration": 0.31
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 102.301,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "看",
+        "timestamp": 102.681,
+        "duration": 1.25
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 103.941,
+        "duration": 0.25
+      },
+      {
+        "id": 4,
+        "text": "看",
+        "timestamp": 104.201,
+        "duration": 0.4
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "words": [
+      {
+        "id": 0,
+        "text": "月",
+        "timestamp": 105.061,
+        "duration": 0.23
+      },
+      {
+        "id": 1,
+        "text": "亮",
+        "timestamp": 105.301,
+        "duration": 0.55
+      },
+      {
+        "id": 2,
+        "text": "代",
+        "timestamp": 105.861,
+        "duration": 1.11
+      },
+      {
+        "id": 3,
+        "text": "表",
+        "timestamp": 106.981,
+        "duration": 0.33
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 107.321,
+        "duration": 0.75
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 108.081,
+        "duration": 0.71
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 108.801,
+        "duration": 2.02
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "words": [
+      {
+        "id": 0,
+        "text": "轻",
+        "timestamp": 135.57,
+        "duration": 0.757
+      },
+      {
+        "id": 1,
+        "text": "轻",
+        "timestamp": 136.337,
+        "duration": 1.274
+      },
+      {
+        "id": 2,
+        "text": "的",
+        "timestamp": 137.621,
+        "duration": 0.41
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 138.041,
+        "duration": 0.69
+      },
+      {
+        "id": 4,
+        "text": "个",
+        "timestamp": 138.741,
+        "duration": 0.73
+      },
+      {
+        "id": 5,
+        "text": "吻",
+        "timestamp": 139.481,
+        "duration": 1.66
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "words": [
+      {
+        "id": 0,
+        "text": "已",
+        "timestamp": 141.661,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "经",
+        "timestamp": 142.061,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "打",
+        "timestamp": 142.461,
+        "duration": 1.13
+      },
+      {
+        "id": 3,
+        "text": "动",
+        "timestamp": 143.601,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 144.001,
+        "duration": 0.75
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 144.761,
+        "duration": 0.67
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 145.441,
+        "duration": 1.56
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "words": [
+      {
+        "id": 0,
+        "text": "深",
+        "timestamp": 147.706,
+        "duration": 0.745
+      },
+      {
+        "id": 1,
+        "text": "深",
+        "timestamp": 148.461,
+        "duration": 1.21
+      },
+      {
+        "id": 2,
+        "text": "的",
+        "timestamp": 149.681,
+        "duration": 0.318
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 150.009,
+        "duration": 0.782
+      },
+      {
+        "id": 4,
+        "text": "段",
+        "timestamp": 150.801,
+        "duration": 0.67
+      },
+      {
+        "id": 5,
+        "text": "情",
+        "timestamp": 151.481,
+        "duration": 1.56
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "words": [
+      {
+        "id": 0,
+        "text": "教",
+        "timestamp": 153.856,
+        "duration": 0.435
+      },
+      {
+        "id": 1,
+        "text": "我",
+        "timestamp": 154.302,
+        "duration": 0.33
+      },
+      {
+        "id": 2,
+        "text": "思",
+        "timestamp": 154.642,
+        "duration": 1.19
+      },
+      {
+        "id": 3,
+        "text": "念",
+        "timestamp": 155.842,
+        "duration": 0.33
+      },
+      {
+        "id": 4,
+        "text": "到",
+        "timestamp": 156.182,
+        "duration": 0.79
+      },
+      {
+        "id": 5,
+        "text": "如",
+        "timestamp": 156.982,
+        "duration": 0.71
+      },
+      {
+        "id": 6,
+        "text": "今",
+        "timestamp": 157.702,
+        "duration": 1.76
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 160.318,
+        "duration": 0.394
+      },
+      {
+        "id": 1,
+        "text": "问",
+        "timestamp": 160.722,
+        "duration": 1.21
+      },
+      {
+        "id": 2,
+        "text": "我",
+        "timestamp": 161.942,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "爱",
+        "timestamp": 162.342,
+        "duration": 1.13
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 163.482,
+        "duration": 0.35
+      },
+      {
+        "id": 5,
+        "text": "有",
+        "timestamp": 163.842,
+        "duration": 1.13
+      },
+      {
+        "id": 6,
+        "text": "多",
+        "timestamp": 164.982,
+        "duration": 0.31
+      },
+      {
+        "id": 7,
+        "text": "深",
+        "timestamp": 165.302,
+        "duration": 0.76
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "words": [
+      {
+        "id": 0,
+        "text": "我",
+        "timestamp": 166.462,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 166.922,
+        "duration": 1.09
+      },
+      {
+        "id": 2,
+        "text": "你",
+        "timestamp": 168.022,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 168.422,
+        "duration": 1.09
+      },
+      {
+        "id": 4,
+        "text": "几",
+        "timestamp": 169.522,
+        "duration": 0.65
+      },
+      {
+        "id": 5,
+        "text": "分",
+        "timestamp": 170.182,
+        "duration": 1.66
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 172.262,
+        "duration": 0.35
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 172.622,
+        "duration": 0.35
+      },
+      {
+        "id": 2,
+        "text": "想",
+        "timestamp": 172.982,
+        "duration": 1.17
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 174.162,
+        "duration": 0.31
+      },
+      {
+        "id": 4,
+        "text": "想",
+        "timestamp": 174.482,
+        "duration": 0.38
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 175.33,
+        "duration": 0.342
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 175.682,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "看",
+        "timestamp": 176.062,
+        "duration": 1.21
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 177.282,
+        "duration": 0.27
+      },
+      {
+        "id": 4,
+        "text": "看",
+        "timestamp": 177.562,
+        "duration": 0.38
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "words": [
+      {
+        "id": 0,
+        "text": "月",
+        "timestamp": 178.402,
+        "duration": 0.25
+      },
+      {
+        "id": 1,
+        "text": "亮",
+        "timestamp": 178.662,
+        "duration": 0.55
+      },
+      {
+        "id": 2,
+        "text": "代",
+        "timestamp": 179.222,
+        "duration": 1.05
+      },
+      {
+        "id": 3,
+        "text": "表",
+        "timestamp": 180.282,
+        "duration": 0.37
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 180.662,
+        "duration": 0.75
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 181.422,
+        "duration": 0.69
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 182.122,
+        "duration": 1.34
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 184.394,
+        "duration": 0.418
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 184.822,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "想",
+        "timestamp": 185.202,
+        "duration": 1.022
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 186.234,
+        "duration": 0.31
+      },
+      {
+        "id": 4,
+        "text": "想",
+        "timestamp": 186.554,
+        "duration": 0.662
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "words": [
+      {
+        "id": 0,
+        "text": "你",
+        "timestamp": 187.48,
+        "duration": 0.2
+      },
+      {
+        "id": 1,
+        "text": "去",
+        "timestamp": 187.69,
+        "duration": 0.407
+      },
+      {
+        "id": 2,
+        "text": "看",
+        "timestamp": 188.107,
+        "duration": 1.251
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 189.368,
+        "duration": 0.395
+      },
+      {
+        "id": 4,
+        "text": "看",
+        "timestamp": 189.773,
+        "duration": 0.539
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "words": [
+      {
+        "id": 0,
+        "text": "月",
+        "timestamp": 190.522,
+        "duration": 0.4
+      },
+      {
+        "id": 1,
+        "text": "亮",
+        "timestamp": 190.932,
+        "duration": 0.4
+      },
+      {
+        "id": 2,
+        "text": "代",
+        "timestamp": 191.342,
+        "duration": 1.057
+      },
+      {
+        "id": 3,
+        "text": "表",
+        "timestamp": 192.409,
+        "duration": 0.446
+      },
+      {
+        "id": 4,
+        "text": "我",
+        "timestamp": 192.865,
+        "duration": 0.775
+      },
+      {
+        "id": 5,
+        "text": "的",
+        "timestamp": 193.65,
+        "duration": 0.657
+      },
+      {
+        "id": 6,
+        "text": "心",
+        "timestamp": 194.317,
+        "duration": 2.596
+      }
+    ]
+  }
+]

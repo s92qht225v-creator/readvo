@@ -1,26 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { getUserFromJWT } from '@/lib/jwt';
 
 const VALID_REASONS = ['pinyin', 'translation', 'audio', 'grammar', 'image', 'other'];
 
-function getSupabaseWithAuth(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+export async function POST(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
   const token = authHeader?.replace('Bearer ', '');
-  if (!token) return null;
-  return createClient(url, anonKey, {
-    global: { headers: { Authorization: `Bearer ${token}` } },
-  });
-}
-
-export async function POST(request: NextRequest) {
-  const supabase = getSupabaseWithAuth(request);
-  if (!supabase) {
+  if (!token) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const user = getUserFromJWT(token);
   if (!user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -44,8 +34,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Message too long' }, { status: 400 });
   }
 
-  const userName = user.user_metadata?.name || 'Unknown';
-  const username = user.user_metadata?.preferred_username;
+  const userName = (user.user_metadata?.name as string) || 'Unknown';
+  const username = user.user_metadata?.preferred_username as string | undefined;
   const userIdentifier = username ? `@${username}` : (user.email || 'no-email');
 
   const reasonLabels: Record<string, string> = {

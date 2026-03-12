@@ -1,0 +1,1680 @@
+[
+  {
+    "id": 0,
+    "words": [
+      {
+        "id": 0,
+        "text": "这",
+        "timestamp": 13.441,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "些",
+        "timestamp": 13.841,
+        "duration": 0.45
+      },
+      {
+        "id": 2,
+        "text": "年",
+        "timestamp": 14.301,
+        "duration": 0.79
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 15.101,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "个",
+        "timestamp": 15.541,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "人",
+        "timestamp": 15.921,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "words": [
+      {
+        "id": 0,
+        "text": "风",
+        "timestamp": 16.781,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "也",
+        "timestamp": 17.201,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "过",
+        "timestamp": 17.581,
+        "duration": 0.83
+      },
+      {
+        "id": 3,
+        "text": "雨",
+        "timestamp": 18.421,
+        "duration": 0.25
+      },
+      {
+        "id": 4,
+        "text": "也",
+        "timestamp": 18.681,
+        "duration": 0.53
+      },
+      {
+        "id": 5,
+        "text": "走",
+        "timestamp": 19.221,
+        "duration": 0.46
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "words": [
+      {
+        "id": 0,
+        "text": "有",
+        "timestamp": 20.081,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "过",
+        "timestamp": 20.501,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "泪",
+        "timestamp": 20.901,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 21.721,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "过",
+        "timestamp": 22.141,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "错",
+        "timestamp": 22.541,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 23.381,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "记",
+        "timestamp": 23.821,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "得",
+        "timestamp": 24.221,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "坚",
+        "timestamp": 24.621,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "持",
+        "timestamp": 25.021,
+        "duration": 0.41
+      },
+      {
+        "id": 5,
+        "text": "什",
+        "timestamp": 25.441,
+        "duration": 0.45
+      },
+      {
+        "id": 6,
+        "text": "么？",
+        "timestamp": 25.901,
+        "duration": 0.48
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "words": [
+      {
+        "id": 0,
+        "text": "真",
+        "timestamp": 26.681,
+        "duration": 0.47
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 27.161,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "过",
+        "timestamp": 27.541,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "才",
+        "timestamp": 28.362,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "会",
+        "timestamp": 28.762,
+        "duration": 0.43
+      },
+      {
+        "id": 5,
+        "text": "懂",
+        "timestamp": 29.202,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "words": [
+      {
+        "id": 0,
+        "text": "会",
+        "timestamp": 30.062,
+        "duration": 0.35
+      },
+      {
+        "id": 1,
+        "text": "寂",
+        "timestamp": 30.422,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "寞",
+        "timestamp": 30.842,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "会",
+        "timestamp": 31.662,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "回",
+        "timestamp": 32.062,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "首",
+        "timestamp": 32.462,
+        "duration": 0.48
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "words": [
+      {
+        "id": 0,
+        "text": "终",
+        "timestamp": 33.322,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "有",
+        "timestamp": 33.782,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "梦",
+        "timestamp": 34.162,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "终",
+        "timestamp": 34.982,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 35.442,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "你",
+        "timestamp": 35.842,
+        "duration": 0.83
+      },
+      {
+        "id": 6,
+        "text": "在",
+        "timestamp": 36.682,
+        "duration": 0.39
+      },
+      {
+        "id": 7,
+        "text": "心",
+        "timestamp": 37.082,
+        "duration": 0.79
+      },
+      {
+        "id": 8,
+        "text": "中",
+        "timestamp": 37.882,
+        "duration": 1.24
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 39.962,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 40.382,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "一",
+        "timestamp": 40.762,
+        "duration": 0.37
+      },
+      {
+        "id": 3,
+        "text": "生",
+        "timestamp": 41.142,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "一",
+        "timestamp": 41.602,
+        "duration": 0.35
+      },
+      {
+        "id": 5,
+        "text": "起",
+        "timestamp": 41.962,
+        "duration": 0.45
+      },
+      {
+        "id": 6,
+        "text": "走",
+        "timestamp": 42.422,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "words": [
+      {
+        "id": 0,
+        "text": "那",
+        "timestamp": 43.302,
+        "duration": 0.35
+      },
+      {
+        "id": 1,
+        "text": "些",
+        "timestamp": 43.662,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "日",
+        "timestamp": 44.102,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "子",
+        "timestamp": 44.502,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "不",
+        "timestamp": 44.942,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "再",
+        "timestamp": 45.322,
+        "duration": 0.43
+      },
+      {
+        "id": 6,
+        "text": "有",
+        "timestamp": 45.762,
+        "duration": 0.4
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 46.582,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "句",
+        "timestamp": 46.983,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "话",
+        "timestamp": 47.423,
+        "duration": 0.77
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 48.203,
+        "duration": 0.25
+      },
+      {
+        "id": 4,
+        "text": "辈",
+        "timestamp": 48.463,
+        "duration": 0.61
+      },
+      {
+        "id": 5,
+        "text": "子",
+        "timestamp": 49.083,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 49.923,
+        "duration": 0.35
+      },
+      {
+        "id": 1,
+        "text": "生",
+        "timestamp": 50.283,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "情",
+        "timestamp": 50.703,
+        "duration": 0.91
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 51.623,
+        "duration": 0.15
+      },
+      {
+        "id": 4,
+        "text": "杯",
+        "timestamp": 51.783,
+        "duration": 0.57
+      },
+      {
+        "id": 5,
+        "text": "酒",
+        "timestamp": 52.363,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 53.223,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 53.643,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "不",
+        "timestamp": 54.083,
+        "duration": 0.33
+      },
+      {
+        "id": 3,
+        "text": "曾",
+        "timestamp": 54.423,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "孤",
+        "timestamp": 54.883,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "单",
+        "timestamp": 55.263,
+        "duration": 0.41
+      },
+      {
+        "id": 6,
+        "text": "过",
+        "timestamp": 55.683,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 56.503,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "声",
+        "timestamp": 56.903,
+        "duration": 0.45
+      },
+      {
+        "id": 2,
+        "text": "朋",
+        "timestamp": 57.363,
+        "duration": 0.41
+      },
+      {
+        "id": 3,
+        "text": "友",
+        "timestamp": 57.783,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 58.203,
+        "duration": 0.41
+      },
+      {
+        "id": 5,
+        "text": "会",
+        "timestamp": 58.623,
+        "duration": 0.39
+      },
+      {
+        "id": 6,
+        "text": "懂",
+        "timestamp": 59.023,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 59.803,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "有",
+        "timestamp": 60.263,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "伤",
+        "timestamp": 60.643,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 61.463,
+        "duration": 0.27
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 61.743,
+        "duration": 0.59
+      },
+      {
+        "id": 5,
+        "text": "痛",
+        "timestamp": 62.343,
+        "duration": 0.52
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 63.143,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "要",
+        "timestamp": 63.583,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "走",
+        "timestamp": 63.983,
+        "duration": 0.79
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 64.783,
+        "duration": 0.44
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 65.233,
+        "duration": 0.378
+      },
+      {
+        "id": 5,
+        "text": "我",
+        "timestamp": 65.621,
+        "duration": 1.588
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "words": [
+      {
+        "id": 0,
+        "text": "这",
+        "timestamp": 97.835,
+        "duration": 0.48
+      },
+      {
+        "id": 1,
+        "text": "些",
+        "timestamp": 98.325,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "年",
+        "timestamp": 98.765,
+        "duration": 0.85
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 99.625,
+        "duration": 0.37
+      },
+      {
+        "id": 4,
+        "text": "个",
+        "timestamp": 100.005,
+        "duration": 0.41
+      },
+      {
+        "id": 5,
+        "text": "人",
+        "timestamp": 100.425,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "words": [
+      {
+        "id": 0,
+        "text": "风",
+        "timestamp": 101.233,
+        "duration": 0.422
+      },
+      {
+        "id": 1,
+        "text": "也",
+        "timestamp": 101.665,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "过",
+        "timestamp": 102.065,
+        "duration": 0.83
+      },
+      {
+        "id": 3,
+        "text": "雨",
+        "timestamp": 102.906,
+        "duration": 0.23
+      },
+      {
+        "id": 4,
+        "text": "也",
+        "timestamp": 103.146,
+        "duration": 0.55
+      },
+      {
+        "id": 5,
+        "text": "走",
+        "timestamp": 103.706,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "words": [
+      {
+        "id": 0,
+        "text": "有",
+        "timestamp": 104.566,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "过",
+        "timestamp": 104.986,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "泪",
+        "timestamp": 105.386,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "有",
+        "timestamp": 106.206,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "过",
+        "timestamp": 106.626,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "错",
+        "timestamp": 107.006,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 107.906,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "记",
+        "timestamp": 108.306,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "得",
+        "timestamp": 108.706,
+        "duration": 0.39
+      },
+      {
+        "id": 3,
+        "text": "坚",
+        "timestamp": 109.106,
+        "duration": 0.39
+      },
+      {
+        "id": 4,
+        "text": "持",
+        "timestamp": 109.506,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "什",
+        "timestamp": 109.906,
+        "duration": 0.45
+      },
+      {
+        "id": 6,
+        "text": "么？",
+        "timestamp": 110.366,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "words": [
+      {
+        "id": 0,
+        "text": "真",
+        "timestamp": 111.114,
+        "duration": 0.502
+      },
+      {
+        "id": 1,
+        "text": "爱",
+        "timestamp": 111.626,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "过",
+        "timestamp": 112.006,
+        "duration": 0.83
+      },
+      {
+        "id": 3,
+        "text": "才",
+        "timestamp": 112.846,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "会",
+        "timestamp": 113.286,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "懂",
+        "timestamp": 113.666,
+        "duration": 0.52
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "words": [
+      {
+        "id": 0,
+        "text": "会",
+        "timestamp": 114.526,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "寂",
+        "timestamp": 114.906,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "寞",
+        "timestamp": 115.326,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "会",
+        "timestamp": 116.146,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "回",
+        "timestamp": 116.566,
+        "duration": 0.35
+      },
+      {
+        "id": 5,
+        "text": "首",
+        "timestamp": 116.926,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "words": [
+      {
+        "id": 0,
+        "text": "终",
+        "timestamp": 117.76,
+        "duration": 0.476
+      },
+      {
+        "id": 1,
+        "text": "有",
+        "timestamp": 118.246,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "梦",
+        "timestamp": 118.666,
+        "duration": 0.77
+      },
+      {
+        "id": 3,
+        "text": "终",
+        "timestamp": 119.446,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 119.906,
+        "duration": 0.41
+      },
+      {
+        "id": 5,
+        "text": "你",
+        "timestamp": 120.326,
+        "duration": 0.79
+      },
+      {
+        "id": 6,
+        "text": "在",
+        "timestamp": 121.126,
+        "duration": 0.39
+      },
+      {
+        "id": 7,
+        "text": "心",
+        "timestamp": 121.527,
+        "duration": 0.742
+      },
+      {
+        "id": 8,
+        "text": "中",
+        "timestamp": 122.279,
+        "duration": 1.108
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 124.447,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 124.867,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "一",
+        "timestamp": 125.247,
+        "duration": 0.37
+      },
+      {
+        "id": 3,
+        "text": "生",
+        "timestamp": 125.627,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "一",
+        "timestamp": 126.047,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "起",
+        "timestamp": 126.427,
+        "duration": 0.47
+      },
+      {
+        "id": 6,
+        "text": "走",
+        "timestamp": 126.907,
+        "duration": 0.48
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "words": [
+      {
+        "id": 0,
+        "text": "那",
+        "timestamp": 127.686,
+        "duration": 0.451
+      },
+      {
+        "id": 1,
+        "text": "些",
+        "timestamp": 128.147,
+        "duration": 0.55
+      },
+      {
+        "id": 2,
+        "text": "日",
+        "timestamp": 128.707,
+        "duration": 0.27
+      },
+      {
+        "id": 3,
+        "text": "子",
+        "timestamp": 128.987,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "不",
+        "timestamp": 129.427,
+        "duration": 0.37
+      },
+      {
+        "id": 5,
+        "text": "再",
+        "timestamp": 129.807,
+        "duration": 0.43
+      },
+      {
+        "id": 6,
+        "text": "有",
+        "timestamp": 130.247,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 131.067,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "句",
+        "timestamp": 131.467,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "话",
+        "timestamp": 131.907,
+        "duration": 0.77
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 132.687,
+        "duration": 0.27
+      },
+      {
+        "id": 4,
+        "text": "辈",
+        "timestamp": 132.967,
+        "duration": 0.57
+      },
+      {
+        "id": 5,
+        "text": "子",
+        "timestamp": 133.547,
+        "duration": 0.48
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 134.387,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "生",
+        "timestamp": 134.767,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "情",
+        "timestamp": 135.187,
+        "duration": 0.83
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 136.027,
+        "duration": 0.25
+      },
+      {
+        "id": 4,
+        "text": "杯",
+        "timestamp": 136.287,
+        "duration": 0.55
+      },
+      {
+        "id": 5,
+        "text": "酒",
+        "timestamp": 136.847,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 137.667,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 138.107,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "不",
+        "timestamp": 138.547,
+        "duration": 0.35
+      },
+      {
+        "id": 3,
+        "text": "曾",
+        "timestamp": 138.907,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "孤",
+        "timestamp": 139.367,
+        "duration": 0.35
+      },
+      {
+        "id": 5,
+        "text": "单",
+        "timestamp": 139.727,
+        "duration": 0.43
+      },
+      {
+        "id": 6,
+        "text": "过",
+        "timestamp": 140.168,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 140.988,
+        "duration": 0.39
+      },
+      {
+        "id": 1,
+        "text": "声",
+        "timestamp": 141.388,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "朋",
+        "timestamp": 141.828,
+        "duration": 0.43
+      },
+      {
+        "id": 3,
+        "text": "友",
+        "timestamp": 142.268,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 142.688,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "会",
+        "timestamp": 143.088,
+        "duration": 0.39
+      },
+      {
+        "id": 6,
+        "text": "懂",
+        "timestamp": 143.488,
+        "duration": 0.42
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 144.288,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "有",
+        "timestamp": 144.748,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "伤",
+        "timestamp": 145.128,
+        "duration": 0.79
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 145.928,
+        "duration": 0.29
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 146.228,
+        "duration": 0.57
+      },
+      {
+        "id": 5,
+        "text": "痛",
+        "timestamp": 146.808,
+        "duration": 0.52
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 147.608,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "要",
+        "timestamp": 148.048,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "走",
+        "timestamp": 148.448,
+        "duration": 0.85
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 149.308,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 149.728,
+        "duration": 0.697
+      },
+      {
+        "id": 5,
+        "text": "我",
+        "timestamp": 150.435,
+        "duration": 1.173
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 152.588,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 153.028,
+        "duration": 0.39
+      },
+      {
+        "id": 2,
+        "text": "一",
+        "timestamp": 153.428,
+        "duration": 0.33
+      },
+      {
+        "id": 3,
+        "text": "生",
+        "timestamp": 153.768,
+        "duration": 0.47
+      },
+      {
+        "id": 4,
+        "text": "一",
+        "timestamp": 154.248,
+        "duration": 0.31
+      },
+      {
+        "id": 5,
+        "text": "起",
+        "timestamp": 154.568,
+        "duration": 0.47
+      },
+      {
+        "id": 6,
+        "text": "走",
+        "timestamp": 155.048,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "words": [
+      {
+        "id": 0,
+        "text": "那",
+        "timestamp": 155.811,
+        "duration": 0.467
+      },
+      {
+        "id": 1,
+        "text": "些",
+        "timestamp": 156.288,
+        "duration": 0.19
+      },
+      {
+        "id": 2,
+        "text": "日",
+        "timestamp": 156.488,
+        "duration": 0.63
+      },
+      {
+        "id": 3,
+        "text": "子",
+        "timestamp": 157.128,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "不",
+        "timestamp": 157.588,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "再",
+        "timestamp": 157.988,
+        "duration": 0.41
+      },
+      {
+        "id": 6,
+        "text": "有",
+        "timestamp": 158.408,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 159.229,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "句",
+        "timestamp": 159.609,
+        "duration": 0.45
+      },
+      {
+        "id": 2,
+        "text": "话",
+        "timestamp": 160.069,
+        "duration": 0.77
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 160.849,
+        "duration": 0.23
+      },
+      {
+        "id": 4,
+        "text": "辈",
+        "timestamp": 161.089,
+        "duration": 0.61
+      },
+      {
+        "id": 5,
+        "text": "子",
+        "timestamp": 161.709,
+        "duration": 0.62
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 162.509,
+        "duration": 0.37
+      },
+      {
+        "id": 1,
+        "text": "生",
+        "timestamp": 162.889,
+        "duration": 0.45
+      },
+      {
+        "id": 2,
+        "text": "情",
+        "timestamp": 163.349,
+        "duration": 0.83
+      },
+      {
+        "id": 3,
+        "text": "一",
+        "timestamp": 164.189,
+        "duration": 0.21
+      },
+      {
+        "id": 4,
+        "text": "杯",
+        "timestamp": 164.409,
+        "duration": 0.57
+      },
+      {
+        "id": 5,
+        "text": "酒",
+        "timestamp": 164.989,
+        "duration": 0.6
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "words": [
+      {
+        "id": 0,
+        "text": "朋",
+        "timestamp": 165.849,
+        "duration": 0.43
+      },
+      {
+        "id": 1,
+        "text": "友",
+        "timestamp": 166.289,
+        "duration": 0.41
+      },
+      {
+        "id": 2,
+        "text": "不",
+        "timestamp": 166.709,
+        "duration": 0.35
+      },
+      {
+        "id": 3,
+        "text": "曾",
+        "timestamp": 167.069,
+        "duration": 0.43
+      },
+      {
+        "id": 4,
+        "text": "孤",
+        "timestamp": 167.509,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "单",
+        "timestamp": 167.909,
+        "duration": 0.41
+      },
+      {
+        "id": 6,
+        "text": "过",
+        "timestamp": 168.329,
+        "duration": 0.5
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "words": [
+      {
+        "id": 0,
+        "text": "一",
+        "timestamp": 169.129,
+        "duration": 0.41
+      },
+      {
+        "id": 1,
+        "text": "声",
+        "timestamp": 169.549,
+        "duration": 0.43
+      },
+      {
+        "id": 2,
+        "text": "朋",
+        "timestamp": 169.989,
+        "duration": 0.43
+      },
+      {
+        "id": 3,
+        "text": "友",
+        "timestamp": 170.429,
+        "duration": 0.41
+      },
+      {
+        "id": 4,
+        "text": "你",
+        "timestamp": 170.849,
+        "duration": 0.39
+      },
+      {
+        "id": 5,
+        "text": "会",
+        "timestamp": 171.249,
+        "duration": 0.39
+      },
+      {
+        "id": 6,
+        "text": "懂",
+        "timestamp": 171.649,
+        "duration": 0.44
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 172.449,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "有",
+        "timestamp": 172.909,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "伤",
+        "timestamp": 173.289,
+        "duration": 0.79
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 174.089,
+        "duration": 0.29
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 174.389,
+        "duration": 0.57
+      },
+      {
+        "id": 5,
+        "text": "痛",
+        "timestamp": 174.969,
+        "duration": 0.54
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "words": [
+      {
+        "id": 0,
+        "text": "还",
+        "timestamp": 175.769,
+        "duration": 0.45
+      },
+      {
+        "id": 1,
+        "text": "要",
+        "timestamp": 176.229,
+        "duration": 0.37
+      },
+      {
+        "id": 2,
+        "text": "走",
+        "timestamp": 176.609,
+        "duration": 0.81
+      },
+      {
+        "id": 3,
+        "text": "还",
+        "timestamp": 177.43,
+        "duration": 0.45
+      },
+      {
+        "id": 4,
+        "text": "有",
+        "timestamp": 177.89,
+        "duration": 0.654
+      },
+      {
+        "id": 5,
+        "text": "我",
+        "timestamp": 178.554,
+        "duration": 1.356
+      }
+    ]
+  }
+]

@@ -7,6 +7,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
@@ -114,29 +115,6 @@ interface DialogueReaderProps {
   dialogue: DialogueData;
   bookPath: string;
   listPath?: string;
-}
-
-// ── Ruby text ──────────────────────────────────────────────────────────────
-
-function RubyChar({ char, py, show }: { char: string; py?: string; show: boolean }) {
-  if (py) {
-    return (
-      <ruby>
-        {char}
-        <rp>(</rp>
-        <rt style={show ? undefined : { visibility: 'hidden' }}>{py}</rt>
-        <rp>)</rp>
-      </ruby>
-    );
-  }
-  return <span>{char}</span>;
-}
-
-function RubyText({ text, pinyin, show }: {
-  text: string; pinyin: string; show: boolean;
-}) {
-  const pairs = alignPinyinToText(text, pinyin);
-  return <>{pairs.map((p, i) => <RubyChar key={i} char={p.char} py={p.pinyin} show={show} />)}</>;
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
@@ -259,7 +237,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     const audio = new Audio();
     audio.preload = 'none';
     audioRef.current = audio;
-    audio.addEventListener('loadedmetadata', () => {});
     audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
     audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); if (hasTimedRef.current) setActiveSentenceId(null); });
     audio.addEventListener('ended', () => {
@@ -348,7 +325,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                   <div className="story__text story__focus-text">
                     <div className="story__focus-line">
                       <span className="story__sentence story__sentence--active" onClick={() => handleSentenceClick(activeSentence.id)}>
-                        <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} show={showPinyin} />
+                        <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} showPinyin={showPinyin} />
                       </span>
                     </div>
                     {showTranslation && (

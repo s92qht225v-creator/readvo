@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageParams) {
   };
   const translation = song
     ? locale === 'ru' ? song.titleTranslation_ru
-    : locale === 'en' ? (song.titleTranslation || song.titleTranslation)
+    : locale === 'en' ? (song.titleTranslation_en || song.titleTranslation)
     : song.titleTranslation
     : '';
   const descMeta: Record<string, string> = {

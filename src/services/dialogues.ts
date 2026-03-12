@@ -117,30 +117,29 @@ export interface DialoguePage {
 
 export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo[]> {
   const bookDir = path.join(DIALOGUES_DIR, bookId);
-  const dialogues: DialogueInfo[] = [];
 
   try {
     const files = await fs.readdir(bookDir);
+    const jsonFiles = files.filter(f => f.endsWith('.json'));
 
-    for (const file of files) {
-      if (!file.endsWith('.json')) continue;
-
-      const content = await fs.readFile(path.join(bookDir, file), 'utf-8');
-      const data = JSON.parse(content) as DialoguePage;
-
-      dialogues.push({
-        id: data.id,
-        slug: (data as DialoguePage & { slug?: string }).slug || data.id,
-        title: data.title,
-        pinyin: data.pinyin,
-        titleTranslation: data.titleTranslation,
-        titleTranslation_ru: data.titleTranslation_ru,
-        titleTranslation_en: data.titleTranslation_en,
-        level: data.level,
-        tag: data.tag,
-        dateAdded: data.dateAdded,
-      });
-    }
+    const dialogues = await Promise.all(
+      jsonFiles.map(async (file): Promise<DialogueInfo> => {
+        const content = await fs.readFile(path.join(bookDir, file), 'utf-8');
+        const data = JSON.parse(content) as DialoguePage;
+        return {
+          id: data.id,
+          slug: (data as DialoguePage & { slug?: string }).slug || data.id,
+          title: data.title,
+          pinyin: data.pinyin,
+          titleTranslation: data.titleTranslation,
+          titleTranslation_ru: data.titleTranslation_ru,
+          titleTranslation_en: data.titleTranslation_en,
+          level: data.level,
+          tag: data.tag,
+          dateAdded: data.dateAdded,
+        };
+      })
+    );
 
     dialogues.sort((a, b) => {
       const dateA = a.dateAdded || '';
@@ -160,21 +159,26 @@ export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo
 export async function loadDialogue(bookId: string, dialogueId: string): Promise<DialoguePage | null> {
   const bookDir = path.join(DIALOGUES_DIR, bookId);
 
+  // Try direct file lookup first (most dialogues use their slug as filename)
+  for (const filename of [`${dialogueId}.json`]) {
+    try {
+      const content = await fs.readFile(path.join(bookDir, filename), 'utf-8');
+      return JSON.parse(content) as DialoguePage;
+    } catch { /* file doesn't exist, fall through */ }
+  }
+
+  // Fallback: scan directory for matching id or slug
   try {
     const files = await fs.readdir(bookDir);
-
     for (const file of files) {
       if (!file.endsWith('.json')) continue;
-
       const content = await fs.readFile(path.join(bookDir, file), 'utf-8');
       const data = JSON.parse(content) as DialoguePage;
-
       const slug = (data as DialoguePage & { slug?: string }).slug;
       if (slug === dialogueId || data.id === dialogueId) {
         return data;
       }
     }
-
     return null;
   } catch {
     return null;

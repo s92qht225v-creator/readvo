@@ -36,7 +36,7 @@ const PLAN_LABELS_EN: Record<string, string> = {
 };
 
 const CARD_NUMBER = '9860 1234 5678 9012';
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB (matches server)
 
 type PlanId = typeof PLANS[number]['id'];
 
@@ -100,7 +100,7 @@ export default function PaymentPage() {
       return;
     }
     if (selectedFile.size > MAX_FILE_SIZE) {
-      setError(t('Fayl juda katta (maks. 5 MB)', 'Файл слишком большой (макс. 5 МБ)', 'File too large (max 5 MB)'));
+      setError(t('Fayl juda katta (maks. 10 MB)', 'Файл слишком большой (макс. 10 МБ)', 'File too large (max 10 MB)'));
       return;
     }
     setError(null);

@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     const { data: row } = await admin.from('active_sessions')
       .select('session_nonce')
       .eq('user_id', userId)
-      .single();
+      .maybeSingle();
 
     return NextResponse.json({ valid: row?.session_nonce === nonce });
   } catch {

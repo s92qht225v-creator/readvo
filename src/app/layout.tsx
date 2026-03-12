@@ -44,6 +44,13 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
     },
     robots: { index: true, follow: true },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+      ],
+      apple: '/apple-icon.png',
+    },
   };
 }
 

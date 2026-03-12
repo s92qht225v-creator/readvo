@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';
-import { alignPinyinToText } from '../utils/rubyText';
+import { RubyText } from './RubyText';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -64,35 +64,6 @@ interface StoryReaderProps {
   story: StoryData;
   bookPath: string;
   listPath?: string;
-}
-
-function RubyChar({ char, py, showPinyin }: { char: string; py?: string; showPinyin: boolean }) {
-  if (py) {
-    return (
-      <ruby>
-        {char}
-        <rp>(</rp>
-        <rt style={showPinyin ? undefined : { visibility: 'hidden' }}>{py}</rt>
-        <rp>)</rp>
-      </ruby>
-    );
-  }
-  return <span>{char}</span>;
-}
-
-function RubyText({ text, pinyin, showPinyin }: {
-  text: string;
-  pinyin: string;
-  showPinyin: boolean;
-}) {
-  const pairs = alignPinyinToText(text, pinyin);
-  return (
-    <>
-      {pairs.map((pair, i) => (
-        <RubyChar key={i} char={pair.char} py={pair.pinyin} showPinyin={showPinyin} />
-      ))}
-    </>
-  );
 }
 
 function formatTime(seconds: number): string {

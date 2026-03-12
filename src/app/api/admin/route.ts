@@ -117,6 +117,9 @@ export async function POST(request: NextRequest) {
   if (action === 'add_days' || action === 'remove_days') {
     const { subscriptionId, days } = body;
     if (!subscriptionId || !days) return NextResponse.json({ error: 'Missing subscriptionId or days' }, { status: 400 });
+    if (typeof days !== 'number' || !Number.isInteger(days) || days < 1 || days > 3650) {
+      return NextResponse.json({ error: 'days must be an integer between 1 and 3650' }, { status: 400 });
+    }
 
     const { data: sub, error: fetchErr } = await admin
       .from('subscriptions')
@@ -141,6 +144,9 @@ export async function POST(request: NextRequest) {
   if (action === 'grant_subscription') {
     const { userId, userEmail, plan, days } = body;
     if (!userId || !days) return NextResponse.json({ error: 'Missing userId or days' }, { status: 400 });
+    if (typeof days !== 'number' || !Number.isInteger(days) || days < 1 || days > 3650) {
+      return NextResponse.json({ error: 'days must be an integer between 1 and 3650' }, { status: 400 });
+    }
 
     const startsAt = new Date();
     const endsAt = new Date();

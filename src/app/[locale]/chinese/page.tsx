@@ -5,6 +5,7 @@ import { LanguagePage } from '@/components/LanguagePage';
 import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
+import { WRITING_SETS } from '@/services/writing';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -109,7 +110,11 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <Suspense>
-        <LanguagePage dialogues={dialogues} flashcardLessons={flashcardLessons} />
+        <LanguagePage
+          dialogues={dialogues}
+          flashcardLessons={flashcardLessons}
+          writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+        />
       </Suspense>
     </>
   );

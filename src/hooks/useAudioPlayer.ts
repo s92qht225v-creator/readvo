@@ -127,10 +127,9 @@ export function useAudioPlayer(): AudioPlayerControls {
     const audio = getGlobalAudio();
 
     // Remove all listeners to prevent stale callbacks
-    audio.oncanplaythrough = null;
+    audio.onplaying = null;
     audio.onended = null;
     audio.onerror = null;
-    audio.onpause = null;
 
     // Stop playback
     audio.pause();

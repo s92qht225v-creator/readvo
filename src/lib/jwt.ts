@@ -22,3 +22,32 @@ export function getUserIdFromJWT(token: string): string | null {
     return null;
   }
 }
+
+export interface JWTUser {
+  id: string;
+  email?: string;
+  user_metadata?: Record<string, unknown>;
+}
+
+/**
+ * Decode a Supabase JWT to extract user ID, email, and metadata.
+ * Use this instead of getUserIdFromJWT when you need more than the user ID.
+ */
+export function getUserFromJWT(token: string): JWTUser | null {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+
+    const payload = JSON.parse(Buffer.from(parts[1], 'base64url').toString());
+    if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) return null;
+    if (!payload.sub) return null;
+
+    return {
+      id: payload.sub,
+      email: payload.email,
+      user_metadata: payload.user_metadata,
+    };
+  } catch {
+    return null;
+  }
+}

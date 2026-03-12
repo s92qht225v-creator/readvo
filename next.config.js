@@ -1,8 +1,17 @@
 const createNextIntlPlugin = require('next-intl/plugin');
+const path = require('path');
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      // Stub out @supabase/realtime-js on the client — the app doesn't use Realtime.
+      // Saves ~100KB from the client JS bundle.
+      config.resolve.alias['@supabase/realtime-js'] = path.resolve(__dirname, 'src/lib/realtime-stub.js');
+    }
+    return config;
+  },
   // Static export for simple hosting (optional, remove if using server features)
   // output: 'export',
 

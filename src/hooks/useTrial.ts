@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { useAuth } from './useAuth';
 
 const TRIAL_DAYS = 7;
+const MS_PER_DAY = 86_400_000; // 24 * 60 * 60 * 1000
 
 interface TrialStatus {
   daysLeft: number;
@@ -20,10 +21,10 @@ export function useTrial(): TrialStatus | null {
     if (!user || !subscriptionChecked) return null;
 
     const createdAt = new Date(user.created_at).getTime();
-    const trialEndsAt = createdAt + TRIAL_DAYS * 24 * 60 * 60 * 1000;
+    const trialEndsAt = createdAt + TRIAL_DAYS * MS_PER_DAY;
     const now = Date.now();
     const msLeft = trialEndsAt - now;
-    const trialDaysLeft = msLeft > 0 ? Math.ceil(msLeft / (24 * 60 * 60 * 1000)) : 0;
+    const trialDaysLeft = msLeft > 0 ? Math.ceil(msLeft / MS_PER_DAY) : 0;
 
     let hasSubscription = false;
     let subscriptionDaysLeft = 0;
@@ -33,7 +34,7 @@ export function useTrial(): TrialStatus | null {
       const subMsLeft = subEnd - now;
       if (subMsLeft > 0) {
         hasSubscription = true;
-        subscriptionDaysLeft = Math.ceil(subMsLeft / (24 * 60 * 60 * 1000));
+        subscriptionDaysLeft = Math.ceil(subMsLeft / MS_PER_DAY);
       }
     }
 

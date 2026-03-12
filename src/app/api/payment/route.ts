@@ -1,19 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
-
-function getSupabaseWithAuth(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-  const authHeader = request.headers.get('authorization');
-  const token = authHeader?.replace('Bearer ', '');
-  if (!token) return null;
-
-  return createClient(url, anonKey, {
-    global: { headers: { Authorization: `Bearer ${token}` } },
-  });
-}
+import { getUserFromJWT } from '@/lib/jwt';
 
 async function sendTelegramNotification(
   email: string,
@@ -55,12 +42,13 @@ async function sendTelegramNotification(
 }
 
 export async function POST(request: NextRequest) {
-  const supabase = getSupabaseWithAuth(request);
-  if (!supabase) {
+  const authHeader = request.headers.get('authorization');
+  const token = authHeader?.replace('Bearer ', '');
+  if (!token) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const user = getUserFromJWT(token);
   if (!user) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
