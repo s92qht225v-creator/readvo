@@ -10,6 +10,8 @@ import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { alignPinyinToText } from '../utils/rubyText';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { CoachMarkTour, dismissTip } from './CoachMark';
+import type { TourStep } from './CoachMark';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -163,6 +165,11 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
   const sentenceAudio = useAudioPlayer();
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const firstLineRef = useRef<HTMLDivElement | null>(null);
+  const translationBtnRef = useRef<HTMLButtonElement | null>(null);
+  const focusBtnRef = useRef<HTMLButtonElement | null>(null);
+  const pinyinBtnRef = useRef<HTMLButtonElement | null>(null);
+  const fontControlsRef = useRef<HTMLDivElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAudioLoading, setIsAudioLoading] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -215,6 +222,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
 
   const handleSentenceClick = useCallback((id: string) => {
+    dismissTip('dialogue-tour');
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     if (sentence?.audio_url) {
@@ -381,7 +389,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                             {s.speaker && (
                               <div className="dr-line-speaker">{s.speaker}:</div>
                             )}
-                            <div className="dr-line-chars">
+                            <div ref={s.id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
                               {pairs.map((pair, ci) => {
                                 const isPunct = /[，。？！、,.\s]/.test(pair.char);
                                 return (
@@ -426,19 +434,19 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
-                <button className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
+                <button ref={focusBtnRef} className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
                   {({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}
                 </button>
-                <button className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
+                <button ref={translationBtnRef} className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
                   {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
                 </button>
-                <button className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
+                <button ref={pinyinBtnRef} className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
                   Pinyin
                 </button>
               </div>
             </nav>
 
-            <div className="dr-font-controls">
+            <div ref={fontControlsRef} className="dr-font-controls">
               <button className="dr-font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
               <div className="dr-font-divider" />
               <button className="dr-font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
@@ -585,6 +593,17 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
 
       </div>
+      <CoachMarkTour
+        tourId="dialogue-tour"
+        lang={language}
+        steps={[
+          { tipId: 'tour-tap', targetRef: firstLineRef, text: { uz: "Gapni bosing — audio eshitasiz", ru: "Нажмите на предложение чтобы услышать аудио", en: "Tap any sentence to hear it" } },
+          { tipId: 'tour-focus', targetRef: focusBtnRef, forceAbove: true, text: { uz: "Fokus rejimi — bir gapni ko'rsatadi", ru: "Режим фокуса — показывает по одному предложению", en: "Focus mode shows one sentence at a time" } },
+          { tipId: 'tour-translation', targetRef: translationBtnRef, forceAbove: true, text: { uz: "Tarjimani ko'rish uchun bosing", ru: "Нажмите, чтобы увидеть перевод", en: "Toggle translation to see the meaning" } },
+          { tipId: 'tour-pinyin', targetRef: pinyinBtnRef, forceAbove: true, text: { uz: "Pinyinni yoqish yoki o'chirish", ru: "Нажмите чтобы вкл/выкл пиньинь", en: "Toggle pinyin on or off" } },
+          { tipId: 'tour-font', targetRef: fontControlsRef, text: { uz: "Shrift o'lchamini o'zgartirish", ru: "Нажмите чтобы изменить размер шрифта", en: "Change font size" } },
+        ] as TourStep[]}
+      />
       <PageFooter />
     </>
   );

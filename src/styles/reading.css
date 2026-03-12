@@ -10715,3 +10715,79 @@ body {
   text-decoration: none;
   font-size: 1rem;
 }
+
+/* ── Coach Mark (onboarding tips) ── */
+@keyframes coachFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.coach-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.35);
+  animation: coachFadeIn 300ms ease;
+}
+
+.coach-tooltip {
+  position: absolute;
+  z-index: 201;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  padding: 14px 18px;
+  max-width: 280px;
+  animation: coachFadeIn 300ms ease;
+}
+
+.coach-tooltip__arrow {
+  position: absolute;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+.coach-tooltip__arrow--down {
+  top: auto;
+  bottom: -8px;
+  border-bottom: none;
+  border-top: 8px solid #fff;
+}
+
+.coach-tooltip__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.coach-tooltip__counter {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.coach-tooltip__btn {
+  display: block;
+  width: 100%;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  min-height: 44px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.coach-tooltip__btn:active {
+  background: #b91c1c;
+}
