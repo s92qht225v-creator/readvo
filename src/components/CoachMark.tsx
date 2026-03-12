@@ -123,7 +123,7 @@ export function CoachMark({ tipId, targetRef, lang, text, btnText, onDismiss, de
       <div
         ref={tooltipRef}
         className={`coach-tooltip ${pos.above ? 'coach-tooltip--above' : ''}`}
-        style={{ top: pos.top, left: pos.left, maxWidth: Math.min(280, typeof window !== 'undefined' ? window.innerWidth - 24 : 280) }}
+        style={{ top: pos.top, left: pos.left, width: Math.min(280, typeof window !== 'undefined' ? window.innerWidth - 24 : 280) }}
       >
         <div
           className={`coach-tooltip__arrow ${pos.above ? 'coach-tooltip__arrow--down' : ''}`}
@@ -250,7 +250,7 @@ export function CoachMarkTour({ tourId, steps, lang, delay = 1000 }: TourProps) 
       <div className="coach-backdrop" onClick={dismiss} />
       <div
         className={`coach-tooltip ${pos.above ? 'coach-tooltip--above' : ''}`}
-        style={{ top: pos.top, left: pos.left, maxWidth: Math.min(280, typeof window !== 'undefined' ? window.innerWidth - 24 : 280) }}
+        style={{ top: pos.top, left: pos.left, width: Math.min(280, typeof window !== 'undefined' ? window.innerWidth - 24 : 280) }}
       >
         <div
           className={`coach-tooltip__arrow ${pos.above ? 'coach-tooltip__arrow--down' : ''}`}
