@@ -1,0 +1,137 @@
+[
+  {
+    "lessonNumber": 1,
+    "title": "AI小语，你好！",
+    "pinyin": "AI Xiǎoyǔ, nǐ hǎo!",
+    "titleTranslation": "Salom, AI Xiaoyu!",
+    "titleTranslation_ru": "Привет, AI Сяоюй!",
+    "titleTranslation_en": "Hello, AI Xiaoyu!",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 2,
+    "title": "我叫李文",
+    "pinyin": "Wǒ jiào Lǐ Wén",
+    "titleTranslation": "Mening ismim Li Wen",
+    "titleTranslation_ru": "Меня зовут Ли Вэнь",
+    "titleTranslation_en": "My name is Li Wen",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 3,
+    "title": "我是中国人",
+    "pinyin": "Wǒ shì Zhōngguó rén",
+    "titleTranslation": "Men Xitoylikman",
+    "titleTranslation_ru": "Я китаец",
+    "titleTranslation_en": "I am Chinese",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 4,
+    "title": "我有两个孩子",
+    "pinyin": "Wǒ yǒu liǎng gè háizi",
+    "titleTranslation": "Mening ikki farzandim bor",
+    "titleTranslation_ru": "У меня двое детей",
+    "titleTranslation_en": "I have two children",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 5,
+    "title": "今天我休息",
+    "pinyin": "Jīntiān wǒ xiūxi",
+    "titleTranslation": "Bugun men dam olaman",
+    "titleTranslation_ru": "Сегодня я отдыхаю",
+    "titleTranslation_en": "Today I'm resting",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 6,
+    "title": "你的手机号是多少？",
+    "pinyin": "Nǐ de shǒujīhào shì duōshao?",
+    "titleTranslation": "Telefon raqamingiz nechchi?",
+    "titleTranslation_ru": "Какой у тебя номер телефона?",
+    "titleTranslation_en": "What is your phone number?",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 7,
+    "title": "我晚上六点半下班",
+    "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān",
+    "titleTranslation": "Men kechqurun soat olti yarimda ishdan chiqaman",
+    "titleTranslation_ru": "Я заканчиваю работу в половине седьмого вечера",
+    "titleTranslation_en": "I finish work at half past six in the evening",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 8,
+    "title": "我爸爸也在医院工作",
+    "pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò",
+    "titleTranslation": "Mening otam ham kasalxonada ishlaydi",
+    "titleTranslation_ru": "Мой папа тоже работает в больнице",
+    "titleTranslation_en": "My dad also works at the hospital",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 9,
+    "title": "我明天上午在学校学习",
+    "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí",
+    "titleTranslation": "Men ertaga ertalab maktabda o'qiyman",
+    "titleTranslation_ru": "Завтра утром я буду учиться в школе",
+    "titleTranslation_en": "Tomorrow morning I'll study at school",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 10,
+    "title": "这儿的苹果真便宜！",
+    "pinyin": "Zhèr de píngguǒ zhēn piányi!",
+    "titleTranslation": "Bu yerdagi olmalar juda arzon!",
+    "titleTranslation_ru": "Яблоки здесь очень дешёвые!",
+    "titleTranslation_en": "The apples here are really cheap!",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 11,
+    "title": "我读大学呢",
+    "pinyin": "Wǒ dú dàxué ne",
+    "titleTranslation": "Men universitetda o'qiyapman",
+    "titleTranslation_ru": "Я учусь в университете",
+    "titleTranslation_en": "I'm studying at university",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 12,
+    "title": "昨天下雪了",
+    "pinyin": "Zuótiān xià xuě le",
+    "titleTranslation": "Kecha qor yog'di",
+    "titleTranslation_ru": "Вчера выпал снег",
+    "titleTranslation_en": "It snowed yesterday",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 13,
+    "title": "请给我一杯茶",
+    "pinyin": "Qǐng gěi wǒ yì bēi chá",
+    "titleTranslation": "Menga bir piyola choy bering",
+    "titleTranslation_ru": "Дайте мне, пожалуйста, чашку чая",
+    "titleTranslation_en": "Please give me a cup of tea",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 14,
+    "title": "我看了一个电影",
+    "pinyin": "Wǒ kànle yí gè diànyǐng",
+    "titleTranslation": "Men bir kino ko'rdim",
+    "titleTranslation_ru": "Я посмотрел фильм",
+    "titleTranslation_en": "I watched a movie",
+    "pages": 3
+  },
+  {
+    "lessonNumber": 15,
+    "title": "大兴机场见！",
+    "pinyin": "Dàxīng Jīchǎng jiàn!",
+    "titleTranslation": "Dashin aeroportida ko'rishamiz!",
+    "titleTranslation_ru": "Увидимся в аэропорту Дасин!",
+    "titleTranslation_en": "See you at Daxing Airport!",
+    "pages": 3
+  }
+]

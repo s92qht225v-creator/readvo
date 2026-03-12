@@ -10,112 +10,129 @@
       "text_original": "老板",
       "pinyin": "lǎobǎn",
       "text_translation": "xo'jayin; boss",
-      "text_translation_ru": "босс; хозяин"
+      "text_translation_ru": "босс; хозяин",
+      "text_translation_en": "boss; owner"
     },
     {
       "id": "tp-wr-02",
       "text_original": "总经理",
       "pinyin": "zǒngjīnglǐ",
       "text_translation": "bosh direktor",
-      "text_translation_ru": "генеральный директор"
+      "text_translation_ru": "генеральный директор",
+      "text_translation_en": "CEO; general manager"
     },
     {
       "id": "tp-wr-03",
       "text_original": "经理",
       "pinyin": "jīnglǐ",
       "text_translation": "menejer; direktor",
-      "text_translation_ru": "менеджер; директор"
+      "text_translation_ru": "менеджер; директор",
+      "text_translation_en": "manager"
     },
     {
       "id": "tp-wr-04",
       "text_original": "部门经理",
       "pinyin": "bùmén jīnglǐ",
       "text_translation": "bo'lim boshlig'i",
-      "text_translation_ru": "начальник отдела"
+      "text_translation_ru": "начальник отдела",
+      "text_translation_en": "department manager"
     },
     {
       "id": "tp-wr-05",
       "text_original": "员工",
       "pinyin": "yuángōng",
       "text_translation": "xodim; ishchi",
-      "text_translation_ru": "сотрудник; работник"
+      "text_translation_ru": "сотрудник; работник",
+      "text_translation_en": "employee; staff"
     },
     {
       "id": "tp-wr-06",
       "text_original": "同事",
       "pinyin": "tóngshì",
       "text_translation": "hamkasb; ishdosh",
-      "text_translation_ru": "коллега"
+      "text_translation_ru": "коллега",
+      "text_translation_en": "colleague"
     },
     {
       "id": "tp-wr-07",
       "text_original": "秘书",
       "pinyin": "mìshū",
       "text_translation": "kotib; sekretar",
-      "text_translation_ru": "секретарь"
+      "text_translation_ru": "секретарь",
+      "text_translation_en": "secretary"
     },
     {
       "id": "tp-wr-08",
       "text_original": "助理",
       "pinyin": "zhùlǐ",
       "text_translation": "yordamchi; assistent",
-      "text_translation_ru": "помощник; ассистент"
+      "text_translation_ru": "помощник; ассистент",
+      "text_translation_en": "assistant"
     },
     {
       "id": "tp-wr-09",
       "text_original": "客户",
       "pinyin": "kèhù",
       "text_translation": "mijoz (biznes)",
-      "text_translation_ru": "клиент (деловой)"
+      "text_translation_ru": "клиент (деловой)",
+      "text_translation_en": "client (business)"
     },
     {
       "id": "tp-wr-10",
       "text_original": "顾客",
       "pinyin": "gùkè",
       "text_translation": "xaridor; mijoz",
-      "text_translation_ru": "покупатель; клиент"
+      "text_translation_ru": "покупатель; клиент",
+      "text_translation_en": "customer"
     },
     {
       "id": "tp-wr-11",
       "text_original": "人力资源经理",
       "pinyin": "rénlì zīyuán jīnglǐ",
       "text_translation": "HR menejer",
-      "text_translation_ru": "менеджер по персоналу"
+      "text_translation_ru": "менеджер по персоналу",
+      "text_translation_en": "HR manager"
     },
     {
       "id": "tp-wr-12",
       "text_original": "会计",
       "pinyin": "kuàijì",
       "text_translation": "buxgalter",
-      "text_translation_ru": "бухгалтер"
+      "text_translation_ru": "бухгалтер",
+      "text_translation_en": "accountant"
     },
     {
       "id": "tp-wr-13",
       "text_original": "工程师",
       "pinyin": "gōngchéngshī",
       "text_translation": "muhandis",
-      "text_translation_ru": "инженер"
+      "text_translation_ru": "инженер",
+      "text_translation_en": "engineer"
     },
     {
       "id": "tp-wr-14",
       "text_original": "程序员",
       "pinyin": "chéngxùyuán",
       "text_translation": "dasturchi",
-      "text_translation_ru": "программист"
+      "text_translation_ru": "программист",
+      "text_translation_en": "programmer"
     },
     {
       "id": "tp-wr-15",
       "text_original": "销售员",
       "pinyin": "xiāoshòuyuán",
       "text_translation": "sotuvchi; savdogar",
-      "text_translation_ru": "продавец; менеджер по продажам"
+      "text_translation_ru": "продавец; менеджер по продажам",
+      "text_translation_en": "salesperson"
     },
     {
       "id": "tp-wr-16",
       "text_original": "实习生",
       "pinyin": "shíxíshēng",
       "text_translation": "stajiyor; amaliyotchi",
-      "text_translation_ru": "стажёр; практикант"
+      "text_translation_ru": "стажёр; практикант",
+      "text_translation_en": "intern"
     }
-  ]
+  ],
+  "title_en": "Workplace Roles"
 }

@@ -74,7 +74,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3",
+          "text_translation_en": "Is your seatbelt fastened?"
         },
         {
           "id": "d43-s2",
@@ -116,7 +117,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes, it is."
         },
         {
           "id": "d43-s3",
@@ -169,7 +171,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3",
+          "text_translation_en": "What about the people in the back?"
         },
         {
           "id": "d43-s4",
@@ -222,7 +225,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3",
+          "text_translation_en": "They're fastened too."
         },
         {
           "id": "d43-s5",
@@ -275,7 +279,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3",
+          "text_translation_en": "Then let's go."
         },
         {
           "id": "d43-s6",
@@ -297,7 +302,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
@@ -315,7 +321,9 @@
       "ex": "请系好安全带。",
       "expy": "Qǐng jì hǎo ānquándài.",
       "ex_uz": "Iltimos, xavfsizlik kamarini taqing.",
-      "ex_ru": "Пожалуйста, пристегните ремень безопасности."
+      "ex_ru": "Пожалуйста, пристегните ремень безопасности.",
+      "en": "seatbelt",
+      "ex_en": "Please fasten your seatbelt."
     },
     {
       "zh": "系",
@@ -325,7 +333,9 @@
       "ex": "你系好安全带了吗？",
       "expy": "Nǐ jì hǎo ānquándài le ma?",
       "ex_uz": "Xavfsizlik kamarini taqdingmi?",
-      "ex_ru": "Ты пристегнул ремень безопасности?"
+      "ex_ru": "Ты пристегнул ремень безопасности?",
+      "en": "to fasten / buckle",
+      "ex_en": "Did you fasten your seatbelt?"
     },
     {
       "zh": "后面",
@@ -335,7 +345,9 @@
       "ex": "后面的人也来了。",
       "expy": "Hòumiàn de rén yě lái le.",
       "ex_uz": "Orqadagilar ham keldi.",
-      "ex_ru": "Люди сзади тоже пришли."
+      "ex_ru": "Люди сзади тоже пришли.",
+      "en": "behind / in the back",
+      "ex_en": "The people in the back also came."
     },
     {
       "zh": "也",
@@ -345,7 +357,9 @@
       "ex": "我也喜欢中文。",
       "expy": "Wǒ yě xǐhuan Zhōngwén.",
       "ex_uz": "Men ham xitoy tilini yoqtiraman.",
-      "ex_ru": "Я тоже люблю китайский."
+      "ex_ru": "Я тоже люблю китайский.",
+      "en": "also / as well",
+      "ex_en": "I also love Chinese."
     },
     {
       "zh": "出发",
@@ -355,7 +369,9 @@
       "ex": "我们八点出发。",
       "expy": "Wǒmen bā diǎn chūfā.",
       "ex_uz": "Biz soat sakkizda jo'naymiz.",
-      "ex_ru": "Мы отправляемся в восемь."
+      "ex_ru": "Мы отправляемся в восемь.",
+      "en": "to set off / depart",
+      "ex_en": "We leave at eight."
     },
     {
       "zh": "吧",
@@ -365,17 +381,49 @@
       "ex": "我们走吧。",
       "expy": "Wǒmen zǒu ba.",
       "ex_uz": "Ketdik.",
-      "ex_ru": "Давай пойдём."
+      "ex_ru": "Давай пойдём.",
+      "en": "sentence particle",
+      "ex_en": "Let's go."
     }
   ],
   "extraVocabSubtitle_uz": "Avtomobil xavfsizligi va haydash mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме безопасности в автомобиле и вождения",
   "extraVocab": [
-    { "zh": "开车", "py": "kāichē", "uz": "mashina haydamoq", "ru": "вести машину" },
-    { "zh": "上车", "py": "shàngchē", "uz": "mashinaga o'tirmoq", "ru": "сесть в машину" },
-    { "zh": "下车", "py": "xiàchē", "uz": "mashinadan tushmoq", "ru": "выйти из машины" },
-    { "zh": "驾照", "py": "jiàzhào", "uz": "haydovchilik guvohnomasi", "ru": "водительские права" },
-    { "zh": "小心", "py": "xiǎoxīn", "uz": "ehtiyot bo'lmoq", "ru": "осторожно" }
+    {
+      "zh": "开车",
+      "py": "kāichē",
+      "uz": "mashina haydamoq",
+      "ru": "вести машину",
+      "en": "to drive a car"
+    },
+    {
+      "zh": "上车",
+      "py": "shàngchē",
+      "uz": "mashinaga o'tirmoq",
+      "ru": "сесть в машину",
+      "en": "to get in a car"
+    },
+    {
+      "zh": "下车",
+      "py": "xiàchē",
+      "uz": "mashinadan tushmoq",
+      "ru": "выйти из машины",
+      "en": "to get out of a car"
+    },
+    {
+      "zh": "驾照",
+      "py": "jiàzhào",
+      "uz": "haydovchilik guvohnomasi",
+      "ru": "водительские права",
+      "en": "driver's license"
+    },
+    {
+      "zh": "小心",
+      "py": "xiǎoxīn",
+      "uz": "ehtiyot bo'lmoq",
+      "ru": "осторожно",
+      "en": "be careful"
+    }
   ],
   "grammarNotes": [
     {
@@ -391,23 +439,30 @@
           "zh": "安全带系好了吗？",
           "py": "Ānquándài jì hǎo le ma?",
           "uz": "Xavfsizlik kamarini taqdingmi?",
-          "ru": "Ремень безопасности пристегнул?"
+          "ru": "Ремень безопасности пристегнул?",
+          "en": "Have you fastened your seatbelt?"
         },
         {
           "zh": "饭做好了吗？",
           "py": "Fàn zuò hǎo le ma?",
           "uz": "Ovqat tayyorlandi mi?",
-          "ru": "Еда готова?"
+          "ru": "Еда готова?",
+          "en": "Is the food ready?"
         },
         {
           "zh": "作业写好了吗？",
           "py": "Zuòyè xiě hǎo le ma?",
           "uz": "Uy vazifani yozdingmi?",
-          "ru": "Домашнее задание написал?"
+          "ru": "Домашнее задание написал?",
+          "en": "Have you done your homework?"
         }
       ],
       "tip_uz": "好 bu yerda «tayyor / tugallangan» ma'nosida. 做好 = tayyorlab bo'lmoq, 写好 = yozib bo'lmoq.",
-      "tip_ru": "好 здесь означает «готово / завершено». 做好 = приготовить, 写好 = дописать."
+      "tip_ru": "好 здесь означает «готово / завершено». 做好 = приготовить, 写好 = дописать.",
+      "title_en": "Asking about completion of an action",
+      "desc_en": "Verb + 好了吗 = have you (already) done it? Used to ask about the completion of an action.",
+      "formula_en": "Verb + 好了吗？",
+      "tip_en": "好 here means \"done / completed\". 做好 = to prepare, 写好 = to finish writing."
     },
     {
       "pattern": "...的人呢？",
@@ -422,21 +477,27 @@
           "zh": "后面的人呢？",
           "py": "Hòumiàn de rén ne?",
           "uz": "Orqadagilar-chi?",
-          "ru": "А люди сзади?"
+          "ru": "А люди сзади?",
+          "en": "What about the people in the back?"
         },
         {
           "zh": "外面的人呢？",
           "py": "Wàimiàn de rén ne?",
           "uz": "Tashqaridagilar-chi?",
-          "ru": "А люди снаружи?"
+          "ru": "А люди снаружи?",
+          "en": "What about the people outside?"
         },
         {
           "zh": "你的朋友呢？",
           "py": "Nǐ de péngyou ne?",
           "uz": "Sening do'sting-chi?",
-          "ru": "А твой друг?"
+          "ru": "А твой друг?",
+          "en": "What about your friend?"
         }
-      ]
+      ],
+      "title_en": "Asking about others",
+      "desc_en": "...的人呢？= what about the people who...? 呢 is a question particle that asks based on previous context.",
+      "formula_en": "[Place/situation] + 的人呢？"
     },
     {
       "pattern": "也 + Fe'l",
@@ -451,23 +512,30 @@
           "zh": "也系好了。",
           "py": "Yě jì hǎo le.",
           "uz": "Ular ham taqishdi.",
-          "ru": "Они тоже пристегнулись."
+          "ru": "Они тоже пристегнулись.",
+          "en": "They've fastened theirs too."
         },
         {
           "zh": "我也想去。",
           "py": "Wǒ yě xiǎng qù.",
           "uz": "Men ham bormoqchiman.",
-          "ru": "Я тоже хочу пойти."
+          "ru": "Я тоже хочу пойти.",
+          "en": "I also want to go."
         },
         {
           "zh": "他也是学生。",
           "py": "Tā yě shì xuéshēng.",
           "uz": "U ham talaba.",
-          "ru": "Он тоже студент."
+          "ru": "Он тоже студент.",
+          "en": "He's also a student."
         }
       ],
       "tip_uz": "也 har doim fe'ldan OLDIN keladi. \"Men ham\" = 我也, \"U ham\" = 他也.",
-      "tip_ru": "也 всегда стоит ПЕРЕД глаголом. «Я тоже» = 我也, «Он тоже» = 他也."
+      "tip_ru": "也 всегда стоит ПЕРЕД глаголом. «Я тоже» = 我也, «Он тоже» = 他也.",
+      "title_en": "Also / too",
+      "desc_en": "也 = also/too. Placed BEFORE the verb. Shows repetition of an action.",
+      "formula_en": "Subj. + 也 + Verb",
+      "tip_en": "也 always comes BEFORE the verb. \"I also\" = 我也, \"He also\" = 他也."
     },
     {
       "pattern": "那我们...吧",
@@ -482,21 +550,28 @@
           "zh": "那我们出发吧。",
           "py": "Nà wǒmen chūfā ba.",
           "uz": "Unda jo'naymiz.",
-          "ru": "Тогда поехали."
+          "ru": "Тогда поехали.",
+          "en": "Then let's go."
         },
         {
           "zh": "那我们吃饭吧。",
           "py": "Nà wǒmen chīfàn ba.",
           "uz": "Unda ovqat yeylik.",
-          "ru": "Тогда давай поедим."
+          "ru": "Тогда давай поедим.",
+          "en": "Then let's eat."
         },
         {
           "zh": "那我们开始吧。",
           "py": "Nà wǒmen kāishǐ ba.",
           "uz": "Unda boshlaymiz.",
-          "ru": "Тогда давай начнём."
+          "ru": "Тогда давай начнём.",
+          "en": "Then let's start."
         }
-      ]
+      ],
+      "title_en": "Suggesting an action",
+      "desc_en": "那 = then, 吧 = suggestion particle. Together: \"Then let's...\".",
+      "formula_en": "那 + Subj. + Verb + 吧"
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on car safety and driving"
 }

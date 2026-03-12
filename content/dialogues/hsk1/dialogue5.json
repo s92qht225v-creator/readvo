@@ -77,7 +77,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue1.mp3",
+          "text_translation_en": "Can you speak Chinese?"
         },
         {
           "id": "d5-s2",
@@ -194,7 +195,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue2.mp3",
+          "text_translation_en": "I can speak a little. Can you speak Uzbek?"
         },
         {
           "id": "d5-s3",
@@ -267,7 +269,8 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue3.mp3",
+          "text_translation_en": "Uzbek? I can't."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue.mp3"
@@ -279,15 +282,76 @@
   "extraVocabSubtitle_uz": "Tillar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме языков",
   "extraVocab": [
-    { "zh": "英语", "py": "Yīngyǔ", "uz": "ingliz tili", "ru": "английский язык" },
-    { "zh": "汉语", "py": "Hànyǔ", "uz": "xitoy tili", "ru": "китайский язык" },
-    { "zh": "俄语", "py": "Éyǔ", "uz": "rus tili", "ru": "русский язык" },
-    { "zh": "韩语", "py": "Hányǔ", "uz": "koreys tili", "ru": "корейский язык" },
-    { "zh": "日语", "py": "Rìyǔ", "uz": "yapon tili", "ru": "японский язык" },
-    { "zh": "翻译", "py": "fānyì", "uz": "tarjima qilmoq", "ru": "переводить" },
-    { "zh": "听懂", "py": "tīngdǒng", "uz": "eshitib tushunmoq", "ru": "понимать на слух" },
-    { "zh": "学习", "py": "xuéxí", "uz": "o'rganmoq", "ru": "учиться / изучать" },
-    { "zh": "发音", "py": "fāyīn", "uz": "talaffuz", "ru": "произношение" },
-    { "zh": "词典", "py": "cídiǎn", "uz": "lug'at", "ru": "словарь" }
-  ]
+    {
+      "zh": "英语",
+      "py": "Yīngyǔ",
+      "uz": "ingliz tili",
+      "ru": "английский язык",
+      "en": "English language"
+    },
+    {
+      "zh": "汉语",
+      "py": "Hànyǔ",
+      "uz": "xitoy tili",
+      "ru": "китайский язык",
+      "en": "Chinese language"
+    },
+    {
+      "zh": "俄语",
+      "py": "Éyǔ",
+      "uz": "rus tili",
+      "ru": "русский язык",
+      "en": "Russian language"
+    },
+    {
+      "zh": "韩语",
+      "py": "Hányǔ",
+      "uz": "koreys tili",
+      "ru": "корейский язык",
+      "en": "Korean language"
+    },
+    {
+      "zh": "日语",
+      "py": "Rìyǔ",
+      "uz": "yapon tili",
+      "ru": "японский язык",
+      "en": "Japanese language"
+    },
+    {
+      "zh": "翻译",
+      "py": "fānyì",
+      "uz": "tarjima qilmoq",
+      "ru": "переводить",
+      "en": "to transfer"
+    },
+    {
+      "zh": "听懂",
+      "py": "tīngdǒng",
+      "uz": "eshitib tushunmoq",
+      "ru": "понимать на слух",
+      "en": "to understand by listening"
+    },
+    {
+      "zh": "学习",
+      "py": "xuéxí",
+      "uz": "o'rganmoq",
+      "ru": "учиться / изучать",
+      "en": "to study / learn"
+    },
+    {
+      "zh": "发音",
+      "py": "fāyīn",
+      "uz": "talaffuz",
+      "ru": "произношение",
+      "en": "pronunciation"
+    },
+    {
+      "zh": "词典",
+      "py": "cídiǎn",
+      "uz": "lug'at",
+      "ru": "словарь",
+      "en": "dictionary"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on languages"
 }

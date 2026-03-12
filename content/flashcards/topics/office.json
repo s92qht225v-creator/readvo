@@ -10,91 +10,105 @@
       "text_original": "电脑",
       "pinyin": "diànnǎo",
       "text_translation": "kompyuter",
-      "text_translation_ru": "компьютер"
+      "text_translation_ru": "компьютер",
+      "text_translation_en": "computer"
     },
     {
       "id": "tp-office-02",
       "text_original": "笔记本电脑",
       "pinyin": "bǐjìběn diànnǎo",
       "text_translation": "noutbuk",
-      "text_translation_ru": "ноутбук"
+      "text_translation_ru": "ноутбук",
+      "text_translation_en": "laptop"
     },
     {
       "id": "tp-office-03",
       "text_original": "打印机",
       "pinyin": "dǎyìnjī",
       "text_translation": "printer",
-      "text_translation_ru": "принтер"
+      "text_translation_ru": "принтер",
+      "text_translation_en": "printer"
     },
     {
       "id": "tp-office-04",
       "text_original": "复印机",
       "pinyin": "fùyìnjī",
       "text_translation": "nusxa ko'chirish mashinasi",
-      "text_translation_ru": "копировальный аппарат"
+      "text_translation_ru": "копировальный аппарат",
+      "text_translation_en": "copier"
     },
     {
       "id": "tp-office-05",
       "text_original": "扫描仪",
       "pinyin": "sǎomiáoyí",
       "text_translation": "skaner",
-      "text_translation_ru": "сканер"
+      "text_translation_ru": "сканер",
+      "text_translation_en": "scanner"
     },
     {
       "id": "tp-office-06",
       "text_original": "传真机",
       "pinyin": "chuánzhēnjī",
       "text_translation": "faks apparati",
-      "text_translation_ru": "факс"
+      "text_translation_ru": "факс",
+      "text_translation_en": "fax machine"
     },
     {
       "id": "tp-office-07",
       "text_original": "投影仪",
       "pinyin": "tóuyǐngyí",
       "text_translation": "proyektor",
-      "text_translation_ru": "проектор"
+      "text_translation_ru": "проектор",
+      "text_translation_en": "projector"
     },
     {
       "id": "tp-office-08",
       "text_original": "显示器",
       "pinyin": "xiǎnshìqì",
       "text_translation": "monitor",
-      "text_translation_ru": "монитор"
+      "text_translation_ru": "монитор",
+      "text_translation_en": "monitor"
     },
     {
       "id": "tp-office-09",
       "text_original": "键盘",
       "pinyin": "jiànpán",
       "text_translation": "klaviatura",
-      "text_translation_ru": "клавиатура"
+      "text_translation_ru": "клавиатура",
+      "text_translation_en": "keyboard"
     },
     {
       "id": "tp-office-10",
       "text_original": "鼠标",
       "pinyin": "shǔbiāo",
       "text_translation": "sichqoncha (kompyuter)",
-      "text_translation_ru": "мышь (компьютерная)"
+      "text_translation_ru": "мышь (компьютерная)",
+      "text_translation_en": "mouse (computer)"
     },
     {
       "id": "tp-office-11",
       "text_original": "电话",
       "pinyin": "diànhuà",
       "text_translation": "telefon",
-      "text_translation_ru": "телефон"
+      "text_translation_ru": "телефон",
+      "text_translation_en": "telephone"
     },
     {
       "id": "tp-office-12",
       "text_original": "路由器",
       "pinyin": "lùyóuqì",
       "text_translation": "router",
-      "text_translation_ru": "роутер"
+      "text_translation_ru": "роутер",
+      "text_translation_en": "router"
     },
     {
       "id": "tp-office-13",
       "text_original": "打卡机",
       "pinyin": "dǎkǎjī",
       "text_translation": "davomat apparati",
-      "text_translation_ru": "табельный аппарат"
+      "text_translation_ru": "табельный аппарат",
+      "text_translation_en": "time clock; punch clock"
     }
-  ]
+  ],
+  "title_en": "Office Equipment"
 }

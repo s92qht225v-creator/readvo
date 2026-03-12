@@ -36,7 +36,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue1.mp3",
           "start": 0.017,
-          "end": 0.84
+          "end": 0.84,
+          "text_translation_en": "Hello!"
         },
         {
           "id": "d1-s2",
@@ -60,7 +61,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue2.mp3",
           "start": 1.83,
-          "end": 2.64
+          "end": 2.64,
+          "text_translation_en": "Hello!"
         },
         {
           "id": "d1-s3",
@@ -117,7 +119,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue3.mp3",
           "start": 3.7,
-          "end": 5.07
+          "end": 5.07,
+          "text_translation_en": "What's your name?"
         },
         {
           "id": "d1-s4",
@@ -161,7 +164,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3",
           "start": 5.52,
-          "end": 6.82
+          "end": 6.82,
+          "text_translation_en": "My name is Li Ming."
         },
         {
           "id": "d1-s5",
@@ -183,7 +187,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue5.mp3",
           "start": 7.32,
-          "end": 8.34
+          "end": 8.34,
+          "text_translation_en": "Li Ming?"
         },
         {
           "id": "d1-s6",
@@ -238,7 +243,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue6.mp3",
           "start": 7.69,
-          "end": 8.44
+          "end": 8.44,
+          "text_translation_en": "Yes, my name is Li Ming."
         },
         {
           "id": "d1-s7",
@@ -295,7 +301,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue7.mp3",
           "start": 10.44,
-          "end": 12.58
+          "end": 12.58,
+          "text_translation_en": "Nice to meet you."
         },
         {
           "id": "d1-s8",
@@ -352,7 +359,8 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue8.mp3",
           "start": 12.58,
-          "end": 14.34
+          "end": 14.34,
+          "text_translation_en": "I'm happy too."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3"
@@ -370,7 +378,9 @@
       "ex": "你好！我叫李明。",
       "expy": "Nǐ hǎo! Wǒ jiào Lǐ Míng.",
       "ex_uz": "Salom! Mening ismim Li Ming.",
-      "ex_ru": "Привет! Меня зовут Ли Мин."
+      "ex_ru": "Привет! Меня зовут Ли Мин.",
+      "en": "hello",
+      "ex_en": "Hi! My name is Li Ming."
     },
     {
       "zh": "叫",
@@ -380,7 +390,9 @@
       "ex": "你叫什么名字？",
       "expy": "Nǐ jiào shénme míngzi?",
       "ex_uz": "Sening isming nima?",
-      "ex_ru": "Как тебя зовут?"
+      "ex_ru": "Как тебя зовут?",
+      "en": "to be called / named",
+      "ex_en": "What's your name?"
     },
     {
       "zh": "什么",
@@ -390,7 +402,9 @@
       "ex": "你叫什么名字？",
       "expy": "Nǐ jiào shénme míngzi?",
       "ex_uz": "Sening isming nima?",
-      "ex_ru": "Как тебя зовут?"
+      "ex_ru": "Как тебя зовут?",
+      "en": "what / which",
+      "ex_en": "What's your name?"
     },
     {
       "zh": "名字",
@@ -400,7 +414,9 @@
       "ex": "你的名字很好听。",
       "expy": "Nǐ de míngzi hěn hǎotīng.",
       "ex_uz": "Sening isming juda chiroyli.",
-      "ex_ru": "У тебя очень красивое имя."
+      "ex_ru": "У тебя очень красивое имя.",
+      "en": "name",
+      "ex_en": "You have a very beautiful name."
     },
     {
       "zh": "对",
@@ -410,7 +426,9 @@
       "ex": "对，我叫李明。",
       "expy": "Duì, wǒ jiào Lǐ Míng.",
       "ex_uz": "Ha, mening ismim Li Ming.",
-      "ex_ru": "Да, меня зовут Ли Мин."
+      "ex_ru": "Да, меня зовут Ли Мин.",
+      "en": "yes, correct",
+      "ex_en": "Yes, my name is Li Ming."
     },
     {
       "zh": "很高兴",
@@ -420,7 +438,9 @@
       "ex": "很高兴认识你！",
       "expy": "Hěn gāoxìng rènshi nǐ!",
       "ex_uz": "Tanishganimdan juda xursandman!",
-      "ex_ru": "Очень рад познакомиться!"
+      "ex_ru": "Очень рад познакомиться!",
+      "en": "very glad / pleased",
+      "ex_en": "Very nice to meet you!"
     },
     {
       "zh": "认识",
@@ -430,7 +450,9 @@
       "ex": "很高兴认识你。",
       "expy": "Hěn gāoxìng rènshi nǐ.",
       "ex_uz": "Tanishganimdan xursandman.",
-      "ex_ru": "Очень рад познакомиться."
+      "ex_ru": "Очень рад познакомиться.",
+      "en": "to get to know / to know",
+      "ex_en": "Nice to meet you."
     },
     {
       "zh": "也",
@@ -440,7 +462,9 @@
       "ex": "我也很高兴。",
       "expy": "Wǒ yě hěn gāoxìng.",
       "ex_uz": "Men ham juda xursandman.",
-      "ex_ru": "Я тоже очень рад."
+      "ex_ru": "Я тоже очень рад.",
+      "en": "also / too",
+      "ex_en": "I'm happy too."
     }
   ],
   "grammarNotes": [
@@ -453,7 +477,10 @@
       "ex": "我叫王芳。你叫什么名字？",
       "expy": "Wǒ jiào Wáng Fāng. Nǐ jiào shénme míngzi?",
       "ex_uz": "Mening ismim Van Fan. Sening isming nima?",
-      "ex_ru": "Меня зовут Ван Фан. Как тебя зовут?"
+      "ex_ru": "Меня зовут Ван Фан. Как тебя зовут?",
+      "title_en": "How to introduce yourself",
+      "desc_en": "To introduce yourself in Chinese, use «我叫» (wǒ jiào) — \"my name is\".",
+      "ex_en": "My name is Wang Fan. What's your name?"
     },
     {
       "pattern": "很高兴认识你",
@@ -464,21 +491,85 @@
       "ex": "你好！很高兴认识你，我叫张伟。",
       "expy": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ, wǒ jiào Zhāng Wěi.",
       "ex_uz": "Salom! Tanishganimdan xursandman, mening ismim Zhang Wei.",
-      "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй."
+      "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй.",
+      "title_en": "Meeting someone for the first time",
+      "desc_en": "The phrase «很高兴认识你» (hěn gāoxìng rènshi nǐ) — \"nice to meet you\" is used when meeting someone for the first time.",
+      "ex_en": "Hello! Nice to meet you, my name is Zhang Wei."
     }
   ],
   "extraVocabSubtitle_uz": "Salomlashish va tanishuv mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме приветствия и знакомства",
   "extraVocab": [
-    { "zh": "您好", "py": "nín hǎo", "uz": "salom (hurmatli)", "ru": "здравствуйте (вежл.)" },
-    { "zh": "再见", "py": "zàijiàn", "uz": "xayr", "ru": "до свидания" },
-    { "zh": "谢谢", "py": "xièxie", "uz": "rahmat", "ru": "спасибо" },
-    { "zh": "不客气", "py": "bú kèqi", "uz": "arzimaydi", "ru": "не за что" },
-    { "zh": "请问", "py": "qǐngwèn", "uz": "kechirasiz (so'ramoqchi)", "ru": "извините (вопрос)" },
-    { "zh": "贵姓", "py": "guìxìng", "uz": "familiyangiz nima", "ru": "как ваша фамилия (вежл.)" },
-    { "zh": "先生", "py": "xiānsheng", "uz": "janob", "ru": "господин" },
-    { "zh": "女士", "py": "nǚshì", "uz": "xonim", "ru": "госпожа" },
-    { "zh": "朋友", "py": "péngyou", "uz": "do'st", "ru": "друг" },
-    { "zh": "欢迎", "py": "huānyíng", "uz": "xush kelibsiz", "ru": "добро пожаловать" }
-  ]
+    {
+      "zh": "您好",
+      "py": "nín hǎo",
+      "uz": "salom (hurmatli)",
+      "ru": "здравствуйте (вежл.)",
+      "en": "hello (polite)"
+    },
+    {
+      "zh": "再见",
+      "py": "zàijiàn",
+      "uz": "xayr",
+      "ru": "до свидания",
+      "en": "goodbye"
+    },
+    {
+      "zh": "谢谢",
+      "py": "xièxie",
+      "uz": "rahmat",
+      "ru": "спасибо",
+      "en": "thank you"
+    },
+    {
+      "zh": "不客气",
+      "py": "bú kèqi",
+      "uz": "arzimaydi",
+      "ru": "не за что",
+      "en": "you're welcome"
+    },
+    {
+      "zh": "请问",
+      "py": "qǐngwèn",
+      "uz": "kechirasiz (so'ramoqchi)",
+      "ru": "извините (вопрос)",
+      "en": "excuse me (asking a question)"
+    },
+    {
+      "zh": "贵姓",
+      "py": "guìxìng",
+      "uz": "familiyangiz nima",
+      "ru": "как ваша фамилия (вежл.)",
+      "en": "what is your surname (polite)"
+    },
+    {
+      "zh": "先生",
+      "py": "xiānsheng",
+      "uz": "janob",
+      "ru": "господин",
+      "en": "Mr. / sir"
+    },
+    {
+      "zh": "女士",
+      "py": "nǚshì",
+      "uz": "xonim",
+      "ru": "госпожа",
+      "en": "Ms. / madam"
+    },
+    {
+      "zh": "朋友",
+      "py": "péngyou",
+      "uz": "do'st",
+      "ru": "друг",
+      "en": "friend"
+    },
+    {
+      "zh": "欢迎",
+      "py": "huānyíng",
+      "uz": "xush kelibsiz",
+      "ru": "добро пожаловать",
+      "en": "welcome"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on greetings and introductions"
 }

@@ -438,7 +438,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     <div className="dialogue-card__text">
                       <h3 className="dialogue-card__title">{d.title}</h3>
                       <p className="dialogue-card__pinyin">{d.pinyin}</p>
-                      <p className="dialogue-card__translation">{language === 'ru' ? d.titleTranslation_ru : d.titleTranslation}</p>
+                      <p className="dialogue-card__translation">{language === 'ru' ? d.titleTranslation_ru : language === 'en' ? (d.titleTranslation_en || d.titleTranslation) : d.titleTranslation}</p>
                     </div>
                     <button
                       className={`dialogue-card__bookmark ${bookmarks.has(d.id) ? 'dialogue-card__bookmark--active' : ''}`}

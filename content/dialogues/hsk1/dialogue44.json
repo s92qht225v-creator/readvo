@@ -65,7 +65,8 @@
               "tr": "закончить работу"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue1.mp3",
+          "text_translation_en": "What time do you get off work today?"
         },
         {
           "id": "d44-s2",
@@ -98,7 +99,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue2.mp3",
+          "text_translation_en": "At six."
         },
         {
           "id": "d44-s3",
@@ -129,7 +131,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue3.mp3",
+          "text_translation_en": "Working overtime?"
         },
         {
           "id": "d44-s4",
@@ -160,7 +163,8 @@
               "tr": "работать сверхурочно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue4.mp3",
+          "text_translation_en": "No."
         },
         {
           "id": "d44-s5",
@@ -213,7 +217,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue5.mp3",
+          "text_translation_en": "Then come home early."
         },
         {
           "id": "d44-s6",
@@ -235,7 +240,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3"
@@ -253,7 +259,9 @@
       "ex": "今天天气很好。",
       "expy": "Jīntiān tiānqì hěn hǎo.",
       "ex_uz": "Bugun ob-havo juda yaxshi.",
-      "ex_ru": "Сегодня хорошая погода."
+      "ex_ru": "Сегодня хорошая погода.",
+      "en": "today",
+      "ex_en": "The weather is nice today."
     },
     {
       "zh": "几点",
@@ -263,7 +271,9 @@
       "ex": "现在几点了？",
       "expy": "Xiànzài jǐ diǎn le?",
       "ex_uz": "Hozir soat necha bo'ldi?",
-      "ex_ru": "Который сейчас час?"
+      "ex_ru": "Который сейчас час?",
+      "en": "what time / at what time",
+      "ex_en": "What time is it now?"
     },
     {
       "zh": "下班",
@@ -273,7 +283,9 @@
       "ex": "你几点下班？",
       "expy": "Nǐ jǐ diǎn xiàbān?",
       "ex_uz": "Soat nechada ishdan chiqasan?",
-      "ex_ru": "Во сколько ты заканчиваешь работу?"
+      "ex_ru": "Во сколько ты заканчиваешь работу?",
+      "en": "to finish work",
+      "ex_en": "What time do you finish work?"
     },
     {
       "zh": "加班",
@@ -283,7 +295,9 @@
       "ex": "他经常加班。",
       "expy": "Tā jīngcháng jiābān.",
       "ex_uz": "U tez-tez qo'shimcha ishlaydi.",
-      "ex_ru": "Он часто работает сверхурочно."
+      "ex_ru": "Он часто работает сверхурочно.",
+      "en": "to work overtime",
+      "ex_en": "He often works overtime."
     },
     {
       "zh": "早点",
@@ -293,7 +307,9 @@
       "ex": "明天早点来。",
       "expy": "Míngtiān zǎo diǎn lái.",
       "ex_uz": "Ertaga ertaroq kel.",
-      "ex_ru": "Завтра приходи пораньше."
+      "ex_ru": "Завтра приходи пораньше.",
+      "en": "earlier",
+      "ex_en": "Come earlier tomorrow."
     },
     {
       "zh": "回来",
@@ -303,20 +319,70 @@
       "ex": "你什么时候回来？",
       "expy": "Nǐ shénme shíhòu huílái?",
       "ex_uz": "Qachon qaytib kelasan?",
-      "ex_ru": "Когда ты вернёшься?"
+      "ex_ru": "Когда ты вернёшься?",
+      "en": "to come back / return",
+      "ex_en": "When will you come back?"
     }
   ],
   "extraVocabSubtitle_uz": "Ish va ofis mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме работы и офиса",
   "extraVocab": [
-    { "zh": "上班", "py": "shàngbān", "uz": "ishga bormoq", "ru": "идти на работу" },
-    { "zh": "请假", "py": "qǐngjià", "uz": "dam olish so'ramoq", "ru": "взять отгул" },
-    { "zh": "工资", "py": "gōngzī", "uz": "maosh", "ru": "зарплата" },
-    { "zh": "同事", "py": "tóngshì", "uz": "hamkasb", "ru": "коллега" },
-    { "zh": "老板", "py": "lǎobǎn", "uz": "boss / rahbar", "ru": "начальник / босс" },
-    { "zh": "办公室", "py": "bàngōngshì", "uz": "ofis", "ru": "офис" },
-    { "zh": "会议", "py": "huìyì", "uz": "yig'ilish", "ru": "совещание" },
-    { "zh": "休息", "py": "xiūxi", "uz": "dam olmoq", "ru": "отдыхать" }
+    {
+      "zh": "上班",
+      "py": "shàngbān",
+      "uz": "ishga bormoq",
+      "ru": "идти на работу",
+      "en": "to go to work"
+    },
+    {
+      "zh": "请假",
+      "py": "qǐngjià",
+      "uz": "dam olish so'ramoq",
+      "ru": "взять отгул",
+      "en": "to take a day off"
+    },
+    {
+      "zh": "工资",
+      "py": "gōngzī",
+      "uz": "maosh",
+      "ru": "зарплата",
+      "en": "salary"
+    },
+    {
+      "zh": "同事",
+      "py": "tóngshì",
+      "uz": "hamkasb",
+      "ru": "коллега",
+      "en": "colleague"
+    },
+    {
+      "zh": "老板",
+      "py": "lǎobǎn",
+      "uz": "boss / rahbar",
+      "ru": "начальник / босс",
+      "en": "boss"
+    },
+    {
+      "zh": "办公室",
+      "py": "bàngōngshì",
+      "uz": "ofis",
+      "ru": "офис",
+      "en": "office"
+    },
+    {
+      "zh": "会议",
+      "py": "huìyì",
+      "uz": "yig'ilish",
+      "ru": "совещание",
+      "en": "meeting"
+    },
+    {
+      "zh": "休息",
+      "py": "xiūxi",
+      "uz": "dam olmoq",
+      "ru": "отдыхать",
+      "en": "to rest"
+    }
   ],
   "grammarNotes": [
     {
@@ -332,21 +398,27 @@
           "zh": "你今天几点下班？",
           "py": "Nǐ jīntiān jǐ diǎn xiàbān?",
           "uz": "Bugun soat nechada ishdan chiqasan?",
-          "ru": "Во сколько сегодня заканчиваешь?"
+          "ru": "Во сколько сегодня заканчиваешь?",
+          "en": "What time do you finish today?"
         },
         {
           "zh": "你几点起床？",
           "py": "Nǐ jǐ diǎn qǐchuáng?",
           "uz": "Soat nechada turasan?",
-          "ru": "Во сколько ты встаёшь?"
+          "ru": "Во сколько ты встаёшь?",
+          "en": "What time do you get up?"
         },
         {
           "zh": "我们几点见面？",
           "py": "Wǒmen jǐ diǎn jiànmiàn?",
           "uz": "Soat nechada uchrashamiz?",
-          "ru": "Во сколько мы встречаемся?"
+          "ru": "Во сколько мы встречаемся?",
+          "en": "What time are we meeting?"
         }
-      ]
+      ],
+      "title_en": "Asking the time",
+      "desc_en": "几点 = what time / at what time. Used to ask about the time of an action.",
+      "formula_en": "Subj. + 几点 + Verb？"
     },
     {
       "pattern": "不 + Fe'l",
@@ -361,23 +433,30 @@
           "zh": "不加班。",
           "py": "Bù jiābān.",
           "uz": "Qo'shimcha ishlamayman.",
-          "ru": "Не работаю сверхурочно."
+          "ru": "Не работаю сверхурочно.",
+          "en": "I'm not working overtime."
         },
         {
           "zh": "我不去。",
           "py": "Wǒ bù qù.",
           "uz": "Men bormayman.",
-          "ru": "Я не пойду."
+          "ru": "Я не пойду.",
+          "en": "I won't go."
         },
         {
           "zh": "他不吃肉。",
           "py": "Tā bù chī ròu.",
           "uz": "U go'sht yemaydi.",
-          "ru": "Он не ест мясо."
+          "ru": "Он не ест мясо.",
+          "en": "He doesn't eat meat."
         }
       ],
       "tip_uz": "不 hozirgi va kelajak vaqt uchun. O'tgan zamon uchun 没 ishlating: 没去 (bormadim).",
-      "tip_ru": "不 для настоящего и будущего. Для прошедшего используйте 没: 没去 (не ходил)."
+      "tip_ru": "不 для настоящего и будущего. Для прошедшего используйте 没: 没去 (не ходил).",
+      "title_en": "Simple negation",
+      "desc_en": "不 before a verb expresses negation. Used for present and future tense.",
+      "formula_en": "Subj. + 不 + Verb",
+      "tip_en": "不 for present and future. For past, use 没: 没去 (didn't go)."
     },
     {
       "pattern": "那 + ...",
@@ -392,21 +471,27 @@
           "zh": "那早点回来。",
           "py": "Nà zǎo diǎn huílái.",
           "uz": "Unday bo'lsa, ertaroq qaytib kel.",
-          "ru": "Тогда возвращайся пораньше."
+          "ru": "Тогда возвращайся пораньше.",
+          "en": "Then come back early."
         },
         {
           "zh": "那我们走吧。",
           "py": "Nà wǒmen zǒu ba.",
           "uz": "Unday bo'lsa, ketdik.",
-          "ru": "Тогда пойдёмте."
+          "ru": "Тогда пойдёмте.",
+          "en": "Then let's go."
         },
         {
           "zh": "那明天见。",
           "py": "Nà míngtiān jiàn.",
           "uz": "Unday bo'lsa, ertaga ko'rishamiz.",
-          "ru": "Тогда до завтра."
+          "ru": "Тогда до завтра.",
+          "en": "Then see you tomorrow."
         }
-      ]
+      ],
+      "title_en": "Conclusion / consequence",
+      "desc_en": "那 = then / in that case. Expresses a conclusion or suggestion based on the previous statement.",
+      "formula_en": "[Previous] → 那 + conclusion/suggestion"
     },
     {
       "pattern": "早点 + Fe'l",
@@ -421,21 +506,28 @@
           "zh": "那早点回来。",
           "py": "Nà zǎo diǎn huílái.",
           "uz": "Unday bo'lsa, ertaroq qaytib kel.",
-          "ru": "Тогда возвращайся пораньше."
+          "ru": "Тогда возвращайся пораньше.",
+          "en": "Then come back early."
         },
         {
           "zh": "早点睡觉。",
           "py": "Zǎo diǎn shuìjiào.",
           "uz": "Ertaroq uxla.",
-          "ru": "Ложись спать пораньше."
+          "ru": "Ложись спать пораньше.",
+          "en": "Go to bed early."
         },
         {
           "zh": "明天早点来。",
           "py": "Míngtiān zǎo diǎn lái.",
           "uz": "Ertaga ertaroq kel.",
-          "ru": "Завтра приходи пораньше."
+          "ru": "Завтра приходи пораньше.",
+          "en": "Come earlier tomorrow."
         }
-      ]
+      ],
+      "title_en": "Do something earlier",
+      "desc_en": "早点 = a bit earlier. Before a verb, it means to do the action earlier than usual.",
+      "formula_en": "早点 + Verb"
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on work and office"
 }

@@ -54,7 +54,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue1.mp3",
+          "text_translation_en": "Do you have bananas?"
         },
         {
           "id": "d6-s2",
@@ -75,7 +76,8 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue2.mp3",
+          "text_translation_en": "Yes, we do."
         },
         {
           "id": "d6-s3",
@@ -108,7 +110,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue3.mp3",
+          "text_translation_en": "How much?"
         },
         {
           "id": "d6-s4",
@@ -172,7 +175,8 @@
               "tr": "цзинь (500г)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3",
+          "text_translation_en": "Five yuan per jin."
         },
         {
           "id": "d6-s5",
@@ -193,7 +197,8 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue5.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3"
@@ -211,20 +216,77 @@
       "ex": "苹果多少钱一斤？",
       "expy": "Píngguǒ duōshao qián yì jīn?",
       "ex_uz": "Olma yarim kilosi necha pul?",
-      "ex_ru": "Сколько стоит полкило яблок?"
+      "ex_ru": "Сколько стоит полкило яблок?",
+      "en": "jin (0.5 kg)",
+      "ex_en": "How much is half a kilo of apples?"
     }
   ],
   "extraVocabSubtitle_uz": "Mevalar va bozor xaridlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме фруктов и покупок на рынке",
   "extraVocab": [
-    { "zh": "苹果", "py": "píngguǒ", "uz": "olma", "ru": "яблоко" },
-    { "zh": "西瓜", "py": "xīguā", "uz": "tarvuz", "ru": "арбуз" },
-    { "zh": "葡萄", "py": "pútao", "uz": "uzum", "ru": "виноград" },
-    { "zh": "草莓", "py": "cǎoméi", "uz": "qulupnay", "ru": "клубника" },
-    { "zh": "橘子", "py": "júzi", "uz": "mandarin", "ru": "мандарин" },
-    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
-    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой" },
-    { "zh": "新鲜", "py": "xīnxiān", "uz": "yangi / toza", "ru": "свежий" },
-    { "zh": "找钱", "py": "zhǎoqián", "uz": "qaytim bermoq", "ru": "дать сдачу" }
-  ]
+    {
+      "zh": "苹果",
+      "py": "píngguǒ",
+      "uz": "olma",
+      "ru": "яблоко",
+      "en": "apple"
+    },
+    {
+      "zh": "西瓜",
+      "py": "xīguā",
+      "uz": "tarvuz",
+      "ru": "арбуз",
+      "en": "watermelon"
+    },
+    {
+      "zh": "葡萄",
+      "py": "pútao",
+      "uz": "uzum",
+      "ru": "виноград",
+      "en": "grapes"
+    },
+    {
+      "zh": "草莓",
+      "py": "cǎoméi",
+      "uz": "qulupnay",
+      "ru": "клубника",
+      "en": "strawberry"
+    },
+    {
+      "zh": "橘子",
+      "py": "júzi",
+      "uz": "mandarin",
+      "ru": "мандарин",
+      "en": "mandarin / tangerine"
+    },
+    {
+      "zh": "便宜",
+      "py": "piányi",
+      "uz": "arzon",
+      "ru": "дешёвый",
+      "en": "cheap"
+    },
+    {
+      "zh": "贵",
+      "py": "guì",
+      "uz": "qimmat",
+      "ru": "дорогой",
+      "en": "expensive"
+    },
+    {
+      "zh": "新鲜",
+      "py": "xīnxiān",
+      "uz": "yangi / toza",
+      "ru": "свежий",
+      "en": "fresh"
+    },
+    {
+      "zh": "找钱",
+      "py": "zhǎoqián",
+      "uz": "qaytim bermoq",
+      "ru": "дать сдачу",
+      "en": "to give change"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on fruits and market shopping"
 }

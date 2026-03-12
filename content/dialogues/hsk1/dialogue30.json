@@ -92,7 +92,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue1.mp3",
+          "text_translation_en": "I sent you a message this morning."
         },
         {
           "id": "d30-s2",
@@ -134,7 +135,8 @@
               "tr": "получить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue2.mp3",
+          "text_translation_en": "I didn't receive it."
         },
         {
           "id": "d30-s3",
@@ -194,7 +196,8 @@
               "tr": "один раз"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue3.mp3",
+          "text_translation_en": "Then I'll send it again."
         },
         {
           "id": "d30-s4",
@@ -234,7 +237,8 @@
               "tr": "получить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue4.mp3",
+          "text_translation_en": "Still didn't receive it."
         },
         {
           "id": "d30-s5",
@@ -309,7 +313,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue5.mp3",
+          "text_translation_en": "Is this your WeChat?"
         },
         {
           "id": "d30-s6",
@@ -342,7 +347,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue6.mp3",
+          "text_translation_en": "No, it's not."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3"
@@ -354,15 +360,76 @@
   "extraVocabSubtitle_uz": "Ijtimoiy tarmoqlar va akkauntlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме соцсетей и аккаунтов",
   "extraVocab": [
-    { "zh": "朋友圈", "py": "péngyouquān", "uz": "do'stlar lentasi", "ru": "лента друзей (Moments)" },
-    { "zh": "账号", "py": "zhànghào", "uz": "akkaunt", "ru": "аккаунт" },
-    { "zh": "头像", "py": "tóuxiàng", "uz": "avatar", "ru": "аватар" },
-    { "zh": "点赞", "py": "diǎn zàn", "uz": "layk bosmoq", "ru": "поставить лайк" },
-    { "zh": "评论", "py": "pínglùn", "uz": "izoh / sharh", "ru": "комментарий" },
-    { "zh": "关注", "py": "guānzhù", "uz": "obuna bo'lmoq", "ru": "подписаться" },
-    { "zh": "分享", "py": "fēnxiǎng", "uz": "ulashmoq", "ru": "поделиться" },
-    { "zh": "视频", "py": "shìpín", "uz": "video", "ru": "видео" },
-    { "zh": "语音", "py": "yǔyīn", "uz": "ovozli xabar", "ru": "голосовое сообщение" },
-    { "zh": "删除", "py": "shānchú", "uz": "o'chirmoq", "ru": "удалить" }
-  ]
+    {
+      "zh": "朋友圈",
+      "py": "péngyouquān",
+      "uz": "do'stlar lentasi",
+      "ru": "лента друзей (Moments)",
+      "en": "friend feed (Moments)"
+    },
+    {
+      "zh": "账号",
+      "py": "zhànghào",
+      "uz": "akkaunt",
+      "ru": "аккаунт",
+      "en": "account"
+    },
+    {
+      "zh": "头像",
+      "py": "tóuxiàng",
+      "uz": "avatar",
+      "ru": "аватар",
+      "en": "avatar / profile picture"
+    },
+    {
+      "zh": "点赞",
+      "py": "diǎn zàn",
+      "uz": "layk bosmoq",
+      "ru": "поставить лайк",
+      "en": "to like (a post)"
+    },
+    {
+      "zh": "评论",
+      "py": "pínglùn",
+      "uz": "izoh / sharh",
+      "ru": "комментарий",
+      "en": "comment"
+    },
+    {
+      "zh": "关注",
+      "py": "guānzhù",
+      "uz": "obuna bo'lmoq",
+      "ru": "подписаться",
+      "en": "to follow / subscribe"
+    },
+    {
+      "zh": "分享",
+      "py": "fēnxiǎng",
+      "uz": "ulashmoq",
+      "ru": "поделиться",
+      "en": "to share"
+    },
+    {
+      "zh": "视频",
+      "py": "shìpín",
+      "uz": "video",
+      "ru": "видео",
+      "en": "video"
+    },
+    {
+      "zh": "语音",
+      "py": "yǔyīn",
+      "uz": "ovozli xabar",
+      "ru": "голосовое сообщение",
+      "en": "voice message"
+    },
+    {
+      "zh": "删除",
+      "py": "shānchú",
+      "uz": "o'chirmoq",
+      "ru": "удалить",
+      "en": "to delete"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on social media and accounts"
 }

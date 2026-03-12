@@ -74,7 +74,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue1.mp3",
+          "text_translation_en": "Can you hear clearly?"
         },
         {
           "id": "d31-s2",
@@ -116,7 +117,8 @@
               "tr": "чётко"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue2.mp3",
+          "text_translation_en": "I can't hear clearly."
         },
         {
           "id": "d31-s3",
@@ -167,7 +169,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue3.mp3",
+          "text_translation_en": "It's too noisy here."
         },
         {
           "id": "d31-s4",
@@ -209,7 +212,8 @@
               "tr": "шумный"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue4.mp3",
+          "text_translation_en": "Yes, very noisy."
         },
         {
           "id": "d31-s5",
@@ -262,7 +266,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue5.mp3",
+          "text_translation_en": "Let's go outside to talk."
         },
         {
           "id": "d31-s6",
@@ -284,7 +289,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/tai%20chao%20le/dialogue.mp3"
@@ -296,15 +302,76 @@
   "extraVocabSubtitle_uz": "Shovqin va atrof-muhit mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме шума и окружающей среды",
   "extraVocab": [
-    { "zh": "安静", "py": "ānjìng", "uz": "tinch", "ru": "тихий" },
-    { "zh": "声音", "py": "shēngyīn", "uz": "ovoz", "ru": "звук" },
-    { "zh": "音乐", "py": "yīnyuè", "uz": "musiqa", "ru": "музыка" },
-    { "zh": "隔壁", "py": "gébì", "uz": "qo'shni xona", "ru": "соседняя комната" },
-    { "zh": "邻居", "py": "línjū", "uz": "qo'shni", "ru": "сосед" },
-    { "zh": "耳机", "py": "ěrjī", "uz": "quloqchin", "ru": "наушники" },
-    { "zh": "窗户", "py": "chuānghù", "uz": "deraza", "ru": "окно" },
-    { "zh": "关门", "py": "guānmén", "uz": "eshikni yopmoq", "ru": "закрыть дверь" },
-    { "zh": "大声", "py": "dàshēng", "uz": "baland ovozda", "ru": "громко" },
-    { "zh": "小声", "py": "xiǎoshēng", "uz": "past ovozda", "ru": "тихо" }
-  ]
+    {
+      "zh": "安静",
+      "py": "ānjìng",
+      "uz": "tinch",
+      "ru": "тихий",
+      "en": "quiet"
+    },
+    {
+      "zh": "声音",
+      "py": "shēngyīn",
+      "uz": "ovoz",
+      "ru": "звук",
+      "en": "sound"
+    },
+    {
+      "zh": "音乐",
+      "py": "yīnyuè",
+      "uz": "musiqa",
+      "ru": "музыка",
+      "en": "music"
+    },
+    {
+      "zh": "隔壁",
+      "py": "gébì",
+      "uz": "qo'shni xona",
+      "ru": "соседняя комната",
+      "en": "next room"
+    },
+    {
+      "zh": "邻居",
+      "py": "línjū",
+      "uz": "qo'shni",
+      "ru": "сосед",
+      "en": "neighbor"
+    },
+    {
+      "zh": "耳机",
+      "py": "ěrjī",
+      "uz": "quloqchin",
+      "ru": "наушники",
+      "en": "headphones / earphones"
+    },
+    {
+      "zh": "窗户",
+      "py": "chuānghù",
+      "uz": "deraza",
+      "ru": "окно",
+      "en": "window"
+    },
+    {
+      "zh": "关门",
+      "py": "guānmén",
+      "uz": "eshikni yopmoq",
+      "ru": "закрыть дверь",
+      "en": "to close the door"
+    },
+    {
+      "zh": "大声",
+      "py": "dàshēng",
+      "uz": "baland ovozda",
+      "ru": "громко",
+      "en": "loudly"
+    },
+    {
+      "zh": "小声",
+      "py": "xiǎoshēng",
+      "uz": "past ovozda",
+      "ru": "тихо",
+      "en": "quietly"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on noise and environment"
 }

@@ -56,7 +56,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue1.mp3",
+          "text_translation_en": "What time is it now?"
         },
         {
           "id": "d7-s2",
@@ -89,7 +90,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue2.mp3",
+          "text_translation_en": "Three o'clock."
         },
         {
           "id": "d7-s3",
@@ -144,7 +146,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue3.mp3",
+          "text_translation_en": "What time does your class start?"
         },
         {
           "id": "d7-s4",
@@ -199,7 +202,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue4.mp3",
+          "text_translation_en": "My class starts at four."
         },
         {
           "id": "d7-s5",
@@ -254,7 +258,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue5.mp3",
+          "text_translation_en": "What time does your class end?"
         },
         {
           "id": "d7-s6",
@@ -309,7 +314,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue6.mp3",
+          "text_translation_en": "My class ends at five."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue.mp3"
@@ -321,15 +327,76 @@
   "extraVocabSubtitle_uz": "Vaqt va kun tartibi mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме времени и расписания",
   "extraVocab": [
-    { "zh": "早上", "py": "zǎoshang", "uz": "ertalab", "ru": "утро" },
-    { "zh": "中午", "py": "zhōngwǔ", "uz": "tush payti", "ru": "полдень" },
-    { "zh": "晚上", "py": "wǎnshang", "uz": "kechqurun", "ru": "вечер" },
-    { "zh": "半", "py": "bàn", "uz": "yarim", "ru": "половина" },
-    { "zh": "分钟", "py": "fēnzhōng", "uz": "daqiqa", "ru": "минута" },
-    { "zh": "小时", "py": "xiǎoshí", "uz": "soat", "ru": "час" },
-    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опаздывать" },
-    { "zh": "早", "py": "zǎo", "uz": "erta", "ru": "рано" },
-    { "zh": "晚", "py": "wǎn", "uz": "kech", "ru": "поздно" },
-    { "zh": "闹钟", "py": "nàozhōng", "uz": "budilnik", "ru": "будильник" }
-  ]
+    {
+      "zh": "早上",
+      "py": "zǎoshang",
+      "uz": "ertalab",
+      "ru": "утро",
+      "en": "morning"
+    },
+    {
+      "zh": "中午",
+      "py": "zhōngwǔ",
+      "uz": "tush payti",
+      "ru": "полдень",
+      "en": "noon"
+    },
+    {
+      "zh": "晚上",
+      "py": "wǎnshang",
+      "uz": "kechqurun",
+      "ru": "вечер",
+      "en": "evening"
+    },
+    {
+      "zh": "半",
+      "py": "bàn",
+      "uz": "yarim",
+      "ru": "половина",
+      "en": "half"
+    },
+    {
+      "zh": "分钟",
+      "py": "fēnzhōng",
+      "uz": "daqiqa",
+      "ru": "минута",
+      "en": "minute"
+    },
+    {
+      "zh": "小时",
+      "py": "xiǎoshí",
+      "uz": "soat",
+      "ru": "час",
+      "en": "hour"
+    },
+    {
+      "zh": "迟到",
+      "py": "chídào",
+      "uz": "kechikmoq",
+      "ru": "опаздывать",
+      "en": "to be late"
+    },
+    {
+      "zh": "早",
+      "py": "zǎo",
+      "uz": "erta",
+      "ru": "рано",
+      "en": "early"
+    },
+    {
+      "zh": "晚",
+      "py": "wǎn",
+      "uz": "kech",
+      "ru": "поздно",
+      "en": "late"
+    },
+    {
+      "zh": "闹钟",
+      "py": "nàozhōng",
+      "uz": "budilnik",
+      "ru": "будильник",
+      "en": "alarm clock"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on time and schedules"
 }

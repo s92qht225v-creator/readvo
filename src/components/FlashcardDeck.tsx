@@ -187,9 +187,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   }, [deck.words]);
 
   const translation = currentCard
-    ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : currentCard.text_translation)
+    ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : language === 'en' && currentCard.text_translation_en ? currentCard.text_translation_en : currentCard.text_translation)
     : '';
-  // Note: English users see Uzbek translations (text_translation) as there's no separate English field
 
   const swipeOpacity = Math.min(Math.abs(dragX) / SWIPE_THRESHOLD, 1);
   const swipeLabel = dragX > SWIPE_THRESHOLD

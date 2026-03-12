@@ -10,91 +10,105 @@
       "text_original": "轿车",
       "pinyin": "jiàochē",
       "text_translation": "sedan",
-      "text_translation_ru": "седан"
+      "text_translation_ru": "седан",
+      "text_translation_en": "sedan"
     },
     {
       "id": "tp-veh-02",
       "text_original": "SUV",
       "pinyin": "SUV",
       "text_translation": "SUV",
-      "text_translation_ru": "внедорожник (SUV)"
+      "text_translation_ru": "внедорожник (SUV)",
+      "text_translation_en": "SUV"
     },
     {
       "id": "tp-veh-03",
       "text_original": "越野车",
       "pinyin": "yuèyěchē",
       "text_translation": "vnedorojnik; jip",
-      "text_translation_ru": "внедорожник; джип"
+      "text_translation_ru": "внедорожник; джип",
+      "text_translation_en": "off-road vehicle; SUV"
     },
     {
       "id": "tp-veh-04",
       "text_original": "跑车",
       "pinyin": "pǎochē",
       "text_translation": "sportkar",
-      "text_translation_ru": "спорткар"
+      "text_translation_ru": "спорткар",
+      "text_translation_en": "sports car"
     },
     {
       "id": "tp-veh-05",
       "text_original": "面包车",
       "pinyin": "miànbāochē",
       "text_translation": "mikroavtobus; miniven",
-      "text_translation_ru": "микроавтобус; минивэн"
+      "text_translation_ru": "микроавтобус; минивэн",
+      "text_translation_en": "minivan"
     },
     {
       "id": "tp-veh-06",
       "text_original": "商务车",
       "pinyin": "shāngwùchē",
       "text_translation": "biznes avtomobil",
-      "text_translation_ru": "бизнес-автомобиль; представительский"
+      "text_translation_ru": "бизнес-автомобиль; представительский",
+      "text_translation_en": "business car"
     },
     {
       "id": "tp-veh-07",
       "text_original": "皮卡",
       "pinyin": "píkǎ",
       "text_translation": "pikap",
-      "text_translation_ru": "пикап"
+      "text_translation_ru": "пикап",
+      "text_translation_en": "pickup truck"
     },
     {
       "id": "tp-veh-08",
       "text_original": "掀背车",
       "pinyin": "xiānbèichē",
       "text_translation": "xetchbek",
-      "text_translation_ru": "хэтчбек"
+      "text_translation_ru": "хэтчбек",
+      "text_translation_en": "hatchback"
     },
     {
       "id": "tp-veh-09",
       "text_original": "旅行车",
       "pinyin": "lǚxíngchē",
       "text_translation": "universal",
-      "text_translation_ru": "универсал"
+      "text_translation_ru": "универсал",
+      "text_translation_en": "station wagon"
     },
     {
       "id": "tp-veh-10",
       "text_original": "敞篷车",
       "pinyin": "chǎngpéngchē",
       "text_translation": "kabriolet",
-      "text_translation_ru": "кабриолет"
+      "text_translation_ru": "кабриолет",
+      "text_translation_en": "convertible"
     },
     {
       "id": "tp-veh-11",
       "text_original": "电动车",
       "pinyin": "diàndòngchē",
       "text_translation": "elektromobil",
-      "text_translation_ru": "электромобиль"
+      "text_translation_ru": "электромобиль",
+      "text_translation_en": "electric vehicle"
     },
     {
       "id": "tp-veh-12",
       "text_original": "混动车",
       "pinyin": "hùndòngchē",
       "text_translation": "gibrid avtomobil",
-      "text_translation_ru": "гибридный автомобиль"
+      "text_translation_ru": "гибридный автомобиль",
+      "text_translation_en": "hybrid vehicle"
     },
     {
       "id": "tp-veh-13",
       "text_original": "燃油车",
       "pinyin": "rányóuchē",
       "text_translation": "benzinli avtomobil",
-      "text_translation_ru": "бензиновый автомобиль"
+      "text_translation_ru": "бензиновый автомобиль",
+      "text_translation_en": "gasoline car"
     }
-  ]
+  ],
+  "title_en": "Vehicle Types"
 }

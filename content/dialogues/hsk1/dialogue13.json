@@ -56,7 +56,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue1.mp3",
+          "text_translation_en": "How old are you?"
         },
         {
           "id": "d13-s2",
@@ -120,7 +121,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue2.mp3",
+          "text_translation_en": "I'm twenty-two. And you?"
         },
         {
           "id": "d13-s3",
@@ -162,7 +164,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue3.mp3",
+          "text_translation_en": "I'm twenty-one."
         },
         {
           "id": "d13-s4",
@@ -213,7 +216,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue4.mp3",
+          "text_translation_en": "Oh, we're about the same age."
         },
         {
           "id": "d13-s5",
@@ -245,7 +249,8 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue5.mp3",
+          "text_translation_en": "Yes."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20duo%20da/dialogue.mp3"
@@ -257,15 +262,76 @@
   "extraVocabSubtitle_uz": "Yosh va oila mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме возраста и семьи",
   "extraVocab": [
-    { "zh": "爸爸", "py": "bàba", "uz": "dada / ota", "ru": "папа" },
-    { "zh": "妈妈", "py": "māma", "uz": "ona", "ru": "мама" },
-    { "zh": "哥哥", "py": "gēge", "uz": "aka", "ru": "старший брат" },
-    { "zh": "姐姐", "py": "jiějie", "uz": "opa", "ru": "старшая сестра" },
-    { "zh": "弟弟", "py": "dìdi", "uz": "uka", "ru": "младший брат" },
-    { "zh": "妹妹", "py": "mèimei", "uz": "singil", "ru": "младшая сестра" },
-    { "zh": "爷爷", "py": "yéye", "uz": "buva", "ru": "дедушка (по отцу)" },
-    { "zh": "奶奶", "py": "nǎinai", "uz": "buvi", "ru": "бабушка (по отцу)" },
-    { "zh": "孩子", "py": "háizi", "uz": "bola", "ru": "ребёнок" },
-    { "zh": "生日", "py": "shēngrì", "uz": "tug'ilgan kun", "ru": "день рождения" }
-  ]
+    {
+      "zh": "爸爸",
+      "py": "bàba",
+      "uz": "dada / ota",
+      "ru": "папа",
+      "en": "dad"
+    },
+    {
+      "zh": "妈妈",
+      "py": "māma",
+      "uz": "ona",
+      "ru": "мама",
+      "en": "mom"
+    },
+    {
+      "zh": "哥哥",
+      "py": "gēge",
+      "uz": "aka",
+      "ru": "старший брат",
+      "en": "older brother"
+    },
+    {
+      "zh": "姐姐",
+      "py": "jiějie",
+      "uz": "opa",
+      "ru": "старшая сестра",
+      "en": "older sister"
+    },
+    {
+      "zh": "弟弟",
+      "py": "dìdi",
+      "uz": "uka",
+      "ru": "младший брат",
+      "en": "younger brother"
+    },
+    {
+      "zh": "妹妹",
+      "py": "mèimei",
+      "uz": "singil",
+      "ru": "младшая сестра",
+      "en": "younger sister"
+    },
+    {
+      "zh": "爷爷",
+      "py": "yéye",
+      "uz": "buva",
+      "ru": "дедушка (по отцу)",
+      "en": "grandfather (paternal)"
+    },
+    {
+      "zh": "奶奶",
+      "py": "nǎinai",
+      "uz": "buvi",
+      "ru": "бабушка (по отцу)",
+      "en": "grandmother (paternal)"
+    },
+    {
+      "zh": "孩子",
+      "py": "háizi",
+      "uz": "bola",
+      "ru": "ребёнок",
+      "en": "child"
+    },
+    {
+      "zh": "生日",
+      "py": "shēngrì",
+      "uz": "tug'ilgan kun",
+      "ru": "день рождения",
+      "en": "birthday"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on age and family"
 }

@@ -21,106 +21,122 @@ const sections = [
 const examples = [
   {
     zh: '一个人', pinyin: 'yí ge rén',
-    uz: 'bitta odam', ru: 'один человек',
+    uz: 'bitta odam', ru: 'один человек', en: 'one person',
     note_uz: '个 = eng universal sanash so\'zi. Qaysi sanash so\'zini bilmasangiz — 个 ishlating!',
     note_ru: '个 = самое универсальное СС. Не знаете какое — используйте 个!',
+    note_en: '个 = the most universal MW. Don\'t know which one? Use 个!',
   },
   {
     zh: '两本书', pinyin: 'liǎng běn shū',
-    uz: 'ikkita kitob', ru: 'две книги',
+    uz: 'ikkita kitob', ru: 'две книги', en: 'two books',
     note_uz: '本 = kitob, daftar, jurnal uchun. 两 (ikki) — 二 emas!',
     note_ru: '本 = для книг, тетрадей, журналов. 两 (два) — не 二!',
+    note_en: '本 = for books, notebooks, magazines. 两 (two) — not 二!',
   },
   {
     zh: '三杯茶', pinyin: 'sān bēi chá',
-    uz: 'uchta (stakan) choy', ru: 'три чашки чая',
+    uz: 'uchta (stakan) choy', ru: 'три чашки чая', en: 'three cups of tea',
     note_uz: '杯 = stakan, piyola — ichimliklar uchun',
     note_ru: '杯 = стакан, чашка — для напитков',
+    note_en: '杯 = glass, cup — for drinks',
   },
   {
     zh: '这件衣服很好看。', pinyin: 'Zhè jiàn yīfu hěn hǎokàn.',
-    uz: 'Bu kiyim chiroyli.', ru: 'Эта одежда красивая.',
+    uz: 'Bu kiyim chiroyli.', ru: 'Эта одежда красивая.', en: 'This piece of clothing is beautiful.',
     note_uz: '件 = kiyim, ishlar uchun. 这件 = bu (kiyim)',
     note_ru: '件 = для одежды, дел. 这件 = эта (одежда)',
+    note_en: '件 = for clothing, matters. 这件 = this (piece of clothing)',
   },
   {
     zh: '我有一只猫。', pinyin: 'Wǒ yǒu yì zhī māo.',
-    uz: 'Mening bitta mushugim bor.', ru: 'У меня есть кошка.',
+    uz: 'Mening bitta mushugim bor.', ru: 'У меня есть кошка.', en: 'I have a cat.',
     note_uz: '只 = kichik hayvonlar uchun (mushuk, it, qush)',
     note_ru: '只 = для небольших животных (кошка, собака, птица)',
+    note_en: '只 = for small animals (cat, dog, bird)',
   },
   {
     zh: '五块钱', pinyin: 'wǔ kuài qián',
-    uz: 'besh yuan', ru: 'пять юаней',
+    uz: 'besh yuan', ru: 'пять юаней', en: 'five yuan',
     note_uz: '块 = pul birligi (yuan). Og\'zaki nutqda 元 o\'rniga 块',
     note_ru: '块 = денежная единица (юань). В разговоре вместо 元',
+    note_en: '块 = monetary unit (yuan). Used in spoken Chinese instead of 元',
   },
   {
     zh: '请给我一杯水。', pinyin: 'Qǐng gěi wǒ yì bēi shuǐ.',
-    uz: 'Menga bir stakan suv bering.', ru: 'Пожалуйста, дайте мне стакан воды.',
+    uz: 'Menga bir stakan suv bering.', ru: 'Пожалуйста, дайте мне стакан воды.', en: 'Please give me a glass of water.',
     note_uz: '杯 = stakan/piyola — suv, choy, qahva uchun',
     note_ru: '杯 = стакан/чашка — для воды, чая, кофе',
+    note_en: '杯 = glass/cup — for water, tea, coffee',
   },
   {
     zh: '那辆车是我的。', pinyin: 'Nà liàng chē shì wǒ de.',
-    uz: 'Anavi mashina meniki.', ru: 'Та машина — моя.',
+    uz: 'Anavi mashina meniki.', ru: 'Та машина — моя.', en: 'That car is mine.',
     note_uz: '辆 = transport vositalari uchun (mashina, velosiped)',
     note_ru: '辆 = для транспортных средств (машина, велосипед)',
+    note_en: '辆 = for vehicles (car, bicycle)',
   },
 ];
 
 const mwList = [
-  { mw: '个', py: 'ge', uz: 'ta', ru: 'штука', use_uz: 'Odamlar, narsalar — UNIVERSAL', use_ru: 'Люди, предметы — УНИВЕРСАЛЬНОЕ', examples: '一个人、一个苹果、一个朋友', color: '#ef4444' },
-  { mw: '本', py: 'běn', uz: 'ta (kitob)', ru: 'штука (книга)', use_uz: 'Kitoblar, daftarlar, jurnallar', use_ru: 'Книги, тетради, журналы', examples: '一本书、一本词典、两本杂志', color: '#f59e0b' },
-  { mw: '杯', py: 'bēi', uz: 'stakan/piyola', ru: 'стакан/чашка', use_uz: 'Ichimliklar (stakan/piyolada)', use_ru: 'Напитки (в стакане/чашке)', examples: '一杯水、一杯茶、两杯咖啡', color: '#059669' },
-  { mw: '块', py: 'kuài', uz: 'yuan (pul)', ru: 'юань (деньги)', use_uz: 'Pul (yuan) — og\'zaki nutqda', use_ru: 'Деньги (юань) — в разговоре', examples: '五块钱、十块、一百块', color: '#d97706' },
-  { mw: '岁', py: 'suì', uz: 'yosh', ru: 'лет (возраст)', use_uz: 'Yosh (necha yoshda)', use_ru: 'Возраст (сколько лет)', examples: '五岁、二十岁、几岁', color: '#7c3aed' },
-  { mw: '口', py: 'kǒu', uz: 'kishi (oila)', ru: 'человек (семья)', use_uz: 'Oila a\'zolari', use_ru: 'Члены семьи', examples: '三口人、五口人、几口人', color: '#0891b2' },
-  { mw: '只', py: 'zhī', uz: 'ta (hayvon)', ru: 'штука (животное)', use_uz: 'Kichik hayvonlar (mushuk, it, qush)', use_ru: 'Небольшие животные (кошка, собака, птица)', examples: '一只猫、两只狗、三只鸟', color: '#e11d48' },
-  { mw: '件', py: 'jiàn', uz: 'ta (kiyim/ish)', ru: 'штука (одежда/дело)', use_uz: 'Kiyimlar, ishlar, hodisalar', use_ru: 'Одежда, дела, события', examples: '一件衣服、一件事、两件', color: '#4f46e5' },
-  { mw: '辆', py: 'liàng', uz: 'ta (transport)', ru: 'штука (транспорт)', use_uz: 'Transport vositalari', use_ru: 'Транспортные средства', examples: '一辆车、一辆出租车', color: '#059669' },
-  { mw: '些', py: 'xiē', uz: 'bir necha', ru: 'несколько', use_uz: 'Noma\'lum miqdor (biroz, ba\'zi)', use_ru: 'Неопределённое количество (немного, некоторые)', examples: '一些水、一些人、这些书', color: '#dc2626' },
-  { mw: '张', py: 'zhāng', uz: 'ta (yassi)', ru: 'штука (плоское)', use_uz: 'Yassi narsalar (stol, qog\'oz, chiqim)', use_ru: 'Плоские предметы (стол, бумага, билет)', examples: '一张桌子、一张纸、两张票', color: '#2563eb' },
-  { mw: '条', py: 'tiáo', uz: 'ta (uzun)', ru: 'штука (длинное)', use_uz: 'Uzun narsalar (ko\'cha, baliq, shimlar)', use_ru: 'Длинные предметы (дорога, рыба, брюки)', examples: '一条路、一条鱼、一条裤子', color: '#b45309' },
+  { mw: '个', py: 'ge', uz: 'ta', ru: 'штука', en: 'piece (universal)', use_uz: 'Odamlar, narsalar — UNIVERSAL', use_ru: 'Люди, предметы — УНИВЕРСАЛЬНОЕ', use_en: 'People, things — UNIVERSAL', examples: '一个人、一个苹果、一个朋友', color: '#ef4444' },
+  { mw: '本', py: 'běn', uz: 'ta (kitob)', ru: 'штука (книга)', en: 'volume (book)', use_uz: 'Kitoblar, daftarlar, jurnallar', use_ru: 'Книги, тетради, журналы', use_en: 'Books, notebooks, magazines', examples: '一本书、一本词典、两本杂志', color: '#f59e0b' },
+  { mw: '杯', py: 'bēi', uz: 'stakan/piyola', ru: 'стакан/чашка', en: 'glass/cup', use_uz: 'Ichimliklar (stakan/piyolada)', use_ru: 'Напитки (в стакане/чашке)', use_en: 'Drinks (in a glass/cup)', examples: '一杯水、一杯茶、两杯咖啡', color: '#059669' },
+  { mw: '块', py: 'kuài', uz: 'yuan (pul)', ru: 'юань (деньги)', en: 'yuan (money)', use_uz: 'Pul (yuan) — og\'zaki nutqda', use_ru: 'Деньги (юань) — в разговоре', use_en: 'Money (yuan) — in spoken Chinese', examples: '五块钱、十块、一百块', color: '#d97706' },
+  { mw: '岁', py: 'suì', uz: 'yosh', ru: 'лет (возраст)', en: 'years old (age)', use_uz: 'Yosh (necha yoshda)', use_ru: 'Возраст (сколько лет)', use_en: 'Age (how old)', examples: '五岁、二十岁、几岁', color: '#7c3aed' },
+  { mw: '口', py: 'kǒu', uz: 'kishi (oila)', ru: 'человек (семья)', en: 'person (family)', use_uz: 'Oila a\'zolari', use_ru: 'Члены семьи', use_en: 'Family members', examples: '三口人、五口人、几口人', color: '#0891b2' },
+  { mw: '只', py: 'zhī', uz: 'ta (hayvon)', ru: 'штука (животное)', en: 'one (animal)', use_uz: 'Kichik hayvonlar (mushuk, it, qush)', use_ru: 'Небольшие животные (кошка, собака, птица)', use_en: 'Small animals (cat, dog, bird)', examples: '一只猫、两只狗、三只鸟', color: '#e11d48' },
+  { mw: '件', py: 'jiàn', uz: 'ta (kiyim/ish)', ru: 'штука (одежда/дело)', en: 'piece (clothing/matter)', use_uz: 'Kiyimlar, ishlar, hodisalar', use_ru: 'Одежда, дела, события', use_en: 'Clothing, matters, events', examples: '一件衣服、一件事、两件', color: '#4f46e5' },
+  { mw: '辆', py: 'liàng', uz: 'ta (transport)', ru: 'штука (транспорт)', en: 'one (vehicle)', use_uz: 'Transport vositalari', use_ru: 'Транспортные средства', use_en: 'Vehicles', examples: '一辆车、一辆出租车', color: '#059669' },
+  { mw: '些', py: 'xiē', uz: 'bir necha', ru: 'несколько', en: 'some/a few', use_uz: 'Noma\'lum miqdor (biroz, ba\'zi)', use_ru: 'Неопределённое количество (немного, некоторые)', use_en: 'Indefinite quantity (some, a few)', examples: '一些水、一些人、这些书', color: '#dc2626' },
+  { mw: '张', py: 'zhāng', uz: 'ta (yassi)', ru: 'штука (плоское)', en: 'one (flat object)', use_uz: 'Yassi narsalar (stol, qog\'oz, chiqim)', use_ru: 'Плоские предметы (стол, бумага, билет)', use_en: 'Flat objects (table, paper, ticket)', examples: '一张桌子、一张纸、两张票', color: '#2563eb' },
+  { mw: '条', py: 'tiáo', uz: 'ta (uzun)', ru: 'штука (длинное)', en: 'one (long object)', use_uz: 'Uzun narsalar (ko\'cha, baliq, shimlar)', use_ru: 'Длинные предметы (дорога, рыба, брюки)', use_en: 'Long objects (road, fish, pants)', examples: '一条路、一条鱼、一条裤子', color: '#b45309' },
 ];
 
 const quizQuestions = [
   {
     q_uz: '"Ikkita kitob" xitoycha qanday?',
     q_ru: 'Как сказать "две книги" по-китайски?',
+    q_en: 'How do you say "two books" in Chinese?',
     options: ['二个书', '两本书', '二本书', '两个书'],
     correct: 1,
   },
   {
     q_uz: 'Qaysi sanash so\'zi eng universal?',
     q_ru: 'Какое СС самое универсальное?',
+    q_en: 'Which measure word is the most universal?',
     options: ['本', '杯', '个', '块'],
     correct: 2,
   },
   {
     q_uz: 'Mushuk uchun qaysi sanash so\'zi ishlatiladi?',
     q_ru: 'Какое СС используется для кошки?',
+    q_en: 'Which measure word is used for a cat?',
     options: ['个', '条', '只', '件'],
     correct: 2,
   },
   {
     q_uz: '"Uch stakan choy" qanday?',
     q_ru: 'Как сказать "три чашки чая"?',
+    q_en: 'How do you say "three cups of tea"?',
     options: ['三个茶', '三杯茶', '三块茶', '三本茶'],
     correct: 1,
   },
   {
     q_uz: 'Sanash so\'zi qayerda turadi?',
     q_ru: 'Где стоит счётное слово?',
+    q_en: 'Where does the measure word go?',
     options_uz: ['Otdan keyin', 'Son va ot orasida', 'Gap oxirida', 'Egadan oldin'],
     options_ru: ['После существительного', 'Между числом и существительным', 'В конце предложения', 'Перед подлежащим'],
+    options_en: ['After the noun', 'Between the number and noun', 'At the end of the sentence', 'Before the subject'],
     correct: 1,
   },
   {
     q_uz: '这/那 bilan sanash so\'zi kerakmi?',
     q_ru: 'Нужно ли СС с 这/那?',
+    q_en: 'Is a MW needed with 这/那?',
     options_uz: ['Yo\'q, hech qachon', 'Ha, 这/那 + 量词 + ot', 'Faqat 这 bilan', 'Faqat ko\'plikda'],
     options_ru: ['Нет, никогда', 'Да, 这/那 + СС + сущ.', 'Только с 这', 'Только во множественном числе'],
+    options_en: ['No, never', 'Yes, 这/那 + MW + noun', 'Only with 这', 'Only in plural'],
     correct: 1,
   },
 ];
@@ -157,7 +173,7 @@ export function GrammarLiangciPage() {
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
           <h1 className="grammar-page__hero-char">量词</h1>
           <div className="grammar-page__hero-pinyin">liàngcí</div>
-          <div className="grammar-page__hero-meaning">— {({ uz: 'sanash so\'zlari', ru: 'счётные слова', en: 'sanash so\'zlari' } as Record<string, string>)[language]} —</div>
+          <div className="grammar-page__hero-meaning">— {({ uz: 'sanash so\'zlari', ru: 'счётные слова', en: 'measure words' } as Record<string, string>)[language]} —</div>
         </div>
       </div>
 
@@ -181,13 +197,13 @@ export function GrammarLiangciPage() {
         {activeTab === 'intro' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '量词 nima?', ru: 'Что такое 量词?', en: '量词 nima?' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '量词 nima?', ru: 'Что такое 量词?', en: 'What is 量词?' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__tip-text">
-                <b style={{ color: COLOR }}>量词 (liàngcí)</b> — {({ uz: 'son va ot orasiga qo\'yiladigan maxsus so\'z. Xitoy tilida shunchaki «uchta kitob» deb bo\'lmaydi — sanash so\'zi kerak!', ru: 'специальное слово, которое ставится между числом и существительным. В китайском нельзя просто сказать «три книги» — нужно счётное слово!', en: 'son va ot orasiga qo\'yiladigan maxsus so\'z. Xitoy tilida shunchaki «uchta kitob» deb bo\'lmaydi — sanash so\'zi kerak!' } as Record<string, string>)[language]}
+                <b style={{ color: COLOR }}>量词 (liàngcí)</b> — {({ uz: 'son va ot orasiga qo\'yiladigan maxsus so\'z. Xitoy tilida shunchaki «uchta kitob» deb bo\'lmaydi — sanash so\'zi kerak!', ru: 'специальное слово, которое ставится между числом и существительным. В китайском нельзя просто сказать «три книги» — нужно счётное слово!', en: 'a special word placed between a number and a noun. In Chinese, you can\'t just say "three books" — you need a measure word!' } as Record<string, string>)[language]}
               </div>
               <div style={{ textAlign: 'center', margin: '12px 0' }}>
                 <div style={{ fontSize: 13, color: '#888', marginBottom: 6 }}>
-                  {({ uz: 'O\'zbekcha: uch', ru: 'По-русски: три книги', en: 'O\'zbekcha: uch' } as Record<string, string>)[language]}<b style={{ color: COLOR }}>{({ uz: 'ta', ru: '', en: 'ta' } as Record<string, string>)[language]}</b>{({ uz: ' kitob', ru: '', en: ' kitob' } as Record<string, string>)[language]}
+                  {({ uz: 'O\'zbekcha: uch', ru: 'По-русски: три книги', en: 'In English: three books' } as Record<string, string>)[language]}<b style={{ color: COLOR }}>{({ uz: 'ta', ru: '', en: '' } as Record<string, string>)[language]}</b>{({ uz: ' kitob', ru: '', en: '' } as Record<string, string>)[language]}
                 </div>
                 <div style={{ fontSize: 20, color: '#1a1a2e', letterSpacing: 2 }}>
                   <span style={{ color: '#2563eb' }}>三</span>
@@ -197,35 +213,35 @@ export function GrammarLiangciPage() {
                 <div style={{ fontSize: 11, color: '#888' }}>sān <b>běn</b> shū</div>
               </div>
               <p className="grammar-block__tip-note">
-                {({ uz: 'O\'zbek tilida ham «ta» bor — lekin xitoy tilida har bir ot turi uchun boshqa sanash so\'zi!', ru: 'В русском тоже есть счётные слова: «три штуки», «два стакана», «пять голов скота». В китайском это обязательно для всех существительных!', en: 'O\'zbek tilida ham «ta» bor — lekin xitoy tilida har bir ot turi uchun boshqa sanash so\'zi!' } as Record<string, string>)[language]}
+                {({ uz: 'O\'zbek tilida ham «ta» bor — lekin xitoy tilida har bir ot turi uchun boshqa sanash so\'zi!', ru: 'В русском тоже есть счётные слова: «три штуки», «два стакана», «пять голов скота». В китайском это обязательно для всех существительных!', en: 'English has some measure words too: "a cup of tea", "a piece of paper". In Chinese, measure words are required for ALL nouns!' } as Record<string, string>)[language]}
               </p>
             </div>
 
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{({ uz: 'Asosiy formula', ru: 'Основная формула', en: 'Asosiy formula' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Asosiy formula', ru: 'Основная формула', en: 'Basic Formula' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span style={{ color: '#2563eb', fontWeight: 700 }}>{({ uz: 'Son', ru: 'Число', en: 'Son' } as Record<string, string>)[language]}</span>
+                <span style={{ color: '#2563eb', fontWeight: 700 }}>{({ uz: 'Son', ru: 'Число', en: 'Number' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-verb">{({ uz: '量词', ru: 'СС', en: 'MW' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span style={{ color: '#1a1a2e' }}>{({ uz: 'Ot', ru: 'Сущ', en: 'Noun' } as Record<string, string>)[language]}</span>
               </div>
               <p className="grammar-block__formula-desc">
-                {({ uz: 'Son → Sanash so\'zi → Ot. Bu tartib o\'zgarmas!', ru: 'Число → Счётное слово → Существительное. Порядок неизменен!', en: 'Son → Sanash so\'zi → Ot. Bu tartib o\'zgarmas!' } as Record<string, string>)[language]}
+                {({ uz: 'Son → Sanash so\'zi → Ot. Bu tartib o\'zgarmas!', ru: 'Число → Счётное слово → Существительное. Порядок неизменен!', en: 'Number → Measure Word → Noun. This order never changes!' } as Record<string, string>)[language]}
               </p>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Sanash so\'zi qayerda kerak?', ru: 'Где нужно СС?', en: 'Sanash so\'zi qayerda kerak?' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Sanash so\'zi qayerda kerak?', ru: 'Где нужно СС?', en: 'Where are measure words needed?' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {({ uz: 'Sanash so\'zi son yoki ko\'rsatish olmoshi bilan hamma joyda kerak:', ru: 'СС нужно везде, где есть число или указатель:', en: 'Sanash so\'zi son yoki ko\'rsatish olmoshi bilan hamma joyda kerak:' } as Record<string, string>)[language]}
+                {({ uz: 'Sanash so\'zi son yoki ko\'rsatish olmoshi bilan hamma joyda kerak:', ru: 'СС нужно везде, где есть число или указатель:', en: 'A measure word is needed wherever there is a number or a demonstrative:' } as Record<string, string>)[language]}
               </p>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' as const, marginTop: 8 }}>
                 {[
-                  { label_uz: 'Sanash', label_ru: 'Счёт', ex: '三个人', color: '#ef4444' },
-                  { label_uz: '这/那', label_ru: '这/那', ex: '这本书', color: '#2563eb' },
-                  { label_uz: '几', label_ru: '几', ex: '几杯？', color: '#7c3aed' },
-                  { label_uz: '一 + 量词', label_ru: '一 + СС', ex: '一件事', color: '#059669' },
+                  { label_uz: 'Sanash', label_ru: 'Счёт', label_en: 'Counting', ex: '三个人', color: '#ef4444' },
+                  { label_uz: '这/那', label_ru: '这/那', label_en: '这/那', ex: '这本书', color: '#2563eb' },
+                  { label_uz: '几', label_ru: '几', label_en: '几', ex: '几杯？', color: '#7c3aed' },
+                  { label_uz: '一 + 量词', label_ru: '一 + СС', label_en: '一 + MW', ex: '一件事', color: '#059669' },
                 ].map((f, i) => (
                   <div key={i} style={{
                     flex: '1 1 45%', background: '#f5f5f8', borderRadius: 8, padding: 8, textAlign: 'center',
@@ -239,15 +255,15 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{({ uz: '💡 Bilmasangiz — 个 ishlating!', ru: '💡 Не знаете — используйте 个!', en: '💡 Bilmasangiz — 个 ishlating!' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '💡 Bilmasangiz — 个 ishlating!', ru: '💡 Не знаете — используйте 个!', en: '💡 Don\'t know? Use 个!' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                <b style={{ color: COLOR, fontSize: 20 }}>个</b> (ge) — {({ uz: 'eng universal sanash so\'zi. Agar to\'g\'ri sanash so\'zini bilmasangiz — 个 ishlatavering. Xitoyliklar tushunadi!', ru: 'самое универсальное СС. Если не знаете нужное — используйте 个, китайцы поймут!', en: 'eng universal sanash so\'zi. Agar to\'g\'ri sanash so\'zini bilmasangiz — 个 ishlatavering. Xitoyliklar tushunadi!' } as Record<string, string>)[language]}
+                <b style={{ color: COLOR, fontSize: 20 }}>个</b> (ge) — {({ uz: 'eng universal sanash so\'zi. Agar to\'g\'ri sanash so\'zini bilmasangiz — 个 ishlatavering. Xitoyliklar tushunadi!', ru: 'самое универсальное СС. Если не знаете нужное — используйте 个, китайцы поймут!', en: 'the most universal measure word. If you don\'t know the right one — just use 个, Chinese speakers will understand!' } as Record<string, string>)[language]}
               </p>
               <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
                 {[
-                  { label_uz: '✓ IDEAL', label_ru: '✓ ИДЕАЛЬНО', ex: '一本书', note_uz: 'aniq sanash so\'zi', note_ru: 'точное СС', color: '#16a34a' },
-                  { label_uz: '✓ HAM BO\'LADI', label_ru: '✓ ТОЖЕ МОЖНО', ex: '一个书', note_uz: 'universal sanash so\'zi', note_ru: 'универсальное СС', color: '#f59e0b' },
-                  { label_uz: '✗ XATO', label_ru: '✗ ОШИБКА', ex: '一书', note_uz: 'Sanash so\'zi yo\'q!', note_ru: 'нет СС!', color: '#ef4444', strike: true },
+                  { label_uz: '✓ IDEAL', label_ru: '✓ ИДЕАЛЬНО', label_en: '✓ IDEAL', ex: '一本书', note_uz: 'aniq sanash so\'zi', note_ru: 'точное СС', note_en: 'exact MW', color: '#16a34a' },
+                  { label_uz: '✓ HAM BO\'LADI', label_ru: '✓ ТОЖЕ МОЖНО', label_en: '✓ ALSO OK', ex: '一个书', note_uz: 'universal sanash so\'zi', note_ru: 'универсальное СС', note_en: 'universal MW', color: '#f59e0b' },
+                  { label_uz: '✗ XATO', label_ru: '✗ ОШИБКА', label_en: '✗ WRONG', ex: '一书', note_uz: 'Sanash so\'zi yo\'q!', note_ru: 'нет СС!', note_en: 'no MW!', color: '#ef4444', strike: true },
                 ].map((x, i) => (
                   <div key={i} style={{ flex: 1, background: '#fff8', borderRadius: 8, padding: 8, textAlign: 'center', border: `1px solid ${x.color}33` }}>
                     <div style={{ fontSize: 9, color: x.color, fontWeight: 700, marginBottom: 3 }}>{({ uz: x.label_uz, ru: x.label_ru, en: (x as any).label_en || x.label_uz } as Record<string, string>)[language]}</div>
@@ -264,20 +280,20 @@ export function GrammarLiangciPage() {
         {activeTab === 'usage' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '1. Son + 量词 + Ot', ru: '1. Число + СС + Существительное', en: '1. Son + 量词 + Ot' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '1. Son + 量词 + Ot', ru: '1. Число + СС + Существительное', en: '1. Number + MW + Noun' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
-                <span style={{ color: '#2563eb', fontWeight: 700 }}>{({ uz: 'Son', ru: 'Чис', en: 'Son' } as Record<string, string>)[language]}</span>
+                <span style={{ color: '#2563eb', fontWeight: 700 }}>{({ uz: 'Son', ru: 'Чис', en: 'Num' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span className="grammar-block__formula-verb">{({ uz: '量词', ru: 'СС', en: 'MW' } as Record<string, string>)[language]}</span>
                 {' + '}
                 <span style={{ color: '#1a1a2e' }}>{({ uz: 'Ot', ru: 'Сущ', en: 'Noun' } as Record<string, string>)[language]}</span>
               </div>
-              <p className="grammar-block__formula-desc">{({ uz: 'Narsalarni sanash', ru: 'Считаем предметы', en: 'Narsalarni sanash' } as Record<string, string>)[language]}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'Narsalarni sanash', ru: 'Считаем предметы', en: 'Counting things' } as Record<string, string>)[language]}</p>
               {[
-                { ex: '一个人', py: 'yí ge rén', uz: 'bitta odam', ru: 'один человек', mw: '个' },
-                { ex: '两本书', py: 'liǎng běn shū', uz: 'ikkita kitob', ru: 'две книги', mw: '本' },
-                { ex: '三杯水', py: 'sān bēi shuǐ', uz: 'uch stakan suv', ru: 'три стакана воды', mw: '杯' },
-                { ex: '五块钱', py: 'wǔ kuài qián', uz: 'besh yuan', ru: 'пять юаней', mw: '块' },
+                { ex: '一个人', py: 'yí ge rén', uz: 'bitta odam', ru: 'один человек', en: 'one person', mw: '个' },
+                { ex: '两本书', py: 'liǎng běn shū', uz: 'ikkita kitob', ru: 'две книги', en: 'two books', mw: '本' },
+                { ex: '三杯水', py: 'sān bēi shuǐ', uz: 'uch stakan suv', ru: 'три стакана воды', en: 'three glasses of water', mw: '杯' },
+                { ex: '五块钱', py: 'wǔ kuài qián', uz: 'besh yuan', ru: 'пять юаней', en: 'five yuan', mw: '块' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
@@ -293,13 +309,13 @@ export function GrammarLiangciPage() {
               <div className="grammar-block grammar-block--warning" style={{ marginTop: 8 }}>
                 <p className="grammar-block__tip-text">
                   ⚠️ <b>{({ uz: '两 vs 二:', ru: '两 vs 二:', en: '两 vs 二:' } as Record<string, string>)[language]}</b>{' '}
-                  {({ uz: '«Ikkita narsa» = 两 (liǎng) + sanash so\'zi. 二 (èr) faqat raqam sifatida (12, 20, 200...).', ru: '«Два предмета» = 两 (liǎng) + СС. 二 (èr) — только как цифра (12, 20, 200...).', en: '«Ikkita narsa» = 两 (liǎng) + sanash so\'zi. 二 (èr) faqat raqam sifatida (12, 20, 200...).' } as Record<string, string>)[language]}
+                  {({ uz: '«Ikkita narsa» = 两 (liǎng) + sanash so\'zi. 二 (èr) faqat raqam sifatida (12, 20, 200...).', ru: '«Два предмета» = 两 (liǎng) + СС. 二 (èr) — только как цифра (12, 20, 200...).', en: '"Two items" = 两 (liǎng) + MW. 二 (èr) is only used as a digit (12, 20, 200...).' } as Record<string, string>)[language]}
                 </p>
               </div>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '2. 这/那 + 量词 + Ot', ru: '2. 这/那 + СС + Существительное', en: '2. 这/那 + 量词 + Ot' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '2. 这/那 + 量词 + Ot', ru: '2. 这/那 + СС + Существительное', en: '2. 这/那 + MW + Noun' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span style={{ color: '#7c3aed', fontWeight: 700 }}>这/那</span>
                 {' + '}
@@ -308,13 +324,13 @@ export function GrammarLiangciPage() {
                 <span style={{ color: '#1a1a2e' }}>{({ uz: 'Ot', ru: 'Сущ', en: 'Noun' } as Record<string, string>)[language]}</span>
               </div>
               <p className="grammar-block__formula-desc">
-                {({ uz: 'Bu / anavi — ko\'rsatish olmoshi bilan', ru: 'Этот / тот — с указательными местоимениями', en: 'Bu / anavi — ko\'rsatish olmoshi bilan' } as Record<string, string>)[language]}
+                {({ uz: 'Bu / anavi — ko\'rsatish olmoshi bilan', ru: 'Этот / тот — с указательными местоимениями', en: 'This / that — with demonstrative pronouns' } as Record<string, string>)[language]}
               </p>
               {[
-                { ex: '这个人', py: 'zhège rén', uz: 'bu odam', ru: 'этот человек', note_uz: '这 + 个 = bu (odam)', note_ru: '这 + 个 = этот (человек)' },
-                { ex: '那本书', py: 'nà běn shū', uz: 'anavi kitob', ru: 'та книга', note_uz: '那 + 本 = anavi (kitob)', note_ru: '那 + 本 = та (книга)' },
-                { ex: '这杯茶', py: 'zhè bēi chá', uz: 'bu (stakan) choy', ru: 'эта чашка чая', note_uz: '这 + 杯 = bu (stakan choy)', note_ru: '这 + 杯 = эта (чашка чая)' },
-                { ex: '那件衣服', py: 'nà jiàn yīfu', uz: 'anavi kiyim', ru: 'та одежда', note_uz: '那 + 件 = anavi (kiyim)', note_ru: '那 + 件 = та (одежда)' },
+                { ex: '这个人', py: 'zhège rén', uz: 'bu odam', ru: 'этот человек', en: 'this person', note_uz: '这 + 个 = bu (odam)', note_ru: '这 + 个 = этот (человек)', note_en: '这 + 个 = this (person)' },
+                { ex: '那本书', py: 'nà běn shū', uz: 'anavi kitob', ru: 'та книга', en: 'that book', note_uz: '那 + 本 = anavi (kitob)', note_ru: '那 + 本 = та (книга)', note_en: '那 + 本 = that (book)' },
+                { ex: '这杯茶', py: 'zhè bēi chá', uz: 'bu (stakan) choy', ru: 'эта чашка чая', en: 'this cup of tea', note_uz: '这 + 杯 = bu (stakan choy)', note_ru: '这 + 杯 = эта (чашка чая)', note_en: '这 + 杯 = this (cup of tea)' },
+                { ex: '那件衣服', py: 'nà jiàn yīfu', uz: 'anavi kiyim', ru: 'та одежда', en: 'that piece of clothing', note_uz: '那 + 件 = anavi (kiyim)', note_ru: '那 + 件 = та (одежда)', note_en: '那 + 件 = that (clothing)' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-zh">{x.ex}</div>
@@ -324,12 +340,12 @@ export function GrammarLiangciPage() {
                 </div>
               ))}
               <p className="grammar-block__tip-note">
-                💡 <b>这/那</b> {({ uz: 'bilan ham sanash so\'zi majburiy!', ru: 'тоже требуют СС!', en: 'bilan ham sanash so\'zi majburiy!' } as Record<string, string>)[language]} 这书 ✗ → 这<b>本</b>书 ✓
+                💡 <b>这/那</b> {({ uz: 'bilan ham sanash so\'zi majburiy!', ru: 'тоже требуют СС!', en: 'also require a measure word!' } as Record<string, string>)[language]} 这书 ✗ → 这<b>本</b>书 ✓
               </p>
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '3. 几 + 量词 + Ot (savol)', ru: '3. 几 + СС + Существительное (вопрос)', en: '3. 几 + 量词 + Ot (savol)' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '3. 几 + 量词 + Ot (savol)', ru: '3. 几 + СС + Существительное (вопрос)', en: '3. 几 + MW + Noun (question)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span style={{ color: '#4f46e5', fontWeight: 700 }}>几</span>
                 {' + '}
@@ -338,11 +354,11 @@ export function GrammarLiangciPage() {
                 <span style={{ color: '#1a1a2e' }}>{({ uz: 'Ot', ru: 'Сущ', en: 'Noun' } as Record<string, string>)[language]}</span>
                 {' ？'}
               </div>
-              <p className="grammar-block__formula-desc">{({ uz: 'Nechta? — sonni so\'rash', ru: 'Сколько? — спрашиваем количество', en: 'Nechta? — sonni so\'rash' } as Record<string, string>)[language]}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'Nechta? — sonni so\'rash', ru: 'Сколько? — спрашиваем количество', en: 'How many? — asking about quantity' } as Record<string, string>)[language]}</p>
               {[
-                { ex: '几个人？', py: 'Jǐ ge rén?', uz: 'Nechta odam?', ru: 'Сколько человек?' },
-                { ex: '几杯咖啡？', py: 'Jǐ bēi kāfēi?', uz: 'Nechta qahva?', ru: 'Сколько чашек кофе?' },
-                { ex: '几本书？', py: 'Jǐ běn shū?', uz: 'Nechta kitob?', ru: 'Сколько книг?' },
+                { ex: '几个人？', py: 'Jǐ ge rén?', uz: 'Nechta odam?', ru: 'Сколько человек?', en: 'How many people?' },
+                { ex: '几杯咖啡？', py: 'Jǐ bēi kāfēi?', uz: 'Nechta qahva?', ru: 'Сколько чашек кофе?', en: 'How many cups of coffee?' },
+                { ex: '几本书？', py: 'Jǐ běn shū?', uz: 'Nechta kitob?', ru: 'Сколько книг?', en: 'How many books?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-zh">{x.ex}</div>
@@ -353,14 +369,14 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '4. 一 + 量词 = «bitta» (umumlashgan)', ru: '4. 一 + СС = «один» (обобщённо)', en: '4. 一 + 量词 = «bitta» (umumlashgan)' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '4. 一 + 量词 = «bitta» (umumlashgan)', ru: '4. 一 + СС = «один» (обобщённо)', en: '4. 一 + MW = "a/one" (generalized)' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {({ uz: '一 + 量词 ko\'pincha «biror» ma\'nosida — aniq son emas, umumiy:', ru: '一 + СС часто означает «один/какой-то» — не точное число, а обобщение:', en: '一 + 量词 ko\'pincha «biror» ma\'nosida — aniq son emas, umumiy:' } as Record<string, string>)[language]}
+                {({ uz: '一 + 量词 ko\'pincha «biror» ma\'nosida — aniq son emas, umumiy:', ru: '一 + СС часто означает «один/какой-то» — не точное число, а обобщение:', en: '一 + MW often means "a/some" — not an exact number, but a generalization:' } as Record<string, string>)[language]}
               </p>
               {[
-                { ex: '我有一个问题。', py: 'Wǒ yǒu yí ge wèntí.', uz: 'Mening bitta savolim bor.', ru: 'У меня есть один вопрос.' },
-                { ex: '给我一杯水。', py: 'Gěi wǒ yì bēi shuǐ.', uz: 'Menga bir stakan suv bering.', ru: 'Дайте мне стакан воды.' },
-                { ex: '他是一个好人。', py: 'Tā shì yí ge hǎo rén.', uz: 'U yaxshi odam.', ru: 'Он хороший человек.' },
+                { ex: '我有一个问题。', py: 'Wǒ yǒu yí ge wèntí.', uz: 'Mening bitta savolim bor.', ru: 'У меня есть один вопрос.', en: 'I have a question.' },
+                { ex: '给我一杯水。', py: 'Gěi wǒ yì bēi shuǐ.', uz: 'Menga bir stakan suv bering.', ru: 'Дайте мне стакан воды.', en: 'Give me a glass of water.' },
+                { ex: '他是一个好人。', py: 'Tā shì yí ge hǎo rén.', uz: 'U yaxshi odam.', ru: 'Он хороший человек.', en: 'He is a good person.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-zh">{x.ex}</div>
@@ -371,7 +387,7 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: '5. 些 — noma\'lum miqdor (biroz/ba\'zi)', ru: '5. 些 — неопределённое количество', en: '5. 些 — noma\'lum miqdor (biroz/ba\'zi)' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: '5. 些 — noma\'lum miqdor (biroz/ba\'zi)', ru: '5. 些 — неопределённое количество', en: '5. 些 — indefinite quantity (some/a few)' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span style={{ color: '#7c3aed', fontWeight: 700 }}>一/这/那</span>
                 {' + '}
@@ -380,10 +396,10 @@ export function GrammarLiangciPage() {
                 <span style={{ color: '#1a1a2e' }}>{({ uz: 'Ot', ru: 'Сущ', en: 'Noun' } as Record<string, string>)[language]}</span>
               </div>
               {[
-                { ex: '一些水', py: 'yìxiē shuǐ', uz: 'biroz suv', ru: 'немного воды' },
-                { ex: '这些人', py: 'zhèxiē rén', uz: 'bu odamlar (bular)', ru: 'эти люди' },
-                { ex: '那些书', py: 'nàxiē shū', uz: 'anavi kitoblar', ru: 'те книги' },
-                { ex: '有一些问题。', py: 'Yǒu yìxiē wèntí.', uz: 'Ba\'zi muammolar bor.', ru: 'Есть некоторые проблемы.' },
+                { ex: '一些水', py: 'yìxiē shuǐ', uz: 'biroz suv', ru: 'немного воды', en: 'some water' },
+                { ex: '这些人', py: 'zhèxiē rén', uz: 'bu odamlar (bular)', ru: 'эти люди', en: 'these people' },
+                { ex: '那些书', py: 'nàxiē shū', uz: 'anavi kitoblar', ru: 'те книги', en: 'those books' },
+                { ex: '有一些问题。', py: 'Yǒu yìxiē wèntí.', uz: 'Ba\'zi muammolar bor.', ru: 'Есть некоторые проблемы.', en: 'There are some problems.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-zh">{x.ex}</div>
@@ -392,9 +408,9 @@ export function GrammarLiangciPage() {
                 </div>
               ))}
               <p className="grammar-block__tip-note">
-                💡 <b>些</b> = {({ uz: 'noaniq miqdor.', ru: 'неопределённое количество.', en: 'noaniq miqdor.' } as Record<string, string>)[language]}{' '}
-                <b>这些</b> = {({ uz: 'bular,', ru: 'эти,', en: 'bular,' } as Record<string, string>)[language]}{' '}
-                <b>那些</b> = {({ uz: 'anular — ko\'plik ko\'rsatadi!', ru: 'те — выражают множественное число!', en: 'anular — ko\'plik ko\'rsatadi!' } as Record<string, string>)[language]}
+                💡 <b>些</b> = {({ uz: 'noaniq miqdor.', ru: 'неопределённое количество.', en: 'indefinite quantity.' } as Record<string, string>)[language]}{' '}
+                <b>这些</b> = {({ uz: 'bular,', ru: 'эти,', en: 'these,' } as Record<string, string>)[language]}{' '}
+                <b>那些</b> = {({ uz: 'anular — ko\'plik ko\'rsatadi!', ru: 'те — выражают множественное число!', en: 'those — they express plural!' } as Record<string, string>)[language]}
               </p>
             </div>
           </>
@@ -426,14 +442,14 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Mini dialog 1: Kaféda', ru: 'Диалог: В кафе', en: 'Mini dialog 1: Kaféda' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Mini dialog 1: Kaféda', ru: 'Диалог: В кафе', en: 'Mini Dialogue 1: At a Cafe' } as Record<string, string>)[language]}</div>
               <div style={{ background: '#f5f5f8', borderRadius: 8, padding: 12 }}>
                 {[
-                  { speaker: 'A', color: '#2563eb', zh: '你好！要喝什么？', py: 'Nǐ hǎo! Yào hē shénme?', uz: 'Salom! Nima ichsiz?', ru: 'Здравствуйте! Что будете пить?' },
-                  { speaker: 'B', color: COLOR, zh: '两杯咖啡，一杯茶。', py: 'Liǎng bēi kāfēi, yì bēi chá.', uz: 'Ikkita qahva, bitta choy.', ru: 'Два кофе, один чай.' },
-                  { speaker: 'A', color: '#2563eb', zh: '好的。还要别的吗？', py: 'Hǎo de. Hái yào bié de ma?', uz: 'Bo\'pti. Yana boshqa nima?', ru: 'Хорошо. Что-то ещё?' },
-                  { speaker: 'B', color: COLOR, zh: '再要三块蛋糕。多少钱？', py: 'Zài yào sān kuài dàngāo. Duōshǎo qián?', uz: 'Yana uchta tort. Qancha turadi?', ru: 'Ещё три пирожных. Сколько стоит?' },
-                  { speaker: 'A', color: '#2563eb', zh: '一共八十五块。', py: 'Yígòng bāshíwǔ kuài.', uz: 'Jami sakson besh yuan.', ru: 'Итого восемьдесят пять юаней.' },
+                  { speaker: 'A', color: '#2563eb', zh: '你好！要喝什么？', py: 'Nǐ hǎo! Yào hē shénme?', uz: 'Salom! Nima ichsiz?', ru: 'Здравствуйте! Что будете пить?', en: 'Hello! What would you like to drink?' },
+                  { speaker: 'B', color: COLOR, zh: '两杯咖啡，一杯茶。', py: 'Liǎng bēi kāfēi, yì bēi chá.', uz: 'Ikkita qahva, bitta choy.', ru: 'Два кофе, один чай.', en: 'Two coffees, one tea.' },
+                  { speaker: 'A', color: '#2563eb', zh: '好的。还要别的吗？', py: 'Hǎo de. Hái yào bié de ma?', uz: 'Bo\'pti. Yana boshqa nima?', ru: 'Хорошо. Что-то ещё?', en: 'Sure. Anything else?' },
+                  { speaker: 'B', color: COLOR, zh: '再要三块蛋糕。多少钱？', py: 'Zài yào sān kuài dàngāo. Duōshǎo qián?', uz: 'Yana uchta tort. Qancha turadi?', ru: 'Ещё три пирожных. Сколько стоит?', en: 'Also three cakes. How much is it?' },
+                  { speaker: 'A', color: '#2563eb', zh: '一共八十五块。', py: 'Yígòng bāshíwǔ kuài.', uz: 'Jami sakson besh yuan.', ru: 'Итого восемьдесят пять юаней.', en: 'Eighty-five yuan total.' },
                 ].map((line, i, arr) => (
                   <div key={i} style={{ marginBottom: i < arr.length - 1 ? 10 : 0 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 2 }}>
@@ -448,13 +464,13 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Mini dialog 2: Kutubxonada', ru: 'Диалог: В библиотеке', en: 'Mini dialog 2: Kutubxonada' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Mini dialog 2: Kutubxonada', ru: 'Диалог: В библиотеке', en: 'Mini Dialogue 2: At the Library' } as Record<string, string>)[language]}</div>
               <div style={{ background: '#f5f5f8', borderRadius: 8, padding: 12 }}>
                 {[
-                  { speaker: 'A', color: '#2563eb', zh: '你要借几本书？', py: 'Nǐ yào jiè jǐ běn shū?', uz: 'Nechta kitob olmoqchisan?', ru: 'Сколько книг хочешь взять?' },
-                  { speaker: 'B', color: COLOR, zh: '三本。这本和那两本。', py: 'Sān běn. Zhè běn hé nà liǎng běn.', uz: 'Uchta. Bu va anavi ikkita.', ru: 'Три. Эту и те две.' },
-                  { speaker: 'A', color: '#2563eb', zh: '好。你还有几本没还？', py: 'Hǎo. Nǐ hái yǒu jǐ běn méi huán?', uz: 'Yaxshi. Hali nechta qaytarmagan kitobing bor?', ru: 'Хорошо. Сколько книг у тебя не возвращено?' },
-                  { speaker: 'B', color: COLOR, zh: '一本，明天还。', py: 'Yì běn, míngtiān huán.', uz: 'Bitta, ertaga qaytaraman.', ru: 'Одна, завтра верну.' },
+                  { speaker: 'A', color: '#2563eb', zh: '你要借几本书？', py: 'Nǐ yào jiè jǐ běn shū?', uz: 'Nechta kitob olmoqchisan?', ru: 'Сколько книг хочешь взять?', en: 'How many books do you want to borrow?' },
+                  { speaker: 'B', color: COLOR, zh: '三本。这本和那两本。', py: 'Sān běn. Zhè běn hé nà liǎng běn.', uz: 'Uchta. Bu va anavi ikkita.', ru: 'Три. Эту и те две.', en: 'Three. This one and those two.' },
+                  { speaker: 'A', color: '#2563eb', zh: '好。你还有几本没还？', py: 'Hǎo. Nǐ hái yǒu jǐ běn méi huán?', uz: 'Yaxshi. Hali nechta qaytarmagan kitobing bor?', ru: 'Хорошо. Сколько книг у тебя не возвращено?', en: 'OK. How many books haven\'t you returned?' },
+                  { speaker: 'B', color: COLOR, zh: '一本，明天还。', py: 'Yì běn, míngtiān huán.', uz: 'Bitta, ertaga qaytaraman.', ru: 'Одна, завтра верну.', en: 'One, I\'ll return it tomorrow.' },
                 ].map((line, i, arr) => (
                   <div key={i} style={{ marginBottom: i < arr.length - 1 ? 10 : 0 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 2 }}>
@@ -469,12 +485,12 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block grammar-block--warning">
-              <div className="grammar-block__label">{({ uz: 'Ko\'p uchraydigan xatolar', ru: 'Типичные ошибки', en: 'Ko\'p uchraydigan xatolar' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Ko\'p uchraydigan xatolar', ru: 'Типичные ошибки', en: 'Common Mistakes' } as Record<string, string>)[language]}</div>
               {[
-                { wrong: '三书', right: '三本书', note_uz: 'Sanash so\'zi tushib qolgan!', note_ru: 'Пропущено СС!' },
-                { wrong: '这书', right: '这本书', note_uz: '这 dan keyin sanash so\'zi kerak!', note_ru: 'После 这 нужно СС!' },
-                { wrong: '二个人', right: '两个人', note_uz: 'Sanash so\'zi bilan 两 ishlatiladi, 二 emas!', note_ru: 'С СС используется 两, не 二!' },
-                { wrong: '一些个问题', right: '一些问题', note_uz: '些 o\'zi sanash so\'zi — yana sanash so\'zi qo\'shmang!', note_ru: '些 уже СС — не добавляйте ещё одно!' },
+                { wrong: '三书', right: '三本书', note_uz: 'Sanash so\'zi tushib qolgan!', note_ru: 'Пропущено СС!', note_en: 'Missing MW!' },
+                { wrong: '这书', right: '这本书', note_uz: '这 dan keyin sanash so\'zi kerak!', note_ru: 'После 这 нужно СС!', note_en: 'MW needed after 这!' },
+                { wrong: '二个人', right: '两个人', note_uz: 'Sanash so\'zi bilan 两 ishlatiladi, 二 emas!', note_ru: 'С СС используется 两, не 二!', note_en: 'Use 两 with MW, not 二!' },
+                { wrong: '一些个问题', right: '一些问题', note_uz: '些 o\'zi sanash so\'zi — yana sanash so\'zi qo\'shmang!', note_ru: '些 уже СС — не добавляйте ещё одно!', note_en: '些 is already a MW — don\'t add another!' },
               ].map((x, i) => (
                 <div key={i} style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
                   <div style={{ flex: 1, background: '#fee2e2', borderRadius: 8, padding: 8, textAlign: 'center' }}>
@@ -496,7 +512,7 @@ export function GrammarLiangciPage() {
         {activeTab === 'list' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'HSK 1 量词 to\'liq jadvali', ru: 'Таблица 量词 для HSK 1', en: 'HSK 1 量词 to\'liq jadvali' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'HSK 1 量词 to\'liq jadvali', ru: 'Таблица 量词 для HSK 1', en: 'Complete HSK 1 量词 Table' } as Record<string, string>)[language]}</div>
               {mwList.map((mw, i) => (
                 <div key={i} style={{
                   background: '#f5f5f8', borderRadius: 8, padding: 10, marginBottom: 6,
@@ -520,22 +536,22 @@ export function GrammarLiangciPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Sanash so\'zi tanlash yo\'l xaritasi', ru: 'Как выбрать СС?', en: 'Sanash so\'zi tanlash yo\'l xaritasi' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Sanash so\'zi tanlash yo\'l xaritasi', ru: 'Как выбрать СС?', en: 'How to Choose a Measure Word?' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {({ uz: 'Qanday sanash so\'zi tanlash kerak? Shakl va turga qarang:', ru: 'Смотрите на форму и тип предмета:', en: 'Qanday sanash so\'zi tanlash kerak? Shakl va turga qarang:' } as Record<string, string>)[language]}
+                {({ uz: 'Qanday sanash so\'zi tanlash kerak? Shakl va turga qarang:', ru: 'Смотрите на форму и тип предмета:', en: 'Look at the shape and type of the object:' } as Record<string, string>)[language]}
               </p>
               <div style={{ marginTop: 8, fontSize: 11 }}>
                 {[
-                  { q_uz: 'Odam, narsa?', q_ru: 'Человек, предмет?', a: '个 (universal)', color: '#ef4444' },
-                  { q_uz: 'Kitob, daftar?', q_ru: 'Книга, тетрадь?', a: '本', color: '#f59e0b' },
-                  { q_uz: 'Ichimlik (stakanda)?', q_ru: 'Напиток (в стакане)?', a: '杯', color: '#059669' },
-                  { q_uz: 'Pul (yuan)?', q_ru: 'Деньги (юань)?', a: '块', color: '#d97706' },
-                  { q_uz: 'Kiyim, hodisa?', q_ru: 'Одежда, событие?', a: '件', color: '#4f46e5' },
-                  { q_uz: 'Kichik hayvon?', q_ru: 'Маленькое животное?', a: '只', color: '#e11d48' },
-                  { q_uz: 'Transport?', q_ru: 'Транспорт?', a: '辆', color: '#059669' },
-                  { q_uz: 'Yassi narsa (stol, qog\'oz)?', q_ru: 'Плоский предмет (стол, бумага)?', a: '张', color: '#2563eb' },
-                  { q_uz: 'Uzun narsa (ko\'cha, baliq)?', q_ru: 'Длинный предмет (дорога, рыба)?', a: '条', color: '#b45309' },
-                  { q_uz: 'Bilmayman!', q_ru: 'Не знаю!', a: ({ uz: '个 ishlating! ✓', ru: '个 — можно! ✓', en: '个 ishlating! ✓' } as Record<string, string>)[language], color: '#16a34a' },
+                  { q_uz: 'Odam, narsa?', q_ru: 'Человек, предмет?', q_en: 'Person, thing?', a: '个 (universal)', color: '#ef4444' },
+                  { q_uz: 'Kitob, daftar?', q_ru: 'Книга, тетрадь?', q_en: 'Book, notebook?', a: '本', color: '#f59e0b' },
+                  { q_uz: 'Ichimlik (stakanda)?', q_ru: 'Напиток (в стакане)?', q_en: 'Drink (in a cup)?', a: '杯', color: '#059669' },
+                  { q_uz: 'Pul (yuan)?', q_ru: 'Деньги (юань)?', q_en: 'Money (yuan)?', a: '块', color: '#d97706' },
+                  { q_uz: 'Kiyim, hodisa?', q_ru: 'Одежда, событие?', q_en: 'Clothing, event?', a: '件', color: '#4f46e5' },
+                  { q_uz: 'Kichik hayvon?', q_ru: 'Маленькое животное?', q_en: 'Small animal?', a: '只', color: '#e11d48' },
+                  { q_uz: 'Transport?', q_ru: 'Транспорт?', q_en: 'Vehicle?', a: '辆', color: '#059669' },
+                  { q_uz: 'Yassi narsa (stol, qog\'oz)?', q_ru: 'Плоский предмет (стол, бумага)?', q_en: 'Flat object (table, paper)?', a: '张', color: '#2563eb' },
+                  { q_uz: 'Uzun narsa (ko\'cha, baliq)?', q_ru: 'Длинный предмет (дорога, рыба)?', q_en: 'Long object (road, fish)?', a: '条', color: '#b45309' },
+                  { q_uz: 'Bilmayman!', q_ru: 'Не знаю!', q_en: 'Don\'t know!', a: ({ uz: '个 ishlating! ✓', ru: '个 — можно! ✓', en: 'use 个! ✓' } as Record<string, string>)[language], color: '#16a34a' },
                 ].map((r, i) => (
                   <div key={i} style={{
                     display: 'flex', alignItems: 'center', gap: 6,

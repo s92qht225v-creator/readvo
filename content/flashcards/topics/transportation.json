@@ -10,77 +10,89 @@
       "text_original": "飞机",
       "pinyin": "fēijī",
       "text_translation": "samolyot",
-      "text_translation_ru": "самолёт"
+      "text_translation_ru": "самолёт",
+      "text_translation_en": "airplane"
     },
     {
       "id": "tp-trn-02",
       "text_original": "机场",
       "pinyin": "jīchǎng",
       "text_translation": "aeroport",
-      "text_translation_ru": "аэропорт"
+      "text_translation_ru": "аэропорт",
+      "text_translation_en": "airport"
     },
     {
       "id": "tp-trn-03",
       "text_original": "航班",
       "pinyin": "hángbān",
       "text_translation": "reys (samolyot)",
-      "text_translation_ru": "рейс; авиарейс"
+      "text_translation_ru": "рейс; авиарейс",
+      "text_translation_en": "flight"
     },
     {
       "id": "tp-trn-04",
       "text_original": "火车",
       "pinyin": "huǒchē",
       "text_translation": "poyezd",
-      "text_translation_ru": "поезд"
+      "text_translation_ru": "поезд",
+      "text_translation_en": "train"
     },
     {
       "id": "tp-trn-05",
       "text_original": "高铁",
       "pinyin": "gāotiě",
       "text_translation": "tezkor poyezd",
-      "text_translation_ru": "скоростной поезд"
+      "text_translation_ru": "скоростной поезд",
+      "text_translation_en": "high-speed train"
     },
     {
       "id": "tp-trn-06",
       "text_original": "地铁",
       "pinyin": "dìtiě",
       "text_translation": "metro",
-      "text_translation_ru": "метро"
+      "text_translation_ru": "метро",
+      "text_translation_en": "subway; metro"
     },
     {
       "id": "tp-trn-07",
       "text_original": "公交车",
       "pinyin": "gōngjiāochē",
       "text_translation": "avtobus",
-      "text_translation_ru": "автобус"
+      "text_translation_ru": "автобус",
+      "text_translation_en": "bus"
     },
     {
       "id": "tp-trn-08",
       "text_original": "出租车",
       "pinyin": "chūzūchē",
       "text_translation": "taksi",
-      "text_translation_ru": "такси"
+      "text_translation_ru": "такси",
+      "text_translation_en": "taxi"
     },
     {
       "id": "tp-trn-09",
       "text_original": "自行车",
       "pinyin": "zìxíngchē",
       "text_translation": "velosiped",
-      "text_translation_ru": "велосипед"
+      "text_translation_ru": "велосипед",
+      "text_translation_en": "bicycle"
     },
     {
       "id": "tp-trn-10",
       "text_original": "摩托车",
       "pinyin": "mótuōchē",
       "text_translation": "mototsikl",
-      "text_translation_ru": "мотоцикл"
+      "text_translation_ru": "мотоцикл",
+      "text_translation_en": "motorcycle"
     },
     {
       "id": "tp-trn-11",
       "text_original": "轮船",
       "pinyin": "lúnchuán",
       "text_translation": "kema; paroxod",
-      "text_translation_ru": "корабль; пароход"
+      "text_translation_ru": "корабль; пароход",
+      "text_translation_en": "ship; steamship"
     }
-  ]
+  ],
+  "title_en": "Transportation"
 }

@@ -36,6 +36,7 @@ interface StorySentence {
   pinyin: string;
   text_translation: string;
   text_translation_ru: string;
+  text_translation_en?: string;
   speaker?: string;
   start?: number;
   end?: number;
@@ -78,118 +79,19 @@ function RubyChar({ char, py, showPinyin }: { char: string; py?: string; showPin
   return <span>{char}</span>;
 }
 
-function RubyText({ text, pinyin, showPinyin, words, activeWordIdx, onWordPress, onWordRelease }: {
+function RubyText({ text, pinyin, showPinyin }: {
   text: string;
   pinyin: string;
   showPinyin: boolean;
-  words?: StoryWord[];
-  activeWordIdx?: number | null;
-  onWordPress?: (wordIdx: number) => void;
-  onWordRelease?: () => void;
 }) {
   const pairs = alignPinyinToText(text, pinyin);
-  const pressTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const longPressFiredRef = useRef(false);
-
-  // Build a map: charIndex → wordIndex (for grouping ruby pairs into words)
-  const charToWord = useMemo(() => {
-    if (!words || words.length === 0) return null;
-    const map = new Map<number, number>();
-    words.forEach((w, wi) => {
-      for (let c = w.i[0]; c < w.i[1]; c++) {
-        map.set(c, wi);
-      }
-    });
-    return map;
-  }, [words]);
-
-  // Track character index as we iterate pairs
-  // Each pair.char can be 1 char (normal) or 2 chars (erhua like 玩儿)
-  const elements: React.ReactNode[] = [];
-  let charIdx = 0;
-
-  if (!charToWord || !words || !onWordPress) {
-    // No word data — render plain ruby pairs
-    pairs.forEach((pair, i) => {
-      elements.push(<RubyChar key={i} char={pair.char} py={pair.pinyin} showPinyin={showPinyin} />);
-    });
-  } else {
-    // Group pairs by word
-    let currentWordIdx: number | undefined;
-    let wordPairs: { pair: typeof pairs[0]; idx: number }[] = [];
-
-    const flushWord = () => {
-      if (wordPairs.length === 0) return;
-      const wIdx = currentWordIdx;
-      if (wIdx !== undefined) {
-        const wordKey = `w${wIdx}`;
-        elements.push(
-          <span
-            key={wordKey}
-            className={`story__word ${activeWordIdx === wIdx ? 'story__word--active' : ''}`}
-            onContextMenu={(e) => e.preventDefault()}
-            onPointerDown={(e) => {
-              e.stopPropagation();
-              longPressFiredRef.current = false;
-              pressTimerRef.current = setTimeout(() => {
-                longPressFiredRef.current = true;
-                onWordPress(wIdx);
-                pressTimerRef.current = null;
-              }, 300);
-            }}
-            onPointerUp={() => {
-              if (pressTimerRef.current) {
-                clearTimeout(pressTimerRef.current);
-                pressTimerRef.current = null;
-              }
-              if (longPressFiredRef.current) {
-                longPressFiredRef.current = false;
-                onWordRelease?.();
-              }
-            }}
-            onPointerCancel={() => {
-              if (pressTimerRef.current) {
-                clearTimeout(pressTimerRef.current);
-                pressTimerRef.current = null;
-              }
-              if (longPressFiredRef.current) {
-                longPressFiredRef.current = false;
-                onWordRelease?.();
-              }
-            }}
-            onPointerLeave={() => {
-              if (pressTimerRef.current) {
-                clearTimeout(pressTimerRef.current);
-                pressTimerRef.current = null;
-              }
-            }}
-          >
-            {wordPairs.map((wp) => (
-              <RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} showPinyin={showPinyin} />
-            ))}
-          </span>
-        );
-      } else {
-        wordPairs.forEach((wp) => {
-          elements.push(<RubyChar key={wp.idx} char={wp.pair.char} py={wp.pair.pinyin} showPinyin={showPinyin} />);
-        });
-      }
-      wordPairs = [];
-    };
-
-    pairs.forEach((pair, i) => {
-      const wIdx = charToWord.get(charIdx);
-      if (wIdx !== currentWordIdx) {
-        flushWord();
-        currentWordIdx = wIdx;
-      }
-      wordPairs.push({ pair, idx: i });
-      charIdx += pair.char.length;
-    });
-    flushWord();
-  }
-
-  return <>{elements}</>;
+  return (
+    <>
+      {pairs.map((pair, i) => (
+        <RubyChar key={i} char={pair.char} py={pair.pinyin} showPinyin={showPinyin} />
+      ))}
+    </>
+  );
 }
 
 function formatTime(seconds: number): string {
@@ -207,15 +109,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const [fontSize, setFontSize] = useState(100);
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
   const [focusMode, setFocusMode] = useState(false);
-  const [activeWord, setActiveWord] = useState<{ sentenceId: string; wordIdx: number } | null>(null);
-  const [showWordHint, setShowWordHint] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return !localStorage.getItem('blim-word-hint-seen');
-    }
-    return false;
-  });
-  const longPressedRef = useRef(false);
-  const audioPausedByWordRef = useRef(false);
   // Per-sentence audio player (singleton, tap-to-play)
   const sentenceAudio = useAudioPlayer();
   // Full-story audio state
@@ -300,12 +193,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
     : null;
 
   const handleSentenceClick = useCallback((id: string) => {
-    // Skip if this click follows a long-press (word press already handled it)
-    if (longPressedRef.current) {
-      longPressedRef.current = false;
-      return;
-    }
-    setActiveWord(null);
     setActiveSentenceId((prev) => {
       // In focus mode, never deselect (view would collapse)
       if (focusMode) return id;
@@ -324,26 +211,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
     }
   }, [focusMode, allSentences, isPlaying, sentenceAudio]);
 
-  const handleWordPress = useCallback((sentenceId: string, wordIdx: number) => {
-    longPressedRef.current = true;
-    // Pause audio if playing so word translation shows cleanly
-    if (audioRef.current && isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-      audioPausedByWordRef.current = true;
-    }
-    setActiveWord({ sentenceId, wordIdx });
-    setActiveSentenceId(sentenceId);
-  }, [isPlaying]);
-
-  const handleWordRelease = useCallback(() => {
-    setActiveWord(null);
-    // Resume audio if it was paused by the word press
-    if (audioPausedByWordRef.current && audioRef.current) {
-      audioPausedByWordRef.current = false;
-      audioRef.current.play().catch(() => {});
-    }
-  }, []);
 
   // Focus mode: navigate to next/prev sentence
   const handleFocusNav = useCallback((direction: 'prev' | 'next') => {
@@ -474,32 +341,10 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
 
       <h1 className="sr-only">{story.title}</h1>
 
-      {showWordHint && (
-        <div
-          className="story__word-hint"
-          onClick={() => {
-            setShowWordHint(false);
-            localStorage.setItem('blim-word-hint-seen', '1');
-          }}
-        >
-          {({ uz: "So'zni bosib turing — tarjimani ko'ring", ru: 'Удерживайте слово — увидите перевод', en: 'Hold a word to see its translation' } as Record<string, string>)[language]}
-        </div>
-      )}
-
-      {activeSentence && (showTranslation || activeWord) && (
+      {activeSentence && showTranslation && (
         <div className="story__translation-panel">
           <p className="story__translation-panel-text">
-            {(() => {
-              if (activeWord && activeWord.sentenceId === activeSentence.id) {
-                const word = activeSentence.words?.[activeWord.wordIdx];
-                if (word) {
-                  const chars = activeSentence.text_original.slice(word.i[0], word.i[1]);
-                  const translation = language === 'ru' ? word.tr : word.t;
-                  return <><strong>{chars}</strong> {word.p} — {translation}{word.h ? <span className="story__word-hsk">HSK {word.h}</span> : null}{word.l ? <span className="story__word-hsk">{word.l}-{({ uz: 'dars', ru: 'урок', en: 'lesson' } as Record<string, string>)[language]}</span> : null}</>;
-                }
-              }
-              return language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation;
-            })()}
+            {language === 'ru' ? activeSentence.text_translation_ru : language === 'en' ? (activeSentence.text_translation_en || activeSentence.text_translation) : activeSentence.text_translation}
           </p>
         </div>
       )}
@@ -520,10 +365,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
                     text={activeSentence.text_original}
                     pinyin={activeSentence.pinyin}
                     showPinyin={showPinyin}
-                    words={activeSentence.words}
-                    activeWordIdx={activeWord?.sentenceId === activeSentence.id ? activeWord.wordIdx : null}
-                    onWordPress={(idx) => handleWordPress(activeSentence.id, idx)}
-                    onWordRelease={handleWordRelease}
                   />
                 </span>
               </div>
@@ -588,10 +429,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
                         text={s.text_original}
                         pinyin={s.pinyin}
                         showPinyin={showPinyin}
-                        words={s.words}
-                        activeWordIdx={activeWord?.sentenceId === s.id ? activeWord.wordIdx : null}
-                        onWordPress={(idx) => handleWordPress(s.id, idx)}
-                        onWordRelease={handleWordRelease}
                       />
                     </span>
                   </div>
@@ -609,10 +446,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
                           text={s.text_original}
                           pinyin={s.pinyin}
                           showPinyin={showPinyin}
-                          words={s.words}
-                          activeWordIdx={activeWord?.sentenceId === s.id ? activeWord.wordIdx : null}
-                          onWordPress={(idx) => handleWordPress(s.id, idx)}
-                          onWordRelease={handleWordRelease}
                         />
                       </span>
                     </React.Fragment>

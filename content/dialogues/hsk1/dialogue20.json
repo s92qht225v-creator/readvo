@@ -87,7 +87,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue1.mp3",
+          "text_translation_en": "My phone is out of battery."
         },
         {
           "id": "d20-s2",
@@ -129,7 +130,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue2.mp3",
+          "text_translation_en": "Do you have a charger?"
         },
         {
           "id": "d20-s3",
@@ -151,7 +153,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue3.mp3",
+          "text_translation_en": "No."
         },
         {
           "id": "d20-s4",
@@ -204,7 +207,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue4.mp3",
+          "text_translation_en": "Use mine."
         },
         {
           "id": "d20-s5",
@@ -226,7 +230,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue5.mp3",
+          "text_translation_en": "Thank you."
         },
         {
           "id": "d20-s6",
@@ -259,7 +264,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue6.mp3",
+          "text_translation_en": "You're welcome."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3"
@@ -277,20 +283,77 @@
       "ex": "我的手机要充电了。",
       "expy": "Wǒ de shǒujī yào chōngdiàn le.",
       "ex_uz": "Telefonimni zaryadka qilishim kerak.",
-      "ex_ru": "Мне нужно зарядить телефон."
+      "ex_ru": "Мне нужно зарядить телефон.",
+      "en": "to charge",
+      "ex_en": "I need to charge my phone."
     }
   ],
   "extraVocabSubtitle_uz": "Telefon va elektronika mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме телефона и электроники",
   "extraVocab": [
-    { "zh": "电脑", "py": "diànnǎo", "uz": "kompyuter", "ru": "компьютер" },
-    { "zh": "信号", "py": "xìnhào", "uz": "signal", "ru": "сигнал" },
-    { "zh": "上网", "py": "shàngwǎng", "uz": "internetga kirmoq", "ru": "выходить в интернет" },
-    { "zh": "拍照", "py": "pāizhào", "uz": "surat olmoq", "ru": "фотографировать" },
-    { "zh": "发短信", "py": "fā duǎnxìn", "uz": "SMS yubormoq", "ru": "отправить SMS" },
-    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "qo'ng'iroq qilmoq", "ru": "звонить" },
-    { "zh": "电池", "py": "diànchí", "uz": "batareya", "ru": "батарея" },
-    { "zh": "屏幕", "py": "píngmù", "uz": "ekran", "ru": "экран" },
-    { "zh": "关机", "py": "guānjī", "uz": "o'chirmoq", "ru": "выключить (телефон)" }
-  ]
+    {
+      "zh": "电脑",
+      "py": "diànnǎo",
+      "uz": "kompyuter",
+      "ru": "компьютер",
+      "en": "computer"
+    },
+    {
+      "zh": "信号",
+      "py": "xìnhào",
+      "uz": "signal",
+      "ru": "сигнал",
+      "en": "signal"
+    },
+    {
+      "zh": "上网",
+      "py": "shàngwǎng",
+      "uz": "internetga kirmoq",
+      "ru": "выходить в интернет",
+      "en": "to go online"
+    },
+    {
+      "zh": "拍照",
+      "py": "pāizhào",
+      "uz": "surat olmoq",
+      "ru": "фотографировать",
+      "en": "to take photos"
+    },
+    {
+      "zh": "发短信",
+      "py": "fā duǎnxìn",
+      "uz": "SMS yubormoq",
+      "ru": "отправить SMS",
+      "en": "to send a text"
+    },
+    {
+      "zh": "打电话",
+      "py": "dǎ diànhuà",
+      "uz": "qo'ng'iroq qilmoq",
+      "ru": "звонить",
+      "en": "to call"
+    },
+    {
+      "zh": "电池",
+      "py": "diànchí",
+      "uz": "batareya",
+      "ru": "батарея",
+      "en": "battery"
+    },
+    {
+      "zh": "屏幕",
+      "py": "píngmù",
+      "uz": "ekran",
+      "ru": "экран",
+      "en": "screen"
+    },
+    {
+      "zh": "关机",
+      "py": "guānjī",
+      "uz": "o'chirmoq",
+      "ru": "выключить (телефон)",
+      "en": "to turn off (phone)"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on phones and electronics"
 }

@@ -63,7 +63,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue1.mp3",
+          "text_translation_en": "Has the delivery arrived?"
         },
         {
           "id": "d42-s2",
@@ -94,7 +95,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes, it has."
         },
         {
           "id": "d42-s3",
@@ -127,7 +129,8 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue3.mp3",
+          "text_translation_en": "Where is it?"
         },
         {
           "id": "d42-s4",
@@ -158,7 +161,8 @@
               "tr": "внизу"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue4.mp3",
+          "text_translation_en": "Downstairs."
         },
         {
           "id": "d42-s5",
@@ -207,7 +211,8 @@
               "tr": "взять"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue5.mp3",
+          "text_translation_en": "OK, I'll go down and get it."
         },
         {
           "id": "d42-s6",
@@ -229,7 +234,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
@@ -247,7 +253,9 @@
       "ex": "我们点外卖吧。",
       "expy": "Wǒmen diǎn wàimài ba.",
       "ex_uz": "Keling, dostavka buyurtma qilaylik.",
-      "ex_ru": "Давай закажем доставку."
+      "ex_ru": "Давай закажем доставку.",
+      "en": "food delivery",
+      "ex_en": "Let's order delivery."
     },
     {
       "zh": "到",
@@ -257,7 +265,9 @@
       "ex": "他到了吗？",
       "expy": "Tā dào le ma?",
       "ex_uz": "U yetib keldimi?",
-      "ex_ru": "Он приехал?"
+      "ex_ru": "Он приехал?",
+      "en": "to arrive",
+      "ex_en": "Has he arrived?"
     },
     {
       "zh": "哪儿",
@@ -267,7 +277,9 @@
       "ex": "你在哪儿？",
       "expy": "Nǐ zài nǎr?",
       "ex_uz": "Sen qayerdasen?",
-      "ex_ru": "Ты где?"
+      "ex_ru": "Ты где?",
+      "en": "where",
+      "ex_en": "Where are you?"
     },
     {
       "zh": "楼下",
@@ -277,7 +289,9 @@
       "ex": "他在楼下等你。",
       "expy": "Tā zài lóuxià děng nǐ.",
       "ex_uz": "U pastda seni kutyapti.",
-      "ex_ru": "Он ждёт тебя внизу."
+      "ex_ru": "Он ждёт тебя внизу.",
+      "en": "downstairs (at the entrance)",
+      "ex_en": "He's waiting for you downstairs."
     },
     {
       "zh": "下去",
@@ -287,7 +301,9 @@
       "ex": "你先下去，我马上来。",
       "expy": "Nǐ xiān xiàqù, wǒ mǎshàng lái.",
       "ex_uz": "Avval sen tush, men hozir kelaman.",
-      "ex_ru": "Сначала ты спустись, я сейчас приду."
+      "ex_ru": "Сначала ты спустись, я сейчас приду.",
+      "en": "to go down",
+      "ex_en": "You go down first, I'll be right there."
     },
     {
       "zh": "拿",
@@ -297,20 +313,70 @@
       "ex": "请帮我拿一下。",
       "expy": "Qǐng bāng wǒ ná yíxià.",
       "ex_uz": "Iltimos, menga olib bering.",
-      "ex_ru": "Пожалуйста, помоги мне взять."
+      "ex_ru": "Пожалуйста, помоги мне взять.",
+      "en": "to take / carry",
+      "ex_en": "Please help me get it."
     }
   ],
   "extraVocabSubtitle_uz": "Ovqat yetkazib berish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме доставки еды",
   "extraVocab": [
-    { "zh": "送餐", "py": "sòngcān", "uz": "ovqat yetkazish", "ru": "доставка еды" },
-    { "zh": "下单", "py": "xiàdān", "uz": "buyurtma bermoq", "ru": "сделать заказ" },
-    { "zh": "骑手", "py": "qíshǒu", "uz": "kuryer", "ru": "курьер" },
-    { "zh": "地址", "py": "dìzhǐ", "uz": "manzil", "ru": "адрес" },
-    { "zh": "楼上", "py": "lóushàng", "uz": "bino ustida", "ru": "наверху" },
-    { "zh": "包装", "py": "bāozhuāng", "uz": "qadoq", "ru": "упаковка" },
-    { "zh": "评价", "py": "píngjià", "uz": "baho bermoq", "ru": "оценить / оставить отзыв" },
-    { "zh": "超时", "py": "chāoshí", "uz": "vaqtdan kechikish", "ru": "задержка / просрочка" }
+    {
+      "zh": "送餐",
+      "py": "sòngcān",
+      "uz": "ovqat yetkazish",
+      "ru": "доставка еды",
+      "en": "food delivery"
+    },
+    {
+      "zh": "下单",
+      "py": "xiàdān",
+      "uz": "buyurtma bermoq",
+      "ru": "сделать заказ",
+      "en": "to place an order"
+    },
+    {
+      "zh": "骑手",
+      "py": "qíshǒu",
+      "uz": "kuryer",
+      "ru": "курьер",
+      "en": "delivery person / courier"
+    },
+    {
+      "zh": "地址",
+      "py": "dìzhǐ",
+      "uz": "manzil",
+      "ru": "адрес",
+      "en": "address"
+    },
+    {
+      "zh": "楼上",
+      "py": "lóushàng",
+      "uz": "bino ustida",
+      "ru": "наверху",
+      "en": "above / upstairs"
+    },
+    {
+      "zh": "包装",
+      "py": "bāozhuāng",
+      "uz": "qadoq",
+      "ru": "упаковка",
+      "en": "packaging"
+    },
+    {
+      "zh": "评价",
+      "py": "píngjià",
+      "uz": "baho bermoq",
+      "ru": "оценить / оставить отзыв",
+      "en": "to rate / leave a review"
+    },
+    {
+      "zh": "超时",
+      "py": "chāoshí",
+      "uz": "vaqtdan kechikish",
+      "ru": "задержка / просрочка",
+      "en": "delay / overdue"
+    }
   ],
   "grammarNotes": [
     {
@@ -322,12 +388,34 @@
       "formula": "Ot + 到了",
       "formula_ru": "Сущ. + 到了",
       "examples": [
-        { "zh": "外卖到了。", "py": "Wàimài dào le.", "uz": "Dostavka yetib keldi.", "ru": "Доставка приехала." },
-        { "zh": "他到了吗？", "py": "Tā dào le ma?", "uz": "U yetib keldimi?", "ru": "Он приехал?" },
-        { "zh": "快递到了。", "py": "Kuàidì dào le.", "uz": "Pochta yetib keldi.", "ru": "Посылка пришла." }
+        {
+          "zh": "外卖到了。",
+          "py": "Wàimài dào le.",
+          "uz": "Dostavka yetib keldi.",
+          "ru": "Доставка приехала.",
+          "en": "The delivery has arrived."
+        },
+        {
+          "zh": "他到了吗？",
+          "py": "Tā dào le ma?",
+          "uz": "U yetib keldimi?",
+          "ru": "Он приехал?",
+          "en": "Has he arrived?"
+        },
+        {
+          "zh": "快递到了。",
+          "py": "Kuàidì dào le.",
+          "uz": "Pochta yetib keldi.",
+          "ru": "Посылка пришла.",
+          "en": "The package has arrived."
+        }
       ],
       "tip_uz": "\"到了\" ko'pincha yetkazib berish, transport yoki odamlar haqida ishlatiladi.",
-      "tip_ru": "\"到了\" часто используется для доставки, транспорта или прибытия людей."
+      "tip_ru": "\"到了\" часто используется для доставки, транспорта или прибытия людей.",
+      "title_en": "到了 — arrived (completed action)",
+      "desc_en": "The verb \"到\" with the particle \"了\" indicates a completed arrival — something or someone has already arrived.",
+      "formula_en": "Noun + 到了",
+      "tip_en": "\"到了\" is often used for deliveries, transport, or people arriving."
     },
     {
       "pattern": "在 + Joy",
@@ -338,12 +426,34 @@
       "formula": "在 + Joy nomi",
       "formula_ru": "在 + Место",
       "examples": [
-        { "zh": "在楼下。", "py": "Zài lóuxià.", "uz": "Pastda.", "ru": "Внизу." },
-        { "zh": "你在哪儿？", "py": "Nǐ zài nǎr?", "uz": "Sen qayerdasen?", "ru": "Ты где?" },
-        { "zh": "他在家。", "py": "Tā zài jiā.", "uz": "U uyda.", "ru": "Он дома." }
+        {
+          "zh": "在楼下。",
+          "py": "Zài lóuxià.",
+          "uz": "Pastda.",
+          "ru": "Внизу.",
+          "en": "Downstairs."
+        },
+        {
+          "zh": "你在哪儿？",
+          "py": "Nǐ zài nǎr?",
+          "uz": "Sen qayerdasen?",
+          "ru": "Ты где?",
+          "en": "Where are you?"
+        },
+        {
+          "zh": "他在家。",
+          "py": "Tā zài jiā.",
+          "uz": "U uyda.",
+          "ru": "Он дома.",
+          "en": "He's at home."
+        }
       ],
       "tip_uz": "\"在哪儿\" — eng ko'p ishlatiladigan joy savol so'zi.",
-      "tip_ru": "\"在哪儿\" — самый частый вопрос о местоположении."
+      "tip_ru": "\"在哪儿\" — самый частый вопрос о местоположении.",
+      "title_en": "在 + place — indicating location",
+      "desc_en": "The preposition \"在\" is used to indicate location. The question is asked as \"在哪儿？\" (where?).",
+      "formula_en": "在 + Place",
+      "tip_en": "\"在哪儿\" — the most common question about location."
     },
     {
       "pattern": "...了吗？",
@@ -354,12 +464,34 @@
       "formula": "Fe'l + 了吗？",
       "formula_ru": "Глагол + 了吗？",
       "examples": [
-        { "zh": "外卖到了吗？", "py": "Wàimài dào le ma?", "uz": "Dostavka yetib keldimi?", "ru": "Доставка приехала?" },
-        { "zh": "你吃了吗？", "py": "Nǐ chī le ma?", "uz": "Ovqat yedingmi?", "ru": "Ты поел?" },
-        { "zh": "他走了吗？", "py": "Tā zǒu le ma?", "uz": "U ketdimi?", "ru": "Он ушёл?" }
+        {
+          "zh": "外卖到了吗？",
+          "py": "Wàimài dào le ma?",
+          "uz": "Dostavka yetib keldimi?",
+          "ru": "Доставка приехала?",
+          "en": "Has the delivery arrived?"
+        },
+        {
+          "zh": "你吃了吗？",
+          "py": "Nǐ chī le ma?",
+          "uz": "Ovqat yedingmi?",
+          "ru": "Ты поел?",
+          "en": "Have you eaten?"
+        },
+        {
+          "zh": "他走了吗？",
+          "py": "Tā zǒu le ma?",
+          "uz": "U ketdimi?",
+          "ru": "Он ушёл?",
+          "en": "Has he left?"
+        }
       ],
       "tip_uz": "\"了吗\" — o'tgan zamondagi eng oddiy savol shakli.",
-      "tip_ru": "\"了吗\" — самый простой способ задать вопрос о прошлом."
+      "tip_ru": "\"了吗\" — самый простой способ задать вопрос о прошлом.",
+      "title_en": "了吗？ — asking about a completed action",
+      "desc_en": "The construction verb + \"了吗\" is used to ask whether an action has occurred.",
+      "formula_en": "Verb + 了吗？",
+      "tip_en": "\"了吗\" — the simplest way to ask about the past."
     },
     {
       "pattern": "下去 + Fe'l",
@@ -370,12 +502,35 @@
       "formula": "下去 + Fe'l",
       "formula_ru": "下去 + Глагол",
       "examples": [
-        { "zh": "我下去拿。", "py": "Wǒ xiàqù ná.", "uz": "Men pastga tushib olaman.", "ru": "Я спущусь и возьму." },
-        { "zh": "你下去看看。", "py": "Nǐ xiàqù kànkan.", "uz": "Pastga tushib ko'r.", "ru": "Спустись и посмотри." },
-        { "zh": "他下去买东西了。", "py": "Tā xiàqù mǎi dōngxi le.", "uz": "U pastga tushib narsa sotib oldi.", "ru": "Он спустился и купил кое-что." }
+        {
+          "zh": "我下去拿。",
+          "py": "Wǒ xiàqù ná.",
+          "uz": "Men pastga tushib olaman.",
+          "ru": "Я спущусь и возьму.",
+          "en": "I'll go down and get it."
+        },
+        {
+          "zh": "你下去看看。",
+          "py": "Nǐ xiàqù kànkan.",
+          "uz": "Pastga tushib ko'r.",
+          "ru": "Спустись и посмотри.",
+          "en": "Go down and take a look."
+        },
+        {
+          "zh": "他下去买东西了。",
+          "py": "Tā xiàqù mǎi dōngxi le.",
+          "uz": "U pastga tushib narsa sotib oldi.",
+          "ru": "Он спустился и купил кое-что.",
+          "en": "He went down and bought something."
+        }
       ],
       "tip_uz": "\"下去\" — binoning pastiga tushishni, \"上去\" — tepaga chiqishni bildiradi.",
-      "tip_ru": "\"下去\" — спуститься вниз, \"上去\" — подняться наверх."
+      "tip_ru": "\"下去\" — спуститься вниз, \"上去\" — подняться наверх.",
+      "title_en": "下去 — go down (and do something)",
+      "desc_en": "\"下去\" indicates a downward direction. If a verb follows, it shows you need to go down and perform an action.",
+      "formula_en": "下去 + Verb",
+      "tip_en": "\"下去\" — go down, \"上去\" — go up."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on food delivery"
 }

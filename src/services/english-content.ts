@@ -9,7 +9,14 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { Page } from '@/types';
 import { validatePage } from '@/validation';
-import type { ContentEntry, LessonInfo } from './content';
+import type { LessonInfo } from './content';
+
+interface ContentEntry {
+  lessonId: string;
+  pageNum: number;
+  pageId: string;
+  filePath: string;
+}
 
 // Content directory for English books
 const ENGLISH_CONTENT_DIR = path.join(process.cwd(), 'content', 'english');

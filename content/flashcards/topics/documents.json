@@ -10,70 +10,81 @@
       "text_original": "护照",
       "pinyin": "hùzhào",
       "text_translation": "pasport",
-      "text_translation_ru": "паспорт"
+      "text_translation_ru": "паспорт",
+      "text_translation_en": "passport"
     },
     {
       "id": "tp-doc-02",
       "text_original": "签证",
       "pinyin": "qiānzhèng",
       "text_translation": "viza",
-      "text_translation_ru": "виза"
+      "text_translation_ru": "виза",
+      "text_translation_en": "visa"
     },
     {
       "id": "tp-doc-03",
       "text_original": "身份证",
       "pinyin": "shēnfènzhèng",
       "text_translation": "shaxsni tasdiqlovchi guvohnoma",
-      "text_translation_ru": "удостоверение личности"
+      "text_translation_ru": "удостоверение личности",
+      "text_translation_en": "ID card"
     },
     {
       "id": "tp-doc-04",
       "text_original": "出生证",
       "pinyin": "chūshēngzhèng",
       "text_translation": "tug'ilganlik haqida guvohnoma",
-      "text_translation_ru": "свидетельство о рождении"
+      "text_translation_ru": "свидетельство о рождении",
+      "text_translation_en": "birth certificate"
     },
     {
       "id": "tp-doc-05",
       "text_original": "结婚证",
       "pinyin": "jiéhūnzhèng",
       "text_translation": "nikoh guvohnomasi",
-      "text_translation_ru": "свидетельство о браке"
+      "text_translation_ru": "свидетельство о браке",
+      "text_translation_en": "marriage certificate"
     },
     {
       "id": "tp-doc-06",
       "text_original": "离婚证",
       "pinyin": "líhūnzhèng",
       "text_translation": "ajrashish guvohnomasi",
-      "text_translation_ru": "свидетельство о разводе"
+      "text_translation_ru": "свидетельство о разводе",
+      "text_translation_en": "divorce certificate"
     },
     {
       "id": "tp-doc-07",
       "text_original": "驾驶证",
       "pinyin": "jiàshǐzhèng",
       "text_translation": "haydovchilik guvohnomasi",
-      "text_translation_ru": "водительское удостоверение"
+      "text_translation_ru": "водительское удостоверение",
+      "text_translation_en": "driver's license"
     },
     {
       "id": "tp-doc-08",
       "text_original": "工作证",
       "pinyin": "gōngzuòzhèng",
       "text_translation": "ish guvohnomasi",
-      "text_translation_ru": "рабочее удостоверение"
+      "text_translation_ru": "рабочее удостоверение",
+      "text_translation_en": "work permit"
     },
     {
       "id": "tp-doc-09",
       "text_original": "学生证",
       "pinyin": "xuéshēngzhèng",
       "text_translation": "talaba guvohnomasi",
-      "text_translation_ru": "студенческий билет"
+      "text_translation_ru": "студенческий билет",
+      "text_translation_en": "student ID"
     },
     {
       "id": "tp-doc-10",
       "text_original": "居留证",
       "pinyin": "jūliúzhèng",
       "text_translation": "yashash guvohnomasi",
-      "text_translation_ru": "вид на жительство"
+      "text_translation_ru": "вид на жительство",
+      "text_translation_en": "residence permit"
     }
-  ]
+  ],
+  "title_en": "Documents"
 }

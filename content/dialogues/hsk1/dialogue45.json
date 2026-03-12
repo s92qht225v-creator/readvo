@@ -76,7 +76,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3",
+          "text_translation_en": "Why didn't you answer the phone?"
         },
         {
           "id": "d45-s2",
@@ -116,7 +117,8 @@
               "tr": "собрание"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3",
+          "text_translation_en": "I was in a meeting just now."
         },
         {
           "id": "d45-s3",
@@ -154,7 +156,8 @@
               "tr": "долго"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3",
+          "text_translation_en": "That long?"
         },
         {
           "id": "d45-s4",
@@ -194,7 +197,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3",
+          "text_translation_en": "There were a lot of things to discuss."
         },
         {
           "id": "d45-s5",
@@ -236,7 +240,8 @@
               "tr": "одно слово"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3",
+          "text_translation_en": "Let me know next time."
         },
         {
           "id": "d45-s6",
@@ -258,7 +263,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
@@ -276,7 +282,9 @@
       "ex": "我正在开会，不能接电话。",
       "expy": "Wǒ zhèngzài kāihuì, bù néng jiē diànhuà.",
       "ex_uz": "Men yig'ilishdaman, telefonga javob bera olmayman.",
-      "ex_ru": "Я на совещании, не могу ответить на звонок."
+      "ex_ru": "Я на совещании, не могу ответить на звонок.",
+      "en": "to answer a call",
+      "ex_en": "I'm in a meeting, I can't answer the phone."
     },
     {
       "zh": "刚才",
@@ -286,7 +294,9 @@
       "ex": "刚才谁打电话了？",
       "expy": "Gāngcái shéi dǎ diànhuà le?",
       "ex_uz": "Hozirgina kim qo'ng'iroq qildi?",
-      "ex_ru": "Кто только что звонил?"
+      "ex_ru": "Кто только что звонил?",
+      "en": "just now",
+      "ex_en": "Who just called?"
     },
     {
       "zh": "开会",
@@ -296,7 +306,9 @@
       "ex": "我们下午两点开会。",
       "expy": "Wǒmen xiàwǔ liǎng diǎn kāihuì.",
       "ex_uz": "Biz soat ikkida yig'ilish o'tkazamiz.",
-      "ex_ru": "У нас совещание в два часа дня."
+      "ex_ru": "У нас совещание в два часа дня.",
+      "en": "to hold a meeting",
+      "ex_en": "We have a meeting at two in the afternoon."
     },
     {
       "zh": "这么",
@@ -306,7 +318,9 @@
       "ex": "你怎么来这么晚？",
       "expy": "Nǐ zěnme lái zhème wǎn?",
       "ex_uz": "Nega buncha kech kelding?",
-      "ex_ru": "Почему ты пришёл так поздно?"
+      "ex_ru": "Почему ты пришёл так поздно?",
+      "en": "so / so much",
+      "ex_en": "Why did you come so late?"
     },
     {
       "zh": "久",
@@ -316,7 +330,9 @@
       "ex": "你等了很久吗？",
       "expy": "Nǐ děng le hěn jiǔ ma?",
       "ex_uz": "Uzoq kutdingmi?",
-      "ex_ru": "Ты долго ждал?"
+      "ex_ru": "Ты долго ждал?",
+      "en": "long (time)",
+      "ex_en": "Have you been waiting long?"
     },
     {
       "zh": "事情",
@@ -326,7 +342,9 @@
       "ex": "今天事情很多。",
       "expy": "Jīntiān shìqing hěn duō.",
       "ex_uz": "Bugun ishlar ko'p.",
-      "ex_ru": "Сегодня много дел."
+      "ex_ru": "Сегодня много дел.",
+      "en": "matter / thing",
+      "ex_en": "There's a lot to do today."
     },
     {
       "zh": "有点",
@@ -336,7 +354,9 @@
       "ex": "我有点累。",
       "expy": "Wǒ yǒudiǎn lèi.",
       "ex_uz": "Men biroz charchadim.",
-      "ex_ru": "Я немного устал."
+      "ex_ru": "Я немного устал.",
+      "en": "a little",
+      "ex_en": "I'm a little tired."
     },
     {
       "zh": "下次",
@@ -346,7 +366,9 @@
       "ex": "下次我请你吃饭。",
       "expy": "Xià cì wǒ qǐng nǐ chīfàn.",
       "ex_uz": "Keyingi safar men seni ovqatga taklif qilaman.",
-      "ex_ru": "В следующий раз я угощу тебя."
+      "ex_ru": "В следующий раз я угощу тебя.",
+      "en": "next time",
+      "ex_en": "Next time I'll treat you."
     },
     {
       "zh": "说一声",
@@ -356,18 +378,56 @@
       "ex": "你走之前说一声。",
       "expy": "Nǐ zǒu zhīqián shuō yì shēng.",
       "ex_uz": "Ketishdan oldin bir og'iz ayt.",
-      "ex_ru": "Скажи перед тем, как уйдёшь."
+      "ex_ru": "Скажи перед тем, как уйдёшь.",
+      "en": "to inform / tell",
+      "ex_en": "Tell me before you leave."
     }
   ],
   "extraVocabSubtitle_uz": "Eslatma va muloqot mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме напоминаний и общения",
   "extraVocab": [
-    { "zh": "手机", "py": "shǒujī", "uz": "telefon", "ru": "мобильный телефон" },
-    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "qo'ng'iroq qilmoq", "ru": "звонить" },
-    { "zh": "回电话", "py": "huí diànhuà", "uz": "qayta qo'ng'iroq qilmoq", "ru": "перезвонить" },
-    { "zh": "发短信", "py": "fā duǎnxìn", "uz": "SMS yubormoq", "ru": "отправить сообщение" },
-    { "zh": "对不起", "py": "duìbuqǐ", "uz": "kechirasiz", "ru": "извините" },
-    { "zh": "没关系", "py": "méi guānxi", "uz": "hech gap emas", "ru": "ничего страшного" }
+    {
+      "zh": "手机",
+      "py": "shǒujī",
+      "uz": "telefon",
+      "ru": "мобильный телефон",
+      "en": "mobile phone"
+    },
+    {
+      "zh": "打电话",
+      "py": "dǎ diànhuà",
+      "uz": "qo'ng'iroq qilmoq",
+      "ru": "звонить",
+      "en": "to call"
+    },
+    {
+      "zh": "回电话",
+      "py": "huí diànhuà",
+      "uz": "qayta qo'ng'iroq qilmoq",
+      "ru": "перезвонить",
+      "en": "to call back"
+    },
+    {
+      "zh": "发短信",
+      "py": "fā duǎnxìn",
+      "uz": "SMS yubormoq",
+      "ru": "отправить сообщение",
+      "en": "to send a message"
+    },
+    {
+      "zh": "对不起",
+      "py": "duìbuqǐ",
+      "uz": "kechirasiz",
+      "ru": "извините",
+      "en": "sorry / excuse me"
+    },
+    {
+      "zh": "没关系",
+      "py": "méi guānxi",
+      "uz": "hech gap emas",
+      "ru": "ничего страшного",
+      "en": "it's okay / no problem"
+    }
   ],
   "grammarNotes": [
     {
@@ -383,23 +443,30 @@
           "zh": "你怎么不接电话？",
           "py": "Nǐ zěnme bù jiē diànhuà?",
           "uz": "Nega telefonga javob bermading?",
-          "ru": "Почему ты не отвечал на звонок?"
+          "ru": "Почему ты не отвечал на звонок?",
+          "en": "Why didn't you answer the phone?"
         },
         {
           "zh": "你怎么不吃饭？",
           "py": "Nǐ zěnme bù chīfàn?",
           "uz": "Nega ovqat yemayapsan?",
-          "ru": "Почему ты не ешь?"
+          "ru": "Почему ты не ешь?",
+          "en": "Why aren't you eating?"
         },
         {
           "zh": "你怎么来了？",
           "py": "Nǐ zěnme lái le?",
           "uz": "Qanday qilib kelding?",
-          "ru": "Как ты пришёл?"
+          "ru": "Как ты пришёл?",
+          "en": "How did you get here?"
         }
       ],
       "tip_uz": "怎么 hayronlik bildirganda fe'ldan OLDIN keladi. Oddiy savol uchun 为什么 ishlating.",
-      "tip_ru": "怎么 в значении удивления стоит ПЕРЕД глаголом. Для обычного вопроса используйте 为什么."
+      "tip_ru": "怎么 в значении удивления стоит ПЕРЕД глаголом. Для обычного вопроса используйте 为什么.",
+      "title_en": "Asking the reason (surprise)",
+      "desc_en": "怎么 = why / how come. Used when you're surprised about something.",
+      "formula_en": "Subj. + 怎么 + Verb？",
+      "tip_en": "怎么 (expressing surprise) goes BEFORE the verb. For a regular question, use 为什么."
     },
     {
       "pattern": "在 + Fe'l",
@@ -414,23 +481,30 @@
           "zh": "刚才在开会。",
           "py": "Gāngcái zài kāihuì.",
           "uz": "O'sha payt yig'ilishda edim.",
-          "ru": "Только что был на совещании."
+          "ru": "Только что был на совещании.",
+          "en": "I was just in a meeting."
         },
         {
           "zh": "我在吃饭。",
           "py": "Wǒ zài chīfàn.",
           "uz": "Men ovqat yeyapman.",
-          "ru": "Я сейчас ем."
+          "ru": "Я сейчас ем.",
+          "en": "I'm eating right now."
         },
         {
           "zh": "她在看书。",
           "py": "Tā zài kàn shū.",
           "uz": "U kitob o'qiyapti.",
-          "ru": "Она сейчас читает."
+          "ru": "Она сейчас читает.",
+          "en": "She's reading right now."
         }
       ],
       "tip_uz": "在 + fe'l = hozir shu ishni qilayotganlikni bildiradi. O'zbek tilida «-yapman/-yapsan» shakli.",
-      "tip_ru": "在 + глагол = действие происходит прямо сейчас. Аналог «-ю/-ешь» в настоящем."
+      "tip_ru": "在 + глагол = действие происходит прямо сейчас. Аналог «-ю/-ешь» в настоящем.",
+      "title_en": "Ongoing actions",
+      "desc_en": "在 before a verb indicates an action that is currently happening.",
+      "formula_en": "Subj. + 在 + Verb",
+      "tip_en": "在 + verb = the action is happening right now. Similar to \"-ing\" in English."
     },
     {
       "pattern": "这么 + Sifat",
@@ -445,21 +519,27 @@
           "zh": "开这么久？",
           "py": "Kāi zhème jiǔ?",
           "uz": "Bu qadar uzoq yig'ilish bo'ldimi?",
-          "ru": "Так долго шло совещание?"
+          "ru": "Так долго шло совещание?",
+          "en": "The meeting lasted that long?"
         },
         {
           "zh": "你怎么这么忙？",
           "py": "Nǐ zěnme zhème máng?",
           "uz": "Sen nega bu qadar bandsan?",
-          "ru": "Почему ты так занят?"
+          "ru": "Почему ты так занят?",
+          "en": "Why are you so busy?"
         },
         {
           "zh": "这么多事情！",
           "py": "Zhème duō shìqing!",
           "uz": "Bu qadar ko'p ish!",
-          "ru": "Столько дел!"
+          "ru": "Столько дел!",
+          "en": "So many things to do!"
         }
-      ]
+      ],
+      "title_en": "So / to such a degree",
+      "desc_en": "这么 = so / this much. Placed before an adjective or quantity.",
+      "formula_en": "这么 + Adj. / Amount"
     },
     {
       "pattern": "有点 + Sifat",
@@ -474,23 +554,30 @@
           "zh": "事情有点多。",
           "py": "Shìqing yǒudiǎn duō.",
           "uz": "Ishlar biroz ko'p.",
-          "ru": "Дел немного многовато."
+          "ru": "Дел немного многовато.",
+          "en": "There's a bit too much to do."
         },
         {
           "zh": "我有点累。",
           "py": "Wǒ yǒudiǎn lèi.",
           "uz": "Men biroz charchadim.",
-          "ru": "Я немного устал."
+          "ru": "Я немного устал.",
+          "en": "I'm a bit tired."
         },
         {
           "zh": "今天有点冷。",
           "py": "Jīntiān yǒudiǎn lěng.",
           "uz": "Bugun biroz sovuq.",
-          "ru": "Сегодня немного холодно."
+          "ru": "Сегодня немного холодно.",
+          "en": "It's a bit cold today."
         }
       ],
       "tip_uz": "有点 ko'pincha SALBIY holatlar bilan ishlatiladi: charchagan, sovuq, qiyin. Ijobiy uchun 一点 ishlating.",
-      "tip_ru": "有点 чаще используется с НЕГАТИВНЫМИ значениями: устал, холодно, трудно. Для позитивных — 一点."
+      "tip_ru": "有点 чаще используется с НЕГАТИВНЫМИ значениями: устал, холодно, трудно. Для позитивных — 一点.",
+      "title_en": "A little / just a bit",
+      "desc_en": "有点 = a little. Placed before an adjective, often in a negative context.",
+      "formula_en": "有点 + Adjective",
+      "tip_en": "有点 is more often used with NEGATIVE meanings: tired, cold, difficult. For positive — 一点."
     },
     {
       "pattern": "下次 + Fe'l",
@@ -505,21 +592,28 @@
           "zh": "下次说一声。",
           "py": "Xià cì shuō yì shēng.",
           "uz": "Keyingi safar xabar ber.",
-          "ru": "В следующий раз предупреди."
+          "ru": "В следующий раз предупреди.",
+          "en": "Let me know next time."
         },
         {
           "zh": "下次早点来。",
           "py": "Xià cì zǎo diǎn lái.",
           "uz": "Keyingi safar ertaroq kel.",
-          "ru": "В следующий раз приходи раньше."
+          "ru": "В следующий раз приходи раньше.",
+          "en": "Come earlier next time."
         },
         {
           "zh": "下次我请你吃饭。",
           "py": "Xià cì wǒ qǐng nǐ chīfàn.",
           "uz": "Keyingi safar men seni ovqatga taklif qilaman.",
-          "ru": "В следующий раз я угощу тебя."
+          "ru": "В следующий раз я угощу тебя.",
+          "en": "Next time I'll treat you."
         }
-      ]
+      ],
+      "title_en": "Next time",
+      "desc_en": "下次 = next time. Placed before a verb to indicate a future action.",
+      "formula_en": "下次 + Verb"
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on reminders and communication"
 }

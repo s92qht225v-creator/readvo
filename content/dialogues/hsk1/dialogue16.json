@@ -78,7 +78,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue1.mp3",
+          "text_translation_en": "Do you have time today?"
         },
         {
           "id": "d16-s2",
@@ -100,7 +101,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d16-s3",
@@ -166,7 +168,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue3.mp3",
+          "text_translation_en": "Let's go watch a movie."
         },
         {
           "id": "d16-s4",
@@ -197,7 +200,8 @@
               "tr": "(воскл.)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue4.mp3",
+          "text_translation_en": "Sure."
         },
         {
           "id": "d16-s5",
@@ -241,7 +245,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue5.mp3",
+          "text_translation_en": "What time shall we meet?"
         },
         {
           "id": "d16-s6",
@@ -274,7 +279,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue6.mp3",
+          "text_translation_en": "Seven o'clock."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3"
@@ -286,15 +292,76 @@
   "extraVocabSubtitle_uz": "Reja va vaqt mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме планов и времени",
   "extraVocab": [
-    { "zh": "约会", "py": "yuēhuì", "uz": "uchrashuv", "ru": "встреча / свидание" },
-    { "zh": "计划", "py": "jìhuà", "uz": "reja", "ru": "план" },
-    { "zh": "周末", "py": "zhōumò", "uz": "dam olish kuni", "ru": "выходные" },
-    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" },
-    { "zh": "准时", "py": "zhǔnshí", "uz": "o'z vaqtida", "ru": "вовремя" },
-    { "zh": "空闲", "py": "kòngxián", "uz": "bo'sh vaqt", "ru": "свободное время" },
-    { "zh": "安排", "py": "ānpái", "uz": "rejalashtirmoq", "ru": "планировать" },
-    { "zh": "忙", "py": "máng", "uz": "band", "ru": "занятой" },
-    { "zh": "等", "py": "děng", "uz": "kutmoq", "ru": "ждать" },
-    { "zh": "半", "py": "bàn", "uz": "yarim", "ru": "половина" }
-  ]
+    {
+      "zh": "约会",
+      "py": "yuēhuì",
+      "uz": "uchrashuv",
+      "ru": "встреча / свидание",
+      "en": "meeting / date"
+    },
+    {
+      "zh": "计划",
+      "py": "jìhuà",
+      "uz": "reja",
+      "ru": "план",
+      "en": "plan"
+    },
+    {
+      "zh": "周末",
+      "py": "zhōumò",
+      "uz": "dam olish kuni",
+      "ru": "выходные",
+      "en": "weekend"
+    },
+    {
+      "zh": "迟到",
+      "py": "chídào",
+      "uz": "kechikmoq",
+      "ru": "опоздать",
+      "en": "to be late"
+    },
+    {
+      "zh": "准时",
+      "py": "zhǔnshí",
+      "uz": "o'z vaqtida",
+      "ru": "вовремя",
+      "en": "on time"
+    },
+    {
+      "zh": "空闲",
+      "py": "kòngxián",
+      "uz": "bo'sh vaqt",
+      "ru": "свободное время",
+      "en": "free time"
+    },
+    {
+      "zh": "安排",
+      "py": "ānpái",
+      "uz": "rejalashtirmoq",
+      "ru": "планировать",
+      "en": "to plan"
+    },
+    {
+      "zh": "忙",
+      "py": "máng",
+      "uz": "band",
+      "ru": "занятой",
+      "en": "busy"
+    },
+    {
+      "zh": "等",
+      "py": "děng",
+      "uz": "kutmoq",
+      "ru": "ждать",
+      "en": "to wait"
+    },
+    {
+      "zh": "半",
+      "py": "bàn",
+      "uz": "yarim",
+      "ru": "половина",
+      "en": "half"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on plans and time"
 }

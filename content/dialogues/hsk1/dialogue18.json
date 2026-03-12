@@ -76,7 +76,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue1.mp3",
+          "text_translation_en": "Are you free tomorrow?"
         },
         {
           "id": "d18-s2",
@@ -98,7 +99,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d18-s3",
@@ -151,7 +153,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue3.mp3",
+          "text_translation_en": "Let's eat together."
         },
         {
           "id": "d18-s4",
@@ -173,7 +176,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3",
+          "text_translation_en": "OK."
         },
         {
           "id": "d18-s5",
@@ -215,7 +219,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue5.mp3",
+          "text_translation_en": "Lunch or dinner?"
         },
         {
           "id": "d18-s6",
@@ -248,7 +253,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue6.mp3",
+          "text_translation_en": "Dinner."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3"
@@ -260,15 +266,76 @@
   "extraVocabSubtitle_uz": "Taklif va uchrashuvlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме приглашений и встреч",
   "extraVocab": [
-    { "zh": "请客", "py": "qǐngkè", "uz": "mehmon qilmoq", "ru": "угощать" },
-    { "zh": "聚会", "py": "jùhuì", "uz": "yig'ilish", "ru": "вечеринка / встреча" },
-    { "zh": "地方", "py": "dìfang", "uz": "joy", "ru": "место" },
-    { "zh": "饭馆", "py": "fànguǎn", "uz": "restoran", "ru": "ресторан" },
-    { "zh": "早上", "py": "zǎoshang", "uz": "ertalab", "ru": "утро" },
-    { "zh": "下午", "py": "xiàwǔ", "uz": "tushdan keyin", "ru": "после обеда" },
-    { "zh": "约", "py": "yuē", "uz": "kelishmoq", "ru": "договориться" },
-    { "zh": "接受", "py": "jiēshòu", "uz": "qabul qilmoq", "ru": "принять" },
-    { "zh": "拒绝", "py": "jùjué", "uz": "rad etmoq", "ru": "отказать" },
-    { "zh": "方便", "py": "fāngbiàn", "uz": "qulay", "ru": "удобный" }
-  ]
+    {
+      "zh": "请客",
+      "py": "qǐngkè",
+      "uz": "mehmon qilmoq",
+      "ru": "угощать",
+      "en": "to treat (someone to food/drink)"
+    },
+    {
+      "zh": "聚会",
+      "py": "jùhuì",
+      "uz": "yig'ilish",
+      "ru": "вечеринка / встреча",
+      "en": "party / gathering"
+    },
+    {
+      "zh": "地方",
+      "py": "dìfang",
+      "uz": "joy",
+      "ru": "место",
+      "en": "place"
+    },
+    {
+      "zh": "饭馆",
+      "py": "fànguǎn",
+      "uz": "restoran",
+      "ru": "ресторан",
+      "en": "restaurant"
+    },
+    {
+      "zh": "早上",
+      "py": "zǎoshang",
+      "uz": "ertalab",
+      "ru": "утро",
+      "en": "morning"
+    },
+    {
+      "zh": "下午",
+      "py": "xiàwǔ",
+      "uz": "tushdan keyin",
+      "ru": "после обеда",
+      "en": "afternoon"
+    },
+    {
+      "zh": "约",
+      "py": "yuē",
+      "uz": "kelishmoq",
+      "ru": "договориться",
+      "en": "to arrange / agree"
+    },
+    {
+      "zh": "接受",
+      "py": "jiēshòu",
+      "uz": "qabul qilmoq",
+      "ru": "принять",
+      "en": "to accept"
+    },
+    {
+      "zh": "拒绝",
+      "py": "jùjué",
+      "uz": "rad etmoq",
+      "ru": "отказать",
+      "en": "to refuse / decline"
+    },
+    {
+      "zh": "方便",
+      "py": "fāngbiàn",
+      "uz": "qulay",
+      "ru": "удобный",
+      "en": "convenient"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on invitations and meetings"
 }

@@ -16,26 +16,26 @@ const sections = [
 ];
 
 const examples = [
-  { zh: '我是学生。', pinyin: 'Wǒ shì xuéshēng.', uz: 'Men talabaman.', ru: 'Я студент.', note_uz: '我 (wǒ) = men, 学生 (xuéshēng) = talaba', note_ru: '我 (wǒ) = я, 学生 (xuéshēng) = студент' },
-  { zh: '她是老师。', pinyin: 'Tā shì lǎoshī.', uz: 'U o\'qituvchi.', ru: 'Она учитель.', note_uz: '她 (tā) = u (ayol), 老师 (lǎoshī) = o\'qituvchi', note_ru: '她 (tā) = она, 老师 (lǎoshī) = учитель' },
-  { zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguó rén ma?', uz: 'Siz xitoylikmisiz?', ru: 'Вы китаец?', note_uz: '吗 (ma) = savol yuklamasi', note_ru: '吗 (ma) = вопросительная частица' },
-  { zh: '这是我的书。', pinyin: 'Zhè shì wǒ de shū.', uz: 'Bu mening kitobim.', ru: 'Это моя книга.', note_uz: '这 (zhè) = bu, 书 (shū) = kitob', note_ru: '这 (zhè) = это, 书 (shū) = книга' },
-  { zh: '他是我的朋友。', pinyin: 'Tā shì wǒ de péngyǒu.', uz: 'U mening do\'stim.', ru: 'Он мой друг.', note_uz: '朋友 (péngyǒu) = do\'st', note_ru: '朋友 (péngyǒu) = друг' },
-  { zh: '我们是同学。', pinyin: 'Wǒmen shì tóngxué.', uz: 'Biz sinfdoshmiz.', ru: 'Мы однокласники.', note_uz: '我们 (wǒmen) = biz, 同学 (tóngxué) = sinfdosh', note_ru: '我们 (wǒmen) = мы, 同学 (tóngxué) = одноклассник' },
+  { zh: '我是学生。', pinyin: 'Wǒ shì xuéshēng.', uz: 'Men talabaman.', ru: 'Я студент.', en: 'I am a student.', note_uz: '我 (wǒ) = men, 学生 (xuéshēng) = talaba', note_ru: '我 (wǒ) = я, 学生 (xuéshēng) = студент', note_en: '我 (wǒ) = I, 学生 (xuéshēng) = student' },
+  { zh: '她是老师。', pinyin: 'Tā shì lǎoshī.', uz: 'U o\'qituvchi.', ru: 'Она учитель.', en: 'She is a teacher.', note_uz: '她 (tā) = u (ayol), 老师 (lǎoshī) = o\'qituvchi', note_ru: '她 (tā) = она, 老师 (lǎoshī) = учитель', note_en: '她 (tā) = she, 老师 (lǎoshī) = teacher' },
+  { zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguó rén ma?', uz: 'Siz xitoylikmisiz?', ru: 'Вы китаец?', en: 'Are you Chinese?', note_uz: '吗 (ma) = savol yuklamasi', note_ru: '吗 (ma) = вопросительная частица', note_en: '吗 (ma) = question particle' },
+  { zh: '这是我的书。', pinyin: 'Zhè shì wǒ de shū.', uz: 'Bu mening kitobim.', ru: 'Это моя книга.', en: 'This is my book.', note_uz: '这 (zhè) = bu, 书 (shū) = kitob', note_ru: '这 (zhè) = это, 书 (shū) = книга', note_en: '这 (zhè) = this, 书 (shū) = book' },
+  { zh: '他是我的朋友。', pinyin: 'Tā shì wǒ de péngyǒu.', uz: 'U mening do\'stim.', ru: 'Он мой друг.', en: 'He is my friend.', note_uz: '朋友 (péngyǒu) = do\'st', note_ru: '朋友 (péngyǒu) = друг', note_en: '朋友 (péngyǒu) = friend' },
+  { zh: '我们是同学。', pinyin: 'Wǒmen shì tóngxué.', uz: 'Biz sinfdoshmiz.', ru: 'Мы однокласники.', en: 'We are classmates.', note_uz: '我们 (wǒmen) = biz, 同学 (tóngxué) = sinfdosh', note_ru: '我们 (wǒmen) = мы, 同学 (tóngxué) = одноклассник', note_en: '我们 (wǒmen) = we, 同学 (tóngxué) = classmate' },
 ];
 
 const negativeExamples = [
-  { zh: '我不是医生。', pinyin: 'Wǒ bú shì yīshēng.', uz: 'Men shifokor emasman.', ru: 'Я не врач.', note_uz: '不 (bù) → 是 oldidan 不 (bú) bo\'ladi (ton o\'zgarishi)', note_ru: '不 (bù) → перед 是 становится 不 (bú) (изменение тона)' },
-  { zh: '他不是中国人。', pinyin: 'Tā bú shì Zhōngguó rén.', uz: 'U xitoylik emas.', ru: 'Он не китаец.' },
-  { zh: '这不是我的。', pinyin: 'Zhè bú shì wǒ de.', uz: 'Bu meniki emas.', ru: 'Это не моё.' },
+  { zh: '我不是医生。', pinyin: 'Wǒ bú shì yīshēng.', uz: 'Men shifokor emasman.', ru: 'Я не врач.', en: 'I am not a doctor.', note_uz: '不 (bù) → 是 oldidan 不 (bú) bo\'ladi (ton o\'zgarishi)', note_ru: '不 (bù) → перед 是 становится 不 (bú) (изменение тона)', note_en: '不 (bù) → before 是 becomes 不 (bú) (tone change)' },
+  { zh: '他不是中国人。', pinyin: 'Tā bú shì Zhōngguó rén.', uz: 'U xitoylik emas.', ru: 'Он не китаец.', en: 'He is not Chinese.' },
+  { zh: '这不是我的。', pinyin: 'Zhè bú shì wǒ de.', uz: 'Bu meniki emas.', ru: 'Это не моё.', en: 'This is not mine.' },
 ];
 
 const quizQuestions = [
-  { q_uz: '"Men talabaman" xitoycha qanday?', q_ru: 'Как сказать "Я студент" по-китайски?', options: ['我是学生。', '我不是学生。', '你是学生。', '她是学生。'], correct: 0 },
-  { q_uz: '是 so\'zining pinyin yozilishi?', q_ru: 'Как пишется пиньинь для 是?', options: ['sì', 'shì', 'shī', 'xì'], correct: 1 },
-  { q_uz: '是 ning inkor shakli qanday?', q_ru: 'Как образуется отрицание от 是?', options: ['没是', '不是', '无是', '非是'], correct: 1 },
-  { q_uz: '"她是老师" tarjimasi?', q_ru: 'Перевод "她是老师"?', options_uz: ['U talaba.', 'Men o\'qituvchi.', 'U o\'qituvchi.', 'Siz o\'qituvchi.'], options_ru: ['Она студент.', 'Я учитель.', 'Она учитель.', 'Вы учитель.'], correct: 2 },
-  { q_uz: 'Qaysi gap to\'g\'ri?', q_ru: 'Какое предложение правильное?', options: ['我是不学生。', '我不是学生。', '不我是学生。', '是我不学生。'], correct: 1 },
+  { q_uz: '"Men talabaman" xitoycha qanday?', q_ru: 'Как сказать "Я студент" по-китайски?', q_en: 'How do you say "I am a student" in Chinese?', options: ['我是学生。', '我不是学生。', '你是学生。', '她是学生。'], correct: 0 },
+  { q_uz: '是 so\'zining pinyin yozilishi?', q_ru: 'Как пишется пиньинь для 是?', q_en: 'What is the pinyin for 是?', options: ['sì', 'shì', 'shī', 'xì'], correct: 1 },
+  { q_uz: '是 ning inkor shakli qanday?', q_ru: 'Как образуется отрицание от 是?', q_en: 'How do you negate 是?', options: ['没是', '不是', '无是', '非是'], correct: 1 },
+  { q_uz: '"她是老师" tarjimasi?', q_ru: 'Перевод "她是老师"?', q_en: 'What does "她是老师" mean?', options_uz: ['U talaba.', 'Men o\'qituvchi.', 'U o\'qituvchi.', 'Siz o\'qituvchi.'], options_ru: ['Она студент.', 'Я учитель.', 'Она учитель.', 'Вы учитель.'], options_en: ['She is a student.', 'I am a teacher.', 'She is a teacher.', 'You are a teacher.'], correct: 2 },
+  { q_uz: 'Qaysi gap to\'g\'ri?', q_ru: 'Какое предложение правильное?', q_en: 'Which sentence is correct?', options: ['我是不学生。', '我不是学生。', '不我是学生。', '是我不学生。'], correct: 1 },
 ];
 
 export function GrammarShiPage() {
@@ -71,7 +71,7 @@ export function GrammarShiPage() {
           <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
           <h1 className="grammar-page__hero-char">是</h1>
           <div className="grammar-page__hero-pinyin">shì</div>
-          <div className="grammar-page__hero-meaning">— {({ uz: 'bo\'lmoq', ru: 'быть, являться', en: 'bo\'lmoq' } as Record<string, string>)[language]} —</div>
+          <div className="grammar-page__hero-meaning">— {({ uz: 'bo\'lmoq', ru: 'быть, являться', en: 'to be' } as Record<string, string>)[language]} —</div>
         </div>
       </div>
 
@@ -100,22 +100,22 @@ export function GrammarShiPage() {
                 <div className="grammar-block__big-char">是</div>
                 <div className="grammar-block__char-info">
                   <div className="grammar-block__info-row"><span className="grammar-block__info-key">Pinyin</span><span className="grammar-block__info-val">shì</span></div>
-                  <div className="grammar-block__info-row"><span className="grammar-block__info-key">{({ uz: 'Ton', ru: 'Тон', en: 'Tone' } as Record<string, string>)[language]}</span><span className="grammar-block__tone">{({ uz: '4-ton (tushuvchi) ↘', ru: '4-й тон (нисходящий) ↘', en: '4-ton (tushuvchi) ↘' } as Record<string, string>)[language]}</span></div>
-                  <div className="grammar-block__info-row"><span className="grammar-block__info-key">{({ uz: 'Ma\'nosi', ru: 'Перевод', en: 'Meaning' } as Record<string, string>)[language]}</span><span className="grammar-block__info-val">{({ uz: 'bo\'lmoq, …dir', ru: 'быть, являться', en: 'bo\'lmoq, …dir' } as Record<string, string>)[language]}</span></div>
+                  <div className="grammar-block__info-row"><span className="grammar-block__info-key">{({ uz: 'Ton', ru: 'Тон', en: 'Tone' } as Record<string, string>)[language]}</span><span className="grammar-block__tone">{({ uz: '4-ton (tushuvchi) ↘', ru: '4-й тон (нисходящий) ↘', en: '4th tone (falling) ↘' } as Record<string, string>)[language]}</span></div>
+                  <div className="grammar-block__info-row"><span className="grammar-block__info-key">{({ uz: 'Ma\'nosi', ru: 'Перевод', en: 'Meaning' } as Record<string, string>)[language]}</span><span className="grammar-block__info-val">{({ uz: 'bo\'lmoq, …dir', ru: 'быть, являться', en: 'to be' } as Record<string, string>)[language]}</span></div>
                   <div className="grammar-block__info-row"><span className="grammar-block__info-key">{({ uz: 'Chiziqlar', ru: 'Черт', en: 'Strokes' } as Record<string, string>)[language]}</span><span className="grammar-block__info-val">9</span></div>
                 </div>
               </div>
             </div>
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{({ uz: 'Muhim eslatma', ru: 'Важно', en: 'Muhim eslatma' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Muhim eslatma', ru: 'Важно', en: 'Important Note' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {({ uz: 'O\'zbek tilida «Men talabaman» desak, «bo\'lmoq» fe\'li ko\'rinmaydi. Xitoy tilida esa 是 doimo yoziladi:', ru: 'По-русски «Я студент» — глагол «быть» не нужен. В китайском 是 всегда обязателен:', en: 'O\'zbek tilida «Men talabaman» desak, «bo\'lmoq» fe\'li ko\'rinmaydi. Xitoy tilida esa 是 doimo yoziladi:' } as Record<string, string>)[language]}
+                {({ uz: 'O\'zbek tilida «Men talabaman» desak, «bo\'lmoq» fe\'li ko\'rinmaydi. Xitoy tilida esa 是 doimo yoziladi:', ru: 'По-русски «Я студент» — глагол «быть» не нужен. В китайском 是 всегда обязателен:', en: 'In English, we say "I am a student" — the verb "to be" is required. Chinese works the same way — 是 must always be used:' } as Record<string, string>)[language]}
               </p>
               <div className="grammar-block__example-center">
                 我<span className="grammar-block__highlight">是</span>学生。
               </div>
               <p className="grammar-block__tip-note">
-                {({ uz: 'Xitoy tilida 是 ni tushirib qoldirish mumkin emas!', ru: 'Пропускать 是 нельзя!', en: 'Xitoy tilida 是 ni tushirib qoldirish mumkin emas!' } as Record<string, string>)[language]}
+                {({ uz: 'Xitoy tilida 是 ni tushirib qoldirish mumkin emas!', ru: 'Пропускать 是 нельзя!', en: 'You cannot omit 是 in Chinese!' } as Record<string, string>)[language]}
               </p>
             </div>
           </>
@@ -124,7 +124,7 @@ export function GrammarShiPage() {
         {activeTab === 'usage' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Asosiy tuzilma', ru: 'Основная структура', en: 'Asosiy tuzilma' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Asosiy tuzilma', ru: 'Основная структура', en: 'Basic Structure' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span className="grammar-block__formula-a">A</span>
                 {' '}
@@ -132,15 +132,15 @@ export function GrammarShiPage() {
                 {' '}
                 <span className="grammar-block__formula-b">B</span>
               </div>
-              <p className="grammar-block__formula-desc">{({ uz: 'A = B (A — B dir)', ru: 'A = B (A является B)', en: 'A = B (A — B dir)' } as Record<string, string>)[language]}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'A = B (A — B dir)', ru: 'A = B (A является B)', en: 'A = B (A is B)' } as Record<string, string>)[language]}</p>
             </div>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Qo\'llanish holatlari', ru: 'Случаи употребления', en: 'Qo\'llanish holatlari' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Qo\'llanish holatlari', ru: 'Случаи употребления', en: 'Usage Cases' } as Record<string, string>)[language]}</div>
               {[
-                { t_uz: '1. Shaxs', t_ru: '1. Имя', zh: '我是李明。', py: 'Wǒ shì Lǐ Míng.', uz: 'Men Li Mingman.', ru: 'Я Ли Мин.' },
-                { t_uz: '2. Kasb', t_ru: '2. Профессия', zh: '他是医生。', py: 'Tā shì yīshēng.', uz: 'U shifokor.', ru: 'Он врач.' },
-                { t_uz: '3. Millat', t_ru: '3. Национальность', zh: '我是乌兹别克人。', py: 'Wǒ shì Wūzībiékè rén.', uz: 'Men o\'zbekman.', ru: 'Я узбек.' },
-                { t_uz: '4. Narsa', t_ru: '4. Предмет', zh: '这是茶。', py: 'Zhè shì chá.', uz: 'Bu choy.', ru: 'Это чай.' },
+                { t_uz: '1. Shaxs', t_ru: '1. Имя', t_en: '1. Name', zh: '我是李明。', py: 'Wǒ shì Lǐ Míng.', uz: 'Men Li Mingman.', ru: 'Я Ли Мин.', en: 'I am Li Ming.' },
+                { t_uz: '2. Kasb', t_ru: '2. Профессия', t_en: '2. Profession', zh: '他是医生。', py: 'Tā shì yīshēng.', uz: 'U shifokor.', ru: 'Он врач.', en: 'He is a doctor.' },
+                { t_uz: '3. Millat', t_ru: '3. Национальность', t_en: '3. Nationality', zh: '我是乌兹别克人。', py: 'Wǒ shì Wūzībiékè rén.', uz: 'Men o\'zbekman.', ru: 'Я узбек.', en: 'I am Uzbek.' },
+                { t_uz: '4. Narsa', t_ru: '4. Предмет', t_en: '4. Object', zh: '这是茶。', py: 'Zhè shì chá.', uz: 'Bu choy.', ru: 'Это чай.', en: 'This is tea.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-type">{({ uz: x.t_uz, ru: x.t_ru, en: (x as any).t_en || x.t_uz } as Record<string, string>)[language]}</div>
@@ -151,7 +151,7 @@ export function GrammarShiPage() {
               ))}
             </div>
             <div className="grammar-block">
-              <div className="grammar-block__label">{({ uz: 'Savol tuzish', ru: 'Вопрос', en: 'Savol tuzish' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Savol tuzish', ru: 'Вопрос', en: 'Forming Questions' } as Record<string, string>)[language]}</div>
               <div className="grammar-block__formula">
                 <span className="grammar-block__formula-a">A</span>
                 {' '}
@@ -162,7 +162,7 @@ export function GrammarShiPage() {
                 <span className="grammar-block__formula-ma">吗？</span>
               </div>
               <p className="grammar-block__formula-desc">
-                {({ uz: 'Oxiriga 吗 (ma) qo\'shilsa — savol.', ru: 'Добавьте 吗 (ma) в конец — получится вопрос.', en: 'Oxiriga 吗 (ma) qo\'shilsa — savol.' } as Record<string, string>)[language]}
+                {({ uz: 'Oxiriga 吗 (ma) qo\'shilsa — savol.', ru: 'Добавьте 吗 (ma) в конец — получится вопрос.', en: 'Add 吗 (ma) at the end to form a question.' } as Record<string, string>)[language]}
               </p>
             </div>
           </>
@@ -204,12 +204,12 @@ export function GrammarShiPage() {
                 {' '}
                 <span className="grammar-block__formula-b">B</span>
               </div>
-              <p className="grammar-block__formula-desc">{({ uz: 'A ≠ B (A — B emas)', ru: 'A ≠ B (A не является B)', en: 'A ≠ B (A — B emas)' } as Record<string, string>)[language]}</p>
+              <p className="grammar-block__formula-desc">{({ uz: 'A ≠ B (A — B emas)', ru: 'A ≠ B (A не является B)', en: 'A ≠ B (A is not B)' } as Record<string, string>)[language]}</p>
             </div>
             <div className="grammar-block grammar-block--warning">
-              <div className="grammar-block__label">{({ uz: 'Ton o\'zgarishi', ru: 'Изменение тона', en: 'Ton o\'zgarishi' } as Record<string, string>)[language]}</div>
+              <div className="grammar-block__label">{({ uz: 'Ton o\'zgarishi', ru: 'Изменение тона', en: 'Tone Change' } as Record<string, string>)[language]}</div>
               <p className="grammar-block__tip-text">
-                {({ uz: '不 odatda 4-ton (bù), lekin 是 oldida 2-tonga o\'zgaradi:', ru: '不 обычно 4-й тон (bù), но перед 是 меняется на 2-й тон:', en: '不 odatda 4-ton (bù), lekin 是 oldida 2-tonga o\'zgaradi:' } as Record<string, string>)[language]}
+                {({ uz: '不 odatda 4-ton (bù), lekin 是 oldida 2-tonga o\'zgaradi:', ru: '不 обычно 4-й тон (bù), но перед 是 меняется на 2-й тон:', en: '不 is normally 4th tone (bù), but before 是 it changes to 2nd tone:' } as Record<string, string>)[language]}
               </p>
               <div className="grammar-block__tone-change">
                 bù → <span className="grammar-block__tone-new">bú</span> shì

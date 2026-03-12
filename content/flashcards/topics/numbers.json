@@ -10,140 +10,161 @@
       "text_original": "零",
       "pinyin": "líng",
       "text_translation": "nol",
-      "text_translation_ru": "ноль"
+      "text_translation_ru": "ноль",
+      "text_translation_en": "zero"
     },
     {
       "id": "tp-num-02",
       "text_original": "一",
       "pinyin": "yī",
       "text_translation": "bir",
-      "text_translation_ru": "один"
+      "text_translation_ru": "один",
+      "text_translation_en": "one"
     },
     {
       "id": "tp-num-03",
       "text_original": "二",
       "pinyin": "èr",
       "text_translation": "ikki",
-      "text_translation_ru": "два"
+      "text_translation_ru": "два",
+      "text_translation_en": "two"
     },
     {
       "id": "tp-num-04",
       "text_original": "三",
       "pinyin": "sān",
       "text_translation": "uch",
-      "text_translation_ru": "три"
+      "text_translation_ru": "три",
+      "text_translation_en": "three"
     },
     {
       "id": "tp-num-05",
       "text_original": "四",
       "pinyin": "sì",
       "text_translation": "to'rt",
-      "text_translation_ru": "четыре"
+      "text_translation_ru": "четыре",
+      "text_translation_en": "four"
     },
     {
       "id": "tp-num-06",
       "text_original": "五",
       "pinyin": "wǔ",
       "text_translation": "besh",
-      "text_translation_ru": "пять"
+      "text_translation_ru": "пять",
+      "text_translation_en": "five"
     },
     {
       "id": "tp-num-07",
       "text_original": "六",
       "pinyin": "liù",
       "text_translation": "olti",
-      "text_translation_ru": "шесть"
+      "text_translation_ru": "шесть",
+      "text_translation_en": "six"
     },
     {
       "id": "tp-num-08",
       "text_original": "七",
       "pinyin": "qī",
       "text_translation": "yetti",
-      "text_translation_ru": "семь"
+      "text_translation_ru": "семь",
+      "text_translation_en": "seven"
     },
     {
       "id": "tp-num-09",
       "text_original": "八",
       "pinyin": "bā",
       "text_translation": "sakkiz",
-      "text_translation_ru": "восемь"
+      "text_translation_ru": "восемь",
+      "text_translation_en": "eight"
     },
     {
       "id": "tp-num-10",
       "text_original": "九",
       "pinyin": "jiǔ",
       "text_translation": "to'qqiz",
-      "text_translation_ru": "девять"
+      "text_translation_ru": "девять",
+      "text_translation_en": "nine"
     },
     {
       "id": "tp-num-11",
       "text_original": "十",
       "pinyin": "shí",
       "text_translation": "o'n",
-      "text_translation_ru": "десять"
+      "text_translation_ru": "десять",
+      "text_translation_en": "ten"
     },
     {
       "id": "tp-num-12",
       "text_original": "百",
       "pinyin": "bǎi",
       "text_translation": "yuz",
-      "text_translation_ru": "сто"
+      "text_translation_ru": "сто",
+      "text_translation_en": "hundred"
     },
     {
       "id": "tp-num-13",
       "text_original": "千",
       "pinyin": "qiān",
       "text_translation": "ming",
-      "text_translation_ru": "тысяча"
+      "text_translation_ru": "тысяча",
+      "text_translation_en": "thousand"
     },
     {
       "id": "tp-num-14",
       "text_original": "万",
       "pinyin": "wàn",
       "text_translation": "o'n ming",
-      "text_translation_ru": "десять тысяч"
+      "text_translation_ru": "десять тысяч",
+      "text_translation_en": "ten thousand"
     },
     {
       "id": "tp-num-15",
       "text_original": "两",
       "pinyin": "liǎng",
       "text_translation": "ikki (miqdor)",
-      "text_translation_ru": "два (количество)"
+      "text_translation_ru": "два (количество)",
+      "text_translation_en": "two (with measure word)"
     },
     {
       "id": "tp-num-16",
       "text_original": "第一",
       "pinyin": "dì yī",
       "text_translation": "birinchi",
-      "text_translation_ru": "первый"
+      "text_translation_ru": "первый",
+      "text_translation_en": "first"
     },
     {
       "id": "tp-num-17",
       "text_original": "第二",
       "pinyin": "dì èr",
       "text_translation": "ikkinchi",
-      "text_translation_ru": "второй"
+      "text_translation_ru": "второй",
+      "text_translation_en": "second"
     },
     {
       "id": "tp-num-18",
       "text_original": "第三",
       "pinyin": "dì sān",
       "text_translation": "uchinchi",
-      "text_translation_ru": "третий"
+      "text_translation_ru": "третий",
+      "text_translation_en": "third"
     },
     {
       "id": "tp-num-19",
       "text_original": "多少",
       "pinyin": "duōshao",
       "text_translation": "qancha; nechta",
-      "text_translation_ru": "сколько"
+      "text_translation_ru": "сколько",
+      "text_translation_en": "how many; how much"
     },
     {
       "id": "tp-num-20",
       "text_original": "几",
       "pinyin": "jǐ",
       "text_translation": "necha (kam son)",
-      "text_translation_ru": "сколько (небольшое число)"
+      "text_translation_ru": "сколько (небольшое число)",
+      "text_translation_en": "how many; several"
     }
-  ]
+  ],
+  "title_en": "Numbers"
 }

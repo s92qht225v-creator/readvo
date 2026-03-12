@@ -76,7 +76,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue1.mp3",
+          "text_translation_en": "Are you here to withdraw money?"
         },
         {
           "id": "d29-s2",
@@ -98,7 +99,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue2.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d29-s3",
@@ -149,7 +151,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue3.mp3",
+          "text_translation_en": "Did you bring your bank card?"
         },
         {
           "id": "d29-s4",
@@ -180,7 +183,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue4.mp3",
+          "text_translation_en": "Yes, I did."
         },
         {
           "id": "d29-s5",
@@ -220,7 +224,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue5.mp3",
+          "text_translation_en": "How much do you want to withdraw?"
         },
         {
           "id": "d29-s6",
@@ -251,7 +256,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue6.mp3",
+          "text_translation_en": "One thousand yuan."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zai%20yinhang/dialogue.mp3"
@@ -263,15 +269,76 @@
   "extraVocabSubtitle_uz": "Bank va moliya mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме банка и финансов",
   "extraVocab": [
-    { "zh": "存款", "py": "cúnkuǎn", "uz": "omonat", "ru": "вклад / депозит" },
-    { "zh": "取款机", "py": "qǔkuǎnjī", "uz": "bankomat", "ru": "банкомат" },
-    { "zh": "密码", "py": "mìmǎ", "uz": "parol", "ru": "пароль / ПИН-код" },
-    { "zh": "账户", "py": "zhànghù", "uz": "hisob raqami", "ru": "счёт (банковский)" },
-    { "zh": "利息", "py": "lìxī", "uz": "foiz", "ru": "процент (по вкладу)" },
-    { "zh": "汇率", "py": "huìlǜ", "uz": "valyuta kursi", "ru": "обменный курс" },
-    { "zh": "签名", "py": "qiānmíng", "uz": "imzo", "ru": "подпись" },
-    { "zh": "排队", "py": "páiduì", "uz": "navbatda turmoq", "ru": "стоять в очереди" },
-    { "zh": "窗口", "py": "chuāngkǒu", "uz": "kassa oynasi", "ru": "окно (кассы)" },
-    { "zh": "手续费", "py": "shǒuxùfèi", "uz": "komissiya", "ru": "комиссия" }
-  ]
+    {
+      "zh": "存款",
+      "py": "cúnkuǎn",
+      "uz": "omonat",
+      "ru": "вклад / депозит",
+      "en": "deposit"
+    },
+    {
+      "zh": "取款机",
+      "py": "qǔkuǎnjī",
+      "uz": "bankomat",
+      "ru": "банкомат",
+      "en": "ATM"
+    },
+    {
+      "zh": "密码",
+      "py": "mìmǎ",
+      "uz": "parol",
+      "ru": "пароль / ПИН-код",
+      "en": "password / PIN code"
+    },
+    {
+      "zh": "账户",
+      "py": "zhànghù",
+      "uz": "hisob raqami",
+      "ru": "счёт (банковский)",
+      "en": "bank account"
+    },
+    {
+      "zh": "利息",
+      "py": "lìxī",
+      "uz": "foiz",
+      "ru": "процент (по вкладу)",
+      "en": "interest rate"
+    },
+    {
+      "zh": "汇率",
+      "py": "huìlǜ",
+      "uz": "valyuta kursi",
+      "ru": "обменный курс",
+      "en": "exchange rate"
+    },
+    {
+      "zh": "签名",
+      "py": "qiānmíng",
+      "uz": "imzo",
+      "ru": "подпись",
+      "en": "signature"
+    },
+    {
+      "zh": "排队",
+      "py": "páiduì",
+      "uz": "navbatda turmoq",
+      "ru": "стоять в очереди",
+      "en": "to stand in line / queue"
+    },
+    {
+      "zh": "窗口",
+      "py": "chuāngkǒu",
+      "uz": "kassa oynasi",
+      "ru": "окно (кассы)",
+      "en": "counter window"
+    },
+    {
+      "zh": "手续费",
+      "py": "shǒuxùfèi",
+      "uz": "komissiya",
+      "ru": "комиссия",
+      "en": "commission / fee"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on banking and finance"
 }

@@ -23,7 +23,9 @@ export const FlashcardCard: React.FC<FlashcardCardProps> = ({
 }) => {
   const translation = language === 'ru' && word.text_translation_ru
     ? word.text_translation_ru
-    : word.text_translation;
+    : language === 'en' && word.text_translation_en
+      ? word.text_translation_en
+      : word.text_translation;
 
   return (
     <div className="flashcard__card-container">

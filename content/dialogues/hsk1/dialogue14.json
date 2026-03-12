@@ -65,7 +65,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue1.mp3",
+          "text_translation_en": "Who's that girl?"
         },
         {
           "id": "d14-s2",
@@ -87,7 +88,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue2.mp3",
+          "text_translation_en": "Which one?"
         },
         {
           "id": "d14-s3",
@@ -149,7 +151,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue3.mp3",
+          "text_translation_en": "The one in red."
         },
         {
           "id": "d14-s4",
@@ -226,7 +229,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue4.mp3",
+          "text_translation_en": "Her? She's my friend."
         },
         {
           "id": "d14-s5",
@@ -279,7 +283,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue5.mp3",
+          "text_translation_en": "Oh, she's very pretty."
         },
         {
           "id": "d14-s6",
@@ -312,7 +317,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue6.mp3",
+          "text_translation_en": "Really?"
         },
         {
           "id": "d14-s7",
@@ -344,7 +350,8 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue7.mp3",
+          "text_translation_en": "Yes."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ta%20shi%20shui/dialogue.mp3"
@@ -356,15 +363,76 @@
   "extraVocabSubtitle_uz": "Munosabatlar va odamlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме отношений и людей",
   "extraVocab": [
-    { "zh": "同学", "py": "tóngxué", "uz": "sinfdosh", "ru": "одноклассник" },
-    { "zh": "同事", "py": "tóngshì", "uz": "hamkasb", "ru": "коллега" },
-    { "zh": "邻居", "py": "línjū", "uz": "qo'shni", "ru": "сосед" },
-    { "zh": "老师", "py": "lǎoshī", "uz": "o'qituvchi", "ru": "учитель" },
-    { "zh": "学生", "py": "xuésheng", "uz": "o'quvchi / talaba", "ru": "ученик / студент" },
-    { "zh": "男人", "py": "nánrén", "uz": "erkak", "ru": "мужчина" },
-    { "zh": "女人", "py": "nǚrén", "uz": "ayol", "ru": "женщина" },
-    { "zh": "丈夫", "py": "zhàngfu", "uz": "er / turmush o'rtog'i", "ru": "муж" },
-    { "zh": "妻子", "py": "qīzi", "uz": "xotin / turmush o'rtog'i", "ru": "жена" },
-    { "zh": "介绍", "py": "jièshào", "uz": "tanishtirmoq", "ru": "представить / познакомить" }
-  ]
+    {
+      "zh": "同学",
+      "py": "tóngxué",
+      "uz": "sinfdosh",
+      "ru": "одноклассник",
+      "en": "classmate"
+    },
+    {
+      "zh": "同事",
+      "py": "tóngshì",
+      "uz": "hamkasb",
+      "ru": "коллега",
+      "en": "colleague"
+    },
+    {
+      "zh": "邻居",
+      "py": "línjū",
+      "uz": "qo'shni",
+      "ru": "сосед",
+      "en": "neighbor"
+    },
+    {
+      "zh": "老师",
+      "py": "lǎoshī",
+      "uz": "o'qituvchi",
+      "ru": "учитель",
+      "en": "teacher"
+    },
+    {
+      "zh": "学生",
+      "py": "xuésheng",
+      "uz": "o'quvchi / talaba",
+      "ru": "ученик / студент",
+      "en": "student"
+    },
+    {
+      "zh": "男人",
+      "py": "nánrén",
+      "uz": "erkak",
+      "ru": "мужчина",
+      "en": "man"
+    },
+    {
+      "zh": "女人",
+      "py": "nǚrén",
+      "uz": "ayol",
+      "ru": "женщина",
+      "en": "woman"
+    },
+    {
+      "zh": "丈夫",
+      "py": "zhàngfu",
+      "uz": "er / turmush o'rtog'i",
+      "ru": "муж",
+      "en": "husband"
+    },
+    {
+      "zh": "妻子",
+      "py": "qīzi",
+      "uz": "xotin / turmush o'rtog'i",
+      "ru": "жена",
+      "en": "wife"
+    },
+    {
+      "zh": "介绍",
+      "py": "jièshào",
+      "uz": "tanishtirmoq",
+      "ru": "представить / познакомить",
+      "en": "to introduce"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on relationships and people"
 }

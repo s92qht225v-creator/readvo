@@ -63,7 +63,8 @@
               "tr": "что"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue1.mp3",
+          "text_translation_en": "What are you doing?"
         },
         {
           "id": "d46-s2",
@@ -83,7 +84,8 @@
               "tr": "худеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue2.mp3",
+          "text_translation_en": "Losing weight."
         },
         {
           "id": "d46-s3",
@@ -136,7 +138,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue3.mp3",
+          "text_translation_en": "What's that in your hand?"
         },
         {
           "id": "d46-s4",
@@ -156,7 +159,8 @@
               "tr": "торт"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue4.mp3",
+          "text_translation_en": "Cake."
         },
         {
           "id": "d46-s5",
@@ -198,7 +202,8 @@
               "tr": "худеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue5.mp3",
+          "text_translation_en": "You call this losing weight?"
         },
         {
           "id": "d46-s6",
@@ -231,7 +236,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue6.mp3",
+          "text_translation_en": "I'll start tomorrow."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/jian%20fei/dialogue.mp3"
@@ -249,7 +255,9 @@
       "ex": "你干嘛呢？",
       "expy": "Nǐ gànma ne?",
       "ex_uz": "Nima qilyapsan?",
-      "ex_ru": "Что ты делаешь?"
+      "ex_ru": "Что ты делаешь?",
+      "en": "what are you doing / why",
+      "ex_en": "What are you doing?"
     },
     {
       "zh": "减肥",
@@ -259,7 +267,9 @@
       "ex": "她每天跑步减肥。",
       "expy": "Tā měitiān pǎobù jiǎnféi.",
       "ex_uz": "U har kuni yugurish bilan ozadi.",
-      "ex_ru": "Она каждый день бегает, чтобы похудеть."
+      "ex_ru": "Она каждый день бегает, чтобы похудеть.",
+      "en": "to lose weight",
+      "ex_en": "She runs every day to lose weight."
     },
     {
       "zh": "手里",
@@ -269,7 +279,9 @@
       "ex": "你手里拿的是什么？",
       "expy": "Nǐ shǒu lǐ ná de shì shénme?",
       "ex_uz": "Qo'lingdagi nima?",
-      "ex_ru": "Что у тебя в руке?"
+      "ex_ru": "Что у тебя в руке?",
+      "en": "in hand",
+      "ex_en": "What's in your hand?"
     },
     {
       "zh": "蛋糕",
@@ -279,7 +291,9 @@
       "ex": "这个蛋糕很好吃。",
       "expy": "Zhège dàngāo hěn hǎochī.",
       "ex_uz": "Bu tort juda mazali.",
-      "ex_ru": "Этот торт очень вкусный."
+      "ex_ru": "Этот торт очень вкусный.",
+      "en": "cake / pastry",
+      "ex_en": "This cake is very delicious."
     },
     {
       "zh": "明天",
@@ -289,7 +303,9 @@
       "ex": "明天你有空吗？",
       "expy": "Míngtiān nǐ yǒu kòng ma?",
       "ex_uz": "Ertaga bo'shsan?",
-      "ex_ru": "Завтра ты свободен?"
+      "ex_ru": "Завтра ты свободен?",
+      "en": "tomorrow",
+      "ex_en": "Are you free tomorrow?"
     },
     {
       "zh": "开始",
@@ -299,26 +315,119 @@
       "ex": "我们开始吧！",
       "expy": "Wǒmen kāishǐ ba!",
       "ex_uz": "Boshlaylik!",
-      "ex_ru": "Давайте начнём!"
+      "ex_ru": "Давайте начнём!",
+      "en": "to begin / start",
+      "ex_en": "Let's begin!"
     }
   ],
   "extraVocabSubtitle_uz": "Ozish va sog'lom ovqatlanish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме похудения и здорового питания",
   "extraVocab": [
-    { "zh": "胖", "py": "pàng", "uz": "semiz / to'la", "ru": "толстый / полный" },
-    { "zh": "瘦", "py": "shòu", "uz": "ozg'in / oriq", "ru": "худой / стройный" },
-    { "zh": "甜", "py": "tián", "uz": "shirin", "ru": "сладкий" },
-    { "zh": "运动", "py": "yùndòng", "uz": "sport / mashq qilmoq", "ru": "спорт / заниматься спортом" },
-    { "zh": "健康", "py": "jiànkāng", "uz": "sog'lom / sog'lik", "ru": "здоровый / здоровье" },
-    { "zh": "体重", "py": "tǐzhòng", "uz": "tana og'irligi", "ru": "вес тела" },
-    { "zh": "节食", "py": "jiéshí", "uz": "parhez qilmoq", "ru": "сидеть на диете" },
-    { "zh": "跑步", "py": "pǎobù", "uz": "yugurmoq", "ru": "бегать" },
-    { "zh": "锻炼", "py": "duànliàn", "uz": "mashq qilmoq", "ru": "тренироваться" },
-    { "zh": "水果", "py": "shuǐguǒ", "uz": "meva", "ru": "фрукты" },
-    { "zh": "蔬菜", "py": "shūcài", "uz": "sabzavot", "ru": "овощи" },
-    { "zh": "零食", "py": "língshí", "uz": "gazak / yengil taom", "ru": "перекус / снеки" },
-    { "zh": "饱", "py": "bǎo", "uz": "to'q", "ru": "сытый" },
-    { "zh": "饿", "py": "è", "uz": "och", "ru": "голодный" },
-    { "zh": "卡路里", "py": "kǎlùlǐ", "uz": "kaloriya", "ru": "калория" }
-  ]
+    {
+      "zh": "胖",
+      "py": "pàng",
+      "uz": "semiz / to'la",
+      "ru": "толстый / полный",
+      "en": "fat / overweight"
+    },
+    {
+      "zh": "瘦",
+      "py": "shòu",
+      "uz": "ozg'in / oriq",
+      "ru": "худой / стройный",
+      "en": "thin / slim"
+    },
+    {
+      "zh": "甜",
+      "py": "tián",
+      "uz": "shirin",
+      "ru": "сладкий",
+      "en": "sweet"
+    },
+    {
+      "zh": "运动",
+      "py": "yùndòng",
+      "uz": "sport / mashq qilmoq",
+      "ru": "спорт / заниматься спортом",
+      "en": "sports / to exercise"
+    },
+    {
+      "zh": "健康",
+      "py": "jiànkāng",
+      "uz": "sog'lom / sog'lik",
+      "ru": "здоровый / здоровье",
+      "en": "healthy / health"
+    },
+    {
+      "zh": "体重",
+      "py": "tǐzhòng",
+      "uz": "tana og'irligi",
+      "ru": "вес тела",
+      "en": "body weight"
+    },
+    {
+      "zh": "节食",
+      "py": "jiéshí",
+      "uz": "parhez qilmoq",
+      "ru": "сидеть на диете",
+      "en": "to be on a diet"
+    },
+    {
+      "zh": "跑步",
+      "py": "pǎobù",
+      "uz": "yugurmoq",
+      "ru": "бегать",
+      "en": "to run / jog"
+    },
+    {
+      "zh": "锻炼",
+      "py": "duànliàn",
+      "uz": "mashq qilmoq",
+      "ru": "тренироваться",
+      "en": "to exercise / train"
+    },
+    {
+      "zh": "水果",
+      "py": "shuǐguǒ",
+      "uz": "meva",
+      "ru": "фрукты",
+      "en": "fruits"
+    },
+    {
+      "zh": "蔬菜",
+      "py": "shūcài",
+      "uz": "sabzavot",
+      "ru": "овощи",
+      "en": "vegetables"
+    },
+    {
+      "zh": "零食",
+      "py": "língshí",
+      "uz": "gazak / yengil taom",
+      "ru": "перекус / снеки",
+      "en": "snack"
+    },
+    {
+      "zh": "饱",
+      "py": "bǎo",
+      "uz": "to'q",
+      "ru": "сытый",
+      "en": "full (not hungry)"
+    },
+    {
+      "zh": "饿",
+      "py": "è",
+      "uz": "och",
+      "ru": "голодный",
+      "en": "hungry"
+    },
+    {
+      "zh": "卡路里",
+      "py": "kǎlùlǐ",
+      "uz": "kaloriya",
+      "ru": "калория",
+      "en": "calorie"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on weight loss and healthy eating"
 }

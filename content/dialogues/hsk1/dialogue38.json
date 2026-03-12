@@ -54,7 +54,8 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue1.mp3",
+          "text_translation_en": "How have you been lately?"
         },
         {
           "id": "d38-s2",
@@ -105,7 +106,8 @@
               "tr": "занят"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue2.mp3",
+          "text_translation_en": "I've been very busy lately."
         },
         {
           "id": "d38-s3",
@@ -136,7 +138,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue3.mp3",
+          "text_translation_en": "Busy with what?"
         },
         {
           "id": "d38-s4",
@@ -185,7 +188,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue4.mp3",
+          "text_translation_en": "I have an exam next month."
         },
         {
           "id": "d38-s5",
@@ -216,7 +220,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue5.mp3",
+          "text_translation_en": "Are you nervous?"
         },
         {
           "id": "d38-s6",
@@ -236,7 +241,8 @@
               "tr": "волноваться"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue6.mp3",
+          "text_translation_en": "Yes, I am."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20hen%20jinzhang/dialogue.mp3"
@@ -254,7 +260,9 @@
       "ex": "考试前我很紧张。",
       "expy": "Kǎoshì qián wǒ hěn jǐnzhāng.",
       "ex_uz": "Imtihon oldidan men juda hayajonlanaman.",
-      "ex_ru": "Перед экзаменом я очень нервничаю."
+      "ex_ru": "Перед экзаменом я очень нервничаю.",
+      "en": "to be nervous",
+      "ex_en": "I'm very nervous before the exam."
     },
     {
       "zh": "最近",
@@ -264,7 +272,9 @@
       "ex": "你最近忙吗？",
       "expy": "Nǐ zuìjìn máng ma?",
       "ex_uz": "Yaqinda bandmisan?",
-      "ex_ru": "В последнее время занят?"
+      "ex_ru": "В последнее время занят?",
+      "en": "recently / lately",
+      "ex_en": "Been busy lately?"
     },
     {
       "zh": "忙",
@@ -274,7 +284,9 @@
       "ex": "他每天都很忙。",
       "expy": "Tā měi tiān dōu hěn máng.",
       "ex_uz": "U har kuni juda band.",
-      "ex_ru": "Он каждый день очень занят."
+      "ex_ru": "Он каждый день очень занят.",
+      "en": "busy",
+      "ex_en": "He's very busy every day."
     },
     {
       "zh": "考试",
@@ -284,7 +296,9 @@
       "ex": "明天有考试。",
       "expy": "Míngtiān yǒu kǎoshì.",
       "ex_uz": "Ertaga imtihon bor.",
-      "ex_ru": "Завтра экзамен."
+      "ex_ru": "Завтра экзамен.",
+      "en": "exam",
+      "ex_en": "The exam is tomorrow."
     },
     {
       "zh": "要",
@@ -294,7 +308,9 @@
       "ex": "我要回家了。",
       "expy": "Wǒ yào huí jiā le.",
       "ex_uz": "Men uyga qaytmoqchiman.",
-      "ex_ru": "Я собираюсь домой."
+      "ex_ru": "Я собираюсь домой.",
+      "en": "to be about to / soon",
+      "ex_en": "I'm going home."
     },
     {
       "zh": "下个月",
@@ -304,18 +320,56 @@
       "ex": "下个月我去北京。",
       "expy": "Xià ge yuè wǒ qù Běijīng.",
       "ex_uz": "Keyingi oy men Pekinga boraman.",
-      "ex_ru": "В следующем месяце я еду в Пекин."
+      "ex_ru": "В следующем месяце я еду в Пекин.",
+      "en": "next month",
+      "ex_en": "Next month I'm going to Beijing."
     }
   ],
   "extraVocabSubtitle_uz": "His-tuyg'ular mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме эмоций и чувств",
   "extraVocab": [
-    { "zh": "放松", "py": "fàngsōng", "uz": "dam olmoq", "ru": "расслабиться" },
-    { "zh": "担心", "py": "dānxīn", "uz": "xavotirlanmoq", "ru": "беспокоиться" },
-    { "zh": "害怕", "py": "hàipà", "uz": "qo'rqmoq", "ru": "бояться" },
-    { "zh": "开心", "py": "kāixīn", "uz": "xursand", "ru": "радостный" },
-    { "zh": "压力", "py": "yālì", "uz": "bosim / stress", "ru": "давление / стресс" },
-    { "zh": "加油", "py": "jiāyóu", "uz": "qo'llab-quvvatlamoq", "ru": "давай / вперёд!" }
+    {
+      "zh": "放松",
+      "py": "fàngsōng",
+      "uz": "dam olmoq",
+      "ru": "расслабиться",
+      "en": "to relax"
+    },
+    {
+      "zh": "担心",
+      "py": "dānxīn",
+      "uz": "xavotirlanmoq",
+      "ru": "беспокоиться",
+      "en": "to worry"
+    },
+    {
+      "zh": "害怕",
+      "py": "hàipà",
+      "uz": "qo'rqmoq",
+      "ru": "бояться",
+      "en": "to be afraid"
+    },
+    {
+      "zh": "开心",
+      "py": "kāixīn",
+      "uz": "xursand",
+      "ru": "радостный",
+      "en": "happy / joyful"
+    },
+    {
+      "zh": "压力",
+      "py": "yālì",
+      "uz": "bosim / stress",
+      "ru": "давление / стресс",
+      "en": "pressure / stress"
+    },
+    {
+      "zh": "加油",
+      "py": "jiāyóu",
+      "uz": "qo'llab-quvvatlamoq",
+      "ru": "давай / вперёд!",
+      "en": "come on! / let's go!"
+    }
   ],
   "grammarNotes": [
     {
@@ -327,11 +381,27 @@
       "formula": "(你) 最近 + 怎么样？",
       "formula_ru": "(Ты) 最近 + 怎么样？",
       "examples": [
-        { "zh": "你最近怎么样？", "py": "Nǐ zuìjìn zěnmeyàng?", "uz": "Oxirgi paytlarda qalaysan?", "ru": "Как у тебя дела в последнее время?" },
-        { "zh": "他最近怎么样？", "py": "Tā zuìjìn zěnmeyàng?", "uz": "U yaqinda qanday?", "ru": "Как у него дела в последнее время?" }
+        {
+          "zh": "你最近怎么样？",
+          "py": "Nǐ zuìjìn zěnmeyàng?",
+          "uz": "Oxirgi paytlarda qalaysan?",
+          "ru": "Как у тебя дела в последнее время?",
+          "en": "How have you been lately?"
+        },
+        {
+          "zh": "他最近怎么样？",
+          "py": "Tā zuìjìn zěnmeyàng?",
+          "uz": "U yaqinda qanday?",
+          "ru": "Как у него дела в последнее время?",
+          "en": "How has he been lately?"
+        }
       ],
       "tip_uz": "Bu savol yaqin do'stlar va tanishlar orasida ishlatiladi. Rasmiy emas.",
-      "tip_ru": "Этот вопрос используется между друзьями и знакомыми. Неформальный."
+      "tip_ru": "Этот вопрос используется между друзьями и знакомыми. Неформальный.",
+      "title_en": "最近怎么样？ — asking about recent things",
+      "desc_en": "\"最近\" (recently) + \"怎么样\" (how are things) — ask how things have been lately.",
+      "formula_en": "(You) 最近 + 怎么样？",
+      "tip_en": "This question is used between friends and acquaintances. Informal."
     },
     {
       "pattern": "很 + Sifat",
@@ -342,11 +412,27 @@
       "formula": "很 + Sifat",
       "formula_ru": "很 + Прилагательное",
       "examples": [
-        { "zh": "我最近很忙。", "py": "Wǒ zuìjìn hěn máng.", "uz": "Men yaqinda juda bandman.", "ru": "В последнее время я очень занят." },
-        { "zh": "她很紧张。", "py": "Tā hěn jǐnzhāng.", "uz": "U juda hayajonlanyapti.", "ru": "Она очень нервничает." }
+        {
+          "zh": "我最近很忙。",
+          "py": "Wǒ zuìjìn hěn máng.",
+          "uz": "Men yaqinda juda bandman.",
+          "ru": "В последнее время я очень занят.",
+          "en": "I've been very busy lately."
+        },
+        {
+          "zh": "她很紧张。",
+          "py": "Tā hěn jǐnzhāng.",
+          "uz": "U juda hayajonlanyapti.",
+          "ru": "Она очень нервничает.",
+          "en": "She's very nervous."
+        }
       ],
       "tip_uz": "\"很\" ba'zan \"juda\" ma'nosini yo'qotib, oddiygina bog'lovchi vazifasini bajaradi.",
-      "tip_ru": "\"很\" иногда теряет значение \"очень\" и просто связывает подлежащее с прилагательным."
+      "tip_ru": "\"很\" иногда теряет значение \"очень\" и просто связывает подлежащее с прилагательным.",
+      "title_en": "very + adjective — describing a state",
+      "desc_en": "\"很\" is placed before an adjective and means \"very\". In Chinese, \"很\" is usually placed before adjectives.",
+      "formula_en": "很 + Adjective",
+      "tip_en": "\"很\" sometimes loses the meaning of \"very\" and simply links the subject to the adjective."
     },
     {
       "pattern": "要...了",
@@ -357,11 +443,27 @@
       "formula": "(Vaqt +) 要 + Fe'l + 了",
       "formula_ru": "(Время +) 要 + Глагол + 了",
       "examples": [
-        { "zh": "下个月要考试了。", "py": "Xià ge yuè yào kǎoshì le.", "uz": "Keyingi oy imtihon bo'ladi.", "ru": "В следующем месяце экзамен." },
-        { "zh": "要下雨了。", "py": "Yào xià yǔ le.", "uz": "Yomg'ir yog'moqchi.", "ru": "Скоро пойдёт дождь." }
+        {
+          "zh": "下个月要考试了。",
+          "py": "Xià ge yuè yào kǎoshì le.",
+          "uz": "Keyingi oy imtihon bo'ladi.",
+          "ru": "В следующем месяце экзамен.",
+          "en": "The exam is next month."
+        },
+        {
+          "zh": "要下雨了。",
+          "py": "Yào xià yǔ le.",
+          "uz": "Yomg'ir yog'moqchi.",
+          "ru": "Скоро пойдёт дождь.",
+          "en": "It's going to rain soon."
+        }
       ],
       "tip_uz": "\"要...了\" = tez orada. \"快要...了\" ham xuddi shu ma'noda ishlatiladi, lekin yanada tezroqni anglatadi.",
-      "tip_ru": "\"要...了\" = скоро. \"快要...了\" — то же значение, но подчёркивает, что совсем скоро."
+      "tip_ru": "\"要...了\" = скоро. \"快要...了\" — то же значение, но подчёркивает, что совсем скоро.",
+      "title_en": "要...了 — about to happen",
+      "desc_en": "\"要...了\" indicates something is about to happen. Used for events in the near future.",
+      "formula_en": "(Time +) 要 + Verb + 了",
+      "tip_en": "\"要...了\" = soon. \"快要...了\" — same meaning but emphasizes it's very soon."
     },
     {
       "pattern": "Sifat + 吗？",
@@ -372,11 +474,28 @@
       "formula": "Sifat + 吗？ → Sifat / 不 + Sifat",
       "formula_ru": "Прил. + 吗？ → Прил. / 不 + Прил.",
       "examples": [
-        { "zh": "紧张吗？", "py": "Jǐnzhāng ma?", "uz": "Hayajonlanyapsanmi?", "ru": "Волнуешься?" },
-        { "zh": "忙吗？", "py": "Máng ma?", "uz": "Bandmisan?", "ru": "Занят?" }
+        {
+          "zh": "紧张吗？",
+          "py": "Jǐnzhāng ma?",
+          "uz": "Hayajonlanyapsanmi?",
+          "ru": "Волнуешься?",
+          "en": "Are you nervous?"
+        },
+        {
+          "zh": "忙吗？",
+          "py": "Máng ma?",
+          "uz": "Bandmisan?",
+          "ru": "Занят?",
+          "en": "Are you busy?"
+        }
       ],
       "tip_uz": "Javob qisqa bo'lishi mumkin: \"紧张。\" (ha) yoki \"不紧张。\" (yo'q).",
-      "tip_ru": "Ответ может быть кратким: \"紧张。\" (да) или \"不紧张。\" (нет)."
+      "tip_ru": "Ответ может быть кратким: \"紧张。\" (да) или \"不紧张。\" (нет).",
+      "title_en": "Adj. + 吗？ — asking about a state",
+      "desc_en": "By adding \"吗\" after an adjective, you can ask about a state. The answer is the adjective itself.",
+      "formula_en": "Adj. + 吗？ → Adj. / 不 + Adj.",
+      "tip_en": "The answer can be brief: \"紧张\" (yes) or \"不紧张\" (no)."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on emotions and feelings"
 }

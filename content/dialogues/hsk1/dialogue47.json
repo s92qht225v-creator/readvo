@@ -63,7 +63,8 @@
               "tr": "есть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue1.mp3",
+          "text_translation_en": "Why aren't you eating?"
         },
         {
           "id": "d47-s2",
@@ -114,7 +115,8 @@
               "tr": "держать пост"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue2.mp3",
+          "text_translation_en": "Because I'm fasting."
         },
         {
           "id": "d47-s3",
@@ -167,7 +169,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue3.mp3",
+          "text_translation_en": "Is it Ramadan now?"
         },
         {
           "id": "d47-s4",
@@ -189,7 +192,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d47-s5",
@@ -264,7 +268,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue5.mp3",
+          "text_translation_en": "You don't eat during the day, right?"
         },
         {
           "id": "d47-s6",
@@ -308,7 +313,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue6.mp3",
+          "text_translation_en": "Right, I eat in the evening."
         },
         {
           "id": "d47-s7",
@@ -339,7 +345,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue7.mp3",
+          "text_translation_en": "Is it hard?"
         },
         {
           "id": "d47-s8",
@@ -370,7 +377,8 @@
               "tr": "тяжело"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue8.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue8.mp3",
+          "text_translation_en": "Not hard."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3"
@@ -388,7 +396,9 @@
       "ex": "你为什么不去？",
       "expy": "Nǐ wèi shénme bù qù?",
       "ex_uz": "Nega bormayapsan?",
-      "ex_ru": "Почему ты не идёшь?"
+      "ex_ru": "Почему ты не идёшь?",
+      "en": "why",
+      "ex_en": "Why aren't you going?"
     },
     {
       "zh": "因为",
@@ -398,7 +408,9 @@
       "ex": "因为我很忙。",
       "expy": "Yīnwèi wǒ hěn máng.",
       "ex_uz": "Chunki men juda bandman.",
-      "ex_ru": "Потому что я очень занят."
+      "ex_ru": "Потому что я очень занят.",
+      "en": "because",
+      "ex_en": "Because I'm very busy."
     },
     {
       "zh": "封斋",
@@ -408,7 +420,9 @@
       "ex": "我在封斋。",
       "expy": "Wǒ zài fēng zhāi.",
       "ex_uz": "Men ro'za tutayapman.",
-      "ex_ru": "Я соблюдаю пост."
+      "ex_ru": "Я соблюдаю пост.",
+      "en": "to fast (observe fasting)",
+      "ex_en": "I'm fasting."
     },
     {
       "zh": "斋月",
@@ -418,7 +432,9 @@
       "ex": "现在是斋月。",
       "expy": "Xiànzài shì zhāi yuè.",
       "ex_uz": "Hozir Ramazon oyi.",
-      "ex_ru": "Сейчас месяц Рамадан."
+      "ex_ru": "Сейчас месяц Рамадан.",
+      "en": "month of Ramadan",
+      "ex_en": "It's Ramadan now."
     },
     {
       "zh": "白天",
@@ -428,7 +444,9 @@
       "ex": "白天不吃饭。",
       "expy": "Báitiān bù chīfàn.",
       "ex_uz": "Kunduz ovqat yemaydi.",
-      "ex_ru": "Днём не ест."
+      "ex_ru": "Днём не ест.",
+      "en": "in the afternoon",
+      "ex_en": "Doesn't eat during the day."
     },
     {
       "zh": "晚上",
@@ -438,7 +456,9 @@
       "ex": "晚上吃饭。",
       "expy": "Wǎnshang chīfàn.",
       "ex_uz": "Kechqurun ovqat yeydi.",
-      "ex_ru": "Вечером ест."
+      "ex_ru": "Вечером ест.",
+      "en": "in the evening",
+      "ex_en": "Eats in the evening."
     },
     {
       "zh": "辛苦",
@@ -448,7 +468,9 @@
       "ex": "工作辛苦吗？",
       "expy": "Gōngzuò xīnkǔ ma?",
       "ex_uz": "Ish qiyinmi?",
-      "ex_ru": "Работа тяжёлая?"
+      "ex_ru": "Работа тяжёлая?",
+      "en": "difficult / hard",
+      "ex_en": "Is the work hard?"
     },
     {
       "zh": "对吗",
@@ -458,7 +480,9 @@
       "ex": "你是学生，对吗？",
       "expy": "Nǐ shì xuéshēng, duì ma?",
       "ex_uz": "Sen talabasan, shundaymi?",
-      "ex_ru": "Ты студент, правда?"
+      "ex_ru": "Ты студент, правда?",
+      "en": "really?",
+      "ex_en": "You're a student, right?"
     }
   ],
   "extraVocabSubtitle_uz": "Ro'za va ibodat mavzusidagi foydali so'zlar",
@@ -468,67 +492,78 @@
       "zh": "开斋",
       "py": "kāi zhāi",
       "uz": "iftor qilmoq (ro'za ochmoq)",
-      "ru": "разговеться"
+      "ru": "разговеться",
+      "en": "to break the fast"
     },
     {
       "zh": "开斋节",
       "py": "kāi zhāi jié",
       "uz": "Ro'za hayiti",
-      "ru": "Праздник разговения"
+      "ru": "Праздник разговения",
+      "en": "Eid al-Fitr"
     },
     {
       "zh": "做礼拜",
       "py": "zuò lǐbài",
       "uz": "namoz o'qimoq (ibodat qilmoq)",
-      "ru": "молиться"
+      "ru": "молиться",
+      "en": "to pray"
     },
     {
       "zh": "清真寺",
       "py": "qīngzhēn sì",
       "uz": "masjid",
-      "ru": "мечеть"
+      "ru": "мечеть",
+      "en": "mosque"
     },
     {
       "zh": "古兰经",
       "py": "gǔlánjīng",
       "uz": "Qur'on",
-      "ru": "Коран"
+      "ru": "Коран",
+      "en": "Quran"
     },
     {
       "zh": "早饭",
       "py": "zǎofàn",
       "uz": "nonushta (saharlik)",
-      "ru": "завтрак (сухур)"
+      "ru": "завтрак (сухур)",
+      "en": "pre-dawn meal (suhur)"
     },
     {
       "zh": "晚饭",
       "py": "wǎnfàn",
       "uz": "kechki ovqat (iftor)",
-      "ru": "ужин (ифтар)"
+      "ru": "ужин (ифтар)",
+      "en": "evening meal (iftar)"
     },
     {
       "zh": "喝水",
       "py": "hē shuǐ",
       "uz": "suv ichmoq",
-      "ru": "пить воду"
+      "ru": "пить воду",
+      "en": "to drink water"
     },
     {
       "zh": "饿",
       "py": "è",
       "uz": "och (qorin)",
-      "ru": "голодный"
+      "ru": "голодный",
+      "en": "hungry"
     },
     {
       "zh": "渴",
       "py": "kě",
       "uz": "chanqoq",
-      "ru": "хочется пить"
+      "ru": "хочется пить",
+      "en": "thirsty"
     },
     {
       "zh": "忍",
       "py": "rěn",
       "uz": "chidamoq, sabr qilmoq",
-      "ru": "терпеть"
+      "ru": "терпеть",
+      "en": "to endure / bear"
     }
   ],
   "grammarNotes": [
@@ -545,23 +580,30 @@
           "zh": "你为什么不吃饭？",
           "py": "Nǐ wèi shénme bù chīfàn?",
           "uz": "Nega ovqat yemayapsan?",
-          "ru": "Почему ты не ешь?"
+          "ru": "Почему ты не ешь?",
+          "en": "Why aren't you eating?"
         },
         {
           "zh": "他为什么不来？",
           "py": "Tā wèi shénme bù lái?",
           "uz": "U nega kelmayapti?",
-          "ru": "Почему он не приходит?"
+          "ru": "Почему он не приходит?",
+          "en": "Why isn't he coming?"
         },
         {
           "zh": "你为什么学中文？",
           "py": "Nǐ wèi shénme xué Zhōngwén?",
           "uz": "Nega xitoy tilini o'rganayapsan?",
-          "ru": "Почему ты учишь китайский?"
+          "ru": "Почему ты учишь китайский?",
+          "en": "Why are you learning Chinese?"
         }
       ],
       "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
-      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!"
+      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!",
+      "title_en": "Asking the reason",
+      "desc_en": "为什么 = why. Placed after the subject, before the verb.",
+      "formula_en": "Subj. + 为什么 + Verb？",
+      "tip_en": "为什么 always goes BEFORE the verb, never at the end of the sentence!"
     },
     {
       "pattern": "因为...",
@@ -576,21 +618,27 @@
           "zh": "因为我在封斋。",
           "py": "Yīnwèi wǒ zài fēng zhāi.",
           "uz": "Chunki men ro'za tutayapman.",
-          "ru": "Потому что я соблюдаю пост."
+          "ru": "Потому что я соблюдаю пост.",
+          "en": "Because I'm fasting."
         },
         {
           "zh": "因为今天是斋月。",
           "py": "Yīnwèi jīntiān shì zhāi yuè.",
           "uz": "Chunki bugun Ramazon oyi.",
-          "ru": "Потому что сегодня Рамадан."
+          "ru": "Потому что сегодня Рамадан.",
+          "en": "Because it's Ramadan today."
         },
         {
           "zh": "因为我很忙。",
           "py": "Yīnwèi wǒ hěn máng.",
           "uz": "Chunki men juda bandman.",
-          "ru": "Потому что я очень занят."
+          "ru": "Потому что я очень занят.",
+          "en": "Because I'm very busy."
         }
-      ]
+      ],
+      "title_en": "Expressing a reason",
+      "desc_en": "因为 = because. The answer to 为什么. Goes at the beginning of the sentence.",
+      "formula_en": "因为 + reason"
     },
     {
       "pattern": "在 + Fe'l",
@@ -605,21 +653,27 @@
           "zh": "我在封斋。",
           "py": "Wǒ zài fēng zhāi.",
           "uz": "Men (hozir) ro'za tutayapman.",
-          "ru": "Я (сейчас) соблюдаю пост."
+          "ru": "Я (сейчас) соблюдаю пост.",
+          "en": "I'm (currently) fasting."
         },
         {
           "zh": "他在吃饭。",
           "py": "Tā zài chīfàn.",
           "uz": "U (hozir) ovqat yeyapti.",
-          "ru": "Он (сейчас) ест."
+          "ru": "Он (сейчас) ест.",
+          "en": "He's eating (right now)."
         },
         {
           "zh": "我们在学习。",
           "py": "Wǒmen zài xuéxí.",
           "uz": "Biz (hozir) o'qiyapmiz.",
-          "ru": "Мы (сейчас) учимся."
+          "ru": "Мы (сейчас) учимся.",
+          "en": "We're studying (right now)."
         }
-      ]
+      ],
+      "title_en": "Ongoing actions",
+      "desc_en": "在 before a verb indicates an action in progress. Similar to \"-ing\" in English.",
+      "formula_en": "Subj. + 在 + Verb"
     },
     {
       "pattern": "...是...吗？",
@@ -634,21 +688,27 @@
           "zh": "现在是斋月吗？",
           "py": "Xiànzài shì zhāi yuè ma?",
           "uz": "Hozir Ramazon oyi-mi?",
-          "ru": "Сейчас Рамадан?"
+          "ru": "Сейчас Рамадан?",
+          "en": "Is it Ramadan now?"
         },
         {
           "zh": "他是学生吗？",
           "py": "Tā shì xuéshēng ma?",
           "uz": "U talabami?",
-          "ru": "Он студент?"
+          "ru": "Он студент?",
+          "en": "Is he a student?"
         },
         {
           "zh": "这是你的书吗？",
           "py": "Zhè shì nǐ de shū ma?",
           "uz": "Bu sening kitobingmi?",
-          "ru": "Это твоя книга?"
+          "ru": "Это твоя книга?",
+          "en": "Is this your book?"
         }
-      ]
+      ],
+      "title_en": "Yes/no questions",
+      "desc_en": "是...吗？ = is it...? Used for confirmation or clarification.",
+      "formula_en": "Now + 是 + [something] + 吗？"
     },
     {
       "pattern": "...，对吗？",
@@ -663,21 +723,27 @@
           "zh": "你白天不吃，对吗？",
           "py": "Nǐ báitiān bù chī, duì ma?",
           "uz": "Kunduz yemaysan, shundaymi?",
-          "ru": "Ты днём не ешь, правда?"
+          "ru": "Ты днём не ешь, правда?",
+          "en": "You don't eat during the day, right?"
         },
         {
           "zh": "你是学生，对吗？",
           "py": "Nǐ shì xuéshēng, duì ma?",
           "uz": "Sen talabasan, shundaymi?",
-          "ru": "Ты студент, правда?"
+          "ru": "Ты студент, правда?",
+          "en": "You're a student, right?"
         },
         {
           "zh": "他很忙，对吗？",
           "py": "Tā hěn máng, duì ma?",
           "uz": "U juda band, shundaymi?",
-          "ru": "Он очень занят, правда?"
+          "ru": "Он очень занят, правда?",
+          "en": "He's very busy, right?"
         }
-      ]
+      ],
+      "title_en": "Follow-up questions",
+      "desc_en": "对吗？ = right? / correct? Added at the end — to confirm your thought.",
+      "formula_en": "Sentence + ，对吗？"
     },
     {
       "pattern": "不 + Sifat",
@@ -692,23 +758,31 @@
           "zh": "不辛苦。",
           "py": "Bù xīnkǔ.",
           "uz": "Qiyin emas.",
-          "ru": "Не тяжело."
+          "ru": "Не тяжело.",
+          "en": "Not difficult."
         },
         {
           "zh": "不忙。",
           "py": "Bù máng.",
           "uz": "Band emas.",
-          "ru": "Не занят."
+          "ru": "Не занят.",
+          "en": "Not busy."
         },
         {
           "zh": "不好。",
           "py": "Bù hǎo.",
           "uz": "Yaxshi emas.",
-          "ru": "Нехорошо."
+          "ru": "Нехорошо.",
+          "en": "Not good."
         }
       ],
       "tip_uz": "Tasdiqda 很好 (hěn hǎo) deymiz, inkorida esa faqat 不好 (bù hǎo) — 很 kerak emas!",
-      "tip_ru": "В утверждении говорим 很好 (hěn hǎo), в отрицании — только 不好 (bù hǎo), без 很!"
+      "tip_ru": "В утверждении говорим 很好 (hěn hǎo), в отрицании — только 不好 (bù hǎo), без 很!",
+      "title_en": "Negating adjectives",
+      "desc_en": "不 before an adjective gives the meaning \"not...\". 很 is omitted in this case!",
+      "formula_en": "不 + Adjective",
+      "tip_en": "In affirmative: 很好 (hěn hǎo). In negation: just 不好 (bù hǎo), without 很!"
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on fasting and prayer"
 }

@@ -74,7 +74,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3",
+          "text_translation_en": "Have you finished your homework?"
         },
         {
           "id": "d39-s2",
@@ -125,7 +126,8 @@
               "tr": "закончить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3",
+          "text_translation_en": "Not yet."
         },
         {
           "id": "d39-s3",
@@ -165,7 +167,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3",
+          "text_translation_en": "How much is left?"
         },
         {
           "id": "d39-s4",
@@ -203,7 +206,8 @@
               "tr": "половина"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3",
+          "text_translation_en": "Half of it."
         },
         {
           "id": "d39-s5",
@@ -267,7 +271,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3",
+          "text_translation_en": "Can you finish it today?"
         },
         {
           "id": "d39-s6",
@@ -289,7 +294,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3",
+          "text_translation_en": "Yes, I can."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
@@ -307,7 +313,9 @@
       "ex": "老师给了很多作业。",
       "expy": "Lǎoshī gěi le hěn duō zuòyè.",
       "ex_uz": "O'qituvchi ko'p uy vazifa berdi.",
-      "ex_ru": "Учитель задал много домашнего задания."
+      "ex_ru": "Учитель задал много домашнего задания.",
+      "en": "homework",
+      "ex_en": "The teacher assigned a lot of homework."
     },
     {
       "zh": "写",
@@ -317,7 +325,9 @@
       "ex": "你在写什么？",
       "expy": "Nǐ zài xiě shénme?",
       "ex_uz": "Sen nima yozyapsan?",
-      "ex_ru": "Что ты пишешь?"
+      "ex_ru": "Что ты пишешь?",
+      "en": "to write",
+      "ex_en": "What are you writing?"
     },
     {
       "zh": "完",
@@ -327,7 +337,9 @@
       "ex": "你吃完了吗？",
       "expy": "Nǐ chī wán le ma?",
       "ex_uz": "Yeb bo'ldingmi?",
-      "ex_ru": "Ты доел?"
+      "ex_ru": "Ты доел?",
+      "en": "to finish / complete",
+      "ex_en": "Are you done eating?"
     },
     {
       "zh": "还",
@@ -337,7 +349,9 @@
       "ex": "他还在学校。",
       "expy": "Tā hái zài xuéxiào.",
       "ex_uz": "U hali maktabda.",
-      "ex_ru": "Он ещё в школе."
+      "ex_ru": "Он ещё в школе.",
+      "en": "still / more",
+      "ex_en": "He's still at school."
     },
     {
       "zh": "差",
@@ -347,7 +361,9 @@
       "ex": "还差两个人。",
       "expy": "Hái chà liǎng ge rén.",
       "ex_uz": "Yana ikki kishi yetishmayapti.",
-      "ex_ru": "Ещё не хватает двух человек."
+      "ex_ru": "Ещё не хватает двух человек.",
+      "en": "not enough / remaining",
+      "ex_en": "Two more people are still missing."
     },
     {
       "zh": "一半",
@@ -357,18 +373,56 @@
       "ex": "我吃了一半。",
       "expy": "Wǒ chī le yíbàn.",
       "ex_uz": "Men yarmini yedim.",
-      "ex_ru": "Я съел половину."
+      "ex_ru": "Я съел половину.",
+      "en": "half",
+      "ex_en": "I ate half."
     }
   ],
   "extraVocabSubtitle_uz": "Maktab va uy vazifasi mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме школы и домашнего задания",
   "extraVocab": [
-    { "zh": "课文", "py": "kèwén", "uz": "dars matni", "ru": "текст урока" },
-    { "zh": "练习", "py": "liànxí", "uz": "mashq", "ru": "упражнение" },
-    { "zh": "复习", "py": "fùxí", "uz": "takrorlamoq", "ru": "повторять" },
-    { "zh": "笔记", "py": "bǐjì", "uz": "yozuv / konspekt", "ru": "заметки / конспект" },
-    { "zh": "成绩", "py": "chéngjì", "uz": "baho / natija", "ru": "оценка / результат" },
-    { "zh": "及格", "py": "jígé", "uz": "o'tmoq (imtihondan)", "ru": "сдать (экзамен)" }
+    {
+      "zh": "课文",
+      "py": "kèwén",
+      "uz": "dars matni",
+      "ru": "текст урока",
+      "en": "lesson text"
+    },
+    {
+      "zh": "练习",
+      "py": "liànxí",
+      "uz": "mashq",
+      "ru": "упражнение",
+      "en": "exercise"
+    },
+    {
+      "zh": "复习",
+      "py": "fùxí",
+      "uz": "takrorlamoq",
+      "ru": "повторять",
+      "en": "to review / repeat"
+    },
+    {
+      "zh": "笔记",
+      "py": "bǐjì",
+      "uz": "yozuv / konspekt",
+      "ru": "заметки / конспект",
+      "en": "notes"
+    },
+    {
+      "zh": "成绩",
+      "py": "chéngjì",
+      "uz": "baho / natija",
+      "ru": "оценка / результат",
+      "en": "grade / result"
+    },
+    {
+      "zh": "及格",
+      "py": "jígé",
+      "uz": "o'tmoq (imtihondan)",
+      "ru": "сдать (экзамен)",
+      "en": "to pass (an exam)"
+    }
   ],
   "grammarNotes": [
     {
@@ -380,11 +434,27 @@
       "formula": "Fe'l + 完 (+ 了)",
       "formula_ru": "Глагол + 完 (+ 了)",
       "examples": [
-        { "zh": "作业写完了。", "py": "Zuòyè xiě wán le.", "uz": "Uy vazifa yozib bo'ldi.", "ru": "Домашнее задание дописано." },
-        { "zh": "书看完了吗？", "py": "Shū kàn wán le ma?", "uz": "Kitobni o'qib bo'ldingmi?", "ru": "Книгу дочитал?" }
+        {
+          "zh": "作业写完了。",
+          "py": "Zuòyè xiě wán le.",
+          "uz": "Uy vazifa yozib bo'ldi.",
+          "ru": "Домашнее задание дописано.",
+          "en": "The homework is finished."
+        },
+        {
+          "zh": "书看完了吗？",
+          "py": "Shū kàn wán le ma?",
+          "uz": "Kitobni o'qib bo'ldingmi?",
+          "ru": "Книгу дочитал?",
+          "en": "Have you finished reading the book?"
+        }
       ],
       "tip_uz": "\"完\" faqat tugashi mumkin bo'lgan ishlar bilan ishlatiladi: yozmoq, o'qimoq, yemoq va h.k.",
-      "tip_ru": "\"完\" используется только с действиями, которые можно завершить: писать, читать, есть и т.д."
+      "tip_ru": "\"完\" используется только с действиями, которые можно завершить: писать, читать, есть и т.д.",
+      "title_en": "Verb + 完 — completing an action",
+      "desc_en": "\"完\" is placed after a verb and shows the action is completed. This is a resultative complement.",
+      "formula_en": "Verb + 完 (+ 了)",
+      "tip_en": "\"完\" is only used with actions that can be completed: write, read, eat, etc."
     },
     {
       "pattern": "还没 + Fe'l",
@@ -395,11 +465,27 @@
       "formula": "还没 + Fe'l (+ 完)",
       "formula_ru": "还没 + Глагол (+ 完)",
       "examples": [
-        { "zh": "还没写完。", "py": "Hái méi xiě wán.", "uz": "Hali yozib bo'lmadim.", "ru": "Ещё не дописал." },
-        { "zh": "他还没来。", "py": "Tā hái méi lái.", "uz": "U hali kelmadi.", "ru": "Он ещё не пришёл." }
+        {
+          "zh": "还没写完。",
+          "py": "Hái méi xiě wán.",
+          "uz": "Hali yozib bo'lmadim.",
+          "ru": "Ещё не дописал.",
+          "en": "Haven't finished writing yet."
+        },
+        {
+          "zh": "他还没来。",
+          "py": "Tā hái méi lái.",
+          "uz": "U hali kelmadi.",
+          "ru": "Он ещё не пришёл.",
+          "en": "He hasn't come yet."
+        }
       ],
       "tip_uz": "\"还没\" — inkor shakl. \"已经...了\" — tasdiqlash shakl: \"已经写完了\" (allaqachon yozib bo'ldi).",
-      "tip_ru": "\"还没\" — отрицание. Утверждение: \"已经...了\" — \"已经写完了\" (уже дописал)."
+      "tip_ru": "\"还没\" — отрицание. Утверждение: \"已经...了\" — \"已经写完了\" (уже дописал).",
+      "title_en": "还没 + Verb — haven't done yet",
+      "desc_en": "\"还没\" indicates an action hasn't been done yet. It's expected but not yet completed.",
+      "formula_en": "还没 + Verb (+ 完)",
+      "tip_en": "\"还没\" — negation. Affirmative: \"已经...了\" — \"已经写完了\" (already finished writing)."
     },
     {
       "pattern": "还差 + Miqdor",
@@ -410,11 +496,27 @@
       "formula": "还差 + Miqdor / 多少",
       "formula_ru": "还差 + Количество / 多少",
       "examples": [
-        { "zh": "还差多少？", "py": "Hái chà duōshao?", "uz": "Yana qancha qoldi?", "ru": "Сколько ещё осталось?" },
-        { "zh": "还差一半。", "py": "Hái chà yíbàn.", "uz": "Yana yarmi qoldi.", "ru": "Ещё половина." }
+        {
+          "zh": "还差多少？",
+          "py": "Hái chà duōshao?",
+          "uz": "Yana qancha qoldi?",
+          "ru": "Сколько ещё осталось?",
+          "en": "How much is left?"
+        },
+        {
+          "zh": "还差一半。",
+          "py": "Hái chà yíbàn.",
+          "uz": "Yana yarmi qoldi.",
+          "ru": "Ещё половина.",
+          "en": "Still half left."
+        }
       ],
       "tip_uz": "\"还差\" vaqt uchun ham ishlatiladi: \"还差五分钟\" (yana 5 daqiqa qoldi).",
-      "tip_ru": "\"还差\" также используется для времени: \"还差五分钟\" (ещё 5 минут осталось)."
+      "tip_ru": "\"还差\" также используется для времени: \"还差五分钟\" (ещё 5 минут осталось).",
+      "title_en": "还差 + amount — how much is still needed",
+      "desc_en": "\"还差\" shows a shortage or remaining amount. The quantity follows after it.",
+      "formula_en": "还差 + Amount / 多少",
+      "tip_en": "\"还差\" is also used for time: \"还差五分钟\" (5 minutes left)."
     },
     {
       "pattern": "能 + Fe'l + 吗？",
@@ -425,11 +527,28 @@
       "formula": "能 + Fe'l (+ Natija) + 吗？",
       "formula_ru": "能 + Глагол (+ Результат) + 吗？",
       "examples": [
-        { "zh": "今天能写完吗？", "py": "Jīntiān néng xiě wán ma?", "uz": "Bugun yozib tugata olasanmi?", "ru": "Сегодня сможешь дописать?" },
-        { "zh": "你能来吗？", "py": "Nǐ néng lái ma?", "uz": "Kela olasanmi?", "ru": "Ты сможешь прийти?" }
+        {
+          "zh": "今天能写完吗？",
+          "py": "Jīntiān néng xiě wán ma?",
+          "uz": "Bugun yozib tugata olasanmi?",
+          "ru": "Сегодня сможешь дописать?",
+          "en": "Can you finish writing today?"
+        },
+        {
+          "zh": "你能来吗？",
+          "py": "Nǐ néng lái ma?",
+          "uz": "Kela olasanmi?",
+          "ru": "Ты сможешь прийти?",
+          "en": "Can you come?"
+        }
       ],
       "tip_uz": "\"能\" qisqa javob uchun ham ishlatiladi: \"能。\" (olaman) yoki \"不能。\" (ololmayman).",
-      "tip_ru": "\"能\" можно использовать как краткий ответ: \"能。\" (смогу) или \"不能。\" (не смогу)."
+      "tip_ru": "\"能\" можно использовать как краткий ответ: \"能。\" (смогу) или \"不能。\" (не смогу).",
+      "title_en": "能...吗？ — asking about possibility",
+      "desc_en": "\"能\" expresses the ability or possibility to do something. With \"吗\" it forms a question.",
+      "formula_en": "能 + Verb (+ Result) + 吗？",
+      "tip_en": "\"能\" can be used as a short answer: \"能\" (I can) or \"不能\" (I can't)."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on school and homework"
 }

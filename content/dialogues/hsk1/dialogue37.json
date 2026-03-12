@@ -65,7 +65,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue1.mp3",
+          "text_translation_en": "Are you here?"
         },
         {
           "id": "d37-s2",
@@ -96,7 +97,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue2.mp3",
+          "text_translation_en": "Yes, I'm here."
         },
         {
           "id": "d37-s3",
@@ -129,7 +131,8 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue3.mp3",
+          "text_translation_en": "Where are you?"
         },
         {
           "id": "d37-s4",
@@ -160,7 +163,8 @@
               "tr": "у входа"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue4.mp3",
+          "text_translation_en": "At the entrance."
         },
         {
           "id": "d37-s5",
@@ -200,7 +204,8 @@
               "tr": "немного"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue5.mp3",
+          "text_translation_en": "Wait for me."
         },
         {
           "id": "d37-s6",
@@ -222,7 +227,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3"
@@ -240,7 +246,9 @@
       "ex": "你什么时候到？",
       "expy": "Nǐ shénme shíhou dào?",
       "ex_uz": "Sen qachon yetib kelasan?",
-      "ex_ru": "Когда ты приедешь?"
+      "ex_ru": "Когда ты приедешь?",
+      "en": "to arrive",
+      "ex_en": "When will you arrive?"
     },
     {
       "zh": "在",
@@ -250,7 +258,9 @@
       "ex": "你在哪儿？",
       "expy": "Nǐ zài nǎr?",
       "ex_uz": "Sen qayerdasan?",
-      "ex_ru": "Где ты?"
+      "ex_ru": "Где ты?",
+      "en": "at / in / to be at",
+      "ex_en": "Where are you?"
     },
     {
       "zh": "门口",
@@ -260,7 +270,9 @@
       "ex": "我在门口等你。",
       "expy": "Wǒ zài ménkǒu děng nǐ.",
       "ex_uz": "Men seni eshik oldida kutaman.",
-      "ex_ru": "Я жду тебя у входа."
+      "ex_ru": "Я жду тебя у входа.",
+      "en": "at the entrance / at the door",
+      "ex_en": "I'm waiting for you at the entrance."
     },
     {
       "zh": "等",
@@ -270,7 +282,9 @@
       "ex": "请等一下。",
       "expy": "Qǐng děng yíxià.",
       "ex_uz": "Iltimos, biroz kuting.",
-      "ex_ru": "Пожалуйста, подождите."
+      "ex_ru": "Пожалуйста, подождите.",
+      "en": "to wait",
+      "ex_en": "Please wait."
     },
     {
       "zh": "一下",
@@ -280,7 +294,9 @@
       "ex": "看一下这个。",
       "expy": "Kàn yíxià zhège.",
       "ex_uz": "Buni bir ko'ring.",
-      "ex_ru": "Посмотри-ка это."
+      "ex_ru": "Посмотри-ка это.",
+      "en": "a little / just once",
+      "ex_en": "Take a look at this."
     },
     {
       "zh": "哪儿",
@@ -290,18 +306,56 @@
       "ex": "你家在哪儿？",
       "expy": "Nǐ jiā zài nǎr?",
       "ex_uz": "Uying qayerda?",
-      "ex_ru": "Где твой дом?"
+      "ex_ru": "Где твой дом?",
+      "en": "where",
+      "ex_en": "Where is your home?"
     }
   ],
   "extraVocabSubtitle_uz": "Kutish va vaqt ifodalari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме ожидания и выражений времени",
   "extraVocab": [
-    { "zh": "马上", "py": "mǎshàng", "uz": "hozir / darhol", "ru": "сейчас / сразу" },
-    { "zh": "快点", "py": "kuài diǎn", "uz": "tezroq", "ru": "побыстрее" },
-    { "zh": "准时", "py": "zhǔnshí", "uz": "vaqtida", "ru": "вовремя" },
-    { "zh": "迟到", "py": "chídào", "uz": "kechikmoq", "ru": "опоздать" },
-    { "zh": "半小时", "py": "bàn xiǎoshí", "uz": "yarim soat", "ru": "полчаса" },
-    { "zh": "一会儿", "py": "yíhuìr", "uz": "biroz vaqtdan keyin", "ru": "через некоторое время" }
+    {
+      "zh": "马上",
+      "py": "mǎshàng",
+      "uz": "hozir / darhol",
+      "ru": "сейчас / сразу",
+      "en": "now / right away"
+    },
+    {
+      "zh": "快点",
+      "py": "kuài diǎn",
+      "uz": "tezroq",
+      "ru": "побыстрее",
+      "en": "hurry up / faster"
+    },
+    {
+      "zh": "准时",
+      "py": "zhǔnshí",
+      "uz": "vaqtida",
+      "ru": "вовремя",
+      "en": "on time"
+    },
+    {
+      "zh": "迟到",
+      "py": "chídào",
+      "uz": "kechikmoq",
+      "ru": "опоздать",
+      "en": "to be late"
+    },
+    {
+      "zh": "半小时",
+      "py": "bàn xiǎoshí",
+      "uz": "yarim soat",
+      "ru": "полчаса",
+      "en": "half an hour"
+    },
+    {
+      "zh": "一会儿",
+      "py": "yíhuìr",
+      "uz": "biroz vaqtdan keyin",
+      "ru": "через некоторое время",
+      "en": "after a while"
+    }
   ],
   "grammarNotes": [
     {
@@ -313,11 +367,27 @@
       "formula": "(Sen) + 到了吗？",
       "formula_ru": "(Ты) + 到了吗？",
       "examples": [
-        { "zh": "你到了吗？", "py": "Nǐ dào le ma?", "uz": "Yetib keldingmi?", "ru": "Ты приехал?" },
-        { "zh": "他到了吗？", "py": "Tā dào le ma?", "uz": "U yetib keldimi?", "ru": "Он приехал?" }
+        {
+          "zh": "你到了吗？",
+          "py": "Nǐ dào le ma?",
+          "uz": "Yetib keldingmi?",
+          "ru": "Ты приехал?",
+          "en": "Have you arrived?"
+        },
+        {
+          "zh": "他到了吗？",
+          "py": "Tā dào le ma?",
+          "uz": "U yetib keldimi?",
+          "ru": "Он приехал?",
+          "en": "Has he arrived?"
+        }
       ],
       "tip_uz": "Javob: \"到了。\" (keldim) yoki \"还没到。\" (hali kelmayman).",
-      "tip_ru": "Ответ: \"到了。\" (приехал) или \"还没到。\" (ещё нет)."
+      "tip_ru": "Ответ: \"到了。\" (приехал) или \"还没到。\" (ещё нет).",
+      "title_en": "...到了吗？ — asking about arrival",
+      "desc_en": "\"到\" (arrive) + \"了\" (past) + \"吗\" (question) — ask if someone has arrived.",
+      "formula_en": "(You) + 到了吗？",
+      "tip_en": "Answer: \"到了\" (arrived) or \"还没到\" (not yet)."
     },
     {
       "pattern": "在 + Joy",
@@ -328,11 +398,27 @@
       "formula": "在 + Joy (+ so'z)",
       "formula_ru": "在 + Место",
       "examples": [
-        { "zh": "在门口。", "py": "Zài ménkǒu.", "uz": "Eshik oldida.", "ru": "У входа." },
-        { "zh": "我在学校。", "py": "Wǒ zài xuéxiào.", "uz": "Men maktabdaman.", "ru": "Я в школе." }
+        {
+          "zh": "在门口。",
+          "py": "Zài ménkǒu.",
+          "uz": "Eshik oldida.",
+          "ru": "У входа.",
+          "en": "At the entrance."
+        },
+        {
+          "zh": "我在学校。",
+          "py": "Wǒ zài xuéxiào.",
+          "uz": "Men maktabdaman.",
+          "ru": "Я в школе.",
+          "en": "I'm at school."
+        }
       ],
       "tip_uz": "\"在哪儿？\" — qayerda? deb so'rash uchun ishlatiladi.",
-      "tip_ru": "\"在哪儿？\" — используется, чтобы спросить \"где?\"."
+      "tip_ru": "\"在哪儿？\" — используется, чтобы спросить \"где?\".",
+      "title_en": "在 + place — indicating location",
+      "desc_en": "\"在\" before a place word indicates where someone or something is located.",
+      "formula_en": "在 + Place",
+      "tip_en": "\"在哪儿？\" — used to ask \"where?\"."
     },
     {
       "pattern": "Fe'l + 一下",
@@ -343,11 +429,27 @@
       "formula": "Fe'l + 一下",
       "formula_ru": "Глагол + 一下",
       "examples": [
-        { "zh": "等我一下。", "py": "Děng wǒ yíxià.", "uz": "Meni biroz kutib tur.", "ru": "Подожди меня." },
-        { "zh": "看一下。", "py": "Kàn yíxià.", "uz": "Bir ko'ring.", "ru": "Посмотри-ка." }
+        {
+          "zh": "等我一下。",
+          "py": "Děng wǒ yíxià.",
+          "uz": "Meni biroz kutib tur.",
+          "ru": "Подожди меня.",
+          "en": "Wait for me."
+        },
+        {
+          "zh": "看一下。",
+          "py": "Kàn yíxià.",
+          "uz": "Bir ko'ring.",
+          "ru": "Посмотри-ка.",
+          "en": "Take a look."
+        }
       ],
       "tip_uz": "\"一下\" iltimosni yumshatadi. \"等我\" = kutib tur! \"等我一下\" = biroz kutib tur (yumshoq).",
-      "tip_ru": "\"一下\" смягчает просьбу. \"等我\" = жди! \"等我一下\" = подожди немного (мягче)."
+      "tip_ru": "\"一下\" смягчает просьбу. \"等我\" = жди! \"等我一下\" = подожди немного (мягче).",
+      "title_en": "Verb + 一下 — doing a little",
+      "desc_en": "\"一下\" after a verb means to do something briefly. It softens the request.",
+      "formula_en": "Verb + 一下",
+      "tip_en": "\"一下\" softens a request. \"等我\" = wait! \"等我一下\" = wait a moment (softer)."
     },
     {
       "pattern": "好。",
@@ -358,11 +460,28 @@
       "formula": "好 / 好的",
       "formula_ru": "好 / 好的",
       "examples": [
-        { "zh": "好。", "py": "Hǎo.", "uz": "Xo'p.", "ru": "Хорошо." },
-        { "zh": "好的，我等你。", "py": "Hǎo de, wǒ děng nǐ.", "uz": "Xo'p, men seni kutaman.", "ru": "Хорошо, я тебя подожду." }
+        {
+          "zh": "好。",
+          "py": "Hǎo.",
+          "uz": "Xo'p.",
+          "ru": "Хорошо.",
+          "en": "Okay."
+        },
+        {
+          "zh": "好的，我等你。",
+          "py": "Hǎo de, wǒ děng nǐ.",
+          "uz": "Xo'p, men seni kutaman.",
+          "ru": "Хорошо, я тебя подожду.",
+          "en": "Okay, I'll wait for you."
+        }
       ],
       "tip_uz": "\"好的\" biroz rasmiyroq. \"好\" oddiy suhbatda ishlatiladi.",
-      "tip_ru": "\"好的\" — чуть более формально. \"好\" — в обычном разговоре."
+      "tip_ru": "\"好的\" — чуть более формально. \"好\" — в обычном разговоре.",
+      "title_en": "好 — agreement / okay",
+      "desc_en": "\"好\" in a response means \"okay\", \"alright\", \"agreed\". Expresses agreement to a request or suggestion.",
+      "formula_en": "好 / 好的",
+      "tip_en": "\"好的\" — slightly more formal. \"好\" — in casual conversation."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on waiting and time expressions"
 }

@@ -10,63 +10,73 @@
       "text_original": "发动机",
       "pinyin": "fādòngjī",
       "text_translation": "dvigatel; motor",
-      "text_translation_ru": "двигатель; мотор"
+      "text_translation_ru": "двигатель; мотор",
+      "text_translation_en": "engine; motor"
     },
     {
       "id": "tp-eng-02",
       "text_original": "电池",
       "pinyin": "diànchí",
       "text_translation": "akkumulyator; batareya",
-      "text_translation_ru": "аккумулятор; батарея"
+      "text_translation_ru": "аккумулятор; батарея",
+      "text_translation_en": "battery"
     },
     {
       "id": "tp-eng-03",
       "text_original": "油箱",
       "pinyin": "yóuxiāng",
       "text_translation": "yoqilg'i baki",
-      "text_translation_ru": "топливный бак"
+      "text_translation_ru": "топливный бак",
+      "text_translation_en": "fuel tank"
     },
     {
       "id": "tp-eng-04",
       "text_original": "变速箱",
       "pinyin": "biànsùxiāng",
       "text_translation": "karobka; uzatmalar qutisi",
-      "text_translation_ru": "коробка передач"
+      "text_translation_ru": "коробка передач",
+      "text_translation_en": "gearbox; transmission"
     },
     {
       "id": "tp-eng-05",
       "text_original": "排气管",
       "pinyin": "páiqìguǎn",
       "text_translation": "chiqindi gaz trubasi",
-      "text_translation_ru": "выхлопная труба"
+      "text_translation_ru": "выхлопная труба",
+      "text_translation_en": "exhaust pipe"
     },
     {
       "id": "tp-eng-06",
       "text_original": "散热器",
       "pinyin": "sànrèqì",
       "text_translation": "radiator",
-      "text_translation_ru": "радиатор"
+      "text_translation_ru": "радиатор",
+      "text_translation_en": "radiator"
     },
     {
       "id": "tp-eng-07",
       "text_original": "火花塞",
       "pinyin": "huǒhuāsāi",
       "text_translation": "svecha",
-      "text_translation_ru": "свеча зажигания"
+      "text_translation_ru": "свеча зажигания",
+      "text_translation_en": "spark plug"
     },
     {
       "id": "tp-eng-08",
       "text_original": "空气滤清器",
       "pinyin": "kōngqì lǜqīngqì",
       "text_translation": "havo filtri",
-      "text_translation_ru": "воздушный фильтр"
+      "text_translation_ru": "воздушный фильтр",
+      "text_translation_en": "air filter"
     },
     {
       "id": "tp-eng-09",
       "text_original": "机油",
       "pinyin": "jīyóu",
       "text_translation": "motor moyi",
-      "text_translation_ru": "моторное масло"
+      "text_translation_ru": "моторное масло",
+      "text_translation_en": "motor oil"
     }
-  ]
+  ],
+  "title_en": "Engine & Mechanics"
 }

@@ -67,7 +67,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue1.mp3",
+          "text_translation_en": "Are you at home?"
         },
         {
           "id": "d17-s2",
@@ -100,7 +101,8 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d17-s3",
@@ -144,7 +146,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue3.mp3",
+          "text_translation_en": "What are you doing?"
         },
         {
           "id": "d17-s4",
@@ -177,7 +180,8 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue4.mp3",
+          "text_translation_en": "Resting."
         },
         {
           "id": "d17-s5",
@@ -208,7 +212,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue5.mp3",
+          "text_translation_en": "Are you tired?"
         },
         {
           "id": "d17-s6",
@@ -239,7 +244,8 @@
               "tr": "уставший"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue6.mp3",
+          "text_translation_en": "Very tired."
         },
         {
           "id": "d17-s7",
@@ -303,7 +309,8 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue7.mp3",
+          "text_translation_en": "Then get some rest early."
         },
         {
           "id": "d17-s8",
@@ -325,7 +332,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue8.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue8.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20lei%20ma/dialogue.mp3"
@@ -337,15 +345,76 @@
   "extraVocabSubtitle_uz": "His-tuyg'ular va kundalik holat mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме чувств и повседневного состояния",
   "extraVocab": [
-    { "zh": "困", "py": "kùn", "uz": "uyqusi kelgan", "ru": "сонный" },
-    { "zh": "舒服", "py": "shūfu", "uz": "qulay / yaxshi", "ru": "комфортный / удобный" },
-    { "zh": "难受", "py": "nánshòu", "uz": "o'zini yomon his qilmoq", "ru": "чувствовать себя плохо" },
-    { "zh": "精神", "py": "jīngshén", "uz": "tetik", "ru": "бодрый / энергичный" },
-    { "zh": "心情", "py": "xīnqíng", "uz": "kayfiyat", "ru": "настроение" },
-    { "zh": "生气", "py": "shēngqì", "uz": "g'azablanmoq", "ru": "злиться" },
-    { "zh": "开心", "py": "kāixīn", "uz": "xursand", "ru": "радостный" },
-    { "zh": "伤心", "py": "shāngxīn", "uz": "g'amgin", "ru": "грустный" },
-    { "zh": "着急", "py": "zháojí", "uz": "xavotirlanmoq", "ru": "волноваться" },
-    { "zh": "睡觉", "py": "shuìjiào", "uz": "uxlamoq", "ru": "спать" }
-  ]
+    {
+      "zh": "困",
+      "py": "kùn",
+      "uz": "uyqusi kelgan",
+      "ru": "сонный",
+      "en": "sleepy"
+    },
+    {
+      "zh": "舒服",
+      "py": "shūfu",
+      "uz": "qulay / yaxshi",
+      "ru": "комфортный / удобный",
+      "en": "comfortable / convenient"
+    },
+    {
+      "zh": "难受",
+      "py": "nánshòu",
+      "uz": "o'zini yomon his qilmoq",
+      "ru": "чувствовать себя плохо",
+      "en": "to feel unwell"
+    },
+    {
+      "zh": "精神",
+      "py": "jīngshén",
+      "uz": "tetik",
+      "ru": "бодрый / энергичный",
+      "en": "energetic / lively"
+    },
+    {
+      "zh": "心情",
+      "py": "xīnqíng",
+      "uz": "kayfiyat",
+      "ru": "настроение",
+      "en": "mood"
+    },
+    {
+      "zh": "生气",
+      "py": "shēngqì",
+      "uz": "g'azablanmoq",
+      "ru": "злиться",
+      "en": "to be angry"
+    },
+    {
+      "zh": "开心",
+      "py": "kāixīn",
+      "uz": "xursand",
+      "ru": "радостный",
+      "en": "happy / joyful"
+    },
+    {
+      "zh": "伤心",
+      "py": "shāngxīn",
+      "uz": "g'amgin",
+      "ru": "грустный",
+      "en": "sad"
+    },
+    {
+      "zh": "着急",
+      "py": "zháojí",
+      "uz": "xavotirlanmoq",
+      "ru": "волноваться",
+      "en": "to worry"
+    },
+    {
+      "zh": "睡觉",
+      "py": "shuìjiào",
+      "uz": "uxlamoq",
+      "ru": "спать",
+      "en": "to sleep"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on feelings and daily well-being"
 }

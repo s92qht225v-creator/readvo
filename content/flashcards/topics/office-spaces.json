@@ -10,119 +10,137 @@
       "text_original": "办公室",
       "pinyin": "bàngōngshì",
       "text_translation": "ofis; ish xonasi",
-      "text_translation_ru": "офис; кабинет"
+      "text_translation_ru": "офис; кабинет",
+      "text_translation_en": "office"
     },
     {
       "id": "tp-ofs-02",
       "text_original": "公司",
       "pinyin": "gōngsī",
       "text_translation": "kompaniya; firma",
-      "text_translation_ru": "компания; фирма"
+      "text_translation_ru": "компания; фирма",
+      "text_translation_en": "company"
     },
     {
       "id": "tp-ofs-03",
       "text_original": "办公楼",
       "pinyin": "bàngōnglóu",
       "text_translation": "ofis binosi",
-      "text_translation_ru": "офисное здание"
+      "text_translation_ru": "офисное здание",
+      "text_translation_en": "office building"
     },
     {
       "id": "tp-ofs-04",
       "text_original": "会议室",
       "pinyin": "huìyìshì",
       "text_translation": "yig'ilish xonasi",
-      "text_translation_ru": "конференц-зал"
+      "text_translation_ru": "конференц-зал",
+      "text_translation_en": "conference room"
     },
     {
       "id": "tp-ofs-05",
       "text_original": "接待处",
       "pinyin": "jiēdàichù",
       "text_translation": "qabul bo'limi",
-      "text_translation_ru": "приёмная; ресепшн"
+      "text_translation_ru": "приёмная; ресепшн",
+      "text_translation_en": "reception area"
     },
     {
       "id": "tp-ofs-06",
       "text_original": "前台",
       "pinyin": "qiántái",
       "text_translation": "resepshn; old stol",
-      "text_translation_ru": "стойка регистрации; ресепшн"
+      "text_translation_ru": "стойка регистрации; ресепшн",
+      "text_translation_en": "front desk; reception"
     },
     {
       "id": "tp-ofs-07",
       "text_original": "茶水间",
       "pinyin": "cháshuǐjiān",
       "text_translation": "choy xonasi",
-      "text_translation_ru": "чайная комната; кухня"
+      "text_translation_ru": "чайная комната; кухня",
+      "text_translation_en": "pantry; kitchen"
     },
     {
       "id": "tp-ofs-08",
       "text_original": "员工休息室",
       "pinyin": "yuángōng xiūxíshì",
       "text_translation": "xodimlar dam olish xonasi",
-      "text_translation_ru": "комната отдыха для сотрудников"
+      "text_translation_ru": "комната отдыха для сотрудников",
+      "text_translation_en": "staff lounge"
     },
     {
       "id": "tp-ofs-09",
       "text_original": "食堂",
       "pinyin": "shítáng",
       "text_translation": "oshxona",
-      "text_translation_ru": "столовая"
+      "text_translation_ru": "столовая",
+      "text_translation_en": "cafeteria; canteen"
     },
     {
       "id": "tp-ofs-10",
       "text_original": "档案室",
       "pinyin": "dǎng'ànshì",
       "text_translation": "arxiv xonasi",
-      "text_translation_ru": "архивная комната"
+      "text_translation_ru": "архивная комната",
+      "text_translation_en": "archive room"
     },
     {
       "id": "tp-ofs-11",
       "text_original": "培训室",
       "pinyin": "péixùnshì",
       "text_translation": "treningxona",
-      "text_translation_ru": "учебный класс; тренинговая"
+      "text_translation_ru": "учебный класс; тренинговая",
+      "text_translation_en": "training room"
     },
     {
       "id": "tp-ofs-12",
       "text_original": "总经理办公室",
       "pinyin": "zǒngjīnglǐ bàngōngshì",
       "text_translation": "bosh direktor kabineti",
-      "text_translation_ru": "кабинет генерального директора"
+      "text_translation_ru": "кабинет генерального директора",
+      "text_translation_en": "CEO's office"
     },
     {
       "id": "tp-ofs-13",
       "text_original": "财务室",
       "pinyin": "cáiwùshì",
       "text_translation": "buxgalteriya",
-      "text_translation_ru": "бухгалтерия; финансовый отдел"
+      "text_translation_ru": "бухгалтерия; финансовый отдел",
+      "text_translation_en": "finance department"
     },
     {
       "id": "tp-ofs-14",
       "text_original": "人力资源部",
       "pinyin": "rénlì zīyuánbù",
       "text_translation": "HR bo'limi",
-      "text_translation_ru": "отдел кадров"
+      "text_translation_ru": "отдел кадров",
+      "text_translation_en": "HR department"
     },
     {
       "id": "tp-ofs-15",
       "text_original": "技术部",
       "pinyin": "jìshùbù",
       "text_translation": "texnik bo'lim",
-      "text_translation_ru": "технический отдел"
+      "text_translation_ru": "технический отдел",
+      "text_translation_en": "technical department"
     },
     {
       "id": "tp-ofs-16",
       "text_original": "市场部",
       "pinyin": "shìchǎngbù",
       "text_translation": "marketing bo'limi",
-      "text_translation_ru": "отдел маркетинга"
+      "text_translation_ru": "отдел маркетинга",
+      "text_translation_en": "marketing department"
     },
     {
       "id": "tp-ofs-17",
       "text_original": "销售部",
       "pinyin": "xiāoshòubù",
       "text_translation": "sotuv bo'limi",
-      "text_translation_ru": "отдел продаж"
+      "text_translation_ru": "отдел продаж",
+      "text_translation_en": "sales department"
     }
-  ]
+  ],
+  "title_en": "Office Spaces"
 }

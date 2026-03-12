@@ -10,70 +10,81 @@
       "text_original": "订单",
       "pinyin": "dìngdān",
       "text_translation": "buyurtma",
-      "text_translation_ru": "заказ"
+      "text_translation_ru": "заказ",
+      "text_translation_en": "order"
     },
     {
       "id": "tp-ord-02",
       "text_original": "数量",
       "pinyin": "shùliàng",
       "text_translation": "miqdor; son",
-      "text_translation_ru": "количество"
+      "text_translation_ru": "количество",
+      "text_translation_en": "quantity"
     },
     {
       "id": "tp-ord-03",
       "text_original": "产品",
       "pinyin": "chǎnpǐn",
       "text_translation": "mahsulot",
-      "text_translation_ru": "продукция; товар"
+      "text_translation_ru": "продукция; товар",
+      "text_translation_en": "product"
     },
     {
       "id": "tp-ord-04",
       "text_original": "样品",
       "pinyin": "yàngpǐn",
       "text_translation": "namuna",
-      "text_translation_ru": "образец"
+      "text_translation_ru": "образец",
+      "text_translation_en": "sample"
     },
     {
       "id": "tp-ord-05",
       "text_original": "生产",
       "pinyin": "shēngchǎn",
       "text_translation": "ishlab chiqarmoq",
-      "text_translation_ru": "производить; производство"
+      "text_translation_ru": "производить; производство",
+      "text_translation_en": "to produce; production"
     },
     {
       "id": "tp-ord-06",
       "text_original": "工厂",
       "pinyin": "gōngchǎng",
       "text_translation": "zavod; fabrika",
-      "text_translation_ru": "завод; фабрика"
+      "text_translation_ru": "завод; фабрика",
+      "text_translation_en": "factory"
     },
     {
       "id": "tp-ord-07",
       "text_original": "质量",
       "pinyin": "zhìliàng",
       "text_translation": "sifat",
-      "text_translation_ru": "качество"
+      "text_translation_ru": "качество",
+      "text_translation_en": "quality"
     },
     {
       "id": "tp-ord-08",
       "text_original": "检验",
       "pinyin": "jiǎnyàn",
       "text_translation": "tekshirmoq; nazorat qilmoq",
-      "text_translation_ru": "проверять; инспектировать"
+      "text_translation_ru": "проверять; инспектировать",
+      "text_translation_en": "to inspect; to check"
     },
     {
       "id": "tp-ord-09",
       "text_original": "包装",
       "pinyin": "bāozhuāng",
       "text_translation": "qadoqlash",
-      "text_translation_ru": "упаковка; упаковывать"
+      "text_translation_ru": "упаковка; упаковывать",
+      "text_translation_en": "packaging; to pack"
     },
     {
       "id": "tp-ord-10",
       "text_original": "交货",
       "pinyin": "jiāohuò",
       "text_translation": "yetkazib bermoq",
-      "text_translation_ru": "доставить товар; поставка"
+      "text_translation_ru": "доставить товар; поставка",
+      "text_translation_en": "to deliver goods"
     }
-  ]
+  ],
+  "title_en": "Orders & Production"
 }

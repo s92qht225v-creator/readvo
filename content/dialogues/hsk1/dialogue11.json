@@ -54,7 +54,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue1.mp3",
+          "text_translation_en": "Are you hungry?"
         },
         {
           "id": "d11-s2",
@@ -87,7 +88,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue2.mp3",
+          "text_translation_en": "A little."
         },
         {
           "id": "d11-s3",
@@ -142,7 +144,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue3.mp3",
+          "text_translation_en": "What do you want to eat?"
         },
         {
           "id": "d11-s4",
@@ -217,7 +220,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue4.mp3",
+          "text_translation_en": "I want noodles. And you?"
         },
         {
           "id": "d11-s5",
@@ -305,7 +309,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue5.mp3",
+          "text_translation_en": "I want rice. What will you drink?"
         },
         {
           "id": "d11-s6",
@@ -347,7 +352,8 @@
               "tr": "кола"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue6.mp3",
+          "text_translation_en": "I'll have cola."
         },
         {
           "id": "d11-s7",
@@ -400,7 +406,8 @@
               "tr": "кола"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3",
+          "text_translation_en": "I'll have cola too."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3"
@@ -418,7 +425,9 @@
       "ex": "我想吃米饭。",
       "expy": "Wǒ xiǎng chī mǐfàn.",
       "ex_uz": "Men guruch yegim keladi.",
-      "ex_ru": "Я хочу рис."
+      "ex_ru": "Я хочу рис.",
+      "en": "rice",
+      "ex_en": "I want rice."
     },
     {
       "zh": "面条",
@@ -428,21 +437,84 @@
       "ex": "他很喜欢吃面条。",
       "expy": "Tā hěn xǐhuan chī miàntiáo.",
       "ex_uz": "U lag'mon yeyishni juda yoqtiradi.",
-      "ex_ru": "Он очень любит есть лапшу."
+      "ex_ru": "Он очень любит есть лапшу.",
+      "en": "noodles",
+      "ex_en": "He really loves eating noodles."
     }
   ],
   "extraVocabSubtitle_uz": "Ovqat va taomlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме еды и блюд",
   "extraVocab": [
-    { "zh": "饺子", "py": "jiǎozi", "uz": "chuchvara", "ru": "пельмени" },
-    { "zh": "鸡蛋", "py": "jīdàn", "uz": "tuxum", "ru": "яйцо" },
-    { "zh": "牛肉", "py": "niúròu", "uz": "mol go'shti", "ru": "говядина" },
-    { "zh": "鸡肉", "py": "jīròu", "uz": "tovuq go'shti", "ru": "курятина" },
-    { "zh": "汤", "py": "tāng", "uz": "sho'rva", "ru": "суп" },
-    { "zh": "辣", "py": "là", "uz": "achchiq", "ru": "острый" },
-    { "zh": "甜", "py": "tián", "uz": "shirin", "ru": "сладкий" },
-    { "zh": "咸", "py": "xián", "uz": "sho'r", "ru": "солёный" },
-    { "zh": "筷子", "py": "kuàizi", "uz": "tayoqcha", "ru": "палочки для еды" },
-    { "zh": "菜单", "py": "càidān", "uz": "menyu", "ru": "меню" }
-  ]
+    {
+      "zh": "饺子",
+      "py": "jiǎozi",
+      "uz": "chuchvara",
+      "ru": "пельмени",
+      "en": "dumplings"
+    },
+    {
+      "zh": "鸡蛋",
+      "py": "jīdàn",
+      "uz": "tuxum",
+      "ru": "яйцо",
+      "en": "egg"
+    },
+    {
+      "zh": "牛肉",
+      "py": "niúròu",
+      "uz": "mol go'shti",
+      "ru": "говядина",
+      "en": "beef"
+    },
+    {
+      "zh": "鸡肉",
+      "py": "jīròu",
+      "uz": "tovuq go'shti",
+      "ru": "курятина",
+      "en": "chicken"
+    },
+    {
+      "zh": "汤",
+      "py": "tāng",
+      "uz": "sho'rva",
+      "ru": "суп",
+      "en": "soup"
+    },
+    {
+      "zh": "辣",
+      "py": "là",
+      "uz": "achchiq",
+      "ru": "острый",
+      "en": "spicy"
+    },
+    {
+      "zh": "甜",
+      "py": "tián",
+      "uz": "shirin",
+      "ru": "сладкий",
+      "en": "sweet"
+    },
+    {
+      "zh": "咸",
+      "py": "xián",
+      "uz": "sho'r",
+      "ru": "солёный",
+      "en": "salty"
+    },
+    {
+      "zh": "筷子",
+      "py": "kuàizi",
+      "uz": "tayoqcha",
+      "ru": "палочки для еды",
+      "en": "chopsticks"
+    },
+    {
+      "zh": "菜单",
+      "py": "càidān",
+      "uz": "menyu",
+      "ru": "меню",
+      "en": "menu"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on food and dishes"
 }

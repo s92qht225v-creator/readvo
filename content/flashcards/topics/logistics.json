@@ -10,70 +10,81 @@
       "text_original": "运输",
       "pinyin": "yùnshū",
       "text_translation": "tashimoq; transport",
-      "text_translation_ru": "транспортировка; перевозка"
+      "text_translation_ru": "транспортировка; перевозка",
+      "text_translation_en": "transportation; shipping"
     },
     {
       "id": "tp-log-02",
       "text_original": "物流",
       "pinyin": "wùliú",
       "text_translation": "logistika",
-      "text_translation_ru": "логистика"
+      "text_translation_ru": "логистика",
+      "text_translation_en": "logistics"
     },
     {
       "id": "tp-log-03",
       "text_original": "发货",
       "pinyin": "fāhuò",
       "text_translation": "tovar jo'natmoq",
-      "text_translation_ru": "отправить товар"
+      "text_translation_ru": "отправить товар",
+      "text_translation_en": "to ship goods"
     },
     {
       "id": "tp-log-04",
       "text_original": "收货",
       "pinyin": "shōuhuò",
       "text_translation": "tovar qabul qilmoq",
-      "text_translation_ru": "получить товар"
+      "text_translation_ru": "получить товар",
+      "text_translation_en": "to receive goods"
     },
     {
       "id": "tp-log-05",
       "text_original": "仓库",
       "pinyin": "cāngkù",
       "text_translation": "ombor",
-      "text_translation_ru": "склад"
+      "text_translation_ru": "склад",
+      "text_translation_en": "warehouse"
     },
     {
       "id": "tp-log-06",
       "text_original": "海运",
       "pinyin": "hǎiyùn",
       "text_translation": "dengiz transporti",
-      "text_translation_ru": "морская перевозка"
+      "text_translation_ru": "морская перевозка",
+      "text_translation_en": "sea freight"
     },
     {
       "id": "tp-log-07",
       "text_original": "空运",
       "pinyin": "kōngyùn",
       "text_translation": "havo transporti",
-      "text_translation_ru": "воздушная перевозка"
+      "text_translation_ru": "воздушная перевозка",
+      "text_translation_en": "air freight"
     },
     {
       "id": "tp-log-08",
       "text_original": "快递",
       "pinyin": "kuàidì",
       "text_translation": "kuryer; tezkor pochta",
-      "text_translation_ru": "курьерская доставка; экспресс"
+      "text_translation_ru": "курьерская доставка; экспресс",
+      "text_translation_en": "express delivery; courier"
     },
     {
       "id": "tp-log-09",
       "text_original": "运费",
       "pinyin": "yùnfèi",
       "text_translation": "yuk tashish narxi",
-      "text_translation_ru": "стоимость доставки; фрахт"
+      "text_translation_ru": "стоимость доставки; фрахт",
+      "text_translation_en": "shipping cost; freight"
     },
     {
       "id": "tp-log-10",
       "text_original": "陆运",
       "pinyin": "lùyùn",
       "text_translation": "quruqlik transporti",
-      "text_translation_ru": "наземная перевозка"
+      "text_translation_ru": "наземная перевозка",
+      "text_translation_en": "land transport"
     }
-  ]
+  ],
+  "title_en": "Logistics"
 }

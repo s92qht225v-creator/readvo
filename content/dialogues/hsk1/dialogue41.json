@@ -43,7 +43,8 @@
               "tr": "счёт"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue1.mp3",
+          "text_translation_en": "Waiter, the bill please."
         },
         {
           "id": "d41-s2",
@@ -63,7 +64,8 @@
               "tr": "хорошо"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue2.mp3",
+          "text_translation_en": "OK."
         },
         {
           "id": "d41-s3",
@@ -105,7 +107,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue3.mp3",
+          "text_translation_en": "How much is it in total?"
         },
         {
           "id": "d41-s4",
@@ -145,7 +148,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue4.mp3",
+          "text_translation_en": "One hundred and twenty yuan."
         },
         {
           "id": "d41-s5",
@@ -187,7 +191,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue5.mp3",
+          "text_translation_en": "Can I pay by card?"
         },
         {
           "id": "d41-s6",
@@ -209,7 +214,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue6.mp3",
+          "text_translation_en": "Yes, you can."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/keyi%20shua%20ka%20ma/dialogue.mp3"
@@ -227,7 +233,9 @@
       "ex": "服务员，请给我菜单。",
       "expy": "Fúwùyuán, qǐng gěi wǒ càidān.",
       "ex_uz": "Ofitsiant, menga menyuni bering.",
-      "ex_ru": "Официант, дайте мне меню."
+      "ex_ru": "Официант, дайте мне меню.",
+      "en": "waiter",
+      "ex_en": "Waiter, give me the menu."
     },
     {
       "zh": "买单",
@@ -237,7 +245,9 @@
       "ex": "吃完了，我们买单吧。",
       "expy": "Chī wán le, wǒmen mǎidān ba.",
       "ex_uz": "Yeb bo'ldik, hisob so'raylik.",
-      "ex_ru": "Мы доели, давай попросим счёт."
+      "ex_ru": "Мы доели, давай попросим счёт.",
+      "en": "to ask for the bill",
+      "ex_en": "We're done eating, let's ask for the bill."
     },
     {
       "zh": "一共",
@@ -247,7 +257,9 @@
       "ex": "一共三个人。",
       "expy": "Yígòng sān ge rén.",
       "ex_uz": "Hammasi bo'lib uch kishi.",
-      "ex_ru": "Всего три человека."
+      "ex_ru": "Всего три человека.",
+      "en": "in total",
+      "ex_en": "Three people in total."
     },
     {
       "zh": "多少钱",
@@ -257,7 +269,9 @@
       "ex": "这个多少钱？",
       "expy": "Zhège duōshao qián?",
       "ex_uz": "Bu qancha turadi?",
-      "ex_ru": "Сколько это стоит?"
+      "ex_ru": "Сколько это стоит?",
+      "en": "how much does it cost",
+      "ex_en": "How much does this cost?"
     },
     {
       "zh": "可以",
@@ -267,7 +281,9 @@
       "ex": "我可以坐这儿吗？",
       "expy": "Wǒ kěyǐ zuò zhèr ma?",
       "ex_uz": "Bu yerga o'tirsam bo'ladimi?",
-      "ex_ru": "Можно мне сесть здесь?"
+      "ex_ru": "Можно мне сесть здесь?",
+      "en": "may / is allowed",
+      "ex_en": "Can I sit here?"
     },
     {
       "zh": "刷卡",
@@ -277,21 +293,77 @@
       "ex": "这里可以刷卡吗？",
       "expy": "Zhèlǐ kěyǐ shuākǎ ma?",
       "ex_uz": "Bu yerda karta bilan to'lasa bo'ladimi?",
-      "ex_ru": "Здесь можно оплатить картой?"
+      "ex_ru": "Здесь можно оплатить картой?",
+      "en": "to pay by card",
+      "ex_en": "Can I pay by card here?"
     }
   ],
   "extraVocabSubtitle_uz": "To'lov usullari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме способов оплаты",
   "extraVocab": [
-    { "zh": "现金", "py": "xiànjīn", "uz": "naqd pul", "ru": "наличные" },
-    { "zh": "扫码", "py": "sǎomǎ", "uz": "QR kod skanerlash", "ru": "сканировать QR-код" },
-    { "zh": "找零", "py": "zhǎolíng", "uz": "qaytim bermoq", "ru": "сдача" },
-    { "zh": "发票", "py": "fāpiào", "uz": "kvitansiya", "ru": "чек / квитанция" },
-    { "zh": "打折", "py": "dǎzhé", "uz": "chegirma", "ru": "скидка" },
-    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой" },
-    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый" },
-    { "zh": "账单", "py": "zhàngdān", "uz": "hisob", "ru": "счёт" },
-    { "zh": "小费", "py": "xiǎofèi", "uz": "choy puli", "ru": "чаевые" }
+    {
+      "zh": "现金",
+      "py": "xiànjīn",
+      "uz": "naqd pul",
+      "ru": "наличные",
+      "en": "cash"
+    },
+    {
+      "zh": "扫码",
+      "py": "sǎomǎ",
+      "uz": "QR kod skanerlash",
+      "ru": "сканировать QR-код",
+      "en": "to scan a QR code"
+    },
+    {
+      "zh": "找零",
+      "py": "zhǎolíng",
+      "uz": "qaytim bermoq",
+      "ru": "сдача",
+      "en": "change"
+    },
+    {
+      "zh": "发票",
+      "py": "fāpiào",
+      "uz": "kvitansiya",
+      "ru": "чек / квитанция",
+      "en": "receipt"
+    },
+    {
+      "zh": "打折",
+      "py": "dǎzhé",
+      "uz": "chegirma",
+      "ru": "скидка",
+      "en": "discount"
+    },
+    {
+      "zh": "贵",
+      "py": "guì",
+      "uz": "qimmat",
+      "ru": "дорогой",
+      "en": "expensive"
+    },
+    {
+      "zh": "便宜",
+      "py": "piányi",
+      "uz": "arzon",
+      "ru": "дешёвый",
+      "en": "cheap"
+    },
+    {
+      "zh": "账单",
+      "py": "zhàngdān",
+      "uz": "hisob",
+      "ru": "счёт",
+      "en": "bill / check"
+    },
+    {
+      "zh": "小费",
+      "py": "xiǎofèi",
+      "uz": "choy puli",
+      "ru": "чаевые",
+      "en": "tip / gratuity"
+    }
   ],
   "grammarNotes": [
     {
@@ -303,12 +375,34 @@
       "formula": "可以 + Fe'l + 吗？",
       "formula_ru": "可以 + Глагол + 吗？",
       "examples": [
-        { "zh": "可以刷卡吗？", "py": "Kěyǐ shuākǎ ma?", "uz": "Karta bilan to'lasa bo'ladimi?", "ru": "Можно оплатить картой?" },
-        { "zh": "可以坐这儿吗？", "py": "Kěyǐ zuò zhèr ma?", "uz": "Bu yerga o'tirsam bo'ladimi?", "ru": "Можно здесь сесть?" },
-        { "zh": "可以看一下吗？", "py": "Kěyǐ kàn yíxià ma?", "uz": "Bir ko'rsam bo'ladimi?", "ru": "Можно посмотреть?" }
+        {
+          "zh": "可以刷卡吗？",
+          "py": "Kěyǐ shuākǎ ma?",
+          "uz": "Karta bilan to'lasa bo'ladimi?",
+          "ru": "Можно оплатить картой?",
+          "en": "Can I pay by card?"
+        },
+        {
+          "zh": "可以坐这儿吗？",
+          "py": "Kěyǐ zuò zhèr ma?",
+          "uz": "Bu yerga o'tirsam bo'ladimi?",
+          "ru": "Можно здесь сесть?",
+          "en": "May I sit here?"
+        },
+        {
+          "zh": "可以看一下吗？",
+          "py": "Kěyǐ kàn yíxià ma?",
+          "uz": "Bir ko'rsam bo'ladimi?",
+          "ru": "Можно посмотреть?",
+          "en": "May I take a look?"
+        }
       ],
       "tip_uz": "Javob: \"可以\" (bo'ladi) yoki \"不可以\" (bo'lmaydi).",
-      "tip_ru": "Ответ: \"可以\" (можно) или \"不可以\" (нельзя)."
+      "tip_ru": "Ответ: \"可以\" (можно) или \"不可以\" (нельзя).",
+      "title_en": "可以...吗？ — asking for permission",
+      "desc_en": "\"可以\" with \"吗\" is used to politely ask for permission to do something.",
+      "formula_en": "可以 + Verb + 吗？",
+      "tip_en": "Answer: \"可以\" (yes, you may) or \"不可以\" (no, you may not)."
     },
     {
       "pattern": "一共 + Son + 块",
@@ -319,12 +413,34 @@
       "formula": "一共 + Son + 块",
       "formula_ru": "一共 + Число + 块",
       "examples": [
-        { "zh": "一共一百二十块。", "py": "Yígòng yìbǎi èrshí kuài.", "uz": "Hammasi bo'lib 120 yuan.", "ru": "Всего сто двадцать юаней." },
-        { "zh": "一共五十块。", "py": "Yígòng wǔshí kuài.", "uz": "Hammasi bo'lib 50 yuan.", "ru": "Всего пятьдесят юаней." },
-        { "zh": "一共三个人。", "py": "Yígòng sān ge rén.", "uz": "Hammasi bo'lib uch kishi.", "ru": "Всего три человека." }
+        {
+          "zh": "一共一百二十块。",
+          "py": "Yígòng yìbǎi èrshí kuài.",
+          "uz": "Hammasi bo'lib 120 yuan.",
+          "ru": "Всего сто двадцать юаней.",
+          "en": "120 yuan in total."
+        },
+        {
+          "zh": "一共五十块。",
+          "py": "Yígòng wǔshí kuài.",
+          "uz": "Hammasi bo'lib 50 yuan.",
+          "ru": "Всего пятьдесят юаней.",
+          "en": "50 yuan in total."
+        },
+        {
+          "zh": "一共三个人。",
+          "py": "Yígòng sān ge rén.",
+          "uz": "Hammasi bo'lib uch kishi.",
+          "ru": "Всего три человека.",
+          "en": "Three people in total."
+        }
       ],
       "tip_uz": "\"块\" — og'zaki nutqda, \"元\" — rasmiy hujjatlarda ishlatiladi.",
-      "tip_ru": "\"块\" — в разговорной речи, \"元\" — в официальных документах."
+      "tip_ru": "\"块\" — в разговорной речи, \"元\" — в официальных документах.",
+      "title_en": "一共...块 — stating the total",
+      "desc_en": "\"一共\" (in total) is used to summarize a total amount. \"块\" is the colloquial form of yuan.",
+      "formula_en": "一共 + Number + 块",
+      "tip_en": "\"块\" — in spoken language, \"元\" — in official documents."
     },
     {
       "pattern": "多少钱？",
@@ -335,12 +451,34 @@
       "formula": "(Ot / 一共) + 多少钱？",
       "formula_ru": "(Сущ. / 一共) + 多少钱？",
       "examples": [
-        { "zh": "一共多少钱？", "py": "Yígòng duōshao qián?", "uz": "Hammasi bo'lib qancha?", "ru": "Сколько всего?" },
-        { "zh": "这个多少钱？", "py": "Zhège duōshao qián?", "uz": "Bu qancha turadi?", "ru": "Сколько это стоит?" },
-        { "zh": "一杯咖啡多少钱？", "py": "Yì bēi kāfēi duōshao qián?", "uz": "Bir piyola qahva qancha?", "ru": "Сколько стоит чашка кофе?" }
+        {
+          "zh": "一共多少钱？",
+          "py": "Yígòng duōshao qián?",
+          "uz": "Hammasi bo'lib qancha?",
+          "ru": "Сколько всего?",
+          "en": "How much in total?"
+        },
+        {
+          "zh": "这个多少钱？",
+          "py": "Zhège duōshao qián?",
+          "uz": "Bu qancha turadi?",
+          "ru": "Сколько это стоит?",
+          "en": "How much does it cost?"
+        },
+        {
+          "zh": "一杯咖啡多少钱？",
+          "py": "Yì bēi kāfēi duōshao qián?",
+          "uz": "Bir piyola qahva qancha?",
+          "ru": "Сколько стоит чашка кофе?",
+          "en": "How much is a cup of coffee?"
+        }
       ],
       "tip_uz": "Do'konda, restoranda, taksida — har qanday joyda ishlatiladi.",
-      "tip_ru": "Используется везде: в магазине, ресторане, такси."
+      "tip_ru": "Используется везде: в магазине, ресторане, такси.",
+      "title_en": "多少钱？ — asking the price",
+      "desc_en": "\"多少钱\" — the simplest and most common way to ask the price. The item or \"一共\" can precede it.",
+      "formula_en": "(Noun / 一共) + 多少钱？",
+      "tip_en": "Used everywhere: in shops, restaurants, taxis."
     },
     {
       "pattern": "好的",
@@ -351,12 +489,35 @@
       "formula": "好的 (mustaqil javob)",
       "formula_ru": "好的 (самостоятельный ответ)",
       "examples": [
-        { "zh": "好的，马上来。", "py": "Hǎo de, mǎshàng lái.", "uz": "Xo'p, hozir kelaman.", "ru": "Хорошо, сейчас приду." },
-        { "zh": "好的，没问题。", "py": "Hǎo de, méi wèntí.", "uz": "Xo'p, muammo yo'q.", "ru": "Хорошо, без проблем." },
-        { "zh": "好的，我知道了。", "py": "Hǎo de, wǒ zhīdào le.", "uz": "Xo'p, tushundim.", "ru": "Хорошо, понял." }
+        {
+          "zh": "好的，马上来。",
+          "py": "Hǎo de, mǎshàng lái.",
+          "uz": "Xo'p, hozir kelaman.",
+          "ru": "Хорошо, сейчас приду.",
+          "en": "Okay, I'll be right there."
+        },
+        {
+          "zh": "好的，没问题。",
+          "py": "Hǎo de, méi wèntí.",
+          "uz": "Xo'p, muammo yo'q.",
+          "ru": "Хорошо, без проблем.",
+          "en": "Okay, no problem."
+        },
+        {
+          "zh": "好的，我知道了。",
+          "py": "Hǎo de, wǒ zhīdào le.",
+          "uz": "Xo'p, tushundim.",
+          "ru": "Хорошо, понял.",
+          "en": "Okay, understood."
+        }
       ],
       "tip_uz": "Ofitsiantlar, xizmat ko'rsatuvchilar \"好的\" ni ko'p ishlatadi.",
-      "tip_ru": "Официанты и обслуживающий персонал часто используют \"好的\"."
+      "tip_ru": "Официанты и обслуживающий персонал часто используют \"好的\".",
+      "title_en": "好的 — expressing agreement",
+      "desc_en": "\"好的\" — a polite expression of agreement to a request or suggestion. Slightly more formal than just \"好\".",
+      "formula_en": "好的 (standalone reply)",
+      "tip_en": "Waiters and service staff often use \"好的\"."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on payment methods"
 }

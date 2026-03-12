@@ -10,98 +10,113 @@
       "text_original": "会议",
       "pinyin": "huìyì",
       "text_translation": "yig'ilish; majlis",
-      "text_translation_ru": "совещание; собрание"
+      "text_translation_ru": "совещание; собрание",
+      "text_translation_en": "meeting; conference"
     },
     {
       "id": "tp-biz-02",
       "text_original": "会议记录",
       "pinyin": "huìyì jìlù",
       "text_translation": "yig'ilish bayonnomasi",
-      "text_translation_ru": "протокол собрания"
+      "text_translation_ru": "протокол собрания",
+      "text_translation_en": "meeting minutes"
     },
     {
       "id": "tp-biz-03",
       "text_original": "议程",
       "pinyin": "yìchéng",
       "text_translation": "kun tartibi",
-      "text_translation_ru": "повестка дня"
+      "text_translation_ru": "повестка дня",
+      "text_translation_en": "agenda"
     },
     {
       "id": "tp-biz-04",
       "text_original": "项目",
       "pinyin": "xiàngmù",
       "text_translation": "loyiha; proekt",
-      "text_translation_ru": "проект"
+      "text_translation_ru": "проект",
+      "text_translation_en": "project"
     },
     {
       "id": "tp-biz-05",
       "text_original": "合同",
       "pinyin": "hétong",
       "text_translation": "shartnoma",
-      "text_translation_ru": "контракт; договор"
+      "text_translation_ru": "контракт; договор",
+      "text_translation_en": "contract"
     },
     {
       "id": "tp-biz-06",
       "text_original": "协议",
       "pinyin": "xiéyì",
       "text_translation": "kelishuv; bitim",
-      "text_translation_ru": "соглашение"
+      "text_translation_ru": "соглашение",
+      "text_translation_en": "agreement"
     },
     {
       "id": "tp-biz-07",
       "text_original": "报价",
       "pinyin": "bàojià",
       "text_translation": "narx taklifi",
-      "text_translation_ru": "ценовое предложение; котировка"
+      "text_translation_ru": "ценовое предложение; котировка",
+      "text_translation_en": "quotation; price offer"
     },
     {
       "id": "tp-biz-08",
       "text_original": "订单",
       "pinyin": "dìngdān",
       "text_translation": "buyurtma",
-      "text_translation_ru": "заказ"
+      "text_translation_ru": "заказ",
+      "text_translation_en": "order"
     },
     {
       "id": "tp-biz-09",
       "text_original": "预算",
       "pinyin": "yùsuàn",
       "text_translation": "byudjet; smeta",
-      "text_translation_ru": "бюджет; смета"
+      "text_translation_ru": "бюджет; смета",
+      "text_translation_en": "budget"
     },
     {
       "id": "tp-biz-10",
       "text_original": "利润",
       "pinyin": "lìrùn",
       "text_translation": "foyda; daromad",
-      "text_translation_ru": "прибыль"
+      "text_translation_ru": "прибыль",
+      "text_translation_en": "profit"
     },
     {
       "id": "tp-biz-11",
       "text_original": "成本",
       "pinyin": "chéngběn",
       "text_translation": "tannarx; xarajat",
-      "text_translation_ru": "себестоимость; затраты"
+      "text_translation_ru": "себестоимость; затраты",
+      "text_translation_en": "cost"
     },
     {
       "id": "tp-biz-12",
       "text_original": "市场",
       "pinyin": "shìchǎng",
       "text_translation": "bozor",
-      "text_translation_ru": "рынок"
+      "text_translation_ru": "рынок",
+      "text_translation_en": "market"
     },
     {
       "id": "tp-biz-13",
       "text_original": "合作",
       "pinyin": "hézuò",
       "text_translation": "hamkorlik qilmoq",
-      "text_translation_ru": "сотрудничать; сотрудничество"
+      "text_translation_ru": "сотрудничать; сотрудничество",
+      "text_translation_en": "to cooperate; cooperation"
     },
     {
       "id": "tp-biz-14",
       "text_original": "谈判",
       "pinyin": "tánpàn",
       "text_translation": "muzokaralar olib bormoq",
-      "text_translation_ru": "вести переговоры"
+      "text_translation_ru": "вести переговоры",
+      "text_translation_en": "to negotiate; negotiation"
     }
-  ]
+  ],
+  "title_en": "Business Terms"
 }

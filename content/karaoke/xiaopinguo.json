@@ -13,753 +13,3387 @@
       "translation": "Men urug' ekdim",
       "translation_ru": "Я посадил семечко",
       "words": [
-        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 16.4, "duration": 0.23 },
-        { "id": 1, "text": "种", "p": "zhòng", "timestamp": 16.64, "duration": 0.23 },
-        { "id": 2, "text": "下", "p": "xià", "timestamp": 16.88, "duration": 0.27 },
-        { "id": 3, "text": "一", "p": "yì", "timestamp": 17.16, "duration": 0.19 },
-        { "id": 4, "text": "颗", "p": "kē", "timestamp": 17.36, "duration": 0.23 },
-        { "id": 5, "text": "种", "p": "zhǒng", "timestamp": 17.6, "duration": 0.23 },
-        { "id": 6, "text": "子", "p": "zi", "timestamp": 17.84, "duration": 0.48 }
-      ]
+        {
+          "id": 0,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 16.4,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "种",
+          "p": "zhòng",
+          "timestamp": 16.64,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 16.88,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 17.16,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "颗",
+          "p": "kē",
+          "timestamp": 17.36,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "种",
+          "p": "zhǒng",
+          "timestamp": 17.6,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "子",
+          "p": "zi",
+          "timestamp": 17.84,
+          "duration": 0.48
+        }
+      ],
+      "translation_en": "I planted a seed"
     },
     {
       "id": 1,
       "translation": "Nihoyat meva berdi",
       "translation_ru": "Наконец выросли плоды",
       "words": [
-        { "id": 0, "text": "终", "p": "zhōng", "timestamp": 18.36, "duration": 0.17 },
-        { "id": 1, "text": "于", "p": "yú", "timestamp": 18.54, "duration": 0.25 },
-        { "id": 2, "text": "长", "p": "zhǎng", "timestamp": 18.8, "duration": 0.25 },
-        { "id": 3, "text": "出", "p": "chū", "timestamp": 19.06, "duration": 0.25 },
-        { "id": 4, "text": "了", "p": "le", "timestamp": 19.32, "duration": 0.21 },
-        { "id": 5, "text": "果", "p": "guǒ", "timestamp": 19.54, "duration": 0.21 },
-        { "id": 6, "text": "实", "p": "shí", "timestamp": 19.76, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "终",
+          "p": "zhōng",
+          "timestamp": 18.36,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "于",
+          "p": "yú",
+          "timestamp": 18.54,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "长",
+          "p": "zhǎng",
+          "timestamp": 18.8,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "出",
+          "p": "chū",
+          "timestamp": 19.06,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "了",
+          "p": "le",
+          "timestamp": 19.32,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 19.54,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "实",
+          "p": "shí",
+          "timestamp": 19.76,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "It finally bore fruit"
     },
     {
       "id": 2,
       "translation": "Bugun buyuk kun",
       "translation_ru": "Сегодня великий день",
       "words": [
-        { "id": 0, "text": "今", "p": "jīn", "timestamp": 20.24, "duration": 0.23 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 20.48, "duration": 0.23 },
-        { "id": 2, "text": "是", "p": "shì", "timestamp": 20.72, "duration": 0.25 },
-        { "id": 3, "text": "个", "p": "gè", "timestamp": 20.98, "duration": 0.23 },
-        { "id": 4, "text": "伟", "p": "wěi", "timestamp": 21.22, "duration": 0.21 },
-        { "id": 5, "text": "大", "p": "dà", "timestamp": 21.44, "duration": 0.27 },
-        { "id": 6, "text": "日", "p": "rì", "timestamp": 21.72, "duration": 0.23 },
-        { "id": 7, "text": "子", "p": "zi", "timestamp": 21.96, "duration": 0.76 }
-      ]
+        {
+          "id": 0,
+          "text": "今",
+          "p": "jīn",
+          "timestamp": 20.24,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 20.48,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 20.72,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 20.98,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "伟",
+          "p": "wěi",
+          "timestamp": 21.22,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "大",
+          "p": "dà",
+          "timestamp": 21.44,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "日",
+          "p": "rì",
+          "timestamp": 21.72,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "子",
+          "p": "zi",
+          "timestamp": 21.96,
+          "duration": 0.76
+        }
+      ],
+      "translation_en": "Today is a great day"
     },
     {
       "id": 3,
       "translation": "Yulduzlarni uzib senga beraman",
       "translation_ru": "Сорву звёзды и подарю тебе",
       "words": [
-        { "id": 0, "text": "摘", "p": "zhāi", "timestamp": 24.1, "duration": 0.19 },
-        { "id": 1, "text": "下", "p": "xià", "timestamp": 24.3, "duration": 0.23 },
-        { "id": 2, "text": "星", "p": "xīng", "timestamp": 24.54, "duration": 0.23 },
-        { "id": 3, "text": "星", "p": "xīng", "timestamp": 24.78, "duration": 0.23 },
-        { "id": 4, "text": "送", "p": "sòng", "timestamp": 25.02, "duration": 0.25 },
-        { "id": 5, "text": "给", "p": "gěi", "timestamp": 25.28, "duration": 0.25 },
-        { "id": 6, "text": "你", "p": "nǐ", "timestamp": 25.54, "duration": 0.42 }
-      ]
+        {
+          "id": 0,
+          "text": "摘",
+          "p": "zhāi",
+          "timestamp": 24.1,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 24.3,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 24.54,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 24.78,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "送",
+          "p": "sòng",
+          "timestamp": 25.02,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "给",
+          "p": "gěi",
+          "timestamp": 25.28,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 25.54,
+          "duration": 0.42
+        }
+      ],
+      "translation_en": "I'll pick the stars and give them to you"
     },
     {
       "id": 4,
       "translation": "Oyni tortib senga beraman",
       "translation_ru": "Сорву луну и подарю тебе",
       "words": [
-        { "id": 0, "text": "拽", "p": "zhuài", "timestamp": 26, "duration": 0.21 },
-        { "id": 1, "text": "下", "p": "xià", "timestamp": 26.22, "duration": 0.27 },
-        { "id": 2, "text": "月", "p": "yuè", "timestamp": 26.5, "duration": 0.21 },
-        { "id": 3, "text": "亮", "p": "liàng", "timestamp": 26.719, "duration": 0.23 },
-        { "id": 4, "text": "送", "p": "sòng", "timestamp": 26.959, "duration": 0.25 },
-        { "id": 5, "text": "给", "p": "gěi", "timestamp": 27.219, "duration": 0.23 },
-        { "id": 6, "text": "你", "p": "nǐ", "timestamp": 27.459, "duration": 0.44 }
-      ]
+        {
+          "id": 0,
+          "text": "拽",
+          "p": "zhuài",
+          "timestamp": 26,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 26.22,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "月",
+          "p": "yuè",
+          "timestamp": 26.5,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 26.719,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "送",
+          "p": "sòng",
+          "timestamp": 26.959,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "给",
+          "p": "gěi",
+          "timestamp": 27.219,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 27.459,
+          "duration": 0.44
+        }
+      ],
+      "translation_en": "I'll pull down the moon and give it to you"
     },
     {
       "id": 5,
       "translation": "Quyosh har kuni sen uchun chiqsin",
       "translation_ru": "Пусть солнце каждый день встаёт для тебя",
       "words": [
-        { "id": 0, "text": "让", "p": "ràng", "timestamp": 27.959, "duration": 0.19 },
-        { "id": 1, "text": "太", "p": "tài", "timestamp": 28.159, "duration": 0.07 },
-        { "id": 2, "text": "阳", "p": "yáng", "timestamp": 28.239, "duration": 0.13 },
-        { "id": 3, "text": "每", "p": "měi", "timestamp": 28.379, "duration": 0.19 },
-        { "id": 4, "text": "天", "p": "tiān", "timestamp": 28.579, "duration": 0.29 },
-        { "id": 5, "text": "为", "p": "wèi", "timestamp": 28.879, "duration": 0.23 },
-        { "id": 6, "text": "你", "p": "nǐ", "timestamp": 29.119, "duration": 0.21 },
-        { "id": 7, "text": "升", "p": "shēng", "timestamp": 29.339, "duration": 0.27 },
-        { "id": 8, "text": "起", "p": "qǐ", "timestamp": 29.619, "duration": 0.72 }
-      ]
+        {
+          "id": 0,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 27.959,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "太",
+          "p": "tài",
+          "timestamp": 28.159,
+          "duration": 0.07
+        },
+        {
+          "id": 2,
+          "text": "阳",
+          "p": "yáng",
+          "timestamp": 28.239,
+          "duration": 0.13
+        },
+        {
+          "id": 3,
+          "text": "每",
+          "p": "měi",
+          "timestamp": 28.379,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 28.579,
+          "duration": 0.29
+        },
+        {
+          "id": 5,
+          "text": "为",
+          "p": "wèi",
+          "timestamp": 28.879,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 29.119,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "升",
+          "p": "shēng",
+          "timestamp": 29.339,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 29.619,
+          "duration": 0.72
+        }
+      ],
+      "translation_en": "Let the sun rise for you every day"
     },
     {
       "id": 6,
       "translation": "Shamga aylanib o'zimni yoqaman",
       "translation_ru": "Стану свечой и сожгу себя",
       "words": [
-        { "id": 0, "text": "变", "p": "biàn", "timestamp": 31.759, "duration": 0.19 },
-        { "id": 1, "text": "成", "p": "chéng", "timestamp": 31.959, "duration": 0.25 },
-        { "id": 2, "text": "蜡", "p": "là", "timestamp": 32.219, "duration": 0.25 },
-        { "id": 3, "text": "烛", "p": "zhú", "timestamp": 32.479, "duration": 0.19 },
-        { "id": 4, "text": "燃", "p": "rán", "timestamp": 32.679, "duration": 0.23 },
-        { "id": 5, "text": "烧", "p": "shāo", "timestamp": 32.919, "duration": 0.27 },
-        { "id": 6, "text": "自", "p": "zì", "timestamp": 33.199, "duration": 0.21 },
-        { "id": 7, "text": "己", "p": "jǐ", "timestamp": 33.419, "duration": 0.2 }
-      ]
+        {
+          "id": 0,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 31.759,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "成",
+          "p": "chéng",
+          "timestamp": 31.959,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "蜡",
+          "p": "là",
+          "timestamp": 32.219,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "烛",
+          "p": "zhú",
+          "timestamp": 32.479,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "燃",
+          "p": "rán",
+          "timestamp": 32.679,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "烧",
+          "p": "shāo",
+          "timestamp": 32.919,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "自",
+          "p": "zì",
+          "timestamp": 33.199,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "己",
+          "p": "jǐ",
+          "timestamp": 33.419,
+          "duration": 0.2
+        }
+      ],
+      "translation_en": "I'll become a candle, burning myself"
     },
     {
       "id": 7,
       "translation": "Faqat seni yoritish uchun",
       "translation_ru": "Лишь чтобы осветить тебя",
       "words": [
-        { "id": 0, "text": "只", "p": "zhǐ", "timestamp": 33.659, "duration": 0.27 },
-        { "id": 1, "text": "为", "p": "wèi", "timestamp": 33.939, "duration": 0.21 },
-        { "id": 2, "text": "照", "p": "zhào", "timestamp": 34.159, "duration": 0.27 },
-        { "id": 3, "text": "亮", "p": "liàng", "timestamp": 34.439, "duration": 0.13 },
-        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 34.579, "duration": 0.56 }
-      ]
+        {
+          "id": 0,
+          "text": "只",
+          "p": "zhǐ",
+          "timestamp": 33.659,
+          "duration": 0.27
+        },
+        {
+          "id": 1,
+          "text": "为",
+          "p": "wèi",
+          "timestamp": 33.939,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "照",
+          "p": "zhào",
+          "timestamp": 34.159,
+          "duration": 0.27
+        },
+        {
+          "id": 3,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 34.439,
+          "duration": 0.13
+        },
+        {
+          "id": 4,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 34.579,
+          "duration": 0.56
+        }
+      ],
+      "translation_en": "Just to light up your world"
     },
     {
       "id": 8,
       "translation": "Hamma narsani senga bag'ishlayman",
       "translation_ru": "Отдам тебе всё что имею",
       "words": [
-        { "id": 0, "text": "把", "p": "bǎ", "timestamp": 35.619, "duration": 0.23 },
-        { "id": 1, "text": "我", "p": "wǒ", "timestamp": 35.859, "duration": 0.23 },
-        { "id": 2, "text": "一", "p": "yí", "timestamp": 36.099, "duration": 0.17 },
-        { "id": 3, "text": "切", "p": "qiè", "timestamp": 36.279, "duration": 0.29 },
-        { "id": 4, "text": "都", "p": "dōu", "timestamp": 36.579, "duration": 0.17 },
-        { "id": 5, "text": "献", "p": "xiàn", "timestamp": 36.759, "duration": 0.27 },
-        { "id": 6, "text": "给", "p": "gěi", "timestamp": 37.039, "duration": 0.23 },
-        { "id": 7, "text": "你", "p": "nǐ", "timestamp": 37.279, "duration": 0.2 }
-      ]
+        {
+          "id": 0,
+          "text": "把",
+          "p": "bǎ",
+          "timestamp": 35.619,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 35.859,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 36.099,
+          "duration": 0.17
+        },
+        {
+          "id": 3,
+          "text": "切",
+          "p": "qiè",
+          "timestamp": 36.279,
+          "duration": 0.29
+        },
+        {
+          "id": 4,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 36.579,
+          "duration": 0.17
+        },
+        {
+          "id": 5,
+          "text": "献",
+          "p": "xiàn",
+          "timestamp": 36.759,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "给",
+          "p": "gěi",
+          "timestamp": 37.039,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 37.279,
+          "duration": 0.2
+        }
+      ],
+      "translation_en": "I'll give you everything I have"
     },
     {
       "id": 9,
       "translation": "Faqat sen xursand bo'lsang",
       "translation_ru": "Лишь бы ты была рада",
       "words": [
-        { "id": 0, "text": "只", "p": "zhǐ", "timestamp": 37.519, "duration": 0.23 },
-        { "id": 1, "text": "要", "p": "yào", "timestamp": 37.759, "duration": 0.25 },
-        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 38.019, "duration": 0.21 },
-        { "id": 3, "text": "欢", "p": "huān", "timestamp": 38.239, "duration": 0.21 },
-        { "id": 4, "text": "喜", "p": "xǐ", "timestamp": 38.459, "duration": 0.48 }
-      ]
+        {
+          "id": 0,
+          "text": "只",
+          "p": "zhǐ",
+          "timestamp": 37.519,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "要",
+          "p": "yào",
+          "timestamp": 37.759,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 38.019,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "欢",
+          "p": "huān",
+          "timestamp": 38.239,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "喜",
+          "p": "xǐ",
+          "timestamp": 38.459,
+          "duration": 0.48
+        }
+      ],
+      "translation_en": "As long as it makes you happy"
     },
     {
       "id": 10,
       "translation": "Sen har ertangimni mazmunli qilasan",
       "translation_ru": "Ты делаешь каждое моё завтра значимым",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 39.479, "duration": 0.21 },
-        { "id": 1, "text": "让", "p": "ràng", "timestamp": 39.699, "duration": 0.25 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 39.959, "duration": 0.23 },
-        { "id": 3, "text": "每", "p": "měi", "timestamp": 40.199, "duration": 0.23 },
-        { "id": 4, "text": "个", "p": "gè", "timestamp": 40.439, "duration": 0.21 },
-        { "id": 5, "text": "明", "p": "míng", "timestamp": 40.659, "duration": 0.27 },
-        { "id": 6, "text": "天", "p": "tiān", "timestamp": 40.939, "duration": 0.21 },
-        { "id": 7, "text": "都", "p": "dōu", "timestamp": 41.159, "duration": 0.23 },
-        { "id": 8, "text": "变", "p": "biàn", "timestamp": 41.399, "duration": 0.27 },
-        { "id": 9, "text": "得", "p": "de", "timestamp": 41.679, "duration": 0.19 },
-        { "id": 10, "text": "有", "p": "yǒu", "timestamp": 41.879, "duration": 0.21 },
-        { "id": 11, "text": "意", "p": "yì", "timestamp": 42.099, "duration": 0.17 },
-        { "id": 12, "text": "义", "p": "yì", "timestamp": 42.279, "duration": 0.42 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 39.479,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "让",
+          "p": "ràng",
+          "timestamp": 39.699,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 39.959,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "每",
+          "p": "měi",
+          "timestamp": 40.199,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "个",
+          "p": "gè",
+          "timestamp": 40.439,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "明",
+          "p": "míng",
+          "timestamp": 40.659,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 40.939,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 41.159,
+          "duration": 0.23
+        },
+        {
+          "id": 8,
+          "text": "变",
+          "p": "biàn",
+          "timestamp": 41.399,
+          "duration": 0.27
+        },
+        {
+          "id": 9,
+          "text": "得",
+          "p": "de",
+          "timestamp": 41.679,
+          "duration": 0.19
+        },
+        {
+          "id": 10,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 41.879,
+          "duration": 0.21
+        },
+        {
+          "id": 11,
+          "text": "意",
+          "p": "yì",
+          "timestamp": 42.099,
+          "duration": 0.17
+        },
+        {
+          "id": 12,
+          "text": "义",
+          "p": "yì",
+          "timestamp": 42.279,
+          "duration": 0.42
+        }
+      ],
+      "translation_en": "You make every tomorrow meaningful"
     },
     {
       "id": 11,
       "translation": "Umr qisqa bo'lsa-da seni abadiy sevaman",
       "translation_ru": "Жизнь коротка, но люблю тебя вечно",
       "words": [
-        { "id": 0, "text": "生", "p": "shēng", "timestamp": 43.259, "duration": 0.25 },
-        { "id": 1, "text": "命", "p": "mìng", "timestamp": 43.519, "duration": 0.23 },
-        { "id": 2, "text": "虽", "p": "suī", "timestamp": 43.759, "duration": 0.25 },
-        { "id": 3, "text": "短", "p": "duǎn", "timestamp": 44.019, "duration": 0.25 },
-        { "id": 4, "text": "爱", "p": "ài", "timestamp": 44.279, "duration": 0.23 },
-        { "id": 5, "text": "你", "p": "nǐ", "timestamp": 44.519, "duration": 0.25 },
-        { "id": 6, "text": "永", "p": "yǒng", "timestamp": 44.779, "duration": 0.17 },
-        { "id": 7, "text": "远", "p": "yuǎn", "timestamp": 44.959, "duration": 0.23 },
-        { "id": 8, "text": "不", "p": "bù", "timestamp": 45.199, "duration": 0.47 },
-        { "id": 9, "text": "离", "p": "lí", "timestamp": 45.679, "duration": 0.47 },
-        { "id": 10, "text": "不", "p": "bù", "timestamp": 46.159, "duration": 0.43 },
-        { "id": 11, "text": "弃", "p": "qì", "timestamp": 46.599, "duration": 0.5 }
-      ]
+        {
+          "id": 0,
+          "text": "生",
+          "p": "shēng",
+          "timestamp": 43.259,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "命",
+          "p": "mìng",
+          "timestamp": 43.519,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "虽",
+          "p": "suī",
+          "timestamp": 43.759,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "短",
+          "p": "duǎn",
+          "timestamp": 44.019,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 44.279,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 44.519,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "永",
+          "p": "yǒng",
+          "timestamp": 44.779,
+          "duration": 0.17
+        },
+        {
+          "id": 7,
+          "text": "远",
+          "p": "yuǎn",
+          "timestamp": 44.959,
+          "duration": 0.23
+        },
+        {
+          "id": 8,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 45.199,
+          "duration": 0.47
+        },
+        {
+          "id": 9,
+          "text": "离",
+          "p": "lí",
+          "timestamp": 45.679,
+          "duration": 0.47
+        },
+        {
+          "id": 10,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 46.159,
+          "duration": 0.43
+        },
+        {
+          "id": 11,
+          "text": "弃",
+          "p": "qì",
+          "timestamp": 46.599,
+          "duration": 0.5
+        }
+      ],
+      "translation_en": "Life is short, but I'll love you forever"
     },
     {
       "id": 12,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 47.139, "duration": 0.41 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 47.559, "duration": 0.49 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 48.059, "duration": 0.49 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 48.559, "duration": 0.45 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 49.019, "duration": 0.27 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 49.299, "duration": 0.17 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 49.479, "duration": 0.25 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 49.739, "duration": 0.27 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 50.019, "duration": 0.39 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 50.419, "duration": 0.16 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 47.139,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 47.559,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 48.059,
+          "duration": 0.49
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 48.559,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 49.019,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 49.299,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 49.479,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 49.739,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 50.019,
+          "duration": 0.39
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 50.419,
+          "duration": 0.16
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 13,
       "translation": "Qancha sevsam ham kamlik qiladi",
       "translation_ru": "Сколько бы ни любил — всё мало",
       "words": [
-        { "id": 0, "text": "怎", "p": "zěn", "timestamp": 50.959, "duration": 0.47 },
-        { "id": 1, "text": "么", "p": "me", "timestamp": 51.439, "duration": 0.51 },
-        { "id": 2, "text": "爱", "p": "ài", "timestamp": 51.959, "duration": 0.43 },
-        { "id": 3, "text": "你", "p": "nǐ", "timestamp": 52.399, "duration": 0.49 },
-        { "id": 4, "text": "都", "p": "dōu", "timestamp": 52.899, "duration": 0.25 },
-        { "id": 5, "text": "不", "p": "bù", "timestamp": 53.159, "duration": 0.19 },
-        { "id": 6, "text": "嫌", "p": "xián", "timestamp": 53.359, "duration": 0.47 },
-        { "id": 7, "text": "多", "p": "duō", "timestamp": 53.839, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "怎",
+          "p": "zěn",
+          "timestamp": 50.959,
+          "duration": 0.47
+        },
+        {
+          "id": 1,
+          "text": "么",
+          "p": "me",
+          "timestamp": 51.439,
+          "duration": 0.51
+        },
+        {
+          "id": 2,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 51.959,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 52.399,
+          "duration": 0.49
+        },
+        {
+          "id": 4,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 52.899,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 53.159,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "嫌",
+          "p": "xián",
+          "timestamp": 53.359,
+          "duration": 0.47
+        },
+        {
+          "id": 7,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 53.839,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "No amount of love for you is too much"
     },
     {
       "id": 14,
       "translation": "Qizil yuzlaring yuragimni isitadi",
       "translation_ru": "Твоё румяное личико согревает мне сердце",
       "words": [
-        { "id": 0, "text": "红", "p": "hóng", "timestamp": 54.339, "duration": 0.21 },
-        { "id": 1, "text": "红", "p": "hóng", "timestamp": 54.559, "duration": 0.25 },
-        { "id": 2, "text": "的", "p": "de", "timestamp": 54.819, "duration": 0.41 },
-        { "id": 3, "text": "小", "p": "xiǎo", "timestamp": 55.239, "duration": 0.25 },
-        { "id": 4, "text": "脸", "p": "liǎn", "timestamp": 55.499, "duration": 0.13 },
-        { "id": 5, "text": "儿", "p": "r", "timestamp": 55.639, "duration": 0.09 },
-        { "id": 6, "text": "温", "p": "wēn", "timestamp": 55.739, "duration": 0.45 },
-        { "id": 7, "text": "暖", "p": "nuǎn", "timestamp": 56.199, "duration": 0.51 },
-        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 56.719, "duration": 0.23 },
-        { "id": 9, "text": "的", "p": "de", "timestamp": 56.959, "duration": 0.21 },
-        { "id": 10, "text": "心", "p": "xīn", "timestamp": 57.179, "duration": 0.51 },
-        { "id": 11, "text": "窝", "p": "wō", "timestamp": 57.699, "duration": 0.5 }
-      ]
+        {
+          "id": 0,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 54.339,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 54.559,
+          "duration": 0.25
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 54.819,
+          "duration": 0.41
+        },
+        {
+          "id": 3,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 55.239,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "脸",
+          "p": "liǎn",
+          "timestamp": 55.499,
+          "duration": 0.13
+        },
+        {
+          "id": 5,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 55.639,
+          "duration": 0.09
+        },
+        {
+          "id": 6,
+          "text": "温",
+          "p": "wēn",
+          "timestamp": 55.739,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "暖",
+          "p": "nuǎn",
+          "timestamp": 56.199,
+          "duration": 0.51
+        },
+        {
+          "id": 8,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 56.719,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "的",
+          "p": "de",
+          "timestamp": 56.959,
+          "duration": 0.21
+        },
+        {
+          "id": 10,
+          "text": "心",
+          "p": "xīn",
+          "timestamp": 57.179,
+          "duration": 0.51
+        },
+        {
+          "id": 11,
+          "text": "窝",
+          "p": "wō",
+          "timestamp": 57.699,
+          "duration": 0.5
+        }
+      ],
+      "translation_en": "Your rosy little face warms my heart"
     },
     {
       "id": 15,
       "translation": "Hayotim olovini yoqasan",
       "translation_ru": "Зажигаешь огонь моей жизни",
       "words": [
-        { "id": 0, "text": "点", "p": "diǎn", "timestamp": 58.439, "duration": 0.23 },
-        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 58.679, "duration": 0.43 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 59.119, "duration": 0.45 },
-        { "id": 3, "text": "生", "p": "shēng", "timestamp": 59.579, "duration": 0.23 },
-        { "id": 4, "text": "命", "p": "mìng", "timestamp": 59.819, "duration": 0.25 },
-        { "id": 5, "text": "的", "p": "de", "timestamp": 60.079, "duration": 0.23 },
-        { "id": 6, "text": "火", "p": "huǒ", "timestamp": 60.319, "duration": 0.73 },
-        { "id": 7, "text": "火", "p": "huǒ", "timestamp": 61.059, "duration": 0.23 },
-        { "id": 8, "text": "火", "p": "huǒ", "timestamp": 61.299, "duration": 0.21 },
-        { "id": 9, "text": "火", "p": "huǒ", "timestamp": 61.519, "duration": 0.23 },
-        { "id": 10, "text": "火", "p": "huǒ", "timestamp": 61.759, "duration": 0.23 },
-        { "id": 11, "text": "火", "p": "huǒ", "timestamp": 61.999, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "点",
+          "p": "diǎn",
+          "timestamp": 58.439,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 58.679,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 59.119,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "生",
+          "p": "shēng",
+          "timestamp": 59.579,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "命",
+          "p": "mìng",
+          "timestamp": 59.819,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "的",
+          "p": "de",
+          "timestamp": 60.079,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 60.319,
+          "duration": 0.73
+        },
+        {
+          "id": 7,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 61.059,
+          "duration": 0.23
+        },
+        {
+          "id": 8,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 61.299,
+          "duration": 0.21
+        },
+        {
+          "id": 9,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 61.519,
+          "duration": 0.23
+        },
+        {
+          "id": 10,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 61.759,
+          "duration": 0.23
+        },
+        {
+          "id": 11,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 61.999,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "You light up the fire of my life"
     },
     {
       "id": 16,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 62.499, "duration": 0.43 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 62.939, "duration": 0.55 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 63.499, "duration": 0.45 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 63.959, "duration": 0.43 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 64.399, "duration": 0.25 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 64.659, "duration": 0.19 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 64.859, "duration": 0.25 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 65.119, "duration": 0.25 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 65.379, "duration": 0.37 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 65.759, "duration": 0.14 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 62.499,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 62.939,
+          "duration": 0.55
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 63.499,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 63.959,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 64.399,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 64.659,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 64.859,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 65.119,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 65.379,
+          "duration": 0.37
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 65.759,
+          "duration": 0.14
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 17,
       "translation": "Xuddi osmondagi eng go'zal bulutday",
       "translation_ru": "Как самое красивое облако на небе",
       "words": [
-        { "id": 0, "text": "就", "p": "jiù", "timestamp": 66.339, "duration": 0.41 },
-        { "id": 1, "text": "像", "p": "xiàng", "timestamp": 66.759, "duration": 0.49 },
-        { "id": 2, "text": "天", "p": "tiān", "timestamp": 67.259, "duration": 0.51 },
-        { "id": 3, "text": "边", "p": "biān", "timestamp": 67.779, "duration": 0.23 },
-        { "id": 4, "text": "最", "p": "zuì", "timestamp": 68.019, "duration": 0.23 },
-        { "id": 5, "text": "美", "p": "měi", "timestamp": 68.259, "duration": 0.25 },
-        { "id": 6, "text": "的", "p": "de", "timestamp": 68.519, "duration": 0.23 },
-        { "id": 7, "text": "云", "p": "yún", "timestamp": 68.759, "duration": 0.43 },
-        { "id": 8, "text": "朵", "p": "duǒ", "timestamp": 69.199, "duration": 0.34 }
-      ]
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 66.339,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 66.759,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 67.259,
+          "duration": 0.51
+        },
+        {
+          "id": 3,
+          "text": "边",
+          "p": "biān",
+          "timestamp": 67.779,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "最",
+          "p": "zuì",
+          "timestamp": 68.019,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "美",
+          "p": "měi",
+          "timestamp": 68.259,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 68.519,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "云",
+          "p": "yún",
+          "timestamp": 68.759,
+          "duration": 0.43
+        },
+        {
+          "id": 8,
+          "text": "朵",
+          "p": "duǒ",
+          "timestamp": 69.199,
+          "duration": 0.34
+        }
+      ],
+      "translation_en": "Like the most beautiful cloud in the sky"
     },
     {
       "id": 18,
       "translation": "Bahor keldi, gullar tog' yonbag'rida ochildi",
       "translation_ru": "Снова пришла весна, цветы на склонах",
       "words": [
-        { "id": 0, "text": "春", "p": "chūn", "timestamp": 69.659, "duration": 0.23 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 69.899, "duration": 0.27 },
-        { "id": 2, "text": "又", "p": "yòu", "timestamp": 70.179, "duration": 0.45 },
-        { "id": 3, "text": "来", "p": "lái", "timestamp": 70.639, "duration": 0.25 },
-        { "id": 4, "text": "到", "p": "dào", "timestamp": 70.899, "duration": 0.21 },
-        { "id": 5, "text": "了", "p": "le", "timestamp": 71.119, "duration": 0.49 },
-        { "id": 6, "text": "花", "p": "huā", "timestamp": 71.619, "duration": 0.45 },
-        { "id": 7, "text": "开", "p": "kāi", "timestamp": 72.079, "duration": 0.25 },
-        { "id": 8, "text": "满", "p": "mǎn", "timestamp": 72.339, "duration": 0.23 },
-        { "id": 9, "text": "山", "p": "shān", "timestamp": 72.579, "duration": 0.47 },
-        { "id": 10, "text": "坡", "p": "pō", "timestamp": 73.059, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "春",
+          "p": "chūn",
+          "timestamp": 69.659,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 69.899,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 70.179,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 70.639,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 70.899,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 71.119,
+          "duration": 0.49
+        },
+        {
+          "id": 6,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 71.619,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 72.079,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "满",
+          "p": "mǎn",
+          "timestamp": 72.339,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "山",
+          "p": "shān",
+          "timestamp": 72.579,
+          "duration": 0.47
+        },
+        {
+          "id": 10,
+          "text": "坡",
+          "p": "pō",
+          "timestamp": 73.059,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "Spring has come again, flowers bloom on the hillside"
     },
     {
       "id": 19,
       "translation": "Umid eksang — hosil olasan",
       "translation_ru": "Посеешь надежду — пожнёшь урожай",
       "words": [
-        { "id": 0, "text": "种", "p": "zhòng", "timestamp": 73.819, "duration": 0.15 },
-        { "id": 1, "text": "下", "p": "xià", "timestamp": 73.979, "duration": 0.45 },
-        { "id": 2, "text": "希", "p": "xī", "timestamp": 74.439, "duration": 0.53 },
-        { "id": 3, "text": "望", "p": "wàng", "timestamp": 74.979, "duration": 0.47 },
-        { "id": 4, "text": "就", "p": "jiù", "timestamp": 75.459, "duration": 0.49 },
-        { "id": 5, "text": "会", "p": "huì", "timestamp": 75.959, "duration": 0.43 },
-        { "id": 6, "text": "收", "p": "shōu", "timestamp": 76.399, "duration": 0.49 },
-        { "id": 7, "text": "获", "p": "huò", "timestamp": 76.899, "duration": 0.54 }
-      ]
+        {
+          "id": 0,
+          "text": "种",
+          "p": "zhòng",
+          "timestamp": 73.819,
+          "duration": 0.15
+        },
+        {
+          "id": 1,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 73.979,
+          "duration": 0.45
+        },
+        {
+          "id": 2,
+          "text": "希",
+          "p": "xī",
+          "timestamp": 74.439,
+          "duration": 0.53
+        },
+        {
+          "id": 3,
+          "text": "望",
+          "p": "wàng",
+          "timestamp": 74.979,
+          "duration": 0.47
+        },
+        {
+          "id": 4,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 75.459,
+          "duration": 0.49
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 75.959,
+          "duration": 0.43
+        },
+        {
+          "id": 6,
+          "text": "收",
+          "p": "shōu",
+          "timestamp": 76.399,
+          "duration": 0.49
+        },
+        {
+          "id": 7,
+          "text": "获",
+          "p": "huò",
+          "timestamp": 76.899,
+          "duration": 0.54
+        }
+      ],
+      "translation_en": "Plant hope and you'll harvest"
     },
     {
       "id": 20,
       "translation": "Seni hech qachon yoqtirmaslik yo'q",
       "translation_ru": "Никогда не нахожу тебя надоедливой",
       "words": [
-        { "id": 0, "text": "从", "p": "cóng", "timestamp": 93.198, "duration": 0.25 },
-        { "id": 1, "text": "不", "p": "bù", "timestamp": 93.458, "duration": 0.23 },
-        { "id": 2, "text": "觉", "p": "jué", "timestamp": 93.698, "duration": 0.25 },
-        { "id": 3, "text": "得", "p": "de", "timestamp": 93.958, "duration": 0.17 },
-        { "id": 4, "text": "你", "p": "nǐ", "timestamp": 94.138, "duration": 0.23 },
-        { "id": 5, "text": "讨", "p": "tǎo", "timestamp": 94.378, "duration": 0.27 },
-        { "id": 6, "text": "厌", "p": "yàn", "timestamp": 94.658, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "从",
+          "p": "cóng",
+          "timestamp": 93.198,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 93.458,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "觉",
+          "p": "jué",
+          "timestamp": 93.698,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "得",
+          "p": "de",
+          "timestamp": 93.958,
+          "duration": 0.17
+        },
+        {
+          "id": 4,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 94.138,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "讨",
+          "p": "tǎo",
+          "timestamp": 94.378,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "厌",
+          "p": "yàn",
+          "timestamp": 94.658,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "I never find you annoying"
     },
     {
       "id": 21,
       "translation": "Sendagi hamma narsani yoqtiraman",
       "translation_ru": "Мне нравится в тебе всё",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 95.158, "duration": 0.21 },
-        { "id": 1, "text": "的", "p": "de", "timestamp": 95.378, "duration": 0.27 },
-        { "id": 2, "text": "一", "p": "yí", "timestamp": 95.658, "duration": 0.15 },
-        { "id": 3, "text": "切", "p": "qiè", "timestamp": 95.818, "duration": 0.27 },
-        { "id": 4, "text": "都", "p": "dōu", "timestamp": 96.098, "duration": 0.19 },
-        { "id": 5, "text": "喜", "p": "xǐ", "timestamp": 96.298, "duration": 0.25 },
-        { "id": 6, "text": "欢", "p": "huān", "timestamp": 96.558, "duration": 0.48 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 95.158,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "的",
+          "p": "de",
+          "timestamp": 95.378,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "一",
+          "p": "yí",
+          "timestamp": 95.658,
+          "duration": 0.15
+        },
+        {
+          "id": 3,
+          "text": "切",
+          "p": "qiè",
+          "timestamp": 95.818,
+          "duration": 0.27
+        },
+        {
+          "id": 4,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 96.098,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "喜",
+          "p": "xǐ",
+          "timestamp": 96.298,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "欢",
+          "p": "huān",
+          "timestamp": 96.558,
+          "duration": 0.48
+        }
+      ],
+      "translation_en": "I like everything about you"
     },
     {
       "id": 22,
       "translation": "Sen bo'lgan har kun yangiday",
       "translation_ru": "С тобой каждый день как новый",
       "words": [
-        { "id": 0, "text": "有", "p": "yǒu", "timestamp": 97.078, "duration": 0.21 },
-        { "id": 1, "text": "你", "p": "nǐ", "timestamp": 97.298, "duration": 0.21 },
-        { "id": 2, "text": "的", "p": "de", "timestamp": 97.518, "duration": 0.23 },
-        { "id": 3, "text": "每", "p": "měi", "timestamp": 97.758, "duration": 0.21 },
-        { "id": 4, "text": "天", "p": "tiān", "timestamp": 97.978, "duration": 0.29 },
-        { "id": 5, "text": "都", "p": "dōu", "timestamp": 98.278, "duration": 0.17 },
-        { "id": 6, "text": "新", "p": "xīn", "timestamp": 98.458, "duration": 0.27 },
-        { "id": 7, "text": "鲜", "p": "xiān", "timestamp": 98.738, "duration": 0.9 }
-      ]
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 97.078,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 97.298,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 97.518,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "每",
+          "p": "měi",
+          "timestamp": 97.758,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 97.978,
+          "duration": 0.29
+        },
+        {
+          "id": 5,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 98.278,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "新",
+          "p": "xīn",
+          "timestamp": 98.458,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "鲜",
+          "p": "xiān",
+          "timestamp": 98.738,
+          "duration": 0.9
+        }
+      ],
+      "translation_en": "Every day with you is fresh and new"
     },
     {
       "id": 23,
       "translation": "Sen bilan quyosh yanada yorqin",
       "translation_ru": "С тобой солнце ярче светит",
       "words": [
-        { "id": 0, "text": "有", "p": "yǒu", "timestamp": 100.918, "duration": 0.21 },
-        { "id": 1, "text": "你", "p": "nǐ", "timestamp": 101.138, "duration": 0.23 },
-        { "id": 2, "text": "阳", "p": "yáng", "timestamp": 101.378, "duration": 0.23 },
-        { "id": 3, "text": "光", "p": "guāng", "timestamp": 101.618, "duration": 0.21 },
-        { "id": 4, "text": "更", "p": "gèng", "timestamp": 101.838, "duration": 0.21 },
-        { "id": 5, "text": "灿", "p": "càn", "timestamp": 102.058, "duration": 0.25 },
-        { "id": 6, "text": "烂", "p": "làn", "timestamp": 102.318, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 100.918,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 101.138,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "阳",
+          "p": "yáng",
+          "timestamp": 101.378,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "光",
+          "p": "guāng",
+          "timestamp": 101.618,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "更",
+          "p": "gèng",
+          "timestamp": 101.838,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "灿",
+          "p": "càn",
+          "timestamp": 102.058,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "烂",
+          "p": "làn",
+          "timestamp": 102.318,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "With you, the sunshine is brighter"
     },
     {
       "id": 24,
       "translation": "Sen bilan tun qorong'u emas",
       "translation_ru": "С тобой ночь не тёмная",
       "words": [
-        { "id": 0, "text": "有", "p": "yǒu", "timestamp": 102.838, "duration": 0.21 },
-        { "id": 1, "text": "你", "p": "nǐ", "timestamp": 103.058, "duration": 0.21 },
-        { "id": 2, "text": "黑", "p": "hēi", "timestamp": 103.278, "duration": 0.25 },
-        { "id": 3, "text": "夜", "p": "yè", "timestamp": 103.538, "duration": 0.23 },
-        { "id": 4, "text": "不", "p": "bù", "timestamp": 103.778, "duration": 0.19 },
-        { "id": 5, "text": "黑", "p": "hēi", "timestamp": 103.978, "duration": 0.29 },
-        { "id": 6, "text": "暗", "p": "àn", "timestamp": 104.278, "duration": 0.44 }
-      ]
+        {
+          "id": 0,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 102.838,
+          "duration": 0.21
+        },
+        {
+          "id": 1,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 103.058,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "黑",
+          "p": "hēi",
+          "timestamp": 103.278,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "夜",
+          "p": "yè",
+          "timestamp": 103.538,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 103.778,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "黑",
+          "p": "hēi",
+          "timestamp": 103.978,
+          "duration": 0.29
+        },
+        {
+          "id": 6,
+          "text": "暗",
+          "p": "àn",
+          "timestamp": 104.278,
+          "duration": 0.44
+        }
+      ],
+      "translation_en": "With you, the dark night isn't dark"
     },
     {
       "id": 25,
       "translation": "Sen oq bulut, men moviy osmon",
       "translation_ru": "Ты белое облако, я голубое небо",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 104.758, "duration": 0.17 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 104.938, "duration": 0.29 },
-        { "id": 2, "text": "白", "p": "bái", "timestamp": 105.238, "duration": 0.25 },
-        { "id": 3, "text": "云", "p": "yún", "timestamp": 105.498, "duration": 0.19 },
-        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 105.698, "duration": 0.19 },
-        { "id": 5, "text": "是", "p": "shì", "timestamp": 105.898, "duration": 0.23 },
-        { "id": 6, "text": "蓝", "p": "lán", "timestamp": 106.138, "duration": 0.23 },
-        { "id": 7, "text": "天", "p": "tiān", "timestamp": 106.378, "duration": 0.74 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 104.758,
+          "duration": 0.17
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 104.938,
+          "duration": 0.29
+        },
+        {
+          "id": 2,
+          "text": "白",
+          "p": "bái",
+          "timestamp": 105.238,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "云",
+          "p": "yún",
+          "timestamp": 105.498,
+          "duration": 0.19
+        },
+        {
+          "id": 4,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 105.698,
+          "duration": 0.19
+        },
+        {
+          "id": 5,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 105.898,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "蓝",
+          "p": "lán",
+          "timestamp": 106.138,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 106.378,
+          "duration": 0.74
+        }
+      ],
+      "translation_en": "You are the white cloud, I am the blue sky"
     },
     {
       "id": 26,
       "translation": "Bahorda sen bilan ochilgan gullar orasida sayr",
       "translation_ru": "Весной гуляем с тобой среди цветов",
       "words": [
-        { "id": 0, "text": "春", "p": "chūn", "timestamp": 108.558, "duration": 0.23 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 108.798, "duration": 0.27 },
-        { "id": 2, "text": "和", "p": "hé", "timestamp": 109.078, "duration": 0.21 },
-        { "id": 3, "text": "你", "p": "nǐ", "timestamp": 109.298, "duration": 0.23 },
-        { "id": 4, "text": "漫", "p": "màn", "timestamp": 109.538, "duration": 0.25 },
-        { "id": 5, "text": "步", "p": "bù", "timestamp": 109.798, "duration": 0.21 },
-        { "id": 6, "text": "在", "p": "zài", "timestamp": 110.018, "duration": 0.21 },
-        { "id": 7, "text": "盛", "p": "shèng", "timestamp": 110.238, "duration": 0.23 },
-        { "id": 8, "text": "开", "p": "kāi", "timestamp": 110.478, "duration": 0.33 },
-        { "id": 9, "text": "的", "p": "de", "timestamp": 110.818, "duration": 0.21 },
-        { "id": 10, "text": "花", "p": "huā", "timestamp": 111.038, "duration": 0.23 },
-        { "id": 11, "text": "丛", "p": "cóng", "timestamp": 111.278, "duration": 0.21 },
-        { "id": 12, "text": "间", "p": "jiān", "timestamp": 111.498, "duration": 0.44 }
-      ]
+        {
+          "id": 0,
+          "text": "春",
+          "p": "chūn",
+          "timestamp": 108.558,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 108.798,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "和",
+          "p": "hé",
+          "timestamp": 109.078,
+          "duration": 0.21
+        },
+        {
+          "id": 3,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 109.298,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "漫",
+          "p": "màn",
+          "timestamp": 109.538,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "步",
+          "p": "bù",
+          "timestamp": 109.798,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 110.018,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "盛",
+          "p": "shèng",
+          "timestamp": 110.238,
+          "duration": 0.23
+        },
+        {
+          "id": 8,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 110.478,
+          "duration": 0.33
+        },
+        {
+          "id": 9,
+          "text": "的",
+          "p": "de",
+          "timestamp": 110.818,
+          "duration": 0.21
+        },
+        {
+          "id": 10,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 111.038,
+          "duration": 0.23
+        },
+        {
+          "id": 11,
+          "text": "丛",
+          "p": "cóng",
+          "timestamp": 111.278,
+          "duration": 0.21
+        },
+        {
+          "id": 12,
+          "text": "间",
+          "p": "jiān",
+          "timestamp": 111.498,
+          "duration": 0.44
+        }
+      ],
+      "translation_en": "In spring, strolling with you among blooming flowers"
     },
     {
       "id": 27,
       "translation": "Yozda kechqurun sen bilan yulduzlarni tomosha qilamiz",
       "translation_ru": "Летним вечером смотрим с тобой на звёзды",
       "words": [
-        { "id": 0, "text": "夏", "p": "xià", "timestamp": 112.398, "duration": 0.27 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 112.678, "duration": 0.21 },
-        { "id": 2, "text": "夜", "p": "yè", "timestamp": 112.898, "duration": 0.23 },
-        { "id": 3, "text": "晚", "p": "wǎn", "timestamp": 113.138, "duration": 0.21 },
-        { "id": 4, "text": "陪", "p": "péi", "timestamp": 113.358, "duration": 0.25 },
-        { "id": 5, "text": "你", "p": "nǐ", "timestamp": 113.618, "duration": 0.43 },
-        { "id": 6, "text": "一", "p": "yì", "timestamp": 114.058, "duration": 0.19 },
-        { "id": 7, "text": "起", "p": "qǐ", "timestamp": 114.258, "duration": 0.05 },
-        { "id": 8, "text": "看", "p": "kàn", "timestamp": 114.318, "duration": 0.23 },
-        { "id": 9, "text": "星", "p": "xīng", "timestamp": 114.558, "duration": 0.23 },
-        { "id": 10, "text": "星", "p": "xīng", "timestamp": 114.798, "duration": 0.25 },
-        { "id": 11, "text": "眨", "p": "zhǎ", "timestamp": 115.058, "duration": 0.13 },
-        { "id": 12, "text": "眼", "p": "yǎn", "timestamp": 115.198, "duration": 0.58 }
-      ]
+        {
+          "id": 0,
+          "text": "夏",
+          "p": "xià",
+          "timestamp": 112.398,
+          "duration": 0.27
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 112.678,
+          "duration": 0.21
+        },
+        {
+          "id": 2,
+          "text": "夜",
+          "p": "yè",
+          "timestamp": 112.898,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "晚",
+          "p": "wǎn",
+          "timestamp": 113.138,
+          "duration": 0.21
+        },
+        {
+          "id": 4,
+          "text": "陪",
+          "p": "péi",
+          "timestamp": 113.358,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 113.618,
+          "duration": 0.43
+        },
+        {
+          "id": 6,
+          "text": "一",
+          "p": "yì",
+          "timestamp": 114.058,
+          "duration": 0.19
+        },
+        {
+          "id": 7,
+          "text": "起",
+          "p": "qǐ",
+          "timestamp": 114.258,
+          "duration": 0.05
+        },
+        {
+          "id": 8,
+          "text": "看",
+          "p": "kàn",
+          "timestamp": 114.318,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 114.558,
+          "duration": 0.23
+        },
+        {
+          "id": 10,
+          "text": "星",
+          "p": "xīng",
+          "timestamp": 114.798,
+          "duration": 0.25
+        },
+        {
+          "id": 11,
+          "text": "眨",
+          "p": "zhǎ",
+          "timestamp": 115.058,
+          "duration": 0.13
+        },
+        {
+          "id": 12,
+          "text": "眼",
+          "p": "yǎn",
+          "timestamp": 115.198,
+          "duration": 0.58
+        }
+      ],
+      "translation_en": "On summer nights, watching the stars twinkle with you"
     },
     {
       "id": 28,
       "translation": "Kuzda sen bilan oltin bug'doy dalasida sayr",
       "translation_ru": "Осенним вечером бродим в золотой пшенице",
       "words": [
-        { "id": 0, "text": "秋", "p": "qiū", "timestamp": 116.238, "duration": 0.23 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 116.478, "duration": 0.23 },
-        { "id": 2, "text": "黄", "p": "huáng", "timestamp": 116.718, "duration": 0.25 },
-        { "id": 3, "text": "昏", "p": "hūn", "timestamp": 116.978, "duration": 0.23 },
-        { "id": 4, "text": "与", "p": "yǔ", "timestamp": 117.218, "duration": 0.21 },
-        { "id": 5, "text": "你", "p": "nǐ", "timestamp": 117.438, "duration": 0.19 },
-        { "id": 6, "text": "徜", "p": "cháng", "timestamp": 117.638, "duration": 0.29 },
-        { "id": 7, "text": "徉", "p": "yáng", "timestamp": 117.938, "duration": 0.19 },
-        { "id": 8, "text": "在", "p": "zài", "timestamp": 118.138, "duration": 0.25 },
-        { "id": 9, "text": "金", "p": "jīn", "timestamp": 118.398, "duration": 0.21 },
-        { "id": 10, "text": "色", "p": "sè", "timestamp": 118.618, "duration": 0.27 },
-        { "id": 11, "text": "麦", "p": "mài", "timestamp": 118.898, "duration": 0.21 },
-        { "id": 12, "text": "田", "p": "tián", "timestamp": 119.118, "duration": 0.52 }
-      ]
+        {
+          "id": 0,
+          "text": "秋",
+          "p": "qiū",
+          "timestamp": 116.238,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 116.478,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "黄",
+          "p": "huáng",
+          "timestamp": 116.718,
+          "duration": 0.25
+        },
+        {
+          "id": 3,
+          "text": "昏",
+          "p": "hūn",
+          "timestamp": 116.978,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "与",
+          "p": "yǔ",
+          "timestamp": 117.218,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 117.438,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "徜",
+          "p": "cháng",
+          "timestamp": 117.638,
+          "duration": 0.29
+        },
+        {
+          "id": 7,
+          "text": "徉",
+          "p": "yáng",
+          "timestamp": 117.938,
+          "duration": 0.19
+        },
+        {
+          "id": 8,
+          "text": "在",
+          "p": "zài",
+          "timestamp": 118.138,
+          "duration": 0.25
+        },
+        {
+          "id": 9,
+          "text": "金",
+          "p": "jīn",
+          "timestamp": 118.398,
+          "duration": 0.21
+        },
+        {
+          "id": 10,
+          "text": "色",
+          "p": "sè",
+          "timestamp": 118.618,
+          "duration": 0.27
+        },
+        {
+          "id": 11,
+          "text": "麦",
+          "p": "mài",
+          "timestamp": 118.898,
+          "duration": 0.21
+        },
+        {
+          "id": 12,
+          "text": "田",
+          "p": "tián",
+          "timestamp": 119.118,
+          "duration": 0.52
+        }
+      ],
+      "translation_en": "In autumn twilight, wandering with you through golden wheat fields"
     },
     {
       "id": 29,
       "translation": "Qishda qor yog'adi, sen bilan yanada iliq",
       "translation_ru": "Зимой снежинки кружат, с тобой ещё теплее",
       "words": [
-        { "id": 0, "text": "冬", "p": "dōng", "timestamp": 120.118, "duration": 0.19 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 120.318, "duration": 0.23 },
-        { "id": 2, "text": "雪", "p": "xuě", "timestamp": 120.558, "duration": 0.23 },
-        { "id": 3, "text": "花", "p": "huā", "timestamp": 120.798, "duration": 0.25 },
-        { "id": 4, "text": "飞", "p": "fēi", "timestamp": 121.058, "duration": 0.23 },
-        { "id": 5, "text": "舞", "p": "wǔ", "timestamp": 121.298, "duration": 0.25 },
-        { "id": 6, "text": "有", "p": "yǒu", "timestamp": 121.558, "duration": 0.21 },
-        { "id": 7, "text": "你", "p": "nǐ", "timestamp": 121.778, "duration": 0.21 },
-        { "id": 8, "text": "更", "p": "gèng", "timestamp": 121.998, "duration": 0.47 },
-        { "id": 9, "text": "加", "p": "jiā", "timestamp": 122.478, "duration": 0.45 },
-        { "id": 10, "text": "温", "p": "wēn", "timestamp": 122.938, "duration": 0.49 },
-        { "id": 11, "text": "暖", "p": "nuǎn", "timestamp": 123.438, "duration": 0.42 }
-      ]
+        {
+          "id": 0,
+          "text": "冬",
+          "p": "dōng",
+          "timestamp": 120.118,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 120.318,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "雪",
+          "p": "xuě",
+          "timestamp": 120.558,
+          "duration": 0.23
+        },
+        {
+          "id": 3,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 120.798,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "飞",
+          "p": "fēi",
+          "timestamp": 121.058,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "舞",
+          "p": "wǔ",
+          "timestamp": 121.298,
+          "duration": 0.25
+        },
+        {
+          "id": 6,
+          "text": "有",
+          "p": "yǒu",
+          "timestamp": 121.558,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 121.778,
+          "duration": 0.21
+        },
+        {
+          "id": 8,
+          "text": "更",
+          "p": "gèng",
+          "timestamp": 121.998,
+          "duration": 0.47
+        },
+        {
+          "id": 9,
+          "text": "加",
+          "p": "jiā",
+          "timestamp": 122.478,
+          "duration": 0.45
+        },
+        {
+          "id": 10,
+          "text": "温",
+          "p": "wēn",
+          "timestamp": 122.938,
+          "duration": 0.49
+        },
+        {
+          "id": 11,
+          "text": "暖",
+          "p": "nuǎn",
+          "timestamp": 123.438,
+          "duration": 0.42
+        }
+      ],
+      "translation_en": "In winter when snowflakes dance, it's warmer with you"
     },
     {
       "id": 30,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 123.938, "duration": 0.41 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 124.358, "duration": 0.49 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 124.858, "duration": 0.51 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 125.378, "duration": 0.43 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 125.818, "duration": 0.31 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 126.138, "duration": 0.15 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 126.298, "duration": 0.25 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 126.558, "duration": 0.25 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 126.818, "duration": 0.37 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 127.198, "duration": 0.14 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 123.938,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 124.358,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 124.858,
+          "duration": 0.51
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 125.378,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 125.818,
+          "duration": 0.31
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 126.138,
+          "duration": 0.15
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 126.298,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 126.558,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 126.818,
+          "duration": 0.37
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 127.198,
+          "duration": 0.14
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 31,
       "translation": "Qancha sevsam ham kamlik qiladi",
       "translation_ru": "Сколько бы ни любил — всё мало",
       "words": [
-        { "id": 0, "text": "怎", "p": "zěn", "timestamp": 127.758, "duration": 0.47 },
-        { "id": 1, "text": "么", "p": "me", "timestamp": 128.238, "duration": 0.51 },
-        { "id": 2, "text": "爱", "p": "ài", "timestamp": 128.758, "duration": 0.43 },
-        { "id": 3, "text": "你", "p": "nǐ", "timestamp": 129.198, "duration": 0.49 },
-        { "id": 4, "text": "都", "p": "dōu", "timestamp": 129.698, "duration": 0.25 },
-        { "id": 5, "text": "不", "p": "bù", "timestamp": 129.958, "duration": 0.17 },
-        { "id": 6, "text": "嫌", "p": "xián", "timestamp": 130.138, "duration": 0.49 },
-        { "id": 7, "text": "多", "p": "duō", "timestamp": 130.638, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "怎",
+          "p": "zěn",
+          "timestamp": 127.758,
+          "duration": 0.47
+        },
+        {
+          "id": 1,
+          "text": "么",
+          "p": "me",
+          "timestamp": 128.238,
+          "duration": 0.51
+        },
+        {
+          "id": 2,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 128.758,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 129.198,
+          "duration": 0.49
+        },
+        {
+          "id": 4,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 129.698,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 129.958,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "嫌",
+          "p": "xián",
+          "timestamp": 130.138,
+          "duration": 0.49
+        },
+        {
+          "id": 7,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 130.638,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "No amount of love for you is too much"
     },
     {
       "id": 32,
       "translation": "Qizil yuzlaring yuragimni isitadi",
       "translation_ru": "Твоё румяное личико согревает мне сердце",
       "words": [
-        { "id": 0, "text": "红", "p": "hóng", "timestamp": 131.118, "duration": 0.23 },
-        { "id": 1, "text": "红", "p": "hóng", "timestamp": 131.358, "duration": 0.23 },
-        { "id": 2, "text": "的", "p": "de", "timestamp": 131.598, "duration": 0.47 },
-        { "id": 3, "text": "小", "p": "xiǎo", "timestamp": 132.078, "duration": 0.23 },
-        { "id": 4, "text": "脸", "p": "liǎn", "timestamp": 132.318, "duration": 0.13 },
-        { "id": 5, "text": "儿", "p": "r", "timestamp": 132.458, "duration": 0.09 },
-        { "id": 6, "text": "温", "p": "wēn", "timestamp": 132.558, "duration": 0.45 },
-        { "id": 7, "text": "暖", "p": "nuǎn", "timestamp": 133.017, "duration": 0.49 },
-        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 133.517, "duration": 0.23 },
-        { "id": 9, "text": "的", "p": "de", "timestamp": 133.757, "duration": 0.21 },
-        { "id": 10, "text": "心", "p": "xīn", "timestamp": 133.977, "duration": 0.49 },
-        { "id": 11, "text": "窝", "p": "wō", "timestamp": 134.477, "duration": 0.52 }
-      ]
+        {
+          "id": 0,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 131.118,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 131.358,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 131.598,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 132.078,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "脸",
+          "p": "liǎn",
+          "timestamp": 132.318,
+          "duration": 0.13
+        },
+        {
+          "id": 5,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 132.458,
+          "duration": 0.09
+        },
+        {
+          "id": 6,
+          "text": "温",
+          "p": "wēn",
+          "timestamp": 132.558,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "暖",
+          "p": "nuǎn",
+          "timestamp": 133.017,
+          "duration": 0.49
+        },
+        {
+          "id": 8,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 133.517,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "的",
+          "p": "de",
+          "timestamp": 133.757,
+          "duration": 0.21
+        },
+        {
+          "id": 10,
+          "text": "心",
+          "p": "xīn",
+          "timestamp": 133.977,
+          "duration": 0.49
+        },
+        {
+          "id": 11,
+          "text": "窝",
+          "p": "wō",
+          "timestamp": 134.477,
+          "duration": 0.52
+        }
+      ],
+      "translation_en": "Your rosy little face warms my heart"
     },
     {
       "id": 33,
       "translation": "Hayotim olovini yoqasan",
       "translation_ru": "Зажигаешь огонь моей жизни",
       "words": [
-        { "id": 0, "text": "点", "p": "diǎn", "timestamp": 135.217, "duration": 0.23 },
-        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 135.457, "duration": 0.49 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 135.957, "duration": 0.43 },
-        { "id": 3, "text": "生", "p": "shēng", "timestamp": 136.397, "duration": 0.23 },
-        { "id": 4, "text": "命", "p": "mìng", "timestamp": 136.637, "duration": 0.23 },
-        { "id": 5, "text": "的", "p": "de", "timestamp": 136.877, "duration": 0.23 },
-        { "id": 6, "text": "火", "p": "huǒ", "timestamp": 137.117, "duration": 0.75 },
-        { "id": 7, "text": "火", "p": "huǒ", "timestamp": 137.877, "duration": 0.21 },
-        { "id": 8, "text": "火", "p": "huǒ", "timestamp": 138.097, "duration": 0.21 },
-        { "id": 9, "text": "火", "p": "huǒ", "timestamp": 138.317, "duration": 0.23 },
-        { "id": 10, "text": "火", "p": "huǒ", "timestamp": 138.557, "duration": 0.23 },
-        { "id": 11, "text": "火", "p": "huǒ", "timestamp": 138.797, "duration": 0.48 }
-      ]
+        {
+          "id": 0,
+          "text": "点",
+          "p": "diǎn",
+          "timestamp": 135.217,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 135.457,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 135.957,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "生",
+          "p": "shēng",
+          "timestamp": 136.397,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "命",
+          "p": "mìng",
+          "timestamp": 136.637,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "的",
+          "p": "de",
+          "timestamp": 136.877,
+          "duration": 0.23
+        },
+        {
+          "id": 6,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 137.117,
+          "duration": 0.75
+        },
+        {
+          "id": 7,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 137.877,
+          "duration": 0.21
+        },
+        {
+          "id": 8,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 138.097,
+          "duration": 0.21
+        },
+        {
+          "id": 9,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 138.317,
+          "duration": 0.23
+        },
+        {
+          "id": 10,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 138.557,
+          "duration": 0.23
+        },
+        {
+          "id": 11,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 138.797,
+          "duration": 0.48
+        }
+      ],
+      "translation_en": "You light up the fire of my life"
     },
     {
       "id": 34,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 139.317, "duration": 0.41 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 139.737, "duration": 0.49 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 140.237, "duration": 0.47 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 140.717, "duration": 0.45 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 141.177, "duration": 0.27 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 141.457, "duration": 0.21 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 141.677, "duration": 0.23 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 141.917, "duration": 0.25 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 142.177, "duration": 0.35 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 142.537, "duration": 0.18 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 139.317,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 139.737,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 140.237,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 140.717,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 141.177,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 141.457,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 141.677,
+          "duration": 0.23
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 141.917,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 142.177,
+          "duration": 0.35
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 142.537,
+          "duration": 0.18
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 35,
       "translation": "Xuddi osmondagi eng go'zal bulutday",
       "translation_ru": "Как самое красивое облако на небе",
       "words": [
-        { "id": 0, "text": "就", "p": "jiù", "timestamp": 143.117, "duration": 0.53 },
-        { "id": 1, "text": "像", "p": "xiàng", "timestamp": 143.657, "duration": 0.43 },
-        { "id": 2, "text": "天", "p": "tiān", "timestamp": 144.097, "duration": 0.45 },
-        { "id": 3, "text": "边", "p": "biān", "timestamp": 144.557, "duration": 0.23 },
-        { "id": 4, "text": "最", "p": "zuì", "timestamp": 144.797, "duration": 0.27 },
-        { "id": 5, "text": "美", "p": "měi", "timestamp": 145.077, "duration": 0.21 },
-        { "id": 6, "text": "的", "p": "de", "timestamp": 145.297, "duration": 0.25 },
-        { "id": 7, "text": "云", "p": "yún", "timestamp": 145.557, "duration": 0.41 },
-        { "id": 8, "text": "朵", "p": "duǒ", "timestamp": 145.977, "duration": 0.28 }
-      ]
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 143.117,
+          "duration": 0.53
+        },
+        {
+          "id": 1,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 143.657,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 144.097,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "边",
+          "p": "biān",
+          "timestamp": 144.557,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "最",
+          "p": "zuì",
+          "timestamp": 144.797,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "美",
+          "p": "měi",
+          "timestamp": 145.077,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 145.297,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "云",
+          "p": "yún",
+          "timestamp": 145.557,
+          "duration": 0.41
+        },
+        {
+          "id": 8,
+          "text": "朵",
+          "p": "duǒ",
+          "timestamp": 145.977,
+          "duration": 0.28
+        }
+      ],
+      "translation_en": "Like the most beautiful cloud in the sky"
     },
     {
       "id": 36,
       "translation": "Bahor keldi, gullar tog' yonbag'rida ochildi",
       "translation_ru": "Снова пришла весна, цветы на склонах",
       "words": [
-        { "id": 0, "text": "春", "p": "chūn", "timestamp": 146.437, "duration": 0.27 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 146.717, "duration": 0.27 },
-        { "id": 2, "text": "又", "p": "yòu", "timestamp": 146.997, "duration": 0.45 },
-        { "id": 3, "text": "来", "p": "lái", "timestamp": 147.457, "duration": 0.27 },
-        { "id": 4, "text": "到", "p": "dào", "timestamp": 147.737, "duration": 0.23 },
-        { "id": 5, "text": "了", "p": "le", "timestamp": 147.977, "duration": 0.41 },
-        { "id": 6, "text": "花", "p": "huā", "timestamp": 148.397, "duration": 0.49 },
-        { "id": 7, "text": "开", "p": "kāi", "timestamp": 148.897, "duration": 0.25 },
-        { "id": 8, "text": "满", "p": "mǎn", "timestamp": 149.157, "duration": 0.23 },
-        { "id": 9, "text": "山", "p": "shān", "timestamp": 149.397, "duration": 0.49 },
-        { "id": 10, "text": "坡", "p": "pō", "timestamp": 149.897, "duration": 0.46 }
-      ]
+        {
+          "id": 0,
+          "text": "春",
+          "p": "chūn",
+          "timestamp": 146.437,
+          "duration": 0.27
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 146.717,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 146.997,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 147.457,
+          "duration": 0.27
+        },
+        {
+          "id": 4,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 147.737,
+          "duration": 0.23
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 147.977,
+          "duration": 0.41
+        },
+        {
+          "id": 6,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 148.397,
+          "duration": 0.49
+        },
+        {
+          "id": 7,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 148.897,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "满",
+          "p": "mǎn",
+          "timestamp": 149.157,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "山",
+          "p": "shān",
+          "timestamp": 149.397,
+          "duration": 0.49
+        },
+        {
+          "id": 10,
+          "text": "坡",
+          "p": "pō",
+          "timestamp": 149.897,
+          "duration": 0.46
+        }
+      ],
+      "translation_en": "Spring has come again, flowers bloom on the hillside"
     },
     {
       "id": 37,
       "translation": "Umid eksang — hosil olasan",
       "translation_ru": "Посеешь надежду — пожнёшь урожай",
       "words": [
-        { "id": 0, "text": "种", "p": "zhòng", "timestamp": 150.597, "duration": 0.19 },
-        { "id": 1, "text": "下", "p": "xià", "timestamp": 150.797, "duration": 0.43 },
-        { "id": 2, "text": "希", "p": "xī", "timestamp": 151.237, "duration": 0.51 },
-        { "id": 3, "text": "望", "p": "wàng", "timestamp": 151.757, "duration": 0.49 },
-        { "id": 4, "text": "就", "p": "jiù", "timestamp": 152.257, "duration": 0.57 },
-        { "id": 5, "text": "会", "p": "huì", "timestamp": 152.837, "duration": 0.39 },
-        { "id": 6, "text": "收", "p": "shōu", "timestamp": 153.237, "duration": 0.45 },
-        { "id": 7, "text": "获", "p": "huò", "timestamp": 153.697, "duration": 0.92 }
-      ]
+        {
+          "id": 0,
+          "text": "种",
+          "p": "zhòng",
+          "timestamp": 150.597,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 150.797,
+          "duration": 0.43
+        },
+        {
+          "id": 2,
+          "text": "希",
+          "p": "xī",
+          "timestamp": 151.237,
+          "duration": 0.51
+        },
+        {
+          "id": 3,
+          "text": "望",
+          "p": "wàng",
+          "timestamp": 151.757,
+          "duration": 0.49
+        },
+        {
+          "id": 4,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 152.257,
+          "duration": 0.57
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 152.837,
+          "duration": 0.39
+        },
+        {
+          "id": 6,
+          "text": "收",
+          "p": "shōu",
+          "timestamp": 153.237,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "获",
+          "p": "huò",
+          "timestamp": 153.697,
+          "duration": 0.92
+        }
+      ],
+      "translation_en": "Plant hope and you'll harvest"
     },
     {
       "id": 38,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 170.037, "duration": 0.41 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 170.457, "duration": 0.47 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 170.937, "duration": 0.51 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 171.457, "duration": 0.43 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 171.897, "duration": 0.27 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 172.177, "duration": 0.17 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 172.357, "duration": 0.27 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 172.637, "duration": 0.29 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 172.937, "duration": 0.15 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 173.097, "duration": 0.34 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 170.037,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 170.457,
+          "duration": 0.47
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 170.937,
+          "duration": 0.51
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 171.457,
+          "duration": 0.43
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 171.897,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 172.177,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 172.357,
+          "duration": 0.27
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 172.637,
+          "duration": 0.29
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 172.937,
+          "duration": 0.15
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 173.097,
+          "duration": 0.34
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 39,
       "translation": "Qancha sevsam ham kamlik qiladi",
       "translation_ru": "Сколько бы ни любил — всё мало",
       "words": [
-        { "id": 0, "text": "怎", "p": "zěn", "timestamp": 173.837, "duration": 0.49 },
-        { "id": 1, "text": "么", "p": "me", "timestamp": 174.337, "duration": 0.49 },
-        { "id": 2, "text": "爱", "p": "ài", "timestamp": 174.837, "duration": 0.43 },
-        { "id": 3, "text": "你", "p": "nǐ", "timestamp": 175.277, "duration": 0.47 },
-        { "id": 4, "text": "都", "p": "dōu", "timestamp": 175.757, "duration": 0.25 },
-        { "id": 5, "text": "不", "p": "bù", "timestamp": 176.017, "duration": 0.19 },
-        { "id": 6, "text": "嫌", "p": "xián", "timestamp": 176.217, "duration": 0.49 },
-        { "id": 7, "text": "多", "p": "duō", "timestamp": 176.717, "duration": 0.28 }
-      ]
+        {
+          "id": 0,
+          "text": "怎",
+          "p": "zěn",
+          "timestamp": 173.837,
+          "duration": 0.49
+        },
+        {
+          "id": 1,
+          "text": "么",
+          "p": "me",
+          "timestamp": 174.337,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "爱",
+          "p": "ài",
+          "timestamp": 174.837,
+          "duration": 0.43
+        },
+        {
+          "id": 3,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 175.277,
+          "duration": 0.47
+        },
+        {
+          "id": 4,
+          "text": "都",
+          "p": "dōu",
+          "timestamp": 175.757,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "不",
+          "p": "bù",
+          "timestamp": 176.017,
+          "duration": 0.19
+        },
+        {
+          "id": 6,
+          "text": "嫌",
+          "p": "xián",
+          "timestamp": 176.217,
+          "duration": 0.49
+        },
+        {
+          "id": 7,
+          "text": "多",
+          "p": "duō",
+          "timestamp": 176.717,
+          "duration": 0.28
+        }
+      ],
+      "translation_en": "No amount of love for you is too much"
     },
     {
       "id": 40,
       "translation": "Qizil yuzlaring yuragimni isitadi",
       "translation_ru": "Твоё румяное личико согревает мне сердце",
       "words": [
-        { "id": 0, "text": "红", "p": "hóng", "timestamp": 177.177, "duration": 0.25 },
-        { "id": 1, "text": "红", "p": "hóng", "timestamp": 177.437, "duration": 0.23 },
-        { "id": 2, "text": "的", "p": "de", "timestamp": 177.677, "duration": 0.45 },
-        { "id": 3, "text": "小", "p": "xiǎo", "timestamp": 178.137, "duration": 0.23 },
-        { "id": 4, "text": "脸", "p": "liǎn", "timestamp": 178.377, "duration": 0.11 },
-        { "id": 5, "text": "儿", "p": "r", "timestamp": 178.497, "duration": 0.13 },
-        { "id": 6, "text": "温", "p": "wēn", "timestamp": 178.637, "duration": 0.45 },
-        { "id": 7, "text": "暖", "p": "nuǎn", "timestamp": 179.097, "duration": 0.47 },
-        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 179.577, "duration": 0.25 },
-        { "id": 9, "text": "的", "p": "de", "timestamp": 179.837, "duration": 0.23 },
-        { "id": 10, "text": "心", "p": "xīn", "timestamp": 180.077, "duration": 0.47 },
-        { "id": 11, "text": "窝", "p": "wō", "timestamp": 180.557, "duration": 0.52 }
-      ]
+        {
+          "id": 0,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 177.177,
+          "duration": 0.25
+        },
+        {
+          "id": 1,
+          "text": "红",
+          "p": "hóng",
+          "timestamp": 177.437,
+          "duration": 0.23
+        },
+        {
+          "id": 2,
+          "text": "的",
+          "p": "de",
+          "timestamp": 177.677,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 178.137,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "脸",
+          "p": "liǎn",
+          "timestamp": 178.377,
+          "duration": 0.11
+        },
+        {
+          "id": 5,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 178.497,
+          "duration": 0.13
+        },
+        {
+          "id": 6,
+          "text": "温",
+          "p": "wēn",
+          "timestamp": 178.637,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "暖",
+          "p": "nuǎn",
+          "timestamp": 179.097,
+          "duration": 0.47
+        },
+        {
+          "id": 8,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 179.577,
+          "duration": 0.25
+        },
+        {
+          "id": 9,
+          "text": "的",
+          "p": "de",
+          "timestamp": 179.837,
+          "duration": 0.23
+        },
+        {
+          "id": 10,
+          "text": "心",
+          "p": "xīn",
+          "timestamp": 180.077,
+          "duration": 0.47
+        },
+        {
+          "id": 11,
+          "text": "窝",
+          "p": "wō",
+          "timestamp": 180.557,
+          "duration": 0.52
+        }
+      ],
+      "translation_en": "Your rosy little face warms my heart"
     },
     {
       "id": 41,
       "translation": "Hayotim olovini yoqasan",
       "translation_ru": "Зажигаешь огонь моей жизни",
       "words": [
-        { "id": 0, "text": "点", "p": "diǎn", "timestamp": 181.297, "duration": 0.19 },
-        { "id": 1, "text": "亮", "p": "liàng", "timestamp": 181.497, "duration": 0.47 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 181.977, "duration": 0.45 },
-        { "id": 3, "text": "生", "p": "shēng", "timestamp": 182.437, "duration": 0.25 },
-        { "id": 4, "text": "命", "p": "mìng", "timestamp": 182.697, "duration": 0.25 },
-        { "id": 5, "text": "的", "p": "de", "timestamp": 182.957, "duration": 0.21 },
-        { "id": 6, "text": "火", "p": "huǒ", "timestamp": 183.177, "duration": 0.69 },
-        { "id": 7, "text": "火", "p": "huǒ", "timestamp": 183.877, "duration": 0.25 },
-        { "id": 8, "text": "火", "p": "huǒ", "timestamp": 184.137, "duration": 0.23 },
-        { "id": 9, "text": "火", "p": "huǒ", "timestamp": 184.377, "duration": 0.21 },
-        { "id": 10, "text": "火", "p": "huǒ", "timestamp": 184.597, "duration": 0.25 },
-        { "id": 11, "text": "火", "p": "huǒ", "timestamp": 184.857, "duration": 0.3 }
-      ]
+        {
+          "id": 0,
+          "text": "点",
+          "p": "diǎn",
+          "timestamp": 181.297,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "亮",
+          "p": "liàng",
+          "timestamp": 181.497,
+          "duration": 0.47
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 181.977,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "生",
+          "p": "shēng",
+          "timestamp": 182.437,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "命",
+          "p": "mìng",
+          "timestamp": 182.697,
+          "duration": 0.25
+        },
+        {
+          "id": 5,
+          "text": "的",
+          "p": "de",
+          "timestamp": 182.957,
+          "duration": 0.21
+        },
+        {
+          "id": 6,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 183.177,
+          "duration": 0.69
+        },
+        {
+          "id": 7,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 183.877,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 184.137,
+          "duration": 0.23
+        },
+        {
+          "id": 9,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 184.377,
+          "duration": 0.21
+        },
+        {
+          "id": 10,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 184.597,
+          "duration": 0.25
+        },
+        {
+          "id": 11,
+          "text": "火",
+          "p": "huǒ",
+          "timestamp": 184.857,
+          "duration": 0.3
+        }
+      ],
+      "translation_en": "You light up the fire of my life"
     },
     {
       "id": 42,
       "translation": "Sen mening kichkina olmamsan",
       "translation_ru": "Ты моё маленькое яблочко",
       "words": [
-        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 185.377, "duration": 0.41 },
-        { "id": 1, "text": "是", "p": "shì", "timestamp": 185.797, "duration": 0.49 },
-        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 186.296, "duration": 0.49 },
-        { "id": 3, "text": "的", "p": "de", "timestamp": 186.796, "duration": 0.45 },
-        { "id": 4, "text": "小", "p": "xiǎo", "timestamp": 187.256, "duration": 0.27 },
-        { "id": 5, "text": "呀", "p": "ya", "timestamp": 187.536, "duration": 0.17 },
-        { "id": 6, "text": "小", "p": "xiǎo", "timestamp": 187.716, "duration": 0.25 },
-        { "id": 7, "text": "苹", "p": "píng", "timestamp": 187.976, "duration": 0.27 },
-        { "id": 8, "text": "果", "p": "guǒ", "timestamp": 188.256, "duration": 0.19 },
-        { "id": 9, "text": "儿", "p": "r", "timestamp": 188.456, "duration": 0.3 }
-      ]
+        {
+          "id": 0,
+          "text": "你",
+          "p": "nǐ",
+          "timestamp": 185.377,
+          "duration": 0.41
+        },
+        {
+          "id": 1,
+          "text": "是",
+          "p": "shì",
+          "timestamp": 185.797,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "我",
+          "p": "wǒ",
+          "timestamp": 186.296,
+          "duration": 0.49
+        },
+        {
+          "id": 3,
+          "text": "的",
+          "p": "de",
+          "timestamp": 186.796,
+          "duration": 0.45
+        },
+        {
+          "id": 4,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 187.256,
+          "duration": 0.27
+        },
+        {
+          "id": 5,
+          "text": "呀",
+          "p": "ya",
+          "timestamp": 187.536,
+          "duration": 0.17
+        },
+        {
+          "id": 6,
+          "text": "小",
+          "p": "xiǎo",
+          "timestamp": 187.716,
+          "duration": 0.25
+        },
+        {
+          "id": 7,
+          "text": "苹",
+          "p": "píng",
+          "timestamp": 187.976,
+          "duration": 0.27
+        },
+        {
+          "id": 8,
+          "text": "果",
+          "p": "guǒ",
+          "timestamp": 188.256,
+          "duration": 0.19
+        },
+        {
+          "id": 9,
+          "text": "儿",
+          "p": "r",
+          "timestamp": 188.456,
+          "duration": 0.3
+        }
+      ],
+      "translation_en": "You are my little apple"
     },
     {
       "id": 43,
       "translation": "Xuddi osmondagi eng go'zal bulutday",
       "translation_ru": "Как самое красивое облако на небе",
       "words": [
-        { "id": 0, "text": "就", "p": "jiù", "timestamp": 189.176, "duration": 0.43 },
-        { "id": 1, "text": "像", "p": "xiàng", "timestamp": 189.616, "duration": 0.53 },
-        { "id": 2, "text": "天", "p": "tiān", "timestamp": 190.156, "duration": 0.47 },
-        { "id": 3, "text": "边", "p": "biān", "timestamp": 190.636, "duration": 0.25 },
-        { "id": 4, "text": "最", "p": "zuì", "timestamp": 190.896, "duration": 0.21 },
-        { "id": 5, "text": "美", "p": "měi", "timestamp": 191.116, "duration": 0.27 },
-        { "id": 6, "text": "的", "p": "de", "timestamp": 191.396, "duration": 0.21 },
-        { "id": 7, "text": "云", "p": "yún", "timestamp": 191.616, "duration": 0.45 },
-        { "id": 8, "text": "朵", "p": "duǒ", "timestamp": 192.076, "duration": 0.3 }
-      ]
+        {
+          "id": 0,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 189.176,
+          "duration": 0.43
+        },
+        {
+          "id": 1,
+          "text": "像",
+          "p": "xiàng",
+          "timestamp": 189.616,
+          "duration": 0.53
+        },
+        {
+          "id": 2,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 190.156,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "边",
+          "p": "biān",
+          "timestamp": 190.636,
+          "duration": 0.25
+        },
+        {
+          "id": 4,
+          "text": "最",
+          "p": "zuì",
+          "timestamp": 190.896,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "美",
+          "p": "měi",
+          "timestamp": 191.116,
+          "duration": 0.27
+        },
+        {
+          "id": 6,
+          "text": "的",
+          "p": "de",
+          "timestamp": 191.396,
+          "duration": 0.21
+        },
+        {
+          "id": 7,
+          "text": "云",
+          "p": "yún",
+          "timestamp": 191.616,
+          "duration": 0.45
+        },
+        {
+          "id": 8,
+          "text": "朵",
+          "p": "duǒ",
+          "timestamp": 192.076,
+          "duration": 0.3
+        }
+      ],
+      "translation_en": "Like the most beautiful cloud in the sky"
     },
     {
       "id": 44,
       "translation": "Bahor keldi, gullar tog' yonbag'rida ochildi",
       "translation_ru": "Снова пришла весна, цветы на склонах",
       "words": [
-        { "id": 0, "text": "春", "p": "chūn", "timestamp": 192.536, "duration": 0.23 },
-        { "id": 1, "text": "天", "p": "tiān", "timestamp": 192.776, "duration": 0.27 },
-        { "id": 2, "text": "又", "p": "yòu", "timestamp": 193.056, "duration": 0.45 },
-        { "id": 3, "text": "来", "p": "lái", "timestamp": 193.516, "duration": 0.23 },
-        { "id": 4, "text": "到", "p": "dào", "timestamp": 193.756, "duration": 0.21 },
-        { "id": 5, "text": "了", "p": "le", "timestamp": 193.976, "duration": 0.51 },
-        { "id": 6, "text": "花", "p": "huā", "timestamp": 194.496, "duration": 0.45 },
-        { "id": 7, "text": "开", "p": "kāi", "timestamp": 194.956, "duration": 0.25 },
-        { "id": 8, "text": "满", "p": "mǎn", "timestamp": 195.216, "duration": 0.21 },
-        { "id": 9, "text": "山", "p": "shān", "timestamp": 195.436, "duration": 0.49 },
-        { "id": 10, "text": "坡", "p": "pō", "timestamp": 195.936, "duration": 0.52 }
-      ]
+        {
+          "id": 0,
+          "text": "春",
+          "p": "chūn",
+          "timestamp": 192.536,
+          "duration": 0.23
+        },
+        {
+          "id": 1,
+          "text": "天",
+          "p": "tiān",
+          "timestamp": 192.776,
+          "duration": 0.27
+        },
+        {
+          "id": 2,
+          "text": "又",
+          "p": "yòu",
+          "timestamp": 193.056,
+          "duration": 0.45
+        },
+        {
+          "id": 3,
+          "text": "来",
+          "p": "lái",
+          "timestamp": 193.516,
+          "duration": 0.23
+        },
+        {
+          "id": 4,
+          "text": "到",
+          "p": "dào",
+          "timestamp": 193.756,
+          "duration": 0.21
+        },
+        {
+          "id": 5,
+          "text": "了",
+          "p": "le",
+          "timestamp": 193.976,
+          "duration": 0.51
+        },
+        {
+          "id": 6,
+          "text": "花",
+          "p": "huā",
+          "timestamp": 194.496,
+          "duration": 0.45
+        },
+        {
+          "id": 7,
+          "text": "开",
+          "p": "kāi",
+          "timestamp": 194.956,
+          "duration": 0.25
+        },
+        {
+          "id": 8,
+          "text": "满",
+          "p": "mǎn",
+          "timestamp": 195.216,
+          "duration": 0.21
+        },
+        {
+          "id": 9,
+          "text": "山",
+          "p": "shān",
+          "timestamp": 195.436,
+          "duration": 0.49
+        },
+        {
+          "id": 10,
+          "text": "坡",
+          "p": "pō",
+          "timestamp": 195.936,
+          "duration": 0.52
+        }
+      ],
+      "translation_en": "Spring has come again, flowers bloom on the hillside"
     },
     {
       "id": 45,
       "translation": "Umid eksang — hosil olasan",
       "translation_ru": "Посеешь надежду — пожнёшь урожай",
       "words": [
-        { "id": 0, "text": "种", "p": "zhòng", "timestamp": 196.656, "duration": 0.19 },
-        { "id": 1, "text": "下", "p": "xià", "timestamp": 196.856, "duration": 0.49 },
-        { "id": 2, "text": "希", "p": "xī", "timestamp": 197.356, "duration": 0.47 },
-        { "id": 3, "text": "望", "p": "wàng", "timestamp": 197.836, "duration": 0.51 },
-        { "id": 4, "text": "就", "p": "jiù", "timestamp": 198.356, "duration": 0.43 },
-        { "id": 5, "text": "会", "p": "huì", "timestamp": 198.796, "duration": 0.45 },
-        { "id": 6, "text": "收", "p": "shōu", "timestamp": 199.256, "duration": 0.49 },
-        { "id": 7, "text": "获", "p": "huò", "timestamp": 199.756, "duration": 0.66 }
-      ]
+        {
+          "id": 0,
+          "text": "种",
+          "p": "zhòng",
+          "timestamp": 196.656,
+          "duration": 0.19
+        },
+        {
+          "id": 1,
+          "text": "下",
+          "p": "xià",
+          "timestamp": 196.856,
+          "duration": 0.49
+        },
+        {
+          "id": 2,
+          "text": "希",
+          "p": "xī",
+          "timestamp": 197.356,
+          "duration": 0.47
+        },
+        {
+          "id": 3,
+          "text": "望",
+          "p": "wàng",
+          "timestamp": 197.836,
+          "duration": 0.51
+        },
+        {
+          "id": 4,
+          "text": "就",
+          "p": "jiù",
+          "timestamp": 198.356,
+          "duration": 0.43
+        },
+        {
+          "id": 5,
+          "text": "会",
+          "p": "huì",
+          "timestamp": 198.796,
+          "duration": 0.45
+        },
+        {
+          "id": 6,
+          "text": "收",
+          "p": "shōu",
+          "timestamp": 199.256,
+          "duration": 0.49
+        },
+        {
+          "id": 7,
+          "text": "获",
+          "p": "huò",
+          "timestamp": 199.756,
+          "duration": 0.66
+        }
+      ],
+      "translation_en": "Plant hope and you'll harvest"
     }
-  ]
+  ],
+  "titleTranslation_en": "Little Apple",
+  "artist_en": "Chopstick Brothers"
 }

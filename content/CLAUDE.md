@@ -11,6 +11,8 @@ This file covers JSON format conventions for all content files in `/content/`.
   "section": "text",
   "text_original": "AI小语，你好！",
   "text_translation": "Salom, AI Xiaoyu!",
+  "text_translation_ru": "Привет, AI Сяоюй!",
+  "text_translation_en": "Hello, AI Xiaoyu!",
   "pinyin": "AI Xiǎoyǔ, nǐ hǎo!",
   "speaker": "王一飞",
   "audio_url": "/audio/l1p1-t1-s1.mp3",
@@ -26,12 +28,15 @@ This file covers JSON format conventions for all content files in `/content/`.
   "heading": "",
   "subheading": "Tekst 1",
   "subheading_ru": "Текст 1",
+  "subheading_en": "Text 1",
   "context": "开学第一天，在办公室里...",
   "contextPinyin": "Kāixué dì yī tiān...",
   "contextTranslation": "O'quv yilining birinchi kuni...",
   "contextTranslation_ru": "В первый день учёбы...",
+  "contextTranslation_en": "On the first day of school, in the office...",
   "instruction": "Dialogni tinglang va ovoz chiqarib o'qing.",
   "instruction_ru": "Послушайте диалог и прочитайте его вслух.",
+  "instruction_en": "Listen to the dialogue and read it aloud.",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/dialogue.mp3",
   "image_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/HSK%201/HSK-1-1-1.jpg",
   "sentences": [...]
@@ -45,7 +50,9 @@ This file covers JSON format conventions for all content files in `/content/`.
     "label": "小语助力",
     "text": "「您」，敬称，对年长者或尊敬的人使用。",
     "pinyin": "「Nín」, jìngchēng, duì niánzhǎng zhě...",
-    "translation": "「您」hurmatli olmosh bo'lib..."
+    "translation": "「您」hurmatli olmosh bo'lib...",
+    "translation_ru": "「您」— вежливое местоимение...",
+    "translation_en": "\"您\" is a polite pronoun used when addressing elders or people you respect."
   }
 }
 ```
@@ -287,11 +294,12 @@ This file covers JSON format conventions for all content files in `/content/`.
 - Pinyin/translation for numbered sentences in grammar and exercise sections auto-indent via CSS (`padding-left: 2.2em`)
 - For pages with MC listening exercises: split text section into 3 parts: (1) heading+context, (2) MC exercise, (3) instruction+audio+image+dialogue
 - **Tongue twisters**: All lines merged into a single sentence entry. Type must be `tonguetwister` (not `text` or `grammar`). Section field must be `tonguetwister`.
-- Standard instruction texts:
-  - Dialogue: `"Dialogni tinglang va ovoz chiqarib o'qing."` / `"Послушайте диалог и прочитайте его вслух."`
-  - MC: `"Dialogni ikki marta tinglab, to'g'ri javobni tanlang."` / `"Прослушайте диалог дважды и выберите правильный ответ."`
-  - Fill-blank: `"To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring."` / `"Выберите подходящие слова для заполнения пропусков."`
-  - Tongue twister: `"Tez aytishni eshiting va aytishni mashq qiling."` / `"Послушайте скороговорку и потренируйтесь произносить."`
+- Standard instruction texts (UZ / RU / EN):
+  - Dialogue: `"Dialogni tinglang va ovoz chiqarib o'qing."` / `"Послушайте диалог и прочитайте его вслух."` / `"Listen to the dialogue and read it aloud."`
+  - MC: `"Dialogni ikki marta tinglab, to'g'ri javobni tanlang."` / `"Прослушайте диалог дважды и выберите правильный ответ."` / `"Listen to the dialogue twice and choose the correct answer."`
+  - Fill-blank: `"To'g'ri so'zni tanlab, bo'sh joylarni to'ldiring."` / `"Выберите подходящие слова для заполнения пропусков."` / `"Choose the correct words to fill in the blanks."`
+  - Tongue twister: `"Tez aytishni eshiting va aytishni mashq qiling."` / `"Послушайте скороговорку и потренируйтесь произносить."` / `"Listen to the tongue twister and practice saying it."`
+- Standard subheading translations (EN): "Objectives", "Text 1"/"Text 2"/"Text 3", "New Words", "Repeat the Tongue Twister", "Xiaoyu's Class", "Tip from Xiaoyu", "Xiaoyu's Bonus Content X-X", "Exercises"
 
 ## Content Formatting Standards
 

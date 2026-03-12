@@ -56,7 +56,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue1.mp3",
+          "text_translation_en": "What's wrong?"
         },
         {
           "id": "d12-s2",
@@ -98,7 +99,8 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue2.mp3",
+          "text_translation_en": "I don't feel well."
         },
         {
           "id": "d12-s3",
@@ -151,7 +153,8 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue3.mp3",
+          "text_translation_en": "Where does it hurt?"
         },
         {
           "id": "d12-s4",
@@ -191,7 +194,8 @@
               "tr": "болеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue4.mp3",
+          "text_translation_en": "I have a headache."
         },
         {
           "id": "d12-s5",
@@ -222,7 +226,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue5.mp3",
+          "text_translation_en": "Do you have a fever?"
         },
         {
           "id": "d12-s6",
@@ -253,7 +258,8 @@
               "tr": "температура"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue6.mp3",
+          "text_translation_en": "No, I don't."
         },
         {
           "id": "d12-s7",
@@ -297,7 +303,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue7.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue7.mp3",
+          "text_translation_en": "Will you go to the hospital?"
         },
         {
           "id": "d12-s8",
@@ -374,7 +381,8 @@
               "l": 12
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue8.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue8.mp3",
+          "text_translation_en": "No, I just want to rest a bit."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3"
@@ -392,7 +400,9 @@
       "ex": "我今天头疼。",
       "expy": "Wǒ jīntiān tóuténg.",
       "ex_uz": "Bugun boshim og'riyapti.",
-      "ex_ru": "У меня сегодня болит голова."
+      "ex_ru": "У меня сегодня болит голова.",
+      "en": "headache",
+      "ex_en": "I have a headache today."
     },
     {
       "zh": "发烧",
@@ -402,7 +412,9 @@
       "ex": "他发烧了。",
       "expy": "Tā fāshāo le.",
       "ex_uz": "Uning isitmasi chiqdi.",
-      "ex_ru": "У него поднялась температура."
+      "ex_ru": "У него поднялась температура.",
+      "en": "temperature / fever",
+      "ex_en": "He has a fever."
     },
     {
       "zh": "休息",
@@ -412,18 +424,63 @@
       "ex": "你休息一下吧。",
       "expy": "Nǐ xiūxi yíxià ba.",
       "ex_uz": "Biroz dam oling.",
-      "ex_ru": "Отдохни немного."
+      "ex_ru": "Отдохни немного.",
+      "en": "to rest",
+      "ex_en": "Rest a little."
     }
   ],
   "extraVocabSubtitle_uz": "Salomatlik va tana alomatlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме здоровья и симптомов",
   "extraVocab": [
-    { "zh": "肚子疼", "py": "dùzi téng", "uz": "qorin og'rig'i", "ru": "боль в животе" },
-    { "zh": "感冒", "py": "gǎnmào", "uz": "shamollamoq", "ru": "простуда" },
-    { "zh": "咳嗽", "py": "késou", "uz": "yo'talmoq", "ru": "кашель" },
-    { "zh": "药", "py": "yào", "uz": "dori", "ru": "лекарство" },
-    { "zh": "看病", "py": "kànbìng", "uz": "shifokorda ko'rinmoq", "ru": "обратиться к врачу" },
-    { "zh": "身体", "py": "shēntǐ", "uz": "tana / salomatlik", "ru": "тело / здоровье" },
-    { "zh": "打针", "py": "dǎzhēn", "uz": "ukol qilmoq", "ru": "делать укол" }
-  ]
+    {
+      "zh": "肚子疼",
+      "py": "dùzi téng",
+      "uz": "qorin og'rig'i",
+      "ru": "боль в животе",
+      "en": "stomachache"
+    },
+    {
+      "zh": "感冒",
+      "py": "gǎnmào",
+      "uz": "shamollamoq",
+      "ru": "простуда",
+      "en": "cold (illness)"
+    },
+    {
+      "zh": "咳嗽",
+      "py": "késou",
+      "uz": "yo'talmoq",
+      "ru": "кашель",
+      "en": "cough"
+    },
+    {
+      "zh": "药",
+      "py": "yào",
+      "uz": "dori",
+      "ru": "лекарство",
+      "en": "medicine"
+    },
+    {
+      "zh": "看病",
+      "py": "kànbìng",
+      "uz": "shifokorda ko'rinmoq",
+      "ru": "обратиться к врачу",
+      "en": "to see a doctor"
+    },
+    {
+      "zh": "身体",
+      "py": "shēntǐ",
+      "uz": "tana / salomatlik",
+      "ru": "тело / здоровье",
+      "en": "body / health"
+    },
+    {
+      "zh": "打针",
+      "py": "dǎzhēn",
+      "uz": "ukol qilmoq",
+      "ru": "делать укол",
+      "en": "to give an injection"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on health and symptoms"
 }

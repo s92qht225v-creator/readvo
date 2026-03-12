@@ -67,7 +67,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue1.mp3",
+          "text_translation_en": "How do you get to school?"
         },
         {
           "id": "d19-s2",
@@ -109,7 +110,8 @@
               "tr": "автобус"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue2.mp3",
+          "text_translation_en": "I take the bus."
         },
         {
           "id": "d19-s3",
@@ -151,7 +153,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue3.mp3",
+          "text_translation_en": "Is school far?"
         },
         {
           "id": "d19-s4",
@@ -182,7 +185,8 @@
               "tr": "далеко"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue4.mp3",
+          "text_translation_en": "Not far."
         },
         {
           "id": "d19-s5",
@@ -211,7 +215,8 @@
               "tr": "добраться"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue5.mp3",
+          "text_translation_en": "How long does it take?"
         },
         {
           "id": "d19-s6",
@@ -242,7 +247,8 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue6.mp3",
+          "text_translation_en": "Twenty minutes."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20qu%20xuexiao/dialogue.mp3"
@@ -254,15 +260,76 @@
   "extraVocabSubtitle_uz": "Transport mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме транспорта",
   "extraVocab": [
-    { "zh": "地铁", "py": "dìtiě", "uz": "metro", "ru": "метро" },
-    { "zh": "出租车", "py": "chūzūchē", "uz": "taksi", "ru": "такси" },
-    { "zh": "自行车", "py": "zìxíngchē", "uz": "velosiped", "ru": "велосипед" },
-    { "zh": "走路", "py": "zǒulù", "uz": "piyoda yurmoq", "ru": "идти пешком" },
-    { "zh": "火车", "py": "huǒchē", "uz": "poyezd", "ru": "поезд" },
-    { "zh": "飞机", "py": "fēijī", "uz": "samolyot", "ru": "самолёт" },
-    { "zh": "近", "py": "jìn", "uz": "yaqin", "ru": "близко" },
-    { "zh": "路", "py": "lù", "uz": "yo'l", "ru": "дорога" },
-    { "zh": "站", "py": "zhàn", "uz": "bekat", "ru": "станция / остановка" },
-    { "zh": "堵车", "py": "dǔchē", "uz": "tirbandlik", "ru": "пробка (на дороге)" }
-  ]
+    {
+      "zh": "地铁",
+      "py": "dìtiě",
+      "uz": "metro",
+      "ru": "метро",
+      "en": "metro"
+    },
+    {
+      "zh": "出租车",
+      "py": "chūzūchē",
+      "uz": "taksi",
+      "ru": "такси",
+      "en": "taxi"
+    },
+    {
+      "zh": "自行车",
+      "py": "zìxíngchē",
+      "uz": "velosiped",
+      "ru": "велосипед",
+      "en": "bicycle"
+    },
+    {
+      "zh": "走路",
+      "py": "zǒulù",
+      "uz": "piyoda yurmoq",
+      "ru": "идти пешком",
+      "en": "to walk"
+    },
+    {
+      "zh": "火车",
+      "py": "huǒchē",
+      "uz": "poyezd",
+      "ru": "поезд",
+      "en": "train"
+    },
+    {
+      "zh": "飞机",
+      "py": "fēijī",
+      "uz": "samolyot",
+      "ru": "самолёт",
+      "en": "airplane"
+    },
+    {
+      "zh": "近",
+      "py": "jìn",
+      "uz": "yaqin",
+      "ru": "близко",
+      "en": "near / close"
+    },
+    {
+      "zh": "路",
+      "py": "lù",
+      "uz": "yo'l",
+      "ru": "дорога",
+      "en": "road"
+    },
+    {
+      "zh": "站",
+      "py": "zhàn",
+      "uz": "bekat",
+      "ru": "станция / остановка",
+      "en": "station / stop"
+    },
+    {
+      "zh": "堵车",
+      "py": "dǔchē",
+      "uz": "tirbandlik",
+      "ru": "пробка (на дороге)",
+      "en": "traffic jam"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on transportation"
 }

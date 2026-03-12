@@ -22,6 +22,7 @@ interface KaraokeLine {
   words: KaraokeChar[];
   translation?: string;
   translation_ru?: string;
+  translation_en?: string;
 }
 
 interface KaraokeSong {
@@ -30,8 +31,10 @@ interface KaraokeSong {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   artist: string;
   artist_ru: string;
+  artist_en?: string;
   audio_url: string;
   lines: KaraokeLine[];
 }
@@ -259,14 +262,14 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
             <div className="dr-hero__level">HSK 1 · {({ uz: 'Karaoke', ru: 'Караоке', en: 'Karaoke' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{song.title}</h1>
             <div className="dr-hero__pinyin">{song.pinyin}</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? song.titleTranslation_ru : song.titleTranslation} —</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? song.titleTranslation_ru : language === 'en' ? (song.titleTranslation_en || song.titleTranslation) : song.titleTranslation} —</div>
           </div>
         </div>
 
         {/* Translation panel - below hero, sticky */}
         {showTranslation && activeLineIdx >= 0 && (() => {
           const activeLine = song.lines[activeLineIdx];
-          const activeTranslation = language === 'ru' ? activeLine?.translation_ru : activeLine?.translation;
+          const activeTranslation = language === 'ru' ? activeLine?.translation_ru : language === 'en' ? (activeLine?.translation_en || activeLine?.translation) : activeLine?.translation;
           return activeTranslation ? (
             <div className="story__translation-panel">
               <p className="story__translation-panel-text">{activeTranslation}</p>

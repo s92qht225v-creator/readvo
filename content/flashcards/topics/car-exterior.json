@@ -10,70 +10,81 @@
       "text_original": "车门",
       "pinyin": "chēmén",
       "text_translation": "mashina eshigi",
-      "text_translation_ru": "дверь автомобиля"
+      "text_translation_ru": "дверь автомобиля",
+      "text_translation_en": "car door"
     },
     {
       "id": "tp-cex-02",
       "text_original": "车窗",
       "pinyin": "chēchuāng",
       "text_translation": "mashina oynasi",
-      "text_translation_ru": "окно автомобиля"
+      "text_translation_ru": "окно автомобиля",
+      "text_translation_en": "car window"
     },
     {
       "id": "tp-cex-03",
       "text_original": "挡风玻璃",
       "pinyin": "dǎngfēng bōli",
       "text_translation": "old oyna",
-      "text_translation_ru": "лобовое стекло"
+      "text_translation_ru": "лобовое стекло",
+      "text_translation_en": "windshield"
     },
     {
       "id": "tp-cex-04",
       "text_original": "后视镜",
       "pinyin": "hòushìjìng",
       "text_translation": "orqa ko'rish oynasi",
-      "text_translation_ru": "зеркало заднего вида"
+      "text_translation_ru": "зеркало заднего вида",
+      "text_translation_en": "rearview mirror"
     },
     {
       "id": "tp-cex-05",
       "text_original": "车灯",
       "pinyin": "chēdēng",
       "text_translation": "mashina chiroqlari",
-      "text_translation_ru": "фары автомобиля"
+      "text_translation_ru": "фары автомобиля",
+      "text_translation_en": "car light"
     },
     {
       "id": "tp-cex-06",
       "text_original": "前灯",
       "pinyin": "qiándēng",
       "text_translation": "old chiroq; fara",
-      "text_translation_ru": "передняя фара"
+      "text_translation_ru": "передняя фара",
+      "text_translation_en": "headlight"
     },
     {
       "id": "tp-cex-07",
       "text_original": "尾灯",
       "pinyin": "wěidēng",
       "text_translation": "orqa chiroq",
-      "text_translation_ru": "задний фонарь"
+      "text_translation_ru": "задний фонарь",
+      "text_translation_en": "taillight"
     },
     {
       "id": "tp-cex-08",
       "text_original": "保险杠",
       "pinyin": "bǎoxiǎngàng",
       "text_translation": "bamper",
-      "text_translation_ru": "бампер"
+      "text_translation_ru": "бампер",
+      "text_translation_en": "bumper"
     },
     {
       "id": "tp-cex-09",
       "text_original": "车牌",
       "pinyin": "chēpái",
       "text_translation": "davlat raqami",
-      "text_translation_ru": "номерной знак"
+      "text_translation_ru": "номерной знак",
+      "text_translation_en": "license plate"
     },
     {
       "id": "tp-cex-10",
       "text_original": "车顶",
       "pinyin": "chēdǐng",
       "text_translation": "mashina tomi",
-      "text_translation_ru": "крыша автомобиля"
+      "text_translation_ru": "крыша автомобиля",
+      "text_translation_en": "car roof"
     }
-  ]
+  ],
+  "title_en": "Car Exterior"
 }

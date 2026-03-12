@@ -67,7 +67,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue1.mp3",
+          "text_translation_en": "Are you listening?"
         },
         {
           "id": "d28-s2",
@@ -100,7 +101,8 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes, I am."
         },
         {
           "id": "d28-s3",
@@ -153,7 +155,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue3.mp3",
+          "text_translation_en": "What did I just say?"
         },
         {
           "id": "d28-s4",
@@ -208,7 +211,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue4.mp3",
+          "text_translation_en": "You said see you tomorrow."
         },
         {
           "id": "d28-s5",
@@ -230,7 +234,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue5.mp3",
+          "text_translation_en": "Correct."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zai%20ting%20ma/dialogue.mp3"
@@ -242,15 +247,76 @@
   "extraVocabSubtitle_uz": "Muloqot va suhbat mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме общения и разговора",
   "extraVocab": [
-    { "zh": "聊天", "py": "liáotiān", "uz": "suhbatlashmoq", "ru": "болтать / общаться" },
-    { "zh": "回答", "py": "huídá", "uz": "javob bermoq", "ru": "ответить" },
-    { "zh": "提问", "py": "tíwèn", "uz": "savol bermoq", "ru": "задать вопрос" },
-    { "zh": "解释", "py": "jiěshì", "uz": "tushuntirmoq", "ru": "объяснить" },
-    { "zh": "明白", "py": "míngbai", "uz": "tushunmoq", "ru": "понимать" },
-    { "zh": "误会", "py": "wùhuì", "uz": "tushunmovchilik", "ru": "недоразумение" },
-    { "zh": "同意", "py": "tóngyì", "uz": "rozi bo'lmoq", "ru": "согласиться" },
-    { "zh": "声音", "py": "shēngyīn", "uz": "ovoz / tovush", "ru": "голос / звук" },
-    { "zh": "重复", "py": "chóngfù", "uz": "takrorlamoq", "ru": "повторить" },
-    { "zh": "意思", "py": "yìsi", "uz": "ma'no", "ru": "значение / смысл" }
-  ]
+    {
+      "zh": "聊天",
+      "py": "liáotiān",
+      "uz": "suhbatlashmoq",
+      "ru": "болтать / общаться",
+      "en": "to chat"
+    },
+    {
+      "zh": "回答",
+      "py": "huídá",
+      "uz": "javob bermoq",
+      "ru": "ответить",
+      "en": "to reply"
+    },
+    {
+      "zh": "提问",
+      "py": "tíwèn",
+      "uz": "savol bermoq",
+      "ru": "задать вопрос",
+      "en": "to ask a question"
+    },
+    {
+      "zh": "解释",
+      "py": "jiěshì",
+      "uz": "tushuntirmoq",
+      "ru": "объяснить",
+      "en": "to explain"
+    },
+    {
+      "zh": "明白",
+      "py": "míngbai",
+      "uz": "tushunmoq",
+      "ru": "понимать",
+      "en": "to understand"
+    },
+    {
+      "zh": "误会",
+      "py": "wùhuì",
+      "uz": "tushunmovchilik",
+      "ru": "недоразумение",
+      "en": "misunderstanding"
+    },
+    {
+      "zh": "同意",
+      "py": "tóngyì",
+      "uz": "rozi bo'lmoq",
+      "ru": "согласиться",
+      "en": "to agree"
+    },
+    {
+      "zh": "声音",
+      "py": "shēngyīn",
+      "uz": "ovoz / tovush",
+      "ru": "голос / звук",
+      "en": "voice / sound"
+    },
+    {
+      "zh": "重复",
+      "py": "chóngfù",
+      "uz": "takrorlamoq",
+      "ru": "повторить",
+      "en": "to repeat / review"
+    },
+    {
+      "zh": "意思",
+      "py": "yìsi",
+      "uz": "ma'no",
+      "ru": "значение / смысл",
+      "en": "meaning"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on communication and conversation"
 }

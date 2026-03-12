@@ -21,8 +21,10 @@ export interface KaraokeSong {
   pinyin: string;
   titleTranslation: string;
   titleTranslation_ru: string;
+  titleTranslation_en?: string;
   artist: string;
   artist_ru: string;
+  artist_en?: string;
   audio_url: string;
   lines: KaraokeLine[];
 }
@@ -38,7 +40,7 @@ export async function loadKaraokeSong(songId: string): Promise<KaraokeSong | nul
   }
 }
 
-export async function loadKaraokeSongs(): Promise<{ id: string; title: string; pinyin: string; titleTranslation: string; titleTranslation_ru: string; artist: string; artist_ru: string }[]> {
+export async function loadKaraokeSongs(): Promise<{ id: string; title: string; pinyin: string; titleTranslation: string; titleTranslation_ru: string; titleTranslation_en?: string; artist: string; artist_ru: string; artist_en?: string }[]> {
   try {
     const files = await fs.readdir(KARAOKE_DIR);
     const songs = [];
@@ -53,8 +55,10 @@ export async function loadKaraokeSongs(): Promise<{ id: string; title: string; p
         pinyin: data.pinyin,
         titleTranslation: data.titleTranslation,
         titleTranslation_ru: data.titleTranslation_ru,
+        titleTranslation_en: data.titleTranslation_en,
         artist: data.artist,
         artist_ru: data.artist_ru,
+        artist_en: data.artist_en,
       });
     }
 

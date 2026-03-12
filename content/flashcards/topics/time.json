@@ -10,7 +10,8 @@
       "text_original": "时间",
       "pinyin": "shíjiān",
       "text_translation": "vaqt",
-      "text_translation_ru": "время"
+      "text_translation_ru": "время",
+      "text_translation_en": "time"
     },
     {
       "id": "tp-time-02",
@@ -18,7 +19,8 @@
       "pinyin": "xiànzài",
       "text_translation": "hozir",
       "text_translation_ru": "сейчас",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/xianzai.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/xianzai.mp3",
+      "text_translation_en": "now"
     },
     {
       "id": "tp-time-03",
@@ -26,7 +28,8 @@
       "pinyin": "jīntiān",
       "text_translation": "bugun",
       "text_translation_ru": "сегодня",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/jintian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/jintian.mp3",
+      "text_translation_en": "today"
     },
     {
       "id": "tp-time-04",
@@ -34,7 +37,8 @@
       "pinyin": "míngtiān",
       "text_translation": "ertaga",
       "text_translation_ru": "завтра",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/mingtian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/mingtian.mp3",
+      "text_translation_en": "tomorrow"
     },
     {
       "id": "tp-time-05",
@@ -42,7 +46,8 @@
       "pinyin": "zuótiān",
       "text_translation": "kecha",
       "text_translation_ru": "вчера",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/zuotian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/zuotian.mp3",
+      "text_translation_en": "yesterday"
     },
     {
       "id": "tp-time-06",
@@ -50,7 +55,8 @@
       "pinyin": "shàngwǔ",
       "text_translation": "ertalab; tush oldi",
       "text_translation_ru": "утро; до полудня",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/shangwu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/shangwu.mp3",
+      "text_translation_en": "morning (AM)"
     },
     {
       "id": "tp-time-07",
@@ -58,7 +64,8 @@
       "pinyin": "xiàwǔ",
       "text_translation": "tushdan keyin; kechqurun",
       "text_translation_ru": "после полудня; вечер",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/xiawu.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/xiawu.mp3",
+      "text_translation_en": "afternoon (PM)"
     },
     {
       "id": "tp-time-08",
@@ -66,7 +73,8 @@
       "pinyin": "wǎnshang",
       "text_translation": "kech; kechqurun",
       "text_translation_ru": "вечер; ночь",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/wanshang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/wanshang.mp3",
+      "text_translation_en": "evening; night"
     },
     {
       "id": "tp-time-09",
@@ -74,7 +82,8 @@
       "pinyin": "zǎoshang",
       "text_translation": "erta tong",
       "text_translation_ru": "раннее утро",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/zaoshang.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/zaoshang.mp3",
+      "text_translation_en": "morning"
     },
     {
       "id": "tp-time-10",
@@ -82,7 +91,8 @@
       "pinyin": "nián",
       "text_translation": "yil",
       "text_translation_ru": "год",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/nian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/nian.mp3",
+      "text_translation_en": "year"
     },
     {
       "id": "tp-time-11",
@@ -90,14 +100,16 @@
       "pinyin": "yuè",
       "text_translation": "oy",
       "text_translation_ru": "месяц",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/yue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/yue.mp3",
+      "text_translation_en": "month"
     },
     {
       "id": "tp-time-12",
       "text_original": "日",
       "pinyin": "rì",
       "text_translation": "kun (sana)",
-      "text_translation_ru": "число (дата)"
+      "text_translation_ru": "число (дата)",
+      "text_translation_en": "day (date)"
     },
     {
       "id": "tp-time-13",
@@ -105,56 +117,64 @@
       "pinyin": "xīngqī",
       "text_translation": "hafta",
       "text_translation_ru": "неделя",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/xingqi.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%204-1/xingqi.mp3",
+      "text_translation_en": "week"
     },
     {
       "id": "tp-time-14",
       "text_original": "星期一",
       "pinyin": "xīngqīyī",
       "text_translation": "dushanba",
-      "text_translation_ru": "понедельник"
+      "text_translation_ru": "понедельник",
+      "text_translation_en": "Monday"
     },
     {
       "id": "tp-time-15",
       "text_original": "星期二",
       "pinyin": "xīngqī'èr",
       "text_translation": "seshanba",
-      "text_translation_ru": "вторник"
+      "text_translation_ru": "вторник",
+      "text_translation_en": "Tuesday"
     },
     {
       "id": "tp-time-16",
       "text_original": "星期三",
       "pinyin": "xīngqīsān",
       "text_translation": "chorshanba",
-      "text_translation_ru": "среда"
+      "text_translation_ru": "среда",
+      "text_translation_en": "Wednesday"
     },
     {
       "id": "tp-time-17",
       "text_original": "星期四",
       "pinyin": "xīngqīsì",
       "text_translation": "payshanba",
-      "text_translation_ru": "четверг"
+      "text_translation_ru": "четверг",
+      "text_translation_en": "Thursday"
     },
     {
       "id": "tp-time-18",
       "text_original": "星期五",
       "pinyin": "xīngqīwǔ",
       "text_translation": "juma",
-      "text_translation_ru": "пятница"
+      "text_translation_ru": "пятница",
+      "text_translation_en": "Friday"
     },
     {
       "id": "tp-time-19",
       "text_original": "星期六",
       "pinyin": "xīngqīliù",
       "text_translation": "shanba",
-      "text_translation_ru": "суббота"
+      "text_translation_ru": "суббота",
+      "text_translation_en": "Saturday"
     },
     {
       "id": "tp-time-20",
       "text_original": "星期天",
       "pinyin": "xīngqītiān",
       "text_translation": "yakshanba",
-      "text_translation_ru": "воскресенье"
+      "text_translation_ru": "воскресенье",
+      "text_translation_en": "Sunday"
     },
     {
       "id": "tp-time-21",
@@ -162,7 +182,8 @@
       "pinyin": "diǎn",
       "text_translation": "soat (vaqt)",
       "text_translation_ru": "час (время)",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dian.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/dian.mp3",
+      "text_translation_en": "o'clock"
     },
     {
       "id": "tp-time-22",
@@ -170,21 +191,25 @@
       "pinyin": "fēnzhōng",
       "text_translation": "daqiqa",
       "text_translation_ru": "минута",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/fenzhong.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%209-1/fenzhong.mp3",
+      "text_translation_en": "minute"
     },
     {
       "id": "tp-time-23",
       "text_original": "小时",
       "pinyin": "xiǎoshí",
       "text_translation": "soat (davomiyligi)",
-      "text_translation_ru": "час (продолжительность)"
+      "text_translation_ru": "час (продолжительность)",
+      "text_translation_en": "hour"
     },
     {
       "id": "tp-time-24",
       "text_original": "半",
       "pinyin": "bàn",
       "text_translation": "yarim",
-      "text_translation_ru": "половина"
+      "text_translation_ru": "половина",
+      "text_translation_en": "half"
     }
-  ]
+  ],
+  "title_en": "Time"
 }

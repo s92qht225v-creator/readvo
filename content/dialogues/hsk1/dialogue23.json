@@ -54,7 +54,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue1.mp3",
+          "text_translation_en": "Is it raining outside?"
         },
         {
           "id": "d23-s2",
@@ -86,7 +87,8 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue2.mp3",
+          "text_translation_en": "Yes."
         },
         {
           "id": "d23-s3",
@@ -148,7 +150,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue3.mp3",
+          "text_translation_en": "Did you bring an umbrella?"
         },
         {
           "id": "d23-s4",
@@ -179,7 +182,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue4.mp3",
+          "text_translation_en": "Yes, I did."
         },
         {
           "id": "d23-s5",
@@ -232,7 +236,8 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue5.mp3",
+          "text_translation_en": "Then let's go."
         },
         {
           "id": "d23-s6",
@@ -254,7 +259,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20dai%20san%20le%20ma/dialogue.mp3"
@@ -266,15 +272,76 @@
   "extraVocabSubtitle_uz": "Ob-havo va kundalik buyumlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме погоды и повседневных вещей",
   "extraVocab": [
-    { "zh": "雨衣", "py": "yǔyī", "uz": "yomg'irpush", "ru": "дождевик" },
-    { "zh": "帽子", "py": "màozi", "uz": "shlyapa / bosh kiyim", "ru": "шапка / шляпа" },
-    { "zh": "手套", "py": "shǒutào", "uz": "qo'lqop", "ru": "перчатки" },
-    { "zh": "围巾", "py": "wéijīn", "uz": "sharf", "ru": "шарф" },
-    { "zh": "阴天", "py": "yīntiān", "uz": "bulutli kun", "ru": "пасмурный день" },
-    { "zh": "晴天", "py": "qíngtiān", "uz": "ochiq kun", "ru": "ясный день" },
-    { "zh": "刮风", "py": "guā fēng", "uz": "shamol esmoq", "ru": "дует ветер" },
-    { "zh": "湿", "py": "shī", "uz": "nam", "ru": "влажный" },
-    { "zh": "干", "py": "gān", "uz": "quruq", "ru": "сухой" },
-    { "zh": "预报", "py": "yùbào", "uz": "prognoz", "ru": "прогноз" }
-  ]
+    {
+      "zh": "雨衣",
+      "py": "yǔyī",
+      "uz": "yomg'irpush",
+      "ru": "дождевик",
+      "en": "raincoat"
+    },
+    {
+      "zh": "帽子",
+      "py": "màozi",
+      "uz": "shlyapa / bosh kiyim",
+      "ru": "шапка / шляпа",
+      "en": "hat / cap"
+    },
+    {
+      "zh": "手套",
+      "py": "shǒutào",
+      "uz": "qo'lqop",
+      "ru": "перчатки",
+      "en": "gloves"
+    },
+    {
+      "zh": "围巾",
+      "py": "wéijīn",
+      "uz": "sharf",
+      "ru": "шарф",
+      "en": "scarf"
+    },
+    {
+      "zh": "阴天",
+      "py": "yīntiān",
+      "uz": "bulutli kun",
+      "ru": "пасмурный день",
+      "en": "cloudy day"
+    },
+    {
+      "zh": "晴天",
+      "py": "qíngtiān",
+      "uz": "ochiq kun",
+      "ru": "ясный день",
+      "en": "sunny day"
+    },
+    {
+      "zh": "刮风",
+      "py": "guā fēng",
+      "uz": "shamol esmoq",
+      "ru": "дует ветер",
+      "en": "the wind is blowing"
+    },
+    {
+      "zh": "湿",
+      "py": "shī",
+      "uz": "nam",
+      "ru": "влажный",
+      "en": "humid"
+    },
+    {
+      "zh": "干",
+      "py": "gān",
+      "uz": "quruq",
+      "ru": "сухой",
+      "en": "dry"
+    },
+    {
+      "zh": "预报",
+      "py": "yùbào",
+      "uz": "prognoz",
+      "ru": "прогноз",
+      "en": "forecast"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on weather and everyday items"
 }

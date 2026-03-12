@@ -52,7 +52,8 @@
               "l": 14
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue1.mp3",
+          "text_translation_en": "Waiter, I'd like to order."
         },
         {
           "id": "d40-s2",
@@ -118,7 +119,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue2.mp3",
+          "text_translation_en": "Hello, what would you like today?"
         },
         {
           "id": "d40-s3",
@@ -158,7 +160,8 @@
               "tr": "дапаньцзи (курица с картошкой)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue3.mp3",
+          "text_translation_en": "One serving of Dapanji."
         },
         {
           "id": "d40-s4",
@@ -251,7 +254,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue4.mp3",
+          "text_translation_en": "Dapanji is very spicy, can you eat spicy food?"
         },
         {
           "id": "d40-s5",
@@ -351,7 +355,8 @@
               "tr": "Пепси"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue5.mp3",
+          "text_translation_en": "Yes, I can. And a bottle of cold Pepsi."
         },
         {
           "id": "d40-s6",
@@ -373,7 +378,8 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue6.mp3",
+          "text_translation_en": "OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3"
@@ -391,7 +397,9 @@
       "ex": "我们先看菜单再点菜。",
       "expy": "Wǒmen xiān kàn càidān zài diǎn cài.",
       "ex_uz": "Avval menyuni ko'raylik, keyin buyurtma beramiz.",
-      "ex_ru": "Сначала посмотрим меню, потом закажем."
+      "ex_ru": "Сначала посмотрим меню, потом закажем.",
+      "en": "to order food",
+      "ex_en": "Let's look at the menu first, then order."
     },
     {
       "zh": "来",
@@ -401,7 +409,9 @@
       "ex": "来一杯茶。",
       "expy": "Lái yì bēi chá.",
       "ex_uz": "Bir piyola choy olib keling.",
-      "ex_ru": "Принесите чашку чая."
+      "ex_ru": "Принесите чашку чая.",
+      "en": "give / bring (when ordering)",
+      "ex_en": "Bring a cup of tea."
     },
     {
       "zh": "一份",
@@ -411,7 +421,9 @@
       "ex": "来一份炒饭。",
       "expy": "Lái yí fèn chǎofàn.",
       "ex_uz": "Bir porsiya qovurilgan guruch olib keling.",
-      "ex_ru": "Одну порцию жареного риса."
+      "ex_ru": "Одну порцию жареного риса.",
+      "en": "one serving",
+      "ex_en": "One serving of fried rice."
     },
     {
       "zh": "辣",
@@ -421,7 +433,9 @@
       "ex": "这个菜太辣了。",
       "expy": "Zhège cài tài là le.",
       "ex_uz": "Bu taom juda achchiq.",
-      "ex_ru": "Это блюдо слишком острое."
+      "ex_ru": "Это блюдо слишком острое.",
+      "en": "spicy",
+      "ex_en": "This dish is too spicy."
     },
     {
       "zh": "能",
@@ -431,7 +445,9 @@
       "ex": "你能喝冰水吗？",
       "expy": "Nǐ néng hē bīng shuǐ ma?",
       "ex_uz": "Muzli suv icha olasanmi?",
-      "ex_ru": "Ты можешь пить ледяную воду?"
+      "ex_ru": "Ты можешь пить ледяную воду?",
+      "en": "can (ability)",
+      "ex_en": "Can you drink ice water?"
     },
     {
       "zh": "再",
@@ -441,20 +457,70 @@
       "ex": "再来一碗米饭。",
       "expy": "Zài lái yì wǎn mǐfàn.",
       "ex_uz": "Yana bir kosa guruch olib keling.",
-      "ex_ru": "Ещё одну тарелку риса."
+      "ex_ru": "Ещё одну тарелку риса.",
+      "en": "again / once more",
+      "ex_en": "One more plate of rice."
     }
   ],
   "extraVocabSubtitle_uz": "Restoran va ovqat buyurtmasi mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме ресторана и заказа еды",
   "extraVocab": [
-    { "zh": "菜单", "py": "càidān", "uz": "menyu", "ru": "меню" },
-    { "zh": "米饭", "py": "mǐfàn", "uz": "guruch", "ru": "рис" },
-    { "zh": "面条", "py": "miàntiáo", "uz": "lag'mon", "ru": "лапша" },
-    { "zh": "饮料", "py": "yǐnliào", "uz": "ichimlik", "ru": "напиток" },
-    { "zh": "甜", "py": "tián", "uz": "shirin", "ru": "сладкий" },
-    { "zh": "咸", "py": "xián", "uz": "sho'r", "ru": "солёный" },
-    { "zh": "汤", "py": "tāng", "uz": "sho'rva", "ru": "суп" },
-    { "zh": "筷子", "py": "kuàizi", "uz": "tayoqcha", "ru": "палочки для еды" }
+    {
+      "zh": "菜单",
+      "py": "càidān",
+      "uz": "menyu",
+      "ru": "меню",
+      "en": "menu"
+    },
+    {
+      "zh": "米饭",
+      "py": "mǐfàn",
+      "uz": "guruch",
+      "ru": "рис",
+      "en": "rice"
+    },
+    {
+      "zh": "面条",
+      "py": "miàntiáo",
+      "uz": "lag'mon",
+      "ru": "лапша",
+      "en": "noodles"
+    },
+    {
+      "zh": "饮料",
+      "py": "yǐnliào",
+      "uz": "ichimlik",
+      "ru": "напиток",
+      "en": "drink / beverage"
+    },
+    {
+      "zh": "甜",
+      "py": "tián",
+      "uz": "shirin",
+      "ru": "сладкий",
+      "en": "sweet"
+    },
+    {
+      "zh": "咸",
+      "py": "xián",
+      "uz": "sho'r",
+      "ru": "солёный",
+      "en": "salty"
+    },
+    {
+      "zh": "汤",
+      "py": "tāng",
+      "uz": "sho'rva",
+      "ru": "суп",
+      "en": "soup"
+    },
+    {
+      "zh": "筷子",
+      "py": "kuàizi",
+      "uz": "tayoqcha",
+      "ru": "палочки для еды",
+      "en": "chopsticks"
+    }
   ],
   "grammarNotes": [
     {
@@ -466,12 +532,34 @@
       "formula": "来 + Miqdor + Ot",
       "formula_ru": "来 + Счётное слово + Сущ.",
       "examples": [
-        { "zh": "来一份大盘鸡。", "py": "Lái yí fèn dàpánjī.", "uz": "Bir porsiya dapanji olib keling.", "ru": "Одну порцию дапаньцзи." },
-        { "zh": "来两杯咖啡。", "py": "Lái liǎng bēi kāfēi.", "uz": "Ikki piyola qahva olib keling.", "ru": "Два кофе, пожалуйста." },
-        { "zh": "来一碗面条。", "py": "Lái yì wǎn miàntiáo.", "uz": "Bir kosa lag'mon olib keling.", "ru": "Одну тарелку лапши." }
+        {
+          "zh": "来一份大盘鸡。",
+          "py": "Lái yí fèn dàpánjī.",
+          "uz": "Bir porsiya dapanji olib keling.",
+          "ru": "Одну порцию дапаньцзи.",
+          "en": "One serving of dapanji."
+        },
+        {
+          "zh": "来两杯咖啡。",
+          "py": "Lái liǎng bēi kāfēi.",
+          "uz": "Ikki piyola qahva olib keling.",
+          "ru": "Два кофе, пожалуйста.",
+          "en": "Two coffees, please."
+        },
+        {
+          "zh": "来一碗面条。",
+          "py": "Lái yì wǎn miàntiáo.",
+          "uz": "Bir kosa lag'mon olib keling.",
+          "ru": "Одну тарелку лапши.",
+          "en": "One bowl of noodles."
+        }
       ],
       "tip_uz": "\"来\" — norasmiy buyurtma usuli. Rasmiyroq: \"请给我...\" (menga bering).",
-      "tip_ru": "\"来\" — неформальный способ заказа. Формальнее: \"请给我...\" (дайте мне)."
+      "tip_ru": "\"来\" — неформальный способ заказа. Формальнее: \"请给我...\" (дайте мне).",
+      "title_en": "来 — ordering in a restaurant",
+      "desc_en": "\"来\" is used when ordering in a restaurant, meaning \"bring me\". It's followed by a measure word and the dish name.",
+      "formula_en": "来 + Measure word + Noun",
+      "tip_en": "\"来\" — an informal way to order. More formal: \"请给我...\" (please give me)."
     },
     {
       "pattern": "能...吗？",
@@ -482,12 +570,34 @@
       "formula": "Ot + 能 + Fe'l + 吗？",
       "formula_ru": "Сущ. + 能 + Глагол + 吗？",
       "examples": [
-        { "zh": "你能吃辣吗？", "py": "Nǐ néng chī là ma?", "uz": "Achchiq yeya olasanmi?", "ru": "Ты можешь есть острое?" },
-        { "zh": "你能来吗？", "py": "Nǐ néng lái ma?", "uz": "Kela olasanmi?", "ru": "Ты сможешь прийти?" },
-        { "zh": "他能喝酒吗？", "py": "Tā néng hē jiǔ ma?", "uz": "U spirtli ichimlik icha oladimi?", "ru": "Он может пить алкоголь?" }
+        {
+          "zh": "你能吃辣吗？",
+          "py": "Nǐ néng chī là ma?",
+          "uz": "Achchiq yeya olasanmi?",
+          "ru": "Ты можешь есть острое?",
+          "en": "Can you eat spicy food?"
+        },
+        {
+          "zh": "你能来吗？",
+          "py": "Nǐ néng lái ma?",
+          "uz": "Kela olasanmi?",
+          "ru": "Ты сможешь прийти?",
+          "en": "Can you come?"
+        },
+        {
+          "zh": "他能喝酒吗？",
+          "py": "Tā néng hē jiǔ ma?",
+          "uz": "U spirtli ichimlik icha oladimi?",
+          "ru": "Он может пить алкоголь?",
+          "en": "Can he drink alcohol?"
+        }
       ],
       "tip_uz": "\"能\" — jismoniy qobiliyat. \"可以\" — ruxsat. Farqi muhim!",
-      "tip_ru": "\"能\" — физическая способность. \"可以\" — разрешение. Разница важна!"
+      "tip_ru": "\"能\" — физическая способность. \"可以\" — разрешение. Разница важна!",
+      "title_en": "能...吗？ — asking about ability",
+      "desc_en": "\"能\" indicates the ability or possibility to do something. With \"吗\" it forms a question.",
+      "formula_en": "Noun + 能 + Verb + 吗？",
+      "tip_en": "\"能\" — physical ability. \"可以\" — permission. The difference matters!"
     },
     {
       "pattern": "很 + Sifat",
@@ -498,12 +608,34 @@
       "formula": "Ot + 很 + Sifat",
       "formula_ru": "Сущ. + 很 + Прил.",
       "examples": [
-        { "zh": "大盘鸡很辣。", "py": "Dàpánjī hěn là.", "uz": "Dapanji juda achchiq.", "ru": "Дапаньцзи очень острое." },
-        { "zh": "今天很冷。", "py": "Jīntiān hěn lěng.", "uz": "Bugun juda sovuq.", "ru": "Сегодня очень холодно." },
-        { "zh": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "uz": "Bu taom juda mazali.", "ru": "Это блюдо очень вкусное." }
+        {
+          "zh": "大盘鸡很辣。",
+          "py": "Dàpánjī hěn là.",
+          "uz": "Dapanji juda achchiq.",
+          "ru": "Дапаньцзи очень острое.",
+          "en": "Dapanji is very spicy."
+        },
+        {
+          "zh": "今天很冷。",
+          "py": "Jīntiān hěn lěng.",
+          "uz": "Bugun juda sovuq.",
+          "ru": "Сегодня очень холодно.",
+          "en": "It's very cold today."
+        },
+        {
+          "zh": "这个菜很好吃。",
+          "py": "Zhège cài hěn hǎochī.",
+          "uz": "Bu taom juda mazali.",
+          "ru": "Это блюдо очень вкусное.",
+          "en": "This dish is very delicious."
+        }
       ],
       "tip_uz": "Xitoy tilida \"很\" ko'pincha \"juda\" emas, oddiy ta'rif sifatida ishlatiladi.",
-      "tip_ru": "В китайском \"很\" часто используется не как \"очень\", а просто как связка перед прилагательным."
+      "tip_ru": "В китайском \"很\" часто используется не как \"очень\", а просто как связка перед прилагательным.",
+      "title_en": "很 + adjective — describing taste/properties",
+      "desc_en": "\"很\" before an adjective means \"very\". In Chinese, \"很\" is often placed before adjectives.",
+      "formula_en": "Noun + 很 + Adj.",
+      "tip_en": "In Chinese, \"很\" is often used not as \"very\" but simply as a link before adjectives."
     },
     {
       "pattern": "再来...",
@@ -514,12 +646,35 @@
       "formula": "再来 + Miqdor + Ot",
       "formula_ru": "再来 + Счётное слово + Сущ.",
       "examples": [
-        { "zh": "再来一瓶冰的百事可乐。", "py": "Zài lái yì píng bīng de Bǎishì Kělè.", "uz": "Yana bitta sovuq Pepsi olib keling.", "ru": "Ещё одну бутылку холодного Пепси." },
-        { "zh": "再来一碗米饭。", "py": "Zài lái yì wǎn mǐfàn.", "uz": "Yana bir kosa guruch.", "ru": "Ещё одну тарелку риса." },
-        { "zh": "再来两杯啤酒。", "py": "Zài lái liǎng bēi píjiǔ.", "uz": "Yana ikki stakan pivo.", "ru": "Ещё два бокала пива." }
+        {
+          "zh": "再来一瓶冰的百事可乐。",
+          "py": "Zài lái yì píng bīng de Bǎishì Kělè.",
+          "uz": "Yana bitta sovuq Pepsi olib keling.",
+          "ru": "Ещё одну бутылку холодного Пепси.",
+          "en": "One more bottle of cold Pepsi."
+        },
+        {
+          "zh": "再来一碗米饭。",
+          "py": "Zài lái yì wǎn mǐfàn.",
+          "uz": "Yana bir kosa guruch.",
+          "ru": "Ещё одну тарелку риса.",
+          "en": "One more plate of rice."
+        },
+        {
+          "zh": "再来两杯啤酒。",
+          "py": "Zài lái liǎng bēi píjiǔ.",
+          "uz": "Yana ikki stakan pivo.",
+          "ru": "Ещё два бокала пива.",
+          "en": "Two more glasses of beer."
+        }
       ],
       "tip_uz": "\"再来\" — asosiy buyurtmadan keyin qo'shimcha so'rashda qulay.",
-      "tip_ru": "\"再来\" — удобное выражение для дополнительного заказа после основного."
+      "tip_ru": "\"再来\" — удобное выражение для дополнительного заказа после основного.",
+      "title_en": "再来 — ordering more",
+      "desc_en": "\"再\" (again/more) + \"来\" (bring) — used to order additional items.",
+      "formula_en": "再来 + Measure word + Noun",
+      "tip_en": "\"再来\" — a handy expression for ordering more after the main order."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on restaurants and ordering food"
 }

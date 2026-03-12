@@ -65,7 +65,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue1.mp3",
+          "text_translation_en": "Do you have Telegram?"
         },
         {
           "id": "d4-s2",
@@ -118,7 +119,8 @@
               "tr": "Чжифэйцзи"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue2.mp3",
+          "text_translation_en": "No, I don't have Telegram."
         },
         {
           "id": "d4-s3",
@@ -171,7 +173,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue3.mp3",
+          "text_translation_en": "Do you have WeChat?"
         },
         {
           "id": "d4-s4",
@@ -193,7 +196,8 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue4.mp3",
+          "text_translation_en": "Yes, I do."
         },
         {
           "id": "d4-s5",
@@ -266,7 +270,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue5.mp3",
+          "text_translation_en": "Can I add you on WeChat?"
         },
         {
           "id": "d4-s6",
@@ -288,7 +293,8 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue6.mp3",
+          "text_translation_en": "Sure."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20you%20telegram%20ma/dialogue.mp3"
@@ -300,15 +306,76 @@
   "extraVocabSubtitle_uz": "Ijtimoiy tarmoqlar va xabar almashish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме соцсетей и мессенджеров",
   "extraVocab": [
-    { "zh": "手机", "py": "shǒujī", "uz": "telefon", "ru": "мобильный телефон" },
-    { "zh": "电脑", "py": "diànnǎo", "uz": "kompyuter", "ru": "компьютер" },
-    { "zh": "上网", "py": "shàngwǎng", "uz": "internetga kirmoq", "ru": "выйти в интернет" },
-    { "zh": "发", "py": "fā", "uz": "jo'natmoq", "ru": "отправить" },
-    { "zh": "消息", "py": "xiāoxi", "uz": "xabar", "ru": "сообщение" },
-    { "zh": "照片", "py": "zhàopiàn", "uz": "surat / rasm", "ru": "фотография" },
-    { "zh": "视频", "py": "shìpín", "uz": "video", "ru": "видео" },
-    { "zh": "下载", "py": "xiàzài", "uz": "yuklab olmoq", "ru": "скачать" },
-    { "zh": "扫码", "py": "sǎomǎ", "uz": "QR-kodni skanlamoq", "ru": "сканировать QR-код" },
-    { "zh": "密码", "py": "mìmǎ", "uz": "parol", "ru": "пароль" }
-  ]
+    {
+      "zh": "手机",
+      "py": "shǒujī",
+      "uz": "telefon",
+      "ru": "мобильный телефон",
+      "en": "mobile phone"
+    },
+    {
+      "zh": "电脑",
+      "py": "diànnǎo",
+      "uz": "kompyuter",
+      "ru": "компьютер",
+      "en": "computer"
+    },
+    {
+      "zh": "上网",
+      "py": "shàngwǎng",
+      "uz": "internetga kirmoq",
+      "ru": "выйти в интернет",
+      "en": "to go online"
+    },
+    {
+      "zh": "发",
+      "py": "fā",
+      "uz": "jo'natmoq",
+      "ru": "отправить",
+      "en": "to send"
+    },
+    {
+      "zh": "消息",
+      "py": "xiāoxi",
+      "uz": "xabar",
+      "ru": "сообщение",
+      "en": "message"
+    },
+    {
+      "zh": "照片",
+      "py": "zhàopiàn",
+      "uz": "surat / rasm",
+      "ru": "фотография",
+      "en": "photo"
+    },
+    {
+      "zh": "视频",
+      "py": "shìpín",
+      "uz": "video",
+      "ru": "видео",
+      "en": "video"
+    },
+    {
+      "zh": "下载",
+      "py": "xiàzài",
+      "uz": "yuklab olmoq",
+      "ru": "скачать",
+      "en": "to download"
+    },
+    {
+      "zh": "扫码",
+      "py": "sǎomǎ",
+      "uz": "QR-kodni skanlamoq",
+      "ru": "сканировать QR-код",
+      "en": "to scan a QR code"
+    },
+    {
+      "zh": "密码",
+      "py": "mìmǎ",
+      "uz": "parol",
+      "ru": "пароль",
+      "en": "password"
+    }
+  ],
+  "extraVocabSubtitle_en": "Useful words on social media and messengers"
 }

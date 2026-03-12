@@ -32,7 +32,8 @@
               "tr": "алло"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue1.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue1.mp3",
+          "text_translation_en": "Hello?"
         },
         {
           "id": "d36-s2",
@@ -83,7 +84,8 @@
               "tr": "персона"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue2.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue2.mp3",
+          "text_translation_en": "Hello, who is this?"
         },
         {
           "id": "d36-s3",
@@ -134,7 +136,8 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue3.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue3.mp3",
+          "text_translation_en": "Excuse me, is this Xiao Li?"
         },
         {
           "id": "d36-s4",
@@ -196,7 +199,8 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue4.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue4.mp3",
+          "text_translation_en": "No, you have the wrong number."
         },
         {
           "id": "d36-s5",
@@ -216,7 +220,8 @@
               "tr": "извините"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue5.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue5.mp3",
+          "text_translation_en": "I'm sorry."
         },
         {
           "id": "d36-s6",
@@ -238,7 +243,8 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue6.mp3"
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue6.mp3",
+          "text_translation_en": "It's OK."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20da%20cuo%20le/dialogue.mp3"
@@ -256,7 +262,9 @@
       "ex": "喂，你好！",
       "expy": "Wèi, nǐ hǎo!",
       "ex_uz": "Alo, salom!",
-      "ex_ru": "Алло, здравствуйте!"
+      "ex_ru": "Алло, здравствуйте!",
+      "en": "hello (on the phone)",
+      "ex_en": "Hello!"
     },
     {
       "zh": "请问",
@@ -266,7 +274,9 @@
       "ex": "请问，这是哪儿？",
       "expy": "Qǐngwèn, zhè shì nǎr?",
       "ex_uz": "Kechirasiz, bu qayer?",
-      "ex_ru": "Скажите, где это?"
+      "ex_ru": "Скажите, где это?",
+      "en": "excuse me, please",
+      "ex_en": "Tell me, where is it?"
     },
     {
       "zh": "打",
@@ -276,7 +286,9 @@
       "ex": "我给你打电话。",
       "expy": "Wǒ gěi nǐ dǎ diànhuà.",
       "ex_uz": "Men senga telefon qilaman.",
-      "ex_ru": "Я тебе позвоню."
+      "ex_ru": "Я тебе позвоню.",
+      "en": "to dial / call",
+      "ex_en": "I'll call you."
     },
     {
       "zh": "错",
@@ -286,7 +298,9 @@
       "ex": "这个字写错了。",
       "expy": "Zhège zì xiě cuò le.",
       "ex_uz": "Bu harf noto'g'ri yozilgan.",
-      "ex_ru": "Этот иероглиф написан неправильно."
+      "ex_ru": "Этот иероглиф написан неправильно.",
+      "en": "wrong / mistake",
+      "ex_en": "This character is written incorrectly."
     },
     {
       "zh": "不好意思",
@@ -296,7 +310,9 @@
       "ex": "不好意思，我来晚了。",
       "expy": "Bù hǎoyìsi, wǒ lái wǎn le.",
       "ex_uz": "Uzr, men kech keldim.",
-      "ex_ru": "Извините, я опоздал."
+      "ex_ru": "Извините, я опоздал.",
+      "en": "sorry / excuse me",
+      "ex_en": "Sorry, I'm late."
     },
     {
       "zh": "没关系",
@@ -306,18 +322,56 @@
       "ex": "没关系，下次注意。",
       "expy": "Méi guānxi, xià cì zhùyì.",
       "ex_uz": "Hech gap emas, keyingi safar ehtiyot bo'ling.",
-      "ex_ru": "Ничего, в следующий раз будь внимательнее."
+      "ex_ru": "Ничего, в следующий раз будь внимательнее.",
+      "en": "no problem / it's okay",
+      "ex_en": "It's okay, be more careful next time."
     }
   ],
   "extraVocabSubtitle_uz": "Telefon qo'ng'iroqlari mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме телефонных звонков",
   "extraVocab": [
-    { "zh": "电话", "py": "diànhuà", "uz": "telefon", "ru": "телефон" },
-    { "zh": "接电话", "py": "jiē diànhuà", "uz": "telefonga javob bermoq", "ru": "ответить на звонок" },
-    { "zh": "挂电话", "py": "guà diànhuà", "uz": "telefon qo'ymoq", "ru": "положить трубку" },
-    { "zh": "号码", "py": "hàomǎ", "uz": "raqam", "ru": "номер" },
-    { "zh": "短信", "py": "duǎnxìn", "uz": "SMS xabar", "ru": "СМС-сообщение" },
-    { "zh": "回电话", "py": "huí diànhuà", "uz": "qayta qo'ng'iroq qilmoq", "ru": "перезвонить" }
+    {
+      "zh": "电话",
+      "py": "diànhuà",
+      "uz": "telefon",
+      "ru": "телефон",
+      "en": "phone"
+    },
+    {
+      "zh": "接电话",
+      "py": "jiē diànhuà",
+      "uz": "telefonga javob bermoq",
+      "ru": "ответить на звонок",
+      "en": "to answer a call"
+    },
+    {
+      "zh": "挂电话",
+      "py": "guà diànhuà",
+      "uz": "telefon qo'ymoq",
+      "ru": "положить трубку",
+      "en": "to hang up"
+    },
+    {
+      "zh": "号码",
+      "py": "hàomǎ",
+      "uz": "raqam",
+      "ru": "номер",
+      "en": "number"
+    },
+    {
+      "zh": "短信",
+      "py": "duǎnxìn",
+      "uz": "SMS xabar",
+      "ru": "СМС-сообщение",
+      "en": "text message / SMS"
+    },
+    {
+      "zh": "回电话",
+      "py": "huí diànhuà",
+      "uz": "qayta qo'ng'iroq qilmoq",
+      "ru": "перезвонить",
+      "en": "to call back"
+    }
   ],
   "grammarNotes": [
     {
@@ -329,11 +383,27 @@
       "formula": "请问 + 是 + Ism + 吗？",
       "formula_ru": "请问 + 是 + Имя + 吗？",
       "examples": [
-        { "zh": "请问是小李吗？", "py": "Qǐngwèn shì Xiǎo Lǐ ma?", "uz": "Kechirasiz, bu Xiao Limi?", "ru": "Скажите, это Сяо Ли?" },
-        { "zh": "请问是王老师吗？", "py": "Qǐngwèn shì Wáng lǎoshī ma?", "uz": "Kechirasiz, bu Wang o'qituvchimi?", "ru": "Скажите, это учитель Ван?" }
+        {
+          "zh": "请问是小李吗？",
+          "py": "Qǐngwèn shì Xiǎo Lǐ ma?",
+          "uz": "Kechirasiz, bu Xiao Limi?",
+          "ru": "Скажите, это Сяо Ли?",
+          "en": "May I ask, is this Xiao Li?"
+        },
+        {
+          "zh": "请问是王老师吗？",
+          "py": "Qǐngwèn shì Wáng lǎoshī ma?",
+          "uz": "Kechirasiz, bu Wang o'qituvchimi?",
+          "ru": "Скажите, это учитель Ван?",
+          "en": "May I ask, is this Teacher Wang?"
+        }
       ],
       "tip_uz": "\"请问\" telefon suhbatlarida va notanish odamlardan so'rashda ishlatiladi.",
-      "tip_ru": "\"请问\" используется в телефонных разговорах и при обращении к незнакомым людям."
+      "tip_ru": "\"请问\" используется в телефонных разговорах и при обращении к незнакомым людям.",
+      "title_en": "请问是...吗？ — asking politely",
+      "desc_en": "\"请问\" (may I ask) at the beginning + \"是...吗？\" — a polite way to ask a question.",
+      "formula_en": "请问 + 是 + Name + 吗？",
+      "tip_en": "\"请问\" is used in phone calls and when addressing strangers."
     },
     {
       "pattern": "Fe'l + 错了",
@@ -344,11 +414,27 @@
       "formula": "Fe'l + 错 + 了",
       "formula_ru": "Глагол + 错 + 了",
       "examples": [
-        { "zh": "你打错了。", "py": "Nǐ dǎ cuò le.", "uz": "Noto'g'ri terdingiz.", "ru": "Вы ошиблись номером." },
-        { "zh": "我写错了。", "py": "Wǒ xiě cuò le.", "uz": "Men noto'g'ri yozdim.", "ru": "Я написал неправильно." }
+        {
+          "zh": "你打错了。",
+          "py": "Nǐ dǎ cuò le.",
+          "uz": "Noto'g'ri terdingiz.",
+          "ru": "Вы ошиблись номером.",
+          "en": "You dialed the wrong number."
+        },
+        {
+          "zh": "我写错了。",
+          "py": "Wǒ xiě cuò le.",
+          "uz": "Men noto'g'ri yozdim.",
+          "ru": "Я написал неправильно.",
+          "en": "I wrote it wrong."
+        }
       ],
       "tip_uz": "\"打错了\" telefonda eng ko'p ishlatiladigan ibora — noto'g'ri raqam terilganda.",
-      "tip_ru": "\"打错了\" — самая частая фраза по телефону, когда набрали неправильный номер."
+      "tip_ru": "\"打错了\" — самая частая фраза по телефону, когда набрали неправильный номер.",
+      "title_en": "Verb + 错了 — did something wrong",
+      "desc_en": "\"错\" after a verb shows the action was done incorrectly. \"了\" indicates past tense.",
+      "formula_en": "Verb + 错 + 了",
+      "tip_en": "\"打错了\" — the most common phone phrase when you dialed the wrong number."
     },
     {
       "pattern": "不好意思",
@@ -359,11 +445,27 @@
       "formula": "不好意思 (+ sabab)",
       "formula_ru": "不好意思 (+ причина)",
       "examples": [
-        { "zh": "不好意思。", "py": "Bù hǎoyìsi.", "uz": "Uzr so'rayman.", "ru": "Извините." },
-        { "zh": "不好意思，我来晚了。", "py": "Bù hǎoyìsi, wǒ lái wǎn le.", "uz": "Uzr, men kech keldim.", "ru": "Извините, я опоздал." }
+        {
+          "zh": "不好意思。",
+          "py": "Bù hǎoyìsi.",
+          "uz": "Uzr so'rayman.",
+          "ru": "Извините.",
+          "en": "Sorry."
+        },
+        {
+          "zh": "不好意思，我来晚了。",
+          "py": "Bù hǎoyìsi, wǒ lái wǎn le.",
+          "uz": "Uzr, men kech keldim.",
+          "ru": "Извините, я опоздал.",
+          "en": "Sorry, I'm late."
+        }
       ],
       "tip_uz": "\"不好意思\" — kundalik hayotda eng ko'p ishlatiladigan uzr so'zi. \"对不起\" — jiddiyroq holatlar uchun.",
-      "tip_ru": "\"不好意思\" — самое частое извинение в быту. \"对不起\" — для более серьёзных ситуаций."
+      "tip_ru": "\"不好意思\" — самое частое извинение в быту. \"对不起\" — для более серьёзных ситуаций.",
+      "title_en": "不好意思 — apologizing",
+      "desc_en": "\"不好意思\" — a mild apology. Softer than \"对不起\".",
+      "formula_en": "不好意思 (+ reason)",
+      "tip_en": "\"不好意思\" — the most common casual apology. \"对不起\" — for more serious situations."
     },
     {
       "pattern": "没关系",
@@ -374,11 +476,28 @@
       "formula": "没关系 (+ qo'shimcha gap)",
       "formula_ru": "没关系 (+ дополнение)",
       "examples": [
-        { "zh": "没关系。", "py": "Méi guānxi.", "uz": "Hech gap emas.", "ru": "Ничего страшного." },
-        { "zh": "没关系，我不急。", "py": "Méi guānxi, wǒ bù jí.", "uz": "Hech gap emas, men shoshilmayapman.", "ru": "Ничего, я не тороплюсь." }
+        {
+          "zh": "没关系。",
+          "py": "Méi guānxi.",
+          "uz": "Hech gap emas.",
+          "ru": "Ничего страшного.",
+          "en": "It's okay."
+        },
+        {
+          "zh": "没关系，我不急。",
+          "py": "Méi guānxi, wǒ bù jí.",
+          "uz": "Hech gap emas, men shoshilmayapman.",
+          "ru": "Ничего, я не тороплюсь.",
+          "en": "It's fine, I'm not in a hurry."
+        }
       ],
       "tip_uz": "\"没关系\" va \"不好意思\" juftligi xitoy tilida eng ko'p ishlatiladigan uzr-javob juftligi.",
-      "tip_ru": "Пара \"不好意思\" — \"没关系\" — самая частая формула извинения и ответа в китайском."
+      "tip_ru": "Пара \"不好意思\" — \"没关系\" — самая частая формула извинения и ответа в китайском.",
+      "title_en": "没关系 — response: it's okay",
+      "desc_en": "\"没关系\" — a response to an apology. Means \"it's okay\" / \"no worries\".",
+      "formula_en": "没关系 (+ addition)",
+      "tip_en": "\"不好意思\" — \"没关系\" is the most common apology-response pair in Chinese."
     }
-  ]
+  ],
+  "extraVocabSubtitle_en": "Useful words on phone calls"
 }
