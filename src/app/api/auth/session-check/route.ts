@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { getUserIdFromJWT } from '@/lib/jwt';
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,25 +9,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ valid: false });
     }
 
-    // Get user from the Authorization header
     const authHeader = request.headers.get('authorization');
     if (!authHeader?.startsWith('Bearer ')) {
       return NextResponse.json({ valid: false });
     }
 
-    const token = authHeader.slice(7);
-    const admin = getSupabaseAdmin();
-
-    // Get user ID from the JWT
-    const { data: { user: jwtUser }, error } = await admin.auth.getUser(token);
-    if (error || !jwtUser) {
+    // Decode JWT locally (~0ms) instead of admin.auth.getUser() (~1-2s remote call)
+    const userId = getUserIdFromJWT(authHeader.slice(7));
+    if (!userId) {
       return NextResponse.json({ valid: false });
     }
 
-    // Compare nonce with the one stored in active_sessions table
+    const admin = getSupabaseAdmin();
     const { data: row } = await admin.from('active_sessions')
       .select('session_nonce')
-      .eq('user_id', jwtUser.id)
+      .eq('user_id', userId)
       .single();
 
     return NextResponse.json({ valid: row?.session_nonce === nonce });
@@ -42,15 +39,14 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }
 
-    const token = authHeader.slice(7);
-    const admin = getSupabaseAdmin();
-
-    const { data: { user }, error } = await admin.auth.getUser(token);
-    if (error || !user) {
+    // Decode JWT locally (~0ms) instead of admin.auth.getUser() (~1-2s remote call)
+    const userId = getUserIdFromJWT(authHeader.slice(7));
+    if (!userId) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }
 
-    await admin.from('active_sessions').delete().eq('user_id', user.id);
+    const admin = getSupabaseAdmin();
+    await admin.from('active_sessions').delete().eq('user_id', userId);
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ ok: false }, { status: 500 });

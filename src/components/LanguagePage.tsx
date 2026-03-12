@@ -500,7 +500,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
             {/* Dialogue cards */}
             <div className="home__lessons">
               {filteredDialogues.map((d) => (
-                <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.slug}`} className="dialogue-card">
+                <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.slug}`} prefetch={false} className="dialogue-card">
                   <span className="dialogue-card__deco" aria-hidden="true">{d.title}</span>
                   <div className="dialogue-card__content">
                     <div className="dialogue-card__text">
@@ -561,6 +561,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     key={set.id}
                     className="lp__writing-card"
                     href={`/chinese/hsk1/writing/${set.id}`}
+                    prefetch={false}
                   >
                     <div className="lp__writing-card__chars" aria-hidden="true">
                       {set.chars}
@@ -661,6 +662,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                       <Link
                         key={topic.slug}
                         href={`/chinese/hsk1/flashcards/topic/${topic.slug}`}
+                        prefetch={false}
                         style={{
                           background: '#fff', borderRadius: 10, padding: '14px',
                           boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
@@ -687,7 +689,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
         {activeTab === 'karaoke' && (
           <div className="lp__list">
             {karaokeItems.map((k) => (
-              <Link key={k.href} href={k.href} className="lp__card">
+              <Link key={k.href} href={k.href} prefetch={false} className="lp__card">
                 <div className="lp__card-main">
                   <div className="lp__card-title">{k.title}</div>
                   <div className="lp__card-pinyin">{k.pinyin}</div>
@@ -726,7 +728,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
               </div>
               <div className="home__lessons">
                 {filteredGrammar.map((item) => (
-                  <Link key={item.char} href={item.active ? item.href : '#'} className="grammar-card">
+                  <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} className="grammar-card">
                     <span className="grammar-card__bg">{item.char}</span>
                     <div className="grammar-card__top">
                       <div className="grammar-card__icon" style={{ background: item.color }}>{item.char}</div>

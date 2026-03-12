@@ -70,6 +70,7 @@ export function FlashcardListPage({ lessons, bookPath }: FlashcardListPageProps)
               <div className="lesson-card__pages">
                 <Link
                   href={`${bookPath}/flashcards/${lesson.lessonId}`}
+                  prefetch={false}
                   className="lesson-card__page-link"
                 >
                   <span className="lesson-card__page-num">
