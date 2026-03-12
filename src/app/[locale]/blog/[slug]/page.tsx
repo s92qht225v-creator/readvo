@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadBlogPost, loadBlogPosts } from '@/services/blog';
 import { BlogPostView } from '@/components/BlogPostView';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 interface PageParams {
   params: Promise<{ locale: string; slug: string }>;
@@ -52,5 +53,32 @@ export default async function BlogPostPage({ params }: PageParams) {
     notFound();
   }
 
-  return <BlogPostView post={post} />;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+  const title = locale === 'ru' ? post.title_ru : locale === 'en' ? (post.title_en || post.title) : post.title;
+  const description = locale === 'ru' ? post.description_ru : locale === 'en' ? (post.description_en || post.description) : post.description;
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Blog', path: `/${locale}/blog` },
+      { name: title, path: `/${locale}/blog/${slug}` },
+    ]),
+    {
+      '@type': 'Article',
+      headline: title,
+      description,
+      datePublished: post.date,
+      inLanguage: locale,
+      url: `${siteUrl}/${locale}/blog/${slug}`,
+      author: { '@type': 'Organization', name: 'Blim', url: siteUrl },
+      publisher: { '@type': 'Organization', name: 'Blim', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` } },
+      ...(post.heroImage ? { image: post.heroImage } : {}),
+    },
+  ]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <BlogPostView post={post} />
+    </>
+  );
 }

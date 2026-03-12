@@ -17,26 +17,26 @@ interface Props {
 }
 
 const WORDS: HanziWord[] = [
-  { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', strokes: 7, radical: '戈', radicalUz: 'nayza', radicalRu: 'копьё', ex: '我是学生。', expy: 'Wǒ shì xuéshēng.', exuz: 'Men talabaman.', exru: 'Я студент.' },
-  { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', strokes: 6, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!' },
-  { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.' },
-  { char: '她', pinyin: 'tā', uz: 'u (ayol)', ru: 'она', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', ex: '她很漂亮。', expy: 'Tā hěn piàoliang.', exuz: 'U juda chiroyli.', exru: 'Она очень красивая.' },
-  { char: '们', pinyin: 'men', uz: "ko'plik qo'shimchasi", ru: 'суффикс множества', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '我们是朋友。', expy: 'Wǒmen shì péngyou.', exuz: 'Biz do\'stmiz.', exru: 'Мы друзья.' },
-  { char: '吃', pinyin: 'chī', uz: 'yemoq', ru: 'есть', strokes: 6, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', ex: '我吃饭。', expy: 'Wǒ chī fàn.', exuz: 'Men ovqat yeyapman.', exru: 'Я ем.' },
-  { char: '喝', pinyin: 'hē', uz: 'ichmoq', ru: 'пить', strokes: 12, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', ex: '我喝水。', expy: 'Wǒ hē shuǐ.', exuz: 'Men suv ichyapman.', exru: 'Я пью воду.' },
-  { char: '看', pinyin: 'kàn', uz: "ko'rmoq", ru: 'смотреть', strokes: 9, radical: '目', radicalUz: 'ko\'z', radicalRu: 'глаз', ex: '我看书。', expy: 'Wǒ kàn shū.', exuz: 'Men kitob o\'qiyapman.', exru: 'Я читаю книгу.' },
-  { char: '听', pinyin: 'tīng', uz: 'tinglаmoq', ru: 'слушать', strokes: 7, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', ex: '我听音乐。', expy: 'Wǒ tīng yīnyuè.', exuz: 'Men musiqa tinglayapman.', exru: 'Я слушаю музыку.' },
-  { char: '说', pinyin: 'shuō', uz: 'gapirmoq', ru: 'говорить', strokes: 9, radical: '讠', radicalUz: 'nutq', radicalRu: 'речь', ex: '他说中文。', expy: 'Tā shuō Zhōngwén.', exuz: 'U xitoy tilida gapiradi.', exru: 'Он говорит по-китайски.' },
-  { char: '走', pinyin: 'zǒu', uz: 'yurmoq', ru: 'идти', strokes: 7, radical: '走', radicalUz: 'yurish', radicalRu: 'ходьба', ex: '我走路。', expy: 'Wǒ zǒu lù.', exuz: 'Men piyoda yuraman.', exru: 'Я иду пешком.' },
-  { char: '来', pinyin: 'lái', uz: 'kelmoq', ru: 'приходить', strokes: 7, radical: '木', radicalUz: 'daraxt', radicalRu: 'дерево', ex: '他来了。', expy: 'Tā lái le.', exuz: 'U keldi.', exru: 'Он пришёл.' },
-  { char: '去', pinyin: 'qù', uz: 'ketmoq', ru: 'уходить', strokes: 5, radical: '厶', radicalUz: 'xususiy', radicalRu: 'личный', ex: '我去学校。', expy: 'Wǒ qù xuéxiào.', exuz: 'Men maktabga ketyapman.', exru: 'Я иду в школу.' },
-  { char: '大', pinyin: 'dà', uz: 'katta', ru: 'большой', strokes: 3, radical: '大', radicalUz: 'katta', radicalRu: 'большой', ex: '这个很大。', expy: 'Zhège hěn dà.', exuz: 'Bu juda katta.', exru: 'Это очень большое.' },
-  { char: '小', pinyin: 'xiǎo', uz: 'kichik', ru: 'маленький', strokes: 3, radical: '小', radicalUz: 'kichik', radicalRu: 'маленький', ex: '那个很小。', expy: 'Nàge hěn xiǎo.', exuz: 'U juda kichik.', exru: 'То очень маленькое.' },
-  { char: '好', pinyin: 'hǎo', uz: 'yaxshi', ru: 'хороший', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!' },
-  { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', strokes: 9, radical: '日', radicalUz: 'quyosh', radicalRu: 'солнце', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.' },
-  { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', strokes: 6, radical: '月', radicalUz: 'oy', radicalRu: 'луна', ex: '我有一本书。', expy: 'Wǒ yǒu yì běn shū.', exuz: 'Mening bitta kitobim bor.', exru: 'У меня есть книга.' },
-  { char: '人', pinyin: 'rén', uz: 'odam', ru: 'человек', strokes: 2, radical: '人', radicalUz: 'odam', radicalRu: 'человек', ex: '他是好人。', expy: 'Tā shì hǎo rén.', exuz: 'U yaxshi odam.', exru: 'Он хороший человек.' },
-  { char: '中', pinyin: 'zhōng', uz: "o'rta / Xitoy", ru: 'середина / Китай', strokes: 4, radical: '丨', radicalUz: 'chiziq', radicalRu: 'черта', ex: '我是中国人。', expy: 'Wǒ shì Zhōngguó rén.', exuz: 'Men xitoylikman.', exru: 'Я китаец.' },
+  { char: '我', pinyin: 'wǒ', uz: 'men', ru: 'я', en: 'I / me', strokes: 7, radical: '戈', radicalUz: 'nayza', radicalRu: 'копьё', radicalEn: 'spear', ex: '我是学生。', expy: 'Wǒ shì xuéshēng.', exuz: 'Men talabaman.', exru: 'Я студент.', exen: 'I am a student.' },
+  { char: '你', pinyin: 'nǐ', uz: 'sen', ru: 'ты', en: 'you', strokes: 6, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!', exen: 'Hello!' },
+  { char: '他', pinyin: 'tā', uz: 'u (erkak)', ru: 'он', en: 'he / him', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.', exen: 'He is a teacher.' },
+  { char: '她', pinyin: 'tā', uz: 'u (ayol)', ru: 'она', en: 'she / her', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', radicalEn: 'woman', ex: '她很漂亮。', expy: 'Tā hěn piàoliang.', exuz: 'U juda chiroyli.', exru: 'Она очень красивая.', exen: 'She is very beautiful.' },
+  { char: '们', pinyin: 'men', uz: "ko'plik qo'shimchasi", ru: 'суффикс множества', en: 'plural suffix', strokes: 5, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '我们是朋友。', expy: 'Wǒmen shì péngyou.', exuz: 'Biz do\'stmiz.', exru: 'Мы друзья.', exen: 'We are friends.' },
+  { char: '吃', pinyin: 'chī', uz: 'yemoq', ru: 'есть', en: 'to eat', strokes: 6, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', radicalEn: 'mouth', ex: '我吃饭。', expy: 'Wǒ chī fàn.', exuz: 'Men ovqat yeyapman.', exru: 'Я ем.', exen: 'I am eating.' },
+  { char: '喝', pinyin: 'hē', uz: 'ichmoq', ru: 'пить', en: 'to drink', strokes: 12, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', radicalEn: 'mouth', ex: '我喝水。', expy: 'Wǒ hē shuǐ.', exuz: 'Men suv ichyapman.', exru: 'Я пью воду.', exen: 'I drink water.' },
+  { char: '看', pinyin: 'kàn', uz: "ko'rmoq", ru: 'смотреть', en: 'to look / to read', strokes: 9, radical: '目', radicalUz: 'ko\'z', radicalRu: 'глаз', radicalEn: 'eye', ex: '我看书。', expy: 'Wǒ kàn shū.', exuz: 'Men kitob o\'qiyapman.', exru: 'Я читаю книгу.', exen: 'I am reading a book.' },
+  { char: '听', pinyin: 'tīng', uz: 'tinglаmoq', ru: 'слушать', en: 'to listen', strokes: 7, radical: '口', radicalUz: 'og\'iz', radicalRu: 'рот', radicalEn: 'mouth', ex: '我听音乐。', expy: 'Wǒ tīng yīnyuè.', exuz: 'Men musiqa tinglayapman.', exru: 'Я слушаю музыку.', exen: 'I listen to music.' },
+  { char: '说', pinyin: 'shuō', uz: 'gapirmoq', ru: 'говорить', en: 'to speak', strokes: 9, radical: '讠', radicalUz: 'nutq', radicalRu: 'речь', radicalEn: 'speech', ex: '他说中文。', expy: 'Tā shuō Zhōngwén.', exuz: 'U xitoy tilida gapiradi.', exru: 'Он говорит по-китайски.', exen: 'He speaks Chinese.' },
+  { char: '走', pinyin: 'zǒu', uz: 'yurmoq', ru: 'идти', en: 'to walk / to go', strokes: 7, radical: '走', radicalUz: 'yurish', radicalRu: 'ходьба', radicalEn: 'walk', ex: '我走路。', expy: 'Wǒ zǒu lù.', exuz: 'Men piyoda yuraman.', exru: 'Я иду пешком.', exen: 'I walk.' },
+  { char: '来', pinyin: 'lái', uz: 'kelmoq', ru: 'приходить', en: 'to come', strokes: 7, radical: '木', radicalUz: 'daraxt', radicalRu: 'дерево', radicalEn: 'tree', ex: '他来了。', expy: 'Tā lái le.', exuz: 'U keldi.', exru: 'Он пришёл.', exen: 'He came.' },
+  { char: '去', pinyin: 'qù', uz: 'ketmoq', ru: 'уходить', en: 'to go', strokes: 5, radical: '厶', radicalUz: 'xususiy', radicalRu: 'личный', radicalEn: 'private', ex: '我去学校。', expy: 'Wǒ qù xuéxiào.', exuz: 'Men maktabga ketyapman.', exru: 'Я иду в школу.', exen: 'I go to school.' },
+  { char: '大', pinyin: 'dà', uz: 'katta', ru: 'большой', en: 'big', strokes: 3, radical: '大', radicalUz: 'katta', radicalRu: 'большой', radicalEn: 'big', ex: '这个很大。', expy: 'Zhège hěn dà.', exuz: 'Bu juda katta.', exru: 'Это очень большое.', exen: 'This is very big.' },
+  { char: '小', pinyin: 'xiǎo', uz: 'kichik', ru: 'маленький', en: 'small', strokes: 3, radical: '小', radicalUz: 'kichik', radicalRu: 'маленький', radicalEn: 'small', ex: '那个很小。', expy: 'Nàge hěn xiǎo.', exuz: 'U juda kichik.', exru: 'То очень маленькое.', exen: 'That is very small.' },
+  { char: '好', pinyin: 'hǎo', uz: 'yaxshi', ru: 'хороший', en: 'good', strokes: 6, radical: '女', radicalUz: 'ayol', radicalRu: 'женщина', radicalEn: 'woman', ex: '你好！', expy: 'Nǐ hǎo!', exuz: 'Salom!', exru: 'Привет!', exen: 'Hello!' },
+  { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', en: 'to be', strokes: 9, radical: '日', radicalUz: 'quyosh', radicalRu: 'солнце', radicalEn: 'sun', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.', exen: 'He is a teacher.' },
+  { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', en: 'to have', strokes: 6, radical: '月', radicalUz: 'oy', radicalRu: 'луна', radicalEn: 'moon', ex: '我有一本书。', expy: 'Wǒ yǒu yì běn shū.', exuz: 'Mening bitta kitobim bor.', exru: 'У меня есть книга.', exen: 'I have a book.' },
+  { char: '人', pinyin: 'rén', uz: 'odam', ru: 'человек', en: 'person', strokes: 2, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '他是好人。', expy: 'Tā shì hǎo rén.', exuz: 'U yaxshi odam.', exru: 'Он хороший человек.', exen: 'He is a good person.' },
+  { char: '中', pinyin: 'zhōng', uz: "o'rta / Xitoy", ru: 'середина / Китай', en: 'middle / China', strokes: 4, radical: '丨', radicalUz: 'chiziq', radicalRu: 'черта', radicalEn: 'line', ex: '我是中国人。', expy: 'Wǒ shì Zhōngguó rén.', exuz: 'Men xitoylikman.', exru: 'Я китаец.', exen: 'I am Chinese.' },
 ];
 
 type View = 'home' | 'practice' | 'done';
@@ -162,11 +162,11 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
                       <span style={{ fontSize: 14, fontWeight: 600, color: '#1a1a2e' }}>{w.pinyin}</span>
-                      <span style={{ fontSize: 12, color: '#888' }}>{lang === 'ru' ? w.ru : w.uz}</span>
+                      <span style={{ fontSize: 12, color: '#888' }}>{lang === 'ru' ? w.ru : lang === 'en' ? w.en : w.uz}</span>
                     </div>
                     <div style={{ display: 'flex', gap: 8, marginTop: 3 }}>
                       <span style={{ fontSize: 10, color: '#dc2626', background: '#fee2e2', borderRadius: 4, padding: '1px 6px' }}>{w.strokes} {({ uz: 'chiziq', ru: 'черт', en: 'strokes' } as Record<string, string>)[lang]}</span>
-                      {w.radical && <span style={{ fontSize: 10, color: '#555', background: '#f0f0f3', borderRadius: 4, padding: '1px 6px' }}>{({ uz: 'kalit', ru: 'ключ', en: 'radical' } as Record<string, string>)[lang]}: {w.radical} ({lang === 'ru' ? w.radicalRu : lang === 'en' ? w.radicalUz : w.radicalUz})</span>}
+                      {w.radical && <span style={{ fontSize: 10, color: '#555', background: '#f0f0f3', borderRadius: 4, padding: '1px 6px' }}>{({ uz: 'kalit', ru: 'ключ', en: 'radical' } as Record<string, string>)[lang]}: {w.radical} ({lang === 'ru' ? w.radicalRu : lang === 'en' ? w.radicalEn : w.radicalUz})</span>}
                     </div>
                   </div>
                   <span style={{ fontSize: 16, color: '#ccc', fontWeight: 300, transition: 'transform 0.2s', display: 'inline-block', transform: expandedChar === w.char ? 'rotate(180deg)' : 'rotate(0deg)' }}>▾</span>
@@ -176,7 +176,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                     <div style={{ background: '#fff', borderRadius: 8, padding: 10, borderLeft: '3px solid #dc2626' }}>
                       <div style={{ fontSize: 16, color: '#1a1a2e' }}>{w.ex}</div>
                       <div style={{ fontSize: 11, color: '#dc2626' }}>{w.expy}</div>
-                      <div style={{ fontSize: 11, color: '#888' }}>{lang === 'ru' ? w.exru : w.exuz}</div>
+                      <div style={{ fontSize: 11, color: '#888' }}>{lang === 'ru' ? w.exru : lang === 'en' ? w.exen : w.exuz}</div>
                     </div>
                     <button type="button" onClick={(e) => { e.stopPropagation(); setSubtab('writing'); handleStart(); }} style={{ marginTop: 8, width: '100%', padding: 8, background: 'linear-gradient(135deg, #dc2626, #b91c1c)', border: 'none', borderRadius: 6, color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
                       ✎ {({ uz: 'Yozishni mashq qilish', ru: 'Практиковать написание', en: 'Practice writing' } as Record<string, string>)[lang]}
@@ -306,7 +306,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               </div>
               <div className="hanzi-practice__pinyin">({currentWord.pinyin})</div>
               <div className="hanzi-practice__meaning">
-                {lang === 'ru' ? currentWord.ru : currentWord.uz}
+                {lang === 'ru' ? currentWord.ru : lang === 'en' ? currentWord.en : currentWord.uz}
               </div>
               {isMultiChar && (
                 <div className="hanzi-practice__char-progress">

@@ -146,7 +146,8 @@ Example routes:
 │   │   ├── supabase-client.ts # Browser client (anon key, respects RLS)
 │   │   └── supabase-server.ts # Server client (service role, bypasses RLS)
 │   ├── utils/                    # Utility functions
-│   │   └── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
+│   │   ├── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
+│   │   └── jsonLd.ts          # JSON-LD structured data helpers (breadcrumb, grammar term, etc.)
 │   ├── services/               # Data loading
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
@@ -228,8 +229,8 @@ Page → Section → Sentence → Word
 - **Three UI languages**: Uzbek (uz), Russian (ru), English (en)
 - **Default language**: English (`DEFAULT_LANGUAGE = 'en'` in `ui-state.ts`)
 - Section headings: **Empty** (all Chinese headings removed — `heading` field is `""`)
-- Subheadings: Uzbek/Russian only (e.g., "Yangi so'zlar", "Новые слова")
-- Instructions: Uzbek/Russian only — **NO Chinese text** in any `instruction`/`instruction_ru` fields
+- Subheadings: Trilingual (e.g., "Yangi so'zlar" / "Новые слова" / "New Words")
+- Instructions: Trilingual — **NO Chinese text** in any `instruction`/`instruction_ru`/`instruction_en` fields
 - Lesson badge: "1 DARS" format (number on top, label below)
 - Button tooltips: Language-dependent (Uzbek/Russian/English)
 - Translations: Uzbek (default), Russian, or English (toggle with language button)
@@ -238,15 +239,16 @@ Page → Section → Sentence → Word
 - Tab labels (EN): Dialogue | Writing | Flash | KTV | Grammar | Tests
 - Tab IDs: `dialogues` | `writing` | `flashcards` | `karaoke` | `grammar` | `tests`
 - Language selector: Inside hamburger menu on banner pages (`<select>` dropdown with O'zbekcha/Русский/English options under "Til"/"Язык"/"Language" label, 中文 under "Men o'rganaman"/"Я изучаю"/"I'm learning" label). Lesson/dialogue reader headers use 3-way cycle toggle button (UZ→RU→EN→UZ, showing the CURRENT language label: UZ/RU/EN).
-- **Content translation fallback**: English users see Uzbek translations (`text_translation`) — there are no `text_translation_en` fields in content JSON. English only applies to UI chrome, not lesson content.
+- **Content translations**: All lesson content has trilingual translations via `text_translation` (UZ), `text_translation_ru` (RU), `text_translation_en` (EN). Components should use `_en` when language is English, falling back to Uzbek if `_en` field is missing.
 
-## Trilingual UI / Bilingual Content
-The **UI** supports three languages (Uzbek, Russian, English). **Lesson content** translations remain bilingual (Uzbek/Russian only — English users see Uzbek translations as fallback):
-- `text_translation` / `text_translation_ru` - sentence translations (English falls back to `text_translation`)
-- `contextTranslation` / `contextTranslation_ru` - context translations
-- `instruction` / `instruction_ru` - instruction text
-- `subheading` / `subheading_ru` - section subheadings
-- `tip.translation` / `tip.translation_ru` - tip translations
+## Trilingual Content
+The **UI** and **lesson content** both support three languages (Uzbek, Russian, English). All 45 lesson JSON files (lessons 1-15, 3 pages each) have full trilingual translations:
+- `text_translation` / `text_translation_ru` / `text_translation_en` - sentence translations
+- `contextTranslation` / `contextTranslation_ru` / `contextTranslation_en` - context translations
+- `instruction` / `instruction_ru` / `instruction_en` - instruction text
+- `subheading` / `subheading_ru` / `subheading_en` - section subheadings
+- `tip.translation` / `tip.translation_ru` / `tip.translation_en` - tip translations
+- `titleTranslation` / `titleTranslation_ru` / `titleTranslation_en` - lesson header titles (page 1)
 
 ### Trilingual Content (Blog & Dialogues)
 Some content types support full trilingual translations with optional `_en` fields:
@@ -397,7 +399,8 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **OpenGraph / Twitter Cards**: Configured in root layout. Dynamic OG image via `src/app/opengraph-image.tsx` (edge runtime)
 - **Sitemap**: `src/app/sitemap.ts` — auto-generates URLs for all content pages (lessons, dialogues, karaoke, flashcards, topic flashcards, writing sets, grammar, blog). **IMPORTANT**: When adding new content types or pages, always update `sitemap.ts` to include the new URLs. Topic flashcards are discovered automatically from `content/flashcards/topics/*.json`; writing sets from `WRITING_SETS` in `services/writing.ts`.
 - **robots.txt**: `public/robots.txt` — allows all, blocks `/api/` and `/*admin*`, includes `Sitemap:` directive
-- **JSON-LD**: `WebApplication` structured data in root layout
+- **JSON-LD**: Structured data on all pages via `src/utils/jsonLd.ts` shared helpers (`breadcrumbJsonLd()`, `jsonLdScript()`, `grammarTermJsonLd()`, `GRAMMAR_TERMS`). Uses `@graph` array pattern. Homepage has WebSite + Organization (root layout). Inner pages: BreadcrumbList on all, plus Course on `/chinese`, DefinedTerm on grammar pages, Article on blog posts, LearningResource on dialogues. All locale-aware (trilingual labels, locale-prefixed URLs).
+- **Payment noindex**: `/{locale}/payment` has `robots: { index: false, follow: true }`. Excluded from sitemap.
 - **Icons**: Dynamic favicon (`src/app/icon.tsx`) and Apple touch icon (`src/app/apple-icon.tsx`) via edge runtime
 - **`next/image`**: All logo `<img>` tags use `next/image` `<Image>`. Remote patterns configured in `next.config.js` for Supabase and flagcdn.
 - **Env var**: `NEXT_PUBLIC_SITE_URL` — defaults to `https://blim.uz`, used by sitemap and `metadataBase`

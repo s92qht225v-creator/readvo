@@ -195,6 +195,29 @@ function stripPunct(syllable: string): string {
   return syllable.replace(/^["""''()（）]+/, '').replace(/[.,!?;:。，！？；："""''()（）]+$/g, '');
 }
 
+/**
+ * Strips tone marks and punctuation from pinyin, lowercases.
+ * e.g., "Nǐ jiào shénme míngzi?" → "ni jiao shenme mingzi"
+ */
+export function stripPinyinTones(pinyin: string): string {
+  const TONE_MAP: Record<string, string> = {
+    'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
+    'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
+    'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
+    'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
+    'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
+    'ǖ': 'v', 'ǘ': 'v', 'ǚ': 'v', 'ǜ': 'v',
+  };
+  return pinyin
+    .split('')
+    .map(ch => TONE_MAP[ch] || TONE_MAP[ch.toLowerCase()] || ch)
+    .join('')
+    .toLowerCase()
+    .replace(/[^a-z\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function alignPinyinToText(text: string, pinyin: string): RubyPair[] {
   // Split pinyin into space-separated tokens, then split compound words into syllables
   const tokens = pinyin.split(/\s+/).filter(Boolean);

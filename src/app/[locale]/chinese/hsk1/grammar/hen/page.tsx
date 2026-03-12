@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarHenPage } from '@/components/GrammarHenPage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '很 (hěn) — Xitoy tili grammatikasi | HSK 1',
+    title: '很 hěn "juda" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 很 (hěn) — sifat oldidagi "juda" ravishi. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '很 (hěn) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 很 (hěn) — наречие "очень". Примеры и объяснения.',
+    title: '很 hěn "очень" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 很 (hěn) — наречие "очень". Примеры и объяснения.',
   },
   en: {
-    title: '很 (hěn) — Chinese Grammar | HSK 1',
+    title: '很 hěn "very" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 很 (hěn) — the adverb "very" before adjectives. Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function HenPage({ params }: { params: Promise<{ locale: st
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarHenPage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/hen` },
+    ]),
+    grammarTermJsonLd('hen', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarHenPage />
+    </>
+  );
 }

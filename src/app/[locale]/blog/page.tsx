@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { loadBlogPosts } from '@/services/blog';
 import { BlogList } from '@/components/BlogList';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: { title: 'Xitoy tili blog — maqolalar va qo\'llanmalar', description: 'Xitoy tili o\'rganish bo\'yicha maqolalar: HSK tayyorgarlik, so\'z yodlash usullari, grammatika va boshqalar.' },
@@ -28,5 +29,17 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 
   const posts = await loadBlogPosts();
 
-  return <BlogList posts={posts} />;
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Blog', path: `/${locale}/blog` },
+    ]),
+  ]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <BlogList posts={posts} />
+    </>
+  );
 }

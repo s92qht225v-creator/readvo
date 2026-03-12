@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarLePage } from '@/components/GrammarLePage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '了 (le) — Xitoy tili grammatikasi | HSK 1',
+    title: '了 le "tugallangan harakat" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 了 (le) — tugallangan harakat va o\'zgarish. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '了 (le) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 了 (le) — завершённое действие и изменение. Примеры и объяснения.',
+    title: '了 le "завершённое действие" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 了 (le) — завершённое действие и изменение. Примеры и объяснения.',
   },
   en: {
-    title: '了 (le) — Chinese Grammar | HSK 1',
+    title: '了 le "completed action" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 了 (le) — completed action and change of state. Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function LePage({ params }: { params: Promise<{ locale: str
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarLePage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/le` },
+    ]),
+    grammarTermJsonLd('le', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarLePage />
+    </>
+  );
 }

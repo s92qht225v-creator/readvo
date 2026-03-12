@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarMeiPage } from '@/components/GrammarMeiPage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '没 (méi) — Xitoy tili grammatikasi | HSK 1',
+    title: '没 méi "inkor (o\'tgan zamon)" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 没 (méi) — o\'tgan zamondagi inkor shakli. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '没 (méi) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 没 (méi) — отрицание в прошедшем времени. Примеры и объяснения.',
+    title: '没 méi "не (прошедшее)" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 没 (méi) — отрицание в прошедшем времени. Примеры и объяснения.',
   },
   en: {
-    title: '没 (méi) — Chinese Grammar | HSK 1',
+    title: '没 méi "did not" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 没 (méi) — past tense negation. Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function MeiPage({ params }: { params: Promise<{ locale: st
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarMeiPage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/mei` },
+    ]),
+    grammarTermJsonLd('mei', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarMeiPage />
+    </>
+  );
 }

@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarXiangPage } from '@/components/GrammarXiangPage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '想 (xiǎng) — Xitoy tili grammatikasi | HSK 1',
+    title: '想 xiǎng "xohlamoq" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 想 (xiǎng) — xohish va niyat bildiruvchi fe\'l. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '想 (xiǎng) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 想 (xiǎng) — глагол "хотеть". Примеры и объяснения.',
+    title: '想 xiǎng "хотеть" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 想 (xiǎng) — глагол "хотеть". Примеры и объяснения.',
   },
   en: {
-    title: '想 (xiǎng) — Chinese Grammar | HSK 1',
+    title: '想 xiǎng "to want" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 想 (xiǎng) — the verb "to want/to think". Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function XiangPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarXiangPage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/xiang` },
+    ]),
+    grammarTermJsonLd('xiang', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarXiangPage />
+    </>
+  );
 }

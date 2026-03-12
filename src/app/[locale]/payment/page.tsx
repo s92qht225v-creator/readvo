@@ -14,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: m.title,
     description: m.description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `/${locale}/payment`,
       languages: { uz: '/uz/payment', ru: '/ru/payment', en: '/en/payment', 'x-default': '/uz/payment' },

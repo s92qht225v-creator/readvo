@@ -39,6 +39,7 @@ export interface DialoguePage {
       pinyin: string;
       text_translation: string;
       text_translation_ru: string;
+      text_translation_en?: string;
       speaker?: string;
       audio_url?: string;
       start?: number;
@@ -51,34 +52,59 @@ export interface DialoguePage {
     py: string;
     uz: string;
     ru: string;
+    en?: string;
     ex: string;
     expy: string;
     ex_uz: string;
     ex_ru: string;
+    ex_en?: string;
   }[];
   phrases?: {
     zh: string;
     py: string;
     uz: string;
     ru: string;
+    en?: string;
   }[];
   timeOfDay?: {
     zh: string;
     py: string;
     uz: string;
     ru: string;
+    en?: string;
     icon: string;
   }[];
+  extraVocab?: {
+    zh: string;
+    py: string;
+    uz: string;
+    ru: string;
+    en?: string;
+    icon?: string;
+  }[];
+  extraVocabSubtitle_uz?: string;
+  extraVocabSubtitle_ru?: string;
+  extraVocabSubtitle_en?: string;
   grammarNotes?: {
     pattern: string;
     title_uz: string;
     title_ru: string;
+    title_en?: string;
     desc_uz: string;
     desc_ru: string;
-    ex: string;
-    expy: string;
-    ex_uz: string;
-    ex_ru: string;
+    desc_en?: string;
+    formula?: string;
+    formula_ru?: string;
+    formula_en?: string;
+    ex?: string;
+    expy?: string;
+    ex_uz?: string;
+    ex_ru?: string;
+    ex_en?: string;
+    tip_uz?: string;
+    tip_ru?: string;
+    tip_en?: string;
+    examples?: { zh: string; py: string; uz: string; ru: string; en?: string }[];
   }[];
   quiz?: {
     q_uz: string;

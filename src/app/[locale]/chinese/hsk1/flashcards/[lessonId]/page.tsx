@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
 import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 interface Props {
   params: Promise<{ locale: string; lessonId: string }>;
@@ -70,8 +71,21 @@ export default async function LessonFlashcardsPage({ params }: Props) {
 
   const info = lessonInfos.find((l) => l.lessonNumber === lessonNum);
 
+  const flashLabel = ({ uz: 'Fleshkartalar', ru: 'Флешкарты', en: 'Flashcards' } as Record<string, string>)[locale] || 'Flashcards';
+  const lessonLabel = ({ uz: `${lessonNum}-dars`, ru: `Урок ${lessonNum}`, en: `Lesson ${lessonNum}` } as Record<string, string>)[locale] || `Lesson ${lessonNum}`;
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: flashLabel, path: `/${locale}/chinese/hsk1/flashcards` },
+      { name: lessonLabel, path: `/${locale}/chinese/hsk1/flashcards/${lessonId}` },
+    ]),
+  ]);
+
   return (
-    <FlashcardDeck
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <FlashcardDeck
       deck={{
         id: `${deck.id}-lesson${lessonNum}`,
         title: `${lessonNum}-dars`,
@@ -82,6 +96,7 @@ export default async function LessonFlashcardsPage({ params }: Props) {
           pinyin: w.pinyin,
           text_translation: w.text_translation,
           text_translation_ru: w.text_translation_ru,
+          text_translation_en: w.text_translation_en,
           lesson: w.lesson,
           audio_url: w.audio_url,
         })),
@@ -92,5 +107,6 @@ export default async function LessonFlashcardsPage({ params }: Props) {
       lessonTitleTranslation={info?.titleTranslation}
       lessonTitleTranslation_ru={info?.titleTranslation_ru}
     />
+    </>
   );
 }

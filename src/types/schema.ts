@@ -572,6 +572,9 @@ export interface FlashcardWord {
   /** Translation in Russian */
   readonly text_translation_ru?: string;
 
+  /** Translation in English */
+  readonly text_translation_en?: string;
+
   /** Which lesson this word comes from */
   readonly lesson?: number;
 
@@ -591,6 +594,9 @@ export interface FlashcardDeckData {
 
   /** Deck title (Russian) */
   readonly title_ru?: string;
+
+  /** Deck title (English) */
+  readonly title_en?: string;
 
   /** Deck title (Chinese characters) */
   readonly title_zh?: string;

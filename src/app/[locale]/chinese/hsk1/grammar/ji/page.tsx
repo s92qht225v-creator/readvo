@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarJiPage } from '@/components/GrammarJiPage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '几 (jǐ) — Xitoy tili grammatikasi | HSK 1',
+    title: '几 jǐ "nechta?" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 几 (jǐ) — son so\'rash uchun savol so\'zi. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '几 (jǐ) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 几 (jǐ) — вопросительное слово "сколько". Примеры и объяснения.',
+    title: '几 jǐ "сколько?" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 几 (jǐ) — вопросительное слово "сколько". Примеры и объяснения.',
   },
   en: {
-    title: '几 (jǐ) — Chinese Grammar | HSK 1',
+    title: '几 jǐ "how many?" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 几 (jǐ) — question word "how many". Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function JiPage({ params }: { params: Promise<{ locale: str
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarJiPage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/ji` },
+    ]),
+    grammarTermJsonLd('ji', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarJiPage />
+    </>
+  );
 }

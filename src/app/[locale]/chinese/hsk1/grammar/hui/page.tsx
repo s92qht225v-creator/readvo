@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { GrammarHuiPage } from '@/components/GrammarHuiPage';
+import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
-    title: '会 (huì) — Xitoy tili grammatikasi | HSK 1',
+    title: '会 huì "bilmoq/qila olmoq" — Xitoy tili grammatikasi | HSK 1',
     description: 'Xitoy tili grammatikasi: 会 (huì) — qobiliyat va kelajak bildiruvchi modal fe\'l. Misollar va tushuntirishlar.',
   },
   ru: {
-    title: '会 (huì) — Грамматика китайского | HSK 1',
-    description: 'Грамматика китайского: 会 (huì) — модальный глагол "уметь/мочь". Примеры и объяснения.',
+    title: '会 huì "уметь" — Грамматика китайского языка | HSK 1',
+    description: 'Грамматика китайского языка: 会 (huì) — модальный глагол "уметь/мочь". Примеры и объяснения.',
   },
   en: {
-    title: '会 (huì) — Chinese Grammar | HSK 1',
+    title: '会 huì "can/will" — Chinese Grammar | HSK 1',
     description: 'Chinese grammar: 会 (huì) — modal verb for ability and future. Examples and explanations.',
   },
 };
@@ -39,5 +40,21 @@ export default async function HuiPage({ params }: { params: Promise<{ locale: st
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <GrammarHuiPage />;
+  const grammarLabel = ({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[locale] || 'Grammar';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/hui` },
+    ]),
+    grammarTermJsonLd('hui', locale),
+  ].filter(Boolean) as Record<string, unknown>[]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <GrammarHuiPage />
+    </>
+  );
 }

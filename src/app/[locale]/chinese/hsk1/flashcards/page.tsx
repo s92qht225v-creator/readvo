@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services';
 import { FlashcardListPage } from '@/components/FlashcardListPage';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -65,10 +66,22 @@ export default async function FlashcardsPage({ params }: { params: Promise<{ loc
     wordCount: wordCountByLesson[l.lessonNumber] || 0,
   })).filter((l) => l.wordCount > 0);
 
+  const flashLabel = ({ uz: 'Fleshkartalar', ru: 'Флешкарты', en: 'Flashcards' } as Record<string, string>)[locale] || 'Flashcards';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: flashLabel, path: `/${locale}/chinese/hsk1/flashcards` },
+    ]),
+  ]);
+
   return (
-    <FlashcardListPage
-      lessons={lessonItems}
-      bookPath="/chinese/hsk1"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <FlashcardListPage
+        lessons={lessonItems}
+        bookPath="/chinese/hsk1"
+      />
+    </>
   );
 }

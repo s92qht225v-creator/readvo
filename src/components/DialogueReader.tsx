@@ -28,6 +28,7 @@ interface Sentence {
   pinyin: string;
   text_translation: string;
   text_translation_ru: string;
+  text_translation_en?: string;
   speaker?: string;
   words?: StoryWord[];
   audio_url?: string;
@@ -39,17 +40,22 @@ interface GrammarNote {
   pattern: string;
   title_uz: string;
   title_ru: string;
+  title_en?: string;
   desc_uz: string;
   desc_ru: string;
+  desc_en?: string;
   formula?: string;
   formula_ru?: string;
-  examples?: { zh: string; py: string; uz: string; ru: string }[];
+  formula_en?: string;
+  examples?: { zh: string; py: string; uz: string; ru: string; en?: string }[];
   tip_uz?: string;
   tip_ru?: string;
+  tip_en?: string;
   ex?: string;
   expy?: string;
   ex_uz?: string;
   ex_ru?: string;
+  ex_en?: string;
 }
 
 
@@ -58,10 +64,12 @@ interface VocabEntry {
   py: string;
   uz: string;
   ru: string;
+  en?: string;
   ex: string;
   expy: string;
   ex_uz: string;
   ex_ru: string;
+  ex_en?: string;
 }
 
 interface PhraseEntry {
@@ -69,6 +77,7 @@ interface PhraseEntry {
   py: string;
   uz: string;
   ru: string;
+  en?: string;
 }
 
 interface TimeOfDayEntry {
@@ -76,6 +85,7 @@ interface TimeOfDayEntry {
   py: string;
   uz: string;
   ru: string;
+  en?: string;
   icon: string;
 }
 
@@ -90,9 +100,10 @@ interface DialogueData {
   sections: { id: string; sentences: Sentence[]; audio_url?: string }[];
   vocab?: VocabEntry[];
   phrases?: PhraseEntry[];
-  extraVocab?: { zh: string; py: string; uz: string; ru: string; icon?: string }[];
+  extraVocab?: { zh: string; py: string; uz: string; ru: string; en?: string; icon?: string }[];
   extraVocabSubtitle_uz?: string;
   extraVocabSubtitle_ru?: string;
+  extraVocabSubtitle_en?: string;
   timeOfDay?: TimeOfDayEntry[];
   grammarNotes?: GrammarNote[];
 }
@@ -255,17 +266,17 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   // Vocab: use authored vocab if present, else auto-extract from sentences
   const vocabList = useMemo(() => {
     if (dialogue.vocab && dialogue.vocab.length > 0) {
-      return dialogue.vocab.map(v => ({ zh: v.zh, py: v.py, uz: v.uz, ru: v.ru, ex: v.ex, expy: v.expy, exuz: v.ex_uz, exru: v.ex_ru }));
+      return dialogue.vocab.map(v => ({ zh: v.zh, py: v.py, uz: v.uz, ru: v.ru, en: v.en || '', ex: v.ex, expy: v.expy, exuz: v.ex_uz, exru: v.ex_ru, exen: v.ex_en || '' }));
     }
     const seen = new Set<string>();
-    const words: Array<{ zh: string; py: string; uz: string; ru: string; ex: string; expy: string; exuz: string; exru: string }> = [];
+    const words: Array<{ zh: string; py: string; uz: string; ru: string; en: string; ex: string; expy: string; exuz: string; exru: string; exen: string }> = [];
     for (const s of allSentences) {
       if (!s.words) continue;
       for (const w of s.words) {
         const zh = s.text_original.slice(w.i[0], w.i[1]);
         if (seen.has(zh) || !zh.trim() || /[，。？！、""''：；]/.test(zh)) continue;
         seen.add(zh);
-        words.push({ zh, py: w.p, uz: w.t, ru: w.tr, ex: s.text_original, expy: s.pinyin, exuz: s.text_translation, exru: s.text_translation_ru });
+        words.push({ zh, py: w.p, uz: w.t, ru: w.tr, en: '', ex: s.text_original, expy: s.pinyin, exuz: s.text_translation, exru: s.text_translation_ru, exen: s.text_translation_en || '' });
       }
     }
     return words;
@@ -333,7 +344,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                       </span>
                     </div>
                     {showTranslation && (
-                      <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : activeSentence.text_translation}</div>
+                      <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : language === 'en' ? (activeSentence.text_translation_en || activeSentence.text_translation) : activeSentence.text_translation}</div>
                     )}
                   </div>
                   <div className="story__focus-nav">
@@ -392,7 +403,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                           </div>
                           {showTranslation && (
                             <div className="dr-line-tr">
-                              {language === 'ru' ? s.text_translation_ru : s.text_translation}
+                              {language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation}
                             </div>
                           )}
                         </div>
@@ -453,13 +464,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                         <div className="dr-vocab-row">
                           <span className="dr-vocab-zh">{v.zh}</span>
                           <span className="dr-vocab-py">{v.py}</span>
-                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : v.uz}</span>
+                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
                         </div>
                         {expandedVocab === i && (
                           <div className="dr-vocab-example">
                             <div className="dr-vocab-example-zh">{v.ex}</div>
                             <div className="dr-vocab-example-py">{v.expy}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : v.exuz}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : language === 'en' ? (v.exen || v.exuz) : v.exuz}</div>
                           </div>
                         )}
                       </div>
@@ -472,7 +483,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                   <div className="dr-card">
                     <div className="dr-label">{({ uz: 'Mavzuga oid qo\'shimcha so\'zlar', ru: 'Дополнительные слова по теме', en: 'Additional Topic Words' } as Record<string, string>)[language]}</div>
                     {dialogue.extraVocabSubtitle_uz && (
-                      <div className="dr-sublabel">{language === 'ru' ? dialogue.extraVocabSubtitle_ru : dialogue.extraVocabSubtitle_uz}</div>
+                      <div className="dr-sublabel">{language === 'ru' ? dialogue.extraVocabSubtitle_ru : language === 'en' ? (dialogue.extraVocabSubtitle_en || dialogue.extraVocabSubtitle_uz) : dialogue.extraVocabSubtitle_uz}</div>
                     )}
                     {dialogue.extraVocab.map((v, i) => (
                       <div key={i} className="dr-vocab-item dr-vocab-item--nohover">
@@ -480,7 +491,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                           {v.icon && <span className="dr-vocab-icon">{v.icon}</span>}
                           <span className="dr-vocab-zh">{v.zh}</span>
                           <span className="dr-vocab-py">{v.py}</span>
-                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : v.uz}</span>
+                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
                         </div>
                       </div>
                     ))}
@@ -495,7 +506,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                         <div key={i} className="dr-phrase-card">
                           <div className="dr-phrase-zh">{p.zh}</div>
                           <div className="dr-phrase-py">{p.py}</div>
-                          <div className="dr-phrase-tr">{language === 'ru' ? p.ru : p.uz}</div>
+                          <div className="dr-phrase-tr">{language === 'ru' ? p.ru : language === 'en' ? (p.en || p.uz) : p.uz}</div>
                         </div>
                       ))}
                     </div>
@@ -511,7 +522,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                           <div className="dr-tod-icon">{t.icon}</div>
                           <div className="dr-tod-zh">{t.zh}</div>
                           <div className="dr-tod-py">{t.py}</div>
-                          <div className="dr-tod-tr">{language === 'ru' ? t.ru : t.uz}</div>
+                          <div className="dr-tod-tr">{language === 'ru' ? t.ru : language === 'en' ? (t.en || t.uz) : t.uz}</div>
                         </div>
                       ))}
                     </div>
@@ -536,31 +547,31 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                   <div key={i} className="dr-card dr-grammar-card" onClick={() => setExpandedGrammar(expandedGrammar === i ? null : i)}>
                     <div className="dr-grammar-header">
                       <span className="dr-grammar-pattern">{g.pattern}</span>
-                      <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : g.title_uz}</span>
+                      <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : language === 'en' ? (g.title_en || g.title_uz) : g.title_uz}</span>
                       <span className={`dr-grammar-arrow${expandedGrammar === i ? ' dr-grammar-arrow--open' : ''}`}>▾</span>
                     </div>
-                    <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : g.desc_uz}</div>
+                    <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : language === 'en' ? (g.desc_en || g.desc_uz) : g.desc_uz}</div>
                     {expandedGrammar === i && (
                       <div className="dr-grammar-expanded">
                         {(g.formula || g.formula_ru) && (
-                          <div className="dr-grammar-formula">{language === 'ru' ? (g.formula_ru ?? g.formula) : g.formula}</div>
+                          <div className="dr-grammar-formula">{language === 'ru' ? (g.formula_ru ?? g.formula) : language === 'en' ? (g.formula_en ?? g.formula) : g.formula}</div>
                         )}
                         {g.examples && g.examples.map((ex, ei) => (
                           <div key={ei} className="dr-grammar-example">
                             <div className="dr-vocab-example-zh">{ex.zh}</div>
                             <div className="dr-vocab-example-py">{ex.py}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? ex.ru : ex.uz}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? ex.ru : language === 'en' ? (ex.en || ex.uz) : ex.uz}</div>
                           </div>
                         ))}
                         {!g.examples && g.ex && (
                           <div className="dr-grammar-example">
                             <div className="dr-vocab-example-zh">{g.ex}</div>
                             <div className="dr-vocab-example-py">{g.expy}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : g.ex_uz}</div>
+                            <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : language === 'en' ? (g.ex_en || g.ex_uz) : g.ex_uz}</div>
                           </div>
                         )}
                         {(g.tip_uz || g.tip_ru) && (
-                          <div className="dr-grammar-tip">💡 {language === 'ru' ? g.tip_ru : g.tip_uz}</div>
+                          <div className="dr-grammar-tip">💡 {language === 'ru' ? g.tip_ru : language === 'en' ? (g.tip_en || g.tip_uz) : g.tip_uz}</div>
                         )}
                       </div>
                     )}

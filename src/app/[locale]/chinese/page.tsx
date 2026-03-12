@@ -5,6 +5,7 @@ import { LanguagePage } from '@/components/LanguagePage';
 import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
@@ -24,7 +25,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
 const tabMeta: Record<string, Record<string, { title: string; description: string }>> = {
   grammar: {
     uz: { title: 'Xitoy tili grammatikasi — HSK 1', description: 'HSK 1 grammatika qoidalari: 是, 有, 在, 的, 不, 吗, 了 va boshqalar. Misollar bilan o\'rganing.' },
-    ru: { title: 'Грамматика китайского — HSK 1', description: 'Грамматика HSK 1: 是, 有, 在, 的, 不, 吗, 了 и другие. Учите с примерами.' },
+    ru: { title: 'Грамматика китайского языка — HSK 1', description: 'Грамматика китайского языка HSK 1: 是, 有, 在, 的, 不, 吗, 了 и другие. Учите с примерами.' },
     en: { title: 'Chinese Grammar — HSK 1', description: 'HSK 1 grammar patterns: 是, 有, 在, 的, 不, 吗, 了 and more. Learn with examples.' },
   },
   writing: {
@@ -88,9 +89,28 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
         })
     : [];
 
+  const homeLabel = ({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[locale] || 'Home';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: homeLabel, path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+    ]),
+    {
+      '@type': 'Course',
+      name: 'HSK 1 Chinese',
+      description: (pageMeta[locale] || pageMeta.uz).description,
+      provider: { '@type': 'Organization', name: 'Blim' },
+      inLanguage: 'zh',
+      educationalLevel: 'Beginner',
+    },
+  ]);
+
   return (
-    <Suspense>
-      <LanguagePage dialogues={dialogues} flashcardLessons={flashcardLessons} />
-    </Suspense>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <Suspense>
+        <LanguagePage dialogues={dialogues} flashcardLessons={flashcardLessons} />
+      </Suspense>
+    </>
   );
 }

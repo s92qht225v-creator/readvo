@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadKaraokeSong } from '@/services/karaoke';
 import { KaraokePlayer } from '@/components/KaraokePlayer';
+import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 interface PageParams {
   params: Promise<{
@@ -62,5 +63,20 @@ export default async function KaraokePage({ params }: PageParams) {
     notFound();
   }
 
-  return <KaraokePlayer song={song} bookPath="/chinese/hsk1" />;
+  const karaokeLabel = 'KTV';
+  const jsonLd = jsonLdScript([
+    breadcrumbJsonLd([
+      { name: 'Blim', path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese` },
+      { name: karaokeLabel, path: `/${locale}/chinese?tab=karaoke` },
+      { name: song.title, path: `/${locale}/chinese/hsk1/karaoke/${songId}` },
+    ]),
+  ]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <KaraokePlayer song={song} bookPath="/chinese/hsk1" />
+    </>
+  );
 }
