@@ -134,7 +134,7 @@ body {
   font-weight: 500;
   color: var(--color-text-secondary);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .page__toggle-btn:hover {
@@ -169,7 +169,7 @@ body {
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .page__lang-btn:hover {
@@ -198,7 +198,7 @@ body {
   font-weight: 600;
   color: var(--color-text-secondary);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .page__font-btn:hover:not(:disabled) {
@@ -974,7 +974,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   background: white;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .matching__image-card:hover:not(:disabled) {
@@ -1039,7 +1039,7 @@ body {
   border: 2px solid var(--color-border);
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   min-width: 80px;
 }
 
@@ -1165,7 +1165,7 @@ body {
   border: 2px solid var(--color-border);
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   opacity: 0.6;
 }
 
@@ -1255,7 +1255,7 @@ body {
   font-family: var(--font-cjk);
   font-size: calc(var(--font-size-base) * var(--font-scale, 1));
   color: var(--color-text-secondary);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   vertical-align: middle;
 }
 
@@ -1438,7 +1438,7 @@ body {
   border: 2px solid var(--color-border);
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   min-width: 80px;
 }
 
@@ -1903,7 +1903,7 @@ body {
   background: var(--color-accent);
   color: white;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
   flex-shrink: 0;
 }
 
@@ -2260,7 +2260,7 @@ body {
   border-radius: 3px;
   cursor: pointer;
   color: var(--color-text-secondary);
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .sentence__audio-btn svg {
@@ -3601,7 +3601,7 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3871,7 +3871,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .flashcard__action-btn--know {
@@ -3958,7 +3958,7 @@ body {
   color: var(--color-accent);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   font-size: calc(var(--font-size-small) * var(--font-scale, 1));
 }
 
@@ -5035,7 +5035,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .lesson-card:hover {
@@ -5108,7 +5108,7 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 6px;
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
   min-width: 64px;
 }
 
@@ -5153,7 +5153,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
 }
 
@@ -5419,7 +5419,7 @@ body {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   padding: var(--spacing-md) var(--spacing-lg);
 }
 
@@ -5521,7 +5521,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
   position: relative;
 }
 
@@ -6620,7 +6620,7 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 3px;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .reader__nav-toggle--active {
@@ -6639,7 +6639,7 @@ body {
   text-decoration: none;
   border: 1px solid var(--color-border);
   border-radius: 3px;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .reader__nav-btn:hover {
@@ -6822,7 +6822,7 @@ body {
   background: transparent;
   padding: 0;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .guided__dot:hover {
@@ -7063,7 +7063,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
   border: none;
 }
 
@@ -10027,7 +10027,7 @@ body {
   font-size: 14px;
   color: #aaa;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
 }
 
 .hanzi-practice__stroke-count--animating {
