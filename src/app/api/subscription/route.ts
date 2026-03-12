@@ -1,27 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 export async function GET(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
   const authHeader = request.headers.get('authorization');
   const token = authHeader?.replace('Bearer ', '');
   if (!token) {
     return NextResponse.json({ subscription: null });
   }
 
-  const supabase = createClient(url, anonKey, {
-    global: { headers: { Authorization: `Bearer ${token}` } },
-  });
+  const admin = getSupabaseAdmin();
 
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) {
+  // Use admin client to verify JWT — avoids creating a per-request anon client
+  const { data: { user }, error } = await admin.auth.getUser(token);
+  if (error || !user) {
     return NextResponse.json({ subscription: null });
   }
-
-  const admin = getSupabaseAdmin();
 
   const now = new Date().toISOString();
   const { data: subscription } = await admin

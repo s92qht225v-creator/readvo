@@ -13,9 +13,16 @@ interface User {
   created_at: string;
 }
 
+interface SubscriptionInfo {
+  ends_at: string;
+  plan?: string;
+}
+
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
+  subscription: SubscriptionInfo | null;
+  subscriptionChecked: boolean;
   loginWithTelegram: () => Promise<void>;
   loginWithGoogle: () => Promise<void>;
   logout: () => Promise<void>;
@@ -25,6 +32,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType>({
   user: null,
   isLoading: true,
+  subscription: null,
+  subscriptionChecked: false,
   loginWithTelegram: async () => {},
   loginWithGoogle: async () => {},
   logout: async () => {},
@@ -44,8 +53,11 @@ function mapUser(supabaseUser: SupabaseUser): User {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [subscription, setSubscription] = useState<SubscriptionInfo | null>(null);
+  const [subscriptionChecked, setSubscriptionChecked] = useState(false);
   const router = useRouter();
   const loginGrace = useRef(false);
+  const subFetchRef = useRef<Promise<void> | null>(null);
 
   useEffect(() => {
     // Listen for auth changes (including token from URL hash)
@@ -130,6 +142,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => clearInterval(interval);
   }, [user, router]);
 
+  // Fetch subscription ONCE when user is available — shared via context
+  useEffect(() => {
+    if (!user) {
+      setSubscription(null);
+      setSubscriptionChecked(false);
+      return;
+    }
+    // Deduplicate: if a fetch is already in flight, skip
+    if (subFetchRef.current) return;
+    subFetchRef.current = (async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session?.access_token) { setSubscriptionChecked(true); return; }
+        const res = await fetch('/api/subscription', {
+          headers: { Authorization: `Bearer ${session.access_token}` },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.subscription) {
+            setSubscription({ ends_at: data.subscription.ends_at, plan: data.subscription.plan });
+          }
+        }
+      } catch { /* ignore */ }
+      setSubscriptionChecked(true);
+      subFetchRef.current = null;
+    })();
+  }, [user]);
+
   const loginWithTelegram = useCallback(async () => {
     const res = await fetch('/api/auth/telegram/init');
     const data = await res.json();
@@ -168,7 +208,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, loginWithTelegram, loginWithGoogle, logout, getAccessToken }}>
+    <AuthContext.Provider value={{ user, isLoading, subscription, subscriptionChecked, loginWithTelegram, loginWithGoogle, logout, getAccessToken }}>
       {children}
     </AuthContext.Provider>
   );
