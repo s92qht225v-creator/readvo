@@ -57,8 +57,11 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const activeWords = wordsProp ?? WORDS;
   const audio = useAudioPlayer();
   const audioMapRef = useRef<Record<string, string>>({});
+  const audioMapReady = useRef<Promise<void> | null>(null);
   useEffect(() => {
-    import('@/services/writing-audio').then((m) => { audioMapRef.current = m.WRITING_AUDIO; });
+    audioMapReady.current = import('@/services/writing-audio').then((m) => { audioMapRef.current = m.WRITING_AUDIO; });
+    return () => { audio.stop(); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [view, setView] = useState<View>('home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
@@ -77,7 +80,8 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const hideBtnRef = useRef<HTMLButtonElement>(null);
 
   /** Play audio for a word (looks up from dynamically-loaded audio map) */
-  const playWordAudio = useCallback((word: HanziWord) => {
+  const playWordAudio = useCallback(async (word: HanziWord) => {
+    if (audioMapReady.current) await audioMapReady.current;
     const url = audioMapRef.current[word.char];
     if (url) audio.play(`writing-${word.char}`, url);
   }, [audio]);
@@ -89,8 +93,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     setSessionIndex(0);
     setCharIndex(0);
     setView('practice');
-    // Play first word audio after state settles
-    setTimeout(() => { if (activeWords[0]) playWordAudio(activeWords[0]); }, 300);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -100,9 +102,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     setSessionIndex(0);
     setCharIndex(0);
     setView('practice');
-    // Play first word audio
-    setTimeout(() => { if (shuffled[0]) playWordAudio(shuffled[0]); }, 300);
-  }, [activeWords, playWordAudio]);
+  }, [activeWords]);
 
   const advance = useCallback(() => {
     setShowAnswer(0);
@@ -114,10 +114,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
       setView('done');
     } else {
       // Moving to next word — play its audio
+      const nextWord = sessionQueue[sessionIndex + 1];
       setCharIndex(0);
       setSessionIndex((i) => i + 1);
       setResetKey((k) => k + 1);
-      const nextWord = sessionQueue[sessionIndex + 1];
       if (nextWord) setTimeout(() => playWordAudio(nextWord), 200);
     }
   }, [sessionIndex, sessionQueue, charIndex, playWordAudio]);
@@ -146,8 +146,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     setResetKey(0);
     setHiddenMode(false);
     setView('practice');
-    setTimeout(() => { if (shuffled[0]) playWordAudio(shuffled[0]); }, 300);
-  }, [sessionQueue, playWordAudio]);
+  }, [sessionQueue]);
 
   const currentWord = sessionQueue[sessionIndex];
   const wordChars = currentWord ? [...currentWord.char] : [];
@@ -358,15 +357,15 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 lang={lang}
                 revealAll={showAnswer}
                 hidden={hiddenMode}
-                onComplete={() => {
-                  // Play audio when character writing is completed
-                  if (currentWord) playWordAudio(currentWord);
-                }}
+                onComplete={() => { if (currentWord) playWordAudio(currentWord); }}
               />
             )}
           </div>
 
           <div style={{ display: 'flex', gap: 8 }}>
+            <button className="hanzi-practice__action-btn" type="button" onClick={() => { if (currentWord) playWordAudio(currentWord); }}>
+              🔊
+            </button>
             <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
               {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>
@@ -401,7 +400,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                   const prevWord = sessionQueue[sessionIndex - 1];
                   setCharIndex([...prevWord.char].length - 1);
                   setSessionIndex((i) => i - 1);
-                  // Play previous word audio
                   setTimeout(() => playWordAudio(prevWord), 200);
                 }
               })}

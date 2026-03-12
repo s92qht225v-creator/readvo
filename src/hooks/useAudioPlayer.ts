@@ -220,6 +220,7 @@ export function useAudioPlayer(): AudioPlayerControls {
       // Play directly in user gesture call stack to avoid browser tap sound
       audio.src = audioUrl;
       audio.play().catch((err) => {
+        if (err.name === 'AbortError') return; // Expected when rapid play/pause
         console.error('Audio play failed:', err);
         if (globalCurrentSentenceId === sentenceId) {
           globalCurrentSentenceId = null;
