@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HanziCanvas } from './HanziCanvas';
+import { CoachMarkTour } from './CoachMark';
+import type { TourStep } from './CoachMark';
 import type { HanziWord } from '@/services/writing';
 
 export type { HanziWord };
@@ -64,6 +66,9 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const [resetKey, setResetKey] = useState(0);
   const [showAnswer, setShowAnswer] = useState(0);
   const [hiddenMode, setHiddenMode] = useState(false);
+  const eraseBtnRef = useRef<HTMLButtonElement>(null);
+  const showBtnRef = useRef<HTMLButtonElement>(null);
+  const hideBtnRef = useRef<HTMLButtonElement>(null);
 
   // Auto-start: skip home screen and go directly to practice with all words
   useEffect(() => {
@@ -334,13 +339,14 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
           </div>
 
           <div style={{ display: 'flex', gap: 8 }}>
-            <button className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
+            <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
               {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>
-            <button className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleShow)}>
+            <button ref={showBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleShow)}>
               {({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
             </button>
             <button
+              ref={hideBtnRef}
               className={`hanzi-practice__action-btn${hiddenMode ? ' hanzi-practice__action-btn--active' : ''}`}
               type="button"
               onClick={() => keepScroll(() => {
@@ -384,6 +390,15 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
           </div>
         </div>
       </div>
+      <CoachMarkTour
+        tourId="writing-tour"
+        lang={lang}
+        steps={[
+          { tipId: 'writing-erase', targetRef: eraseBtnRef, text: { uz: "O'chirib qaytadan yozish", ru: "Стереть и написать заново", en: "Erase and rewrite" } },
+          { tipId: 'writing-show', targetRef: showBtnRef, text: { uz: "Ko'rsatmalar bilan yozish", ru: "Писать с подсказками", en: "Write with hints" } },
+          { tipId: 'writing-hide', targetRef: hideBtnRef, text: { uz: "Ieroglifni yashirib xotiradan yozish", ru: "Скрыть иероглиф написать по памяти", en: "Hide the character and write from memory" } },
+        ] as TourStep[]}
+      />
     </div>
   );
 }

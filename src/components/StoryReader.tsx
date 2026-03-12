@@ -13,6 +13,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { CoachMark, dismissTip } from './CoachMark';
 import { trackAll } from '@/utils/analytics';
 
 interface StoryWord {
@@ -113,6 +114,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
   const sentenceAudio = useAudioPlayer();
   // Full-story audio state
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const firstSentenceRef = useRef<HTMLDivElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -193,6 +195,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
     : null;
 
   const handleSentenceClick = useCallback((id: string) => {
+    dismissTip('reader-tap');
     setActiveSentenceId((prev) => {
       // In focus mode, never deselect (view would collapse)
       if (focusMode) return id;
@@ -417,9 +420,10 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
           story.sections.map((section) => (
             <div key={section.id} className={`story__paragraph ${isDialogue ? 'story__paragraph--dialogue' : ''}`}>
               {isDialogue ? (
-                section.sentences.map((s) => (
+                section.sentences.map((s, si) => (
                   <div
                     key={s.id}
+                    ref={si === 0 && section === story.sections[0] ? firstSentenceRef : undefined}
                     className={`story__dialogue-line ${displaySentenceId === s.id ? 'story__sentence--active' : ''} ${audioSentenceId === s.id ? 'story__sentence--playing' : ''}`}
                     onClick={() => handleSentenceClick(s.id)}
                   >
@@ -439,6 +443,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
                     <React.Fragment key={s.id}>
                       {i > 0 && ' '}
                       <span
+                        ref={i === 0 && section === story.sections[0] ? firstSentenceRef as React.RefObject<HTMLSpanElement> : undefined}
                         className={`story__sentence ${displaySentenceId === s.id ? 'story__sentence--active' : ''} ${audioSentenceId === s.id ? 'story__sentence--playing' : ''}`}
                         onClick={() => handleSentenceClick(s.id)}
                       >
@@ -456,6 +461,13 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
           ))
         )}
       </article>
+
+      <CoachMark
+        tipId="reader-tap"
+        targetRef={firstSentenceRef}
+        lang={language}
+        text={{ uz: "Gapni bosing — audio eshitasiz 🔊", ru: "Нажмите на предложение — услышите аудио 🔊", en: "Tap any sentence to hear it 🔊" }}
+      />
 
       {!focusMode && story.audio_url && (
         <button

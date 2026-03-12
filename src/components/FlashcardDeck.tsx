@@ -11,6 +11,8 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { CoachMarkTour, dismissTip } from './CoachMark';
+import type { TourStep } from './CoachMark';
 import { trackAll } from '@/utils/analytics';
 
 export interface FlashcardDeckProps {
@@ -43,6 +45,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   });
   const [dragX, setDragX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const pinyinBtnRef = useRef<HTMLButtonElement>(null);
   const startX = useRef(0);
   const dragXRef = useRef(0);
   const isDraggingRef = useRef(false);
@@ -293,7 +297,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               onMouseDown={onMouseDown}
               style={{ userSelect: 'none', touchAction: 'pan-y' }}
             >
-              <div style={{ perspective: 800, width: '100%', height: 260, position: 'relative', cursor: 'pointer' }}>
+              <div ref={cardRef} style={{ perspective: 800, width: '100%', height: 260, position: 'relative', cursor: 'pointer' }}>
                 {/* Swipe indicator */}
                 {Math.abs(dragX) > 20 && (
                   <div style={{
@@ -341,7 +345,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                 )}
 
                 <div
-                  onClick={() => { if (!isDragging && Math.abs(dragX) < 5) setIsFlipped((f) => !f); }}
+                  onClick={() => { if (!isDragging && Math.abs(dragX) < 5) { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
                   style={{
                     width: '100%', height: '100%',
                     transformStyle: 'preserve-3d',
@@ -440,6 +444,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
         <nav className="story__bottom-bar">
           <div className="story__bottom-bar-inner">
             <button
+              ref={pinyinBtnRef}
               className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`}
               onClick={() => setIsPinyinVisible((p) => !p)}
               type="button"
@@ -449,6 +454,16 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           </div>
         </nav>
       </main>
+      <CoachMarkTour
+        tourId="flashcard-tour"
+        lang={language}
+        steps={[
+          { tipId: 'fc-tap', targetRef: cardRef, text: { uz: 'Tarjimani ko\'rish uchun kartani bosing', ru: 'Нажмите на карточку, чтобы увидеть перевод', en: 'Tap the card to see the translation' } },
+          { tipId: 'fc-swipe-left', targetRef: cardRef, text: { uz: 'So\'zni bilmasangiz chapga suring', ru: 'Свайп влево, если вы не знаете слово', en: 'Swipe left if you don\'t know the word' } },
+          { tipId: 'fc-swipe-right', targetRef: cardRef, text: { uz: 'So\'zni bilsangiz o\'ngga suring', ru: 'Свайп вправо, если вы знаете слово', en: 'Swipe right if you know the word' } },
+          { tipId: 'fc-pinyin', targetRef: pinyinBtnRef, text: { uz: 'Pinyinni yoqish/o\'chirish', ru: 'Нажмите, чтобы вкл/выкл пиньинь', en: 'Toggle pinyin on/off' }, forceAbove: true },
+        ] as TourStep[]}
+      />
       <PageFooter />
     </>
   );
