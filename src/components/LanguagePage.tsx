@@ -104,12 +104,17 @@ function FlashcardModeBar({ flashcardMode, setFlashcardMode }: { flashcardMode: 
 
 const FLASHCARD_MIX_KEY = 'blim-flashcard-mix';
 
-function FlashcardUnitSelector({ lessons, onStart }: {
+function FlashcardUnitSelector({ lessons, onStart, onSingle }: {
   lessons: { lessonId: string; lessonNumber: number; wordCount: number; title?: string; title_ru?: string }[];
   onStart: (selectedIds: string[]) => void;
+  onSingle: (lessonNumber: number) => void;
 }) {
   const [selected, setSelected] = React.useState<string[]>([]);
+  const [selectMode, setSelectMode] = React.useState(false);
   const [language] = useLanguage();
+  const longPressTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const longPressTriggered = React.useRef(false);
+  const tapped = React.useRef(false);
 
   const toggle = (id: string) => setSelected((prev) =>
     prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
@@ -121,28 +126,80 @@ function FlashcardUnitSelector({ lessons, onStart }: {
 
   const allSelected = selected.length === lessons.length;
 
+  const cancelSelect = () => {
+    setSelectMode(false);
+    setSelected([]);
+  };
+
+  const handlePointerDown = (l: typeof lessons[0]) => {
+    longPressTriggered.current = false;
+    longPressTimer.current = setTimeout(() => {
+      longPressTriggered.current = true;
+      setSelectMode(true);
+      setSelected((prev) => prev.includes(l.lessonId) ? prev : [...prev, l.lessonId]);
+    }, 400);
+  };
+
+  const handlePointerUp = (l: typeof lessons[0]) => {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+      longPressTimer.current = null;
+    }
+    if (longPressTriggered.current) return;
+    tapped.current = true;
+    if (selectMode) {
+      toggle(l.lessonId);
+    } else {
+      onSingle(l.lessonNumber);
+    }
+  };
+
+  const handleClick = (l: typeof lessons[0]) => {
+    if (tapped.current) { tapped.current = false; return; }
+    if (longPressTriggered.current) return;
+    if (selectMode) {
+      toggle(l.lessonId);
+    } else {
+      onSingle(l.lessonNumber);
+    }
+  };
+
   return (
     <div style={{ marginBottom: 18 }}>
       <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: 2, color: '#dc2626', fontWeight: 700, marginBottom: 10 }}>
-        {({ uz: 'Darslarni tanlang', ru: 'Выберите уроки', en: 'Select lessons' } as Record<string, string>)[language]}
+        {selectMode
+          ? ({ uz: 'Darslarni tanlang', ru: 'Выберите уроки', en: 'Select lessons' } as Record<string, string>)[language]
+          : ({ uz: 'Darsni bosing — mashq boshlang', ru: 'Нажмите на урок — начните практику', en: 'Tap a lesson to start practice' } as Record<string, string>)[language]
+        }
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
         {lessons.map((l) => {
-          const sel = selected.includes(l.lessonId);
+          const sel = selectMode && selected.includes(l.lessonId);
           return (
-            <div key={l.lessonId} onClick={() => toggle(l.lessonId)} style={{
-              display: 'flex', alignItems: 'center', gap: 10,
-              background: '#fff',
-              border: sel ? '2px solid #dc2626' : '2px solid transparent',
-              borderRadius: 10, padding: '12px 14px', cursor: 'pointer',
-              boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
-            }}>
+            <div
+              key={l.lessonId}
+              onPointerDown={() => handlePointerDown(l)}
+              onPointerUp={() => handlePointerUp(l)}
+              onPointerLeave={() => { if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; } }}
+              onPointerCancel={() => { if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; } }}
+              onClick={() => handleClick(l)}
+              onContextMenu={(e) => e.preventDefault()}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 10,
+                background: '#fff',
+                border: sel ? '2px solid #dc2626' : '2px solid transparent',
+                borderRadius: 10, padding: '12px 14px', cursor: 'pointer',
+                boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+                userSelect: 'none', WebkitUserSelect: 'none',
+              }}
+            >
               <span style={{
                 fontSize: 13, fontWeight: 700, color: '#fff',
                 background: '#dc2626', borderRadius: 8,
                 minWidth: 28, height: 28, flexShrink: 0,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>{l.lessonNumber}</span>
+                transition: 'background 0.15s',
+              }}>{sel ? '✓' : l.lessonNumber}</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>{l.title ?? `第${l.lessonNumber}课`}</div>
                 <div style={{ fontSize: 11, color: '#999' }}>{l.wordCount} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}</div>
@@ -151,31 +208,42 @@ function FlashcardUnitSelector({ lessons, onStart }: {
           );
         })}
       </div>
-      <div style={{ textAlign: 'center', marginTop: 10 }}>
-        <button
-          onClick={() => setSelected(allSelected ? [] : lessons.map((l) => l.lessonId))}
-          style={{ background: 'transparent', border: 'none', color: '#dc2626', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
-          type="button"
-        >
-          {({ uz: allSelected ? 'Barchasini bekor qilish' : 'Barchasini tanlash', ru: allSelected ? 'Снять все' : 'Выбрать все', en: allSelected ? 'Deselect all' : 'Select all' } as Record<string, string>)[language]}
-        </button>
-      </div>
-      <button
-        onClick={() => { if (selected.length > 0) onStart(selected); }}
-        disabled={selected.length === 0}
-        style={{
-          width: '100%', padding: 13, marginTop: 14,
-          background: selected.length > 0 ? 'linear-gradient(135deg, #dc2626, #b91c1c)' : '#e0e0e6',
-          border: 'none', borderRadius: 10,
-          color: selected.length > 0 ? '#fff' : '#999',
-          fontSize: 15, fontWeight: 600,
-          cursor: selected.length > 0 ? 'pointer' : 'not-allowed',
-          fontFamily: 'inherit',
-        }}
-        type="button"
-      >
-        {({ uz: `Boshlash (${totalWords} so'z)`, ru: `Начать (${totalWords} слов)`, en: `Start (${totalWords} words)` } as Record<string, string>)[language]}
-      </button>
+      {selectMode && (
+        <>
+          <div style={{ textAlign: 'center', marginTop: 10, display: 'flex', justifyContent: 'center', gap: 16 }}>
+            <button
+              onClick={() => setSelected(allSelected ? [] : lessons.map((l) => l.lessonId))}
+              style={{ background: 'transparent', border: 'none', color: '#dc2626', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
+              type="button"
+            >
+              {({ uz: allSelected ? 'Barchasini bekor qilish' : 'Barchasini tanlash', ru: allSelected ? 'Снять все' : 'Выбрать все', en: allSelected ? 'Deselect all' : 'Select all' } as Record<string, string>)[language]}
+            </button>
+            <button
+              onClick={cancelSelect}
+              style={{ background: 'transparent', border: 'none', color: '#999', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
+              type="button"
+            >
+              {({ uz: 'Bekor qilish', ru: 'Отмена', en: 'Cancel' } as Record<string, string>)[language]}
+            </button>
+          </div>
+          <button
+            onClick={() => { if (selected.length > 0) onStart(selected); }}
+            disabled={selected.length === 0}
+            style={{
+              width: '100%', padding: 13, marginTop: 14,
+              background: selected.length > 0 ? 'linear-gradient(135deg, #dc2626, #b91c1c)' : '#e0e0e6',
+              border: 'none', borderRadius: 10,
+              color: selected.length > 0 ? '#fff' : '#999',
+              fontSize: 15, fontWeight: 600,
+              cursor: selected.length > 0 ? 'pointer' : 'not-allowed',
+              fontFamily: 'inherit',
+            }}
+            type="button"
+          >
+            {({ uz: `Boshlash (${totalWords} so'z)`, ru: `Начать (${totalWords} слов)`, en: `Start (${totalWords} words)` } as Record<string, string>)[language]}
+          </button>
+        </>
+      )}
     </div>
   );
 }
@@ -528,6 +596,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [] }: Props) {
                     localStorage.setItem(FLASHCARD_MIX_KEY, JSON.stringify(selectedIds));
                     router.push('/chinese/hsk1/flashcards/mix');
                   }}
+                  onSingle={(lessonNumber) => router.push(`/chinese/hsk1/flashcards/${lessonNumber}`)}
                 />
               </>
             )}

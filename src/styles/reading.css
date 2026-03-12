@@ -10791,3 +10791,20 @@ body {
 .coach-tooltip__btn:active {
   background: #b91c1c;
 }
+
+.coach-tooltip__skip {
+  display: block;
+  margin: 8px auto 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.coach-tooltip__skip:active {
+  color: #888;
+}

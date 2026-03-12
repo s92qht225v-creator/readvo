@@ -597,8 +597,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         tourId="dialogue-tour"
         lang={language}
         steps={[
-          { tipId: 'tour-tap', targetRef: firstLineRef, text: { uz: "Gapni bosing — audio eshitasiz", ru: "Нажмите на предложение чтобы услышать аудио", en: "Tap any sentence to hear it" } },
-          { tipId: 'tour-focus', targetRef: focusBtnRef, forceAbove: true, text: { uz: "Fokus rejimi — bir gapni ko'rsatadi", ru: "Режим фокуса — показывает по одному предложению", en: "Focus mode shows one sentence at a time" } },
+          { tipId: 'tour-tap', targetRef: firstLineRef, text: { uz: "Audioni eshitish uchun gapni bosing", ru: "Нажмите на предложение чтобы услышать аудио", en: "Tap any sentence to hear audio" } },
+          { tipId: 'tour-focus', targetRef: focusBtnRef, forceAbove: true, text: { uz: "Fokus rejimi — bir vaqtda bir gap ko'rsatadi", ru: "Режим фокуса — показывает по одному предложению", en: "Focus mode shows one sentence at a time" } },
           { tipId: 'tour-translation', targetRef: translationBtnRef, forceAbove: true, text: { uz: "Tarjimani ko'rish uchun bosing", ru: "Нажмите, чтобы увидеть перевод", en: "Toggle translation to see the meaning" } },
           { tipId: 'tour-pinyin', targetRef: pinyinBtnRef, forceAbove: true, text: { uz: "Pinyinni yoqish yoki o'chirish", ru: "Нажмите чтобы вкл/выкл пиньинь", en: "Toggle pinyin on or off" } },
           { tipId: 'tour-font', targetRef: fontControlsRef, text: { uz: "Shrift o'lchamini o'zgartirish", ru: "Нажмите чтобы изменить размер шрифта", en: "Change font size" } },

@@ -5,6 +5,8 @@ import { HanziCanvas } from './HanziCanvas';
 import { CoachMarkTour } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import type { HanziWord } from '@/services/writing';
+import { WRITING_AUDIO } from '@/services/writing';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export type { HanziWord };
 
@@ -54,6 +56,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart, hideSubtabs, subtab: subtabProp, onSubtabChange }: Props) {
   const activeWords = wordsProp ?? WORDS;
+  const audio = useAudioPlayer();
   const [view, setView] = useState<View>('home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
   const subtab = subtabProp ?? subtabInternal;
@@ -70,6 +73,12 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const showBtnRef = useRef<HTMLButtonElement>(null);
   const hideBtnRef = useRef<HTMLButtonElement>(null);
 
+  /** Play audio for a word (looks up from WRITING_AUDIO map) */
+  const playWordAudio = useCallback((word: HanziWord) => {
+    const url = WRITING_AUDIO[word.char];
+    if (url) audio.play(`writing-${word.char}`, url);
+  }, [audio]);
+
   // Auto-start: skip home screen and go directly to practice with all words
   useEffect(() => {
     if (!autoStart) return;
@@ -77,28 +86,37 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     setSessionIndex(0);
     setCharIndex(0);
     setView('practice');
+    // Play first word audio after state settles
+    setTimeout(() => { if (activeWords[0]) playWordAudio(activeWords[0]); }, 300);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleStart = useCallback(() => {
-    setSessionQueue(shuffle(activeWords));
+    const shuffled = shuffle(activeWords);
+    setSessionQueue(shuffled);
     setSessionIndex(0);
     setCharIndex(0);
     setView('practice');
-  }, [activeWords]);
+    // Play first word audio
+    setTimeout(() => { if (shuffled[0]) playWordAudio(shuffled[0]); }, 300);
+  }, [activeWords, playWordAudio]);
 
   const advance = useCallback(() => {
     setShowAnswer(0);
     const currentChars = [...(sessionQueue[sessionIndex]?.char || '')];
     if (charIndex < currentChars.length - 1) {
+      // Next character within same multi-char word — no audio (same word)
       setCharIndex((i) => i + 1);
     } else if (sessionIndex + 1 >= sessionQueue.length) {
       setView('done');
     } else {
+      // Moving to next word — play its audio
       setCharIndex(0);
       setSessionIndex((i) => i + 1);
+      const nextWord = sessionQueue[sessionIndex + 1];
+      if (nextWord) setTimeout(() => playWordAudio(nextWord), 200);
     }
-  }, [sessionIndex, sessionQueue, charIndex]);
+  }, [sessionIndex, sessionQueue, charIndex, playWordAudio]);
 
   const handleErase = useCallback(() => {
     setResetKey((k) => k + 1);
@@ -116,14 +134,16 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   }, []);
 
   const handleRestart = useCallback(() => {
-    setSessionQueue(shuffle(sessionQueue));
+    const shuffled = shuffle(sessionQueue);
+    setSessionQueue(shuffled);
     setSessionIndex(0);
     setCharIndex(0);
     setShowAnswer(0);
     setResetKey(0);
     setHiddenMode(false);
     setView('practice');
-  }, [sessionQueue]);
+    setTimeout(() => { if (shuffled[0]) playWordAudio(shuffled[0]); }, 300);
+  }, [sessionQueue, playWordAudio]);
 
   const currentWord = sessionQueue[sessionIndex];
   const wordChars = currentWord ? [...currentWord.char] : [];
@@ -334,6 +354,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 lang={lang}
                 revealAll={showAnswer}
                 hidden={hiddenMode}
+                onComplete={() => {
+                  // Play audio when character writing is completed
+                  if (currentWord) playWordAudio(currentWord);
+                }}
               />
             )}
           </div>
@@ -367,11 +391,14 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               onClick={() => keepScroll(() => {
                 setShowAnswer(0);
                 if (charIndex > 0) {
+                  // Previous character within same multi-char word — no audio
                   setCharIndex((i) => i - 1);
                 } else if (sessionIndex > 0) {
                   const prevWord = sessionQueue[sessionIndex - 1];
                   setCharIndex([...prevWord.char].length - 1);
                   setSessionIndex((i) => i - 1);
+                  // Play previous word audio
+                  setTimeout(() => playWordAudio(prevWord), 200);
                 }
               })}
             >

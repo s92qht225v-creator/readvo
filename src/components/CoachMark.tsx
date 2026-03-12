@@ -133,6 +133,9 @@ export function CoachMark({ tipId, targetRef, lang, text, btnText, onDismiss, de
         <button className="coach-tooltip__btn" type="button" onClick={dismiss}>
           {btn} →
         </button>
+        <button className="coach-tooltip__skip" type="button" onClick={dismiss}>
+          {({ uz: 'Boshqa ko\'rsatilmasin', ru: 'Больше не показывать', en: "Don't show again" } as Record<string, string>)[lang] || "Don't show again"}
+        </button>
       </div>
     </>
   );
@@ -260,6 +263,9 @@ export function CoachMarkTour({ tourId, steps, lang, delay = 1000 }: TourProps) 
         <div className="coach-tooltip__counter">{step + 1} / {steps.length}</div>
         <button className="coach-tooltip__btn" type="button" onClick={next}>
           {btnLabel} →
+        </button>
+        <button className="coach-tooltip__skip" type="button" onClick={dismiss}>
+          {({ uz: 'Boshqa ko\'rsatilmasin', ru: 'Больше не показывать', en: "Don't show again" } as Record<string, string>)[lang] || "Don't show again"}
         </button>
       </div>
     </>

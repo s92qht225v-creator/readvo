@@ -466,7 +466,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
         tipId="reader-tap"
         targetRef={firstSentenceRef}
         lang={language}
-        text={{ uz: "Gapni bosing — audio eshitasiz 🔊", ru: "Нажмите на предложение — услышите аудио 🔊", en: "Tap any sentence to hear it 🔊" }}
+        text={{ uz: "Audioni eshitish uchun gapni bosing 🔊", ru: "Нажмите на предложение — услышите аудио 🔊", en: "Tap any sentence to hear audio 🔊" }}
       />
 
       {!focusMode && story.audio_url && (
