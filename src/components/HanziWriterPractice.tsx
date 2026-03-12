@@ -116,6 +116,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
       // Moving to next word — play its audio
       setCharIndex(0);
       setSessionIndex((i) => i + 1);
+      setResetKey((k) => k + 1);
       const nextWord = sessionQueue[sessionIndex + 1];
       if (nextWord) setTimeout(() => playWordAudio(nextWord), 200);
     }

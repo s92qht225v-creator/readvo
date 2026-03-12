@@ -419,7 +419,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
             }</div>
             <div className="dr-hero__pinyin">{
               activeTab === 'dialogues' ? 'duìhuà' :
-              activeTab === 'writing' ? 'shūxiě' :
+              activeTab === 'writing' ? 'xiězì' :
               activeTab === 'flashcards' ? 'cíkǎ' :
               activeTab === 'karaoke' ? 'gēqǔ' :
               activeTab === 'grammar' ? 'yǔfǎ' :
