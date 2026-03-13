@@ -10,6 +10,8 @@ export interface BlogSection {
   body_en?: string;
   image?: string;
   imageAlt?: string;
+  imageAlt_ru?: string;
+  imageAlt_en?: string;
 }
 
 export interface BlogPost {
@@ -22,6 +24,8 @@ export interface BlogPost {
   description_en?: string;
   date: string;
   heroImage?: string;
+  heroImage_ru?: string;
+  heroImage_en?: string;
   intro?: string;
   intro_ru?: string;
   intro_en?: string;

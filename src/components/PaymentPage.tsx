@@ -35,7 +35,7 @@ const PLAN_LABELS_EN: Record<string, string> = {
   '12_months': '12 months',
 };
 
-const CARD_NUMBER = '9860 1234 5678 9012';
+const CARD_NUMBER = '9860 1766 1049 2223';
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB (matches server)
 
 type PlanId = typeof PLANS[number]['id'];

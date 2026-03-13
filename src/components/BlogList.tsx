@@ -12,7 +12,15 @@ interface Props {
 export function BlogList({ posts }: Props) {
   const [language, toggleLanguage] = useLanguage();
   const isRu = language === 'ru';
-  const dateLocale = language === 'ru' ? 'ru-RU' : language === 'en' ? 'en-US' : 'uz-UZ';
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    if (language === 'uz') {
+      const months = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr'];
+      return `${d.getUTCDate()}-${months[d.getUTCMonth()]}, ${d.getUTCFullYear()}`;
+    }
+    const locale = language === 'ru' ? 'ru-RU' : 'en-US';
+    return d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  };
 
   return (
     <main className="blog">
@@ -42,9 +50,7 @@ export function BlogList({ posts }: Props) {
               {language === 'ru' ? post.description_ru : language === 'en' ? (post.description_en || post.description) : post.description}
             </p>
             <span className="blog__card-date" suppressHydrationWarning>
-              {new Date(post.date).toLocaleDateString(dateLocale, {
-                year: 'numeric', month: 'long', day: 'numeric',
-              })}
+              {formatDate(post.date)}
             </span>
           </Link>
         ))}

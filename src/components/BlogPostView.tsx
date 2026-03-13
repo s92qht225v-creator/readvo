@@ -43,7 +43,15 @@ export function BlogPostView({ post }: Props) {
 
   const title = language === 'ru' ? post.title_ru : language === 'en' ? (post.title_en || post.title) : post.title;
   const intro = language === 'ru' ? post.intro_ru : language === 'en' ? (post.intro_en || post.intro) : post.intro;
-  const dateLocale = language === 'ru' ? 'ru-RU' : language === 'en' ? 'en-US' : 'uz-UZ';
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    if (language === 'uz') {
+      const months = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr'];
+      return `${d.getUTCDate()}-${months[d.getUTCMonth()]}, ${d.getUTCFullYear()}`;
+    }
+    const locale = language === 'ru' ? 'ru-RU' : 'en-US';
+    return d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  };
 
   return (
     <main className="blog">
@@ -58,15 +66,13 @@ export function BlogPostView({ post }: Props) {
         </div>
         <h1 className="blog__post-title">{title}</h1>
         <p className="blog__post-date" suppressHydrationWarning>
-          {new Date(post.date).toLocaleDateString(dateLocale, {
-            year: 'numeric', month: 'long', day: 'numeric',
-          })}
+          {formatDate(post.date)}
         </p>
       </div>
       {post.heroImage && (
         <div className="blog__hero-image">
           <Image
-            src={post.heroImage}
+            src={(language === 'ru' ? post.heroImage_ru : language === 'en' ? post.heroImage_en : undefined) || post.heroImage}
             alt={title}
             width={800}
             height={450}
@@ -86,18 +92,18 @@ export function BlogPostView({ post }: Props) {
             <h2 className="blog__section-heading">
               {language === 'ru' ? section.heading_ru : language === 'en' ? (section.heading_en || section.heading) : section.heading}
             </h2>
-            {renderBody(language === 'ru' ? section.body_ru : language === 'en' ? (section.body_en || section.body) : section.body)}
             {section.image && (
               <div className="blog__section-image">
                 <Image
                   src={section.image}
-                  alt={section.imageAlt || (language === 'ru' ? section.heading_ru : language === 'en' ? (section.heading_en || section.heading) : section.heading)}
+                  alt={(language === 'ru' ? (section.imageAlt_ru || section.imageAlt) : language === 'en' ? (section.imageAlt_en || section.imageAlt) : section.imageAlt) || heading}
                   width={800}
                   height={450}
                   style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
                 />
               </div>
             )}
+            {renderBody(language === 'ru' ? section.body_ru : language === 'en' ? (section.body_en || section.body) : section.body)}
           </section>
         ))}
       </article>
