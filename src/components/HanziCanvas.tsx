@@ -800,10 +800,22 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     }
   }, [onCorrect, onWrong, onOutOfOrder]);
 
-  // Show button: enter guide mode — dot shows path for current stroke, user draws it
+  // Show button: toggle guide mode — odd = on (dot shows path), even = off (free draw)
   useEffect(() => {
     if (!revealAll || revealAll === lastRevealRef.current || loading || loadError || animatingRef.current) return;
     lastRevealRef.current = revealAll;
+
+    // Even clicks = turn guide off
+    if (revealAll % 2 === 0) {
+      guideModeRef.current = false;
+      cancelAnimationFrame(hintDotRafRef.current);
+      const inputCtx = inputRef.current?.getContext('2d');
+      if (inputCtx) inputCtx.clearRect(0, 0, sizeRef.current, sizeRef.current);
+      currentInputRef.current = [];
+      return;
+    }
+
+    // Odd clicks = turn guide on
     const strokes = strokesRef.current;
     const idx = completedRef.current;
     if (idx >= strokes.length) return;

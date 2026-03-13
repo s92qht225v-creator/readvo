@@ -369,8 +369,15 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
             <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
               {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>
-            <button ref={showBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleShow)}>
-              {({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
+            <button
+              ref={showBtnRef}
+              className={`hanzi-practice__action-btn${showAnswer % 2 === 1 ? ' hanzi-practice__action-btn--active' : ''}`}
+              type="button"
+              onClick={() => keepScroll(handleShow)}
+            >
+              {showAnswer % 2 === 1
+                ? ({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]
+                : ({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
             </button>
             <button
               ref={hideBtnRef}
