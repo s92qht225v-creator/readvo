@@ -96,7 +96,7 @@ export function BlogPostView({ post }: Props) {
               <div className="blog__section-image">
                 <Image
                   src={section.image}
-                  alt={(language === 'ru' ? (section.imageAlt_ru || section.imageAlt) : language === 'en' ? (section.imageAlt_en || section.imageAlt) : section.imageAlt) || heading}
+                  alt={(language === 'ru' ? (section.imageAlt_ru || section.imageAlt) : language === 'en' ? (section.imageAlt_en || section.imageAlt) : section.imageAlt) || section.heading}
                   width={800}
                   height={450}
                   style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
