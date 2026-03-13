@@ -3,7 +3,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Link } from '@/i18n/navigation';
 import type { FlashcardDeckData, FlashcardWord } from '../types';
-import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useLanguage } from '../hooks/useLanguage';
 import { shuffleArray } from '../utils/shuffle';
 import { useRequireAuth } from '../hooks/useRequireAuth';
@@ -51,8 +50,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const dragXRef = useRef(0);
   const isDraggingRef = useRef(false);
   const isProcessingRef = useRef(false);
-  const audio = useAudioPlayer();
-
   // Analytics: track flashcard view
   useEffect(() => {
     trackAll('ViewContent', 'flashcard_view', 'flashcard_view', {
@@ -67,15 +64,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const isComplete = reviewedCount >= totalCards && totalCards > 0;
   const currentCard = cards[currentIndex];
   const pct = totalCards > 0 ? Math.round((reviewedCount / totalCards) * 100) : 0;
-
-  const handleAudioClick = useCallback(() => {
-    if (!currentCard?.audio_url) return;
-    if (audio.isPlaying(currentCard.id)) {
-      audio.stop();
-    } else {
-      audio.play(currentCard.id, currentCard.audio_url);
-    }
-  }, [audio, currentCard]);
 
   const handleKnow = useCallback(() => {
     if (!currentCard || isProcessingRef.current) return;
@@ -320,29 +308,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                   </div>
                 )}
 
-                {/* Audio button */}
-                {currentCard.audio_url && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); handleAudioClick(); }}
-                    style={{
-                      position: 'absolute', top: 12, right: 12, zIndex: 10,
-                      width: 32, height: 32, borderRadius: '50%',
-                      background: audio.isPlaying(currentCard.id) ? '#dc2626' : '#f5f5f8',
-                      border: 'none', cursor: 'pointer',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    }}
-                    type="button"
-                    aria-label="Audio"
-                  >
-                    {audio.isLoading(currentCard.id) ? (
-                      <span style={{ width: 14, height: 14, border: '2px solid #dc2626', borderTopColor: 'transparent', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.8s linear infinite' }} />
-                    ) : audio.isPlaying(currentCard.id) ? (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
-                    ) : (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#999"><path d="M8 5v14l11-7z" /></svg>
-                    )}
-                  </button>
-                )}
 
                 <div
                   onClick={() => { if (!isDragging && Math.abs(dragX) < 5) { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
