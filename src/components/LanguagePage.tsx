@@ -33,7 +33,7 @@ const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] =
   { id: 'writing', label: 'Yozish', label_ru: 'Письмо', label_en: 'Writing' },
   { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
   { id: 'karaoke', label: 'KTV' },
-  { id: 'grammar', label: 'Tika', label_ru: 'Грамматика', label_en: 'Grammar' },
+  { id: 'grammar', label: 'Grammatika', label_ru: 'Грамматика', label_en: 'Grammar' },
   { id: 'tests', label: 'Test', label_ru: 'Тесты', label_en: 'Tests' },
 ];
 
@@ -325,7 +325,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
 
   // Writing tab
-  const initialVersion = searchParams.get('version') === '2.0' ? '2.0' : '3.0';
+  const initialVersion = searchParams.get('version') === '3.0' ? '3.0' : '2.0';
   const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>(initialVersion);
   const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : searchParams.get('hsk') === '4' ? '4' : searchParams.get('hsk') === '5' ? '5' : searchParams.get('hsk') === '6' ? '6' : '1';
   const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3' | '4' | '5' | '6'>(initialWritingHskLevel as '1' | '2' | '3' | '4' | '5' | '6');
@@ -648,8 +648,9 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                     href={`/chinese/hsk1/writing/${set.id}`}
                     prefetch={false}
                   >
-                    <div className="lp__writing-card__chars" aria-hidden="true">
-                      {set.chars}
+                    <div className="lp__writing-card-deco" aria-hidden="true">{set.chars.slice(0, 5)}</div>
+                    <div className="lp__writing-card__num">
+                      {set.id.split('-set')[1]}
                     </div>
                     <div className="lp__writing-card__body">
                       <div className="lp__writing-card__title">
@@ -745,6 +746,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
           <div className="lp__list">
             {karaokeItems.map((k) => (
               <Link key={k.href} href={k.href} prefetch={false} className="lp__card">
+                <div className="lp__card-deco" aria-hidden="true">{k.title}</div>
                 <div className="lp__card-main">
                   <div className="lp__card-title">{k.title}</div>
                   <div className="lp__card-pinyin">{k.pinyin}</div>

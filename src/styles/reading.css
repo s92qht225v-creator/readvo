@@ -5834,17 +5834,33 @@ body {
   align-items: center;
   gap: 12px;
   background: #fff;
-  border: 1px solid #e0e0e6;
+  border: 1px solid #e8e8ed;
   border-radius: 10px;
   padding: 12px 14px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.lp__card-deco {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .lp__card:hover {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .lp__card-main {
@@ -10423,6 +10439,22 @@ body {
   font-family: inherit;
   width: 100%;
   transition: box-shadow 0.15s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.lp__writing-card-deco {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .lp__writing-card:hover {
@@ -10430,15 +10462,18 @@ body {
   transform: translateY(-1px);
 }
 
-.lp__writing-card__chars {
-  font-size: 1.15rem;
-  color: #ccc;
-  letter-spacing: 0.05em;
+.lp__writing-card__num {
   flex-shrink: 0;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 44px;
+  height: 44px;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .lp__writing-card__body {
