@@ -9980,6 +9980,10 @@ body {
 .hanzi-practice__meaning {
   font-size: 24px;
   color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .hanzi-practice__word-display {

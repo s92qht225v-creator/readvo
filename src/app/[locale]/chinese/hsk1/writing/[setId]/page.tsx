@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { WRITING_SETS, WRITING_SETS_HSK2, getWritingSet } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, getWritingSet } from '@/services/writing';
 import { WritingPracticePage } from './WritingPracticePage';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  return [...WRITING_SETS, ...WRITING_SETS_HSK2].map((s) => ({ setId: s.id }));
+  return [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2].map((s) => ({ setId: s.id }));
 }
 
 export default async function WritingSetPage({ params }: Props) {

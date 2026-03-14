@@ -25,7 +25,7 @@ interface Props {
   onComplete?: (mistakes: number) => void;
   revealAll?: number; // increment to trigger reveal; 0 = idle
   hidden?: boolean; // hide character outline (write from memory)
-  onPlayAudio?: () => void; // play pronunciation audio
+  onPlayAudio?: () => void; // play pronunciation audio (unused, kept for API compat)
 }
 
 function distance(a: Point, b: Point): number {
@@ -888,13 +888,13 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         onPointerCancel={handleStrokeEnd}
         onLostPointerCapture={handleStrokeEnd}
       />
-      {/* Stroke counter — top-left */}
+      {/* Stroke counter — bottom-right */}
       {strokeCount > 0 && (
         <div
           style={{
             position: 'absolute',
-            top: 8,
-            left: 10,
+            bottom: 8,
+            right: 10,
             zIndex: 3,
             fontSize: 13,
             fontWeight: 600,
@@ -905,34 +905,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         >
           {completedCount}/{strokeCount}
         </div>
-      )}
-      {/* Play audio — bottom-right */}
-      {onPlayAudio && (
-        <button
-          type="button"
-          onClick={onPlayAudio}
-          style={{
-            position: 'absolute',
-            bottom: 8,
-            right: 8,
-            zIndex: 3,
-            width: 36,
-            height: 36,
-            borderRadius: '50%',
-            border: 'none',
-            background: '#dc2626',
-            color: '#fff',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 0,
-            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
-          }}
-          aria-label="Play audio"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
-        </button>
       )}
     </div>
   );

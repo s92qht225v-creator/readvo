@@ -335,6 +335,29 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               <div className="hanzi-practice__pinyin">({currentWord.pinyin})</div>
               <div className="hanzi-practice__meaning">
                 {lang === 'ru' ? currentWord.ru : lang === 'en' ? currentWord.en : currentWord.uz}
+                <button
+                  type="button"
+                  onClick={() => { if (currentWord) playWordAudio(currentWord); }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 28,
+                    height: 28,
+                    borderRadius: '50%',
+                    border: 'none',
+                    background: '#dc2626',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    padding: 0,
+                    marginLeft: 8,
+                    verticalAlign: 'middle',
+                    flexShrink: 0,
+                  }}
+                  aria-label="Play audio"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
+                </button>
               </div>
               {isMultiChar && (
                 <div className="hanzi-practice__char-progress">
@@ -358,7 +381,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 revealAll={showAnswer}
                 hidden={hiddenMode}
                 onComplete={() => { if (currentWord) playWordAudio(currentWord); }}
-                onPlayAudio={() => { if (currentWord) playWordAudio(currentWord); }}
               />
             )}
           </div>

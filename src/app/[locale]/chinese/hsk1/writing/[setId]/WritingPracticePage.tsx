@@ -23,6 +23,9 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const [language] = useLanguage();
   const router = useRouter();
   const [subtab, setSubtab] = useState<'writing' | 'chars'>('writing');
+  const isHsk2L2 = setId.startsWith('hsk2-l2-');
+  const isHsk2 = setId.startsWith('hsk2-') && !isHsk2L2;
+  const backUrl = isHsk2L2 ? '/chinese?tab=writing&version=2.0&hsk=2' : isHsk2 ? '/chinese?tab=writing&version=2.0' : '/chinese?tab=writing';
 
   // Analytics: track writing practice view
   useEffect(() => {
@@ -44,7 +47,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
             <button
               className="dr-back-btn"
               type="button"
-              onClick={() => router.push('/chinese?tab=writing')}
+              onClick={() => router.push(backUrl)}
               aria-label="Orqaga"
             >
               ‹
@@ -81,7 +84,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
         <HanziWriterPractice
           lang={language}
           words={words}
-          onBack={() => router.push('/chinese?tab=writing')}
+          onBack={() => router.push(backUrl)}
           autoStart
           hideSubtabs
           subtab={subtab}
