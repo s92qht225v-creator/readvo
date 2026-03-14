@@ -1584,6 +1584,39 @@ export const WRITING_SETS_HSK2_L2: WritingSet[] = [
   },
 ];
 
+export const WRITING_SETS_HSK3: WritingSet[] = [
+  {
+    id: 'hsk3-set1',
+    title: "HSK 3 — 1-to'plam",
+    title_ru: 'HSK 3 — Набор 1',
+    subtitle: "20 ta so'z · 啊 半 还是 口 还 只 位 跟 分 一共 张 音乐 用 难 刻 老 先 又 教 为",
+    subtitle_ru: '20 слов · 啊 半 还是 口 还 只 位 跟 分 一共 张 音乐 用 难 刻 老 先 又 教 为',
+    chars: '啊半还口只位跟分张音乐用难刻老先又教为',
+    words: [
+      { char: '啊', pinyin: 'a', uz: 'oh! / voy! (undov)', ru: 'ах! / о! (восклицание)', en: 'ah! / oh! (exclamation)', strokes: 10, radical: '口', radicalUz: "og'iz", radicalRu: 'рот', radicalEn: 'mouth', ex: '啊，真漂亮！', expy: 'A, zhēn piàoliang!', exuz: 'Voy, juda chiroyli!', exru: 'О, как красиво!', exen: 'Oh, how beautiful!' },
+      { char: '半', pinyin: 'bàn', uz: 'yarim', ru: 'половина', en: 'half', strokes: 5, radical: '十', radicalUz: "o'n", radicalRu: 'десять', radicalEn: 'ten', ex: '半个小时。', expy: 'Bàn gè xiǎoshí.', exuz: 'Yarim soat.', exru: 'Полчаса.', exen: 'Half an hour.' },
+      { char: '还是', pinyin: 'háishi', uz: 'yoki / baribir', ru: 'или / всё равно', en: 'or / still', strokes: 11, ex: '你喝茶还是咖啡？', expy: 'Nǐ hē chá háishi kāfēi?', exuz: 'Choy ichasizmi yoki qahva?', exru: 'Вы пьёте чай или кофе?', exen: 'Do you drink tea or coffee?' },
+      { char: '口', pinyin: 'kǒu', uz: "og'iz", ru: 'рот', en: 'mouth', strokes: 3, radical: '口', radicalUz: "og'iz", radicalRu: 'рот', radicalEn: 'mouth', ex: '他的口很大。', expy: 'Tā de kǒu hěn dà.', exuz: "Uning og'zi katta.", exru: 'У него большой рот.', exen: 'He has a big mouth.' },
+      { char: '还', pinyin: 'hái', uz: 'hali ham / yana', ru: 'ещё / всё ещё', en: 'still / also', strokes: 7, radical: '辶', radicalUz: 'yurish', radicalRu: 'движение', radicalEn: 'walk', ex: '我还在学习。', expy: 'Wǒ hái zài xuéxí.', exuz: 'Men hali ham o\'qiyapman.', exru: 'Я всё ещё учусь.', exen: 'I am still studying.' },
+      { char: '只', pinyin: 'zhǐ', uz: 'faqat / atigi', ru: 'только / лишь', en: 'only / just', strokes: 5, radical: '口', radicalUz: "og'iz", radicalRu: 'рот', radicalEn: 'mouth', ex: '我只有一本书。', expy: 'Wǒ zhǐ yǒu yì běn shū.', exuz: 'Menda faqat bitta kitob bor.', exru: 'У меня только одна книга.', exen: 'I only have one book.' },
+      { char: '位', pinyin: 'wèi', uz: 'o\'rin / naf. son (hurmat)', ru: 'место / счётное слово (уважит.)', en: 'seat / polite measure word', strokes: 7, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '这位是我的老师。', expy: 'Zhè wèi shì wǒ de lǎoshī.', exuz: 'Bu mening o\'qituvchim.', exru: 'Это мой учитель.', exen: 'This is my teacher.' },
+      { char: '跟', pinyin: 'gēn', uz: 'bilan / ergashmoq', ru: 'с / следовать', en: 'with / to follow', strokes: 13, radical: '足', radicalUz: 'oyoq', radicalRu: 'нога', radicalEn: 'foot', ex: '我跟他一起去。', expy: 'Wǒ gēn tā yìqǐ qù.', exuz: 'Men u bilan birga boraman.', exru: 'Я иду вместе с ним.', exen: 'I go together with him.' },
+      { char: '分', pinyin: 'fēn', uz: 'daqiqa / ball / bo\'lmoq', ru: 'минута / балл / делить', en: 'minute / point / to divide', strokes: 4, radical: '刀', radicalUz: 'pichoq', radicalRu: 'нож', radicalEn: 'knife', ex: '还有五分钟。', expy: 'Hái yǒu wǔ fēn zhōng.', exuz: 'Yana besh daqiqa bor.', exru: 'Ещё пять минут.', exen: 'Five more minutes.' },
+      { char: '一共', pinyin: 'yīgòng', uz: 'jami / hammasi bo\'lib', ru: 'всего / итого', en: 'altogether / in total', strokes: 8, ex: '一共多少钱？', expy: 'Yīgòng duōshao qián?', exuz: 'Jami qancha pul?', exru: 'Сколько всего стоит?', exen: 'How much is it altogether?' },
+      { char: '张', pinyin: 'zhāng', uz: 'varaq (qog\'oz uchun)', ru: 'лист (счётное для бумаги)', en: 'sheet (measure word for paper)', strokes: 7, radical: '弓', radicalUz: 'yoy', radicalRu: 'лук', radicalEn: 'bow', ex: '一张纸。', expy: 'Yì zhāng zhǐ.', exuz: 'Bir varaq qog\'oz.', exru: 'Лист бумаги.', exen: 'A sheet of paper.' },
+      { char: '音乐', pinyin: 'yīnyuè', uz: 'musiqa', ru: 'музыка', en: 'music', strokes: 17, ex: '我喜欢音乐。', expy: 'Wǒ xǐhuan yīnyuè.', exuz: 'Men musiqani yaxshi ko\'raman.', exru: 'Я люблю музыку.', exen: 'I love music.' },
+      { char: '用', pinyin: 'yòng', uz: 'ishlatmoq / foydalanmoq', ru: 'использовать / применять', en: 'to use', strokes: 5, radical: '用', radicalUz: 'ishlatmoq', radicalRu: 'использовать', radicalEn: 'use', ex: '用手机打电话。', expy: 'Yòng shǒujī dǎ diànhuà.', exuz: 'Telefon bilan qo\'ng\'iroq qilmoq.', exru: 'Звонить по мобильному.', exen: 'Make a call with a mobile phone.' },
+      { char: '难', pinyin: 'nán', uz: 'qiyin / mushkul', ru: 'трудный / сложный', en: 'difficult / hard', strokes: 10, radical: '隹', radicalUz: 'qush', radicalRu: 'птица', radicalEn: 'bird', ex: '中文很难。', expy: 'Zhōngwén hěn nán.', exuz: 'Xitoy tili juda qiyin.', exru: 'Китайский очень сложный.', exen: 'Chinese is very difficult.' },
+      { char: '刻', pinyin: 'kè', uz: '15 daqiqa / o\'ymoq', ru: 'четверть часа / гравировать', en: 'quarter hour / to carve', strokes: 8, radical: '刀', radicalUz: 'pichoq', radicalRu: 'нож', radicalEn: 'knife', ex: '三点一刻。', expy: 'Sān diǎn yī kè.', exuz: 'Uch o\'n besh daqiqa.', exru: 'Четверть четвёртого.', exen: 'A quarter past three.' },
+      { char: '老', pinyin: 'lǎo', uz: 'keksa / eski', ru: 'старый / пожилой', en: 'old / elderly', strokes: 6, radical: '老', radicalUz: 'keksa', radicalRu: 'старый', radicalEn: 'old', ex: '他很老了。', expy: 'Tā hěn lǎo le.', exuz: 'U ancha keksa.', exru: 'Он уже старый.', exen: 'He is quite old.' },
+      { char: '先', pinyin: 'xiān', uz: 'avval / birinchi', ru: 'сначала / сперва', en: 'first / before', strokes: 6, radical: '儿', radicalUz: 'bola', radicalRu: 'ребёнок', radicalEn: 'child', ex: '先吃饭再说。', expy: 'Xiān chī fàn zài shuō.', exuz: 'Avval ovqat ye, keyin gapirasan.', exru: 'Сначала поешь, потом поговорим.', exen: 'Eat first, then we\'ll talk.' },
+      { char: '又', pinyin: 'yòu', uz: 'yana / qayta', ru: 'снова / опять', en: 'again / once more', strokes: 2, radical: '又', radicalUz: 'yana', radicalRu: 'снова', radicalEn: 'again', ex: '他又来了。', expy: 'Tā yòu lái le.', exuz: 'U yana keldi.', exru: 'Он снова пришёл.', exen: 'He came again.' },
+      { char: '教', pinyin: 'jiāo', uz: "o'rgatmoq", ru: 'учить / преподавать', en: 'to teach', strokes: 11, radical: '攴', radicalUz: 'urmoq', radicalRu: 'удар', radicalEn: 'strike', ex: '他教我汉语。', expy: 'Tā jiāo wǒ Hànyǔ.', exuz: "U menga xitoy tilini o'rgatadi.", exru: 'Он учит меня китайскому.', exen: 'He teaches me Chinese.' },
+      { char: '为', pinyin: 'wèi', uz: 'uchun / sababli', ru: 'для / из-за', en: 'for / because of', strokes: 4, radical: '、', radicalUz: 'nuqta', radicalRu: 'точка', radicalEn: 'dot', ex: '为什么？', expy: 'Wèi shénme?', exuz: 'Nima uchun?', exru: 'Почему?', exen: 'Why?' },
+    ],
+  },
+];
+
 export function getWritingSet(setId: string): WritingSet | undefined {
-  return WRITING_SETS.find((s) => s.id === setId) || WRITING_SETS_HSK2.find((s) => s.id === setId) || WRITING_SETS_HSK2_L2.find((s) => s.id === setId);
+  return WRITING_SETS.find((s) => s.id === setId) || WRITING_SETS_HSK2.find((s) => s.id === setId) || WRITING_SETS_HSK2_L2.find((s) => s.id === setId) || WRITING_SETS_HSK3.find((s) => s.id === setId);
 }

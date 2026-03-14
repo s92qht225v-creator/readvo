@@ -301,9 +301,10 @@ interface Props {
   writingSets?: WritingSetMeta[];
   writingSetsHsk2?: WritingSetMeta[];
   writingSetsHsk2L2?: WritingSetMeta[];
+  writingSetsHsk3?: WritingSetMeta[];
 }
 
-export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [] }: Props) {
+export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -322,8 +323,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   // Writing tab
   const initialVersion = searchParams.get('version') === '2.0' ? '2.0' : '3.0';
   const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>(initialVersion);
-  const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : '1';
-  const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2'>(initialWritingHskLevel as '1' | '2');
+  const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : '1';
+  const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3'>(initialWritingHskLevel as '1' | '2' | '3');
   const [writingSearch, setWritingSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
   const [topicSearch, setTopicSearch] = useState('');
@@ -481,11 +482,11 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
-              const hasContent = lv === 'HSK 1' || (lv === 'HSK 2' && activeTab === 'writing' && hskVersion === '2.0');
+              const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3'));
               const isActive = activeTab === 'flashcards'
                 ? (flashcardSubTab === 'lessons' && lv === 'HSK 1')
                 : activeTab === 'writing' && hskVersion === '2.0'
-                  ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2')
+                  ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3')
                   : hasContent;
               return (
                 <button
@@ -496,7 +497,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                     if (hasContent) {
                       if (activeTab === 'flashcards') setFlashcardSubTab('lessons');
                       if (activeTab === 'writing' && hskVersion === '2.0') {
-                        setWritingHskLevel(lv === 'HSK 2' ? '2' : '1');
+                        setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : '1');
                       }
                     }
                   }}
@@ -611,7 +612,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         )}
 
         {activeTab === 'writing' && (() => {
-          const activeSets = hskVersion === '3.0' ? writingSets : writingHskLevel === '2' ? writingSetsHsk2L2 : writingSetsHsk2;
+          const activeSets = hskVersion === '3.0' ? writingSets : writingHskLevel === '3' ? writingSetsHsk3 : writingHskLevel === '2' ? writingSetsHsk2L2 : writingSetsHsk2;
           const wq = writingSearch.trim().toLowerCase();
           const filteredSets = wq
             ? activeSets.filter((s) =>
