@@ -485,7 +485,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
       {/* HSK level pills */}
       {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
-          <div className={`lp__hsk-pills${activeTab === 'writing' ? ' lp__hsk-pills--grid' : ''}`}>
+          <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues') ? ' lp__hsk-pills--grid' : ''}`}>
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
               const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
               const isActive = activeTab === 'flashcards'
