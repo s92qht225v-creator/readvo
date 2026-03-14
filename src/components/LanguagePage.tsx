@@ -811,11 +811,11 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                 />
               </div>
               <div className="home__lessons">
-                {filteredGrammar.map((item) => (
+                {filteredGrammar.map((item, idx) => (
                   <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} className="grammar-card">
                     <span className="grammar-card__bg">{item.char}</span>
                     <div className="grammar-card__top">
-                      <div className="grammar-card__icon" style={{ background: item.color, fontSize: item.char.length > 1 ? '0.85rem' : undefined }}>{item.char}</div>
+                      <div className="grammar-card__icon" style={{ background: item.color }}>{idx + 1}</div>
                       <p className="grammar-card__title">{item.char} {item.pinyin}</p>
                       {!item.active && <span className="grammar-card__badge">{({ uz: 'Tez kunda', ru: 'Скоро', en: 'Soon' } as Record<string, string>)[language]}</span>}
                     </div>
