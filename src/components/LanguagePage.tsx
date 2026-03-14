@@ -484,8 +484,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
 
       {/* HSK level pills */}
       {activeTab !== 'karaoke' && (
-        <div className="lp__seg-bar">
-          <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues' || activeTab === 'grammar') ? ' lp__hsk-pills--grid' : ''}`}>
+        <div className={`lp__seg-bar${activeTab === 'flashcards' ? ' lp__seg-bar--col' : ''}`}>
+          <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues' || activeTab === 'grammar' || activeTab === 'flashcards') ? ' lp__hsk-pills--grid' : ''}`}>
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
               const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
               const isActive = activeTab === 'flashcards'
@@ -512,16 +512,16 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                 </button>
               );
             })}
-            {activeTab === 'flashcards' && (
-              <button
-                type="button"
-                onClick={() => setFlashcardSubTab('topics')}
-                className={`lp__hsk-pill ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
-              >
-                {({ uz: 'Mavzular', ru: 'Темы', en: 'Topics' } as Record<string, string>)[language]}
-              </button>
-            )}
           </div>
+          {activeTab === 'flashcards' && (
+            <button
+              type="button"
+              onClick={() => setFlashcardSubTab('topics')}
+              className={`lp__hsk-pill lp__hsk-pill--full ${flashcardSubTab === 'topics' ? 'lp__hsk-pill--active' : ''}`}
+            >
+              {({ uz: 'Mavzular', ru: 'Темы', en: 'Topics' } as Record<string, string>)[language]}
+            </button>
+          )}
         </div>
       )}
 
