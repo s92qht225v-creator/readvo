@@ -6241,6 +6241,15 @@ body {
   margin-bottom: 6px;
 }
 
+.grammar-block__usage-item--tap {
+  border: none;
+  transition: background 0.15s;
+}
+
+.grammar-block__usage-item--tap:active {
+  background: #eef2ff;
+}
+
 .grammar-block__usage-type {
   font-size: 11px;
   color: #dc2626;
