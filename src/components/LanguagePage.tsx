@@ -330,6 +330,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : searchParams.get('hsk') === '4' ? '4' : searchParams.get('hsk') === '5' ? '5' : searchParams.get('hsk') === '6' ? '6' : '1';
   const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3' | '4' | '5' | '6'>(initialWritingHskLevel as '1' | '2' | '3' | '4' | '5' | '6');
   const [writingSearch, setWritingSearch] = useState('');
+  const [karaokeSearch, setKaraokeSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
   const [topicSearch, setTopicSearch] = useState('');
 
@@ -585,7 +586,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
             <div className="home__lessons">
               {filteredDialogues.map((d) => (
                 <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.slug}`} prefetch={false} className="dialogue-card">
-                  <span className="dialogue-card__deco" aria-hidden="true">{d.title}</span>
+                  <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>
                   <div className="dialogue-card__content">
                     <div className="dialogue-card__text">
                       <h3 className="dialogue-card__title">{d.title}</h3>
@@ -648,7 +649,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                     href={`/chinese/hsk1/writing/${set.id}`}
                     prefetch={false}
                   >
-                    <div className="lp__writing-card-deco" aria-hidden="true">{set.chars.slice(0, 5)}</div>
+                    <div className="lp__writing-card-deco" aria-hidden="true">{set.chars.slice(0, 3)}</div>
                     <div className="lp__writing-card__num">
                       {set.id.split('-set')[1]}
                     </div>
@@ -743,10 +744,34 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         )}
 
         {activeTab === 'karaoke' && (
+          <>
+          <div className="dialogues__search">
+            <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              className="dialogues__search-input"
+              placeholder={({ uz: 'Qo\'shiqlarni qidirish...', ru: 'Поиск песен...', en: 'Search songs...' } as Record<string, string>)[language]}
+              value={karaokeSearch}
+              onChange={(e) => setKaraokeSearch(e.target.value)}
+            />
+            {karaokeSearch && (
+              <button className="dialogues__search-clear" onClick={() => setKaraokeSearch('')} aria-label="Clear">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            )}
+          </div>
           <div className="lp__list">
-            {karaokeItems.map((k) => (
+            {karaokeItems.filter((k) => {
+              const q = karaokeSearch.trim().toLowerCase();
+              if (!q) return true;
+              return k.title.toLowerCase().includes(q) || k.pinyin.toLowerCase().includes(q) || k.translation.toLowerCase().includes(q) || k.translation_ru.toLowerCase().includes(q) || k.translation_en.toLowerCase().includes(q);
+            }).map((k) => (
               <Link key={k.href} href={k.href} prefetch={false} className="lp__card">
-                <div className="lp__card-deco" aria-hidden="true">{k.title}</div>
+                <div className="lp__card-deco" aria-hidden="true">{k.title.slice(0, 3)}</div>
                 <div className="lp__card-main">
                   <div className="lp__card-title">{k.title}</div>
                   <div className="lp__card-pinyin">{k.pinyin}</div>
@@ -756,6 +781,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
               </Link>
             ))}
           </div>
+          </>
         )}
 
         {activeTab === 'grammar' && (() => {
