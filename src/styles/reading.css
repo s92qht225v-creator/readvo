@@ -5696,6 +5696,13 @@ body {
   opacity: 0.5;
 }
 
+.lp__hsk-pills--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: unset;
+  width: 100%;
+}
+
 .lp__seg-bar {
   display: flex;
   align-items: center;
