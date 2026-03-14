@@ -358,14 +358,12 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 revealAll={showAnswer}
                 hidden={hiddenMode}
                 onComplete={() => { if (currentWord) playWordAudio(currentWord); }}
+                onPlayAudio={() => { if (currentWord) playWordAudio(currentWord); }}
               />
             )}
           </div>
 
           <div style={{ display: 'flex', gap: 8 }}>
-            <button className="hanzi-practice__action-btn" type="button" onClick={() => { if (currentWord) playWordAudio(currentWord); }}>
-              🔊
-            </button>
             <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
               {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>

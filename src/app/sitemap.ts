@@ -3,7 +3,7 @@ import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadKaraokeSongs } from '@/services/karaoke';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { loadBlogPosts } from '@/services/blog';
-import { WRITING_SETS } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2 } from '@/services/writing';
 import { routing } from '@/i18n/routing';
 import fs from 'fs';
 import path from 'path';
@@ -79,7 +79,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch { /* topics dir may not exist */ }
 
   // Writing practice pages
-  for (const set of WRITING_SETS) {
+  for (const set of [...WRITING_SETS, ...WRITING_SETS_HSK2]) {
     entries.push(...localeEntries(`/chinese/hsk1/writing/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
   }
 

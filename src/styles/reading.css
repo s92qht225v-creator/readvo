@@ -5681,6 +5681,8 @@ body {
   color: #999;
   cursor: default;
   white-space: nowrap;
+  flex: 1;
+  text-align: center;
 }
 
 .lp__hsk-pill--active {
@@ -10360,6 +10362,38 @@ body {
   cursor: pointer;
   padding: 0;
   margin-bottom: 4px;
+}
+
+/* HSK version toggle */
+.lp__hsk-version-bar {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.lp__hsk-version-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.lp__hsk-version-btn--active {
+  border-color: #dc2626;
+  color: #dc2626;
+  background: #fef2f2;
+}
+.lp__writing-coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 16px;
+  color: #999;
+  font-size: 16px;
 }
 
 /* Writing set cards */

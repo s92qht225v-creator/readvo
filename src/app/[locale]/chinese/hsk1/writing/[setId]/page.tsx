@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { WRITING_SETS, getWritingSet } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2, getWritingSet } from '@/services/writing';
 import { WritingPracticePage } from './WritingPracticePage';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props) {
       description: `${set.subtitle_ru}. Практика написания китайских иероглифов.`,
     },
     en: {
-      title: `Set ${set.id.replace('hsk1-set', '')} — Writing Practice`,
+      title: `Set ${set.id.replace(/hsk\d+-set/, '')} — Writing Practice`,
       description: `${set.subtitle.replace(/ta so'z/, 'words')}. Practice writing Chinese characters.`,
     },
   };
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  return WRITING_SETS.map((s) => ({ setId: s.id }));
+  return [...WRITING_SETS, ...WRITING_SETS_HSK2].map((s) => ({ setId: s.id }));
 }
 
 export default async function WritingSetPage({ params }: Props) {
@@ -54,7 +54,7 @@ export default async function WritingSetPage({ params }: Props) {
   if (!set) notFound();
 
   const writingLabel = ({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[locale] || 'Writing';
-  const setTitle = locale === 'ru' ? set.title_ru : locale === 'en' ? `Set ${set.id.replace('hsk1-set', '')}` : set.title;
+  const setTitle = locale === 'ru' ? set.title_ru : locale === 'en' ? `Set ${set.id.replace(/hsk\d+-set/, '')}` : set.title;
   const jsonLd = jsonLdScript([
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },

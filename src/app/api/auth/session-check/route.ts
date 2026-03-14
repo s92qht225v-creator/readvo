@@ -14,8 +14,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ valid: false });
     }
 
-    // Decode JWT locally (~0ms) instead of admin.auth.getUser() (~1-2s remote call)
-    const userId = getUserIdFromJWT(authHeader.slice(7));
+    // Decode JWT locally — skip expiration check because the nonce comparison
+    // is the actual auth mechanism. Expired tokens on backgrounded/mobile tabs
+    // would otherwise cause false kicks.
+    const userId = getUserIdFromJWT(authHeader.slice(7), { skipExpiration: true });
     if (!userId) {
       return NextResponse.json({ valid: false });
     }
@@ -39,8 +41,7 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }
 
-    // Decode JWT locally (~0ms) instead of admin.auth.getUser() (~1-2s remote call)
-    const userId = getUserIdFromJWT(authHeader.slice(7));
+    const userId = getUserIdFromJWT(authHeader.slice(7), { skipExpiration: true });
     if (!userId) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }

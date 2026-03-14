@@ -299,9 +299,10 @@ interface Props {
   dialogues: DialogueInfo[];
   flashcardLessons?: FlashcardLesson[];
   writingSets?: WritingSetMeta[];
+  writingSetsHsk2?: WritingSetMeta[];
 }
 
-export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [] }: Props) {
+export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -318,6 +319,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
 
   // Writing tab
+  const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>('3.0');
   const [writingSearch, setWritingSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
   const [topicSearch, setTopicSearch] = useState('');
@@ -448,6 +450,28 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         </div>
       </nav>
 
+      {/* HSK version toggle (writing tab only) */}
+      {activeTab === 'writing' && (
+        <div className="lp__seg-bar">
+          <div className="lp__hsk-version-bar">
+            <button
+              className={`lp__hsk-version-btn${hskVersion === '2.0' ? ' lp__hsk-version-btn--active' : ''}`}
+              onClick={() => setHskVersion('2.0')}
+              type="button"
+            >
+              HSK 2.0
+            </button>
+            <button
+              className={`lp__hsk-version-btn${hskVersion === '3.0' ? ' lp__hsk-version-btn--active' : ''}`}
+              onClick={() => setHskVersion('3.0')}
+              type="button"
+            >
+              HSK 3.0
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* HSK level pills */}
       {activeTab !== 'karaoke' && (
         <div className="lp__seg-bar">
@@ -572,15 +596,16 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         )}
 
         {activeTab === 'writing' && (() => {
+          const activeSets = hskVersion === '2.0' ? writingSetsHsk2 : writingSets;
           const wq = writingSearch.trim().toLowerCase();
           const filteredSets = wq
-            ? writingSets.filter((s) =>
+            ? activeSets.filter((s) =>
                 s.title.toLowerCase().includes(wq) ||
                 s.title_ru.toLowerCase().includes(wq) ||
                 s.chars.includes(wq) ||
                 s.subtitle.toLowerCase().includes(wq)
               )
-            : writingSets;
+            : activeSets;
           return (
             <>
               <div className="dialogues__search">

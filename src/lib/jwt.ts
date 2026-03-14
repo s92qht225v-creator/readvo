@@ -7,15 +7,15 @@
  * Safe because: tokens are issued by our Supabase instance, transmitted over HTTPS,
  * and these endpoints only do low-risk reads (subscription check, nonce comparison).
  */
-export function getUserIdFromJWT(token: string): string | null {
+export function getUserIdFromJWT(token: string, opts?: { skipExpiration?: boolean }): string | null {
   try {
     const parts = token.split('.');
     if (parts.length !== 3) return null;
 
     const payload = JSON.parse(Buffer.from(parts[1], 'base64url').toString());
 
-    // Check expiration
-    if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) return null;
+    // Check expiration (can be skipped for endpoints where JWT is only used to extract user_id)
+    if (!opts?.skipExpiration && payload.exp && payload.exp < Math.floor(Date.now() / 1000)) return null;
 
     return payload.sub || null;
   } catch {
