@@ -27,7 +27,8 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const isHsk2 = setId.startsWith('hsk2-') && !isHsk2L2;
   const isHsk3 = setId.startsWith('hsk3-');
   const isHsk4 = setId.startsWith('hsk4-');
-  const backUrl = isHsk4 ? '/chinese?tab=writing&version=2.0&hsk=4' : isHsk2L2 ? '/chinese?tab=writing&version=2.0&hsk=2' : isHsk3 ? '/chinese?tab=writing&version=2.0&hsk=3' : isHsk2 ? '/chinese?tab=writing&version=2.0' : '/chinese?tab=writing';
+  const isHsk5 = setId.startsWith('hsk5-');
+  const backUrl = isHsk5 ? '/chinese?tab=writing&version=2.0&hsk=5' : isHsk4 ? '/chinese?tab=writing&version=2.0&hsk=4' : isHsk2L2 ? '/chinese?tab=writing&version=2.0&hsk=2' : isHsk3 ? '/chinese?tab=writing&version=2.0&hsk=3' : isHsk2 ? '/chinese?tab=writing&version=2.0' : '/chinese?tab=writing';
 
   // Analytics: track writing practice view
   useEffect(() => {
@@ -57,7 +58,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">{isHsk4 ? 'HSK 4' : isHsk3 ? 'HSK 3' : isHsk2L2 || isHsk2 ? 'HSK 2' : 'HSK 1'}</div>
+            <div className="dr-hero__level">{isHsk5 ? 'HSK 5' : isHsk4 ? 'HSK 4' : isHsk3 ? 'HSK 3' : isHsk2L2 || isHsk2 ? 'HSK 2' : 'HSK 1'}</div>
             <h1 className="dr-hero__title">{({ uz: 'Ieroglif yozish', ru: 'Писать иероглифы', en: 'Writing Characters' } as Record<string, string>)[language] || 'Writing Characters'}</h1>
             <div className="dr-hero__pinyin">写字 · xiězì</div>
             <div className="dr-hero__translation">— {language === 'ru' ? title_ru : language === 'en' ? title_ru.replace('Набор', 'Set') : title} —</div>

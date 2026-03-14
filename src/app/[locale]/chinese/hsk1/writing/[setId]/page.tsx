@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, getWritingSet } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, WRITING_SETS_HSK5, WRITING_SETS_HSK6, getWritingSet } from '@/services/writing';
 import { WritingPracticePage } from './WritingPracticePage';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  return [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2, ...WRITING_SETS_HSK3, ...WRITING_SETS_HSK4].map((s) => ({ setId: s.id }));
+  return [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2, ...WRITING_SETS_HSK3, ...WRITING_SETS_HSK4, ...WRITING_SETS_HSK5, ...WRITING_SETS_HSK6].map((s) => ({ setId: s.id }));
 }
 
 export default async function WritingSetPage({ params }: Props) {

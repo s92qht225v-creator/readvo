@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -22,13 +21,15 @@ const meta: Record<string, { alt: string; tagline: string; subjects: string }> =
   },
 };
 
-export function generateImageMetadata({ params }: { params: { locale: string } }) {
-  const m = meta[params.locale] || meta.uz;
+export async function generateImageMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const m = meta[locale] || meta.uz;
   return [{ id: 'og', alt: m.alt, size, contentType }];
 }
 
-export default function Image({ params }: { params: { locale: string } }) {
-  const m = meta[params.locale] || meta.uz;
+export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const m = meta[locale] || meta.uz;
   return new ImageResponse(
     (
       <div

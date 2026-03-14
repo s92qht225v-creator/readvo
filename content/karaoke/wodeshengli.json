@@ -1,0 +1,555 @@
+{
+  "id": "wodeshengli",
+  "title": "我的歌声里",
+  "pinyin": "Wǒ De Gēshēng Lǐ",
+  "titleTranslation": "Mening qo'shig'imda",
+  "titleTranslation_ru": "В моей песне",
+  "titleTranslation_en": "In My Song",
+  "artist": "曲婉婷",
+  "artist_ru": "Цюй Ваньтин",
+  "artist_en": "Qu Wanting",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%20karaoke/wodeshengli.mp3",
+  "lines": [
+    {
+      "id": 0,
+      "translation": "Hech qanday ehtiyotsizliksiz",
+      "translation_ru": "Без малейшей осторожности",
+      "words": [
+        { "id": 0, "text": "没", "p": "méi", "timestamp": 14.339, "duration": 0.19 },
+        { "id": 1, "text": "有", "p": "yǒu", "timestamp": 14.539, "duration": 0.21 },
+        { "id": 2, "text": "一", "p": "yī", "timestamp": 14.759, "duration": 0.19 },
+        { "id": 3, "text": "点", "p": "diǎn", "timestamp": 14.959, "duration": 0.19 },
+        { "id": 4, "text": "点", "p": "diǎn", "timestamp": 15.159, "duration": 0.21 },
+        { "id": 5, "text": "防", "p": "fáng", "timestamp": 15.379, "duration": 0.27 },
+        { "id": 6, "text": "备", "p": "bèi", "timestamp": 15.659, "duration": 0.38 }
+      ]
+    },
+    {
+      "id": 1,
+      "translation": "Hech qanday xavotirlanmasdan",
+      "translation_ru": "Без единого беспокойства",
+      "words": [
+        { "id": 0, "text": "也", "p": "yě", "timestamp": 16.079, "duration": 0.17 },
+        { "id": 1, "text": "没", "p": "méi", "timestamp": 16.259, "duration": 0.23 },
+        { "id": 2, "text": "有", "p": "yǒu", "timestamp": 16.499, "duration": 0.17 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 16.679, "duration": 0.19 },
+        { "id": 4, "text": "丝", "p": "sī", "timestamp": 16.879, "duration": 0.21 },
+        { "id": 5, "text": "顾", "p": "gù", "timestamp": 17.099, "duration": 0.23 },
+        { "id": 6, "text": "虑", "p": "lǜ", "timestamp": 17.339, "duration": 0.2 }
+      ]
+    },
+    {
+      "id": 2,
+      "translation": "Sen shunday paydo bo'lding mening dunyomda",
+      "translation_ru": "Ты вот так появился в моём мире",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 17.799, "duration": 0.19 },
+        { "id": 1, "text": "就", "p": "jiù", "timestamp": 17.999, "duration": 0.19 },
+        { "id": 2, "text": "这", "p": "zhè", "timestamp": 18.199, "duration": 0.23 },
+        { "id": 3, "text": "样", "p": "yàng", "timestamp": 18.439, "duration": 0.39 },
+        { "id": 4, "text": "出", "p": "chū", "timestamp": 18.839, "duration": 0.45 },
+        { "id": 5, "text": "现", "p": "xiàn", "timestamp": 19.299, "duration": 0.91 },
+        { "id": 6, "text": "在", "p": "zài", "timestamp": 20.219, "duration": 0.35 },
+        { "id": 7, "text": "我", "p": "wǒ", "timestamp": 20.579, "duration": 0.27 },
+        { "id": 8, "text": "的", "p": "de", "timestamp": 20.859, "duration": 0.19 },
+        { "id": 9, "text": "世", "p": "shì", "timestamp": 21.059, "duration": 0.41 },
+        { "id": 10, "text": "界", "p": "jiè", "timestamp": 21.479, "duration": 0.27 },
+        { "id": 11, "text": "里", "p": "lǐ", "timestamp": 21.759, "duration": 0.16 }
+      ]
+    },
+    {
+      "id": 3,
+      "translation": "Menga hayrat baxsh etdi, o'zim bilmay",
+      "translation_ru": "Принёс мне сюрприз, сам того не ожидая",
+      "words": [
+        { "id": 0, "text": "带", "p": "dài", "timestamp": 22.239, "duration": 0.35 },
+        { "id": 1, "text": "给", "p": "gěi", "timestamp": 22.599, "duration": 0.21 },
+        { "id": 2, "text": "我", "p": "wǒ", "timestamp": 22.819, "duration": 0.31 },
+        { "id": 3, "text": "惊", "p": "jīng", "timestamp": 23.139, "duration": 0.31 },
+        { "id": 4, "text": "喜", "p": "xǐ", "timestamp": 23.459, "duration": 0.3 },
+        { "id": 5, "text": "情", "p": "qíng", "timestamp": 24.319, "duration": 0.81 },
+        { "id": 6, "text": "不", "p": "bù", "timestamp": 25.139, "duration": 0.51 },
+        { "id": 7, "text": "自", "p": "zì", "timestamp": 25.659, "duration": 0.61 },
+        { "id": 8, "text": "已", "p": "yǐ", "timestamp": 26.279, "duration": 0.34 }
+      ]
+    },
+    {
+      "id": 4,
+      "translation": "Lekin sen yana shunday",
+      "translation_ru": "Но ты снова вот так",
+      "words": [
+        { "id": 0, "text": "可", "p": "kě", "timestamp": 28.339, "duration": 0.17 },
+        { "id": 1, "text": "是", "p": "shì", "timestamp": 28.519, "duration": 0.23 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 28.759, "duration": 0.19 },
+        { "id": 3, "text": "偏", "p": "piān", "timestamp": 28.959, "duration": 0.25 },
+        { "id": 4, "text": "又", "p": "yòu", "timestamp": 29.219, "duration": 0.17 },
+        { "id": 5, "text": "这", "p": "zhè", "timestamp": 29.399, "duration": 0.25 },
+        { "id": 6, "text": "样", "p": "yàng", "timestamp": 29.659, "duration": 0.36 }
+      ]
+    },
+    {
+      "id": 5,
+      "translation": "Men bilmagan holda sekin g'oyib bo'lding",
+      "translation_ru": "Незаметно для меня тихо исчез",
+      "words": [
+        { "id": 0, "text": "在", "p": "zài", "timestamp": 30.059, "duration": 0.21 },
+        { "id": 1, "text": "我", "p": "wǒ", "timestamp": 30.279, "duration": 0.21 },
+        { "id": 2, "text": "不", "p": "bù", "timestamp": 30.499, "duration": 0.19 },
+        { "id": 3, "text": "知", "p": "zhī", "timestamp": 30.699, "duration": 0.21 },
+        { "id": 4, "text": "不", "p": "bù", "timestamp": 30.919, "duration": 0.17 },
+        { "id": 5, "text": "觉", "p": "jué", "timestamp": 31.099, "duration": 0.21 },
+        { "id": 6, "text": "中", "p": "zhōng", "timestamp": 31.319, "duration": 0.27 },
+        { "id": 7, "text": "悄", "p": "qiāo", "timestamp": 31.599, "duration": 0.45 },
+        { "id": 8, "text": "悄", "p": "qiāo", "timestamp": 32.059, "duration": 0.37 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 32.439, "duration": 0.23 },
+        { "id": 10, "text": "消", "p": "xiāo", "timestamp": 32.679, "duration": 0.43 },
+        { "id": 11, "text": "失", "p": "shī", "timestamp": 33.119, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 6,
+      "translation": "Mening dunyomdan hech qanday xabar yo'q",
+      "translation_ru": "Из моего мира — ни единой вести",
+      "words": [
+        { "id": 0, "text": "从", "p": "cóng", "timestamp": 34.199, "duration": 0.37 },
+        { "id": 1, "text": "我", "p": "wǒ", "timestamp": 34.579, "duration": 0.27 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 34.859, "duration": 0.19 },
+        { "id": 3, "text": "世", "p": "shì", "timestamp": 35.059, "duration": 0.43 },
+        { "id": 4, "text": "界", "p": "jiè", "timestamp": 35.499, "duration": 0.25 },
+        { "id": 5, "text": "里", "p": "lǐ", "timestamp": 35.759, "duration": 0.45 },
+        { "id": 6, "text": "没", "p": "méi", "timestamp": 36.219, "duration": 0.35 },
+        { "id": 7, "text": "有", "p": "yǒu", "timestamp": 36.579, "duration": 0.21 },
+        { "id": 8, "text": "音", "p": "yīn", "timestamp": 36.799, "duration": 0.23 },
+        { "id": 9, "text": "讯", "p": "xùn", "timestamp": 37.039, "duration": 0.32 }
+      ]
+    },
+    {
+      "id": 7,
+      "translation": "Qolganlar faqat xotiralar",
+      "translation_ru": "Осталось лишь воспоминание",
+      "words": [
+        { "id": 0, "text": "剩", "p": "shèng", "timestamp": 37.399, "duration": 0.23 },
+        { "id": 1, "text": "下", "p": "xià", "timestamp": 37.639, "duration": 0.45 },
+        { "id": 2, "text": "的", "p": "de", "timestamp": 38.099, "duration": 0.47 },
+        { "id": 3, "text": "只", "p": "zhǐ", "timestamp": 38.579, "duration": 0.4 },
+        { "id": 4, "text": "是", "p": "shì", "timestamp": 39.498, "duration": 0.85 },
+        { "id": 5, "text": "回", "p": "huí", "timestamp": 40.358, "duration": 0.67 },
+        { "id": 6, "text": "忆", "p": "yì", "timestamp": 41.038, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 8,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 42.158, "duration": 0.85 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 43.018, "duration": 0.59 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 43.618, "duration": 0.54 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 45.318, "duration": 0.15 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 45.478, "duration": 0.31 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 45.798, "duration": 0.39 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 46.198, "duration": 0.21 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 46.418, "duration": 0.45 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 46.878, "duration": 0.45 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 47.338, "duration": 0.38 }
+      ]
+    },
+    {
+      "id": 9,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 48.198, "duration": 0.41 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 48.618, "duration": 0.25 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 48.878, "duration": 0.39 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 49.278, "duration": 0.63 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 49.918, "duration": 0.43 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 50.358, "duration": 0.27 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 50.638, "duration": 0.47 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 51.118, "duration": 0.31 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 51.438, "duration": 0.25 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 51.698, "duration": 0.35 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 52.058, "duration": 0.25 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 52.318, "duration": 0.31 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 52.638, "duration": 0.68 }
+      ]
+    },
+    {
+      "id": 10,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 56.118, "duration": 0.77 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 56.898, "duration": 0.75 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 57.658, "duration": 1.29 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 58.958, "duration": 0.55 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 59.518, "duration": 0.33 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 59.858, "duration": 0.37 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 60.238, "duration": 0.21 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 60.458, "duration": 0.39 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 60.858, "duration": 0.45 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 61.318, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 11,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 62.258, "duration": 0.39 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 62.658, "duration": 0.23 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 62.898, "duration": 0.43 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 63.338, "duration": 0.65 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 63.998, "duration": 0.39 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 64.398, "duration": 0.23 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 64.638, "duration": 0.47 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 65.118, "duration": 0.31 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 65.437, "duration": 0.27 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 65.717, "duration": 0.39 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 66.117, "duration": 0.31 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 66.437, "duration": 0.45 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 66.897, "duration": 0.94 }
+      ]
+    },
+    {
+      "id": 12,
+      "translation": "Esingizdami, biz ilgari",
+      "translation_ru": "Ты помнишь, как мы когда-то",
+      "words": [
+        { "id": 0, "text": "还", "p": "hái", "timestamp": 70.377, "duration": 0.19 },
+        { "id": 1, "text": "记", "p": "jì", "timestamp": 70.577, "duration": 0.23 },
+        { "id": 2, "text": "得", "p": "de", "timestamp": 70.817, "duration": 0.17 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 70.997, "duration": 0.19 },
+        { "id": 4, "text": "们", "p": "men", "timestamp": 71.197, "duration": 0.21 },
+        { "id": 5, "text": "曾", "p": "céng", "timestamp": 71.417, "duration": 0.25 },
+        { "id": 6, "text": "经", "p": "jīng", "timestamp": 71.677, "duration": 0.34 }
+      ]
+    },
+    {
+      "id": 13,
+      "translation": "Yelkama-yelka o'sha gavjum ko'cha boshida yurganmiz",
+      "translation_ru": "Плечом к плечу шли по тому оживлённому переулку",
+      "words": [
+        { "id": 0, "text": "肩", "p": "jiān", "timestamp": 72.057, "duration": 0.21 },
+        { "id": 1, "text": "并", "p": "bìng", "timestamp": 72.277, "duration": 0.21 },
+        { "id": 2, "text": "肩", "p": "jiān", "timestamp": 72.497, "duration": 0.21 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 72.717, "duration": 0.19 },
+        { "id": 4, "text": "起", "p": "qǐ", "timestamp": 72.917, "duration": 0.19 },
+        { "id": 5, "text": "走", "p": "zǒu", "timestamp": 73.117, "duration": 0.25 },
+        { "id": 6, "text": "过", "p": "guò", "timestamp": 73.377, "duration": 0.49 },
+        { "id": 7, "text": "那", "p": "nà", "timestamp": 73.877, "duration": 0.39 },
+        { "id": 8, "text": "段", "p": "duàn", "timestamp": 74.277, "duration": 0.19 },
+        { "id": 9, "text": "繁", "p": "fán", "timestamp": 74.477, "duration": 0.33 },
+        { "id": 10, "text": "华", "p": "huá", "timestamp": 74.817, "duration": 0.49 },
+        { "id": 11, "text": "巷", "p": "xiàng", "timestamp": 75.317, "duration": 0.33 },
+        { "id": 12, "text": "口", "p": "kǒu", "timestamp": 75.657, "duration": 0.3 }
+      ]
+    },
+    {
+      "id": 14,
+      "translation": "Garchi ikkovimiz begonalar bo'lsak ham, o'tkinchilar bo'lsak ham",
+      "translation_ru": "Хоть мы и были чужими, прохожими",
+      "words": [
+        { "id": 0, "text": "尽", "p": "jǐn", "timestamp": 75.977, "duration": 0.23 },
+        { "id": 1, "text": "管", "p": "guǎn", "timestamp": 76.217, "duration": 0.23 },
+        { "id": 2, "text": "你", "p": "nǐ", "timestamp": 76.457, "duration": 0.19 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 76.657, "duration": 0.19 },
+        { "id": 4, "text": "是", "p": "shì", "timestamp": 76.857, "duration": 0.27 },
+        { "id": 5, "text": "陌", "p": "mò", "timestamp": 77.137, "duration": 0.35 },
+        { "id": 6, "text": "生", "p": "shēng", "timestamp": 77.497, "duration": 0.27 },
+        { "id": 7, "text": "人", "p": "rén", "timestamp": 77.777, "duration": 0.3 },
+        { "id": 8, "text": "是", "p": "shì", "timestamp": 78.617, "duration": 0.23 },
+        { "id": 9, "text": "过", "p": "guò", "timestamp": 78.857, "duration": 0.33 },
+        { "id": 10, "text": "路", "p": "lù", "timestamp": 79.197, "duration": 0.31 },
+        { "id": 11, "text": "人", "p": "rén", "timestamp": 79.517, "duration": 0.34 }
+      ]
+    },
+    {
+      "id": 15,
+      "translation": "Lekin ikkovimiz ham bir-birimizni his qildik",
+      "translation_ru": "Но мы оба почувствовали друг друга",
+      "words": [
+        { "id": 0, "text": "但", "p": "dàn", "timestamp": 80.377, "duration": 0.23 },
+        { "id": 1, "text": "彼", "p": "bǐ", "timestamp": 80.617, "duration": 0.21 },
+        { "id": 2, "text": "此", "p": "cǐ", "timestamp": 80.837, "duration": 0.21 },
+        { "id": 3, "text": "还", "p": "hái", "timestamp": 81.057, "duration": 0.19 },
+        { "id": 4, "text": "是", "p": "shì", "timestamp": 81.257, "duration": 0.23 },
+        { "id": 5, "text": "感", "p": "gǎn", "timestamp": 81.497, "duration": 0.41 },
+        { "id": 6, "text": "觉", "p": "jué", "timestamp": 81.917, "duration": 0.45 },
+        { "id": 7, "text": "到", "p": "dào", "timestamp": 82.377, "duration": 0.43 },
+        { "id": 8, "text": "了", "p": "le", "timestamp": 82.817, "duration": 0.27 },
+        { "id": 9, "text": "对", "p": "duì", "timestamp": 83.097, "duration": 0.37 },
+        { "id": 10, "text": "方", "p": "fāng", "timestamp": 83.477, "duration": 0.39 },
+        { "id": 11, "text": "的", "p": "de", "timestamp": 83.877, "duration": 0.22 }
+      ]
+    },
+    {
+      "id": 16,
+      "translation": "Bir nazar, bir yurak urishi",
+      "translation_ru": "Один взгляд, одно биение сердца",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 84.137, "duration": 0.41 },
+        { "id": 1, "text": "个", "p": "gè", "timestamp": 84.557, "duration": 0.27 },
+        { "id": 2, "text": "眼", "p": "yǎn", "timestamp": 84.837, "duration": 0.33 },
+        { "id": 3, "text": "神", "p": "shén", "timestamp": 85.177, "duration": 0.69 },
+        { "id": 4, "text": "一", "p": "yī", "timestamp": 85.877, "duration": 0.41 },
+        { "id": 5, "text": "个", "p": "gè", "timestamp": 86.297, "duration": 0.25 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 86.557, "duration": 0.37 },
+        { "id": 7, "text": "跳", "p": "tiào", "timestamp": 86.937, "duration": 0.34 }
+      ]
+    },
+    {
+      "id": 17,
+      "translation": "Kutilmagan bir baxt",
+      "translation_ru": "Неожиданное счастье",
+      "words": [
+        { "id": 0, "text": "一", "p": "yī", "timestamp": 87.657, "duration": 0.39 },
+        { "id": 1, "text": "种", "p": "zhǒng", "timestamp": 88.057, "duration": 0.43 },
+        { "id": 2, "text": "意", "p": "yì", "timestamp": 88.497, "duration": 0.41 },
+        { "id": 3, "text": "想", "p": "xiǎng", "timestamp": 88.917, "duration": 0.45 },
+        { "id": 4, "text": "不", "p": "bù", "timestamp": 89.377, "duration": 0.37 },
+        { "id": 5, "text": "到", "p": "dào", "timestamp": 89.757, "duration": 0.45 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 90.217, "duration": 0.25 },
+        { "id": 7, "text": "快", "p": "kuài", "timestamp": 90.477, "duration": 0.63 },
+        { "id": 8, "text": "乐", "p": "lè", "timestamp": 91.117, "duration": 1.74 }
+      ]
+    },
+    {
+      "id": 18,
+      "translation": "Go'yo bu taqdir tomonidan belgilangan tush kabi",
+      "translation_ru": "Словно сон, предназначенный судьбой",
+      "words": [
+        { "id": 0, "text": "好", "p": "hǎo", "timestamp": 93.496, "duration": 0.19 },
+        { "id": 1, "text": "像", "p": "xiàng", "timestamp": 93.696, "duration": 0.23 },
+        { "id": 2, "text": "是", "p": "shì", "timestamp": 93.936, "duration": 0.67 },
+        { "id": 3, "text": "一", "p": "yī", "timestamp": 94.616, "duration": 0.83 },
+        { "id": 4, "text": "场", "p": "chǎng", "timestamp": 95.456, "duration": 0.91 },
+        { "id": 5, "text": "梦", "p": "mèng", "timestamp": 96.376, "duration": 0.83 },
+        { "id": 6, "text": "境", "p": "jìng", "timestamp": 97.216, "duration": 0.93 },
+        { "id": 7, "text": "命", "p": "mìng", "timestamp": 98.156, "duration": 0.83 },
+        { "id": 8, "text": "中", "p": "zhōng", "timestamp": 98.996, "duration": 0.89 },
+        { "id": 9, "text": "注", "p": "zhù", "timestamp": 99.896, "duration": 0.83 },
+        { "id": 10, "text": "定", "p": "dìng", "timestamp": 100.736, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 19,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 101.656, "duration": 0.81 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 102.476, "duration": 0.69 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 103.176, "duration": 0.62 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 104.916, "duration": 0.19 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 105.116, "duration": 0.31 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 105.436, "duration": 0.35 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 105.796, "duration": 0.21 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 106.016, "duration": 0.41 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 106.436, "duration": 0.45 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 106.896, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 20,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 107.756, "duration": 0.41 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 108.176, "duration": 0.25 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 108.436, "duration": 0.43 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 108.876, "duration": 0.59 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 109.476, "duration": 0.45 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 109.936, "duration": 0.23 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 110.176, "duration": 0.47 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 110.656, "duration": 0.33 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 110.996, "duration": 0.23 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 111.236, "duration": 0.35 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 111.596, "duration": 0.31 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 111.916, "duration": 0.29 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 112.216, "duration": 3 }
+      ]
+    },
+    {
+      "id": 21,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 115.696, "duration": 0.81 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 116.516, "duration": 0.69 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 117.216, "duration": 1.35 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 118.575, "duration": 0.51 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 119.095, "duration": 0.35 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 119.455, "duration": 0.31 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 119.775, "duration": 0.25 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 120.035, "duration": 0.39 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 120.435, "duration": 0.47 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 120.915, "duration": 0.44 }
+      ]
+    },
+    {
+      "id": 22,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 121.775, "duration": 0.41 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 122.195, "duration": 0.25 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 122.455, "duration": 0.43 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 122.895, "duration": 0.61 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 123.515, "duration": 0.41 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 123.935, "duration": 0.23 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 124.175, "duration": 0.49 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 124.675, "duration": 0.35 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 125.035, "duration": 0.27 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 125.315, "duration": 0.37 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 125.695, "duration": 0.29 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 125.995, "duration": 0.47 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 126.475, "duration": 1.38 }
+      ]
+    },
+    {
+      "id": 23,
+      "translation": "Bu katta dunyoda nega biz uchrashib qoldik",
+      "translation_ru": "В этом огромном мире — зачем мы встретились",
+      "words": [
+        { "id": 0, "text": "世", "p": "shì", "timestamp": 129.655, "duration": 0.43 },
+        { "id": 1, "text": "界", "p": "jiè", "timestamp": 130.095, "duration": 0.25 },
+        { "id": 2, "text": "之", "p": "zhī", "timestamp": 130.355, "duration": 0.45 },
+        { "id": 3, "text": "大", "p": "dà", "timestamp": 130.815, "duration": 0.59 },
+        { "id": 4, "text": "为", "p": "wèi", "timestamp": 131.415, "duration": 0.43 },
+        { "id": 5, "text": "何", "p": "hé", "timestamp": 131.855, "duration": 0.27 },
+        { "id": 6, "text": "我", "p": "wǒ", "timestamp": 132.135, "duration": 0.37 },
+        { "id": 7, "text": "们", "p": "men", "timestamp": 132.515, "duration": 0.65 },
+        { "id": 8, "text": "相", "p": "xiāng", "timestamp": 133.175, "duration": 0.71 },
+        { "id": 9, "text": "遇", "p": "yù", "timestamp": 133.895, "duration": 0.46 }
+      ]
+    },
+    {
+      "id": 24,
+      "translation": "Bu taqdirmi, bu osmon irodasimi",
+      "translation_ru": "Неужели это судьба, неужели это воля небес",
+      "words": [
+        { "id": 0, "text": "难", "p": "nán", "timestamp": 135.575, "duration": 0.21 },
+        { "id": 1, "text": "道", "p": "dào", "timestamp": 135.795, "duration": 0.43 },
+        { "id": 2, "text": "是", "p": "shì", "timestamp": 136.235, "duration": 0.47 },
+        { "id": 3, "text": "缘", "p": "yuán", "timestamp": 136.715, "duration": 0.59 },
+        { "id": 4, "text": "分", "p": "fèn", "timestamp": 137.315, "duration": 0.35 },
+        { "id": 5, "text": "难", "p": "nán", "timestamp": 137.675, "duration": 1.59 },
+        { "id": 6, "text": "道", "p": "dào", "timestamp": 139.275, "duration": 0.43 },
+        { "id": 7, "text": "是", "p": "shì", "timestamp": 139.715, "duration": 0.39 },
+        { "id": 8, "text": "天", "p": "tiān", "timestamp": 140.115, "duration": 0.864 },
+        { "id": 9, "text": "意", "p": "yì", "timestamp": 140.989, "duration": 2.238 }
+      ]
+    },
+    {
+      "id": 25,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 147.234, "duration": 0.79 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 148.034, "duration": 0.63 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 148.674, "duration": 1.39 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 150.074, "duration": 0.47 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 150.554, "duration": 0.37 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 150.934, "duration": 0.35 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 151.294, "duration": 0.23 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 151.534, "duration": 0.39 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 151.934, "duration": 0.49 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 152.434, "duration": 0.42 }
+      ]
+    },
+    {
+      "id": 26,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 153.314, "duration": 0.39 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 153.714, "duration": 0.25 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 153.974, "duration": 0.43 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 154.414, "duration": 0.65 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 155.074, "duration": 0.39 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 155.474, "duration": 0.23 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 155.714, "duration": 0.47 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 156.194, "duration": 0.35 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 156.554, "duration": 0.27 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 156.834, "duration": 0.35 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 157.194, "duration": 0.25 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 157.454, "duration": 0.69 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 158.154, "duration": 1.26 }
+      ]
+    },
+    {
+      "id": 27,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 161.194, "duration": 0.81 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 162.014, "duration": 0.65 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 162.674, "duration": 1.37 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 164.054, "duration": 0.49 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 164.554, "duration": 0.33 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 164.894, "duration": 0.39 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 165.294, "duration": 0.25 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 165.554, "duration": 0.37 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 165.934, "duration": 0.47 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 166.414, "duration": 0.5 }
+      ]
+    },
+    {
+      "id": 28,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 167.314, "duration": 0.41 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 167.734, "duration": 0.27 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 168.014, "duration": 0.45 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 168.474, "duration": 0.57 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 169.054, "duration": 0.41 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 169.474, "duration": 0.31 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 169.794, "duration": 0.45 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 170.253, "duration": 0.29 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 170.553, "duration": 0.29 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 170.853, "duration": 0.35 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 171.213, "duration": 0.33 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 171.553, "duration": 0.47 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 172.033, "duration": 0.64 }
+      ]
+    },
+    {
+      "id": 29,
+      "translation": "Sen mening chuqur xotiramda yashaysan",
+      "translation_ru": "Ты живёшь в глубинах моей памяти",
+      "words": [
+        { "id": 0, "text": "你", "p": "nǐ", "timestamp": 175.353, "duration": 0.81 },
+        { "id": 1, "text": "存", "p": "cún", "timestamp": 176.173, "duration": 0.75 },
+        { "id": 2, "text": "在", "p": "zài", "timestamp": 176.933, "duration": 1.21 },
+        { "id": 3, "text": "我", "p": "wǒ", "timestamp": 178.153, "duration": 0.53 },
+        { "id": 4, "text": "深", "p": "shēn", "timestamp": 178.693, "duration": 0.41 },
+        { "id": 5, "text": "深", "p": "shēn", "timestamp": 179.113, "duration": 0.29 },
+        { "id": 6, "text": "的", "p": "de", "timestamp": 179.413, "duration": 0.25 },
+        { "id": 7, "text": "脑", "p": "nǎo", "timestamp": 179.673, "duration": 0.39 },
+        { "id": 8, "text": "海", "p": "hǎi", "timestamp": 180.073, "duration": 0.45 },
+        { "id": 9, "text": "里", "p": "lǐ", "timestamp": 180.533, "duration": 0.4 }
+      ]
+    },
+    {
+      "id": 30,
+      "translation": "Mening tushlarimda, yuragimda, qo'shig'imda",
+      "translation_ru": "В моих снах, в моём сердце, в моей песне",
+      "words": [
+        { "id": 0, "text": "我", "p": "wǒ", "timestamp": 181.393, "duration": 0.43 },
+        { "id": 1, "text": "的", "p": "de", "timestamp": 181.833, "duration": 0.25 },
+        { "id": 2, "text": "梦", "p": "mèng", "timestamp": 182.093, "duration": 0.41 },
+        { "id": 3, "text": "里", "p": "lǐ", "timestamp": 182.513, "duration": 0.71 },
+        { "id": 4, "text": "我", "p": "wǒ", "timestamp": 183.233, "duration": 0.45 },
+        { "id": 5, "text": "的", "p": "de", "timestamp": 183.693, "duration": 0.31 },
+        { "id": 6, "text": "心", "p": "xīn", "timestamp": 184.013, "duration": 0.47 },
+        { "id": 7, "text": "里", "p": "lǐ", "timestamp": 184.493, "duration": 0.33 },
+        { "id": 8, "text": "我", "p": "wǒ", "timestamp": 184.833, "duration": 0.31 },
+        { "id": 9, "text": "的", "p": "de", "timestamp": 185.153, "duration": 0.41 },
+        { "id": 10, "text": "歌", "p": "gē", "timestamp": 185.573, "duration": 0.37 },
+        { "id": 11, "text": "声", "p": "shēng", "timestamp": 185.953, "duration": 2.46 },
+        { "id": 12, "text": "里", "p": "lǐ", "timestamp": 190.173, "duration": 3 }
+      ]
+    }
+  ]
+}

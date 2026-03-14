@@ -67,6 +67,7 @@ const karaokeItems = [
   { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', translation_en: 'Mouse Loves Rice', href: '/chinese/hsk1/karaoke/laoshuaidami' },
   { title: '小苹果', pinyin: 'Xiǎo Píngguǒ', translation: 'Kichkina olma', translation_ru: 'Маленькое яблочко', translation_en: 'Little Apple', href: '/chinese/hsk1/karaoke/xiaopinguo' },
   { title: '世界这么大还是遇见你', pinyin: 'Shìjiè Zhème Dà Háishi Yùjiàn Nǐ', translation: 'Dunyo shuncha katta, baribir senga duch keldim', translation_ru: 'Мир так велик, но я встретил тебя', translation_en: 'The World Is So Big, Yet I Met You', href: '/chinese/hsk1/karaoke/shijiezhemeda' },
+  { title: '我的歌声里', pinyin: 'Wǒ De Gēshēng Lǐ', translation: "Mening qo'shig'imda", translation_ru: 'В моей песне', translation_en: 'In My Song', href: '/chinese/hsk1/karaoke/wodeshengli' },
 ];
 
 
@@ -303,9 +304,11 @@ interface Props {
   writingSetsHsk2L2?: WritingSetMeta[];
   writingSetsHsk3?: WritingSetMeta[];
   writingSetsHsk4?: WritingSetMeta[];
+  writingSetsHsk5?: WritingSetMeta[];
+  writingSetsHsk6?: WritingSetMeta[];
 }
 
-export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [] }: Props) {
+export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -324,8 +327,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   // Writing tab
   const initialVersion = searchParams.get('version') === '2.0' ? '2.0' : '3.0';
   const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>(initialVersion);
-  const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : searchParams.get('hsk') === '4' ? '4' : '1';
-  const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3' | '4'>(initialWritingHskLevel as '1' | '2' | '3' | '4');
+  const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : searchParams.get('hsk') === '4' ? '4' : searchParams.get('hsk') === '5' ? '5' : searchParams.get('hsk') === '6' ? '6' : '1';
+  const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3' | '4' | '5' | '6'>(initialWritingHskLevel as '1' | '2' | '3' | '4' | '5' | '6');
   const [writingSearch, setWritingSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
   const [topicSearch, setTopicSearch] = useState('');
@@ -483,11 +486,11 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         <div className="lp__seg-bar">
           <div className="lp__hsk-pills">
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
-              const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4'));
+              const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
               const isActive = activeTab === 'flashcards'
                 ? (flashcardSubTab === 'lessons' && lv === 'HSK 1')
                 : activeTab === 'writing' && hskVersion === '2.0'
-                  ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3') || (lv === 'HSK 4' && writingHskLevel === '4')
+                  ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3') || (lv === 'HSK 4' && writingHskLevel === '4') || (lv === 'HSK 5' && writingHskLevel === '5') || (lv === 'HSK 6' && writingHskLevel === '6')
                   : hasContent;
               return (
                 <button
@@ -498,7 +501,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                     if (hasContent) {
                       if (activeTab === 'flashcards') setFlashcardSubTab('lessons');
                       if (activeTab === 'writing' && hskVersion === '2.0') {
-                        setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : '1');
+                        setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1');
                       }
                     }
                   }}
@@ -613,7 +616,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         )}
 
         {activeTab === 'writing' && (() => {
-          const activeSets = hskVersion === '3.0' ? writingSets : writingHskLevel === '4' ? writingSetsHsk4 : writingHskLevel === '3' ? writingSetsHsk3 : writingHskLevel === '2' ? writingSetsHsk2L2 : writingSetsHsk2;
+          const activeSets = hskVersion === '3.0' ? writingSets : writingHskLevel === '6' ? writingSetsHsk6 : writingHskLevel === '5' ? writingSetsHsk5 : writingHskLevel === '4' ? writingSetsHsk4 : writingHskLevel === '3' ? writingSetsHsk3 : writingHskLevel === '2' ? writingSetsHsk2L2 : writingSetsHsk2;
           const wq = writingSearch.trim().toLowerCase();
           const filteredSets = wq
             ? activeSets.filter((s) =>
@@ -653,7 +656,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                         {language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title}
                       </div>
                       <div className="lp__writing-card__sub">
-                        {language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle}
+                        {(language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0]}
                       </div>
                     </div>
                     <div className="lp__card-arrow">›</div>

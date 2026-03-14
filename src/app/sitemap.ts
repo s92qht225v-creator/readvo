@@ -3,7 +3,7 @@ import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadKaraokeSongs } from '@/services/karaoke';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { loadBlogPosts } from '@/services/blog';
-import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2 } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, WRITING_SETS_HSK5, WRITING_SETS_HSK6 } from '@/services/writing';
 import { routing } from '@/i18n/routing';
 import fs from 'fs';
 import path from 'path';
@@ -79,7 +79,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch { /* topics dir may not exist */ }
 
   // Writing practice pages
-  for (const set of [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2]) {
+  for (const set of [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2, ...WRITING_SETS_HSK3, ...WRITING_SETS_HSK4, ...WRITING_SETS_HSK5, ...WRITING_SETS_HSK6]) {
     entries.push(...localeEntries(`/chinese/hsk1/writing/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
   }
 
