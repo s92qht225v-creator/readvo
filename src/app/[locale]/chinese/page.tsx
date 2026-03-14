@@ -5,7 +5,7 @@ import { LanguagePage } from '@/components/LanguagePage';
 import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
-import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3 } from '@/services/writing';
+import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4 } from '@/services/writing';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -117,6 +117,7 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
           writingSetsHsk2={WRITING_SETS_HSK2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
           writingSetsHsk2L2={WRITING_SETS_HSK2_L2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
           writingSetsHsk3={WRITING_SETS_HSK3.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+          writingSetsHsk4={WRITING_SETS_HSK4.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
         />
       </Suspense>
     </>
