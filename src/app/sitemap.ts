@@ -49,7 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Grammar pages
-  for (const slug of ['shi', 'you', 'zai', 'de', 'bu', 'ma', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci']) {
+  for (const slug of ['shenme', 'shi', 'you', 'zai', 'de', 'bu', 'ma', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci']) {
     entries.push(...localeEntries(`/chinese/hsk1/grammar/${slug}`, { changeFrequency: 'monthly', priority: 0.7 }));
   }
 

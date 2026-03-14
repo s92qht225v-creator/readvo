@@ -18,6 +18,7 @@ export function jsonLdScript(graph: Record<string, unknown>[]) {
 
 // Grammar term data for DefinedTerm schema
 export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: string }> = {
+  shenme: { char: '什么', pinyin: 'shénme', en: 'what (question word)' },
   shi: { char: '是', pinyin: 'shì', en: 'to be' },
   you: { char: '有', pinyin: 'yǒu', en: 'to have / there is' },
   zai: { char: '在', pinyin: 'zài', en: 'to be at / located' },

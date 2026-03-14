@@ -40,6 +40,7 @@ const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] =
 const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar', 'tests'];
 
 const grammarItems = [
+  { char: '什么', pinyin: 'shénme', href: '/chinese/hsk1/grammar/shenme', translation: 'nima?', translation_ru: 'что?', translation_en: 'what?', color: '#dc2626', active: true },
   { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', translation_en: 'to be', color: '#dc2626', active: true },
   { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', translation_ru: 'иметь', translation_en: 'to have', color: '#7c3aed', active: true },
   { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', translation_ru: 'находиться', translation_en: 'to be at/in', color: '#0891b2', active: true },
