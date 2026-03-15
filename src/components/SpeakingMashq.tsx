@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 type Language = 'uz' | 'ru' | 'en';
 type Question = { uz: string; zh: string; pinyin: string };
-type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing' | 'api_error';
+type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'result_no_speech' | 'shadowing' | 'api_error';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
 type DeniedReason = 'blocked' | 'noDevice' | 'unsupported';
 type Score = 'correct' | 'close' | 'wrong';
@@ -46,6 +46,7 @@ const UI = {
   processing:   { uz: 'Tekshirilmoqda…',             ru: 'Обрабатывается…',            en: 'Processing…'              } as T,
   serverError:  { uz: 'Server xatosi',               ru: 'Ошибка сервера',             en: 'Server error'             } as T,
   serverHint:   { uz: 'Ovoz serverga yetib bormadi. Internet aloqasini tekshiring.', ru: 'Аудио не дошло до сервера. Проверьте интернет.', en: "Audio didn't reach the server. Check your connection." } as T,
+  noSpeech:     { uz: 'Ovoz eshitilmadi. Balandroq gapiring.', ru: 'Голос не распознан. Говорите громче.', en: 'No speech detected. Please speak louder.' } as T,
   lastAttempt:  { uz: '⚠️ Oxirgi urinish',           ru: '⚠️ Последняя попытка',       en: '⚠️ Last attempt'          } as T,
   correct_count:{ uz: "to'g'ri",                     ru: 'правильно',                  en: 'correct'                  } as T,
   perfect:      { uz: "Mukammal! Barchasini to'g'ri aytdingiz!", ru: 'Отлично! Всё правильно!', en: 'Perfect! All correct!' } as T,
@@ -110,10 +111,29 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   const [scores, setScores]       = useState<Score[]>([]);
   const [requesting, setRequesting] = useState(false);
   const [deniedReason, setDeniedReason] = useState<DeniedReason>('blocked');
+  const [recordingProgress, setRecordingProgress] = useState(0);
 
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef   = useRef<Blob[]>([]);
   const timerRef    = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (phase !== 'recording') {
+      setRecordingProgress(0);
+      return;
+    }
+    setRecordingProgress(0);
+    const duration = 6000;
+    const interval = 50;
+    const start = Date.now();
+    const id = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const filled = Math.min(100, (elapsed / duration) * 100);
+      setRecordingProgress(filled);
+      if (filled >= 100) clearInterval(id);
+    }, interval);
+    return () => clearInterval(id);
+  }, [phase]);
 
   const q = questions[qIndex];
 
@@ -144,8 +164,12 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       chunksRef.current = [];
       const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
         ? 'audio/webm;codecs=opus'
-        : 'audio/webm';
-      const recorder = new MediaRecorder(stream, { mimeType });
+        : MediaRecorder.isTypeSupported('audio/webm')
+        ? 'audio/webm'
+        : MediaRecorder.isTypeSupported('audio/mp4')
+        ? 'audio/mp4'
+        : '';
+      const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
       recorderRef.current = recorder;
       recorder.ondataavailable = e => { if (e.data.size > 0) chunksRef.current.push(e.data); };
       recorder.onstop = async () => {
@@ -169,8 +193,18 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   const submitAudio = async (mimeType: string) => {
     try {
       const blob = new Blob(chunksRef.current, { type: mimeType });
+
+      // Client-side silence guard: very small blobs are silence before even hitting the server
+      if (blob.size < 3000) {
+        setHeard('');
+        setFeedback('');
+        setPhase('result_no_speech');
+        return;
+      }
+
+      const ext = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
       const formData = new FormData();
-      formData.append('audio', blob, 'answer.webm');
+      formData.append('audio', blob, `answer.${ext}`);
       formData.append('expected', q.zh);
       formData.append('language', language);
       const res  = await fetch('/api/transcribe', { method: 'POST', body: formData });
@@ -178,6 +212,12 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       if (data.error) throw new Error(data.error);
       setHeard(data.text ?? '');
       setFeedback(data.feedback ?? '');
+      if (data.result === 'no_speech') {
+        setHeard('');
+        setFeedback('');
+        setPhase('result_no_speech');
+        return;
+      }
       const result = (data.result ?? 'wrong') as Score;
       if (result === 'correct') {
         setScores(p => [...p, result]);
@@ -329,6 +369,9 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <div style={{ fontSize: 12, color: accentColor, fontWeight: 700, marginBottom: 12 }}>🔴 {L(UI.listening)}</div>
             <button onClick={stopRecording} style={{ width: '100%', padding: '16px 0', background: '#fee2e2', border: '2px solid #ef4444', borderRadius: 12, color: '#dc2626', fontSize: 15, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', animation: 'smPulse 1s infinite' }}>{L(UI.stop)}</button>
             <style>{`@keyframes smPulse { 0%,100%{opacity:1} 50%{opacity:.6} }`}</style>
+            <div style={{ height: 4, background: '#e0e0e6', borderRadius: 4, marginTop: 10 }}>
+              <div style={{ height: '100%', background: '#ef4444', borderRadius: 4, width: `${recordingProgress}%`, transition: 'width 0.05s linear' }} />
+            </div>
           </div>
         )}
 
@@ -389,6 +432,18 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             </div>
             <button onClick={nextQuestion} style={{ width: '100%', padding: '13px 0', background: '#d97706', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
               {qIndex + 1 < questions.length ? L(UI.next) : L(UI.results)}
+            </button>
+          </div>
+        )}
+
+        {/* no speech detected — neutral, doesn't count as a wrong attempt */}
+        {phase === 'result_no_speech' && (
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ background: '#f0f9ff', borderRadius: 10, padding: '12px 14px', border: '1px solid #bae6fd', marginBottom: 16 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#0369a1', marginBottom: 4 }}>🎙️ {L(UI.noSpeech)}</div>
+            </div>
+            <button onClick={() => { setPhase('idle'); }} style={{ width: '100%', padding: '13px 0', background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+              🎤 {L(UI.retrySpeak)}
             </button>
           </div>
         )}

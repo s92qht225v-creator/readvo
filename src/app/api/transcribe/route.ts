@@ -68,11 +68,24 @@ export async function POST(request: Request) {
       file: audio as File,
       model: 'whisper-large-v3',
       language: 'zh',
-      response_format: 'text',
+      response_format: 'verbose_json',
       prompt,
-    });
+    } as Parameters<typeof groq.audio.transcriptions.create>[0]);
 
-    const heard = (transcription as unknown as string).trim().replace(/\d+/g, '').trim();
+    // Detect silence via no_speech_prob (Whisper hallucinates on silent audio)
+    const segments = (transcription as unknown as { segments?: { no_speech_prob?: number }[] }).segments ?? [];
+    const avgNoSpeechProb = segments.length > 0
+      ? segments.reduce((sum, s) => sum + (s.no_speech_prob ?? 0), 0) / segments.length
+      : 1;
+
+    const rawText = ((transcription as unknown as { text: string }).text ?? '').trim().replace(/\d+/g, '').trim();
+
+    // If Whisper says no speech, or normalized text is empty (just punctuation), bail out
+    if (avgNoSpeechProb > 0.6 || normalizeChinese(rawText).length === 0) {
+      return Response.json({ text: '', result: 'no_speech', feedback: '' });
+    }
+
+    const heard = rawText;
 
     let result: string | null = null;
     let feedback = '';
