@@ -600,6 +600,7 @@ export function GrammarNaPage() {
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
+            language={language}
             questions={speakingQuestions}
             accentColor="#0891b2"
             accentBg="#f0f9ff"

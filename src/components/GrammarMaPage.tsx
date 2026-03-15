@@ -615,6 +615,7 @@ export function GrammarMaPage() {
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
+            language={language}
             questions={speakingQuestions}
             accentColor="#b45309"
             accentBg="#fef3c7"

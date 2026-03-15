@@ -606,6 +606,7 @@ export function GrammarDePage() {
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
+            language={language}
             questions={speakingQuestions}
             accentColor="#be185d"
             accentBg="#fce7f3"

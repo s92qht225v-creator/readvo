@@ -608,6 +608,7 @@ export function GrammarSheiPage() {
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
+            language={language}
             questions={speakingQuestions}
             accentColor="#d97706"
             accentBg="#fffbeb"

@@ -504,6 +504,7 @@ export function GrammarShenmePage() {
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
+            language={language}
             questions={speakingQuestions}
             accentColor="#dc2626"
             accentBg="#fee2e2"
