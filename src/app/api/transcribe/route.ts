@@ -66,13 +66,18 @@ export async function POST(request: Request) {
     let feedback = '';
 
     if (expected) {
-      const dist = levenshtein(normalizeChinese(expected), normalizeChinese(heard));
+      const normExp  = normalizeChinese(expected);
+      const normHeard = normalizeChinese(heard);
+      const dist = levenshtein(normExp, normHeard);
+      const len  = normExp.length;
+
       if (dist <= 1) {
         result = 'correct';
-      } else if (dist >= 5) {
+      } else if (dist >= 5 || len <= 7) {
+        // short sentences (≤7 chars) require near-exact match
         result = 'wrong';
       } else {
-        // borderline (dist 2–4) — ask AI
+        // borderline (dist 2–4, longer sentences) — ask AI
         const ai = await aiJudge(expected, heard, language);
         result   = ai.result;
         feedback = ai.feedback ?? '';
