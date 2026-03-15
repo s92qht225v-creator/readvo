@@ -138,6 +138,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       const blob = new Blob(chunksRef.current, { type: mimeType });
       const formData = new FormData();
       formData.append('audio', blob, 'answer.webm');
+      formData.append('expected', q.zh);
       const res  = await fetch('/api/transcribe', { method: 'POST', body: formData });
       const data = await res.json() as { text?: string; error?: string };
       if (data.error) throw new Error(data.error);
