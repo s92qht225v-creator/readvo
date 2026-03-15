@@ -412,8 +412,8 @@ export function GrammarSheiPage() {
               </p>
               {pattern1Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-py">{r.py}</div>
+                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
                 </div>
               ))}
@@ -442,8 +442,8 @@ export function GrammarSheiPage() {
               </p>
               {pattern2Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-py">{r.py}</div>
+                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
                 </div>
               ))}
@@ -465,8 +465,8 @@ export function GrammarSheiPage() {
               </p>
               {pattern3Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-py">{r.py}</div>
+                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
                   <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
                 </div>
               ))}

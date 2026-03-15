@@ -252,8 +252,9 @@ export function GrammarDouPage() {
                 { zh: '大家都来了。', py: 'Dàjiā dōu lái le.', uz: 'Hamma keldi.', ru: 'Все пришли.', en: 'Everyone came.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -279,8 +280,9 @@ export function GrammarDouPage() {
                 { zh: '猫和狗都很可爱。', py: 'Māo hé gǒu dōu hěn kě\'ài.', uz: 'Mushuk va it ikkalasi ham yoqimli.', ru: 'Кошка и собака — оба милые.', en: 'Cats and dogs are both cute.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -309,8 +311,9 @@ export function GrammarDouPage() {
                 { zh: '这些都不贵。', py: 'Zhèxiē dōu bú guì.', uz: 'Bularning hech biri qimmat emas.', ru: 'Ничего из этого не дорого.', en: 'None of these are expensive.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -333,8 +336,9 @@ export function GrammarDouPage() {
                 { zh: '我们不都喜欢。', py: 'Wǒmen bù dōu xǐhuan.', uz: 'Biz hammamiz ham yoqtirmaydi. (ba\'zilar yoqtiradi)', ru: 'Нам не всем нравится. (некоторым нравится)', en: 'Not all of us like it. (some do)' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -377,8 +381,9 @@ export function GrammarDouPage() {
                 { zh: '哪儿都有。', py: 'Nǎr dōu yǒu.', uz: 'Hamma joyda bor.', ru: 'Везде есть.', en: 'It\'s everywhere.', word: '哪儿都 = везде' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                   <div style={{ fontSize: '0.75em', color: '#7c3aed', marginTop: 3, fontStyle: 'italic' }}>{x.word}</div>
                 </div>

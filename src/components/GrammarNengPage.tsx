@@ -313,8 +313,9 @@ export function GrammarNengPage() {
                 { zh: '她能跑很快。', py: 'Tā néng pǎo hěn kuài.', uz: 'U juda tez yugura oladi.', ru: 'Она может бегать очень быстро.', en: 'She can run very fast.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -338,8 +339,9 @@ export function GrammarNengPage() {
                 { zh: '下雨了，不能出去。', py: 'Xià yǔ le, bù néng chū qù.', uz: 'Yomg\'ir yog\'di, chiqa olmaymiz.', ru: 'Дождь пошёл, нельзя выходить.', en: 'It\'s raining, can\'t go out.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -361,8 +363,9 @@ export function GrammarNengPage() {
                 { zh: '上课不能用手机。', py: 'Shàng kè bù néng yòng shǒujī.', uz: 'Darsda telefon ishlata olmaysiz.', ru: 'На уроке нельзя пользоваться телефоном.', en: 'You can\'t use your phone in class.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -393,8 +396,9 @@ export function GrammarNengPage() {
                 { zh: '你能等一下吗？', py: 'Nǐ néng děng yíxià ma?', uz: 'Biroz kuta olasanmi?', ru: 'Можешь немного подождать?', en: 'Can you wait a moment?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -594,8 +598,9 @@ export function GrammarNengPage() {
                     </div>
                   </div>
                   <div className="grammar-block__usage-item">
-                    <div className="grammar-block__usage-zh">{r.ex}</div>
                     <div className="grammar-block__usage-py">{r.py_ex}</div>
+                    <div className="grammar-block__usage-zh">{r.ex}</div>
+
                     <div className="grammar-block__usage-tr">{({ uz: r.uz, ru: r.ru, en: (r as any).en || r.uz } as Record<string, string>)[language]}</div>
                   </div>
                 </div>

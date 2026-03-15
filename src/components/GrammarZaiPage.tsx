@@ -189,8 +189,9 @@ export function GrammarZaiPage() {
               </div>
               <p className="grammar-block__formula-desc">{({ uz: 'Kimdir/nimadir biror joyda joylashgan', ru: 'Кто-то/что-то находится в каком-то месте', en: 'Someone/something is located at a place' } as Record<string, string>)[language]}</p>
               <div className="grammar-block__usage-item" style={{ marginTop: 10 }}>
-                <div className="grammar-block__usage-zh">猫<span className="grammar-block__highlight">在</span>沙发上。</div>
                 <div className="grammar-block__usage-py">Māo zài shāfā shàng.</div>
+                <div className="grammar-block__usage-zh">猫<span className="grammar-block__highlight">在</span>沙发上。</div>
+
                 <div className="grammar-block__usage-tr">{({ uz: 'Mushuk divanda.', ru: 'Кот на диване.', en: 'The cat is on the sofa.' } as Record<string, string>)[language]}</div>
               </div>
             </div>
@@ -208,8 +209,9 @@ export function GrammarZaiPage() {
               </div>
               <p className="grammar-block__formula-desc">{({ uz: 'Harakat biror joyda sodir bo\'ladi', ru: 'Действие происходит в каком-то месте', en: 'An action takes place at a location' } as Record<string, string>)[language]}</p>
               <div className="grammar-block__usage-item" style={{ marginTop: 10 }}>
-                <div className="grammar-block__usage-zh">我<span className="grammar-block__highlight">在</span>图书馆学习。</div>
                 <div className="grammar-block__usage-py">Wǒ zài túshūguǎn xuéxí.</div>
+                <div className="grammar-block__usage-zh">我<span className="grammar-block__highlight">在</span>图书馆学习。</div>
+
                 <div className="grammar-block__usage-tr">{({ uz: 'Men kutubxonada o\'qiyman.', ru: 'Я учусь в библиотеке.', en: 'I study in the library.' } as Record<string, string>)[language]}</div>
               </div>
             </div>
@@ -222,8 +224,9 @@ export function GrammarZaiPage() {
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-type">{({ uz: x.t_uz, ru: x.t_ru, en: (x as any).t_en || x.t_uz } as Record<string, string>)[language]}</div>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -312,8 +315,9 @@ export function GrammarZaiPage() {
               <div className="grammar-block__label">{({ uz: 'Misollar', ru: 'Примеры', en: 'Examples' } as Record<string, string>)[language]}</div>
               {negativeExamples.map((ex, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{ex.zh}</div>
                   <div className="grammar-block__usage-py">{ex.pinyin}</div>
+                  <div className="grammar-block__usage-zh">{ex.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: ex.uz, ru: ex.ru, en: (ex as any).en || ex.uz } as Record<string, string>)[language]}</div>
                   {(({ uz: ex.note_uz, ru: ex.note_ru, en: (ex as any).note_en || ex.note_uz } as Record<string, string | undefined>)[language]) && (
                     <div className="grammar-block__usage-note">💡 {({ uz: ex.note_uz, ru: ex.note_ru, en: (ex as any).note_en || ex.note_uz } as Record<string, string | undefined>)[language]}</div>

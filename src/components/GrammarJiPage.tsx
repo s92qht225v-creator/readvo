@@ -303,8 +303,9 @@ export function GrammarJiPage() {
                       fontSize: 11, fontWeight: 700, color: COLOR,
                     }}>量词: {x.mw}</span>
                   </div>
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -328,8 +329,9 @@ export function GrammarJiPage() {
                 { ex: '你几月来？', py: 'Nǐ jǐ yuè lái?', uz: 'Nechanchi oyda kelasan?', ru: 'В каком месяце придёшь?', en: 'Which month are you coming?', note: '1-12' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 2 }}>
                     <span className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</span>
                     <span style={{ fontSize: 9, color: COLOR, background: `${COLOR}15`, padding: '1px 6px', borderRadius: 3 }}>{x.note}</span>
@@ -357,8 +359,9 @@ export function GrammarJiPage() {
                 { ex: '你认识多少汉字？', py: 'Nǐ rènshi duōshǎo Hànzì?', uz: 'Nechta ieroglif bilasan?', ru: 'Сколько иероглифов ты знаешь?', en: 'How many Chinese characters do you know?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -382,8 +385,9 @@ export function GrammarJiPage() {
                 { ex: '那件衣服多少钱？', py: 'Nà jiàn yīfu duōshǎo qián?', uz: 'Anavi kiyim qancha turadi?', ru: 'Сколько стоит та одежда?', en: 'How much is that piece of clothing?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -410,8 +414,9 @@ export function GrammarJiPage() {
                 { ex: '多长时间？', py: 'Duō cháng shíjiān?', uz: 'Qancha vaqt?', ru: 'Сколько времени?', en: 'How long?', note_uz: '多长时间 = qancha vaqt davom etadi?', note_ru: '多长时间 = сколько времени это занимает?', note_en: '多长时间 = how long does it take?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                   <div className="grammar-block__usage-note">💡 {({ uz: x.note_uz, ru: x.note_ru, en: (x as any).note_en || x.note_uz } as Record<string, string>)[language]}</div>
                 </div>

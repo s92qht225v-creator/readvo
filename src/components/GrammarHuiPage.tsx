@@ -364,8 +364,9 @@ export function GrammarHuiPage() {
                 { zh: '她会开车。', py: 'Tā huì kāi chē.', uz: 'U mashina hayda oladi.', ru: 'Она умеет водить машину.', en: 'She can drive.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -391,8 +392,9 @@ export function GrammarHuiPage() {
                 { zh: '他会来的。', py: 'Tā huì lái de.', uz: 'U keladi (ishonaman).', ru: 'Он придёт (я уверен).', en: 'He will come (I\'m sure).' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -420,8 +422,9 @@ export function GrammarHuiPage() {
                 { zh: '我不会开车。', py: 'Wǒ bú huì kāi chē.', uz: 'Men mashina hayda olmayman.', ru: 'Я не умею водить машину.', en: 'I can\'t drive.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -515,8 +518,9 @@ export function GrammarHuiPage() {
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
                   <div style={{ display: 'inline-block', background: '#ecfeff', borderRadius: 4, padding: '2px 8px', fontSize: '0.75em', fontWeight: 700, color: COLOR, marginBottom: 4 }}>{x.combo}</div>
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -669,8 +673,9 @@ export function GrammarHuiPage() {
                     </div>
                   </div>
                   <div className="grammar-block__usage-item">
-                    <div className="grammar-block__usage-zh">{r.ex}</div>
                     <div className="grammar-block__usage-py">{r.py_ex}</div>
+                    <div className="grammar-block__usage-zh">{r.ex}</div>
+
                     <div className="grammar-block__usage-tr">{({ uz: r.uz, ru: r.ru, en: (r as any).en || r.uz } as Record<string, string>)[language]}</div>
                   </div>
                 </div>

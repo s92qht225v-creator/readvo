@@ -219,8 +219,9 @@ export function GrammarLePage() {
                 { zh: '她睡了。', py: 'Tā shuì le.', uz: 'U uxladi.', ru: 'Она уснула.', en: 'She fell asleep.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -244,8 +245,9 @@ export function GrammarLePage() {
                 { zh: '我们看了电影。', py: 'Wǒmen kàn le diànyǐng.', uz: 'Biz kino ko\'rdik.', ru: 'Мы посмотрели фильм.', en: 'We watched a movie.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -271,8 +273,9 @@ export function GrammarLePage() {
                 { zh: '他高了。', py: 'Tā gāo le.', uz: 'U o\'sdi. (oldin past edi)', ru: 'Он вырос. (раньше был ниже)', en: 'He grew taller. (he was shorter before)' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -299,8 +302,9 @@ export function GrammarLePage() {
                 { zh: '太冷了！', py: 'Tài lěng le!', uz: 'Juda sovuq!', ru: 'Очень холодно!', en: 'So cold!' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

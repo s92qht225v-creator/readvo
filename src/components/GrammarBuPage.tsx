@@ -239,8 +239,9 @@ export function GrammarBuPage() {
                 { zh: '她不看电视。', py: 'Tā bú kàn diànshì.', uz: 'U televizor ko\'rmaydi.', ru: 'Она не смотрит телевизор.', en: 'She doesn\'t watch TV.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -262,8 +263,9 @@ export function GrammarBuPage() {
                 { zh: '我不忙。', py: 'Wǒ bù máng.', uz: 'Men band emasman.', ru: 'Я не занят.', en: 'I\'m not busy.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -284,8 +286,9 @@ export function GrammarBuPage() {
                 { zh: '这不是我的书。', py: 'Zhè bú shì wǒ de shū.', uz: 'Bu mening kitobim emas.', ru: 'Это не моя книга.', en: 'This is not my book.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -306,8 +309,9 @@ export function GrammarBuPage() {
                 { zh: '我不想学习。', py: 'Wǒ bù xiǎng xuéxí.', uz: 'O\'qigim kelmayapti.', ru: 'Я не хочу учиться.', en: 'I don\'t want to study.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -436,8 +440,9 @@ export function GrammarBuPage() {
               ].map((w, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 5 }}>
                   <div style={{ flex: 1 }}>
-                    <div className="grammar-block__usage-zh">{w.zh}</div>
                     <div className="grammar-block__usage-py">{w.py}</div>
+                    <div className="grammar-block__usage-zh">{w.zh}</div>
+
                     <div className="grammar-block__usage-tr">{({ uz: w.uz, ru: w.ru, en: (w as any).en || w.uz } as Record<string, string>)[language]}</div>
                   </div>
                   <div style={{ fontSize: '0.7em', color: '#16a34a', fontWeight: 600, background: '#dcfce7', padding: '3px 6px', borderRadius: 4, flexShrink: 0, textAlign: 'center', maxWidth: 90 }}>

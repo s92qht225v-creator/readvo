@@ -239,8 +239,9 @@ export function GrammarHenPage() {
                 { zh: '今天很热。', py: 'Jīntiān hěn rè.', uz: 'Bugun issiq.', ru: 'Сегодня жарко.', en: 'It\'s hot today.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -262,8 +263,9 @@ export function GrammarHenPage() {
                 { zh: '他跑得很快。', py: 'Tā pǎo de hěn kuài.', uz: 'U juda tez yuguradi.', ru: 'Он бегает очень быстро.', en: 'He runs very fast.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -352,8 +354,9 @@ export function GrammarHenPage() {
                 { zh: '我很想去。', py: 'Wǒ hěn xiǎng qù.', uz: 'Men juda bormoqchiman.', ru: 'Я очень хочу пойти.', en: 'I really want to go.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

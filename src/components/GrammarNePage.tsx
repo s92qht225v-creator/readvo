@@ -210,8 +210,9 @@ export function GrammarNePage() {
                 { zh: '我是学生，你呢？', py: 'Wǒ shì xuésheng, nǐ ne?', uz: 'Men talabaman, senchi?', ru: 'Я студент, а ты?', en: 'I\'m a student, and you?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -238,8 +239,9 @@ export function GrammarNePage() {
                 { zh: '我吃了，你呢？', py: 'Wǒ chī le, nǐ ne?', uz: 'Men yedim, senchi?', ru: 'Я поел, а ты?', en: 'I\'ve eaten, and you?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -260,8 +262,9 @@ export function GrammarNePage() {
                 { zh: '你的手机呢？', py: 'Nǐ de shǒujī ne?', uz: 'Telefoning qani?', ru: 'Где твой телефон?', en: 'Where is your phone?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

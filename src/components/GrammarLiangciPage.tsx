@@ -306,8 +306,9 @@ export function GrammarLiangciPage() {
                       量词: {x.mw}
                     </span>
                   </div>
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -338,8 +339,9 @@ export function GrammarLiangciPage() {
                 { ex: '那件衣服', py: 'nà jiàn yīfu', uz: 'anavi kiyim', ru: 'та одежда', en: 'that piece of clothing', note_uz: '那 + 件 = anavi (kiyim)', note_ru: '那 + 件 = та (одежда)', note_en: '那 + 件 = that (clothing)' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                   <div className="grammar-block__usage-note">💡 {({ uz: x.note_uz, ru: x.note_ru, en: (x as any).note_en || x.note_uz } as Record<string, string>)[language]}</div>
                 </div>
@@ -366,8 +368,9 @@ export function GrammarLiangciPage() {
                 { ex: '几本书？', py: 'Jǐ běn shū?', uz: 'Nechta kitob?', ru: 'Сколько книг?', en: 'How many books?' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -384,8 +387,9 @@ export function GrammarLiangciPage() {
                 { ex: '他是一个好人。', py: 'Tā shì yí ge hǎo rén.', uz: 'U yaxshi odam.', ru: 'Он хороший человек.', en: 'He is a good person.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -407,8 +411,9 @@ export function GrammarLiangciPage() {
                 { ex: '有一些问题。', py: 'Yǒu yìxiē wèntí.', uz: 'Ba\'zi muammolar bor.', ru: 'Есть некоторые проблемы.', en: 'There are some problems.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{x.ex}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.ex}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

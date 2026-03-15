@@ -323,8 +323,9 @@ export function GrammarXiangPage() {
                 { zh: '我们想看电影。', py: 'Wǒmen xiǎng kàn diànyǐng.', uz: 'Biz film ko\'rmoqchimiz.', ru: 'Мы хотим посмотреть фильм.', en: 'We want to watch a movie.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -347,8 +348,9 @@ export function GrammarXiangPage() {
                 { zh: '她想朋友。', py: 'Tā xiǎng péngyou.', uz: 'U do\'stlarini sog\'inadi.', ru: 'Она скучает по друзьям.', en: 'She misses her friends.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -379,8 +381,9 @@ export function GrammarXiangPage() {
                 { zh: '我想休息一下。', py: 'Wǒ xiǎng xiūxi yīxià.', uz: 'Men biroz dam olmoqchiman.', ru: 'Я хочу немного отдохнуть.', en: 'I want to rest a little.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -400,8 +403,9 @@ export function GrammarXiangPage() {
                 { zh: '我想中国。', py: 'Wǒ xiǎng Zhōngguó.', uz: 'Men Xitoyni sog\'inaman.', ru: 'Я скучаю по Китаю.', en: 'I miss China.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -417,8 +421,9 @@ export function GrammarXiangPage() {
                 { zh: '让我想一想。', py: 'Ràng wǒ xiǎng yì xiǎng.', uz: 'Menga o\'ylab ko\'rish uchun ruxsat bering.', ru: 'Позвольте мне подумать.', en: 'Let me think about it.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -643,8 +648,9 @@ export function GrammarXiangPage() {
                     </div>
                   </div>
                   <div className="grammar-block__usage-item">
-                    <div className="grammar-block__usage-zh">{r.ex}</div>
                     <div className="grammar-block__usage-py">{r.py_ex}</div>
+                    <div className="grammar-block__usage-zh">{r.ex}</div>
+
                     <div className="grammar-block__usage-tr">{({ uz: r.uz, ru: r.ru, en: (r as any).en || r.uz } as Record<string, string>)[language]}</div>
                   </div>
                 </div>

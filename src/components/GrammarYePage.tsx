@@ -229,8 +229,9 @@ export function GrammarYePage() {
                 { zh: '爸爸会做饭，妈妈也会做饭。', py: 'Bàba huì zuòfàn, māma yě huì zuòfàn.', uz: 'Otam ovqat pishira oladi, onam ham.', ru: 'Папа умеет готовить, мама тоже.', en: 'Dad can cook, Mom can too.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -254,8 +255,9 @@ export function GrammarYePage() {
                 { zh: '他会说英语，也会说中文。', py: 'Tā huì shuō Yīngyǔ, yě huì shuō Zhōngwén.', uz: 'U inglizcha gapira oladi, xitoycha ham.', ru: 'Он умеет говорить по-английски и по-китайски.', en: 'He can speak English and also Chinese.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -279,8 +281,9 @@ export function GrammarYePage() {
                 { zh: '我也不想去。', py: 'Wǒ yě bù xiǎng qù.', uz: 'Men ham bormoqchi emasman.', ru: 'Я тоже не хочу идти.', en: 'I don\'t want to go either.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -316,8 +319,9 @@ export function GrammarYePage() {
                 { zh: '他们也都去了。', py: 'Tāmen yě dōu qù le.', uz: 'Ular ham hammasi bordi.', ru: 'Они тоже все пошли.', en: 'They also all went.' },
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item" style={{ marginTop: 6 }}>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: (x as any).en || x.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

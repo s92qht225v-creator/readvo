@@ -188,8 +188,9 @@ export function GrammarYouPage() {
               </div>
               <p className="grammar-block__formula-desc">{({ uz: 'Kimda nimadir bor', ru: 'У кого-то что-то есть', en: 'Someone has something' } as Record<string, string>)[language]}</p>
               <div className="grammar-block__usage-item" style={{ marginTop: 10 }}>
-                <div className="grammar-block__usage-zh">我<span className="grammar-block__highlight">有</span>三个朋友。</div>
                 <div className="grammar-block__usage-py">Wǒ yǒu sān gè péngyǒu.</div>
+                <div className="grammar-block__usage-zh">我<span className="grammar-block__highlight">有</span>三个朋友。</div>
+
                 <div className="grammar-block__usage-tr">{({ uz: 'Mening uchta do\'stim bor.', ru: 'У меня три друга.', en: 'I have three friends.' } as Record<string, string>)[language]}</div>
               </div>
             </div>
@@ -205,8 +206,9 @@ export function GrammarYouPage() {
               </div>
               <p className="grammar-block__formula-desc">{({ uz: 'Biror joyda nimadir / kimdir bor', ru: 'Где-то что-то / кто-то есть', en: 'Something / someone exists somewhere' } as Record<string, string>)[language]}</p>
               <div className="grammar-block__usage-item" style={{ marginTop: 10 }}>
-                <div className="grammar-block__usage-zh">学校里<span className="grammar-block__highlight">有</span>图书馆。</div>
                 <div className="grammar-block__usage-py">Xuéxiào lǐ yǒu túshūguǎn.</div>
+                <div className="grammar-block__usage-zh">学校里<span className="grammar-block__highlight">有</span>图书馆。</div>
+
                 <div className="grammar-block__usage-tr">{({ uz: 'Maktabda kutubxona bor.', ru: 'В школе есть библиотека.', en: 'There is a library in the school.' } as Record<string, string>)[language]}</div>
               </div>
             </div>
@@ -220,8 +222,9 @@ export function GrammarYouPage() {
               ].map((x, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div className="grammar-block__usage-type">{({ uz: x.t_uz, ru: x.t_ru, en: x.t_en } as Record<string, string>)[language]}</div>
-                  <div className="grammar-block__usage-zh">{x.zh}</div>
                   <div className="grammar-block__usage-py">{x.py}</div>
+                  <div className="grammar-block__usage-zh">{x.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: x.uz, ru: x.ru, en: x.en } as Record<string, string>)[language]}</div>
                 </div>
               ))}
@@ -301,8 +304,9 @@ export function GrammarYouPage() {
               <div className="grammar-block__label">{({ uz: 'Misollar', ru: 'Примеры', en: 'Examples' } as Record<string, string>)[language]}</div>
               {negativeExamples.map((ex, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-zh">{ex.zh}</div>
                   <div className="grammar-block__usage-py">{ex.pinyin}</div>
+                  <div className="grammar-block__usage-zh">{ex.zh}</div>
+
                   <div className="grammar-block__usage-tr">{({ uz: ex.uz, ru: ex.ru, en: ex.en } as Record<string, string>)[language]}</div>
                   {(({ uz: ex.note_uz, ru: ex.note_ru, en: ex.note_en } as Record<string, string | undefined>)[language]) && (
                     <div className="grammar-block__usage-note">💡 {({ uz: ex.note_uz, ru: ex.note_ru, en: ex.note_en } as Record<string, string | undefined>)[language]}</div>
