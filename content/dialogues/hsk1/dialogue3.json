@@ -67,7 +67,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue1.mp3",
           "text_translation_en": "Do you like China?"
         },
         {
@@ -90,7 +90,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue2.mp3",
           "text_translation_en": "Yes, I do."
         },
         {
@@ -135,7 +135,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue3.mp3",
           "text_translation_en": "What do you like?"
         },
         {
@@ -191,16 +191,16 @@
               "l": 12
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue4.mp3",
           "text_translation_en": "I like Chinese food."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3"
     }
   ],
   "tag": "tanishuv",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3",
   "extraVocabSubtitle_uz": "Hobbilar va qiziqishlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме хобби и интересов",
   "extraVocab": [

@@ -34,7 +34,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue1.mp3",
           "start": 0.017,
           "end": 0.84,
           "text_translation_en": "Hello!"
@@ -59,7 +59,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue2.mp3",
           "start": 1.83,
           "end": 2.64,
           "text_translation_en": "Hello!"
@@ -117,7 +117,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue3.mp3",
           "start": 3.7,
           "end": 5.07,
           "text_translation_en": "What's your name?"
@@ -162,7 +162,7 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue4.mp3",
           "start": 5.52,
           "end": 6.82,
           "text_translation_en": "My name is Li Ming."
@@ -185,7 +185,7 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue5.mp3",
           "start": 7.32,
           "end": 8.34,
           "text_translation_en": "Li Ming?"
@@ -241,7 +241,7 @@
               "tr": "Ли Мин"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue6.mp3",
           "start": 7.69,
           "end": 8.44,
           "text_translation_en": "Yes, my name is Li Ming."
@@ -299,7 +299,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue7.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue7.mp3",
           "start": 10.44,
           "end": 12.58,
           "text_translation_en": "Nice to meet you."
@@ -357,18 +357,18 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue8.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue8.mp3",
           "start": 12.58,
           "end": 14.34,
           "text_translation_en": "I'm happy too."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3"
     }
   ],
   "tag": "tanishuv",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3",
   "vocab": [
     {
       "zh": "你好",

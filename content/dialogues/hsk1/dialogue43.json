@@ -74,7 +74,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3",
           "text_translation_en": "Is your seatbelt fastened?"
         },
         {
@@ -117,7 +117,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3",
           "text_translation_en": "Yes, it is."
         },
         {
@@ -171,7 +171,7 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3",
           "text_translation_en": "What about the people in the back?"
         },
         {
@@ -225,7 +225,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3",
           "text_translation_en": "They're fastened too."
         },
         {
@@ -279,7 +279,7 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3",
           "text_translation_en": "Then let's go."
         },
         {
@@ -302,16 +302,16 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3",
           "text_translation_en": "OK."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
     }
   ],
   "tag": "transport",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
     {
       "zh": "安全带",

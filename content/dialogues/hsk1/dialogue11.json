@@ -54,7 +54,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue1.mp3",
           "text_translation_en": "Are you hungry?"
         },
         {
@@ -88,7 +88,7 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue2.mp3",
           "text_translation_en": "A little."
         },
         {
@@ -144,7 +144,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue3.mp3",
           "text_translation_en": "What do you want to eat?"
         },
         {
@@ -220,7 +220,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue4.mp3",
           "text_translation_en": "I want noodles. And you?"
         },
         {
@@ -309,7 +309,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue5.mp3",
           "text_translation_en": "I want rice. What will you drink?"
         },
         {
@@ -352,7 +352,7 @@
               "tr": "кола"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue6.mp3",
           "text_translation_en": "I'll have cola."
         },
         {
@@ -406,16 +406,16 @@
               "tr": "кола"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3",
           "text_translation_en": "I'll have cola too."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3"
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3",
   "vocab": [
     {
       "zh": "米饭",

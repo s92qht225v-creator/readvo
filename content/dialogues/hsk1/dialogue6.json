@@ -54,7 +54,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue1.mp3",
           "text_translation_en": "Do you have bananas?"
         },
         {
@@ -76,7 +76,7 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue2.mp3",
           "text_translation_en": "Yes, we do."
         },
         {
@@ -110,7 +110,7 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue3.mp3",
           "text_translation_en": "How much?"
         },
         {
@@ -175,7 +175,7 @@
               "tr": "цзинь (500г)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3",
           "text_translation_en": "Five yuan per jin."
         },
         {
@@ -197,16 +197,16 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue5.mp3",
           "text_translation_en": "OK."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3"
     }
   ],
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3",
   "vocab": [
     {
       "zh": "斤",

@@ -74,7 +74,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue1.mp3",
           "text_translation_en": "How long have you been learning Chinese?"
         },
         {
@@ -130,7 +130,7 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue2.mp3",
           "text_translation_en": "Half a year."
         },
         {
@@ -171,7 +171,7 @@
               "tr": "трудно ли"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue3.mp3",
           "text_translation_en": "Is learning Chinese difficult?"
         },
         {
@@ -192,7 +192,7 @@
               "tr": "трудный"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue4.mp3",
           "text_translation_en": "It's difficult."
         },
         {
@@ -257,7 +257,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue5.mp3",
           "text_translation_en": "Can you write characters?"
         },
         {
@@ -291,16 +291,16 @@
               "l": 12
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue6.mp3",
           "text_translation_en": "A little."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3"
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xue%20zhongwen%20nan%20bu%20nan/dialogue.mp3",
   "extraVocabSubtitle_uz": "O'qish va til o'rganish mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме учёбы и изучения языка",
   "extraVocab": [

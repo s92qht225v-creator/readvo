@@ -67,7 +67,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue1.mp3",
           "text_translation_en": "Where is your home?"
         },
         {
@@ -121,7 +121,7 @@
               "tr": "Шанхай"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue2.mp3",
           "text_translation_en": "My home is in Shanghai."
         },
         {
@@ -197,7 +197,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue3.mp3",
           "text_translation_en": "How many people are in your family?"
         },
         {
@@ -295,7 +295,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue4.mp3",
           "text_translation_en": "Four. Dad, mom, my younger brother, and me."
         },
         {
@@ -351,7 +351,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue5.mp3",
           "text_translation_en": "Is your home big?"
         },
         {
@@ -385,16 +385,16 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue6.mp3",
           "text_translation_en": "Not big."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3",
   "extraVocabSubtitle_uz": "Uy va mahalla mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме дома и района",
   "extraVocab": [

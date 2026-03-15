@@ -56,7 +56,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue1.mp3",
           "text_translation_en": "What time is it now?"
         },
         {
@@ -90,7 +90,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue2.mp3",
           "text_translation_en": "Three o'clock."
         },
         {
@@ -146,7 +146,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue3.mp3",
           "text_translation_en": "What time does your class start?"
         },
         {
@@ -202,7 +202,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue4.mp3",
           "text_translation_en": "My class starts at four."
         },
         {
@@ -258,7 +258,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue5.mp3",
           "text_translation_en": "What time does your class end?"
         },
         {
@@ -314,16 +314,16 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue6.mp3",
           "text_translation_en": "My class ends at five."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue.mp3"
     }
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xianzai%20ji%20dian/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue.mp3",
   "extraVocabSubtitle_uz": "Vaqt va kun tartibi mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме времени и расписания",
   "extraVocab": [

@@ -76,7 +76,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue1.mp3",
           "text_translation_en": "Are you free tomorrow?"
         },
         {
@@ -99,7 +99,7 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue2.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -153,7 +153,7 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue3.mp3",
           "text_translation_en": "Let's eat together."
         },
         {
@@ -176,7 +176,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3",
           "text_translation_en": "OK."
         },
         {
@@ -219,7 +219,7 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue5.mp3",
           "text_translation_en": "Lunch or dinner?"
         },
         {
@@ -253,16 +253,16 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue6.mp3",
           "text_translation_en": "Dinner."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3"
     }
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3",
   "extraVocabSubtitle_uz": "Taklif va uchrashuvlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме приглашений и встреч",
   "extraVocab": [

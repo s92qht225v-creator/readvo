@@ -63,7 +63,7 @@
               "tr": "есть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue1.mp3",
           "text_translation_en": "Why aren't you eating?"
         },
         {
@@ -115,7 +115,7 @@
               "tr": "держать пост"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue2.mp3",
           "text_translation_en": "Because I'm fasting."
         },
         {
@@ -169,7 +169,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue3.mp3",
           "text_translation_en": "Is it Ramadan now?"
         },
         {
@@ -192,7 +192,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue4.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -268,7 +268,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue5.mp3",
           "text_translation_en": "You don't eat during the day, right?"
         },
         {
@@ -313,7 +313,7 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue6.mp3",
           "text_translation_en": "Right, I eat in the evening."
         },
         {
@@ -345,7 +345,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue7.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue7.mp3",
           "text_translation_en": "Is it hard?"
         },
         {
@@ -377,16 +377,16 @@
               "tr": "тяжело"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue8.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue8.mp3",
           "text_translation_en": "Not hard."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue.mp3"
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-26",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhai%20yue/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue.mp3",
   "vocab": [
     {
       "zh": "为什么",

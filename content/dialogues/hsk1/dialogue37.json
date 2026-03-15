@@ -65,7 +65,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue1.mp3",
           "text_translation_en": "Are you here?"
         },
         {
@@ -97,7 +97,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue2.mp3",
           "text_translation_en": "Yes, I'm here."
         },
         {
@@ -131,7 +131,7 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue3.mp3",
           "text_translation_en": "Where are you?"
         },
         {
@@ -163,7 +163,7 @@
               "tr": "у входа"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue4.mp3",
           "text_translation_en": "At the entrance."
         },
         {
@@ -204,7 +204,7 @@
               "tr": "немного"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue5.mp3",
           "text_translation_en": "Wait for me."
         },
         {
@@ -227,16 +227,16 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue6.mp3",
           "text_translation_en": "OK."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue.mp3"
     }
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/deng%20wo%20yixia/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue.mp3",
   "vocab": [
     {
       "zh": "到",

@@ -92,7 +92,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue1.mp3",
           "text_translation_en": "I sent you a message this morning."
         },
         {
@@ -135,7 +135,7 @@
               "tr": "получить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue2.mp3",
           "text_translation_en": "I didn't receive it."
         },
         {
@@ -196,7 +196,7 @@
               "tr": "один раз"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue3.mp3",
           "text_translation_en": "Then I'll send it again."
         },
         {
@@ -237,7 +237,7 @@
               "tr": "получить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue4.mp3",
           "text_translation_en": "Still didn't receive it."
         },
         {
@@ -313,7 +313,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue5.mp3",
           "text_translation_en": "Is this your WeChat?"
         },
         {
@@ -347,16 +347,16 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue6.mp3",
           "text_translation_en": "No, it's not."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3"
     }
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3",
   "extraVocabSubtitle_uz": "Ijtimoiy tarmoqlar va akkauntlar mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме соцсетей и аккаунтов",
   "extraVocab": [

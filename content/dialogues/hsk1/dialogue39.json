@@ -74,7 +74,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3",
           "text_translation_en": "Have you finished your homework?"
         },
         {
@@ -126,7 +126,7 @@
               "tr": "закончить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3",
           "text_translation_en": "Not yet."
         },
         {
@@ -167,7 +167,7 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3",
           "text_translation_en": "How much is left?"
         },
         {
@@ -206,7 +206,7 @@
               "tr": "половина"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3",
           "text_translation_en": "Half of it."
         },
         {
@@ -271,7 +271,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3",
           "text_translation_en": "Can you finish it today?"
         },
         {
@@ -294,16 +294,16 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3",
           "text_translation_en": "Yes, I can."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3",
   "vocab": [
     {
       "zh": "作业",

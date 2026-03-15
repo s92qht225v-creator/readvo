@@ -56,7 +56,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue1.mp3",
           "text_translation_en": "What's wrong?"
         },
         {
@@ -99,7 +99,7 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue2.mp3",
           "text_translation_en": "I don't feel well."
         },
         {
@@ -153,7 +153,7 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue3.mp3",
           "text_translation_en": "Where does it hurt?"
         },
         {
@@ -194,7 +194,7 @@
               "tr": "болеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue4.mp3",
           "text_translation_en": "I have a headache."
         },
         {
@@ -226,7 +226,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue5.mp3",
           "text_translation_en": "Do you have a fever?"
         },
         {
@@ -258,7 +258,7 @@
               "tr": "температура"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue6.mp3",
           "text_translation_en": "No, I don't."
         },
         {
@@ -303,7 +303,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue7.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue7.mp3",
           "text_translation_en": "Will you go to the hospital?"
         },
         {
@@ -381,16 +381,16 @@
               "l": 12
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue8.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue8.mp3",
           "text_translation_en": "No, I just want to rest a bit."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue.mp3"
     }
   ],
   "tag": "salomatlik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/wo%20bu%20shufu/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue.mp3",
   "vocab": [
     {
       "zh": "头疼",

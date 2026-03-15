@@ -76,7 +76,7 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3",
           "text_translation_en": "Why didn't you answer the phone?"
         },
         {
@@ -117,7 +117,7 @@
               "tr": "собрание"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3",
           "text_translation_en": "I was in a meeting just now."
         },
         {
@@ -156,7 +156,7 @@
               "tr": "долго"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3",
           "text_translation_en": "That long?"
         },
         {
@@ -197,7 +197,7 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3",
           "text_translation_en": "There were a lot of things to discuss."
         },
         {
@@ -240,7 +240,7 @@
               "tr": "одно слово"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3",
           "text_translation_en": "Let me know next time."
         },
         {
@@ -263,16 +263,16 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3",
           "text_translation_en": "OK."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
     }
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
   "vocab": [
     {
       "zh": "接电话",

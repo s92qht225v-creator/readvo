@@ -78,7 +78,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue1.mp3",
           "text_translation_en": "Do you have time today?"
         },
         {
@@ -101,7 +101,7 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue2.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -168,7 +168,7 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue3.mp3",
           "text_translation_en": "Let's go watch a movie."
         },
         {
@@ -200,7 +200,7 @@
               "tr": "(воскл.)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue4.mp3",
           "text_translation_en": "Sure."
         },
         {
@@ -245,7 +245,7 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue5.mp3",
           "text_translation_en": "What time shall we meet?"
         },
         {
@@ -279,16 +279,16 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue6.mp3",
           "text_translation_en": "Seven o'clock."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3"
     }
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20you%20shijian%20ma/dialogue.mp3",
   "extraVocabSubtitle_uz": "Reja va vaqt mavzusidagi foydali so'zlar",
   "extraVocabSubtitle_ru": "Полезные слова по теме планов и времени",
   "extraVocab": [

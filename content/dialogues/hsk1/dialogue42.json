@@ -63,7 +63,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue1.mp3",
           "text_translation_en": "Has the delivery arrived?"
         },
         {
@@ -95,7 +95,7 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue2.mp3",
           "text_translation_en": "Yes, it has."
         },
         {
@@ -129,7 +129,7 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue3.mp3",
           "text_translation_en": "Where is it?"
         },
         {
@@ -161,7 +161,7 @@
               "tr": "внизу"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue4.mp3",
           "text_translation_en": "Downstairs."
         },
         {
@@ -211,7 +211,7 @@
               "tr": "взять"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue5.mp3",
           "text_translation_en": "OK, I'll go down and get it."
         },
         {
@@ -234,16 +234,16 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue6.mp3",
           "text_translation_en": "OK."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/waimai%20dao%20le%20ma/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue.mp3",
   "vocab": [
     {
       "zh": "外卖",

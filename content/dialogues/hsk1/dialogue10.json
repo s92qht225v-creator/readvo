@@ -64,7 +64,7 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue1.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue1.mp3",
           "text_translation_en": "Excuse me, where is the restroom?"
         },
         {
@@ -116,7 +116,7 @@
               "tr": "этаж"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue2.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue2.mp3",
           "text_translation_en": "The restroom is on the third floor."
         },
         {
@@ -159,7 +159,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue3.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue3.mp3",
           "text_translation_en": "Is there an elevator?"
         },
         {
@@ -210,7 +210,7 @@
               "tr": "вон там"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue4.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue4.mp3",
           "text_translation_en": "Yes, the elevator is over there."
         },
         {
@@ -233,7 +233,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue5.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue5.mp3",
           "text_translation_en": "Thank you."
         },
         {
@@ -254,16 +254,16 @@
               "tr": "не за что"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue6.mp3",
+          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue6.mp3",
           "text_translation_en": "You're welcome."
         }
       ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue.mp3"
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20dialogues/xishoujian%20zai%20nar/dialogue.mp3",
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue.mp3",
   "vocab": [
     {
       "zh": "电梯",
