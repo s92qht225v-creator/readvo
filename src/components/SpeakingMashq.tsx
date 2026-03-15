@@ -84,7 +84,8 @@ function toSimplified(str: string): string {
 }
 
 function normalizeChinese(str: string): string {
-  return toSimplified(str.trim().replace(/[。？！，、""''「」《》\s]/g, '')).toLowerCase();
+  // Strip punctuation, spaces, and stray non-CJK characters (e.g. trailing digits from Whisper)
+  return toSimplified(str.trim().replace(/[。？！，、""''「」《》\s\d]/g, '')).toLowerCase();
 }
 
 function scoreAnswer(expected: string, whisperText: string): Score {
@@ -311,7 +312,6 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
 
         {/* Prompt */}
         <div style={{ background: accentBg, borderRadius: 10, padding: '14px 16px', marginBottom: 16, textAlign: 'center' }}>
-          <div style={{ fontSize: 11, color: '#888', marginBottom: 4 }}>{L(UI.translation)}</div>
           <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a2e', lineHeight: 1.4 }}>{q.uz}</div>
         </div>
 
