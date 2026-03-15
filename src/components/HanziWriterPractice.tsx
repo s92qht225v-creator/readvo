@@ -53,13 +53,18 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
+
+function getWritingAudioUrl(char: string, pinyin: string): string {
+  const stripped = pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
+  const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
+  return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
+}
+
 export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart, hideSubtabs, subtab: subtabProp, onSubtabChange }: Props) {
   const activeWords = wordsProp ?? WORDS;
   const audio = useAudioPlayer();
-  const audioMapRef = useRef<Record<string, string>>({});
-  const audioMapReady = useRef<Promise<void> | null>(null);
   useEffect(() => {
-    audioMapReady.current = import('@/services/writing-audio').then((m) => { audioMapRef.current = m.WRITING_AUDIO; });
     return () => { audio.stop(); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -79,11 +84,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const showBtnRef = useRef<HTMLButtonElement>(null);
   const hideBtnRef = useRef<HTMLButtonElement>(null);
 
-  /** Play audio for a word (looks up from dynamically-loaded audio map) */
-  const playWordAudio = useCallback(async (word: HanziWord) => {
-    if (audioMapReady.current) await audioMapReady.current;
-    const url = audioMapRef.current[word.char];
-    if (url) audio.play(`writing-${word.char}`, url);
+  /** Play audio for a word */
+  const playWordAudio = useCallback((word: HanziWord) => {
+    const url = getWritingAudioUrl(word.char, word.pinyin);
+    audio.play(`writing-${word.char}`, url);
   }, [audio]);
 
   // Auto-start: skip home screen and go directly to practice with all words
