@@ -15,7 +15,7 @@ const C_PUNC = '#888';    // Punctuation
 
 const speakingQuestionsData = [
   { uz: 'Bu nima?', ru: 'Что это?', en: 'What is this?', zh: '这是什么？', pinyin: 'Zhè shì shénme?' },
-  { uz: 'U nima?', ru: 'Что то?', en: 'What is that?', zh: '那是什么？', pinyin: 'Nà shì shénme?' },
+  { uz: 'Ana u nima?', ru: 'Что то?', en: 'What is that?', zh: '那是什么？', pinyin: 'Nà shì shénme?' },
   { uz: 'Nima yeyasan?', ru: 'Что ты ешь?', en: 'What are you eating?', zh: '你吃什么？', pinyin: 'Nǐ chī shénme?' },
   { uz: 'Nima ichasiz?', ru: 'Что ты пьёшь?', en: 'What are you drinking?', zh: '你喝什么？', pinyin: 'Nǐ hē shénme?' },
   { uz: "Nima o'rganaysan?", ru: 'Что ты изучаешь?', en: 'What are you studying?', zh: '你学什么？', pinyin: 'Nǐ xué shénme?' },
@@ -96,7 +96,7 @@ const pattern2Rows: PatternRow[] = [
 
 const pattern3Rows: PatternRow[] = [
   { parts:[{text:'这',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Zhè shì shénme?', uz:"Bu nima?", ru:"Что это?",  en:"What is this?" },
-  { parts:[{text:'那',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Nà shì shénme?',  uz:"U nima?",  ru:"Что то?",   en:"What is that?" },
+  { parts:[{text:'那',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Nà shì shénme?',  uz:"Ana u nima?",  ru:"Что то?",   en:"What is that?" },
 ];
 
 const dialog1 = [
