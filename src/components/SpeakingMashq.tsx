@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 
 type Question = { uz: string; zh: string; pinyin: string };
-type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing';
+type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing' | 'api_error';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
 type Score = 'correct' | 'close' | 'wrong';
 
@@ -123,7 +123,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
         }
       }
     } catch {
-      setPhase('idle');
+      setPhase('api_error');
     }
   };
 
@@ -258,6 +258,19 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
         {phase === 'processing' && (
           <div style={{ textAlign: 'center', padding: '16px 0' }}>
             <div style={{ fontSize: 13, color: '#888' }}>⏳ Tekshirilmoqda…</div>
+          </div>
+        )}
+
+        {/* api error */}
+        {phase === 'api_error' && (
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ background: '#fee2e2', borderRadius: 10, padding: '12px 14px', border: '1px solid #fca5a5', marginBottom: 12 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#dc2626', marginBottom: 4 }}>Server xatosi</div>
+              <div style={{ fontSize: 12, color: '#888' }}>Ovoz serverga yetib bormadi. Internet aloqasini tekshiring.</div>
+            </div>
+            <button onClick={() => setPhase('idle')} style={{ width: '100%', padding: '13px 0', background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+              Qayta urinish
+            </button>
           </div>
         )}
 
