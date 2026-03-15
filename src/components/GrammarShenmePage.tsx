@@ -6,11 +6,21 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { SpeakingMashq } from './SpeakingMashq';
 
 const C_SUB  = '#3b82f6'; // Subject / Ega
 const C_VERB = '#16a34a'; // Verb / Fe'l
 const C_WHAT = '#dc2626'; // 什么
 const C_PUNC = '#888';    // Punctuation
+
+const speakingQuestionsData = [
+  { uz: 'Bu nima?', ru: 'Что это?', en: 'What is this?', zh: '这是什么？', pinyin: 'Zhè shì shénme?' },
+  { uz: 'U nima?', ru: 'Что то?', en: 'What is that?', zh: '那是什么？', pinyin: 'Nà shì shénme?' },
+  { uz: 'Nima yeyasan?', ru: 'Что ты ешь?', en: 'What are you eating?', zh: '你吃什么？', pinyin: 'Nǐ chī shénme?' },
+  { uz: 'Nima ichasiz?', ru: 'Что ты пьёшь?', en: 'What are you drinking?', zh: '你喝什么？', pinyin: 'Nǐ hē shénme?' },
+  { uz: "Nima o'rganaysan?", ru: 'Что ты изучаешь?', en: 'What are you studying?', zh: '你学什么？', pinyin: 'Nǐ xué shénme?' },
+  { uz: 'Ismingiz nima?', ru: 'Как вас зовут?', en: 'What is your name?', zh: '你叫什么名字？', pinyin: 'Nǐ jiào shénme míngzi?' },
+];
 
 const sections = [
   { id: 'intro',    uz: 'Asosiy',   ru: 'Основное', en: 'Overview'  },
@@ -166,6 +176,12 @@ function ColorParts({ parts }: { parts: Part[] }) {
 export function GrammarShenmePage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+
+  const speakingQuestions = speakingQuestionsData.map(q => ({
+    uz: language === 'ru' ? q.ru : language === 'en' ? q.en : q.uz,
+    zh: q.zh,
+    pinyin: q.pinyin,
+  }));
   const [activeTab, setActiveTab] = useState('intro');
   const [expandedEx, setExpandedEx] = useState<number | null>(null);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -487,65 +503,11 @@ export function GrammarShenmePage() {
 
         {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
-          <div className="grammar-block">
-            <div className="grammar-block__label">{t("O'zingizni sinang",'Проверьте себя','Test Yourself')}</div>
-            {quizQuestions.map((q, qi) => {
-              const opts: string[] = q.options
-                ? q.options
-                : (({ uz: q.options_uz, ru: q.options_ru, en: (q as { options_en?: string[] }).options_en || q.options_uz } as Record<string, string[] | undefined>)[language]) ?? [];
-              return (
-                <div key={qi} className="grammar-quiz__question">
-                  <p className="grammar-quiz__q">{qi + 1}. {t(q.q_uz, q.q_ru, q.q_en)}</p>
-                  <div className="grammar-quiz__options">
-                    {opts.map((opt, ai) => {
-                      const selected = answers[qi] === ai;
-                      const correct  = q.correct === ai;
-                      let cls = 'grammar-quiz__option';
-                      if (showResults && selected && correct) cls += ' grammar-quiz__option--correct';
-                      else if (showResults && selected)       cls += ' grammar-quiz__option--wrong';
-                      else if (showResults && correct)        cls += ' grammar-quiz__option--correct';
-                      else if (selected)                      cls += ' grammar-quiz__option--selected';
-                      return (
-                        <button key={ai} type="button" className={cls} onClick={() => pick(qi, ai)}>
-                          {opt}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-            {!showResults ? (
-              <button
-                type="button"
-                className={`grammar-quiz__submit ${allAnswered ? 'grammar-quiz__submit--ready' : ''}`}
-                onClick={() => { if (allAnswered) setShowResults(true); }}
-              >
-                {allAnswered
-                  ? t('Tekshirish','Проверить','Check')
-                  : `${Object.keys(answers).length} / ${quizQuestions.length} ${t('tanlandi','выбрано','selected')}`}
-              </button>
-            ) : (
-              <div className={`grammar-quiz__result ${score === quizQuestions.length ? 'grammar-quiz__result--perfect' : ''}`}>
-                <div className="grammar-quiz__result-emoji">{score === quizQuestions.length ? '🎉' : score >= 4 ? '👍' : '📚'}</div>
-                <div className="grammar-quiz__result-score">{score} / {quizQuestions.length}</div>
-                <div className="grammar-quiz__result-msg">
-                  {score === quizQuestions.length
-                    ? t("Ajoyib! Barchasini to'g'ri topdingiz!", 'Отлично! Всё правильно!', 'Excellent! All correct!')
-                    : score >= 4
-                    ? t("Yaxshi! Biroz takrorlang.", 'Хорошо! Повторите немного.', 'Good! Review a bit more.')
-                    : t("Darsni qayta ko'ring.", 'Повторите урок.', 'Review the lesson.')}
-                </div>
-                <button
-                  type="button"
-                  className="grammar-quiz__retry"
-                  onClick={() => { setAnswers({}); setShowResults(false); }}
-                >
-                  {t('Qayta urinish', 'Попробовать снова', 'Try again')}
-                </button>
-              </div>
-            )}
-          </div>
+          <SpeakingMashq
+            questions={speakingQuestions}
+            accentColor="#dc2626"
+            accentBg="#fee2e2"
+          />
         )}
 
       </div>

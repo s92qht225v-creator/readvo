@@ -42,22 +42,10 @@ const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'gram
 const grammarItems = [
   { char: '什么', pinyin: 'shénme', href: '/chinese/hsk1/grammar/shenme', translation: 'nima?', translation_ru: 'что?', translation_en: 'what?', color: '#dc2626', active: true },
   { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', translation_en: 'to be', color: '#dc2626', active: true },
-  { char: '有', pinyin: 'yǒu', href: '/chinese/hsk1/grammar/you', translation: 'ega bo\'lmoq', translation_ru: 'иметь', translation_en: 'to have', color: '#7c3aed', active: true },
-  { char: '在', pinyin: 'zài', href: '/chinese/hsk1/grammar/zai', translation: 'joylashmoq', translation_ru: 'находиться', translation_en: 'to be at/in', color: '#0891b2', active: true },
-  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik / sifat bog\'lovchi', translation_ru: 'притяжательная частица', translation_en: 'possessive / adjective particle', color: '#d97706', active: true },
-  { char: '不', pinyin: 'bù', href: '/chinese/hsk1/grammar/bu', translation: 'inkor', translation_ru: 'отрицание', translation_en: 'negation', color: '#059669', active: true },
   { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', translation_ru: 'вопросительная частица', translation_en: 'question particle', color: '#0891b2', active: true },
-  { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: 'davom yuklamasi', translation_ru: 'продолжительная частица', translation_en: 'continuation particle', color: '#7c3aed', active: true },
-  { char: '了', pinyin: 'le', href: '/chinese/hsk1/grammar/le', translation: 'tugallash / o\'zgarish', translation_ru: 'завершение / изменение', translation_en: 'completion / change', color: '#7c3aed', active: true },
-  { char: '也', pinyin: 'yě', href: '/chinese/hsk1/grammar/ye', translation: 'ham', translation_ru: 'тоже', translation_en: 'also', color: '#059669', active: true },
-  { char: '都', pinyin: 'dōu', href: '/chinese/hsk1/grammar/dou', translation: 'hammasi / barchasi', translation_ru: 'все / всё', translation_en: 'all / both', color: '#2563eb', active: true },
-  { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda / bog\'lovchi', translation_ru: 'очень / связка', translation_en: 'very / linking word', color: '#7c3aed', active: true },
-  { char: '想', pinyin: 'xiǎng', href: '/chinese/hsk1/grammar/xiang', translation: 'xohlamoq / sog\'inmoq', translation_ru: 'хотеть / скучать', translation_en: 'to want / to miss', color: '#e11d48', active: true },
-  { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: '...a olmoq (mahorat)', translation_ru: 'уметь (навык)', translation_en: 'can (learned skill)', color: '#dc2626', active: true },
-  { char: '能', pinyin: 'néng', href: '/chinese/hsk1/grammar/neng', translation: '...a olmoq (imkoniyat)', translation_ru: 'мочь (возможность)', translation_en: 'can (ability)', color: '#dc2626', active: true },
-  { char: '没', pinyin: 'méi', href: '/chinese/hsk1/grammar/mei', translation: '...madim / yo\'q', translation_ru: 'не делал / нет', translation_en: 'did not / not have', color: '#dc2626', active: true },
-  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'necha? / qancha?', translation_ru: 'сколько?', translation_en: 'how many?', color: '#dc2626', active: true },
-  { char: '量词', pinyin: 'liàngcí', href: '/chinese/hsk1/grammar/liangci', translation: 'sanash so\'zlari', translation_ru: 'счётные слова', translation_en: 'measure words', color: '#dc2626', active: true },
+  { char: '谁', pinyin: 'shéi', href: '/chinese/hsk1/grammar/shei', translation: 'kim?', translation_ru: 'кто?', translation_en: 'who?', color: '#d97706', active: true },
+  { char: '哪', pinyin: 'nǎ', href: '/chinese/hsk1/grammar/na', translation: 'qaysi?', translation_ru: 'который?', translation_en: 'which?', color: '#0284c7', active: true },
+  { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik belgisi', translation_ru: 'частица принадлежности', translation_en: 'possessive particle', color: '#be185d', active: true },
 ];
 
 const karaokeItems = [

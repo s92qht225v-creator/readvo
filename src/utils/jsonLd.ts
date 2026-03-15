@@ -25,6 +25,8 @@ export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: s
   de: { char: '的', pinyin: 'de', en: 'possessive particle' },
   bu: { char: '不', pinyin: 'bù', en: 'not / negation' },
   ma: { char: '吗', pinyin: 'ma', en: 'question particle' },
+  shei: { char: '谁', pinyin: 'shéi', en: 'who (question word)' },
+  na: { char: '哪', pinyin: 'nǎ', en: 'which (question word)' },
   ne: { char: '呢', pinyin: 'ne', en: 'continuation particle' },
   le: { char: '了', pinyin: 'le', en: 'completion particle' },
   ye: { char: '也', pinyin: 'yě', en: 'also / too' },
