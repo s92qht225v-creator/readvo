@@ -464,12 +464,14 @@ export function GrammarShenmePage() {
               <div className="grammar-block__label">{t('Dialog 1 — Tanishish','Диалог 1 — Знакомство','Dialogue 1 — Introductions')}</div>
               {dialog1.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                                    <div className="grammar-block__usage-py">{line.py}</div>
-                  <div className="grammar-block__usage-zh">
-                    <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_WHAT, marginRight:6 }}>{line.s}:</span>
-                    {line.zh}
+                  <div style={{display:'flex',gap:6,alignItems:'flex-start'}}>
+                    <span style={{fontWeight:700,color:line.s==='A'?C_SUB:C_WHAT,flexShrink:0,paddingTop:3}}>{line.s}:</span>
+                    <div style={{flex:1}}>
+                      <div className="grammar-block__usage-py">{line.py}</div>
+                      <div className="grammar-block__usage-zh">{line.zh}</div>
+                      <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
+                    </div>
                   </div>
-                  <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                 </div>
               ))}
             </div>
@@ -479,12 +481,14 @@ export function GrammarShenmePage() {
               <div className="grammar-block__label">{t('Dialog 2 — Ovqat','Диалог 2 — Еда','Dialogue 2 — Food')}</div>
               {dialog2.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
-                                    <div className="grammar-block__usage-py">{line.py}</div>
-                  <div className="grammar-block__usage-zh">
-                    <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_WHAT, marginRight:6 }}>{line.s}:</span>
-                    {line.zh}
+                  <div style={{display:'flex',gap:6,alignItems:'flex-start'}}>
+                    <span style={{fontWeight:700,color:line.s==='A'?C_SUB:C_WHAT,flexShrink:0,paddingTop:3}}>{line.s}:</span>
+                    <div style={{flex:1}}>
+                      <div className="grammar-block__usage-py">{line.py}</div>
+                      <div className="grammar-block__usage-zh">{line.zh}</div>
+                      <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
+                    </div>
                   </div>
-                  <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                 </div>
               ))}
             </div>

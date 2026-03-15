@@ -542,17 +542,19 @@ export function GrammarMaPage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fefce8' : undefined }}
                 >
-                                    <div className="grammar-block__usage-py">{line.py}</div>
-                  <div className="grammar-block__usage-zh">
-                    <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_MA, marginRight:6 }}>{line.s}:</span>
-                    <ColorParts parts={line.parts} />
-                  </div>
-                  {rev1[i]
+                                                      <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
+                    <span style={{fontWeight:700,color:line.s==='A'?C_SUB:C_MA,flexShrink:0,paddingTop:3}}>{line.s}:</span>
+                    <div style={{flex:1}}>
+                      <div className="grammar-block__usage-py">{line.py}</div>
+                      <div className="grammar-block__usage-zh"><ColorParts parts={line.parts} /></div>
+                      {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
                         {t('Tarjima uchun bosing…','Нажмите для перевода…','Tap for translation…')}
                       </div>
                   }
+                    </div>
+                  </div>
                 </button>
               ))}
               <p className="grammar-block__hint">{t('Tarjima uchun har bir satrga bosing','Нажмите на каждую строку для перевода','Tap each line for translation')}</p>
@@ -569,17 +571,19 @@ export function GrammarMaPage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fefce8' : undefined }}
                 >
-                                    <div className="grammar-block__usage-py">{line.py}</div>
-                  <div className="grammar-block__usage-zh">
-                    <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_MA, marginRight:6 }}>{line.s}:</span>
-                    <ColorParts parts={line.parts} />
-                  </div>
-                  {rev2[i]
+                                                      <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
+                    <span style={{fontWeight:700,color:line.s==='A'?C_SUB:C_MA,flexShrink:0,paddingTop:3}}>{line.s}:</span>
+                    <div style={{flex:1}}>
+                      <div className="grammar-block__usage-py">{line.py}</div>
+                      <div className="grammar-block__usage-zh"><ColorParts parts={line.parts} /></div>
+                      {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
                         {t('Tarjima uchun bosing…','Нажмите для перевода…','Tap for translation…')}
                       </div>
                   }
+                    </div>
+                  </div>
                 </button>
               ))}
               <p className="grammar-block__hint">{t('Tarjima uchun har bir satrga bosing','Нажмите на каждую строку для перевода','Tap each line for translation')}</p>
