@@ -1,6 +1,8 @@
 import Groq from 'groq-sdk';
+import OpenAI from 'openai';
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq    = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const openai  = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 function normalizeChinese(str: string): string {
   return str.trim().replace(/[。？！，、""''「」《》\s\d]/g, '').toLowerCase();
@@ -21,8 +23,8 @@ function levenshtein(a: string, b: string): number {
 
 async function aiJudge(expected: string, heard: string, language: string): Promise<{ result: string; feedback: string }> {
   const langLabel = language === 'ru' ? 'Russian' : language === 'en' ? 'English' : 'Uzbek';
-  const completion = await groq.chat.completions.create({
-    model: 'llama-3.1-8b-instant',
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-4o-mini',
     max_tokens: 80,
     temperature: 0,
     messages: [
