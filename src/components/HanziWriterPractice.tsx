@@ -322,19 +322,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
       <div className="hanzi-practice__layout">
         {/* Left: info + canvas */}
         <div className="hanzi-practice__canvas-panel">
-          {currentWord && isMultiChar && (
-            <div className="hanzi-practice__info-panel" style={hiddenMode ? { visibility: 'hidden' } : undefined}>
-              <div className="hanzi-practice__char-progress">
-                {wordChars.map((_, i) => (
-                  <span
-                    key={i}
-                    className={`hanzi-practice__char-dot${i === charIndex ? ' hanzi-practice__char-dot--active' : i < charIndex ? ' hanzi-practice__char-dot--done' : ''}`}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-
           <div className="hanzi-practice__grid-wrapper">
             {currentWord && (
               <HanziCanvas
