@@ -71,13 +71,13 @@ export async function POST(request: Request) {
       const dist = levenshtein(normExp, normHeard);
       const len  = normExp.length;
 
-      if (dist <= 1) {
+      if (dist === 0) {
         result = 'correct';
-      } else if (dist >= 5 || len <= 7) {
-        // short sentences (≤7 chars) require near-exact match
+      } else if (dist >= 5 || (len <= 6 && dist >= 2)) {
+        // clearly wrong: too many edits, or very short sentence with 2+ edits
         result = 'wrong';
       } else {
-        // borderline (dist 2–4, longer sentences) — ask AI
+        // everything else (incl. 1-char substitutions like 我→你) — ask AI
         const ai = await aiJudge(expected, heard, language);
         result   = ai.result;
         feedback = ai.feedback ?? '';
