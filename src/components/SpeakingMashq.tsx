@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 type Question = { uz: string; zh: string; pinyin: string };
 type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing' | 'api_error';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
+type DeniedReason = 'blocked' | 'noDevice' | 'unsupported';
 type Score = 'correct' | 'close' | 'wrong';
 
 function levenshtein(a: string, b: string): number {
@@ -47,12 +48,14 @@ interface Props {
 }
 
 export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '#fce7f3' }: Props) {
-  const [screen, setScreen]   = useState<Screen>('permission');
-  const [qIndex, setQIndex]   = useState(0);
-  const [phase, setPhase]     = useState<Phase>('idle');
-  const [attempt, setAttempt] = useState(1);
-  const [heard, setHeard]     = useState('');
-  const [scores, setScores]   = useState<Score[]>([]);
+  const [screen, setScreen]       = useState<Screen>('permission');
+  const [qIndex, setQIndex]       = useState(0);
+  const [phase, setPhase]         = useState<Phase>('idle');
+  const [attempt, setAttempt]     = useState(1);
+  const [heard, setHeard]         = useState('');
+  const [scores, setScores]       = useState<Score[]>([]);
+  const [requesting, setRequesting] = useState(false);
+  const [deniedReason, setDeniedReason] = useState<DeniedReason>('blocked');
 
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef   = useRef<Blob[]>([]);
@@ -61,12 +64,23 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   const q = questions[qIndex];
 
   const requestPermission = async () => {
+    setRequesting(true);
+    if (!navigator.mediaDevices?.getUserMedia) {
+      setDeniedReason('unsupported');
+      setScreen('denied');
+      setRequesting(false);
+      return;
+    }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       stream.getTracks().forEach(t => t.stop());
       setScreen('quiz');
-    } catch {
+    } catch (err) {
+      const name = (err as DOMException).name;
+      setDeniedReason(name === 'NotFoundError' ? 'noDevice' : 'blocked');
       setScreen('denied');
+    } finally {
+      setRequesting(false);
     }
   };
 
@@ -148,15 +162,15 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   if (screen === 'permission') return (
     <div style={{ padding: '24px 16px', textAlign: 'center', maxWidth: 400, margin: '0 auto' }}>
       <div style={{ fontSize: 48, marginBottom: 16 }}>🎤</div>
-      <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a2e', marginBottom: 8 }}>Gapirib o'rganing</div>
+      <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a2e', marginBottom: 8 }}>Gapirib o&apos;rganing</div>
       <div style={{ fontSize: 13, color: '#666', lineHeight: 1.7, marginBottom: 24 }}>
-        O'zbek tarjimasini ko'rasiz, keyin xitoycha aytasiz. Mikrofon ruxsati kerak.
+        O&apos;zbek tarjimasini ko&apos;rasiz, keyin xitoycha aytasiz. Mikrofon ruxsati kerak.
       </div>
-      <button onClick={requestPermission} style={{
-        background: accentColor, border: 'none', borderRadius: 12,
+      <button onClick={requestPermission} disabled={requesting} style={{
+        background: requesting ? '#aaa' : accentColor, border: 'none', borderRadius: 12,
         color: '#fff', fontSize: 15, fontWeight: 700,
-        padding: '14px 32px', cursor: 'pointer', fontFamily: 'inherit',
-      }}>Mikrofonni yoqish</button>
+        padding: '14px 32px', cursor: requesting ? 'wait' : 'pointer', fontFamily: 'inherit',
+      }}>{requesting ? 'Tekshirilmoqda…' : 'Mikrofonni yoqish'}</button>
     </div>
   );
 
@@ -164,15 +178,25 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   if (screen === 'denied') return (
     <div style={{ padding: '24px 16px', textAlign: 'center', maxWidth: 400, margin: '0 auto' }}>
       <div style={{ fontSize: 48, marginBottom: 16 }}>🎙️</div>
-      <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 8 }}>Mikrofon ruxsati kerak</div>
-      <div style={{ fontSize: 13, color: '#666', lineHeight: 1.8, marginBottom: 24 }}>
-        Brauzer manzil satridagi 🔒 belgisini bosing → <b>Mikrofon</b> → <b>Ruxsat</b> qiling, keyin quyidagi tugmani bosing.
+      <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 8 }}>
+        {deniedReason === 'unsupported' ? 'Brauzer qo\'llab-quvvatlamaydi' :
+         deniedReason === 'noDevice'    ? 'Mikrofon topilmadi' :
+                                          'Mikrofon ruxsati rad etildi'}
       </div>
-      <button onClick={() => setScreen('permission')} style={{
-        background: accentColor, border: 'none', borderRadius: 12,
-        color: '#fff', fontSize: 15, fontWeight: 700,
-        padding: '14px 32px', cursor: 'pointer', fontFamily: 'inherit',
-      }}>Qayta urinish</button>
+      <div style={{ fontSize: 13, color: '#666', lineHeight: 1.8, marginBottom: 24 }}>
+        {deniedReason === 'unsupported'
+          ? 'Bu brauzer mikrofon API-ni qo\'llab-quvvatlamaydi. Iltimos, Chrome yoki Safari ishlating.'
+          : deniedReason === 'noDevice'
+          ? 'Qurilmangizda mikrofon topilmadi. Mikrofon ulanganligini tekshiring.'
+          : <>Manzil satridagi <b>🔒</b> belgisini bosing → <b>Mikrofon</b> → <b>Ruxsat</b> → sahifani yangilang.</>}
+      </div>
+      {deniedReason !== 'unsupported' && (
+        <button onClick={() => setScreen('permission')} style={{
+          background: accentColor, border: 'none', borderRadius: 12,
+          color: '#fff', fontSize: 15, fontWeight: 700,
+          padding: '14px 32px', cursor: 'pointer', fontFamily: 'inherit',
+        }}>Qayta urinish</button>
+      )}
     </div>
   );
 
