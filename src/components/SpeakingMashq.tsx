@@ -48,7 +48,9 @@ function scoreAnswer(expected: string, whisperText: string): Score {
   const a = normalizeChinese(expected);
   const b = normalizeChinese(whisperText);
   if (a === b) return 'correct';
-  if (levenshtein(a, b) <= 1) return 'close';
+  // Allow 1 edit only for longer sentences (≥8 chars); short sentences require exact match
+  const maxEdits = a.length >= 10 ? 2 : a.length >= 8 ? 1 : 0;
+  if (maxEdits > 0 && levenshtein(a, b) <= maxEdits) return 'close';
   return 'wrong';
 }
 
