@@ -79,12 +79,18 @@ function normalizeChinese(str: string): string {
 }
 
 
-function speak(text: string, rate = 0.85) {
-  if (!('speechSynthesis' in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'zh-CN'; u.rate = rate; u.pitch = 1; u.volume = 1;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(u);
+function speak(text: string) {
+  const url = `/audio/hsk1/grammar/${encodeURIComponent(text)}.mp3`;
+  const audio = new Audio(url);
+  audio.onerror = () => {
+    // fallback to TTS if local file not found
+    if (!('speechSynthesis' in window)) return;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'zh-CN'; u.rate = 0.85; u.pitch = 1; u.volume = 1;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(u);
+  };
+  audio.play();
 }
 
 interface Props {
