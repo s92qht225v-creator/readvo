@@ -15,6 +15,7 @@ export async function POST(request: Request) {
       model: 'whisper-large-v3-turbo',
       language: 'zh',
       response_format: 'text',
+      prompt: '简体中文',
     });
 
     return Response.json({ text: (transcription as unknown as string).trim() });

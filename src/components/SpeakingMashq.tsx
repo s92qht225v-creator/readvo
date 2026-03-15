@@ -21,8 +21,27 @@ function levenshtein(a: string, b: string): number {
   return dp[m][n];
 }
 
+// Common traditional → simplified substitutions (HSK 1-relevant)
+const TRAD_TO_SIMP: Record<string, string> = {
+  '麼':'么','麽':'么','誰':'谁','嗎':'吗','嗯':'嗯',
+  '學':'学','語':'语','漢':'汉','這':'这','個':'个',
+  '們':'们','來':'来','時':'时','師':'师','國':'国',
+  '東':'东','車':'车','書':'书','號':'号','電':'电',
+  '話':'话','視':'视','歡':'欢','親':'亲','愛':'爱',
+  '為':'为','對':'对','問':'问','題':'题','從':'从',
+  '開':'开','關':'关','錢':'钱','買':'买','賣':'卖',
+  '見':'见','層':'层','長':'长','兩':'两','點':'点',
+  '邊':'边','過':'过','還':'还','說':'说','讀':'读',
+  '寫':'写','聽':'听','讓':'让','覺':'觉','進':'进',
+  '會':'会','後':'后','號':'号','幾':'几','裡':'里',
+};
+
+function toSimplified(str: string): string {
+  return str.split('').map(c => TRAD_TO_SIMP[c] ?? c).join('');
+}
+
 function normalizeChinese(str: string): string {
-  return str.trim().replace(/[。？！，、""''「」《》\s]/g, '').toLowerCase();
+  return toSimplified(str.trim().replace(/[。？！，、""''「」《》\s]/g, '')).toLowerCase();
 }
 
 function scoreAnswer(expected: string, whisperText: string): Score {
