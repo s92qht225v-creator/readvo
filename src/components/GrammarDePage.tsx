@@ -19,7 +19,7 @@ const C_PUNC = '#888';    // Punctuation
 
 const speakingQuestionsData = [
   { uz: 'Bu mening kitobim.', ru: 'Это моя книга.', en: 'This is my book.', zh: '这是我的书。', pinyin: 'Zhè shì wǒ de shū.' },
-  { uz: 'U sizning telefoningizmi?', ru: 'Это ваш телефон?', en: 'Is that your phone?', zh: '那是你的手机吗？', pinyin: 'Nà shì nǐ de shǒujī ma?' },
+  { uz: 'Bu sizning telefoningizmi?', ru: 'Это ваш телефон?', en: 'Is this your phone?', zh: '这是你的手机吗？', pinyin: 'Zhè shì nǐ de shǒujī ma?' },
   { uz: "U mening do'stim.", ru: 'Он мой друг.', en: 'He is my friend.', zh: '他是我的朋友。', pinyin: 'Tā shì wǒ de péngyǒu.' },
   { uz: "Bu o'qituvchining kitobi.", ru: 'Это книга учителя.', en: "This is the teacher's book.", zh: '这是老师的书。', pinyin: 'Zhè shì lǎoshī de shū.' },
   { uz: 'U kimniki?', ru: 'Чьё это?', en: 'Whose is that?', zh: '那是谁的？', pinyin: 'Nà shì shéi de?' },
