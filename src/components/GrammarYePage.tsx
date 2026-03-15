@@ -1,5 +1,10 @@
 'use client';
 
+function playGrammarAudio(zh: string) {
+  const audio = new Audio(`/audio/hsk1/grammar/${encodeURIComponent(zh)}.mp3`);
+  audio.play().catch(() => {});
+}
+
 import React, { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
@@ -337,7 +342,10 @@ export function GrammarYePage() {
                   onClick={() => setExpandedEx(expandedEx === i ? null : i)}
                   type="button"
                 >
-                  <div className="grammar-block__example-zh">{ex.zh}</div>
+                  <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:6}}>
+                  <span style={{flex:1}}>{ex.zh}</span>
+                  <button type="button" onClick={e=>{e.stopPropagation();playGrammarAudio(ex.zh);}} style={{background:'none',border:'none',padding:'2px 6px',cursor:'pointer',fontSize:15,color:'#3b82f6',flexShrink:0}} aria-label="Play">▶</button>
+                </div>
                   <div className="grammar-block__example-py">{ex.pinyin}</div>
                   <div className="grammar-block__example-tr">{({ uz: ex.uz, ru: ex.ru, en: (ex as any).en || ex.uz } as Record<string, string>)[language]}</div>
                   {expandedEx === i && (

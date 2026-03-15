@@ -1,5 +1,10 @@
 'use client';
 
+function playGrammarAudio(zh: string) {
+  const audio = new Audio(`/audio/hsk1/grammar/${encodeURIComponent(zh)}.mp3`);
+  audio.play().catch(() => {});
+}
+
 import React, { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
