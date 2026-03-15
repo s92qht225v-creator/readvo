@@ -437,8 +437,9 @@ export function GrammarShenmePage() {
                 className={`grammar-block__example ${expandedEx === i ? 'grammar-block__example--open' : ''}`}
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
-                <div className="grammar-block__example-zh">
-                  <ColorParts parts={ex.parts} />
+                <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:6}}>
+                  <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
+                  <span role="button" tabIndex={0} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'none',border:'none',padding:'2px 6px',cursor:'pointer',fontSize:15,color:'#3b82f6',flexShrink:0}} aria-label="Play">▶</span>
                 </div>
                 <div className="grammar-block__example-py">{ex.pinyin}</div>
                 <div className="grammar-block__example-tr">{t(ex.uz, ex.ru, ex.en)}</div>
