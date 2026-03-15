@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 
 type Language = 'uz' | 'ru' | 'en';
 type Question = { uz: string; zh: string; pinyin: string };
-type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing' | 'api_error';
+type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'shadowing' | 'api_error';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
 type DeniedReason = 'blocked' | 'noDevice' | 'unsupported';
 type Score = 'correct' | 'close' | 'wrong';
@@ -23,6 +23,8 @@ const UI = {
   noDeviceHint: { uz: "Qurilmangizda mikrofon topilmadi. Mikrofon ulanganligini tekshiring.", ru: 'Микрофон не найден. Проверьте подключение.', en: 'No microphone found. Check your device connection.' } as T,
   retry:        { uz: 'Qayta urinish',               ru: 'Повторить попытку',          en: 'Try again'                } as T,
   correct:      { uz: "To'g'ri!",                    ru: 'Правильно!',                 en: 'Correct!'                 } as T,
+  close:        { uz: "Deyarli to'g'ri",              ru: 'Почти правильно',            en: 'Almost correct'           } as T,
+  closeHint:    { uz: "Talaffuz to'g'ri, lekin so'z noto'g'ri", ru: 'Произношение верное, но слово неправильное', en: 'Pronunciation OK, but wrong word' } as T,
   heard:        { uz: 'Eshitildi:',                  ru: 'Услышано:',                  en: 'Heard:'                   } as T,
   correctAns:   { uz: "To'g'ri javob:",              ru: 'Правильный ответ:',          en: 'Correct answer:'          } as T,
   next:         { uz: 'Keyingisi →',                 ru: 'Следующий →',                en: 'Next →'                   } as T,
@@ -171,9 +173,13 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       setHeard(data.text ?? '');
       setFeedback(data.feedback ?? '');
       const result = (data.result ?? 'wrong') as Score;
-      if (result === 'correct' || result === 'close') {
+      if (result === 'correct') {
         setScores(p => [...p, result]);
         setPhase('result_correct');
+        speak(q.zh);
+      } else if (result === 'close') {
+        setScores(p => [...p, result]);
+        setPhase('result_close');
         speak(q.zh);
       } else {
         if (attempt === 1) {
@@ -354,6 +360,28 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
               <div style={{ fontSize: 12, color: accentColor }}>{q.pinyin}</div>
             </div>
             <button onClick={nextQuestion} style={{ width: '100%', padding: '13px 0', background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+              {qIndex + 1 < questions.length ? L(UI.next) : L(UI.results)}
+            </button>
+          </div>
+        )}
+
+        {/* close — almost correct */}
+        {phase === 'result_close' && (
+          <div>
+            <div style={{ background: '#fff7ed', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', marginBottom: 12, textAlign: 'center' }}>
+              <div style={{ fontSize: 16, fontWeight: 700, color: '#d97706', marginBottom: 4 }}>≈ {L(UI.close)}</div>
+              {heard && <div style={{ fontSize: 13, color: '#444' }}>{L(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+              {feedback
+                ? <div style={{ fontSize: 12, color: '#b45309', marginTop: 4 }}>{feedback}</div>
+                : <div style={{ fontSize: 12, color: '#b45309', marginTop: 4 }}>{L(UI.closeHint)}</div>
+              }
+            </div>
+            <div style={{ background: '#f5f5f8', borderRadius: 8, padding: '10px 14px', marginBottom: 14 }}>
+              <div style={{ fontSize: 11, color: '#888', marginBottom: 3 }}>{L(UI.correctAns)}</div>
+              <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a2e' }}>{q.zh}</div>
+              <div style={{ fontSize: 12, color: accentColor }}>{q.pinyin}</div>
+            </div>
+            <button onClick={nextQuestion} style={{ width: '100%', padding: '13px 0', background: '#d97706', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
               {qIndex + 1 < questions.length ? L(UI.next) : L(UI.results)}
             </button>
           </div>

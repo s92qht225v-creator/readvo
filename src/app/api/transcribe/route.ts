@@ -21,6 +21,18 @@ function levenshtein(a: string, b: string): number {
   return dp[m][n];
 }
 
+// Characters where substitution always changes meaning — never allow 'close'
+const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也')
+
+function hasCriticalSubstitution(expected: string, heard: string): boolean {
+  // Quick check: if any char present in one but not the other is a critical char
+  const expSet  = new Set(expected);
+  const heardSet = new Set(heard);
+  for (const c of expSet)   if (!heardSet.has(c) && CRITICAL_CHARS.has(c)) return true;
+  for (const c of heardSet) if (!expSet.has(c)   && CRITICAL_CHARS.has(c)) return true;
+  return false;
+}
+
 async function aiJudge(expected: string, heard: string, language: string): Promise<{ result: string; feedback: string }> {
   const langLabel = language === 'ru' ? 'Russian' : language === 'en' ? 'English' : 'Uzbek';
   const completion = await openai.chat.completions.create({
@@ -29,7 +41,7 @@ async function aiJudge(expected: string, heard: string, language: string): Promi
     temperature: 0,
     messages: [
       { role: 'system', content: 'You are grading a Chinese language learner\'s spoken answer. Reply with JSON only.' },
-      { role: 'user', content: `Expected: "${expected}"\nLearner said: "${heard}"\nIs the learner's answer correct, close (minor error but meaning preserved), or wrong?\nConsider: synonyms, valid paraphrases, word order variations, and Whisper transcription noise.\n{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}` },
+      { role: 'user', content: `Expected: "${expected}"\nLearner said: "${heard}"\nIs the learner's answer correct, close (minor Whisper noise or tone mark only), or wrong?\nRules: any substitution that changes meaning (e.g. 我→你, 不→没, pronoun or negation swap) is WRONG, not close. Only mark 'close' for clear speech-recognition noise where meaning is identical.\n{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}` },
     ],
   });
   const text = completion.choices?.[0]?.message?.content ?? '';
@@ -76,8 +88,12 @@ export async function POST(request: Request) {
       } else if (dist >= 5 || (len <= 6 && dist >= 2)) {
         // clearly wrong: too many edits, or very short sentence with 2+ edits
         result = 'wrong';
+      } else if (hasCriticalSubstitution(normExp, normHeard)) {
+        // pronoun / negation / demonstrative swapped — always wrong regardless of AI
+        result = 'wrong';
+        feedback = '';
       } else {
-        // everything else (incl. 1-char substitutions like 我→你) — ask AI
+        // everything else — ask AI
         const ai = await aiJudge(expected, heard, language);
         result   = ai.result;
         feedback = ai.feedback ?? '';
