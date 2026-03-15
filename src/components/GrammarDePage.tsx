@@ -530,11 +530,11 @@ export function GrammarDePage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fdf2f8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_DE : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
@@ -557,11 +557,11 @@ export function GrammarDePage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fdf2f8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_DE : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>

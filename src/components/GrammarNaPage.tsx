@@ -358,19 +358,19 @@ export function GrammarNaPage() {
               <div style={{ display:'flex', gap:8, alignItems:'center', marginTop:8 }}>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center' }}>
                   <div className="grammar-block__usage-type">{t('Darak gap','Повествование','Statement')}</div>
+                                    <div className="grammar-block__usage-py">Nà ge shì wǒ de.</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'那个',color:C_SUB},{text:'是',color:C_SHI},{text:'我的。',color:C_PRED}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nà ge shì wǒ de.</div>
                   <div className="grammar-block__usage-tr">{t("U/o'sha meniki.",'То — моё.','That one is mine.')}</div>
                 </div>
                 <div style={{ fontSize:'1.4em', color:'#888' }}>+哪→</div>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center', background:'#f0f9ff', border:'1px solid #bae6fd', borderRadius:8 }}>
                   <div className="grammar-block__usage-type" style={{ color:C_NA }}>{t('Savol','Вопрос','Question')}</div>
+                                    <div className="grammar-block__usage-py">Nǎ ge shì nǐ de?</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'哪个',color:C_NA},{text:'是',color:C_SHI},{text:'你的',color:C_SUB},{text:'？',color:C_PUNC}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nǎ ge shì nǐ de?</div>
                   <div className="grammar-block__usage-tr">{t('Qaysi biri sizniki?','Которое ваше?','Which one is yours?')}</div>
                 </div>
               </div>
@@ -525,11 +525,11 @@ export function GrammarNaPage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#f0f9ff' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_NA : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
@@ -552,11 +552,11 @@ export function GrammarNaPage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#f0f9ff' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_NA : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>

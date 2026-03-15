@@ -316,10 +316,10 @@ export function GrammarShiPage() {
                 )}
               </p>
               <div className="grammar-block__usage-item">
+                                <div className="grammar-block__usage-py">Wǒ shì xuésheng.</div>
                 <div className="grammar-block__usage-zh">
                   <ColorParts parts={[{text:'我',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'。',color:C_PUNC}]} />
                 </div>
-                <div className="grammar-block__usage-py">Wǒ shì xuésheng.</div>
                 <div className="grammar-block__usage-tr">{t('Men talabaman.','Я студент.','I am a student.')}</div>
               </div>
               <div className="grammar-block__usage-item" style={{ background:'#fee2e2' }}>
@@ -487,11 +487,11 @@ export function GrammarShiPage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fff8f8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
@@ -514,11 +514,11 @@ export function GrammarShiPage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fff8f8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>

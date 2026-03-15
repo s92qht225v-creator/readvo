@@ -346,19 +346,19 @@ export function GrammarSheiPage() {
               <div style={{ display:'flex', gap:8, alignItems:'center', marginTop:8 }}>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center' }}>
                   <div className="grammar-block__usage-type">{t('Darak gap','Повествование','Statement')}</div>
+                                    <div className="grammar-block__usage-py">Nà shì wǒ de lǎoshī.</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'那',color:C_SUB},{text:'是',color:C_SHI},{text:'我的老师',color:C_PRED},{text:'。',color:C_PUNC}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nà shì wǒ de lǎoshī.</div>
                   <div className="grammar-block__usage-tr">{t("U mening o'qituvchim.",'Это мой учитель.','That is my teacher.')}</div>
                 </div>
                 <div style={{ fontSize:'1.4em', color:'#888' }}>+谁→</div>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center', background:'#fefce8', border:'1px solid #fde68a', borderRadius:8 }}>
                   <div className="grammar-block__usage-type" style={{ color:C_SHEI }}>{t('Savol','Вопрос','Question')}</div>
+                                    <div className="grammar-block__usage-py">Nà shì shéi?</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'那',color:C_SUB},{text:'是',color:C_SHI},{text:'谁',color:C_SHEI},{text:'？',color:C_PUNC}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nà shì shéi?</div>
                   <div className="grammar-block__usage-tr">{t('U kim?','Кто это?','Who is that?')}</div>
                 </div>
               </div>
@@ -533,11 +533,11 @@ export function GrammarSheiPage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fefce8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SHEI : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
@@ -560,11 +560,11 @@ export function GrammarSheiPage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fefce8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SHEI : C_SHI, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>

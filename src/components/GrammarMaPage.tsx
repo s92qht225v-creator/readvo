@@ -334,19 +334,19 @@ export function GrammarMaPage() {
               <div style={{ display:'flex', gap:8, alignItems:'center', marginTop:8 }}>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center' }}>
                   <div className="grammar-block__usage-type">{t('Darak gap','Повествование','Statement')}</div>
+                                    <div className="grammar-block__usage-py">Nǐ shì xuésheng.</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'你',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'。',color:C_PUNC}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nǐ shì xuésheng.</div>
                   <div className="grammar-block__usage-tr">{t('Siz talabamisiz.','Вы студент.','You are a student.')}</div>
                 </div>
                 <div style={{ fontSize:'1.4em', color:'#888' }}>+吗→</div>
                 <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center', background:'#fefce8', border:'1px solid #fde68a', borderRadius:8 }}>
                   <div className="grammar-block__usage-type" style={{ color:C_MA }}>{t('Savol','Вопрос','Question')}</div>
+                                    <div className="grammar-block__usage-py">Nǐ shì xuésheng ma?</div>
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={[{text:'你',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'吗？',color:C_MA}]} />
                   </div>
-                  <div className="grammar-block__usage-py">Nǐ shì xuésheng ma?</div>
                   <div className="grammar-block__usage-tr">{t('Siz talabamisiz?','Вы студент?','Are you a student?')}</div>
                 </div>
               </div>
@@ -542,11 +542,11 @@ export function GrammarMaPage() {
                   onClick={() => toggleRev(setRev1, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fefce8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_MA, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev1[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>
@@ -569,11 +569,11 @@ export function GrammarMaPage() {
                   onClick={() => toggleRev(setRev2, i)}
                   style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fefce8' : undefined }}
                 >
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_MA, marginRight:6 }}>{line.s}:</span>
                     <ColorParts parts={line.parts} />
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   {rev2[i]
                     ? <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                     : <div className="grammar-block__usage-tr" style={{ color:'#ccc', fontStyle:'italic' }}>

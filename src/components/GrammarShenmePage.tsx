@@ -300,21 +300,21 @@ export function GrammarShenmePage() {
                 )}
               </p>
               <div className="grammar-block__usage-item">
+                                <div className="grammar-block__usage-py">Wǒ chī miàntiáo.</div>
                 <div className="grammar-block__usage-zh">
                   我吃&nbsp;
                   <span style={{ background:'#dcfce7', borderRadius:4, padding:'2px 8px', color:C_VERB, fontWeight:700 }}>面条</span>。
                 </div>
-                <div className="grammar-block__usage-py">Wǒ chī miàntiáo.</div>
                 <div className="grammar-block__usage-tr">
                   {t("Men lag'mon yeyapman.", "Я ем лапшу.", "I am eating noodles.")}
                 </div>
               </div>
               <div style={{ textAlign:'center', color:'#bbb', fontSize:18, margin:'4px 0' }}>↕</div>
               <div className="grammar-block__usage-item">
+                                <div className="grammar-block__usage-py">Nǐ chī shénme?</div>
                 <div className="grammar-block__usage-zh">
                   你吃&nbsp;<span className="grammar-block__highlight">什么</span>？
                 </div>
-                <div className="grammar-block__usage-py">Nǐ chī shénme?</div>
                 <div className="grammar-block__usage-tr">
                   {t("Sen nima yeyapsan?", "Что ты ешь?", "What are you eating?")}
                 </div>
@@ -464,11 +464,11 @@ export function GrammarShenmePage() {
               <div className="grammar-block__label">{t('Dialog 1 — Tanishish','Диалог 1 — Знакомство','Dialogue 1 — Introductions')}</div>
               {dialog1.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_WHAT, marginRight:6 }}>{line.s}:</span>
                     {line.zh}
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                 </div>
               ))}
@@ -479,11 +479,11 @@ export function GrammarShenmePage() {
               <div className="grammar-block__label">{t('Dialog 2 — Ovqat','Диалог 2 — Еда','Dialogue 2 — Food')}</div>
               {dialog2.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
+                                    <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-zh">
                     <span style={{ fontWeight:700, color: line.s === 'A' ? C_SUB : C_WHAT, marginRight:6 }}>{line.s}:</span>
                     {line.zh}
                   </div>
-                  <div className="grammar-block__usage-py">{line.py}</div>
                   <div className="grammar-block__usage-tr">{t(line.uz, line.ru, line.en)}</div>
                 </div>
               ))}
