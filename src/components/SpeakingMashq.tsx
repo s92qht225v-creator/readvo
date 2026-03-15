@@ -219,7 +219,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
     }
   };
 
-  const retryAfterWrong = () => { setAttempt(2); setPhase('idle'); };
+  const retryAfterWrong = () => { setAttempt(2); startRecording(); };
   const startShadowing  = () => { speak(q.zh); setPhase('shadowing'); };
 
   const correctCount = scores.filter(s => s === 'correct' || s === 'close').length;
