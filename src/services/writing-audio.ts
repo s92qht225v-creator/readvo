@@ -1,4 +1,4 @@
-const W = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201%20flashcards/HSK%201';
+const W = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing/HSK%202.0';
 /** Audio URL lookup by character. Values are Supabase Storage paths (HSK 1 flashcards bucket, SET folders). */
 export const WRITING_AUDIO: Record<string, string> = {
   // SET 1
