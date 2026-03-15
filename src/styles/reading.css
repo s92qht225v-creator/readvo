@@ -6006,7 +6006,7 @@ body {
   background: linear-gradient(180deg, #dc2626 0%, #b91c1c 40%, #7f1d1d 100%);
   padding: 0 0 24px;
   position: relative;
-  overflow: hidden;
+  z-index: 50;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   min-height: 206px;

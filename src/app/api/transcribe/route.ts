@@ -1,8 +1,7 @@
 import Groq from 'groq-sdk';
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
 export async function POST(request: Request) {
+  const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
   try {
     const formData = await request.formData();
     const audio = formData.get('audio');

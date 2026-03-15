@@ -163,11 +163,16 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   // ── Denied ────────────────────────────────────────────────
   if (screen === 'denied') return (
     <div style={{ padding: '24px 16px', textAlign: 'center', maxWidth: 400, margin: '0 auto' }}>
-      <div style={{ fontSize: 48, marginBottom: 16 }}>🚫</div>
-      <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 8 }}>Mikrofon ruxsati berilmadi</div>
-      <div style={{ fontSize: 13, color: '#666', lineHeight: 1.7 }}>
-        Brauzer sozlamalaridan mikrofon ruxsatini bering va sahifani yangilang.
+      <div style={{ fontSize: 48, marginBottom: 16 }}>🎙️</div>
+      <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 8 }}>Mikrofon ruxsati kerak</div>
+      <div style={{ fontSize: 13, color: '#666', lineHeight: 1.8, marginBottom: 24 }}>
+        Brauzer manzil satridagi 🔒 belgisini bosing → <b>Mikrofon</b> → <b>Ruxsat</b> qiling, keyin quyidagi tugmani bosing.
       </div>
+      <button onClick={() => setScreen('permission')} style={{
+        background: accentColor, border: 'none', borderRadius: 12,
+        color: '#fff', fontSize: 15, fontWeight: 700,
+        padding: '14px 32px', cursor: 'pointer', fontFamily: 'inherit',
+      }}>Qayta urinish</button>
     </div>
   );
 
