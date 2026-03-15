@@ -22,7 +22,7 @@ function levenshtein(a: string, b: string): number {
 }
 
 // Characters where substitution always changes meaning — never allow 'close'
-const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也')
+const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也吗呢吧啊')
 
 function hasCriticalSubstitution(expected: string, heard: string): boolean {
   // Quick check: if any char present in one but not the other is a critical char
@@ -41,7 +41,7 @@ async function aiJudge(expected: string, heard: string, language: string): Promi
     temperature: 0,
     messages: [
       { role: 'system', content: 'You are grading a Chinese language learner\'s spoken answer. Reply with JSON only.' },
-      { role: 'user', content: `Expected: "${expected}"\nLearner said: "${heard}"\nIs the learner's answer correct, close (minor Whisper noise or tone mark only), or wrong?\nRules: any substitution that changes meaning (e.g. 我→你, 不→没, pronoun or negation swap) is WRONG, not close. Only mark 'close' for clear speech-recognition noise where meaning is identical.\n{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}` },
+      { role: 'user', content: `Expected: "${expected}"\nLearner said: "${heard}"\nIs the learner's answer correct, close (minor Whisper noise or tone mark only), or wrong?\nRules: any substitution that changes meaning (e.g. 我→你, 不→没, pronoun or negation swap) is WRONG, not close. Only mark 'close' for clear speech-recognition noise where meaning is identical.\nFeedback rules: always name the specific Chinese character that is missing or wrong (e.g. 'missing 吗' not 'missing question mark', 'use 是 not 有' not 'wrong verb').\n{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}` },
     ],
   });
   const text = completion.choices?.[0]?.message?.content ?? '';
