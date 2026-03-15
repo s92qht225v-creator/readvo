@@ -90,7 +90,7 @@ function speak(text: string) {
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(u);
   };
-  audio.play();
+  audio.play().catch(() => { /* onerror handles TTS fallback */ });
 }
 
 interface Props {
