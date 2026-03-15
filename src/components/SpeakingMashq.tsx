@@ -51,18 +51,6 @@ const UI = {
   review:       { uz: "Darsni qayta ko'ring va qaytadan urining.", ru: 'Повторите урок и попробуйте снова.', en: 'Review the lesson and try again.' } as T,
 };
 
-function levenshtein(a: string, b: string): number {
-  const m = a.length, n = b.length;
-  const dp: number[][] = Array.from({ length: m + 1 }, (_, i) =>
-    Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
-  );
-  for (let i = 1; i <= m; i++)
-    for (let j = 1; j <= n; j++)
-      dp[i][j] = a[i - 1] === b[j - 1]
-        ? dp[i - 1][j - 1]
-        : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
-  return dp[m][n];
-}
 
 // Common traditional → simplified substitutions (HSK 1-relevant)
 const TRAD_TO_SIMP: Record<string, string> = {
@@ -88,15 +76,6 @@ function normalizeChinese(str: string): string {
   return toSimplified(str.trim().replace(/[。？！，、""''「」《》\s\d]/g, '')).toLowerCase();
 }
 
-function scoreAnswer(expected: string, whisperText: string): Score {
-  const a = normalizeChinese(expected);
-  const b = normalizeChinese(whisperText);
-  if (a === b) return 'correct';
-  // Allow 1 edit only for longer sentences (≥8 chars); short sentences require exact match
-  const maxEdits = a.length >= 10 ? 2 : a.length >= 8 ? 1 : 0;
-  if (maxEdits > 0 && levenshtein(a, b) <= maxEdits) return 'close';
-  return 'wrong';
-}
 
 function speak(text: string, rate = 0.85) {
   if (!('speechSynthesis' in window)) return;
@@ -119,6 +98,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   const [phase, setPhase]         = useState<Phase>('idle');
   const [attempt, setAttempt]     = useState(1);
   const [heard, setHeard]         = useState('');
+  const [feedback, setFeedback]   = useState('');
   const [scores, setScores]       = useState<Score[]>([]);
   const [requesting, setRequesting] = useState(false);
   const [deniedReason, setDeniedReason] = useState<DeniedReason>('blocked');
@@ -184,12 +164,13 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       const formData = new FormData();
       formData.append('audio', blob, 'answer.webm');
       formData.append('expected', q.zh);
+      formData.append('language', language);
       const res  = await fetch('/api/transcribe', { method: 'POST', body: formData });
-      const data = await res.json() as { text?: string; error?: string };
+      const data = await res.json() as { text?: string; result?: string; feedback?: string; error?: string };
       if (data.error) throw new Error(data.error);
-      const whisperText = data.text ?? '';
-      setHeard(whisperText);
-      const result = scoreAnswer(q.zh, whisperText);
+      setHeard(data.text ?? '');
+      setFeedback(data.feedback ?? '');
+      const result = (data.result ?? 'wrong') as Score;
       if (result === 'correct' || result === 'close') {
         setScores(p => [...p, result]);
         setPhase('result_correct');
@@ -216,6 +197,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       setPhase('idle');
       setAttempt(1);
       setHeard('');
+      setFeedback('');
     }
   };
 
@@ -364,6 +346,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <div style={{ background: '#dcfce7', borderRadius: 10, padding: '12px 14px', border: '1px solid #86efac', marginBottom: 12, textAlign: 'center' }}>
               <div style={{ fontSize: 16, fontWeight: 700, color: '#16a34a', marginBottom: 4 }}>✓ {L(UI.correct)}</div>
               {heard && <div style={{ fontSize: 13, color: '#444' }}>{L(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+              {feedback && <div style={{ fontSize: 12, color: '#15803d', marginTop: 4 }}>{feedback}</div>}
             </div>
             <div style={{ background: '#f5f5f8', borderRadius: 8, padding: '10px 14px', marginBottom: 14 }}>
               <div style={{ fontSize: 11, color: '#888', marginBottom: 3 }}>{L(UI.correctAns)}</div>
@@ -382,6 +365,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <div style={{ background: '#fff7ed', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', marginBottom: 12, textAlign: 'center' }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: '#d97706', marginBottom: 4 }}>{L(UI.retryPrompt)}</div>
               {heard && <div style={{ fontSize: 12, color: '#888' }}>{L(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+              {feedback && <div style={{ fontSize: 12, color: '#b45309', marginTop: 4 }}>{feedback}</div>}
             </div>
             <div style={{ fontSize: 11, color: '#888', textAlign: 'center', marginBottom: 12 }}>{L(UI.retryHint)}</div>
             <button onClick={retryAfterWrong} style={{ width: '100%', padding: '13px 0', background: '#d97706', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>🎤 {L(UI.retrySpeak)}</button>
@@ -394,6 +378,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <div style={{ background: '#fee2e2', borderRadius: 10, padding: '12px 14px', border: '1px solid #fca5a5', marginBottom: 12, textAlign: 'center' }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 4 }}>{L(UI.wrong)}</div>
               {heard && <div style={{ fontSize: 12, color: '#888' }}>{L(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+              {feedback && <div style={{ fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{feedback}</div>}
             </div>
             <div style={{ background: '#f5f5f8', borderRadius: 8, padding: '10px 14px', marginBottom: 14 }}>
               <div style={{ fontSize: 11, color: '#888', marginBottom: 3 }}>{L(UI.correctAns)}</div>
