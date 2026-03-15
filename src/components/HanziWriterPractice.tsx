@@ -322,31 +322,16 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
       <div className="hanzi-practice__layout">
         {/* Left: info + canvas */}
         <div className="hanzi-practice__canvas-panel">
-          {currentWord && (
+          {currentWord && isMultiChar && (
             <div className="hanzi-practice__info-panel" style={hiddenMode ? { visibility: 'hidden' } : undefined}>
-              <div className="hanzi-practice__word-display">
-                {isMultiChar ? wordChars.map((c, i) => (
+              <div className="hanzi-practice__char-progress">
+                {wordChars.map((_, i) => (
                   <span
                     key={i}
-                    className={`hanzi-practice__word-char${i === charIndex ? ' hanzi-practice__word-char--active' : i < charIndex ? ' hanzi-practice__word-char--done' : ''}`}
-                  >
-                    {c}
-                  </span>
-                )) : (
-                  <span className="hanzi-practice__word-char hanzi-practice__word-char--active">{currentWord.char}</span>
-                )}
+                    className={`hanzi-practice__char-dot${i === charIndex ? ' hanzi-practice__char-dot--active' : i < charIndex ? ' hanzi-practice__char-dot--done' : ''}`}
+                  />
+                ))}
               </div>
-              <div className="hanzi-practice__pinyin">({currentWord.pinyin})</div>
-              {isMultiChar && (
-                <div className="hanzi-practice__char-progress">
-                  {wordChars.map((_, i) => (
-                    <span
-                      key={i}
-                      className={`hanzi-practice__char-dot${i === charIndex ? ' hanzi-practice__char-dot--active' : i < charIndex ? ' hanzi-practice__char-dot--done' : ''}`}
-                    />
-                  ))}
-                </div>
-              )}
             </div>
           )}
 
@@ -426,7 +411,9 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
       </div>
       {currentWord && (
         <div style={{ padding: '16px 16px 8px', display: 'flex', alignItems: 'center', gap: 10, maxWidth: 520, margin: '0 auto', width: '100%' }}>
-          <span style={{ fontSize: 16, color: '#444' }}>
+          <span style={{ fontSize: 22, fontWeight: 500, color: '#1a1a2e' }}>{currentWord.char}</span>
+          <span style={{ fontSize: 13, color: '#dc2626', fontStyle: 'italic' }}>{currentWord.pinyin}</span>
+          <span style={{ fontSize: 15, color: '#444', flex: 1 }}>
             {lang === 'ru' ? currentWord.ru : lang === 'en' ? currentWord.en : currentWord.uz}
           </span>
           <button
