@@ -2814,6 +2814,23 @@ body {
   width: 100%;
 }
 
+.home__hero--lang .home__hero-inner {
+  position: relative;
+}
+
+.home__hero--lang .home__hero-top-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.home__hero--lang .dr-hero__body {
+  height: 100%;
+  padding-bottom: 20px;
+}
+
 .dr-hero__level {
   font-size: 10px;
   text-transform: uppercase;
@@ -4735,7 +4752,7 @@ body {
 }
 
 .home__hero-logo-img {
-  height: 24px;
+  height: 64px;
   width: auto;
 }
 
@@ -6485,7 +6502,7 @@ body {
   }
 
   .home__hero-logo-img {
-    height: 24px;
+    height: 52px;
   }
 
   .home__lang-selector-label {

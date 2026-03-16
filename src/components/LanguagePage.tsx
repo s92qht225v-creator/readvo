@@ -398,7 +398,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   return (
     <main className="home">
       {/* Banner */}
-      <header className="home__hero">
+      <header className="home__hero home__hero--lang">
         <div className="home__hero-inner">
           <span className="lp__hero-watermark" aria-hidden="true">中</span>
           <div className="home__hero-top-row">
