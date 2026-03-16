@@ -816,7 +816,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       return (
                         <div style={{ display: 'flex', gap: 3, marginTop: 5, marginLeft: 56 }}>
                           {[1, 2, 3].map(n => (
-                            <span key={n} style={{ fontSize: 18, color: stars != null && n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>
+                            <span key={n} style={{ fontSize: 28, color: stars != null && n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>
                               ★
                             </span>
                           ))}
