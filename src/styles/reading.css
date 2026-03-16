@@ -2750,6 +2750,11 @@ body {
 }
 
 .dr-hero__top-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2795,7 +2800,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 var(--spacing-xl);
-  padding-bottom: 26px;
+  padding-bottom: 20px;
+  height: 100%;
 }
 
 .dr-hero .dr-hero__body {
