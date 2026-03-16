@@ -2731,7 +2731,10 @@ body {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  min-height: 206px;
+  height: 165px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .dr-hero__watermark {
@@ -2791,11 +2794,16 @@ body {
 }
 
 .dr-hero__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 0;
 }
 
 .dr-hero .dr-hero__body {
-  margin-top: -22px;
+  margin-top: 0;
 }
 
 .home__hero .dr-hero__body {
@@ -4476,7 +4484,8 @@ body {
   transform: translateX(-50%);
   margin-bottom: 0;
   z-index: 200;
-  min-height: 206px;
+  height: 165px;
+  overflow: hidden;
 }
 
 .home__hero-inner {
@@ -6009,7 +6018,7 @@ body {
   z-index: 50;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  min-height: 206px;
+  min-height: 165px;
 }
 
 .grammar-page__hero-body {
