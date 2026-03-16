@@ -7,7 +7,7 @@ type Question = { uz: string; zh: string; pinyin: string };
 type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'result_no_speech' | 'shadowing' | 'api_error';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
 type DeniedReason = 'blocked' | 'noDevice' | 'unsupported';
-type Score = 'correct' | 'close' | 'wrong';
+export type Score = 'correct' | 'close' | 'wrong';
 
 type T = Record<Language, string>;
 const t = (obj: T, lang: Language) => obj[lang];
@@ -50,6 +50,7 @@ const UI = {
   lastAttempt:  { uz: '⚠️ Oxirgi urinish',           ru: '⚠️ Последняя попытка',       en: '⚠️ Last attempt'          } as T,
   correct_count:{ uz: "to'g'ri",                     ru: 'правильно',                  en: 'correct'                  } as T,
   perfect:      { uz: "Mukammal! Barchasini to'g'ri aytdingiz!", ru: 'Отлично! Всё правильно!', en: 'Perfect! All correct!' } as T,
+  done:         { uz: 'Tayyor ✓',                          ru: 'Готово ✓',                  en: 'Done ✓'                   } as T,
   good:         { uz: "Yaxshi! Bir oz mashq qiling.",ru: 'Хорошо! Немного практики.',  en: 'Good! Keep practising.'   } as T,
   review:       { uz: "Darsni qayta ko'ring va qaytadan urining.", ru: 'Повторите урок и попробуйте снова.', en: 'Review the lesson and try again.' } as T,
 };
@@ -99,9 +100,11 @@ interface Props {
   accentColor?: string;
   accentBg?: string;
   language?: Language;
+  onComplete?: (result: { scores: Score[]; shadowingUsed: boolean }) => void;
+  onDone?: () => void;
 }
 
-export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '#fce7f3', language = 'uz' }: Props) {
+export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '#fce7f3', language = 'uz', onComplete, onDone }: Props) {
   const [screen, setScreen]       = useState<Screen>('permission');
   const [qIndex, setQIndex]       = useState(0);
   const [phase, setPhase]         = useState<Phase>('idle');
@@ -112,10 +115,19 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   const [requesting, setRequesting] = useState(false);
   const [deniedReason, setDeniedReason] = useState<DeniedReason>('blocked');
   const [recordingProgress, setRecordingProgress] = useState(0);
+  const shadowingUsedRef = useRef(false);
 
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef   = useRef<Blob[]>([]);
   const timerRef    = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Fire onComplete when quiz finishes (scores state is settled by the time screen changes)
+  useEffect(() => {
+    if (screen === 'complete' && scores.length > 0) {
+      onComplete?.({ scores, shadowingUsed: shadowingUsedRef.current });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screen]);
 
   useEffect(() => {
     if (phase !== 'recording') {
@@ -254,7 +266,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   };
 
   const retryAfterWrong = () => { setAttempt(2); startRecording(); };
-  const startShadowing  = () => { speak(q.zh); setPhase('shadowing'); };
+  const startShadowing  = () => { shadowingUsedRef.current = true; speak(q.zh); setPhase('shadowing'); };
 
   const correctCount = scores.filter(s => s === 'correct' || s === 'close').length;
   const pct = Math.round((correctCount / questions.length) * 100);
@@ -319,10 +331,25 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
           );
         })}
       </div>
-      <button
-        onClick={() => { setQIndex(0); setPhase('idle'); setAttempt(1); setHeard(''); setScores([]); setScreen('quiz'); }}
-        style={{ background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 600, padding: '12px 28px', cursor: 'pointer', fontFamily: 'inherit' }}
-      >{L(UI.retry)}</button>
+      {pct === 100 && onDone ? (
+        <button
+          onClick={onDone}
+          style={{ background: '#16a34a', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 600, padding: '12px 28px', cursor: 'pointer', fontFamily: 'inherit' }}
+        >{L(UI.done)}</button>
+      ) : (
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
+          <button
+            onClick={() => { setQIndex(0); setPhase('idle'); setAttempt(1); setHeard(''); setScores([]); shadowingUsedRef.current = false; setScreen('quiz'); }}
+            style={{ background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 600, padding: '12px 28px', cursor: 'pointer', fontFamily: 'inherit' }}
+          >{L(UI.retry)}</button>
+          {onDone && (
+            <button
+              onClick={onDone}
+              style={{ background: '#6b7280', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 600, padding: '12px 28px', cursor: 'pointer', fontFamily: 'inherit' }}
+            >{L(UI.done)}</button>
+          )}
+        </div>
+      )}
     </div>
   );
 

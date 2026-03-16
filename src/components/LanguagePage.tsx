@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useLanguage } from '../hooks/useLanguage';
+import { useStars } from '../hooks/useStars';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { trackAll } from '@/utils/analytics';
@@ -300,6 +301,7 @@ interface Props {
 export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  const { getStars: getGrammarStars } = useStars('grammar');
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
@@ -808,6 +810,19 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       {!item.active && <span className="grammar-card__badge">{({ uz: 'Tez kunda', ru: 'Скоро', en: 'Soon' } as Record<string, string>)[language]}</span>}
                     </div>
                     <p className="grammar-card__translation">{({ uz: item.translation, ru: item.translation_ru, en: item.translation_en } as Record<string, string>)[language]}</p>
+                    {(() => {
+                      const slug = item.href.split('/').pop()!;
+                      const stars = getGrammarStars(slug);
+                      return (
+                        <div style={{ display: 'flex', gap: 3, marginTop: 5, marginLeft: 56 }}>
+                          {[1, 2, 3].map(n => (
+                            <span key={n} style={{ fontSize: 18, color: stars != null && n <= stars ? '#f59e0b' : 'var(--color-border-secondary)' }}>
+                              {stars != null && n <= stars ? '★' : '☆'}
+                            </span>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </Link>
                 ))}
                 {filteredGrammar.length === 0 && (

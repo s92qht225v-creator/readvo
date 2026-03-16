@@ -6,12 +6,14 @@ function playGrammarAudio(zh: string) {
 }
 
 import React, { useState } from 'react';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { useStars } from '../hooks/useStars';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { SpeakingMashq } from './SpeakingMashq';
+import { calculateStars } from '@/utils/calculateStars';
 
 const C_SUB  = '#3b82f6'; // Subject / Ega
 const C_VERB = '#16a34a'; // Verb / Fe'l
@@ -181,6 +183,13 @@ function ColorParts({ parts }: { parts: Part[] }) {
 export function GrammarShenmePage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
+  const router = useRouter();
+  const { getStars, saveStars } = useStars('grammar');
+  const handleQuizComplete = ({ scores, shadowingUsed }: { scores: import('./SpeakingMashq').Score[]; shadowingUsed: boolean }) => {
+    const newStars = calculateStars(scores, shadowingUsed);
+    const existing = getStars('shenme');
+    if (existing === undefined || newStars > existing) saveStars('shenme', newStars);
+  };
 
   const speakingQuestions = speakingQuestionsData.map(q => ({
     uz: language === 'ru' ? q.ru : language === 'en' ? q.en : q.uz,
@@ -516,6 +525,8 @@ export function GrammarShenmePage() {
             questions={speakingQuestions}
             accentColor="#dc2626"
             accentBg="#fee2e2"
+            onComplete={handleQuizComplete}
+            onDone={() => router.push('/chinese?tab=grammar')}
           />
         )}
 
