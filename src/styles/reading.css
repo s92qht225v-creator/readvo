@@ -4979,7 +4979,7 @@ body {
 
 .dialogue-card__deco {
   position: absolute;
-  right: -4px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4.5rem;
@@ -5901,7 +5901,7 @@ body {
 
 .lp__card-deco {
   position: absolute;
-  right: -4px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4.5rem;
@@ -10602,7 +10602,7 @@ body {
 
 .lp__writing-card-deco {
   position: absolute;
-  right: -4px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4.5rem;
