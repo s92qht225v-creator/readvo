@@ -164,21 +164,19 @@ export function GrammarLiangciPage() {
 
   return (
     <div className="grammar-page">
-      <div className="grammar-page__hero">
-        <div className="grammar-page__hero-bg">量</div>
-        <div className="home__hero-inner">
-          <div className="home__hero-top-row">
+      <div className="dr-hero">
+        <div className="dr-hero__watermark">量</div>
+        <div className="dr-hero__top-row">
             <Link href="/chinese?tab=grammar" className="dr-back-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
             </Link>
             <BannerMenu />
-          </div>
         </div>
-        <div className="grammar-page__hero-body">
-          <div className="grammar-page__hero-label">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
-          <h1 className="grammar-page__hero-char">量词</h1>
-          <div className="grammar-page__hero-pinyin">liàngcí</div>
-          <div className="grammar-page__hero-meaning">— {({ uz: 'sanash so\'zlari', ru: 'счётные слова', en: 'measure words' } as Record<string, string>)[language]} —</div>
+        <div className="dr-hero__body">
+          <div className="dr-hero__level">HSK 1 · {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</div>
+          <h1 className="dr-hero__title">量词</h1>
+          <div className="dr-hero__pinyin">liàngcí</div>
+          <div className="dr-hero__translation">— {({ uz: 'sanash so\'zlari', ru: 'счётные слова', en: 'measure words' } as Record<string, string>)[language]} —</div>
         </div>
       </div>
 
