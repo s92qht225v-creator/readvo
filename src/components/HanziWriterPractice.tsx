@@ -397,20 +397,42 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
         </div>
       </div>
       {currentWord && (
-        <div style={{ padding: '16px 16px 8px', display: 'flex', alignItems: 'center', gap: 10, maxWidth: 520, margin: '0 auto', width: '100%' }}>
-          <span style={{ fontSize: 22, fontWeight: 500, color: '#1a1a2e' }}>{currentWord.char}</span>
-          <span style={{ fontSize: 13, color: '#dc2626', fontStyle: 'italic' }}>{currentWord.pinyin}</span>
-          <span style={{ fontSize: 15, color: '#444', flex: 1 }}>
-            {lang === 'ru' ? currentWord.ru : lang === 'en' ? currentWord.en : currentWord.uz}
-          </span>
-          <button
-            type="button"
-            onClick={() => { if (currentWord) playWordAudio(currentWord); }}
-            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: '50%', border: 'none', background: '#dc2626', color: '#fff', cursor: 'pointer', padding: 0, flexShrink: 0 }}
-            aria-label="Play audio"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
-          </button>
+        <div className="hanzi-practice__char-card">
+          <div className="hanzi-practice__char-card-header">
+            <div className="hanzi-practice__char-card-main">
+              <span className="hanzi-practice__char-card-pinyin">{currentWord.pinyin}</span>
+              <span className="hanzi-practice__char-card-meaning">
+                {lang === 'ru' ? currentWord.ru : lang === 'en' ? currentWord.en : currentWord.uz}
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => { if (currentWord) playWordAudio(currentWord); }}
+              className="hanzi-practice__char-card-audio"
+              aria-label="Play audio"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
+            </button>
+          </div>
+          <div className="hanzi-practice__char-card-details">
+            <span className="hanzi-practice__char-card-tag">
+              {currentWord.strokes} {({ uz: 'chiziq', ru: 'черт', en: 'strokes' } as Record<string, string>)[lang]}
+            </span>
+            {currentWord.radical && (
+              <span className="hanzi-practice__char-card-tag">
+                {({ uz: 'kalit', ru: 'ключ', en: 'radical' } as Record<string, string>)[lang]}: {currentWord.radical} ({lang === 'ru' ? currentWord.radicalRu : lang === 'en' ? currentWord.radicalEn : currentWord.radicalUz})
+              </span>
+            )}
+          </div>
+          {currentWord.ex && (
+            <div className="hanzi-practice__char-card-example">
+              <div className="hanzi-practice__char-card-ex-zh">{currentWord.ex}</div>
+              <div className="hanzi-practice__char-card-ex-py">{currentWord.expy}</div>
+              <div className="hanzi-practice__char-card-ex-tr">
+                {lang === 'ru' ? currentWord.exru : lang === 'en' ? currentWord.exen : currentWord.exuz}
+              </div>
+            </div>
+          )}
         </div>
       )}
       <CoachMarkTour
