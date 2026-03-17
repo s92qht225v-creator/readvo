@@ -302,6 +302,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const { getStars: getGrammarStars } = useStars('grammar');
+  const { getStars: getWritingStars } = useStars('writing');
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
@@ -651,6 +652,16 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       <div className="lp__writing-card__sub">
                         {(language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0]}
                       </div>
+                      {(() => {
+                        const wStars = getWritingStars(set.id);
+                        return (
+                          <div style={{ display: 'flex', gap: 3, marginTop: 4 }}>
+                            {[1, 2, 3].map(n => (
+                              <span key={n} style={{ fontSize: 18, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
+                            ))}
+                          </div>
+                        );
+                      })()}
                     </div>
                     <div className="lp__card-arrow">›</div>
                   </Link>

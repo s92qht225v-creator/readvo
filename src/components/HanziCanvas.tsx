@@ -682,6 +682,9 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     mistakesOnStrokeRef.current += 1;
     fadeOutStroke();
 
+    // In hidden mode (test), no hints at all — user must recall from memory
+    if (hidden) return;
+
     // Restart guide dot or show traveling dot hint
     if (guideModeRef.current) {
       showGuideDot(completedRef.current);
@@ -693,13 +696,16 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         showTravelingDot(dCtx, strokes[idx], sizeRef.current);
       }
     }
-  }, [fadeOutStroke, showTravelingDot, showGuideDot]);
+  }, [fadeOutStroke, showTravelingDot, showGuideDot, hidden]);
 
   // Handle out-of-order stroke: briefly highlight the correct next stroke
   const onOutOfOrder = useCallback(() => {
     mistakesRef.current += 1;
     mistakesOnStrokeRef.current += 1;
     fadeOutStroke();
+
+    // In hidden mode (test), no hints at all
+    if (hidden) return;
 
     if (guideModeRef.current) {
       // In guide mode, just restart the guide dot
@@ -721,7 +727,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         }, 800);
       }
     }
-  }, [fadeOutStroke, showGuideDot]);
+  }, [fadeOutStroke, showGuideDot, hidden]);
 
   // Pointer events
   const onPointerDown = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {

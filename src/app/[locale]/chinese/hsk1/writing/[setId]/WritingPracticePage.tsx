@@ -8,6 +8,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { HanziWriterPractice } from '@/components/HanziWriterPractice';
+import { WritingTest } from '@/components/WritingTest';
 import type { HanziWord } from '@/services/writing';
 import { trackAll } from '@/utils/analytics';
 
@@ -22,7 +23,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
-  const [subtab, setSubtab] = useState<'writing' | 'chars'>('writing');
+  const [subtab, setSubtab] = useState<'writing' | 'chars' | 'test'>('writing');
   const isHsk2L2 = setId.startsWith('hsk2-l2-');
   const isHsk2 = setId.startsWith('hsk2-') && !isHsk2L2;
   const isHsk3 = setId.startsWith('hsk3-');
@@ -73,24 +74,33 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
             {({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[language]}
           </button>
           <button
-            className={`lp__tab ${subtab === 'chars' ? 'lp__tab--active' : ''}`}
-            onClick={() => setSubtab('chars')}
+            className={`lp__tab ${subtab === 'test' ? 'lp__tab--active' : ''}`}
+            onClick={() => setSubtab('test')}
             type="button"
           >
-            {({ uz: 'Ierogliflar', ru: 'Иероглифы', en: 'Characters' } as Record<string, string>)[language]}
+            {({ uz: 'Diktant', ru: 'Диктант', en: 'Dictation' } as Record<string, string>)[language]}
           </button>
         </div>
       </nav>
       <section className="home__content">
-        <HanziWriterPractice
-          lang={language}
-          words={words}
-          onBack={() => router.push(backUrl)}
-          autoStart
-          hideSubtabs
-          subtab={subtab}
-          onSubtabChange={setSubtab}
-        />
+        {subtab === 'test' ? (
+          <WritingTest
+            words={words}
+            lang={language}
+            setId={setId}
+            onDone={() => router.push(backUrl)}
+          />
+        ) : (
+          <HanziWriterPractice
+            lang={language}
+            words={words}
+            onBack={() => router.push(backUrl)}
+            autoStart
+            hideSubtabs
+            subtab={subtab}
+            onSubtabChange={(t) => setSubtab(t as 'writing' | 'chars' | 'test')}
+          />
+        )}
       </section>
       <PageFooter />
     </main>
