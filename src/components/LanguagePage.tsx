@@ -655,28 +655,22 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                     prefetch={false}
                   >
                     <div className="lp__writing-card-deco" aria-hidden="true">{set.chars.slice(0, 3)}</div>
-                    <div className="lp__writing-card__num">
-                      {set.id.split('-set')[1]}
+                    <div className="lp__writing-card__title">
+                      {language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title}
                     </div>
-                    <div className="lp__writing-card__body">
-                      <div className="lp__writing-card__title">
-                        {language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title}
-                      </div>
-                      <div className="lp__writing-card__sub">
-                        {(language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0]}
-                      </div>
-                      {(() => {
-                        const wStars = getWritingStars(set.id);
-                        return (
-                          <div style={{ display: 'flex', gap: 3, marginTop: 4 }}>
-                            {[1, 2, 3].map(n => (
-                              <span key={n} style={{ fontSize: 18, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
-                            ))}
-                          </div>
-                        );
-                      })()}
+                    <div className="lp__writing-card__sub">
+                      {(language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0]}
                     </div>
-                    <div className="lp__card-arrow">›</div>
+                    {(() => {
+                      const wStars = getWritingStars(set.id);
+                      return (
+                        <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                          {[1, 2, 3].map(n => (
+                            <span key={n} style={{ fontSize: 28, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </Link>
                 ))}
                 {filteredSets.length === 0 && (
@@ -711,16 +705,12 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                           prefetch={false}
                         >
                           <div className="lp__writing-card-deco" aria-hidden="true">{ghost}</div>
-                          <div className="lp__writing-card__num">{num}</div>
-                          <div className="lp__writing-card__body">
-                            <div className="lp__writing-card__title">
-                              {({ uz: `${num}-to'plam`, ru: `Набор ${num}`, en: `Set ${num}` } as Record<string, string>)[language]}
-                            </div>
-                            <div className="lp__writing-card__sub">
-                              {set.wordCount || 10} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}
-                            </div>
+                          <div className="lp__writing-card__title">
+                            {({ uz: `${num}-to'plam`, ru: `Набор ${num}`, en: `Set ${num}` } as Record<string, string>)[language]}
                           </div>
-                          <div className="lp__card-arrow">›</div>
+                          <div className="lp__writing-card__sub">
+                            {set.wordCount || 10} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}
+                          </div>
                         </Link>
                       );
                     })}

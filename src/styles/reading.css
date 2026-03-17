@@ -10581,16 +10581,14 @@ body {
 }
 
 .lp__writing-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  display: block;
   background: #fff;
   border: none;
   text-decoration: none;
   color: inherit;
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   cursor: pointer;
   text-align: left;
   font-family: inherit;
@@ -10605,7 +10603,7 @@ body {
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.04);
   line-height: 1;
@@ -10639,15 +10637,16 @@ body {
 }
 
 .lp__writing-card__title {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 3px;
+  margin: 0 0 6px;
 }
 
 .lp__writing-card__sub {
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   color: #888;
+  margin: 0;
 }
 
 /* Inline Correction Button (inside footer) */

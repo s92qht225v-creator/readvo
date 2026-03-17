@@ -11,7 +11,8 @@ interface Props {
 const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
 
 function getWritingAudioUrl(char: string, pinyin: string): string {
-  const stripped = pinyin.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
+  const first = pinyin.split(' / ')[0];
+  const stripped = first.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
   const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
   return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
 }
