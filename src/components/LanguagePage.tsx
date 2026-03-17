@@ -339,7 +339,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
   const initialSubTab = searchParams.get('subtab');
   const [flashcardSubTab, setFlashcardSubTab] = useState<'lessons' | 'topics'>(initialSubTab === 'topics' ? 'topics' : 'lessons');
-  const [flashcardHskLevel, setFlashcardHskLevel] = useState<'1' | '2' | '3'>('1');
+  const initialFlashHsk = searchParams.get('flashhsk');
+  const [flashcardHskLevel, setFlashcardHskLevel] = useState<'1' | '2' | '3'>(initialFlashHsk === '2' ? '2' : initialFlashHsk === '3' ? '3' : '1');
 
   // HSK dropdown
   const [hskDropdownOpen, setHskDropdownOpen] = useState(false);
@@ -647,32 +648,37 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                 />
               </div>
               <div className="lp__writing-sets">
-                {filteredSets.map((set) => (
-                  <Link
-                    key={set.id}
-                    className="lp__writing-card"
-                    href={`/chinese/hsk1/writing/${set.id}`}
-                    prefetch={false}
-                  >
-                    <div className="lp__writing-card-deco" aria-hidden="true">{set.chars.slice(0, 3)}</div>
-                    <div className="lp__writing-card__title">
-                      {language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title}
+                {filteredSets.map((set) => {
+                  const isEmpty = set.chars.length === 0;
+                  const title = language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title;
+                  const sub = (language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0];
+                  const inner = (
+                    <>
+                      <div className="lp__writing-card-deco" aria-hidden="true">{isEmpty ? '🔒' : set.chars.slice(0, 3)}</div>
+                      <div className="lp__writing-card__title">{title}</div>
+                      <div className="lp__writing-card__sub">{isEmpty ? ({ uz: 'Tez kunda', ru: 'Скоро', en: 'Coming soon' } as Record<string, string>)[language] : sub}</div>
+                      {!isEmpty && (() => {
+                        const wStars = getWritingStars(set.id);
+                        return (
+                          <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                            {[1, 2, 3].map(n => (
+                              <span key={n} style={{ fontSize: 28, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
+                            ))}
+                          </div>
+                        );
+                      })()}
+                    </>
+                  );
+                  return isEmpty ? (
+                    <div key={set.id} className="lp__writing-card lp__writing-card--soon">
+                      {inner}
                     </div>
-                    <div className="lp__writing-card__sub">
-                      {(language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0]}
-                    </div>
-                    {(() => {
-                      const wStars = getWritingStars(set.id);
-                      return (
-                        <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
-                          {[1, 2, 3].map(n => (
-                            <span key={n} style={{ fontSize: 28, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
-                          ))}
-                        </div>
-                      );
-                    })()}
-                  </Link>
-                ))}
+                  ) : (
+                    <Link key={set.id} className="lp__writing-card" href={`/chinese/hsk1/writing/${set.id}`} prefetch={false}>
+                      {inner}
+                    </Link>
+                  );
+                })}
                 {filteredSets.length === 0 && (
                   <p className="dialogues__empty">{({ uz: 'Hech narsa topilmadi', ru: 'Ничего не найдено', en: 'Nothing found' } as Record<string, string>)[language]}</p>
                 )}

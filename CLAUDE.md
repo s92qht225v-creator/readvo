@@ -17,6 +17,8 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 - **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
 - **i18n**: next-intl ^4.8.3 (URL-based locale routing, `localePrefix: 'always'`)
 - **State Management**: React hooks (useState, useCallback, useMemo)
+- **Speech-to-Text**: Groq API (`whisper-large-v3`) for Chinese speech recognition
+- **AI Grading**: OpenAI API (`gpt-4o-mini`) for borderline answer evaluation
 - **Storage**: Supabase Storage (images and audio files)
 - **Database**: Supabase (project: miruwaeplbzfqmdwacsh)
 
@@ -34,7 +36,9 @@ All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect 
 /{locale}/chinese/hsk1/dialogues/[dialogueId] # Dialogue reader page (uses StoryReader)
 /{locale}/chinese/hsk1/karaoke/[songId]     # Karaoke player page
 /{locale}/chinese/hsk1/writing/[setId]      # Writing practice page (per character set)
-/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (17 slugs)
+/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (20 slugs)
+/{locale}/chinese/hsk2/flashcards/[lessonId] # HSK 2 flashcard practice
+/{locale}/chinese/hsk3/flashcards/[lessonId] # HSK 3 flashcard practice
 /{locale}/login                             # Login page
 /{locale}/payment                           # Payment page
 /{locale}/blog                              # Blog list
@@ -82,7 +86,13 @@ Example routes:
 │   │   │           │   └── [setId]/
 │   │   │           │       ├── page.tsx              # Writing practice (server)
 │   │   │           │       └── WritingPracticePage.tsx # Writing practice (client)
-│   │   │           └── grammar/[slug]/page.tsx # Grammar pages (17 slugs)
+│   │   │           └── grammar/[slug]/page.tsx # Grammar pages (20 slugs)
+│   │   │       ├── hsk2/
+│   │   │       │   └── flashcards/
+│   │   │       │       └── [lessonId]/page.tsx  # HSK 2 flashcard practice
+│   │   │       └── hsk3/
+│   │   │           └── flashcards/
+│   │   │               └── [lessonId]/page.tsx  # HSK 3 flashcard practice
 │   │   ├── api/
 │   │   │   ├── admin/
 │   │   │   │   ├── route.ts       # Admin data + actions (GET/POST)
@@ -93,10 +103,16 @@ Example routes:
 │   │   │   ├── subscription/route.ts # Active subscription (GET)
 │   │   │   ├── progress/route.ts  # User progress (GET/POST)
 │   │   │   ├── corrections/route.ts # Correction reports via Telegram (POST)
+│   │   │   ├── transcribe/route.ts # Speech-to-text + AI grading (POST)
+│   │   │   ├── stars/route.ts     # Star progress read/write (GET/POST)
+│   │   │   ├── flashcards/
+│   │   │   │   ├── hsk1/route.ts          # HSK 1 flashcard data (GET)
+│   │   │   │   └── topic/[topicId]/route.ts # Topic flashcard data (GET)
 │   │   │   └── auth/
 │   │   │       ├── telegram/
 │   │   │       │   ├── init/route.ts     # Telegram Widget auth URL (GET)
 │   │   │       │   └── callback/route.ts # HMAC verify + user create + session (POST)
+│   │   │       ├── register-nonce/route.ts # Session nonce registration (POST)
 │   │   │       └── session-check/route.ts # Session nonce validation (POST/DELETE)
 │   │   └── auth/telegram/complete/page.tsx  # Telegram login completion (outside [locale])
 │   ├── components/             # React components (see src/components/CLAUDE.md)
@@ -129,6 +145,20 @@ Example routes:
 │   │   ├── ErrorCorrectionExercise.tsx # Error correction (English exercises)
 │   │   ├── WordChoiceExercise.tsx     # Word choice / circle correct word (English exercises)
 │   │   ├── TextErrorExercise.tsx      # Text error / find & correct errors in passage (English exercises)
+│   │   ├── SpeakingMashq.tsx         # Speaking practice with AI grading (Groq + OpenAI)
+│   │   ├── WritingTest.tsx           # Writing test with HanziCanvas + star scoring
+│   │   ├── CoachMark.tsx             # Tooltip coach marks + multi-step tours
+│   │   ├── RubyText.tsx              # Shared ruby pinyin component (<ruby>/<rt>)
+│   │   ├── DialogueReader.tsx        # Dialogue reader (vocab/grammar tabs, coach tour)
+│   │   ├── DialoguesPage.tsx         # Dialogues list page (HSK level tabs)
+│   │   ├── FlashcardListPage.tsx     # Flashcard lesson list with banner+tabs
+│   │   ├── FlashcardCard.tsx         # Flashcard with 3D flip animation
+│   │   ├── BookPage.tsx              # Book page (lesson list with banner+tabs)
+│   │   ├── LoginPage.tsx             # Login page (Telegram auth button)
+│   │   ├── BlogList.tsx              # Blog list page
+│   │   ├── BlogPostView.tsx          # Blog post viewer
+│   │   ├── YandexPageView.tsx        # Yandex Metrica page view tracker
+│   │   ├── MetaPageView.tsx          # Meta (Facebook) Pixel page view tracker
 │   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
 │   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
 │   │   └── Paywall.tsx               # Paywall overlay (trial expired)
@@ -141,20 +171,27 @@ Example routes:
 │   │   ├── useLanguage.ts     # UZ/RU/EN language toggle (wraps useLocale + useRouter from @/i18n/navigation)
 │   │   ├── useAuth.tsx        # Telegram auth provider + context
 │   │   ├── useRequireAuth.ts  # Auth guard (redirects to / if not logged in)
-│   │   └── useTrial.ts       # Trial/subscription status hook
-│   ├── lib/                      # Supabase clients
+│   │   ├── useTrial.ts       # Trial/subscription status hook
+│   │   └── useStars.ts       # Star progress read/write hook (speaking practice)
+│   ├── lib/                      # Supabase clients & utilities
+│   │   ├── supabase.ts        # Supabase helpers (getImageUrl, uploadImage)
 │   │   ├── supabase-client.ts # Browser client (anon key, respects RLS)
-│   │   └── supabase-server.ts # Server client (service role, bypasses RLS)
+│   │   ├── supabase-server.ts # Server client (service role, bypasses RLS)
+│   │   └── jwt.ts             # Local JWT decode (getUserIdFromJWT, getUserFromJWT)
 │   ├── utils/                    # Utility functions
 │   │   ├── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
-│   │   └── jsonLd.ts          # JSON-LD structured data helpers (breadcrumb, grammar term, etc.)
+│   │   ├── jsonLd.ts          # JSON-LD structured data helpers (breadcrumb, grammar term, etc.)
+│   │   ├── calculateStars.ts  # Star rating calculation from speaking quiz scores
+│   │   ├── shuffle.ts         # Fisher-Yates array shuffle
+│   │   └── analytics.ts       # Unified analytics (Meta Pixel, Yandex Metrica, GA4)
 │   ├── services/               # Data loading
 │   │   ├── index.ts           # Service exports
 │   │   ├── content.ts         # Loads JSON from /content
 │   │   ├── dialogues.ts     # Loads dialogue JSON from /content/dialogues
 │   │   ├── flashcards.ts     # Loads flashcard decks from /content/flashcards
 │   │   ├── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
-│   │   ├── writing.ts        # Writing practice sets data (WRITING_SETS, HanziWord type)
+│   │   ├── writing.ts        # Writing practice sets data (WRITING_SETS through WRITING_SETS_HSK6, HanziWord type)
+│   │   ├── blog.ts           # Blog posts data loading
 │   │   └── english-content.ts # Loads English content from /content/english
 │   ├── styles/
 │   │   └── reading.css        # All styles (see src/styles/CLAUDE.md)
@@ -180,7 +217,7 @@ Example routes:
 │   ├── uz.json                # Uzbek UI translations
 │   ├── ru.json                # Russian UI translations
 │   └── en.json                # English UI translations
-├── .env.local                  # Supabase credentials
+├── .env.local                  # Supabase + Telegram + Groq + OpenAI credentials
 └── public/
     ├── logo.svg               # White text logo (for dark backgrounds: banner, karaoke)
     ├── logo-blue.svg          # Blue text logo #71a3da (for light backgrounds: landing nav)
@@ -375,6 +412,38 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Database**: `user_progress` table — `user_id, lesson_id, page_num, completed, last_visited_at`
 - **Upsert**: Creates or updates on conflict `(user_id, lesson_id, page_num)`
 
+## Speaking Practice (Speaking Mashq)
+- **Component**: `src/components/SpeakingMashq.tsx` — AI-powered speaking quiz embedded in grammar pages
+- **API route**: `POST /api/transcribe` — accepts audio blob + expected Chinese text, returns grading result
+- **AI pipeline**:
+  1. **Groq Whisper** (`whisper-large-v3`) transcribes user's speech to Chinese text
+  2. **Heuristic stage**: Levenshtein distance on normalized Chinese characters for quick correct/wrong decisions
+  3. **Critical character check**: Pronoun/negation/demonstrative swaps (我↔你, 不↔没, 这↔那) always → `wrong`
+  4. **OpenAI** (`gpt-4o-mini`) judges borderline cases only — minimizes AI API costs
+- **Grading results**: `correct` | `close` (minor Whisper noise) | `wrong` | `no_speech` (silence detected)
+- **Flow**: User sees translation prompt → speaks Chinese → audio recorded (max 6s) → transcribed → graded → feedback shown
+- **Two attempts**: First wrong → retry with hint. Second wrong → shadowing mode (listen + repeat). No-speech doesn't count as attempt.
+- **Shadowing mode**: Plays correct audio, user repeats. Tracked via `shadowingUsedRef` (affects star rating).
+- **Audio playback**: Local grammar audio files (`/audio/hsk1/grammar/{text}.mp3`) with Web Speech API TTS fallback
+- **Traditional→Simplified**: `TRAD_TO_SIMP` map normalizes Whisper output (Whisper sometimes returns traditional characters)
+- **Silence detection**: Client-side (blob < 3KB) + server-side (Whisper `no_speech_prob > 0.6`)
+- **Trilingual UI**: All 40+ UI strings in UZ/RU/EN via inline `Record<Language, string>` pattern
+- **Used in 6 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪)
+- **Question format**: `{ uz: string; zh: string; pinyin: string }` — each grammar page defines its own `speakingQuestionsData` array
+- **Env vars**: `GROQ_API_KEY` (speech recognition), `OPENAI_API_KEY` (answer grading)
+
+### Star Rating System
+- **Hook**: `src/hooks/useStars.ts` — reads/writes star progress per section type
+- **Calculation**: `src/utils/calculateStars.ts` — 0-3 stars based on scores + shadowing usage
+  - 3 stars: all correct, no shadowing
+  - 2 stars: max 1 wrong, no shadowing
+  - 1 star: at least 1 correct
+  - 0 stars: no correct answers
+- **API**: `GET/POST /api/stars` — JWT auth, upserts to `star_progress` table
+- **Database table**: `star_progress` — `user_id UUID, section_type TEXT, section_id TEXT, stars INT (0-3), completed_at TIMESTAMPTZ`, PK `(user_id, section_type, section_id)`
+- **Display**: Grammar cards on Language Page show star ratings (★★★) fetched via `useStars('grammar')`
+- **Optimistic updates**: Stars saved locally immediately, persisted to server async (silent failure OK)
+
 ## Supabase Storage
 - **Project URL**: https://miruwaeplbzfqmdwacsh.supabase.co
 - **Images bucket**: `/images/` - original textbook scans (HSK-1-1-1.jpg, HSK-1-2-1.jpg, etc.)
@@ -391,6 +460,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **No vocab section "Play All" audio**: Vocabulary sections do not have section-level `audio_url` (no `vocab.mp3` files exist). Individual word audio works via per-sentence URLs.
 - Example: Lesson 5, Page 2 dialogue sentence 3 → `HSK 1/HSK 5-2/dialogue3.mp3`
 - Example: Lesson 8, Page 1 vocab word 学校 (xuéxiào) → `HSK 1/HSK 8-1/xuexiao.mp3`
+- **Grammar speaking audio**: `/audio/hsk1/grammar/{chinese_text}.mp3` — local files in `public/audio/`, with Web Speech API TTS fallback
 
 ## SEO & Metadata
 - **`<html lang="{locale}">`** — dynamic, set to current locale from `getLocale()` (uz/ru/en)
@@ -415,6 +485,40 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **CSS classes**: `.correction-inline__*` in reading.css
 - **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
 - **Used in**: Every page component — LanguagePage, BookPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
+
+## Writing Test
+- **Component**: `src/components/WritingTest.tsx` — timed writing quiz using `HanziCanvas`
+- **Flow**: Ready screen → write each character → results screen with star rating
+- **Grading**: Per-character `mistakes` count. Fail threshold: 2+ wrong strokes per character
+- **Star calculation**: 3★ = all passed, 2★ = max 1 fail, 1★ = at least 1 passed, 0★ = none
+- **Star persistence**: Uses `useStars('writing')` hook → `star_progress` table (same as speaking)
+- **Audio**: Per-character audio playback via `getWritingAudioUrl()` (same URL generation as flashcard pages)
+- **Props**: `words: HanziWord[]`, `lang`, `setId`, `onDone` callback
+- **Writing sets**: HSK 3.0 Level 1 (`WRITING_SETS`, `hsk1-*`), HSK 2.0 Levels 1-6 (`WRITING_SETS_HSK2` through `WRITING_SETS_HSK6`). HSK 6 has 25 sets (6 with data, 19 "coming soon" placeholders with empty `words[]` and `chars: ''`).
+- **Coming soon sets**: Rendered as non-clickable `<div>` cards (not `<Link>`) with 🔒 icon, "Tez kunda"/"Скоро"/"Coming soon" subtitle, dimmed opacity (0.55), no star ratings
+- **Back button routing** (`WritingPracticePage.tsx`): Each HSK level routes back to the correct writing tab with version/level params. HSK 3.0 sets → `?tab=writing&version=3.0`, HSK 2.0 sets → `?tab=writing&version=2.0&hsk={level}`
+- **Flashcard back buttons**: HSK 2/3 flashcard pages pass `backHref="/chinese?tab=flashcards&flashhsk={level}"`. LanguagePage reads `flashhsk` URL param to restore correct HSK pill on return.
+
+## Coach Marks & Tours
+- **Component**: `src/components/CoachMark.tsx` — tooltip-based onboarding hints
+- **Single tip**: `CoachMark` — positions tooltip near a target element, shown once (localStorage `blim-tips-seen`)
+- **Multi-step**: `CoachMarkTour` — sequential steps with "Next" / counter / "Got it" on last step
+- **Positioning**: Auto above/below target based on viewport space, arrow follows target center
+- **Dismissal**: "Tushundim"/"Понятно"/"Got it" button or "Don't show again" skip link. Persisted in localStorage.
+- **Used in**: `DialogueReader.tsx` for first-time user onboarding tour
+- **CSS classes**: `.coach-backdrop`, `.coach-tooltip`, `.coach-tooltip__arrow`, `.coach-tooltip__btn`
+
+## Analytics
+- **Utility**: `src/utils/analytics.ts` — `trackAll(meta, yandex, ga, params)` fires events to all 3 platforms
+- **Platforms**: Meta Pixel (`fbq`), Yandex Metrica (ID: `107194604`), Google Analytics 4 (`gtag`)
+- **Page trackers**: `YandexPageView.tsx` (Yandex), `MetaPageView.tsx` (Meta Pixel) — mounted in root layout
+- **Safe**: All calls check `typeof window !== 'undefined'` and SDK existence before firing
+
+## JWT Utilities
+- **File**: `src/lib/jwt.ts` — local JWT decoding without remote API calls
+- **`getUserIdFromJWT(token)`**: Decodes Supabase JWT payload locally (~0ms vs ~1-2s for `admin.auth.getUser`). Returns `sub` (user_id). Checks expiration by default, optional `skipExpiration` flag.
+- **`getUserFromJWT(token)`**: Returns `{ id, email, user_metadata }` from JWT payload
+- **Used by**: `/api/stars`, `/api/subscription`, `/api/auth/session-check`, `/api/progress` — all low-risk read endpoints where local decode is sufficient
 
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.

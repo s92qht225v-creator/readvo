@@ -10616,6 +10616,14 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
   transform: translateY(-1px);
 }
+.lp__writing-card--soon {
+  opacity: 0.55;
+  cursor: default;
+}
+.lp__writing-card--soon:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transform: none;
+}
 
 .lp__writing-card__num {
   flex-shrink: 0;

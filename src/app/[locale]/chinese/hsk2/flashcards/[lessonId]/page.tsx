@@ -93,6 +93,7 @@ export default async function Hsk2FlashcardsPage({ params }: Props) {
           })),
         }}
         bookPath="/chinese/hsk2"
+        backHref="/chinese?tab=flashcards&flashhsk=2"
       />
     </>
   );
