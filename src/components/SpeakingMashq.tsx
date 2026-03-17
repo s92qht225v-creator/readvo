@@ -376,10 +376,12 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
           <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a2e', lineHeight: 1.4 }}>{q.uz}</div>
         </div>
 
-        {/* Hear example */}
-        <button onClick={() => speak(q.zh)} style={{ width: '100%', padding: '10px 0', background: '#f5f5f8', border: '1px solid #e0e0e6', borderRadius: 8, fontSize: 13, color: '#555', cursor: 'pointer', fontFamily: 'inherit', marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-          <span>▶</span> {L(UI.listenEx)}
-        </button>
+        {/* Hear example — only before answer is revealed */}
+        {(phase === 'idle' || phase === 'recording' || phase === 'processing' || phase === 'result_no_speech') && (
+          <button onClick={() => speak(q.zh)} style={{ width: '100%', padding: '10px 0', background: '#f5f5f8', border: '1px solid #e0e0e6', borderRadius: 8, fontSize: 13, color: '#555', cursor: 'pointer', fontFamily: 'inherit', marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+            <span>▶</span> {L(UI.listenEx)}
+          </button>
+        )}
 
         {/* idle */}
         {phase === 'idle' && (

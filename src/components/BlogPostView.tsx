@@ -6,26 +6,81 @@ import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import type { BlogPost } from '../services/blog';
 
+function renderInline(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
+
 function renderBody(text: string) {
   const paragraphs = text.split('\n\n');
   return paragraphs.map((para, i) => {
     const lines = para.split('\n');
+
+    // Table: all lines start with |
+    const isTable = lines.length > 1 && lines.every((l) => l.trimStart().startsWith('|'));
+    if (isTable) {
+      const dataRows = lines.filter((l) => !l.match(/^\s*\|[-\s:|]+\|\s*$/));
+      if (dataRows.length === 0) return null;
+      const headerCells = dataRows[0].split('|').map((c) => c.trim()).filter(Boolean);
+      const bodyRows = dataRows.slice(1);
+      return (
+        <div key={i} className="blog__table-wrap">
+          <table className="blog__table">
+            <thead>
+              <tr>{headerCells.map((c, j) => <th key={j}>{renderInline(c)}</th>)}</tr>
+            </thead>
+            <tbody>
+              {bodyRows.map((row, j) => {
+                const cells = row.split('|').map((c) => c.trim()).filter(Boolean);
+                return <tr key={j}>{cells.map((c, k) => <td key={k}>{renderInline(c)}</td>)}</tr>;
+              })}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    // Blockquote: all lines start with >
+    const isBlockquote = lines.every((l) => l.startsWith('> '));
+    if (isBlockquote) {
+      return (
+        <blockquote key={i} className="blog__blockquote">
+          {lines.map((l, j) => (
+            <React.Fragment key={j}>
+              {j > 0 && <br />}
+              {renderInline(l.slice(2))}
+            </React.Fragment>
+          ))}
+        </blockquote>
+      );
+    }
+
+    // List: all lines start with *
     const isList = lines.every((l) => l.startsWith('* '));
     if (isList) {
       return (
         <ul key={i} className="blog__list-ul">
           {lines.map((l, j) => (
-            <li key={j}>{l.slice(2)}</li>
+            <li key={j}>{renderInline(l.slice(2))}</li>
           ))}
         </ul>
       );
     }
+
     return (
       <p key={i} className="blog__section-body">
         {lines.map((line, j) => (
           <React.Fragment key={j}>
             {j > 0 && <br />}
-            {line}
+            {renderInline(line)}
           </React.Fragment>
         ))}
       </p>
@@ -69,10 +124,10 @@ export function BlogPostView({ post }: Props) {
           {formatDate(post.date)}
         </p>
       </div>
-      {post.heroImage && (
+      {(post.heroImage || post.heroImage_ru || post.heroImage_en) && (
         <div className="blog__hero-image">
           <Image
-            src={(language === 'ru' ? post.heroImage_ru : language === 'en' ? post.heroImage_en : undefined) || post.heroImage}
+            src={((language === 'ru' ? (post.heroImage_ru || post.heroImage) : language === 'en' ? (post.heroImage_en || post.heroImage) : post.heroImage) || post.heroImage_ru || post.heroImage_en)!}
             alt={title}
             width={800}
             height={450}

@@ -56,7 +56,7 @@ function shuffle<T>(arr: T[]): T[] {
 const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
 
 function getWritingAudioUrl(char: string, pinyin: string): string {
-  const stripped = pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
+  const stripped = pinyin.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
   const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
   return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
 }
@@ -336,19 +336,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
           </div>
 
           <div style={{ display: 'flex', gap: 8 }}>
-            <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
-              {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
-            </button>
-            <button
-              ref={showBtnRef}
-              className={`hanzi-practice__action-btn${showAnswer % 2 === 1 ? ' hanzi-practice__action-btn--active' : ''}`}
-              type="button"
-              onClick={() => keepScroll(handleShow)}
-            >
-              {showAnswer % 2 === 1
-                ? ({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]
-                : ({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
-            </button>
             <button
               ref={hideBtnRef}
               className={`hanzi-practice__action-btn${hiddenMode ? ' hanzi-practice__action-btn--active' : ''}`}
@@ -360,6 +347,19 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               })}
             >
               {({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]}
+            </button>
+            <button
+              ref={showBtnRef}
+              className={`hanzi-practice__action-btn${showAnswer % 2 === 1 ? ' hanzi-practice__action-btn--active' : ''}`}
+              type="button"
+              onClick={() => keepScroll(handleShow)}
+            >
+              {showAnswer % 2 === 1
+                ? ({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]
+                : ({ uz: 'Ko\'rsatish', ru: 'Показать', en: 'Show' } as Record<string, string>)[lang]}
+            </button>
+            <button ref={eraseBtnRef} className="hanzi-practice__action-btn" type="button" onClick={() => keepScroll(handleErase)}>
+              {({ uz: 'O\'chirish', ru: 'Стереть', en: 'Erase' } as Record<string, string>)[lang]}
             </button>
           </div>
 

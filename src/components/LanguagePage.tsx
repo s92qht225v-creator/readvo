@@ -275,6 +275,10 @@ interface FlashcardLesson {
   wordCount: number;
   title?: string;
   title_ru?: string;
+  sampleChar?: string;
+  sampleUz?: string;
+  sampleRu?: string;
+  sampleEn?: string;
 }
 
 interface WritingSetMeta {
@@ -284,6 +288,11 @@ interface WritingSetMeta {
   subtitle: string;
   subtitle_ru: string;
   chars: string;
+  wordCount?: number;
+  sampleChar?: string;
+  sampleUz?: string;
+  sampleRu?: string;
+  sampleEn?: string;
 }
 
 interface Props {
@@ -330,6 +339,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
   const initialSubTab = searchParams.get('subtab');
   const [flashcardSubTab, setFlashcardSubTab] = useState<'lessons' | 'topics'>(initialSubTab === 'topics' ? 'topics' : 'lessons');
+  const [flashcardHskLevel, setFlashcardHskLevel] = useState<'1' | '2' | '3'>('1');
 
   // HSK dropdown
   const [hskDropdownOpen, setHskDropdownOpen] = useState(false);
@@ -479,9 +489,9 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         <div className={`lp__seg-bar${activeTab === 'flashcards' ? ' lp__seg-bar--col' : ''}`}>
           <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues' || activeTab === 'grammar' || activeTab === 'flashcards') ? ' lp__hsk-pills--grid' : ''}`}>
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
-              const hasContent = lv === 'HSK 1' || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
+              const hasContent = lv === 'HSK 1' || (activeTab === 'flashcards' && flashcardSubTab === 'lessons' && (lv === 'HSK 2' || lv === 'HSK 3')) || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
               const isActive = activeTab === 'flashcards'
-                ? (flashcardSubTab === 'lessons' && lv === 'HSK 1')
+                ? (flashcardSubTab === 'lessons' && ((lv === 'HSK 1' && flashcardHskLevel === '1') || (lv === 'HSK 2' && flashcardHskLevel === '2') || (lv === 'HSK 3' && flashcardHskLevel === '3')))
                 : activeTab === 'writing' && hskVersion === '2.0'
                   ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3') || (lv === 'HSK 4' && writingHskLevel === '4') || (lv === 'HSK 5' && writingHskLevel === '5') || (lv === 'HSK 6' && writingHskLevel === '6')
                   : hasContent;
@@ -492,7 +502,10 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                   disabled={!hasContent}
                   onClick={() => {
                     if (hasContent) {
-                      if (activeTab === 'flashcards') setFlashcardSubTab('lessons');
+                      if (activeTab === 'flashcards') {
+                        setFlashcardSubTab('lessons');
+                        setFlashcardHskLevel(lv === 'HSK 3' ? '3' : lv === 'HSK 2' ? '2' : '1');
+                      }
                       if (activeTab === 'writing' && hskVersion === '2.0') {
                         setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1');
                       }
@@ -677,19 +690,44 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         {activeTab === 'flashcards' && (
           <>
             {/* Sub-tab pills: Darslar / Mavzular */}
-            {flashcardSubTab === 'lessons' && (
-              <>
-                <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
-                <FlashcardUnitSelector
-                  lessons={flashcardLessons}
-                  onStart={(selectedIds) => {
-                    localStorage.setItem(FLASHCARD_MIX_KEY, JSON.stringify(selectedIds));
-                    router.push('/chinese/hsk1/flashcards/mix');
-                  }}
-                  onSingle={(lessonNumber) => router.push(`/chinese/hsk1/flashcards/${lessonNumber}`)}
-                />
-              </>
-            )}
+            {flashcardSubTab === 'lessons' && (() => {
+              const activeFlashSets = flashcardHskLevel === '3' ? writingSetsHsk3 : flashcardHskLevel === '2' ? writingSetsHsk2L2 : writingSets;
+              const hskPath = flashcardHskLevel === '3' ? 'hsk3' : flashcardHskLevel === '2' ? 'hsk2' : 'hsk1';
+              return (
+                <>
+                  <FlashcardModeBar flashcardMode={flashcardMode} setFlashcardMode={setFlashcardMode} />
+                  <div className="lp__writing-sets">
+                    {activeFlashSets.map((set, idx) => {
+                      const sampleTrans = language === 'ru' ? (set.sampleRu || set.sampleUz) : language === 'en' ? (set.sampleEn || set.sampleUz) : (set.sampleUz || '');
+                      const ghost = flashcardMode === 'uz-zh'
+                        ? `${sampleTrans} – ${set.sampleChar || ''}`
+                        : `${set.sampleChar || ''} – ${sampleTrans}`;
+                      const num = idx + 1;
+                      return (
+                        <Link
+                          key={set.id}
+                          className="lp__writing-card"
+                          href={`/chinese/${hskPath}/flashcards/${set.id}`}
+                          prefetch={false}
+                        >
+                          <div className="lp__writing-card-deco" aria-hidden="true">{ghost}</div>
+                          <div className="lp__writing-card__num">{num}</div>
+                          <div className="lp__writing-card__body">
+                            <div className="lp__writing-card__title">
+                              {({ uz: `${num}-to'plam`, ru: `Набор ${num}`, en: `Set ${num}` } as Record<string, string>)[language]}
+                            </div>
+                            <div className="lp__writing-card__sub">
+                              {set.wordCount || 10} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}
+                            </div>
+                          </div>
+                          <div className="lp__card-arrow">›</div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </>
+              );
+            })()}
 
             {flashcardSubTab === 'topics' && (() => {
               const tq = topicSearch.trim().toLowerCase();
@@ -816,7 +854,6 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                   <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} className="grammar-card">
                     <span className="grammar-card__bg">{item.char}</span>
                     <div className="grammar-card__top">
-                      <div className="grammar-card__icon" style={{ background: item.color }}>{idx + 1}</div>
                       <p className="grammar-card__title">{item.char} {item.pinyin}</p>
                       {!item.active && <span className="grammar-card__badge">{({ uz: 'Tez kunda', ru: 'Скоро', en: 'Soon' } as Record<string, string>)[language]}</span>}
                     </div>
@@ -825,7 +862,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       const slug = item.href.split('/').pop()!;
                       const stars = getGrammarStars(slug);
                       return (
-                        <div style={{ display: 'flex', gap: 3, marginTop: 5, marginLeft: 56 }}>
+                        <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
                           {[1, 2, 3].map(n => (
                             <span key={n} style={{ fontSize: 28, color: stars != null && n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>
                               ★

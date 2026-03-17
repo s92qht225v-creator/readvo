@@ -6027,7 +6027,7 @@ body {
 .grammar-card__translation {
   font-size: 0.88rem;
   color: #888;
-  margin: 0 0 0 56px;
+  margin: 0;
 }
 
 /* ── Grammar page ─────────────────────────────── */
@@ -10915,6 +10915,47 @@ body {
 .blog__list-ul {
   margin: 0 0 8px;
   padding-left: 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.blog__table-wrap {
+  overflow-x: auto;
+  margin: 0 0 8px;
+}
+
+.blog__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.blog__table th,
+.blog__table td {
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+
+.blog__table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.blog__table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.blog__blockquote {
+  margin: 0 0 8px;
+  padding: 12px 20px;
+  border-left: 4px solid #dc2626;
+  background: #fef2f2;
+  border-radius: 0 6px 6px 0;
   font-size: 1rem;
   line-height: 1.7;
   color: #374151;

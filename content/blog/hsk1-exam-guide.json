@@ -1,0 +1,58 @@
+{
+  "slug": "hsk1-exam-guide",
+  "title": "HSK 1 imtihon qo'llanmasi (2026)",
+  "title_ru": "Руководство по экзамену HSK 1 (2026)",
+  "title_en": "HSK 1 Exam Guide (2026)",
+  "description": "HSK 1 imtihon tuzilishi, savol turlari, lug'at talablari va tayyorgarlik bo'yicha to'liq qo'llanma.",
+  "description_ru": "Полное руководство по структуре экзамена HSK 1: типы вопросов, требования к словарному запасу и подготовка.",
+  "description_en": "Complete guide to the HSK 1 exam: structure, question types, vocabulary requirements and how to prepare.",
+  "date": "2026-03-17",
+  "heroImage": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-uzbek.jpg",
+  "heroImage_ru": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-russian.jpg",
+  "heroImage_en": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-english.jpg",
+  "intro": "Agar siz xitoy tilini o'rganishni boshlayotgan bo'lsangiz, **HSK 1** haqida eshitgan bo'lsangiz kerak.\nBu butun dunyoda qo'llaniladigan rasmiy xitoy tili bilish darajasi imtihonining birinchi bosqichi.\n\nBu qo'llanmada siz o'rganasiz:\n\n* HSK 1 nima\n* Imtihon tuzilishi\n* Savol turlari\n* Lug'at talablari\n* Qanday tayyorlanish kerak",
+  "intro_ru": "Если вы начинаете изучать китайский язык, вы наверняка слышали про **HSK 1**.\nЭто первый уровень официального экзамена на знание китайского языка, который используется во всём мире.\n\nВ этом руководстве вы узнаете:\n\n* Что такое HSK 1\n* Структуру экзамена\n* Типы вопросов\n* Требования к словарному запасу\n* Как подготовиться",
+  "intro_en": "If you are starting to learn Chinese, you have probably heard about **HSK 1**.\nIt is the first level of the official Chinese proficiency test used worldwide.\n\nIn this guide you will learn:\n\n* What HSK 1 is\n* The exam structure\n* Question types\n* Vocabulary requirements\n* How to prepare",
+  "sections": [
+    {
+      "heading": "HSK nima?",
+      "heading_ru": "Что такое HSK?",
+      "heading_en": "What is HSK?",
+      "body": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** — xitoy tilini ona tili bo'lmagan insonlar uchun rasmiy bilim darajasi imtihoni.\n\nHSK 1 — **boshlang'ich daraja**. U quyidagilarni tekshiradi:\n\n* Oddiy xitoycha so'zlarni tushunish\n* Sodda ierogliflarni tanish\n* Qisqa kundalik gaplarni tushunish",
+      "body_ru": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** — официальный экзамен на уровень владения китайским языком для неносителей.\n\nHSK 1 — это **начальный уровень**. Он проверяет, можете ли вы:\n\n* Понимать базовые китайские слова\n* Распознавать простые иероглифы\n* Понимать короткие повседневные предложения",
+      "body_en": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** is the official Chinese language proficiency test for non-native speakers.\n\nHSK 1 is the **beginner level**. It checks if you can:\n\n* Understand basic Chinese words\n* Recognize simple characters\n* Understand short everyday sentences"
+    },
+    {
+      "heading": "HSK 1 imtihon umumiy ko'rinishi",
+      "heading_ru": "Обзор экзамена HSK 1",
+      "heading_en": "HSK 1 Exam Overview",
+      "body": "| Kategoriya | Tafsilotlar |\n|---|---|\n| Daraja | Boshlang'ich |\n| Lug'at | ~150 ta so'z |\n| Bo'limlar | Tinglash, O'qish |\n| Jami savollar | 40 |\n| Jami ball | 200 |\n| O'tish bali | 120 |\n| Davomiylik | ~35–40 daqiqa |",
+      "body_ru": "| Категория | Детали |\n|---|---|\n| Уровень | Начальный |\n| Словарный запас | ~150 слов |\n| Разделы | Аудирование, Чтение |\n| Всего вопросов | 40 |\n| Максимальный балл | 200 |\n| Проходной балл | 120 |\n| Длительность | ~35–40 минут |",
+      "body_en": "| Category | Details |\n|---|---|\n| Level | Beginner |\n| Vocabulary | ~150 words |\n| Sections | Listening, Reading |\n| Total Questions | 40 |\n| Total Score | 200 |\n| Passing Score | 120 |\n| Duration | ~35–40 minutes |"
+    },
+    {
+      "heading": "HSK 1 imtihon tuzilishi",
+      "heading_ru": "Структура экзамена HSK 1",
+      "heading_en": "HSK 1 Exam Structure",
+      "body": "| Bo'lim | Savollar | Vaqt |\n|---|---|---|\n| Tinglash | 20 | ~15 daqiqa |\n| O'qish | 20 | ~17 daqiqa |\n| Jami | 40 | ~35 daqiqa |\n\nHSK 1 da **yozma bo'lim yo'q**.",
+      "body_ru": "| Раздел | Вопросов | Время |\n|---|---|---|\n| Аудирование | 20 | ~15 минут |\n| Чтение | 20 | ~17 минут |\n| Итого | 40 | ~35 минут |\n\nВ HSK 1 **нет письменной части**.",
+      "body_en": "| Section | Questions | Time |\n|---|---|---|\n| Listening | 20 | ~15 minutes |\n| Reading | 20 | ~17 minutes |\n| Total | 40 | ~35 minutes |\n\nThere is **no writing section** in HSK 1."
+    },
+    {
+      "heading": "Tinglash bo'limi",
+      "heading_ru": "Раздел аудирования",
+      "heading_en": "Listening Section",
+      "body": "Tinglash bo'limida siz qisqa gaplar yoki dialoglarni eshitasiz va to'g'ri javobni tanlaysiz.\n\n| Qism | Vazifa | Savollar |\n|---|---|---|\n| 1-qism | Rasmlar bilan to'g'ri/noto'g'ri | 5 |\n| 2-qism | To'g'ri rasmni tanlang | 5 |\n| 3-qism | Qisqa dialoglar | 5 |\n| 4-qism | Ko'p tanlov | 5 |\n\nTinglash uchun misol gap:\n\n> 他喝水\n> *U suv ichadi.*",
+      "body_ru": "В разделе аудирования вы слушаете короткие предложения или диалоги и выбираете правильный ответ.\n\n| Часть | Задание | Вопросов |\n|---|---|---|\n| Часть 1 | Верно/неверно с картинками | 5 |\n| Часть 2 | Выберите правильную картинку | 5 |\n| Часть 3 | Короткие диалоги | 5 |\n| Часть 4 | Множественный выбор | 5 |\n\nПример предложения для аудирования:\n\n> 他喝水\n> *Он пьёт воду.*",
+      "body_en": "In the listening section you hear short sentences or dialogues and choose the correct answer.\n\n| Part | Task | Questions |\n|---|---|---|\n| Part 1 | True / False with pictures | 5 |\n| Part 2 | Choose correct picture | 5 |\n| Part 3 | Short dialogues | 5 |\n| Part 4 | Multiple choice | 5 |\n\nExample listening sentence:\n\n> 他喝水\n> *He drinks water.*"
+    },
+    {
+      "heading": "O'qish bo'limi",
+      "heading_ru": "Раздел чтения",
+      "heading_en": "Reading Section",
+      "body": "O'qish bo'limi oddiy ierogliflar va gaplarni tushunish qobiliyatingizni tekshiradi.\n\n| Qism | Vazifa | Savollar |\n|---|---|---|\n| 1-qism | Rasmni so'z bilan moslashtiring | 5 |\n| 2-qism | Savol va javobni moslashtiring | 5 |\n| 3-qism | Gaplarni moslashtiring | 5 |\n| 4-qism | Bo'sh joyni to'ldiring | 5 |",
+      "body_ru": "Раздел чтения проверяет вашу способность распознавать простые иероглифы и предложения.\n\n| Часть | Задание | Вопросов |\n|---|---|---|\n| Часть 1 | Соотнесите картинку со словом | 5 |\n| Часть 2 | Соотнесите вопрос и ответ | 5 |\n| Часть 3 | Соотнесите предложения | 5 |\n| Часть 4 | Заполните пропуски | 5 |",
+      "body_en": "The reading section tests your ability to recognize simple characters and sentences.\n\n| Part | Task | Questions |\n|---|---|---|\n| Part 1 | Match picture with word | 5 |\n| Part 2 | Match question and answer | 5 |\n| Part 3 | Sentence matching | 5 |\n| Part 4 | Fill in the blank | 5 |"
+    }
+  ]
+}

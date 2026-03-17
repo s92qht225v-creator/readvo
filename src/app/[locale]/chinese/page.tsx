@@ -80,12 +80,18 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
         .sort((a, b) => (a as number) - (b as number))
         .map((lessonNum) => {
           const info = lessonInfos.find((l) => l.lessonNumber === lessonNum);
+          const wordsInLesson = deck.words.filter((w) => w.lesson === lessonNum);
+          const sample = wordsInLesson[0];
           return {
             lessonId: String(lessonNum),
             lessonNumber: lessonNum as number,
-            wordCount: deck.words.filter((w) => w.lesson === lessonNum).length,
+            wordCount: wordsInLesson.length,
             title: info?.title,
             title_ru: info?.titleTranslation_ru,
+            sampleChar: sample?.text_original,
+            sampleUz: sample?.text_translation,
+            sampleRu: sample?.text_translation_ru,
+            sampleEn: sample?.text_translation_en,
           };
         })
     : [];
@@ -113,10 +119,22 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
         <LanguagePage
           dialogues={dialogues}
           flashcardLessons={flashcardLessons}
-          writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+          writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
+            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
+            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+          })}
           writingSetsHsk2={WRITING_SETS_HSK2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
-          writingSetsHsk2L2={WRITING_SETS_HSK2_L2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
-          writingSetsHsk3={WRITING_SETS_HSK3.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+          writingSetsHsk2L2={WRITING_SETS_HSK2_L2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
+            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
+            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+          })}
+          writingSetsHsk3={WRITING_SETS_HSK3.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
+            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
+            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+          })}
           writingSetsHsk4={WRITING_SETS_HSK4.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
           writingSetsHsk5={WRITING_SETS_HSK5.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
           writingSetsHsk6={WRITING_SETS_HSK6.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}

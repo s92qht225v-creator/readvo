@@ -69,6 +69,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entries.push(...localeEntries(`/chinese/hsk1/flashcards/${lesson}`, { changeFrequency: 'monthly', priority: 0.5 }));
   }
 
+  // HSK 1 flashcard set pages
+  for (const set of WRITING_SETS) {
+    entries.push(...localeEntries(`/chinese/hsk1/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
+  }
+
+  // HSK 2 flashcard set pages
+  for (const set of WRITING_SETS_HSK2_L2) {
+    entries.push(...localeEntries(`/chinese/hsk2/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
+  }
+
+  // HSK 3 flashcard set pages
+  for (const set of WRITING_SETS_HSK3) {
+    entries.push(...localeEntries(`/chinese/hsk3/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
+  }
+
   // Topic flashcard pages
   const topicsDir = path.join(process.cwd(), 'content', 'flashcards', 'topics');
   try {
