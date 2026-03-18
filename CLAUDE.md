@@ -558,6 +558,16 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **`getUserFromJWT(token)`**: Returns `{ id, email, user_metadata }` from JWT payload
 - **Used by**: `/api/stars`, `/api/subscription`, `/api/auth/session-check`, `/api/progress` — all low-risk read endpoints where local decode is sufficient
 
+## Caching & ISR
+- **ISR (Incremental Static Regeneration)**: Top 4 pages use `revalidate = 3600` (1 hour) to reduce Vercel function invocations:
+  - `/{locale}` (homepage) — 255 invocations/day before ISR
+  - `/{locale}/chinese` (language page) — 151 invocations/day
+  - `/{locale}/blog` (blog list) — 93 invocations/day
+  - `/{locale}/blog/[slug]` (blog posts) — 68 invocations/day
+- **How it works**: First visitor per hour per locale triggers one server render; everyone else gets cached HTML with zero function invocations
+- **Dynamic pages** (no ISR): Payment page remains dynamic (`/{locale}/payment`) — checks subscription status per user
+- **Content pages**: Lesson, dialogue, flashcard, karaoke, writing, grammar pages use `generateStaticParams` for build-time generation
+
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.
 - **Payment upload validation** (`/api/payment`): File extension allowlist (`jpg, jpeg, png, webp, heic`), MIME type check, 10MB size limit. Validated server-side before Supabase upload.
