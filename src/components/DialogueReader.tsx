@@ -13,6 +13,9 @@ import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
 import type { TourStep } from './CoachMark';
+import { DialogueRolePlay } from './DialogueRolePlay';
+import type { DialogueLine } from './DialogueRolePlay';
+import { useStars } from '../hooks/useStars';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -123,12 +126,14 @@ const TABS = [
   { id: 'dialog', uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' },
   { id: 'vocab', uz: 'So\'zlar', ru: 'Слова', en: 'Words' },
   { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' },
+  { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
 export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderProps) {
   const { isLoading: authLoading } = useRequireAuth();
   const trial = useTrial();
   const [language] = useLanguage();
+  const { saveStars: saveDialogueStars } = useStars('dialogue');
 
   // Font size
   const [fontSize, setFontSize] = useState(100);
@@ -268,6 +273,20 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [dialogue.vocab, allSentences]);
 
   const grammarNotes = dialogue.grammarNotes ?? [];
+
+  // Extract DialogueLine[] for role-play practice
+  const rolePlayLines: DialogueLine[] = useMemo(() =>
+    allSentences
+      .filter(s => s.speaker === 'A' || s.speaker === 'B')
+      .map(s => ({
+        speaker: s.speaker as 'A' | 'B',
+        zh: s.text_original,
+        pinyin: s.pinyin,
+        uz: language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation,
+        audio_url: s.audio_url,
+      })),
+    [allSentences, language]
+  );
 
   if (authLoading) return <div className="loading-spinner" />;
   const showPaywall = trial?.isTrialExpired;
@@ -568,6 +587,25 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
           </div>
         )}
 
+        {/* ── PRACTICE TAB ── */}
+        {activeTab === 'practice' && (
+          <div className="dr-panel">
+            {rolePlayLines.length >= 2 ? (
+              <DialogueRolePlay
+                lines={rolePlayLines}
+                dialogueId={dialogue.id}
+                accentColor="#dc2626"
+                language={language}
+                onComplete={(stars) => saveDialogueStars(dialogue.id, stars)}
+              />
+            ) : (
+              <div className="dr-empty">
+                <div className="dr-empty__icon">🚧</div>
+                <div>{({ uz: 'Tez kunda', ru: 'Скоро будет', en: 'Coming soon' } as Record<string, string>)[language]}</div>
+              </div>
+            )}
+          </div>
+        )}
 
       </div>
       <CoachMarkTour

@@ -146,10 +146,11 @@ Example routes:
 │   │   ├── WordChoiceExercise.tsx     # Word choice / circle correct word (English exercises)
 │   │   ├── TextErrorExercise.tsx      # Text error / find & correct errors in passage (English exercises)
 │   │   ├── SpeakingMashq.tsx         # Speaking practice with AI grading (Groq + OpenAI)
+│   │   ├── DialogueRolePlay.tsx     # Dialogue role-play speaking quiz (2 rounds, A/B roles)
 │   │   ├── WritingTest.tsx           # Writing test with HanziCanvas + star scoring
 │   │   ├── CoachMark.tsx             # Tooltip coach marks + multi-step tours
 │   │   ├── RubyText.tsx              # Shared ruby pinyin component (<ruby>/<rt>)
-│   │   ├── DialogueReader.tsx        # Dialogue reader (vocab/grammar tabs, coach tour)
+│   │   ├── DialogueReader.tsx        # Dialogue reader (dialog/vocab/grammar/practice tabs, coach tour)
 │   │   ├── DialoguesPage.tsx         # Dialogues list page (HSK level tabs)
 │   │   ├── FlashcardListPage.tsx     # Flashcard lesson list with banner+tabs
 │   │   ├── FlashcardCard.tsx         # Flashcard with 3D flip animation
@@ -177,7 +178,10 @@ Example routes:
 │   │   ├── supabase.ts        # Supabase helpers (getImageUrl, uploadImage)
 │   │   ├── supabase-client.ts # Browser client (anon key, respects RLS)
 │   │   ├── supabase-server.ts # Server client (service role, bypasses RLS)
-│   │   └── jwt.ts             # Local JWT decode (getUserIdFromJWT, getUserFromJWT)
+│   │   ├── jwt.ts             # Local JWT decode (getUserIdFromJWT, getUserFromJWT)
+│   │   └── transcribe/          # Speech transcription & scoring
+│   │       ├── whisper.ts     # Groq + OpenAI Whisper fallback (3s timeout)
+│   │       └── scorer.ts      # Levenshtein + GPT-4o mini judge
 │   ├── utils/                    # Utility functions
 │   │   ├── rubyText.ts        # Pinyin-to-character alignment for ruby annotations
 │   │   ├── jsonLd.ts          # JSON-LD structured data helpers (breadcrumb, grammar term, etc.)
@@ -415,22 +419,54 @@ Only one device can be logged in at a time. New login kicks previous session.
 ## Speaking Practice (Speaking Mashq)
 - **Component**: `src/components/SpeakingMashq.tsx` — AI-powered speaking quiz embedded in grammar pages
 - **API route**: `POST /api/transcribe` — accepts audio blob + expected Chinese text, returns grading result
-- **AI pipeline**:
-  1. **Groq Whisper** (`whisper-large-v3`) transcribes user's speech to Chinese text
-  2. **Heuristic stage**: Levenshtein distance on normalized Chinese characters for quick correct/wrong decisions
-  3. **Critical character check**: Pronoun/negation/demonstrative swaps (我↔你, 不↔没, 这↔那) always → `wrong`
-  4. **OpenAI** (`gpt-4o-mini`) judges borderline cases only — minimizes AI API costs
+- **Architecture** (modular, 3 files):
+  - `src/lib/transcribe/whisper.ts` — Groq (primary, 3s timeout) + OpenAI (fallback) transcription
+  - `src/lib/transcribe/scorer.ts` — Levenshtein distance + GPT-4o mini judge for borderline cases
+  - `src/app/api/transcribe/route.ts` — route handler with JWT auth + daily usage limit
+- **Transcription pipeline** (`whisper.ts`):
+  1. **Groq** (`whisper-large-v3-turbo`, 3s AbortController timeout) — primary, fast
+  2. **OpenAI** (`whisper-1`, no timeout) — fallback on Groq 429/500+/timeout
+  3. Audio buffered as `ArrayBuffer` first, FormData rebuilt for each provider (never reused)
+- **Scoring pipeline** (`scorer.ts`):
+  - Normalize: trim, lowercase, remove Chinese punctuation + spaces
+  - Short (≤4 chars): exact → correct, else → GPT judge
+  - Normal (5–8 chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
+  - Long (9+ chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
+  - GPT-4o mini judge: temperature 0, max 80 tokens, returns `{ result, feedback }`. Falls back to Levenshtein on failure.
+- **Daily usage limit**: 100 requests/user/day. Table `transcription_usage` (user_id, date, count, PK (user_id, date)). Checked before transcription, incremented after success via upsert.
+- **Auth**: JWT Bearer token required. Client sends via `getAccessToken()` from `useAuth()`.
 - **Grading results**: `correct` | `close` (minor Whisper noise) | `wrong` | `no_speech` (silence detected)
+- **Error responses**: 401 (no auth), 429 `limit_reached`, 503 `transcription_failed`
 - **Flow**: User sees translation prompt → speaks Chinese → audio recorded (max 6s) → transcribed → graded → feedback shown
 - **Two attempts**: First wrong → retry with hint. Second wrong → shadowing mode (listen + repeat). No-speech doesn't count as attempt.
 - **Shadowing mode**: Plays correct audio, user repeats. Tracked via `shadowingUsedRef` (affects star rating).
 - **Audio playback**: Local grammar audio files (`/audio/hsk1/grammar/{text}.mp3`) with Web Speech API TTS fallback
 - **Traditional→Simplified**: `TRAD_TO_SIMP` map normalizes Whisper output (Whisper sometimes returns traditional characters)
-- **Silence detection**: Client-side (blob < 3KB) + server-side (Whisper `no_speech_prob > 0.6`)
+- **Silence detection**: Client-side (blob < 3KB) + server-side (empty text after normalization)
 - **Trilingual UI**: All 40+ UI strings in UZ/RU/EN via inline `Record<Language, string>` pattern
 - **Used in 6 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪)
 - **Question format**: `{ uz: string; zh: string; pinyin: string }` — each grammar page defines its own `speakingQuestionsData` array
 - **Env vars**: `GROQ_API_KEY` (speech recognition), `OPENAI_API_KEY` (answer grading)
+
+### Dialogue Role-Play Quiz
+- **Component**: `src/components/DialogueRolePlay.tsx` — 2-round dialogue speaking quiz with chat-style layout
+- **Props**: `lines: DialogueLine[]`, `dialogueId: string`, `accentColor: string`, `language: Language`, `onComplete: (stars: number) => void`
+- **Data type**: `DialogueLine = { speaker: 'A' | 'B', zh: string, pinyin: string, uz: string, audio_url?: string }`
+- **Integrated in**: `DialogueReader.tsx` as the 4th tab ("Mashq" / "Практика" / "Practice"). Lines extracted from dialogue sentences with `speaker` field.
+- **Test unit splitting**: Long lines (>15 chars per sentence) split on `。？！` into individual `TestUnit`s. Each `TestUnit` tracks `originalIndex` for bubble state mapping.
+- **UI layout**: Full dialogue visible as chat bubbles throughout quiz. A lines left-aligned (light blue bg), B lines right-aligned (white bg). Answered learner lines show ✓/✗ with Chinese text. Future lines show muted Uzbek. Active line highlighted with accent border. Mic area sits below the chat, not inline.
+- **Auto-scroll**: Active bubble scrolls into view via `scrollIntoView({ behavior: 'smooth', block: 'center' })`.
+- **Round logic**:
+  - Round 1: learner = B, app = A. App plays A line audio first → learner speaks B line → API grading
+  - Round 2: learner = A, app = B. Learner speaks A line first → API grading → app plays B response audio
+- **App line audio**: Round 1: plays automatically before learner speaks (app initiates). Round 2: plays after learner answers correctly (app responds). Speak button disabled during playback.
+- **Attempt logic**: First wrong → retry (no answer revealed). Second wrong → reveal answer + shadowing step → advance.
+- **Audio**: Uses dialogue sentence `audio_url` (Supabase) when available, falls back to `/audio/hsk1/grammar/{text}.mp3`, then `speechSynthesis` TTS
+- **Screens**: permission → quiz (round 1) → between (recap + start round 2) → quiz (round 2) → complete (stars + recap)
+- **Star calculation**: 3★ = all correct + no shadowing, 2★ = max 1 wrong + no shadowing, 1★ = at least 1 correct
+- **API**: Reuses existing `POST /api/transcribe` (same auth, daily limit, Groq/OpenAI pipeline)
+- **Supabase table**: `dialogue_progress` (user_id UUID, dialogue_id TEXT, stars INT, completed_at TIMESTAMPTZ) — saves only if new stars > existing
+- **CSS classes**: `.drp`, `.drp__chat`, `.drp__bubble`, `.drp__bubble--a`, `.drp__bubble--b`, `.drp__mic-area`, `.drp__prompt`, `.drp__btn`
 
 ### Star Rating System
 - **Hook**: `src/hooks/useStars.ts` — reads/writes star progress per section type

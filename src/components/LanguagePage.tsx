@@ -312,6 +312,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [language] = useLanguage();
   const { getStars: getGrammarStars } = useStars('grammar');
   const { getStars: getWritingStars } = useStars('writing');
+  const { getStars: getDialogueStars } = useStars('dialogue');
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') as Tab | null;
@@ -598,6 +599,16 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       <h3 className="dialogue-card__title">{d.title}</h3>
                       <p className="dialogue-card__pinyin">{d.pinyin}</p>
                       <p className="dialogue-card__translation">{language === 'ru' ? d.titleTranslation_ru : language === 'en' ? (d.titleTranslation_en || d.titleTranslation) : d.titleTranslation}</p>
+                      {(() => {
+                        const stars = getDialogueStars(d.id) ?? 0;
+                        return (
+                          <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
+                            {[1, 2, 3].map(n => (
+                              <span key={n} style={{ fontSize: 28, color: n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
+                            ))}
+                          </div>
+                        );
+                      })()}
                     </div>
                     <button
                       className={`dialogue-card__bookmark ${bookmarks.has(d.id) ? 'dialogue-card__bookmark--active' : ''}`}

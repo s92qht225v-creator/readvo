@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 
 type Language = 'uz' | 'ru' | 'en';
 type Question = { uz: string; zh: string; pinyin: string };
-type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'result_no_speech' | 'shadowing' | 'api_error';
+type Phase = 'idle' | 'recording' | 'processing' | 'result_correct' | 'result_close' | 'result_wrong_retry' | 'result_wrong_final' | 'result_no_speech' | 'shadowing' | 'api_error' | 'limit_reached';
 type Screen = 'permission' | 'denied' | 'quiz' | 'complete';
 type DeniedReason = 'blocked' | 'noDevice' | 'unsupported';
 export type Score = 'correct' | 'close' | 'wrong';
@@ -46,6 +47,7 @@ const UI = {
   processing:   { uz: 'Tekshirilmoqda…',             ru: 'Обрабатывается…',            en: 'Processing…'              } as T,
   serverError:  { uz: 'Server xatosi',               ru: 'Ошибка сервера',             en: 'Server error'             } as T,
   serverHint:   { uz: 'Ovoz serverga yetib bormadi. Internet aloqasini tekshiring.', ru: 'Аудио не дошло до сервера. Проверьте интернет.', en: "Audio didn't reach the server. Check your connection." } as T,
+  limitReached: { uz: "Bugungi limit tugadi (100 ta). Ertaga davom eting!", ru: 'Дневной лимит исчерпан (100). Продолжите завтра!', en: "Daily limit reached (100). Continue tomorrow!" } as T,
   noSpeech:     { uz: 'Ovoz eshitilmadi. Balandroq gapiring.', ru: 'Голос не распознан. Говорите громче.', en: 'No speech detected. Please speak louder.' } as T,
   lastAttempt:  { uz: '⚠️ Oxirgi urinish',           ru: '⚠️ Последняя попытка',       en: '⚠️ Last attempt'          } as T,
   correct_count:{ uz: "to'g'ri",                     ru: 'правильно',                  en: 'correct'                  } as T,
@@ -105,6 +107,7 @@ interface Props {
 }
 
 export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '#fce7f3', language = 'uz', onComplete, onDone }: Props) {
+  const { getAccessToken } = useAuth();
   const [screen, setScreen]       = useState<Screen>('permission');
   const [qIndex, setQIndex]       = useState(0);
   const [phase, setPhase]         = useState<Phase>('idle');
@@ -219,8 +222,17 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
       formData.append('audio', blob, `answer.${ext}`);
       formData.append('expected', q.zh);
       formData.append('language', language);
-      const res  = await fetch('/api/transcribe', { method: 'POST', body: formData });
+      const token = await getAccessToken();
+      const res  = await fetch('/api/transcribe', {
+        method: 'POST',
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+        body: formData,
+      });
       const data = await res.json() as { text?: string; result?: string; feedback?: string; error?: string };
+      if (data.error === 'limit_reached') {
+        setPhase('limit_reached');
+        return;
+      }
       if (data.error) throw new Error(data.error);
       setHeard(data.text ?? '');
       setFeedback(data.feedback ?? '');
@@ -421,6 +433,15 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <button onClick={() => setPhase('idle')} style={{ width: '100%', padding: '13px 0', background: accentColor, border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
               {L(UI.retry)}
             </button>
+          </div>
+        )}
+
+        {/* daily limit reached */}
+        {phase === 'limit_reached' && (
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ background: '#fef3c7', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', marginBottom: 12 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#92400e', marginBottom: 4 }}>{L(UI.limitReached)}</div>
+            </div>
           </div>
         )}
 

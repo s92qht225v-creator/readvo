@@ -11086,3 +11086,114 @@ body {
 .coach-tooltip__skip:active {
   color: #888;
 }
+
+/* ══════════════════════════════════════════════════════════
+   Dialogue Role-Play (DialogueRolePlay.tsx)
+   ══════════════════════════════════════════════════════════ */
+.drp {
+  padding: 8px 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.drp__progress-wrap {
+  margin-bottom: 14px;
+}
+
+.drp__progress-bar {
+  height: 4px;
+  background: #e0e0e6;
+  border-radius: 4px;
+}
+
+.drp__progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s;
+}
+
+/* Chat area — all dialogue lines visible */
+.drp__chat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  max-height: 40vh;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+/* Bubble base */
+.drp__bubble {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, opacity 0.2s;
+  max-width: 85%;
+}
+
+/* A = app (left) */
+.drp__bubble--a {
+  align-self: flex-start;
+  background: #f0f9ff;
+  margin-right: 36px;
+}
+
+/* B = learner (right) */
+.drp__bubble--b {
+  align-self: flex-end;
+  background: #fff;
+  margin-left: 36px;
+  border: 2px solid #e0e0e6;
+}
+
+.drp__bubble-speaker {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.drp__bubble-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.5;
+}
+
+/* Mic / interaction area */
+.drp__mic-area {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 14px;
+}
+
+.drp__prompt {
+  background: #fef3c7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.drp__btn {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .drp__chat {
+    max-height: 35vh;
+  }
+  .drp__bubble {
+    max-width: 88%;
+  }
+}

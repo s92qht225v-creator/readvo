@@ -1,121 +1,93 @@
-import Groq from 'groq-sdk';
-import OpenAI from 'openai';
+import { NextRequest } from 'next/server';
+import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { getUserIdFromJWT } from '@/lib/jwt';
+import { transcribeAudio } from '@/lib/transcribe/whisper';
+import { scoreAnswer } from '@/lib/transcribe/scorer';
 
-const groq    = new Groq({ apiKey: process.env.GROQ_API_KEY });
-const openai  = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const DAILY_LIMIT = 100;
 
-function normalizeChinese(str: string): string {
-  return str.trim().replace(/[。？！，、""''「」《》\s\d]/g, '').toLowerCase();
-}
+export async function POST(request: NextRequest) {
+  // --- Auth (optional — daily limit only applies to logged-in users) ---
+  const authHeader = request.headers.get('authorization');
+  const token = authHeader?.replace('Bearer ', '');
+  const userId = token ? getUserIdFromJWT(token) : null;
 
-function levenshtein(a: string, b: string): number {
-  const m = a.length, n = b.length;
-  const dp = Array.from({ length: m + 1 }, (_, i) =>
-    Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
-  );
-  for (let i = 1; i <= m; i++)
-    for (let j = 1; j <= n; j++)
-      dp[i][j] = a[i-1] === b[j-1]
-        ? dp[i-1][j-1]
-        : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
-  return dp[m][n];
-}
+  // --- Parse FormData ---
+  const formData = await request.formData();
+  const audio = formData.get('audio');
+  const expected = typeof formData.get('expected') === 'string' ? (formData.get('expected') as string) : '';
+  const language = typeof formData.get('language') === 'string' ? (formData.get('language') as string) : 'uz';
 
-// Characters where substitution always changes meaning — never allow 'close'
-const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也吗呢吧啊')
-
-function hasCriticalSubstitution(expected: string, heard: string): boolean {
-  // Quick check: if any char present in one but not the other is a critical char
-  const expSet  = new Set(expected);
-  const heardSet = new Set(heard);
-  for (const c of expSet)   if (!heardSet.has(c) && CRITICAL_CHARS.has(c)) return true;
-  for (const c of heardSet) if (!expSet.has(c)   && CRITICAL_CHARS.has(c)) return true;
-  return false;
-}
-
-async function aiJudge(expected: string, heard: string, language: string): Promise<{ result: string; feedback: string }> {
-  const langLabel = language === 'ru' ? 'Russian' : language === 'en' ? 'English' : 'Uzbek';
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
-    max_tokens: 80,
-    temperature: 0,
-    messages: [
-      { role: 'system', content: 'You are grading a Chinese language learner\'s spoken answer. Reply with JSON only.' },
-      { role: 'user', content: `Expected: "${expected}"\nLearner said: "${heard}"\nIs the learner's answer correct, close (minor Whisper noise or tone mark only), or wrong?\nRules: any substitution that changes meaning (e.g. 我→你, 不→没, pronoun or negation swap) is WRONG, not close. Only mark 'close' for clear speech-recognition noise where meaning is identical.\nFeedback rules: always name the specific Chinese character that is missing or wrong (e.g. 'missing 吗' not 'missing question mark', 'use 是 not 有' not 'wrong verb').\n{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}` },
-    ],
-  });
-  const text = completion.choices?.[0]?.message?.content ?? '';
-  try {
-    return JSON.parse(text.replace(/```json|```/g, '').trim());
-  } catch {
-    return { result: 'wrong', feedback: '' };
+  if (!audio || !(audio instanceof Blob)) {
+    return Response.json({ error: 'No audio file' }, { status: 400 });
   }
-}
 
-export async function POST(request: Request) {
+  // --- Daily usage limit (only for authenticated users) ---
+  const admin = getSupabaseAdmin();
+  const today = new Date().toISOString().slice(0, 10);
+  let currentCount = 0;
+
+  if (userId) {
+    const { data: usageRow } = await admin
+      .from('transcription_usage')
+      .select('count')
+      .eq('user_id', userId)
+      .eq('date', today)
+      .single();
+
+    currentCount = usageRow?.count ?? 0;
+    if (currentCount >= DAILY_LIMIT) {
+      return Response.json({ error: 'limit_reached' }, { status: 429 });
+    }
+  }
+
+  // --- Buffer audio ---
+  const arrayBuffer = await audio.arrayBuffer();
+  const fileName = (audio as File).name || 'audio.webm';
+  const mimeType = audio.type || 'audio/webm';
+
+  // --- Transcribe ---
+  let transcription;
   try {
-    const formData = await request.formData();
-    const audio    = formData.get('audio');
-    const expected = typeof formData.get('expected') === 'string' ? formData.get('expected') as string : '';
-    const language = typeof formData.get('language') === 'string' ? formData.get('language') as string : 'uz';
-
-    if (!audio || !(audio instanceof Blob)) {
-      return Response.json({ error: 'No audio file' }, { status: 400 });
-    }
-
-    const prompt = expected ? `简体中文。${expected}` : '简体中文';
-    const transcription = await groq.audio.transcriptions.create({
-      file: audio as File,
-      model: 'whisper-large-v3',
-      language: 'zh',
-      response_format: 'verbose_json',
-      prompt,
-    } as Parameters<typeof groq.audio.transcriptions.create>[0]);
-
-    // Detect silence via no_speech_prob (Whisper hallucinates on silent audio)
-    const segments = (transcription as unknown as { segments?: { no_speech_prob?: number }[] }).segments ?? [];
-    const avgNoSpeechProb = segments.length > 0
-      ? segments.reduce((sum, s) => sum + (s.no_speech_prob ?? 0), 0) / segments.length
-      : 1;
-
-    const rawText = ((transcription as unknown as { text: string }).text ?? '').trim().replace(/\d+/g, '').trim();
-
-    // If Whisper says no speech, or normalized text is empty (just punctuation), bail out
-    if (avgNoSpeechProb > 0.6 || normalizeChinese(rawText).length === 0) {
-      return Response.json({ text: '', result: 'no_speech', feedback: '' });
-    }
-
-    const heard = rawText;
-
-    let result: string | null = null;
-    let feedback = '';
-
-    if (expected) {
-      const normExp  = normalizeChinese(expected);
-      const normHeard = normalizeChinese(heard);
-      const dist = levenshtein(normExp, normHeard);
-      const len  = normExp.length;
-
-      if (dist === 0) {
-        result = 'correct';
-      } else if (dist >= 5 || (len <= 6 && dist >= 2)) {
-        // clearly wrong: too many edits, or very short sentence with 2+ edits
-        result = 'wrong';
-      } else if (hasCriticalSubstitution(normExp, normHeard)) {
-        // pronoun / negation / demonstrative swapped — always wrong regardless of AI
-        result = 'wrong';
-        feedback = '';
-      } else {
-        // everything else — ask AI
-        const ai = await aiJudge(expected, heard, language);
-        result   = ai.result;
-        feedback = ai.feedback ?? '';
-      }
-    }
-
-    return Response.json({ text: heard, result, feedback });
+    transcription = await transcribeAudio(arrayBuffer, fileName, mimeType);
   } catch (err) {
-    console.error('Groq Whisper error:', err);
-    return Response.json({ error: 'Transcription failed' }, { status: 500 });
+    console.error('[transcribe] Both providers failed:', err);
+    return Response.json({ error: 'transcription_failed' }, { status: 503 });
   }
+
+  const heard = transcription.text.replace(/\d+/g, '').trim();
+
+  // --- Silence detection ---
+  if (heard.length === 0) {
+    return Response.json({ text: '', result: 'no_speech', feedback: '', source: transcription.source });
+  }
+
+  // --- Score ---
+  let result: 'correct' | 'close' | 'wrong' = 'wrong';
+  let feedback = '';
+
+  if (expected) {
+    const score = await scoreAnswer(expected, heard, language);
+    result = score.result;
+    feedback = score.feedback;
+  }
+
+  // --- Increment usage (only for authenticated users) ---
+  if (userId) {
+    await admin
+      .from('transcription_usage')
+      .upsert(
+        { user_id: userId, date: today, count: currentCount + 1 },
+        { onConflict: 'user_id,date' },
+      );
+  }
+
+  console.log({ source: transcription.source, expected, heard, result });
+
+  return Response.json({
+    text: heard,
+    result,
+    feedback,
+    source: transcription.source,
+  });
 }
