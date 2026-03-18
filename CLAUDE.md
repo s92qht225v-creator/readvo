@@ -471,7 +471,8 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Star calculation**: 3★ = all correct + no shadowing, 2★ = max 1 wrong + no shadowing, 1★ = at least 1 correct
 - **API**: Reuses existing `POST /api/transcribe` (same auth, daily limit, Groq/OpenAI pipeline)
 - **Supabase table**: `dialogue_progress` (user_id UUID, dialogue_id TEXT, stars INT, completed_at TIMESTAMPTZ) — saves only if new stars > existing
-- **CSS classes**: `.drp`, `.drp__chat`, `.drp__bubble`, `.drp__bubble--a`, `.drp__bubble--b`, `.drp__mic-area`, `.drp__prompt`, `.drp__btn`
+- **Mic area**: `position: sticky; bottom: 0` — stays visible at bottom while dialogue scrolls. Background `#f5f5f5` with `env(safe-area-inset-bottom)` padding.
+- **CSS classes**: `.drp`, `.drp__chat`, `.drp__bubble`, `.drp__bubble--a`, `.drp__bubble--b`, `.drp__mic-area` (sticky), `.drp__prompt`, `.drp__btn`
 
 ### Star Rating System
 - **Hook**: `src/hooks/useStars.ts` — reads/writes star progress per section type
