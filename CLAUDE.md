@@ -424,25 +424,27 @@ Only one device can be logged in at a time. New login kicks previous session.
   - `src/lib/transcribe/scorer.ts` — Levenshtein distance + GPT-4o mini judge for borderline cases
   - `src/app/api/transcribe/route.ts` — route handler with JWT auth + daily usage limit
 - **Transcription pipeline** (`whisper.ts`):
-  1. **Groq** (`whisper-large-v3-turbo`, 3s AbortController timeout) — primary, fast
-  2. **OpenAI** (`whisper-1`, no timeout) — fallback on Groq 429/500+/timeout
+  1. **Groq** (`whisper-large-v3-turbo`, 3s AbortController timeout, `verbose_json` format) — primary, fast. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
+  2. **OpenAI** (`whisper-1`, no timeout, plain JSON) — fallback on Groq 429/500+/timeout. `noSpeechProb` = 0 (not available).
   3. Audio buffered as `ArrayBuffer` first, FormData rebuilt for each provider (never reused)
 - **Scoring pipeline** (`scorer.ts`):
-  - Normalize: trim, lowercase, remove Chinese punctuation + spaces
+  - Normalize: trim, lowercase, remove Chinese punctuation + spaces + digits (`\d`)
+  - **CRITICAL_CHARS check**: Before Levenshtein thresholds, checks if a meaning-changing character (我你他她它这那有没不是很都也吗呢吧啊) was substituted/dropped. If so, skips straight to GPT judge (prevents e.g. 我→你 from being auto-accepted at dist 1).
   - Short (≤4 chars): exact → correct, else → GPT judge
   - Normal (5–8 chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
   - Long (9+ chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
-  - GPT-4o mini judge: temperature 0, max 80 tokens, returns `{ result, feedback }`. Falls back to Levenshtein on failure.
+  - GPT-4o mini judge: temperature 0, max 80 tokens, explicit language enforcement (`IMPORTANT: feedback MUST be in ${langLabel} language only`), returns `{ result, feedback }`. Falls back to Levenshtein on failure.
 - **Daily usage limit**: 100 requests/user/day. Table `transcription_usage` (user_id, date, count, PK (user_id, date)). Checked before transcription, incremented after success via upsert.
 - **Auth**: JWT Bearer token required. Client sends via `getAccessToken()` from `useAuth()`.
-- **Grading results**: `correct` | `close` (minor Whisper noise) | `wrong` | `no_speech` (silence detected)
+- **Grading results**: `correct` (green) | `close` (amber, distinct UI phase) | `wrong` (red) | `no_speech` (neutral, doesn't consume attempt)
 - **Error responses**: 401 (no auth), 429 `limit_reached`, 503 `transcription_failed`
+- **Limit reached UI**: Both `SpeakingMashq` and `DialogueRolePlay` show a dismiss/Next button when daily limit is hit (prevents user from being stuck)
 - **Flow**: User sees translation prompt → speaks Chinese → audio recorded (max 6s) → transcribed → graded → feedback shown
 - **Two attempts**: First wrong → retry with hint. Second wrong → shadowing mode (listen + repeat). No-speech doesn't count as attempt.
 - **Shadowing mode**: Plays correct audio, user repeats. Tracked via `shadowingUsedRef` (affects star rating).
 - **Audio playback**: Local grammar audio files (`/audio/hsk1/grammar/{text}.mp3`) with Web Speech API TTS fallback
 - **Traditional→Simplified**: `TRAD_TO_SIMP` map normalizes Whisper output (Whisper sometimes returns traditional characters)
-- **Silence detection**: Client-side (blob < 3KB) + server-side (empty text after normalization)
+- **Silence detection**: Client-side (blob < 3KB) + server-side (empty text after normalization OR `noSpeechProb > 0.6` from Groq `verbose_json`)
 - **Trilingual UI**: All 40+ UI strings in UZ/RU/EN via inline `Record<Language, string>` pattern
 - **Used in 6 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪)
 - **Question format**: `{ uz: string; zh: string; pinyin: string }` — each grammar page defines its own `speakingQuestionsData` array
