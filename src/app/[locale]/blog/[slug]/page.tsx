@@ -4,6 +4,8 @@ import { loadBlogPost, loadBlogPosts } from '@/services/blog';
 import { BlogPostView } from '@/components/BlogPostView';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
+export const revalidate = 3600; // re-render at most once per hour
+
 interface PageParams {
   params: Promise<{ locale: string; slug: string }>;
 }

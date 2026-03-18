@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 import { LanguagePage } from '@/components/LanguagePage';
+
+export const revalidate = 3600; // re-render at most once per hour
 import { loadDialoguesForBook } from '@/services/dialogues';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';

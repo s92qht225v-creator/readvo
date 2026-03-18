@@ -4,6 +4,8 @@ import { loadBlogPosts } from '@/services/blog';
 import { BlogList } from '@/components/BlogList';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
+export const revalidate = 3600; // re-render at most once per hour
+
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: { title: 'Xitoy tili blog — maqolalar va qo\'llanmalar', description: 'Xitoy tili o\'rganish bo\'yicha maqolalar: HSK tayyorgarlik, so\'z yodlash usullari, grammatika va boshqalar.' },
   ru: { title: 'Блог китайского языка — статьи и руководства', description: 'Статьи по изучению китайского: подготовка к HSK, методы запоминания слов, грамматика.' },
