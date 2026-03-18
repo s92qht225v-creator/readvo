@@ -77,11 +77,6 @@ function toSimplified(str: string): string {
   return str.split('').map(c => TRAD_TO_SIMP[c] ?? c).join('');
 }
 
-function normalizeChinese(str: string): string {
-  // Strip punctuation, spaces, and stray non-CJK characters (e.g. trailing digits from Whisper)
-  return toSimplified(str.trim().replace(/[。？！，、""''「」《》\s\d]/g, '')).toLowerCase();
-}
-
 
 function speak(text: string) {
   const url = `/audio/hsk1/grammar/${encodeURIComponent(text)}.mp3`;
@@ -442,6 +437,9 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
             <div style={{ background: '#fef3c7', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', marginBottom: 12 }}>
               <div style={{ fontSize: 14, fontWeight: 700, color: '#92400e', marginBottom: 4 }}>{L(UI.limitReached)}</div>
             </div>
+            <button onClick={nextQuestion} style={{ width: '100%', padding: '13px 0', background: '#6b7280', border: 'none', borderRadius: 10, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+              {qIndex + 1 < questions.length ? L(UI.next) : L(UI.results)}
+            </button>
           </div>
         )}
 

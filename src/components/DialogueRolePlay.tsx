@@ -634,36 +634,38 @@ export function DialogueRolePlay({
                 opacity: (state.isFuture && !isCurrentApp) ? 0.5 : 1,
               }}
             >
-              <div className="drp__bubble-speaker" style={{
-                color: isA ? '#0369a1' : accentColor,
-              }}>
-                {line.speaker}
+              <div className="drp__bubble-inner">
+                <div className="drp__bubble-speaker" style={{
+                  color: isA ? '#0369a1' : accentColor,
+                }}>
+                  {line.speaker}
+                </div>
+
+                {/* App line: always show Chinese */}
+                {state.type === 'app' && (
+                  <div className="drp__bubble-text">{line.zh}</div>
+                )}
+
+                {/* Learner line: show based on state */}
+                {state.type === 'learner' && (
+                  <>
+                    {isAnswered ? (
+                      <div className="drp__bubble-text" style={{
+                        color: state.revealData!.score === 'wrong' ? '#dc2626' : '#16a34a',
+                      }}>
+                        {state.revealData!.score === 'wrong' ? '✗' : '✓'} {state.revealData!.zh}
+                      </div>
+                    ) : (
+                      <div className="drp__bubble-text" style={{
+                        fontStyle: 'italic',
+                        color: isFutureLearner ? '#bbb' : '#555',
+                      }}>
+                        {line.uz}
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
-
-              {/* App line: always show Chinese */}
-              {state.type === 'app' && (
-                <div className="drp__bubble-text">{line.zh}</div>
-              )}
-
-              {/* Learner line: show based on state */}
-              {state.type === 'learner' && (
-                <>
-                  {isAnswered ? (
-                    <div className="drp__bubble-text" style={{
-                      color: state.revealData!.score === 'wrong' ? '#dc2626' : '#16a34a',
-                    }}>
-                      {state.revealData!.score === 'wrong' ? '✗' : '✓'} {state.revealData!.zh}
-                    </div>
-                  ) : (
-                    <div className="drp__bubble-text" style={{
-                      fontStyle: 'italic',
-                      color: isFutureLearner ? '#bbb' : '#555',
-                    }}>
-                      {line.uz}
-                    </div>
-                  )}
-                </>
-              )}
             </div>
           );
         })}
@@ -726,8 +728,13 @@ export function DialogueRolePlay({
 
           {/* ── limit reached ── */}
           {phase === 'limit_reached' && (
-            <div style={{ background: '#fef3c7', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', textAlign: 'center' }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#92400e' }}>{t(UI.limitReached)}</div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ background: '#fef3c7', borderRadius: 10, padding: '12px 14px', border: '1px solid #fcd34d', marginBottom: 10 }}>
+                <div style={{ fontSize: 14, fontWeight: 700, color: '#92400e' }}>{t(UI.limitReached)}</div>
+              </div>
+              <button onClick={advanceUnit} className="drp__btn" style={{ background: '#6b7280' }}>
+                {unitIndex + 1 < learnerUnits.length ? t(UI.next) : t(UI.results)}
+              </button>
             </div>
           )}
 
