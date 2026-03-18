@@ -11169,8 +11169,12 @@ body {
 
 /* Mic / interaction area */
 .drp__mic-area {
+  position: sticky;
+  bottom: 0;
+  background: #f5f5f5;
   border-top: 1px solid #e5e5e5;
-  padding-top: 14px;
+  padding: 14px 0 env(safe-area-inset-bottom);
+  z-index: 10;
 }
 
 .drp__prompt {
@@ -11195,9 +11199,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  .drp__chat {
-    max-height: 35vh;
-  }
   .drp__bubble {
     max-width: 88%;
   }
