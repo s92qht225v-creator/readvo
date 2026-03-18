@@ -6,6 +6,7 @@ const PROMPT = '用简体中文输出。';
 export type WhisperResult = {
   text: string;
   source: 'groq' | 'openai';
+  noSpeechProb: number; // avg no_speech_prob from Groq verbose_json; 0 for OpenAI
 };
 
 /**
@@ -20,15 +21,15 @@ export async function transcribeAudio(
 ): Promise<WhisperResult> {
   // --- Try Groq first ---
   try {
-    const text = await callGroq(audioBuffer, fileName, mimeType);
-    return { text, source: 'groq' };
+    const groq = await callGroq(audioBuffer, fileName, mimeType);
+    return { text: groq.text, source: 'groq', noSpeechProb: groq.noSpeechProb };
   } catch (err) {
     console.warn('[whisper] Groq failed, falling back to OpenAI:', (err as Error).message);
   }
 
-  // --- Fallback: OpenAI ---
+  // --- Fallback: OpenAI (plain JSON, no no_speech_prob) ---
   const text = await callOpenAI(audioBuffer, fileName, mimeType);
-  return { text, source: 'openai' };
+  return { text, source: 'openai', noSpeechProb: 0 };
 }
 
 function buildFormData(
@@ -36,6 +37,7 @@ function buildFormData(
   fileName: string,
   mimeType: string,
   model: string,
+  responseFormat: 'json' | 'verbose_json' = 'json',
 ): FormData {
   const blob = new Blob([audioBuffer], { type: mimeType });
   const fd = new FormData();
@@ -43,6 +45,7 @@ function buildFormData(
   fd.append('model', model);
   fd.append('language', 'zh');
   fd.append('prompt', PROMPT);
+  fd.append('response_format', responseFormat);
   return fd;
 }
 
@@ -50,12 +53,12 @@ async function callGroq(
   audioBuffer: ArrayBuffer,
   fileName: string,
   mimeType: string,
-): Promise<string> {
+): Promise<{ text: string; noSpeechProb: number }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), GROQ_TIMEOUT_MS);
 
   try {
-    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3-turbo');
+    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3-turbo', 'verbose_json');
     const res = await fetch(GROQ_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
@@ -70,8 +73,13 @@ async function callGroq(
       throw new Error(`Groq HTTP ${res.status}: ${await res.text()}`);
     }
 
-    const json = await res.json() as { text?: string };
-    return (json.text ?? '').trim();
+    const json = await res.json() as { text?: string; segments?: { no_speech_prob?: number }[] };
+    const text = (json.text ?? '').trim();
+    const segments = json.segments ?? [];
+    const noSpeechProb = segments.length > 0
+      ? segments.reduce((sum, s) => sum + (s.no_speech_prob ?? 0), 0) / segments.length
+      : 0;
+    return { text, noSpeechProb };
   } finally {
     clearTimeout(timer);
   }

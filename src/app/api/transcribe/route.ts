@@ -57,8 +57,8 @@ export async function POST(request: NextRequest) {
 
   const heard = transcription.text.replace(/\d+/g, '').trim();
 
-  // --- Silence detection ---
-  if (heard.length === 0) {
+  // --- Silence detection (empty text or Whisper's own no_speech probability) ---
+  if (heard.length === 0 || transcription.noSpeechProb > 0.6) {
     return Response.json({ text: '', result: 'no_speech', feedback: '', source: transcription.source });
   }
 

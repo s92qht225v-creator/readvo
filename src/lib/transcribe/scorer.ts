@@ -7,10 +7,21 @@ export type ScoreResult = {
   feedback: string;
 };
 
-const PUNCTUATION_RE = /[。？！，、""''「」《》\s]/g;
+const PUNCTUATION_RE = /[。？！，、""''「」《》\s\d]/g;
 
 function normalize(str: string): string {
   return str.trim().replace(PUNCTUATION_RE, '').toLowerCase();
+}
+
+// Characters where any substitution always changes meaning — never skip to AI
+const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也吗呢吧啊');
+
+function hasCriticalSubstitution(normExp: string, normHeard: string): boolean {
+  const expSet = new Set(normExp);
+  const heardSet = new Set(normHeard);
+  for (const c of expSet) if (!heardSet.has(c) && CRITICAL_CHARS.has(c)) return true;
+  for (const c of heardSet) if (!expSet.has(c) && CRITICAL_CHARS.has(c)) return true;
+  return false;
 }
 
 function levenshtein(a: string, b: string): number {
@@ -54,6 +65,11 @@ export async function scoreAnswer(
   // --- Short sentence (≤4 chars): any difference → ask AI ---
   if (len <= 4) {
     return aiJudgeWithFallback(expected, heard, language, dist);
+  }
+
+  // --- Critical char substitution → always wrong, no AI ---
+  if (hasCriticalSubstitution(normExp, normHeard)) {
+    return { result: 'wrong', feedback: '' };
   }
 
   // --- Normal (5–8) and Long (9+) ---
