@@ -138,9 +138,10 @@ async function aiJudge(
         content: [
           `Expected: "${expected}"`,
           `Learner said: "${heard}"`,
-          'Is the learner\'s answer correct, close (minor Whisper noise or tone mark only), or wrong?',
-          'Rules: any substitution that changes meaning (e.g. 我→你, 不→没, pronoun or negation swap) is WRONG, not close.',
-          'Only mark \'close\' for clear speech-recognition noise where meaning is identical.',
+          'Is the learner\'s answer correct, close, or wrong?',
+          'Mark CORRECT if: exact match, OR the learner said the expected phrase plus extra context words (e.g. said 我在减肥 when expected is 减肥).',
+          'Mark CLOSE if: a tone-only mistake (e.g. 那→拿, same sound different tone), or minor Whisper noise where intended meaning is clear.',
+          'Mark WRONG if: a substitution that clearly changes meaning (e.g. 我→你, 不→没, 是→不是, negation or pronoun swap).',
           'Feedback rules: always name the specific Chinese character that is missing or wrong.',
           `IMPORTANT: feedback MUST be in ${langLabel} language only, not in any other language.`,
           `{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}`,
