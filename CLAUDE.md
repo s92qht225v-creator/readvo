@@ -424,7 +424,7 @@ Only one device can be logged in at a time. New login kicks previous session.
   - `src/lib/transcribe/scorer.ts` — Levenshtein distance + GPT-4o mini judge for borderline cases
   - `src/app/api/transcribe/route.ts` — route handler with JWT auth + daily usage limit
 - **Transcription pipeline** (`whisper.ts`):
-  1. **Groq** (`whisper-large-v3-turbo`, 3s AbortController timeout, `verbose_json` format) — primary, fast. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
+  1. **Groq** (`whisper-large-v3`, 3s AbortController timeout, `verbose_json` format) — primary, fast. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
   2. **OpenAI** (`whisper-1`, no timeout, plain JSON) — fallback on Groq 429/500+/timeout. `noSpeechProb` = 0 (not available).
   3. Audio buffered as `ArrayBuffer` first, FormData rebuilt for each provider (never reused)
 - **Scoring pipeline** (`scorer.ts`):

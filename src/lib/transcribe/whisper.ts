@@ -58,7 +58,7 @@ async function callGroq(
   const timer = setTimeout(() => controller.abort(), GROQ_TIMEOUT_MS);
 
   try {
-    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3-turbo', 'verbose_json');
+    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3', 'verbose_json');
     const res = await fetch(GROQ_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
