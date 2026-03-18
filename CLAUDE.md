@@ -429,7 +429,7 @@ Only one device can be logged in at a time. New login kicks previous session.
   2. **Groq** (`whisper-large-v3`, 3s AbortController timeout, `verbose_json` format) — fallback on GPT-4o failure. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
   3. Audio buffered as `ArrayBuffer` first, FormData rebuilt for each provider (never reused)
 - **Context-aware prompting**: The `expected` answer is passed from route → whisper. Unique Chinese characters are extracted and appended to the STT prompt as vocabulary hints (e.g. `"用简体中文输出。上下文词汇：封、斋、因、为"`), biasing the model toward correct homophones. This is the single biggest accuracy improvement for Chinese STT.
-- **Post-correction** (`post-correct.ts`): After transcription, if Levenshtein distance between heard and expected is 2+ chars (but not greater than expected length), GPT-4o mini is asked to fix homophone errors. Only fires for borderline cases — exact/close matches skip this step. Falls back to raw transcription on failure.
+- **Post-correction** (`post-correct.ts`): After transcription, if Levenshtein distance between heard and expected is 2+ chars (but not greater than expected length) AND heard shares ≥60% characters with expected, GPT-4o mini is asked to fix homophone errors. The 60% overlap guard prevents false corrections when the learner said something completely different (e.g. 很开心 vs 在封斋 = 50% overlap → blocked). Only fires for borderline cases — exact/close matches skip this step. Falls back to raw transcription on failure.
 - **Scoring pipeline** (`scorer.ts`):
   - Normalize: trim, lowercase, remove Chinese punctuation + spaces + digits (`\d`)
   - **CRITICAL_CHARS check**: Before Levenshtein thresholds, checks if a meaning-changing character (我你他她它这那有没不是很都也吗呢吧啊) was substituted/dropped. If so, skips straight to GPT judge (prevents e.g. 我→你 from being auto-accepted at dist 1).
@@ -567,8 +567,8 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
   - `/{locale}/chinese` (language page) — 151 invocations/day
   - `/{locale}/blog` (blog list) — 93 invocations/day
   - `/{locale}/blog/[slug]` (blog posts) — 68 invocations/day
-- **How it works**: First visitor per hour per locale triggers one server render; everyone else gets cached HTML with zero function invocations
-- **Dynamic pages** (no ISR): Payment page remains dynamic (`/{locale}/payment`) — checks subscription status per user
+- **Total savings**: These 4 pages accounted for 567 invocations/day — the top cost drivers. After ISR, the first visitor per hour per locale triggers one server render; everyone else gets cached HTML with zero function invocations.
+- **Dynamic pages** (no ISR): Payment page (63 invocations/day) remains dynamic (`/{locale}/payment`) — checks subscription status per user
 - **Content pages**: Lesson, dialogue, flashcard, karaoke, writing, grammar pages use `generateStaticParams` for build-time generation
 
 ## Security Hardening
