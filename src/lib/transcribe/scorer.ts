@@ -72,6 +72,12 @@ export async function scoreAnswer(
     return { result: 'correct', feedback: '' };
   }
 
+  // --- Superset match: heard contains the full expected answer ---
+  // e.g. user said 我在减肥 when expected is 减肥 (added context to help Whisper)
+  if (normExp.length >= 2 && normHeard.includes(normExp)) {
+    return { result: 'correct', feedback: '' };
+  }
+
   // --- Short sentence (≤4 chars): any difference → ask AI ---
   if (len <= 4) {
     return aiJudgeWithFallback(expected, heard, language, dist);
