@@ -144,7 +144,12 @@ async function aiJudge(
           'Mark WRONG if: a substitution that clearly changes meaning (e.g. 我→你, 不→没, 是→不是, negation or pronoun swap).',
           'Feedback rules: always name the specific Chinese character that is missing or wrong.',
           `IMPORTANT: feedback MUST be in ${langLabel} language only, not in any other language.`,
-          `{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence explaining why, max 8 words"}`,
+          language === 'uz'
+            ? 'Uzbek feedback MUST use Latin script (NOT Cyrillic). Examples: "\'喝\' so\'zi tushib qolgan", "\'我\' o\'rniga \'你\' deyilgan", "to\'g\'ri aytildi".'
+            : language === 'ru'
+            ? 'Russian feedback examples: "пропущен иероглиф \'喝\'", "вместо \'我\' сказано \'你\'", "произнесено правильно".'
+            : 'English feedback examples: "missing \'喝\'", "said \'你\' instead of \'我\'", "pronounced correctly".',
+          `{"result": "correct" | "close" | "wrong", "feedback": "one short ${langLabel} sentence, max 8 words"}`,
         ].join('\n'),
       },
     ],
