@@ -17,7 +17,7 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 - **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
 - **i18n**: next-intl ^4.8.3 (URL-based locale routing, `localePrefix: 'always'`)
 - **State Management**: React hooks (useState, useCallback, useMemo)
-- **Speech-to-Text**: Groq API (`whisper-large-v3`) for Chinese speech recognition
+- **Speech-to-Text**: OpenAI (`gpt-4o-transcribe`, primary) + Groq API (`whisper-large-v3`, fallback) for Chinese speech recognition
 - **AI Grading**: OpenAI API (`gpt-4o-mini`) for borderline answer evaluation
 - **Storage**: Supabase Storage (images and audio files)
 - **Database**: Supabase (project: miruwaeplbzfqmdwacsh)
@@ -419,14 +419,17 @@ Only one device can be logged in at a time. New login kicks previous session.
 ## Speaking Practice (Speaking Mashq)
 - **Component**: `src/components/SpeakingMashq.tsx` — AI-powered speaking quiz embedded in grammar pages
 - **API route**: `POST /api/transcribe` — accepts audio blob + expected Chinese text, returns grading result
-- **Architecture** (modular, 3 files):
-  - `src/lib/transcribe/whisper.ts` — Groq (primary, 3s timeout) + OpenAI (fallback) transcription
+- **Architecture** (modular, 4 files):
+  - `src/lib/transcribe/whisper.ts` — GPT-4o Transcribe (primary) + Groq whisper-large-v3 (fallback)
   - `src/lib/transcribe/scorer.ts` — Levenshtein distance + GPT-4o mini judge for borderline cases
+  - `src/lib/transcribe/post-correct.ts` — LLM post-correction for Chinese homophone errors
   - `src/app/api/transcribe/route.ts` — route handler with JWT auth + daily usage limit
 - **Transcription pipeline** (`whisper.ts`):
-  1. **Groq** (`whisper-large-v3`, 3s AbortController timeout, `verbose_json` format) — primary, fast. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
-  2. **OpenAI** (`whisper-1`, no timeout, plain JSON) — fallback on Groq 429/500+/timeout. `noSpeechProb` = 0 (not available).
+  1. **GPT-4o Transcribe** (`gpt-4o-transcribe`, OpenAI) — primary, best accuracy (2.46% WER). No `verbose_json` support, `noSpeechProb` = 0.
+  2. **Groq** (`whisper-large-v3`, 3s AbortController timeout, `verbose_json` format) — fallback on GPT-4o failure. Returns `noSpeechProb` (avg of segment `no_speech_prob` values).
   3. Audio buffered as `ArrayBuffer` first, FormData rebuilt for each provider (never reused)
+- **Context-aware prompting**: The `expected` answer is passed from route → whisper. Unique Chinese characters are extracted and appended to the STT prompt as vocabulary hints (e.g. `"用简体中文输出。上下文词汇：封、斋、因、为"`), biasing the model toward correct homophones. This is the single biggest accuracy improvement for Chinese STT.
+- **Post-correction** (`post-correct.ts`): After transcription, if Levenshtein distance between heard and expected is 2+ chars (but not greater than expected length), GPT-4o mini is asked to fix homophone errors. Only fires for borderline cases — exact/close matches skip this step. Falls back to raw transcription on failure.
 - **Scoring pipeline** (`scorer.ts`):
   - Normalize: trim, lowercase, remove Chinese punctuation + spaces + digits (`\d`)
   - **CRITICAL_CHARS check**: Before Levenshtein thresholds, checks if a meaning-changing character (我你他她它这那有没不是很都也吗呢吧啊) was substituted/dropped. If so, skips straight to GPT judge (prevents e.g. 我→你 from being auto-accepted at dist 1).
@@ -448,7 +451,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Trilingual UI**: All 40+ UI strings in UZ/RU/EN via inline `Record<Language, string>` pattern
 - **Used in 6 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪)
 - **Question format**: `{ uz: string; zh: string; pinyin: string }` — each grammar page defines its own `speakingQuestionsData` array
-- **Env vars**: `GROQ_API_KEY` (speech recognition), `OPENAI_API_KEY` (answer grading)
+- **Env vars**: `OPENAI_API_KEY` (GPT-4o Transcribe + answer grading + post-correction), `GROQ_API_KEY` (whisper-large-v3 fallback)
 
 ### Dialogue Role-Play Quiz
 - **Component**: `src/components/DialogueRolePlay.tsx` — 2-round dialogue speaking quiz with chat-style layout

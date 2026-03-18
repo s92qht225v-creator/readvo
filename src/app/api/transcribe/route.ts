@@ -2,7 +2,8 @@ import { NextRequest } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getUserIdFromJWT } from '@/lib/jwt';
 import { transcribeAudio } from '@/lib/transcribe/whisper';
-import { scoreAnswer } from '@/lib/transcribe/scorer';
+import { scoreAnswer, levenshtein, normalize } from '@/lib/transcribe/scorer';
+import { postCorrect } from '@/lib/transcribe/post-correct';
 
 const DAILY_LIMIT = 100;
 
@@ -49,7 +50,7 @@ export async function POST(request: NextRequest) {
   // --- Transcribe ---
   let transcription;
   try {
-    transcription = await transcribeAudio(arrayBuffer, fileName, mimeType);
+    transcription = await transcribeAudio(arrayBuffer, fileName, mimeType, expected);
   } catch (err) {
     console.error('[transcribe] Both providers failed:', err);
     return Response.json({ error: 'transcription_failed' }, { status: 503 });
@@ -70,12 +71,32 @@ export async function POST(request: NextRequest) {
     return Response.json({ text: '', result: 'no_speech', feedback: '', source: transcription.source });
   }
 
+  // --- Post-correction (D): if transcription is far from expected, ask LLM to fix homophones ---
+  let corrected = heard;
+  if (expected) {
+    const dist = levenshtein(normalize(expected), normalize(heard));
+    // Only post-correct if there's a meaningful difference (dist >= 2)
+    // but not so far that it's clearly wrong speech (dist > expected length)
+    const normLen = normalize(expected).length;
+    if (dist >= 2 && dist <= normLen) {
+      try {
+        const fixed = await postCorrect(expected, heard);
+        if (fixed && fixed !== heard) {
+          console.log('[post-correct]', heard, '→', fixed);
+          corrected = fixed;
+        }
+      } catch (err) {
+        console.warn('[post-correct] Failed, using raw transcription:', (err as Error).message);
+      }
+    }
+  }
+
   // --- Score ---
   let result: 'correct' | 'close' | 'wrong' = 'wrong';
   let feedback = '';
 
   if (expected) {
-    const score = await scoreAnswer(expected, heard, language);
+    const score = await scoreAnswer(expected, corrected, language);
     result = score.result;
     feedback = score.feedback;
   }
@@ -90,10 +111,10 @@ export async function POST(request: NextRequest) {
       );
   }
 
-  console.log({ source: transcription.source, expected, heard, result });
+  console.log({ source: transcription.source, expected, heard, corrected: corrected !== heard ? corrected : undefined, result });
 
   return Response.json({
-    text: heard,
+    text: corrected,
     result,
     feedback,
     source: transcription.source,

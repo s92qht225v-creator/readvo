@@ -1,35 +1,58 @@
 const GROQ_URL = 'https://api.groq.com/openai/v1/audio/transcriptions';
 const OPENAI_URL = 'https://api.openai.com/v1/audio/transcriptions';
 const GROQ_TIMEOUT_MS = 3000;
-const PROMPT = '用简体中文输出。';
+const BASE_PROMPT = '用简体中文输出。';
 
 export type WhisperResult = {
   text: string;
-  source: 'groq' | 'openai';
-  noSpeechProb: number; // avg no_speech_prob from Groq verbose_json; 0 for OpenAI
+  source: 'gpt4o' | 'groq';
+  noSpeechProb: number; // avg no_speech_prob from Groq verbose_json; 0 for GPT-4o
 };
 
 /**
- * Transcribe audio via Groq (primary) with OpenAI fallback.
+ * Build a context-aware prompt from the expected answer.
+ * Extracts unique Chinese characters and appends them as vocabulary hints
+ * so the STT model is biased toward the right homophones.
+ */
+function buildPrompt(expected?: string): string {
+  if (!expected) return BASE_PROMPT;
+  // Extract unique Chinese characters from expected answer
+  const chars = [...new Set(expected.replace(/[^\u4e00-\u9fff]/g, ''))];
+  if (chars.length === 0) return BASE_PROMPT;
+  return `${BASE_PROMPT}上下文词汇：${chars.join('、')}`;
+}
+
+/**
+ * Transcribe audio via GPT-4o Transcribe (primary) with Groq fallback.
  * Accepts raw ArrayBuffer — rebuilds FormData for each provider
  * so the same body is never reused across fetch calls.
+ *
+ * @param expected — the expected Chinese answer, used to build context-aware prompt (improvement A)
  */
 export async function transcribeAudio(
   audioBuffer: ArrayBuffer,
   fileName: string,
   mimeType: string,
+  expected?: string,
 ): Promise<WhisperResult> {
-  // --- Try Groq first ---
+  const prompt = buildPrompt(expected);
+
+  // --- Primary: GPT-4o Transcribe (best accuracy) ---
   try {
-    const groq = await callGroq(audioBuffer, fileName, mimeType);
-    return { text: groq.text, source: 'groq', noSpeechProb: groq.noSpeechProb };
+    const text = await callGpt4oTranscribe(audioBuffer, fileName, mimeType, prompt);
+    return { text, source: 'gpt4o', noSpeechProb: 0 };
   } catch (err) {
-    console.warn('[whisper] Groq failed, falling back to OpenAI:', (err as Error).message);
+    console.warn('[whisper] GPT-4o Transcribe failed, falling back to Groq:', (err as Error).message);
   }
 
-  // --- Fallback: OpenAI (plain JSON, no no_speech_prob) ---
-  const text = await callOpenAI(audioBuffer, fileName, mimeType);
-  return { text, source: 'openai', noSpeechProb: 0 };
+  // --- Fallback: Groq whisper-large-v3 (free, fast) ---
+  try {
+    const groq = await callGroq(audioBuffer, fileName, mimeType, prompt);
+    return { text: groq.text, source: 'groq', noSpeechProb: groq.noSpeechProb };
+  } catch (err) {
+    console.error('[whisper] Groq also failed:', (err as Error).message);
+    throw new Error('All transcription providers failed');
+  }
 }
 
 function buildFormData(
@@ -37,6 +60,7 @@ function buildFormData(
   fileName: string,
   mimeType: string,
   model: string,
+  prompt: string,
   responseFormat: 'json' | 'verbose_json' = 'json',
 ): FormData {
   const blob = new Blob([audioBuffer], { type: mimeType });
@@ -44,21 +68,43 @@ function buildFormData(
   fd.append('file', blob, fileName);
   fd.append('model', model);
   fd.append('language', 'zh');
-  fd.append('prompt', PROMPT);
+  fd.append('prompt', prompt);
   fd.append('response_format', responseFormat);
   return fd;
+}
+
+async function callGpt4oTranscribe(
+  audioBuffer: ArrayBuffer,
+  fileName: string,
+  mimeType: string,
+  prompt: string,
+): Promise<string> {
+  const fd = buildFormData(audioBuffer, fileName, mimeType, 'gpt-4o-transcribe', prompt);
+  const res = await fetch(OPENAI_URL, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
+    body: fd,
+  });
+
+  if (!res.ok) {
+    throw new Error(`GPT-4o Transcribe HTTP ${res.status}: ${await res.text()}`);
+  }
+
+  const json = await res.json() as { text?: string };
+  return (json.text ?? '').trim();
 }
 
 async function callGroq(
   audioBuffer: ArrayBuffer,
   fileName: string,
   mimeType: string,
+  prompt: string,
 ): Promise<{ text: string; noSpeechProb: number }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), GROQ_TIMEOUT_MS);
 
   try {
-    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3', 'verbose_json');
+    const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-large-v3', prompt, 'verbose_json');
     const res = await fetch(GROQ_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
@@ -83,24 +129,4 @@ async function callGroq(
   } finally {
     clearTimeout(timer);
   }
-}
-
-async function callOpenAI(
-  audioBuffer: ArrayBuffer,
-  fileName: string,
-  mimeType: string,
-): Promise<string> {
-  const fd = buildFormData(audioBuffer, fileName, mimeType, 'whisper-1');
-  const res = await fetch(OPENAI_URL, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
-    body: fd,
-  });
-
-  if (!res.ok) {
-    throw new Error(`OpenAI HTTP ${res.status}: ${await res.text()}`);
-  }
-
-  const json = await res.json() as { text?: string };
-  return (json.text ?? '').trim();
 }
