@@ -9,8 +9,18 @@ export type ScoreResult = {
 
 const PUNCTUATION_RE = /[。？！，、""''「」《》\s\d]/g;
 
+// Homophones Whisper confuses: 他/她/它 all sound like "tā"
+// Normalize to a single form so they don't count as wrong substitutions
+const HOMOPHONES: Record<string, string> = { '她': '他', '它': '他' };
+
 function normalize(str: string): string {
-  return str.trim().replace(PUNCTUATION_RE, '').toLowerCase();
+  return str
+    .trim()
+    .replace(PUNCTUATION_RE, '')
+    .toLowerCase()
+    .split('')
+    .map((c) => HOMOPHONES[c] ?? c)
+    .join('');
 }
 
 // Characters where any substitution always changes meaning — never skip to AI

@@ -62,6 +62,14 @@ export async function POST(request: NextRequest) {
     return Response.json({ text: '', result: 'no_speech', feedback: '', source: transcription.source });
   }
 
+  // --- Hallucination detection ---
+  // If the expected answer is Chinese but Whisper returned zero CJK characters,
+  // it hallucinated Latin text (e.g. "whoa whoa Schröingfei") — treat as no_speech
+  const CJK_RE = /[\u4e00-\u9fff]/;
+  if (expected && CJK_RE.test(expected) && !CJK_RE.test(heard)) {
+    return Response.json({ text: '', result: 'no_speech', feedback: '', source: transcription.source });
+  }
+
   // --- Score ---
   let result: 'correct' | 'close' | 'wrong' = 'wrong';
   let feedback = '';
