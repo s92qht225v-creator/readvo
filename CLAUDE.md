@@ -436,7 +436,7 @@ Only one device can be logged in at a time. New login kicks previous session.
   - Short (≤4 chars): exact → correct, else → GPT judge
   - Normal (5–8 chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
   - Long (9+ chars): dist 0–1 → correct, 2–4 → GPT, 5+ → wrong
-  - GPT-4o mini judge: temperature 0, max 80 tokens, explicit language enforcement (`IMPORTANT: feedback MUST be in ${langLabel} language only`), returns `{ result, feedback }`. Falls back to Levenshtein on failure.
+  - GPT-4o mini judge: temperature 0, max 80 tokens, explicit language enforcement (`IMPORTANT: feedback MUST be in ${langLabel} language only`), concrete feedback examples per language (Uzbek Latin, Russian Cyrillic, English), Uzbek enforced as Latin script (NOT Cyrillic). Returns `{ result, feedback }`. Falls back to Levenshtein on failure.
 - **Daily usage limit**: 100 requests/user/day. Table `transcription_usage` (user_id, date, count, PK (user_id, date)). Checked before transcription, incremented after success via upsert.
 - **Auth**: JWT Bearer token required. Client sends via `getAccessToken()` from `useAuth()`.
 - **Grading results**: `correct` (green) | `close` (amber, distinct UI phase) | `wrong` (red) | `no_speech` (neutral, doesn't consume attempt)
