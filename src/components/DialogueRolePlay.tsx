@@ -674,11 +674,7 @@ export function DialogueRolePlay({
       {/* Mic / interaction area below the dialogue */}
       {currentLearnerUnit && (
         <div className="drp__mic-area">
-          {/* Translation prompt */}
-          <div className="drp__prompt">
-            <div style={{ fontSize: 11, color: '#888', marginBottom: 4 }}>{t(UI.sayInChinese)}</div>
-            <div style={{ fontSize: 16, fontWeight: 700, color: '#1a1a2e' }}>{currentLearnerUnit.uz}</div>
-          </div>
+          {/* Mic controls only — prompt is already shown in the bubble above */}
 
           {/* ── idle ── */}
           {phase === 'idle' && (

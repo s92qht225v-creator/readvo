@@ -77,8 +77,13 @@ export async function POST(request: NextRequest) {
     const dist = levenshtein(normalize(expected), normalize(heard));
     // Only post-correct if there's a meaningful difference (dist >= 2)
     // but not so far that it's clearly wrong speech (dist > expected length)
-    const normLen = normalize(expected).length;
-    if (dist >= 2 && dist <= normLen) {
+    // AND the heard text shares at least 40% characters with expected (homophone territory)
+    const normExp = normalize(expected);
+    const normHeard = normalize(heard);
+    const normLen = normExp.length;
+    const sharedChars = [...normHeard].filter(c => normExp.includes(c)).length;
+    const overlapRatio = normLen > 0 ? sharedChars / normLen : 0;
+    if (dist >= 2 && dist <= normLen && overlapRatio >= 0.6) {
       try {
         const fixed = await postCorrect(expected, heard);
         if (fixed && fixed !== heard) {
