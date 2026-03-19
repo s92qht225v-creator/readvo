@@ -43,12 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
   entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
-  // Tab variants
-  for (const tab of ['grammar', 'writing', 'karaoke', 'dialogues', 'flashcards']) {
-    entries.push(...localeEntries(`/chinese?tab=${tab}`, { changeFrequency: 'monthly', priority: 0.7 }));
-  }
-
-  // List pages
+  // List pages (standalone routes, not client-side tabs)
   entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.6 }));
   entries.push(...localeEntries('/chinese/hsk1/dialogues', { changeFrequency: 'monthly', priority: 0.6 }));
 
