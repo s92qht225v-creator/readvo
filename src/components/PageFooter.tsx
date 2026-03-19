@@ -140,10 +140,14 @@ export function PageFooter() {
           )}
         </div>
       )}
+      <nav className="home__footer-nav">
+        <Link href="/chinese" className="home__footer-nav-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
+        <Link href="/chinese?tab=grammar" className="home__footer-nav-link">{({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</Link>
+        <Link href="/chinese?tab=dialogues" className="home__footer-nav-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
+        <Link href="/chinese?tab=flashcards" className="home__footer-nav-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
+        <Link href="/blog" className="home__footer-nav-link">Blog</Link>
+      </nav>
       <p>{({ uz: 'Blim — Interaktiv til darsliklari', ru: 'Blim — Интерактивные учебники языков', en: 'Blim — Interactive language textbooks' } as Record<string, string>)[language]}</p>
-      {pathname !== '/blog' && !pathname?.startsWith('/blog/') && (
-        <Link href="/blog" className="home__footer-blog-link">Blog</Link>
-      )}
     </footer>
   );
 }

@@ -5296,15 +5296,21 @@ body {
   margin: 0;
 }
 
-.home__footer-blog-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #888;
-  text-decoration: none;
-  font-size: 0.85rem;
+.home__footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin-bottom: 8px;
 }
 
-.home__footer-blog-link:hover {
+.home__footer-nav-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.home__footer-nav-link:hover {
   color: #555;
   text-decoration: underline;
 }
@@ -8026,9 +8032,16 @@ body {
   font-size: 0.9rem;
 }
 
+.landing__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-top: 12px;
+}
+
 .landing__footer-link {
   display: inline-block;
-  margin-top: 12px;
   color: #9ca3af;
   font-size: 0.85rem;
   text-decoration: none;

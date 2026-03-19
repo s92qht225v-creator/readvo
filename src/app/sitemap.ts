@@ -43,10 +43,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
   entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
-  // Tab variants (skip dialogues=default, flashcards/tests=auth-gated)
-  for (const tab of ['grammar', 'writing', 'karaoke']) {
+  // Tab variants
+  for (const tab of ['grammar', 'writing', 'karaoke', 'dialogues', 'flashcards']) {
     entries.push(...localeEntries(`/chinese?tab=${tab}`, { changeFrequency: 'monthly', priority: 0.7 }));
   }
+
+  // List pages
+  entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.6 }));
+  entries.push(...localeEntries('/chinese/hsk1/dialogues', { changeFrequency: 'monthly', priority: 0.6 }));
 
   // Grammar pages
   for (const slug of ['shenme', 'shi', 'ma', 'shei', 'na', 'you', 'zai', 'de', 'bu', 'ne', 'le', 'ye', 'dou', 'hen', 'xiang', 'hui', 'neng', 'mei', 'ji', 'liangci']) {
@@ -93,8 +97,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   } catch { /* topics dir may not exist */ }
 
-  // Writing practice pages
+  // Writing practice pages (skip coming soon sets with no content)
   for (const set of [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2, ...WRITING_SETS_HSK3, ...WRITING_SETS_HSK4, ...WRITING_SETS_HSK5, ...WRITING_SETS_HSK6]) {
+    if (!set.chars) continue;
     entries.push(...localeEntries(`/chinese/hsk1/writing/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
   }
 

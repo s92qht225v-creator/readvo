@@ -412,7 +412,15 @@ function LandingPage({ language, toggleLanguage, s }: {
       <footer className="landing__footer">
         <Image src="/logo.svg" alt="Blim" width={64} height={28} className="landing__footer-logo" />
         <p className="landing__footer-text">{s.footerText}</p>
-        <Link href="/blog" className="landing__footer-link">Blog</Link>
+        <div className="landing__footer-links">
+          <Link href="/chinese" className="landing__footer-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese?tab=grammar" className="landing__footer-link">{({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese?tab=dialogues" className="landing__footer-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese?tab=flashcards" className="landing__footer-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese?tab=karaoke" className="landing__footer-link">KTV</Link>
+          <Link href="/chinese?tab=writing" className="landing__footer-link">{({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[language]}</Link>
+          <Link href="/blog" className="landing__footer-link">Blog</Link>
+        </div>
       </footer>
 
       {/* Floating live pill */}
