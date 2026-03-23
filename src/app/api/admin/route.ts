@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
   const [paymentsRes, subsRes, progressRes] = await Promise.all([
     admin.from('payment_requests').select('*').order('created_at', { ascending: false }),
     admin.from('subscriptions').select('*').order('created_at', { ascending: false }),
-    admin.from('user_progress').select('user_id, last_visited_at').order('last_visited_at', { ascending: false }),
+    admin.from('user_progress').select('user_id, last_visited_at').order('last_visited_at', { ascending: false }).limit(10000),
   ]);
 
   // Paginate through all users (listUsers returns max ~50 per page by default)
