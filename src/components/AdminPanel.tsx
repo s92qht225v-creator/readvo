@@ -21,6 +21,7 @@ interface AdminUser {
   name: string;
   username: string;
   created_at: string;
+  last_active: string | null;
 }
 
 interface Subscription {
@@ -140,9 +141,15 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const filteredPayments = search
     ? payments.filter((p) => p.user_email.toLowerCase().includes(searchLower))
     : payments;
-  const filteredUsers = search
+  const filteredUsers = (search
     ? users.filter((u) => u.email.toLowerCase().includes(searchLower) || u.name.toLowerCase().includes(searchLower) || u.username.toLowerCase().includes(searchLower))
-    : users;
+    : users
+  ).sort((a, b) => {
+    if (!a.last_active && !b.last_active) return 0;
+    if (!a.last_active) return 1;
+    if (!b.last_active) return -1;
+    return new Date(b.last_active).getTime() - new Date(a.last_active).getTime();
+  });
 
   if (loading) {
     return (
@@ -294,6 +301,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                 </div>
                 <div className="admin__card-details">
                   <span>Ro&apos;yxatdan o&apos;tgan: {formatDate(u.created_at)}</span>
+                  <span style={{ marginLeft: 12 }}>Oxirgi tashrif: {u.last_active ? formatDate(u.last_active) : '—'}</span>
                 </div>
                 <div className="admin__sub-actions">
                   {sub ? (
