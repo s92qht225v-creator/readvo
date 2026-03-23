@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
   const [paymentsRes, subsRes, progressRes] = await Promise.all([
     admin.from('payment_requests').select('*').order('created_at', { ascending: false }),
     admin.from('subscriptions').select('*').order('created_at', { ascending: false }),
-    admin.from('user_progress').select('user_id, last_visited_at').order('last_visited_at', { ascending: false }).limit(10000),
+    admin.from('active_sessions').select('user_id, updated_at'),
   ]);
 
   // Paginate through all users (listUsers returns max ~50 per page by default)
@@ -42,12 +42,10 @@ export async function GET(request: NextRequest) {
   const subscriptions = subsRes.data || [];
   const users = allUsers;
 
-  // Build last_active map: user_id → most recent last_visited_at
+  // Build last_active map: user_id → updated_at from active_sessions
   const lastActiveMap = new Map<string, string>();
   for (const row of progressRes.data || []) {
-    if (!lastActiveMap.has(row.user_id)) {
-      lastActiveMap.set(row.user_id, row.last_visited_at);
-    }
+    lastActiveMap.set(row.user_id, row.updated_at);
   }
 
   const now = new Date();

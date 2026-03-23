@@ -28,7 +28,17 @@ export async function POST(request: NextRequest) {
       .eq('user_id', userId)
       .maybeSingle();
 
-    return NextResponse.json({ valid: row?.session_nonce === nonce });
+    const valid = row?.session_nonce === nonce;
+
+    // Update last-seen timestamp (fire-and-forget, don't block response)
+    if (valid) {
+      admin.from('active_sessions')
+        .update({ updated_at: new Date().toISOString() })
+        .eq('user_id', userId)
+        .then(() => {});
+    }
+
+    return NextResponse.json({ valid });
   } catch {
     return NextResponse.json({ valid: false });
   }
