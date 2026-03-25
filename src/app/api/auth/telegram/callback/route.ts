@@ -69,9 +69,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'not_configured' }, { status: 500 });
   }
 
-  const { code, redirectUri } = await request.json();
+  const { code, redirectUri, state } = await request.json();
   if (!code || !redirectUri) {
     return NextResponse.json({ error: 'missing_params' }, { status: 400 });
+  }
+
+  // CSRF validation: compare state from Telegram redirect with stored cookie
+  const storedState = request.cookies.get('tg_state')?.value;
+  if (!storedState || !state || state !== storedState) {
+    return NextResponse.json({ error: 'invalid_csrf_state' }, { status: 403 });
   }
 
   // Exchange authorization code for tokens using Basic Auth (no PKCE)

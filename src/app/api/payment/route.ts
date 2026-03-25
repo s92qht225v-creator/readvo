@@ -37,7 +37,7 @@ async function sendTelegramNotification(
 
   if (!res.ok) {
     const body = await res.text();
-    console.error('Telegram API error:', res.status, body);
+    throw new Error(`Telegram API error: ${res.status} ${body}`);
   }
 }
 
@@ -54,12 +54,20 @@ export async function POST(request: NextRequest) {
   }
 
   const formData = await request.formData();
-  const plan = formData.get('plan') as string;
-  const amount = parseInt(formData.get('amount') as string, 10);
-  const screenshot = formData.get('screenshot') as File;
+  const planVal = formData.get('plan');
+  const amountVal = formData.get('amount');
+  const screenshotVal = formData.get('screenshot');
 
-  if (!plan || !amount || !screenshot) {
-    return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  if (typeof planVal !== 'string' || typeof amountVal !== 'string' || !(screenshotVal instanceof File)) {
+    return NextResponse.json({ error: 'Missing or invalid fields' }, { status: 400 });
+  }
+
+  const plan = planVal;
+  const amount = parseInt(amountVal, 10);
+  const screenshot = screenshotVal;
+
+  if (!plan || isNaN(amount) || amount <= 0) {
+    return NextResponse.json({ error: 'Invalid plan or amount' }, { status: 400 });
   }
 
   // Validate file type
@@ -113,8 +121,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: dbError.message }, { status: 500 });
   }
 
-  // Send Telegram notification (await it so it completes before response)
-  await sendTelegramNotification(user.email!, plan, amount, screenshotUrl);
+  // Send Telegram notification — retry once on failure
+  try {
+    await sendTelegramNotification(user.email!, plan, amount, screenshotUrl);
+  } catch {
+    try {
+      await sendTelegramNotification(user.email!, plan, amount, screenshotUrl);
+    } catch (err) {
+      console.error('Telegram notification failed after retry:', err);
+      return NextResponse.json({ ok: true, warning: 'notification_failed' });
+    }
+  }
 
   return NextResponse.json({ ok: true });
 }

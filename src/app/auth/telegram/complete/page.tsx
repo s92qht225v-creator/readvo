@@ -52,12 +52,13 @@ function TelegramCompleteInner() {
 
         const origin = window.location.origin;
         const redirectUri = `${origin}/auth/telegram/complete`;
+        const state = searchParams.get('state') || '';
 
-        // Callback reads code_verifier + state from httpOnly cookies server-side
+        // Callback validates state against httpOnly tg_state cookie for CSRF protection
         const res = await fetch('/api/auth/telegram/callback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code, redirectUri }),
+          body: JSON.stringify({ code, redirectUri, state }),
         });
 
         if (!res.ok) {

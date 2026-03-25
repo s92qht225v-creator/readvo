@@ -17,7 +17,9 @@ export async function POST(request: NextRequest) {
   const formData = await request.formData();
   const audio = formData.get('audio');
   const expected = typeof formData.get('expected') === 'string' ? (formData.get('expected') as string) : '';
-  const language = typeof formData.get('language') === 'string' ? (formData.get('language') as string) : 'uz';
+  const langVal = formData.get('language');
+  const VALID_LANGS = ['uz', 'ru', 'en'];
+  const language = typeof langVal === 'string' && VALID_LANGS.includes(langVal) ? langVal : 'uz';
 
   if (!audio || !(audio instanceof Blob)) {
     return Response.json({ error: 'No audio file' }, { status: 400 });

@@ -7,6 +7,9 @@ const TOPICS_DIR = path.join(process.cwd(), 'content', 'flashcards', 'topics');
 
 export async function GET(_req: Request, { params }: { params: Promise<{ topicId: string }> }) {
   const { topicId } = await params;
+  if (!/^[a-z0-9_-]+$/.test(topicId)) {
+    return NextResponse.json({ error: 'invalid topic id' }, { status: 400 });
+  }
   const filePath = path.join(TOPICS_DIR, `${topicId}.json`);
   try {
     const content = await fs.readFile(filePath, 'utf-8');

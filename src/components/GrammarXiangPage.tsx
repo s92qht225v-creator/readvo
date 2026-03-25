@@ -1,5 +1,23 @@
 'use client';
 
+/** Safely render Chinese text with <span> highlights as React elements */
+function renderZh(html: string) {
+  const parts = html.split(/(<span[^>]*>[^<]*<\/span>)/);
+  return parts.map((part, i) => {
+    const match = part.match(/<span\s+(?:class="([^"]*)"|style="([^"]*)")>([^<]*)<\/span>/);
+    if (match) {
+      const [, className, style, text] = match;
+      if (className) return <span key={i} className={className}>{text}</span>;
+      if (style) {
+        const styleObj: Record<string, string> = {};
+        style.split(';').forEach(s => { const [k, v] = s.split(':'); if (k && v) styleObj[k.trim()] = v.trim(); });
+        return <span key={i} style={styleObj}>{text}</span>;
+      }
+    }
+    return part;
+  });
+}
+
 function playGrammarAudio(zh: string) {
   const audio = new Audio(`/audio/hsk1/grammar/${encodeURIComponent(zh)}.mp3`);
   audio.play().catch(() => {});
@@ -294,7 +312,7 @@ export function GrammarXiangPage() {
                   <div style={{ fontSize: '0.7em', fontWeight: 700, color: item.color, marginBottom: 4 }}>
                     {item.num}. {({ uz: item.title_uz, ru: item.title_ru, en: (item as any).title_en || item.title_uz } as Record<string, string>)[language]}
                   </div>
-                  <div className="grammar-block__usage-zh" dangerouslySetInnerHTML={{ __html: item.zh }} />
+                  <div className="grammar-block__usage-zh">{renderZh(item.zh)}</div>
                   <div className="grammar-block__usage-tr">{({ uz: item.uz, ru: item.ru, en: (item as any).en || item.uz } as Record<string, string>)[language]}</div>
                 </div>
               ))}

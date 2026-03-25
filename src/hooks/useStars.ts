@@ -74,21 +74,32 @@ export function useStars(sectionType: string) {
         ];
       });
 
-      // Persist
-      try {
-        const token = await getAccessToken();
-        if (!token) return;
+      // Persist (retry once on failure, revert optimistic state if both fail)
+      const token = await getAccessToken();
+      if (!token) return;
 
-        await fetch('/api/stars', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({ section_type: sectionType, section_id: sectionId, stars }),
-        });
+      const doSave = () => fetch('/api/stars', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ section_type: sectionType, section_id: sectionId, stars }),
+      });
+
+      try {
+        const res = await doSave();
+        if (!res.ok) throw new Error('save failed');
       } catch {
-        // silently fail — optimistic state remains
+        try {
+          const res = await doSave();
+          if (!res.ok) throw new Error('retry failed');
+        } catch {
+          // Revert optimistic update
+          setEntries((prev) => prev.filter(
+            (e) => !(e.section_type === sectionType && e.section_id === sectionId)
+          ));
+        }
       }
     },
     [sectionType, getAccessToken]

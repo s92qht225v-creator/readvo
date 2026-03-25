@@ -28,10 +28,11 @@ export async function GET(request: NextRequest) {
     admin.from('active_sessions').select('user_id, updated_at'),
   ]);
 
-  // Paginate through all users (listUsers returns max ~50 per page by default)
+  // Paginate through all users (capped at 10,000 to prevent unbounded fetching)
   const allUsers = [];
   let page = 1;
-  while (true) {
+  const MAX_USERS = 10_000;
+  while (allUsers.length < MAX_USERS) {
     const { data: { users: batch } } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
     allUsers.push(...batch);
     if (batch.length < 1000) break;
@@ -139,6 +140,13 @@ export async function POST(request: NextRequest) {
 
     const endsAt = new Date(sub.ends_at);
     endsAt.setDate(endsAt.getDate() + (action === 'add_days' ? days : -days));
+
+    // Prevent setting end date to more than 10 years in the future
+    const maxDate = new Date();
+    maxDate.setFullYear(maxDate.getFullYear() + 10);
+    if (endsAt > maxDate) {
+      return NextResponse.json({ error: 'Resulting end date too far in the future' }, { status: 400 });
+    }
 
     const { error } = await admin
       .from('subscriptions')
