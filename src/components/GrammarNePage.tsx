@@ -256,32 +256,6 @@ export function GrammarNePage() {
               </div>
             </div>
 
-            {/* 呢 vs 吗 comparison */}
-            <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{t('呢 va 吗 — Farq qiling!','呢 и 吗 — Не путайте!','呢 vs 吗 — Know the Difference!')}</div>
-              <div style={{ display:'flex', gap:12, justifyContent:'center' }}>
-                <div style={{ flex:1, textAlign:'center', background:'#f5f3ff', border:'2px solid #7c3aed', borderRadius:8, padding:12 }}>
-                  <div style={{ fontSize:'2.2em', color:C_NE, fontWeight:700 }}>呢</div>
-                  <div style={{ color:C_NE, fontWeight:600 }}>ne</div>
-                  <div style={{ color:'#555', fontSize:12, marginTop:2 }}>{t('neytral ton','нейтр. тон','neutral tone')}</div>
-                  <div style={{ marginTop:6, color:C_NE, fontWeight:600, fontSize:14 }}>{t('…chi? (qaytarish)','…а вы? (переспрос)','…and you? (bounce-back)')}</div>
-                </div>
-                <div style={{ flex:1, textAlign:'center', background:'#f0f9ff', border:'2px solid #0891b2', borderRadius:8, padding:12 }}>
-                  <div style={{ fontSize:'2.2em', color:C_MA, fontWeight:700 }}>吗</div>
-                  <div style={{ color:C_MA, fontWeight:600 }}>ma</div>
-                  <div style={{ color:'#555', fontSize:12, marginTop:2 }}>{t('neytral ton','нейтр. тон','neutral tone')}</div>
-                  <div style={{ marginTop:6, color:C_MA, fontWeight:600, fontSize:14 }}>{t('…mi? (ha/yo\'q savol)','…ли? (вопрос да/нет)','…? (yes/no question)')}</div>
-                </div>
-              </div>
-              <p className="grammar-block__tip-note" style={{ marginTop:10 }}>
-                💡 {t(
-                  "吗 — yangi savol beradi: «Sen talabamisanmi?» 呢 — avvalgi gapni qaytaradi: «Men talabaman. Sizchi?» Ikkalasi gap oxiriga qo'yiladi, lekin vazifasi boshqa!",
-                  "吗 — задаёт новый вопрос: «Ты студент?» 呢 — возвращает предыдущий контекст: «Я студент. А вы?» Обе частицы ставятся в конец, но функции разные!",
-                  "吗 asks a new question: \"Are you a student?\" 呢 bounces back the previous context: \"I'm a student. And you?\" Both go at the end, but serve different purposes!",
-                )}
-              </p>
-            </div>
-
             {/* 呢 nima */}
             <div className="grammar-block grammar-block--tip">
               <div className="grammar-block__label">{t('呢 nima?','呢 — что это?','What is 呢?')}</div>
@@ -330,6 +304,32 @@ export function GrammarNePage() {
                   "呢 hech qachon yakka ishlatilmaydi — oldin darak gap bo'lishi kerak. Suhbatdosh kontekstdan tushunadi.",
                   "呢 никогда не используется отдельно — перед ним должно быть утверждение. Собеседник понимает из контекста.",
                   "呢 is never used alone — there must be a statement before it. The listener understands from context.",
+                )}
+              </p>
+            </div>
+
+            {/* 呢 vs 吗 comparison */}
+            <div className="grammar-block grammar-block--tip">
+              <div className="grammar-block__label">{t('呢 va 吗 — Farq qiling!','呢 и 吗 — Не путайте!','呢 vs 吗 — Know the Difference!')}</div>
+              <div style={{ display:'flex', gap:12, justifyContent:'center' }}>
+                <div style={{ flex:1, textAlign:'center', background:'#f5f3ff', border:'2px solid #7c3aed', borderRadius:8, padding:12 }}>
+                  <div style={{ fontSize:'2.2em', color:C_NE, fontWeight:700 }}>呢</div>
+                  <div style={{ color:C_NE, fontWeight:600 }}>ne</div>
+                  <div style={{ color:'#555', fontSize:12, marginTop:2 }}>{t('neytral ton','нейтр. тон','neutral tone')}</div>
+                  <div style={{ marginTop:6, color:C_NE, fontWeight:600, fontSize:14 }}>{t('…chi? (qaytarish)','…а вы? (переспрос)','…and you? (bounce-back)')}</div>
+                </div>
+                <div style={{ flex:1, textAlign:'center', background:'#f0f9ff', border:'2px solid #0891b2', borderRadius:8, padding:12 }}>
+                  <div style={{ fontSize:'2.2em', color:C_MA, fontWeight:700 }}>吗</div>
+                  <div style={{ color:C_MA, fontWeight:600 }}>ma</div>
+                  <div style={{ color:'#555', fontSize:12, marginTop:2 }}>{t('neytral ton','нейтр. тон','neutral tone')}</div>
+                  <div style={{ marginTop:6, color:C_MA, fontWeight:600, fontSize:14 }}>{t('…mi? (ha/yo\'q savol)','…ли? (вопрос да/нет)','…? (yes/no question)')}</div>
+                </div>
+              </div>
+              <p className="grammar-block__tip-note" style={{ marginTop:10 }}>
+                💡 {t(
+                  "吗 — yangi savol beradi: «Sen talabamisanmi?» 呢 — avvalgi gapni qaytaradi: «Men talabaman. Sizchi?» Ikkalasi gap oxiriga qo'yiladi, lekin vazifasi boshqa!",
+                  "吗 — задаёт новый вопрос: «Ты студент?» 呢 — возвращает предыдущий контекст: «Я студент. А вы?» Обе частицы ставятся в конец, но функции разные!",
+                  "吗 asks a new question: \"Are you a student?\" 呢 bounces back the previous context: \"I'm a student. And you?\" Both go at the end, but serve different purposes!",
                 )}
               </p>
             </div>
