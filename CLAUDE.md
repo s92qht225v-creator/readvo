@@ -36,7 +36,7 @@ All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect 
 /{locale}/chinese/hsk1/dialogues/[dialogueId] # Dialogue reader page (uses StoryReader)
 /{locale}/chinese/hsk1/karaoke/[songId]     # Karaoke player page
 /{locale}/chinese/hsk1/writing/[setId]      # Writing practice page (per character set)
-/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (20 slugs)
+/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (7 slugs)
 /{locale}/chinese/hsk2/flashcards/[lessonId] # HSK 2 flashcard practice
 /{locale}/chinese/hsk3/flashcards/[lessonId] # HSK 3 flashcard practice
 /{locale}/login                             # Login page
@@ -449,7 +449,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Traditional→Simplified**: `TRAD_TO_SIMP` map normalizes Whisper output (Whisper sometimes returns traditional characters)
 - **Silence detection**: Client-side (blob < 3KB) + server-side (empty text after normalization OR `noSpeechProb > 0.6` from Groq `verbose_json`)
 - **Trilingual UI**: All 40+ UI strings in UZ/RU/EN via inline `Record<Language, string>` pattern
-- **Used in 6 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪)
+- **Used in 7 grammar pages**: GrammarShiPage (是), GrammarMaPage (吗), GrammarDePage (的), GrammarSheiPage (谁), GrammarShenmePage (什么), GrammarNaPage (哪), GrammarNePage (呢)
 - **Question format**: `{ uz: string; zh: string; pinyin: string }` — each grammar page defines its own `speakingQuestionsData` array
 - **Env vars**: `OPENAI_API_KEY` (GPT-4o Transcribe + answer grading + post-correction), `GROQ_API_KEY` (whisper-large-v3 fallback)
 
