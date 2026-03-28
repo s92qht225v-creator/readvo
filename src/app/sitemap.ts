@@ -48,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   entries.push(...localeEntries('/chinese/hsk1/dialogues', { changeFrequency: 'monthly', priority: 0.6 }));
 
   // Grammar pages
-  for (const slug of ['shenme', 'shi', 'ma', 'shei', 'na', 'de', 'ne', 'ji', 'shuzi']) {
+  for (const slug of ['shenme', 'shi', 'ma', 'shei', 'na', 'de', 'ne', 'ji', 'shuzi', 'duoda']) {
     entries.push(...localeEntries(`/chinese/hsk1/grammar/${slug}`, { changeFrequency: 'monthly', priority: 0.7 }));
   }
 

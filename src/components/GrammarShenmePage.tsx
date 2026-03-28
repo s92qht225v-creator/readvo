@@ -1,14 +1,7 @@
 'use client';
 
-let _ga: HTMLAudioElement | null = null;
-function playGrammarAudio(zh: string) {
-  if (!_ga) _ga = new Audio();
-  _ga.src = `/audio/hsk1/grammar/${encodeURIComponent(zh)}.mp3`;
-  _ga.currentTime = 0;
-  _ga.play().catch(() => {});
-}
-
 import React, { useState } from 'react';
+import { playGrammarAudio } from '@/utils/grammarAudio';
 import { Link, useRouter } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useStars } from '../hooks/useStars';
