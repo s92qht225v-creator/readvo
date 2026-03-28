@@ -16,9 +16,11 @@ import { SpeakingMashq } from './SpeakingMashq';
 import { calculateStars } from '@/utils/calculateStars';
 
 const C_NUM  = '#f59e0b'; // Numbers (amber — featured)
-const C_SUB  = '#3b82f6'; // Subject
-const C_VERB = '#1d4ed8'; // Verb
-const C_OBJ  = '#dc2626'; // Object/Noun
+const C_SUB  = '#16a34a'; // Subject / context (green)
+const C_VERB = '#1d4ed8'; // Verb (blue)
+const C_JI   = '#059669'; // 几 (emerald)
+const C_OBJ  = '#dc2626'; // Object / Noun (red)
+const C_NE   = '#7c3aed'; // 呢 / 两 (violet)
 const C_PUNC = '#888';    // Punctuation
 
 const speakingQuestionsData = [
@@ -32,7 +34,7 @@ const speakingQuestionsData = [
 
 const sections = [
   { id: 'intro',    uz: 'Asosiy',   ru: 'Основное', en: 'Overview'  },
-  { id: 'usage',    uz: 'Shablon',  ru: 'Шаблоны',  en: 'Patterns'  },
+  { id: 'usage',    uz: 'Raqamlar', ru: 'Числа',    en: 'Numbers'   },
   { id: 'examples', uz: 'Misollar', ru: 'Примеры',  en: 'Examples'  },
   { id: 'dialog',   uz: 'Dialog',   ru: 'Диалог',   en: 'Dialogue'  },
   { id: 'quiz',     uz: 'Mashq',    ru: 'Тест',     en: 'Quiz'      },
@@ -40,117 +42,100 @@ const sections = [
 
 type Part = { text: string; color: string };
 
-const numbersTable = [
-  { char: '一', pinyin: 'yī', num: 1 },
-  { char: '二', pinyin: 'èr', num: 2 },
-  { char: '三', pinyin: 'sān', num: 3 },
-  { char: '四', pinyin: 'sì', num: 4 },
-  { char: '五', pinyin: 'wǔ', num: 5 },
-  { char: '六', pinyin: 'liù', num: 6 },
-  { char: '七', pinyin: 'qī', num: 7 },
-  { char: '八', pinyin: 'bā', num: 8 },
-  { char: '九', pinyin: 'jiǔ', num: 9 },
-  { char: '十', pinyin: 'shí', num: 10 },
+const ones = [
+  { n:'一', py:'yī',  uz:'bir',     ru:'один',  en:'one' },
+  { n:'二', py:'èr',  uz:'ikki',    ru:'два',   en:'two' },
+  { n:'三', py:'sān', uz:'uch',     ru:'три',   en:'three' },
+  { n:'四', py:'sì',  uz:"to'rt",   ru:'четыре',en:'four' },
+  { n:'五', py:'wǔ',  uz:'besh',    ru:'пять',  en:'five' },
+  { n:'六', py:'liù', uz:'olti',    ru:'шесть', en:'six' },
+  { n:'七', py:'qī',  uz:'yetti',   ru:'семь',  en:'seven' },
+  { n:'八', py:'bā',  uz:'sakkiz',  ru:'восемь',en:'eight' },
+  { n:'九', py:'jiǔ', uz:"to'qqiz", ru:'девять',en:'nine' },
+  { n:'十', py:'shí', uz:"o'n",     ru:'десять',en:'ten' },
 ];
 
 const examples: { parts: Part[]; pinyin: string; uz: string; ru: string; en: string; note_uz: string; note_ru: string; note_en: string }[] = [
   {
-    parts:[{text:'我',color:C_SUB},{text:'今年',color:C_VERB},{text:'二十五',color:C_NUM},{text:'岁。',color:C_OBJ}],
-    pinyin:'Wǒ jīnnián èrshíwǔ suì.',
-    uz:'Men bu yil yigirma besh yoshdaman.',       ru:'Мне в этом году двадцать пять лет.',      en:"I'm twenty-five years old this year.",
-    note_uz:'二十五 (èrshíwǔ) = 2×10+5 = 25 · 岁 (suì) = yosh',
-    note_ru:'二十五 (èrshíwǔ) = 2×10+5 = 25 · 岁 (suì) = лет',
-    note_en:'二十五 (èrshíwǔ) = 2×10+5 = 25 · 岁 (suì) = years old',
+    parts:[{text:'我家有',color:C_SUB},{text:'三',color:C_NUM},{text:'个人。',color:C_OBJ}],
+    pinyin:'Wǒ jiā yǒu sān gè rén.',
+    uz:'Oilamda uch kishi bor.',               ru:'В моей семье три человека.',              en:'My family has three people.',
+    note_uz:'三 (sān) = uch · 个 (gè) = son-o\'lchov so\'zi',
+    note_ru:'三 (sān) = три · 个 (gè) = счётное слово',
+    note_en:'三 (sān) = three · 个 (gè) = measure word',
   },
   {
-    parts:[{text:'他',color:C_SUB},{text:'有',color:C_VERB},{text:'三十',color:C_NUM},{text:'本',color:C_PUNC},{text:'书。',color:C_OBJ}],
-    pinyin:'Tā yǒu sānshí běn shū.',
-    uz:'Uning o\'ttizta kitobi bor.',               ru:'У него тридцать книг.',                  en:'He has thirty books.',
-    note_uz:'三十 (sānshí) = 3×10 = 30 · 本 (běn) = kitob son-o\'lchov so\'zi',
-    note_ru:'三十 (sānshí) = 3×10 = 30 · 本 (běn) = счётное слово для книг',
-    note_en:'三十 (sānshí) = 3×10 = 30 · 本 (běn) = measure word for books',
+    parts:[{text:'我有',color:C_SUB},{text:'两',color:C_NE},{text:'个朋友。',color:C_OBJ}],
+    pinyin:'Wǒ yǒu liǎng gè péngyǒu.',
+    uz:'Menda ikki do\'st bor.',                ru:'У меня два друга.',                       en:'I have two friends.',
+    note_uz:'两 (liǎng) = ikki — son-o\'lchov so\'zi bilan: 两个, 两本…',
+    note_ru:'两 (liǎng) = два — со счётным словом: 两个, 两本…',
+    note_en:'两 (liǎng) = two — with measure words: 两个, 两本…',
   },
   {
-    parts:[{text:'现在',color:C_SUB},{text:'八点',color:C_NUM},{text:'十五',color:C_NUM},{text:'分。',color:C_OBJ}],
-    pinyin:'Xiànzài bā diǎn shíwǔ fēn.',
-    uz:'Hozir soat sakkiz o\'n besh.',              ru:'Сейчас восемь часов пятнадцать минут.',   en:"It's 8:15 now.",
-    note_uz:'八 (bā) = 8 · 十五 (shíwǔ) = 15 · 分 (fēn) = daqiqa',
-    note_ru:'八 (bā) = 8 · 十五 (shíwǔ) = 15 · 分 (fēn) = минут',
-    note_en:'八 (bā) = 8 · 十五 (shíwǔ) = 15 · 分 (fēn) = minutes',
+    parts:[{text:'现在',color:C_SUB},{text:'八',color:C_NUM},{text:'点。',color:C_OBJ}],
+    pinyin:'Xiànzài bā diǎn.',
+    uz:'Hozir soat sakkiz.',                   ru:'Сейчас восемь часов.',                   en:"It's eight o'clock.",
+    note_uz:'八 (bā) = sakkiz · 点 (diǎn) = soat',
+    note_ru:'八 (bā) = восемь · 点 (diǎn) = час',
+    note_en:'八 (bā) = eight · 点 (diǎn) = o\'clock',
   },
   {
-    parts:[{text:'我们班',color:C_SUB},{text:'有',color:C_VERB},{text:'四十',color:C_NUM},{text:'个',color:C_PUNC},{text:'学生。',color:C_OBJ}],
-    pinyin:'Wǒmen bān yǒu sìshí gè xuéshēng.',
-    uz:'Bizning sinfda qirqta talaba bor.',         ru:'В нашем классе сорок студентов.',         en:'Our class has forty students.',
-    note_uz:'四十 (sìshí) = 4×10 = 40 · 个 (gè) = umumiy son-o\'lchov so\'zi',
-    note_ru:'四十 (sìshí) = 4×10 = 40 · 个 (gè) = универсальное счётное слово',
-    note_en:'四十 (sìshí) = 4×10 = 40 · 个 (gè) = general measure word',
+    parts:[{text:'我今年',color:C_SUB},{text:'二十',color:C_NUM},{text:'岁。',color:C_OBJ}],
+    pinyin:'Wǒ jīnnián èrshí suì.',
+    uz:'Men bu yil yigirma yoshdaman.',         ru:'Мне в этом году двадцать лет.',           en:"I'm twenty years old this year.",
+    note_uz:'今年 (jīnnián) = bu yil · 二十 (èrshí) = yigirma · 岁 (suì) = yosh',
+    note_ru:'今年 (jīnnián) = в этом году · 二十 (èrshí) = двадцать · 岁 (suì) = лет',
+    note_en:'今年 (jīnnián) = this year · 二十 (èrshí) = twenty · 岁 (suì) = years old',
   },
   {
-    parts:[{text:'这个苹果',color:C_OBJ},{text:'五',color:C_NUM},{text:'块',color:C_PUNC},{text:'钱。',color:C_OBJ}],
-    pinyin:'Zhège píngguǒ wǔ kuài qián.',
-    uz:'Bu olma besh yuan.',                        ru:'Это яблоко стоит пять юаней.',            en:'This apple costs five yuan.',
-    note_uz:'五 (wǔ) = 5 · 块 (kuài) = yuan (pul birligi)',
-    note_ru:'五 (wǔ) = 5 · 块 (kuài) = юань (денежная единица)',
-    note_en:'五 (wǔ) = 5 · 块 (kuài) = yuan (currency unit)',
+    parts:[{text:'这个',color:C_SUB},{text:'是',color:C_VERB},{text:'五',color:C_NUM},{text:'块钱。',color:C_OBJ}],
+    pinyin:'Zhège shì wǔ kuài qián.',
+    uz:'Bu besh yuan.',                         ru:'Это пять юаней.',                         en:'This is five yuan.',
+    note_uz:'块 (kuài) = yuan (pul birligi) · 钱 (qián) = pul',
+    note_ru:'块 (kuài) = юань (денежная единица) · 钱 (qián) = деньги',
+    note_en:'块 (kuài) = yuan (currency unit) · 钱 (qián) = money',
   },
   {
-    parts:[{text:'她',color:C_SUB},{text:'今年',color:C_VERB},{text:'十八',color:C_NUM},{text:'岁。',color:C_OBJ}],
-    pinyin:'Tā jīnnián shíbā suì.',
-    uz:'U bu yil o\'n sakkiz yoshda.',              ru:'Ей в этом году восемнадцать лет.',        en:"She's eighteen this year.",
-    note_uz:'十八 (shíbā) = 10+8 = 18',
-    note_ru:'十八 (shíbā) = 10+8 = 18',
-    note_en:'十八 (shíbā) = 10+8 = 18',
+    parts:[{text:'今天',color:C_SUB},{text:'十五',color:C_NUM},{text:'号。',color:C_OBJ}],
+    pinyin:'Jīntiān shíwǔ hào.',
+    uz:'Bugun o\'n beshinchi (sana).',           ru:'Сегодня пятнадцатое число.',              en:"Today is the 15th.",
+    note_uz:'号 (hào) = sana/raqam · 十五 = 10+5',
+    note_ru:'号 (hào) = число/дата · 十五 = 10+5',
+    note_en:'号 (hào) = date/number · 十五 = 10+5',
   },
   {
-    parts:[{text:'我',color:C_SUB},{text:'买了',color:C_VERB},{text:'二十',color:C_NUM},{text:'个',color:C_PUNC},{text:'苹果。',color:C_OBJ}],
-    pinyin:'Wǒ mǎi le èrshí gè píngguǒ.',
-    uz:'Men yigirmata olma sotib oldim.',            ru:'Я купил двадцать яблок.',                 en:'I bought twenty apples.',
-    note_uz:'二十 (èrshí) = 2×10 = 20 · 买了 (mǎi le) = sotib oldi',
-    note_ru:'二十 (èrshí) = 2×10 = 20 · 买了 (mǎi le) = купил',
-    note_en:'二十 (èrshí) = 2×10 = 20 · 买了 (mǎi le) = bought',
+    parts:[{text:'我买了',color:C_SUB},{text:'三十',color:C_NUM},{text:'个苹果。',color:C_OBJ}],
+    pinyin:'Wǒ mǎi le sānshí gè píngguǒ.',
+    uz:'Men o\'ttiz ta olma sotib oldim.',       ru:'Я купил тридцать яблок.',                 en:'I bought thirty apples.',
+    note_uz:'三十 (sānshí) = o\'ttiz · 苹果 (píngguǒ) = olma',
+    note_ru:'三十 (sānshí) = тридцать · 苹果 (píngguǒ) = яблоко',
+    note_en:'三十 (sānshí) = thirty · 苹果 (píngguǒ) = apple',
   },
-];
-
-type PatternRow = { parts: Part[]; py: string; uz: string; ru: string; en: string };
-
-const pattern1Rows: PatternRow[] = [
-  { parts:[{text:'十一',color:C_NUM}], py:'shíyī', uz:'11 (o\'n bir)', ru:'11 (одиннадцать)', en:'11 (eleven)' },
-  { parts:[{text:'十二',color:C_NUM}], py:'shíèr', uz:'12 (o\'n ikki)', ru:'12 (двенадцать)', en:'12 (twelve)' },
-  { parts:[{text:'十五',color:C_NUM}], py:'shíwǔ', uz:'15 (o\'n besh)', ru:'15 (пятнадцать)', en:'15 (fifteen)' },
-  { parts:[{text:'十九',color:C_NUM}], py:'shíjiǔ', uz:'19 (o\'n to\'qqiz)', ru:'19 (девятнадцать)', en:'19 (nineteen)' },
-];
-
-const pattern2Rows: PatternRow[] = [
-  { parts:[{text:'二十',color:C_NUM}], py:'èrshí', uz:'20 (yigirma)', ru:'20 (двадцать)', en:'20 (twenty)' },
-  { parts:[{text:'三十',color:C_NUM}], py:'sānshí', uz:'30 (o\'ttiz)', ru:'30 (тридцать)', en:'30 (thirty)' },
-  { parts:[{text:'五十',color:C_NUM}], py:'wǔshí', uz:'50 (ellik)', ru:'50 (пятьдесят)', en:'50 (fifty)' },
-  { parts:[{text:'九十',color:C_NUM}], py:'jiǔshí', uz:'90 (to\'qson)', ru:'90 (девяносто)', en:'90 (ninety)' },
-];
-
-const pattern3Rows: PatternRow[] = [
-  { parts:[{text:'二十一',color:C_NUM}], py:'èrshíyī', uz:'21 (yigirma bir)', ru:'21 (двадцать один)', en:'21 (twenty-one)' },
-  { parts:[{text:'三十五',color:C_NUM}], py:'sānshíwǔ', uz:'35 (o\'ttiz besh)', ru:'35 (тридцать пять)', en:'35 (thirty-five)' },
-  { parts:[{text:'六十八',color:C_NUM}], py:'liùshíbā', uz:'68 (oltmish sakkiz)', ru:'68 (шестьдесят восемь)', en:'68 (sixty-eight)' },
-  { parts:[{text:'九十九',color:C_NUM}], py:'jiǔshíjiǔ', uz:'99 (to\'qson to\'qqiz)', ru:'99 (девяносто девять)', en:'99 (ninety-nine)' },
+  {
+    parts:[{text:'我们班有',color:C_SUB},{text:'四十五',color:C_NUM},{text:'个学生。',color:C_OBJ}],
+    pinyin:'Wǒmen bān yǒu sìshíwǔ gè xuéshēng.',
+    uz:'Sinfimizda qirq besh talaba bor.',       ru:'В нашем классе сорок пять студентов.',    en:'Our class has forty-five students.',
+    note_uz:'班 (bān) = sinf · 四十五 = 40+5',
+    note_ru:'班 (bān) = класс · 四十五 = 40+5',
+    note_en:'班 (bān) = class · 四十五 = 40+5',
+  },
 ];
 
 const dialog1: { s: string; parts: Part[]; py: string; uz: string; ru: string; en: string }[] = [
-  { s:'A', parts:[{text:'这个苹果',color:C_OBJ},{text:'多少',color:C_NUM},{text:'钱？',color:C_OBJ}], py:'Zhège píngguǒ duōshǎo qián?', uz:'Bu olma necha pul?', ru:'Сколько стоит это яблоко?', en:'How much is this apple?' },
-  { s:'B', parts:[{text:'五',color:C_NUM},{text:'块。',color:C_OBJ}], py:'Wǔ kuài.', uz:'Besh yuan.', ru:'Пять юаней.', en:'Five yuan.' },
-  { s:'A', parts:[{text:'我',color:C_SUB},{text:'要',color:C_VERB},{text:'三',color:C_NUM},{text:'个。',color:C_OBJ}], py:'Wǒ yào sān gè.', uz:'Menga uchta kerak.', ru:'Мне нужно три.', en:'I want three.' },
-  { s:'B', parts:[{text:'好，一共',color:C_VERB},{text:'十五',color:C_NUM},{text:'块。',color:C_OBJ}], py:'Hǎo, yīgòng shíwǔ kuài.', uz:'Xo\'p, hammasi bo\'lib o\'n besh yuan.', ru:'Хорошо, всего пятнадцать юаней.', en:'OK, fifteen yuan in total.' },
-  { s:'A', parts:[{text:'给你',color:C_VERB},{text:'二十',color:C_NUM},{text:'块。',color:C_OBJ}], py:'Gěi nǐ èrshí kuài.', uz:'Mana yigirma yuan.', ru:'Вот двадцать юаней.', en:'Here\'s twenty yuan.' },
-  { s:'B', parts:[{text:'找你',color:C_VERB},{text:'五',color:C_NUM},{text:'块。',color:C_OBJ}], py:'Zhǎo nǐ wǔ kuài.', uz:'Qaytim besh yuan.', ru:'Сдача пять юаней.', en:'Five yuan change.' },
+  { s:'A', parts:[{text:'你家有',color:C_SUB},{text:'几个',color:C_JI},{text:'人',color:C_OBJ},{text:'？',color:C_PUNC}], py:'Nǐ jiā yǒu jǐ gè rén?', uz:'Oilangda necha kishi bor?', ru:'Сколько человек в вашей семье?', en:'How many people in your family?' },
+  { s:'B', parts:[{text:'我家有',color:C_SUB},{text:'四',color:C_NUM},{text:'个人。',color:C_OBJ}], py:'Wǒ jiā yǒu sì gè rén.', uz:"Oilamda to'rt kishi bor.", ru:'В моей семье четыре человека.', en:'My family has four people.' },
+  { s:'A', parts:[{text:'你有',color:C_SUB},{text:'几本',color:C_JI},{text:'汉语书',color:C_OBJ},{text:'？',color:C_PUNC}], py:'Nǐ yǒu jǐ běn Hànyǔ shū?', uz:'Sizda nechta xitoy tili kitobi bor?', ru:'Сколько у вас учебников китайского?', en:'How many Chinese books do you have?' },
+  { s:'B', parts:[{text:'我有',color:C_SUB},{text:'两',color:C_NE},{text:'本。你',color:C_OBJ},{text:'呢',color:C_NE},{text:'？',color:C_PUNC}], py:'Wǒ yǒu liǎng běn. Nǐ ne?', uz:'Menda ikkita bor. Sizchi?', ru:'У меня две. А у вас?', en:'I have two. And you?' },
+  { s:'A', parts:[{text:'我有',color:C_SUB},{text:'三',color:C_NUM},{text:'本。',color:C_OBJ}], py:'Wǒ yǒu sān běn.', uz:'Menda uchta bor.', ru:'У меня три.', en:'I have three.' },
 ];
 
 const dialog2: { s: string; parts: Part[]; py: string; uz: string; ru: string; en: string }[] = [
-  { s:'A', parts:[{text:'你',color:C_SUB},{text:'今年',color:C_VERB},{text:'多大？',color:C_NUM}], py:'Nǐ jīnnián duō dà?', uz:'Bu yil necha yoshdasiz?', ru:'Сколько вам лет в этом году?', en:'How old are you this year?' },
-  { s:'B', parts:[{text:'我',color:C_SUB},{text:'今年',color:C_VERB},{text:'二十三',color:C_NUM},{text:'岁。',color:C_OBJ}], py:'Wǒ jīnnián èrshísān suì.', uz:'Men bu yil yigirma uch yoshdaman.', ru:'Мне в этом году двадцать три года.', en:"I'm twenty-three this year." },
-  { s:'A', parts:[{text:'你家',color:C_SUB},{text:'有',color:C_VERB},{text:'几',color:C_NUM},{text:'个',color:C_PUNC},{text:'人？',color:C_OBJ}], py:'Nǐ jiā yǒu jǐ gè rén?', uz:'Oilangizda necha kishi bor?', ru:'Сколько человек в вашей семье?', en:'How many people in your family?' },
-  { s:'B', parts:[{text:'五',color:C_NUM},{text:'个人。',color:C_OBJ}], py:'Wǔ gè rén.', uz:'Beshta kishi.', ru:'Пять человек.', en:'Five people.' },
-  { s:'A', parts:[{text:'你',color:C_SUB},{text:'有',color:C_VERB},{text:'几',color:C_NUM},{text:'个',color:C_PUNC},{text:'兄弟姐妹？',color:C_OBJ}], py:'Nǐ yǒu jǐ gè xiōngdì jiěmèi?', uz:'Sizning nechta aka-uka, opa-singilingiz bor?', ru:'Сколько у вас братьев и сестёр?', en:'How many siblings do you have?' },
-  { s:'B', parts:[{text:'我',color:C_SUB},{text:'有',color:C_VERB},{text:'两',color:C_NUM},{text:'个',color:C_PUNC},{text:'姐姐。',color:C_OBJ}], py:'Wǒ yǒu liǎng gè jiějie.', uz:'Mening ikkita opam bor.', ru:'У меня две старшие сестры.', en:'I have two older sisters.' },
+  { s:'A', parts:[{text:'现在',color:C_SUB},{text:'几点',color:C_JI},{text:'？',color:C_PUNC}], py:'Xiànzài jǐ diǎn?', uz:'Hozir soat necha?', ru:'Который сейчас час?', en:'What time is it now?' },
+  { s:'B', parts:[{text:'现在',color:C_SUB},{text:'十一',color:C_NUM},{text:'点。',color:C_OBJ}], py:'Xiànzài shíyī diǎn.', uz:"Hozir o'n bir.", ru:'Сейчас одиннадцать часов.', en:"It's eleven o'clock." },
+  { s:'A', parts:[{text:'这个多少钱',color:C_SUB},{text:'？',color:C_PUNC}], py:'Zhège duōshǎo qián?', uz:'Bu qancha?', ru:'Сколько это стоит?', en:'How much is this?' },
+  { s:'B', parts:[{text:'三十五',color:C_NUM},{text:'块。',color:C_OBJ}], py:'Sānshíwǔ kuài.', uz:"O'ttiz besh yuan.", ru:'Тридцать пять юаней.', en:'Thirty-five yuan.' },
+  { s:'A', parts:[{text:'很贵！',color:C_SUB}], py:'Hěn guì!', uz:'Qimmat!', ru:'Дорого!', en:'Expensive!' },
 ];
 
 function ColorParts({ parts }: { parts: Part[] }) {
@@ -163,6 +148,35 @@ function ColorParts({ parts }: { parts: Part[] }) {
       ))}
     </span>
   );
+}
+
+/* ── Number builder helpers ── */
+const uzTens = ['','o\'n','yigirma','o\'ttiz','qirq','ellik','oltmish','yetmish','sakson','to\'qson'];
+const uzOnes = ['','bir','ikki','uch','to\'rt','besh','olti','yetti','sakkiz','to\'qqiz'];
+const ruTens = ['','десять','двадцать','тридцать','сорок','пятьдесят','шестьдесят','семьдесят','восемьдесят','девяносто'];
+const ruOnes = ['','один','два','три','четыре','пять','шесть','семь','восемь','девять'];
+const enTens = ['','ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+const enOnes = ['','one','two','three','four','five','six','seven','eight','nine'];
+const enTeens: Record<number,string> = {11:'eleven',12:'twelve',13:'thirteen',14:'fourteen',15:'fifteen',16:'sixteen',17:'seventeen',18:'eighteen',19:'nineteen'};
+const ruTeens: Record<number,string> = {11:'одиннадцать',12:'двенадцать',13:'тринадцать',14:'четырнадцать',15:'пятнадцать',16:'шестнадцать',17:'семнадцать',18:'восемнадцать',19:'девятнадцать'};
+
+function buildNumber(tens: number, onesD: number | null) {
+  const o = onesD || 0;
+  const num = tens * 10 + o;
+  const zh = tens === 1
+    ? (o ? `十${ones[o - 1].n}` : '十')
+    : o ? `${ones[tens - 1].n}十${ones[o - 1].n}` : `${ones[tens - 1].n}十`;
+  const py = tens === 1
+    ? (o ? `shí${ones[o - 1].py}` : 'shí')
+    : o ? `${ones[tens - 1].py}shí${ones[o - 1].py}` : `${ones[tens - 1].py}shí`;
+  const uz = tens === 1
+    ? (o ? `o'n ${uzOnes[o]}` : 'o\'n')
+    : o ? `${uzTens[tens]} ${uzOnes[o]}` : uzTens[tens];
+  const ru = (num >= 11 && num <= 19) ? ruTeens[num]
+    : o ? `${ruTens[tens]} ${ruOnes[o]}` : ruTens[tens];
+  const en = (num >= 11 && num <= 19) ? enTeens[num]
+    : o ? `${enTens[tens]}-${enOnes[o]}` : enTens[tens];
+  return { zh, py, num, uz, ru, en };
 }
 
 export function GrammarShuziPage() {
@@ -185,6 +199,9 @@ export function GrammarShuziPage() {
   const [expandedEx, setExpandedEx] = useState<number | null>(null);
   const [rev1, setRev1] = useState<Record<number, boolean>>({});
   const [rev2, setRev2] = useState<Record<number, boolean>>({});
+  // Number builder
+  const [builtTens, setBuiltTens] = useState<number | null>(null);
+  const [builtOnes, setBuiltOnes] = useState<number | null>(null);
 
   if (isLoading) return <div className="loading-spinner" />;
 
@@ -194,11 +211,13 @@ export function GrammarShuziPage() {
   const t = (uz: string, ru: string, en: string) =>
     ({ uz, ru, en } as Record<string, string>)[language] ?? uz;
 
+  const built = builtTens !== null && builtOnes !== null ? buildNumber(builtTens, builtOnes) : null;
+
   return (
     <div className="grammar-page">
       {/* Hero */}
       <div className="dr-hero">
-        <div className="dr-hero__watermark">数</div>
+        <div className="dr-hero__watermark" style={{ fontSize:120, letterSpacing:8 }}>一二三</div>
         <div className="dr-hero__top-row">
             <Link href="/chinese?tab=grammar" className="dr-back-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -209,10 +228,10 @@ export function GrammarShuziPage() {
           <div className="dr-hero__level">
             HSK 1 · {t('Grammatika','Грамматика','Grammar')}
           </div>
-          <h1 className="dr-hero__title">数字 1-99</h1>
-          <div className="dr-hero__pinyin">shùzì</div>
+          <h1 className="dr-hero__title" style={{ fontSize:42, letterSpacing:6, fontWeight:300 }}>一 — 九十九</h1>
+          <div className="dr-hero__pinyin">yī — jiǔshíjiǔ</div>
           <div className="dr-hero__translation">
-            — {t('sonlar','числа','numbers')} —
+            — {t('1 dan 99 gacha','от 1 до 99','from 1 to 99')} —
           </div>
         </div>
       </div>
@@ -233,97 +252,52 @@ export function GrammarShuziPage() {
 
       <div className="grammar-page__content">
 
-        {/* -- ASOSIY -- */}
+        {/* ── ASOSIY ── */}
         {activeTab === 'intro' && (
           <>
-            {/* Character info */}
+            {/* 1–10 grid */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t('Ieroglif','Иероглиф','Character')}</div>
-              <div className="grammar-block__char-row">
-                <div className="grammar-block__big-char">一</div>
-                <div className="grammar-block__char-info">
-                  <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">Pinyin</span>
-                    <span className="grammar-block__info-val">yī</span>
-                  </div>
-                  <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{t('Ton','Тон','Tone')}</span>
-                    <span className="grammar-block__tone">{t("1-ton (tekis-baland) ā","1-й тон (высокий ровный) ā","1st tone (high level) ā")}</span>
-                  </div>
-                  <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{t('Chiziqlar','Черт','Strokes')}</span>
-                    <span className="grammar-block__info-val">1</span>
-                  </div>
-                  <div className="grammar-block__info-row">
-                    <span className="grammar-block__info-key">{t("Ma'nosi",'Перевод','Meaning')}</span>
-                    <span className="grammar-block__info-val">{t('bir (1)','один (1)','one (1)')}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* What are Chinese numbers? */}
-            <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{t('Xitoy raqamlari nima?','Что такое китайские числа?','What are Chinese numbers?')}</div>
-              <p className="grammar-block__tip-text">
-                {t(
-                  "Xitoy tilida raqamlar juda oddiy tizimga ega — faqat 一 dan 十 gacha o'rgansangiz, 1 dan 99 gacha hamma sonni tuzishingiz mumkin. Bu o'zbek tilidagi «o'n bir, o'n ikki, yigirma bir» ga o'xshaydi — lekin yanada mantiqiyroq!",
-                  'Китайская система чисел очень логична — выучив всего 10 иероглифов (от 一 до 十), вы сможете составить любое число от 1 до 99. Это похоже на русские «одиннадцать, двенадцать, двадцать один» — но ещё проще!',
-                  "Chinese numbers follow a beautifully simple system — learn just 10 characters (一 to 十) and you can form any number from 1 to 99. Unlike English with its irregular \"eleven, twelve, thirteen\", Chinese is perfectly logical!",
-                )}
-              </p>
-            </div>
-
-            {/* Numbers 1-10 table */}
-            <div className="grammar-block">
-              <div className="grammar-block__label">{t('1-10 raqamlar','Числа 1-10','Numbers 1-10')}</div>
+              <div className="grammar-block__label">1 — 10</div>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(5, 1fr)', gap:8 }}>
-                {numbersTable.map(n => (
-                  <div key={n.num} style={{ textAlign:'center', background:'#fffbeb', border:'1px solid #fde68a', borderRadius:8, padding:'10px 4px' }}>
-                    <button type="button" onClick={() => playGrammarAudio(n.char)} style={{width:28,height:28,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',padding:0,margin:'0 auto 4px'}} aria-label="Play">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
-                    </button>
-                    <div style={{ fontSize:28, fontWeight:700, color:C_NUM }}>{n.char}</div>
-                    <div style={{ fontSize:11, color:'#92400e', marginTop:2 }}>{n.pinyin}</div>
-                    <div style={{ fontSize:12, color:'#888', fontWeight:600 }}>{n.num}</div>
+                {ones.map((o, i) => (
+                  <div key={i} style={{ textAlign:'center', background:'#fffbeb', border:'1px solid #fde68a', borderRadius:8, padding:'10px 4px', cursor:'pointer', userSelect:'none' }}
+                    onClick={() => playGrammarAudio(o.n)}>
+                    <div style={{ fontSize:28, fontWeight:700, color:C_NUM }}>{o.n}</div>
+                    <div style={{ fontSize:11, color:'#92400e', marginTop:2 }}>{o.py}</div>
+                    <div style={{ fontSize:10, color:'#888', marginTop:1 }}>{t(o.uz, o.ru, o.en)}</div>
                   </div>
                 ))}
               </div>
-              <p className="grammar-block__tip-note" style={{ marginTop:10 }}>
-                💡 {t(
-                  "Har bir raqamni bosib, talaffuzini eshiting!",
-                  'Нажмите на каждую цифру, чтобы услышать произношение!',
-                  'Tap each number to hear the pronunciation!',
-                )}
+              <p className="grammar-block__tip-note" style={{ marginTop:10, textAlign:'center' }}>
+                {t("Bosing — eshiting","Нажмите — слушайте","Tap — listen")}
               </p>
             </div>
 
-            {/* Key rule */}
+            {/* 二 vs 两 */}
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{t('Asosiy qoida','Основное правило','Key Rule')}</div>
-              <p className="grammar-block__tip-text">
-                {t(
-                  "Xitoy tili o'nlik tizimga asoslangan. 十 (shí) = o'n. Hamma raqamlar shu asosda tuziladi:",
-                  'Китайский язык основан на десятичной системе. 十 (shí) = десять. Все числа строятся на этой основе:',
-                  'Chinese uses a base-10 system. 十 (shí) = ten. All numbers are built from this:',
-                )}
-              </p>
-              <div style={{ display:'flex', gap:8, flexWrap:'wrap', justifyContent:'center', marginTop:8 }}>
-                <div style={{ textAlign:'center', background:'#fffbeb', border:'2px solid #f59e0b', borderRadius:8, padding:12, flex:'1 1 120px', maxWidth:160 }}>
-                  <div style={{ fontSize:22, fontWeight:700, color:C_NUM }}>十一</div>
-                  <div style={{ fontSize:11, color:'#92400e' }}>shíyī</div>
-                  <div style={{ fontSize:13, color:'#555', marginTop:4 }}>10 + 1 = <strong>11</strong></div>
+              <div className="grammar-block__label">{t("Muhim: ikki = 二 yoki 两？","Важно: два = 二 или 两？","Important: two = 二 or 两？")}</div>
+              <div style={{ display:'flex', gap:8, marginBottom:10 }}>
+                <div style={{ flex:1, textAlign:'center', background:'#fffbeb', border:'2px solid #f59e0b', borderRadius:8, padding:12 }}>
+                  <div style={{ fontSize:34, color:C_NUM, fontWeight:700 }}>二</div>
+                  <div style={{ color:C_NUM, fontWeight:600, fontSize:12 }}>èr</div>
+                  <div style={{ fontSize:11, color:'#555', lineHeight:1.6, marginTop:6 }}>
+                    {t("Sanashda","При счёте","For counting")}
+                    <br />十二, 二十二
+                  </div>
                 </div>
-                <div style={{ textAlign:'center', background:'#fffbeb', border:'2px solid #f59e0b', borderRadius:8, padding:12, flex:'1 1 120px', maxWidth:160 }}>
-                  <div style={{ fontSize:22, fontWeight:700, color:C_NUM }}>二十</div>
-                  <div style={{ fontSize:11, color:'#92400e' }}>èrshí</div>
-                  <div style={{ fontSize:13, color:'#555', marginTop:4 }}>2 × 10 = <strong>20</strong></div>
+                <div style={{ flex:1, textAlign:'center', background:'#f5f3ff', border:'2px solid #7c3aed', borderRadius:8, padding:12 }}>
+                  <div style={{ fontSize:34, color:'#7c3aed', fontWeight:700 }}>两</div>
+                  <div style={{ color:'#7c3aed', fontWeight:600, fontSize:12 }}>liǎng</div>
+                  <div style={{ fontSize:11, color:'#555', lineHeight:1.6, marginTop:6 }}>
+                    {t("Son-o'lchov so'zi bilan","Со счётным словом","With measure words")}
+                    <br />两个, 两本
+                  </div>
                 </div>
-                <div style={{ textAlign:'center', background:'#fffbeb', border:'2px solid #f59e0b', borderRadius:8, padding:12, flex:'1 1 120px', maxWidth:160 }}>
-                  <div style={{ fontSize:22, fontWeight:700, color:C_NUM }}>二十一</div>
-                  <div style={{ fontSize:11, color:'#92400e' }}>èrshíyī</div>
-                  <div style={{ fontSize:13, color:'#555', marginTop:4 }}>2 × 10 + 1 = <strong>21</strong></div>
-                </div>
+              </div>
+              <div style={{ background:'#f5f5f8', borderRadius:8, padding:10, fontSize:12, lineHeight:1.9 }}>
+                <div style={{ marginBottom:4 }}>✓ &nbsp;<strong style={{color:'#7c3aed'}}>两</strong>个人 — {t('ikki kishi','два человека','two people')}</div>
+                <div style={{ marginBottom:4 }}>✗ &nbsp;<span style={{textDecoration:'line-through'}}>二个人</span> — {t('bu xato!','это неправильно!','this is wrong!')}</div>
+                <div>✓ &nbsp;<strong style={{color:C_NUM}}>二</strong>十<strong style={{color:C_NUM}}>二</strong> — {t('yigirma ikki (sanoq)','двадцать два (счёт)','twenty-two (counting)')}</div>
               </div>
             </div>
 
@@ -332,10 +306,12 @@ export function GrammarShuziPage() {
               <div className="grammar-block__label">{t('Rang belgilari','Цветовые обозначения','Color Legend')}</div>
               <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
                 {([
-                  { color:C_SUB,  uz:'Ega (kim/nima?)',     ru:'Подлежащее (кто/что?)', en:'Subject (who/what?)' },
-                  { color:C_VERB, uz:"Fe'l (有, 买)",        ru:'Глагол (有, 买)',        en:'Verb (有, 买)' },
-                  { color:C_NUM,  uz:'Son (raqamlar)',       ru:'Число (цифры)',          en:'Number (digits)' },
-                  { color:C_OBJ,  uz:'Ot (narsa/kishi)',     ru:'Сущ. (предмет/человек)', en:'Noun (thing/person)' },
+                  { color:C_SUB,  uz:'Ega',                 ru:'Подлежащее',   en:'Subject' },
+                  { color:C_NUM,  uz:"Son (bir…to'qqiz)",   ru:'Число (1-9)',   en:'Number (1-9)' },
+                  { color:C_JI,   uz:'几 (nechta?)',         ru:'几 (сколько?)', en:'几 (how many?)' },
+                  { color:C_OBJ,  uz:'Ot / Xabar',           ru:'Сущ. / Предикат',en:'Noun / Predicate' },
+                  { color:C_NE,   uz:'呢 (…chi?) / 两',      ru:'呢 (…а вы?) / 两',en:'呢 (…and you?) / 两' },
+                  { color:C_VERB, uz:"Fe'l",                 ru:'Глагол',       en:'Verb' },
                 ] as { color:string; uz:string; ru:string; en:string }[]).map((r, i) => (
                   <div key={i} style={{ display:'flex', alignItems:'center', gap:6, background:'#f5f5f8', borderRadius:6, padding:'5px 10px' }}>
                     <div style={{ width:10, height:10, borderRadius:'50%', background:r.color, flexShrink:0 }} />
@@ -347,132 +323,164 @@ export function GrammarShuziPage() {
           </>
         )}
 
-        {/* -- SHABLON -- */}
+        {/* ── RAQAMLAR ── */}
         {activeTab === 'usage' && (
           <>
-            {/* Pattern 1 — 11-19 */}
+            {/* 11–19 */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t("1-shablon — 11-19 (o'n + raqam)",'Шаблон 1 — 11-19 (десять + цифра)','Pattern 1 — 11-19 (ten + digit)')}</div>
+              <div className="grammar-block__label">{t("11 — 19: 十 + birlik","11 — 19: 十 + единица","11 — 19: 十 + digit")}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_NUM, fontWeight:700 }}>十</span>
                 {' + '}
-                <span style={{ color:C_NUM, fontWeight:700 }}>{t('raqam','цифра','digit')}</span>
-                {' = '}
-                <span style={{ color:'#555' }}>11-19</span>
+                <span style={{ color:'#555' }}>{t('birlik raqam','единица','digit')}</span>
               </div>
               <p className="grammar-block__formula-desc">
                 {t(
-                  "O'zbek tilida «o'n bir, o'n ikki» — xitoy tilida ham xuddi shunday: 十 + raqam",
-                  'Как в русском «одиннадцать» (десять + один), в китайском: 十 + цифра',
-                  'Just like saying "ten-one, ten-two" — simply add the digit after 十',
+                  "O'n + birlik = o'n bir … o'n to'qqiz",
+                  'Десять + единица = одиннадцать … девятнадцать',
+                  'Ten + digit = eleven … nineteen',
                 )}
               </p>
-              {pattern1Rows.map((r, i) => (
-                <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-py">{r.py}</div>
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
-                  <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
-                </div>
-              ))}
-              <p className="grammar-block__tip-note">
-                💡 {t(
-                  "Oddiy: 十 (10) + 一 (1) = 十一 (11). Ingliz tilidagi «eleven, twelve» ga o'xshamaydi — ancha mantiqiy!",
-                  'Просто: 十 (10) + 一 (1) = 十一 (11). В отличие от русского, никаких исключений!',
-                  'Simple: 十 (10) + 一 (1) = 十一 (11). No irregular words like "eleven" or "twelve"!',
-                )}
-              </p>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:6 }}>
+                {([
+                  { zh:'十一', py:'shíyī',  uz:"o'n bir",     ru:'11', en:'11', n:11 },
+                  { zh:'十二', py:'shíèr',  uz:"o'n ikki",    ru:'12', en:'12', n:12 },
+                  { zh:'十三', py:'shísān', uz:"o'n uch",     ru:'13', en:'13', n:13 },
+                  { zh:'十五', py:'shíwǔ',  uz:"o'n besh",    ru:'15', en:'15', n:15 },
+                  { zh:'十八', py:'shíbā',  uz:"o'n sakkiz",  ru:'18', en:'18', n:18 },
+                  { zh:'十九', py:'shíjiǔ', uz:"o'n to'qqiz", ru:'19', en:'19', n:19 },
+                ]).map((r, i) => (
+                  <div key={i} style={{ background:'#f5f5f8', borderRadius:8, padding:'8px 6px', textAlign:'center', cursor:'pointer', userSelect:'none' }}
+                    onClick={() => playGrammarAudio(r.zh)}>
+                    <div style={{ fontSize:18, fontWeight:700, color:C_NUM }}>{r.zh}</div>
+                    <div style={{ fontSize:10, color:'#92400e' }}>{r.py}</div>
+                    <div style={{ fontSize:10, color:'#888' }}>{t(r.uz, r.ru, r.en)}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Pattern 2 — 20-90 */}
+            {/* 20–90 */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t("2-shablon — 20-90 (raqam × o'n)",'Шаблон 2 — 20-90 (цифра × десять)','Pattern 2 — 20-90 (digit × ten)')}</div>
+              <div className="grammar-block__label">{t("20 — 90: birlik + 十","20 — 90: единица + 十","20 — 90: digit + 十")}</div>
               <div className="grammar-block__formula">
-                <span style={{ color:C_NUM, fontWeight:700 }}>{t('raqam','цифра','digit')}</span>
+                <span style={{ color:'#555' }}>{t("o'nlik raqam",'цифра','digit')}</span>
                 {' + '}
                 <span style={{ color:C_NUM, fontWeight:700 }}>十</span>
-                {' = '}
-                <span style={{ color:'#555' }}>20, 30, … 90</span>
               </div>
               <p className="grammar-block__formula-desc">
                 {t(
-                  "Raqamni 十 oldiga qo'ying: 二十 = «ikki o'n» = 20",
-                  'Поставьте цифру перед 十: 二十 = «два-десять» = 20',
-                  'Put the digit before 十: 二十 = "two-ten" = 20',
+                  "Ikki × o'n = yigirma; uch × o'n = o'ttiz…",
+                  'Два × десять = двадцать; три × десять = тридцать…',
+                  'Two × ten = twenty; three × ten = thirty…',
                 )}
               </p>
-              {pattern2Rows.map((r, i) => (
-                <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-py">{r.py}</div>
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
-                  <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
-                </div>
-              ))}
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(4, 1fr)', gap:6 }}>
+                {([
+                  { zh:'二十', py:'èrshí',  n:'20' },
+                  { zh:'三十', py:'sānshí', n:'30' },
+                  { zh:'四十', py:'sìshí',  n:'40' },
+                  { zh:'五十', py:'wǔshí',  n:'50' },
+                  { zh:'六十', py:'liùshí', n:'60' },
+                  { zh:'七十', py:'qīshí',  n:'70' },
+                  { zh:'八十', py:'bāshí',  n:'80' },
+                  { zh:'九十', py:'jiǔshí', n:'90' },
+                ]).map((r, i) => (
+                  <div key={i} style={{ background:'#f5f5f8', borderRadius:8, padding:'8px 4px', textAlign:'center', cursor:'pointer', userSelect:'none' }}
+                    onClick={() => playGrammarAudio(r.zh)}>
+                    <div style={{ fontSize:16, fontWeight:700, color:C_NUM }}>{r.zh}</div>
+                    <div style={{ fontSize:10, color:'#92400e' }}>{r.py}</div>
+                    <div style={{ fontSize:11, color:'#888', fontWeight:600 }}>{r.n}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Pattern 3 — 21-99 */}
+            {/* 21–99 compound */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t("3-shablon — 21-99 (to'liq raqam)",'Шаблон 3 — 21-99 (полное число)','Pattern 3 — 21-99 (full number)')}</div>
+              <div className="grammar-block__label">{t("21 — 99: o'nlik + 十 + birlik","21 — 99: десятки + 十 + единица","21 — 99: tens + 十 + ones")}</div>
               <div className="grammar-block__formula">
-                <span style={{ color:C_NUM, fontWeight:700 }}>{t('raqam','цифра','digit')}</span>
+                <span style={{ color:'#555' }}>{t("o'nlik","десятки","tens")}</span>
                 {' + '}
                 <span style={{ color:C_NUM, fontWeight:700 }}>十</span>
                 {' + '}
-                <span style={{ color:C_NUM, fontWeight:700 }}>{t('raqam','цифра','digit')}</span>
-                {' = '}
-                <span style={{ color:'#555' }}>21-99</span>
+                <span style={{ color:'#555' }}>{t('birlik','единица','ones')}</span>
               </div>
               <p className="grammar-block__formula-desc">
                 {t(
-                  "Ikkalasini birlashtiring: 二十一 = «ikki o'n bir» = 21",
-                  'Объедините оба шаблона: 二十一 = «два-десять-один» = 21',
-                  'Combine both patterns: 二十一 = "two-ten-one" = 21',
+                  "Masalan: 三十五 = sān + shí + wǔ = 35",
+                  'Например: 三十五 = sān + shí + wǔ = 35',
+                  'Example: 三十五 = sān + shí + wǔ = 35',
                 )}
               </p>
-              {pattern3Rows.map((r, i) => (
-                <div key={i} className="grammar-block__usage-item">
-                  <div className="grammar-block__usage-py">{r.py}</div>
-                  <div className="grammar-block__usage-zh"><ColorParts parts={r.parts} /></div>
-                  <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
+              {([
+                { zh:'二十一', py:'èrshíyī',   uz:'yigirma bir',     ru:'двадцать один',      en:'twenty-one',    n:21 },
+                { zh:'三十五', py:'sānshíwǔ',  uz:"o'ttiz besh",     ru:'тридцать пять',      en:'thirty-five',   n:35 },
+                { zh:'四十八', py:'sìshíbā',   uz:'qirq sakkiz',     ru:'сорок восемь',       en:'forty-eight',   n:48 },
+                { zh:'六十六', py:'liùshíliù', uz:'oltmish olti',    ru:'шестьдесят шесть',   en:'sixty-six',     n:66 },
+                { zh:'九十九', py:'jiǔshíjiǔ', uz:"to'qson to'qqiz", ru:'девяносто девять',   en:'ninety-nine',   n:99 },
+              ]).map((r, i) => (
+                <div key={i} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom: i < 4 ? '1px solid #f0f0f0' : 'none' }}>
+                  <button type="button" onClick={() => playGrammarAudio(r.zh)} style={{width:28,height:28,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',padding:0,flexShrink:0}} aria-label="Play">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
+                  <div style={{ fontSize:22, fontWeight:700, color:C_NUM, minWidth:60 }}>{r.zh}</div>
+                  <div>
+                    <div style={{ fontSize:11, color:'#92400e' }}>{r.py}</div>
+                    <div style={{ fontSize:11, color:'#888' }}>{t(r.uz, r.ru, r.en)} ({r.n})</div>
+                  </div>
                 </div>
               ))}
-              <p className="grammar-block__tip-note">
-                💡 {t(
-                  "九十九 = 9×10+9 = 99 — eng katta ikki xonali son!",
-                  '九十九 = 9×10+9 = 99 — самое большое двузначное число!',
-                  '九十九 = 9×10+9 = 99 — the largest two-digit number!',
-                )}
-              </p>
             </div>
 
-            {/* 二 vs 两 */}
+            {/* Interactive number builder */}
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{t("二 va 两 — Farq qiling!",'二 и 两 — Не путайте!','二 vs 两 — Know the Difference!')}</div>
-              <div style={{ display:'flex', gap:12, justifyContent:'center' }}>
-                <div style={{ flex:1, textAlign:'center', background:'#fffbeb', border:'2px solid #f59e0b', borderRadius:8, padding:12 }}>
-                  <div style={{ fontSize:'2.2em', color:C_NUM, fontWeight:700 }}>二</div>
-                  <div style={{ color:C_NUM, fontWeight:600 }}>èr</div>
-                  <div style={{ marginTop:6, color:'#92400e', fontWeight:600, fontSize:14 }}>{t("Son o'zida: 12, 20, 52",'Само число: 12, 20, 52','The number itself: 12, 20, 52')}</div>
-                  <div style={{ fontSize:12, color:'#555', marginTop:4 }}>{t('十二, 二十, 五十二','十二, 二十, 五十二','十二, 二十, 五十二')}</div>
-                </div>
-                <div style={{ flex:1, textAlign:'center', background:'#ecfdf5', border:'2px solid #059669', borderRadius:8, padding:12 }}>
-                  <div style={{ fontSize:'2.2em', color:'#059669', fontWeight:700 }}>两</div>
-                  <div style={{ color:'#059669', fontWeight:600 }}>liǎng</div>
-                  <div style={{ marginTop:6, color:'#065f46', fontWeight:600, fontSize:14 }}>{t("Son-o'lchov so'zi bilan: 2ta",'Со счётным словом: 2 шт.','With measure word: 2 of...')}</div>
-                  <div style={{ fontSize:12, color:'#555', marginTop:4 }}>{t("两个人, 两本书","два человека, две книги","two people, two books")}</div>
-                </div>
+              <div className="grammar-block__label">{t("Raqam yasang!","Составьте число!","Build a Number!")}</div>
+              <p style={{ fontSize:12, color:'#555', marginBottom:10 }}>{t("O'nlik tanlang:","Выберите десятки:","Choose tens:")}</p>
+              <div style={{ display:'flex', gap:5, flexWrap:'wrap', marginBottom:12 }}>
+                {[1,2,3,4,5,6,7,8,9].map(d => (
+                  <button key={d} type="button" onClick={() => { setBuiltTens(d); setBuiltOnes(null); }} style={{
+                    width:40, height:40, borderRadius:8, border:`2px solid ${builtTens === d ? C_NUM : '#e0e0e6'}`,
+                    background: builtTens === d ? C_NUM : '#f5f5f8', color: builtTens === d ? '#fff' : '#1a1a2e',
+                    fontSize:16, fontWeight:700, cursor:'pointer',
+                  }}>{ones[d-1].n}</button>
+                ))}
               </div>
-              <p className="grammar-block__tip-note" style={{ marginTop:10 }}>
-                ⚠️ {t(
-                  "二十 (20), lekin 两个人 (2 kishi). Son-o'lchov so'zi bilan doim 两 ishlating!",
-                  '二十 (20), но 两个人 (2 человека). Со счётными словами всегда используйте 两!',
-                  '二十 (20), but 两个人 (2 people). Always use 两 before measure words!',
-                )}
-              </p>
+              <p style={{ fontSize:12, color:'#555', marginBottom:10 }}>{t("Birlik tanlang (0 = nol):","Выберите единицу (0 = ноль):","Choose ones (0 = zero):")}</p>
+              <div style={{ display:'flex', gap:5, flexWrap:'wrap', marginBottom:14 }}>
+                <button type="button" onClick={() => setBuiltOnes(0)} style={{
+                  width:40, height:40, borderRadius:8, border:`2px solid ${builtOnes === 0 ? '#6b7280' : '#e0e0e6'}`,
+                  background: builtOnes === 0 ? '#6b7280' : '#f5f5f8', color: builtOnes === 0 ? '#fff' : '#1a1a2e',
+                  fontSize:13, fontWeight:600, cursor:'pointer',
+                }}>0</button>
+                {[1,2,3,4,5,6,7,8,9].map(d => (
+                  <button key={d} type="button" onClick={() => setBuiltOnes(d)} style={{
+                    width:40, height:40, borderRadius:8, border:`2px solid ${builtOnes === d ? C_NUM : '#e0e0e6'}`,
+                    background: builtOnes === d ? C_NUM : '#f5f5f8', color: builtOnes === d ? '#fff' : '#1a1a2e',
+                    fontSize:16, fontWeight:700, cursor:'pointer',
+                  }}>{ones[d-1].n}</button>
+                ))}
+              </div>
+              {built ? (
+                <div style={{ background:'#fffbeb', borderRadius:10, padding:16, textAlign:'center', border:`2px solid ${C_NUM}` }}>
+                  <div style={{ fontSize:48, fontWeight:700, color:C_NUM, letterSpacing:4, marginBottom:4 }}>{built.zh}</div>
+                  <div style={{ fontSize:16, color:'#92400e', marginBottom:4 }}>{built.py}</div>
+                  <div style={{ fontSize:20, fontWeight:700, color:'#555' }}>{built.num}</div>
+                  <div style={{ fontSize:14, color:'#555', marginTop:2 }}>{t(built.uz, built.ru, built.en)}</div>
+                  <button type="button" onClick={() => playGrammarAudio(built.zh)} style={{marginTop:8,width:32,height:32,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'inline-flex',alignItems:'center',justifyContent:'center',padding:0}} aria-label="Play">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
+                </div>
+              ) : (
+                <div style={{ background:'#f5f5f8', borderRadius:10, padding:20, textAlign:'center', color:'#bbb', fontSize:13 }}>
+                  {t("O'nlik va birlik tanlang…","Выберите десятки и единицу…","Choose tens and ones…")}
+                </div>
+              )}
             </div>
           </>
         )}
 
-        {/* -- MISOLLAR -- */}
+        {/* ── MISOLLAR ── */}
         {activeTab === 'examples' && (
           <div className="grammar-block">
             <div className="grammar-block__label">{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
@@ -513,12 +521,12 @@ export function GrammarShuziPage() {
           </div>
         )}
 
-        {/* -- DIALOG -- */}
+        {/* ── DIALOG ── */}
         {activeTab === 'dialog' && (
           <>
             {/* Dialog 1 */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t("Dialog 1 — Do'konda",'Диалог 1 — В магазине','Dialogue 1 — At the Store')}</div>
+              <div className="grammar-block__label">{t('Dialog 1 — Oila va kitoblar','Диалог 1 — Семья и книги','Dialogue 1 — Family and Books')}</div>
               {dialog1.map((line, i) => (
                 <button
                   key={i}
@@ -547,7 +555,7 @@ export function GrammarShuziPage() {
 
             {/* Dialog 2 */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t('Dialog 2 — Tanishuv','Диалог 2 — Знакомство','Dialogue 2 — Getting to Know')}</div>
+              <div className="grammar-block__label">{t('Dialog 2 — Vaqt va narx','Диалог 2 — Время и цена','Dialogue 2 — Time and Price')}</div>
               {dialog2.map((line, i) => (
                 <button
                   key={i}
@@ -579,32 +587,42 @@ export function GrammarShuziPage() {
               <div className="grammar-block__label">{t('Eslab qoling','Запомните','Remember')}</div>
               {([
                 {
-                  parts:[{text:'十一',color:C_NUM}],
-                  note: t("十 + 一 = 11 (o'n bir)","十 + 一 = 11 (одиннадцать)","十 + 一 = 11 (eleven)"),
+                  zh: t('十 + birlik','十 + единица','十 + digit'),
+                  ex: '十五 = 15',
+                  desc: t(
+                    "O'n va birlik orasida hech narsa qo'shilmaydi",
+                    'Между десятью и единицей ничего не добавляется',
+                    'Nothing is added between ten and the digit',
+                  ),
                 },
                 {
-                  parts:[{text:'二十',color:C_NUM}],
-                  note: t("二 + 十 = 20 (yigirma)","二 + 十 = 20 (двадцать)","二 + 十 = 20 (twenty)"),
+                  zh: t("o'nlik + 十","десятки + 十","tens digit + 十"),
+                  ex: '三十 = 30',
+                  desc: t(
+                    "O'nlikdan keyin 十, keyin birlik (agar bor bo'lsa)",
+                    'После десятков 十, потом единица (если есть)',
+                    'After the tens digit comes 十, then ones (if any)',
+                  ),
                 },
                 {
-                  parts:[{text:'二十一',color:C_NUM}],
-                  note: t("二 + 十 + 一 = 21 (yigirma bir)","二 + 十 + 一 = 21 (двадцать один)","二 + 十 + 一 = 21 (twenty-one)"),
+                  zh: t("o'nlik + 十 + birlik","десятки + 十 + единица","tens + 十 + ones"),
+                  ex: '四十八 = 48',
+                  desc: t(
+                    "Uchta qism birga yoziladi — bo'sh joy yo'q",
+                    'Три части пишутся слитно — без пробелов',
+                    'Three parts written together — no spaces',
+                  ),
                 },
-                {
-                  parts:[{text:'两',color:'#059669'},{text:'个人',color:C_OBJ}],
-                  note: t("两 (liǎng) = son-o'lchov so'zi bilan · 二 (èr) = sonning o'zida","两 (liǎng) = со счётным словом · 二 (èr) = само число","两 (liǎng) = with measure words · 二 (èr) = for the number itself"),
-                },
-              ] as { parts: Part[]; note: string }[]).map((item, i) => (
+              ]).map((item, i) => (
                 <div
                   key={i}
                   className="grammar-block__usage-item"
                   style={{ borderLeft:'3px solid #f59e0b', background:'#fffbeb' }}
                 >
-                  <div className="grammar-block__usage-zh">
-                    <ColorParts parts={item.parts} />
-                  </div>
-                  <div className="grammar-block__usage-note" style={{ color:'#92400e' }}>
-                    💡 {item.note}
+                  <div style={{ fontSize:16, fontWeight:700, color:C_NUM }}>{item.zh}</div>
+                  <div style={{ fontSize:14, color:'#92400e', marginTop:2 }}>{item.ex}</div>
+                  <div className="grammar-block__usage-note" style={{ color:'#555', marginTop:2 }}>
+                    {item.desc}
                   </div>
                 </div>
               ))}
@@ -612,7 +630,7 @@ export function GrammarShuziPage() {
           </>
         )}
 
-        {/* -- MASHQ -- */}
+        {/* ── MASHQ ── */}
         {activeTab === 'quiz' && (
           <SpeakingMashq
             language={language}
