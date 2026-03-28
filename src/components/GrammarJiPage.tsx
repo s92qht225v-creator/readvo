@@ -390,12 +390,12 @@ export function GrammarJiPage() {
                 <span style={{ color:C_VERB, fontWeight:700 }}>有</span>
                 {' '}
                 <span style={{ color:C_JI, fontWeight:700 }}>几</span>
-                <span style={{ color:'#888' }}>+MW+</span>
+                <span style={{ color:'#888' }}>+{t("o'lch.","сч.сл.","MW")}+</span>
                 <span style={{ color:C_OBJ, fontWeight:700 }}>{t('Ot','Сущ.','Noun')}</span>
                 {'？'}
               </div>
               <p className="grammar-block__formula-desc">
-                {t("MW = son-o'lchov so'zi (个, 本, 只…)",'MW = счётное слово (个, 本, 只…)','MW = measure word (个, 本, 只…)')}
+                {t("o'lch. = son-o'lchov so'zi (个, 本, 只…)",'сч.сл. = счётное слово (个, 本, 只…)','MW = measure word (个, 本, 只…)')}
               </p>
               {pattern1Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
@@ -413,9 +413,9 @@ export function GrammarJiPage() {
               </p>
             </div>
 
-            {/* Extra — 几+MW standalone */}
+            {/* Extra — standalone */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t("Qo'shimcha — 几+MW yolg'iz (tez so'rash)","Дополнительно — 几+MW отдельно (быстрый вопрос)","Extra — 几+MW alone (quick question)")}</div>
+              <div className="grammar-block__label">{t("Qo'shimcha — 几个/几本 yolg'iz (tez so'rash)","Дополнительно — 几个/几本 отдельно (быстрый вопрос)","Extra — 几个/几本 alone (quick question)")}</div>
               <p className="grammar-block__tip-text" style={{ marginBottom:8 }}>
                 {t(
                   "Oddiy suhbatda 几个/几本 yolg'iz ham ishlatiladi — 有 shart emas:",
