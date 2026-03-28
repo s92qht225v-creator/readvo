@@ -26,6 +26,7 @@ export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: s
   de: { char: '的', pinyin: 'de', en: 'possessive particle' },
   ne: { char: '呢', pinyin: 'ne', en: 'bounce-back question particle' },
   ji: { char: '几', pinyin: 'jǐ', en: 'how many (question word for quantity)' },
+  shuzi: { char: '数字', pinyin: 'shùzì', en: 'numbers 1-99' },
 };
 
 export function grammarTermJsonLd(slug: string, locale: string) {
