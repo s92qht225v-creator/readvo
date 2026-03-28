@@ -506,9 +506,11 @@ export function GrammarSheiPage() {
                 className={`grammar-block__example ${expandedEx === i ? 'grammar-block__example--open' : ''}`}
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
-                <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:6}}>
+                <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
+                  <button type="button" onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{width:32,height:32,borderRadius:'50%',background:'#fffbeb',border:'none',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',padding:0}} aria-label="Play">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#d97706"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
-                  <span role="button" tabIndex={0} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'none',border:'none',padding:'2px 6px',cursor:'pointer',fontSize:15,color:'#3b82f6',flexShrink:0}} aria-label="Play">▶</span>
                 </div>
                 {expandedEx === i ? (
                   <>
