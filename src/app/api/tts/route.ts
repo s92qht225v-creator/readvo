@@ -27,12 +27,12 @@ export async function POST(req: Request) {
   const path = storagePath(text);
   const supabase = getSupabaseAdmin();
 
-  // 1. Check if already cached in Supabase
-  const { data: existing } = await supabase.storage.from(BUCKET).list(TTS_PREFIX, {
-    search: path.split('/').pop(),
-  });
+  // 1. Check if already cached in Supabase (exact file check)
+  const { data: existing, error: dlError } = await supabase.storage
+    .from(BUCKET)
+    .download(path);
 
-  if (existing && existing.length > 0) {
+  if (existing && !dlError) {
     return NextResponse.json({ url: publicUrl(path) });
   }
 
