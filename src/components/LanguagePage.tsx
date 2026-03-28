@@ -48,6 +48,7 @@ const grammarItems = [
   { char: '哪', pinyin: 'nǎ', href: '/chinese/hsk1/grammar/na', translation: 'qaysi?', translation_ru: 'который?', translation_en: 'which?', color: '#0284c7', active: true },
   { char: '的', pinyin: 'de', href: '/chinese/hsk1/grammar/de', translation: 'egalik belgisi', translation_ru: 'частица принадлежности', translation_en: 'possessive particle', color: '#be185d', active: true },
   { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: '…chi?', translation_ru: '…а вы?', translation_en: '…and you?', color: '#7c3aed', active: true },
+  { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'nechta?', translation_ru: 'сколько?', translation_en: 'how many?', color: '#059669', active: true },
 ];
 
 const karaokeItems = [
