@@ -517,7 +517,7 @@ export function GrammarMaPage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{width:32,height:32,borderRadius:'50%',background:'#fffbeb',border:'none',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',padding:0}} aria-label="Play">
+                  <button type="button" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{width:44,height:44,borderRadius:'50%',background:'#fffbeb',border:'none',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',padding:0,WebkitTapHighlightColor:'transparent'}} aria-label="Play">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="#b45309"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>

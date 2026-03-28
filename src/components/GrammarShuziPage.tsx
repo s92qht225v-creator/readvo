@@ -421,7 +421,7 @@ export function GrammarShuziPage() {
                 { zh:'九十九', py:'jiǔshíjiǔ', uz:"to'qson to'qqiz", ru:'девяносто девять',   en:'ninety-nine',   n:99 },
               ]).map((r, i) => (
                 <div key={i} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom: i < 4 ? '1px solid #f0f0f0' : 'none' }}>
-                  <button type="button" onClick={() => playGrammarAudio(r.zh)} style={{width:28,height:28,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',padding:0,flexShrink:0}} aria-label="Play">
+                  <button type="button" onClick={() => playGrammarAudio(r.zh)} style={{width:44,height:44,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',padding:0,flexShrink:0,WebkitTapHighlightColor:'transparent'}} aria-label="Play">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <div style={{ fontSize:22, fontWeight:700, color:C_NUM, minWidth:60 }}>{r.zh}</div>
@@ -467,7 +467,7 @@ export function GrammarShuziPage() {
                   <div style={{ fontSize:16, color:'#92400e', marginBottom:4 }}>{built.py}</div>
                   <div style={{ fontSize:20, fontWeight:700, color:'#555' }}>{built.num}</div>
                   <div style={{ fontSize:14, color:'#555', marginTop:2 }}>{t(built.uz, built.ru, built.en)}</div>
-                  <button type="button" onClick={() => playGrammarAudio(built.zh)} style={{marginTop:8,width:32,height:32,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'inline-flex',alignItems:'center',justifyContent:'center',padding:0}} aria-label="Play">
+                  <button type="button" onClick={() => playGrammarAudio(built.zh)} style={{marginTop:8,width:44,height:44,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',display:'inline-flex',alignItems:'center',justifyContent:'center',padding:0,WebkitTapHighlightColor:'transparent'}} aria-label="Play">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                 </div>
@@ -500,7 +500,7 @@ export function GrammarShuziPage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{width:32,height:32,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',padding:0}} aria-label="Play">
+                  <button type="button" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{width:44,height:44,borderRadius:'50%',background:'#fef3c7',border:'none',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',padding:0,WebkitTapHighlightColor:'transparent'}} aria-label="Play">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
