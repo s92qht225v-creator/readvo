@@ -18,28 +18,40 @@ function publicUrl(path: string): string {
 }
 
 export async function POST(req: Request) {
-  const { text } = await req.json();
+  const { text, style, skipCache } = await req.json();
 
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
 
-  const path = storagePath(text);
   const supabase = getSupabaseAdmin();
 
-  // 1. Check if already cached in Supabase (exact file check)
-  const { data: existing, error: dlError } = await supabase.storage
-    .from(BUCKET)
-    .download(path);
+  // 1. Check Supabase cache (skip when admin requests fresh generation)
+  if (!skipCache) {
+    const path = storagePath(text);
+    const { data: existing, error: dlError } = await supabase.storage
+      .from(BUCKET)
+      .download(path);
 
-  if (existing && !dlError) {
-    return NextResponse.json({ url: publicUrl(path) });
+    if (existing && !dlError) {
+      return NextResponse.json({ url: publicUrl(path) });
+    }
   }
 
   // 2. Generate via MiMo TTS
   const apiKey = process.env.MIMO_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: 'TTS not configured' }, { status: 503 });
+  }
+
+  // Build content with style tag
+  let content = text;
+  if (style !== undefined) {
+    // Admin-provided style: use it (empty string = no style tag)
+    if (style) content = `<style>${style}</style>${text}`;
+  } else {
+    // Default learner style
+    content = `<style>语速缓慢，吐字清晰，适合语言学习者</style>${text}`;
   }
 
   try {
@@ -51,7 +63,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model: 'mimo-v2-tts',
-        messages: [{ role: 'assistant', content: `<style>语速缓慢，吐字清晰，适合语言学习者</style>${text}` }],
+        messages: [{ role: 'assistant', content }],
         audio: {
           format: 'wav',
           voice: 'default_zh',
@@ -71,7 +83,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'No audio in response' }, { status: 502 });
     }
 
+    // skipCache mode: return base64 directly without Supabase upload
+    if (skipCache) {
+      return NextResponse.json({ audio: audioBase64 });
+    }
+
     // 3. Upload to Supabase Storage
+    const path = storagePath(text);
     const audioBuffer = Buffer.from(audioBase64, 'base64');
     const { error: uploadError } = await supabase.storage
       .from(BUCKET)
@@ -82,7 +100,6 @@ export async function POST(req: Request) {
 
     if (uploadError) {
       console.error('Supabase upload error:', uploadError);
-      // Still return the audio even if upload fails
       return NextResponse.json({ audio: audioBase64 });
     }
 

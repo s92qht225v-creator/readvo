@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
-type AdminTab = 'payments' | 'users';
+type AdminTab = 'payments' | 'users' | 'audio';
 
 interface Payment {
   id: string;
@@ -74,6 +74,15 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [expandedScreenshot, setExpandedScreenshot] = useState<string | null>(null);
   const [search, setSearch] = useState('');
 
+  // Audio tab state
+  const [ttsText, setTtsText] = useState('');
+  const [ttsStylePreset, setTtsStylePreset] = useState('slow');
+  const [ttsCustomStyle, setTtsCustomStyle] = useState('');
+  const [ttsLoading, setTtsLoading] = useState(false);
+  const [ttsItems, setTtsItems] = useState<{ text: string; style: string; url: string }[]>([]);
+  const ttsTextareaRef = useRef<HTMLTextAreaElement>(null);
+  const ttsAudioRef = useRef<HTMLAudioElement | null>(null);
+
   const fetchData = useCallback(async () => {
     const res = await fetch('/api/admin', {
       headers: { 'x-admin-password': password },
@@ -136,6 +145,85 @@ export function AdminPanel({ password }: AdminPanelProps) {
       (s) => s.user_id === userId && new Date(s.ends_at) > now
     );
   }, [subscriptions]);
+
+  const STYLE_PRESETS: { value: string; label: string }[] = [
+    { value: 'slow', label: 'Slow & Clear (learner)' },
+    { value: '', label: 'Default (no style)' },
+    { value: '开心', label: 'Happy' },
+    { value: '温柔，轻声', label: 'Gentle & Soft' },
+    { value: 'Slow down', label: 'Slow' },
+    { value: 'Speed up', label: 'Fast' },
+    { value: 'Whisper', label: 'Whisper' },
+    { value: 'custom', label: 'Custom...' },
+  ];
+
+  const INLINE_EVENTS = ['[cough]', '[pause]', '[sigh]', '(laugh)', '(sob)', 'um...', '[heavy breathing]'];
+
+  const insertAtCursor = useCallback((tag: string) => {
+    const ta = ttsTextareaRef.current;
+    if (!ta) return;
+    const start = ta.selectionStart;
+    const end = ta.selectionEnd;
+    const before = ttsText.slice(0, start);
+    const after = ttsText.slice(end);
+    setTtsText(before + tag + after);
+    requestAnimationFrame(() => {
+      ta.focus();
+      ta.selectionStart = ta.selectionEnd = start + tag.length;
+    });
+  }, [ttsText]);
+
+  const getEffectiveStyle = useCallback(() => {
+    if (ttsStylePreset === 'slow') return '语速缓慢，吐字清晰，适合语言学习者';
+    if (ttsStylePreset === 'custom') return ttsCustomStyle;
+    return ttsStylePreset;
+  }, [ttsStylePreset, ttsCustomStyle]);
+
+  const handleGenerate = useCallback(async () => {
+    if (!ttsText.trim()) return;
+    setTtsLoading(true);
+    try {
+      const style = getEffectiveStyle();
+      const res = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: ttsText.trim(), style, skipCache: true }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        alert(`TTS error: ${err.error || res.status}`);
+        return;
+      }
+      const data = await res.json();
+      if (data.audio) {
+        const binary = atob(data.audio);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        const blob = new Blob([bytes], { type: 'audio/wav' });
+        const url = URL.createObjectURL(blob);
+        setTtsItems(prev => [{ text: ttsText.trim(), style: style || '(default)', url }, ...prev]);
+      }
+    } catch (e) {
+      alert(`TTS failed: ${e}`);
+    } finally {
+      setTtsLoading(false);
+    }
+  }, [ttsText, getEffectiveStyle]);
+
+  const playTtsAudio = useCallback((url: string) => {
+    if (!ttsAudioRef.current) ttsAudioRef.current = new Audio();
+    const el = ttsAudioRef.current;
+    el.src = url;
+    el.currentTime = 0;
+    el.play().catch(() => {});
+  }, []);
+
+  const downloadTtsAudio = useCallback((url: string, text: string) => {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${text.slice(0, 30)}.wav`;
+    a.click();
+  }, []);
 
   const searchLower = search.toLowerCase();
   const filteredPayments = search
@@ -200,6 +288,13 @@ export function AdminPanel({ password }: AdminPanelProps) {
           type="button"
         >
           Foydalanuvchilar ({users.length})
+        </button>
+        <button
+          className={`admin__tab${tab === 'audio' ? ' admin__tab--active' : ''}`}
+          onClick={() => setTab('audio')}
+          type="button"
+        >
+          Audio
         </button>
       </div>
 
@@ -345,6 +440,106 @@ export function AdminPanel({ password }: AdminPanelProps) {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Audio Tab */}
+      {tab === 'audio' && (
+        <div style={{ padding: '16px 0' }}>
+          <div className="admin__card" style={{ padding: 16 }}>
+            <textarea
+              ref={ttsTextareaRef}
+              value={ttsText}
+              onChange={(e) => setTtsText(e.target.value)}
+              placeholder="Chinese text to generate audio..."
+              rows={3}
+              style={{ width: '100%', padding: 10, fontSize: 16, borderRadius: 6, border: '1px solid #ddd', resize: 'vertical', fontFamily: 'inherit' }}
+            />
+
+            {/* Inline audio events */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
+              {INLINE_EVENTS.map((tag) => (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => insertAtCursor(tag)}
+                  style={{ padding: '4px 8px', fontSize: 12, borderRadius: 4, border: '1px solid #ccc', background: '#f5f5f5', cursor: 'pointer' }}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+
+            {/* Style selector */}
+            <div style={{ marginTop: 12, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+              <select
+                value={ttsStylePreset}
+                onChange={(e) => setTtsStylePreset(e.target.value)}
+                style={{ padding: '6px 10px', fontSize: 14, borderRadius: 6, border: '1px solid #ddd' }}
+              >
+                {STYLE_PRESETS.map((p) => (
+                  <option key={p.value} value={p.value}>{p.label}</option>
+                ))}
+              </select>
+              {ttsStylePreset === 'custom' && (
+                <input
+                  type="text"
+                  value={ttsCustomStyle}
+                  onChange={(e) => setTtsCustomStyle(e.target.value)}
+                  placeholder="e.g. angry but calm, Sichuan dialect..."
+                  style={{ flex: 1, minWidth: 200, padding: '6px 10px', fontSize: 14, borderRadius: 6, border: '1px solid #ddd' }}
+                />
+              )}
+            </div>
+
+            {/* Generate button */}
+            <button
+              type="button"
+              onClick={handleGenerate}
+              disabled={ttsLoading || !ttsText.trim()}
+              style={{
+                marginTop: 12, padding: '10px 24px', fontSize: 15, fontWeight: 600,
+                borderRadius: 6, border: 'none', color: '#fff',
+                background: ttsLoading || !ttsText.trim() ? '#aaa' : '#dc2626',
+                cursor: ttsLoading || !ttsText.trim() ? 'not-allowed' : 'pointer',
+              }}
+            >
+              {ttsLoading ? 'Generating...' : 'Generate'}
+            </button>
+          </div>
+
+          {/* Session history */}
+          {ttsItems.length > 0 && (
+            <div style={{ marginTop: 16 }}>
+              <h3 style={{ fontSize: 14, fontWeight: 600, marginBottom: 8, color: '#666' }}>Generated ({ttsItems.length})</h3>
+              {ttsItems.map((item, i) => (
+                <div key={i} className="admin__card" style={{ padding: '10px 14px', marginBottom: 8 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: 16, fontWeight: 500 }}>{item.text}</div>
+                      <div style={{ fontSize: 11, color: '#999', marginTop: 2 }}>{item.style}</div>
+                    </div>
+                    <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
+                      <button
+                        type="button"
+                        onClick={() => playTtsAudio(item.url)}
+                        style={{ padding: '6px 12px', fontSize: 13, borderRadius: 4, border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}
+                      >
+                        &#9654; Play
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => downloadTtsAudio(item.url, item.text)}
+                        style={{ padding: '6px 12px', fontSize: 13, borderRadius: 4, border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}
+                      >
+                        &#8595; Download
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
