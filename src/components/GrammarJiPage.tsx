@@ -506,9 +506,10 @@ export function GrammarJiPage() {
               )}
             </p>
             {examples.map((ex, i) => (
-              <button
+              <div
                 key={i}
-                type="button"
+                role="button"
+                tabIndex={0}
                 className={`grammar-block__example ${expandedEx === i ? 'grammar-block__example--open' : ''}`}
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
@@ -529,7 +530,7 @@ export function GrammarJiPage() {
                     {t('Pinyin va tarjima uchun bosing…','Нажмите для пиньиня и перевода…','Tap for pinyin and translation…')}
                   </div>
                 )}
-              </button>
+              </div>
             ))}
           </div>
         )}

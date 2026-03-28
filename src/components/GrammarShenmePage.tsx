@@ -438,9 +438,10 @@ export function GrammarShenmePage() {
           <div className="grammar-block">
             <div className="grammar-block__label">{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
             {examples.map((ex, i) => (
-              <button
+              <div
                 key={i}
-                type="button"
+                role="button"
+                tabIndex={0}
                 className={`grammar-block__example ${expandedEx === i ? 'grammar-block__example--open' : ''}`}
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
@@ -457,7 +458,7 @@ export function GrammarShenmePage() {
                     💡 {t(ex.note_uz, ex.note_ru, ex.note_en)}
                   </div>
                 )}
-              </button>
+              </div>
             ))}
             <p className="grammar-block__hint">
               {t("Bosing — izoh ko'rinadi", 'Нажмите — увидите пояснение', 'Tap to see explanation')}
