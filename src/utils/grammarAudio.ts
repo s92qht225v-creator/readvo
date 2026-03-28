@@ -1,10 +1,10 @@
 /**
- * Shared grammar audio player using MiMo TTS API.
- * Caches generated audio in memory to avoid repeated API calls.
- * Falls back to Web Speech API if TTS API is unavailable.
+ * Shared grammar audio player using MiMo TTS API + Supabase cache.
+ * Flow: memory cache → Supabase (via API) → MiMo TTS → Web Speech API.
+ * Generated audio is saved to Supabase so it's only generated once per phrase.
  */
 
-const audioCache = new Map<string, string>(); // text → objectURL
+const audioCache = new Map<string, string>(); // text → playable URL
 let _el: HTMLAudioElement | null = null;
 
 function getAudioEl(): HTMLAudioElement {
@@ -15,7 +15,7 @@ function getAudioEl(): HTMLAudioElement {
 export function playGrammarAudio(zh: string) {
   const el = getAudioEl();
 
-  // If cached, play immediately
+  // If cached in memory, play immediately
   const cached = audioCache.get(zh);
   if (cached) {
     el.src = cached;
@@ -24,7 +24,7 @@ export function playGrammarAudio(zh: string) {
     return;
   }
 
-  // Fetch from TTS API
+  // Fetch from API (checks Supabase cache, generates if needed)
   fetchTTS(zh).then(url => {
     if (url) {
       el.src = url;
@@ -46,20 +46,27 @@ async function fetchTTS(text: string): Promise<string | null> {
 
     if (!res.ok) return fallbackSpeech(text);
 
-    const { audio } = await res.json();
-    if (!audio) return fallbackSpeech(text);
+    const data = await res.json();
 
-    // Decode base64 WAV → blob URL
-    const binary = atob(audio);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-      bytes[i] = binary.charCodeAt(i);
+    // API returns { url } if cached in Supabase, or { audio } as base64 fallback
+    if (data.url) {
+      audioCache.set(text, data.url);
+      return data.url;
     }
-    const blob = new Blob([bytes], { type: 'audio/wav' });
-    const url = URL.createObjectURL(blob);
 
-    audioCache.set(text, url);
-    return url;
+    if (data.audio) {
+      const binary = atob(data.audio);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+      const blob = new Blob([bytes], { type: 'audio/wav' });
+      const url = URL.createObjectURL(blob);
+      audioCache.set(text, url);
+      return url;
+    }
+
+    return fallbackSpeech(text);
   } catch {
     return fallbackSpeech(text);
   }
