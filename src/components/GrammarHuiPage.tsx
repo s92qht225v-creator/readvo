@@ -12,7 +12,7 @@ import { SpeakingMashq } from './SpeakingMashq';
 import { calculateStars } from '@/utils/calculateStars';
 
 const C_SUB  = '#16a34a'; // Subject / Ega (green)
-const C_HUI  = '#4338ca'; // 会 (indigo-700 — featured)
+const C_HUI  = '#dc2626'; // 会 (brand red — featured)
 const C_NEG  = '#ef4444'; // 不会 (red — negation)
 const C_VERB = '#dc2626'; // Verb / action
 const C_MA   = '#0d9488'; // 吗 (question)
@@ -185,7 +185,7 @@ export function GrammarHuiPage() {
   return (
     <div className="grammar-page">
       {/* Hero */}
-      <div className="dr-hero" style={{ background:'linear-gradient(135deg, #4338ca, #3730a3)' }}>
+      <div className="dr-hero" style={{ background:'linear-gradient(135deg, #dc2626, #b91c1c)' }}>
         <div className="dr-hero__watermark">会</div>
         <div className="dr-hero__top-row">
             <Link href="/chinese?tab=grammar" className="dr-back-btn">
@@ -206,7 +206,7 @@ export function GrammarHuiPage() {
       </div>
 
       {/* Tabs */}
-      <div className="grammar-page__tabs" style={{ background:'linear-gradient(180deg, #3730a3 0%, #312e81 100%)' }}>
+      <div className="grammar-page__tabs" style={{ background:'linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%)' }}>
         {sections.map(s => (
           <button
             key={s.id}
@@ -264,13 +264,13 @@ export function GrammarHuiPage() {
               </p>
               <div style={{ background:'#f5f5f8', borderRadius:8, padding:12, marginTop:10 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:8 }}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我会说汉语。');}} style={{background:'#e0e7ff'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我会说汉语。');}} style={{background:'#fee2e2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_HUI}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{ fontSize:14 }}>我<strong style={{color:C_HUI}}>会</strong>说汉语。— {t('Men xitoy tilida gaplasha olaman.','Я могу говорить по-китайски.','I can speak Chinese.')}</span>
                 </div>
                 <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我不会游泳。');}} style={{background:'#e0e7ff'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我不会游泳。');}} style={{background:'#fee2e2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_HUI}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{ fontSize:14 }}>我<strong style={{color:C_NEG}}>不会</strong>游泳。— {t('Men suzishni bilmayman.','Я не умею плавать.','I cannot swim.')}</span>
@@ -282,7 +282,7 @@ export function GrammarHuiPage() {
             <div className="grammar-block">
               <div className="grammar-block__label">{t('会 va 能 — farqi','会 и 能 — разница','会 vs 能 — Difference')}</div>
               <div style={{ display:'flex', gap:8, marginBottom:8 }}>
-                <div style={{ flex:1, textAlign:'center', background:'#e0e7ff', border:'2px solid #4338ca', borderRadius:8, padding:12 }}>
+                <div style={{ flex:1, textAlign:'center', background:'#fee2e2', border:'2px solid #dc2626', borderRadius:8, padding:12 }}>
                   <div style={{ fontSize:28, color:C_HUI, fontWeight:700, marginBottom:2 }}>会</div>
                   <div style={{ fontSize:10, color:C_HUI, fontWeight:700, textTransform:'uppercase', letterSpacing:1, marginBottom:6 }}>{t('MAHORAT','НАВЫК','SKILL')}</div>
                   <div style={{ fontSize:11, color:'#555', lineHeight:1.6 }}>{t("O'rganilgan ko'nikma\nsuzish, haydash, gapirish","Приобретённый навык\nплавать, водить, говорить","Learned ability\nswim, drive, speak")}</div>
@@ -355,9 +355,9 @@ export function GrammarHuiPage() {
                   { zh:'唱歌', py:'chàng gē', uz:"qo'shiq aytmoq", ru:'петь', en:'to sing' },
                 ].map((v, i) => (
                   <div key={i} role="button" tabIndex={0} onClick={() => playGrammarAudio('会' + v.zh)}
-                    style={{ background:'#e0e7ff', borderRadius:8, padding:'8px 10px', cursor:'pointer', userSelect:'none', border:'1px solid #a5b4fc' }}>
+                    style={{ background:'#fee2e2', borderRadius:8, padding:'8px 10px', cursor:'pointer', userSelect:'none', border:'1px solid #fca5a5' }}>
                     <div style={{ fontSize:20, fontWeight:700, color:C_HUI }}>会{v.zh}</div>
-                    <div style={{ fontSize:10, color:'#6366f1' }}>huì {v.py}</div>
+                    <div style={{ fontSize:10, color:'#dc2626' }}>huì {v.py}</div>
                     <div style={{ fontSize:10, color:'#888', marginTop:2 }}>{t(v.uz, v.ru, v.en)}</div>
                   </div>
                 ))}
@@ -498,7 +498,7 @@ export function GrammarHuiPage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#e0e7ff'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#fee2e2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_HUI}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
@@ -531,7 +531,7 @@ export function GrammarHuiPage() {
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev1, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#e0e7ff' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fee2e2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_HUI:'#dc2626',flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -560,7 +560,7 @@ export function GrammarHuiPage() {
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev2, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#e0e7ff' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fee2e2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_HUI:'#dc2626',flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -600,12 +600,12 @@ export function GrammarHuiPage() {
                 <div
                   key={i}
                   className="grammar-block__usage-item"
-                  style={{ borderLeft:'3px solid #4338ca', background:'#e0e7ff' }}
+                  style={{ borderLeft:'3px solid #dc2626', background:'#fee2e2' }}
                 >
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={item.parts} />
                   </div>
-                  <div className="grammar-block__usage-note" style={{ color:'#312e81' }}>
+                  <div className="grammar-block__usage-note" style={{ color:'#7f1d1d' }}>
                     💡 {item.note}
                   </div>
                 </div>
@@ -619,8 +619,8 @@ export function GrammarHuiPage() {
           <SpeakingMashq
             language={language}
             questions={speakingQuestions}
-            accentColor="#4338ca"
-            accentBg="#e0e7ff"
+            accentColor="#dc2626"
+            accentBg="#fee2e2"
             onComplete={handleQuizComplete}
             onDone={() => router.push('/chinese?tab=grammar')}
           />
