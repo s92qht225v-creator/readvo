@@ -28,6 +28,7 @@ export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: s
   ji: { char: '几', pinyin: 'jǐ', en: 'how many (question word for quantity)' },
   shuzi: { char: '数字', pinyin: 'shùzì', en: 'numbers 1-99' },
   duoda: { char: '多大', pinyin: 'duō dà', en: 'how old (asking age)' },
+  hui: { char: '会', pinyin: 'huì', en: 'can / be able to (modal verb for learned skills)' },
 };
 
 export function grammarTermJsonLd(slug: string, locale: string) {
