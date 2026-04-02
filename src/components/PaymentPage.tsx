@@ -24,13 +24,10 @@ const PLAN_LABELS_EN: Record<string, string> = {
   '1_month': '1 month', '3_months': '3 months', '6_months': '6 months', '12_months': '12 months',
 };
 
-// Manual payment fallback
 const CARD_NUMBER = '9860 1766 1049 2223';
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 type PlanId = typeof PLANS[number]['id'];
-
-type Step = 'plan' | 'card' | 'otp' | 'success';
 
 interface PaymentStatus {
   id: string;
@@ -51,28 +48,14 @@ export default function PaymentPage() {
   const [statusLoading, setStatusLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Atmos card payment state
-  const [step, setStep] = useState<Step>('plan');
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiry, setExpiry] = useState('');
-  const [otp, setOtp] = useState('');
-  const [transactionId, setTransactionId] = useState<number | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [completedPlan, setCompletedPlan] = useState<string | null>(null);
-  const [completedEndsAt, setCompletedEndsAt] = useState<string | null>(null);
-
-  // Manual payment fallback state
-  const [manualMode, setManualMode] = useState(false);
+  // Manual payment state
+  const [showUpload, setShowUpload] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [manualSuccess, setManualSuccess] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // OTP resend timer
-  const [resendTimer, setResendTimer] = useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const isRu = language === 'ru';
   const isEn = language === 'en';
@@ -94,25 +77,6 @@ export default function PaymentPage() {
     if (isEn) return months === 1 ? 'month' : 'months';
     return 'oy';
   };
-
-  // Start resend timer
-  const startResendTimer = useCallback(() => {
-    setResendTimer(60);
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setResendTimer((prev) => {
-        if (prev <= 1) {
-          clearInterval(timerRef.current!);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-  }, []);
-
-  useEffect(() => {
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, []);
 
   // Check existing payment/subscription status
   useEffect(() => {
@@ -138,135 +102,7 @@ export default function PaymentPage() {
     checkStatus();
   }, [getAccessToken]);
 
-  // ─── Card number formatting ───
-  const handleCardInput = (value: string) => {
-    const digits = value.replace(/\D/g, '').slice(0, 16);
-    const formatted = digits.replace(/(\d{4})(?=\d)/g, '$1 ');
-    setCardNumber(formatted);
-  };
-
-  const handleExpiryInput = (value: string) => {
-    const digits = value.replace(/\D/g, '').slice(0, 4);
-    if (digits.length >= 3) {
-      setExpiry(`${digits.slice(0, 2)}/${digits.slice(2)}`);
-    } else {
-      setExpiry(digits);
-    }
-  };
-
-  // ─── Atmos: Create transaction + pre-apply ───
-  const handlePayWithCard = useCallback(async () => {
-    if (!selectedPlan) return;
-    setLoading(true);
-    setError(null);
-
-    try {
-      const token = await getAccessToken();
-      if (!token) { setError(t('Hisobga kiring', 'Войдите в аккаунт', 'Please log in')); setLoading(false); return; }
-
-      const cleanCard = cardNumber.replace(/\s/g, '');
-      const res = await fetch('/api/payment/atmos', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'create', plan: selectedPlan, cardNumber: cleanCard, expiry }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error || t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-        setLoading(false);
-        return;
-      }
-
-      setTransactionId(data.transaction_id);
-      setStep('otp');
-      startResendTimer();
-
-      trackAll('InitiateCheckout', 'payment_card_submit', 'begin_checkout', {
-        content_name: selectedPlan,
-        value: PLANS.find((p) => p.id === selectedPlan)!.price,
-        currency: 'UZS',
-      });
-    } catch {
-      setError(t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-    } finally {
-      setLoading(false);
-    }
-  }, [selectedPlan, cardNumber, expiry, getAccessToken, t, startResendTimer]);
-
-  // ─── Atmos: Confirm with OTP ───
-  const handleConfirmOtp = useCallback(async () => {
-    if (!transactionId || !otp) return;
-    setLoading(true);
-    setError(null);
-
-    try {
-      const token = await getAccessToken();
-      if (!token) { setError(t('Hisobga kiring', 'Войдите в аккаунт', 'Please log in')); setLoading(false); return; }
-
-      const res = await fetch('/api/payment/atmos', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'confirm', transaction_id: transactionId, otp }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error || t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-        setLoading(false);
-        return;
-      }
-
-      setCompletedPlan(data.plan);
-      setCompletedEndsAt(data.ends_at);
-      setStep('success');
-
-      trackAll('Purchase', 'payment_atmos_confirm', 'purchase', {
-        content_name: selectedPlan || '',
-        value: PLANS.find((p) => p.id === selectedPlan)?.price || 0,
-        currency: 'UZS',
-      });
-    } catch {
-      setError(t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-    } finally {
-      setLoading(false);
-    }
-  }, [transactionId, otp, getAccessToken, selectedPlan, t]);
-
-  // ─── Resend OTP ───
-  const handleResendOtp = useCallback(async () => {
-    if (!selectedPlan || resendTimer > 0) return;
-    // Re-create transaction with same card details
-    setOtp('');
-    setError(null);
-    setLoading(true);
-
-    try {
-      const token = await getAccessToken();
-      if (!token) { setLoading(false); return; }
-
-      const cleanCard = cardNumber.replace(/\s/g, '');
-      const res = await fetch('/api/payment/atmos', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'create', plan: selectedPlan, cardNumber: cleanCard, expiry }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error || t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-      } else {
-        setTransactionId(data.transaction_id);
-        startResendTimer();
-      }
-    } catch {
-      setError(t('Xatolik yuz berdi', 'Произошла ошибка', 'An error occurred'));
-    } finally {
-      setLoading(false);
-    }
-  }, [selectedPlan, cardNumber, expiry, resendTimer, getAccessToken, t, startResendTimer]);
-
-  // ─── Manual payment handlers ───
+  // ─── File handlers ───
   const handleFileSelect = useCallback((selectedFile: File) => {
     if (!selectedFile.type.startsWith('image/')) {
       setError(t('Rasm tanlang', 'Выберите изображение', 'Select an image'));
@@ -372,8 +208,8 @@ export default function PaymentPage() {
     }
   }
 
-  // ─── Existing pending/rejected payment (manual) ───
-  if (existingPayment && !manualSuccess && step === 'plan') {
+  // ─── Existing pending/rejected payment ───
+  if (existingPayment && !manualSuccess && !showUpload) {
     const isPending = existingPayment.status === 'pending';
     const isRejected = existingPayment.status === 'rejected';
     const label = planLabel(existingPayment.plan);
@@ -448,223 +284,8 @@ export default function PaymentPage() {
     );
   }
 
-  // ─── Atmos success ───
-  if (step === 'success') {
-    const daysLeft = completedEndsAt ? Math.ceil((new Date(completedEndsAt).getTime() - Date.now()) / (24 * 60 * 60 * 1000)) : 0;
-    return (
-      <main className="payment">
-        {renderHeader()}
-        <div className="payment__success">
-          <div className="payment__success-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2">
-              <circle cx="12" cy="12" r="10" /><path d="M8 12l3 3 5-5" />
-            </svg>
-          </div>
-          <h2 className="payment__success-title">
-            {t("To'lov qabul qilindi!", 'Оплата прошла!', 'Payment successful!')}
-          </h2>
-          <p className="payment__success-text">
-            {t(
-              `${planLabel(completedPlan || '')} obuna faollashtirildi. ${daysLeft} kun qoldi.`,
-              `Подписка ${planLabel(completedPlan || '')} активирована. Осталось ${daysLeft} дн.`,
-              `${planLabel(completedPlan || '')} subscription activated. ${daysLeft} days remaining.`
-            )}
-          </p>
-          <Link href="/chinese" className="payment__back-btn" style={{ background: '#16a34a', color: '#fff', border: 'none' }}>
-            {t("O'rganishni boshlash", 'Начать обучение', 'Start learning')}
-          </Link>
-        </div>
-      </main>
-    );
-  }
-
-  // ─── OTP step ───
-  if (step === 'otp') {
-    return (
-      <main className="payment">
-        {renderHeader()}
-        <div className="payment__section" style={{ textAlign: 'center', marginTop: 24 }}>
-          <div style={{ marginBottom: 16 }}>
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="1.5">
-              <rect x="2" y="4" width="20" height="16" rx="3" />
-              <path d="M2 10h20" />
-            </svg>
-          </div>
-          <h2 className="payment__section-title" style={{ marginBottom: 8 }}>
-            {t('SMS kodni kiriting', 'Введите SMS код', 'Enter SMS code')}
-          </h2>
-          <p style={{ color: '#666', fontSize: 14, marginBottom: 20 }}>
-            {t(
-              "Kartangizga bog'langan raqamga 6 xonali kod yuborildi",
-              'На номер привязанный к карте отправлен 6-значный код',
-              'A 6-digit code was sent to the phone linked to your card'
-            )}
-          </p>
-
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
-            <input
-              type="text"
-              inputMode="numeric"
-              maxLength={6}
-              value={otp}
-              onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              placeholder="000000"
-              autoFocus
-              style={{
-                width: 180, textAlign: 'center', fontSize: 24, letterSpacing: 8,
-                padding: '12px 16px', border: '2px solid #e5e5e5', borderRadius: 8,
-                outline: 'none', fontFamily: 'inherit',
-              }}
-            />
-          </div>
-
-          {error && <p className="payment__error">{error}</p>}
-
-          <button
-            className="payment__submit"
-            onClick={handleConfirmOtp}
-            disabled={otp.length !== 6 || loading}
-            type="button"
-            style={{ maxWidth: 300, margin: '0 auto 12px' }}
-          >
-            {loading ? <span className="payment__spinner" /> : t('Tasdiqlash', 'Подтвердить', 'Confirm')}
-          </button>
-
-          <button
-            type="button"
-            onClick={handleResendOtp}
-            disabled={resendTimer > 0 || loading}
-            style={{
-              background: 'none', border: 'none', color: resendTimer > 0 ? '#999' : '#dc2626',
-              cursor: resendTimer > 0 ? 'default' : 'pointer', fontSize: 14, fontFamily: 'inherit',
-              padding: '8px 16px',
-            }}
-          >
-            {resendTimer > 0
-              ? t(`Qayta yuborish (${resendTimer}s)`, `Отправить снова (${resendTimer}s)`, `Resend (${resendTimer}s)`)
-              : t('Kodni qayta yuborish', 'Отправить код снова', 'Resend code')
-            }
-          </button>
-
-          <div style={{ marginTop: 16 }}>
-            <button
-              type="button"
-              onClick={() => { setStep('card'); setOtp(''); setError(null); }}
-              style={{ background: 'none', border: 'none', color: '#666', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}
-            >
-              {t('← Orqaga', '← Назад', '← Back')}
-            </button>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
-  // ─── Card input step ───
-  if (step === 'card' && !manualMode) {
-    const plan = PLANS.find((p) => p.id === selectedPlan);
-    const cleanCard = cardNumber.replace(/\s/g, '');
-    const validCard = /^\d{16}$/.test(cleanCard);
-    const validExpiry = /^\d{2}\/\d{2}$/.test(expiry);
-
-    return (
-      <main className="payment">
-        {renderHeader()}
-
-        <div className="payment__section" style={{ marginTop: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-            <button
-              type="button"
-              onClick={() => { setStep('plan'); setError(null); }}
-              style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: 14, fontFamily: 'inherit' }}
-            >
-              {t('← Orqaga', '← Назад', '← Back')}
-            </button>
-          </div>
-
-          <h2 className="payment__section-title" style={{ marginBottom: 4 }}>
-            {t("Karta ma'lumotlari", 'Данные карты', 'Card details')}
-          </h2>
-          <p style={{ color: '#666', fontSize: 13, marginBottom: 20 }}>
-            Uzcard / Humo
-          </p>
-
-          {/* Card number */}
-          <div style={{ marginBottom: 16 }}>
-            <label style={{ display: 'block', fontSize: 13, color: '#666', marginBottom: 4 }}>
-              {t('Karta raqami', 'Номер карты', 'Card number')}
-            </label>
-            <input
-              type="text"
-              inputMode="numeric"
-              value={cardNumber}
-              onChange={(e) => handleCardInput(e.target.value)}
-              placeholder="0000 0000 0000 0000"
-              autoFocus
-              style={{
-                width: '100%', padding: '12px 14px', fontSize: 16, border: '2px solid #e5e5e5',
-                borderRadius: 8, outline: 'none', fontFamily: 'inherit', boxSizing: 'border-box',
-              }}
-            />
-          </div>
-
-          {/* Expiry */}
-          <div style={{ marginBottom: 20 }}>
-            <label style={{ display: 'block', fontSize: 13, color: '#666', marginBottom: 4 }}>
-              {t("Amal qilish muddati", 'Срок действия', 'Expiry date')}
-            </label>
-            <input
-              type="text"
-              inputMode="numeric"
-              value={expiry}
-              onChange={(e) => handleExpiryInput(e.target.value)}
-              placeholder="MM/YY"
-              style={{
-                width: 120, padding: '12px 14px', fontSize: 16, border: '2px solid #e5e5e5',
-                borderRadius: 8, outline: 'none', fontFamily: 'inherit', textAlign: 'center',
-              }}
-            />
-          </div>
-
-          {error && <p className="payment__error">{error}</p>}
-
-          {/* Pay button */}
-          <button
-            className="payment__submit"
-            onClick={handlePayWithCard}
-            disabled={!validCard || !validExpiry || loading}
-            type="button"
-          >
-            {loading ? (
-              <span className="payment__spinner" />
-            ) : (
-              <>
-                {t("To'lash", 'Оплатить', 'Pay')}{' '}
-                {plan ? `${formatPrice(plan.price)} ${t("so'm", 'сум', 'UZS')}` : ''}
-              </>
-            )}
-          </button>
-
-          {/* Manual payment link */}
-          <div style={{ textAlign: 'center', marginTop: 16 }}>
-            <button
-              type="button"
-              onClick={() => setManualMode(true)}
-              style={{
-                background: 'none', border: 'none', color: '#999', fontSize: 13,
-                cursor: 'pointer', textDecoration: 'underline', fontFamily: 'inherit',
-              }}
-            >
-              {t("Karta orqali o'tkazma", 'Оплата переводом', 'Pay via bank transfer')}
-            </button>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
-  // ─── Manual payment mode ───
-  if (manualMode) {
+  // ─── Upload screenshot step ───
+  if (showUpload) {
     return (
       <main className="payment">
         {renderHeader()}
@@ -672,7 +293,7 @@ export default function PaymentPage() {
         <div style={{ padding: '16px 0 0' }}>
           <button
             type="button"
-            onClick={() => { setManualMode(false); setError(null); }}
+            onClick={() => { setShowUpload(false); setError(null); }}
             style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: 14, fontFamily: 'inherit', padding: '0 24px' }}
           >
             {t('← Orqaga', '← Назад', '← Back')}
@@ -797,32 +418,14 @@ export default function PaymentPage() {
         ))}
       </div>
 
-      {/* Proceed to card input */}
       <button
         className="payment__submit"
-        onClick={() => { setStep('card'); setError(null); }}
+        onClick={() => { setShowUpload(true); setError(null); }}
         disabled={!selectedPlan}
         type="button"
       >
         {t('Davom etish', 'Продолжить', 'Continue')}
       </button>
-
-      {/* Manual payment fallback */}
-      <div style={{ textAlign: 'center', marginTop: 12 }}>
-        <button
-          type="button"
-          onClick={() => { if (selectedPlan) { setManualMode(true); setStep('card'); } }}
-          disabled={!selectedPlan}
-          style={{
-            background: 'none', border: 'none',
-            color: selectedPlan ? '#999' : '#ccc',
-            fontSize: 13, cursor: selectedPlan ? 'pointer' : 'default',
-            textDecoration: 'underline', fontFamily: 'inherit',
-          }}
-        >
-          {t("Karta orqali o'tkazma", 'Оплата переводом', 'Pay via bank transfer')}
-        </button>
-      </div>
     </main>
   );
 }
