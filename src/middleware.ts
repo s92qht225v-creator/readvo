@@ -23,16 +23,19 @@ export default function middleware(request: NextRequest) {
   }
 
   // Server-side auth check: redirect unauthenticated users on protected routes
-  const localeMatch = pathname.match(/^\/([a-z]{2})(\/.*)?$/);
-  if (localeMatch) {
-    const pathWithoutLocale = localeMatch[2] || '/';
-    if (PROTECTED_PATTERN.test(pathWithoutLocale)) {
-      const hasAuth = request.cookies.get('blim-auth')?.value === '1';
-      if (!hasAuth) {
-        const locale = localeMatch[1];
-        const url = request.nextUrl.clone();
-        url.pathname = `/${locale}/login`;
-        return NextResponse.redirect(url);
+  // Skip in development (localhost) for dev mode
+  if (process.env.NODE_ENV !== 'development') {
+    const localeMatch = pathname.match(/^\/([a-z]{2})(\/.*)?$/);
+    if (localeMatch) {
+      const pathWithoutLocale = localeMatch[2] || '/';
+      if (PROTECTED_PATTERN.test(pathWithoutLocale)) {
+        const hasAuth = request.cookies.get('blim-auth')?.value === '1';
+        if (!hasAuth) {
+          const locale = localeMatch[1];
+          const url = request.nextUrl.clone();
+          url.pathname = `/${locale}/login`;
+          return NextResponse.redirect(url);
+        }
       }
     }
   }

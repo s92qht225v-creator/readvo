@@ -23,6 +23,7 @@ export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: s
   ma: { char: '吗', pinyin: 'ma', en: 'question particle' },
   shei: { char: '谁', pinyin: 'shéi', en: 'who (question word)' },
   na: { char: '哪', pinyin: 'nǎ', en: 'which (question word)' },
+  hen: { char: '很', pinyin: 'hěn', en: 'very (adverb before adjectives)' },
   de: { char: '的', pinyin: 'de', en: 'possessive particle' },
   ne: { char: '呢', pinyin: 'ne', en: 'bounce-back question particle' },
   ji: { char: '几', pinyin: 'jǐ', en: 'how many (question word for quantity)' },
