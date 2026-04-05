@@ -318,66 +318,6 @@
       "ex_en": "Please help me get it."
     }
   ],
-  "extraVocabSubtitle_uz": "Ovqat yetkazib berish mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме доставки еды",
-  "extraVocab": [
-    {
-      "zh": "送餐",
-      "py": "sòngcān",
-      "uz": "ovqat yetkazish",
-      "ru": "доставка еды",
-      "en": "food delivery"
-    },
-    {
-      "zh": "下单",
-      "py": "xiàdān",
-      "uz": "buyurtma bermoq",
-      "ru": "сделать заказ",
-      "en": "to place an order"
-    },
-    {
-      "zh": "骑手",
-      "py": "qíshǒu",
-      "uz": "kuryer",
-      "ru": "курьер",
-      "en": "delivery person / courier"
-    },
-    {
-      "zh": "地址",
-      "py": "dìzhǐ",
-      "uz": "manzil",
-      "ru": "адрес",
-      "en": "address"
-    },
-    {
-      "zh": "楼上",
-      "py": "lóushàng",
-      "uz": "bino ustida",
-      "ru": "наверху",
-      "en": "above / upstairs"
-    },
-    {
-      "zh": "包装",
-      "py": "bāozhuāng",
-      "uz": "qadoq",
-      "ru": "упаковка",
-      "en": "packaging"
-    },
-    {
-      "zh": "评价",
-      "py": "píngjià",
-      "uz": "baho bermoq",
-      "ru": "оценить / оставить отзыв",
-      "en": "to rate / leave a review"
-    },
-    {
-      "zh": "超时",
-      "py": "chāoshí",
-      "uz": "vaqtdan kechikish",
-      "ru": "задержка / просрочка",
-      "en": "delay / overdue"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "...到了",
@@ -531,6 +471,5 @@
       "formula_en": "下去 + Verb",
       "tip_en": "\"下去\" — go down, \"上去\" — go up."
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on food delivery"
+  ]
 }

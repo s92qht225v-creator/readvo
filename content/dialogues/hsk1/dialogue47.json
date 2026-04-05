@@ -485,87 +485,6 @@
       "ex_en": "You're a student, right?"
     }
   ],
-  "extraVocabSubtitle_uz": "Ro'za va ibodat mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме поста и молитвы",
-  "extraVocab": [
-    {
-      "zh": "开斋",
-      "py": "kāi zhāi",
-      "uz": "iftor qilmoq (ro'za ochmoq)",
-      "ru": "разговеться",
-      "en": "to break the fast"
-    },
-    {
-      "zh": "开斋节",
-      "py": "kāi zhāi jié",
-      "uz": "Ro'za hayiti",
-      "ru": "Праздник разговения",
-      "en": "Eid al-Fitr"
-    },
-    {
-      "zh": "做礼拜",
-      "py": "zuò lǐbài",
-      "uz": "namoz o'qimoq (ibodat qilmoq)",
-      "ru": "молиться",
-      "en": "to pray"
-    },
-    {
-      "zh": "清真寺",
-      "py": "qīngzhēn sì",
-      "uz": "masjid",
-      "ru": "мечеть",
-      "en": "mosque"
-    },
-    {
-      "zh": "古兰经",
-      "py": "gǔlánjīng",
-      "uz": "Qur'on",
-      "ru": "Коран",
-      "en": "Quran"
-    },
-    {
-      "zh": "早饭",
-      "py": "zǎofàn",
-      "uz": "nonushta (saharlik)",
-      "ru": "завтрак (сухур)",
-      "en": "pre-dawn meal (suhur)"
-    },
-    {
-      "zh": "晚饭",
-      "py": "wǎnfàn",
-      "uz": "kechki ovqat (iftor)",
-      "ru": "ужин (ифтар)",
-      "en": "evening meal (iftar)"
-    },
-    {
-      "zh": "喝水",
-      "py": "hē shuǐ",
-      "uz": "suv ichmoq",
-      "ru": "пить воду",
-      "en": "to drink water"
-    },
-    {
-      "zh": "饿",
-      "py": "è",
-      "uz": "och (qorin)",
-      "ru": "голодный",
-      "en": "hungry"
-    },
-    {
-      "zh": "渴",
-      "py": "kě",
-      "uz": "chanqoq",
-      "ru": "хочется пить",
-      "en": "thirsty"
-    },
-    {
-      "zh": "忍",
-      "py": "rěn",
-      "uz": "chidamoq, sabr qilmoq",
-      "ru": "терпеть",
-      "en": "to endure / bear"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "为什么...？",
@@ -783,6 +702,5 @@
       "formula_en": "不 + Adjective",
       "tip_en": "In affirmative: 很好 (hěn hǎo). In negation: just 不好 (bù hǎo), without 很!"
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on fasting and prayer"
+  ]
 }

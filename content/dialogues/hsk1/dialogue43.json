@@ -386,45 +386,6 @@
       "ex_en": "Let's go."
     }
   ],
-  "extraVocabSubtitle_uz": "Avtomobil xavfsizligi va haydash mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме безопасности в автомобиле и вождения",
-  "extraVocab": [
-    {
-      "zh": "开车",
-      "py": "kāichē",
-      "uz": "mashina haydamoq",
-      "ru": "вести машину",
-      "en": "to drive a car"
-    },
-    {
-      "zh": "上车",
-      "py": "shàngchē",
-      "uz": "mashinaga o'tirmoq",
-      "ru": "сесть в машину",
-      "en": "to get in a car"
-    },
-    {
-      "zh": "下车",
-      "py": "xiàchē",
-      "uz": "mashinadan tushmoq",
-      "ru": "выйти из машины",
-      "en": "to get out of a car"
-    },
-    {
-      "zh": "驾照",
-      "py": "jiàzhào",
-      "uz": "haydovchilik guvohnomasi",
-      "ru": "водительские права",
-      "en": "driver's license"
-    },
-    {
-      "zh": "小心",
-      "py": "xiǎoxīn",
-      "uz": "ehtiyot bo'lmoq",
-      "ru": "осторожно",
-      "en": "be careful"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "...好了吗？",
@@ -572,6 +533,5 @@
       "desc_en": "那 = then, 吧 = suggestion particle. Together: \"Then let's...\".",
       "formula_en": "那 + Subj. + Verb + 吧"
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on car safety and driving"
+  ]
 }

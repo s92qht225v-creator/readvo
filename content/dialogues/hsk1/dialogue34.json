@@ -371,52 +371,6 @@
       "ex_en": "He was late today."
     }
   ],
-  "extraVocabSubtitle_uz": "Tayyorgarlik va tadbirlar mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме подготовки и мероприятий",
-  "extraVocab": [
-    {
-      "zh": "来得及",
-      "py": "láidejí",
-      "uz": "ulgurmoq",
-      "ru": "успевать",
-      "en": "to be on time / manage"
-    },
-    {
-      "zh": "来不及",
-      "py": "láibují",
-      "uz": "ulgurmaslik",
-      "ru": "не успевать",
-      "en": "to not have enough time"
-    },
-    {
-      "zh": "着急",
-      "py": "zháojí",
-      "uz": "shoshilmoq",
-      "ru": "торопиться",
-      "en": "to hurry"
-    },
-    {
-      "zh": "化妆",
-      "py": "huàzhuāng",
-      "uz": "bo'yanmoq",
-      "ru": "краситься",
-      "en": "to put on makeup"
-    },
-    {
-      "zh": "换衣服",
-      "py": "huàn yīfu",
-      "uz": "kiyim almashtirmoq",
-      "ru": "переодеться",
-      "en": "to change clothes"
-    },
-    {
-      "zh": "出门",
-      "py": "chūmén",
-      "uz": "uydan chiqmoq",
-      "ru": "выйти из дома",
-      "en": "to leave home"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "Fe'l + 好了吗？",
@@ -542,6 +496,5 @@
       "formula_en": "快一点 (+ Verb)",
       "tip_en": "\"快点\" is used with the same meaning. \"慢一点\" — slow down."
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on preparation and events"
+  ]
 }

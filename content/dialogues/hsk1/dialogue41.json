@@ -298,73 +298,6 @@
       "ex_en": "Can I pay by card here?"
     }
   ],
-  "extraVocabSubtitle_uz": "To'lov usullari mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме способов оплаты",
-  "extraVocab": [
-    {
-      "zh": "现金",
-      "py": "xiànjīn",
-      "uz": "naqd pul",
-      "ru": "наличные",
-      "en": "cash"
-    },
-    {
-      "zh": "扫码",
-      "py": "sǎomǎ",
-      "uz": "QR kod skanerlash",
-      "ru": "сканировать QR-код",
-      "en": "to scan a QR code"
-    },
-    {
-      "zh": "找零",
-      "py": "zhǎolíng",
-      "uz": "qaytim bermoq",
-      "ru": "сдача",
-      "en": "change"
-    },
-    {
-      "zh": "发票",
-      "py": "fāpiào",
-      "uz": "kvitansiya",
-      "ru": "чек / квитанция",
-      "en": "receipt"
-    },
-    {
-      "zh": "打折",
-      "py": "dǎzhé",
-      "uz": "chegirma",
-      "ru": "скидка",
-      "en": "discount"
-    },
-    {
-      "zh": "贵",
-      "py": "guì",
-      "uz": "qimmat",
-      "ru": "дорогой",
-      "en": "expensive"
-    },
-    {
-      "zh": "便宜",
-      "py": "piányi",
-      "uz": "arzon",
-      "ru": "дешёвый",
-      "en": "cheap"
-    },
-    {
-      "zh": "账单",
-      "py": "zhàngdān",
-      "uz": "hisob",
-      "ru": "счёт",
-      "en": "bill / check"
-    },
-    {
-      "zh": "小费",
-      "py": "xiǎofèi",
-      "uz": "choy puli",
-      "ru": "чаевые",
-      "en": "tip / gratuity"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "可以...吗？",
@@ -518,6 +451,5 @@
       "formula_en": "好的 (standalone reply)",
       "tip_en": "Waiters and service staff often use \"好的\"."
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on payment methods"
+  ]
 }

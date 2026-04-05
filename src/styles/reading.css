@@ -3254,6 +3254,13 @@ body {
   white-space: nowrap;
 }
 
+.dr-vocab-card-py {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  white-space: nowrap;
+}
+
 .dr-grammar-title {
   font-size: 14px;
   color: #1a1a2e;

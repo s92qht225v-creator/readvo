@@ -383,52 +383,6 @@
       "ex_en": "Tell me before you leave."
     }
   ],
-  "extraVocabSubtitle_uz": "Eslatma va muloqot mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме напоминаний и общения",
-  "extraVocab": [
-    {
-      "zh": "手机",
-      "py": "shǒujī",
-      "uz": "telefon",
-      "ru": "мобильный телефон",
-      "en": "mobile phone"
-    },
-    {
-      "zh": "打电话",
-      "py": "dǎ diànhuà",
-      "uz": "qo'ng'iroq qilmoq",
-      "ru": "звонить",
-      "en": "to call"
-    },
-    {
-      "zh": "回电话",
-      "py": "huí diànhuà",
-      "uz": "qayta qo'ng'iroq qilmoq",
-      "ru": "перезвонить",
-      "en": "to call back"
-    },
-    {
-      "zh": "发短信",
-      "py": "fā duǎnxìn",
-      "uz": "SMS yubormoq",
-      "ru": "отправить сообщение",
-      "en": "to send a message"
-    },
-    {
-      "zh": "对不起",
-      "py": "duìbuqǐ",
-      "uz": "kechirasiz",
-      "ru": "извините",
-      "en": "sorry / excuse me"
-    },
-    {
-      "zh": "没关系",
-      "py": "méi guānxi",
-      "uz": "hech gap emas",
-      "ru": "ничего страшного",
-      "en": "it's okay / no problem"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "怎么...？",
@@ -614,6 +568,5 @@
       "desc_en": "下次 = next time. Placed before a verb to indicate a future action.",
       "formula_en": "下次 + Verb"
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on reminders and communication"
+  ]
 }

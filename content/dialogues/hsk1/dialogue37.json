@@ -311,52 +311,6 @@
       "ex_en": "Where is your home?"
     }
   ],
-  "extraVocabSubtitle_uz": "Kutish va vaqt ifodalari mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме ожидания и выражений времени",
-  "extraVocab": [
-    {
-      "zh": "马上",
-      "py": "mǎshàng",
-      "uz": "hozir / darhol",
-      "ru": "сейчас / сразу",
-      "en": "now / right away"
-    },
-    {
-      "zh": "快点",
-      "py": "kuài diǎn",
-      "uz": "tezroq",
-      "ru": "побыстрее",
-      "en": "hurry up / faster"
-    },
-    {
-      "zh": "准时",
-      "py": "zhǔnshí",
-      "uz": "vaqtida",
-      "ru": "вовремя",
-      "en": "on time"
-    },
-    {
-      "zh": "迟到",
-      "py": "chídào",
-      "uz": "kechikmoq",
-      "ru": "опоздать",
-      "en": "to be late"
-    },
-    {
-      "zh": "半小时",
-      "py": "bàn xiǎoshí",
-      "uz": "yarim soat",
-      "ru": "полчаса",
-      "en": "half an hour"
-    },
-    {
-      "zh": "一会儿",
-      "py": "yíhuìr",
-      "uz": "biroz vaqtdan keyin",
-      "ru": "через некоторое время",
-      "en": "after a while"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "...到了吗？",
@@ -482,6 +436,5 @@
       "formula_en": "好 / 好的",
       "tip_en": "\"好的\" — slightly more formal. \"好\" — in casual conversation."
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on waiting and time expressions"
+  ]
 }

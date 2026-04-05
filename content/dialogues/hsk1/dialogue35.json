@@ -383,52 +383,6 @@
       "ex_en": "I'll walk you to the door."
     }
   ],
-  "extraVocabSubtitle_uz": "Xayrlashish va kuzatish mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме прощания и проводов",
-  "extraVocab": [
-    {
-      "zh": "机场",
-      "py": "jīchǎng",
-      "uz": "aeroport",
-      "ru": "аэропорт",
-      "en": "airport"
-    },
-    {
-      "zh": "火车站",
-      "py": "huǒchēzhàn",
-      "uz": "temir yo'l vokzali",
-      "ru": "вокзал",
-      "en": "train station"
-    },
-    {
-      "zh": "行李",
-      "py": "xínglǐ",
-      "uz": "yuk / bagaj",
-      "ru": "багаж",
-      "en": "luggage / baggage"
-    },
-    {
-      "zh": "护照",
-      "py": "hùzhào",
-      "uz": "pasport",
-      "ru": "паспорт",
-      "en": "passport"
-    },
-    {
-      "zh": "再见",
-      "py": "zàijiàn",
-      "uz": "xayr",
-      "ru": "до свидания",
-      "en": "goodbye"
-    },
-    {
-      "zh": "一路平安",
-      "py": "yílù píng'ān",
-      "uz": "yaxshi safar!",
-      "ru": "счастливого пути",
-      "en": "have a safe trip"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "什么时候 + Fe'l？",
@@ -554,6 +508,5 @@
       "formula_en": "I + 送 + You",
       "tip_en": "\"送\" also means to give a gift: \"送你一本书\" — I'll give you a book."
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on farewells and seeing off"
+  ]
 }

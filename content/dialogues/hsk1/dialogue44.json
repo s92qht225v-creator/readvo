@@ -324,66 +324,6 @@
       "ex_en": "When will you come back?"
     }
   ],
-  "extraVocabSubtitle_uz": "Ish va ofis mavzusidagi foydali so'zlar",
-  "extraVocabSubtitle_ru": "Полезные слова по теме работы и офиса",
-  "extraVocab": [
-    {
-      "zh": "上班",
-      "py": "shàngbān",
-      "uz": "ishga bormoq",
-      "ru": "идти на работу",
-      "en": "to go to work"
-    },
-    {
-      "zh": "请假",
-      "py": "qǐngjià",
-      "uz": "dam olish so'ramoq",
-      "ru": "взять отгул",
-      "en": "to take a day off"
-    },
-    {
-      "zh": "工资",
-      "py": "gōngzī",
-      "uz": "maosh",
-      "ru": "зарплата",
-      "en": "salary"
-    },
-    {
-      "zh": "同事",
-      "py": "tóngshì",
-      "uz": "hamkasb",
-      "ru": "коллега",
-      "en": "colleague"
-    },
-    {
-      "zh": "老板",
-      "py": "lǎobǎn",
-      "uz": "boss / rahbar",
-      "ru": "начальник / босс",
-      "en": "boss"
-    },
-    {
-      "zh": "办公室",
-      "py": "bàngōngshì",
-      "uz": "ofis",
-      "ru": "офис",
-      "en": "office"
-    },
-    {
-      "zh": "会议",
-      "py": "huìyì",
-      "uz": "yig'ilish",
-      "ru": "совещание",
-      "en": "meeting"
-    },
-    {
-      "zh": "休息",
-      "py": "xiūxi",
-      "uz": "dam olmoq",
-      "ru": "отдыхать",
-      "en": "to rest"
-    }
-  ],
   "grammarNotes": [
     {
       "pattern": "几点 + Fe'l？",
@@ -528,6 +468,5 @@
       "desc_en": "早点 = a bit earlier. Before a verb, it means to do the action earlier than usual.",
       "formula_en": "早点 + Verb"
     }
-  ],
-  "extraVocabSubtitle_en": "Useful words on work and office"
+  ]
 }

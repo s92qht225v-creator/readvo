@@ -671,7 +671,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                   const sub = (language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0];
                   const inner = (
                     <>
-                      <div className="lp__writing-card-deco" aria-hidden="true">{isEmpty ? '🔒' : set.chars.slice(0, 3)}</div>
+                      <div className="lp__writing-card-deco" aria-hidden="true">{isEmpty ? '🔒' : set.chars.slice(0, 2)}</div>
                       <div className="lp__writing-card__title">{title}</div>
                       <div className="lp__writing-card__sub">{isEmpty ? ({ uz: 'Tez kunda', ru: 'Скоро', en: 'Coming soon' } as Record<string, string>)[language] : sub}</div>
                       {!isEmpty && (() => {

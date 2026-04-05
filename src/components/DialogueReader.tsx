@@ -106,10 +106,6 @@ interface DialogueData {
   sections: { id: string; sentences: Sentence[]; audio_url?: string }[];
   vocab?: VocabEntry[];
   phrases?: PhraseEntry[];
-  extraVocab?: { zh: string; py: string; uz: string; ru: string; en?: string; icon?: string }[];
-  extraVocabSubtitle_uz?: string;
-  extraVocabSubtitle_ru?: string;
-  extraVocabSubtitle_en?: string;
   timeOfDay?: TimeOfDayEntry[];
   grammarNotes?: GrammarNote[];
 }
@@ -453,54 +449,33 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         {/* ── SO'ZLAR TAB ── */}
         {activeTab === 'vocab' && (
           <div className="dr-panel">
-            {vocabList.length === 0 && !dialogue.extraVocab?.length && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
+            {vocabList.length === 0 && !dialogue.phrases?.length && !dialogue.timeOfDay?.length ? (
               <div className="dr-empty">
                 <div className="dr-empty__icon">📖</div>
                 <div>{({ uz: 'So\'zlar topilmadi', ru: 'Слова не найдены', en: 'No words found' } as Record<string, string>)[language]}</div>
               </div>
             ) : (
               <>
-                {vocabList.length > 0 && (
-                  <div className="dr-card">
-                    <div className="dr-label">{({ uz: 'Yangi so\'zlar', ru: 'Новые слова', en: 'New Words' } as Record<string, string>)[language]}</div>
-                    {vocabList.map((v, i) => (
-                      <div key={i} className={`dr-vocab-item ${expandedVocab === i ? 'dr-vocab-item--open' : ''}`} onClick={() => setExpandedVocab(expandedVocab === i ? null : i)}>
-                        <div className="dr-vocab-row">
-                          <span className="dr-vocab-zh">{v.zh}</span>
-                          <span className="dr-vocab-py">{v.py}</span>
-                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
+                {vocabList.length > 0 && vocabList.map((v, i) => (
+                  <div key={i} className="dr-card dr-grammar-card" onClick={() => setExpandedVocab(expandedVocab === i ? null : i)}>
+                    <div className="dr-grammar-header">
+                      <span className="dr-grammar-pattern">{v.zh}</span>
+                      <span className="dr-vocab-card-py">{v.py}</span>
+                      <span className="dr-grammar-title">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
+                      <span className={`dr-grammar-arrow${expandedVocab === i ? ' dr-grammar-arrow--open' : ''}`}>▾</span>
+                    </div>
+                    {expandedVocab === i && v.ex && (
+                      <div className="dr-grammar-expanded">
+                        <div className="dr-grammar-example">
+                          <div className="dr-vocab-example-zh">{v.ex}</div>
+                          <div className="dr-vocab-example-py">{v.expy}</div>
+                          <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : language === 'en' ? (v.exen || v.exuz) : v.exuz}</div>
                         </div>
-                        {expandedVocab === i && (
-                          <div className="dr-vocab-example">
-                            <div className="dr-vocab-example-zh">{v.ex}</div>
-                            <div className="dr-vocab-example-py">{v.expy}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : language === 'en' ? (v.exen || v.exuz) : v.exuz}</div>
-                          </div>
-                        )}
                       </div>
-                    ))}
-                    <div className="dr-hint">{({ uz: 'Bosing — misol ko\'rinadi', ru: 'Нажмите — увидите пример', en: 'Tap to see an example' } as Record<string, string>)[language]}</div>
-                  </div>
-                )}
-
-                {dialogue.extraVocab && dialogue.extraVocab.length > 0 && (
-                  <div className="dr-card">
-                    <div className="dr-label">{({ uz: 'Mavzuga oid qo\'shimcha so\'zlar', ru: 'Дополнительные слова по теме', en: 'Additional Topic Words' } as Record<string, string>)[language]}</div>
-                    {dialogue.extraVocabSubtitle_uz && (
-                      <div className="dr-sublabel">{language === 'ru' ? dialogue.extraVocabSubtitle_ru : language === 'en' ? (dialogue.extraVocabSubtitle_en || dialogue.extraVocabSubtitle_uz) : dialogue.extraVocabSubtitle_uz}</div>
                     )}
-                    {dialogue.extraVocab.map((v, i) => (
-                      <div key={i} className="dr-vocab-item dr-vocab-item--nohover">
-                        <div className="dr-vocab-row">
-                          {v.icon && <span className="dr-vocab-icon">{v.icon}</span>}
-                          <span className="dr-vocab-zh">{v.zh}</span>
-                          <span className="dr-vocab-py">{v.py}</span>
-                          <span className="dr-vocab-tr">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
-                        </div>
-                      </div>
-                    ))}
                   </div>
-                )}
+                ))}
+
 
                 {dialogue.phrases && dialogue.phrases.length > 0 && (
                   <div className="dr-card">
