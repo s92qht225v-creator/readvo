@@ -2,14 +2,13 @@ import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 const BUCKET = 'audio';
-const DEFAULT_PREFIX = 'tts/grammar';
-const ALLOWED_PREFIXES = ['tts/grammar', 'tts/writing'];
+const TTS_PREFIX = 'tts/grammar';
 
 /** Deterministic file path from Chinese text */
-function storagePath(text: string, prefix: string = DEFAULT_PREFIX): string {
+function storagePath(text: string): string {
   // Use hex encoding of the text to avoid URL-encoding issues
   const hex = Buffer.from(text, 'utf-8').toString('hex');
-  return `${prefix}/${hex}.wav`;
+  return `${TTS_PREFIX}/${hex}.wav`;
 }
 
 /** Public URL for a file in the audio bucket */
@@ -19,20 +18,17 @@ function publicUrl(path: string): string {
 }
 
 export async function POST(req: Request) {
-  const { text, style, skipCache, prefix } = await req.json();
+  const { text, style, skipCache } = await req.json();
 
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
 
-  // Validate prefix if provided
-  const storagePrefix = (prefix && ALLOWED_PREFIXES.includes(prefix)) ? prefix : DEFAULT_PREFIX;
-
   const supabase = getSupabaseAdmin();
 
   // 1. Check Supabase cache (skip when admin requests fresh generation)
   if (!skipCache) {
-    const path = storagePath(text, storagePrefix);
+    const path = storagePath(text);
     const { data: existing, error: dlError } = await supabase.storage
       .from(BUCKET)
       .download(path);
@@ -93,7 +89,7 @@ export async function POST(req: Request) {
     }
 
     // 3. Upload to Supabase Storage
-    const path = storagePath(text, storagePrefix);
+    const path = storagePath(text);
     const audioBuffer = Buffer.from(audioBase64, 'base64');
     const { error: uploadError } = await supabase.storage
       .from(BUCKET)

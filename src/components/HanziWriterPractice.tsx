@@ -5,7 +5,7 @@ import { HanziCanvas } from './HanziCanvas';
 import { CoachMarkTour } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import type { HanziWord } from '@/services/writing';
-import { playWritingAudio } from '@/utils/grammarAudio';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export type { HanziWord };
 
@@ -54,8 +54,22 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 
+const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
+
+function getWritingAudioUrl(char: string, pinyin: string): string {
+  const first = pinyin.split(' / ')[0];
+  const stripped = first.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
+  const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
+  return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
+}
+
 export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart, hideSubtabs, subtab: subtabProp, onSubtabChange }: Props) {
   const activeWords = wordsProp ?? WORDS;
+  const audio = useAudioPlayer();
+  useEffect(() => {
+    return () => { audio.stop(); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [view, setView] = useState<View>('home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
   const subtab = subtabProp ?? subtabInternal;
@@ -72,10 +86,11 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const showBtnRef = useRef<HTMLButtonElement>(null);
   const hideBtnRef = useRef<HTMLButtonElement>(null);
 
-  /** Play audio for a word via MiMo TTS */
+  /** Play audio for a word */
   const playWordAudio = useCallback((word: HanziWord) => {
-    playWritingAudio(word.char);
-  }, []);
+    const url = getWritingAudioUrl(word.char, word.pinyin);
+    audio.play(`writing-${word.char}`, url);
+  }, [audio]);
 
   // Auto-start: skip home screen and go directly to practice with all words
   useEffect(() => {

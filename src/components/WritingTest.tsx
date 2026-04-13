@@ -4,7 +4,15 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HanziCanvas } from './HanziCanvas';
 import { useStars } from '@/hooks/useStars';
 import type { HanziWord } from '@/services/writing';
-import { playWritingAudio, fetchWritingAudioUrl } from '@/utils/grammarAudio';
+
+const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
+
+function getWritingAudioUrl(char: string, pinyin: string): string {
+  const first = pinyin.split(' / ')[0];
+  const stripped = first.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
+  const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
+  return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
+}
 
 /** Max wrong strokes per character before it counts as "fail" */
 const FAIL_THRESHOLD = 2;
@@ -35,7 +43,18 @@ function calculateWritingStars(results: CharResult[]): number {
 }
 
 export function WritingTest({ words, lang, setId, onDone }: Props) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const { getStars, saveStars } = useStars('writing');
+
+  // Cleanup audio on unmount
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
 
   const [screen, setScreen] = useState<Screen>('ready');
   const [wordIndex, setWordIndex] = useState(0);
@@ -65,11 +84,20 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
   const completedChars = results.length;
   const totalChars = flatChars.current.length || words.reduce((n, w) => n + [...w.char].length, 0);
 
-  /** Play audio for current word via MiMo TTS */
+  // Play audio using direct HTMLAudioElement — avoids useAudioPlayer race conditions
+  const playAudio = useCallback((url: string) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    const el = new Audio(url);
+    audioRef.current = el;
+    el.play().catch(() => { /* ignore autoplay blocks */ });
+  }, []);
+
   const playCurrentAudio = useCallback(() => {
     if (!currentWord) return;
-    playWritingAudio(currentWord.char);
-  }, [currentWord]);
+    playAudio(getWritingAudioUrl(currentWord.char, currentWord.pinyin));
+  }, [currentWord, playAudio]);
 
   // Auto-play audio when word changes (not on initial start — that's handled in handleStart)
   const prevWordIndexRef = useRef(-1);
@@ -131,11 +159,11 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
     mistakesRef.current = 0;
     prevWordIndexRef.current = 0;
     setScreen('test');
-    // Play first word audio via MiMo TTS
+    // Play first word audio directly in click handler (user gesture)
     if (words[0]) {
-      playWritingAudio(words[0].char);
+      playAudio(getWritingAudioUrl(words[0].char, words[0].pinyin));
     }
-  }, [words]);
+  }, [words, playAudio]);
 
   // Retry — play audio immediately in user gesture context
   const handleRetry = useCallback(() => {
@@ -148,9 +176,9 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
     setStarsLocal(null);
     setScreen('test');
     if (words[0]) {
-      playWritingAudio(words[0].char);
+      playAudio(getWritingAudioUrl(words[0].char, words[0].pinyin));
     }
-  }, [words]);
+  }, [words, playAudio]);
 
   const L = (t: Record<string, string>) => t[lang] || t.en;
 

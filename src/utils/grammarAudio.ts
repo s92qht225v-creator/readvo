@@ -1,5 +1,5 @@
 /**
- * Shared TTS audio player using MiMo TTS API + Supabase cache.
+ * Shared grammar audio player using MiMo TTS API + Supabase cache.
  * Flow: memory cache → Supabase (via API) → MiMo TTS → Web Speech API.
  * Generated audio is saved to Supabase so it's only generated once per phrase.
  */
@@ -12,23 +12,11 @@ function getAudioEl(): HTMLAudioElement {
   return _el;
 }
 
-/** Play grammar audio (stored under tts/grammar/) */
 export function playGrammarAudio(zh: string) {
-  playTTSAudio(zh, 'tts/grammar');
-}
-
-/** Play writing audio (stored under tts/writing/) */
-export function playWritingAudio(zh: string) {
-  playTTSAudio(zh, 'tts/writing');
-}
-
-/** Generic TTS player with configurable storage prefix */
-export function playTTSAudio(zh: string, prefix: string = 'tts/grammar') {
-  const cacheKey = `${prefix}:${zh}`;
   const el = getAudioEl();
 
   // If cached in memory, play immediately
-  const cached = audioCache.get(cacheKey);
+  const cached = audioCache.get(zh);
   if (cached) {
     el.src = cached;
     el.currentTime = 0;
@@ -37,7 +25,7 @@ export function playTTSAudio(zh: string, prefix: string = 'tts/grammar') {
   }
 
   // Fetch from API (checks Supabase cache, generates if needed)
-  fetchTTS(zh, prefix).then(url => {
+  fetchTTS(zh).then(url => {
     if (url) {
       el.src = url;
       el.currentTime = 0;
@@ -46,23 +34,14 @@ export function playTTSAudio(zh: string, prefix: string = 'tts/grammar') {
   });
 }
 
-/**
- * Fetch TTS URL (generate-on-demand). Returns a playable URL or null.
- * Used by components that need the URL (e.g. WritingTest with its own Audio element).
- */
-export async function fetchWritingAudioUrl(text: string): Promise<string | null> {
-  return fetchTTS(text, 'tts/writing');
-}
-
-async function fetchTTS(text: string, prefix: string): Promise<string | null> {
-  const cacheKey = `${prefix}:${text}`;
-  if (audioCache.has(cacheKey)) return audioCache.get(cacheKey)!;
+async function fetchTTS(text: string): Promise<string | null> {
+  if (audioCache.has(text)) return audioCache.get(text)!;
 
   try {
     const res = await fetch('/api/tts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, prefix }),
+      body: JSON.stringify({ text }),
     });
 
     if (!res.ok) return fallbackSpeech(text);
@@ -71,7 +50,7 @@ async function fetchTTS(text: string, prefix: string): Promise<string | null> {
 
     // API returns { url } if cached in Supabase, or { audio } as base64 fallback
     if (data.url) {
-      audioCache.set(cacheKey, data.url);
+      audioCache.set(text, data.url);
       return data.url;
     }
 
@@ -83,7 +62,7 @@ async function fetchTTS(text: string, prefix: string): Promise<string | null> {
       }
       const blob = new Blob([bytes], { type: 'audio/wav' });
       const url = URL.createObjectURL(blob);
-      audioCache.set(cacheKey, url);
+      audioCache.set(text, url);
       return url;
     }
 
