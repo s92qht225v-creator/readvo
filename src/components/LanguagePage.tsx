@@ -53,6 +53,8 @@ const grammarItems = [
   { char: '多大', pinyin: 'duō dà', href: '/chinese/hsk1/grammar/duoda', translation: 'necha yoshda?', translation_ru: 'сколько лет?', translation_en: 'how old?', color: '#0369a1', active: true },
   { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: 'qila olmoq', translation_ru: 'уметь', translation_en: 'can / be able to', color: '#dc2626', active: true },
   { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda', translation_ru: 'очень', translation_en: 'very', color: '#b45309', active: true },
+  { char: '怎么', pinyin: 'zěnme', href: '/chinese/hsk1/grammar/zenme', translation: 'qanday?', translation_ru: 'как?', translation_en: 'how?', color: '#0f766e', active: true },
+  { char: '日期', pinyin: 'rìqī', href: '/chinese/hsk1/grammar/riqi', translation: 'sanalar', translation_ru: 'даты', translation_en: 'dates', color: '#7c3aed', active: true },
 ];
 
 const karaokeItems = [

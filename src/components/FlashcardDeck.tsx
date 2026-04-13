@@ -13,6 +13,7 @@ import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import { trackAll } from '@/utils/analytics';
+import { playWritingAudio } from '@/utils/grammarAudio';
 
 export interface FlashcardDeckProps {
   deck: FlashcardDeckData;
@@ -46,23 +47,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const [isDragging, setIsDragging] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const startX = useRef(0);
   const dragXRef = useRef(0);
   const isDraggingRef = useRef(false);
   const isProcessingRef = useRef(false);
-
-  // Audio playback
-  const playAudio = useCallback((url: string) => {
-    if (audioRef.current) audioRef.current.pause();
-    const el = new Audio(url);
-    audioRef.current = el;
-    el.play().catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    return () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } };
-  }, []);
 
   // Analytics: track flashcard view
   useEffect(() => {
@@ -357,10 +345,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
                       {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
                     </div>
-                    {currentCard.audio_url && direction === 'cn' && (
+                    {direction === 'cn' && (
                       <button
                         type="button"
-                        onClick={(e) => { e.stopPropagation(); playAudio(currentCard.audio_url!); }}
+                        onClick={(e) => { e.stopPropagation(); playWritingAudio(currentCard.text_original); }}
                         style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: '#dc2626', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
@@ -395,15 +383,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         <div style={{ fontSize: 18, color: '#fca5a5', marginTop: 8, textAlign: 'center' }}>{translation}</div>
                       </>
                     )}
-                    {currentCard.audio_url && (
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); playAudio(currentCard.audio_url!); }}
-                        style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: 'rgba(255,255,255,0.2)', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
-                      </button>
-                    )}
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); playWritingAudio(currentCard.text_original); }}
+                      style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: 'rgba(255,255,255,0.2)', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
+                    </button>
                     <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← bilmayman | bilaman →', ru: '← не знаю | знаю →', en: "← don't know | know →" } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
