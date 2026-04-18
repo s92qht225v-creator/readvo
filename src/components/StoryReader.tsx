@@ -152,13 +152,6 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
     return match?.id ?? null;
   }, [isPlaying, currentTime, timedSentences]);
 
-  // In focus mode, keep activeSentenceId synced with audio so pausing doesn't lose position
-  useEffect(() => {
-    if (focusMode && audioSentenceId) {
-      setActiveSentenceId(audioSentenceId);
-    }
-  }, [focusMode, audioSentenceId]);
-
   // The displayed sentence: audio-synced takes priority, then manual tap
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
   const activeSentence = displaySentenceId
@@ -242,7 +235,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
       audio.pause();
       audio.src = '';
     };
-  }, [story.audio_url]);
+  }, [story.audio_url, story.sections]);
 
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;

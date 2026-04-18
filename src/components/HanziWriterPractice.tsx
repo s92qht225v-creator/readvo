@@ -70,13 +70,13 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     return () => { audio.stop(); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const [view, setView] = useState<View>('home');
+  const [view, setView] = useState<View>(autoStart ? 'practice' : 'home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
   const subtab = subtabProp ?? subtabInternal;
   const setSubtab = onSubtabChange ?? setSubtabInternal;
   const [expandedChar, setExpandedChar] = useState<string | null>(null);
 
-  const [sessionQueue, setSessionQueue] = useState<HanziWord[]>([]);
+  const [sessionQueue, setSessionQueue] = useState<HanziWord[]>(() => (autoStart ? activeWords : []));
   const [sessionIndex, setSessionIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [resetKey, setResetKey] = useState(0);
@@ -91,16 +91,6 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     const url = getWritingAudioUrl(word.char, word.pinyin);
     audio.play(`writing-${word.char}`, url);
   }, [audio]);
-
-  // Auto-start: skip home screen and go directly to practice with all words
-  useEffect(() => {
-    if (!autoStart) return;
-    setSessionQueue(activeWords);
-    setSessionIndex(0);
-    setCharIndex(0);
-    setView('practice');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const handleStart = useCallback(() => {
     const shuffled = shuffle(activeWords);

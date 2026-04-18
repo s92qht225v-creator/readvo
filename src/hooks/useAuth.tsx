@@ -65,6 +65,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const newUser = session?.user ? mapUser(session.user) : null;
       setUser(newUser);
       setIsLoading(false);
+      if (!newUser) {
+        setSubscription(null);
+        setSubscriptionChecked(false);
+      }
       // Skip session checks for 60s after login to avoid race conditions
       if (_event === 'SIGNED_IN') {
         loginGrace.current = true;
@@ -103,14 +107,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const newUser = session?.user ? mapUser(session.user) : null;
       setUser(newUser);
       setIsLoading(false);
+      if (!newUser) {
+        setSubscription(null);
+        setSubscriptionChecked(false);
+      }
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
   // Periodically verify single-device session via nonce check
-  const routerRef = useRef(router);
-  routerRef.current = router;
   useEffect(() => {
     if (!user) return;
     const interval = setInterval(async () => {
@@ -120,7 +126,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
         setUser(null);
-        routerRef.current.push('/');
+        setSubscription(null);
+        setSubscriptionChecked(false);
+        router.push('/');
         return;
       }
       try {
@@ -137,20 +145,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem('blim-session-nonce');
           await supabase.auth.signOut({ scope: 'local' });
           setUser(null);
-          routerRef.current.push('/');
+          setSubscription(null);
+          setSubscriptionChecked(false);
+          router.push('/');
         }
       } catch {
         // Network error — don't kick out
       }
     }, 120_000); // check every 2 minutes
     return () => clearInterval(interval);
-  }, [user]);
+  }, [router, user]);
 
   // Fetch subscription ONCE when user is available — shared via context
   useEffect(() => {
     if (!user) {
-      setSubscription(null);
-      setSubscriptionChecked(false);
+      subFetchRef.current = null;
       return;
     }
     // Deduplicate: if a fetch is already in flight, skip
@@ -158,16 +167,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     subFetchRef.current = (async () => {
       try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (!session?.access_token) { setSubscriptionChecked(true); return; }
+        if (!session?.access_token) {
+          setSubscriptionChecked(true);
+          return;
+        }
         const res = await fetch('/api/subscription', {
           headers: { Authorization: `Bearer ${session.access_token}` },
         });
+        let nextSubscription: SubscriptionInfo | null = null;
         if (res.ok) {
           const data = await res.json();
           if (data.subscription) {
-            setSubscription({ ends_at: data.subscription.ends_at, plan: data.subscription.plan });
+            nextSubscription = { ends_at: data.subscription.ends_at, plan: data.subscription.plan };
           }
         }
+        setSubscription(nextSubscription);
       } catch { /* ignore */ }
       setSubscriptionChecked(true);
       subFetchRef.current = null;
@@ -205,6 +219,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     document.cookie = 'blim-auth=; path=/; max-age=0';
     await supabase.auth.signOut();
     setUser(null);
+    setSubscription(null);
+    setSubscriptionChecked(false);
   }, []);
 
   const getAccessToken = useCallback(async () => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useAuth } from './useAuth';
 
 const TRIAL_DAYS = 7;
@@ -16,13 +16,21 @@ interface TrialStatus {
 
 export function useTrial(): TrialStatus | null {
   const { user, subscription, subscriptionChecked } = useAuth();
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setNow(Date.now());
+    }, 60_000);
+
+    return () => window.clearInterval(id);
+  }, []);
 
   return useMemo(() => {
     if (!user || !subscriptionChecked) return null;
 
     const createdAt = new Date(user.created_at).getTime();
     const trialEndsAt = createdAt + TRIAL_DAYS * MS_PER_DAY;
-    const now = Date.now();
     const msLeft = trialEndsAt - now;
     const trialDaysLeft = msLeft > 0 ? Math.ceil(msLeft / MS_PER_DAY) : 0;
 
@@ -45,5 +53,5 @@ export function useTrial(): TrialStatus | null {
       hasSubscription,
       subscriptionDaysLeft,
     };
-  }, [user, subscriptionChecked, subscription]);
+  }, [now, user, subscriptionChecked, subscription]);
 }

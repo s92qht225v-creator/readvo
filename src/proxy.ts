@@ -9,7 +9,7 @@ const LOCALES = new Set(routing.locales);
 // Routes that require authentication (matched after stripping locale prefix)
 const PROTECTED_PATTERN = /^\/chinese\/hsk/;
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the first path segment looks like a locale prefix but isn't a supported one

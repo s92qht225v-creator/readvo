@@ -3,7 +3,6 @@
 ## Before Making Changes
 Always read the relevant CLAUDE.md file(s) before modifying any code. Check which subdirectory CLAUDE.md files apply to the files you're about to change:
 - Editing `content/` files → read `content/CLAUDE.md`
-- Editing `content/english/` files → also read `content/english/CLAUDE.md`
 - Editing `src/components/` files → read `src/components/CLAUDE.md`
 - Editing `src/styles/` files → read `src/styles/CLAUDE.md`
 
@@ -129,7 +128,7 @@ Example routes:
 │   │   ├── LanguagePage.tsx   # Language page (tabbed: Dialog, Yozish, Flesh, KTV, Tika, Test)
 │   │   ├── HanziWriterPractice.tsx  # Writing tab: Leitner SRS character practice (home/practice/done views)
 │   │   ├── HanziCanvas.tsx          # Canvas-based hanzi stroke engine (retina, grading, hints, reveal)
-│   │   ├── BookPage.tsx       # Book page (lesson list with banner+tabs, reusable for English)
+│   │   ├── BookPage.tsx       # Book page (lesson list with banner+tabs)
 │   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
 │   │   ├── StoryReader.tsx    # Dialogue reader with ruby pinyin, translation panel, audio bar
 │   │   ├── FlashcardListPage.tsx # Flashcard lesson list with banner+tabs
@@ -196,7 +195,6 @@ Example routes:
 │   │   ├── karaoke.ts        # Loads karaoke song JSON from /content/karaoke
 │   │   ├── writing.ts        # Writing practice sets data (WRITING_SETS through WRITING_SETS_HSK6, HanziWord type)
 │   │   ├── blog.ts           # Blog posts data loading
-│   │   └── english-content.ts # Loads English content from /content/english
 │   ├── styles/
 │   │   └── reading.css        # All styles (see src/styles/CLAUDE.md)
 │   ├── types/
@@ -214,9 +212,6 @@ Example routes:
 │   │       └── dialogue1.json # Dialogue content files (uses StoryReader format)
 │   ├── karaoke/
 │   │   └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
-│   └── english/               # English content (see content/english/CLAUDE.md)
-│       └── destination-b1/
-│           └── unit1-page1.json  # English grammar content (Destination B1)
 ├── messages/                   # next-intl translation files (22 namespaces, ~348 lines each)
 │   ├── uz.json                # Uzbek UI translations
 │   ├── ru.json                # Russian UI translations
@@ -231,7 +226,6 @@ Example routes:
 
 ## Subdirectory CLAUDE.md Files
 - **`content/CLAUDE.md`** — Content JSON formats, authoring conventions, formatting standards
-- **`content/english/CLAUDE.md`** — English (Destination B1) content guide: grammar tables, tips, exercises
 - **`src/components/CLAUDE.md`** — Component behavior, layout structures, feature details
 - **`src/styles/CLAUDE.md`** — CSS class reference, padding specs, mobile responsive, button sizes
 

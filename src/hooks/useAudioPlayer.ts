@@ -82,10 +82,21 @@ function notifyListeners(state: AudioState): void {
 // =============================================================================
 
 export function useAudioPlayer(): AudioPlayerControls {
-  const [state, setState] = useState<AudioState>({
-    playingSentenceId: null,
-    loadingSentenceId: null,
-    error: null,
+  const [state, setState] = useState<AudioState>(() => {
+    if (globalCurrentSentenceId) {
+      const audio = getGlobalAudio();
+      return {
+        playingSentenceId: audio.paused ? null : globalCurrentSentenceId,
+        loadingSentenceId: null,
+        error: null,
+      };
+    }
+
+    return {
+      playingSentenceId: null,
+      loadingSentenceId: null,
+      error: null,
+    };
   });
 
   // Track if this hook instance is mounted
@@ -102,16 +113,6 @@ export function useAudioPlayer(): AudioPlayerControls {
     };
 
     globalStateListeners.add(listener);
-
-    // Sync with current global state on mount
-    if (globalCurrentSentenceId) {
-      const audio = getGlobalAudio();
-      setState({
-        playingSentenceId: audio.paused ? null : globalCurrentSentenceId,
-        loadingSentenceId: null,
-        error: null,
-      });
-    }
 
     return () => {
       isMountedRef.current = false;

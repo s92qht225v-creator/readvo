@@ -332,7 +332,14 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
-  const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
+  const [bookmarks, setBookmarks] = useState<Set<string>>(() => {
+    try {
+      const saved = typeof window !== 'undefined' ? localStorage.getItem(BOOKMARK_KEY) : null;
+      return saved ? new Set(JSON.parse(saved)) : new Set();
+    } catch {
+      return new Set();
+    }
+  });
 
   // Writing tab
   const initialVersion = searchParams.get('version') === '3.0' ? '3.0' : '2.0';
@@ -345,7 +352,13 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [topicSearch, setTopicSearch] = useState('');
 
   // Flashcard mode
-  const [flashcardMode, setFlashcardMode] = useState<string>('zh-uz');
+  const [flashcardMode, setFlashcardMode] = useState<string>(() => {
+    try {
+      return typeof window !== 'undefined' ? localStorage.getItem(FLASHCARD_MODE_KEY) || 'zh-uz' : 'zh-uz';
+    } catch {
+      return 'zh-uz';
+    }
+  });
   const initialSubTab = searchParams.get('subtab');
   const [flashcardSubTab, setFlashcardSubTab] = useState<'lessons' | 'topics'>(initialSubTab === 'topics' ? 'topics' : 'lessons');
   const initialFlashHsk = searchParams.get('flashhsk');
@@ -368,15 +381,6 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
       document.removeEventListener('touchstart', handleClick);
     };
   }, [hskDropdownOpen]);
-
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(BOOKMARK_KEY);
-      if (saved) setBookmarks(new Set(JSON.parse(saved)));
-      const savedMode = localStorage.getItem(FLASHCARD_MODE_KEY);
-      if (savedMode) setFlashcardMode(savedMode);
-    } catch { /* ignore */ }
-  }, []);
 
   const toggleBookmark = useCallback((e: React.MouseEvent, id: string) => {
     e.preventDefault();

@@ -82,7 +82,7 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
 
   // Total progress: count completed chars across all words
   const completedChars = results.length;
-  const totalChars = flatChars.current.length || words.reduce((n, w) => n + [...w.char].length, 0);
+  const totalChars = words.reduce((n, w) => n + [...w.char].length, 0);
 
   // Play audio using direct HTMLAudioElement — avoids useAudioPlayer race conditions
   const playAudio = useCallback((url: string) => {

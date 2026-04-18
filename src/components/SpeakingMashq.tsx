@@ -128,11 +128,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
   }, [screen]);
 
   useEffect(() => {
-    if (phase !== 'recording') {
-      setRecordingProgress(0);
-      return;
-    }
-    setRecordingProgress(0);
+    if (phase !== 'recording') return;
     const duration = 6000;
     const interval = 50;
     const start = Date.now();
@@ -188,6 +184,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
         await submitAudio(mimeType);
       };
       recorder.start(100);
+      setRecordingProgress(0);
       setPhase('recording');
       timerRef.current = setTimeout(() => stopRecording(), 6000);
     } catch {

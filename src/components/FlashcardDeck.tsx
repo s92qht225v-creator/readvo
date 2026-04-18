@@ -135,27 +135,22 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   }, [handleSwipe]);
 
   // Mouse handlers — attach move/up to document to fix Bug 3 (onMouseLeave accidental swipe)
-  const handleSwipeRef = useRef(handleSwipe);
-  handleSwipeRef.current = handleSwipe;
-
   const onDocMouseMove = useCallback((e: MouseEvent) => {
     if (!isDraggingRef.current) return;
     const dx = e.clientX - startX.current;
     dragXRef.current = dx;
     setDragX(dx);
   }, []);
-  const onDocMouseUp = useCallback(() => {
+  const endMouseDrag = useCallback(() => {
     if (!isDraggingRef.current) return;
     const dx = dragXRef.current;
     isDraggingRef.current = false;
     setIsDragging(false);
-    if (dx > SWIPE_THRESHOLD) handleSwipeRef.current('right');
-    else if (dx < -SWIPE_THRESHOLD) handleSwipeRef.current('left');
+    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
+    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
     setDragX(0);
     dragXRef.current = 0;
-    document.removeEventListener('mousemove', onDocMouseMove);
-    document.removeEventListener('mouseup', onDocMouseUp);
-  }, [onDocMouseMove]);
+  }, [handleSwipe]);
 
   const onMouseDown = useCallback((e: React.MouseEvent) => {
     startX.current = e.clientX;
@@ -163,17 +158,23 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     isDraggingRef.current = true;
     setIsDragging(true);
     e.preventDefault();
-    document.addEventListener('mousemove', onDocMouseMove);
-    document.addEventListener('mouseup', onDocMouseUp);
-  }, [onDocMouseMove, onDocMouseUp]);
+  }, []);
 
   // Cleanup document listeners on unmount
   useEffect(() => {
+    if (!isDragging) return;
+
+    const handleMouseMove = (e: MouseEvent) => onDocMouseMove(e);
+    const handleMouseUp = () => endMouseDrag();
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
     return () => {
-      document.removeEventListener('mousemove', onDocMouseMove);
-      document.removeEventListener('mouseup', onDocMouseUp);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [onDocMouseMove, onDocMouseUp]);
+  }, [endMouseDrag, isDragging, onDocMouseMove]);
 
   const handleRestartUnknown = useCallback(() => {
     const unknownCards = cards.filter((c) => unknownIds.has(c.id));

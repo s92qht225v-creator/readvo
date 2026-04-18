@@ -114,7 +114,9 @@ fbq('track', 'PageView');`}
       <body className={`${font.className} ${font.variable}`}>
         <noscript>
           <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://mc.yandex.ru/watch/107194604" style={{ position: 'absolute', left: '-9999px' }} alt="" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=2352011961980102&ev=PageView&noscript=1" alt="" />
           </div>
         </noscript>

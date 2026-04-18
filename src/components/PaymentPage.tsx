@@ -59,7 +59,9 @@ export default function PaymentPage() {
 
   const isRu = language === 'ru';
   const isEn = language === 'en';
-  const t = (uz: string, ru: string, en: string) => isEn ? en : isRu ? ru : uz;
+  const t = useCallback((uz: string, ru: string, en: string) => (
+    isEn ? en : isRu ? ru : uz
+  ), [isEn, isRu]);
 
   const planLabel = (planId: string) =>
     isEn ? PLAN_LABELS_EN[planId] || planId
@@ -337,7 +339,10 @@ export default function PaymentPage() {
             onDragOver={(e) => e.preventDefault()}
           >
             {preview ? (
-              <img src={preview} alt="Screenshot" className="payment__preview" />
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={preview} alt="Screenshot" className="payment__preview" />
+              </>
             ) : (
               <div className="payment__upload-placeholder">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="1.5">

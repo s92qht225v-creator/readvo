@@ -67,6 +67,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
   }, [fontSize]);
   const [tappedLineIdx, setTappedLineIdx] = useState(-1);
   const [fontActive, setFontActive] = useState(false);
+  const [mouseScrubbing, setMouseScrubbing] = useState(false);
   const fontTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const flashFont = useCallback(() => {
     setFontActive(true);
@@ -191,18 +192,16 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     seekToX(e.clientX);
   }, [seekToX]);
 
-  const onScrubUp = useCallback(() => {
+  const endMouseScrub = useCallback(() => {
     isScrubbing.current = false;
-    document.removeEventListener('mousemove', onScrubMove);
-    document.removeEventListener('mouseup', onScrubUp);
-  }, [onScrubMove]);
+    setMouseScrubbing(false);
+  }, []);
 
   const onScrubDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     isScrubbing.current = true;
+    setMouseScrubbing(true);
     seekToX(e.clientX);
-    document.addEventListener('mousemove', onScrubMove);
-    document.addEventListener('mouseup', onScrubUp);
-  }, [seekToX, onScrubMove, onScrubUp]);
+  }, [seekToX]);
 
   const onScrubTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
     isScrubbing.current = true;
@@ -220,11 +219,19 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
 
   // Cleanup scrub listeners on unmount
   useEffect(() => {
+    if (!mouseScrubbing) return;
+
+    const handleMouseMove = (e: MouseEvent) => onScrubMove(e);
+    const handleMouseUp = () => endMouseScrub();
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
     return () => {
-      document.removeEventListener('mousemove', onScrubMove);
-      document.removeEventListener('mouseup', onScrubUp);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [onScrubMove, onScrubUp]);
+  }, [endMouseScrub, mouseScrubbing, onScrubMove]);
 
   const handleSkip = useCallback((seconds: number) => {
     const audio = audioRef.current;

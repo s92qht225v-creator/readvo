@@ -195,9 +195,10 @@ const strokeCache = new Map<string, StrokeData[]>();
 
 export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = false, onPlayAudio }: Props) {
   const [canvasSize, setCanvasSize] = useState(400);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !strokeCache.get(char));
   const [loadError, setLoadError] = useState(false);
   const [completedCount, setCompletedCount] = useState(0);
+  const [strokeCount, setStrokeCount] = useState(() => strokeCache.get(char)?.length ?? 0);
 
   const bgRef = useRef<HTMLCanvasElement>(null);
   const displayRef = useRef<HTMLCanvasElement>(null);
@@ -221,7 +222,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   const unmountedRef = useRef(false);
   const lastRevealRef = useRef(0); // track last-processed revealAll value
   const guideModeRef = useRef(false); // Show → guide dot for each stroke, user still draws
-  const startGuideDotRef = useRef<((idx: number) => void) | null>(null);
 
   // Keep refs in sync
   useEffect(() => { sizeRef.current = canvasSize; }, [canvasSize]);
@@ -263,9 +263,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   // Load character data from CDN (with in-memory cache)
   useEffect(() => {
     let cancelled = false;
-    setLoadError(false);
     completedRef.current = 0;
-    setCompletedCount(0);
     mistakesRef.current = 0;
     mistakesOnStrokeRef.current = 0;
     guideModeRef.current = false;
@@ -275,11 +273,9 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     const cached = strokeCache.get(char);
     if (cached) {
       strokesRef.current = cached;
-      setLoading(false);
       return;
     }
 
-    setLoading(true);
     fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/${encodeURIComponent(char)}.json`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load');
@@ -295,6 +291,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         );
         strokeCache.set(char, strokes);
         strokesRef.current = strokes;
+        setStrokeCount(strokes.length);
         setLoading(false);
       })
       .catch(() => {
@@ -444,9 +441,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     []
   );
 
-  // Keep ref in sync so onRevealDone can call it without TDZ
-  startGuideDotRef.current = showGuideDot;
-
   // Post-reveal: increment completed, run completion effect if all done
   const onRevealDone = useCallback((strokes: StrokeData[], safetyTimer: ReturnType<typeof setTimeout>) => {
     if (unmountedRef.current) return;
@@ -461,8 +455,8 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     // Guide mode: auto-start dot for next stroke
     if (guideModeRef.current && completedRef.current < strokes.length) {
       setTimeout(() => {
-        if (!unmountedRef.current && guideModeRef.current && startGuideDotRef.current) {
-          startGuideDotRef.current(completedRef.current);
+        if (!unmountedRef.current && guideModeRef.current) {
+          showGuideDot(completedRef.current);
         }
       }, 300);
     }
@@ -505,7 +499,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         setTimeout(() => onComplete?.(mistakesRef.current), 800);
       }
     }
-  }, [onComplete]);
+  }, [onComplete, showGuideDot]);
 
   // Handle correct stroke
   const onCorrect = useCallback(() => {
@@ -850,9 +844,6 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
     // Show guide dot for current stroke — user must draw it
     showGuideDot(idx);
   }, [revealAll, loading, loadError, showGuideDot]);
-
-  // Stroke counter text
-  const strokeCount = strokesRef.current.length;
 
   if (loading) {
     return <div style={{ textAlign: 'center', padding: '20px', color: '#999' }}>...</div>;

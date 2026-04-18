@@ -198,11 +198,10 @@ export function DialogueRolePlay({
   const [requesting, setRequesting] = useState(false);
   const [deniedReason, setDeniedReason] = useState<DeniedReason>('blocked');
   const [recordingProgress, setRecordingProgress] = useState(0);
+  const [shadowingUsed, setShadowingUsed] = useState(false);
   // Tracks which lines have been answered: key = "round_unitIndex", value = zh text
   const [revealed, setRevealed] = useState<Record<string, { zh: string; score: Score }>>({});
   const [playingAppLine, setPlayingAppLine] = useState(false);
-
-  const shadowingUsedRef = useRef(false);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -228,7 +227,7 @@ export function DialogueRolePlay({
 
   // ── Recording progress bar ──
   useEffect(() => {
-    if (phase !== 'recording') { setRecordingProgress(0); return; }
+    if (phase !== 'recording') return;
     const start = Date.now();
     const id = setInterval(() => {
       const pct = Math.min(100, ((Date.now() - start) / 6000) * 100);
@@ -251,15 +250,21 @@ export function DialogueRolePlay({
   // Round 2: app (B) speaks AFTER learner (A) answers — app responds
   const prevUnitKey = useRef('');
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
     const key = `${round}_${unitIndex}`;
     if (screen === 'quiz' && phase === 'idle' && key !== prevUnitKey.current) {
       prevUnitKey.current = key;
       if (round === 1) {
         // Round 1: A speaks first, then learner (B) responds
-        playAppLine();
+        timeoutId = setTimeout(() => {
+          void playAppLine();
+        }, 0);
       }
       // Round 2: learner (A) speaks first — no auto-play
     }
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [screen, round, unitIndex, phase, playAppLine]);
 
   // ── Permission ──
@@ -306,6 +311,7 @@ export function DialogueRolePlay({
         await submitAudio(mimeType);
       };
       recorder.start(100);
+      setRecordingProgress(0);
       setPhase('recording');
       timerRef.current = setTimeout(() => stopRecording(), 6000);
     } catch {
@@ -425,13 +431,13 @@ export function DialogueRolePlay({
     setR2scores([]);
     setRevealed({});
     prevUnitKey.current = '';
-    shadowingUsedRef.current = false;
+    setShadowingUsed(false);
     setScreen('quiz');
   };
 
   const retryAfterWrong = () => { setAttempt(2); startRecording(); };
   const startShadowing = () => {
-    shadowingUsedRef.current = true;
+    setShadowingUsed(true);
     speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url);
     setPhase('shadowing');
   };
@@ -439,7 +445,7 @@ export function DialogueRolePlay({
   // ── Fire onComplete ──
   useEffect(() => {
     if (screen === 'complete' && r1scores.length > 0 && r2scores.length > 0) {
-      const stars = calcStars(r1scores, r2scores, shadowingUsedRef.current);
+      const stars = calcStars(r1scores, r2scores, shadowingUsed);
       onComplete?.(stars);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -564,7 +570,7 @@ export function DialogueRolePlay({
   // ── COMPLETE SCREEN ──
   // ══════════════════════════════════════════════════════════
   if (screen === 'complete') {
-    const stars = calcStars(r1scores, r2scores, shadowingUsedRef.current);
+    const stars = calcStars(r1scores, r2scores, shadowingUsed);
     const totalCorrect = correctCount(r1scores) + correctCount(r2scores);
     const totalUnits = bUnits.length + aUnits.length;
     const pct = Math.round((totalCorrect / totalUnits) * 100);

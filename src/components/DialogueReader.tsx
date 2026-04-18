@@ -166,21 +166,13 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     () => allSentences.filter((s): s is Sentence & { start: number; end: number } => s.start !== undefined && s.end !== undefined),
     [allSentences]
   );
-  const hasTimedRef = useRef(timedSentences.length > 0);
-  hasTimedRef.current = timedSentences.length > 0;
 
   const audioSentenceId = useMemo(() => {
     if (!isPlaying || !timedSentences.length) return null;
     return timedSentences.find(s => currentTime >= s.start && currentTime < s.end)?.id ?? null;
   }, [isPlaying, currentTime, timedSentences]);
 
-  useEffect(() => {
-    if (focusMode && audioSentenceId) setActiveSentenceId(audioSentenceId);
-  }, [focusMode, audioSentenceId]);
-
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
-  const displaySentenceIdRef = useRef(displaySentenceId);
-  displaySentenceIdRef.current = displaySentenceId;
   const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
 
   const toggleFocusMode = useCallback(() => {
@@ -211,14 +203,14 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   }, [focusMode, allSentences, isPlaying, sentenceAudio]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
-    const idx = allSentences.findIndex(s => s.id === displaySentenceIdRef.current);
+    const idx = allSentences.findIndex(s => s.id === displaySentenceId);
     if (idx === -1) return;
     const next = allSentences[dir === 'next' ? idx + 1 : idx - 1];
     if (next) {
       setActiveSentenceId(next.id);
       if (next.audio_url) sentenceAudio.play(next.id, next.audio_url);
     }
-  }, [allSentences, sentenceAudio]);
+  }, [allSentences, displaySentenceId, sentenceAudio]);
 
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -239,7 +231,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     audio.preload = 'none';
     audioRef.current = audio;
     audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
-    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); if (hasTimedRef.current) setActiveSentenceId(null); });
+    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); if (timedSentences.length > 0) setActiveSentenceId(null); });
     audio.addEventListener('ended', () => {
       setIsPlaying(false); setCurrentTime(0); setAudioActive(false);
       const lastId = allSentences[allSentences.length - 1]?.id ?? null;
@@ -247,7 +239,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     });
     audio.addEventListener('error', () => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); });
     return () => { audio.pause(); audio.src = ''; };
-  }, [dialogue.audio_url, allSentences]);
+  }, [dialogue.audio_url, allSentences, timedSentences.length]);
 
   // Vocab: use authored vocab if present, else auto-extract from sentences
   const vocabList = useMemo(() => {

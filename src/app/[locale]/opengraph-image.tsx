@@ -7,17 +7,17 @@ const meta: Record<string, { alt: string; tagline: string; subjects: string }> =
   uz: {
     alt: "Blim — Interaktiv til o'rganish",
     tagline: "Interaktiv til o\u2019rganish",
-    subjects: 'Xitoy tili \u2022 Ingliz tili \u2022 Darsliklar \u2022 Fleshkartalar \u2022 Karaoke',
+    subjects: 'Xitoy tili \u2022 Darsliklar \u2022 Fleshkartalar \u2022 Karaoke',
   },
   ru: {
     alt: 'Blim — Интерактивное изучение языков',
     tagline: 'Интерактивное изучение языков',
-    subjects: 'Китайский \u2022 Английский \u2022 Учебники \u2022 Флешкарты \u2022 Караоке',
+    subjects: 'Китайский \u2022 Учебники \u2022 Флешкарты \u2022 Караоке',
   },
   en: {
     alt: 'Blim — Interactive language learning',
     tagline: 'Interactive language learning',
-    subjects: 'Chinese \u2022 English \u2022 Textbooks \u2022 Flashcards \u2022 Karaoke',
+    subjects: 'Chinese \u2022 Textbooks \u2022 Flashcards \u2022 Karaoke',
   },
 };
 

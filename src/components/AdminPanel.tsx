@@ -73,6 +73,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [expandedScreenshot, setExpandedScreenshot] = useState<string | null>(null);
   const [search, setSearch] = useState('');
+  const [now, setNow] = useState(() => Date.now());
 
   // Audio tab state
   const [ttsText, setTtsText] = useState('');
@@ -98,8 +99,39 @@ export function AdminPanel({ password }: AdminPanelProps) {
   }, [password]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    let cancelled = false;
+
+    async function load() {
+      const res = await fetch('/api/admin', {
+        headers: { 'x-admin-password': password },
+      });
+
+      if (!res.ok || cancelled) return;
+
+      const data = await res.json();
+      if (cancelled) return;
+
+      setPayments(data.payments);
+      setUsers(data.users);
+      setSubscriptions(data.subscriptions);
+      setStats(data.stats);
+      setLoading(false);
+    }
+
+    void load();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [password]);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setNow(Date.now());
+    }, 60_000);
+
+    return () => window.clearInterval(id);
+  }, []);
 
   const handleAction = useCallback(async (action: string, payload: Record<string, unknown>) => {
     const loadingKey = (payload.paymentId || payload.subscriptionId || payload.userId || '') as string;
@@ -335,6 +367,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
                 </div>
                 {p.screenshot_url && (
                   <div className="admin__screenshot-wrap">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.screenshot_url}
                       alt="Screenshot"
@@ -378,7 +411,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
             <p className="admin__empty">Natija topilmadi</p>
           ) : filteredUsers.map((u) => {
             const sub = getUserSubscription(u.id);
-            const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - Date.now()) / (24 * 60 * 60 * 1000)) : 0;
+            const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - now) / (24 * 60 * 60 * 1000)) : 0;
             return (
               <div key={u.id} className="admin__card">
                 <div className="admin__card-header">
@@ -549,6 +582,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
           className="admin__overlay"
           onClick={() => setExpandedScreenshot(null)}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={expandedScreenshot} alt="Screenshot" className="admin__overlay-img" />
         </div>
       )}

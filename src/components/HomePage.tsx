@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
-import { useRouter } from 'next/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { PageFooter } from './PageFooter';
 import { useAuth } from '../hooks/useAuth';
@@ -46,7 +46,6 @@ const t = {
     ctaSubtitle: 'Ro\'yxatdan o\'ting va barcha imkoniyatlardan foydalaning — hech qanday to\'lov talab qilinmaydi',
     footerText: 'Blim — Interaktiv til darsliklari',
     chinese: 'Xitoy tili',
-    english: 'Ingliz tili',
     tagline: 'Interaktiv til darsliklari',
     liveNow: 'Hozir {n} kishi o\'qimoqda',
   },
@@ -86,7 +85,6 @@ const t = {
     ctaSubtitle: 'Зарегистрируйтесь и получите полный доступ ко всем функциям — без оплаты',
     footerText: 'Blim — Интерактивные учебники языков',
     chinese: 'Китайский язык',
-    english: 'Английский язык',
     tagline: 'Интерактивные учебники языков',
     liveNow: 'Сейчас {n} человек занимаются',
   },
@@ -126,7 +124,6 @@ const t = {
     ctaSubtitle: 'Sign up and get full access to all features — no payment required',
     footerText: 'Blim — Interactive language textbooks',
     chinese: 'Chinese',
-    english: 'English',
     tagline: 'Interactive language textbooks',
     liveNow: '{n} people studying right now',
   },
@@ -141,7 +138,6 @@ function getActiveCount(): number {
 
 const languageList = [
   { id: 'chinese', nameOriginal: '中文', flag: '🇨🇳' },
-  { id: 'english', nameOriginal: 'English', flag: '🇬🇧' },
 ];
 
 
@@ -159,7 +155,10 @@ function AppHome({ language, toggleLanguage, user, logout, s }: {
         <div className="home__hero-top">
           <button className="home__user-btn" onClick={logout} type="button">
             {user.avatar_url && (
-              <img src={user.avatar_url} alt="" className="home__user-avatar" />
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={user.avatar_url} alt="" className="home__user-avatar" />
+              </>
             )}
             <span className="home__user-name">{user.name}</span>
           </button>
@@ -253,9 +252,9 @@ function LandingPage({ language, toggleLanguage, s }: {
             <a href="#how" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               {s.howItWorks}
             </a>
-            <a href="/blog" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/blog" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               Blog
-            </a>
+            </Link>
           </div>
         )}
       </nav>
@@ -437,25 +436,26 @@ export function HomePage() {
   const { user, isLoading, logout } = useAuth();
   const s = t[language];
   const router = useRouter();
-  const [hasMounted, setHasMounted] = useState(false);
-  const [isAdminParam, setIsAdminParam] = useState(false);
+  const searchParams = useSearchParams();
+  const hasMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+  const isAdminParam = hasMounted && searchParams.get('admin') === 'true';
+  const savedAdminPassword = useMemo(() => {
+    if (!isAdminParam || !hasMounted) return '';
+    try {
+      return sessionStorage.getItem('blim-admin-pw') || '';
+    } catch {
+      return '';
+    }
+  }, [hasMounted, isAdminParam]);
   const [adminPassword, setAdminPassword] = useState('');
-  const [adminAuthed, setAdminAuthed] = useState(false);
   const [adminError, setAdminError] = useState(false);
   const [adminLoading, setAdminLoading] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-    const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
-    setIsAdminParam(isAdmin);
-    if (isAdmin) {
-      const saved = sessionStorage.getItem('blim-admin-pw');
-      if (saved) {
-        setAdminPassword(saved);
-        setAdminAuthed(true);
-      }
-    }
-  }, []);
+  const isAdminAuthed = isAdminParam && (adminPassword === savedAdminPassword || (!adminPassword && !!savedAdminPassword));
+  const effectiveAdminPassword = adminPassword || savedAdminPassword;
 
   useEffect(() => {
     if (!isLoading && user && !isAdminParam) {
@@ -463,7 +463,7 @@ export function HomePage() {
     }
   }, [isLoading, user, router, isAdminParam]);
 
-  const handleAdminLogin = async (e: React.FormEvent) => {
+  const handleAdminLogin = useMemo(() => async (e: React.FormEvent) => {
     e.preventDefault();
     setAdminLoading(true);
     setAdminError(false);
@@ -471,18 +471,17 @@ export function HomePage() {
     const res = await fetch('/api/admin/check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password: adminPassword }),
+      body: JSON.stringify({ password: effectiveAdminPassword }),
     });
 
     const data = await res.json();
     if (data.isAdmin) {
-      sessionStorage.setItem('blim-admin-pw', adminPassword);
-      setAdminAuthed(true);
+      sessionStorage.setItem('blim-admin-pw', effectiveAdminPassword);
     } else {
       setAdminError(true);
     }
     setAdminLoading(false);
-  };
+  }, [effectiveAdminPassword]);
 
   /* ── SSR + initial hydration: always render landing page ──
      This ensures crawlers (and Semrush) see the full content in
@@ -494,12 +493,12 @@ export function HomePage() {
   /* ── Client-side only from here ── */
 
   if (isAdminParam) {
-    if (adminAuthed) {
+    if (isAdminAuthed) {
       return (
         <main className="home" style={{ background: '#f5f5f5', minHeight: '100vh' }}>
           <meta name="robots" content="noindex, nofollow" />
           <div style={{ padding: '24px 16px 0' }}>
-            <AdminPanel password={adminPassword} />
+            <AdminPanel password={effectiveAdminPassword} />
           </div>
         </main>
       );
@@ -514,7 +513,7 @@ export function HomePage() {
             type="password"
             className="admin-login__input"
             placeholder="Parol"
-            value={adminPassword}
+            value={effectiveAdminPassword}
             onChange={(e) => setAdminPassword(e.target.value)}
             autoFocus
           />
