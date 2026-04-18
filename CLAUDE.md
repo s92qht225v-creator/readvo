@@ -298,7 +298,7 @@ Some content types support full trilingual translations with optional `_en` fiel
 - **URL pattern**: `/{locale}/...` (e.g. `/uz/chinese`, `/en/blog`). Unprefixed URLs auto-redirect to `/uz/...`
 - **Routing config**: `src/i18n/routing.ts` — `defineRouting()` with locales, defaultLocale, localePrefix
 - **Navigation**: `src/i18n/navigation.ts` — `createNavigation(routing)` exports `{ Link, redirect, usePathname, useRouter }`. All components use these instead of `next/link` and `next/navigation`.
-- **Middleware**: `src/middleware.ts` — wraps `createMiddleware(routing)` with custom logic to redirect invalid 2-letter locale prefixes (e.g. `/fr/chinese` → `/uz/chinese`)
+- **Proxy**: `src/proxy.ts` — wraps `createMiddleware(routing)` with custom logic to redirect invalid 2-letter locale prefixes (e.g. `/fr/chinese` → `/uz/chinese`)
 - **Server-side**: `src/i18n/request.ts` uses `getRequestConfig()` from next-intl, reads locale from URL
 - **Root layout**: `src/app/layout.tsx` — minimal shell: `<html>`, font, analytics. Dynamic `<html lang>` from `getLocale()`
 - **Locale layout**: `src/app/[locale]/layout.tsx` — `NextIntlClientProvider` + `AuthProvider` + `setRequestLocale()`
