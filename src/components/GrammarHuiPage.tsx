@@ -185,7 +185,7 @@ export function GrammarHuiPage() {
   return (
     <div className="grammar-page">
       {/* Hero */}
-      <div className="dr-hero" style={{ background:'linear-gradient(135deg, #dc2626, #b91c1c)' }}>
+      <div className="dr-hero">
         <div className="dr-hero__watermark">会</div>
         <div className="dr-hero__top-row">
             <Link href="/chinese?tab=grammar" className="dr-back-btn">
@@ -206,7 +206,7 @@ export function GrammarHuiPage() {
       </div>
 
       {/* Tabs */}
-      <div className="grammar-page__tabs" style={{ background:'linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%)' }}>
+      <div className="grammar-page__tabs">
         {sections.map(s => (
           <button
             key={s.id}

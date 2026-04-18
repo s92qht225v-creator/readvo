@@ -223,7 +223,7 @@ export function GrammarRiqiPage() {
   return (
     <div className="grammar-page">
       {/* Hero */}
-      <div className="dr-hero" style={{ background:'linear-gradient(135deg, #7c3aed, #a78bfa)' }}>
+      <div className="dr-hero">
         <div className="dr-hero__watermark">月日</div>
         <div className="dr-hero__top-row">
             <Link href="/chinese?tab=grammar" className="dr-back-btn">
@@ -244,7 +244,7 @@ export function GrammarRiqiPage() {
       </div>
 
       {/* Tabs */}
-      <div className="grammar-page__tabs" style={{ background:'linear-gradient(180deg, #a78bfa 0%, #7c3aed 100%)' }}>
+      <div className="grammar-page__tabs">
         {sections.map(s => (
           <button
             key={s.id}
