@@ -264,7 +264,7 @@ export function GrammarRiqiPage() {
           <>
             {/* Key words */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Asosiy so\'zlar','Ключевые слова','Key Words')}</div>
+              <div className="grammar-block__label" >{t('Asosiy so\'zlar','Ключевые слова','Key Words')}</div>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:14 }}>
                 {([
                   { zh:'月', py:'yuè', uz:'oy', ru:'месяц', en:'month', tone:t('4-ton','4-й тон','4th tone') },
@@ -272,11 +272,11 @@ export function GrammarRiqiPage() {
                   { zh:'日', py:'rì', uz:'kun (rasmiy)', ru:'число (офиц.)', en:'date (formal)', tone:t('4-ton','4-й тон','4th tone') },
                   { zh:'星期', py:'xīngqī', uz:'hafta kuni', ru:'день недели', en:'weekday', tone:t('1+1 ton','1+1 тон','1+1 tone') },
                 ] as { zh: string; py: string; uz: string; ru: string; en: string; tone: string }[]).map((item, i) => (
-                  <div key={i} style={{ background:'#f5f3ff', borderRadius:10, padding:12, border:'1px solid #e9d5ff', textAlign:'center' }}>
-                    <div style={{ fontSize:40, background:'linear-gradient(135deg, #7c3aed, #a78bfa)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', fontWeight:400, lineHeight:1.2 }}>{item.zh}</div>
+                  <div key={i} style={{ background:'#fef2f2', borderRadius:10, padding:12, border:'1px solid #fecaca', textAlign:'center' }}>
+                    <div style={{ fontSize:40, background:'linear-gradient(135deg, #dc2626, #ef4444)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', fontWeight:400, lineHeight:1.2 }}>{item.zh}</div>
                     <div style={{ fontSize:13, fontWeight:600, color:'#1a1a2e', marginTop:4 }}>{item.py}</div>
                     <div style={{ fontSize:11, color:'#888', marginTop:2 }}>{t(item.uz, item.ru, item.en)}</div>
-                    <div style={{ fontSize:10, color:C_MON, marginTop:4 }}>{item.tone}</div>
+                    <div style={{ fontSize:10, color:'#dc2626', marginTop:4 }}>{item.tone}</div>
                   </div>
                 ))}
               </div>
@@ -284,11 +284,11 @@ export function GrammarRiqiPage() {
 
             {/* 号 vs 日 */}
             <div className="grammar-block grammar-block--warning">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('号 va 日 farqi','号 и 日 — разница','号 vs 日 — difference')}</div>
+              <div className="grammar-block__label" >{t('号 va 日 farqi','号 и 日 — разница','号 vs 日 — difference')}</div>
               <div style={{ display:'flex', gap:8, marginBottom:10 }}>
-                <div style={{ flex:1, background:'#f5f3ff', borderRadius:8, padding:12, border:'1px solid #e9d5ff', textAlign:'center' }}>
-                  <div style={{ fontSize:30, color:C_MON, fontWeight:700, marginBottom:2 }}>号</div>
-                  <div style={{ fontSize:10, color:C_MON, fontWeight:700, textTransform:'uppercase', letterSpacing:1, marginBottom:6 }}>hào</div>
+                <div style={{ flex:1, background:'#fef2f2', borderRadius:8, padding:12, border:'1px solid #fecaca', textAlign:'center' }}>
+                  <div style={{ fontSize:30, color:'#dc2626', fontWeight:700, marginBottom:2 }}>号</div>
+                  <div style={{ fontSize:10, color:'#dc2626', fontWeight:700, textTransform:'uppercase', letterSpacing:1, marginBottom:6 }}>hào</div>
                   <div style={{ fontSize:11, color:'#555', lineHeight:1.6 }}>{t('Og\'zaki nutqda\nkundalik suhbatda','Разговорная речь\nповседневное общение','Spoken language\neveryday conversation')}</div>
                 </div>
                 <div style={{ flex:1, background:'#f0fdfa', borderRadius:8, padding:12, border:'1px solid #5eead4', textAlign:'center' }}>
@@ -308,7 +308,7 @@ export function GrammarRiqiPage() {
 
             {/* Date order */}
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Xitoycha sana tartibi','Порядок даты в китайском','Chinese Date Order')}</div>
+              <div className="grammar-block__label" >{t('Xitoycha sana tartibi','Порядок даты в китайском','Chinese Date Order')}</div>
               <p className="grammar-block__tip-text">
                 {t(
                   'Xitoycha sana kattadan kichikka qarab yoziladi:',
@@ -320,7 +320,7 @@ export function GrammarRiqiPage() {
                 <div style={{ fontSize:14, letterSpacing:2, lineHeight:2 }}>
                   <span style={{ background:'#dbeafe', padding:'4px 8px', borderRadius:6, color:'#1d4ed8', fontWeight:600 }}>{t('Yil','Год','Year')}</span>
                   {' → '}
-                  <span style={{ background:'#e9d5ff', padding:'4px 8px', borderRadius:6, color:C_MON, fontWeight:600 }}>{t('Oy','Месяц','Month')}</span>
+                  <span style={{ background:'#fecaca', padding:'4px 8px', borderRadius:6, color:'#dc2626', fontWeight:600 }}>{t('Oy','Месяц','Month')}</span>
                   {' → '}
                   <span style={{ background:'#fecaca', padding:'4px 8px', borderRadius:6, color:C_DAY, fontWeight:600 }}>{t('Kun','День','Day')}</span>
                   {' → '}
@@ -329,8 +329,8 @@ export function GrammarRiqiPage() {
               </div>
               <div className="grammar-block__usage-item">
                 <div className="grammar-block__usage-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('九月二号星期四')} style={{background:'#f5f3ff'}} aria-label="Play">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill={C_MON}><path d="M8 5v14l11-7z"/></svg>
+                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('九月二号星期四')} style={{background:'#fef2f2'}} aria-label="Play">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <ColorParts parts={[{text:'九月',color:C_MON},{text:'二号',color:C_DAY},{text:'星期四',color:C_WK}]} />
                 </div>
@@ -340,7 +340,7 @@ export function GrammarRiqiPage() {
 
             {/* Months */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Oylar — son + 月','Месяцы — число + 月','Months — number + 月')}</div>
+              <div className="grammar-block__label" >{t('Oylar — son + 月','Месяцы — число + 月','Months — number + 月')}</div>
               <p className="grammar-block__tip-text">
                 {t(
                   'Xitoycha oylar juda oddiy: son + 月. Yanvar = 1-oy = 一月, Fevral = 2-oy = 二月...',
@@ -352,7 +352,7 @@ export function GrammarRiqiPage() {
                 {months.map((m, i) => (
                   <button key={i} type="button" className="grammar-block__usage-item" onClick={()=>playGrammarAudio(m.zh)}
                     style={{ textAlign:'center', cursor:'pointer', padding:'8px 6px' }}>
-                    <div style={{ fontSize:18, color:C_MON, fontWeight:600 }}>{m.zh}</div>
+                    <div style={{ fontSize:18, color:'#dc2626', fontWeight:600 }}>{m.zh}</div>
                     <div style={{ fontSize:9, color:'#888' }}>{m.py}</div>
                     <div style={{ fontSize:9, color:'#bbb' }}>{t(m.uz, m.ru, m.en)}</div>
                   </button>
@@ -362,7 +362,7 @@ export function GrammarRiqiPage() {
 
             {/* Weekdays */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Hafta kunlari — 星期 + son','Дни недели — 星期 + число','Weekdays — 星期 + number')}</div>
+              <div className="grammar-block__label" >{t('Hafta kunlari — 星期 + son','Дни недели — 星期 + число','Weekdays — 星期 + number')}</div>
               <p className="grammar-block__tip-text">
                 {t(
                   'Hafta kunlari ham oddiy: 星期 + son. Dushanba = 星期一 (hafta-1)... Faqat yakshanba = 星期天 (天 = kun), son emas!',
@@ -374,8 +374,8 @@ export function GrammarRiqiPage() {
                 {weekdays.map((w, i) => (
                   <button key={i} type="button" className="grammar-block__usage-item"
                     onClick={()=>playGrammarAudio(w.zh)}
-                    style={{ display:'flex', alignItems:'center', gap:10, cursor:'pointer', background: i === 6 ? '#f5f3ff' : undefined, border: i === 6 ? '1px solid #e9d5ff' : undefined }}>
-                    <div style={{ fontSize:20, color:C_MON, fontWeight:600, minWidth:70 }}>{w.zh}</div>
+                    style={{ display:'flex', alignItems:'center', gap:10, cursor:'pointer', background: i === 6 ? '#fef2f2' : undefined, border: i === 6 ? '1px solid #fecaca' : undefined }}>
+                    <div style={{ fontSize:20, color:'#dc2626', fontWeight:600, minWidth:70 }}>{w.zh}</div>
                     <div style={{ fontSize:11, color:'#888', minWidth:80 }}>{w.py}</div>
                     <div style={{ fontSize:11, color:'#555' }}>{t(w.uz, w.ru, w.en)}</div>
                   </button>
@@ -385,7 +385,7 @@ export function GrammarRiqiPage() {
 
             {/* Color legend */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Rang belgilari','Цветовые обозначения','Color Legend')}</div>
+              <div className="grammar-block__label" >{t('Rang belgilari','Цветовые обозначения','Color Legend')}</div>
               <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
                 {([
                   { color: C_TIME, uz:'Ega / Vaqt',      ru:'Подлежащее / Время', en:'Subject / Time' },
@@ -409,11 +409,11 @@ export function GrammarRiqiPage() {
           <>
             {/* Pattern 1: Asking date */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('1-shablon — Sana so\'rash','Шаблон 1 — Спрашиваем дату','Pattern 1 — Asking the Date')}</div>
+              <div className="grammar-block__label" >{t('1-shablon — Sana so\'rash','Шаблон 1 — Спрашиваем дату','Pattern 1 — Asking the Date')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_TIME, fontWeight:700 }}>今天</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#f5f3ff', color:C_MON }}>几月</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>几月</span>
                 {' '}
                 <span style={{ color:C_DAY, fontWeight:700 }}>几号</span>
                 {'？'}
@@ -437,9 +437,9 @@ export function GrammarRiqiPage() {
 
             {/* Pattern 2: Saying a date */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('2-shablon — Sana aytish','Шаблон 2 — Называем дату','Pattern 2 — Saying the Date')}</div>
+              <div className="grammar-block__label" >{t('2-shablon — Sana aytish','Шаблон 2 — Называем дату','Pattern 2 — Saying the Date')}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-verb" style={{ background:'#f5f3ff', color:C_MON }}>X月</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>X月</span>
                 {' '}
                 <span style={{ color:C_DAY, fontWeight:700 }}>Y号</span>
               </div>
@@ -455,11 +455,11 @@ export function GrammarRiqiPage() {
 
             {/* Pattern 3: Asking weekday */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('3-shablon — Hafta kunini so\'rash','Шаблон 3 — Спрашиваем день недели','Pattern 3 — Asking the Weekday')}</div>
+              <div className="grammar-block__label" >{t('3-shablon — Hafta kunini so\'rash','Шаблон 3 — Спрашиваем день недели','Pattern 3 — Asking the Weekday')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_TIME, fontWeight:700 }}>今天</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#f5f3ff', color:C_MON }}>星期几</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>星期几</span>
                 {'？'}
               </div>
               <p className="grammar-block__formula-desc">{t('Bugun haftaning qaysi kuni?','Какой сегодня день недели?','What day of the week is today?')}</p>
@@ -474,9 +474,9 @@ export function GrammarRiqiPage() {
 
             {/* Pattern 4: Full date */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('4-shablon — To\'liq sana','Шаблон 4 — Полная дата','Pattern 4 — Full Date')}</div>
+              <div className="grammar-block__label" >{t('4-shablon — To\'liq sana','Шаблон 4 — Полная дата','Pattern 4 — Full Date')}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-verb" style={{ background:'#f5f3ff', color:C_MON }}>X月</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>X月</span>
                 {' '}
                 <span style={{ color:C_DAY, fontWeight:700 }}>Y号</span>
                 {' '}
@@ -501,11 +501,11 @@ export function GrammarRiqiPage() {
 
             {/* Pattern 5: Birthday */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('5-shablon — Tug\'ilgan kun','Шаблон 5 — День рождения','Pattern 5 — Birthday')}</div>
+              <div className="grammar-block__label" >{t('5-shablon — Tug\'ilgan kun','Шаблон 5 — День рождения','Pattern 5 — Birthday')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_TIME, fontWeight:700 }}>{t('你的生日','你的生日','你的生日')}</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#f5f3ff', color:C_MON }}>几月几号</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>几月几号</span>
                 {'？'}
               </div>
               <p className="grammar-block__formula-desc">{t('Tug\'ilgan kuningiz qachon?','Когда ваш день рождения?','When is your birthday?')}</p>
@@ -523,7 +523,7 @@ export function GrammarRiqiPage() {
         {/* ── MISOLLAR ── */}
         {activeTab === 'examples' && (
           <div className="grammar-block">
-            <div className="grammar-block__label" style={{ color:C_MON }}>{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
+            <div className="grammar-block__label" >{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
             {examples.map((ex, i) => (
               <div
                 key={i}
@@ -533,8 +533,8 @@ export function GrammarRiqiPage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#f5f3ff'}} aria-label="Play">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill={C_MON}><path d="M8 5v14l11-7z"/></svg>
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#fef2f2'}} aria-label="Play">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
                 </div>
@@ -557,7 +557,7 @@ export function GrammarRiqiPage() {
         {activeTab === 'dialog' && (
           <>
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Dialog 1 — Bugun nechanchi?','Диалог 1 — Какое сегодня число?','Dialogue 1 — What\'s today\'s date?')}</div>
+              <div className="grammar-block__label" >{t('Dialog 1 — Bugun nechanchi?','Диалог 1 — Какое сегодня число?','Dialogue 1 — What\'s today\'s date?')}</div>
               {dialog1.map((line, i) => (
                 <button
                   key={i}
@@ -585,7 +585,7 @@ export function GrammarRiqiPage() {
             </div>
 
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Dialog 2 — Tug\'ilgan kun','Диалог 2 — День рождения','Dialogue 2 — Birthday')}</div>
+              <div className="grammar-block__label" >{t('Dialog 2 — Tug\'ilgan kun','Диалог 2 — День рождения','Dialogue 2 — Birthday')}</div>
               {dialog2.map((line, i) => (
                 <button
                   key={i}
@@ -614,7 +614,7 @@ export function GrammarRiqiPage() {
 
             {/* Remember */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_MON }}>{t('Eslab qoling','Запомните','Remember')}</div>
+              <div className="grammar-block__label" >{t('Eslab qoling','Запомните','Remember')}</div>
               {([
                 {
                   parts: [{text:'今天',color:C_TIME},{text:'几月',color:C_MON},{text:'几号',color:C_DAY},{text:'？',color:C_PUNC}] as Part[],
@@ -637,7 +637,7 @@ export function GrammarRiqiPage() {
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={item.parts} />
                   </div>
-                  <div className="grammar-block__usage-note" style={{ color:C_MON }}>
+                  <div className="grammar-block__usage-note" style={{ color:'#dc2626' }}>
                     {item.note}
                   </div>
                 </div>
@@ -651,8 +651,8 @@ export function GrammarRiqiPage() {
           <SpeakingMashq
             language={language}
             questions={speakingQuestions}
-            accentColor="#7c3aed"
-            accentBg="#f5f3ff"
+            accentColor="#dc2626"
+            accentBg="#fee2e2"
             onComplete={handleQuizComplete}
             onDone={() => router.push('/chinese?tab=grammar')}
           />

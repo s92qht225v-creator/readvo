@@ -245,13 +245,13 @@ export function GrammarDuodaPage() {
               </p>
               <div style={{ background:'#f5f5f8', borderRadius:8, padding:12, marginTop:10 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:8 }}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('你多大？');}} style={{background:'#e0f2fe'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('你多大？');}} style={{background:'#fef2f2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_AGE}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{ fontSize:14 }}>你<strong style={{color:C_AGE}}>多大</strong>？— {t('Necha yoshdasiz?','Сколько вам лет?','How old are you?')}</span>
                 </div>
                 <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我二十五岁。');}} style={{background:'#e0f2fe'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio('我二十五岁。');}} style={{background:'#fef2f2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_AGE}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{ fontSize:14 }}>我二十五<strong style={{color:C_AGE}}>岁</strong>。— {t('Men yigirma besh yoshdaman.','Мне двадцать пять лет.','I am twenty-five years old.')}</span>
@@ -263,7 +263,7 @@ export function GrammarDuodaPage() {
             <div className="grammar-block">
               <div className="grammar-block__label">{t('多大 va 几岁 — farqi','多大 и 几岁 — разница','多大 vs 几岁 — Difference')}</div>
               <div style={{ display:'flex', gap:8, marginBottom:8 }}>
-                <div style={{ flex:1, textAlign:'center', background:'#e0f2fe', border:'2px solid #0369a1', borderRadius:8, padding:12 }}>
+                <div style={{ flex:1, textAlign:'center', background:'#fef2f2', border:'2px solid #dc2626', borderRadius:8, padding:12 }}>
                   <div style={{ fontSize:28, color:C_AGE, fontWeight:700, marginBottom:2 }}>多大</div>
                   <div style={{ fontSize:10, color:C_AGE, fontWeight:700, textTransform:'uppercase', letterSpacing:1, marginBottom:6 }}>{t('KATTALAR','ВЗРОСЛЫЕ','ADULTS')}</div>
                   <div style={{ fontSize:11, color:'#555', lineHeight:1.6 }}>{t('18+ yoshdagilar\nuchun tabiiy','Для взрослых\n(18+)','Natural for\nadults (18+)')}</div>
@@ -305,7 +305,7 @@ export function GrammarDuodaPage() {
                   <div className="grammar-block__usage-tr">{t('Siz necha yoshdasiz?','Сколько вам лет?','How old are you?')}</div>
                 </div>
                 <div style={{ fontSize:'1.4em', color:'#888' }}>→</div>
-                <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center', background:'#e0f2fe', border:'1px solid #7dd3fc', borderRadius:8 }}>
+                <div className="grammar-block__usage-item" style={{ flex:1, textAlign:'center', background:'#fef2f2', border:'1px solid #fecaca', borderRadius:8 }}>
                   <div className="grammar-block__usage-type" style={{ color:C_AGE }}>{t('Javob','Ответ','Answer')}</div>
                   <div className="grammar-block__usage-py">Wǒ èrshíwǔ suì.</div>
                   <div className="grammar-block__usage-zh">
@@ -447,7 +447,7 @@ export function GrammarDuodaPage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#e0f2fe'}} aria-label="Play">
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#fef2f2'}} aria-label="Play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill={C_AGE}><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
@@ -480,7 +480,7 @@ export function GrammarDuodaPage() {
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev1, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#e0f2fe' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fef2f2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_AGE:'#dc2626',flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -509,7 +509,7 @@ export function GrammarDuodaPage() {
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev2, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#e0f2fe' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fef2f2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_AGE:'#dc2626',flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -553,12 +553,12 @@ export function GrammarDuodaPage() {
                 <div
                   key={i}
                   className="grammar-block__usage-item"
-                  style={{ borderLeft:'3px solid #0369a1', background:'#e0f2fe' }}
+                  style={{ borderLeft:'3px solid #dc2626', background:'#fef2f2' }}
                 >
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={item.parts} />
                   </div>
-                  <div className="grammar-block__usage-note" style={{ color:'#075985' }}>
+                  <div className="grammar-block__usage-note" style={{ color:'#dc2626' }}>
                     💡 {item.note}
                   </div>
                 </div>
@@ -572,8 +572,8 @@ export function GrammarDuodaPage() {
           <SpeakingMashq
             language={language}
             questions={speakingQuestions}
-            accentColor="#0369a1"
-            accentBg="#e0f2fe"
+            accentColor="#dc2626"
+            accentBg="#fee2e2"
             onComplete={handleQuizComplete}
             onDone={() => router.push('/chinese?tab=grammar')}
           />

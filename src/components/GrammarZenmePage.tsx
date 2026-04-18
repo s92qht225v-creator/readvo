@@ -232,7 +232,7 @@ export function GrammarZenmePage() {
           <>
             {/* Character info */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Ieroglif','Иероглиф','Character')}</div>
+              <div className="grammar-block__label" >{t('Ieroglif','Иероглиф','Character')}</div>
               <div className="grammar-block__char-row">
                 <div className="grammar-block__big-char" style={{ background:`linear-gradient(135deg,${C_ZM},#2dd4bf)`, WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>怎么</div>
                 <div className="grammar-block__char-info">
@@ -258,7 +258,7 @@ export function GrammarZenmePage() {
 
             {/* What it is */}
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('怎么 nima?','怎么 — что это?','What is 怎么?')}</div>
+              <div className="grammar-block__label" >{t('怎么 nima?','怎么 — что это?','What is 怎么?')}</div>
               <p className="grammar-block__tip-text">
                 <strong style={{ color: C_ZM }}>怎么</strong> = <strong>{t('qanday','как','how')}</strong><br />
                 {t(
@@ -271,7 +271,7 @@ export function GrammarZenmePage() {
 
             {/* How it works */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Qanday ishlaydi?','Как работает?','How does it work?')}</div>
+              <div className="grammar-block__label" >{t('Qanday ishlaydi?','Как работает?','How does it work?')}</div>
               <p className="grammar-block__tip-text">
                 {t(
                   '怎么 har doim fe\'ldan oldin turadi. So\'raladigan fe\'l o\'rniga qo\'yiladi:',
@@ -282,8 +282,8 @@ export function GrammarZenmePage() {
               <div className="grammar-block__usage-item">
                 <div className="grammar-block__usage-py">Zhège zěnme dú?</div>
                 <div className="grammar-block__usage-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('这个怎么读？')} style={{background:'#ccfbf1'}} aria-label="Play">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill={C_ZM}><path d="M8 5v14l11-7z"/></svg>
+                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('这个怎么读？')} style={{background:'#fef2f2'}} aria-label="Play">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <ColorParts parts={[{text:'这个',color:C_SUB},{text:'怎么',color:C_ZM},{text:'读',color:C_VERB},{text:'？',color:C_PUNC}]} />
                 </div>
@@ -292,8 +292,8 @@ export function GrammarZenmePage() {
               <div className="grammar-block__usage-item">
                 <div className="grammar-block__usage-py">Nǐ zěnme qù xuéxiào?</div>
                 <div className="grammar-block__usage-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('你怎么去学校？')} style={{background:'#ccfbf1'}} aria-label="Play">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill={C_ZM}><path d="M8 5v14l11-7z"/></svg>
+                  <button type="button" className="grammar-play-btn" onClick={()=>playGrammarAudio('你怎么去学校？')} style={{background:'#fef2f2'}} aria-label="Play">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <ColorParts parts={[{text:'你',color:C_SUB},{text:'怎么',color:C_ZM},{text:'去',color:C_VERB},{text:'学校？',color:C_OBJ}]} />
                 </div>
@@ -303,9 +303,9 @@ export function GrammarZenmePage() {
 
             {/* 怎么 vs 什么 */}
             <div className="grammar-block grammar-block--warning">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('怎么 va 什么 — farqi','怎么 и 什么 — разница','怎么 vs 什么 — difference')}</div>
+              <div className="grammar-block__label" >{t('怎么 va 什么 — farqi','怎么 и 什么 — разница','怎么 vs 什么 — difference')}</div>
               <div style={{ display:'flex', gap:8, marginBottom:10 }}>
-                <div style={{ flex:1, background:'#ccfbf1', borderRadius:8, padding:12, border:'1px solid #5eead4', textAlign:'center' }}>
+                <div style={{ flex:1, background:'#fef2f2', borderRadius:8, padding:12, border:'1px solid #fecaca', textAlign:'center' }}>
                   <div style={{ fontSize:30, color:C_ZM, fontWeight:700, marginBottom:2 }}>怎么</div>
                   <div style={{ fontSize:10, color:C_ZM, fontWeight:700, textTransform:'uppercase', letterSpacing:1, marginBottom:6 }}>{t('QANDAY','КАК','HOW')}</div>
                   <div style={{ fontSize:11, color:'#555', lineHeight:1.6 }}>{t('Usul yoki yo\'l\nhaqida savol','Способ или метод\nдействия','Manner or method\nof doing')}</div>
@@ -328,7 +328,7 @@ export function GrammarZenmePage() {
 
             {/* Color legend */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Rang belgilari','Цветовые обозначения','Color Legend')}</div>
+              <div className="grammar-block__label" >{t('Rang belgilari','Цветовые обозначения','Color Legend')}</div>
               <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
                 {([
                   { color: C_SUB,   uz:'Ega / Mavzu',         ru:'Подлежащее / Тема',    en:'Subject / Topic' },
@@ -352,11 +352,11 @@ export function GrammarZenmePage() {
           <>
             {/* Pattern 1: 怎么读/写/说 */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('1-shablon — Talaffuz (怎么读/写/说)','Шаблон 1 — Произношение (怎么读/写/说)','Pattern 1 — Pronunciation (怎么读/写/说)')}</div>
+              <div className="grammar-block__label" >{t('1-shablon — Talaffuz (怎么读/写/说)','Шаблон 1 — Произношение (怎么读/写/说)','Pattern 1 — Pronunciation (怎么读/写/说)')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_SUB, fontWeight:700 }}>{t('Mavzu','Тема','Topic')}</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#ccfbf1', color:C_ZM }}>怎么</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>怎么</span>
                 {' '}
                 <span style={{ color:C_VERB, fontWeight:700 }}>读/写/说</span>
                 {'？'}
@@ -380,11 +380,11 @@ export function GrammarZenmePage() {
 
             {/* Pattern 2: 怎么去 */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('2-shablon — Yo\'l (怎么去)','Шаблон 2 — Направление (怎么去)','Pattern 2 — Directions (怎么去)')}</div>
+              <div className="grammar-block__label" >{t('2-shablon — Yo\'l (怎么去)','Шаблон 2 — Направление (怎么去)','Pattern 2 — Directions (怎么去)')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_SUB, fontWeight:700 }}>{t('Ega','Подлежащее','Subject')}</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#ccfbf1', color:C_ZM }}>怎么</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>怎么</span>
                 {' '}
                 <span style={{ color:C_VERB, fontWeight:700 }}>去</span>
                 {' '}
@@ -410,11 +410,11 @@ export function GrammarZenmePage() {
 
             {/* Pattern 3: 怎么做 */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('3-shablon — Usul (怎么做)','Шаблон 3 — Способ (怎么做)','Pattern 3 — Method (怎么做)')}</div>
+              <div className="grammar-block__label" >{t('3-shablon — Usul (怎么做)','Шаблон 3 — Способ (怎么做)','Pattern 3 — Method (怎么做)')}</div>
               <div className="grammar-block__formula">
                 <span style={{ color:C_SUB, fontWeight:700 }}>{t('Mavzu','Тема','Topic')}</span>
                 {' '}
-                <span className="grammar-block__formula-verb" style={{ background:'#ccfbf1', color:C_ZM }}>怎么</span>
+                <span className="grammar-block__formula-verb" style={{ background:'#fef2f2', color:'#dc2626' }}>怎么</span>
                 {' '}
                 <span style={{ color:C_VERB, fontWeight:700 }}>做</span>
                 {'？'}
@@ -434,7 +434,7 @@ export function GrammarZenmePage() {
         {/* ── MISOLLAR ── */}
         {activeTab === 'examples' && (
           <div className="grammar-block">
-            <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
+            <div className="grammar-block__label" >{t('Namuna gaplar','Примеры предложений','Example Sentences')}</div>
             {examples.map((ex, i) => (
               <div
                 key={i}
@@ -444,8 +444,8 @@ export function GrammarZenmePage() {
                 onClick={() => setExpandedEx(expandedEx === i ? null : i)}
               >
                 <div className="grammar-block__example-zh" style={{display:'flex',alignItems:'center',gap:8}}>
-                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#ccfbf1'}} aria-label="Play">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill={C_ZM}><path d="M8 5v14l11-7z"/></svg>
+                  <button type="button" className="grammar-play-btn" onPointerDown={e=>{e.stopPropagation();}} onClick={e=>{e.stopPropagation();playGrammarAudio(ex.parts.map((p:{text:string;color:string})=>p.text).join(''));}} style={{background:'#fef2f2'}} aria-label="Play">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626"><path d="M8 5v14l11-7z"/></svg>
                   </button>
                   <span style={{flex:1}}><ColorParts parts={ex.parts} /></span>
                 </div>
@@ -469,14 +469,14 @@ export function GrammarZenmePage() {
           <>
             {/* Dialog 1 */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Dialog 1 — Xitoy harflari','Диалог 1 — Китайские иероглифы','Dialogue 1 — Chinese Characters')}</div>
+              <div className="grammar-block__label" >{t('Dialog 1 — Xitoy harflari','Диалог 1 — Китайские иероглифы','Dialogue 1 — Chinese Characters')}</div>
               {dialog1.map((line, i) => (
                 <button
                   key={i}
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev1, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#f0fdfa' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev1[i] ? '#fef2f2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_ZM:C_VERB,flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -498,14 +498,14 @@ export function GrammarZenmePage() {
 
             {/* Dialog 2 */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Dialog 2 — Maktabga qanday borasiz?','Диалог 2 — Как едете в школу?','Dialogue 2 — How do you go to school?')}</div>
+              <div className="grammar-block__label" >{t('Dialog 2 — Maktabga qanday borasiz?','Диалог 2 — Как едете в школу?','Dialogue 2 — How do you go to school?')}</div>
               {dialog2.map((line, i) => (
                 <button
                   key={i}
                   type="button"
                   className="grammar-block__usage-item grammar-block__usage-item--tap"
                   onClick={() => toggleRev(setRev2, i)}
-                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#f0fdfa' : undefined }}
+                  style={{ width:'100%', textAlign:'left', cursor:'pointer', background: rev2[i] ? '#fef2f2' : undefined }}
                 >
                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
                     <span style={{fontWeight:700,color:line.s==='A'?C_ZM:C_VERB,flexShrink:0,paddingTop:3}}>{line.s}:</span>
@@ -527,7 +527,7 @@ export function GrammarZenmePage() {
 
             {/* Remember */}
             <div className="grammar-block">
-              <div className="grammar-block__label" style={{ color:C_ZM }}>{t('Eslab qoling','Запомните','Remember')}</div>
+              <div className="grammar-block__label" >{t('Eslab qoling','Запомните','Remember')}</div>
               {([
                 {
                   parts: [{text:'怎么',color:C_ZM},{text:' + fe\'l',color:C_VERB}],
@@ -553,12 +553,12 @@ export function GrammarZenmePage() {
                 <div
                   key={i}
                   className="grammar-block__usage-item"
-                  style={{ borderLeft:`3px solid ${C_ZM}`, background:'#f0fdfa' }}
+                  style={{ borderLeft:'3px solid #dc2626', background:'#fef2f2' }}
                 >
                   <div className="grammar-block__usage-zh">
                     <ColorParts parts={item.parts} />
                   </div>
-                  <div className="grammar-block__usage-note" style={{ color:'#0f766e' }}>
+                  <div className="grammar-block__usage-note" style={{ color:'#dc2626' }}>
                     {item.note}
                   </div>
                 </div>
@@ -572,8 +572,8 @@ export function GrammarZenmePage() {
           <SpeakingMashq
             language={language}
             questions={speakingQuestions}
-            accentColor="#0f766e"
-            accentBg="#ccfbf1"
+            accentColor="#dc2626"
+            accentBg="#fee2e2"
             onComplete={handleQuizComplete}
             onDone={() => router.push('/chinese?tab=grammar')}
           />
