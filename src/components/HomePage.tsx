@@ -443,13 +443,12 @@ export function HomePage() {
     () => false
   );
   const isAdminParam = hasMounted && searchParams.get('admin') === 'true';
-  const savedAdminPassword = useMemo(() => {
-    if (!isAdminParam || !hasMounted) return '';
+  const [savedAdminPassword, setSavedAdminPassword] = useState('');
+  useEffect(() => {
+    if (!isAdminParam || !hasMounted) return;
     try {
-      return sessionStorage.getItem('blim-admin-pw') || '';
-    } catch {
-      return '';
-    }
+      setSavedAdminPassword(sessionStorage.getItem('blim-admin-pw') || '');
+    } catch {}
   }, [hasMounted, isAdminParam]);
   const [adminPassword, setAdminPassword] = useState('');
   const [adminError, setAdminError] = useState(false);
@@ -476,7 +475,8 @@ export function HomePage() {
 
     const data = await res.json();
     if (data.isAdmin) {
-      sessionStorage.setItem('blim-admin-pw', effectiveAdminPassword);
+      try { sessionStorage.setItem('blim-admin-pw', effectiveAdminPassword); } catch {}
+      setSavedAdminPassword(effectiveAdminPassword);
     } else {
       setAdminError(true);
     }
