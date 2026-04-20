@@ -39,7 +39,7 @@ const WORDS: HanziWord[] = [
   { char: '是', pinyin: 'shì', uz: "bo'lmoq", ru: 'быть', en: 'to be', strokes: 9, radical: '日', radicalUz: 'quyosh', radicalRu: 'солнце', radicalEn: 'sun', ex: '他是老师。', expy: 'Tā shì lǎoshī.', exuz: "U o'qituvchi.", exru: 'Он учитель.', exen: 'He is a teacher.' },
   { char: '有', pinyin: 'yǒu', uz: "bor (ega bo'lmoq)", ru: 'иметь', en: 'to have', strokes: 6, radical: '月', radicalUz: 'oy', radicalRu: 'луна', radicalEn: 'moon', ex: '我有一本书。', expy: 'Wǒ yǒu yì běn shū.', exuz: 'Mening bitta kitobim bor.', exru: 'У меня есть книга.', exen: 'I have a book.' },
   { char: '人', pinyin: 'rén', uz: 'odam', ru: 'человек', en: 'person', strokes: 2, radical: '人', radicalUz: 'odam', radicalRu: 'человек', radicalEn: 'person', ex: '他是好人。', expy: 'Tā shì hǎo rén.', exuz: 'U yaxshi odam.', exru: 'Он хороший человек.', exen: 'He is a good person.' },
-  { char: '中', pinyin: 'zhōng', uz: "o'rta / Xitoy", ru: 'середина / Китай', en: 'middle / China', strokes: 4, radical: '丨', radicalUz: 'chiziq', radicalRu: 'черта', radicalEn: 'line', ex: '我是中国人。', expy: 'Wǒ shì Zhōngguó rén.', exuz: 'Men xitoylikman.', exru: 'Я китаец.', exen: 'I am Chinese.' },
+  { char: '中', pinyin: 'zhōng', uz: "o'rta / Xitoy", ru: 'середина / Китай', en: 'middle / China', strokes: 4, radical: '丨', radicalUz: 'chiziq', radicalRu: 'черта', radicalEn: 'line', ex: '我是中国人。', expy: 'Wǒ shì Zhōngguó rén.', exuz: 'Men Xitoylikman.', exru: 'Я китаец.', exen: 'I am Chinese.' },
 ];
 
 type View = 'home' | 'practice' | 'done';

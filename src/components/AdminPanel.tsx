@@ -89,7 +89,13 @@ export function AdminPanel({ password }: AdminPanelProps) {
       headers: { 'x-admin-password': password },
     });
 
-    if (!res.ok) return;
+    if (!res.ok) {
+      if (res.status === 401 || res.status === 403) {
+        try { sessionStorage.removeItem('blim-admin-pw'); } catch {}
+        window.location.reload();
+      }
+      return;
+    }
     const data = await res.json();
     setPayments(data.payments);
     setUsers(data.users);
@@ -106,7 +112,14 @@ export function AdminPanel({ password }: AdminPanelProps) {
         headers: { 'x-admin-password': password },
       });
 
-      if (!res.ok || cancelled) return;
+      if (cancelled) return;
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 403) {
+          try { sessionStorage.removeItem('blim-admin-pw'); } catch {}
+          window.location.reload();
+        }
+        return;
+      }
 
       const data = await res.json();
       if (cancelled) return;

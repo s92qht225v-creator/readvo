@@ -23,7 +23,7 @@ const speakingQuestionsData = [
   { uz: "U o'qituvchi.", ru: 'Он учитель.', en: 'He is a teacher.', zh: '他是老师。', pinyin: 'Tā shì lǎoshī.' },
   { uz: 'Bu kitob.', ru: 'Это книга.', en: 'This is a book.', zh: '这是书。', pinyin: 'Zhè shì shū.' },
   { uz: 'U talaba emas.', ru: 'Она не студентка.', en: 'She is not a student.', zh: '她不是学生。', pinyin: 'Tā bú shì xuésheng.' },
-  { uz: 'Siz xitoylikmisiz?', ru: 'Вы китаец?', en: 'Are you Chinese?', zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguórén ma?' },
+  { uz: 'Siz Xitoylikmisiz?', ru: 'Вы китаец?', en: 'Are you Chinese?', zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguórén ma?' },
   { uz: "U mening do'stim.", ru: 'Он мой друг.', en: 'He is my friend.', zh: '他是我的朋友。', pinyin: 'Tā shì wǒ de péngyǒu.' },
 ];
 
@@ -59,7 +59,7 @@ const examples: {
   },
   {
     parts: [{ text:'我',color:C_SUB },{ text:'是',color:C_SHI },{ text:'中国人',color:C_PRED },{ text:'。',color:C_PUNC }],
-    pinyin:'Wǒ shì Zhōngguó rén.', uz:'Men xitoylikman.', ru:'Я китаец.', en:'I am Chinese.',
+    pinyin:'Wǒ shì Zhōngguó rén.', uz:'Men Xitoylikman.', ru:'Я китаец.', en:'I am Chinese.',
     note_uz:'中国 (Zhōngguó) = Xitoy · 人 (rén) = kishi',
     note_ru:'中国 (Zhōngguó) = Китай · 人 (rén) = человек',
     note_en:'中国 (Zhōngguó) = China · 人 (rén) = person',
@@ -126,7 +126,7 @@ const dialog1: { s: string; parts: Part[]; py: string; uz: string; ru: string; e
   { s:'A', parts:[{text:'你好！你',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'吗？',color:C_MA}],              py:'Nǐ hǎo! Nǐ shì xuésheng ma?',       uz:'Salom! Siz talabamisiz?',            ru:'Привет! Вы студент?',                  en:'Hi! Are you a student?' },
   { s:'B', parts:[{text:'是的，我',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'。你呢？',color:C_PUNC}],         py:'Shì de, wǒ shì xuésheng. Nǐ ne?',   uz:'Ha, men talabaman. Sizchi?',         ru:'Да, я студент. А вы?',                 en:'Yes, I am a student. And you?' },
   { s:'A', parts:[{text:'我',color:C_SUB},{text:'不是',color:C_NEG},{text:'学生，我',color:C_PRED},{text:'是',color:C_SHI},{text:'老师',color:C_PRED},{text:'。',color:C_PUNC}], py:'Wǒ bú shì xuésheng, wǒ shì lǎoshī.', uz:"Men talaba emasman, men o'qituvchiman.", ru:'Я не студент, я учитель.', en:"I am not a student, I am a teacher." },
-  { s:'B', parts:[{text:'你',color:C_SUB},{text:'是',color:C_SHI},{text:'中国人',color:C_PRED},{text:'吗？',color:C_MA}],                   py:'Nǐ shì Zhōngguó rén ma?',            uz:'Siz xitoylikmisiz?',                ru:'Вы китаец?',                           en:'Are you Chinese?' },
+  { s:'B', parts:[{text:'你',color:C_SUB},{text:'是',color:C_SHI},{text:'中国人',color:C_PRED},{text:'吗？',color:C_MA}],                   py:'Nǐ shì Zhōngguó rén ma?',            uz:'Siz Xitoylikmisiz?',                ru:'Вы китаец?',                           en:'Are you Chinese?' },
   { s:'A', parts:[{text:'不是，我',color:C_SUB},{text:'是',color:C_SHI},{text:'乌兹别克人',color:C_PRED},{text:'。',color:C_PUNC}],          py:'Bú shì, wǒ shì Wūzībiékè rén.',     uz:"Yo'q, men o'zbekman.",               ru:'Нет, я узбек.',                        en:"No, I am Uzbek." },
 ];
 
@@ -174,7 +174,7 @@ const quizQuestions = [
     correct: 2,
   },
   {
-    q_uz:'"Siz xitoylikmisiz?" qanday?',
+    q_uz:'"Siz Xitoylikmisiz?" qanday?',
     q_ru:'Как сказать «Вы китаец?» по-китайски?',
     q_en:'How do you say "Are you Chinese?" in Chinese?',
     options: ['你中国人是吗？', '你是中国人吗？', '你吗是中国人？', '是你中国人？'],

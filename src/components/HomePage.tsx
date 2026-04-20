@@ -454,7 +454,7 @@ export function HomePage() {
   const [adminPassword, setAdminPassword] = useState('');
   const [adminError, setAdminError] = useState(false);
   const [adminLoading, setAdminLoading] = useState(false);
-  const isAdminAuthed = isAdminParam && (adminPassword === savedAdminPassword || (!adminPassword && !!savedAdminPassword));
+  const isAdminAuthed = isAdminParam && !!savedAdminPassword && (!adminPassword || adminPassword === savedAdminPassword);
   const effectiveAdminPassword = adminPassword || savedAdminPassword;
 
   useEffect(() => {

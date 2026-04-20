@@ -67,9 +67,9 @@ const examples: {
     note_uz:'这 (zhè) = bu', note_ru:'这 (zhè) = это', note_en:'这 (zhè) = this',
   },
   {
-    parts: [{ text:'你叫',color:C_SUB },{ text:'什么',color:C_WHAT },{ text:'名字',color:C_VERB },{ text:'？',color:C_PUNC }],
+    parts: [{ text:'你',color:C_SUB },{ text:'叫',color:C_VERB },{ text:'什么名字',color:C_WHAT },{ text:'？',color:C_PUNC }],
     pinyin:"Nǐ jiào shénme míngzi?", uz:"Ismingiz nima?", ru:"Как вас зовут?", en:"What is your name?",
-    note_uz:"叫 (jiào) = atalmoq, 名字 (míngzi) = ism", note_ru:"叫 (jiào) = звать, 名字 (míngzi) = имя", note_en:"叫 (jiào) = to be called, 名字 (míngzi) = name",
+    note_uz:"Bu iborani tayyor qolip sifatida yodlang", note_ru:"Эту фразу лучше запоминать как готовый шаблон", note_en:"Learn this as a fixed chunk",
   },
   {
     parts: [{ text:'你',color:C_SUB },{ text:'做',color:C_VERB },{ text:'什么',color:C_WHAT },{ text:'？',color:C_PUNC }],
@@ -77,7 +77,7 @@ const examples: {
     note_uz:"做 (zuò) = qilmoq", note_ru:"做 (zuò) = делать", note_en:"做 (zuò) = to do",
   },
   {
-    parts: [{ text:'这是',color:C_SUB },{ text:'什么',color:C_WHAT },{ text:'颜色',color:C_VERB },{ text:'？',color:C_PUNC }],
+    parts: [{ text:'这',color:C_SUB },{ text:'是',color:C_VERB },{ text:'什么颜色',color:C_WHAT },{ text:'？',color:C_PUNC }],
     pinyin:"Zhè shì shénme yánsè?", uz:"Bu qanday rang?", ru:"Какой это цвет?", en:"What color is this?",
     note_uz:"颜色 (yánsè) = rang", note_ru:"颜色 (yánsè) = цвет", note_en:"颜色 (yánsè) = color",
   },
@@ -93,27 +93,27 @@ const pattern1Rows: PatternRow[] = [
 ];
 
 const pattern2Rows: PatternRow[] = [
-  { parts:[{text:'什么',color:C_WHAT},{text:'名字',color:C_VERB},{text:'？',color:C_PUNC}], py:"shénme míngzi?",  uz:"Qanday ism?",  ru:"Какое имя?",     en:"What name?" },
-  { parts:[{text:'什么',color:C_WHAT},{text:'工作',color:C_VERB},{text:'？',color:C_PUNC}], py:"shénme gōngzuò?", uz:"Qanday ish?",  ru:"Какая работа?",  en:"What job?" },
+  { parts:[{text:'你',color:C_SUB},{text:'叫',color:C_VERB},{text:'什么名字',color:C_WHAT},{text:'？',color:C_PUNC}], py:"Nǐ jiào shénme míngzi?",  uz:"Ismingiz nima?",  ru:"Как вас зовут?",     en:"What is your name?" },
+  { parts:[{text:'你',color:C_SUB},{text:'做',color:C_VERB},{text:'什么工作',color:C_WHAT},{text:'？',color:C_PUNC}], py:"Nǐ zuò shénme gōngzuò?", uz:"Qanday ish qilasiz?",  ru:"Кем вы работаете?",  en:"What work do you do?" },
 ];
 
 const pattern3Rows: PatternRow[] = [
   { parts:[{text:'这',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Zhè shì shénme?', uz:"Bu nima?", ru:"Что это?",  en:"What is this?" },
-  { parts:[{text:'那',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Nà shì shénme?',  uz:"Ana u nima?",  ru:"Что то?",   en:"What is that?" },
+  { parts:[{text:'那',color:C_SUB},{text:'是',color:C_VERB},{text:'什么',color:C_WHAT},{text:'？',color:C_PUNC}], py:'Nà shì shénme?',  uz:"U nima?",  ru:"Что это там?",   en:"What is that?" },
 ];
 
 const dialog1 = [
   { s:'A', zh:'你好！你叫什么名字？',     py:'Nǐ hǎo! Nǐ jiào shénme míngzi?',    uz:'Salom! Ismingiz nima?',               ru:'Привет! Как вас зовут?',         en:'Hi! What is your name?' },
-  { s:'B', zh:'我叫王芳。你呢？',          py:'Wǒ jiào Wáng Fāng. Nǐ ne?',          uz:'Mening ismim Van Fan. Sizchi?',       ru:'Меня зовут Ван Фан. А вы?',      en:'My name is Wang Fang. And you?' },
-  { s:'A', zh:'我叫李明。你学什么？',      py:'Wǒ jiào Lǐ Míng. Nǐ xué shénme?',   uz:"Men Li Min. Nima o'qiyasan?",         ru:'Меня зовут Ли Мин. Что изучаешь?',en:'I\'m Li Ming. What are you studying?' },
-  { s:'B', zh:'我学汉语。',                py:'Wǒ xué Hànyǔ.',                       uz:"Men xitoy tilini o'qiyapman.",        ru:'Я изучаю китайский язык.',       en:"I'm studying Chinese." },
+  { s:'B', zh:'我叫王芳。你呢？',          py:'Wǒ jiào Wáng Fāng. Nǐ ne?',          uz:'Mening ismim Wang Fang. Sizchi?',       ru:'Меня зовут Ван Фан. А вас?',      en:'My name is Wang Fang. And you?' },
+  { s:'A', zh:'我叫李明。你学什么？',      py:'Wǒ jiào Lǐ Míng. Nǐ xué shénme?',   uz:"Mening ismim Li Ming. Siz nima o'rganasiz?",         ru:'Меня зовут Ли Мин. Что вы изучаете?',en:'My name is Li Ming. What are you studying?' },
+  { s:'B', zh:'我学汉语。',                py:'Wǒ xué Hànyǔ.',                       uz:"Men xitoy tilini o'rganyapman.",        ru:'Я изучаю китайский язык.',       en:"I'm studying Chinese." },
 ];
 
 const dialog2 = [
-  { s:'A', zh:'你吃什么？',       py:'Nǐ chī shénme?',     uz:'Nima yeyasan?',            ru:'Что ты ешь?',           en:'What are you eating?' },
+  { s:'A', zh:'你吃什么？',       py:'Nǐ chī shénme?',     uz:'Sen nima yeysan?',            ru:'Что ты ешь?',           en:'What are you eating?' },
   { s:'B', zh:'我吃面条。',       py:'Wǒ chī miàntiáo.',   uz:"Men lag'mon yeyman.",       ru:'Я ем лапшу.',           en:"I'm eating noodles." },
-  { s:'A', zh:'你喝什么？',       py:'Nǐ hē shénme?',      uz:'Nima ichasiz?',             ru:'Что ты пьёшь?',         en:"What are you drinking?" },
-  { s:'B', zh:'我喝茶。你呢？',   py:'Wǒ hē chá. Nǐ ne?',  uz:'Men choy. Sizchi?',         ru:'Я пью чай. А ты?',      en:"I'm drinking tea. And you?" },
+  { s:'A', zh:'你喝什么？',       py:'Nǐ hē shénme?',      uz:'Sen nima ichasan?',             ru:'Что ты пьёшь?',         en:"What are you drinking?" },
+  { s:'B', zh:'我喝茶。你呢？',   py:'Wǒ hē chá. Nǐ ne?',  uz:'Men choy ichaman. Senchi?',         ru:'Я пью чай. А ты?',      en:"I'm drinking tea. And you?" },
   { s:'A', zh:'我喝水。',         py:'Wǒ hē shuǐ.',         uz:'Men suv ichaman.',          ru:'Я пью воду.',           en:"I'm drinking water." },
 ];
 
@@ -194,16 +194,7 @@ export function GrammarShenmePage() {
   }));
   const [activeTab, setActiveTab] = useState('intro');
   const [expandedEx, setExpandedEx] = useState<number | null>(null);
-  const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [showResults, setShowResults] = useState(false);
-
   if (isLoading) return <div className="loading-spinner" />;
-
-  const pick = (qi: number, ai: number) => {
-    if (!showResults) setAnswers(p => ({ ...p, [qi]: ai }));
-  };
-  const score       = Object.entries(answers).filter(([qi, ai]) => quizQuestions[+qi].correct === +ai).length;
-  const allAnswered = Object.keys(answers).length === quizQuestions.length;
 
   const t = (uz: string, ru: string, en: string) =>
     ({ uz, ru, en } as Record<string, string>)[language] ?? uz;
@@ -282,13 +273,17 @@ export function GrammarShenmePage() {
 
             {/* What it means */}
             <div className="grammar-block grammar-block--tip">
-              <div className="grammar-block__label">{t('什么 nima?','什么 — что это?','What is 什么?')}</div>
+              <div className="grammar-block__label">{t('什么 nimani bildiradi?','Что показывает 什么?','What does 什么 do?')}</div>
               <p className="grammar-block__tip-text">
                 <strong style={{ color: C_WHAT }}>什么</strong>
                 {' '}={' '}
                 <strong>{t('nima','что','what')}</strong>
                 <br />
-                {t('Savol berish uchun ishlatiladi.','Используется для вопросов.','Used to ask questions.')}
+                {t(
+                  "Savolda javob bo'ladigan so'z o'rniga keladi.",
+                  'Ставится на место слова, которое должно стать ответом.',
+                  'It replaces the word you want the answer to give.',
+                )}
               </p>
             </div>
 
@@ -297,9 +292,9 @@ export function GrammarShenmePage() {
               <div className="grammar-block__label">{t('Qanday ishlaydi?','Как это работает?','How does it work?')}</div>
               <p className="grammar-block__tip-text">
                 {t(
-                  "Xitoy tilida so'z tartibi o'zgarmaydi. Faqat javob bo'ladigan so'z o'rniga 什么 qo'yiladi:",
+                  "Xitoy tilida bu turdagi savolda so'z tartibi odatda o'zgarmaydi. Faqat javob bo'ladigan so'z o'rniga 什么 qo'yiladi:",
                   "В китайском порядок слов не меняется. Просто замените слово-ответ на 什么:",
-                  "In Chinese, word order stays the same. Just replace the answer word with 什么:",
+                  "In this kind of Chinese question, word order usually stays the same. Just replace the answer word with 什么:",
                 )}
               </p>
               <div className="grammar-block__usage-item">
@@ -365,7 +360,7 @@ export function GrammarShenmePage() {
                 {'？'}
               </div>
               <p className="grammar-block__formula-desc">
-                {t('Nimani yeydi / ichadi / sotib oladi…','Что ест / пьёт / покупает…','What eats / drinks / buys…')}
+                {t("Nima? / Nimani? — fe'ldan keyin","Что? — после глагола",'What? — after the verb')}
               </p>
               {pattern1Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
@@ -374,19 +369,32 @@ export function GrammarShenmePage() {
                   <div className="grammar-block__usage-tr">{t(r.uz, r.ru, r.en)}</div>
                 </div>
               ))}
+              <p className="grammar-block__tip-note">
+                ⚠️ {t(
+                  "什么 ni gap boshiga olib chiqarmang: ✓ 你喝什么？  ✗ 什么你喝？",
+                  "Не переносите 什么 в начало: ✓ 你喝什么？  ✗ 什么你喝？",
+                  "Do not move 什么 to the front: ✓ 你喝什么？  ✗ 什么你喝？",
+                )}
+              </p>
             </div>
 
             {/* Pattern 2 */}
             <div className="grammar-block">
-              <div className="grammar-block__label">{t('2-shablon — Qanday … ?','Шаблон 2 — Какой … ?','Pattern 2 — What kind of … ?')}</div>
+              <div className="grammar-block__label">{t('2-shablon — Tayyor qoliplar','Шаблон 2 — Готовые модели','Pattern 2 — Fixed useful frames')}</div>
               <div className="grammar-block__formula">
-                <span className="grammar-block__formula-verb">什么</span>
+                <span style={{ color:C_SUB, fontWeight:700 }}>{t('Ega','Подлежащее','Subject')}</span>
                 {' + '}
-                <span style={{ color:C_VERB, fontWeight:700 }}>{t('Ot','Существительное','Noun')}</span>
+                <span style={{ color:C_VERB, fontWeight:700 }}>{t("Fe'l","Глагол","Verb")}</span>
+                {' + '}
+                <span className="grammar-block__formula-verb">什么 + {t('ot','сущ.','noun')}</span>
                 {'？'}
               </div>
               <p className="grammar-block__formula-desc">
-                {t('什么 + ot = qanday … ?','什么 + сущ. = какой … ?','什么 + noun = what kind of … ?')}
+                {t(
+                  "Ba'zi iboralarni tayyor qolip sifatida o'rganish osonroq.",
+                  'Некоторые вопросы удобнее учить как готовые модели.',
+                  'Some questions are easier to learn as fixed frames.',
+                )}
               </p>
               {pattern2Rows.map((r, i) => (
                 <div key={i} className="grammar-block__usage-item">
@@ -397,9 +405,9 @@ export function GrammarShenmePage() {
               ))}
               <p className="grammar-block__tip-note">
                 💡 {t(
-                  '2-shablon odatda to\'liq gap ichida keladi: 你叫什么名字？ / 这是什么颜色？',
-                  '2-й шаблон обычно встречается в полном предложении: 你叫什么名字？ / 这是什么颜色？',
-                  'Pattern 2 usually appears inside a full sentence: 你叫什么名字？ / 这是什么颜色？',
+                  "Masalan, 你叫什么名字？ ni juda chuqur bo'laklamasdan, tayyor ibora sifatida ishlatish mumkin.",
+                  'Например, 你叫什么名字？ можно просто запомнить как готовую фразу.',
+                  'For example, you can simply memorize 你叫什么名字？ as a useful chunk.',
                 )}
               </p>
             </div>
@@ -468,6 +476,13 @@ export function GrammarShenmePage() {
             {/* Dialog 1 */}
             <div className="grammar-block">
               <div className="grammar-block__label">{t('Dialog 1 — Tanishish','Диалог 1 — Знакомство','Dialogue 1 — Introductions')}</div>
+              <p className="grammar-block__formula-desc">
+                {t(
+                  "Bu dialogda 什么 tayyor qolip ichida keladi: 你叫什么名字？ / 你学什么？",
+                  'Здесь 什么 встречается в готовых вопросах: 你叫什么名字？ / 你学什么？',
+                  'Here 什么 appears in fixed useful questions: 你叫什么名字？ / 你学什么？',
+                )}
+              </p>
               {dialog1.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div style={{display:'flex',gap:6,alignItems:'flex-start'}}>
@@ -485,6 +500,13 @@ export function GrammarShenmePage() {
             {/* Dialog 2 */}
             <div className="grammar-block">
               <div className="grammar-block__label">{t('Dialog 2 — Ovqat','Диалог 2 — Еда','Dialogue 2 — Food')}</div>
+              <p className="grammar-block__formula-desc">
+                {t(
+                  "Bu dialogda 什么 fe'ldan keyin turibdi: 吃什么 / 喝什么",
+                  'Здесь 什么 стоит после глагола: 吃什么 / 喝什么',
+                  'Here 什么 comes after the verb: 吃什么 / 喝什么',
+                )}
+              </p>
               {dialog2.map((line, i) => (
                 <div key={i} className="grammar-block__usage-item">
                   <div style={{display:'flex',gap:6,alignItems:'flex-start'}}>
@@ -499,21 +521,6 @@ export function GrammarShenmePage() {
               ))}
             </div>
 
-            {/* Word order warning */}
-            <div className="grammar-block grammar-block--warning">
-              <div className="grammar-block__label">{t("So'z tartibi eslatmasi",'Порядок слов','Word Order Reminder')}</div>
-              <p className="grammar-block__tip-text">
-                ⚠️ {t(
-                  "什么 ni gap boshiga qo'ymang:",
-                  "Не ставьте 什么 в начало предложения:",
-                  "Do not put 什么 at the beginning of the sentence:",
-                )}
-              </p>
-              <div style={{ display:'flex', gap:16, alignItems:'center', flexWrap:'wrap', marginTop:6 }}>
-                <span style={{ textDecoration:'line-through', color:'#ef4444', fontSize:16 }}>什么你喝？</span>
-                <span style={{ color:'#16a34a', fontWeight:700, fontSize:16 }}>✓ 你喝什么？</span>
-              </div>
-            </div>
           </>
         )}
 

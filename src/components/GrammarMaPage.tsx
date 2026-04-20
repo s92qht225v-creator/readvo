@@ -24,7 +24,7 @@ const speakingQuestionsData = [
   { uz: "U o'qituvchimi?", ru: 'Он учитель?', en: 'Is he a teacher?', zh: '他是老师吗？', pinyin: 'Tā shì lǎoshī ma?' },
   { uz: 'Siz talabamisiz?', ru: 'Вы студент?', en: 'Are you a student?', zh: '你是学生吗？', pinyin: 'Nǐ shì xuésheng ma?' },
   { uz: 'U siznikimi?', ru: 'Это ваше?', en: 'Is that yours?', zh: '那是你的吗？', pinyin: 'Nà shì nǐ de ma?' },
-  { uz: 'Siz xitoylikmisiz?', ru: 'Вы китаец?', en: 'Are you Chinese?', zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguórén ma?' },
+  { uz: 'Siz Xitoylikmisiz?', ru: 'Вы китаец?', en: 'Are you Chinese?', zh: '你是中国人吗？', pinyin: 'Nǐ shì Zhōngguórén ma?' },
 ];
 
 const sections = [

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
-import { GrammarMaPage } from '@/components/GrammarMaPage';
+import { GrammarMaPolishedPage } from '@/components/GrammarMaPolishedPage';
 import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -54,7 +54,7 @@ export default async function MaPage({ params }: { params: Promise<{ locale: str
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <GrammarMaPage />
+      <GrammarMaPolishedPage />
     </>
   );
 }
