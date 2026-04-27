@@ -33,7 +33,7 @@ type Card =
     };
 
 const cards: Card[] = [
-  /* ─ 01 meaning ─ */
+  /* ─ 01 meaning (part 1: what it is) ─ */
   {
     kind: 'rule',
     id: 'meaning',
@@ -41,14 +41,35 @@ const cards: Card[] = [
     kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
     title: { uz: '吗 = -mi?', ru: '吗 = ли?', en: '吗 = ? (yes/no)' },
     body: {
-      uz: "`吗` (ma) — so'roq yuklamasi bo'lib uni gap oxiriga qo'shsangiz, darak gap ha/yo'q savoliga aylanadi. Masalan: «你是学生» (Sen talabasan) → «你是学生吗？» (Sen talabamisan?).",
-      ru: '`吗` (ma) — вопросительная частица. Поставьте её в конце утверждения, и оно превратится в вопрос «да/нет». Например: «你是学生» (Ты студент) → «你是学生吗？» (Ты студент?).',
-      en: '`吗` (ma) is a question particle. Add it at the end of a statement to turn it into a yes/no question. Example: "你是学生" (You are a student) → "你是学生吗？" (Are you a student?).',
+      uz: "`吗` (ma) — so'roq yuklamasi.",
+      ru: '`吗` (ma) — вопросительная частица.',
+      en: '`吗` (ma) is a question particle.',
     },
-    formula: {
-      uz: "Darak gap + 吗？",
-      ru: 'Утверждение + 吗？',
-      en: 'statement + 吗?',
+  },
+  /* ─ 02 meaning (part 2: how it works) ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-2',
+    step: '02',
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '吗 = -mi?', ru: '吗 = ли?', en: '吗 = ? (yes/no)' },
+    body: {
+      uz: "`吗` ni darak gap oxiriga qo'shsangiz, darak gap ha/yo'q savoliga aylanadi.",
+      ru: 'Добавьте `吗` в конец утверждения — оно превратится в вопрос «да/нет».',
+      en: 'Add `吗` at the end of a statement and it becomes a yes/no question.',
+    },
+  },
+  /* ─ 03 meaning (part 3: example) ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-3',
+    step: '03',
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '吗 = -mi?', ru: '吗 = ли?', en: '吗 = ? (yes/no)' },
+    body: {
+      uz: "Masalan: «你是学生» (Sen talabasan) → «你是学生吗？» (Sen talabamisan?).",
+      ru: 'Например: «你是学生» (Ты студент) → «你是学生吗？» (Ты студент?).',
+      en: 'For example: "你是学生" (You are a student) → "你是学生吗？" (Are you a student?).',
     },
   },
 
@@ -56,7 +77,7 @@ const cards: Card[] = [
   {
     kind: 'example',
     id: 'how-are-you',
-    step: '02',
+    step: '04',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: { uz: '你好吗？', ru: '你好吗？', en: '你好吗？' },
     sentence: {
@@ -73,7 +94,7 @@ const cards: Card[] = [
   {
     kind: 'example',
     id: 'are-student',
-    step: '03',
+    step: '05',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: { uz: '你是学生吗？', ru: '你是学生吗？', en: '你是学生吗？' },
     sentence: {
@@ -90,7 +111,7 @@ const cards: Card[] = [
   {
     kind: 'example',
     id: 'is-teacher',
-    step: '04',
+    step: '06',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: { uz: '她是老师吗？', ru: '她是老师吗？', en: '她是老师吗？' },
     sentence: {
@@ -107,7 +128,7 @@ const cards: Card[] = [
   {
     kind: 'example',
     id: 'are-chinese',
-    step: '05',
+    step: '07',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: { uz: '你是中国人吗？', ru: '你是中国人吗？', en: '你是中国人吗？' },
     sentence: {
@@ -126,7 +147,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check-how-are-you',
-    step: '06',
+    step: '08',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '你好吗？', ru: '你好吗？', en: '你好吗？' },
     options: [
@@ -140,7 +161,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check-are-student',
-    step: '07',
+    step: '09',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '你是学生吗？', ru: '你是学生吗？', en: '你是学生吗？' },
     options: [
@@ -154,7 +175,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check-is-teacher',
-    step: '08',
+    step: '10',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '她是老师吗？', ru: '她是老师吗？', en: '她是老师吗？' },
     options: [
@@ -168,7 +189,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check-are-chinese',
-    step: '09',
+    step: '11',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '你是中国人吗？', ru: '你是中国人吗？', en: '你是中国人吗？' },
     options: [
@@ -184,7 +205,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'audio-how-are-you',
-    step: '10',
+    step: '12',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '你好吗？', ru: '你好吗？', en: '你好吗？' },
     audio: '你好吗',
@@ -199,7 +220,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'audio-are-student',
-    step: '11',
+    step: '13',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '你是学生吗？', ru: '你是学生吗？', en: '你是学生吗？' },
     audio: '你是学生吗',
@@ -214,7 +235,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'audio-is-teacher',
-    step: '12',
+    step: '14',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '她是老师吗？', ru: '她是老师吗？', en: '她是老师吗？' },
     audio: '她是老师吗',
@@ -229,7 +250,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'audio-are-chinese',
-    step: '13',
+    step: '15',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '你是中国人吗？', ru: '你是中国人吗？', en: '你是中国人吗？' },
     audio: '你是中国人吗',
@@ -246,7 +267,7 @@ const cards: Card[] = [
   {
     kind: 'recap',
     id: 'recap',
-    step: '14',
+    step: '16',
     kicker: { uz: 'Xulosa', ru: 'Итог', en: 'Recap' },
     title: { uz: '4 ta asosiy savol', ru: '4 ключевых вопроса', en: '4 key questions' },
     questions: [
@@ -396,24 +417,11 @@ export function GrammarMaPolishedPage() {
         <div className="shenme-polished__progress">
           <div className="shenme-polished__progress-bar" style={{ width: `${progress}%` }} />
         </div>
-        <div className="shenme-polished__map">
-          {cards.map((item, itemIndex) => (
-            <button
-              key={item.id}
-              type="button"
-              className={`shenme-polished__map-dot ${itemIndex === index ? 'shenme-polished__map-dot--active' : ''}`}
-              onClick={() => setCard(itemIndex)}
-              aria-label={item.step}
-            >
-              {item.step}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Stage */}
       <div className="shenme-polished__stage">
-        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id === 'meaning' ? ' shenme-polished-card--scene' : ''}`}>
+        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id.startsWith('meaning') ? ' shenme-polished-card--scene' : ''}`}>
           <div className="shenme-polished-card__header">
             <div className="shenme-polished-card__meta">
               <span className="shenme-polished-card__step">{card.step}</span>
@@ -443,9 +451,12 @@ export function GrammarMaPolishedPage() {
                   {card.sentence ? (
                     <div className="shenme-polished-card__title-translation">{card.sentence.tr[lang]}</div>
                   ) : null}
+                  {card.kind === 'example' && card.body ? (
+                    <p className="shenme-polished-card__meaning-body">{card.body[lang]}</p>
+                  ) : null}
                 </div>
               )
-            ) : card.id === 'meaning' ? (
+            ) : card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__title-stack">
                 <div className="shenme-polished-card__ruby-title" aria-label="ma">
                   <ruby>吗<rt>ma</rt></ruby>
@@ -453,12 +464,15 @@ export function GrammarMaPolishedPage() {
                 <div className="shenme-polished-card__title-translation">
                   {lang === 'ru' ? 'ли?' : lang === 'en' ? '? (yes/no)' : "-mi?"}
                 </div>
+                {card.body ? (
+                  <p className="shenme-polished-card__meaning-body">{card.body[lang]}</p>
+                ) : null}
               </div>
             ) : (
               <h2 className="shenme-polished-card__title">{t(card.title)}</h2>
             )}
 
-            {'formula' in card && card.formula && card.id !== 'meaning' ? (
+            {'formula' in card && card.formula && !card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__formula">
                 {typeof card.formula === 'string' ? card.formula : t(card.formula)}
               </div>
@@ -535,7 +549,7 @@ export function GrammarMaPolishedPage() {
           </div>
 
           <div className="shenme-polished-card__footer">
-            {'body' in card && card.body ? (
+            {'body' in card && card.body && !card.id.startsWith('meaning') && card.kind !== 'example' ? (
               <p className="shenme-polished-card__body">{card.body[lang]}</p>
             ) : null}
             {'note' in card && card.note ? (

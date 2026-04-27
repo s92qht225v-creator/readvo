@@ -14,7 +14,7 @@ type T = Record<Language, string>;
 const t = (obj: T, lang: Language) => obj[lang];
 const UI = {
   title:        { uz: "Gapirib o'rganing",          ru: 'Учитесь говорить',          en: 'Speaking Practice'        } as T,
-  desc:         { uz: "O'zbek tarjimasini ko'rasiz, keyin xitoycha aytasiz. Mikrofon ruxsati kerak.", ru: 'Вы видите перевод, затем произносите по-китайски. Нужен микрофон.', en: 'See the translation, then say it in Chinese. Microphone access required.' } as T,
+  desc:         { uz: "O'zbek tarjimasini ko'rasiz, keyin Xitoycha aytasiz. Mikrofon ruxsati kerak.", ru: 'Вы видите перевод, затем произносите по-китайски. Нужен микрофон.', en: 'See the translation, then say it in Chinese. Microphone access required.' } as T,
   enableMic:    { uz: 'Mikrofonni yoqish',           ru: 'Включить микрофон',          en: 'Enable Microphone'        } as T,
   checking:     { uz: 'Tekshirilmoqda…',             ru: 'Проверка…',                  en: 'Checking…'                } as T,
   unsupported:  { uz: "Brauzer qo'llab-quvvatlamaydi", ru: 'Браузер не поддерживается', en: 'Browser not supported'   } as T,
@@ -41,7 +41,7 @@ const UI = {
   translation:  { uz: 'Tarjima:',                    ru: 'Перевод:',                   en: 'Translation:'             } as T,
   listenEx:     { uz: 'Namunani eshiting',            ru: 'Послушать пример',           en: 'Listen to example'        } as T,
   speakBtn:     { uz: '🎤 Gapiring',                  ru: '🎤 Говорите',                en: '🎤 Speak'                 } as T,
-  tapSpeak:     { uz: 'Bosing va xitoycha ayting',    ru: 'Нажмите и говорите по-китайски', en: 'Tap and speak in Chinese' } as T,
+  tapSpeak:     { uz: 'Bosing va Xitoycha ayting',    ru: 'Нажмите и говорите по-китайски', en: 'Tap and speak in Chinese' } as T,
   listening:    { uz: 'Tinglayapman…',               ru: 'Слушаю…',                   en: 'Listening…'               } as T,
   stop:         { uz: "⏹ To'xtatish",                ru: '⏹ Стоп',                    en: '⏹ Stop'                   } as T,
   processing:   { uz: 'Tekshirilmoqda…',             ru: 'Обрабатывается…',            en: 'Processing…'              } as T,

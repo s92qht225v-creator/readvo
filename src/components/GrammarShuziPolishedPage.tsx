@@ -30,301 +30,199 @@ type Card =
       bullets?: Copy[];
       audio?: string;
       questions?: { zh: string; pinyin: string; tr: Copy }[];
-      /** Scramble card: tokens shown in correct order; UI shuffles and user reconstructs. */
       tokens?: { zh: string; pinyin: string }[];
     };
 
 const cards: Card[] = [
-  /* ─ 01 meaning ─ */
+  /* ─ 01 meaning (digits 1-10) ─ */
   {
     kind: 'rule',
     id: 'meaning',
     step: '01',
     kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
-    title: { uz: '是 = ...dir, bo\'lmoq', ru: '是 = быть', en: '是 = to be' },
+    title: { uz: '1-9', ru: '1-9', en: '1-9' },
     body: {
-      uz: "`是` (shì) — Xitoy tilida bog'lovchi fe'l bo'lib «A 是 B» = «A bu B» ya'ni «Men — talabaman», «Bu — kitob» kabi gaplarda ishlatiladi.",
-      ru: '`是` (shì) — глагол-связка. Используется в предложениях вида «А есть B»: «Я студент», «Это книга». Строится как «A 是 B».',
-      en: '`是` (shì) is the linking verb "to be". It connects "A is B" sentences: "I am a student", "This is a book". Pattern: `A + 是 + B`.',
-    },
-    formula: {
-      uz: 'A + 是 + B',
-      ru: 'A + 是 + B',
-      en: 'A + 是 + B',
+      uz: "一 (yī) 1 · 二 (èr) 2 · 三 (sān) 3 · 四 (sì) 4 · 五 (wǔ) 5 · 六 (liù) 6 · 七 (qī) 7 · 八 (bā) 8 · 九 (jiǔ) 9 · 十 (shí) 10",
+      ru: '一 (yī) 1 · 二 (èr) 2 · 三 (sān) 3 · 四 (sì) 4 · 五 (wǔ) 5 · 六 (liù) 6 · 七 (qī) 7 · 八 (bā) 8 · 九 (jiǔ) 9 · 十 (shí) 10',
+      en: '一 (yī) 1 · 二 (èr) 2 · 三 (sān) 3 · 四 (sì) 4 · 五 (wǔ) 5 · 六 (liù) 6 · 七 (qī) 7 · 八 (bā) 8 · 九 (jiǔ) 9 · 十 (shí) 10',
     },
   },
-
-  /* ─ 02-06: five example scene cards ─ */
+  /* ─ 02 meaning (teens 11-19) ─ */
   {
-    kind: 'example',
-    id: 'student',
+    kind: 'rule',
+    id: 'meaning-2',
     step: '02',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '我是学生。', ru: '我是学生。', en: '我是学生。' },
-    sentence: {
-      zh: '我是学生。',
-      pinyin: 'Wǒ shì xuéshēng.',
-      tr: { uz: 'Men talabaman.', ru: 'Я студент.', en: 'I am a student.' },
-    },
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '11-19', ru: '11-19', en: '11-19' },
     body: {
-      uz: "`我` — «men», `是` — «man», `学生` — «talaba». So'zma-so'z: «Men man talaba».",
-      ru: '`我` — «я», `学生` — «студент». Дословно: «Я есть студент».',
-      en: '`我` = I, `学生` = student. Literally "I am student."',
+      uz: "11 dan 19 gacha sanash uchun\n10 (shí) + 1 dan 9 gacha bo'lgan sonlar qo'shib o'qiladi.\n\nMasalan:\n10 (shí) + 1 (yī) = 11 (shíyī)\n10 (shí) + 8 (bā) = 18 (shíbā)\nva hokazo.",
+      ru: 'Чтобы считать от 11 до 19,\nк 10 (shí) прибавляется цифра от 1 до 9.\n\nНапример:\n10 (shí) + 1 (yī) = 11 (shíyī)\n10 (shí) + 8 (bā) = 18 (shíbā)\nи так далее.',
+      en: 'To count from 11 to 19,\nadd a digit 1-9 to 10 (shí).\n\nFor example:\n10 (shí) + 1 (yī) = 11 (shíyī)\n10 (shí) + 8 (bā) = 18 (shíbā)\nand so on.',
     },
   },
+  /* ─ 03 meaning (tens & compound 20-99) ─ */
   {
-    kind: 'example',
-    id: 'teacher',
+    kind: 'rule',
+    id: 'meaning-3',
     step: '03',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '他是老师。', ru: '他是老师。', en: '他是老师。' },
-    sentence: {
-      zh: '他是老师。',
-      pinyin: 'Tā shì lǎoshī.',
-      tr: { uz: 'U o\'qituvchi.', ru: 'Он учитель.', en: 'He is a teacher.' },
-    },
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '20-99', ru: '20-99', en: '20-99' },
     body: {
-      uz: "`他` — «u» (erkak), `是` — «dir», `老师` — «o'qituvchi». So'zma-so'z: «U dir o'qituvchi». Shablon o'sha-o'sha: A + 是 + B.",
-      ru: '`他` — «он», `老师` — «учитель». Модель та же: A + 是 + B.',
-      en: '`他` = he, `老师` = teacher. Same pattern: A + 是 + B.',
-    },
-  },
-  {
-    kind: 'example',
-    id: 'chinese',
-    step: '04',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '她是中国人。', ru: '她是中国人。', en: '她是中国人。' },
-    sentence: {
-      zh: '她是中国人。',
-      pinyin: 'Tā shì Zhōngguórén.',
-      tr: { uz: 'U Xitoylik.', ru: 'Она китаянка.', en: 'She is Chinese.' },
-    },
-    body: {
-      uz: "`她` — «u» (ayol), `是` — «dir», `中国` — «Xitoy», `人` — «odam». So'zma-so'z: «U dir Xitoy odam» ya'ni «U Xitoylik».",
-      ru: '`她` — «она», `中国` — «Китай», `人` — «человек». `中国人` — «китаец/китаянка».',
-      en: '`她` = she, `中国` = China, `人` = person. `中国人` = Chinese person.',
-    },
-  },
-  {
-    kind: 'example',
-    id: 'book',
-    step: '05',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '这是书。', ru: '这是书。', en: '这是书。' },
-    sentence: {
-      zh: '这是书。',
-      pinyin: 'Zhè shì shū.',
-      tr: { uz: 'Bu kitob.', ru: 'Это книга.', en: 'This is a book.' },
-    },
-    body: {
-      uz: "`这` — «bu», `是` — «dir», `书` — «kitob». Demak `是` nafaqat odamlar uchun balki jonsiz narsalarni ham tasvirlash uchun ishlaydi.",
-      ru: '`这` — «это», `书` — «книга». `是` работает и с людьми, и с предметами.',
-      en: '`这` = this, `书` = book. `是` works for both people and objects.',
+      uz: "20 dan 99 gacha sanash uchun 2 dan 9 gacha bo'lgan sonlar + 10 (shí) + 2 dan 9 gacha bo'lgan sonlar qo'shib aytiladi.\n\nMasalan:\n2 (èr) + 10 (shí) = 20 (èr shí)\n2 (èr) + 10 (shí) + 1 (yī) = 21 (èr shí yī)\n2 (èr) + 10 (shí) + 2 (èr) = 22 (èr shí èr)\nva hokazo.",
+      ru: 'Чтобы считать от 20 до 99, к цифре от 2 до 9 прибавляется 10 (shí), а затем цифра от 2 до 9.\n\nНапример:\n2 (èr) + 10 (shí) = 20 (èr shí)\n2 (èr) + 10 (shí) + 1 (yī) = 21 (èr shí yī)\n2 (èr) + 10 (shí) + 2 (èr) = 22 (èr shí èr)\nи так далее.',
+      en: 'To count from 20 to 99, add a digit 2-9 + 10 (shí) + a digit 2-9.\n\nFor example:\n2 (èr) + 10 (shí) = 20 (èr shí)\n2 (èr) + 10 (shí) + 1 (yī) = 21 (èr shí yī)\n2 (èr) + 10 (shí) + 2 (èr) = 22 (èr shí èr)\nand so on.',
     },
   },
 
-  /* ─ 06-09: four visual tests ─ */
+  /* ─ 04-06: three multiple-choice checks ─ */
   {
     kind: 'practice',
-    id: 'check-student',
+    id: 'check-thirteen',
+    step: '04',
+    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
+    title: { uz: '十三', ru: '十三', en: '十三' },
+    options: [
+      '3',
+      '13',
+      '30',
+      '33',
+    ],
+    correct: 1,
+  },
+  {
+    kind: 'practice',
+    id: 'check-thirty',
+    step: '05',
+    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
+    title: { uz: '三十', ru: '三十', en: '三十' },
+    options: [
+      '3',
+      '13',
+      '30',
+      '33',
+    ],
+    correct: 2,
+  },
+  {
+    kind: 'practice',
+    id: 'check-fifty-three',
     step: '06',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '我是学生。', ru: '我是学生。', en: '我是学生。' },
+    title: { uz: '五十三', ru: '五十三', en: '五十三' },
     options: [
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
+      '35',
+      '503',
+      '53',
+      '13',
     ],
-    correct: 0,
+    correct: 2,
   },
+
+  /* ─ 07-09: three scramble tests ─ */
   {
-    kind: 'practice',
-    id: 'check-teacher',
+    kind: 'scramble',
+    id: 'scramble-thirteen',
     step: '07',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '他是老师。', ru: '他是老师。', en: '他是老师。' },
-    options: [
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: '13', ru: '13', en: '13' },
+    tokens: [
+      { zh: '十', pinyin: 'shí' },
+      { zh: '三', pinyin: 'sān' },
     ],
-    correct: 1,
   },
   {
-    kind: 'practice',
-    id: 'check-chinese',
+    kind: 'scramble',
+    id: 'scramble-thirty',
     step: '08',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '她是中国人。', ru: '她是中国人。', en: '她是中国人。' },
-    options: [
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: '30', ru: '30', en: '30' },
+    tokens: [
+      { zh: '三', pinyin: 'sān' },
+      { zh: '十', pinyin: 'shí' },
     ],
-    correct: 2,
   },
   {
-    kind: 'practice',
-    id: 'check-book',
+    kind: 'scramble',
+    id: 'scramble-fifty-three',
     step: '09',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '这是书。', ru: '这是书。', en: '这是书。' },
-    options: [
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: '53', ru: '53', en: '53' },
+    tokens: [
+      { zh: '五', pinyin: 'wǔ' },
+      { zh: '十', pinyin: 'shí' },
+      { zh: '三', pinyin: 'sān' },
     ],
-    correct: 3,
   },
 
-  /* ─ 10-13: four scramble tests ─ */
+  /* ─ 10-12: three audio tests ─ */
   {
-    kind: 'scramble',
-    id: 'scramble-student',
+    kind: 'practice',
+    id: 'audio-thirteen',
     step: '10',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Men talabaman.', ru: 'Я студент.', en: 'I am a student.' },
-    tokens: [
-      { zh: '我', pinyin: 'wǒ' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '学生', pinyin: 'xuéshēng' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-teacher',
-    step: '11',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: "U o'qituvchi.", ru: 'Он учитель.', en: 'He is a teacher.' },
-    tokens: [
-      { zh: '他', pinyin: 'tā' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '老师', pinyin: 'lǎoshī' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-chinese',
-    step: '12',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'U Xitoylik.', ru: 'Она китаянка.', en: 'She is Chinese.' },
-    tokens: [
-      { zh: '她', pinyin: 'tā' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '中国人', pinyin: 'Zhōngguórén' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-book',
-    step: '13',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Bu kitob.', ru: 'Это книга.', en: 'This is a book.' },
-    tokens: [
-      { zh: '这', pinyin: 'zhè' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '书', pinyin: 'shū' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-
-  /* ─ 14-17: four audio tests ─ */
-  {
-    kind: 'practice',
-    id: 'audio-student',
-    step: '14',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '我是学生。', ru: '我是学生。', en: '我是学生。' },
-    audio: '我是学生',
+    title: { uz: '十三', ru: '十三', en: '十三' },
+    audio: '十三',
     options: [
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
-    ],
-    correct: 1,
-  },
-  {
-    kind: 'practice',
-    id: 'audio-teacher',
-    step: '15',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '他是老师。', ru: '他是老师。', en: '他是老师。' },
-    audio: '他是老师',
-    options: [
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
+      '3',
+      '30',
+      '13',
+      '33',
     ],
     correct: 2,
   },
   {
     kind: 'practice',
-    id: 'audio-chinese',
-    step: '16',
+    id: 'audio-thirty',
+    step: '11',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '她是中国人。', ru: '她是中国人。', en: '她是中国人。' },
-    audio: '她是中国人',
+    title: { uz: '三十', ru: '三十', en: '三十' },
+    audio: '三十',
     options: [
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
-    ],
-    correct: 3,
-  },
-  {
-    kind: 'practice',
-    id: 'audio-book',
-    step: '17',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '这是书。', ru: '这是书。', en: '这是书。' },
-    audio: '这是书',
-    options: [
-      { uz: 'Bu kitob.',           ru: 'Это книга.',         en: 'This is a book.' },
-      { uz: 'U Xitoylik.',         ru: 'Она китаянка.',      en: 'She is Chinese.' },
-      { uz: 'Men talabaman.',      ru: 'Я студент.',         en: 'I am a student.' },
-      { uz: 'U o\'qituvchi.',      ru: 'Он учитель.',        en: 'He is a teacher.' },
+      '30',
+      '3',
+      '13',
+      '33',
     ],
     correct: 0,
   },
+  {
+    kind: 'practice',
+    id: 'audio-fifty-three',
+    step: '12',
+    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
+    title: { uz: '五十三', ru: '五十三', en: '五十三' },
+    audio: '五十三',
+    options: [
+      '35',
+      '53',
+      '503',
+      '13',
+    ],
+    correct: 1,
+  },
 
-  /* ─ 18 recap ─ */
+  /* ─ 13 recap ─ */
   {
     kind: 'recap',
     id: 'recap',
-    step: '18',
+    step: '13',
     kicker: { uz: 'Xulosa', ru: 'Итог', en: 'Recap' },
-    title: { uz: '4 ta asosiy gap', ru: '4 ключевых предложения', en: '4 key sentences' },
+    title: { uz: '3 ta asosiy namuna', ru: '3 ключевых образца', en: '3 key patterns' },
     questions: [
       {
-        zh: '我是学生。',
-        pinyin: 'Wǒ shì xuéshēng.',
-        tr: { uz: 'Men talabaman.', ru: 'Я студент.', en: 'I am a student.' },
+        zh: '十三',
+        pinyin: 'shí sān',
+        tr: { uz: '13 — 十 + 3', ru: '13 — 十 + 3', en: '13 — 十 + 3' },
       },
       {
-        zh: '他是老师。',
-        pinyin: 'Tā shì lǎoshī.',
-        tr: { uz: 'U o\'qituvchi.', ru: 'Он учитель.', en: 'He is a teacher.' },
+        zh: '三十',
+        pinyin: 'sān shí',
+        tr: { uz: '30 — 3 × 十', ru: '30 — 3 × 十', en: '30 — 3 × 十' },
       },
       {
-        zh: '她是中国人。',
-        pinyin: 'Tā shì Zhōngguórén.',
-        tr: { uz: 'U Xitoylik.', ru: 'Она китаянка.', en: 'She is Chinese.' },
-      },
-      {
-        zh: '这是书。',
-        pinyin: 'Zhè shì shū.',
-        tr: { uz: 'Bu kitob.', ru: 'Это книга.', en: 'This is a book.' },
+        zh: '五十三',
+        pinyin: 'wǔ shí sān',
+        tr: { uz: '53 — 5 × 十 + 3', ru: '53 — 5 × 十 + 3', en: '53 — 5 × 十 + 3' },
       },
     ],
   },
@@ -332,7 +230,7 @@ const cards: Card[] = [
 
 type Lang = 'uz' | 'ru' | 'en';
 
-export function GrammarShiPolishedPage() {
+export function GrammarShuziPolishedPage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -345,9 +243,8 @@ export function GrammarShiPolishedPage() {
 
   const card = cards[index];
   const sceneIds = new Set<string>([
-    'student', 'teacher', 'chinese', 'book',
-    'check-student', 'check-teacher', 'check-chinese', 'check-book',
-    'audio-student', 'audio-teacher', 'audio-chinese', 'audio-book',
+    'check-thirteen', 'check-thirty', 'check-fifty-three',
+    'audio-thirteen', 'audio-thirty', 'audio-fifty-three',
   ]);
   const isSceneCard = sceneIds.has(card.id);
   const progress = ((index + 1) / cards.length) * 100;
@@ -356,11 +253,7 @@ export function GrammarShiPolishedPage() {
   const quizAnswer = quizAnswers[card.id] ?? null;
   const isLastCard = index === cards.length - 1;
   const setCard = (nextIndex: number) => setIndex(nextIndex);
-  const pickAnswer = (cardId: string, optionIndex: number) => {
-    setQuizAnswers(prev => (prev[cardId] !== undefined ? prev : { ...prev, [cardId]: optionIndex }));
-  };
 
-  // Deterministic per-card shuffled pool
   const scrambledIndices = (() => {
     if (card.kind !== 'scramble' || !card.tokens) return [];
     const n = card.tokens.length;
@@ -396,6 +289,10 @@ export function GrammarShiPolishedPage() {
   const resetScramble = () => {
     setScrambleSel(prev => ({ ...prev, [card.id]: [] }));
   };
+
+  const pickAnswer = (cardId: string, optionIndex: number) => {
+    setQuizAnswers(prev => (prev[cardId] !== undefined ? prev : { ...prev, [cardId]: optionIndex }));
+  };
   const handleComplete = () => {
     const testCards = cards.filter(c => c.kind === 'practice' && c.correct !== undefined);
     const total = testCards.length;
@@ -406,62 +303,45 @@ export function GrammarShiPolishedPage() {
       else if (correctCount / total >= 0.7) stars = 2;
       else if (correctCount > 0) stars = 1;
     }
-    const existing = getStars('shi');
-    if (existing === undefined || stars > existing) saveStars('shi', stars);
+    const existing = getStars('shuzi');
+    if (existing === undefined || stars > existing) saveStars('shuzi', stars);
     setQuizAnswers({});
     router.push('/chinese?tab=grammar');
   };
 
   /* ─ Ruby element mapping ─ */
   const rubyByPhrase: Record<string, React.ReactNode> = {
-    student: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Wǒ shì xuéshēng.">
-        <ruby>我<rt>w&#466;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>学<rt>xu&eacute;</rt></ruby>
-        <ruby>生<rt>sh&#275;ng</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
+    thirteen: (
+      <div className="shenme-polished-card__ruby-title" aria-label="shí sān">
+        <ruby>十<rt>sh&iacute;</rt></ruby>
+        <ruby>三<rt>s&#257;n</rt></ruby>
       </div>
     ),
-    teacher: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Tā shì lǎoshī.">
-        <ruby>他<rt>t&#257;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>老<rt>l&#462;o</rt></ruby>
-        <ruby>师<rt>sh&#299;</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
+    thirty: (
+      <div className="shenme-polished-card__ruby-title" aria-label="sān shí">
+        <ruby>三<rt>s&#257;n</rt></ruby>
+        <ruby>十<rt>sh&iacute;</rt></ruby>
       </div>
     ),
-    chinese: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Tā shì Zhōngguórén.">
-        <ruby>她<rt>t&#257;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>中<rt>zh&#333;ng</rt></ruby>
-        <ruby>国<rt>gu&oacute;</rt></ruby>
-        <ruby>人<rt>r&eacute;n</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
-      </div>
-    ),
-    book: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Zhè shì shū.">
-        <ruby>这<rt>zh&egrave;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>书<rt>sh&#363;</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
+    'fifty-three': (
+      <div className="shenme-polished-card__ruby-title" aria-label="wǔ shí sān">
+        <ruby>五<rt>w&#466;</rt></ruby>
+        <ruby>十<rt>sh&iacute;</rt></ruby>
+        <ruby>三<rt>s&#257;n</rt></ruby>
       </div>
     ),
   };
 
   const rubyPhraseKey = card.id
     .replace(/^check-/, '')
-    .replace(/^audio-/, '');
+    .replace(/^audio-/, '')
+    .replace(/^scramble-/, '');
   const rubyEl = rubyByPhrase[rubyPhraseKey] ?? null;
 
   return (
     <div className="grammar-page shenme-polished">
-      {/* Original grammar page hero */}
       <div className="dr-hero">
-        <div className="dr-hero__watermark">是</div>
+        <div className="dr-hero__watermark">数字</div>
         <div className="dr-hero__top-row">
           <Link href="/chinese?tab=grammar" className="dr-back-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -474,24 +354,22 @@ export function GrammarShiPolishedPage() {
           <div className="dr-hero__level">
             HSK 1 · {lang === 'ru' ? 'Грамматика' : lang === 'en' ? 'Grammar' : 'Grammatika'}
           </div>
-          <h1 className="dr-hero__title">是</h1>
-          <div className="dr-hero__pinyin">shì</div>
+          <h1 className="dr-hero__title">数字</h1>
+          <div className="dr-hero__pinyin">shùzì</div>
           <div className="dr-hero__translation">
-            — {lang === 'ru' ? 'быть' : lang === 'en' ? 'to be' : "...dir, bo'lmoq"} —
+            — {lang === 'ru' ? 'числа 1-99' : lang === 'en' ? 'numbers 1-99' : 'sonlar 1-99'} —
           </div>
         </div>
       </div>
 
-      {/* Progress + step map */}
       <div className="shenme-polished__hero">
         <div className="shenme-polished__progress">
           <div className="shenme-polished__progress-bar" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
-      {/* Stage */}
       <div className="shenme-polished__stage">
-        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id === 'meaning' ? ' shenme-polished-card--scene' : ''}`}>
+        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id.startsWith('meaning') ? ' shenme-polished-card--scene' : ''}`}>
           <div className="shenme-polished-card__header">
             <div className="shenme-polished-card__meta">
               <span className="shenme-polished-card__step">{card.step}</span>
@@ -526,14 +404,15 @@ export function GrammarShiPolishedPage() {
                   ) : null}
                 </div>
               )
-            ) : card.id === 'meaning' ? (
+            ) : card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__title-stack">
-                <div className="shenme-polished-card__ruby-title" aria-label="shì">
-                  <ruby>是<rt>sh&igrave;</rt></ruby>
+                <div className="shenme-polished-card__ruby-title" aria-label="shùzì">
+                  <ruby>数<rt>sh&ugrave;</rt></ruby>
+                  <ruby>字<rt>z&igrave;</rt></ruby>
                 </div>
-                <div className="shenme-polished-card__title-translation">
-                  {lang === 'ru' ? 'быть' : lang === 'en' ? 'to be' : "...dir, bo'lmoq"}
-                </div>
+                {card.title ? (
+                  <div className="shenme-polished-card__title-translation">{t(card.title)}</div>
+                ) : null}
                 {card.body ? (
                   <p className="shenme-polished-card__meaning-body">{card.body[lang]}</p>
                 ) : null}
@@ -541,25 +420,6 @@ export function GrammarShiPolishedPage() {
             ) : (
               <h2 className="shenme-polished-card__title">{t(card.title)}</h2>
             )}
-
-            {'formula' in card && card.formula && card.id !== 'meaning' ? (
-              <div className="shenme-polished-card__formula">
-                {typeof card.formula === 'string' ? card.formula : t(card.formula)}
-              </div>
-            ) : null}
-
-            {'wrong' in card && card.wrong && 'right' in card && card.right ? (
-              <div className="shenme-polished-card__contrast">
-                <div className="shenme-polished-card__contrast-box shenme-polished-card__contrast-box--bad">
-                  <strong>{lang === 'ru' ? 'Неверно' : lang === 'en' ? 'Wrong' : "Noto'g'ri"}</strong>
-                  <span>{card.wrong}</span>
-                </div>
-                <div className="shenme-polished-card__contrast-box shenme-polished-card__contrast-box--good">
-                  <strong>{lang === 'ru' ? 'Верно' : lang === 'en' ? 'Right' : "To'g'ri"}</strong>
-                  <span>{card.right}</span>
-                </div>
-              </div>
-            ) : null}
 
             {'options' in card && card.options ? (
               <>
@@ -588,16 +448,6 @@ export function GrammarShiPolishedPage() {
                   })}
                 </div>
               </>
-            ) : null}
-
-            {'bullets' in card && card.bullets ? (
-              <div className="shenme-polished-card__bullets">
-                {card.bullets.map((bullet, bulletIndex) => (
-                  <div key={bulletIndex} className="shenme-polished-card__bullet">
-                    {bullet[lang]}
-                  </div>
-                ))}
-              </div>
             ) : null}
 
             {'questions' in card && card.questions ? (
@@ -684,11 +534,8 @@ export function GrammarShiPolishedPage() {
           </div>
 
           <div className="shenme-polished-card__footer">
-            {'body' in card && card.body && card.kind !== 'example' && card.id !== 'meaning' ? (
+            {'body' in card && card.body && card.kind !== 'example' && !card.id.startsWith('meaning') ? (
               <p className="shenme-polished-card__body">{card.body[lang]}</p>
-            ) : null}
-            {'note' in card && card.note ? (
-              <div className="shenme-polished-card__note">{card.note[lang]}</div>
             ) : null}
           </div>
         </article>

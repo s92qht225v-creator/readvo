@@ -28,7 +28,7 @@ export const GRAMMAR_TERMS: Record<string, { char: string; pinyin: string; en: s
   ne: { char: '呢', pinyin: 'ne', en: 'bounce-back question particle' },
   ji: { char: '几', pinyin: 'jǐ', en: 'how many (question word for quantity)' },
   shuzi: { char: '数字', pinyin: 'shùzì', en: 'numbers 1-99' },
-  duoda: { char: '多大', pinyin: 'duō dà', en: 'how old (asking age)' },
+  duoda: { char: '几岁 / 多大', pinyin: 'jǐ suì / duō dà', en: 'how old (asking age — child vs adult)' },
   hui: { char: '会', pinyin: 'huì', en: 'can / be able to (modal verb for learned skills)' },
   zenme: { char: '怎么', pinyin: 'zěnme', en: 'how (interrogative adverb for manner/method)' },
   riqi: { char: '日期', pinyin: 'rìqī', en: 'dates and days of the week (月/号/日/星期)' },

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
-import { GrammarShuziPage } from '@/components/GrammarShuziPage';
+import { GrammarShuziPolishedPage } from '@/components/GrammarShuziPolishedPage';
 import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -54,7 +54,7 @@ export default async function ShuziPage({ params }: { params: Promise<{ locale: 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <GrammarShuziPage />
+      <GrammarShuziPolishedPage />
     </>
   );
 }

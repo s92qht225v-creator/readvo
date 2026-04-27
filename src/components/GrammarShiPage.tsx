@@ -139,7 +139,7 @@ const dialog2: { s: string; parts: Part[]; py: string; uz: string; ru: string; e
 
 const quizQuestions = [
   {
-    q_uz:'"Men talabaman" xitoycha qanday?',
+    q_uz:'"Men talabaman" Xitoycha qanday?',
     q_ru:'Как сказать «Я студент» по-китайски?',
     q_en:'How do you say "I am a student" in Chinese?',
     options: ['我学生是。', '我是学生。', '是我学生。', '我学是生。'],

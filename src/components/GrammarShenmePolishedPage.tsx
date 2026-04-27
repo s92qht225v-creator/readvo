@@ -13,7 +13,7 @@ type Copy = { uz: string; ru: string; en: string };
 
 type Card =
   | {
-      kind: 'rule' | 'example' | 'contrast' | 'practice' | 'recap';
+      kind: 'rule' | 'example' | 'contrast' | 'practice' | 'recap' | 'scramble';
       id: string;
       step: string;
       kicker: Copy;
@@ -30,6 +30,8 @@ type Card =
       bullets?: Copy[];
       audio?: string;
       questions?: { zh: string; pinyin: string; tr: Copy }[];
+      /** Scramble card: tokens shown in correct order; UI shuffles and user reconstructs. */
+      tokens?: { zh: string; pinyin: string }[];
     };
 
 const cards: Card[] = [
@@ -102,58 +104,8 @@ const cards: Card[] = [
   },
   {
     kind: 'example',
-    id: 'book',
-    step: '04',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: {
-      uz: "Kitob nomini so'rash",
-      ru: 'Спросить название книги',
-      en: 'Ask about a book',
-    },
-    sentence: {
-      zh: '这是什么书？',
-      pinyin: 'Zhè shì shénme shū?',
-      tr: {
-        uz: 'Bu qanday kitob?',
-        ru: 'Какая это книга?',
-        en: 'What book is this?',
-      },
-    },
-    body: {
-      uz: "`书` — «kitob». Uning o'rniga boshqa otni qo'ying — yangi savol paydo bo'ladi. Masalan: `这是什么颜色 (yánsè)？` — «Bu qanday rang?»",
-      ru: '`书` — «книга». Замените на любое другое существительное — получите новый вопрос. Например: `这是什么颜色 (yánsè)？` — «Какой это цвет?»',
-      en: '`书` means "book". Swap it for a different noun to get a new question. For example: `这是什么颜色 (yánsè)？` — "What color is this?"',
-    },
-  },
-  {
-    kind: 'example',
-    id: 'color',
-    step: '05',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: {
-      uz: "Rangni so'rash",
-      ru: 'Спросить про цвет',
-      en: 'Ask about a color',
-    },
-    sentence: {
-      zh: '这是什么颜色？',
-      pinyin: 'Zhè shì shénme yánsè?',
-      tr: {
-        uz: 'Bu qanday rang?',
-        ru: 'Какой это цвет?',
-        en: 'What color is this?',
-      },
-    },
-    body: {
-      uz: "`颜色` (yánsè) — «rang». Xuddi `书` kabi — `什么` dan keyin istagan otni qo'ysangiz bo'ladi.",
-      ru: '`颜色` (yánsè) — «цвет». Так же как `书`, после `什么` можно поставить любое существительное.',
-      en: '`颜色` (yánsè) means "color". Just like `书`, you can place any noun after `什么`.',
-    },
-  },
-  {
-    kind: 'example',
     id: 'name',
-    step: '06',
+    step: '04',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: {
       uz: "Ismni so'rash",
@@ -178,7 +130,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check',
-    step: '07',
+    step: '05',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: {
       uz: '那是什么？',
@@ -196,7 +148,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'check-this',
-    step: '08',
+    step: '06',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '这是什么？', ru: '这是什么？', en: '这是什么？' },
     options: [
@@ -209,22 +161,8 @@ const cards: Card[] = [
   },
   {
     kind: 'practice',
-    id: 'check-book',
-    step: '09',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '这是什么书？', ru: '这是什么书？', en: '这是什么书？' },
-    options: [
-      { uz: 'Bu qanday rang?',     ru: 'Какой это цвет?',    en: 'What color is this?' },
-      { uz: 'Bu nima?',            ru: 'Что это?',           en: 'What is this?' },
-      { uz: 'Bu qanday kitob?',    ru: 'Какая это книга?',   en: 'What book is this?' },
-      { uz: 'Ismingiz nima?',      ru: 'Как вас зовут?',     en: 'What is your name?' },
-    ],
-    correct: 2,
-  },
-  {
-    kind: 'practice',
     id: 'check-name',
-    step: '10',
+    step: '07',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
     title: { uz: '你叫什么名字？', ru: '你叫什么名字？', en: '你叫什么名字？' },
     options: [
@@ -236,23 +174,49 @@ const cards: Card[] = [
     correct: 3,
   },
   {
-    kind: 'practice',
-    id: 'check-color-that',
-    step: '11',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '那是什么颜色？', ru: '那是什么颜色？', en: '那是什么颜色？' },
-    options: [
-      { uz: 'Ana u qanday rang?',  ru: 'Какой это цвет там?', en: 'What color is that?' },
-      { uz: 'Bu qanday rang?',     ru: 'Какой это цвет?',    en: 'What color is this?' },
-      { uz: 'Ana u nima?',         ru: 'Что это там?',       en: 'What is that?' },
-      { uz: 'Ismingiz nima?',      ru: 'Как вас зовут?',     en: 'What is your name?' },
+    kind: 'scramble',
+    id: 'scramble-this',
+    step: '08',
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: 'Bu nima?', ru: 'Что это?', en: 'What is this?' },
+    tokens: [
+      { zh: '这', pinyin: 'zhè' },
+      { zh: '是', pinyin: 'shì' },
+      { zh: '什么', pinyin: 'shénme' },
+      { zh: '？', pinyin: '' },
     ],
-    correct: 0,
+  },
+  {
+    kind: 'scramble',
+    id: 'scramble-that',
+    step: '09',
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: 'Ana u nima?', ru: 'Что это там?', en: 'What is that?' },
+    tokens: [
+      { zh: '那', pinyin: 'nà' },
+      { zh: '是', pinyin: 'shì' },
+      { zh: '什么', pinyin: 'shénme' },
+      { zh: '？', pinyin: '' },
+    ],
+  },
+  {
+    kind: 'scramble',
+    id: 'scramble-name',
+    step: '10',
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: 'Ismingiz nima?', ru: 'Как вас зовут?', en: 'What is your name?' },
+    tokens: [
+      { zh: '你', pinyin: 'nǐ' },
+      { zh: '叫', pinyin: 'jiào' },
+      { zh: '什么', pinyin: 'shénme' },
+      { zh: '名字', pinyin: 'míngzi' },
+      { zh: '？', pinyin: '' },
+    ],
   },
   {
     kind: 'practice',
     id: 'audio-that',
-    step: '12',
+    step: '11',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '那是什么？', ru: '那是什么？', en: '那是什么？' },
     audio: '那是什么',
@@ -267,7 +231,7 @@ const cards: Card[] = [
   {
     kind: 'practice',
     id: 'audio-this',
-    step: '13',
+    step: '12',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '这是什么？', ru: '这是什么？', en: '这是什么？' },
     audio: '这是什么',
@@ -281,23 +245,8 @@ const cards: Card[] = [
   },
   {
     kind: 'practice',
-    id: 'audio-book',
-    step: '14',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '这是什么书？', ru: '这是什么书？', en: '这是什么书？' },
-    audio: '这是什么书',
-    options: [
-      { uz: 'Bu qanday rang?',     ru: 'Какой это цвет?',    en: 'What color is this?' },
-      { uz: 'Bu nima?',            ru: 'Что это?',           en: 'What is this?' },
-      { uz: 'Ismingiz nima?',      ru: 'Как вас зовут?',     en: 'What is your name?' },
-      { uz: 'Bu qanday kitob?',    ru: 'Какая это книга?',   en: 'What book is this?' },
-    ],
-    correct: 3,
-  },
-  {
-    kind: 'practice',
     id: 'audio-name',
-    step: '15',
+    step: '13',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
     title: { uz: '你叫什么名字？', ru: '你叫什么名字？', en: '你叫什么名字？' },
     audio: '你叫什么名字',
@@ -310,29 +259,14 @@ const cards: Card[] = [
     correct: 0,
   },
   {
-    kind: 'practice',
-    id: 'audio-color-that',
-    step: '16',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '那是什么颜色？', ru: '那是什么颜色？', en: '那是什么颜色？' },
-    audio: '那是什么颜色',
-    options: [
-      { uz: 'Bu qanday rang?',     ru: 'Какой это цвет?',    en: 'What color is this?' },
-      { uz: 'Ana u qanday rang?',  ru: 'Какой это цвет там?', en: 'What color is that?' },
-      { uz: 'Ismingiz nima?',      ru: 'Как вас зовут?',     en: 'What is your name?' },
-      { uz: 'Ana u nima?',         ru: 'Что это там?',       en: 'What is that?' },
-    ],
-    correct: 1,
-  },
-  {
     kind: 'recap',
     id: 'recap',
-    step: '17',
+    step: '14',
     kicker: { uz: 'Xulosa', ru: 'Итог', en: 'Recap' },
     title: {
-      uz: "5 ta foydali savol",
-      ru: '5 полезных вопросов',
-      en: '5 useful questions',
+      uz: "3 ta foydali savol",
+      ru: '3 полезных вопроса',
+      en: '3 useful questions',
     },
     questions: [
       {
@@ -346,19 +280,9 @@ const cards: Card[] = [
         tr: { uz: 'Ana u nima?', ru: 'Что это там?', en: 'What is that?' },
       },
       {
-        zh: '这是什么书？',
-        pinyin: 'Zhè shì shénme shū?',
-        tr: { uz: 'Bu qanday kitob?', ru: 'Какая это книга?', en: 'What book is this?' },
-      },
-      {
         zh: '你叫什么名字？',
         pinyin: 'Nǐ jiào shénme míngzi?',
         tr: { uz: 'Ismingiz nima?', ru: 'Как вас зовут?', en: 'What is your name?' },
-      },
-      {
-        zh: '那是什么颜色？',
-        pinyin: 'Nà shì shénme yánsè?',
-        tr: { uz: 'Ana u qanday rang?', ru: 'Какой это цвет там?', en: 'What color is that?' },
       },
     ],
   },
@@ -371,14 +295,15 @@ export function GrammarShenmePolishedPage() {
   const { getStars, saveStars } = useStars('grammar');
   const [index, setIndex] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>({});
+  const [scrambleSel, setScrambleSel] = useState<Record<string, number[]>>({});
 
   if (isLoading) return <div className="loading-spinner" />;
 
   const card = cards[index];
   const sceneIds = new Set([
-    'this', 'that', 'book', 'color', 'name',
-    'check', 'check-this', 'check-book', 'check-name', 'check-color-that',
-    'audio-that', 'audio-this', 'audio-book', 'audio-name', 'audio-color-that',
+    'this', 'that', 'name',
+    'check', 'check-this', 'check-name',
+    'audio-that', 'audio-this', 'audio-name',
   ]);
   const isSceneCard = sceneIds.has(card.id);
   const progress = ((index + 1) / cards.length) * 100;
@@ -390,6 +315,45 @@ export function GrammarShenmePolishedPage() {
   };
   const pickAnswer = (cardId: string, optionIndex: number) => {
     setQuizAnswers(prev => (prev[cardId] !== undefined ? prev : { ...prev, [cardId]: optionIndex }));
+  };
+
+  // Deterministic per-card shuffled pool
+  const scrambledIndices = (() => {
+    if (card.kind !== 'scramble' || !card.tokens) return [];
+    const n = card.tokens.length;
+    const idx = Array.from({ length: n }, (_, i) => i);
+    let seed = 0;
+    for (const ch of card.id) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+    for (let i = n - 1; i > 0; i--) {
+      seed = (seed * 1103515245 + 12345) >>> 0;
+      const j = seed % (i + 1);
+      [idx[i], idx[j]] = [idx[j], idx[i]];
+    }
+    if (n > 1 && idx.every((v, i) => v === i)) idx.push(idx.shift()!);
+    return idx;
+  })();
+
+  const selForCard = scrambleSel[card.id] ?? [];
+  const scrambleTokensLen = card.tokens?.length ?? 0;
+  const scrambleComplete = selForCard.length === scrambleTokensLen && scrambleTokensLen > 0;
+  const scrambleCorrect = scrambleComplete && selForCard.every((v, i) => v === i);
+
+  const toggleScrambleToken = (tokenIdx: number) => {
+    setScrambleSel(prev => {
+      const current = prev[card.id] ?? [];
+      // If already selected, remove it (and anything after it)
+      const pos = current.indexOf(tokenIdx);
+      if (pos !== -1) {
+        return { ...prev, [card.id]: current.slice(0, pos).concat(current.slice(pos + 1)) };
+      }
+      // Don't allow new picks once complete-and-correct (locked)
+      if (scrambleCorrect) return prev;
+      return { ...prev, [card.id]: [...current, tokenIdx] };
+    });
+  };
+
+  const resetScramble = () => {
+    setScrambleSel(prev => ({ ...prev, [card.id]: [] }));
   };
   const handleComplete = () => {
     const testCards = cards.filter(c => c.kind === 'practice' && c.correct !== undefined);
@@ -438,19 +402,6 @@ export function GrammarShenmePolishedPage() {
           <div className="shenme-polished__progress-bar" style={{ width: `${progress}%` }} />
         </div>
 
-        <div className="shenme-polished__map">
-          {cards.map((item, itemIndex) => (
-            <button
-              key={item.id}
-              type="button"
-              className={`shenme-polished__map-dot ${itemIndex === index ? 'shenme-polished__map-dot--active' : ''}`}
-              onClick={() => setCard(itemIndex)}
-              aria-label={`${item.step}`}
-            >
-              {item.step}
-            </button>
-          ))}
-        </div>
       </div>
 
       <div className="shenme-polished__stage">
@@ -474,25 +425,6 @@ export function GrammarShenmePolishedPage() {
                       <ruby>么<rt>me</rt></ruby>
                       <span className="shenme-polished-card__ruby-punct">？</span>
                     </div>
-                  ) : card.id === 'book' || card.id === 'check-book' || card.id === 'audio-book' ? (
-                    <div className="shenme-polished-card__ruby-title" aria-label="Zhè shì shénme shū?">
-                      <ruby>这<rt>zh&egrave;</rt></ruby>
-                      <ruby>是<rt>sh&igrave;</rt></ruby>
-                      <ruby>什<rt>sh&eacute;n</rt></ruby>
-                      <ruby>么<rt>me</rt></ruby>
-                      <ruby>书<rt>sh&#363;</rt></ruby>
-                      <span className="shenme-polished-card__ruby-punct">？</span>
-                    </div>
-                  ) : card.id === 'color' ? (
-                    <div className="shenme-polished-card__ruby-title" aria-label="Zhè shì shénme yánsè?">
-                      <ruby>这<rt>zh&egrave;</rt></ruby>
-                      <ruby>是<rt>sh&igrave;</rt></ruby>
-                      <ruby>什<rt>sh&eacute;n</rt></ruby>
-                      <ruby>么<rt>me</rt></ruby>
-                      <ruby>颜<rt>y&aacute;n</rt></ruby>
-                      <ruby>色<rt>s&egrave;</rt></ruby>
-                      <span className="shenme-polished-card__ruby-punct">？</span>
-                    </div>
                   ) : card.id === 'name' || card.id === 'check-name' || card.id === 'audio-name' ? (
                     <div className="shenme-polished-card__ruby-title" aria-label="Nǐ jiào shénme míngzi?">
                       <ruby>你<rt>n&#464;</rt></ruby>
@@ -501,16 +433,6 @@ export function GrammarShenmePolishedPage() {
                       <ruby>么<rt>me</rt></ruby>
                       <ruby>名<rt>m&iacute;ng</rt></ruby>
                       <ruby>字<rt>zi</rt></ruby>
-                      <span className="shenme-polished-card__ruby-punct">？</span>
-                    </div>
-                  ) : card.id === 'check-color-that' || card.id === 'audio-color-that' ? (
-                    <div className="shenme-polished-card__ruby-title" aria-label="Nà shì shénme yánsè?">
-                      <ruby>那<rt>n&agrave;</rt></ruby>
-                      <ruby>是<rt>sh&igrave;</rt></ruby>
-                      <ruby>什<rt>sh&eacute;n</rt></ruby>
-                      <ruby>么<rt>me</rt></ruby>
-                      <ruby>颜<rt>y&aacute;n</rt></ruby>
-                      <ruby>色<rt>s&egrave;</rt></ruby>
                       <span className="shenme-polished-card__ruby-punct">？</span>
                     </div>
                   ) : (
@@ -547,6 +469,9 @@ export function GrammarShenmePolishedPage() {
                     {card.sentence ? (
                       <div className="shenme-polished-card__title-translation">{card.sentence.tr[language]}</div>
                     ) : null}
+                    {card.kind === 'example' && card.body ? (
+                      <p className="shenme-polished-card__meaning-body">{card.body[language]}</p>
+                    ) : null}
                   </div>
                 );
               })()
@@ -559,6 +484,9 @@ export function GrammarShenmePolishedPage() {
                 <div className="shenme-polished-card__title-translation">
                   {language === 'ru' ? 'что?' : language === 'en' ? 'what?' : 'nima?'}
                 </div>
+                {card.body ? (
+                  <p className="shenme-polished-card__meaning-body">{card.body[language]}</p>
+                ) : null}
               </div>
             ) : (
               <h2 className="shenme-polished-card__title">{t(card.title)}</h2>
@@ -649,10 +577,75 @@ export function GrammarShenmePolishedPage() {
                 ))}
               </div>
             ) : null}
+
+            {card.kind === 'scramble' && card.tokens ? (
+              <div className="scramble">
+                <div
+                  className={`scramble__answer${scrambleCorrect ? ' scramble__answer--correct' : ''}${
+                    scrambleComplete && !scrambleCorrect ? ' scramble__answer--wrong' : ''
+                  }`}
+                >
+                  {selForCard.length === 0 ? (
+                    <div className="scramble__answer-placeholder">
+                      {language === 'ru' ? 'Нажмите слова ниже' : language === 'en' ? 'Tap words below' : 'Pastdagi so‘zlarni bosing'}
+                    </div>
+                  ) : (
+                    selForCard.map((tokenIdx, slotIdx) => {
+                      const tok = card.tokens![tokenIdx];
+                      return (
+                        <button
+                          key={`${slotIdx}-${tokenIdx}`}
+                          type="button"
+                          className="scramble__token scramble__token--placed"
+                          onClick={() => toggleScrambleToken(tokenIdx)}
+                          disabled={scrambleCorrect}
+                        >
+                          <span className="scramble__token-py" aria-hidden={!tok.pinyin}>{tok.pinyin || '\u00A0'}</span>
+                          <span className={`scramble__token-zh${/^[？。！，、；：]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
+                        </button>
+                      );
+                    })
+                  )}
+                </div>
+
+                <div className="scramble__pool">
+                  {scrambledIndices.map(tokenIdx => {
+                    const tok = card.tokens![tokenIdx];
+                    const used = selForCard.includes(tokenIdx);
+                    return (
+                      <button
+                        key={tokenIdx}
+                        type="button"
+                        className={`scramble__token${used ? ' scramble__token--used' : ''}`}
+                        onClick={() => !used && toggleScrambleToken(tokenIdx)}
+                        disabled={used || scrambleCorrect}
+                        aria-hidden={used}
+                      >
+                        <span className="scramble__token-py" aria-hidden={!tok.pinyin}>{tok.pinyin || '\u00A0'}</span>
+                        <span className={`scramble__token-zh${/^[？。！，、；：]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="scramble__feedback">
+                  {scrambleComplete && !scrambleCorrect ? (
+                    <button type="button" className="scramble__reset" onClick={resetScramble}>
+                      {language === 'ru' ? 'Попробовать ещё раз' : language === 'en' ? 'Try again' : 'Qaytadan'}
+                    </button>
+                  ) : null}
+                  {scrambleCorrect ? (
+                    <div className="scramble__success">
+                      {language === 'ru' ? 'Верно!' : language === 'en' ? 'Correct!' : "To'g'ri!"}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
           </div>
 
           <div className="shenme-polished-card__footer">
-            {'body' in card && card.body ? (
+            {'body' in card && card.body && card.kind !== 'example' && card.id !== 'meaning' ? (
               <p className="shenme-polished-card__body">{card.body[language]}</p>
             ) : null}
             {'note' in card && card.note ? (
@@ -678,7 +671,10 @@ export function GrammarShenmePolishedPage() {
             if (isLastCard) handleComplete();
             else setCard(Math.min(cards.length - 1, index + 1));
           }}
-          disabled={card.kind === 'practice' && !!card.options && quizAnswer === null}
+          disabled={
+            (card.kind === 'practice' && !!card.options && quizAnswer === null) ||
+            (card.kind === 'scramble' && !scrambleCorrect)
+          }
         >
           {isLastCard
             ? (language === 'ru' ? 'Завершить' : language === 'en' ? 'Complete' : 'Tugatish')

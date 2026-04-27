@@ -43,6 +43,7 @@ const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'gram
 const grammarItems = [
   { char: '什么', pinyin: 'shénme', href: '/chinese/hsk1/grammar/shenme', translation: 'nima?', translation_ru: 'что?', translation_en: 'what?', color: '#dc2626', active: true },
   { char: '是', pinyin: 'shì', href: '/chinese/hsk1/grammar/shi', translation: 'bo\'lmoq', translation_ru: 'быть', translation_en: 'to be', color: '#dc2626', active: true },
+  { char: '不是', pinyin: 'bú shì', href: '/chinese/hsk1/grammar/bushi-polished', translation: 'emas', translation_ru: 'не быть', translation_en: 'is not', color: '#dc2626', active: true },
   { char: '吗', pinyin: 'ma', href: '/chinese/hsk1/grammar/ma', translation: 'savol yuklamasi', translation_ru: 'вопросительная частица', translation_en: 'question particle', color: '#0891b2', active: true },
   { char: '谁', pinyin: 'shéi', href: '/chinese/hsk1/grammar/shei', translation: 'kim?', translation_ru: 'кто?', translation_en: 'who?', color: '#d97706', active: true },
   { char: '哪', pinyin: 'nǎ', href: '/chinese/hsk1/grammar/na', translation: 'qaysi?', translation_ru: 'который?', translation_en: 'which?', color: '#0284c7', active: true },
@@ -50,7 +51,7 @@ const grammarItems = [
   { char: '呢', pinyin: 'ne', href: '/chinese/hsk1/grammar/ne', translation: '…chi?', translation_ru: '…а вы?', translation_en: '…and you?', color: '#7c3aed', active: true },
   { char: '几', pinyin: 'jǐ', href: '/chinese/hsk1/grammar/ji', translation: 'nechta?', translation_ru: 'сколько?', translation_en: 'how many?', color: '#059669', active: true },
   { char: '数字', pinyin: 'shùzì', href: '/chinese/hsk1/grammar/shuzi', translation: '1-99 sonlar', translation_ru: 'числа 1-99', translation_en: 'numbers 1-99', color: '#f59e0b', active: true },
-  { char: '多大', pinyin: 'duō dà', href: '/chinese/hsk1/grammar/duoda', translation: 'necha yoshda?', translation_ru: 'сколько лет?', translation_en: 'how old?', color: '#0369a1', active: true },
+  { char: '几岁 / 多大', pinyin: 'jǐ suì / duō dà', ghost: '几岁', href: '/chinese/hsk1/grammar/duoda', translation: 'necha yoshda?', translation_ru: 'сколько лет?', translation_en: 'how old?', color: '#0369a1', active: true },
   { char: '会', pinyin: 'huì', href: '/chinese/hsk1/grammar/hui', translation: 'qila olmoq', translation_ru: 'уметь', translation_en: 'can / be able to', color: '#dc2626', active: true },
   { char: '很', pinyin: 'hěn', href: '/chinese/hsk1/grammar/hen', translation: 'juda', translation_ru: 'очень', translation_en: 'very', color: '#b45309', active: true },
   { char: '怎么', pinyin: 'zěnme', href: '/chinese/hsk1/grammar/zenme', translation: 'qanday?', translation_ru: 'как?', translation_en: 'how?', color: '#0f766e', active: true },
@@ -871,7 +872,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
               <div className="home__lessons">
                 {filteredGrammar.map((item, idx) => (
                   <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} className="grammar-card">
-                    <span className="grammar-card__bg">{item.char}</span>
+                    <span className="grammar-card__bg">{('ghost' in item && item.ghost) || item.char}</span>
                     <div className="grammar-card__top">
                       <p className="grammar-card__title">{item.char} {item.pinyin}</p>
                       {!item.active && <span className="grammar-card__badge">{({ uz: 'Tez kunda', ru: 'Скоро', en: 'Soon' } as Record<string, string>)[language]}</span>}

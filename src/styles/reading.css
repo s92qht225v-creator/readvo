@@ -12539,7 +12539,7 @@ body {
 }
 
 .shenme-polished-card {
-  min-height: 500px;
+  min-height: 565px;
   display: flex;
   flex-direction: column;
   border-radius: 28px;
@@ -12661,17 +12661,18 @@ body {
 }
 
 .shenme-polished-card__ruby-title {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.08em;
+  gap: 0.08em 0.08em;
   color: #0f172a;
   font-size: clamp(2.4rem, 7vw, 4rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.3;
   letter-spacing: -0.04em;
   position: relative;
-  width: fit-content;
+  max-width: 100%;
 }
 
 .shenme-polished-card__ruby-title ruby {
@@ -12695,6 +12696,22 @@ body {
   line-height: 1;
   margin-left: -0.04em;
   transform: translateX(0.04em);
+}
+
+/* Hang only the trailing CJK punctuation at the end of the whole ruby-title
+   (`？`/`。`/`！`) so it doesn't push the line off-centre. Mid-sentence
+   commas — including ones inside a `.ruby-glyph-group` — keep their natural
+   spacing. */
+.shenme-polished-card__ruby-title > .shenme-polished-card__ruby-punct:last-child {
+  margin-right: -0.9em;
+}
+
+/* Groups a ruby character with its following punctuation so the pair never
+   breaks across lines — prevents orphan commas at the start of a new row. */
+.shenme-polished-card__ruby-glyph-group {
+  display: inline-flex;
+  align-items: flex-end;
+  white-space: nowrap;
 }
 
 .shenme-polished-card__title-scene {
@@ -12974,6 +12991,13 @@ body {
   padding-top: 56px;
 }
 
+/* Rule cards (meaning-*) should vertically center content so short and
+   long bodies land in the same visual position on the card. */
+.shenme-polished-card--rule.shenme-polished-card--scene .shenme-polished-card__main {
+  justify-content: center;
+  padding-top: 0;
+}
+
 .shenme-polished-card--scene .shenme-polished-card__ruby-title {
   min-height: 1.4em;
 }
@@ -12985,7 +13009,7 @@ body {
 .shenme-polished-card--scene .shenme-polished-card__title {
   text-align: center;
   width: 100%;
-  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-size: clamp(1.9rem, 5.5vw, 3rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -13075,7 +13099,7 @@ body {
 
 @media (max-width: 600px) {
   .shenme-polished-card {
-    min-height: 460px;
+    min-height: 565px;
     padding: 20px;
     border-radius: 22px;
   }
@@ -13085,7 +13109,7 @@ body {
   }
 
   .shenme-polished-card__ruby-title {
-    font-size: clamp(2.4rem, 12vw, 4rem);
+    font-size: clamp(1.9rem, 9vw, 3rem);
   }
 
   .shenme-polished-card--scene .shenme-polished-card__body {
@@ -13128,4 +13152,212 @@ body {
   .shenme-polished-card__contrast {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Scramble test (tap-to-build sentence) ─────────────────────────── */
+.scramble {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.scramble__prompt {
+  text-align: center;
+  color: #475569;
+  font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+  font-weight: 600;
+}
+
+.scramble__answer {
+  min-height: 84px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 12px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.scramble__answer--correct {
+  border-style: solid;
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.scramble__answer--wrong {
+  border-style: solid;
+  border-color: #dc2626;
+  background: #fef2f2;
+  animation: scrambleShake 360ms ease;
+}
+
+@keyframes scrambleShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.scramble__answer-placeholder {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.scramble__pool {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  min-height: 68px;
+}
+
+.scramble__token {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-height: 52px;
+  padding: 8px 14px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  color: #0f172a;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scramble__token:hover:not(:disabled) {
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.scramble__token:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Placed tokens keep the same appearance as pool tokens — no blue highlight. */
+.scramble__token--placed {
+  /* inherit base token styling */
+}
+
+.scramble__token--used {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.scramble__token:disabled {
+  cursor: default;
+}
+
+.scramble__token-py {
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1;
+  min-height: 0.72rem;
+}
+
+.scramble__token-zh {
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* Full-width CJK punctuation (？。！) leans visually left inside its glyph box;
+   nudge right so it reads as centered in the token. */
+.scramble__token-zh--punct {
+  transform: translateX(0.18em);
+}
+
+/* Meaning cards: body paragraph sits inside the title-stack so it renders
+   directly below the big 吗/character and translation, instead of dropping to
+   the card footer. */
+.shenme-polished-card__meaning-body {
+  max-width: 42ch;
+  margin: 16px auto 0;
+  color: #475569;
+  font-size: clamp(1rem, 2.8vw, 1.15rem);
+  line-height: 1.55;
+  text-align: center;
+  /* Preserve explicit \n line breaks in the body string so authors can
+     control multi-line layout (e.g. bullet-style rule lists). */
+  white-space: pre-line;
+}
+
+/* Vertically center the character + translation + body on meaning cards
+   and on example cards (override the scene-card default which anchors
+   content to the top). */
+.shenme-polished-card--meaning .shenme-polished-card__main,
+.shenme-polished-card--meaning-2 .shenme-polished-card__main,
+.shenme-polished-card--meaning-3 .shenme-polished-card__main,
+.shenme-polished-card--example .shenme-polished-card__main {
+  justify-content: center;
+  padding-top: 0;
+}
+
+/* Reserve space so the reset button / success label never shifts the card height. */
+.scramble__feedback {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scramble__reset {
+  padding: 8px 18px;
+  background: transparent;
+  border: 1.5px solid #dc2626;
+  border-radius: 999px;
+  color: #dc2626;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scramble__reset:hover {
+  background: #fef2f2;
+}
+
+.scramble__success {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Telegram floating contact FAB */
+.telegram-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(34, 158, 217, 0.45);
+  z-index: 60;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.telegram-fab:hover { transform: scale(1.06); }
+.telegram-fab:active { transform: scale(0.96); }
+@media (max-width: 600px) {
+  .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
 }

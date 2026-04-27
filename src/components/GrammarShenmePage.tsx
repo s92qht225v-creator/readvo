@@ -106,7 +106,7 @@ const dialog1 = [
   { s:'A', zh:'你好！你叫什么名字？',     py:'Nǐ hǎo! Nǐ jiào shénme míngzi?',    uz:'Salom! Ismingiz nima?',               ru:'Привет! Как вас зовут?',         en:'Hi! What is your name?' },
   { s:'B', zh:'我叫王芳。你呢？',          py:'Wǒ jiào Wáng Fāng. Nǐ ne?',          uz:'Mening ismim Wang Fang. Sizchi?',       ru:'Меня зовут Ван Фан. А вас?',      en:'My name is Wang Fang. And you?' },
   { s:'A', zh:'我叫李明。你学什么？',      py:'Wǒ jiào Lǐ Míng. Nǐ xué shénme?',   uz:"Mening ismim Li Ming. Siz nima o'rganasiz?",         ru:'Меня зовут Ли Мин. Что вы изучаете?',en:'My name is Li Ming. What are you studying?' },
-  { s:'B', zh:'我学汉语。',                py:'Wǒ xué Hànyǔ.',                       uz:"Men xitoy tilini o'rganyapman.",        ru:'Я изучаю китайский язык.',       en:"I'm studying Chinese." },
+  { s:'B', zh:'我学汉语。',                py:'Wǒ xué Hànyǔ.',                       uz:"Men Xitoy tilini o'rganyapman.",        ru:'Я изучаю китайский язык.',       en:"I'm studying Chinese." },
 ];
 
 const dialog2 = [
@@ -119,7 +119,7 @@ const dialog2 = [
 
 const quizQuestions = [
   {
-    q_uz:'"Nima yeyasan?" xitoycha qanday?',
+    q_uz:'"Nima yeyasan?" Xitoycha qanday?',
     q_ru:'Как сказать «Что ты ешь?» по-китайски?',
     q_en:'How do you say "What are you eating?" in Chinese?',
     options: ['你吃什么？', '什么你吃？', '你什么吃？', '吃什么你？'],

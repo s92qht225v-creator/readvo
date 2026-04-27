@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
-import { GrammarHuiPage } from '@/components/GrammarHuiPage';
+import { GrammarHuiPolishedPage } from '@/components/GrammarHuiPolishedPage';
 import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -54,7 +54,7 @@ export default async function HuiPage({ params }: { params: Promise<{ locale: st
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <GrammarHuiPage />
+      <GrammarHuiPolishedPage />
     </>
   );
 }

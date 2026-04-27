@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { AuthProvider } from '@/hooks/useAuth';
+import { TelegramFAB } from '@/components/TelegramFAB';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <AuthProvider>
         {children}
+        <TelegramFAB />
       </AuthProvider>
     </NextIntlClientProvider>
   );

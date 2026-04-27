@@ -13,7 +13,7 @@ const t = {
   uz: {
     login: 'Kirish',
     heroTitle: 'Xitoy tilini interaktiv darslar bilan o\'rganing',
-    heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan xitoy tilini samarali o\'rganing',
+    heroSubtitle: 'Pinyin, audio, tarjima va flashkartalar bilan Xitoy tilini samarali o\'rganing',
     startFree: 'Bepul boshlang',
     languages: 'Tillarni tanlang',
     howItWorks: 'Qanday ishlaydi?',
@@ -378,7 +378,7 @@ function LandingPage({ language, toggleLanguage, s }: {
           {[
             {
               name: ({ uz: 'Dilnoza, 22', ru: 'Дилноза, 22', en: 'Dilnoza, 22' } as Record<string, string>)[language] ?? 'Dilnoza, 22',
-              text: ({ uz: "Karaoke — xitoy tilini o'rganishning eng yoqimli usuli. Endi qo'shiq aytib so'zlarni oson yodlayman!", ru: 'Караоке — мой любимый способ учить китайский. Теперь я пою песни и запоминаю слова легко!', en: 'Karaoke is my favorite way to learn Chinese. Now I sing songs and memorize words easily!' } as Record<string, string>)[language] ?? '',
+              text: ({ uz: "Karaoke — Xitoy tilini o'rganishning eng yoqimli usuli. Endi qo'shiq aytib so'zlarni oson yodlayman!", ru: 'Караоке — мой любимый способ учить китайский. Теперь я пою песни и запоминаю слова легко!', en: 'Karaoke is my favorite way to learn Chinese. Now I sing songs and memorize words easily!' } as Record<string, string>)[language] ?? '',
             },
             {
               name: ({ uz: 'Aziz, 19', ru: 'Азиз, 19', en: 'Aziz, 19' } as Record<string, string>)[language] ?? 'Aziz, 19',

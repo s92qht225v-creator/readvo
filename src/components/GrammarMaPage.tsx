@@ -123,7 +123,7 @@ const dialog1: { s: string; parts: Part[]; py: string; uz: string; ru: string; e
   { s:'B', parts:[{text:'我很好，谢谢。你',color:C_SUB},{text:'呢',color:C_MA},{text:'？',color:C_PUNC}],                                py:"Wǒ hěn hǎo, xièxie. Nǐ ne?",           uz:'Men yaxshiman, rahmat. Sizchi?',                  ru:'Я хорошо, спасибо. А вы?',               en:"I'm fine, thank you. And you?" },
   { s:'A', parts:[{text:'我也很好。你',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'吗？',color:C_MA}],          py:'Wǒ yě hěn hǎo. Nǐ shì xuésheng ma?',  uz:'Men ham yaxshiman. Siz talabamisiz?',              ru:'Я тоже хорошо. Вы студент?',             en:"I'm fine too. Are you a student?" },
   { s:'B', parts:[{text:'是的，我',color:C_SUB},{text:'是',color:C_SHI},{text:'学生',color:C_PRED},{text:'。',color:C_PUNC}],             py:'Shì de, wǒ shì xuésheng.',             uz:'Ha, men talabaman.',                              ru:'Да, я студент.',                         en:"Yes, I'm a student." },
-  { s:'A', parts:[{text:'你',color:C_SUB},{text:'喜欢',color:C_SHI},{text:'汉语',color:C_PRED},{text:'吗？',color:C_MA}],                 py:'Nǐ xǐhuan Hànyǔ ma?',                  uz:'Siz xitoy tilini yoqtirasizmi?',                  ru:'Вам нравится китайский язык?',           en:'Do you like Chinese?' },
+  { s:'A', parts:[{text:'你',color:C_SUB},{text:'喜欢',color:C_SHI},{text:'汉语',color:C_PRED},{text:'吗？',color:C_MA}],                 py:'Nǐ xǐhuan Hànyǔ ma?',                  uz:'Siz Xitoy tilini yoqtirasizmi?',                  ru:'Вам нравится китайский язык?',           en:'Do you like Chinese?' },
   { s:'B', parts:[{text:'喜欢！汉语很好！',color:C_PRED}],                                                                               py:'Xǐhuan! Hànyǔ hěn hǎo!',               uz:"Yoqtiraman! Xitoy tili zo'r!",                    ru:'Нравится! Китайский отличный!',          en:"I like it! Chinese is great!" },
 ];
 
@@ -160,7 +160,7 @@ const quizQuestions: {
     correct:3,
   },
   {
-    q_uz:'"Siz talabamisiz?" xitoycha qanday?',
+    q_uz:'"Siz talabamisiz?" Xitoycha qanday?',
     q_ru:'"Вы студент?" по-китайски?',
     q_en:'"Are you a student?" in Chinese?',
     options:["你吗是学生？","你是学生吗？","吗你是学生？","你是吗学生？"],

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
-import { GrammarDePage } from '@/components/GrammarDePage';
+import { GrammarDePolishedPage } from '@/components/GrammarDePolishedPage';
 import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -54,7 +54,7 @@ export default async function DePage({ params }: { params: Promise<{ locale: str
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <GrammarDePage />
+      <GrammarDePolishedPage />
     </>
   );
 }

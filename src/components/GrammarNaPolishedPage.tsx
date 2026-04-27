@@ -30,301 +30,196 @@ type Card =
       bullets?: Copy[];
       audio?: string;
       questions?: { zh: string; pinyin: string; tr: Copy }[];
-      /** Scramble card: tokens shown in correct order; UI shuffles and user reconstructs. */
       tokens?: { zh: string; pinyin: string }[];
     };
 
 const cards: Card[] = [
-  /* ─ 01 meaning ─ */
+  /* ─ 01 meaning (part 1: what it is) ─ */
   {
     kind: 'rule',
     id: 'meaning',
     step: '01',
     kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
-    title: { uz: '不是 = emas', ru: '不是 = не быть', en: '不是 = is not' },
+    title: { uz: '哪 = qaysi?', ru: '哪 = какой?', en: '哪 = which?' },
     body: {
-      uz: "`不是` bu `是` ning inkor shakli bo'lib `是` oldiga `不` qo'shilganda «我是学生» (Men talabaman) → «我不是学生» (Men talaba emasman) ga aylanib qoladi.",
-      ru: '`不是` (bú shì) — отрицательная форма `是`. Ставим `不` перед `是` — получается «не быть». Например: «我是学生» (Я студент) → «我不是学生» (Я не студент). Обратите внимание: `不` перед 4-м тоном `是` меняется на 2-й тон (bú).',
-      en: '`不是` (bú shì) is the negation of `是`. Put `不` before `是` to mean "is not". Example: "我是学生" (I am a student) → "我不是学生" (I am not a student). Note: `不` becomes 2nd tone (bú) before the 4th-tone `是`.',
+      uz: "哪 (nǎ) — «qaysi?»",
+      ru: '哪 (nǎ) — «какой?»',
+      en: '哪 (nǎ) — "which?"',
     },
-    formula: {
-      uz: 'A + 不是 + B',
-      ru: 'A + 不是 + B',
-      en: 'A + 不是 + B',
+  },
+  /* ─ 02 meaning (part 2: purpose) ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-2',
+    step: '02',
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '哪 = qaysi?', ru: '哪 = какой?', en: '哪 = which?' },
+    body: {
+      uz: "哪 (nǎ) bir nechta variantdan birini tanlash uchun ishlatiladi.\n\nMasalan: 哪个? (nǎ ge?) — Qaysi biri?",
+      ru: '哪 (nǎ) используется, чтобы выбрать один вариант из нескольких.\n\nНапример: 哪个? (nǎ ge?) — Какой именно?',
+      en: '哪 (nǎ) is used to pick one out of several options.\n\nFor example: 哪个? (nǎ ge?) — Which one?',
+    },
+  },
+  /* ─ 03 meaning (part 3: how it works) ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-3',
+    step: '03',
+    kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
+    title: { uz: '哪 = qaysi?', ru: '哪 = какой?', en: '哪 = which?' },
+    body: {
+      uz: "哪 odatda ot yoki sanoq so'z bilan birga ishlatiladi.\n\n哪 + ot: 哪国 (nǎ guó) — qaysi mamlakat?\n哪 + sanoq so'z: 哪个 (nǎ ge) — qaysi biri?",
+      ru: '哪 обычно идёт вместе с существительным или счётным словом.\n\n哪 + существительное: 哪国 (nǎ guó) — какая страна?\n哪 + счётное слово: 哪个 (nǎ ge) — какой именно?',
+      en: '哪 usually pairs with a noun or a measure word.\n\n哪 + noun: 哪国 (nǎ guó) — which country?\n哪 + measure word: 哪个 (nǎ ge) — which one?',
     },
   },
 
-  /* ─ 02-05: four example scene cards ─ */
+  /* ─ 04-06: three example scene cards ─ */
   {
     kind: 'example',
-    id: 'student',
-    step: '02',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '我不是学生。', ru: '我不是学生。', en: '我不是学生。' },
-    sentence: {
-      zh: '我不是学生。',
-      pinyin: 'Wǒ bú shì xuéshēng.',
-      tr: { uz: 'Men talaba emasman.', ru: 'Я не студент.', en: 'I am not a student.' },
-    },
-    body: {
-      uz: "«我是学生» ga `不` qo'shib: «我不是学生». So'zma-so'z: «Men emasman talaba» ya'ni «Men talaba emasman» ga aylantirdik.",
-      ru: 'К «我是学生» добавили `不`: «我不是学生». Дословно: «Я не студент».',
-      en: 'Added `不` to "我是学生": "我不是学生". Literally "I not am student" → "I am not a student."',
-    },
-  },
-  {
-    kind: 'example',
-    id: 'teacher',
-    step: '03',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '他不是老师。', ru: '他不是老师。', en: '他不是老师。' },
-    sentence: {
-      zh: '他不是老师。',
-      pinyin: 'Tā bú shì lǎoshī.',
-      tr: { uz: 'U o\'qituvchi emas.', ru: 'Он не учитель.', en: 'He is not a teacher.' },
-    },
-    body: {
-      uz: "`他` — «u» (erkak), `不是老师` — «o'qituvchi emas». Shablon o'sha-o'sha: A + 不是 + B.",
-      ru: '`他` — «он», `不是老师` — «не учитель». Модель та же: A + 不是 + B.',
-      en: '`他` = he, `不是老师` = not a teacher. Same pattern: A + 不是 + B.',
-    },
-  },
-  {
-    kind: 'example',
-    id: 'chinese',
+    id: 'country',
     step: '04',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '她不是中国人。', ru: '她不是中国人。', en: '她不是中国人。' },
+    title: { uz: '你是哪国人？', ru: '你是哪国人？', en: '你是哪国人？' },
     sentence: {
-      zh: '她不是中国人。',
-      pinyin: 'Tā bú shì Zhōngguórén.',
-      tr: { uz: 'U Xitoylik emas.', ru: 'Она не китаянка.', en: 'She is not Chinese.' },
+      zh: '你是哪国人？',
+      pinyin: 'Nǐ shì nǎ guó rén?',
+      tr: { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?', en: 'Which country are you from?' },
     },
     body: {
-      uz: "Ushbu misolda ham xuddi shunday: `不是` + `中国人` (Xitoylik emas).",
-      ru: 'Отрицание национальности — так же: `不是` + `中国人` (китаец).',
-      en: 'Negating nationality works the same: `不是` + `中国人` (Chinese).',
+      uz: "你 — «siz, sen», 是 — «…siz», 哪国 — «qaysi davlat», 人 — «odam».\nSo'zma-so'z: «Siz qaysi davlat odamisiz?».",
+      ru: '你 — «ты/вы», 是 — «быть», 哪国 — «какая страна», 人 — «человек».\nДословно: «Ты какой страны человек?».',
+      en: '你 = you, 是 = to be, 哪国 = which country, 人 = person.\nLiterally "You are which-country person?".',
     },
   },
   {
     kind: 'example',
-    id: 'book',
+    id: 'one',
     step: '05',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '这不是书。', ru: '这不是书。', en: '这不是书。' },
+    title: { uz: '哪个是你的？', ru: '哪个是你的？', en: '哪个是你的？' },
     sentence: {
-      zh: '这不是书。',
-      pinyin: 'Zhè bú shì shū.',
-      tr: { uz: 'Bu kitob emas.', ru: 'Это не книга.', en: 'This is not a book.' },
+      zh: '哪个是你的？',
+      pinyin: 'Nǎ ge shì nǐ de?',
+      tr: { uz: 'Qaysi biri sizniki?', ru: 'Какой из них твой?', en: 'Which one is yours?' },
     },
     body: {
-      uz: "`这不是书`: «Bu — kitob emas». Jonsiz narsalar bilan ham xuddi shunday ishlaydi.",
-      ru: '`这不是书`: «Это не книга». Работает и с предметами.',
-      en: '`这不是书`: "This is not a book." Works with objects too.',
+      uz: "哪个 — «qaysi biri». 个 (ge) — universal sanoq so'z. 你的 — «sizniki».",
+      ru: '哪个 — «какой именно». 个 (ge) — универсальное счётное слово. 你的 — «твой».',
+      en: '哪个 = which one. 个 (ge) is the universal measure word. 你的 = yours.',
     },
   },
 
-  /* ─ 06-09: four visual tests ─ */
+  /* ─ visual tests ─ */
   {
     kind: 'practice',
-    id: 'check-student',
+    id: 'check-country',
     step: '06',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '我不是学生。', ru: '我不是学生。', en: '我不是学生。' },
+    title: { uz: '你是哪国人？', ru: '你是哪国人？', en: '你是哪国人？' },
     options: [
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
+      { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?',  en: 'Which country are you from?' },
+      { uz: 'Qaysi biri sizniki?',     ru: 'Какой из них твой?',    en: 'Which one is yours?' },
+      { uz: 'U kim?',                 ru: 'Кто он?',               en: 'Who is he?' },
+      { uz: 'Bu nima?',               ru: 'Что это?',              en: 'What is this?' },
     ],
     correct: 0,
   },
   {
     kind: 'practice',
-    id: 'check-teacher',
+    id: 'check-one',
     step: '07',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '他不是老师。', ru: '他不是老师。', en: '他不是老师。' },
+    title: { uz: '哪个是你的？', ru: '哪个是你的？', en: '哪个是你的？' },
     options: [
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
+      { uz: 'U kim?',                 ru: 'Кто он?',               en: 'Who is he?' },
+      { uz: 'Qaysi biri sizniki?',     ru: 'Какой из них твой?',    en: 'Which one is yours?' },
+      { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?',  en: 'Which country are you from?' },
+      { uz: 'Bu nima?',               ru: 'Что это?',              en: 'What is this?' },
     ],
     correct: 1,
   },
+
+  /* ─ scramble tests ─ */
   {
-    kind: 'practice',
-    id: 'check-chinese',
+    kind: 'scramble',
+    id: 'scramble-country',
     step: '08',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '她不是中国人。', ru: '她不是中国人。', en: '她不是中国人。' },
-    options: [
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
+    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
+    title: { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?', en: 'Which country are you from?' },
+    tokens: [
+      { zh: '你', pinyin: 'nǐ' },
+      { zh: '是', pinyin: 'shì' },
+      { zh: '哪', pinyin: 'nǎ' },
+      { zh: '国', pinyin: 'guó' },
+      { zh: '人', pinyin: 'rén' },
+      { zh: '？', pinyin: '' },
     ],
-    correct: 2,
   },
   {
-    kind: 'practice',
-    id: 'check-book',
+    kind: 'scramble',
+    id: 'scramble-one',
     step: '09',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '这不是书。', ru: '这不是书。', en: '这不是书。' },
-    options: [
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-    ],
-    correct: 3,
-  },
-
-  /* ─ 10-13: four scramble tests ─ */
-  {
-    kind: 'scramble',
-    id: 'scramble-student',
-    step: '10',
     kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Men talaba emasman.', ru: 'Я не студент.', en: 'I am not a student.' },
+    title: { uz: 'Qaysi biri sizniki?', ru: 'Какой из них твой?', en: 'Which one is yours?' },
     tokens: [
-      { zh: '我', pinyin: 'wǒ' },
-      { zh: '不是', pinyin: 'bú shì' },
-      { zh: '学生', pinyin: 'xuéshēng' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-teacher',
-    step: '11',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: "U o'qituvchi emas.", ru: 'Он не учитель.', en: 'He is not a teacher.' },
-    tokens: [
-      { zh: '他', pinyin: 'tā' },
-      { zh: '不是', pinyin: 'bú shì' },
-      { zh: '老师', pinyin: 'lǎoshī' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-chinese',
-    step: '12',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'U Xitoylik emas.', ru: 'Она не китаянка.', en: 'She is not Chinese.' },
-    tokens: [
-      { zh: '她', pinyin: 'tā' },
-      { zh: '不是', pinyin: 'bú shì' },
-      { zh: '中国人', pinyin: 'Zhōngguórén' },
-      { zh: '。', pinyin: '' },
-    ],
-  },
-  {
-    kind: 'scramble',
-    id: 'scramble-book',
-    step: '13',
-    kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Bu kitob emas.', ru: 'Это не книга.', en: 'This is not a book.' },
-    tokens: [
-      { zh: '这', pinyin: 'zhè' },
-      { zh: '不是', pinyin: 'bú shì' },
-      { zh: '书', pinyin: 'shū' },
-      { zh: '。', pinyin: '' },
+      { zh: '哪', pinyin: 'nǎ' },
+      { zh: '个', pinyin: 'ge' },
+      { zh: '是', pinyin: 'shì' },
+      { zh: '你的', pinyin: 'nǐ de' },
+      { zh: '？', pinyin: '' },
     ],
   },
 
-  /* ─ 14-17: four audio tests ─ */
+  /* ─ audio tests ─ */
   {
     kind: 'practice',
-    id: 'audio-student',
-    step: '14',
+    id: 'audio-country',
+    step: '10',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '我不是学生。', ru: '我不是学生。', en: '我不是学生。' },
-    audio: '我不是学生',
+    title: { uz: '你是哪国人？', ru: '你是哪国人？', en: '你是哪国人？' },
+    audio: '你是哪国人',
     options: [
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
+      { uz: 'Qaysi biri sizniki?',     ru: 'Какой из них твой?',    en: 'Which one is yours?' },
+      { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?',  en: 'Which country are you from?' },
+      { uz: 'U kim?',                 ru: 'Кто он?',               en: 'Who is he?' },
+      { uz: 'Bu nima?',               ru: 'Что это?',              en: 'What is this?' },
     ],
     correct: 1,
   },
   {
     kind: 'practice',
-    id: 'audio-teacher',
-    step: '15',
+    id: 'audio-one',
+    step: '11',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '他不是老师。', ru: '他不是老师。', en: '他不是老师。' },
-    audio: '他不是老师',
+    title: { uz: '哪个是你的？', ru: '哪个是你的？', en: '哪个是你的？' },
+    audio: '哪个是你的',
     options: [
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
+      { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?',  en: 'Which country are you from?' },
+      { uz: 'U kim?',                 ru: 'Кто он?',               en: 'Who is he?' },
+      { uz: 'Qaysi biri sizniki?',     ru: 'Какой из них твой?',    en: 'Which one is yours?' },
+      { uz: 'Bu nima?',               ru: 'Что это?',              en: 'What is this?' },
     ],
     correct: 2,
   },
-  {
-    kind: 'practice',
-    id: 'audio-chinese',
-    step: '16',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '她不是中国人。', ru: '她不是中国人。', en: '她不是中国人。' },
-    audio: '她不是中国人',
-    options: [
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
-    ],
-    correct: 3,
-  },
-  {
-    kind: 'practice',
-    id: 'audio-book',
-    step: '17',
-    kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '这不是书。', ru: '这不是书。', en: '这不是书。' },
-    audio: '这不是书',
-    options: [
-      { uz: 'Bu kitob emas.',         ru: 'Это не книга.',         en: 'This is not a book.' },
-      { uz: 'U Xitoylik emas.',       ru: 'Она не китаянка.',      en: 'She is not Chinese.' },
-      { uz: 'Men talaba emasman.',    ru: 'Я не студент.',         en: 'I am not a student.' },
-      { uz: 'U o\'qituvchi emas.',    ru: 'Он не учитель.',        en: 'He is not a teacher.' },
-    ],
-    correct: 0,
-  },
 
-  /* ─ 18 recap ─ */
+  /* ─ recap ─ */
   {
     kind: 'recap',
     id: 'recap',
-    step: '18',
+    step: '12',
     kicker: { uz: 'Xulosa', ru: 'Итог', en: 'Recap' },
-    title: { uz: '4 ta inkor gap', ru: '4 отрицательных предложения', en: '4 negative sentences' },
+    title: { uz: '2 ta asosiy savol', ru: '2 ключевых вопроса', en: '2 key questions' },
     questions: [
       {
-        zh: '我不是学生。',
-        pinyin: 'Wǒ bú shì xuéshēng.',
-        tr: { uz: 'Men talaba emasman.', ru: 'Я не студент.', en: 'I am not a student.' },
+        zh: '你是哪国人？',
+        pinyin: 'Nǐ shì nǎ guó rén?',
+        tr: { uz: 'Siz qaysi davlatdansiz?', ru: 'Ты из какой страны?', en: 'Which country are you from?' },
       },
       {
-        zh: '他不是老师。',
-        pinyin: 'Tā bú shì lǎoshī.',
-        tr: { uz: 'U o\'qituvchi emas.', ru: 'Он не учитель.', en: 'He is not a teacher.' },
-      },
-      {
-        zh: '她不是中国人。',
-        pinyin: 'Tā bú shì Zhōngguórén.',
-        tr: { uz: 'U Xitoylik emas.', ru: 'Она не китаянка.', en: 'She is not Chinese.' },
-      },
-      {
-        zh: '这不是书。',
-        pinyin: 'Zhè bú shì shū.',
-        tr: { uz: 'Bu kitob emas.', ru: 'Это не книга.', en: 'This is not a book.' },
+        zh: '哪个是你的？',
+        pinyin: 'Nǎ ge shì nǐ de?',
+        tr: { uz: 'Qaysi biri sizniki?', ru: 'Какой из них твой?', en: 'Which one is yours?' },
       },
     ],
   },
@@ -332,7 +227,7 @@ const cards: Card[] = [
 
 type Lang = 'uz' | 'ru' | 'en';
 
-export function GrammarBushiPolishedPage() {
+export function GrammarNaPolishedPage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -345,9 +240,9 @@ export function GrammarBushiPolishedPage() {
 
   const card = cards[index];
   const sceneIds = new Set<string>([
-    'student', 'teacher', 'chinese', 'book',
-    'check-student', 'check-teacher', 'check-chinese', 'check-book',
-    'audio-student', 'audio-teacher', 'audio-chinese', 'audio-book',
+    'country', 'one',
+    'check-country', 'check-one',
+    'audio-country', 'audio-one',
   ]);
   const isSceneCard = sceneIds.has(card.id);
   const progress = ((index + 1) / cards.length) * 100;
@@ -356,7 +251,7 @@ export function GrammarBushiPolishedPage() {
   const quizAnswer = quizAnswers[card.id] ?? null;
   const isLastCard = index === cards.length - 1;
   const setCard = (nextIndex: number) => setIndex(nextIndex);
-  // Deterministic per-card shuffled pool
+
   const scrambledIndices = (() => {
     if (card.kind !== 'scramble' || !card.tokens) return [];
     const n = card.tokens.length;
@@ -406,66 +301,46 @@ export function GrammarBushiPolishedPage() {
       else if (correctCount / total >= 0.7) stars = 2;
       else if (correctCount > 0) stars = 1;
     }
-    const existing = getStars('bushi');
-    if (existing === undefined || stars > existing) saveStars('bushi', stars);
+    const existing = getStars('na');
+    if (existing === undefined || stars > existing) saveStars('na', stars);
     setQuizAnswers({});
     router.push('/chinese?tab=grammar');
   };
 
   /* ─ Ruby element mapping ─ */
   const rubyByPhrase: Record<string, React.ReactNode> = {
-    student: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Wǒ bú shì xuéshēng.">
-        <ruby>我<rt>w&#466;</rt></ruby>
-        <ruby>不<rt>b&uacute;</rt></ruby>
+    country: (
+      <div className="shenme-polished-card__ruby-title" aria-label="Nǐ shì nǎ guó rén?">
+        <ruby>你<rt>n&#464;</rt></ruby>
         <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>学<rt>xu&eacute;</rt></ruby>
-        <ruby>生<rt>sh&#275;ng</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
-      </div>
-    ),
-    teacher: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Tā bú shì lǎoshī.">
-        <ruby>他<rt>t&#257;</rt></ruby>
-        <ruby>不<rt>b&uacute;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>老<rt>l&#462;o</rt></ruby>
-        <ruby>师<rt>sh&#299;</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
-      </div>
-    ),
-    chinese: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Tā bú shì Zhōngguórén.">
-        <ruby>她<rt>t&#257;</rt></ruby>
-        <ruby>不<rt>b&uacute;</rt></ruby>
-        <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>中<rt>zh&#333;ng</rt></ruby>
+        <ruby>哪<rt>n&#462;</rt></ruby>
         <ruby>国<rt>gu&oacute;</rt></ruby>
         <ruby>人<rt>r&eacute;n</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
+        <span className="shenme-polished-card__ruby-punct">？</span>
       </div>
     ),
-    book: (
-      <div className="shenme-polished-card__ruby-title" aria-label="Zhè bú shì shū.">
-        <ruby>这<rt>zh&egrave;</rt></ruby>
-        <ruby>不<rt>b&uacute;</rt></ruby>
+    one: (
+      <div className="shenme-polished-card__ruby-title" aria-label="Nǎ ge shì nǐ de?">
+        <ruby>哪<rt>n&#462;</rt></ruby>
+        <ruby>个<rt>ge</rt></ruby>
         <ruby>是<rt>sh&igrave;</rt></ruby>
-        <ruby>书<rt>sh&#363;</rt></ruby>
-        <span className="shenme-polished-card__ruby-punct">。</span>
+        <ruby>你<rt>n&#464;</rt></ruby>
+        <ruby>的<rt>de</rt></ruby>
+        <span className="shenme-polished-card__ruby-punct">？</span>
       </div>
     ),
   };
 
   const rubyPhraseKey = card.id
     .replace(/^check-/, '')
-    .replace(/^audio-/, '');
+    .replace(/^audio-/, '')
+    .replace(/^scramble-/, '');
   const rubyEl = rubyByPhrase[rubyPhraseKey] ?? null;
 
   return (
     <div className="grammar-page shenme-polished">
-      {/* Original grammar page hero */}
       <div className="dr-hero">
-        <div className="dr-hero__watermark">不是</div>
+        <div className="dr-hero__watermark">哪</div>
         <div className="dr-hero__top-row">
           <Link href="/chinese?tab=grammar" className="dr-back-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -478,24 +353,22 @@ export function GrammarBushiPolishedPage() {
           <div className="dr-hero__level">
             HSK 1 · {lang === 'ru' ? 'Грамматика' : lang === 'en' ? 'Grammar' : 'Grammatika'}
           </div>
-          <h1 className="dr-hero__title">不是</h1>
-          <div className="dr-hero__pinyin">bú shì</div>
+          <h1 className="dr-hero__title">哪</h1>
+          <div className="dr-hero__pinyin">nǎ</div>
           <div className="dr-hero__translation">
-            — {lang === 'ru' ? 'не быть' : lang === 'en' ? 'is not' : 'emas'} —
+            — {lang === 'ru' ? 'какой?' : lang === 'en' ? 'which?' : 'qaysi?'} —
           </div>
         </div>
       </div>
 
-      {/* Progress + step map */}
       <div className="shenme-polished__hero">
         <div className="shenme-polished__progress">
           <div className="shenme-polished__progress-bar" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
-      {/* Stage */}
       <div className="shenme-polished__stage">
-        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id === 'meaning' ? ' shenme-polished-card--scene' : ''}`}>
+        <article className={`shenme-polished-card shenme-polished-card--${card.kind} shenme-polished-card--${card.id}${isSceneCard || card.id.startsWith('meaning') ? ' shenme-polished-card--scene' : ''}`}>
           <div className="shenme-polished-card__header">
             <div className="shenme-polished-card__meta">
               <span className="shenme-polished-card__step">{card.step}</span>
@@ -530,14 +403,10 @@ export function GrammarBushiPolishedPage() {
                   ) : null}
                 </div>
               )
-            ) : card.id === 'meaning' ? (
+            ) : card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__title-stack">
-                <div className="shenme-polished-card__ruby-title" aria-label="bú shì">
-                  <ruby>不<rt>b&uacute;</rt></ruby>
-                  <ruby>是<rt>sh&igrave;</rt></ruby>
-                </div>
-                <div className="shenme-polished-card__title-translation">
-                  {lang === 'ru' ? 'не быть' : lang === 'en' ? 'is not' : 'emas'}
+                <div className="shenme-polished-card__ruby-title" aria-label="nǎ">
+                  <ruby>哪<rt>n&#462;</rt></ruby>
                 </div>
                 {card.body ? (
                   <p className="shenme-polished-card__meaning-body">{card.body[lang]}</p>
@@ -547,22 +416,9 @@ export function GrammarBushiPolishedPage() {
               <h2 className="shenme-polished-card__title">{t(card.title)}</h2>
             )}
 
-            {'formula' in card && card.formula && card.id !== 'meaning' ? (
+            {'formula' in card && card.formula && !card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__formula">
                 {typeof card.formula === 'string' ? card.formula : t(card.formula)}
-              </div>
-            ) : null}
-
-            {'wrong' in card && card.wrong && 'right' in card && card.right ? (
-              <div className="shenme-polished-card__contrast">
-                <div className="shenme-polished-card__contrast-box shenme-polished-card__contrast-box--bad">
-                  <strong>{lang === 'ru' ? 'Неверно' : lang === 'en' ? 'Wrong' : "Noto'g'ri"}</strong>
-                  <span>{card.wrong}</span>
-                </div>
-                <div className="shenme-polished-card__contrast-box shenme-polished-card__contrast-box--good">
-                  <strong>{lang === 'ru' ? 'Верно' : lang === 'en' ? 'Right' : "To'g'ri"}</strong>
-                  <span>{card.right}</span>
-                </div>
               </div>
             ) : null}
 
@@ -593,16 +449,6 @@ export function GrammarBushiPolishedPage() {
                   })}
                 </div>
               </>
-            ) : null}
-
-            {'bullets' in card && card.bullets ? (
-              <div className="shenme-polished-card__bullets">
-                {card.bullets.map((bullet, bulletIndex) => (
-                  <div key={bulletIndex} className="shenme-polished-card__bullet">
-                    {bullet[lang]}
-                  </div>
-                ))}
-              </div>
             ) : null}
 
             {'questions' in card && card.questions ? (
@@ -689,11 +535,8 @@ export function GrammarBushiPolishedPage() {
           </div>
 
           <div className="shenme-polished-card__footer">
-            {'body' in card && card.body && card.kind !== 'example' && card.id !== 'meaning' ? (
+            {'body' in card && card.body && card.kind !== 'example' && !card.id.startsWith('meaning') ? (
               <p className="shenme-polished-card__body">{card.body[lang]}</p>
-            ) : null}
-            {'note' in card && card.note ? (
-              <div className="shenme-polished-card__note">{card.note[lang]}</div>
             ) : null}
           </div>
         </article>

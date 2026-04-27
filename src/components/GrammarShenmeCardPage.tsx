@@ -370,7 +370,7 @@ const cards: Card[] = [
       en: 'Now — you speak',
     },
     body: {
-      uz: "6 ta savol. Tarjimani ko'rasiz — xitoychasini ayting.",
+      uz: "6 ta savol. Tarjimani ko'rasiz — Xitoychasini ayting.",
       ru: '6 вопросов. Видите перевод — говорите по-китайски.',
       en: '6 prompts. You see the translation — you say the Chinese.',
     },

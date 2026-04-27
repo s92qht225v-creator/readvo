@@ -60,7 +60,7 @@ const UI = {
   correctAns:    { uz: "To'g'ri javob:",                 ru: 'Правильный ответ:',           en: 'Correct answer:'          } as T,
   next:          { uz: 'Keyingisi →',                    ru: 'Следующий →',                 en: 'Next →'                   } as T,
   speakBtn:      { uz: '🎤 Gapiring',                    ru: '🎤 Говорите',                  en: '🎤 Speak'                 } as T,
-  tapSpeak:      { uz: 'Bosing va xitoycha ayting',      ru: 'Нажмите и говорите по-китайски', en: 'Tap and speak in Chinese' } as T,
+  tapSpeak:      { uz: 'Bosing va Xitoycha ayting',      ru: 'Нажмите и говорите по-китайски', en: 'Tap and speak in Chinese' } as T,
   listening:     { uz: 'Tinglayapman…',                  ru: 'Слушаю…',                    en: 'Listening…'               } as T,
   stop:          { uz: "⏹ To'xtatish",                   ru: '⏹ Стоп',                     en: '⏹ Stop'                   } as T,
   processing:    { uz: 'Tekshirilmoqda…',                ru: 'Обрабатывается…',             en: 'Processing…'              } as T,

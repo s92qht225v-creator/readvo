@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getLocale } from 'next-intl/server';
-import { GrammarSheiPage } from '@/components/GrammarSheiPage';
+import { GrammarSheiPolishedPage } from '@/components/GrammarSheiPolishedPage';
 import { breadcrumbJsonLd, jsonLdScript, grammarTermJsonLd } from '@/utils/jsonLd';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -54,7 +54,7 @@ export default async function SheiPage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <GrammarSheiPage />
+      <GrammarSheiPolishedPage />
     </>
   );
 }

@@ -34,6 +34,7 @@ type Card =
     };
 
 const cards: Card[] = [
+  /* ─ 01 rule: 会 = can (learned skill) ─ */
   {
     kind: 'rule',
     id: 'meaning',
@@ -41,247 +42,236 @@ const cards: Card[] = [
     kicker: { uz: 'Belgi', ru: 'Сигнал', en: 'Signal' },
     title: { uz: '', ru: '', en: '' },
     body: {
-      uz: "月 (yuè) — oy\n号 (hào) — kun (sana)\n星期 (xīngqī) — hafta",
-      ru: '月 (yuè) — месяц\n号 (hào) — число (день месяца)\n星期 (xīngqī) — неделя',
-      en: '月 (yuè) — month\n号 (hào) — day (of month)\n星期 (xīngqī) — week',
+      uz: '会 = qila olmoq / qila olishni bilmoq',
+      ru: '会 = уметь / мочь (что-то делать)',
+      en: '会 = can / know how to do',
     },
   },
+  /* ─ 02 rule: positive formula ─ */
   {
     kind: 'rule',
     id: 'meaning-2',
     step: '02',
     kicker: { uz: 'Shablon', ru: 'Шаблон', en: 'Pattern' },
-    title: { uz: 'Oy + kun', ru: 'Месяц + число', en: 'Month + day' },
+    title: { uz: "Ega + 会 + fe'l", ru: 'Подлежащее + 会 + глагол', en: 'Subject + 会 + verb' },
     body: {
-      uz: "Xitoy tilida sana: avval oy, keyin kun.\nRaqam + 月 = oy\nRaqam + 号 = kun\n\nMasalan: 十月一号\n(shí yuè yī hào)\n1-oktyabr",
-      ru: 'В китайском языке дата: сначала месяц, потом число.\nЧисло + 月 = месяц\nЧисло + 号 = день\n\nНапример: 十月一号\n(shí yuè yī hào)\n1 октября',
-      en: 'In Chinese, dates go: month first, then day.\nNumber + 月 = month\nNumber + 号 = day\n\nFor example: 十月一号\n(shí yuè yī hào)\nOctober 1st',
+      uz: "Masalan: 我会说中文。\n(Wǒ huì shuō Zhōngwén.)\nMen Xitoycha gapira olaman.\n\n我 (wǒ) — men\n会 (huì) — qila olmoq\n说 (shuō) — gapirmoq\n中文 (Zhōngwén) — Xitoy tili",
+      ru: 'Например: 我会说中文。\n(Wǒ huì shuō Zhōngwén.)\nЯ умею говорить по-китайски.\n\n我 (wǒ) — я\n会 (huì) — уметь / мочь\n说 (shuō) — говорить\n中文 (Zhōngwén) — китайский язык',
+      en: 'For example: 我会说中文。\n(Wǒ huì shuō Zhōngwén.)\nI can speak Chinese.\n\n我 (wǒ) — I\n会 (huì) — can / know how to\n说 (shuō) — to speak\n中文 (Zhōngwén) — Chinese language',
     },
   },
-  {
-    kind: 'rule',
-    id: 'meaning-months',
-    step: '03',
-    kicker: { uz: 'Oylar', ru: 'Месяцы', en: 'Months' },
-    title: { uz: '', ru: '', en: '' },
-    body: {
-      uz: "Raqam + 月 = oy nomi:\n\n一月 (yī yuè) — yanvar\n二月 (èr yuè) — fevral\n三月 (sān yuè) — mart\n四月 (sì yuè) — aprel\n五月 (wǔ yuè) — may\n六月 (liù yuè) — iyun\n七月 (qī yuè) — iyul\n八月 (bā yuè) — avgust\n九月 (jiǔ yuè) — sentyabr\n十月 (shí yuè) — oktyabr\n十一月 (shíyī yuè) — noyabr\n十二月 (shí'èr yuè) — dekabr",
-      ru: 'Число + 月 = название месяца:\n\n一月 (yī yuè) — январь\n二月 (èr yuè) — февраль\n三月 (sān yuè) — март\n四月 (sì yuè) — апрель\n五月 (wǔ yuè) — май\n六月 (liù yuè) — июнь\n七月 (qī yuè) — июль\n八月 (bā yuè) — август\n九月 (jiǔ yuè) — сентябрь\n十月 (shí yuè) — октябрь\n十一月 (shíyī yuè) — ноябрь\n十二月 (shí\'èr yuè) — декабрь',
-      en: 'Number + 月 = month name:\n\n一月 (yī yuè) — January\n二月 (èr yuè) — February\n三月 (sān yuè) — March\n四月 (sì yuè) — April\n五月 (wǔ yuè) — May\n六月 (liù yuè) — June\n七月 (qī yuè) — July\n八月 (bā yuè) — August\n九月 (jiǔ yuè) — September\n十月 (shí yuè) — October\n十一月 (shíyī yuè) — November\n十二月 (shí\'èr yuè) — December',
-    },
-  },
-  {
-    kind: 'rule',
-    id: 'meaning-days',
-    step: '04',
-    kicker: { uz: 'Sana', ru: 'Число', en: 'Day' },
-    title: { uz: '', ru: '', en: '' },
-    body: {
-      uz: "Raqam + 号 = sana (oyning kuni):\n\n一号 (yī hào) — 1-kun\n二号 (èr hào) — 2-kun\n三号 (sān hào) — 3-kun\n…\n十号 (shí hào) — 10-kun\n十一号 (shíyī hào) — 11-kun\n…\n二十号 (èrshí hào) — 20-kun\n二十一号 (èrshíyī hào) — 21-kun\n…\n三十一号 (sānshíyī hào) — 31-kun",
-      ru: 'Число + 号 = день месяца:\n\n一号 (yī hào) — 1-е\n二号 (èr hào) — 2-е\n三号 (sān hào) — 3-е\n…\n十号 (shí hào) — 10-е\n十一号 (shíyī hào) — 11-е\n…\n二十号 (èrshí hào) — 20-е\n二十一号 (èrshíyī hào) — 21-е\n…\n三十一号 (sānshíyī hào) — 31-е',
-      en: 'Number + 号 = day of the month:\n\n一号 (yī hào) — 1st\n二号 (èr hào) — 2nd\n三号 (sān hào) — 3rd\n…\n十号 (shí hào) — 10th\n十一号 (shíyī hào) — 11th\n…\n二十号 (èrshí hào) — 20th\n二十一号 (èrshíyī hào) — 21st\n…\n三十一号 (sānshíyī hào) — 31st',
-    },
-  },
-  {
-    kind: 'rule',
-    id: 'meaning-weekdays',
-    step: '05',
-    kicker: { uz: 'Hafta kunlari', ru: 'Дни недели', en: 'Days of the week' },
-    title: { uz: '', ru: '', en: '' },
-    body: {
-      uz: "星期 + raqam = hafta kuni:\n\n星期一 (xīngqī yī) — dushanba\n星期二 (xīngqī èr) — seshanba\n星期三 (xīngqī sān) — chorshanba\n星期四 (xīngqī sì) — payshanba\n星期五 (xīngqī wǔ) — juma\n星期六 (xīngqī liù) — shanba\n星期天 (xīngqī tiān) — yakshanba",
-      ru: '星期 + число = день недели:\n\n星期一 (xīngqī yī) — понедельник\n星期二 (xīngqī èr) — вторник\n星期三 (xīngqī sān) — среда\n星期四 (xīngqī sì) — четверг\n星期五 (xīngqī wǔ) — пятница\n星期六 (xīngqī liù) — суббота\n星期天 (xīngqī tiān) — воскресенье',
-      en: '星期 + number = day of the week:\n\n星期一 (xīngqī yī) — Monday\n星期二 (xīngqī èr) — Tuesday\n星期三 (xīngqī sān) — Wednesday\n星期四 (xīngqī sì) — Thursday\n星期五 (xīngqī wǔ) — Friday\n星期六 (xīngqī liù) — Saturday\n星期天 (xīngqī tiān) — Sunday',
-    },
-  },
+  /* ─ 03 rule: negation formula 不会 ─ */
   {
     kind: 'rule',
     id: 'meaning-3',
+    step: '03',
+    kicker: { uz: 'Shablon', ru: 'Шаблон', en: 'Pattern' },
+    title: { uz: "Ega + 不会 + fe'l", ru: 'Подлежащее + 不会 + глагол', en: 'Subject + 不会 + verb' },
+    body: {
+      uz: "Masalan: 我不会说中文。\n(Wǒ bú huì shuō Zhōngwén.)\nMen Xitoycha gapira olmayman.\n\n我 (wǒ) — men\n不会 (bú huì) — qila olmaslik\n说 (shuō) — gapirmoq\n中文 (Zhōngwén) — Xitoy tili",
+      ru: 'Например: 我不会说中文。\n(Wǒ bú huì shuō Zhōngwén.)\nЯ не умею говорить по-китайски.\n\n我 (wǒ) — я\n不会 (bú huì) — не уметь\n说 (shuō) — говорить\n中文 (Zhōngwén) — китайский язык',
+      en: 'For example: 我不会说中文。\n(Wǒ bú huì shuō Zhōngwén.)\nI can\'t speak Chinese.\n\n我 (wǒ) — I\n不会 (bú huì) — cannot / don\'t know how to\n说 (shuō) — to speak\n中文 (Zhōngwén) — Chinese language',
+    },
+  },
+
+  /* ─ 04 rule: question formula 会…吗? ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-4',
+    step: '04',
+    kicker: { uz: 'Shablon', ru: 'Шаблон', en: 'Pattern' },
+    title: { uz: "Ega + 会 + fe'l + 吗?", ru: 'Подлежащее + 会 + глагол + 吗?', en: 'Subject + 会 + verb + 吗?' },
+    body: {
+      uz: "Masalan: 你会说中文吗？\n(Nǐ huì shuō Zhōngwén ma?)\nSen Xitoycha gapira olasanmi?\n\n你 (nǐ) — sen\n会 (huì) — qila olmoq\n说 (shuō) — gapirmoq\n中文 (Zhōngwén) — Xitoy tili\n吗 (ma) — savol yuklamasi",
+      ru: 'Например: 你会说中文吗？\n(Nǐ huì shuō Zhōngwén ma?)\nТы умеешь говорить по-китайски?\n\n你 (nǐ) — ты\n会 (huì) — уметь / мочь\n说 (shuō) — говорить\n中文 (Zhōngwén) — китайский язык\n吗 (ma) — вопросительная частица',
+      en: 'For example: 你会说中文吗？\n(Nǐ huì shuō Zhōngwén ma?)\nCan you speak Chinese?\n\n你 (nǐ) — you\n会 (huì) — can / know how to\n说 (shuō) — to speak\n中文 (Zhōngwén) — Chinese language\n吗 (ma) — question particle',
+    },
+  },
+
+  /* ─ 05 breakdown: 我会写汉字 ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-5',
+    step: '05',
+    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
+    title: { uz: '', ru: '', en: '' },
+    body: {
+      uz: "(Wǒ huì xiě Hànzì.)\nMen iyerogliflarni yoza olaman.\n\n我 (wǒ) — men\n会 (huì) — qila olmoq\n写 (xiě) — yozmoq\n汉字 (Hànzì) — iyerogliflar",
+      ru: '(Wǒ huì xiě Hànzì.)\nЯ умею писать иероглифы.\n\n我 (wǒ) — я\n会 (huì) — уметь / мочь\n写 (xiě) — писать\n汉字 (Hànzì) — иероглифы',
+      en: '(Wǒ huì xiě Hànzì.)\nI can write Chinese characters.\n\n我 (wǒ) — I\n会 (huì) — can / know how to\n写 (xiě) — to write\n汉字 (Hànzì) — Chinese characters',
+    },
+  },
+  /* ─ 06 breakdown: 我会做饭 ─ */
+  {
+    kind: 'rule',
+    id: 'meaning-6',
     step: '06',
     kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
     title: { uz: '', ru: '', en: '' },
     body: {
-      uz: "(Jīntiān shì shí yuè yī hào.)\nBugun 1-oktyabr.\n\n今天 (jīntiān) — bugun\n是 (shì) — bo'lmoq\n十月 (shí yuè) — oktyabr\n一号 (yī hào) — 1-kun",
-      ru: '(Jīntiān shì shí yuè yī hào.)\nСегодня 1 октября.\n\n今天 (jīntiān) — сегодня\n是 (shì) — быть\n十月 (shí yuè) — октябрь\n一号 (yī hào) — 1-е число',
-      en: '(Jīntiān shì shí yuè yī hào.)\nToday is October 1st.\n\n今天 (jīntiān) — today\n是 (shì) — to be\n十月 (shí yuè) — October\n一号 (yī hào) — 1st',
+      uz: "(Wǒ huì zuò fàn.)\nMen ovqat pishira olaman.\n\n我 (wǒ) — men\n会 (huì) — qila olmoq\n做 (zuò) — qilmoq\n饭 (fàn) — ovqat\n做饭 (zuò fàn) — ovqat pishirmoq",
+      ru: '(Wǒ huì zuò fàn.)\nЯ умею готовить.\n\n我 (wǒ) — я\n会 (huì) — уметь / мочь\n做 (zuò) — делать\n饭 (fàn) — еда\n做饭 (zuò fàn) — готовить еду',
+      en: '(Wǒ huì zuò fàn.)\nI can cook.\n\n我 (wǒ) — I\n会 (huì) — can / know how to\n做 (zuò) — to do / make\n饭 (fàn) — meal / rice\n做饭 (zuò fàn) — to cook',
     },
   },
+  /* ─ 07-09: three multiple-choice checks ─ */
   {
-    kind: 'rule',
-    id: 'meaning-4',
+    kind: 'practice',
+    id: 'check-positive',
     step: '07',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '', ru: '', en: '' },
-    body: {
-      uz: "(Jīntiān shì xīngqī yī.)\nBugun — dushanba.\n\n今天 (jīntiān) — bugun\n是 (shì) — bo'lmoq\n星期 (xīngqī) — hafta\n星期一 (xīngqī yī) — dushanba",
-      ru: '(Jīntiān shì xīngqī yī.)\nСегодня понедельник.\n\n今天 (jīntiān) — сегодня\n是 (shì) — быть\n星期 (xīngqī) — неделя\n星期一 (xīngqī yī) — понедельник',
-      en: '(Jīntiān shì xīngqī yī.)\nToday is Monday.\n\n今天 (jīntiān) — today\n是 (shì) — to be\n星期 (xīngqī) — week\n星期一 (xīngqī yī) — Monday',
-    },
+    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
+    title: { uz: '我会说中文。', ru: '我会说中文。', en: '我会说中文。' },
+    options: [
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Men iyerogliflarni yoza olaman.', ru: 'Я умею писать иероглифы.', en: 'I can write Chinese characters.' },
+      { uz: 'Men ovqat pishira olaman.', ru: 'Я умею готовить.', en: 'I can cook.' },
+    ],
+    correct: 0,
   },
   {
-    kind: 'rule',
-    id: 'meaning-5',
+    kind: 'practice',
+    id: 'check-negative',
     step: '08',
-    kicker: { uz: 'Misol', ru: 'Пример', en: 'Example' },
-    title: { uz: '', ru: '', en: '' },
-    body: {
-      uz: "(Jīntiān jǐ yuè jǐ hào?)\nBugun qaysi oyning nechanchi kuni?\n\n今天 (jīntiān) — bugun\n几 (jǐ) — nechta?\n月 (yuè) — oy\n号 (hào) — kun",
-      ru: '(Jīntiān jǐ yuè jǐ hào?)\nКакое сегодня число?\n\n今天 (jīntiān) — сегодня\n几 (jǐ) — сколько?\n月 (yuè) — месяц\n号 (hào) — число',
-      en: "(Jīntiān jǐ yuè jǐ hào?)\nWhat's the date today?\n\n今天 (jīntiān) — today\n几 (jǐ) — how many?\n月 (yuè) — month\n号 (hào) — day",
-    },
-  },
-
-  {
-    kind: 'practice',
-    id: 'check-date',
-    step: '09',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '今天是十月一号。', ru: '今天是十月一号。', en: '今天是十月一号。' },
+    title: { uz: '我不会说中文。', ru: '我不会说中文。', en: '我不会说中文。' },
     options: [
-      { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
-      { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
-      { uz: 'Bugun qaysi kun?', ru: 'Какой сегодня день?', en: 'What day is it today?' },
-      { uz: 'Bugun 10-kun.', ru: 'Сегодня 10-е число.', en: 'Today is the 10th.' },
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Men ovqat pishira olmayman.', ru: 'Я не умею готовить.', en: "I can't cook." },
     ],
-    correct: 1,
-  },
-  {
-    kind: 'practice',
-    id: 'check-weekday',
-    step: '10',
-    kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '今天是星期一。', ru: '今天是星期一。', en: '今天是星期一。' },
-    options: [
-      { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
-      { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
-      { uz: 'Bugun bayram.', ru: 'Сегодня праздник.', en: 'Today is a holiday.' },
-      { uz: 'Bugun 1-kun.', ru: 'Сегодня 1-е число.', en: 'Today is the 1st.' },
-    ],
-    correct: 1,
+    correct: 2,
   },
   {
     kind: 'practice',
     id: 'check-question',
-    step: '11',
+    step: '09',
     kicker: { uz: 'Tekshiruv', ru: 'Проверка', en: 'Check' },
-    title: { uz: '今天几月几号？', ru: '今天几月几号？', en: '今天几月几号？' },
+    title: { uz: '你会说中文吗？', ru: '你会说中文吗？', en: '你会说中文吗？' },
     options: [
-      { uz: 'Bugun qaysi kun?', ru: 'Какой сегодня день недели?', en: 'What day of the week is today?' },
-      { uz: 'Bugun nima?', ru: 'Что сегодня?', en: 'What is today?' },
-      { uz: 'Bugun qaysi oyning nechanchi kuni?', ru: 'Какое сегодня число?', en: "What's the date today?" },
-      { uz: 'Bugun bayrammi?', ru: 'Сегодня праздник?', en: 'Is today a holiday?' },
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
+      { uz: 'Sen ovqat pishira olasanmi?', ru: 'Ты умеешь готовить?', en: 'Can you cook?' },
     ],
     correct: 2,
   },
 
+  /* ─ 10-12: three scramble tests ─ */
   {
     kind: 'scramble',
-    id: 'scramble-date',
-    step: '12',
+    id: 'scramble-positive',
+    step: '10',
     kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
+    title: { uz: 'Men xitoy tilida gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
     tokens: [
-      { zh: '今天', pinyin: 'jīntiān' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '十月', pinyin: 'shí yuè' },
-      { zh: '一号', pinyin: 'yī hào' },
+      { zh: '我', pinyin: 'wǒ' },
+      { zh: '会', pinyin: 'huì' },
+      { zh: '说', pinyin: 'shuō' },
+      { zh: '中文', pinyin: 'Zhōngwén' },
       { zh: '。', pinyin: '' },
     ],
   },
   {
     kind: 'scramble',
-    id: 'scramble-weekday',
-    step: '13',
+    id: 'scramble-negative',
+    step: '11',
     kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
+    title: { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
     tokens: [
-      { zh: '今天', pinyin: 'jīntiān' },
-      { zh: '是', pinyin: 'shì' },
-      { zh: '星期一', pinyin: 'xīngqī yī' },
+      { zh: '我', pinyin: 'wǒ' },
+      { zh: '不会', pinyin: 'bú huì' },
+      { zh: '说', pinyin: 'shuō' },
+      { zh: '中文', pinyin: 'Zhōngwén' },
       { zh: '。', pinyin: '' },
     ],
   },
   {
     kind: 'scramble',
     id: 'scramble-question',
-    step: '14',
+    step: '12',
     kicker: { uz: 'Terib chiqing', ru: 'Соберите', en: 'Build it' },
-    title: { uz: 'Bugun qaysi oyning nechanchi kuni?', ru: 'Какое сегодня число?', en: "What's the date today?" },
+    title: { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
     tokens: [
-      { zh: '今天', pinyin: 'jīntiān' },
-      { zh: '几月', pinyin: 'jǐ yuè' },
-      { zh: '几号', pinyin: 'jǐ hào' },
+      { zh: '你', pinyin: 'nǐ' },
+      { zh: '会', pinyin: 'huì' },
+      { zh: '说', pinyin: 'shuō' },
+      { zh: '中文', pinyin: 'Zhōngwén' },
+      { zh: '吗', pinyin: 'ma' },
       { zh: '？', pinyin: '' },
     ],
   },
 
+  /* ─ 13-15: three audio tests ─ */
   {
     kind: 'practice',
-    id: 'audio-date',
-    step: '15',
+    id: 'audio-positive',
+    step: '13',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '今天是十月一号。', ru: '今天是十月一号。', en: '今天是十月一号。' },
-    audio: '今天是十月一号。',
+    title: { uz: '我会说中文。', ru: '我会说中文。', en: '我会说中文。' },
+    audio: '我会说中文。',
     options: [
-      { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
-      { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
-      { uz: 'Bugun qaysi kun?', ru: 'Какой сегодня день?', en: 'What day is it today?' },
-      { uz: 'Bugun 10-kun.', ru: 'Сегодня 10-е число.', en: 'Today is the 10th.' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
+      { uz: 'Men ovqat pishira olaman.', ru: 'Я умею готовить.', en: 'I can cook.' },
     ],
     correct: 1,
   },
   {
     kind: 'practice',
-    id: 'audio-weekday',
-    step: '16',
+    id: 'audio-negative',
+    step: '14',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '今天是星期一。', ru: '今天是星期一。', en: '今天是星期一。' },
-    audio: '今天是星期一。',
+    title: { uz: '我不会说中文。', ru: '我不会说中文。', en: '我不会说中文。' },
+    audio: '我不会说中文。',
     options: [
-      { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
-      { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
-      { uz: 'Bugun bayram.', ru: 'Сегодня праздник.', en: 'Today is a holiday.' },
-      { uz: 'Bugun 1-kun.', ru: 'Сегодня 1-е число.', en: 'Today is the 1st.' },
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
+      { uz: 'Men ovqat pishira olmayman.', ru: 'Я не умею готовить.', en: "I can't cook." },
     ],
     correct: 1,
   },
   {
     kind: 'practice',
     id: 'audio-question',
-    step: '17',
+    step: '15',
     kicker: { uz: 'Eshitish', ru: 'Слушание', en: 'Listening' },
-    title: { uz: '今天几月几号？', ru: '今天几月几号？', en: '今天几月几号？' },
-    audio: '今天几月几号？',
+    title: { uz: '你会说中文吗？', ru: '你会说中文吗？', en: '你会说中文吗？' },
+    audio: '你会说中文吗？',
     options: [
-      { uz: 'Bugun qaysi kun?', ru: 'Какой сегодня день недели?', en: 'What day of the week is today?' },
-      { uz: 'Bugun nima?', ru: 'Что сегодня?', en: 'What is today?' },
-      { uz: 'Bugun qaysi oyning nechanchi kuni?', ru: 'Какое сегодня число?', en: "What's the date today?" },
-      { uz: 'Bugun bayrammi?', ru: 'Сегодня праздник?', en: 'Is today a holiday?' },
+      { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
+      { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
+      { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
+      { uz: 'Sen ovqat pishira olasanmi?', ru: 'Ты умеешь готовить?', en: 'Can you cook?' },
     ],
     correct: 2,
   },
 
+  /* ─ 13 recap ─ */
   {
     kind: 'recap',
     id: 'recap',
-    step: '18',
+    step: '16',
     kicker: { uz: 'Xulosa', ru: 'Итог', en: 'Recap' },
     title: { uz: '3 ta asosiy namuna', ru: '3 ключевых образца', en: '3 key patterns' },
     questions: [
       {
-        zh: '今天是十月一号。',
-        pinyin: 'Jīntiān shì shí yuè yī hào.',
-        tr: { uz: 'Bugun 1-oktyabr.', ru: 'Сегодня 1 октября.', en: 'Today is October 1st.' },
+        zh: '我会说中文。',
+        pinyin: 'Wǒ huì shuō Zhōngwén.',
+        tr: { uz: 'Men Xitoycha gapira olaman.', ru: 'Я умею говорить по-китайски.', en: 'I can speak Chinese.' },
       },
       {
-        zh: '今天是星期一。',
-        pinyin: 'Jīntiān shì xīngqī yī.',
-        tr: { uz: 'Bugun — dushanba.', ru: 'Сегодня понедельник.', en: 'Today is Monday.' },
+        zh: '我不会说中文。',
+        pinyin: 'Wǒ bú huì shuō Zhōngwén.',
+        tr: { uz: 'Men Xitoycha gapira olmayman.', ru: 'Я не умею говорить по-китайски.', en: "I can't speak Chinese." },
       },
       {
-        zh: '今天几月几号？',
-        pinyin: 'Jīntiān jǐ yuè jǐ hào?',
-        tr: { uz: 'Bugun qaysi oyning nechanchi kuni?', ru: 'Какое сегодня число?', en: "What's the date today?" },
+        zh: '你会说中文吗？',
+        pinyin: 'Nǐ huì shuō Zhōngwén ma?',
+        tr: { uz: 'Sen Xitoycha gapira olasanmi?', ru: 'Ты умеешь говорить по-китайски?', en: 'Can you speak Chinese?' },
       },
     ],
   },
@@ -289,7 +279,7 @@ const cards: Card[] = [
 
 type Lang = 'uz' | 'ru' | 'en';
 
-export function GrammarRiqiPolishedPage() {
+export function GrammarHuiPolishedPage() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const router = useRouter();
@@ -302,8 +292,8 @@ export function GrammarRiqiPolishedPage() {
 
   const card = cards[index];
   const sceneIds = new Set<string>([
-    'check-date', 'check-weekday', 'check-question',
-    'audio-date', 'audio-weekday', 'audio-question',
+    'check-question',
+    'audio-speak', 'audio-drive', 'audio-question',
   ]);
   const isSceneCard = sceneIds.has(card.id);
   const progress = ((index + 1) / cards.length) * 100;
@@ -362,8 +352,8 @@ export function GrammarRiqiPolishedPage() {
       else if (correctCount / total >= 0.7) stars = 2;
       else if (correctCount > 0) stars = 1;
     }
-    const existing = getStars('riqi');
-    if (existing === undefined || stars > existing) saveStars('riqi', stars);
+    const existing = getStars('hui');
+    if (existing === undefined || stars > existing) saveStars('hui', stars);
     setQuizAnswers({});
     router.push('/chinese?tab=grammar');
   };
@@ -371,7 +361,7 @@ export function GrammarRiqiPolishedPage() {
   return (
     <div className="grammar-page shenme-polished">
       <div className="dr-hero">
-        <div className="dr-hero__watermark">日期</div>
+        <div className="dr-hero__watermark">会</div>
         <div className="dr-hero__top-row">
           <Link href="/chinese?tab=grammar" className="dr-back-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -384,10 +374,10 @@ export function GrammarRiqiPolishedPage() {
           <div className="dr-hero__level">
             HSK 1 · {lang === 'ru' ? 'Грамматика' : lang === 'en' ? 'Grammar' : 'Grammatika'}
           </div>
-          <h1 className="dr-hero__title">日期</h1>
-          <div className="dr-hero__pinyin">rìqī</div>
+          <h1 className="dr-hero__title">会</h1>
+          <div className="dr-hero__pinyin">huì</div>
           <div className="dr-hero__translation">
-            — {lang === 'ru' ? 'даты' : lang === 'en' ? 'dates' : 'sanalar'} —
+            — {lang === 'ru' ? 'уметь / мочь' : lang === 'en' ? 'can / be able to' : 'qila olmoq'} —
           </div>
         </div>
       </div>
@@ -411,40 +401,33 @@ export function GrammarRiqiPolishedPage() {
             {card.id.startsWith('meaning') ? (
               <div className="shenme-polished-card__title-stack">
                 {card.id === 'meaning-3' ? (
-                  <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān shì shí yuè yī hào">
-                    <ruby>今<rt>j&#299;n</rt></ruby>
-                    <ruby>天<rt>ti&#257;n</rt></ruby>
-                    <ruby>是<rt>sh&igrave;</rt></ruby>
-                    <ruby>十<rt>sh&iacute;</rt></ruby>
-                    <ruby>月<rt>yu&egrave;</rt></ruby>
-                    <ruby>一<rt>y&#299;</rt></ruby>
-                    <ruby>号<rt>h&agrave;o</rt></ruby>
-                    <span>。</span>
+                  <div className="shenme-polished-card__ruby-title" aria-label="bú huì">
+                    <ruby>不<rt>b&uacute;</rt></ruby>
+                    <ruby>会<rt>hu&igrave;</rt></ruby>
                   </div>
                 ) : card.id === 'meaning-4' ? (
-                  <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān shì xīngqī yī">
-                    <ruby>今<rt>j&#299;n</rt></ruby>
-                    <ruby>天<rt>ti&#257;n</rt></ruby>
-                    <ruby>是<rt>sh&igrave;</rt></ruby>
-                    <ruby>星<rt>x&#299;ng</rt></ruby>
-                    <ruby>期<rt>q&#299;</rt></ruby>
-                    <ruby>一<rt>y&#299;</rt></ruby>
-                    <span>。</span>
+                  <div className="shenme-polished-card__ruby-title" aria-label="huì ma">
+                    <ruby>会<rt>hu&igrave;</rt></ruby>
+                    <ruby>吗<rt>ma</rt></ruby>
                   </div>
                 ) : card.id === 'meaning-5' ? (
-                  <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān jǐ yuè jǐ hào">
-                    <ruby>今<rt>j&#299;n</rt></ruby>
-                    <ruby>天<rt>ti&#257;n</rt></ruby>
-                    <ruby>几<rt>j&#464;</rt></ruby>
-                    <ruby>月<rt>yu&egrave;</rt></ruby>
-                    <ruby>几<rt>j&#464;</rt></ruby>
-                    <ruby>号<rt>h&agrave;o</rt></ruby>
-                    <span>？</span>
+                  <div className="shenme-polished-card__ruby-title" aria-label="Wǒ huì xiě Hànzì">
+                    <ruby>我<rt>w&#466;</rt></ruby>
+                    <ruby>会<rt>hu&igrave;</rt></ruby>
+                    <ruby>写<rt>xi&#283;</rt></ruby>
+                    <ruby>汉<rt>H&agrave;n</rt></ruby>
+                    <ruby>字<rt>z&igrave;</rt></ruby>
+                  </div>
+                ) : card.id === 'meaning-6' ? (
+                  <div className="shenme-polished-card__ruby-title" aria-label="Wǒ huì zuò fàn">
+                    <ruby>我<rt>w&#466;</rt></ruby>
+                    <ruby>会<rt>hu&igrave;</rt></ruby>
+                    <ruby>做<rt>zu&ograve;</rt></ruby>
+                    <ruby>饭<rt>f&agrave;n</rt></ruby>
                   </div>
                 ) : (
-                  <div className="shenme-polished-card__ruby-title" aria-label="rìqī">
-                    <ruby>日<rt>r&igrave;</rt></ruby>
-                    <ruby>期<rt>q&#299;</rt></ruby>
+                  <div className="shenme-polished-card__ruby-title" aria-label="huì">
+                    <ruby>会<rt>hu&igrave;</rt></ruby>
                   </div>
                 )}
                 {card.title && t(card.title) ? (
@@ -468,35 +451,33 @@ export function GrammarRiqiPolishedPage() {
                   {lang === 'ru' ? 'Нажмите, чтобы послушать' : lang === 'en' ? 'Tap to listen' : "Bosib tinglang"}
                 </div>
               </div>
-            ) : card.id === 'check-date' ? (
-              <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān shì shí yuè yī hào">
-                <ruby>今<rt>j&#299;n</rt></ruby>
-                <ruby>天<rt>ti&#257;n</rt></ruby>
-                <ruby>是<rt>sh&igrave;</rt></ruby>
-                <ruby>十<rt>sh&iacute;</rt></ruby>
-                <ruby>月<rt>yu&egrave;</rt></ruby>
-                <ruby>一<rt>y&#299;</rt></ruby>
-                <ruby>号<rt>h&agrave;o</rt></ruby>
+            ) : card.id === 'check-positive' ? (
+              <div className="shenme-polished-card__ruby-title" aria-label="Wǒ huì shuō Zhōngwén">
+                <ruby>我<rt>w&#466;</rt></ruby>
+                <ruby>会<rt>hu&igrave;</rt></ruby>
+                <ruby>说<rt>shu&#333;</rt></ruby>
+                <ruby>中<rt>zh&#333;ng</rt></ruby>
+                <ruby>文<rt>w&eacute;n</rt></ruby>
                 <span>。</span>
               </div>
-            ) : card.id === 'check-weekday' ? (
-              <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān shì xīngqī yī">
-                <ruby>今<rt>j&#299;n</rt></ruby>
-                <ruby>天<rt>ti&#257;n</rt></ruby>
-                <ruby>是<rt>sh&igrave;</rt></ruby>
-                <ruby>星<rt>x&#299;ng</rt></ruby>
-                <ruby>期<rt>q&#299;</rt></ruby>
-                <ruby>一<rt>y&#299;</rt></ruby>
+            ) : card.id === 'check-negative' ? (
+              <div className="shenme-polished-card__ruby-title" aria-label="Wǒ bú huì shuō Zhōngwén">
+                <ruby>我<rt>w&#466;</rt></ruby>
+                <ruby>不<rt>b&uacute;</rt></ruby>
+                <ruby>会<rt>hu&igrave;</rt></ruby>
+                <ruby>说<rt>shu&#333;</rt></ruby>
+                <ruby>中<rt>zh&#333;ng</rt></ruby>
+                <ruby>文<rt>w&eacute;n</rt></ruby>
                 <span>。</span>
               </div>
             ) : card.id === 'check-question' ? (
-              <div className="shenme-polished-card__ruby-title" aria-label="Jīntiān jǐ yuè jǐ hào">
-                <ruby>今<rt>j&#299;n</rt></ruby>
-                <ruby>天<rt>ti&#257;n</rt></ruby>
-                <ruby>几<rt>j&#464;</rt></ruby>
-                <ruby>月<rt>yu&egrave;</rt></ruby>
-                <ruby>几<rt>j&#464;</rt></ruby>
-                <ruby>号<rt>h&agrave;o</rt></ruby>
+              <div className="shenme-polished-card__ruby-title" aria-label="Nǐ huì shuō Zhōngwén ma">
+                <ruby>你<rt>n&#464;</rt></ruby>
+                <ruby>会<rt>hu&igrave;</rt></ruby>
+                <ruby>说<rt>shu&#333;</rt></ruby>
+                <ruby>中<rt>zh&#333;ng</rt></ruby>
+                <ruby>文<rt>w&eacute;n</rt></ruby>
+                <ruby>吗<rt>ma</rt></ruby>
                 <span>？</span>
               </div>
             ) : (
@@ -572,7 +553,7 @@ export function GrammarRiqiPolishedPage() {
                           disabled={scrambleCorrect}
                         >
                           <span className="scramble__token-py" aria-hidden={!tok.pinyin}>{tok.pinyin || '\u00A0'}</span>
-                          <span className={`scramble__token-zh${/^[？。！,、;:]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
+                          <span className={`scramble__token-zh${/^[？。！，、；：]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
                         </button>
                       );
                     })
@@ -593,7 +574,7 @@ export function GrammarRiqiPolishedPage() {
                         aria-hidden={used}
                       >
                         <span className="scramble__token-py" aria-hidden={!tok.pinyin}>{tok.pinyin || '\u00A0'}</span>
-                        <span className={`scramble__token-zh${/^[？。！,、;:]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
+                        <span className={`scramble__token-zh${/^[？。！，、；：]+$/.test(tok.zh) ? ' scramble__token-zh--punct' : ''}`}>{tok.zh}</span>
                       </button>
                     );
                   })}
