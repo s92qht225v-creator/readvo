@@ -447,6 +447,7 @@ export function HomePage() {
   useEffect(() => {
     if (!isAdminParam || !hasMounted) return;
     try {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time bootstrap from sessionStorage on mount
       setSavedAdminPassword(sessionStorage.getItem('blim-admin-pw') || '');
     } catch {}
   }, [hasMounted, isAdminParam]);

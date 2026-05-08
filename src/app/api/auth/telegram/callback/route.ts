@@ -76,6 +76,7 @@ export async function POST(request: NextRequest) {
 
   // CSRF validation: compare state from Telegram redirect with stored cookie
   const storedState = request.cookies.get('tg_state')?.value;
+  const nextPath = request.cookies.get('tg_next')?.value || '/uz/chinese';
   if (!storedState || !state || state !== storedState) {
     return NextResponse.json({ error: 'invalid_csrf_state' }, { status: 403 });
   }
@@ -192,8 +193,10 @@ export async function POST(request: NextRequest) {
       access_token: sessionData.session.access_token,
       refresh_token: sessionData.session.refresh_token,
       session_nonce: sessionNonce,
+      next: nextPath,
     });
     response.cookies.set('tg_state', '', { maxAge: 0, path: '/' });
+    response.cookies.set('tg_next', '', { maxAge: 0, path: '/' });
     return response;
   } catch (err) {
     console.error('Telegram callback error:', err);

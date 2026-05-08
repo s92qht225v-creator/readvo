@@ -11,6 +11,27 @@ const PROTECTED_PATTERN = /^\/chinese\/hsk/;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const host = request.headers.get('host') ?? '';
+
+  // Test creator subdomain: rewrite into the /test-app route group so URLs
+  // stay clean (e.g. test.blim.uz/dashboard → /test-app/dashboard internally).
+  // The locale middleware is skipped entirely for this hostname.
+  const isTestHost = host === 'test.blim.uz' || host.startsWith('test.localhost');
+  if (isTestHost) {
+    if (!pathname.startsWith('/test-app')) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/test-app${pathname}`;
+      return NextResponse.rewrite(url);
+    }
+    return NextResponse.next();
+  }
+
+  // Allow direct /test-app access on the main host (useful in dev when not
+  // editing /etc/hosts). The intl middleware would otherwise redirect this
+  // to /en/test-app and 404.
+  if (pathname.startsWith('/test-app')) {
+    return NextResponse.next();
+  }
 
   // Check if the first path segment looks like a locale prefix but isn't a supported one
   const match = pathname.match(/^\/([a-z]{2})(\/|$)/);

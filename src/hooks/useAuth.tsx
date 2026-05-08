@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase-client';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 
@@ -23,8 +23,8 @@ interface AuthContextType {
   isLoading: boolean;
   subscription: SubscriptionInfo | null;
   subscriptionChecked: boolean;
-  loginWithTelegram: () => Promise<void>;
-  loginWithGoogle: () => Promise<void>;
+  loginWithTelegram: (nextPath?: string) => Promise<void>;
+  loginWithGoogle: (nextPath?: string) => Promise<void>;
   logout: () => Promise<void>;
   getAccessToken: () => Promise<string | null>;
 }
@@ -188,8 +188,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     })();
   }, [user]);
 
-  const loginWithTelegram = useCallback(async () => {
-    const res = await fetch('/api/auth/telegram/init');
+  const loginWithTelegram = useCallback(async (nextPath?: string) => {
+    const url = nextPath
+      ? `/api/auth/telegram/init?next=${encodeURIComponent(nextPath)}`
+      : '/api/auth/telegram/init';
+    const res = await fetch(url);
     const data = await res.json();
     if (data.url) {
       window.location.href = data.url;
@@ -198,11 +201,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const loginWithGoogle = useCallback(async () => {
+  const loginWithGoogle = useCallback(async (nextPath?: string) => {
     const origin = window.location.origin;
+    const target = nextPath ?? '/uz/chinese';
+    const callback = `/auth/callback?next=${encodeURIComponent(target)}`;
     await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${origin}/chinese` },
+      options: { redirectTo: `${origin}${callback}` },
     });
   }, []);
 

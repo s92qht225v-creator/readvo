@@ -70,7 +70,7 @@ export function LoginPage() {
       <div className="login-card">
         <Image src="/logo-red.svg" alt="Blim" width={100} height={34} className="login-logo" priority />
 
-        <button className="login-btn login-btn--google" onClick={loginWithGoogle} type="button">
+        <button className="login-btn login-btn--google" onClick={() => loginWithGoogle(`/${language}/chinese`)} type="button">
           <GoogleIcon />
           {s.google}
         </button>
@@ -79,7 +79,7 @@ export function LoginPage() {
           <span>{s.or}</span>
         </div>
 
-        <button className="login-btn login-btn--telegram" onClick={loginWithTelegram} type="button">
+        <button className="login-btn login-btn--telegram" onClick={() => loginWithTelegram(`/${language}/chinese`)} type="button">
           <TelegramIcon />
           {s.telegram}
         </button>

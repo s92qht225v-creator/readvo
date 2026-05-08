@@ -67,7 +67,7 @@ function TelegramCompleteInner() {
           return;
         }
 
-        const { access_token, refresh_token, session_nonce } = await res.json();
+        const { access_token, refresh_token, session_nonce, next } = await res.json();
 
         // Store nonce BEFORE setSession (setSession triggers onAuthStateChange)
         localStorage.removeItem('blim-session-nonce');
@@ -89,7 +89,7 @@ function TelegramCompleteInner() {
         // Analytics: track registration/login
         trackAll('CompleteRegistration', 'registration', 'sign_up', { status: 'success' });
 
-        router.replace(`${lp}/chinese`);
+        router.replace(typeof next === 'string' && next.startsWith('/') ? next : `${lp}/chinese`);
       } catch (err) {
         console.error('Telegram complete error:', err);
         router.replace(`${lp}/?error=complete_failed`);

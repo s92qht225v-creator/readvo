@@ -1,13 +1,14 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   const clientId = process.env.TELEGRAM_BOT_ID;
   if (!clientId) {
     return NextResponse.json({ error: 'Telegram not configured' }, { status: 500 });
   }
 
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const origin = request.nextUrl.origin;
+  const nextPath = request.nextUrl.searchParams.get('next') || '/uz/chinese';
   const redirectUri = `${origin}/auth/telegram/complete`;
 
   // CSRF state
@@ -27,7 +28,14 @@ export async function GET() {
   const response = NextResponse.json({ url });
   response.cookies.set('tg_state', state, {
     httpOnly: true,
-    secure: true,
+    secure: request.nextUrl.protocol === 'https:',
+    sameSite: 'lax',
+    maxAge: 600,
+    path: '/',
+  });
+  response.cookies.set('tg_next', nextPath, {
+    httpOnly: true,
+    secure: request.nextUrl.protocol === 'https:',
     sameSite: 'lax',
     maxAge: 600,
     path: '/',
