@@ -1,0 +1,803 @@
+'use client';
+
+import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { QuestionRenderer } from './QuestionRenderer';
+import { QuestionMediaLayout } from './QuestionMediaBlock';
+import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
+import './test-player.css';
+
+interface Props {
+  test: PublicTest;
+  forceDevice?: 'mobile' | 'desktop';
+}
+
+type Phase = 'intro' | 'question' | 'submitting' | 'done' | 'error';
+
+interface Done {
+  score: number | null;
+  total: number | null;
+}
+
+const TOKEN_KEY_PREFIX = 'blim-test-token:';
+
+function ensureToken(slug: string): string {
+  const key = TOKEN_KEY_PREFIX + slug;
+  const existing = localStorage.getItem(key);
+  if (existing) return existing;
+  const fresh = `${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}-${Date.now()}`;
+  localStorage.setItem(key, fresh);
+  return fresh;
+}
+
+function formatClock(totalSeconds: number): string {
+  const safeSeconds = Math.max(0, Math.floor(totalSeconds));
+  const minutes = Math.floor(safeSeconds / 60);
+  const seconds = safeSeconds % 60;
+  return `${minutes}:${String(seconds).padStart(2, '0')}`;
+}
+
+function formatDuration(totalSeconds: number): string {
+  const minutes = Math.max(1, Math.ceil(totalSeconds / 60));
+  return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`;
+}
+
+export function TestPlayer({ test, forceDevice }: Props) {
+  const [phase, setPhase] = useState<Phase>('intro');
+  const [name, setName] = useState('');
+  const [idx, setIdx] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
+  const [errMsg, setErrMsg] = useState<string | null>(null);
+  const [done, setDone] = useState<Done | null>(null);
+  const [timerEndsAt, setTimerEndsAt] = useState<number | null>(null);
+  const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
+  const [timeExpired, setTimeExpired] = useState(false);
+  const [startedAt, setStartedAt] = useState<string | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const [cardOverflowing, setCardOverflowing] = useState(false);
+
+  const total = test.questions.length;
+  const q: PublicQuestion | undefined = test.questions[idx];
+  const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
+  const welcomeScreen = test.welcome_screen?.enabled ? test.welcome_screen : null;
+  const endScreen = test.end_screen?.enabled ? test.end_screen : null;
+  const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
+    ? Math.round(test.time_limit_seconds)
+    : null;
+
+  const canAdvance = useMemo(() => {
+    if (!q) return false;
+    if (!q.required) return true;
+    if (q.type === 'multiple_choice' || q.type === 'picture_choice') {
+      const opts = q.options as { allowMultiple?: boolean };
+      if (opts.allowMultiple) return Array.isArray(answer.selectedIds) && answer.selectedIds.length > 0;
+      return typeof answer.selected === 'number' || typeof answer.selectedId === 'string';
+    }
+    if (q.type === 'short_text' || q.type === 'long_answer' || q.type === 'number') {
+      return !!answer.text && answer.text.trim().length > 0;
+    }
+    if (q.type === 'dropdown') return typeof answer.selectedId === 'string' && answer.selectedId.length > 0;
+    if (q.type === 'checkbox') return Array.isArray(answer.selectedIds) && answer.selectedIds.length > 0;
+    if (q.type === 'opinion_scale' || q.type === 'rating') return typeof answer.selected === 'number';
+    if (q.type === 'true_false') return typeof answer.bool === 'boolean';
+    if (q.type === 'match') {
+      const need = (q.options as { left?: unknown[] }).left?.length ?? 0;
+      if (Array.isArray(answer.pairs)) {
+        const lefts = new Set<number>();
+        const rights = new Set<string>();
+        answer.pairs.forEach(pair => {
+          if (Number.isInteger(pair.leftIndex) && typeof pair.rightId === 'string' && pair.rightId.length > 0) {
+            lefts.add(pair.leftIndex);
+            rights.add(pair.rightId);
+          }
+        });
+        return lefts.size === need && rights.size === need;
+      }
+      return Array.isArray(answer.matches) && answer.matches.length === need
+        && answer.matches.every(v => typeof v === 'string' && v.length > 0);
+    }
+    if (q.type === 'ordering') {
+      const need = (q.options as { items?: unknown[] }).items?.length ?? 0;
+      return Array.isArray(answer.order) && answer.order.length === need
+        && answer.order.every(v => typeof v === 'string' && v.length > 0);
+    }
+    if (q.type === 'fill_blanks') {
+      const need = (q.options as { blanks?: number }).blanks ?? 0;
+      return Array.isArray(answer.blanks)
+        && answer.blanks.length === need
+        && answer.blanks.every(s => typeof s === 'string' && s.trim().length > 0);
+    }
+    return false;
+  }, [q, answer]);
+
+  const isLast = idx === total - 1;
+
+  const submit = useCallback(async (timedOut = false) => {
+    setPhase('submitting');
+    if (timedOut) setTimeExpired(true);
+    setErrMsg(null);
+    const token = ensureToken(test.slug);
+    const payload = {
+      respondent_token: token,
+      respondent_name: name,
+      started_at: startedAt ?? new Date().toISOString(),
+      timed_out: timedOut,
+      answers: Object.entries(answers).map(([qid, value]) => ({ question_id: qid, value })),
+    };
+    const res = await fetch(`/api/t/${test.slug}/responses`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const j = await res.json().catch(() => ({}));
+      setErrMsg(j.error ?? 'Submission failed');
+      setPhase('error');
+      return;
+    }
+    const j = await res.json();
+    setDone({ score: j.score ?? null, total: j.total ?? null });
+    setPhase('done');
+  }, [answers, name, startedAt, test.slug]);
+
+  const startQuestions = useCallback(() => {
+    setStartedAt(new Date().toISOString());
+    if (timerLimitSeconds) {
+      setTimerEndsAt(Date.now() + timerLimitSeconds * 1000);
+      setRemainingSeconds(timerLimitSeconds);
+      setTimeExpired(false);
+    }
+    setPhase('question');
+  }, [timerLimitSeconds]);
+
+  const onChange = (v: AnswerSubmission['value']) => {
+    if (!q) return;
+    setAnswers({ ...answers, [q.id]: v });
+  };
+
+  // Keyboard shortcuts: Enter to advance, 1-9 to pick mc choice
+  useEffect(() => {
+    if (phase !== 'question' || !q) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLInputElement) {
+        // Let typing happen; only Enter triggers advance for short text via Cmd+Enter
+        return;
+      }
+      if (e.key === 'Enter') {
+        if (canAdvance) {
+          if (isLast) submit();
+          else setIdx(i => i + 1);
+        }
+        return;
+      }
+      if ((q.type === 'multiple_choice' || q.type === 'checkbox') && /^[1-9]$/.test(e.key)) {
+        const opts = q.options as { choices: { id: string }[]; allowMultiple?: boolean };
+        const i = parseInt(e.key, 10) - 1;
+        const choice = opts.choices[i];
+        if (!choice) return;
+        if (q.type === 'multiple_choice' && !opts.allowMultiple) {
+          onChange({ selectedId: choice.id });
+          return;
+        }
+        const current = answer.selectedIds ?? [];
+        onChange({
+          selectedIds: current.includes(choice.id)
+            ? current.filter(id => id !== choice.id)
+            : [...current, choice.id],
+        });
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  });
+
+  useEffect(() => {
+    if (phase !== 'question' || !timerEndsAt) return;
+
+    let submitted = false;
+    const tick = () => {
+      const next = Math.max(0, Math.ceil((timerEndsAt - Date.now()) / 1000));
+      setRemainingSeconds(next);
+      if (next <= 0 && !submitted) {
+        submitted = true;
+        void submit(true);
+      }
+    };
+
+    tick();
+    const interval = window.setInterval(tick, 250);
+    return () => window.clearInterval(interval);
+  }, [phase, timerEndsAt, submit]);
+
+  useEffect(() => {
+    if (phase !== 'question') return;
+    const card = cardRef.current;
+    if (!card) return;
+
+    const measure = () => {
+      const overflowing = card.scrollHeight > card.clientHeight + 1;
+      setCardOverflowing(overflowing);
+      if (overflowing && card.scrollTop < 1) card.scrollTop = 0;
+    };
+
+    measure();
+    const raf = window.requestAnimationFrame(measure);
+    const observer = new ResizeObserver(measure);
+    observer.observe(card);
+    window.addEventListener('resize', measure);
+
+    return () => {
+      window.cancelAnimationFrame(raf);
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, [phase, q?.id, answer]);
+
+  if (phase === 'intro') {
+    if (welcomeScreen) {
+      const title = welcomeScreen.title || test.title;
+      const description = welcomeScreen.description ?? '';
+      const buttonText = welcomeScreen.buttonText || 'Start';
+
+      return (
+        <ScreenWrapper>
+          <div style={publicScreenCard}>
+            {welcomeScreen.imageUrl ? <img src={welcomeScreen.imageUrl} alt="" style={screenImage} /> : null}
+            <h1 style={publicScreenTitle}>{title}</h1>
+            <p style={publicScreenDescription}>
+              {description || 'Description (optional)'}
+            </p>
+            <button
+              type="button"
+              onClick={startQuestions}
+              disabled={total === 0}
+              style={publicScreenButton(total === 0)}
+            >
+              {total === 0 ? 'No questions yet' : buttonText}
+            </button>
+            {welcomeScreen.showTimeToComplete ? (
+              <div style={publicScreenMeta}>◷ {timerLimitSeconds ? `Time limit: ${formatDuration(timerLimitSeconds)}` : welcomeScreen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(total / 4))} minutes`}</div>
+            ) : null}
+            {welcomeScreen.showSubmissionCount ? (
+              <div style={publicScreenMeta}>● Submissions are recorded after completion</div>
+            ) : null}
+            <div style={publicNameBlock}>
+              <label style={publicNameLabel}>Your name (optional)</label>
+              <input
+                type="text"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                placeholder="Anonymous"
+                style={publicNameInput}
+              />
+            </div>
+          </div>
+        </ScreenWrapper>
+      );
+    }
+
+    return (
+      <Wrapper>
+        <div style={introBadge}>{test.is_graded ? 'Graded quiz' : 'Survey'}</div>
+        <h1 style={introTitle}>{test.title}</h1>
+        {test.description ? (
+          <p style={introText}>{test.description}</p>
+        ) : (
+          <p style={introText}>
+            Answer {total} {total === 1 ? 'question' : 'questions'} one at a time.
+          </p>
+        )}
+        <div style={nameBlock}>
+          <label style={fieldLabel}>
+            Your name (optional)
+          </label>
+          <input
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            placeholder="Anonymous"
+            style={nameInput}
+          />
+        </div>
+        <button
+          type="button"
+          onClick={startQuestions}
+          disabled={total === 0}
+          style={primaryButton(total === 0)}
+        >
+          {total === 0 ? 'No questions yet' : `Start · ${total} ${total === 1 ? 'question' : 'questions'}`}
+        </button>
+      </Wrapper>
+    );
+  }
+
+  if (phase === 'done') {
+    const title = endScreen?.title || 'Submitted';
+    const description = endScreen?.description || 'Your answers were submitted.';
+    const buttonText = endScreen?.buttonText || '';
+    return (
+      <Wrapper>
+        <div style={doneMark}>✓</div>
+        {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
+        <h1 style={introTitle}>{title}</h1>
+        {test.is_graded && done?.score != null ? (
+          <p style={introText}>
+            Score: <b style={{ color: '#1c1626' }}>{done.score}</b>
+            {done.total != null ? <> / <b style={{ color: '#1c1626' }}>{done.total}</b></> : null}
+          </p>
+        ) : (
+          <p style={introText}>{timeExpired ? 'Time is up. Your answers were submitted.' : description}</p>
+        )}
+        {endScreen?.showSocialShare ? (
+          <div style={socialRow}>
+            <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+          </div>
+        ) : null}
+        {buttonText ? (
+          <button
+            type="button"
+            onClick={() => {
+              if (endScreen?.buttonLinkEnabled && endScreen.buttonLink) {
+                window.location.href = endScreen.buttonLink;
+              }
+            }}
+            style={primaryButton(false)}
+          >
+            {buttonText}
+          </button>
+        ) : null}
+      </Wrapper>
+    );
+  }
+
+  if (phase === 'error') {
+    return (
+      <Wrapper>
+        <h1 style={{ ...introTitle, color: '#b91c1c' }}>
+          Submission failed
+        </h1>
+        <p style={introText}>{errMsg}</p>
+        <button
+          type="button"
+          onClick={() => submit()}
+          style={primaryButton(false)}
+        >Try again</button>
+      </Wrapper>
+    );
+  }
+
+  if (!q) return null;
+
+  const progress = ((idx + 1) / total) * 100;
+
+  return (
+    <Wrapper>
+      <motion.div
+        ref={cardRef}
+        key={q.id}
+        initial={{ opacity: 0, x: 32 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.2 }}
+        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
+        style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
+      >
+          {remainingSeconds != null ? (
+            <div className="test-player__timer-floating" style={floatingTimer}>
+              <span style={timerPill(remainingSeconds <= 60)}>
+                {formatClock(remainingSeconds)}
+              </span>
+            </div>
+          ) : null}
+          <QuestionMediaLayout
+            media={q.media}
+            forceDevice={forceDevice}
+            header={(
+              <>
+                <h2 className="test-player__title" style={questionTitle}>
+                  {q.prompt}
+                </h2>
+                {q.description ? (
+                  <p className="test-player__description" style={questionDescription}>
+                    {q.description}
+                  </p>
+                ) : null}
+              </>
+            )}
+            answer={(
+              <div style={answerWrap}>
+                <QuestionRenderer
+                  question={q}
+                  value={answer}
+                  onChange={onChange}
+                  onSubmit={() => { if (canAdvance) { isLast ? submit() : setIdx(idx + 1); } }}
+                />
+              </div>
+            )}
+          />
+      </motion.div>
+
+      <div style={progressTrack}>
+        <div style={{ ...progressFill, width: `${progress}%` }} />
+      </div>
+
+      <div className="test-player__nav" style={navRow}>
+        <button
+          type="button"
+          onClick={() => setIdx(i => Math.max(0, i - 1))}
+          disabled={idx === 0}
+          style={secondaryButton(idx === 0)}
+        >
+          Back
+        </button>
+        <div style={shortcutHint}>Enter to continue</div>
+        <button
+          type="button"
+          onClick={() => isLast ? submit() : setIdx(idx + 1)}
+          disabled={!canAdvance || phase === 'submitting'}
+          style={primaryButton(!canAdvance || phase === 'submitting')}
+        >
+          {phase === 'submitting' ? 'Submitting…' : isLast ? 'Submit' : 'Next'}
+        </button>
+      </div>
+    </Wrapper>
+  );
+}
+
+function Wrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="test-player" style={playerShell}>
+      <div className="test-player__blob" style={playerBackgroundBlob} />
+      <div className="test-player__inner" style={playerInner}>{children}</div>
+    </div>
+  );
+}
+
+function ScreenWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="test-player-screen" style={publicScreenShell}>
+      {children}
+    </div>
+  );
+}
+
+const playerShell: React.CSSProperties = {
+  minHeight: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '36px 18px',
+  background: 'radial-gradient(circle at 16% 12%, rgba(139,92,246,0.16), transparent 28%), linear-gradient(135deg, #f7f4f1 0%, #f1ede8 100%)',
+  position: 'relative',
+  overflow: 'hidden',
+};
+
+const playerBackgroundBlob: React.CSSProperties = {
+  position: 'absolute',
+  width: 420,
+  height: 420,
+  borderRadius: '50%',
+  right: -160,
+  bottom: -180,
+  background: 'rgba(47,37,51,0.08)',
+};
+
+const playerInner: React.CSSProperties = {
+  position: 'relative',
+  zIndex: 1,
+  width: '100%',
+  maxWidth: 660,
+};
+
+const questionCard: React.CSSProperties = {
+  position: 'relative',
+  background: '#fff',
+  border: '1px solid #e4ded8',
+  borderRadius: 7,
+  boxShadow: '0 30px 90px rgba(47,40,53,0.14)',
+  padding: '48px 52px',
+  containerType: 'inline-size',
+};
+
+const introBadge: React.CSSProperties = {
+  display: 'inline-flex',
+  borderRadius: 999,
+  padding: '6px 10px',
+  background: '#efe9ff',
+  color: '#6b4fbb',
+  fontSize: 12,
+  fontWeight: 850,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  marginBottom: 14,
+};
+
+const introTitle: React.CSSProperties = {
+  margin: '0 0 12px',
+  color: '#1c1626',
+  fontSize: 42,
+  lineHeight: 1.05,
+  fontWeight: 850,
+  letterSpacing: -1.2,
+};
+
+const introText: React.CSSProperties = {
+  margin: '0 0 28px',
+  color: '#6b6470',
+  fontSize: 18,
+  lineHeight: 1.5,
+};
+
+const nameBlock: React.CSSProperties = {
+  marginBottom: 18,
+};
+
+const fieldLabel: React.CSSProperties = {
+  fontSize: 12,
+  color: '#8b848f',
+  fontWeight: 850,
+  display: 'block',
+  marginBottom: 8,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+};
+
+const nameInput: React.CSSProperties = {
+  width: '100%',
+  padding: '13px 14px',
+  fontSize: 16,
+  border: '1px solid #ded8d1',
+  borderRadius: 12,
+  boxSizing: 'border-box',
+  maxWidth: 360,
+  color: '#1c1626',
+  background: '#fff',
+  outline: 'none',
+};
+
+const doneMark: React.CSSProperties = {
+  width: 62,
+  height: 62,
+  borderRadius: 20,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#dcfce7',
+  color: '#15803d',
+  fontSize: 34,
+  fontWeight: 900,
+  marginBottom: 18,
+};
+
+const publicScreenShell: React.CSSProperties = {
+  minHeight: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '24px 16px',
+  background: '#fff',
+};
+
+const publicScreenCard: React.CSSProperties = {
+  width: 'min(430px, 100%)',
+  minHeight: 'min(760px, calc(100vh - 48px))',
+  border: '1px solid #e5e7eb',
+  background: '#fff',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+  padding: '42px 32px',
+  boxSizing: 'border-box',
+};
+
+const publicScreenTitle: React.CSSProperties = {
+  margin: '0 0 14px',
+  color: '#2f2835',
+  fontSize: 20,
+  fontStyle: 'italic',
+  fontWeight: 500,
+  lineHeight: 1.35,
+};
+
+const publicScreenDescription: React.CSSProperties = {
+  margin: '0 0 30px',
+  color: '#a29aa6',
+  fontSize: 15,
+  fontStyle: 'italic',
+  lineHeight: 1.45,
+};
+
+const publicScreenButton = (disabled: boolean): React.CSSProperties => ({
+  border: 'none',
+  borderRadius: 4,
+  background: '#0445b8',
+  color: '#fff',
+  padding: '12px 18px',
+  fontSize: 18,
+  fontWeight: 800,
+  boxShadow: disabled ? 'none' : '0 6px 14px rgba(4,69,184,0.22)',
+  opacity: disabled ? 0.45 : 1,
+  cursor: disabled ? 'not-allowed' : 'pointer',
+});
+
+const publicScreenMeta: React.CSSProperties = {
+  marginTop: 14,
+  color: '#111827',
+  fontSize: 13,
+};
+
+const publicNameBlock: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 330,
+  marginTop: 28,
+  textAlign: 'left',
+};
+
+const publicNameLabel: React.CSSProperties = {
+  display: 'block',
+  color: '#a29aa6',
+  fontSize: 11,
+  fontWeight: 850,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  marginBottom: 8,
+};
+
+const publicNameInput: React.CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  padding: '11px 12px',
+  border: '1px solid #ded8d1',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#2f2835',
+  fontSize: 15,
+  outline: 'none',
+};
+
+const screenImage: React.CSSProperties = {
+  width: 180,
+  maxHeight: 150,
+  objectFit: 'cover',
+  borderRadius: 18,
+  marginBottom: 22,
+};
+
+const screenMeta: React.CSSProperties = {
+  marginTop: 14,
+  color: '#6b6470',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const socialRow: React.CSSProperties = {
+  display: 'flex',
+  gap: 10,
+  alignItems: 'center',
+  color: '#6b6470',
+  fontSize: 13,
+  fontWeight: 800,
+  marginBottom: 18,
+};
+
+const questionMeta: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 10,
+  color: '#6b4fbb',
+  fontSize: 12,
+  fontWeight: 850,
+  letterSpacing: 0.6,
+  textTransform: 'uppercase',
+  marginBottom: 24,
+};
+
+const questionNumber: React.CSSProperties = {
+  width: 34,
+  height: 34,
+  borderRadius: 12,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#2f2533',
+  color: '#fff',
+};
+
+const requiredPill: React.CSSProperties = {
+  marginLeft: 'auto',
+  borderRadius: 999,
+  background: '#f3efff',
+  color: '#6b4fbb',
+  padding: '5px 9px',
+};
+
+const floatingTimer: React.CSSProperties = {
+  position: 'absolute',
+  top: 16,
+  right: 16,
+  zIndex: 6,
+  pointerEvents: 'none',
+};
+
+const timerPill = (urgent: boolean): React.CSSProperties => ({
+  marginLeft: 0,
+  borderRadius: 999,
+  background: urgent ? '#fee2e2' : '#f8fafc',
+  color: urgent ? '#b91c1c' : '#2f2533',
+  border: urgent ? '1px solid #fecaca' : '1px solid #e2e8f0',
+  padding: '5px 9px',
+  fontVariantNumeric: 'tabular-nums',
+});
+
+const questionTitle: React.CSSProperties = {
+  fontSize: 34,
+  fontWeight: 400,
+  margin: '0 0 12px',
+  lineHeight: 1.15,
+  color: '#1c1626',
+  letterSpacing: -0.6,
+};
+
+const questionDescription: React.CSSProperties = {
+  margin: '0 0 28px',
+  color: '#8b848f',
+  fontSize: 16,
+  lineHeight: 1.5,
+};
+
+const answerWrap: React.CSSProperties = {
+  marginTop: 4,
+};
+
+const progressTrack: React.CSSProperties = {
+  height: 6,
+  background: 'rgba(47,37,51,0.12)',
+  borderRadius: 999,
+  margin: '22px 4px 0',
+  overflow: 'hidden',
+};
+
+const progressFill: React.CSSProperties = {
+  height: '100%',
+  background: 'linear-gradient(90deg, #2f2533, #8b5cf6)',
+  transition: 'width 0.3s ease',
+};
+
+const navRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginTop: 18,
+  gap: 12,
+};
+
+const shortcutHint: React.CSSProperties = {
+  color: '#8b848f',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const primaryButton = (disabled: boolean): React.CSSProperties => ({
+  padding: '12px 22px',
+  background: '#2f2533',
+  color: '#fff',
+  border: 'none',
+  borderRadius: 999,
+  fontWeight: 850,
+  fontSize: 15,
+  cursor: disabled ? 'not-allowed' : 'pointer',
+  opacity: disabled ? 0.45 : 1,
+  boxShadow: disabled ? 'none' : '0 12px 28px rgba(47,37,51,0.16)',
+});
+
+const secondaryButton = (disabled: boolean): React.CSSProperties => ({
+  padding: '11px 18px',
+  background: '#fff',
+  color: '#2f2533',
+  border: '1px solid #d8d2cc',
+  borderRadius: 999,
+  fontWeight: 800,
+  cursor: disabled ? 'not-allowed' : 'pointer',
+  opacity: disabled ? 0.45 : 1,
+});
