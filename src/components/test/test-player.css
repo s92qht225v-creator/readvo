@@ -338,6 +338,7 @@
   .test-player__card:has(.qmedia-mobile-wallpaper) {
     isolation: isolate !important;
     overflow: visible !important;
+    transform: none !important;
   }
 
   .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper {
