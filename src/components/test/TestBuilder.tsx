@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
+import { QRCodeCanvas } from 'qrcode.react';
 import {
   closestCenter,
   DndContext,
@@ -1013,11 +1014,45 @@ function ShareTab({ test, shareUrl, copied, onCopy, onPublish, publishing }: {
           </button>
         </div>
 
+        {test.is_published ? <ShareQR url={shareUrl} fileName={test.title || 'test'} /> : null}
+
         <div style={shareNote}>
           The public player route stays the same after edits. Unpublish hides this link without deleting responses.
         </div>
       </section>
     </main>
+  );
+}
+
+function ShareQR({ url, fileName }: { url: string; fileName: string }) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  const handleDownload = useCallback(() => {
+    const canvas = wrapRef.current?.querySelector('canvas');
+    if (!canvas) return;
+    const dataUrl = canvas.toDataURL('image/png');
+    const safeName = fileName.replace(/[^a-z0-9-_]+/gi, '-').slice(0, 40) || 'test';
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = `${safeName}-qr.png`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }, [fileName]);
+
+  return (
+    <div style={shareQrWrap} ref={wrapRef}>
+      <div style={shareQrFrame}>
+        <QRCodeCanvas value={url} size={192} marginSize={2} level="M" />
+      </div>
+      <div style={shareQrSide}>
+        <div style={shareQrLabel}>Scan to open</div>
+        <p style={shareQrText}>
+          Project this in class or print it on a handout. Anyone who scans gets the same link.
+        </p>
+        <button type="button" onClick={handleDownload} style={shareQrButton}>Download PNG</button>
+      </div>
+    </div>
   );
 }
 
@@ -2077,6 +2112,64 @@ const shareNote: React.CSSProperties = {
   color: '#8b848f',
   fontSize: 13,
   lineHeight: 1.45,
+};
+
+const shareQrWrap: React.CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 18,
+  alignItems: 'center',
+  marginTop: 16,
+  padding: 16,
+  border: '1px solid #ded8d1',
+  borderRadius: 14,
+  background: '#fbfaf8',
+};
+
+const shareQrFrame: React.CSSProperties = {
+  background: '#fff',
+  border: '1px solid #ece6df',
+  borderRadius: 12,
+  padding: 10,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const shareQrSide: React.CSSProperties = {
+  flex: '1 1 220px',
+  minWidth: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 6,
+};
+
+const shareQrLabel: React.CSSProperties = {
+  color: '#8b848f',
+  fontSize: 11,
+  fontWeight: 850,
+  letterSpacing: 0.7,
+  textTransform: 'uppercase',
+};
+
+const shareQrText: React.CSSProperties = {
+  margin: 0,
+  color: '#6b6470',
+  fontSize: 13,
+  lineHeight: 1.45,
+};
+
+const shareQrButton: React.CSSProperties = {
+  alignSelf: 'flex-start',
+  marginTop: 6,
+  border: '1px solid #ded8d1',
+  borderRadius: 999,
+  background: '#fff',
+  color: '#2f2533',
+  padding: '8px 14px',
+  fontSize: 13,
+  fontWeight: 700,
+  cursor: 'pointer',
 };
 
 const topBarLeft: React.CSSProperties = {
