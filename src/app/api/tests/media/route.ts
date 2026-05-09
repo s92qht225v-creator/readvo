@@ -11,7 +11,7 @@ const ALLOWED_MIME_TYPES = new Set([
 ]);
 
 export async function POST(req: NextRequest) {
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const form = await req.formData().catch(() => null);

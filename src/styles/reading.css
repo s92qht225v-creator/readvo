@@ -13933,7 +13933,7 @@ body {
   min-height: 100svh !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 44px 0 !important;
+  padding: 44px 0 calc(132px + env(safe-area-inset-bottom, 0px)) !important;
   background: #fff !important;
   overflow-y: auto !important;
 }
@@ -13963,7 +13963,7 @@ body {
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
   border-radius: 7px !important;
-  padding: 30px 26px !important;
+  padding: 30px 26px 152px !important;
   box-shadow: 0 12px 36px rgba(47, 40, 53, 0.06) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -14485,8 +14485,41 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__nav {
-  width: 372px !important;
-  max-width: 100% !important;
+  position: fixed !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: env(safe-area-inset-bottom, 0px) !important;
+  width: min(372px, calc(100vw - 24px)) !important;
+  max-width: calc(100vw - 24px) !important;
+  transform: translateX(-50%) !important;
+  z-index: 80 !important;
+  margin: 0 !important;
+  padding: 14px 0 calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  gap: 10px !important;
+  background: linear-gradient(to top, #fff 82%, rgba(255, 255, 255, 0)) !important;
+}
+
+.test-preview-shell--mobile .test-player__progress {
+  position: fixed !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+  width: min(372px, calc(100vw - 28px)) !important;
+  max-width: calc(100vw - 28px) !important;
+  transform: translateX(-50%) !important;
+  z-index: 81 !important;
+  margin: 0 !important;
+}
+
+.test-preview-shell--mobile .test-player__nav > div {
+  display: none !important;
+}
+
+.test-preview-shell--mobile .test-player__nav button {
+  flex: 1 1 0 !important;
+  min-height: 48px !important;
+  border-radius: 14px !important;
+  font-size: 15px !important;
 }
 
 .test-preview-shell--mobile .test-player-screen > div {
@@ -14512,7 +14545,7 @@ body {
     min-height: 100svh !important;
     align-items: stretch !important;
     justify-content: center !important;
-    padding: 12px 12px calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+    padding: 12px 12px calc(132px + env(safe-area-inset-bottom, 0px)) !important;
     background: #fff !important;
     overflow-y: auto !important;
   }
@@ -14523,7 +14556,7 @@ body {
 
   .test-player__inner {
     max-width: none !important;
-    min-height: calc(100svh - 30px) !important;
+    min-height: calc(100svh - 144px) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -14552,12 +14585,24 @@ body {
   }
 
   .test-player__nav {
-    position: sticky !important;
-    bottom: 0 !important;
-    margin: 18px -2px 0 !important;
-    padding: 14px 0 0 !important;
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    bottom: env(safe-area-inset-bottom, 0px) !important;
+    z-index: 80 !important;
+    margin: 0 !important;
+    padding: 14px 0 calc(12px + env(safe-area-inset-bottom, 0px)) !important;
     gap: 10px !important;
-    background: linear-gradient(to top, #fff 76%, rgba(255,255,255,0)) !important;
+    background: linear-gradient(to top, #fff 82%, rgba(255,255,255,0)) !important;
+  }
+
+  .test-player__progress {
+    position: fixed !important;
+    left: 14px !important;
+    right: 14px !important;
+    bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+    z-index: 81 !important;
+    margin: 0 !important;
   }
 
   .test-player__nav > div {

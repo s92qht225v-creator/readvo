@@ -5,7 +5,7 @@ import { getRequestUserId } from '@/lib/test/devAuth';
 /** GET /api/tests/[id]/responses — teacher's response list with answers */
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const admin = getSupabaseAdmin();

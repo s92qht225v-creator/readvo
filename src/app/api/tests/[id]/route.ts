@@ -3,7 +3,7 @@ import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 
 async function authorize(req: NextRequest, id: string) {
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return { error: NextResponse.json({ error: 'unauthorized' }, { status: 401 }) };
   const admin = getSupabaseAdmin();
   const { data: test } = await admin

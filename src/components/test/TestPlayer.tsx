@@ -432,7 +432,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
       </motion.div>
       </AnimatePresence>
 
-      <div style={progressTrack}>
+      <div className="test-player__progress" style={progressTrack}>
         <div style={{ ...progressFill, width: `${progress}%` }} />
       </div>
 

@@ -18,7 +18,7 @@ interface IncomingQuestion {
  */
 export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const admin = getSupabaseAdmin();
@@ -55,11 +55,12 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 
   const { data: existingQuestions, error: existingErr } = await admin
     .from('test_questions')
-    .select('id')
+    .select('id, position')
     .eq('test_id', id);
   if (existingErr) return NextResponse.json({ error: existingErr.message }, { status: 500 });
 
   const existingIds = new Set((existingQuestions ?? []).map(q => q.id as string));
+  const occupiedPositions = new Set((existingQuestions ?? []).map(q => q.position as number));
   const keptIds = new Set<string>();
   const rows = body.questions.map((q, i) => {
     const prompt = (q.prompt ?? '').toString().trim();
@@ -91,11 +92,17 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
   }
 
   // Move kept rows out of the way first to avoid the unique (test_id, position)
-  // index colliding during reorder updates.
-  for (const [offset, existingId] of [...keptIds].entries()) {
+  // index colliding during reorder updates. Use a negative block that is not
+  // already occupied so a previous failed save cannot leave future saves stuck.
+  const keptList = [...keptIds];
+  let tempBase = -1_000_000;
+  while (keptList.some((_, offset) => occupiedPositions.has(tempBase - offset))) {
+    tempBase -= keptList.length + 1_000;
+  }
+  for (const [offset, existingId] of keptList.entries()) {
     const moveResult = await admin
       .from('test_questions')
-      .update({ position: 100000 + offset })
+      .update({ position: tempBase - offset })
       .eq('id', existingId);
     if (moveResult.error) {
       return NextResponse.json({ error: moveResult.error.message }, { status: 500 });

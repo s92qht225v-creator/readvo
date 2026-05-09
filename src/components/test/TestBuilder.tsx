@@ -46,6 +46,34 @@ function testBuilderTab(tab: string | null): 'create' | 'share' | 'results' {
   return tab === 'share' || tab === 'results' ? tab : 'create';
 }
 
+function questionTypeLabel(type: QuestionType): string {
+  return type
+    .split('_')
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function firstQuestionValidationError(questions: BuilderQuestion[]): { index: number; message: string } | null {
+  if (questions.length === 0) {
+    return {
+      index: -1,
+      message: 'Add at least one question before publishing.',
+    };
+  }
+
+  const emptyPromptIndex = questions.findIndex(q => !q.prompt.trim());
+  if (emptyPromptIndex !== -1) {
+    const q = questions[emptyPromptIndex];
+    const label = questionTypeLabel(q.type);
+    return {
+      index: emptyPromptIndex,
+      message: `Question ${emptyPromptIndex + 1} (${label}) is missing question text. Add the question text before saving or publishing.`,
+    };
+  }
+
+  return null;
+}
+
 /* ── Type icon SVGs (Typeform-style) ─────────────────────────────────────── */
 
 function TypeIcon({ type }: { type: QuestionType }) {
@@ -303,6 +331,19 @@ export function TestBuilder({ testId }: Props) {
     sourceQuestions: BuilderQuestion[] = questionsRef.current,
     options?: { silent?: boolean },
   ): Promise<boolean> => {
+    const validationError = firstQuestionValidationError(sourceQuestions);
+    if (validationError) {
+      if (!options?.silent) {
+        if (validationError.index >= 0) {
+          setActiveTopTab('create');
+          setActiveIdx(validationError.index);
+          setActiveBlock({ kind: 'question', index: validationError.index });
+        }
+        alert(validationError.message);
+      }
+      return false;
+    }
+
     setSaving(true);
     const sourceSnapshot = JSON.stringify(sourceQuestions);
     const tok = await getAccessToken();
@@ -322,7 +363,13 @@ export function TestBuilder({ testId }: Props) {
     });
     setSaving(false);
     if (!res.ok) {
-      if (!options?.silent) alert('Failed to save questions');
+      if (!options?.silent) {
+        const errorBody = await res.json().catch(() => null) as { error?: unknown } | null;
+        const errorMessage = typeof errorBody?.error === 'string'
+          ? errorBody.error
+          : 'Failed to save questions';
+        alert(errorMessage);
+      }
       return false;
     }
     const j = await res.json();

@@ -4,7 +4,7 @@ import { getRequestUserId } from '@/lib/test/devAuth';
 import { generateUniqueSlug } from '@/lib/test/slug';
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const { id } = await params;

@@ -5,7 +5,7 @@ import { generateUniqueSlug } from '@/lib/test/slug';
 
 /** GET /api/tests — list current teacher's tests (newest first) */
 export async function GET(req: NextRequest) {
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const admin = getSupabaseAdmin();
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
 
 /** POST /api/tests — create a new test (drafts only; publishing is separate) */
 export async function POST(req: NextRequest) {
-  const userId = getRequestUserId(req);
+  const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
   const body = await req.json().catch(() => null) as { title?: string; description?: string; is_graded?: boolean } | null;
