@@ -338,13 +338,36 @@
   display: none !important;
 }
 
+.test-player--wallpaper-active {
+  background: transparent !important;
+}
+
+.test-player--wallpaper-active .test-player__blob {
+  display: none !important;
+}
+
+.test-player--wallpaper-active .test-player__wallpaper-bg {
+  bottom: 0 !important;
+  height: auto !important;
+  min-height: 100dvh !important;
+  transform: translateZ(0);
+}
+
+.test-player--wallpaper-active .test-player__nav {
+  background: transparent !important;
+}
+
+.test-player--wallpaper-active .test-player__nav button {
+  border-radius: 3px !important;
+}
+
 .test-player__wallpaper-bg--force-mobile {
   display: block !important;
   position: fixed !important;
   inset: 0 !important;
   width: 100vw !important;
   max-width: none !important;
-  height: 100svh !important;
+  height: 100dvh !important;
   aspect-ratio: auto !important;
   border-radius: 0 !important;
   margin: 0 !important;
@@ -371,7 +394,7 @@
     inset: 0 !important;
     width: 100vw !important;
     max-width: none !important;
-    height: 100svh !important;
+    height: 100dvh !important;
     aspect-ratio: auto !important;
     border-radius: 0 !important;
     margin: 0 !important;
@@ -410,10 +433,6 @@
   .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-answer {
     position: relative !important;
     z-index: 1 !important;
-  }
-
-  .test-player__inner:has(.qmedia-mobile-wallpaper) .test-player__nav {
-    background: transparent !important;
   }
 
   .test-player__nav button {

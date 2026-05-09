@@ -14595,6 +14595,14 @@ body {
     font-size: 15px !important;
   }
 
+  .test-player--wallpaper-active .test-player__nav {
+    background: transparent !important;
+  }
+
+  .test-player--wallpaper-active .test-player__nav button {
+    border-radius: 3px !important;
+  }
+
   .test-question-options {
     gap: 10px !important;
   }

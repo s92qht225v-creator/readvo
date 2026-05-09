@@ -384,7 +384,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   if (!q) return null;
 
   return (
-    <Wrapper>
+    <Wrapper wallpaperActive={!!mobileWallpaperMedia}>
       <QuestionMediaBlock
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
@@ -463,9 +463,18 @@ export function TestPlayer({ test, forceDevice }: Props) {
   );
 }
 
-function Wrapper({ children }: { children: React.ReactNode }) {
+function Wrapper({
+  children,
+  wallpaperActive = false,
+}: {
+  children: React.ReactNode
+  wallpaperActive?: boolean
+}) {
   return (
-    <div className="test-player" style={playerShell}>
+    <div
+      className={`test-player${wallpaperActive ? ' test-player--wallpaper-active' : ''}`}
+      style={playerShell}
+    >
       <div className="test-player__blob" style={playerBackgroundBlob} />
       <div className="test-player__inner" style={playerInner}>{children}</div>
     </div>
