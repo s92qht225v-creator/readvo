@@ -6,6 +6,10 @@
   --test-answer-padding-y: clamp(7px, 1.7cqw, 12px);
   --test-answer-padding-x: clamp(8px, 2cqw, 14px);
   --test-option-gap: clamp(6px, 1.4cqw, 10px);
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .test-player__card .test-player__title {
