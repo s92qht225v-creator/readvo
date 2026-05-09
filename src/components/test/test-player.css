@@ -389,6 +389,31 @@
 }
 
 @media (max-width: 599px) {
+  .test-player--wallpaper-active {
+    height: 100vh !important;
+    height: 100lvh !important;
+    min-height: 100vh !important;
+    min-height: 100lvh !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  .test-player--wallpaper-active .test-player__inner {
+    height: 100vh !important;
+    height: 100lvh !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    overflow-y: auto !important;
+    padding: 12px 12px calc(132px + env(safe-area-inset-bottom, 0px)) !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .test-player--wallpaper-active .test-player__inner::-webkit-scrollbar {
+    display: none !important;
+  }
+
   .test-player__wallpaper-bg {
     display: block !important;
     position: fixed !important;
