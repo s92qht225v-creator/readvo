@@ -380,4 +380,8 @@
     position: relative !important;
     z-index: 1 !important;
   }
+
+  .test-player__inner:has(.qmedia-mobile-wallpaper) + .test-player__nav {
+    background: transparent !important;
+  }
 }
