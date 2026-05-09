@@ -347,10 +347,11 @@
 }
 
 .test-player--wallpaper-active .test-player__wallpaper-bg {
-  /* Use svh (small viewport height) — stable during URL-bar collapse on iOS,
-     prevents background jitter while scrolling. */
-  height: 100dvh !important;
-  min-height: 100dvh !important;
+  /* Fixed-position children handle their own sizing via inset: 0 in the
+     mobile/force-mobile blocks — no viewport-unit height needed here,
+     which prevents the iOS URL-bar-collapse jitter. */
+  height: auto !important;
+  min-height: 0 !important;
 }
 
 .test-player--wallpaper-active .test-player__nav {
@@ -367,7 +368,7 @@
   inset: 0 !important;
   width: 100vw !important;
   max-width: none !important;
-  height: 100dvh !important;
+  height: auto !important;
   aspect-ratio: auto !important;
   border-radius: 0 !important;
   margin: 0 !important;
@@ -389,14 +390,20 @@
 
 @media (max-width: 599px) {
   .test-player--wallpaper-active {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
+    /* Pin the whole layout to the visual viewport with fixed positioning —
+       no viewport-unit math means no jitter as the URL bar collapses. */
+    position: fixed !important;
+    inset: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
     overflow: hidden !important;
     padding: 0 !important;
   }
 
   .test-player--wallpaper-active .test-player__inner {
-    height: 100dvh !important;
+    position: absolute !important;
+    inset: 0 !important;
+    height: auto !important;
     min-height: 0 !important;
     max-width: none !important;
     overflow-y: auto !important;
@@ -404,6 +411,7 @@
     box-sizing: border-box !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .test-player--wallpaper-active .test-player__inner::-webkit-scrollbar {
@@ -416,7 +424,7 @@
     inset: 0 !important;
     width: 100vw !important;
     max-width: none !important;
-    height: 100dvh !important;
+    height: auto !important;
     aspect-ratio: auto !important;
     border-radius: 0 !important;
     margin: 0 !important;
