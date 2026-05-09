@@ -349,8 +349,8 @@
 .test-player--wallpaper-active .test-player__wallpaper-bg {
   /* Use svh (small viewport height) — stable during URL-bar collapse on iOS,
      prevents background jitter while scrolling. */
-  height: 100svh !important;
-  min-height: 100svh !important;
+  height: 100dvh !important;
+  min-height: 100dvh !important;
 }
 
 .test-player--wallpaper-active .test-player__nav {
@@ -367,7 +367,7 @@
   inset: 0 !important;
   width: 100vw !important;
   max-width: none !important;
-  height: 100svh !important;
+  height: 100dvh !important;
   aspect-ratio: auto !important;
   border-radius: 0 !important;
   margin: 0 !important;
@@ -389,14 +389,14 @@
 
 @media (max-width: 599px) {
   .test-player--wallpaper-active {
-    height: 100svh !important;
-    min-height: 100svh !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
     overflow: hidden !important;
     padding: 0 !important;
   }
 
   .test-player--wallpaper-active .test-player__inner {
-    height: 100svh !important;
+    height: 100dvh !important;
     min-height: 0 !important;
     max-width: none !important;
     overflow-y: auto !important;
@@ -416,7 +416,7 @@
     inset: 0 !important;
     width: 100vw !important;
     max-width: none !important;
-    height: 100svh !important;
+    height: 100dvh !important;
     aspect-ratio: auto !important;
     border-radius: 0 !important;
     margin: 0 !important;
