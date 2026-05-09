@@ -312,7 +312,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     return (
       <textarea
         value={value.text ?? ''}
-        autoFocus
         rows={3}
         maxLength={opts.maxLength}
         placeholder="Type your answer…"
