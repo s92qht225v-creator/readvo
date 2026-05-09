@@ -334,11 +334,57 @@
   font-size: var(--test-small-size) !important;
 }
 
+.test-player__wallpaper-bg {
+  display: none !important;
+}
+
+.test-player__wallpaper-bg--force-mobile {
+  display: block !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  max-width: none !important;
+  height: 100svh !important;
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  opacity: 0.42 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.test-player__wallpaper-bg--force-mobile img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.test-player__card--force-mobile:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper > .qmedia-asset {
+  display: none !important;
+}
+
 @media (max-width: 599px) {
-  .test-player__card:has(.qmedia-mobile-wallpaper) {
-    isolation: isolate !important;
-    overflow: visible !important;
-    transform: none !important;
+  .test-player__wallpaper-bg {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100svh !important;
+    aspect-ratio: auto !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    opacity: 0.42 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+  }
+
+  .test-player__wallpaper-bg img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 
   .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper {
@@ -351,23 +397,7 @@
   }
 
   .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper > .qmedia-asset {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    max-width: none !important;
-    height: 100svh !important;
-    aspect-ratio: auto !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    opacity: 0.42 !important;
-    z-index: 0 !important;
-    pointer-events: none !important;
-  }
-
-  .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper > .qmedia-asset img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    display: none !important;
   }
 
   .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-mobile-wallpaper > .qmedia-content {

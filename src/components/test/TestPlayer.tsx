@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
-import { QuestionMediaLayout } from './QuestionMediaBlock';
+import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
 import './test-player.css';
 
@@ -68,6 +68,12 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
   const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
+  const mobileWallpaperMedia = q?.media?.url
+    && q.media.layoutMobile === 'wallpaper'
+    && q.media.type !== 'video'
+    && forceDevice !== 'desktop'
+    ? q.media
+    : undefined;
   const welcomeScreen = test.welcome_screen?.enabled ? test.welcome_screen : null;
   const endScreen = test.end_screen?.enabled ? test.end_screen : null;
   const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
@@ -379,6 +385,10 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
   return (
     <Wrapper>
+      <QuestionMediaBlock
+        media={mobileWallpaperMedia}
+        className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
+      />
       <AnimatePresence mode="wait" custom={navDirection} initial={false}>
       <motion.div
         ref={cardRef}
