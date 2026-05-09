@@ -407,7 +407,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
           ))}
         </div>
         {(opts.minLabel || opts.maxLabel) ? (
-          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#64748b', fontSize: 12 }}>
+          <div className="test-opinion-scale__labels" style={{ display: 'flex', justifyContent: 'space-between', color: '#64748b', fontSize: 12 }}>
             <span>{opts.minLabel}</span>
             <span>{opts.maxLabel}</span>
           </div>
@@ -479,6 +479,7 @@ function choiceButtonStyle(selected: boolean): React.CSSProperties {
 const opinionScaleWrap: React.CSSProperties = {
   width: 361,
   maxWidth: '100%',
+  marginInline: 'auto',
   display: 'flex',
   flexDirection: 'column',
   gap: 6,
@@ -524,4 +525,3 @@ function ratingButton(selected: boolean): React.CSSProperties {
     cursor: 'pointer',
   };
 }
-

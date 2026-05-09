@@ -32,7 +32,7 @@ export function NumberSettings({ q, onChange, isGraded }: {
         </Field>
       )}
       <Field label="Limits">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+        <div style={{ display: 'grid', gap: 8 }}>
           <input
             type="number"
             value={opts.min ?? ''}

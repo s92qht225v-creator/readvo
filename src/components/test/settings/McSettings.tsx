@@ -3,8 +3,7 @@
 import type { MultipleChoiceOptions } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
 import {
-  Field, addChoiceBtn, correctAnswerBlock, correctAnswerChip,
-  correctAnswerChoices, correctAnswerLabel, inputStyle, removeBtn,
+  Field, addChoiceBtn, inputStyle, removeBtn,
 } from './_shared';
 
 export function McSettings({ q, onChange, isGraded }: {
@@ -83,32 +82,6 @@ export function McSettings({ q, onChange, isGraded }: {
           </div>
         ))}
         <button type="button" onClick={addChoice} style={addChoiceBtn}>+ Add choice</button>
-        {isGraded ? (
-          <div style={correctAnswerBlock}>
-            <div style={correctAnswerLabel}>Correct answer</div>
-            <div style={correctAnswerChoices}>
-              {choices.map((choice, index) => {
-                const active = opts.allowMultiple
-                  ? (opts.correctIndexes ?? (opts.correctIndex != null ? [opts.correctIndex] : [])).includes(index)
-                  : opts.correctIndex === index;
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => toggleCorrect(index)}
-                    style={correctAnswerChip(active)}
-                  >
-                    <span>{String.fromCharCode(65 + index)}</span>
-                    <span>{choice || `Choice ${index + 1}`}</span>
-                  </button>
-                );
-              })}
-            </div>
-            <div style={{ fontSize: 11, color: '#94a3b8' }}>
-              {opts.allowMultiple ? 'Select every correct answer.' : 'Select the one correct answer.'}
-            </div>
-          </div>
-        ) : null}
       </div>
     </Field>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
@@ -46,6 +46,15 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const [phase, setPhase] = useState<Phase>('intro');
   const [name, setName] = useState('');
   const [idx, setIdx] = useState(0);
+  // 1 = forward (next), -1 = backward (prev). Drives slide direction.
+  const [navDirection, setNavDirection] = useState<1 | -1>(1);
+  const goToIdx = useCallback((nextIdx: number | ((prev: number) => number)) => {
+    setIdx(prev => {
+      const next = typeof nextIdx === 'function' ? nextIdx(prev) : nextIdx;
+      setNavDirection(next >= prev ? 1 : -1);
+      return next;
+    });
+  }, []);
   const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
   const [errMsg, setErrMsg] = useState<string | null>(null);
   const [done, setDone] = useState<Done | null>(null);
@@ -166,7 +175,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
       if (e.key === 'Enter') {
         if (canAdvance) {
           if (isLast) submit();
-          else setIdx(i => i + 1);
+          else goToIdx(i => i + 1);
         }
         return;
       }
@@ -372,12 +381,15 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
   return (
     <Wrapper>
+      <AnimatePresence mode="wait" custom={navDirection} initial={false}>
       <motion.div
         ref={cardRef}
         key={q.id}
-        initial={{ opacity: 0, x: 32 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.2 }}
+        custom={navDirection}
+        variants={cardSlideVariants}
+        initial="enter"
+        animate="center"
+        exit="exit"
         className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
@@ -393,6 +405,9 @@ export function TestPlayer({ test, forceDevice }: Props) {
             forceDevice={forceDevice}
             header={(
               <>
+                <span className="test-player__number" style={questionNumberBadge}>
+                  {idx + 1}
+                </span>
                 <h2 className="test-player__title" style={questionTitle}>
                   {q.prompt}
                 </h2>
@@ -409,12 +424,13 @@ export function TestPlayer({ test, forceDevice }: Props) {
                   question={q}
                   value={answer}
                   onChange={onChange}
-                  onSubmit={() => { if (canAdvance) { isLast ? submit() : setIdx(idx + 1); } }}
+                  onSubmit={() => { if (canAdvance) { isLast ? submit() : goToIdx(idx + 1); } }}
                 />
               </div>
             )}
           />
       </motion.div>
+      </AnimatePresence>
 
       <div style={progressTrack}>
         <div style={{ ...progressFill, width: `${progress}%` }} />
@@ -423,7 +439,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
       <div className="test-player__nav" style={navRow}>
         <button
           type="button"
-          onClick={() => setIdx(i => Math.max(0, i - 1))}
+          onClick={() => goToIdx(i => Math.max(0, i - 1))}
           disabled={idx === 0}
           style={secondaryButton(idx === 0)}
         >
@@ -432,7 +448,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
         <div style={shortcutHint}>Enter to continue</div>
         <button
           type="button"
-          onClick={() => isLast ? submit() : setIdx(idx + 1)}
+          onClick={() => isLast ? submit() : goToIdx(idx + 1)}
           disabled={!canAdvance || phase === 'submitting'}
           style={primaryButton(!canAdvance || phase === 'submitting')}
         >
@@ -729,6 +745,41 @@ const timerPill = (urgent: boolean): React.CSSProperties => ({
   padding: '5px 9px',
   fontVariantNumeric: 'tabular-nums',
 });
+
+// Typeform-style page transition: forward slides up, backward slides down.
+// `custom` is the direction (1 = next, -1 = prev) injected from AnimatePresence.
+const cardSlideVariants: Variants = {
+  enter: (dir: 1 | -1) => ({
+    opacity: 0,
+    y: 36 * dir,
+  }),
+  center: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.32, ease: [0.22, 1, 0.36, 1] },
+  },
+  exit: (dir: 1 | -1) => ({
+    opacity: 0,
+    y: -36 * dir,
+    transition: { duration: 0.22, ease: [0.4, 0, 1, 1] },
+  }),
+};
+
+const questionNumberBadge: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minWidth: 26,
+  padding: '2px 7px',
+  marginBottom: 14,
+  background: '#262627',
+  color: '#fff',
+  fontSize: 13,
+  fontWeight: 700,
+  lineHeight: 1.4,
+  borderRadius: 5,
+  letterSpacing: 0.2,
+};
 
 const questionTitle: React.CSSProperties = {
   fontSize: 34,

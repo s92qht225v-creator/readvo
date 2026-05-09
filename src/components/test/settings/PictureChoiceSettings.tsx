@@ -1,10 +1,11 @@
 'use client';
 
+import { useState, type CSSProperties } from 'react';
 import type { PictureChoice, PictureChoiceOptions } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
+import { MediaGalleryModal } from '../media/MediaGalleryModal';
 import {
-  Field, addChoiceBtn, correctAnswerBlock, correctAnswerChip,
-  correctAnswerChoices, correctAnswerLabel, inputStyle, removeBtn,
+  Field, addChoiceBtn, inputStyle, removeBtn,
 } from './_shared';
 
 export function PictureChoiceSettings({ q, onChange, isGraded }: {
@@ -12,6 +13,7 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
 }) {
   const opts = q.options as PictureChoiceOptions;
   const choices = opts.choices ?? [];
+  const [mediaChoiceIndex, setMediaChoiceIndex] = useState<number | null>(null);
 
   const setChoice = (i: number, patch: Partial<PictureChoice>) => {
     const next = choices.slice();
@@ -81,47 +83,85 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
                 onChange={e => setChoice(i, { text: e.target.value })}
                 style={inputStyle}
               />
+              <button
+                type="button"
+                onClick={() => setMediaChoiceIndex(i)}
+                style={choiceMediaButton}
+                title={c.image_url ? 'Change image' : 'Add image'}
+                aria-label={c.image_url ? `Change image for choice ${i + 1}` : `Add image for choice ${i + 1}`}
+              >
+                +
+              </button>
               {choices.length > 2 ? (
                 <button type="button" onClick={() => removeChoice(i)} style={removeBtn}>×</button>
               ) : null}
             </div>
-            <input
-              type="url"
-              value={c.image_url ?? ''}
-              placeholder="Image URL (https://…)"
-              onChange={e => setChoice(i, { image_url: e.target.value || undefined })}
-              style={{ ...inputStyle, fontSize: 12 }}
-            />
+            {c.image_url ? (
+              <button
+                type="button"
+                onClick={() => setMediaChoiceIndex(i)}
+                style={choiceImagePreview}
+                title="Change image"
+              >
+                <span style={choiceMediaThumb(c.image_url)} />
+              </button>
+            ) : null}
           </div>
         ))}
         <button type="button" onClick={addChoice} style={addChoiceBtn}>+ Add choice</button>
-        {isGraded ? (
-          <div style={correctAnswerBlock}>
-            <div style={correctAnswerLabel}>Correct answer</div>
-            <div style={correctAnswerChoices}>
-              {choices.map((choice, index) => {
-                const active = opts.allowMultiple
-                  ? (opts.correctIndexes ?? (opts.correctIndex != null ? [opts.correctIndex] : [])).includes(index)
-                  : opts.correctIndex === index;
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => toggleCorrect(index)}
-                    style={correctAnswerChip(active)}
-                  >
-                    <span>{String.fromCharCode(65 + index)}</span>
-                    <span>{choice.text || `Choice ${index + 1}`}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ) : null}
         <div style={{ fontSize: 11, color: '#94a3b8' }}>
-          Paste an image URL for each choice. File upload comes later.
+          Use + to add or replace an image for each choice.
         </div>
+        {mediaChoiceIndex != null ? (
+          <MediaGalleryModal
+            q={q}
+            allowedTabs={['upload', 'image', 'gallery']}
+            onClose={() => setMediaChoiceIndex(null)}
+            onChange={() => undefined}
+            onPickMedia={(media) => {
+              setChoice(mediaChoiceIndex, { image_url: media.url });
+              setMediaChoiceIndex(null);
+            }}
+          />
+        ) : null}
       </div>
     </Field>
   );
 }
+
+const choiceMediaButton: CSSProperties = {
+  width: 34,
+  height: 34,
+  border: '1px solid #ded8d1',
+  borderRadius: 7,
+  background: '#fff',
+  color: '#2f2835',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: 22,
+  lineHeight: 1,
+  cursor: 'pointer',
+  flexShrink: 0,
+  overflow: 'hidden',
+};
+
+const choiceImagePreview: CSSProperties = {
+  width: '100%',
+  height: 120,
+  border: '1px solid #ded8d1',
+  borderRadius: 7,
+  background: '#f8f5f1',
+  padding: 0,
+  overflow: 'hidden',
+  cursor: 'pointer',
+};
+
+const choiceMediaThumb = (url: string): CSSProperties => ({
+  width: '100%',
+  height: '100%',
+  display: 'block',
+  backgroundImage: `url(${url})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+});

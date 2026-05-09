@@ -23,14 +23,13 @@ export function MatchSettings({ q, onChange }: {
     <Field label="Pairs (left ↔ right)">
       <div style={{ display: 'grid', gap: 6 }}>
         {pairs.map((p, i) => (
-          <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto', gap: 6, alignItems: 'center' }}>
+          <div key={i} style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: 6, alignItems: 'center', position: 'relative', paddingRight: pairs.length > 2 ? 20 : 0 }}>
             <input
               type="text" value={p.left}
               placeholder={`Left ${i + 1}`}
               onChange={e => setPair(i, { left: e.target.value })}
               style={inputStyle}
             />
-            <span style={{ color: '#cbd5e1' }}>↔</span>
             <input
               type="text" value={p.right}
               placeholder={`Right ${i + 1}`}
@@ -38,8 +37,14 @@ export function MatchSettings({ q, onChange }: {
               style={inputStyle}
             />
             {pairs.length > 2 ? (
-              <button type="button" onClick={() => removePair(i)} style={removeBtn}>×</button>
-            ) : <span style={{ width: 24 }} />}
+              <button
+                type="button"
+                onClick={() => removePair(i)}
+                style={{ ...removeBtn, position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)' }}
+              >
+                ×
+              </button>
+            ) : null}
           </div>
         ))}
         <button type="button" onClick={addPair} style={addChoiceBtn}>+ Add pair</button>

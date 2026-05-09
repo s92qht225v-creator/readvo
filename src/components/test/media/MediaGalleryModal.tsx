@@ -17,17 +17,28 @@ import {
   modalClose,
 } from './_styles';
 
-export function MediaGalleryModal({ q, onClose, onChange }: {
+export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTabs }: {
   q: BuilderQuestion;
   onClose: () => void;
   onChange: (q: BuilderQuestion) => void;
+  onPickMedia?: (media: QuestionMedia) => void;
+  allowedTabs?: Array<'upload' | 'image' | 'video' | 'icon' | 'gallery'>;
 }) {
-  const [tab, setTab] = useState<'upload' | 'image' | 'video' | 'icon' | 'gallery'>('upload');
+  const tabs = allowedTabs ?? ['upload', 'image', 'video', 'icon', 'gallery'];
+  const [tab, setTab] = useState<'upload' | 'image' | 'video' | 'icon' | 'gallery'>(tabs[0] ?? 'upload');
   const [url, setUrl] = useState('');
   const [alt, setAlt] = useState('');
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const pickMedia = (media: QuestionMedia) => {
+    if (onPickMedia) {
+      onPickMedia(media);
+      return;
+    }
+    onChange(setQuestionMedia(q, media));
+  };
 
   const attachUrl = async (type: 'image' | 'gif' | 'video', provider: QuestionMedia['provider'] = 'external') => {
     const trimmed = url.trim();
@@ -36,14 +47,14 @@ export function MediaGalleryModal({ q, onClose, onChange }: {
       return;
     }
     const naturalAspectRatio = type === 'video' ? undefined : await getImageAspectRatio(trimmed);
-    onChange(setQuestionMedia(q, {
+    pickMedia({
       type,
       url: trimmed,
       alt,
       provider,
       aspectRatio: type === 'video' ? undefined : 'original',
       naturalAspectRatio,
-    }));
+    });
   };
 
   const upload = async (file: File) => {
@@ -70,14 +81,14 @@ export function MediaGalleryModal({ q, onClose, onChange }: {
       setError(result.error ?? 'Upload failed.');
       return;
     }
-    onChange(setQuestionMedia(q, {
+    pickMedia({
       type: file.type === 'image/gif' ? 'gif' : 'image',
       url: result.url,
       alt,
       provider: 'upload',
       aspectRatio: 'original',
       naturalAspectRatio: await getFileImageAspectRatio(file),
-    }));
+    });
   };
 
   return (
@@ -94,7 +105,7 @@ export function MediaGalleryModal({ q, onClose, onChange }: {
             ['video', 'Video'],
             ['icon', 'Icon'],
             ['gallery', 'My gallery'],
-          ].map(([id, label]) => (
+          ].filter(([id]) => tabs.includes(id as typeof tab)).map(([id, label]) => (
             <button
               key={id}
               type="button"

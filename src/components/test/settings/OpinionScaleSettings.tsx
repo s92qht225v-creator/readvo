@@ -11,7 +11,7 @@ export function OpinionScaleSettings({ q, onChange }: {
   return (
     <div style={{ display: 'grid', gap: 10 }}>
       <Field label="Scale">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+        <div style={{ display: 'grid', gap: 8 }}>
           <input
             type="number"
             value={opts.min ?? 0}

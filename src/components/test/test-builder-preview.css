@@ -704,9 +704,21 @@
 }
 
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-short-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-long-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-number-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-dropdown-answer,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-short-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-long-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-number-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-dropdown-answer,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-short-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-short-answer {
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-long-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-number-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-dropdown-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-short-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-long-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-number-answer,
+.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-dropdown-answer {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
@@ -728,6 +740,13 @@
   flex: 1 1 0% !important;
   max-width: none !important;
   min-width: 0 !important;
+}
+
+.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--has-media.tb-preview-card--type-opinion-scale .test-opinion-scale,
+.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--has-media.tb-preview-card--type-opinion-scale .test-opinion-scale__labels {
+  width: 361px !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
 }
 
 .tb-preview-card .test-match-row,

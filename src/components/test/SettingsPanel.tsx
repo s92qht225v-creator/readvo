@@ -46,7 +46,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         </div>
       </div>
 
-      <Section title="Content">
+      <Section title="Content" hideTitle>
         <Field label="Question text">
           <textarea
             value={q.prompt}
@@ -360,10 +360,10 @@ function typeLabel(type: BuilderQuestion['type']) {
 }
 
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children, hideTitle = false }: { title: string; children: React.ReactNode; hideTitle?: boolean }) {
   return (
     <section style={sectionCard}>
-      <div style={sectionTitle}>{title}</div>
+      {hideTitle ? null : <div style={sectionTitle}>{title}</div>}
       <div style={{ display: 'grid', gap: 12 }}>{children}</div>
     </section>
   );
@@ -559,4 +559,3 @@ const mediaIconButtonDisabled = (disabled: boolean): React.CSSProperties => ({
   opacity: disabled ? 0.35 : 1,
   cursor: disabled ? 'not-allowed' : 'pointer',
 });
-

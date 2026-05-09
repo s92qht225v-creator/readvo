@@ -89,10 +89,22 @@
     margin-inline: 0 !important;
   }
 
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-dropdown-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-short-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-dropdown-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-short-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-dropdown-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-short-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-short-answer {
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-dropdown-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-number-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-short-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-long-answer {
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0 !important;
@@ -107,10 +119,22 @@
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-number .test-number-answer,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-short-text .test-short-answer,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-long-answer .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-right .test-dropdown-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-right .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-short-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-right .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-left .test-dropdown-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-left .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-short-answer,
+.test-player__card--force-desktop .qmedia-desktop-float-left .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-dropdown-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-short-answer,
-.test-player__card--force-desktop .qmedia-desktop-split-left .test-short-answer {
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-dropdown-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-number-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-short-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-long-answer {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;

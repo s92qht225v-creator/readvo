@@ -181,6 +181,7 @@ export function TestBuilder({ testId }: Props) {
   const [openQuestionMenu, setOpenQuestionMenu] = useState<{ index: number; top: number; left: number } | null>(null);
   const [shareCopied, setShareCopied] = useState(false);
   const [showAnswerKey, setShowAnswerKey] = useState(false);
+  const [showTimerModal, setShowTimerModal] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const questionsRef = useRef<BuilderQuestion[]>([]);
   const dndSensors = useSensors(
@@ -741,36 +742,6 @@ export function TestBuilder({ testId }: Props) {
                 ))}
               </div>
             ) : null}
-          </div>
-          <div className="tb-toolbar__center">
-            <button
-              type="button"
-              className={`tb-toolbar__icon-btn ${previewDevice === 'desktop' ? 'tb-toolbar__icon-btn--active' : ''}`}
-              onClick={() => setPreviewDevice('desktop')}
-              title="Desktop view"
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="2.5" width="15" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.5"/><path d="M6 15h6M9 12.5V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-            </button>
-            <button
-              type="button"
-              className={`tb-toolbar__icon-btn ${previewDevice === 'mobile' ? 'tb-toolbar__icon-btn--active' : ''}`}
-              onClick={() => setPreviewDevice('mobile')}
-              title="Mobile view"
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="4.5" y="1.5" width="9" height="15" rx="2" stroke="currentColor" strokeWidth="1.5"/><circle cx="9" cy="14" r="0.75" fill="currentColor"/></svg>
-            </button>
-            <div className="tb-toolbar__sep" />
-            <button
-              type="button"
-              className="tb-toolbar__preview-btn"
-              onClick={() => {
-                if (test.is_graded) setShowAnswerKey(true);
-              }}
-              disabled={!test.is_graded}
-              title={test.is_graded ? 'Set correct answers' : 'Answers are only used in Quiz mode'}
-            >
-              Answers
-            </button>
             {test.is_published ? (
               <button
                 type="button"
@@ -790,6 +761,45 @@ export function TestBuilder({ testId }: Props) {
                 Preview
               </button>
             )}
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => {
+                if (test.is_graded) setShowAnswerKey(true);
+              }}
+              disabled={!test.is_graded}
+              title={test.is_graded ? 'Set correct answers' : 'Answers are only used in Test mode'}
+            >
+              Answers
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => setShowTimerModal(true)}
+              title="Timer settings"
+              style={test.timer_enabled ? toolbarTimerActive : undefined}
+            >
+              Timer
+            </button>
+          </div>
+          <div />
+          <div className="tb-toolbar__right">
+            <button
+              type="button"
+              className={`tb-toolbar__icon-btn ${previewDevice === 'desktop' ? 'tb-toolbar__icon-btn--active' : ''}`}
+              onClick={() => setPreviewDevice('desktop')}
+              title="Desktop view"
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="2.5" width="15" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.5"/><path d="M6 15h6M9 12.5V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+            </button>
+            <button
+              type="button"
+              className={`tb-toolbar__icon-btn ${previewDevice === 'mobile' ? 'tb-toolbar__icon-btn--active' : ''}`}
+              onClick={() => setPreviewDevice('mobile')}
+              title="Mobile view"
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="4.5" y="1.5" width="9" height="15" rx="2" stroke="currentColor" strokeWidth="1.5"/><circle cx="9" cy="14" r="0.75" fill="currentColor"/></svg>
+            </button>
           </div>
         </div>
 
@@ -814,15 +824,6 @@ export function TestBuilder({ testId }: Props) {
 
       {/* ── Right rail: settings ─────────────────── */}
       <aside style={rightPane}>
-        <TimerSettings
-          enabled={!!test.timer_enabled}
-          seconds={test.time_limit_seconds ?? null}
-          onChange={(patch) => {
-            setTest({ ...test, ...patch });
-            updateTest(patch);
-          }}
-        />
-
         {activeBlock.kind === 'welcome' ? (
           <ScreenSettingsPanel
             kind="welcome"
@@ -902,6 +903,18 @@ export function TestBuilder({ testId }: Props) {
             setQuestions(qs => qs.map(q => (
               q.clientId === clientId ? { ...q, options: nextOptions } : q
             )));
+          }}
+        />
+      ) : null}
+
+      {activeTopTab === 'create' && showTimerModal ? (
+        <TimerModal
+          enabled={!!test.timer_enabled}
+          seconds={test.time_limit_seconds ?? null}
+          onClose={() => setShowTimerModal(false)}
+          onChange={(patch) => {
+            setTest({ ...test, ...patch });
+            updateTest(patch);
           }}
         />
       ) : null}
@@ -1246,6 +1259,30 @@ function ScreenToggle({ label, checked, onChange }: {
   );
 }
 
+function TimerModal({ enabled, seconds, onClose, onChange }: {
+  enabled: boolean;
+  seconds: number | null;
+  onClose: () => void;
+  onChange: (patch: Pick<Test, 'timer_enabled'> | Pick<Test, 'time_limit_seconds'> | Pick<Test, 'timer_enabled' | 'time_limit_seconds'>) => void;
+}) {
+  return (
+    <div
+      style={timerModalBackdrop}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Timer settings"
+      onMouseDown={onClose}
+    >
+      <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
+        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close timer settings">
+          ×
+        </button>
+        <TimerSettings enabled={enabled} seconds={seconds} onChange={onChange} />
+      </div>
+    </div>
+  );
+}
+
 function TimerSettings({ enabled, seconds, onChange }: {
   enabled: boolean;
   seconds: number | null;
@@ -1516,7 +1553,9 @@ function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qInde
           maxWidth: 'none',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: !previewOverflowing ? 'center' : 'flex-start',
+          // safe center: vertically center when content fits, fall back to
+          // flex-start when it would overflow (prevents top-crop in one paint).
+          justifyContent: 'safe center',
           overflowY: 'auto',
           // Typeform parity: desktop is full-bleed (no chrome), mobile has a
           // hairline border for visible separation against the off-white canvas.
@@ -1534,6 +1573,9 @@ function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qInde
             forceDevice={previewDevice}
             header={(
               <>
+                <span className="tb-preview-number" style={previewNumberBadge}>
+                  {qIndex + 1}
+                </span>
                 <h2 className="tb-preview-title" style={{
                   fontSize: 34, fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
                   color: q.prompt ? '#1c1626' : '#cbd5e1',
@@ -1767,7 +1809,6 @@ const screenInput: React.CSSProperties = {
 
 const timerPanel: React.CSSProperties = {
   padding: 16,
-  borderTop: '1px solid #e4ded8',
   display: 'grid',
   gap: 10,
 };
@@ -1815,6 +1856,49 @@ const timerInput: React.CSSProperties = {
   ...screenInput,
   textAlign: 'center',
   fontWeight: 800,
+};
+
+const toolbarTimerActive: React.CSSProperties = {
+  borderColor: '#c4b5fd',
+  background: '#f3efff',
+  color: '#5b3db2',
+};
+
+const timerModalBackdrop: React.CSSProperties = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: 130,
+  background: 'rgba(15, 23, 42, 0.22)',
+  display: 'flex',
+  alignItems: 'flex-start',
+  justifyContent: 'center',
+  paddingTop: 96,
+};
+
+const timerModal: React.CSSProperties = {
+  position: 'relative',
+  width: 360,
+  maxWidth: 'calc(100vw - 32px)',
+  borderRadius: 10,
+  background: '#fff',
+  boxShadow: '0 18px 60px rgba(47, 40, 53, 0.22), 0 1px 4px rgba(47, 40, 53, 0.12)',
+  border: '1px solid #e4ded8',
+};
+
+const timerModalClose: React.CSSProperties = {
+  position: 'absolute',
+  top: 10,
+  right: 10,
+  width: 30,
+  height: 30,
+  border: 'none',
+  borderRadius: 6,
+  background: 'transparent',
+  color: '#8b848f',
+  fontSize: 24,
+  lineHeight: 1,
+  cursor: 'pointer',
+  zIndex: 1,
 };
 
 const screenCharCount: React.CSSProperties = {
@@ -2224,6 +2308,22 @@ const previewHint: React.CSSProperties = {
   fontStyle: 'italic',
   marginBottom: 32,
   fontWeight: 500,
+};
+
+const previewNumberBadge: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minWidth: 26,
+  padding: '2px 7px',
+  marginBottom: 14,
+  background: '#262627',
+  color: '#fff',
+  fontSize: 13,
+  fontWeight: 700,
+  lineHeight: 1.4,
+  borderRadius: 5,
+  letterSpacing: 0.2,
 };
 
 const previewAnswerArea: React.CSSProperties = {

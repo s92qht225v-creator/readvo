@@ -1,8 +1,7 @@
 'use client';
 
 import {
-  Field, addChoiceBtn, correctAnswerBlock, correctAnswerChip,
-  correctAnswerChoices, correctAnswerLabel, inputStyle, removeBtn,
+  Field, addChoiceBtn, inputStyle, removeBtn,
 } from './_shared';
 
 export function ChoiceListSettings({ choices, minChoices, isGraded, correctIndexes, multipleCorrect, onChoices, onCorrect }: {
@@ -69,30 +68,6 @@ export function ChoiceListSettings({ choices, minChoices, isGraded, correctIndex
           );
         })}
         <button type="button" onClick={addChoice} style={addChoiceBtn}>+ Add choice</button>
-        {isGraded ? (
-          <div style={correctAnswerBlock}>
-            <div style={correctAnswerLabel}>Correct answer</div>
-            <div style={correctAnswerChoices}>
-              {choices.map((choice, i) => {
-                const active = correctIndexes.includes(i);
-                return (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => toggleCorrect(i)}
-                    style={correctAnswerChip(active)}
-                  >
-                    <span>{String.fromCharCode(65 + i)}</span>
-                    <span>{choice || `Choice ${i + 1}`}</span>
-                  </button>
-                );
-              })}
-            </div>
-            <div style={{ fontSize: 11, color: '#94a3b8' }}>
-              {multipleCorrect ? 'Select every correct answer.' : 'Select the one correct answer.'}
-            </div>
-          </div>
-        ) : null}
       </div>
     </Field>
   );

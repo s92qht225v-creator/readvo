@@ -13905,11 +13905,8 @@ body {
 .test-preview-shell--desktop .test-player__card--no-media {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
-}
-
-.test-preview-shell--desktop .test-player__card--overflowing {
-  justify-content: flex-start !important;
+  /* safe center: center when content fits, fall back to start on overflow. */
+  justify-content: safe center !important;
 }
 
 .test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-right),
@@ -13970,11 +13967,8 @@ body {
   box-shadow: 0 12px 36px rgba(47, 40, 53, 0.06) !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
-}
-
-.test-preview-shell--mobile .test-player__card--overflowing {
-  justify-content: flex-start !important;
+  /* safe center: center when content fits, fall back to start on overflow. */
+  justify-content: safe center !important;
 }
 
 .test-preview-shell--mobile .test-player__card::-webkit-scrollbar {
@@ -13986,7 +13980,7 @@ body {
   right: 14px !important;
 }
 
-.test-preview-shell--mobile .test-player__card--no-media .test-player__title {
+.test-preview-shell--mobile .test-player__card--no-media:has(.test-player__timer-floating) .test-player__title {
   padding-right: 78px !important;
   box-sizing: border-box !important;
 }
@@ -14040,8 +14034,12 @@ body {
 
 .test-preview-shell--mobile .qmedia-layout > .qmedia-content > .qmedia-header,
 .test-preview-shell--mobile .qmedia-layout > .qmedia-content > .qmedia-answer {
-  width: 303px !important;
+  /* width: 100% makes the section fill the card's content area so the
+     303px option column inside (with its own margin-inline: auto) centers
+     symmetrically — was 303px which left-aligned within a 320px parent. */
+  width: 100% !important;
   max-width: 100% !important;
+  margin-inline: auto !important;
 }
 
 .test-preview-shell--mobile .qmedia-mobile-stack > .qmedia-content > .qmedia-header {
@@ -14093,19 +14091,31 @@ body {
 
 .test-preview-shell--mobile .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-layout {
   width: 100% !important;
-  height: 100% !important;
+  /* grow with content so wallpaper's own padding-bottom applies on overflow. */
+  height: auto !important;
+  min-height: 100% !important;
   max-width: none !important;
+  /* prevent the parent flex container from shrinking the wallpaper below its
+     intrinsic content height (otherwise content overflows out of the
+     wallpaper's padding-bottom zone with no buffer at the card edge). */
+  flex-shrink: 0 !important;
 }
 
 .test-preview-shell--mobile .qmedia-mobile-wallpaper {
   width: 100% !important;
-  height: 100% !important;
+  /* grow to content height (drop fixed `height: 100%` so the wallpaper's own
+     padding-bottom applies even when content overflows the card). */
+  height: auto !important;
   min-height: 100% !important;
   max-width: none !important;
-  justify-content: center !important;
-  overflow: hidden !important;
+  /* safe center: center content when it fits, fall back to flex-start
+     when it would otherwise overflow above the card bounds. */
+  justify-content: safe center !important;
+  /* visible (not hidden) so overflow content can scroll within the card. */
+  overflow: visible !important;
   border-radius: 0 !important;
-  padding: 154px 27px 30px !important;
+  /* trimmed top padding (was 154px which pushed content way down). */
+  padding: 36px 27px 30px !important;
 }
 
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-asset {
@@ -14116,7 +14126,8 @@ body {
   max-width: none !important;
   aspect-ratio: auto !important;
   border-radius: 0 !important;
-  opacity: 1 !important;
+  /* dim the wallpaper so overlay text/badge stays readable */
+  opacity: 0.42 !important;
   z-index: 0 !important;
 }
 
@@ -14156,6 +14167,9 @@ body {
 .test-preview-shell--mobile .test-fill-blanks {
   width: 303px !important;
   max-width: 100% !important;
+  /* center the 303px column inside the 320px card content area so the
+     left/right gaps from the card edge match. */
+  margin-inline: auto !important;
 }
 
 .test-preview-shell--mobile .test-question-options,
@@ -14441,6 +14455,13 @@ body {
     flex: 1 1 0% !important;
     max-width: none !important;
     min-width: 0 !important;
+  }
+
+  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--has-media.test-player__card--type-opinion-scale .test-opinion-scale,
+  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--has-media.test-player__card--type-opinion-scale .test-opinion-scale__labels {
+    width: 361px !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
 }
 
