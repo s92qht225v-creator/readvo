@@ -381,7 +381,11 @@
     z-index: 1 !important;
   }
 
-  .test-player__inner:has(.qmedia-mobile-wallpaper) + .test-player__nav {
+  .test-player__inner:has(.qmedia-mobile-wallpaper) .test-player__nav {
     background: transparent !important;
+  }
+
+  .test-player__nav button {
+    border-radius: 3px !important;
   }
 }
