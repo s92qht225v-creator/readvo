@@ -377,8 +377,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
   if (!q) return null;
 
-  const progress = ((idx + 1) / total) * 100;
-
   return (
     <Wrapper>
       <AnimatePresence mode="wait" custom={navDirection} initial={false}>
@@ -431,10 +429,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
           />
       </motion.div>
       </AnimatePresence>
-
-      <div className="test-player__progress" style={progressTrack}>
-        <div style={{ ...progressFill, width: `${progress}%` }} />
-      </div>
 
       <div className="test-player__nav" style={navRow}>
         <button
@@ -799,20 +793,6 @@ const questionDescription: React.CSSProperties = {
 
 const answerWrap: React.CSSProperties = {
   marginTop: 4,
-};
-
-const progressTrack: React.CSSProperties = {
-  height: 6,
-  background: 'rgba(47,37,51,0.12)',
-  borderRadius: 999,
-  margin: '22px 4px 0',
-  overflow: 'hidden',
-};
-
-const progressFill: React.CSSProperties = {
-  height: '100%',
-  background: 'linear-gradient(90deg, #2f2533, #8b5cf6)',
-  transition: 'width 0.3s ease',
 };
 
 const navRow: React.CSSProperties = {
