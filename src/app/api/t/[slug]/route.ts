@@ -34,6 +34,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
     slug: test.slug,
     title: test.title,
     description: test.description,
+    theme: test.theme,
     welcome_screen: test.welcome_screen,
     end_screen: test.end_screen,
     timer_enabled: !!test.timer_enabled,

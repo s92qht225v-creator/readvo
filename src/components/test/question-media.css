@@ -1351,3 +1351,38 @@
   padding: 22px;
   background: transparent;
 }
+
+.qmedia-layout .test-question-option,
+.qmedia-layout .test-picture-option,
+.qmedia-layout .test-dropdown-answer,
+.qmedia-layout .test-number-answer,
+.qmedia-layout .test-short-answer,
+.qmedia-layout .test-long-answer,
+.qmedia-layout .test-match-choice,
+.qmedia-layout .test-match-select,
+.qmedia-layout .test-ordering-row,
+.qmedia-layout .test-opinion-scale button,
+.qmedia-layout .test-rating button {
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+}
+
+.qmedia-layout .test-question-option,
+.qmedia-layout .test-picture-option,
+.qmedia-layout .test-dropdown-answer,
+.qmedia-layout .test-number-answer,
+.qmedia-layout .test-short-answer,
+.qmedia-layout .test-long-answer,
+.qmedia-layout .test-match-choice,
+.qmedia-layout .test-match-select,
+.qmedia-layout .test-ordering-row,
+.qmedia-layout .test-opinion-scale button,
+.qmedia-layout .test-rating button {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+}
+
+.qmedia-layout .test-question-option span:first-child,
+.qmedia-layout .test-picture-option span:first-child,
+.qmedia-layout .test-ordering-row span:first-child {
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
+}

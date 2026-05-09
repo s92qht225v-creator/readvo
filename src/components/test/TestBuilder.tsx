@@ -31,6 +31,7 @@ import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId } from '@/lib/test/sanitize';
+import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
   Test, TestQuestion, QuestionType, QuestionOptions,
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
@@ -38,6 +39,7 @@ import type {
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
   PublicQuestion, TestScreenConfig,
+  TestThemeConfig,
 } from '@/lib/test/types';
 
 let cidCounter = 0;
@@ -211,6 +213,7 @@ export function TestBuilder({ testId }: Props) {
   const [shareCopied, setShareCopied] = useState(false);
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showTimerModal, setShowTimerModal] = useState(false);
+  const [showThemeModal, setShowThemeModal] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const questionsRef = useRef<BuilderQuestion[]>([]);
   const dndSensors = useSensors(
@@ -315,7 +318,7 @@ export function TestBuilder({ testId }: Props) {
     [questions],
   );
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'is_graded'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'is_graded'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -829,6 +832,14 @@ export function TestBuilder({ testId }: Props) {
             >
               Timer
             </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => setShowThemeModal(true)}
+              title="Theme settings"
+            >
+              Theme
+            </button>
           </div>
           <div />
           <div className="tb-toolbar__right">
@@ -858,7 +869,7 @@ export function TestBuilder({ testId }: Props) {
           ) : activeBlock.kind === 'end' ? (
             <ScreenPreviewCanvas screen={endScreen} fallbackTitle="Submitted" kind="end" questionCount={questions.length} previewDevice={previewDevice} />
           ) : activeQuestion ? (
-            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} />
+            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} />
           ) : (
             <div style={emptyCanvas}>
               <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>No questions yet</div>
@@ -963,6 +974,17 @@ export function TestBuilder({ testId }: Props) {
           onChange={(patch) => {
             setTest({ ...test, ...patch });
             updateTest(patch);
+          }}
+        />
+      ) : null}
+
+      {activeTopTab === 'create' && showThemeModal ? (
+        <ThemeModal
+          theme={test.theme}
+          onClose={() => setShowThemeModal(false)}
+          onChange={(nextTheme) => {
+            setTest({ ...test, theme: nextTheme });
+            updateTest({ theme: nextTheme });
           }}
         />
       ) : null}
@@ -1409,6 +1431,117 @@ function TimerSettings({ enabled, seconds, onChange }: {
   );
 }
 
+function ThemeModal({ theme, onClose, onChange }: {
+  theme?: TestThemeConfig | null;
+  onClose: () => void;
+  onChange: (theme: TestThemeConfig) => void;
+}) {
+  const normalized = normalizeTestTheme(theme);
+  const updateTheme = (patch: Partial<TestThemeConfig>) => {
+    onChange(normalizeTestTheme({ ...normalized, ...patch }));
+  };
+
+  return (
+    <div
+      style={timerModalBackdrop}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Theme settings"
+      onMouseDown={onClose}
+    >
+      <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
+        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close theme settings">
+          ×
+        </button>
+        <div style={timerPanel}>
+          <div style={timerHeader}>
+            <span style={timerIcon}>◐</span>
+            <div>
+              <div style={timerTitle}>Theme</div>
+              <div style={timerSubtitle}>Colors and text size for this test</div>
+            </div>
+          </div>
+          <ThemeColorInput label="Background" value={normalized.backgroundColor} onChange={(backgroundColor) => updateTheme({ backgroundColor })} />
+          <ThemeColorInput label="Question text" value={normalized.questionColor} onChange={(questionColor) => updateTheme({ questionColor })} />
+          <ThemeColorInput label="Answers" value={normalized.answerColor} onChange={(answerColor) => updateTheme({ answerColor })} />
+          <ThemeColorInput label="Buttons" value={normalized.buttonColor} onChange={(buttonColor) => updateTheme({ buttonColor })} />
+          <label style={themeFieldRow}>
+            <span>Text size</span>
+            <select
+              value={normalized.fontScale}
+              onChange={(event) => updateTheme({ fontScale: event.target.value as TestThemeConfig['fontScale'] })}
+              style={themeSelect}
+            >
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </label>
+          <button
+            type="button"
+            style={themeResetButton}
+            onClick={() => onChange(DEFAULT_TEST_THEME)}
+          >
+            Reset theme
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ThemeColorInput({ label, value, onChange }: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [draft, setDraft] = useState(value);
+
+  useEffect(() => {
+    setDraft(value);
+  }, [value]);
+
+  const commitDraft = () => {
+    const nextValue = draft.trim();
+    if (/^#[0-9a-fA-F]{6}$/.test(nextValue)) {
+      onChange(nextValue);
+      return;
+    }
+    setDraft(value);
+  };
+
+  return (
+    <label style={themeFieldRow}>
+      <span>{label}</span>
+      <span style={themeColorControl}>
+        <input
+          type="color"
+          value={value}
+          onChange={(event) => {
+            setDraft(event.target.value);
+            onChange(event.target.value);
+          }}
+          style={themeColorSwatch}
+          aria-label={label}
+        />
+        <input
+          type="text"
+          value={draft}
+          onChange={(event) => setDraft(event.target.value)}
+          onBlur={commitDraft}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              commitDraft();
+            }
+          }}
+          style={themeTextInput}
+          aria-label={`${label} hex color`}
+        />
+      </span>
+    </label>
+  );
+}
+
 /* ── Preview canvas: full-screen, like the player ──────────────────────── */
 function getQuestionDescription(q: BuilderQuestion): string {
   const description = (q.options as { description?: unknown }).description;
@@ -1426,9 +1559,20 @@ function previewShuffle<T>(items: T[], enabled: boolean): T[] {
   return enabled ? items.slice().reverse() : items;
 }
 
-function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qIndex: number; previewDevice: 'desktop' | 'mobile' }) {
+function PreviewCanvas({
+  q,
+  qIndex,
+  previewDevice,
+  theme,
+}: {
+  q: BuilderQuestion;
+  qIndex: number;
+  previewDevice: 'desktop' | 'mobile';
+  theme?: TestThemeConfig | null;
+}) {
   const slideSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const frameSize = BUILDER_PREVIEW_FRAME_SIZE[previewDevice];
+  const themeVars = useMemo(() => testThemeCssVars(theme), [theme]);
   const previewCardRef = useRef<HTMLDivElement | null>(null);
   const [previewOverflowing, setPreviewOverflowing] = useState(false);
   // Convert the builder question to the public shape (no answer keys)
@@ -1629,6 +1773,7 @@ function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qInde
         className={previewCardClassName}
         style={{
           ...previewCard,
+          ...themeVars,
           width: previewDevice === 'desktop' ? '100%' : frameSize.width,
           height: frameSize.height,
           minHeight: frameSize.height,
@@ -1644,6 +1789,7 @@ function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qInde
           border: previewDevice === 'mobile' ? '1px solid #ececec' : 'none',
           borderRadius: 0,
           boxShadow: 'none',
+          background: 'var(--test-theme-bg, #fff)',
           padding: previewDevice === 'mobile' ? '32px 28px' : '64px 80px',
           '--qmedia-card-pad-x': previewDevice === 'mobile' ? '28px' : '80px',
           '--qmedia-card-pad-top': previewDevice === 'mobile' ? '32px' : '64px',
@@ -1659,8 +1805,8 @@ function PreviewCanvas({ q, qIndex, previewDevice }: { q: BuilderQuestion; qInde
                   {qIndex + 1}
                 </span>
                 <h2 className="tb-preview-title" style={{
-                  fontSize: 34, fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
-                  color: q.prompt ? '#1c1626' : '#cbd5e1',
+                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
+                  color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
                   {q.prompt || 'Your question…'}
                 </h2>
@@ -1938,6 +2084,58 @@ const timerInput: React.CSSProperties = {
   ...screenInput,
   textAlign: 'center',
   fontWeight: 800,
+};
+
+const themeFieldRow: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 152px',
+  alignItems: 'center',
+  gap: 10,
+  color: '#6b6470',
+  fontSize: 14,
+};
+
+const themeColorControl: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '34px 1fr',
+  gap: 8,
+  alignItems: 'center',
+};
+
+const themeColorSwatch: React.CSSProperties = {
+  width: 34,
+  height: 34,
+  padding: 0,
+  border: '1px solid #ded8d1',
+  borderRadius: 7,
+  background: '#fff',
+  cursor: 'pointer',
+};
+
+const themeTextInput: React.CSSProperties = {
+  ...screenInput,
+  padding: '8px 9px',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const themeSelect: React.CSSProperties = {
+  ...screenInput,
+  padding: '8px 9px',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const themeResetButton: React.CSSProperties = {
+  marginTop: 4,
+  border: '1px solid #ded8d1',
+  borderRadius: 7,
+  background: '#fff',
+  color: '#2f2533',
+  padding: '9px 12px',
+  fontSize: 13,
+  fontWeight: 800,
+  cursor: 'pointer',
 };
 
 const toolbarTimerActive: React.CSSProperties = {

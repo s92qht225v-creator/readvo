@@ -5,6 +5,7 @@ import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
+import { testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
 
 interface Props {
@@ -79,6 +80,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
     ? Math.round(test.time_limit_seconds)
     : null;
+  const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -292,7 +294,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
     }
 
     return (
-      <Wrapper>
+      <Wrapper themeVars={themeVars}>
         <div style={introBadge}>{test.is_graded ? 'Graded quiz' : 'Survey'}</div>
         <h1 style={introTitle}>{test.title}</h1>
         {test.description ? (
@@ -331,7 +333,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const description = endScreen?.description || 'Your answers were submitted.';
     const buttonText = endScreen?.buttonText || '';
     return (
-      <Wrapper>
+      <Wrapper themeVars={themeVars}>
         <div style={doneMark}>✓</div>
         {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
         <h1 style={introTitle}>{title}</h1>
@@ -367,7 +369,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
   if (phase === 'error') {
     return (
-      <Wrapper>
+      <Wrapper themeVars={themeVars}>
         <h1 style={{ ...introTitle, color: '#b91c1c' }}>
           Submission failed
         </h1>
@@ -384,7 +386,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   if (!q) return null;
 
   return (
-    <Wrapper wallpaperActive={!!mobileWallpaperMedia}>
+    <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars}>
       <QuestionMediaBlock
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
@@ -466,14 +468,16 @@ export function TestPlayer({ test, forceDevice }: Props) {
 function Wrapper({
   children,
   wallpaperActive = false,
+  themeVars,
 }: {
   children: React.ReactNode
   wallpaperActive?: boolean
+  themeVars?: Record<string, string>
 }) {
   return (
     <div
       className={`test-player${wallpaperActive ? ' test-player--wallpaper-active' : ''}`}
-      style={playerShell}
+      style={{ ...playerShell, ...themeVars }}
     >
       <div className="test-player__blob" style={playerBackgroundBlob} />
       <div className="test-player__inner" style={playerInner}>{children}</div>
@@ -495,7 +499,7 @@ const playerShell: React.CSSProperties = {
   alignItems: 'center',
   justifyContent: 'center',
   padding: '36px 18px',
-  background: 'radial-gradient(circle at 16% 12%, rgba(139,92,246,0.16), transparent 28%), linear-gradient(135deg, #f7f4f1 0%, #f1ede8 100%)',
+  background: 'var(--test-theme-bg, #ffffff)',
   position: 'relative',
   overflow: 'hidden',
 };
@@ -785,7 +789,7 @@ const questionNumberBadge: React.CSSProperties = {
   minWidth: 26,
   padding: '2px 7px',
   marginBottom: 14,
-  background: '#262627',
+  background: 'var(--test-theme-button, #262627)',
   color: '#fff',
   fontSize: 13,
   fontWeight: 700,
@@ -795,11 +799,11 @@ const questionNumberBadge: React.CSSProperties = {
 };
 
 const questionTitle: React.CSSProperties = {
-  fontSize: 34,
+  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))',
   fontWeight: 400,
   margin: '0 0 12px',
   lineHeight: 1.15,
-  color: '#1c1626',
+  color: 'var(--test-theme-question, #1c1626)',
   letterSpacing: -0.6,
 };
 
@@ -830,7 +834,7 @@ const shortcutHint: React.CSSProperties = {
 
 const primaryButton = (disabled: boolean): React.CSSProperties => ({
   padding: '12px 22px',
-  background: '#2f2533',
+  background: 'var(--test-theme-button, #2f2533)',
   color: '#fff',
   border: 'none',
   borderRadius: 999,
@@ -838,13 +842,13 @@ const primaryButton = (disabled: boolean): React.CSSProperties => ({
   fontSize: 15,
   cursor: disabled ? 'not-allowed' : 'pointer',
   opacity: disabled ? 0.45 : 1,
-  boxShadow: disabled ? 'none' : '0 12px 28px rgba(47,37,51,0.16)',
+  boxShadow: disabled ? 'none' : '0 12px 28px color-mix(in srgb, var(--test-theme-button, #2f2533) 22%, transparent)',
 });
 
 const secondaryButton = (disabled: boolean): React.CSSProperties => ({
   padding: '11px 18px',
   background: '#fff',
-  color: '#2f2533',
+  color: 'var(--test-theme-button, #2f2533)',
   border: '1px solid #d8d2cc',
   borderRadius: 999,
   fontWeight: 800,

@@ -182,6 +182,7 @@ export interface Test {
   slug: string;
   title: string;
   description: string;
+  theme?: TestThemeConfig | null;
   welcome_screen?: TestScreenConfig | null;
   end_screen?: TestScreenConfig | null;
   timer_enabled?: boolean;
@@ -205,6 +206,14 @@ export interface TestScreenConfig {
   showSocialShare?: boolean;
   buttonLinkEnabled?: boolean;
   buttonLink?: string;
+}
+
+export interface TestThemeConfig {
+  backgroundColor?: string;
+  questionColor?: string;
+  answerColor?: string;
+  buttonColor?: string;
+  fontScale?: 'small' | 'medium' | 'large';
 }
 
 /* ── Public-facing (sent to the player) — no answer keys ──────────────── */
@@ -317,6 +326,7 @@ export interface PublicTest {
   slug: string;
   title: string;
   description: string;
+  theme?: TestThemeConfig | null;
   welcome_screen?: TestScreenConfig | null;
   end_screen?: TestScreenConfig | null;
   timer_enabled?: boolean;

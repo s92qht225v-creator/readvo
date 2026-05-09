@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
+import { normalizeTestTheme } from '@/lib/test/theme';
 
 async function authorize(req: NextRequest, id: string) {
   const userId = await getRequestUserId(req);
@@ -34,6 +35,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   const body = await req.json().catch(() => null) as {
     title?: string;
     description?: string;
+    theme?: unknown;
     welcome_screen?: unknown;
     end_screen?: unknown;
     timer_enabled?: boolean;
@@ -45,6 +47,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   const patch: Record<string, unknown> = {};
   if (typeof body.title === 'string') patch.title = body.title.trim();
   if (typeof body.description === 'string') patch.description = body.description;
+  if (body.theme !== undefined) patch.theme = normalizeTestTheme(body.theme);
   if (body.welcome_screen !== undefined) patch.welcome_screen = body.welcome_screen;
   if (body.end_screen !== undefined) patch.end_screen = body.end_screen;
   if (typeof body.timer_enabled === 'boolean') patch.timer_enabled = body.timer_enabled;

@@ -31,6 +31,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       slug,
       title: `${original.title} copy`,
       description: original.description ?? '',
+      ...('theme' in original ? { theme: original.theme ?? {} } : {}),
       ...('welcome_screen' in original ? { welcome_screen: original.welcome_screen ?? { enabled: false } } : {}),
       ...('end_screen' in original ? { end_screen: original.end_screen ?? { enabled: false } } : {}),
       ...('timer_enabled' in original ? { timer_enabled: !!original.timer_enabled } : {}),
