@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import type { QuestionMedia } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
 import { Field, inputStyle } from '../settings/_shared';
@@ -26,6 +27,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
   onPickMedia?: (media: QuestionMedia) => void;
   allowedTabs?: MediaGalleryTab[];
 }) {
+  const { getAccessToken } = useAuth();
   const tabs = allowedTabs ?? ['upload', 'video', 'audio', 'gallery'];
   const [tab, setTab] = useState<MediaGalleryTab>(tabs[0] ?? 'upload');
   const [url, setUrl] = useState('');
@@ -76,8 +78,10 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     const form = new FormData();
     form.append('file', file);
     form.append('questionId', q.clientId);
+    const token = await getAccessToken();
     const response = await fetch('/api/tests/media', {
       method: 'POST',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
       body: form,
     });
     const result = await response.json().catch(() => ({}));
