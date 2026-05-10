@@ -1415,7 +1415,6 @@ function TimerSettings({ enabled, seconds, onChange }: {
   return (
     <div style={timerPanel}>
       <div style={timerHeader}>
-        <span style={timerIcon}>◷</span>
         <div>
           <div style={timerTitle}>Timer</div>
           <div style={timerSubtitle}>Auto-submit when time runs out</div>
@@ -2123,18 +2122,6 @@ const timerHeader: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   gap: 10,
-};
-
-const timerIcon: React.CSSProperties = {
-  width: 30,
-  height: 30,
-  borderRadius: 10,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#ede9fe',
-  color: '#6b4fbb',
-  fontWeight: 900,
 };
 
 const timerTitle: React.CSSProperties = {
