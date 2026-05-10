@@ -827,8 +827,9 @@ export function TestBuilder({ testId }: Props) {
               className="tb-toolbar__preview-btn"
               onClick={() => setShowTimerModal(true)}
               title="Timer settings"
-              style={test.timer_enabled ? toolbarTimerActive : undefined}
+              style={test.timer_enabled ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
             >
+              <AlarmClockIcon />
               Timer
             </button>
             <button
@@ -1542,6 +1543,19 @@ function ThemeModal({ theme, onClose, onChange }: {
         </div>
       </div>
     </div>
+  );
+}
+
+function AlarmClockIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="13" r="8" />
+      <path d="M12 9v4l2 2" />
+      <path d="M5 3 2 6" />
+      <path d="m22 6-3-3" />
+      <path d="M6.38 18.7 4 21" />
+      <path d="M17.64 18.67 20 21" />
+    </svg>
   );
 }
 
@@ -2373,15 +2387,28 @@ const designControlsTitle: React.CSSProperties = {
 };
 
 const toolbarTimerActive: React.CSSProperties = {
-  borderColor: '#c4b5fd',
+  border: 'none',
   background: '#f3efff',
   color: '#5b3db2',
+};
+
+const timerToolbarButton: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+  border: 'none',
+  boxShadow: 'none',
+  color: '#6d6470',
+  fontSize: 16,
+  fontWeight: 600,
 };
 
 const designToolbarButton: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 8,
+  border: 'none',
+  boxShadow: 'none',
   color: '#6d6470',
   fontSize: 16,
   fontWeight: 600,
