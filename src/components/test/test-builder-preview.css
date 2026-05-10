@@ -1064,3 +1064,44 @@
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
+
+/* Final theme pass: keep design controls above layout-specific hard-coded defaults. */
+.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-short-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-long-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-opinion-scale button,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
+  color: var(--test-theme-answer, #0445af) !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-short-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-long-answer,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-opinion-scale button,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option span:first-child,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option span:first-child,
+.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row span:first-child {
+  color: var(--test-theme-answer, #0445af) !important;
+  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
+  border-bottom-color: var(--test-theme-answer, #0445af) !important;
+}

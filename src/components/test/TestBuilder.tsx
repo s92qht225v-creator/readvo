@@ -1467,7 +1467,9 @@ function ThemeModal({ theme, onClose, onSave }: {
   onSave: (theme: TestThemeConfig) => void;
 }) {
   const [view, setView] = useState<'themes' | 'theme-editor' | 'upload'>('themes');
+  const [themeListTab, setThemeListTab] = useState<'my-themes' | 'gallery'>('my-themes');
   const [activeTab, setActiveTab] = useState<ThemeEditorTab>('logo');
+  const [uploadTab, setUploadTab] = useState<'upload' | 'gallery'>('upload');
   const [uploadTarget, setUploadTarget] = useState<ThemeUploadTarget>('logo');
   const [draft, setDraft] = useState<TestThemeConfig>(() => normalizeTestTheme(theme));
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
@@ -1571,34 +1573,55 @@ function ThemeModal({ theme, onClose, onSave }: {
         {view === 'upload' ? (
           <div style={designModalBody}>
             <div style={designTabs} role="tablist" aria-label="Image upload sections">
-              <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+              <button
+                type="button"
+                style={{ ...designTab, ...(uploadTab === 'upload' ? designTabActive : null) }}
+                role="tab"
+                aria-selected={uploadTab === 'upload'}
+                onClick={() => setUploadTab('upload')}
+              >
                 Upload
               </button>
-              <button type="button" style={designTab} role="tab" aria-selected="false">
+              <button
+                type="button"
+                style={{ ...designTab, ...(uploadTab === 'gallery' ? designTabActive : null) }}
+                role="tab"
+                aria-selected={uploadTab === 'gallery'}
+                onClick={() => setUploadTab('gallery')}
+              >
                 My gallery
               </button>
             </div>
-            <div style={designUploadSection}>
-              <input
-                id={logoInputId}
-                type="file"
-                accept="image/png,image/jpeg,image/gif"
-                onChange={(event) => {
-                  handleLogoFile(event.target.files?.[0] ?? null);
-                  event.currentTarget.value = '';
-                }}
-                style={{ display: 'none' }}
-              />
-              <label
-                htmlFor={logoInputId}
-                style={designDropZone}
-                onDragOver={(event) => event.preventDefault()}
-                onDrop={handleLogoDrop}
-              >
-                <span><u>Upload</u> or drop an image here</span>
-                <span style={designDropZoneHint}>JPG, PNG, or GIF. Up to 4MB.</span>
-              </label>
-            </div>
+            {uploadTab === 'upload' ? (
+              <div style={designUploadSection}>
+                <input
+                  id={logoInputId}
+                  type="file"
+                  accept="image/png,image/jpeg,image/gif"
+                  onChange={(event) => {
+                    handleLogoFile(event.target.files?.[0] ?? null);
+                    event.currentTarget.value = '';
+                  }}
+                  style={{ display: 'none' }}
+                />
+                <label
+                  htmlFor={logoInputId}
+                  style={designDropZone}
+                  onDragOver={(event) => event.preventDefault()}
+                  onDrop={handleLogoDrop}
+                >
+                  <span><u>Upload</u> or drop an image here</span>
+                  <span style={designDropZoneHint}>JPG, PNG, or GIF. Up to 4MB.</span>
+                </label>
+              </div>
+            ) : (
+              <div style={designEmptyState}>
+                <span>No uploaded images yet.</span>
+                <button type="button" style={designAddLogoButton} onClick={() => setUploadTab('upload')}>
+                  Upload image
+                </button>
+              </div>
+            )}
           </div>
         ) : view === 'theme-editor' ? (
           <>
@@ -1625,7 +1648,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                       <img src={activeTheme.logoUrl} alt="" style={designLogoPreviewImage} />
                     </div>
                     <div style={designLogoActions}>
-                      <button type="button" style={designIconButton} onClick={() => { setUploadTarget('logo'); setView('upload'); }} aria-label="Replace logo">
+                      <button type="button" style={designIconButton} onClick={() => { setUploadTarget('logo'); setUploadTab('upload'); setView('upload'); }} aria-label="Replace logo">
                         <ImageReplaceIcon />
                       </button>
                       <button type="button" style={designIconButton} onClick={() => updateDraft({ logoUrl: '' })} aria-label="Remove logo">
@@ -1664,7 +1687,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                     </label>
                   </div>
                 ) : (
-                  <button type="button" style={designAddLogoButton} onClick={() => { setUploadTarget('logo'); setView('upload'); }}>
+                  <button type="button" style={designAddLogoButton} onClick={() => { setUploadTarget('logo'); setUploadTab('upload'); setView('upload'); }}>
                     <span style={designAddLogoIcon}>+</span>
                     Add logo
                   </button>
@@ -1680,6 +1703,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                   onChange={updateDraft}
                   onAddImage={() => {
                     setUploadTarget('background');
+                    setUploadTab('upload');
                     setView('upload');
                   }}
                 />
@@ -1689,68 +1713,97 @@ function ThemeModal({ theme, onClose, onSave }: {
         ) : (
           <div style={designModalBody}>
             <div style={designTabs} role="tablist" aria-label="Design sections">
-              <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+              <button
+                type="button"
+                style={{ ...designTab, ...(themeListTab === 'my-themes' ? designTabActive : null) }}
+                role="tab"
+                aria-selected={themeListTab === 'my-themes'}
+                onClick={() => setThemeListTab('my-themes')}
+              >
                 My themes
               </button>
-              <button type="button" style={designTab} role="tab" aria-selected="false">
+              <button
+                type="button"
+                style={{ ...designTab, ...(themeListTab === 'gallery' ? designTabActive : null) }}
+                role="tab"
+                aria-selected={themeListTab === 'gallery'}
+                onClick={() => setThemeListTab('gallery')}
+              >
                 Gallery
               </button>
             </div>
-            <div style={designSection}>
-              <div style={designMyThemesHeader}>
-                <span style={designSectionTitle}>My themes</span>
+            {themeListTab === 'my-themes' ? (
+              <div style={designSection}>
+                <div style={designMyThemesHeader}>
+                  <span style={designSectionTitle}>My themes</span>
+                  <button
+                    type="button"
+                    style={designAddButton}
+                    aria-label="Add theme"
+                    onClick={() => {
+                      setDraft(normalizeTestTheme({ themeName: 'My new theme' }));
+                      setView('theme-editor');
+                    }}
+                  >
+                    +
+                  </button>
+                </div>
+                {hasSavedTheme ? (
+                  <div style={designThemeCardWrap}>
+                    <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
+                      {activeTheme.logoUrl ? (
+                        <span style={designThemeLogoPreview}>
+                          <img src={activeTheme.logoUrl} alt="" style={designThemeLogoImage} />
+                        </span>
+                      ) : null}
+                      <span style={{ color: activeTheme.questionColor, fontSize: 15 }}>Question</span>
+                      <span style={{ color: activeTheme.answerColor, fontSize: 15 }}>Answer</span>
+                      <span style={{ ...designThemeSwatch, background: activeTheme.buttonColor }} />
+                      <span style={designThemeCardName}>{activeTheme.themeName}</span>
+                    </button>
+                    <button
+                      type="button"
+                      style={designThemeMenuButton}
+                      aria-label="Theme actions"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        const rect = event.currentTarget.getBoundingClientRect();
+                        setThemeMenuPosition({
+                          top: rect.bottom + 8,
+                          left: rect.left - 6,
+                        });
+                        setThemeMenuOpen(open => !open);
+                      }}
+                    >
+                      ...
+                    </button>
+                    {themeMenuOpen ? (
+                      <div style={{ ...designThemeMenu, top: themeMenuPosition.top, left: themeMenuPosition.left }}>
+                        <button type="button" style={designThemeMenuItem} onClick={renameTheme}>Rename</button>
+                        <button type="button" style={designThemeMenuItem} onClick={() => { setThemeMenuOpen(false); setView('theme-editor'); }}>Edit</button>
+                        <button type="button" style={designThemeMenuItem} onClick={duplicateTheme}>Duplicate</button>
+                        <button type="button" style={designThemeMenuItem} onClick={deleteTheme}>Delete</button>
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <div style={designEmptyState}>
+                <span>No gallery themes yet.</span>
                 <button
                   type="button"
-                  style={designAddButton}
-                  aria-label="Add theme"
+                  style={designAddLogoButton}
                   onClick={() => {
+                    setThemeListTab('my-themes');
                     setDraft(normalizeTestTheme({ themeName: 'My new theme' }));
                     setView('theme-editor');
                   }}
                 >
-                  +
+                  Create theme
                 </button>
               </div>
-              {hasSavedTheme ? (
-                <div style={designThemeCardWrap}>
-                  <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
-                    {activeTheme.logoUrl ? (
-                      <span style={designThemeLogoPreview}>
-                        <img src={activeTheme.logoUrl} alt="" style={designThemeLogoImage} />
-                      </span>
-                    ) : null}
-                    <span style={{ color: activeTheme.questionColor, fontSize: 15 }}>Question</span>
-                    <span style={{ color: activeTheme.answerColor, fontSize: 15 }}>Answer</span>
-                    <span style={{ ...designThemeSwatch, background: activeTheme.buttonColor }} />
-                    <span style={designThemeCardName}>{activeTheme.themeName}</span>
-                  </button>
-                  <button
-                    type="button"
-                    style={designThemeMenuButton}
-                    aria-label="Theme actions"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      const rect = event.currentTarget.getBoundingClientRect();
-                      setThemeMenuPosition({
-                        top: rect.bottom + 8,
-                        left: rect.left - 6,
-                      });
-                      setThemeMenuOpen(open => !open);
-                    }}
-                  >
-                    ...
-                  </button>
-                  {themeMenuOpen ? (
-                    <div style={{ ...designThemeMenu, top: themeMenuPosition.top, left: themeMenuPosition.left }}>
-                      <button type="button" style={designThemeMenuItem} onClick={renameTheme}>Rename</button>
-                      <button type="button" style={designThemeMenuItem} onClick={() => { setThemeMenuOpen(false); setView('theme-editor'); }}>Edit</button>
-                      <button type="button" style={designThemeMenuItem} onClick={duplicateTheme}>Duplicate</button>
-                      <button type="button" style={designThemeMenuItem} onClick={deleteTheme}>Delete</button>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </div>
+            )}
           </div>
         )}
       </div>
@@ -2262,9 +2315,6 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
-                <span className="tb-preview-number" style={previewNumberBadge}>
-                  {qIndex + 1}
-                </span>
                 <h2 className="tb-preview-title" style={{
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
@@ -2931,6 +2981,18 @@ const designDropZoneHint: React.CSSProperties = {
   fontSize: 14,
 };
 
+const designEmptyState: React.CSSProperties = {
+  minHeight: 220,
+  padding: '34px 32px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  justifyContent: 'center',
+  gap: 16,
+  color: '#6d6470',
+  fontSize: 16,
+};
+
 const designAddLogoButton: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
@@ -3580,22 +3642,6 @@ const previewHint: React.CSSProperties = {
   fontStyle: 'italic',
   marginBottom: 32,
   fontWeight: 500,
-};
-
-const previewNumberBadge: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  minWidth: 26,
-  padding: '2px 7px',
-  marginBottom: 14,
-  background: '#262627',
-  color: '#fff',
-  fontSize: 13,
-  fontWeight: 700,
-  lineHeight: 1.4,
-  borderRadius: 5,
-  letterSpacing: 0.2,
 };
 
 const previewAnswerArea: React.CSSProperties = {

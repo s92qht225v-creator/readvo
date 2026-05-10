@@ -428,9 +428,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
             forceDevice={forceDevice}
             header={(
               <>
-                <span className="test-player__number" style={questionNumberBadge}>
-                  {idx + 1}
-                </span>
                 <h2 className="test-player__title" style={questionTitle}>
                   {q.prompt}
                 </h2>
@@ -464,7 +461,9 @@ export function TestPlayer({ test, forceDevice }: Props) {
         >
           Back
         </button>
-        <div style={shortcutHint}>Enter to continue</div>
+        <div className="test-player__progress" style={navProgress}>
+          {idx + 1} / {total}
+        </div>
         <button
           type="button"
           onClick={() => isLast ? submit() : goToIdx(idx + 1)}
@@ -815,22 +814,6 @@ const cardSlideVariants: Variants = {
   }),
 };
 
-const questionNumberBadge: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  minWidth: 26,
-  padding: '2px 7px',
-  marginBottom: 14,
-  background: 'var(--test-theme-button, #262627)',
-  color: '#fff',
-  fontSize: 13,
-  fontWeight: 700,
-  lineHeight: 1.4,
-  borderRadius: 5,
-  letterSpacing: 0.2,
-};
-
 const questionTitle: React.CSSProperties = {
   fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))',
   fontWeight: 400,
@@ -860,10 +843,14 @@ const navRow: React.CSSProperties = {
   gap: 12,
 };
 
-const shortcutHint: React.CSSProperties = {
-  color: '#8b848f',
-  fontSize: 13,
-  fontWeight: 700,
+const navProgress: React.CSSProperties = {
+  minWidth: 58,
+  textAlign: 'center',
+  color: '#6f6772',
+  fontSize: 14,
+  fontWeight: 800,
+  letterSpacing: 0.2,
+  whiteSpace: 'nowrap',
 };
 
 const primaryButton = (disabled: boolean): React.CSSProperties => ({

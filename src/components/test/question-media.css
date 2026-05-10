@@ -1386,3 +1386,44 @@
   color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
+
+/* Final theme pass: media layout rules above include fixed Typeform-blue defaults. */
+.qmedia-layout.qmedia-layout .test-question-option,
+.qmedia-layout.qmedia-layout .test-picture-option,
+.qmedia-layout.qmedia-layout .test-dropdown-answer,
+.qmedia-layout.qmedia-layout .test-number-answer,
+.qmedia-layout.qmedia-layout .test-short-answer,
+.qmedia-layout.qmedia-layout .test-long-answer,
+.qmedia-layout.qmedia-layout .test-match-choice,
+.qmedia-layout.qmedia-layout .test-match-select,
+.qmedia-layout.qmedia-layout .test-ordering-row,
+.qmedia-layout.qmedia-layout .test-opinion-scale button,
+.qmedia-layout.qmedia-layout .test-rating button,
+.qmedia-layout.qmedia-layout .test-fill-blank-input {
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+}
+
+.qmedia-layout.qmedia-layout .test-question-option,
+.qmedia-layout.qmedia-layout .test-picture-option,
+.qmedia-layout.qmedia-layout .test-dropdown-answer,
+.qmedia-layout.qmedia-layout .test-number-answer,
+.qmedia-layout.qmedia-layout .test-short-answer,
+.qmedia-layout.qmedia-layout .test-long-answer,
+.qmedia-layout.qmedia-layout .test-match-choice,
+.qmedia-layout.qmedia-layout .test-match-select,
+.qmedia-layout.qmedia-layout .test-ordering-row,
+.qmedia-layout.qmedia-layout .test-opinion-scale button,
+.qmedia-layout.qmedia-layout .test-rating button {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+}
+
+.qmedia-layout.qmedia-layout .test-question-option span:first-child,
+.qmedia-layout.qmedia-layout .test-picture-option span:first-child,
+.qmedia-layout.qmedia-layout .test-ordering-row span:first-child {
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
+}
+
+.qmedia-layout.qmedia-layout .test-fill-blank-input {
+  border-bottom-color: var(--test-theme-answer, #0445af) !important;
+}

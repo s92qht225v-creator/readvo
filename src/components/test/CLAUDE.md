@@ -181,13 +181,12 @@ making `.qmedia-header` and `.qmedia-answer` direct flex children of
 `justify-content` apply directly to header/answer. Don't add box-affecting
 properties to `.qmedia-content` in the shell — they have no effect.
 
-## Question number badge
+## Question progress
 
-Both `TestBuilder.tsx:PreviewCanvas` and `TestPlayer.tsx` render a navy
-chip (`#262627` bg, white text, 5px radius) above the title with the
-question's 1-based index. Styles: `previewNumberBadge` (TestBuilder) and
-`questionNumberBadge` (TestPlayer). Class hooks for CSS overrides:
-`.tb-preview-number` and `.test-player__number`.
+`TestPlayer.tsx` shows progress in the bottom navigation as `current / total`
+between Back and Next. The question card itself does not render a number badge;
+keep progress chrome outside the question content so media/wallpaper layouts
+stay clean. Builder preview cards also omit the badge.
 
 ## Question transitions (animation)
 

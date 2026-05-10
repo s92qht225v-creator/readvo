@@ -101,7 +101,7 @@
   margin: 0 0.18em !important;
   line-height: 1.2 !important;
   vertical-align: baseline !important;
-  border-bottom: 1.5px solid #0445af !important;
+  border-bottom: 1.5px solid var(--test-theme-answer, #0445af) !important;
   border-radius: 1px 1px 0 0 !important;
 }
 

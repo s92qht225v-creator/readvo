@@ -14500,8 +14500,12 @@ body {
   background: linear-gradient(to top, #fff 82%, rgba(255, 255, 255, 0)) !important;
 }
 
-.test-preview-shell--mobile .test-player__nav > div {
-  display: none !important;
+.test-preview-shell--mobile .test-player__progress {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 52px !important;
+  font-size: 13px !important;
 }
 
 .test-preview-shell--mobile .test-player__nav button {
@@ -14585,8 +14589,12 @@ body {
     background: linear-gradient(to top, #fff 82%, rgba(255,255,255,0)) !important;
   }
 
-  .test-player__nav > div {
-    display: none !important;
+  .test-player__progress {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 52px !important;
+    font-size: 13px !important;
   }
 
   .test-player__nav button {
