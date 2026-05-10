@@ -84,8 +84,8 @@ function isTestFontFamily(value: unknown): value is TestFontFamily {
 }
 
 const ANSWER_RADIUS: Record<TestCornerRadius, string> = {
-  sharp: '1px',
-  soft: '7px',
+  sharp: '0px',
+  soft: '6px',
   round: '999px',
 };
 
