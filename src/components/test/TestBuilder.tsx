@@ -1471,6 +1471,7 @@ function ThemeModal({ theme, onClose, onSave }: {
   const [uploadTarget, setUploadTarget] = useState<ThemeUploadTarget>('logo');
   const [draft, setDraft] = useState<TestThemeConfig>(() => normalizeTestTheme(theme));
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
+  const [themeMenuPosition, setThemeMenuPosition] = useState({ top: 0, left: 0 });
   const logoInputId = useId();
   const activeTheme = normalizeTestTheme(draft);
   const updateDraft = (patch: TestThemeConfig) => setDraft(current => ({ ...current, ...patch }));
@@ -1703,14 +1704,6 @@ function ThemeModal({ theme, onClose, onSave }: {
               </button>
             </div>
             <div style={designSection}>
-              <div style={designBrandRow}>
-                <div style={designSectionTitle}>
-                  Brand kit themes
-                  <span style={designBrandBadge}>◇</span>
-                </div>
-                <button type="button" style={designManageButton}>Manage</button>
-              </div>
-              <div style={designDivider} />
               <div style={designMyThemesHeader}>
                 <span style={designSectionTitle}>My themes</span>
                 <button
@@ -1728,7 +1721,6 @@ function ThemeModal({ theme, onClose, onSave }: {
               {hasSavedTheme ? (
                 <div style={designThemeCardWrap}>
                   <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
-                    <span style={designThemeCardBadge}>◇</span>
                     {activeTheme.logoUrl ? (
                       <span style={designThemeLogoPreview}>
                         <img src={activeTheme.logoUrl} alt="" style={designThemeLogoImage} />
@@ -1745,13 +1737,18 @@ function ThemeModal({ theme, onClose, onSave }: {
                     aria-label="Theme actions"
                     onClick={(event) => {
                       event.stopPropagation();
+                      const rect = event.currentTarget.getBoundingClientRect();
+                      setThemeMenuPosition({
+                        top: rect.bottom + 8,
+                        left: rect.left - 6,
+                      });
                       setThemeMenuOpen(open => !open);
                     }}
                   >
                     ...
                   </button>
                   {themeMenuOpen ? (
-                    <div style={designThemeMenu}>
+                    <div style={{ ...designThemeMenu, top: themeMenuPosition.top, left: themeMenuPosition.left }}>
                       <button type="button" style={designThemeMenuItem} onClick={renameTheme}>Rename</button>
                       <button type="button" style={designThemeMenuItem} onClick={() => { setThemeMenuOpen(false); setView('theme-editor'); }}>Edit</button>
                       <button type="button" style={designThemeMenuItem} onClick={duplicateTheme}>Duplicate</button>
@@ -2516,7 +2513,7 @@ const designModal: React.CSSProperties = {
   width: 560,
   maxWidth: 'calc(100vw - 32px)',
   maxHeight: 'calc(100vh - 32px)',
-  overflow: 'auto',
+  overflow: 'visible',
   borderRadius: 18,
   background: '#fff',
   border: '3px solid #eeecef',
@@ -2621,13 +2618,6 @@ const designSection: React.CSSProperties = {
   gap: 20,
 };
 
-const designBrandRow: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 18,
-};
-
 const designSectionTitle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
@@ -2656,29 +2646,6 @@ const designBrandBadgeSmall: React.CSSProperties = {
   width: 22,
   height: 22,
   fontSize: 15,
-};
-
-const designManageButton: React.CSSProperties = {
-  border: '1px solid #dedde0',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#6a606e',
-  padding: '8px 15px',
-  fontSize: 16,
-  fontWeight: 500,
-  cursor: 'pointer',
-};
-
-const designThemeRowButton: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 18,
-  width: '100%',
-  border: 'none',
-  background: 'transparent',
-  padding: 0,
-  cursor: 'pointer',
 };
 
 const designDivider: React.CSSProperties = {
@@ -2725,13 +2692,6 @@ const designThemeCard: React.CSSProperties = {
   padding: '20px 18px 16px',
   textAlign: 'left',
   cursor: 'pointer',
-};
-
-const designThemeCardBadge: React.CSSProperties = {
-  ...designBrandBadgeSmall,
-  position: 'absolute',
-  top: 8,
-  right: 8,
 };
 
 const designThemeLogoPreview: React.CSSProperties = {
@@ -2783,10 +2743,8 @@ const designThemeMenuButton: React.CSSProperties = {
 };
 
 const designThemeMenu: React.CSSProperties = {
-  position: 'absolute',
-  top: 118,
-  left: 202,
-  zIndex: 20,
+  position: 'fixed',
+  zIndex: 220,
   width: 198,
   padding: '10px 0',
   borderRadius: 12,
