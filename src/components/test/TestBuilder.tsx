@@ -1627,14 +1627,10 @@ function ThemeModal({ theme, onClose, onSave }: {
                     </div>
                     <div style={designLogoActions}>
                       <button type="button" style={designIconButton} onClick={() => { setUploadTarget('logo'); setView('upload'); }} aria-label="Replace logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                          <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" />
-                        </svg>
+                        <ImageReplaceIcon />
                       </button>
                       <button type="button" style={designIconButton} onClick={() => updateDraft({ logoUrl: '' })} aria-label="Remove logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                          <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" />
-                        </svg>
+                        <TrashIcon />
                       </button>
                     </div>
                     <div style={designLogoSettingRow}>
@@ -1842,11 +1838,11 @@ function ThemeBackgroundPanel({ theme, onChange, onAddImage }: {
           <div style={designBackgroundPreviewRow}>
             <img src={theme.backgroundImageUrl} alt="" style={designBackgroundPreview} />
             <button type="button" style={designIconButton} onClick={onAddImage} aria-label="Replace background image">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" />
-              </svg>
+              <ImageReplaceIcon />
             </button>
-            <button type="button" style={designIconButton} onClick={() => onChange({ backgroundImageUrl: '' })} aria-label="Remove background image">×</button>
+            <button type="button" style={designIconButton} onClick={() => onChange({ backgroundImageUrl: '' })} aria-label="Remove background image">
+              <TrashIcon />
+            </button>
           </div>
         ) : (
           <button type="button" style={designAddLogoButton} onClick={onAddImage}>
@@ -1944,6 +1940,23 @@ function TextAlignIcon({ align }: { align: 'left' | 'center' | 'right' }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d={path} />
+    </svg>
+  );
+}
+
+function ImageReplaceIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M10.448 6.96a1 1 0 0 0-.13.13c-.126.144-.28.356-.524.695L8.227 9.961c-.15.208-.287.4-.415.55a1.8 1.8 0 0 1-.536.446c-.327.17-.7.23-1.065.176a1.8 1.8 0 0 1-.65-.251 9 9 0 0 1-.57-.388l-.395-.282a9 9 0 0 0-.51-.35.6.6 0 0 0-.113-.058.25.25 0 0 0-.149.028.6.6 0 0 0-.084.095 9 9 0 0 0-.35.512l-1.144 1.75a13 13 0 0 0-.554.89c-.069.128-.087.19-.091.207a.25.25 0 0 0 .086.16c.017.005.078.023.223.037.232.02.552.022 1.048.022H13.15c.481 0 .79-.001 1.013-.022a1 1 0 0 0 .215-.036.25.25 0 0 0 .088-.157 1 1 0 0 0-.08-.202 13 13 0 0 0-.51-.876L11.21 7.84c-.218-.356-.355-.58-.469-.733a1 1 0 0 0-.12-.14.25.25 0 0 0-.174-.006m-.532-1.403a1.75 1.75 0 0 1 1.342.051c.31.143.522.381.688.604.16.216.332.498.527.819l2.702 4.43c.227.372.424.695.557.966.134.274.263.608.23.981-.044.5-.3.957-.704 1.255-.302.223-.655.286-.958.314-.3.028-.679.028-1.115.028H2.923c-.451 0-.841 0-1.15-.029-.309-.028-.67-.093-.976-.323a1.75 1.75 0 0 1-.695-1.283c-.025-.382.119-.72.264-.995.146-.273.359-.6.606-.977L2.15 9.596c.147-.224.28-.43.406-.59.136-.174.302-.353.535-.482a1.75 1.75 0 0 1 1.09-.205c.264.036.484.142.673.255.176.104.375.247.592.402l.396.282c.237.17.378.27.489.336.068.04.1.053.108.056a.25.25 0 0 0 .146-.024.6.6 0 0 0 .085-.087c.083-.099.185-.24.355-.476l1.57-2.18c.22-.305.413-.574.59-.777.181-.21.412-.43.73-.55m-3.333 4.07h.001z" />
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5.405 2.499a1.412 1.412 0 1 0 0 2.824 1.412 1.412 0 0 0 0-2.824M2.493 3.911a2.912 2.912 0 1 1 5.824 0 2.912 2.912 0 0 1-5.824 0" />
+    </svg>
+  );
+}
+
+function TrashIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" />
     </svg>
   );
 }
