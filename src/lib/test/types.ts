@@ -213,7 +213,19 @@ export interface TestThemeConfig {
   questionColor?: string;
   answerColor?: string;
   buttonColor?: string;
+  buttonTextColor?: string;
   fontScale?: 'small' | 'medium' | 'large';
+  fontFamily?: 'system' | 'inter' | 'serif';
+  titleSize?: 'small' | 'medium' | 'large';
+  titleAlign?: 'left' | 'center' | 'right';
+  questionSize?: 'small' | 'medium' | 'large';
+  questionAlign?: 'left' | 'center' | 'right';
+  answerRadius?: 'sharp' | 'soft' | 'round';
+  logoUrl?: string;
+  logoAlt?: string;
+  logoSize?: 'small' | 'medium' | 'large';
+  logoAlign?: 'left' | 'center' | 'right';
+  backgroundImageUrl?: string;
 }
 
 /* ── Public-facing (sent to the player) — no answer keys ──────────────── */

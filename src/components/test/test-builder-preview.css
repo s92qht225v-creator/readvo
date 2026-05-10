@@ -802,7 +802,7 @@
 .test-player__card .test-fill-blank-input,
 .tb-preview-card .test-rating button,
 .test-player__card .test-rating button {
-  border-radius: 1px !important;
+  border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
 .tb-preview-card .test-ordering-list > div:last-child,
@@ -932,7 +932,7 @@
   --tb-answer-width: 303px;
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
-  --tb-answer-radius: 1px;
+  --tb-answer-radius: var(--test-theme-answer-radius, 1px);
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }
@@ -941,7 +941,7 @@
   --tb-answer-width: 303px;
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
-  --tb-answer-radius: 1px;
+  --tb-answer-radius: var(--test-theme-answer-radius, 1px);
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }
@@ -950,7 +950,7 @@
   --tb-answer-width: 100%;
   --tb-answer-gap: 8px;
   --tb-answer-min-height: 40px;
-  --tb-answer-radius: 1px;
+  --tb-answer-radius: var(--test-theme-answer-radius, 1px);
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }
@@ -959,7 +959,7 @@
   --tb-answer-width: 100%;
   --tb-answer-gap: 8px;
   --tb-answer-min-height: 40px;
-  --tb-answer-radius: 1px;
+  --tb-answer-radius: var(--test-theme-answer-radius, 1px);
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }

@@ -524,6 +524,10 @@ const playerShell: React.CSSProperties = {
   justifyContent: 'center',
   padding: '36px 18px',
   background: 'var(--test-theme-bg, #ffffff)',
+  backgroundImage: 'var(--test-theme-bg-image, none)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  fontFamily: 'var(--test-theme-font-family, inherit)',
   position: 'relative',
   overflow: 'hidden',
 };
@@ -826,11 +830,12 @@ const questionNumberBadge: React.CSSProperties = {
 };
 
 const questionTitle: React.CSSProperties = {
-  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))',
+  fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))',
   fontWeight: 400,
   margin: '0 0 12px',
   lineHeight: 1.15,
   color: 'var(--test-theme-question, #1c1626)',
+  textAlign: 'var(--test-theme-question-align, left)' as React.CSSProperties['textAlign'],
   letterSpacing: -0.6,
 };
 
@@ -862,7 +867,7 @@ const shortcutHint: React.CSSProperties = {
 const primaryButton = (disabled: boolean): React.CSSProperties => ({
   padding: '12px 22px',
   background: 'var(--test-theme-button, #2f2533)',
-  color: '#fff',
+  color: 'var(--test-theme-button-text, #fff)',
   border: 'none',
   borderRadius: 999,
   fontWeight: 850,

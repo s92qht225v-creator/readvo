@@ -370,7 +370,7 @@
 .test-player__card .test-long-answer,
 .test-player__card .test-fill-blank-input,
 .test-player__card .test-rating button {
-  border-radius: 1px !important;
+  border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
 .test-player__card .test-ordering-list > div:last-child {

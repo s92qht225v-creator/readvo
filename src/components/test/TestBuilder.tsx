@@ -988,7 +988,12 @@ export function TestBuilder({ testId }: Props) {
 
       {activeTopTab === 'create' && showThemeModal ? (
         <ThemeModal
+          theme={test.theme}
           onClose={() => setShowThemeModal(false)}
+          onSave={(theme) => {
+            setTest({ ...test, theme });
+            updateTest({ theme });
+          }}
         />
       ) : null}
 
@@ -1453,13 +1458,21 @@ function TimerSettings({ enabled, seconds, onChange }: {
   );
 }
 
-function ThemeModal({ onClose }: {
+type ThemeEditorTab = 'logo' | 'font' | 'buttons' | 'background';
+type ThemeUploadTarget = 'logo' | 'background';
+
+function ThemeModal({ theme, onClose, onSave }: {
+  theme?: TestThemeConfig | null;
   onClose: () => void;
+  onSave: (theme: TestThemeConfig) => void;
 }) {
-  const [view, setView] = useState<'themes' | 'theme-editor' | 'logo-upload'>('themes');
-  const [logoUrl, setLogoUrl] = useState<string | null>(null);
-  const [logoAlt, setLogoAlt] = useState('');
+  const [view, setView] = useState<'themes' | 'theme-editor' | 'upload'>('themes');
+  const [activeTab, setActiveTab] = useState<ThemeEditorTab>('logo');
+  const [uploadTarget, setUploadTarget] = useState<ThemeUploadTarget>('logo');
+  const [draft, setDraft] = useState<TestThemeConfig>(() => normalizeTestTheme(theme));
   const logoInputId = useId();
+  const activeTheme = normalizeTestTheme(draft);
+  const updateDraft = (patch: TestThemeConfig) => setDraft(current => ({ ...current, ...patch }));
   const handleLogoFile = (file: File | null) => {
     if (!file || !file.type.startsWith('image/')) return;
     if (file.size > 4 * 1024 * 1024) {
@@ -1469,7 +1482,9 @@ function ThemeModal({ onClose }: {
     const reader = new FileReader();
     reader.onload = () => {
       if (typeof reader.result === 'string') {
-        setLogoUrl(reader.result);
+        updateDraft(uploadTarget === 'logo'
+          ? { logoUrl: reader.result }
+          : { backgroundImageUrl: reader.result });
         setView('theme-editor');
       }
     };
@@ -1499,17 +1514,17 @@ function ThemeModal({ onClose }: {
             <span style={designDot} />
           </span>
           <div style={designTitle}>
-            {view === 'theme-editor' || view === 'logo-upload' ? (
+            {view === 'theme-editor' || view === 'upload' ? (
               <>
                 <button type="button" style={designBreadcrumbButton} onClick={() => setView('themes')}>
                   Design
                 </button>
                 <span style={designBreadcrumbSep}>›</span>
                 <span>My new theme</span>
-                {view === 'logo-upload' ? (
+                {view === 'upload' ? (
                   <>
                     <span style={designBreadcrumbSep}>›</span>
-                    <span>Logo</span>
+                    <span>{uploadTarget === 'logo' ? 'Logo' : 'Background image'}</span>
                   </>
                 ) : null}
               </>
@@ -1521,9 +1536,9 @@ function ThemeModal({ onClose }: {
             ×
           </button>
         </div>
-        {view === 'logo-upload' ? (
+        {view === 'upload' ? (
           <div style={designModalBody}>
-            <div style={designTabs} role="tablist" aria-label="Logo upload sections">
+            <div style={designTabs} role="tablist" aria-label="Image upload sections">
               <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
                 Upload
               </button>
@@ -1557,33 +1572,34 @@ function ThemeModal({ onClose }: {
           <>
             <div style={designModalBody}>
               <div style={designTabs} role="tablist" aria-label="Theme editor sections">
-                <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+                <button type="button" style={{ ...designTab, ...(activeTab === 'logo' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'logo'} onClick={() => setActiveTab('logo')}>
                   Logo
                   <span style={designBrandBadgeSmall}>◇</span>
                 </button>
-                <button type="button" style={designTab} role="tab" aria-selected="false">
+                <button type="button" style={{ ...designTab, ...(activeTab === 'font' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'font'} onClick={() => setActiveTab('font')}>
                   Font
                 </button>
-                <button type="button" style={designTab} role="tab" aria-selected="false">
+                <button type="button" style={{ ...designTab, ...(activeTab === 'buttons' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'buttons'} onClick={() => setActiveTab('buttons')}>
                   Buttons
                 </button>
-                <button type="button" style={designTab} role="tab" aria-selected="false">
+                <button type="button" style={{ ...designTab, ...(activeTab === 'background' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'background'} onClick={() => setActiveTab('background')}>
                   Background
                 </button>
               </div>
-              <div style={designLogoSection}>
-                {logoUrl ? (
+              {activeTab === 'logo' ? (
+                <div style={designLogoSection}>
+                {activeTheme.logoUrl ? (
                   <div style={designLogoSettings}>
                     <div style={designLogoPreviewBox}>
-                      <img src={logoUrl} alt="" style={designLogoPreviewImage} />
+                      <img src={activeTheme.logoUrl} alt="" style={designLogoPreviewImage} />
                     </div>
                     <div style={designLogoActions}>
-                      <button type="button" style={designIconButton} onClick={() => setView('logo-upload')} aria-label="Replace logo">
+                      <button type="button" style={designIconButton} onClick={() => { setUploadTarget('logo'); setView('upload'); }} aria-label="Replace logo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
                           <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" />
                         </svg>
                       </button>
-                      <button type="button" style={designIconButton} onClick={() => setLogoUrl(null)} aria-label="Remove logo">
+                      <button type="button" style={designIconButton} onClick={() => updateDraft({ logoUrl: '' })} aria-label="Remove logo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
                           <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" />
                         </svg>
@@ -1592,58 +1608,61 @@ function ThemeModal({ onClose }: {
                     <div style={designLogoSettingRow}>
                       <span>Size</span>
                       <span style={designSegmentControl}>
-                        <button type="button" style={{ ...designSegmentButton, ...designSegmentButtonActive }}>Sm</button>
-                        <button type="button" style={designSegmentButton}>Md</button>
-                        <button type="button" style={designSegmentButton}>Lg</button>
+                        {(['small', 'medium', 'large'] as const).map(size => (
+                          <button key={size} type="button" style={{ ...designSegmentButton, ...(activeTheme.logoSize === size ? designSegmentButtonActive : null) }} onClick={() => updateDraft({ logoSize: size })}>
+                            {size === 'small' ? 'Sm' : size === 'medium' ? 'Md' : 'Lg'}
+                          </button>
+                        ))}
                       </span>
                     </div>
                     <div style={designLogoSettingRow}>
                       <span>Alignment</span>
                       <span style={designSegmentControl}>
-                        <button type="button" style={{ ...designSegmentButton, ...designSegmentButtonActive }} aria-label="Align logo left">
-                          <TextAlignIcon align="left" />
-                        </button>
-                        <button type="button" style={designSegmentButton} aria-label="Align logo center">
-                          <TextAlignIcon align="center" />
-                        </button>
-                        <button type="button" style={designSegmentButton} aria-label="Align logo right">
-                          <TextAlignIcon align="right" />
-                        </button>
+                        {(['left', 'center', 'right'] as const).map(align => (
+                          <button key={align} type="button" style={{ ...designSegmentButton, ...(activeTheme.logoAlign === align ? designSegmentButtonActive : null) }} aria-label={`Align logo ${align}`} onClick={() => updateDraft({ logoAlign: align })}>
+                            <TextAlignIcon align={align} />
+                          </button>
+                        ))}
                       </span>
                     </div>
                     <label style={designLogoAltLabel}>
                       Logo alt text
                       <textarea
-                        value={logoAlt}
+                        value={activeTheme.logoAlt}
                         maxLength={125}
-                        onChange={(event) => setLogoAlt(event.target.value)}
+                        onChange={(event) => updateDraft({ logoAlt: event.target.value })}
                         style={designLogoAltInput}
                       />
-                      <span style={designLogoAltCount}>{logoAlt.length}/125</span>
+                      <span style={designLogoAltCount}>{activeTheme.logoAlt.length}/125</span>
                     </label>
                   </div>
                 ) : (
-                  <button type="button" style={designAddLogoButton} onClick={() => setView('logo-upload')}>
+                  <button type="button" style={designAddLogoButton} onClick={() => { setUploadTarget('logo'); setView('upload'); }}>
                     <span style={designAddLogoIcon}>+</span>
                     Add logo
                   </button>
                 )}
-              </div>
+                </div>
+              ) : activeTab === 'font' ? (
+                <ThemeFontPanel theme={activeTheme} onChange={updateDraft} />
+              ) : activeTab === 'buttons' ? (
+                <ThemeButtonsPanel theme={activeTheme} onChange={updateDraft} />
+              ) : (
+                <ThemeBackgroundPanel
+                  theme={activeTheme}
+                  onChange={updateDraft}
+                  onAddImage={() => {
+                    setUploadTarget('background');
+                    setView('upload');
+                  }}
+                />
+              )}
             </div>
             <div style={designSaveRow}>
-              {logoUrl ? (
-                <button
-                  type="button"
-                  style={designRevertButton}
-                  onClick={() => {
-                    setLogoUrl(null);
-                    setLogoAlt('');
-                  }}
-                >
-                  Revert
-                </button>
-              ) : null}
-              <button type="button" style={designSaveButton} onClick={onClose}>
+              <button type="button" style={designRevertButton} onClick={() => setDraft(normalizeTestTheme(theme))}>
+                Revert
+              </button>
+              <button type="button" style={designSaveButton} onClick={() => { onSave(activeTheme); onClose(); }}>
                 Save changes
               </button>
             </div>
@@ -1679,6 +1698,149 @@ function ThemeModal({ onClose }: {
   );
 }
 
+function ThemeFontPanel({ theme, onChange }: {
+  theme: Required<TestThemeConfig>;
+  onChange: (patch: TestThemeConfig) => void;
+}) {
+  return (
+    <div style={designPanel}>
+      <div style={designPanelLabel}>Font</div>
+      <select value={theme.fontFamily} onChange={(event) => onChange({ fontFamily: event.target.value as TestThemeConfig['fontFamily'] })} style={designSelect}>
+        <option value="system">System font</option>
+        <option value="inter">Inter</option>
+        <option value="serif">Serif</option>
+      </select>
+      <div style={designPanelGroup}>
+        <div style={designPanelLabel}>Color</div>
+        <ThemeColorRow label="Titles and questions" value={theme.questionColor} onChange={(color) => onChange({ questionColor: color })} />
+      </div>
+      <div style={designDivider} />
+      <div style={designPanelGroup}>
+        <div style={designPanelLabel}>Size and positioning</div>
+        <ThemeSizeAlignRow
+          label="Welcome screen and endings"
+          size={theme.titleSize}
+          align={theme.titleAlign}
+          onSize={(titleSize) => onChange({ titleSize })}
+          onAlign={(titleAlign) => onChange({ titleAlign })}
+        />
+        <ThemeSizeAlignRow
+          label="Questions"
+          size={theme.questionSize}
+          align={theme.questionAlign}
+          onSize={(questionSize) => onChange({ questionSize })}
+          onAlign={(questionAlign) => onChange({ questionAlign })}
+        />
+      </div>
+    </div>
+  );
+}
+
+function ThemeButtonsPanel({ theme, onChange }: {
+  theme: Required<TestThemeConfig>;
+  onChange: (patch: TestThemeConfig) => void;
+}) {
+  return (
+    <div style={designPanel}>
+      <div style={designPanelLabel}>Color</div>
+      <ThemeColorRow label="Buttons" value={theme.buttonColor} onChange={(color) => onChange({ buttonColor: color })} />
+      <ThemeColorRow label="Button text" value={theme.buttonTextColor} onChange={(color) => onChange({ buttonTextColor: color })} />
+      <ThemeColorRow label="Answers" value={theme.answerColor} onChange={(color) => onChange({ answerColor: color })} />
+      <div style={designDivider} />
+      <div style={designPanelGroup}>
+        <div style={designPanelLabel}>Corner radius</div>
+        <span style={designSegmentControl}>
+          {(['sharp', 'soft', 'round'] as const).map(radius => (
+            <button key={radius} type="button" style={{ ...designSegmentButton, minWidth: 41, ...(theme.answerRadius === radius ? designSegmentButtonActive : null) }} onClick={() => onChange({ answerRadius: radius })} aria-label={`${radius} answer corners`}>
+              <CornerRadiusIcon radius={radius} />
+            </button>
+          ))}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function ThemeBackgroundPanel({ theme, onChange, onAddImage }: {
+  theme: Required<TestThemeConfig>;
+  onChange: (patch: TestThemeConfig) => void;
+  onAddImage: () => void;
+}) {
+  return (
+    <div style={designPanel}>
+      <div style={designPanelLabel}>Color</div>
+      <ThemeColorRow label="Background" value={theme.backgroundColor} onChange={(color) => onChange({ backgroundColor: color })} />
+      <div style={designDivider} />
+      <div style={designPanelGroup}>
+        <div style={designPanelLabel}>Background image</div>
+        {theme.backgroundImageUrl ? (
+          <div style={designBackgroundPreviewRow}>
+            <img src={theme.backgroundImageUrl} alt="" style={designBackgroundPreview} />
+            <button type="button" style={designIconButton} onClick={onAddImage} aria-label="Replace background image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" />
+              </svg>
+            </button>
+            <button type="button" style={designIconButton} onClick={() => onChange({ backgroundImageUrl: '' })} aria-label="Remove background image">×</button>
+          </div>
+        ) : (
+          <button type="button" style={designAddLogoButton} onClick={onAddImage}>
+            <span style={designAddLogoIcon}>+</span>
+            Add image
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ThemeColorRow({ label, value, onChange }: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <label style={designColorRow}>
+      <span>{label}</span>
+      <span style={designColorButton}>
+        <span style={{ ...designColorSwatch, background: value }} />
+        <input type="color" value={value} onChange={(event) => onChange(event.target.value)} style={designColorInput} aria-label={`${label} color`} />
+        <span style={designColorChevron}>⌄</span>
+      </span>
+    </label>
+  );
+}
+
+function ThemeSizeAlignRow({ label, size, align, onSize, onAlign }: {
+  label: string;
+  size: NonNullable<TestThemeConfig['fontScale']>;
+  align: NonNullable<TestThemeConfig['titleAlign']>;
+  onSize: (size: NonNullable<TestThemeConfig['fontScale']>) => void;
+  onAlign: (align: NonNullable<TestThemeConfig['titleAlign']>) => void;
+}) {
+  return (
+    <div style={designSizeAlignRow}>
+      <span>{label}</span>
+      <div style={designSizeAlignControls}>
+        <span style={designSegmentControl}>
+          {(['small', 'medium', 'large'] as const).map(nextSize => (
+            <button key={nextSize} type="button" style={{ ...designSegmentButton, ...(size === nextSize ? designSegmentButtonActive : null) }} onClick={() => onSize(nextSize)}>
+              {nextSize === 'small' ? 'Sm' : nextSize === 'medium' ? 'Md' : 'Lg'}
+            </button>
+          ))}
+        </span>
+        <span style={designSegmentControl}>
+          {(['left', 'center'] as const).map(nextAlign => (
+            <button key={nextAlign} type="button" style={{ ...designSegmentButton, ...(align === nextAlign ? designSegmentButtonActive : null) }} onClick={() => onAlign(nextAlign)} aria-label={`Align ${label} ${nextAlign}`}>
+              <TextAlignIcon align={nextAlign} />
+            </button>
+          ))}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function AlarmClockIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -1707,6 +1869,15 @@ function TextAlignIcon({ align }: { align: 'left' | 'center' | 'right' }) {
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
       <path d="M3 5h12M3 9h12M3 13h12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.45" />
       <path d={`M${shortX} 9h8`} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function CornerRadiusIcon({ radius }: { radius: 'sharp' | 'soft' | 'round' }) {
+  const curve = radius === 'sharp' ? 0 : radius === 'soft' ? 3 : 8;
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" viewBox="0 0 24 18" aria-hidden="true">
+      <path d={`M5 13V7a${curve} ${curve} 0 0 1 ${curve} -${curve}h10`} stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
     </svg>
   );
 }
@@ -1959,6 +2130,10 @@ function PreviewCanvas({
           borderRadius: 0,
           boxShadow: 'none',
           background: 'var(--test-theme-bg, #fff)',
+          backgroundImage: 'var(--test-theme-bg-image, none)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          fontFamily: 'var(--test-theme-font-family, inherit)',
           padding: previewDevice === 'mobile' ? '32px 28px' : '64px 80px',
           '--qmedia-card-pad-x': previewDevice === 'mobile' ? '28px' : '80px',
           '--qmedia-card-pad-top': previewDevice === 'mobile' ? '32px' : '64px',
@@ -1974,8 +2149,9 @@ function PreviewCanvas({
                   {qIndex + 1}
                 </span>
                 <h2 className="tb-preview-title" style={{
-                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
+                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
+                  textAlign: 'var(--test-theme-question-align, left)' as React.CSSProperties['textAlign'],
                 }}>
                   {q.prompt || 'Your question…'}
                 </h2>
@@ -2447,6 +2623,106 @@ const designAddButton: React.CSSProperties = {
 
 const designLogoSection: React.CSSProperties = {
   padding: '18px 22px 16px',
+};
+
+const designPanel: React.CSSProperties = {
+  display: 'grid',
+  gap: 20,
+  padding: '18px 20px 16px',
+  maxHeight: 395,
+  overflowY: 'auto',
+  scrollbarWidth: 'thin',
+};
+
+const designPanelGroup: React.CSSProperties = {
+  display: 'grid',
+  gap: 14,
+};
+
+const designPanelLabel: React.CSSProperties = {
+  color: '#2f2533',
+  fontSize: 15,
+  fontWeight: 500,
+};
+
+const designSelect: React.CSSProperties = {
+  width: '100%',
+  height: 34,
+  border: '1px solid #dedde0',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#6a606e',
+  padding: '0 12px',
+  fontSize: 15,
+  fontFamily: 'inherit',
+};
+
+const designColorRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  color: '#6a606e',
+  fontSize: 15,
+};
+
+const designColorButton: React.CSSProperties = {
+  width: 49,
+  height: 32,
+  border: '1px solid #cfcbd2',
+  borderRadius: 4,
+  background: '#fff',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 7,
+  position: 'relative',
+};
+
+const designColorSwatch: React.CSSProperties = {
+  width: 12,
+  height: 16,
+  borderRadius: 999,
+  display: 'inline-block',
+};
+
+const designColorChevron: React.CSSProperties = {
+  color: '#6a606e',
+  fontSize: 16,
+  lineHeight: 1,
+  transform: 'translateY(-1px)',
+};
+
+const designColorInput: React.CSSProperties = {
+  position: 'absolute',
+  inset: 0,
+  opacity: 0,
+  cursor: 'pointer',
+};
+
+const designSizeAlignRow: React.CSSProperties = {
+  display: 'grid',
+  gap: 8,
+  color: '#6a606e',
+  fontSize: 15,
+};
+
+const designSizeAlignControls: React.CSSProperties = {
+  display: 'flex',
+  gap: 16,
+};
+
+const designBackgroundPreviewRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 12,
+};
+
+const designBackgroundPreview: React.CSSProperties = {
+  width: 78,
+  height: 48,
+  objectFit: 'cover',
+  borderRadius: 6,
+  border: '1px solid #dedde0',
 };
 
 const designUploadSection: React.CSSProperties = {
