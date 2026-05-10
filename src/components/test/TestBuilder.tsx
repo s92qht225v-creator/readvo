@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
+import { useEffect, useState, useCallback, useMemo, useRef, useId } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 import {
   closestCenter,
@@ -1456,7 +1456,29 @@ function TimerSettings({ enabled, seconds, onChange }: {
 function ThemeModal({ onClose }: {
   onClose: () => void;
 }) {
-  const [view, setView] = useState<'themes' | 'theme-editor'>('themes');
+  const [view, setView] = useState<'themes' | 'theme-editor' | 'logo-upload'>('themes');
+  const [logoUrl, setLogoUrl] = useState<string | null>(null);
+  const [logoAlt, setLogoAlt] = useState('');
+  const logoInputId = useId();
+  const handleLogoFile = (file: File | null) => {
+    if (!file || !file.type.startsWith('image/')) return;
+    if (file.size > 4 * 1024 * 1024) {
+      window.alert('Image must be 4MB or smaller.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === 'string') {
+        setLogoUrl(reader.result);
+        setView('theme-editor');
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+  const handleLogoDrop: React.DragEventHandler<HTMLLabelElement> = (event) => {
+    event.preventDefault();
+    handleLogoFile(event.dataTransfer.files?.[0] ?? null);
+  };
 
   return (
     <div
@@ -1477,13 +1499,19 @@ function ThemeModal({ onClose }: {
             <span style={designDot} />
           </span>
           <div style={designTitle}>
-            {view === 'theme-editor' ? (
+            {view === 'theme-editor' || view === 'logo-upload' ? (
               <>
                 <button type="button" style={designBreadcrumbButton} onClick={() => setView('themes')}>
                   Design
                 </button>
                 <span style={designBreadcrumbSep}>›</span>
                 <span>My new theme</span>
+                {view === 'logo-upload' ? (
+                  <>
+                    <span style={designBreadcrumbSep}>›</span>
+                    <span>Logo</span>
+                  </>
+                ) : null}
               </>
             ) : (
               'Design'
@@ -1493,7 +1521,39 @@ function ThemeModal({ onClose }: {
             ×
           </button>
         </div>
-        {view === 'theme-editor' ? (
+        {view === 'logo-upload' ? (
+          <div style={designModalBody}>
+            <div style={designTabs} role="tablist" aria-label="Logo upload sections">
+              <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+                Upload
+              </button>
+              <button type="button" style={designTab} role="tab" aria-selected="false">
+                My gallery
+              </button>
+            </div>
+            <div style={designUploadSection}>
+              <input
+                id={logoInputId}
+                type="file"
+                accept="image/png,image/jpeg,image/gif"
+                onChange={(event) => {
+                  handleLogoFile(event.target.files?.[0] ?? null);
+                  event.currentTarget.value = '';
+                }}
+                style={{ display: 'none' }}
+              />
+              <label
+                htmlFor={logoInputId}
+                style={designDropZone}
+                onDragOver={(event) => event.preventDefault()}
+                onDrop={handleLogoDrop}
+              >
+                <span><u>Upload</u> or drop an image here</span>
+                <span style={designDropZoneHint}>JPG, PNG, or GIF. Up to 4MB.</span>
+              </label>
+            </div>
+          </div>
+        ) : view === 'theme-editor' ? (
           <>
             <div style={designModalBody}>
               <div style={designTabs} role="tablist" aria-label="Theme editor sections">
@@ -1512,13 +1572,77 @@ function ThemeModal({ onClose }: {
                 </button>
               </div>
               <div style={designLogoSection}>
-                <button type="button" style={designAddLogoButton}>
-                  <span style={designAddLogoIcon}>+</span>
-                  Add logo
-                </button>
+                {logoUrl ? (
+                  <div style={designLogoSettings}>
+                    <div style={designLogoPreviewBox}>
+                      <img src={logoUrl} alt="" style={designLogoPreviewImage} />
+                    </div>
+                    <div style={designLogoActions}>
+                      <button type="button" style={designIconButton} onClick={() => setView('logo-upload')} aria-label="Replace logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                          <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" />
+                        </svg>
+                      </button>
+                      <button type="button" style={designIconButton} onClick={() => setLogoUrl(null)} aria-label="Remove logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                          <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div style={designLogoSettingRow}>
+                      <span>Size</span>
+                      <span style={designSegmentControl}>
+                        <button type="button" style={{ ...designSegmentButton, ...designSegmentButtonActive }}>Sm</button>
+                        <button type="button" style={designSegmentButton}>Md</button>
+                        <button type="button" style={designSegmentButton}>Lg</button>
+                      </span>
+                    </div>
+                    <div style={designLogoSettingRow}>
+                      <span>Alignment</span>
+                      <span style={designSegmentControl}>
+                        <button type="button" style={{ ...designSegmentButton, ...designSegmentButtonActive }} aria-label="Align logo left">
+                          <TextAlignIcon align="left" />
+                        </button>
+                        <button type="button" style={designSegmentButton} aria-label="Align logo center">
+                          <TextAlignIcon align="center" />
+                        </button>
+                        <button type="button" style={designSegmentButton} aria-label="Align logo right">
+                          <TextAlignIcon align="right" />
+                        </button>
+                      </span>
+                    </div>
+                    <label style={designLogoAltLabel}>
+                      Logo alt text
+                      <textarea
+                        value={logoAlt}
+                        maxLength={125}
+                        onChange={(event) => setLogoAlt(event.target.value)}
+                        style={designLogoAltInput}
+                      />
+                      <span style={designLogoAltCount}>{logoAlt.length}/125</span>
+                    </label>
+                  </div>
+                ) : (
+                  <button type="button" style={designAddLogoButton} onClick={() => setView('logo-upload')}>
+                    <span style={designAddLogoIcon}>+</span>
+                    Add logo
+                  </button>
+                )}
               </div>
             </div>
             <div style={designSaveRow}>
+              {logoUrl ? (
+                <button
+                  type="button"
+                  style={designRevertButton}
+                  onClick={() => {
+                    setLogoUrl(null);
+                    setLogoAlt('');
+                  }}
+                >
+                  Revert
+                </button>
+              ) : null}
               <button type="button" style={designSaveButton} onClick={onClose}>
                 Save changes
               </button>
@@ -1572,6 +1696,17 @@ function PreviewPlayIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M2 2.293c0-1.36 1.484-2.2 2.65-1.5l9.506 5.703a1.75 1.75 0 0 1 0 3.001L4.65 15.201C3.484 15.9 2 15.06 2 13.7zm1.879-.214a.25.25 0 0 0-.379.214V13.7a.25.25 0 0 0 .379.215l9.505-5.704a.25.25 0 0 0 0-.429z" />
+    </svg>
+  );
+}
+
+function TextAlignIcon({ align }: { align: 'left' | 'center' | 'right' }) {
+  const shortX = align === 'left' ? 3 : align === 'center' ? 5 : 7;
+
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+      <path d="M3 5h12M3 9h12M3 13h12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.45" />
+      <path d={`M${shortX} 9h8`} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
 }
@@ -2314,6 +2449,30 @@ const designLogoSection: React.CSSProperties = {
   padding: '18px 22px 16px',
 };
 
+const designUploadSection: React.CSSProperties = {
+  padding: '20px 20px 18px',
+};
+
+const designDropZone: React.CSSProperties = {
+  minHeight: 405,
+  border: '1px dashed #bdb8c0',
+  borderRadius: 7,
+  background: '#eceaec',
+  color: '#342c38',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 8,
+  fontSize: 16,
+  cursor: 'pointer',
+};
+
+const designDropZoneHint: React.CSSProperties = {
+  color: '#6d6470',
+  fontSize: 14,
+};
+
 const designAddLogoButton: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
@@ -2335,10 +2494,122 @@ const designAddLogoIcon: React.CSSProperties = {
   fontWeight: 300,
 };
 
+const designLogoSettings: React.CSSProperties = {
+  display: 'grid',
+  gap: 18,
+};
+
+const designLogoPreviewBox: React.CSSProperties = {
+  width: 212,
+  height: 60,
+  border: '1px solid #dedde0',
+  borderRadius: 10,
+  background: '#f6f5f6',
+  display: 'flex',
+  alignItems: 'center',
+  padding: 8,
+};
+
+const designLogoPreviewImage: React.CSSProperties = {
+  width: 52,
+  height: 52,
+  objectFit: 'contain',
+};
+
+const designLogoActions: React.CSSProperties = {
+  display: 'flex',
+  gap: 14,
+  marginTop: -4,
+};
+
+const designIconButton: React.CSSProperties = {
+  border: 'none',
+  background: 'transparent',
+  color: '#5f5664',
+  fontSize: 21,
+  lineHeight: 1,
+  cursor: 'pointer',
+  padding: 0,
+};
+
+const designLogoSettingRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  color: '#6d6470',
+  fontSize: 15,
+};
+
+const designSegmentControl: React.CSSProperties = {
+  display: 'inline-flex',
+  border: '1px solid #dedde0',
+  borderRadius: 6,
+  overflow: 'hidden',
+  background: '#fff',
+};
+
+const designSegmentButton: React.CSSProperties = {
+  minWidth: 34,
+  height: 24,
+  border: 'none',
+  borderLeft: '1px solid #dedde0',
+  background: '#fff',
+  color: '#6d6470',
+  fontSize: 14,
+  cursor: 'pointer',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 0,
+};
+
+const designSegmentButtonActive: React.CSSProperties = {
+  background: '#eeecef',
+  borderLeft: 'none',
+  color: '#3f3645',
+};
+
+const designLogoAltLabel: React.CSSProperties = {
+  display: 'grid',
+  gap: 8,
+  color: '#2f2533',
+  fontSize: 15,
+};
+
+const designLogoAltInput: React.CSSProperties = {
+  minHeight: 80,
+  border: '1px solid #dedde0',
+  borderRadius: 10,
+  background: '#fff',
+  padding: 10,
+  resize: 'vertical',
+  font: 'inherit',
+  outline: 'none',
+};
+
+const designLogoAltCount: React.CSSProperties = {
+  color: '#8b848f',
+  fontSize: 13,
+  textAlign: 'right',
+  marginTop: -4,
+};
+
 const designSaveRow: React.CSSProperties = {
   display: 'flex',
+  alignItems: 'center',
   justifyContent: 'flex-end',
+  gap: 10,
   paddingTop: 8,
+};
+
+const designRevertButton: React.CSSProperties = {
+  border: 'none',
+  background: 'transparent',
+  color: '#6a606e',
+  padding: '10px 8px',
+  fontSize: 16,
+  fontWeight: 500,
+  cursor: 'pointer',
 };
 
 const designSaveButton: React.CSSProperties = {
