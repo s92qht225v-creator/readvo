@@ -506,7 +506,6 @@ function Wrapper({
       className={`test-player${wallpaperActive ? ' test-player--wallpaper-active' : ''}`}
       style={{ ...playerShell, ...themeVars }}
     >
-      <div className="test-player__blob" style={playerBackgroundBlob} />
       <div className="test-player__inner" style={playerInner}>{children}</div>
     </div>
   );
@@ -539,23 +538,10 @@ const playerShell: React.CSSProperties = {
   alignItems: 'center',
   justifyContent: 'center',
   padding: '36px 18px',
-  background: 'var(--test-theme-bg, #ffffff)',
-  backgroundImage: 'var(--test-theme-bg-image, none)',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  background: '#ffffff',
   fontFamily: 'var(--test-theme-font-family, inherit)',
   position: 'relative',
   overflow: 'hidden',
-};
-
-const playerBackgroundBlob: React.CSSProperties = {
-  position: 'absolute',
-  width: 420,
-  height: 420,
-  borderRadius: '50%',
-  right: -160,
-  bottom: -180,
-  background: 'rgba(47,37,51,0.08)',
 };
 
 const playerInner: React.CSSProperties = {
@@ -801,7 +787,7 @@ const chromeLayer: React.CSSProperties = {
 
 const chromeLogo = (align: 'left' | 'center' | 'right'): React.CSSProperties => ({
   position: 'absolute',
-  top: 0,
+  top: -6,
   left: align === 'left' ? 0 : align === 'center' ? '50%' : 'auto',
   right: align === 'right' ? 0 : 'auto',
   transform: align === 'center' ? 'translateX(-50%)' : 'none',

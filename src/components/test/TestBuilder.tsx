@@ -147,8 +147,8 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
 
 const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim.uz';
 // Typeform-style preview frames:
-// - Desktop fills the entire canvas as one wide white card (no chrome).
-// - Mobile is a centered 427×760 white card on a faint grey canvas (bg-contrast only).
+// - Desktop fills the available canvas as one wide framed card.
+// - Mobile is a centered 427×760 framed card on a plain white canvas.
 const BUILDER_PREVIEW_SIZE = {
   desktop: { width: 1280, height: 760 },
   mobile: { width: 480, height: 800 },
@@ -871,7 +871,7 @@ export function TestBuilder({ testId }: Props) {
         </div>
 
         {/* Canvas */}
-        <div className={`tb-canvas tb-canvas--${previewDevice}`} style={{ flex: 1, overflow: 'auto', background: '#fafafa' }}>
+        <div className={`tb-canvas tb-canvas--${previewDevice}`} style={{ flex: 1, overflow: 'auto', background: '#fff' }}>
           {activeBlock.kind === 'welcome' ? (
             <ScreenPreviewCanvas screen={welcomeScreen} fallbackTitle={test.title} kind="welcome" questionCount={questions.length} previewDevice={previewDevice} />
           ) : activeBlock.kind === 'end' ? (
@@ -2293,13 +2293,12 @@ function PreviewCanvas({
           // flex-start when it would overflow (prevents top-crop in one paint).
           justifyContent: 'safe center',
           overflowY: 'auto',
-          // Typeform parity: desktop is full-bleed (no chrome), mobile has a
-          // hairline border for visible separation against the off-white canvas.
-          border: previewDevice === 'mobile' ? '1px solid #ececec' : 'none',
-          borderRadius: 0,
-          boxShadow: 'none',
-          background: 'var(--test-theme-bg, #fff)',
-          backgroundImage: 'var(--test-theme-bg-image, none)',
+          boxSizing: 'border-box',
+          border: '1px solid #ded8d2',
+          borderRadius: 7,
+          boxShadow: '0 14px 36px rgba(47, 40, 53, 0.06)',
+          background: '#fff',
+          backgroundImage: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           fontFamily: 'var(--test-theme-font-family, inherit)',
