@@ -792,6 +792,46 @@ export function TestBuilder({ testId }: Props) {
                 ))}
               </div>
             ) : null}
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => setShowThemeModal(true)}
+              title="Design settings"
+              style={textToolbarButton}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                <g fill="currentColor">
+                  <path d="M8 4.871a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.346 0M5.654 8.196a1.173 1.173 0 1 1-2.347 0 1.173 1.173 0 0 1 2.347 0M11.91 6.045a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.347 0" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M8 1.5a6.5 6.5 0 0 0-.021 13 8 8 0 0 0-.173-.338c-.172-.327-.399-.76-.54-1.203-.17-.532-.26-1.2.056-1.867.237-.502.6-.85 1.05-1.057.428-.196.893-.245 1.32-.238.43.006.878.07 1.296.14q.22.037.427.073c.274.048.534.094.8.13.825.114 1.349.078 1.672-.135.264-.174.613-.628.613-2.005A6.5 6.5 0 0 0 8 1.5M0 8a8 8 0 1 1 16 0c0 1.568-.395 2.67-1.287 3.258-.834.549-1.878.482-2.703.368-.292-.04-.6-.094-.889-.144l-.38-.066a7.5 7.5 0 0 0-1.072-.12c-.313-.004-.526.036-.672.103a.63.63 0 0 0-.319.333c-.088.186-.094.424.017.771.098.308.255.608.429.942l.094.181c.097.188.203.4.277.607.069.193.15.485.089.8a1.1 1.1 0 0 1-.652.805c-.28.127-.609.162-.932.162a8 8 0 0 1-8-8" />
+                </g>
+              </svg>
+              Design
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => setShowTimerModal(true)}
+              title="Timer settings"
+              style={test.timer_enabled ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
+            >
+              <AlarmClockIcon />
+              Timer
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => {
+                if (test.is_graded) setShowAnswerKey(true);
+              }}
+              disabled={!test.is_graded}
+              title={test.is_graded ? 'Set correct answers' : 'Answers are only used in Test mode'}
+              style={test.is_graded ? textToolbarButton : { ...textToolbarButton, ...disabledTextToolbarButton }}
+            >
+              Answers
+            </button>
+          </div>
+          <div />
+          <div className="tb-toolbar__right">
             {test.is_published ? (
               <button
                 type="button"
@@ -811,45 +851,6 @@ export function TestBuilder({ testId }: Props) {
                 <PreviewPlayIcon />
               </button>
             )}
-            <button
-              type="button"
-              className="tb-toolbar__preview-btn"
-              onClick={() => {
-                if (test.is_graded) setShowAnswerKey(true);
-              }}
-              disabled={!test.is_graded}
-              title={test.is_graded ? 'Set correct answers' : 'Answers are only used in Test mode'}
-            >
-              Answers
-            </button>
-            <button
-              type="button"
-              className="tb-toolbar__preview-btn"
-              onClick={() => setShowTimerModal(true)}
-              title="Timer settings"
-              style={test.timer_enabled ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
-            >
-              <AlarmClockIcon />
-              Timer
-            </button>
-            <button
-              type="button"
-              className="tb-toolbar__preview-btn"
-              onClick={() => setShowThemeModal(true)}
-              title="Design settings"
-              style={designToolbarButton}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                <g fill="currentColor">
-                  <path d="M8 4.871a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.346 0M5.654 8.196a1.173 1.173 0 1 1-2.347 0 1.173 1.173 0 0 1 2.347 0M11.91 6.045a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.347 0" />
-                  <path fillRule="evenodd" clipRule="evenodd" d="M8 1.5a6.5 6.5 0 0 0-.021 13 8 8 0 0 0-.173-.338c-.172-.327-.399-.76-.54-1.203-.17-.532-.26-1.2.056-1.867.237-.502.6-.85 1.05-1.057.428-.196.893-.245 1.32-.238.43.006.878.07 1.296.14q.22.037.427.073c.274.048.534.094.8.13.825.114 1.349.078 1.672-.135.264-.174.613-.628.613-2.005A6.5 6.5 0 0 0 8 1.5M0 8a8 8 0 1 1 16 0c0 1.568-.395 2.67-1.287 3.258-.834.549-1.878.482-2.703.368-.292-.04-.6-.094-.889-.144l-.38-.066a7.5 7.5 0 0 0-1.072-.12c-.313-.004-.526.036-.672.103a.63.63 0 0 0-.319.333c-.088.186-.094.424.017.771.098.308.255.608.429.942l.094.181c.097.188.203.4.277.607.069.193.15.485.089.8a1.1 1.1 0 0 1-.652.805c-.28.127-.609.162-.932.162a8 8 0 0 1-8-8" />
-                </g>
-              </svg>
-              Design
-            </button>
-          </div>
-          <div />
-          <div className="tb-toolbar__right">
             <button
               type="button"
               className={`tb-toolbar__icon-btn ${previewDevice === 'desktop' ? 'tb-toolbar__icon-btn--active' : ''}`}
@@ -2400,7 +2401,7 @@ const toolbarTimerActive: React.CSSProperties = {
   color: '#5b3db2',
 };
 
-const timerToolbarButton: React.CSSProperties = {
+const textToolbarButton: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 8,
@@ -2411,15 +2412,13 @@ const timerToolbarButton: React.CSSProperties = {
   fontWeight: 600,
 };
 
-const designToolbarButton: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 8,
-  border: 'none',
+const timerToolbarButton: React.CSSProperties = textToolbarButton;
+
+const disabledTextToolbarButton: React.CSSProperties = {
+  background: 'transparent',
+  color: '#aaa3ad',
   boxShadow: 'none',
-  color: '#6d6470',
-  fontSize: 16,
-  fontWeight: 600,
+  cursor: 'not-allowed',
 };
 
 const timerModalBackdrop: React.CSSProperties = {
