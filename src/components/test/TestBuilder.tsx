@@ -1392,7 +1392,17 @@ function TimerSettings({ enabled, seconds, onChange }: {
   seconds: number | null;
   onChange: (patch: Pick<Test, 'timer_enabled'> | Pick<Test, 'time_limit_seconds'> | Pick<Test, 'timer_enabled' | 'time_limit_seconds'>) => void;
 }) {
-  const minutes = Math.max(1, Math.round((seconds ?? 600) / 60));
+  const normalizedSeconds = Math.max(60, Math.round(seconds ?? 600));
+  const hours = Math.floor(normalizedSeconds / 3600);
+  const minutes = Math.floor((normalizedSeconds % 3600) / 60);
+  const updateTimeLimit = (nextHours: number, nextMinutes: number) => {
+    const safeHours = Math.min(24, Math.max(0, Number.isFinite(nextHours) ? nextHours : 0));
+    const safeMinutes = safeHours >= 24
+      ? 0
+      : Math.min(59, Math.max(0, Number.isFinite(nextMinutes) ? nextMinutes : 0));
+    const nextSeconds = Math.max(60, Math.min(86400, safeHours * 3600 + safeMinutes * 60));
+    onChange({ time_limit_seconds: nextSeconds });
+  };
 
   return (
     <div style={timerPanel}>
@@ -1412,20 +1422,30 @@ function TimerSettings({ enabled, seconds, onChange }: {
         })}
       />
       {enabled ? (
-        <label style={timerInputRow}>
-          <span>Minutes</span>
-          <input
-            type="number"
-            min={1}
-            max={1440}
-            value={minutes}
-            onChange={(event) => {
-              const nextMinutes = Math.min(1440, Math.max(1, Number(event.target.value) || 1));
-              onChange({ time_limit_seconds: nextMinutes * 60 });
-            }}
-            style={timerInput}
-          />
-        </label>
+        <div style={timerDurationGrid}>
+          <label style={timerDurationField}>
+            <span>Hours</span>
+            <input
+              type="number"
+              min={0}
+              max={24}
+              value={hours}
+              onChange={(event) => updateTimeLimit(Number(event.target.value), minutes)}
+              style={timerInput}
+            />
+          </label>
+          <label style={timerDurationField}>
+            <span>Minutes</span>
+            <input
+              type="number"
+              min={0}
+              max={59}
+              value={minutes}
+              onChange={(event) => updateTimeLimit(hours, Number(event.target.value))}
+              style={timerInput}
+            />
+          </label>
+        </div>
       ) : null}
     </div>
   );
@@ -2071,13 +2091,18 @@ const timerSubtitle: React.CSSProperties = {
   marginTop: 2,
 };
 
-const timerInputRow: React.CSSProperties = {
+const timerDurationGrid: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: '1fr 92px',
-  alignItems: 'center',
+  gridTemplateColumns: '1fr 1fr',
   gap: 10,
+};
+
+const timerDurationField: React.CSSProperties = {
+  display: 'grid',
+  gap: 6,
   color: '#6b6470',
-  fontSize: 14,
+  fontSize: 13,
+  fontWeight: 700,
 };
 
 const timerInput: React.CSSProperties = {
@@ -2150,9 +2175,9 @@ const timerModalBackdrop: React.CSSProperties = {
   zIndex: 130,
   background: 'rgba(15, 23, 42, 0.22)',
   display: 'flex',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   justifyContent: 'center',
-  paddingTop: 96,
+  padding: 16,
 };
 
 const timerModal: React.CSSProperties = {
