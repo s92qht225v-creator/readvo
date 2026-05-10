@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, type CSSProperties } from 'react';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useAuth } from '@/hooks/useAuth';
 import { authHeaders } from '@/lib/test/clientFetch';
 import type {
@@ -223,7 +224,7 @@ export function ResponsesTable({ testId }: Props) {
                           Timed out
                         </div>
                       ) : null}
-                      <span style={chevron}>{open ? '▾' : '▸'}</span>
+                      <ChevronDownIcon style={{ ...chevron, transform: open ? 'rotate(0deg)' : 'rotate(-90deg)' }} />
                     </div>
                   </button>
                   {open ? (

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { HanziCanvas } from './HanziCanvas';
 import { CoachMarkTour } from './CoachMark';
 import type { TourStep } from './CoachMark';
@@ -193,7 +194,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                       {w.radical && <span style={{ fontSize: 10, color: '#555', background: '#f0f0f3', borderRadius: 4, padding: '1px 6px' }}>{({ uz: 'kalit', ru: 'ключ', en: 'radical' } as Record<string, string>)[lang]}: {w.radical} ({lang === 'ru' ? w.radicalRu : lang === 'en' ? w.radicalEn : w.radicalUz})</span>}
                     </div>
                   </div>
-                  <span style={{ fontSize: 16, color: '#ccc', fontWeight: 300, transition: 'transform 0.2s', display: 'inline-block', transform: expandedChar === w.char ? 'rotate(180deg)' : 'rotate(0deg)' }}>▾</span>
+                  <ChevronDownIcon style={{ color: '#ccc', transition: 'transform 0.2s', flexShrink: 0, transform: expandedChar === w.char ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                 </div>
                 {expandedChar === w.char && (
                   <div style={{ padding: '0 12px 12px 12px' }}>
@@ -209,7 +210,10 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 )}
               </div>
             ))}
-            <div style={{ fontSize: 10, color: '#bbb', textAlign: 'center' as const, marginTop: 4 }}>▾ {({ uz: "bosing — misol ko'rinadi", ru: 'нажмите — покажет пример', en: 'tap to see example' } as Record<string, string>)[lang]}</div>
+            <div style={{ fontSize: 10, color: '#bbb', textAlign: 'center' as const, marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+              <ChevronDownIcon style={{ width: 12, height: 12 }} />
+              {({ uz: "bosing — misol ko'rinadi", ru: 'нажмите — покажет пример', en: 'tap to see example' } as Record<string, string>)[lang]}
+            </div>
           </div>
 
           {/* Card 2: stroke types */}

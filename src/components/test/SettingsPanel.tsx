@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import type {
   CheckboxOptions, DropdownOptions, MultipleChoiceOptions, PictureChoiceOptions,
   QuestionMedia,
@@ -278,7 +279,7 @@ function LayoutSelect<T extends string>({ label, value, options, onChange }: {
           <DeviceIconFrame device={device} selected>
             <LayoutIcon value={value} device={device} />
           </DeviceIconFrame>
-          <span style={layoutChevron}>⌄</span>
+          <ChevronDownIcon style={layoutChevron} />
         </button>
         {open ? (
           <div style={layoutPopover(options.length, openAbove, device === 'desktop')} role="menu">

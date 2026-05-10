@@ -1,6 +1,7 @@
 'use client';
 
 import { chevronIcon } from './styles';
+import { ChevronDownIcon as BaseChevronDownIcon } from '@/components/ChevronDownIcon';
 
 type SortMode = 'created' | 'updated' | 'alphabetical';
 
@@ -36,17 +37,7 @@ export function GridViewIcon() {
 }
 
 export function ChevronDownIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true" style={chevronIcon}>
-      <path
-        d="M4.75 6.25 8 9.5l3.25-3.25"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <BaseChevronDownIcon style={chevronIcon} />;
 }
 
 export function SortIcon({ mode }: { mode: SortMode }) {

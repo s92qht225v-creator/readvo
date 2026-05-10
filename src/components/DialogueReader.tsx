@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { Link } from '@/i18n/navigation';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -454,7 +455,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                       <span className="dr-grammar-pattern">{v.zh}</span>
                       <span className="dr-vocab-card-py">{v.py}</span>
                       <span className="dr-grammar-title">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
-                      <span className={`dr-grammar-arrow${expandedVocab === i ? ' dr-grammar-arrow--open' : ''}`}>▾</span>
+                      <ChevronDownIcon className={`dr-grammar-arrow${expandedVocab === i ? ' dr-grammar-arrow--open' : ''}`} />
                     </div>
                     {expandedVocab === i && v.ex && (
                       <div className="dr-grammar-expanded">
@@ -519,7 +520,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                     <div className="dr-grammar-header">
                       <span className="dr-grammar-pattern">{g.pattern}</span>
                       <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : language === 'en' ? (g.title_en || g.title_uz) : g.title_uz}</span>
-                      <span className={`dr-grammar-arrow${expandedGrammar === i ? ' dr-grammar-arrow--open' : ''}`}>▾</span>
+                      <ChevronDownIcon className={`dr-grammar-arrow${expandedGrammar === i ? ' dr-grammar-arrow--open' : ''}`} />
                     </div>
                     <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : language === 'en' ? (g.desc_en || g.desc_uz) : g.desc_uz}</div>
                     {expandedGrammar === i && (

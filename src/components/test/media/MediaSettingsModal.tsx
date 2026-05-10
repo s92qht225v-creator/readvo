@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import type { QuestionMedia } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
 import { getQuestionMedia, setQuestionMedia } from './_helpers';
@@ -140,7 +141,7 @@ function AspectRatioDropdown({ value, onChange }: {
         style={aspectDropdownButton(open)}
       >
         <span>{selected.label}</span>
-        <span style={aspectDropdownChevron}>⌄</span>
+        <ChevronDownIcon style={aspectDropdownChevron} />
       </button>
       {open ? (
         <div style={aspectDropdownMenu}>

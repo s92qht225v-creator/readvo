@@ -18,6 +18,7 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import { useSearchParams } from 'next/navigation';
+import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useAuth } from '@/hooks/useAuth';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
@@ -102,7 +103,7 @@ function TypeIcon({ type }: { type: QuestionType }) {
     case 'number':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M5.75 1.006a.75.75 0 0 1 .65.837L6.13 4h4.74l.292-2.343a.75.75 0 0 1 1.488.186L12.38 4h1.87a.75.75 0 0 1 0 1.5h-2.057l-.625 5h2.682a.75.75 0 1 1 0 1.5h-2.87l-.292 2.343a.75.75 0 0 1-1.488-.186L9.87 12H5.13l-.292 2.343a.75.75 0 0 1-1.488-.186L3.62 12H1.75a.75.75 0 0 1 0-1.5h2.057l.625-5H1.75a.75.75 0 0 1 0-1.5h2.87l.292-2.343a.75.75 0 0 1 .837-.651M5.942 5.5l-.625 5h4.739l.625-5z" fillRule="evenodd" clipRule="evenodd"/></svg>;
     case 'dropdown':
-      return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="m8 10.19 5.72-5.72a.75.75 0 1 1 1.06 1.06l-5.896 5.897a1.25 1.25 0 0 1-1.768 0L1.22 5.53a.75.75 0 1 1 1.06-1.06z" fillRule="evenodd" clipRule="evenodd"/></svg>;
+      return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M7.116 10.847a1.25 1.25 0 0 0 1.768 0L12.78 6.95a.75.75 0 0 0-1.06-1.06L8 9.61 4.28 5.89a.75.75 0 0 0-1.06 1.06z" fillRule="evenodd" clipRule="evenodd"/></svg>;
     case 'checkbox':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M2.5 2.75a.25.25 0 0 1 .25-.25h10.5a.25.25 0 0 1 .25.25v10.5a.25.25 0 0 1-.25.25H2.75a.25.25 0 0 1-.25-.25zM2.75 1A1.75 1.75 0 0 0 1 2.75v10.5c0 .966.784 1.75 1.75 1.75h10.5A1.75 1.75 0 0 0 15 13.25V2.75A1.75 1.75 0 0 0 13.25 1zm9.044 5.1a.75.75 0 0 0-1.119-1l-3.77 4.226-1.637-1.637a.75.75 0 0 0-1.06 1.06l2.198 2.199a.75.75 0 0 0 1.09-.031z" fillRule="evenodd" clipRule="evenodd"/></svg>;
     case 'opinion_scale':
@@ -128,20 +129,20 @@ function EndScreenIcon({ color = 'currentColor' }: { color?: string }) {
   );
 }
 
-const ADD_MENU_ITEMS: { type: QuestionType; icon: string; label: string }[] = [
-  { type: 'multiple_choice', icon: '◯', label: 'Multiple choice' },
-  { type: 'picture_choice', icon: '🖼', label: 'Picture choice' },
-  { type: 'true_false', icon: '✓✗', label: 'True / False' },
-  { type: 'match', icon: '↔', label: 'Match' },
-  { type: 'ordering', icon: '1↕', label: 'Ordering' },
-  { type: 'fill_blanks', icon: '___', label: 'Fill in the blanks' },
-  { type: 'short_text', icon: 'Aa', label: 'Short text' },
-  { type: 'long_answer', icon: '¶', label: 'Long answer' },
-  { type: 'number', icon: '#', label: 'Number' },
-  { type: 'dropdown', icon: '⌄', label: 'Dropdown' },
-  { type: 'checkbox', icon: '☑', label: 'Checkbox' },
-  { type: 'opinion_scale', icon: '0–10', label: 'Opinion scale' },
-  { type: 'rating', icon: '★', label: 'Rating' },
+const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
+  { type: 'multiple_choice', label: 'Multiple choice' },
+  { type: 'picture_choice', label: 'Picture choice' },
+  { type: 'true_false', label: 'True / False' },
+  { type: 'match', label: 'Match' },
+  { type: 'ordering', label: 'Ordering' },
+  { type: 'fill_blanks', label: 'Fill in the blanks' },
+  { type: 'short_text', label: 'Short text' },
+  { type: 'long_answer', label: 'Long answer' },
+  { type: 'number', label: 'Number' },
+  { type: 'dropdown', label: 'Dropdown' },
+  { type: 'checkbox', label: 'Checkbox' },
+  { type: 'opinion_scale', label: 'Opinion scale' },
+  { type: 'rating', label: 'Rating' },
 ];
 
 const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim.uz';
@@ -615,9 +616,7 @@ export function TestBuilder({ testId }: Props) {
             <option value="test">Test mode</option>
           </select>
           <span style={leftModeChevron} aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="m4.5 6.25 3.5 3.5 3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <ChevronDownIcon />
           </span>
         </div>
         <ul className="tb-left" style={{ listStyle: 'none', padding: '8px 8px 0', margin: 0, flex: 1, overflow: 'auto' }}>
@@ -1262,7 +1261,7 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
       <div style={screenSettingsTop}>
         <span style={screenTypeIcon}>{kind === 'welcome' ? <WelcomeScreenIcon color="#5b5260" /> : <EndScreenIcon color="#5b5260" />}</span>
         <span>{kind === 'welcome' ? 'Welcome Screen' : 'End Screen'}</span>
-        <span style={{ marginLeft: 'auto' }}>⌄</span>
+        <span style={{ marginLeft: 'auto', display: 'inline-flex' }}><ChevronDownIcon /></span>
       </div>
 
       {kind === 'welcome' ? (
@@ -1884,7 +1883,7 @@ function ThemeColorRow({ label, value, onChange }: {
           <DropletIcon />
         </span>
         <input type="color" value={value} onChange={(event) => onChange(event.target.value)} style={designColorInput} aria-label={`${label} color`} />
-        <span style={designColorChevron}>⌄</span>
+        <ChevronDownIcon style={designColorChevron} />
       </span>
     </label>
   );
