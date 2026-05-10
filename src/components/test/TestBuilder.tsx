@@ -1463,47 +1463,76 @@ function ThemeModal({ theme, onClose, onChange }: {
 
   return (
     <div
-      style={timerModalBackdrop}
+      style={designModalBackdrop}
       role="dialog"
       aria-modal="true"
       aria-label="Design settings"
       onMouseDown={onClose}
     >
-      <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
-        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close design settings">
-          ×
-        </button>
-        <div style={timerPanel}>
-          <div style={timerHeader}>
-            <span style={timerIcon}>◐</span>
-            <div>
-              <div style={timerTitle}>Design</div>
-              <div style={timerSubtitle}>Colors and text size for this test</div>
+      <div style={designModal} onMouseDown={(event) => event.stopPropagation()}>
+        <div style={designModalHeader}>
+          <span style={designDragDots} aria-hidden="true">
+            <span style={designDot} />
+            <span style={designDot} />
+            <span style={designDot} />
+            <span style={designDot} />
+            <span style={designDot} />
+            <span style={designDot} />
+          </span>
+          <div style={designTitle}>Design</div>
+          <button type="button" onClick={onClose} style={designModalClose} aria-label="Close design settings">
+            ×
+          </button>
+        </div>
+        <div style={designModalBody}>
+          <div style={designTabs} role="tablist" aria-label="Design sections">
+            <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+              My themes
+            </button>
+            <button type="button" style={designTab} role="tab" aria-selected="false">
+              Gallery
+            </button>
+          </div>
+          <div style={designSection}>
+            <div style={designBrandRow}>
+              <div style={designSectionTitle}>
+                Brand kit themes
+                <span style={designBrandBadge}>◇</span>
+              </div>
+              <button type="button" style={designManageButton}>Manage</button>
+            </div>
+            <div style={designDivider} />
+            <div style={designBrandRow}>
+              <div style={designSectionTitle}>My themes</div>
+              <button type="button" style={designAddButton} aria-label="Add theme">+</button>
+            </div>
+            <div style={designControlsCard}>
+              <div style={designControlsTitle}>Current theme</div>
+              <ThemeColorInput label="Background" value={normalized.backgroundColor} onChange={(backgroundColor) => updateTheme({ backgroundColor })} />
+              <ThemeColorInput label="Question text" value={normalized.questionColor} onChange={(questionColor) => updateTheme({ questionColor })} />
+              <ThemeColorInput label="Answers" value={normalized.answerColor} onChange={(answerColor) => updateTheme({ answerColor })} />
+              <ThemeColorInput label="Buttons" value={normalized.buttonColor} onChange={(buttonColor) => updateTheme({ buttonColor })} />
+              <label style={themeFieldRow}>
+                <span>Text size</span>
+                <select
+                  value={normalized.fontScale}
+                  onChange={(event) => updateTheme({ fontScale: event.target.value as TestThemeConfig['fontScale'] })}
+                  style={themeSelect}
+                >
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </label>
+              <button
+                type="button"
+                style={themeResetButton}
+                onClick={() => onChange(DEFAULT_TEST_THEME)}
+              >
+                Reset theme
+              </button>
             </div>
           </div>
-          <ThemeColorInput label="Background" value={normalized.backgroundColor} onChange={(backgroundColor) => updateTheme({ backgroundColor })} />
-          <ThemeColorInput label="Question text" value={normalized.questionColor} onChange={(questionColor) => updateTheme({ questionColor })} />
-          <ThemeColorInput label="Answers" value={normalized.answerColor} onChange={(answerColor) => updateTheme({ answerColor })} />
-          <ThemeColorInput label="Buttons" value={normalized.buttonColor} onChange={(buttonColor) => updateTheme({ buttonColor })} />
-          <label style={themeFieldRow}>
-            <span>Text size</span>
-            <select
-              value={normalized.fontScale}
-              onChange={(event) => updateTheme({ fontScale: event.target.value as TestThemeConfig['fontScale'] })}
-              style={themeSelect}
-            >
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-            </select>
-          </label>
-          <button
-            type="button"
-            style={themeResetButton}
-            onClick={() => onChange(DEFAULT_TEST_THEME)}
-          >
-            Reset theme
-          </button>
         </div>
       </div>
     </div>
@@ -2161,6 +2190,180 @@ const themeResetButton: React.CSSProperties = {
   fontSize: 13,
   fontWeight: 800,
   cursor: 'pointer',
+};
+
+const designModalBackdrop: React.CSSProperties = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: 130,
+  background: 'rgba(15, 23, 42, 0.16)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 18,
+};
+
+const designModal: React.CSSProperties = {
+  width: 560,
+  maxWidth: 'calc(100vw - 32px)',
+  maxHeight: 'calc(100vh - 32px)',
+  overflow: 'auto',
+  borderRadius: 18,
+  background: '#fff',
+  border: '3px solid #eeecef',
+  boxShadow: '0 20px 70px rgba(47, 40, 53, 0.16)',
+};
+
+const designModalHeader: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '24px 1fr 36px',
+  alignItems: 'center',
+  gap: 14,
+  padding: '24px 24px 22px',
+  color: '#564d5b',
+};
+
+const designDragDots: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 4px)',
+  gridAutoRows: 4,
+  gap: 4,
+  justifyContent: 'center',
+};
+
+const designDot: React.CSSProperties = {
+  width: 4,
+  height: 4,
+  borderRadius: 999,
+  background: '#756c79',
+};
+
+const designTitle: React.CSSProperties = {
+  fontSize: 22,
+  fontWeight: 600,
+  color: '#514857',
+};
+
+const designModalClose: React.CSSProperties = {
+  width: 36,
+  height: 36,
+  border: 'none',
+  background: 'transparent',
+  color: '#5f5664',
+  fontSize: 34,
+  lineHeight: 1,
+  cursor: 'pointer',
+};
+
+const designModalBody: React.CSSProperties = {
+  margin: '0 16px 16px',
+  borderRadius: 12,
+  overflow: 'hidden',
+  background: '#f6f5f6',
+};
+
+const designTabs: React.CSSProperties = {
+  display: 'flex',
+  gap: 34,
+  padding: '18px 32px 0',
+  borderBottom: '2px solid #ecebed',
+};
+
+const designTab: React.CSSProperties = {
+  position: 'relative',
+  border: 'none',
+  background: 'transparent',
+  padding: '0 0 18px',
+  color: '#6d6470',
+  fontSize: 20,
+  fontWeight: 600,
+  cursor: 'pointer',
+};
+
+const designTabActive: React.CSSProperties = {
+  color: '#514857',
+  boxShadow: 'inset 0 -4px 0 #514857',
+};
+
+const designSection: React.CSSProperties = {
+  padding: '26px 32px 24px',
+  display: 'grid',
+  gap: 20,
+};
+
+const designBrandRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 18,
+};
+
+const designSectionTitle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 10,
+  color: '#3f3645',
+  fontSize: 19,
+  fontWeight: 650,
+};
+
+const designBrandBadge: React.CSSProperties = {
+  width: 28,
+  height: 28,
+  borderRadius: 999,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#e6fbf8',
+  border: '1px solid #9bded8',
+  color: '#075f5b',
+  fontSize: 19,
+  fontWeight: 900,
+};
+
+const designManageButton: React.CSSProperties = {
+  border: '1px solid #dedde0',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#6a606e',
+  padding: '8px 15px',
+  fontSize: 16,
+  fontWeight: 500,
+  cursor: 'pointer',
+};
+
+const designDivider: React.CSSProperties = {
+  height: 1,
+  background: '#e2e0e3',
+};
+
+const designAddButton: React.CSSProperties = {
+  width: 32,
+  height: 32,
+  borderRadius: 8,
+  border: '1px solid #dedde0',
+  background: '#fff',
+  color: '#5d5361',
+  fontSize: 28,
+  lineHeight: 1,
+  cursor: 'pointer',
+};
+
+const designControlsCard: React.CSSProperties = {
+  display: 'grid',
+  gap: 10,
+  padding: 14,
+  borderRadius: 10,
+  background: '#fff',
+  border: '1px solid #e4e0dc',
+};
+
+const designControlsTitle: React.CSSProperties = {
+  color: '#3f3645',
+  fontSize: 13,
+  fontWeight: 850,
+  textTransform: 'uppercase',
+  letterSpacing: 0.35,
 };
 
 const toolbarTimerActive: React.CSSProperties = {
