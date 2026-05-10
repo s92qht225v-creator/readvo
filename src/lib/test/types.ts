@@ -216,7 +216,7 @@ export interface TestThemeConfig {
   buttonColor?: string;
   buttonTextColor?: string;
   fontScale?: 'small' | 'medium' | 'large';
-  fontFamily?: 'system' | 'inter' | 'serif';
+  fontFamily?: 'system' | 'inter' | 'noto-sans' | 'arial' | 'verdana' | 'trebuchet' | 'georgia' | 'garamond' | 'times' | 'courier' | 'mono' | 'serif';
   titleSize?: 'small' | 'medium' | 'large';
   titleAlign?: 'left' | 'center' | 'right';
   questionSize?: 'small' | 'medium' | 'large';

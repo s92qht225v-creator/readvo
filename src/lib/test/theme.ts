@@ -1,5 +1,17 @@
 export type TestFontScale = 'small' | 'medium' | 'large';
-export type TestFontFamily = 'system' | 'inter' | 'serif';
+export type TestFontFamily =
+  | 'system'
+  | 'inter'
+  | 'noto-sans'
+  | 'arial'
+  | 'verdana'
+  | 'trebuchet'
+  | 'georgia'
+  | 'garamond'
+  | 'times'
+  | 'courier'
+  | 'mono'
+  | 'serif';
 export type TestAlign = 'left' | 'center' | 'right';
 export type TestCornerRadius = 'sharp' | 'soft' | 'round';
 export type TestLogoSize = 'small' | 'medium' | 'large';
@@ -55,8 +67,21 @@ const FONT_SCALE: Record<TestFontScale, string> = {
 const FONT_FAMILY: Record<TestFontFamily, string> = {
   system: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   inter: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  'noto-sans': '"Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  arial: 'Arial, Helvetica, sans-serif',
+  verdana: 'Verdana, Geneva, sans-serif',
+  trebuchet: '"Trebuchet MS", Arial, sans-serif',
+  georgia: 'Georgia, "Times New Roman", serif',
+  garamond: 'Garamond, "Times New Roman", serif',
+  times: '"Times New Roman", Times, serif',
+  courier: '"Courier New", Courier, monospace',
+  mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
   serif: 'Georgia, "Times New Roman", serif',
 };
+
+function isTestFontFamily(value: unknown): value is TestFontFamily {
+  return typeof value === 'string' && value in FONT_FAMILY;
+}
 
 const ANSWER_RADIUS: Record<TestCornerRadius, string> = {
   sharp: '1px',
@@ -77,7 +102,7 @@ function cleanFontScale(value: unknown): TestFontScale {
 }
 
 function cleanFontFamily(value: unknown): TestFontFamily {
-  return value === 'inter' || value === 'serif' || value === 'system'
+  return isTestFontFamily(value)
     ? value
     : DEFAULT_TEST_THEME.fontFamily;
 }

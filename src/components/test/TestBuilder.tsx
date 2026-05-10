@@ -1769,6 +1769,15 @@ function ThemeFontPanel({ theme, onChange }: {
       <select value={theme.fontFamily} onChange={(event) => onChange({ fontFamily: event.target.value as TestThemeConfig['fontFamily'] })} style={designSelect}>
         <option value="system">System font</option>
         <option value="inter">Inter</option>
+        <option value="noto-sans">Noto Sans</option>
+        <option value="arial">Arial</option>
+        <option value="verdana">Verdana</option>
+        <option value="trebuchet">Trebuchet MS</option>
+        <option value="georgia">Georgia</option>
+        <option value="garamond">Garamond</option>
+        <option value="times">Times New Roman</option>
+        <option value="courier">Courier New</option>
+        <option value="mono">Monospace</option>
         <option value="serif">Serif</option>
       </select>
       <div style={designPanelGroup}>
@@ -1871,7 +1880,9 @@ function ThemeColorRow({ label, value, onChange }: {
     <label style={designColorRow}>
       <span>{label}</span>
       <span style={designColorButton}>
-        <span style={{ ...designColorSwatch, background: value }} />
+        <span style={{ ...designColorDroplet, color: value }}>
+          <DropletIcon />
+        </span>
         <input type="color" value={value} onChange={(event) => onChange(event.target.value)} style={designColorInput} aria-label={`${label} color`} />
         <span style={designColorChevron}>⌄</span>
       </span>
@@ -1926,6 +1937,14 @@ function PreviewPlayIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M2 2.293c0-1.36 1.484-2.2 2.65-1.5l9.506 5.703a1.75 1.75 0 0 1 0 3.001L4.65 15.201C3.484 15.9 2 15.06 2 13.7zm1.879-.214a.25.25 0 0 0-.379.214V13.7a.25.25 0 0 0 .379.215l9.505-5.704a.25.25 0 0 0 0-.429z" />
+    </svg>
+  );
+}
+
+function DropletIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M8.768 1.186a1 1 0 0 0-1.536 0C5.69 3.061 3 6.718 3 9.421 3 12.29 5.239 14.5 8 14.5s5-2.21 5-5.079c0-2.703-2.69-6.36-4.232-8.235M8 12.999c-1.902 0-3.5-1.516-3.5-3.578 0-1.83 1.79-4.588 3.5-6.78 1.71 2.192 3.5 4.95 3.5 6.78 0 2.062-1.598 3.578-3.5 3.578" />
     </svg>
   );
 }
@@ -2812,11 +2831,12 @@ const designColorButton: React.CSSProperties = {
   position: 'relative',
 };
 
-const designColorSwatch: React.CSSProperties = {
-  width: 12,
+const designColorDroplet: React.CSSProperties = {
+  width: 16,
   height: 16,
-  borderRadius: 999,
-  display: 'inline-block',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const designColorChevron: React.CSSProperties = {
