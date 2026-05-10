@@ -799,6 +799,7 @@ export function TestBuilder({ testId }: Props) {
                 onClick={() => navigateToTestHref(`/t/${test.slug}?preview=1`)}
                 title="Open public preview"
               >
+                <PreviewPlayIcon />
                 Preview
               </button>
             ) : (
@@ -808,6 +809,7 @@ export function TestBuilder({ testId }: Props) {
                 onClick={explainPreviewDisabled}
                 title="Publish before previewing"
               >
+                <PreviewPlayIcon />
                 Preview
               </button>
             )}
@@ -1555,6 +1557,14 @@ function AlarmClockIcon() {
       <path d="m22 6-3-3" />
       <path d="M6.38 18.7 4 21" />
       <path d="M17.64 18.67 20 21" />
+    </svg>
+  );
+}
+
+function PreviewPlayIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M2 2.293c0-1.36 1.484-2.2 2.65-1.5l9.506 5.703a1.75 1.75 0 0 1 0 3.001L4.65 15.201C3.484 15.9 2 15.06 2 13.7zm1.879-.214a.25.25 0 0 0-.379.214V13.7a.25.25 0 0 0 .379.215l9.505-5.704a.25.25 0 0 0 0-.429z" />
     </svg>
   );
 }
