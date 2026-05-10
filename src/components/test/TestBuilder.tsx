@@ -1986,10 +1986,14 @@ function TrashIcon() {
 }
 
 function CornerRadiusIcon({ radius }: { radius: 'sharp' | 'soft' | 'round' }) {
-  const curve = radius === 'sharp' ? 0 : radius === 'soft' ? 3 : 8;
+  const path = radius === 'sharp'
+    ? 'M0 2h16v1.5H1.5v9H16V14H0z'
+    : radius === 'soft'
+      ? 'M5.518 2H16v1.5H5.55c-.852 0-1.447 0-1.91.038-.453.037-.714.107-.911.207a2.25 2.25 0 0 0-.984.984c-.1.197-.17.458-.207.912-.037.462-.038 1.057-.038 1.909v.9c0 .852 0 1.447.038 1.91.037.453.107.714.207.912.216.423.56.767.984.983.197.1.458.17.912.207.462.037 1.057.038 1.909.038H16V14H5.518c-.813 0-1.469 0-2-.043-.546-.045-1.026-.14-1.47-.366a3.75 3.75 0 0 1-1.64-1.638c-.226-.445-.32-.925-.365-1.471C0 9.95 0 9.295 0 8.482v-.964c0-.813 0-1.469.043-2 .045-.546.14-1.026.366-1.47a3.75 3.75 0 0 1 1.639-1.64c.444-.226.924-.32 1.47-.365C4.05 2 4.706 2 5.519 2'
+      : 'M6 3.5a4.5 4.5 0 0 0 0 9h10V14H6A6 6 0 0 1 .046 8.75H0V8a6 6 0 0 1 6-6h10v1.5z';
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" viewBox="0 0 24 18" aria-hidden="true">
-      <path d={`M5 13V7a${curve} ${curve} 0 0 1 ${curve} -${curve}h10`} stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d={path} />
     </svg>
   );
 }
