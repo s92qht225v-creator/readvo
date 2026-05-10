@@ -1729,6 +1729,11 @@ function ThemeModal({ theme, onClose, onSave }: {
                 <div style={designThemeCardWrap}>
                   <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
                     <span style={designThemeCardBadge}>◇</span>
+                    {activeTheme.logoUrl ? (
+                      <span style={designThemeLogoPreview}>
+                        <img src={activeTheme.logoUrl} alt="" style={designThemeLogoImage} />
+                      </span>
+                    ) : null}
                     <span style={{ color: activeTheme.questionColor, fontSize: 15 }}>Question</span>
                     <span style={{ color: activeTheme.answerColor, fontSize: 15 }}>Answer</span>
                     <span style={{ ...designThemeSwatch, background: activeTheme.buttonColor }} />
@@ -2580,7 +2585,7 @@ const designModalClose: React.CSSProperties = {
 const designModalBody: React.CSSProperties = {
   margin: '0 16px 16px',
   borderRadius: 12,
-  overflow: 'hidden',
+  overflow: 'visible',
   background: '#f6f5f6',
 };
 
@@ -2727,6 +2732,25 @@ const designThemeCardBadge: React.CSSProperties = {
   position: 'absolute',
   top: 8,
   right: 8,
+};
+
+const designThemeLogoPreview: React.CSSProperties = {
+  width: 42,
+  height: 42,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  overflow: 'hidden',
+  borderRadius: 6,
+  background: '#f6f5f6',
+  border: '1px solid #dedde0',
+  marginBottom: 8,
+};
+
+const designThemeLogoImage: React.CSSProperties = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain',
 };
 
 const designThemeSwatch: React.CSSProperties = {
