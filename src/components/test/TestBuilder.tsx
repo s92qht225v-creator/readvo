@@ -1935,12 +1935,15 @@ function PreviewPlayIcon() {
 }
 
 function TextAlignIcon({ align }: { align: 'left' | 'center' | 'right' }) {
-  const shortX = align === 'left' ? 3 : align === 'center' ? 5 : 7;
+  const path = align === 'left'
+    ? 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 1 7.75m0 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75'
+    : align === 'center'
+      ? 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m3 5A.75.75 0 0 1 4.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 4 7.75m-3 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75'
+      : 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m6 5A.75.75 0 0 1 7.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 7 7.75m-6 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75';
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
-      <path d="M3 5h12M3 9h12M3 13h12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.45" />
-      <path d={`M${shortX} 9h8`} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d={path} />
     </svg>
   );
 }
