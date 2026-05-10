@@ -1474,7 +1474,13 @@ function ThemeModal({ theme, onClose, onSave }: {
   const [themeMenuPosition, setThemeMenuPosition] = useState({ top: 0, left: 0 });
   const logoInputId = useId();
   const activeTheme = normalizeTestTheme(draft);
-  const updateDraft = (patch: TestThemeConfig) => setDraft(current => ({ ...current, ...patch }));
+  const updateDraft = (patch: TestThemeConfig) => {
+    setDraft(current => {
+      const nextTheme = normalizeTestTheme({ ...current, ...patch });
+      onSave(nextTheme);
+      return nextTheme;
+    });
+  };
   const hasSavedTheme = isCustomTheme(activeTheme);
   const saveTheme = (nextTheme: TestThemeConfig) => {
     const normalized = normalizeTestTheme(nextTheme);
@@ -1600,7 +1606,6 @@ function ThemeModal({ theme, onClose, onSave }: {
               <div style={designTabs} role="tablist" aria-label="Theme editor sections">
                 <button type="button" style={{ ...designTab, ...(activeTab === 'logo' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'logo'} onClick={() => setActiveTab('logo')}>
                   Logo
-                  <span style={designBrandBadgeSmall}>◇</span>
                 </button>
                 <button type="button" style={{ ...designTab, ...(activeTab === 'font' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'font'} onClick={() => setActiveTab('font')}>
                   Font
@@ -1683,14 +1688,6 @@ function ThemeModal({ theme, onClose, onSave }: {
                   }}
                 />
               )}
-            </div>
-            <div style={designSaveRow}>
-              <button type="button" style={designRevertButton} onClick={() => setDraft(normalizeTestTheme(theme))}>
-                Revert
-              </button>
-              <button type="button" style={designSaveButton} onClick={() => { onSave(activeTheme); onClose(); }}>
-                Save changes
-              </button>
             </div>
           </>
         ) : (
@@ -2627,27 +2624,6 @@ const designSectionTitle: React.CSSProperties = {
   fontWeight: 650,
 };
 
-const designBrandBadge: React.CSSProperties = {
-  width: 28,
-  height: 28,
-  borderRadius: 999,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#e6fbf8',
-  border: '1px solid #9bded8',
-  color: '#075f5b',
-  fontSize: 19,
-  fontWeight: 900,
-};
-
-const designBrandBadgeSmall: React.CSSProperties = {
-  ...designBrandBadge,
-  width: 22,
-  height: 22,
-  fontSize: 15,
-};
-
 const designDivider: React.CSSProperties = {
   height: 1,
   background: '#e2e0e3',
@@ -2695,8 +2671,8 @@ const designThemeCard: React.CSSProperties = {
 };
 
 const designThemeLogoPreview: React.CSSProperties = {
-  width: 42,
-  height: 42,
+  width: 58,
+  height: 58,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -2772,9 +2748,6 @@ const designPanel: React.CSSProperties = {
   display: 'grid',
   gap: 20,
   padding: '18px 20px 16px',
-  maxHeight: 395,
-  overflowY: 'auto',
-  scrollbarWidth: 'thin',
 };
 
 const designPanelGroup: React.CSSProperties = {
@@ -3011,35 +2984,6 @@ const designLogoAltCount: React.CSSProperties = {
   fontSize: 13,
   textAlign: 'right',
   marginTop: -4,
-};
-
-const designSaveRow: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  gap: 10,
-  paddingTop: 8,
-};
-
-const designRevertButton: React.CSSProperties = {
-  border: 'none',
-  background: 'transparent',
-  color: '#6a606e',
-  padding: '10px 8px',
-  fontSize: 16,
-  fontWeight: 500,
-  cursor: 'pointer',
-};
-
-const designSaveButton: React.CSSProperties = {
-  border: 'none',
-  borderRadius: 8,
-  background: '#2f2533',
-  color: '#fff',
-  padding: '10px 16px',
-  fontSize: 16,
-  fontWeight: 600,
-  cursor: 'pointer',
 };
 
 const toolbarTimerActive: React.CSSProperties = {
