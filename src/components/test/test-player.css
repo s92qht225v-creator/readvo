@@ -12,6 +12,10 @@
   border-radius: 0 !important;
 }
 
+.test-player__card--has-chrome {
+  padding-top: max(136px, var(--qmedia-card-pad-top, 48px)) !important;
+}
+
 .test-player__card .test-question-option,
 .test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,

@@ -94,11 +94,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const normalizedTheme = useMemo(() => normalizeTestTheme(test.theme), [test.theme]);
   const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
   const timerSide = normalizedTheme.logoUrl && normalizedTheme.logoAlign === 'right' ? 'left' : 'right';
-  const chromeSpacerHeight = normalizedTheme.logoUrl
-    ? ({ small: 76, medium: 94, large: 118 } as const)[normalizedTheme.logoSize]
-    : remainingSeconds != null
-      ? 50
-      : 0;
+  const hasChrome = Boolean(normalizedTheme.logoUrl || remainingSeconds != null);
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -409,6 +405,27 @@ export function TestPlayer({ test, forceDevice }: Props) {
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
       />
+      {hasChrome ? (
+        <div
+          className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign} test-player__chrome--timer-${timerSide}`}
+          style={chromeLayer}
+          aria-hidden={false}
+        >
+          <ThemeLogo
+            theme={normalizedTheme}
+            className="test-player__chrome-logo"
+            style={chromeLogo(normalizedTheme.logoAlign)}
+          />
+          {remainingSeconds != null ? (
+            <div className="test-player__timer-floating" style={floatingTimer(timerSide)}>
+              <span style={timerPill(remainingSeconds <= 60)}>
+                <AlarmClockIcon />
+                {formatClock(remainingSeconds)}
+              </span>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
       <AnimatePresence mode="wait" custom={navDirection} initial={false}>
       <motion.div
         ref={cardRef}
@@ -418,33 +435,9 @@ export function TestPlayer({ test, forceDevice }: Props) {
         initial="enter"
         animate="center"
         exit="exit"
-        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
+        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${hasChrome ? 'test-player__card--has-chrome' : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
-          {(normalizedTheme.logoUrl || remainingSeconds != null) ? (
-            <div
-              className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign} test-player__chrome--timer-${timerSide}`}
-              style={chromeLayer}
-              aria-hidden={false}
-            >
-              <ThemeLogo
-                theme={normalizedTheme}
-                className="test-player__chrome-logo"
-                style={chromeLogo(normalizedTheme.logoAlign)}
-              />
-              {remainingSeconds != null ? (
-                <div className="test-player__timer-floating" style={floatingTimer(timerSide)}>
-                  <span style={timerPill(remainingSeconds <= 60)}>
-                    <AlarmClockIcon />
-                    {formatClock(remainingSeconds)}
-                  </span>
-                </div>
-              ) : null}
-            </div>
-          ) : null}
-          {chromeSpacerHeight > 0 ? (
-            <div aria-hidden="true" style={{ height: chromeSpacerHeight, flexShrink: 0 }} />
-          ) : null}
           <QuestionMediaLayout
             media={q.media}
             forceDevice={forceDevice}
@@ -798,11 +791,11 @@ const requiredPill: React.CSSProperties = {
 
 const chromeLayer: React.CSSProperties = {
   position: 'absolute',
-  top: 28,
+  top: 'calc(env(safe-area-inset-top, 0px) + 28px)',
   left: 28,
   right: 28,
   height: 96,
-  zIndex: 6,
+  zIndex: 20,
   pointerEvents: 'none',
 };
 

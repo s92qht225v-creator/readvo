@@ -13977,9 +13977,13 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__chrome {
-  top: 30px !important;
+  top: calc(env(safe-area-inset-top, 0px) + 30px) !important;
   left: 28px !important;
   right: 28px !important;
+}
+
+.test-preview-shell--mobile .test-player__card--has-chrome {
+  padding-top: 142px !important;
 }
 
 .test-preview-shell--mobile .test-player__title {
