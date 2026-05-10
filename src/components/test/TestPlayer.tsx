@@ -33,12 +33,22 @@ function ensureToken(slug: string): string {
 
 function formatClock(totalSeconds: number): string {
   const safeSeconds = Math.max(0, Math.floor(totalSeconds));
-  const minutes = Math.floor(safeSeconds / 60);
+  const hours = Math.floor(safeSeconds / 3600);
+  const minutes = Math.floor((safeSeconds % 3600) / 60);
   const seconds = safeSeconds % 60;
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
   return `${minutes}:${String(seconds).padStart(2, '0')}`;
 }
 
 function formatDuration(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutesAfterHours = Math.ceil((totalSeconds % 3600) / 60);
+  if (hours > 0) {
+    const hourLabel = `${hours} ${hours === 1 ? 'hour' : 'hours'}`;
+    return minutesAfterHours > 0 ? `${hourLabel} ${minutesAfterHours} min` : hourLabel;
+  }
   const minutes = Math.max(1, Math.ceil(totalSeconds / 60));
   return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`;
 }
