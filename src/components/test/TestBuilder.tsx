@@ -1456,6 +1456,8 @@ function TimerSettings({ enabled, seconds, onChange }: {
 function ThemeModal({ onClose }: {
   onClose: () => void;
 }) {
+  const [view, setView] = useState<'themes' | 'theme-editor'>('themes');
+
   return (
     <div
       style={designModalBackdrop}
@@ -1474,35 +1476,80 @@ function ThemeModal({ onClose }: {
             <span style={designDot} />
             <span style={designDot} />
           </span>
-          <div style={designTitle}>Design</div>
+          <div style={designTitle}>
+            {view === 'theme-editor' ? (
+              <>
+                <button type="button" style={designBreadcrumbButton} onClick={() => setView('themes')}>
+                  Design
+                </button>
+                <span style={designBreadcrumbSep}>›</span>
+                <span>My new theme</span>
+              </>
+            ) : (
+              'Design'
+            )}
+          </div>
           <button type="button" onClick={onClose} style={designModalClose} aria-label="Close design settings">
             ×
           </button>
         </div>
-        <div style={designModalBody}>
-          <div style={designTabs} role="tablist" aria-label="Design sections">
-            <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
-              My themes
-            </button>
-            <button type="button" style={designTab} role="tab" aria-selected="false">
-              Gallery
-            </button>
-          </div>
-          <div style={designSection}>
-            <div style={designBrandRow}>
-              <div style={designSectionTitle}>
-                Brand kit themes
-                <span style={designBrandBadge}>◇</span>
+        {view === 'theme-editor' ? (
+          <>
+            <div style={designModalBody}>
+              <div style={designTabs} role="tablist" aria-label="Theme editor sections">
+                <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+                  Logo
+                  <span style={designBrandBadgeSmall}>◇</span>
+                </button>
+                <button type="button" style={designTab} role="tab" aria-selected="false">
+                  Font
+                </button>
+                <button type="button" style={designTab} role="tab" aria-selected="false">
+                  Buttons
+                </button>
+                <button type="button" style={designTab} role="tab" aria-selected="false">
+                  Background
+                </button>
               </div>
-              <button type="button" style={designManageButton}>Manage</button>
+              <div style={designLogoSection}>
+                <button type="button" style={designAddLogoButton}>
+                  <span style={designAddLogoIcon}>+</span>
+                  Add logo
+                </button>
+              </div>
             </div>
-            <div style={designDivider} />
-            <div style={designBrandRow}>
-              <div style={designSectionTitle}>My themes</div>
-              <button type="button" style={designAddButton} aria-label="Add theme">+</button>
+            <div style={designSaveRow}>
+              <button type="button" style={designSaveButton} onClick={onClose}>
+                Save changes
+              </button>
+            </div>
+          </>
+        ) : (
+          <div style={designModalBody}>
+            <div style={designTabs} role="tablist" aria-label="Design sections">
+              <button type="button" style={{ ...designTab, ...designTabActive }} role="tab" aria-selected="true">
+                My themes
+              </button>
+              <button type="button" style={designTab} role="tab" aria-selected="false">
+                Gallery
+              </button>
+            </div>
+            <div style={designSection}>
+              <div style={designBrandRow}>
+                <div style={designSectionTitle}>
+                  Brand kit themes
+                  <span style={designBrandBadge}>◇</span>
+                </div>
+                <button type="button" style={designManageButton}>Manage</button>
+              </div>
+              <div style={designDivider} />
+              <button type="button" style={designThemeRowButton} onClick={() => setView('theme-editor')}>
+                <span style={designSectionTitle}>My themes</span>
+                <span style={designAddButton} aria-label="Add theme">+</span>
+              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -2113,9 +2160,27 @@ const designDot: React.CSSProperties = {
 };
 
 const designTitle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
   fontSize: 22,
   fontWeight: 600,
   color: '#514857',
+};
+
+const designBreadcrumbButton: React.CSSProperties = {
+  border: 'none',
+  background: 'transparent',
+  padding: 0,
+  color: '#6a606e',
+  font: 'inherit',
+  cursor: 'pointer',
+};
+
+const designBreadcrumbSep: React.CSSProperties = {
+  color: '#6a606e',
+  fontSize: 20,
+  fontWeight: 500,
 };
 
 const designModalClose: React.CSSProperties = {
@@ -2145,6 +2210,9 @@ const designTabs: React.CSSProperties = {
 
 const designTab: React.CSSProperties = {
   position: 'relative',
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
   border: 'none',
   background: 'transparent',
   padding: '0 0 18px',
@@ -2195,6 +2263,13 @@ const designBrandBadge: React.CSSProperties = {
   fontWeight: 900,
 };
 
+const designBrandBadgeSmall: React.CSSProperties = {
+  ...designBrandBadge,
+  width: 22,
+  height: 22,
+  fontSize: 15,
+};
+
 const designManageButton: React.CSSProperties = {
   border: '1px solid #dedde0',
   borderRadius: 8,
@@ -2203,6 +2278,18 @@ const designManageButton: React.CSSProperties = {
   padding: '8px 15px',
   fontSize: 16,
   fontWeight: 500,
+  cursor: 'pointer',
+};
+
+const designThemeRowButton: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 18,
+  width: '100%',
+  border: 'none',
+  background: 'transparent',
+  padding: 0,
   cursor: 'pointer',
 };
 
@@ -2220,6 +2307,48 @@ const designAddButton: React.CSSProperties = {
   color: '#5d5361',
   fontSize: 28,
   lineHeight: 1,
+  cursor: 'pointer',
+};
+
+const designLogoSection: React.CSSProperties = {
+  padding: '18px 22px 16px',
+};
+
+const designAddLogoButton: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+  height: 34,
+  border: '1px solid #dedde0',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#6a606e',
+  padding: '0 14px',
+  fontSize: 16,
+  fontWeight: 500,
+  cursor: 'pointer',
+};
+
+const designAddLogoIcon: React.CSSProperties = {
+  fontSize: 24,
+  lineHeight: 1,
+  fontWeight: 300,
+};
+
+const designSaveRow: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  paddingTop: 8,
+};
+
+const designSaveButton: React.CSSProperties = {
+  border: 'none',
+  borderRadius: 8,
+  background: '#2f2533',
+  color: '#fff',
+  padding: '10px 16px',
+  fontSize: 16,
+  fontWeight: 600,
   cursor: 'pointer',
 };
 
