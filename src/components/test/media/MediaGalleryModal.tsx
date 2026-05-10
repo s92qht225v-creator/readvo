@@ -33,6 +33,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const audioInputRef = useRef<HTMLInputElement | null>(null);
 
   const pickMedia = (media: QuestionMedia) => {
     if (onPickMedia) {
@@ -42,7 +43,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     onChange(setQuestionMedia(q, media));
   };
 
-  const attachUrl = async (type: 'video' | 'audio', provider: QuestionMedia['provider'] = 'external') => {
+  const attachUrl = async (type: 'video', provider: QuestionMedia['provider'] = 'external') => {
     const trimmed = url.trim();
     if (!trimmed) {
       setError('Paste a URL first.');
@@ -56,8 +57,12 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     });
   };
 
-  const upload = async (file: File) => {
+  const upload = async (file: File, expectedType?: 'audio') => {
     setError(null);
+    if (expectedType === 'audio' && !file.type.startsWith('audio/')) {
+      setError('Upload MP3, WAV, OGG, M4A, AAC, or WebM audio.');
+      return;
+    }
     if (!file.type.startsWith('image/') && !file.type.startsWith('audio/')) {
       setError('Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, or WebM.');
       return;
@@ -155,14 +160,30 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               onAttach={() => attachUrl('video', videoProvider(url))}
             />
           ) : tab === 'audio' ? (
-            <MediaUrlForm
-              label="Audio URL"
-              url={url}
-              alt={alt}
-              onUrl={setUrl}
-              onAlt={setAlt}
-              onAttach={() => attachUrl('audio')}
-            />
+            <button
+              type="button"
+              onClick={() => audioInputRef.current?.click()}
+              onDragOver={e => e.preventDefault()}
+              onDrop={e => {
+                e.preventDefault();
+                const file = e.dataTransfer.files[0];
+                if (file) void upload(file, 'audio');
+              }}
+              style={uploadDropzone}
+            >
+              <input
+                ref={audioInputRef}
+                type="file"
+                accept="audio/mpeg,audio/mp3,audio/wav,audio/wave,audio/x-wav,audio/mp4,audio/aac,audio/ogg,audio/webm"
+                hidden
+                onChange={e => {
+                  const file = e.target.files?.[0];
+                  if (file) void upload(file, 'audio');
+                }}
+              />
+              <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop an audio file here</span>
+              <span style={uploadSub}>MP3, WAV, OGG, M4A, AAC, or WebM. Up to 20MB.</span>
+            </button>
           ) : (
             <div style={comingSoonBox}>
               Uploaded media gallery comes later.
