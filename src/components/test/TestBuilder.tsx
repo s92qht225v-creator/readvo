@@ -988,12 +988,7 @@ export function TestBuilder({ testId }: Props) {
 
       {activeTopTab === 'create' && showThemeModal ? (
         <ThemeModal
-          theme={test.theme}
           onClose={() => setShowThemeModal(false)}
-          onChange={(nextTheme) => {
-            setTest({ ...test, theme: nextTheme });
-            updateTest({ theme: nextTheme });
-          }}
         />
       ) : null}
 
@@ -1458,16 +1453,9 @@ function TimerSettings({ enabled, seconds, onChange }: {
   );
 }
 
-function ThemeModal({ theme, onClose, onChange }: {
-  theme?: TestThemeConfig | null;
+function ThemeModal({ onClose }: {
   onClose: () => void;
-  onChange: (theme: TestThemeConfig) => void;
 }) {
-  const normalized = normalizeTestTheme(theme);
-  const updateTheme = (patch: Partial<TestThemeConfig>) => {
-    onChange(normalizeTestTheme({ ...normalized, ...patch }));
-  };
-
   return (
     <div
       style={designModalBackdrop}
@@ -1513,32 +1501,6 @@ function ThemeModal({ theme, onClose, onChange }: {
               <div style={designSectionTitle}>My themes</div>
               <button type="button" style={designAddButton} aria-label="Add theme">+</button>
             </div>
-            <div style={designControlsCard}>
-              <div style={designControlsTitle}>Current theme</div>
-              <ThemeColorInput label="Background" value={normalized.backgroundColor} onChange={(backgroundColor) => updateTheme({ backgroundColor })} />
-              <ThemeColorInput label="Question text" value={normalized.questionColor} onChange={(questionColor) => updateTheme({ questionColor })} />
-              <ThemeColorInput label="Answers" value={normalized.answerColor} onChange={(answerColor) => updateTheme({ answerColor })} />
-              <ThemeColorInput label="Buttons" value={normalized.buttonColor} onChange={(buttonColor) => updateTheme({ buttonColor })} />
-              <label style={themeFieldRow}>
-                <span>Text size</span>
-                <select
-                  value={normalized.fontScale}
-                  onChange={(event) => updateTheme({ fontScale: event.target.value as TestThemeConfig['fontScale'] })}
-                  style={themeSelect}
-                >
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
-                </select>
-              </label>
-              <button
-                type="button"
-                style={themeResetButton}
-                onClick={() => onChange(DEFAULT_TEST_THEME)}
-              >
-                Reset theme
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -1564,58 +1526,6 @@ function PreviewPlayIcon() {
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M2 2.293c0-1.36 1.484-2.2 2.65-1.5l9.506 5.703a1.75 1.75 0 0 1 0 3.001L4.65 15.201C3.484 15.9 2 15.06 2 13.7zm1.879-.214a.25.25 0 0 0-.379.214V13.7a.25.25 0 0 0 .379.215l9.505-5.704a.25.25 0 0 0 0-.429z" />
     </svg>
-  );
-}
-
-function ThemeColorInput({ label, value, onChange }: {
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  const [draft, setDraft] = useState(value);
-
-  useEffect(() => {
-    setDraft(value);
-  }, [value]);
-
-  const commitDraft = () => {
-    const nextValue = draft.trim();
-    if (/^#[0-9a-fA-F]{6}$/.test(nextValue)) {
-      onChange(nextValue);
-      return;
-    }
-    setDraft(value);
-  };
-
-  return (
-    <label style={themeFieldRow}>
-      <span>{label}</span>
-      <span style={themeColorControl}>
-        <input
-          type="color"
-          value={value}
-          onChange={(event) => {
-            setDraft(event.target.value);
-            onChange(event.target.value);
-          }}
-          style={themeColorSwatch}
-          aria-label={label}
-        />
-        <input
-          type="text"
-          value={draft}
-          onChange={(event) => setDraft(event.target.value)}
-          onBlur={commitDraft}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter') {
-              commitDraft();
-            }
-          }}
-          style={themeTextInput}
-          aria-label={`${label} hex color`}
-        />
-      </span>
-    </label>
   );
 }
 
@@ -2156,58 +2066,6 @@ const timerInput: React.CSSProperties = {
   fontWeight: 800,
 };
 
-const themeFieldRow: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '1fr 152px',
-  alignItems: 'center',
-  gap: 10,
-  color: '#6b6470',
-  fontSize: 14,
-};
-
-const themeColorControl: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '34px 1fr',
-  gap: 8,
-  alignItems: 'center',
-};
-
-const themeColorSwatch: React.CSSProperties = {
-  width: 34,
-  height: 34,
-  padding: 0,
-  border: '1px solid #ded8d1',
-  borderRadius: 7,
-  background: '#fff',
-  cursor: 'pointer',
-};
-
-const themeTextInput: React.CSSProperties = {
-  ...screenInput,
-  padding: '8px 9px',
-  fontSize: 13,
-  fontWeight: 700,
-};
-
-const themeSelect: React.CSSProperties = {
-  ...screenInput,
-  padding: '8px 9px',
-  fontSize: 13,
-  fontWeight: 700,
-};
-
-const themeResetButton: React.CSSProperties = {
-  marginTop: 4,
-  border: '1px solid #ded8d1',
-  borderRadius: 7,
-  background: '#fff',
-  color: '#2f2533',
-  padding: '9px 12px',
-  fontSize: 13,
-  fontWeight: 800,
-  cursor: 'pointer',
-};
-
 const designModalBackdrop: React.CSSProperties = {
   position: 'fixed',
   inset: 0,
@@ -2363,23 +2221,6 @@ const designAddButton: React.CSSProperties = {
   fontSize: 28,
   lineHeight: 1,
   cursor: 'pointer',
-};
-
-const designControlsCard: React.CSSProperties = {
-  display: 'grid',
-  gap: 10,
-  padding: 14,
-  borderRadius: 10,
-  background: '#fff',
-  border: '1px solid #e4e0dc',
-};
-
-const designControlsTitle: React.CSSProperties = {
-  color: '#3f3645',
-  fontSize: 13,
-  fontWeight: 850,
-  textTransform: 'uppercase',
-  letterSpacing: 0.35,
 };
 
 const toolbarTimerActive: React.CSSProperties = {
