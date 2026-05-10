@@ -6,7 +6,7 @@ import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import { ThemeLogo } from './ThemeLogo';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
-import { testThemeCssVars } from '@/lib/test/theme';
+import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
 
 interface Props {
@@ -91,7 +91,14 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
     ? Math.round(test.time_limit_seconds)
     : null;
+  const normalizedTheme = useMemo(() => normalizeTestTheme(test.theme), [test.theme]);
   const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
+  const timerSide = normalizedTheme.logoUrl && normalizedTheme.logoAlign === 'right' ? 'left' : 'right';
+  const chromeSpacerHeight = normalizedTheme.logoUrl
+    ? ({ small: 76, medium: 94, large: 118 } as const)[normalizedTheme.logoSize]
+    : remainingSeconds != null
+      ? 50
+      : 0;
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -414,15 +421,30 @@ export function TestPlayer({ test, forceDevice }: Props) {
         className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
-          {remainingSeconds != null ? (
-            <div className="test-player__timer-floating" style={floatingTimer}>
-              <span style={timerPill(remainingSeconds <= 60)}>
-                <AlarmClockIcon />
-                {formatClock(remainingSeconds)}
-              </span>
+          {(normalizedTheme.logoUrl || remainingSeconds != null) ? (
+            <div
+              className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign} test-player__chrome--timer-${timerSide}`}
+              style={chromeLayer}
+              aria-hidden={false}
+            >
+              <ThemeLogo
+                theme={normalizedTheme}
+                className="test-player__chrome-logo"
+                style={chromeLogo(normalizedTheme.logoAlign)}
+              />
+              {remainingSeconds != null ? (
+                <div className="test-player__timer-floating" style={floatingTimer(timerSide)}>
+                  <span style={timerPill(remainingSeconds <= 60)}>
+                    <AlarmClockIcon />
+                    {formatClock(remainingSeconds)}
+                  </span>
+                </div>
+              ) : null}
             </div>
           ) : null}
-          <ThemeLogo theme={test.theme} />
+          {chromeSpacerHeight > 0 ? (
+            <div aria-hidden="true" style={{ height: chromeSpacerHeight, flexShrink: 0 }} />
+          ) : null}
           <QuestionMediaLayout
             media={q.media}
             forceDevice={forceDevice}
@@ -774,13 +796,36 @@ const requiredPill: React.CSSProperties = {
   padding: '5px 9px',
 };
 
-const floatingTimer: React.CSSProperties = {
+const chromeLayer: React.CSSProperties = {
   position: 'absolute',
-  top: 16,
-  right: 16,
+  top: 28,
+  left: 28,
+  right: 28,
+  height: 96,
   zIndex: 6,
   pointerEvents: 'none',
 };
+
+const chromeLogo = (align: 'left' | 'center' | 'right'): React.CSSProperties => ({
+  position: 'absolute',
+  top: 0,
+  left: align === 'left' ? 0 : align === 'center' ? '50%' : 'auto',
+  right: align === 'right' ? 0 : 'auto',
+  transform: align === 'center' ? 'translateX(-50%)' : 'none',
+  width: 'auto',
+  marginBottom: 0,
+  display: 'block',
+  pointerEvents: 'none',
+});
+
+const floatingTimer = (side: 'left' | 'right'): React.CSSProperties => ({
+  position: 'absolute',
+  top: 0,
+  left: side === 'left' ? 0 : 'auto',
+  right: side === 'right' ? 0 : 'auto',
+  zIndex: 7,
+  pointerEvents: 'none',
+});
 
 const timerPill = (urgent: boolean): React.CSSProperties => ({
   display: 'inline-flex',

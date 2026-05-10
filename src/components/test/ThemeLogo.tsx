@@ -8,7 +8,15 @@ const LOGO_SIZE = {
   large: 96,
 } as const;
 
-export function ThemeLogo({ theme }: { theme?: TestThemeConfig | null }) {
+export function ThemeLogo({
+  theme,
+  className,
+  style,
+}: {
+  theme?: TestThemeConfig | null;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
   const normalized = normalizeTestTheme(theme);
   if (!normalized.logoUrl) return null;
 
@@ -20,7 +28,7 @@ export function ThemeLogo({ theme }: { theme?: TestThemeConfig | null }) {
       : 'flex-start';
 
   return (
-    <div className="test-theme-logo" style={{ ...logoWrap, justifyContent }}>
+    <div className={className ? `test-theme-logo ${className}` : 'test-theme-logo'} style={{ ...logoWrap, justifyContent, ...style }}>
       <img
         src={normalized.logoUrl}
         alt={normalized.logoAlt}

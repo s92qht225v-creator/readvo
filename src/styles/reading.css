@@ -13976,14 +13976,10 @@ body {
   display: none !important;
 }
 
-.test-preview-shell--mobile .test-player__timer-floating {
-  top: 14px !important;
-  right: 14px !important;
-}
-
-.test-preview-shell--mobile .test-player__card--no-media:has(.test-player__timer-floating) .test-player__title {
-  padding-right: 78px !important;
-  box-sizing: border-box !important;
+.test-preview-shell--mobile .test-player__chrome {
+  top: 30px !important;
+  left: 28px !important;
+  right: 28px !important;
 }
 
 .test-preview-shell--mobile .test-player__title {
