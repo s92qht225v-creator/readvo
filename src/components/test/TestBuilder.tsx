@@ -836,9 +836,9 @@ export function TestBuilder({ testId }: Props) {
               type="button"
               className="tb-toolbar__preview-btn"
               onClick={() => setShowThemeModal(true)}
-              title="Theme settings"
+              title="Design settings"
             >
-              Theme
+              Design
             </button>
           </div>
           <div />
@@ -1446,18 +1446,18 @@ function ThemeModal({ theme, onClose, onChange }: {
       style={timerModalBackdrop}
       role="dialog"
       aria-modal="true"
-      aria-label="Theme settings"
+      aria-label="Design settings"
       onMouseDown={onClose}
     >
       <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
-        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close theme settings">
+        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close design settings">
           ×
         </button>
         <div style={timerPanel}>
           <div style={timerHeader}>
             <span style={timerIcon}>◐</span>
             <div>
-              <div style={timerTitle}>Theme</div>
+              <div style={timerTitle}>Design</div>
               <div style={timerSubtitle}>Colors and text size for this test</div>
             </div>
           </div>
