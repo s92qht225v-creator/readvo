@@ -209,6 +209,7 @@ export interface TestScreenConfig {
 }
 
 export interface TestThemeConfig {
+  themeName?: string;
   backgroundColor?: string;
   questionColor?: string;
   answerColor?: string;

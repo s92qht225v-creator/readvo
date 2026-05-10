@@ -1470,9 +1470,34 @@ function ThemeModal({ theme, onClose, onSave }: {
   const [activeTab, setActiveTab] = useState<ThemeEditorTab>('logo');
   const [uploadTarget, setUploadTarget] = useState<ThemeUploadTarget>('logo');
   const [draft, setDraft] = useState<TestThemeConfig>(() => normalizeTestTheme(theme));
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const logoInputId = useId();
   const activeTheme = normalizeTestTheme(draft);
   const updateDraft = (patch: TestThemeConfig) => setDraft(current => ({ ...current, ...patch }));
+  const hasSavedTheme = isCustomTheme(activeTheme);
+  const saveTheme = (nextTheme: TestThemeConfig) => {
+    const normalized = normalizeTestTheme(nextTheme);
+    setDraft(normalized);
+    onSave(normalized);
+  };
+  const renameTheme = () => {
+    const nextName = window.prompt('Theme name', activeTheme.themeName);
+    if (!nextName?.trim()) return;
+    saveTheme({ ...activeTheme, themeName: nextName.trim() });
+    setThemeMenuOpen(false);
+  };
+  const duplicateTheme = () => {
+    const nextTheme = { ...activeTheme, themeName: `${activeTheme.themeName} copy` };
+    saveTheme(nextTheme);
+    setDraft(nextTheme);
+    setThemeMenuOpen(false);
+    setView('theme-editor');
+  };
+  const deleteTheme = () => {
+    saveTheme(DEFAULT_TEST_THEME);
+    setDraft(DEFAULT_TEST_THEME);
+    setThemeMenuOpen(false);
+  };
   const handleLogoFile = (file: File | null) => {
     if (!file || !file.type.startsWith('image/')) return;
     if (file.size > 4 * 1024 * 1024) {
@@ -1686,10 +1711,50 @@ function ThemeModal({ theme, onClose, onSave }: {
                 <button type="button" style={designManageButton}>Manage</button>
               </div>
               <div style={designDivider} />
-              <button type="button" style={designThemeRowButton} onClick={() => setView('theme-editor')}>
+              <div style={designMyThemesHeader}>
                 <span style={designSectionTitle}>My themes</span>
-                <span style={designAddButton} aria-label="Add theme">+</span>
-              </button>
+                <button
+                  type="button"
+                  style={designAddButton}
+                  aria-label="Add theme"
+                  onClick={() => {
+                    setDraft(normalizeTestTheme({ themeName: 'My new theme' }));
+                    setView('theme-editor');
+                  }}
+                >
+                  +
+                </button>
+              </div>
+              {hasSavedTheme ? (
+                <div style={designThemeCardWrap}>
+                  <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
+                    <span style={designThemeCardBadge}>◇</span>
+                    <span style={{ color: activeTheme.questionColor, fontSize: 15 }}>Question</span>
+                    <span style={{ color: activeTheme.answerColor, fontSize: 15 }}>Answer</span>
+                    <span style={{ ...designThemeSwatch, background: activeTheme.buttonColor }} />
+                    <span style={designThemeCardName}>{activeTheme.themeName}</span>
+                  </button>
+                  <button
+                    type="button"
+                    style={designThemeMenuButton}
+                    aria-label="Theme actions"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setThemeMenuOpen(open => !open);
+                    }}
+                  >
+                    ...
+                  </button>
+                  {themeMenuOpen ? (
+                    <div style={designThemeMenu}>
+                      <button type="button" style={designThemeMenuItem} onClick={renameTheme}>Rename</button>
+                      <button type="button" style={designThemeMenuItem} onClick={() => { setThemeMenuOpen(false); setView('theme-editor'); }}>Edit</button>
+                      <button type="button" style={designThemeMenuItem} onClick={duplicateTheme}>Duplicate</button>
+                      <button type="button" style={designThemeMenuItem} onClick={deleteTheme}>Delete</button>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           </div>
         )}
@@ -1792,6 +1857,13 @@ function ThemeBackgroundPanel({ theme, onChange, onAddImage }: {
       </div>
     </div>
   );
+}
+
+function isCustomTheme(theme: Required<TestThemeConfig>) {
+  const defaults = normalizeTestTheme(DEFAULT_TEST_THEME);
+  return (Object.keys(defaults) as Array<keyof Required<TestThemeConfig>>)
+    .filter(key => key !== 'themeName')
+    .some(key => theme[key] !== defaults[key]);
 }
 
 function ThemeColorRow({ label, value, onChange }: {
@@ -2618,6 +2690,95 @@ const designAddButton: React.CSSProperties = {
   color: '#5d5361',
   fontSize: 28,
   lineHeight: 1,
+  cursor: 'pointer',
+};
+
+const designMyThemesHeader: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 18,
+};
+
+const designThemeCardWrap: React.CSSProperties = {
+  position: 'relative',
+  width: 236,
+};
+
+const designThemeCard: React.CSSProperties = {
+  position: 'relative',
+  width: 236,
+  minHeight: 158,
+  display: 'grid',
+  justifyItems: 'start',
+  alignContent: 'start',
+  gap: 4,
+  border: '2px solid #2f2533',
+  borderRadius: 12,
+  background: '#fff',
+  color: '#2f2533',
+  padding: '20px 18px 16px',
+  textAlign: 'left',
+  cursor: 'pointer',
+};
+
+const designThemeCardBadge: React.CSSProperties = {
+  ...designBrandBadgeSmall,
+  position: 'absolute',
+  top: 8,
+  right: 8,
+};
+
+const designThemeSwatch: React.CSSProperties = {
+  display: 'block',
+  width: 40,
+  height: 18,
+  borderRadius: 3,
+  marginTop: 12,
+};
+
+const designThemeCardName: React.CSSProperties = {
+  alignSelf: 'end',
+  marginTop: 48,
+  color: '#2f2533',
+  fontSize: 15,
+};
+
+const designThemeMenuButton: React.CSSProperties = {
+  position: 'absolute',
+  right: 10,
+  bottom: 10,
+  border: 'none',
+  background: 'transparent',
+  color: '#5f5664',
+  fontSize: 18,
+  fontWeight: 700,
+  letterSpacing: 1,
+  cursor: 'pointer',
+  padding: 4,
+};
+
+const designThemeMenu: React.CSSProperties = {
+  position: 'absolute',
+  top: 118,
+  left: 202,
+  zIndex: 20,
+  width: 198,
+  padding: '10px 0',
+  borderRadius: 12,
+  border: '3px solid #eeecef',
+  background: '#fff',
+  boxShadow: '0 12px 35px rgba(47, 40, 53, 0.16)',
+};
+
+const designThemeMenuItem: React.CSSProperties = {
+  width: '100%',
+  border: 'none',
+  background: 'transparent',
+  color: '#6a606e',
+  padding: '10px 16px',
+  textAlign: 'left',
+  fontSize: 15,
   cursor: 'pointer',
 };
 

@@ -5,6 +5,7 @@ export type TestCornerRadius = 'sharp' | 'soft' | 'round';
 export type TestLogoSize = 'small' | 'medium' | 'large';
 
 export interface TestThemeConfig {
+  themeName?: string;
   backgroundColor?: string;
   questionColor?: string;
   answerColor?: string;
@@ -25,6 +26,7 @@ export interface TestThemeConfig {
 }
 
 export const DEFAULT_TEST_THEME: Required<TestThemeConfig> = {
+  themeName: 'My new theme',
   backgroundColor: '#ffffff',
   questionColor: '#000000',
   answerColor: '#0445af',
@@ -100,6 +102,7 @@ export function normalizeTestTheme(input: unknown): Required<TestThemeConfig> {
   const raw = input && typeof input === 'object' ? input as TestThemeConfig : {};
   return {
     backgroundColor: cleanHex(raw.backgroundColor, DEFAULT_TEST_THEME.backgroundColor),
+    themeName: cleanString(raw.themeName) || DEFAULT_TEST_THEME.themeName,
     questionColor: cleanHex(raw.questionColor, DEFAULT_TEST_THEME.questionColor),
     answerColor: cleanHex(raw.answerColor, DEFAULT_TEST_THEME.answerColor),
     buttonColor: cleanHex(raw.buttonColor, DEFAULT_TEST_THEME.buttonColor),
