@@ -1765,20 +1765,23 @@ function ThemeFontPanel({ theme, onChange }: {
   return (
     <div style={designPanel}>
       <div style={designPanelLabel}>Font</div>
-      <select value={theme.fontFamily} onChange={(event) => onChange({ fontFamily: event.target.value as TestThemeConfig['fontFamily'] })} style={designSelect}>
-        <option value="system">System font</option>
-        <option value="inter">Inter</option>
-        <option value="noto-sans">Noto Sans</option>
-        <option value="arial">Arial</option>
-        <option value="verdana">Verdana</option>
-        <option value="trebuchet">Trebuchet MS</option>
-        <option value="georgia">Georgia</option>
-        <option value="garamond">Garamond</option>
-        <option value="times">Times New Roman</option>
-        <option value="courier">Courier New</option>
-        <option value="mono">Monospace</option>
-        <option value="serif">Serif</option>
-      </select>
+      <div style={designSelectWrap}>
+        <select value={theme.fontFamily} onChange={(event) => onChange({ fontFamily: event.target.value as TestThemeConfig['fontFamily'] })} style={designSelect}>
+          <option value="system">System font</option>
+          <option value="inter">Inter</option>
+          <option value="noto-sans">Noto Sans</option>
+          <option value="arial">Arial</option>
+          <option value="verdana">Verdana</option>
+          <option value="trebuchet">Trebuchet MS</option>
+          <option value="georgia">Georgia</option>
+          <option value="garamond">Garamond</option>
+          <option value="times">Times New Roman</option>
+          <option value="courier">Courier New</option>
+          <option value="mono">Monospace</option>
+          <option value="serif">Serif</option>
+        </select>
+        <ChevronDownIcon style={designSelectChevron} />
+      </div>
       <div style={designPanelGroup}>
         <div style={designPanelLabel}>Color</div>
         <ThemeColorRow label="Titles and questions" value={theme.questionColor} onChange={(color) => onChange({ questionColor: color })} />
@@ -2804,9 +2807,28 @@ const designSelect: React.CSSProperties = {
   borderRadius: 8,
   background: '#fff',
   color: '#6a606e',
-  padding: '0 12px',
+  padding: '0 40px 0 12px',
   fontSize: 15,
   fontFamily: 'inherit',
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  outline: 'none',
+};
+
+const designSelectWrap: React.CSSProperties = {
+  position: 'relative',
+  width: '100%',
+};
+
+const designSelectChevron: React.CSSProperties = {
+  position: 'absolute',
+  right: 12,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  width: 16,
+  height: 16,
+  color: '#6a606e',
+  pointerEvents: 'none',
 };
 
 const designColorRow: React.CSSProperties = {
