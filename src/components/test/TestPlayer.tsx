@@ -82,7 +82,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
   const mobileWallpaperMedia = q?.media?.url
     && q.media.layoutMobile === 'wallpaper'
-    && q.media.type !== 'video'
+    && (q.media.type === 'image' || q.media.type === 'gif')
     && forceDevice !== 'desktop'
     ? q.media
     : undefined;

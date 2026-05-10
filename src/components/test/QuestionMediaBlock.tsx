@@ -34,6 +34,17 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
 export function QuestionMediaBlock({ media, className, style }: Props) {
   if (!media?.url) return null;
 
+  if (media.type === 'audio') {
+    return (
+      <div className={className} style={{ ...audioFrameWrap, ...style }}>
+        <div style={audioTitle}>{media.alt || 'Audio'}</div>
+        <audio controls preload="metadata" src={media.url} style={audioControl}>
+          <a href={media.url}>Open audio</a>
+        </audio>
+      </div>
+    );
+  }
+
   if (media.type === 'video') {
     const embedUrl = toEmbedUrl(media.url);
     if (!embedUrl) {
@@ -87,7 +98,9 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
 }
 
 function layoutClassName(media: QuestionMedia, forceDevice?: 'mobile' | 'desktop') {
-  const mobile = media.layoutMobile ?? 'stack';
+  const mobile = media.type === 'audio' && media.layoutMobile === 'wallpaper'
+    ? 'stack'
+    : media.layoutMobile ?? 'stack';
   const desktop = normalizeDesktopLayout(media.layoutDesktop);
   if (forceDevice === 'mobile') {
     return `qmedia-layout qmedia-mobile-${mobile} qmedia-force-mobile`;
@@ -213,4 +226,26 @@ const mediaLink: React.CSSProperties = {
   marginBottom: 22,
   color: '#0445af',
   fontWeight: 800,
+};
+
+const audioFrameWrap: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 420,
+  margin: '0 auto 22px',
+  padding: 14,
+  borderRadius: 7,
+  background: 'color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff)',
+  boxSizing: 'border-box',
+};
+
+const audioTitle: React.CSSProperties = {
+  marginBottom: 8,
+  color: 'var(--test-theme-question, #1c1626)',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const audioControl: React.CSSProperties = {
+  display: 'block',
+  width: '100%',
 };

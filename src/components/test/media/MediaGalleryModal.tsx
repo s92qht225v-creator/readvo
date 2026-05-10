@@ -22,10 +22,10 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
   onClose: () => void;
   onChange: (q: BuilderQuestion) => void;
   onPickMedia?: (media: QuestionMedia) => void;
-  allowedTabs?: Array<'upload' | 'image' | 'video' | 'icon' | 'gallery'>;
+  allowedTabs?: Array<'upload' | 'image' | 'video' | 'audio' | 'icon' | 'gallery'>;
 }) {
-  const tabs = allowedTabs ?? ['upload', 'image', 'video', 'icon', 'gallery'];
-  const [tab, setTab] = useState<'upload' | 'image' | 'video' | 'icon' | 'gallery'>(tabs[0] ?? 'upload');
+  const tabs = allowedTabs ?? ['upload', 'image', 'video', 'audio', 'icon', 'gallery'];
+  const [tab, setTab] = useState<'upload' | 'image' | 'video' | 'audio' | 'icon' | 'gallery'>(tabs[0] ?? 'upload');
   const [url, setUrl] = useState('');
   const [alt, setAlt] = useState('');
   const [uploading, setUploading] = useState(false);
@@ -40,31 +40,32 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     onChange(setQuestionMedia(q, media));
   };
 
-  const attachUrl = async (type: 'image' | 'gif' | 'video', provider: QuestionMedia['provider'] = 'external') => {
+  const attachUrl = async (type: QuestionMedia['type'], provider: QuestionMedia['provider'] = 'external') => {
     const trimmed = url.trim();
     if (!trimmed) {
       setError('Paste a URL first.');
       return;
     }
-    const naturalAspectRatio = type === 'video' ? undefined : await getImageAspectRatio(trimmed);
+    const naturalAspectRatio = type === 'image' || type === 'gif' ? await getImageAspectRatio(trimmed) : undefined;
     pickMedia({
       type,
       url: trimmed,
       alt,
       provider,
-      aspectRatio: type === 'video' ? undefined : 'original',
+      aspectRatio: type === 'image' || type === 'gif' ? 'original' : undefined,
       naturalAspectRatio,
     });
   };
 
   const upload = async (file: File) => {
     setError(null);
-    if (!file.type.startsWith('image/') && file.type !== 'image/gif') {
-      setError('Upload JPG, PNG, GIF, or WebP.');
+    if (!file.type.startsWith('image/') && !file.type.startsWith('audio/')) {
+      setError('Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, or WebM.');
       return;
     }
-    if (file.size > 4 * 1024 * 1024) {
-      setError('File must be 4MB or less.');
+    const maxSize = file.type.startsWith('audio/') ? 20 * 1024 * 1024 : 4 * 1024 * 1024;
+    if (file.size > maxSize) {
+      setError(file.type.startsWith('audio/') ? 'Audio file must be 20MB or less.' : 'Image file must be 4MB or less.');
       return;
     }
     setUploading(true);
@@ -81,13 +82,16 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
       setError(result.error ?? 'Upload failed.');
       return;
     }
+    const type: QuestionMedia['type'] = file.type.startsWith('audio/')
+      ? 'audio'
+      : file.type === 'image/gif' ? 'gif' : 'image';
     pickMedia({
-      type: file.type === 'image/gif' ? 'gif' : 'image',
+      type,
       url: result.url,
       alt,
       provider: 'upload',
-      aspectRatio: 'original',
-      naturalAspectRatio: await getFileImageAspectRatio(file),
+      aspectRatio: type === 'audio' ? undefined : 'original',
+      naturalAspectRatio: type === 'audio' ? undefined : await getFileImageAspectRatio(file),
     });
   };
 
@@ -103,6 +107,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
             ['upload', 'Upload'],
             ['image', 'Image'],
             ['video', 'Video'],
+            ['audio', 'Audio'],
             ['icon', 'Icon'],
             ['gallery', 'My gallery'],
           ].filter(([id]) => tabs.includes(id as typeof tab)).map(([id, label]) => (
@@ -133,15 +138,15 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               <input
                 ref={inputRef}
                 type="file"
-                accept="image/png,image/jpeg,image/gif,image/webp"
+                accept="image/png,image/jpeg,image/gif,image/webp,audio/mpeg,audio/mp3,audio/wav,audio/wave,audio/x-wav,audio/mp4,audio/aac,audio/ogg,audio/webm"
                 hidden
                 onChange={e => {
                   const file = e.target.files?.[0];
                   if (file) void upload(file);
                 }}
               />
-              <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop an image here</span>
-              <span style={uploadSub}>JPG, PNG, or GIF. Up to 4MB.</span>
+              <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop a file here</span>
+              <span style={uploadSub}>Images up to 4MB. Audio up to 20MB.</span>
             </button>
           ) : tab === 'image' ? (
             <MediaUrlForm
@@ -160,6 +165,15 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               onUrl={setUrl}
               onAlt={setAlt}
               onAttach={() => attachUrl('video', videoProvider(url))}
+            />
+          ) : tab === 'audio' ? (
+            <MediaUrlForm
+              label="Audio URL"
+              url={url}
+              alt={alt}
+              onUrl={setUrl}
+              onAlt={setAlt}
+              onAttach={() => attachUrl('audio')}
             />
           ) : (
             <div style={comingSoonBox}>

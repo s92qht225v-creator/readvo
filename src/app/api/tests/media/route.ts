@@ -2,12 +2,22 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 
-const MAX_FILE_SIZE = 4 * 1024 * 1024;
+const MAX_IMAGE_FILE_SIZE = 4 * 1024 * 1024;
+const MAX_AUDIO_FILE_SIZE = 20 * 1024 * 1024;
 const ALLOWED_MIME_TYPES = new Set([
   'image/jpeg',
   'image/png',
   'image/gif',
   'image/webp',
+  'audio/mpeg',
+  'audio/mp3',
+  'audio/wav',
+  'audio/wave',
+  'audio/x-wav',
+  'audio/mp4',
+  'audio/aac',
+  'audio/ogg',
+  'audio/webm',
 ]);
 
 export async function POST(req: NextRequest) {
@@ -22,10 +32,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'file_required' }, { status: 400 });
   }
   if (!ALLOWED_MIME_TYPES.has(file.type)) {
-    return NextResponse.json({ error: 'Upload JPG, PNG, GIF, or WebP.' }, { status: 400 });
+    return NextResponse.json({ error: 'Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, or WebM.' }, { status: 400 });
   }
-  if (file.size > MAX_FILE_SIZE) {
-    return NextResponse.json({ error: 'File must be 4MB or less.' }, { status: 400 });
+  const maxSize = file.type.startsWith('audio/') ? MAX_AUDIO_FILE_SIZE : MAX_IMAGE_FILE_SIZE;
+  if (file.size > maxSize) {
+    return NextResponse.json({ error: file.type.startsWith('audio/') ? 'Audio file must be 20MB or less.' : 'Image file must be 4MB or less.' }, { status: 400 });
   }
 
   const ext = extensionFor(file);
@@ -59,5 +70,11 @@ function extensionFor(file: File) {
   if (file.type === 'image/png') return 'png';
   if (file.type === 'image/gif') return 'gif';
   if (file.type === 'image/webp') return 'webp';
+  if (file.type === 'audio/mpeg' || file.type === 'audio/mp3') return 'mp3';
+  if (file.type === 'audio/wav' || file.type === 'audio/wave' || file.type === 'audio/x-wav') return 'wav';
+  if (file.type === 'audio/mp4') return 'm4a';
+  if (file.type === 'audio/aac') return 'aac';
+  if (file.type === 'audio/ogg') return 'ogg';
+  if (file.type === 'audio/webm') return 'webm';
   return 'bin';
 }

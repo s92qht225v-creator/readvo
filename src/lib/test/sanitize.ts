@@ -39,7 +39,7 @@ function questionDescription(options: unknown): string | undefined {
 function questionMedia(options: unknown): PublicQuestion['media'] {
   const media = (options as { media?: unknown } | null)?.media as PublicQuestion['media'] | undefined;
   if (!media || typeof media.url !== 'string' || !media.url.trim()) return undefined;
-  if (media.type !== 'image' && media.type !== 'gif' && media.type !== 'video') return undefined;
+  if (media.type !== 'image' && media.type !== 'gif' && media.type !== 'video' && media.type !== 'audio') return undefined;
   return {
     type: media.type,
     url: media.url,

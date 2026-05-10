@@ -154,7 +154,7 @@ function MediaRow({ q, onOpen, onSettings, onRemove }: {
     <div style={mediaRowWrap}>
       <div style={mediaRowTop}>
         <div>
-          <div style={mediaRowTitle}>Image or video</div>
+          <div style={mediaRowTitle}>Image, video, or audio</div>
         </div>
         {media?.url ? (
           <div style={mediaActions}>
@@ -168,10 +168,10 @@ function MediaRow({ q, onOpen, onSettings, onRemove }: {
             </button>
             <button
               type="button"
-              onClick={media.type === 'video' ? undefined : onSettings}
-              disabled={media.type === 'video'}
-              style={mediaIconButtonDisabled(media.type === 'video')}
-              title={media.type === 'video' ? 'Video settings are not available yet' : 'Media settings'}
+              onClick={media.type === 'video' || media.type === 'audio' ? undefined : onSettings}
+              disabled={media.type === 'video' || media.type === 'audio'}
+              style={mediaIconButtonDisabled(media.type === 'video' || media.type === 'audio')}
+              title={media.type === 'audio' ? 'Audio settings are not needed' : media.type === 'video' ? 'Video settings are not available yet' : 'Media settings'}
               aria-label="Media settings"
             >
               <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
@@ -212,6 +212,9 @@ const DESKTOP_LAYOUT_OPTIONS: Array<{ value: DesktopMediaLayout; label: string }
 function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q: BuilderQuestion) => void }) {
   const media = getQuestionMedia(q);
   if (!media?.url) return null;
+  const mobileOptions = media.type === 'audio'
+    ? MOBILE_LAYOUT_OPTIONS.filter(option => option.value !== 'wallpaper')
+    : MOBILE_LAYOUT_OPTIONS;
 
   const update = (patch: Partial<Pick<QuestionMedia, 'layoutMobile' | 'layoutDesktop'>>) => {
     onChange(setQuestionMedia(q, { ...media, ...patch }));
@@ -222,8 +225,8 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
       <div style={mediaRowTitle}>Layout</div>
       <LayoutSelect
         label="Mobile"
-        value={media.layoutMobile ?? 'stack'}
-        options={MOBILE_LAYOUT_OPTIONS}
+        value={(media.type === 'audio' && media.layoutMobile === 'wallpaper' ? 'stack' : media.layoutMobile ?? 'stack') as MobileMediaLayout}
+        options={mobileOptions}
         onChange={value => update({ layoutMobile: value as MobileMediaLayout })}
       />
       <LayoutSelect

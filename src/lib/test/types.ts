@@ -131,7 +131,7 @@ export interface FillBlanksOptions {
 }
 
 export interface QuestionMedia {
-  type: 'image' | 'gif' | 'video';
+  type: 'image' | 'gif' | 'video' | 'audio';
   url: string;
   alt?: string;
   provider?: 'upload' | 'external' | 'youtube' | 'vimeo';
