@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
+import { ThemeLogo } from './ThemeLogo';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
 import { testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
@@ -421,6 +422,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
               </span>
             </div>
           ) : null}
+          <ThemeLogo theme={test.theme} />
           <QuestionMediaLayout
             media={q.media}
             forceDevice={forceDevice}

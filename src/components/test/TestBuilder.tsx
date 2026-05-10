@@ -21,6 +21,7 @@ import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
+import { ThemeLogo } from './ThemeLogo';
 import { SettingsPanel } from './SettingsPanel';
 import { PaywallNotice } from './PaywallNotice';
 import { TestLink } from './TestLink';
@@ -2210,6 +2211,7 @@ function PreviewCanvas({
           '--qmedia-card-pad-top': previewDevice === 'mobile' ? '32px' : '64px',
         } as React.CSSProperties}
       >
+        <ThemeLogo theme={theme} />
         <div className="tb-preview-content">
           <QuestionMediaLayout
             media={previewQ.media}
