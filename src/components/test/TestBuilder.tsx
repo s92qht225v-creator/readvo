@@ -1945,8 +1945,11 @@ function PreviewPlayIcon() {
 
 function DropletIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M8.768 1.186a1 1 0 0 0-1.536 0C5.69 3.061 3 6.718 3 9.421 3 12.29 5.239 14.5 8 14.5s5-2.21 5-5.079c0-2.703-2.69-6.36-4.232-8.235M8 12.999c-1.902 0-3.5-1.516-3.5-3.578 0-1.83 1.79-4.588 3.5-6.78 1.71 2.192 3.5 4.95 3.5 6.78 0 2.062-1.598 3.578-3.5 3.578" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" aria-hidden="true">
+      <g fill="currentColor" fillRule="nonzero">
+        <path d="M12 10c0-3.74-4.18-7.439-6-10-1.82 2.561-6 6.26-6 10a6 6 0 1 0 12 0z" />
+        <path d="M5.59 2.133c-.022.026-1.089 1.288-1.403 1.669C2.026 6.422 1 8.266 1 10a5 5 0 0 0 10 0c0-1.734-1.026-3.578-3.187-6.198-.314-.381-1.38-1.643-1.402-1.669A50.34 50.34 0 0 1 6 1.637a50.34 50.34 0 0 1-.41.496zM12 10a6 6 0 1 1-12 0C0 6.26 4.18 2.561 6 0c1.82 2.561 6 6.26 6 10z" fill="rgba(255,255,255,0.72)" />
+      </g>
     </svg>
   );
 }
