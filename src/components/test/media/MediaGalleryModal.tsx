@@ -17,15 +17,17 @@ import {
   modalClose,
 } from './_styles';
 
+type MediaGalleryTab = 'upload' | 'video' | 'audio' | 'gallery';
+
 export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTabs }: {
   q: BuilderQuestion;
   onClose: () => void;
   onChange: (q: BuilderQuestion) => void;
   onPickMedia?: (media: QuestionMedia) => void;
-  allowedTabs?: Array<'upload' | 'image' | 'video' | 'audio' | 'icon' | 'gallery'>;
+  allowedTabs?: MediaGalleryTab[];
 }) {
-  const tabs = allowedTabs ?? ['upload', 'image', 'video', 'audio', 'icon', 'gallery'];
-  const [tab, setTab] = useState<'upload' | 'image' | 'video' | 'audio' | 'icon' | 'gallery'>(tabs[0] ?? 'upload');
+  const tabs = allowedTabs ?? ['upload', 'video', 'audio', 'gallery'];
+  const [tab, setTab] = useState<MediaGalleryTab>(tabs[0] ?? 'upload');
   const [url, setUrl] = useState('');
   const [alt, setAlt] = useState('');
   const [uploading, setUploading] = useState(false);
@@ -40,20 +42,17 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     onChange(setQuestionMedia(q, media));
   };
 
-  const attachUrl = async (type: QuestionMedia['type'], provider: QuestionMedia['provider'] = 'external') => {
+  const attachUrl = async (type: 'video' | 'audio', provider: QuestionMedia['provider'] = 'external') => {
     const trimmed = url.trim();
     if (!trimmed) {
       setError('Paste a URL first.');
       return;
     }
-    const naturalAspectRatio = type === 'image' || type === 'gif' ? await getImageAspectRatio(trimmed) : undefined;
     pickMedia({
       type,
       url: trimmed,
       alt,
       provider,
-      aspectRatio: type === 'image' || type === 'gif' ? 'original' : undefined,
-      naturalAspectRatio,
     });
   };
 
@@ -105,10 +104,8 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
         <div style={mediaTabs}>
           {[
             ['upload', 'Upload'],
-            ['image', 'Image'],
             ['video', 'Video'],
             ['audio', 'Audio'],
-            ['icon', 'Icon'],
             ['gallery', 'My gallery'],
           ].filter(([id]) => tabs.includes(id as typeof tab)).map(([id, label]) => (
             <button
@@ -148,15 +145,6 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop a file here</span>
               <span style={uploadSub}>Images up to 4MB. Audio up to 20MB.</span>
             </button>
-          ) : tab === 'image' ? (
-            <MediaUrlForm
-              label="Image or GIF URL"
-              url={url}
-              alt={alt}
-              onUrl={setUrl}
-              onAlt={setAlt}
-              onAttach={() => attachUrl(url.toLowerCase().includes('.gif') ? 'gif' : 'image')}
-            />
           ) : tab === 'video' ? (
             <MediaUrlForm
               label="YouTube or Vimeo URL"
@@ -177,7 +165,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
             />
           ) : (
             <div style={comingSoonBox}>
-              {tab === 'icon' ? 'Icon library comes later.' : 'Uploaded media gallery comes later.'}
+              Uploaded media gallery comes later.
             </div>
           )}
           {error ? <div style={mediaError}>{error}</div> : null}

@@ -115,7 +115,7 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
         {mediaChoiceIndex != null ? (
           <MediaGalleryModal
             q={q}
-            allowedTabs={['upload', 'image', 'gallery']}
+            allowedTabs={['upload', 'gallery']}
             onClose={() => setMediaChoiceIndex(null)}
             onChange={() => undefined}
             onPickMedia={(media) => {
