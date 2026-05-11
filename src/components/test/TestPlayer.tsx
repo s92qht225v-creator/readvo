@@ -604,51 +604,51 @@ export function TestPlayer({ test, forceDevice }: Props) {
               transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
               onClick={event => event.stopPropagation()}
             >
-              <div style={navigatorHeader}>
-                <div>
-                  <h3 style={navigatorTitle}>Questions</h3>
-                  <p style={navigatorSubtitle}>
-                    {answeredCount} answered · {Math.max(0, total - answeredCount)} unanswered
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  aria-label="Close questions"
-                  onClick={() => setNavigatorOpen(false)}
-                  style={navigatorCloseButton}
-                >
-                  ×
-                </button>
-              </div>
+              <button
+                type="button"
+                aria-label="Close questions"
+                onClick={() => setNavigatorOpen(false)}
+                style={navigatorCloseButton}
+              >
+                ×
+              </button>
               {remainingSeconds != null ? (
-                <div style={navigatorTimer}>
-                  <AlarmClockIcon />
-                  <span>{formatClock(remainingSeconds)}</span>
-                </div>
+                <section style={navigatorCard}>
+                  <div style={navigatorCardHeader}>
+                    <h3 style={navigatorCardTitle}>Qolgan vaqt</h3>
+                    <div style={navigatorTimerPill}>
+                      <AlarmClockIcon />
+                      <span>{formatClock(remainingSeconds)}</span>
+                    </div>
+                  </div>
+                </section>
               ) : null}
-              <div style={navigatorGrid}>
-                {test.questions.map((question, questionIndex) => {
-                  const answered = hasQuestionAnswer(question, answers[question.id]);
-                  const current = questionIndex === idx;
-                  return (
-                    <button
-                      key={question.id}
-                      type="button"
-                      onClick={() => goToIdx(questionIndex)}
-                      aria-current={current ? 'step' : undefined}
-                      aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
-                      style={navigatorQuestionButton(current, answered)}
-                    >
-                      {questionIndex + 1}
-                    </button>
-                  );
-                })}
-              </div>
-              <div style={navigatorLegend}>
-                <span style={navigatorLegendItem('#2f2533')}>Current</span>
-                <span style={navigatorLegendItem('#0a7f34')}>Answered</span>
-                <span style={navigatorLegendItem('#d8d2cc')}>Unanswered</span>
-              </div>
+              <section style={navigatorCard}>
+                <div style={navigatorCardHeader}>
+                  <h3 style={navigatorCardTitle}>Barcha testlar</h3>
+                  <span style={navigatorCount}>{answeredCount}/{total}</span>
+                </div>
+                <div style={navigatorGridScroller}>
+                  <div style={navigatorGrid}>
+                    {test.questions.map((question, questionIndex) => {
+                      const answered = hasQuestionAnswer(question, answers[question.id]);
+                      const current = questionIndex === idx;
+                      return (
+                        <button
+                          key={question.id}
+                          type="button"
+                          onClick={() => goToIdx(questionIndex)}
+                          aria-current={current ? 'step' : undefined}
+                          aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
+                          style={navigatorQuestionButton(current, answered)}
+                        >
+                          {questionIndex + 1}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </section>
             </motion.div>
           </motion.div>
         ) : null}
@@ -1101,109 +1101,114 @@ const navigatorOverlay: React.CSSProperties = {
 };
 
 const navigatorPanel: React.CSSProperties = {
-  width: 'min(430px, calc(100vw - 28px))',
-  maxHeight: 'min(680px, calc(100dvh - 36px))',
-  overflowY: 'auto',
+  width: 'min(390px, calc(100vw - 28px))',
+  maxHeight: 'min(720px, calc(100dvh - 36px))',
+  overflow: 'visible',
   scrollbarWidth: 'none',
-  background: '#fff',
-  border: '1px solid #e4ded8',
-  borderRadius: 16,
-  boxShadow: '0 24px 70px rgba(47, 37, 51, 0.22)',
-  padding: 20,
+  background: 'transparent',
+  border: 'none',
+  borderRadius: 0,
+  boxShadow: 'none',
+  padding: 0,
   color: '#2f2533',
+  position: 'relative',
 };
 
-const navigatorHeader: React.CSSProperties = {
+const navigatorCard: React.CSSProperties = {
+  width: 'min(368px, 100%)',
+  marginInline: 'auto',
+  background: '#fff',
+  border: '1px solid rgba(47, 37, 51, 0.08)',
+  borderRadius: 14,
+  boxShadow: '0 1px 2px rgba(47, 37, 51, 0.04)',
+  padding: 20,
+  marginBottom: 10,
+};
+
+const navigatorCardHeader: React.CSSProperties = {
   display: 'flex',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   justifyContent: 'space-between',
   gap: 16,
-  marginBottom: 14,
 };
 
-const navigatorTitle: React.CSSProperties = {
+const navigatorCardTitle: React.CSSProperties = {
   margin: 0,
-  fontSize: 22,
-  lineHeight: 1.15,
-  fontWeight: 850,
-  color: '#2f2533',
-};
-
-const navigatorSubtitle: React.CSSProperties = {
-  margin: '5px 0 0',
-  fontSize: 13,
-  color: '#746b76',
-  fontWeight: 650,
+  fontSize: 16,
+  lineHeight: 1.25,
+  fontWeight: 800,
+  color: '#17121c',
 };
 
 const navigatorCloseButton: React.CSSProperties = {
-  width: 34,
-  height: 34,
+  position: 'absolute',
+  top: -42,
+  right: 2,
+  width: 36,
+  height: 36,
   border: 'none',
-  borderRadius: 8,
-  background: '#f3f1f3',
-  color: '#6f6772',
-  fontSize: 26,
-  lineHeight: '30px',
+  borderRadius: 10,
+  background: '#fff',
+  color: '#6d6670',
+  fontSize: 28,
+  lineHeight: '32px',
   cursor: 'pointer',
+  boxShadow: '0 1px 8px rgba(47, 37, 51, 0.12)',
 };
 
-const navigatorTimer: React.CSSProperties = {
+const navigatorTimerPill: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 8,
-  marginBottom: 16,
-  padding: '8px 12px',
-  borderRadius: 999,
-  background: '#f6f4f6',
-  color: '#2f2533',
+  padding: '10px 14px',
+  borderRadius: 12,
+  background: '#f7f7f6',
+  color: '#02ad1b',
   fontSize: 14,
-  fontWeight: 850,
+  fontWeight: 900,
+  letterSpacing: '0.03em',
+  whiteSpace: 'nowrap',
+};
+
+const navigatorCount: React.CSSProperties = {
+  color: '#8b858c',
+  fontSize: 15,
+  fontWeight: 800,
+};
+
+const navigatorGridScroller: React.CSSProperties = {
+  width: '100%',
+  maxHeight: 288,
+  marginTop: 18,
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  scrollbarWidth: 'none',
 };
 
 const navigatorGrid: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(42px, 1fr))',
-  gap: 8,
+  gridTemplateColumns: 'repeat(6, 1fr)',
+  columnGap: 16,
+  rowGap: 14,
 };
 
 const navigatorQuestionButton = (current: boolean, answered: boolean): React.CSSProperties => ({
-  height: 42,
-  border: current
-    ? '2px solid var(--test-theme-button, #2f2533)'
-    : answered
-      ? '1px solid rgba(10, 127, 52, 0.26)'
-      : '1px solid #e2dcd6',
-  borderRadius: 10,
+  width: 36,
+  height: 36,
+  justifySelf: 'center',
+  border: 'none',
+  borderRadius: 11,
   background: current
     ? 'var(--test-theme-button, #2f2533)'
     : answered
-      ? 'rgba(10, 127, 52, 0.08)'
-      : '#f8f6f4',
+      ? 'rgba(2, 173, 27, 0.1)'
+      : '#fafafa',
   color: current
     ? 'var(--test-theme-button-text, #fff)'
     : answered
-      ? '#0a7f34'
-      : '#6f6772',
-  fontSize: 14,
-  fontWeight: 850,
+      ? '#02ad1b'
+      : '#555',
+  fontSize: 16,
+  fontWeight: 800,
   cursor: 'pointer',
-});
-
-const navigatorLegend: React.CSSProperties = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  gap: 12,
-  marginTop: 16,
-  color: '#746b76',
-  fontSize: 12,
-  fontWeight: 700,
-};
-
-const navigatorLegendItem = (color: string): React.CSSProperties => ({
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  borderLeft: `10px solid ${color}`,
-  paddingLeft: 6,
 });
