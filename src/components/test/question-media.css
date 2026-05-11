@@ -304,11 +304,11 @@
     line-height: 34px !important;
     color: #000 !important;
   }
-  .qmedia-desktop-float-right .qmedia-header {
+  .qmedia-desktop-float-right > .qmedia-content > .qmedia-header {
     width: 100%;
     margin-bottom: 16px;
   }
-  .qmedia-desktop-float-right .qmedia-answer {
+  .qmedia-desktop-float-right > .qmedia-content > .qmedia-answer {
     width: 100%;
   }
   .qmedia-desktop-float-right .tb-preview-description,
@@ -418,11 +418,11 @@
     line-height: 34px !important;
     color: #000 !important;
   }
-  .qmedia-desktop-float-left .qmedia-header {
+  .qmedia-desktop-float-left > .qmedia-content > .qmedia-header {
     width: 100%;
     margin-bottom: 16px;
   }
-  .qmedia-desktop-float-left .qmedia-answer {
+  .qmedia-desktop-float-left > .qmedia-content > .qmedia-answer {
     width: 100%;
   }
   .qmedia-desktop-float-left .tb-preview-description,
@@ -825,11 +825,11 @@
   line-height: 34px !important;
   color: #000 !important;
 }
-.qmedia-force-desktop.qmedia-desktop-float-right .qmedia-header {
+.qmedia-force-desktop.qmedia-desktop-float-right > .qmedia-content > .qmedia-header {
   width: 100%;
   margin-bottom: 16px;
 }
-.qmedia-force-desktop.qmedia-desktop-float-right .qmedia-answer {
+.qmedia-force-desktop.qmedia-desktop-float-right > .qmedia-content > .qmedia-answer {
   width: 100%;
 }
 .qmedia-force-desktop.qmedia-desktop-float-right .tb-preview-description,
@@ -939,11 +939,11 @@
   line-height: 34px !important;
   color: #000 !important;
 }
-.qmedia-force-desktop.qmedia-desktop-float-left .qmedia-header {
+.qmedia-force-desktop.qmedia-desktop-float-left > .qmedia-content > .qmedia-header {
   width: 100%;
   margin-bottom: 16px;
 }
-.qmedia-force-desktop.qmedia-desktop-float-left .qmedia-answer {
+.qmedia-force-desktop.qmedia-desktop-float-left > .qmedia-content > .qmedia-answer {
   width: 100%;
 }
 .qmedia-force-desktop.qmedia-desktop-float-left .tb-preview-description,
