@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import type { QuestionMedia } from '@/lib/test/types';
 import './question-media.css';
 
@@ -37,9 +38,7 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   if (media.type === 'audio') {
     return (
       <div className={className} style={{ ...audioFrameWrap, ...style }}>
-        <audio controls preload="metadata" src={media.url} style={audioControl}>
-          <a href={media.url}>Open audio</a>
-        </audio>
+        <AudioPlayer src={media.url} />
       </div>
     );
   }
@@ -93,6 +92,151 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
         style={{ ...framedImageStyle, transform }}
       />
     </div>
+  );
+}
+
+function AudioPlayer({ src }: { src: string }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
+    setCurrentTime(0);
+    setIsPlaying(false);
+    setIsMuted(audio.muted);
+
+    const handleMetadata = () => setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
+    const handleTime = () => setCurrentTime(audio.currentTime);
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+    const handleEnded = () => {
+      setIsPlaying(false);
+      setCurrentTime(audio.duration || 0);
+    };
+    const handleVolume = () => setIsMuted(audio.muted);
+
+    audio.addEventListener('loadedmetadata', handleMetadata);
+    audio.addEventListener('durationchange', handleMetadata);
+    audio.addEventListener('timeupdate', handleTime);
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+    audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('volumechange', handleVolume);
+
+    return () => {
+      audio.removeEventListener('loadedmetadata', handleMetadata);
+      audio.removeEventListener('durationchange', handleMetadata);
+      audio.removeEventListener('timeupdate', handleTime);
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('volumechange', handleVolume);
+    };
+  }, [src]);
+
+  const progress = duration > 0 ? Math.min(100, Math.max(0, (currentTime / duration) * 100)) : 0;
+
+  const togglePlay = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      try {
+        await audio.play();
+      } catch (error) {
+        console.error('Unable to play audio', error);
+      }
+      return;
+    }
+    audio.pause();
+  };
+
+  const seek = (value: string) => {
+    const nextTime = Number(value);
+    const audio = audioRef.current;
+    if (!audio || !Number.isFinite(nextTime)) return;
+    audio.currentTime = nextTime;
+    setCurrentTime(nextTime);
+  };
+
+  const toggleMute = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.muted = !audio.muted;
+    setIsMuted(audio.muted);
+  };
+
+  return (
+    <div className="qmedia-audio-player">
+      <audio ref={audioRef} preload="metadata" src={src} />
+      <button type="button" className="qmedia-audio-icon-button" onClick={togglePlay} aria-label={isPlaying ? 'Pause audio' : 'Play audio'}>
+        {isPlaying ? <PauseIcon /> : <PlayIcon />}
+      </button>
+      <span className="qmedia-audio-time">{formatTime(currentTime)} / {formatTime(duration)}</span>
+      <div className="qmedia-audio-progress" style={{ '--qmedia-audio-progress': `${progress}%` } as React.CSSProperties}>
+        <div className="qmedia-audio-progress-track" aria-hidden="true">
+          <span />
+        </div>
+        <input
+          className="qmedia-audio-progress-input"
+          type="range"
+          min="0"
+          max={duration || 0}
+          step="0.01"
+          value={duration ? currentTime : 0}
+          onChange={event => seek(event.target.value)}
+          aria-label="Audio progress"
+        />
+      </div>
+      <button type="button" className="qmedia-audio-icon-button" onClick={toggleMute} aria-label={isMuted ? 'Unmute audio' : 'Mute audio'}>
+        <VolumeIcon muted={isMuted} />
+      </button>
+    </div>
+  );
+}
+
+function formatTime(value: number) {
+  const safeValue = Number.isFinite(value) && value > 0 ? Math.floor(value) : 0;
+  const hours = Math.floor(safeValue / 3600);
+  const minutes = Math.floor((safeValue % 3600) / 60);
+  const seconds = safeValue % 60;
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
+  return `${minutes}:${String(seconds).padStart(2, '0')}`;
+}
+
+function PlayIcon() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" d="M4 2.9c0-.8.9-1.3 1.6-.9l7.1 4.4c.6.4.6 1.3 0 1.7l-7.1 4.4c-.7.4-1.6-.1-1.6-.9z" />
+    </svg>
+  );
+}
+
+function PauseIcon() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" d="M4 3.2c0-.4.3-.7.7-.7h1.6c.4 0 .7.3.7.7v9.6c0 .4-.3.7-.7.7H4.7a.7.7 0 0 1-.7-.7zm5 0c0-.4.3-.7.7-.7h1.6c.4 0 .7.3.7.7v9.6c0 .4-.3.7-.7.7H9.7a.7.7 0 0 1-.7-.7z" />
+    </svg>
+  );
+}
+
+function VolumeIcon({ muted }: { muted: boolean }) {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" d="M2 6.3c0-.4.3-.8.8-.8h2.1l3-2.5c.5-.4 1.3-.1 1.3.6v8.8c0 .7-.8 1-1.3.6l-3-2.5H2.8a.8.8 0 0 1-.8-.8z" />
+      {muted ? (
+        <path fill="currentColor" d="M11.1 6.1a.8.8 0 0 1 1.1 0l.8.8.8-.8a.8.8 0 0 1 1.1 1.1l-.8.8.8.8a.8.8 0 1 1-1.1 1.1l-.8-.8-.8.8a.8.8 0 1 1-1.1-1.1l.8-.8-.8-.8a.8.8 0 0 1 0-1.1" />
+      ) : (
+        <path fill="currentColor" d="M11.2 5.1a.8.8 0 0 1 1.1 0 4.1 4.1 0 0 1 0 5.8.8.8 0 0 1-1.1-1.1 2.6 2.6 0 0 0 0-3.6.8.8 0 0 1 0-1.1" />
+      )}
+    </svg>
   );
 }
 
@@ -230,15 +374,10 @@ const mediaLink: React.CSSProperties = {
 
 const audioFrameWrap: React.CSSProperties = {
   width: '100%',
-  maxWidth: 420,
-  margin: '0 auto 12px',
+  maxWidth: 560,
+  margin: '0 auto 10px',
   padding: 0,
   borderRadius: 0,
   background: 'transparent',
   boxSizing: 'border-box',
-};
-
-const audioControl: React.CSSProperties = {
-  display: 'block',
-  width: '100%',
 };

@@ -9,6 +9,99 @@
 .qmedia-layout.qmedia-audio {
   gap: 10px;
 }
+.qmedia-audio-player {
+  --qmedia-audio-ink: var(--test-theme-question, #1f2937);
+  --qmedia-audio-track: rgba(31, 41, 55, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  color: var(--qmedia-audio-ink);
+  box-sizing: border-box;
+}
+.qmedia-audio-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+}
+.qmedia-audio-icon-button svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.qmedia-audio-time {
+  flex: 0 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.qmedia-audio-progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 72px;
+  height: 24px;
+}
+.qmedia-audio-progress-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--qmedia-audio-track);
+}
+.qmedia-audio-progress-track span {
+  display: block;
+  width: var(--qmedia-audio-progress, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: currentColor;
+}
+.qmedia-audio-progress-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+@media (max-width: 520px) {
+  .qmedia-audio-player {
+    gap: 12px;
+    min-height: 54px;
+    padding: 0 16px;
+  }
+  .qmedia-audio-time {
+    font-size: 16px;
+  }
+  .qmedia-audio-icon-button {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+  .qmedia-audio-icon-button svg {
+    width: 22px;
+    height: 22px;
+  }
+}
 .qmedia-layout > .qmedia-asset {
   margin: 0;
 }
