@@ -656,7 +656,7 @@ const playerInner: React.CSSProperties = {
   position: 'relative',
   zIndex: 1,
   width: '100%',
-  maxWidth: 660,
+  maxWidth: 1120,
 };
 
 const questionCard: React.CSSProperties = {
