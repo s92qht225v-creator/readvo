@@ -918,7 +918,19 @@ export function TestBuilder({ testId }: Props) {
         </div>
 
         {/* Canvas */}
-        <div className={`tb-canvas tb-canvas--${previewDevice}`} style={{ flex: 1, overflow: 'auto', background: '#fff' }}>
+        <div
+          className={`tb-canvas tb-canvas--${previewDevice}`}
+          style={{
+            flex: 1,
+            overflow: 'auto',
+            background: '#fff',
+            display: 'flex',
+            alignItems: 'safe center',
+            justifyContent: 'safe center',
+            padding: previewDevice === 'desktop' ? '28px 32px' : '28px',
+            boxSizing: 'border-box',
+          }}
+        >
           {activeBlock.kind === 'welcome' ? (
             <ScreenPreviewCanvas screen={welcomeScreen} fallbackTitle={test.title} kind="welcome" questionCount={questions.length} previewDevice={previewDevice} />
           ) : activeBlock.kind === 'end' ? (
