@@ -173,6 +173,47 @@ scrollbar-width: none;
 - Inputs should not auto-focus in the public player; users should read first,
   then tap to open keyboard.
 
+### Custom Dropdown
+
+Dropdown questions use a custom menu, not a native `<select>`.
+
+Renderer:
+
+- `src/components/test/QuestionRenderer.tsx`
+- Component: `CustomDropdownAnswer`
+- Root classes: `test-dropdown-answer test-custom-dropdown`
+- Trigger: `test-custom-dropdown__trigger`
+- Menu: `test-custom-dropdown__menu`
+- Option: `test-custom-dropdown__option`
+
+Required behavior:
+
+- Corner radius is `3px` on the trigger and menu.
+- Chevron uses the shared Typeform-style down icon:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.116 10.847a1.25 1.25 0 0 0 1.768 0L12.78 6.95a.75.75 0 0 0-1.06-1.06L8 9.61 4.28 5.89a.75.75 0 0 0-1.06 1.06z"/></svg>
+```
+
+- Menu opens with a short scale/fade animation (`test-dropdown-open`).
+- Menu closes on outside click and `Escape`.
+- Selected option uses the answer/theme color with white text.
+- Trigger width follows the same rules as other answer boxes:
+  - media desktop layouts: match the media answer column width
+  - no-media desktop: stretch to the card/content width
+  - mobile: match the standard mobile answer width
+
+Styling locations:
+
+- `src/components/test/test-player.css` - base custom dropdown styles and animation.
+- `src/components/test/question-media.css` - qmedia/theme-specific dropdown overrides.
+- `src/components/test/test-builder-preview.css` - builder preview overrides.
+- `src/styles/reading.css` - public preview shell overrides.
+
+Do not style custom dropdowns only with `.test-dropdown-answer`; that class is
+shared with older native dropdown/input sizing rules. Always include
+`.test-custom-dropdown` or child classes when targeting the custom menu.
+
 ### Rating
 
 - Stars must be clickable.
@@ -265,4 +306,3 @@ For any styling change, verify at least:
 - A question with media and a question without media.
 - Multiple choice, match, rating, opinion scale, dropdown, short/long answer if
   the change touches shared answer styles.
-
