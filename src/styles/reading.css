@@ -13747,8 +13747,14 @@ body {
   max-width: 100% !important;
   min-height: 663px !important;
   overflow-y: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   border-radius: 7px !important;
   padding: 30px 26px !important;
+}
+
+.tb-canvas--mobile .tb-preview-card::-webkit-scrollbar {
+  display: none !important;
 }
 
 .tb-canvas--mobile .tb-preview-meta {
