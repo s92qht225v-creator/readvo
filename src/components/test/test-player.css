@@ -40,7 +40,7 @@
   }
 
   .test-player__card--no-media > .qmedia-layout {
-    justify-content: safe center !important;
+    justify-content: center !important;
   }
 
   .test-player__nav {
@@ -311,7 +311,7 @@
 }
 
 .test-player__card--force-desktop.test-player__card--no-media > .qmedia-layout {
-  justify-content: safe center !important;
+  justify-content: center !important;
 }
 
 .test-player__card--force-desktop :is(

@@ -13911,7 +13911,7 @@ body {
 }
 
 .test-preview-shell--desktop .test-player__card--no-media > .qmedia-layout {
-  justify-content: safe center !important;
+  justify-content: center !important;
 }
 
 .test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-right),
