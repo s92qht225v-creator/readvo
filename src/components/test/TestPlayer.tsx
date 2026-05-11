@@ -615,7 +615,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
               {remainingSeconds != null ? (
                 <section style={navigatorCard}>
                   <div style={navigatorCardHeader}>
-                    <h3 style={navigatorCardTitle}>Qolgan vaqt</h3>
+                    <h3 style={navigatorCardTitle}>Time left</h3>
                     <div style={navigatorTimerPill}>
                       <AlarmClockIcon />
                       <span>{formatClock(remainingSeconds)}</span>
@@ -625,7 +625,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
               ) : null}
               <section style={navigatorCard}>
                 <div style={navigatorCardHeader}>
-                  <h3 style={navigatorCardTitle}>Barcha testlar</h3>
+                  <h3 style={navigatorCardTitle}>All questions</h3>
                   <span style={navigatorCount}>{answeredCount}/{total}</span>
                 </div>
                 <div style={navigatorGridScroller}>
@@ -649,6 +649,17 @@ export function TestPlayer({ test, forceDevice }: Props) {
                   </div>
                 </div>
               </section>
+              <button
+                type="button"
+                onClick={() => {
+                  setNavigatorOpen(false);
+                  void submit();
+                }}
+                disabled={phase === 'submitting'}
+                style={navigatorFinishButton(phase === 'submitting')}
+              >
+                Finish the test
+              </button>
             </motion.div>
           </motion.div>
         ) : null}
@@ -1119,7 +1130,7 @@ const navigatorCard: React.CSSProperties = {
   marginInline: 'auto',
   background: '#fff',
   border: '1px solid rgba(47, 37, 51, 0.08)',
-  borderRadius: 14,
+  borderRadius: 3,
   boxShadow: '0 1px 2px rgba(47, 37, 51, 0.04)',
   padding: 20,
   marginBottom: 10,
@@ -1147,7 +1158,7 @@ const navigatorCloseButton: React.CSSProperties = {
   width: 36,
   height: 36,
   border: 'none',
-  borderRadius: 10,
+  borderRadius: 3,
   background: '#fff',
   color: '#6d6670',
   fontSize: 28,
@@ -1161,7 +1172,7 @@ const navigatorTimerPill: React.CSSProperties = {
   alignItems: 'center',
   gap: 8,
   padding: '10px 14px',
-  borderRadius: 12,
+  borderRadius: 3,
   background: '#f7f7f6',
   color: '#02ad1b',
   fontSize: 14,
@@ -1197,7 +1208,7 @@ const navigatorQuestionButton = (current: boolean, answered: boolean): React.CSS
   height: 36,
   justifySelf: 'center',
   border: 'none',
-  borderRadius: 11,
+  borderRadius: 3,
   background: current
     ? 'var(--test-theme-button, #2f2533)'
     : answered
@@ -1211,4 +1222,22 @@ const navigatorQuestionButton = (current: boolean, answered: boolean): React.CSS
   fontSize: 16,
   fontWeight: 800,
   cursor: 'pointer',
+});
+
+const navigatorFinishButton = (disabled: boolean): React.CSSProperties => ({
+  width: 'min(368px, 100%)',
+  minHeight: 52,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: '0 auto',
+  border: 'none',
+  borderRadius: 3,
+  background: 'var(--test-theme-button, #2f2533)',
+  color: 'var(--test-theme-button-text, #fff)',
+  fontSize: 15,
+  fontWeight: 850,
+  cursor: disabled ? 'not-allowed' : 'pointer',
+  opacity: disabled ? 0.55 : 1,
+  boxShadow: '0 10px 24px rgba(47, 37, 51, 0.16)',
 });
