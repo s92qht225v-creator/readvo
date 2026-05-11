@@ -200,7 +200,6 @@ const MOBILE_LAYOUT_OPTIONS: Array<LayoutOption<MobileMediaLayout>> = [
   { value: 'stack', label: 'Stack' },
   { value: 'float', label: 'Float' },
   { value: 'split', label: 'Split' },
-  { value: 'wallpaper', label: 'Wallpaper' },
 ];
 
 const DESKTOP_LAYOUT_OPTIONS: Array<LayoutOption<DesktopMediaLayout>> = [
@@ -216,10 +215,12 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
   const mobileOptions = media.type === 'audio'
     ? MOBILE_LAYOUT_OPTIONS.map(option => ({
       ...option,
-      disabled: option.value === 'split' || option.value === 'wallpaper',
+      disabled: option.value === 'split',
     }))
     : MOBILE_LAYOUT_OPTIONS;
-  const mobileValue = media.type === 'audio' && (media.layoutMobile === 'split' || media.layoutMobile === 'wallpaper')
+  const mobileValue = media.layoutMobile === 'wallpaper'
+    ? 'stack'
+    : media.type === 'audio' && media.layoutMobile === 'split'
     ? 'stack'
     : media.layoutMobile ?? 'stack';
 

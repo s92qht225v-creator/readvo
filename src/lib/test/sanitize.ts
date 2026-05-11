@@ -45,7 +45,7 @@ function questionMedia(options: unknown): PublicQuestion['media'] {
     url: media.url,
     alt: typeof media.alt === 'string' ? media.alt : undefined,
     provider: media.provider,
-    layoutMobile: media.layoutMobile,
+    layoutMobile: media.layoutMobile === 'wallpaper' ? 'stack' : media.layoutMobile,
     layoutDesktop: media.layoutDesktop,
     aspectRatio: media.aspectRatio,
     naturalAspectRatio: media.naturalAspectRatio,

@@ -214,9 +214,11 @@ function PauseIcon() {
 
 function layoutClassName(media: QuestionMedia, forceDevice?: 'mobile' | 'desktop') {
   const kind = media.type === 'audio' ? ' qmedia-audio' : '';
-  const mobile = media.type === 'audio' && media.layoutMobile === 'wallpaper'
+  const mobile = media.layoutMobile === 'wallpaper'
     ? 'stack'
-    : media.layoutMobile ?? 'stack';
+    : media.type === 'audio' && media.layoutMobile === 'split'
+      ? 'stack'
+      : media.layoutMobile ?? 'stack';
   const desktop = normalizeDesktopLayout(media.layoutDesktop);
   if (forceDevice === 'mobile') {
     return `qmedia-layout${kind} qmedia-mobile-${mobile} qmedia-force-mobile`;

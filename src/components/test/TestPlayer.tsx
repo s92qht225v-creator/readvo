@@ -80,12 +80,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
   const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
-  const mobileWallpaperMedia = q?.media?.url
-    && q.media.layoutMobile === 'wallpaper'
-    && (q.media.type === 'image' || q.media.type === 'gif')
-    && forceDevice !== 'desktop'
-    ? q.media
-    : undefined;
+  const mobileWallpaperMedia = undefined;
   const welcomeScreen = test.welcome_screen?.enabled ? test.welcome_screen : null;
   const endScreen = test.end_screen?.enabled ? test.end_screen : null;
   const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
