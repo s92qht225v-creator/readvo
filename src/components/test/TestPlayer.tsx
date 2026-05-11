@@ -54,12 +54,48 @@ function formatDuration(totalSeconds: number): string {
   return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`;
 }
 
+function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['value']): boolean {
+  if (!value) return false;
+  if (question.type === 'multiple_choice' || question.type === 'picture_choice') {
+    return typeof value.selected === 'number'
+      || (typeof value.selectedId === 'string' && value.selectedId.length > 0)
+      || (Array.isArray(value.selectedIds) && value.selectedIds.length > 0);
+  }
+  if (question.type === 'short_text' || question.type === 'long_answer' || question.type === 'number') {
+    return typeof value.text === 'string' && value.text.trim().length > 0;
+  }
+  if (question.type === 'dropdown') {
+    return typeof value.selectedId === 'string' && value.selectedId.length > 0;
+  }
+  if (question.type === 'checkbox') {
+    return Array.isArray(value.selectedIds) && value.selectedIds.length > 0;
+  }
+  if (question.type === 'opinion_scale' || question.type === 'rating') {
+    return typeof value.selected === 'number';
+  }
+  if (question.type === 'true_false') {
+    return typeof value.bool === 'boolean';
+  }
+  if (question.type === 'match') {
+    return (Array.isArray(value.pairs) && value.pairs.length > 0)
+      || (Array.isArray(value.matches) && value.matches.some(match => typeof match === 'string' && match.length > 0));
+  }
+  if (question.type === 'ordering') {
+    return Array.isArray(value.order) && value.order.length > 0;
+  }
+  if (question.type === 'fill_blanks') {
+    return Array.isArray(value.blanks) && value.blanks.some(blank => typeof blank === 'string' && blank.trim().length > 0);
+  }
+  return Object.keys(value).length > 0;
+}
+
 export function TestPlayer({ test, forceDevice }: Props) {
   const [phase, setPhase] = useState<Phase>('intro');
   const [name, setName] = useState('');
   const [idx, setIdx] = useState(0);
   // 1 = forward (next), -1 = backward (prev). Drives slide direction.
   const [navDirection, setNavDirection] = useState<1 | -1>(1);
+  const [navigatorOpen, setNavigatorOpen] = useState(false);
   const [timerOpen, setTimerOpen] = useState(false);
   const [timerOffset, setTimerOffset] = useState({ x: 0, y: 0 });
   const timerDragRef = useRef<{
@@ -72,6 +108,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   } | null>(null);
   const goToIdx = useCallback((nextIdx: number | ((prev: number) => number)) => {
     setTimerOpen(false);
+    setNavigatorOpen(false);
     setIdx(prev => {
       const next = typeof nextIdx === 'function' ? nextIdx(prev) : nextIdx;
       setNavDirection(next >= prev ? 1 : -1);
@@ -91,6 +128,10 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
   const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
+  const answeredCount = useMemo(
+    () => test.questions.filter(question => hasQuestionAnswer(question, answers[question.id])).length,
+    [answers, test.questions],
+  );
   const mobileWallpaperMedia = undefined;
   const welcomeScreen = test.welcome_screen?.enabled ? test.welcome_screen : null;
   const endScreen = test.end_screen?.enabled ? test.end_screen : null;
@@ -525,11 +566,10 @@ export function TestPlayer({ test, forceDevice }: Props) {
       <div className="test-player__nav" style={navRow}>
         <button
           type="button"
-          onClick={() => goToIdx(i => Math.max(0, i - 1))}
-          disabled={idx === 0}
-          style={secondaryButton(idx === 0)}
+          onClick={() => setNavigatorOpen(true)}
+          style={secondaryButton(false)}
         >
-          Back
+          Questions
         </button>
         <div className="test-player__progress" style={navProgress}>
           {idx + 1} / {total}
@@ -543,6 +583,76 @@ export function TestPlayer({ test, forceDevice }: Props) {
           {phase === 'submitting' ? 'Submitting…' : isLast ? 'Submit' : 'Next'}
         </button>
       </div>
+
+      <AnimatePresence>
+        {navigatorOpen ? (
+          <motion.div
+            style={navigatorOverlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setNavigatorOpen(false)}
+          >
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label="Question navigator"
+              style={navigatorPanel}
+              initial={{ opacity: 0, y: 18, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 18, scale: 0.98 }}
+              transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              onClick={event => event.stopPropagation()}
+            >
+              <div style={navigatorHeader}>
+                <div>
+                  <h3 style={navigatorTitle}>Questions</h3>
+                  <p style={navigatorSubtitle}>
+                    {answeredCount} answered · {Math.max(0, total - answeredCount)} unanswered
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  aria-label="Close questions"
+                  onClick={() => setNavigatorOpen(false)}
+                  style={navigatorCloseButton}
+                >
+                  ×
+                </button>
+              </div>
+              {remainingSeconds != null ? (
+                <div style={navigatorTimer}>
+                  <AlarmClockIcon />
+                  <span>{formatClock(remainingSeconds)}</span>
+                </div>
+              ) : null}
+              <div style={navigatorGrid}>
+                {test.questions.map((question, questionIndex) => {
+                  const answered = hasQuestionAnswer(question, answers[question.id]);
+                  const current = questionIndex === idx;
+                  return (
+                    <button
+                      key={question.id}
+                      type="button"
+                      onClick={() => goToIdx(questionIndex)}
+                      aria-current={current ? 'step' : undefined}
+                      aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
+                      style={navigatorQuestionButton(current, answered)}
+                    >
+                      {questionIndex + 1}
+                    </button>
+                  );
+                })}
+              </div>
+              <div style={navigatorLegend}>
+                <span style={navigatorLegendItem('#2f2533')}>Current</span>
+                <span style={navigatorLegendItem('#0a7f34')}>Answered</span>
+                <span style={navigatorLegendItem('#d8d2cc')}>Unanswered</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </Wrapper>
   );
 }
@@ -976,4 +1086,124 @@ const secondaryButton = (disabled: boolean): React.CSSProperties => ({
   fontWeight: 800,
   cursor: disabled ? 'not-allowed' : 'pointer',
   opacity: disabled ? 0.45 : 1,
+});
+
+const navigatorOverlay: React.CSSProperties = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: 120,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 18,
+  background: 'rgba(28, 22, 38, 0.28)',
+  backdropFilter: 'blur(6px)',
+};
+
+const navigatorPanel: React.CSSProperties = {
+  width: 'min(430px, calc(100vw - 28px))',
+  maxHeight: 'min(680px, calc(100dvh - 36px))',
+  overflowY: 'auto',
+  scrollbarWidth: 'none',
+  background: '#fff',
+  border: '1px solid #e4ded8',
+  borderRadius: 16,
+  boxShadow: '0 24px 70px rgba(47, 37, 51, 0.22)',
+  padding: 20,
+  color: '#2f2533',
+};
+
+const navigatorHeader: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  justifyContent: 'space-between',
+  gap: 16,
+  marginBottom: 14,
+};
+
+const navigatorTitle: React.CSSProperties = {
+  margin: 0,
+  fontSize: 22,
+  lineHeight: 1.15,
+  fontWeight: 850,
+  color: '#2f2533',
+};
+
+const navigatorSubtitle: React.CSSProperties = {
+  margin: '5px 0 0',
+  fontSize: 13,
+  color: '#746b76',
+  fontWeight: 650,
+};
+
+const navigatorCloseButton: React.CSSProperties = {
+  width: 34,
+  height: 34,
+  border: 'none',
+  borderRadius: 8,
+  background: '#f3f1f3',
+  color: '#6f6772',
+  fontSize: 26,
+  lineHeight: '30px',
+  cursor: 'pointer',
+};
+
+const navigatorTimer: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+  marginBottom: 16,
+  padding: '8px 12px',
+  borderRadius: 999,
+  background: '#f6f4f6',
+  color: '#2f2533',
+  fontSize: 14,
+  fontWeight: 850,
+};
+
+const navigatorGrid: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(42px, 1fr))',
+  gap: 8,
+};
+
+const navigatorQuestionButton = (current: boolean, answered: boolean): React.CSSProperties => ({
+  height: 42,
+  border: current
+    ? '2px solid var(--test-theme-button, #2f2533)'
+    : answered
+      ? '1px solid rgba(10, 127, 52, 0.26)'
+      : '1px solid #e2dcd6',
+  borderRadius: 10,
+  background: current
+    ? 'var(--test-theme-button, #2f2533)'
+    : answered
+      ? 'rgba(10, 127, 52, 0.08)'
+      : '#f8f6f4',
+  color: current
+    ? 'var(--test-theme-button-text, #fff)'
+    : answered
+      ? '#0a7f34'
+      : '#6f6772',
+  fontSize: 14,
+  fontWeight: 850,
+  cursor: 'pointer',
+});
+
+const navigatorLegend: React.CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 12,
+  marginTop: 16,
+  color: '#746b76',
+  fontSize: 12,
+  fontWeight: 700,
+};
+
+const navigatorLegendItem = (color: string): React.CSSProperties => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  borderLeft: `10px solid ${color}`,
+  paddingLeft: 6,
 });
