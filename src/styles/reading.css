@@ -13730,13 +13730,14 @@ body {
 
 /* Mobile preview wrapper */
 .tb-canvas--mobile {
-  max-width: 372px;
-  margin: 0 auto;
+  width: 100%;
   min-height: 100%;
   background: #fff;
 }
 
 .tb-canvas--mobile .tb-preview-wrap {
+  width: 372px !important;
+  max-width: none !important;
   padding: 44px 0 !important;
 }
 

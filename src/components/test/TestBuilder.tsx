@@ -927,7 +927,7 @@ export function TestBuilder({ testId }: Props) {
             display: 'flex',
             alignItems: 'safe center',
             justifyContent: 'safe center',
-            padding: previewDevice === 'desktop' ? '28px 32px' : '28px',
+            padding: previewDevice === 'desktop' ? '28px 32px' : '8px',
             boxSizing: 'border-box',
           }}
         >
@@ -2370,8 +2370,8 @@ function PreviewCanvas({
       className="tb-preview-wrap"
       style={{
         ...previewWrap,
-        width: previewDevice === 'desktop' ? frameSize.width : '100%',
-        maxWidth: previewDevice === 'desktop' ? 'none' : '100%',
+        width: frameSize.width,
+        maxWidth: 'none',
         height: slideSize.height,
         minHeight: slideSize.height,
       }}
