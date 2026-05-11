@@ -198,13 +198,48 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-question-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-picture-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-ordering-list,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-match-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-dropdown-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-short-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-long-answer {
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-question-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-picture-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-ordering-list,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-match-list,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-dropdown-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-number-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-short-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-long-answer,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-question-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-picture-options,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-ordering-list,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-match-list {
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0 !important;
+  }
+
+  .test-player__card:not(.test-player__card--force-mobile) :is(
+    .qmedia-desktop-float-right,
+    .qmedia-desktop-float-left,
+    .qmedia-desktop-split-right,
+    .qmedia-desktop-split-left,
+    .qmedia-desktop-wallpaper
+  ) .test-opinion-scale,
+  .test-player__card:not(.test-player__card--force-mobile) :is(
+    .qmedia-desktop-float-right,
+    .qmedia-desktop-float-left,
+    .qmedia-desktop-split-right,
+    .qmedia-desktop-split-left,
+    .qmedia-desktop-wallpaper
+  ) .test-opinion-scale__labels {
+    width: 361px !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
 }
 
@@ -236,13 +271,48 @@
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-question-options,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-picture-options,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-ordering-list,
+.test-player__card--force-desktop .qmedia-desktop-split-right .test-match-list,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-dropdown-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-short-answer,
-.test-player__card--force-desktop .qmedia-desktop-split-left .test-long-answer {
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-question-options,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-picture-options,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-ordering-list,
+.test-player__card--force-desktop .qmedia-desktop-split-left .test-match-list,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-dropdown-answer,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-number-answer,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-short-answer,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-long-answer,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-question-options,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-picture-options,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-ordering-list,
+.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-match-list {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
+}
+
+.test-player__card--force-desktop :is(
+  .qmedia-desktop-float-right,
+  .qmedia-desktop-float-left,
+  .qmedia-desktop-split-right,
+  .qmedia-desktop-split-left,
+  .qmedia-desktop-wallpaper
+) .test-opinion-scale,
+.test-player__card--force-desktop :is(
+  .qmedia-desktop-float-right,
+  .qmedia-desktop-float-left,
+  .qmedia-desktop-split-right,
+  .qmedia-desktop-split-left,
+  .qmedia-desktop-wallpaper
+) .test-opinion-scale__labels {
+  width: 361px !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
 }
 
 .test-player__card--type-match .qmedia-answer,
