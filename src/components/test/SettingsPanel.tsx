@@ -205,8 +205,6 @@ const MOBILE_LAYOUT_OPTIONS: Array<LayoutOption<MobileMediaLayout>> = [
 const DESKTOP_LAYOUT_OPTIONS: Array<LayoutOption<DesktopMediaLayout>> = [
   { value: 'float-right', label: 'Float right' },
   { value: 'float-left', label: 'Float left' },
-  { value: 'split-right', label: 'Split right' },
-  { value: 'split-left', label: 'Split left' },
 ];
 
 function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q: BuilderQuestion) => void }) {

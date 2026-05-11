@@ -29,7 +29,9 @@ export function setQuestionMedia(q: BuilderQuestion, media: QuestionMedia | unde
 }
 
 export function normalizeDesktopLayout(value: QuestionMedia['layoutDesktop']): DesktopMediaLayout {
-  if (value === 'wallpaper') return 'split-left';
+  if (value === 'split-right') return 'float-right';
+  if (value === 'split-left') return 'float-left';
+  if (value === 'wallpaper') return 'float-right';
   if (value === 'stack') return 'float-right';
   return value ?? 'float-right';
 }

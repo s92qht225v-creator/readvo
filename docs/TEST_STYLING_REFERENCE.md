@@ -32,6 +32,11 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 - Builder mobile canvas target: `427 x 760`.
 - Public desktop card target in preview shell: `1120 x 620`.
 - Public mobile card target in preview shell: `372 x 663`.
+- The builder center canvas must center the fixed preview frame inside the
+  middle column, not pin it to the top-left. The `.tb-canvas` wrapper uses
+  `display: flex`, `align-items: safe center`, `justify-content: safe center`,
+  and padding (`28px 32px` on desktop) so the frame has breathing room from the
+  toolbar and side rails.
 
 ## Card Rules
 
@@ -139,12 +144,11 @@ If content overflows, the card remains scrollable with hidden scrollbars.
 
 - `float-right` - content left, image right.
 - `float-left` - image left, content right.
-- `split-right` - content left, full-height image right.
-- `split-left` - full-height image left, content right.
-- `wallpaper` - background media with content overlaid.
+- `split-right`, `split-left`, and `wallpaper` are legacy values only. They
+  should not appear in builder controls. Normalize them to `float-right`,
+  `float-left`, and `float-right` respectively when reading or saving media.
 
-Desktop `float-left` should mirror `float-right`; `split-left` should mirror
-`split-right`.
+Desktop `float-left` should mirror `float-right`.
 
 ## Desktop Symmetry Rules
 
