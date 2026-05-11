@@ -194,15 +194,16 @@ function MediaRow({ q, onOpen, onSettings, onRemove }: {
 
 type MobileMediaLayout = NonNullable<QuestionMedia['layoutMobile']>;
 type DesktopMediaLayout = NonNullable<QuestionMedia['layoutDesktop']>;
+type LayoutOption<T extends string> = { value: T; label: string; disabled?: boolean };
 
-const MOBILE_LAYOUT_OPTIONS: Array<{ value: MobileMediaLayout; label: string }> = [
+const MOBILE_LAYOUT_OPTIONS: Array<LayoutOption<MobileMediaLayout>> = [
   { value: 'stack', label: 'Stack' },
   { value: 'float', label: 'Float' },
   { value: 'split', label: 'Split' },
   { value: 'wallpaper', label: 'Wallpaper' },
 ];
 
-const DESKTOP_LAYOUT_OPTIONS: Array<{ value: DesktopMediaLayout; label: string }> = [
+const DESKTOP_LAYOUT_OPTIONS: Array<LayoutOption<DesktopMediaLayout>> = [
   { value: 'float-right', label: 'Float right' },
   { value: 'float-left', label: 'Float left' },
   { value: 'split-right', label: 'Split right' },
@@ -213,8 +214,14 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
   const media = getQuestionMedia(q);
   if (!media?.url) return null;
   const mobileOptions = media.type === 'audio'
-    ? MOBILE_LAYOUT_OPTIONS.filter(option => option.value !== 'wallpaper')
+    ? MOBILE_LAYOUT_OPTIONS.map(option => ({
+      ...option,
+      disabled: option.value === 'split' || option.value === 'wallpaper',
+    }))
     : MOBILE_LAYOUT_OPTIONS;
+  const mobileValue = media.type === 'audio' && (media.layoutMobile === 'split' || media.layoutMobile === 'wallpaper')
+    ? 'stack'
+    : media.layoutMobile ?? 'stack';
 
   const update = (patch: Partial<Pick<QuestionMedia, 'layoutMobile' | 'layoutDesktop'>>) => {
     onChange(setQuestionMedia(q, { ...media, ...patch }));
@@ -225,7 +232,7 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
       <div style={mediaRowTitle}>Layout</div>
       <LayoutSelect
         label="Mobile"
-        value={(media.type === 'audio' && media.layoutMobile === 'wallpaper' ? 'stack' : media.layoutMobile ?? 'stack') as MobileMediaLayout}
+        value={mobileValue as MobileMediaLayout}
         options={mobileOptions}
         onChange={value => update({ layoutMobile: value as MobileMediaLayout })}
       />
@@ -242,7 +249,7 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
 function LayoutSelect<T extends string>({ label, value, options, onChange }: {
   label: string;
   value: T;
-  options: Array<{ value: T; label: string }>;
+  options: Array<LayoutOption<T>>;
   onChange: (value: T) => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -292,9 +299,12 @@ function LayoutSelect<T extends string>({ label, value, options, onChange }: {
                 type="button"
                 role="menuitemradio"
                 aria-checked={option.value === value}
+                aria-disabled={option.disabled}
+                disabled={option.disabled}
                 title={option.label}
-                style={layoutOptionButton(option.value === value, device === 'desktop')}
+                style={layoutOptionButton(option.value === value, device === 'desktop', option.disabled)}
                 onClick={() => {
+                  if (option.disabled) return;
                   onChange(option.value);
                   setOpen(false);
                 }}
@@ -514,17 +524,18 @@ const layoutPopover = (optionCount: number, openAbove: boolean, isDesktop: boole
   };
 };
 
-const layoutOptionButton = (active: boolean, desktop = false): React.CSSProperties => ({
+const layoutOptionButton = (active: boolean, desktop = false, disabled = false): React.CSSProperties => ({
   width: 36,
   height: 34,
   border: 'none',
   borderRadius: 7,
   background: active ? '#f1efec' : 'transparent',
   color: active ? '#2f2835' : '#6b6470',
+  opacity: disabled ? 0.3 : 1,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  cursor: 'pointer',
+  cursor: disabled ? 'not-allowed' : 'pointer',
 });
 
 const mediaAddButton: React.CSSProperties = {
