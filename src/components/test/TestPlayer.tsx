@@ -60,7 +60,9 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const [idx, setIdx] = useState(0);
   // 1 = forward (next), -1 = backward (prev). Drives slide direction.
   const [navDirection, setNavDirection] = useState<1 | -1>(1);
+  const [timerOpen, setTimerOpen] = useState(false);
   const goToIdx = useCallback((nextIdx: number | ((prev: number) => number)) => {
+    setTimerOpen(false);
     setIdx(prev => {
       const next = typeof nextIdx === 'function' ? nextIdx(prev) : nextIdx;
       setNavDirection(next >= prev ? 1 : -1);
@@ -90,6 +92,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
   const timerSide = normalizedTheme.logoUrl && normalizedTheme.logoAlign === 'right' ? 'left' : 'right';
   const hasChrome = Boolean(normalizedTheme.logoUrl || remainingSeconds != null);
+  const hasLogoChrome = Boolean(normalizedTheme.logoUrl);
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -413,10 +416,20 @@ export function TestPlayer({ test, forceDevice }: Props) {
           />
           {remainingSeconds != null ? (
             <div className="test-player__timer-floating" style={floatingTimer(timerSide)}>
-              <span style={timerPill(remainingSeconds <= 60)}>
+              <button
+                type="button"
+                style={timerFab(remainingSeconds <= 60)}
+                onClick={() => setTimerOpen(open => !open)}
+                aria-label={`Show remaining time: ${formatClock(remainingSeconds)}`}
+                aria-expanded={timerOpen}
+              >
                 <AlarmClockIcon />
-                {formatClock(remainingSeconds)}
-              </span>
+              </button>
+              {timerOpen ? (
+                <div style={timerPopover(timerSide, remainingSeconds <= 60)}>
+                  {formatClock(remainingSeconds)}
+                </div>
+              ) : null}
             </div>
           ) : null}
         </div>
@@ -430,7 +443,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
         initial="enter"
         animate="center"
         exit="exit"
-        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${hasChrome ? 'test-player__card--has-chrome' : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
+        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${hasLogoChrome ? 'test-player__card--has-chrome' : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
           <QuestionMediaLayout
@@ -516,7 +529,7 @@ function ScreenWrapper({ children }: { children: React.ReactNode }) {
 
 function AlarmClockIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <circle cx="12" cy="13" r="8" />
       <path d="M12 9v4l2 2" />
       <path d="M5 3 2 6" />
@@ -798,19 +811,41 @@ const floatingTimer = (side: 'left' | 'right'): React.CSSProperties => ({
   left: side === 'left' ? 0 : 'auto',
   right: side === 'right' ? 0 : 'auto',
   zIndex: 7,
-  pointerEvents: 'none',
+  pointerEvents: 'auto',
 });
 
-const timerPill = (urgent: boolean): React.CSSProperties => ({
+const timerFab = (urgent: boolean): React.CSSProperties => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 42,
+  height: 42,
+  padding: 0,
+  border: urgent ? '1px solid #fecaca' : '1px solid #e2e8f0',
+  borderRadius: 999,
+  background: urgent ? '#fee2e2' : 'rgba(255, 255, 255, 0.92)',
+  color: urgent ? '#b91c1c' : '#2f2533',
+  boxShadow: '0 10px 28px rgba(47, 40, 53, 0.12)',
+  cursor: 'pointer',
+  backdropFilter: 'blur(10px)',
+});
+
+const timerPopover = (side: 'left' | 'right', urgent: boolean): React.CSSProperties => ({
+  position: 'absolute',
+  top: 50,
+  left: side === 'left' ? 0 : 'auto',
+  right: side === 'right' ? 0 : 'auto',
   display: 'inline-flex',
   alignItems: 'center',
   gap: 6,
-  marginLeft: 0,
   borderRadius: 999,
-  background: urgent ? '#fee2e2' : '#f8fafc',
+  background: urgent ? '#fee2e2' : 'rgba(255, 255, 255, 0.96)',
   color: urgent ? '#b91c1c' : '#2f2533',
   border: urgent ? '1px solid #fecaca' : '1px solid #e2e8f0',
-  padding: '5px 9px',
+  padding: '7px 11px',
+  boxShadow: '0 14px 34px rgba(47, 40, 53, 0.14)',
+  fontSize: 14,
+  fontWeight: 800,
   fontVariantNumeric: 'tabular-nums',
 });
 
