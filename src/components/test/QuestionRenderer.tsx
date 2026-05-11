@@ -422,15 +422,17 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
       <div className="test-rating" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {Array.from({ length: max }, (_, i) => i + 1).map(n => {
           const selected = (value.selected ?? 0) >= n;
+          const symbol = opts.shape === 'number' ? n : opts.shape === 'heart' ? '♥' : selected ? '★' : '☆';
           return (
             <button
               key={n}
               type="button"
               onClick={() => onChange({ selected: n })}
               style={ratingButton(selected)}
+              data-selected={selected ? 'true' : 'false'}
               aria-label={`Rating ${n}`}
             >
-              {opts.shape === 'number' ? n : opts.shape === 'heart' ? '♥' : '☆'}
+              {symbol}
             </button>
           );
         })}

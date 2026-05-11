@@ -13910,6 +13910,10 @@ body {
   justify-content: safe center !important;
 }
 
+.test-preview-shell--desktop .test-player__card--no-media > .qmedia-layout {
+  justify-content: safe center !important;
+}
+
 .test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-right),
 .test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-left) {
   padding: 0 !important;
@@ -14410,6 +14414,10 @@ body {
   color: rgb(4, 69, 175) !important;
 }
 
+.test-preview-shell .test-rating button[data-selected="true"] {
+  color: #f59e0b !important;
+}
+
 .test-preview-shell--mobile .test-opinion-scale button {
   flex: 1 1 0% !important;
   max-width: calc(16.6667% - 5px) !important;
@@ -14511,7 +14519,7 @@ body {
 .test-preview-shell--mobile .test-player__nav button {
   flex: 1 1 0 !important;
   min-height: 48px !important;
-  border-radius: 14px !important;
+  border-radius: 3px !important;
   font-size: 15px !important;
 }
 
@@ -14600,7 +14608,7 @@ body {
   .test-player__nav button {
     min-height: 48px !important;
     flex: 1 !important;
-    border-radius: 14px !important;
+    border-radius: 3px !important;
     font-size: 15px !important;
   }
 

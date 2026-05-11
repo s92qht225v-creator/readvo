@@ -1585,3 +1585,7 @@
 .qmedia-layout.qmedia-layout .test-fill-blank-input {
   border-bottom-color: var(--test-theme-answer, #0445af) !important;
 }
+
+.qmedia-layout.qmedia-layout .test-rating button[data-selected="true"] {
+  color: #f59e0b !important;
+}

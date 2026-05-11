@@ -1105,3 +1105,7 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   border-bottom-color: var(--test-theme-answer, #0445af) !important;
 }
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button[data-selected="true"] {
+  color: #f59e0b !important;
+}
