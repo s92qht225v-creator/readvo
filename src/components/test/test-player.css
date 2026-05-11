@@ -12,6 +12,44 @@
   border-radius: 0 !important;
 }
 
+@media (min-width: 641px) {
+  .test-player__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .test-player__card {
+    box-sizing: border-box !important;
+    height: min(620px, calc(100vh - 136px)) !important;
+    min-height: 520px !important;
+    overflow-y: auto !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    background: #fff !important;
+    border: 1px solid #e4ded8 !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+  }
+
+  .test-player__card::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .test-player__card > .qmedia-layout {
+    min-height: 100% !important;
+  }
+
+  .test-player__nav {
+    width: 100% !important;
+  }
+
+  .test-player__nav button {
+    min-height: 48px !important;
+    border-radius: 14px !important;
+    font-size: 15px !important;
+  }
+}
+
 .test-player__card--has-chrome {
   padding-top: max(136px, var(--qmedia-card-pad-top, 48px)) !important;
 }

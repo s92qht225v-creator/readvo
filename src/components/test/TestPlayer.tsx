@@ -965,10 +965,11 @@ const navProgress: React.CSSProperties = {
 
 const primaryButton = (disabled: boolean): React.CSSProperties => ({
   padding: '12px 22px',
+  minHeight: 48,
   background: 'var(--test-theme-button, #2f2533)',
   color: 'var(--test-theme-button-text, #fff)',
   border: 'none',
-  borderRadius: 999,
+  borderRadius: 14,
   fontWeight: 850,
   fontSize: 15,
   cursor: disabled ? 'not-allowed' : 'pointer',
@@ -978,10 +979,12 @@ const primaryButton = (disabled: boolean): React.CSSProperties => ({
 
 const secondaryButton = (disabled: boolean): React.CSSProperties => ({
   padding: '11px 18px',
+  minHeight: 48,
   background: '#fff',
   color: 'var(--test-theme-button, #2f2533)',
   border: '1px solid #d8d2cc',
-  borderRadius: 999,
+  borderRadius: 14,
+  fontSize: 15,
   fontWeight: 800,
   cursor: disabled ? 'not-allowed' : 'pointer',
   opacity: disabled ? 0.45 : 1,
