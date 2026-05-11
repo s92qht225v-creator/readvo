@@ -58,8 +58,11 @@ function questionTypeLabel(type: QuestionType): string {
     .join(' ');
 }
 
-function firstQuestionValidationError(questions: BuilderQuestion[]): { index: number; message: string } | null {
-  if (questions.length === 0) {
+function firstQuestionValidationError(
+  questions: BuilderQuestion[],
+  options?: { requireQuestions?: boolean },
+): { index: number; message: string } | null {
+  if (options?.requireQuestions && questions.length === 0) {
     return {
       index: -1,
       message: 'Add at least one question before publishing.',
@@ -335,9 +338,11 @@ export function TestBuilder({ testId }: Props) {
 
   const saveQuestions = useCallback(async (
     sourceQuestions: BuilderQuestion[] = questionsRef.current,
-    options?: { silent?: boolean },
+    options?: { silent?: boolean; requireQuestions?: boolean },
   ): Promise<boolean> => {
-    const validationError = firstQuestionValidationError(sourceQuestions);
+    const validationError = firstQuestionValidationError(sourceQuestions, {
+      requireQuestions: options?.requireQuestions,
+    });
     if (validationError) {
       if (!options?.silent) {
         if (validationError.index >= 0) {
@@ -414,6 +419,19 @@ export function TestBuilder({ testId }: Props) {
     setPubLoading(true);
     setShowPaywall(null);
     const tok = await getAccessToken();
+    if (next) {
+      const validationError = firstQuestionValidationError(questionsRef.current, { requireQuestions: true });
+      if (validationError) {
+        if (validationError.index >= 0) {
+          setActiveTopTab('create');
+          setActiveIdx(validationError.index);
+          setActiveBlock({ kind: 'question', index: validationError.index });
+        }
+        alert(validationError.message);
+        setPubLoading(false);
+        return;
+      }
+    }
     if (next && dirty) {
       const saved = await saveQuestions(questionsRef.current);
       if (!saved) { setPubLoading(false); return; }
@@ -430,7 +448,8 @@ export function TestBuilder({ testId }: Props) {
       return;
     }
     if (!res.ok) {
-      alert('Failed to update publish state');
+      const errorBody = await res.json().catch(() => null) as { error?: unknown } | null;
+      alert(typeof errorBody?.error === 'string' ? errorBody.error : 'Failed to update publish state');
       return;
     }
     const j = await res.json();

@@ -39,6 +39,20 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     return NextResponse.json({ test: data });
   }
 
+  const { count: questionCount, error: questionCountError } = await admin
+    .from('test_questions')
+    .select('id', { count: 'exact', head: true })
+    .eq('test_id', id);
+  if (questionCountError) {
+    return NextResponse.json({ error: questionCountError.message }, { status: 500 });
+  }
+  if ((questionCount ?? 0) === 0) {
+    return NextResponse.json(
+      { error: 'Add at least one question before publishing.' },
+      { status: 400 },
+    );
+  }
+
   // Free-tier check (transition false → true)
   const [{ count }, { data: sub }] = await Promise.all([
     admin
