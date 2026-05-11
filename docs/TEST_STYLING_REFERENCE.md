@@ -48,8 +48,8 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
   public desktop max (`1120px`) with the same border, `7px` radius, and shadow.
   In the desktop preview shell, it is forced to the same frame as question cards:
   `1120 x 620px`.
-- Mobile welcome/end screen cards keep the phone-frame size in the preview shell:
-  `372 x 663px`.
+- Mobile welcome/end screen cards keep the same phone-frame size in the builder
+  and preview shell: `372 x 663px`.
 - Most inner answer/media radii are theme-controlled by
   `--test-theme-answer-radius`; default is `1px`.
 - Navigation buttons use `border-radius: 3px`.

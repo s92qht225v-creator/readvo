@@ -100,7 +100,7 @@ differently:
 
 | Surface | Where | Sizing | Layout source |
 |---|---|---|---|
-| **Builder PreviewCanvas** | `TestBuilder.tsx:PreviewCanvas` | Fixed pixel frame: 1120×620 desktop, 427×760 mobile. The `.tb-canvas` wrapper centers this frame inside the middle column with safe-center flex alignment and padding. | Class-based via `.tb-preview-card--{desktop,mobile-centered}` in `test-builder-preview.css` |
+| **Builder PreviewCanvas** | `TestBuilder.tsx:PreviewCanvas` | Fixed pixel frame: 1120×620 desktop, 372×663 mobile. The `.tb-canvas` wrapper centers this frame inside the middle column with safe-center flex alignment and padding. | Class-based via `.tb-preview-card--{desktop,mobile-centered}` in `test-builder-preview.css` |
 | **Live TestPlayer (real users)** | `/test-app/t/[slug]` mounted directly | Card width follows real viewport, max 660px in playerInner | `@container (min-width: 480px)` queries against `.test-player__card` in `test-player.css` |
 | **Preview shell** | Same route with `?preview=1` (or on localhost) | Wraps `<TestPlayer forceDevice={device}>` in `.test-preview-shell--{desktop,mobile}` with fixed simulated frame | `.test-preview-shell--*` overrides in `reading.css` |
 

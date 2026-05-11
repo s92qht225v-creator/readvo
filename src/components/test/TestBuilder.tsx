@@ -151,14 +151,14 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
 const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim.uz';
 // Typeform-style preview frames:
 // - Desktop matches the public test frame so builder spacing does not drift.
-// - Mobile is a centered 427×760 framed card on a plain white canvas.
+// - Mobile matches the public mobile preview shell so builder spacing does not drift.
 const BUILDER_PREVIEW_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 480, height: 800 },
+  mobile: { width: 372, height: 663 },
 } as const;
 const BUILDER_PREVIEW_FRAME_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 427, height: 760 },
+  mobile: { width: 372, height: 663 },
 } as const;
 
 type ActiveBlock =
@@ -2401,9 +2401,9 @@ function PreviewCanvas({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           fontFamily: 'var(--test-theme-font-family, inherit)',
-          padding: previewDevice === 'mobile' ? '32px 28px' : '64px 80px',
-          '--qmedia-card-pad-x': previewDevice === 'mobile' ? '28px' : '80px',
-          '--qmedia-card-pad-top': previewDevice === 'mobile' ? '32px' : '64px',
+          padding: previewDevice === 'mobile' ? '30px 26px' : '64px 80px',
+          '--qmedia-card-pad-x': previewDevice === 'mobile' ? '26px' : '80px',
+          '--qmedia-card-pad-top': previewDevice === 'mobile' ? '30px' : '64px',
         } as React.CSSProperties}
       >
         <ThemeLogo theme={theme} />
