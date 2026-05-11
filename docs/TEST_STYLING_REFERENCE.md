@@ -82,6 +82,16 @@ not drift into a separate visual system.
 - Desktop with respondent fields uses a two-column layout:
   - one column for title, description, start button, and time-to-complete
   - one column for respondent fields
+- The two desktop columns must always be equal-width (`1fr / 1fr`). The intro
+  block and respondent-field block are each centered inside their own column
+  with the same max width (`360px`). Left/right placement changes only order,
+  not column sizing.
+- Intro text, description, start button, and time-to-complete must stay inside
+  that same `360px` measure so the text column visually matches the field
+  column.
+- The intro grid item must set `min-width: 0`, and title/description text must
+  wrap inside the `360px` measure. Long descriptions must not expand the intro
+  column.
 - If `collectorLayout` is `left`, fields render on the left and intro info moves
   to the right.
 - If `collectorLayout` is `right`, intro info stays left and fields render right.

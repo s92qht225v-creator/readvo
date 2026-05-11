@@ -2511,7 +2511,7 @@ const screenPreviewCard: React.CSSProperties = {
 
 const screenPreviewCardSplit: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'minmax(0, 1fr) minmax(280px, 360px)',
+  gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
   gap: 56,
   alignItems: 'center',
   textAlign: 'left',
@@ -2519,6 +2519,9 @@ const screenPreviewCardSplit: React.CSSProperties = {
 
 const screenPreviewIntro: React.CSSProperties = {
   width: '100%',
+  maxWidth: 360,
+  minWidth: 0,
+  justifySelf: 'center',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -2529,6 +2532,7 @@ const screenPreviewIntro: React.CSSProperties = {
 const screenPreviewCollector: React.CSSProperties = {
   width: '100%',
   maxWidth: 360,
+  justifySelf: 'center',
   display: 'grid',
   gap: 12,
 };
@@ -2560,6 +2564,8 @@ const screenPreviewCollectorInput: React.CSSProperties = {
 };
 
 const screenPreviewTitle: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
   margin: '0 0 12px',
   color: '#2f2835',
   fontSize: 20,
@@ -2569,10 +2575,15 @@ const screenPreviewTitle: React.CSSProperties = {
 };
 
 const screenPreviewDescription: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
   margin: '0 0 30px',
   color: '#a29aa6',
   fontSize: 15,
   fontStyle: 'italic',
+  lineHeight: 1.45,
+  whiteSpace: 'normal',
+  overflowWrap: 'anywhere',
 };
 
 const screenPreviewButton: React.CSSProperties = {

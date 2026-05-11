@@ -13919,7 +13919,7 @@ body {
 @media (min-width: 760px) {
   .test-player-screen__card--with-collector {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 56px;
     align-items: center !important;
     text-align: left !important;
@@ -13927,7 +13927,7 @@ body {
   }
 
   .test-player-screen__card--with-collector.test-player-screen__card--collector-left {
-    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .test-player-screen__card--collector-left .test-player-screen__collector {
@@ -13949,10 +13949,14 @@ body {
 
 .test-player-screen__card--with-collector .test-player-screen__content {
   min-width: 0;
+  width: min(100%, 360px);
+  justify-self: center;
 }
 
 .test-player-screen__card--with-collector .test-player-screen__collector {
   min-width: 0;
+  width: min(100%, 360px);
+  justify-self: center;
 }
 
 .test-preview-shell--mobile .test-player-screen__card--with-collector {

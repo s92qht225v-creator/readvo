@@ -826,6 +826,8 @@ const publicScreenCard: React.CSSProperties = {
 
 const publicScreenContent: React.CSSProperties = {
   width: '100%',
+  maxWidth: 360,
+  minWidth: 0,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -834,6 +836,8 @@ const publicScreenContent: React.CSSProperties = {
 };
 
 const publicScreenTitle: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
   margin: '0 0 14px',
   color: '#2f2835',
   fontSize: 20,
@@ -843,11 +847,15 @@ const publicScreenTitle: React.CSSProperties = {
 };
 
 const publicScreenDescription: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
   margin: '0 0 30px',
   color: '#a29aa6',
   fontSize: 15,
   fontStyle: 'italic',
   lineHeight: 1.45,
+  whiteSpace: 'normal',
+  overflowWrap: 'anywhere',
 };
 
 const publicScreenButton = (disabled: boolean): React.CSSProperties => ({
