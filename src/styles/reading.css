@@ -13888,7 +13888,7 @@ body {
 }
 
 .test-preview-shell--desktop .test-player__inner {
-  max-width: 941px !important;
+  max-width: 1120px !important;
 }
 
 .test-preview-shell--desktop .test-player-screen {
@@ -13897,10 +13897,10 @@ body {
 
 .test-preview-shell--desktop .test-player-screen__card {
   box-sizing: border-box !important;
-  width: 941px !important;
+  width: 1120px !important;
   max-width: 100% !important;
-  height: 529px !important;
-  min-height: 529px !important;
+  height: 620px !important;
+  min-height: 620px !important;
   border: 1px solid #e4ded8 !important;
   border-radius: 7px !important;
   overflow-y: auto !important;
@@ -13965,8 +13965,8 @@ body {
 }
 
 .test-preview-shell--desktop .test-player__card {
-  height: 529px !important;
-  min-height: 529px !important;
+  height: 620px !important;
+  min-height: 620px !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;

@@ -150,14 +150,14 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
 
 const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim.uz';
 // Typeform-style preview frames:
-// - Desktop fills the available canvas as one wide framed card.
+// - Desktop matches the public test frame so builder spacing does not drift.
 // - Mobile is a centered 427×760 framed card on a plain white canvas.
 const BUILDER_PREVIEW_SIZE = {
-  desktop: { width: 1280, height: 760 },
+  desktop: { width: 1120, height: 620 },
   mobile: { width: 480, height: 800 },
 } as const;
 const BUILDER_PREVIEW_FRAME_SIZE = {
-  desktop: { width: 1280, height: 760 },
+  desktop: { width: 1120, height: 620 },
   mobile: { width: 427, height: 760 },
 } as const;
 
@@ -2358,7 +2358,8 @@ function PreviewCanvas({
       className="tb-preview-wrap"
       style={{
         ...previewWrap,
-        width: '100%',
+        width: previewDevice === 'desktop' ? frameSize.width : '100%',
+        maxWidth: previewDevice === 'desktop' ? 'none' : '100%',
         height: slideSize.height,
         minHeight: slideSize.height,
       }}
@@ -2369,7 +2370,7 @@ function PreviewCanvas({
         style={{
           ...previewCard,
           ...themeVars,
-          width: previewDevice === 'desktop' ? '100%' : frameSize.width,
+          width: frameSize.width,
           height: frameSize.height,
           minHeight: frameSize.height,
           maxWidth: 'none',

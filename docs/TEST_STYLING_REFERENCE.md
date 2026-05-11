@@ -28,9 +28,9 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 
 - Mobile layout switches at `<= 599px`.
 - Desktop layout applies at `>= 600px`.
-- Builder desktop canvas target: `1280 x 760`.
+- Builder desktop canvas target: `1120 x 620`.
 - Builder mobile canvas target: `427 x 760`.
-- Public desktop card target in preview shell: `941 x 529`.
+- Public desktop card target in preview shell: `1120 x 620`.
 - Public mobile card target in preview shell: `372 x 663`.
 
 ## Card Rules
@@ -42,7 +42,7 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
   In the live player, `.test-player-screen__card` is full-width up to the
   public desktop max (`1120px`) with the same border, `7px` radius, and shadow.
   In the desktop preview shell, it is forced to the same frame as question cards:
-  `941 x 529px`.
+  `1120 x 620px`.
 - Mobile welcome/end screen cards keep the phone-frame size in the preview shell:
   `372 x 663px`.
 - Most inner answer/media radii are theme-controlled by
@@ -50,6 +50,58 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 - Navigation buttons use `border-radius: 3px`.
 - `Questions` and `Next` buttons should remain visually equal width.
 - Question number badge was removed from the card; progress appears in nav as `current / total`.
+
+## Welcome / End Screen Rules
+
+Welcome and end screens use the same frame language as question cards and should
+not drift into a separate visual system.
+
+### Welcome Screen Settings
+
+- Do not show an `Image or video` URL field on the welcome/end screen settings.
+- Welcome screen respondent collection is controlled by explicit toggles:
+  - `Name`
+  - `Last name`
+  - `Phone number`
+  - `Email`
+- If any respondent field is enabled, show a `Fields position` segmented control:
+  - `Left`
+  - `Right`
+- Default respondent field position is `Right`.
+- The old single `Your name (optional)` field should not appear when a custom
+  welcome screen is enabled. It only exists as a legacy fallback for tests
+  without a configured welcome screen.
+
+### Welcome Screen Layout
+
+- Desktop with respondent fields uses a two-column layout:
+  - one column for title, description, start button, and time-to-complete
+  - one column for respondent fields
+- If `collectorLayout` is `left`, fields render on the left and intro info moves
+  to the right.
+- If `collectorLayout` is `right`, intro info stays left and fields render right.
+- Mobile always stacks intro info and fields in one column to preserve the phone
+  canvas width.
+- Respondent fields use normal inputs with the same form language as settings:
+  `border: 1px solid #ded8d1`, `border-radius: 8px`, white background.
+
+### Time To Complete
+
+- Welcome screen time-to-complete uses the shared alarm clock SVG icon, not a
+  text glyph like `◷`.
+- The icon and text are inline-flex aligned:
+  `display: inline-flex; align-items: center; gap: 6px`.
+- The setting label remains `Time to complete`; the value field can use text
+  like `Takes X minutes`.
+
+### Response Storage
+
+- Current DB schema stores respondent identity in `test_responses.respondent_name`.
+- The public player combines enabled respondent info into a compact label before
+  submission.
+- If separate columns are added later, update both:
+  - `src/lib/test/types.ts`
+  - `src/app/api/t/[slug]/responses/route.ts`
 
 ## No-Media Desktop Cards
 
