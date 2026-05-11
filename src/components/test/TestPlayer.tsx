@@ -96,18 +96,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   // 1 = forward (next), -1 = backward (prev). Drives slide direction.
   const [navDirection, setNavDirection] = useState<1 | -1>(1);
   const [navigatorOpen, setNavigatorOpen] = useState(false);
-  const [timerOpen, setTimerOpen] = useState(false);
-  const [timerOffset, setTimerOffset] = useState({ x: 0, y: 0 });
-  const timerDragRef = useRef<{
-    pointerId: number;
-    startX: number;
-    startY: number;
-    baseX: number;
-    baseY: number;
-    moved: boolean;
-  } | null>(null);
   const goToIdx = useCallback((nextIdx: number | ((prev: number) => number)) => {
-    setTimerOpen(false);
     setNavigatorOpen(false);
     setIdx(prev => {
       const next = typeof nextIdx === 'function' ? nextIdx(prev) : nextIdx;
@@ -140,45 +129,8 @@ export function TestPlayer({ test, forceDevice }: Props) {
     : null;
   const normalizedTheme = useMemo(() => normalizeTestTheme(test.theme), [test.theme]);
   const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
-  const timerSide = normalizedTheme.logoUrl && normalizedTheme.logoAlign === 'right' ? 'left' : 'right';
-  const hasChrome = Boolean(normalizedTheme.logoUrl || remainingSeconds != null);
+  const hasChrome = Boolean(normalizedTheme.logoUrl);
   const hasLogoChrome = Boolean(normalizedTheme.logoUrl);
-
-  const handleTimerPointerDown = useCallback((event: React.PointerEvent<HTMLButtonElement>) => {
-    if (event.button !== 0) return;
-    timerDragRef.current = {
-      pointerId: event.pointerId,
-      startX: event.clientX,
-      startY: event.clientY,
-      baseX: timerOffset.x,
-      baseY: timerOffset.y,
-      moved: false,
-    };
-    event.currentTarget.setPointerCapture(event.pointerId);
-  }, [timerOffset.x, timerOffset.y]);
-
-  const handleTimerPointerMove = useCallback((event: React.PointerEvent<HTMLButtonElement>) => {
-    const drag = timerDragRef.current;
-    if (!drag || drag.pointerId !== event.pointerId) return;
-    const dx = event.clientX - drag.startX;
-    const dy = event.clientY - drag.startY;
-    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) drag.moved = true;
-    setTimerOffset({ x: drag.baseX + dx, y: drag.baseY + dy });
-  }, []);
-
-  const handleTimerPointerUp = useCallback((event: React.PointerEvent<HTMLButtonElement>) => {
-    const drag = timerDragRef.current;
-    if (!drag || drag.pointerId !== event.pointerId) return;
-    event.currentTarget.releasePointerCapture(event.pointerId);
-    timerDragRef.current = null;
-    if (!drag.moved) setTimerOpen(open => !open);
-  }, []);
-
-  const handleTimerKeyDown = useCallback((event: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (event.key !== 'Enter' && event.key !== ' ') return;
-    event.preventDefault();
-    setTimerOpen(open => !open);
-  }, []);
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -491,7 +443,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
       />
       {hasChrome ? (
         <div
-          className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign} test-player__chrome--timer-${timerSide}`}
+          className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign}`}
           style={chromeLayer}
           aria-hidden={false}
         >
@@ -500,26 +452,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
             className="test-player__chrome-logo"
             style={chromeLogo(normalizedTheme.logoAlign)}
           />
-          {remainingSeconds != null ? (
-            <div className="test-player__timer-floating" style={floatingTimer(timerSide, timerOffset)}>
-              <button
-                type="button"
-                style={timerFab(remainingSeconds <= 60, timerOpen)}
-                onPointerDown={handleTimerPointerDown}
-                onPointerMove={handleTimerPointerMove}
-                onPointerUp={handleTimerPointerUp}
-                onPointerCancel={() => { timerDragRef.current = null; }}
-                onKeyDown={handleTimerKeyDown}
-                aria-label={`Show remaining time: ${formatClock(remainingSeconds)}`}
-                aria-expanded={timerOpen}
-              >
-                <AlarmClockIcon />
-                <span style={timerText(timerOpen)}>
-                  {formatClock(remainingSeconds)}
-                </span>
-              </button>
-            </div>
-          ) : null}
         </div>
       ) : null}
       <AnimatePresence mode="wait" custom={navDirection} initial={false}>
@@ -971,50 +903,6 @@ const chromeLogo = (align: 'left' | 'center' | 'right'): React.CSSProperties => 
   marginBottom: 0,
   display: 'block',
   pointerEvents: 'none',
-});
-
-const floatingTimer = (side: 'left' | 'right', offset: { x: number; y: number }): React.CSSProperties => ({
-  position: 'absolute',
-  top: 0,
-  left: side === 'left' ? 0 : 'auto',
-  right: side === 'right' ? 0 : 'auto',
-  zIndex: 7,
-  pointerEvents: 'auto',
-  transform: `translate(${offset.x}px, ${offset.y}px)`,
-});
-
-const timerFab = (urgent: boolean, open: boolean): React.CSSProperties => ({
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: open ? 7 : 0,
-  width: open ? 120 : 42,
-  height: 42,
-  padding: 0,
-  border: urgent ? '1px solid #fecaca' : '1px solid #e2e8f0',
-  borderRadius: 999,
-  background: urgent ? '#fee2e2' : 'rgba(255, 255, 255, 0.92)',
-  color: urgent ? '#b91c1c' : '#2f2533',
-  boxShadow: '0 10px 28px rgba(47, 40, 53, 0.12)',
-  cursor: 'pointer',
-  backdropFilter: 'blur(10px)',
-  overflow: 'hidden',
-  touchAction: 'none',
-  userSelect: 'none',
-  WebkitUserSelect: 'none',
-  transition: 'width 180ms ease, gap 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease',
-});
-
-const timerText = (open: boolean): React.CSSProperties => ({
-  display: 'inline-flex',
-  maxWidth: open ? 72 : 0,
-  opacity: open ? 1 : 0,
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
-  fontSize: 14,
-  fontWeight: 800,
-  fontVariantNumeric: 'tabular-nums',
-  transition: 'max-width 180ms ease, opacity 140ms ease',
 });
 
 // Typeform-style page transition: forward slides up, backward slides down.
