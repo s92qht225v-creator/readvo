@@ -494,6 +494,9 @@ const opinionScaleRow: React.CSSProperties = {
 function scaleButton(selected: boolean): React.CSSProperties {
   return {
     flex: '1 1 0%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     maxWidth: 'calc(16.6667% - 5px)',
     height: 56,
     padding: 0,
