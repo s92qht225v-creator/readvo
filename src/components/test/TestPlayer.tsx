@@ -308,7 +308,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
       return (
         <ScreenWrapper>
-          <div style={publicScreenCard}>
+          <div className="test-player-screen__card" style={publicScreenCard}>
             {welcomeScreen.imageUrl ? <img src={welcomeScreen.imageUrl} alt="" style={screenImage} /> : null}
             <h1 style={publicScreenTitle}>{title}</h1>
             <p style={publicScreenDescription}>
@@ -744,15 +744,18 @@ const publicScreenShell: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '24px 16px',
+  padding: '36px 18px',
   background: '#fff',
 };
 
 const publicScreenCard: React.CSSProperties = {
-  width: 'min(430px, 100%)',
-  minHeight: 'min(760px, calc(100vh - 48px))',
-  border: '1px solid #e5e7eb',
+  width: '100%',
+  maxWidth: 1120,
+  minHeight: 'min(620px, calc(100vh - 72px))',
+  border: '1px solid #e4ded8',
+  borderRadius: 7,
   background: '#fff',
+  boxShadow: '0 30px 90px rgba(47,40,53,0.14)',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

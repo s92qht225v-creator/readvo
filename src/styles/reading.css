@@ -13891,6 +13891,27 @@ body {
   max-width: 941px !important;
 }
 
+.test-preview-shell--desktop .test-player-screen {
+  padding: 36px 18px !important;
+}
+
+.test-preview-shell--desktop .test-player-screen__card {
+  box-sizing: border-box !important;
+  width: 941px !important;
+  max-width: 100% !important;
+  height: 529px !important;
+  min-height: 529px !important;
+  border: 1px solid #e4ded8 !important;
+  border-radius: 7px !important;
+  overflow-y: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.test-preview-shell--desktop .test-player-screen__card::-webkit-scrollbar {
+  display: none !important;
+}
+
 .test-preview-shell--desktop .test-player__card {
   height: 529px !important;
   min-height: 529px !important;
