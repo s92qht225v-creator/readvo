@@ -173,6 +173,11 @@ const defaultWelcomeScreen = (title: string): TestScreenConfig => ({
   buttonText: 'Start',
   showTimeToComplete: true,
   timeToCompleteText: 'Takes X minutes',
+  collectFirstName: false,
+  collectLastName: false,
+  collectPhone: false,
+  collectEmail: false,
+  collectorLayout: 'right',
 });
 
 const defaultEndScreen = (): TestScreenConfig => ({
@@ -193,6 +198,23 @@ const normalizeScreen = (
   ...(screen ?? {}),
   enabled: !!screen?.enabled,
 });
+
+type WelcomeCollectorField = {
+  key: 'collectFirstName' | 'collectLastName' | 'collectPhone' | 'collectEmail';
+  label: string;
+  placeholder: string;
+};
+
+const WELCOME_COLLECTOR_FIELDS: WelcomeCollectorField[] = [
+  { key: 'collectFirstName', label: 'Name', placeholder: 'Name' },
+  { key: 'collectLastName', label: 'Last name', placeholder: 'Last name' },
+  { key: 'collectPhone', label: 'Phone number', placeholder: '+998' },
+  { key: 'collectEmail', label: 'Email', placeholder: 'name@example.com' },
+];
+
+function enabledWelcomeCollectorFields(screen: TestScreenConfig) {
+  return WELCOME_COLLECTOR_FIELDS.filter(field => !!screen[field.key]);
+}
 
 interface Props {
   testId: string;
@@ -1241,11 +1263,44 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   const description = screen.description ?? '';
   const buttonText = screen.buttonText || (kind === 'welcome' ? 'Start' : 'Done');
   const previewSize = BUILDER_PREVIEW_SIZE[previewDevice];
+  const collectorFields = kind === 'welcome' ? enabledWelcomeCollectorFields(screen) : [];
+  const hasCollectorFields = collectorFields.length > 0;
+  const splitCollector = hasCollectorFields && previewDevice === 'desktop';
+  const collectorLayout = screen.collectorLayout === 'left' ? 'left' : 'right';
+  const collectorPreview = hasCollectorFields ? (
+    <div style={screenPreviewCollector}>
+      {collectorFields.map(field => (
+        <label key={field.key} style={screenPreviewCollectorField}>
+          <span style={screenPreviewCollectorLabel}>{field.label}</span>
+          <input readOnly value="" placeholder={field.placeholder} style={screenPreviewCollectorInput} />
+        </label>
+      ))}
+    </div>
+  ) : null;
+  const introPreview = (
+    <div style={screenPreviewIntro}>
+      <h2 style={screenPreviewTitle}>{title}</h2>
+      <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
+      {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
+      {kind === 'welcome' && screen.showTimeToComplete ? (
+        <div style={screenPreviewMeta}>
+          <AlarmClockIcon />
+          <span>{screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</span>
+        </div>
+      ) : null}
+      {kind === 'end' && screen.showSocialShare ? (
+        <div style={screenSocialPreview}>
+          <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+        </div>
+      ) : null}
+    </div>
+  );
 
   return (
     <div style={screenPreviewWrap}>
       <div style={{
         ...screenPreviewCard,
+        ...(splitCollector ? screenPreviewCardSplit : null),
         width: previewSize.width,
         height: previewSize.height,
         minHeight: previewSize.height,
@@ -1253,18 +1308,9 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         borderRadius: 7,
         padding: previewDevice === 'mobile' ? '30px 26px' : 32,
       }}>
-        {screen.imageUrl ? <img src={screen.imageUrl} alt="" style={screenPreviewImage} /> : null}
-        <h2 style={screenPreviewTitle}>{title}</h2>
-        <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
-        {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
-        {kind === 'welcome' && screen.showTimeToComplete ? (
-          <div style={screenPreviewMeta}>◷ {screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</div>
-        ) : null}
-        {kind === 'end' && screen.showSocialShare ? (
-          <div style={screenSocialPreview}>
-            <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
-          </div>
-        ) : null}
+        {splitCollector && collectorLayout === 'left' ? collectorPreview : null}
+        {introPreview}
+        {hasCollectorFields && (!splitCollector || collectorLayout === 'right') ? collectorPreview : null}
       </div>
     </div>
   );
@@ -1277,6 +1323,7 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
 }) {
   const persist = (patch: Partial<TestScreenConfig>) => onChange({ ...screen, ...patch }, true);
   const update = (patch: Partial<TestScreenConfig>) => onChange({ ...screen, ...patch }, false);
+  const collectorFields = enabledWelcomeCollectorFields(screen);
 
   return (
     <div style={panel}>
@@ -1320,6 +1367,38 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
 
       {kind === 'welcome' ? (
         <>
+          <div style={screenDivider} />
+          <div style={screenFieldLabel}>Collect respondent info</div>
+          {WELCOME_COLLECTOR_FIELDS.map(field => (
+            <ScreenToggle
+              key={field.key}
+              label={field.label}
+              checked={!!screen[field.key]}
+              onChange={value => persist({ [field.key]: value })}
+            />
+          ))}
+          {collectorFields.length > 0 ? (
+            <div style={screenLayoutRow}>
+              <span>Fields position</span>
+              <div style={screenSegmented}>
+                <button
+                  type="button"
+                  style={screenSegmentedButton(screen.collectorLayout === 'left')}
+                  onClick={() => persist({ collectorLayout: 'left' })}
+                >
+                  Left
+                </button>
+                <button
+                  type="button"
+                  style={screenSegmentedButton(screen.collectorLayout !== 'left')}
+                  onClick={() => persist({ collectorLayout: 'right' })}
+                >
+                  Right
+                </button>
+              </div>
+            </div>
+          ) : null}
+
           <ScreenToggle label="Time to complete" checked={!!screen.showTimeToComplete} onChange={v => persist({ showTimeToComplete: v })} />
           {screen.showTimeToComplete ? (
             <input
@@ -1354,20 +1433,6 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
           ) : null}
         </>
       ) : null}
-
-      <div style={screenDivider} />
-      <div style={screenMediaRow}>
-        <span>Image or video</span>
-        <button type="button" style={screenMediaPlus}>+</button>
-      </div>
-      <input
-        type="url"
-        value={screen.imageUrl ?? ''}
-        onChange={e => update({ imageUrl: e.target.value })}
-        onBlur={() => persist({ imageUrl: screen.imageUrl ?? '' })}
-        placeholder="Image URL"
-        style={screenInput}
-      />
     </div>
   );
 }
@@ -2431,12 +2496,54 @@ const screenPreviewCard: React.CSSProperties = {
   padding: 32,
 };
 
-const screenPreviewImage: React.CSSProperties = {
-  width: 180,
-  maxHeight: 150,
-  objectFit: 'cover',
-  borderRadius: 18,
-  marginBottom: 26,
+const screenPreviewCardSplit: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'minmax(0, 1fr) minmax(280px, 360px)',
+  gap: 56,
+  alignItems: 'center',
+  textAlign: 'left',
+};
+
+const screenPreviewIntro: React.CSSProperties = {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+};
+
+const screenPreviewCollector: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
+  display: 'grid',
+  gap: 12,
+};
+
+const screenPreviewCollectorField: React.CSSProperties = {
+  display: 'block',
+};
+
+const screenPreviewCollectorLabel: React.CSSProperties = {
+  display: 'block',
+  color: '#8f8793',
+  fontSize: 11,
+  fontWeight: 850,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  marginBottom: 8,
+};
+
+const screenPreviewCollectorInput: React.CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  border: '1px solid #ded8d1',
+  borderRadius: 8,
+  background: '#fff',
+  padding: '11px 12px',
+  fontSize: 15,
+  color: '#2f2835',
+  outline: 'none',
 };
 
 const screenPreviewTitle: React.CSSProperties = {
@@ -2470,6 +2577,10 @@ const screenPreviewMeta: React.CSSProperties = {
   marginTop: 14,
   color: '#111827',
   fontSize: 13,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 6,
 };
 
 const screenSocialPreview: React.CSSProperties = {
@@ -3210,24 +3321,33 @@ const screenDivider: React.CSSProperties = {
   margin: '4px 0',
 };
 
-const screenMediaRow: React.CSSProperties = {
+const screenLayoutRow: React.CSSProperties = {
   display: 'flex',
-  justifyContent: 'space-between',
   alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 12,
   color: '#2f2835',
   fontSize: 14,
 };
 
-const screenMediaPlus: React.CSSProperties = {
-  width: 34,
-  height: 34,
-  borderRadius: 10,
+const screenSegmented: React.CSSProperties = {
+  display: 'inline-flex',
+  overflow: 'hidden',
   border: '1px solid #ded8d1',
+  borderRadius: 8,
   background: '#fff',
-  color: '#6b6470',
-  fontSize: 22,
-  cursor: 'pointer',
 };
+
+const screenSegmentedButton = (active: boolean): React.CSSProperties => ({
+  border: 'none',
+  borderRight: '1px solid #ded8d1',
+  background: active ? '#ece8f1' : '#fff',
+  color: '#2f2835',
+  padding: '7px 11px',
+  fontSize: 13,
+  fontWeight: active ? 800 : 600,
+  cursor: 'pointer',
+});
 
 const topBar: React.CSSProperties = {
   position: 'fixed', top: 0, left: 0, right: 0, height: 64,

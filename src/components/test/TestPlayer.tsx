@@ -21,6 +21,13 @@ interface Done {
   total: number | null;
 }
 
+type RespondentProfile = {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+};
+
 const TOKEN_KEY_PREFIX = 'blim-test-token:';
 
 function ensureToken(slug: string): string {
@@ -52,6 +59,28 @@ function formatDuration(totalSeconds: number): string {
   }
   const minutes = Math.max(1, Math.ceil(totalSeconds / 60));
   return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`;
+}
+
+function respondentLabel(profile: RespondentProfile) {
+  return [
+    [profile.firstName.trim(), profile.lastName.trim()].filter(Boolean).join(' '),
+    profile.email.trim(),
+    profile.phone.trim(),
+  ].filter(Boolean).join(' · ').slice(0, 80);
+}
+
+function welcomeCollectorFields(screen: { collectFirstName?: boolean; collectLastName?: boolean; collectPhone?: boolean; collectEmail?: boolean }) {
+  const fields: Array<{
+    key: keyof RespondentProfile;
+    label: string;
+    placeholder: string;
+    type: string;
+  }> = [];
+  if (screen.collectFirstName) fields.push({ key: 'firstName', label: 'Name', placeholder: 'Name', type: 'text' });
+  if (screen.collectLastName) fields.push({ key: 'lastName', label: 'Last name', placeholder: 'Last name', type: 'text' });
+  if (screen.collectPhone) fields.push({ key: 'phone', label: 'Phone number', placeholder: '+998', type: 'tel' });
+  if (screen.collectEmail) fields.push({ key: 'email', label: 'Email', placeholder: 'name@example.com', type: 'email' });
+  return fields;
 }
 
 function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['value']): boolean {
@@ -92,6 +121,12 @@ function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['v
 export function TestPlayer({ test, forceDevice }: Props) {
   const [phase, setPhase] = useState<Phase>('intro');
   const [name, setName] = useState('');
+  const [profile, setProfile] = useState<RespondentProfile>({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+  });
   const [idx, setIdx] = useState(0);
   // 1 = forward (next), -1 = backward (prev). Drives slide direction.
   const [navDirection, setNavDirection] = useState<1 | -1>(1);
@@ -184,9 +219,16 @@ export function TestPlayer({ test, forceDevice }: Props) {
     if (timedOut) setTimeExpired(true);
     setErrMsg(null);
     const token = ensureToken(test.slug);
+    const profileName = respondentLabel(profile);
     const payload = {
       respondent_token: token,
-      respondent_name: name,
+      respondent_name: profileName || name,
+      respondent_profile: {
+        first_name: profile.firstName,
+        last_name: profile.lastName,
+        phone: profile.phone,
+        email: profile.email,
+      },
       started_at: startedAt ?? new Date().toISOString(),
       timed_out: timedOut,
       answers: Object.entries(answers).map(([qid, value]) => ({ question_id: qid, value })),
@@ -205,7 +247,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const j = await res.json();
     setDone({ score: j.score ?? null, total: j.total ?? null });
     setPhase('done');
-  }, [answers, name, startedAt, test.slug]);
+  }, [answers, name, profile, startedAt, test.slug]);
 
   const startQuestions = useCallback(() => {
     setStartedAt(new Date().toISOString());
@@ -305,36 +347,56 @@ export function TestPlayer({ test, forceDevice }: Props) {
       const title = welcomeScreen.title || test.title;
       const description = welcomeScreen.description ?? '';
       const buttonText = welcomeScreen.buttonText || 'Start';
+      const collectorFields = welcomeCollectorFields(welcomeScreen);
+      const hasCollectorFields = collectorFields.length > 0;
+      const collectorLayout = welcomeScreen.collectorLayout === 'left' ? 'left' : 'right';
 
       return (
         <ScreenWrapper>
-          <div className="test-player-screen__card" style={publicScreenCard}>
-            {welcomeScreen.imageUrl ? <img src={welcomeScreen.imageUrl} alt="" style={screenImage} /> : null}
-            <h1 style={publicScreenTitle}>{title}</h1>
-            <p style={publicScreenDescription}>
-              {description || 'Description (optional)'}
-            </p>
-            <button
-              type="button"
-              onClick={startQuestions}
-              disabled={total === 0}
-              style={publicScreenButton(total === 0)}
-            >
-              {total === 0 ? 'No questions yet' : buttonText}
-            </button>
-            {welcomeScreen.showTimeToComplete ? (
-              <div style={publicScreenMeta}>◷ {timerLimitSeconds ? `Time limit: ${formatDuration(timerLimitSeconds)}` : welcomeScreen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(total / 4))} minutes`}</div>
-            ) : null}
-            <div style={publicNameBlock}>
-              <label style={publicNameLabel}>Your name (optional)</label>
-              <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                placeholder="Anonymous"
-                style={publicNameInput}
-              />
+          <div
+            className={[
+              'test-player-screen__card',
+              hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
+              `test-player-screen__card--collector-${collectorLayout}`,
+            ].filter(Boolean).join(' ')}
+            style={publicScreenCard}
+          >
+            <div className="test-player-screen__content" style={publicScreenContent}>
+              <h1 style={publicScreenTitle}>{title}</h1>
+              <p style={publicScreenDescription}>
+                {description || 'Description (optional)'}
+              </p>
+              <button
+                type="button"
+                onClick={startQuestions}
+                disabled={total === 0}
+                style={publicScreenButton(total === 0)}
+              >
+                {total === 0 ? 'No questions yet' : buttonText}
+              </button>
+              {welcomeScreen.showTimeToComplete ? (
+                <div style={publicScreenMeta}>
+                  <AlarmClockIcon />
+                  <span>{timerLimitSeconds ? `Time limit: ${formatDuration(timerLimitSeconds)}` : welcomeScreen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(total / 4))} minutes`}</span>
+                </div>
+              ) : null}
             </div>
+            {hasCollectorFields ? (
+              <div className="test-player-screen__collector" style={publicCollectorBlock}>
+                {collectorFields.map(field => (
+                  <label key={field.key} style={publicNameBlock}>
+                    <span style={publicNameLabel}>{field.label}</span>
+                    <input
+                      type={field.type}
+                      value={profile[field.key]}
+                      onChange={event => setProfile(current => ({ ...current, [field.key]: event.target.value }))}
+                      placeholder={field.placeholder}
+                      style={publicNameInput}
+                    />
+                  </label>
+                ))}
+              </div>
+            ) : null}
           </div>
         </ScreenWrapper>
       );
@@ -762,6 +824,15 @@ const publicScreenCard: React.CSSProperties = {
   boxSizing: 'border-box',
 };
 
+const publicScreenContent: React.CSSProperties = {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+};
+
 const publicScreenTitle: React.CSSProperties = {
   margin: '0 0 14px',
   color: '#2f2835',
@@ -796,12 +867,22 @@ const publicScreenMeta: React.CSSProperties = {
   marginTop: 14,
   color: '#111827',
   fontSize: 13,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 6,
+};
+
+const publicCollectorBlock: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 360,
+  display: 'grid',
+  gap: 12,
+  textAlign: 'left',
 };
 
 const publicNameBlock: React.CSSProperties = {
   width: '100%',
-  maxWidth: 330,
-  marginTop: 28,
   textAlign: 'left',
 };
 

@@ -13912,6 +13912,58 @@ body {
   display: none !important;
 }
 
+.test-player-screen__card--with-collector {
+  gap: 28px;
+}
+
+@media (min-width: 760px) {
+  .test-player-screen__card--with-collector {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: 56px;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 48px 56px !important;
+  }
+
+  .test-player-screen__card--with-collector.test-player-screen__card--collector-left {
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  }
+
+  .test-player-screen__card--collector-left .test-player-screen__collector {
+    order: 1;
+  }
+
+  .test-player-screen__card--collector-left .test-player-screen__content {
+    order: 2;
+  }
+
+  .test-player-screen__card--collector-right .test-player-screen__content {
+    order: 1;
+  }
+
+  .test-player-screen__card--collector-right .test-player-screen__collector {
+    order: 2;
+  }
+}
+
+.test-player-screen__card--with-collector .test-player-screen__content {
+  min-width: 0;
+}
+
+.test-player-screen__card--with-collector .test-player-screen__collector {
+  min-width: 0;
+}
+
+.test-preview-shell--mobile .test-player-screen__card--with-collector {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
 .test-preview-shell--desktop .test-player__card {
   height: 529px !important;
   min-height: 529px !important;

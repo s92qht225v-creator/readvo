@@ -202,6 +202,11 @@ export interface TestScreenConfig {
   imageUrl?: string;
   showTimeToComplete?: boolean;
   timeToCompleteText?: string;
+  collectFirstName?: boolean;
+  collectLastName?: boolean;
+  collectPhone?: boolean;
+  collectEmail?: boolean;
+  collectorLayout?: 'left' | 'right';
   showSocialShare?: boolean;
   buttonLinkEnabled?: boolean;
   buttonLink?: string;
@@ -381,6 +386,12 @@ export interface AnswerSubmission {
 export interface ResponseSubmission {
   respondent_token: string;
   respondent_name?: string;
+  respondent_profile?: {
+    first_name?: string;
+    last_name?: string;
+    phone?: string;
+    email?: string;
+  };
   started_at?: string;
   timed_out?: boolean;
   answers: AnswerSubmission[];

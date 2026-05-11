@@ -86,6 +86,16 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     && submittedStartedAt.getTime() <= Date.now()
     ? submittedStartedAt.toISOString()
     : completedAt;
+  const profile = body.respondent_profile ?? {};
+  const respondentName = [
+    (body.respondent_name ?? '').toString().trim(),
+    [
+      (profile.first_name ?? '').toString().trim(),
+      (profile.last_name ?? '').toString().trim(),
+    ].filter(Boolean).join(' '),
+    (profile.email ?? '').toString().trim(),
+    (profile.phone ?? '').toString().trim(),
+  ].filter(Boolean)[0] ?? '';
 
   // Grade and persist
   let score = 0;
@@ -103,7 +113,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
 
   const responsePayload = {
     test_id: test.id,
-    respondent_name: (body.respondent_name ?? '').toString().slice(0, 80),
+    respondent_name: respondentName.slice(0, 80),
     respondent_token: body.respondent_token,
     started_at: startedAt,
     completed_at: completedAt,
