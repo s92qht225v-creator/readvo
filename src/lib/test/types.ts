@@ -202,7 +202,6 @@ export interface TestScreenConfig {
   imageUrl?: string;
   showTimeToComplete?: boolean;
   timeToCompleteText?: string;
-  showSubmissionCount?: boolean;
   showSocialShare?: boolean;
   buttonLinkEnabled?: boolean;
   buttonLink?: string;

@@ -173,7 +173,6 @@ const defaultWelcomeScreen = (title: string): TestScreenConfig => ({
   buttonText: 'Start',
   showTimeToComplete: true,
   timeToCompleteText: 'Takes X minutes',
-  showSubmissionCount: false,
 });
 
 const defaultEndScreen = (): TestScreenConfig => ({
@@ -1261,9 +1260,6 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         {kind === 'welcome' && screen.showTimeToComplete ? (
           <div style={screenPreviewMeta}>◷ {screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</div>
         ) : null}
-        {kind === 'welcome' && screen.showSubmissionCount ? (
-          <div style={screenPreviewMeta}>● Number of submissions</div>
-        ) : null}
         {kind === 'end' && screen.showSocialShare ? (
           <div style={screenSocialPreview}>
             <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
@@ -1289,28 +1285,6 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
         <span>{kind === 'welcome' ? 'Welcome Screen' : 'End Screen'}</span>
         <span style={{ marginLeft: 'auto', display: 'inline-flex' }}><ChevronDownIcon /></span>
       </div>
-
-      {kind === 'welcome' ? (
-        <>
-          <ScreenToggle label="Time to complete" checked={!!screen.showTimeToComplete} onChange={v => persist({ showTimeToComplete: v })} />
-          {screen.showTimeToComplete ? (
-            <input
-              type="text"
-              value={screen.timeToCompleteText ?? ''}
-              onChange={e => update({ timeToCompleteText: e.target.value })}
-              onBlur={() => persist({ timeToCompleteText: screen.timeToCompleteText ?? '' })}
-              placeholder="Takes X minutes"
-              style={screenInput}
-            />
-          ) : null}
-          <ScreenToggle label="Number of submissions" checked={!!screen.showSubmissionCount} onChange={v => persist({ showSubmissionCount: v })} />
-        </>
-      ) : (
-        <>
-          <ScreenToggle label="Social share icons" checked={!!screen.showSocialShare} onChange={v => persist({ showSocialShare: v })} />
-          <ScreenToggle label="Button" checked={(screen.buttonText ?? '') !== ''} onChange={v => persist({ buttonText: v ? 'Create a typeform' : '' })} />
-        </>
-      )}
 
       <div style={screenFieldLabel}>Title</div>
       <textarea
@@ -1343,6 +1317,27 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
         style={screenInput}
       />
       <div style={screenCharCount}>{(screen.buttonText ?? '').length}/24</div>
+
+      {kind === 'welcome' ? (
+        <>
+          <ScreenToggle label="Time to complete" checked={!!screen.showTimeToComplete} onChange={v => persist({ showTimeToComplete: v })} />
+          {screen.showTimeToComplete ? (
+            <input
+              type="text"
+              value={screen.timeToCompleteText ?? ''}
+              onChange={e => update({ timeToCompleteText: e.target.value })}
+              onBlur={() => persist({ timeToCompleteText: screen.timeToCompleteText ?? '' })}
+              placeholder="Takes X minutes"
+              style={screenInput}
+            />
+          ) : null}
+        </>
+      ) : (
+        <>
+          <ScreenToggle label="Social share icons" checked={!!screen.showSocialShare} onChange={v => persist({ showSocialShare: v })} />
+          <ScreenToggle label="Button" checked={(screen.buttonText ?? '') !== ''} onChange={v => persist({ buttonText: v ? 'Create a typeform' : '' })} />
+        </>
+      )}
 
       {kind === 'end' ? (
         <>

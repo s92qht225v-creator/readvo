@@ -325,9 +325,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
             {welcomeScreen.showTimeToComplete ? (
               <div style={publicScreenMeta}>◷ {timerLimitSeconds ? `Time limit: ${formatDuration(timerLimitSeconds)}` : welcomeScreen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(total / 4))} minutes`}</div>
             ) : null}
-            {welcomeScreen.showSubmissionCount ? (
-              <div style={publicScreenMeta}>● Submissions are recorded after completion</div>
-            ) : null}
             <div style={publicNameBlock}>
               <label style={publicNameLabel}>Your name (optional)</label>
               <input
