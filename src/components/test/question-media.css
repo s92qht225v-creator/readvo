@@ -11,15 +11,17 @@
 }
 .qmedia-audio-player {
   --qmedia-audio-ink: var(--test-theme-question, #1f2937);
-  --qmedia-audio-track: rgba(31, 41, 55, 0.18);
+  --qmedia-audio-accent: var(--test-theme-answer, #0445af);
+  --qmedia-audio-track: color-mix(in srgb, var(--qmedia-audio-accent) 14%, #ffffff);
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   width: 100%;
-  min-height: 58px;
-  padding: 0 22px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--qmedia-audio-accent) 15%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--qmedia-audio-accent) 6%, #ffffff);
   color: var(--qmedia-audio-ink);
   box-sizing: border-box;
 }
@@ -33,20 +35,21 @@
   padding: 0;
   border: 0;
   border-radius: 999px;
-  background: transparent;
-  color: currentColor;
+  background: var(--test-theme-button, #2f2533);
+  color: var(--test-theme-button-text, #ffffff);
   cursor: pointer;
 }
 .qmedia-audio-icon-button svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: block;
 }
 .qmedia-audio-time {
   flex: 0 0 auto;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1;
+  color: color-mix(in srgb, var(--qmedia-audio-ink) 72%, transparent);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
@@ -55,14 +58,14 @@
   display: flex;
   align-items: center;
   flex: 1 1 auto;
-  min-width: 72px;
-  height: 24px;
+  min-width: 80px;
+  height: 20px;
 }
 .qmedia-audio-progress-track {
   position: absolute;
   left: 0;
   right: 0;
-  height: 6px;
+  height: 5px;
   overflow: hidden;
   border-radius: 999px;
   background: var(--qmedia-audio-track);
@@ -72,7 +75,7 @@
   width: var(--qmedia-audio-progress, 0%);
   height: 100%;
   border-radius: inherit;
-  background: currentColor;
+  background: var(--qmedia-audio-accent);
 }
 .qmedia-audio-progress-input {
   position: absolute;
@@ -85,21 +88,21 @@
 }
 @media (max-width: 520px) {
   .qmedia-audio-player {
-    gap: 12px;
-    min-height: 54px;
-    padding: 0 16px;
+    gap: 10px;
+    min-height: 46px;
+    padding: 7px 10px;
   }
   .qmedia-audio-time {
-    font-size: 16px;
+    font-size: 12px;
   }
   .qmedia-audio-icon-button {
-    width: 28px;
-    height: 28px;
-    flex-basis: 28px;
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
   }
   .qmedia-audio-icon-button svg {
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
   }
 }
 .qmedia-layout > .qmedia-asset {

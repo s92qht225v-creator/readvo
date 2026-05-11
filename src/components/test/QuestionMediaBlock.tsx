@@ -100,7 +100,6 @@ function AudioPlayer({ src }: { src: string }) {
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -109,7 +108,6 @@ function AudioPlayer({ src }: { src: string }) {
     setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
     setCurrentTime(0);
     setIsPlaying(false);
-    setIsMuted(audio.muted);
 
     const handleMetadata = () => setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
     const handleTime = () => setCurrentTime(audio.currentTime);
@@ -119,7 +117,6 @@ function AudioPlayer({ src }: { src: string }) {
       setIsPlaying(false);
       setCurrentTime(audio.duration || 0);
     };
-    const handleVolume = () => setIsMuted(audio.muted);
 
     audio.addEventListener('loadedmetadata', handleMetadata);
     audio.addEventListener('durationchange', handleMetadata);
@@ -127,7 +124,6 @@ function AudioPlayer({ src }: { src: string }) {
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('ended', handleEnded);
-    audio.addEventListener('volumechange', handleVolume);
 
     return () => {
       audio.removeEventListener('loadedmetadata', handleMetadata);
@@ -136,7 +132,6 @@ function AudioPlayer({ src }: { src: string }) {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('ended', handleEnded);
-      audio.removeEventListener('volumechange', handleVolume);
     };
   }, [src]);
 
@@ -164,20 +159,12 @@ function AudioPlayer({ src }: { src: string }) {
     setCurrentTime(nextTime);
   };
 
-  const toggleMute = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.muted = !audio.muted;
-    setIsMuted(audio.muted);
-  };
-
   return (
     <div className="qmedia-audio-player">
       <audio ref={audioRef} preload="metadata" src={src} />
       <button type="button" className="qmedia-audio-icon-button" onClick={togglePlay} aria-label={isPlaying ? 'Pause audio' : 'Play audio'}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
-      <span className="qmedia-audio-time">{formatTime(currentTime)} / {formatTime(duration)}</span>
       <div className="qmedia-audio-progress" style={{ '--qmedia-audio-progress': `${progress}%` } as React.CSSProperties}>
         <div className="qmedia-audio-progress-track" aria-hidden="true">
           <span />
@@ -193,9 +180,7 @@ function AudioPlayer({ src }: { src: string }) {
           aria-label="Audio progress"
         />
       </div>
-      <button type="button" className="qmedia-audio-icon-button" onClick={toggleMute} aria-label={isMuted ? 'Unmute audio' : 'Mute audio'}>
-        <VolumeIcon muted={isMuted} />
-      </button>
+      <span className="qmedia-audio-time">{formatTime(currentTime)} / {formatTime(duration)}</span>
     </div>
   );
 }
@@ -223,19 +208,6 @@ function PauseIcon() {
   return (
     <svg viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" d="M4 3.2c0-.4.3-.7.7-.7h1.6c.4 0 .7.3.7.7v9.6c0 .4-.3.7-.7.7H4.7a.7.7 0 0 1-.7-.7zm5 0c0-.4.3-.7.7-.7h1.6c.4 0 .7.3.7.7v9.6c0 .4-.3.7-.7.7H9.7a.7.7 0 0 1-.7-.7z" />
-    </svg>
-  );
-}
-
-function VolumeIcon({ muted }: { muted: boolean }) {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-      <path fill="currentColor" d="M2 6.3c0-.4.3-.8.8-.8h2.1l3-2.5c.5-.4 1.3-.1 1.3.6v8.8c0 .7-.8 1-1.3.6l-3-2.5H2.8a.8.8 0 0 1-.8-.8z" />
-      {muted ? (
-        <path fill="currentColor" d="M11.1 6.1a.8.8 0 0 1 1.1 0l.8.8.8-.8a.8.8 0 0 1 1.1 1.1l-.8.8.8.8a.8.8 0 1 1-1.1 1.1l-.8-.8-.8.8a.8.8 0 1 1-1.1-1.1l.8-.8-.8-.8a.8.8 0 0 1 0-1.1" />
-      ) : (
-        <path fill="currentColor" d="M11.2 5.1a.8.8 0 0 1 1.1 0 4.1 4.1 0 0 1 0 5.8.8.8 0 0 1-1.1-1.1 2.6 2.6 0 0 0 0-3.6.8.8 0 0 1 0-1.1" />
-      )}
     </svg>
   );
 }
@@ -374,7 +346,7 @@ const mediaLink: React.CSSProperties = {
 
 const audioFrameWrap: React.CSSProperties = {
   width: '100%',
-  maxWidth: 560,
+  maxWidth: 420,
   margin: '0 auto 10px',
   padding: 0,
   borderRadius: 0,
