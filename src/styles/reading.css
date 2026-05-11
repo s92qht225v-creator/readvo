@@ -14314,6 +14314,33 @@ body {
   vertical-align: baseline !important;
 }
 
+.test-preview-shell .test-custom-dropdown.test-dropdown-answer,
+.test-preview-shell--mobile .test-custom-dropdown.test-dropdown-answer {
+  height: auto !important;
+  min-height: 37px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+.test-preview-shell .test-custom-dropdown__trigger,
+.test-preview-shell--mobile .test-custom-dropdown__trigger {
+  min-height: 37px !important;
+  border-radius: 3px !important;
+  padding: 6px 10px !important;
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+.test-preview-shell .test-custom-dropdown__menu,
+.test-preview-shell--mobile .test-custom-dropdown__menu {
+  border-radius: 3px !important;
+}
+
 .test-preview-shell--mobile .test-match-row {
   grid-template-columns: 1fr !important;
   gap: 7px !important;

@@ -1589,3 +1589,15 @@
 .qmedia-layout.qmedia-layout .test-rating button[data-selected="true"] {
   color: #f59e0b !important;
 }
+
+.qmedia-layout.qmedia-layout .test-custom-dropdown.test-dropdown-answer {
+  background: transparent !important;
+  border-radius: 3px !important;
+  overflow: visible !important;
+}
+
+.qmedia-layout.qmedia-layout .test-custom-dropdown__trigger {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  border-radius: 3px !important;
+}

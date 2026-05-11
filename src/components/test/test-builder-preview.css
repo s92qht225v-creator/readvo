@@ -1109,3 +1109,19 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-rating button[data-selected="true"] {
   color: #f59e0b !important;
 }
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown.test-dropdown-answer {
+  position: relative !important;
+  overflow: visible !important;
+  min-height: 37px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger {
+  border-radius: 3px !important;
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+}

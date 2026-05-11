@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type {
   PublicQuestion, PublicMcOptions, PublicShortTextOptions, PublicPictureChoiceOptions,
   PublicMatchOptions, PublicOrderingOptions, PublicFillBlanksOptions,
@@ -190,23 +190,12 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   if (question.type === 'dropdown') {
     const opts = question.options as PublicDropdownOptions;
     return (
-      <select
-        value={value.selectedId ?? ''}
-        onChange={e => onChange({ selectedId: e.target.value })}
-        className="test-dropdown-answer"
-        style={{
-          width: '100%', padding: '12px 14px', fontSize: 16,
-          border: '1px solid #cbd5e1', borderRadius: 1,
-          background: '#fff', color: '#1c1626', fontFamily: 'inherit',
-        }}
-      >
-        <option value="">Select an answer</option>
-        {opts.choices.map((choice, i) => (
-          <option key={choice.id} value={choice.id}>
-            {choice.text || `Choice ${i + 1}`}
-          </option>
-        ))}
-      </select>
+      <CustomDropdownAnswer
+        prompt={question.prompt}
+        choices={opts.choices}
+        selectedId={value.selectedId}
+        onSelect={selectedId => onChange({ selectedId })}
+      />
     );
   }
 
@@ -441,6 +430,100 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   }
 
   return null;
+}
+
+function CustomDropdownAnswer({
+  prompt,
+  choices,
+  selectedId,
+  onSelect,
+}: {
+  prompt: string;
+  choices: PublicDropdownOptions['choices'];
+  selectedId?: string;
+  onSelect: (selectedId: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const selectedChoice = choices.find(choice => choice.id === selectedId);
+  const listboxId = `dropdown-${prompt.replace(/\W+/g, '-').toLowerCase().slice(0, 32)}`;
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
+  return (
+    <div ref={rootRef} className="test-dropdown-answer test-custom-dropdown">
+      <button
+        type="button"
+        className="test-custom-dropdown__trigger"
+        role="combobox"
+        aria-expanded={open}
+        aria-controls={listboxId}
+        aria-label={prompt}
+        onClick={() => setOpen(value => !value)}
+        onKeyDown={event => {
+          if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setOpen(true);
+          }
+        }}
+      >
+        <span>{selectedChoice?.text || 'Select an answer'}</span>
+        <ChevronDownIcon className="test-custom-dropdown__chevron" />
+      </button>
+      {open ? (
+        <div id={listboxId} className="test-custom-dropdown__menu" role="listbox">
+          {choices.map((choice, index) => {
+            const selected = choice.id === selectedId;
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                className="test-custom-dropdown__option"
+                role="option"
+                aria-selected={selected}
+                data-selected={selected ? 'true' : 'false'}
+                onClick={() => {
+                  onSelect(choice.id);
+                  setOpen(false);
+                }}
+              >
+                <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
+                <span>{choice.text || `Choice ${index + 1}`}</span>
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M7.116 10.847a1.25 1.25 0 0 0 1.768 0L12.78 6.95a.75.75 0 0 0-1.06-1.06L8 9.61 4.28 5.89a.75.75 0 0 0-1.06 1.06z" />
+    </svg>
+  );
 }
 
 const choiceLetterStyle: React.CSSProperties = {
