@@ -38,6 +38,13 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 - Public desktop card has a thin outline for consistency:
   `border: 1px solid #e4ded8`, `border-radius: 7px`.
 - Mobile card also uses `border-radius: 7px`.
+- Welcome/end screen cards must use the same frame language as question cards.
+  In the live player, `.test-player-screen__card` is full-width up to the
+  public desktop max (`1120px`) with the same border, `7px` radius, and shadow.
+  In the desktop preview shell, it is forced to the same frame as question cards:
+  `941 x 529px`.
+- Mobile welcome/end screen cards keep the phone-frame size in the preview shell:
+  `372 x 663px`.
 - Most inner answer/media radii are theme-controlled by
   `--test-theme-answer-radius`; default is `1px`.
 - Navigation buttons use `border-radius: 3px`.
