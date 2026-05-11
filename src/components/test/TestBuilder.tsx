@@ -350,49 +350,56 @@ export function TestBuilder({ testId }: Props) {
       return false;
     }
 
-    setSaving(true);
     const sourceSnapshot = JSON.stringify(sourceQuestions);
-    const tok = await getAccessToken();
-    const payload = {
-      questions: sourceQuestions.map(q => ({
-        id: q.clientId,
+    try {
+      setSaving(true);
+      const tok = await getAccessToken();
+      const payload = {
+        questions: sourceQuestions.map(q => ({
+          id: q.clientId,
+          type: q.type,
+          prompt: q.prompt,
+          options: q.options,
+          required: q.required,
+        })),
+      };
+      const res = await fetch(`/api/tests/${testId}/questions`, {
+        method: 'PUT',
+        headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        if (!options?.silent) {
+          const errorBody = await res.json().catch(() => null) as { error?: unknown } | null;
+          const errorMessage = typeof errorBody?.error === 'string'
+            ? errorBody.error
+            : 'Failed to save questions';
+          alert(errorMessage);
+        }
+        return false;
+      }
+      const j = await res.json();
+      const next: BuilderQuestion[] = (j.questions as TestQuestion[]).map(q => ({
+        clientId: q.id,
         type: q.type,
         prompt: q.prompt,
         options: q.options,
         required: q.required,
-      })),
-    };
-    const res = await fetch(`/api/tests/${testId}/questions`, {
-      method: 'PUT',
-      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
-      body: JSON.stringify(payload),
-    });
-    setSaving(false);
-    if (!res.ok) {
-      if (!options?.silent) {
-        const errorBody = await res.json().catch(() => null) as { error?: unknown } | null;
-        const errorMessage = typeof errorBody?.error === 'string'
-          ? errorBody.error
-          : 'Failed to save questions';
-        alert(errorMessage);
+      }));
+      if (JSON.stringify(questionsRef.current) === sourceSnapshot) {
+        setQuestions(next);
+        setSavedSnapshot(JSON.stringify(next));
+      } else {
+        setSavedSnapshot(sourceSnapshot);
       }
+      return true;
+    } catch (error) {
+      console.error('Failed to save questions', error);
+      if (!options?.silent) alert('Failed to save questions. Please try again.');
       return false;
+    } finally {
+      setSaving(false);
     }
-    const j = await res.json();
-    const next: BuilderQuestion[] = (j.questions as TestQuestion[]).map(q => ({
-      clientId: q.id,
-      type: q.type,
-      prompt: q.prompt,
-      options: q.options,
-      required: q.required,
-    }));
-    if (JSON.stringify(questionsRef.current) === sourceSnapshot) {
-      setQuestions(next);
-      setSavedSnapshot(JSON.stringify(next));
-    } else {
-      setSavedSnapshot(sourceSnapshot);
-    }
-    return true;
   }, [getAccessToken, testId]);
 
   useEffect(() => {
