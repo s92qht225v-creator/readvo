@@ -13733,12 +13733,24 @@ body {
   width: 100%;
   min-height: 100%;
   background: #fff;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.tb-canvas--mobile::-webkit-scrollbar {
+  display: none !important;
 }
 
 .tb-canvas--mobile .tb-preview-wrap {
   width: 372px !important;
   max-width: none !important;
   padding: 44px 0 !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.tb-canvas--mobile .tb-preview-wrap::-webkit-scrollbar {
+  display: none !important;
 }
 
 .tb-canvas--mobile .tb-preview-card {
