@@ -6,6 +6,9 @@
   width: 100%;
   container-type: inline-size;
 }
+.qmedia-layout.qmedia-audio {
+  gap: 10px;
+}
 .qmedia-layout > .qmedia-asset {
   margin: 0;
 }
@@ -121,6 +124,9 @@
   .qmedia-layout > .qmedia-content {
     display: grid;
     gap: 18px;
+  }
+  .qmedia-layout.qmedia-audio > .qmedia-content {
+    gap: 10px;
   }
   .qmedia-desktop-stack {
     flex-direction: column;

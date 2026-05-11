@@ -37,7 +37,6 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   if (media.type === 'audio') {
     return (
       <div className={className} style={{ ...audioFrameWrap, ...style }}>
-        <div style={audioTitle}>{media.alt || 'Audio'}</div>
         <audio controls preload="metadata" src={media.url} style={audioControl}>
           <a href={media.url}>Open audio</a>
         </audio>
@@ -98,17 +97,18 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
 }
 
 function layoutClassName(media: QuestionMedia, forceDevice?: 'mobile' | 'desktop') {
+  const kind = media.type === 'audio' ? ' qmedia-audio' : '';
   const mobile = media.type === 'audio' && media.layoutMobile === 'wallpaper'
     ? 'stack'
     : media.layoutMobile ?? 'stack';
   const desktop = normalizeDesktopLayout(media.layoutDesktop);
   if (forceDevice === 'mobile') {
-    return `qmedia-layout qmedia-mobile-${mobile} qmedia-force-mobile`;
+    return `qmedia-layout${kind} qmedia-mobile-${mobile} qmedia-force-mobile`;
   }
   if (forceDevice === 'desktop') {
-    return `qmedia-layout qmedia-desktop-${desktop} qmedia-force-desktop`;
+    return `qmedia-layout${kind} qmedia-desktop-${desktop} qmedia-force-desktop`;
   }
-  return `qmedia-layout qmedia-mobile-${mobile} qmedia-desktop-${desktop}${forceDevice ? ` qmedia-force-${forceDevice}` : ''}`;
+  return `qmedia-layout${kind} qmedia-mobile-${mobile} qmedia-desktop-${desktop}${forceDevice ? ` qmedia-force-${forceDevice}` : ''}`;
 }
 
 function normalizeDesktopLayout(value: QuestionMedia['layoutDesktop']) {
@@ -231,18 +231,11 @@ const mediaLink: React.CSSProperties = {
 const audioFrameWrap: React.CSSProperties = {
   width: '100%',
   maxWidth: 420,
-  margin: '0 auto 22px',
-  padding: 14,
-  borderRadius: 7,
-  background: 'color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff)',
+  margin: '0 auto 12px',
+  padding: 0,
+  borderRadius: 0,
+  background: 'transparent',
   boxSizing: 'border-box',
-};
-
-const audioTitle: React.CSSProperties = {
-  marginBottom: 8,
-  color: 'var(--test-theme-question, #1c1626)',
-  fontSize: 13,
-  fontWeight: 700,
 };
 
 const audioControl: React.CSSProperties = {
