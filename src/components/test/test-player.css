@@ -39,6 +39,12 @@
     min-height: 100% !important;
   }
 
+  .test-player__card--no-media {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
   .test-player__card--no-media > .qmedia-layout {
     justify-content: center !important;
   }
@@ -311,6 +317,12 @@
 }
 
 .test-player__card--force-desktop.test-player__card--no-media > .qmedia-layout {
+  justify-content: center !important;
+}
+
+.test-player__card--force-desktop.test-player__card--no-media {
+  display: flex !important;
+  flex-direction: column !important;
   justify-content: center !important;
 }
 

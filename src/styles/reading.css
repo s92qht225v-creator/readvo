@@ -13906,8 +13906,7 @@ body {
 .test-preview-shell--desktop .test-player__card--no-media {
   display: flex !important;
   flex-direction: column !important;
-  /* safe center: center when content fits, fall back to start on overflow. */
-  justify-content: safe center !important;
+  justify-content: center !important;
 }
 
 .test-preview-shell--desktop .test-player__card--no-media > .qmedia-layout {
