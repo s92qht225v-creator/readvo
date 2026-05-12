@@ -75,12 +75,23 @@ function welcomeCollectorFields(screen: { collectFirstName?: boolean; collectLas
     label: string;
     placeholder: string;
     type: string;
+    prefix?: string;
   }> = [];
   if (screen.collectFirstName) fields.push({ key: 'firstName', label: 'Name', placeholder: 'Name', type: 'text' });
   if (screen.collectLastName) fields.push({ key: 'lastName', label: 'Last name', placeholder: 'Last name', type: 'text' });
-  if (screen.collectPhone) fields.push({ key: 'phone', label: 'Phone number', placeholder: '+998', type: 'tel' });
+  if (screen.collectPhone) fields.push({ key: 'phone', label: 'Phone number', placeholder: '', type: 'tel', prefix: '+998' });
   if (screen.collectEmail) fields.push({ key: 'email', label: 'Email', placeholder: 'name@example.com', type: 'email' });
   return fields;
+}
+
+function phoneLocalValue(value: string) {
+  return value.replace(/^\+?998\s*/, '');
+}
+
+function normalizeUzbekPhoneInput(value: string) {
+  const digits = value.replace(/\D/g, '');
+  const withoutCountry = digits.startsWith('998') ? digits.slice(3) : digits;
+  return withoutCountry ? `+998${withoutCountry}` : '';
 }
 
 function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['value']): boolean {
@@ -386,13 +397,27 @@ export function TestPlayer({ test, forceDevice }: Props) {
                 {collectorFields.map(field => (
                   <label key={field.key} style={publicNameBlock}>
                     <span style={publicNameLabel}>{field.label}</span>
-                    <input
-                      type={field.type}
-                      value={profile[field.key]}
-                      onChange={event => setProfile(current => ({ ...current, [field.key]: event.target.value }))}
-                      placeholder={field.placeholder}
-                      style={publicNameInput}
-                    />
+                    {field.key === 'phone' ? (
+                      <span style={publicPhoneInputWrap}>
+                        <span style={publicPhonePrefix}>+998</span>
+                        <input
+                          type={field.type}
+                          inputMode="numeric"
+                          value={phoneLocalValue(profile.phone)}
+                          onChange={event => setProfile(current => ({ ...current, phone: normalizeUzbekPhoneInput(event.target.value) }))}
+                          placeholder={field.placeholder}
+                          style={{ ...publicNameInput, ...publicPhoneInput }}
+                        />
+                      </span>
+                    ) : (
+                      <input
+                        type={field.type}
+                        value={profile[field.key]}
+                        onChange={event => setProfile(current => ({ ...current, [field.key]: event.target.value }))}
+                        placeholder={field.placeholder}
+                        style={publicNameInput}
+                      />
+                    )}
                   </label>
                 ))}
               </div>
@@ -914,6 +939,27 @@ const publicNameInput: React.CSSProperties = {
   color: '#2f2835',
   fontSize: 15,
   outline: 'none',
+};
+
+const publicPhoneInputWrap: React.CSSProperties = {
+  position: 'relative',
+  display: 'block',
+  width: '100%',
+};
+
+const publicPhonePrefix: React.CSSProperties = {
+  position: 'absolute',
+  left: 12,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  color: '#6f6874',
+  fontSize: 15,
+  lineHeight: 1,
+  pointerEvents: 'none',
+};
+
+const publicPhoneInput: React.CSSProperties = {
+  paddingLeft: 52,
 };
 
 const screenImage: React.CSSProperties = {

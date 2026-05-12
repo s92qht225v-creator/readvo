@@ -203,12 +203,13 @@ type WelcomeCollectorField = {
   key: 'collectFirstName' | 'collectLastName' | 'collectPhone' | 'collectEmail';
   label: string;
   placeholder: string;
+  prefix?: string;
 };
 
 const WELCOME_COLLECTOR_FIELDS: WelcomeCollectorField[] = [
   { key: 'collectFirstName', label: 'Name', placeholder: 'Name' },
   { key: 'collectLastName', label: 'Last name', placeholder: 'Last name' },
-  { key: 'collectPhone', label: 'Phone number', placeholder: '+998' },
+  { key: 'collectPhone', label: 'Phone number', placeholder: '', prefix: '+998' },
   { key: 'collectEmail', label: 'Email', placeholder: 'name@example.com' },
 ];
 
@@ -1284,7 +1285,14 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
       {collectorFields.map(field => (
         <label key={field.key} style={screenPreviewCollectorField}>
           <span style={screenPreviewCollectorLabel}>{field.label}</span>
-          <input readOnly value="" placeholder={field.placeholder} style={screenPreviewCollectorInput} />
+          {field.prefix ? (
+            <span style={screenPreviewPhoneInputWrap}>
+              <span style={screenPreviewPhonePrefix}>{field.prefix}</span>
+              <input readOnly value="" placeholder={field.placeholder} style={{ ...screenPreviewCollectorInput, ...screenPreviewPhoneInput }} />
+            </span>
+          ) : (
+            <input readOnly value="" placeholder={field.placeholder} style={screenPreviewCollectorInput} />
+          )}
         </label>
       ))}
     </div>
@@ -2561,6 +2569,27 @@ const screenPreviewCollectorInput: React.CSSProperties = {
   fontSize: 15,
   color: '#2f2835',
   outline: 'none',
+};
+
+const screenPreviewPhoneInputWrap: React.CSSProperties = {
+  position: 'relative',
+  display: 'block',
+  width: '100%',
+};
+
+const screenPreviewPhonePrefix: React.CSSProperties = {
+  position: 'absolute',
+  left: 12,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  color: '#6f6874',
+  fontSize: 15,
+  lineHeight: 1,
+  pointerEvents: 'none',
+};
+
+const screenPreviewPhoneInput: React.CSSProperties = {
+  paddingLeft: 52,
 };
 
 const screenPreviewTitle: React.CSSProperties = {
