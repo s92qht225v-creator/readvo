@@ -212,6 +212,13 @@
     margin-inline: 0 !important;
   }
 
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top > .qmedia-asset,
+  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .qmedia-audio-player {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+  }
+
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-dropdown-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-short-answer,
@@ -333,6 +340,13 @@
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-match-list {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+}
+
+.test-player__card--force-desktop .qmedia-audio-top > .qmedia-asset,
+.test-player__card--force-desktop .qmedia-audio-top .qmedia-audio-player {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
