@@ -11,9 +11,16 @@ export function getQuestionMedia(q: BuilderQuestion): QuestionMedia | undefined 
 export function setQuestionMedia(q: BuilderQuestion, media: QuestionMedia | undefined): BuilderQuestion {
   const options = { ...(q.options as Record<string, unknown>) };
   if (media?.url?.trim()) {
+    if (media.type === 'audio') {
+      options.media = {
+        type: media.type,
+        url: media.url.trim(),
+        alt: media.alt,
+        provider: media.provider,
+      };
+      return { ...q, options: options as BuilderQuestion['options'] };
+    }
     const layoutMobile = media.layoutMobile === 'wallpaper'
-      ? 'stack'
-      : media.type === 'audio' && media.layoutMobile === 'split'
       ? 'stack'
       : media.layoutMobile ?? 'stack';
     options.media = {

@@ -24,6 +24,14 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
     </>
   );
   if (!media?.url) return <>{content}</>;
+  if (media.type === 'audio') {
+    return (
+      <div className="qmedia-layout qmedia-audio qmedia-audio-top">
+        <QuestionMediaBlock media={media} className="qmedia-asset" />
+        <div className="qmedia-content">{content}</div>
+      </div>
+    );
+  }
   return (
     <div className={layoutClassName(media, forceDevice)}>
       <QuestionMediaBlock media={media} className="qmedia-asset" />
@@ -213,20 +221,17 @@ function PauseIcon() {
 }
 
 function layoutClassName(media: QuestionMedia, forceDevice?: 'mobile' | 'desktop') {
-  const kind = media.type === 'audio' ? ' qmedia-audio' : '';
   const mobile = media.layoutMobile === 'wallpaper'
     ? 'stack'
-    : media.type === 'audio' && media.layoutMobile === 'split'
-      ? 'stack'
-      : media.layoutMobile ?? 'stack';
+    : media.layoutMobile ?? 'stack';
   const desktop = normalizeDesktopLayout(media.layoutDesktop);
   if (forceDevice === 'mobile') {
-    return `qmedia-layout${kind} qmedia-mobile-${mobile} qmedia-force-mobile`;
+    return `qmedia-layout qmedia-mobile-${mobile} qmedia-force-mobile`;
   }
   if (forceDevice === 'desktop') {
-    return `qmedia-layout${kind} qmedia-desktop-${desktop} qmedia-force-desktop`;
+    return `qmedia-layout qmedia-desktop-${desktop} qmedia-force-desktop`;
   }
-  return `qmedia-layout${kind} qmedia-mobile-${mobile} qmedia-desktop-${desktop}${forceDevice ? ` qmedia-force-${forceDevice}` : ''}`;
+  return `qmedia-layout qmedia-mobile-${mobile} qmedia-desktop-${desktop}${forceDevice ? ` qmedia-force-${forceDevice}` : ''}`;
 }
 
 function normalizeDesktopLayout(value: QuestionMedia['layoutDesktop']) {

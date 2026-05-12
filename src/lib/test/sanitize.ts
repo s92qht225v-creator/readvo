@@ -40,6 +40,14 @@ function questionMedia(options: unknown): PublicQuestion['media'] {
   const media = (options as { media?: unknown } | null)?.media as PublicQuestion['media'] | undefined;
   if (!media || typeof media.url !== 'string' || !media.url.trim()) return undefined;
   if (media.type !== 'image' && media.type !== 'gif' && media.type !== 'video' && media.type !== 'audio') return undefined;
+  if (media.type === 'audio') {
+    return {
+      type: media.type,
+      url: media.url,
+      alt: typeof media.alt === 'string' ? media.alt : undefined,
+      provider: media.provider,
+    };
+  }
   const layoutDesktop = media.layoutDesktop === 'split-right'
     ? 'float-right'
     : media.layoutDesktop === 'split-left'

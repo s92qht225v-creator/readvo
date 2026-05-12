@@ -147,8 +147,9 @@ If content overflows, the card remains scrollable with hidden scrollbars.
 - `split` - image is full width at the top with no top/left/right gap.
 - `wallpaper` was removed/disabled for normal selection because it created too
   many edge cases with background movement, stretching, and nav overlap.
-- Audio questions only allow mobile layouts that make sense for audio; image-only
-  layouts should be unavailable/greyed out for audio.
+- Audio does not expose layout controls. It always renders as a full-width
+  audio player above the question, then the question text and answers below.
+  Saved legacy audio layout values must be ignored by renderer/sanitizer.
 
 ### Desktop
 

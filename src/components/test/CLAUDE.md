@@ -119,6 +119,8 @@ or the builder's mobile/desktop toggle is set, `QuestionMediaBlock`'s
   (no mobile class). Mobile rules don't match. Desktop rules apply.
 - No force → both `qmedia-mobile-X qmedia-desktop-X` are present, and
   `@container` queries decide which wins.
+- Audio media bypasses `layoutClassName()` and uses `qmedia-audio-top`, so it
+  is always rendered above the question and does not expose layout controls.
 
 ## Layout gotchas (read before debugging)
 

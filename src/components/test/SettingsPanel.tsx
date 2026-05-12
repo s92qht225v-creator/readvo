@@ -37,6 +37,7 @@ interface Props {
 export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
   const [mediaOpen, setMediaOpen] = useState(false);
   const [mediaSettingsOpen, setMediaSettingsOpen] = useState(false);
+  const media = getQuestionMedia(q);
 
   return (
     <div style={panel}>
@@ -118,7 +119,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           onSettings={() => setMediaSettingsOpen(true)}
           onRemove={() => onChange(setQuestionMedia(q, undefined))}
         />
-        {getQuestionMedia(q)?.url ? (
+        {media?.url && media.type !== 'audio' ? (
           <MediaLayoutControls q={q} onChange={onChange} />
         ) : null}
       </Section>
@@ -209,16 +210,9 @@ const DESKTOP_LAYOUT_OPTIONS: Array<LayoutOption<DesktopMediaLayout>> = [
 
 function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q: BuilderQuestion) => void }) {
   const media = getQuestionMedia(q);
-  if (!media?.url) return null;
-  const mobileOptions = media.type === 'audio'
-    ? MOBILE_LAYOUT_OPTIONS.map(option => ({
-      ...option,
-      disabled: option.value === 'split',
-    }))
-    : MOBILE_LAYOUT_OPTIONS;
+  if (!media?.url || media.type === 'audio') return null;
+  const mobileOptions = MOBILE_LAYOUT_OPTIONS;
   const mobileValue = media.layoutMobile === 'wallpaper'
-    ? 'stack'
-    : media.type === 'audio' && media.layoutMobile === 'split'
     ? 'stack'
     : media.layoutMobile ?? 'stack';
 
