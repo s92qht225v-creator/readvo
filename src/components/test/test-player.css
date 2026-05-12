@@ -1,4 +1,5 @@
 .test-player__card {
+  --test-mobile-column: min(100%, 303px);
   --test-title-size: clamp(21px, 4.25cqw, 34px);
   --test-description-size: clamp(13px, 2.1cqw, 16px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);

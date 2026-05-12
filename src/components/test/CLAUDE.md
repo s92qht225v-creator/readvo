@@ -159,6 +159,12 @@ to center symmetrically — without it, the column left-aligns and produces
 a 27px/42px asymmetric gap. The catchall `.test-preview-shell--mobile .qmedia-answer`
 rule in `reading.css` sets both width and margin-inline together.
 
+Use the same mobile column width everywhere mobile is rendered:
+`--test-mobile-column: min(100%, 303px)`. That column applies to question
+title/description, stack/float media, audio players, and answer controls.
+Split media can stay full-bleed, but the text and answer controls below it
+still use the shared 303px column. Do not add separate 320px media widths.
+
 ### `:not(.test-player__card--force-mobile)` modifier
 
 Desktop-expansion rules (e.g. `width: 100%` instead of mobile's

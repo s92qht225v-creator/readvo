@@ -182,6 +182,13 @@ For desktop cards without media:
 
 - Main content column target: `303px`.
 - Card content horizontal padding target: `26px`.
+- Public mobile player, builder mobile preview, and mobile-forced cards should
+  all use the same `--test-mobile-column: min(100%, 303px)` contract.
+- Question title, description, media in stack/float layouts, audio player,
+  answer groups, inputs, selects, rating, and opinion controls should resolve
+  to that same column width.
+- Mobile split media may remain full-bleed by layout design, but the text and
+  answers under it still use the shared `303px` column.
 - Choice row target:
   - width: `303px`
   - height: `37px`

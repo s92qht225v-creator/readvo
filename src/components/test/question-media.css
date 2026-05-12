@@ -9,6 +9,13 @@
 .qmedia-layout.qmedia-audio {
   gap: 10px;
 }
+.qmedia-audio-top > .qmedia-asset,
+.qmedia-audio-top > .qmedia-content > .qmedia-header,
+.qmedia-audio-top > .qmedia-content > .qmedia-answer {
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100%;
+  margin-inline: auto;
+}
 .qmedia-audio-player {
   --qmedia-audio-ink: var(--test-theme-question, #1f2937);
   --qmedia-audio-accent: var(--test-theme-answer, #0445af);
@@ -132,8 +139,10 @@
 .qmedia-mobile-stack > .qmedia-content > .qmedia-answer,
 .qmedia-mobile-float > .qmedia-content > .qmedia-header,
 .qmedia-mobile-float > .qmedia-content > .qmedia-answer {
-  width: min(100%, 320px);
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100%;
   text-align: left;
+  margin-inline: auto;
 }
 .qmedia-mobile-stack > .qmedia-content > .qmedia-header *,
 .qmedia-mobile-stack > .qmedia-content > .qmedia-answer *,
@@ -146,7 +155,9 @@
 }
 .qmedia-mobile-stack > .qmedia-asset {
   order: 2;
-  width: min(100%, 320px);
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100%;
+  margin-inline: auto;
 }
 .qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
   order: 3;
@@ -157,8 +168,10 @@
 }
 .qmedia-mobile-float > .qmedia-asset {
   order: 1;
-  width: min(100%, 320px);
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100%;
   margin: 0;
+  margin-inline: auto;
 }
 .qmedia-mobile-float > .qmedia-content > .qmedia-header {
   order: 2;
@@ -1299,18 +1312,18 @@
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-stack > .qmedia-asset {
     order: 2;
-    width: min(100%, 320px) !important;
-    max-width: 320px !important;
-    margin: 0 !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
     order: 3;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-float > .qmedia-asset {
     order: 1;
-    width: min(100%, 320px) !important;
-    max-width: 320px !important;
-    margin: 0 !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-float > .qmedia-content > .qmedia-header {
     order: 2;
@@ -1373,18 +1386,18 @@
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-stack > .qmedia-asset {
     order: 2;
-    width: min(100%, 320px) !important;
-    max-width: 320px !important;
-    margin: 0 !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
     order: 3;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-float > .qmedia-asset {
     order: 1;
-    width: min(100%, 320px) !important;
-    max-width: 320px !important;
-    margin: 0 !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
   .qmedia-layout:not(.qmedia-force-desktop).qmedia-mobile-float > .qmedia-content > .qmedia-header {
     order: 2;
@@ -1446,18 +1459,18 @@
 }
 .qmedia-force-mobile.qmedia-mobile-stack > .qmedia-asset {
   order: 2;
-  width: min(100%, 320px);
-  max-width: 320px !important;
-  margin: 0;
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100% !important;
+  margin-inline: auto;
 }
 .qmedia-force-mobile.qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
   order: 3;
 }
 .qmedia-force-mobile.qmedia-mobile-float > .qmedia-asset {
   order: 1;
-  width: min(100%, 320px);
-  max-width: 320px !important;
-  margin: 0;
+  width: var(--test-mobile-column, min(100%, 303px));
+  max-width: 100% !important;
+  margin-inline: auto;
 }
 .qmedia-force-mobile.qmedia-mobile-float > .qmedia-content > .qmedia-header {
   order: 2;
