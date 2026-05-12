@@ -237,6 +237,38 @@
   .qmedia-layout.qmedia-audio > .qmedia-content {
     gap: 10px;
   }
+  .qmedia-layout.qmedia-audio.qmedia-audio-top {
+    align-items: stretch;
+    justify-content: center;
+    min-height: 100%;
+  }
+  .qmedia-audio-top > .qmedia-asset,
+  .qmedia-audio-top > .qmedia-content > .qmedia-header,
+  .qmedia-audio-top > .qmedia-content > .qmedia-answer {
+    width: min(100%, 640px);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  .qmedia-audio-top > .qmedia-content > .qmedia-header,
+  .qmedia-audio-top > .qmedia-content > .qmedia-answer {
+    text-align: left;
+  }
+  .qmedia-audio-top > .qmedia-content > .qmedia-header *,
+  .qmedia-audio-top > .qmedia-content > .qmedia-answer * {
+    text-align: left;
+  }
+  .qmedia-audio-top .test-dropdown-answer,
+  .qmedia-audio-top .test-number-answer,
+  .qmedia-audio-top .test-short-answer,
+  .qmedia-audio-top .test-long-answer,
+  .qmedia-audio-top .test-question-options,
+  .qmedia-audio-top .test-picture-options,
+  .qmedia-audio-top .test-ordering-list,
+  .qmedia-audio-top .test-match-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+  }
   .qmedia-desktop-stack {
     flex-direction: column;
   }
