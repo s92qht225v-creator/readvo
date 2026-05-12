@@ -156,36 +156,25 @@ function MediaControls({ q, onOpen, onSettings, onRemove }: {
   const media = getQuestionMedia(q);
   const caps = mediaCapabilities(q.type);
   const currentKind = mediaKind(media);
+  const availableKinds: MediaKind[] = q.type === 'picture_choice'
+    ? ['audio']
+    : ['image', 'audio', 'video'];
   return (
     <div style={mediaRowWrap}>
       <div style={mediaRows}>
-        <MediaControlRow
-          label="Image"
-          active={currentKind === 'image'}
-          disabled={!caps.image}
-          disabledReason="Question-level images are not used for picture choice. Add images to each choice instead."
-          onAdd={() => onOpen('image')}
-          onChange={() => onOpen('image')}
-          onSettings={media && currentKind === 'image' ? onSettings : undefined}
-          onRemove={onRemove}
-        />
-        <MediaControlRow
-          label="Audio"
-          active={currentKind === 'audio'}
-          disabled={!caps.audio}
-          onAdd={() => onOpen('audio')}
-          onChange={() => onOpen('audio')}
-          onRemove={onRemove}
-        />
-        <MediaControlRow
-          label="Video"
-          active={currentKind === 'video'}
-          disabled={!caps.video}
-          disabledReason="Question-level video is not used for picture choice."
-          onAdd={() => onOpen('video')}
-          onChange={() => onOpen('video')}
-          onRemove={onRemove}
-        />
+        {availableKinds.map(kind => (
+          <MediaControlRow
+            key={kind}
+            label={mediaKindLabel(kind)}
+            active={currentKind === kind}
+            disabled={!caps[kind]}
+            disabledReason={mediaDisabledReason(kind)}
+            onAdd={() => onOpen(kind)}
+            onChange={() => onOpen(kind)}
+            onSettings={media && kind === 'image' && currentKind === 'image' ? onSettings : undefined}
+            onRemove={onRemove}
+          />
+        ))}
       </div>
     </div>
   );
@@ -210,10 +199,12 @@ function MediaControlRow({ label, active, disabled, disabledReason, onAdd, onCha
       </div>
       {active ? (
         <div style={mediaActions}>
-          <button type="button" onClick={onChange} style={mediaTextButton} title={`Change ${label.toLowerCase()}`}>
-            Change
-          </button>
-          {onSettings ? (
+          {!disabled ? (
+            <button type="button" onClick={onChange} style={mediaTextButton} title={`Change ${label.toLowerCase()}`}>
+              Change
+            </button>
+          ) : null}
+          {onSettings && !disabled ? (
             <button type="button" onClick={onSettings} style={mediaIconButton} title={`${label} settings`} aria-label={`${label} settings`}>
               <SettingsIcon />
             </button>
@@ -250,6 +241,18 @@ function mediaCapabilities(type: BuilderQuestion['type']): Record<MediaKind, boo
     return { image: false, audio: true, video: false };
   }
   return { image: true, audio: true, video: true };
+}
+
+function mediaKindLabel(kind: MediaKind): string {
+  if (kind === 'image') return 'Image';
+  if (kind === 'audio') return 'Audio';
+  return 'Video';
+}
+
+function mediaDisabledReason(kind: MediaKind): string | undefined {
+  if (kind === 'image') return 'Question-level images are not used for picture choice.';
+  if (kind === 'video') return 'Question-level video is not used for picture choice.';
+  return undefined;
 }
 
 function SettingsIcon() {
