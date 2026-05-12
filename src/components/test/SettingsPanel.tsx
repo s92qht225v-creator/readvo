@@ -34,8 +34,10 @@ interface Props {
   onChange: (q: BuilderQuestion) => void;
 }
 
+type MediaKind = 'image' | 'audio' | 'video';
+
 export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
-  const [mediaOpen, setMediaOpen] = useState(false);
+  const [mediaOpen, setMediaOpen] = useState<MediaKind | null>(null);
   const [mediaSettingsOpen, setMediaSettingsOpen] = useState(false);
   const media = getQuestionMedia(q);
 
@@ -113,9 +115,9 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         {q.type === 'short_text' || q.type === 'long_answer' ? (
           <TextLengthBehavior q={q} onChange={onChange} />
         ) : null}
-        <MediaRow
+        <MediaControls
           q={q}
-          onOpen={() => setMediaOpen(true)}
+          onOpen={setMediaOpen}
           onSettings={() => setMediaSettingsOpen(true)}
           onRemove={() => onChange(setQuestionMedia(q, undefined))}
         />
@@ -126,10 +128,11 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
       {mediaOpen ? (
         <MediaGalleryModal
           q={q}
-          onClose={() => setMediaOpen(false)}
+          mediaKind={mediaOpen}
+          onClose={() => setMediaOpen(null)}
           onChange={next => {
             onChange(next);
-            setMediaOpen(false);
+            setMediaOpen(null);
           }}
         />
       ) : null}
@@ -147,49 +150,121 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
   );
 }
 
-function MediaRow({ q, onOpen, onSettings, onRemove }: {
-  q: BuilderQuestion; onOpen: () => void; onSettings: () => void; onRemove: () => void;
+function MediaControls({ q, onOpen, onSettings, onRemove }: {
+  q: BuilderQuestion; onOpen: (kind: MediaKind) => void; onSettings: () => void; onRemove: () => void;
 }) {
   const media = getQuestionMedia(q);
+  const caps = mediaCapabilities(q.type);
+  const currentKind = mediaKind(media);
   return (
     <div style={mediaRowWrap}>
-      <div style={mediaRowTop}>
-        <div>
-          <div style={mediaRowTitle}>Image, video, or audio</div>
-        </div>
-        {media?.url ? (
-          <div style={mediaActions}>
-            <button type="button" onClick={onOpen} style={mediaIconButton} title="Change media" aria-label="Change media">
-              <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
-                <g fill="currentColor">
-                  <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H11v3.25A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5H5zM6.5 5h2.75c.933 0 1.695.73 1.747 1.65l1.44-.897a.75.75 0 0 1 .812.012l1.251.834V1.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25zm8 3.401-1.68-1.12L11 8.416V9.5h3.25a.25.25 0 0 0 .25-.25zm-5-.388V6.75a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25z" fillRule="evenodd" clipRule="evenodd"/>
-                  <path d="M11.625 3.368a1.007 1.007 0 1 0 2.014 0 1.007 1.007 0 0 0-2.014 0M3.995 11.95V8.883a.5.5 0 0 1 .757-.429l2.556 1.534a.5.5 0 0 1 0 .857L4.752 12.38a.5.5 0 0 1-.757-.429"/>
-                </g>
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={media.type === 'video' || media.type === 'audio' ? undefined : onSettings}
-              disabled={media.type === 'video' || media.type === 'audio'}
-              style={mediaIconButtonDisabled(media.type === 'video' || media.type === 'audio')}
-              title={media.type === 'audio' ? 'Audio settings are not needed' : media.type === 'video' ? 'Video settings are not available yet' : 'Media settings'}
-              aria-label="Media settings"
-            >
-              <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
-                <path fill="currentColor" d="M8.904 3.504a3.094 3.094 0 1 1 0 1.5H1.75a.75.75 0 1 1 0-1.5zm3.002-.844a1.593 1.593 0 1 0-.001 3.186 1.593 1.593 0 0 0 .001-3.186m-9.252 8.336a3.094 3.094 0 0 1 6.005 0h5.591a.75.75 0 0 1 0 1.5H8.659a3.094 3.094 0 0 1-6.005 0H1.75a.75.75 0 0 1 0-1.5zm3.002-.844a1.593 1.593 0 1 0 0 3.187 1.593 1.593 0 0 0 0-3.187" fillRule="evenodd" clipRule="evenodd"/>
-              </svg>
-            </button>
-            <button type="button" onClick={onRemove} style={mediaIconButton} title="Delete media" aria-label="Delete media">
-              <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
-                <path fill="currentColor" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" fillRule="evenodd" clipRule="evenodd"/>
-              </svg>
-            </button>
-          </div>
-        ) : (
-          <button type="button" onClick={onOpen} style={mediaAddButton}>+</button>
-        )}
+      <div style={mediaRows}>
+        <MediaControlRow
+          label="Image"
+          active={currentKind === 'image'}
+          disabled={!caps.image}
+          disabledReason="Question-level images are not used for picture choice. Add images to each choice instead."
+          onAdd={() => onOpen('image')}
+          onChange={() => onOpen('image')}
+          onSettings={media && currentKind === 'image' ? onSettings : undefined}
+          onRemove={onRemove}
+        />
+        <MediaControlRow
+          label="Audio"
+          active={currentKind === 'audio'}
+          disabled={!caps.audio}
+          onAdd={() => onOpen('audio')}
+          onChange={() => onOpen('audio')}
+          onRemove={onRemove}
+        />
+        <MediaControlRow
+          label="Video"
+          active={currentKind === 'video'}
+          disabled={!caps.video}
+          disabledReason="Question-level video is not used for picture choice."
+          onAdd={() => onOpen('video')}
+          onChange={() => onOpen('video')}
+          onRemove={onRemove}
+        />
       </div>
     </div>
+  );
+}
+
+function MediaControlRow({ label, active, disabled, disabledReason, onAdd, onChange, onSettings, onRemove }: {
+  label: string;
+  active: boolean;
+  disabled?: boolean;
+  disabledReason?: string;
+  onAdd: () => void;
+  onChange: () => void;
+  onSettings?: () => void;
+  onRemove: () => void;
+}) {
+  return (
+    <div style={mediaRowTop}>
+      <div>
+        <div style={mediaRowTitle}>{label}</div>
+        {active ? <div style={mediaStatus}>Added</div> : null}
+        {disabled ? <div style={mediaStatus}>{disabledReason ?? 'Not available for this question.'}</div> : null}
+      </div>
+      {active ? (
+        <div style={mediaActions}>
+          <button type="button" onClick={onChange} style={mediaTextButton} title={`Change ${label.toLowerCase()}`}>
+            Change
+          </button>
+          {onSettings ? (
+            <button type="button" onClick={onSettings} style={mediaIconButton} title={`${label} settings`} aria-label={`${label} settings`}>
+              <SettingsIcon />
+            </button>
+          ) : null}
+          <button type="button" onClick={onRemove} style={mediaIconButton} title={`Delete ${label.toLowerCase()}`} aria-label={`Delete ${label.toLowerCase()}`}>
+            <TrashIcon />
+          </button>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={disabled ? undefined : onAdd}
+          disabled={disabled}
+          style={mediaAddButtonDisabled(!!disabled)}
+          title={disabled ? disabledReason : `Add ${label.toLowerCase()}`}
+          aria-label={`Add ${label.toLowerCase()}`}
+        >
+          +
+        </button>
+      )}
+    </div>
+  );
+}
+
+function mediaKind(media: QuestionMedia | undefined): MediaKind | undefined {
+  if (!media?.url) return undefined;
+  if (media.type === 'audio') return 'audio';
+  if (media.type === 'video') return 'video';
+  return 'image';
+}
+
+function mediaCapabilities(type: BuilderQuestion['type']): Record<MediaKind, boolean> {
+  if (type === 'picture_choice') {
+    return { image: false, audio: true, video: false };
+  }
+  return { image: true, audio: true, video: true };
+}
+
+function SettingsIcon() {
+  return (
+    <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
+      <path fill="currentColor" d="M8.904 3.504a3.094 3.094 0 1 1 0 1.5H1.75a.75.75 0 1 1 0-1.5zm3.002-.844a1.593 1.593 0 1 0-.001 3.186 1.593 1.593 0 0 0 .001-3.186m-9.252 8.336a3.094 3.094 0 0 1 6.005 0h5.591a.75.75 0 0 1 0 1.5H8.659a3.094 3.094 0 0 1-6.005 0H1.75a.75.75 0 0 1 0-1.5zm3.002-.844a1.593 1.593 0 1 0 0 3.187 1.593 1.593 0 0 0 0-3.187" fillRule="evenodd" clipRule="evenodd"/>
+    </svg>
+  );
+}
+
+function TrashIcon() {
+  return (
+    <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
+      <path fill="currentColor" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" fillRule="evenodd" clipRule="evenodd"/>
+    </svg>
   );
 }
 
@@ -435,6 +510,11 @@ const mediaRowWrap: React.CSSProperties = {
   marginTop: 4,
 };
 
+const mediaRows: React.CSSProperties = {
+  display: 'grid',
+  gap: 11,
+};
+
 const mediaRowTop: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
@@ -445,6 +525,14 @@ const mediaRowTop: React.CSSProperties = {
 const mediaRowTitle: React.CSSProperties = {
   color: '#4f4655',
   fontSize: 13,
+};
+
+const mediaStatus: React.CSSProperties = {
+  color: '#8f8793',
+  fontSize: 11,
+  lineHeight: 1.35,
+  marginTop: 3,
+  maxWidth: 188,
 };
 
 const layoutControlsWrap: React.CSSProperties = {
@@ -543,10 +631,26 @@ const mediaAddButton: React.CSSProperties = {
   cursor: 'pointer',
 };
 
+const mediaAddButtonDisabled = (disabled: boolean): React.CSSProperties => ({
+  ...mediaAddButton,
+  opacity: disabled ? 0.35 : 1,
+  cursor: disabled ? 'not-allowed' : 'pointer',
+});
+
 const mediaActions: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
-  gap: 13,
+  gap: 9,
+};
+
+const mediaTextButton: React.CSSProperties = {
+  border: 'none',
+  background: 'transparent',
+  color: '#4f4655',
+  fontSize: 12,
+  fontWeight: 750,
+  padding: 0,
+  cursor: 'pointer',
 };
 
 const mediaIconButton: React.CSSProperties = {

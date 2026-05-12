@@ -19,16 +19,18 @@ import {
 } from './_styles';
 
 type MediaGalleryTab = 'upload' | 'video' | 'audio' | 'gallery';
+type MediaKind = 'image' | 'audio' | 'video';
 
-export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTabs }: {
+export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTabs, mediaKind }: {
   q: BuilderQuestion;
   onClose: () => void;
   onChange: (q: BuilderQuestion) => void;
   onPickMedia?: (media: QuestionMedia) => void;
   allowedTabs?: MediaGalleryTab[];
+  mediaKind?: MediaKind;
 }) {
   const { getAccessToken } = useAuth();
-  const tabs = allowedTabs ?? ['upload', 'video', 'audio', 'gallery'];
+  const tabs = allowedTabs ?? tabsForMediaKind(mediaKind);
   const [tab, setTab] = useState<MediaGalleryTab>(tabs[0] ?? 'upload');
   const [url, setUrl] = useState('');
   const [alt, setAlt] = useState('');
@@ -59,8 +61,12 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     });
   };
 
-  const upload = async (file: File, expectedType?: 'audio') => {
+  const upload = async (file: File, expectedType?: 'image' | 'audio') => {
     setError(null);
+    if (expectedType === 'image' && !file.type.startsWith('image/')) {
+      setError('Upload JPG, PNG, GIF, or WebP image.');
+      return;
+    }
     if (expectedType === 'audio' && !file.type.startsWith('audio/')) {
       setError('Upload MP3, WAV, OGG, M4A, AAC, or WebM audio.');
       return;
@@ -137,22 +143,24 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               onDrop={e => {
                 e.preventDefault();
                 const file = e.dataTransfer.files[0];
-                if (file) void upload(file);
+                if (file) void upload(file, mediaKind === 'image' ? 'image' : undefined);
               }}
               style={uploadDropzone}
             >
               <input
                 ref={inputRef}
                 type="file"
-                accept="image/png,image/jpeg,image/gif,image/webp,audio/mpeg,audio/mp3,audio/wav,audio/wave,audio/x-wav,audio/mp4,audio/aac,audio/ogg,audio/webm"
+                accept={mediaKind === 'image'
+                  ? 'image/png,image/jpeg,image/gif,image/webp'
+                  : 'image/png,image/jpeg,image/gif,image/webp,audio/mpeg,audio/mp3,audio/wav,audio/wave,audio/x-wav,audio/mp4,audio/aac,audio/ogg,audio/webm'}
                 hidden
                 onChange={e => {
                   const file = e.target.files?.[0];
-                  if (file) void upload(file);
+                  if (file) void upload(file, mediaKind === 'image' ? 'image' : undefined);
                 }}
               />
-              <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop a file here</span>
-              <span style={uploadSub}>Images up to 4MB. Audio up to 20MB.</span>
+              <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop {mediaKind === 'image' ? 'an image' : 'a file'} here</span>
+              <span style={uploadSub}>{mediaKind === 'image' ? 'JPG, PNG, GIF, or WebP. Up to 4MB.' : 'Images up to 4MB. Audio up to 20MB.'}</span>
             </button>
           ) : tab === 'video' ? (
             <MediaUrlForm
@@ -198,6 +206,13 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
       </div>
     </div>
   );
+}
+
+function tabsForMediaKind(mediaKind?: MediaKind): MediaGalleryTab[] {
+  if (mediaKind === 'image') return ['upload', 'gallery'];
+  if (mediaKind === 'audio') return ['audio'];
+  if (mediaKind === 'video') return ['video'];
+  return ['upload', 'video', 'audio', 'gallery'];
 }
 
 function MediaUrlForm({ label, url, alt, onUrl, onAlt, onAttach }: {
