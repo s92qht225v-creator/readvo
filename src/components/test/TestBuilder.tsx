@@ -242,11 +242,34 @@ export function TestBuilder({ testId }: Props) {
   const [showTimerModal, setShowTimerModal] = useState(false);
   const [showThemeModal, setShowThemeModal] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
+  const previewCanvasRef = useRef<HTMLDivElement | null>(null);
+  const [previewCanvasSize, setPreviewCanvasSize] = useState({ width: 0, height: 0 });
   const questionsRef = useRef<BuilderQuestion[]>([]);
   const dndSensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
   );
+
+  useEffect(() => {
+    const node = previewCanvasRef.current;
+    if (!node) return;
+
+    const updateSize = () => {
+      setPreviewCanvasSize({
+        width: node.clientWidth,
+        height: node.clientHeight,
+      });
+    };
+
+    updateSize();
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(node);
+    window.addEventListener('resize', updateSize);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateSize);
+    };
+  }, [test]);
 
   const load = useCallback(async () => {
     const tok = await getAccessToken();
@@ -598,6 +621,15 @@ export function TestBuilder({ testId }: Props) {
     ? Math.min(activeBlock.index, Math.max(questions.length - 1, 0))
     : activeIdx;
   const activeQuestion = questions[activeQuestionIndex];
+  const previewScale = (() => {
+    if (previewDevice !== 'desktop') return 1;
+    const frame = BUILDER_PREVIEW_FRAME_SIZE.desktop;
+    const slide = BUILDER_PREVIEW_SIZE.desktop;
+    const availableWidth = Math.max(0, previewCanvasSize.width - 64);
+    const availableHeight = Math.max(0, previewCanvasSize.height - 56);
+    if (!availableWidth || !availableHeight) return 1;
+    return Math.min(1, availableWidth / frame.width, availableHeight / slide.height);
+  })();
 
   return (
     <div style={builderShell}>
@@ -920,6 +952,7 @@ export function TestBuilder({ testId }: Props) {
 
         {/* Canvas */}
         <div
+          ref={previewCanvasRef}
           className={`tb-canvas tb-canvas--${previewDevice}`}
           style={{
             flex: 1,
@@ -933,11 +966,11 @@ export function TestBuilder({ testId }: Props) {
           }}
         >
           {activeBlock.kind === 'welcome' ? (
-            <ScreenPreviewCanvas screen={welcomeScreen} fallbackTitle={test.title} kind="welcome" questionCount={questions.length} previewDevice={previewDevice} />
+            <ScreenPreviewCanvas screen={welcomeScreen} fallbackTitle={test.title} kind="welcome" questionCount={questions.length} previewDevice={previewDevice} previewScale={previewScale} />
           ) : activeBlock.kind === 'end' ? (
-            <ScreenPreviewCanvas screen={endScreen} fallbackTitle="Submitted" kind="end" questionCount={questions.length} previewDevice={previewDevice} />
+            <ScreenPreviewCanvas screen={endScreen} fallbackTitle="Submitted" kind="end" questionCount={questions.length} previewDevice={previewDevice} previewScale={previewScale} />
           ) : activeQuestion ? (
-            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} />
+            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} />
           ) : (
             <div style={emptyCanvas}>
               <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>No questions yet</div>
@@ -1265,12 +1298,13 @@ function QuestionActionsMenu({ top, left, onDuplicate, onDelete }: {
   );
 }
 
-function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previewDevice }: {
+function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previewDevice, previewScale }: {
   screen: TestScreenConfig;
   fallbackTitle: string;
   kind: 'welcome' | 'end';
   questionCount: number;
   previewDevice: 'desktop' | 'mobile';
+  previewScale: number;
 }) {
   const title = screen.title || fallbackTitle;
   const description = screen.description ?? '';
@@ -1317,7 +1351,15 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   );
 
   return (
-    <div style={screenPreviewWrap}>
+    <div style={{
+      ...screenPreviewWrap,
+      width: previewSize.width * previewScale,
+      height: previewSize.height * previewScale,
+      minHeight: previewSize.height * previewScale,
+      overflow: 'hidden',
+      display: 'block',
+      padding: 0,
+    }}>
       <div style={{
         ...screenPreviewCard,
         ...(splitCollector ? screenPreviewCardSplit : null),
@@ -1327,6 +1369,8 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         maxWidth: 'none',
         borderRadius: 7,
         padding: previewDevice === 'mobile' ? '30px 26px' : 32,
+        transform: `scale(${previewScale})`,
+        transformOrigin: 'top left',
       }}>
         {splitCollector && collectorLayout === 'left' ? collectorPreview : null}
         {introPreview}
@@ -2179,11 +2223,13 @@ function PreviewCanvas({
   qIndex,
   previewDevice,
   theme,
+  previewScale,
 }: {
   q: BuilderQuestion;
   qIndex: number;
   previewDevice: 'desktop' | 'mobile';
   theme?: TestThemeConfig | null;
+  previewScale: number;
 }) {
   const slideSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const frameSize = BUILDER_PREVIEW_FRAME_SIZE[previewDevice];
@@ -2362,7 +2408,7 @@ function PreviewCanvas({
     const overflowing = frame.scrollHeight > frame.clientHeight + 1;
     setPreviewOverflowing(overflowing);
     frame.scrollTop = 0;
-  }, [previewDevice, q.clientId, q.prompt, description, media?.url, q.options]);
+  }, [previewDevice, previewScale, q.clientId, q.prompt, description, media?.url, q.options]);
 
   const previewCardClassName = [
     'tb-preview-card',
@@ -2378,10 +2424,13 @@ function PreviewCanvas({
       className="tb-preview-wrap"
       style={{
         ...previewWrap,
-        width: frameSize.width,
+        width: frameSize.width * previewScale,
         maxWidth: 'none',
-        height: slideSize.height,
-        minHeight: slideSize.height,
+        height: slideSize.height * previewScale,
+        minHeight: slideSize.height * previewScale,
+        overflow: 'hidden',
+        display: 'block',
+        padding: 0,
       }}
     >
       <div
@@ -2413,6 +2462,8 @@ function PreviewCanvas({
           padding: previewDevice === 'mobile' ? '30px 26px' : '64px 80px',
           '--qmedia-card-pad-x': previewDevice === 'mobile' ? '26px' : '80px',
           '--qmedia-card-pad-top': previewDevice === 'mobile' ? '30px' : '64px',
+          transform: `scale(${previewScale})`,
+          transformOrigin: 'top left',
         } as React.CSSProperties}
       >
         <ThemeLogo theme={theme} />
