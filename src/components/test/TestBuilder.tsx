@@ -923,7 +923,7 @@ export function TestBuilder({ testId }: Props) {
           className={`tb-canvas tb-canvas--${previewDevice}`}
           style={{
             flex: 1,
-            overflow: 'auto',
+            overflow: 'hidden',
             background: '#fff',
             display: 'flex',
             alignItems: 'safe center',
@@ -2400,6 +2400,7 @@ function PreviewCanvas({
           // flex-start when it would overflow (prevents top-crop in one paint).
           justifyContent: 'safe center',
           overflowY: 'auto',
+          overflowX: 'hidden',
           boxSizing: 'border-box',
           border: '1px solid #ded8d2',
           borderRadius: 7,
