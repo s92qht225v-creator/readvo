@@ -1127,6 +1127,11 @@
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
   width: 100% !important;
   min-height: 37px !important;
   padding: 6px 10px !important;
@@ -1137,7 +1142,24 @@
   color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
   font-size: 18px !important;
   line-height: 24px !important;
+  text-align: left !important;
   box-shadow: none !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger span {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__chevron {
+  width: 16px !important;
+  height: 16px !important;
+  flex: 0 0 16px !important;
+  margin-left: auto !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger:focus-visible {
