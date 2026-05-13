@@ -247,7 +247,12 @@ scrollbar-width: none;
 
 - Desktop no-media match uses two columns side by side.
 - Left and right boxes must have equal height and aligned rows.
-- Mobile match boxes use full answer width.
+- Mobile match grids use the shared mobile/media column width
+  (`--test-mobile-column`, currently `303px`) for the whole two-column
+  grid, not per column and not full card width. This keeps the matching boxes
+  aligned to the media width.
+- Mobile match tile text uses the standard mobile answer typography:
+  `18px` font size and `24px` line height.
 
 ### Dropdown / Number / Short / Long Answer
 

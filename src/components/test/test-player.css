@@ -483,6 +483,35 @@
   white-space: nowrap !important;
 }
 
+@media (max-width: 640px) {
+  .test-player__card--type-match .test-match-list,
+  .test-player__card--type-match .test-match-pairing {
+    box-sizing: border-box !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .test-player__card--type-match .test-match-pairing {
+    gap: 8px !important;
+  }
+
+  .test-player__card--type-match .test-match-choice {
+    min-height: 37px !important;
+    padding: 6px 10px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+}
+
+.test-player__card--force-mobile.test-player__card--type-match .test-match-list,
+.test-player__card--force-mobile.test-player__card--type-match .test-match-pairing {
+  box-sizing: border-box !important;
+  width: var(--test-mobile-column, min(100%, 303px)) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+}
+
 @container (min-width: 480px) {
 
   .test-player__card--no-media.test-player__card--type-opinion-scale:not(.test-player__card--force-mobile) .test-opinion-scale {

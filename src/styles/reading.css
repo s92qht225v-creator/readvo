@@ -14881,6 +14881,26 @@ body {
     border-radius: 1px !important;
   }
 
+  .test-player__card--type-match .test-match-list,
+  .test-player__card--type-match .test-match-pairing {
+    box-sizing: border-box !important;
+    width: var(--test-mobile-column) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .test-player__card--type-match .test-match-pairing {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .test-player__card--type-match .test-match-choice {
+    min-height: 37px !important;
+    padding: 6px 10px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
   .test-ordering-list {
     gap: 7px !important;
   }
