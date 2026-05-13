@@ -15,13 +15,13 @@
 
 @media (max-width: 640px) {
   /* On real mobile (production, not preview shell): make the card chrome
-     invisible and let the question flow naturally from the top with a
-     small inset. No flex-grow centering so short content doesn't get
-     pushed to the middle with big empty bands above / below. The
+     invisible. Use `align-items: safe center` so that short content
+     visually centers in the viewport while long content falls back to
+     flex-start and scrolls normally (no top clipping). The
      .test-preview-shell--mobile rules are more specific and still win
      there, leaving the simulated phone frame untouched. */
   .test-player {
-    align-items: flex-start !important;
+    align-items: safe center !important;
     padding-top: 24px !important;
     padding-bottom: 24px !important;
   }
