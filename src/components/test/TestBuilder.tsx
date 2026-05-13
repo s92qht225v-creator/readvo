@@ -240,7 +240,7 @@ export function TestBuilder({ testId }: Props) {
   const [shareCopied, setShareCopied] = useState(false);
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showTimerModal, setShowTimerModal] = useState(false);
-  const [showThemeModal, setShowThemeModal] = useState(false);
+  const [showFontPanel, setShowFontPanel] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const previewCanvasRef = useRef<HTMLDivElement | null>(null);
   const [previewCanvasSize, setPreviewCanvasSize] = useState({ width: 0, height: 0 });
@@ -877,17 +877,14 @@ export function TestBuilder({ testId }: Props) {
             <button
               type="button"
               className="tb-toolbar__preview-btn"
-              onClick={() => setShowThemeModal(true)}
-              title="Design settings"
+              onClick={() => setShowFontPanel(v => !v)}
+              title="Font"
               style={textToolbarButton}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                <g fill="currentColor">
-                  <path d="M8 4.871a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.346 0M5.654 8.196a1.173 1.173 0 1 1-2.347 0 1.173 1.173 0 0 1 2.347 0M11.91 6.045a1.173 1.173 0 1 1-2.346 0 1.173 1.173 0 0 1 2.347 0" />
-                  <path fillRule="evenodd" clipRule="evenodd" d="M8 1.5a6.5 6.5 0 0 0-.021 13 8 8 0 0 0-.173-.338c-.172-.327-.399-.76-.54-1.203-.17-.532-.26-1.2.056-1.867.237-.502.6-.85 1.05-1.057.428-.196.893-.245 1.32-.238.43.006.878.07 1.296.14q.22.037.427.073c.274.048.534.094.8.13.825.114 1.349.078 1.672-.135.264-.174.613-.628.613-2.005A6.5 6.5 0 0 0 8 1.5M0 8a8 8 0 1 1 16 0c0 1.568-.395 2.67-1.287 3.258-.834.549-1.878.482-2.703.368-.292-.04-.6-.094-.889-.144l-.38-.066a7.5 7.5 0 0 0-1.072-.12c-.313-.004-.526.036-.672.103a.63.63 0 0 0-.319.333c-.088.186-.094.424.017.771.098.308.255.608.429.942l.094.181c.097.188.203.4.277.607.069.193.15.485.089.8a1.1 1.1 0 0 1-.652.805c-.28.127-.609.162-.932.162a8 8 0 0 1-8-8" />
-                </g>
+                <path fill="currentColor" d="M7.27 1.5a.75.75 0 0 1 .691.457L13.182 14.21a.75.75 0 1 1-1.38.583l-1.503-3.557H4.243l-1.503 3.557a.75.75 0 0 1-1.38-.583L6.58 1.957a.75.75 0 0 1 .691-.457m0 2.679L4.876 9.736h5.788z" />
               </svg>
-              Design
+              Font
             </button>
             <button
               type="button"
@@ -1086,10 +1083,10 @@ export function TestBuilder({ testId }: Props) {
         />
       ) : null}
 
-      {activeTopTab === 'create' && showThemeModal ? (
-        <ThemeModal
+      {activeTopTab === 'create' && showFontPanel ? (
+        <FontPickerPanel
           theme={test.theme}
-          onClose={() => setShowThemeModal(false)}
+          onClose={() => setShowFontPanel(false)}
           onSave={(theme) => {
             setTest({ ...test, theme });
             updateTest({ theme });
@@ -1616,6 +1613,172 @@ function TimerSettings({ enabled, seconds, onChange }: {
 }
 
 type ThemeEditorTab = 'font' | 'buttons' | 'background';
+
+const FONT_OPTIONS: Array<{ value: NonNullable<TestThemeConfig['fontFamily']>; label: string }> = [
+  { value: 'system', label: 'System font' },
+  { value: 'inter', label: 'Inter' },
+  { value: 'noto-sans', label: 'Noto Sans' },
+  { value: 'arial', label: 'Arial' },
+  { value: 'verdana', label: 'Verdana' },
+  { value: 'trebuchet', label: 'Trebuchet MS' },
+  { value: 'georgia', label: 'Georgia' },
+  { value: 'garamond', label: 'Garamond' },
+  { value: 'times', label: 'Times New Roman' },
+  { value: 'courier', label: 'Courier New' },
+  { value: 'mono', label: 'Monospace' },
+  { value: 'serif', label: 'Serif' },
+];
+
+function FontPickerPanel({ theme, onClose, onSave }: {
+  theme?: TestThemeConfig | null;
+  onClose: () => void;
+  onSave: (theme: TestThemeConfig) => void;
+}) {
+  const activeTheme = normalizeTestTheme(theme);
+  const [pos, setPos] = useState<{ x: number; y: number }>(() => {
+    if (typeof window === 'undefined') return { x: 200, y: 120 };
+    return { x: Math.max(16, window.innerWidth - 360), y: 80 };
+  });
+  const dragRef = useRef<{ offsetX: number; offsetY: number } | null>(null);
+
+  const onPointerDown: React.PointerEventHandler<HTMLDivElement> = (event) => {
+    if (event.button !== 0) return;
+    const target = event.currentTarget;
+    target.setPointerCapture(event.pointerId);
+    dragRef.current = {
+      offsetX: event.clientX - pos.x,
+      offsetY: event.clientY - pos.y,
+    };
+  };
+  const onPointerMove: React.PointerEventHandler<HTMLDivElement> = (event) => {
+    const drag = dragRef.current;
+    if (!drag) return;
+    setPos({
+      x: Math.max(0, Math.min(window.innerWidth - 320, event.clientX - drag.offsetX)),
+      y: Math.max(0, Math.min(window.innerHeight - 60, event.clientY - drag.offsetY)),
+    });
+  };
+  const onPointerUp: React.PointerEventHandler<HTMLDivElement> = (event) => {
+    event.currentTarget.releasePointerCapture(event.pointerId);
+    dragRef.current = null;
+  };
+
+  return (
+    <div
+      role="dialog"
+      aria-label="Font"
+      style={{
+        position: 'fixed',
+        top: pos.y,
+        left: pos.x,
+        zIndex: 220,
+        width: 320,
+        background: '#fff',
+        borderRadius: 12,
+        border: '1px solid #e4ded8',
+        boxShadow: '0 16px 40px rgba(47, 40, 53, 0.18)',
+        overflow: 'hidden',
+        userSelect: 'none',
+      }}
+    >
+      <div
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '10px 14px',
+          background: '#f6f4f1',
+          borderBottom: '1px solid #ece7e1',
+          cursor: 'grab',
+          touchAction: 'none',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#3f3645', fontWeight: 700, fontSize: 14 }}>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <span aria-hidden="true" style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(2, 3px)', gap: 2 }}>
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            </span>
+            Font
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          style={{
+            border: 'none',
+            background: 'transparent',
+            color: '#6a606e',
+            fontSize: 18,
+            fontWeight: 600,
+            cursor: 'pointer',
+            padding: 2,
+            lineHeight: 1,
+          }}
+        >
+          ×
+        </button>
+      </div>
+      <div role="listbox" aria-label="Font family" style={{ maxHeight: 340, overflowY: 'auto', padding: 6 }}>
+        {FONT_OPTIONS.map(opt => {
+          const isActive = activeTheme.fontFamily === opt.value;
+          return (
+            <button
+              key={opt.value}
+              type="button"
+              role="option"
+              aria-selected={isActive}
+              onClick={() => onSave({ ...activeTheme, fontFamily: opt.value })}
+              style={{
+                width: '100%',
+                textAlign: 'left',
+                border: 'none',
+                background: isActive ? '#eeecef' : 'transparent',
+                color: '#2f2533',
+                padding: '10px 12px',
+                fontSize: 15,
+                borderRadius: 6,
+                cursor: 'pointer',
+                fontFamily: FONT_PREVIEW_STACK[opt.value] ?? 'inherit',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 12,
+              }}
+            >
+              <span>{opt.label}</span>
+              {isActive ? <span aria-hidden="true" style={{ color: '#5b3db2' }}>✓</span> : null}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+const FONT_PREVIEW_STACK: Record<NonNullable<TestThemeConfig['fontFamily']>, string> = {
+  system: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  inter: 'Inter, system-ui, sans-serif',
+  'noto-sans': '"Noto Sans", system-ui, sans-serif',
+  arial: 'Arial, Helvetica, sans-serif',
+  verdana: 'Verdana, Geneva, sans-serif',
+  trebuchet: '"Trebuchet MS", Arial, sans-serif',
+  georgia: 'Georgia, "Times New Roman", serif',
+  garamond: 'Garamond, "Times New Roman", serif',
+  times: '"Times New Roman", Times, serif',
+  courier: '"Courier New", Courier, monospace',
+  mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+  serif: 'Georgia, "Times New Roman", serif',
+};
 
 function ThemeModal({ theme, onClose, onSave }: {
   theme?: TestThemeConfig | null;
