@@ -14895,6 +14895,19 @@ body {
     margin-inline: auto !important;
   }
 
+  /* High-specificity override so the @container (min-width: 480px) rule for
+     qmedia-desktop-* layouts cannot widen the match list beyond the mobile
+     column on phones whose card width crosses 480 CSS px. */
+  html body .test-player .test-player__card.test-player__card--type-match .test-match-list,
+  html body .test-player .test-player__card.test-player__card--type-match .test-match-pairing,
+  html body .test-player .test-player__card.test-player__card--type-match .qmedia-answer,
+  html body .test-player .test-player__card.test-player__card--type-match .qmedia-header {
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+  }
+
   .test-player__card--type-match .test-match-pairing {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: 8px !important;
