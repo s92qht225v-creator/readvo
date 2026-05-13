@@ -12,22 +12,18 @@ export type TestFontFamily =
   | 'courier'
   | 'mono'
   | 'serif';
-export type TestAlign = 'left' | 'center' | 'right';
 export type TestCornerRadius = 'sharp' | 'soft' | 'round';
 
 export interface TestThemeConfig {
   themeName?: string;
   backgroundColor?: string;
   questionColor?: string;
+  descriptionColor?: string;
   answerColor?: string;
   buttonColor?: string;
   buttonTextColor?: string;
   fontScale?: TestFontScale;
   fontFamily?: TestFontFamily;
-  titleSize?: TestFontScale;
-  titleAlign?: TestAlign;
-  questionSize?: TestFontScale;
-  questionAlign?: TestAlign;
   answerRadius?: TestCornerRadius;
   backgroundImageUrl?: string;
 }
@@ -36,15 +32,12 @@ export const DEFAULT_TEST_THEME: Required<TestThemeConfig> = {
   themeName: 'My new theme',
   backgroundColor: '#ffffff',
   questionColor: '#000000',
+  descriptionColor: '#8b848f',
   answerColor: '#0445af',
   buttonColor: '#2f2533',
   buttonTextColor: '#ffffff',
   fontScale: 'medium',
   fontFamily: 'system',
-  titleSize: 'medium',
-  titleAlign: 'left',
-  questionSize: 'medium',
-  questionAlign: 'left',
   answerRadius: 'sharp',
   backgroundImageUrl: '',
 };
@@ -98,12 +91,6 @@ function cleanFontFamily(value: unknown): TestFontFamily {
     : DEFAULT_TEST_THEME.fontFamily;
 }
 
-function cleanAlign(value: unknown): TestAlign {
-  return value === 'center' || value === 'right' || value === 'left'
-    ? value
-    : 'left';
-}
-
 function cleanRadius(value: unknown): TestCornerRadius {
   return value === 'soft' || value === 'round' || value === 'sharp'
     ? value
@@ -120,15 +107,12 @@ export function normalizeTestTheme(input: unknown): Required<TestThemeConfig> {
     backgroundColor: cleanHex(raw.backgroundColor, DEFAULT_TEST_THEME.backgroundColor),
     themeName: cleanString(raw.themeName) || DEFAULT_TEST_THEME.themeName,
     questionColor: cleanHex(raw.questionColor, DEFAULT_TEST_THEME.questionColor),
+    descriptionColor: cleanHex(raw.descriptionColor, DEFAULT_TEST_THEME.descriptionColor),
     answerColor: cleanHex(raw.answerColor, DEFAULT_TEST_THEME.answerColor),
     buttonColor: cleanHex(raw.buttonColor, DEFAULT_TEST_THEME.buttonColor),
     buttonTextColor: cleanHex(raw.buttonTextColor, DEFAULT_TEST_THEME.buttonTextColor),
     fontScale: cleanFontScale(raw.fontScale),
     fontFamily: cleanFontFamily(raw.fontFamily),
-    titleSize: cleanFontScale(raw.titleSize),
-    titleAlign: cleanAlign(raw.titleAlign),
-    questionSize: cleanFontScale(raw.questionSize),
-    questionAlign: cleanAlign(raw.questionAlign),
     answerRadius: cleanRadius(raw.answerRadius),
     backgroundImageUrl: cleanString(raw.backgroundImageUrl),
   };
@@ -139,14 +123,11 @@ export function testThemeCssVars(input: unknown): Record<string, string> {
   return {
     '--test-theme-bg': theme.backgroundColor,
     '--test-theme-question': theme.questionColor,
+    '--test-theme-description': theme.descriptionColor,
     '--test-theme-answer': theme.answerColor,
     '--test-theme-button': theme.buttonColor,
     '--test-theme-button-text': theme.buttonTextColor,
     '--test-theme-font-scale': FONT_SCALE[theme.fontScale],
-    '--test-theme-question-scale': FONT_SCALE[theme.questionSize],
-    '--test-theme-title-scale': FONT_SCALE[theme.titleSize],
-    '--test-theme-question-align': theme.questionAlign,
-    '--test-theme-title-align': theme.titleAlign,
     '--test-theme-font-family': FONT_FAMILY[theme.fontFamily],
     '--test-theme-answer-radius': ANSWER_RADIUS[theme.answerRadius],
     '--test-theme-bg-image': theme.backgroundImageUrl ? `url("${theme.backgroundImageUrl}")` : 'none',

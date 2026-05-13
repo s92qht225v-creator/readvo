@@ -216,15 +216,12 @@ export interface TestThemeConfig {
   themeName?: string;
   backgroundColor?: string;
   questionColor?: string;
+  descriptionColor?: string;
   answerColor?: string;
   buttonColor?: string;
   buttonTextColor?: string;
   fontScale?: 'small' | 'medium' | 'large';
   fontFamily?: 'system' | 'inter' | 'noto-sans' | 'arial' | 'verdana' | 'trebuchet' | 'georgia' | 'garamond' | 'times' | 'courier' | 'mono' | 'serif';
-  titleSize?: 'small' | 'medium' | 'large';
-  titleAlign?: 'left' | 'center' | 'right';
-  questionSize?: 'small' | 'medium' | 'large';
-  questionAlign?: 'left' | 'center' | 'right';
   answerRadius?: 'sharp' | 'soft' | 'round';
   backgroundImageUrl?: string;
 }

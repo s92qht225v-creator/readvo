@@ -1022,18 +1022,17 @@ const cardSlideVariants: Variants = {
 };
 
 const questionTitle: React.CSSProperties = {
-  fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))',
+  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))',
   fontWeight: 400,
   margin: '0 0 12px',
   lineHeight: 1.15,
   color: 'var(--test-theme-question, #1c1626)',
-  textAlign: 'var(--test-theme-question-align, left)' as React.CSSProperties['textAlign'],
   letterSpacing: -0.6,
 };
 
 const questionDescription: React.CSSProperties = {
   margin: '0 0 28px',
-  color: '#8b848f',
+  color: 'var(--test-theme-description, #8b848f)',
   fontSize: 16,
   lineHeight: 1.5,
 };

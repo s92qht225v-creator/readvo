@@ -1928,25 +1928,8 @@ function ThemeFontPanel({ theme, onChange }: {
       </div>
       <div style={designPanelGroup}>
         <div style={designPanelLabel}>Color</div>
-        <ThemeColorRow label="Titles and questions" value={theme.questionColor} onChange={(color) => onChange({ questionColor: color })} />
-      </div>
-      <div style={designDivider} />
-      <div style={designPanelGroup}>
-        <div style={designPanelLabel}>Size and positioning</div>
-        <ThemeSizeAlignRow
-          label="Welcome screen and endings"
-          size={theme.titleSize}
-          align={theme.titleAlign}
-          onSize={(titleSize) => onChange({ titleSize })}
-          onAlign={(titleAlign) => onChange({ titleAlign })}
-        />
-        <ThemeSizeAlignRow
-          label="Questions"
-          size={theme.questionSize}
-          align={theme.questionAlign}
-          onSize={(questionSize) => onChange({ questionSize })}
-          onAlign={(questionAlign) => onChange({ questionAlign })}
-        />
+        <ThemeColorRow label="Question" value={theme.questionColor} onChange={(color) => onChange({ questionColor: color })} />
+        <ThemeColorRow label="Description" value={theme.descriptionColor} onChange={(color) => onChange({ descriptionColor: color })} />
       </div>
     </div>
   );
@@ -2036,36 +2019,6 @@ function ThemeColorRow({ label, value, onChange }: {
   );
 }
 
-function ThemeSizeAlignRow({ label, size, align, onSize, onAlign }: {
-  label: string;
-  size: NonNullable<TestThemeConfig['fontScale']>;
-  align: NonNullable<TestThemeConfig['titleAlign']>;
-  onSize: (size: NonNullable<TestThemeConfig['fontScale']>) => void;
-  onAlign: (align: NonNullable<TestThemeConfig['titleAlign']>) => void;
-}) {
-  return (
-    <div style={designSizeAlignRow}>
-      <span>{label}</span>
-      <div style={designSizeAlignControls}>
-        <span style={designSegmentControl}>
-          {(['small', 'medium', 'large'] as const).map(nextSize => (
-            <button key={nextSize} type="button" style={{ ...designSegmentButton, ...(size === nextSize ? designSegmentButtonActive : null) }} onClick={() => onSize(nextSize)}>
-              {nextSize === 'small' ? 'Sm' : nextSize === 'medium' ? 'Md' : 'Lg'}
-            </button>
-          ))}
-        </span>
-        <span style={designSegmentControl}>
-          {(['left', 'center'] as const).map(nextAlign => (
-            <button key={nextAlign} type="button" style={{ ...designSegmentButton, ...(align === nextAlign ? designSegmentButtonActive : null) }} onClick={() => onAlign(nextAlign)} aria-label={`Align ${label} ${nextAlign}`}>
-              <TextAlignIcon align={nextAlign} />
-            </button>
-          ))}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 function AlarmClockIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -2094,20 +2047,6 @@ function DropletIcon() {
         <path d="M12 10c0-3.74-4.18-7.439-6-10-1.82 2.561-6 6.26-6 10a6 6 0 1 0 12 0z" />
         <path d="M5.59 2.133c-.022.026-1.089 1.288-1.403 1.669C2.026 6.422 1 8.266 1 10a5 5 0 0 0 10 0c0-1.734-1.026-3.578-3.187-6.198-.314-.381-1.38-1.643-1.402-1.669A50.34 50.34 0 0 1 6 1.637a50.34 50.34 0 0 1-.41.496zM12 10a6 6 0 1 1-12 0C0 6.26 4.18 2.561 6 0c1.82 2.561 6 6.26 6 10z" fill="rgba(47,37,51,0.72)" />
       </g>
-    </svg>
-  );
-}
-
-function TextAlignIcon({ align }: { align: 'left' | 'center' | 'right' }) {
-  const path = align === 'left'
-    ? 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 1 7.75m0 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75'
-    : align === 'center'
-      ? 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m3 5A.75.75 0 0 1 4.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 4 7.75m-3 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75'
-      : 'M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m6 5A.75.75 0 0 1 7.75 7h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 7 7.75m-6 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75';
-
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-      <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d={path} />
     </svg>
   );
 }
@@ -2414,9 +2353,8 @@ function PreviewCanvas({
             header={(
               <>
                 <h2 className="tb-preview-title" style={{
-                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1) * var(--test-theme-question-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
+                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
-                  textAlign: 'var(--test-theme-question-align, left)' as React.CSSProperties['textAlign'],
                 }}>
                   {q.prompt || 'Your question…'}
                 </h2>
@@ -3084,18 +3022,6 @@ const designColorInput: React.CSSProperties = {
   cursor: 'pointer',
 };
 
-const designSizeAlignRow: React.CSSProperties = {
-  display: 'grid',
-  gap: 8,
-  color: '#6a606e',
-  fontSize: 15,
-};
-
-const designSizeAlignControls: React.CSSProperties = {
-  display: 'flex',
-  gap: 16,
-};
-
 const designBackgroundPreviewRow: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
@@ -3739,7 +3665,7 @@ const requiredChip: React.CSSProperties = {
 
 const previewHint: React.CSSProperties = {
   fontSize: 15,
-  color: '#9b929d',
+  color: 'var(--test-theme-description, #9b929d)',
   fontStyle: 'italic',
   marginBottom: 32,
   fontWeight: 500,
