@@ -1,33 +1,29 @@
 import type { QuestionMedia } from '@/lib/test/types';
+import { normalizeQuestionMedia, normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import type { BuilderQuestion } from '../builderTypes';
 
 type DesktopMediaLayout = NonNullable<QuestionMedia['layoutDesktop']>;
 
 export function getQuestionMedia(q: BuilderQuestion): QuestionMedia | undefined {
   const media = (q.options as { media?: unknown }).media as QuestionMedia | undefined;
-  return media?.url ? media : undefined;
+  return normalizeQuestionMedia(media, q.type);
 }
 
 export function setQuestionMedia(q: BuilderQuestion, media: QuestionMedia | undefined): BuilderQuestion {
-  const options = { ...(q.options as Record<string, unknown>) };
-  if (media?.url?.trim()) {
-    if (media.type === 'audio') {
-      options.media = {
-        type: media.type,
-        url: media.url.trim(),
-        alt: media.alt,
-        provider: media.provider,
-      };
+  const options = normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>);
+  const normalizedMedia = normalizeQuestionMedia(media, q.type);
+  if (normalizedMedia) {
+    if (normalizedMedia.type === 'audio') {
+      options.media = normalizedMedia;
       return { ...q, options: options as BuilderQuestion['options'] };
     }
-    const layoutMobile = media.layoutMobile === 'wallpaper'
+    const layoutMobile = normalizedMedia.layoutMobile === 'wallpaper'
       ? 'stack'
-      : media.layoutMobile ?? 'stack';
+      : normalizedMedia.layoutMobile ?? 'stack';
     options.media = {
-      ...media,
-      url: media.url.trim(),
+      ...normalizedMedia,
       layoutMobile,
-      layoutDesktop: normalizeDesktopLayout(media.layoutDesktop),
+      layoutDesktop: normalizeDesktopLayout(normalizedMedia.layoutDesktop),
     };
   } else {
     delete options.media;

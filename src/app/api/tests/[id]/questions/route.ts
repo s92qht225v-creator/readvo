@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
+import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import type { QuestionType } from '@/lib/test/types';
 
 interface IncomingQuestion {
@@ -74,7 +75,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       position: i,
       type: q.type,
       prompt,
-      options: q.options ?? {},
+      options: normalizeQuestionOptionsMedia(q.type, q.options ?? {}),
       required: q.required ?? true,
     };
   });

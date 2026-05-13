@@ -5,6 +5,7 @@ import type {
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
 } from './types';
+import { normalizeQuestionMedia } from './media';
 
 export function publicOptionId(questionId: string, kind: 'choice' | 'match-right' | 'ordering', index: number): string {
   return `opt_${stableHash(`${kind}:${questionId}:${index}`)}`;
@@ -36,18 +37,14 @@ function questionDescription(options: unknown): string | undefined {
   return typeof description === 'string' && description.trim() ? description : undefined;
 }
 
-function questionMedia(options: unknown): PublicQuestion['media'] {
-  const media = (options as { media?: unknown } | null)?.media as PublicQuestion['media'] | undefined;
-  if (!media || typeof media.url !== 'string' || !media.url.trim()) return undefined;
-  if (media.type !== 'image' && media.type !== 'gif' && media.type !== 'video' && media.type !== 'audio') return undefined;
-  if (media.type === 'audio') {
-    return {
-      type: media.type,
-      url: media.url,
-      alt: typeof media.alt === 'string' ? media.alt : undefined,
-      provider: media.provider,
-    };
-  }
+function questionMedia(q: TestQuestion): PublicQuestion['media'] {
+  const media = normalizeQuestionMedia((q.options as { media?: unknown } | null)?.media, q.type);
+  if (!media) return undefined;
+  if (media.type === 'audio') return media;
+  return normalizeVisualMedia(media);
+}
+
+function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): PublicQuestion['media'] {
   const layoutDesktop = media.layoutDesktop === 'split-right'
     ? 'float-right'
     : media.layoutDesktop === 'split-left'
@@ -89,7 +86,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'multiple_choice',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
@@ -105,7 +102,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'short_text',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         minLength: opts.minLength,
@@ -121,7 +118,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'long_answer',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         minLength: opts.minLength,
@@ -137,7 +134,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'number',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         min: opts.min,
@@ -157,7 +154,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'dropdown',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
@@ -176,7 +173,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'checkbox',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
@@ -191,7 +188,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'opinion_scale',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         min: Number.isFinite(opts.min) ? opts.min : 0,
@@ -209,7 +206,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'rating',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         max: Number.isFinite(opts.max) ? opts.max : 5,
@@ -230,7 +227,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'picture_choice',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
@@ -245,7 +242,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'true_false',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {},
     };
@@ -259,7 +256,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'match',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         left: pairs.map((p, i) => ({
@@ -285,7 +282,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'ordering',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         items: stableShuffle(
@@ -306,7 +303,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       type: 'fill_blanks',
       prompt: q.prompt,
       description: questionDescription(q.options),
-      media: questionMedia(q.options),
+      media: questionMedia(q),
       required: q.required,
       options: {
         template: opts.template ?? '',

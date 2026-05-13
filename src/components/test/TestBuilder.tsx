@@ -31,6 +31,7 @@ import { AnswerKeyModal } from './AnswerKeyModal';
 import type { BuilderQuestion } from './builderTypes';
 import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
+import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -284,7 +285,7 @@ export function TestBuilder({ testId }: Props) {
       clientId: q.id,
       type: q.type,
       prompt: q.prompt,
-      options: q.options,
+      options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
       required: q.required,
     }));
     setQuestions(builderQs);
@@ -409,7 +410,7 @@ export function TestBuilder({ testId }: Props) {
           id: q.clientId,
           type: q.type,
           prompt: q.prompt,
-          options: q.options,
+          options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>),
           required: q.required,
         })),
       };
@@ -433,7 +434,7 @@ export function TestBuilder({ testId }: Props) {
         clientId: q.id,
         type: q.type,
         prompt: q.prompt,
-        options: q.options,
+        options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
         required: q.required,
       }));
       if (JSON.stringify(questionsRef.current) === sourceSnapshot) {

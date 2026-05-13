@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
+import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { generateUniqueSlug } from '@/lib/test/slug';
+import type { QuestionType } from '@/lib/test/types';
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const userId = await getRequestUserId(req);
@@ -60,7 +62,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         position: q.position,
         type: q.type,
         prompt: q.prompt,
-        options: q.options,
+        options: normalizeQuestionOptionsMedia(q.type as QuestionType, q.options ?? {}),
         required: q.required,
       })));
 
