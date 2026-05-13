@@ -15,21 +15,23 @@
 
 @media (max-width: 640px) {
   /* On real mobile (production, not preview shell): make the card chrome
-     invisible and let the card area expand to fill the viewport so its
-     content can sit visually centered. Preview shell mobile rules
-     (.test-preview-shell--mobile .test-player__card) are more specific
-     and still win there. */
+     invisible and let the question flow naturally from the top with a
+     small inset. No flex-grow centering so short content doesn't get
+     pushed to the middle with big empty bands above / below. The
+     .test-preview-shell--mobile rules are more specific and still win
+     there, leaving the simulated phone frame untouched. */
+  .test-player {
+    align-items: flex-start !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
   .test-player__inner {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: calc(100vh - 72px) !important;
+    display: block !important;
   }
 
   .test-player__card {
-    flex: 1 1 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+    display: block !important;
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
