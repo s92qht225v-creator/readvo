@@ -13999,7 +13999,7 @@ body {
   border: 1px solid #e4ded8 !important;
   border-radius: 7px !important;
   background: #fff !important;
-  box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
+  box-shadow: none !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
@@ -14042,8 +14042,8 @@ body {
 .test-preview-shell--mobile .test-player-screen {
   min-height: 100svh !important;
   align-items: center !important;
-  justify-content: center !important;
-  padding: 44px 0 calc(132px + env(safe-area-inset-bottom, 0px)) !important;
+  justify-content: flex-start !important;
+  padding: 93px 0 calc(132px + env(safe-area-inset-bottom, 0px)) !important;
   background: #fff !important;
   overflow-y: auto !important;
 }
@@ -14075,7 +14075,7 @@ body {
   -ms-overflow-style: none !important;
   border-radius: 7px !important;
   padding: 30px 26px 152px !important;
-  box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
+  box-shadow: none !important;
   background: #fff !important;
   display: flex !important;
   flex-direction: column !important;
