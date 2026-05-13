@@ -10,6 +10,7 @@ import {
   useSensor,
   useSensors,
   type DragEndEvent,
+  type Modifier,
 } from '@dnd-kit/core';
 import {
   arrayMove,
@@ -52,7 +53,7 @@ export function OrderingPlayer({ items, value, onChange }: {
 
   return (
     <div className="test-ordering-list" style={{ display: 'grid', gap: 8 }}>
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} modifiers={[restrictToVerticalAxis]}>
         <SortableContext items={order} strategy={verticalListSortingStrategy}>
           <div style={{ display: 'grid', gap: 8 }}>
             {order.map((itemId, i) => (
@@ -136,3 +137,10 @@ const orderingHint: CSSProperties = {
   fontSize: 13,
   marginTop: 2,
 };
+
+/** Constrain drag motion to the vertical axis so items can't be flung
+ *  horizontally off the page (especially noticeable on mobile). */
+const restrictToVerticalAxis: Modifier = ({ transform }) => ({
+  ...transform,
+  x: 0,
+});
