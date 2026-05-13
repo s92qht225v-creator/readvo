@@ -38,6 +38,43 @@
     box-shadow: none !important;
     padding: 0 !important;
   }
+
+  /* Constrain the match list to the same 303px column the media uses
+     so the option boxes align with the image above. */
+  .test-player__card .test-match-list {
+    box-sizing: border-box !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  /* Unify mobile typography so the title, description and answer text
+     read at consistent sizes. */
+  .test-player__card .test-player__title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+
+  .test-player__card .test-player__description {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  .test-player__card .test-question-option,
+  .test-player__card .test-picture-option,
+  .test-player__card .test-ordering-row,
+  .test-player__card .test-match-row,
+  .test-player__card .test-match-choice,
+  .test-player__card .test-match-select,
+  .test-player__card .test-dropdown-answer,
+  .test-player__card .test-number-answer,
+  .test-player__card .test-short-answer,
+  .test-player__card .test-long-answer,
+  .test-player__card .test-fill-blank-input,
+  .test-player__card .test-fill-blanks,
+  .test-player__card .test-opinion-scale button {
+    font-size: 15px !important;
+  }
 }
 
 @media (min-width: 641px) {
