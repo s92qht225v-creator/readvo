@@ -1930,8 +1930,6 @@ function ThemeFontPanel({ theme, onChange }: {
         <div style={designPanelLabel}>Color</div>
         <ThemeColorRow label="Question" value={theme.questionColor} onChange={(color) => onChange({ questionColor: color })} />
         <ThemeColorRow label="Description" value={theme.descriptionColor} onChange={(color) => onChange({ descriptionColor: color })} />
-        <ThemeColorRow label="Answer text" value={theme.answerTextColor} onChange={(color) => onChange({ answerTextColor: color })} />
-        <ThemeColorRow label="Answer accent" value={theme.answerColor} onChange={(color) => onChange({ answerColor: color })} />
       </div>
     </div>
   );
