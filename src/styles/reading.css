@@ -14087,16 +14087,6 @@ body {
   display: none !important;
 }
 
-.test-preview-shell--mobile .test-player__chrome {
-  top: calc(env(safe-area-inset-top, 0px) + 30px) !important;
-  left: 28px !important;
-  right: 28px !important;
-}
-
-.test-preview-shell--mobile .test-player__card--has-chrome {
-  padding-top: 142px !important;
-}
-
 .test-preview-shell--mobile .test-player__title {
   width: 303px !important;
   max-width: 100% !important;

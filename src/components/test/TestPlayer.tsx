@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
-import { ThemeLogo } from './ThemeLogo';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
@@ -175,8 +174,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
     : null;
   const normalizedTheme = useMemo(() => normalizeTestTheme(test.theme), [test.theme]);
   const themeVars = useMemo(() => testThemeCssVars(test.theme), [test.theme]);
-  const hasChrome = Boolean(normalizedTheme.logoUrl);
-  const hasLogoChrome = Boolean(normalizedTheme.logoUrl);
 
   const canAdvance = useMemo(() => {
     if (!q) return false;
@@ -525,19 +522,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
       />
-      {hasChrome ? (
-        <div
-          className={`test-player__chrome test-player__chrome--logo-${normalizedTheme.logoAlign}`}
-          style={chromeLayer}
-          aria-hidden={false}
-        >
-          <ThemeLogo
-            theme={normalizedTheme}
-            className="test-player__chrome-logo"
-            style={chromeLogo(normalizedTheme.logoAlign)}
-          />
-        </div>
-      ) : null}
       <AnimatePresence mode="wait" custom={navDirection} initial={false}>
       <motion.div
         ref={cardRef}
@@ -547,7 +531,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
         initial="enter"
         animate="center"
         exit="exit"
-        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${hasLogoChrome ? 'test-player__card--has-chrome' : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
+        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
           <QuestionMediaLayout
@@ -1017,28 +1001,6 @@ const requiredPill: React.CSSProperties = {
   color: '#6b4fbb',
   padding: '5px 9px',
 };
-
-const chromeLayer: React.CSSProperties = {
-  position: 'absolute',
-  top: 'calc(env(safe-area-inset-top, 0px) + 28px)',
-  left: 28,
-  right: 28,
-  height: 96,
-  zIndex: 20,
-  pointerEvents: 'none',
-};
-
-const chromeLogo = (align: 'left' | 'center' | 'right'): React.CSSProperties => ({
-  position: 'absolute',
-  top: -6,
-  left: align === 'left' ? 0 : align === 'center' ? '50%' : 'auto',
-  right: align === 'right' ? 0 : 'auto',
-  transform: align === 'center' ? 'translateX(-50%)' : 'none',
-  width: 'auto',
-  marginBottom: 0,
-  display: 'block',
-  pointerEvents: 'none',
-});
 
 // Typeform-style page transition: forward slides up, backward slides down.
 // `custom` is the direction (1 = next, -1 = prev) injected from AnimatePresence.

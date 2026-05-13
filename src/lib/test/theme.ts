@@ -14,7 +14,6 @@ export type TestFontFamily =
   | 'serif';
 export type TestAlign = 'left' | 'center' | 'right';
 export type TestCornerRadius = 'sharp' | 'soft' | 'round';
-export type TestLogoSize = 'small' | 'medium' | 'large';
 
 export interface TestThemeConfig {
   themeName?: string;
@@ -30,10 +29,6 @@ export interface TestThemeConfig {
   questionSize?: TestFontScale;
   questionAlign?: TestAlign;
   answerRadius?: TestCornerRadius;
-  logoUrl?: string;
-  logoAlt?: string;
-  logoSize?: TestLogoSize;
-  logoAlign?: TestAlign;
   backgroundImageUrl?: string;
 }
 
@@ -51,10 +46,6 @@ export const DEFAULT_TEST_THEME: Required<TestThemeConfig> = {
   questionSize: 'medium',
   questionAlign: 'left',
   answerRadius: 'sharp',
-  logoUrl: '',
-  logoAlt: '',
-  logoSize: 'small',
-  logoAlign: 'left',
   backgroundImageUrl: '',
 };
 
@@ -139,12 +130,6 @@ export function normalizeTestTheme(input: unknown): Required<TestThemeConfig> {
     questionSize: cleanFontScale(raw.questionSize),
     questionAlign: cleanAlign(raw.questionAlign),
     answerRadius: cleanRadius(raw.answerRadius),
-    logoUrl: cleanString(raw.logoUrl),
-    logoAlt: cleanString(raw.logoAlt),
-    logoSize: raw.logoSize === 'medium' || raw.logoSize === 'large' || raw.logoSize === 'small'
-      ? raw.logoSize
-      : DEFAULT_TEST_THEME.logoSize,
-    logoAlign: cleanAlign(raw.logoAlign),
     backgroundImageUrl: cleanString(raw.backgroundImageUrl),
   };
 }

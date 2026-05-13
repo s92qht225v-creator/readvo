@@ -226,10 +226,6 @@ export interface TestThemeConfig {
   questionSize?: 'small' | 'medium' | 'large';
   questionAlign?: 'left' | 'center' | 'right';
   answerRadius?: 'sharp' | 'soft' | 'round';
-  logoUrl?: string;
-  logoAlt?: string;
-  logoSize?: 'small' | 'medium' | 'large';
-  logoAlign?: 'left' | 'center' | 'right';
   backgroundImageUrl?: string;
 }
 

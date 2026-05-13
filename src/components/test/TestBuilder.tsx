@@ -22,7 +22,6 @@ import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useAuth } from '@/hooks/useAuth';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
-import { ThemeLogo } from './ThemeLogo';
 import { SettingsPanel } from './SettingsPanel';
 import { PaywallNotice } from './PaywallNotice';
 import { TestLink } from './TestLink';
@@ -1616,8 +1615,7 @@ function TimerSettings({ enabled, seconds, onChange }: {
   );
 }
 
-type ThemeEditorTab = 'logo' | 'font' | 'buttons' | 'background';
-type ThemeUploadTarget = 'logo' | 'background';
+type ThemeEditorTab = 'font' | 'buttons' | 'background';
 
 function ThemeModal({ theme, onClose, onSave }: {
   theme?: TestThemeConfig | null;
@@ -1626,13 +1624,12 @@ function ThemeModal({ theme, onClose, onSave }: {
 }) {
   const [view, setView] = useState<'themes' | 'theme-editor' | 'upload'>('themes');
   const [themeListTab, setThemeListTab] = useState<'my-themes' | 'gallery'>('my-themes');
-  const [activeTab, setActiveTab] = useState<ThemeEditorTab>('logo');
+  const [activeTab, setActiveTab] = useState<ThemeEditorTab>('font');
   const [uploadTab, setUploadTab] = useState<'upload' | 'gallery'>('upload');
-  const [uploadTarget, setUploadTarget] = useState<ThemeUploadTarget>('logo');
   const [draft, setDraft] = useState<TestThemeConfig>(() => normalizeTestTheme(theme));
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const [themeMenuPosition, setThemeMenuPosition] = useState({ top: 0, left: 0 });
-  const logoInputId = useId();
+  const uploadInputId = useId();
   const activeTheme = normalizeTestTheme(draft);
   const updateDraft = (patch: TestThemeConfig) => {
     setDraft(current => {
@@ -1674,9 +1671,7 @@ function ThemeModal({ theme, onClose, onSave }: {
     const reader = new FileReader();
     reader.onload = () => {
       if (typeof reader.result === 'string') {
-        updateDraft(uploadTarget === 'logo'
-          ? { logoUrl: reader.result }
-          : { backgroundImageUrl: reader.result });
+        updateDraft({ backgroundImageUrl: reader.result });
         setView('theme-editor');
       }
     };
@@ -1716,7 +1711,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                 {view === 'upload' ? (
                   <>
                     <span style={designBreadcrumbSep}>›</span>
-                    <span>{uploadTarget === 'logo' ? 'Logo' : 'Background image'}</span>
+                    <span>Background image</span>
                   </>
                 ) : null}
               </>
@@ -1753,7 +1748,7 @@ function ThemeModal({ theme, onClose, onSave }: {
             {uploadTab === 'upload' ? (
               <div style={designUploadSection}>
                 <input
-                  id={logoInputId}
+                  id={uploadInputId}
                   type="file"
                   accept="image/png,image/jpeg,image/gif"
                   onChange={(event) => {
@@ -1763,7 +1758,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                   style={{ display: 'none' }}
                 />
                 <label
-                  htmlFor={logoInputId}
+                  htmlFor={uploadInputId}
                   style={designDropZone}
                   onDragOver={(event) => event.preventDefault()}
                   onDrop={handleLogoDrop}
@@ -1785,9 +1780,6 @@ function ThemeModal({ theme, onClose, onSave }: {
           <>
             <div style={designModalBody}>
               <div style={designTabs} role="tablist" aria-label="Theme editor sections">
-                <button type="button" style={{ ...designTab, ...(activeTab === 'logo' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'logo'} onClick={() => setActiveTab('logo')}>
-                  Logo
-                </button>
                 <button type="button" style={{ ...designTab, ...(activeTab === 'font' ? designTabActive : null) }} role="tab" aria-selected={activeTab === 'font'} onClick={() => setActiveTab('font')}>
                   Font
                 </button>
@@ -1798,60 +1790,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                   Background
                 </button>
               </div>
-              {activeTab === 'logo' ? (
-                <div style={designLogoSection}>
-                {activeTheme.logoUrl ? (
-                  <div style={designLogoSettings}>
-                    <div style={designLogoPreviewBox}>
-                      <img src={activeTheme.logoUrl} alt="" style={designLogoPreviewImage} />
-                    </div>
-                    <div style={designLogoActions}>
-                      <button type="button" style={designIconButton} onClick={() => { setUploadTarget('logo'); setUploadTab('upload'); setView('upload'); }} aria-label="Replace logo">
-                        <ImageReplaceIcon />
-                      </button>
-                      <button type="button" style={designIconButton} onClick={() => updateDraft({ logoUrl: '' })} aria-label="Remove logo">
-                        <TrashIcon />
-                      </button>
-                    </div>
-                    <div style={designLogoSettingRow}>
-                      <span>Size</span>
-                      <span style={designSegmentControl}>
-                        {(['small', 'medium', 'large'] as const).map(size => (
-                          <button key={size} type="button" style={{ ...designSegmentButton, ...(activeTheme.logoSize === size ? designSegmentButtonActive : null) }} onClick={() => updateDraft({ logoSize: size })}>
-                            {size === 'small' ? 'Sm' : size === 'medium' ? 'Md' : 'Lg'}
-                          </button>
-                        ))}
-                      </span>
-                    </div>
-                    <div style={designLogoSettingRow}>
-                      <span>Alignment</span>
-                      <span style={designSegmentControl}>
-                        {(['left', 'center', 'right'] as const).map(align => (
-                          <button key={align} type="button" style={{ ...designSegmentButton, ...(activeTheme.logoAlign === align ? designSegmentButtonActive : null) }} aria-label={`Align logo ${align}`} onClick={() => updateDraft({ logoAlign: align })}>
-                            <TextAlignIcon align={align} />
-                          </button>
-                        ))}
-                      </span>
-                    </div>
-                    <label style={designLogoAltLabel}>
-                      Logo alt text
-                      <textarea
-                        value={activeTheme.logoAlt}
-                        maxLength={125}
-                        onChange={(event) => updateDraft({ logoAlt: event.target.value })}
-                        style={designLogoAltInput}
-                      />
-                      <span style={designLogoAltCount}>{activeTheme.logoAlt.length}/125</span>
-                    </label>
-                  </div>
-                ) : (
-                  <button type="button" style={designAddLogoButton} onClick={() => { setUploadTarget('logo'); setUploadTab('upload'); setView('upload'); }}>
-                    <span style={designAddLogoIcon}>+</span>
-                    Add logo
-                  </button>
-                )}
-                </div>
-              ) : activeTab === 'font' ? (
+              {activeTab === 'font' ? (
                 <ThemeFontPanel theme={activeTheme} onChange={updateDraft} />
               ) : activeTab === 'buttons' ? (
                 <ThemeButtonsPanel theme={activeTheme} onChange={updateDraft} />
@@ -1860,7 +1799,6 @@ function ThemeModal({ theme, onClose, onSave }: {
                   theme={activeTheme}
                   onChange={updateDraft}
                   onAddImage={() => {
-                    setUploadTarget('background');
                     setUploadTab('upload');
                     setView('upload');
                   }}
@@ -1909,11 +1847,6 @@ function ThemeModal({ theme, onClose, onSave }: {
                 {hasSavedTheme ? (
                   <div style={designThemeCardWrap}>
                     <button type="button" style={designThemeCard} onClick={() => setView('theme-editor')}>
-                      {activeTheme.logoUrl ? (
-                        <span style={designThemeLogoPreview}>
-                          <img src={activeTheme.logoUrl} alt="" style={designThemeLogoImage} />
-                        </span>
-                      ) : null}
                       <span style={{ color: activeTheme.questionColor, fontSize: 15 }}>Question</span>
                       <span style={{ color: activeTheme.answerColor, fontSize: 15 }}>Answer</span>
                       <span style={{ ...designThemeSwatch, background: activeTheme.buttonColor }} />
@@ -2474,7 +2407,6 @@ function PreviewCanvas({
           transformOrigin: 'top left',
         } as React.CSSProperties}
       >
-        <ThemeLogo theme={theme} />
         <div className="tb-preview-content">
           <QuestionMediaLayout
             media={previewQ.media}
@@ -3010,25 +2942,6 @@ const designThemeCard: React.CSSProperties = {
   cursor: 'pointer',
 };
 
-const designThemeLogoPreview: React.CSSProperties = {
-  width: 58,
-  height: 58,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  overflow: 'hidden',
-  borderRadius: 6,
-  background: '#f6f5f6',
-  border: '1px solid #dedde0',
-  marginBottom: 8,
-};
-
-const designThemeLogoImage: React.CSSProperties = {
-  width: '100%',
-  height: '100%',
-  objectFit: 'contain',
-};
-
 const designThemeSwatch: React.CSSProperties = {
   display: 'block',
   width: 40,
@@ -3078,10 +2991,6 @@ const designThemeMenuItem: React.CSSProperties = {
   textAlign: 'left',
   fontSize: 15,
   cursor: 'pointer',
-};
-
-const designLogoSection: React.CSSProperties = {
-  padding: '18px 22px 16px',
 };
 
 const designPanel: React.CSSProperties = {
@@ -3258,34 +3167,6 @@ const designAddLogoIcon: React.CSSProperties = {
   fontWeight: 300,
 };
 
-const designLogoSettings: React.CSSProperties = {
-  display: 'grid',
-  gap: 18,
-};
-
-const designLogoPreviewBox: React.CSSProperties = {
-  width: 212,
-  height: 60,
-  border: '1px solid #dedde0',
-  borderRadius: 10,
-  background: '#f6f5f6',
-  display: 'flex',
-  alignItems: 'center',
-  padding: 8,
-};
-
-const designLogoPreviewImage: React.CSSProperties = {
-  width: 52,
-  height: 52,
-  objectFit: 'contain',
-};
-
-const designLogoActions: React.CSSProperties = {
-  display: 'flex',
-  gap: 14,
-  marginTop: -4,
-};
-
 const designIconButton: React.CSSProperties = {
   border: 'none',
   background: 'transparent',
@@ -3294,14 +3175,6 @@ const designIconButton: React.CSSProperties = {
   lineHeight: 1,
   cursor: 'pointer',
   padding: 0,
-};
-
-const designLogoSettingRow: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  color: '#6d6470',
-  fontSize: 15,
 };
 
 const designSegmentControl: React.CSSProperties = {
@@ -3331,31 +3204,6 @@ const designSegmentButtonActive: React.CSSProperties = {
   background: '#eeecef',
   borderLeft: 'none',
   color: '#3f3645',
-};
-
-const designLogoAltLabel: React.CSSProperties = {
-  display: 'grid',
-  gap: 8,
-  color: '#2f2533',
-  fontSize: 15,
-};
-
-const designLogoAltInput: React.CSSProperties = {
-  minHeight: 80,
-  border: '1px solid #dedde0',
-  borderRadius: 10,
-  background: '#fff',
-  padding: 10,
-  resize: 'vertical',
-  font: 'inherit',
-  outline: 'none',
-};
-
-const designLogoAltCount: React.CSSProperties = {
-  color: '#8b848f',
-  fontSize: 13,
-  textAlign: 'right',
-  marginTop: -4,
 };
 
 const toolbarTimerActive: React.CSSProperties = {

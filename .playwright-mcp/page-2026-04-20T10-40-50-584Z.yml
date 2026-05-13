@@ -1,0 +1,7 @@
+- generic [ref=e1]:
+  - alert [ref=e2]
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Admin" [level=1] [ref=e5]
+      - textbox "Parol" [active] [ref=e6]
+      - button "Kirish" [disabled] [ref=e7]
