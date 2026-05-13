@@ -623,13 +623,15 @@ export function TestBuilder({ testId }: Props) {
     : activeIdx;
   const activeQuestion = questions[activeQuestionIndex];
   const previewScale = (() => {
-    if (previewDevice !== 'desktop') return 1;
-    const frame = BUILDER_PREVIEW_FRAME_SIZE.desktop;
-    const slide = BUILDER_PREVIEW_SIZE.desktop;
-    const availableWidth = Math.max(0, previewCanvasSize.width - 64);
-    const availableHeight = Math.max(0, previewCanvasSize.height - 56);
+    const frame = BUILDER_PREVIEW_FRAME_SIZE[previewDevice];
+    const slide = BUILDER_PREVIEW_SIZE[previewDevice];
+    const canvasPadX = previewDevice === 'desktop' ? 64 : 16;
+    const canvasPadY = previewDevice === 'desktop' ? 56 : 16;
+    const availableWidth = Math.max(0, previewCanvasSize.width - canvasPadX);
+    const availableHeight = Math.max(0, previewCanvasSize.height - canvasPadY);
     if (!availableWidth || !availableHeight) return 1;
-    return Math.min(1, availableWidth / frame.width, availableHeight / slide.height);
+    const fitScale = Math.min(1, availableWidth / frame.width, availableHeight / slide.height);
+    return previewDevice === 'mobile' ? Math.min(0.86, fitScale) : fitScale;
   })();
 
   return (
@@ -957,13 +959,13 @@ export function TestBuilder({ testId }: Props) {
           className={`tb-canvas tb-canvas--${previewDevice}`}
           style={{
             flex: 1,
-            overflow: 'hidden',
-            background: '#fff',
-            display: 'flex',
-            alignItems: 'safe center',
-            justifyContent: 'safe center',
-            padding: previewDevice === 'desktop' ? '28px 32px' : '8px',
-            boxSizing: 'border-box',
+                overflow: 'hidden',
+                background: '#fff',
+                display: 'flex',
+                alignItems: previewDevice === 'mobile' ? 'flex-start' : 'safe center',
+                justifyContent: 'safe center',
+                padding: previewDevice === 'desktop' ? '28px 32px' : '8px',
+                boxSizing: 'border-box',
           }}
         >
           {activeBlock.kind === 'welcome' ? (

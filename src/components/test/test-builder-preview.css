@@ -1111,17 +1111,42 @@
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown.test-dropdown-answer {
+  display: block !important;
   position: relative !important;
+  box-sizing: border-box !important;
+  width: 303px !important;
+  max-width: 100% !important;
+  height: auto !important;
   overflow: visible !important;
   min-height: 37px !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 3px !important;
   background: transparent !important;
+  box-shadow: none !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger {
+  width: 100% !important;
+  min-height: 37px !important;
+  padding: 6px 10px !important;
+  border: 0 !important;
+  outline: none !important;
   border-radius: 3px !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
   color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  box-shadow: none !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger:focus-visible {
+  outline: none !important;
+  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af) !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__menu {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
 }
