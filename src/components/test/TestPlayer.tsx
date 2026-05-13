@@ -839,7 +839,7 @@ const publicScreenCard: React.CSSProperties = {
   border: '1px solid #e4ded8',
   borderRadius: 7,
   background: '#fff',
-  boxShadow: '0 30px 90px rgba(47,40,53,0.14)',
+  boxShadow: 'none',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
