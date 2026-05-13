@@ -1114,7 +1114,7 @@
   display: block !important;
   position: relative !important;
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
   overflow: visible !important;
@@ -1124,6 +1124,11 @@
   border-radius: 3px !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card.tb-preview-card--mobile-centered .test-custom-dropdown.test-dropdown-answer {
+  width: 303px !important;
+  max-width: 100% !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger {
