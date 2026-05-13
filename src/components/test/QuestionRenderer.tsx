@@ -90,7 +90,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 }}>
                   {selected ? (
                     <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   ) : null}
                 </span>
@@ -245,7 +245,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   <svg width="14" height="14" viewBox="0 0 26 26" fill="none">
                     <path
                       d="M6.5 13.4 10.7 17.6 19.8 8.4"
-                      stroke="currentColor"
+                      stroke="#fff"
                       strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
