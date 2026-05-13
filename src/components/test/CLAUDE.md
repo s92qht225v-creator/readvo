@@ -100,7 +100,7 @@ differently:
 
 | Surface | Where | Sizing | Layout source |
 |---|---|---|---|
-| **Builder PreviewCanvas** | `TestBuilder.tsx:PreviewCanvas` | Fixed pixel frame: 1120×620 desktop, 372×663 mobile. The `.tb-canvas` wrapper centers this frame inside the middle column with safe-center flex alignment and padding. | Class-based via `.tb-preview-card--{desktop,mobile-centered}` in `test-builder-preview.css` |
+| **Builder PreviewCanvas** | `TestBuilder.tsx:PreviewCanvas` | Fixed pixel frame: 1120×620 desktop, 372×663 mobile. The `.tb-canvas` wrapper is `display: flex; align-items: flex-start; justify-content: safe center` and uses `padding: 52px 32px` (desktop) / `52px 8px` (mobile) so the card top sits at the same y (52 px below the toolbar) on both devices. | Class-based via `.tb-preview-card--{desktop,mobile-centered}` in `test-builder-preview.css` |
 | **Live TestPlayer (real users)** | `/test-app/t/[slug]` mounted directly | Card width follows real viewport, max 660px in playerInner | `@container (min-width: 480px)` queries against `.test-player__card` in `test-player.css` |
 | **Preview shell** | Same route with `?preview=1` (or on localhost) | Wraps `<TestPlayer forceDevice={device}>` in `.test-preview-shell--{desktop,mobile}` with fixed simulated frame | `.test-preview-shell--*` overrides in `reading.css` |
 
@@ -131,8 +131,47 @@ will clip the top of overflowing content (and the badge/title get cut off
 above the visible area). Use `safe center` — the keyword falls back to
 `flex-start` when content would overflow. Applies in:
 
-- `TestBuilder.tsx:PreviewCanvas` (`previewCard` inline style)
+- `TestBuilder.tsx:PreviewCanvas` (`previewCard` inline style on the
+  card itself; the `.tb-canvas` parent uses `flex-start` instead — see
+  "Card y-position parity" below)
 - `reading.css` `.test-preview-shell--mobile/desktop .test-player__card`
+
+### Card y-position parity (builder + preview shell)
+
+Both the builder PreviewCanvas and the `?preview=1` shell render
+desktop and mobile cards. The expectation is that toggling device
+shouldn't shift the card vertically; the card top stays anchored at
+the same y.
+
+**Builder canvas (`tb-canvas`)** — both devices use:
+- `display: flex; align-items: flex-start; justify-content: safe center`
+- `padding-top: 52px` (was: desktop `28px` + safe-center slack, mobile
+  `8px` canvas padding + `44px` wrap padding — both produced different
+  vertical centers and a 15 px mismatch)
+- `.tb-canvas--mobile .tb-preview-wrap` padding is **0** (the old
+  `44px 0` wrap chrome was the source of bottom clipping after the
+  card heights were re-unified).
+
+Net: card top lands at y = `toolbar.bottom + 52` on both devices.
+
+**Preview shell (`test-preview-shell--*`)** — the desktop card sits at
+y=93 (test-player-screen padding-top 36 + 57 px toolbar area). The
+mobile card uses `justify-content: flex-start` (not center) with
+`padding: 93px 0 calc(132px + safe-area-inset-bottom)` on
+`.test-player` and `.test-player-screen` so its card lands at the
+same y=93 as desktop.
+
+### No drop shadows on cards
+
+All test-app cards render flat:
+- `.test-preview-shell--desktop .test-player__card` and
+  `.test-preview-shell--mobile .test-player__card`:
+  `box-shadow: none !important` in `reading.css`.
+- `publicScreenCard` inline style in `TestPlayer.tsx` (welcome /
+  end screen card): `boxShadow: 'none'`.
+
+If you need to add elevation, do so per-element (e.g. on a button or
+badge) — do NOT reintroduce shadows on the card chrome itself.
 
 ### `flex-shrink: 0` for content-driven height
 
