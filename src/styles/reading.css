@@ -13755,13 +13755,16 @@ body {
 
 .tb-canvas--mobile .tb-preview-card {
   width: 372px !important;
-  height: 620px !important;
+  height: 663px !important;
   max-width: 100% !important;
-  min-height: 620px !important;
+  min-height: 663px !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  border: 1px solid #e4ded8 !important;
   border-radius: 7px !important;
+  box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
+  background: #fff !important;
   padding: 30px 26px !important;
 }
 
@@ -13988,8 +13991,15 @@ body {
 }
 
 .test-preview-shell--desktop .test-player__card {
+  box-sizing: border-box !important;
+  width: 1120px !important;
+  max-width: 100% !important;
   height: 620px !important;
   min-height: 620px !important;
+  border: 1px solid #e4ded8 !important;
+  border-radius: 7px !important;
+  background: #fff !important;
+  box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
@@ -14059,12 +14069,14 @@ body {
   max-width: 100% !important;
   height: 663px !important;
   min-height: 663px !important;
+  border: 1px solid #e4ded8 !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
   border-radius: 7px !important;
   padding: 30px 26px 152px !important;
-  box-shadow: 0 12px 36px rgba(47, 40, 53, 0.06) !important;
+  box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
+  background: #fff !important;
   display: flex !important;
   flex-direction: column !important;
   /* safe center: center when content fits, fall back to start on overflow. */

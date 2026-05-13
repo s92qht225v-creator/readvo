@@ -155,11 +155,11 @@ const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim
 // - Mobile matches the public mobile preview shell so builder spacing does not drift.
 const BUILDER_PREVIEW_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 372, height: 620 },
+  mobile: { width: 372, height: 663 },
 } as const;
 const BUILDER_PREVIEW_FRAME_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 372, height: 620 },
+  mobile: { width: 372, height: 663 },
 } as const;
 
 type ActiveBlock =
@@ -2459,9 +2459,9 @@ function PreviewCanvas({
           overflowY: 'auto',
           overflowX: 'hidden',
           boxSizing: 'border-box',
-          border: '1px solid #ded8d2',
+          border: '1px solid #e4ded8',
           borderRadius: 7,
-          boxShadow: '0 14px 36px rgba(47, 40, 53, 0.06)',
+          boxShadow: '0 14px 36px rgba(47, 40, 53, 0.08)',
           background: '#fff',
           backgroundImage: 'none',
           backgroundSize: 'cover',

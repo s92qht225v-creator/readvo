@@ -29,7 +29,7 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 - Mobile layout switches at `<= 599px`.
 - Desktop layout applies at `>= 600px`.
 - Builder desktop canvas target: `1120 x 620`.
-- Builder mobile canvas target: `427 x 760`.
+- Builder mobile canvas target: `372 x 663`.
 - Public desktop card target in preview shell: `1120 x 620`.
 - Public mobile card target in preview shell: `372 x 663`.
 - The builder center canvas must center the fixed preview frame inside the
@@ -40,9 +40,11 @@ There are three separate surfaces. Do not assume one CSS rule fixes all three.
 
 ## Card Rules
 
-- Public desktop card has a thin outline for consistency:
-  `border: 1px solid #e4ded8`, `border-radius: 7px`.
-- Mobile card also uses `border-radius: 7px`.
+- Builder preview cards and public preview cards use the same frame treatment:
+  `background: #fff`, `border: 1px solid #e4ded8`, `border-radius: 7px`,
+  `box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08)`.
+- Desktop frame target is `1120 x 620px`.
+- Mobile frame target is `372 x 663px`.
 - Welcome/end screen cards must use the same frame language as question cards.
   In the live player, `.test-player-screen__card` is full-width up to the
   public desktop max (`1120px`) with the same border, `7px` radius, and shadow.
