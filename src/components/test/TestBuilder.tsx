@@ -155,11 +155,11 @@ const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim
 // - Mobile matches the public mobile preview shell so builder spacing does not drift.
 const BUILDER_PREVIEW_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 372, height: 663 },
+  mobile: { width: 372, height: 620 },
 } as const;
 const BUILDER_PREVIEW_FRAME_SIZE = {
   desktop: { width: 1120, height: 620 },
-  mobile: { width: 372, height: 663 },
+  mobile: { width: 372, height: 620 },
 } as const;
 
 type ActiveBlock =
@@ -631,7 +631,7 @@ export function TestBuilder({ testId }: Props) {
     const availableHeight = Math.max(0, previewCanvasSize.height - canvasPadY);
     if (!availableWidth || !availableHeight) return 1;
     const fitScale = Math.min(1, availableWidth / frame.width, availableHeight / slide.height);
-    return previewDevice === 'mobile' ? Math.min(0.86, fitScale) : fitScale;
+    return fitScale;
   })();
 
   return (
@@ -962,9 +962,14 @@ export function TestBuilder({ testId }: Props) {
                 overflow: 'hidden',
                 background: '#fff',
                 display: 'flex',
-                alignItems: previewDevice === 'mobile' ? 'flex-start' : 'safe center',
+                /* Both devices top-align so the desktop card sits at the same
+                 * y as the mobile card (52px below the toolbar). The mobile
+                 * card gets its 52px from 8px canvas padding + 44px wrap
+                 * padding; the desktop card gets it from 52px canvas padding
+                 * since there is no wrap chrome to provide the extra inset. */
+                alignItems: 'flex-start',
                 justifyContent: 'safe center',
-                padding: previewDevice === 'desktop' ? '28px 32px' : '8px',
+                padding: previewDevice === 'desktop' ? '52px 32px' : '8px',
                 boxSizing: 'border-box',
           }}
         >

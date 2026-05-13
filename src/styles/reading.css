@@ -13755,9 +13755,9 @@ body {
 
 .tb-canvas--mobile .tb-preview-card {
   width: 372px !important;
-  height: 663px !important;
+  height: 620px !important;
   max-width: 100% !important;
-  min-height: 663px !important;
+  min-height: 620px !important;
   overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
