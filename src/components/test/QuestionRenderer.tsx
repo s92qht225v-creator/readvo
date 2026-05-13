@@ -77,15 +77,34 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 transition: 'background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease',
               }}
             >
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                width: 22, height: 22, borderRadius: 3,
-                background: '#fff',
-                color: TEXT,
-                fontSize: 11, fontWeight: 700,
-                border: `1px solid ${TEXT}`,
-                flexShrink: 0,
-              }}>{LETTERS[i] ?? i + 1}</span>
+              {opts.allowMultiple ? (
+                <span aria-hidden="true" style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: 22, height: 22, borderRadius: 4,
+                  background: selected ? TEXT : '#fff',
+                  color: '#fff',
+                  border: selected ? `1px solid ${TEXT}` : `2px solid ${TEXT}`,
+                  boxSizing: 'border-box',
+                  flexShrink: 0,
+                  transition: 'background-color 0.16s ease, border-color 0.16s ease',
+                }}>
+                  {selected ? (
+                    <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ) : null}
+                </span>
+              ) : (
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: 22, height: 22, borderRadius: 3,
+                  background: '#fff',
+                  color: TEXT,
+                  fontSize: 11, fontWeight: 700,
+                  border: `1px solid ${TEXT}`,
+                  flexShrink: 0,
+                }}>{LETTERS[i] ?? i + 1}</span>
+              )}
               <span style={{ flex: 1 }}>{c.text}</span>
             </button>
           );
@@ -203,8 +222,8 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     const opts = question.options as PublicCheckboxOptions;
     const selectedIds = value.selectedIds ?? [];
     return (
-      <div className="test-question-options" role="group" aria-label={question.prompt} style={{ display: 'grid', gap: 8 }}>
-        {opts.choices.map((choice, i) => {
+      <div className="test-question-options test-checkbox-options" role="group" aria-label={question.prompt} style={{ display: 'grid', gap: 8 }}>
+        {opts.choices.map(choice => {
           const selected = selectedIds.includes(choice.id);
           return (
             <button
@@ -219,9 +238,21 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               role="checkbox"
               aria-checked={selected}
               data-selected={selected ? 'true' : 'false'}
-              style={choiceButtonStyle(selected)}
+              style={checkboxButtonStyle}
             >
-              <span style={choiceLetterStyle}>{LETTERS[i] ?? i + 1}</span>
+              <span style={checkboxBoxStyle(selected)} aria-hidden="true">
+                {selected ? (
+                  <svg width="14" height="14" viewBox="0 0 26 26" fill="none">
+                    <path
+                      d="M6.5 13.4 10.7 17.6 19.8 8.4"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ) : null}
+              </span>
               <span style={{ flex: 1 }}>{choice.text}</span>
             </button>
           );
@@ -557,6 +588,42 @@ function choiceButtonStyle(selected: boolean): React.CSSProperties {
     cursor: 'pointer',
     fontWeight: 400,
     fontFamily: 'inherit',
+  };
+}
+
+const checkboxButtonStyle: React.CSSProperties = {
+  textAlign: 'left',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 24,
+  padding: '8px 0',
+  minHeight: 52,
+  fontSize: 28,
+  background: 'transparent',
+  color: 'var(--test-theme-answer-text, #0445af)',
+  border: 'none',
+  borderRadius: 1,
+  cursor: 'pointer',
+  fontWeight: 400,
+  fontFamily: 'inherit',
+};
+
+function checkboxBoxStyle(selected: boolean): React.CSSProperties {
+  return {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 22,
+    height: 22,
+    borderRadius: 4,
+    background: selected ? 'var(--test-theme-answer, #0445af)' : '#fff',
+    color: '#fff',
+    border: selected
+      ? '1px solid var(--test-theme-answer, #0445af)'
+      : '2px solid var(--test-theme-answer, #0445af)',
+    boxShadow: 'none',
+    flexShrink: 0,
+    boxSizing: 'border-box',
   };
 }
 
