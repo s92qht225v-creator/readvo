@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, type CSSProperties } from 'react';
+import { useMemo, type CSSProperties } from 'react';
 import {
   closestCenter,
   DndContext,
@@ -34,13 +34,12 @@ export function OrderingPlayer({ items, value, onChange }: {
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
   );
 
+  // Render order falls back to the initial order so the list shows even when
+  // the user has not interacted yet. We deliberately do NOT push that
+  // fallback into `value.order` — leaving it `undefined` keeps `hasAnswer`
+  // false in `grade.ts`, so the question navigator doesn't mark the
+  // question as answered just because it was viewed.
   const order = value.order && value.order.length === items.length ? value.order : initialOrder;
-
-  useEffect(() => {
-    if (!value.order || value.order.length !== items.length) {
-      onChange({ order: initialOrder });
-    }
-  }, [initialOrder, items.length, onChange, value.order]);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
