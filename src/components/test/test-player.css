@@ -13,6 +13,31 @@
   box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
 }
 
+@media (max-width: 640px) {
+  /* On real mobile (production, not preview shell): make the card chrome
+     invisible and let the card area expand to fill the viewport so its
+     content can sit visually centered. Preview shell mobile rules
+     (.test-preview-shell--mobile .test-player__card) are more specific
+     and still win there. */
+  .test-player__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: calc(100vh - 72px) !important;
+  }
+
+  .test-player__card {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}
+
 @media (min-width: 641px) {
   .test-player__inner {
     display: flex;
