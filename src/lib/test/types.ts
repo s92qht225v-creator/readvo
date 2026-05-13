@@ -217,6 +217,7 @@ export interface TestThemeConfig {
   backgroundColor?: string;
   questionColor?: string;
   descriptionColor?: string;
+  answerTextColor?: string;
   answerColor?: string;
   buttonColor?: string;
   buttonTextColor?: string;

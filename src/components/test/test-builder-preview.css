@@ -1041,7 +1041,7 @@
 .tb-preview-card .test-opinion-scale button,
 .tb-preview-card .test-rating button,
 .tb-preview-card .test-fill-blank-input {
-  color: var(--test-theme-answer, #0445af) !important;
+  color: var(--test-theme-answer-text, #0445af) !important;
 }
 
 .tb-preview-card .test-question-option,
@@ -1078,7 +1078,7 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-opinion-scale button,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-rating button,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
-  color: var(--test-theme-answer, #0445af) !important;
+  color: var(--test-theme-answer-text, #0445af) !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-question-option,
@@ -1144,11 +1144,15 @@
   outline: none !important;
   border-radius: 3px !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
   font-size: 18px !important;
   line-height: 24px !important;
   text-align: left !important;
   box-shadow: none !important;
+}
+
+.tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__chevron {
+  color: var(--test-theme-answer, #0445af) !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown__trigger span {

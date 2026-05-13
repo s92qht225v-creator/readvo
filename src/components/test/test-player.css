@@ -75,7 +75,7 @@
 .test-player__card .test-opinion-scale button,
 .test-player__card .test-rating button,
 .test-player__card .test-fill-blank-input {
-  color: var(--test-theme-answer, #0445af) !important;
+  color: var(--test-theme-answer-text, #0445af) !important;
 }
 
 .test-player__card .test-question-option,
@@ -111,7 +111,7 @@
 }
 
 .test-player__card .test-rating button[data-selected="false"] {
-  color: var(--test-theme-answer, #0445af) !important;
+  color: var(--test-theme-answer-text, #0445af) !important;
 }
 
 .test-player__card .test-player__title {
@@ -430,7 +430,7 @@
   min-height: 37px !important;
   padding: 6px 10px !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
   font-size: 18px !important;
   line-height: 24px !important;
   text-align: left !important;
@@ -504,7 +504,7 @@
   min-height: 37px !important;
   padding: 6px 10px !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
   border: none !important;
   font-size: 18px !important;
   line-height: 24px !important;
@@ -526,7 +526,7 @@
   display: block !important;
   min-height: 37px !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
   border: none !important;
   font-size: 18px !important;
   line-height: 24px !important;
@@ -540,7 +540,7 @@
   border: 0 !important;
   border-radius: 3px !important;
   background: transparent !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
 }
 
 .test-custom-dropdown__trigger {
@@ -555,7 +555,7 @@
   border: 0;
   border-radius: 3px;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
-  color: var(--test-theme-answer, rgb(4, 69, 175));
+  color: var(--test-theme-answer-text, rgb(4, 69, 175));
   font: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -585,6 +585,7 @@
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
+  color: var(--test-theme-answer, #0445af);
   transition: transform 0.16s ease;
 }
 

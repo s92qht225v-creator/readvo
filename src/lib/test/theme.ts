@@ -19,6 +19,7 @@ export interface TestThemeConfig {
   backgroundColor?: string;
   questionColor?: string;
   descriptionColor?: string;
+  answerTextColor?: string;
   answerColor?: string;
   buttonColor?: string;
   buttonTextColor?: string;
@@ -33,6 +34,7 @@ export const DEFAULT_TEST_THEME: Required<TestThemeConfig> = {
   backgroundColor: '#ffffff',
   questionColor: '#000000',
   descriptionColor: '#8b848f',
+  answerTextColor: '#0445af',
   answerColor: '#0445af',
   buttonColor: '#2f2533',
   buttonTextColor: '#ffffff',
@@ -108,6 +110,7 @@ export function normalizeTestTheme(input: unknown): Required<TestThemeConfig> {
     themeName: cleanString(raw.themeName) || DEFAULT_TEST_THEME.themeName,
     questionColor: cleanHex(raw.questionColor, DEFAULT_TEST_THEME.questionColor),
     descriptionColor: cleanHex(raw.descriptionColor, DEFAULT_TEST_THEME.descriptionColor),
+    answerTextColor: cleanHex(raw.answerTextColor, DEFAULT_TEST_THEME.answerTextColor),
     answerColor: cleanHex(raw.answerColor, DEFAULT_TEST_THEME.answerColor),
     buttonColor: cleanHex(raw.buttonColor, DEFAULT_TEST_THEME.buttonColor),
     buttonTextColor: cleanHex(raw.buttonTextColor, DEFAULT_TEST_THEME.buttonTextColor),
@@ -124,6 +127,7 @@ export function testThemeCssVars(input: unknown): Record<string, string> {
     '--test-theme-bg': theme.backgroundColor,
     '--test-theme-question': theme.questionColor,
     '--test-theme-description': theme.descriptionColor,
+    '--test-theme-answer-text': theme.answerTextColor,
     '--test-theme-answer': theme.answerColor,
     '--test-theme-button': theme.buttonColor,
     '--test-theme-button-text': theme.buttonTextColor,
