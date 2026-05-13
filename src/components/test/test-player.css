@@ -101,9 +101,12 @@
 
 .test-player__card .test-question-option[data-selected="true"],
 .test-player__card .test-picture-option[data-selected="true"],
-.test-player__card .test-opinion-scale button[data-selected="true"],
-.test-player__card .test-rating button[data-selected="true"] {
+.test-player__card .test-opinion-scale button[data-selected="true"] {
   box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af) !important;
+}
+
+.test-player__card .test-rating button[data-selected="true"] {
+  box-shadow: none !important;
 }
 
 .test-player__card .test-rating button[data-selected="true"] {
