@@ -169,9 +169,138 @@ All test-app cards render flat:
   `box-shadow: none !important` in `reading.css`.
 - `publicScreenCard` inline style in `TestPlayer.tsx` (welcome /
   end screen card): `boxShadow: 'none'`.
+- Production mobile (`@media (max-width: 640px)` block in `reading.css`):
+  `.test-player__card` is `background: transparent`, `border: none`,
+  `box-shadow: none`, `padding: 0` — the card chrome is invisible so
+  the question content floats directly on the page background.
 
 If you need to add elevation, do so per-element (e.g. on a button or
 badge) — do NOT reintroduce shadows on the card chrome itself.
+
+### Mobile production card layout
+
+`@media (max-width: 640px)` in `reading.css` is the single source for the
+real-mobile player chrome. After several iterations the active config is:
+
+- `.test-player`: `align-items: safe center` + `padding: 24px 12px
+  calc(132px + safe-area-inset-bottom)` so short content sits visually
+  centered in the viewport while long content falls back to flex-start
+  and scrolls (no top clipping).
+- `.test-player__inner`: `display: block` (no forced 100vh flex-grow).
+  The shell handles centering.
+- `.test-player__card`: chrome-less (see "No drop shadows" above) and
+  `--test-mobile-column: min(100%, 303px)` defined here.
+- Typography unified to flatten the title-vs-body hierarchy that looked
+  jumpy on phones:
+  - `.test-player__title`: `18px / 1.3 / -0.2 letter-spacing`
+  - `.test-player__description`: `15px / 1.4`
+  - Every option / row / input (.test-question-option, .test-match-row,
+    .test-match-select, .test-match-choice, .test-ordering-row,
+    .test-short-answer, .test-fill-blanks): `15px`
+
+### Mobile match-list clamp (defeats @container desktop float rules)
+
+`question-media.css` has `@container (min-width: 480px) { …
+.qmedia-desktop-float-left .test-match-list { width: 100% !important } }`
+plus the same rule for float-right and split-* variants. The container
+is `.test-player__card` (`container-type: inline-size`). On phones whose
+card width reaches ~480 CSS px (~430–480 viewport with no padding), the
+container fires even though the viewport is "mobile", and the match list
+widens past `--test-mobile-column`.
+
+To re-clamp, `reading.css` `@media (max-width: 640px)` adds a (0,4,2)
+selector that beats the container rule's (0,4,0):
+
+```css
+html body .test-player .test-player__card.test-player__card--type-match
+  .test-match-list,
+html body .test-player .test-player__card.test-player__card--type-match
+  .test-match-pairing,
+html body .test-player .test-player__card.test-player__card--type-match
+  .qmedia-answer,
+html body .test-player .test-player__card.test-player__card--type-match
+  .qmedia-header {
+  width: var(--test-mobile-column, min(100%, 303px)) !important;
+  …
+}
+```
+
+Same pattern works for any other element that the desktop `@container`
+rules would widen past the mobile column.
+
+### Theme fields (current shape)
+
+`TestThemeConfig` in `src/lib/test/theme.ts` (mirrored loosely in
+`src/lib/test/types.ts`):
+
+```ts
+themeName, backgroundColor, questionColor, descriptionColor,
+answerTextColor, answerColor, buttonColor, buttonTextColor, fontScale,
+fontFamily, answerRadius, backgroundImageUrl
+```
+
+CSS vars exported via `testThemeCssVars`: `--test-theme-bg`,
+`--test-theme-question`, `--test-theme-description`, `--test-theme-answer-text`,
+`--test-theme-answer`, `--test-theme-button`, `--test-theme-button-text`,
+`--test-theme-font-scale`, `--test-theme-font-family`,
+`--test-theme-answer-radius`, `--test-theme-bg-image`.
+
+Two answer colours are deliberately split:
+- `--test-theme-answer-text` drives the `color:` of option labels,
+  dropdown text, fill-blank input text, etc.
+- `--test-theme-answer` drives the accent: 8 % bg tint, letter chip /
+  selected ring / fill-blank underline / dropdown chevron (`color` on
+  `.test-custom-dropdown__chevron` is bound to the accent so it doesn't
+  inherit answer-text).
+
+Legacy fields silently dropped by `normalizeTestTheme`: `logoUrl`,
+`logoAlt`, `logoSize`, `logoAlign` (the Design > Logo tab was removed);
+`titleSize`, `titleAlign`, `questionSize`, `questionAlign` (the Design >
+"Size and positioning" controls were removed).
+
+### Font picker popover (no Design modal)
+
+`TestBuilder.tsx` no longer mounts a `<ThemeModal>`. The Design button
+is replaced by a Font button that toggles a draggable
+`<FontPickerPanel>` popover (320 px wide, anchored top-right). The
+popover:
+
+- Lists 31 font families (system + 30 web-safe stacks). Each row
+  previews its label in its own family via the `FONT_PREVIEW_STACK`
+  map.
+- Header has a drag handle (the 6-dot grip) — pointer-down on the dots
+  starts an absolute-position drag, clamped to viewport bounds.
+- The close (×) button is **outside** the drag region and uses
+  `onPointerDown={e => e.stopPropagation()}` so it doesn't get
+  swallowed by the parent's `setPointerCapture`.
+
+The legacy `ThemeModal` function and its sub-panels (`ThemeFontPanel`,
+`ThemeButtonsPanel`, `ThemeBackgroundPanel`, theme-list view, upload
+view) still live in `TestBuilder.tsx` as dead code — the modal is no
+longer mounted but the helpers can be deleted in a follow-up cleanup.
+
+### Question type quirks
+
+- **Multi-select** (`multiple_choice` with `allowMultiple: true`):
+  letter chip A/B/C/D is replaced with a 22 × 22 rounded square
+  checkbox icon. Empty (2px accent outline) when unchecked, filled
+  with accent + white checkmark when checked. Single-select keeps
+  the lettered chip.
+- **Dedicated `checkbox` type**: same 22 × 22 checkbox icon (was 44 px
+  before). Border is a uniform 2 px accent ring in either state.
+- **Checkmark stroke**: hardcoded `stroke="#fff"` in both the inline
+  multi-select icon and the dedicated checkbox renderer. Using
+  `currentColor` made the white ✓ inherit the answer-accent colour
+  via `.test-question-option span:first-child { color: …!important }`,
+  which painted blue-on-blue and looked invisible.
+- **Rating**: selected stars only change colour (gold); no blue
+  inset box-shadow. The shared
+  `.test-player__card .test-rating button[data-selected="true"]`
+  rule sets `box-shadow: none !important`.
+- **Ordering drag**: a `restrictToVerticalAxis` modifier on
+  `DndContext` zeros out the x component of the dnd-kit transform,
+  so rows can only be dragged up/down — no horizontal fling off the
+  side of the screen on mobile.
 
 ### `flex-shrink: 0` for content-driven height
 
