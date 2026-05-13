@@ -17,7 +17,7 @@ export function setQuestionMedia(q: BuilderQuestion, media: QuestionMedia | unde
       options.media = normalizedMedia;
       return { ...q, options: options as BuilderQuestion['options'] };
     }
-    const layoutMobile = normalizedMedia.layoutMobile === 'wallpaper'
+    const layoutMobile = normalizedMedia.layoutMobile === 'wallpaper' || normalizedMedia.layoutMobile === 'split'
       ? 'stack'
       : normalizedMedia.layoutMobile ?? 'stack';
     options.media = {

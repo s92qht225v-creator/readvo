@@ -221,7 +221,7 @@ function PauseIcon() {
 }
 
 function layoutClassName(media: QuestionMedia, forceDevice?: 'mobile' | 'desktop') {
-  const mobile = media.layoutMobile === 'wallpaper'
+  const mobile = media.layoutMobile === 'wallpaper' || media.layoutMobile === 'split'
     ? 'stack'
     : media.layoutMobile ?? 'stack';
   const desktop = normalizeDesktopLayout(media.layoutDesktop);

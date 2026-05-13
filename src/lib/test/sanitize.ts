@@ -57,7 +57,7 @@ function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): Publ
     url: media.url,
     alt: typeof media.alt === 'string' ? media.alt : undefined,
     provider: media.provider,
-    layoutMobile: media.layoutMobile === 'wallpaper' ? 'stack' : media.layoutMobile,
+    layoutMobile: media.layoutMobile === 'wallpaper' || media.layoutMobile === 'split' ? 'stack' : media.layoutMobile,
     layoutDesktop,
     aspectRatio: media.aspectRatio,
     naturalAspectRatio: media.naturalAspectRatio,

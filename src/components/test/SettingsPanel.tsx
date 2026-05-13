@@ -278,7 +278,6 @@ type LayoutOption<T extends string> = { value: T; label: string; disabled?: bool
 const MOBILE_LAYOUT_OPTIONS: Array<LayoutOption<MobileMediaLayout>> = [
   { value: 'stack', label: 'Stack' },
   { value: 'float', label: 'Float' },
-  { value: 'split', label: 'Split' },
 ];
 
 const DESKTOP_LAYOUT_OPTIONS: Array<LayoutOption<DesktopMediaLayout>> = [
@@ -290,7 +289,7 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
   const media = getQuestionMedia(q);
   if (!media?.url || media.type === 'audio') return null;
   const mobileOptions = MOBILE_LAYOUT_OPTIONS;
-  const mobileValue = media.layoutMobile === 'wallpaper'
+  const mobileValue = media.layoutMobile === 'wallpaper' || media.layoutMobile === 'split'
     ? 'stack'
     : media.layoutMobile ?? 'stack';
 

@@ -146,7 +146,8 @@ If content overflows, the card remains scrollable with hidden scrollbars.
 
 - `stack` - text, media, answers in one column.
 - `float` - compact media near text.
-- `split` - image is full width at the top with no top/left/right gap.
+- `split` was removed from normal selection. Saved legacy `split` values must
+  normalize to `stack` in builder, sanitizer, and player rendering.
 - `wallpaper` was removed/disabled for normal selection because it created too
   many edge cases with background movement, stretching, and nav overlap.
 - Audio does not expose layout controls. It always renders as a full-width
@@ -189,8 +190,7 @@ For desktop cards without media:
 - Question title, description, media in stack/float layouts, audio player,
   answer groups, inputs, selects, rating, and opinion controls should resolve
   to that same column width.
-- Mobile split media may remain full-bleed by layout design, but the text and
-  answers under it still use the shared `303px` column.
+- Mobile `split` is legacy-only and should render as `stack`.
 - Choice row target:
   - width: `303px`
   - height: `37px`
