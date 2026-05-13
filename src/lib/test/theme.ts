@@ -4,13 +4,32 @@ export type TestFontFamily =
   | 'inter'
   | 'noto-sans'
   | 'arial'
+  | 'helvetica'
+  | 'tahoma'
+  | 'calibri'
   | 'verdana'
   | 'trebuchet'
+  | 'lucida-sans'
+  | 'gill-sans'
+  | 'futura'
+  | 'optima'
+  | 'avenir'
   | 'georgia'
   | 'garamond'
+  | 'palatino'
+  | 'baskerville'
+  | 'cambria'
+  | 'book-antiqua'
   | 'times'
+  | 'didot'
+  | 'rockwell'
   | 'courier'
+  | 'lucida-console'
   | 'mono'
+  | 'impact'
+  | 'comic-sans'
+  | 'copperplate'
+  | 'brush-script'
   | 'serif';
 export type TestCornerRadius = 'sharp' | 'soft' | 'round';
 
@@ -55,13 +74,32 @@ const FONT_FAMILY: Record<TestFontFamily, string> = {
   inter: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   'noto-sans': '"Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   arial: 'Arial, Helvetica, sans-serif',
+  helvetica: 'Helvetica, Arial, sans-serif',
+  tahoma: 'Tahoma, Geneva, Verdana, sans-serif',
+  calibri: 'Calibri, "Segoe UI", Tahoma, sans-serif',
   verdana: 'Verdana, Geneva, sans-serif',
   trebuchet: '"Trebuchet MS", Arial, sans-serif',
+  'lucida-sans': '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
+  'gill-sans': '"Gill Sans", "Gill Sans MT", Calibri, sans-serif',
+  futura: 'Futura, "Trebuchet MS", Arial, sans-serif',
+  optima: 'Optima, Candara, Calibri, sans-serif',
+  avenir: 'Avenir, "Avenir Next", "Helvetica Neue", Helvetica, sans-serif',
   georgia: 'Georgia, "Times New Roman", serif',
   garamond: 'Garamond, "Times New Roman", serif',
+  palatino: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+  baskerville: 'Baskerville, "Baskerville Old Face", Garamond, serif',
+  cambria: 'Cambria, Georgia, serif',
+  'book-antiqua': '"Book Antiqua", Palatino, "Palatino Linotype", serif',
   times: '"Times New Roman", Times, serif',
+  didot: 'Didot, "Bodoni MT", "Didot LT STD", "Hoefler Text", Garamond, serif',
+  rockwell: 'Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif',
   courier: '"Courier New", Courier, monospace',
+  'lucida-console': '"Lucida Console", "Courier New", Courier, monospace',
   mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
+  impact: 'Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif',
+  'comic-sans': '"Comic Sans MS", "Comic Sans", cursive',
+  copperplate: 'Copperplate, "Copperplate Gothic Light", fantasy',
+  'brush-script': '"Brush Script MT", "Brush Script Std", cursive',
   serif: 'Georgia, "Times New Roman", serif',
 };
 

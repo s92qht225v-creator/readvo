@@ -222,7 +222,7 @@ export interface TestThemeConfig {
   buttonColor?: string;
   buttonTextColor?: string;
   fontScale?: 'small' | 'medium' | 'large';
-  fontFamily?: 'system' | 'inter' | 'noto-sans' | 'arial' | 'verdana' | 'trebuchet' | 'georgia' | 'garamond' | 'times' | 'courier' | 'mono' | 'serif';
+  fontFamily?: 'system' | 'inter' | 'noto-sans' | 'arial' | 'helvetica' | 'tahoma' | 'calibri' | 'verdana' | 'trebuchet' | 'lucida-sans' | 'gill-sans' | 'futura' | 'optima' | 'avenir' | 'georgia' | 'garamond' | 'palatino' | 'baskerville' | 'cambria' | 'book-antiqua' | 'times' | 'didot' | 'rockwell' | 'courier' | 'lucida-console' | 'mono' | 'impact' | 'comic-sans' | 'copperplate' | 'brush-script' | 'serif';
   answerRadius?: 'sharp' | 'soft' | 'round';
   backgroundImageUrl?: string;
 }

@@ -1619,14 +1619,33 @@ const FONT_OPTIONS: Array<{ value: NonNullable<TestThemeConfig['fontFamily']>; l
   { value: 'inter', label: 'Inter' },
   { value: 'noto-sans', label: 'Noto Sans' },
   { value: 'arial', label: 'Arial' },
+  { value: 'helvetica', label: 'Helvetica' },
+  { value: 'tahoma', label: 'Tahoma' },
+  { value: 'calibri', label: 'Calibri' },
   { value: 'verdana', label: 'Verdana' },
   { value: 'trebuchet', label: 'Trebuchet MS' },
+  { value: 'lucida-sans', label: 'Lucida Sans' },
+  { value: 'gill-sans', label: 'Gill Sans' },
+  { value: 'futura', label: 'Futura' },
+  { value: 'optima', label: 'Optima' },
+  { value: 'avenir', label: 'Avenir' },
   { value: 'georgia', label: 'Georgia' },
   { value: 'garamond', label: 'Garamond' },
+  { value: 'palatino', label: 'Palatino' },
+  { value: 'baskerville', label: 'Baskerville' },
+  { value: 'cambria', label: 'Cambria' },
+  { value: 'book-antiqua', label: 'Book Antiqua' },
   { value: 'times', label: 'Times New Roman' },
-  { value: 'courier', label: 'Courier New' },
-  { value: 'mono', label: 'Monospace' },
+  { value: 'didot', label: 'Didot' },
+  { value: 'rockwell', label: 'Rockwell' },
   { value: 'serif', label: 'Serif' },
+  { value: 'courier', label: 'Courier New' },
+  { value: 'lucida-console', label: 'Lucida Console' },
+  { value: 'mono', label: 'Monospace' },
+  { value: 'impact', label: 'Impact' },
+  { value: 'comic-sans', label: 'Comic Sans MS' },
+  { value: 'copperplate', label: 'Copperplate' },
+  { value: 'brush-script', label: 'Brush Script MT' },
 ];
 
 function FontPickerPanel({ theme, onClose, onSave }: {
@@ -1682,10 +1701,6 @@ function FontPickerPanel({ theme, onClose, onSave }: {
       }}
     >
       <div
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -1693,25 +1708,38 @@ function FontPickerPanel({ theme, onClose, onSave }: {
           padding: '10px 14px',
           background: '#f6f4f1',
           borderBottom: '1px solid #ece7e1',
-          cursor: 'grab',
-          touchAction: 'none',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#3f3645', fontWeight: 700, fontSize: 14 }}>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-            <span aria-hidden="true" style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(2, 3px)', gap: 2 }}>
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-              <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
-            </span>
-            Font
+        <div
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            color: '#3f3645',
+            fontWeight: 700,
+            fontSize: 14,
+            cursor: 'grab',
+            touchAction: 'none',
+          }}
+        >
+          <span aria-hidden="true" style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(2, 3px)', gap: 2 }}>
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
+            <span style={{ width: 3, height: 3, background: '#a39aa6', borderRadius: 1 }} />
           </span>
+          Font
         </div>
         <button
           type="button"
+          onPointerDown={(e) => e.stopPropagation()}
           onClick={onClose}
           aria-label="Close"
           style={{
@@ -1770,13 +1798,32 @@ const FONT_PREVIEW_STACK: Record<NonNullable<TestThemeConfig['fontFamily']>, str
   inter: 'Inter, system-ui, sans-serif',
   'noto-sans': '"Noto Sans", system-ui, sans-serif',
   arial: 'Arial, Helvetica, sans-serif',
+  helvetica: 'Helvetica, Arial, sans-serif',
+  tahoma: 'Tahoma, Geneva, Verdana, sans-serif',
+  calibri: 'Calibri, "Segoe UI", Tahoma, sans-serif',
   verdana: 'Verdana, Geneva, sans-serif',
   trebuchet: '"Trebuchet MS", Arial, sans-serif',
+  'lucida-sans': '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
+  'gill-sans': '"Gill Sans", "Gill Sans MT", Calibri, sans-serif',
+  futura: 'Futura, "Trebuchet MS", Arial, sans-serif',
+  optima: 'Optima, Candara, Calibri, sans-serif',
+  avenir: 'Avenir, "Avenir Next", "Helvetica Neue", Helvetica, sans-serif',
   georgia: 'Georgia, "Times New Roman", serif',
   garamond: 'Garamond, "Times New Roman", serif',
+  palatino: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+  baskerville: 'Baskerville, "Baskerville Old Face", Garamond, serif',
+  cambria: 'Cambria, Georgia, serif',
+  'book-antiqua': '"Book Antiqua", Palatino, "Palatino Linotype", serif',
   times: '"Times New Roman", Times, serif',
+  didot: 'Didot, "Bodoni MT", "Didot LT STD", "Hoefler Text", Garamond, serif',
+  rockwell: 'Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif',
   courier: '"Courier New", Courier, monospace',
+  'lucida-console': '"Lucida Console", "Courier New", Courier, monospace',
   mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+  impact: 'Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif',
+  'comic-sans': '"Comic Sans MS", "Comic Sans", cursive',
+  copperplate: 'Copperplate, "Copperplate Gothic Light", fantasy',
+  'brush-script': '"Brush Script MT", "Brush Script Std", cursive',
   serif: 'Georgia, "Times New Roman", serif',
 };
 
