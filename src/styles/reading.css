@@ -13744,7 +13744,7 @@ body {
 .tb-canvas--mobile .tb-preview-wrap {
   width: 372px !important;
   max-width: none !important;
-  padding: 44px 0 !important;
+  padding: 0 !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
 }

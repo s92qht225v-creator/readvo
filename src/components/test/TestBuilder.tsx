@@ -962,14 +962,14 @@ export function TestBuilder({ testId }: Props) {
                 overflow: 'hidden',
                 background: '#fff',
                 display: 'flex',
-                /* Both devices top-align so the desktop card sits at the same
-                 * y as the mobile card (52px below the toolbar). The mobile
-                 * card gets its 52px from 8px canvas padding + 44px wrap
-                 * padding; the desktop card gets it from 52px canvas padding
-                 * since there is no wrap chrome to provide the extra inset. */
+                /* Both devices top-align with a 52px gap below the toolbar.
+                 * Wrap chrome was removed for mobile (padding: 0), so the
+                 * full 52px now lives on the canvas top padding for both
+                 * devices. Horizontal padding differs since desktop card is
+                 * 1120 wide and mobile card is 372 wide. */
                 alignItems: 'flex-start',
                 justifyContent: 'safe center',
-                padding: previewDevice === 'desktop' ? '52px 32px' : '8px',
+                padding: previewDevice === 'desktop' ? '52px 32px' : '52px 8px',
                 boxSizing: 'border-box',
           }}
         >
