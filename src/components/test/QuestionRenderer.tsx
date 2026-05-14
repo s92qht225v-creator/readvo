@@ -78,25 +78,34 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 transition: 'background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease',
               }}
             >
-              <span aria-hidden="true" style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                width: 22, height: 22, borderRadius: opts.allowMultiple ? 4 : 3,
-                background: selected ? TEXT : '#fff',
-                color: '#fff',
-                fontSize: 11, fontWeight: 700,
-                border: selected ? `1px solid ${TEXT}` : `${opts.allowMultiple ? 2 : 1}px solid ${TEXT}`,
-                boxSizing: 'border-box',
-                flexShrink: 0,
-                transition: 'background-color 0.16s ease, border-color 0.16s ease',
-              }}>
-                {selected ? (
-                  <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-                    <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ) : (
-                  <span style={{ color: TEXT }}>{LETTERS[i] ?? i + 1}</span>
-                )}
-              </span>
+              {opts.allowMultiple ? (
+                <span aria-hidden="true" style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: 22, height: 22, borderRadius: 4,
+                  background: selected ? TEXT : '#fff',
+                  color: '#fff',
+                  border: selected ? `1px solid ${TEXT}` : `2px solid ${TEXT}`,
+                  boxSizing: 'border-box',
+                  flexShrink: 0,
+                  transition: 'background-color 0.16s ease, border-color 0.16s ease',
+                }}>
+                  {selected ? (
+                    <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ) : null}
+                </span>
+              ) : (
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: 22, height: 22, borderRadius: 3,
+                  background: '#fff',
+                  color: TEXT,
+                  fontSize: 11, fontWeight: 700,
+                  border: `1px solid ${TEXT}`,
+                  flexShrink: 0,
+                }}>{LETTERS[i] ?? i + 1}</span>
+              )}
               <span style={{ flex: 1 }}>{c.text}</span>
             </button>
           );
@@ -178,24 +187,15 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 display: 'flex', alignItems: 'center', gap: 6,
                 fontSize: 14, textAlign: 'left',
               }}>
-                <span aria-hidden="true" style={{
+                <span style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: 22, height: 22, borderRadius: opts.allowMultiple ? 4 : 3,
-                  background: selected ? TEXT : '#fff',
-                  color: '#fff',
+                  width: 22, height: 22, borderRadius: 3,
+                  background: '#fff',
+                  color: TEXT,
                   fontSize: 11, fontWeight: 700,
-                  border: selected ? `1px solid ${TEXT}` : `${opts.allowMultiple ? 2 : 1}px solid ${TEXT}`,
-                  boxSizing: 'border-box',
+                  border: `1px solid ${TEXT}`,
                   flexShrink: 0,
-                }}>
-                  {selected ? (
-                    <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ) : (
-                    <span style={{ color: TEXT }}>{LETTERS[i] ?? i + 1}</span>
-                  )}
-                </span>
+                }}>{LETTERS[i] ?? i + 1}</span>
                 <span style={{
                   flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                 }}>{c.text || `Choice ${i + 1}`}</span>
@@ -297,25 +297,14 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 fontWeight: 400,
               }}
             >
-              <span aria-hidden="true" style={{
+              <span style={{
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                 width: 22, height: 22, borderRadius: 3,
-                background: selected ? TEXT : '#fff',
-                color: '#fff',
+                background: '#fff', color: TEXT,
                 fontSize: 11, fontWeight: 700,
                 border: `1px solid ${TEXT}`,
-                boxSizing: 'border-box',
                 flexShrink: 0,
-                transition: 'background-color 0.16s ease',
-              }}>
-                {selected ? (
-                  <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-                    <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ) : (
-                  <span style={{ color: TEXT }}>{LETTERS[i]}</span>
-                )}
-              </span>
+              }}>{LETTERS[i]}</span>
               <span style={{ flex: 1 }}>{label}</span>
             </button>
           );
