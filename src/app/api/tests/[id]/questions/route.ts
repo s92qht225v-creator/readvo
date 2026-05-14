@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { randomUUID } from 'crypto';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
@@ -70,7 +71,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       : undefined;
     if (existingId) keptIds.add(existingId);
     return {
-      ...(existingId ? { id: existingId } : {}),
+      id: existingId ?? randomUUID(),
       test_id: id,
       position: i,
       type: q.type,
