@@ -106,6 +106,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       .update({ position: tempBase - offset })
       .eq('id', existingId);
     if (moveResult.error) {
+      console.error('[questions PUT] move-out failed', { offset, existingId, error: moveResult.error });
       return NextResponse.json({ error: moveResult.error.message }, { status: 500 });
     }
   }
@@ -115,7 +116,10 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     .upsert(rows, { onConflict: 'id' })
     .select('*')
     .order('position', { ascending: true });
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) {
+    console.error('[questions PUT] upsert failed', { rowCount: rows.length, error });
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
   return NextResponse.json({ ok: true, questions: data });
 }
 
