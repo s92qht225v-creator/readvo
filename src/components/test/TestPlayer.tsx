@@ -217,6 +217,12 @@ export function TestPlayer({ test, forceDevice }: Props) {
         && answer.blanks.length === need
         && answer.blanks.every(s => typeof s === 'string' && s.trim().length > 0);
     }
+    if (q.type === 'scramble') {
+      const need = (q.options as { tiles?: unknown[] }).tiles?.length ?? 0;
+      return Array.isArray(answer.tileIds)
+        && answer.tileIds.length === need
+        && answer.tileIds.every(id => typeof id === 'string' && id.length > 0);
+    }
     return false;
   }, [q, answer]);
 
