@@ -17,6 +17,7 @@ import { NumberSettings } from './settings/NumberSettings';
 import { OpinionScaleSettings } from './settings/OpinionScaleSettings';
 import { OrderingSettings } from './settings/OrderingSettings';
 import { PictureChoiceSettings } from './settings/PictureChoiceSettings';
+import { ScrambleSettings } from './settings/ScrambleSettings';
 import { RatingSettings } from './settings/RatingSettings';
 import { ShortTextSettings } from './settings/ShortTextSettings';
 import { TrueFalseSettings } from './settings/TrueFalseSettings';
@@ -85,6 +86,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         {q.type === 'match' && <MatchSettings q={q} onChange={onChange} />}
         {q.type === 'ordering' && <OrderingSettings q={q} onChange={onChange} />}
         {q.type === 'fill_blanks' && <FillBlanksSettings q={q} onChange={onChange} isGraded={isGraded} />}
+        {q.type === 'scramble' && <ScrambleSettings q={q} onChange={onChange} />}
       </Section>
 
       <Section title="Behavior">

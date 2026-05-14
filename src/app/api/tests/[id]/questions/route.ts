@@ -35,7 +35,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
   const ALLOWED_TYPES: ReadonlySet<QuestionType> = new Set([
     'multiple_choice', 'short_text', 'long_answer', 'number', 'dropdown',
     'checkbox', 'opinion_scale', 'rating', 'picture_choice',
-    'true_false', 'match', 'ordering', 'fill_blanks',
+    'true_false', 'match', 'ordering', 'fill_blanks', 'scramble',
   ]);
   // Validate each question minimally before deleting existing rows.
   for (const q of body.questions) {

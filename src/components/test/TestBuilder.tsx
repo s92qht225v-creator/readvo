@@ -32,12 +32,12 @@ import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { navigateToTestHref } from '@/lib/test/paths';
-import { publicOptionId } from '@/lib/test/sanitize';
+import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
   Test, TestQuestion, QuestionType, QuestionOptions,
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
-  MatchOptions, OrderingOptions, FillBlanksOptions,
+  MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
   PublicQuestion, TestScreenConfig,
@@ -99,6 +99,8 @@ function TypeIcon({ type }: { type: QuestionType }) {
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M8.75 3.498a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5zM8.75 11.503a.75.75 0 1 0 0 1.5h5.5a.75.75 0 0 0 0-1.5z"/><path fill={c} d="M2.5 10.52A.75.75 0 0 1 1 10.5c0-.276.051-.566.21-.825.164-.27.4-.433.636-.528.221-.088.45-.12.64-.133C2.67 9 2.87 9 3.045 9h.03c.177 0 .377 0 .563.014.19.014.418.045.639.133.236.095.472.258.637.528.158.259.21.548.21.825v.75a.75.75 0 0 1-.186.494L3.403 13.5H4.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.564-1.244l2.439-2.788v-.448l-.097-.01a7 7 0 0 0-.466-.01c-.195 0-.34 0-.466.01zM3.602 1.088A.75.75 0 0 1 4 1.75v4.5a.75.75 0 1 1-1.5 0V3.162l-.33.223a.75.75 0 0 1-.84-1.243l1.5-1.013a.75.75 0 0 1 .772-.041" fillRule="evenodd" clipRule="evenodd"/></svg>;
     case 'fill_blanks':
       return <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="4" width="14" height="2" rx="1" fill={c}/><rect x="1" y="8" width="5" height="2" rx="1" fill={c}/><rect x="7" y="8" width="8" height="2" rx="1" fill={c} opacity="0.3" strokeDasharray="2 2" stroke={c} strokeWidth="0.5"/><rect x="1" y="12" width="10" height="2" rx="1" fill={c} opacity="0.5"/></svg>;
+    case 'scramble':
+      return <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="3.5" height="3.5" rx="0.6" fill={c}/><rect x="6" y="3" width="3.5" height="3.5" rx="0.6" fill={c} opacity="0.55"/><rect x="11" y="3" width="3.5" height="3.5" rx="0.6" fill={c} opacity="0.3"/><rect x="3.5" y="9.5" width="3.5" height="3.5" rx="0.6" fill={c} opacity="0.4"/><rect x="8.5" y="9.5" width="3.5" height="3.5" rx="0.6" fill={c} opacity="0.7"/></svg>;
     case 'short_text':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M1 6.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 6.25m0 4a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75" fillRule="evenodd" clipRule="evenodd"/></svg>;
     case 'long_answer':
@@ -139,6 +141,7 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
   { type: 'match', label: 'Match' },
   { type: 'ordering', label: 'Ordering' },
   { type: 'fill_blanks', label: 'Fill in the blanks' },
+  { type: 'scramble', label: 'Scramble' },
   { type: 'short_text', label: 'Short text' },
   { type: 'long_answer', label: 'Long answer' },
   { type: 'number', label: 'Number' },
@@ -509,6 +512,7 @@ export function TestBuilder({ testId }: Props) {
     else if (type === 'match') options = { pairs: [{ left: '', right: '' }, { left: '', right: '' }] };
     else if (type === 'ordering') options = { items: ['', ''] };
     else if (type === 'fill_blanks') options = { template: '', blanks: [] };
+    else if (type === 'scramble') options = { correctAnswer: '', unit: 'words' };
     else if (type === 'short_text') options = { correctAnswers: [] };
     else if (type === 'long_answer') options = { maxCharactersEnabled: false };
     else if (type === 'number') options = { correctValue: null };
@@ -2437,6 +2441,27 @@ function PreviewCanvas({
         template: opts.template ?? '',
         blanks: (opts.blanks ?? []).length,
         blankWidths: (opts.blanks ?? []).map(blank => Math.max(4, Math.min(32, (blank.answer ?? '').trim().length || 4))),
+      },
+    };
+  } else if (q.type === 'scramble') {
+    const opts = q.options as ScrambleOptions;
+    const unit = opts.unit === 'words' ? 'words' : 'letters';
+    const pieces = splitScrambleAnswer(opts.correctAnswer ?? '', unit);
+    previewQ = {
+      id: q.clientId, position: qIndex, type: 'scramble',
+      prompt: q.prompt || 'Question text…',
+      description: description || undefined,
+      media,
+      required: q.required,
+      options: {
+        // Builder preview keeps the natural order so the author can verify
+        // the canonical answer reads correctly. Production sanitize.ts
+        // shuffles via stableShuffle.
+        tiles: pieces.map((text, i) => ({
+          id: publicOptionId(q.clientId, 'scramble', i),
+          text,
+        })),
+        unit,
       },
     };
   } else if (q.type === 'long_answer') {

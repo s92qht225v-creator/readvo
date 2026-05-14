@@ -16,7 +16,8 @@ export type QuestionType =
   | 'true_false'
   | 'match'
   | 'ordering'
-  | 'fill_blanks';
+  | 'fill_blanks'
+  | 'scramble';
 
 export interface MultipleChoiceOptions {
   choices: string[];
@@ -130,6 +131,16 @@ export interface FillBlanksOptions {
   media?: QuestionMedia;
 }
 
+/** Scramble — student arranges shuffled tiles (letters or words) to form
+ *  the target string. `correctAnswer` is the canonical sentence/word; the
+ *  player splits it by the `unit` to produce tiles, then shuffles them
+ *  deterministically (stable per question id). */
+export interface ScrambleOptions {
+  correctAnswer: string;
+  unit: 'letters' | 'words';
+  media?: QuestionMedia;
+}
+
 export interface QuestionMedia {
   type: 'image' | 'gif' | 'video' | 'audio';
   url: string;
@@ -163,7 +174,8 @@ export type QuestionOptions =
   | TrueFalseOptions
   | MatchOptions
   | OrderingOptions
-  | FillBlanksOptions;
+  | FillBlanksOptions
+  | ScrambleOptions;
 
 export interface TestQuestion {
   id: string;
@@ -288,6 +300,16 @@ export interface PublicFillBlanksOptions {
   blankWidths?: number[];
 }
 
+export interface PublicScrambleTile {
+  id: string;
+  text: string;
+}
+export interface PublicScrambleOptions {
+  /** Pre-shuffled tiles (deterministic per question id). */
+  tiles: PublicScrambleTile[];
+  unit: 'letters' | 'words';
+}
+
 export interface PublicDropdownOptions {
   choices: PublicChoice[];
 }
@@ -324,6 +346,7 @@ export interface PublicQuestion {
     | PublicMatchOptions
     | PublicOrderingOptions
     | PublicFillBlanksOptions
+    | PublicScrambleOptions
     | PublicLongAnswerOptions
     | PublicNumberOptions
     | PublicDropdownOptions
@@ -374,6 +397,7 @@ export interface AnswerSubmission {
     matches?: string[];
     order?: string[];
     blanks?: string[];
+    tileIds?: string[];
   };
 }
 

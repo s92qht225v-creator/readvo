@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type {
   PublicQuestion, PublicMcOptions, PublicShortTextOptions, PublicPictureChoiceOptions,
-  PublicMatchOptions, PublicOrderingOptions, PublicFillBlanksOptions,
+  PublicMatchOptions, PublicOrderingOptions, PublicFillBlanksOptions, PublicScrambleOptions,
   PublicLongAnswerOptions, PublicNumberOptions, PublicDropdownOptions, PublicCheckboxOptions,
   PublicOpinionScaleOptions, PublicRatingOptions,
   AnswerSubmission,
@@ -11,6 +11,7 @@ import type {
 import { FillBlanksPlayer } from './renderers/FillBlanksRenderer';
 import { MatchPlayer } from './renderers/MatchRenderer';
 import { OrderingPlayer } from './renderers/OrderingRenderer';
+import { ScramblePlayer } from './renderers/ScrambleRenderer';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -325,6 +326,11 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   if (question.type === 'fill_blanks') {
     const opts = question.options as PublicFillBlanksOptions;
     return <FillBlanksPlayer template={opts.template} blanks={opts.blanks} blankWidths={opts.blankWidths} value={value} onChange={onChange} />;
+  }
+
+  if (question.type === 'scramble') {
+    const opts = question.options as PublicScrambleOptions;
+    return <ScramblePlayer tiles={opts.tiles ?? []} unit={opts.unit === 'words' ? 'words' : 'letters'} value={value} onChange={onChange} />;
   }
 
   if (question.type === 'short_text') {

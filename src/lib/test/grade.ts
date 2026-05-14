@@ -2,10 +2,11 @@ import type {
   TestQuestion, AnswerSubmission,
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
   TrueFalseOptions, MatchOptions, OrderingOptions, FillBlanksOptions,
+  ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
 } from './types';
-import { publicOptionId } from './sanitize';
+import { publicOptionId, splitScrambleAnswer } from './sanitize';
 
 const norm = (s: string) => s.trim().toLowerCase();
 
@@ -102,6 +103,23 @@ export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['val
       return (expected.alternates ?? []).some(a => norm(a) === subN);
     });
   }
+  if (question.type === 'scramble') {
+    const opts = question.options as ScrambleOptions;
+    const unit = opts.unit === 'words' ? 'words' : 'letters';
+    const expectedPieces = splitScrambleAnswer(opts.correctAnswer ?? '', unit);
+    if (expectedPieces.length === 0) return null;
+    const submittedIds = value.tileIds;
+    if (!Array.isArray(submittedIds) || submittedIds.length !== expectedPieces.length) return false;
+    // Rebuild submitted text from tile ids → original index → original piece.
+    const submittedPieces: string[] = [];
+    for (const id of submittedIds) {
+      const idx = scrambleIdToIndex(question.id, id, expectedPieces.length);
+      if (idx == null) return false;
+      submittedPieces.push(expectedPieces[idx] ?? '');
+    }
+    const joiner = unit === 'words' ? ' ' : '';
+    return norm(submittedPieces.join(joiner)) === norm(expectedPieces.join(joiner));
+  }
   return null;
 }
 
@@ -151,7 +169,23 @@ export function hasAnswer(question: TestQuestion, value: AnswerSubmission['value
       && value.blanks.length === need
       && value.blanks.every(s => typeof s === 'string' && s.trim().length > 0);
   }
+  if (question.type === 'scramble') {
+    const opts = question.options as ScrambleOptions;
+    const unit = opts.unit === 'words' ? 'words' : 'letters';
+    const need = splitScrambleAnswer(opts.correctAnswer ?? '', unit).length;
+    if (need === 0) return false;
+    return Array.isArray(value.tileIds)
+      && value.tileIds.length === need
+      && value.tileIds.every(id => typeof id === 'string' && id.length > 0);
+  }
   return false;
+}
+
+function scrambleIdToIndex(questionId: string, id: string, count: number): number | null {
+  for (let i = 0; i < count; i++) {
+    if (publicOptionId(questionId, 'scramble', i) === id) return i;
+  }
+  return null;
 }
 
 function submittedChoiceIndexes(questionId: string, value: AnswerSubmission['value']): number[] {

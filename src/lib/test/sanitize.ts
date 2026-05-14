@@ -1,14 +1,23 @@
 import type {
   TestQuestion, PublicQuestion,
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
-  MatchOptions, OrderingOptions, FillBlanksOptions,
+  MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
 } from './types';
 import { normalizeQuestionMedia } from './media';
 
-export function publicOptionId(questionId: string, kind: 'choice' | 'match-right' | 'ordering', index: number): string {
+export function publicOptionId(questionId: string, kind: 'choice' | 'match-right' | 'ordering' | 'scramble', index: number): string {
   return `opt_${stableHash(`${kind}:${questionId}:${index}`)}`;
+}
+
+/** Split a scramble target string into ordered tiles based on the chosen unit. */
+export function splitScrambleAnswer(correctAnswer: string, unit: 'letters' | 'words'): string[] {
+  const trimmed = (correctAnswer ?? '').trim();
+  if (!trimmed) return [];
+  if (unit === 'words') return trimmed.split(/\s+/);
+  // letters: keep visible characters, skip whitespace
+  return Array.from(trimmed).filter(ch => !/\s/.test(ch));
 }
 
 function stableHash(value: string): string {
@@ -309,6 +318,28 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
         template: opts.template ?? '',
         blanks: (opts.blanks ?? []).length,
         blankWidths: (opts.blanks ?? []).map(blank => answerWidthHint(blank.answer)),
+      },
+    };
+  }
+  if (q.type === 'scramble') {
+    const opts = q.options as ScrambleOptions;
+    const unit = opts.unit === 'words' ? 'words' : 'letters';
+    const pieces = splitScrambleAnswer(opts.correctAnswer ?? '', unit);
+    const tiles = pieces.map((text, i) => ({
+      id: publicOptionId(q.id, 'scramble', i),
+      text,
+    }));
+    return {
+      id: q.id,
+      position: q.position,
+      type: 'scramble',
+      prompt: q.prompt,
+      description: questionDescription(q.options),
+      media: questionMedia(q),
+      required: q.required,
+      options: {
+        tiles: stableShuffle(tiles, `${q.id}:scramble`),
+        unit,
       },
     };
   }
