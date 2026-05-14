@@ -99,20 +99,12 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                   width: 22, height: 22, borderRadius: 3,
-                  background: selected ? TEXT : '#fff',
-                  color: selected ? '#fff' : TEXT,
+                  background: '#fff',
+                  color: TEXT,
                   fontSize: 11, fontWeight: 700,
                   border: `1px solid ${TEXT}`,
                   flexShrink: 0,
-                }}>
-                  {selected ? (
-                    <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-                      <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ) : (
-                    LETTERS[i] ?? i + 1
-                  )}
-                </span>
+                }}>{LETTERS[i] ?? i + 1}</span>
               )}
               <span style={{ flex: 1 }}>{c.text}</span>
             </button>
