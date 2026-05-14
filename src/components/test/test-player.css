@@ -919,3 +919,39 @@
     border-radius: 3px !important;
   }
 }
+
+/* Dedicated checkbox question icon — guards against the qmedia-desktop and
+   qmedia-mobile layout rules that force span:first-child of
+   .test-question-option into a 20x20 letter-chip shape with a faint white
+   background. Specificity 0,3,0 plus !important beats those 0,2,0 layout
+   rules so the inline blue fill and white checkmark render correctly on
+   the dedicated checkbox question type. */
+.test-player__card .test-checkbox-option .test-checkbox-option__box,
+.tb-preview-card .test-checkbox-option .test-checkbox-option__box {
+  box-sizing: border-box !important;
+  width: 22px !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  padding: 0 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  border: 2px solid var(--test-theme-answer, #0445af) !important;
+  color: #fff !important;
+  font-size: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.test-player__card .test-checkbox-option[data-selected="true"] .test-checkbox-option__box,
+.tb-preview-card .test-checkbox-option[data-selected="true"] .test-checkbox-option__box {
+  background: var(--test-theme-answer, #0445af) !important;
+  border: 1px solid var(--test-theme-answer, #0445af) !important;
+}
+
+.test-player__card .test-checkbox-option .test-checkbox-option__box svg,
+.tb-preview-card .test-checkbox-option .test-checkbox-option__box svg {
+  width: 14px !important;
+  height: 14px !important;
+}

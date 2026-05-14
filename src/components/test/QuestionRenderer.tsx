@@ -235,13 +235,13 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   ? selectedIds.filter(id => id !== choice.id)
                   : [...selectedIds, choice.id],
               })}
-              className="test-question-option"
+              className="test-question-option test-checkbox-option"
               role="checkbox"
               aria-checked={selected}
               data-selected={selected ? 'true' : 'false'}
               style={checkboxButtonStyle}
             >
-              <span style={checkboxBoxStyle(selected)} aria-hidden="true">
+              <span className="test-checkbox-option__box" style={checkboxBoxStyle(selected)} aria-hidden="true">
                 {selected ? (
                   <svg width="14" height="14" viewBox="0 0 26 26" fill="none">
                     <path
