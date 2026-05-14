@@ -14821,11 +14821,12 @@ body {
   }
 
   .test-opinion-scale button {
-    flex: 1 1 0% !important;
-    max-width: calc(16.6667% - 5px) !important;
-    height: 56px !important;
-    min-width: 0 !important;
-    border-radius: 8px !important;
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    max-width: 44px !important;
+    min-width: 44px !important;
+    border-radius: 0 !important;
     border: none !important;
     box-shadow: rgba(1, 66, 172, 0.1) 0 0 0 1px inset !important;
     background: rgba(255, 255, 255, 0.6) !important;
