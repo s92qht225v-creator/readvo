@@ -289,6 +289,7 @@ export function TestBuilder({ testId }: Props) {
       prompt: q.prompt,
       options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
       required: q.required,
+      hidden: q.hidden === true,
     }));
     setQuestions(builderQs);
     setSavedSnapshot(JSON.stringify(builderQs));
@@ -414,6 +415,7 @@ export function TestBuilder({ testId }: Props) {
           prompt: q.prompt,
           options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>),
           required: q.required,
+          hidden: q.hidden === true,
         })),
       };
       const res = await fetch(`/api/tests/${testId}/questions`, {
@@ -438,6 +440,7 @@ export function TestBuilder({ testId }: Props) {
         prompt: q.prompt,
         options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
         required: q.required,
+        hidden: q.hidden === true,
       }));
       if (JSON.stringify(questionsRef.current) === sourceSnapshot) {
         setQuestions(next);
@@ -546,6 +549,13 @@ export function TestBuilder({ testId }: Props) {
       const nextIndex = Math.max(0, block.index > i ? block.index - 1 : block.index === i && i === questions.length - 1 ? i - 1 : block.index);
       return questions.length <= 1 ? { kind: 'end' } : { kind: 'question', index: nextIndex };
     });
+  };
+
+  const toggleHiddenQuestion = (i: number) => {
+    setQuestions(qs => qs.map((cur, idx) => (
+      idx === i ? { ...cur, hidden: !cur.hidden } : cur
+    )));
+    setOpenQuestionMenu(null);
   };
 
   const duplicateQuestion = (i: number) => {
@@ -1102,6 +1112,8 @@ export function TestBuilder({ testId }: Props) {
         <QuestionActionsMenu
           top={openQuestionMenu.top}
           left={openQuestionMenu.left}
+          isHidden={questions[openQuestionMenu.index]?.hidden === true}
+          onToggleHidden={() => toggleHiddenQuestion(openQuestionMenu.index)}
           onDuplicate={() => duplicateQuestion(openQuestionMenu.index)}
           onDelete={() => {
             const index = openQuestionMenu.index;
@@ -1229,10 +1241,11 @@ function SortableQuestionItem({
     zIndex: isDragging ? 40 : undefined,
   };
 
+  const isHidden = q.hidden === true;
   return (
     <li
       ref={setNodeRef}
-      className={`tb-left__item-wrap ${isDragging ? 'tb-left__item-wrap--dragging' : ''}`}
+      className={`tb-left__item-wrap ${isDragging ? 'tb-left__item-wrap--dragging' : ''} ${isHidden ? 'tb-left__item-wrap--hidden' : ''}`}
       style={style}
     >
       <button
@@ -1241,14 +1254,34 @@ function SortableQuestionItem({
         {...listeners}
         onClick={onSelect}
         className={`tb-left__item ${isActive ? 'tb-left__item--active' : ''}`}
-        aria-label={`Question ${index + 1}: ${q.prompt || 'Untitled question'}`}
+        aria-label={`Question ${index + 1}: ${q.prompt || 'Untitled question'}${isHidden ? ' (hidden)' : ''}`}
+        style={isHidden ? { opacity: 0.55 } : undefined}
       >
         <span className="tb-left__item-left">
           <TypeIcon type={q.type} />
         </span>
-        <span className={`tb-left__item-title ${!q.prompt ? 'tb-left__item-title--empty' : ''}`}>
+        <span className={`tb-left__item-title ${!q.prompt ? 'tb-left__item-title--empty' : ''}`} style={isHidden ? { textDecoration: 'line-through', textDecorationColor: 'rgba(15,23,42,0.35)' } : undefined}>
           {q.prompt || 'Untitled question'}
         </span>
+        {isHidden ? (
+          <span
+            aria-hidden="true"
+            style={{
+              marginLeft: 6,
+              flexShrink: 0,
+              fontSize: 10,
+              fontWeight: 600,
+              letterSpacing: 0.4,
+              textTransform: 'uppercase',
+              color: '#64748b',
+              background: '#e2e8f0',
+              padding: '2px 6px',
+              borderRadius: 4,
+            }}
+          >
+            Hidden
+          </span>
+        ) : null}
       </button>
       <button
         type="button"
@@ -1267,14 +1300,36 @@ function SortableQuestionItem({
   );
 }
 
-function QuestionActionsMenu({ top, left, onDuplicate, onDelete }: {
+function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate, onDelete }: {
   top: number;
   left: number;
+  isHidden: boolean;
+  onToggleHidden: () => void;
   onDuplicate: () => void;
   onDelete: () => void;
 }) {
   return (
     <div className="tb-left__menu" role="menu" style={{ top, left }} onClick={(e) => e.stopPropagation()}>
+      <button
+        type="button"
+        className="tb-left__menu-item"
+        role="menuitem"
+        onClick={onToggleHidden}
+      >
+        <span className="tb-left__menu-icon" aria-hidden="true">
+          {isHidden ? (
+            <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
+              <path d="M1.5 9s2.75-5 7.5-5 7.5 5 7.5 5-2.75 5-7.5 5S1.5 9 1.5 9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="9" cy="9" r="2.25" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          ) : (
+            <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
+              <path d="M3 3l12 12M7.4 7.4A2.25 2.25 0 0 0 10.6 10.6M5.5 5.5C3.4 6.9 1.9 9 1.9 9s2.75 5 7.1 5c1.4 0 2.65-.35 3.7-.85M8.1 4.05A8.7 8.7 0 0 1 9 4c4.75 0 7.5 5 7.5 5a14 14 0 0 1-2.2 2.7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          )}
+        </span>
+        {isHidden ? 'Unhide' : 'Hide'}
+      </button>
       <button
         type="button"
         className="tb-left__menu-item"

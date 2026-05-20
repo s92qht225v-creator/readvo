@@ -11,6 +11,7 @@ interface IncomingQuestion {
   prompt: string;
   options?: Record<string, unknown>;
   required?: boolean;
+  hidden?: boolean;
 }
 
 /**
@@ -78,6 +79,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       prompt,
       options: normalizeQuestionOptionsMedia(q.type, q.options ?? {}),
       required: q.required ?? true,
+      hidden: q.hidden === true,
     };
   });
 

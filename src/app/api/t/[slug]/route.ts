@@ -40,7 +40,9 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
     timer_enabled: !!test.timer_enabled,
     time_limit_seconds: test.time_limit_seconds,
     is_graded: test.is_graded,
-    questions: (questions ?? []).map((q: TestQuestion) => sanitizeQuestion(q)),
+    questions: (questions ?? [])
+      .filter((q: TestQuestion) => !q.hidden)
+      .map((q: TestQuestion) => sanitizeQuestion(q)),
   };
 
   return NextResponse.json({ test: publicTest });

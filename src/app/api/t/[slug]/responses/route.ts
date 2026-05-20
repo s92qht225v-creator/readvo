@@ -50,13 +50,17 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     return NextResponse.json({ error: 'duplicate' }, { status: 409 });
   }
 
-  // Load canonical questions, build lookup map
+  // Load canonical questions, build lookup map.
+  // Hidden questions are skipped — they don't reach the player, so they
+  // can't be answered and shouldn't enforce required-question checks.
   const { data: questions } = await admin
     .from('test_questions')
     .select('*')
     .eq('test_id', test.id);
   const qMap = new Map<string, TestQuestion>();
-  for (const q of (questions ?? []) as TestQuestion[]) qMap.set(q.id, q);
+  for (const q of (questions ?? []) as TestQuestion[]) {
+    if (!q.hidden) qMap.set(q.id, q);
+  }
 
   // Map submitted answers by question id (drop unknowns)
   const submitted = new Map<string, typeof body.answers[number]['value']>();

@@ -6,4 +6,7 @@ export interface BuilderQuestion {
   prompt: string;
   options: QuestionOptions;
   required: boolean;
+  /** Author-side toggle: hidden questions are kept in the builder
+   *  but skipped in the public player. Defaults to false. */
+  hidden?: boolean;
 }

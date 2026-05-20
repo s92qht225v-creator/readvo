@@ -185,6 +185,9 @@ export interface TestQuestion {
   prompt: string;
   options: QuestionOptions;
   required: boolean;
+  /** When true the question is excluded from the public player and
+   *  grading but kept in the builder so the author can restore it. */
+  hidden?: boolean;
   created_at: string;
 }
 
