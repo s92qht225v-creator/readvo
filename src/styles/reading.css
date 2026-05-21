@@ -3566,6 +3566,10 @@ body {
   margin-top: 0;
   line-height: 1.5;
   padding: 0 16px;
+  /* Override parent's --font-cjk inheritance: PingFang SC contains Cyrillic
+     glyphs but renders them at near-full-width, producing extreme letter
+     spacing in Russian translations. Force the project's default body font. */
+  font-family: var(--font-main), "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 .dialogue-reader .story__focus-translation {
