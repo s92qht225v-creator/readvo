@@ -412,20 +412,23 @@ export function DialogueRolePlay({
         setScores(p => [...p, result]);
         setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: 'correct' } }));
         setPhase('result_correct');
-        // Round 1: echo learner's line. Round 2: play app (B) response
+        // Round 1: skip the echo of the learner's own line and just move on.
+        // Round 2: play the app (next role's) line, then advance.
         if (round === 2 && currentAppUnit) {
-          speakFire(currentAppUnit.zh, currentAppUnit.audio_url);
+          playAudio(currentAppUnit.zh, currentAppUnit.audio_url).then(() => advanceUnit());
         } else {
-          speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url);
+          window.setTimeout(() => advanceUnit(), 700);
         }
       } else if (result === 'close') {
         setScores(p => [...p, result]);
         setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: 'close' } }));
         setPhase('result_close');
+        // Same flow as correct: skip the echo on round 1, play the app
+        // response on round 2, then advance.
         if (round === 2 && currentAppUnit) {
-          speakFire(currentAppUnit.zh, currentAppUnit.audio_url);
+          playAudio(currentAppUnit.zh, currentAppUnit.audio_url).then(() => advanceUnit());
         } else {
-          speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url);
+          window.setTimeout(() => advanceUnit(), 900);
         }
       } else {
         if (attempt === 1) {
