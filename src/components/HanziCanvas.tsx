@@ -25,6 +25,13 @@ interface Props {
   onComplete?: (mistakes: number) => void;
   revealAll?: number; // increment to trigger reveal; 0 = idle
   hidden?: boolean; // hide character outline (write from memory)
+  /**
+   * Increment to soft-erase the user's drawing without remounting the
+   * canvas. Clears the completed-strokes layer + the live input layer
+   * and resets stroke progress, but keeps the outline / strokes data
+   * intact so the user can keep practising the same character.
+   */
+  eraseSignal?: number;
   onPlayAudio?: () => void; // play pronunciation audio (unused, kept for API compat)
 }
 
@@ -193,7 +200,7 @@ function redrawCompleted(
 // Module-level cache: avoids re-fetching character data on revisit
 const strokeCache = new Map<string, StrokeData[]>();
 
-export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = false, onPlayAudio }: Props) {
+export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = false, eraseSignal = 0, onPlayAudio }: Props) {
   const [canvasSize, setCanvasSize] = useState(400);
   const [loading, setLoading] = useState(() => !strokeCache.get(char));
   const [loadError, setLoadError] = useState(false);
@@ -370,6 +377,36 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
       if (inputRafRef.current) cancelAnimationFrame(inputRafRef.current);
     };
   }, []);
+
+  // Soft-erase: clear the user's drawing (input + completed strokes)
+  // without remounting the canvas. Triggered when eraseSignal changes.
+  // Keeps strokesRef + bgRef (outline) intact so the user keeps
+  // practising the same character. Skipped on initial mount (0).
+  useEffect(() => {
+    if (eraseSignal === 0) return;
+    // Cancel any in-flight animations / fades that might paint after us.
+    if (animFrameRef.current) { cancelAnimationFrame(animFrameRef.current); animFrameRef.current = null; }
+    cancelAnimationFrame(hintDotRafRef.current);
+    if (fadeIntervalRef.current) { clearInterval(fadeIntervalRef.current); fadeIntervalRef.current = null; }
+    if (highlightTimerRef.current) { clearTimeout(highlightTimerRef.current); highlightTimerRef.current = null; }
+
+    // Reset progress + per-stroke state.
+    completedRef.current = 0;
+    mistakesRef.current = 0;
+    mistakesOnStrokeRef.current = 0;
+    isDrawingRef.current = false;
+    currentInputRef.current = [];
+    isDirtyRef.current = false;
+    animatingRef.current = false;
+    setCompletedCount(0);
+
+    // Wipe the user-drawn layers but leave the outline (bgRef) alone.
+    const size = sizeRef.current;
+    const dCtx = displayRef.current?.getContext('2d');
+    if (dCtx) dCtx.clearRect(0, 0, size, size);
+    const iCtx = inputRef.current?.getContext('2d');
+    if (iCtx) iCtx.clearRect(0, 0, size, size);
+  }, [eraseSignal]);
 
   // Master cleanup on unmount — cancel all async work
   useEffect(() => {

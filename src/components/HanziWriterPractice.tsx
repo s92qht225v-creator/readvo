@@ -81,6 +81,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   const [sessionIndex, setSessionIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [resetKey, setResetKey] = useState(0);
+  const [eraseSignal, setEraseSignal] = useState(0);
   const [showAnswer, setShowAnswer] = useState(0);
   const [hiddenMode, setHiddenMode] = useState(false);
   const eraseBtnRef = useRef<HTMLButtonElement>(null);
@@ -120,7 +121,8 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
   }, [sessionIndex, sessionQueue, charIndex, playWordAudio]);
 
   const handleErase = useCallback(() => {
-    setResetKey((k) => k + 1);
+    // Soft-clear: keep the outline visible, just wipe the user's drawing.
+    setEraseSignal((k) => k + 1);
     setShowAnswer(0);
   }, []);
 
@@ -326,6 +328,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 lang={lang}
                 revealAll={showAnswer}
                 hidden={hiddenMode}
+                eraseSignal={eraseSignal}
                 onComplete={() => { if (currentWord) playWordAudio(currentWord); }}
               />
             )}
