@@ -3034,9 +3034,6 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  /* Horizontal breathing room so wide pinyin syllables (yuàn, gōng, huan,
-     xiǎng…) don't crash into the neighbouring character's pinyin. */
-  padding-inline: 0.18em;
 }
 
 .dr-char-py {
@@ -3045,6 +3042,11 @@ body {
   line-height: 1.2;
   margin-bottom: 4px;
   white-space: nowrap;
+  /* Sideways breathing room so wide pinyin syllables (yuàn, gōng, huan…)
+     don't crash into the next character's pinyin. Applied to the pinyin
+     label itself so it widens the .dr-char column only when pinyin is
+     showing — with pinyin off the chars sit at natural CJK spacing. */
+  padding-inline: 0.18em;
 }
 
 .dr-char-py--empty {
