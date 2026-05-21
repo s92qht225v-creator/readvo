@@ -3028,6 +3028,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  /* Gap is overridden to 0 below when pinyin is off so character spacing
+     stays natural without ruby labels overhead. */
+  column-gap: 0.18em;
+}
+
+/* When pinyin is hidden, collapse the inter-character gap so CJK rendering
+   looks natural rather than artificially spaced out. */
+.dr-line-chars:not(:has(.dr-char-py)) {
+  column-gap: 0;
 }
 
 .dr-char {
@@ -3042,11 +3051,6 @@ body {
   line-height: 1.2;
   margin-bottom: 4px;
   white-space: nowrap;
-  /* Sideways breathing room so wide pinyin syllables (yuàn, gōng, huan…)
-     don't crash into the next character's pinyin. Applied to the pinyin
-     label itself so it widens the .dr-char column only when pinyin is
-     showing — with pinyin off the chars sit at natural CJK spacing. */
-  padding-inline: 0.18em;
 }
 
 .dr-char-py--empty {
