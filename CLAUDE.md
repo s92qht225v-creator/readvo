@@ -557,13 +557,13 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Used by**: `/api/stars`, `/api/subscription`, `/api/auth/session-check`, `/api/progress` — all low-risk read endpoints where local decode is sufficient
 
 ## Caching & ISR
-- **ISR (Incremental Static Regeneration)**: Top 4 pages use `revalidate = 3600` (1 hour) to reduce Vercel function invocations:
-  - `/{locale}` (homepage) — 255 invocations/day before ISR
-  - `/{locale}/chinese` (language page) — 151 invocations/day
-  - `/{locale}/blog` (blog list) — 93 invocations/day
-  - `/{locale}/blog/[slug]` (blog posts) — 68 invocations/day
-- **Total savings**: These 4 pages accounted for 567 invocations/day — the top cost drivers. After ISR, the first visitor per hour per locale triggers one server render; everyone else gets cached HTML with zero function invocations.
-- **Dynamic pages** (no ISR): Payment page (63 invocations/day) remains dynamic (`/{locale}/payment`) — checks subscription status per user
+- **ISR (Incremental Static Regeneration)**: Top 4 pages use `revalidate = 3600` (1 hour) to keep server-render cost low on the Hetzner box:
+  - `/{locale}` (homepage)
+  - `/{locale}/chinese` (language page)
+  - `/{locale}/blog` (blog list)
+  - `/{locale}/blog/[slug]` (blog posts)
+- After ISR, the first visitor per hour per locale triggers one server render; everyone else gets cached HTML.
+- **Dynamic pages** (no ISR): Payment page (`/{locale}/payment`) stays dynamic — checks subscription status per user
 - **Content pages**: Lesson, dialogue, flashcard, karaoke, writing, grammar pages use `generateStaticParams` for build-time generation
 
 ## Security Hardening

@@ -1,6 +1,6 @@
 # Blim Deployment Guide
 
-Production runs on a single Hetzner CPX22 VPS. Migrated off Vercel on 2026-05-09 because of overdue billing — flat $10/mo replaces variable function-invocation pricing.
+Production runs on a single Hetzner CPX22 VPS — flat $10/mo, no per-invocation pricing.
 
 ## TL;DR
 
@@ -373,9 +373,9 @@ No per-deploy, per-bandwidth, or per-function costs. The 20 TB monthly bandwidth
 
 ---
 
-## Migration history
+## History
 
-- **2026-05-09** Migrated off Vercel due to overdue billing. Provisioned CPX22, set up nginx + Let's Encrypt, cut DNS at ahost.uz, applied RLS policies, configured Supabase Google OAuth allowlist.
+- **2026-05-09** Provisioned CPX22, set up nginx + Let's Encrypt, cut DNS at ahost.uz, applied RLS policies, configured Supabase Google OAuth allowlist.
 
 ## Out-of-scope (deliberately not configured)
 

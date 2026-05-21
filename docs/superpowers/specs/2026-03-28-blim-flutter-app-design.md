@@ -291,7 +291,7 @@ Same three UI languages as web: Uzbek (default), Russian, English.
 - **AI:** OpenAI SDK, Groq SDK
 - **Payments:** Google Play Developer API (`googleapis`)
 - **File upload:** Multer (payment screenshots)
-- **Deployment:** Vercel / Railway / VPS
+- **Deployment:** Hetzner VPS (same box as web — see `docs/DEPLOYMENT.md`)
 
 ### Shared
 - **Database:** Supabase (project: miruwaeplbzfqmdwacsh) — same instance as web
