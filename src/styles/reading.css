@@ -13123,7 +13123,7 @@ body {
   .shenme-polished-card {
     min-height: 565px;
     padding: 20px;
-    border-radius: 22px;
+    border-radius: 3px;
   }
 
   .shenme-polished-card__title {

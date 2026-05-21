@@ -109,7 +109,7 @@ function FlashcardModeBar({ flashcardMode, setFlashcardMode }: { flashcardMode: 
     { id: 'uz-zh', label: ({ uz: "O'zbekcha → 汉字", ru: "Русский → 汉字", en: "English → 汉字" } as Record<string, string>)[language] },
   ];
   return (
-    <div style={{ display: 'flex', background: '#f5f5f8', borderRadius: 10, overflow: 'hidden', marginBottom: 14, border: '1px solid #e0e0e6' }}>
+    <div style={{ display: 'flex', background: '#f5f5f8', borderRadius: 3, overflow: 'hidden', marginBottom: 14, border: '1px solid #e0e0e6' }}>
       {modes.map((m) => (
         <button
           key={m.id}
