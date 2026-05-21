@@ -4924,7 +4924,7 @@ body {
   width: 100%;
   padding: 12px 40px 12px 42px;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   font-size: 0.95rem;
@@ -4970,7 +4970,7 @@ body {
 
 .dialogues__tag {
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 3px;
   border: 1px solid #ddd;
   background: white;
   color: #666;
@@ -5746,7 +5746,7 @@ body {
 
 .lp__hsk-pill {
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: 3px;
   border: 1.5px solid #e0e0e0;
   background: #fff;
   font-family: inherit;
