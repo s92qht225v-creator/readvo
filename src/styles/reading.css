@@ -2475,7 +2475,7 @@ body {
 .story__dialogue-text ruby {
   ruby-position: over;
   ruby-align: center;
-  margin: 0 0.15em;
+  margin: 0 0.28em;
 }
 
 .story__dialogue-text rt {
@@ -2500,7 +2500,7 @@ body {
 .story__text ruby {
   ruby-position: over;
   ruby-align: center;
-  margin: 0 0.15em;
+  margin: 0 0.28em;
 }
 
 .story__text rt {
