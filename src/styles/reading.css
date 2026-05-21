@@ -3020,8 +3020,17 @@ body {
   min-width: 28px;
   flex-shrink: 0;
   text-align: right;
-  align-self: flex-end;
-  padding-bottom: 2px;
+  /* Align to the top of the line so the label always sits beside the
+     FIRST visual row of characters, not the last one (which is what
+     flex-end did when long sentences wrapped). The margin-top skips past
+     the pinyin label that sits above the first character. */
+  align-self: flex-start;
+  margin-top: 1em;
+}
+
+/* No pinyin → no extra offset; speaker sits flush with the character row. */
+.dr-line-main:not(:has(.dr-char-py)) .dr-line-speaker {
+  margin-top: 0;
 }
 
 .dr-line-chars {
