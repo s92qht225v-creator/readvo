@@ -3034,6 +3034,9 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  /* Horizontal breathing room so wide pinyin syllables (yuàn, gōng, huan,
+     xiǎng…) don't crash into the neighbouring character's pinyin. */
+  padding-inline: 0.18em;
 }
 
 .dr-char-py {
