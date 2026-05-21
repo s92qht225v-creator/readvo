@@ -361,20 +361,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                 dialogue.sections.map(section => (
                   <div key={section.id} className="dr-lines">
                     {section.sentences.map(s => {
-                      const rawPairs = alignPinyinToText(s.text_original, s.pinyin);
-                      // Glue trailing CJK punctuation onto the preceding
-                      // character so a comma/period/?/! never wraps alone
-                      // onto its own line when the user scales up the font.
-                      const PUNCT_RE = /^[，。？！、,.;:…—)）"」』]+$/;
-                      const pairs: Array<{ char: string; pinyin?: string; trailing?: string }> = [];
-                      for (const p of rawPairs) {
-                        if (PUNCT_RE.test(p.char) && pairs.length > 0) {
-                          const prev = pairs[pairs.length - 1];
-                          prev.trailing = (prev.trailing ?? '') + p.char;
-                        } else {
-                          pairs.push({ char: p.char, pinyin: p.pinyin });
-                        }
-                      }
+                      const pairs = alignPinyinToText(s.text_original, s.pinyin);
                       const isActive = displaySentenceId === s.id;
                       const isPlaying2 = audioSentenceId === s.id;
                       return (
@@ -401,10 +388,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                                     {showPinyin && !pair.pinyin && !isPunct && (
                                       <div className="dr-char-py dr-char-py--empty"> </div>
                                     )}
-                                    <div className="dr-char-zh">
-                                      {pair.char}
-                                      {pair.trailing ? <span className="dr-char-zh-punct">{pair.trailing}</span> : null}
-                                    </div>
+                                    <div className="dr-char-zh">{pair.char}</div>
                                   </div>
                                 );
                               })}
