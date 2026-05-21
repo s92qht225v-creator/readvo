@@ -263,19 +263,39 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
   const grammarNotes = dialogue.grammarNotes ?? [];
 
-  // Extract DialogueLine[] for role-play practice
-  const rolePlayLines: DialogueLine[] = useMemo(() =>
-    allSentences
-      .filter(s => s.speaker === 'A' || s.speaker === 'B')
-      .map(s => ({
-        speaker: s.speaker as 'A' | 'B',
-        zh: s.text_original,
-        pinyin: s.pinyin,
-        uz: language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation,
-        audio_url: s.audio_url,
-      })),
-    [allSentences, language]
-  );
+  // Extract DialogueLine[] for role-play practice. Merge consecutive
+  // sentences from the same speaker so one A or B turn becomes one chat
+  // bubble even when the JSON splits the turn across multiple sentence
+  // entries. getTestUnits inside DialogueRolePlay re-splits on punctuation
+  // so per-sentence grading still works.
+  const rolePlayLines: DialogueLine[] = useMemo(() => {
+    const filtered = allSentences.filter(s => s.speaker === 'A' || s.speaker === 'B');
+    const trOf = (s: typeof filtered[number]) =>
+      language === 'ru' ? s.text_translation_ru
+      : language === 'en' ? (s.text_translation_en || s.text_translation)
+      : s.text_translation;
+    const merged: DialogueLine[] = [];
+    for (const s of filtered) {
+      const last = merged[merged.length - 1];
+      if (last && last.speaker === s.speaker) {
+        last.zh = `${last.zh}${s.text_original}`;
+        last.pinyin = `${last.pinyin} ${s.pinyin}`.trim();
+        last.uz = `${last.uz} ${trOf(s)}`.trim();
+        // Keep the existing audio_url; first sentence's audio (when
+        // present) drives the app-line playback for the whole bubble.
+        last.audio_url = last.audio_url ?? s.audio_url;
+      } else {
+        merged.push({
+          speaker: s.speaker as 'A' | 'B',
+          zh: s.text_original,
+          pinyin: s.pinyin,
+          uz: trOf(s),
+          audio_url: s.audio_url,
+        });
+      }
+    }
+    return merged;
+  }, [allSentences, language]);
 
   if (authLoading) return <div className="loading-spinner" />;
   const showPaywall = trial?.isTrialExpired;
