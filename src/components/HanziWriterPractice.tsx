@@ -345,7 +345,9 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 setShowAnswer(0);
               })}
             >
-              {({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]}
+              {hiddenMode
+                ? ({ uz: 'Ochish', ru: 'Открыть', en: 'Unhide' } as Record<string, string>)[lang]
+                : ({ uz: 'Yashirish', ru: 'Скрыть', en: 'Hide' } as Record<string, string>)[lang]}
             </button>
             <button
               ref={showBtnRef}
