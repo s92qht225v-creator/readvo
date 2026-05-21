@@ -27,7 +27,7 @@ const TAGS: Record<string, { uz: string; ru: string; en: string }> = {
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
 
-type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar' | 'tests';
+type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar';
 
 const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] = [
   { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог', label_en: 'Dialogues' },
@@ -35,10 +35,9 @@ const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] =
   { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
   { id: 'karaoke', label: 'KTV' },
   { id: 'grammar', label: 'Grammatika', label_ru: 'Грамматика', label_en: 'Grammar' },
-  { id: 'tests', label: 'Test', label_ru: 'Тесты', label_en: 'Tests' },
 ];
 
-const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar', 'tests'];
+const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar'];
 
 const grammarItems = [
   { char: '什么', pinyin: 'shénme', href: '/chinese/hsk1/grammar/shenme', translation: 'nima?', translation_ru: 'что?', translation_en: 'what?', color: '#dc2626', active: true },
@@ -912,12 +911,6 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
             </>
           );
         })()}
-
-        {activeTab === 'tests' && (
-          <div className="lang-page__placeholder">
-            <p className="lang-page__placeholder-text">{({ uz: 'Tez kunda...', ru: 'Скоро...', en: 'Coming soon...' } as Record<string, string>)[language]}</p>
-          </div>
-        )}
 
       </section>
 
