@@ -109,26 +109,77 @@ function toSimplified(str: string): string {
 }
 
 // ── Audio helper ──
-function playAudio(text: string, audioUrl?: string): Promise<void> {
-  return new Promise(resolve => {
-    const url = audioUrl || `/audio/hsk1/grammar/${encodeURIComponent(text)}.mp3`;
-    const audio = new Audio(url);
-    audio.onended = () => resolve();
-    audio.onerror = () => {
-      if ('speechSynthesis' in window) {
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'zh-CN'; u.rate = 0.85;
-        u.onend = () => resolve();
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(u);
-      } else {
-        resolve();
-      }
-    };
-    audio.play().catch(() => {
-      audio.onerror?.(new Event('error'));
+// Module-level cache of resolved playable URLs (Supabase MiMo cache or
+// blob URLs) so the same line doesn't hit the TTS API twice in one session.
+const mimoCache = new Map<string, string>();
+
+async function fetchMimoUrl(text: string): Promise<string | null> {
+  const cached = mimoCache.get(text);
+  if (cached) return cached;
+  try {
+    const res = await fetch('/api/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text }),
     });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.url) {
+      mimoCache.set(text, data.url);
+      return data.url;
+    }
+    if (data.audio) {
+      const binary = atob(data.audio);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      const blob = new Blob([bytes], { type: 'audio/wav' });
+      const url = URL.createObjectURL(blob);
+      mimoCache.set(text, url);
+      return url;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function playUrl(url: string): Promise<boolean> {
+  return new Promise(resolve => {
+    const audio = new Audio(url);
+    audio.onended = () => resolve(true);
+    audio.onerror = () => resolve(false);
+    audio.play().catch(() => resolve(false));
   });
+}
+
+function playSpeechSynthesis(text: string): Promise<void> {
+  return new Promise(resolve => {
+    if (!('speechSynthesis' in window)) { resolve(); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'zh-CN'; u.rate = 0.85;
+    u.onend = () => resolve();
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(u);
+  });
+}
+
+// Playback order:
+// 1. Caller-supplied audioUrl (Supabase per-sentence MP3, when the
+//    dialogue JSON has one).
+// 2. MiMo TTS via /api/tts — generated once per Chinese string and
+//    cached in Supabase Storage for instant replay.
+// 3. Browser SpeechSynthesis fallback if MiMo is unconfigured or down.
+async function playAudio(text: string, audioUrl?: string): Promise<void> {
+  if (audioUrl) {
+    const ok = await playUrl(audioUrl);
+    if (ok) return;
+  }
+  const mimoUrl = await fetchMimoUrl(text);
+  if (mimoUrl) {
+    const ok = await playUrl(mimoUrl);
+    if (ok) return;
+  }
+  await playSpeechSynthesis(text);
 }
 
 function speakFire(text: string, audioUrl?: string) {
