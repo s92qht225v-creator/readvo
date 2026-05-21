@@ -360,10 +360,18 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
               ) : (
                 dialogue.sections.map(section => (
                   <div key={section.id} className="dr-lines">
-                    {section.sentences.map(s => {
+                    {section.sentences.map((s, sentenceIdx) => {
                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
                       const isActive = displaySentenceId === s.id;
                       const isPlaying2 = audioSentenceId === s.id;
+                      // Only show the speaker label on the first sentence of
+                      // a same-speaker run — when an author splits one turn
+                      // into multiple sentences (e.g. "你妈妈呢？她也在医院
+                      // 工作吗？") the follow-up sentences leave the label
+                      // slot empty so it doesn't look like a fresh speaker
+                      // turn.
+                      const prev = section.sentences[sentenceIdx - 1];
+                      const showSpeaker = !!s.speaker && (!prev || prev.speaker !== s.speaker);
                       return (
                         <div
                           key={s.id}
@@ -372,7 +380,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                         >
                           <div className="dr-line-main">
                             {s.speaker && (
-                              <div className="dr-line-speaker">{s.speaker}:</div>
+                              <div className="dr-line-speaker" style={showSpeaker ? undefined : { visibility: 'hidden' }}>{s.speaker}:</div>
                             )}
                             <div ref={s.id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
                               {pairs.map((pair, ci) => {
