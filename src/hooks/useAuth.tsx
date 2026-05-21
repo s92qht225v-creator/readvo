@@ -69,12 +69,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setSubscription(null);
         setSubscriptionChecked(false);
       }
+      // Keep the server-side auth cookie in sync with the client session on
+      // every event (INITIAL_SESSION, SIGNED_IN, TOKEN_REFRESHED, SIGNED_OUT).
+      // Without this, returning visitors whose Supabase session is restored
+      // from localStorage have no cookie and the middleware bounces them to
+      // /login on protected routes.
+      if (newUser) {
+        document.cookie = 'blim-auth=1; path=/; max-age=31536000; SameSite=Lax';
+      } else {
+        document.cookie = 'blim-auth=; path=/; max-age=0; SameSite=Lax';
+      }
       // Skip session checks for 60s after login to avoid race conditions
       if (_event === 'SIGNED_IN') {
         loginGrace.current = true;
         setTimeout(() => { loginGrace.current = false; }, 60_000);
-        // Set auth cookie for server-side middleware protection
-        document.cookie = 'blim-auth=1; path=/; max-age=31536000; SameSite=Lax';
 
         // Register nonce for OAuth providers (Google) that don't have a custom callback
         // Telegram sets nonce BEFORE setSession, so it already has one by now
@@ -110,6 +118,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (!newUser) {
         setSubscription(null);
         setSubscriptionChecked(false);
+        document.cookie = 'blim-auth=; path=/; max-age=0; SameSite=Lax';
+      } else {
+        document.cookie = 'blim-auth=1; path=/; max-age=31536000; SameSite=Lax';
       }
     });
 
