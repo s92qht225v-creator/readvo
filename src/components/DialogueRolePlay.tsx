@@ -408,27 +408,23 @@ export function DialogueRolePlay({
       }
       const result = (data.result ?? 'wrong') as Score;
       const revealKey = `${round}_${unitIndex}`;
-      if (result === 'correct') {
+      if (result === 'correct' || result === 'close') {
         setScores(p => [...p, result]);
-        setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: 'correct' } }));
-        setPhase('result_correct');
-        // Round 1: skip the echo of the learner's own line and just move on.
-        // Round 2: play the app (next role's) line, then advance.
+        setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: result } }));
+        setPhase(result === 'correct' ? 'result_correct' : 'result_close');
+        // Round 1: skip echoing the learner's own line. If this is the
+        // last learner unit and the dialogue has a trailing app turn
+        // (app has more units than learner), play it before advancing
+        // so the conversation finishes naturally.
+        // Round 2: app plays its next response after the learner answers.
+        const isLast = unitIndex + 1 >= learnerUnits.length;
+        const trailingApp = round === 1 && isLast ? appUnits[unitIndex + 1] : null;
         if (round === 2 && currentAppUnit) {
           playAudio(currentAppUnit.zh, currentAppUnit.audio_url).then(() => advanceUnit());
+        } else if (trailingApp) {
+          playAudio(trailingApp.zh, trailingApp.audio_url).then(() => advanceUnit());
         } else {
-          window.setTimeout(() => advanceUnit(), 700);
-        }
-      } else if (result === 'close') {
-        setScores(p => [...p, result]);
-        setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: 'close' } }));
-        setPhase('result_close');
-        // Same flow as correct: skip the echo on round 1, play the app
-        // response on round 2, then advance.
-        if (round === 2 && currentAppUnit) {
-          playAudio(currentAppUnit.zh, currentAppUnit.audio_url).then(() => advanceUnit());
-        } else {
-          window.setTimeout(() => advanceUnit(), 900);
+          window.setTimeout(() => advanceUnit(), result === 'correct' ? 700 : 900);
         }
       } else {
         if (attempt === 1) {
