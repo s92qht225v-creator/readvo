@@ -71,8 +71,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 export default async function ChinesePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [dialogues, deck, lessonInfos] = await Promise.all([
+  const [dialogues, dialoguesHsk2, deck, lessonInfos] = await Promise.all([
     loadDialoguesForBook('hsk1'),
+    loadDialoguesForBook('hsk2'),
     loadFlashcardDeck('hsk1'),
     getLessonsWithInfo(),
   ]);
@@ -120,6 +121,7 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
       <Suspense>
         <LanguagePage
           dialogues={dialogues}
+          dialoguesHsk2={dialoguesHsk2}
           flashcardLessons={flashcardLessons}
           writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
             const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';

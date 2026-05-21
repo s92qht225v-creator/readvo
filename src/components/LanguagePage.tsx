@@ -306,6 +306,7 @@ interface WritingSetMeta {
 
 interface Props {
   dialogues: DialogueInfo[];
+  dialoguesHsk2?: DialogueInfo[];
   flashcardLessons?: FlashcardLesson[];
   writingSets?: WritingSetMeta[];
   writingSetsHsk2?: WritingSetMeta[];
@@ -316,7 +317,7 @@ interface Props {
   writingSetsHsk6?: WritingSetMeta[];
 }
 
-export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
+export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const { getStars: getGrammarStars } = useStars('grammar');
@@ -333,6 +334,8 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
+  const initialDialogueHsk = searchParams.get('dialhsk') === '2' ? '2' : '1';
+  const [dialogueHskLevel, setDialogueHskLevel] = useState<'1' | '2'>(initialDialogueHsk as '1' | '2');
   const [bookmarks, setBookmarks] = useState<Set<string>>(() => {
     try {
       const saved = typeof window !== 'undefined' ? localStorage.getItem(BOOKMARK_KEY) : null;
@@ -394,11 +397,13 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
     });
   }, []);
 
+  const activeDialogues = dialogueHskLevel === '2' ? dialoguesHsk2 : dialogues;
+
   const availableTags = useMemo(() => {
     const tagSet = new Set<string>();
-    dialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
+    activeDialogues.forEach((d) => { if (d.tag) tagSet.add(d.tag); });
     return Object.keys(TAGS).filter((t) => tagSet.has(t));
-  }, [dialogues]);
+  }, [activeDialogues]);
 
   // Meta Pixel: debounced search tracking
   useEffect(() => {
@@ -409,7 +414,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
   }, [search, topicSearch, writingSearch, grammarSearch]);
 
   const filteredDialogues = useMemo(() => {
-    let result = dialogues;
+    let result = activeDialogues;
     if (showBookmarked) result = result.filter((d) => bookmarks.has(d.id));
     if (activeTag) result = result.filter((d) => d.tag === activeTag);
     const q = search.trim().toLowerCase();
@@ -419,7 +424,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
       d.titleTranslation.toLowerCase().includes(q)
     );
     return result;
-  }, [search, dialogues, activeTag, showBookmarked, bookmarks]);
+  }, [search, activeDialogues, activeTag, showBookmarked, bookmarks]);
 
   if (isLoading) return <div className="loading-spinner" />;
 
@@ -504,12 +509,14 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
         <div className={`lp__seg-bar${activeTab === 'flashcards' ? ' lp__seg-bar--col' : ''}`}>
           <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues' || activeTab === 'grammar' || activeTab === 'flashcards') ? ' lp__hsk-pills--grid' : ''}`}>
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
-              const hasContent = lv === 'HSK 1' || (activeTab === 'flashcards' && flashcardSubTab === 'lessons' && (lv === 'HSK 2' || lv === 'HSK 3')) || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6'));
+              const hasContent = lv === 'HSK 1' || (activeTab === 'flashcards' && flashcardSubTab === 'lessons' && (lv === 'HSK 2' || lv === 'HSK 3')) || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6')) || (activeTab === 'dialogues' && lv === 'HSK 2' && dialoguesHsk2.length > 0);
               const isActive = activeTab === 'flashcards'
                 ? (flashcardSubTab === 'lessons' && ((lv === 'HSK 1' && flashcardHskLevel === '1') || (lv === 'HSK 2' && flashcardHskLevel === '2') || (lv === 'HSK 3' && flashcardHskLevel === '3')))
                 : activeTab === 'writing' && hskVersion === '2.0'
                   ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3') || (lv === 'HSK 4' && writingHskLevel === '4') || (lv === 'HSK 5' && writingHskLevel === '5') || (lv === 'HSK 6' && writingHskLevel === '6')
-                  : hasContent;
+                  : activeTab === 'dialogues'
+                    ? (lv === 'HSK 1' && dialogueHskLevel === '1') || (lv === 'HSK 2' && dialogueHskLevel === '2')
+                    : hasContent;
               return (
                 <button
                   key={lv}
@@ -523,6 +530,11 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
                       }
                       if (activeTab === 'writing' && hskVersion === '2.0') {
                         setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1');
+                      }
+                      if (activeTab === 'dialogues') {
+                        setDialogueHskLevel(lv === 'HSK 2' ? '2' : '1');
+                        setActiveTag(null);
+                        setShowBookmarked(false);
                       }
                     }
                   }}
@@ -605,7 +617,7 @@ export function LanguagePage({ dialogues, flashcardLessons = [], writingSets = [
             {/* Dialogue cards */}
             <div className="home__lessons">
               {filteredDialogues.map((d) => (
-                <Link key={d.id} href={`/chinese/hsk1/dialogues/${d.slug}`} prefetch={false} className="dialogue-card">
+                <Link key={d.id} href={`/chinese/hsk${dialogueHskLevel}/dialogues/${d.slug}`} prefetch={false} className="dialogue-card">
                   <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>
                   <div className="dialogue-card__content">
                     <div className="dialogue-card__text">
