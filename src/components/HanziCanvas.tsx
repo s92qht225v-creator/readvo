@@ -313,7 +313,18 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   // Draw background (outline + crosshair) — retina-aware
   // useLayoutEffect: must run BEFORE paint so canvas is initialized before user can interact
   useLayoutEffect(() => {
-    if (loading || !bgRef.current || strokesRef.current.length === 0) return;
+    if (loading || !bgRef.current) return;
+    // Hydrate strokesRef from cache synchronously here: the regular
+    // load-data useEffect only fires AFTER paint, so on a key-driven
+    // remount of a cached character strokesRef would still be empty
+    // and the outline draw would be skipped. Reading from strokeCache
+    // here ensures the outline reappears whenever Hide → Unhide
+    // toggles cause a remount.
+    if (strokesRef.current.length === 0) {
+      const cached = strokeCache.get(char);
+      if (cached) strokesRef.current = cached;
+    }
+    if (strokesRef.current.length === 0) return;
     const ctx = setupCanvas(bgRef.current, canvasSize);
     if (!ctx) return;
 
@@ -340,7 +351,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
         drawSVGPath(ctx, s.path, canvasSize, '#c8b89a', 0.45);
       });
     }
-  }, [loading, canvasSize, setupCanvas, hidden]);
+  }, [loading, canvasSize, setupCanvas, hidden, char]);
 
   // Set up display and input canvases for retina
   // useLayoutEffect: must run BEFORE paint so DPR transform is ready before user draws
