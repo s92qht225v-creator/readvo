@@ -358,60 +358,71 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                   <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
                 </div>
               ) : (
-                dialogue.sections.map(section => (
-                  <div key={section.id} className="dr-lines">
-                    {section.sentences.map((s, sentenceIdx) => {
-                      const pairs = alignPinyinToText(s.text_original, s.pinyin);
-                      const isActive = displaySentenceId === s.id;
-                      const isPlaying2 = audioSentenceId === s.id;
-                      // Only show the speaker label on the first sentence of
-                      // a same-speaker run — when an author splits one turn
-                      // into multiple sentences (e.g. "你妈妈呢？她也在医院
-                      // 工作吗？") the follow-up sentences leave the label
-                      // slot empty so it doesn't look like a fresh speaker
-                      // turn.
-                      const prev = section.sentences[sentenceIdx - 1];
-                      const showSpeaker = !!s.speaker && (!prev || prev.speaker !== s.speaker);
-                      return (
-                        <div
-                          key={s.id}
-                          className={`dr-line ${isActive ? 'dr-line--active' : ''} ${isPlaying2 ? 'dr-line--playing' : ''}`}
-                          onClick={() => handleSentenceClick(s.id)}
-                        >
-                          <div className="dr-line-main">
-                            {s.speaker && (
-                              <div className="dr-line-speaker" style={showSpeaker ? undefined : { visibility: 'hidden' }}>{s.speaker}:</div>
+                dialogue.sections.map(section => {
+                  // Group consecutive sentences that share a speaker so
+                  // they flow as one wrapping row of characters instead
+                  // of breaking onto a new line per sentence.
+                  const groups: Sentence[][] = [];
+                  for (const s of section.sentences) {
+                    const last = groups[groups.length - 1];
+                    if (last && last[0].speaker && last[0].speaker === s.speaker) last.push(s);
+                    else groups.push([s]);
+                  }
+                  return (
+                    <div key={section.id} className="dr-lines">
+                      {groups.map((group, gi) => {
+                        const speaker = group[0].speaker;
+                        return (
+                          <div key={`${section.id}-g${gi}`} className="dr-line">
+                            <div className="dr-line-main">
+                              {speaker && (
+                                <div className="dr-line-speaker">{speaker}:</div>
+                              )}
+                              <div ref={group[0].id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
+                                {group.map((s, si) => {
+                                  const pairs = alignPinyinToText(s.text_original, s.pinyin);
+                                  const sActive = displaySentenceId === s.id;
+                                  const sPlaying = audioSentenceId === s.id;
+                                  return pairs.map((pair, ci) => {
+                                    const isPunct = /[，。？！、,.\s]/.test(pair.char);
+                                    return (
+                                      <div
+                                        key={`${si}-${ci}`}
+                                        className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
+                                        onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id); }}
+                                      >
+                                        {showPinyin && pair.pinyin && (
+                                          <div className="dr-char-py">{pair.pinyin}</div>
+                                        )}
+                                        {showPinyin && !pair.pinyin && !isPunct && (
+                                          <div className="dr-char-py dr-char-py--empty"> </div>
+                                        )}
+                                        <div className="dr-char-zh">{pair.char}</div>
+                                      </div>
+                                    );
+                                  });
+                                })}
+                              </div>
+                            </div>
+                            {showTranslation && (
+                              <div className="dr-line-tr">
+                                {group.map((s, si) => {
+                                  const tr = language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation;
+                                  const isActive = displaySentenceId === s.id;
+                                  return (
+                                    <span key={si} style={isActive ? { color: '#dc2626' } : undefined}>
+                                      {si > 0 ? ' ' : ''}{tr}
+                                    </span>
+                                  );
+                                })}
+                              </div>
                             )}
-                            <div ref={s.id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
-                              {pairs.map((pair, ci) => {
-                                const isPunct = /[，。？！、,.\s]/.test(pair.char);
-                                return (
-                                  <div
-                                    key={ci}
-                                    className="dr-char"
-                                  >
-                                    {showPinyin && pair.pinyin && (
-                                      <div className="dr-char-py">{pair.pinyin}</div>
-                                    )}
-                                    {showPinyin && !pair.pinyin && !isPunct && (
-                                      <div className="dr-char-py dr-char-py--empty"> </div>
-                                    )}
-                                    <div className="dr-char-zh">{pair.char}</div>
-                                  </div>
-                                );
-                              })}
-                            </div>
                           </div>
-                          {showTranslation && (
-                            <div className="dr-line-tr">
-                              {language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))
+                        );
+                      })}
+                    </div>
+                  );
+                })
               )}
             </div>
 
