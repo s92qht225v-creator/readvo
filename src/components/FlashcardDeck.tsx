@@ -263,11 +263,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                 <span>{Math.min(currentIndex + 1, totalCards)} / {totalCards}</span>
                 <span>{pct}%</span>
               </div>
-              <div style={{ height: 4, background: '#f5f5f8', borderRadius: 4, overflow: 'hidden' }}>
+              <div style={{ height: 4, background: '#f5f5f8', borderRadius: 3, overflow: 'hidden' }}>
                 <div style={{
                   height: '100%',
                   background: 'linear-gradient(90deg, #dc2626, #f87171)',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   width: `${pct}%`,
                   transition: 'width 0.3s',
                 }} />
@@ -278,7 +278,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'center' }}>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 6,
-                background: '#fee2e2', borderRadius: 8, padding: '5px 12px',
+                background: '#fee2e2', borderRadius: 3, padding: '5px 12px',
               }}>
                 <span style={{ fontSize: 12, color: '#ef4444' }}>✗</span>
                 <span style={{ fontSize: 13, fontWeight: 600, color: '#ef4444' }}>{unknownIds.size}</span>
@@ -286,7 +286,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               <div style={{ fontSize: 11, color: '#ccc' }}>{({ uz: '← suring →', ru: '← листать →', en: '← swipe →' } as Record<string, string>)[language]}</div>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 6,
-                background: '#dcfce7', borderRadius: 8, padding: '5px 12px',
+                background: '#dcfce7', borderRadius: 3, padding: '5px 12px',
               }}>
                 <span style={{ fontSize: 13, fontWeight: 600, color: '#16a34a' }}>{knownIds.size}</span>
                 <span style={{ fontSize: 12, color: '#16a34a' }}>✓</span>
@@ -311,7 +311,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     right: dragX < -SWIPE_THRESHOLD ? 16 : 'auto',
                     zIndex: 10,
                     padding: '6px 16px',
-                    borderRadius: 8,
+                    borderRadius: 3,
                     background: swipeBg,
                     border: `2px solid ${swipeBorder}`,
                     fontSize: 13,
@@ -339,7 +339,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     position: 'absolute', width: '100%', height: '100%',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
-                    background: '#fff', borderRadius: 16,
+                    background: '#fff', borderRadius: 3,
                     border: '1px solid #e0e0e6',
                     boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                     display: 'flex', flexDirection: 'column',
@@ -376,7 +376,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                     WebkitBackfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)',
                     background: 'linear-gradient(135deg, #dc2626, #b91c1c)',
-                    borderRadius: 16,
+                    borderRadius: 3,
                     boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
                     display: 'flex', flexDirection: 'column',
                     alignItems: 'center', justifyContent: 'center', padding: 20,
@@ -416,7 +416,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               <button
                 onClick={handleUnknown}
                 style={{
-                  flex: 1, padding: 12, border: '2px solid #fca5a5', borderRadius: 10,
+                  flex: 1, padding: 12, border: '2px solid #fca5a5', borderRadius: 3,
                   background: '#fff', color: '#ef4444', fontSize: 14, fontWeight: 600,
                   cursor: 'pointer', fontFamily: 'inherit',
                 }}
@@ -427,7 +427,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               <button
                 onClick={handleKnow}
                 style={{
-                  flex: 1, padding: 12, border: '2px solid #86efac', borderRadius: 10,
+                  flex: 1, padding: 12, border: '2px solid #86efac', borderRadius: 3,
                   background: '#fff', color: '#16a34a', fontSize: 14, fontWeight: 600,
                   cursor: 'pointer', fontFamily: 'inherit',
                 }}
