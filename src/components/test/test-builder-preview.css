@@ -192,7 +192,7 @@
 
 .tb-preview-card--mobile-centered .qmedia-mobile-split > .qmedia-content > .qmedia-header,
 .tb-preview-card--mobile-centered .qmedia-mobile-split > .qmedia-content > .qmedia-answer {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }
@@ -238,7 +238,7 @@
 .tb-preview-card--mobile-centered .qmedia-mobile-wallpaper > .qmedia-content {
   display: grid !important;
   gap: 18px !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   padding: 0 !important;
   background: transparent !important;
@@ -247,14 +247,14 @@
 
 .tb-preview-card--mobile-centered .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-header,
 .tb-preview-card--mobile-centered .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-answer {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
 }
 
 .tb-preview-card--mobile-centered .test-question-options {
   display: grid !important;
   gap: 7px !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
 }
 
@@ -262,7 +262,7 @@
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   height: 37px !important;
   min-height: 37px !important;
@@ -304,7 +304,7 @@
 .tb-preview-card--mobile-centered .test-short-answer,
 .tb-preview-card--mobile-centered .test-long-answer {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   border-radius: 1px !important;
   background: #f3f5ff !important;
@@ -339,7 +339,7 @@
 .tb-preview-card--mobile-centered .test-picture-options,
 .tb-preview-card--mobile-centered .test-match-list,
 .tb-preview-card--mobile-centered .test-ordering-list {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   gap: 7px !important;
 }
@@ -351,7 +351,7 @@
 .tb-preview-card--mobile-centered .test-picture-option,
 .tb-preview-card--mobile-centered .test-ordering-row {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   border-radius: 1px !important;
   background: #f3f5ff !important;
@@ -376,7 +376,7 @@
 
 .tb-preview-card--mobile-centered .test-match-row {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   grid-template-columns: 1fr !important;
   gap: 7px !important;
@@ -390,7 +390,7 @@
 .tb-preview-card--mobile-centered .test-match-row > div,
 .tb-preview-card--mobile-centered .test-match-select {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   min-height: 37px !important;
   border-radius: 1px !important;
@@ -405,7 +405,7 @@
 .tb-preview-card--mobile-centered .test-match-pairing {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   gap: 8px !important;
 }
@@ -455,7 +455,7 @@
 }
 
 .tb-preview-card--mobile-centered .test-fill-blanks {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   overflow-wrap: anywhere !important;
   font-size: 18px !important;
@@ -486,7 +486,7 @@
 
 .tb-preview-card--mobile-centered .test-opinion-scale,
 .tb-preview-card--mobile-centered .test-rating {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
 }
 
