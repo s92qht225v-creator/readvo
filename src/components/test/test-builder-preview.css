@@ -1203,3 +1203,27 @@
   right: 0 !important;
   width: 100% !important;
 }
+
+/* Final builder-mobile guard: regular answer rows must fill the shared
+   303px mobile column, not shrink to their text. Keep this in the builder
+   preview CSS so public/mobile preview rules stay independent. */
+.tb-preview-card.tb-preview-card--mobile-centered .test-question-options {
+  box-sizing: border-box !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  width: min(100%, 303px) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+}
+
+.tb-preview-card.tb-preview-card--mobile-centered .test-question-option {
+  box-sizing: border-box !important;
+  display: flex !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  align-self: stretch !important;
+  justify-self: stretch !important;
+}
