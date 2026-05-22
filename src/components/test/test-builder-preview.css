@@ -929,7 +929,7 @@
  * media, no-media, and each media layout can be adjusted independently.
  */
 .tb-preview-card--mobile.tb-preview-card--no-media {
-  --tb-answer-width: 303px;
+  --tb-answer-width: min(100%, 320px);
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
   --tb-answer-radius: var(--test-theme-answer-radius, 1px);
@@ -938,7 +938,7 @@
 }
 
 .tb-preview-card--mobile.tb-preview-card--has-media {
-  --tb-answer-width: 303px;
+  --tb-answer-width: min(100%, 320px);
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
   --tb-answer-radius: var(--test-theme-answer-radius, 1px);
@@ -991,6 +991,7 @@
   gap: var(--tb-answer-gap) !important;
   width: var(--tb-answer-width) !important;
   max-width: 100% !important;
+  margin-inline: auto !important;
 }
 
 .tb-preview-card--mobile.tb-preview-card--no-media .test-question-option,
@@ -1027,6 +1028,40 @@
   color: rgb(4, 69, 175) !important;
   align-items: center !important;
   box-shadow: none !important;
+}
+
+.tb-preview-card.tb-preview-card--mobile-centered {
+  --tb-mobile-content-width: min(100%, 320px);
+}
+
+.tb-preview-card.tb-preview-card--mobile-centered .qmedia-header,
+.tb-preview-card.tb-preview-card--mobile-centered .qmedia-answer,
+.tb-preview-card.tb-preview-card--mobile-centered .test-question-options,
+.tb-preview-card.tb-preview-card--mobile-centered .test-picture-options,
+.tb-preview-card.tb-preview-card--mobile-centered .test-match-list,
+.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list,
+.tb-preview-card.tb-preview-card--mobile-centered .test-dropdown-answer,
+.tb-preview-card.tb-preview-card--mobile-centered .test-number-answer,
+.tb-preview-card.tb-preview-card--mobile-centered .test-short-answer,
+.tb-preview-card.tb-preview-card--mobile-centered .test-long-answer,
+.tb-preview-card.tb-preview-card--mobile-centered .test-fill-blanks,
+.tb-preview-card.tb-preview-card--mobile-centered .test-opinion-scale,
+.tb-preview-card.tb-preview-card--mobile-centered .test-rating {
+  width: var(--tb-mobile-content-width) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+}
+
+.tb-preview-card.tb-preview-card--mobile-centered .test-question-option,
+.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.tb-preview-card.tb-preview-card--mobile-centered .test-question-option span:last-child,
+.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row span:nth-child(2) {
+  font-size: 18px !important;
+  line-height: 20px !important;
 }
 
 .tb-preview-card .test-question-option,

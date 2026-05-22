@@ -2662,11 +2662,6 @@ function PreviewCanvas({
                     onSubmit={() => {}}
                   />
                 </div>
-                {q.type === 'multiple_choice' || q.type === 'picture_choice' ? (
-                  <div className="tb-preview-footnote" style={previewFootnote}>
-                    <span>Add or edit choices from the right panel.</span>
-                  </div>
-                ) : null}
               </>
             )}
           />
@@ -3963,14 +3958,6 @@ const previewHint: React.CSSProperties = {
 const previewAnswerArea: React.CSSProperties = {
   pointerEvents: 'none',
   marginTop: 8,
-};
-
-const previewFootnote: React.CSSProperties = {
-  marginTop: 18,
-  paddingLeft: 4,
-  color: '#8b848f',
-  fontSize: 13,
-  fontWeight: 650,
 };
 
 function Center({ children }: { children: React.ReactNode }) {
