@@ -59,47 +59,6 @@
   color: #333 !important;
   margin-bottom: 0 !important;
   overflow-wrap: anywhere !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-layout {
-  gap: 18px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-layout > .qmedia-asset {
-  align-self: stretch !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  background: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-layout > .qmedia-asset img {
-  background: transparent !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-layout > .qmedia-content > .qmedia-header {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-layout > .qmedia-content > .qmedia-answer {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-mobile-stack > .qmedia-content > .qmedia-header {
-  order: 1 !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-mobile-stack > .qmedia-asset {
-  order: 2 !important;
-}
-
-.tb-preview-card--mobile-centered .qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
-  order: 3 !important;
 }.tb-preview-card--mobile-centered .test-dropdown-answer,
 .tb-preview-card--mobile-centered .test-number-answer,
 .tb-preview-card--mobile-centered .test-short-answer,
@@ -494,22 +453,7 @@
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-short-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-long-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-number-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-dropdown-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-short-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-long-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-number-answer,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-dropdown-answer {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-inline: 0 !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--no-media.tb-preview-card--type-opinion-scale .test-opinion-scale {
+}.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--no-media.tb-preview-card--type-opinion-scale .test-opinion-scale {
   display: flex !important;
   flex-direction: row !important;
   gap: 6px !important;
@@ -608,29 +552,6 @@
   color: rgb(4, 69, 175) !important;
   align-items: center !important;
   box-shadow: none !important;
-}
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-ordering-list,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-ordering-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  width: 100% !important;
-  max-width: none !important;
-}
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-ordering-row,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-ordering-row {
-  box-sizing: border-box !important;
-  width: 100% !important;
-  min-height: 40px !important;
-  height: auto !important;
-  padding: 6px 10px !important;
-  gap: 4px !important;
-  background: #f3f5ff !important;
-  border: none !important;
-  border-radius: 1px !important;
-  color: rgb(4, 69, 175) !important;
-  align-items: center !important;
-  box-shadow: none !important;
 }/*
  * Explicit preview contexts. Keep these separated so mobile, desktop,
  * media, no-media, and each media layout can be adjusted independently.
@@ -671,11 +592,7 @@
   --tb-answer-pad-x: 10px;
 }
 .tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-ordering-list {
+.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-list {
   display: flex !important;
   flex-direction: column !important;
   gap: var(--tb-answer-gap) !important;
@@ -684,11 +601,7 @@
   margin-inline: auto !important;
 }
 .tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-ordering-row {
+.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-row {
   box-sizing: border-box !important;
   width: var(--tb-answer-width) !important;
   max-width: 100% !important;

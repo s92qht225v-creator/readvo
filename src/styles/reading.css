@@ -14039,10 +14039,6 @@ body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-}
-
-.test-preview-shell--desktop .test-player__card--no-media > .qmedia-layout {
-  justify-content: center !important;
 }.test-preview-shell--mobile .test-preview-frame {
   width: 372px;
   max-width: 100%;
@@ -14127,49 +14123,6 @@ body {
 .test-preview-shell--mobile .qmedia-header {
   margin-bottom: 18px !important;
 }
-
-.test-preview-shell--mobile .qmedia-layout {
-  gap: 18px !important;
-}
-
-.test-preview-shell--mobile .qmedia-layout > .qmedia-asset {
-  align-self: flex-start !important;
-  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-}
-
-.test-preview-shell--mobile .qmedia-layout > .qmedia-asset img {
-  background: transparent !important;
-}
-
-.test-preview-shell--mobile .qmedia-layout > .qmedia-content {
-  display: contents !important;
-}
-
-.test-preview-shell--mobile .qmedia-layout > .qmedia-content > .qmedia-header,
-.test-preview-shell--mobile .qmedia-layout > .qmedia-content > .qmedia-answer {
-  /* width: 100% makes the section fill the card's content area so the
-     303px option column inside (with its own margin-inline: auto) centers
-     symmetrically — was 303px which left-aligned within a 320px parent. */
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-stack > .qmedia-content > .qmedia-header {
-  order: 1 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-stack > .qmedia-asset {
-  order: 2 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
-  order: 3 !important;
-}.test-preview-shell--mobile .qmedia-layout,
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-picture-options,
@@ -14397,7 +14350,6 @@ body {
 
 .test-preview-shell--mobile .test-player__title,
 .test-preview-shell--mobile .test-player__description,
-.test-preview-shell--mobile .qmedia-layout,
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-picture-options,
@@ -14638,16 +14590,7 @@ body {
     width: var(--test-mobile-column) !important;
     max-width: 100% !important;
     margin-inline: auto !important;
-  }
-
-  .test-player__card .qmedia-mobile-stack > .qmedia-asset,
-  .test-player__card .qmedia-mobile-float > .qmedia-asset {
-    width: var(--test-mobile-column) !important;
-    max-width: 100% !important;
-    margin-inline: auto !important;
-  }
-
-  .test-player__meta {
+  }  .test-player__meta {
     flex-wrap: wrap !important;
     gap: 8px !important;
     margin-bottom: 18px !important;

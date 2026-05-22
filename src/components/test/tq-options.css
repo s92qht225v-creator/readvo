@@ -155,3 +155,187 @@
   min-width: 0;
   overflow-wrap: anywhere;
 }
+
+/* ──────────────────────────────────────────────────────────────────────
+   QMedia layout — same data-test-device token system as .tq-*.
+
+   The builder lets authors pick one layout per device:
+     mobile:  stack | float        (asset above content / asset before content)
+     desktop: float-right | float-left  (image right or left of content)
+
+   Token block defaults below cover mobile (stack). The desktop block
+   overrides direction + grid template + sizing. Layout variants
+   (stack/float, float-right/float-left) only flip ordering or grid
+   placement — they share all sizing/typography rules.
+
+   No @container queries, no @media branches, no per-surface overrides.
+   Same single-source pattern as the .tq-* migration.
+   ────────────────────────────────────────────────────────────────────── */
+
+[data-test-device="mobile"] {
+  --qm-direction: column;
+  --qm-gap: 22px;
+  --qm-grid: none;
+  --qm-asset-w: var(--tq-column);
+  --qm-asset-h: auto;
+  --qm-asset-aspect-pin: 1;       /* respect inline aspect-ratio */
+  --qm-content-w: var(--tq-column);
+  --qm-content-pad: 0;
+  --qm-content-justify: flex-start;
+  --qm-asset-order: 2;            /* stack default: header, asset, answer */
+  --qm-header-order: 1;
+  --qm-answer-order: 3;
+  --qm-title-fs: 22px;
+  --qm-title-lh: 1.2;
+}
+
+[data-test-device="desktop"] {
+  --qm-direction: row;
+  --qm-gap: 0;
+  --qm-grid: minmax(0, 1fr) minmax(0, 1fr);
+  --qm-asset-w: 100%;
+  --qm-asset-h: 100%;
+  --qm-asset-aspect-pin: 0;       /* fill the grid column instead */
+  --qm-content-w: 100%;
+  --qm-content-pad: 35px 53px 24px 0;
+  --qm-content-justify: center;
+  --qm-asset-order: 2;
+  --qm-header-order: 1;
+  --qm-answer-order: 3;
+  --qm-title-fs: 26px;
+  --qm-title-lh: 1.3;
+}
+
+/* Layout-variant overrides — same vars, different values. */
+.qmedia-mobile-float {
+  --qm-asset-order: 1;
+  --qm-header-order: 2;
+  --qm-answer-order: 3;
+}
+
+[data-test-device="desktop"] .qmedia-desktop-float-left {
+  /* asset on the left, content on the right */
+  --qm-content-pad: 35px 0 24px 53px;
+}
+
+/* Shared layout rules — read the tokens above, no device branches. */
+.qmedia-layout {
+  position: relative;
+  display: flex;
+  flex-direction: var(--qm-direction);
+  gap: var(--qm-gap);
+  width: 100%;
+}
+
+[data-test-device="desktop"] .qmedia-layout {
+  /* Desktop floats render as a 2-column grid so the asset and content
+     share the row height. Switching display via the same selector that
+     sets --qm-grid keeps the layout choice in one place. */
+  display: grid;
+  grid-template-columns: var(--qm-grid);
+  align-items: center;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.qmedia-layout > .qmedia-content {
+  /* Flatten the content wrapper so its children (header/answer)
+     participate in the parent grid/flex directly. */
+  display: contents;
+}
+
+.qmedia-layout > .qmedia-asset {
+  order: var(--qm-asset-order);
+  width: var(--qm-asset-w);
+  height: var(--qm-asset-h);
+  margin: 0;
+  margin-inline: auto;
+}
+
+/* On desktop the asset becomes a grid cell, so the inline aspect-ratio
+   set on the wrapper should yield to the grid track dimensions. */
+[data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
+  aspect-ratio: auto !important;
+  align-self: stretch;
+  border-radius: 0;
+  background: transparent;
+}
+
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-asset { grid-column: 2; }
+[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-asset { grid-column: 1; }
+
+[data-test-device="desktop"] .qmedia-layout > .qmedia-asset img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.qmedia-layout > .qmedia-content > .qmedia-header {
+  order: var(--qm-header-order);
+  width: var(--qm-content-w);
+  max-width: 100%;
+  margin-inline: auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.qmedia-layout > .qmedia-content > .qmedia-answer {
+  order: var(--qm-answer-order);
+  width: var(--qm-content-w);
+  max-width: 100%;
+  margin-inline: auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Desktop wraps header+answer inside the grid's content cell so they
+   stack vertically and share its padding. */
+[data-test-device="desktop"] .qmedia-layout > .qmedia-content > .qmedia-header,
+[data-test-device="desktop"] .qmedia-layout > .qmedia-content > .qmedia-answer {
+  width: 100%;
+  margin-inline: 0;
+}
+
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-header,
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-answer {
+  grid-column: 1;
+  padding-inline: 0 53px;
+  padding-block: 0;
+}
+[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content > .qmedia-header,
+[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content > .qmedia-answer {
+  grid-column: 2;
+  padding-inline: 53px 0;
+  padding-block: 0;
+}
+
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-header,
+[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content > .qmedia-header {
+  align-self: end;
+  padding-top: 35px;
+  margin-bottom: 16px;
+}
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-answer,
+[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content > .qmedia-answer {
+  align-self: start;
+  padding-bottom: 24px;
+}
+
+/* Audio media is special — it never participates in the grid. Stack it
+   above the question, full width of whatever column the layout gives it. */
+.qmedia-layout.qmedia-audio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.qmedia-audio-top > .qmedia-asset,
+.qmedia-audio-top > .qmedia-content > .qmedia-header,
+.qmedia-audio-top > .qmedia-content > .qmedia-answer {
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+}
+

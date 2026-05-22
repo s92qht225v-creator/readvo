@@ -100,23 +100,11 @@
 
   .test-player__card::-webkit-scrollbar {
     display: none !important;
-  }
-
-  .test-player__card > .qmedia-layout {
-    min-height: 100% !important;
-  }
-
-  .test-player__card--no-media {
+  }  .test-player__card--no-media {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-  }
-
-  .test-player__card--no-media > .qmedia-layout {
-    justify-content: center !important;
-  }
-
-  .test-player__nav {
+  }  .test-player__nav {
     width: 100% !important;
   }
 
@@ -265,25 +253,6 @@
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0 !important;
-  }
-
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-dropdown-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-number-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-short-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-picture-options,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-ordering-list,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-match-list,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-dropdown-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-number-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-short-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-picture-options,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-ordering-list,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-match-list {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-inline: 0 !important;
   }}
 .test-player__card--force-desktop.test-player__card--no-media .test-ordering-list,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-dropdown .test-dropdown-answer,
@@ -296,21 +265,7 @@
 .test-player__card--force-desktop .qmedia-audio-top .test-long-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-picture-options,
 .test-player__card--force-desktop .qmedia-audio-top .test-ordering-list,
-.test-player__card--force-desktop .qmedia-audio-top .test-match-list,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-dropdown-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-number-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-short-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-picture-options,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-ordering-list,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-match-list,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-dropdown-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-number-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-short-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-picture-options,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-ordering-list,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-match-list {
+.test-player__card--force-desktop .qmedia-audio-top .test-match-list {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
@@ -321,13 +276,7 @@
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
-}
-
-.test-player__card--force-desktop.test-player__card--no-media > .qmedia-layout {
-  justify-content: center !important;
-}
-
-.test-player__card--force-desktop.test-player__card--no-media {
+}.test-player__card--force-desktop.test-player__card--no-media {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;

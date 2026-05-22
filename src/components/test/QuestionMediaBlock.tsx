@@ -257,12 +257,6 @@ function aspectRatioValue(media: QuestionMedia) {
   return null;
 }
 
-function aspectRatioNumber(value: string) {
-  const [left, right] = value.split('/').map(part => Number(part.trim()));
-  if (!left || !right || !Number.isFinite(left) || !Number.isFinite(right)) return 16 / 9;
-  return left / right;
-}
-
 function toEmbedUrl(url: string) {
   try {
     const u = new URL(url);
@@ -287,15 +281,15 @@ function toEmbedUrl(url: string) {
 }
 
 function imageFrameStyle(aspectRatio: string, borderRadius: React.CSSProperties['borderRadius']): React.CSSProperties {
-  const ratio = aspectRatioNumber(aspectRatio);
+  // Width/max-width are owned by CSS (.qmedia-layout > .qmedia-asset rules
+  // driven by --qm-* device tokens). Keeping them out of the inline style
+  // means the cascade can fully control size — no more inline 1,0,0,0
+  // specificity fighting !important rules across three surfaces.
   return {
     position: 'relative',
-    width: '100%',
-    maxWidth: `min(100%, ${Math.round(360 * ratio)}px)`,
     aspectRatio,
     overflow: 'hidden',
     borderRadius,
-    margin: '0 auto 22px',
     background: 'transparent',
   };
 }
