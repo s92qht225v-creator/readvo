@@ -1,0 +1,135 @@
+/* ──────────────────────────────────────────────────────────────────────
+   Device-driven design tokens (.tq-*)
+
+   Single source of truth for option-list styling across every surface
+   that renders QuestionRenderer (live runtime, ?preview=1 shell,
+   builder PreviewCanvas). Each surface sets
+   `data-test-device="mobile|desktop"` on an ancestor; the rules below
+   choose the right values from there. Component CSS reads var(--tq-*)
+   instead of @container or @media so all surfaces stay in lock-step —
+   tweak a value once, it changes everywhere.
+
+   Lives next to QuestionRenderer.tsx and is imported by it so the
+   styles travel with the component into any host (TestPlayer, the
+   builder's PreviewCanvas, future embeds, …) without needing a
+   matching CSS import per host.
+
+   PoC scope: multiple_choice / true_false / checkbox option lists.
+   Other question types still go through the legacy override chains
+   until they're migrated to this system one type at a time.
+   ────────────────────────────────────────────────────────────────────── */
+
+[data-test-device="mobile"] {
+  --tq-column: min(100%, 303px);
+  --tq-list-gap: 7px;
+  --tq-option-min-h: 37px;
+  --tq-option-pad-y: 6px;
+  --tq-option-pad-x: 10px;
+  --tq-option-fs: 18px;
+  --tq-option-lh: 20px;
+  --tq-option-radius: 1px;
+  --tq-option-content-gap: 8px;
+  --tq-chip-size: 22px;
+  --tq-chip-fs: 11px;
+  --tq-checkbox-size: 22px;
+}
+
+[data-test-device="desktop"] {
+  --tq-column: 540px;
+  --tq-list-gap: 8px;
+  --tq-option-min-h: 56px;
+  --tq-option-pad-y: 12px;
+  --tq-option-pad-x: 16px;
+  --tq-option-fs: 18px;
+  --tq-option-lh: 24px;
+  --tq-option-radius: 3px;
+  --tq-option-content-gap: 10px;
+  --tq-chip-size: 28px;
+  --tq-chip-fs: 12px;
+  --tq-checkbox-size: 26px;
+}
+
+/* Shared option-list / option / chip / checkbox / label rules.
+   No device branches inside these — values come from the vars above.
+   No ancestor required: rules apply wherever the .tq-* classes render. */
+.tq-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+  gap: var(--tq-list-gap);
+}
+
+.tq-option {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--tq-option-content-gap);
+  width: 100%;
+  min-height: var(--tq-option-min-h);
+  padding: var(--tq-option-pad-y) var(--tq-option-pad-x);
+  border: none;
+  border-radius: var(--tq-option-radius);
+  background: rgba(4, 69, 175, 0.1);
+  color: var(--test-theme-answer, #0445af);
+  font-family: inherit;
+  font-size: var(--tq-option-fs);
+  line-height: var(--tq-option-lh);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+
+.tq-option[data-selected="true"] {
+  background: rgba(4, 69, 175, 0.18);
+  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
+}
+
+.tq-option:active:not(:disabled) {
+  transform: scale(0.992);
+}
+
+.tq-option__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--tq-chip-size);
+  height: var(--tq-chip-size);
+  border: 1px solid var(--test-theme-answer, #0445af);
+  border-radius: var(--test-theme-answer-radius, 3px);
+  background: #fff;
+  color: var(--test-theme-answer, #0445af);
+  font-size: var(--tq-chip-fs);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tq-option__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--tq-checkbox-size);
+  height: var(--tq-checkbox-size);
+  border-radius: 4px;
+  background: #fff;
+  border: 2px solid var(--test-theme-answer, #0445af);
+  color: #fff;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.tq-option[data-selected="true"] .tq-option__check {
+  background: var(--test-theme-answer, #0445af);
+  border-width: 1px;
+}
+
+.tq-option__label {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

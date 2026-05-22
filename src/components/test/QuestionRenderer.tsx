@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import './tq-options.css';
 import type {
   PublicQuestion, PublicMcOptions, PublicShortTextOptions, PublicPictureChoiceOptions,
   PublicMatchOptions, PublicOrderingOptions, PublicFillBlanksOptions, PublicScrambleOptions,
