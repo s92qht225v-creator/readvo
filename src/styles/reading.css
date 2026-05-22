@@ -14136,24 +14136,26 @@ body {
   display: none !important;
 }
 
+/* Title + description — match live-mobile typography (@media max-width:640px)
+   so the preview shell looks like a real phone, not a slightly-bigger phone. */
 .test-preview-shell--mobile .test-player__title {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
   font-weight: 400 !important;
-  line-height: 26px !important;
-  margin-bottom: 10px !important;
-  letter-spacing: 0 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 12px !important;
+  letter-spacing: -0.2px !important;
   color: #000 !important;
 }
 
 .test-preview-shell--mobile .test-player__description {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
-  line-height: 22px !important;
-  margin: 0 !important;
+  line-height: 1.4 !important;
+  margin: 0 0 18px 0 !important;
   color: #333 !important;
   overflow-wrap: anywhere !important;
 }
@@ -14417,28 +14419,36 @@ body {
   border-color: color-mix(in srgb, var(--test-theme-answer, rgb(4, 69, 175)) 35%, #ffffff) !important;
 }
 
-.test-preview-shell--mobile .test-question-option span:first-child,
-.test-preview-shell--mobile .test-ordering-row span:first-child {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  /* Match production chip radius. */
-  border-radius: var(--test-theme-answer-radius, 1px) !important;
-  padding: 0 6px !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
-  color: rgb(4, 69, 175) !important;
-  background: rgba(255, 255, 255, 0.4) !important;
-  border: 1px solid rgba(4, 69, 175, 0.24) !important;
+/* Letter chip — mirror the production-mobile defaults (the @media (max-width:
+   640px) block doesn't fire in the preview shell because the underlying
+   viewport is desktop). 22×22 white pill with a solid accent border and an
+   11px letter so the chip matches what real phones render. Selector
+   specificity bumped (preview-shell--mobile + card + option + span = 0,3,1)
+   so this beats the universal preview-shell chip rule further down. */
+.test-preview-shell--mobile .test-player__card .test-question-option span:first-child,
+.test-preview-shell--mobile .test-player__card .test-ordering-row span:first-child {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  border-radius: var(--test-theme-answer-radius, 3px) !important;
+  padding: 0 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 22px !important;
+  color: var(--test-theme-answer, #0445af) !important;
+  background: #fff !important;
+  border: 1px solid var(--test-theme-answer, #0445af) !important;
 }
 
+/* Option label — match live mobile: wrap naturally, 18px / 20px. The earlier
+   ellipsis-truncated version diverged from the production phone view. */
 .test-preview-shell--mobile .test-question-option span:last-child,
 .test-preview-shell--mobile .test-ordering-row span:nth-child(2) {
   min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
 }
 
 .test-preview-shell--mobile .test-picture-options {
@@ -14605,6 +14615,26 @@ body {
   line-height: 20px !important;
 }
 
+/* Option button itself — match live mobile (@media max-width:640px). The
+   inline JSX styles give a smaller 36×8/4 button; live mobile bumps it to
+   37×10/6. Replicating here keeps preview-shell tiles the same size as the
+   real phone. Selector specificity bumped (preview-shell--mobile + card +
+   option = 0,3,0) so this beats the universal preview-shell border-radius
+   3px rule that appears further down the file. */
+.test-preview-shell--mobile .test-player__card .test-question-option {
+  box-sizing: border-box !important;
+  min-height: 37px !important;
+  padding: 6px 10px !important;
+  border-radius: 1px !important;
+  font-size: 18px !important;
+  line-height: 20px !important;
+  align-items: center !important;
+}
+
+.test-preview-shell--mobile .test-player__card .test-question-options {
+  gap: 7px !important;
+}
+
 .test-preview-shell--mobile .test-short-answer {
   min-height: 92px !important;
   padding: 10px !important;
@@ -14712,6 +14742,13 @@ body {
 .test-preview-shell .test-player__card .test-fill-blank-input,
 .test-preview-shell .test-player__card .test-rating button {
   border-radius: 3px !important;
+}
+
+/* Mobile preview: option button uses the 1px live-mobile radius. Declared
+   after the universal preview-shell border-radius rule above so it wins on
+   source order at equal specificity. */
+.test-preview-shell--mobile .test-player__card .test-question-option {
+  border-radius: 1px !important;
 }
 
 .test-preview-shell--mobile .test-player__nav {
