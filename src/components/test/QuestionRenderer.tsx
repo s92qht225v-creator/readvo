@@ -158,12 +158,13 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                 cursor: 'pointer',
                 fontFamily: 'inherit',
                 color: TEXT,
-                aspectRatio: '1 / 1.05',
                 transition: 'background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease',
               }}
             >
               <div style={{
-                flex: 1,
+                width: '100%',
+                aspectRatio: '1 / 1',
+                flex: '0 0 auto',
                 background: 'rgba(4, 69, 175, 0.05)',
                 border: `1px dashed ${TEXT}`,
                 borderRadius: 1,
