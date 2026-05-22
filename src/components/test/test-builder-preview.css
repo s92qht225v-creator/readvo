@@ -1030,24 +1030,11 @@
   box-shadow: none !important;
 }
 
-.tb-preview-card.tb-preview-card--mobile-centered {
-  --tb-mobile-content-width: min(100%, 320px);
-}
-
-.tb-preview-card.tb-preview-card--mobile-centered .qmedia-header,
-.tb-preview-card.tb-preview-card--mobile-centered .qmedia-answer,
+/* Mobile builder answer rows need a fixed shared measure. Keep this scoped to
+   answer lists so scaled builder preview frames do not collapse headers/media. */
 .tb-preview-card.tb-preview-card--mobile-centered .test-question-options,
-.tb-preview-card.tb-preview-card--mobile-centered .test-picture-options,
-.tb-preview-card.tb-preview-card--mobile-centered .test-match-list,
-.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list,
-.tb-preview-card.tb-preview-card--mobile-centered .test-dropdown-answer,
-.tb-preview-card.tb-preview-card--mobile-centered .test-number-answer,
-.tb-preview-card.tb-preview-card--mobile-centered .test-short-answer,
-.tb-preview-card.tb-preview-card--mobile-centered .test-long-answer,
-.tb-preview-card.tb-preview-card--mobile-centered .test-fill-blanks,
-.tb-preview-card.tb-preview-card--mobile-centered .test-opinion-scale,
-.tb-preview-card.tb-preview-card--mobile-centered .test-rating {
-  width: var(--tb-mobile-content-width) !important;
+.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list {
+  width: min(100%, 320px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }

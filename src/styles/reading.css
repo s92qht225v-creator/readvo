@@ -14531,7 +14531,7 @@ body {
 }
 
 .test-preview-shell--mobile {
-  --test-mobile-preview-column: min(100%, 320px);
+  --test-mobile-preview-column: min(100%, 340px);
 }
 
 .test-preview-shell--mobile .test-player__title,
@@ -14752,7 +14752,7 @@ body {
   }
 
   .test-player__card {
-    --test-mobile-column: min(100%, 320px);
+    --test-mobile-column: min(100%, 340px);
     width: 100% !important;
     min-height: auto !important;
     border: none !important;
@@ -14971,7 +14971,7 @@ body {
   html body .test-player .test-player__card.test-player__card--type-match .test-match-pairing,
   html body .test-player .test-player__card.test-player__card--type-match .qmedia-answer,
   html body .test-player .test-player__card.test-player__card--type-match .qmedia-header {
-    width: var(--test-mobile-column, min(100%, 320px)) !important;
+    width: var(--test-mobile-column, min(100%, 340px)) !important;
     max-width: 100% !important;
     margin-inline: auto !important;
     box-sizing: border-box !important;
