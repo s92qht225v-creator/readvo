@@ -13811,6 +13811,33 @@ body {
   gap: 10px !important;
 }
 
+.tb-canvas--mobile .tb-preview-card .test-question-options,
+.tb-canvas--mobile .tb-preview-card .test-ordering-list {
+  box-sizing: border-box !important;
+  width: min(100%, 340px) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+}
+
+.tb-canvas--mobile .tb-preview-card .test-question-option,
+.tb-canvas--mobile .tb-preview-card .test-ordering-row {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  justify-self: stretch !important;
+  align-self: stretch !important;
+}
+
+.tb-canvas--mobile .tb-preview-card .test-dropdown-answer,
+.tb-canvas--mobile .tb-preview-card .test-custom-dropdown.test-dropdown-answer {
+  box-sizing: border-box !important;
+  width: min(100%, 340px) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+}
+
 .tb-canvas--mobile .tb-preview-card:not(.tb-preview-card--mobile-centered) .test-question-option {
   min-height: 48px !important;
   padding: 10px 12px !important;
