@@ -14043,20 +14043,7 @@ body {
 
 .test-preview-shell--desktop .test-player__card--no-media > .qmedia-layout {
   justify-content: center !important;
-}
-
-.test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-right),
-.test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-left) {
-  padding: 0 !important;
-}
-
-.test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-right) .qmedia-layout,
-.test-preview-shell--desktop .test-player__card:has(.qmedia-desktop-split-left) .qmedia-layout {
-  height: 100% !important;
-  min-height: 100% !important;
-}
-
-.test-preview-shell--mobile .test-preview-frame {
+}.test-preview-shell--mobile .test-preview-frame {
   width: 372px;
   max-width: 100%;
   margin: 0 auto;
@@ -14182,106 +14169,7 @@ body {
 
 .test-preview-shell--mobile .qmedia-mobile-stack > .qmedia-content > .qmedia-answer {
   order: 3 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-split {
-  width: 100% !important;
-  max-width: none !important;
-  gap: 26px !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-split > .qmedia-asset {
-  order: 1 !important;
-  align-self: stretch !important;
-  width: calc(100% + 52px) !important;
-  height: auto !important;
-  max-width: none !important;
-  aspect-ratio: auto !important;
-  margin-top: -30px !important;
-  margin-left: -26px !important;
-  margin-right: -26px !important;
-  border-radius: 0 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-split > .qmedia-asset img {
-  object-fit: contain !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-split > .qmedia-content > .qmedia-header {
-  order: 2 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-split > .qmedia-content > .qmedia-answer {
-  order: 3 !important;
-}
-
-.test-preview-shell--mobile .test-player__card:has(.qmedia-mobile-wallpaper) {
-  padding: 0 !important;
-}
-
-.test-preview-shell--mobile .test-player__card:has(.qmedia-mobile-wallpaper) .qmedia-layout {
-  width: 100% !important;
-  /* grow with content so wallpaper's own padding-bottom applies on overflow. */
-  height: auto !important;
-  min-height: 100% !important;
-  max-width: none !important;
-  /* prevent the parent flex container from shrinking the wallpaper below its
-     intrinsic content height (otherwise content overflows out of the
-     wallpaper's padding-bottom zone with no buffer at the card edge). */
-  flex-shrink: 0 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-wallpaper {
-  width: 100% !important;
-  /* grow to content height (drop fixed `height: 100%` so the wallpaper's own
-     padding-bottom applies even when content overflows the card). */
-  height: auto !important;
-  min-height: 100% !important;
-  max-width: none !important;
-  /* safe center: center content when it fits, fall back to flex-start
-     when it would otherwise overflow above the card bounds. */
-  justify-content: safe center !important;
-  /* visible (not hidden) so overflow content can scroll within the card. */
-  overflow: visible !important;
-  border-radius: 0 !important;
-  /* trimmed top padding (was 154px which pushed content way down). */
-  padding: 36px 27px 30px !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-asset {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  aspect-ratio: auto !important;
-  border-radius: 0 !important;
-  /* dim the wallpaper so overlay text/badge stays readable */
-  opacity: 0.42 !important;
-  z-index: 0 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-asset img {
-  object-fit: cover !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content {
-  display: grid !important;
-  gap: 18px !important;
-  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-  background: transparent !important;
-  z-index: 1 !important;
-}
-
-.test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-header,
-.test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-answer {
-  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
-  max-width: 100% !important;
-}
-
-.test-preview-shell--mobile .qmedia-layout,
+}.test-preview-shell--mobile .qmedia-layout,
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-picture-options,
