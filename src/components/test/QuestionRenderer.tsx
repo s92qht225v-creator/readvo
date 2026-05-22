@@ -27,16 +27,14 @@ interface Props {
 export function QuestionRenderer({ question, value, onChange, onSubmit }: Props) {
   if (question.type === 'multiple_choice') {
     const opts = question.options as PublicMcOptions;
-    // Typeform palette: cool blue tile, darker blue letter+text.
-    const TILE_BG = 'rgba(4, 69, 175, 0.1)';
-    const TILE_BG_SEL = 'rgba(4, 69, 175, 0.18)';
-    const TEXT = '#0445af';
+    // Multiple choice / single + multi-select. Styling lives in
+    // test-player.css under .tq-options/.tq-option/.tq-option__chip and
+    // is driven by data-test-device CSS variables — no inline sizes here.
     return (
       <div
-        className="test-question-options"
+        className="tq-options"
         role={opts.allowMultiple ? 'group' : 'radiogroup'}
         aria-label={question.prompt}
-        style={{ display: 'grid', gap: 8 }}
       >
         {opts.choices.map((c, i) => {
           const selected = opts.allowMultiple
@@ -58,37 +56,13 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                     : [...current, c.id],
                 });
               }}
-              className="test-question-option"
+              className="tq-option"
               role={opts.allowMultiple ? 'checkbox' : 'radio'}
               aria-checked={selected}
               data-selected={selected ? 'true' : 'false'}
-              style={{
-                textAlign: 'left',
-                display: 'flex', alignItems: 'center', gap: 8,
-                padding: '4px 8px 4px 4px',
-                minHeight: 36,
-                fontSize: 16,
-                background: selected ? TILE_BG_SEL : TILE_BG,
-                color: TEXT,
-                border: 'none',
-                borderRadius: 1,
-                cursor: 'pointer',
-                fontWeight: 400,
-                fontFamily: 'inherit',
-                transition: 'background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease',
-              }}
             >
               {opts.allowMultiple ? (
-                <span aria-hidden="true" style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: 22, height: 22, borderRadius: 4,
-                  background: selected ? TEXT : '#fff',
-                  color: '#fff',
-                  border: selected ? `1px solid ${TEXT}` : `2px solid ${TEXT}`,
-                  boxSizing: 'border-box',
-                  flexShrink: 0,
-                  transition: 'background-color 0.16s ease, border-color 0.16s ease',
-                }}>
+                <span className="tq-option__check" aria-hidden="true">
                   {selected ? (
                     <svg width="14" height="14" viewBox="0 0 26 26" fill="none" aria-hidden="true">
                       <path d="M6.5 13.4 10.7 17.6 19.8 8.4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
@@ -96,17 +70,9 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   ) : null}
                 </span>
               ) : (
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: 22, height: 22, borderRadius: 3,
-                  background: '#fff',
-                  color: TEXT,
-                  fontSize: 11, fontWeight: 700,
-                  border: `1px solid ${TEXT}`,
-                  flexShrink: 0,
-                }}>{LETTERS[i] ?? i + 1}</span>
+                <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span style={{ flex: 1 }}>{c.text}</span>
+              <span className="tq-option__label">{c.text}</span>
             </button>
           );
         })}
@@ -221,10 +187,12 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   }
 
   if (question.type === 'checkbox') {
+    // Dedicated checkbox question — same tq-* primitives as multiple_choice
+    // multi-select. Sizing/colour live in test-player.css.
     const opts = question.options as PublicCheckboxOptions;
     const selectedIds = value.selectedIds ?? [];
     return (
-      <div className="test-question-options test-checkbox-options" role="group" aria-label={question.prompt} style={{ display: 'grid', gap: 8 }}>
+      <div className="tq-options" role="group" aria-label={question.prompt}>
         {opts.choices.map(choice => {
           const selected = selectedIds.includes(choice.id);
           return (
@@ -236,13 +204,12 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   ? selectedIds.filter(id => id !== choice.id)
                   : [...selectedIds, choice.id],
               })}
-              className="test-question-option test-checkbox-option"
+              className="tq-option"
               role="checkbox"
               aria-checked={selected}
               data-selected={selected ? 'true' : 'false'}
-              style={checkboxButtonStyle}
             >
-              <span className="test-checkbox-option__box" style={checkboxBoxStyle(selected)} aria-hidden="true">
+              <span className="tq-option__check" aria-hidden="true">
                 {selected ? (
                   <svg width="14" height="14" viewBox="0 0 26 26" fill="none">
                     <path
@@ -255,7 +222,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   </svg>
                 ) : null}
               </span>
-              <span style={{ flex: 1 }}>{choice.text}</span>
+              <span className="tq-option__label">{choice.text}</span>
             </button>
           );
         })}
@@ -264,11 +231,9 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   }
 
   if (question.type === 'true_false') {
-    const TILE_BG = 'rgba(4, 69, 175, 0.1)';
-    const TILE_BG_SEL = 'rgba(4, 69, 175, 0.18)';
-    const TEXT = '#0445af';
+    // True/False — same tq-* primitives as multiple_choice single-select.
     return (
-      <div className="test-question-options" role="radiogroup" aria-label={question.prompt} style={{ display: 'grid', gap: 8 }}>
+      <div className="tq-options" role="radiogroup" aria-label={question.prompt}>
         {[
           { val: true, label: 'True' },
           { val: false, label: 'False' },
@@ -279,34 +244,13 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               key={label}
               type="button"
               onClick={() => onChange({ bool: val })}
-              className="test-question-option"
+              className="tq-option"
               role="radio"
               aria-checked={selected}
               data-selected={selected ? 'true' : 'false'}
-              style={{
-                textAlign: 'left',
-                display: 'flex', alignItems: 'center', gap: 8,
-                padding: '4px 8px 4px 4px',
-                minHeight: 40,
-                fontSize: 16,
-                background: selected ? TILE_BG_SEL : TILE_BG,
-                color: TEXT,
-                border: 'none',
-                borderRadius: 1,
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-                fontWeight: 400,
-              }}
             >
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                width: 22, height: 22, borderRadius: 3,
-                background: '#fff', color: TEXT,
-                fontSize: 11, fontWeight: 700,
-                border: `1px solid ${TEXT}`,
-                flexShrink: 0,
-              }}>{LETTERS[i]}</span>
-              <span style={{ flex: 1 }}>{label}</span>
+              <span className="tq-option__chip" aria-hidden="true">{LETTERS[i]}</span>
+              <span className="tq-option__label">{label}</span>
             </button>
           );
         })}
@@ -598,41 +542,6 @@ function choiceButtonStyle(selected: boolean): React.CSSProperties {
   };
 }
 
-const checkboxButtonStyle: React.CSSProperties = {
-  textAlign: 'left',
-  display: 'flex',
-  alignItems: 'center',
-  gap: 24,
-  padding: '8px 0',
-  minHeight: 52,
-  fontSize: 28,
-  background: 'transparent',
-  color: 'var(--test-theme-answer-text, #0445af)',
-  border: 'none',
-  borderRadius: 1,
-  cursor: 'pointer',
-  fontWeight: 400,
-  fontFamily: 'inherit',
-};
-
-function checkboxBoxStyle(selected: boolean): React.CSSProperties {
-  return {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 22,
-    height: 22,
-    borderRadius: 4,
-    background: selected ? 'var(--test-theme-answer, #0445af)' : '#fff',
-    color: '#fff',
-    border: selected
-      ? '1px solid var(--test-theme-answer, #0445af)'
-      : '2px solid var(--test-theme-answer, #0445af)',
-    boxShadow: 'none',
-    flexShrink: 0,
-    boxSizing: 'border-box',
-  };
-}
 
 const opinionScaleWrap: React.CSSProperties = {
   width: 361,

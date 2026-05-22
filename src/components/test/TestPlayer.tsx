@@ -129,6 +129,24 @@ function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['v
 }
 
 export function TestPlayer({ test, forceDevice }: Props) {
+  // Single source of truth for "which device layout are we rendering".
+  // Surfaces declare device explicitly (forceDevice) when they're known
+  // to be a preview/builder; live runtime derives it from viewport width.
+  // Component CSS reads CSS custom properties set by data-test-device on
+  // the .test-player root — no @container / @media branches needed.
+  const [liveDevice, setLiveDevice] = useState<'mobile' | 'desktop'>(() => {
+    if (typeof window === 'undefined') return 'desktop';
+    return window.innerWidth <= 640 ? 'mobile' : 'desktop';
+  });
+  useEffect(() => {
+    if (forceDevice) return;
+    const onResize = () => setLiveDevice(window.innerWidth <= 640 ? 'mobile' : 'desktop');
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [forceDevice]);
+  const device: 'mobile' | 'desktop' = forceDevice ?? liveDevice;
+
   const [phase, setPhase] = useState<Phase>('intro');
   const [name, setName] = useState('');
   const [profile, setProfile] = useState<RespondentProfile>({
@@ -431,7 +449,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
     }
 
     return (
-      <Wrapper themeVars={themeVars}>
+      <Wrapper themeVars={themeVars} device={device}>
         <div style={introBadge}>{test.is_graded ? 'Graded quiz' : 'Survey'}</div>
         <h1 style={introTitle}>{test.title}</h1>
         {test.description ? (
@@ -470,7 +488,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const description = endScreen?.description || 'Your answers were submitted.';
     const buttonText = endScreen?.buttonText || '';
     return (
-      <Wrapper themeVars={themeVars}>
+      <Wrapper themeVars={themeVars} device={device}>
         <div style={doneMark}>✓</div>
         {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
         <h1 style={introTitle}>{title}</h1>
@@ -506,7 +524,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
 
   if (phase === 'error') {
     return (
-      <Wrapper themeVars={themeVars}>
+      <Wrapper themeVars={themeVars} device={device}>
         <h1 style={{ ...introTitle, color: '#b91c1c' }}>
           Submission failed
         </h1>
@@ -523,7 +541,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
   if (!q) return null;
 
   return (
-    <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars}>
+    <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars} device={device}>
       <QuestionMediaBlock
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
@@ -678,14 +696,17 @@ function Wrapper({
   children,
   wallpaperActive = false,
   themeVars,
+  device,
 }: {
   children: React.ReactNode
   wallpaperActive?: boolean
   themeVars?: Record<string, string>
+  device?: 'mobile' | 'desktop'
 }) {
   return (
     <div
       className={`test-player${wallpaperActive ? ' test-player--wallpaper-active' : ''}`}
+      data-test-device={device}
       style={{ ...playerShell, ...themeVars }}
     >
       <div className="test-player__inner" style={playerInner}>{children}</div>
