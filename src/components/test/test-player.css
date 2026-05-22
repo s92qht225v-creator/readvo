@@ -1,5 +1,5 @@
 .test-player__card {
-  --test-mobile-column: min(100%, 303px);
+  --test-mobile-column: min(100%, 340px);
   --test-title-size: clamp(21px, 4.25cqw, 34px);
   --test-description-size: clamp(13px, 2.1cqw, 16px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);
@@ -39,11 +39,11 @@
     padding: 0 !important;
   }
 
-  /* Constrain the match list to the same 303px column the media uses
+  /* Constrain the match list to the same mobile column the media uses
      so the option boxes align with the image above. */
   .test-player__card .test-match-list {
     box-sizing: border-box !important;
-    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    width: var(--test-mobile-column, min(100%, 340px)) !important;
     max-width: 100% !important;
     margin-inline: auto !important;
   }
@@ -245,7 +245,7 @@
 .test-player__card--type-short-text .test-short-answer,
 .test-player__card--type-long-answer .test-long-answer {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: var(--test-mobile-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }
@@ -455,7 +455,7 @@
 
 .test-player__card--type-match .test-match-list {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: var(--test-mobile-column, min(100%, 340px)) !important;
   min-width: 0 !important;
   max-width: 100% !important;
   margin-inline: auto !important;
@@ -524,7 +524,7 @@
   .test-player__card--type-match .test-match-list,
   .test-player__card--type-match .test-match-pairing {
     box-sizing: border-box !important;
-    width: var(--test-mobile-column, min(100%, 303px)) !important;
+    width: var(--test-mobile-column, min(100%, 340px)) !important;
     max-width: 100% !important;
     margin-inline: auto !important;
   }
@@ -544,7 +544,7 @@
 .test-player__card--force-mobile.test-player__card--type-match .test-match-list,
 .test-player__card--force-mobile.test-player__card--type-match .test-match-pairing {
   box-sizing: border-box !important;
-  width: var(--test-mobile-column, min(100%, 303px)) !important;
+  width: var(--test-mobile-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }

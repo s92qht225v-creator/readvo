@@ -14110,7 +14110,7 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__title {
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   font-size: 20px !important;
   font-weight: 400 !important;
@@ -14121,7 +14121,7 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__description {
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   font-size: 16px !important;
   font-weight: 400 !important;
@@ -14141,7 +14141,7 @@ body {
 
 .test-preview-shell--mobile .qmedia-layout > .qmedia-asset {
   align-self: flex-start !important;
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -14262,7 +14262,7 @@ body {
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content {
   display: grid !important;
   gap: 18px !important;
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   padding: 0 !important;
   background: transparent !important;
@@ -14271,7 +14271,7 @@ body {
 
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-header,
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-answer {
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
 }
 
@@ -14289,9 +14289,9 @@ body {
 .test-preview-shell--mobile .test-short-answer,
 .test-preview-shell--mobile .test-long-answer,
 .test-preview-shell--mobile .test-fill-blanks {
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
-  /* center the 303px column inside the 320px card content area so the
+  /* center the shared mobile column inside the card content area so the
      left/right gaps from the card edge match. */
   margin-inline: auto !important;
 }
@@ -14324,7 +14324,7 @@ body {
 .test-preview-shell--mobile .test-question-option,
 .test-preview-shell--mobile .test-ordering-row {
   box-sizing: border-box !important;
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
   height: 37px !important;
   min-height: 37px !important;
@@ -14464,7 +14464,7 @@ body {
 .test-preview-shell--mobile .test-match-row {
   grid-template-columns: 1fr !important;
   gap: 7px !important;
-  width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
   max-width: 100% !important;
 }
 
@@ -14476,16 +14476,16 @@ body {
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-header,
 .test-preview-shell--mobile .test-player__card--type-match .test-match-list {
   box-sizing: border-box !important;
-  width: 303px !important;
-  min-width: 303px !important;
-  max-width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
   margin-inline: auto !important;
 }
 
 .test-preview-shell--mobile .test-player__card--type-match .test-player__title {
   box-sizing: border-box !important;
-  width: 303px !important;
-  max-width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  max-width: 100% !important;
   font-size: 20px !important;
   line-height: 26px !important;
   overflow-wrap: anywhere !important;
@@ -14497,9 +14497,9 @@ body {
 .test-preview-shell--mobile .test-player__card--type-match .test-match-select {
   box-sizing: border-box !important;
   display: block !important;
-  width: 303px !important;
-  min-width: 303px !important;
-  max-width: 303px !important;
+  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
   min-height: 37px !important;
   height: 37px !important;
   padding: 6px 10px !important;

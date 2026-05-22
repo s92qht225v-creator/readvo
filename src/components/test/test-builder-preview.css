@@ -929,7 +929,7 @@
  * media, no-media, and each media layout can be adjusted independently.
  */
 .tb-preview-card--mobile.tb-preview-card--no-media {
-  --tb-answer-width: min(100%, 320px);
+  --tb-answer-width: min(100%, 340px);
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
   --tb-answer-radius: var(--test-theme-answer-radius, 1px);
@@ -938,7 +938,7 @@
 }
 
 .tb-preview-card--mobile.tb-preview-card--has-media {
-  --tb-answer-width: min(100%, 320px);
+  --tb-answer-width: min(100%, 340px);
   --tb-answer-gap: 7px;
   --tb-answer-min-height: 37px;
   --tb-answer-radius: var(--test-theme-answer-radius, 1px);
@@ -1034,7 +1034,7 @@
    answer lists so scaled builder preview frames do not collapse headers/media. */
 .tb-preview-card.tb-preview-card--mobile-centered .test-question-options,
 .tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list {
-  width: min(100%, 320px) !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }
@@ -1149,7 +1149,7 @@
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card.tb-preview-card--mobile-centered .test-custom-dropdown.test-dropdown-answer {
-  width: 303px !important;
+  width: min(100%, 340px) !important;
   max-width: 100% !important;
 }
 
