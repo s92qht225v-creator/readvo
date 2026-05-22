@@ -14364,9 +14364,9 @@ body {
 }
 
 .test-question-option[data-selected="true"] span:first-child {
-  background: rgb(4, 69, 175) !important;
-  color: #fff !important;
-  border-color: rgb(4, 69, 175) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  border-color: color-mix(in srgb, var(--test-theme-answer, rgb(4, 69, 175)) 35%, #ffffff) !important;
 }
 
 @keyframes test-answer-selected {
@@ -14382,9 +14382,9 @@ body {
 }
 
 .test-preview-shell--mobile .test-question-option[data-selected="true"] span:first-child {
-  background: rgb(4, 69, 175) !important;
-  color: #fff !important;
-  border-color: rgb(4, 69, 175) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
+  border-color: color-mix(in srgb, var(--test-theme-answer, rgb(4, 69, 175)) 35%, #ffffff) !important;
 }
 
 .test-preview-shell--mobile .test-question-option span:first-child,
