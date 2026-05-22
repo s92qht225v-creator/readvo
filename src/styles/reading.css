@@ -12737,7 +12737,7 @@ body {
 }
 
 .shenme-polished-card__title-scene {
-  width: min(100%, 340px);
+  width: min(100%, 303px);
 }
 
 .shenme-polished-card__title-scene-image {
@@ -13814,7 +13814,7 @@ body {
 .tb-canvas--mobile .tb-preview-card .test-question-options,
 .tb-canvas--mobile .tb-preview-card .test-ordering-list {
   box-sizing: border-box !important;
-  width: min(100%, 340px) !important;
+  width: min(100%, 303px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
   align-items: stretch !important;
@@ -13833,7 +13833,7 @@ body {
 .tb-canvas--mobile .tb-preview-card .test-dropdown-answer,
 .tb-canvas--mobile .tb-preview-card .test-custom-dropdown.test-dropdown-answer {
   box-sizing: border-box !important;
-  width: min(100%, 340px) !important;
+  width: min(100%, 303px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }
@@ -14137,7 +14137,7 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__title {
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   font-size: 20px !important;
   font-weight: 400 !important;
@@ -14148,7 +14148,7 @@ body {
 }
 
 .test-preview-shell--mobile .test-player__description {
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   font-size: 16px !important;
   font-weight: 400 !important;
@@ -14168,7 +14168,7 @@ body {
 
 .test-preview-shell--mobile .qmedia-layout > .qmedia-asset {
   align-self: flex-start !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -14289,7 +14289,7 @@ body {
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content {
   display: grid !important;
   gap: 18px !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   padding: 0 !important;
   background: transparent !important;
@@ -14298,7 +14298,7 @@ body {
 
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-header,
 .test-preview-shell--mobile .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-answer {
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
 }
 
@@ -14316,7 +14316,7 @@ body {
 .test-preview-shell--mobile .test-short-answer,
 .test-preview-shell--mobile .test-long-answer,
 .test-preview-shell--mobile .test-fill-blanks {
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   /* center the shared mobile column inside the card content area so the
      left/right gaps from the card edge match. */
@@ -14327,7 +14327,9 @@ body {
 .test-preview-shell--mobile .test-picture-options,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list {
-  gap: 12px !important;
+  /* Match the production-mobile @media row gap so the preview reflects
+     real on-device spacing. */
+  gap: 7px !important;
   justify-content: center !important;
 }
 
@@ -14351,13 +14353,14 @@ body {
 .test-preview-shell--mobile .test-question-option,
 .test-preview-shell--mobile .test-ordering-row {
   box-sizing: border-box !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   height: 37px !important;
   min-height: 37px !important;
   padding: 6px 10px !important;
   gap: 4px !important;
-  border-radius: 8px !important;
+  /* Match production: theme answer-radius, 1px fallback. */
+  border-radius: var(--test-theme-answer-radius, 1px) !important;
   background: #f3f5ff !important;
   border: none !important;
   color: rgb(4, 69, 175) !important;
@@ -14419,7 +14422,8 @@ body {
   width: 20px !important;
   height: 20px !important;
   min-width: 20px !important;
-  border-radius: 4px !important;
+  /* Match production chip radius. */
+  border-radius: var(--test-theme-answer-radius, 1px) !important;
   padding: 0 6px !important;
   font-size: 12px !important;
   font-weight: 600 !important;
@@ -14491,7 +14495,7 @@ body {
 .test-preview-shell--mobile .test-match-row {
   grid-template-columns: 1fr !important;
   gap: 7px !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
 }
 
@@ -14503,7 +14507,7 @@ body {
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-header,
 .test-preview-shell--mobile .test-player__card--type-match .test-match-list {
   box-sizing: border-box !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   min-width: 0 !important;
   max-width: 100% !important;
   margin-inline: auto !important;
@@ -14511,7 +14515,7 @@ body {
 
 .test-preview-shell--mobile .test-player__card--type-match .test-player__title {
   box-sizing: border-box !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   font-size: 20px !important;
   line-height: 26px !important;
@@ -14524,7 +14528,7 @@ body {
 .test-preview-shell--mobile .test-player__card--type-match .test-match-select {
   box-sizing: border-box !important;
   display: block !important;
-  width: var(--test-mobile-preview-column, min(100%, 340px)) !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   min-width: 0 !important;
   max-width: 100% !important;
   min-height: 37px !important;
@@ -14558,7 +14562,7 @@ body {
 }
 
 .test-preview-shell--mobile {
-  --test-mobile-preview-column: min(100%, 340px);
+  --test-mobile-preview-column: min(100%, 303px);
 }
 
 .test-preview-shell--mobile .test-player__title,
@@ -14779,7 +14783,7 @@ body {
   }
 
   .test-player__card {
-    --test-mobile-column: min(100%, 340px);
+    --test-mobile-column: min(100%, 303px);
     width: 100% !important;
     min-height: auto !important;
     border: none !important;
@@ -14998,7 +15002,7 @@ body {
   html body .test-player .test-player__card.test-player__card--type-match .test-match-pairing,
   html body .test-player .test-player__card.test-player__card--type-match .qmedia-answer,
   html body .test-player .test-player__card.test-player__card--type-match .qmedia-header {
-    width: var(--test-mobile-column, min(100%, 340px)) !important;
+    width: var(--test-mobile-column, min(100%, 303px)) !important;
     max-width: 100% !important;
     margin-inline: auto !important;
     box-sizing: border-box !important;
