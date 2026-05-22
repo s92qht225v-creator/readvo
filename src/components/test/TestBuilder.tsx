@@ -2605,6 +2605,7 @@ function PreviewCanvas({
       <div
         ref={previewCardRef}
         className={previewCardClassName}
+        data-test-device={previewDevice}
         style={{
           ...previewCard,
           ...themeVars,
