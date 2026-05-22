@@ -35,7 +35,11 @@
 }
 
 [data-test-device="desktop"] {
-  --tq-column: 540px;
+  /* Match whatever the surrounding answer area provides (typically the
+     card content area, the same width the audio player or other media
+     occupies). Was 540px which left the options narrower than the
+     audio player above them. */
+  --tq-column: 100%;
   --tq-list-gap: 8px;
   --tq-option-min-h: 56px;
   --tq-option-pad-y: 12px;
