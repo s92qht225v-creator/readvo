@@ -14623,6 +14623,7 @@ body {
    3px rule that appears further down the file. */
 .test-preview-shell--mobile .test-player__card .test-question-option {
   box-sizing: border-box !important;
+  width: 100% !important;
   min-height: 37px !important;
   padding: 6px 10px !important;
   border-radius: 1px !important;
@@ -14631,7 +14632,15 @@ body {
   align-items: center !important;
 }
 
+/* The inline JSX gives .test-question-options `display: grid` without
+   gridTemplateColumns, so it auto-sizes to content unless we force the
+   container width. Live mobile sets it to the 303px mobile column; mirror
+   here so the options grid in the preview shell occupies the same band. */
 .test-preview-shell--mobile .test-player__card .test-question-options {
+  box-sizing: border-box !important;
+  width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
   gap: 7px !important;
 }
 
