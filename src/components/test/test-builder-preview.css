@@ -249,57 +249,7 @@
 .tb-preview-card--mobile-centered .qmedia-mobile-wallpaper > .qmedia-content > .qmedia-answer {
   width: min(100%, 303px) !important;
   max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .test-question-options {
-  display: grid !important;
-  gap: 7px !important;
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .test-question-option {
-  box-sizing: border-box !important;
-  display: flex !important;
-  align-items: center !important;
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  height: 37px !important;
-  min-height: 37px !important;
-  border-radius: 1px !important;
-  padding: 6px 10px !important;
-  gap: 4px !important;
-  background: #f3f5ff !important;
-  border: none !important;
-}
-
-.tb-preview-card--mobile-centered .test-question-option span:first-child {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  border-radius: 4px !important;
-  padding: 0 6px !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
-  color: rgb(4, 69, 175) !important;
-  background: rgba(255, 255, 255, 0.4) !important;
-  border: 1px solid rgba(4, 69, 175, 0.24) !important;
-}
-
-.tb-preview-card--mobile-centered .test-question-option span:last-child {
-  flex: 1 !important;
-  min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  line-height: 20px !important;
-  color: rgb(4, 69, 175) !important;
-}
-
-.tb-preview-card--mobile-centered .test-dropdown-answer,
+}.tb-preview-card--mobile-centered .test-dropdown-answer,
 .tb-preview-card--mobile-centered .test-number-answer,
 .tb-preview-card--mobile-centered .test-short-answer,
 .tb-preview-card--mobile-centered .test-long-answer {
@@ -560,9 +510,6 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-
-.tb-preview-card .test-question-option,
-.test-player__card .test-question-option,
 .tb-preview-card .test-picture-option,
 .test-player__card .test-picture-option,
 .tb-preview-card .test-ordering-row,
@@ -577,9 +524,6 @@
 .test-player__card .test-short-answer {
   font-size: var(--test-answer-size) !important;
 }
-
-.tb-preview-card .test-question-option,
-.test-player__card .test-question-option,
 .tb-preview-card .test-ordering-row,
 .test-player__card .test-ordering-row {
   gap: var(--test-option-gap) !important;
@@ -610,8 +554,6 @@
 
 .tb-preview-card .test-picture-options,
 .test-player__card .test-picture-options,
-.tb-preview-card .test-question-options,
-.test-player__card .test-question-options,
 .tb-preview-card .test-ordering-list,
 .test-player__card .test-ordering-list,
 .tb-preview-card .test-match-list,
@@ -753,9 +695,6 @@
 .test-player__card .test-match-row {
   gap: clamp(6px, 1.6cqw, 10px) !important;
 }
-
-.tb-preview-card .test-question-option span:first-child,
-.test-player__card .test-question-option span:first-child,
 .tb-preview-card .test-ordering-row span:first-child,
 .test-player__card .test-ordering-row span:first-child {
   width: clamp(19px, 3.2cqw, 22px) !important;
@@ -774,10 +713,6 @@
 .test-player__card .qmedia-asset img,
 .tb-preview-card .qmedia-asset iframe,
 .test-player__card .qmedia-asset iframe,
-.tb-preview-card .test-question-option,
-.test-player__card .test-question-option,
-.tb-preview-card .test-question-option span:first-child,
-.test-player__card .test-question-option span:first-child,
 .tb-preview-card .test-picture-option,
 .test-player__card .test-picture-option,
 .tb-preview-card .test-picture-option > div,
@@ -810,8 +745,6 @@
 .tb-preview-card .tb-preview-footnote {
   font-size: var(--test-small-size) !important;
 }
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-question-options,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .test-ordering-list {
   display: flex !important;
   flex-direction: column !important;
@@ -819,8 +752,6 @@
   width: 100% !important;
   max-width: none !important;
 }
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-question-option,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .test-ordering-row {
   box-sizing: border-box !important;
   width: 100% !important;
@@ -835,39 +766,9 @@
   align-items: center !important;
   box-shadow: none !important;
 }
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-question-option span:first-child {
-  min-width: 20px !important;
-  width: 20px !important;
-  height: 20px !important;
-  padding: 0 6px !important;
-  border-radius: 4px !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
-  color: rgb(4, 69, 175) !important;
-  background: rgba(255, 255, 255, 0.4) !important;
-  border: 1px solid rgba(4, 69, 175, 0.24) !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-question-option span:last-child {
-  min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  line-height: 24px !important;
-  color: rgb(4, 69, 175) !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-question-options,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-ordering-list,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-question-options,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-ordering-list,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-question-options,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-ordering-list,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-question-options,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-ordering-list {
   display: flex !important;
   flex-direction: column !important;
@@ -875,14 +776,9 @@
   width: 100% !important;
   max-width: none !important;
 }
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-question-option,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-ordering-row,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-question-option,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-ordering-row,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-question-option,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-ordering-row,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-question-option,
 .tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-ordering-row {
   box-sizing: border-box !important;
   width: 100% !important;
@@ -896,35 +792,7 @@
   color: rgb(4, 69, 175) !important;
   align-items: center !important;
   box-shadow: none !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-question-option span:first-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-question-option span:first-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-question-option span:first-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-question-option span:first-child {
-  min-width: 20px !important;
-  width: 20px !important;
-  height: 20px !important;
-  padding: 0 6px !important;
-  border-radius: 4px !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  color: rgb(4, 69, 175) !important;
-  background: rgba(255, 255, 255, 0.4) !important;
-  border: 1px solid rgba(4, 69, 175, 0.24) !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-right .test-question-option span:last-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-float-left .test-question-option span:last-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-right .test-question-option span:last-child,
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .qmedia-desktop-split-left .test-question-option span:last-child {
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  line-height: 24px !important;
-  color: rgb(4, 69, 175) !important;
-}
-
-/*
+}/*
  * Explicit preview contexts. Keep these separated so mobile, desktop,
  * media, no-media, and each media layout can be adjusted independently.
  */
@@ -963,28 +831,16 @@
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }
-
-.tb-preview-card--mobile.tb-preview-card--no-media .test-question-options,
 .tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-question-options,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-question-options,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-split .test-question-options,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-split .test-ordering-list,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-wallpaper .test-question-options,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-wallpaper .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-right .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-right .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-left .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-left .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-wallpaper .test-question-options,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-wallpaper .test-ordering-list {
   display: flex !important;
   flex-direction: column !important;
@@ -993,28 +849,16 @@
   max-width: 100% !important;
   margin-inline: auto !important;
 }
-
-.tb-preview-card--mobile.tb-preview-card--no-media .test-question-option,
 .tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-question-option,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-stack .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-question-option,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-float .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-split .test-question-option,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-split .test-ordering-row,
-.tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-wallpaper .test-question-option,
 .tb-preview-card--mobile.tb-preview-card--has-media .qmedia-mobile-wallpaper .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-right .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-float-left .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-right .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-right .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-left .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-split-left .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-wallpaper .test-question-option,
 .tb-preview-card--desktop.tb-preview-card--has-media .qmedia-desktop-wallpaper .test-ordering-row {
   box-sizing: border-box !important;
   width: var(--tb-answer-width) !important;
@@ -1029,29 +873,19 @@
   align-items: center !important;
   box-shadow: none !important;
 }
-
-/* Mobile builder answer rows need a fixed shared measure. Keep this scoped to
-   answer lists so scaled builder preview frames do not collapse headers/media. */
-.tb-preview-card.tb-preview-card--mobile-centered .test-question-options,
 .tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list {
   width: min(100%, 303px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
 }
-
-.tb-preview-card.tb-preview-card--mobile-centered .test-question-option,
 .tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row {
   width: 100% !important;
   max-width: 100% !important;
 }
-
-.tb-preview-card.tb-preview-card--mobile-centered .test-question-option span:last-child,
 .tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row span:nth-child(2) {
   font-size: 18px !important;
   line-height: 20px !important;
 }
-
-.tb-preview-card .test-question-option,
 .tb-preview-card .test-picture-option,
 .tb-preview-card .test-dropdown-answer,
 .tb-preview-card .test-number-answer,
@@ -1065,8 +899,6 @@
 .tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-
-.tb-preview-card .test-question-option,
 .tb-preview-card .test-picture-option,
 .tb-preview-card .test-dropdown-answer,
 .tb-preview-card .test-number-answer,
@@ -1079,16 +911,11 @@
 .tb-preview-card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-
-.tb-preview-card .test-question-option span:first-child,
 .tb-preview-card .test-picture-option span:first-child,
 .tb-preview-card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
-
-/* Final theme pass: keep design controls above layout-specific hard-coded defaults. */
-.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
@@ -1102,8 +929,6 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-
-.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
@@ -1116,8 +941,6 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-
-.tb-preview-card.tb-preview-card.tb-preview-card .test-question-option span:first-child,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option span:first-child,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
@@ -1202,28 +1025,4 @@
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
-}
-
-/* Final builder-mobile guard: regular answer rows must fill the shared
-   303px mobile column, not shrink to their text. Keep this in the builder
-   preview CSS so public/mobile preview rules stay independent. */
-.tb-preview-card.tb-preview-card--mobile-centered .test-question-options {
-  box-sizing: border-box !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) !important;
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-  align-items: stretch !important;
-  justify-items: stretch !important;
-}
-
-.tb-preview-card.tb-preview-card--mobile-centered .test-question-option {
-  box-sizing: border-box !important;
-  display: flex !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  align-self: stretch !important;
-  justify-self: stretch !important;
 }

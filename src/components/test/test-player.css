@@ -63,8 +63,6 @@
     font-size: 15px !important;
     line-height: 1.4 !important;
   }
-
-  .test-player__card .test-question-option,
   .test-player__card .test-picture-option,
   .test-player__card .test-ordering-row,
   .test-player__card .test-match-row,
@@ -130,8 +128,6 @@
     font-size: 15px !important;
   }
 }
-
-.test-player__card .test-question-option,
 .test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-number-answer,
@@ -145,8 +141,6 @@
 .test-player__card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-
-.test-player__card .test-question-option,
 .test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-number-answer,
@@ -159,15 +153,11 @@
 .test-player__card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-
-.test-player__card .test-question-option span:first-child,
 .test-player__card .test-picture-option span:first-child,
 .test-player__card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
-
-.test-player__card .test-question-option[data-selected="true"],
 .test-player__card .test-picture-option[data-selected="true"],
 .test-player__card .test-opinion-scale button[data-selected="true"] {
   box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af) !important;
@@ -198,8 +188,6 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-
-.test-player__card .test-question-option,
 .test-player__card .test-picture-option,
 .test-player__card .test-ordering-row,
 .test-player__card .test-match-row,
@@ -208,8 +196,6 @@
 .test-player__card .test-short-answer {
   font-size: var(--test-answer-size) !important;
 }
-
-.test-player__card .test-question-option,
 .test-player__card .test-ordering-row {
   gap: var(--test-option-gap) !important;
   min-height: clamp(32px, 5.2cqw, 40px) !important;
@@ -236,13 +222,10 @@
 }
 
 .test-player__card .test-picture-options,
-.test-player__card .test-question-options,
 .test-player__card .test-ordering-list,
 .test-player__card .test-match-list {
   gap: clamp(7px, 1.8cqw, 12px) !important;
 }
-
-.test-player__card .test-question-options,
 .test-player__card .test-ordering-list,
 .test-player__card--type-dropdown .test-dropdown-answer,
 .test-player__card--type-number .test-number-answer,
@@ -255,7 +238,6 @@
 }
 
 @container (min-width: 480px) {
-  .test-player__card--no-media:not(.test-player__card--force-mobile) .test-question-options,
   .test-player__card--no-media:not(.test-player__card--force-mobile) .test-ordering-list,
   .test-player__card--no-media.test-player__card--type-dropdown:not(.test-player__card--force-mobile) .test-dropdown-answer,
   .test-player__card--no-media.test-player__card--type-number:not(.test-player__card--force-mobile) .test-number-answer,
@@ -270,7 +252,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-match-list {
@@ -290,7 +271,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-right .test-match-list,
@@ -298,7 +278,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-float-left .test-match-list,
@@ -306,7 +285,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-right .test-match-list,
@@ -314,7 +292,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-split-left .test-match-list,
@@ -322,7 +299,6 @@
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-number-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-short-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-long-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-question-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-desktop-wallpaper .test-match-list {
@@ -350,10 +326,6 @@
     margin-inline: auto !important;
   }
 }
-
-/* Force-desktop overrides — apply unconditionally when the preview shell
-   wraps TestPlayer with forceDevice="desktop" on a small actual viewport. */
-.test-player__card--force-desktop.test-player__card--no-media .test-question-options,
 .test-player__card--force-desktop.test-player__card--no-media .test-ordering-list,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-dropdown .test-dropdown-answer,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-number .test-number-answer,
@@ -363,7 +335,6 @@
 .test-player__card--force-desktop .qmedia-audio-top .test-number-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-short-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-long-answer,
-.test-player__card--force-desktop .qmedia-audio-top .test-question-options,
 .test-player__card--force-desktop .qmedia-audio-top .test-picture-options,
 .test-player__card--force-desktop .qmedia-audio-top .test-ordering-list,
 .test-player__card--force-desktop .qmedia-audio-top .test-match-list,
@@ -371,7 +342,6 @@
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-right .test-question-options,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-float-right .test-match-list,
@@ -379,7 +349,6 @@
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-float-left .test-question-options,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-float-left .test-match-list,
@@ -387,7 +356,6 @@
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-split-right .test-question-options,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-split-right .test-match-list,
@@ -395,7 +363,6 @@
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-split-left .test-question-options,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-split-left .test-match-list,
@@ -403,7 +370,6 @@
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-number-answer,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-short-answer,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-long-answer,
-.test-player__card--force-desktop .qmedia-desktop-wallpaper .test-question-options,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-picture-options,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-ordering-list,
 .test-player__card--force-desktop .qmedia-desktop-wallpaper .test-match-list {
@@ -752,8 +718,6 @@
     transform: translateY(0) scaleY(1);
   }
 }
-
-.test-player__card .test-question-option span:first-child,
 .test-player__card .test-ordering-row span:first-child {
   width: clamp(19px, 3.2cqw, 22px) !important;
   height: clamp(19px, 3.2cqw, 22px) !important;
@@ -767,8 +731,6 @@
 .test-player__card .qmedia-asset,
 .test-player__card .qmedia-asset img,
 .test-player__card .qmedia-asset iframe,
-.test-player__card .test-question-option,
-.test-player__card .test-question-option span:first-child,
 .test-player__card .test-picture-option,
 .test-player__card .test-picture-option > div,
 .test-player__card .test-ordering-row,
@@ -922,46 +884,4 @@
   .test-player__nav button {
     border-radius: 3px !important;
   }
-}
-
-/* Dedicated checkbox question icon — guards against the qmedia-desktop and
-   qmedia-mobile layout rules that force span:first-child of
-   .test-question-option into a 20x20 letter-chip shape with a faint white
-   background. Specificity 0,3,0 plus !important beats those 0,2,0 layout
-   rules so the inline blue fill and white checkmark render correctly on
-   the dedicated checkbox question type. */
-html body .test-player__card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box,
-html body .tb-preview-card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box {
-  box-sizing: border-box !important;
-  width: 22px !important;
-  min-width: 22px !important;
-  height: 22px !important;
-  padding: 0 !important;
-  border-radius: 4px !important;
-  background: #fff !important;
-  border: 2px solid var(--test-theme-answer, #0445af) !important;
-  color: #fff !important;
-  font-size: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-}
-
-html body .test-player__card .test-checkbox-option.test-checkbox-option[data-selected="true"] .test-checkbox-option__box,
-html body .tb-preview-card .test-checkbox-option.test-checkbox-option[data-selected="true"] .test-checkbox-option__box {
-  background: var(--test-theme-answer, #0445af) !important;
-  border: 1px solid var(--test-theme-answer, #0445af) !important;
-}
-
-html body .test-player__card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box svg,
-html body .tb-preview-card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box svg {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-html body .test-player__card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box svg path,
-html body .tb-preview-card .test-checkbox-option.test-checkbox-option .test-checkbox-option__box svg path {
-  stroke: #fff !important;
-  stroke-width: 4 !important;
 }

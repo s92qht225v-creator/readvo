@@ -19,6 +19,24 @@
    until they're migrated to this system one type at a time.
    ────────────────────────────────────────────────────────────────────── */
 
+/* Safety net: defaults the .tq-* rules read when a host forgets to set
+   data-test-device. Specificity is 0 thanks to :where(), so any real
+   [data-test-device="…"] block above wins without needing !important. */
+:where(html) {
+  --tq-column: min(100%, 303px);
+  --tq-list-gap: 7px;
+  --tq-option-min-h: 37px;
+  --tq-option-pad-y: 6px;
+  --tq-option-pad-x: 10px;
+  --tq-option-fs: 18px;
+  --tq-option-lh: 20px;
+  --tq-option-radius: 1px;
+  --tq-option-content-gap: 8px;
+  --tq-chip-size: 22px;
+  --tq-chip-fs: 11px;
+  --tq-checkbox-size: 22px;
+}
+
 [data-test-device="mobile"] {
   --tq-column: min(100%, 303px);
   --tq-list-gap: 7px;
