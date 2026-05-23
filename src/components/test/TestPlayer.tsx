@@ -1048,25 +1048,28 @@ const cardSlideVariants: Variants = {
   }),
 };
 
+// Vertical spacing for the title / description / answer block lives on
+// the qmedia-content flex column (gap) and .qmedia-header (gap), not as
+// per-element margins. Keeping these as pure typography means the
+// content's CSS box height matches its visible bounds so the grid's
+// align-items: center actually centres it relative to the media.
 const questionTitle: React.CSSProperties = {
   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))',
   fontWeight: 400,
-  margin: '0 0 12px',
+  margin: 0,
   lineHeight: 1.15,
   color: 'var(--test-theme-question, #1c1626)',
   letterSpacing: -0.6,
 };
 
 const questionDescription: React.CSSProperties = {
-  margin: '0 0 28px',
+  margin: 0,
   color: 'var(--test-theme-description, #8b848f)',
   fontSize: 16,
   lineHeight: 1.5,
 };
 
-const answerWrap: React.CSSProperties = {
-  marginTop: 4,
-};
+const answerWrap: React.CSSProperties = {};
 
 const navRow: React.CSSProperties = {
   display: 'flex',
