@@ -237,9 +237,16 @@
 [data-test-device="desktop"] .qmedia-layout {
   /* Desktop floats render as a 2-column grid so the asset and content
      share the row height. Switching display via the same selector that
-     sets --qm-grid keeps the layout choice in one place. */
+     sets --qm-grid keeps the layout choice in one place.
+
+     `grid-auto-flow: dense` lets later items backfill earlier empty
+     cells — without it the content (which is sourced AFTER the asset
+     and placed in column 1) would skip past the asset's row and end
+     up in row 2 below the image. With `dense` it backfills row 1 col
+     1 so both items share the row. */
   display: grid;
   grid-template-columns: var(--qm-grid);
+  grid-auto-flow: dense;
   align-items: center;
   min-height: 100%;
   overflow: hidden;
