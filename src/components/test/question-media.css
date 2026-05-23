@@ -1,13 +1,6 @@
-.qmedia-layout.qmedia-audio {
-  gap: 10px;
-}
-.qmedia-audio-top > .qmedia-asset,
-.qmedia-audio-top > .qmedia-content > .qmedia-header,
-.qmedia-audio-top > .qmedia-content > .qmedia-answer {
-  width: var(--test-mobile-column, min(100%, 303px));
-  max-width: 100%;
-  margin-inline: auto;
-}
+/* Audio layout (display, gap, ordering, width) lives in tq-options.css
+   alongside the other qmedia layouts. This file owns only the inner
+   audio-player chrome (button, progress, time, etc.). */
 .qmedia-audio-player {
   --qmedia-audio-ink: var(--test-theme-question, #1f2937);
   --qmedia-audio-accent: var(--test-theme-answer, #0445af);

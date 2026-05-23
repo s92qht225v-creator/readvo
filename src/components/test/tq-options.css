@@ -472,13 +472,25 @@
 }
 
 
-/* Audio media is special — it never participates in the grid. Stack it
-   above the question, full width of whatever column the layout gives it. */
+/* Audio media — never participates in the desktop image grid. Layout
+   reads: title/description → audio player → answer on every device.
+   To get this ordering on desktop (where .qmedia-content is normally a
+   flex column that keeps the asset above the content), flatten
+   .qmedia-content via display:contents so header/asset/answer all
+   become direct flex children of the audio layout, then reorder via
+   flex `order`. This keeps mobile and desktop in lock-step. */
 .qmedia-layout.qmedia-audio {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.qmedia-layout.qmedia-audio > .qmedia-content {
+  display: contents;
+}
+.qmedia-layout.qmedia-audio > .qmedia-content > .qmedia-header { order: 1; }
+.qmedia-layout.qmedia-audio > .qmedia-asset { order: 2; }
+.qmedia-layout.qmedia-audio > .qmedia-content > .qmedia-answer { order: 3; }
+
 .qmedia-audio-top > .qmedia-asset,
 .qmedia-audio-top > .qmedia-content > .qmedia-header,
 .qmedia-audio-top > .qmedia-content > .qmedia-answer {
