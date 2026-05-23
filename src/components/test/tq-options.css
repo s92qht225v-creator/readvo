@@ -23,7 +23,11 @@
    data-test-device. Specificity is 0 thanks to :where(), so any real
    [data-test-device="…"] block above wins without needing !important. */
 :where(html) {
-  --tq-column: min(100%, 303px);
+  /* Mobile content column. Fills the card up to 480px so phones use
+     most of the available width; clamped above 480 for the rare wide
+     tablet portrait. Was 303px which left a ~43px gap on each side
+     of a 390px iPhone viewport. */
+  --tq-column: min(100%, 480px);
   --tq-list-gap: 7px;
   --tq-option-min-h: 37px;
   --tq-option-pad-y: 6px;
@@ -38,7 +42,7 @@
 }
 
 [data-test-device="mobile"] {
-  --tq-column: min(100%, 303px);
+  --tq-column: min(100%, 480px);
   --tq-list-gap: 7px;
   --tq-option-min-h: 37px;
   --tq-option-pad-y: 6px;
