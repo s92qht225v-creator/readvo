@@ -178,7 +178,8 @@
   --qm-grid: none;
   --qm-asset-w: var(--tq-column);
   --qm-asset-h: auto;
-  --qm-asset-aspect-pin: 1;       /* respect inline aspect-ratio */
+  --qm-asset-radius: 7px;          /* rounded image inside the 303px column */
+  --qm-asset-margin-inline: auto;  /* centre inside the column */
   --qm-content-w: var(--tq-column);
   --qm-content-pad: 0;
   --qm-content-justify: flex-start;
@@ -204,6 +205,8 @@
   --qm-asset-w: 100%;
   --qm-asset-max-w: 100%;         /* asset fills its 360px-wide column */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
+  --qm-asset-radius: 0;            /* full-bleed in its grid cell */
+  --qm-asset-margin-inline: 0;     /* flush against the cell edge */
   --qm-content-w: 100%;
   --qm-content-pad: 0;            /* card outer padding owns the perimeter */
   --qm-content-justify: center;
@@ -291,18 +294,27 @@
   max-width: var(--qm-asset-max-w, 100%);
   height: var(--qm-asset-h);
   margin: 0;
-  margin-inline: auto;
+  margin-inline: var(--qm-asset-margin-inline);
+  border-radius: var(--qm-asset-radius);
+  background: transparent;
 }
 
-/* Desktop: asset's column is exactly its width, so it naturally fills
-   the cell — no justify-self needed. margin-inline: 0 clears the base
-   auto-margin (used for mobile centering) so the asset hugs the cell. */
+/* Per-media modifiers (set by QuestionMediaBlock.tsx based on the
+   media's type / aspectRatio). Don't fight tokens — they describe a
+   property of the media itself, not the device. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--video {
+  background: #111827;
+}
+.qmedia-layout > .qmedia-asset.qmedia-asset--circle {
+  border-radius: 50%;
+}
+
+/* Desktop: asset gets a grid placement (which column) and is
+   vertically centred in its grid cell. All other dimensional / chrome
+   properties are token-driven by the base rule above. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
   grid-column: var(--qm-asset-col);
-  margin-inline: 0;
   align-self: center;
-  border-radius: 0;
-  background: transparent;
 }
 
 

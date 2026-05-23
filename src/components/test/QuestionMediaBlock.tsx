@@ -61,7 +61,7 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
       );
     }
     return (
-      <div className={className} style={{ ...videoFrameWrap, ...style }}>
+      <div className={`${className ?? ''} qmedia-asset--video`} style={{ ...videoFrameWrap, ...style }}>
         <iframe
           src={embedUrl}
           title={media.alt || 'Question video'}
@@ -80,9 +80,10 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
     `scaleY(${media.flipY ? -1 : 1})`,
   ].join(' ');
 
+  const circle = media.aspectRatio === 'circle';
   if (media.crop && aspectRatio) {
     return (
-      <div className={className} style={{ ...imageFrameStyle(aspectRatio, media.aspectRatio === 'circle' ? '50%' : 7), ...style }}>
+      <div className={`${className ?? ''}${circle ? ' qmedia-asset--circle' : ''}`} style={{ ...imageFrameStyle(aspectRatio), ...style }}>
         <img
           src={media.url}
           alt={media.alt || ''}
@@ -93,7 +94,7 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   }
 
   return (
-    <div className={className} style={{ ...imageFrameStyle(aspectRatio ?? '16 / 9', 7), ...style }}>
+    <div className={`${className ?? ''}${circle ? ' qmedia-asset--circle' : ''}`} style={{ ...imageFrameStyle(aspectRatio ?? '16 / 9'), ...style }}>
       <img
         src={media.url}
         alt={media.alt || ''}
@@ -280,17 +281,15 @@ function toEmbedUrl(url: string) {
   return null;
 }
 
-function imageFrameStyle(aspectRatio: string, borderRadius: React.CSSProperties['borderRadius']): React.CSSProperties {
-  // Width/max-width are owned by CSS (.qmedia-layout > .qmedia-asset rules
-  // driven by --qm-* device tokens). Keeping them out of the inline style
-  // means the cascade can fully control size — no more inline 1,0,0,0
-  // specificity fighting !important rules across three surfaces.
+function imageFrameStyle(aspectRatio: string): React.CSSProperties {
+  // Width, max-width, border-radius, and background are owned by CSS
+  // (.qmedia-layout > .qmedia-asset rules driven by --qm-* device
+  // tokens, plus .qmedia-asset--circle modifier for circular masks).
+  // Inline-style props would fight the cascade across surfaces.
   return {
     position: 'relative',
     aspectRatio,
     overflow: 'hidden',
-    borderRadius,
-    background: 'transparent',
   };
 }
 
@@ -322,17 +321,16 @@ function croppedImageStyle(crop: NonNullable<QuestionMedia['crop']>, naturalAspe
   };
 }
 
+// borderRadius / background are owned by CSS (tq-options.css → asset
+// rules driven by --qm-asset-radius / --qm-asset-bg tokens) so the
+// cascade actually owns them. No vertical margin either: the
+// surrounding .qmedia-content gap (and the grid's align-items: center)
+// own the spacing.
 const videoFrameWrap: React.CSSProperties = {
   position: 'relative',
   width: '100%',
   aspectRatio: '16 / 9',
-  borderRadius: 7,
   overflow: 'hidden',
-  background: '#111827',
-  // No vertical margin: the surrounding .qmedia-content gap (and the
-  // grid's align-items: center) own the spacing. A bottom margin here
-  // inflates the asset's CSS-box past its visible bounds and biases
-  // the vertical centring relative to the content beside it.
 };
 
 const videoFrame: React.CSSProperties = {
