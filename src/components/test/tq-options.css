@@ -238,10 +238,27 @@
   overflow: hidden;
 }
 
-.qmedia-layout > .qmedia-content {
-  /* Flatten the content wrapper so its children (header/answer)
-     participate in the parent grid/flex directly. */
+/* Mobile: flatten the content wrapper so header/asset/answer behave as
+   siblings under the parent flex column and the order tokens can
+   re-arrange them. */
+[data-test-device="mobile"] .qmedia-layout > .qmedia-content {
   display: contents;
+}
+
+/* Desktop: keep the content wrapper as its own grid cell — a flex
+   column that stacks header above answer in the left/right side
+   (set by qmedia-desktop-float-*). Vertically centred next to the
+   asset cell on the opposite side. */
+[data-test-device="desktop"] .qmedia-layout > .qmedia-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: var(--qm-content-pad);
+  gap: 16px;
 }
 
 .qmedia-layout > .qmedia-asset {
@@ -263,8 +280,12 @@
   background: transparent;
 }
 
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-asset { grid-column: 2; }
-[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-asset { grid-column: 1; }
+/* Place the asset + content wrapper on opposite sides of the 2-col
+   grid. Content wrapper holds header + answer internally. */
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-asset   { grid-column: 2; }
+[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content { grid-column: 1; }
+[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-asset   { grid-column: 1; }
+[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content { grid-column: 2; }
 
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset img {
   width: 100%;
@@ -293,37 +314,18 @@
   word-break: break-word;
 }
 
-/* Desktop wraps header+answer inside the grid's content cell so they
-   stack vertically and share its padding. */
+/* Header + answer fill the content wrapper. Padding (35px 53px 24px …)
+   lives on the wrapper, so the children only need to occupy their
+   intrinsic width. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-content > .qmedia-header,
 [data-test-device="desktop"] .qmedia-layout > .qmedia-content > .qmedia-answer {
   width: 100%;
   margin-inline: 0;
 }
 
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-header,
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-answer {
-  grid-column: 1;
-  padding-inline: 0 53px;
-  padding-block: 0;
-}
-[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content > .qmedia-header,
-[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content > .qmedia-answer {
-  grid-column: 2;
-  padding-inline: 53px 0;
-  padding-block: 0;
-}
-
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-header,
-[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content > .qmedia-header {
-  align-self: end;
-  padding-top: 35px;
-  margin-bottom: 16px;
-}
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content > .qmedia-answer,
-[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content > .qmedia-answer {
-  align-self: start;
-  padding-bottom: 24px;
+/* Mirror the inner padding when content is on the right vs left. */
+[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content {
+  padding: 35px 0 24px 53px;
 }
 
 /* Audio media is special — it never participates in the grid. Stack it
