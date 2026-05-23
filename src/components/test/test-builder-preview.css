@@ -59,10 +59,8 @@
   color: #333 !important;
   margin-bottom: 0 !important;
   overflow-wrap: anywhere !important;
-}.tb-preview-card--mobile-centered .test-dropdown-answer,
-.tb-preview-card--mobile-centered .test-number-answer,
-.tb-preview-card--mobile-centered .test-short-answer,
-.tb-preview-card--mobile-centered .test-long-answer {
+}/* short/long/number now driven by --ti-* tokens in tq-options.css. */
+.tb-preview-card--mobile-centered .test-dropdown-answer {
   box-sizing: border-box !important;
   width: min(100%, 303px) !important;
   max-width: 100% !important;
@@ -72,28 +70,10 @@
   font-size: 18px !important;
   font-weight: 400 !important;
   line-height: 24px !important;
-}
-
-.tb-preview-card--mobile-centered .test-dropdown-answer,
-.tb-preview-card--mobile-centered .test-number-answer {
   height: 37px !important;
   min-height: 37px !important;
   padding: 6px 10px !important;
   border: none !important;
-}
-
-.tb-preview-card--mobile-centered .test-short-answer {
-  min-height: 92px !important;
-  padding: 10px !important;
-  border: none !important;
-  resize: none !important;
-}
-
-.tb-preview-card--mobile-centered .test-long-answer {
-  min-height: 148px !important;
-  padding: 10px !important;
-  border: none !important;
-  resize: none !important;
 }
 
 .tb-preview-card--mobile-centered .test-picture-options,
@@ -329,9 +309,7 @@
 .tb-preview-card .test-match-choice,
 .test-player__card .test-match-choice,
 .tb-preview-card .test-fill-blanks,
-.test-player__card .test-fill-blanks,
-.tb-preview-card .test-short-answer,
-.test-player__card .test-short-answer {
+.test-player__card .test-fill-blanks {
   font-size: var(--test-answer-size) !important;
 }
 .tb-preview-card .test-ordering-row,
@@ -341,8 +319,6 @@
   padding: clamp(4px, 1.2cqw, 9px) clamp(8px, 1.8cqw, 12px) !important;
 }
 
-.tb-preview-card .test-short-answer,
-.test-player__card .test-short-answer,
 .tb-preview-card .test-match-select,
 .test-player__card .test-match-select {
   font-size: var(--test-answer-size) !important;
@@ -514,12 +490,6 @@
 .test-player__card .test-match-select,
 .tb-preview-card .test-dropdown-answer,
 .test-player__card .test-dropdown-answer,
-.tb-preview-card .test-number-answer,
-.test-player__card .test-number-answer,
-.tb-preview-card .test-short-answer,
-.test-player__card .test-short-answer,
-.tb-preview-card .test-long-answer,
-.test-player__card .test-long-answer,
 .tb-preview-card .test-fill-blank-input,
 .test-player__card .test-fill-blank-input,
 .tb-preview-card .test-rating button,
@@ -628,11 +598,9 @@
   font-size: 18px !important;
   line-height: 20px !important;
 }
+/* Text-input theming (short/long/number) lives in tq-options.css. */
 .tb-preview-card .test-picture-option,
 .tb-preview-card .test-dropdown-answer,
-.tb-preview-card .test-number-answer,
-.tb-preview-card .test-short-answer,
-.tb-preview-card .test-long-answer,
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
 .tb-preview-card .test-ordering-row,
@@ -643,9 +611,6 @@
 }
 .tb-preview-card .test-picture-option,
 .tb-preview-card .test-dropdown-answer,
-.tb-preview-card .test-number-answer,
-.tb-preview-card .test-short-answer,
-.tb-preview-card .test-long-answer,
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
 .tb-preview-card .test-ordering-row,
@@ -660,9 +625,6 @@
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-short-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-long-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
@@ -673,9 +635,6 @@
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-number-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-short-answer,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-long-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,

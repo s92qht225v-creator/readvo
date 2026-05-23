@@ -39,6 +39,20 @@
   --tq-chip-size: 22px;
   --tq-chip-fs: 11px;
   --tq-checkbox-size: 22px;
+
+  /* Text-input tokens (--ti-*) — same single-source pattern.
+     Drive short_text / long_answer / number renderers. Mobile defaults
+     declared here so any surface that forgets data-test-device still
+     gets sensible values. */
+  --ti-fs: 15px;
+  --ti-lh: 24px;
+  --ti-pad-y: 10px;
+  --ti-pad-x: 10px;
+  --ti-min-h-short: 92px;
+  --ti-min-h-long: 148px;
+  --ti-min-h-number: 37px;
+  --ti-radius: 1px;
+  --ti-width: var(--tq-column);
 }
 
 [data-test-device="mobile"] {
@@ -54,6 +68,16 @@
   --tq-chip-size: 22px;
   --tq-chip-fs: 11px;
   --tq-checkbox-size: 22px;
+
+  --ti-fs: 15px;
+  --ti-lh: 24px;
+  --ti-pad-y: 10px;
+  --ti-pad-x: 10px;
+  --ti-min-h-short: 92px;
+  --ti-min-h-long: 148px;
+  --ti-min-h-number: 37px;
+  --ti-radius: 1px;
+  --ti-width: var(--tq-column);
 }
 
 [data-test-device="desktop"] {
@@ -73,6 +97,16 @@
   --tq-chip-size: 28px;
   --tq-chip-fs: 12px;
   --tq-checkbox-size: 26px;
+
+  --ti-fs: 16px;
+  --ti-lh: 24px;
+  --ti-pad-y: 12px;
+  --ti-pad-x: 14px;
+  --ti-min-h-short: 56px;
+  --ti-min-h-long: 200px;
+  --ti-min-h-number: 56px;
+  --ti-radius: 3px;
+  --ti-width: 100%;
 }
 
 /* Shared option-list / option / chip / checkbox / label rules.
@@ -442,3 +476,49 @@
   margin-inline: auto;
 }
 
+
+/* ──────────────────────────────────────────────────────────────────────
+   Text inputs — short_text, long_answer, number.
+
+   Same device-token pattern as .tq-* and qmedia. All dimensional
+   styling (size, padding, width, radius) reads --ti-* tokens declared
+   above per device. No @container queries, no per-surface overrides.
+
+   Per-type variations (border style, accent colour for number) are
+   modifier rules below, NOT per-surface overrides.
+   ────────────────────────────────────────────────────────────────────── */
+.test-short-answer,
+.test-long-answer,
+.test-number-answer {
+  box-sizing: border-box;
+  width: var(--ti-width);
+  max-width: 100%;
+  margin-inline: auto;
+  display: block;
+  padding: var(--ti-pad-y) var(--ti-pad-x);
+  font-family: inherit;
+  font-size: var(--ti-fs);
+  line-height: var(--ti-lh);
+  border-radius: var(--ti-radius);
+  /* Theme tint + text colour shared with the other answer controls
+     (option chips, dropdown, etc.). */
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  color: var(--test-theme-answer-text, #0445af);
+}
+
+/* Text-area types — grey 1px border + vertical resize. */
+.test-short-answer,
+.test-long-answer {
+  border: 1px solid #cbd5e1;
+  resize: vertical;
+}
+
+.test-short-answer { min-height: var(--ti-min-h-short); }
+.test-long-answer  { min-height: var(--ti-min-h-long); }
+
+/* Number — accent underline, no full border. */
+.test-number-answer {
+  min-height: var(--ti-min-h-number);
+  border: none;
+  border-bottom: 1.5px solid var(--test-theme-answer, #0445af);
+}

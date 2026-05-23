@@ -64,15 +64,15 @@
     font-size: 15px !important;
     line-height: 1.4 !important;
   }
+  /* Text-input sizing (short/long/number) now lives in tq-options.css
+     under the --ti-* device tokens. Other answer-type selectors stay
+     here until they're migrated. */
   .test-player__card .test-picture-option,
   .test-player__card .test-ordering-row,
   .test-player__card .test-match-row,
   .test-player__card .test-match-choice,
   .test-player__card .test-match-select,
   .test-player__card .test-dropdown-answer,
-  .test-player__card .test-number-answer,
-  .test-player__card .test-short-answer,
-  .test-player__card .test-long-answer,
   .test-player__card .test-fill-blank-input,
   .test-player__card .test-fill-blanks,
   .test-player__card .test-opinion-scale button {
@@ -117,11 +117,9 @@
     font-size: 15px !important;
   }
 }
+/* short/long/number text-input theming now lives in tq-options.css. */
 .test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,
-.test-player__card .test-number-answer,
-.test-player__card .test-short-answer,
-.test-player__card .test-long-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
 .test-player__card .test-ordering-row,
@@ -132,9 +130,6 @@
 }
 .test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,
-.test-player__card .test-number-answer,
-.test-player__card .test-short-answer,
-.test-player__card .test-long-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
 .test-player__card .test-ordering-row,
@@ -181,8 +176,7 @@
 .test-player__card .test-ordering-row,
 .test-player__card .test-match-row,
 .test-player__card .test-match-choice,
-.test-player__card .test-fill-blanks,
-.test-player__card .test-short-answer {
+.test-player__card .test-fill-blanks {
   font-size: var(--test-answer-size) !important;
 }
 .test-player__card .test-ordering-row {
@@ -191,8 +185,6 @@
   padding: clamp(4px, 1.2cqw, 9px) clamp(8px, 1.8cqw, 12px) !important;
 }
 
-.test-player__card .test-short-answer,
-.test-player__card .test-match-select,
 .test-player__card .test-match-select {
   font-size: var(--test-answer-size) !important;
   padding: var(--test-answer-padding-y) var(--test-answer-padding-x) !important;
@@ -216,10 +208,7 @@
   gap: clamp(7px, 1.8cqw, 12px) !important;
 }
 .test-player__card .test-ordering-list,
-.test-player__card--type-dropdown .test-dropdown-answer,
-.test-player__card--type-number .test-number-answer,
-.test-player__card--type-short-text .test-short-answer,
-.test-player__card--type-long-answer .test-long-answer {
+.test-player__card--type-dropdown .test-dropdown-answer {
   box-sizing: border-box !important;
   width: var(--test-mobile-column, min(100%, 303px)) !important;
   max-width: 100% !important;
@@ -228,19 +217,13 @@
 
 @container (min-width: 480px) {
   .test-player__card--no-media:not(.test-player__card--force-mobile) .test-ordering-list,
-  .test-player__card--no-media.test-player__card--type-dropdown:not(.test-player__card--force-mobile) .test-dropdown-answer,
-  .test-player__card--no-media.test-player__card--type-number:not(.test-player__card--force-mobile) .test-number-answer,
-  .test-player__card--no-media.test-player__card--type-short-text:not(.test-player__card--force-mobile) .test-short-answer,
-  .test-player__card--no-media.test-player__card--type-long-answer:not(.test-player__card--force-mobile) .test-long-answer {
+  .test-player__card--no-media.test-player__card--type-dropdown:not(.test-player__card--force-mobile) .test-dropdown-answer {
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0 !important;
   }
 
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-dropdown-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-number-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-short-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-long-answer,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-match-list {
@@ -257,13 +240,7 @@
   }}
 .test-player__card--force-desktop.test-player__card--no-media .test-ordering-list,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-dropdown .test-dropdown-answer,
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-number .test-number-answer,
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-short-text .test-short-answer,
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-long-answer .test-long-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-dropdown-answer,
-.test-player__card--force-desktop .qmedia-audio-top .test-number-answer,
-.test-player__card--force-desktop .qmedia-audio-top .test-short-answer,
-.test-player__card--force-desktop .qmedia-audio-top .test-long-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-picture-options,
 .test-player__card--force-desktop .qmedia-audio-top .test-ordering-list,
 .test-player__card--force-desktop .qmedia-audio-top .test-match-list {
@@ -451,10 +428,7 @@
   white-space: nowrap !important;
 }
 
-.test-player__card--type-dropdown .test-dropdown-answer,
-.test-player__card--type-number .test-number-answer,
-.test-player__card--type-short-text .test-short-answer,
-.test-player__card--type-long-answer .test-long-answer {
+.test-player__card--type-dropdown .test-dropdown-answer {
   box-sizing: border-box !important;
   display: block !important;
   min-height: 37px !important;
@@ -605,9 +579,6 @@
 .test-player__card .test-match-row > div,
 .test-player__card .test-match-select,
 .test-player__card .test-dropdown-answer,
-.test-player__card .test-number-answer,
-.test-player__card .test-short-answer,
-.test-player__card .test-long-answer,
 .test-player__card .test-fill-blank-input,
 .test-player__card .test-rating button {
   border-radius: var(--test-theme-answer-radius, 1px) !important;

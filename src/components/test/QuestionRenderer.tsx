@@ -295,12 +295,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
           }
         }}
         className="test-short-answer"
-        style={{
-          width: '100%', padding: '12px 14px', fontSize: 16,
-          border: '1px solid #cbd5e1', borderRadius: 1,
-          fontFamily: 'inherit', resize: 'vertical',
-          boxSizing: 'border-box',
-        }}
       />
     );
   }
@@ -315,12 +309,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
         placeholder="Type your answer…"
         onChange={e => onChange({ text: e.target.value })}
         className="test-long-answer"
-        style={{
-          width: '100%', padding: '12px 14px', fontSize: 16,
-          border: '1px solid #cbd5e1', borderRadius: 1,
-          fontFamily: 'inherit', resize: 'vertical',
-          boxSizing: 'border-box',
-        }}
       />
     );
   }
@@ -336,13 +324,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
         placeholder="Type a number…"
         onChange={e => onChange({ text: e.target.value })}
         className="test-number-answer"
-        style={{
-          width: '100%', padding: '12px 14px', fontSize: 18,
-          border: 'none', borderBottom: '1.5px solid #0445af',
-          background: 'rgba(4,69,175,0.08)', color: '#0445af',
-          borderRadius: 1, fontFamily: 'inherit',
-          boxSizing: 'border-box',
-        }}
       />
     );
   }
