@@ -329,7 +329,10 @@ const videoFrameWrap: React.CSSProperties = {
   borderRadius: 7,
   overflow: 'hidden',
   background: '#111827',
-  marginBottom: 22,
+  // No vertical margin: the surrounding .qmedia-content gap (and the
+  // grid's align-items: center) own the spacing. A bottom margin here
+  // inflates the asset's CSS-box past its visible bounds and biases
+  // the vertical centring relative to the content beside it.
 };
 
 const videoFrame: React.CSSProperties = {
@@ -350,7 +353,10 @@ const mediaLink: React.CSSProperties = {
 const audioFrameWrap: React.CSSProperties = {
   width: '100%',
   maxWidth: 420,
-  margin: '0 auto 10px',
+  // Horizontal centring only; vertical spacing is owned by the
+  // .qmedia-content gap so the wrapper's CSS box matches its visible
+  // bounds (same fix as videoFrameWrap and imageFrameStyle).
+  marginInline: 'auto',
   padding: 0,
   borderRadius: 0,
   background: 'transparent',
