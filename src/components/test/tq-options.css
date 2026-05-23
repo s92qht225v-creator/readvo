@@ -105,6 +105,23 @@
   --dd-option-lh: 22px;
   --dd-option-gap: 6px;
   --dd-check-w: 14px;
+
+  /* Ordering tokens (--ord-*). Drive .test-ordering-list / row /
+     badge / handle / hint. Drag transforms stay inline (dnd-kit). */
+  --ord-rows-gap: 8px;
+  --ord-row-min-h: 37px;
+  --ord-row-pad-y: 8px;
+  --ord-row-pad-x: 10px;
+  --ord-row-content-gap: 8px;
+  --ord-row-fs: 15px;
+  --ord-row-lh: 20px;
+  --ord-row-radius: 1px;
+  --ord-badge-size: 22px;
+  --ord-badge-fs: 11px;
+  --ord-badge-radius: 3px;
+  --ord-handle-pad-x: 2px;
+  --ord-hint-fs: 13px;
+  --ord-hint-mt: 4px;
 }
 
 [data-test-device="mobile"] {
@@ -175,6 +192,21 @@
   --dd-option-lh: 22px;
   --dd-option-gap: 6px;
   --dd-check-w: 14px;
+
+  --ord-rows-gap: 8px;
+  --ord-row-min-h: 37px;
+  --ord-row-pad-y: 8px;
+  --ord-row-pad-x: 10px;
+  --ord-row-content-gap: 8px;
+  --ord-row-fs: 15px;
+  --ord-row-lh: 20px;
+  --ord-row-radius: 1px;
+  --ord-badge-size: 22px;
+  --ord-badge-fs: 11px;
+  --ord-badge-radius: 3px;
+  --ord-handle-pad-x: 2px;
+  --ord-hint-fs: 13px;
+  --ord-hint-mt: 4px;
 }
 
 [data-test-device="desktop"] {
@@ -249,6 +281,21 @@
   --dd-option-lh: 22px;
   --dd-option-gap: 8px;
   --dd-check-w: 14px;
+
+  --ord-rows-gap: 10px;
+  --ord-row-min-h: 48px;
+  --ord-row-pad-y: 10px;
+  --ord-row-pad-x: 14px;
+  --ord-row-content-gap: 10px;
+  --ord-row-fs: 16px;
+  --ord-row-lh: 22px;
+  --ord-row-radius: 3px;
+  --ord-badge-size: 26px;
+  --ord-badge-fs: 12px;
+  --ord-badge-radius: 3px;
+  --ord-handle-pad-x: 4px;
+  --ord-hint-fs: 13px;
+  --ord-hint-mt: 6px;
 }
 
 /* Shared option-list / option / chip / checkbox / label rules.
@@ -1016,4 +1063,89 @@
 @keyframes test-dropdown-open {
   from { opacity: 0; transform: scaleY(0.96); }
   to   { opacity: 1; transform: scaleY(1); }
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   Ordering — drag-to-sort rows (dnd-kit).
+
+   The renderer keeps `transform` and `transition` inline because
+   dnd-kit drives them per-item. Everything dimensional and stateful
+   (size, padding, badge, dragging visuals) reads --ord-* tokens.
+
+   Row dragging state is signalled by `data-dragging="true"` on the
+   row element; CSS branches on the attribute, no JS inline styling.
+   ────────────────────────────────────────────────────────────────────── */
+.test-ordering-list {
+  display: grid;
+  gap: 0;
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.test-ordering-list__rows {
+  display: grid;
+  gap: var(--ord-rows-gap);
+}
+
+.test-ordering-row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--ord-row-content-gap);
+  min-height: var(--ord-row-min-h);
+  padding: var(--ord-row-pad-y) var(--ord-row-pad-x);
+  border: 1px solid transparent;
+  border-radius: var(--ord-row-radius);
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  color: var(--test-theme-answer-text, #0445af);
+  font-family: inherit;
+  font-size: var(--ord-row-fs);
+  line-height: var(--ord-row-lh);
+  cursor: grab;
+  touch-action: none;
+}
+
+.test-ordering-row[data-dragging="true"] {
+  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 42%, transparent);
+  opacity: 0.5;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--test-theme-answer, #0445af) 16%, transparent);
+}
+
+.test-ordering-row__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--ord-badge-size);
+  height: var(--ord-badge-size);
+  border: 1px solid var(--test-theme-answer, #0445af);
+  border-radius: var(--ord-badge-radius);
+  background: #ffffff;
+  color: var(--test-theme-answer, #0445af);
+  font-size: var(--ord-badge-fs);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.test-ordering-row__text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.test-ordering-row__handle {
+  flex-shrink: 0;
+  padding: 0 var(--ord-handle-pad-x);
+  color: color-mix(in srgb, var(--test-theme-answer, #0445af) 45%, transparent);
+  font-weight: 900;
+  letter-spacing: -2px;
+  cursor: grab;
+}
+
+.test-ordering-hint {
+  color: var(--test-theme-description, #64748b);
+  font-size: var(--ord-hint-fs);
+  margin-top: var(--ord-hint-mt);
 }

@@ -125,9 +125,8 @@
   .qmedia-audio-top > .qmedia-content > .qmedia-answer * {
     text-align: left;
   }
-  /* short/long/number/picture/dropdown full-width via tokens on desktop. */
+  /* short/long/number/picture/dropdown/ordering full-width via tokens on desktop. */
   .qmedia-audio-top .test-question-options,
-  .qmedia-audio-top .test-ordering-list,
   .qmedia-audio-top .test-match-list {
     width: 100% !important;
     max-width: 100% !important;

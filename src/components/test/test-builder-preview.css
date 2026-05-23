@@ -62,36 +62,10 @@
 }/* text inputs, picture, opinion-scale, rating, dropdown all driven
    by their respective --*-* tokens in tq-options.css. */
 
-.tb-preview-card--mobile-centered .test-match-list,
-.tb-preview-card--mobile-centered .test-ordering-list {
+.tb-preview-card--mobile-centered .test-match-list {
   width: min(100%, 303px) !important;
   max-width: 100% !important;
   gap: 7px !important;
-}
-
-.tb-preview-card--mobile-centered .test-ordering-row {
-  box-sizing: border-box !important;
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  border-radius: 1px !important;
-  background: #f3f5ff !important;
-  color: rgb(4, 69, 175) !important;
-}
-
-.tb-preview-card--mobile-centered .test-ordering-row {
-  min-height: 37px !important;
-  padding: 6px 10px !important;
-  gap: 4px !important;
-}
-
-.tb-preview-card--mobile-centered .test-ordering-row span:nth-child(2) {
-  min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  line-height: 20px !important;
 }
 
 .tb-preview-card--mobile-centered .test-match-row {
@@ -216,8 +190,6 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-.tb-preview-card .test-ordering-row,
-.test-player__card .test-ordering-row,
 .tb-preview-card .test-match-row,
 .test-player__card .test-match-row,
 .tb-preview-card .test-match-choice,
@@ -225,12 +197,6 @@
 .tb-preview-card .test-fill-blanks,
 .test-player__card .test-fill-blanks {
   font-size: var(--test-answer-size) !important;
-}
-.tb-preview-card .test-ordering-row,
-.test-player__card .test-ordering-row {
-  gap: var(--test-option-gap) !important;
-  min-height: clamp(32px, 5.2cqw, 40px) !important;
-  padding: clamp(4px, 1.2cqw, 9px) clamp(8px, 1.8cqw, 12px) !important;
 }
 
 .tb-preview-card .test-match-select,
@@ -252,8 +218,6 @@
   border-radius: 1px 1px 0 0 !important;
 }
 
-.tb-preview-card .test-ordering-list,
-.test-player__card .test-ordering-list,
 .tb-preview-card .test-match-list,
 .test-player__card .test-match-list {
   gap: clamp(7px, 1.8cqw, 12px) !important;
@@ -345,13 +309,6 @@
 .test-player__card .test-match-row {
   gap: clamp(6px, 1.6cqw, 10px) !important;
 }
-.tb-preview-card .test-ordering-row span:first-child,
-.test-player__card .test-ordering-row span:first-child {
-  width: clamp(19px, 3.2cqw, 22px) !important;
-  height: clamp(19px, 3.2cqw, 22px) !important;
-  font-size: clamp(9px, 1.45cqw, 11px) !important;
-}
-
 .tb-preview-card .test-fill-blanks,
 .test-player__card .test-fill-blanks {
   line-height: 1.75 !important;
@@ -363,8 +320,6 @@
 .test-player__card .qmedia-asset img,
 .tb-preview-card .qmedia-asset iframe,
 .test-player__card .qmedia-asset iframe,
-.tb-preview-card .test-ordering-row,
-.test-player__card .test-ordering-row,
 .tb-preview-card .test-match-choice,
 .test-player__card .test-match-choice,
 .tb-preview-card .test-match-row > div,
@@ -376,32 +331,10 @@
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
-.tb-preview-card .test-ordering-list > div:last-child,
-.test-player__card .test-ordering-list > div:last-child,
 .tb-preview-card .tb-preview-footnote {
   font-size: var(--test-small-size) !important;
 }
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-ordering-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  width: 100% !important;
-  max-width: none !important;
-}
-.tb-preview-card:not(.tb-preview-card--mobile-centered) .test-ordering-row {
-  box-sizing: border-box !important;
-  width: 100% !important;
-  min-height: 40px !important;
-  height: auto !important;
-  padding: 6px 10px !important;
-  gap: 4px !important;
-  background: #f3f5ff !important;
-  border: none !important;
-  border-radius: 1px !important;
-  color: rgb(4, 69, 175) !important;
-  align-items: center !important;
-  box-shadow: none !important;
-}/*
+/* Ordering layout/theming now driven by --ord-* tokens in tq-options.css. *//*
  * Explicit preview contexts. Keep these separated so mobile, desktop,
  * media, no-media, and each media layout can be adjusted independently.
  */
@@ -440,73 +373,26 @@
   --tb-answer-pad-y: 6px;
   --tb-answer-pad-x: 10px;
 }
-.tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-list,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: var(--tb-answer-gap) !important;
-  width: var(--tb-answer-width) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-.tb-preview-card--mobile.tb-preview-card--no-media .test-ordering-row,
-.tb-preview-card--desktop.tb-preview-card--no-media .test-ordering-row {
-  box-sizing: border-box !important;
-  width: var(--tb-answer-width) !important;
-  max-width: 100% !important;
-  min-height: var(--tb-answer-min-height) !important;
-  padding: var(--tb-answer-pad-y) var(--tb-answer-pad-x) !important;
-  gap: 4px !important;
-  border-radius: var(--tb-answer-radius) !important;
-  background: #f3f5ff !important;
-  border: none !important;
-  color: rgb(4, 69, 175) !important;
-  align-items: center !important;
-  box-shadow: none !important;
-}
-.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-list {
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-.tb-preview-card.tb-preview-card--mobile-centered .test-ordering-row span:nth-child(2) {
-  font-size: 18px !important;
-  line-height: 20px !important;
-}
-/* Text-input + picture-choice + dropdown theming lives in tq-options.css. */
+/* Ordering layout/theming + size handled by --ord-* tokens. */
+
+/* Text-input + picture-choice + dropdown + ordering theming lives in tq-options.css. */
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
-.tb-preview-card .test-ordering-row,
 .tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .tb-preview-card .test-match-choice,
-.tb-preview-card .test-match-select,
-.tb-preview-card .test-ordering-row {
+.tb-preview-card .test-match-select {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
-.tb-preview-card .test-ordering-row span:first-child {
-  color: var(--test-theme-answer, #0445af) !important;
-  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row {
+.tb-preview-card.tb-preview-card.tb-preview-card .test-match-select {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
-.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row span:first-child {
-  color: var(--test-theme-answer, #0445af) !important;
-  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {

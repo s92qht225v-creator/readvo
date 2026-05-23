@@ -67,7 +67,6 @@
   /* Text-input sizing (short/long/number) now lives in tq-options.css
      under the --ti-* device tokens. Other answer-type selectors stay
      here until they're migrated. */
-  .test-player__card .test-ordering-row,
   .test-player__card .test-match-row,
   .test-player__card .test-match-choice,
   .test-player__card .test-match-select,
@@ -114,22 +113,16 @@
     font-size: 15px !important;
   }
 }
-/* Text-input + picture-choice + opinion-scale + rating + dropdown
-   theming lives in tq-options.css now. */
+/* Text-input + picture-choice + opinion-scale + rating + dropdown +
+   ordering theming lives in tq-options.css now. */
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
-.test-player__card .test-ordering-row,
 .test-player__card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .test-player__card .test-match-choice,
-.test-player__card .test-match-select,
-.test-player__card .test-ordering-row {
+.test-player__card .test-match-select {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
-.test-player__card .test-ordering-row span:first-child {
-  color: var(--test-theme-answer, #0445af) !important;
-  border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
 
 .test-player__card .test-player__title {
@@ -145,16 +138,10 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-.test-player__card .test-ordering-row,
 .test-player__card .test-match-row,
 .test-player__card .test-match-choice,
 .test-player__card .test-fill-blanks {
   font-size: var(--test-answer-size) !important;
-}
-.test-player__card .test-ordering-row {
-  gap: var(--test-option-gap) !important;
-  min-height: clamp(32px, 5.2cqw, 40px) !important;
-  padding: clamp(4px, 1.2cqw, 9px) clamp(8px, 1.8cqw, 12px) !important;
 }
 
 .test-player__card .test-match-select {
@@ -174,25 +161,11 @@
   border-radius: 1px 1px 0 0 !important;
 }
 
-.test-player__card .test-ordering-list,
 .test-player__card .test-match-list {
   gap: clamp(7px, 1.8cqw, 12px) !important;
 }
-.test-player__card .test-ordering-list {
-  box-sizing: border-box !important;
-  width: var(--test-mobile-column, min(100%, 303px)) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
 
 @container (min-width: 480px) {
-  .test-player__card--no-media:not(.test-player__card--force-mobile) .test-ordering-list {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-inline: 0 !important;
-  }
-
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-match-list {
     width: 100% !important;
     max-width: 100% !important;
@@ -204,9 +177,8 @@
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0 !important;
-  }}
-.test-player__card--force-desktop.test-player__card--no-media .test-ordering-list,
-.test-player__card--force-desktop .qmedia-audio-top .test-ordering-list,
+  }
+}
 .test-player__card--force-desktop .qmedia-audio-top .test-match-list {
   width: 100% !important;
   max-width: 100% !important;
@@ -360,12 +332,6 @@
    menu, options, chevron, check, hover/selected states, open
    animation). */
 
-.test-player__card .test-ordering-row span:first-child {
-  width: clamp(19px, 3.2cqw, 22px) !important;
-  height: clamp(19px, 3.2cqw, 22px) !important;
-  font-size: clamp(9px, 1.45cqw, 11px) !important;
-}
-
 .test-player__card .test-fill-blanks {
   line-height: 1.75 !important;
 }
@@ -373,16 +339,11 @@
 .test-player__card .qmedia-asset,
 .test-player__card .qmedia-asset img,
 .test-player__card .qmedia-asset iframe,
-.test-player__card .test-ordering-row,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-row > div,
 .test-player__card .test-match-select,
 .test-player__card .test-fill-blank-input {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
-}
-
-.test-player__card .test-ordering-list > div:last-child {
-  font-size: var(--test-small-size) !important;
 }
 
 .test-player__wallpaper-bg {

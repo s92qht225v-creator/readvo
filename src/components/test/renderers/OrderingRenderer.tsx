@@ -19,7 +19,7 @@ import {
   useSortable,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { CSS, type Transform } from '@dnd-kit/utilities';
+import { CSS } from '@dnd-kit/utilities';
 
 export function OrderingPlayer({ items, value, onChange }: {
   items: { id: string; text: string }[];
@@ -51,10 +51,10 @@ export function OrderingPlayer({ items, value, onChange }: {
   };
 
   return (
-    <div className="test-ordering-list" style={{ display: 'grid', gap: 8 }}>
+    <div className="test-ordering-list">
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} modifiers={[restrictToVerticalAxis]}>
         <SortableContext items={order} strategy={verticalListSortingStrategy}>
-          <div style={{ display: 'grid', gap: 8 }}>
+          <div className="test-ordering-list__rows">
             {order.map((itemId, i) => (
               <SortableOrderingRow
                 key={itemId}
@@ -66,7 +66,7 @@ export function OrderingPlayer({ items, value, onChange }: {
           </div>
         </SortableContext>
       </DndContext>
-      <div style={orderingHint}>Drag rows into the correct order.</div>
+      <div className="test-ordering-hint">Drag rows into the correct order.</div>
     </div>
   );
 }
@@ -81,61 +81,29 @@ function SortableOrderingRow({ id, index, text }: { id: string; index: number; t
     isDragging,
   } = useSortable({ id });
 
+  /* Only dnd-kit-driven properties stay inline (per-item transform +
+     transition). Visuals (size, padding, badge, hover, dragging
+     border/opacity/shadow) live in tq-options.css under --ord-*. */
+  const dndStyle: CSSProperties = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
   return (
     <div
       ref={setNodeRef}
       className="test-ordering-row"
-      style={orderingRow(isDragging, transform, transition)}
+      data-dragging={isDragging ? 'true' : 'false'}
+      style={dndStyle}
       {...attributes}
       {...listeners}
     >
-      <span style={{
-        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-        width: 22, height: 22, borderRadius: 3,
-        background: '#fff', color: '#0445af',
-        fontSize: 11, fontWeight: 700,
-        border: '1px solid #0445af', flexShrink: 0,
-      }}>{index + 1}</span>
-      <span style={{ flex: 1 }}>{text}</span>
-      <span aria-hidden style={dragHandle}>⋮⋮</span>
+      <span className="test-ordering-row__badge">{index + 1}</span>
+      <span className="test-ordering-row__text">{text}</span>
+      <span aria-hidden className="test-ordering-row__handle">⋮⋮</span>
     </div>
   );
 }
-
-const orderingRow = (
-  dragging: boolean,
-  transform: Transform | null,
-  transition: string | undefined,
-): CSSProperties => ({
-  display: 'flex',
-  alignItems: 'center',
-  gap: 8,
-  padding: '9px 10px',
-  background: 'rgba(4, 69, 175, 0.08)',
-  color: '#0445af',
-  border: dragging ? '1px solid rgba(4, 69, 175, 0.42)' : '1px solid transparent',
-  borderRadius: 1,
-  cursor: 'grab',
-  opacity: dragging ? 0.5 : 1,
-  touchAction: 'none',
-  transform: CSS.Transform.toString(transform),
-  transition,
-  boxShadow: dragging ? '0 10px 24px rgba(4,69,175,0.16)' : undefined,
-});
-
-const dragHandle: CSSProperties = {
-  color: 'rgba(4, 69, 175, 0.45)',
-  fontWeight: 900,
-  letterSpacing: -2,
-  cursor: 'grab',
-  padding: '0 2px',
-};
-
-const orderingHint: CSSProperties = {
-  color: '#64748b',
-  fontSize: 13,
-  marginTop: 2,
-};
 
 /** Constrain drag motion to the vertical axis so items can't be flung
  *  horizontally off the page (especially noticeable on mobile). */
