@@ -18,17 +18,13 @@
 }
 
 @media (max-width: 640px) {
-  /* On real mobile (production, not preview shell): make the card chrome
-     invisible. Use `align-items: safe center` so that short content
-     visually centers in the viewport while long content falls back to
-     flex-start and scrolls normally (no top clipping). The
-     .test-preview-shell--mobile rules are more specific and still win
-     there, leaving the simulated phone frame untouched. */
-  .test-player {
-    align-items: safe center !important;
-    padding-top: 24px !important;
-    padding-bottom: 24px !important;
-  }
+  /* .test-player itself is owned by reading.css's @media (max-width: 640px)
+     block — defines min-height, safe-center alignment, the
+     `calc(132px + safe-area-inset-bottom)` padding-bottom that keeps
+     the fixed nav from covering the last option, and overflow-y: auto.
+     Don't re-declare here: a duplicate with only padding-top/padding-
+     bottom: 24px previously overrode that 132px clearance via source-
+     order and hid the last option behind the nav. */
 
   .test-player__inner {
     display: block !important;
