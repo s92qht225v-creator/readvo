@@ -312,6 +312,17 @@
   overflow: hidden;
 }
 
+/* No-media: flat single-column flex layout on every device. Overrides
+   the desktop 2-column grid so the content fills the full card width
+   instead of leaving a phantom 360px column on the right. */
+.qmedia-layout.qmedia-no-media,
+[data-test-device="desktop"] .qmedia-layout.qmedia-no-media {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  min-height: 0;
+}
+
 /* Mobile: flatten the content wrapper so header/asset/answer behave as
    siblings under the parent flex column and the order tokens can
    re-arrange them. */
