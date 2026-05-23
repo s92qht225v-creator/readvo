@@ -52,48 +52,10 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   }
 
   if (media.type === 'video') {
-    const aspect = videoAspectRatio(media);
-    const portrait = aspect && aspect < 1;
-    const wrapperClass = `${className ?? ''} qmedia-asset--video${portrait ? ' qmedia-asset--portrait' : ''}`;
-    const wrapperStyle = { ...videoFrameWrap, aspectRatio: aspect ? `${aspect}` : '16 / 9', ...style };
-
-    // Uploaded video → use a native <video> element. Lets the cascade
-    // own the box and avoids YouTube's portrait-letterboxing behaviour.
     if (media.provider === 'upload') {
-      return (
-        <div className={wrapperClass} style={wrapperStyle}>
-          <video
-            src={media.url}
-            controls
-            playsInline
-            preload="metadata"
-            style={videoFrame}
-            aria-label={media.alt || 'Question video'}
-          />
-        </div>
-      );
+      return <UploadedVideo media={media} className={className} style={style} />;
     }
-
-    // External link (YouTube, Vimeo, etc.) → iframe.
-    const embedUrl = toEmbedUrl(media.url);
-    if (!embedUrl) {
-      return (
-        <a href={media.url} target="_blank" rel="noreferrer" style={mediaLink}>
-          Open video
-        </a>
-      );
-    }
-    return (
-      <div className={wrapperClass} style={wrapperStyle}>
-        <iframe
-          src={embedUrl}
-          title={media.alt || 'Question video'}
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          style={videoFrame}
-        />
-      </div>
-    );
+    return <EmbeddedVideo media={media} className={className} style={style} />;
   }
 
   const aspectRatio = aspectRatioValue(media);
@@ -279,6 +241,73 @@ function aspectRatioValue(media: QuestionMedia) {
     return `${media.naturalAspectRatio} / 1`;
   }
   return null;
+}
+
+function UploadedVideo({ media, className, style }: { media: QuestionMedia; className?: string; style?: React.CSSProperties }) {
+  // Runtime aspect detection: even if media.naturalAspectRatio is
+  // missing (older uploads), the loadedmetadata event gives us the
+  // real dimensions so the wrapper matches and the <video>'s default
+  // object-fit doesn't letterbox.
+  const initialAspect = videoAspectRatio(media);
+  const [runtimeAspect, setRuntimeAspect] = useState<number | undefined>(undefined);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const onLoaded = () => {
+      if (v.videoWidth && v.videoHeight) {
+        setRuntimeAspect(v.videoWidth / v.videoHeight);
+      }
+    };
+    v.addEventListener('loadedmetadata', onLoaded);
+    if (v.readyState >= 1) onLoaded();
+    return () => v.removeEventListener('loadedmetadata', onLoaded);
+  }, [media.url]);
+  const aspect = runtimeAspect ?? initialAspect;
+  const portrait = aspect ? aspect < 1 : false;
+  return (
+    <div
+      className={`${className ?? ''} qmedia-asset--video${portrait ? ' qmedia-asset--portrait' : ''}`}
+      style={{ ...videoFrameWrap, aspectRatio: aspect ? `${aspect}` : '16 / 9', ...style }}
+    >
+      <video
+        ref={videoRef}
+        src={media.url}
+        controls
+        playsInline
+        preload="metadata"
+        style={videoFrame}
+        aria-label={media.alt || 'Question video'}
+      />
+    </div>
+  );
+}
+
+function EmbeddedVideo({ media, className, style }: { media: QuestionMedia; className?: string; style?: React.CSSProperties }) {
+  const aspect = videoAspectRatio(media);
+  const portrait = aspect ? aspect < 1 : false;
+  const embedUrl = toEmbedUrl(media.url ?? '');
+  if (!embedUrl) {
+    return (
+      <a href={media.url} target="_blank" rel="noreferrer" style={mediaLink}>
+        Open video
+      </a>
+    );
+  }
+  return (
+    <div
+      className={`${className ?? ''} qmedia-asset--video${portrait ? ' qmedia-asset--portrait' : ''}`}
+      style={{ ...videoFrameWrap, aspectRatio: aspect ? `${aspect}` : '16 / 9', ...style }}
+    >
+      <iframe
+        src={embedUrl}
+        title={media.alt || 'Question video'}
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        style={videoFrame}
+      />
+    </div>
+  );
 }
 
 function videoAspectRatio(media: QuestionMedia): number | undefined {

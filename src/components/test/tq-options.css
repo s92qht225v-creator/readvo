@@ -310,6 +310,22 @@
   height: var(--qm-asset-max-h, 600px);
 }
 
+/* Portrait YouTube/Vimeo: the standard /embed/ player is fixed 16:9 and
+   centres portrait content inside, producing black bars on the sides.
+   Trick: render the iframe at the size YouTube's player naturally
+   occupies for our wrapper height (16:9 wide), centre it, and let the
+   wrapper's overflow:hidden clip the letterbox bars. The visible
+   central column equals the portrait content width. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--portrait > iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  /* (16/9) ÷ (9/16) = (16/9)² → 256/81 ≈ 316% of wrapper width */
+  width: calc(100% * 256 / 81);
+  transform: translateX(-50%);
+}
+
 /* Per-media modifiers (set by QuestionMediaBlock.tsx based on the
    media's type / aspectRatio). Don't fight tokens — they describe a
    property of the media itself, not the device. */
