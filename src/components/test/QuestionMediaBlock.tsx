@@ -23,7 +23,17 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
       <div className="qmedia-answer">{answer}</div>
     </>
   );
-  if (!media?.url) return <>{content}</>;
+  if (!media?.url) {
+    // No-media path still uses the same flex-column wrapper so spacing
+    // between header and answer matches the media path (driven by
+    // --qm-gap on .qmedia-layout). Without this wrapper, header and
+    // answer would sit as block siblings with zero gap.
+    return (
+      <div className="qmedia-layout qmedia-no-media">
+        <div className="qmedia-content">{content}</div>
+      </div>
+    );
+  }
   if (media.type === 'audio') {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
