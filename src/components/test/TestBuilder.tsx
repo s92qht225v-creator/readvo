@@ -2643,7 +2643,7 @@ function PreviewCanvas({
             header={(
               <>
                 <h2 className="tb-preview-title" style={{
-                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: '0 0 10px', lineHeight: 1.12,
+                  fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
                   {q.prompt || 'Your question…'}
@@ -3948,17 +3948,21 @@ const requiredChip: React.CSSProperties = {
   padding: '5px 9px',
 };
 
+// Spacing between title / description / answer in the builder preview
+// is owned by the flex `gap` on .qmedia-content (and .qmedia-header) in
+// tq-options.css — matches the player. Per-element margins here would
+// inflate the content's CSS-box past its visible bounds and bias the
+// vertical centring.
 const previewHint: React.CSSProperties = {
   fontSize: 15,
   color: 'var(--test-theme-description, #9b929d)',
   fontStyle: 'italic',
-  marginBottom: 32,
+  margin: 0,
   fontWeight: 500,
 };
 
 const previewAnswerArea: React.CSSProperties = {
   pointerEvents: 'none',
-  marginTop: 8,
 };
 
 function Center({ children }: { children: React.ReactNode }) {
