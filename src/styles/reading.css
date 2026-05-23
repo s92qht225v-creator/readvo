@@ -13822,13 +13822,7 @@ body {
   align-self: stretch !important;
 }
 
-.tb-canvas--mobile .tb-preview-card .test-dropdown-answer,
-.tb-canvas--mobile .tb-preview-card .test-custom-dropdown.test-dropdown-answer {
-  box-sizing: border-box !important;
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}.tb-canvas--mobile .test-match-row {
+.tb-canvas--mobile .test-match-row {
   grid-template-columns: 1fr !important;
   gap: 8px !important;
 }
@@ -14114,7 +14108,6 @@ body {
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
-.test-preview-shell--mobile .test-dropdown-answer,
 .test-preview-shell--mobile .test-fill-blanks {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
@@ -14179,7 +14172,6 @@ body {
   overflow-wrap: anywhere !important;
 }
 
-.test-preview-shell--mobile .test-dropdown-answer,
 .test-preview-shell--mobile .test-match-select,
 .test-preview-shell--mobile .test-match-row > div,
 .test-preview-shell--mobile .test-fill-blank-input {
@@ -14198,32 +14190,7 @@ body {
   vertical-align: baseline !important;
 }
 
-.test-preview-shell .test-custom-dropdown.test-dropdown-answer,
-.test-preview-shell--mobile .test-custom-dropdown.test-dropdown-answer {
-  height: auto !important;
-  min-height: 37px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 3px !important;
-  background: transparent !important;
-  overflow: visible !important;
-}
-
-.test-preview-shell .test-custom-dropdown__trigger,
-.test-preview-shell--mobile .test-custom-dropdown__trigger {
-  min-height: 37px !important;
-  border-radius: 3px !important;
-  padding: 6px 10px !important;
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer, rgb(4, 69, 175)) !important;
-  font-size: 18px !important;
-  line-height: 24px !important;
-}
-
-.test-preview-shell .test-custom-dropdown__menu,
-.test-preview-shell--mobile .test-custom-dropdown__menu {
-  border-radius: 3px !important;
-}
+/* Custom dropdown now driven by --dd-* tokens in tq-options.css. */
 
 .test-preview-shell--mobile .test-match-row {
   grid-template-columns: 1fr !important;
@@ -14306,7 +14273,6 @@ body {
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
-.test-preview-shell--mobile .test-dropdown-answer,
 .test-preview-shell--mobile .test-fill-blanks,
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-answer,
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-header,
@@ -14337,7 +14303,6 @@ body {
 .test-preview-shell .test-player__card .test-ordering-row,
 .test-preview-shell .test-player__card .test-match-row > div,
 .test-preview-shell .test-player__card .test-match-select,
-.test-preview-shell .test-player__card .test-dropdown-answer,
 .test-preview-shell .test-player__card .test-fill-blank-input {
   border-radius: 3px !important;
 }.test-preview-shell--mobile .test-player__nav {
@@ -14432,7 +14397,6 @@ body {
   .test-player__card .qmedia-answer,
   .test-player__card .test-match-list,
   .test-player__card .test-ordering-list,
-  .test-player__card .test-dropdown-answer,
   .test-player__card .test-fill-blanks {
     box-sizing: border-box !important;
     width: var(--test-mobile-column) !important;

@@ -85,6 +85,25 @@
   --or-btn-size: 46px;
   --or-btn-fs: 34px;
   --or-btn-radius: 1px;
+
+  /* Dropdown tokens (--dd-*). Drive .test-dropdown-answer trigger
+     button + popover menu + each option. */
+  --dd-trigger-min-h: 37px;
+  --dd-trigger-pad-y: 6px;
+  --dd-trigger-pad-x: 10px;
+  --dd-trigger-fs: 18px;
+  --dd-trigger-lh: 24px;
+  --dd-trigger-gap: 12px;
+  --dd-radius: 3px;
+  --dd-chevron-size: 16px;
+  --dd-menu-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --dd-option-min-h: 34px;
+  --dd-option-pad-y: 6px;
+  --dd-option-pad-x: 10px;
+  --dd-option-fs: 16px;
+  --dd-option-lh: 22px;
+  --dd-option-gap: 6px;
+  --dd-check-w: 14px;
 }
 
 [data-test-device="mobile"] {
@@ -137,6 +156,23 @@
   --or-btn-size: 46px;
   --or-btn-fs: 34px;
   --or-btn-radius: 1px;
+
+  --dd-trigger-min-h: 37px;
+  --dd-trigger-pad-y: 6px;
+  --dd-trigger-pad-x: 10px;
+  --dd-trigger-fs: 18px;
+  --dd-trigger-lh: 24px;
+  --dd-trigger-gap: 12px;
+  --dd-radius: 3px;
+  --dd-chevron-size: 16px;
+  --dd-menu-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --dd-option-min-h: 34px;
+  --dd-option-pad-y: 6px;
+  --dd-option-pad-x: 10px;
+  --dd-option-fs: 16px;
+  --dd-option-lh: 22px;
+  --dd-option-gap: 6px;
+  --dd-check-w: 14px;
 }
 
 [data-test-device="desktop"] {
@@ -193,6 +229,23 @@
   --or-btn-size: 46px;
   --or-btn-fs: 34px;
   --or-btn-radius: 1px;
+
+  --dd-trigger-min-h: 56px;
+  --dd-trigger-pad-y: 12px;
+  --dd-trigger-pad-x: 14px;
+  --dd-trigger-fs: 18px;
+  --dd-trigger-lh: 24px;
+  --dd-trigger-gap: 12px;
+  --dd-radius: 3px;
+  --dd-chevron-size: 18px;
+  --dd-menu-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --dd-option-min-h: 40px;
+  --dd-option-pad-y: 8px;
+  --dd-option-pad-x: 14px;
+  --dd-option-fs: 16px;
+  --dd-option-lh: 22px;
+  --dd-option-gap: 8px;
+  --dd-check-w: 14px;
 }
 
 /* Shared option-list / option / chip / checkbox / label rules.
@@ -822,4 +875,139 @@
 
 .test-rating button[data-selected="true"] {
   color: #f59e0b;
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   Dropdown — .test-dropdown-answer wrapper with .test-custom-dropdown
+   modifier for the custom-popover variant. Trigger button opens a
+   listbox menu with options.
+
+   Mobile: 37px compact trigger. Desktop: 56px tall trigger matching the
+   .tq-option desktop sizing for visual consistency with multi-choice.
+   ────────────────────────────────────────────────────────────────────── */
+
+.test-dropdown-answer {
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.test-custom-dropdown.test-dropdown-answer {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: var(--dd-trigger-min-h);
+  padding: 0;
+  border: 0;
+  border-radius: var(--dd-radius);
+  background: transparent;
+  overflow: visible;
+}
+
+.test-custom-dropdown__trigger {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dd-trigger-gap);
+  width: 100%;
+  min-height: var(--dd-trigger-min-h);
+  padding: var(--dd-trigger-pad-y) var(--dd-trigger-pad-x);
+  border: none;
+  border-radius: var(--dd-radius);
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  color: var(--test-theme-answer-text, #0445af);
+  font-family: inherit;
+  font-size: var(--dd-trigger-fs);
+  line-height: var(--dd-trigger-lh);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.test-custom-dropdown__trigger:hover,
+.test-custom-dropdown__trigger[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 14%, #ffffff);
+}
+
+.test-custom-dropdown__trigger:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
+}
+
+.test-custom-dropdown__trigger > span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.test-custom-dropdown__chevron {
+  flex: 0 0 var(--dd-chevron-size);
+  width: var(--dd-chevron-size);
+  height: var(--dd-chevron-size);
+  color: var(--test-theme-answer, #0445af);
+  transition: transform 160ms ease;
+}
+
+.test-custom-dropdown__trigger[aria-expanded="true"] .test-custom-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.test-custom-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--test-theme-answer, #0445af) 15%, transparent);
+  border-radius: var(--dd-radius);
+  background: #ffffff;
+  box-shadow: var(--dd-menu-shadow);
+  animation: test-dropdown-open 160ms ease;
+  transform-origin: top center;
+}
+
+.test-custom-dropdown__option {
+  display: flex;
+  align-items: center;
+  gap: var(--dd-option-gap);
+  width: 100%;
+  min-height: var(--dd-option-min-h);
+  padding: var(--dd-option-pad-y) var(--dd-option-pad-x);
+  border: none;
+  background: transparent;
+  color: var(--test-theme-answer-text, #0445af);
+  font-family: inherit;
+  font-size: var(--dd-option-fs);
+  line-height: var(--dd-option-lh);
+  text-align: left;
+  cursor: pointer;
+}
+
+.test-custom-dropdown__option:hover,
+.test-custom-dropdown__option:focus-visible {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  outline: none;
+}
+
+.test-custom-dropdown__option[data-selected="true"] {
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 14%, #ffffff);
+  color: var(--test-theme-answer, #0445af);
+}
+
+.test-custom-dropdown__check {
+  flex: 0 0 var(--dd-check-w);
+  width: var(--dd-check-w);
+  color: var(--test-theme-answer, #0445af);
+  font-weight: 700;
+  text-align: center;
+}
+
+@keyframes test-dropdown-open {
+  from { opacity: 0; transform: scaleY(0.96); }
+  to   { opacity: 1; transform: scaleY(1); }
 }
