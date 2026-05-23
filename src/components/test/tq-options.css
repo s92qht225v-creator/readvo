@@ -68,6 +68,7 @@
   --pic-badge-size: 22px;
   --pic-badge-fs: 11px;
   --pic-badge-radius: 3px;
+  --pic-grid-mb: 0;
 
   /* Opinion-scale tokens (--os-*) and rating tokens (--or-*).
      Drive .test-opinion-scale and .test-rating respectively. */
@@ -141,6 +142,7 @@
   --pic-badge-size: 22px;
   --pic-badge-fs: 11px;
   --pic-badge-radius: 3px;
+  --pic-grid-mb: 0;
 
   --os-max-w: 361px;
   --os-stack-gap: 8px;
@@ -214,6 +216,7 @@
   --pic-badge-size: 26px;
   --pic-badge-fs: 12px;
   --pic-badge-radius: 3px;
+  --pic-grid-mb: 24px;
 
   --os-max-w: 361px;
   --os-stack-gap: 8px;
@@ -705,6 +708,9 @@
   width: var(--tq-column);
   max-width: 100%;
   margin-inline: auto;
+  /* Bottom breathing room so cards don't sit flush against the
+     navigation bar on desktop (where the card height is taller). */
+  margin-block-end: var(--pic-grid-mb);
 }
 
 .test-picture-option {
