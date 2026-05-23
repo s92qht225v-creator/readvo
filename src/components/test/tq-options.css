@@ -197,25 +197,32 @@
   --qm-asset-max-w: 360px;        /* cap so the image doesn't stretch full card */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
   --qm-content-w: 100%;
-  --qm-content-pad: 35px 53px 24px 0;
+  --qm-content-pad: 0;            /* card outer padding owns the perimeter */
   --qm-content-justify: center;
-  --qm-asset-order: 2;
   --qm-header-order: 1;
   --qm-answer-order: 3;
   --qm-title-fs: 26px;
   --qm-title-lh: 1.3;
+  /* Variant defaults — float-right places the asset in column 2 pinned
+     to the right side of its cell; content sits in column 1. The
+     float-left variant flips both via a single token-only override
+     block below. No rule-level overrides per variant. */
+  --qm-asset-col: 2;
+  --qm-asset-justify-self: end;
+  --qm-content-col: 1;
 }
 
-/* Layout-variant overrides — same vars, different values. */
+[data-test-device="desktop"] .qmedia-desktop-float-left {
+  --qm-asset-col: 1;
+  --qm-asset-justify-self: start;
+  --qm-content-col: 2;
+}
+
+/* Mobile float variant — same vars, different values. */
 .qmedia-mobile-float {
   --qm-asset-order: 1;
   --qm-header-order: 2;
   --qm-answer-order: 3;
-}
-
-[data-test-device="desktop"] .qmedia-desktop-float-left {
-  /* asset on the left, content on the right */
-  --qm-content-pad: 35px 0 24px 53px;
 }
 
 /* Shared layout rules — read the tokens above, no device branches. */
@@ -245,11 +252,11 @@
   display: contents;
 }
 
-/* Desktop: keep the content wrapper as its own grid cell — a flex
-   column that stacks header above answer in the left/right side
-   (set by qmedia-desktop-float-*). Vertically centred next to the
-   asset cell on the opposite side. */
+/* Desktop: content wrapper is its own grid cell — a flex column that
+   stacks header above answer. Token-driven column placement so the
+   variants share this single rule. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-content {
+  grid-column: var(--qm-content-col);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,22 +277,16 @@
   margin-inline: auto;
 }
 
-/* On desktop the asset is centred inside its grid cell. We keep the
-   wrapper's inline aspect-ratio (no auto override) so the height follows
-   the aspect-ratio at the capped width instead of stretching to the
-   full card height. */
+/* Desktop: asset gets placed by tokens — which column it lives in and
+   which side of the cell it pins to. No per-variant rules. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
+  grid-column: var(--qm-asset-col);
+  justify-self: var(--qm-asset-justify-self);
   align-self: center;
   border-radius: 0;
   background: transparent;
 }
 
-/* Place the asset + content wrapper on opposite sides of the 2-col
-   grid. Content wrapper holds header + answer internally. */
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-asset   { grid-column: 2; }
-[data-test-device="desktop"] .qmedia-desktop-float-right > .qmedia-content { grid-column: 1; }
-[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-asset   { grid-column: 1; }
-[data-test-device="desktop"] .qmedia-desktop-float-left  > .qmedia-content { grid-column: 2; }
 
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset img {
   width: 100%;
@@ -323,10 +324,6 @@
   margin-inline: 0;
 }
 
-/* Mirror the inner padding when content is on the right vs left. */
-[data-test-device="desktop"] .qmedia-desktop-float-left > .qmedia-content {
-  padding: 35px 0 24px 53px;
-}
 
 /* Audio media is special — it never participates in the grid. Stack it
    above the question, full width of whatever column the layout gives it. */
