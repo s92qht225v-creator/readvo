@@ -191,10 +191,18 @@
 
 [data-test-device="desktop"] {
   --qm-direction: row;
-  --qm-gap: 0;
-  --qm-grid: minmax(0, 1fr) minmax(0, 1fr);
+  /* Inner gap between content and image equals the card's outer
+     horizontal padding so all three horizontal gaps (card-left ↔
+     content, content ↔ image, image ↔ card-right) read the same.
+     --qmedia-card-pad-x is set on the card by TestPlayer / TestBuilder
+     (52px in the preview shell, 80px in the builder, etc.). */
+  --qm-gap: var(--qmedia-card-pad-x, 52px);
+  /* Asset column is sized exactly to the image (no leftover space
+     inside its cell), so the asset is flush against the inner side of
+     its column and the outer side reaches the card's outer padding. */
+  --qm-grid: minmax(0, 1fr) 360px;
   --qm-asset-w: 100%;
-  --qm-asset-max-w: 360px;        /* cap so the image doesn't stretch full card */
+  --qm-asset-max-w: 100%;         /* asset fills its 360px-wide column */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
   --qm-content-w: 100%;
   --qm-content-pad: 0;            /* card outer padding owns the perimeter */
@@ -203,18 +211,20 @@
   --qm-answer-order: 3;
   --qm-title-fs: 26px;
   --qm-title-lh: 1.3;
-  /* Variant defaults — float-right places the asset in column 2 pinned
-     to the right side of its cell; content sits in column 1. The
-     float-left variant flips both via a single token-only override
-     block below. No rule-level overrides per variant. */
+  /* Variant defaults — float-right places the asset in column 2 (the
+     360-px track on the right); content sits in column 1 (the
+     flexible track on the left). The float-left variant flips both
+     via a single token-only override below. No rule-level overrides
+     per variant. */
   --qm-asset-col: 2;
-  --qm-asset-justify-self: end;
   --qm-content-col: 1;
 }
 
 [data-test-device="desktop"] .qmedia-desktop-float-left {
+  /* Mirror the grid: image-sized track on the left, flexible content
+     on the right. */
+  --qm-grid: 360px minmax(0, 1fr);
   --qm-asset-col: 1;
-  --qm-asset-justify-self: start;
   --qm-content-col: 2;
 }
 
@@ -284,15 +294,11 @@
   margin-inline: auto;
 }
 
-/* Desktop: asset gets placed by tokens — which column it lives in and
-   which side of the cell it pins to. No per-variant rules.
-
-   `margin-inline: 0` clears the base `margin-inline: auto` which would
-   otherwise consume leftover space on both sides of the asset and
-   silently defeat justify-self. */
+/* Desktop: asset's column is exactly its width, so it naturally fills
+   the cell — no justify-self needed. margin-inline: 0 clears the base
+   auto-margin (used for mobile centering) so the asset hugs the cell. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
   grid-column: var(--qm-asset-col);
-  justify-self: var(--qm-asset-justify-self);
   margin-inline: 0;
   align-self: center;
   border-radius: 0;
