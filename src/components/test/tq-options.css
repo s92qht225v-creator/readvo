@@ -205,6 +205,7 @@
   --qm-asset-w: 100%;
   --qm-asset-max-w: 100%;         /* asset fills its 360px-wide column */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
+  --qm-asset-max-h: 600px;         /* never taller than this — caps portrait media */
   --qm-asset-radius: 0;            /* full-bleed in its grid cell */
   --qm-asset-margin-inline: 0;     /* flush against the cell edge */
   --qm-content-w: 100%;
@@ -293,10 +294,20 @@
   width: var(--qm-asset-w);
   max-width: var(--qm-asset-max-w, 100%);
   height: var(--qm-asset-h);
+  max-height: var(--qm-asset-max-h, none);
   margin: 0;
   margin-inline: var(--qm-asset-margin-inline);
   border-radius: var(--qm-asset-radius);
   background: transparent;
+}
+
+/* Portrait video (9:16 etc.) — width derives from the height cap so
+   the asset never overflows the card vertically. Inline aspectRatio
+   keeps width / height in proportion. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--portrait {
+  width: auto;
+  max-width: 100%;
+  height: var(--qm-asset-max-h, 600px);
 }
 
 /* Per-media modifiers (set by QuestionMediaBlock.tsx based on the

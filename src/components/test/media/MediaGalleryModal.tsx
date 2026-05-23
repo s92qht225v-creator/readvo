@@ -38,6 +38,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const audioInputRef = useRef<HTMLInputElement | null>(null);
+  const videoInputRef = useRef<HTMLInputElement | null>(null);
 
   const pickMedia = (media: QuestionMedia) => {
     if (onPickMedia) {
@@ -61,7 +62,7 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     });
   };
 
-  const upload = async (file: File, expectedType?: 'image' | 'audio') => {
+  const upload = async (file: File, expectedType?: 'image' | 'audio' | 'video') => {
     setError(null);
     if (expectedType === 'image' && !file.type.startsWith('image/')) {
       setError('Upload JPG, PNG, GIF, or WebP image.');
@@ -71,13 +72,25 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
       setError('Upload MP3, WAV, OGG, M4A, AAC, or WebM audio.');
       return;
     }
-    if (!file.type.startsWith('image/') && !file.type.startsWith('audio/')) {
-      setError('Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, or WebM.');
+    if (expectedType === 'video' && !file.type.startsWith('video/')) {
+      setError('Upload MP4, WebM, or MOV video.');
       return;
     }
-    const maxSize = file.type.startsWith('audio/') ? 20 * 1024 * 1024 : 4 * 1024 * 1024;
+    if (!file.type.startsWith('image/') && !file.type.startsWith('audio/') && !file.type.startsWith('video/')) {
+      setError('Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, WebM, MP4, or MOV.');
+      return;
+    }
+    const maxSize = file.type.startsWith('audio/')
+      ? 20 * 1024 * 1024
+      : file.type.startsWith('video/')
+        ? 50 * 1024 * 1024
+        : 4 * 1024 * 1024;
     if (file.size > maxSize) {
-      setError(file.type.startsWith('audio/') ? 'Audio file must be 20MB or less.' : 'Image file must be 4MB or less.');
+      setError(
+        file.type.startsWith('audio/') ? 'Audio file must be 20MB or less.'
+        : file.type.startsWith('video/') ? 'Video file must be 50MB or less.'
+        : 'Image file must be 4MB or less.'
+      );
       return;
     }
     setUploading(true);
@@ -98,14 +111,21 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
     }
     const type: QuestionMedia['type'] = file.type.startsWith('audio/')
       ? 'audio'
-      : file.type === 'image/gif' ? 'gif' : 'image';
+      : file.type.startsWith('video/')
+        ? 'video'
+        : file.type === 'image/gif' ? 'gif' : 'image';
+    const naturalAspectRatio = type === 'audio'
+      ? undefined
+      : type === 'video'
+        ? await getFileVideoAspectRatio(file)
+        : await getFileImageAspectRatio(file);
     pickMedia({
       type,
       url: result.url,
       alt,
       provider: 'upload',
       aspectRatio: type === 'audio' ? undefined : 'original',
-      naturalAspectRatio: type === 'audio' ? undefined : await getFileImageAspectRatio(file),
+      naturalAspectRatio,
     });
   };
 
@@ -163,14 +183,41 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               <span style={uploadSub}>{mediaKind === 'image' ? 'JPG, PNG, GIF, or WebP. Up to 4MB.' : 'Images up to 4MB. Audio up to 20MB.'}</span>
             </button>
           ) : tab === 'video' ? (
-            <MediaUrlForm
-              label="YouTube or Vimeo URL"
-              url={url}
-              alt={alt}
-              onUrl={setUrl}
-              onAlt={setAlt}
-              onAttach={() => attachUrl('video', videoProvider(url))}
-            />
+            <div style={{ display: 'grid', gap: 14 }}>
+              <button
+                type="button"
+                onClick={() => videoInputRef.current?.click()}
+                onDragOver={e => e.preventDefault()}
+                onDrop={e => {
+                  e.preventDefault();
+                  const file = e.dataTransfer.files[0];
+                  if (file) void upload(file, 'video');
+                }}
+                style={uploadDropzone}
+              >
+                <input
+                  ref={videoInputRef}
+                  type="file"
+                  accept="video/mp4,video/webm,video/quicktime,video/ogg"
+                  hidden
+                  onChange={e => {
+                    const file = e.target.files?.[0];
+                    if (file) void upload(file, 'video');
+                  }}
+                />
+                <span style={uploadMain}>{uploading ? 'Uploading…' : 'Upload'} or drop a video here</span>
+                <span style={uploadSub}>MP4, WebM, or MOV. Up to 50MB.</span>
+              </button>
+              <div style={mediaOrDivider}>or paste a link</div>
+              <MediaUrlForm
+                label="YouTube or Vimeo URL"
+                url={url}
+                alt={alt}
+                onUrl={setUrl}
+                onAlt={setAlt}
+                onAttach={() => attachUrl('video', videoProvider(url))}
+              />
+            </div>
           ) : tab === 'audio' ? (
             <button
               type="button"
@@ -236,6 +283,26 @@ function MediaUrlForm({ label, url, alt, onUrl, onAlt, onAttach }: {
       </button>
     </div>
   );
+}
+
+function getFileVideoAspectRatio(file: File): Promise<number | undefined> {
+  return new Promise(resolve => {
+    const url = URL.createObjectURL(file);
+    const video = document.createElement('video');
+    video.preload = 'metadata';
+    video.muted = true;
+    video.onloadedmetadata = () => {
+      URL.revokeObjectURL(url);
+      const w = video.videoWidth;
+      const h = video.videoHeight;
+      resolve(w && h ? w / h : undefined);
+    };
+    video.onerror = () => {
+      URL.revokeObjectURL(url);
+      resolve(undefined);
+    };
+    video.src = url;
+  });
 }
 
 function getFileImageAspectRatio(file: File): Promise<number | undefined> {
@@ -321,4 +388,14 @@ const mediaError: CSSProperties = {
   marginTop: 10,
   color: '#b91c1c',
   fontSize: 13,
+};
+
+const mediaOrDivider: CSSProperties = {
+  position: 'relative',
+  textAlign: 'center',
+  fontSize: 12,
+  color: '#9b929d',
+  textTransform: 'uppercase',
+  letterSpacing: 0.5,
+  padding: '4px 0',
 };

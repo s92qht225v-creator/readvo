@@ -4,6 +4,7 @@ import { getRequestUserId } from '@/lib/test/devAuth';
 
 const MAX_IMAGE_FILE_SIZE = 4 * 1024 * 1024;
 const MAX_AUDIO_FILE_SIZE = 20 * 1024 * 1024;
+const MAX_VIDEO_FILE_SIZE = 50 * 1024 * 1024;
 const ALLOWED_MIME_TYPES = new Set([
   'image/jpeg',
   'image/png',
@@ -18,6 +19,10 @@ const ALLOWED_MIME_TYPES = new Set([
   'audio/aac',
   'audio/ogg',
   'audio/webm',
+  'video/mp4',
+  'video/webm',
+  'video/quicktime',
+  'video/ogg',
 ]);
 
 export async function POST(req: NextRequest) {
@@ -32,11 +37,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'file_required' }, { status: 400 });
   }
   if (!ALLOWED_MIME_TYPES.has(file.type)) {
-    return NextResponse.json({ error: 'Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, or WebM.' }, { status: 400 });
+    return NextResponse.json({ error: 'Upload JPG, PNG, GIF, WebP, MP3, WAV, OGG, M4A, WebM, or MP4/MOV video.' }, { status: 400 });
   }
-  const maxSize = file.type.startsWith('audio/') ? MAX_AUDIO_FILE_SIZE : MAX_IMAGE_FILE_SIZE;
+  const maxSize = file.type.startsWith('audio/')
+    ? MAX_AUDIO_FILE_SIZE
+    : file.type.startsWith('video/')
+      ? MAX_VIDEO_FILE_SIZE
+      : MAX_IMAGE_FILE_SIZE;
   if (file.size > maxSize) {
-    return NextResponse.json({ error: file.type.startsWith('audio/') ? 'Audio file must be 20MB or less.' : 'Image file must be 4MB or less.' }, { status: 400 });
+    const limit = file.type.startsWith('audio/')
+      ? 'Audio file must be 20MB or less.'
+      : file.type.startsWith('video/')
+        ? 'Video file must be 50MB or less.'
+        : 'Image file must be 4MB or less.';
+    return NextResponse.json({ error: limit }, { status: 400 });
   }
 
   const ext = extensionFor(file);
@@ -76,5 +90,9 @@ function extensionFor(file: File) {
   if (file.type === 'audio/aac') return 'aac';
   if (file.type === 'audio/ogg') return 'ogg';
   if (file.type === 'audio/webm') return 'webm';
+  if (file.type === 'video/mp4') return 'mp4';
+  if (file.type === 'video/webm') return 'webm';
+  if (file.type === 'video/quicktime') return 'mov';
+  if (file.type === 'video/ogg') return 'ogv';
   return 'bin';
 }

@@ -52,6 +52,29 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   }
 
   if (media.type === 'video') {
+    const aspect = videoAspectRatio(media);
+    const portrait = aspect && aspect < 1;
+    const wrapperClass = `${className ?? ''} qmedia-asset--video${portrait ? ' qmedia-asset--portrait' : ''}`;
+    const wrapperStyle = { ...videoFrameWrap, aspectRatio: aspect ? `${aspect}` : '16 / 9', ...style };
+
+    // Uploaded video → use a native <video> element. Lets the cascade
+    // own the box and avoids YouTube's portrait-letterboxing behaviour.
+    if (media.provider === 'upload') {
+      return (
+        <div className={wrapperClass} style={wrapperStyle}>
+          <video
+            src={media.url}
+            controls
+            playsInline
+            preload="metadata"
+            style={videoFrame}
+            aria-label={media.alt || 'Question video'}
+          />
+        </div>
+      );
+    }
+
+    // External link (YouTube, Vimeo, etc.) → iframe.
     const embedUrl = toEmbedUrl(media.url);
     if (!embedUrl) {
       return (
@@ -61,7 +84,7 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
       );
     }
     return (
-      <div className={`${className ?? ''} qmedia-asset--video`} style={{ ...videoFrameWrap, ...style }}>
+      <div className={wrapperClass} style={wrapperStyle}>
         <iframe
           src={embedUrl}
           title={media.alt || 'Question video'}
@@ -256,6 +279,21 @@ function aspectRatioValue(media: QuestionMedia) {
     return `${media.naturalAspectRatio} / 1`;
   }
   return null;
+}
+
+function videoAspectRatio(media: QuestionMedia): number | undefined {
+  // Upload path: video file was measured at upload time
+  // (getFileVideoAspectRatio) and stored on media.naturalAspectRatio.
+  if (Number.isFinite(media.naturalAspectRatio) && (media.naturalAspectRatio as number) > 0) {
+    return media.naturalAspectRatio as number;
+  }
+  // YouTube Shorts are always 9:16. Detect from URL so authors don't
+  // need to mark them manually.
+  try {
+    const u = new URL(media.url ?? '');
+    if (u.pathname.includes('/shorts/')) return 9 / 16;
+  } catch { /* not a URL */ }
+  return undefined;
 }
 
 function toEmbedUrl(url: string) {
