@@ -14537,7 +14537,11 @@ body {
   .test-player {
     min-height: 100svh !important;
     align-items: safe center !important;
-    justify-content: center !important;
+    /* `safe center` falls back to flex-start when content overflows so
+       the bottom (e.g. the last option after a tall portrait video) stays
+       reachable by scroll. Plain `center` would push half the overflow
+       above the scroll origin where it can't be reached. */
+    justify-content: safe center !important;
     padding: 24px 12px calc(132px + env(safe-area-inset-bottom, 0px)) !important;
     background: #fff !important;
     overflow-y: auto !important;
