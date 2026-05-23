@@ -285,10 +285,15 @@
 }
 
 /* Desktop: asset gets placed by tokens — which column it lives in and
-   which side of the cell it pins to. No per-variant rules. */
+   which side of the cell it pins to. No per-variant rules.
+
+   `margin-inline: 0` clears the base `margin-inline: auto` which would
+   otherwise consume leftover space on both sides of the asset and
+   silently defeat justify-self. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
   grid-column: var(--qm-asset-col);
   justify-self: var(--qm-asset-justify-self);
+  margin-inline: 0;
   align-self: center;
   border-radius: 0;
   background: transparent;
