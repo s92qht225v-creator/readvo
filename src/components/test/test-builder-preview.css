@@ -148,31 +148,8 @@
   text-overflow: ellipsis !important;
 }
 
-.tb-preview-card--mobile-centered .test-fill-blanks {
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-  overflow-wrap: anywhere !important;
-  font-size: 18px !important;
-  line-height: 1.75 !important;
-}
-
-.tb-preview-card--mobile-centered .test-fill-blank-input {
-  height: 1.9em !important;
-  min-height: 1.9em !important;
-  border-radius: 1px 1px 0 0 !important;
-  background: #f3f5ff !important;
-  color: rgb(4, 69, 175) !important;
-  border: none !important;
-  border-bottom: 1.5px solid #0445af !important;
-  padding: 0 0.45em !important;
-  margin: 0 0.18em !important;
-  font-size: 18px !important;
-  line-height: 1.2 !important;
-  vertical-align: baseline !important;
-}
-
-/* Opinion-scale + rating now driven by --os-* / --or-* tokens in
-   tq-options.css. */
+/* Opinion-scale + rating + fill-blanks now driven by --os-* / --or-* /
+   --fb-* tokens in tq-options.css. */
 
 .tb-preview-card .tb-preview-title,
 .test-player__card .test-player__title {
@@ -193,9 +170,7 @@
 .tb-preview-card .test-match-row,
 .test-player__card .test-match-row,
 .tb-preview-card .test-match-choice,
-.test-player__card .test-match-choice,
-.tb-preview-card .test-fill-blanks,
-.test-player__card .test-fill-blanks {
+.test-player__card .test-match-choice {
   font-size: var(--test-answer-size) !important;
 }
 
@@ -203,19 +178,6 @@
 .test-player__card .test-match-select {
   font-size: var(--test-answer-size) !important;
   padding: var(--test-answer-padding-y) var(--test-answer-padding-x) !important;
-}
-
-.tb-preview-card .test-fill-blank-input,
-.test-player__card .test-fill-blank-input {
-  font-size: var(--test-answer-size) !important;
-  height: 1.9em !important;
-  min-height: 1.9em !important;
-  padding: 0 0.45em !important;
-  margin: 0 0.18em !important;
-  line-height: 1.2 !important;
-  vertical-align: baseline !important;
-  border-bottom: 1.5px solid #0445af !important;
-  border-radius: 1px 1px 0 0 !important;
 }
 
 .tb-preview-card .test-match-list,
@@ -309,11 +271,6 @@
 .test-player__card .test-match-row {
   gap: clamp(6px, 1.6cqw, 10px) !important;
 }
-.tb-preview-card .test-fill-blanks,
-.test-player__card .test-fill-blanks {
-  line-height: 1.75 !important;
-}
-
 .tb-preview-card .qmedia-asset,
 .test-player__card .qmedia-asset,
 .tb-preview-card .qmedia-asset img,
@@ -325,9 +282,7 @@
 .tb-preview-card .test-match-row > div,
 .test-player__card .test-match-row > div,
 .tb-preview-card .test-match-select,
-.test-player__card .test-match-select,
-.tb-preview-card .test-fill-blank-input,
-.test-player__card .test-fill-blank-input {
+.test-player__card .test-match-select {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
@@ -375,28 +330,17 @@
 }
 /* Ordering layout/theming + size handled by --ord-* tokens. */
 
-/* Text-input + picture-choice + dropdown + ordering theming lives in tq-options.css. */
-.tb-preview-card .test-match-choice,
-.tb-preview-card .test-match-select,
-.tb-preview-card .test-fill-blank-input {
-  color: var(--test-theme-answer-text, #0445af) !important;
-}
+/* Text-input + picture-choice + dropdown + ordering + fill-blanks
+   theming lives in tq-options.css. */
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select {
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
-.tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select {
+  color: var(--test-theme-answer-text, #0445af) !important;
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
-
-.tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
-  border-bottom-color: var(--test-theme-answer, #0445af) !important;
 }
 
 /* Custom dropdown styling now driven by --dd-* tokens in tq-options.css. */

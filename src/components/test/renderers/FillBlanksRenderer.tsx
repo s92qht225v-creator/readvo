@@ -16,10 +16,13 @@ export function FillBlanksPlayer({ template, blanks, blankWidths, value, onChang
   };
 
   return (
-    <div className="test-fill-blanks" style={{ fontSize: 16, lineHeight: 1.8, color: '#0f172a' }}>
+    <div className="test-fill-blanks">
       {parts.map((p, idx) => {
         if (idx % 2 === 0) return <span key={idx}>{p}</span>;
         const blankIdx = parseInt(p, 10) - 1;
+        /* Only the dynamic, content-driven width stays inline. All
+           other styling (height, padding, font, colors, border-bottom,
+           radius) lives in tq-options.css under --fb-* tokens. */
         const width = blankInputWidth(submitted[blankIdx], blankWidths?.[blankIdx]);
         return (
           <input
@@ -29,26 +32,7 @@ export function FillBlanksPlayer({ template, blanks, blankWidths, value, onChang
             value={submitted[blankIdx] ?? ''}
             onChange={e => set(blankIdx, e.target.value)}
             placeholder=" "
-            style={{
-              display: 'inline-block',
-              width,
-              minWidth: '4.6ch',
-              maxWidth: '100%',
-              height: '1.9em',
-              minHeight: '1.9em',
-              margin: '0 0.18em',
-              padding: '0 0.45em',
-              fontSize: 16,
-              background: 'rgba(4,69,175,0.08)',
-              border: 'none',
-              borderBottom: '1.5px solid #0445af',
-              borderRadius: '1px 1px 0 0',
-              color: '#0445af',
-              fontFamily: 'inherit',
-              lineHeight: 1.2,
-              outline: 'none',
-              verticalAlign: 'baseline',
-            }}
+            style={{ width }}
           />
         );
       })}

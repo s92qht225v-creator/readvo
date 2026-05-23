@@ -69,9 +69,7 @@
      here until they're migrated. */
   .test-player__card .test-match-row,
   .test-player__card .test-match-choice,
-  .test-player__card .test-match-select,
-  .test-player__card .test-fill-blank-input,
-  .test-player__card .test-fill-blanks {
+  .test-player__card .test-match-select {
     font-size: 15px !important;
   }
 }
@@ -116,8 +114,7 @@
 /* Text-input + picture-choice + opinion-scale + rating + dropdown +
    ordering theming lives in tq-options.css now. */
 .test-player__card .test-match-choice,
-.test-player__card .test-match-select,
-.test-player__card .test-fill-blank-input {
+.test-player__card .test-match-select {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .test-player__card .test-match-choice,
@@ -139,8 +136,7 @@
   word-break: break-word !important;
 }
 .test-player__card .test-match-row,
-.test-player__card .test-match-choice,
-.test-player__card .test-fill-blanks {
+.test-player__card .test-match-choice {
   font-size: var(--test-answer-size) !important;
 }
 
@@ -149,17 +145,7 @@
   padding: var(--test-answer-padding-y) var(--test-answer-padding-x) !important;
 }
 
-.test-player__card .test-fill-blank-input {
-  font-size: var(--test-answer-size) !important;
-  height: 1.9em !important;
-  min-height: 1.9em !important;
-  padding: 0 0.45em !important;
-  margin: 0 0.18em !important;
-  line-height: 1.2 !important;
-  vertical-align: baseline !important;
-  border-bottom: 1.5px solid var(--test-theme-answer, #0445af) !important;
-  border-radius: 1px 1px 0 0 !important;
-}
+/* Fill-blanks styling now driven by --fb-* tokens in tq-options.css. */
 
 .test-player__card .test-match-list {
   gap: clamp(7px, 1.8cqw, 12px) !important;
@@ -332,17 +318,12 @@
    menu, options, chevron, check, hover/selected states, open
    animation). */
 
-.test-player__card .test-fill-blanks {
-  line-height: 1.75 !important;
-}
-
 .test-player__card .qmedia-asset,
 .test-player__card .qmedia-asset img,
 .test-player__card .qmedia-asset iframe,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-row > div,
-.test-player__card .test-match-select,
-.test-player__card .test-fill-blank-input {
+.test-player__card .test-match-select {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 

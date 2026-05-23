@@ -122,6 +122,20 @@
   --ord-handle-pad-x: 2px;
   --ord-hint-fs: 13px;
   --ord-hint-mt: 4px;
+
+  /* Fill-blanks tokens (--fb-*). Drive .test-fill-blanks passage +
+     .test-fill-blank-input inputs. Input width stays inline (the
+     renderer computes it from typed/expected character length). */
+  --fb-passage-fs: 16px;
+  --fb-passage-lh: 1.8;
+  --fb-input-min-w: 4.6ch;
+  --fb-input-h: 1.9em;
+  --fb-input-pad-x: 0.45em;
+  --fb-input-margin-x: 0.18em;
+  --fb-input-fs: 16px;
+  --fb-input-lh: 1.2;
+  --fb-input-radius: 1px 1px 0 0;
+  --fb-input-underline: 1.5px;
 }
 
 [data-test-device="mobile"] {
@@ -207,6 +221,17 @@
   --ord-handle-pad-x: 2px;
   --ord-hint-fs: 13px;
   --ord-hint-mt: 4px;
+
+  --fb-passage-fs: 16px;
+  --fb-passage-lh: 1.8;
+  --fb-input-min-w: 4.6ch;
+  --fb-input-h: 1.9em;
+  --fb-input-pad-x: 0.45em;
+  --fb-input-margin-x: 0.18em;
+  --fb-input-fs: 16px;
+  --fb-input-lh: 1.2;
+  --fb-input-radius: 1px 1px 0 0;
+  --fb-input-underline: 1.5px;
 }
 
 [data-test-device="desktop"] {
@@ -296,6 +321,17 @@
   --ord-handle-pad-x: 4px;
   --ord-hint-fs: 13px;
   --ord-hint-mt: 6px;
+
+  --fb-passage-fs: 17px;
+  --fb-passage-lh: 1.85;
+  --fb-input-min-w: 5ch;
+  --fb-input-h: 1.9em;
+  --fb-input-pad-x: 0.5em;
+  --fb-input-margin-x: 0.2em;
+  --fb-input-fs: 17px;
+  --fb-input-lh: 1.2;
+  --fb-input-radius: 3px 3px 0 0;
+  --fb-input-underline: 1.5px;
 }
 
 /* Shared option-list / option / chip / checkbox / label rules.
@@ -1148,4 +1184,49 @@
   color: var(--test-theme-description, #64748b);
   font-size: var(--ord-hint-fs);
   margin-top: var(--ord-hint-mt);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   Fill blanks — .test-fill-blanks passage with inline
+   .test-fill-blank-input inputs interpolated into the text.
+
+   The renderer computes `width` per input from the typed/expected
+   character length and applies it inline. Everything else
+   (background tint, underline, padding, radius, font) lives here.
+   ────────────────────────────────────────────────────────────────────── */
+
+.test-fill-blanks {
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+  font-family: inherit;
+  font-size: var(--fb-passage-fs);
+  line-height: var(--fb-passage-lh);
+  color: var(--test-theme-question, #0f172a);
+}
+
+.test-fill-blank-input {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: var(--fb-input-min-w);
+  max-width: 100%;
+  height: var(--fb-input-h);
+  min-height: var(--fb-input-h);
+  margin: 0 var(--fb-input-margin-x);
+  padding: 0 var(--fb-input-pad-x);
+  border: none;
+  border-bottom: var(--fb-input-underline) solid var(--test-theme-answer, #0445af);
+  border-radius: var(--fb-input-radius);
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff);
+  color: var(--test-theme-answer, #0445af);
+  font-family: inherit;
+  font-size: var(--fb-input-fs);
+  line-height: var(--fb-input-lh);
+  outline: none;
+  vertical-align: baseline;
+}
+
+.test-fill-blank-input:focus-visible {
+  border-bottom-color: var(--test-theme-answer, #0445af);
+  box-shadow: inset 0 -2px 0 0 var(--test-theme-answer, #0445af);
 }

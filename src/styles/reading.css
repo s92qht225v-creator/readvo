@@ -14083,8 +14083,7 @@ body {
 }
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
-.test-preview-shell--mobile .test-match-list,
-.test-preview-shell--mobile .test-fill-blanks {
+.test-preview-shell--mobile .test-match-list {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
   /* center the shared mobile column inside the card content area so the
@@ -14110,8 +14109,7 @@ body {
 }
 
 .test-preview-shell--mobile .test-match-select,
-.test-preview-shell--mobile .test-match-row > div,
-.test-preview-shell--mobile .test-fill-blank-input {
+.test-preview-shell--mobile .test-match-row > div {
   box-sizing: border-box !important;
   height: 1.9em !important;
   min-height: 1.9em !important;
@@ -14209,7 +14207,6 @@ body {
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-match-list,
-.test-preview-shell--mobile .test-fill-blanks,
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-answer,
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-header,
 .test-preview-shell--mobile .test-player__card--type-match .test-match-list,
@@ -14232,8 +14229,7 @@ body {
 .test-preview-shell .test-player__card .qmedia-asset img,
 .test-preview-shell .test-player__card .qmedia-asset iframe,
 .test-preview-shell .test-player__card .test-match-row > div,
-.test-preview-shell .test-player__card .test-match-select,
-.test-preview-shell .test-player__card .test-fill-blank-input {
+.test-preview-shell .test-player__card .test-match-select {
   border-radius: 3px !important;
 }.test-preview-shell--mobile .test-player__nav {
   position: fixed !important;
@@ -14325,8 +14321,7 @@ body {
   .test-player__card .test-player__description,
   .test-player__card .qmedia-header,
   .test-player__card .qmedia-answer,
-  .test-player__card .test-match-list,
-  .test-player__card .test-fill-blanks {
+  .test-player__card .test-match-list {
     box-sizing: border-box !important;
     width: var(--test-mobile-column) !important;
     max-width: 100% !important;
@@ -14451,24 +14446,6 @@ body {
     padding: 6px 10px !important;
     font-size: 15px !important;
     line-height: 22px !important;
-  }
-
-  .test-fill-blanks {
-    font-size: 17px !important;
-    line-height: 1.75 !important;
-  }
-
-  .test-fill-blank-input {
-    width: min(180px, 100%) !important;
-    height: 1.9em !important;
-    min-height: 1.9em !important;
-    margin: 0 0.18em !important;
-    padding: 0 0.45em !important;
-    font-size: 17px !important;
-    line-height: 1.2 !important;
-    vertical-align: baseline !important;
-    border-bottom: 1.5px solid #0445af !important;
-    border-radius: 1px 1px 0 0 !important;
   }
 
   .test-player-screen {
