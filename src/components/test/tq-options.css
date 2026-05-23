@@ -178,7 +178,15 @@
 
 [data-test-device="mobile"] {
   --qm-direction: column;
-  --qm-gap: 22px;
+  /* Matches the .qmedia-header internal gap (12px) so the spacing
+     above and below the description reads the same. With
+     `.qmedia-content { display: contents }` on mobile, header and
+     answer become direct flex children of .qmedia-layout, so this
+     gap is what sits between description and the first option.
+     Previously 22px → asymmetric: 12px above description, 22px
+     below. Uniform 12px keeps the rhythm consistent and still gives
+     enough breathing room between the asset and the header. */
+  --qm-gap: 12px;
   --qm-grid: none;
   --qm-asset-w: var(--tq-column);
   --qm-asset-h: auto;
