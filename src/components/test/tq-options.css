@@ -194,8 +194,8 @@
   --qm-gap: 0;
   --qm-grid: minmax(0, 1fr) minmax(0, 1fr);
   --qm-asset-w: 100%;
-  --qm-asset-h: 100%;
-  --qm-asset-aspect-pin: 0;       /* fill the grid column instead */
+  --qm-asset-max-w: 360px;        /* cap so the image doesn't stretch full card */
+  --qm-asset-h: auto;             /* aspect-ratio drives the height */
   --qm-content-w: 100%;
   --qm-content-pad: 35px 53px 24px 0;
   --qm-content-justify: center;
@@ -247,16 +247,18 @@
 .qmedia-layout > .qmedia-asset {
   order: var(--qm-asset-order);
   width: var(--qm-asset-w);
+  max-width: var(--qm-asset-max-w, 100%);
   height: var(--qm-asset-h);
   margin: 0;
   margin-inline: auto;
 }
 
-/* On desktop the asset becomes a grid cell, so the inline aspect-ratio
-   set on the wrapper should yield to the grid track dimensions. */
+/* On desktop the asset is centred inside its grid cell. We keep the
+   wrapper's inline aspect-ratio (no auto override) so the height follows
+   the aspect-ratio at the capped width instead of stretching to the
+   full card height. */
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset {
-  aspect-ratio: auto !important;
-  align-self: stretch;
+  align-self: center;
   border-radius: 0;
   background: transparent;
 }
@@ -267,7 +269,7 @@
 [data-test-device="desktop"] .qmedia-layout > .qmedia-asset img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 4px;
 }
 
