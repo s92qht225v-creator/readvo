@@ -272,11 +272,11 @@ function UploadedVideo({ media, className, style }: { media: QuestionMedia; clas
     >
       <video
         ref={videoRef}
+        className="qmedia-asset__media"
         src={media.url}
         controls
         playsInline
         preload="metadata"
-        style={videoFrame}
         aria-label={media.alt || 'Question video'}
       />
     </div>
@@ -300,11 +300,11 @@ function EmbeddedVideo({ media, className, style }: { media: QuestionMedia; clas
       style={{ ...videoFrameWrap, aspectRatio: aspect ? `${aspect}` : '16 / 9', ...style }}
     >
       <iframe
+        className="qmedia-asset__media"
         src={embedUrl}
         title={media.alt || 'Question video'}
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        style={videoFrame}
       />
     </div>
   );
@@ -398,14 +398,6 @@ function croppedImageStyle(crop: NonNullable<QuestionMedia['crop']>, naturalAspe
 const videoFrameWrap: React.CSSProperties = {
   position: 'relative',
   overflow: 'hidden',
-};
-
-const videoFrame: React.CSSProperties = {
-  position: 'absolute',
-  inset: 0,
-  width: '100%',
-  height: '100%',
-  border: 0,
 };
 
 const mediaLink: React.CSSProperties = {

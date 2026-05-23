@@ -310,20 +310,46 @@
   height: var(--qm-asset-max-h, 600px);
 }
 
+/* Media element (iframe or <video>) inside .qmedia-asset. Default:
+   fill the wrapper. Single class lets CSS own positioning so inline
+   styles don't silently win the cascade. */
+.qmedia-asset__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Portrait YouTube/Vimeo: the standard /embed/ player is fixed 16:9 and
    centres portrait content inside, producing black bars on the sides.
    Trick: render the iframe at the size YouTube's player naturally
    occupies for our wrapper height (16:9 wide), centre it, and let the
    wrapper's overflow:hidden clip the letterbox bars. The visible
-   central column equals the portrait content width. */
-.qmedia-layout > .qmedia-asset.qmedia-asset--portrait > iframe {
-  position: absolute;
+   central column equals the portrait content width.
+
+   `inset: auto` clears the default inset:0 so left:50% + transform
+   actually positions the iframe centred; otherwise inset's right:0
+   pins it to the right edge and translateX would shift the wrong
+   thing. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--portrait > .qmedia-asset__media {
+  inset: auto;
   top: 0;
   left: 50%;
   height: 100%;
   /* (16/9) ÷ (9/16) = (16/9)² → 256/81 ≈ 316% of wrapper width */
   width: calc(100% * 256 / 81);
   transform: translateX(-50%);
+}
+
+/* Uploaded portrait video doesn't need upscale-clip — the wrapper
+   already matches the video's natural aspect ratio. Reset to the
+   default fill so the video plays edge-to-edge. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--portrait > video.qmedia-asset__media {
+  inset: 0;
+  left: 0;
+  width: 100%;
+  transform: none;
 }
 
 /* Per-media modifiers (set by QuestionMediaBlock.tsx based on the
