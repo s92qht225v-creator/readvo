@@ -211,65 +211,8 @@
   vertical-align: baseline !important;
 }
 
-.tb-preview-card--mobile-centered .test-opinion-scale,
-.tb-preview-card--mobile-centered .test-rating {
-  width: min(100%, 303px) !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 6px !important;
-}
-
-.tb-preview-card--mobile-centered .test-rating {
-  gap: 12px !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale__row {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  gap: 6px !important;
-  justify-content: center !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale button {
-  flex: 1 1 0% !important;
-  max-width: calc(16.6667% - 5px) !important;
-  height: 56px !important;
-  min-width: 0 !important;
-  border-radius: 1px !important;
-  background: #f3f5ff !important;
-  border: none !important;
-  box-shadow: rgba(1, 66, 172, 0.1) 0 0 0 1px inset !important;
-  color: rgb(38, 38, 39) !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale button[data-selected="true"] {
-  background: rgba(1, 66, 172, 0.15) !important;
-  box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale button:hover {
-  background: rgba(1, 66, 172, 0.08) !important;
-  box-shadow: rgba(1, 66, 172, 0.3) 0 0 0 1px inset !important;
-}
-
-.tb-preview-card--mobile-centered .test-opinion-scale button[data-selected="true"]:hover {
-  background: rgba(1, 66, 172, 0.15) !important;
-  box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-}
-
-.tb-preview-card--mobile-centered .test-rating button {
-  width: 37px !important;
-  height: 37px !important;
-  border-radius: 1px !important;
-  background: #f3f5ff !important;
-  font-size: 25px !important;
-}
+/* Opinion-scale + rating now driven by --os-* / --or-* tokens in
+   tq-options.css. */
 
 .tb-preview-card .tb-preview-title,
 .test-player__card .test-player__title {
@@ -412,32 +355,7 @@
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-}.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--no-media.tb-preview-card--type-opinion-scale .test-opinion-scale {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 6px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--no-media.tb-preview-card--type-opinion-scale .test-opinion-scale__row {
-  display: contents !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--no-media.tb-preview-card--type-opinion-scale .test-opinion-scale button {
-  flex: 1 1 0% !important;
-  max-width: none !important;
-  min-width: 0 !important;
-}
-
-.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--has-media.tb-preview-card--type-opinion-scale .test-opinion-scale,
-.tb-preview-card:not(.tb-preview-card--mobile-centered).tb-preview-card--has-media.tb-preview-card--type-opinion-scale .test-opinion-scale__labels {
-  width: 361px !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-
-.tb-preview-card .test-match-row,
+}.tb-preview-card .test-match-row,
 .test-player__card .test-match-row {
   gap: clamp(6px, 1.6cqw, 10px) !important;
 }
@@ -470,9 +388,7 @@
 .tb-preview-card .test-dropdown-answer,
 .test-player__card .test-dropdown-answer,
 .tb-preview-card .test-fill-blank-input,
-.test-player__card .test-fill-blank-input,
-.tb-preview-card .test-rating button,
-.test-player__card .test-rating button {
+.test-player__card .test-fill-blank-input {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
@@ -582,17 +498,13 @@
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
 .tb-preview-card .test-ordering-row,
-.tb-preview-card .test-opinion-scale button,
-.tb-preview-card .test-rating button,
 .tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .tb-preview-card .test-dropdown-answer,
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
-.tb-preview-card .test-ordering-row,
-.tb-preview-card .test-opinion-scale button,
-.tb-preview-card .test-rating button {
+.tb-preview-card .test-ordering-row {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
 .tb-preview-card .test-ordering-row span:first-child {
@@ -603,17 +515,13 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-opinion-scale button,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-opinion-scale button,
-.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button {
+.tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row span:first-child {
@@ -623,10 +531,6 @@
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   border-bottom-color: var(--test-theme-answer, #0445af) !important;
-}
-
-.tb-preview-card.tb-preview-card.tb-preview-card .test-rating button[data-selected="true"] {
-  color: #f59e0b !important;
 }
 
 .tb-preview-card.tb-preview-card.tb-preview-card .test-custom-dropdown.test-dropdown-answer {

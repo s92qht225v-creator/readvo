@@ -73,8 +73,7 @@
   .test-player__card .test-match-select,
   .test-player__card .test-dropdown-answer,
   .test-player__card .test-fill-blank-input,
-  .test-player__card .test-fill-blanks,
-  .test-player__card .test-opinion-scale button {
+  .test-player__card .test-fill-blanks {
     font-size: 15px !important;
   }
 }
@@ -116,43 +115,24 @@
     font-size: 15px !important;
   }
 }
-/* short/long/number text-input + picture-choice theming now live in
-   tq-options.css. */
+/* Text-input + picture-choice + opinion-scale + rating theming lives
+   in tq-options.css now. */
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
 .test-player__card .test-ordering-row,
-.test-player__card .test-opinion-scale button,
-.test-player__card .test-rating button,
 .test-player__card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
-.test-player__card .test-ordering-row,
-.test-player__card .test-opinion-scale button,
-.test-player__card .test-rating button {
+.test-player__card .test-ordering-row {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
 .test-player__card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
-}
-.test-player__card .test-opinion-scale button[data-selected="true"] {
-  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af) !important;
-}
-
-.test-player__card .test-rating button[data-selected="true"] {
-  box-shadow: none !important;
-}
-
-.test-player__card .test-rating button[data-selected="true"] {
-  color: #f59e0b !important;
-}
-
-.test-player__card .test-rating button[data-selected="false"] {
-  color: var(--test-theme-answer-text, #0445af) !important;
 }
 
 .test-player__card .test-player__title {
@@ -355,44 +335,8 @@
   margin-inline: auto !important;
 }
 
-@container (min-width: 480px) {
-
-  .test-player__card--no-media.test-player__card--type-opinion-scale:not(.test-player__card--force-mobile) .test-opinion-scale {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 6px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .test-player__card--no-media.test-player__card--type-opinion-scale:not(.test-player__card--force-mobile) .test-opinion-scale__row {
-    display: contents !important;
-  }
-
-  .test-player__card--no-media.test-player__card--type-opinion-scale:not(.test-player__card--force-mobile) .test-opinion-scale button {
-    flex: 1 1 0% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-  }
-}
-
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 6px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale__row {
-  display: contents !important;
-}
-
-.test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale button {
-  flex: 1 1 0% !important;
-  max-width: none !important;
-  min-width: 0 !important;
-}
+/* Opinion-scale desktop/no-media expansion no longer needed —
+   tq-options.css handles the constrained 361px scale layout uniformly. */
 
 .test-player__card .test-match-row > span {
   display: none !important;
@@ -569,8 +513,7 @@
 .test-player__card .test-match-row > div,
 .test-player__card .test-match-select,
 .test-player__card .test-dropdown-answer,
-.test-player__card .test-fill-blank-input,
-.test-player__card .test-rating button {
+.test-player__card .test-fill-blank-input {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 

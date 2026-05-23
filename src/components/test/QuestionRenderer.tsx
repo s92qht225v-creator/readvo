@@ -299,10 +299,10 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     const values = Array.from({ length: Math.max(1, max - min + 1) }, (_, i) => min + i);
     const rows = [values.slice(0, 6), values.slice(6)];
     return (
-      <div style={{ display: 'grid', gap: 8 }}>
-        <div className="test-opinion-scale" role="radiogroup" aria-label={question.prompt} style={opinionScaleWrap}>
+      <div className="test-opinion-scale">
+        <div className="test-opinion-scale__scale" role="radiogroup" aria-label={question.prompt}>
           {rows.filter(row => row.length > 0).map((row, rowIndex) => (
-            <div key={rowIndex} className="test-opinion-scale__row" style={opinionScaleRow}>
+            <div key={rowIndex} className="test-opinion-scale__row">
               {row.map(n => {
                 const selected = value.selected === n;
                 return (
@@ -313,7 +313,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                     aria-checked={selected}
                     data-selected={selected ? 'true' : 'false'}
                     onClick={() => onChange({ selected: n })}
-                    style={scaleButton(selected)}
                   >
                     {n}
                   </button>
@@ -323,7 +322,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
           ))}
         </div>
         {(opts.minLabel || opts.maxLabel) ? (
-          <div className="test-opinion-scale__labels" style={{ display: 'flex', justifyContent: 'space-between', color: '#64748b', fontSize: 12 }}>
+          <div className="test-opinion-scale__labels">
             <span>{opts.minLabel}</span>
             <span>{opts.maxLabel}</span>
           </div>
@@ -336,7 +335,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     const opts = question.options as PublicRatingOptions;
     const max = Math.max(2, Math.min(10, opts.max ?? 5));
     return (
-      <div className="test-rating" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      <div className="test-rating">
         {Array.from({ length: max }, (_, i) => i + 1).map(n => {
           const selected = (value.selected ?? 0) >= n;
           const symbol = opts.shape === 'number' ? n : opts.shape === 'heart' ? '♥' : selected ? '★' : '☆';
@@ -345,7 +344,6 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               key={n}
               type="button"
               onClick={() => onChange({ selected: n })}
-              style={ratingButton(selected)}
               data-selected={selected ? 'true' : 'false'}
               aria-label={`Rating ${n}`}
             >
@@ -489,55 +487,5 @@ function choiceButtonStyle(selected: boolean): React.CSSProperties {
 }
 
 
-const opinionScaleWrap: React.CSSProperties = {
-  width: 361,
-  maxWidth: '100%',
-  marginInline: 'auto',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 6,
-};
-
-const opinionScaleRow: React.CSSProperties = {
-  display: 'flex',
-  flexWrap: 'nowrap',
-  gap: 6,
-  justifyContent: 'center',
-};
-
-function scaleButton(selected: boolean): React.CSSProperties {
-  return {
-    flex: '1 1 0%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    maxWidth: 'calc(16.6667% - 5px)',
-    height: 56,
-    padding: 0,
-    borderRadius: 1,
-    border: 'none',
-    boxShadow: selected ? 'rgba(1, 66, 172, 0.6) 0 0 0 2px inset' : 'rgba(1, 66, 172, 0.1) 0 0 0 1px inset',
-    background: selected ? 'rgba(1, 66, 172, 0.15)' : 'rgba(255, 255, 255, 0.6)',
-    color: 'rgb(38, 38, 39)',
-    fontSize: 14,
-    fontWeight: 400,
-    lineHeight: 1,
-    fontFamily: 'inherit',
-    cursor: 'pointer',
-  };
-}
-
-function ratingButton(selected: boolean): React.CSSProperties {
-  return {
-    width: 46,
-    height: 46,
-    borderRadius: 1,
-    border: '1px solid transparent',
-    background: 'transparent',
-    color: selected ? '#f59e0b' : '#6b7177',
-    fontSize: 34,
-    lineHeight: 1,
-    fontFamily: 'inherit',
-    cursor: 'pointer',
-  };
-}
+/* Opinion-scale + rating styling lives in tq-options.css under
+   the --os-* and --or-* device tokens. */

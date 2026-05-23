@@ -14114,8 +14114,6 @@ body {
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
-.test-preview-shell--mobile .test-opinion-scale,
-.test-preview-shell--mobile .test-rating,
 .test-preview-shell--mobile .test-dropdown-answer,
 .test-preview-shell--mobile .test-fill-blanks {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
@@ -14130,23 +14128,6 @@ body {
      real on-device spacing. */
   gap: 7px !important;
   justify-content: center !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 6px !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale__row {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  gap: 6px !important;
-  justify-content: center !important;
-}
-
-.test-preview-shell--mobile .test-rating {
-  gap: 7px !important;
 }
 .test-preview-shell--mobile .test-ordering-row {
   box-sizing: border-box !important;
@@ -14325,8 +14306,6 @@ body {
 .test-preview-shell--mobile .qmedia-answer,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
-.test-preview-shell--mobile .test-opinion-scale,
-.test-preview-shell--mobile .test-rating,
 .test-preview-shell--mobile .test-dropdown-answer,
 .test-preview-shell--mobile .test-fill-blanks,
 .test-preview-shell--mobile .test-player__card--type-match .qmedia-answer,
@@ -14349,75 +14328,8 @@ body {
   line-height: 20px !important;
 }
 
-.test-preview-shell--mobile .test-opinion-scale button,
-.test-preview-shell--mobile .test-rating button {
-  height: 37px !important;
-  min-width: 37px !important;
-  border-radius: 3px !important;
-  background: #f3f5ff !important;
-  border: none !important;
-  color: rgb(4, 69, 175) !important;
-}
-
-.test-preview-shell .test-rating button[data-selected="true"] {
-  color: #f59e0b !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale button {
-  flex: 1 1 0% !important;
-  max-width: calc(16.6667% - 5px) !important;
-  height: 56px !important;
-  min-width: 0 !important;
-  border-radius: 3px !important;
-  border: none !important;
-  box-shadow: rgba(1, 66, 172, 0.1) 0 0 0 1px inset !important;
-  background: rgba(255, 255, 255, 0.6) !important;
-  color: rgb(38, 38, 39) !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale button[data-selected="true"] {
-  background: rgba(1, 66, 172, 0.15) !important;
-  box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale button:hover {
-  background: rgba(1, 66, 172, 0.08) !important;
-  box-shadow: rgba(1, 66, 172, 0.3) 0 0 0 1px inset !important;
-}
-
-.test-preview-shell--mobile .test-opinion-scale button[data-selected="true"]:hover {
-  background: rgba(1, 66, 172, 0.15) !important;
-  box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-}
-
-@media (min-width: 641px) {
-  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 6px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale__row {
-    display: contents !important;
-  }
-
-  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--no-media.test-player__card--type-opinion-scale .test-opinion-scale button {
-    flex: 1 1 0% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-  }
-
-  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--has-media.test-player__card--type-opinion-scale .test-opinion-scale,
-  .test-preview-shell:not(.test-preview-shell--mobile) .test-player__card--has-media.test-player__card--type-opinion-scale .test-opinion-scale__labels {
-    width: 361px !important;
-    max-width: 100% !important;
-    margin-inline: auto !important;
-  }
-}
+/* Opinion-scale + rating now driven by --os-* / --or-* tokens in
+   tq-options.css. */
 
 .test-preview-shell .test-player__card .qmedia-asset,
 .test-preview-shell .test-player__card .qmedia-asset img,
@@ -14426,8 +14338,7 @@ body {
 .test-preview-shell .test-player__card .test-match-row > div,
 .test-preview-shell .test-player__card .test-match-select,
 .test-preview-shell .test-player__card .test-dropdown-answer,
-.test-preview-shell .test-player__card .test-fill-blank-input,
-.test-preview-shell .test-player__card .test-rating button {
+.test-preview-shell .test-player__card .test-fill-blank-input {
   border-radius: 3px !important;
 }.test-preview-shell--mobile .test-player__nav {
   position: fixed !important;
@@ -14521,8 +14432,6 @@ body {
   .test-player__card .qmedia-answer,
   .test-player__card .test-match-list,
   .test-player__card .test-ordering-list,
-  .test-player__card .test-opinion-scale,
-  .test-player__card .test-rating,
   .test-player__card .test-dropdown-answer,
   .test-player__card .test-fill-blanks {
     box-sizing: border-box !important;
@@ -14596,47 +14505,6 @@ body {
 
   .test-player--wallpaper-active .test-player__nav button {
     border-radius: 3px !important;
-  }  .test-opinion-scale {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-  }
-
-  .test-opinion-scale__row {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 6px !important;
-    justify-content: center !important;
-  }
-
-  .test-opinion-scale button {
-    flex: 0 0 44px !important;
-    width: 44px !important;
-    height: 44px !important;
-    max-width: 44px !important;
-    min-width: 44px !important;
-    border-radius: 0 !important;
-    border: none !important;
-    box-shadow: rgba(1, 66, 172, 0.1) 0 0 0 1px inset !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-    color: rgb(38, 38, 39) !important;
-    font-size: 14px !important;
-    line-height: 1 !important;
-  }
-
-  .test-opinion-scale button[data-selected="true"] {
-    background: rgba(1, 66, 172, 0.15) !important;
-    box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-  }
-
-  .test-opinion-scale button:hover {
-    background: rgba(1, 66, 172, 0.08) !important;
-    box-shadow: rgba(1, 66, 172, 0.3) 0 0 0 1px inset !important;
-  }
-
-  .test-opinion-scale button[data-selected="true"]:hover {
-    background: rgba(1, 66, 172, 0.15) !important;
-    box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
   }
 
   .test-match-row {
