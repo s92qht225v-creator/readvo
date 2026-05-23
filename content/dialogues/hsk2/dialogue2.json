@@ -170,7 +170,7 @@
           "text_translation": "Yaxshi, nima istaysizlar?",
           "text_translation_ru": "Хорошо, что вы будете?",
           "text_translation_en": "Okay, what would you like?",
-          "speaker": "服务员",
+          "speaker": "C",
           "words": [
             { "i": [0, 2], "p": "hǎo de", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
             { "i": [3, 5], "p": "nǐmen", "t": "sizlar", "tr": "вы", "h": 1, "l": 2 },
