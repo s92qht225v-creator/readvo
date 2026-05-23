@@ -388,15 +388,15 @@ function croppedImageStyle(crop: NonNullable<QuestionMedia['crop']>, naturalAspe
   };
 }
 
-// borderRadius / background are owned by CSS (tq-options.css → asset
-// rules driven by --qm-asset-radius / --qm-asset-bg tokens) so the
-// cascade actually owns them. No vertical margin either: the
-// surrounding .qmedia-content gap (and the grid's align-items: center)
-// own the spacing.
+// Width / border-radius / background are owned by CSS (.qmedia-layout
+// > .qmedia-asset rules driven by --qm-asset-* device tokens and the
+// .qmedia-asset--portrait modifier). Inline width: '100%' here was
+// silently beating .qmedia-asset--portrait { width: auto }, leaving
+// the wrapper too wide and producing left/right black bars around
+// portrait videos. The per-instance aspectRatio is added in the
+// component below, not here.
 const videoFrameWrap: React.CSSProperties = {
   position: 'relative',
-  width: '100%',
-  aspectRatio: '16 / 9',
   overflow: 'hidden',
 };
 
