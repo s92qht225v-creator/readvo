@@ -76,7 +76,6 @@
   border: none !important;
 }
 
-.tb-preview-card--mobile-centered .test-picture-options,
 .tb-preview-card--mobile-centered .test-match-list,
 .tb-preview-card--mobile-centered .test-ordering-list {
   width: min(100%, 303px) !important;
@@ -84,11 +83,6 @@
   gap: 7px !important;
 }
 
-.tb-preview-card--mobile-centered .test-picture-options {
-  grid-template-columns: 1fr !important;
-}
-
-.tb-preview-card--mobile-centered .test-picture-option,
 .tb-preview-card--mobile-centered .test-ordering-row {
   box-sizing: border-box !important;
   width: min(100%, 303px) !important;
@@ -217,13 +211,6 @@
   vertical-align: baseline !important;
 }
 
-.tb-preview-card--mobile-centered .test-picture-option span:last-child {
-  min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-}
-
 .tb-preview-card--mobile-centered .test-opinion-scale,
 .tb-preview-card--mobile-centered .test-rating {
   width: min(100%, 303px) !important;
@@ -300,8 +287,6 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-.tb-preview-card .test-picture-option,
-.test-player__card .test-picture-option,
 .tb-preview-card .test-ordering-row,
 .test-player__card .test-ordering-row,
 .tb-preview-card .test-match-row,
@@ -338,8 +323,6 @@
   border-radius: 1px 1px 0 0 !important;
 }
 
-.tb-preview-card .test-picture-options,
-.test-player__card .test-picture-options,
 .tb-preview-card .test-ordering-list,
 .test-player__card .test-ordering-list,
 .tb-preview-card .test-match-list,
@@ -476,10 +459,6 @@
 .test-player__card .qmedia-asset img,
 .tb-preview-card .qmedia-asset iframe,
 .test-player__card .qmedia-asset iframe,
-.tb-preview-card .test-picture-option,
-.test-player__card .test-picture-option,
-.tb-preview-card .test-picture-option > div,
-.test-player__card .test-picture-option > div,
 .tb-preview-card .test-ordering-row,
 .test-player__card .test-ordering-row,
 .tb-preview-card .test-match-choice,
@@ -598,8 +577,7 @@
   font-size: 18px !important;
   line-height: 20px !important;
 }
-/* Text-input theming (short/long/number) lives in tq-options.css. */
-.tb-preview-card .test-picture-option,
+/* Text-input + picture-choice theming lives in tq-options.css. */
 .tb-preview-card .test-dropdown-answer,
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
@@ -609,7 +587,6 @@
 .tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-.tb-preview-card .test-picture-option,
 .tb-preview-card .test-dropdown-answer,
 .tb-preview-card .test-match-choice,
 .tb-preview-card .test-match-select,
@@ -618,12 +595,10 @@
 .tb-preview-card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-.tb-preview-card .test-picture-option span:first-child,
 .tb-preview-card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
-.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
@@ -633,7 +608,6 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-dropdown-answer,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-choice,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-match-select,
@@ -642,7 +616,6 @@
 .tb-preview-card.tb-preview-card.tb-preview-card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-.tb-preview-card.tb-preview-card.tb-preview-card .test-picture-option span:first-child,
 .tb-preview-card.tb-preview-card.tb-preview-card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;

@@ -67,7 +67,6 @@
   /* Text-input sizing (short/long/number) now lives in tq-options.css
      under the --ti-* device tokens. Other answer-type selectors stay
      here until they're migrated. */
-  .test-player__card .test-picture-option,
   .test-player__card .test-ordering-row,
   .test-player__card .test-match-row,
   .test-player__card .test-match-choice,
@@ -117,8 +116,8 @@
     font-size: 15px !important;
   }
 }
-/* short/long/number text-input theming now lives in tq-options.css. */
-.test-player__card .test-picture-option,
+/* short/long/number text-input + picture-choice theming now live in
+   tq-options.css. */
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
@@ -128,7 +127,6 @@
 .test-player__card .test-fill-blank-input {
   color: var(--test-theme-answer-text, #0445af) !important;
 }
-.test-player__card .test-picture-option,
 .test-player__card .test-dropdown-answer,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-select,
@@ -137,12 +135,10 @@
 .test-player__card .test-rating button {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
 }
-.test-player__card .test-picture-option span:first-child,
 .test-player__card .test-ordering-row span:first-child {
   color: var(--test-theme-answer, #0445af) !important;
   border-color: color-mix(in srgb, var(--test-theme-answer, #0445af) 35%, #ffffff) !important;
 }
-.test-player__card .test-picture-option[data-selected="true"],
 .test-player__card .test-opinion-scale button[data-selected="true"] {
   box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af) !important;
 }
@@ -172,7 +168,6 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-.test-player__card .test-picture-option,
 .test-player__card .test-ordering-row,
 .test-player__card .test-match-row,
 .test-player__card .test-match-choice,
@@ -202,7 +197,6 @@
   border-radius: 1px 1px 0 0 !important;
 }
 
-.test-player__card .test-picture-options,
 .test-player__card .test-ordering-list,
 .test-player__card .test-match-list {
   gap: clamp(7px, 1.8cqw, 12px) !important;
@@ -224,7 +218,6 @@
   }
 
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-dropdown-answer,
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-picture-options,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-ordering-list,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-match-list {
     width: 100% !important;
@@ -241,7 +234,6 @@
 .test-player__card--force-desktop.test-player__card--no-media .test-ordering-list,
 .test-player__card--force-desktop.test-player__card--no-media.test-player__card--type-dropdown .test-dropdown-answer,
 .test-player__card--force-desktop .qmedia-audio-top .test-dropdown-answer,
-.test-player__card--force-desktop .qmedia-audio-top .test-picture-options,
 .test-player__card--force-desktop .qmedia-audio-top .test-ordering-list,
 .test-player__card--force-desktop .qmedia-audio-top .test-match-list {
   width: 100% !important;
@@ -572,8 +564,6 @@
 .test-player__card .qmedia-asset,
 .test-player__card .qmedia-asset img,
 .test-player__card .qmedia-asset iframe,
-.test-player__card .test-picture-option,
-.test-player__card .test-picture-option > div,
 .test-player__card .test-ordering-row,
 .test-player__card .test-match-choice,
 .test-player__card .test-match-row > div,

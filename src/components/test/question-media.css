@@ -125,10 +125,9 @@
   .qmedia-audio-top > .qmedia-content > .qmedia-answer * {
     text-align: left;
   }
-  /* short/long/number are full-width via --ti-width:100% on desktop. */
+  /* short/long/number/picture full-width via tokens on desktop. */
   .qmedia-audio-top .test-dropdown-answer,
   .qmedia-audio-top .test-question-options,
-  .qmedia-audio-top .test-picture-options,
   .qmedia-audio-top .test-ordering-list,
   .qmedia-audio-top .test-match-list {
     width: 100% !important;

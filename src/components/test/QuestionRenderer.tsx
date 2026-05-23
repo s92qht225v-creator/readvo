@@ -83,14 +83,12 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
 
   if (question.type === 'picture_choice') {
     const opts = question.options as PublicPictureChoiceOptions;
-    const TILE_BG = 'rgba(4, 69, 175, 0.08)';
-    const TILE_BG_SEL = 'rgba(4, 69, 175, 0.18)';
-    const TEXT = '#0445af';
     return (
-      <div className="test-picture-options" role={opts.allowMultiple ? 'group' : 'radiogroup'} aria-label={question.prompt} style={{
-        display: 'grid', gap: 12,
-        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-      }}>
+      <div
+        className="test-picture-options"
+        role={opts.allowMultiple ? 'group' : 'radiogroup'}
+        aria-label={question.prompt}
+      >
         {opts.choices.map((c, i) => {
           const selected = opts.allowMultiple
             ? (value.selectedIds ?? []).includes(c.id)
@@ -116,57 +114,23 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               aria-checked={selected}
               aria-pressed={selected}
               data-selected={selected ? 'true' : 'false'}
-              style={{
-                display: 'flex', flexDirection: 'column',
-                background: selected ? TILE_BG_SEL : TILE_BG,
-                border: selected ? `2px solid ${TEXT}` : '2px solid transparent',
-                borderRadius: 1,
-                padding: 8,
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-                color: TEXT,
-                transition: 'background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease',
-              }}
             >
-              <div style={{
-                width: '100%',
-                aspectRatio: '1 / 1',
-                flex: '0 0 auto',
-                background: 'rgba(4, 69, 175, 0.05)',
-                border: `1px dashed ${TEXT}`,
-                borderRadius: 1,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                marginBottom: 8,
-                overflow: 'hidden',
-                backgroundImage: c.image_url ? `url(${c.image_url})` : undefined,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}>
+              <div
+                className={`test-picture-option__image${c.image_url ? ' test-picture-option__image--has-image' : ''}`}
+                style={c.image_url ? { backgroundImage: `url(${c.image_url})` } : undefined}
+              >
                 {!c.image_url ? (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={TEXT} strokeWidth="1.5" aria-hidden>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
                     <rect x="3" y="3" width="18" height="18" rx="2" />
                     <path d="M3 16l5-5 4 4 3-3 6 6" />
-                    <circle cx="9" cy="9" r="1.5" fill={TEXT} stroke="none" />
+                    <circle cx="9" cy="9" r="1.5" fill="currentColor" stroke="none" />
                     <path d="M19 5v4M21 7h-4" />
                   </svg>
                 ) : null}
               </div>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 6,
-                fontSize: 14, textAlign: 'left',
-              }}>
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: 22, height: 22, borderRadius: 3,
-                  background: '#fff',
-                  color: TEXT,
-                  fontSize: 11, fontWeight: 700,
-                  border: `1px solid ${TEXT}`,
-                  flexShrink: 0,
-                }}>{LETTERS[i] ?? i + 1}</span>
-                <span style={{
-                  flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                }}>{c.text || `Choice ${i + 1}`}</span>
+              <div className="test-picture-option__label">
+                <span className="test-picture-option__badge">{LETTERS[i] ?? i + 1}</span>
+                <span className="test-picture-option__text">{c.text || `Choice ${i + 1}`}</span>
               </div>
             </button>
           );

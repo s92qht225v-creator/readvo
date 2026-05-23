@@ -13828,16 +13828,7 @@ body {
   width: min(100%, 303px) !important;
   max-width: 100% !important;
   margin-inline: auto !important;
-}.tb-canvas--mobile .test-picture-options {
-  grid-template-columns: 1fr !important;
-}
-
-.tb-canvas--mobile .test-picture-option {
-  min-height: 150px !important;
-  aspect-ratio: auto !important;
-}
-
-.tb-canvas--mobile .test-match-row {
+}.tb-canvas--mobile .test-match-row {
   grid-template-columns: 1fr !important;
   gap: 8px !important;
 }
@@ -14121,7 +14112,6 @@ body {
 }
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
-.test-preview-shell--mobile .test-picture-options,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
 .test-preview-shell--mobile .test-opinion-scale,
@@ -14134,7 +14124,6 @@ body {
      left/right gaps from the card edge match. */
   margin-inline: auto !important;
 }
-.test-preview-shell--mobile .test-picture-options,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list {
   /* Match the production-mobile @media row gap so the preview reflects
@@ -14176,16 +14165,8 @@ body {
   font-weight: 400 !important;
   line-height: 20px !important;
   align-items: center !important;
-}.test-picture-option {
-  transition: background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, transform 0.12s ease;
-}.test-picture-option:active {
-  transform: scale(0.992);
 }
-.test-picture-option[data-selected="true"] {
-  background: rgba(4, 69, 175, 0.18) !important;
-  box-shadow: inset 0 0 0 2px rgb(4, 69, 175) !important;
-  animation: test-answer-selected 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}@keyframes test-answer-selected {
+@keyframes test-answer-selected {
   0% {
     transform: scale(0.986);
   }
@@ -14215,10 +14196,6 @@ body {
   text-overflow: clip !important;
   white-space: normal !important;
   overflow-wrap: anywhere !important;
-}
-
-.test-preview-shell--mobile .test-picture-options {
-  grid-template-columns: 1fr !important;
 }
 
 .test-preview-shell--mobile .test-dropdown-answer,
@@ -14346,7 +14323,6 @@ body {
 .test-preview-shell--mobile .test-player__description,
 .test-preview-shell--mobile .qmedia-header,
 .test-preview-shell--mobile .qmedia-answer,
-.test-preview-shell--mobile .test-picture-options,
 .test-preview-shell--mobile .test-match-list,
 .test-preview-shell--mobile .test-ordering-list,
 .test-preview-shell--mobile .test-opinion-scale,
@@ -14446,8 +14422,6 @@ body {
 .test-preview-shell .test-player__card .qmedia-asset,
 .test-preview-shell .test-player__card .qmedia-asset img,
 .test-preview-shell .test-player__card .qmedia-asset iframe,
-.test-preview-shell .test-player__card .test-picture-option,
-.test-preview-shell .test-player__card .test-picture-option > div,
 .test-preview-shell .test-player__card .test-ordering-row,
 .test-preview-shell .test-player__card .test-match-row > div,
 .test-preview-shell .test-player__card .test-match-select,
@@ -14545,7 +14519,6 @@ body {
   .test-player__card .test-player__description,
   .test-player__card .qmedia-header,
   .test-player__card .qmedia-answer,
-  .test-player__card .test-picture-options,
   .test-player__card .test-match-list,
   .test-player__card .test-ordering-list,
   .test-player__card .test-opinion-scale,
@@ -14664,17 +14637,6 @@ body {
   .test-opinion-scale button[data-selected="true"]:hover {
     background: rgba(1, 66, 172, 0.15) !important;
     box-shadow: rgba(1, 66, 172, 0.6) 0 0 0 2px inset !important;
-  }
-
-  .test-picture-options {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  .test-picture-option {
-    aspect-ratio: auto !important;
-    min-height: 164px !important;
-    border-radius: 14px !important;
   }
 
   .test-match-row {
