@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, type CSSProperties } from 'react';
+import { useMemo, useState } from 'react';
 
 export function MatchPlayer({ left, right, value, onChange }: {
   left: { id: string; text: string }[];
@@ -52,20 +52,8 @@ export function MatchPlayer({ left, right, value, onChange }: {
   };
 
   return (
-    <div
-      className="test-match-list test-match-pairing"
-      role="group"
-      aria-label="Match pairs"
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-        gap: 10,
-        width: '100%',
-        maxWidth: '100%',
-        marginInline: 0,
-      }}
-    >
-      <div className="test-match-column" style={{ display: 'grid', gap: 7, minWidth: 0 }}>
+    <div className="test-match-list test-match-pairing" role="group" aria-label="Match pairs">
+      <div className="test-match-column">
         {left.map((item, leftIndex) => {
           const pairedRight = rightForLeft(leftIndex);
           const selected = selectedLeft === leftIndex;
@@ -77,15 +65,14 @@ export function MatchPlayer({ left, right, value, onChange }: {
               data-selected={selected ? 'true' : 'false'}
               data-matched={pairedRight ? 'true' : 'false'}
               onClick={() => setSelectedLeft(selected ? null : leftIndex)}
-              style={matchChoiceStyle(selected, !!pairedRight)}
             >
-              {pairedRight ? <span style={matchBadgeStyle}>{leftIndex + 1}</span> : null}
-              <span style={matchChoiceTextStyle}>{item.text}</span>
+              {pairedRight ? <span className="test-match-choice__badge">{leftIndex + 1}</span> : null}
+              <span className="test-match-choice__text">{item.text}</span>
             </button>
           );
         })}
       </div>
-      <div className="test-match-column" style={{ display: 'grid', gap: 7, minWidth: 0 }}>
+      <div className="test-match-column">
         {right.map(item => {
           const pairedLeft = leftForRight(item.id);
           const selected = selectedLeft != null && pairedLeft === selectedLeft;
@@ -97,10 +84,9 @@ export function MatchPlayer({ left, right, value, onChange }: {
               data-selected={selected ? 'true' : 'false'}
               data-matched={pairedLeft != null ? 'true' : 'false'}
               onClick={() => handleRightClick(item.id)}
-              style={matchChoiceStyle(selected, pairedLeft != null)}
             >
-              {pairedLeft != null ? <span style={matchBadgeStyle}>{pairedLeft + 1}</span> : null}
-              <span style={matchChoiceTextStyle}>{item.text}</span>
+              {pairedLeft != null ? <span className="test-match-choice__badge">{pairedLeft + 1}</span> : null}
+              <span className="test-match-choice__text">{item.text}</span>
             </button>
           );
         })}
@@ -108,51 +94,3 @@ export function MatchPlayer({ left, right, value, onChange }: {
     </div>
   );
 }
-
-function matchChoiceStyle(selected: boolean, matched: boolean): CSSProperties {
-  return {
-    ...matchTile,
-    width: '100%',
-    border: selected ? '2px solid #0445af' : '2px solid transparent',
-    background: selected ? 'rgba(4, 69, 175, 0.16)' : matched ? 'rgba(4, 69, 175, 0.12)' : '#f3f5ff',
-    cursor: 'pointer',
-    gap: 6,
-    fontFamily: 'inherit',
-    textAlign: 'left',
-  };
-}
-
-const matchTile: CSSProperties = {
-  boxSizing: 'border-box',
-  display: 'flex',
-  alignItems: 'center',
-  minHeight: 37,
-  padding: '6px 10px',
-  background: '#f3f5ff',
-  color: 'rgb(4, 69, 175)',
-  borderRadius: 1,
-  fontSize: 18,
-  lineHeight: '24px',
-};
-
-const matchBadgeStyle: CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: 20,
-  height: 20,
-  borderRadius: 3,
-  border: '1px solid #0445af',
-  background: '#fff',
-  color: '#0445af',
-  fontSize: 11,
-  fontWeight: 700,
-  flexShrink: 0,
-};
-
-const matchChoiceTextStyle: CSSProperties = {
-  minWidth: 0,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-};

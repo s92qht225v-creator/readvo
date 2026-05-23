@@ -44,15 +44,6 @@
     padding: 0 !important;
   }
 
-  /* Constrain the match list to the same mobile column the media uses
-     so the option boxes align with the image above. */
-  .test-player__card .test-match-list {
-    box-sizing: border-box !important;
-    width: var(--test-mobile-column, min(100%, 303px)) !important;
-    max-width: 100% !important;
-    margin-inline: auto !important;
-  }
-
   /* Unify mobile typography so the title, description and answer text
      read at consistent sizes. */
   .test-player__card .test-player__title {
@@ -64,14 +55,10 @@
     font-size: 15px !important;
     line-height: 1.4 !important;
   }
-  /* Text-input sizing (short/long/number) now lives in tq-options.css
-     under the --ti-* device tokens. Other answer-type selectors stay
-     here until they're migrated. */
-  .test-player__card .test-match-row,
-  .test-player__card .test-match-choice,
-  .test-player__card .test-match-select {
-    font-size: 15px !important;
-  }
+
+  /* All answer-type sizing now lives in tq-options.css under device
+     tokens (--tq-*, --ti-*, --pic-*, --os-*, --or-*, --dd-*, --ord-*,
+     --fb-*, --mt-*). */
 }
 
 @media (min-width: 641px) {
@@ -112,15 +99,7 @@
   }
 }
 /* Text-input + picture-choice + opinion-scale + rating + dropdown +
-   ordering theming lives in tq-options.css now. */
-.test-player__card .test-match-choice,
-.test-player__card .test-match-select {
-  color: var(--test-theme-answer-text, #0445af) !important;
-}
-.test-player__card .test-match-choice,
-.test-player__card .test-match-select {
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-}
+   ordering + match theming lives in tq-options.css now. */
 
 .test-player__card .test-player__title {
   font-size: var(--test-title-size) !important;
@@ -135,29 +114,10 @@
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
-.test-player__card .test-match-row,
-.test-player__card .test-match-choice {
-  font-size: var(--test-answer-size) !important;
-}
-
-.test-player__card .test-match-select {
-  font-size: var(--test-answer-size) !important;
-  padding: var(--test-answer-padding-y) var(--test-answer-padding-x) !important;
-}
-
-/* Fill-blanks styling now driven by --fb-* tokens in tq-options.css. */
-
-.test-player__card .test-match-list {
-  gap: clamp(7px, 1.8cqw, 12px) !important;
-}
+/* Fill-blanks + match styling now driven by --fb-* / --mt-* tokens
+   in tq-options.css. */
 
 @container (min-width: 480px) {
-  .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .test-match-list {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-inline: 0 !important;
-  }
-
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top > .qmedia-asset,
   .test-player__card:not(.test-player__card--force-mobile) .qmedia-audio-top .qmedia-audio-player {
     width: 100% !important;
@@ -165,165 +125,26 @@
     margin-inline: 0 !important;
   }
 }
-.test-player__card--force-desktop .qmedia-audio-top .test-match-list {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-inline: 0 !important;
-}
 
 .test-player__card--force-desktop .qmedia-audio-top > .qmedia-asset,
 .test-player__card--force-desktop .qmedia-audio-top .qmedia-audio-player {
   width: 100% !important;
   max-width: 100% !important;
   margin-inline: 0 !important;
-}.test-player__card--force-desktop.test-player__card--no-media {
+}
+
+.test-player__card--force-desktop.test-player__card--no-media {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-}.test-player__card--type-match .qmedia-answer,
-.test-player__card--type-match .qmedia-header {
-  box-sizing: border-box !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
-  margin-inline: 0 !important;
 }
 
-.test-player__card--type-match .test-match-list {
-  box-sizing: border-box !important;
-  width: var(--test-mobile-column, min(100%, 303px)) !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-
-@container (min-width: 480px) {
-  .test-player__card--type-match:not(.test-player__card--force-mobile) .test-match-list {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-inline: 0 !important;
-  }
-}
-
-.test-player__card--force-desktop.test-player__card--type-match .test-match-list {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-inline: 0 !important;
-}
-
-.test-player__card .test-match-pairing {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-  width: 100% !important;
-  gap: clamp(8px, 2cqw, 14px) !important;
-}
-
-.test-player__card .test-match-column {
-  display: grid !important;
-  gap: 7px !important;
-  min-width: 0 !important;
-}
-
-.test-player__card .test-match-choice {
-  box-sizing: border-box !important;
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  min-height: 37px !important;
-  padding: 6px 10px !important;
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
-  font-size: 18px !important;
-  line-height: 24px !important;
-  text-align: left !important;
-  overflow: hidden !important;
-}
-
-.test-player__card .test-match-choice[data-selected="true"] {
-  background: rgba(4, 69, 175, 0.16) !important;
-  border-color: var(--test-theme-answer, #0445af) !important;
-}
-
-.test-player__card .test-match-choice[data-matched="true"]:not([data-selected="true"]) {
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 12%, #ffffff) !important;
-}
-
-.test-player__card .test-match-choice span:last-child {
-  min-width: 0 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-}
-
-@media (max-width: 640px) {
-  .test-player__card--type-match .test-match-list,
-  .test-player__card--type-match .test-match-pairing {
-    box-sizing: border-box !important;
-    width: var(--test-mobile-column, min(100%, 303px)) !important;
-    max-width: 100% !important;
-    margin-inline: auto !important;
-  }
-
-  .test-player__card--type-match .test-match-pairing {
-    gap: 8px !important;
-  }
-
-  .test-player__card--type-match .test-match-choice {
-    min-height: 37px !important;
-    padding: 6px 10px !important;
-    font-size: 15px !important;
-    line-height: 24px !important;
-  }
-}
-
-.test-player__card--force-mobile.test-player__card--type-match .test-match-list,
-.test-player__card--force-mobile.test-player__card--type-match .test-match-pairing {
-  box-sizing: border-box !important;
-  width: var(--test-mobile-column, min(100%, 303px)) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-}
-
-/* Opinion-scale desktop/no-media expansion no longer needed —
-   tq-options.css handles the constrained 361px scale layout uniformly. */
-
-.test-player__card .test-match-row > span {
-  display: none !important;
-}
-
-.test-player__card .test-match-row > div,
-.test-player__card .test-match-select {
-  box-sizing: border-box !important;
-  display: block !important;
-  width: 100% !important;
-  min-height: 37px !important;
-  padding: 6px 10px !important;
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 8%, #ffffff) !important;
-  color: var(--test-theme-answer-text, rgb(4, 69, 175)) !important;
-  border: none !important;
-  font-size: 18px !important;
-  line-height: 24px !important;
-  text-align: left !important;
-  text-indent: 0 !important;
-}
-
-.test-player__card .test-match-row > div {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-}
-
-/* Dropdown now driven by --dd-* tokens in tq-options.css (trigger,
-   menu, options, chevron, check, hover/selected states, open
-   animation). */
+/* Match + ordering + dropdown + scale + rating all driven by their
+   --*-* token families in tq-options.css. */
 
 .test-player__card .qmedia-asset,
 .test-player__card .qmedia-asset img,
-.test-player__card .qmedia-asset iframe,
-.test-player__card .test-match-choice,
-.test-player__card .test-match-row > div,
-.test-player__card .test-match-select {
+.test-player__card .qmedia-asset iframe {
   border-radius: var(--test-theme-answer-radius, 1px) !important;
 }
 
