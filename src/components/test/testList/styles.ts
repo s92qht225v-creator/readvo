@@ -602,6 +602,7 @@ export const tableHead: CSSProperties = {
   display: 'grid',
   gridTemplateColumns: '42px minmax(220px, 1fr) 90px 110px 140px 54px',
   alignItems: 'center',
+  columnGap: 10,
   color: '#6b6470',
   fontSize: 14,
   marginBottom: 10,

@@ -892,7 +892,7 @@ export function TestList() {
           ) : (
             <section>
               <div style={tableHead}>
-                <span style={{ gridColumn: '1 / 3' }}>Tests</span>
+                <span style={{ gridColumn: '1 / 3' }} />
                 <span>Responses</span>
                 <span>Status</span>
                 <span>Updated</span>
