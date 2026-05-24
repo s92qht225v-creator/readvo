@@ -74,7 +74,6 @@
      Drive .test-opinion-scale and .test-rating respectively. */
   --os-max-w: 361px;
   --os-stack-gap: 8px;
-  --os-rows-gap: 6px;
   --os-row-gap: 6px;
   --os-btn-h: 56px;
   --os-btn-fs: 14px;
@@ -192,7 +191,6 @@
 
   --os-max-w: 361px;
   --os-stack-gap: 8px;
-  --os-rows-gap: 6px;
   --os-row-gap: 6px;
   --os-btn-h: 56px;
   --os-btn-fs: 14px;
@@ -303,15 +301,16 @@
   --pic-badge-radius: 3px;
   --pic-grid-mb: 24px;
 
-  --os-max-w: 361px;
-  --os-stack-gap: 8px;
-  --os-rows-gap: 6px;
-  --os-row-gap: 6px;
+  /* Desktop scale fits in one row — bigger column, lift per-button
+     max-width cap so flex can distribute all buttons across one row. */
+  --os-max-w: 100%;
+  --os-stack-gap: 10px;
+  --os-row-gap: 8px;
   --os-btn-h: 56px;
-  --os-btn-fs: 14px;
-  --os-btn-radius: 1px;
-  --os-btn-max-w: calc(16.6667% - 5px);
-  --os-label-fs: 12px;
+  --os-btn-fs: 16px;
+  --os-btn-radius: 3px;
+  --os-btn-max-w: none;
+  --os-label-fs: 13px;
 
   --or-gap: 8px;
   --or-btn-size: 46px;
@@ -942,21 +941,20 @@
   margin-inline: auto;
 }
 
+/* Flat list of buttons. flex-wrap lets mobile break into 2 rows
+   when --os-btn-max-w caps the per-button width (e.g.
+   calc(16.6667% - 5px) makes 7+ buttons wrap). Desktop sets
+   --os-btn-max-w: none so all buttons fit in one row. */
 .test-opinion-scale__scale {
   display: flex;
-  flex-direction: column;
-  gap: var(--os-rows-gap);
-}
-
-.test-opinion-scale__row {
-  display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: var(--os-row-gap);
   justify-content: center;
 }
 
-.test-opinion-scale__row button {
+.test-opinion-scale__scale button {
   flex: 1 1 0%;
+  min-width: 36px;
   max-width: var(--os-btn-max-w);
   height: var(--os-btn-h);
   display: flex;
@@ -976,7 +974,7 @@
   transition: background-color 160ms ease, box-shadow 160ms ease;
 }
 
-.test-opinion-scale__row button[data-selected="true"] {
+.test-opinion-scale__scale button[data-selected="true"] {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 15%, #ffffff);
   box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
 }

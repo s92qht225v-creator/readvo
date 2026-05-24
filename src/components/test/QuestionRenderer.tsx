@@ -297,29 +297,27 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     const min = Number.isFinite(opts.min) ? opts.min : 0;
     const max = Number.isFinite(opts.max) ? opts.max : 10;
     const values = Array.from({ length: Math.max(1, max - min + 1) }, (_, i) => min + i);
-    const rows = [values.slice(0, 6), values.slice(6)];
+    /* Flat list of buttons. CSS handles row wrapping: mobile caps
+       each button's max-width to fit ~6 per row (so 11 buttons wrap
+       to 6 + 5); desktop removes the cap so all fit in one row. */
     return (
       <div className="test-opinion-scale">
         <div className="test-opinion-scale__scale" role="radiogroup" aria-label={question.prompt}>
-          {rows.filter(row => row.length > 0).map((row, rowIndex) => (
-            <div key={rowIndex} className="test-opinion-scale__row">
-              {row.map(n => {
-                const selected = value.selected === n;
-                return (
-                  <button
-                    key={n}
-                    type="button"
-                    role="radio"
-                    aria-checked={selected}
-                    data-selected={selected ? 'true' : 'false'}
-                    onClick={() => onChange({ selected: n })}
-                  >
-                    {n}
-                  </button>
-                );
-              })}
-            </div>
-          ))}
+          {values.map(n => {
+            const selected = value.selected === n;
+            return (
+              <button
+                key={n}
+                type="button"
+                role="radio"
+                aria-checked={selected}
+                data-selected={selected ? 'true' : 'false'}
+                onClick={() => onChange({ selected: n })}
+              >
+                {n}
+              </button>
+            );
+          })}
         </div>
         {(opts.minLabel || opts.maxLabel) ? (
           <div className="test-opinion-scale__labels">
