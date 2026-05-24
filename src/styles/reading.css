@@ -13939,6 +13939,59 @@ body {
     text-align: left !important;
     align-items: flex-start !important;
   }
+
+  /* Media split (desktop only): the welcome card becomes a two-column
+     row, media taking 50% on the opposite side from the content
+     alignment. The content half centers its own block so left/right
+     content alignment within that half still works. Mobile ignores
+     all of this — media is hidden, content stays centered. */
+  .test-player-screen__card--media-left,
+  .test-player-screen__card--media-right {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    padding: 0 !important;
+  }
+  .test-player-screen__card--media-left .test-player-screen__media {
+    order: 0;
+  }
+  .test-player-screen__card--media-right .test-player-screen__media {
+    order: 2;
+  }
+  .test-player-screen__media {
+    width: 50%;
+    min-width: 0;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .test-player-screen__card--media-left .test-player-screen__content,
+  .test-player-screen__card--media-right .test-player-screen__content {
+    order: 1;
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 32px !important;
+    /* override the align-* margin rules when media is present —
+       inside the 50% column we re-center the inner block. */
+    margin: 0 !important;
+    align-self: stretch !important;
+    text-align: center !important;
+  }
+}
+
+/* Mobile: hide the media element (don't render the 50/50 split). */
+@media (max-width: 640px) {
+  .test-player-screen__media {
+    display: none !important;
+  }
 }
 
 .test-preview-shell--desktop .test-player__card {

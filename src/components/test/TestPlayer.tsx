@@ -381,14 +381,23 @@ export function TestPlayer({ test, forceDevice }: Props) {
       const buttonText = welcomeScreen.buttonText || 'Start';
       const collectorFields = welcomeCollectorFields(welcomeScreen);
       const hasCollectorFields = collectorFields.length > 0;
-      /* Content alignment is a desktop-only feature; mobile is always
-         centered for readability. CSS owns the actual flex-alignment
-         via the --align-left / --align-right modifier; this class
-         attribute is the only thing that drives it. */
+      const hasMedia = !!welcomeScreen.imageUrl;
+      /* Content alignment + media are desktop-only (CSS @media gated).
+         The media class (--media-left / --media-right) toggles the
+         50/50 split layout; the side is the OPPOSITE of the content
+         alignment ("Content: Right" → media on left, "Content: Left"
+         → media on right). Mobile ignores both — content is always
+         centered, media is hidden. */
       const alignmentModifier = hasCollectorFields
         ? welcomeScreen.collectorLayout === 'left'
           ? 'test-player-screen__card--align-left'
           : 'test-player-screen__card--align-right'
+        : '';
+      const mediaSide = welcomeScreen.collectorLayout === 'left' ? 'right' : 'left';
+      const mediaModifier = hasMedia
+        ? mediaSide === 'left'
+          ? 'test-player-screen__card--media-left'
+          : 'test-player-screen__card--media-right'
         : '';
 
       return (
@@ -398,9 +407,17 @@ export function TestPlayer({ test, forceDevice }: Props) {
               'test-player-screen__card',
               hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
               alignmentModifier,
+              mediaModifier,
             ].filter(Boolean).join(' ')}
             style={publicScreenCard}
           >
+            {hasMedia && mediaSide === 'left' ? (
+              <div
+                className="test-player-screen__media"
+                style={{ backgroundImage: `url(${welcomeScreen.imageUrl})` }}
+                aria-hidden
+              />
+            ) : null}
             <div className="test-player-screen__content" style={publicScreenContent}>
               <h1 style={publicScreenTitle}>{title}</h1>
               <p style={publicScreenDescription}>
@@ -456,6 +473,13 @@ export function TestPlayer({ test, forceDevice }: Props) {
                 </div>
               ) : null}
             </div>
+            {hasMedia && mediaSide === 'right' ? (
+              <div
+                className="test-player-screen__media"
+                style={{ backgroundImage: `url(${welcomeScreen.imageUrl})` }}
+                aria-hidden
+              />
+            ) : null}
           </div>
         </ScreenWrapper>
       );

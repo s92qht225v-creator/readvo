@@ -31,6 +31,7 @@ import type { BuilderQuestion } from './builderTypes';
 import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
+import { addChoiceBtn, removeBtn } from './settings/_shared';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -1375,16 +1376,28 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   const previewSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const collectorFields = kind === 'welcome' ? enabledWelcomeCollectorFields(screen) : [];
   const hasCollectorFields = collectorFields.length > 0;
-  /* Content alignment only matters on desktop (mobile is always
-     centered for readability). When fields exist + we're on desktop,
-     stick the content column to left or right; otherwise center. */
-  const alignToLeft = previewDevice === 'desktop' && hasCollectorFields && screen.collectorLayout === 'left';
-  const alignToRight = previewDevice === 'desktop' && hasCollectorFields && screen.collectorLayout !== 'left';
-  const introMarginStyle: React.CSSProperties = alignToLeft
-    ? { marginLeft: 0, marginRight: 'auto', alignSelf: 'flex-start', textAlign: 'left', alignItems: 'flex-start' }
-    : alignToRight
-      ? { marginLeft: 'auto', marginRight: 0, alignSelf: 'flex-end', textAlign: 'left', alignItems: 'flex-start' }
-      : {};
+  /* Content alignment + media only matter on desktop (mobile is
+     always centered, media hidden). When fields exist + we're on
+     desktop, stick the content column to left or right; otherwise
+     center. Media (if present) takes 50% of the card on the opposite
+     side from the content. */
+  const isDesktop = previewDevice === 'desktop';
+  const hasMedia = !!screen.imageUrl;
+  const alignToLeft = isDesktop && hasCollectorFields && screen.collectorLayout === 'left';
+  const alignToRight = isDesktop && hasCollectorFields && screen.collectorLayout !== 'left';
+  const splitLayout = isDesktop && hasMedia;
+  const mediaSide: 'left' | 'right' = screen.collectorLayout === 'left' ? 'right' : 'left';
+  /* When the card is split 50/50 with media, the content column
+     occupies its half and centers its inner block. The alignToLeft /
+     alignToRight margin tweaks only apply when there's no media (the
+     content column is the full card width). */
+  const introMarginStyle: React.CSSProperties = splitLayout
+    ? {}
+    : alignToLeft
+      ? { marginLeft: 0, marginRight: 'auto', alignSelf: 'flex-start', textAlign: 'left', alignItems: 'flex-start' }
+      : alignToRight
+        ? { marginLeft: 'auto', marginRight: 0, alignSelf: 'flex-end', textAlign: 'left', alignItems: 'flex-start' }
+        : {};
   /* Collector preview stacks inside the intro column (title →
      description → fields → button). Field labels are omitted — the
      placeholder inside each input already labels it; mirrors the live
@@ -1423,27 +1436,38 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         minHeight: previewSize.height,
         maxWidth: 'none',
         borderRadius: 7,
-        padding: previewDevice === 'mobile' ? '30px 26px' : 32,
+        padding: splitLayout ? 0 : (previewDevice === 'mobile' ? '30px 26px' : 32),
         transform: `scale(${previewScale})`,
         transformOrigin: 'top left',
+        ...(splitLayout ? { flexDirection: 'row' as const, alignItems: 'stretch' as const, justifyContent: 'stretch' as const, padding: 0 } : {}),
       }}>
-        <div style={{ ...screenPreviewIntro, ...introMarginStyle }}>
-          <h2 style={screenPreviewTitle}>{title}</h2>
-          <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
-          {collectorPreview}
-          {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
-          {kind === 'welcome' && screen.showTimeToComplete ? (
-            <div style={screenPreviewMeta}>
-              <AlarmClockIcon />
-              <span>{screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</span>
-            </div>
-          ) : null}
-          {kind === 'end' && screen.showSocialShare ? (
-            <div style={screenSocialPreview}>
-              <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
-            </div>
-          ) : null}
+        {splitLayout && mediaSide === 'left' ? (
+          <div style={{ width: '50%', height: '100%', backgroundImage: `url(${screen.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', flexShrink: 0 }} />
+        ) : null}
+        <div style={{
+          ...(splitLayout ? { width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 32, boxSizing: 'border-box' as const } : {}),
+        }}>
+          <div style={{ ...screenPreviewIntro, ...introMarginStyle }}>
+            <h2 style={screenPreviewTitle}>{title}</h2>
+            <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
+            {collectorPreview}
+            {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
+            {kind === 'welcome' && screen.showTimeToComplete ? (
+              <div style={screenPreviewMeta}>
+                <AlarmClockIcon />
+                <span>{screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</span>
+              </div>
+            ) : null}
+            {kind === 'end' && screen.showSocialShare ? (
+              <div style={screenSocialPreview}>
+                <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+              </div>
+            ) : null}
+          </div>
         </div>
+        {splitLayout && mediaSide === 'right' ? (
+          <div style={{ width: '50%', height: '100%', backgroundImage: `url(${screen.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', flexShrink: 0 }} />
+        ) : null}
       </div>
     </div>
   );
@@ -1457,6 +1481,38 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
   const persist = (patch: Partial<TestScreenConfig>) => onChange({ ...screen, ...patch }, true);
   const update = (patch: Partial<TestScreenConfig>) => onChange({ ...screen, ...patch }, false);
   const collectorFields = enabledWelcomeCollectorFields(screen);
+  const { getAccessToken } = useAuth();
+  const mediaInputRef = useRef<HTMLInputElement | null>(null);
+  const [mediaUploading, setMediaUploading] = useState(false);
+  const [mediaError, setMediaError] = useState<string | null>(null);
+  const uploadMedia = async (file: File) => {
+    setMediaError(null);
+    if (!file.type.startsWith('image/')) {
+      setMediaError('Upload JPG, PNG, GIF, or WebP image.');
+      return;
+    }
+    if (file.size > 4 * 1024 * 1024) {
+      setMediaError('Image must be 4MB or smaller.');
+      return;
+    }
+    setMediaUploading(true);
+    const form = new FormData();
+    form.append('file', file);
+    form.append('questionId', `${kind}-screen`);
+    const token = await getAccessToken();
+    const res = await fetch('/api/tests/media', {
+      method: 'POST',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      body: form,
+    });
+    const json = await res.json().catch(() => ({}));
+    setMediaUploading(false);
+    if (!res.ok || !json.url) {
+      setMediaError(json.error ?? 'Upload failed.');
+      return;
+    }
+    persist({ imageUrl: json.url });
+  };
 
   return (
     <div style={panel}>
@@ -1531,6 +1587,50 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
               </div>
             </div>
           ) : null}
+
+          <div style={screenDivider} />
+          <div style={screenFieldLabel}>Media (desktop only, 50% of card)</div>
+          {screen.imageUrl ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+              <img src={screen.imageUrl} alt="" style={{ width: 56, height: 56, objectFit: 'cover', borderRadius: 6, border: '1px solid #e4ded8' }} />
+              <button
+                type="button"
+                style={addChoiceBtn}
+                onClick={() => mediaInputRef.current?.click()}
+                disabled={mediaUploading}
+              >
+                {mediaUploading ? 'Uploading…' : 'Replace'}
+              </button>
+              <button
+                type="button"
+                style={removeBtn}
+                onClick={() => persist({ imageUrl: '' })}
+              >
+                Remove
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              style={addChoiceBtn}
+              onClick={() => mediaInputRef.current?.click()}
+              disabled={mediaUploading}
+            >
+              {mediaUploading ? 'Uploading…' : '+ Add image'}
+            </button>
+          )}
+          {mediaError ? <div style={{ color: '#dc2626', fontSize: 12, marginTop: 6 }}>{mediaError}</div> : null}
+          <input
+            ref={mediaInputRef}
+            type="file"
+            accept="image/*"
+            style={{ display: 'none' }}
+            onChange={event => {
+              const file = event.target.files?.[0];
+              if (file) uploadMedia(file);
+              event.target.value = '';
+            }}
+          />
 
           <ScreenToggle label="Time to complete" checked={!!screen.showTimeToComplete} onChange={v => persist({ showTimeToComplete: v })} />
           {screen.showTimeToComplete ? (
