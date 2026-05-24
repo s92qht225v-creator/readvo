@@ -13901,60 +13901,20 @@ body {
   display: none !important;
 }
 
-.test-player-screen__card--with-collector {
-  gap: 28px;
-}
-
-@media (min-width: 760px) {
-  .test-player-screen__card--with-collector {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 56px;
-    align-items: center !important;
-    text-align: left !important;
-    padding: 48px 56px !important;
-  }
-
-  .test-player-screen__card--with-collector.test-player-screen__card--collector-left {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
-
-  .test-player-screen__card--collector-left .test-player-screen__collector {
-    order: 1;
-  }
-
-  .test-player-screen__card--collector-left .test-player-screen__content {
-    order: 2;
-  }
-
-  .test-player-screen__card--collector-right .test-player-screen__content {
-    order: 1;
-  }
-
-  .test-player-screen__card--collector-right .test-player-screen__collector {
-    order: 2;
-  }
-}
-
+/* Welcome screen with collector fields stacks vertically:
+   title → description → fields → start button. The collector is
+   nested inside .test-player-screen__content (not a sibling) so
+   normal flex-column flow handles the order; this rule just
+   constrains the content column width. */
 .test-player-screen__card--with-collector .test-player-screen__content {
   min-width: 0;
-  width: min(100%, 360px);
+  width: min(100%, 420px);
   justify-self: center;
 }
 
 .test-player-screen__card--with-collector .test-player-screen__collector {
   min-width: 0;
-  width: min(100%, 360px);
-  justify-self: center;
-}
-
-.test-preview-shell--mobile .test-player-screen__card--with-collector {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 24px !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
+  width: 100%;
 }
 
 .test-preview-shell--desktop .test-player__card {

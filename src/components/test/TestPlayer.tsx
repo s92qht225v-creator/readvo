@@ -381,7 +381,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
       const buttonText = welcomeScreen.buttonText || 'Start';
       const collectorFields = welcomeCollectorFields(welcomeScreen);
       const hasCollectorFields = collectorFields.length > 0;
-      const collectorLayout = welcomeScreen.collectorLayout === 'left' ? 'left' : 'right';
 
       return (
         <ScreenWrapper>
@@ -389,7 +388,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
             className={[
               'test-player-screen__card',
               hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
-              `test-player-screen__card--collector-${collectorLayout}`,
             ].filter(Boolean).join(' ')}
             style={publicScreenCard}
           >
@@ -398,6 +396,41 @@ export function TestPlayer({ test, forceDevice }: Props) {
               <p style={publicScreenDescription}>
                 {description || 'Description (optional)'}
               </p>
+              {/* Collector fields go between description and the Start
+                  button so the CTA sits at the natural bottom of the
+                  form. Field labels are omitted — the placeholder
+                  inside each input already labels it. */}
+              {hasCollectorFields ? (
+                <div className="test-player-screen__collector" style={publicCollectorBlock}>
+                  {collectorFields.map(field => (
+                    <div key={field.key} style={publicNameBlock}>
+                      {field.key === 'phone' ? (
+                        <span style={publicPhoneInputWrap}>
+                          <span style={publicPhonePrefix}>+998</span>
+                          <input
+                            type={field.type}
+                            inputMode="numeric"
+                            value={phoneLocalValue(profile.phone)}
+                            onChange={event => setProfile(current => ({ ...current, phone: normalizeUzbekPhoneInput(event.target.value) }))}
+                            placeholder={field.placeholder}
+                            aria-label={field.label}
+                            style={{ ...publicNameInput, ...publicPhoneInput }}
+                          />
+                        </span>
+                      ) : (
+                        <input
+                          type={field.type}
+                          value={profile[field.key]}
+                          onChange={event => setProfile(current => ({ ...current, [field.key]: event.target.value }))}
+                          placeholder={field.placeholder}
+                          aria-label={field.label}
+                          style={publicNameInput}
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
               <button
                 type="button"
                 onClick={startQuestions}
@@ -413,36 +446,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
                 </div>
               ) : null}
             </div>
-            {hasCollectorFields ? (
-              <div className="test-player-screen__collector" style={publicCollectorBlock}>
-                {collectorFields.map(field => (
-                  <label key={field.key} style={publicNameBlock}>
-                    <span style={publicNameLabel}>{field.label}</span>
-                    {field.key === 'phone' ? (
-                      <span style={publicPhoneInputWrap}>
-                        <span style={publicPhonePrefix}>+998</span>
-                        <input
-                          type={field.type}
-                          inputMode="numeric"
-                          value={phoneLocalValue(profile.phone)}
-                          onChange={event => setProfile(current => ({ ...current, phone: normalizeUzbekPhoneInput(event.target.value) }))}
-                          placeholder={field.placeholder}
-                          style={{ ...publicNameInput, ...publicPhoneInput }}
-                        />
-                      </span>
-                    ) : (
-                      <input
-                        type={field.type}
-                        value={profile[field.key]}
-                        onChange={event => setProfile(current => ({ ...current, [field.key]: event.target.value }))}
-                        placeholder={field.placeholder}
-                        style={publicNameInput}
-                      />
-                    )}
-                  </label>
-                ))}
-              </div>
-            ) : null}
           </div>
         </ScreenWrapper>
       );
@@ -922,6 +925,7 @@ const publicCollectorBlock: React.CSSProperties = {
   maxWidth: 360,
   display: 'grid',
   gap: 12,
+  marginBottom: 24,
   textAlign: 'left',
 };
 
