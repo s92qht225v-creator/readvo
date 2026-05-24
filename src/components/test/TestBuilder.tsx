@@ -1375,43 +1375,26 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   const previewSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const collectorFields = kind === 'welcome' ? enabledWelcomeCollectorFields(screen) : [];
   const hasCollectorFields = collectorFields.length > 0;
-  const splitCollector = hasCollectorFields && previewDevice === 'desktop';
-  const collectorLayout = screen.collectorLayout === 'left' ? 'left' : 'right';
+  /* Collector preview stacks inside the intro column (title →
+     description → fields → button). Field labels are omitted — the
+     placeholder inside each input already labels it; mirrors the live
+     TestPlayer behavior. */
   const collectorPreview = hasCollectorFields ? (
     <div style={screenPreviewCollector}>
       {collectorFields.map(field => (
-        <label key={field.key} style={screenPreviewCollectorField}>
-          <span style={screenPreviewCollectorLabel}>{field.label}</span>
+        <div key={field.key} style={screenPreviewCollectorField}>
           {field.prefix ? (
             <span style={screenPreviewPhoneInputWrap}>
               <span style={screenPreviewPhonePrefix}>{field.prefix}</span>
-              <input readOnly value="" placeholder={field.placeholder} style={{ ...screenPreviewCollectorInput, ...screenPreviewPhoneInput }} />
+              <input readOnly value="" placeholder={field.placeholder} aria-label={field.label} style={{ ...screenPreviewCollectorInput, ...screenPreviewPhoneInput }} />
             </span>
           ) : (
-            <input readOnly value="" placeholder={field.placeholder} style={screenPreviewCollectorInput} />
+            <input readOnly value="" placeholder={field.placeholder} aria-label={field.label} style={screenPreviewCollectorInput} />
           )}
-        </label>
+        </div>
       ))}
     </div>
   ) : null;
-  const introPreview = (
-    <div style={screenPreviewIntro}>
-      <h2 style={screenPreviewTitle}>{title}</h2>
-      <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
-      {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
-      {kind === 'welcome' && screen.showTimeToComplete ? (
-        <div style={screenPreviewMeta}>
-          <AlarmClockIcon />
-          <span>{screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</span>
-        </div>
-      ) : null}
-      {kind === 'end' && screen.showSocialShare ? (
-        <div style={screenSocialPreview}>
-          <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
-        </div>
-      ) : null}
-    </div>
-  );
 
   return (
     <div style={{
@@ -1425,7 +1408,6 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
     }}>
       <div style={{
         ...screenPreviewCard,
-        ...(splitCollector ? screenPreviewCardSplit : null),
         width: previewSize.width,
         height: previewSize.height,
         minHeight: previewSize.height,
@@ -1435,9 +1417,23 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         transform: `scale(${previewScale})`,
         transformOrigin: 'top left',
       }}>
-        {splitCollector && collectorLayout === 'left' ? collectorPreview : null}
-        {introPreview}
-        {hasCollectorFields && (!splitCollector || collectorLayout === 'right') ? collectorPreview : null}
+        <div style={screenPreviewIntro}>
+          <h2 style={screenPreviewTitle}>{title}</h2>
+          <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
+          {collectorPreview}
+          {buttonText ? <button type="button" style={screenPreviewButton}>{buttonText}</button> : null}
+          {kind === 'welcome' && screen.showTimeToComplete ? (
+            <div style={screenPreviewMeta}>
+              <AlarmClockIcon />
+              <span>{screen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(questionCount / 4))} minutes`}</span>
+            </div>
+          ) : null}
+          {kind === 'end' && screen.showSocialShare ? (
+            <div style={screenSocialPreview}>
+              <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+            </div>
+          ) : null}
+        </div>
       </div>
     </div>
   );
@@ -2758,6 +2754,7 @@ const screenPreviewCollector: React.CSSProperties = {
   justifySelf: 'center',
   display: 'grid',
   gap: 12,
+  marginBottom: 24,
 };
 
 const screenPreviewCollectorField: React.CSSProperties = {
