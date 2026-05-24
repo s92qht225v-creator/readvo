@@ -26,7 +26,27 @@ export async function GET(req: NextRequest) {
     .order('updated_at', { ascending: false });
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ tests: data ?? [] });
+
+  const tests = data ?? [];
+
+  /* Attach completed-response counts. One query against test_responses
+     filtered by the teacher's test ids; tallied in JS so we don't need
+     a Postgres group-by RPC. Empty for users with no tests. */
+  const testIds = tests.map(t => t.id);
+  const counts = new Map<string, number>();
+  if (testIds.length > 0) {
+    const { data: rows } = await admin
+      .from('test_responses')
+      .select('test_id')
+      .in('test_id', testIds)
+      .not('completed_at', 'is', null);
+    for (const row of rows ?? []) {
+      counts.set(row.test_id, (counts.get(row.test_id) ?? 0) + 1);
+    }
+  }
+  const testsWithCounts = tests.map(t => ({ ...t, response_count: counts.get(t.id) ?? 0 }));
+
+  return NextResponse.json({ tests: testsWithCounts });
 }
 
 /** POST /api/tests — create a new test (drafts only; publishing is separate) */

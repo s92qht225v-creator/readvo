@@ -922,7 +922,7 @@ export function TestList() {
                         {t.is_published ? `Share: /t/${t.slug}` : 'Draft test'}
                       </div>
                     </div>
-                    <div style={mutedCell}>-</div>
+                    <div style={mutedCell}>{t.response_count ?? 0}</div>
                     <div>
                       <span style={t.is_published ? publishedPill : draftPill}>
                         {t.is_published ? 'Published' : 'Draft'}

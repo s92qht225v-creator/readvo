@@ -213,6 +213,9 @@ export interface Test {
   is_marketplace?: boolean;
   marketplace_price?: number | null;       // soums
   marketplace_summary?: string | null;     // catalog listing description
+  /* Completed-response count. Populated only by GET /api/tests; not a
+     persisted column on the tests table. */
+  response_count?: number;
   created_at: string;
   updated_at: string;
 }
