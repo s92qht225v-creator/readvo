@@ -38,9 +38,10 @@ src/components/test/
 ├── renderers/              Heavy player components extracted from
 │                           QuestionRenderer.tsx. Add one when the inline JSX
 │                           grows past ~30 lines.
-│   ├── MatchRenderer.tsx    MatchPlayer + match styles.
-│   ├── OrderingRenderer.tsx OrderingPlayer + SortableOrderingRow + styles.
-│   └── FillBlanksRenderer.tsx FillBlanksPlayer + blankInputWidth.
+│   ├── MatchRenderer.tsx    MatchPlayer (2-col pairing).
+│   ├── OrderingRenderer.tsx OrderingPlayer + SortableOrderingRow (dnd-kit).
+│   ├── FillBlanksRenderer.tsx FillBlanksPlayer + blankInputWidth.
+│   └── ScrambleRenderer.tsx ScramblePlayer.
 ├── media/                  Media-editing modals + helpers, extracted from
 │                           SettingsPanel.tsx.
 │   ├── _helpers.ts          getQuestionMedia, setQuestionMedia,
@@ -53,30 +54,41 @@ src/components/test/
 │   └── MediaSettingsModal.tsx Crop, aspect ratio, rotate, flip.
 ├── testList/               Helpers extracted from TestList.tsx.
 │   ├── styles.ts, icons.tsx, TemplateCard.tsx, formatDate.ts
-├── test-player.css         Live-player typography + per-type widths + match
-│                           grid + opinion-scale + fill-blank input styling.
-│                           Uses @container queries against `.test-player__card`
-│                           with breakpoint 480px.
-├── question-media.css      Media-block layout (mobile-stack/float/split/
-│                           wallpaper, desktop-stack/float-X/split-X/wallpaper).
-│                           Uses @container queries against `.qmedia-layout`.
-│                           Has parallel `.qmedia-force-desktop` blocks that
-│                           apply unconditionally.
-├── test-builder-preview.css Builder-only styles. The `.tb-preview-card--*`
-│                           classes drive class-based device switching (no
-│                           container queries needed since the builder uses
-│                           a fixed-pixel preview frame).
+├── tq-options.css          **Single source of truth for every answer-type's
+│                           dimensional + theming CSS.** Token system keyed off
+│                           `[data-test-device="mobile|desktop"]` on an ancestor.
+│                           See `TOKENS.md` for the per-type reference.
+├── test-player.css         Card chrome (height, border, scroll), live-player
+│                           navigation, wallpaper bg. NO answer-type rules.
+├── question-media.css      Audio-player chrome (`.qmedia-audio-player` + sub-
+│                           elements). qmedia LAYOUT (mobile-stack/float/
+│                           desktop-float-X) is now in `tq-options.css`.
+├── test-builder-preview.css Builder canvas card chrome + a few legacy variant-
+│                           bridge tokens. NO answer-type rules.
 ├── builderTypes.ts          BuilderQuestion type used across the builder.
 └── questionTypeMeta.ts      Type → { icon, label } registry for the add menu.
 ```
 
-Live-preview shell styles (the phone-frame / desktop frame at `?preview=1`)
-live in **`src/styles/reading.css`** under `.test-preview-shell--{desktop,mobile}`.
-That file also overrides player styles for the simulated frame.
+Live-preview shell frame (the phone-frame / desktop frame at `?preview=1`)
+lives in **`src/styles/reading.css`** under `.test-preview-shell--{desktop,mobile}`
+— card chrome + nav clamps only. Answer-type styling is in `tq-options.css`.
+
+## Token system — read TOKENS.md
+
+Every answer type's dimensional + theming CSS lives in **one file**
+(`tq-options.css`) as `--<type>-*` custom properties scoped to
+`[data-test-device="mobile|desktop"]`. Each surface (live player,
+`?preview=1` shell, builder canvas) sets the attribute on an ancestor;
+the same shared rules apply everywhere.
+
+If you need to tweak how an answer type looks, **start in `TOKENS.md`**
+to find the right token. Never reach for `test-player.css` /
+`test-builder-preview.css` / `reading.css` first; they no longer own
+answer-type styles.
 
 ## Adding a new question type
 
-Four files, no exception:
+Five files, no exception:
 
 1. **`@/lib/test/types.ts`** — add `XOptions` (builder), `PublicXOptions` (player),
    and add the type literal to `BuilderQuestion`/`PublicQuestion` unions.
@@ -87,8 +99,11 @@ Four files, no exception:
    at the top, and one line to the dispatch block (around line 56-68):
    `{q.type === 'x' && <XSettings q={q} onChange={onChange} ... />}`
 4. **`QuestionRenderer.tsx`** — add an `if (question.type === 'x') { ... }` branch.
-   If the JSX is < 30 lines, inline it. If it grows, extract to
-   `renderers/XRenderer.tsx` and import.
+   className-driven, no inline dimensional styles. If the JSX is < 30 lines,
+   inline it; if it grows, extract to `renderers/XRenderer.tsx`.
+5. **`tq-options.css`** — add a `--xx-*` token family (defaults + mobile + desktop
+   blocks) and the shared rule block. Theme via `--test-theme-*` vars. See
+   `TOKENS.md` for the pattern and existing families.
 
 Optional: register icon/label in `questionTypeMeta.ts`. Add a default in
 `TestBuilder.tsx`'s `addQuestion` switch.
@@ -177,56 +192,35 @@ All test-app cards render flat:
 If you need to add elevation, do so per-element (e.g. on a button or
 badge) — do NOT reintroduce shadows on the card chrome itself.
 
-### Mobile production card layout
+### Mobile production card chrome
 
 `@media (max-width: 640px)` in `reading.css` is the single source for the
-real-mobile player chrome. After several iterations the active config is:
+real-mobile **card chrome** (everything except answer-type styling, which
+is in `tq-options.css`):
 
 - `.test-player`: `align-items: safe center` + `padding: 24px 12px
   calc(132px + safe-area-inset-bottom)` so short content sits visually
   centered in the viewport while long content falls back to flex-start
   and scrolls (no top clipping).
 - `.test-player__inner`: `display: block` (no forced 100vh flex-grow).
-  The shell handles centering.
-- `.test-player__card`: chrome-less (see "No drop shadows" above) and
-  `--test-mobile-column: min(100%, 303px)` defined here.
-- Typography unified to flatten the title-vs-body hierarchy that looked
-  jumpy on phones:
-  - `.test-player__title`: `18px / 1.3 / -0.2 letter-spacing`
-  - `.test-player__description`: `15px / 1.4`
-  - Every option / row / input (.test-question-option, .test-match-row,
-    .test-match-select, .test-match-choice, .test-ordering-row,
-    .test-short-answer, .test-fill-blanks): `15px`
+- `.test-player__card`: chrome-less (no border, no shadow, transparent).
+- `.test-player__title`: 18px / 1.3 / -0.2 letter-spacing.
+- `.test-player__description`: 15px / 1.4 with `margin: 0` (spacing
+  owned by the qmedia flex-gap system in `tq-options.css`).
 
-### Mobile match-list clamp (defeats @container desktop float rules)
+Answer-type sizing on mobile is owned entirely by the `--<type>-*` token
+blocks under `[data-test-device="mobile"]` in `tq-options.css`.
 
-`question-media.css` has `@container (min-width: 480px) { …
-.qmedia-desktop-float-left .test-match-list { width: 100% !important } }`
-plus the same rule for float-right and split-* variants. The container
-is `.test-player__card` (`container-type: inline-size`). On phones whose
-card width reaches ~480 CSS px (~430–480 viewport with no padding), the
-container fires even though the viewport is "mobile", and the match list
-widens past `--test-mobile-column`.
+### Defunct: the (0,4,2) mobile match-list clamp
 
-To re-clamp, `reading.css` `@media (max-width: 640px)` adds a (0,4,2)
-selector that beats the container rule's (0,4,0):
-
-```css
-html body .test-player .test-player__card.test-player__card--type-match
-  .test-match-list,
-html body .test-player .test-player__card.test-player__card--type-match
-  .test-match-pairing,
-html body .test-player .test-player__card.test-player__card--type-match
-  .qmedia-answer,
-html body .test-player .test-player__card.test-player__card--type-match
-  .qmedia-header {
-  width: var(--test-mobile-column, min(100%, 303px)) !important;
-  …
-}
-```
-
-Same pattern works for any other element that the desktop `@container`
-rules would widen past the mobile column.
+Old `reading.css` had a high-specificity
+`html body .test-player .test-player__card.test-player__card--type-match …`
+override to defeat `question-media.css` `@container (min-width: 480px)`
+rules that widened the match list on phones whose card crossed 480 CSS
+px. After the match migration, `question-media.css` no longer widens
+`.test-match-list`; the device-token width comes from `--tq-column`
+which is `min(100%, 480px)` on mobile regardless of container size.
+The clamp has been removed.
 
 ### Theme fields (current shape)
 
@@ -293,14 +287,32 @@ longer mounted but the helpers can be deleted in a follow-up cleanup.
   `currentColor` made the white ✓ inherit the answer-accent colour
   via `.test-question-option span:first-child { color: …!important }`,
   which painted blue-on-blue and looked invisible.
-- **Rating**: selected stars only change colour (gold); no blue
-  inset box-shadow. The shared
-  `.test-player__card .test-rating button[data-selected="true"]`
-  rule sets `box-shadow: none !important`.
+- **Rating**: selected stars only change colour (gold `#f59e0b`);
+  unselected stays grey `#6b7177`. Owned by `--or-*` rule in
+  `tq-options.css`.
+- **Opinion scale**: flat list of buttons in a flex-wrap row.
+  Mobile uses `--os-btn-basis: calc((100% - 5*gap) / 6)` so 7+
+  buttons wrap to a second row; partial last row centers via
+  `justify-content: center`. Desktop uses basis 0 + grow 1 so all
+  buttons share one row regardless of count.
 - **Ordering drag**: a `restrictToVerticalAxis` modifier on
   `DndContext` zeros out the x component of the dnd-kit transform,
   so rows can only be dragged up/down — no horizontal fling off the
-  side of the screen on mobile.
+  side of the screen on mobile. Drag state is exposed via
+  `data-dragging="true"` on `.test-ordering-row`; CSS branches on
+  the attribute for the border/opacity/shadow visuals.
+- **Match**: 2-column grid layout (`.test-match-list`) regardless
+  of device — left items and right items always side-by-side. Tap a
+  left item, then tap its match on the right (or vice versa); badge
+  numbers the pair.
+- **Fill blanks**: passage flows inline with `.test-fill-blank-input`
+  elements interpolated where blanks live. Input width is
+  content-driven (set inline by `blankInputWidth()` from typed or
+  expected length); everything else owned by `--fb-*` tokens.
+- **Picture choice**: 2 columns on every device. Selected card uses
+  inset 2px accent ring + 16% tint (no layout-shifting border).
+  Image cell `aspect-ratio: 1/1` with dashed accent border when
+  empty, solid + background-image when set.
 
 ### `flex-shrink: 0` for content-driven height
 
@@ -321,41 +333,47 @@ becomes unreadable on full-saturation backgrounds.
 
 ### Mobile content centering
 
-The card's content area is 320px wide (372 - 26×2 padding). The 303px
-content column inside (`width: 303px !important`) needs **`margin-inline: auto !important`**
-to center symmetrically — without it, the column left-aligns and produces
-a 27px/42px asymmetric gap. The catchall `.test-preview-shell--mobile .qmedia-answer`
-rule in `reading.css` sets both width and margin-inline together.
+All mobile answer-type rules read `--tq-column` (set to `min(100%, 480px)`
+in the mobile token block) and apply `margin-inline: auto`. The 480px
+cap was deliberately wider than the old 303px so phones use most of
+the available card width; centered horizontally via the auto margin so
+left/right gaps from the card edge match.
 
-Use the same mobile column width everywhere mobile is rendered:
-`--test-mobile-column: min(100%, 303px)`. That column applies to question
-title/description, stack/float media, audio players, and answer controls.
-Split media can stay full-bleed, but the text and answer controls below it
-still use the shared 303px column. Do not add separate 320px media widths.
+If you need a narrower column for a specific answer type, override its
+own token (e.g. `--os-max-w: 361px` for opinion-scale) — don't
+introduce a new mobile-only width variable.
 
-### `:not(.test-player__card--force-mobile)` modifier
+### `data-test-device` replaces `force-mobile/desktop` for answer types
 
-Desktop-expansion rules (e.g. `width: 100%` instead of mobile's
-`width: 303px`) gate on **`@container (min-width: 480px)` AND
-`:not(.--force-mobile)`** so:
+Answer-type widths/sizes are no longer gated on `@container (min-width: 480px)`
++ `:not(.test-player__card--force-mobile)`. The token system reads
+`[data-test-device="mobile|desktop"]` set on `.test-player` (live +
+preview shell) and `.tb-preview-card` (builder canvas). One attribute,
+one set of tokens, no surface drift.
 
-- Real desktop viewport → container fires, no force-mobile → desktop wins.
-- Real mobile → container doesn't fire → mobile wins.
-- Force mobile on wide screen → container fires, but `:not(force-mobile)`
-  blocks → mobile wins.
-
-For the parallel "force desktop on tiny viewport" case, there's a separate
-unconditional block of `.test-player__card--force-desktop` rules at the
-bottom of `test-player.css` and `.qmedia-force-desktop.qmedia-desktop-X`
-in `question-media.css` (~78 mirror rules).
+The `.test-player__card--force-desktop` / `--force-mobile` modifiers
+still exist for non-token chrome (e.g. card height, wallpaper bg) but
+the qmedia layout itself reads device tokens via
+`[data-test-device="desktop"] .qmedia-layout`.
 
 ### `display: contents` on `.qmedia-content`
 
-In the preview shell, `.qmedia-content` has `display: contents !important`,
-making `.qmedia-header` and `.qmedia-answer` direct flex children of
-`.qmedia-layout`. This is why qmedia-layout's `align-items` / `gap` /
-`justify-content` apply directly to header/answer. Don't add box-affecting
-properties to `.qmedia-content` in the shell — they have no effect.
+Mobile makes `.qmedia-content` `display: contents` so `.qmedia-header`
+and `.qmedia-answer` become direct flex children of `.qmedia-layout` —
+this lets the order tokens (header=1, asset=2, answer=3 by default;
+asset=1 for `qmedia-mobile-float`) reorder them as siblings, and the
+flex `gap` applies directly between header→asset and asset→answer.
+
+Desktop uses a real `.qmedia-content` flex column (with its own `gap`)
+inside a 2-column grid that places asset and content side-by-side.
+
+Audio media (`qmedia-audio`) flattens `.qmedia-content` on every device
+so the audio player can sit between description and answer via flex
+order tokens regardless of device.
+
+The no-media path (`.qmedia-layout.qmedia-no-media`) overrides the
+desktop 2-column grid to flex-column + `overflow: visible` so tall
+answer content isn't clipped.
 
 ## Question progress
 

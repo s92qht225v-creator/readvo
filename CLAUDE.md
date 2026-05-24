@@ -5,6 +5,7 @@ Always read the relevant CLAUDE.md file(s) before modifying any code. Check whic
 - Editing `content/` files → read `content/CLAUDE.md`
 - Editing `src/components/` files → read `src/components/CLAUDE.md`
 - Editing `src/styles/` files → read `src/styles/CLAUDE.md`
+- Editing **test builder / player styling** (any `.test-*` class) → read `src/components/test/CLAUDE.md` AND `src/components/test/TOKENS.md`. Every answer-type's CSS lives in `tq-options.css` under `--<type>-*` device tokens. Don't touch `test-player.css` / `test-builder-preview.css` / `reading.css` for answer-type styling.
 
 ## Project Overview
 Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek, Russian, and English-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.

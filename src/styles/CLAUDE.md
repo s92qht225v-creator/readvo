@@ -1,6 +1,15 @@
 # CSS Reference
 
-All styles live in `src/styles/reading.css`.
+All styles live in `src/styles/reading.css` **EXCEPT**:
+
+- **Test builder / player answer-type styling** lives in
+  `src/components/test/tq-options.css` under `--<type>-*` device
+  tokens. See `src/components/test/TOKENS.md` for the full reference.
+  Do NOT add `.test-*` answer-type rules to `reading.css` — they're
+  parallel chains that will get out of sync.
+- `reading.css` still owns the test player **frame chrome**
+  (`.test-preview-shell--{mobile,desktop}`, the `@media (max-width:640px)`
+  card chrome) but those rules don't touch any answer-type internals.
 
 ## Key CSS Classes
 
