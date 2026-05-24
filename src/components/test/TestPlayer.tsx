@@ -382,22 +382,17 @@ export function TestPlayer({ test, forceDevice }: Props) {
       const collectorFields = welcomeCollectorFields(welcomeScreen);
       const hasCollectorFields = collectorFields.length > 0;
       const hasMedia = !!welcomeScreen.imageUrl;
-      /* Content alignment + media are desktop-only (CSS @media gated).
-         The media class (--media-left / --media-right) toggles the
-         50/50 split layout; the side is the OPPOSITE of the content
-         alignment ("Content: Right" → media on left, "Content: Left"
-         → media on right). Mobile ignores both — content is always
-         centered, media is hidden. */
+      /* Content alignment is the single switch on desktop: it always
+         drives a 50/50 split. The content occupies its half; the
+         other half holds the media (if uploaded) or stays empty.
+         Either way the content's position is identical, so toggling
+         media on/off doesn't shift the form.
+
+         Mobile ignores all of this — content centers, media hidden. */
       const alignmentModifier = hasCollectorFields
         ? welcomeScreen.collectorLayout === 'left'
           ? 'test-player-screen__card--align-left'
           : 'test-player-screen__card--align-right'
-        : '';
-      const mediaSide = welcomeScreen.collectorLayout === 'left' ? 'right' : 'left';
-      const mediaModifier = hasMedia
-        ? mediaSide === 'left'
-          ? 'test-player-screen__card--media-left'
-          : 'test-player-screen__card--media-right'
         : '';
 
       return (
@@ -407,14 +402,18 @@ export function TestPlayer({ test, forceDevice }: Props) {
               'test-player-screen__card',
               hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
               alignmentModifier,
-              mediaModifier,
             ].filter(Boolean).join(' ')}
             style={publicScreenCard}
           >
-            {hasMedia && mediaSide === 'left' ? (
+            {/* Always render the media element when content is split-aligned
+                (desktop only — mobile hides via @media). When no imageUrl,
+                the half stays visually empty but the layout is identical
+                to the with-media case, so the content position doesn't
+                shift when an image is added or removed. */}
+            {hasCollectorFields ? (
               <div
                 className="test-player-screen__media"
-                style={{ backgroundImage: `url(${welcomeScreen.imageUrl})` }}
+                style={hasMedia ? { backgroundImage: `url(${welcomeScreen.imageUrl})` } : undefined}
                 aria-hidden
               />
             ) : null}
@@ -473,13 +472,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
                 </div>
               ) : null}
             </div>
-            {hasMedia && mediaSide === 'right' ? (
-              <div
-                className="test-player-screen__media"
-                style={{ backgroundImage: `url(${welcomeScreen.imageUrl})` }}
-                aria-hidden
-              />
-            ) : null}
           </div>
         </ScreenWrapper>
       );

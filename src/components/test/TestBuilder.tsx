@@ -1376,28 +1376,16 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   const previewSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const collectorFields = kind === 'welcome' ? enabledWelcomeCollectorFields(screen) : [];
   const hasCollectorFields = collectorFields.length > 0;
-  /* Content alignment + media only matter on desktop (mobile is
-     always centered, media hidden). When fields exist + we're on
-     desktop, stick the content column to left or right; otherwise
-     center. Media (if present) takes 50% of the card on the opposite
-     side from the content. */
+  /* Desktop with content alignment chosen: card splits 50/50.
+     Content fills its half; the other half holds the media (if
+     uploaded) or stays empty. Mobile (and end-screen) keeps the
+     centered layout. */
   const isDesktop = previewDevice === 'desktop';
   const hasMedia = !!screen.imageUrl;
-  const alignToLeft = isDesktop && hasCollectorFields && screen.collectorLayout === 'left';
-  const alignToRight = isDesktop && hasCollectorFields && screen.collectorLayout !== 'left';
-  const splitLayout = isDesktop && hasMedia;
-  const mediaSide: 'left' | 'right' = screen.collectorLayout === 'left' ? 'right' : 'left';
-  /* When the card is split 50/50 with media, the content column
-     occupies its half and centers its inner block. The alignToLeft /
-     alignToRight margin tweaks only apply when there's no media (the
-     content column is the full card width). */
-  const introMarginStyle: React.CSSProperties = splitLayout
-    ? {}
-    : alignToLeft
-      ? { marginLeft: 0, marginRight: 'auto', alignSelf: 'flex-start', textAlign: 'left', alignItems: 'flex-start' }
-      : alignToRight
-        ? { marginLeft: 'auto', marginRight: 0, alignSelf: 'flex-end', textAlign: 'left', alignItems: 'flex-start' }
-        : {};
+  const splitLayout = isDesktop && hasCollectorFields;
+  const contentSide: 'left' | 'right' = screen.collectorLayout === 'left' ? 'left' : 'right';
+  const mediaSide: 'left' | 'right' = contentSide === 'left' ? 'right' : 'left';
+  const introMarginStyle: React.CSSProperties = splitLayout ? {} : {};
   /* Collector preview stacks inside the intro column (title →
      description → fields → button). Field labels are omitted — the
      placeholder inside each input already labels it; mirrors the live
@@ -1441,11 +1429,31 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         transformOrigin: 'top left',
         ...(splitLayout ? { flexDirection: 'row' as const, alignItems: 'stretch' as const, justifyContent: 'stretch' as const, padding: 0 } : {}),
       }}>
+        {/* Empty media-half placeholder when splitLayout but no
+            image — keeps the content position identical with or
+            without media. */}
         {splitLayout && mediaSide === 'left' ? (
-          <div style={{ width: '50%', height: '100%', backgroundImage: `url(${screen.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', flexShrink: 0 }} />
+          <div style={{
+            width: '50%',
+            height: '100%',
+            flexShrink: 0,
+            order: 0,
+            backgroundImage: hasMedia ? `url(${screen.imageUrl})` : 'none',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }} />
         ) : null}
         <div style={{
-          ...(splitLayout ? { width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 32, boxSizing: 'border-box' as const } : {}),
+          ...(splitLayout ? {
+            width: '50%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 32,
+            boxSizing: 'border-box' as const,
+            order: contentSide === 'left' ? 0 : 1,
+          } : {}),
         }}>
           <div style={{ ...screenPreviewIntro, ...introMarginStyle }}>
             <h2 style={screenPreviewTitle}>{title}</h2>
@@ -1466,7 +1474,15 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
           </div>
         </div>
         {splitLayout && mediaSide === 'right' ? (
-          <div style={{ width: '50%', height: '100%', backgroundImage: `url(${screen.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', flexShrink: 0 }} />
+          <div style={{
+            width: '50%',
+            height: '100%',
+            flexShrink: 0,
+            order: 1,
+            backgroundImage: hasMedia ? `url(${screen.imageUrl})` : 'none',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }} />
         ) : null}
       </div>
     </div>
