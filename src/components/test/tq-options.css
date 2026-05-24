@@ -670,13 +670,24 @@
 }
 
 /* Uploaded portrait video doesn't need upscale-clip — the wrapper
-   already matches the video's natural aspect ratio. Reset to the
-   default fill so the video plays edge-to-edge. */
+   already matches the video's natural aspect ratio. Force object-fit
+   to cover so any rounding mismatch between the inline aspectRatio
+   on the wrapper and the actual video stream gets cropped (a few
+   pixels) instead of letterboxed (visible black bars). */
 .qmedia-layout > .qmedia-asset.qmedia-asset--portrait > video.qmedia-asset__media {
   inset: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   transform: none;
+  object-fit: cover;
+}
+
+/* Same for all uploaded videos (landscape too) — the wrapper's
+   aspectRatio is set inline from videoWidth/videoHeight at runtime,
+   so cover is safe and prevents letterbox in either direction. */
+.qmedia-layout > .qmedia-asset.qmedia-asset--video > video.qmedia-asset__media {
+  object-fit: cover;
 }
 
 /* Per-media modifiers (set by QuestionMediaBlock.tsx based on the
