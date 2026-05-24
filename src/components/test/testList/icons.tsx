@@ -25,14 +25,14 @@ export function FormsIcon() {
    it inherits the tab text color (active red / inactive grey). */
 export function MarketplaceIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-      <g stroke="#000000" strokeWidth="3.5" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
-        <polyline points="40.02 26.75 40.02 38.98 10.53 38.98 10.53 26.75" />
-        <path d="M24.93,19.55v3.43c0,2.08-1.96,3.78-4.36,3.78h-.49c-2.4,0-4.37-1.7-4.37-3.78v-3.43" />
-        <path d="M34.16,19.55v3.43c0,2.08-1.96,3.78-4.37,3.78h-.49c-2.39,0-4.37-1.7-4.37-3.78v-3.43" />
-        <path d="M15.71,19.54v3.43c0,2.08-1.96,3.78-4.36,3.78h-.49c-2.4,0-4.37-1.7-4.37-3.78v-3.43" />
-        <path d="M43.38,19.55v3.43c0,2.08-1.96,3.78-4.36,3.78h-.49c-2.4,0-4.37-1.7-4.37-3.78v-3.43" />
-        <polygon points="42.5 17.84 7.37 17.84 10.44 10.51 39.43 10.51 42.5 17.84" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 69.45 63.44" fill="none" aria-hidden="true">
+      <g stroke="#000000" strokeWidth="5" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
+        <polyline points="54.66 35.26 54.66 52.29 13.49 52.29 13.49 35.26" />
+        <path d="M34.07,25.23v4.78c0,2.9-2.92,5.26-6.49,5.26h-.73c-3.57,0-6.5-2.37-6.5-5.26v-4.78" />
+        <path d="M47.81,25.23v4.78c0,2.9-2.92,5.26-6.5,5.26h-.73c-3.56,0-6.5-2.37-6.5-5.26v-4.78" />
+        <path d="M20.35,25.22v4.78c0,2.9-2.92,5.26-6.49,5.26h-.73c-3.57,0-6.5-2.37-6.5-5.26v-4.78" />
+        <path d="M61.52,25.23v4.78c0,2.9-2.92,5.26-6.49,5.26h-.73c-3.57,0-6.5-2.37-6.5-5.26v-4.78" />
+        <polygon points="60.13 22.85 7.83 22.85 12.4 12.64 55.56 12.64 60.13 22.85" />
       </g>
     </svg>
   );
