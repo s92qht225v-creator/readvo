@@ -53,7 +53,6 @@ import {
   workspaceMenuItem,
   workspaceMenuDangerItem,
   workspaceControls,
-  ghostBtn,
   sortControlWrap,
   sortBtn,
   sortIcon,
@@ -796,7 +795,6 @@ export function TestList() {
               </div>
             </div>
             <div style={workspaceControls}>
-              <span style={ghostBtn}>Invite later</span>
               <div
                 style={sortControlWrap}
                 onMouseDown={event => event.stopPropagation()}
