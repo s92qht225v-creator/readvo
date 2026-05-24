@@ -379,3 +379,27 @@ If you find yourself reaching for any file other than `tq-options.css`
 or the renderer to change how an answer type *looks*, stop. The
 mechanism is broken or there's a leftover override that should be
 deleted. The whole point of the migration is that one file owns it.
+
+---
+
+## Out of scope (not token-driven)
+
+A few areas of the test app are intentionally NOT in the `--*-*`
+token system because they're surface-specific chrome, not answer-type
+styling:
+
+- **Test card chrome** (height, border, scroll, padding) — lives in
+  `test-player.css` + `test-builder-preview.css` + `reading.css`
+  `.test-preview-shell--*` blocks. Change those if you want the card
+  itself bigger / scrollable / padded differently.
+- **Welcome screen layout** (50/50 split, content alignment, media
+  half) — uses `data-test-device` on the welcome card directly, with
+  rules in `reading.css` under `.test-player-screen__card[…]`. See
+  the "Welcome screen" section in `CLAUDE.md`.
+- **End screen** — same shape as welcome but no collector / media.
+- **Test player navigation** (Back/Next, progress) — `TestPlayer.tsx`
+  inline styles + the `.test-player__nav` rules.
+- **Builder dashboard / sidebar / quota box** — `TestList.tsx` inline
+  styles.
+- **Settings panel** — `SettingsPanel.tsx` + `settings/` per-type
+  editors, plus `settings/_shared.tsx` primitives.

@@ -69,6 +69,25 @@ src/components/test/
 └── questionTypeMeta.ts      Type → { icon, label } registry for the add menu.
 ```
 
+Other test-app files outside this folder:
+
+```
+src/lib/test/
+├── quota.ts               Free-tier published cap + enforcement helpers.
+│                          See "Free-tier quota" section below.
+├── types.ts               BuilderQuestion / PublicQuestion / TestScreenConfig / etc.
+├── theme.ts               TestThemeConfig + testThemeCssVars helper.
+├── slug.ts, devAuth.ts, clientFetch.ts, media.ts, grade.ts
+└── …
+src/app/api/tests/
+├── route.ts               GET (list) + POST (create draft, unlimited)
+├── [id]/route.ts          PATCH (edit) + DELETE
+├── [id]/publish/route.ts  Enforces the free-tier published cap
+├── [id]/duplicate/route.ts Always copies as draft
+├── [id]/responses/route.ts Responses for a test
+└── media/route.ts         Upload images / audio / video to Supabase Storage
+```
+
 Live-preview shell frame (the phone-frame / desktop frame at `?preview=1`)
 lives in **`src/styles/reading.css`** under `.test-preview-shell--{desktop,mobile}`
 — card chrome + nav clamps only. Answer-type styling is in `tq-options.css`.
@@ -374,6 +393,116 @@ order tokens regardless of device.
 The no-media path (`.qmedia-layout.qmedia-no-media`) overrides the
 desktop 2-column grid to flex-column + `overflow: visible` so tall
 answer content isn't clipped.
+
+## Welcome screen
+
+The welcome screen (shown before the first question when
+`test.welcome_screen?.enabled === true`) lives in `TestPlayer.tsx`
+under the `phase === 'intro'` branch and is mirrored in
+`TestBuilder.tsx`'s `ScreenPreviewCanvas` for builder canvas preview.
+
+### Layout (with collector fields)
+
+Vertical stack inside the content column:
+1. Title (from `welcome_screen.title` or `test.title`)
+2. Description
+3. Collector fields (Name / Last name / Phone / Email — toggled
+   individually in settings; placeholders label them, no per-field
+   `<label>` text)
+4. Start button (always at the natural bottom of the form)
+5. Optional "Takes N minutes" line
+
+Field inputs use `aria-label={field.label}` so screen readers
+announce them.
+
+### Content alignment (desktop only)
+
+The "Content alignment (desktop)" segmented control in welcome
+settings (`collectorLayout: 'left' | 'right'`) drives a 50/50 card
+split on desktop:
+
+- **Right** (default): content fills the right half; left half holds
+  media (or is empty).
+- **Left**: content fills the left half; right half holds media (or
+  is empty).
+- Mobile ignores the setting — content centers, media is hidden.
+
+The split is **always active on desktop** when content alignment is
+chosen, even with no media — the empty half stays blank but the
+content's position doesn't shift when an image is added or removed.
+
+CSS gates on `data-test-device` (set on the welcome card itself, not
+on `.test-player`, because `ScreenWrapper` doesn't include the
+`.test-player` ancestor). Selectors:
+
+```css
+.test-player-screen__card[data-test-device="desktop"]
+  .test-player-screen__card--align-left { … 50/50 split, flex row … }
+.test-player-screen__card[data-test-device="mobile"]
+  .test-player-screen__media { display: none !important; }
+```
+
+### Media
+
+Upload an image via the settings panel "Image" row (4MB max, jpg/
+png/gif/webp). Stored in `welcome_screen.imageUrl` and uploaded
+via the existing `/api/tests/media` endpoint with
+`questionId='welcome-screen'`.
+
+Renders as a `<div className="test-player-screen__media">` with
+`backgroundImage` inline (only when imageUrl set). CSS owns the 50%
+width + `background-size: cover`. On mobile the element is
+`display: none`. Always rendered (even with empty bg) on desktop
+when content alignment is set, so layout doesn't shift when the
+teacher toggles the image off/on.
+
+The media settings row matches the question-media `MediaControlRow`
+visual style — "Image" title + "Added" status + Change text-button +
+trash icon when attached; bordered `+` add button when not.
+
+## Free-tier quota
+
+Free accounts can publish **1 test at a time**; drafts are
+unlimited. Enforced server-side in
+`src/lib/test/quota.ts`:
+
+- `FREE_PUBLISHED_LIMIT = 1`
+- `checkPublishQuota(userId, admin, excludeTestId?)` — counts
+  `is_published=true` rows owned by the user + checks
+  `subscriptions.ends_at > now()`. Returns `isOverLimit`.
+- `enforceFreePublishLimit(userId, admin)` — idempotent helper that
+  auto-unpublishes oldest extras when an ex-subscriber lands on
+  the dashboard with multiple published tests. Most recently
+  published one stays live; the rest become drafts (nothing
+  deleted). No-op for active subscribers.
+
+Enforcement points:
+- `POST /api/tests`: no quota check (drafts unlimited).
+- `POST /api/tests/[id]/duplicate`: no quota check (copy is always
+  a draft via `is_published: false`).
+- `POST /api/tests/[id]/publish`: blocks false→true transitions
+  when `checkPublishQuota` reports over-limit; returns 402
+  `free_publish_limit_reached`. Uses `excludeTestId` so re-
+  publishing the same row never trips the check.
+- `GET /api/tests`: calls `enforceFreePublishLimit` before
+  returning so the dashboard always reflects the enforced state.
+
+### UI behavior (`TestList.tsx`)
+
+The component fetches `/api/subscription` on mount and stores
+`hasActiveSubscription` so:
+- **Subscriber**: no free-tier banner; sidebar shows "Pro /
+  Unlimited published tests".
+- **Free user**: banner reads "Free accounts can publish 1 test at
+  a time. Drafts are unlimited." + `{publishedCount} / 1 published`.
+  Sidebar shows the same quota track.
+- **Loading state** (`hasActiveSubscription === null`): neither
+  rendered, so the banner doesn't flash on a subscriber before the
+  check returns.
+
+`PaywallNotice` is shown in the builder when a publish attempt
+returns 402; messaging tells the user to unpublish the current test
+or upgrade.
 
 ## Question progress
 
