@@ -192,7 +192,12 @@ export function TestList() {
     });
     setBusyId(null);
     if (!res.ok) {
-      alert('Failed to duplicate test');
+      const json = await res.json().catch(() => ({}));
+      if (json.error === 'free_limit_reached') {
+        alert(`Free accounts are limited to ${json.limit ?? 1} test. Delete the existing one or upgrade to duplicate.`);
+      } else {
+        alert('Failed to duplicate test');
+      }
       return;
     }
     const json = await res.json();
@@ -313,7 +318,13 @@ export function TestList() {
     });
     if (!res.ok) {
       const json = await res.json().catch(() => ({}));
-      setCreateTestError(json.error ?? 'Failed to create test');
+      if (json.error === 'free_limit_reached') {
+        setCreateTestError(
+          `Free accounts are limited to ${json.limit ?? 1} test. Delete the existing one or upgrade to create more.`,
+        );
+      } else {
+        setCreateTestError(json.error ?? 'Failed to create test');
+      }
       setIsSubmittingTest(false);
       return;
     }
@@ -600,8 +611,8 @@ export function TestList() {
       {showLimitBanner ? (
         <section style={limitBanner}>
           <span style={diamondIcon}>◇</span>
-          <span>You can publish 3 tests for free.</span>
-          <strong>{publishedCount} / 3 used</strong>
+          <span>Free accounts can have 1 test (draft or published).</span>
+          <strong>{tests.length} / 1 used</strong>
           <a href="https://blim.uz/uz/payment" style={upgradeBtn}>Upgrade</a>
           <button type="button" aria-label="Dismiss banner" onClick={() => setShowLimitBanner(false)} style={dismissBtn}>×</button>
         </section>
@@ -650,9 +661,9 @@ export function TestList() {
           </div>
 
           <div style={quotaBox}>
-            <div style={{ marginBottom: 8 }}>Published tests</div>
-            <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (publishedCount / 3) * 100)}%` }} /></div>
-            <div style={{ color: '#6b6470', marginTop: 6 }}>{publishedCount} / 3</div>
+            <div style={{ marginBottom: 8 }}>Tests (free tier)</div>
+            <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (tests.length / 1) * 100)}%` }} /></div>
+            <div style={{ color: '#6b6470', marginTop: 6 }}>{tests.length} / 1</div>
             <a href="https://blim.uz/uz/payment" style={quotaLink}>Increase limit</a>
           </div>
         </aside>

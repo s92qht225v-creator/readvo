@@ -2,14 +2,17 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 
-const FREE_PUBLISH_LIMIT = 3;
-
 /**
  * POST /api/tests/[id]/publish — body { is_published: boolean }
- * - Free-tier limit only enforced on false→true transitions
- * - Excludes the current test from the published count
- * - Sets published_at on first publish only
- * - Existing Blim subscribers bypass the limit
+ *
+ * Free-tier quota is enforced at TEST CREATION time (POST /api/tests and
+ * POST /api/tests/[id]/duplicate via `checkFreeQuota` in
+ * `@/lib/test/quota.ts`). Free accounts are capped at FREE_TEST_LIMIT
+ * total tests of any state. Once a user has a test, they can publish or
+ * unpublish it freely. This endpoint only:
+ *   - validates the body
+ *   - requires ≥1 question on first publish
+ *   - sets published_at on first publish
  */
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -31,7 +34,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
   const isPublishing = body.is_published === true && current.is_published === false;
 
-  // No paywall check on unpublish or no-op
+  // Unpublish or no-op: just update.
   if (!isPublishing) {
     const patch: Record<string, unknown> = { is_published: body.is_published };
     const { data, error } = await admin.from('tests').update(patch).eq('id', id).select('*').single();
@@ -50,29 +53,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     return NextResponse.json(
       { error: 'Add at least one question before publishing.' },
       { status: 400 },
-    );
-  }
-
-  // Free-tier check (transition false → true)
-  const [{ count }, { data: sub }] = await Promise.all([
-    admin
-      .from('tests')
-      .select('id', { count: 'exact', head: true })
-      .eq('owner_id', userId)
-      .eq('is_published', true)
-      .neq('id', id),
-    admin
-      .from('subscriptions')
-      .select('id')
-      .eq('user_id', userId)
-      .gt('ends_at', new Date().toISOString())
-      .maybeSingle(),
-  ]);
-
-  if ((count ?? 0) >= FREE_PUBLISH_LIMIT && !sub) {
-    return NextResponse.json(
-      { error: 'free_limit_reached', limit: FREE_PUBLISH_LIMIT },
-      { status: 402 },
     );
   }
 

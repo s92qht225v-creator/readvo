@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 import { generateUniqueSlug } from '@/lib/test/slug';
+import { FREE_TEST_LIMIT, checkFreeQuota } from '@/lib/test/quota';
 
 /** GET /api/tests — list current teacher's tests (newest first) */
 export async function GET(req: NextRequest) {
@@ -29,6 +30,15 @@ export async function POST(req: NextRequest) {
   if (!title) return NextResponse.json({ error: 'title_required' }, { status: 400 });
 
   const admin = getSupabaseAdmin();
+
+  const quota = await checkFreeQuota(userId, admin);
+  if (quota.isOverLimit) {
+    return NextResponse.json(
+      { error: 'free_limit_reached', limit: FREE_TEST_LIMIT, current: quota.totalCount },
+      { status: 402 },
+    );
+  }
+
   const slug = await generateUniqueSlug(async (s) => {
     const { data } = await admin.from('tests').select('id').eq('slug', s).maybeSingle();
     return !!data;
