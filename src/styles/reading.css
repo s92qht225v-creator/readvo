@@ -13926,20 +13926,20 @@ body {
    its half, the other half holds the media (if uploaded) or empty.
    Toggling media on/off doesn't shift the content.
 
-   Gated on `[data-test-device="desktop"]` (set on `.test-player` by
-   TestPlayer based on viewport / forceDevice) rather than on viewport
-   `@media`, so the `?preview=1` shell's simulated mobile correctly
-   hides the media even though the underlying viewport is desktop. */
-[data-test-device="desktop"] .test-player-screen__card--align-left,
-[data-test-device="desktop"] .test-player-screen__card--align-right {
+   `data-test-device` lives on the card itself (set by TestPlayer
+   based on viewport / forceDevice) so the simulated mobile inside
+   the `?preview=1` shell correctly hides the media + reverts to
+   centered content even though the surrounding viewport is desktop. */
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-left,
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-right {
   flex-direction: row !important;
   align-items: stretch !important;
   justify-content: stretch !important;
   padding: 0 !important;
 }
 
-[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__content,
-[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__content {
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-left .test-player-screen__content,
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-right .test-player-screen__content {
   width: 50% !important;
   max-width: 50% !important;
   min-width: 0;
@@ -13953,10 +13953,10 @@ body {
   margin: 0 !important;
   text-align: center !important;
 }
-[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__content { order: 0; }
-[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__content { order: 1; }
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-left .test-player-screen__content { order: 0; }
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-right .test-player-screen__content { order: 1; }
 
-[data-test-device="desktop"] .test-player-screen__media {
+.test-player-screen__card[data-test-device="desktop"] .test-player-screen__media {
   width: 50%;
   min-width: 0;
   flex-shrink: 0;
@@ -13964,12 +13964,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__media { order: 1; }
-[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__media { order: 0; }
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-left .test-player-screen__media { order: 1; }
+.test-player-screen__card[data-test-device="desktop"].test-player-screen__card--align-right .test-player-screen__media { order: 0; }
 
 /* Mobile (real or simulated): hide the media element entirely so
    the content's natural centered layout takes the full card width. */
-[data-test-device="mobile"] .test-player-screen__media {
+.test-player-screen__card[data-test-device="mobile"] .test-player-screen__media {
   display: none !important;
 }
 

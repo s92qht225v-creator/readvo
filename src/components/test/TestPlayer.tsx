@@ -403,6 +403,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
               hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
               alignmentModifier,
             ].filter(Boolean).join(' ')}
+            data-test-device={device}
             style={publicScreenCard}
           >
             {/* Always render the media element when content is split-aligned
