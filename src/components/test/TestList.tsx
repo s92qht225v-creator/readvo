@@ -112,11 +112,25 @@ const TEMPLATES = [
   'Create a feedback test to collect opinions from students.',
 ];
 
+type DashboardTab = 'tests' | 'marketplace' | 'settings';
+
+type MarketplaceTest = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  price: number;
+  questionCount: number;
+};
+
 export function TestList() {
   const { getAccessToken } = useAuth();
   const [tests, setTests] = useState<ListItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+  const [dashboardTab, setDashboardTab] = useState<DashboardTab>('tests');
+  const [marketplaceTests, setMarketplaceTests] = useState<MarketplaceTest[] | null>(null);
+  const [buyingTest, setBuyingTest] = useState<MarketplaceTest | null>(null);
   const [showLimitBanner, setShowLimitBanner] = useState(true);
   const [hiddenTemplates, setHiddenTemplates] = useState<Set<number>>(() => new Set());
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -157,6 +171,24 @@ export function TestList() {
 
   // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
   useEffect(() => { load(); }, [load]);
+
+  /* Lazy-fetch marketplace tests the first time the Marketplace tab
+     is opened. Result cached in state for the session; re-fetch on
+     tab re-open is a follow-up if listings start changing during a
+     session. */
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => {
+    if (dashboardTab !== 'marketplace' || marketplaceTests !== null) return;
+    let cancelled = false;
+    (async () => {
+      const res = await fetch('/api/marketplace');
+      if (cancelled) return;
+      if (!res.ok) { setMarketplaceTests([]); return; }
+      const json = await res.json().catch(() => ({ tests: [] }));
+      setMarketplaceTests(json.tests ?? []);
+    })();
+    return () => { cancelled = true; };
+  }, [dashboardTab, marketplaceTests]);
 
   // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
   useEffect(() => {
@@ -630,9 +662,27 @@ export function TestList() {
       ) : null}
 
       <nav style={tabsBar} aria-label="Test workspace sections">
-        <span style={activeTab}><FormsIcon /> Tests</span>
-        <span style={inactiveTab}>◎ Responses</span>
-        <span style={inactiveTab}>⚙ Settings</span>
+        <button
+          type="button"
+          style={{ ...(dashboardTab === 'tests' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
+          onClick={() => setDashboardTab('tests')}
+        >
+          <FormsIcon /> Tests
+        </button>
+        <button
+          type="button"
+          style={{ ...(dashboardTab === 'marketplace' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
+          onClick={() => setDashboardTab('marketplace')}
+        >
+          ◇ Marketplace
+        </button>
+        <button
+          type="button"
+          style={{ ...(dashboardTab === 'settings' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
+          onClick={() => setDashboardTab('settings')}
+        >
+          ⚙ Settings
+        </button>
       </nav>
 
       <div style={workspaceShell}>
@@ -687,6 +737,17 @@ export function TestList() {
         </aside>
 
         <main style={mainPane}>
+          {dashboardTab === 'marketplace' ? (
+            <MarketplacePane
+              tests={marketplaceTests}
+              ownedTestIds={new Set((tests ?? []).map(t => t.id))}
+              onBuy={setBuyingTest}
+            />
+          ) : dashboardTab === 'settings' ? (
+            <div style={{ padding: 32, color: '#6b6470' }}>
+              Settings coming soon.
+            </div>
+          ) : (<>
           <header style={workspaceHeader}>
             <div>
               <div style={workspaceTitleWrap} onMouseDown={event => event.stopPropagation()}>
@@ -920,7 +981,191 @@ export function TestList() {
               </ul>
             </section>
           )}
+          </>)}
         </main>
+      </div>
+
+      {buyingTest ? (
+        <MarketplaceBuyModal
+          test={buyingTest}
+          onClose={() => setBuyingTest(null)}
+          onSubmitted={() => {
+            setBuyingTest(null);
+            /* The copy appears in `tests` after admin approval — next
+               full reload picks it up. We don't have realtime here. */
+          }}
+          getAccessToken={getAccessToken}
+        />
+      ) : null}
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MarketplacePane — catalog of premade tests anyone can buy.
+   ────────────────────────────────────────────────────────────────── */
+function MarketplacePane({ tests, ownedTestIds, onBuy }: {
+  tests: MarketplaceTest[] | null;
+  ownedTestIds: Set<string>;
+  onBuy: (test: MarketplaceTest) => void;
+}) {
+  if (tests === null) {
+    return <div style={{ padding: 32, color: '#6b6470' }}>Loading marketplace…</div>;
+  }
+  if (tests.length === 0) {
+    return (
+      <div style={{ padding: 32, color: '#6b6470' }}>
+        <h2 style={{ margin: '0 0 8px', color: '#0f172a', fontSize: 20 }}>Marketplace</h2>
+        <p>No premade tests are available right now. Check back soon.</p>
+      </div>
+    );
+  }
+  return (
+    <div style={{ padding: 32 }}>
+      <h2 style={{ margin: '0 0 8px', color: '#0f172a', fontSize: 22 }}>Marketplace</h2>
+      <p style={{ margin: '0 0 24px', color: '#6b6470', fontSize: 14 }}>
+        Premade tests by the Blim team. After purchase, a copy lands in your workspace and you can edit, publish, and collect responses just like your own tests.
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
+        {tests.map(t => (
+          <article key={t.id} style={{
+            display: 'flex', flexDirection: 'column', gap: 12,
+            padding: 18, borderRadius: 10, border: '1px solid #e4ded8', background: '#fff',
+          }}>
+            <div>
+              <h3 style={{ margin: '0 0 6px', fontSize: 16, color: '#0f172a' }}>{t.title}</h3>
+              <div style={{ color: '#6b6470', fontSize: 13, lineHeight: 1.4 }}>
+                {t.summary || `${t.questionCount} ${t.questionCount === 1 ? 'question' : 'questions'}`}
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
+              <span style={{ fontWeight: 700, color: '#0f172a' }}>
+                {t.price > 0 ? `${t.price.toLocaleString('uz-UZ').replace(/,/g, ' ')} so'm` : 'Free'}
+              </span>
+              <button
+                type="button"
+                style={{
+                  padding: '8px 16px', borderRadius: 6, border: 'none',
+                  background: '#0445b8', color: '#fff', fontWeight: 700, cursor: 'pointer',
+                  opacity: ownedTestIds.has(t.id) ? 0.45 : 1,
+                }}
+                onClick={() => onBuy(t)}
+                disabled={ownedTestIds.has(t.id)}
+                title={ownedTestIds.has(t.id) ? 'You already own this test' : `Buy ${t.title}`}
+              >
+                {ownedTestIds.has(t.id) ? 'Owned' : 'Buy'}
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MarketplaceBuyModal — payment-screenshot flow for marketplace
+   purchases. Reuses POST /api/payment with kind=marketplace_test.
+   ────────────────────────────────────────────────────────────────── */
+function MarketplaceBuyModal({ test, onClose, onSubmitted, getAccessToken }: {
+  test: MarketplaceTest;
+  onClose: () => void;
+  onSubmitted: () => void;
+  getAccessToken: () => Promise<string | null>;
+}) {
+  const [file, setFile] = useState<File | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+
+  const submit = async () => {
+    if (!file || submitting) return;
+    setSubmitting(true);
+    setError(null);
+    const form = new FormData();
+    form.append('kind', 'marketplace_test');
+    form.append('marketplaceTestId', test.id);
+    form.append('plan', `marketplace:${test.id}`);
+    form.append('amount', String(test.price));
+    form.append('screenshot', file);
+    const tok = await getAccessToken();
+    const res = await fetch('/api/payment', {
+      method: 'POST',
+      headers: tok ? { Authorization: `Bearer ${tok}` } : {},
+      body: form,
+    });
+    setSubmitting(false);
+    if (!res.ok) {
+      const json = await res.json().catch(() => ({}));
+      setError(json.error ?? 'Payment failed.');
+      return;
+    }
+    setDone(true);
+  };
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.4)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      zIndex: 200, padding: 16,
+    }} onClick={onClose}>
+      <div
+        onClick={e => e.stopPropagation()}
+        style={{
+          width: 'min(440px, 100%)', background: '#fff', borderRadius: 12,
+          padding: 24, boxShadow: '0 20px 60px rgba(15,23,42,0.25)',
+        }}
+      >
+        {done ? (
+          <>
+            <h3 style={{ margin: '0 0 8px', fontSize: 18, color: '#0f172a' }}>Payment submitted</h3>
+            <p style={{ margin: '0 0 16px', color: '#6b6470', fontSize: 14, lineHeight: 1.5 }}>
+              We&apos;ve received your payment screenshot for <strong>{test.title}</strong>. Once approved, a copy will appear in your Tests tab.
+            </p>
+            <button type="button" onClick={onSubmitted} style={{
+              padding: '10px 16px', borderRadius: 6, border: 'none',
+              background: '#0445b8', color: '#fff', fontWeight: 700, cursor: 'pointer', width: '100%',
+            }}>Done</button>
+          </>
+        ) : (
+          <>
+            <h3 style={{ margin: '0 0 8px', fontSize: 18, color: '#0f172a' }}>Buy: {test.title}</h3>
+            <p style={{ margin: '0 0 16px', color: '#6b6470', fontSize: 13, lineHeight: 1.5 }}>
+              Price: <strong>{test.price.toLocaleString('uz-UZ').replace(/,/g, ' ')} so&apos;m</strong>.
+              Transfer the amount and upload your payment screenshot. We&apos;ll approve and copy the test into your workspace within a few hours.
+            </p>
+            <div style={{ marginBottom: 12, fontSize: 13, color: '#0f172a' }}>
+              <div><strong>Card:</strong> 8600 1234 5678 9012</div>
+              <div><strong>Holder:</strong> BLIM LLC</div>
+            </div>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={e => setFile(e.target.files?.[0] ?? null)}
+              style={{ marginBottom: 12 }}
+            />
+            {error ? <div style={{ color: '#dc2626', fontSize: 13, marginBottom: 12 }}>{error}</div> : null}
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              <button type="button" onClick={onClose} style={{
+                padding: '10px 16px', borderRadius: 6, border: '1px solid #d8d3cd',
+                background: '#fff', color: '#0f172a', fontWeight: 600, cursor: 'pointer',
+              }}>Cancel</button>
+              <button
+                type="button"
+                onClick={submit}
+                disabled={!file || submitting}
+                style={{
+                  padding: '10px 16px', borderRadius: 6, border: 'none',
+                  background: '#0445b8', color: '#fff', fontWeight: 700,
+                  cursor: !file || submitting ? 'not-allowed' : 'pointer',
+                  opacity: !file || submitting ? 0.5 : 1,
+                }}
+              >
+                {submitting ? 'Submitting…' : 'Submit payment'}
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
