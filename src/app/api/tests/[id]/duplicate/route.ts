@@ -3,7 +3,6 @@ import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { generateUniqueSlug } from '@/lib/test/slug';
-import { FREE_TEST_LIMIT, checkFreeQuota } from '@/lib/test/quota';
 import type { QuestionType } from '@/lib/test/types';
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -22,13 +21,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   if (!original) return NextResponse.json({ error: 'not_found' }, { status: 404 });
   if (original.owner_id !== userId) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
 
-  const quota = await checkFreeQuota(userId, admin);
-  if (quota.isOverLimit) {
-    return NextResponse.json(
-      { error: 'free_limit_reached', limit: FREE_TEST_LIMIT, current: quota.totalCount },
-      { status: 402 },
-    );
-  }
+  /* Drafts are unlimited on free tier. The copy is always created as a
+     draft (is_published: false below), so no quota check needed here. */
 
   const slug = await generateUniqueSlug(async (candidate) => {
     const { data } = await admin.from('tests').select('id').eq('slug', candidate).maybeSingle();

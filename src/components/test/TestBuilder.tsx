@@ -495,7 +495,7 @@ export function TestBuilder({ testId }: Props) {
     setPubLoading(false);
     if (res.status === 402) {
       const j = await res.json();
-      setShowPaywall({ limit: j.limit ?? 3 });
+      setShowPaywall({ limit: j.limit ?? 1 });
       return;
     }
     if (!res.ok) {

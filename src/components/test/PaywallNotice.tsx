@@ -1,4 +1,5 @@
 export function PaywallNotice({ limit }: { limit: number }) {
+  const noun = limit === 1 ? 'test' : 'tests';
   return (
     <div style={{
       background: '#fef3c7', border: '1px solid #fcd34d',
@@ -6,7 +7,8 @@ export function PaywallNotice({ limit }: { limit: number }) {
     }}>
       <div style={{ fontWeight: 700, marginBottom: 4 }}>Free limit reached</div>
       <div style={{ fontSize: 14, marginBottom: 12 }}>
-        You can publish up to {limit} tests on the free plan. Upgrade to publish more.
+        Free accounts can publish {limit} {noun} at a time. Unpublish the current
+        one to publish a different draft, or upgrade for unlimited published tests.
       </div>
       <a
         href="https://blim.uz/uz/payment"

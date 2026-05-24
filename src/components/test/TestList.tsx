@@ -214,12 +214,7 @@ export function TestList() {
     });
     setBusyId(null);
     if (!res.ok) {
-      const json = await res.json().catch(() => ({}));
-      if (json.error === 'free_limit_reached') {
-        alert(`Free accounts are limited to ${json.limit ?? 1} test. Delete the existing one or upgrade to duplicate.`);
-      } else {
-        alert('Failed to duplicate test');
-      }
+      alert('Failed to duplicate test');
       return;
     }
     const json = await res.json();
@@ -340,13 +335,7 @@ export function TestList() {
     });
     if (!res.ok) {
       const json = await res.json().catch(() => ({}));
-      if (json.error === 'free_limit_reached') {
-        setCreateTestError(
-          `Free accounts are limited to ${json.limit ?? 1} test. Delete the existing one or upgrade to create more.`,
-        );
-      } else {
-        setCreateTestError(json.error ?? 'Failed to create test');
-      }
+      setCreateTestError(json.error ?? 'Failed to create test');
       setIsSubmittingTest(false);
       return;
     }
@@ -633,8 +622,8 @@ export function TestList() {
       {showLimitBanner && hasActiveSubscription === false ? (
         <section style={limitBanner}>
           <span style={diamondIcon}>◇</span>
-          <span>Free accounts can have 1 test (draft or published).</span>
-          <strong>{tests.length} / 1 used</strong>
+          <span>Free accounts can publish 1 test at a time. Drafts are unlimited.</span>
+          <strong>{publishedCount} / 1 published</strong>
           <a href="https://blim.uz/uz/payment" style={upgradeBtn}>Upgrade</a>
           <button type="button" aria-label="Dismiss banner" onClick={() => setShowLimitBanner(false)} style={dismissBtn}>×</button>
         </section>
@@ -685,13 +674,13 @@ export function TestList() {
           {hasActiveSubscription === true ? (
             <div style={quotaBox}>
               <div style={{ marginBottom: 8, fontWeight: 600, color: '#0f172a' }}>Pro</div>
-              <div style={{ color: '#6b6470' }}>Unlimited tests</div>
+              <div style={{ color: '#6b6470' }}>Unlimited published tests</div>
             </div>
           ) : hasActiveSubscription === false ? (
             <div style={quotaBox}>
-              <div style={{ marginBottom: 8 }}>Tests (free tier)</div>
-              <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (tests.length / 1) * 100)}%` }} /></div>
-              <div style={{ color: '#6b6470', marginTop: 6 }}>{tests.length} / 1</div>
+              <div style={{ marginBottom: 8 }}>Published (free tier)</div>
+              <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (publishedCount / 1) * 100)}%` }} /></div>
+              <div style={{ color: '#6b6470', marginTop: 6 }}>{publishedCount} / 1 · drafts unlimited</div>
               <a href="https://blim.uz/uz/payment" style={quotaLink}>Increase limit</a>
             </div>
           ) : null}

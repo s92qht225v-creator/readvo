@@ -1,18 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getRequestUserId } from '@/lib/test/devAuth';
+import { FREE_PUBLISHED_LIMIT, checkPublishQuota } from '@/lib/test/quota';
 
 /**
  * POST /api/tests/[id]/publish — body { is_published: boolean }
  *
- * Free-tier quota is enforced at TEST CREATION time (POST /api/tests and
- * POST /api/tests/[id]/duplicate via `checkFreeQuota` in
- * `@/lib/test/quota.ts`). Free accounts are capped at FREE_TEST_LIMIT
- * total tests of any state. Once a user has a test, they can publish or
- * unpublish it freely. This endpoint only:
- *   - validates the body
+ * Free-tier rule: 1 published test at a time. Drafts unlimited.
+ * Subscribers bypass. Enforced here on false→true transitions only.
+ *
+ * Also:
  *   - requires ≥1 question on first publish
- *   - sets published_at on first publish
+ *   - sets published_at on first publish (preserved on later toggles)
  */
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -53,6 +52,20 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     return NextResponse.json(
       { error: 'Add at least one question before publishing.' },
       { status: 400 },
+    );
+  }
+
+  /* Free-tier published cap. Exclude this test from the count so a
+     re-publish of the same row never trips it. */
+  const quota = await checkPublishQuota(userId, admin, id);
+  if (quota.isOverLimit) {
+    return NextResponse.json(
+      {
+        error: 'free_publish_limit_reached',
+        limit: FREE_PUBLISHED_LIMIT,
+        current: quota.publishedCount,
+      },
+      { status: 402 },
     );
   }
 
