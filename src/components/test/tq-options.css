@@ -75,7 +75,8 @@
   --os-max-w: 361px;
   --os-stack-gap: 8px;
   --os-row-gap: 6px;
-  --os-grid: repeat(6, minmax(0, 1fr));
+  --os-btn-basis: calc((100% - 5 * var(--os-row-gap)) / 6);
+  --os-btn-grow: 0;
   --os-btn-h: 56px;
   --os-btn-fs: 14px;
   --os-btn-radius: 1px;
@@ -192,7 +193,8 @@
   --os-max-w: 361px;
   --os-stack-gap: 8px;
   --os-row-gap: 6px;
-  --os-grid: repeat(6, minmax(0, 1fr));
+  --os-btn-basis: calc((100% - 5 * var(--os-row-gap)) / 6);
+  --os-btn-grow: 0;
   --os-btn-h: 56px;
   --os-btn-fs: 14px;
   --os-btn-radius: 1px;
@@ -301,11 +303,12 @@
   --pic-badge-radius: 3px;
   --pic-grid-mb: 24px;
 
-  /* Desktop scale: auto-fit puts all buttons in one row. */
+  /* Desktop scale: all buttons share one row equally. */
   --os-max-w: 100%;
   --os-stack-gap: 10px;
   --os-row-gap: 8px;
-  --os-grid: repeat(auto-fit, minmax(40px, 1fr));
+  --os-btn-basis: 0;
+  --os-btn-grow: 1;
   --os-btn-h: 56px;
   --os-btn-fs: 16px;
   --os-btn-radius: 3px;
@@ -940,19 +943,20 @@
   margin-inline: auto;
 }
 
-/* Grid layout — --os-grid token controls columns per device.
-   Mobile: repeat(6, …) forces 6 cols so 7+ buttons wrap (e.g.
-   11-button 0-10 scale becomes 6 + 5). Desktop: auto-fit puts
-   them all in one row regardless of count. */
+/* Flex wrap with explicit per-button basis — partial last row
+   centers automatically. Mobile: --os-btn-basis = 1/6 of container
+   so 7+ buttons wrap; --os-btn-grow = 0 so the last row's items
+   keep the same width as the first row (don't stretch). Desktop:
+   basis = 0 + grow = 1 so all buttons share one row equally. */
 .test-opinion-scale__scale {
-  display: grid;
-  grid-template-columns: var(--os-grid);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--os-row-gap);
   justify-content: center;
 }
 
 .test-opinion-scale__scale button {
-  width: 100%;
+  flex: var(--os-btn-grow) 0 var(--os-btn-basis);
   height: var(--os-btn-h);
   display: flex;
   align-items: center;
