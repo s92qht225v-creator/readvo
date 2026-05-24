@@ -7,7 +7,7 @@ type SortMode = 'created' | 'updated' | 'alphabetical';
 
 export function FormsIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <g clipPath="url(#forms-clip)">
         <path fill="currentColor" d="M14.499 3.75a.25.25 0 0 0-.25-.25h-2.25v9h2.25a.25.25 0 0 0 .25-.25zM6.249 8.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1 0-1.5zm2-2.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5zm-6.75 6.25c0 .138.113.25.25.25h8.75v-9h-8.75a.25.25 0 0 0-.25.25zm14.5 0a1.75 1.75 0 0 1-1.75 1.75h-12.5A1.75 1.75 0 0 1 0 12.25v-8.5c0-.966.783-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75z" />
       </g>
@@ -25,8 +25,8 @@ export function FormsIcon() {
    it inherits the tab text color (active red / inactive grey). */
 export function MarketplaceIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-      <g stroke="#000000" strokeWidth="3" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <g stroke="#000000" strokeWidth="3.5" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
         <polyline points="40.02 26.75 40.02 38.98 10.53 38.98 10.53 26.75" />
         <path d="M24.93,19.55v3.43c0,2.08-1.96,3.78-4.36,3.78h-.49c-2.4,0-4.37-1.7-4.37-3.78v-3.43" />
         <path d="M34.16,19.55v3.43c0,2.08-1.96,3.78-4.37,3.78h-.49c-2.39,0-4.37-1.7-4.37-3.78v-3.43" />
