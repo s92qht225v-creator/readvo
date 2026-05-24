@@ -372,7 +372,7 @@ export function TestBuilder({ testId }: Props) {
     [questions],
   );
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'is_graded'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -682,6 +682,7 @@ export function TestBuilder({ testId }: Props) {
           <span style={saveState(dirty)}>
             {saving ? 'Saving…' : dirty ? 'Unsaved' : 'Saved'}
           </span>
+          <MarketplaceTogglePopover test={test} updateTest={updateTest} />
           <button type="button" onClick={() => togglePublish(!test.is_published)} disabled={pubLoading} style={pubBtn(test.is_published)}>
             {pubLoading ? '…' : test.is_published ? 'Unpublish' : 'Publish'}
           </button>
@@ -2462,6 +2463,126 @@ function ImageReplaceIcon() {
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M10.448 6.96a1 1 0 0 0-.13.13c-.126.144-.28.356-.524.695L8.227 9.961c-.15.208-.287.4-.415.55a1.8 1.8 0 0 1-.536.446c-.327.17-.7.23-1.065.176a1.8 1.8 0 0 1-.65-.251 9 9 0 0 1-.57-.388l-.395-.282a9 9 0 0 0-.51-.35.6.6 0 0 0-.113-.058.25.25 0 0 0-.149.028.6.6 0 0 0-.084.095 9 9 0 0 0-.35.512l-1.144 1.75a13 13 0 0 0-.554.89c-.069.128-.087.19-.091.207a.25.25 0 0 0 .086.16c.017.005.078.023.223.037.232.02.552.022 1.048.022H13.15c.481 0 .79-.001 1.013-.022a1 1 0 0 0 .215-.036.25.25 0 0 0 .088-.157 1 1 0 0 0-.08-.202 13 13 0 0 0-.51-.876L11.21 7.84c-.218-.356-.355-.58-.469-.733a1 1 0 0 0-.12-.14.25.25 0 0 0-.174-.006m-.532-1.403a1.75 1.75 0 0 1 1.342.051c.31.143.522.381.688.604.16.216.332.498.527.819l2.702 4.43c.227.372.424.695.557.966.134.274.263.608.23.981-.044.5-.3.957-.704 1.255-.302.223-.655.286-.958.314-.3.028-.679.028-1.115.028H2.923c-.451 0-.841 0-1.15-.029-.309-.028-.67-.093-.976-.323a1.75 1.75 0 0 1-.695-1.283c-.025-.382.119-.72.264-.995.146-.273.359-.6.606-.977L2.15 9.596c.147-.224.28-.43.406-.59.136-.174.302-.353.535-.482a1.75 1.75 0 0 1 1.09-.205c.264.036.484.142.673.255.176.104.375.247.592.402l.396.282c.237.17.378.27.489.336.068.04.1.053.108.056a.25.25 0 0 0 .146-.024.6.6 0 0 0 .085-.087c.083-.099.185-.24.355-.476l1.57-2.18c.22-.305.413-.574.59-.777.181-.21.412-.43.73-.55m-3.333 4.07h.001z" />
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M5.405 2.499a1.412 1.412 0 1 0 0 2.824 1.412 1.412 0 0 0 0-2.824M2.493 3.911a2.912 2.912 0 1 1 5.824 0 2.912 2.912 0 0 1-5.824 0" />
     </svg>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MarketplaceTogglePopover — admin-only listing controls.
+
+   Sits next to the Publish button in the builder topbar. Click opens
+   a popover with the is_marketplace toggle + price + summary fields.
+   Saves go through the same PATCH /api/tests/[id] updateTest helper.
+   ────────────────────────────────────────────────────────────────── */
+function MarketplaceTogglePopover({ test, updateTest }: {
+  test: Test;
+  updateTest: (patch: Partial<Pick<Test, 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => Promise<void>;
+}) {
+  const [open, setOpen] = useState(false);
+  const [draftPrice, setDraftPrice] = useState<string>(test.marketplace_price?.toString() ?? '');
+  const [draftSummary, setDraftSummary] = useState<string>(test.marketplace_summary ?? '');
+  /* Re-seed draft state when the popover is opened against a
+     fresh test row (e.g. user toggled then re-opened). */
+  useEffect(() => {
+    if (!open) return;
+    setDraftPrice(test.marketplace_price?.toString() ?? '');
+    setDraftSummary(test.marketplace_summary ?? '');
+  }, [open, test.marketplace_price, test.marketplace_summary]);
+
+  const persistPrice = () => {
+    const trimmed = draftPrice.trim();
+    if (trimmed === '') { updateTest({ marketplace_price: null }); return; }
+    const n = parseInt(trimmed, 10);
+    if (!Number.isFinite(n) || n < 0) return;
+    updateTest({ marketplace_price: n });
+  };
+  const persistSummary = () => {
+    const value = draftSummary.trim();
+    updateTest({ marketplace_summary: value || null });
+  };
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        style={{
+          padding: '6px 12px', borderRadius: 6,
+          border: test.is_marketplace ? '1px solid #0445b8' : '1px solid #d8d3cd',
+          background: test.is_marketplace ? '#eaf0fb' : '#fff',
+          color: test.is_marketplace ? '#0445b8' : '#0f172a',
+          fontWeight: 600, fontSize: 13, cursor: 'pointer',
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+        }}
+        title="Marketplace listing"
+      >
+        ◇ Marketplace{test.is_marketplace ? ' · On' : ''}
+      </button>
+      {open ? (
+        <>
+          {/* Click-outside layer */}
+          <div
+            onClick={() => setOpen(false)}
+            style={{ position: 'fixed', inset: 0, zIndex: 50 }}
+          />
+          <div style={{
+            position: 'absolute', top: 'calc(100% + 6px)', right: 0,
+            width: 320, padding: 16, borderRadius: 8,
+            background: '#fff', border: '1px solid #e4ded8',
+            boxShadow: '0 12px 30px rgba(15,23,42,0.12)', zIndex: 51,
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+              <strong style={{ fontSize: 13, color: '#0f172a' }}>List in marketplace</strong>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={!!test.is_marketplace}
+                  onChange={e => updateTest({ is_marketplace: e.target.checked })}
+                />
+                <span style={{ fontSize: 13 }}>{test.is_marketplace ? 'Listed' : 'Off'}</span>
+              </label>
+            </div>
+
+            <label style={{ display: 'block', marginBottom: 12 }}>
+              <span style={{ display: 'block', fontSize: 11, color: '#6b6470', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>Price (so'm)</span>
+              <input
+                type="number"
+                min={0}
+                step={1000}
+                value={draftPrice}
+                onChange={e => setDraftPrice(e.target.value)}
+                onBlur={persistPrice}
+                placeholder="e.g. 25000"
+                style={{
+                  width: '100%', boxSizing: 'border-box',
+                  padding: '8px 10px', borderRadius: 6,
+                  border: '1px solid #d8d3cd', fontSize: 13,
+                }}
+              />
+            </label>
+
+            <label style={{ display: 'block', marginBottom: 4 }}>
+              <span style={{ display: 'block', fontSize: 11, color: '#6b6470', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>Listing summary (optional)</span>
+              <textarea
+                rows={3}
+                maxLength={500}
+                value={draftSummary}
+                onChange={e => setDraftSummary(e.target.value)}
+                onBlur={persistSummary}
+                placeholder="One-line description shown on the catalog card. Falls back to the test description if blank."
+                style={{
+                  width: '100%', boxSizing: 'border-box', resize: 'vertical',
+                  padding: '8px 10px', borderRadius: 6, fontFamily: 'inherit',
+                  border: '1px solid #d8d3cd', fontSize: 13,
+                }}
+              />
+            </label>
+            <div style={{ fontSize: 11, color: '#6b6470', marginTop: 8, lineHeight: 1.5 }}>
+              When listed, any logged-in user can buy a copy. They upload a payment screenshot; you approve it in the admin panel, which duplicates this test into their workspace.
+            </div>
+          </div>
+        </>
+      ) : null}
+    </div>
   );
 }
 

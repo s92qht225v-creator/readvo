@@ -205,6 +205,14 @@ export interface Test {
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
+  /* Marketplace metadata. When `is_marketplace = true` this test is
+     listed publicly under /api/marketplace; buyers get a duplicate
+     into their own workspace on admin approval. Owner-managed (any
+     test owner can set the flag, but in practice only admin curates
+     the marketplace). */
+  is_marketplace?: boolean;
+  marketplace_price?: number | null;       // soums
+  marketplace_summary?: string | null;     // catalog listing description
   created_at: string;
   updated_at: string;
 }

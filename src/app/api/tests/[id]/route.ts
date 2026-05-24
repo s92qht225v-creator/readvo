@@ -41,6 +41,9 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     timer_enabled?: boolean;
     time_limit_seconds?: number | null;
     is_graded?: boolean;
+    is_marketplace?: boolean;
+    marketplace_price?: number | null;
+    marketplace_summary?: string | null;
   } | null;
   if (!body) return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
 
@@ -61,6 +64,26 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     patch.time_limit_seconds = seconds;
   }
   if (typeof body.is_graded === 'boolean') patch.is_graded = body.is_graded;
+
+  /* Marketplace flag + price + summary. Owner-gated only — any test
+     owner can flag their own test for sale. The marketplace tab is
+     intended for admin-curated content; if teachers start abusing it,
+     add an explicit admin check here. */
+  if (typeof body.is_marketplace === 'boolean') patch.is_marketplace = body.is_marketplace;
+  if (body.marketplace_price === null) {
+    patch.marketplace_price = null;
+  } else if (typeof body.marketplace_price === 'number') {
+    const price = Math.round(body.marketplace_price);
+    if (!Number.isFinite(price) || price < 0 || price > 100_000_000) {
+      return NextResponse.json({ error: 'invalid_price' }, { status: 400 });
+    }
+    patch.marketplace_price = price;
+  }
+  if (body.marketplace_summary === null) {
+    patch.marketplace_summary = null;
+  } else if (typeof body.marketplace_summary === 'string') {
+    patch.marketplace_summary = body.marketplace_summary.slice(0, 500);
+  }
 
   const { data, error } = await auth.admin
     .from('tests').update(patch).eq('id', id).select('*').single();

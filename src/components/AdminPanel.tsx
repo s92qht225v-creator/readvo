@@ -13,6 +13,13 @@ interface Payment {
   screenshot_url: string;
   status: string;
   created_at: string;
+  /* Marketplace fields (nullable when the row is a regular
+     subscription payment). Approving a marketplace payment
+     duplicates the source test into the buyer's workspace
+     instead of granting a subscription. */
+  kind?: 'subscription' | 'marketplace_test';
+  marketplace_source_test_id?: string | null;
+  marketplace_copy_test_id?: string | null;
 }
 
 interface AdminUser {
@@ -369,12 +376,17 @@ export function AdminPanel({ password }: AdminPanelProps) {
               <div key={p.id} className={`admin__card admin__card--${p.status}`}>
                 <div className="admin__card-header">
                   <span className="admin__card-email">{p.user_email}</span>
+                  {p.kind === 'marketplace_test' ? (
+                    <span className="admin__badge" style={{ background: '#eaf0fb', color: '#0445b8' }}>
+                      Marketplace
+                    </span>
+                  ) : null}
                   <span className={`admin__badge admin__badge--${p.status}`}>
                     {p.status === 'pending' ? 'Kutilmoqda' : p.status === 'approved' ? 'Tasdiqlangan' : p.status === 'cancelled' ? 'Bekor qilingan' : 'Rad etilgan'}
                   </span>
                 </div>
                 <div className="admin__card-details">
-                  <span>{PLAN_LABELS[p.plan] || p.plan}</span>
+                  <span>{p.kind === 'marketplace_test' ? `Test: ${p.marketplace_source_test_id?.slice(0, 8) ?? '?'}` : (PLAN_LABELS[p.plan] || p.plan)}</span>
                   <span>{formatPrice(p.amount)} so&apos;m</span>
                   <span>{formatDate(p.created_at)}</span>
                 </div>
