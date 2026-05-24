@@ -31,7 +31,6 @@ import type { BuilderQuestion } from './builderTypes';
 import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
-import { addChoiceBtn, removeBtn } from './settings/_shared';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -1605,36 +1604,52 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
           ) : null}
 
           <div style={screenDivider} />
-          <div style={screenFieldLabel}>Media (desktop only, 50% of card)</div>
-          {screen.imageUrl ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-              <img src={screen.imageUrl} alt="" style={{ width: 56, height: 56, objectFit: 'cover', borderRadius: 6, border: '1px solid #e4ded8' }} />
+          {/* Media row mirrors the question Media control style:
+              compact label + status + Change / Trash icons on the
+              right when an image is attached, "+" add button when not. */}
+          <div style={welcomeMediaRowTop}>
+            <div>
+              <div style={welcomeMediaRowTitle}>Image</div>
+              {screen.imageUrl ? (
+                <div style={welcomeMediaStatus}>Added</div>
+              ) : (
+                <div style={welcomeMediaStatus}>Desktop only · 50% of card</div>
+              )}
+            </div>
+            {screen.imageUrl ? (
+              <div style={welcomeMediaActions}>
+                <button
+                  type="button"
+                  onClick={() => mediaInputRef.current?.click()}
+                  disabled={mediaUploading}
+                  style={welcomeMediaTextButton}
+                  title="Change image"
+                >
+                  {mediaUploading ? 'Uploading…' : 'Change'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => persist({ imageUrl: '' })}
+                  style={welcomeMediaIconButton}
+                  title="Remove image"
+                  aria-label="Remove image"
+                >
+                  <WelcomeTrashIcon />
+                </button>
+              </div>
+            ) : (
               <button
                 type="button"
-                style={addChoiceBtn}
                 onClick={() => mediaInputRef.current?.click()}
                 disabled={mediaUploading}
+                style={welcomeMediaAddButton}
+                title="Add image"
+                aria-label="Add image"
               >
-                {mediaUploading ? 'Uploading…' : 'Replace'}
+                +
               </button>
-              <button
-                type="button"
-                style={removeBtn}
-                onClick={() => persist({ imageUrl: '' })}
-              >
-                Remove
-              </button>
-            </div>
-          ) : (
-            <button
-              type="button"
-              style={addChoiceBtn}
-              onClick={() => mediaInputRef.current?.click()}
-              disabled={mediaUploading}
-            >
-              {mediaUploading ? 'Uploading…' : '+ Add image'}
-            </button>
-          )}
+            )}
+          </div>
           {mediaError ? <div style={{ color: '#dc2626', fontSize: 12, marginTop: 6 }}>{mediaError}</div> : null}
           <input
             ref={mediaInputRef}
@@ -3615,6 +3630,76 @@ const screenDivider: React.CSSProperties = {
   background: '#e8e4df',
   margin: '4px 0',
 };
+
+/* Welcome-screen media row — same visual style as question-media
+   MediaControlRow in SettingsPanel.tsx. Compact label + status on
+   the left; Change text-button + trash icon on the right when an
+   image is attached; "+" add button when not. */
+const welcomeMediaRowTop: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 12,
+  padding: '8px 0',
+};
+const welcomeMediaRowTitle: React.CSSProperties = {
+  color: '#2f2835',
+  fontSize: 13,
+  fontWeight: 600,
+};
+const welcomeMediaStatus: React.CSSProperties = {
+  color: '#8b848f',
+  fontSize: 11,
+  marginTop: 2,
+};
+const welcomeMediaActions: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+};
+const welcomeMediaTextButton: React.CSSProperties = {
+  background: 'transparent',
+  border: 'none',
+  padding: 0,
+  color: '#2f2835',
+  fontSize: 13,
+  fontWeight: 600,
+  cursor: 'pointer',
+};
+const welcomeMediaIconButton: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 28,
+  height: 28,
+  border: 'none',
+  borderRadius: 4,
+  background: 'transparent',
+  color: '#2f2835',
+  cursor: 'pointer',
+};
+const welcomeMediaAddButton: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 28,
+  height: 28,
+  border: '1px solid #d8d3cd',
+  borderRadius: 4,
+  background: '#fff',
+  color: '#2f2835',
+  fontSize: 18,
+  fontWeight: 600,
+  cursor: 'pointer',
+};
+
+function WelcomeTrashIcon() {
+  return (
+    <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
+      <path fill="currentColor" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" fillRule="evenodd" clipRule="evenodd"/>
+    </svg>
+  );
+}
 
 const screenLayoutRow: React.CSSProperties = {
   display: 'flex',
