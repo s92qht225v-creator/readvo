@@ -894,9 +894,9 @@ export function TestList() {
               <div style={tableHead}>
                 <span style={{ gridColumn: '1 / 3' }} />
                 <span style={{ textAlign: 'center' }}>Responses</span>
-                <span>Status</span>
-                <span>Updated</span>
-                <span>Actions</span>
+                <span style={{ textAlign: 'center' }}>Status</span>
+                <span style={{ textAlign: 'center' }}>Updated</span>
+                <span style={{ textAlign: 'center' }}>Actions</span>
               </div>
               <ul style={testRows}>
                 {renderedTests.map(t => (
@@ -923,12 +923,12 @@ export function TestList() {
                       </div>
                     </div>
                     <div style={{ ...mutedCell, textAlign: 'center' }}>{t.response_count ?? 0}</div>
-                    <div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
                       <span style={t.is_published ? publishedPill : draftPill}>
                         {t.is_published ? 'Published' : 'Draft'}
                       </span>
                     </div>
-                    <div style={mutedCell}>{formatDate(t.updated_at || t.created_at)}</div>
+                    <div style={{ ...mutedCell, textAlign: 'center' }}>{formatDate(t.updated_at || t.created_at)}</div>
                     <div
                       style={rowMenuCell}
                       onMouseDown={event => event.stopPropagation()}
