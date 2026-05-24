@@ -893,7 +893,7 @@ export function TestList() {
             <section>
               <div style={tableHead}>
                 <span style={{ gridColumn: '1 / 3' }} />
-                <span>Responses</span>
+                <span style={{ textAlign: 'center' }}>Responses</span>
                 <span>Status</span>
                 <span>Updated</span>
                 <span>Actions</span>
@@ -922,7 +922,7 @@ export function TestList() {
                         {t.is_published ? `Share: /t/${t.slug}` : 'Draft test'}
                       </div>
                     </div>
-                    <div style={mutedCell}>{t.response_count ?? 0}</div>
+                    <div style={{ ...mutedCell, textAlign: 'center' }}>{t.response_count ?? 0}</div>
                     <div>
                       <span style={t.is_published ? publishedPill : draftPill}>
                         {t.is_published ? 'Published' : 'Draft'}
