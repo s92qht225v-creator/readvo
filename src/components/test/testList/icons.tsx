@@ -26,7 +26,7 @@ export function FormsIcon() {
 export function MarketplaceIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-      <g stroke="currentColor" strokeWidth="3" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
+      <g stroke="#000000" strokeWidth="3" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
         <polyline points="40.02 26.75 40.02 38.98 10.53 38.98 10.53 26.75" />
         <path d="M24.93,19.55v3.43c0,2.08-1.96,3.78-4.36,3.78h-.49c-2.4,0-4.37-1.7-4.37-3.78v-3.43" />
         <path d="M34.16,19.55v3.43c0,2.08-1.96,3.78-4.37,3.78h-.49c-2.39,0-4.37-1.7-4.37-3.78v-3.43" />
