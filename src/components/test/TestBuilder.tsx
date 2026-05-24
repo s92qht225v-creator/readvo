@@ -1375,6 +1375,16 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
   const previewSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const collectorFields = kind === 'welcome' ? enabledWelcomeCollectorFields(screen) : [];
   const hasCollectorFields = collectorFields.length > 0;
+  /* Content alignment only matters on desktop (mobile is always
+     centered for readability). When fields exist + we're on desktop,
+     stick the content column to left or right; otherwise center. */
+  const alignToLeft = previewDevice === 'desktop' && hasCollectorFields && screen.collectorLayout === 'left';
+  const alignToRight = previewDevice === 'desktop' && hasCollectorFields && screen.collectorLayout !== 'left';
+  const introMarginStyle: React.CSSProperties = alignToLeft
+    ? { marginLeft: 0, marginRight: 'auto', alignSelf: 'flex-start', textAlign: 'left', alignItems: 'flex-start' }
+    : alignToRight
+      ? { marginLeft: 'auto', marginRight: 0, alignSelf: 'flex-end', textAlign: 'left', alignItems: 'flex-start' }
+      : {};
   /* Collector preview stacks inside the intro column (title →
      description → fields → button). Field labels are omitted — the
      placeholder inside each input already labels it; mirrors the live
@@ -1417,7 +1427,7 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
         transform: `scale(${previewScale})`,
         transformOrigin: 'top left',
       }}>
-        <div style={screenPreviewIntro}>
+        <div style={{ ...screenPreviewIntro, ...introMarginStyle }}>
           <h2 style={screenPreviewTitle}>{title}</h2>
           <p style={screenPreviewDescription}>{description || 'Description (optional)'}</p>
           {collectorPreview}
@@ -1502,7 +1512,7 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
           ))}
           {collectorFields.length > 0 ? (
             <div style={screenLayoutRow}>
-              <span>Fields position</span>
+              <span>Content alignment (desktop)</span>
               <div style={screenSegmented}>
                 <button
                   type="button"

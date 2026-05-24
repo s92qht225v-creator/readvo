@@ -381,6 +381,15 @@ export function TestPlayer({ test, forceDevice }: Props) {
       const buttonText = welcomeScreen.buttonText || 'Start';
       const collectorFields = welcomeCollectorFields(welcomeScreen);
       const hasCollectorFields = collectorFields.length > 0;
+      /* Content alignment is a desktop-only feature; mobile is always
+         centered for readability. CSS owns the actual flex-alignment
+         via the --align-left / --align-right modifier; this class
+         attribute is the only thing that drives it. */
+      const alignmentModifier = hasCollectorFields
+        ? welcomeScreen.collectorLayout === 'left'
+          ? 'test-player-screen__card--align-left'
+          : 'test-player-screen__card--align-right'
+        : '';
 
       return (
         <ScreenWrapper>
@@ -388,6 +397,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
             className={[
               'test-player-screen__card',
               hasCollectorFields ? 'test-player-screen__card--with-collector' : '',
+              alignmentModifier,
             ].filter(Boolean).join(' ')}
             style={publicScreenCard}
           >

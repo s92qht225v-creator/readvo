@@ -13917,6 +13917,30 @@ body {
   width: 100%;
 }
 
+/* Desktop-only content alignment. Mobile keeps everything centered
+   for readability; on a wide card the teacher can stick the welcome
+   content to the left or right edge (useful for a future side image
+   / branding panel). */
+@media (min-width: 641px) {
+  /* !important on text-align beats the inline textAlign: center on
+     publicScreenContent — title/description switch to left-aligned
+     when the column is shifted off-center. */
+  .test-player-screen__card--align-left .test-player-screen__content {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    align-self: flex-start;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .test-player-screen__card--align-right .test-player-screen__content {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    align-self: flex-end;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+}
+
 .test-preview-shell--desktop .test-player__card {
   box-sizing: border-box !important;
   width: 1120px !important;
