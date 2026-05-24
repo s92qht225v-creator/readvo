@@ -671,7 +671,7 @@ export function TestList() {
         </button>
         <button
           type="button"
-          style={{ ...(dashboardTab === 'marketplace' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6 }}
+          style={{ ...(dashboardTab === 'marketplace' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
           onClick={() => setDashboardTab('marketplace')}
         >
           <MarketplaceIcon /> Marketplace

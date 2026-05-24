@@ -55,14 +55,19 @@ export const activeTab: CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 6,
-  borderBottom: '3px solid #1c1626',
+  boxShadow: 'inset 0 -3px 0 #1c1626',
   color: '#3f3946',
   fontWeight: 600,
   fontSize: 14,
 };
 
 export const inactiveTab: CSSProperties = {
+  height: '100%',
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
   color: '#6b6470',
+  fontWeight: 600,
   fontSize: 14,
 };
 
