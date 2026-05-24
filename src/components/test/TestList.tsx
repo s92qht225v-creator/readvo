@@ -139,6 +139,10 @@ export function TestList() {
   const [testDraft, setTestDraft] = useState('');
   const [deletingTest, setDeletingTest] = useState<ListItem | null>(null);
   const [isDeletingWorkspace, setIsDeletingWorkspace] = useState(false);
+  /* Active-subscription gate: when true, hide free-tier banner + sidebar
+     quota box (subscribers don't have the 1-test cap). Initially null
+     so we don't flash the banner before the subscription check returns. */
+  const [hasActiveSubscription, setHasActiveSubscription] = useState<boolean | null>(null);
 
   const load = useCallback(async () => {
     const tok = await getAccessToken();
@@ -153,6 +157,24 @@ export function TestList() {
 
   // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
   useEffect(() => { load(); }, [load]);
+
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const tok = await getAccessToken();
+      const res = await fetch('/api/subscription', { headers: authHeaders(tok) });
+      if (cancelled) return;
+      if (!res.ok) {
+        setHasActiveSubscription(false);
+        return;
+      }
+      const json = await res.json().catch(() => ({}));
+      /* /api/subscription returns the active sub (ends_at > now) or null. */
+      setHasActiveSubscription(!!json.subscription);
+    })();
+    return () => { cancelled = true; };
+  }, [getAccessToken]);
 
   useEffect(() => {
     if (!openMenuId && !isSortOpen && !isWorkspaceMenuOpen) return;
@@ -608,7 +630,7 @@ export function TestList() {
           </form>
         </div>
       ) : null}
-      {showLimitBanner ? (
+      {showLimitBanner && hasActiveSubscription === false ? (
         <section style={limitBanner}>
           <span style={diamondIcon}>◇</span>
           <span>Free accounts can have 1 test (draft or published).</span>
@@ -660,12 +682,19 @@ export function TestList() {
             </div>
           </div>
 
-          <div style={quotaBox}>
-            <div style={{ marginBottom: 8 }}>Tests (free tier)</div>
-            <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (tests.length / 1) * 100)}%` }} /></div>
-            <div style={{ color: '#6b6470', marginTop: 6 }}>{tests.length} / 1</div>
-            <a href="https://blim.uz/uz/payment" style={quotaLink}>Increase limit</a>
-          </div>
+          {hasActiveSubscription === true ? (
+            <div style={quotaBox}>
+              <div style={{ marginBottom: 8, fontWeight: 600, color: '#0f172a' }}>Pro</div>
+              <div style={{ color: '#6b6470' }}>Unlimited tests</div>
+            </div>
+          ) : hasActiveSubscription === false ? (
+            <div style={quotaBox}>
+              <div style={{ marginBottom: 8 }}>Tests (free tier)</div>
+              <div style={quotaTrack}><div style={{ ...quotaFill, width: `${Math.min(100, (tests.length / 1) * 100)}%` }} /></div>
+              <div style={{ color: '#6b6470', marginTop: 6 }}>{tests.length} / 1</div>
+              <a href="https://blim.uz/uz/payment" style={quotaLink}>Increase limit</a>
+            </div>
+          ) : null}
         </aside>
 
         <main style={mainPane}>
