@@ -13921,64 +13921,56 @@ body {
    for readability; on a wide card the teacher can stick the welcome
    content to the left or right edge (useful for a future side image
    / branding panel). */
-/* Desktop only: when the welcome screen has a content-alignment
-   choice (left/right), the card always splits 50/50 — content fills
-   its half, the other half holds the media (if uploaded) or is just
-   empty space. The point is that the content position is identical
-   whether media is present or not, so toggling media on/off doesn't
-   move the form.
+/* When the welcome screen has a content-alignment choice (left/right)
+   AND the surface is desktop, the card splits 50/50 — content fills
+   its half, the other half holds the media (if uploaded) or empty.
+   Toggling media on/off doesn't shift the content.
 
-   Mobile ignores all of this: content stays centered, media is
-   hidden. */
-@media (min-width: 641px) {
-  .test-player-screen__card--align-left,
-  .test-player-screen__card--align-right {
-    flex-direction: row !important;
-    align-items: stretch !important;
-    justify-content: stretch !important;
-    padding: 0 !important;
-  }
-
-  /* Content side: 50% of the card, internal block centered. */
-  .test-player-screen__card--align-left .test-player-screen__content,
-  .test-player-screen__card--align-right .test-player-screen__content {
-    width: 50% !important;
-    max-width: 50% !important;
-    min-width: 0;
-    height: 100%;
-    box-sizing: border-box;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 32px !important;
-    margin: 0 !important;
-    text-align: center !important;
-  }
-  .test-player-screen__card--align-left .test-player-screen__content { order: 0; }
-  .test-player-screen__card--align-right .test-player-screen__content { order: 1; }
-
-  /* Media side: 50% on the opposite half. If imageUrl is empty the
-     element isn't rendered, so the half stays empty (white). */
-  .test-player-screen__media {
-    width: 50%;
-    min-width: 0;
-    flex-shrink: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .test-player-screen__card--align-left .test-player-screen__media { order: 1; }
-  .test-player-screen__card--align-right .test-player-screen__media { order: 0; }
+   Gated on `[data-test-device="desktop"]` (set on `.test-player` by
+   TestPlayer based on viewport / forceDevice) rather than on viewport
+   `@media`, so the `?preview=1` shell's simulated mobile correctly
+   hides the media even though the underlying viewport is desktop. */
+[data-test-device="desktop"] .test-player-screen__card--align-left,
+[data-test-device="desktop"] .test-player-screen__card--align-right {
+  flex-direction: row !important;
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  padding: 0 !important;
 }
 
-/* Mobile: media hidden + content centered (the alignment classes
-   collapse to no-op since the desktop @media block above doesn't
-   fire). */
-@media (max-width: 640px) {
-  .test-player-screen__media {
-    display: none !important;
-  }
+[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__content,
+[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__content {
+  width: 50% !important;
+  max-width: 50% !important;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 32px !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__content { order: 0; }
+[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__content { order: 1; }
+
+[data-test-device="desktop"] .test-player-screen__media {
+  width: 50%;
+  min-width: 0;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+[data-test-device="desktop"] .test-player-screen__card--align-left .test-player-screen__media { order: 1; }
+[data-test-device="desktop"] .test-player-screen__card--align-right .test-player-screen__media { order: 0; }
+
+/* Mobile (real or simulated): hide the media element entirely so
+   the content's natural centered layout takes the full card width. */
+[data-test-device="mobile"] .test-player-screen__media {
+  display: none !important;
 }
 
 .test-preview-shell--desktop .test-player__card {
