@@ -38,6 +38,21 @@ export function MarketplaceIcon() {
   );
 }
 
+/* Settings cog (two halves of a gear + center disc). Sourced from
+   /Users/ali/Desktop/SETTINGS.svg, hard-coded black to match the
+   marketplace icon's explicit stroke colour. */
+export function SettingsIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <g stroke="#000000" strokeWidth="3" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
+        <path d="M28.32,3.14h-6.92c-1.65,0-2.99,1.34-2.99,2.99v2.5c0,2.31-2.5,3.75-4.49,2.59l-2.16-1.25c-1.43-.83-3.26-.34-4.09,1.09l-3.46,5.99c-.83,1.43-.34,3.26,1.1,4.09l2.16,1.25c2,1.15,2,4.03,0,5.19l-2.16,1.25c-1.43.83-1.92,2.66-1.1,4.09l3.46,5.99c.83,1.43,2.66,1.92,4.09,1.09l2.16-1.25c2-1.15,4.49.29,4.49,2.59v2.5c0,1.65,1.34,2.99,2.99,2.99h6.92" />
+        <path d="M31.31,25h0c0,2.31-1.23,4.44-3.23,5.59h0c-1.99,1.15-4.45,1.15-6.44,0h0c-2-1.15-3.23-3.29-3.23-5.59h0c0-2.31,1.23-4.44,3.23-5.59h0c1.99-1.15,4.45-1.15,6.44,0h0c2,1.15,3.23,3.28,3.23,5.59Z" />
+        <path d="M21.24,46.86h6.92c1.65,0,2.99-1.34,2.99-2.99v-2.5c0-2.31,2.5-3.75,4.49-2.59l2.16,1.25c1.43.83,3.26.34,4.09-1.09l3.46-5.99c.83-1.43.34-3.26-1.1-4.09l-2.16-1.25c-2-1.15-2-4.03,0-5.19l2.16-1.25c1.43-.83,1.92-2.66,1.1-4.09l-3.46-5.99c-.83-1.43-2.66-1.92-4.09-1.09l-2.16,1.25c-2,1.15-4.49-.29-4.49-2.59v-2.5c0-1.65-1.34-2.99-2.99-2.99h-6.92" />
+      </g>
+    </svg>
+  );
+}
+
 export function ListViewIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">

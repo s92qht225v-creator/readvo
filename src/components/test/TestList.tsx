@@ -6,7 +6,7 @@ import { authHeaders } from '@/lib/test/clientFetch';
 import { navigateToTestHref } from '@/lib/test/paths';
 import type { Test } from '@/lib/test/types';
 import { TestLink } from './TestLink';
-import { FormsIcon, MarketplaceIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
+import { FormsIcon, MarketplaceIcon, SettingsIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
 import { formatDate } from './testList/formatDate';
 import {
   limitBanner,
@@ -672,7 +672,7 @@ export function TestList() {
           style={{ ...(dashboardTab === 'settings' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
           onClick={() => setDashboardTab('settings')}
         >
-          ⚙ Settings
+          <SettingsIcon /> Settings
         </button>
       </nav>
 
