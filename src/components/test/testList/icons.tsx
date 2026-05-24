@@ -20,6 +20,27 @@ export function FormsIcon() {
   );
 }
 
+/* Storefront icon for the Marketplace dashboard tab. Sourced from
+   /Users/ali/Desktop/marketplace.svg, recolored to currentColor so
+   it inherits the tab text color (active red / inactive grey). */
+export function MarketplaceIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <g stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" fill="none">
+        <rect x="10.53" y="21.53" width="29.48" height="17.45" />
+        <path d="M13.18,18.83s.03.01.03.03v2.61c0,1.51-1.24,2.75-2.76,2.75h-.39c-1.52,0-2.76-1.24-2.76-2.75v-2.61s.01-.03.03-.03h5.85Z" />
+        <path d="M19.12,18.83v2.64c0,.1,0,.19-.01.28-.15,1.38-1.33,2.47-2.75,2.47h-.38c-1.52,0-2.76-1.24-2.76-2.75v-2.64h5.9Z" />
+        <path d="M25,18.83v2.64c0,1.51-1.24,2.75-2.76,2.75h-.39c-1.42,0-2.6-1.09-2.75-2.47-.01-.09-.01-.18-.01-.28v-2.64h5.91Z" />
+        <path d="M30.9,18.83v2.78c-.08,1.45-1.29,2.61-2.76,2.61h-.38c-1.52,0-2.76-1.24-2.76-2.75v-2.64h5.9Z" />
+        <path d="M36.8,18.83v2.64c0,1.51-1.24,2.75-2.76,2.75h-.39c-1.46,0-2.67-1.16-2.74-2.61-.01-.05-.01-.09-.01-.14v-2.64h5.9Z" />
+        <path d="M42.62,18.83s.07.03.07.07v2.57c0,1.51-1.24,2.75-2.76,2.75h-.38c-1.52,0-2.76-1.24-2.76-2.75v-2.57s.03-.07.07-.07h5.75Z" />
+        <path d="M42.64,18.83H7.47c-.08,0-.14-.06-.11-.12l1.99-3.99,1.83-3.68s.02-.02.04-.02h27.57s.03,0,.04.02l1.83,3.68,2.02,4.07s0,.04-.04.04Z" />
+        <rect x="21.4" y="28.66" width="7.2" height="10.31" />
+      </g>
+    </svg>
+  );
+}
+
 export function ListViewIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">

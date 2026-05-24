@@ -31,6 +31,7 @@ import type { BuilderQuestion } from './builderTypes';
 import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
+import { MarketplaceIcon } from './testList/icons';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -2515,7 +2516,7 @@ function MarketplaceTogglePopover({ test, updateTest }: {
         }}
         title="Marketplace listing"
       >
-        ◇ Marketplace{test.is_marketplace ? ' · On' : ''}
+        <MarketplaceIcon /> Marketplace{test.is_marketplace ? ' · On' : ''}
       </button>
       {open ? (
         <>

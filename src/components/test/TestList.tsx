@@ -6,7 +6,7 @@ import { authHeaders } from '@/lib/test/clientFetch';
 import { navigateToTestHref } from '@/lib/test/paths';
 import type { Test } from '@/lib/test/types';
 import { TestLink } from './TestLink';
-import { FormsIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
+import { FormsIcon, MarketplaceIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
 import { TemplateCard } from './testList/TemplateCard';
 import { formatDate } from './testList/formatDate';
 import {
@@ -671,10 +671,10 @@ export function TestList() {
         </button>
         <button
           type="button"
-          style={{ ...(dashboardTab === 'marketplace' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
+          style={{ ...(dashboardTab === 'marketplace' ? activeTab : inactiveTab), background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6 }}
           onClick={() => setDashboardTab('marketplace')}
         >
-          ◇ Marketplace
+          <MarketplaceIcon /> Marketplace
         </button>
         <button
           type="button"
