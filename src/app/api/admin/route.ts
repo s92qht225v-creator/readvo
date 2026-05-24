@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { copyMarketplaceTestToBuyer } from '@/lib/test/marketplaceCopy';
 
 function verifyPassword(request: NextRequest) {
   const password = request.headers.get('x-admin-password');
@@ -196,6 +197,30 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Already approved' }, { status: 400 });
     }
 
+    /* Marketplace purchase: duplicate the source test into the
+       buyer's workspace + link the copy back to the payment row.
+       No subscription is created (the buyer owns the test outright). */
+    if (payment.kind === 'marketplace_test') {
+      if (!payment.marketplace_source_test_id) {
+        return NextResponse.json({ error: 'Payment is marketplace but missing source test id' }, { status: 400 });
+      }
+      const copy = await copyMarketplaceTestToBuyer(
+        admin,
+        payment.marketplace_source_test_id,
+        payment.user_id,
+      );
+      if (!copy) {
+        return NextResponse.json({ error: 'Failed to duplicate marketplace test' }, { status: 500 });
+      }
+      const { error: updateErr } = await admin
+        .from('payment_requests')
+        .update({ status: 'approved', marketplace_copy_test_id: copy.id })
+        .eq('id', paymentId);
+      if (updateErr) return NextResponse.json({ error: updateErr.message }, { status: 500 });
+      return NextResponse.json({ ok: true, copyTestId: copy.id, copySlug: copy.slug });
+    }
+
+    /* Default flow: subscription payment. Grants PLAN_DAYS days from now. */
     const days = PLAN_DAYS[payment.plan] || 30;
     const startsAt = new Date();
     const endsAt = new Date();

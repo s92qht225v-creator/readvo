@@ -57,6 +57,12 @@ export async function POST(request: NextRequest) {
   const planVal = formData.get('plan');
   const amountVal = formData.get('amount');
   const screenshotVal = formData.get('screenshot');
+  /* Optional fields for the marketplace flow. When `kind` is
+     'marketplace_test' the row is recorded with the source test id,
+     and admin approval (in /api/admin) duplicates that test into the
+     buyer's workspace instead of granting a subscription. */
+  const kindVal = formData.get('kind');
+  const marketplaceTestIdVal = formData.get('marketplaceTestId');
 
   if (typeof planVal !== 'string' || typeof amountVal !== 'string' || !(screenshotVal instanceof File)) {
     return NextResponse.json({ error: 'Missing or invalid fields' }, { status: 400 });
@@ -65,9 +71,19 @@ export async function POST(request: NextRequest) {
   const plan = planVal;
   const amount = parseInt(amountVal, 10);
   const screenshot = screenshotVal;
+  const kind = typeof kindVal === 'string' && kindVal === 'marketplace_test'
+    ? 'marketplace_test'
+    : 'subscription';
+  const marketplaceTestId = typeof marketplaceTestIdVal === 'string' && marketplaceTestIdVal
+    ? marketplaceTestIdVal
+    : null;
 
   if (!plan || isNaN(amount) || amount <= 0) {
     return NextResponse.json({ error: 'Invalid plan or amount' }, { status: 400 });
+  }
+
+  if (kind === 'marketplace_test' && !marketplaceTestId) {
+    return NextResponse.json({ error: 'marketplaceTestId required for marketplace purchase' }, { status: 400 });
   }
 
   // Validate file type
@@ -115,6 +131,8 @@ export async function POST(request: NextRequest) {
       plan,
       amount,
       screenshot_url: screenshotUrl,
+      kind,
+      marketplace_source_test_id: marketplaceTestId,
     });
 
   if (dbError) {
