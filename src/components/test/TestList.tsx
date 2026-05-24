@@ -7,7 +7,6 @@ import { navigateToTestHref } from '@/lib/test/paths';
 import type { Test } from '@/lib/test/types';
 import { TestLink } from './TestLink';
 import { FormsIcon, MarketplaceIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
-import { TemplateCard } from './testList/TemplateCard';
 import { formatDate } from './testList/formatDate';
 import {
   limitBanner,
@@ -63,7 +62,6 @@ import {
   viewToggle,
   viewToggleActive,
   divider,
-  templateGrid,
   dashboardGrid,
   gridCard,
   gridCardTop,
@@ -106,11 +104,6 @@ const SORT_OPTIONS: Array<{ value: SortMode; label: string }> = [
   { value: 'alphabetical', label: 'Alphabetical' },
 ];
 
-const TEMPLATES = [
-  'Create a quick quiz to check understanding after a lesson.',
-  'Create a feedback test to collect opinions from students.',
-];
-
 type DashboardTab = 'tests' | 'marketplace' | 'settings';
 
 type MarketplaceTest = {
@@ -131,7 +124,6 @@ export function TestList() {
   const [marketplaceTests, setMarketplaceTests] = useState<MarketplaceTest[] | null>(null);
   const [buyingTest, setBuyingTest] = useState<MarketplaceTest | null>(null);
   const [showLimitBanner, setShowLimitBanner] = useState(true);
-  const [hiddenTemplates, setHiddenTemplates] = useState<Set<number>>(() => new Set());
   const [busyId, setBusyId] = useState<string | null>(null);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [sortMode, setSortMode] = useState<SortMode>('created');
@@ -857,17 +849,6 @@ export function TestList() {
           </header>
 
           <div style={divider} />
-
-          <section style={templateGrid}>
-            {TEMPLATES.map((text, index) => hiddenTemplates.has(index) ? null : (
-              <TemplateCard
-                key={text}
-                text={text}
-                onDismiss={() => setHiddenTemplates(prev => new Set(prev).add(index))}
-                onUse={openCreateTest}
-              />
-            ))}
-          </section>
 
           {renderedTests.length === 0 && !query.trim() ? (
             <section style={emptyState}>
