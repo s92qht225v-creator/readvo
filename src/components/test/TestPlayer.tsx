@@ -187,6 +187,15 @@ export function TestPlayer({ test, forceDevice }: Props) {
   const mobileWallpaperMedia = undefined;
   const welcomeScreen = test.welcome_screen?.enabled ? test.welcome_screen : null;
   const endScreen = test.end_screen?.enabled ? test.end_screen : null;
+
+  /* Skip the intro phase entirely when the test owner has disabled the
+     welcome screen — go straight to the first question. Without this
+     guard the player would render a fallback "Survey" intro card built
+     from the test title even when the teacher explicitly turned the
+     welcome screen off. */
+  useEffect(() => {
+    if (phase === 'intro' && !welcomeScreen) setPhase('question');
+  }, [phase, welcomeScreen]);
   const timerLimitSeconds = test.timer_enabled && test.time_limit_seconds && test.time_limit_seconds > 0
     ? Math.round(test.time_limit_seconds)
     : null;
@@ -375,8 +384,11 @@ export function TestPlayer({ test, forceDevice }: Props) {
   }, [phase, q?.id, answer]);
 
   if (phase === 'intro') {
-    if (welcomeScreen) {
-      const title = welcomeScreen.title || test.title;
+    /* Welcome screen disabled — render nothing while the effect above
+       advances to 'question'. Prevents one-tick flash of the fallback
+       Survey/Quiz intro. */
+    if (!welcomeScreen) return null;
+    const title = welcomeScreen.title || test.title;
       const description = welcomeScreen.description ?? '';
       const buttonText = welcomeScreen.buttonText || 'Start';
       const collectorFields = welcomeCollectorFields(welcomeScreen);
@@ -486,41 +498,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
           </div>
         </ScreenWrapper>
       );
-    }
-
-    return (
-      <Wrapper themeVars={themeVars} device={device}>
-        <div style={introBadge}>{test.is_graded ? 'Graded quiz' : 'Survey'}</div>
-        <h1 style={introTitle}>{test.title}</h1>
-        {test.description ? (
-          <p style={introText}>{test.description}</p>
-        ) : (
-          <p style={introText}>
-            Answer {total} {total === 1 ? 'question' : 'questions'} one at a time.
-          </p>
-        )}
-        <div style={nameBlock}>
-          <label style={fieldLabel}>
-            Your name (optional)
-          </label>
-          <input
-            type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            placeholder="Anonymous"
-            style={nameInput}
-          />
-        </div>
-        <button
-          type="button"
-          onClick={startQuestions}
-          disabled={total === 0}
-          style={primaryButton(total === 0)}
-        >
-          {total === 0 ? 'No questions yet' : `Start · ${total} ${total === 1 ? 'question' : 'questions'}`}
-        </button>
-      </Wrapper>
-    );
   }
 
   if (phase === 'done') {
