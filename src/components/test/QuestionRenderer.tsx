@@ -73,7 +73,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               ) : (
                 <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span className="tq-option__label">{c.text}</span>
+              <span className="tq-option__label">{c.text || `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -158,7 +158,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
     const selectedIds = value.selectedIds ?? [];
     return (
       <div className="tq-options" role="group" aria-label={question.prompt}>
-        {opts.choices.map(choice => {
+        {opts.choices.map((choice, i) => {
           const selected = selectedIds.includes(choice.id);
           return (
             <button
@@ -187,7 +187,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   </svg>
                 ) : null}
               </span>
-              <span className="tq-option__label">{choice.text}</span>
+              <span className="tq-option__label">{choice.text || `Choice ${i + 1}`}</span>
             </button>
           );
         })}

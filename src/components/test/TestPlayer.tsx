@@ -616,7 +616,7 @@ export function TestPlayer({ test, forceDevice }: Props) {
             header={(
               <>
                 <h2 className="test-player__title" style={questionTitle}>
-                  {q.prompt}
+                  {q.prompt || '…'}
                 </h2>
                 {q.description ? (
                   <p className="test-player__description" style={questionDescription}>
