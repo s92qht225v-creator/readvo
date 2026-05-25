@@ -13550,10 +13550,15 @@ body {
 }
 
 .tb-left__menu-icon {
-  width: 18px;
+  width: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+.tb-left__menu-icon > svg {
+  width: 22px;
+  height: 22px;
 }
 
 .tb-left__add-item {
