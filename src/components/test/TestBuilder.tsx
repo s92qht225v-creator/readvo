@@ -2965,7 +2965,7 @@ const screenAddBtn: React.CSSProperties = {
   width: '100%',
   marginBottom: 8,
   padding: '10px 10px',
-  borderRadius: 12,
+  borderRadius: 3,
   border: '1px dashed #ded8d1',
   background: '#fbfaf8',
   color: '#2f2835',
@@ -4135,7 +4135,7 @@ const leftModeWrap: React.CSSProperties = {
   position: 'relative',
   margin: '12px 12px 12px',
   height: 48,
-  borderRadius: 10,
+  borderRadius: 3,
   background: '#f5f3f4',
   color: '#5f5864',
   display: 'flex',
@@ -4158,7 +4158,7 @@ const leftModeSelect: React.CSSProperties = {
   width: '100%',
   height: '100%',
   border: 'none',
-  borderRadius: 10,
+  borderRadius: 3,
   background: 'transparent',
   color: '#5f5864',
   fontFamily: 'inherit',
@@ -4203,7 +4203,7 @@ const topTabButton = (active: boolean): React.CSSProperties => ({
 const addBtn: React.CSSProperties = {
   width: '100%', padding: '12px 12px',
   background: '#2f2533', color: '#fff',
-  border: 'none', borderRadius: 10,
+  border: 'none', borderRadius: 3,
   fontSize: 13, fontWeight: 800, cursor: 'pointer',
 };
 
