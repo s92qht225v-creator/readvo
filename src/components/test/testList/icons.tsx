@@ -69,6 +69,17 @@ export function GridViewIcon() {
   );
 }
 
+/* Vertical three-dot 'kebab' menu icon. Three filled circles stacked
+   vertically at y=3, 8, 13 inside a 16×16 viewBox. Used wherever we
+   render an "actions for this row" overflow trigger. */
+export function MoreMenuIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M6.5 3a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0" />
+    </svg>
+  );
+}
+
 export function ChevronDownIcon() {
   return <BaseChevronDownIcon style={chevronIcon} />;
 }

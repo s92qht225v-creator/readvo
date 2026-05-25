@@ -31,7 +31,7 @@ import type { BuilderQuestion } from './builderTypes';
 import { typePalette } from './questionTypeMeta';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
-import { MarketplaceIcon } from './testList/icons';
+import { MarketplaceIcon, MoreMenuIcon } from './testList/icons';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -2299,7 +2299,7 @@ function ThemeModal({ theme, onClose, onSave }: {
                         setThemeMenuOpen(open => !open);
                       }}
                     >
-                      ...
+                      <MoreMenuIcon />
                     </button>
                     {themeMenuOpen ? (
                       <div style={{ ...designThemeMenu, top: themeMenuPosition.top, left: themeMenuPosition.left }}>

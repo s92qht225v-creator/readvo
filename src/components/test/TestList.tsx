@@ -6,7 +6,7 @@ import { authHeaders } from '@/lib/test/clientFetch';
 import { navigateToTestHref } from '@/lib/test/paths';
 import type { Test } from '@/lib/test/types';
 import { TestLink } from './TestLink';
-import { FormsIcon, MarketplaceIcon, SettingsIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon } from './testList/icons';
+import { FormsIcon, MarketplaceIcon, SettingsIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon, MoreMenuIcon } from './testList/icons';
 import { formatDate } from './testList/formatDate';
 import {
   limitBanner,
@@ -751,7 +751,7 @@ export function TestList() {
                   style={workspaceMenuButton}
                   onClick={() => setIsWorkspaceMenuOpen(open => !open)}
                 >
-                  ···
+                  <MoreMenuIcon />
                 </button>
                 {isWorkspaceMenuOpen ? (
                   <div role="menu" style={workspaceMenu}>
@@ -942,7 +942,7 @@ export function TestList() {
                         onClick={() => setOpenMenuId(current => current === t.id ? null : t.id)}
                         style={rowMenuButton}
                       >
-                        ···
+                        <MoreMenuIcon />
                       </button>
                       {openMenuId === t.id ? (
                         <div role="menu" style={rowMenu}>
