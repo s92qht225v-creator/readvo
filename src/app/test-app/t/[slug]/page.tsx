@@ -7,6 +7,49 @@ import type { PublicTest } from '@/lib/test/types';
 
 type PreviewDevice = 'desktop' | 'mobile';
 
+/* Per-respondent session state. The server creates a test_responses
+   row up front with a shuffle seed; the client stores the {responseId,
+   seed} in localStorage keyed by slug so reloads reuse the same shuffle
+   order and the same response row on submission. */
+type Session = { responseId: string; seed: string };
+
+function sessionKey(slug: string) { return `blim-test-session-${slug}`; }
+
+function readStoredSession(slug: string): Session | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(sessionKey(slug));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<Session>;
+    if (typeof parsed.responseId === 'string' && typeof parsed.seed === 'string') {
+      return { responseId: parsed.responseId, seed: parsed.seed };
+    }
+  } catch {
+    /* ignore parse errors */
+  }
+  return null;
+}
+
+function writeStoredSession(slug: string, session: Session) {
+  if (typeof window === 'undefined') return;
+  try { window.localStorage.setItem(sessionKey(slug), JSON.stringify(session)); } catch { /* quota / private mode */ }
+}
+
+function ensureRespondentToken(slug: string): string {
+  const key = `blim-test-token-${slug}`;
+  if (typeof window === 'undefined') return '';
+  try {
+    const existing = window.localStorage.getItem(key);
+    if (existing && existing.length >= 8) return existing;
+    const fresh = (crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`).slice(0, 64);
+    window.localStorage.setItem(key, fresh);
+    return fresh;
+  } catch {
+    /* localStorage unavailable — fall back to in-memory token for this load */
+    return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  }
+}
+
 function shouldShowPreviewTools() {
   if (typeof window === 'undefined') return false;
   const host = window.location.hostname;
@@ -22,21 +65,58 @@ function goBackToBuilder(testId: string) {
 export default function PublicTestPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const [test, setTest] = useState<PublicTest | null | 'not_found'>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const [device, setDevice] = useState<PreviewDevice>('desktop');
   const [showPreviewTools] = useState(shouldShowPreviewTools);
 
   useEffect(() => {
-    fetch(`/api/t/${slug}`)
-      .then(async r => {
-        if (r.status === 404) { setTest('not_found'); return; }
-        if (!r.ok) { setTest('not_found'); return; }
+    let cancelled = false;
+    async function load() {
+      /* 1. Open (or rejoin) the respondent session — server returns
+         { responseId, seed }. The seed drives per-respondent shuffling
+         of choices/tiles in step 2. */
+      let openedSession = readStoredSession(slug);
+      if (!openedSession) {
+        const token = ensureRespondentToken(slug);
+        try {
+          const sessionRes = await fetch(`/api/t/${slug}/session`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ respondent_token: token }),
+          });
+          if (sessionRes.ok) {
+            const sj = await sessionRes.json() as { response_id?: string; seed?: string };
+            if (sj.response_id && sj.seed) {
+              openedSession = { responseId: sj.response_id, seed: sj.seed };
+              writeStoredSession(slug, openedSession);
+            }
+          }
+        } catch (err) {
+          console.warn('[PublicTestPage] session open failed, falling back to unseeded fetch:', err);
+        }
+      }
+      if (cancelled) return;
+      if (openedSession) setSession(openedSession);
+
+      /* 2. Fetch the public test, seeded with the session's shuffle key
+         so randomized questions shuffle per-respondent (stable across
+         reloads). If the session step failed we still load the test —
+         the player just falls back to the legacy stable shuffle. */
+      const seedQuery = openedSession ? `?seed=${encodeURIComponent(openedSession.seed)}` : '';
+      try {
+        const r = await fetch(`/api/t/${slug}${seedQuery}`);
+        if (cancelled) return;
+        if (r.status === 404 || !r.ok) { setTest('not_found'); return; }
         const j = await r.json();
         setTest(j.test);
-      })
-      .catch(err => {
+      } catch (err) {
+        if (cancelled) return;
         console.error('[PublicTestPage] fetch error:', err);
         setTest('not_found');
-      });
+      }
+    }
+    load();
+    return () => { cancelled = true; };
   }, [slug]);
 
   if (test === null) {
@@ -54,7 +134,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
   }
 
   if (!showPreviewTools) {
-    return <TestPlayer test={test} />;
+    return <TestPlayer test={test} responseId={session?.responseId} />;
   }
 
   return (
@@ -98,7 +178,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
         </button>
       </div>
       <div className="test-preview-frame">
-        <TestPlayer test={test} forceDevice={device} />
+        <TestPlayer test={test} forceDevice={device} responseId={session?.responseId} />
       </div>
     </div>
   );

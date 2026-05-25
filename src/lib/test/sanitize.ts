@@ -81,8 +81,18 @@ function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): Publ
  * Strip answer keys (correctIndex / correctAnswers) from a question before
  * sending it to the public player. Always use an explicit per-type allowlist
  * — never spread q.options.
+ *
+ * `seed` (optional): per-respondent seed for choice/tile shuffling. When
+ * provided, randomized questions shuffle differently for each session
+ * (true randomization per test-taker, stable across reloads of the same
+ * session). When omitted, falls back to the legacy stable-per-question
+ * seed so existing callers still work.
  */
-export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
+export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion {
+  const choiceSeed = seed ? `${q.id}:choices:${seed}` : `${q.id}:choices`;
+  const matchSeed = seed ? `${q.id}:match:${seed}` : `${q.id}:match`;
+  const orderingSeed = seed ? `${q.id}:ordering:${seed}` : `${q.id}:ordering`;
+  const scrambleSeed = seed ? `${q.id}:scramble:${seed}` : `${q.id}:scramble`;
   if (q.type === 'multiple_choice') {
     const opts = q.options as MultipleChoiceOptions;
     const choices = (opts.choices ?? []).map((text, i) => ({
@@ -98,7 +108,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       media: questionMedia(q),
       required: q.required,
       options: {
-        choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
+        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
         allowMultiple: !!opts.allowMultiple,
       },
     };
@@ -166,7 +176,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       media: questionMedia(q),
       required: q.required,
       options: {
-        choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
+        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
       },
     };
   }
@@ -185,7 +195,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       media: questionMedia(q),
       required: q.required,
       options: {
-        choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
+        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
       },
     };
   }
@@ -239,7 +249,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       media: questionMedia(q),
       required: q.required,
       options: {
-        choices: opts.randomize ? stableShuffle(choices, `${q.id}:choices`) : choices,
+        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
         allowMultiple: !!opts.allowMultiple,
       },
     };
@@ -277,7 +287,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
             id: publicOptionId(q.id, 'match-right', i),
             text: p.right,
           })),
-          `${q.id}:match`,
+          matchSeed,
         ),
       },
     };
@@ -299,7 +309,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
             id: publicOptionId(q.id, 'ordering', i),
             text,
           })),
-          `${q.id}:ordering`,
+          orderingSeed,
         ),
       },
     };
@@ -338,7 +348,7 @@ export function sanitizeQuestion(q: TestQuestion): PublicQuestion {
       media: questionMedia(q),
       required: q.required,
       options: {
-        tiles: stableShuffle(tiles, `${q.id}:scramble`),
+        tiles: stableShuffle(tiles, scrambleSeed),
         unit,
       },
     };

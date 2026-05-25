@@ -11,6 +11,11 @@ import './test-player.css';
 interface Props {
   test: PublicTest;
   forceDevice?: 'mobile' | 'desktop';
+  /* Server-issued session row id from POST /api/t/[slug]/session.
+     Threaded through to the submission payload so the server updates
+     the existing row (with its locked shuffle seed) instead of
+     inserting a fresh one. */
+  responseId?: string;
 }
 
 type Phase = 'intro' | 'question' | 'submitting' | 'done' | 'error';
@@ -128,7 +133,7 @@ function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['v
   return Object.keys(value).length > 0;
 }
 
-export function TestPlayer({ test, forceDevice }: Props) {
+export function TestPlayer({ test, forceDevice, responseId }: Props) {
   // Single source of truth for "which device layout are we rendering".
   // Surfaces declare device explicitly (forceDevice) when they're known
   // to be a preview/builder; live runtime derives it from viewport width.
@@ -263,6 +268,11 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const profileName = respondentLabel(profile);
     const payload = {
       respondent_token: token,
+      /* When the page opened a session up front (POST /session), the
+         server-side responses route will UPDATE that row instead of
+         INSERTing a new one — preserving the shuffle seed tied to
+         this respondent. */
+      response_id: responseId,
       respondent_name: profileName || name,
       respondent_profile: {
         first_name: profile.firstName,
@@ -288,7 +298,13 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const j = await res.json();
     setDone({ score: j.score ?? null, total: j.total ?? null });
     setPhase('done');
-  }, [answers, name, profile, startedAt, test.slug]);
+    /* Clear the session marker now that the row has been completed —
+       a refresh of the done screen would otherwise post-submit the
+       same row and 409. */
+    if (typeof window !== 'undefined') {
+      try { window.localStorage.removeItem(`blim-test-session-${test.slug}`); } catch { /* ignore */ }
+    }
+  }, [answers, name, profile, responseId, startedAt, test.slug]);
 
   const startQuestions = useCallback(() => {
     setStartedAt(new Date().toISOString());

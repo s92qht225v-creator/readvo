@@ -21,11 +21,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     return NextResponse.json({ error: 'not_found' }, { status: 404 });
   }
 
-  const body = await req.json().catch(() => null) as ResponseSubmission | null;
+  const body = await req.json().catch(() => null) as (ResponseSubmission & { response_id?: string }) | null;
   if (!body || typeof body.respondent_token !== 'string' || !Array.isArray(body.answers)) {
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
   }
   const timedOut = body.timed_out === true;
+  const sessionResponseId = typeof body.response_id === 'string' && body.response_id ? body.response_id : null;
 
   const admin = getSupabaseAdmin();
   const { data: test } = await admin
@@ -125,22 +126,66 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     ip_hash: ipHash,
     timed_out: timedOut,
   };
-  let { data: respRow, error: respErr } = await admin
-    .from('test_responses')
-    .insert(responsePayload)
-    .select('id, score')
-    .single();
 
-  if (respErr?.message?.includes('timed_out')) {
-    const { timed_out: _timedOut, ...legacyPayload } = responsePayload;
-    const retry = await admin
+  let respRow: { id: string; score: number | null } | null = null;
+  let respErr: { message?: string } | null = null;
+
+  /* If the client opened a session up-front (POST /session), update that
+     row instead of inserting a new one. This is the path the player
+     takes by default — the shuffle seed lives on that row, so we keep
+     the seed-to-answers tie intact. Reject if the session was already
+     completed (double-submit). */
+  if (sessionResponseId) {
+    const { data: existing } = await admin
       .from('test_responses')
-      .insert(legacyPayload)
+      .select('id, completed_at')
+      .eq('id', sessionResponseId)
+      .eq('test_id', test.id)
+      .eq('respondent_token', body.respondent_token)
+      .maybeSingle();
+    if (!existing) {
+      return NextResponse.json({ error: 'session_not_found' }, { status: 404 });
+    }
+    if (existing.completed_at) {
+      return NextResponse.json({ error: 'duplicate' }, { status: 409 });
+    }
+    /* Don't overwrite started_at — keep the original session-open time. */
+    const { started_at: _started, ...updatePatch } = responsePayload;
+    const update = await admin
+      .from('test_responses')
+      .update(updatePatch)
+      .eq('id', sessionResponseId)
       .select('id, score')
       .single();
-    respRow = retry.data;
-    respErr = retry.error;
+    respRow = update.data;
+    respErr = update.error;
+
+    /* Clear stale answers from any partial earlier submission attempt
+       for this session row before inserting the canonical ones. */
+    if (!respErr) {
+      await admin.from('test_answers').delete().eq('response_id', sessionResponseId);
+    }
+  } else {
+    const insert = await admin
+      .from('test_responses')
+      .insert(responsePayload)
+      .select('id, score')
+      .single();
+    respRow = insert.data;
+    respErr = insert.error;
+
+    if (respErr?.message?.includes('timed_out')) {
+      const { timed_out: _timedOut, ...legacyPayload } = responsePayload;
+      const retry = await admin
+        .from('test_responses')
+        .insert(legacyPayload)
+        .select('id, score')
+        .single();
+      respRow = retry.data;
+      respErr = retry.error;
+    }
   }
+
   if (respErr || !respRow) {
     return NextResponse.json({ error: respErr?.message ?? 'insert_failed' }, { status: 500 });
   }
