@@ -538,7 +538,6 @@ export function TestPlayer({ test, forceDevice }: Props) {
           style={publicScreenCard}
         >
           <div className="test-player-screen__content" style={publicScreenContent}>
-            <div style={doneMark}>✓</div>
             {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
             <h1 style={publicScreenTitle}>{title}</h1>
             {test.is_graded && done?.score != null ? (
