@@ -472,6 +472,16 @@ export function TestPlayer({ test, forceDevice }: Props) {
                   <span>{timerLimitSeconds ? `Time limit: ${formatDuration(timerLimitSeconds)}` : welcomeScreen.timeToCompleteText || `Takes ${Math.max(1, Math.ceil(total / 4))} minutes`}</span>
                 </div>
               ) : null}
+              {test.show_branding ? (
+                <a
+                  href="https://test.blim.uz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="test-player-screen__branding"
+                >
+                  Made with Blim
+                </a>
+              ) : null}
             </div>
           </div>
         </ScreenWrapper>

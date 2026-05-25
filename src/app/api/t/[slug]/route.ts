@@ -29,6 +29,19 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
     .eq('test_id', test.id)
     .order('position', { ascending: true });
 
+  /* Branding gate — show "Made with Blim" when the owner has no
+     active subscription. Subscribers get a clean welcome screen. */
+  let showBranding = true;
+  if (test.owner_id) {
+    const { data: sub } = await admin
+      .from('subscriptions')
+      .select('ends_at')
+      .eq('user_id', test.owner_id)
+      .gt('ends_at', new Date().toISOString())
+      .maybeSingle();
+    if (sub) showBranding = false;
+  }
+
   const publicTest: PublicTest = {
     id: test.id,
     slug: test.slug,
@@ -43,6 +56,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
     questions: (questions ?? [])
       .filter((q: TestQuestion) => !q.hidden)
       .map((q: TestQuestion) => sanitizeQuestion(q)),
+    show_branding: showBranding,
   };
 
   return NextResponse.json({ test: publicTest });

@@ -13973,6 +13973,29 @@ body {
   display: none !important;
 }
 
+/* "Made with Blim" badge — shown on the welcome screen of every free
+   user's published test. Subscribers get the flag stripped from the
+   public API response so the badge never renders. Big blue button to
+   maximise click-through to test.blim.uz. */
+.test-player-screen__branding {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 12px 28px;
+  background: var(--test-theme-button, #1c3aa1);
+  color: var(--test-theme-button-text, #fff);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  align-self: center;
+}
+.test-player-screen__branding:hover {
+  opacity: 0.9;
+}
+
 .test-preview-shell--desktop .test-player__card {
   box-sizing: border-box !important;
   width: 1120px !important;

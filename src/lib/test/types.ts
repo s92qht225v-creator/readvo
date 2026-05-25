@@ -381,6 +381,9 @@ export interface PublicTest {
   time_limit_seconds?: number | null;
   is_graded: boolean;
   questions: PublicQuestion[];
+  /* True when the test owner does NOT have an active subscription —
+     used to show the "Made with Blim" badge on free-tier tests. */
+  show_branding?: boolean;
 }
 
 /* ── Submission shape ─────────────────────────────────────────────────── */
