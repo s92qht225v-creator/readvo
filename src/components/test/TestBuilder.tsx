@@ -536,6 +536,24 @@ export function TestBuilder({ testId }: Props) {
     setActiveBlock({ kind: 'question', index: questions.length });
     setShowAddMenu(false);
     setShowToolbarAddMenu(false);
+
+    /* First question added — auto-enable welcome + end screens with
+       sensible defaults so every published test always opens with a
+       welcome and closes with a thank-you. Idempotent: only fires
+       when the screens aren't already enabled. */
+    if (questions.length === 0) {
+      const patch: Partial<Pick<Test, 'welcome_screen' | 'end_screen'>> = {};
+      if (!test.welcome_screen?.enabled) {
+        patch.welcome_screen = defaultWelcomeScreen(test.title);
+      }
+      if (!test.end_screen?.enabled) {
+        patch.end_screen = defaultEndScreen();
+      }
+      if (Object.keys(patch).length > 0) {
+        setTest({ ...test, ...patch });
+        updateTest(patch);
+      }
+    }
   };
 
   const explainPreviewDisabled = () => {
