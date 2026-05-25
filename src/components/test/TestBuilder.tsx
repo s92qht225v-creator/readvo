@@ -1341,13 +1341,13 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
       >
         <span className="tb-left__menu-icon" aria-hidden="true">
           {isHidden ? (
-            <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
+            <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
               <path d="M1.5 9s2.75-5 7.5-5 7.5 5 7.5 5-2.75 5-7.5 5S1.5 9 1.5 9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="9" cy="9" r="2.25" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="9" cy="9" r="2.25" fill="currentColor"/>
             </svg>
           ) : (
             <svg viewBox="5 8 40 34" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-              <g stroke="currentColor" strokeWidth="4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" fill="none">
+              <g stroke="currentColor" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" fill="none">
                 <line x1="37.59" y1="12.25" x2="11.65" y2="37.75" />
                 <path d="M29.62,17.21c-1.77-.61-3.52-.97-5.42-.84-5.75.51-10.42,4.26-14.25,8.45,2.01,2.18,3.96,3.98,6.35,5.55" />
                 <path d="M20.91,32.61c7.45,2.45,14.18-2.38,19.14-7.8-1.78-1.92-3.59-3.62-5.65-5.09" />
@@ -1366,9 +1366,9 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
         onClick={onDuplicate}
       >
         <span className="tb-left__menu-icon" aria-hidden="true">
-          <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
-            <rect x="6.25" y="3.25" width="8.5" height="8.5" rx="1.25" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M11.75 11.75v1.25c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V7.5c0-.69.56-1.25 1.25-1.25h1.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <svg viewBox="3 3 12 12" fill="none" aria-hidden="true">
+            <rect x="6.25" y="3.25" width="8.5" height="8.5" rx="1.25" stroke="currentColor" strokeWidth="1.4" />
+            <path d="M11.75 11.75v1.25c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V7.5c0-.69.56-1.25 1.25-1.25h1.25" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
           </svg>
         </span>
         Duplicate
