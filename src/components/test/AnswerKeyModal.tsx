@@ -313,7 +313,7 @@ const answerModal: React.CSSProperties = {
   height: 'min(86vh, 820px)',
   background: '#fff',
   border: '1px solid #ded8d1',
-  borderRadius: 16,
+  borderRadius: 3,
   boxShadow: '0 34px 100px rgba(47, 37, 51, 0.24)',
   display: 'flex',
   flexDirection: 'column',
@@ -340,7 +340,7 @@ const answerModalTitle: React.CSSProperties = {
 const answerModalClose: React.CSSProperties = {
   width: 34,
   height: 34,
-  borderRadius: 12,
+  borderRadius: 3,
   border: 'none',
   background: '#f4f1ee',
   color: '#2f2835',
@@ -370,7 +370,7 @@ const answerModalFoot: React.CSSProperties = {
 const answerDoneBtn: React.CSSProperties = {
   padding: '10px 20px',
   border: 'none',
-  borderRadius: 999,
+  borderRadius: 3,
   background: '#2f2533',
   color: '#fff',
   fontWeight: 850,
@@ -379,7 +379,7 @@ const answerDoneBtn: React.CSSProperties = {
 
 const answerQuestionCard: React.CSSProperties = {
   border: '1px solid #e4ded8',
-  borderRadius: 14,
+  borderRadius: 3,
   background: '#fff',
   overflow: 'hidden',
   flexShrink: 0,
@@ -399,7 +399,7 @@ const answerQuestionHead: React.CSSProperties = {
 const answerQuestionNumber = (type: QuestionType): React.CSSProperties => ({
   width: 34,
   height: 30,
-  borderRadius: 8,
+  borderRadius: 3,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -438,7 +438,7 @@ const answerOptionRow = (active: boolean): React.CSSProperties => ({
   minHeight: 42,
   padding: '6px 10px',
   border: active ? '1.5px solid #2f2533' : '1px solid #e4ded8',
-  borderRadius: 10,
+  borderRadius: 3,
   background: active ? '#fbfaf8' : '#fff',
   color: '#2f2835',
   cursor: 'pointer',
@@ -460,7 +460,7 @@ const answerRadio: React.CSSProperties = {
 const answerLetter = (active: boolean): React.CSSProperties => ({
   minWidth: 24,
   height: 24,
-  borderRadius: 6,
+  borderRadius: 3,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -473,7 +473,7 @@ const answerLetter = (active: boolean): React.CSSProperties => ({
 const answerToggle = (active: boolean): React.CSSProperties => ({
   flex: 1,
   padding: '12px 14px',
-  borderRadius: 10,
+  borderRadius: 3,
   border: active ? '1px solid #2f2533' : '1px solid #ded8d1',
   background: active ? '#2f2533' : '#fff',
   color: active ? '#fff' : '#2f2835',
@@ -492,7 +492,7 @@ const answerTextarea: React.CSSProperties = {
   width: 'calc(100% - 40px)',
   boxSizing: 'border-box',
   padding: 14,
-  borderRadius: 10,
+  borderRadius: 3,
   border: '1px solid #ded8d1',
   fontFamily: 'inherit',
   fontSize: 15,
@@ -504,7 +504,7 @@ const answerTextarea: React.CSSProperties = {
 const answerInput: React.CSSProperties = {
   padding: '11px 12px',
   border: '1px solid #ded8d1',
-  borderRadius: 9,
+  borderRadius: 3,
   background: '#fff',
   color: '#2f2835',
   fontSize: 14,
@@ -513,7 +513,7 @@ const answerInput: React.CSSProperties = {
 
 const answerInfo: React.CSSProperties = {
   padding: '12px 14px',
-  borderRadius: 12,
+  borderRadius: 3,
   background: '#fbfaf8',
   border: '1px solid #e7e2dc',
   color: '#6b6470',
@@ -522,7 +522,7 @@ const answerInfo: React.CSSProperties = {
 
 const answerEmpty: React.CSSProperties = {
   padding: 24,
-  borderRadius: 14,
+  borderRadius: 3,
   background: '#fbfaf8',
   border: '1px solid #e7e2dc',
   color: '#6b6470',
