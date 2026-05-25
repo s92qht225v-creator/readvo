@@ -1374,9 +1374,7 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
         onClick={onDelete}
       >
         <span className="tb-left__menu-icon" aria-hidden="true">
-          <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
-            <path d="M6.5 4.75V3.5c0-.41.34-.75.75-.75h3.5c.41 0 .75.34.75.75v1.25M4.25 4.75h9.5M6 7v6M9 7v6M12 7v6M5.25 4.75l.5 9.25c.04.7.61 1.25 1.31 1.25h3.88c.7 0 1.27-.55 1.31-1.25l.5-9.25" stroke="currentColor" strokeWidth="1.45" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <TrashIcon />
         </span>
         Delete
       </button>
@@ -1661,7 +1659,7 @@ function ScreenSettingsPanel({ kind, screen, onChange }: {
                   title="Remove image"
                   aria-label="Remove image"
                 >
-                  <WelcomeTrashIcon />
+                  <TrashIcon />
                 </button>
               </div>
             ) : (
@@ -3839,14 +3837,6 @@ const welcomeMediaAddButton: React.CSSProperties = {
   fontWeight: 600,
   cursor: 'pointer',
 };
-
-function WelcomeTrashIcon() {
-  return (
-    <svg width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden>
-      <path fill="currentColor" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" fillRule="evenodd" clipRule="evenodd"/>
-    </svg>
-  );
-}
 
 const screenLayoutRow: React.CSSProperties = {
   display: 'flex',
