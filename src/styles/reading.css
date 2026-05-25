@@ -13513,7 +13513,7 @@ body {
   min-width: 128px;
   padding: 7px;
   border: 2px solid #e8e4df;
-  border-radius: 13px;
+  border-radius: 3px;
   background: #fff;
   box-shadow: 0 12px 32px rgba(47, 40, 53, 0.12);
 }
@@ -13526,7 +13526,7 @@ body {
   gap: 10px;
   padding: 7px 9px;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   background: transparent;
   color: #6b6470;
   cursor: pointer;

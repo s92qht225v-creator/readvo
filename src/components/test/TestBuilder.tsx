@@ -3484,7 +3484,7 @@ const designThemeMenu: React.CSSProperties = {
   zIndex: 220,
   width: 198,
   padding: '10px 0',
-  borderRadius: 12,
+  borderRadius: 3,
   border: '3px solid #eeecef',
   background: '#fff',
   boxShadow: '0 12px 35px rgba(47, 40, 53, 0.16)',
@@ -4212,7 +4212,7 @@ const addBtn: React.CSSProperties = {
 
 const addMenu: React.CSSProperties = {
   position: 'absolute', bottom: '100%', left: 8, right: 8, marginBottom: 6,
-  background: '#fff', border: '1px solid #e4ded8', borderRadius: 7,
+  background: '#fff', border: '1px solid #e4ded8', borderRadius: 3,
   boxShadow: '0 18px 50px rgba(47,40,53,0.16)',
   display: 'grid', gap: 2, padding: 6, zIndex: 10,
 };
@@ -4224,7 +4224,7 @@ const toolbarAddMenu: React.CSSProperties = {
   width: 260,
   background: '#fff',
   border: '1px solid #e4ded8',
-  borderRadius: 7,
+  borderRadius: 3,
   boxShadow: '0 18px 50px rgba(47,40,53,0.16)',
   display: 'grid',
   gap: 2,
