@@ -389,11 +389,13 @@ export function TestPlayer({ test, forceDevice }: Props) {
          media on/off doesn't shift the form.
 
          Mobile ignores all of this — content centers, media hidden. */
-      const alignmentModifier = hasCollectorFields
-        ? welcomeScreen.collectorLayout === 'left'
+      /* Alignment drives the 50/50 split unconditionally on desktop —
+         fields off or on, the content stays in its half so the layout
+         doesn't shift when fields toggle. */
+      const alignmentModifier =
+        welcomeScreen.collectorLayout === 'left'
           ? 'test-player-screen__card--align-left'
-          : 'test-player-screen__card--align-right'
-        : '';
+          : 'test-player-screen__card--align-right';
 
       return (
         <ScreenWrapper>
@@ -411,13 +413,11 @@ export function TestPlayer({ test, forceDevice }: Props) {
                 the half stays visually empty but the layout is identical
                 to the with-media case, so the content position doesn't
                 shift when an image is added or removed. */}
-            {hasCollectorFields ? (
-              <div
-                className="test-player-screen__media"
-                style={hasMedia ? { backgroundImage: `url(${welcomeScreen.imageUrl})` } : undefined}
-                aria-hidden
-              />
-            ) : null}
+            <div
+              className="test-player-screen__media"
+              style={hasMedia ? { backgroundImage: `url(${welcomeScreen.imageUrl})` } : undefined}
+              aria-hidden
+            />
             <div className="test-player-screen__content" style={publicScreenContent}>
               <h1 style={publicScreenTitle}>{title}</h1>
               <p style={publicScreenDescription}>

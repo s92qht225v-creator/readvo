@@ -1383,7 +1383,11 @@ function ScreenPreviewCanvas({ screen, fallbackTitle, kind, questionCount, previ
      centered layout. */
   const isDesktop = previewDevice === 'desktop';
   const hasMedia = !!screen.imageUrl;
-  const splitLayout = isDesktop && hasCollectorFields;
+  /* Welcome cards split 50/50 on desktop regardless of fields — the
+     content stays in its chosen half whether or not the teacher has
+     turned on collector inputs, so toggling fields never shifts the
+     intro position. End-screen keeps the centered layout. */
+  const splitLayout = isDesktop && kind === 'welcome';
   const contentSide: 'left' | 'right' = screen.collectorLayout === 'left' ? 'left' : 'right';
   const mediaSide: 'left' | 'right' = contentSide === 'left' ? 'right' : 'left';
   const introMarginStyle: React.CSSProperties = splitLayout ? {} : {};
