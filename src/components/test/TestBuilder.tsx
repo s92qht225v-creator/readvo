@@ -1346,8 +1346,14 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
               <circle cx="9" cy="9" r="2.25" stroke="currentColor" strokeWidth="1.5"/>
             </svg>
           ) : (
-            <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
-              <path d="M3 3l12 12M7.4 7.4A2.25 2.25 0 0 0 10.6 10.6M5.5 5.5C3.4 6.9 1.9 9 1.9 9s2.75 5 7.1 5c1.4 0 2.65-.35 3.7-.85M8.1 4.05A8.7 8.7 0 0 1 9 4c4.75 0 7.5 5 7.5 5a14 14 0 0 1-2.2 2.7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="17" height="17" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+              <g stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" fill="none">
+                <line x1="37.59" y1="12.25" x2="11.65" y2="37.75" />
+                <path d="M29.62,17.21c-1.77-.61-3.52-.97-5.42-.84-5.75.51-10.42,4.26-14.25,8.45,2.01,2.18,3.96,3.98,6.35,5.55" />
+                <path d="M20.91,32.61c7.45,2.45,14.18-2.38,19.14-7.8-1.78-1.92-3.59-3.62-5.65-5.09" />
+                <path d="M27.16,20.37c-2-.92-4.17-.51-5.63.94s-1.82,3.51-1.03,5.51" />
+                <path d="M22.75,28.88c1.83.72,3.72.31,5.1-.93s1.96-3.11,1.42-5.06" />
+              </g>
             </svg>
           )}
         </span>
