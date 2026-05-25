@@ -571,7 +571,7 @@ const resultsSubtitle: CSSProperties = {
 const refreshButton: CSSProperties = {
   border: '1px solid #e7e5e4',
   background: '#fff',
-  borderRadius: 999,
+  borderRadius: 3,
   padding: '10px 14px',
   fontSize: 13,
   fontWeight: 800,
@@ -588,7 +588,7 @@ const summaryGrid: CSSProperties = {
 const summaryCard: CSSProperties = {
   border: '1px solid #eee7df',
   background: '#fff',
-  borderRadius: 18,
+  borderRadius: 3,
   padding: 18,
   boxShadow: '0 18px 40px rgba(17, 24, 39, 0.04)',
 };
@@ -618,7 +618,7 @@ const summaryHelper: CSSProperties = {
 const sectionCard: CSSProperties = {
   border: '1px solid #eee7df',
   background: '#fff',
-  borderRadius: 22,
+  borderRadius: 3,
   padding: 20,
   boxShadow: '0 18px 50px rgba(17, 24, 39, 0.05)',
 };
@@ -654,7 +654,7 @@ const questionStatsGrid: CSSProperties = {
 const questionStatCard: CSSProperties = {
   border: '1px solid #f0ebe5',
   background: '#fffdfb',
-  borderRadius: 16,
+  borderRadius: 3,
   padding: 14,
 };
 
@@ -682,7 +682,7 @@ const questionPrompt: CSSProperties = {
 
 const scoreBadge: CSSProperties = {
   flex: '0 0 auto',
-  borderRadius: 999,
+  borderRadius: 3,
   background: '#f5f5f4',
   color: '#292524',
   padding: '5px 9px',
@@ -699,14 +699,14 @@ const attentionBadge: CSSProperties = {
 const progressTrack: CSSProperties = {
   height: 8,
   background: '#f3f0ec',
-  borderRadius: 999,
+  borderRadius: 3,
   overflow: 'hidden',
   marginTop: 14,
 };
 
 const progressFill: CSSProperties = {
   height: '100%',
-  borderRadius: 999,
+  borderRadius: 3,
   transition: 'width 160ms ease',
 };
 
@@ -752,7 +752,7 @@ const choiceNumber: CSSProperties = {
   justifyContent: 'center',
   width: 18,
   height: 18,
-  borderRadius: 6,
+  borderRadius: 3,
   background: '#f5f5f4',
   color: '#78716c',
   fontSize: 10,
@@ -772,7 +772,7 @@ const miniTrack: CSSProperties = {
   display: 'block',
   height: 5,
   background: '#f3f0ec',
-  borderRadius: 999,
+  borderRadius: 3,
   overflow: 'hidden',
 };
 
@@ -780,13 +780,13 @@ const miniFill: CSSProperties = {
   display: 'block',
   height: '100%',
   background: '#a78bfa',
-  borderRadius: 999,
+  borderRadius: 3,
 };
 
 const emptyState: CSSProperties = {
   background: '#fffdfb',
   border: '1px dashed #d6d3d1',
-  borderRadius: 16,
+  borderRadius: 3,
   padding: 32,
   textAlign: 'center',
   color: '#78716c',
@@ -800,7 +800,7 @@ const responseList: CSSProperties = {
 const responseCard: CSSProperties = {
   background: '#fffdfb',
   border: '1px solid #f0ebe5',
-  borderRadius: 16,
+  borderRadius: 3,
   overflow: 'hidden',
 };
 
@@ -830,7 +830,7 @@ const avatarCircle: CSSProperties = {
   justifyContent: 'center',
   width: 36,
   height: 36,
-  borderRadius: 12,
+  borderRadius: 3,
   background: '#292524',
   color: '#fff',
   fontSize: 12,
@@ -860,7 +860,7 @@ const responseScorePill: CSSProperties = {
   padding: '5px 10px',
   background: '#dcfce7',
   color: '#15803d',
-  borderRadius: 999,
+  borderRadius: 3,
   fontSize: 12,
   fontWeight: 900,
 };
@@ -869,7 +869,7 @@ const timedOutPill: CSSProperties = {
   padding: '5px 10px',
   background: '#fee2e2',
   color: '#b91c1c',
-  borderRadius: 999,
+  borderRadius: 3,
   fontSize: 12,
   fontWeight: 900,
 };
@@ -890,7 +890,7 @@ const answerDetailCard: CSSProperties = {
   display: 'grid',
   gap: 6,
   padding: 12,
-  borderRadius: 12,
+  borderRadius: 3,
   background: '#fff',
   border: '1px solid #f5f0ea',
 };
