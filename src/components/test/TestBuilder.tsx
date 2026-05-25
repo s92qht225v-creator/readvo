@@ -849,7 +849,10 @@ export function TestBuilder({ testId }: Props) {
               }}
               style={screenAddBtn}
             >
-              <span>▮ Add End Screen</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                <EndScreenIcon color="#0369a1" />
+                Add End Screen
+              </span>
               <span style={screenAddPlus}>+</span>
             </button>
           ) : null}
