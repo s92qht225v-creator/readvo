@@ -527,38 +527,51 @@ export function TestPlayer({ test, forceDevice }: Props) {
     const title = endScreen?.title || 'Submitted';
     const description = endScreen?.description || 'Your answers were submitted.';
     const buttonText = endScreen?.buttonText || '';
+    /* End screen reuses the welcome-screen card shell so colour, font,
+       centering and mobile chrome all match. No alignment/media split
+       — end screen always centers its content column inside the card. */
     return (
-      <Wrapper themeVars={themeVars} device={device}>
-        <div style={doneMark}>✓</div>
-        {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
-        <h1 style={introTitle}>{title}</h1>
-        {test.is_graded && done?.score != null ? (
-          <p style={introText}>
-            Score: <b style={{ color: '#1c1626' }}>{done.score}</b>
-            {done.total != null ? <> / <b style={{ color: '#1c1626' }}>{done.total}</b></> : null}
-          </p>
-        ) : (
-          <p style={introText}>{timeExpired ? 'Time is up. Your answers were submitted.' : description}</p>
-        )}
-        {endScreen?.showSocialShare ? (
-          <div style={socialRow}>
-            <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+      <ScreenWrapper>
+        <div
+          className="test-player-screen__card"
+          data-test-device={device}
+          style={publicScreenCard}
+        >
+          <div className="test-player-screen__content" style={publicScreenContent}>
+            <div style={doneMark}>✓</div>
+            {endScreen?.imageUrl ? <img src={endScreen.imageUrl} alt="" style={screenImage} /> : null}
+            <h1 style={publicScreenTitle}>{title}</h1>
+            {test.is_graded && done?.score != null ? (
+              <p style={publicScreenDescription}>
+                Score: <b style={{ color: '#1c1626' }}>{done.score}</b>
+                {done.total != null ? <> / <b style={{ color: '#1c1626' }}>{done.total}</b></> : null}
+              </p>
+            ) : (
+              <p style={publicScreenDescription}>
+                {timeExpired ? 'Time is up. Your answers were submitted.' : description}
+              </p>
+            )}
+            {endScreen?.showSocialShare ? (
+              <div style={socialRow}>
+                <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
+              </div>
+            ) : null}
+            {buttonText ? (
+              <button
+                type="button"
+                onClick={() => {
+                  if (endScreen?.buttonLinkEnabled && endScreen.buttonLink) {
+                    window.location.href = endScreen.buttonLink;
+                  }
+                }}
+                style={publicScreenButton(false)}
+              >
+                {buttonText}
+              </button>
+            ) : null}
           </div>
-        ) : null}
-        {buttonText ? (
-          <button
-            type="button"
-            onClick={() => {
-              if (endScreen?.buttonLinkEnabled && endScreen.buttonLink) {
-                window.location.href = endScreen.buttonLink;
-              }
-            }}
-            style={primaryButton(false)}
-          >
-            {buttonText}
-          </button>
-        ) : null}
-      </Wrapper>
+        </div>
+      </ScreenWrapper>
     );
   }
 
