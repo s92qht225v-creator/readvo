@@ -296,7 +296,10 @@ function answerTypeLabel(type: BuilderQuestion['type']) {
 const answerModalBackdrop: React.CSSProperties = {
   position: 'fixed',
   inset: 0,
-  zIndex: 50,
+  /* Above the builder's `.tb-toolbar` (z-index 80) so the toolbar
+     doesn't peek over the modal. Also above `.tb-add-menu` (which
+     can open above the toolbar) so neither leaks through. */
+  zIndex: 200,
   background: 'rgba(47, 37, 51, 0.48)',
   backdropFilter: 'blur(4px)',
   display: 'flex',
