@@ -27,7 +27,7 @@ export function MarketplaceIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 69.45 63.44" fill="none" aria-hidden="true">
       <g stroke="#000000" strokeWidth="5" strokeMiterlimit="10" strokeLinejoin="round" fill="none">
-        <polyline points="59.35 35.26 59.35 52.29 10.1 52.29 10.1 35.26" />
+        <polyline points="56.16 35.26 56.16 52.29 13.29 52.29 13.29 35.26" />
         <path d="M34.72,25.23v4.78c0,2.9-2.92,5.26-6.49,5.26h-.73c-3.58,0-6.51-2.37-6.51-5.26v-4.78" />
         <path d="M48.47,25.23v4.78c0,2.9-2.92,5.26-6.51,5.26h-.73c-3.56,0-6.51-2.37-6.51-5.26v-4.78" />
         <path d="M20.98,25.22v4.78c0,2.9-2.92,5.26-6.49,5.26h-.73c-3.58,0-6.51-2.37-6.51-5.26v-4.78" />
