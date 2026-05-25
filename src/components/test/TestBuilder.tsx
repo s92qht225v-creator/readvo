@@ -1341,19 +1341,25 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
       >
         <span className="tb-left__menu-icon" aria-hidden="true">
           {isHidden ? (
-            <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M1.5 9s2.75-5 7.5-5 7.5 5 7.5 5-2.75 5-7.5 5S1.5 9 1.5 9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="9" cy="9" r="2.25" fill="currentColor"/>
+            <svg viewBox="4 6 42 38" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+              <g stroke="currentColor" strokeWidth="2.73" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                <path d="M31.3,14.38c-2.41-.83-4.8-1.32-7.38-1.14-7.84.69-14.21,5.81-19.43,11.52,2.75,2.96,5.4,5.43,8.66,7.56" />
+                <path d="M19.43,35.37c10.16,3.34,19.33-3.24,26.08-10.63-2.42-2.61-4.89-4.94-7.7-6.93" />
+                <path d="M18.7,14.38c2.41-.83,4.8-1.32,7.38-1.14,7.84.69,14.21,5.81,19.43,11.52-2.75,2.96-5.4,5.43-8.66,7.56" />
+                <path d="M30.57,35.37c-10.16,3.34-19.33-3.24-26.08-10.63,2.42-2.61,4.89-4.94,7.7-6.93" />
+              </g>
+              <circle cx="25" cy="25" r="6.67" fill="currentColor" stroke="currentColor" strokeWidth="2.73" strokeMiterlimit="10" />
             </svg>
           ) : (
-            <svg viewBox="5 8 40 34" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-              <g stroke="currentColor" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" fill="none">
-                <line x1="37.59" y1="12.25" x2="11.65" y2="37.75" />
-                <path d="M29.62,17.21c-1.77-.61-3.52-.97-5.42-.84-5.75.51-10.42,4.26-14.25,8.45,2.01,2.18,3.96,3.98,6.35,5.55" />
-                <path d="M20.91,32.61c7.45,2.45,14.18-2.38,19.14-7.8-1.78-1.92-3.59-3.62-5.65-5.09" />
-                <path d="M27.16,20.37c-2-.92-4.17-.51-5.63.94s-1.82,3.51-1.03,5.51" />
-                <path d="M22.75,28.88c1.83.72,3.72.31,5.1-.93s1.96-3.11,1.42-5.06" />
+            <svg viewBox="4 6 42 38" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+              <g stroke="currentColor" strokeWidth="2.73" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                <path d="M31.3,14.38c-2.41-.83-4.8-1.32-7.38-1.14-7.84.69-14.21,5.81-19.43,11.52,2.75,2.96,5.4,5.43,8.66,7.56" />
+                <path d="M19.43,35.37c10.16,3.34,19.33-3.24,26.08-10.63-2.42-2.61-4.89-4.94-7.7-6.93" />
+                <path d="M18.7,14.38c2.41-.83,4.8-1.32,7.38-1.14,7.84.69,14.21,5.81,19.43,11.52-2.75,2.96-5.4,5.43-8.66,7.56" />
+                <path d="M30.57,35.37c-10.16,3.34-19.33-3.24-26.08-10.63,2.42-2.61,4.89-4.94,7.7-6.93" />
               </g>
+              <circle cx="25" cy="25" r="6.67" fill="currentColor" stroke="currentColor" strokeWidth="2.73" strokeMiterlimit="10" />
+              <line x1="41.99" y1="8.3" x2="8.01" y2="41.7" stroke="currentColor" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" />
             </svg>
           )}
         </span>
