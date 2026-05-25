@@ -486,7 +486,7 @@ const panelTitle: React.CSSProperties = {
 const sectionCard: React.CSSProperties = {
   background: '#fff',
   border: '1px solid #e4ded8',
-  borderRadius: 7,
+  borderRadius: 3,
   padding: 14,
   boxShadow: '0 8px 22px rgba(47,40,53,0.04)',
 };
@@ -500,7 +500,7 @@ const sectionTitle: React.CSSProperties = {
 
 const staticNote: React.CSSProperties = {
   padding: '9px 10px',
-  borderRadius: 7,
+  borderRadius: 3,
   background: '#f8f5f1',
   color: '#6b6470',
   fontSize: 12,
@@ -568,7 +568,7 @@ const layoutSelectControl: React.CSSProperties = {
   gap: 6,
   padding: '0 10px',
   border: '1px solid #ded8d1',
-  borderRadius: 7,
+  borderRadius: 3,
   background: '#fff',
   boxSizing: 'border-box',
   color: '#4f4655',
@@ -601,7 +601,7 @@ const layoutPopover = (optionCount: number, openAbove: boolean, isDesktop: boole
   gap: 7,
   width: optionCount * 36 + (optionCount - 1) * 7 + 24,
   padding: '10px 12px',
-  borderRadius: 7,
+  borderRadius: 3,
   background: '#fff',
   border: '1px solid #eee7df',
   boxShadow: '0 0 0 4px rgba(47, 40, 53, 0.05), 0 14px 34px rgba(47, 40, 53, 0.14)',
@@ -613,7 +613,7 @@ const layoutOptionButton = (active: boolean, desktop = false, disabled = false):
   width: 36,
   height: 34,
   border: 'none',
-  borderRadius: 7,
+  borderRadius: 3,
   background: active ? '#f1efec' : 'transparent',
   color: active ? '#2f2835' : '#6b6470',
   opacity: disabled ? 0.3 : 1,
@@ -626,7 +626,7 @@ const layoutOptionButton = (active: boolean, desktop = false, disabled = false):
 const mediaAddButton: React.CSSProperties = {
   width: 34,
   height: 34,
-  borderRadius: 7,
+  borderRadius: 3,
   border: '1px solid #ded8d1',
   background: '#fff',
   color: '#6b6470',

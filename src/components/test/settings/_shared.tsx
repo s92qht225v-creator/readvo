@@ -100,7 +100,7 @@ export function correctAnswerChip(active: boolean): CSSProperties {
     width: '100%',
     minHeight: 34,
     padding: '7px 9px',
-    borderRadius: 7,
+    borderRadius: 3,
     border: active ? '1px solid #2f2533' : '1px solid #ded8d1',
     background: active ? '#2f2533' : '#fff',
     color: active ? '#fff' : '#2f2835',
@@ -120,7 +120,7 @@ export const kicker: CSSProperties = {
 
 export const inputStyle: CSSProperties = {
   flex: 1, padding: '9px 11px', fontSize: 13,
-  border: '1px solid #ded8d1', borderRadius: 7,
+  border: '1px solid #ded8d1', borderRadius: 3,
   background: '#fff',
   boxSizing: 'border-box',
   color: '#2f2835',
@@ -130,7 +130,7 @@ export const inputStyle: CSSProperties = {
 export const textareaStyle: CSSProperties = {
   width: '100%', boxSizing: 'border-box',
   padding: '10px 11px', fontSize: 14,
-  border: '1px solid #ded8d1', borderRadius: 7,
+  border: '1px solid #ded8d1', borderRadius: 3,
   background: '#fff',
   fontFamily: 'inherit', resize: 'vertical',
   color: '#2f2835',
@@ -146,14 +146,14 @@ export const removeBtn: CSSProperties = {
 export const addChoiceBtn: CSSProperties = {
   alignSelf: 'flex-start', padding: '7px 11px', fontSize: 12,
   background: '#fff', border: '1px dashed #c9c1ca',
-  borderRadius: 7, cursor: 'pointer', color: '#4f4655',
+  borderRadius: 3, cursor: 'pointer', color: '#4f4655',
   fontWeight: 750,
 };
 
 export const correctAnswerBlock: CSSProperties = {
   marginTop: 8,
   padding: 10,
-  borderRadius: 7,
+  borderRadius: 3,
   background: '#f7f5f2',
   border: '1px solid #e8e0d8',
   display: 'grid',

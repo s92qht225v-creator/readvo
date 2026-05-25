@@ -2529,7 +2529,7 @@ function MarketplaceTogglePopover({ test, updateTest }: {
         type="button"
         onClick={() => setOpen(o => !o)}
         style={{
-          padding: '6px 12px', borderRadius: 6,
+          padding: '6px 12px', borderRadius: 3,
           border: test.is_marketplace ? '1px solid #0445b8' : '1px solid #d8d3cd',
           background: test.is_marketplace ? '#eaf0fb' : '#fff',
           color: test.is_marketplace ? '#0445b8' : '#0f172a',
@@ -4110,7 +4110,7 @@ const pubBtn = (isPub: boolean): React.CSSProperties => ({
   padding: '9px 18px', fontSize: 13, fontWeight: 800,
   background: isPub ? '#fff' : '#2f2533',
   color: isPub ? '#2f2533' : '#fff',
-  border: isPub ? '1.5px solid #2f2533' : 'none', borderRadius: 7,
+  border: isPub ? '1.5px solid #2f2533' : 'none', borderRadius: 3,
   cursor: 'pointer',
 });
 
