@@ -420,9 +420,9 @@ export function TestPlayer({ test, forceDevice }: Props) {
             />
             <div className="test-player-screen__content" style={publicScreenContent}>
               <h1 style={publicScreenTitle}>{title}</h1>
-              <p style={publicScreenDescription}>
-                {description || 'Description (optional)'}
-              </p>
+              {description ? (
+                <p style={publicScreenDescription}>{description}</p>
+              ) : null}
               {/* Collector fields go between description and the Start
                   button so the CTA sits at the natural bottom of the
                   form. Field labels are omitted — the placeholder
