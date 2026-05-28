@@ -208,6 +208,7 @@ export async function POST(request: NextRequest) {
         admin,
         payment.marketplace_source_test_id,
         payment.user_id,
+        payment.marketplace_workspace_id ?? null,
       );
       if (!copy) {
         return NextResponse.json({ error: 'Failed to duplicate marketplace test' }, { status: 500 });

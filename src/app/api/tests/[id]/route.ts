@@ -44,6 +44,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     is_marketplace?: boolean;
     marketplace_price?: number | null;
     marketplace_summary?: string | null;
+    workspace_id?: string | null;
   } | null;
   if (!body) return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
 
@@ -83,6 +84,21 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     patch.marketplace_summary = null;
   } else if (typeof body.marketplace_summary === 'string') {
     patch.marketplace_summary = body.marketplace_summary.slice(0, 500);
+  }
+
+  /* Move test between workspaces. null = default bucket. A non-null
+     target must be a workspace owned by the same user. */
+  if (body.workspace_id === null) {
+    patch.workspace_id = null;
+  } else if (typeof body.workspace_id === 'string') {
+    const { data: ws } = await auth.admin
+      .from('test_workspaces')
+      .select('id')
+      .eq('id', body.workspace_id)
+      .eq('owner_id', auth.userId)
+      .maybeSingle();
+    if (!ws) return NextResponse.json({ error: 'invalid_workspace' }, { status: 400 });
+    patch.workspace_id = body.workspace_id;
   }
 
   const { data, error } = await auth.admin

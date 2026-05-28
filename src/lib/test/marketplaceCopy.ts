@@ -20,6 +20,10 @@ export async function copyMarketplaceTestToBuyer(
   admin: SupabaseClient,
   sourceTestId: string,
   buyerId: string,
+  /* Optional buyer-chosen workspace for the copy. Validated here:
+     must belong to the buyer, else the copy falls back to the default
+     (null) bucket. */
+  targetWorkspaceId?: string | null,
 ): Promise<{ id: string; slug: string } | null> {
   const { data: source, error: sourceErr } = await admin
     .from('tests')
@@ -29,6 +33,17 @@ export async function copyMarketplaceTestToBuyer(
   if (sourceErr || !source) {
     console.error('marketplace copy: source not found', sourceTestId, sourceErr);
     return null;
+  }
+
+  let workspaceId: string | null = null;
+  if (targetWorkspaceId) {
+    const { data: ws } = await admin
+      .from('test_workspaces')
+      .select('id')
+      .eq('id', targetWorkspaceId)
+      .eq('owner_id', buyerId)
+      .maybeSingle();
+    if (ws) workspaceId = targetWorkspaceId;
   }
 
   const slug = await generateUniqueSlug(async candidate => {
@@ -50,6 +65,7 @@ export async function copyMarketplaceTestToBuyer(
       ...('time_limit_seconds' in source ? { time_limit_seconds: source.time_limit_seconds ?? null } : {}),
       is_graded: !!source.is_graded,
       is_published: false,
+      workspace_id: workspaceId,
       /* The copy is NOT a marketplace listing itself — only the
          source is. Leave is_marketplace at its default false. */
     })

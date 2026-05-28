@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo, type ReactNode } from 'react';
+import {
+  DndContext, PointerSensor, useSensor, useSensors,
+  useDraggable, useDroppable, type DragEndEvent,
+} from '@dnd-kit/core';
 import { useAuth } from '@/hooks/useAuth';
 import { authHeaders } from '@/lib/test/clientFetch';
 import { navigateToTestHref } from '@/lib/test/paths';
-import type { Test } from '@/lib/test/types';
+import type { Test, Workspace } from '@/lib/test/types';
+import { FREE_WORKSPACE_LIMIT } from '@/lib/test/types';
 import { TestLink } from './TestLink';
 import { FormsIcon, MarketplaceIcon, SettingsIcon, ListViewIcon, GridViewIcon, ChevronDownIcon, SortIcon, MoreMenuIcon } from './testList/icons';
 import { formatDate } from './testList/formatDate';
@@ -116,34 +121,15 @@ type MarketplaceTest = {
 };
 
 const DEFAULT_WORKSPACE: WorkspaceItem = { id: 'default', name: 'My workspace' };
-const WORKSPACES_KEY = 'blim-test-workspaces';
 const ACTIVE_WORKSPACE_KEY = 'blim-test-active-workspace';
 
-function readStoredWorkspaces(): WorkspaceItem[] {
-  if (typeof window === 'undefined') return [DEFAULT_WORKSPACE];
-  try {
-    const raw = window.localStorage.getItem(WORKSPACES_KEY);
-    if (!raw) return [DEFAULT_WORKSPACE];
-    const parsed = JSON.parse(raw) as unknown;
-    if (!Array.isArray(parsed)) return [DEFAULT_WORKSPACE];
-    const valid = parsed.filter((w): w is WorkspaceItem =>
-      !!w && typeof (w as WorkspaceItem).id === 'string' && typeof (w as WorkspaceItem).name === 'string');
-    /* Always guarantee the default workspace is present and first. */
-    const withoutDefault = valid.filter(w => w.id !== 'default');
-    return [DEFAULT_WORKSPACE, ...withoutDefault];
-  } catch {
-    return [DEFAULT_WORKSPACE];
-  }
-}
-
+/* The active-workspace selection (which folder you're viewing) is a UI
+   convenience kept in localStorage. The workspace LIST + membership are
+   server-backed (test_workspaces + tests.workspace_id). */
 function readStoredActiveWorkspace(): string {
   if (typeof window === 'undefined') return 'default';
   try {
-    const id = window.localStorage.getItem(ACTIVE_WORKSPACE_KEY) || 'default';
-    /* Guard against a stale active id pointing at a workspace that no
-       longer exists — would otherwise show an empty 'phantom' folder. */
-    const exists = readStoredWorkspaces().some(w => w.id === id);
-    return exists ? id : 'default';
+    return window.localStorage.getItem(ACTIVE_WORKSPACE_KEY) || 'default';
   } catch {
     return 'default';
   }
@@ -163,11 +149,20 @@ export function TestList() {
   const [sortMode, setSortMode] = useState<SortMode>('created');
   const [isSortOpen, setIsSortOpen] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('list');
-  /* Workspaces are client-only (no backend yet) — persist to
-     localStorage so newly created ones survive a reload instead of
-     vanishing. The default workspace is always present. */
-  const [workspaces, setWorkspaces] = useState<WorkspaceItem[]>(() => readStoredWorkspaces());
+  /* Server-backed workspaces (test_workspaces). The synthetic
+     'default' bucket (workspace_id = null) is prepended for display
+     and is not a stored row. */
+  const [serverWorkspaces, setServerWorkspaces] = useState<Workspace[]>([]);
   const [activeWorkspaceId, setActiveWorkspaceId] = useState(() => readStoredActiveWorkspace());
+  const [workspaceError, setWorkspaceError] = useState<string | null>(null);
+  const [draggingTestId, setDraggingTestId] = useState<string | null>(null);
+  const workspaces = useMemo<WorkspaceItem[]>(
+    () => [DEFAULT_WORKSPACE, ...serverWorkspaces.map(w => ({ id: w.id, name: w.name }))],
+    [serverWorkspaces],
+  );
+  /* 6px activation distance so a click on a test row still navigates;
+     only a deliberate drag starts the move. */
+  const dndSensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 6 } }));
   const [isWorkspaceMenuOpen, setIsWorkspaceMenuOpen] = useState(false);
   const [isRenamingWorkspace, setIsRenamingWorkspace] = useState(false);
   const [workspaceDraft, setWorkspaceDraft] = useState('My workspace');
@@ -197,8 +192,16 @@ export function TestList() {
     setTests(json.tests);
   }, [getAccessToken]);
 
+  const loadWorkspaces = useCallback(async () => {
+    const tok = await getAccessToken();
+    const res = await fetch('/api/workspaces', { headers: authHeaders(tok) });
+    if (!res.ok) return;
+    const json = await res.json().catch(() => ({ workspaces: [] }));
+    setServerWorkspaces(json.workspaces ?? []);
+  }, [getAccessToken]);
+
   // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { load(); loadWorkspaces(); }, [load, loadWorkspaces]);
 
   /* Lazy-fetch marketplace tests the first time the Marketplace tab
      is opened. Result cached in state for the session; re-fetch on
@@ -236,14 +239,18 @@ export function TestList() {
     return () => { cancelled = true; };
   }, [getAccessToken]);
 
-  /* Persist workspaces + active selection so created workspaces
-     survive reloads (they have no backend yet). */
-  useEffect(() => {
-    try { window.localStorage.setItem(WORKSPACES_KEY, JSON.stringify(workspaces)); } catch { /* private mode / quota */ }
-  }, [workspaces]);
+  /* Persist only the active-folder selection (UI convenience). */
   useEffect(() => {
     try { window.localStorage.setItem(ACTIVE_WORKSPACE_KEY, activeWorkspaceId); } catch { /* private mode / quota */ }
   }, [activeWorkspaceId]);
+
+  /* If the active workspace no longer exists (deleted elsewhere or stale
+     localStorage), fall back to the default bucket. */
+  useEffect(() => {
+    if (activeWorkspaceId !== 'default' && !serverWorkspaces.some(w => w.id === activeWorkspaceId)) {
+      setActiveWorkspaceId('default');
+    }
+  }, [serverWorkspaces, activeWorkspaceId]);
 
   useEffect(() => {
     if (!openMenuId && !isSortOpen && !isWorkspaceMenuOpen) return;
@@ -258,12 +265,19 @@ export function TestList() {
 
   const visibleTests = useMemo(() => {
     if (!tests) return null;
-    if (activeWorkspaceId !== 'default') return [];
+    /* Filter by the active workspace: 'default' shows tests with no
+       workspace (workspace_id null/undefined); a real id shows only
+       that workspace's tests. */
+    const inWorkspace = tests.filter(t => (
+      activeWorkspaceId === 'default'
+        ? !t.workspace_id
+        : t.workspace_id === activeWorkspaceId
+    ));
     const q = query.trim().toLowerCase();
-    const filtered = q ? tests.filter(t => (
+    const filtered = q ? inWorkspace.filter(t => (
       t.title.toLowerCase().includes(q) ||
       t.slug.toLowerCase().includes(q)
-    )) : tests;
+    )) : inWorkspace;
     return [...filtered].sort((a, b) => {
       if (sortMode === 'alphabetical') return a.title.localeCompare(b.title);
       if (sortMode === 'updated') {
@@ -361,29 +375,67 @@ export function TestList() {
     setIsRenamingWorkspace(true);
   };
 
-  const saveWorkspaceRename = () => {
+  const saveWorkspaceRename = async () => {
     const nextTitle = workspaceDraft.trim();
-    if (nextTitle) {
-      setWorkspaces(current => current.map(workspace => (
-        workspace.id === activeWorkspaceId ? { ...workspace, name: nextTitle } : workspace
-      )));
-    }
     setIsRenamingWorkspace(false);
+    if (!nextTitle || activeWorkspaceId === 'default') return;
+    /* Optimistic rename, then persist. */
+    setServerWorkspaces(current => current.map(w => (
+      w.id === activeWorkspaceId ? { ...w, name: nextTitle } : w
+    )));
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/workspaces/${activeWorkspaceId}`, {
+      method: 'PATCH',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ name: nextTitle }),
+    });
+    if (!res.ok) loadWorkspaces();  // revert to server truth on failure
   };
 
   const openAddWorkspace = () => {
     setNewWorkspaceDraft('');
+    setWorkspaceError(null);
     setIsAddingWorkspace(true);
   };
 
-  const saveNewWorkspace = () => {
+  const saveNewWorkspace = async () => {
     const name = newWorkspaceDraft.trim();
     if (!name) return;
-    const workspace = { id: `local-${Date.now()}`, name };
-    setWorkspaces(current => [...current, workspace]);
+    setWorkspaceError(null);
+    const tok = await getAccessToken();
+    const res = await fetch('/api/workspaces', {
+      method: 'POST',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ name }),
+    });
+    if (!res.ok) {
+      const json = await res.json().catch(() => ({}));
+      setWorkspaceError(
+        json.error === 'free_workspace_limit_reached'
+          ? `Free accounts can create up to ${FREE_WORKSPACE_LIMIT} workspaces. Upgrade for unlimited.`
+          : 'Failed to create workspace',
+      );
+      return;
+    }
+    const { workspace } = await res.json();
+    setServerWorkspaces(current => [...current, workspace]);
     setActiveWorkspaceId(workspace.id);
     setIsAddingWorkspace(false);
   };
+
+  /* Move a test into a workspace (or back to default with null). Used
+     by drag-and-drop onto the sidebar. Optimistic. */
+  const moveTestToWorkspace = useCallback(async (testId: string, workspaceId: string | null) => {
+    const targetId = workspaceId === 'default' ? null : workspaceId;
+    setTests(current => current?.map(t => (t.id === testId ? { ...t, workspace_id: targetId } : t)) ?? current);
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/tests/${testId}`, {
+      method: 'PATCH',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ workspace_id: targetId }),
+    });
+    if (!res.ok) load();  // revert to server truth on failure
+  }, [getAccessToken, load]);
 
   const openCreateTest = () => {
     setNewTestDraft('');
@@ -400,7 +452,8 @@ export function TestList() {
     const res = await fetch('/api/tests', {
       method: 'POST',
       headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
-      body: JSON.stringify({ title }),
+      /* Drop the new test into the workspace currently being viewed. */
+      body: JSON.stringify({ title, workspace_id: activeWorkspaceId === 'default' ? null : activeWorkspaceId }),
     });
     if (!res.ok) {
       const json = await res.json().catch(() => ({}));
@@ -415,7 +468,23 @@ export function TestList() {
   };
 
   const deleteWorkspace = () => {
+    if (activeWorkspaceId === 'default') return;
     setIsDeletingWorkspace(true);
+  };
+
+  const confirmDeleteWorkspace = async () => {
+    const id = activeWorkspaceId;
+    setIsDeletingWorkspace(false);
+    if (id === 'default') return;
+    /* Optimistic: remove from sidebar, return to default. Tests in it
+       fall back to the default bucket server-side (FK set null), so
+       refresh tests too. */
+    setServerWorkspaces(current => current.filter(w => w.id !== id));
+    setActiveWorkspaceId('default');
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/workspaces/${id}`, { method: 'DELETE', headers: authHeaders(tok) });
+    if (!res.ok) { loadWorkspaces(); return; }
+    load();  // tests that were in it now show null workspace_id
   };
 
   if (error) return <div style={{ color: '#dc2626', padding: 24 }}>{error}</div>;
@@ -426,6 +495,25 @@ export function TestList() {
   const renderedTests = visibleTests ?? [];
   const activeWorkspace = workspaces.find(workspace => workspace.id === activeWorkspaceId) ?? workspaces[0];
   const workspaceName = activeWorkspace?.name ?? 'My workspace';
+  const workspaceCount = (id: string) => (
+    id === 'default'
+      ? tests.filter(t => !t.workspace_id).length
+      : tests.filter(t => t.workspace_id === id).length
+  );
+
+  const handleDragEnd = (event: DragEndEvent) => {
+    setDraggingTestId(null);
+    const testId = event.active?.id ? String(event.active.id) : null;
+    const overId = event.over?.id ? String(event.over.id) : null;
+    if (!testId || !overId) return;
+    /* over ids are prefixed 'ws-' to namespace droppable workspaces. */
+    if (!overId.startsWith('ws-')) return;
+    const workspaceId = overId.slice(3);
+    const test = tests.find(t => t.id === testId);
+    const currentWs = test?.workspace_id ?? 'default';
+    if (currentWs === workspaceId) return;  // no-op drop on same folder
+    moveTestToWorkspace(testId, workspaceId);
+  };
 
   return (
     <div style={{ background: '#fff', minHeight: 'calc(100vh - 61px)' }}>
@@ -666,7 +754,7 @@ export function TestList() {
             style={renameModal}
             onSubmit={event => {
               event.preventDefault();
-              setIsDeletingWorkspace(false);
+              confirmDeleteWorkspace();
             }}
           >
             <button
@@ -679,7 +767,7 @@ export function TestList() {
             </button>
             <h2 id="delete-workspace-title" style={renameModalTitle}>Delete workspace</h2>
             <p style={deleteModalText}>
-              Workspace deletion is not available yet. This default workspace contains {tests.length} {tests.length === 1 ? 'test' : 'tests'}.
+              Delete <strong>{workspaceName}</strong>? Its tests aren&apos;t deleted — they move back to “My workspace”.
             </p>
             <div style={renameModalActions}>
               <button type="button" style={renameModalCancel} onClick={() => setIsDeletingWorkspace(false)}>Cancel</button>
@@ -722,6 +810,12 @@ export function TestList() {
         </button>
       </nav>
 
+      <DndContext
+        sensors={dndSensors}
+        onDragStart={event => setDraggingTestId(event.active?.id ? String(event.active.id) : null)}
+        onDragCancel={() => setDraggingTestId(null)}
+        onDragEnd={handleDragEnd}
+      >
       <div style={workspaceShell}>
         <aside style={sideRail}>
           <button type="button" style={createBtn} onClick={openCreateTest}>+ Create test</button>
@@ -745,17 +839,19 @@ export function TestList() {
             <div style={privateLabel}>Private</div>
             <div style={workspaceList}>
               {workspaces.map(workspace => (
-                <button
+                <WorkspaceDropTarget
                   key={workspace.id}
-                  type="button"
-                  onClick={() => setActiveWorkspaceId(workspace.id)}
-                  style={workspace.id === activeWorkspaceId ? workspaceItem : workspaceItemMuted}
-                >
-                  <span>{workspace.name}</span>
-                  <span>{workspace.id === 'default' ? tests.length : 0}</span>
-                </button>
+                  workspace={workspace}
+                  count={workspaceCount(workspace.id)}
+                  active={workspace.id === activeWorkspaceId}
+                  dragging={!!draggingTestId}
+                  onSelect={() => setActiveWorkspaceId(workspace.id)}
+                />
               ))}
             </div>
+            {workspaceError ? (
+              <div style={{ color: '#b91c1c', fontSize: 12, marginTop: 8 }}>{workspaceError}</div>
+            ) : null}
           </div>
 
           {hasActiveSubscription === true ? (
@@ -946,19 +1042,7 @@ export function TestList() {
               </div>
               <ul style={testRows}>
                 {renderedTests.map(t => (
-                  <li
-                    key={t.id}
-                    style={testRow}
-                    role="link"
-                    tabIndex={0}
-                    onClick={() => openTestBuilder(t)}
-                    onKeyDown={event => {
-                      if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        openTestBuilder(t);
-                      }
-                    }}
-                  >
+                  <DraggableTestRow key={t.id} testId={t.id} onOpen={() => openTestBuilder(t)}>
                     <div style={testIcon}>{t.title.slice(0, 1).toUpperCase() || 'T'}</div>
                     <div style={{ minWidth: 0 }}>
                       <TestLink href={`/dashboard/${t.id}/edit`} style={testTitle}>
@@ -1001,7 +1085,7 @@ export function TestList() {
                         </div>
                       ) : null}
                     </div>
-                  </li>
+                  </DraggableTestRow>
                 ))}
               </ul>
             </section>
@@ -1009,10 +1093,12 @@ export function TestList() {
           </>)}
         </main>
       </div>
+      </DndContext>
 
       {buyingTest ? (
         <MarketplaceBuyModal
           test={buyingTest}
+          workspaces={workspaces}
           onClose={() => setBuyingTest(null)}
           onSubmitted={() => {
             setBuyingTest(null);
@@ -1023,6 +1109,65 @@ export function TestList() {
         />
       ) : null}
     </div>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Drag-and-drop: test rows are draggable; sidebar workspaces are drop
+   targets. Dropping a row on a workspace moves the test there.
+   ────────────────────────────────────────────────────────────────── */
+function DraggableTestRow({ testId, onOpen, children }: {
+  testId: string;
+  onOpen: () => void;
+  children: ReactNode;
+}) {
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: testId });
+  return (
+    <li
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      style={{ ...testRow, opacity: isDragging ? 0.4 : 1, cursor: isDragging ? 'grabbing' : 'pointer' }}
+      role="link"
+      tabIndex={0}
+      onClick={onOpen}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onOpen();
+        }
+      }}
+    >
+      {children}
+    </li>
+  );
+}
+
+function WorkspaceDropTarget({ workspace, count, active, dragging, onSelect }: {
+  workspace: WorkspaceItem;
+  count: number;
+  active: boolean;
+  dragging: boolean;
+  onSelect: () => void;
+}) {
+  const { setNodeRef, isOver } = useDroppable({ id: `ws-${workspace.id}` });
+  return (
+    <button
+      ref={setNodeRef}
+      type="button"
+      onClick={onSelect}
+      style={{
+        ...(active ? workspaceItem : workspaceItemMuted),
+        /* Highlight as a drop zone while a row is being dragged over it. */
+        outline: isOver ? '2px solid #2f2533' : 'none',
+        outlineOffset: -2,
+        background: isOver ? '#f1efec' : (active ? workspaceItem.background : workspaceItemMuted.background),
+        transition: dragging ? 'outline 0.08s, background 0.08s' : undefined,
+      }}
+    >
+      <span>{workspace.name}</span>
+      <span>{count}</span>
+    </button>
   );
 }
 
@@ -1092,8 +1237,9 @@ function MarketplacePane({ tests, ownedTestIds, onBuy }: {
    MarketplaceBuyModal — payment-screenshot flow for marketplace
    purchases. Reuses POST /api/payment with kind=marketplace_test.
    ────────────────────────────────────────────────────────────────── */
-function MarketplaceBuyModal({ test, onClose, onSubmitted, getAccessToken }: {
+function MarketplaceBuyModal({ test, workspaces, onClose, onSubmitted, getAccessToken }: {
   test: MarketplaceTest;
+  workspaces: WorkspaceItem[];
   onClose: () => void;
   onSubmitted: () => void;
   getAccessToken: () => Promise<string | null>;
@@ -1102,6 +1248,8 @@ function MarketplaceBuyModal({ test, onClose, onSubmitted, getAccessToken }: {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  /* Buyer picks which workspace the purchased copy lands in. */
+  const [targetWorkspace, setTargetWorkspace] = useState<string>('default');
 
   const submit = async () => {
     if (!file || submitting) return;
@@ -1110,6 +1258,7 @@ function MarketplaceBuyModal({ test, onClose, onSubmitted, getAccessToken }: {
     const form = new FormData();
     form.append('kind', 'marketplace_test');
     form.append('marketplaceTestId', test.id);
+    if (targetWorkspace !== 'default') form.append('marketplaceWorkspaceId', targetWorkspace);
     form.append('plan', `marketplace:${test.id}`);
     form.append('amount', String(test.price));
     form.append('screenshot', file);
@@ -1163,6 +1312,21 @@ function MarketplaceBuyModal({ test, onClose, onSubmitted, getAccessToken }: {
               <div><strong>Card:</strong> 8600 1234 5678 9012</div>
               <div><strong>Holder:</strong> BLIM LLC</div>
             </div>
+            <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: '#6b6470', marginBottom: 4 }}>
+              Add to workspace
+            </label>
+            <select
+              value={targetWorkspace}
+              onChange={e => setTargetWorkspace(e.target.value)}
+              style={{
+                width: '100%', marginBottom: 12, padding: '9px 10px', borderRadius: 3,
+                border: '1px solid #d8d3cd', background: '#fff', fontSize: 14, color: '#0f172a',
+              }}
+            >
+              {workspaces.map(w => (
+                <option key={w.id} value={w.id}>{w.name}</option>
+              ))}
+            </select>
             <input
               type="file"
               accept="image/*"

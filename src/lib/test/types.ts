@@ -213,12 +213,28 @@ export interface Test {
   is_marketplace?: boolean;
   marketplace_price?: number | null;       // soums
   marketplace_summary?: string | null;     // catalog listing description
+  /* Workspace membership. null = the default 'My workspace' bucket;
+     a uuid = a user-created workspace (test_workspaces.id). */
+  workspace_id?: string | null;
   /* Completed-response count. Populated only by GET /api/tests; not a
      persisted column on the tests table. */
   response_count?: number;
   created_at: string;
   updated_at: string;
 }
+
+/* User-created folder for organizing tests. Backed by the
+   test_workspaces table. The default workspace is represented by
+   workspace_id = null on a test (no row), not a stored record. */
+export interface Workspace {
+  id: string;
+  owner_id: string;
+  name: string;
+  position: number;
+  created_at: string;
+}
+
+export const FREE_WORKSPACE_LIMIT = 3;
 
 export interface TestScreenConfig {
   enabled: boolean;

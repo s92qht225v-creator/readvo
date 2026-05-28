@@ -63,6 +63,9 @@ export async function POST(request: NextRequest) {
      buyer's workspace instead of granting a subscription. */
   const kindVal = formData.get('kind');
   const marketplaceTestIdVal = formData.get('marketplaceTestId');
+  /* Buyer-chosen workspace for the copy (optional). Stored on the
+     payment request and used at admin-approval time. */
+  const marketplaceWorkspaceIdVal = formData.get('marketplaceWorkspaceId');
 
   if (typeof planVal !== 'string' || typeof amountVal !== 'string' || !(screenshotVal instanceof File)) {
     return NextResponse.json({ error: 'Missing or invalid fields' }, { status: 400 });
@@ -76,6 +79,9 @@ export async function POST(request: NextRequest) {
     : 'subscription';
   const marketplaceTestId = typeof marketplaceTestIdVal === 'string' && marketplaceTestIdVal
     ? marketplaceTestIdVal
+    : null;
+  const marketplaceWorkspaceId = typeof marketplaceWorkspaceIdVal === 'string' && marketplaceWorkspaceIdVal
+    ? marketplaceWorkspaceIdVal
     : null;
 
   if (!plan || isNaN(amount) || amount <= 0) {
@@ -133,6 +139,7 @@ export async function POST(request: NextRequest) {
       screenshot_url: screenshotUrl,
       kind,
       marketplace_source_test_id: marketplaceTestId,
+      marketplace_workspace_id: marketplaceWorkspaceId,
     });
 
   if (dbError) {

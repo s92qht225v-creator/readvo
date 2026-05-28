@@ -54,11 +54,24 @@ export async function POST(req: NextRequest) {
   const userId = await getRequestUserId(req);
   if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
 
-  const body = await req.json().catch(() => null) as { title?: string; description?: string; is_graded?: boolean } | null;
+  const body = await req.json().catch(() => null) as { title?: string; description?: string; is_graded?: boolean; workspace_id?: string | null } | null;
   const title = body?.title?.trim();
   if (!title) return NextResponse.json({ error: 'title_required' }, { status: 400 });
 
   const admin = getSupabaseAdmin();
+
+  /* Optional workspace placement — validate ownership of a non-null
+     target so a test can't be created into someone else's workspace. */
+  let workspaceId: string | null = null;
+  if (typeof body?.workspace_id === 'string') {
+    const { data: ws } = await admin
+      .from('test_workspaces')
+      .select('id')
+      .eq('id', body.workspace_id)
+      .eq('owner_id', userId)
+      .maybeSingle();
+    if (ws) workspaceId = body.workspace_id;
+  }
 
   /* Drafts are unlimited on free tier — the cap is on published tests
      and lives in POST /api/tests/[id]/publish. */
@@ -76,6 +89,7 @@ export async function POST(req: NextRequest) {
       title,
       description: body?.description ?? '',
       is_graded: !!body?.is_graded,
+      workspace_id: workspaceId,
     })
     .select('*')
     .single();
