@@ -14,14 +14,21 @@ export function OpinionScaleSettings({ q, onChange }: {
         <div style={{ display: 'grid', gap: 8 }}>
           <input
             type="number"
+            min={0}
+            max={9}
             value={opts.min ?? 0}
-            onChange={e => onChange({ ...q, options: { ...opts, min: Number(e.target.value) } })}
+            /* min clamped to 0..9 (must stay below max). */
+            onChange={e => onChange({ ...q, options: { ...opts, min: Math.max(0, Math.min(9, Math.round(Number(e.target.value)) || 0)) } })}
             style={inputStyle}
           />
           <input
             type="number"
+            min={1}
+            max={10}
             value={opts.max ?? 10}
-            onChange={e => onChange({ ...q, options: { ...opts, max: Number(e.target.value) } })}
+            /* max capped at 10 (the highest allowed point). Anything
+               higher snaps to 10; floor of 1 keeps a valid range. */
+            onChange={e => onChange({ ...q, options: { ...opts, max: Math.max(1, Math.min(10, Math.round(Number(e.target.value)) || 1)) } })}
             style={inputStyle}
           />
         </div>

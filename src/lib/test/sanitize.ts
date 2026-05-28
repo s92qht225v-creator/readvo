@@ -210,8 +210,10 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       media: questionMedia(q),
       required: q.required,
       options: {
-        min: Number.isFinite(opts.min) ? opts.min : 0,
-        max: Number.isFinite(opts.max) ? opts.max : 10,
+        /* 10 is the highest allowed point — cap defensively so any
+           legacy/over-limit data still renders 0..10. */
+        min: Number.isFinite(opts.min) ? Math.max(0, Math.min(9, opts.min)) : 0,
+        max: Number.isFinite(opts.max) ? Math.max(1, Math.min(10, opts.max)) : 10,
         minLabel: opts.minLabel,
         maxLabel: opts.maxLabel,
       },
