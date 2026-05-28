@@ -2937,13 +2937,13 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
-                <h2 className="tb-preview-title" style={{
+                <h2 className="tb-preview-title" dir="auto" style={{
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
                   {q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…'}
                 </h2>
-                <div className="tb-preview-hint" style={previewHint}>
+                <div className="tb-preview-hint" dir="auto" style={previewHint}>
                   {description ? <MathText>{description}</MathText> : 'Description (optional)'}
                 </div>
               </>
