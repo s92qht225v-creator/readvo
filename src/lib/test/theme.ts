@@ -107,6 +107,18 @@ function isTestFontFamily(value: unknown): value is TestFontFamily {
   return typeof value === 'string' && value in FONT_FAMILY;
 }
 
+/* Universal script fallback appended to every font stack so Chinese
+   (CJK) and Arabic glyphs render via a sensible per-OS font when the
+   chosen Latin family has no glyph for them. Ordered: Chinese (mac /
+   windows / cross-platform Noto), then Arabic, then a generic
+   sans-serif. The browser uses the first family that has the glyph,
+   so Latin text still uses the chosen family. */
+const SCRIPT_FALLBACK = '"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", sans-serif';
+
+function withScriptFallback(stack: string): string {
+  return `${stack}, ${SCRIPT_FALLBACK}`;
+}
+
 const ANSWER_RADIUS: Record<TestCornerRadius, string> = {
   sharp: '0px',
   soft: '6px',
@@ -170,7 +182,7 @@ export function testThemeCssVars(input: unknown): Record<string, string> {
     '--test-theme-button': theme.buttonColor,
     '--test-theme-button-text': theme.buttonTextColor,
     '--test-theme-font-scale': FONT_SCALE[theme.fontScale],
-    '--test-theme-font-family': FONT_FAMILY[theme.fontFamily],
+    '--test-theme-font-family': withScriptFallback(FONT_FAMILY[theme.fontFamily]),
     '--test-theme-answer-radius': ANSWER_RADIUS[theme.answerRadius],
     '--test-theme-bg-image': theme.backgroundImageUrl ? `url("${theme.backgroundImageUrl}")` : 'none',
   };

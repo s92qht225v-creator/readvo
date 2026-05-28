@@ -74,7 +74,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               ) : (
                 <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span className="tq-option__label">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -131,7 +131,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               </div>
               <div className="test-picture-option__label">
                 <span className="test-picture-option__badge">{LETTERS[i] ?? i + 1}</span>
-                <span className="test-picture-option__text">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+                <span className="test-picture-option__text" dir="auto">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
               </div>
             </button>
           );
@@ -188,7 +188,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   </svg>
                 ) : null}
               </span>
-              <span className="tq-option__label">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -216,7 +216,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               data-selected={selected ? 'true' : 'false'}
             >
               <span className="tq-option__chip" aria-hidden="true">{LETTERS[i]}</span>
-              <span className="tq-option__label">{label}</span>
+              <span className="tq-option__label" dir="auto">{label}</span>
             </button>
           );
         })}
@@ -259,7 +259,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
             onSubmit();
           }
         }}
-        className="test-short-answer"
+        dir="auto" className="test-short-answer"
       />
     );
   }
@@ -273,7 +273,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
         maxLength={opts.maxLength}
         placeholder="Type your answer…"
         onChange={e => onChange({ text: e.target.value })}
-        className="test-long-answer"
+        dir="auto" className="test-long-answer"
       />
     );
   }
@@ -412,7 +412,7 @@ function CustomDropdownAnswer({
           }
         }}
       >
-        <span>{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
+        <span dir="auto">{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
         <ChevronDownIcon className="test-custom-dropdown__chevron" />
       </button>
       {open ? (
@@ -433,7 +433,7 @@ function CustomDropdownAnswer({
                 }}
               >
                 <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
-                <span>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
+                <span dir="auto">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
               </button>
             );
           })}

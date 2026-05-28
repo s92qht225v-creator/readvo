@@ -609,11 +609,11 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
             forceDevice={forceDevice}
             header={(
               <>
-                <h2 className="test-player__title" style={questionTitle}>
+                <h2 className="test-player__title" style={questionTitle} dir="auto">
                   {q.prompt ? <MathText>{q.prompt}</MathText> : '…'}
                 </h2>
                 {q.description ? (
-                  <p className="test-player__description" style={questionDescription}>
+                  <p className="test-player__description" style={questionDescription} dir="auto">
                     <MathText>{q.description}</MathText>
                   </p>
                 ) : null}
