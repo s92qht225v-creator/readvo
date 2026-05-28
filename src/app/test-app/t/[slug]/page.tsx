@@ -3,6 +3,7 @@
 import { use, useEffect, useState } from 'react';
 import { TestPlayer } from '@/components/test/TestPlayer';
 import { navigateToTestHref } from '@/lib/test/paths';
+import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import type { PublicTest } from '@/lib/test/types';
 
 type PreviewDevice = 'desktop' | 'mobile';
@@ -33,21 +34,6 @@ function readStoredSession(slug: string): Session | null {
 function writeStoredSession(slug: string, session: Session) {
   if (typeof window === 'undefined') return;
   try { window.localStorage.setItem(sessionKey(slug), JSON.stringify(session)); } catch { /* quota / private mode */ }
-}
-
-function ensureRespondentToken(slug: string): string {
-  const key = `blim-test-token-${slug}`;
-  if (typeof window === 'undefined') return '';
-  try {
-    const existing = window.localStorage.getItem(key);
-    if (existing && existing.length >= 8) return existing;
-    const fresh = (crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`).slice(0, 64);
-    window.localStorage.setItem(key, fresh);
-    return fresh;
-  } catch {
-    /* localStorage unavailable — fall back to in-memory token for this load */
-    return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-  }
 }
 
 function shouldShowPreviewTools() {

@@ -5,6 +5,7 @@ import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { MathText } from './MathText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
+import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -33,17 +34,6 @@ type RespondentProfile = {
   phone: string;
   email: string;
 };
-
-const TOKEN_KEY_PREFIX = 'blim-test-token:';
-
-function ensureToken(slug: string): string {
-  const key = TOKEN_KEY_PREFIX + slug;
-  const existing = localStorage.getItem(key);
-  if (existing) return existing;
-  const fresh = `${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}-${Date.now()}`;
-  localStorage.setItem(key, fresh);
-  return fresh;
-}
 
 function formatClock(totalSeconds: number): string {
   const safeSeconds = Math.max(0, Math.floor(totalSeconds));
@@ -266,7 +256,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     setPhase('submitting');
     if (timedOut) setTimeExpired(true);
     setErrMsg(null);
-    const token = ensureToken(test.slug);
+    const token = ensureRespondentToken(test.slug);
     const profileName = respondentLabel(profile);
     const payload = {
       respondent_token: token,

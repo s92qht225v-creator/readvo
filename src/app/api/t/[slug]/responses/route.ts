@@ -129,12 +129,15 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
 
   let respRow: { id: string; score: number | null } | null = null;
   let respErr: { message?: string } | null = null;
+  let updatedSession = false;
 
   /* If the client opened a session up-front (POST /session), update that
-     row instead of inserting a new one. This is the path the player
-     takes by default — the shuffle seed lives on that row, so we keep
-     the seed-to-answers tie intact. Reject if the session was already
-     completed (double-submit). */
+     row instead of inserting a new one — the shuffle seed lives on that
+     row, so this keeps the seed-to-answers tie intact. If the session
+     row can't be found (stale localStorage, session POST failed, server
+     reset), fall back to inserting a fresh response rather than failing
+     the submission — a missing session must never strand a respondent.
+     A genuinely completed session is still rejected as a duplicate. */
   if (sessionResponseId) {
     const { data: existing } = await admin
       .from('test_responses')
@@ -143,29 +146,32 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
       .eq('test_id', test.id)
       .eq('respondent_token', body.respondent_token)
       .maybeSingle();
-    if (!existing) {
-      return NextResponse.json({ error: 'session_not_found' }, { status: 404 });
-    }
-    if (existing.completed_at) {
+    if (existing?.completed_at) {
       return NextResponse.json({ error: 'duplicate' }, { status: 409 });
     }
-    /* Don't overwrite started_at — keep the original session-open time. */
-    const { started_at: _started, ...updatePatch } = responsePayload;
-    const update = await admin
-      .from('test_responses')
-      .update(updatePatch)
-      .eq('id', sessionResponseId)
-      .select('id, score')
-      .single();
-    respRow = update.data;
-    respErr = update.error;
+    if (existing) {
+      /* Don't overwrite started_at — keep the original session-open time. */
+      const { started_at: _started, ...updatePatch } = responsePayload;
+      const update = await admin
+        .from('test_responses')
+        .update(updatePatch)
+        .eq('id', sessionResponseId)
+        .select('id, score')
+        .single();
+      respRow = update.data;
+      respErr = update.error;
+      updatedSession = !respErr;
 
-    /* Clear stale answers from any partial earlier submission attempt
-       for this session row before inserting the canonical ones. */
-    if (!respErr) {
-      await admin.from('test_answers').delete().eq('response_id', sessionResponseId);
+      /* Clear stale answers from any partial earlier submission attempt
+         for this session row before inserting the canonical ones. */
+      if (updatedSession) {
+        await admin.from('test_answers').delete().eq('response_id', sessionResponseId);
+      }
     }
-  } else {
+    /* else: session row not found → fall through to insert below. */
+  }
+
+  if (!updatedSession) {
     const insert = await admin
       .from('test_responses')
       .insert(responsePayload)
