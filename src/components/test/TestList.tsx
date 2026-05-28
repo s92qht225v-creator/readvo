@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo, type ReactNode } from 'react';
+import { useEffect, useState, useCallback, useMemo, type ReactNode, type CSSProperties } from 'react';
 import {
-  DndContext, PointerSensor, useSensor, useSensors,
+  DndContext, DragOverlay, PointerSensor, useSensor, useSensors,
   useDraggable, useDroppable, type DragEndEvent,
 } from '@dnd-kit/core';
 import { useAuth } from '@/hooks/useAuth';
@@ -1093,6 +1093,18 @@ export function TestList() {
           </>)}
         </main>
       </div>
+      <DragOverlay dropAnimation={null}>
+        {draggingTestId ? (() => {
+          const t = tests.find(x => x.id === draggingTestId);
+          if (!t) return null;
+          return (
+            <div style={dragPreview}>
+              <div style={testIcon}>{t.title.slice(0, 1).toUpperCase() || 'T'}</div>
+              <span style={dragPreviewTitle}>{t.title}</span>
+            </div>
+          );
+        })() : null}
+      </DragOverlay>
       </DndContext>
 
       {buyingTest ? (
@@ -1116,6 +1128,28 @@ export function TestList() {
    Drag-and-drop: test rows are draggable; sidebar workspaces are drop
    targets. Dropping a row on a workspace moves the test there.
    ────────────────────────────────────────────────────────────────── */
+const dragPreview: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 10,
+  padding: '8px 14px 8px 8px',
+  background: '#fff',
+  border: '1px solid #2f2533',
+  borderRadius: 3,
+  boxShadow: '0 12px 30px rgba(47,37,51,0.22)',
+  cursor: 'grabbing',
+  maxWidth: 280,
+};
+
+const dragPreviewTitle: CSSProperties = {
+  fontSize: 14,
+  fontWeight: 600,
+  color: '#2f2835',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+};
+
 function DraggableTestRow({ testId, onOpen, children }: {
   testId: string;
   onOpen: () => void;
