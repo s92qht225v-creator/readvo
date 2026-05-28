@@ -13948,7 +13948,11 @@ body {
   width: 50% !important;
   max-width: 50% !important;
   min-width: 0;
-  height: 100%;
+  /* No height:100% here — it would make the cross-size non-auto and
+     disable the card's `align-items: stretch`, collapsing the column
+     to content height (content stuck at the top). Letting stretch fill
+     the column to the card height is what makes justify-content:center
+     actually center vertically. */
   box-sizing: border-box;
   display: flex !important;
   flex-direction: column !important;
