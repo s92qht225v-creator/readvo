@@ -21,6 +21,9 @@ src/components/test/
 ├── QuestionMediaBlock.tsx  Wraps question content with media (image/video).
 │                           Picks layout class via `layoutClassName(media,
 │                           forceDevice)` — the qmedia class swap.
+├── MathText.tsx            Renders text with inline `$…$` / block `$$…$$`
+│                           LaTeX via KaTeX. Used for prompts, descriptions,
+│                           and choice labels. See "Math rendering" below.
 ├── SettingsPanel.tsx       Right-rail editor. Dispatches per-type to
 │                           `settings/XSettings.tsx`. Contains MediaRow,
 │                           MediaLayoutControls, LayoutSelect (the layout
@@ -75,17 +78,42 @@ Other test-app files outside this folder:
 src/lib/test/
 ├── quota.ts               Free-tier published cap + enforcement helpers.
 │                          See "Free-tier quota" section below.
-├── types.ts               BuilderQuestion / PublicQuestion / TestScreenConfig / etc.
+├── types.ts               BuilderQuestion / PublicQuestion / TestScreenConfig /
+│                          Workspace / FREE_WORKSPACE_LIMIT / etc.
 ├── theme.ts               TestThemeConfig + testThemeCssVars helper.
+├── scriptLang.ts          detectScriptLang() — CJK/Arabic content → BCP-47
+│                          lang tag. See "Multi-language fonts + RTL".
+├── respondentToken.ts     ensureRespondentToken() — ONE canonical per-test
+│                          token (localStorage key `blim-test-token:{slug}`)
+│                          shared by session-open + submit. See "Per-respondent
+│                          sessions".
+├── marketplaceCopy.ts     copyMarketplaceTestToBuyer() — duplicates a listing
+│                          into the buyer's workspace on admin approval.
 ├── slug.ts, devAuth.ts, clientFetch.ts, media.ts, grade.ts
 └── …
 src/app/api/tests/
-├── route.ts               GET (list) + POST (create draft, unlimited)
-├── [id]/route.ts          PATCH (edit) + DELETE
+├── route.ts               GET (list, + per-test response_count + enforce
+│                          publish cap) + POST (create draft, accepts
+│                          workspace_id)
+├── [id]/route.ts          PATCH (edit; accepts workspace_id, is_marketplace,
+│                          marketplace_price/summary) + DELETE
 ├── [id]/publish/route.ts  Enforces the free-tier published cap
 ├── [id]/duplicate/route.ts Always copies as draft
 ├── [id]/responses/route.ts Responses for a test
 └── media/route.ts         Upload images / audio / video to Supabase Storage
+src/app/api/t/[slug]/
+├── route.ts               Public GET (sanitized, accepts ?seed=, computes
+│                          show_branding)
+├── session/route.ts       POST — opens/rejoins a respondent session row with
+│                          a shuffle seed
+└── responses/route.ts     POST — submit (updates the session row; falls back
+                           to insert if the session is missing)
+src/app/api/
+├── workspaces/route.ts    GET (list) + POST (create, 3-free cap)
+├── workspaces/[id]/route.ts PATCH (rename/reorder) + DELETE
+├── settings/route.ts      GET + PATCH user_settings (hide_branding,
+│                          notify_on_response)
+└── marketplace/route.ts   Public GET — lists is_marketplace tests
 ```
 
 Live-preview shell frame (the phone-frame / desktop frame at `?preview=1`)
@@ -518,6 +546,151 @@ direction-aware variants (`cardSlideVariants`). Going Next slides the
 new question up from below, going Back slides it down from above. The
 direction is tracked via `navDirection` state; all `setIdx` callsites
 funnel through `goToIdx()` which sets the direction.
+
+## Math rendering (LaTeX / KaTeX)
+
+`MathText.tsx` renders text containing LaTeX wrapped in `$…$` (inline)
+or `$$…$$` (block), via KaTeX. A literal dollar is `\$`. Plain text with
+no `$` fast-paths to a bare string. `throwOnError: false` — bad LaTeX
+renders red instead of crashing (teachers author by hand).
+
+- `katex/dist/katex.min.css` is imported once in the root
+  `src/app/layout.tsx`.
+- Wired into: `TestPlayer` prompt + description; `QuestionRenderer`
+  choice labels (mc / checkbox / picture / dropdown trigger + menu);
+  `TestBuilder` PreviewCanvas prompt + description hint. Builder
+  choices inherit it through the shared `QuestionRenderer`.
+- A collapsible "Insert math (LaTeX)" cheat-sheet sits under the
+  question text field in `SettingsPanel.tsx`.
+
+## Multi-language fonts + RTL
+
+Three things make Russian / Chinese / Japanese / Korean / Arabic render
+correctly:
+
+1. **`--test-theme-font-family` is Latin-only.** Do NOT append CJK fonts
+   to it — a Chinese-first fallback forces Chinese glyph shapes onto
+   Japanese text.
+2. **Per-script `lang`.** `detectScriptLang(text)` (in `scriptLang.ts`)
+   inspects the content and returns `ko` (Hangul) / `ja` (kana) / `ar`
+   (Arabic) / `zh` (Han, default) / undefined. It's set as the `lang`
+   attribute on every text-bearing element (prompt, description, choice
+   labels, dropdown, text inputs) so the browser picks region-correct
+   glyphs via the OpenType `locl` feature. Priority: Hangul > kana >
+   Arabic > Han.
+3. **`[lang="…"]`-scoped font stacks** in `reading.css` lead each
+   language with its correct regional font (PingFang/YaHei for zh,
+   Hiragino/Yu Gothic for ja, Apple SD Gothic/Malgun for ko, Noto
+   Arabic for ar) after the Latin theme font.
+
+**RTL:** `dir="auto"` is on the same text elements, so each string picks
+LTR/RTL from its first strong character — Arabic right-aligns, Latin/CJK
+stay LTR, automatically and per-string. No per-test setting.
+
+When adding a new text surface, set BOTH `dir="auto"` and
+`lang={detectScriptLang(text)}`.
+
+## Workspaces
+
+Server-backed folders for organizing tests (`test_workspaces` table;
+`tests.workspace_id` nullable FK, `on delete set null`). The default
+"My workspace" bucket is `workspace_id = null` — NOT a stored row.
+
+- Free tier capped at `FREE_WORKSPACE_LIMIT = 3` (POST returns 402 when
+  over; subscribers unlimited).
+- `TestList.tsx`: workspace list fetched from `/api/workspaces`; the
+  active-folder selection is the only thing in localStorage
+  (`blim-test-active-workspace`) — purely a UI convenience.
+- `visibleTests` filters by `workspace_id`; sidebar counts are real.
+- **Drag-and-drop** (dnd-kit): test rows (`DraggableTestRow`) drag onto
+  sidebar workspaces (`WorkspaceDropTarget`, drop id `ws-{id}`). 6px
+  activation distance so a click still opens the test. A `DragOverlay`
+  renders the floating preview (without it the cursor drags nothing).
+- Deleting a workspace moves its tests back to the default bucket (FK
+  set null), never deletes them.
+- Marketplace buyers pick a target workspace at checkout (threaded via
+  `payment_requests.marketplace_workspace_id`).
+
+## Settings tab
+
+`TestList.tsx` → `SettingsPane`. Three cards: Plan (Pro + days left /
+Free + upgrade), Branding (the **Hide "Made with Blim"** toggle —
+Pro-only), Account (name/email/joined + log out).
+
+- Backed by `user_settings` (user_id PK, `hide_branding`,
+  `notify_on_response`), RLS on, service-role only.
+- `/api/settings` GET + PATCH (upsert, partial).
+- `notify_on_response` column exists but isn't wired to fire yet
+  (planned Telegram new-response alert).
+
+## Branding badge ("Made with Blim")
+
+The public test API (`/api/t/[slug]`) sets `show_branding` on the
+payload: **true unless the owner is an active subscriber AND has
+`user_settings.hide_branding = true`.** Free users always show it;
+subscribers see it by default and opt out via the Settings toggle.
+`TestPlayer` renders the badge (link to test.blim.uz) at the bottom of
+the welcome screen when `test.show_branding`.
+
+## Marketplace
+
+Premade tests flagged `is_marketplace = true` are listed publicly via
+`/api/marketplace`. The dashboard "Marketplace" tab (`MarketplacePane`
+in `TestList.tsx`) shows the catalog; a buyer uploads a payment
+screenshot (`MarketplaceBuyModal` → `/api/payment` with
+`kind='marketplace_test'`, `marketplaceTestId`, optional
+`marketplaceWorkspaceId`). On admin approval (`/api/admin`),
+`copyMarketplaceTestToBuyer` duplicates the source test into the
+buyer's workspace as a draft and links it back via
+`payment_requests.marketplace_copy_test_id`. Listing flags
+(`is_marketplace`, `marketplace_price`, `marketplace_summary`) are set
+from the builder's `MarketplaceTogglePopover`. Currently single-vendor
+(admin-curated); a two-sided teacher marketplace is a deferred phase 2.
+
+## Per-respondent sessions + shuffle seed
+
+True per-respondent randomization (not the old stable-per-question
+shuffle):
+
+- On load, the player page POSTs `/api/t/[slug]/session` with the
+  respondent token → server inserts a `test_responses` row with a
+  random `seed` (and `started_at`), returns `{ response_id, seed }`.
+  Existing in-flight sessions for the same token are reused (stable
+  shuffle across reloads).
+- The test is then fetched as `/api/t/[slug]?seed=…`; `sanitizeQuestion`
+  seeds choice/tile shuffles with `${q.id}:…:${seed}` — different per
+  respondent, identical across that respondent's reloads.
+- On submit, the player sends `response_id`; the responses route
+  UPDATEs that row (preserving the seed↔answers tie). If the session
+  row is missing it falls back to INSERT — a missing session never
+  strands a respondent. A completed session returns 409 (duplicate).
+- **Token gotcha:** session-open and submit MUST use the same
+  respondent token. Both import `ensureRespondentToken` from
+  `lib/test/respondentToken.ts` (key `blim-test-token:{slug}`). A
+  mismatch causes `session_not_found`.
+
+## Required-question submit guard
+
+The per-question Next button is gated on `canAdvance` (current question
+only). But the navigator lets you jump around + the "Finish the test"
+button submits directly — both could reach `submit()` with required
+questions blank (server then 400s `missing_required`).
+
+`TestPlayer` computes `firstMissingRequiredIdx` across ALL questions;
+`attemptSubmit()` is the single finish path (bottom Submit, Enter,
+navigator Finish). If a required question is unanswered it navigates
+there and shows an inline alert instead of submitting. Timer
+auto-submit bypasses the guard (time's up → send what exists).
+
+## Welcome / end screen auto-enable
+
+Adding the FIRST question to a test auto-enables both the welcome and
+end screens with defaults (`TestBuilder.addQuestion`, gated on
+`questions.length === 0`). The welcome content alignment drives the
+desktop 50/50 split unconditionally (even with no fields / no media).
+A disabled welcome screen skips the intro entirely (player auto-advances
+`intro → question`); a disabled end screen still shows a minimal
+"Submitted" acknowledgement.
 
 ## Webpack mode
 
