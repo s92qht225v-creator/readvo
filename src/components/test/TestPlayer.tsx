@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { MathText } from './MathText';
+import { detectScriptLang } from '@/lib/test/scriptLang';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -609,11 +610,11 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
             forceDevice={forceDevice}
             header={(
               <>
-                <h2 className="test-player__title" style={questionTitle} dir="auto">
+                <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(q.prompt)}>
                   {q.prompt ? <MathText>{q.prompt}</MathText> : '…'}
                 </h2>
                 {q.description ? (
-                  <p className="test-player__description" style={questionDescription} dir="auto">
+                  <p className="test-player__description" style={questionDescription} dir="auto" lang={detectScriptLang(q.description)}>
                     <MathText>{q.description}</MathText>
                   </p>
                 ) : null}

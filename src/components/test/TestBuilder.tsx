@@ -23,6 +23,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
 import { MathText } from './MathText';
+import { detectScriptLang } from '@/lib/test/scriptLang';
 import { SettingsPanel } from './SettingsPanel';
 import { PaywallNotice } from './PaywallNotice';
 import { TestLink } from './TestLink';
@@ -2937,13 +2938,13 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
-                <h2 className="tb-preview-title" dir="auto" style={{
+                <h2 className="tb-preview-title" dir="auto" lang={detectScriptLang(q.prompt)} style={{
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
                   {q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…'}
                 </h2>
-                <div className="tb-preview-hint" dir="auto" style={previewHint}>
+                <div className="tb-preview-hint" dir="auto" lang={detectScriptLang(description)} style={previewHint}>
                   {description ? <MathText>{description}</MathText> : 'Description (optional)'}
                 </div>
               </>

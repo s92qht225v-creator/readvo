@@ -13982,6 +13982,33 @@ body {
   display: none !important;
 }
 
+/* ── Per-script fonts for CJK + Arabic ──────────────────────────────
+   Text elements get a `lang` attribute from content detection
+   (detectScriptLang). Each language leads with its region-correct
+   font so shared Han/Kanji/Hangul characters render with the right
+   glyph shapes — a single Chinese-first fallback would force Chinese
+   shapes onto Japanese text. The chosen Latin theme font stays first
+   so Latin characters keep the picked typeface; the regional CJK font
+   only kicks in for glyphs the Latin font lacks. The `lang` attribute
+   also triggers the OpenType `locl` feature inside multi-region fonts
+   like Noto Sans CJK.
+
+   Scoped to the test surfaces (live player, preview shell, builder
+   canvas) so these never affect the rest of the app. `--test-theme-
+   font-family` only resolves inside those surfaces anyway. */
+.test-player [lang="zh"], .test-player-screen [lang="zh"], .tb-preview-card [lang="zh"] {
+  font-family: var(--test-theme-font-family, system-ui), "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+.test-player [lang="ja"], .test-player-screen [lang="ja"], .tb-preview-card [lang="ja"] {
+  font-family: var(--test-theme-font-family, system-ui), "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+}
+.test-player [lang="ko"], .test-player-screen [lang="ko"], .tb-preview-card [lang="ko"] {
+  font-family: var(--test-theme-font-family, system-ui), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+}
+.test-player [lang="ar"], .test-player-screen [lang="ar"], .tb-preview-card [lang="ar"] {
+  font-family: var(--test-theme-font-family, system-ui), "Geeza Pro", "Noto Sans Arabic", "Segoe UI", "Tahoma", sans-serif;
+}
+
 /* "Made with Blim" badge — shown on the welcome screen of every free
    user's published test. Subscribers get the flag stripped from the
    public API response so the badge never renders. Big blue button to

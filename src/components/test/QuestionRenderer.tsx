@@ -10,6 +10,7 @@ import type {
   AnswerSubmission,
 } from '@/lib/test/types';
 import { MathText } from './MathText';
+import { detectScriptLang } from '@/lib/test/scriptLang';
 import { FillBlanksPlayer } from './renderers/FillBlanksRenderer';
 import { MatchPlayer } from './renderers/MatchRenderer';
 import { OrderingPlayer } from './renderers/OrderingRenderer';
@@ -74,7 +75,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               ) : (
                 <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span className="tq-option__label" dir="auto">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto" lang={detectScriptLang(c.text)}>{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -131,7 +132,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               </div>
               <div className="test-picture-option__label">
                 <span className="test-picture-option__badge">{LETTERS[i] ?? i + 1}</span>
-                <span className="test-picture-option__text" dir="auto">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+                <span className="test-picture-option__text" dir="auto" lang={detectScriptLang(c.text)}>{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
               </div>
             </button>
           );
@@ -188,7 +189,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   </svg>
                 ) : null}
               </span>
-              <span className="tq-option__label" dir="auto">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -412,7 +413,7 @@ function CustomDropdownAnswer({
           }
         }}
       >
-        <span dir="auto">{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
+        <span dir="auto" lang={detectScriptLang(selectedChoice?.text)}>{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
         <ChevronDownIcon className="test-custom-dropdown__chevron" />
       </button>
       {open ? (
@@ -433,7 +434,7 @@ function CustomDropdownAnswer({
                 }}
               >
                 <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
-                <span dir="auto">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
+                <span dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
               </button>
             );
           })}
