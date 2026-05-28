@@ -36,17 +36,18 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     .eq('test_id', test.id)
     .order('position', { ascending: true });
 
-  /* Branding gate — show "Made with Blim" when the owner has no
-     active subscription. Subscribers get a clean welcome screen. */
+  /* Branding gate — show "Made with Blim" unless the owner is an
+     active subscriber AND has explicitly turned it off in Settings.
+     Free users always show it (can't hide); subscribers see it by
+     default but get the toggle as a paid perk. */
   let showBranding = true;
   if (test.owner_id) {
-    const { data: sub } = await admin
-      .from('subscriptions')
-      .select('ends_at')
-      .eq('user_id', test.owner_id)
-      .gt('ends_at', new Date().toISOString())
-      .maybeSingle();
-    if (sub) showBranding = false;
+    const [{ data: sub }, { data: settings }] = await Promise.all([
+      admin.from('subscriptions').select('ends_at').eq('user_id', test.owner_id)
+        .gt('ends_at', new Date().toISOString()).maybeSingle(),
+      admin.from('user_settings').select('hide_branding').eq('user_id', test.owner_id).maybeSingle(),
+    ]);
+    if (sub && settings?.hide_branding) showBranding = false;
   }
 
   const publicTest: PublicTest = {

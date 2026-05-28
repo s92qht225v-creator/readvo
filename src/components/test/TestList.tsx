@@ -136,7 +136,8 @@ function readStoredActiveWorkspace(): string {
 }
 
 export function TestList() {
-  const { getAccessToken } = useAuth();
+  const { getAccessToken, user, subscription, logout } = useAuth();
+  const [hideBranding, setHideBranding] = useState(false);
   const [tests, setTests] = useState<ListItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
@@ -200,8 +201,16 @@ export function TestList() {
     setServerWorkspaces(json.workspaces ?? []);
   }, [getAccessToken]);
 
+  const loadSettings = useCallback(async () => {
+    const tok = await getAccessToken();
+    const res = await fetch('/api/settings', { headers: authHeaders(tok) });
+    if (!res.ok) return;
+    const json = await res.json().catch(() => null);
+    if (json?.settings) setHideBranding(!!json.settings.hide_branding);
+  }, [getAccessToken]);
+
   // eslint-disable-next-line react-hooks/set-state-in-effect -- setState happens inside async fetch, after await
-  useEffect(() => { load(); loadWorkspaces(); }, [load, loadWorkspaces]);
+  useEffect(() => { load(); loadWorkspaces(); loadSettings(); }, [load, loadWorkspaces, loadSettings]);
 
   /* Lazy-fetch marketplace tests the first time the Marketplace tab
      is opened. Result cached in state for the session; re-fetch on
@@ -436,6 +445,17 @@ export function TestList() {
     });
     if (!res.ok) load();  // revert to server truth on failure
   }, [getAccessToken, load]);
+
+  const toggleHideBranding = async (next: boolean) => {
+    setHideBranding(next);  // optimistic
+    const tok = await getAccessToken();
+    const res = await fetch('/api/settings', {
+      method: 'PATCH',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ hide_branding: next }),
+    });
+    if (!res.ok) setHideBranding(!next);  // revert on failure
+  };
 
   const openCreateTest = () => {
     setNewTestDraft('');
@@ -877,9 +897,14 @@ export function TestList() {
               onBuy={setBuyingTest}
             />
           ) : dashboardTab === 'settings' ? (
-            <div style={{ padding: 32, color: '#6b6470' }}>
-              Settings coming soon.
-            </div>
+            <SettingsPane
+              user={user}
+              subscription={subscription}
+              hasActiveSubscription={hasActiveSubscription}
+              hideBranding={hideBranding}
+              onToggleHideBranding={toggleHideBranding}
+              onLogout={logout}
+            />
           ) : (<>
           <header style={workspaceHeader}>
             <div>
@@ -1204,6 +1229,125 @@ function WorkspaceDropTarget({ workspace, count, active, dragging, onSelect }: {
     </button>
   );
 }
+
+/* ──────────────────────────────────────────────────────────────────
+   SettingsPane — account, subscription, and preferences.
+   ────────────────────────────────────────────────────────────────── */
+function SettingsPane({ user, subscription, hasActiveSubscription, hideBranding, onToggleHideBranding, onLogout }: {
+  user: { name?: string; email?: string; created_at?: string; avatar_url?: string } | null;
+  subscription: { ends_at: string; plan?: string } | null;
+  hasActiveSubscription: boolean | null;
+  hideBranding: boolean;
+  onToggleHideBranding: (next: boolean) => void;
+  onLogout: () => void;
+}) {
+  const subDaysLeft = subscription
+    ? Math.max(0, Math.ceil((new Date(subscription.ends_at).getTime() - Date.now()) / 86_400_000))
+    : 0;
+  const isPro = hasActiveSubscription === true;
+
+  return (
+    <div style={settingsPane}>
+      {/* Subscription */}
+      <section style={settingsCard}>
+        <h2 style={settingsCardTitle}>Plan</h2>
+        {isPro ? (
+          <>
+            <div style={{ fontSize: 15, fontWeight: 700, color: '#15803d' }}>Pro</div>
+            <div style={settingsMuted}>
+              {subscription?.plan ? `${subscription.plan} · ` : ''}{subDaysLeft} day{subDaysLeft === 1 ? '' : 's'} left
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ fontSize: 15, fontWeight: 700, color: '#0f172a' }}>Free</div>
+            <div style={settingsMuted}>1 published test at a time · drafts unlimited · up to {FREE_WORKSPACE_LIMIT} workspaces</div>
+            <a href="https://blim.uz/uz/payment" style={settingsUpgradeBtn}>Upgrade to Pro</a>
+          </>
+        )}
+      </section>
+
+      {/* Branding (Pro perk) */}
+      <section style={settingsCard}>
+        <h2 style={settingsCardTitle}>Branding</h2>
+        <div style={settingsRow}>
+          <div>
+            <div style={{ fontSize: 14, color: '#2f2835', fontWeight: 600 }}>Hide “Made with Blim”</div>
+            <div style={settingsMuted}>
+              {isPro
+                ? 'Remove the Blim badge from your published tests.'
+                : 'Available on Pro. Free tests always show the Blim badge.'}
+            </div>
+          </div>
+          <SettingsToggle
+            checked={isPro && hideBranding}
+            disabled={!isPro}
+            onChange={onToggleHideBranding}
+          />
+        </div>
+      </section>
+
+      {/* Account */}
+      <section style={settingsCard}>
+        <h2 style={settingsCardTitle}>Account</h2>
+        {user ? (
+          <div style={{ display: 'grid', gap: 6 }}>
+            {user.name ? <div style={{ fontSize: 14, color: '#2f2835', fontWeight: 600 }}>{user.name}</div> : null}
+            {user.email ? <div style={settingsMuted}>{user.email}</div> : null}
+            {user.created_at ? <div style={settingsMuted}>Joined {formatDate(user.created_at)}</div> : null}
+          </div>
+        ) : <div style={settingsMuted}>Not signed in.</div>}
+        <button type="button" onClick={onLogout} style={settingsLogoutBtn}>Log out</button>
+      </section>
+    </div>
+  );
+}
+
+function SettingsToggle({ checked, disabled, onChange }: {
+  checked: boolean;
+  disabled?: boolean;
+  onChange: (next: boolean) => void;
+}) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={checked}
+      disabled={disabled}
+      onClick={() => !disabled && onChange(!checked)}
+      style={{
+        flexShrink: 0,
+        width: 44, height: 26, borderRadius: 999, border: 'none',
+        background: checked ? '#1c1626' : '#d4cfd6',
+        opacity: disabled ? 0.45 : 1,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        position: 'relative', transition: 'background 0.15s',
+      }}
+    >
+      <span style={{
+        position: 'absolute', top: 3, left: checked ? 21 : 3,
+        width: 20, height: 20, borderRadius: '50%', background: '#fff',
+        transition: 'left 0.15s',
+      }} />
+    </button>
+  );
+}
+
+const settingsPane: CSSProperties = { padding: 24, display: 'grid', gap: 16, maxWidth: 620 };
+const settingsCard: CSSProperties = {
+  background: '#fff', border: '1px solid #e4ded8', borderRadius: 3, padding: 20,
+};
+const settingsCardTitle: CSSProperties = { margin: '0 0 12px', fontSize: 13, fontWeight: 850, letterSpacing: 0.5, textTransform: 'uppercase', color: '#8b848f' };
+const settingsMuted: CSSProperties = { fontSize: 13, color: '#6b6470', lineHeight: 1.5 };
+const settingsRow: CSSProperties = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 };
+const settingsUpgradeBtn: CSSProperties = {
+  display: 'inline-block', marginTop: 12, padding: '8px 16px', borderRadius: 3,
+  background: '#2f2533', color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none',
+};
+const settingsLogoutBtn: CSSProperties = {
+  marginTop: 14, padding: '8px 16px', borderRadius: 3, border: '1px solid #ded8d1',
+  background: '#fff', color: '#b91c1c', fontWeight: 600, fontSize: 13, cursor: 'pointer',
+};
 
 /* ──────────────────────────────────────────────────────────────────
    MarketplacePane — catalog of premade tests anyone can buy.
