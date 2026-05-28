@@ -337,11 +337,15 @@ longer mounted but the helpers can be deleted in a follow-up cleanup.
 - **Rating**: selected stars only change colour (gold `#f59e0b`);
   unselected stays grey `#6b7177`. Owned by `--or-*` rule in
   `tq-options.css`.
-- **Opinion scale**: flat list of buttons in a flex-wrap row.
-  Mobile uses `--os-btn-basis: calc((100% - 5*gap) / 6)` so 7+
-  buttons wrap to a second row; partial last row centers via
-  `justify-content: center`. Desktop uses basis 0 + grow 1 so all
-  buttons share one row regardless of count.
+- **Opinion scale**: connected segmented control — a single
+  non-wrapping row on every device (`.test-opinion-scale__scale` =
+  flex `nowrap`, one outer rounded accent border, buttons
+  `flex: 1 1 0` with 1px accent dividers, `overflow: hidden` to clip
+  cells to the corners). An 11-point scale shrinks each cell to fit
+  rather than wrapping. Selected cell = solid `--test-theme-question`
+  fill + white number. Min/max anchor labels (`__labels`) sit BELOW
+  the row. The old `--os-btn-basis` / `--os-btn-grow` / `--os-row-gap`
+  tokens are now unused (kept defined; cleanup is optional).
 - **Ordering drag**: a `restrictToVerticalAxis` modifier on
   `DndContext` zeros out the x component of the dnd-kit transform,
   so rows can only be dragged up/down — no horizontal fling off the

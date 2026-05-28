@@ -943,41 +943,53 @@
   margin-inline: auto;
 }
 
-/* Flex wrap with explicit per-button basis — partial last row
-   centers automatically. Mobile: --os-btn-basis = 1/6 of container
-   so 7+ buttons wrap; --os-btn-grow = 0 so the last row's items
-   keep the same width as the first row (don't stretch). Desktop:
-   basis = 0 + grow = 1 so all buttons share one row equally. */
+/* Connected segmented control — a single non-wrapping row on every
+   device. One outer rounded border (the theme accent), buttons share
+   width equally (flex: 1 1 0), 1px accent dividers between cells.
+   overflow:hidden clips the cells to the rounded corners so the
+   selected fill never pokes past. 11-point scales shrink each cell to
+   fit rather than wrapping to a second row. */
 .test-opinion-scale__scale {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--os-row-gap);
-  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  border: 1px solid var(--test-theme-answer, #0445af);
+  border-radius: var(--os-btn-radius);
+  overflow: hidden;
 }
 
 .test-opinion-scale__scale button {
-  flex: var(--os-btn-grow) 0 var(--os-btn-basis);
+  flex: 1 1 0;
+  min-width: 0;
   height: var(--os-btn-h);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   border: none;
-  border-radius: var(--os-btn-radius);
+  border-left: 1px solid var(--test-theme-answer, #0445af);
+  border-radius: 0;
   background: #ffffff;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--test-theme-answer, #0445af) 12%, transparent);
   color: var(--test-theme-question, #262627);
   font-family: inherit;
   font-size: var(--os-btn-fs);
   font-weight: 400;
   line-height: 1;
   cursor: pointer;
-  transition: background-color 160ms ease, box-shadow 160ms ease;
+  transition: background-color 140ms ease, color 140ms ease;
 }
 
+.test-opinion-scale__scale button:first-child {
+  border-left: none;
+}
+
+/* Selected cell: solid dark fill + white number (matches the
+   segmented-control reference). Uses the theme's question (text)
+   colour so it stays readable across themes. */
 .test-opinion-scale__scale button[data-selected="true"] {
-  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 15%, #ffffff);
-  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
+  background: var(--test-theme-question, #262627);
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .test-opinion-scale__labels {
