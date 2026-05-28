@@ -115,6 +115,40 @@ type MarketplaceTest = {
   questionCount: number;
 };
 
+const DEFAULT_WORKSPACE: WorkspaceItem = { id: 'default', name: 'My workspace' };
+const WORKSPACES_KEY = 'blim-test-workspaces';
+const ACTIVE_WORKSPACE_KEY = 'blim-test-active-workspace';
+
+function readStoredWorkspaces(): WorkspaceItem[] {
+  if (typeof window === 'undefined') return [DEFAULT_WORKSPACE];
+  try {
+    const raw = window.localStorage.getItem(WORKSPACES_KEY);
+    if (!raw) return [DEFAULT_WORKSPACE];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [DEFAULT_WORKSPACE];
+    const valid = parsed.filter((w): w is WorkspaceItem =>
+      !!w && typeof (w as WorkspaceItem).id === 'string' && typeof (w as WorkspaceItem).name === 'string');
+    /* Always guarantee the default workspace is present and first. */
+    const withoutDefault = valid.filter(w => w.id !== 'default');
+    return [DEFAULT_WORKSPACE, ...withoutDefault];
+  } catch {
+    return [DEFAULT_WORKSPACE];
+  }
+}
+
+function readStoredActiveWorkspace(): string {
+  if (typeof window === 'undefined') return 'default';
+  try {
+    const id = window.localStorage.getItem(ACTIVE_WORKSPACE_KEY) || 'default';
+    /* Guard against a stale active id pointing at a workspace that no
+       longer exists — would otherwise show an empty 'phantom' folder. */
+    const exists = readStoredWorkspaces().some(w => w.id === id);
+    return exists ? id : 'default';
+  } catch {
+    return 'default';
+  }
+}
+
 export function TestList() {
   const { getAccessToken } = useAuth();
   const [tests, setTests] = useState<ListItem[] | null>(null);
@@ -129,8 +163,11 @@ export function TestList() {
   const [sortMode, setSortMode] = useState<SortMode>('created');
   const [isSortOpen, setIsSortOpen] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('list');
-  const [workspaces, setWorkspaces] = useState<WorkspaceItem[]>([{ id: 'default', name: 'My workspace' }]);
-  const [activeWorkspaceId, setActiveWorkspaceId] = useState('default');
+  /* Workspaces are client-only (no backend yet) — persist to
+     localStorage so newly created ones survive a reload instead of
+     vanishing. The default workspace is always present. */
+  const [workspaces, setWorkspaces] = useState<WorkspaceItem[]>(() => readStoredWorkspaces());
+  const [activeWorkspaceId, setActiveWorkspaceId] = useState(() => readStoredActiveWorkspace());
   const [isWorkspaceMenuOpen, setIsWorkspaceMenuOpen] = useState(false);
   const [isRenamingWorkspace, setIsRenamingWorkspace] = useState(false);
   const [workspaceDraft, setWorkspaceDraft] = useState('My workspace');
@@ -198,6 +235,15 @@ export function TestList() {
     })();
     return () => { cancelled = true; };
   }, [getAccessToken]);
+
+  /* Persist workspaces + active selection so created workspaces
+     survive reloads (they have no backend yet). */
+  useEffect(() => {
+    try { window.localStorage.setItem(WORKSPACES_KEY, JSON.stringify(workspaces)); } catch { /* private mode / quota */ }
+  }, [workspaces]);
+  useEffect(() => {
+    try { window.localStorage.setItem(ACTIVE_WORKSPACE_KEY, activeWorkspaceId); } catch { /* private mode / quota */ }
+  }, [activeWorkspaceId]);
 
   useEffect(() => {
     if (!openMenuId && !isSortOpen && !isWorkspaceMenuOpen) return;
