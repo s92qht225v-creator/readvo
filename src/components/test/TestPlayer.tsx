@@ -298,6 +298,35 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     }
   }, [answers, name, profile, responseId, startedAt, test.slug]);
 
+  /* Index of the first required question with no answer (across the
+     whole test, not just the current one), or -1 if all required are
+     answered. Used to block submission and jump the respondent to the
+     gap — covers navigator jumps + the "Finish the test" button, which
+     otherwise reach submit() with required questions still blank. */
+  const firstMissingRequiredIdx = useMemo(() => {
+    for (let i = 0; i < test.questions.length; i++) {
+      const qq = test.questions[i];
+      if (qq.required && !hasQuestionAnswer(qq, answers[qq.id])) return i;
+    }
+    return -1;
+  }, [test.questions, answers]);
+
+  const [requiredWarning, setRequiredWarning] = useState(false);
+
+  /* Single entry point for finishing the test. If a required question
+     is unanswered, navigate to it and show a hint instead of letting
+     the server reject with missing_required. */
+  const attemptSubmit = useCallback(() => {
+    if (firstMissingRequiredIdx >= 0) {
+      setNavigatorOpen(false);
+      goToIdx(firstMissingRequiredIdx);
+      setRequiredWarning(true);
+      return;
+    }
+    setRequiredWarning(false);
+    void submit();
+  }, [firstMissingRequiredIdx, goToIdx, submit]);
+
   const startQuestions = useCallback(() => {
     setStartedAt(new Date().toISOString());
     if (timerLimitSeconds) {
@@ -323,7 +352,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
       }
       if (e.key === 'Enter') {
         if (canAdvance) {
-          if (isLast) submit();
+          if (isLast) attemptSubmit();
           else goToIdx(i => i + 1);
         }
         return;
@@ -616,13 +645,19 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
                   question={q}
                   value={answer}
                   onChange={onChange}
-                  onSubmit={() => { if (canAdvance) { isLast ? submit() : goToIdx(idx + 1); } }}
+                  onSubmit={() => { if (canAdvance) { isLast ? attemptSubmit() : goToIdx(idx + 1); } }}
                 />
               </div>
             )}
           />
       </motion.div>
       </AnimatePresence>
+
+      {requiredWarning && !canAdvance ? (
+        <div role="alert" style={requiredWarnBar}>
+          This question is required — please answer it to finish.
+        </div>
+      ) : null}
 
       <div className="test-player__nav" style={navRow}>
         <button
@@ -637,7 +672,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
         </div>
         <button
           type="button"
-          onClick={() => isLast ? submit() : goToIdx(idx + 1)}
+          onClick={() => isLast ? attemptSubmit() : goToIdx(idx + 1)}
           disabled={!canAdvance || phase === 'submitting'}
           style={primaryButton(!canAdvance || phase === 'submitting')}
         >
@@ -714,7 +749,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
                 type="button"
                 onClick={() => {
                   setNavigatorOpen(false);
-                  void submit();
+                  attemptSubmit();
                 }}
                 disabled={phase === 'submitting'}
                 style={navigatorFinishButton(phase === 'submitting')}
@@ -1115,6 +1150,18 @@ const navRow: React.CSSProperties = {
   justifyContent: 'space-between',
   marginTop: 18,
   gap: 12,
+};
+
+const requiredWarnBar: React.CSSProperties = {
+  marginTop: 16,
+  padding: '10px 14px',
+  borderRadius: 8,
+  background: '#fef2f2',
+  border: '1px solid #fecaca',
+  color: '#b91c1c',
+  fontSize: 13,
+  fontWeight: 600,
+  textAlign: 'center',
 };
 
 const navProgress: React.CSSProperties = {
