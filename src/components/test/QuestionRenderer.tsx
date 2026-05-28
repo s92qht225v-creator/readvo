@@ -9,6 +9,7 @@ import type {
   PublicOpinionScaleOptions, PublicRatingOptions,
   AnswerSubmission,
 } from '@/lib/test/types';
+import { MathText } from './MathText';
 import { FillBlanksPlayer } from './renderers/FillBlanksRenderer';
 import { MatchPlayer } from './renderers/MatchRenderer';
 import { OrderingPlayer } from './renderers/OrderingRenderer';
@@ -73,7 +74,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               ) : (
                 <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span className="tq-option__label">{c.text || `Choice ${i + 1}`}</span>
+              <span className="tq-option__label">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -130,7 +131,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
               </div>
               <div className="test-picture-option__label">
                 <span className="test-picture-option__badge">{LETTERS[i] ?? i + 1}</span>
-                <span className="test-picture-option__text">{c.text || `Choice ${i + 1}`}</span>
+                <span className="test-picture-option__text">{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
               </div>
             </button>
           );
@@ -187,7 +188,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
                   </svg>
                 ) : null}
               </span>
-              <span className="tq-option__label">{choice.text || `Choice ${i + 1}`}</span>
+              <span className="tq-option__label">{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
             </button>
           );
         })}
@@ -411,7 +412,7 @@ function CustomDropdownAnswer({
           }
         }}
       >
-        <span>{selectedChoice?.text || 'Select an answer'}</span>
+        <span>{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
         <ChevronDownIcon className="test-custom-dropdown__chevron" />
       </button>
       {open ? (
@@ -432,7 +433,7 @@ function CustomDropdownAnswer({
                 }}
               >
                 <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
-                <span>{choice.text || `Choice ${index + 1}`}</span>
+                <span>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
               </button>
             );
           })}

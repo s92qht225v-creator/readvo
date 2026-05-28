@@ -70,6 +70,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
             style={textareaStyle}
           />
         </Field>
+        <MathHint />
       </Section>
 
       <Section title="Answer">
@@ -481,6 +482,65 @@ const panelTitle: React.CSSProperties = {
   fontSize: 20,
   fontWeight: 800,
   lineHeight: 1.1,
+};
+
+/* Math cheat-sheet shown under the question text/description fields.
+   Teachers wrap LaTeX in $…$ to render math. Collapsed by default. */
+const MATH_EXAMPLES: Array<{ type: string; render: string }> = [
+  { type: 'x^2', render: 'x²' },
+  { type: 'x_1', render: 'x₁' },
+  { type: '\\frac{a}{b}', render: 'a/b fraction' },
+  { type: '\\sqrt{x}', render: '√x' },
+  { type: '\\pi', render: 'π' },
+  { type: '\\times', render: '×' },
+  { type: '\\leq  \\geq', render: '≤ ≥' },
+  { type: '\\cdot', render: '·' },
+];
+
+function MathHint() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ marginTop: 4 }}>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        style={{
+          background: 'transparent', border: 'none', padding: 0, cursor: 'pointer',
+          color: '#6b6470', fontSize: 12, fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 4,
+        }}
+      >
+        {open ? '▾' : '▸'} Insert math (LaTeX)
+      </button>
+      {open ? (
+        <div style={{
+          marginTop: 8, padding: 10, borderRadius: 3, background: '#f8f5f1',
+          border: '1px solid #e8e0d8', fontSize: 12, color: '#4f4655', lineHeight: 1.6,
+        }}>
+          <div style={{ marginBottom: 8 }}>
+            Wrap math in <code style={mathCode}>$…$</code>. Example:{' '}
+            <code style={mathCode}>Solve $x^2 + 3x = 0$</code>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px 12px' }}>
+            {MATH_EXAMPLES.map(ex => (
+              <div key={ex.type} style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                <code style={mathCode}>{ex.type}</code>
+                <span style={{ color: '#8b848f' }}>{ex.render}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+const mathCode: React.CSSProperties = {
+  background: '#ece6df',
+  borderRadius: 3,
+  padding: '1px 5px',
+  fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+  fontSize: 11.5,
+  color: '#2f2835',
 };
 
 const sectionCard: React.CSSProperties = {

@@ -22,6 +22,7 @@ import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useAuth } from '@/hooks/useAuth';
 import { QuestionRenderer } from './QuestionRenderer';
 import { QuestionMediaLayout } from './QuestionMediaBlock';
+import { MathText } from './MathText';
 import { SettingsPanel } from './SettingsPanel';
 import { PaywallNotice } from './PaywallNotice';
 import { TestLink } from './TestLink';
@@ -2940,10 +2941,10 @@ function PreviewCanvas({
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
-                  {q.prompt || 'Your question…'}
+                  {q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…'}
                 </h2>
                 <div className="tb-preview-hint" style={previewHint}>
-                  {description || 'Description (optional)'}
+                  {description ? <MathText>{description}</MathText> : 'Description (optional)'}
                 </div>
               </>
             )}

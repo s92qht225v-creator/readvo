@@ -3,6 +3,7 @@ import { Noto_Sans } from 'next/font/google';
 import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import '@/styles/reading.css';
+import 'katex/dist/katex.min.css';
 import { YandexPageView } from '@/components/YandexPageView';
 import { MetaPageView } from '@/components/MetaPageView';
 
