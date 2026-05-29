@@ -7,7 +7,17 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Telegram not configured' }, { status: 500 });
   }
 
-  const origin = request.nextUrl.origin;
+  /* Build the public origin from the proxy-forwarded headers, NOT
+     request.nextUrl.origin — behind the nginx reverse proxy the latter
+     resolves to the internal http://localhost:3000, which Telegram
+     rejects ("redirect_uri required"). nginx sets `Host $host`
+     (blim.uz / test.blim.uz) and `X-Forwarded-Proto $scheme`, so the
+     header values are the real public origin. This must also match the
+     redirectUri the completion page sends to the callback (it uses
+     window.location.origin), or the token exchange fails. */
+  const forwardedHost = request.headers.get('x-forwarded-host') || request.headers.get('host');
+  const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
+  const origin = forwardedHost ? `${forwardedProto}://${forwardedHost}` : request.nextUrl.origin;
   const nextPath = request.nextUrl.searchParams.get('next') || '/uz/chinese';
   const redirectUri = `${origin}/auth/telegram/complete`;
 
