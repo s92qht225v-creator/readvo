@@ -1234,7 +1234,7 @@ function WorkspaceDropTarget({ workspace, count, active, dragging, onSelect }: {
    SettingsPane — account, subscription, and preferences.
    ────────────────────────────────────────────────────────────────── */
 function SettingsPane({ user, subscription, hasActiveSubscription, hideBranding, onToggleHideBranding, onLogout }: {
-  user: { name?: string; email?: string; created_at?: string; avatar_url?: string } | null;
+  user: { name?: string; email?: string; created_at?: string; avatar_url?: string; telegramId?: string; telegramUsername?: string } | null;
   subscription: { ends_at: string; plan?: string } | null;
   hasActiveSubscription: boolean | null;
   hideBranding: boolean;
@@ -1293,7 +1293,17 @@ function SettingsPane({ user, subscription, hasActiveSubscription, hideBranding,
         {user ? (
           <div style={{ display: 'grid', gap: 6 }}>
             {user.name ? <div style={{ fontSize: 14, color: '#2f2835', fontWeight: 600 }}>{user.name}</div> : null}
-            {user.email ? <div style={settingsMuted}>{user.email}</div> : null}
+            {/* Telegram identity instead of the synthetic
+                tg_<id>@telegram.blim email: prefer @username, else the
+                numeric Telegram ID. Non-Telegram (Google) users still
+                show their real email. */}
+            {user.telegramUsername
+              ? <div style={settingsMuted}>@{user.telegramUsername}</div>
+              : user.telegramId
+                ? <div style={settingsMuted}>Telegram ID: {user.telegramId}</div>
+                : user.email && !user.email.endsWith('@telegram.blim')
+                  ? <div style={settingsMuted}>{user.email}</div>
+                  : null}
             {user.created_at ? <div style={settingsMuted}>Joined {formatDate(user.created_at)}</div> : null}
           </div>
         ) : <div style={settingsMuted}>Not signed in.</div>}

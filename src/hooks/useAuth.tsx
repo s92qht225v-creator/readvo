@@ -11,6 +11,10 @@ interface User {
   name: string;
   avatar_url?: string;
   created_at: string;
+  /* Telegram-login users only — surfaced for display instead of the
+     synthetic tg_<id>@telegram.blim email. */
+  telegramId?: string;
+  telegramUsername?: string;
 }
 
 interface SubscriptionInfo {
@@ -41,12 +45,20 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 function mapUser(supabaseUser: SupabaseUser): User {
+  const meta = supabaseUser.user_metadata ?? {};
+  const username = meta.preferred_username || meta.username || '';
+  /* telegram_id is stored in metadata; fall back to parsing the
+     synthetic tg_<id>@telegram.blim email for older rows. */
+  const emailIdMatch = (supabaseUser.email || '').match(/^tg_(\d+)@telegram\.blim$/);
+  const telegramId = meta.telegram_id ? String(meta.telegram_id) : (emailIdMatch ? emailIdMatch[1] : undefined);
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',
-    name: supabaseUser.user_metadata?.full_name || supabaseUser.user_metadata?.name || supabaseUser.email || '',
-    avatar_url: supabaseUser.user_metadata?.avatar_url || supabaseUser.user_metadata?.picture,
+    name: meta.full_name || meta.name || supabaseUser.email || '',
+    avatar_url: meta.avatar_url || meta.picture,
     created_at: supabaseUser.created_at,
+    telegramId,
+    telegramUsername: username || undefined,
   };
 }
 
