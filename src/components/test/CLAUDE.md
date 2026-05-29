@@ -360,8 +360,12 @@ longer mounted but the helpers can be deleted in a follow-up cleanup.
   elements interpolated where blanks live. Input width is
   content-driven (set inline by `blankInputWidth()` from typed or
   expected length); everything else owned by `--fb-*` tokens.
-- **Picture choice**: 2 columns on every device. Selected card uses
-  inset 2px accent ring + 16% tint (no layout-shifting border).
+- **Picture choice**: up to 5 per row. Column count =
+  `min(choiceCount, 5)`, set as a data-driven inline
+  `gridTemplateColumns` on `.test-picture-options` (overrides the
+  `--pic-cols` token) — so ≤5 images stretch to fill the full width
+  (4 → 4 equal columns) and 6+ wrap into rows of 5. Selected card
+  uses inset 2px accent ring + 16% tint (no layout-shifting border).
   Image cell `aspect-ratio: 1/1` with dashed accent border when
   empty, solid + background-image when set.
 

@@ -85,11 +85,17 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
 
   if (question.type === 'picture_choice') {
     const opts = question.options as PublicPictureChoiceOptions;
+    /* Up to 5 per row. Column count = min(count, 5) so a row with
+       fewer than 5 images stretches to fill the full width (4 images →
+       4 equal columns), and 6+ images wrap into rows of 5. Data-driven,
+       so it's an inline style override of the --pic-cols token. */
+    const picCols = Math.min(opts.choices.length || 1, 5);
     return (
       <div
         className="test-picture-options"
         role={opts.allowMultiple ? 'group' : 'radiogroup'}
         aria-label={question.prompt}
+        style={{ gridTemplateColumns: `repeat(${picCols}, minmax(0, 1fr))` }}
       >
         {opts.choices.map((c, i) => {
           const selected = opts.allowMultiple
