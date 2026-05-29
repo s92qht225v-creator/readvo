@@ -360,14 +360,15 @@ longer mounted but the helpers can be deleted in a follow-up cleanup.
   elements interpolated where blanks live. Input width is
   content-driven (set inline by `blankInputWidth()` from typed or
   expected length); everything else owned by `--fb-*` tokens.
-- **Picture choice**: up to 5 per row. Column count =
-  `min(choiceCount, 5)`, set as a data-driven inline
-  `gridTemplateColumns` on `.test-picture-options` (overrides the
-  `--pic-cols` token) — so ≤5 images stretch to fill the full width
-  (4 → 4 equal columns) and 6+ wrap into rows of 5. Selected card
-  uses inset 2px accent ring + 16% tint (no layout-shifting border).
-  Image cell `aspect-ratio: 1/1` with dashed accent border when
-  empty, solid + background-image when set.
+- **Picture choice**: flex-wrap, N-per-row driven by the
+  `--pic-basis` device token — **2-up on mobile, 5-up on desktop**
+  (`.test-picture-option` is `flex: 1 1 var(--pic-basis)`). `flex-grow`
+  makes a partial row stretch to fill the full width (a desktop row of
+  4 → 4 equal full-width columns; 6+ wrap into rows of 5). Pure
+  token-driven — no inline column override, no JS counting. Selected
+  card uses inset 2px accent ring + 16% tint (no layout-shifting
+  border). Image cell `aspect-ratio: 1/1` with dashed accent border
+  when empty, solid + background-image when set.
 
 ### `flex-shrink: 0` for content-driven height
 

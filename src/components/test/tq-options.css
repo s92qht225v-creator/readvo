@@ -57,7 +57,7 @@
   /* Picture-choice tokens (--pic-*). Drive .test-picture-options /
      .test-picture-option and its nested __image / __label / __badge /
      __text elements. Same single-source pattern. */
-  --pic-cols: repeat(2, minmax(0, 1fr));
+  --pic-basis: calc((100% - var(--pic-gap)) / 2);
   --pic-gap: 8px;
   --pic-pad: 8px;
   --pic-radius: 1px;
@@ -177,7 +177,7 @@
   --ti-radius: 1px;
   --ti-width: var(--tq-column);
 
-  --pic-cols: repeat(2, minmax(0, 1fr));
+  --pic-basis: calc((100% - var(--pic-gap)) / 2);
   --pic-gap: 8px;
   --pic-pad: 8px;
   --pic-radius: 1px;
@@ -290,7 +290,9 @@
   --ti-radius: 3px;
   --ti-width: 100%;
 
-  --pic-cols: repeat(2, minmax(0, 1fr));
+  /* Desktop: 5 per row (mobile stays 2-up via the default/mobile
+     blocks). flex-grow on the option fills partial rows to full width. */
+  --pic-basis: calc((100% - 4 * var(--pic-gap)) / 5);
   --pic-gap: 12px;
   --pic-pad: 10px;
   --pic-radius: 3px;
@@ -838,8 +840,8 @@
    other answer controls.
    ────────────────────────────────────────────────────────────────────── */
 .test-picture-options {
-  display: grid;
-  grid-template-columns: var(--pic-cols);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--pic-gap);
   width: var(--tq-column);
   max-width: 100%;
@@ -849,8 +851,14 @@
   margin-block-end: var(--pic-grid-mb);
 }
 
+/* Per-device "N per row" comes from --pic-basis (1/2 of the row on
+   mobile, 1/5 on desktop). flex-grow:1 makes a partial row stretch to
+   fill the full width — so a desktop row of 4 images becomes 4 equal
+   full-width columns, and 6+ wrap into rows of 5. */
 .test-picture-option {
   box-sizing: border-box;
+  flex: 1 1 var(--pic-basis);
+  min-width: 0;
   display: flex;
   flex-direction: column;
   padding: var(--pic-pad);
