@@ -632,7 +632,7 @@ export const testRow: CSSProperties = {
   padding: '0 12px',
   columnGap: 10,
   cursor: 'pointer',
-  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.08), 0 2px 5px rgba(47, 40, 53, 0.06)',
+  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.14), 0 2px 6px rgba(47, 40, 53, 0.12)',
 };
 
 export const testIcon: CSSProperties = {
@@ -694,8 +694,8 @@ export const rowMenuButton: CSSProperties = {
   width: 42,
   height: 36,
   borderRadius: 8,
-  border: '1px solid #dedbdd',
-  background: '#fff',
+  border: 'none',
+  background: 'transparent',
   color: '#3f3946',
   fontSize: 16,
   fontWeight: 800,
