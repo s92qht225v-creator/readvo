@@ -170,7 +170,7 @@ export const workspaceItem: CSSProperties = {
   height: 40,
   border: 'none',
   borderRadius: 8,
-  background: '#e9e7e8',
+  background: '#f8f8f5',
   color: '#3f3946',
   display: 'flex',
   alignItems: 'center',
@@ -179,12 +179,15 @@ export const workspaceItem: CSSProperties = {
   fontSize: 14,
   fontFamily: 'inherit',
   cursor: 'pointer',
+  /* Floating card — active workspace lifts off the rail. */
+  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.14), 0 2px 6px rgba(47, 40, 53, 0.12)',
 };
 
 export const workspaceItemMuted: CSSProperties = {
   ...workspaceItem,
-  background: '#fff',
   color: '#6b6470',
+  /* Inactive workspaces sit flat (no lift) so the active one stands out. */
+  boxShadow: 'none',
 };
 
 export const quotaBox: CSSProperties = {
