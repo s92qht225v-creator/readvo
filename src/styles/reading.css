@@ -13423,7 +13423,7 @@ body {
      gets the floating-card background + shadow. */
   background: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   cursor: pointer;
   font-size: 13px;
   font-weight: 650;
