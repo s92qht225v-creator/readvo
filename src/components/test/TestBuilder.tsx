@@ -246,7 +246,7 @@ export function TestBuilder({ testId }: Props) {
   const [shareCopied, setShareCopied] = useState(false);
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showTimerModal, setShowTimerModal] = useState(false);
-  const [showListeningModal, setShowListeningModal] = useState(false);
+  const [showLayoutModal, setShowLayoutModal] = useState(false);
   const [showFontPanel, setShowFontPanel] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const previewCanvasRef = useRef<HTMLDivElement | null>(null);
@@ -939,12 +939,12 @@ export function TestBuilder({ testId }: Props) {
             <button
               type="button"
               className="tb-toolbar__preview-btn"
-              onClick={() => setShowListeningModal(true)}
-              title="Layout & listening audio"
+              onClick={() => setShowLayoutModal(true)}
+              title="Layout (card or scroll)"
               style={test.layout === 'scroll' ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
             >
-              <HeadphonesIcon />
-              Listening
+              <LayoutIcon />
+              Layout
             </button>
             <button
               type="button"
@@ -1133,12 +1133,12 @@ export function TestBuilder({ testId }: Props) {
         />
       ) : null}
 
-      {activeTopTab === 'create' && showListeningModal ? (
-        <ListeningModal
+      {activeTopTab === 'create' && showLayoutModal ? (
+        <LayoutModal
           layout={test.layout === 'scroll' ? 'scroll' : 'card'}
           audioUrl={test.listening_audio_url ?? null}
           getAccessToken={getAccessToken}
-          onClose={() => setShowListeningModal(false)}
+          onClose={() => setShowLayoutModal(false)}
           onChange={(patch) => {
             setTest({ ...test, ...patch });
             updateTest(patch);
@@ -2508,20 +2508,20 @@ function PreviewPlayIcon() {
   );
 }
 
-function HeadphonesIcon() {
+function LayoutIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
-      <path d="M21 17a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h3z" />
-      <path d="M3 17a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H3z" />
+      <rect x="3" y="4" width="18" height="5" rx="1.5" />
+      <rect x="3" y="13" width="18" height="5" rx="1.5" />
     </svg>
   );
 }
 
-/* Listening / layout modal — choose card vs scroll presentation and
-   (in scroll mode) upload the single continuous audio track that plays
-   while the student works through the page. Mirrors TimerModal chrome. */
-function ListeningModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
+/* Layout modal — choose card vs scroll presentation. In scroll mode an
+   optional continuous audio track can be uploaded for listening exams
+   (the audio is a sub-option, not the point of the control). Mirrors
+   TimerModal chrome. */
+function LayoutModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
   layout: 'card' | 'scroll';
   audioUrl: string | null;
   getAccessToken: () => Promise<string | null>;
@@ -2605,9 +2605,9 @@ function ListeningModal({ layout, audioUrl, getAccessToken, onClose, onChange }:
           {layout === 'scroll' ? (
             <>
               <div style={screenDivider} />
-              <div style={timerTitle}>Listening audio</div>
+              <div style={timerTitle}>Listening audio (optional)</div>
               <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
-                Plays continuously while students answer. One track for the whole test.
+                Only for listening exams. Leave empty for a plain scrollable test. One track plays continuously while students answer.
               </div>
               {audioUrl ? (
                 <div style={{ marginBottom: 12 }}>
