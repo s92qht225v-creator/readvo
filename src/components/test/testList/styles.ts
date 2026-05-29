@@ -632,7 +632,7 @@ export const testRow: CSSProperties = {
   padding: '0 12px',
   columnGap: 10,
   cursor: 'pointer',
-  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.06), 0 6px 16px rgba(47, 40, 53, 0.08)',
+  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.08), 0 2px 5px rgba(47, 40, 53, 0.06)',
 };
 
 export const testIcon: CSSProperties = {
