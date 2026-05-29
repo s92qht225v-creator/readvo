@@ -246,6 +246,7 @@ export function TestBuilder({ testId }: Props) {
   const [shareCopied, setShareCopied] = useState(false);
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showTimerModal, setShowTimerModal] = useState(false);
+  const [showListeningModal, setShowListeningModal] = useState(false);
   const [showFontPanel, setShowFontPanel] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const previewCanvasRef = useRef<HTMLDivElement | null>(null);
@@ -375,7 +376,7 @@ export function TestBuilder({ testId }: Props) {
     [questions],
   );
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -938,6 +939,16 @@ export function TestBuilder({ testId }: Props) {
             <button
               type="button"
               className="tb-toolbar__preview-btn"
+              onClick={() => setShowListeningModal(true)}
+              title="Layout & listening audio"
+              style={test.layout === 'scroll' ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
+            >
+              <HeadphonesIcon />
+              Listening
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
               onClick={() => {
                 if (test.is_graded) setShowAnswerKey(true);
               }}
@@ -1115,6 +1126,19 @@ export function TestBuilder({ testId }: Props) {
           enabled={!!test.timer_enabled}
           seconds={test.time_limit_seconds ?? null}
           onClose={() => setShowTimerModal(false)}
+          onChange={(patch) => {
+            setTest({ ...test, ...patch });
+            updateTest(patch);
+          }}
+        />
+      ) : null}
+
+      {activeTopTab === 'create' && showListeningModal ? (
+        <ListeningModal
+          layout={test.layout === 'scroll' ? 'scroll' : 'card'}
+          audioUrl={test.listening_audio_url ?? null}
+          getAccessToken={getAccessToken}
+          onClose={() => setShowListeningModal(false)}
           onChange={(patch) => {
             setTest({ ...test, ...patch });
             updateTest(patch);
@@ -2481,6 +2505,172 @@ function PreviewPlayIcon() {
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 16 16" aria-hidden="true">
       <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M2 2.293c0-1.36 1.484-2.2 2.65-1.5l9.506 5.703a1.75 1.75 0 0 1 0 3.001L4.65 15.201C3.484 15.9 2 15.06 2 13.7zm1.879-.214a.25.25 0 0 0-.379.214V13.7a.25.25 0 0 0 .379.215l9.505-5.704a.25.25 0 0 0 0-.429z" />
     </svg>
+  );
+}
+
+function HeadphonesIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
+      <path d="M21 17a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h3z" />
+      <path d="M3 17a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H3z" />
+    </svg>
+  );
+}
+
+/* Listening / layout modal — choose card vs scroll presentation and
+   (in scroll mode) upload the single continuous audio track that plays
+   while the student works through the page. Mirrors TimerModal chrome. */
+function ListeningModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
+  layout: 'card' | 'scroll';
+  audioUrl: string | null;
+  getAccessToken: () => Promise<string | null>;
+  onClose: () => void;
+  onChange: (patch: Pick<Test, 'layout'> | Pick<Test, 'listening_audio_url'> | Pick<Test, 'layout' | 'listening_audio_url'>) => void;
+}) {
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const uploadAudio = async (file: File) => {
+    setError(null);
+    if (!file.type.startsWith('audio/')) {
+      setError('Upload an audio file (MP3, WAV, M4A, OGG).');
+      return;
+    }
+    if (file.size > 50 * 1024 * 1024) {
+      setError('Audio must be 50MB or smaller.');
+      return;
+    }
+    setUploading(true);
+    const form = new FormData();
+    form.append('file', file);
+    form.append('questionId', 'listening-audio');
+    const token = await getAccessToken();
+    const res = await fetch('/api/tests/media', {
+      method: 'POST',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      body: form,
+    });
+    const json = await res.json().catch(() => ({}));
+    setUploading(false);
+    if (!res.ok || !json.url) {
+      setError(json.error ?? 'Upload failed.');
+      return;
+    }
+    onChange({ listening_audio_url: json.url });
+  };
+
+  return (
+    <div
+      style={timerModalBackdrop}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Layout and listening audio"
+      onMouseDown={onClose}
+    >
+      <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
+        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close listening settings">
+          ×
+        </button>
+        <div style={timerPanel}>
+          <div style={timerHeader}>
+            <div>
+              <div style={timerTitle}>Layout</div>
+              <div style={timerSubtitle}>How students move through the test</div>
+            </div>
+          </div>
+          <div style={screenSegmented}>
+            <button
+              type="button"
+              style={screenSegmentedButton(layout === 'card')}
+              onClick={() => onChange({ layout: 'card' })}
+            >
+              Card
+            </button>
+            <button
+              type="button"
+              style={screenSegmentedButton(layout === 'scroll')}
+              onClick={() => onChange({ layout: 'scroll' })}
+            >
+              Scroll
+            </button>
+          </div>
+          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 10 }}>
+            {layout === 'card'
+              ? 'One question per screen, with Next / Back.'
+              : 'All questions on one scrollable page. Inactive questions dim out. Best for listening exams.'}
+          </div>
+
+          {layout === 'scroll' ? (
+            <>
+              <div style={screenDivider} />
+              <div style={timerTitle}>Listening audio</div>
+              <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
+                Plays continuously while students answer. One track for the whole test.
+              </div>
+              {audioUrl ? (
+                <div style={{ marginBottom: 12 }}>
+                  <audio src={audioUrl} controls style={{ width: '100%' }} />
+                </div>
+              ) : null}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="audio/*"
+                style={{ display: 'none' }}
+                onChange={(event) => {
+                  const file = event.target.files?.[0];
+                  if (file) void uploadAudio(file);
+                  event.target.value = '';
+                }}
+              />
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={uploading}
+                  style={{
+                    flex: 1,
+                    padding: '10px 12px',
+                    border: '1px solid #cbd5e1',
+                    borderRadius: 3,
+                    background: '#fff',
+                    color: '#2f2835',
+                    fontSize: 13,
+                    fontWeight: 700,
+                    cursor: uploading ? 'wait' : 'pointer',
+                  }}
+                >
+                  {uploading ? 'Uploading…' : audioUrl ? 'Replace audio' : 'Upload audio'}
+                </button>
+                {audioUrl ? (
+                  <button
+                    type="button"
+                    onClick={() => onChange({ listening_audio_url: null })}
+                    style={{
+                      padding: '10px 12px',
+                      border: '1px solid #f3c2c2',
+                      borderRadius: 3,
+                      background: '#fff',
+                      color: '#b91c1c',
+                      fontSize: 13,
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Remove
+                  </button>
+                ) : null}
+              </div>
+              {error ? (
+                <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
+              ) : null}
+            </>
+          ) : null}
+        </div>
+      </div>
+    </div>
   );
 }
 

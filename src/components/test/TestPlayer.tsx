@@ -342,6 +342,12 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     setAnswers({ ...answers, [q.id]: v });
   };
 
+  /* Scroll mode answers any question (not just the active one), so it
+     needs an id-addressed setter rather than the active-q `onChange`. */
+  const setAnswerFor = useCallback((qid: string, v: AnswerSubmission['value']) => {
+    setAnswers(prev => ({ ...prev, [qid]: v }));
+  }, []);
+
   // Keyboard shortcuts: Enter to advance, 1-9 to pick mc choice
   useEffect(() => {
     if (phase !== 'question' || !q) return;
@@ -606,6 +612,30 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
 
   if (!q) return null;
 
+  /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
+     All questions stacked on one scrollable page; the active question
+     (nearest viewport centre) stays lit while the rest dim. A single
+     continuous audio track plays at the top. Shares every other concern
+     (answers, grading, submission, required-guard) with card mode. */
+  if (test.layout === 'scroll') {
+    return (
+      <ScrollBody
+        test={test}
+        device={device}
+        themeVars={themeVars}
+        answers={answers}
+        onAnswer={setAnswerFor}
+        onSubmit={submit}
+        phase={phase}
+        remainingSeconds={remainingSeconds}
+        answeredCount={answeredCount}
+        total={total}
+        firstMissingRequiredIdx={firstMissingRequiredIdx}
+        listeningAudioUrl={test.listening_audio_url ?? null}
+      />
+    );
+  }
+
   return (
     <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars} device={device}>
       <QuestionMediaBlock
@@ -790,6 +820,187 @@ function ScreenWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className="test-player-screen" style={publicScreenShell}>
       {children}
+    </div>
+  );
+}
+
+function HeadphonesGlyph() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
+      <path d="M21 17a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h3z" />
+      <path d="M3 17a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H3z" />
+    </svg>
+  );
+}
+
+/* Scroll-mode body: every question stacked on one scrollable page, the
+   one nearest the viewport centre stays lit while the rest dim out
+   (SurveyMonkey-style). A single continuous audio track is pinned at the
+   top for listening exams. */
+function ScrollBody({
+  test,
+  device,
+  themeVars,
+  answers,
+  onAnswer,
+  onSubmit,
+  phase,
+  remainingSeconds,
+  answeredCount,
+  total,
+  firstMissingRequiredIdx,
+  listeningAudioUrl,
+}: {
+  test: PublicTest;
+  device: 'mobile' | 'desktop';
+  themeVars?: Record<string, string>;
+  answers: Record<string, AnswerSubmission['value']>;
+  onAnswer: (qid: string, v: AnswerSubmission['value']) => void;
+  onSubmit: () => void;
+  phase: Phase;
+  remainingSeconds: number | null;
+  answeredCount: number;
+  total: number;
+  firstMissingRequiredIdx: number;
+  listeningAudioUrl: string | null;
+}) {
+  const [activeId, setActiveId] = useState<string | null>(test.questions[0]?.id ?? null);
+  const [warnId, setWarnId] = useState<string | null>(null);
+  const itemRefs = useRef<Map<string, HTMLElement>>(new Map());
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  /* Try to autoplay the continuous track. Works when the student arrived
+     via a Start click (welcome screen); otherwise the browser blocks it
+     and the native controls let them press play manually. */
+  useEffect(() => {
+    if (!listeningAudioUrl) return;
+    const el = audioRef.current;
+    if (!el) return;
+    el.play().catch(() => { /* autoplay blocked — controls remain */ });
+  }, [listeningAudioUrl]);
+
+  /* Focus follows the topmost question crossing a band around the
+     viewport centre. A thin band (±45%) means usually one item is inside
+     it, so the lit question tracks the scroll position smoothly. */
+  useEffect(() => {
+    const visible = new Set<string>();
+    const observer = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        const id = (e.target as HTMLElement).dataset.qid;
+        if (!id) continue;
+        if (e.isIntersecting) visible.add(id);
+        else visible.delete(id);
+      }
+      const first = test.questions.find(qq => visible.has(qq.id));
+      if (first) setActiveId(first.id);
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    itemRefs.current.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [test.questions]);
+
+  const setItemRef = (id: string) => (el: HTMLElement | null) => {
+    if (el) itemRefs.current.set(id, el);
+    else itemRefs.current.delete(id);
+  };
+
+  const handleFinish = () => {
+    if (firstMissingRequiredIdx >= 0) {
+      const missing = test.questions[firstMissingRequiredIdx];
+      const el = itemRefs.current.get(missing.id);
+      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setActiveId(missing.id);
+      setWarnId(missing.id);
+      return;
+    }
+    setWarnId(null);
+    onSubmit();
+  };
+
+  return (
+    <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
+      {listeningAudioUrl ? (
+        <div className="test-scroll__audio-bar" style={scrollAudioBar}>
+          <div style={scrollAudioInner}>
+            <span style={scrollAudioLabel}>
+              <HeadphonesGlyph />
+              Listening
+            </span>
+            <audio ref={audioRef} src={listeningAudioUrl} controls style={{ flex: 1, minWidth: 0 }} />
+          </div>
+        </div>
+      ) : null}
+
+      <div style={scrollList}>
+        {test.questions.map((question, i) => {
+          const active = question.id === activeId;
+          const answered = hasQuestionAnswer(question, answers[question.id]);
+          const warn = warnId === question.id && !answered;
+          return (
+            <section
+              key={question.id}
+              ref={setItemRef(question.id)}
+              data-qid={question.id}
+              aria-current={active ? 'true' : undefined}
+              onFocusCapture={() => setActiveId(question.id)}
+              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${warn ? 'test-scroll__item--warn' : ''}`}
+              style={scrollItem}
+            >
+              <div style={scrollItemNumRow}>
+                <span style={scrollItemNumBadge(answered)}>{i + 1}</span>
+                {question.required ? <span style={scrollRequiredStar} title="Required">*</span> : null}
+              </div>
+              <QuestionMediaLayout
+                media={question.media}
+                header={(
+                  <>
+                    <h2 className="test-player__title" style={scrollItemTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
+                      {question.prompt ? <MathText>{question.prompt}</MathText> : '…'}
+                    </h2>
+                    {question.description ? (
+                      <p className="test-player__description" style={scrollItemDesc} dir="auto" lang={detectScriptLang(question.description)}>
+                        <MathText>{question.description}</MathText>
+                      </p>
+                    ) : null}
+                  </>
+                )}
+                answer={(
+                  <div style={answerWrap}>
+                    <QuestionRenderer
+                      question={question}
+                      value={answers[question.id] ?? {}}
+                      onChange={(v) => onAnswer(question.id, v)}
+                      onSubmit={() => { /* no per-question advance in scroll mode */ }}
+                    />
+                  </div>
+                )}
+              />
+              {warn ? (
+                <div role="alert" style={scrollItemWarnText}>This question is required.</div>
+              ) : null}
+            </section>
+          );
+        })}
+      </div>
+
+      <div className="test-scroll__footer" style={scrollFooter}>
+        <div style={scrollFooterInner}>
+          <div style={scrollFooterMeta}>
+            {remainingSeconds != null ? (
+              <span style={scrollTimerPill}><AlarmClockIcon />{formatClock(remainingSeconds)}</span>
+            ) : null}
+            <span style={scrollFooterCount}>{answeredCount} / {total} answered</span>
+          </div>
+          <button
+            type="button"
+            onClick={handleFinish}
+            disabled={phase === 'submitting'}
+            style={primaryButton(phase === 'submitting')}
+          >
+            {phase === 'submitting' ? 'Submitting…' : 'Submit'}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -1343,3 +1554,158 @@ const navigatorFinishButton = (disabled: boolean): React.CSSProperties => ({
   opacity: disabled ? 0.55 : 1,
   boxShadow: '0 10px 24px rgba(47, 37, 51, 0.16)',
 });
+
+/* ── Scroll mode ──────────────────────────────────────────────────── */
+
+const scrollShell: React.CSSProperties = {
+  minHeight: '100vh',
+  background: 'var(--test-theme-background, #fff)',
+  fontFamily: 'var(--test-theme-font-family, inherit)',
+  paddingBottom: 104,
+};
+
+const scrollAudioBar: React.CSSProperties = {
+  position: 'sticky',
+  top: 0,
+  zIndex: 30,
+  background: 'rgba(255, 255, 255, 0.96)',
+  backdropFilter: 'blur(8px)',
+  borderBottom: '1px solid #ece7e1',
+};
+
+const scrollAudioInner: React.CSSProperties = {
+  maxWidth: 760,
+  margin: '0 auto',
+  padding: '10px 18px',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 12,
+};
+
+const scrollAudioLabel: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  fontSize: 13,
+  fontWeight: 800,
+  color: '#6b4fbb',
+  whiteSpace: 'nowrap',
+};
+
+const scrollList: React.CSSProperties = {
+  maxWidth: 760,
+  margin: '0 auto',
+  padding: '40px 18px 0',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 20,
+};
+
+const scrollItem: React.CSSProperties = {
+  position: 'relative',
+  background: '#fff',
+  border: '1px solid #e4ded8',
+  borderRadius: 7,
+  padding: '28px 28px',
+  containerType: 'inline-size',
+  scrollMarginTop: 96,
+  '--qmedia-card-pad-x': '28px',
+  '--qmedia-card-pad-top': '28px',
+} as React.CSSProperties;
+
+const scrollItemNumRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  marginBottom: 14,
+};
+
+const scrollItemNumBadge = (answered: boolean): React.CSSProperties => ({
+  width: 28,
+  height: 28,
+  borderRadius: 999,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: 13,
+  fontWeight: 850,
+  background: answered ? 'rgba(2, 173, 27, 0.12)' : '#f3eff7',
+  color: answered ? '#02ad1b' : '#6b4fbb',
+});
+
+const scrollRequiredStar: React.CSSProperties = {
+  color: '#dc2626',
+  fontSize: 18,
+  fontWeight: 800,
+  lineHeight: 1,
+};
+
+const scrollItemTitle: React.CSSProperties = {
+  fontSize: 'calc(22px * var(--test-theme-font-scale, 1))',
+  fontWeight: 500,
+  margin: 0,
+  lineHeight: 1.25,
+  color: 'var(--test-theme-question, #1c1626)',
+};
+
+const scrollItemDesc: React.CSSProperties = {
+  margin: 0,
+  color: 'var(--test-theme-description, #8b848f)',
+  fontSize: 15,
+  lineHeight: 1.5,
+};
+
+const scrollItemWarnText: React.CSSProperties = {
+  marginTop: 12,
+  color: '#b91c1c',
+  fontSize: 13,
+  fontWeight: 700,
+};
+
+const scrollFooter: React.CSSProperties = {
+  position: 'fixed',
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: 40,
+  background: 'rgba(255, 255, 255, 0.97)',
+  backdropFilter: 'blur(8px)',
+  borderTop: '1px solid #ece7e1',
+};
+
+const scrollFooterInner: React.CSSProperties = {
+  maxWidth: 760,
+  margin: '0 auto',
+  padding: '12px 18px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 12,
+};
+
+const scrollFooterMeta: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 12,
+  minWidth: 0,
+};
+
+const scrollFooterCount: React.CSSProperties = {
+  color: '#6f6772',
+  fontSize: 14,
+  fontWeight: 800,
+  whiteSpace: 'nowrap',
+};
+
+const scrollTimerPill: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  padding: '6px 10px',
+  borderRadius: 999,
+  background: '#f7f7f6',
+  color: '#02ad1b',
+  fontSize: 13,
+  fontWeight: 900,
+  whiteSpace: 'nowrap',
+};

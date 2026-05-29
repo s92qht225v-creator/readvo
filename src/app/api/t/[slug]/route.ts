@@ -60,6 +60,8 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     end_screen: test.end_screen,
     timer_enabled: !!test.timer_enabled,
     time_limit_seconds: test.time_limit_seconds,
+    layout: test.layout === 'scroll' ? 'scroll' : 'card',
+    listening_audio_url: test.listening_audio_url ?? null,
     is_graded: test.is_graded,
     questions: (questions ?? [])
       .filter((q: TestQuestion) => !q.hidden)

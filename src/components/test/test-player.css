@@ -250,3 +250,42 @@
     border-radius: 3px !important;
   }
 }
+
+/* ── Scroll mode (SurveyMonkey-style focus) ───────────────────────────
+   Every question is visible at once; the one nearest the viewport centre
+   stays fully lit while the rest dim back. Pure presentation — all
+   questions remain answerable regardless of focus. */
+.test-scroll__item {
+  transition: opacity 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.test-scroll__item--dim {
+  opacity: 0.42;
+}
+
+.test-scroll__item--active {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--test-theme-button, #6b4fbb) 45%, #e4ded8) !important;
+  box-shadow: 0 10px 30px rgba(47, 40, 53, 0.10);
+}
+
+.test-scroll__item--warn {
+  opacity: 1;
+  border-color: #f3c2c2 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+/* On touch / coarse pointers the dim is lighter — small screens show
+   fewer items so heavy dimming reads as "disabled". */
+@media (max-width: 640px) {
+  .test-scroll__item--dim {
+    opacity: 0.55;
+  }
+}
+
+/* Respect reduced-motion: no fades, just the opacity end-states. */
+@media (prefers-reduced-motion: reduce) {
+  .test-scroll__item {
+    transition: none;
+  }
+}

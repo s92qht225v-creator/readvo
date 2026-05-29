@@ -40,6 +40,8 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     end_screen?: unknown;
     timer_enabled?: boolean;
     time_limit_seconds?: number | null;
+    layout?: 'card' | 'scroll';
+    listening_audio_url?: string | null;
     is_graded?: boolean;
     is_marketplace?: boolean;
     marketplace_price?: number | null;
@@ -65,6 +67,14 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     patch.time_limit_seconds = seconds;
   }
   if (typeof body.is_graded === 'boolean') patch.is_graded = body.is_graded;
+
+  /* Presentation mode + listening audio (scroll-mode exams). */
+  if (body.layout === 'card' || body.layout === 'scroll') patch.layout = body.layout;
+  if (body.listening_audio_url === null) {
+    patch.listening_audio_url = null;
+  } else if (typeof body.listening_audio_url === 'string') {
+    patch.listening_audio_url = body.listening_audio_url.slice(0, 1000);
+  }
 
   /* Marketplace flag + price + summary. Owner-gated only — any test
      owner can flag their own test for sale. The marketplace tab is

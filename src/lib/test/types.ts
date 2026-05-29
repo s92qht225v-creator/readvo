@@ -202,6 +202,14 @@ export interface Test {
   end_screen?: TestScreenConfig | null;
   timer_enabled?: boolean;
   time_limit_seconds?: number | null;
+  /* Presentation mode. 'card' = one question per screen (default,
+     Typeform-style). 'scroll' = all questions stacked on one
+     scrollable page (IELTS/SurveyMonkey-style listening exams). */
+  layout?: 'card' | 'scroll';
+  /* Single continuous audio track played while the student works
+     through a scroll-mode test (listening exams). Stored as a
+     test-media public URL. */
+  listening_audio_url?: string | null;
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
@@ -395,6 +403,8 @@ export interface PublicTest {
   end_screen?: TestScreenConfig | null;
   timer_enabled?: boolean;
   time_limit_seconds?: number | null;
+  layout?: 'card' | 'scroll';
+  listening_audio_url?: string | null;
   is_graded: boolean;
   questions: PublicQuestion[];
   /* True when the test owner does NOT have an active subscription —
