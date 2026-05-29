@@ -622,12 +622,13 @@ export const testRow: CSSProperties = {
   gridTemplateColumns: '42px minmax(220px, 1fr) repeat(4, 110px)',
   alignItems: 'center',
   minHeight: 56,
-  background: '#fff',
-  border: '1px solid #dedbdd',
+  background: '#f8f8f5',
+  border: 'none',
   borderRadius: 10,
   padding: '0 12px',
   columnGap: 10,
   cursor: 'pointer',
+  boxShadow: '0 1px 2px rgba(47, 40, 53, 0.06), 0 6px 16px rgba(47, 40, 53, 0.08)',
 };
 
 export const testIcon: CSSProperties = {
