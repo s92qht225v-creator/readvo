@@ -611,10 +611,14 @@ export const tableHead: CSSProperties = {
 
 export const testRows: CSSProperties = {
   listStyle: 'none',
-  padding: 0,
+  /* Vertical padding so the first/last row shadows aren't clipped by
+     the section edge. */
+  padding: '4px 2px',
   margin: 0,
   display: 'grid',
-  gap: 8,
+  /* Roomy gap so the floating cards read as separate (the 16px blur
+     shadow needs clear space between rows). */
+  gap: 16,
 };
 
 export const testRow: CSSProperties = {
