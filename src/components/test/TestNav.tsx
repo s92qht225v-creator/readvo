@@ -24,7 +24,18 @@ export function TestNav() {
       <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
         {user ? (
           <>
-            <span style={{ fontSize: 13, color: '#475569' }}>{user.email}</span>
+            {/* Telegram identity instead of the synthetic
+                tg_<id>@telegram.blim email — @username, else ID; Google
+                users keep their real email. */}
+            <span style={{ fontSize: 13, color: '#475569' }}>
+              {user.telegramUsername
+                ? `@${user.telegramUsername}`
+                : user.telegramId
+                  ? `Telegram ID: ${user.telegramId}`
+                  : user.email && !user.email.endsWith('@telegram.blim')
+                    ? user.email
+                    : (user.name || '')}
+            </span>
             <button
               type="button"
               onClick={logout}
