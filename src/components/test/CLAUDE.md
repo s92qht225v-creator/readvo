@@ -53,7 +53,9 @@ src/components/test/
 │   ├── _styles.ts           Modal styles shared between gallery + settings.
 │   ├── LayoutIcons.tsx      All 12 SVG icons + DeviceIconFrame +
 │   │                        LayoutIcon dispatcher.
-│   ├── MediaGalleryModal.tsx  Upload / paste-URL gallery.
+│   ├── MediaGalleryModal.tsx  Upload / paste-URL / "My gallery" (reuse
+│   │                          previously-uploaded media; GalleryTab
+│   │                          fetches GET /api/tests/media/list).
 │   └── MediaSettingsModal.tsx Crop, aspect ratio, rotate, flip.
 ├── testList/               Helpers extracted from TestList.tsx.
 │   ├── styles.ts, icons.tsx, TemplateCard.tsx, formatDate.ts

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import type { QuestionMedia } from '@/lib/test/types';
@@ -9,7 +9,6 @@ import { Field, inputStyle } from '../settings/_shared';
 import { setQuestionMedia } from './_helpers';
 import {
   attachMediaButton,
-  comingSoonBox,
   mediaModal,
   mediaModalBody,
   mediaModalHeader,
@@ -244,9 +243,24 @@ export function MediaGalleryModal({ q, onClose, onChange, onPickMedia, allowedTa
               <span style={uploadSub}>MP3, WAV, OGG, M4A, AAC, or WebM. Up to 20MB.</span>
             </button>
           ) : (
-            <div style={comingSoonBox}>
-              Uploaded media gallery comes later.
-            </div>
+            <GalleryTab
+              kind={mediaKind ?? 'image'}
+              getAccessToken={getAccessToken}
+              onPick={async item => {
+                const type: QuestionMedia['type'] = item.kind === 'audio'
+                  ? 'audio'
+                  : item.kind === 'video'
+                    ? 'video'
+                    : item.name.toLowerCase().endsWith('.gif') ? 'gif' : 'image';
+                pickMedia({
+                  type,
+                  url: item.url,
+                  alt,
+                  provider: 'upload',
+                  aspectRatio: type === 'audio' ? undefined : 'original',
+                });
+              }}
+            />
           )}
           {error ? <div style={mediaError}>{error}</div> : null}
         </div>
@@ -261,6 +275,102 @@ function tabsForMediaKind(mediaKind?: MediaKind): MediaGalleryTab[] {
   if (mediaKind === 'video') return ['video'];
   return ['upload', 'video', 'audio', 'gallery'];
 }
+
+type GalleryItem = { url: string; name: string; kind: 'image' | 'audio' | 'video'; createdAt: string | null };
+
+/* "My gallery" tab — lists the user's previously uploaded media so it
+   can be reused without re-uploading. Fetches once on mount; click a
+   thumbnail to attach it. */
+function GalleryTab({ kind, getAccessToken, onPick }: {
+  kind: MediaKind;
+  getAccessToken: () => Promise<string | null>;
+  onPick: (item: GalleryItem) => void;
+}) {
+  const [items, setItems] = useState<GalleryItem[] | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const token = await getAccessToken();
+      const res = await fetch(`/api/tests/media/list?kind=${kind}`, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      });
+      if (cancelled) return;
+      if (!res.ok) { setLoadError('Could not load your media.'); setItems([]); return; }
+      const json = await res.json().catch(() => ({ items: [] }));
+      setItems(json.items ?? []);
+    })();
+    return () => { cancelled = true; };
+  }, [kind, getAccessToken]);
+
+  if (items === null) return <div style={galleryStatus}>Loading…</div>;
+  if (loadError) return <div style={galleryStatus}>{loadError}</div>;
+  if (items.length === 0) return <div style={galleryStatus}>Nothing uploaded yet. Use the Upload tab to add media.</div>;
+
+  return (
+    <div style={galleryGrid}>
+      {items.map(item => (
+        <button
+          key={item.url}
+          type="button"
+          onClick={() => onPick(item)}
+          style={galleryCell}
+          title={item.name}
+          aria-label={`Use ${item.name}`}
+        >
+          {item.kind === 'image' ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={item.url} alt="" style={galleryThumb} loading="lazy" />
+          ) : (
+            <span style={galleryFileBadge}>{item.kind === 'audio' ? '♪' : '▶'}</span>
+          )}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+const galleryStatus: CSSProperties = {
+  padding: '40px 16px',
+  textAlign: 'center',
+  color: '#8b848f',
+  fontSize: 13,
+  lineHeight: 1.5,
+};
+
+const galleryGrid: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))',
+  gap: 10,
+  maxHeight: 360,
+  overflowY: 'auto',
+};
+
+const galleryCell: CSSProperties = {
+  aspectRatio: '1 / 1',
+  padding: 0,
+  border: '1px solid #e4ded8',
+  borderRadius: 3,
+  background: '#f8f8f5',
+  cursor: 'pointer',
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const galleryThumb: CSSProperties = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  display: 'block',
+};
+
+const galleryFileBadge: CSSProperties = {
+  fontSize: 28,
+  color: '#6b6470',
+};
 
 function MediaUrlForm({ label, url, alt, onUrl, onAlt, onAttach }: {
   label: string;
