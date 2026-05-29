@@ -98,6 +98,39 @@ export async function DELETE(req: NextRequest) {
   }
 
   const admin = getSupabaseAdmin();
+
+  /* In-use guard: refuse to delete media still referenced by any of the
+     user's questions or welcome/end screens — otherwise those would
+     show a broken 404 image. The public URL is embedded as a substring
+     in the questions' `options` JSON and the tests' screen configs, so
+     we stringify-scan the user's rows for it. */
+  const { data: urlData } = admin.storage.from('test-media').getPublicUrl(path);
+  const publicUrl = urlData.publicUrl;
+
+  const { data: ownTests } = await admin
+    .from('tests')
+    .select('id, welcome_screen, end_screen')
+    .eq('owner_id', userId);
+  const testIds = (ownTests ?? []).map(t => t.id);
+
+  let usageCount = 0;
+  for (const t of ownTests ?? []) {
+    if (JSON.stringify(t.welcome_screen ?? '').includes(publicUrl)) usageCount++;
+    if (JSON.stringify(t.end_screen ?? '').includes(publicUrl)) usageCount++;
+  }
+  if (testIds.length > 0) {
+    const { data: questions } = await admin
+      .from('test_questions')
+      .select('options')
+      .in('test_id', testIds);
+    for (const q of questions ?? []) {
+      if (JSON.stringify(q.options ?? '').includes(publicUrl)) usageCount++;
+    }
+  }
+  if (usageCount > 0) {
+    return NextResponse.json({ error: 'in_use', count: usageCount }, { status: 409 });
+  }
+
   const { error } = await admin.storage.from('test-media').remove([path]);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ ok: true });

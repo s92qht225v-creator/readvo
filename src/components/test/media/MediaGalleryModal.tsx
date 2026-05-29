@@ -288,6 +288,9 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
 }) {
   const [items, setItems] = useState<GalleryItem[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  /* Delete errors shown as a banner above the grid (loadError replaces
+     the whole grid, which we don't want for a per-item failure). */
+  const [actionError, setActionError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -305,6 +308,7 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
   }, [kind, getAccessToken]);
 
   const deleteItem = async (item: GalleryItem) => {
+    setActionError(null);
     /* Optimistic remove. */
     setItems(prev => (prev ? prev.filter(i => i.path !== item.path) : prev));
     const token = await getAccessToken();
@@ -316,7 +320,13 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
     if (!res.ok) {
       /* Re-add on failure (newest-first order isn't critical here). */
       setItems(prev => (prev ? [item, ...prev] : [item]));
-      setLoadError('Could not delete that file.');
+      const json = await res.json().catch(() => ({}));
+      if (json.error === 'in_use') {
+        const n = json.count ?? 1;
+        setActionError(`Can't delete — this file is used in ${n} ${n === 1 ? 'question/screen' : 'questions/screens'}.`);
+      } else {
+        setActionError('Could not delete that file.');
+      }
     }
   };
 
@@ -325,6 +335,8 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
   if (items.length === 0) return <div style={galleryStatus}>Nothing uploaded yet. Use the Upload tab to add media.</div>;
 
   return (
+    <>
+    {actionError ? <div style={galleryActionError}>{actionError}</div> : null}
     <div style={galleryGrid}>
       {items.map(item => (
         <div key={item.path} className="test-gallery-cell" style={galleryCell}>
@@ -357,8 +369,19 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
         </div>
       ))}
     </div>
+    </>
   );
 }
+
+const galleryActionError: CSSProperties = {
+  marginBottom: 10,
+  padding: '8px 12px',
+  borderRadius: 3,
+  background: '#fef2f2',
+  border: '1px solid #fecaca',
+  color: '#b91c1c',
+  fontSize: 13,
+};
 
 const galleryStatus: CSSProperties = {
   padding: '40px 16px',
