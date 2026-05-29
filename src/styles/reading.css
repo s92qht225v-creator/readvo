@@ -14362,3 +14362,15 @@ body {
     padding: 36px 22px !important;
   }
 }
+
+/* Media gallery — trash button reveals on cell hover (My gallery tab
+   in the media modal). The cell + buttons are styled inline in
+   MediaGalleryModal.tsx; only the hover-reveal lives here. */
+.test-gallery-trash {
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+.test-gallery-cell:hover .test-gallery-trash,
+.test-gallery-trash:focus-visible {
+  opacity: 1;
+}

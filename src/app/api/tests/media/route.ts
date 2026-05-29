@@ -79,6 +79,30 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({ url: urlData.publicUrl });
 }
 
+/** DELETE /api/tests/media — remove an uploaded file from the gallery.
+ *  Body: { path }. The path MUST be under the caller's own
+ *  `${userId}/` prefix, so a user can only delete their own media. */
+export async function DELETE(req: NextRequest) {
+  const userId = await getRequestUserId(req);
+  if (!userId) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+
+  const body = await req.json().catch(() => null) as { path?: string } | null;
+  const path = body?.path;
+  if (!path || typeof path !== 'string') {
+    return NextResponse.json({ error: 'path_required' }, { status: 400 });
+  }
+  /* Ownership gate: only files inside the user's own folder, and no
+     path traversal. */
+  if (!path.startsWith(`${userId}/`) || path.includes('..')) {
+    return NextResponse.json({ error: 'forbidden' }, { status: 403 });
+  }
+
+  const admin = getSupabaseAdmin();
+  const { error } = await admin.storage.from('test-media').remove([path]);
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  return NextResponse.json({ ok: true });
+}
+
 function extensionFor(file: File) {
   if (file.type === 'image/jpeg') return 'jpg';
   if (file.type === 'image/png') return 'png';

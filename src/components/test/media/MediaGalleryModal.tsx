@@ -276,7 +276,7 @@ function tabsForMediaKind(mediaKind?: MediaKind): MediaGalleryTab[] {
   return ['upload', 'video', 'audio', 'gallery'];
 }
 
-type GalleryItem = { url: string; name: string; kind: 'image' | 'audio' | 'video'; createdAt: string | null };
+type GalleryItem = { url: string; path: string; name: string; kind: 'image' | 'audio' | 'video'; createdAt: string | null };
 
 /* "My gallery" tab — lists the user's previously uploaded media so it
    can be reused without re-uploading. Fetches once on mount; click a
@@ -304,6 +304,22 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
     return () => { cancelled = true; };
   }, [kind, getAccessToken]);
 
+  const deleteItem = async (item: GalleryItem) => {
+    /* Optimistic remove. */
+    setItems(prev => (prev ? prev.filter(i => i.path !== item.path) : prev));
+    const token = await getAccessToken();
+    const res = await fetch('/api/tests/media', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      body: JSON.stringify({ path: item.path }),
+    });
+    if (!res.ok) {
+      /* Re-add on failure (newest-first order isn't critical here). */
+      setItems(prev => (prev ? [item, ...prev] : [item]));
+      setLoadError('Could not delete that file.');
+    }
+  };
+
   if (items === null) return <div style={galleryStatus}>Loading…</div>;
   if (loadError) return <div style={galleryStatus}>{loadError}</div>;
   if (items.length === 0) return <div style={galleryStatus}>Nothing uploaded yet. Use the Upload tab to add media.</div>;
@@ -311,21 +327,34 @@ function GalleryTab({ kind, getAccessToken, onPick }: {
   return (
     <div style={galleryGrid}>
       {items.map(item => (
-        <button
-          key={item.url}
-          type="button"
-          onClick={() => onPick(item)}
-          style={galleryCell}
-          title={item.name}
-          aria-label={`Use ${item.name}`}
-        >
-          {item.kind === 'image' ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={item.url} alt="" style={galleryThumb} loading="lazy" />
-          ) : (
-            <span style={galleryFileBadge}>{item.kind === 'audio' ? '♪' : '▶'}</span>
-          )}
-        </button>
+        <div key={item.path} className="test-gallery-cell" style={galleryCell}>
+          <button
+            type="button"
+            onClick={() => onPick(item)}
+            style={galleryPickBtn}
+            title={item.name}
+            aria-label={`Use ${item.name}`}
+          >
+            {item.kind === 'image' ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={item.url} alt="" style={galleryThumb} loading="lazy" />
+            ) : (
+              <span style={galleryFileBadge}>{item.kind === 'audio' ? '♪' : '▶'}</span>
+            )}
+          </button>
+          <button
+            type="button"
+            className="test-gallery-trash"
+            onClick={e => { e.stopPropagation(); void deleteItem(item); }}
+            style={galleryTrashBtn}
+            title="Delete"
+            aria-label={`Delete ${item.name}`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill="#fff" fillRule="evenodd" clipRule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75v.75h3.667a.75.75 0 0 1 0 1.5H14v10.238a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 14.238V4h-.667a.75.75 0 0 1 0-1.5H5zm1.5.75h3v-.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25zM3.5 4v10.238c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V4zm3.25 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m2.5 0a.75.75 0 0 1 .75.75v4a.75.75 0 1 1-1.5 0v-4a.75.75 0 0 1 .75-.75" />
+            </svg>
+          </button>
+        </div>
       ))}
     </div>
   );
@@ -348,16 +377,40 @@ const galleryGrid: CSSProperties = {
 };
 
 const galleryCell: CSSProperties = {
+  position: 'relative',
   aspectRatio: '1 / 1',
-  padding: 0,
   border: '1px solid #e4ded8',
   borderRadius: 3,
   background: '#f8f8f5',
-  cursor: 'pointer',
   overflow: 'hidden',
+};
+
+const galleryPickBtn: CSSProperties = {
+  width: '100%',
+  height: '100%',
+  padding: 0,
+  border: 'none',
+  background: 'transparent',
+  cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+};
+
+const galleryTrashBtn: CSSProperties = {
+  position: 'absolute',
+  bottom: 6,
+  right: 6,
+  width: 28,
+  height: 28,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  border: 'none',
+  borderRadius: 3,
+  background: 'rgba(185, 28, 28, 0.92)',
+  cursor: 'pointer',
+  padding: 0,
 };
 
 const galleryThumb: CSSProperties = {

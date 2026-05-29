@@ -8,6 +8,7 @@ const MAX_ITEMS = 80;     // items returned
 
 type MediaItem = {
   url: string;
+  path: string;   // storage path within the bucket, for delete
   name: string;
   kind: 'image' | 'audio' | 'video';
   createdAt: string | null;
@@ -78,7 +79,7 @@ export async function GET(req: NextRequest) {
     if (!kind) continue;
     if (kindFilter && kind !== kindFilter) continue;
     const { data: urlData } = admin.storage.from(BUCKET).getPublicUrl(c.path);
-    items.push({ url: urlData.publicUrl, name: c.name, kind, createdAt: c.created_at });
+    items.push({ url: urlData.publicUrl, path: c.path, name: c.name, kind, createdAt: c.created_at });
     if (items.length >= MAX_ITEMS) break;
   }
 
