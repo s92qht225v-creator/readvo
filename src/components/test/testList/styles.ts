@@ -186,7 +186,9 @@ export const workspaceItem: CSSProperties = {
 export const workspaceItemMuted: CSSProperties = {
   ...workspaceItem,
   color: '#6b6470',
-  /* Inactive workspaces sit flat (no lift) so the active one stands out. */
+  /* Inactive workspaces are plain — no card (transparent bg + no
+     shadow) so only the selected item reads as a floating card. */
+  background: 'transparent',
   boxShadow: 'none',
 };
 
