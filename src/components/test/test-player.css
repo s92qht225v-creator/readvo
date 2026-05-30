@@ -252,16 +252,16 @@
 }
 
 /* ── Scroll mode (SurveyMonkey-style focus) ───────────────────────────
-   Every question is visible at once; the one nearest the viewport centre
-   stays fully lit while the rest dim back. Pure presentation — all
-   questions remain answerable regardless of focus.
-
-   Borderless by design: card-mode items keep their outline (inline on
-   `questionCard`), scroll-mode items rely on opacity, background, and a
-   soft shadow ring for the active state — no shared rule, no override. */
+   Each item renders exactly like the card-mode card (border, radius,
+   drop shadow, background — mirrors the `questionCard` inline style in
+   TestPlayer.tsx) so a single question is visually identical in both
+   layouts. The only differences in scroll mode are: items stack
+   vertically + page scrolls, out-of-view items dim. */
 .test-scroll__item {
   background: #fff;
+  border: 1px solid #e4ded8;
   border-radius: 7px;
+  box-shadow: 0 30px 90px rgba(47, 40, 53, 0.14);
   transition: opacity 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
