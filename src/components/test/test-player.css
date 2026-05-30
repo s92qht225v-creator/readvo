@@ -273,11 +273,23 @@
    between cards instead of the card scrolling internally and trapping
    the wheel.
 
+   `display: flex; flex-direction: column` + the qmedia flex-stretch
+   rule below give media items their full card height back — without
+   it the qmedia grid's `min-height: 100%` resolves to 0 against a
+   min-height-only parent and the image column sits at its natural
+   height, pinning content to the top of the card.
+
    Higher specificity (both classes on the same element) wins without
    needing a parent-shell selector. Card mode is untouched. */
 .test-player__card.test-scroll__item {
   height: auto !important;
   overflow-y: visible !important;
+  display: flex;
+  flex-direction: column;
+}
+.test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
+  flex: 1;
+  min-height: 0;
 }
 
 /* Scroll list / shell. Layout chrome (display/flex/gap) plus a
