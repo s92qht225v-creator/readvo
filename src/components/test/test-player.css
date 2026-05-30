@@ -333,7 +333,17 @@
    strip in reading.css so scroll items render edge-to-edge just like
    card-mode cards on phones (no border, no shadow, transparent, zero
    padding). Without this each scroll item would render as a small
-   centred white card with the question content squashed inside it. */
+   centred white card with the question content squashed inside it.
+
+   Height parity — on mobile, card mode effectively gives each question
+   the full viewport (`.test-player` is `min-height: 100vh` with
+   `safe center` alignment, so the card sits centred in the viewport
+   and feels full-screen). To match, each scroll item gets a
+   per-item min-height of `(100vh − list_padding_top − list_padding_bottom)`
+   and `justify-content: safe center` so its content sits vertically
+   centred inside that viewport-sized box. `safe center` falls back to
+   `flex-start` when content overflows so tall content isn't clipped
+   at the top. */
 @media (max-width: 640px) {
   .test-scroll__list {
     padding: 24px 12px 0;
@@ -347,6 +357,10 @@
     border-radius: 0;
     box-shadow: none;
     padding: 0;
+    min-height: calc(100vh - 156px - env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
   }
 }
 
