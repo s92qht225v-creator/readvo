@@ -1633,11 +1633,13 @@ const scrollList: React.CSSProperties = {
   gap: 20,
 };
 
+/* Scroll items render borderless by design — the focus dim (opacity)
+   and the subtle padding/spacing carry the "card" feel, not an
+   outline. Background + radius + active/warn rings all live in
+   `.test-scroll__item` CSS so they aren't sharing or competing with
+   the card-mode shell's inline border. */
 const scrollItem: React.CSSProperties = {
   position: 'relative',
-  background: '#fff',
-  border: '1px solid #e4ded8',
-  borderRadius: 7,
   padding: '28px 28px',
   containerType: 'inline-size',
   scrollMarginTop: 96,
