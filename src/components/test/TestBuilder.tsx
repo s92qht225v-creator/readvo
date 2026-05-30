@@ -2530,10 +2530,15 @@ function PreviewPlayIcon() {
 }
 
 function LayoutIcon() {
+  /* Three stacked rectangles on the left + one tall rectangle on the
+     right — adapted from the SVG the user requested, simplified to a
+     24×24 viewBox and rendered as outline-only (no fill). */
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="3" y="4" width="18" height="5" rx="1.5" />
-      <rect x="3" y="13" width="18" height="5" rx="1.5" />
+      <rect x="14" y="2" width="8" height="20" rx="1.5" />
+      <rect x="2" y="2" width="10" height="5" rx="1.5" />
+      <rect x="2" y="9.5" width="10" height="5" rx="1.5" />
+      <rect x="2" y="17" width="10" height="5" rx="1.5" />
     </svg>
   );
 }
