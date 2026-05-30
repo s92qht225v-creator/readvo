@@ -1088,7 +1088,7 @@ function ScrollBody({
 
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
-      <div style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
+      <div className="test-scroll__list" style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
         {test.questions.map((question) => {
           const active = question.id === activeId;
           return (
@@ -1717,7 +1717,7 @@ const scrollShell: React.CSSProperties = {
   minHeight: '100vh',
   background: 'var(--test-theme-background, #fff)',
   fontFamily: 'var(--test-theme-font-family, inherit)',
-  paddingBottom: 104,
+  /* padding-bottom owned by `.test-scroll` CSS (centres last card). */
 };
 
 const listeningBarStyle: React.CSSProperties = {
@@ -1753,13 +1753,11 @@ const listeningBarLabel: React.CSSProperties = {
 const scrollList: React.CSSProperties = {
   /* Match card-mode width (playerInner maxWidth: 1120) and scroll item
      padding (questionCard: 48px 52px) so the qmedia layouts inside
-     have the same room to render — split-right gives the image its
-     full half-card column instead of being squeezed. Top padding
-     mirrors card-mode `playerShell` (36px) so the first card's gap
-     to the page top matches the card-mode card's gap. */
+     have the same room to render. Top/horizontal padding is owned by
+     the `.test-scroll__list` CSS rule (top padding centres the first
+     card vertically in the viewport using a calc on 100vh). */
   maxWidth: 1120,
   margin: '0 auto',
-  padding: '36px 18px 0',
   display: 'flex',
   flexDirection: 'column',
   gap: 20,

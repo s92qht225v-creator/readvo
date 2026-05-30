@@ -266,22 +266,65 @@
 }
 
 /* Match card-mode card height on desktop — `.test-player__card` pins to
-   `min(620px, calc(100vh - 136px))`. Scroll items get the same minimum,
-   plus the flex chain that lets the qmedia layout fill that height
-   (without the chain the qmedia's `min-height: 100%` resolves to 0
-   against a min-height-only parent, leaving the image column its
-   natural height and a big empty pocket below). For no-media items the
-   `test-player__card--no-media` class (added on the JSX side) inherits
-   the existing flex centering rule. */
+   `min(620px, calc(100vh - 136px))`. Scroll items get the same minimum.
+
+   Two cases for the qmedia child:
+
+   1. Media items (image / video on the side) — qmedia is a grid that
+      uses `min-height: 100%` to stretch and `align-items: center` to
+      vertically centre the content column. For `min-height: 100%` to
+      resolve against a min-height-only parent we need a flex chain
+      with `flex: 1`. Card mode gets this for free via `.test-player__card`
+      having an explicit `height`.
+
+   2. No-media items (dropdown, opinion scale, T/F, rating, picture
+      choice — anything without a side image) — qmedia is a plain flex
+      column that sizes to its content. Stretching it with `flex: 1`
+      would defeat the `.test-player__card--no-media` rule's
+      `justify-content: center` and re-pin content to the top. So we
+      leave qmedia at its natural height and let the card's flex
+      centering position it.
+
+   Hence the `:not(.qmedia-no-media)` selector on the flex-stretch
+   rule. */
 @media (min-width: 641px) {
   .test-scroll__item {
     display: flex;
     flex-direction: column;
     min-height: min(620px, calc(100vh - 136px));
   }
-  .test-scroll__item > .qmedia-layout {
+  .test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
     flex: 1;
     min-height: 0;
+  }
+}
+
+/* First/last card vertical centering in the viewport.
+
+   When the page is at the top, the natural scroll position should place
+   the first card centred in the viewport (not pinned to the top edge).
+   When scrolled all the way down, the same for the last card. Both are
+   achieved by giving the scroll list a top padding and the scroll shell
+   a bottom padding of `(viewport_height − card_height) / 2` — that's the
+   extra space needed above the first card / below the last to make the
+   card centre coincide with the viewport centre.
+
+   Card height is `min(620px, 100vh - 136px)`, so the centering padding
+   simplifies to `(100vh - card_height) / 2`. Floors are kept so the
+   first card doesn't ride right under the page top on tall viewports
+   and the last card always clears the fixed footer (≈80px tall). */
+.test-scroll {
+  padding-bottom: 104px;
+}
+.test-scroll__list {
+  padding: 36px 18px 0;
+}
+@media (min-width: 641px) {
+  .test-scroll__list {
+    padding-top: max(36px, calc((100vh - min(620px, 100vh - 136px)) / 2));
+  }
+  .test-scroll {
+    padding-bottom: max(104px, calc((100vh - min(620px, 100vh - 136px)) / 2));
   }
 }
 
