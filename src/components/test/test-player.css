@@ -302,9 +302,9 @@
   display: flex;
   flex-direction: column;
 }
-.test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
-  /* `flex: 1` (= 1 1 0%) lets the qmedia grid grow to fill the card
-     height when content is short — so the qmedia grid's
+@media (min-width: 641px) {
+  /* DESKTOP ONLY: `flex: 1` (= 1 1 0%) lets the qmedia grid grow to
+     fill the card height when content is short — so the qmedia grid's
      `align-items: center` puts the content column vertically centred
      in the card.
 
@@ -314,8 +314,16 @@
      fixed cell and the qmedia grid's `overflow: hidden` crops the
      bottom. Leaving min-height at its default `auto` means qmedia is
      at least as tall as its content, so taller assets push the whole
-     scroll card to grow instead of being cropped. */
-  flex: 1;
+     scroll card to grow instead of being cropped.
+
+     NOT applied on mobile: mobile qmedia is a plain flex-column stack
+     (no internal `align-items: center`), so stretching it just leaves
+     content pinned to its top and defeats the scroll item's own
+     `justify-content: safe center`. On mobile qmedia stays at natural
+     height so the item's flex centring can position it correctly. */
+  .test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
+    flex: 1;
+  }
 }
 
 /* Scroll list / shell. Layout chrome (display/flex/gap) plus a
