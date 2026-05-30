@@ -296,8 +296,19 @@
   flex-direction: column;
 }
 .test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
+  /* `flex: 1` (= 1 1 0%) lets the qmedia grid grow to fill the card
+     height when content is short — so the qmedia grid's
+     `align-items: center` puts the content column vertically centred
+     in the card.
+
+     Crucially: NO `min-height: 0` here. With `min-height: 0` the qmedia
+     would also shrink below its content height, so a tall video
+     (portrait, or anything > card min-height) gets squeezed into the
+     fixed cell and the qmedia grid's `overflow: hidden` crops the
+     bottom. Leaving min-height at its default `auto` means qmedia is
+     at least as tall as its content, so taller assets push the whole
+     scroll card to grow instead of being cropped. */
   flex: 1;
-  min-height: 0;
 }
 
 /* Scroll list / shell. Layout chrome (display/flex/gap) plus a
