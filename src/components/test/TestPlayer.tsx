@@ -1797,9 +1797,12 @@ const scrollList: React.CSSProperties = {
    the card-mode shell's inline border. */
 const scrollItem: React.CSSProperties = {
   position: 'relative',
-  /* Padding is owned by `.test-scroll__item` CSS so it can drop to 0
-     on mobile (where card-mode strips card chrome and renders
-     edge-to-edge — see reading.css `@media (max-width: 640px)`). */
+  /* Padding mirrors card mode's `questionCard` inline style (48×52),
+     where card mode also keeps padding inline rather than in CSS. The
+     mobile chrome-strip rule (`.test-player__card { padding: 0
+     !important }` in @media max-width:640px) overrides this on phones,
+     so scroll items stay edge-to-edge on mobile just like card mode. */
+  padding: '48px 52px',
   containerType: 'inline-size',
   scrollMarginTop: 96,
   '--qmedia-card-pad-x': '52px',
