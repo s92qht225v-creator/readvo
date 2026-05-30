@@ -265,6 +265,16 @@
   scroll-margin-top: 96px;
 }
 
+/* Disable card-mode's internal `overflow-y: auto !important` for scroll
+   items — in card mode the trapped scroll is harmless (single card per
+   page) but in scroll mode it stops the wheel / touch from reaching
+   the page, so the user can't scroll past a card that fits. Higher
+   specificity (both classes on the same element) wins without needing
+   a parent-shell selector. */
+.test-player__card.test-scroll__item {
+  overflow-y: visible !important;
+}
+
 /* Scroll list / shell. Layout chrome (display/flex/gap) plus a
    top/bottom padding that mirrors card-mode's flex-centering for a
    single card — `(viewport − card_height) / 2`. With this padding the
