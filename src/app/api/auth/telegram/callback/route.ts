@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
-import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { getSupabaseAdmin, createSupabaseAuthClient } from '@/lib/supabase-server';
 
 // Cache JWKS keys (in-memory, refreshed on cold start)
 let jwksCache: { keys: JWK[] } | null = null;
@@ -130,6 +130,15 @@ export async function POST(request: NextRequest) {
 
   try {
     const admin = getSupabaseAdmin();
+    /* Dedicated throwaway client for auth/session operations. `verifyOtp`
+       below sets the resulting USER session on whatever client it runs on;
+       running it on `admin` (the shared DB singleton) would poison every
+       later admin DB call in the process with that user's token. Keeping it
+       on a per-request client discards the session with the request. All
+       admin-namespace auth ops (createUser/generateLink/updateUserById)
+       also run here for clarity — only `admin.from(...)` DB writes use the
+       singleton. See supabase-server.ts for the full rationale. */
+    const authClient = createSupabaseAuthClient();
     const syntheticEmail = `tg_${telegramId}@telegram.blim`;
     const sessionNonce = crypto.randomBytes(16).toString('hex');
 
@@ -144,7 +153,7 @@ export async function POST(request: NextRequest) {
     };
 
     // Create user if not exists
-    const { error: createError } = await admin.auth.admin.createUser({
+    const { error: createError } = await authClient.auth.admin.createUser({
       email: syntheticEmail,
       email_confirm: true,
       user_metadata: metadata,
@@ -156,7 +165,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate Supabase session
-    const { data: linkData, error: linkError } = await admin.auth.admin.generateLink({
+    const { data: linkData, error: linkError } = await authClient.auth.admin.generateLink({
       type: 'magiclink',
       email: syntheticEmail,
     });
@@ -171,7 +180,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'no_token' }, { status: 500 });
     }
 
-    const { data: sessionData, error: otpError } = await admin.auth.verifyOtp({
+    /* verifyOtp sets a session on `authClient` (NOT `admin`) — this is the
+       call that previously poisoned the shared singleton. */
+    const { data: sessionData, error: otpError } = await authClient.auth.verifyOtp({
       token_hash: tokenHash,
       type: 'email',
     });
@@ -182,7 +193,7 @@ export async function POST(request: NextRequest) {
     }
 
     const userId = sessionData.session.user.id;
-    await admin.auth.admin.updateUserById(userId, { user_metadata: metadata });
+    await authClient.auth.admin.updateUserById(userId, { user_metadata: metadata });
     await admin.from('active_sessions').upsert({
       user_id: userId,
       session_nonce: sessionNonce,
