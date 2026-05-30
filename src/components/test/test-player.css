@@ -252,115 +252,35 @@
 }
 
 /* ── Scroll mode (SurveyMonkey-style focus) ───────────────────────────
-   Each item renders exactly like the card-mode card (border, radius,
-   drop shadow, background — mirrors the `questionCard` inline style in
-   TestPlayer.tsx) so a single question is visually identical in both
-   layouts. The only differences in scroll mode are: items stack
-   vertically + page scrolls, out-of-view items dim. */
+   Each scroll item wears `test-player__card` so EVERY card-mode rule
+   (chrome, height, border, padding, mobile chrome-strip, preview-shell
+   sizing — all already battle-tested in test-player.css / reading.css /
+   test-builder-preview.css) applies automatically. The `.test-scroll__item`
+   class here carries ONLY the scroll-specific behaviour: focus dim,
+   transitions, scroll-margin (to leave room for the listening bar when
+   the navigator jumps to a card). It deliberately does NOT redefine
+   any chrome, padding, or height — that's `.test-player__card`'s job. */
 .test-scroll__item {
-  background: #fff;
-  border: 1px solid #e4ded8;
-  border-radius: 7px;
-  box-shadow: 0 30px 90px rgba(47, 40, 53, 0.14);
-  padding: 48px 52px;
   transition: opacity 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  scroll-margin-top: 96px;
 }
 
-/* Match card-mode card height on desktop — `.test-player__card` pins to
-   `min(620px, calc(100vh - 136px))`. Scroll items get the same minimum.
-
-   Two cases for the qmedia child:
-
-   1. Media items (image / video on the side) — qmedia is a grid that
-      uses `min-height: 100%` to stretch and `align-items: center` to
-      vertically centre the content column. For `min-height: 100%` to
-      resolve against a min-height-only parent we need a flex chain
-      with `flex: 1`. Card mode gets this for free via `.test-player__card`
-      having an explicit `height`.
-
-   2. No-media items (dropdown, opinion scale, T/F, rating, picture
-      choice — anything without a side image) — qmedia is a plain flex
-      column that sizes to its content. Stretching it with `flex: 1`
-      would defeat the `.test-player__card--no-media` rule's
-      `justify-content: center` and re-pin content to the top. So we
-      leave qmedia at its natural height and let the card's flex
-      centering position it.
-
-   Hence the `:not(.qmedia-no-media)` selector on the flex-stretch
-   rule. */
-@media (min-width: 641px) {
-  .test-scroll__item {
-    display: flex;
-    flex-direction: column;
-    min-height: min(620px, calc(100vh - 136px));
-  }
-  .test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
-    flex: 1;
-    min-height: 0;
-  }
-}
-
-/* First/last card vertical centering in the viewport.
-
-   When the page is at the top, the natural scroll position should place
-   the first card centred in the viewport (not pinned to the top edge).
-   When scrolled all the way down, the same for the last card. Both are
-   achieved by giving the scroll list a top padding and the scroll shell
-   a bottom padding of `(viewport_height − card_height) / 2` — that's the
-   extra space needed above the first card / below the last to make the
-   card centre coincide with the viewport centre.
-
-   Card height is `min(620px, 100vh - 136px)`, so the centering padding
-   simplifies to `(100vh - card_height) / 2`. Floors are kept so the
-   first card doesn't ride right under the page top on tall viewports
-   and the last card always clears the fixed footer (≈80px tall). */
+/* Scroll list / shell — just width, gap, and minimal padding-bottom to
+   clear the fixed footer. No centering math, no parallel sizing rules. */
 .test-scroll {
-  padding-bottom: 104px;
+  padding-bottom: 96px;
 }
 .test-scroll__list {
-  padding: 36px 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-@media (min-width: 641px) {
-  .test-scroll__list {
-    padding-top: max(36px, calc((100vh - min(620px, 100vh - 136px)) / 2));
-  }
-  .test-scroll {
-    padding-bottom: max(104px, calc((100vh - min(620px, 100vh - 136px)) / 2));
-  }
-}
-
-/* Mobile chrome — mirror the documented `.test-player__card` mobile
-   strip in reading.css so scroll items render edge-to-edge just like
-   card-mode cards on phones (no border, no shadow, transparent, zero
-   padding). Without this each scroll item would render as a small
-   centred white card with the question content squashed inside it.
-
-   Height parity — on mobile, card mode effectively gives each question
-   the full viewport (`.test-player` is `min-height: 100vh` with
-   `safe center` alignment, so the card sits centred in the viewport
-   and feels full-screen). To match, each scroll item gets a
-   per-item min-height of `(100vh − list_padding_top − list_padding_bottom)`
-   and `justify-content: safe center` so its content sits vertically
-   centred inside that viewport-sized box. `safe center` falls back to
-   `flex-start` when content overflows so tall content isn't clipped
-   at the top. */
 @media (max-width: 640px) {
-  .test-scroll__list {
-    padding: 24px 12px 0;
-  }
   .test-scroll {
-    padding-bottom: calc(132px + env(safe-area-inset-bottom));
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
   }
-  .test-scroll__item {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    min-height: calc(100vh - 156px - env(safe-area-inset-bottom));
-    display: flex;
-    flex-direction: column;
-    justify-content: safe center;
+  .test-scroll__list {
+    gap: 12px;
   }
 }
 

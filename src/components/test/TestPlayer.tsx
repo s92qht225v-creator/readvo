@@ -1121,7 +1121,14 @@ function ScrollBody({
               data-qid={question.id}
               aria-current={active ? 'true' : undefined}
               onFocusCapture={() => setActiveId(question.id)}
-              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${question.media?.url ? '' : 'test-player__card--no-media'}`}
+              /* Each scroll item *is* a card — wears `test-player__card`
+                 so all existing card-mode rules (chrome, height, border,
+                 padding, mobile chrome-strip, preview-shell sizing)
+                 apply automatically. `test-scroll__item` only carries
+                 the scroll-specific behaviour (focus dim, transitions).
+                 Media flag mirrors card mode's `--has-media` / `--no-media`
+                 modifier so the same centering rules kick in. */
+              className={`test-scroll__item test-player__card ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${question.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'}`}
               style={scrollItem}
             >
               {/* Match card-mode chrome exactly: no inline number badge
@@ -1774,16 +1781,13 @@ const listeningBarLabel: React.CSSProperties = {
 };
 
 const scrollList: React.CSSProperties = {
-  /* Match card-mode width (playerInner maxWidth: 1120) and scroll item
-     padding (questionCard: 48px 52px) so the qmedia layouts inside
-     have the same room to render. Top/horizontal padding is owned by
-     the `.test-scroll__list` CSS rule (top padding centres the first
-     card vertically in the viewport using a calc on 100vh). */
+  /* Width and centering only. `.test-scroll__list` CSS owns the
+     display/flex/gap; each item wears `.test-player__card` and
+     inherits all card-mode rules (width, height, padding, chrome,
+     mobile strip, preview-shell sizing), so this file no longer
+     duplicates any of that. */
   maxWidth: 1120,
   margin: '0 auto',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 20,
 };
 
 /* Scroll items render borderless by design — the focus dim (opacity)
