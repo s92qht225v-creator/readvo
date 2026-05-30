@@ -717,27 +717,14 @@ export function TestBuilder({ testId }: Props) {
       {/* ── Left rail: question list ─────────────── */}
       <aside style={leftPane}>
         <div style={leftModeWrap}>
-          <span style={leftModeIcon} aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-              <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v2.5A1.75 1.75 0 0 1 13.25 7H2.75A1.75 1.75 0 0 1 1 5.25zm1.75-.25a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25zM1 10.75C1 9.784 1.784 9 2.75 9h10.5c.966 0 1.75.784 1.75 1.75v2.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25zm1.75-.25a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25z" />
-            </svg>
-          </span>
-          <select
+          <ModeDropdown
             value={test.is_graded ? 'test' : 'survey'}
-            onChange={(event) => {
-              const isGraded = event.target.value === 'test';
+            onChange={(next) => {
+              const isGraded = next === 'test';
               setTest({ ...test, is_graded: isGraded });
               updateTest({ is_graded: isGraded });
             }}
-            style={leftModeSelect}
-            aria-label="Test mode"
-          >
-            <option value="survey">Survey mode</option>
-            <option value="test">Test mode</option>
-          </select>
-          <span style={leftModeChevron} aria-hidden="true">
-            <ChevronDownIcon />
-          </span>
+          />
         </div>
         <ul className="tb-left" style={{ listStyle: 'none', padding: '8px 8px 0', margin: 0, flex: 1, overflow: 'auto' }}>
           {welcomeScreen.enabled ? (
@@ -2540,6 +2527,89 @@ function LayoutIcon() {
       <rect x="2" y="9.5" width="10" height="5" rx="1.5" />
       <rect x="2" y="17" width="10" height="5" rx="1.5" />
     </svg>
+  );
+}
+
+/* Survey-mode / Test-mode picker in the builder's left rail. Replaces
+   a native <select> with a custom dropdown styled like the player's
+   `CustomDropdownAnswer` (combobox button + menu with a ✓ on the
+   selected row + hover highlight) so it matches the rest of the test
+   app instead of using the OS default popup. */
+function ModeDropdown({ value, onChange }: {
+  value: 'survey' | 'test';
+  onChange: (next: 'survey' | 'test') => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
+  const OPTIONS: Array<{ value: 'survey' | 'test'; label: string }> = [
+    { value: 'survey', label: 'Survey mode' },
+    { value: 'test', label: 'Test mode' },
+  ];
+  const current = OPTIONS.find(o => o.value === value) ?? OPTIONS[0];
+
+  return (
+    <div ref={rootRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <span style={leftModeIcon} aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+          <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v2.5A1.75 1.75 0 0 1 13.25 7H2.75A1.75 1.75 0 0 1 1 5.25zm1.75-.25a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25zM1 10.75C1 9.784 1.784 9 2.75 9h10.5c.966 0 1.75.784 1.75 1.75v2.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25zm1.75-.25a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25z" />
+        </svg>
+      </span>
+      <button
+        type="button"
+        role="combobox"
+        aria-expanded={open}
+        aria-label="Test mode"
+        onClick={() => setOpen(v => !v)}
+        onKeyDown={(event) => {
+          if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setOpen(true);
+          }
+        }}
+        style={modeTriggerButton}
+      >
+        <span>{current.label}</span>
+      </button>
+      <span style={leftModeChevron} aria-hidden="true">
+        <ChevronDownIcon />
+      </span>
+      {open ? (
+        <div role="listbox" style={modeMenu}>
+          {OPTIONS.map(option => {
+            const selected = option.value === value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                role="option"
+                aria-selected={selected}
+                onClick={() => { onChange(option.value); setOpen(false); }}
+                style={modeMenuItem(selected)}
+              >
+                <span style={modeMenuCheck}>{selected ? '✓' : ''}</span>
+                <span>{option.label}</span>
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
   );
 }
 
@@ -4528,7 +4598,11 @@ const leftModeIcon: React.CSSProperties = {
   pointerEvents: 'none',
 };
 
-const leftModeSelect: React.CSSProperties = {
+/* `leftModeSelect` retired — the native <select> was replaced by the
+   custom `ModeDropdown` button so the OS popup styling stops jumping
+   out from the rest of the test-app UI. The button below mirrors the
+   old select's visual chrome inside `leftModeWrap`. */
+const modeTriggerButton: React.CSSProperties = {
   width: '100%',
   height: '100%',
   border: 'none',
@@ -4538,11 +4612,53 @@ const leftModeSelect: React.CSSProperties = {
   fontFamily: 'inherit',
   fontSize: 14,
   fontWeight: 500,
-  outline: 'none',
-  appearance: 'none',
-  WebkitAppearance: 'none',
+  textAlign: 'left',
   padding: '0 40px 0 42px',
   cursor: 'pointer',
+};
+
+/* Menu popup — mirrors `.test-custom-dropdown__menu` from
+   QuestionRenderer / tq-options.css visually (white card, soft
+   shadow, rounded). Positioned absolutely below the trigger wrapper
+   (the parent `leftModeWrap` is the relative ancestor). */
+const modeMenu: React.CSSProperties = {
+  position: 'absolute',
+  top: 'calc(100% + 4px)',
+  left: 0,
+  right: 0,
+  zIndex: 50,
+  background: '#fff',
+  border: '1px solid #e4ded8',
+  borderRadius: 3,
+  boxShadow: '0 12px 28px rgba(47, 40, 53, 0.16), 0 1px 3px rgba(47, 40, 53, 0.08)',
+  padding: 4,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 2,
+};
+
+const modeMenuItem = (selected: boolean): React.CSSProperties => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  padding: '8px 10px',
+  border: 'none',
+  background: selected ? '#f5f3f4' : 'transparent',
+  color: '#2f2835',
+  fontFamily: 'inherit',
+  fontSize: 14,
+  fontWeight: selected ? 700 : 500,
+  borderRadius: 3,
+  cursor: 'pointer',
+  textAlign: 'left',
+});
+
+const modeMenuCheck: React.CSSProperties = {
+  width: 14,
+  display: 'inline-flex',
+  justifyContent: 'center',
+  color: '#6b4fbb',
+  fontWeight: 800,
 };
 
 const leftModeChevron: React.CSSProperties = {
