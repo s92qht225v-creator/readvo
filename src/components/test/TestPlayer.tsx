@@ -1098,7 +1098,7 @@ function ScrollBody({
               data-qid={question.id}
               aria-current={active ? 'true' : undefined}
               onFocusCapture={() => setActiveId(question.id)}
-              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'}`}
+              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${question.media?.url ? '' : 'test-player__card--no-media'}`}
               style={scrollItem}
             >
               {/* Match card-mode chrome exactly: no inline number badge
