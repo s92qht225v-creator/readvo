@@ -42,3 +42,8 @@ coverage/
 .mcp.json
 .superpowers/
 supabase/
+
+# Playwright MCP cache + screenshots
+.playwright-mcp/
+mobile-*.png
+
