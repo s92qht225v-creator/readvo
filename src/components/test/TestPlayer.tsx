@@ -1089,9 +1089,8 @@ function ScrollBody({
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
       <div style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
-        {test.questions.map((question, i) => {
+        {test.questions.map((question) => {
           const active = question.id === activeId;
-          const answered = hasQuestionAnswer(question, answers[question.id]);
           return (
             <section
               key={question.id}
@@ -1102,19 +1101,18 @@ function ScrollBody({
               className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'}`}
               style={scrollItem}
             >
-              <div style={scrollItemNumRow}>
-                <span style={scrollItemNumBadge(answered)}>{i + 1}</span>
-                {question.required ? <span style={scrollRequiredStar} title="Required">*</span> : null}
-              </div>
+              {/* Match card-mode chrome exactly: no inline number badge
+                  (progress lives in the footer + Questions navigator),
+                  same title/description styling. */}
               <QuestionMediaLayout
                 media={question.media}
                 header={(
                   <>
-                    <h2 className="test-player__title" style={scrollItemTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
+                    <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
                       {question.prompt ? <MathText>{question.prompt}</MathText> : '…'}
                     </h2>
                     {question.description ? (
-                      <p className="test-player__description" style={scrollItemDesc} dir="auto" lang={detectScriptLang(question.description)}>
+                      <p className="test-player__description" style={questionDescription} dir="auto" lang={detectScriptLang(question.description)}>
                         <MathText>{question.description}</MathText>
                       </p>
                     ) : null}
