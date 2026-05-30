@@ -229,6 +229,7 @@ Example routes:
 - **`content/CLAUDE.md`** — Content JSON formats, authoring conventions, formatting standards
 - **`src/components/CLAUDE.md`** — Component behavior, layout structures, feature details
 - **`src/styles/CLAUDE.md`** — CSS class reference, padding specs, mobile responsive, button sizes
+- **`src/components/test/CLAUDE.md`** — Test builder + player. Folder map, per-question-type extension recipe, viewport architecture, **scroll mode** (`layout: 'scroll'` — IELTS / SurveyMonkey-style stacked questions), listening audio, navigator, marketplace, sessions.
 
 ## Data Hierarchy
 ```

@@ -825,47 +825,90 @@ automatically:
 opacity, transitions, `scroll-margin-top: 96px` (clears the listening
 bar when the navigator scrolls to a card).
 
-### Two targeted overrides for scroll items
+### No-`!important` cascade strategy
 
-Two card-mode declarations don't apply to scroll items, handled via
-the combined-class selector `.test-player__card.test-scroll__item`
-(specificity 0,2,0 — beats base 0,1,0 cleanly):
+All scroll-mode rules win the cascade via specificity alone — **no
+scroll-specific declaration uses `!important`**. Achieved through a
+deliberate three-part rewrite of the existing card-mode rules:
 
-1. **Drop the fixed height**: card-mode pins `height: min(620px,
-   100vh − 136px)`. Scroll items use `height: auto` so they grow
-   with content (tall videos / long answers). `min-height` stays as
-   the floor so short cards still look like 620 cards.
-2. **Drop the internal overflow scroll**: card-mode uses `overflow-y:
-   auto` to scroll content inside the card. Scroll items use
-   `overflow-y: visible` — the *page* scrolls between cards, never
-   trapping the wheel inside one.
+**1. `:not(.test-scroll__item)` splits** — where card-mode rules
+need to keep their `!important` for card-mode reasons (chrome strip
+that beats inline styles, etc), the conflicting declarations were
+moved into a `:not(.test-scroll__item)` variant so scroll items
+simply don't match them:
 
-**No `!important` on the override** because the base
-`.test-player__card` rule was modified to **NOT** use `!important` on
-`height` and `overflow-y` (only on the chrome declarations that
-nothing fights). Preview shell rules (`.test-preview-shell--desktop
-.test-player__card`) similarly **split** their height/overflow into a
-`:not(.test-scroll__item)` variant so card mode behaviour is
-byte-for-byte unchanged but scroll items skip the pinning.
+- `@media (max-width: 640px) .test-player__card:not(.test-scroll__item)
+  { display: block !important }` in `test-player.css` — keeps mobile
+  card-mode cards as block, lets scroll items use `display: flex`
+  from their own rule.
+- `.test-preview-shell--desktop .test-player__card:not(.test-scroll__item)
+  { height: 620px !important; overflow-y: auto !important }` in
+  `reading.css` — preview shell desktop card-mode keeps its pinned
+  height + internal scroll; scroll items skip the pinning.
+- `.test-preview-shell--mobile .test-player__card:not(.test-scroll__item)
+  { height: 663px !important; overflow-y: auto !important }` — same
+  for preview shell mobile.
 
-### Flex chain for media items
+**2. Removed `!important` from base** declarations that nothing
+external was fighting:
+
+- `.test-player__card { height: min(620px, …); overflow-y: auto }` in
+  `test-player.css` desktop @media — `!important` dropped from
+  `height` and `overflow-y` so the scroll override wins on combined-
+  class specificity (0,2,0 > 0,1,0).
+- `min-height: min(620px, …) !important` stays as the canonical
+  floor — consumed by card mode (gets pinned to it via `height`) and
+  scroll mode (uses it as a floor; cards grow above it with content).
+
+**3. Removed redundant defensive `!important`** that was forcing
+mobile scroll items to have no min-height:
+
+- `@media (max-width: 640px) .test-player__card { min-height: auto
+  !important }` in `reading.css` — removed entirely. Defensive
+  declaration: the desktop min-height rule on `.test-player__card` is
+  scoped to `@media (min-width: 641px)` and never applies on mobile
+  anyway, so `min-height` was already `auto` without the override.
+  Without it, mobile scroll items can set their own
+  viewport-tall min-height.
+
+### Scroll-item overrides — what `.test-player__card.test-scroll__item`
+declares
+
+With the cascade cleanups above in place, two card-mode declarations
+get overridden by the scroll combined-class selector cleanly (0,2,0
+beats 0,1,0, no `!important` needed):
+
+```css
+.test-player__card.test-scroll__item {
+  height: auto;          /* card grows with content (was 620 pinned) */
+  overflow-y: visible;   /* page scrolls; no wheel-trap inside card */
+  display: flex;         /* enables qmedia flex chain (desktop) + safe-center (mobile) */
+  flex-direction: column;
+}
+```
+
+### Flex chain for media items (desktop only)
 
 With `height: auto`, the qmedia grid's `min-height: 100%` resolves to
 0 against the now-min-height-only parent — so the image column stays
-natural height and content pins to the top of a tall card. Fix:
+natural height and content pins to the top of a tall card on desktop.
+Fix (DESKTOP ONLY — see mobile note below):
 
 ```css
 .test-player__card.test-scroll__item {
   display: flex;
   flex-direction: column;
 }
-.test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
-  flex: 1;          /* grow to fill card; no min-height: 0 (avoid clipping tall media) */
+@media (min-width: 641px) {
+  .test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
+    flex: 1;        /* grow to fill card; no min-height: 0 (avoid clipping tall media) */
+  }
 }
 ```
 
-- `flex: 1` lets short qmedia stretch to fill the card so the grid's
-  `align-items: center` vertically centres the content column.
+- `flex: 1` (desktop) lets short qmedia stretch to fill the card so
+  the grid's `align-items: center` vertically centres the content
+  column.
 - **NO `min-height: 0`** — that allows shrinking below content and the
   qmedia grid's `overflow: hidden` then crops the bottom of tall
   media (portrait videos). Without it, qmedia respects its content
@@ -873,8 +916,15 @@ natural height and content pins to the top of a tall card. Fix:
 - `:not(.qmedia-no-media)` — no-media items keep the existing
   `.test-player__card--no-media { justify-content: center }` rule
   doing their centring.
+- **Mobile NOT included** — mobile qmedia is a plain flex-column
+  stack with no internal `align-items: center` (per CLAUDE.md
+  "viewport architecture" → `display: contents` on `.qmedia-content`),
+  so stretching it just leaves content pinned to its top and defeats
+  the scroll item's own `justify-content: safe center`. On mobile,
+  qmedia stays at natural height so the item's flex centring can
+  position it correctly.
 
-### First / last card centring in viewport
+### First / last card centring in viewport (desktop)
 
 Card mode centres its single card via flex on `.test-player`. Scroll
 mode can't (multiple cards can't all flex-centre), so equivalent CSS
@@ -894,7 +944,43 @@ small 48 px lift so the card sits slightly above geometric centre
 ```
 
 Floors protect short viewports + preserve fixed-footer clearance
-(96 px). Mobile keeps simpler flat padding (24/12 + safe-area).
+(96 px). Last-card padding-bottom is `+ 48` (not `− 48`) because on
+the scroll-bottom rest position more padding-bottom = card visually
+higher in viewport.
+
+### Mobile scroll items — per-item viewport-tall
+
+On mobile, card mode gives each question the full viewport via
+`.test-player { min-height: 100vh; align-items: safe center }` in
+reading.css. Scroll items mirror that **per item**:
+
+```css
+@media (max-width: 640px) {
+  .test-scroll {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+  .test-scroll__list {
+    /* 24px horizontal padding mirrors card mode's `.test-player {
+       padding: 24px 24px … }`. The `.test-player__card` mobile
+       chrome-strip zeroes the card's own padding, so without list
+       padding scroll items would touch the screen edges. */
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 12px;
+  }
+  .test-scroll__item {
+    min-height: calc(100vh - 24px - 96px - env(safe-area-inset-bottom));
+    justify-content: safe center;
+  }
+}
+```
+
+`display: flex; flex-direction: column` is already on the
+all-viewports `.test-player__card.test-scroll__item` rule. With qmedia
+NOT stretched on mobile (see above), the item's `safe center` actually
+centres the qmedia content block in the viewport-tall box. `safe`
+falls back to `flex-start` when content overflows so tall questions
+aren't clipped at the top.
 
 ### Navigator (shared with card mode)
 

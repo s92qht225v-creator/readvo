@@ -10,12 +10,23 @@ All styles live in `src/styles/reading.css` **EXCEPT**:
 - `reading.css` still owns the test player **frame chrome**
   (`.test-preview-shell--{mobile,desktop}`, the `@media (max-width:640px)`
   card chrome) but those rules don't touch any answer-type internals.
-  The preview shell rules deliberately **split** `height` and
-  `overflow-y` into a `:not(.test-scroll__item)` variant so scroll-mode
-  cards (which grow with content + scroll the page) aren't pinned to
-  the card-mode 620 / 663 fixed height. See `src/components/test/CLAUDE.md`
-  → "Scroll mode" for the full reasoning. Card mode behaviour is
-  byte-for-byte unchanged.
+  Scroll-mode coexistence: several card-mode rules are deliberately
+  **split** so they apply only to non-scroll cards, letting scroll
+  items inherit the shared chrome but override conflicting
+  declarations via specificity alone (no `!important` escalation):
+  - `.test-preview-shell--{desktop,mobile} .test-player__card:not(.test-scroll__item)
+    { height; overflow-y }` — preview shell pins card-mode card height
+    + internal scroll; scroll items aren't pinned (grow with content).
+  - `.test-player__card:not(.test-scroll__item) { display: block !important }`
+    in test-player.css mobile @media — card-mode mobile keeps block
+    layout; scroll items use `display: flex` from their own rule.
+  - `min-height: auto !important` was REMOVED from the mobile
+    `.test-player__card` rule (redundant — the desktop min-height is
+    `@media (min-width: 641px)`-scoped, never applied on mobile
+    anyway). Removal lets mobile scroll items set their own
+    viewport-tall min-height.
+  See `src/components/test/CLAUDE.md` → "Scroll mode" for full reasoning.
+  Card mode behaviour is byte-for-byte unchanged.
 
 ## Key CSS Classes
 
