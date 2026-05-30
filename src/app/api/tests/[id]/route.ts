@@ -14,16 +14,20 @@ async function authorize(req: NextRequest, id: string) {
   return { admin, userId, test };
 }
 
-/** GET /api/tests/[id] — full test + ordered questions */
+/** GET /api/tests/[id] — full test + ordered questions + ordered sections */
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const auth = await authorize(req, id);
   if (auth.error) return auth.error;
 
-  const { data: questions } = await auth.admin
-    .from('test_questions').select('*').eq('test_id', id).order('position', { ascending: true });
+  const [{ data: questions }, { data: sections }] = await Promise.all([
+    auth.admin.from('test_questions').select('*').eq('test_id', id).order('position', { ascending: true }),
+    auth.admin.from('test_sections').select('*').eq('test_id', id)
+      .order('position', { ascending: true })
+      .order('created_at', { ascending: true }),
+  ]);
 
-  return NextResponse.json({ test: auth.test, questions: questions ?? [] });
+  return NextResponse.json({ test: auth.test, questions: questions ?? [], sections: sections ?? [] });
 }
 
 /** PATCH /api/tests/[id] — update metadata, screens, grading */
@@ -42,6 +46,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     time_limit_seconds?: number | null;
     layout?: 'card' | 'scroll';
     listening_audio_url?: string | null;
+    strict_sections?: boolean;
     is_graded?: boolean;
     is_marketplace?: boolean;
     marketplace_price?: number | null;
@@ -75,6 +80,8 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   } else if (typeof body.listening_audio_url === 'string') {
     patch.listening_audio_url = body.listening_audio_url.slice(0, 1000);
   }
+  /* Forward-only / play-once toggle for sectioned listening exams. */
+  if (typeof body.strict_sections === 'boolean') patch.strict_sections = body.strict_sections;
 
   /* Marketplace flag + price + summary. Owner-gated only — any test
      owner can flag their own test for sale. The marketplace tab is

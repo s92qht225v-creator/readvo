@@ -12,6 +12,10 @@ interface IncomingQuestion {
   options?: Record<string, unknown>;
   required?: boolean;
   hidden?: boolean;
+  /** Optional FK to `test_sections.id` — null/missing = unsectioned.
+   *  Caller is responsible for sending a valid section id that belongs
+   *  to this test; bad ids fail at the DB FK level (returns 500). */
+  section_id?: string | null;
 }
 
 /**
@@ -80,6 +84,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       options: normalizeQuestionOptionsMedia(q.type, q.options ?? {}),
       required: q.required ?? true,
       hidden: q.hidden === true,
+      section_id: typeof q.section_id === 'string' && isUuid(q.section_id) ? q.section_id : null,
     };
   });
 

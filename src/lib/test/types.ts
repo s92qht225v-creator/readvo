@@ -188,7 +188,30 @@ export interface TestQuestion {
   /** When true the question is excluded from the public player and
    *  grading but kept in the builder so the author can restore it. */
   hidden?: boolean;
+  /** Optional FK to `test_sections.id`. Null = unsectioned, renders
+   *  under a synthetic "All questions" group in the builder. */
+  section_id?: string | null;
   created_at: string;
+}
+
+/** Per-test ordered group of questions, optionally with its own
+ *  continuous listening audio. A test with zero section rows behaves
+ *  exactly like stage (a) — sectionless tests are unchanged. */
+export interface TestSection {
+  id: string;
+  test_id: string;
+  position: number;
+  title: string;
+  audio_url: string | null;
+  created_at: string;
+}
+
+/** Public-facing section, returned with the test on `GET /api/t/[slug]`. */
+export interface PublicSection {
+  id: string;
+  position: number;
+  title: string;
+  audio_url: string | null;
 }
 
 export interface Test {
@@ -208,8 +231,15 @@ export interface Test {
   layout?: 'card' | 'scroll';
   /* Single continuous audio track played while the student works
      through a scroll-mode test (listening exams). Stored as a
-     test-media public URL. */
+     test-media public URL. Used when the test has no `test_sections`
+     rows — when sections exist, each section carries its own audio
+     and this field is ignored. */
   listening_audio_url?: string | null;
+  /* Forward-only navigation + play-once audio when true (IELTS-style
+     exam mode). When false, students can navigate freely between
+     sections and replay audio. Defaults to false so stage-(a) tests
+     behave identically. */
+  strict_sections?: boolean;
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
@@ -376,6 +406,9 @@ export interface PublicQuestion {
   description?: string;
   media?: QuestionMedia;
   required: boolean;
+  /** Same FK as the builder side. Player groups questions by this id
+   *  (or by "unsectioned" when null). */
+  section_id?: string | null;
   options:
     | PublicMcOptions
     | PublicShortTextOptions
@@ -405,6 +438,14 @@ export interface PublicTest {
   time_limit_seconds?: number | null;
   layout?: 'card' | 'scroll';
   listening_audio_url?: string | null;
+  /* When true: forward-only navigation across sections + play-once
+     audio per section. When false (default): free back/next. Only
+     meaningful when `sections.length > 0`. */
+  strict_sections?: boolean;
+  /* Ordered list of the test's sections (empty if the test is
+     sectionless). Each question's `section_id` references one of
+     these ids. */
+  sections?: PublicSection[];
   is_graded: boolean;
   questions: PublicQuestion[];
   /* True when the test owner does NOT have an active subscription —

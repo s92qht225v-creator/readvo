@@ -30,11 +30,19 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     return NextResponse.json({ error: 'not_found' }, { status: 404 });
   }
 
-  const { data: questions } = await admin
-    .from('test_questions')
-    .select('*')
-    .eq('test_id', test.id)
-    .order('position', { ascending: true });
+  const [{ data: questions }, { data: sections }] = await Promise.all([
+    admin
+      .from('test_questions')
+      .select('*')
+      .eq('test_id', test.id)
+      .order('position', { ascending: true }),
+    admin
+      .from('test_sections')
+      .select('id, position, title, audio_url')
+      .eq('test_id', test.id)
+      .order('position', { ascending: true })
+      .order('created_at', { ascending: true }),
+  ]);
 
   /* Branding gate — show "Made with Blim" unless the owner is an
      active subscriber AND has explicitly turned it off in Settings.
@@ -62,10 +70,23 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     time_limit_seconds: test.time_limit_seconds,
     layout: test.layout === 'scroll' ? 'scroll' : 'card',
     listening_audio_url: test.listening_audio_url ?? null,
+    strict_sections: !!test.strict_sections,
+    sections: (sections ?? []).map(s => ({
+      id: s.id as string,
+      position: s.position as number,
+      title: (s.title as string) ?? '',
+      audio_url: (s.audio_url as string | null) ?? null,
+    })),
     is_graded: test.is_graded,
     questions: (questions ?? [])
       .filter((q: TestQuestion) => !q.hidden)
-      .map((q: TestQuestion) => sanitizeQuestion(q, seed)),
+      .map((q: TestQuestion) => {
+        const sanitized = sanitizeQuestion(q, seed);
+        /* Preserve section_id on the public question so the player
+           can group questions by section. sanitizeQuestion only
+           sanitizes answer keys; section_id is non-secret metadata. */
+        return { ...sanitized, section_id: q.section_id ?? null };
+      }),
     show_branding: showBranding,
   };
 
