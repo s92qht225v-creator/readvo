@@ -13880,6 +13880,29 @@ body {
   padding: 36px 18px !important;
 }
 
+/* Scroll-mode card y-position parity inside the preview shell.
+
+   Card mode uses the rule above (`.test-player-screen { padding:
+   36px 18px }`) to sit the card 36 px from the shell content top.
+   Scroll mode in live (window-scrolling) context uses
+   `(100vh − card_height) / 2` centering math so the first card lands
+   centred in the viewport — correct for real users. In the preview
+   shell that same math computes a larger top padding than card
+   mode's flat 36, so the first scroll card visibly hangs lower than
+   the card-mode card.
+
+   These selectors restore parity *only* inside the preview shell —
+   live mode is untouched. Specificity (.test-preview-shell + .test-…)
+   beats the centering rule without needing `!important`. */
+.test-preview-shell--desktop .test-scroll__list,
+.test-preview-shell--mobile .test-scroll__list {
+  padding-top: 36px;
+}
+.test-preview-shell--desktop .test-scroll,
+.test-preview-shell--mobile .test-scroll {
+  padding-bottom: 36px;
+}
+
 .test-preview-shell--desktop .test-player-screen__card {
   box-sizing: border-box !important;
   width: 1120px !important;
