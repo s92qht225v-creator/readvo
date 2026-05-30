@@ -265,13 +265,18 @@
   scroll-margin-top: 96px;
 }
 
-/* Disable card-mode's internal `overflow-y: auto !important` for scroll
-   items — in card mode the trapped scroll is harmless (single card per
-   page) but in scroll mode it stops the wheel / touch from reaching
-   the page, so the user can't scroll past a card that fits. Higher
-   specificity (both classes on the same element) wins without needing
-   a parent-shell selector. */
+/* Scroll-mode cards grow with their content instead of being pinned to
+   `height: min(620px, …)` with internal `overflow-y: auto` (card-mode's
+   model). Keeping the min-height keeps short cards at the same visual
+   size as card-mode; dropping the hard `height` lets tall content
+   (videos, long answers) push the card taller so the *page* scrolls
+   between cards instead of the card scrolling internally and trapping
+   the wheel.
+
+   Higher specificity (both classes on the same element) wins without
+   needing a parent-shell selector. Card mode is untouched. */
 .test-player__card.test-scroll__item {
+  height: auto !important;
   overflow-y: visible !important;
 }
 
