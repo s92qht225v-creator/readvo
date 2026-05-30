@@ -286,8 +286,13 @@
   gap: 20px;
 }
 @media (min-width: 641px) {
+  /* First-card padding is `(viewport − card_height) / 2` (the centering
+     value) MINUS a small lift so the first card sits slightly above
+     the geometric centre — matches the user's preferred resting
+     position. Last-card padding-bottom keeps the full centering value
+     so the bottom-rest position is unchanged. */
   .test-scroll__list {
-    padding-top: calc((100vh - min(620px, 100vh - 136px)) / 2);
+    padding-top: max(24px, calc((100vh - min(620px, 100vh - 136px)) / 2 - 48px));
   }
   .test-scroll {
     padding-bottom: max(96px, calc((100vh - min(620px, 100vh - 136px)) / 2));
