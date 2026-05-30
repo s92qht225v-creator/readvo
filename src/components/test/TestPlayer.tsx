@@ -17,8 +17,13 @@ interface Props {
   /* Server-issued session row id from POST /api/t/[slug]/session.
      Threaded through to the submission payload so the server updates
      the existing row (with its locked shuffle seed) instead of
-     inserting a fresh one. */
+     inserting a fresh one. Also keys the per-session answer autosave in
+     localStorage. */
   responseId?: string;
+  /* Server-recorded session start (ISO) from POST /api/t/[slug]/session.
+     The countdown timer is anchored to this instead of the client clock
+     so it survives a page refresh and can't be reset by reloading. */
+  sessionStartedAt?: string;
 }
 
 type Phase = 'intro' | 'question' | 'submitting' | 'done' | 'error';
@@ -125,7 +130,7 @@ function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['v
   return Object.keys(value).length > 0;
 }
 
-export function TestPlayer({ test, forceDevice, responseId }: Props) {
+export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: Props) {
   // Single source of truth for "which device layout are we rendering".
   // Surfaces declare device explicitly (forceDevice) when they're known
   // to be a preview/builder; live runtime derives it from viewport width.
@@ -143,6 +148,21 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     return () => window.removeEventListener('resize', onResize);
   }, [forceDevice]);
   const device: 'mobile' | 'desktop' = forceDevice ?? liveDevice;
+
+  /* localStorage key for autosaving in-progress answers, so an
+     accidental refresh (or tab crash) restores them instead of wiping
+     the test. Keyed by the per-session responseId when available; falls
+     back to slug + respondent token so it's still per-respondent if the
+     session row couldn't be opened. Preview/builder surfaces
+     (forceDevice set) skip autosave entirely — they're for authoring,
+     not real attempts. */
+  const answersStorageKey = useMemo(() => {
+    if (forceDevice) return null;
+    if (responseId) return `blim-test-answers:${responseId}`;
+    if (typeof window === 'undefined') return null;
+    try { return `blim-test-answers:${test.slug}:${ensureRespondentToken(test.slug)}`; }
+    catch { return null; }
+  }, [forceDevice, responseId, test.slug]);
 
   const [phase, setPhase] = useState<Phase>('intro');
   const [name, setName] = useState('');
@@ -179,6 +199,43 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
   const [startedAt, setStartedAt] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const [cardOverflowing, setCardOverflowing] = useState(false);
+
+  /* ── Refresh-resilient autosave ──────────────────────────────────
+     Persist the in-progress attempt (answers + collected respondent
+     info + a "started" flag) to localStorage so an accidental refresh
+     or tab crash restores everything instead of wiping the test. */
+  const restoredRef = useRef(false);
+  useEffect(() => {
+    if (restoredRef.current || !answersStorageKey) return;
+    restoredRef.current = true;
+    try {
+      const raw = window.localStorage.getItem(answersStorageKey);
+      if (!raw) return;
+      const saved = JSON.parse(raw) as {
+        answers?: Record<string, AnswerSubmission['value']>;
+        name?: string;
+        profile?: RespondentProfile;
+        started?: boolean;
+      };
+      if (saved.answers && typeof saved.answers === 'object') setAnswers(saved.answers);
+      if (typeof saved.name === 'string') setName(saved.name);
+      if (saved.profile && typeof saved.profile === 'object') setProfile(saved.profile);
+      /* If they'd already begun the questions, skip the welcome screen on
+         resume so a refresh drops them straight back where they were. */
+      if (saved.started) setPhase('question');
+    } catch { /* ignore corrupt / blocked storage */ }
+  }, [answersStorageKey]);
+
+  /* Autosave on any change to the things worth restoring. Skips empty
+     pre-start state so we never clobber a fresh restore with blanks. */
+  useEffect(() => {
+    if (!answersStorageKey || !restoredRef.current) return;
+    const started = phase === 'question' || phase === 'submitting';
+    if (!started && Object.keys(answers).length === 0) return;
+    try {
+      window.localStorage.setItem(answersStorageKey, JSON.stringify({ answers, name, profile, started }));
+    } catch { /* quota / private mode — autosave is best-effort */ }
+  }, [answers, name, profile, phase, answersStorageKey]);
 
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
@@ -296,13 +353,34 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     const j = await res.json();
     setDone({ score: j.score ?? null, total: j.total ?? null });
     setPhase('done');
-    /* Clear the session marker now that the row has been completed —
-       a refresh of the done screen would otherwise post-submit the
-       same row and 409. */
+    /* Clear the session marker + autosaved answers now that the row has
+       been completed — a refresh of the done screen would otherwise
+       post-submit the same row and 409, and stale answers shouldn't
+       linger for a fresh attempt. */
     if (typeof window !== 'undefined') {
       try { window.localStorage.removeItem(`blim-test-session-${test.slug}`); } catch { /* ignore */ }
+      if (answersStorageKey) {
+        try { window.localStorage.removeItem(answersStorageKey); } catch { /* ignore */ }
+      }
     }
-  }, [answers, name, profile, responseId, startedAt, test.slug]);
+  }, [answers, answersStorageKey, name, profile, responseId, startedAt, test.slug]);
+
+  /* Warn before an accidental refresh / tab-close while a test is in
+     progress with unsaved-to-server work. Answers are autosaved to
+     localStorage so they survive anyway, but the native prompt prevents
+     most accidental reloads in the first place. Only armed during the
+     question phase with at least one answer entered. */
+  useEffect(() => {
+    if (forceDevice) return; // never in builder/preview
+    if (phase !== 'question') return;
+    if (Object.keys(answers).length === 0) return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', onBeforeUnload);
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
+  }, [forceDevice, phase, answers]);
 
   /* Index of the first required question with no answer (across the
      whole test, not just the current one), or -1 if all required are
@@ -406,14 +484,31 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
   }, [test.layout, scrollActiveId, idx, test.questions]);
 
   const startQuestions = useCallback(() => {
-    setStartedAt(new Date().toISOString());
-    if (timerLimitSeconds) {
-      setTimerEndsAt(Date.now() + timerLimitSeconds * 1000);
-      setRemainingSeconds(timerLimitSeconds);
-      setTimeExpired(false);
-    }
+    /* Timer is anchored to the server session start (see the effect
+       below), NOT stamped here — so it doesn't reset on refresh and a
+       reload can't buy more time. We only flip the phase; startedAt and
+       timerEndsAt are derived from sessionStartedAt. */
+    setTimeExpired(false);
     setPhase('question');
-  }, [timerLimitSeconds]);
+  }, []);
+
+  /* Anchor the countdown to the server-recorded session start. Computed
+     whenever sessionStartedAt + a time limit are known, so on a refresh
+     it recomputes the SAME end time and the clock continues from where
+     it was. Also fixes timers on tests with no welcome screen (where
+     startQuestions was never called). Falls back to "now" only if the
+     server didn't supply a start (offline session-open failure). */
+  useEffect(() => {
+    const anchorIso = sessionStartedAt;
+    const anchorMs = anchorIso ? new Date(anchorIso).getTime() : NaN;
+    const startMs = Number.isFinite(anchorMs) ? anchorMs : Date.now();
+    setStartedAt(anchorIso ?? new Date(startMs).toISOString());
+    if (timerLimitSeconds) {
+      const ends = startMs + timerLimitSeconds * 1000;
+      setTimerEndsAt(ends);
+      setRemainingSeconds(Math.max(0, Math.ceil((ends - Date.now()) / 1000)));
+    }
+  }, [sessionStartedAt, timerLimitSeconds]);
 
   const onChange = (v: AnswerSubmission['value']) => {
     if (!q) return;

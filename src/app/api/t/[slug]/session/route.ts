@@ -45,7 +45,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
      stable across reloads even if the client lost its localStorage. */
   const { data: existing } = await admin
     .from('test_responses')
-    .select('id, seed')
+    .select('id, seed, started_at')
     .eq('test_id', test.id)
     .eq('respondent_token', token)
     .is('completed_at', null)
@@ -53,7 +53,10 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     .limit(1)
     .maybeSingle();
   if (existing && existing.seed) {
-    return NextResponse.json({ response_id: existing.id, seed: existing.seed });
+    /* started_at is returned so the player can anchor a countdown timer
+       to the server-recorded session start — survives page refresh and
+       can't be reset by reloading. */
+    return NextResponse.json({ response_id: existing.id, seed: existing.seed, started_at: existing.started_at });
   }
 
   const seed = randomUUID();
@@ -68,12 +71,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
       completed_at: null,
       seed,
     })
-    .select('id, seed')
+    .select('id, seed, started_at')
     .single();
 
   if (error || !row) {
     return NextResponse.json({ error: error?.message ?? 'session_create_failed' }, { status: 500 });
   }
 
-  return NextResponse.json({ response_id: row.id, seed: row.seed });
+  return NextResponse.json({ response_id: row.id, seed: row.seed, started_at: row.started_at });
 }

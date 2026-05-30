@@ -12,7 +12,7 @@ type PreviewDevice = 'desktop' | 'mobile';
    row up front with a shuffle seed; the client stores the {responseId,
    seed} in localStorage keyed by slug so reloads reuse the same shuffle
    order and the same response row on submission. */
-type Session = { responseId: string; seed: string };
+type Session = { responseId: string; seed: string; startedAt?: string };
 
 function sessionKey(slug: string) { return `blim-test-session-${slug}`; }
 
@@ -23,7 +23,7 @@ function readStoredSession(slug: string): Session | null {
     if (!raw) return null;
     const parsed = JSON.parse(raw) as Partial<Session>;
     if (typeof parsed.responseId === 'string' && typeof parsed.seed === 'string') {
-      return { responseId: parsed.responseId, seed: parsed.seed };
+      return { responseId: parsed.responseId, seed: parsed.seed, startedAt: parsed.startedAt };
     }
   } catch {
     /* ignore parse errors */
@@ -59,28 +59,32 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
     let cancelled = false;
     async function load() {
       /* 1. Open (or rejoin) the respondent session — server returns
-         { responseId, seed }. The seed drives per-respondent shuffling
-         of choices/tiles in step 2. */
-      let openedSession = readStoredSession(slug);
-      if (!openedSession) {
-        const token = ensureRespondentToken(slug);
-        try {
-          const sessionRes = await fetch(`/api/t/${slug}/session`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ respondent_token: token }),
-          });
-          if (sessionRes.ok) {
-            const sj = await sessionRes.json() as { response_id?: string; seed?: string };
-            if (sj.response_id && sj.seed) {
-              openedSession = { responseId: sj.response_id, seed: sj.seed };
-              writeStoredSession(slug, openedSession);
-            }
+         { responseId, seed, started_at }. The POST is idempotent: it
+         reuses an in-flight session for the same respondent token, so we
+         always call it (rather than trusting the cache) to get the
+         AUTHORITATIVE server `started_at`. That timestamp anchors the
+         countdown timer so it survives refresh and can't be reset by
+         reloading. Falls back to the cached session only if the network
+         call fails. The seed drives per-respondent shuffling in step 2. */
+      const token = ensureRespondentToken(slug);
+      let openedSession: Session | null = null;
+      try {
+        const sessionRes = await fetch(`/api/t/${slug}/session`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ respondent_token: token }),
+        });
+        if (sessionRes.ok) {
+          const sj = await sessionRes.json() as { response_id?: string; seed?: string; started_at?: string };
+          if (sj.response_id && sj.seed) {
+            openedSession = { responseId: sj.response_id, seed: sj.seed, startedAt: sj.started_at };
+            writeStoredSession(slug, openedSession);
           }
-        } catch (err) {
-          console.warn('[PublicTestPage] session open failed, falling back to unseeded fetch:', err);
         }
+      } catch (err) {
+        console.warn('[PublicTestPage] session open failed, falling back to cached session:', err);
       }
+      if (!openedSession) openedSession = readStoredSession(slug);
       if (cancelled) return;
       if (openedSession) setSession(openedSession);
 
@@ -120,7 +124,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
   }
 
   if (!showPreviewTools) {
-    return <TestPlayer test={test} responseId={session?.responseId} />;
+    return <TestPlayer test={test} responseId={session?.responseId} sessionStartedAt={session?.startedAt} />;
   }
 
   return (
@@ -164,7 +168,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
         </button>
       </div>
       <div className="test-preview-frame">
-        <TestPlayer test={test} forceDevice={device} responseId={session?.responseId} />
+        <TestPlayer test={test} forceDevice={device} responseId={session?.responseId} sessionStartedAt={session?.startedAt} />
       </div>
     </div>
   );
