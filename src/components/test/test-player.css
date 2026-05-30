@@ -262,6 +262,7 @@
   border: 1px solid #e4ded8;
   border-radius: 7px;
   box-shadow: 0 30px 90px rgba(47, 40, 53, 0.14);
+  padding: 48px 52px;
   transition: opacity 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -325,6 +326,27 @@
   }
   .test-scroll {
     padding-bottom: max(104px, calc((100vh - min(620px, 100vh - 136px)) / 2));
+  }
+}
+
+/* Mobile chrome — mirror the documented `.test-player__card` mobile
+   strip in reading.css so scroll items render edge-to-edge just like
+   card-mode cards on phones (no border, no shadow, transparent, zero
+   padding). Without this each scroll item would render as a small
+   centred white card with the question content squashed inside it. */
+@media (max-width: 640px) {
+  .test-scroll__list {
+    padding: 24px 12px 0;
+  }
+  .test-scroll {
+    padding-bottom: calc(132px + env(safe-area-inset-bottom));
+  }
+  .test-scroll__item {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
   }
 }
 

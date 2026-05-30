@@ -1770,10 +1770,9 @@ const scrollList: React.CSSProperties = {
    the card-mode shell's inline border. */
 const scrollItem: React.CSSProperties = {
   position: 'relative',
-  /* Match the card-mode shell padding (questionCard: 48px 52px) so
-     question content has the same breathing room — qmedia layouts
-     and answer types size identically across the two layouts. */
-  padding: '48px 52px',
+  /* Padding is owned by `.test-scroll__item` CSS so it can drop to 0
+     on mobile (where card-mode strips card chrome and renders
+     edge-to-edge — see reading.css `@media (max-width: 640px)`). */
   containerType: 'inline-size',
   scrollMarginTop: 96,
   '--qmedia-card-pad-x': '52px',
