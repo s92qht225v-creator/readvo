@@ -23,6 +23,7 @@ const TAGS: Record<string, { uz: string; ru: string; en: string }> = {
   ish: { uz: 'Ish/O\'qish', ru: 'Работа/Учёба', en: 'Work/Study' },
   reja: { uz: 'Reja', ru: 'Планы', en: 'Plans' },
   muloqot: { uz: 'Muloqot', ru: 'Общение', en: 'Communication' },
+  'ob-havo': { uz: 'Ob-havo', ru: 'Погода', en: 'Weather' },
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
@@ -645,7 +646,14 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
                       </svg>
                     </button>
                   </div>
-                  {d.tag && (
+                  {d.tag && TAGS[d.tag] && (
+                    /* Defensive: only render the tag pill when TAGS knows
+                       about it. Without the `TAGS[d.tag] &&` guard, a
+                       dialogue with an unrecognised `tag` (e.g. a new
+                       category authored in content but not yet added to
+                       this dictionary) would throw "Cannot read properties
+                       of undefined (reading '<lang>')" on the language
+                       page render and break the entire dialogues tab. */
                     <span className="dialogue-card__tag">{(TAGS[d.tag] as Record<string, string>)[language] ?? TAGS[d.tag].uz}</span>
                   )}
                 </Link>
