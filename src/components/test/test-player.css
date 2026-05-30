@@ -265,16 +265,23 @@
   transition: opacity 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* Match card-mode card height on desktop — the card-mode `.test-player__card`
-   rule pins itself to `min(620px, calc(100vh - 136px))`. Scroll items now do
-   the same so they don't visually shrink to fit short content. Combined with
-   the `test-player__card--no-media` class added on the JSX side (which
-   inherits flex centering), no-media items vertically centre their content
-   in the box just like card mode. Media items rely on the qmedia grid to
-   fill the cell height (matching card-mode behaviour). */
+/* Match card-mode card height on desktop — `.test-player__card` pins to
+   `min(620px, calc(100vh - 136px))`. Scroll items get the same minimum,
+   plus the flex chain that lets the qmedia layout fill that height
+   (without the chain the qmedia's `min-height: 100%` resolves to 0
+   against a min-height-only parent, leaving the image column its
+   natural height and a big empty pocket below). For no-media items the
+   `test-player__card--no-media` class (added on the JSX side) inherits
+   the existing flex centering rule. */
 @media (min-width: 641px) {
   .test-scroll__item {
+    display: flex;
+    flex-direction: column;
     min-height: min(620px, calc(100vh - 136px));
+  }
+  .test-scroll__item > .qmedia-layout {
+    flex: 1;
+    min-height: 0;
   }
 }
 

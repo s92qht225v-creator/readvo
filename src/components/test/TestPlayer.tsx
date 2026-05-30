@@ -1754,10 +1754,12 @@ const scrollList: React.CSSProperties = {
   /* Match card-mode width (playerInner maxWidth: 1120) and scroll item
      padding (questionCard: 48px 52px) so the qmedia layouts inside
      have the same room to render — split-right gives the image its
-     full half-card column instead of being squeezed. */
+     full half-card column instead of being squeezed. Top padding
+     mirrors card-mode `playerShell` (36px) so the first card's gap
+     to the page top matches the card-mode card's gap. */
   maxWidth: 1120,
   margin: '0 auto',
-  padding: '40px 18px 0',
+  padding: '36px 18px 0',
   display: 'flex',
   flexDirection: 'column',
   gap: 20,
