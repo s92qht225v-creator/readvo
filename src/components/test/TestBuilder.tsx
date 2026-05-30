@@ -798,6 +798,11 @@ export function TestBuilder({ testId }: Props) {
         <SectionsPanel
           sections={sections}
           activeSectionId={activeBlock.kind === 'section' ? activeBlock.id : null}
+          strictSections={!!test.strict_sections}
+          onStrictChange={(next) => {
+            setTest({ ...test, strict_sections: next });
+            void updateTest({ strict_sections: next });
+          }}
           onSelect={(id) => setActiveBlock({ kind: 'section', id })}
           onCreate={async () => {
             const section = await createSection('');
@@ -1254,11 +1259,16 @@ export function TestBuilder({ testId }: Props) {
       {activeTopTab === 'create' && showListeningModal ? (
         <ListeningModal
           audioUrl={test.listening_audio_url ?? null}
+          sections={sections}
           getAccessToken={getAccessToken}
           onClose={() => setShowListeningModal(false)}
           onChange={(patch) => {
             setTest({ ...test, ...patch });
             updateTest(patch);
+          }}
+          onJumpToSection={(id) => {
+            setShowListeningModal(false);
+            setActiveBlock({ kind: 'section', id });
           }}
         />
       ) : null}
@@ -1482,6 +1492,8 @@ function SortableQuestionItem({
 function SectionsPanel({
   sections,
   activeSectionId,
+  strictSections,
+  onStrictChange,
   onSelect,
   onCreate,
   onRename,
@@ -1489,6 +1501,11 @@ function SectionsPanel({
 }: {
   sections: TestSection[];
   activeSectionId: string | null;
+  /* `tests.strict_sections` value + setter. The toggle renders only
+     when at least one section exists — strict mode is meaningless
+     without sections. */
+  strictSections: boolean;
+  onStrictChange: (next: boolean) => void;
   onSelect: (id: string) => void;
   onCreate: () => void;
   onRename: (id: string, title: string) => void;
@@ -1507,37 +1524,55 @@ function SectionsPanel({
           No sections. Questions are ungrouped.
         </div>
       ) : (
-        <ul style={sectionsList}>
-          {sections.map(section => {
-            const active = section.id === activeSectionId;
-            return (
-              <li key={section.id} style={sectionRow(active)}>
-                <button type="button" onClick={() => onSelect(section.id)} style={sectionRowMain}>
-                  <input
-                    type="text"
-                    value={section.title}
-                    placeholder="Untitled section"
-                    onClick={(event) => event.stopPropagation()}
-                    onChange={(event) => onRename(section.id, event.target.value)}
-                    style={sectionRowInput}
-                  />
-                  {section.audio_url ? (
-                    <span style={sectionRowAudioDot} title="Has audio">●</span>
-                  ) : null}
-                </button>
-                <button
-                  type="button"
-                  onClick={(event) => { event.stopPropagation(); onDelete(section.id); }}
-                  style={sectionRowDelete}
-                  title="Delete section"
-                  aria-label="Delete section"
-                >
-                  ×
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+        <>
+          <ul style={sectionsList}>
+            {sections.map(section => {
+              const active = section.id === activeSectionId;
+              return (
+                <li key={section.id} style={sectionRow(active)}>
+                  <button type="button" onClick={() => onSelect(section.id)} style={sectionRowMain}>
+                    <input
+                      type="text"
+                      value={section.title}
+                      placeholder="Untitled section"
+                      onClick={(event) => event.stopPropagation()}
+                      onChange={(event) => onRename(section.id, event.target.value)}
+                      style={sectionRowInput}
+                    />
+                    {section.audio_url ? (
+                      <span style={sectionRowAudioDot} title="Has audio">●</span>
+                    ) : null}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={(event) => { event.stopPropagation(); onDelete(section.id); }}
+                    style={sectionRowDelete}
+                    title="Delete section"
+                    aria-label="Delete section"
+                  >
+                    ×
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          {/* Strict-sections toggle — only meaningful when sections exist.
+              When true: forward-only nav between sections + each section's
+              audio plays once (no replay). When false: free back/next +
+              replayable audio. */}
+          <label style={sectionsPanelToggle}>
+            <input
+              type="checkbox"
+              checked={strictSections}
+              onChange={(event) => onStrictChange(event.target.checked)}
+              style={{ margin: 0 }}
+            />
+            <span style={sectionsPanelToggleText}>
+              <span style={sectionsPanelToggleTitle}>Forward-only navigation</span>
+              <span style={sectionsPanelToggleHint}>Lock back-nav between sections; audio plays once.</span>
+            </span>
+          </label>
+        </>
       )}
     </div>
   );
@@ -3143,11 +3178,18 @@ function LayoutModal({ layout, onClose, onChange }: {
 /* Listening modal — uploads a single continuous audio track that plays
    on the test page while the student answers. Works in both card and
    scroll layouts; presence/absence of audio is independent of layout. */
-function ListeningModal({ audioUrl, getAccessToken, onClose, onChange }: {
+function ListeningModal({ audioUrl, sections, getAccessToken, onClose, onChange, onJumpToSection }: {
   audioUrl: string | null;
+  /* Test-level sections (stage-b). When the test has at least one
+     section, the global `listening_audio_url` is hidden in this
+     modal — per-section audios take precedence on the player side,
+     and showing the global field too would be confusing. The modal
+     becomes a directory of section audios instead. */
+  sections: TestSection[];
   getAccessToken: () => Promise<string | null>;
   onClose: () => void;
   onChange: (patch: Pick<Test, 'listening_audio_url'>) => void;
+  onJumpToSection: (sectionId: string) => void;
 }) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -3198,69 +3240,107 @@ function ListeningModal({ audioUrl, getAccessToken, onClose, onChange }: {
           <div style={timerHeader}>
             <div>
               <div style={timerTitle}>Listening audio</div>
-              <div style={timerSubtitle}>One track that plays continuously while the test is taken</div>
+              <div style={timerSubtitle}>
+                {sections.length > 0
+                  ? 'Each section has its own audio when sections are defined'
+                  : 'One track that plays continuously while the test is taken'}
+              </div>
             </div>
           </div>
-          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
-            For listening exams (IELTS / HSK / etc). Works with any layout. Leave empty for a normal test.
-          </div>
-          {audioUrl ? (
-            <div style={{ marginBottom: 12 }}>
-              <audio src={audioUrl} controls style={{ width: '100%' }} />
-            </div>
-          ) : null}
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="audio/*"
-            style={{ display: 'none' }}
-            onChange={(event) => {
-              const file = event.target.files?.[0];
-              if (file) void uploadAudio(file);
-              event.target.value = '';
-            }}
-          />
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button
-              type="button"
-              onClick={() => fileInputRef.current?.click()}
-              disabled={uploading}
-              style={{
-                flex: 1,
-                padding: '10px 12px',
-                border: '1px solid #cbd5e1',
-                borderRadius: 3,
-                background: '#fff',
-                color: '#2f2835',
-                fontSize: 13,
-                fontWeight: 700,
-                cursor: uploading ? 'wait' : 'pointer',
-              }}
-            >
-              {uploading ? 'Uploading…' : audioUrl ? 'Replace audio' : 'Upload audio'}
-            </button>
-            {audioUrl ? (
-              <button
-                type="button"
-                onClick={() => onChange({ listening_audio_url: null })}
-                style={{
-                  padding: '10px 12px',
-                  border: '1px solid #f3c2c2',
-                  borderRadius: 3,
-                  background: '#fff',
-                  color: '#b91c1c',
-                  fontSize: 13,
-                  fontWeight: 700,
-                  cursor: 'pointer',
+          {sections.length > 0 ? (
+            /* Sectioned tests: show per-section audio directory instead of
+               the global upload. The global `listening_audio_url` is ignored
+               by the player when sections exist, so showing the global
+               control too would invite confusion. Click a row to jump into
+               that section's settings (where the audio actually lives). */
+            <>
+              <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
+                Per-section audio is managed in each section's settings.
+                Click a section to set or replace its audio.
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                {sections.map((section, i) => (
+                  <li key={section.id}>
+                    <button
+                      type="button"
+                      onClick={() => onJumpToSection(section.id)}
+                      style={listeningSectionRow}
+                    >
+                      <span style={listeningSectionIndex}>{i + 1}</span>
+                      <span style={listeningSectionTitle}>{section.title || 'Untitled section'}</span>
+                      <span style={listeningSectionStatus(!!section.audio_url)}>
+                        {section.audio_url ? '● Audio set' : '○ No audio'}
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            /* Sectionless tests: the original stage-(a) single-track upload. */
+            <>
+              <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
+                For listening exams (IELTS / HSK / etc). Works with any layout. Leave empty for a normal test.
+              </div>
+              {audioUrl ? (
+                <div style={{ marginBottom: 12 }}>
+                  <audio src={audioUrl} controls style={{ width: '100%' }} />
+                </div>
+              ) : null}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="audio/*"
+                style={{ display: 'none' }}
+                onChange={(event) => {
+                  const file = event.target.files?.[0];
+                  if (file) void uploadAudio(file);
+                  event.target.value = '';
                 }}
-              >
-                Remove
-              </button>
-            ) : null}
-          </div>
-          {error ? (
-            <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
-          ) : null}
+              />
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={uploading}
+                  style={{
+                    flex: 1,
+                    padding: '10px 12px',
+                    border: '1px solid #cbd5e1',
+                    borderRadius: 3,
+                    background: '#fff',
+                    color: '#2f2835',
+                    fontSize: 13,
+                    fontWeight: 700,
+                    cursor: uploading ? 'wait' : 'pointer',
+                  }}
+                >
+                  {uploading ? 'Uploading…' : audioUrl ? 'Replace audio' : 'Upload audio'}
+                </button>
+                {audioUrl ? (
+                  <button
+                    type="button"
+                    onClick={() => onChange({ listening_audio_url: null })}
+                    style={{
+                      padding: '10px 12px',
+                      border: '1px solid #f3c2c2',
+                      borderRadius: 3,
+                      background: '#fff',
+                      color: '#b91c1c',
+                      fontSize: 13,
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Remove
+                  </button>
+                ) : null}
+              </div>
+              {error ? (
+                <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
+              ) : null}
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -5259,6 +5339,80 @@ const sectionRowDelete: React.CSSProperties = {
   cursor: 'pointer',
   marginRight: 4,
 };
+
+const sectionsPanelToggle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: 8,
+  padding: '8px 4px 0',
+  cursor: 'pointer',
+  borderTop: '1px solid #ece9ed',
+  marginTop: 4,
+};
+
+const sectionsPanelToggleText: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 2,
+  lineHeight: 1.3,
+};
+
+const sectionsPanelToggleTitle: React.CSSProperties = {
+  fontSize: 12,
+  fontWeight: 700,
+  color: '#2f2835',
+};
+
+const sectionsPanelToggleHint: React.CSSProperties = {
+  fontSize: 11,
+  color: '#8b848f',
+};
+
+/* ── Stage-b: per-section directory inside ListeningModal ───────── */
+const listeningSectionRow: React.CSSProperties = {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 10,
+  padding: '10px 12px',
+  border: '1px solid #ece9ed',
+  borderRadius: 3,
+  background: '#fff',
+  cursor: 'pointer',
+  textAlign: 'left',
+};
+
+const listeningSectionIndex: React.CSSProperties = {
+  width: 22,
+  height: 22,
+  borderRadius: 999,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#f3eff7',
+  color: '#6b4fbb',
+  fontSize: 12,
+  fontWeight: 800,
+  flexShrink: 0,
+};
+
+const listeningSectionTitle: React.CSSProperties = {
+  flex: 1,
+  fontSize: 13,
+  fontWeight: 600,
+  color: '#2f2835',
+  minWidth: 0,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+};
+
+const listeningSectionStatus = (hasAudio: boolean): React.CSSProperties => ({
+  fontSize: 11,
+  fontWeight: 700,
+  color: hasAudio ? '#02ad1b' : '#94a3b8',
+  whiteSpace: 'nowrap',
+});
 
 /* ── Stage-b "Move to section" submenu styling in QuestionActionsMenu ── */
 const questionMenuDivider: React.CSSProperties = {
