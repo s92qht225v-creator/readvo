@@ -89,10 +89,46 @@ export function QuestionMediaBlock({ media, className, style }: Props) {
   }
 
   return (
-    <div className={`${className ?? ''}${circle ? ' qmedia-asset--circle' : ''}`} style={{ ...imageFrameStyle(aspectRatio ?? '16 / 9'), ...style }}>
+    <FramedImage
+      media={media}
+      className={`${className ?? ''}${circle ? ' qmedia-asset--circle' : ''}`}
+      style={style}
+      transform={transform}
+      initialAspect={aspectRatio}
+    />
+  );
+}
+
+/* Uncropped image render with runtime aspect detection — mirrors the
+   pattern in UploadedVideo. If aspectRatioValue() couldn't determine a
+   ratio (old upload with no `naturalAspectRatio`, no aspectRatio set),
+   we'd otherwise default the wrapper to 16/9 and distort square /
+   portrait images into landscape. Instead, sniff naturalWidth /
+   naturalHeight on the img's onLoad and use that. A square (1/1)
+   placeholder is used before load so the wrapper has *some* height
+   to render — far less wrong than 16/9 for typical content. */
+function FramedImage({ media, className, style, transform, initialAspect }: {
+  media: QuestionMedia;
+  className?: string;
+  style?: React.CSSProperties;
+  transform: string;
+  initialAspect: string | null;
+}) {
+  const [runtimeAspect, setRuntimeAspect] = useState<string | null>(null);
+  const aspect = initialAspect ?? runtimeAspect ?? '1 / 1';
+  const onLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    if (initialAspect || runtimeAspect) return;
+    const img = e.currentTarget;
+    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+      setRuntimeAspect(`${img.naturalWidth} / ${img.naturalHeight}`);
+    }
+  };
+  return (
+    <div className={className} style={{ ...imageFrameStyle(aspect), ...style }}>
       <img
         src={media.url}
         alt={media.alt || ''}
+        onLoad={onLoad}
         style={{ ...framedImageStyle, transform }}
       />
     </div>
