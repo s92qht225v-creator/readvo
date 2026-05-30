@@ -612,32 +612,46 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
 
   if (!q) return null;
 
+  /* Continuous listening audio is an independent feature from layout —
+     when a track is set it plays during the question phase in BOTH card
+     and scroll modes. The bar is fixed to the top of the viewport above
+     whichever layout renders below. */
+  const audioActive = !!test.listening_audio_url && phase === 'question';
+  const listeningBar = audioActive ? (
+    <ListeningAudioBar url={test.listening_audio_url!} />
+  ) : null;
+
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
      All questions stacked on one scrollable page; the active question
-     (nearest viewport centre) stays lit while the rest dim. A single
-     continuous audio track plays at the top. Shares every other concern
-     (answers, grading, submission, required-guard) with card mode. */
+     (nearest viewport centre) stays lit while the rest dim. Shares every
+     other concern (answers, grading, submission, required-guard) with
+     card mode. */
   if (test.layout === 'scroll') {
     return (
-      <ScrollBody
-        test={test}
-        device={device}
-        themeVars={themeVars}
-        answers={answers}
-        onAnswer={setAnswerFor}
-        onSubmit={submit}
-        phase={phase}
-        remainingSeconds={remainingSeconds}
-        answeredCount={answeredCount}
-        total={total}
-        firstMissingRequiredIdx={firstMissingRequiredIdx}
-        listeningAudioUrl={test.listening_audio_url ?? null}
-      />
+      <>
+        {listeningBar}
+        <ScrollBody
+          test={test}
+          device={device}
+          themeVars={themeVars}
+          answers={answers}
+          onAnswer={setAnswerFor}
+          onSubmit={submit}
+          phase={phase}
+          remainingSeconds={remainingSeconds}
+          answeredCount={answeredCount}
+          total={total}
+          firstMissingRequiredIdx={firstMissingRequiredIdx}
+          audioActive={audioActive}
+        />
+      </>
     );
   }
 
   return (
-    <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars} device={device}>
+    <>
+    {listeningBar}
+    <Wrapper wallpaperActive={!!mobileWallpaperMedia} themeVars={themeVars} device={device} audioActive={audioActive}>
       <QuestionMediaBlock
         media={mobileWallpaperMedia}
         className={`test-player__wallpaper-bg ${forceDevice === 'mobile' ? 'test-player__wallpaper-bg--force-mobile' : ''}`}
@@ -791,6 +805,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
         ) : null}
       </AnimatePresence>
     </Wrapper>
+    </>
   );
 }
 
@@ -799,17 +814,24 @@ function Wrapper({
   wallpaperActive = false,
   themeVars,
   device,
+  audioActive = false,
 }: {
   children: React.ReactNode
   wallpaperActive?: boolean
   themeVars?: Record<string, string>
   device?: 'mobile' | 'desktop'
+  audioActive?: boolean
 }) {
+  /* When the global listening audio bar is mounted above this shell,
+     push the centered card down so the bar doesn't obscure its top. */
+  const shellStyle = audioActive
+    ? { ...playerShell, paddingTop: 96, ...themeVars }
+    : { ...playerShell, ...themeVars };
   return (
     <div
       className={`test-player${wallpaperActive ? ' test-player--wallpaper-active' : ''}`}
       data-test-device={device}
-      style={{ ...playerShell, ...themeVars }}
+      style={shellStyle}
     >
       <div className="test-player__inner" style={playerInner}>{children}</div>
     </div>
@@ -834,6 +856,34 @@ function HeadphonesGlyph() {
   );
 }
 
+/* Global listening-audio bar — fixed to the top of the viewport above
+   whichever layout (card or scroll) is rendering. Audio is independent
+   of layout: a test can have audio in either mode, or neither. The
+   parent shells pad their top edges (96px) to keep their content from
+   sliding under the bar. */
+function ListeningAudioBar({ url }: { url: string }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  /* Try to autoplay the continuous track. Works when the student
+     arrived via a Start click (welcome screen); otherwise the browser
+     blocks it and the visible controls let them press play manually. */
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el) return;
+    el.play().catch(() => { /* autoplay blocked — controls remain */ });
+  }, [url]);
+  return (
+    <div className="test-listening-bar" style={listeningBarStyle}>
+      <div style={listeningBarInner}>
+        <span style={listeningBarLabel}>
+          <HeadphonesGlyph />
+          Listening
+        </span>
+        <audio ref={audioRef} src={url} controls style={{ flex: 1, minWidth: 0 }} />
+      </div>
+    </div>
+  );
+}
+
 /* Scroll-mode body: every question stacked on one scrollable page, the
    one nearest the viewport centre stays lit while the rest dim out
    (SurveyMonkey-style). A single continuous audio track is pinned at the
@@ -850,7 +900,7 @@ function ScrollBody({
   answeredCount,
   total,
   firstMissingRequiredIdx,
-  listeningAudioUrl,
+  audioActive,
 }: {
   test: PublicTest;
   device: 'mobile' | 'desktop';
@@ -863,22 +913,14 @@ function ScrollBody({
   answeredCount: number;
   total: number;
   firstMissingRequiredIdx: number;
-  listeningAudioUrl: string | null;
+  /* Whether the global ListeningAudioBar is mounted above this body, so
+     scrolled content has room to clear it. The bar itself lives at the
+     top-level TestPlayer render (independent of layout). */
+  audioActive: boolean;
 }) {
   const [activeId, setActiveId] = useState<string | null>(test.questions[0]?.id ?? null);
   const [warnId, setWarnId] = useState<string | null>(null);
   const itemRefs = useRef<Map<string, HTMLElement>>(new Map());
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  /* Try to autoplay the continuous track. Works when the student arrived
-     via a Start click (welcome screen); otherwise the browser blocks it
-     and the native controls let them press play manually. */
-  useEffect(() => {
-    if (!listeningAudioUrl) return;
-    const el = audioRef.current;
-    if (!el) return;
-    el.play().catch(() => { /* autoplay blocked — controls remain */ });
-  }, [listeningAudioUrl]);
 
   /* Focus follows the topmost question crossing a band around the
      viewport centre. A thin band (±45%) means usually one item is inside
@@ -919,19 +961,7 @@ function ScrollBody({
 
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
-      {listeningAudioUrl ? (
-        <div className="test-scroll__audio-bar" style={scrollAudioBar}>
-          <div style={scrollAudioInner}>
-            <span style={scrollAudioLabel}>
-              <HeadphonesGlyph />
-              Listening
-            </span>
-            <audio ref={audioRef} src={listeningAudioUrl} controls style={{ flex: 1, minWidth: 0 }} />
-          </div>
-        </div>
-      ) : null}
-
-      <div style={scrollList}>
+      <div style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
         {test.questions.map((question, i) => {
           const active = question.id === activeId;
           const answered = hasQuestionAnswer(question, answers[question.id]);
@@ -1564,16 +1594,18 @@ const scrollShell: React.CSSProperties = {
   paddingBottom: 104,
 };
 
-const scrollAudioBar: React.CSSProperties = {
-  position: 'sticky',
+const listeningBarStyle: React.CSSProperties = {
+  position: 'fixed',
   top: 0,
-  zIndex: 30,
+  left: 0,
+  right: 0,
+  zIndex: 50,
   background: 'rgba(255, 255, 255, 0.96)',
   backdropFilter: 'blur(8px)',
   borderBottom: '1px solid #ece7e1',
 };
 
-const scrollAudioInner: React.CSSProperties = {
+const listeningBarInner: React.CSSProperties = {
   maxWidth: 760,
   margin: '0 auto',
   padding: '10px 18px',
@@ -1582,7 +1614,7 @@ const scrollAudioInner: React.CSSProperties = {
   gap: 12,
 };
 
-const scrollAudioLabel: React.CSSProperties = {
+const listeningBarLabel: React.CSSProperties = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 6,

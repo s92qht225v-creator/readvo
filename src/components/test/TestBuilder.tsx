@@ -247,6 +247,7 @@ export function TestBuilder({ testId }: Props) {
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showTimerModal, setShowTimerModal] = useState(false);
   const [showLayoutModal, setShowLayoutModal] = useState(false);
+  const [showListeningModal, setShowListeningModal] = useState(false);
   const [showFontPanel, setShowFontPanel] = useState(false);
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const previewCanvasRef = useRef<HTMLDivElement | null>(null);
@@ -949,6 +950,16 @@ export function TestBuilder({ testId }: Props) {
             <button
               type="button"
               className="tb-toolbar__preview-btn"
+              onClick={() => setShowListeningModal(true)}
+              title="Listening audio"
+              style={test.listening_audio_url ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
+            >
+              <HeadphonesIcon />
+              Listening
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
               onClick={() => {
                 if (test.is_graded) setShowAnswerKey(true);
               }}
@@ -1136,9 +1147,19 @@ export function TestBuilder({ testId }: Props) {
       {activeTopTab === 'create' && showLayoutModal ? (
         <LayoutModal
           layout={test.layout === 'scroll' ? 'scroll' : 'card'}
+          onClose={() => setShowLayoutModal(false)}
+          onChange={(patch) => {
+            setTest({ ...test, ...patch });
+            updateTest(patch);
+          }}
+        />
+      ) : null}
+
+      {activeTopTab === 'create' && showListeningModal ? (
+        <ListeningModal
           audioUrl={test.listening_audio_url ?? null}
           getAccessToken={getAccessToken}
-          onClose={() => setShowLayoutModal(false)}
+          onClose={() => setShowListeningModal(false)}
           onChange={(patch) => {
             setTest({ ...test, ...patch });
             updateTest(patch);
@@ -2517,16 +2538,77 @@ function LayoutIcon() {
   );
 }
 
-/* Layout modal — choose card vs scroll presentation. In scroll mode an
-   optional continuous audio track can be uploaded for listening exams
-   (the audio is a sub-option, not the point of the control). Mirrors
-   TimerModal chrome. */
-function LayoutModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
+function HeadphonesIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
+      <path d="M21 17a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h3z" />
+      <path d="M3 17a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H3z" />
+    </svg>
+  );
+}
+
+/* Layout modal — card vs scroll presentation only. Audio lives in its
+   own modal so the two controls are fully independent. */
+function LayoutModal({ layout, onClose, onChange }: {
   layout: 'card' | 'scroll';
+  onClose: () => void;
+  onChange: (patch: Pick<Test, 'layout'>) => void;
+}) {
+  return (
+    <div
+      style={timerModalBackdrop}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Layout"
+      onMouseDown={onClose}
+    >
+      <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
+        <button type="button" onClick={onClose} style={timerModalClose} aria-label="Close layout settings">
+          ×
+        </button>
+        <div style={timerPanel}>
+          <div style={timerHeader}>
+            <div>
+              <div style={timerTitle}>Layout</div>
+              <div style={timerSubtitle}>How students move through the test</div>
+            </div>
+          </div>
+          <div style={screenSegmented}>
+            <button
+              type="button"
+              style={screenSegmentedButton(layout === 'card')}
+              onClick={() => onChange({ layout: 'card' })}
+            >
+              Card
+            </button>
+            <button
+              type="button"
+              style={screenSegmentedButton(layout === 'scroll')}
+              onClick={() => onChange({ layout: 'scroll' })}
+            >
+              Scroll
+            </button>
+          </div>
+          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 10 }}>
+            {layout === 'card'
+              ? 'One question per screen, with Next / Back.'
+              : 'All questions on one scrollable page. Inactive questions dim out.'}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* Listening modal — uploads a single continuous audio track that plays
+   on the test page while the student answers. Works in both card and
+   scroll layouts; presence/absence of audio is independent of layout. */
+function ListeningModal({ audioUrl, getAccessToken, onClose, onChange }: {
   audioUrl: string | null;
   getAccessToken: () => Promise<string | null>;
   onClose: () => void;
-  onChange: (patch: Pick<Test, 'layout'> | Pick<Test, 'listening_audio_url'> | Pick<Test, 'layout' | 'listening_audio_url'>) => void;
+  onChange: (patch: Pick<Test, 'listening_audio_url'>) => void;
 }) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -2566,7 +2648,7 @@ function LayoutModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
       style={timerModalBackdrop}
       role="dialog"
       aria-modal="true"
-      aria-label="Layout and listening audio"
+      aria-label="Listening audio"
       onMouseDown={onClose}
     >
       <div style={timerModal} onMouseDown={(event) => event.stopPropagation()}>
@@ -2576,97 +2658,69 @@ function LayoutModal({ layout, audioUrl, getAccessToken, onClose, onChange }: {
         <div style={timerPanel}>
           <div style={timerHeader}>
             <div>
-              <div style={timerTitle}>Layout</div>
-              <div style={timerSubtitle}>How students move through the test</div>
+              <div style={timerTitle}>Listening audio</div>
+              <div style={timerSubtitle}>One track that plays continuously while the test is taken</div>
             </div>
           </div>
-          <div style={screenSegmented}>
+          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
+            For listening exams (IELTS / HSK / etc). Works with any layout. Leave empty for a normal test.
+          </div>
+          {audioUrl ? (
+            <div style={{ marginBottom: 12 }}>
+              <audio src={audioUrl} controls style={{ width: '100%' }} />
+            </div>
+          ) : null}
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="audio/*"
+            style={{ display: 'none' }}
+            onChange={(event) => {
+              const file = event.target.files?.[0];
+              if (file) void uploadAudio(file);
+              event.target.value = '';
+            }}
+          />
+          <div style={{ display: 'flex', gap: 8 }}>
             <button
               type="button"
-              style={screenSegmentedButton(layout === 'card')}
-              onClick={() => onChange({ layout: 'card' })}
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+              style={{
+                flex: 1,
+                padding: '10px 12px',
+                border: '1px solid #cbd5e1',
+                borderRadius: 3,
+                background: '#fff',
+                color: '#2f2835',
+                fontSize: 13,
+                fontWeight: 700,
+                cursor: uploading ? 'wait' : 'pointer',
+              }}
             >
-              Card
+              {uploading ? 'Uploading…' : audioUrl ? 'Replace audio' : 'Upload audio'}
             </button>
-            <button
-              type="button"
-              style={screenSegmentedButton(layout === 'scroll')}
-              onClick={() => onChange({ layout: 'scroll' })}
-            >
-              Scroll
-            </button>
-          </div>
-          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 10 }}>
-            {layout === 'card'
-              ? 'One question per screen, with Next / Back.'
-              : 'All questions on one scrollable page. Inactive questions dim out. Best for listening exams.'}
-          </div>
-
-          {layout === 'scroll' ? (
-            <>
-              <div style={screenDivider} />
-              <div style={timerTitle}>Listening audio (optional)</div>
-              <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
-                Only for listening exams. Leave empty for a plain scrollable test. One track plays continuously while students answer.
-              </div>
-              {audioUrl ? (
-                <div style={{ marginBottom: 12 }}>
-                  <audio src={audioUrl} controls style={{ width: '100%' }} />
-                </div>
-              ) : null}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="audio/*"
-                style={{ display: 'none' }}
-                onChange={(event) => {
-                  const file = event.target.files?.[0];
-                  if (file) void uploadAudio(file);
-                  event.target.value = '';
+            {audioUrl ? (
+              <button
+                type="button"
+                onClick={() => onChange({ listening_audio_url: null })}
+                style={{
+                  padding: '10px 12px',
+                  border: '1px solid #f3c2c2',
+                  borderRadius: 3,
+                  background: '#fff',
+                  color: '#b91c1c',
+                  fontSize: 13,
+                  fontWeight: 700,
+                  cursor: 'pointer',
                 }}
-              />
-              <div style={{ display: 'flex', gap: 8 }}>
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  disabled={uploading}
-                  style={{
-                    flex: 1,
-                    padding: '10px 12px',
-                    border: '1px solid #cbd5e1',
-                    borderRadius: 3,
-                    background: '#fff',
-                    color: '#2f2835',
-                    fontSize: 13,
-                    fontWeight: 700,
-                    cursor: uploading ? 'wait' : 'pointer',
-                  }}
-                >
-                  {uploading ? 'Uploading…' : audioUrl ? 'Replace audio' : 'Upload audio'}
-                </button>
-                {audioUrl ? (
-                  <button
-                    type="button"
-                    onClick={() => onChange({ listening_audio_url: null })}
-                    style={{
-                      padding: '10px 12px',
-                      border: '1px solid #f3c2c2',
-                      borderRadius: 3,
-                      background: '#fff',
-                      color: '#b91c1c',
-                      fontSize: 13,
-                      fontWeight: 700,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Remove
-                  </button>
-                ) : null}
-              </div>
-              {error ? (
-                <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
-              ) : null}
-            </>
+              >
+                Remove
+              </button>
+            ) : null}
+          </div>
+          {error ? (
+            <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
           ) : null}
         </div>
       </div>
