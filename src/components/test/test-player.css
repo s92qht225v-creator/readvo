@@ -286,16 +286,21 @@
   gap: 20px;
 }
 @media (min-width: 641px) {
-  /* First-card padding is `(viewport − card_height) / 2` (the centering
-     value) MINUS a small lift so the first card sits slightly above
-     the geometric centre — matches the user's preferred resting
-     position. Last-card padding-bottom keeps the full centering value
-     so the bottom-rest position is unchanged. */
+  /* Both paddings centre the first/last card in the viewport at their
+     respective scroll rest positions (`(viewport − card_height) / 2`),
+     then lift each card 48 px towards the top:
+     - first card: SUBTRACT 48 from padding-top → card sits closer to
+       the viewport top.
+     - last card:  ADD 48 to padding-bottom → card sits further from
+       the page bottom, which at scroll-bottom rest puts it higher in
+       the viewport.
+     Floors (`max(24px, …)` / `max(96px, …)`) protect short viewports
+     and preserve fixed-footer clearance. */
   .test-scroll__list {
     padding-top: max(24px, calc((100vh - min(620px, 100vh - 136px)) / 2 - 48px));
   }
   .test-scroll {
-    padding-bottom: max(96px, calc((100vh - min(620px, 100vh - 136px)) / 2));
+    padding-bottom: max(96px, calc((100vh - min(620px, 100vh - 136px)) / 2 + 48px));
   }
 }
 @media (max-width: 640px) {
