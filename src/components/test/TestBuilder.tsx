@@ -38,7 +38,7 @@ import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
-  Test, TestQuestion, QuestionType, QuestionOptions,
+  Test, TestQuestion, TestSection, QuestionType, QuestionOptions,
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
   MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
@@ -170,6 +170,7 @@ const BUILDER_PREVIEW_FRAME_SIZE = {
 type ActiveBlock =
   | { kind: 'welcome' }
   | { kind: 'question'; index: number }
+  | { kind: 'section'; id: string }
   | { kind: 'end' };
 
 const defaultWelcomeScreen = (title: string): TestScreenConfig => ({
@@ -232,6 +233,11 @@ export function TestBuilder({ testId }: Props) {
   const searchParams = useSearchParams();
   const [test, setTest] = useState<Test | null>(null);
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
+  /* Per-test ordered list of sections (stage-b). Empty array = sectionless
+     test, behaves identically to stage (a) — the section UI in the left
+     rail just doesn't render. Loaded with the rest of the test on mount;
+     mutated via the section CRUD helpers below. */
+  const [sections, setSections] = useState<TestSection[]>([]);
   const [activeIdx, setActiveIdx] = useState(0);
   const [activeBlock, setActiveBlock] = useState<ActiveBlock>({ kind: 'question', index: 0 });
   const [savedSnapshot, setSavedSnapshot] = useState<string>('');
@@ -295,8 +301,10 @@ export function TestBuilder({ testId }: Props) {
       options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
       required: q.required,
       hidden: q.hidden === true,
+      section_id: q.section_id ?? null,
     }));
     setQuestions(builderQs);
+    setSections((json.sections as TestSection[] | undefined) ?? []);
     setSavedSnapshot(JSON.stringify(builderQs));
   }, [getAccessToken, testId]);
 
@@ -377,7 +385,7 @@ export function TestBuilder({ testId }: Props) {
     [questions],
   );
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -389,6 +397,62 @@ export function TestBuilder({ testId }: Props) {
       setTest(j.test);
     }
   };
+
+  /* ── Section CRUD helpers (stage-b) ──────────────────────────────
+     All four hit `/api/tests/[id]/sections[/[sectionId]]` and update
+     local `sections` state on success so the left rail re-renders
+     immediately. Errors are silent (alert on failure); on transient
+     errors the local state is reloaded from the server on the next
+     mount. */
+  const createSection = useCallback(async (title = ''): Promise<TestSection | null> => {
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/tests/${testId}/sections`, {
+      method: 'POST',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ title }),
+    });
+    if (!res.ok) { alert('Failed to create section'); return null; }
+    const j = await res.json() as { section: TestSection };
+    setSections(prev => [...prev, j.section]);
+    return j.section;
+  }, [getAccessToken, testId]);
+
+  const updateSection = useCallback(async (sectionId: string, patch: Partial<Pick<TestSection, 'title' | 'audio_url' | 'position'>>): Promise<boolean> => {
+    /* Optimistic update first so the UI doesn't lag on rename. */
+    setSections(prev => prev.map(s => (s.id === sectionId ? { ...s, ...patch } : s)));
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/tests/${testId}/sections/${sectionId}`, {
+      method: 'PATCH',
+      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+      body: JSON.stringify(patch),
+    });
+    if (!res.ok) { alert('Failed to update section'); return false; }
+    const j = await res.json() as { section: TestSection };
+    setSections(prev => prev.map(s => (s.id === sectionId ? j.section : s)));
+    return true;
+  }, [getAccessToken, testId]);
+
+  const deleteSection = useCallback(async (sectionId: string): Promise<boolean> => {
+    const tok = await getAccessToken();
+    const res = await fetch(`/api/tests/${testId}/sections/${sectionId}`, {
+      method: 'DELETE',
+      headers: authHeaders(tok),
+    });
+    if (!res.ok) { alert('Failed to delete section'); return false; }
+    setSections(prev => prev.filter(s => s.id !== sectionId));
+    /* `on delete set null` on test_questions.section_id means the
+       server already moved this section's questions to unsectioned;
+       mirror that locally so the left rail matches. */
+    setQuestions(prev => prev.map(q => (q.section_id === sectionId ? { ...q, section_id: null } : q)));
+    return true;
+  }, [getAccessToken, testId]);
+
+  /* Move one question to a different section (or to unsectioned via
+     null). Pure local-state change here — the question's section_id
+     is persisted on the next `saveQuestions` PUT. */
+  const moveQuestionToSection = useCallback((questionIndex: number, sectionId: string | null) => {
+    setQuestions(prev => prev.map((q, i) => (i === questionIndex ? { ...q, section_id: sectionId } : q)));
+  }, []);
 
   const saveQuestions = useCallback(async (
     sourceQuestions: BuilderQuestion[] = questionsRef.current,
@@ -421,6 +485,7 @@ export function TestBuilder({ testId }: Props) {
           options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>),
           required: q.required,
           hidden: q.hidden === true,
+          section_id: q.section_id ?? null,
         })),
       };
       const res = await fetch(`/api/tests/${testId}/questions`, {
@@ -446,6 +511,7 @@ export function TestBuilder({ testId }: Props) {
         options: normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>) as QuestionOptions,
         required: q.required,
         hidden: q.hidden === true,
+        section_id: q.section_id ?? null,
       }));
       if (JSON.stringify(questionsRef.current) === sourceSnapshot) {
         setQuestions(next);
@@ -726,6 +792,26 @@ export function TestBuilder({ testId }: Props) {
             }}
           />
         </div>
+        {/* Sections panel (stage-b). Renders ONLY when the test has at
+            least one section OR the author clicks Add Section. Empty
+            tests stay visually identical to stage (a). */}
+        <SectionsPanel
+          sections={sections}
+          activeSectionId={activeBlock.kind === 'section' ? activeBlock.id : null}
+          onSelect={(id) => setActiveBlock({ kind: 'section', id })}
+          onCreate={async () => {
+            const section = await createSection('');
+            if (section) setActiveBlock({ kind: 'section', id: section.id });
+          }}
+          onRename={(id, title) => { void updateSection(id, { title }); }}
+          onDelete={(id) => {
+            if (!confirm('Delete this section? Its questions stay in the test (move back to "Unsectioned").')) return;
+            void deleteSection(id);
+            if (activeBlock.kind === 'section' && activeBlock.id === id) {
+              setActiveBlock({ kind: 'question', index: 0 });
+            }
+          }}
+        />
         <ul className="tb-left" style={{ listStyle: 'none', padding: '8px 8px 0', margin: 0, flex: 1, overflow: 'auto' }}>
           {welcomeScreen.enabled ? (
             <li className="tb-left__item-wrap">
@@ -1021,7 +1107,19 @@ export function TestBuilder({ testId }: Props) {
             <ScreenPreviewCanvas screen={welcomeScreen} fallbackTitle={test.title} kind="welcome" questionCount={questions.length} previewDevice={previewDevice} previewScale={previewScale} />
           ) : activeBlock.kind === 'end' ? (
             <ScreenPreviewCanvas screen={endScreen} fallbackTitle="Submitted" kind="end" questionCount={questions.length} previewDevice={previewDevice} previewScale={previewScale} />
-          ) : activeQuestion ? (
+          ) : activeBlock.kind === 'section' ? (() => {
+            const s = sections.find(x => x.id === activeBlock.id);
+            return (
+              <div style={emptyCanvas}>
+                <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>
+                  {s?.title || 'Untitled section'}
+                </div>
+                <div style={{ color: '#94a3b8', fontSize: 14 }}>
+                  Section settings (title + audio) are on the right.
+                </div>
+              </div>
+            );
+          })() : activeQuestion ? (
             <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} />
           ) : (
             <div style={emptyCanvas}>
@@ -1054,7 +1152,18 @@ export function TestBuilder({ testId }: Props) {
               if (persist) updateTest({ end_screen: next });
             }}
           />
-        ) : activeQuestion ? (
+        ) : activeBlock.kind === 'section' ? (() => {
+          const activeSection = sections.find(s => s.id === activeBlock.id);
+          if (!activeSection) return null;
+          return (
+            <SectionSettingsPanel
+              section={activeSection}
+              getAccessToken={getAccessToken}
+              onRename={(title) => { void updateSection(activeSection.id, { title }); }}
+              onAudio={(url) => { void updateSection(activeSection.id, { audio_url: url }); }}
+            />
+          );
+        })() : activeQuestion ? (
           <SettingsPanel
             q={activeQuestion}
             isGraded={test.is_graded}
@@ -1170,6 +1279,13 @@ export function TestBuilder({ testId }: Props) {
           top={openQuestionMenu.top}
           left={openQuestionMenu.left}
           isHidden={questions[openQuestionMenu.index]?.hidden === true}
+          sections={sections}
+          currentSectionId={questions[openQuestionMenu.index]?.section_id ?? null}
+          onMoveToSection={(sectionId) => {
+            const index = openQuestionMenu.index;
+            setOpenQuestionMenu(null);
+            moveQuestionToSection(index, sectionId);
+          }}
           onToggleHidden={() => toggleHiddenQuestion(openQuestionMenu.index)}
           onDuplicate={() => duplicateQuestion(openQuestionMenu.index)}
           onDelete={() => {
@@ -1357,10 +1473,211 @@ function SortableQuestionItem({
   );
 }
 
-function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate, onDelete }: {
+/* Sections panel — sits between the mode dropdown and the question
+   list in the left rail. Renders ONLY when there's at least one
+   section (or a single "+ Add section" button when empty). Each
+   section row: title (inline-editable on click), audio dot, delete
+   button. Clicking the row selects the section, surfacing
+   SectionSettingsPanel in the right rail. */
+function SectionsPanel({
+  sections,
+  activeSectionId,
+  onSelect,
+  onCreate,
+  onRename,
+  onDelete,
+}: {
+  sections: TestSection[];
+  activeSectionId: string | null;
+  onSelect: (id: string) => void;
+  onCreate: () => void;
+  onRename: (id: string, title: string) => void;
+  onDelete: (id: string) => void;
+}) {
+  return (
+    <div style={sectionsPanelWrap}>
+      <div style={sectionsPanelHeader}>
+        <span>Sections</span>
+        <button type="button" onClick={onCreate} style={sectionsPanelAdd} title="Add section">
+          +
+        </button>
+      </div>
+      {sections.length === 0 ? (
+        <div style={sectionsPanelEmpty}>
+          No sections. Questions are ungrouped.
+        </div>
+      ) : (
+        <ul style={sectionsList}>
+          {sections.map(section => {
+            const active = section.id === activeSectionId;
+            return (
+              <li key={section.id} style={sectionRow(active)}>
+                <button type="button" onClick={() => onSelect(section.id)} style={sectionRowMain}>
+                  <input
+                    type="text"
+                    value={section.title}
+                    placeholder="Untitled section"
+                    onClick={(event) => event.stopPropagation()}
+                    onChange={(event) => onRename(section.id, event.target.value)}
+                    style={sectionRowInput}
+                  />
+                  {section.audio_url ? (
+                    <span style={sectionRowAudioDot} title="Has audio">●</span>
+                  ) : null}
+                </button>
+                <button
+                  type="button"
+                  onClick={(event) => { event.stopPropagation(); onDelete(section.id); }}
+                  style={sectionRowDelete}
+                  title="Delete section"
+                  aria-label="Delete section"
+                >
+                  ×
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+/* Section settings panel — right rail when activeBlock is a section.
+   Two fields: title (text input) + audio (Listening-modal-style
+   upload row). Audio uses the existing /api/tests/media endpoint
+   tagged with `section-{id}` so per-section audios stay separable in
+   the gallery. */
+function SectionSettingsPanel({
+  section,
+  getAccessToken,
+  onRename,
+  onAudio,
+}: {
+  section: TestSection;
+  getAccessToken: () => Promise<string | null>;
+  onRename: (title: string) => void;
+  onAudio: (url: string | null) => void;
+}) {
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const uploadAudio = async (file: File) => {
+    setError(null);
+    if (!file.type.startsWith('audio/')) {
+      setError('Upload an audio file (MP3, WAV, M4A, OGG).');
+      return;
+    }
+    if (file.size > 50 * 1024 * 1024) {
+      setError('Audio must be 50MB or smaller.');
+      return;
+    }
+    setUploading(true);
+    const form = new FormData();
+    form.append('file', file);
+    form.append('questionId', `section-${section.id}`);
+    const token = await getAccessToken();
+    const res = await fetch('/api/tests/media', {
+      method: 'POST',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      body: form,
+    });
+    const json = await res.json().catch(() => ({}));
+    setUploading(false);
+    if (!res.ok || !json.url) {
+      setError(json.error ?? 'Upload failed.');
+      return;
+    }
+    onAudio(json.url);
+  };
+
+  return (
+    <div style={panel}>
+      <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8', letterSpacing: 0.5, textTransform: 'uppercase', marginBottom: 12 }}>
+        Section
+      </div>
+      <div style={screenFieldLabel}>Title</div>
+      <input
+        type="text"
+        value={section.title}
+        placeholder="e.g. Listening — Part 1"
+        onChange={(event) => onRename(event.target.value)}
+        style={screenInput}
+      />
+      <div style={screenDivider} />
+      <div style={screenFieldLabel}>Listening audio (optional)</div>
+      <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, margin: '4px 0 12px' }}>
+        Plays while students answer this section's questions.
+      </div>
+      {section.audio_url ? (
+        <div style={{ marginBottom: 12 }}>
+          <audio src={section.audio_url} controls style={{ width: '100%' }} />
+        </div>
+      ) : null}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="audio/*"
+        style={{ display: 'none' }}
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          if (file) void uploadAudio(file);
+          event.target.value = '';
+        }}
+      />
+      <div style={{ display: 'flex', gap: 8 }}>
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+          style={{
+            flex: 1,
+            padding: '10px 12px',
+            border: '1px solid #cbd5e1',
+            borderRadius: 3,
+            background: '#fff',
+            color: '#2f2835',
+            fontSize: 13,
+            fontWeight: 700,
+            cursor: uploading ? 'wait' : 'pointer',
+          }}
+        >
+          {uploading ? 'Uploading…' : section.audio_url ? 'Replace audio' : 'Upload audio'}
+        </button>
+        {section.audio_url ? (
+          <button
+            type="button"
+            onClick={() => onAudio(null)}
+            style={{
+              padding: '10px 12px',
+              border: '1px solid #f3c2c2',
+              borderRadius: 3,
+              background: '#fff',
+              color: '#b91c1c',
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: 'pointer',
+            }}
+          >
+            Remove
+          </button>
+        ) : null}
+      </div>
+      {error ? (
+        <div style={{ marginTop: 10, color: '#b91c1c', fontSize: 12, fontWeight: 600 }}>{error}</div>
+      ) : null}
+    </div>
+  );
+}
+
+function QuestionActionsMenu({ top, left, isHidden, sections, currentSectionId, onMoveToSection, onToggleHidden, onDuplicate, onDelete }: {
   top: number;
   left: number;
   isHidden: boolean;
+  sections: TestSection[];
+  currentSectionId: string | null;
+  onMoveToSection: (sectionId: string | null) => void;
   onToggleHidden: () => void;
   onDuplicate: () => void;
   onDelete: () => void;
@@ -1413,6 +1730,35 @@ function QuestionActionsMenu({ top, left, isHidden, onToggleHidden, onDuplicate,
         </span>
         Duplicate
       </button>
+      {sections.length > 0 ? (
+        <>
+          <div style={questionMenuDivider} />
+          <div style={questionMenuSectionLabel}>Move to section</div>
+          <button
+            type="button"
+            className="tb-left__menu-item"
+            role="menuitem"
+            onClick={() => onMoveToSection(null)}
+            style={{ fontStyle: currentSectionId === null ? 'normal' : 'italic', color: currentSectionId === null ? undefined : '#64748b' }}
+          >
+            <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === null ? '✓' : ''}</span>
+            No section
+          </button>
+          {sections.map(section => (
+            <button
+              key={section.id}
+              type="button"
+              className="tb-left__menu-item"
+              role="menuitem"
+              onClick={() => onMoveToSection(section.id)}
+            >
+              <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === section.id ? '✓' : ''}</span>
+              {section.title || 'Untitled section'}
+            </button>
+          ))}
+          <div style={questionMenuDivider} />
+        </>
+      ) : null}
       <button
         type="button"
         className="tb-left__menu-item tb-left__menu-item--danger"
@@ -4805,6 +5151,129 @@ const previewHint: React.CSSProperties = {
 
 const previewAnswerArea: React.CSSProperties = {
   pointerEvents: 'none',
+};
+
+/* ── Stage-b sections panel (left rail) ─────────────────────────── */
+const sectionsPanelWrap: React.CSSProperties = {
+  margin: '0 12px 12px',
+  padding: 10,
+  borderRadius: 3,
+  background: '#fafafa',
+  border: '1px solid #ece9ed',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 8,
+};
+
+const sectionsPanelHeader: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  fontSize: 11,
+  fontWeight: 800,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  color: '#6b6470',
+};
+
+const sectionsPanelAdd: React.CSSProperties = {
+  width: 22,
+  height: 22,
+  border: 'none',
+  borderRadius: 3,
+  background: '#eceae0',
+  color: '#2f2835',
+  fontSize: 16,
+  fontWeight: 700,
+  lineHeight: 1,
+  cursor: 'pointer',
+};
+
+const sectionsPanelEmpty: React.CSSProperties = {
+  fontSize: 12,
+  color: '#94a3b8',
+  fontStyle: 'italic',
+  lineHeight: 1.4,
+};
+
+const sectionsList: React.CSSProperties = {
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+};
+
+const sectionRow = (active: boolean): React.CSSProperties => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 4,
+  padding: 0,
+  borderRadius: 3,
+  background: active ? '#eee9f5' : 'transparent',
+  border: active ? '1px solid #c9bfe0' : '1px solid transparent',
+  transition: 'background 0.12s ease',
+});
+
+const sectionRowMain: React.CSSProperties = {
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  gap: 6,
+  border: 'none',
+  background: 'transparent',
+  padding: '6px 8px',
+  cursor: 'pointer',
+  textAlign: 'left',
+  minWidth: 0,
+};
+
+const sectionRowInput: React.CSSProperties = {
+  flex: 1,
+  border: 'none',
+  background: 'transparent',
+  fontSize: 13,
+  fontWeight: 600,
+  color: '#2f2835',
+  padding: 0,
+  outline: 'none',
+  minWidth: 0,
+};
+
+const sectionRowAudioDot: React.CSSProperties = {
+  color: '#6b4fbb',
+  fontSize: 10,
+  lineHeight: 1,
+};
+
+const sectionRowDelete: React.CSSProperties = {
+  width: 22,
+  height: 22,
+  border: 'none',
+  borderRadius: 3,
+  background: 'transparent',
+  color: '#6b6470',
+  fontSize: 16,
+  lineHeight: 1,
+  cursor: 'pointer',
+  marginRight: 4,
+};
+
+/* ── Stage-b "Move to section" submenu styling in QuestionActionsMenu ── */
+const questionMenuDivider: React.CSSProperties = {
+  height: 1,
+  background: '#eceae0',
+  margin: '4px 0',
+};
+
+const questionMenuSectionLabel: React.CSSProperties = {
+  fontSize: 11,
+  fontWeight: 800,
+  color: '#94a3b8',
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  padding: '4px 10px',
 };
 
 function Center({ children }: { children: React.ReactNode }) {
