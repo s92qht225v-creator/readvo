@@ -333,10 +333,33 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     void submit();
   }, [firstMissingRequiredIdx, goToIdx, submit]);
 
+  /* Scroll the target question to the centre of the *visible* viewport
+     (i.e. excluding the fixed footer at the bottom and, when present,
+     the listening audio bar at the top). `Element.scrollIntoView({
+     block: 'center' })` centres against the raw 100vh viewport, which
+     places the question visually low because the bottom band is
+     covered by the footer. Computing the offset manually against the
+     unobstructed visible region puts it where the eye expects. */
+  const centreInViewport = useCallback((el: HTMLElement) => {
+    if (typeof window === 'undefined') return;
+    /* Approximate fixed-chrome heights. The footer is ~80px on
+       desktop, slightly taller on mobile because of the safe area. */
+    const audioBarHeight = test.listening_audio_url ? 96 : 0;
+    const footerHeight = window.innerWidth <= 640 ? 96 : 80;
+    const visibleTop = audioBarHeight;
+    const visibleBottom = window.innerHeight - footerHeight;
+    const visibleCentre = (visibleTop + visibleBottom) / 2;
+    const rect = el.getBoundingClientRect();
+    const elementCentre = rect.top + rect.height / 2;
+    const delta = elementCentre - visibleCentre;
+    window.scrollTo({ top: window.scrollY + delta, behavior: 'smooth' });
+  }, [test.listening_audio_url]);
+
   /* Layout-aware "go to question N" used by the shared Navigator
      overlay. Card mode jumps the current index; scroll mode scrolls the
-     target item into view (and updates the active id so the focus ring
-     moves immediately, without waiting for the IntersectionObserver). */
+     target item into the visible-region centre (and updates the active
+     id so the focus ring moves immediately, without waiting for the
+     IntersectionObserver). */
   const navigatorGoTo = useCallback((targetIdx: number) => {
     setNavigatorOpen(false);
     const target = test.questions[targetIdx];
@@ -345,12 +368,12 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
       const el = typeof document !== 'undefined'
         ? document.querySelector(`[data-qid="${target.id}"]`) as HTMLElement | null
         : null;
-      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (el) centreInViewport(el);
       setScrollActiveId(target.id);
     } else {
       goToIdx(targetIdx);
     }
-  }, [test.layout, test.questions, goToIdx]);
+  }, [centreInViewport, test.layout, test.questions, goToIdx]);
 
   /* Layout-aware "finish the test" used by both the Navigator overlay
      and the scroll-mode footer Submit button. Card mode goes through
@@ -364,7 +387,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
         const el = typeof document !== 'undefined'
           ? document.querySelector(`[data-qid="${missing.id}"]`) as HTMLElement | null
           : null;
-        el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (el) centreInViewport(el);
         setScrollActiveId(missing.id);
         return;
       }
@@ -372,7 +395,7 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     } else {
       attemptSubmit();
     }
-  }, [attemptSubmit, firstMissingRequiredIdx, submit, test.layout, test.questions]);
+  }, [attemptSubmit, centreInViewport, firstMissingRequiredIdx, submit, test.layout, test.questions]);
 
   /* For the shared Navigator + scroll-mode footer progress display. */
   const scrollActiveIdx = useMemo(() => {
