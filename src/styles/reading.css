@@ -14272,7 +14272,12 @@ body {
        480 for the rare wide tablet portrait. */
     --test-mobile-column: min(100%, 480px);
     width: 100% !important;
-    min-height: auto !important;
+    /* `min-height: auto !important` was here defensively but is
+       redundant — the desktop min-height rule on `.test-player__card`
+       is scoped to `@media (min-width: 641px)` so it never applies on
+       mobile. Removing the !important lets scroll items set their own
+       viewport-tall min-height via `.test-scroll__item` (mobile
+       rule), so each question fills one viewport like card mode does. */
     border: none !important;
     border-radius: 0 !important;
     background: transparent !important;
