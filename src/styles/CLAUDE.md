@@ -10,6 +10,12 @@ All styles live in `src/styles/reading.css` **EXCEPT**:
 - `reading.css` still owns the test player **frame chrome**
   (`.test-preview-shell--{mobile,desktop}`, the `@media (max-width:640px)`
   card chrome) but those rules don't touch any answer-type internals.
+  The preview shell rules deliberately **split** `height` and
+  `overflow-y` into a `:not(.test-scroll__item)` variant so scroll-mode
+  cards (which grow with content + scroll the page) aren't pinned to
+  the card-mode 620 / 663 fixed height. See `src/components/test/CLAUDE.md`
+  → "Scroll mode" for the full reasoning. Card mode behaviour is
+  byte-for-byte unchanged.
 
 ## Key CSS Classes
 

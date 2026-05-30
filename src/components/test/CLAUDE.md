@@ -703,6 +703,257 @@ A disabled welcome screen skips the intro entirely (player auto-advances
 `intro → question`); a disabled end screen still shows a minimal
 "Submitted" acknowledgement.
 
+## Scroll mode (`tests.layout = 'scroll'`)
+
+Tests have a `layout` field — `'card'` (default, Typeform-style one
+question per screen) or `'scroll'` (IELTS / SurveyMonkey-style: every
+question stacked on one scrollable page, with the currently-focused
+one lit and the rest dimmed). Card mode is the baseline; scroll mode
+is an alternate **presentation shell** over the same shared core
+(QuestionRenderer, grading, submission, required-guard, randomization).
+
+### Data
+
+- `tests.layout text not null default 'card'` (`'card' | 'scroll'`).
+- `tests.listening_audio_url text` — optional continuous audio track
+  for listening exams. Independent of layout — works in both card and
+  scroll modes via the shared `ListeningAudioBar`.
+- Both columns: `add column if not exists … default 'card'`. Migration
+  applied via Supabase MCP; safe additive change.
+- Public API (`/api/t/[slug]`) returns `layout` (defaulting to `'card'`)
+  and `listening_audio_url ?? null` on `PublicTest`.
+- PATCH `/api/tests/[id]` accepts `layout: 'card' | 'scroll'` and
+  `listening_audio_url: string | null` (1000-char cap).
+
+### Player (`TestPlayer.tsx`)
+
+`TestPlayer` branches on `test.layout` AFTER the shared intro/done/error
+phase handling but BEFORE the card return:
+
+```tsx
+const audioActive = !!test.listening_audio_url && phase === 'question';
+const listeningBar = audioActive
+  ? <ListeningAudioBar url={test.listening_audio_url!} />
+  : null;
+
+if (test.layout === 'scroll') {
+  return (
+    <>
+      {listeningBar}
+      <ScrollBody … />
+      {navigatorOpen ? <NavigatorOverlay … /> : null}
+    </>
+  );
+}
+
+return (
+  <>
+    {listeningBar}
+    <Wrapper …>
+      {/* card-mode AnimatePresence card */}
+    </Wrapper>
+    {navigatorOpen ? <NavigatorOverlay … /> : null}
+  </>
+);
+```
+
+- `ListeningAudioBar` is **layout-independent** — mounted at the
+  top-level fragment of both branches when an audio URL is set.
+  Position: `fixed; top: 0; z-index: 50`. Tries to autoplay on mount
+  (works after the Start click on the welcome screen; browsers block
+  autoplay otherwise — the native controls let students press play).
+- `NavigatorOverlay` is the **shared question navigator** lifted out
+  of the card return. Both modes mount it from the same JSX with
+  layout-specific `onGoTo` / `onFinish` callbacks.
+
+### `ScrollBody`
+
+Props receive everything from `TestPlayer`:
+
+- `test, device, themeVars, answers, onAnswer (id-addressed), onSubmit
+  (= navigatorFinish), onOpenNavigator (= setNavigatorOpen(true)),
+  activeId, setActiveId, activeIdx, phase, total, audioActive`.
+- `activeId / setActiveId / activeIdx` are LIFTED to `TestPlayer` so
+  the shared navigator can highlight the current scroll question and
+  the footer can show "i / total".
+
+Render structure:
+
+```
+.test-scroll (data-test-device, themeVars on shell)
+└── .test-scroll__list (max-width 1120, centered)
+    ├── section.test-player__card.test-scroll__item.test-player__card--has-media|--no-media[--active|--dim]
+    │   └── QuestionMediaLayout (header h2 + answer QuestionRenderer)
+    └── … (one section per question)
+.test-scroll__footer (fixed bottom)
+└── Questions button | i/total | Submit
+```
+
+Each scroll item **wears `test-player__card`** (plus `--has-media` /
+`--no-media`) — see "CSS rule split" below.
+
+### Focus tracking (which question is "active")
+
+1. **IntersectionObserver** observes every `[data-qid]` section with
+   `rootMargin: '-45% 0px -45% 0px'` (a thin band around the viewport
+   centre). The topmost question whose section is inside the band
+   becomes `scrollActiveId`.
+2. **Edge guard** — a `scroll` listener pins `scrollActiveId` to the
+   first or last question when the page is within 140px of the top or
+   bottom. The IntersectionObserver's centre band misses those
+   extremes; without the guard the first/last never highlight.
+3. **`onFocusCapture`** on each item also promotes it to active when
+   the user clicks/tabs into a field — so the lit ring follows
+   intent, not just scroll position.
+
+### CSS rule split — scroll items reuse `.test-player__card` chrome
+
+The fundamental simplification: **a scroll item IS a card**. It wears
+`test-player__card` so every card-mode rule across surfaces applies
+automatically:
+
+- `.test-player__card` in `test-player.css` — desktop chrome (border,
+  shadow, background, min-height, scrollbar styling).
+- `@media (max-width: 640px) .test-player__card { transparent, no
+  border, padding 0 }` in `test-player.css` — mobile chrome strip.
+- `.test-preview-shell--desktop .test-player__card` — preview shell
+  desktop sizing (width 1120, min-height 620, border).
+- `.test-preview-shell--mobile .test-player__card` — preview shell
+  mobile sizing (width 372, min-height 663, padding 30 26 152).
+
+`.test-scroll__item` carries ONLY the scroll-specific bits: focus dim
+opacity, transitions, `scroll-margin-top: 96px` (clears the listening
+bar when the navigator scrolls to a card).
+
+### Two targeted overrides for scroll items
+
+Two card-mode declarations don't apply to scroll items, handled via
+the combined-class selector `.test-player__card.test-scroll__item`
+(specificity 0,2,0 — beats base 0,1,0 cleanly):
+
+1. **Drop the fixed height**: card-mode pins `height: min(620px,
+   100vh − 136px)`. Scroll items use `height: auto` so they grow
+   with content (tall videos / long answers). `min-height` stays as
+   the floor so short cards still look like 620 cards.
+2. **Drop the internal overflow scroll**: card-mode uses `overflow-y:
+   auto` to scroll content inside the card. Scroll items use
+   `overflow-y: visible` — the *page* scrolls between cards, never
+   trapping the wheel inside one.
+
+**No `!important` on the override** because the base
+`.test-player__card` rule was modified to **NOT** use `!important` on
+`height` and `overflow-y` (only on the chrome declarations that
+nothing fights). Preview shell rules (`.test-preview-shell--desktop
+.test-player__card`) similarly **split** their height/overflow into a
+`:not(.test-scroll__item)` variant so card mode behaviour is
+byte-for-byte unchanged but scroll items skip the pinning.
+
+### Flex chain for media items
+
+With `height: auto`, the qmedia grid's `min-height: 100%` resolves to
+0 against the now-min-height-only parent — so the image column stays
+natural height and content pins to the top of a tall card. Fix:
+
+```css
+.test-player__card.test-scroll__item {
+  display: flex;
+  flex-direction: column;
+}
+.test-player__card.test-scroll__item > .qmedia-layout:not(.qmedia-no-media) {
+  flex: 1;          /* grow to fill card; no min-height: 0 (avoid clipping tall media) */
+}
+```
+
+- `flex: 1` lets short qmedia stretch to fill the card so the grid's
+  `align-items: center` vertically centres the content column.
+- **NO `min-height: 0`** — that allows shrinking below content and the
+  qmedia grid's `overflow: hidden` then crops the bottom of tall
+  media (portrait videos). Without it, qmedia respects its content
+  height and pushes the scroll card to grow taller instead of cropping.
+- `:not(.qmedia-no-media)` — no-media items keep the existing
+  `.test-player__card--no-media { justify-content: center }` rule
+  doing their centring.
+
+### First / last card centring in viewport
+
+Card mode centres its single card via flex on `.test-player`. Scroll
+mode can't (multiple cards can't all flex-centre), so equivalent CSS
+padding on the list/shell — `(viewport − card_height) / 2` minus a
+small 48 px lift so the card sits slightly above geometric centre
+(preferred resting position):
+
+```css
+@media (min-width: 641px) {
+  .test-scroll__list {
+    padding-top: max(24px, calc((100vh - min(620px, 100vh - 136px)) / 2 - 48px));
+  }
+  .test-scroll {
+    padding-bottom: max(96px, calc((100vh - min(620px, 100vh - 136px)) / 2 + 48px));
+  }
+}
+```
+
+Floors protect short viewports + preserve fixed-footer clearance
+(96 px). Mobile keeps simpler flat padding (24/12 + safe-area).
+
+### Navigator (shared with card mode)
+
+`NavigatorOverlay` is a single component rendered from both layout
+branches:
+
+- Card mode: `currentIdx = idx`, `onGoTo = goToIdx`, `onFinish =
+  attemptSubmit`.
+- Scroll mode: `currentIdx = scrollActiveIdx`, `onGoTo = navigatorGoTo`
+  (smooth-scrolls to `[data-qid=…]` and updates active id), `onFinish
+  = navigatorFinish` (scrolls to first missing required if any, else
+  submits).
+
+**Visible-region centring** — `scrollIntoView({ block: 'center' })`
+centres against the raw 100vh viewport, placing the target visually
+low because the fixed footer (~80 px desktop / ~96 px mobile) and the
+listening bar (~96 px when on) cover part of the screen. Instead, the
+helper `centreInViewport(el)` computes the unobstructed visible region
+(`window.innerHeight − topChrome − bottomChrome`), gets the element's
+centre via `getBoundingClientRect()`, and `window.scrollTo` by the
+delta — so the target lands at the centre of what the user actually
+sees.
+
+### Builder (`TestBuilder.tsx`)
+
+Two **separate** toolbar controls, both opening modals next to Timer:
+
+- **Layout** (`<LayoutIcon />`, opens `<LayoutModal>`) — picks `'card'`
+  or `'scroll'` via two stacked option cards (`<LayoutOptionCard>`)
+  with title + one-line description + radio dot. Highlights when
+  layout is scroll.
+- **Listening** (`<HeadphonesIcon />`, opens `<ListeningModal>`) —
+  uploads / replaces / removes the continuous audio. Works with any
+  layout. Highlights when an audio URL is set.
+
+Both update via the existing `updateTest({ layout, listening_audio_url })`
+helper. The builder canvas (`PreviewCanvas`) still renders one card at
+a time even when the test is in scroll mode — extending the canvas to
+preview scroll layout is a future enhancement.
+
+### Files touched
+
+- `src/lib/test/types.ts` — `Test` and `PublicTest` gain `layout` +
+  `listening_audio_url` fields.
+- `src/app/api/tests/[id]/route.ts` PATCH — accepts new fields with
+  validation.
+- `src/app/api/t/[slug]/route.ts` GET — returns them in `PublicTest`.
+- `src/components/test/TestPlayer.tsx` — branch, `ScrollBody`,
+  `ListeningAudioBar`, `NavigatorOverlay` extraction, lifted
+  `scrollActiveId`, `navigatorGoTo` / `navigatorFinish`,
+  `centreInViewport`.
+- `src/components/test/TestBuilder.tsx` — `LayoutModal`, `LayoutOptionCard`,
+  `LayoutIcon`, `HeadphonesIcon`, `ListeningModal`, two toolbar buttons.
+- `src/components/test/test-player.css` — `.test-scroll*` rules,
+  scroll-item override, base `!important` cleanup on `height` and
+  `overflow-y`.
+- `src/styles/reading.css` — preview shell rules split into
+  shared-chrome vs `:not(.test-scroll__item)` height/overflow.
+
 ## Webpack mode
 
 Dev script is `next dev --webpack` (set in `package.json`). The test

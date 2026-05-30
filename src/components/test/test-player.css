@@ -356,6 +356,22 @@
   .test-scroll__list {
     gap: 12px;
   }
+  /* Each mobile scroll item takes roughly the viewport so questions
+     feel "one per page" like card mode does (where `.test-player` is
+     100vh with safe-centre alignment). The `.test-player__card` mobile
+     rule strips chrome (transparent, no border, padding 0) but does
+     NOT set a per-item height — that's added here:
+     - `min-height` ≈ viewport minus the list's top padding (24) and
+       the shell's bottom padding (96 + safe-area).
+     - `justify-content: safe center` vertically centres content inside
+       that viewport-sized box, falling back to `flex-start` when
+       content overflows so tall questions aren't clipped at the top.
+     `display: flex; flex-direction: column` is already set by the
+     `.test-player__card.test-scroll__item` rule above. */
+  .test-scroll__item {
+    min-height: calc(100vh - 24px - 96px - env(safe-area-inset-bottom));
+    justify-content: safe center;
+  }
 }
 
 .test-scroll__item--dim {
