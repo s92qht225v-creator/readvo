@@ -266,7 +266,7 @@
 }
 
 .test-scroll__item--dim {
-  opacity: 0.22;
+  opacity: 0.1;
 }
 
 .test-scroll__item--active {
@@ -282,7 +282,7 @@
    fewer items so heavy dimming reads as "disabled". */
 @media (max-width: 640px) {
   .test-scroll__item--dim {
-    opacity: 0.35;
+    opacity: 0.18;
   }
 }
 

@@ -164,6 +164,12 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
       return next;
     });
   }, []);
+  /* Scroll-mode "current question" — the one the focus ring is on.
+     Lifted here (rather than living inside ScrollBody) so the shared
+     navigator can highlight it and the scroll-mode footer can render
+     "i/total". Initialised to the first question and kept in sync by
+     ScrollBody via setScrollActiveId. */
+  const [scrollActiveId, setScrollActiveId] = useState<string | null>(() => test.questions[0]?.id ?? null);
   const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
   const [errMsg, setErrMsg] = useState<string | null>(null);
   const [done, setDone] = useState<Done | null>(null);
@@ -326,6 +332,55 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
     setRequiredWarning(false);
     void submit();
   }, [firstMissingRequiredIdx, goToIdx, submit]);
+
+  /* Layout-aware "go to question N" used by the shared Navigator
+     overlay. Card mode jumps the current index; scroll mode scrolls the
+     target item into view (and updates the active id so the focus ring
+     moves immediately, without waiting for the IntersectionObserver). */
+  const navigatorGoTo = useCallback((targetIdx: number) => {
+    setNavigatorOpen(false);
+    const target = test.questions[targetIdx];
+    if (!target) return;
+    if (test.layout === 'scroll') {
+      const el = typeof document !== 'undefined'
+        ? document.querySelector(`[data-qid="${target.id}"]`) as HTMLElement | null
+        : null;
+      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setScrollActiveId(target.id);
+    } else {
+      goToIdx(targetIdx);
+    }
+  }, [test.layout, test.questions, goToIdx]);
+
+  /* Layout-aware "finish the test" used by both the Navigator overlay
+     and the scroll-mode footer Submit button. Card mode goes through
+     `attemptSubmit` (which jumps + flags). Scroll mode scrolls to the
+     first missing required question; otherwise it submits. */
+  const navigatorFinish = useCallback(() => {
+    setNavigatorOpen(false);
+    if (test.layout === 'scroll') {
+      if (firstMissingRequiredIdx >= 0) {
+        const missing = test.questions[firstMissingRequiredIdx];
+        const el = typeof document !== 'undefined'
+          ? document.querySelector(`[data-qid="${missing.id}"]`) as HTMLElement | null
+          : null;
+        el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setScrollActiveId(missing.id);
+        return;
+      }
+      void submit();
+    } else {
+      attemptSubmit();
+    }
+  }, [attemptSubmit, firstMissingRequiredIdx, submit, test.layout, test.questions]);
+
+  /* For the shared Navigator + scroll-mode footer progress display. */
+  const scrollActiveIdx = useMemo(() => {
+    if (test.layout !== 'scroll') return idx;
+    if (!scrollActiveId) return 0;
+    const i = test.questions.findIndex(qq => qq.id === scrollActiveId);
+    return i >= 0 ? i : 0;
+  }, [test.layout, scrollActiveId, idx, test.questions]);
 
   const startQuestions = useCallback(() => {
     setStartedAt(new Date().toISOString());
@@ -636,14 +691,32 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
           themeVars={themeVars}
           answers={answers}
           onAnswer={setAnswerFor}
-          onSubmit={submit}
+          onSubmit={navigatorFinish}
+          onOpenNavigator={() => setNavigatorOpen(true)}
+          activeId={scrollActiveId}
+          setActiveId={setScrollActiveId}
+          activeIdx={scrollActiveIdx}
           phase={phase}
-          remainingSeconds={remainingSeconds}
-          answeredCount={answeredCount}
           total={total}
-          firstMissingRequiredIdx={firstMissingRequiredIdx}
           audioActive={audioActive}
         />
+        {/* phase is already narrowed to 'question'|'submitting' here
+            by the earlier intro/done/error early returns, so no
+            additional phase gate needed. */}
+        {navigatorOpen ? (
+          <NavigatorOverlay
+            questions={test.questions}
+            answers={answers}
+            currentIdx={scrollActiveIdx}
+            answeredCount={answeredCount}
+            total={total}
+            remainingSeconds={remainingSeconds}
+            submitting={phase === 'submitting'}
+            onClose={() => setNavigatorOpen(false)}
+            onGoTo={navigatorGoTo}
+            onFinish={navigatorFinish}
+          />
+        ) : null}
       </>
     );
   }
@@ -724,88 +797,125 @@ export function TestPlayer({ test, forceDevice, responseId }: Props) {
         </button>
       </div>
 
-      <AnimatePresence>
-        {navigatorOpen ? (
-          <motion.div
-            style={navigatorOverlay}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setNavigatorOpen(false)}
-          >
-            <motion.div
-              role="dialog"
-              aria-modal="true"
-              aria-label="Question navigator"
-              style={navigatorPanel}
-              initial={{ opacity: 0, y: 18, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 18, scale: 0.98 }}
-              transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              onClick={event => event.stopPropagation()}
-            >
-              <button
-                type="button"
-                aria-label="Close questions"
-                onClick={() => setNavigatorOpen(false)}
-                style={navigatorCloseButton}
-              >
-                ×
-              </button>
-              {remainingSeconds != null ? (
-                <section style={navigatorCard}>
-                  <div style={navigatorCardHeader}>
-                    <h3 style={navigatorCardTitle}>Time left</h3>
-                    <div style={navigatorTimerPill}>
-                      <AlarmClockIcon />
-                      <span>{formatClock(remainingSeconds)}</span>
-                    </div>
-                  </div>
-                </section>
-              ) : null}
-              <section style={navigatorCard}>
-                <div style={navigatorCardHeader}>
-                  <h3 style={navigatorCardTitle}>All questions</h3>
-                  <span style={navigatorCount}>{answeredCount}/{total}</span>
-                </div>
-                <div style={navigatorGridScroller}>
-                  <div style={navigatorGrid}>
-                    {test.questions.map((question, questionIndex) => {
-                      const answered = hasQuestionAnswer(question, answers[question.id]);
-                      const current = questionIndex === idx;
-                      return (
-                        <button
-                          key={question.id}
-                          type="button"
-                          onClick={() => goToIdx(questionIndex)}
-                          aria-current={current ? 'step' : undefined}
-                          aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
-                          style={navigatorQuestionButton(current, answered)}
-                        >
-                          {questionIndex + 1}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </section>
-              <button
-                type="button"
-                onClick={() => {
-                  setNavigatorOpen(false);
-                  attemptSubmit();
-                }}
-                disabled={phase === 'submitting'}
-                style={navigatorFinishButton(phase === 'submitting')}
-              >
-                Finish the test
-              </button>
-            </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
     </Wrapper>
+    {/* Same Navigator used by scroll mode, supplied with card-mode
+        handlers (goToIdx + attemptSubmit) so the existing card
+        behaviour is preserved exactly. */}
+    {navigatorOpen ? (
+      <NavigatorOverlay
+        questions={test.questions}
+        answers={answers}
+        currentIdx={idx}
+        answeredCount={answeredCount}
+        total={total}
+        remainingSeconds={remainingSeconds}
+        submitting={phase === 'submitting'}
+        onClose={() => setNavigatorOpen(false)}
+        onGoTo={(targetIdx) => { setNavigatorOpen(false); goToIdx(targetIdx); }}
+        onFinish={() => { setNavigatorOpen(false); attemptSubmit(); }}
+      />
+    ) : null}
     </>
+  );
+}
+
+/* Shared question-navigator overlay — numbered grid of all questions
+   with answered/current state, optional time-left card, and a Finish
+   button. Used by both card mode (Questions button in the card-mode
+   nav row) and scroll mode (Questions button in the scroll footer).
+   The two modes differ only in what `onGoTo` and `onFinish` do. */
+function NavigatorOverlay({
+  questions,
+  answers,
+  currentIdx,
+  answeredCount,
+  total,
+  remainingSeconds,
+  submitting,
+  onClose,
+  onGoTo,
+  onFinish,
+}: {
+  questions: PublicQuestion[];
+  answers: Record<string, AnswerSubmission['value']>;
+  currentIdx: number;
+  answeredCount: number;
+  total: number;
+  remainingSeconds: number | null;
+  submitting: boolean;
+  onClose: () => void;
+  onGoTo: (targetIdx: number) => void;
+  onFinish: () => void;
+}) {
+  return (
+    <AnimatePresence>
+      <motion.div
+        style={navigatorOverlay}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+      >
+        <motion.div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Question navigator"
+          style={navigatorPanel}
+          initial={{ opacity: 0, y: 18, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 18, scale: 0.98 }}
+          transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          onClick={event => event.stopPropagation()}
+        >
+          <button type="button" aria-label="Close questions" onClick={onClose} style={navigatorCloseButton}>×</button>
+          {remainingSeconds != null ? (
+            <section style={navigatorCard}>
+              <div style={navigatorCardHeader}>
+                <h3 style={navigatorCardTitle}>Time left</h3>
+                <div style={navigatorTimerPill}>
+                  <AlarmClockIcon />
+                  <span>{formatClock(remainingSeconds)}</span>
+                </div>
+              </div>
+            </section>
+          ) : null}
+          <section style={navigatorCard}>
+            <div style={navigatorCardHeader}>
+              <h3 style={navigatorCardTitle}>All questions</h3>
+              <span style={navigatorCount}>{answeredCount}/{total}</span>
+            </div>
+            <div style={navigatorGridScroller}>
+              <div style={navigatorGrid}>
+                {questions.map((question, questionIndex) => {
+                  const answered = hasQuestionAnswer(question, answers[question.id]);
+                  const current = questionIndex === currentIdx;
+                  return (
+                    <button
+                      key={question.id}
+                      type="button"
+                      onClick={() => onGoTo(questionIndex)}
+                      aria-current={current ? 'step' : undefined}
+                      aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
+                      style={navigatorQuestionButton(current, answered)}
+                    >
+                      {questionIndex + 1}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+          <button
+            type="button"
+            onClick={onFinish}
+            disabled={submitting}
+            style={navigatorFinishButton(submitting)}
+          >
+            Finish the test
+          </button>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
@@ -895,11 +1005,12 @@ function ScrollBody({
   answers,
   onAnswer,
   onSubmit,
+  onOpenNavigator,
+  activeId,
+  setActiveId,
+  activeIdx,
   phase,
-  remainingSeconds,
-  answeredCount,
   total,
-  firstMissingRequiredIdx,
   audioActive,
 }: {
   test: PublicTest;
@@ -907,19 +1018,23 @@ function ScrollBody({
   themeVars?: Record<string, string>;
   answers: Record<string, AnswerSubmission['value']>;
   onAnswer: (qid: string, v: AnswerSubmission['value']) => void;
+  /* Layout-aware finish — supplied by TestPlayer; scrolls to the first
+     missing required question if any, otherwise submits. */
   onSubmit: () => void;
+  /* Open the shared Navigator overlay (numbered grid). */
+  onOpenNavigator: () => void;
+  /* Lifted to TestPlayer so the shared Navigator + footer progress
+     can read/display it. */
+  activeId: string | null;
+  setActiveId: (id: string | null) => void;
+  activeIdx: number;
   phase: Phase;
-  remainingSeconds: number | null;
-  answeredCount: number;
   total: number;
-  firstMissingRequiredIdx: number;
   /* Whether the global ListeningAudioBar is mounted above this body, so
      scrolled content has room to clear it. The bar itself lives at the
      top-level TestPlayer render (independent of layout). */
   audioActive: boolean;
 }) {
-  const [activeId, setActiveId] = useState<string | null>(test.questions[0]?.id ?? null);
-  const [warnId, setWarnId] = useState<string | null>(null);
   const itemRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   /* Focus follows the topmost question crossing a band around the
@@ -941,22 +1056,34 @@ function ScrollBody({
     return () => observer.disconnect();
   }, [test.questions]);
 
+  /* Edge guard — the IntersectionObserver's centre band misses the
+     first and last questions when the user is scrolled all the way to
+     the top or bottom (those items sit above/below the band at rest).
+     A scroll listener pins the first/last as active in those zones so
+     they always highlight. The threshold is loose (~140px) so it
+     triggers as soon as the viewport is near an edge. */
+  useEffect(() => {
+    const onScroll = () => {
+      const top = window.scrollY;
+      const viewportBottom = top + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const EDGE = 140;
+      if (top < EDGE) {
+        const first = test.questions[0];
+        if (first) setActiveId(first.id);
+      } else if (viewportBottom >= docHeight - EDGE) {
+        const last = test.questions[test.questions.length - 1];
+        if (last) setActiveId(last.id);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [test.questions]);
+
   const setItemRef = (id: string) => (el: HTMLElement | null) => {
     if (el) itemRefs.current.set(id, el);
     else itemRefs.current.delete(id);
-  };
-
-  const handleFinish = () => {
-    if (firstMissingRequiredIdx >= 0) {
-      const missing = test.questions[firstMissingRequiredIdx];
-      const el = itemRefs.current.get(missing.id);
-      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setActiveId(missing.id);
-      setWarnId(missing.id);
-      return;
-    }
-    setWarnId(null);
-    onSubmit();
   };
 
   return (
@@ -965,7 +1092,6 @@ function ScrollBody({
         {test.questions.map((question, i) => {
           const active = question.id === activeId;
           const answered = hasQuestionAnswer(question, answers[question.id]);
-          const warn = warnId === question.id && !answered;
           return (
             <section
               key={question.id}
@@ -973,7 +1099,7 @@ function ScrollBody({
               data-qid={question.id}
               aria-current={active ? 'true' : undefined}
               onFocusCapture={() => setActiveId(question.id)}
-              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${warn ? 'test-scroll__item--warn' : ''}`}
+              className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'}`}
               style={scrollItem}
             >
               <div style={scrollItemNumRow}>
@@ -1005,25 +1131,27 @@ function ScrollBody({
                   </div>
                 )}
               />
-              {warn ? (
-                <div role="alert" style={scrollItemWarnText}>This question is required.</div>
-              ) : null}
             </section>
           );
         })}
       </div>
 
+      {/* Footer mirrors card-mode chrome: a Questions button on the
+          left that opens the same numbered-grid navigator overlay,
+          centre progress (current/total), Submit on the right. */}
       <div className="test-scroll__footer" style={scrollFooter}>
         <div style={scrollFooterInner}>
-          <div style={scrollFooterMeta}>
-            {remainingSeconds != null ? (
-              <span style={scrollTimerPill}><AlarmClockIcon />{formatClock(remainingSeconds)}</span>
-            ) : null}
-            <span style={scrollFooterCount}>{answeredCount} / {total} answered</span>
-          </div>
           <button
             type="button"
-            onClick={handleFinish}
+            onClick={onOpenNavigator}
+            style={secondaryButton(false)}
+          >
+            Questions
+          </button>
+          <div style={navProgress}>{activeIdx + 1} / {total}</div>
+          <button
+            type="button"
+            onClick={onSubmit}
             disabled={phase === 'submitting'}
             style={primaryButton(phase === 'submitting')}
           >
