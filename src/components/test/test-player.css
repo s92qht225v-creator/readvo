@@ -368,7 +368,14 @@
   .test-scroll {
     padding-bottom: calc(96px + env(safe-area-inset-bottom));
   }
+  /* Horizontal padding on the list mirrors card mode's mobile shell
+     (`.test-player { padding: 24px 24px … }` in reading.css), since
+     the `.test-player__card` mobile chrome-strip sets `padding: 0`
+     on the card itself — without list padding scroll item content
+     would touch the screen edges. */
   .test-scroll__list {
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 12px;
   }
   /* Each mobile scroll item takes roughly the viewport so questions
