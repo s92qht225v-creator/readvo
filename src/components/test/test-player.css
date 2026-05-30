@@ -36,12 +36,19 @@
   }
 
   .test-player__card {
-    display: block !important;
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     padding: 0 !important;
+  }
+
+  /* `display: block` is pinned only on card-mode cards so scroll
+     items can opt-in to `display: flex` from their own rule
+     (`.test-player__card.test-scroll__item`) without needing
+     `!important`. Card-mode behaviour byte-for-byte unchanged. */
+  .test-player__card:not(.test-scroll__item) {
+    display: block !important;
   }
 
   /* Unify mobile typography so the title, description and answer text
