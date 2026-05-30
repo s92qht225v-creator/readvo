@@ -1734,7 +1734,7 @@ const listeningBarStyle: React.CSSProperties = {
 };
 
 const listeningBarInner: React.CSSProperties = {
-  maxWidth: 760,
+  maxWidth: 1120,
   margin: '0 auto',
   padding: '10px 18px',
   display: 'flex',
@@ -1753,7 +1753,11 @@ const listeningBarLabel: React.CSSProperties = {
 };
 
 const scrollList: React.CSSProperties = {
-  maxWidth: 760,
+  /* Match card-mode width (playerInner maxWidth: 1120) and scroll item
+     padding (questionCard: 48px 52px) so the qmedia layouts inside
+     have the same room to render — split-right gives the image its
+     full half-card column instead of being squeezed. */
+  maxWidth: 1120,
   margin: '0 auto',
   padding: '40px 18px 0',
   display: 'flex',
@@ -1768,11 +1772,14 @@ const scrollList: React.CSSProperties = {
    the card-mode shell's inline border. */
 const scrollItem: React.CSSProperties = {
   position: 'relative',
-  padding: '28px 28px',
+  /* Match the card-mode shell padding (questionCard: 48px 52px) so
+     question content has the same breathing room — qmedia layouts
+     and answer types size identically across the two layouts. */
+  padding: '48px 52px',
   containerType: 'inline-size',
   scrollMarginTop: 96,
-  '--qmedia-card-pad-x': '28px',
-  '--qmedia-card-pad-top': '28px',
+  '--qmedia-card-pad-x': '52px',
+  '--qmedia-card-pad-top': '48px',
 } as React.CSSProperties;
 
 const scrollItemNumRow: React.CSSProperties = {
@@ -1836,7 +1843,7 @@ const scrollFooter: React.CSSProperties = {
 };
 
 const scrollFooterInner: React.CSSProperties = {
-  maxWidth: 760,
+  maxWidth: 1120,
   margin: '0 auto',
   padding: '12px 18px',
   display: 'flex',
