@@ -265,8 +265,18 @@
   scroll-margin-top: 96px;
 }
 
-/* Scroll list / shell — just width, gap, and minimal padding-bottom to
-   clear the fixed footer. No centering math, no parallel sizing rules. */
+/* Scroll list / shell. Layout chrome (display/flex/gap) plus a
+   top/bottom padding that mirrors card-mode's flex-centering for a
+   single card — `(viewport − card_height) / 2`. With this padding the
+   first card centres in the viewport at rest (page scrolled to top)
+   and the last card centres when scrolled to the bottom. Card mode
+   achieves the same via flex centering on the single `.test-player`
+   shell; scroll mode can't reuse that (multiple cards can't all
+   flex-center) so we compute the equivalent padding here.
+
+   card_height = `min(620px, 100vh − 136px)` matches `.test-player__card`'s
+   own desktop height rule. The `max(96px, …)` floor on padding-bottom
+   keeps the fixed footer always clear of the last card. */
 .test-scroll {
   padding-bottom: 96px;
 }
@@ -274,6 +284,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (min-width: 641px) {
+  .test-scroll__list {
+    padding-top: calc((100vh - min(620px, 100vh - 136px)) / 2);
+  }
+  .test-scroll {
+    padding-bottom: max(96px, calc((100vh - min(620px, 100vh - 136px)) / 2));
+  }
 }
 @media (max-width: 640px) {
   .test-scroll {
