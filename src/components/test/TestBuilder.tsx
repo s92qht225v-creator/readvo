@@ -2538,6 +2538,129 @@ function LayoutIcon() {
   );
 }
 
+/* Selectable card used inside LayoutModal to pick card vs scroll. Full
+   modal width, icon on the left, title + one-line description in the
+   middle, accent-bordered when selected (with a small filled radio
+   dot at the top-right). Clicking the card itself selects it. */
+function LayoutOptionCard({ selected, title, description, icon, onClick }: {
+  selected: boolean;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <button type="button" onClick={onClick} aria-pressed={selected} style={layoutOptionCardStyle(selected)}>
+      <span style={layoutOptionIconWrap(selected)} aria-hidden>{icon}</span>
+      <span style={layoutOptionTextWrap}>
+        <span style={layoutOptionTitle}>{title}</span>
+        <span style={layoutOptionDesc}>{description}</span>
+      </span>
+      <span style={layoutOptionRadio(selected)} aria-hidden>
+        {selected ? <span style={layoutOptionRadioDot} /> : null}
+      </span>
+    </button>
+  );
+}
+
+function LayoutCardGlyph() {
+  /* Single stacked rectangle — represents one card on screen. */
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="4" y="6" width="16" height="12" rx="2" />
+    </svg>
+  );
+}
+
+function LayoutScrollGlyph() {
+  /* Three stacked rectangles — represents a list of questions on a page. */
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="4" y="3" width="16" height="5" rx="1.4" />
+      <rect x="4" y="10" width="16" height="5" rx="1.4" />
+      <rect x="4" y="17" width="16" height="4" rx="1.4" />
+    </svg>
+  );
+}
+
+const layoutOptionGroup: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 8,
+  marginTop: 4,
+};
+
+const layoutOptionCardStyle = (selected: boolean): React.CSSProperties => ({
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: 12,
+  width: '100%',
+  textAlign: 'left',
+  background: selected ? '#f5f1ff' : '#fff',
+  border: selected ? '2px solid #6b4fbb' : '1px solid #e4ded8',
+  /* Compensate the 1→2px border so the height/spacing stays constant
+     across the selected/unselected states. */
+  padding: selected ? '11px 13px' : '12px 14px',
+  borderRadius: 6,
+  cursor: 'pointer',
+  transition: 'background 0.15s ease, border-color 0.15s ease',
+});
+
+const layoutOptionIconWrap = (selected: boolean): React.CSSProperties => ({
+  flex: '0 0 auto',
+  width: 36,
+  height: 36,
+  borderRadius: 6,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: selected ? '#fff' : '#f5f3f7',
+  color: selected ? '#6b4fbb' : '#6d6470',
+  border: selected ? '1px solid #d9ccf3' : '1px solid transparent',
+});
+
+const layoutOptionTextWrap: React.CSSProperties = {
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 2,
+  minWidth: 0,
+};
+
+const layoutOptionTitle: React.CSSProperties = {
+  fontSize: 14,
+  fontWeight: 700,
+  color: '#1c1626',
+  lineHeight: 1.25,
+};
+
+const layoutOptionDesc: React.CSSProperties = {
+  fontSize: 12,
+  fontWeight: 500,
+  color: '#6f6772',
+  lineHeight: 1.4,
+};
+
+const layoutOptionRadio = (selected: boolean): React.CSSProperties => ({
+  flex: '0 0 auto',
+  width: 18,
+  height: 18,
+  borderRadius: 999,
+  marginTop: 2,
+  background: '#fff',
+  border: selected ? '2px solid #6b4fbb' : '1.5px solid #c9c2cf',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
+
+const layoutOptionRadioDot: React.CSSProperties = {
+  width: 8,
+  height: 8,
+  borderRadius: 999,
+  background: '#6b4fbb',
+};
+
 function HeadphonesIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -2574,26 +2697,21 @@ function LayoutModal({ layout, onClose, onChange }: {
               <div style={timerSubtitle}>How students move through the test</div>
             </div>
           </div>
-          <div style={screenSegmented}>
-            <button
-              type="button"
-              style={screenSegmentedButton(layout === 'card')}
+          <div style={layoutOptionGroup}>
+            <LayoutOptionCard
+              selected={layout === 'card'}
+              title="Card"
+              description="One question per screen, with Next and Back."
+              icon={<LayoutCardGlyph />}
               onClick={() => onChange({ layout: 'card' })}
-            >
-              Card
-            </button>
-            <button
-              type="button"
-              style={screenSegmentedButton(layout === 'scroll')}
+            />
+            <LayoutOptionCard
+              selected={layout === 'scroll'}
+              title="Scroll"
+              description="All questions stacked on one scrollable page. Inactive questions dim out."
+              icon={<LayoutScrollGlyph />}
               onClick={() => onChange({ layout: 'scroll' })}
-            >
-              Scroll
-            </button>
-          </div>
-          <div style={{ fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 10 }}>
-            {layout === 'card'
-              ? 'One question per screen, with Next / Back.'
-              : 'All questions on one scrollable page. Inactive questions dim out.'}
+            />
           </div>
         </div>
       </div>
