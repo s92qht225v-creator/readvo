@@ -976,16 +976,15 @@ function ScrollBody({
               className={`test-scroll__item ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${warn ? 'test-scroll__item--warn' : ''}`}
               style={scrollItem}
             >
+              <div style={scrollItemNumRow}>
+                <span style={scrollItemNumBadge(answered)}>{i + 1}</span>
+                {question.required ? <span style={scrollRequiredStar} title="Required">*</span> : null}
+              </div>
               <QuestionMediaLayout
                 media={question.media}
                 header={(
                   <>
                     <h2 className="test-player__title" style={scrollItemTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
-                      {/* Number badge sits inline at the start of the
-                          first line; wrapping text continues flush
-                          against the card edge below it. */}
-                      <span style={scrollItemNumInline(answered)} aria-hidden>{i + 1}</span>
-                      {question.required ? <span style={scrollRequiredStar} title="Required">*</span> : null}
                       {question.prompt ? <MathText>{question.prompt}</MathText> : '…'}
                     </h2>
                     {question.description ? (
@@ -1646,25 +1645,24 @@ const scrollItem: React.CSSProperties = {
   '--qmedia-card-pad-top': '28px',
 } as React.CSSProperties;
 
-/* Inline number badge — sits at the start of the question's first line
-   of text so the number and the text share a row. `display: inline-flex`
-   + `vertical-align: middle` keeps the circle baseline-aligned with the
-   first line; subsequent wrapped lines start flush at the card edge
-   below the badge (no hanging indent). */
-const scrollItemNumInline = (answered: boolean): React.CSSProperties => ({
+const scrollItemNumRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  marginBottom: 14,
+};
+
+const scrollItemNumBadge = (answered: boolean): React.CSSProperties => ({
+  width: 28,
+  height: 28,
+  borderRadius: 999,
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: 26,
-  height: 26,
-  borderRadius: 999,
-  marginRight: 10,
-  verticalAlign: 'middle',
   fontSize: 13,
   fontWeight: 850,
   background: answered ? 'rgba(2, 173, 27, 0.12)' : '#f3eff7',
   color: answered ? '#02ad1b' : '#6b4fbb',
-  flexShrink: 0,
 });
 
 const scrollRequiredStar: React.CSSProperties = {
