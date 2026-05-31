@@ -12,46 +12,28 @@
  * public (during the phased rollout). Once the bucket is private, priming
  * on mount guarantees the token is present before any play.
  */
-import { protectAudioUrl } from './url';
+/* ─────────────────────────────────────────────────────────────────────
+   ⏸ PAUSED — audio protection is on hold until the audio content is final.
+   These are intentionally no-ops so audio plays DIRECTLY from the public
+   URL (no proxy hop, no token request, original fast behaviour). The proxy
+   plumbing (/api/audio routes, url.ts, token.ts, the consumer wiring) is
+   left in place, dormant. To RE-ENABLE, restore the real implementations
+   below (see git history: "Phase 1/2: audio proxy") and decide the bucket
+   strategy (private `audio` bucket vs a separate private bucket for just
+   dialogue + karaoke + test audio).
+   ───────────────────────────────────────────────────────────────────── */
 
-let cached: { token: string; exp: number } | null = null;
-let inflight: Promise<string | null> | null = null;
-
-/** Synchronously return a still-valid cached token, or null. */
+/** PAUSED: always null (no token in use). */
 export function getCachedAudioToken(): string | null {
-  if (cached && cached.exp > Date.now() / 1000 + 60) return cached.token;
   return null;
 }
 
-/** Fetch + cache the token (once; de-duped). Call early (on mount). */
-export async function primeAudioToken(getAccessToken: () => Promise<string | null>): Promise<string | null> {
-  const valid = getCachedAudioToken();
-  if (valid) return valid;
-  if (inflight) return inflight;
-  inflight = (async () => {
-    try {
-      const jwt = await getAccessToken();
-      if (!jwt) return null;
-      const res = await fetch('/api/audio/token', { headers: { Authorization: `Bearer ${jwt}` } });
-      if (!res.ok) return null;
-      const j = await res.json() as { token: string; expiresIn: number };
-      cached = { token: j.token, exp: Math.floor(Date.now() / 1000) + (j.expiresIn ?? 3600) };
-      return j.token;
-    } catch {
-      return null;
-    } finally {
-      inflight = null;
-    }
-  })();
-  return inflight;
+/** PAUSED: no-op (no token fetch). */
+export async function primeAudioToken(_getAccessToken: () => Promise<string | null>): Promise<string | null> {
+  return null;
 }
 
-/**
- * Rewrite a public Storage URL to the proxied form using the cached token.
- * Falls back to the original URL when no token is cached yet (safe while
- * the bucket is public).
- */
+/** PAUSED: returns the public URL unchanged (no proxy). */
 export function protectAudioUrlSync(publicUrl: string): string {
-  const t = getCachedAudioToken();
-  return t ? protectAudioUrl(publicUrl, t) : publicUrl;
+  return publicUrl;
 }
