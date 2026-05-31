@@ -1159,9 +1159,22 @@
   color: var(--test-theme-answer, #0445af);
 }
 
+.test-custom-dropdown__option-text {
+  /* Text is the first flex child, so it starts at the option's left
+     padding — which equals the trigger's left padding, aligning the
+     option text with the "Select an answer" trigger text. */
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+}
+
 .test-custom-dropdown__check {
+  /* Selection tick sits at the RIGHT edge (pushed by margin-left:auto)
+     instead of leading the text, so it no longer indents the option
+     label out of alignment with the trigger. */
   flex: 0 0 var(--dd-check-w);
   width: var(--dd-check-w);
+  margin-left: auto;
   color: var(--test-theme-answer, #0445af);
   font-weight: 700;
   text-align: center;

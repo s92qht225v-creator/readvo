@@ -433,8 +433,8 @@ function CustomDropdownAnswer({
                   setOpen(false);
                 }}
               >
+                <span className="test-custom-dropdown__option-text" dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
                 <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
-                <span dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
               </button>
             );
           })}
