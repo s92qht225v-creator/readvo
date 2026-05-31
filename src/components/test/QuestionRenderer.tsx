@@ -15,6 +15,7 @@ import { FillBlanksPlayer } from './renderers/FillBlanksRenderer';
 import { MatchPlayer } from './renderers/MatchRenderer';
 import { OrderingPlayer } from './renderers/OrderingRenderer';
 import { ScramblePlayer } from './renderers/ScrambleRenderer';
+import { SpeakingRecorder } from './renderers/SpeakingRecorder';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -25,9 +26,12 @@ interface Props {
   value: AValue;
   onChange: (v: AValue) => void;
   onSubmit: () => void;
+  slug?: string;
+  responseId?: string;
+  respondentToken?: string;
 }
 
-export function QuestionRenderer({ question, value, onChange, onSubmit }: Props) {
+export function QuestionRenderer({ question, value, onChange, onSubmit, slug, responseId, respondentToken }: Props) {
   if (question.type === 'multiple_choice') {
     const opts = question.options as PublicMcOptions;
     // Multiple choice / single + multi-select. Styling lives in
@@ -354,6 +358,21 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
           );
         })}
       </div>
+    );
+  }
+
+  if (question.type === 'speaking') {
+    const opts = question.options as { maxRecordingSeconds?: number };
+    return (
+      <SpeakingRecorder
+        slug={slug ?? ''}
+        responseId={responseId}
+        respondentToken={respondentToken ?? ''}
+        questionId={question.id}
+        maxSeconds={opts.maxRecordingSeconds ?? 30}
+        recorded={value?.recorded === true}
+        onRecorded={() => onChange({ recorded: true })}
+      />
     );
   }
 

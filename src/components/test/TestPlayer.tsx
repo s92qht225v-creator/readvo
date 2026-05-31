@@ -981,6 +981,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           onAnswer={setAnswerFor}
           onSubmit={navigatorFinish}
           onOpenNavigator={() => setNavigatorOpen(true)}
+          responseId={responseId}
           activeId={scrollActiveId}
           setActiveId={setScrollActiveId}
           activeIdx={scrollActiveIdx}
@@ -1066,6 +1067,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
                   value={answer}
                   onChange={onChange}
                   onSubmit={() => { isLast ? attemptSubmit() : goToIdx(idx + 1); }}
+                  slug={test.slug}
+                  responseId={responseId}
+                  respondentToken={ensureRespondentToken(test.slug)}
                 />
               </div>
             )}
@@ -1461,6 +1465,7 @@ function ScrollBody({
   submitAttempted,
   audioActive,
   section,
+  responseId,
 }: {
   test: PublicTest;
   /* The questions to render. Defaults (sectionless) to the whole test;
@@ -1501,6 +1506,9 @@ function ScrollBody({
      scrolled content has room to clear it. The bar itself lives at the
      top-level TestPlayer render (independent of layout). */
   audioActive: boolean;
+  /* Per-session response id, threaded to the speaking recorder so it can
+     POST to /speaking-grade. Undefined in preview/builder. */
+  responseId?: string;
 }) {
   const itemRefs = useRef<Map<string, HTMLElement>>(new Map());
 
@@ -1605,6 +1613,9 @@ function ScrollBody({
                       value={answers[question.id] ?? {}}
                       onChange={(v) => onAnswer(question.id, v)}
                       onSubmit={() => { /* no per-question advance in scroll mode */ }}
+                      slug={test.slug}
+                      responseId={responseId}
+                      respondentToken={ensureRespondentToken(test.slug)}
                     />
                     {/* Required note appears once a finish was attempted
                         and this required question is still blank. */}
