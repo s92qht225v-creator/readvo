@@ -238,9 +238,6 @@ export function TestBuilder({ testId }: Props) {
      rail just doesn't render. Loaded with the rest of the test on mount;
      mutated via the section CRUD helpers below. */
   const [sections, setSections] = useState<TestSection[]>([]);
-  /* Debounce timers for per-section title saves (keyed by section id), so
-     typing a name doesn't fire a PATCH per keystroke + race its responses. */
-  const sectionTitleTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const [activeIdx, setActiveIdx] = useState(0);
   const [activeBlock, setActiveBlock] = useState<ActiveBlock>({ kind: 'question', index: 0 });
   const [savedSnapshot, setSavedSnapshot] = useState<string>('');
@@ -437,17 +434,15 @@ export function TestBuilder({ testId }: Props) {
     return true;
   }, [getAccessToken, testId]);
 
-  /* Title rename: update local state instantly on every keystroke, but
-     debounce the server PATCH so we don't fire (and race) a request per
-     keystroke. */
+  /* Typing only updates local state — no server call per keystroke.
+     The title is persisted once, on blur (commitSectionTitle below). */
   const renameSection = useCallback((sectionId: string, title: string) => {
     setSections(prev => prev.map(s => (s.id === sectionId ? { ...s, title } : s)));
-    const timers = sectionTitleTimers.current;
-    if (timers[sectionId]) clearTimeout(timers[sectionId]);
-    timers[sectionId] = setTimeout(() => {
-      delete timers[sectionId];
-      void updateSection(sectionId, { title });
-    }, 500);
+  }, []);
+
+  /* Save the section title to the server when the field loses focus. */
+  const commitSectionTitle = useCallback((sectionId: string, title: string) => {
+    void updateSection(sectionId, { title });
   }, [updateSection]);
 
   const deleteSection = useCallback(async (sectionId: string): Promise<boolean> => {
@@ -827,6 +822,7 @@ export function TestBuilder({ testId }: Props) {
             if (section) setActiveBlock({ kind: 'section', id: section.id });
           }}
           onRename={(id, title) => { renameSection(id, title); }}
+          onCommit={(id, title) => { commitSectionTitle(id, title); }}
           onDelete={(id) => {
             if (!confirm('Delete this section? Its questions stay in the test (move back to "Unsectioned").')) return;
             void deleteSection(id);
@@ -1183,6 +1179,7 @@ export function TestBuilder({ testId }: Props) {
               section={activeSection}
               getAccessToken={getAccessToken}
               onRename={(title) => { renameSection(activeSection.id, title); }}
+              onCommit={(title) => { commitSectionTitle(activeSection.id, title); }}
               onAudio={(url) => { void updateSection(activeSection.id, { audio_url: url }); }}
             />
           );
@@ -1515,6 +1512,7 @@ function SectionsPanel({
   onSelect,
   onCreate,
   onRename,
+  onCommit,
   onDelete,
 }: {
   sections: TestSection[];
@@ -1527,6 +1525,7 @@ function SectionsPanel({
   onSelect: (id: string) => void;
   onCreate: () => void;
   onRename: (id: string, title: string) => void;
+  onCommit: (id: string, title: string) => void;
   onDelete: (id: string) => void;
 }) {
   return (
@@ -1555,6 +1554,7 @@ function SectionsPanel({
                       placeholder="Untitled section"
                       onClick={(event) => event.stopPropagation()}
                       onChange={(event) => onRename(section.id, event.target.value)}
+                      onBlur={(event) => onCommit(section.id, event.target.value)}
                       style={sectionRowInput}
                     />
                     {section.audio_url ? (
@@ -1605,11 +1605,13 @@ function SectionSettingsPanel({
   section,
   getAccessToken,
   onRename,
+  onCommit,
   onAudio,
 }: {
   section: TestSection;
   getAccessToken: () => Promise<string | null>;
   onRename: (title: string) => void;
+  onCommit: (title: string) => void;
   onAudio: (url: string | null) => void;
 }) {
   const [uploading, setUploading] = useState(false);
@@ -1656,6 +1658,7 @@ function SectionSettingsPanel({
         value={section.title}
         placeholder="e.g. Listening — Part 1"
         onChange={(event) => onRename(event.target.value)}
+        onBlur={(event) => onCommit(event.target.value)}
         style={screenInput}
       />
       <div style={screenDivider} />
