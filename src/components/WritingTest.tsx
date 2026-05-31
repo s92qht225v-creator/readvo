@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HanziCanvas } from './HanziCanvas';
 import { useStars } from '@/hooks/useStars';
+import { usePrimeAudioToken } from '@/hooks/useAudioToken';
+import { protectAudioUrlSync } from '@/lib/audio/token-client';
 import type { HanziWord } from '@/services/writing';
 
 const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
@@ -84,12 +86,14 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
   const completedChars = results.length;
   const totalChars = words.reduce((n, w) => n + [...w.char].length, 0);
 
+  usePrimeAudioToken();
+
   // Play audio using direct HTMLAudioElement — avoids useAudioPlayer race conditions
   const playAudio = useCallback((url: string) => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
-    const el = new Audio(url);
+    const el = new Audio(protectAudioUrlSync(url));
     audioRef.current = el;
     el.play().catch(() => { /* ignore autoplay blocks */ });
   }, []);

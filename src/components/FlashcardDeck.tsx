@@ -7,6 +7,8 @@ import { useLanguage } from '../hooks/useLanguage';
 import { shuffleArray } from '../utils/shuffle';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
+import { usePrimeAudioToken } from '../hooks/useAudioToken';
+import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
@@ -52,10 +54,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const isDraggingRef = useRef(false);
   const isProcessingRef = useRef(false);
 
+  // Prime the audio-proxy token so playback URLs can be rewritten synchronously.
+  usePrimeAudioToken();
+
   // Audio playback
   const playAudio = useCallback((url: string) => {
     if (audioRef.current) audioRef.current.pause();
-    const el = new Audio(url);
+    const el = new Audio(protectAudioUrlSync(url));
     audioRef.current = el;
     el.play().catch(() => {});
   }, []);
