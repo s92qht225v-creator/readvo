@@ -1220,13 +1220,45 @@ Graded tests with sections show a per-part score breakdown.
 - **NO database change** — `section_id` already on questions,
   `is_correct` already on answers; the breakdown is pure compute.
 
-### Still TODO (stage-c remainder)
+## Play-once audio (stage-c · `play_once_audio`)
 
-- **Play-once audio**: `ListeningAudioBar` is still a native
-  `<audio controls>` (free seek/replay). Make it non-seekable /
-  non-replayable, gated on a NEW separate `play_once_audio` toggle
-  (independent of `strict_sections`), with server-side "consumed" state
-  to close the refresh-replay loophole.
+Listening audio that can't be scrubbed or replayed, refresh-proof. A
+SEPARATE toggle from `strict_sections` (forward-only) — either can be on
+without the other.
+
+- **Data**: `tests.play_once_audio boolean default false`;
+  `test_responses.consumed_audio text[] default '{}'` — the play-once
+  tracks a respondent has already consumed (a section id, or `'global'`
+  for the test-level track). Migration `add_play_once_audio`.
+- **API**: PATCH `/api/tests/[id]` accepts `play_once_audio`; public GET
+  `/api/t/[slug]` returns it; `POST /api/t/[slug]/session` returns
+  `consumed_audio`; new `POST /api/t/[slug]/audio-consumed`
+  (`{respondent_token, response_id, track_id}`) appends a track —
+  idempotent, guarded by response_id+token (the per-respondent secret).
+- **Builder**: a "Play audio once" checkbox at the bottom of the
+  Listening modal (shown when any audio is set — global or per-section).
+- **Player** (`ListeningAudioBar`, gets `playOnce`/`consumed`/`onConsumed`;
+  `playOnce = test.play_once_audio && !forceDevice` so preview is never
+  locked):
+  - **Locked** (consumed snapshot at mount → after a refresh): renders
+    "Audio already played", no `<audio>` element, no replay.
+  - **Active** (not yet consumed): custom NON-seekable player — play/pause
+    only, display-only progress, `seeking`/`timeupdate` clamp `currentTime`
+    to the furthest point reached (blocks fwd + rewind), locks on `ended`.
+    Marks the track consumed on FIRST play (`onConsumed` → local set +
+    persists via `/audio-consumed`), so a refresh re-locks it. The live
+    bar deliberately ignores the `consumed` prop flipping mid-play (it
+    snapshots at mount) so marking-on-play doesn't re-lock the current
+    listen.
+  - **Off** (`!playOnce`): unchanged native `<audio controls>`.
+  - Track identity = `currentGroup.section.id` / `cardQuestionSection.id`
+    / `'global'`; the bar is keyed by `audioKey` so switching sections
+    remounts and re-evaluates `consumed` for the new track.
+  - `consumedAudio` Set lives in `TestPlayer` (seeded from the session's
+    `initialConsumedAudio` prop threaded through the page).
+- **Behaviour note**: consumed is marked the moment playback STARTS, so a
+  network drop mid-clip means it can't be re-heard — the honest cost of a
+  truly refresh-proof "play once" (this was the user's chosen tradeoff).
 
 ## Webpack mode
 
