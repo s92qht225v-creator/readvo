@@ -139,7 +139,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   // Tab state
   const [activeTab, setActiveTab] = useState('dialog');
 
-  // Dialog tab state (mirrors StoryReader)
+  // Dialog tab state
   const [showPinyin, setShowPinyin] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
   const [focusMode, setFocusMode] = useState(false);
