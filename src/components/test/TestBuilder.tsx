@@ -152,6 +152,7 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
   { type: 'checkbox', label: 'Checkbox' },
   { type: 'opinion_scale', label: 'Opinion scale' },
   { type: 'rating', label: 'Rating' },
+  { type: 'speaking', label: 'Speaking' },
 ];
 
 const SHARE_BASE = process.env.NEXT_PUBLIC_TEST_SHARE_BASE ?? 'https://test.blim.uz';
@@ -244,7 +245,7 @@ export function TestBuilder({ testId }: Props) {
   const [loadErr, setLoadErr] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [pubLoading, setPubLoading] = useState(false);
-  const [showPaywall, setShowPaywall] = useState<{ limit: number } | null>(null);
+  const [showPaywall, setShowPaywall] = useState<{ limit: number; message?: string } | null>(null);
   const [showAddMenu, setShowAddMenu] = useState(false);
   const [showToolbarAddMenu, setShowToolbarAddMenu] = useState(false);
   const [previewDevice, setPreviewDevice] = useState<'desktop' | 'mobile'>('desktop');
@@ -601,7 +602,11 @@ export function TestBuilder({ testId }: Props) {
     setPubLoading(false);
     if (res.status === 402) {
       const j = await res.json();
-      setShowPaywall({ limit: j.limit ?? 1 });
+      if (j.error === 'speaking_requires_pro') {
+        setShowPaywall({ limit: 1, message: 'Speaking questions require a Pro subscription. Upgrade to publish this test.' });
+      } else {
+        setShowPaywall({ limit: j.limit ?? 1 });
+      }
       return;
     }
     if (!res.ok) {
@@ -628,6 +633,7 @@ export function TestBuilder({ testId }: Props) {
     else if (type === 'dropdown') options = { choices: ['', ''], correctIndex: null, randomize: false };
     else if (type === 'checkbox') options = { choices: ['', ''], correctIndexes: [], randomize: false };
     else if (type === 'opinion_scale') options = { min: 0, max: 10, minLabel: '', maxLabel: '' };
+    else if (type === 'speaking') options = { rubric: [{ id: crypto.randomUUID(), text: '', weight: 1 }], maxRecordingSeconds: 30 };
     else options = { max: 5, shape: 'star' };
     const base: BuilderQuestion = {
       clientId: newClientId(),
@@ -1237,7 +1243,7 @@ export function TestBuilder({ testId }: Props) {
 
         {showPaywall ? (
           <div style={{ padding: 12 }}>
-            <PaywallNotice limit={showPaywall.limit} />
+            <PaywallNotice limit={showPaywall.limit} message={showPaywall.message} />
           </div>
         ) : null}
       </aside>

@@ -55,6 +55,29 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     );
   }
 
+  /* Hard Pro-gate: speaking questions require an active subscription.
+     Runs on first publish only (false→true). */
+  const { count: speakingCount, error: speakingCountError } = await admin
+    .from('test_questions')
+    .select('id', { count: 'exact', head: true })
+    .eq('test_id', id)
+    .eq('type', 'speaking');
+  if (speakingCountError) {
+    return NextResponse.json({ error: speakingCountError.message }, { status: 500 });
+  }
+  if ((speakingCount ?? 0) > 0) {
+    const { data: sub } = await admin
+      .from('subscriptions')
+      .select('id')
+      .eq('user_id', current.owner_id)
+      .gt('ends_at', new Date().toISOString())
+      .limit(1)
+      .maybeSingle();
+    if (!sub) {
+      return NextResponse.json({ error: 'speaking_requires_pro' }, { status: 402 });
+    }
+  }
+
   /* Free-tier published cap. Exclude this test from the count so a
      re-publish of the same row never trips it. */
   const quota = await checkPublishQuota(userId, admin, id);
