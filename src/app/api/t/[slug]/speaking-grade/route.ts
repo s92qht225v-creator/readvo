@@ -136,7 +136,16 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   const arrayBuffer = await audioFile.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
   const contentType = audioFile.type || 'audio/webm';
-  const path = `${testId}/${responseId}/${questionId}.webm`;
+  // Derive the file extension from the actual content-type. Browsers differ
+  // (Chrome/Firefox → webm, Safari → mp4/m4a) and the OpenAI transcription
+  // API keys off the filename extension, so a hardcoded .webm breaks Safari
+  // recordings (and any non-webm upload).
+  const ext = /(mp4|m4a|aac)/.test(contentType) ? 'm4a'
+    : /(mpeg|mp3)/.test(contentType) ? 'mp3'
+    : /ogg/.test(contentType) ? 'ogg'
+    : /wav/.test(contentType) ? 'wav'
+    : 'webm';
+  const path = `${testId}/${responseId}/${questionId}.${ext}`;
   const { error: uploadErr } = await admin.storage
     .from('test-recordings')
     .upload(path, buffer, { contentType, upsert: true });
@@ -148,7 +157,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   let transcript = '';
   try {
     const fd = new FormData();
-    fd.append('file', new Blob([arrayBuffer], { type: contentType }), 'recording.webm');
+    fd.append('file', new Blob([arrayBuffer], { type: contentType }), `recording.${ext}`);
     fd.append('model', 'gpt-4o-transcribe');
     fd.append('response_format', 'text');
     const sttRes = await fetch(OPENAI_TRANSCRIBE_URL, {
