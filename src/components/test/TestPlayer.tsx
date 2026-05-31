@@ -190,6 +190,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
      "i/total". Initialised to the first question and kept in sync by
      ScrollBody via setScrollActiveId. */
   const [scrollActiveId, setScrollActiveId] = useState<string | null>(() => test.questions[0]?.id ?? null);
+  /* Answers map — declared above the section block because the
+     strict-mode per-section guard (goToNextSection) reads it. */
+  const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
 
   /* ── Sections (stage-b) ──────────────────────────────────────────
      `sectionGroups` is the ordered list of { section, questions } when
@@ -218,9 +221,26 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
 
   /* Advance to the next section: scroll to top, focus its first
      question. In strict mode there's no going back (the Back control is
-     hidden in the footer). */
+     hidden in the footer), so we MUST enforce the current section's
+     required questions before leaving it — otherwise a blank required
+     answer becomes unfixable. In non-strict mode the student can return
+     via Back, so Next-section advances freely (consistent with the
+     "navigation never blocks" rule; the final Submit still validates). */
   const goToNextSection = useCallback(() => {
     if (!sectionGroups) return;
+    if (test.strict_sections) {
+      const group = sectionGroups[currentSectionIdx];
+      const firstMissing = group?.questions.find(qq => qq.required && !hasQuestionAnswer(qq, answers[qq.id]));
+      if (firstMissing) {
+        setSubmitAttempted(true);
+        setScrollActiveId(firstMissing.id);
+        const el = typeof document !== 'undefined'
+          ? document.querySelector(`[data-qid="${firstMissing.id}"]`) as HTMLElement | null
+          : null;
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return; // block advance until the section's required are answered
+      }
+    }
     setCurrentSectionIdx(prev => {
       const next = Math.min(prev + 1, sectionGroups.length - 1);
       const firstQ = sectionGroups[next]?.questions[0];
@@ -228,7 +248,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
       if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
       return next;
     });
-  }, [sectionGroups]);
+  }, [sectionGroups, test.strict_sections, currentSectionIdx, answers]);
 
   const goToPrevSection = useCallback(() => {
     if (!sectionGroups) return;
@@ -241,7 +261,6 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     });
   }, [sectionGroups]);
 
-  const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
   const [errMsg, setErrMsg] = useState<string | null>(null);
   const [done, setDone] = useState<Done | null>(null);
   const [timerEndsAt, setTimerEndsAt] = useState<number | null>(null);
@@ -267,10 +286,14 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
         name?: string;
         profile?: RespondentProfile;
         started?: boolean;
+        sectionIdx?: number;
       };
       if (saved.answers && typeof saved.answers === 'object') setAnswers(saved.answers);
       if (typeof saved.name === 'string') setName(saved.name);
       if (saved.profile && typeof saved.profile === 'object') setProfile(saved.profile);
+      /* Restore the section the student was on (scroll sectioned mode)
+         so a refresh doesn't bounce them back to section 1. */
+      if (typeof saved.sectionIdx === 'number' && saved.sectionIdx >= 0) setCurrentSectionIdx(saved.sectionIdx);
       /* If they'd already begun the questions, skip the welcome screen on
          resume so a refresh drops them straight back where they were. */
       if (saved.started) setPhase('question');
@@ -284,9 +307,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     const started = phase === 'question' || phase === 'submitting';
     if (!started && Object.keys(answers).length === 0) return;
     try {
-      window.localStorage.setItem(answersStorageKey, JSON.stringify({ answers, name, profile, started }));
+      window.localStorage.setItem(answersStorageKey, JSON.stringify({ answers, name, profile, started, sectionIdx: currentSectionIdx }));
     } catch { /* quota / private mode — autosave is best-effort */ }
-  }, [answers, name, profile, phase, answersStorageKey]);
+  }, [answers, name, profile, phase, currentSectionIdx, answersStorageKey]);
 
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
