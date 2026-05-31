@@ -404,17 +404,35 @@ export function TestBuilder({ testId }: Props) {
      immediately. Errors are silent (alert on failure); on transient
      errors the local state is reloaded from the server on the next
      mount. */
-  const createSection = useCallback(async (title = ''): Promise<TestSection | null> => {
-    const tok = await getAccessToken();
-    const res = await fetch(`/api/tests/${testId}/sections`, {
-      method: 'POST',
-      headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
-      body: JSON.stringify({ title }),
+  /* Optimistic create: drop a temporary section into the list instantly
+     (so the "+" feels immediate) and select it, then POST in the
+     background and swap the temp row for the server's real one. No more
+     waiting on the round-trip before anything appears. */
+  const createSection = useCallback((title = ''): void => {
+    const tempId = `tmp-${crypto.randomUUID()}`;
+    setSections(prev => {
+      const pos = prev.length ? Math.max(...prev.map(s => s.position)) + 1 : 0;
+      return [...prev, { id: tempId, test_id: testId, position: pos, title, audio_url: null, created_at: '' }];
     });
-    if (!res.ok) { alert('Failed to create section'); return null; }
-    const j = await res.json() as { section: TestSection };
-    setSections(prev => [...prev, j.section]);
-    return j.section;
+    setActiveBlock({ kind: 'section', id: tempId });
+    void (async () => {
+      const tok = await getAccessToken();
+      const res = await fetch(`/api/tests/${testId}/sections`, {
+        method: 'POST',
+        headers: authHeaders(tok, { 'Content-Type': 'application/json' }),
+        body: JSON.stringify({ title }),
+      });
+      if (!res.ok) {
+        alert('Failed to create section');
+        setSections(prev => prev.filter(s => s.id !== tempId));
+        setActiveBlock(prev => (prev.kind === 'section' && prev.id === tempId ? { kind: 'question', index: 0 } : prev));
+        return;
+      }
+      const j = await res.json() as { section: TestSection };
+      /* Keep whatever the user has typed in the meantime; take the real id. */
+      setSections(prev => prev.map(s => (s.id === tempId ? { ...j.section, title: s.title } : s)));
+      setActiveBlock(prev => (prev.kind === 'section' && prev.id === tempId ? { kind: 'section', id: j.section.id } : prev));
+    })();
   }, [getAccessToken, testId]);
 
   const updateSection = useCallback(async (sectionId: string, patch: Partial<Pick<TestSection, 'title' | 'audio_url' | 'position'>>): Promise<boolean> => {
@@ -440,8 +458,12 @@ export function TestBuilder({ testId }: Props) {
     setSections(prev => prev.map(s => (s.id === sectionId ? { ...s, title } : s)));
   }, []);
 
-  /* Save the section title to the server when the field loses focus. */
+  /* Save the section title to the server when the field loses focus.
+     Skip while the section is still optimistic (`tmp-` id) — the create
+     POST hasn't returned a real id yet; the typed title is preserved in
+     the temp→real swap and persists on the next blur. */
   const commitSectionTitle = useCallback((sectionId: string, title: string) => {
+    if (sectionId.startsWith('tmp-')) return;
     void updateSection(sectionId, { title });
   }, [updateSection]);
 
@@ -817,10 +839,7 @@ export function TestBuilder({ testId }: Props) {
             void updateTest({ strict_sections: next });
           }}
           onSelect={(id) => setActiveBlock({ kind: 'section', id })}
-          onCreate={async () => {
-            const section = await createSection('');
-            if (section) setActiveBlock({ kind: 'section', id: section.id });
-          }}
+          onCreate={() => { createSection(''); }}
           onRename={(id, title) => { renameSection(id, title); }}
           onCommit={(id, title) => { commitSectionTitle(id, title); }}
           onDelete={(id) => {
