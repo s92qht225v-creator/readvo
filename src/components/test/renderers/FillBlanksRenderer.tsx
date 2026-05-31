@@ -32,6 +32,14 @@ export function FillBlanksPlayer({ template, blanks, blankWidths, value, onChang
             value={submitted[blankIdx] ?? ''}
             onChange={e => set(blankIdx, e.target.value)}
             placeholder=" "
+            /* Mobile keyboards default to autocapitalize="sentences" and
+               autocorrect, which silently capitalize/alter fill-blank
+               answers. Disable both so the student types exactly what
+               they intend. */
+            autoCapitalize="none"
+            autoCorrect="off"
+            autoComplete="off"
+            spellCheck={false}
             style={{ width }}
           />
         );
