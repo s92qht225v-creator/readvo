@@ -11,6 +11,8 @@
  */
 
 import { useCallback, useRef, useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { primeAudioToken, protectAudioUrlSync } from '@/lib/audio/token-client';
 
 // =============================================================================
 // TYPES
@@ -101,6 +103,11 @@ export function useAudioPlayer(): AudioPlayerControls {
 
   // Track if this hook instance is mounted
   const isMountedRef = useRef(true);
+
+  /* Prime the audio access token so play() can synchronously rewrite URLs
+     to the auth-gated proxy without breaking the user-gesture call stack. */
+  const { getAccessToken } = useAuth();
+  useEffect(() => { void primeAudioToken(getAccessToken); }, [getAccessToken]);
 
   // Register this component as a listener for global state changes
   useEffect(() => {
@@ -218,8 +225,11 @@ export function useAudioPlayer(): AudioPlayerControls {
         }
       };
 
-      // Play directly in user gesture call stack to avoid browser tap sound
-      audio.src = audioUrl;
+      // Play directly in user gesture call stack to avoid browser tap sound.
+      // protectAudioUrlSync rewrites public Storage URLs to the auth-gated
+      // proxy using the pre-cached token (falls back to the public URL when
+      // not yet primed — safe while the bucket is public).
+      audio.src = protectAudioUrlSync(audioUrl);
       audio.play().catch((err) => {
         if (err.name === 'AbortError') return; // Expected when rapid play/pause
         console.error('Audio play failed:', err);
