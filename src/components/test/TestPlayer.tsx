@@ -1336,10 +1336,14 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
      instance — when playback starts we mark the track consumed, which flips
      the prop, but the live bar must keep playing rather than re-lock. */
   const [lockedOnMount] = useState(playOnce && consumed);
-  const [playing, setPlaying] = useState(false);
+  /* `started` flips true the moment playback begins (autoplay or the
+     one-time Play tap), hiding the Play button so the bar is status-only
+     from then on — no pause, scrub, or replay. */
+  const [started, setStarted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [ended, setEnded] = useState(false);
   const maxTimeRef = useRef(0);
+  const endedRef = useRef(false);
   const consumedFiredRef = useRef(false);
 
   /* Try to autoplay. Works when the student arrived via a Start click;
@@ -1375,9 +1379,10 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
     );
   }
 
-  /* Play-once, not yet consumed: custom non-seekable player. Play/pause
-     only; progress is display-only; seeking is clamped to the furthest
-     point reached; once it ends it can't be replayed. */
+  /* Play-once, not yet consumed: status-only player. A one-time Play
+     button before playback (needed because browsers block silent
+     autoplay), then nothing but a progress bar — no pause, no scrub, no
+     replay. Plays straight through, exactly once. */
   const fireConsumed = () => {
     if (!consumedFiredRef.current) { consumedFiredRef.current = true; onConsumed(); }
   };
@@ -1393,29 +1398,34 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
     <div className="test-listening-bar" style={listeningBarStyle}>
       <div style={listeningBarInner}>
         <span style={listeningBarLabel}><HeadphonesGlyph /> Listening</span>
-        <button
-          type="button"
-          style={listeningPlayBtn(ended)}
-          disabled={ended}
-          aria-label={ended ? 'Finished' : playing ? 'Pause' : 'Play'}
-          onClick={() => {
-            const el = audioRef.current;
-            if (!el) return;
-            if (el.paused) el.play().catch(() => {}); else el.pause();
-          }}
-        >
-          {ended ? '✓' : playing ? '❚❚' : '▶'}
-        </button>
+        {!started ? (
+          <button
+            type="button"
+            style={listeningPlayBtn(false)}
+            aria-label="Play audio"
+            onClick={() => { audioRef.current?.play().catch(() => {}); }}
+          >
+            ▶
+          </button>
+        ) : null}
         <span style={listeningProgressTrack} aria-hidden="true">
           <span style={{ ...listeningProgressFill, width: `${Math.round(progress * 100)}%` }} />
         </span>
+        {ended ? <span style={listeningFinishedNote}>Finished</span> : null}
         <audio
           ref={audioRef}
           src={url}
           style={{ display: 'none' }}
-          onPlay={() => { setPlaying(true); fireConsumed(); }}
-          onPause={() => setPlaying(false)}
-          onEnded={() => { setEnded(true); setPlaying(false); setProgress(1); }}
+          onPlay={() => { setStarted(true); fireConsumed(); }}
+          onPause={() => {
+            /* No pausing allowed: silently resume unless the clip ended
+               (guards against OS media keys / system pauses). */
+            const el = audioRef.current;
+            if (el && !endedRef.current && el.duration && el.currentTime < el.duration - 0.3) {
+              el.play().catch(() => {});
+            }
+          }}
+          onEnded={() => { endedRef.current = true; setEnded(true); setProgress(1); }}
           onSeeking={clampSeek}
           onTimeUpdate={() => {
             const el = audioRef.current;
@@ -2297,6 +2307,12 @@ const listeningProgressFill: React.CSSProperties = {
   borderRadius: 3,
   background: 'var(--test-theme-button, #1c1626)',
   transition: 'width 200ms linear',
+};
+const listeningFinishedNote: React.CSSProperties = {
+  flexShrink: 0,
+  fontSize: 12,
+  fontWeight: 600,
+  color: '#94a3b8',
 };
 
 const listeningBarStyle: React.CSSProperties = {

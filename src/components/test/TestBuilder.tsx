@@ -3395,7 +3395,7 @@ function ListeningModal({ audioUrl, playOnce, sections, getAccessToken, onClose,
               <span>
                 <span style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#2f2835' }}>Play audio once</span>
                 <span style={{ display: 'block', fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 2 }}>
-                  Students can&apos;t rewind or replay it, and a page refresh won&apos;t restart it. Pausing is still allowed.
+                  Plays once, straight through — no pausing, rewinding, or replaying, and a page refresh won&apos;t restart it.
                 </span>
               </span>
             </label>
