@@ -15,6 +15,10 @@ const norm = (s: string) => s.trim().toLowerCase();
  * the question is not gradable (no correct answer set).
  */
 export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['value']): boolean | null {
+  if (question.type === 'speaking') {
+    // Graded on a separate track — never part of the objective score.
+    return null;
+  }
   if (question.type === 'multiple_choice' || question.type === 'picture_choice') {
     const opts = question.options as MultipleChoiceOptions | PictureChoiceOptions;
     const correctIndexes = opts.allowMultiple
@@ -126,6 +130,9 @@ export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['val
 /** Whether a submission counts as "answered" for required-question checks. */
 export function hasAnswer(question: TestQuestion, value: AnswerSubmission['value'] | undefined): boolean {
   if (!value) return false;
+  if (question.type === 'speaking') {
+    return value.recorded === true;
+  }
   if (question.type === 'multiple_choice' || question.type === 'picture_choice') {
     return typeof value.selected === 'number' && value.selected >= 0
       || typeof value.selectedId === 'string' && value.selectedId.length > 0

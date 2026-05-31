@@ -3,7 +3,7 @@ import type {
   MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
   MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
-  OpinionScaleOptions, RatingOptions,
+  OpinionScaleOptions, RatingOptions, SpeakingOptions,
 } from './types';
 import { normalizeQuestionMedia } from './media';
 
@@ -352,6 +352,21 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       options: {
         tiles: stableShuffle(tiles, scrambleSeed),
         unit,
+      },
+    };
+  }
+  if (q.type === 'speaking') {
+    const opts = q.options as SpeakingOptions;
+    return {
+      id: q.id,
+      position: q.position,
+      type: 'speaking',
+      prompt: q.prompt,
+      description: questionDescription(q.options),
+      media: questionMedia(q),
+      required: q.required,
+      options: {
+        maxRecordingSeconds: Number.isFinite(opts.maxRecordingSeconds) ? opts.maxRecordingSeconds : 30,
       },
     };
   }

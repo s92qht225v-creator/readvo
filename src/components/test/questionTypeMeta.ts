@@ -15,4 +15,5 @@ export const typePalette: Record<QuestionType, { bg: string; color: string }> = 
   ordering: { bg: '#cffafe', color: '#0e7490' },
   fill_blanks: { bg: '#fce7f3', color: '#be185d' },
   scramble: { bg: '#e0e7ff', color: '#4338ca' },
+  speaking: { bg: '#ffe4e6', color: '#be123c' },
 };

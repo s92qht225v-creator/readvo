@@ -17,7 +17,8 @@ export type QuestionType =
   | 'match'
   | 'ordering'
   | 'fill_blanks'
-  | 'scramble';
+  | 'scramble'
+  | 'speaking';
 
 export interface MultipleChoiceOptions {
   choices: string[];
@@ -141,6 +142,21 @@ export interface ScrambleOptions {
   media?: QuestionMedia;
 }
 
+/** Speaking — student records spoken audio; graded on a separate track
+ *  against a rubric. The rubric is the answer key and must NOT reach the
+ *  player. */
+export interface SpeakingRubricCriterion {
+  id: string;
+  text: string;
+  weight: number;
+}
+export interface SpeakingOptions {
+  rubric: SpeakingRubricCriterion[];
+  /** Default 30 */
+  maxRecordingSeconds: number;
+  media?: QuestionMedia;
+}
+
 export interface QuestionMedia {
   type: 'image' | 'gif' | 'video' | 'audio';
   url: string;
@@ -175,7 +191,8 @@ export type QuestionOptions =
   | MatchOptions
   | OrderingOptions
   | FillBlanksOptions
-  | ScrambleOptions;
+  | ScrambleOptions
+  | SpeakingOptions;
 
 export interface TestQuestion {
   id: string;
@@ -402,6 +419,11 @@ export interface PublicRatingOptions {
   shape?: 'star' | 'heart' | 'number';
 }
 
+/** Speaking — rubric stripped (answer key); only recording cap reaches the player. */
+export interface PublicSpeakingOptions {
+  maxRecordingSeconds: number;
+}
+
 export interface PublicQuestion {
   id: string;
   position: number;
@@ -427,7 +449,8 @@ export interface PublicQuestion {
     | PublicDropdownOptions
     | PublicCheckboxOptions
     | PublicOpinionScaleOptions
-    | PublicRatingOptions;
+    | PublicRatingOptions
+    | PublicSpeakingOptions;
 }
 
 export interface PublicTest {
@@ -477,6 +500,7 @@ export interface AnswerSubmission {
    *    Legacy accepted: { matches: string[] } where matches[leftIndex] = selected right item id
    *  - ordering: { order: string[] }  // student's chosen order (array of public item ids)
    *  - fill_blanks: { blanks: string[] }
+   *  - speaking: { recorded: boolean }  // graded on a separate track
    */
   value: {
     selected?: number;
@@ -489,6 +513,7 @@ export interface AnswerSubmission {
     order?: string[];
     blanks?: string[];
     tileIds?: string[];
+    recorded?: boolean;
   };
 }
 
