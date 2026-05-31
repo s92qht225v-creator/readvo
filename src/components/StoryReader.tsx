@@ -8,7 +8,6 @@ import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { ReaderControls } from './ReaderControls';
 import { RubyText } from './RubyText';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
-import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
@@ -251,7 +250,7 @@ export function StoryReader({ story, bookPath, listPath }: StoryReaderProps) {
     } else {
       setIsLoading(true);
       setAudioActive(true);
-      audio.src = protectAudioUrlSync(story.audio_url);
+      audio.src = story.audio_url;
       audio.play().catch(() => {
         setIsLoading(false);
         setIsPlaying(false);

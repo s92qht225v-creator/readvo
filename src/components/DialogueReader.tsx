@@ -8,6 +8,7 @@ import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
 import { BannerMenu } from './BannerMenu';
@@ -221,7 +222,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     else if (audioActive) { audio.play(); }
     else {
       setIsAudioLoading(true); setAudioActive(true);
-      audio.src = dialogue.audio_url;
+      audio.src = protectAudioUrlSync(dialogue.audio_url);
       audio.play().catch(() => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); });
     }
   }, [isPlaying, audioActive, dialogue.audio_url, sentenceAudio]);
