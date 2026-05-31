@@ -290,7 +290,10 @@ function answerTypeLabel(type: BuilderQuestion['type']) {
   if (type === 'true_false') return 'True / False';
   if (type === 'match') return 'Match pairs';
   if (type === 'ordering') return 'Ordering';
-  return 'Fill in the blanks';
+  if (type === 'scramble') return 'Scramble';
+  if (type === 'speaking') return 'Speaking';
+  if (type === 'fill_blanks') return 'Fill in the blanks';
+  return type;
 }
 
 const answerModalBackdrop: React.CSSProperties = {
