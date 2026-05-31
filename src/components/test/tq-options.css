@@ -48,7 +48,7 @@
   --ti-lh: 24px;
   --ti-pad-y: 10px;
   --ti-pad-x: 10px;
-  --ti-min-h-short: 92px;
+  --ti-min-h-short: 37px;
   --ti-min-h-long: 148px;
   --ti-min-h-number: 37px;
   --ti-radius: 1px;
@@ -171,7 +171,7 @@
   --ti-lh: 24px;
   --ti-pad-y: 10px;
   --ti-pad-x: 10px;
-  --ti-min-h-short: 92px;
+  --ti-min-h-short: 37px;
   --ti-min-h-long: 148px;
   --ti-min-h-number: 37px;
   --ti-radius: 1px;
@@ -813,10 +813,13 @@
   color: var(--test-theme-answer-text, #0445af);
 }
 
-/* Text-area types — grey 1px border + vertical resize. */
+/* Grey 1px border. Short text is now a single-line <input> (no resize);
+   long answer stays a multi-line <textarea> with vertical resize. */
 .test-short-answer,
 .test-long-answer {
   border: 1px solid #cbd5e1;
+}
+.test-long-answer {
   resize: vertical;
 }
 

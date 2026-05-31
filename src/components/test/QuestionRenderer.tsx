@@ -248,18 +248,20 @@ export function QuestionRenderer({ question, value, onChange, onSubmit }: Props)
   if (question.type === 'short_text') {
     const opts = question.options as PublicShortTextOptions;
     return (
-      <textarea
+      <input
+        type="text"
         value={value.text ?? ''}
-        rows={3}
         maxLength={opts.maxLength}
         placeholder="Type your answer…"
         onChange={e => onChange({ text: e.target.value })}
         onKeyDown={e => {
-          if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+          /* Single-line field: Enter submits/advances. */
+          if (e.key === 'Enter') {
             e.preventDefault();
             onSubmit();
           }
         }}
+        autoCapitalize="sentences"
         dir="auto" className="test-short-answer"
       />
     );
