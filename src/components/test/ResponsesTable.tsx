@@ -19,6 +19,14 @@ interface ResponseRow {
   score: number | null;
   timed_out?: boolean;
   section_scores?: { section_id: string | null; title: string; correct: number; total: number }[];
+  speaking_grades?: {
+    question_id: string;
+    transcript: string;
+    score: number;
+    max_score: number;
+    audio_signed_url: string | null;
+    detail: { criteria: { id: string; verdict: string; earned: number; note: string }[]; feedback: string };
+  }[];
 }
 
 interface AnswerRow {
@@ -240,6 +248,12 @@ export function ResponsesTable({ testId }: Props) {
                         </div>
                       ) : null}
                       {questions.map(q => {
+                        if (q.type === 'speaking') {
+                          const grade = r.speaking_grades?.find(g => g.question_id === q.id);
+                          return (
+                            <SpeakingResult key={q.id} q={q} grade={grade} />
+                          );
+                        }
                         const a = myAnswers.find(x => x.question_id === q.id);
                         return (
                           <div key={q.id} style={answerDetailCard}>
@@ -376,6 +390,91 @@ function renderAnswer(q: TestQuestion, value: AnswerRow['value'] | undefined) {
     );
   }
   return null;
+}
+
+type SpeakingGrade = NonNullable<ResponseRow['speaking_grades']>[number];
+
+function SpeakingResult({ q, grade }: { q: TestQuestion; grade: SpeakingGrade | undefined }) {
+  const rubric = (q.options as { rubric?: { id: string; text: string; weight: number }[] }).rubric ?? [];
+  const rubricText = (id: string) => rubric.find(rc => rc.id === id)?.text ?? id;
+
+  return (
+    <div style={speakingCard}>
+      <div style={speakingTop}>
+        <div>
+          <div style={speakingKicker}>Speaking</div>
+          <div style={answerQuestionLine}>
+            <span>{q.position + 1}. {q.prompt}</span>
+          </div>
+        </div>
+        <span style={speakingScorePill}>
+          {grade ? `${grade.score} / ${grade.max_score}` : 'Grading…'}
+        </span>
+      </div>
+
+      {!grade ? (
+        <div style={speakingMuted}>Not answered yet.</div>
+      ) : (
+        <>
+          {grade.audio_signed_url ? (
+            <audio controls src={grade.audio_signed_url} style={{ width: '100%' }} />
+          ) : null}
+
+          <div>
+            <div style={speakingLabel}>Transcript</div>
+            <div style={speakingMuted}>{grade.transcript ? grade.transcript : '—'}</div>
+          </div>
+
+          {grade.detail?.criteria?.length ? (
+            <div style={{ display: 'grid', gap: 6 }}>
+              <div style={speakingLabel}>Rubric</div>
+              {grade.detail.criteria.map((c, i) => (
+                <div key={c.id || i} style={criterionRow}>
+                  <span style={verdictMarkStyle(c.verdict)}>{verdictMark(c.verdict)}</span>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={criterionText}>{rubricText(c.id)}</div>
+                    {c.note ? <div style={speakingMuted}>{c.note}</div> : null}
+                  </div>
+                  <span style={criterionPoints}>+{c.earned}</span>
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          {grade.detail?.feedback ? (
+            <div>
+              <div style={speakingLabel}>Feedback</div>
+              <div style={speakingFeedback}>{grade.detail.feedback}</div>
+            </div>
+          ) : null}
+        </>
+      )}
+    </div>
+  );
+}
+
+function verdictMark(verdict: string) {
+  if (verdict === 'full') return '✓';
+  if (verdict === 'partial') return '~';
+  return '✗';
+}
+
+function verdictMarkStyle(verdict: string): CSSProperties {
+  const base: CSSProperties = {
+    flex: '0 0 auto',
+    width: 18,
+    height: 18,
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 3,
+    fontSize: 12,
+    fontWeight: 900,
+    marginTop: 1,
+  };
+  if (verdict === 'full') return { ...base, background: '#dcfce7', color: '#15803d' };
+  if (verdict === 'partial') return { ...base, background: '#fef9c3', color: '#a16207' };
+  return { ...base, background: '#fee2e2', color: '#b91c1c' };
 }
 
 function computeStats(questions: TestQuestion[], answers: AnswerRow[]) {
@@ -946,4 +1045,82 @@ const correctMark: CSSProperties = {
 const incorrectMark: CSSProperties = {
   ...correctMark,
   color: '#b91c1c',
+};
+
+const speakingCard: CSSProperties = {
+  display: 'grid',
+  gap: 10,
+  padding: 14,
+  borderRadius: 3,
+  background: '#fbfaff',
+  border: '1px solid #e9e5fb',
+};
+
+const speakingTop: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+  gap: 12,
+};
+
+const speakingKicker: CSSProperties = {
+  fontSize: 11,
+  fontWeight: 800,
+  letterSpacing: '0.1em',
+  textTransform: 'uppercase',
+  color: '#7c3aed',
+  marginBottom: 4,
+};
+
+const speakingScorePill: CSSProperties = {
+  flex: '0 0 auto',
+  padding: '5px 10px',
+  background: '#ede9fe',
+  color: '#6d28d9',
+  borderRadius: 3,
+  fontSize: 12,
+  fontWeight: 900,
+};
+
+const speakingLabel: CSSProperties = {
+  fontSize: 11,
+  fontWeight: 800,
+  textTransform: 'uppercase',
+  letterSpacing: '0.07em',
+  color: '#a8a29e',
+  marginBottom: 3,
+};
+
+const speakingMuted: CSSProperties = {
+  fontSize: 13,
+  color: '#78716c',
+  lineHeight: 1.4,
+};
+
+const criterionRow: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'auto 1fr auto',
+  gap: 8,
+  alignItems: 'start',
+};
+
+const criterionText: CSSProperties = {
+  fontSize: 13,
+  fontWeight: 700,
+  color: '#44403c',
+  lineHeight: 1.35,
+};
+
+const criterionPoints: CSSProperties = {
+  flex: '0 0 auto',
+  fontSize: 12,
+  fontWeight: 900,
+  color: '#57534e',
+  fontVariantNumeric: 'tabular-nums',
+};
+
+const speakingFeedback: CSSProperties = {
+  fontSize: 13,
+  color: '#292524',
+  lineHeight: 1.45,
 };

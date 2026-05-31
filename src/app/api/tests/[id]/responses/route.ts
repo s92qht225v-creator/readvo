@@ -33,10 +33,49 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
     answers = res.data ?? [];
   }
 
+  /* Speaking grades: AI-graded spoken answers live on a separate track
+     (test_speaking_grades). Attach a per-response array, mirroring how
+     section_scores is attached below. audio_url is a PATH in the private
+     test-recordings bucket → sign it for playback. */
+  const responsesOut = responses ?? [];
+  if (responsesOut.length > 0) {
+    const { data: gradeRows } = await admin
+      .from('test_speaking_grades')
+      .select('response_id, question_id, audio_url, transcript, score, max_score, detail')
+      .in('response_id', responseIds);
+    const grades = gradeRows ?? [];
+    if (grades.length > 0) {
+      const byResponse = new Map<string, Array<Record<string, unknown>>>();
+      for (const g of grades) {
+        let signedUrl: string | null = null;
+        if (g.audio_url) {
+          const { data: signed } = await admin.storage
+            .from('test-recordings')
+            .createSignedUrl(g.audio_url as string, 3600);
+          signedUrl = signed?.signedUrl ?? null;
+        }
+        const entry = {
+          question_id: g.question_id,
+          transcript: g.transcript ?? '',
+          score: g.score,
+          max_score: g.max_score,
+          audio_signed_url: signedUrl,
+          detail: g.detail,
+        };
+        const list = byResponse.get(g.response_id as string) ?? [];
+        list.push(entry);
+        byResponse.set(g.response_id as string, list);
+      }
+      for (const r of responsesOut as Array<Record<string, unknown>>) {
+        const list = byResponse.get(r.id as string);
+        if (list) r.speaking_grades = list;
+      }
+    }
+  }
+
   /* Per-response section breakdown (graded + sectioned tests). Computed
      server-side from the canonical questions/sections so answer keys never
      reach the client; covers historical responses too (nothing persisted). */
-  const responsesOut = responses ?? [];
   if (test.is_graded && responsesOut.length > 0) {
     const [{ data: questionRows }, { data: sectionRows }] = await Promise.all([
       admin.from('test_questions').select('*').eq('test_id', id),
