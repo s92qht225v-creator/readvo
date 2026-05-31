@@ -3793,6 +3793,16 @@ function PreviewCanvas({
       required: q.required,
       options: { max: opts.max ?? 5, shape: opts.shape ?? 'star' },
     };
+  } else if (q.type === 'speaking') {
+    const opts = q.options as { maxRecordingSeconds?: number };
+    previewQ = {
+      id: q.clientId, position: qIndex, type: 'speaking',
+      prompt: q.prompt || 'Question text…',
+      description: description || undefined,
+      media,
+      required: q.required,
+      options: { maxRecordingSeconds: opts.maxRecordingSeconds ?? 30 },
+    };
   } else {
     const opts = q.options as ShortTextOptions;
     previewQ = {
