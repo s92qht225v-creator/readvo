@@ -1265,6 +1265,69 @@ without the other.
   network drop mid-clip means it can't be re-heard — the honest cost of a
   truly refresh-proof "play once" (this was the user's chosen tradeoff).
 
+## Speaking question type (AI rubric-graded, separate score)
+
+A `speaking` question: the student reads/hears the prompt, records an
+open-ended spoken reply (any language), and the AI transcribes + scores it
+against a teacher-authored **rubric**. **Graded on its own track — the score
+is shown SEPARATELY in results, never merged into the objective total.**
+
+### Why "separate track" (no scoring-rollup changes)
+`gradeAnswer()` returns `null` for `speaking`, so it's auto-excluded from the
+objective total and `summarizeSectionScores` (both already drop `null`).
+Speaking results live in their own table, surfaced as their own block. Spec:
+`docs/superpowers/specs/2026-05-31-speaking-question-type-design.md`.
+
+### Data
+- `SpeakingOptions { rubric: { id, text, weight }[], maxRecordingSeconds }`
+  (default 30). Max points = sum of weights. **The rubric is the answer key
+  — `sanitizeQuestion` strips it; the public player only gets
+  `{ maxRecordingSeconds }`.**
+- Table `test_speaking_grades (response_id, question_id, audio_url,
+  transcript, score, max_score, detail jsonb, created_at)`, PK
+  `(response_id, question_id)` (idempotent). `detail = { criteria:
+  [{ id, verdict: full|partial|none, earned, note }], feedback }`. RLS on,
+  service-role only.
+- Private bucket **`test-recordings`** holds the audio (voice data → never
+  public; served via 1h signed URLs in the owner results route).
+
+### Grading — `POST /api/t/[slug]/speaking-grade` (grade-on-record)
+Called by the player when the student finishes a recording (anonymous,
+respondent-token + response_id gated like `audio-consumed`). Guardrails →
+upload audio to `test-recordings` → **standalone transcription** (its own
+`gpt-4o-transcribe` call with `response_format: 'json'`, NO language field =
+auto-detect — does NOT reuse the Chinese-tuned `whisper.ts`, keeping the live
+speaking-practice pipeline untouched) → **`lib/transcribe/rubricJudge.ts`**
+(gpt-4o-mini, temp 0, JSON; per-criterion full/partial/none → points;
+notes+feedback in the transcript's language via `detectScriptLang`) → upsert
+`test_speaking_grades`. Returns `{ ok: true }` only — **never leaks the
+score** (exam-style). Idempotent per (response, question).
+- **Gotchas (found in testing):** gpt-4o-transcribe only supports
+  `response_format: 'json'` (not `text`); and the recording filename
+  extension must match the content-type (Chrome→webm, Safari→mp4) or OpenAI
+  rejects it — the route derives the ext from `audioFile.type`.
+
+### Player — `renderers/SpeakingRecorder.tsx`
+Mic record (MediaRecorder, mimeType selection like `SpeakingMashq`) →
+countdown to `maxRecordingSeconds` → stop → upload → background grade → shows
+**"✓ Recorded"** (no score). **One attempt** (locks after recording). No
+`responseId` (preview/builder) → disabled placeholder. `QuestionRenderer`
+gets `slug`/`responseId`/`respondentToken` threaded from `TestPlayer` (both
+card + scroll sites; `ScrollBody` also threads `responseId`). Answer value =
+`{ recorded: true }`; `hasAnswer` checks it for the required-question guard.
+
+### Builder — `settings/SpeakingSettings.tsx`
+Rubric editor (criterion text + weight rows, add/remove) + max-seconds.
+**Pro-gate:** `POST /api/tests/[id]/publish` blocks first-publish with a 402
+`speaking_requires_pro` if the test has any speaking question and the owner
+lacks an active subscription; the builder surfaces it via `PaywallNotice`.
+
+### Results — `ResponsesTable.tsx`
+Owner responses route attaches `speaking_grades` per response (with signed
+audio URLs). Each speaking question renders a distinct block: audio player +
+transcript + per-criterion breakdown (criterion id→text from
+`q.options.rubric`) + `earned / max` + feedback. "Grading…" when no row yet.
+
 ## Webpack mode
 
 Dev script is `next dev --webpack` (set in `package.json`). The test
