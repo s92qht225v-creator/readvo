@@ -6,6 +6,9 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
+import { useAudioToken } from '../hooks/useAudioToken';
+import { protectAudioUrlSync } from '../lib/audio/token-client';
+import { protectAudioUrl, isStorageUrl } from '../lib/audio/url';
 import { BannerMenu } from './BannerMenu';
 import { trackAll } from '@/utils/analytics';
 
@@ -106,7 +109,7 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
     if (!song.audio_url) return;
     const audio = new Audio();
     audio.preload = 'metadata';
-    audio.src = song.audio_url;
+    audio.src = protectAudioUrlSync(song.audio_url); // proxied if token ready, else public fallback
     audioRef.current = audio;
 
     audio.addEventListener('loadedmetadata', () => setDuration(audio.duration));
@@ -130,6 +133,22 @@ export function KaraokePlayer({ song, bookPath }: KaraokePlayerProps) {
       audio.src = '';
     };
   }, [song.audio_url]);
+
+  /* The init effect runs at mount, before the async audio token is ready,
+     so the src may have fallen back to the public URL. Once the token
+     arrives, upgrade the src to the auth-gated proxy — preserving position
+     and resuming if it was already playing. */
+  const audioToken = useAudioToken();
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || !audioToken || !isStorageUrl(song.audio_url)) return;
+    if (audio.src.includes('/api/audio/') && audio.src.includes('t=')) return; // already proxied
+    const wasPlaying = !audio.paused;
+    const pos = audio.currentTime;
+    audio.src = protectAudioUrl(song.audio_url, audioToken);
+    if (pos) audio.currentTime = pos;
+    if (wasPlaying) void audio.play().catch(() => {});
+  }, [audioToken, song.audio_url]);
 
   // Use requestAnimationFrame for smooth time updates
   useEffect(() => {

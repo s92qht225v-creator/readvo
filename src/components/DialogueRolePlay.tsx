@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { useAuth } from '@/hooks/useAuth';
+import { usePrimeAudioToken } from '@/hooks/useAudioToken';
+import { protectAudioUrlSync } from '@/lib/audio/token-client';
 
 type Language = 'uz' | 'ru' | 'en';
 
@@ -145,7 +147,9 @@ async function fetchMimoUrl(text: string): Promise<string | null> {
 
 function playUrl(url: string): Promise<boolean> {
   return new Promise(resolve => {
-    const audio = new Audio(url);
+    // protectAudioUrlSync proxies Supabase URLs (token primed by the
+    // component); non-Supabase URLs (mimo/TTS) pass through unchanged.
+    const audio = new Audio(protectAudioUrlSync(url));
     audio.onended = () => resolve(true);
     audio.onerror = () => resolve(false);
     audio.play().catch(() => resolve(false));
@@ -229,6 +233,7 @@ export function DialogueRolePlay({
   language = 'uz',
   onComplete,
 }: Props) {
+  usePrimeAudioToken();
   const { getAccessToken } = useAuth();
 
   // ── Precompute test units ──
