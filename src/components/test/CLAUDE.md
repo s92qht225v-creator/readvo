@@ -362,6 +362,23 @@ longer mounted but the helpers can be deleted in a follow-up cleanup.
   elements interpolated where blanks live. Input width is
   content-driven (set inline by `blankInputWidth()` from typed or
   expected length); everything else owned by `--fb-*` tokens.
+  - **Width sizing gotcha:** the input is `box-sizing: border-box` with
+    `0.45em` side padding, and the inline width is `calc(Nch + 0.9em)` —
+    so the `+0.9em` cancels the padding and the text area is ≈`Nch`.
+    Since `ch` = width of `0` and proportional letters (m, w) are wider,
+    `blankInputWidth` adds **~2 chars of slack** (floor 5, cap 30) so
+    wide words like "name" + the caret don't clip. It grows with typed
+    length too.
+  - Text is **`text-align: center`** in the input.
+  - The input sets `autoCapitalize="none" autoCorrect="off"
+    autoComplete="off" spellCheck={false}` so mobile keyboards don't
+    auto-capitalize the first letter or silently alter answers.
+- **Dropdown**: `CustomDropdownAnswer` (a button-triggered custom popup,
+  not a native `<select>`). Option label is the **first** flex child so
+  it aligns with the trigger's "Select an answer" text (both share the
+  same left padding); the selection ✓ (`.test-custom-dropdown__check`)
+  sits at the **right** edge via `margin-left: auto` so it never indents
+  the label. Owned by `--dd-*` tokens.
 - **Picture choice**: flex-wrap, N-per-row driven by the
   `--pic-basis` device token — **2-up on mobile, 5-up on desktop**
   (`.test-picture-option` is `flex: 1 1 var(--pic-basis)`). `flex-grow`
@@ -679,19 +696,83 @@ shuffle):
   respondent token. Both import `ensureRespondentToken` from
   `lib/test/respondentToken.ts` (key `blim-test-token:{slug}`). A
   mismatch causes `session_not_found`.
+- The session POST is **idempotent** (reuses the in-flight row for the
+  same token) and now also returns **`started_at`** — used for the
+  server-anchored timer below. The page always calls it (rather than
+  trusting the cached session) to get the authoritative `started_at`,
+  falling back to the cached session only if the network call fails.
+
+## Refresh resilience — answer autosave + server-anchored timer
+
+An accidental page refresh used to wipe all answers and reset the
+timer (the latter also let a respondent reload for more time). Both are
+fixed; all of this is **live-attempt only** — preview/builder surfaces
+(`forceDevice` set) skip it.
+
+**Answer autosave (`TestPlayer`, localStorage).**
+- `answersStorageKey` = `blim-test-answers:{responseId}` (falls back to
+  `blim-test-answers:{slug}:{respondentToken}` if no responseId).
+- A progress blob `{ answers, name, profile, started }` is autosaved on
+  every change and restored once on mount (`restoredRef` guards the
+  one-time restore). On resume it skips the welcome screen if `started`
+  was true, dropping the respondent straight back where they were.
+- The autosave effect won't run until after the restore pass and skips
+  the empty pre-start state, so it never clobbers a fresh restore.
+- Cleared on a successful submit (alongside the existing
+  `blim-test-session-{slug}` marker) so a completed attempt doesn't
+  linger or 409 on reload.
+
+**Server-anchored timer.**
+- The countdown is derived in an effect from `sessionStartedAt`
+  (threaded from the page) + `time_limit_seconds`:
+  `timerEndsAt = new Date(sessionStartedAt).getTime() + limit*1000`.
+  On refresh it recomputes the SAME end time, so the clock continues
+  from where it was and a reload can't reset it.
+- `startQuestions()` no longer stamps the timer — it only flips the
+  phase. This also fixed a pre-existing bug where tests with **no
+  welcome screen** never started their timer (startQuestions, the only
+  place that used to stamp it, was never called on that path).
+- **Behaviour note:** the timer starts when the test is **opened** (the
+  session row is created on page load), not when the student clicks
+  "Start". This is the standard cheat-resistant exam behaviour; the
+  welcome screen already shows the time limit. If start-on-Start-click
+  is ever wanted, persist the start moment at Start time instead.
+
+**Leave-page guard.** A native `beforeunload` prompt is armed while a
+live attempt is in the question phase with ≥1 answer entered, to prevent
+most accidental reloads in the first place.
 
 ## Required-question submit guard
 
-The per-question Next button is gated on `canAdvance` (current question
-only). But the navigator lets you jump around + the "Finish the test"
-button submits directly — both could reach `submit()` with required
-questions blank (server then 400s `missing_required`).
+**Navigation never blocks on required questions** — Next, Enter, the
+text-field Enter (`onSubmit`), and navigator jumps all advance freely
+regardless of whether the current required question is answered. The
+`canAdvance` memo still exists but is used ONLY to decide whether to
+render the per-question "required" note, not to disable Next. (This
+replaced the old behaviour where Next was disabled on a blank required
+question, which got users stuck mid-test.)
 
-`TestPlayer` computes `firstMissingRequiredIdx` across ALL questions;
-`attemptSubmit()` is the single finish path (bottom Submit, Enter,
-navigator Finish). If a required question is unanswered it navigates
-there and shows an inline alert instead of submitting. Timer
-auto-submit bypasses the guard (time's up → send what exists).
+Validation happens ONLY at the finish path:
+
+- `firstMissingRequiredIdx` is computed across ALL questions.
+- `attemptSubmit()` (bottom Submit on the last question, Enter on the
+  last question, navigator "Finish") is the single validator. If a
+  required question is blank it jumps to the FIRST missing one and sets
+  the persistent `submitAttempted` flag (instead of letting the server
+  400 `missing_required`).
+- While `submitAttempted` is true, EVERY unanswered required question
+  shows its "This question is required …" note as the user navigates to
+  it — card mode renders the `requiredWarnBar` under the current card
+  (`submitAttempted && !canAdvance && q.required`); scroll mode renders
+  `scrollItemWarnText` inline under each unanswered required item
+  (`submitAttempted` is threaded into `ScrollBody`). The note clears
+  per-question the moment it's answered, and `submitAttempted` resets on
+  a clean submit.
+- Timer auto-submit bypasses the guard entirely (time's up → send what
+  exists).
+
+Scroll mode's `navigatorFinish` arms the same `submitAttempted` flag and
+scrolls to the first missing required item (via `centreInViewport`).
 
 ## Welcome / end screen auto-enable
 
@@ -1039,6 +1120,80 @@ preview scroll layout is a future enhancement.
   `overflow-y`.
 - `src/styles/reading.css` — preview shell rules split into
   shared-chrome vs `:not(.test-scroll__item)` height/overflow.
+
+## Sections (stage-b — `test_sections`)
+
+Stage-b adds ordered **sections** that group questions, each with its
+own optional continuous audio, plus a per-test forward-only toggle —
+for IELTS/HSK-style multi-part listening exams. **Currently the BUILDER
+side is fully wired; the PLAYER does not yet render section-by-section
+behaviour or switch audio per section** (that's the remaining b3/b3.5
+work). A sectionless test behaves exactly like stage (a).
+
+### Data
+
+- Table `test_sections` (`id`, `test_id` FK cascade, `position`,
+  `title`, `audio_url`, `created_at`) + `(test_id, position)` index +
+  RLS (owner-manages; public reads for published tests). Migration via
+  Supabase MCP.
+- `test_questions.section_id` — nullable FK, `on delete set null`
+  (deleting a section moves its questions back to "unsectioned", never
+  destroys them) + index.
+- `tests.strict_sections boolean not null default false` — forward-only
+  navigation + play-once audio when true. Default false keeps stage-(a)
+  tests unchanged.
+- Types (`src/lib/test/types.ts`): `TestSection` (builder),
+  `PublicSection` (player); `section_id` on `TestQuestion` and
+  `PublicQuestion`; `strict_sections` on `Test`/`PublicTest`;
+  `sections: PublicSection[]` on `PublicTest`. `BuilderQuestion`
+  (`builderTypes.ts`) also carries `section_id`.
+
+### API
+
+- `GET/POST /api/tests/[id]/sections` (list ordered / create — appends
+  to end) and `PATCH/DELETE /api/tests/[id]/sections/[sectionId]`
+  (update title/audio_url/position / delete). Same `authorize()`
+  ownership pattern as the other `tests/[id]/*` routes.
+- `PATCH /api/tests/[id]` accepts `strict_sections`.
+- `PUT /api/tests/[id]/questions` accepts + stores `section_id` per
+  question (full-list replacement; null = unsectioned).
+- `GET /api/tests/[id]` (builder) returns ordered `sections`.
+- `GET /api/t/[slug]` (player) returns `strict_sections`, ordered
+  `sections`, and preserves each `PublicQuestion.section_id` through
+  `sanitizeQuestion` (section_id is non-secret metadata).
+
+### Builder (`TestBuilder.tsx`)
+
+- **Left rail `SectionsPanel`** (between the mode dropdown and the
+  question list) — renders only when ≥1 section exists or via its
+  "+ Add section" button. Per-section row: inline-editable title, audio
+  dot, delete (×). Clicking a row sets `activeBlock = { kind: 'section',
+  id }` (new `ActiveBlock` variant). Footer carries the **forward-only
+  toggle** (writes `strict_sections`) — only shown when sections exist.
+- **Right rail `SectionSettingsPanel`** (when a section is active) —
+  title input + per-section audio upload (reuses `/api/tests/media`
+  tagged `section-{id}`).
+- **Question kebab → "Move to section"** — a radio list of sections +
+  "No section" with ✓ on the current one. Local state change
+  (`moveQuestionToSection`); persisted on the next `saveQuestions` PUT
+  (which now sends `section_id`).
+- **Listening modal evolves**: when the test has sections, it hides the
+  global `listening_audio_url` upload (the player will use per-section
+  audio when sections exist) and shows a per-section directory with
+  click-to-jump into each section's settings. Sectionless tests keep
+  the original single-track upload.
+- CRUD helpers `createSection` / `updateSection` (optimistic) /
+  `deleteSection` (also nulls the local questions' `section_id`, mirroring
+  the FK) / `moveQuestionToSection` hit the routes above and update local
+  state so the rail re-renders without a refetch.
+
+### Still TODO (b3 / b3.5 / b4)
+
+- Player: render one section at a time in scroll mode, switch the audio
+  bar per section in both layouts, "Section X of Y" + Next-section,
+  forward-only enforcement when `strict_sections`, section group
+  headers in the navigator, per-section required-guard, optional
+  results-by-section.
 
 ## Webpack mode
 
