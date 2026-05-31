@@ -1381,9 +1381,13 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
   const fireConsumed = () => {
     if (!consumedFiredRef.current) { consumedFiredRef.current = true; onConsumed(); }
   };
+  /* Block ALL user seeks — forward skip AND rewind. Natural playback never
+     fires 'seeking', so any seek event is a user jump: snap back to the
+     furthest point reached. The 0.4s tolerance stops the snap from
+     re-triggering itself once currentTime is already at maxTime. */
   const clampSeek = () => {
     const el = audioRef.current;
-    if (el && el.currentTime > maxTimeRef.current + 0.4) el.currentTime = maxTimeRef.current;
+    if (el && Math.abs(el.currentTime - maxTimeRef.current) > 0.4) el.currentTime = maxTimeRef.current;
   };
   return (
     <div className="test-listening-bar" style={listeningBarStyle}>
