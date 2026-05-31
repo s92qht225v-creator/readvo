@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { usePrimeAudioToken } from '@/hooks/useAudioToken';
+import { protectAudioUrlSync } from '@/lib/audio/token-client';
 
 type AdminTab = 'payments' | 'users' | 'audio';
 
@@ -71,6 +73,7 @@ interface AdminPanelProps {
 }
 
 export function AdminPanel({ password }: AdminPanelProps) {
+  usePrimeAudioToken();
   const [tab, setTab] = useState<AdminTab>('payments');
   const [payments, setPayments] = useState<Payment[]>([]);
   const [users, setUsers] = useState<AdminUser[]>([]);
@@ -265,14 +268,14 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const playTtsAudio = useCallback((url: string) => {
     if (!ttsAudioRef.current) ttsAudioRef.current = new Audio();
     const el = ttsAudioRef.current;
-    el.src = url;
+    el.src = protectAudioUrlSync(url);
     el.currentTime = 0;
     el.play().catch(() => {});
   }, []);
 
   const downloadTtsAudio = useCallback((url: string, text: string) => {
     const a = document.createElement('a');
-    a.href = url;
+    a.href = protectAudioUrlSync(url);
     a.download = `${text.slice(0, 30)}.wav`;
     a.click();
   }, []);
