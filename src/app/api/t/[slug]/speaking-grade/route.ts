@@ -159,14 +159,16 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     const fd = new FormData();
     fd.append('file', new Blob([arrayBuffer], { type: contentType }), `recording.${ext}`);
     fd.append('model', 'gpt-4o-transcribe');
-    fd.append('response_format', 'text');
+    // gpt-4o-transcribe supports only `json` (not `text`/`verbose_json`).
+    fd.append('response_format', 'json');
     const sttRes = await fetch(OPENAI_TRANSCRIBE_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
       body: fd,
     });
     if (sttRes.ok) {
-      transcript = (await sttRes.text()).trim();
+      const j = await sttRes.json() as { text?: string };
+      transcript = (j.text ?? '').trim();
     } else {
       console.warn('[speaking-grade] transcription HTTP', sttRes.status, await sttRes.text());
     }
