@@ -155,7 +155,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
 
   // 6. Transcribe — standalone, multi-language, auto-detect (NO language field).
   let transcript = '';
-  let _dbg: Record<string, unknown> = {};
   try {
     const fd = new FormData();
     fd.append('file', new Blob([arrayBuffer], { type: contentType }), `recording.${ext}`);
@@ -167,18 +166,13 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
       headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
       body: fd,
     });
-    _dbg.status = sttRes.status;
-    _dbg.ext = ext; _dbg.contentType = contentType; _dbg.size = buffer.length;
-    _dbg.keyPresent = !!process.env.OPENAI_API_KEY;
     if (sttRes.ok) {
       const j = await sttRes.json() as { text?: string };
       transcript = (j.text ?? '').trim();
     } else {
-      _dbg.errBody = (await sttRes.text()).slice(0, 500);
-      console.warn('[speaking-grade] transcription HTTP', sttRes.status, _dbg.errBody);
+      console.warn('[speaking-grade] transcription HTTP', sttRes.status, (await sttRes.text()).slice(0, 300));
     }
   } catch (err) {
-    _dbg.threw = (err as Error).message;
     console.warn('[speaking-grade] transcription failed:', (err as Error).message);
   }
 
@@ -220,5 +214,5 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   }
 
   // 9. Exam-style — never leak the score/transcript to the caller.
-  return NextResponse.json({ ok: true, _dbg, _transcriptLen: transcript.length });
+  return NextResponse.json({ ok: true });
 }
