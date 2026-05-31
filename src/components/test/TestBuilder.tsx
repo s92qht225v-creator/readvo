@@ -238,6 +238,9 @@ export function TestBuilder({ testId }: Props) {
      rail just doesn't render. Loaded with the rest of the test on mount;
      mutated via the section CRUD helpers below. */
   const [sections, setSections] = useState<TestSection[]>([]);
+  /* Debounce timers for per-section title saves (keyed by section id), so
+     typing a name doesn't fire a PATCH per keystroke + race its responses. */
+  const sectionTitleTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const [activeIdx, setActiveIdx] = useState(0);
   const [activeBlock, setActiveBlock] = useState<ActiveBlock>({ kind: 'question', index: 0 });
   const [savedSnapshot, setSavedSnapshot] = useState<string>('');
@@ -427,10 +430,25 @@ export function TestBuilder({ testId }: Props) {
       body: JSON.stringify(patch),
     });
     if (!res.ok) { alert('Failed to update section'); return false; }
-    const j = await res.json() as { section: TestSection };
-    setSections(prev => prev.map(s => (s.id === sectionId ? j.section : s)));
+    /* NOTE: deliberately do NOT re-apply the server response to local state.
+       The optimistic update above is the source of truth; re-applying a
+       (possibly out-of-order) server echo here would overwrite whatever the
+       user has typed since, making the title input "retype itself". */
     return true;
   }, [getAccessToken, testId]);
+
+  /* Title rename: update local state instantly on every keystroke, but
+     debounce the server PATCH so we don't fire (and race) a request per
+     keystroke. */
+  const renameSection = useCallback((sectionId: string, title: string) => {
+    setSections(prev => prev.map(s => (s.id === sectionId ? { ...s, title } : s)));
+    const timers = sectionTitleTimers.current;
+    if (timers[sectionId]) clearTimeout(timers[sectionId]);
+    timers[sectionId] = setTimeout(() => {
+      delete timers[sectionId];
+      void updateSection(sectionId, { title });
+    }, 500);
+  }, [updateSection]);
 
   const deleteSection = useCallback(async (sectionId: string): Promise<boolean> => {
     const tok = await getAccessToken();
@@ -808,7 +826,7 @@ export function TestBuilder({ testId }: Props) {
             const section = await createSection('');
             if (section) setActiveBlock({ kind: 'section', id: section.id });
           }}
-          onRename={(id, title) => { void updateSection(id, { title }); }}
+          onRename={(id, title) => { renameSection(id, title); }}
           onDelete={(id) => {
             if (!confirm('Delete this section? Its questions stay in the test (move back to "Unsectioned").')) return;
             void deleteSection(id);
@@ -1164,7 +1182,7 @@ export function TestBuilder({ testId }: Props) {
             <SectionSettingsPanel
               section={activeSection}
               getAccessToken={getAccessToken}
-              onRename={(title) => { void updateSection(activeSection.id, { title }); }}
+              onRename={(title) => { renameSection(activeSection.id, title); }}
               onAudio={(url) => { void updateSection(activeSection.id, { audio_url: url }); }}
             />
           );
