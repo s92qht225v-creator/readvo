@@ -1295,6 +1295,9 @@
   line-height: var(--fb-input-lh);
   outline: none;
   vertical-align: baseline;
+  /* Centre the typed text within the blank so it sits balanced under
+     the underline regardless of how the content-driven width grows. */
+  text-align: center;
 }
 
 .test-fill-blank-input:focus-visible {
