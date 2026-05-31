@@ -1242,15 +1242,20 @@ without the other.
   locked):
   - **Locked** (consumed snapshot at mount → after a refresh): renders
     "Audio already played", no `<audio>` element, no replay.
-  - **Active** (not yet consumed): custom NON-seekable player — play/pause
-    only, display-only progress, `seeking`/`timeupdate` clamp `currentTime`
-    to the furthest point reached (blocks fwd + rewind), locks on `ended`.
-    Marks the track consumed on FIRST play (`onConsumed` → local set +
-    persists via `/audio-consumed`), so a refresh re-locks it. The live
-    bar deliberately ignores the `consumed` prop flipping mid-play (it
-    snapshots at mount) so marking-on-play doesn't re-lock the current
-    listen.
-  - **Off** (`!playOnce`): unchanged native `<audio controls>`.
+  - **Active** (not yet consumed): **status-only** player — plays once,
+    straight through. A single ▶ Play button shows only BEFORE playback
+    (needed because browsers block silent autoplay); the moment audio
+    starts (`onPlay` → `started=true`) the button is gone and only a
+    progress bar remains. **No pause** (a `pause` event before the end
+    silently resumes — guards OS media keys), **no scrub** (`onSeeking`
+    snaps `currentTime` back to the furthest point reached — blocks fwd
+    AND rewind via the `Math.abs(...) > 0.4` clamp), **no replay** (locks
+    on `ended`, shows "Finished"). Marks the track consumed on FIRST play
+    (`onConsumed` → local set + persists via `/audio-consumed`) so a
+    refresh re-locks it; the live bar snapshots `consumed` at mount so
+    marking-on-play doesn't re-lock the current listen.
+  - **Off** (`!playOnce`): unchanged native `<audio controls>` (free
+    seek + replay).
   - Track identity = `currentGroup.section.id` / `cardQuestionSection.id`
     / `'global'`; the bar is keyed by `audioKey` so switching sections
     remounts and re-evaluates `consumed` for the new track.
