@@ -186,7 +186,7 @@ export interface SectionScore {
   section_id: string | null;
   title: string;
   correct: number;
-  /** Gradable questions in the section (unanswered count toward total as wrong). */
+  /** Submitted + gradable answers in the section (sums to the overall total). */
   total: number;
 }
 
@@ -196,11 +196,12 @@ export interface SectionScore {
  * route (student done screen) and the owner responses route (teacher view).
  *
  * - Returns [] for sectionless tests (no breakdown to show).
- * - Ungradable questions (no answer key / free-text) are excluded entirely.
- * - Unanswered gradable questions count toward `total` as wrong, so "4/5"
- *   means 4 correct of 5 gradable questions in that part — not "of answered".
+ * - Counts only SUBMITTED + gradable answers, mirroring the overall score's
+ *   denominator exactly — so the per-section totals always sum to the
+ *   overall `score / total`. (Ungradable free-text and questions the
+ *   respondent didn't answer are excluded, same as the overall score.)
  * - Sections are ordered by `position`; a trailing "Other questions" bucket
- *   collects gradable questions with no section. Empty buckets are dropped.
+ *   collects answered gradable questions with no section. Empty buckets drop.
  */
 export function summarizeSectionScores(
   questions: TestQuestion[],
@@ -213,7 +214,9 @@ export function summarizeSectionScores(
   const buckets = new Map<string, SectionScore>();
   const NONE = '__none__';
   for (const q of questions) {
-    const ic = gradeAnswer(q, valueByQid.get(q.id) ?? ({} as AnswerSubmission['value']));
+    const value = valueByQid.get(q.id);
+    if (value === undefined) continue; // not submitted — excluded (matches overall total)
+    const ic = gradeAnswer(q, value);
     if (ic === null) continue; // ungradable — not part of any section score
     const sid = q.section_id ?? null;
     const key = sid ?? NONE;
