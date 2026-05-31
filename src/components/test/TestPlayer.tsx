@@ -395,19 +395,25 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     return -1;
   }, [test.questions, answers]);
 
-  const [requiredWarning, setRequiredWarning] = useState(false);
+  /* Set true once the user has tried to finish with a required question
+     still blank. While true, the "this question is required" message is
+     shown on EVERY unanswered required question as the user navigates
+     to it (not just the one we jumped to). Reset on a clean submit. */
+  const [submitAttempted, setSubmitAttempted] = useState(false);
 
-  /* Single entry point for finishing the test. If a required question
-     is unanswered, navigate to it and show a hint instead of letting
-     the server reject with missing_required. */
+  /* Single entry point for finishing the test. Navigation (Next) never
+     blocks on required questions — only this finish path validates. If
+     a required question is unanswered, jump to the first one and arm the
+     per-question required messages instead of letting the server reject
+     with missing_required. */
   const attemptSubmit = useCallback(() => {
     if (firstMissingRequiredIdx >= 0) {
       setNavigatorOpen(false);
       goToIdx(firstMissingRequiredIdx);
-      setRequiredWarning(true);
+      setSubmitAttempted(true);
       return;
     }
-    setRequiredWarning(false);
+    setSubmitAttempted(false);
     void submit();
   }, [firstMissingRequiredIdx, goToIdx, submit]);
 
@@ -467,8 +473,10 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
           : null;
         if (el) centreInViewport(el);
         setScrollActiveId(missing.id);
+        setSubmitAttempted(true); // arm per-item required messages
         return;
       }
+      setSubmitAttempted(false);
       void submit();
     } else {
       attemptSubmit();
@@ -530,10 +538,10 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
         return;
       }
       if (e.key === 'Enter') {
-        if (canAdvance) {
-          if (isLast) attemptSubmit();
-          else goToIdx(i => i + 1);
-        }
+        /* Enter advances freely (mirrors the Next button) — required
+           questions are only enforced at the final Submit. */
+        if (isLast) attemptSubmit();
+        else goToIdx(i => i + 1);
         return;
       }
       if ((q.type === 'multiple_choice' || q.type === 'checkbox') && /^[1-9]$/.test(e.key)) {
@@ -816,6 +824,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
           activeIdx={scrollActiveIdx}
           phase={phase}
           total={total}
+          submitAttempted={submitAttempted}
           audioActive={audioActive}
         />
         {/* phase is already narrowed to 'question'|'submitting' here
@@ -880,7 +889,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
                   question={q}
                   value={answer}
                   onChange={onChange}
-                  onSubmit={() => { if (canAdvance) { isLast ? attemptSubmit() : goToIdx(idx + 1); } }}
+                  onSubmit={() => { isLast ? attemptSubmit() : goToIdx(idx + 1); }}
                 />
               </div>
             )}
@@ -888,7 +897,10 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
       </motion.div>
       </AnimatePresence>
 
-      {requiredWarning && !canAdvance ? (
+      {/* Shown on every unanswered required question once a finish was
+          attempted — `!canAdvance` is true only for a required question
+          that's still blank. */}
+      {submitAttempted && !canAdvance && q.required ? (
         <div role="alert" style={requiredWarnBar}>
           This question is required — please answer it to finish.
         </div>
@@ -908,8 +920,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
         <button
           type="button"
           onClick={() => isLast ? attemptSubmit() : goToIdx(idx + 1)}
-          disabled={!canAdvance || phase === 'submitting'}
-          style={primaryButton(!canAdvance || phase === 'submitting')}
+          /* Next never blocks on required questions — only the final
+             Submit validates (and jumps to the first missing one).
+             Disabled solely while a submission is in flight. */
+          disabled={phase === 'submitting'}
+          style={primaryButton(phase === 'submitting')}
         >
           {phase === 'submitting' ? 'Submitting…' : isLast ? 'Submit' : 'Next'}
         </button>
@@ -1129,6 +1144,7 @@ function ScrollBody({
   activeIdx,
   phase,
   total,
+  submitAttempted,
   audioActive,
 }: {
   test: PublicTest;
@@ -1148,6 +1164,9 @@ function ScrollBody({
   activeIdx: number;
   phase: Phase;
   total: number;
+  /* True once a finish was attempted with a required question blank —
+     unanswered required items then show their "required" note. */
+  submitAttempted: boolean;
   /* Whether the global ListeningAudioBar is mounted above this body, so
      scrolled content has room to clear it. The bar itself lives at the
      top-level TestPlayer render (independent of layout). */
@@ -1251,6 +1270,13 @@ function ScrollBody({
                       onChange={(v) => onAnswer(question.id, v)}
                       onSubmit={() => { /* no per-question advance in scroll mode */ }}
                     />
+                    {/* Required note appears once a finish was attempted
+                        and this required question is still blank. */}
+                    {submitAttempted && question.required && !hasQuestionAnswer(question, answers[question.id]) ? (
+                      <div role="alert" style={scrollItemWarnText}>
+                        This question is required — please answer it to finish.
+                      </div>
+                    ) : null}
                   </div>
                 )}
               />
