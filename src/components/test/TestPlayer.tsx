@@ -7,7 +7,7 @@ import { MathText } from './MathText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
 import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
-import type { PublicTest, PublicQuestion, AnswerSubmission } from '@/lib/test/types';
+import type { PublicTest, PublicQuestion, PublicSection, AnswerSubmission } from '@/lib/test/types';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
 
@@ -190,6 +190,57 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
      "i/total". Initialised to the first question and kept in sync by
      ScrollBody via setScrollActiveId. */
   const [scrollActiveId, setScrollActiveId] = useState<string | null>(() => test.questions[0]?.id ?? null);
+
+  /* ── Sections (stage-b, scroll mode only) ────────────────────────
+     When a scroll-mode test has sections, the player shows ONE section
+     at a time. `sectionGroups` is the ordered list of { section,
+     questions } to page through; an implicit trailing group holds any
+     unsectioned questions so nothing is ever dropped. Sectionless tests
+     and card mode get `null` here and behave exactly as before.
+     Declared up here (above attemptSubmit/navigatorFinish) because
+     those callbacks reference it. */
+  const sectionGroups = useMemo(() => {
+    if (test.layout !== 'scroll') return null;
+    const secs = [...(test.sections ?? [])].sort((a, b) => a.position - b.position);
+    if (secs.length === 0) return null;
+    const groups: Array<{ section: PublicSection | null; questions: PublicQuestion[] }> =
+      secs.map(s => ({ section: s, questions: test.questions.filter(qq => qq.section_id === s.id) }));
+    const known = new Set(secs.map(s => s.id));
+    const unsectioned = test.questions.filter(qq => !qq.section_id || !known.has(qq.section_id));
+    if (unsectioned.length) groups.push({ section: null, questions: unsectioned });
+    return groups.filter(g => g.questions.length > 0);
+  }, [test.layout, test.sections, test.questions]);
+
+  const isSectioned = !!sectionGroups && sectionGroups.length > 0;
+  const [currentSectionIdx, setCurrentSectionIdx] = useState(0);
+  const currentGroup = isSectioned ? sectionGroups![Math.min(currentSectionIdx, sectionGroups!.length - 1)] : null;
+  const isLastSection = !isSectioned || currentSectionIdx >= (sectionGroups!.length - 1);
+
+  /* Advance to the next section: scroll to top, focus its first
+     question. In strict mode there's no going back (the Back control is
+     hidden in the footer). */
+  const goToNextSection = useCallback(() => {
+    if (!sectionGroups) return;
+    setCurrentSectionIdx(prev => {
+      const next = Math.min(prev + 1, sectionGroups.length - 1);
+      const firstQ = sectionGroups[next]?.questions[0];
+      if (firstQ) setScrollActiveId(firstQ.id);
+      if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
+      return next;
+    });
+  }, [sectionGroups]);
+
+  const goToPrevSection = useCallback(() => {
+    if (!sectionGroups) return;
+    setCurrentSectionIdx(prev => {
+      const next = Math.max(prev - 1, 0);
+      const firstQ = sectionGroups[next]?.questions[0];
+      if (firstQ) setScrollActiveId(firstQ.id);
+      if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
+      return next;
+    });
+  }, [sectionGroups]);
+
   const [answers, setAnswers] = useState<Record<string, AnswerSubmission['value']>>({});
   const [errMsg, setErrMsg] = useState<string | null>(null);
   const [done, setDone] = useState<Done | null>(null);
@@ -468,12 +519,24 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     if (test.layout === 'scroll') {
       if (firstMissingRequiredIdx >= 0) {
         const missing = test.questions[firstMissingRequiredIdx];
+        setSubmitAttempted(true); // arm per-item required messages
+        /* Sectioned: if the missing required is in a different section,
+           switch to that section first (its item then renders with the
+           required note). Same section → just scroll to it. */
+        if (sectionGroups) {
+          const targetSecIdx = sectionGroups.findIndex(g => g.questions.some(qq => qq.id === missing.id));
+          if (targetSecIdx >= 0 && targetSecIdx !== currentSectionIdx) {
+            setCurrentSectionIdx(targetSecIdx);
+            setScrollActiveId(missing.id);
+            if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
+            return;
+          }
+        }
         const el = typeof document !== 'undefined'
           ? document.querySelector(`[data-qid="${missing.id}"]`) as HTMLElement | null
           : null;
         if (el) centreInViewport(el);
         setScrollActiveId(missing.id);
-        setSubmitAttempted(true); // arm per-item required messages
         return;
       }
       setSubmitAttempted(false);
@@ -481,7 +544,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     } else {
       attemptSubmit();
     }
-  }, [attemptSubmit, centreInViewport, firstMissingRequiredIdx, submit, test.layout, test.questions]);
+  }, [attemptSubmit, centreInViewport, firstMissingRequiredIdx, submit, test.layout, test.questions, sectionGroups, currentSectionIdx]);
 
   /* For the shared Navigator + scroll-mode footer progress display. */
   const scrollActiveIdx = useMemo(() => {
@@ -795,11 +858,16 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
 
   /* Continuous listening audio is an independent feature from layout —
      when a track is set it plays during the question phase in BOTH card
-     and scroll modes. The bar is fixed to the top of the viewport above
-     whichever layout renders below. */
-  const audioActive = !!test.listening_audio_url && phase === 'question';
+     and scroll modes. For SECTIONED scroll tests the audio is the
+     CURRENT section's track (and switches as the student advances);
+     otherwise it's the test-level `listening_audio_url`. The bar is
+     fixed to the top of the viewport above whichever layout renders
+     below. A `key` on the bar forces a fresh <audio> per section so the
+     new track actually loads + autoplays on section change. */
+  const activeAudioUrl = isSectioned ? (currentGroup?.section?.audio_url ?? null) : (test.listening_audio_url ?? null);
+  const audioActive = !!activeAudioUrl && phase === 'question';
   const listeningBar = audioActive ? (
-    <ListeningAudioBar url={test.listening_audio_url!} />
+    <ListeningAudioBar key={isSectioned ? `sec-${currentSectionIdx}` : 'global'} url={activeAudioUrl!} />
   ) : null;
 
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
@@ -813,6 +881,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
         {listeningBar}
         <ScrollBody
           test={test}
+          items={isSectioned ? currentGroup!.questions : test.questions}
           device={device}
           themeVars={themeVars}
           answers={answers}
@@ -826,11 +895,22 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
           total={total}
           submitAttempted={submitAttempted}
           audioActive={audioActive}
+          section={isSectioned ? {
+            title: currentGroup!.section?.title || `Section ${currentSectionIdx + 1}`,
+            index: currentSectionIdx,
+            count: sectionGroups!.length,
+            isLast: isLastSection,
+            strict: !!test.strict_sections,
+            onNext: goToNextSection,
+            onPrev: goToPrevSection,
+          } : null}
         />
         {/* phase is already narrowed to 'question'|'submitting' here
-            by the earlier intro/done/error early returns, so no
-            additional phase gate needed. */}
-        {navigatorOpen ? (
+            by the earlier intro/done/error early returns. The numbered
+            navigator is hidden in sectioned mode (cross-section jumps
+            conflict with one-section-at-a-time + forward-only; a
+            section-aware navigator is a later refinement). */}
+        {navigatorOpen && !isSectioned ? (
           <NavigatorOverlay
             questions={test.questions}
             answers={answers}
@@ -1133,6 +1213,7 @@ function ListeningAudioBar({ url }: { url: string }) {
    top for listening exams. */
 function ScrollBody({
   test,
+  items,
   device,
   themeVars,
   answers,
@@ -1146,8 +1227,12 @@ function ScrollBody({
   total,
   submitAttempted,
   audioActive,
+  section,
 }: {
   test: PublicTest;
+  /* The questions to render. Defaults (sectionless) to the whole test;
+     in sectioned mode it's just the current section's questions. */
+  items: PublicQuestion[];
   device: 'mobile' | 'desktop';
   themeVars?: Record<string, string>;
   answers: Record<string, AnswerSubmission['value']>;
@@ -1164,6 +1249,18 @@ function ScrollBody({
   activeIdx: number;
   phase: Phase;
   total: number;
+  /* When set, the test is in sectioned mode: render a section header
+     and a section footer (Prev/"Section X of Y"/Next-section or Submit)
+     instead of the flat Questions/progress/Submit footer. */
+  section: {
+    title: string;
+    index: number;
+    count: number;
+    isLast: boolean;
+    strict: boolean;
+    onNext: () => void;
+    onPrev: () => void;
+  } | null;
   /* True once a finish was attempted with a required question blank —
      unanswered required items then show their "required" note. */
   submitAttempted: boolean;
@@ -1186,12 +1283,12 @@ function ScrollBody({
         if (e.isIntersecting) visible.add(id);
         else visible.delete(id);
       }
-      const first = test.questions.find(qq => visible.has(qq.id));
+      const first = items.find(qq => visible.has(qq.id));
       if (first) setActiveId(first.id);
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
     itemRefs.current.forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, [test.questions]);
+  }, [items, setActiveId]);
 
   /* Edge guard — the IntersectionObserver's centre band misses the
      first and last questions when the user is scrolled all the way to
@@ -1206,17 +1303,17 @@ function ScrollBody({
       const docHeight = document.documentElement.scrollHeight;
       const EDGE = 140;
       if (top < EDGE) {
-        const first = test.questions[0];
+        const first = items[0];
         if (first) setActiveId(first.id);
       } else if (viewportBottom >= docHeight - EDGE) {
-        const last = test.questions[test.questions.length - 1];
+        const last = items[items.length - 1];
         if (last) setActiveId(last.id);
       }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
-  }, [test.questions]);
+  }, [items, setActiveId]);
 
   const setItemRef = (id: string) => (el: HTMLElement | null) => {
     if (el) itemRefs.current.set(id, el);
@@ -1226,7 +1323,13 @@ function ScrollBody({
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
       <div className="test-scroll__list" style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
-        {test.questions.map((question) => {
+        {section ? (
+          <div style={scrollSectionHeader}>
+            <span style={scrollSectionKicker}>Section {section.index + 1} of {section.count}</span>
+            {section.title ? <h2 style={scrollSectionTitle}>{section.title}</h2> : null}
+          </div>
+        ) : null}
+        {items.map((question) => {
           const active = question.id === activeId;
           return (
             <section
@@ -1285,27 +1388,49 @@ function ScrollBody({
         })}
       </div>
 
-      {/* Footer mirrors card-mode chrome: a Questions button on the
-          left that opens the same numbered-grid navigator overlay,
-          centre progress (current/total), Submit on the right. */}
+      {/* Footer. Sectioned: [Back?] · "Section X of Y" · [Next section →
+          / Submit]. Back is hidden in strict (forward-only) mode and on
+          the first section. Sectionless: the original Questions /
+          progress / Submit row. */}
       <div className="test-scroll__footer" style={scrollFooter}>
         <div style={scrollFooterInner}>
-          <button
-            type="button"
-            onClick={onOpenNavigator}
-            style={secondaryButton(false)}
-          >
-            Questions
-          </button>
-          <div style={navProgress}>{activeIdx + 1} / {total}</div>
-          <button
-            type="button"
-            onClick={onSubmit}
-            disabled={phase === 'submitting'}
-            style={primaryButton(phase === 'submitting')}
-          >
-            {phase === 'submitting' ? 'Submitting…' : 'Submit'}
-          </button>
+          {section ? (
+            <>
+              {!section.strict && section.index > 0 ? (
+                <button type="button" onClick={section.onPrev} style={secondaryButton(false)}>
+                  Back
+                </button>
+              ) : <span />}
+              <div style={navProgress}>Section {section.index + 1} / {section.count}</div>
+              <button
+                type="button"
+                onClick={section.isLast ? onSubmit : section.onNext}
+                disabled={phase === 'submitting'}
+                style={primaryButton(phase === 'submitting')}
+              >
+                {phase === 'submitting' ? 'Submitting…' : section.isLast ? 'Submit' : 'Next section'}
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type="button"
+                onClick={onOpenNavigator}
+                style={secondaryButton(false)}
+              >
+                Questions
+              </button>
+              <div style={navProgress}>{activeIdx + 1} / {total}</div>
+              <button
+                type="button"
+                onClick={onSubmit}
+                disabled={phase === 'submitting'}
+                style={primaryButton(phase === 'submitting')}
+              >
+                {phase === 'submitting' ? 'Submitting…' : 'Submit'}
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -1909,6 +2034,31 @@ const scrollList: React.CSSProperties = {
      duplicates any of that. */
   maxWidth: 1120,
   margin: '0 auto',
+};
+
+/* Sectioned scroll mode — header above the section's questions. */
+const scrollSectionHeader: React.CSSProperties = {
+  maxWidth: 1120,
+  margin: '0 auto',
+  padding: '0 8px',
+};
+
+const scrollSectionKicker: React.CSSProperties = {
+  display: 'inline-block',
+  fontSize: 12,
+  fontWeight: 800,
+  letterSpacing: 0.6,
+  textTransform: 'uppercase',
+  color: '#6b4fbb',
+  marginBottom: 4,
+};
+
+const scrollSectionTitle: React.CSSProperties = {
+  margin: 0,
+  fontSize: 22,
+  fontWeight: 700,
+  lineHeight: 1.25,
+  color: 'var(--test-theme-question, #1c1626)',
 };
 
 /* Scroll items render borderless by design — the focus dim (opacity)
