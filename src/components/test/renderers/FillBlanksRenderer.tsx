@@ -42,6 +42,15 @@ export function FillBlanksPlayer({ template, blanks, blankWidths, value, onChang
 
 function blankInputWidth(value: string | undefined, answerLengthHint: number | undefined) {
   const typedLength = (value ?? '').length;
-  const ch = Math.min(28, Math.max(4, typedLength, answerLengthHint ?? 4));
+  /* `ch` is the width of the '0' glyph, but proportional fonts render
+     many letters wider than that (an 'm' is ~1.5ch). With the input's
+     box-sizing: border-box + 0.45em side padding, the inline width below
+     maps almost 1:1 to the available text area, so a bare `typedLength`
+     of ch left the text cramped and clipped the last character on wide
+     words (e.g. "name", whose 'm' overflows a 4ch box). Add ~2 chars of
+     slack to cover wide glyphs + the caret. The trailing `+ 0.9em`
+     offsets the horizontal padding so the slack lands on the content,
+     not the padding. */
+  const ch = Math.min(30, Math.max(5, typedLength + 2, (answerLengthHint ?? 4) + 2));
   return `calc(${ch}ch + 0.9em)`;
 }
