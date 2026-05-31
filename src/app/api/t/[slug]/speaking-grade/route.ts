@@ -161,6 +161,18 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     fd.append('model', 'gpt-4o-transcribe');
     // gpt-4o-transcribe supports only `json` (not `text`/`verbose_json`).
     fd.append('response_format', 'json');
+    // Bias toward a faithful, complete transcript. The model still drops
+    // most disfluencies (um/uh) — ASR normalizes those out regardless — but
+    // this measurably improves retention of trailing words (e.g. a closing
+    // "thank you") that the model otherwise sometimes clips, and keeps the
+    // output literal rather than paraphrased.
+    fd.append(
+      'prompt',
+      'Transcribe the audio verbatim and completely, word for word, '
+      + 'exactly as spoken from the first word to the last. Include filler '
+      + 'words, false starts, and repetitions. Do not paraphrase, summarize, '
+      + 'or omit anything.',
+    );
     const sttRes = await fetch(OPENAI_TRANSCRIBE_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
