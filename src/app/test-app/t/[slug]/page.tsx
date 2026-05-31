@@ -12,7 +12,7 @@ type PreviewDevice = 'desktop' | 'mobile';
    row up front with a shuffle seed; the client stores the {responseId,
    seed} in localStorage keyed by slug so reloads reuse the same shuffle
    order and the same response row on submission. */
-type Session = { responseId: string; seed: string; startedAt?: string };
+type Session = { responseId: string; seed: string; startedAt?: string; consumedAudio?: string[] };
 
 function sessionKey(slug: string) { return `blim-test-session-${slug}`; }
 
@@ -75,9 +75,9 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
           body: JSON.stringify({ respondent_token: token }),
         });
         if (sessionRes.ok) {
-          const sj = await sessionRes.json() as { response_id?: string; seed?: string; started_at?: string };
+          const sj = await sessionRes.json() as { response_id?: string; seed?: string; started_at?: string; consumed_audio?: string[] };
           if (sj.response_id && sj.seed) {
-            openedSession = { responseId: sj.response_id, seed: sj.seed, startedAt: sj.started_at };
+            openedSession = { responseId: sj.response_id, seed: sj.seed, startedAt: sj.started_at, consumedAudio: sj.consumed_audio ?? [] };
             writeStoredSession(slug, openedSession);
           }
         }
@@ -124,7 +124,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
   }
 
   if (!showPreviewTools) {
-    return <TestPlayer test={test} responseId={session?.responseId} sessionStartedAt={session?.startedAt} />;
+    return <TestPlayer test={test} responseId={session?.responseId} sessionStartedAt={session?.startedAt} initialConsumedAudio={session?.consumedAudio} />;
   }
 
   return (
@@ -168,7 +168,7 @@ export default function PublicTestPage({ params }: { params: Promise<{ slug: str
         </button>
       </div>
       <div className="test-preview-frame">
-        <TestPlayer test={test} forceDevice={device} responseId={session?.responseId} sessionStartedAt={session?.startedAt} />
+        <TestPlayer test={test} forceDevice={device} responseId={session?.responseId} sessionStartedAt={session?.startedAt} initialConsumedAudio={session?.consumedAudio} />
       </div>
     </div>
   );

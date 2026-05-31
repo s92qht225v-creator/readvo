@@ -385,7 +385,7 @@ export function TestBuilder({ testId }: Props) {
     [questions],
   );
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'play_once_audio' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -1293,6 +1293,7 @@ export function TestBuilder({ testId }: Props) {
       {activeTopTab === 'create' && showListeningModal ? (
         <ListeningModal
           audioUrl={test.listening_audio_url ?? null}
+          playOnce={!!test.play_once_audio}
           sections={sections}
           getAccessToken={getAccessToken}
           onClose={() => setShowListeningModal(false)}
@@ -3218,8 +3219,10 @@ function LayoutModal({ layout, onClose, onChange }: {
 /* Listening modal — uploads a single continuous audio track that plays
    on the test page while the student answers. Works in both card and
    scroll layouts; presence/absence of audio is independent of layout. */
-function ListeningModal({ audioUrl, sections, getAccessToken, onClose, onChange, onJumpToSection }: {
+function ListeningModal({ audioUrl, playOnce, sections, getAccessToken, onClose, onChange, onJumpToSection }: {
   audioUrl: string | null;
+  /* Current `play_once_audio` value (the play-once toggle below). */
+  playOnce: boolean;
   /* Test-level sections (stage-b). When the test has at least one
      section, the global `listening_audio_url` is hidden in this
      modal — per-section audios take precedence on the player side,
@@ -3228,7 +3231,7 @@ function ListeningModal({ audioUrl, sections, getAccessToken, onClose, onChange,
   sections: TestSection[];
   getAccessToken: () => Promise<string | null>;
   onClose: () => void;
-  onChange: (patch: Pick<Test, 'listening_audio_url'>) => void;
+  onChange: (patch: Partial<Pick<Test, 'listening_audio_url' | 'play_once_audio'>>) => void;
   onJumpToSection: (sectionId: string) => void;
 }) {
   const [uploading, setUploading] = useState(false);
@@ -3381,11 +3384,37 @@ function ListeningModal({ audioUrl, sections, getAccessToken, onClose, onChange,
               ) : null}
             </>
           )}
+          {(!!audioUrl || sections.some(s => !!s.audio_url)) ? (
+            <label style={playOnceRow}>
+              <input
+                type="checkbox"
+                checked={playOnce}
+                onChange={(event) => onChange({ play_once_audio: event.target.checked })}
+                style={{ width: 16, height: 16, marginTop: 1, flexShrink: 0, cursor: 'pointer' }}
+              />
+              <span>
+                <span style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#2f2835' }}>Play audio once</span>
+                <span style={{ display: 'block', fontSize: 12, color: '#8b848f', lineHeight: 1.45, marginTop: 2 }}>
+                  Students can&apos;t rewind or replay it, and a page refresh won&apos;t restart it. Pausing is still allowed.
+                </span>
+              </span>
+            </label>
+          ) : null}
         </div>
       </div>
     </div>
   );
 }
+
+const playOnceRow: React.CSSProperties = {
+  display: 'flex',
+  gap: 10,
+  alignItems: 'flex-start',
+  marginTop: 16,
+  paddingTop: 14,
+  borderTop: '1px solid #efe9f1',
+  cursor: 'pointer',
+};
 
 function DropletIcon() {
   return (

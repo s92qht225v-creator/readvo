@@ -240,6 +240,10 @@ export interface Test {
      sections and replay audio. Defaults to false so stage-(a) tests
      behave identically. */
   strict_sections?: boolean;
+  /* Listening audio plays once: no seek/replay, and consumption is
+     persisted per respondent so a page refresh can't replay it.
+     Independent of `strict_sections`. Defaults to false. */
+  play_once_audio?: boolean;
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
@@ -442,6 +446,9 @@ export interface PublicTest {
      audio per section. When false (default): free back/next. Only
      meaningful when `sections.length > 0`. */
   strict_sections?: boolean;
+  /* Listening audio plays once (no seek/replay; consumption persisted per
+     respondent so refresh can't replay). Independent of strict_sections. */
+  play_once_audio?: boolean;
   /* Ordered list of the test's sections (empty if the test is
      sectionless). Each question's `section_id` references one of
      these ids. */

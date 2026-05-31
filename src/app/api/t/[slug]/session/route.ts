@@ -45,7 +45,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
      stable across reloads even if the client lost its localStorage. */
   const { data: existing } = await admin
     .from('test_responses')
-    .select('id, seed, started_at')
+    .select('id, seed, started_at, consumed_audio')
     .eq('test_id', test.id)
     .eq('respondent_token', token)
     .is('completed_at', null)
@@ -55,8 +55,15 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   if (existing && existing.seed) {
     /* started_at is returned so the player can anchor a countdown timer
        to the server-recorded session start — survives page refresh and
-       can't be reset by reloading. */
-    return NextResponse.json({ response_id: existing.id, seed: existing.seed, started_at: existing.started_at });
+       can't be reset by reloading. consumed_audio is the list of play-once
+       tracks this respondent already consumed, so a refresh re-locks them
+       instead of allowing a replay. */
+    return NextResponse.json({
+      response_id: existing.id,
+      seed: existing.seed,
+      started_at: existing.started_at,
+      consumed_audio: existing.consumed_audio ?? [],
+    });
   }
 
   const seed = randomUUID();
@@ -78,5 +85,5 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     return NextResponse.json({ error: error?.message ?? 'session_create_failed' }, { status: 500 });
   }
 
-  return NextResponse.json({ response_id: row.id, seed: row.seed, started_at: row.started_at });
+  return NextResponse.json({ response_id: row.id, seed: row.seed, started_at: row.started_at, consumed_audio: [] });
 }

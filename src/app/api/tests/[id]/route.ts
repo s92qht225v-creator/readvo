@@ -47,6 +47,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     layout?: 'card' | 'scroll';
     listening_audio_url?: string | null;
     strict_sections?: boolean;
+    play_once_audio?: boolean;
     is_graded?: boolean;
     is_marketplace?: boolean;
     marketplace_price?: number | null;
@@ -82,6 +83,8 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   }
   /* Forward-only / play-once toggle for sectioned listening exams. */
   if (typeof body.strict_sections === 'boolean') patch.strict_sections = body.strict_sections;
+  /* Play-once listening audio (independent of strict_sections). */
+  if (typeof body.play_once_audio === 'boolean') patch.play_once_audio = body.play_once_audio;
 
   /* Marketplace flag + price + summary. Owner-gated only — any test
      owner can flag their own test for sale. The marketplace tab is

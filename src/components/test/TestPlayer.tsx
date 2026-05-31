@@ -25,6 +25,10 @@ interface Props {
      The countdown timer is anchored to this instead of the client clock
      so it survives a page refresh and can't be reset by reloading. */
   sessionStartedAt?: string;
+  /* Play-once listening tracks this respondent already consumed (section
+     ids and/or 'global'), from POST /session. Seeds the local consumed
+     set so a refresh re-locks them instead of replaying. */
+  initialConsumedAudio?: string[];
 }
 
 type Phase = 'intro' | 'question' | 'submitting' | 'done' | 'error';
@@ -132,7 +136,7 @@ function hasQuestionAnswer(question: PublicQuestion, value?: AnswerSubmission['v
   return Object.keys(value).length > 0;
 }
 
-export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: Props) {
+export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, initialConsumedAudio }: Props) {
   // Single source of truth for "which device layout are we rendering".
   // Surfaces declare device explicitly (forceDevice) when they're known
   // to be a preview/builder; live runtime derives it from viewport width.
@@ -271,6 +275,37 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
   const [startedAt, setStartedAt] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const [cardOverflowing, setCardOverflowing] = useState(false);
+
+  /* ── Play-once listening audio ───────────────────────────────────
+     `playOnce` (test setting, off in preview) drives the locked
+     ListeningAudioBar. `consumedAudio` is the set of tracks (section id
+     or 'global') already played by this respondent — seeded from the
+     server session so a refresh re-locks them. `markAudioConsumed`
+     records a track locally + persists it so the lock survives reload. */
+  const playOnce = !!test.play_once_audio && !forceDevice;
+  const [consumedAudio, setConsumedAudio] = useState<Set<string>>(() => new Set(initialConsumedAudio ?? []));
+  const markAudioConsumed = useCallback((trackId: string) => {
+    setConsumedAudio(prev => {
+      if (prev.has(trackId)) return prev;
+      const next = new Set(prev);
+      next.add(trackId);
+      return next;
+    });
+    if (forceDevice) return; // preview: don't persist
+    void (async () => {
+      try {
+        await fetch(`/api/t/${test.slug}/audio-consumed`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            respondent_token: ensureRespondentToken(test.slug),
+            response_id: responseId,
+            track_id: trackId,
+          }),
+        });
+      } catch { /* best-effort; the local set still locks for this load */ }
+    })();
+  }, [forceDevice, responseId, test.slug]);
 
   /* ── Refresh-resilient autosave ──────────────────────────────────
      Persist the in-progress attempt (answers + collected respondent
@@ -912,9 +947,20 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
   const audioKey = isSectioned
     ? `sec-${currentSectionIdx}`
     : (sectionGroups ? `card-sec-${cardQuestionSection?.id ?? 'none'}` : 'global');
+  /* Track identity for play-once consumption: the section's id when the
+     audio belongs to a section, else 'global' for the test-level track. */
+  const activeAudioTrackId = isSectioned
+    ? (currentGroup?.section?.id ?? 'global')
+    : (sectionGroups ? (cardQuestionSection?.id ?? 'global') : 'global');
   const audioActive = !!activeAudioUrl && phase === 'question';
   const listeningBar = audioActive ? (
-    <ListeningAudioBar key={audioKey} url={activeAudioUrl!} />
+    <ListeningAudioBar
+      key={audioKey}
+      url={activeAudioUrl!}
+      playOnce={playOnce}
+      consumed={consumedAudio.has(activeAudioTrackId)}
+      onConsumed={() => markAudioConsumed(activeAudioTrackId)}
+    />
   ) : null;
 
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
@@ -1275,24 +1321,106 @@ function SectionScoreBreakdown({ sections }: { sections: SectionScore[] }) {
   );
 }
 
-function ListeningAudioBar({ url }: { url: string }) {
+function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
+  url: string;
+  /* Play-once mode: no seek/replay; consumption persisted (refresh-proof). */
+  playOnce: boolean;
+  /* Whether THIS track was already consumed by the respondent (e.g. before
+     a refresh). Snapshotted at mount to decide the locked state. */
+  consumed: boolean;
+  onConsumed: () => void;
+}) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  /* Try to autoplay the continuous track. Works when the student
-     arrived via a Start click (welcome screen); otherwise the browser
-     blocks it and the visible controls let them press play manually. */
+  /* Snapshot `consumed` at mount: a track already consumed (after refresh)
+     mounts locked. We deliberately ignore later `consumed` changes for THIS
+     instance — when playback starts we mark the track consumed, which flips
+     the prop, but the live bar must keep playing rather than re-lock. */
+  const [lockedOnMount] = useState(playOnce && consumed);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [ended, setEnded] = useState(false);
+  const maxTimeRef = useRef(0);
+  const consumedFiredRef = useRef(false);
+
+  /* Try to autoplay. Works when the student arrived via a Start click;
+     otherwise the browser blocks it and the visible Play control lets them
+     start it manually. Locked tracks never load/play. */
   useEffect(() => {
     const el = audioRef.current;
-    if (!el) return;
-    el.play().catch(() => { /* autoplay blocked — controls remain */ });
-  }, [url]);
+    if (!el || lockedOnMount) return;
+    el.play().catch(() => { /* autoplay blocked — control remains */ });
+  }, [url, lockedOnMount]);
+
+  /* Locked: already played once. No audio element, no replay. */
+  if (playOnce && lockedOnMount) {
+    return (
+      <div className="test-listening-bar" style={listeningBarStyle}>
+        <div style={listeningBarInner}>
+          <span style={listeningBarLabel}><HeadphonesGlyph /> Listening</span>
+          <span style={listeningLockedNote}>Audio already played</span>
+        </div>
+      </div>
+    );
+  }
+
+  /* Normal mode: full native controls (seek + replay allowed). */
+  if (!playOnce) {
+    return (
+      <div className="test-listening-bar" style={listeningBarStyle}>
+        <div style={listeningBarInner}>
+          <span style={listeningBarLabel}><HeadphonesGlyph /> Listening</span>
+          <audio ref={audioRef} src={url} controls style={{ flex: 1, minWidth: 0 }} />
+        </div>
+      </div>
+    );
+  }
+
+  /* Play-once, not yet consumed: custom non-seekable player. Play/pause
+     only; progress is display-only; seeking is clamped to the furthest
+     point reached; once it ends it can't be replayed. */
+  const fireConsumed = () => {
+    if (!consumedFiredRef.current) { consumedFiredRef.current = true; onConsumed(); }
+  };
+  const clampSeek = () => {
+    const el = audioRef.current;
+    if (el && el.currentTime > maxTimeRef.current + 0.4) el.currentTime = maxTimeRef.current;
+  };
   return (
     <div className="test-listening-bar" style={listeningBarStyle}>
       <div style={listeningBarInner}>
-        <span style={listeningBarLabel}>
-          <HeadphonesGlyph />
-          Listening
+        <span style={listeningBarLabel}><HeadphonesGlyph /> Listening</span>
+        <button
+          type="button"
+          style={listeningPlayBtn(ended)}
+          disabled={ended}
+          aria-label={ended ? 'Finished' : playing ? 'Pause' : 'Play'}
+          onClick={() => {
+            const el = audioRef.current;
+            if (!el) return;
+            if (el.paused) el.play().catch(() => {}); else el.pause();
+          }}
+        >
+          {ended ? '✓' : playing ? '❚❚' : '▶'}
+        </button>
+        <span style={listeningProgressTrack} aria-hidden="true">
+          <span style={{ ...listeningProgressFill, width: `${Math.round(progress * 100)}%` }} />
         </span>
-        <audio ref={audioRef} src={url} controls style={{ flex: 1, minWidth: 0 }} />
+        <audio
+          ref={audioRef}
+          src={url}
+          style={{ display: 'none' }}
+          onPlay={() => { setPlaying(true); fireConsumed(); }}
+          onPause={() => setPlaying(false)}
+          onEnded={() => { setEnded(true); setPlaying(false); setProgress(1); }}
+          onSeeking={clampSeek}
+          onTimeUpdate={() => {
+            const el = audioRef.current;
+            if (!el) return;
+            if (el.currentTime > maxTimeRef.current + 0.4) { el.currentTime = maxTimeRef.current; return; }
+            maxTimeRef.current = Math.max(maxTimeRef.current, el.currentTime);
+            if (el.duration > 0) setProgress(Math.min(1, el.currentTime / el.duration));
+          }}
+        />
       </div>
     </div>
   );
@@ -2127,6 +2255,44 @@ const sectionBreakdownTitle: React.CSSProperties = {
 const sectionBreakdownScore: React.CSSProperties = {
   flexShrink: 0,
   fontVariantNumeric: 'tabular-nums',
+};
+
+const listeningLockedNote: React.CSSProperties = {
+  flex: 1,
+  minWidth: 0,
+  fontSize: 13,
+  fontWeight: 600,
+  color: '#94a3b8',
+  fontStyle: 'italic',
+};
+const listeningPlayBtn = (ended: boolean): React.CSSProperties => ({
+  flexShrink: 0,
+  width: 34,
+  height: 34,
+  borderRadius: '50%',
+  border: 'none',
+  background: ended ? '#cbd5e1' : 'var(--test-theme-button, #1c1626)',
+  color: ended ? '#475569' : 'var(--test-theme-button-text, #fff)',
+  fontSize: 12,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  cursor: ended ? 'default' : 'pointer',
+});
+const listeningProgressTrack: React.CSSProperties = {
+  flex: 1,
+  minWidth: 0,
+  height: 6,
+  borderRadius: 3,
+  background: 'rgba(28, 22, 38, 0.12)',
+  overflow: 'hidden',
+};
+const listeningProgressFill: React.CSSProperties = {
+  display: 'block',
+  height: '100%',
+  borderRadius: 3,
+  background: 'var(--test-theme-button, #1c1626)',
+  transition: 'width 200ms linear',
 };
 
 const listeningBarStyle: React.CSSProperties = {
