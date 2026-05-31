@@ -191,16 +191,15 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
      ScrollBody via setScrollActiveId. */
   const [scrollActiveId, setScrollActiveId] = useState<string | null>(() => test.questions[0]?.id ?? null);
 
-  /* ── Sections (stage-b, scroll mode only) ────────────────────────
-     When a scroll-mode test has sections, the player shows ONE section
-     at a time. `sectionGroups` is the ordered list of { section,
-     questions } to page through; an implicit trailing group holds any
-     unsectioned questions so nothing is ever dropped. Sectionless tests
-     and card mode get `null` here and behave exactly as before.
-     Declared up here (above attemptSubmit/navigatorFinish) because
-     those callbacks reference it. */
+  /* ── Sections (stage-b) ──────────────────────────────────────────
+     `sectionGroups` is the ordered list of { section, questions } when
+     the test has sections — LAYOUT-AGNOSTIC (used by both scroll's
+     section-by-section paging AND card mode's navigator grouping +
+     per-section audio). An implicit trailing group holds any
+     unsectioned questions so nothing is ever dropped. `null` when the
+     test has no sections (behaves exactly as stage-a). Declared up here
+     because attemptSubmit/navigatorFinish reference it. */
   const sectionGroups = useMemo(() => {
-    if (test.layout !== 'scroll') return null;
     const secs = [...(test.sections ?? [])].sort((a, b) => a.position - b.position);
     if (secs.length === 0) return null;
     const groups: Array<{ section: PublicSection | null; questions: PublicQuestion[] }> =
@@ -209,9 +208,10 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     const unsectioned = test.questions.filter(qq => !qq.section_id || !known.has(qq.section_id));
     if (unsectioned.length) groups.push({ section: null, questions: unsectioned });
     return groups.filter(g => g.questions.length > 0);
-  }, [test.layout, test.sections, test.questions]);
+  }, [test.sections, test.questions]);
 
-  const isSectioned = !!sectionGroups && sectionGroups.length > 0;
+  /* Scroll-mode section-by-section paging applies only in scroll layout. */
+  const isSectioned = !!sectionGroups && sectionGroups.length > 0 && test.layout === 'scroll';
   const [currentSectionIdx, setCurrentSectionIdx] = useState(0);
   const currentGroup = isSectioned ? sectionGroups![Math.min(currentSectionIdx, sectionGroups!.length - 1)] : null;
   const isLastSection = !isSectioned || currentSectionIdx >= (sectionGroups!.length - 1);
@@ -856,18 +856,28 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
 
   if (!q) return null;
 
-  /* Continuous listening audio is an independent feature from layout —
-     when a track is set it plays during the question phase in BOTH card
-     and scroll modes. For SECTIONED scroll tests the audio is the
-     CURRENT section's track (and switches as the student advances);
-     otherwise it's the test-level `listening_audio_url`. The bar is
-     fixed to the top of the viewport above whichever layout renders
-     below. A `key` on the bar forces a fresh <audio> per section so the
-     new track actually loads + autoplays on section change. */
-  const activeAudioUrl = isSectioned ? (currentGroup?.section?.audio_url ?? null) : (test.listening_audio_url ?? null);
+  /* Continuous listening audio is independent of layout. Which track
+     plays depends on whether the test has sections:
+     - SCROLL + sections → the CURRENT section's track (switches when the
+       student advances to the next section).
+     - CARD + sections → the CURRENT card question's section track
+       (switches as Next/Back crosses a section boundary).
+     - no sections → the test-level `listening_audio_url`.
+     The `audioKey` forces a fresh <audio> on each track change so the
+     new file actually loads + autoplays. The bar is fixed to the top of
+     the viewport above whichever layout renders below. */
+  const cardQuestionSection = sectionGroups
+    ? sectionGroups.find(g => g.section && g.questions.some(qq => qq.id === q.id))?.section ?? null
+    : null;
+  const activeAudioUrl = isSectioned
+    ? (currentGroup?.section?.audio_url ?? null)
+    : (sectionGroups ? (cardQuestionSection?.audio_url ?? null) : (test.listening_audio_url ?? null));
+  const audioKey = isSectioned
+    ? `sec-${currentSectionIdx}`
+    : (sectionGroups ? `card-sec-${cardQuestionSection?.id ?? 'none'}` : 'global');
   const audioActive = !!activeAudioUrl && phase === 'question';
   const listeningBar = audioActive ? (
-    <ListeningAudioBar key={isSectioned ? `sec-${currentSectionIdx}` : 'global'} url={activeAudioUrl!} />
+    <ListeningAudioBar key={audioKey} url={activeAudioUrl!} />
   ) : null;
 
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
@@ -919,6 +929,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
             total={total}
             remainingSeconds={remainingSeconds}
             submitting={phase === 'submitting'}
+            /* Sectionless scroll only reaches here (sectioned scroll
+               hides the navigator), so no grouping. */
+            sectionGroups={null}
             onClose={() => setNavigatorOpen(false)}
             onGoTo={navigatorGoTo}
             onFinish={navigatorFinish}
@@ -1023,6 +1036,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
         total={total}
         remainingSeconds={remainingSeconds}
         submitting={phase === 'submitting'}
+        sectionGroups={sectionGroups}
         onClose={() => setNavigatorOpen(false)}
         onGoTo={(targetIdx) => { setNavigatorOpen(false); goToIdx(targetIdx); }}
         onFinish={() => { setNavigatorOpen(false); attemptSubmit(); }}
@@ -1045,6 +1059,7 @@ function NavigatorOverlay({
   total,
   remainingSeconds,
   submitting,
+  sectionGroups,
   onClose,
   onGoTo,
   onFinish,
@@ -1056,10 +1071,32 @@ function NavigatorOverlay({
   total: number;
   remainingSeconds: number | null;
   submitting: boolean;
+  /* When the test has sections, the grid is grouped under section
+     titles. Each button still navigates by GLOBAL question index
+     (computed from `questions`), so onGoTo semantics are unchanged. */
+  sectionGroups: Array<{ section: PublicSection | null; questions: PublicQuestion[] }> | null;
   onClose: () => void;
   onGoTo: (targetIdx: number) => void;
   onFinish: () => void;
 }) {
+  const globalIdxById = new Map(questions.map((qq, i) => [qq.id, i] as const));
+  const renderButton = (question: PublicQuestion) => {
+    const questionIndex = globalIdxById.get(question.id) ?? 0;
+    const answered = hasQuestionAnswer(question, answers[question.id]);
+    const current = questionIndex === currentIdx;
+    return (
+      <button
+        key={question.id}
+        type="button"
+        onClick={() => onGoTo(questionIndex)}
+        aria-current={current ? 'step' : undefined}
+        aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
+        style={navigatorQuestionButton(current, answered)}
+      >
+        {questionIndex + 1}
+      </button>
+    );
+  };
   return (
     <AnimatePresence>
       <motion.div
@@ -1098,24 +1135,23 @@ function NavigatorOverlay({
               <span style={navigatorCount}>{answeredCount}/{total}</span>
             </div>
             <div style={navigatorGridScroller}>
-              <div style={navigatorGrid}>
-                {questions.map((question, questionIndex) => {
-                  const answered = hasQuestionAnswer(question, answers[question.id]);
-                  const current = questionIndex === currentIdx;
-                  return (
-                    <button
-                      key={question.id}
-                      type="button"
-                      onClick={() => onGoTo(questionIndex)}
-                      aria-current={current ? 'step' : undefined}
-                      aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
-                      style={navigatorQuestionButton(current, answered)}
-                    >
-                      {questionIndex + 1}
-                    </button>
-                  );
-                })}
-              </div>
+              {sectionGroups ? (
+                /* Sectioned: each section gets a sub-header + its own grid. */
+                sectionGroups.map((group, gi) => (
+                  <div key={group.section?.id ?? `unsectioned-${gi}`} style={navigatorSectionBlock}>
+                    <div style={navigatorSectionLabel}>
+                      {group.section?.title || (group.section ? `Section ${gi + 1}` : 'Other questions')}
+                    </div>
+                    <div style={navigatorGrid}>
+                      {group.questions.map(renderButton)}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div style={navigatorGrid}>
+                  {questions.map(renderButton)}
+                </div>
+              )}
             </div>
           </section>
           <button
@@ -1939,6 +1975,19 @@ const navigatorGridScroller: React.CSSProperties = {
   overflowY: 'auto',
   overflowX: 'hidden',
   scrollbarWidth: 'none',
+};
+
+const navigatorSectionBlock: React.CSSProperties = {
+  marginBottom: 14,
+};
+
+const navigatorSectionLabel: React.CSSProperties = {
+  fontSize: 11,
+  fontWeight: 800,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  color: '#8b858c',
+  marginBottom: 10,
 };
 
 const navigatorGrid: React.CSSProperties = {
