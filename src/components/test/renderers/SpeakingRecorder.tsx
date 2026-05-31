@@ -71,7 +71,12 @@ export function SpeakingRecorder({
         stopTracks();
         void uploadAudio();
       };
-      recorder.start(100);
+      // Record into a SINGLE finalized blob (no timeslice). A 100ms timeslice
+      // emits many small chunks whose concatenation produces a webm that
+      // decoders can't read past the first cluster — so long answers got
+      // transcribed as only the first few seconds. Without a timeslice the
+      // browser finalizes one complete, fully-decodable file on stop.
+      recorder.start();
       setCountdown(maxSeconds);
       setState('recording');
       // Live countdown.
