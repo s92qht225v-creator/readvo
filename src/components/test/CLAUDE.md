@@ -1187,13 +1187,46 @@ work). A sectionless test behaves exactly like stage (a).
   the FK) / `moveQuestionToSection` hit the routes above and update local
   state so the rail re-renders without a refetch.
 
-### Still TODO (b3 / b3.5 / b4)
+### Player (stage-b shipped)
 
-- Player: render one section at a time in scroll mode, switch the audio
-  bar per section in both layouts, "Section X of Y" + Next-section,
-  forward-only enforcement when `strict_sections`, section group
-  headers in the navigator, per-section required-guard, optional
-  results-by-section.
+Section-by-section scroll player, per-section audio switching (both
+layouts), "Section X of Y" + Next-section, forward-only enforcement when
+`strict_sections`, navigator section headers, per-section required-guard
+— all built (b3/b3.5/b4).
+
+## Results-by-section (stage-c · `summarizeSectionScores`)
+
+Graded tests with sections show a per-part score breakdown.
+
+- **`summarizeSectionScores(questions, valueByQid, sections)`** in
+  `grade.ts` — server-side only (grades against the canonical key, so
+  answer keys never reach the client). Counts only **submitted +
+  gradable** answers, mirroring the overall score's denominator exactly,
+  so the per-section totals always **sum to the overall `score / total`**
+  (a skipped optional question is excluded from its section, same as it's
+  excluded from the overall — avoids a "3/4 overall vs parts summing to
+  3/5" mismatch on the done screen). Returns `[]` for sectionless tests;
+  unsectioned answered questions fall into a trailing "Other questions"
+  bucket; empty buckets drop; sections ordered by `position`.
+- **Student**: `POST /api/t/[slug]/responses` returns `sections:
+  SectionScore[]`; `TestPlayer` done screen renders
+  `<SectionScoreBreakdown>` under the overall score (graded + sectioned
+  only).
+- **Teacher**: `GET /api/tests/[id]/responses` computes `section_scores`
+  per response from the canonical questions/sections (no migration, no
+  keys to client; covers historical responses since nothing is
+  persisted). `ResponsesTable` renders them as chips inside each expanded
+  response.
+- **NO database change** — `section_id` already on questions,
+  `is_correct` already on answers; the breakdown is pure compute.
+
+### Still TODO (stage-c remainder)
+
+- **Play-once audio**: `ListeningAudioBar` is still a native
+  `<audio controls>` (free seek/replay). Make it non-seekable /
+  non-replayable, gated on a NEW separate `play_once_audio` toggle
+  (independent of `strict_sections`), with server-side "consumed" state
+  to close the refresh-replay loophole.
 
 ## Webpack mode
 
