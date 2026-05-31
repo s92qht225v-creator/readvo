@@ -186,7 +186,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     : script === 'ar' ? 'Arabic'
     : 'English';
   const { criteria, score, maxScore, feedback } = transcript
-    ? await judgeRubric(transcript, rubric, langLabel)
+    ? await judgeRubric(transcript, rubric, langLabel, question.prompt as string)
     : {
         criteria: rubric.map(c => ({ id: c.id, verdict: 'none' as const, earned: 0, note: '' })),
         score: 0,

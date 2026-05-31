@@ -40,18 +40,26 @@ export async function judgeRubric(
   transcript: string,
   rubric: SpeakingRubricCriterion[],
   langLabel: string,
+  question?: string,
 ): Promise<RubricResult> {
   const maxScore = rubricMaxScore(rubric);
 
   const sys =
-    `You grade a student's spoken reply (given as a transcript) against a rubric. ` +
+    `You grade a student's spoken reply (given as a transcript) to a question, against a rubric. ` +
+    `Judge the reply AS AN ANSWER TO THAT QUESTION: whether it is relevant/on-topic, and whether its ` +
+    `grammar and tense fit what the question asks (e.g. a present-habit question like "What time do you ` +
+    `usually get up?" should be answered in the present, so a past-tense reply is a grammar/relevance error). ` +
     `For each rubric criterion, decide whether the reply satisfies it: "full", "partial", or "none". ` +
     `Be fair: judge meaning, not exact wording. ` +
     `Respond with ONLY a JSON object of the shape ` +
     `{"criteria":[{"id":string,"verdict":"full"|"partial"|"none","note":string}],"feedback":string}. ` +
     `Each "note" briefly justifies the verdict for that criterion. ` +
     `IMPORTANT: write every "note" and the overall "feedback" in ${langLabel} only.`;
-  const user = JSON.stringify({ transcript, rubric: rubric.map(c => ({ id: c.id, text: c.text, weight: c.weight })) });
+  const user = JSON.stringify({
+    question: question ?? '',
+    transcript,
+    rubric: rubric.map(c => ({ id: c.id, text: c.text, weight: c.weight })),
+  });
 
   try {
     const res = await openai.chat.completions.create({
