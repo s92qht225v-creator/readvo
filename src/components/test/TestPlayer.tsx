@@ -593,7 +593,14 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
      startQuestions was never called). Falls back to "now" only if the
      server didn't supply a start (offline session-open failure). */
   useEffect(() => {
-    const anchorIso = sessionStartedAt;
+    /* Authoring surfaces (builder/preview, `forceDevice` set) must NOT
+       anchor to the real session's `started_at`. A timed test whose
+       session was opened earlier is already past its limit, so anchoring
+       to it would make the preview load with the clock at 0 and instantly
+       auto-submit to the end screen. Anchor preview to "now" so it shows a
+       fresh full countdown purely for display (auto-submit is also gated
+       off below). */
+    const anchorIso = forceDevice ? new Date().toISOString() : sessionStartedAt;
     const anchorMs = anchorIso ? new Date(anchorIso).getTime() : NaN;
     const startMs = Number.isFinite(anchorMs) ? anchorMs : Date.now();
     setStartedAt(anchorIso ?? new Date(startMs).toISOString());
@@ -602,7 +609,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
       setTimerEndsAt(ends);
       setRemainingSeconds(Math.max(0, Math.ceil((ends - Date.now()) / 1000)));
     }
-  }, [sessionStartedAt, timerLimitSeconds]);
+  }, [sessionStartedAt, timerLimitSeconds, forceDevice]);
 
   const onChange = (v: AnswerSubmission['value']) => {
     if (!q) return;
@@ -658,7 +665,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     const tick = () => {
       const next = Math.max(0, Math.ceil((timerEndsAt - Date.now()) / 1000));
       setRemainingSeconds(next);
-      if (next <= 0 && !submitted) {
+      /* Preview/builder (forceDevice) never auto-submits — it's authoring,
+         not a real attempt. The countdown is display-only there. */
+      if (next <= 0 && !submitted && !forceDevice) {
         submitted = true;
         void submit(true);
       }
@@ -667,7 +676,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
     tick();
     const interval = window.setInterval(tick, 250);
     return () => window.clearInterval(interval);
-  }, [phase, timerEndsAt, submit]);
+  }, [phase, timerEndsAt, submit, forceDevice]);
 
   useEffect(() => {
     if (phase !== 'question') return;
