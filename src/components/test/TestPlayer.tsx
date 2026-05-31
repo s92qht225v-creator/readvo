@@ -8,6 +8,7 @@ import { detectScriptLang } from '@/lib/test/scriptLang';
 import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
 import type { PublicTest, PublicQuestion, PublicSection, AnswerSubmission } from '@/lib/test/types';
+import type { SectionScore } from '@/lib/test/grade';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import './test-player.css';
 
@@ -31,6 +32,7 @@ type Phase = 'intro' | 'question' | 'submitting' | 'done' | 'error';
 interface Done {
   score: number | null;
   total: number | null;
+  sections: SectionScore[];
 }
 
 type RespondentProfile = {
@@ -425,7 +427,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
       return;
     }
     const j = await res.json();
-    setDone({ score: j.score ?? null, total: j.total ?? null });
+    setDone({ score: j.score ?? null, total: j.total ?? null, sections: Array.isArray(j.sections) ? j.sections : [] });
     setPhase('done');
     /* Clear the session marker + autosaved answers now that the row has
        been completed — a refresh of the done screen would otherwise
@@ -846,6 +848,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt }: 
                 {timeExpired ? 'Time is up. Your answers were submitted.' : description}
               </p>
             )}
+            {test.is_graded && done?.sections && done.sections.length > 0 ? (
+              <SectionScoreBreakdown sections={done.sections} />
+            ) : null}
             {endScreen?.showSocialShare ? (
               <div style={socialRow}>
                 <span>Share</span><span>𝕏</span><span>f</span><span>in</span>
@@ -1252,6 +1257,24 @@ function HeadphonesGlyph() {
    of layout: a test can have audio in either mode, or neither. The
    parent shells pad their top edges (96px) to keep their content from
    sliding under the bar. */
+/* Results-by-section breakdown shown on the student's done screen (graded
+   tests with sections). Each row: section title + correct/total. */
+function SectionScoreBreakdown({ sections }: { sections: SectionScore[] }) {
+  return (
+    <div style={sectionBreakdownWrap}>
+      {sections.map((s, i) => (
+        <div key={s.section_id ?? `none-${i}`} style={sectionBreakdownRow}>
+          <span style={sectionBreakdownTitle}>{s.title}</span>
+          <span style={sectionBreakdownScore}>
+            <b style={{ color: '#1c1626' }}>{s.correct}</b>
+            <span style={{ opacity: 0.55 }}> / {s.total}</span>
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ListeningAudioBar({ url }: { url: string }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   /* Try to autoplay the continuous track. Works when the student
@@ -2075,6 +2098,35 @@ const scrollShell: React.CSSProperties = {
   background: 'var(--test-theme-background, #fff)',
   fontFamily: 'var(--test-theme-font-family, inherit)',
   /* padding-bottom owned by `.test-scroll` CSS (centres last card). */
+};
+
+const sectionBreakdownWrap: React.CSSProperties = {
+  width: '100%',
+  marginTop: 4,
+  border: '1px solid rgba(28, 22, 38, 0.1)',
+  borderRadius: 10,
+  overflow: 'hidden',
+};
+const sectionBreakdownRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 12,
+  padding: '10px 14px',
+  fontSize: 15,
+  borderTop: '1px solid rgba(28, 22, 38, 0.07)',
+};
+const sectionBreakdownTitle: React.CSSProperties = {
+  color: 'var(--test-theme-description, #475569)',
+  textAlign: 'left',
+  minWidth: 0,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+};
+const sectionBreakdownScore: React.CSSProperties = {
+  flexShrink: 0,
+  fontVariantNumeric: 'tabular-nums',
 };
 
 const listeningBarStyle: React.CSSProperties = {

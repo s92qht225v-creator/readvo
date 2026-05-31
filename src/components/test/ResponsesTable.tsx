@@ -18,6 +18,7 @@ interface ResponseRow {
   completed_at: string | null;
   score: number | null;
   timed_out?: boolean;
+  section_scores?: { section_id: string | null; title: string; correct: number; total: number }[];
 }
 
 interface AnswerRow {
@@ -229,6 +230,15 @@ export function ResponsesTable({ testId }: Props) {
                   </button>
                   {open ? (
                     <div style={answerDetailGrid}>
+                      {test.is_graded && r.section_scores && r.section_scores.length > 0 ? (
+                        <div style={sectionChipRow}>
+                          {r.section_scores.map((s, i) => (
+                            <span key={s.section_id ?? `none-${i}`} style={sectionChip}>
+                              {s.title}: <b style={{ color: '#1c1917' }}>{s.correct}/{s.total}</b>
+                            </span>
+                          ))}
+                        </div>
+                      ) : null}
                       {questions.map(q => {
                         const a = myAnswers.find(x => x.question_id === q.id);
                         return (
@@ -884,6 +894,23 @@ const answerDetailGrid: CSSProperties = {
   gap: 8,
   padding: '12px 16px 16px',
   borderTop: '1px solid #f0ebe5',
+};
+
+const sectionChipRow: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 6,
+  marginBottom: 2,
+};
+
+const sectionChip: CSSProperties = {
+  padding: '5px 10px',
+  background: '#f5f5f4',
+  border: '1px solid #ece9e5',
+  borderRadius: 3,
+  fontSize: 12,
+  fontWeight: 700,
+  color: '#57534e',
 };
 
 const answerDetailCard: CSSProperties = {

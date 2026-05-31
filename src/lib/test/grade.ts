@@ -181,6 +181,60 @@ export function hasAnswer(question: TestQuestion, value: AnswerSubmission['value
   return false;
 }
 
+/** One section's gradable score, for the results-by-section breakdown. */
+export interface SectionScore {
+  section_id: string | null;
+  title: string;
+  correct: number;
+  /** Gradable questions in the section (unanswered count toward total as wrong). */
+  total: number;
+}
+
+/**
+ * Per-section gradable scores for a single response. Server-side only (it
+ * grades against the canonical answer key). Used by both the public submit
+ * route (student done screen) and the owner responses route (teacher view).
+ *
+ * - Returns [] for sectionless tests (no breakdown to show).
+ * - Ungradable questions (no answer key / free-text) are excluded entirely.
+ * - Unanswered gradable questions count toward `total` as wrong, so "4/5"
+ *   means 4 correct of 5 gradable questions in that part — not "of answered".
+ * - Sections are ordered by `position`; a trailing "Other questions" bucket
+ *   collects gradable questions with no section. Empty buckets are dropped.
+ */
+export function summarizeSectionScores(
+  questions: TestQuestion[],
+  valueByQid: Map<string, AnswerSubmission['value']>,
+  sections: { id: string; title: string; position: number }[],
+): SectionScore[] {
+  if (sections.length === 0) return [];
+  const orderedSecs = [...sections].sort((a, b) => a.position - b.position);
+  const titleFor = new Map(orderedSecs.map(s => [s.id, s.title]));
+  const buckets = new Map<string, SectionScore>();
+  const NONE = '__none__';
+  for (const q of questions) {
+    const ic = gradeAnswer(q, valueByQid.get(q.id) ?? ({} as AnswerSubmission['value']));
+    if (ic === null) continue; // ungradable — not part of any section score
+    const sid = q.section_id ?? null;
+    const key = sid ?? NONE;
+    let b = buckets.get(key);
+    if (!b) {
+      b = { section_id: sid, title: sid ? (titleFor.get(sid) ?? 'Section') : 'Other questions', correct: 0, total: 0 };
+      buckets.set(key, b);
+    }
+    b.total += 1;
+    if (ic) b.correct += 1;
+  }
+  const result: SectionScore[] = [];
+  for (const s of orderedSecs) {
+    const b = buckets.get(s.id);
+    if (b && b.total > 0) result.push(b);
+  }
+  const none = buckets.get(NONE);
+  if (none && none.total > 0) result.push(none);
+  return result;
+}
+
 function scrambleIdToIndex(questionId: string, id: string, count: number): number | null {
   for (let i = 0; i < count; i++) {
     if (publicOptionId(questionId, 'scramble', i) === id) return i;

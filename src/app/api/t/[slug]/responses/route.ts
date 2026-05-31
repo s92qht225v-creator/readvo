@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
-import { gradeAnswer, hasAnswer } from '@/lib/test/grade';
+import { gradeAnswer, hasAnswer, summarizeSectionScores } from '@/lib/test/grade';
 import type { TestQuestion, ResponseSubmission } from '@/lib/test/types';
 
 const DOUBLE_SUBMIT_WINDOW_MS = 30_000;
@@ -205,10 +205,25 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     }
   }
 
+  /* Per-section breakdown for the student's done screen (graded tests with
+     sections only). Computed over ALL non-hidden questions so unanswered
+     gradable questions count as wrong, mirroring the overall score. */
+  let sectionScores: ReturnType<typeof summarizeSectionScores> = [];
+  if (test.is_graded) {
+    const { data: sectionRows } = await admin
+      .from('test_sections')
+      .select('id, title, position')
+      .eq('test_id', test.id);
+    if (sectionRows && sectionRows.length > 0) {
+      sectionScores = summarizeSectionScores([...qMap.values()], submitted, sectionRows);
+    }
+  }
+
   return NextResponse.json({
     ok: true,
     response_id: respRow.id,
     score: respRow.score,
     total: gradeable ? answerRows.filter(r => r.is_correct !== null).length : null,
+    sections: sectionScores,
   });
 }
