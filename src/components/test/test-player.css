@@ -34,6 +34,12 @@
    never gets tiny or huge. */
 [data-test-device="mobile"] .test-player__card {
   --test-title-size: clamp(15px, 5.4cqw, 22px) !important;
+  /* Description + answer text get the same container-scaled treatment so they
+     too wrap to the same line count on every phone width (the old
+     clamp(13px, ~2.1cqw, 16px) floored at 13px on phones → fixed size →
+     width-dependent wrapping, same bug the title had). */
+  --test-description-size: clamp(12px, 4.2cqw, 16px) !important;
+  --test-answer-size: clamp(12px, 4.2cqw, 16px) !important;
 }
 
 @media (max-width: 640px) {
