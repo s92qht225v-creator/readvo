@@ -9,7 +9,7 @@
      source order — leaving titles and options narrower than the
      media on real phones. */
   --test-mobile-column: min(100%, 480px);
-  --test-title-size: clamp(21px, 4.25cqw, 34px);
+  --test-title-size: clamp(18px, 3.6cqw, 28px);
   --test-description-size: clamp(13px, 2.1cqw, 16px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);
   --test-small-size: clamp(10px, 1.55cqw, 13px);
@@ -54,7 +54,7 @@
   /* Unify mobile typography so the title, description and answer text
      read at consistent sizes. */
   .test-player__card .test-player__title {
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1.3 !important;
   }
 

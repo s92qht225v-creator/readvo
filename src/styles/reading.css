@@ -11682,7 +11682,7 @@ body {
 .test-preview-shell--mobile .test-player__title {
   width: var(--test-mobile-preview-column, min(100%, 303px)) !important;
   max-width: 100% !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
   line-height: 1.3 !important;
   /* Spacing owned by qmedia flex gap system (see tq-options.css).
@@ -11858,7 +11858,7 @@ body {
   }
 
   .test-player__title {
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 1.3 !important;
     /* Spacing owned by .qmedia-header (gap:12px between title and
        description) and .qmedia-layout (--qm-gap between header and
