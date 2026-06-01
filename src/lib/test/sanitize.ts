@@ -46,6 +46,11 @@ function questionDescription(options: unknown): string | undefined {
   return typeof description === 'string' && description.trim() ? description : undefined;
 }
 
+function questionInstruction(options: unknown): string | undefined {
+  const instruction = (options as { instruction?: unknown } | null)?.instruction;
+  return typeof instruction === 'string' && instruction.trim() ? instruction : undefined;
+}
+
 function questionMedia(q: TestQuestion): PublicQuestion['media'] {
   const media = normalizeQuestionMedia((q.options as { media?: unknown } | null)?.media, q.type);
   if (!media) return undefined;
@@ -105,6 +110,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'multiple_choice',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -121,6 +127,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'short_text',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -137,6 +144,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'long_answer',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -153,6 +161,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'number',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -173,6 +182,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'dropdown',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -192,6 +202,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'checkbox',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -207,6 +218,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'opinion_scale',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -227,6 +239,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'rating',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -248,6 +261,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'picture_choice',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -263,6 +277,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'true_false',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {},
@@ -277,6 +292,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'match',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -303,6 +319,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'ordering',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -324,6 +341,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'fill_blanks',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -347,6 +365,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'scramble',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {
@@ -363,6 +382,7 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
       type: 'speaking',
       prompt: q.prompt,
       description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
       media: questionMedia(q),
       required: q.required,
       options: {

@@ -430,6 +430,9 @@ export interface PublicQuestion {
   type: QuestionType;
   prompt: string;
   description?: string;
+  /** Optional directive shown ABOVE the question text (e.g. "Read and
+   *  select the best option."). Stored in options.instruction. */
+  instruction?: string;
   media?: QuestionMedia;
   required: boolean;
   /** Same FK as the builder side. Player groups questions by this id

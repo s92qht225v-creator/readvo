@@ -3589,6 +3589,11 @@ function getQuestionDescription(q: BuilderQuestion): string {
   return typeof description === 'string' ? description : '';
 }
 
+function getQuestionInstruction(q: BuilderQuestion): string {
+  const instruction = (q.options as { instruction?: unknown }).instruction;
+  return typeof instruction === 'string' ? instruction : '';
+}
+
 function getQuestionMedia(q: BuilderQuestion) {
   const media = (q.options as { media?: unknown }).media;
   if (!media || typeof media !== 'object') return undefined;
@@ -3620,6 +3625,7 @@ function PreviewCanvas({
   const [previewOverflowing, setPreviewOverflowing] = useState(false);
   // Convert the builder question to the public shape (no answer keys)
   const description = getQuestionDescription(q);
+  const instruction = getQuestionInstruction(q);
   const media = getQuestionMedia(q);
   let previewQ: PublicQuestion;
   if (q.type === 'multiple_choice') {
@@ -3886,6 +3892,11 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
+                {instruction.trim() ? (
+                  <div className="tb-preview-instruction" dir="auto" lang={detectScriptLang(instruction)} style={previewInstruction}>
+                    <MathText>{instruction}</MathText>
+                  </div>
+                ) : null}
                 <h2 className="tb-preview-title" dir="auto" lang={detectScriptLang(q.prompt)} style={{
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
                   // Match the live player's questionTitle tracking (TestPlayer.tsx
@@ -5317,6 +5328,17 @@ const previewHint: React.CSSProperties = {
   fontStyle: 'italic',
   margin: 0,
   fontWeight: 500,
+};
+
+/* Mirrors TestPlayer.tsx `questionInstruction` so the builder canvas shows the
+   directive above the question the same way the live player does. */
+const previewInstruction: React.CSSProperties = {
+  fontSize: 15,
+  color: 'var(--test-theme-description, #8b848f)',
+  margin: 0,
+  fontWeight: 600,
+  lineHeight: 1.4,
+  letterSpacing: -0.2,
 };
 
 const previewAnswerArea: React.CSSProperties = {

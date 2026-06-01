@@ -1050,6 +1050,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             forceDevice={forceDevice}
             header={(
               <>
+                {q.instruction ? (
+                  <p className="test-player__instruction" style={questionInstruction} dir="auto" lang={detectScriptLang(q.instruction)}>
+                    <MathText>{q.instruction}</MathText>
+                  </p>
+                ) : null}
                 <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(q.prompt)}>
                   {q.prompt ? <MathText>{q.prompt}</MathText> : '…'}
                 </h2>
@@ -1596,6 +1601,11 @@ function ScrollBody({
                 media={question.media}
                 header={(
                   <>
+                    {question.instruction ? (
+                      <p className="test-player__instruction" style={questionInstruction} dir="auto" lang={detectScriptLang(question.instruction)}>
+                        <MathText>{question.instruction}</MathText>
+                      </p>
+                    ) : null}
                     <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
                       {question.prompt ? <MathText>{question.prompt}</MathText> : '…'}
                     </h2>
@@ -2027,6 +2037,19 @@ const questionDescription: React.CSSProperties = {
   color: 'var(--test-theme-description, #8b848f)',
   fontSize: 16,
   lineHeight: 1.5,
+};
+
+/* Directive shown ABOVE the question title (e.g. "Read and select the best
+   option."). Muted + semibold so it reads as an instruction, not the question.
+   margin:0 — spacing comes from the qmedia header flex-gap, like the
+   description. */
+const questionInstruction: React.CSSProperties = {
+  margin: 0,
+  color: 'var(--test-theme-description, #8b848f)',
+  fontSize: 15,
+  fontWeight: 600,
+  lineHeight: 1.4,
+  letterSpacing: -0.2,
 };
 
 const answerWrap: React.CSSProperties = {};

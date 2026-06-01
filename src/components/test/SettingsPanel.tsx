@@ -53,6 +53,15 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
       </div>
 
       <Section title="Content" hideTitle>
+        <Field label="Instruction">
+          <textarea
+            value={getQuestionInstruction(q)}
+            onChange={e => onChange(setQuestionInstruction(q, e.target.value))}
+            rows={1}
+            placeholder="Optional directive shown above the question (e.g. Read and select the best option.)"
+            style={textareaStyle}
+          />
+        </Field>
         <Field label="Question text">
           <textarea
             value={q.prompt}
@@ -428,6 +437,21 @@ function setQuestionDescription(q: BuilderQuestion, description: string): Builde
     options: {
       ...(q.options as Record<string, unknown>),
       description,
+    } as BuilderQuestion['options'],
+  };
+}
+
+function getQuestionInstruction(q: BuilderQuestion): string {
+  const instruction = (q.options as { instruction?: unknown }).instruction;
+  return typeof instruction === 'string' ? instruction : '';
+}
+
+function setQuestionInstruction(q: BuilderQuestion, instruction: string): BuilderQuestion {
+  return {
+    ...q,
+    options: {
+      ...(q.options as Record<string, unknown>),
+      instruction,
     } as BuilderQuestion['options'],
   };
 }
