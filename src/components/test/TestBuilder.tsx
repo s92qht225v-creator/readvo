@@ -3888,6 +3888,11 @@ function PreviewCanvas({
               <>
                 <h2 className="tb-preview-title" dir="auto" lang={detectScriptLang(q.prompt)} style={{
                   fontSize: 'calc(34px * var(--test-theme-font-scale, 1))', fontWeight: 400, margin: 0, lineHeight: 1.12,
+                  // Match the live player's questionTitle tracking (TestPlayer.tsx
+                  // `questionTitle.letterSpacing`) so the builder canvas wraps the
+                  // prompt identically — without this the looser builder text wrapped
+                  // to an extra line vs the live player.
+                  letterSpacing: -0.6,
                   color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                 }}>
                   {q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…'}
