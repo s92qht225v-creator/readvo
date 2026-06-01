@@ -1,5 +1,9 @@
-.tb-preview-card,
-.test-player__card {
+/* Builder canvas card only. The live player + ?preview=1 shell get the
+   same token set from test-player.css's .test-player__card block, where
+   --test-title-size is a flat 20px. Keeping .test-player__card OUT of this
+   selector lets the builder keep its own title clamp without re-imposing
+   it on the live/preview surfaces. */
+.tb-preview-card {
   --test-title-size: clamp(18px, 3.6cqw, 28px);
   --test-description-size: clamp(13px, 2.1cqw, 16px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);
