@@ -60,7 +60,10 @@
   font-weight: 400 !important;
   line-height: 26px !important;
   color: #000 !important;
-  letter-spacing: 0 !important;
+  /* Match the live/preview mobile title tracking (reading.css
+     @media max-width:640px + .test-preview-shell--mobile = -0.2px) so the
+     builder mobile canvas wraps the prompt like a real phone. */
+  letter-spacing: -0.2px !important;
   margin-bottom: 10px !important;
 }
 
