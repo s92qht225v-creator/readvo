@@ -9,10 +9,9 @@
      source order — leaving titles and options narrower than the
      media on real phones. */
   --test-mobile-column: min(100%, 480px);
-  /* Live desktop player + ?preview=1 shell render the question title at a
-     flat 20px (mobile is overridden to 16px in the max-width:640px /
-     preview-shell--mobile blocks). The builder canvas keeps its own
-     clamp on .tb-preview-card. */
+  /* Desktop: flat 20px. Every surface caps the card at 1120px on desktop, so
+     the title wraps identically everywhere. Mobile overrides this to a
+     container-scaled size below. */
   --test-title-size: 20px;
   --test-description-size: clamp(13px, 2.1cqw, 16px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);
@@ -24,6 +23,17 @@
   border: 1px solid #e4ded8 !important;
   border-radius: 7px !important;
   box-shadow: 0 14px 36px rgba(47, 40, 53, 0.08) !important;
+}
+
+/* Mobile: the title scales with the card width (container-query units) so the
+   number of wrapped lines is the SAME on every phone width — a 360px phone and
+   a 430px phone fit the same words per line — and the ?preview=1 / builder
+   mobile previews wrap like a real phone instead of being locked to one width.
+   Applies to live + preview shell (data-test-device on .test-player). Builder
+   sets the same on .tb-preview-card[data-test-device="mobile"]. Bounded so it
+   never gets tiny or huge. */
+[data-test-device="mobile"] .test-player__card {
+  --test-title-size: clamp(15px, 5.4cqw, 22px) !important;
 }
 
 @media (max-width: 640px) {

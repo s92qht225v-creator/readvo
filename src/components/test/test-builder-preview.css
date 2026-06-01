@@ -1,10 +1,9 @@
 /* Builder canvas card only. The live player + ?preview=1 shell get the
    same token set from test-player.css's .test-player__card block.
-   --test-title-size is a flat 20px on EVERY width to match the live player
-   (whose .test-player__card uses a flat 20px var on all viewports). The old
-   clamp floored to 18px on the narrow mobile canvas, so the builder rendered
-   the title smaller than the live/preview mobile (20px) — a 18-vs-20 wrap
-   mismatch. Flat 20px keeps builder desktop AND mobile identical to live. */
+   Desktop --test-title-size is a flat 20px (every surface caps the card at
+   1120px on desktop, so the title wraps identically). Mobile is overridden
+   below to a container-scaled size — same formula as the live player — so the
+   builder mobile canvas wraps like a real phone. */
 .tb-preview-card {
   --test-title-size: 20px;
   --test-description-size: clamp(13px, 2.1cqw, 16px);
@@ -13,6 +12,13 @@
   --test-answer-padding-y: clamp(7px, 1.7cqw, 12px);
   --test-answer-padding-x: clamp(8px, 2cqw, 14px);
   --test-option-gap: clamp(6px, 1.4cqw, 10px);
+}
+
+/* Mobile builder canvas: title scales with the card width (same clamp as the
+   live player / preview shell) so the wrapped line count is width-independent
+   and matches a real phone. */
+.tb-preview-card[data-test-device="mobile"] {
+  --test-title-size: clamp(15px, 5.4cqw, 22px) !important;
 }
 
 .tb-preview-card {
