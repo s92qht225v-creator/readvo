@@ -5333,7 +5333,7 @@ const previewHint: React.CSSProperties = {
 /* Mirrors TestPlayer.tsx `questionInstruction` so the builder canvas shows the
    directive above the question the same way the live player does. */
 const previewInstruction: React.CSSProperties = {
-  fontSize: 15,
+  fontSize: 18,
   color: 'var(--test-theme-description, #8b848f)',
   margin: 0,
   fontWeight: 600,

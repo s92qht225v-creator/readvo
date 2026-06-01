@@ -6,7 +6,7 @@
    builder mobile canvas wraps like a real phone. */
 .tb-preview-card {
   --test-title-size: 20px;
-  --test-description-size: clamp(13px, 2.1cqw, 16px);
+  --test-description-size: clamp(14px, 2.5cqw, 18px);
   --test-answer-size: clamp(13px, 2.15cqw, 16px);
   --test-small-size: clamp(10px, 1.55cqw, 13px);
   --test-answer-padding-y: clamp(7px, 1.7cqw, 12px);
@@ -19,7 +19,7 @@
    and matches a real phone. */
 .tb-preview-card[data-test-device="mobile"] {
   --test-title-size: clamp(15px, 5.4cqw, 28px) !important;
-  --test-description-size: clamp(12px, 4.2cqw, 22px) !important;
+  --test-description-size: clamp(14px, 4.8cqw, 24px) !important;
   --test-answer-size: clamp(12px, 4.2cqw, 22px) !important;
 }
 

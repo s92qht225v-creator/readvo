@@ -2046,7 +2046,7 @@ const questionDescription: React.CSSProperties = {
 const questionInstruction: React.CSSProperties = {
   margin: 0,
   color: 'var(--test-theme-description, #8b848f)',
-  fontSize: 15,
+  fontSize: 18,
   fontWeight: 600,
   lineHeight: 1.4,
   letterSpacing: -0.2,
