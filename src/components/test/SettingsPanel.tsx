@@ -57,8 +57,8 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           <textarea
             value={getQuestionInstruction(q)}
             onChange={e => onChange(setQuestionInstruction(q, e.target.value))}
-            rows={1}
-            placeholder="Optional directive shown above the question (e.g. Read and select the best option.)"
+            rows={3}
+            placeholder={'Optional — shown above the question.\ne.g. Read and select the best option.'}
             style={textareaStyle}
           />
         </Field>
