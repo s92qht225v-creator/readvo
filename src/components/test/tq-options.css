@@ -168,8 +168,12 @@
   --tq-option-min-h: 37px;
   --tq-option-pad-y: 6px;
   --tq-option-pad-x: 10px;
-  --tq-option-fs: 18px;
-  --tq-option-lh: 20px;
+  /* Container-scaled on mobile (was a fixed 18px) so answer-option text wraps
+     to the same line count on every phone width — like the title/description —
+     and stays slightly SMALLER than the title (which is clamp(15,5.4cqw,22)),
+     instead of ending up larger than the scaled-down question on a phone. */
+  --tq-option-fs: clamp(13px, 4.9cqw, 20px);
+  --tq-option-lh: 1.25;
   --tq-option-radius: 1px;
   --tq-option-content-gap: 8px;
   --tq-chip-size: 22px;
