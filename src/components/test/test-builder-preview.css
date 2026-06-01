@@ -13,13 +13,12 @@
   --test-option-gap: clamp(6px, 1.4cqw, 10px);
 }
 
-/* The builder desktop canvas renders a rigid, un-clamped 1120px card —
-   slightly wider than the live player / preview shell cards. Pin its title
-   to a flat 21px so it reads at the same visual size as the live player's
-   20px on the marginally smaller live/preview card. (Builder mobile keeps
-   the clamp above.) */
+/* Builder desktop canvas: match the live player / preview shell exactly.
+   The card horizontal padding was lowered from 80px → 52px (in TestBuilder)
+   so the content column width matches the live/preview cards, so the title
+   uses the same flat 20px too. (Builder mobile keeps the clamp above.) */
 .tb-preview-card--desktop {
-  --test-title-size: 21px;
+  --test-title-size: 20px;
 }
 
 .tb-preview-card {
