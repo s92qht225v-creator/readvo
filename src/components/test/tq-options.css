@@ -172,7 +172,7 @@
      to the same line count on every phone width — like the title/description —
      and stays slightly SMALLER than the title (which is clamp(15,5.4cqw,22)),
      instead of ending up larger than the scaled-down question on a phone. */
-  --tq-option-fs: clamp(13px, 4.9cqw, 20px);
+  --tq-option-fs: clamp(13px, 4.9cqw, 26px);
   --tq-option-lh: 1.25;
   --tq-option-radius: 1px;
   --tq-option-content-gap: 8px;

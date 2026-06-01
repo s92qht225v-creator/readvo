@@ -18,9 +18,9 @@
    live player / preview shell) so the wrapped line count is width-independent
    and matches a real phone. */
 .tb-preview-card[data-test-device="mobile"] {
-  --test-title-size: clamp(15px, 5.4cqw, 22px) !important;
-  --test-description-size: clamp(12px, 4.2cqw, 16px) !important;
-  --test-answer-size: clamp(12px, 4.2cqw, 16px) !important;
+  --test-title-size: clamp(15px, 5.4cqw, 28px) !important;
+  --test-description-size: clamp(12px, 4.2cqw, 22px) !important;
+  --test-answer-size: clamp(12px, 4.2cqw, 22px) !important;
 }
 
 .tb-preview-card {
