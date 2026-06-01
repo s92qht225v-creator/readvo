@@ -167,18 +167,26 @@
   --tq-list-gap: 7px;
   --tq-option-min-h: 37px;
   --tq-option-pad-y: 6px;
-  --tq-option-pad-x: 10px;
+  /* The option's horizontal chrome (side padding + checkbox + gap) is scaled
+     with the card width (container units) so it stays a CONSTANT FRACTION of
+     the card. Otherwise it's a fixed ~50px that's a bigger share of a narrow
+     card than a wide one, so the text column grows faster than the font and
+     wide phones fit fewer lines than narrow ones (the option wrapped 4 lines
+     on a 390px phone but 3 on a 480px phone). With proportional chrome the
+     text column tracks the card, so the option wraps to the same line count on
+     every phone — matching the preview. */
+  --tq-option-pad-x: clamp(8px, 3.1cqw, 16px);
   /* Container-scaled on mobile (was a fixed 18px) so answer-option text wraps
      to the same line count on every phone width — like the title/description —
-     and stays slightly SMALLER than the title (which is clamp(15,5.4cqw,22)),
+     and stays slightly SMALLER than the title (which is clamp(15,5.4cqw,28)),
      instead of ending up larger than the scaled-down question on a phone. */
   --tq-option-fs: clamp(13px, 4.9cqw, 26px);
   --tq-option-lh: 1.25;
   --tq-option-radius: 1px;
-  --tq-option-content-gap: 8px;
-  --tq-chip-size: 22px;
-  --tq-chip-fs: 11px;
-  --tq-checkbox-size: 22px;
+  --tq-option-content-gap: clamp(6px, 2.5cqw, 12px);
+  --tq-chip-size: clamp(18px, 6.9cqw, 30px);
+  --tq-chip-fs: clamp(9px, 3.5cqw, 16px);
+  --tq-checkbox-size: clamp(18px, 6.9cqw, 30px);
 
   --ti-fs: 15px;
   --ti-lh: 24px;
