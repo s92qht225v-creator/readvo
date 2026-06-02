@@ -12,6 +12,13 @@ export function getQuestionMedia(q: BuilderQuestion): QuestionMedia | undefined 
 export function setQuestionMedia(q: BuilderQuestion, media: QuestionMedia | undefined): BuilderQuestion {
   const options = normalizeQuestionOptionsMedia(q.type, q.options as Record<string, unknown>);
   const normalizedMedia = normalizeQuestionMedia(media, q.type);
+  /* Audio-only behaviours (lock-until-finished + play-once) are meaningless
+     without audio media. Drop them whenever the media is removed or swapped
+     to a non-audio type, so a stale flag can't silently do nothing. */
+  if (!normalizedMedia || normalizedMedia.type !== 'audio') {
+    delete (options as Record<string, unknown>).audioMustFinish;
+    delete (options as Record<string, unknown>).audioPlayOnce;
+  }
   if (normalizedMedia) {
     if (normalizedMedia.type === 'audio') {
       options.media = normalizedMedia;

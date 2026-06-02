@@ -3652,6 +3652,12 @@ function PreviewCanvas({
     ? exampleAnswerValue({ ...q, id: q.clientId } as unknown as TestQuestion)
     : undefined;
   const media = getQuestionMedia(q);
+  /* Audio-behaviour annotations — the canvas can't (and shouldn't) actually
+     lock/consume while editing, so surface the configured behaviour as chips
+     instead, so the teacher can SEE that a lock / play-once is in effect. */
+  const hasAudioMedia = media?.type === 'audio';
+  const audioMustFinishSet = hasAudioMedia && (q.options as { audioMustFinish?: unknown }).audioMustFinish === true;
+  const audioPlayOnceSet = hasAudioMedia && (q.options as { audioPlayOnce?: unknown }).audioPlayOnce === true;
   let previewQ: PublicQuestion;
   if (q.type === 'multiple_choice') {
     const opts = q.options as MultipleChoiceOptions;
@@ -3917,6 +3923,12 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
+                {(audioMustFinishSet || audioPlayOnceSet) ? (
+                  <div style={previewAudioFlags}>
+                    {audioMustFinishSet ? <span style={previewAudioFlagChip}>🔒 Locked until audio finishes</span> : null}
+                    {audioPlayOnceSet ? <span style={previewAudioFlagChip}>▶ Plays once — no replay</span> : null}
+                  </div>
+                ) : null}
                 {isExample ? <span className="tb-preview-example-badge" style={previewExampleBadge}>Example</span> : null}
                 {instruction.trim() ? (
                   <div className="tb-preview-instruction" dir="auto" lang={detectScriptLang(instruction)} style={previewInstruction}>
@@ -5365,6 +5377,31 @@ const previewInstruction: React.CSSProperties = {
   fontWeight: 600,
   lineHeight: 1.4,
   letterSpacing: -0.2,
+};
+
+/* Builder-only annotation chips that surface a question's audio behaviour
+   (lock / play-once) on the canvas — the live player enforces it, the canvas
+   just shows it's configured. */
+const previewAudioFlags: React.CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 6,
+  marginBottom: 4,
+};
+const previewAudioFlagChip: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 4,
+  alignSelf: 'flex-start',
+  padding: '3px 9px',
+  borderRadius: 999,
+  background: '#eff6ff',
+  border: '1px solid #bfdbfe',
+  color: '#1d4ed8',
+  fontSize: 12,
+  fontWeight: 600,
+  lineHeight: 1.3,
+  whiteSpace: 'nowrap',
 };
 
 /* Mirrors TestPlayer.tsx `exampleBadge`. */
