@@ -579,7 +579,12 @@ const framedImageStyle: React.CSSProperties = {
   display: 'block',
   width: '100%',
   height: '100%',
-  objectFit: 'cover',
+  /* `contain` (not cover) so an UNCROPPED image is shown whole. When the
+     card's height cap clamps the frame shorter than the image's aspect
+     ratio (tall portrait), cover would crop the top/bottom; contain scales
+     the full image to fit instead. For images whose frame already matches
+     their aspect (the common case) contain and cover look identical. */
+  objectFit: 'contain',
   transition: 'transform 160ms ease',
 };
 
