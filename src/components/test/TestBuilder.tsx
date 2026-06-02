@@ -259,6 +259,10 @@ export function TestBuilder({ testId }: Props) {
   const [activeTopTab, setActiveTopTab] = useState<'create' | 'share' | 'results'>(() => testBuilderTab(searchParams.get('tab')));
   const previewCanvasRef = useRef<HTMLDivElement | null>(null);
   const [previewCanvasSize, setPreviewCanvasSize] = useState({ width: 0, height: 0 });
+  /* Natural (unscaled) height of the active question card, reported by
+     PreviewCanvas. Lets the scale fit the WHOLE card on screen (grow to
+     fit), instead of pinning to a fixed frame height and scrolling. */
+  const [previewContentHeight, setPreviewContentHeight] = useState(0);
   const questionsRef = useRef<BuilderQuestion[]>([]);
   const dndSensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
@@ -773,7 +777,11 @@ export function TestBuilder({ testId }: Props) {
     const availableWidth = Math.max(0, previewCanvasSize.width - canvasPadX);
     const availableHeight = Math.max(0, previewCanvasSize.height - canvasPadY);
     if (!availableWidth || !availableHeight) return 1;
-    const fitScale = Math.min(1, availableWidth / frame.width, availableHeight / slide.height);
+    /* Fit the FULL card height (floored at the frame height for short
+       questions) so a tall card scales down to show entirely — no internal
+       scroll just because content is taller than the frame. */
+    const fitHeight = Math.max(slide.height, previewContentHeight);
+    const fitScale = Math.min(1, availableWidth / frame.width, availableHeight / fitHeight);
     return fitScale;
   })();
 
@@ -1164,7 +1172,7 @@ export function TestBuilder({ testId }: Props) {
               </div>
             );
           })() : activeQuestion ? (
-            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} />
+            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} onContentHeight={setPreviewContentHeight} />
           ) : (
             <div style={emptyCanvas}>
               <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>No questions yet</div>
@@ -3639,17 +3647,22 @@ function PreviewCanvas({
   previewDevice,
   theme,
   previewScale,
+  onContentHeight,
 }: {
   q: BuilderQuestion;
   qIndex: number;
   previewDevice: 'desktop' | 'mobile';
   theme?: TestThemeConfig | null;
   previewScale: number;
+  /* Report the card's natural (unscaled) height so the parent can scale
+     the whole card to fit — grow-to-fit instead of pin-and-scroll. */
+  onContentHeight?: (h: number) => void;
 }) {
   const slideSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const frameSize = BUILDER_PREVIEW_FRAME_SIZE[previewDevice];
   const themeVars = useMemo(() => testThemeCssVars(theme), [theme]);
   const previewCardRef = useRef<HTMLDivElement | null>(null);
+  const [contentHeight, setContentHeight] = useState(0);
   const [previewOverflowing, setPreviewOverflowing] = useState(false);
   // Convert the builder question to the public shape (no answer keys)
   const description = getQuestionDescription(q);
@@ -3865,10 +3878,21 @@ function PreviewCanvas({
   useEffect(() => {
     const frame = previewCardRef.current;
     if (!frame) return;
-    const overflowing = frame.scrollHeight > frame.clientHeight + 1;
-    setPreviewOverflowing(overflowing);
-    frame.scrollTop = 0;
-  }, [previewDevice, previewScale, q.clientId, q.prompt, description, media?.url, q.options]);
+    /* Measure the card's natural (unscaled) height and report it so the
+       parent's scale fits the whole card on screen. A ResizeObserver
+       catches async media (image/video) load changing the height. The
+       scale transform doesn't affect the layout box, so this never loops. */
+    const measure = () => {
+      const natural = frame.scrollHeight;
+      setContentHeight(natural);
+      onContentHeight?.(natural);
+      setPreviewOverflowing(natural > frameSize.height + 1);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(frame);
+    return () => ro.disconnect();
+  }, [previewDevice, q.clientId, q.prompt, description, media?.url, q.options, frameSize.height, onContentHeight]);
 
   const previewCardClassName = [
     'tb-preview-card',
@@ -3886,7 +3910,10 @@ function PreviewCanvas({
         ...previewWrap,
         width: frameSize.width * previewScale,
         maxWidth: 'none',
-        height: slideSize.height * previewScale,
+        /* Size the wrap to the SCALED card height (grow-to-fit) so the whole
+           card shows without an internal scrollbar. Floored at the frame
+           height so short questions keep a comfortable card. */
+        height: Math.max(slideSize.height, contentHeight) * previewScale,
         minHeight: slideSize.height * previewScale,
         overflow: 'hidden',
         display: 'block',
@@ -3901,15 +3928,16 @@ function PreviewCanvas({
           ...previewCard,
           ...themeVars,
           width: frameSize.width,
-          height: frameSize.height,
+          /* Grow to fit content (floored at the frame height). The parent
+             scales the whole card to fit the canvas, so it shows entirely
+             — no internal scrollbar when content is taller than the frame. */
+          height: 'auto',
           minHeight: frameSize.height,
           maxWidth: 'none',
           display: 'flex',
           flexDirection: 'column',
-          // safe center: vertically center when content fits, fall back to
-          // flex-start when it would overflow (prevents top-crop in one paint).
           justifyContent: 'safe center',
-          overflowY: 'auto',
+          overflowY: 'visible',
           overflowX: 'hidden',
           boxSizing: 'border-box',
           border: '1px solid #e4ded8',
