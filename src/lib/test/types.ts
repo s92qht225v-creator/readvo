@@ -440,6 +440,11 @@ export interface PublicQuestion {
    *  to the next question until that audio has played through once. Stored in
    *  options.audioMustFinish. */
   audioMustFinish?: boolean;
+  /** When true + this question has audio media: the audio plays straight
+   *  through ONCE — no pause, seek, or replay — and a refresh re-locks it
+   *  ("Audio already played"). Mirrors the listening-track play-once.
+   *  Stored in options.audioPlayOnce. */
+  audioPlayOnce?: boolean;
   /** When true this is a worked EXAMPLE (HSK-style): the answer is shown
    *  pre-selected, the inputs are locked, and it's excluded from the score.
    *  Stored in options.isExample. */

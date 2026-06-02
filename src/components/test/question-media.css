@@ -45,6 +45,13 @@
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
+.qmedia-audio-once-note {
+  flex: 1 1 auto;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: color-mix(in srgb, var(--qmedia-audio-ink) 72%, transparent);
+}
 .qmedia-audio-progress {
   position: relative;
   display: flex;

@@ -15,9 +15,14 @@ interface Props {
    *  Next wondering why — the clip starts itself (browser gesture
    *  permitting; the play control remains if autoplay is blocked). */
   autoPlayAudio?: boolean;
+  /** Play-once for AUDIO media: plays straight through once (no pause/
+   *  seek/replay), refresh-proof via consumed/onConsumed. */
+  audioPlayOnce?: boolean;
+  audioConsumed?: boolean;
+  onAudioConsumed?: () => void;
 }
 
-export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded, autoPlayAudio }: {
+export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded, autoPlayAudio, audioPlayOnce, audioConsumed, onAudioConsumed }: {
   media?: QuestionMedia;
   header?: React.ReactNode;
   answer?: React.ReactNode;
@@ -27,6 +32,10 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   onAudioEnded?: () => void;
   /** Auto-start the question's AUDIO media on mount (audio-locked questions). */
   autoPlayAudio?: boolean;
+  /** Play-once for the question's AUDIO media (refresh-proof). */
+  audioPlayOnce?: boolean;
+  audioConsumed?: boolean;
+  onAudioConsumed?: () => void;
 }) {
   const content = children ?? (
     <>
@@ -48,7 +57,7 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   if (media.type === 'audio') {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
-        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} autoPlayAudio={autoPlayAudio} />
+        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} autoPlayAudio={autoPlayAudio} audioPlayOnce={audioPlayOnce} audioConsumed={audioConsumed} onAudioConsumed={onAudioConsumed} />
         <div className="qmedia-content">{content}</div>
       </div>
     );
@@ -61,13 +70,13 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   );
 }
 
-export function QuestionMediaBlock({ media, className, style, onAudioEnded, autoPlayAudio }: Props) {
+export function QuestionMediaBlock({ media, className, style, onAudioEnded, autoPlayAudio, audioPlayOnce, audioConsumed, onAudioConsumed }: Props) {
   if (!media?.url) return null;
 
   if (media.type === 'audio') {
     return (
       <div className={className} style={{ ...audioFrameWrap, ...style }}>
-        <AudioPlayer src={media.url} onEnded={onAudioEnded} autoPlay={autoPlayAudio} />
+        <AudioPlayer src={media.url} onEnded={onAudioEnded} autoPlay={autoPlayAudio} playOnce={audioPlayOnce} consumed={audioConsumed} onConsumed={onAudioConsumed} />
       </div>
     );
   }
@@ -146,24 +155,57 @@ function FramedImage({ media, className, style, transform, initialAspect }: {
   );
 }
 
-function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => void; autoPlay?: boolean }) {
+function AudioPlayer({ src, onEnded, autoPlay, playOnce, consumed, onConsumed }: {
+  src: string;
+  onEnded?: () => void;
+  autoPlay?: boolean;
+  /* Play-once: plays straight through once — no pause, seek, or replay —
+     and (via consumed/onConsumed) re-locks after a refresh. Mirrors the
+     listening-track ListeningAudioBar play-once behaviour. */
+  playOnce?: boolean;
+  /* Whether THIS question's audio was already consumed by the respondent
+     (e.g. before a refresh). Snapshotted at mount to decide the locked state. */
+  consumed?: boolean;
+  /* Mark the track consumed (first play) so a refresh re-locks it. */
+  onConsumed?: () => void;
+}) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const onEndedRef = useRef(onEnded);
   onEndedRef.current = onEnded;
+  const onConsumedRef = useRef(onConsumed);
+  onConsumedRef.current = onConsumed;
 
-  /* Auto-start on mount for audio-locked questions (gesture permitting —
-     arriving via Start/Next gives the page user-activation so play()
-     usually succeeds; if the browser blocks it, the play control stays
-     so the student can start it manually). */
+  /* Play-once bookkeeping (mirrors ListeningAudioBar). Snapshot `consumed`
+     at mount: a track already heard mounts locked. `started` hides the play
+     button once playback begins; `poEnded` locks it when the clip finishes. */
+  const [lockedOnMount] = useState(!!playOnce && !!consumed);
+  const [started, setStarted] = useState(false);
+  const [poEnded, setPoEnded] = useState(false);
+  const maxTimeRef = useRef(0);
+  const endedRef = useRef(false);
+  const consumedFiredRef = useRef(false);
+
+  /* Auto-start on mount ONLY when explicitly asked (autoPlay — card-mode
+     audio-locked questions, where exactly one card is visible). Play-once
+     does NOT auto-attempt on its own: in scroll mode every question is on
+     one page, so mass-autoplay would overlap — play-once shows a one-time
+     Play button instead. Locked-on-mount play-once never loads/plays. */
   useEffect(() => {
-    if (!autoPlay) return;
+    if (lockedOnMount || !autoPlay) return;
     const audio = audioRef.current;
     if (!audio) return;
     audio.play().catch(() => { /* autoplay blocked — manual control remains */ });
-  }, [autoPlay, src]);
+  }, [autoPlay, lockedOnMount, src]);
+
+  /* A play-once track that mounts locked has effectively been heard — fire
+     onEnded once so any audio-lock gate on the same question doesn't trap a
+     respondent who already listened before a refresh. */
+  useEffect(() => {
+    if (lockedOnMount) onEndedRef.current?.();
+  }, [lockedOnMount]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -173,14 +215,40 @@ function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => 
     setCurrentTime(0);
     setIsPlaying(false);
 
+    const fireConsumed = () => {
+      if (!consumedFiredRef.current) { consumedFiredRef.current = true; onConsumedRef.current?.(); }
+    };
     const handleMetadata = () => setDuration(Number.isFinite(audio.duration) ? audio.duration : 0);
-    const handleTime = () => setCurrentTime(audio.currentTime);
-    const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
+    const handleTime = () => {
+      if (playOnce) {
+        /* Block forward skips; track furthest point reached. */
+        if (audio.currentTime > maxTimeRef.current + 0.4) { audio.currentTime = maxTimeRef.current; return; }
+        maxTimeRef.current = Math.max(maxTimeRef.current, audio.currentTime);
+      }
+      setCurrentTime(audio.currentTime);
+    };
+    const handlePlay = () => { setIsPlaying(true); if (playOnce) { setStarted(true); fireConsumed(); } };
+    const handlePause = () => {
+      setIsPlaying(false);
+      /* Play-once: no pausing — silently resume unless the clip ended
+         (guards against OS media keys / system pauses). */
+      if (playOnce && !endedRef.current && audio.duration && audio.currentTime < audio.duration - 0.3) {
+        audio.play().catch(() => {});
+      }
+    };
     const handleEnded = () => {
+      endedRef.current = true;
       setIsPlaying(false);
       setCurrentTime(audio.duration || 0);
+      if (playOnce) setPoEnded(true);
       onEndedRef.current?.();
+    };
+    /* Play-once: block ALL user seeks (forward AND rewind). Natural
+       playback never fires 'seeking', so any seek is a user jump — snap
+       back to the furthest point reached. */
+    const handleSeeking = () => {
+      if (!playOnce) return;
+      if (Math.abs(audio.currentTime - maxTimeRef.current) > 0.4) audio.currentTime = maxTimeRef.current;
     };
 
     audio.addEventListener('loadedmetadata', handleMetadata);
@@ -189,6 +257,7 @@ function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => 
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('seeking', handleSeeking);
 
     return () => {
       audio.removeEventListener('loadedmetadata', handleMetadata);
@@ -197,8 +266,9 @@ function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => 
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('seeking', handleSeeking);
     };
-  }, [src]);
+  }, [src, playOnce]);
 
   const progress = duration > 0 ? Math.min(100, Math.max(0, (currentTime / duration) * 100)) : 0;
 
@@ -223,6 +293,37 @@ function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => 
     audio.currentTime = nextTime;
     setCurrentTime(nextTime);
   };
+
+  /* Play-once, already heard before a refresh: locked, no audio element. */
+  if (playOnce && lockedOnMount) {
+    return (
+      <div className="qmedia-audio-player qmedia-audio-player--once">
+        <span className="qmedia-audio-once-note">Audio already played</span>
+      </div>
+    );
+  }
+
+  /* Play-once, active: status-only — a one-time Play button before
+     playback (browsers block silent autoplay), then a non-interactive
+     progress bar. No pause, no scrub, no replay; locks on end. */
+  if (playOnce) {
+    return (
+      <div className="qmedia-audio-player qmedia-audio-player--once">
+        <audio ref={audioRef} preload="metadata" src={src} />
+        {!started ? (
+          <button type="button" className="qmedia-audio-icon-button" onClick={togglePlay} aria-label="Play audio">
+            <PlayIcon />
+          </button>
+        ) : null}
+        <div className="qmedia-audio-progress" style={{ '--qmedia-audio-progress': `${progress}%` } as React.CSSProperties}>
+          <div className="qmedia-audio-progress-track" aria-hidden="true">
+            <span />
+          </div>
+        </div>
+        <span className="qmedia-audio-time">{poEnded ? 'Finished' : `${formatTime(currentTime)} / ${formatTime(duration)}`}</span>
+      </div>
+    );
+  }
 
   return (
     <div className="qmedia-audio-player">

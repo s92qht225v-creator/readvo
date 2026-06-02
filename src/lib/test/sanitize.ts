@@ -169,6 +169,9 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
   if ((q.options as { audioMustFinish?: unknown } | null)?.audioMustFinish === true) {
     pub = { ...pub, audioMustFinish: true };
   }
+  if ((q.options as { audioPlayOnce?: unknown } | null)?.audioPlayOnce === true) {
+    pub = { ...pub, audioPlayOnce: true };
+  }
   if (isExampleQuestion(q)) {
     // Worked example: intentionally reveal its own answer so the player can show
     // it pre-selected. The answer key for every OTHER question stays stripped.

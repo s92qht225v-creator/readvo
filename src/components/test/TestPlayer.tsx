@@ -1059,6 +1059,8 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           audioLockEnabled={!!test.audio_lock && !forceDevice}
           audioDone={audioDone}
           markAudioDone={markAudioDone}
+          consumedAudio={consumedAudio}
+          markAudioConsumed={markAudioConsumed}
           activeAudioTrackId={activeAudioTrackId}
           forceDevice={forceDevice}
           section={isSectioned ? {
@@ -1125,6 +1127,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
                stranded on a disabled Next. Only when the lock is on and
                not in preview. */
             autoPlayAudio={!forceDevice && !!q.audioMustFinish && q.media?.type === 'audio'}
+            /* Play-once for this question's audio (refresh-proof — reuses
+               the consumed-audio store with a q:{id} track id). */
+            audioPlayOnce={!forceDevice && !!q.audioPlayOnce && q.media?.type === 'audio'}
+            audioConsumed={consumedAudio.has(`q:${q.id}`)}
+            onAudioConsumed={() => markAudioConsumed(`q:${q.id}`)}
             header={(
               <>
                 {q.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}
@@ -1581,6 +1588,8 @@ function ScrollBody({
   audioLockEnabled,
   audioDone,
   markAudioDone,
+  consumedAudio,
+  markAudioConsumed,
   activeAudioTrackId,
   forceDevice,
   section,
@@ -1634,6 +1643,10 @@ function ScrollBody({
   audioLockEnabled: boolean;
   audioDone: Set<string>;
   markAudioDone: (key: string) => void;
+  /* Play-once consumption store (refresh-proof), shared with card mode.
+     Per-question audio uses a `q:{id}` track id. */
+  consumedAudio: Set<string>;
+  markAudioConsumed: (key: string) => void;
   activeAudioTrackId: string;
   forceDevice?: 'mobile' | 'desktop';
   /* Per-session response id, threaded to the speaking recorder so it can
@@ -1735,6 +1748,9 @@ function ScrollBody({
               <QuestionMediaLayout
                 media={question.media}
                 onAudioEnded={() => markAudioDone(`q:${question.id}`)}
+                audioPlayOnce={!forceDevice && !!question.audioPlayOnce && question.media?.type === 'audio'}
+                audioConsumed={consumedAudio.has(`q:${question.id}`)}
+                onAudioConsumed={() => markAudioConsumed(`q:${question.id}`)}
                 header={(
                   <>
                     {question.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}

@@ -121,6 +121,13 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
             onChange={v => onChange(setQuestionAudioMustFinish(q, v))}
           />
         ) : null}
+        {questionHasAudio(q) ? (
+          <ToggleRow
+            label="Play audio once"
+            checked={getQuestionAudioPlayOnce(q)}
+            onChange={v => onChange(setQuestionAudioPlayOnce(q, v))}
+          />
+        ) : null}
         {(q.type === 'multiple_choice' || q.type === 'picture_choice' || q.type === 'dropdown' || q.type === 'checkbox') ? (
           <>
             <ToggleRow
@@ -484,6 +491,20 @@ function setQuestionAudioMustFinish(q: BuilderQuestion, audioMustFinish: boolean
     options: {
       ...(q.options as Record<string, unknown>),
       audioMustFinish,
+    } as BuilderQuestion['options'],
+  };
+}
+
+function getQuestionAudioPlayOnce(q: BuilderQuestion): boolean {
+  return (q.options as { audioPlayOnce?: unknown }).audioPlayOnce === true;
+}
+
+function setQuestionAudioPlayOnce(q: BuilderQuestion, audioPlayOnce: boolean): BuilderQuestion {
+  return {
+    ...q,
+    options: {
+      ...(q.options as Record<string, unknown>),
+      audioPlayOnce,
     } as BuilderQuestion['options'],
   };
 }
