@@ -11334,12 +11334,10 @@ body {
 
 .tb-canvas--mobile .tb-preview-card {
   width: 372px !important;
-  /* Grow to fit content (floored at the frame height); the parent scales
-     the whole card to fit so it shows entirely — no internal scroll. */
-  height: auto !important;
+  height: 663px !important;
   max-width: 100% !important;
   min-height: 663px !important;
-  overflow-y: visible !important;
+  overflow-y: auto !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
   border: 1px solid #e4ded8 !important;
