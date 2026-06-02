@@ -555,7 +555,13 @@
   --qm-asset-w: 100%;
   --qm-asset-max-w: 100%;         /* asset fills its 360px-wide column */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
-  --qm-asset-max-h: 600px;         /* never taller than this — caps portrait media */
+  /* Cap media to the card's available content height so a tall (portrait)
+     video/image shrinks to fit INSIDE the fixed card instead of forcing it
+     to overflow + scroll. Card height is min(620px, 100vh - 136px); minus
+     the 48px top/bottom padding (96) and a small buffer. Same fixed 620
+     card on the live player, preview shell, and builder canvas, so one
+     value fits all three. */
+  --qm-asset-max-h: calc(min(620px, 100vh - 136px) - 108px);
   --qm-asset-radius: 0;            /* full-bleed in its grid cell */
   --qm-asset-margin-inline: 0;     /* flush against the cell edge */
   --qm-content-w: 100%;
