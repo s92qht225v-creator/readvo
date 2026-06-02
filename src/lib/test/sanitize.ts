@@ -51,6 +51,30 @@ export function exampleAnswerValue(q: TestQuestion): AnswerSubmission['value'] |
     const o = q.options as NumberOptions;
     return o.correctValue != null ? { text: String(o.correctValue) } : undefined;
   }
+  if (q.type === 'match') {
+    const o = q.options as MatchOptions;
+    const pairs = o.pairs ?? [];
+    return pairs.length
+      ? { pairs: pairs.map((_, i) => ({ leftIndex: i, rightId: publicOptionId(q.id, 'match-right', i) })) }
+      : undefined;
+  }
+  if (q.type === 'ordering') {
+    const o = q.options as OrderingOptions;
+    const items = o.items ?? [];
+    return items.length ? { order: items.map((_, i) => publicOptionId(q.id, 'ordering', i)) } : undefined;
+  }
+  if (q.type === 'fill_blanks') {
+    const o = q.options as FillBlanksOptions;
+    const blanks = o.blanks ?? [];
+    return blanks.length ? { blanks: blanks.map(b => b?.answer ?? '') } : undefined;
+  }
+  if (q.type === 'scramble') {
+    const o = q.options as ScrambleOptions;
+    const pieces = splitScrambleAnswer(o.correctAnswer ?? '', o.unit === 'words' ? 'words' : 'letters');
+    return pieces.length ? { tileIds: pieces.map((_, i) => publicOptionId(q.id, 'scramble', i)) } : undefined;
+  }
+  // long_answer (no answer key), opinion_scale, rating, speaking → no pre-fill;
+  // the example still shows the badge + locks + is excluded from the score.
   return undefined;
 }
 

@@ -32,7 +32,7 @@ export function TrueFalseSettings({ q, onChange, isGraded }: {
             type="radio"
             name={`tf-${q.clientId}`}
             checked={opts.correct === v}
-            onChange={() => onChange({ ...q, options: { correct: v } })}
+            onChange={() => onChange({ ...q, options: { ...opts, correct: v } })}
             title="Correct"
           />
           {v ? 'True' : 'False'}

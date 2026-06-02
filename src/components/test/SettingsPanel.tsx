@@ -107,7 +107,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           checked={q.required}
           onChange={v => onChange({ ...q, required: v })}
         />
-        {['multiple_choice', 'picture_choice', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number'].includes(q.type) ? (
+        {['multiple_choice', 'picture_choice', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
           <ToggleRow
             label="Example (answer shown, not scored)"
             checked={getQuestionIsExample(q)}
