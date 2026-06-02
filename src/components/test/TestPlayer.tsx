@@ -337,6 +337,22 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
     } catch { /* ignore corrupt / blocked storage */ }
   }, [answersStorageKey]);
 
+  /* Seed worked-example answers with their (revealed) correct value so they
+     submit + satisfy the required-guard. Runs after the restore effect above
+     (defined later = applied to the post-restore state) and only ADDS example
+     keys, so a resume isn't clobbered. Example inputs are locked, so this value
+     can never be changed by the student; grading ignores examples entirely. */
+  const exampleSeededRef = useRef(false);
+  useEffect(() => {
+    if (exampleSeededRef.current) return;
+    exampleSeededRef.current = true;
+    const seed: Record<string, AnswerSubmission['value']> = {};
+    for (const question of test.questions) {
+      if (question.isExample && question.exampleValue) seed[question.id] = question.exampleValue;
+    }
+    if (Object.keys(seed).length) setAnswers(prev => ({ ...prev, ...seed }));
+  }, [test.questions]);
+
   /* Autosave on any change to the things worth restoring. Skips empty
      pre-start state so we never clobber a fresh restore with blanks. */
   useEffect(() => {
@@ -1050,6 +1066,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             forceDevice={forceDevice}
             header={(
               <>
+                {q.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}
                 {q.instruction ? (
                   <p className="test-player__instruction" style={questionInstruction} dir="auto" lang={detectScriptLang(q.instruction)}>
                     <MathText>{q.instruction}</MathText>
@@ -1067,15 +1084,17 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             )}
             answer={(
               <div style={answerWrap}>
-                <QuestionRenderer
-                  question={q}
-                  value={answer}
-                  onChange={onChange}
-                  onSubmit={() => { isLast ? attemptSubmit() : goToIdx(idx + 1); }}
-                  slug={test.slug}
-                  responseId={responseId}
-                  respondentToken={ensureRespondentToken(test.slug)}
-                />
+                <div style={q.isExample ? exampleLockedWrap : undefined} aria-disabled={q.isExample || undefined}>
+                  <QuestionRenderer
+                    question={q}
+                    value={q.isExample ? (q.exampleValue ?? {}) : answer}
+                    onChange={q.isExample ? noop : onChange}
+                    onSubmit={q.isExample ? noop : (() => { isLast ? attemptSubmit() : goToIdx(idx + 1); })}
+                    slug={test.slug}
+                    responseId={responseId}
+                    respondentToken={ensureRespondentToken(test.slug)}
+                  />
+                </div>
               </div>
             )}
           />
@@ -1601,6 +1620,7 @@ function ScrollBody({
                 media={question.media}
                 header={(
                   <>
+                    {question.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}
                     {question.instruction ? (
                       <p className="test-player__instruction" style={questionInstruction} dir="auto" lang={detectScriptLang(question.instruction)}>
                         <MathText>{question.instruction}</MathText>
@@ -1618,18 +1638,21 @@ function ScrollBody({
                 )}
                 answer={(
                   <div style={answerWrap}>
-                    <QuestionRenderer
-                      question={question}
-                      value={answers[question.id] ?? {}}
-                      onChange={(v) => onAnswer(question.id, v)}
-                      onSubmit={() => { /* no per-question advance in scroll mode */ }}
-                      slug={test.slug}
-                      responseId={responseId}
-                      respondentToken={ensureRespondentToken(test.slug)}
-                    />
+                    <div style={question.isExample ? exampleLockedWrap : undefined} aria-disabled={question.isExample || undefined}>
+                      <QuestionRenderer
+                        question={question}
+                        value={question.isExample ? (question.exampleValue ?? {}) : (answers[question.id] ?? {})}
+                        onChange={question.isExample ? noop : ((v) => onAnswer(question.id, v))}
+                        onSubmit={noop}
+                        slug={test.slug}
+                        responseId={responseId}
+                        respondentToken={ensureRespondentToken(test.slug)}
+                      />
+                    </div>
                     {/* Required note appears once a finish was attempted
-                        and this required question is still blank. */}
-                    {submitAttempted && question.required && !hasQuestionAnswer(question, answers[question.id]) ? (
+                        and this required question is still blank. Examples are
+                        pre-filled so they never trip this. */}
+                    {!question.isExample && submitAttempted && question.required && !hasQuestionAnswer(question, answers[question.id]) ? (
                       <div role="alert" style={scrollItemWarnText}>
                         This question is required — please answer it to finish.
                       </div>
@@ -2050,6 +2073,27 @@ const questionInstruction: React.CSSProperties = {
   fontWeight: 600,
   lineHeight: 1.4,
   letterSpacing: -0.2,
+};
+
+const noop = () => {};
+
+/* "Example" chip shown above a worked-example question (HSK style). */
+const exampleBadge: React.CSSProperties = {
+  display: 'inline-block',
+  alignSelf: 'flex-start',
+  background: '#2f2835',
+  color: '#fff',
+  fontSize: 12,
+  fontWeight: 700,
+  letterSpacing: 0.3,
+  padding: '3px 10px',
+  borderRadius: 5,
+};
+
+/* Locks an example's answer inputs — the correct answer is shown pre-selected
+   and the student can't change it. */
+const exampleLockedWrap: React.CSSProperties = {
+  pointerEvents: 'none',
 };
 
 const answerWrap: React.CSSProperties = {};

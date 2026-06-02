@@ -35,7 +35,7 @@ import { authHeaders } from '@/lib/test/clientFetch';
 import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { MarketplaceIcon, MoreMenuIcon } from './testList/icons';
 import { navigateToTestHref } from '@/lib/test/paths';
-import { publicOptionId, splitScrambleAnswer } from '@/lib/test/sanitize';
+import { publicOptionId, splitScrambleAnswer, exampleAnswerValue } from '@/lib/test/sanitize';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
   Test, TestQuestion, TestSection, QuestionType, QuestionOptions,
@@ -3626,6 +3626,12 @@ function PreviewCanvas({
   // Convert the builder question to the public shape (no answer keys)
   const description = getQuestionDescription(q);
   const instruction = getQuestionInstruction(q);
+  const isExample = (q.options as { isExample?: unknown }).isExample === true;
+  // Canvas option ids are keyed off clientId (see publicOptionId(q.clientId,…)),
+  // so derive the pre-selected value with clientId as the id so it lines up.
+  const exampleVal = isExample
+    ? exampleAnswerValue({ ...q, id: q.clientId } as unknown as TestQuestion)
+    : undefined;
   const media = getQuestionMedia(q);
   let previewQ: PublicQuestion;
   if (q.type === 'multiple_choice') {
@@ -3892,6 +3898,7 @@ function PreviewCanvas({
             forceDevice={previewDevice}
             header={(
               <>
+                {isExample ? <span className="tb-preview-example-badge" style={previewExampleBadge}>Example</span> : null}
                 {instruction.trim() ? (
                   <div className="tb-preview-instruction" dir="auto" lang={detectScriptLang(instruction)} style={previewInstruction}>
                     <MathText>{instruction}</MathText>
@@ -3918,7 +3925,7 @@ function PreviewCanvas({
                 <div style={previewAnswerArea}>
                   <QuestionRenderer
                     question={previewQ}
-                    value={{}}
+                    value={exampleVal ?? {}}
                     onChange={() => {}}
                     onSubmit={() => {}}
                   />
@@ -5339,6 +5346,19 @@ const previewInstruction: React.CSSProperties = {
   fontWeight: 600,
   lineHeight: 1.4,
   letterSpacing: -0.2,
+};
+
+/* Mirrors TestPlayer.tsx `exampleBadge`. */
+const previewExampleBadge: React.CSSProperties = {
+  display: 'inline-block',
+  alignSelf: 'flex-start',
+  background: '#2f2835',
+  color: '#fff',
+  fontSize: 12,
+  fontWeight: 700,
+  letterSpacing: 0.3,
+  padding: '3px 10px',
+  borderRadius: 5,
 };
 
 const previewAnswerArea: React.CSSProperties = {

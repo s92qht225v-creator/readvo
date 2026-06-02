@@ -107,6 +107,13 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           checked={q.required}
           onChange={v => onChange({ ...q, required: v })}
         />
+        {['multiple_choice', 'picture_choice', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number'].includes(q.type) ? (
+          <ToggleRow
+            label="Example (answer shown, not scored)"
+            checked={getQuestionIsExample(q)}
+            onChange={v => onChange(setQuestionIsExample(q, v))}
+          />
+        ) : null}
         {(q.type === 'multiple_choice' || q.type === 'picture_choice' || q.type === 'dropdown' || q.type === 'checkbox') ? (
           <>
             <ToggleRow
@@ -444,6 +451,20 @@ function setQuestionDescription(q: BuilderQuestion, description: string): Builde
 function getQuestionInstruction(q: BuilderQuestion): string {
   const instruction = (q.options as { instruction?: unknown }).instruction;
   return typeof instruction === 'string' ? instruction : '';
+}
+
+function getQuestionIsExample(q: BuilderQuestion): boolean {
+  return (q.options as { isExample?: unknown }).isExample === true;
+}
+
+function setQuestionIsExample(q: BuilderQuestion, isExample: boolean): BuilderQuestion {
+  return {
+    ...q,
+    options: {
+      ...(q.options as Record<string, unknown>),
+      isExample,
+    } as BuilderQuestion['options'],
+  };
 }
 
 function setQuestionInstruction(q: BuilderQuestion, instruction: string): BuilderQuestion {

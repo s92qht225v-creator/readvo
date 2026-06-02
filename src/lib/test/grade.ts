@@ -6,7 +6,7 @@ import type {
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
 } from './types';
-import { publicOptionId, splitScrambleAnswer } from './sanitize';
+import { publicOptionId, splitScrambleAnswer, isExampleQuestion } from './sanitize';
 
 const norm = (s: string) => s.trim().toLowerCase();
 
@@ -15,6 +15,10 @@ const norm = (s: string) => s.trim().toLowerCase();
  * the question is not gradable (no correct answer set).
  */
 export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['value']): boolean | null {
+  if (isExampleQuestion(question)) {
+    // Worked example — the answer is shown to the student; never scored.
+    return null;
+  }
   if (question.type === 'speaking') {
     // Graded on a separate track — never part of the objective score.
     return null;

@@ -433,6 +433,13 @@ export interface PublicQuestion {
   /** Optional directive shown ABOVE the question text (e.g. "Read and
    *  select the best option."). Stored in options.instruction. */
   instruction?: string;
+  /** When true this is a worked EXAMPLE (HSK-style): the answer is shown
+   *  pre-selected, the inputs are locked, and it's excluded from the score.
+   *  Stored in options.isExample. */
+  isExample?: boolean;
+  /** For an example question, the correct answer in the player's submission
+   *  shape — used to render it pre-selected. Only sent when isExample. */
+  exampleValue?: AnswerSubmission['value'];
   media?: QuestionMedia;
   required: boolean;
   /** Same FK as the builder side. Player groups questions by this id

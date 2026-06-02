@@ -1,11 +1,58 @@
 import type {
-  TestQuestion, PublicQuestion,
-  MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions,
+  TestQuestion, PublicQuestion, AnswerSubmission,
+  MultipleChoiceOptions, ShortTextOptions, PictureChoiceOptions, TrueFalseOptions,
   MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions, SpeakingOptions,
 } from './types';
 import { normalizeQuestionMedia } from './media';
+
+/** True when the question is flagged as a worked example. */
+export function isExampleQuestion(q: { options?: unknown }): boolean {
+  return (q.options as { isExample?: unknown } | null)?.isExample === true;
+}
+
+/**
+ * The correct answer of an example question, expressed in the player's
+ * submission-value shape so the renderer shows it pre-selected. Returns
+ * undefined for types we can't pre-fill (the example still locks + shows the
+ * badge, just without a pre-selected answer). Choice ids use the same
+ * deterministic publicOptionId as the sanitized options, so they line up
+ * regardless of shuffle order.
+ */
+export function exampleAnswerValue(q: TestQuestion): AnswerSubmission['value'] | undefined {
+  const cid = (i: number) => publicOptionId(q.id, 'choice', i);
+  if (q.type === 'true_false') {
+    const o = q.options as TrueFalseOptions;
+    return typeof o.correct === 'boolean' ? { bool: o.correct } : undefined;
+  }
+  if (q.type === 'multiple_choice' || q.type === 'picture_choice') {
+    const o = q.options as MultipleChoiceOptions | PictureChoiceOptions;
+    if (o.allowMultiple) {
+      const idx = o.correctIndexes ?? (o.correctIndex != null ? [o.correctIndex] : []);
+      return idx.length ? { selectedIds: idx.map(cid) } : undefined;
+    }
+    return o.correctIndex != null ? { selectedId: cid(o.correctIndex) } : undefined;
+  }
+  if (q.type === 'checkbox') {
+    const o = q.options as CheckboxOptions;
+    const idx = o.correctIndexes ?? [];
+    return idx.length ? { selectedIds: idx.map(cid) } : undefined;
+  }
+  if (q.type === 'dropdown') {
+    const o = q.options as DropdownOptions;
+    return o.correctIndex != null ? { selectedId: cid(o.correctIndex) } : undefined;
+  }
+  if (q.type === 'short_text') {
+    const o = q.options as ShortTextOptions;
+    return o.correctAnswers?.length ? { text: o.correctAnswers[0] } : undefined;
+  }
+  if (q.type === 'number') {
+    const o = q.options as NumberOptions;
+    return o.correctValue != null ? { text: String(o.correctValue) } : undefined;
+  }
+  return undefined;
+}
 
 export function publicOptionId(questionId: string, kind: 'choice' | 'match-right' | 'ordering' | 'scramble', index: number): string {
   return `opt_${stableHash(`${kind}:${questionId}:${index}`)}`;
@@ -94,6 +141,14 @@ function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): Publ
  * seed so existing callers still work.
  */
 export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion {
+  const base = sanitizeQuestionBase(q, seed);
+  if (!isExampleQuestion(q)) return base;
+  // Worked example: intentionally reveal its own answer so the player can show
+  // it pre-selected. The answer key for every OTHER question stays stripped.
+  return { ...base, isExample: true, exampleValue: exampleAnswerValue(q) };
+}
+
+function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
   const choiceSeed = seed ? `${q.id}:choices:${seed}` : `${q.id}:choices`;
   const matchSeed = seed ? `${q.id}:match:${seed}` : `${q.id}:match`;
   const orderingSeed = seed ? `${q.id}:ordering:${seed}` : `${q.id}:ordering`;
