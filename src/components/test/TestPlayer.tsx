@@ -1194,8 +1194,12 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
       <div className="test-player__nav" style={navRow}>
         <button
           type="button"
-          onClick={() => setNavigatorOpen(true)}
-          style={secondaryButton(false)}
+          /* While THIS question's audio must still be heard (lock / play-once),
+             block the Questions navigator too — otherwise the student could
+             jump to another question and skip the audio. */
+          onClick={() => { if (questionAudioLocked) return; setNavigatorOpen(true); }}
+          disabled={questionAudioLocked}
+          style={secondaryButton(questionAudioLocked)}
         >
           Questions
         </button>
@@ -1231,7 +1235,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         submitting={phase === 'submitting'}
         sectionGroups={sectionGroups}
         onClose={() => setNavigatorOpen(false)}
-        onGoTo={(targetIdx) => { setNavigatorOpen(false); goToIdx(targetIdx); }}
+        /* Defense in depth: even if the navigator is open, don't let a jump
+           leave a question whose audio must still be heard. */
+        onGoTo={(targetIdx) => { if (questionAudioLocked) return; setNavigatorOpen(false); goToIdx(targetIdx); }}
         onFinish={() => { setNavigatorOpen(false); attemptSubmit(); }}
       />
     ) : null}
