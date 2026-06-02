@@ -1038,7 +1038,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
      letting the student skip mid-play would waste their single listen.
      Play-once therefore also blocks advancing until the clip finishes. */
   const questionAudioLocked = !forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce)
-    && q.media?.type === 'audio' && !audioDone.has(`q:${q.id}`);
+    && !!q.audioMedia?.url && !audioDone.has(`q:${q.id}`);
   const audioLocked = sectionAudioLocked || questionAudioLocked;
   audioLockedRef.current = audioLocked;
   const nextBlocked = phase === 'submitting' || audioLocked;
@@ -1129,20 +1129,21 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         initial="enter"
         animate="center"
         exit="exit"
-        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${q.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
+        className={`test-player__card ${forceDevice ? `test-player__card--force-${forceDevice}` : ''} ${(q.media?.url || q.audioMedia?.url) ? 'test-player__card--has-media' : 'test-player__card--no-media'} test-player__card--type-${q.type.replaceAll('_', '-')} ${cardOverflowing ? 'test-player__card--overflowing' : ''}`}
         style={{ ...questionCard, '--qmedia-card-pad-x': '52px', '--qmedia-card-pad-top': '48px' } as React.CSSProperties}
       >
           <QuestionMediaLayout
             media={q.media}
+            audioMedia={q.audioMedia}
             forceDevice={forceDevice}
             onAudioEnded={() => markAudioDone(`q:${q.id}`)}
             /* Auto-start a locked question's audio so the student isn't
                stranded on a disabled Next. Only when the lock is on and
                not in preview. */
-            autoPlayAudio={!forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce) && q.media?.type === 'audio'}
+            autoPlayAudio={!forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce) && !!q.audioMedia?.url}
             /* Play-once for this question's audio (refresh-proof — reuses
                the consumed-audio store with a q:{id} track id). */
-            audioPlayOnce={!forceDevice && !!q.audioPlayOnce && q.media?.type === 'audio'}
+            audioPlayOnce={!forceDevice && !!q.audioPlayOnce && !!q.audioMedia?.url}
             audioConsumed={consumedAudio.has(`q:${q.id}`)}
             onAudioConsumed={() => markAudioConsumed(`q:${q.id}`)}
             header={(
@@ -1739,7 +1740,7 @@ function ScrollBody({
      ("Lock until audio finishes" OR "Play once") has played through. */
   const sectionAudioLocked = audioLockEnabled && audioActive && !audioDone.has(activeAudioTrackId);
   const questionAudioLocked = !forceDevice && items.some(it =>
-    (it.audioMustFinish || it.audioPlayOnce) && it.media?.type === 'audio' && !audioDone.has(`q:${it.id}`));
+    (it.audioMustFinish || it.audioPlayOnce) && !!it.audioMedia?.url && !audioDone.has(`q:${it.id}`));
   const audioLockedScroll = sectionAudioLocked || questionAudioLocked;
   const advanceBlocked = phase === 'submitting' || audioLockedScroll;
 
@@ -1768,7 +1769,7 @@ function ScrollBody({
                  the scroll-specific behaviour (focus dim, transitions).
                  Media flag mirrors card mode's `--has-media` / `--no-media`
                  modifier so the same centering rules kick in. */
-              className={`test-scroll__item test-player__card ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${question.media?.url ? 'test-player__card--has-media' : 'test-player__card--no-media'}`}
+              className={`test-scroll__item test-player__card ${active ? 'test-scroll__item--active' : 'test-scroll__item--dim'} ${(question.media?.url || question.audioMedia?.url) ? 'test-player__card--has-media' : 'test-player__card--no-media'}`}
               style={scrollItem}
             >
               {/* Match card-mode chrome exactly: no inline number badge
@@ -1776,8 +1777,9 @@ function ScrollBody({
                   same title/description styling. */}
               <QuestionMediaLayout
                 media={question.media}
+                audioMedia={question.audioMedia}
                 onAudioEnded={() => markAudioDone(`q:${question.id}`)}
-                audioPlayOnce={!forceDevice && !!question.audioPlayOnce && question.media?.type === 'audio'}
+                audioPlayOnce={!forceDevice && !!question.audioPlayOnce && !!question.audioMedia?.url}
                 audioConsumed={consumedAudio.has(`q:${question.id}`)}
                 onAudioConsumed={() => markAudioConsumed(`q:${question.id}`)}
                 header={(

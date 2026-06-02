@@ -25,6 +25,7 @@ export interface MultipleChoiceOptions {
   randomize?: boolean;
   allowMultiple?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   /** Used only when test.is_graded */
   correctIndex: number | null;
   correctIndexes?: number[];
@@ -35,6 +36,7 @@ export interface ShortTextOptions {
   maxLength?: number;
   maxCharactersEnabled?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   /** Used only when test.is_graded; matched case-insensitively after trim */
   correctAnswers?: string[];
 }
@@ -44,12 +46,14 @@ export interface LongAnswerOptions {
   maxLength?: number;
   maxCharactersEnabled?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 export interface NumberOptions {
   min?: number;
   max?: number;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   /** Used only when test.is_graded */
   correctValue?: number | null;
 }
@@ -58,6 +62,7 @@ export interface DropdownOptions {
   choices: string[];
   randomize?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   /** Used only when test.is_graded */
   correctIndex: number | null;
 }
@@ -66,6 +71,7 @@ export interface CheckboxOptions {
   choices: string[];
   randomize?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   /** Used only when test.is_graded */
   correctIndexes?: number[];
 }
@@ -76,12 +82,14 @@ export interface OpinionScaleOptions {
   minLabel?: string;
   maxLabel?: string;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 export interface RatingOptions {
   max: number;
   shape?: 'star' | 'heart' | 'number';
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 export interface PictureChoice {
@@ -94,6 +102,7 @@ export interface PictureChoiceOptions {
   randomize?: boolean;
   allowMultiple?: boolean;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   correctIndex: number | null;
   correctIndexes?: number[];
 }
@@ -103,6 +112,7 @@ export interface TrueFalseOptions {
   /** Used only when test.is_graded */
   correct: boolean | null;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 /** Match — left items paired with right items (storage order = correct order) */
@@ -113,12 +123,14 @@ export interface MatchPair {
 export interface MatchOptions {
   pairs: MatchPair[];
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 /** Ordering — student must drag items into the correct sequence (stored order = correct) */
 export interface OrderingOptions {
   items: string[];
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 /** Fill blanks — `template` uses {1}, {2}, … markers; `blanks` is per-marker correct answers */
@@ -130,6 +142,7 @@ export interface FillBlanksOptions {
   template: string;
   blanks: FillBlank[];
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 /** Scramble — student arranges shuffled tiles (letters or words) to form
@@ -140,6 +153,7 @@ export interface ScrambleOptions {
   correctAnswer: string;
   unit: 'letters' | 'words';
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 /** Speaking — student records spoken audio; graded on a separate track
@@ -155,6 +169,7 @@ export interface SpeakingOptions {
   /** Default 30 */
   maxRecordingSeconds: number;
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
 }
 
 export interface QuestionMedia {
@@ -453,6 +468,7 @@ export interface PublicQuestion {
    *  shape — used to render it pre-selected. Only sent when isExample. */
   exampleValue?: AnswerSubmission['value'];
   media?: QuestionMedia;
+  audioMedia?: QuestionMedia;
   required: boolean;
   /** Same FK as the builder side. Player groups questions by this id
    *  (or by "unsectioned" when null). */

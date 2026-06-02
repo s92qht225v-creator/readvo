@@ -26,7 +26,7 @@ import { Field, TextLengthBehavior, ToggleRow, kicker, textareaStyle } from './s
 import { DeviceIconFrame, LayoutIcon } from './media/LayoutIcons';
 import { MediaGalleryModal } from './media/MediaGalleryModal';
 import { MediaSettingsModal } from './media/MediaSettingsModal';
-import { getQuestionMedia, normalizeDesktopLayout, setQuestionMedia } from './media/_helpers';
+import { getQuestionMedia, getQuestionVisual, getQuestionAudio, normalizeDesktopLayout, removeQuestionMedia, setQuestionVisual } from './media/_helpers';
 
 interface Props {
   q: BuilderQuestion;
@@ -154,7 +154,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           q={q}
           onOpen={setMediaOpen}
           onSettings={() => setMediaSettingsOpen(true)}
-          onRemove={() => onChange(setQuestionMedia(q, undefined))}
+          onRemove={(kind) => onChange(removeQuestionMedia(q, kind))}
         />
         {media?.url && media.type !== 'audio' ? (
           <MediaLayoutControls q={q} onChange={onChange} />
@@ -186,30 +186,57 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
 }
 
 function MediaControls({ q, onOpen, onSettings, onRemove }: {
-  q: BuilderQuestion; onOpen: (kind: MediaKind) => void; onSettings: () => void; onRemove: () => void;
+  q: BuilderQuestion; onOpen: (kind: MediaKind) => void; onSettings: () => void; onRemove: (kind: MediaKind) => void;
 }) {
-  const media = getQuestionMedia(q);
+  const visual = getQuestionVisual(q);
+  const audio = getQuestionAudio(q);
   const caps = mediaCapabilities(q.type);
-  const currentKind = mediaKind(media);
   const availableKinds: MediaKind[] = q.type === 'picture_choice'
     ? ['audio']
     : ['image', 'audio', 'video'];
+  const hasImage = visual?.type === 'image';
+  const hasVideo = visual?.type === 'video';
+  const hasAudio = !!audio?.url;
+
+  /* Combination rules — only allowed multi-combo is audio + image.
+     Video is always solo. Returns a reason string when ADDING `kind`
+     is blocked by what's already attached (an active kind is never
+     blocked against itself). */
+  const ruleReason = (kind: MediaKind): string | undefined => {
+    if (kind === 'video') {
+      if (hasAudio) return 'Audio and video can’t be used together (both have sound).';
+      if (hasImage) return 'Image and video use the same spot — remove the image first.';
+    }
+    if (kind === 'image' && hasVideo) return 'Image and video use the same spot — remove the video first.';
+    if (kind === 'audio' && hasVideo) return 'Audio and video can’t be used together — remove the video first.';
+    return undefined;
+  };
+  const isActive = (kind: MediaKind) => kind === 'audio' ? hasAudio : kind === 'video' ? hasVideo : hasImage;
+
   return (
     <div style={mediaRowWrap}>
       <div style={mediaRows}>
-        {availableKinds.map(kind => (
-          <MediaControlRow
-            key={kind}
-            label={mediaKindLabel(kind)}
-            active={currentKind === kind}
-            disabled={!caps[kind]}
-            disabledReason={mediaDisabledReason(kind)}
-            onAdd={() => onOpen(kind)}
-            onChange={() => onOpen(kind)}
-            onSettings={media && kind === 'image' && currentKind === 'image' ? onSettings : undefined}
-            onRemove={onRemove}
-          />
-        ))}
+        {availableKinds.map(kind => {
+          const active = isActive(kind);
+          const capDisabled = !caps[kind];
+          const blockedReason = capDisabled ? mediaDisabledReason(kind) : ruleReason(kind);
+          // An active item is never disabled against itself (so it can be
+          // changed/removed). Disabling only blocks ADDING a new kind.
+          const disabled = !active && (capDisabled || !!ruleReason(kind));
+          return (
+            <MediaControlRow
+              key={kind}
+              label={mediaKindLabel(kind)}
+              active={active}
+              disabled={disabled}
+              disabledReason={blockedReason}
+              onAdd={() => onOpen(kind)}
+              onChange={() => onOpen(kind)}
+              onSettings={active && kind === 'image' ? onSettings : undefined}
+              onRemove={() => onRemove(kind)}
+            />
+          );
+        })}
       </div>
     </div>
   );
@@ -329,7 +356,7 @@ function MediaLayoutControls({ q, onChange }: { q: BuilderQuestion; onChange: (q
     : media.layoutMobile ?? 'stack';
 
   const update = (patch: Partial<Pick<QuestionMedia, 'layoutMobile' | 'layoutDesktop'>>) => {
-    onChange(setQuestionMedia(q, { ...media, ...patch }));
+    onChange(setQuestionVisual(q, { ...media, ...patch }));
   };
 
   return (
@@ -510,8 +537,7 @@ function setQuestionAudioPlayOnce(q: BuilderQuestion, audioPlayOnce: boolean): B
 }
 
 function questionHasAudio(q: BuilderQuestion): boolean {
-  return (q.options as { media?: { type?: unknown; url?: unknown } }).media?.type === 'audio'
-    && !!(q.options as { media?: { url?: unknown } }).media?.url;
+  return !!getQuestionAudio(q)?.url;
 }
 
 function setQuestionInstruction(q: BuilderQuestion, instruction: string): BuilderQuestion {

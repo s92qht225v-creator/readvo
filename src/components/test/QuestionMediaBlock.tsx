@@ -23,8 +23,12 @@ interface Props {
   onAudioConsumed?: () => void;
 }
 
-export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded, autoPlayAudio, audioPlayOnce, audioConsumed, onAudioConsumed }: {
+export function QuestionMediaLayout({ media, audioMedia, header, answer, children, forceDevice, onAudioEnded, autoPlayAudio, audioPlayOnce, audioConsumed, onAudioConsumed }: {
+  /** The VISUAL slot — image or video. */
   media?: QuestionMedia;
+  /** The AUDIO slot — rendered above the visual (if any). Carries the
+   *  audio-lock / play-once props. */
+  audioMedia?: QuestionMedia;
   header?: React.ReactNode;
   answer?: React.ReactNode;
   children?: React.ReactNode;
@@ -44,28 +48,59 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
       <div className="qmedia-answer">{answer}</div>
     </>
   );
-  if (!media?.url) {
-    // No-media path still uses the same flex-column wrapper so spacing
-    // between header and answer matches the media path (driven by
-    // --qm-gap on .qmedia-layout). Without this wrapper, header and
-    // answer would sit as block siblings with zero gap.
+  /* Legacy safety: if a visual slot still holds audio (un-migrated old
+     data), treat it as the audio. New data keeps `media` visual-only. */
+  const visual = media && media.type !== 'audio' ? media : undefined;
+  const audio = audioMedia?.url ? audioMedia : (media && media.type === 'audio' ? media : undefined);
+
+  const audioBlock = audio ? (
+    <QuestionMediaBlock
+      media={audio}
+      className="qmedia-asset"
+      onAudioEnded={onAudioEnded}
+      autoPlayAudio={autoPlayAudio}
+      audioPlayOnce={audioPlayOnce}
+      audioConsumed={audioConsumed}
+      onAudioConsumed={onAudioConsumed}
+    />
+  ) : null;
+
+  // Audio + image: audio bar stacked above the normal image layout.
+  if (visual?.url && audioBlock) {
     return (
-      <div className="qmedia-layout qmedia-no-media">
-        <div className="qmedia-content">{content}</div>
+      <div className="qmedia-audio-combo">
+        <div className="qmedia-audio-combo__audio">{audioBlock}</div>
+        <div className={layoutClassName(visual, forceDevice)}>
+          <QuestionMediaBlock media={visual} className="qmedia-asset" />
+          <div className="qmedia-content">{content}</div>
+        </div>
       </div>
     );
   }
-  if (media.type === 'audio') {
+
+  // Audio only — sits above the content (reordered with header/answer).
+  if (audioBlock) {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
-        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} autoPlayAudio={autoPlayAudio} audioPlayOnce={audioPlayOnce} audioConsumed={audioConsumed} onAudioConsumed={onAudioConsumed} />
+        {audioBlock}
         <div className="qmedia-content">{content}</div>
       </div>
     );
   }
+
+  // Visual only (image / video).
+  if (visual?.url) {
+    return (
+      <div className={layoutClassName(visual, forceDevice)}>
+        <QuestionMediaBlock media={visual} className="qmedia-asset" />
+        <div className="qmedia-content">{content}</div>
+      </div>
+    );
+  }
+
+  // No media — flex-column wrapper so header/answer spacing matches.
   return (
-    <div className={layoutClassName(media, forceDevice)}>
-      <QuestionMediaBlock media={media} className="qmedia-asset" />
+    <div className="qmedia-layout qmedia-no-media">
       <div className="qmedia-content">{content}</div>
     </div>
   );

@@ -122,11 +122,20 @@ function questionInstruction(options: unknown): string | undefined {
   return typeof instruction === 'string' && instruction.trim() ? instruction : undefined;
 }
 
-function questionMedia(q: TestQuestion): PublicQuestion['media'] {
+/* The VISUAL slot — image or video only (options.media). */
+function visualMedia(q: TestQuestion): PublicQuestion['media'] {
   const media = normalizeQuestionMedia((q.options as { media?: unknown } | null)?.media, q.type);
-  if (!media) return undefined;
-  if (media.type === 'audio') return media;
+  if (!media || media.type === 'audio') return undefined;
   return normalizeVisualMedia(media);
+}
+
+/* The AUDIO slot (options.audioMedia), with legacy fallback to audio that
+   was stored in the single options.media slot before the split. */
+function audioMediaOf(q: TestQuestion): PublicQuestion['media'] {
+  const am = normalizeQuestionMedia((q.options as { audioMedia?: unknown } | null)?.audioMedia, q.type);
+  if (am && am.type === 'audio') return am;
+  const legacy = normalizeQuestionMedia((q.options as { media?: unknown } | null)?.media, q.type);
+  return legacy && legacy.type === 'audio' ? legacy : undefined;
 }
 
 function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): PublicQuestion['media'] {
@@ -198,7 +207,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
@@ -215,7 +225,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         minLength: opts.minLength,
@@ -232,7 +243,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         minLength: opts.minLength,
@@ -249,7 +261,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         min: opts.min,
@@ -270,7 +283,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
@@ -290,7 +304,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
@@ -306,7 +321,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         /* 10 is the highest allowed point — cap defensively so any
@@ -327,7 +343,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         max: Number.isFinite(opts.max) ? opts.max : 5,
@@ -349,7 +366,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
@@ -365,7 +383,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {},
     };
@@ -380,7 +399,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         left: pairs.map((p, i) => ({
@@ -407,7 +427,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         items: stableShuffle(
@@ -429,7 +450,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         template: opts.template ?? '',
@@ -453,7 +475,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         tiles: stableShuffle(tiles, scrambleSeed),
@@ -470,7 +493,8 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
-      media: questionMedia(q),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
       required: q.required,
       options: {
         maxRecordingSeconds: Number.isFinite(opts.maxRecordingSeconds) ? opts.maxRecordingSeconds : 30,

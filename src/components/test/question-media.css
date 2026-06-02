@@ -45,6 +45,17 @@
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
+/* Audio + image: the audio player stacked above the normal image layout. */
+.qmedia-audio-combo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-height: 100%;
+}
+.qmedia-audio-combo__audio {
+  width: 100%;
+}
 .qmedia-audio-once-note {
   flex: 1 1 auto;
   font-size: 13px;

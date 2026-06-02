@@ -3614,10 +3614,19 @@ function getQuestionInstruction(q: BuilderQuestion): string {
 }
 
 function getQuestionMedia(q: BuilderQuestion) {
-  const media = (q.options as { media?: unknown }).media;
-  if (!media || typeof media !== 'object') return undefined;
-  const typedMedia = media as PublicQuestion['media'];
-  return typedMedia?.url ? typedMedia : undefined;
+  // VISUAL slot only (image / video) — audio lives in getQuestionAudioMedia.
+  const media = (q.options as { media?: unknown }).media as PublicQuestion['media'] | undefined;
+  if (media && typeof media === 'object' && media.url && media.type !== 'audio') return media;
+  return undefined;
+}
+
+function getQuestionAudioMedia(q: BuilderQuestion) {
+  const am = (q.options as { audioMedia?: unknown }).audioMedia as PublicQuestion['media'] | undefined;
+  if (am && typeof am === 'object' && am.url && am.type === 'audio') return am;
+  // Legacy: audio stored in the single media slot.
+  const legacy = (q.options as { media?: unknown }).media as PublicQuestion['media'] | undefined;
+  if (legacy && typeof legacy === 'object' && legacy.url && legacy.type === 'audio') return legacy;
+  return undefined;
 }
 
 function previewShuffle<T>(items: T[], enabled: boolean): T[] {
@@ -3652,10 +3661,11 @@ function PreviewCanvas({
     ? exampleAnswerValue({ ...q, id: q.clientId } as unknown as TestQuestion)
     : undefined;
   const media = getQuestionMedia(q);
+  const audioMedia = getQuestionAudioMedia(q);
   /* Audio-behaviour annotations — the canvas can't (and shouldn't) actually
      lock/consume while editing, so surface the configured behaviour as chips
      instead, so the teacher can SEE that a lock / play-once is in effect. */
-  const hasAudioMedia = media?.type === 'audio';
+  const hasAudioMedia = !!audioMedia;
   const audioMustFinishSet = hasAudioMedia && (q.options as { audioMustFinish?: unknown }).audioMustFinish === true;
   const audioPlayOnceSet = hasAudioMedia && (q.options as { audioPlayOnce?: unknown }).audioPlayOnce === true;
   let previewQ: PublicQuestion;
@@ -3920,6 +3930,7 @@ function PreviewCanvas({
         <div className="tb-preview-content">
           <QuestionMediaLayout
             media={previewQ.media}
+            audioMedia={audioMedia ?? undefined}
             forceDevice={previewDevice}
             header={(
               <>
