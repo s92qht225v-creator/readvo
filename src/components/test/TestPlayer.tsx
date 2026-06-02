@@ -701,6 +701,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
     setAnswers(prev => ({ ...prev, [qid]: v }));
   }, []);
 
+  /* Mirrors the current `audioLocked` value (computed lower in render) so the
+     keyboard handler can read it without a stale closure — keeps Enter from
+     skipping an audio that must still be heard, the same as the Next button. */
+  const audioLockedRef = useRef(false);
+
   // Keyboard shortcuts: Enter to advance, 1-9 to pick mc choice
   useEffect(() => {
     if (phase !== 'question' || !q) return;
@@ -711,7 +716,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
       }
       if (e.key === 'Enter') {
         /* Enter advances freely (mirrors the Next button) — required
-           questions are only enforced at the final Submit. */
+           questions are only enforced at the final Submit. But it must
+           respect the audio lock, or it becomes a skip-the-audio shortcut. */
+        if (audioLockedRef.current) return;
         if (isLast) attemptSubmit();
         else goToIdx(i => i + 1);
         return;
@@ -1032,6 +1039,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
   const questionAudioLocked = !forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce)
     && q.media?.type === 'audio' && !audioDone.has(`q:${q.id}`);
   const audioLocked = sectionAudioLocked || questionAudioLocked;
+  audioLockedRef.current = audioLocked;
   const nextBlocked = phase === 'submitting' || audioLocked;
 
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
