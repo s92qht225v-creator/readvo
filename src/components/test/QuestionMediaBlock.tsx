@@ -53,10 +53,10 @@ export function QuestionMediaLayout({ media, audioMedia, header, answer, childre
   const visual = media && media.type !== 'audio' ? media : undefined;
   const audio = audioMedia?.url ? audioMedia : (media && media.type === 'audio' ? media : undefined);
 
-  const audioBlock = audio ? (
+  const renderAudio = (className: string) => audio ? (
     <QuestionMediaBlock
       media={audio}
-      className="qmedia-asset"
+      className={className}
       onAudioEnded={onAudioEnded}
       autoPlayAudio={autoPlayAudio}
       audioPlayOnce={audioPlayOnce}
@@ -65,24 +65,28 @@ export function QuestionMediaLayout({ media, audioMedia, header, answer, childre
     />
   ) : null;
 
-  // Audio + image: audio bar stacked above the normal image layout.
-  if (visual?.url && audioBlock) {
+  // Audio + image: image floats as normal; the audio player sits inside the
+  // content column right above the answer choices (same spot as audio-only).
+  if (visual?.url && audio) {
     return (
-      <div className="qmedia-audio-combo">
-        <div className="qmedia-audio-combo__audio">{audioBlock}</div>
-        <div className={layoutClassName(visual, forceDevice)}>
-          <QuestionMediaBlock media={visual} className="qmedia-asset" />
-          <div className="qmedia-content">{content}</div>
+      <div className={layoutClassName(visual, forceDevice)}>
+        <QuestionMediaBlock media={visual} className="qmedia-asset" />
+        <div className="qmedia-content">
+          <div className="qmedia-header">{header}</div>
+          <div className="qmedia-answer">
+            {renderAudio('qmedia-audio-inline')}
+            {answer}
+          </div>
         </div>
       </div>
     );
   }
 
   // Audio only — sits above the content (reordered with header/answer).
-  if (audioBlock) {
+  if (audio) {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
-        {audioBlock}
+        {renderAudio('qmedia-asset')}
         <div className="qmedia-content">{content}</div>
       </div>
     );
