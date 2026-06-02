@@ -548,10 +548,13 @@
      --qmedia-card-pad-x is set on the card by TestPlayer / TestBuilder
      (52px in the preview shell, 80px in the builder, etc.). */
   --qm-gap: var(--qmedia-card-pad-x, 52px);
-  /* Asset column is sized exactly to the image (no leftover space
-     inside its cell), so the asset is flush against the inner side of
-     its column and the outer side reaches the card's outer padding. */
-  --qm-grid: minmax(0, 1fr) 360px;
+  /* Media column width: a clamped PROPORTION of the card (not a fixed
+     360px) so it scales — text/answers keep the majority, the media never
+     shrinks below 280px (stays usable on narrow cards) nor grows past
+     420px (no stretched small images / over-dominant media on wide cards).
+     The text column is the remaining 1fr. */
+  --qm-media-col: clamp(280px, 38%, 420px);
+  --qm-grid: minmax(0, 1fr) var(--qm-media-col);
   --qm-asset-w: 100%;
   --qm-asset-max-w: 100%;         /* asset fills its 360px-wide column */
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
@@ -583,7 +586,7 @@
 [data-test-device="desktop"] .qmedia-desktop-float-left {
   /* Mirror the grid: image-sized track on the left, flexible content
      on the right. */
-  --qm-grid: 360px minmax(0, 1fr);
+  --qm-grid: var(--qm-media-col) minmax(0, 1fr);
   --qm-asset-col: 1;
   --qm-content-col: 2;
 }
