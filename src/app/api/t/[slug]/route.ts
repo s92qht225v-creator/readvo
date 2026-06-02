@@ -72,6 +72,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     listening_audio_url: test.listening_audio_url ?? null,
     strict_sections: !!test.strict_sections,
     play_once_audio: !!test.play_once_audio,
+    audio_lock: !!test.audio_lock,
     sections: (sections ?? []).map(s => ({
       id: s.id as string,
       position: s.position as number,

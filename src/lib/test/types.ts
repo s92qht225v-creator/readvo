@@ -261,6 +261,9 @@ export interface Test {
      persisted per respondent so a page refresh can't replay it.
      Independent of `strict_sections`. Defaults to false. */
   play_once_audio?: boolean;
+  /** When true: the test-taker can't advance past a section until that
+   *  section's audio has played through once (per-section / global track). */
+  audio_lock?: boolean;
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
@@ -433,6 +436,10 @@ export interface PublicQuestion {
   /** Optional directive shown ABOVE the question text (e.g. "Read and
    *  select the best option."). Stored in options.instruction. */
   instruction?: string;
+  /** When true + this question has audio media: the test-taker can't advance
+   *  to the next question until that audio has played through once. Stored in
+   *  options.audioMustFinish. */
+  audioMustFinish?: boolean;
   /** When true this is a worked EXAMPLE (HSK-style): the answer is shown
    *  pre-selected, the inputs are locked, and it's excluded from the score.
    *  Stored in options.isExample. */
@@ -482,6 +489,9 @@ export interface PublicTest {
   /* Listening audio plays once (no seek/replay; consumption persisted per
      respondent so refresh can't replay). Independent of strict_sections. */
   play_once_audio?: boolean;
+  /** When true: the test-taker can't advance past a section until that
+   *  section's audio has played through once (per-section / global track). */
+  audio_lock?: boolean;
   /* Ordered list of the test's sections (empty if the test is
      sectionless). Each question's `section_id` references one of
      these ids. */

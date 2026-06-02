@@ -114,6 +114,13 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
             onChange={v => onChange(setQuestionIsExample(q, v))}
           />
         ) : null}
+        {questionHasAudio(q) ? (
+          <ToggleRow
+            label="Lock until audio finishes"
+            checked={getQuestionAudioMustFinish(q)}
+            onChange={v => onChange(setQuestionAudioMustFinish(q, v))}
+          />
+        ) : null}
         {(q.type === 'multiple_choice' || q.type === 'picture_choice' || q.type === 'dropdown' || q.type === 'checkbox') ? (
           <>
             <ToggleRow
@@ -465,6 +472,25 @@ function setQuestionIsExample(q: BuilderQuestion, isExample: boolean): BuilderQu
       isExample,
     } as BuilderQuestion['options'],
   };
+}
+
+function getQuestionAudioMustFinish(q: BuilderQuestion): boolean {
+  return (q.options as { audioMustFinish?: unknown }).audioMustFinish === true;
+}
+
+function setQuestionAudioMustFinish(q: BuilderQuestion, audioMustFinish: boolean): BuilderQuestion {
+  return {
+    ...q,
+    options: {
+      ...(q.options as Record<string, unknown>),
+      audioMustFinish,
+    } as BuilderQuestion['options'],
+  };
+}
+
+function questionHasAudio(q: BuilderQuestion): boolean {
+  return (q.options as { media?: { type?: unknown; url?: unknown } }).media?.type === 'audio'
+    && !!(q.options as { media?: { url?: unknown } }).media?.url;
 }
 
 function setQuestionInstruction(q: BuilderQuestion, instruction: string): BuilderQuestion {

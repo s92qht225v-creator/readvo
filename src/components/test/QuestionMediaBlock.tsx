@@ -8,14 +8,18 @@ interface Props {
   media?: QuestionMedia;
   className?: string;
   style?: React.CSSProperties;
+  /** Fired when this block's AUDIO media finishes playing (audio only). */
+  onAudioEnded?: () => void;
 }
 
-export function QuestionMediaLayout({ media, header, answer, children, forceDevice }: {
+export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded }: {
   media?: QuestionMedia;
   header?: React.ReactNode;
   answer?: React.ReactNode;
   children?: React.ReactNode;
   forceDevice?: 'mobile' | 'desktop';
+  /** Fired when the question's AUDIO media finishes playing. */
+  onAudioEnded?: () => void;
 }) {
   const content = children ?? (
     <>
@@ -37,7 +41,7 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   if (media.type === 'audio') {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
-        <QuestionMediaBlock media={media} className="qmedia-asset" />
+        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} />
         <div className="qmedia-content">{content}</div>
       </div>
     );
@@ -50,13 +54,13 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   );
 }
 
-export function QuestionMediaBlock({ media, className, style }: Props) {
+export function QuestionMediaBlock({ media, className, style, onAudioEnded }: Props) {
   if (!media?.url) return null;
 
   if (media.type === 'audio') {
     return (
       <div className={className} style={{ ...audioFrameWrap, ...style }}>
-        <AudioPlayer src={media.url} />
+        <AudioPlayer src={media.url} onEnded={onAudioEnded} />
       </div>
     );
   }
@@ -135,11 +139,13 @@ function FramedImage({ media, className, style, transform, initialAspect }: {
   );
 }
 
-function AudioPlayer({ src }: { src: string }) {
+function AudioPlayer({ src, onEnded }: { src: string; onEnded?: () => void }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const onEndedRef = useRef(onEnded);
+  onEndedRef.current = onEnded;
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -156,6 +162,7 @@ function AudioPlayer({ src }: { src: string }) {
     const handleEnded = () => {
       setIsPlaying(false);
       setCurrentTime(audio.duration || 0);
+      onEndedRef.current?.();
     };
 
     audio.addEventListener('loadedmetadata', handleMetadata);

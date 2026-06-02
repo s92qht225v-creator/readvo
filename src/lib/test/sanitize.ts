@@ -165,11 +165,16 @@ function normalizeVisualMedia(media: NonNullable<PublicQuestion['media']>): Publ
  * seed so existing callers still work.
  */
 export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion {
-  const base = sanitizeQuestionBase(q, seed);
-  if (!isExampleQuestion(q)) return base;
-  // Worked example: intentionally reveal its own answer so the player can show
-  // it pre-selected. The answer key for every OTHER question stays stripped.
-  return { ...base, isExample: true, exampleValue: exampleAnswerValue(q) };
+  let pub = sanitizeQuestionBase(q, seed);
+  if ((q.options as { audioMustFinish?: unknown } | null)?.audioMustFinish === true) {
+    pub = { ...pub, audioMustFinish: true };
+  }
+  if (isExampleQuestion(q)) {
+    // Worked example: intentionally reveal its own answer so the player can show
+    // it pre-selected. The answer key for every OTHER question stays stripped.
+    pub = { ...pub, isExample: true, exampleValue: exampleAnswerValue(q) };
+  }
+  return pub;
 }
 
 function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {

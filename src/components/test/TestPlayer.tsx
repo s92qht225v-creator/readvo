@@ -307,6 +307,26 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
     })();
   }, [forceDevice, responseId, test.slug]);
 
+  /* ── Audio-lock gating ───────────────────────────────────────────
+     When `test.audio_lock` is on, a SECTION's audio must finish before
+     the respondent can leave that section (card mode) / advance past it
+     (scroll mode). Per-question `audioMustFinish` gates Next while that
+     question's own audio media hasn't completed. `audioDone` is the set
+     of audio tracks (section id, 'global', or 'q:{questionId}') that
+     have played through at least once this session. A play-once track
+     consumed before a refresh counts as heard, so we seed from
+     `consumedAudio`. Replays stay unlocked — once a track is in the set
+     it never leaves it. Preview/builder (forceDevice) is never locked. */
+  const [audioDone, setAudioDone] = useState<Set<string>>(() => new Set(initialConsumedAudio ?? []));
+  const markAudioDone = useCallback((key: string) => {
+    setAudioDone(prev => {
+      if (prev.has(key)) return prev;
+      const next = new Set(prev);
+      next.add(key);
+      return next;
+    });
+  }, []);
+
   /* ── Refresh-resilient autosave ──────────────────────────────────
      Persist the in-progress attempt (answers + collected respondent
      info + a "started" flag) to localStorage so an accidental refresh
@@ -324,10 +344,16 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         profile?: RespondentProfile;
         started?: boolean;
         sectionIdx?: number;
+        audioDone?: string[];
       };
       if (saved.answers && typeof saved.answers === 'object') setAnswers(saved.answers);
       if (typeof saved.name === 'string') setName(saved.name);
       if (saved.profile && typeof saved.profile === 'object') setProfile(saved.profile);
+      /* Restore which audio tracks were already heard so an accidental
+         refresh doesn't re-arm the audio-lock and force a re-listen. */
+      if (Array.isArray(saved.audioDone) && saved.audioDone.length) {
+        setAudioDone(prev => new Set([...prev, ...saved.audioDone!]));
+      }
       /* Restore the section the student was on (scroll sectioned mode)
          so a refresh doesn't bounce them back to section 1. */
       if (typeof saved.sectionIdx === 'number' && saved.sectionIdx >= 0) setCurrentSectionIdx(saved.sectionIdx);
@@ -360,9 +386,9 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
     const started = phase === 'question' || phase === 'submitting';
     if (!started && Object.keys(answers).length === 0) return;
     try {
-      window.localStorage.setItem(answersStorageKey, JSON.stringify({ answers, name, profile, started, sectionIdx: currentSectionIdx }));
+      window.localStorage.setItem(answersStorageKey, JSON.stringify({ answers, name, profile, started, sectionIdx: currentSectionIdx, audioDone: [...audioDone] }));
     } catch { /* quota / private mode — autosave is best-effort */ }
-  }, [answers, name, profile, phase, currentSectionIdx, answersStorageKey]);
+  }, [answers, name, profile, phase, currentSectionIdx, audioDone, answersStorageKey]);
 
   const total = test.questions.length;
   const q: PublicQuestion | undefined = test.questions[idx];
@@ -976,8 +1002,33 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
       playOnce={playOnce}
       consumed={consumedAudio.has(activeAudioTrackId)}
       onConsumed={() => markAudioConsumed(activeAudioTrackId)}
+      onEnded={() => markAudioDone(activeAudioTrackId)}
     />
   ) : null;
+
+  /* ── Audio-lock gating (card mode) ────────────────────────────────
+     Two independent locks, never applied in preview (forceDevice):
+     1. SECTION / listening audio — when `test.audio_lock` is on, the
+        current ListeningAudioBar track must finish before a Next that
+        LEAVES that track (crosses into a question on a different track,
+        or Submits on the last question). Advancing within the same
+        track is free. For a sectionless test this means the global
+        track only gates the final Submit.
+     2. PER-QUESTION audio — `q.audioMustFinish` blocks Next until this
+        question's own audio media has played through once. */
+  const nextQuestion = isLast ? null : test.questions[idx + 1];
+  const nextAudioTrackId = nextQuestion
+    ? (sectionGroups
+        ? (sectionGroups.find(g => g.section && g.questions.some(qq => qq.id === nextQuestion.id))?.section?.id ?? 'global')
+        : 'global')
+    : null;
+  const sectionAudioLocked = !forceDevice && audioActive && !!test.audio_lock
+    && !audioDone.has(activeAudioTrackId)
+    && (isLast || nextAudioTrackId !== activeAudioTrackId);
+  const questionAudioLocked = !forceDevice && !!q.audioMustFinish
+    && q.media?.type === 'audio' && !audioDone.has(`q:${q.id}`);
+  const audioLocked = sectionAudioLocked || questionAudioLocked;
+  const nextBlocked = phase === 'submitting' || audioLocked;
 
   /* ── Scroll mode (IELTS / SurveyMonkey-style) ──────────────────────
      All questions stacked on one scrollable page; the active question
@@ -1005,6 +1056,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           total={total}
           submitAttempted={submitAttempted}
           audioActive={audioActive}
+          audioLockEnabled={!!test.audio_lock && !forceDevice}
+          audioDone={audioDone}
+          markAudioDone={markAudioDone}
+          activeAudioTrackId={activeAudioTrackId}
+          forceDevice={forceDevice}
           section={isSectioned ? {
             title: currentGroup!.section?.title || `Section ${currentSectionIdx + 1}`,
             index: currentSectionIdx,
@@ -1064,6 +1120,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           <QuestionMediaLayout
             media={q.media}
             forceDevice={forceDevice}
+            onAudioEnded={() => markAudioDone(`q:${q.id}`)}
             header={(
               <>
                 {q.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}
@@ -1089,7 +1146,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
                     question={q}
                     value={q.isExample ? (q.exampleValue ?? {}) : answer}
                     onChange={q.isExample ? noop : onChange}
-                    onSubmit={q.isExample ? noop : (() => { isLast ? attemptSubmit() : goToIdx(idx + 1); })}
+                    onSubmit={q.isExample ? noop : (() => { if (audioLocked) return; isLast ? attemptSubmit() : goToIdx(idx + 1); })}
                     slug={test.slug}
                     responseId={responseId}
                     respondentToken={ensureRespondentToken(test.slug)}
@@ -1110,6 +1167,15 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         </div>
       ) : null}
 
+      {/* Audio-lock hint — shown while a Next is blocked because the
+          section/listening audio or this question's own audio hasn't
+          finished playing yet. */}
+      {audioLocked ? (
+        <div role="status" style={audioLockBar}>
+          Listen to the audio to continue.
+        </div>
+      ) : null}
+
       <div className="test-player__nav" style={navRow}>
         <button
           type="button"
@@ -1123,12 +1189,13 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         </div>
         <button
           type="button"
-          onClick={() => isLast ? attemptSubmit() : goToIdx(idx + 1)}
+          onClick={() => { if (nextBlocked) return; isLast ? attemptSubmit() : goToIdx(idx + 1); }}
           /* Next never blocks on required questions — only the final
              Submit validates (and jumps to the first missing one).
-             Disabled solely while a submission is in flight. */
-          disabled={phase === 'submitting'}
-          style={primaryButton(phase === 'submitting')}
+             Disabled while a submission is in flight OR while an
+             audio-lock is active (audio must finish first). */
+          disabled={nextBlocked}
+          style={primaryButton(nextBlocked)}
         >
           {phase === 'submitting' ? 'Submitting…' : isLast ? 'Submit' : 'Next'}
         </button>
@@ -1349,7 +1416,7 @@ function SectionScoreBreakdown({ sections }: { sections: SectionScore[] }) {
   );
 }
 
-function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
+function ListeningAudioBar({ url, playOnce, consumed, onConsumed, onEnded }: {
   url: string;
   /* Play-once mode: no seek/replay; consumption persisted (refresh-proof). */
   playOnce: boolean;
@@ -1357,6 +1424,10 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
      a refresh). Snapshotted at mount to decide the locked state. */
   consumed: boolean;
   onConsumed: () => void;
+  /* Fired when the track plays through to the end (audio-lock gating).
+     Also fired once at mount when the track was already consumed before a
+     refresh, so the lock doesn't strand a respondent who already heard it. */
+  onEnded?: () => void;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   /* Snapshot `consumed` at mount: a track already consumed (after refresh)
@@ -1373,6 +1444,8 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
   const maxTimeRef = useRef(0);
   const endedRef = useRef(false);
   const consumedFiredRef = useRef(false);
+  const onEndedRef = useRef(onEnded);
+  onEndedRef.current = onEnded;
 
   /* Try to autoplay. Works when the student arrived via a Start click;
      otherwise the browser blocks it and the visible Play control lets them
@@ -1382,6 +1455,13 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
     if (!el || lockedOnMount) return;
     el.play().catch(() => { /* autoplay blocked — control remains */ });
   }, [url, lockedOnMount]);
+
+  /* A track that mounts locked (play-once, already consumed before a
+     refresh) has effectively been "heard" — fire onEnded once so the
+     audio-lock gate doesn't trap a respondent who already listened. */
+  useEffect(() => {
+    if (lockedOnMount) onEndedRef.current?.();
+  }, [lockedOnMount]);
 
   /* Locked: already played once. No audio element, no replay. */
   if (playOnce && lockedOnMount) {
@@ -1401,7 +1481,13 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
       <div className="test-listening-bar" style={listeningBarStyle}>
         <div style={listeningBarInner}>
           <span style={listeningBarLabel}><HeadphonesGlyph /> Listening</span>
-          <audio ref={audioRef} src={url} controls style={{ flex: 1, minWidth: 0 }} />
+          <audio
+            ref={audioRef}
+            src={url}
+            controls
+            style={{ flex: 1, minWidth: 0 }}
+            onEnded={() => onEndedRef.current?.()}
+          />
         </div>
       </div>
     );
@@ -1453,7 +1539,7 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed }: {
               el.play().catch(() => {});
             }
           }}
-          onEnded={() => { endedRef.current = true; setEnded(true); setProgress(1); }}
+          onEnded={() => { endedRef.current = true; setEnded(true); setProgress(1); onEndedRef.current?.(); }}
           onSeeking={clampSeek}
           onTimeUpdate={() => {
             const el = audioRef.current;
@@ -1488,6 +1574,11 @@ function ScrollBody({
   total,
   submitAttempted,
   audioActive,
+  audioLockEnabled,
+  audioDone,
+  markAudioDone,
+  activeAudioTrackId,
+  forceDevice,
   section,
   responseId,
 }: {
@@ -1530,6 +1621,17 @@ function ScrollBody({
      scrolled content has room to clear it. The bar itself lives at the
      top-level TestPlayer render (independent of layout). */
   audioActive: boolean;
+  /* Audio-lock: when enabled, the section/listening audio (and any
+     per-question `audioMustFinish` audio in the section) must finish
+     before the respondent can advance past the section / submit. Always
+     false in preview. `audioDone` is the shared set of finished tracks
+     (section id / 'global' / 'q:{id}'); `markAudioDone` records one.
+     `activeAudioTrackId` is the current section/listening track. */
+  audioLockEnabled: boolean;
+  audioDone: Set<string>;
+  markAudioDone: (key: string) => void;
+  activeAudioTrackId: string;
+  forceDevice?: 'mobile' | 'desktop';
   /* Per-session response id, threaded to the speaking recorder so it can
      POST to /speaking-grade. Undefined in preview/builder. */
   responseId?: string;
@@ -1585,6 +1687,16 @@ function ScrollBody({
     else itemRefs.current.delete(id);
   };
 
+  /* Audio-lock (scroll mode): block advancing past the section / submit
+     until (a) the section/listening audio has finished (when audio_lock
+     is on) and (b) every per-question `audioMustFinish` audio in the
+     visible section has played through. */
+  const sectionAudioLocked = audioLockEnabled && audioActive && !audioDone.has(activeAudioTrackId);
+  const questionAudioLocked = !forceDevice && items.some(it =>
+    it.audioMustFinish && it.media?.type === 'audio' && !audioDone.has(`q:${it.id}`));
+  const audioLockedScroll = sectionAudioLocked || questionAudioLocked;
+  const advanceBlocked = phase === 'submitting' || audioLockedScroll;
+
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
       <div className="test-scroll__list" style={audioActive ? { ...scrollList, paddingTop: 96 } : scrollList}>
@@ -1618,6 +1730,7 @@ function ScrollBody({
                   same title/description styling. */}
               <QuestionMediaLayout
                 media={question.media}
+                onAudioEnded={() => markAudioDone(`q:${question.id}`)}
                 header={(
                   <>
                     {question.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}
@@ -1669,6 +1782,11 @@ function ScrollBody({
           / Submit]. Back is hidden in strict (forward-only) mode and on
           the first section. Sectionless: the original Questions /
           progress / Submit row. */}
+      {audioLockedScroll ? (
+        <div role="status" style={{ ...audioLockBar, maxWidth: 1120, margin: '0 auto 12px', width: '100%' }}>
+          Listen to the audio to continue.
+        </div>
+      ) : null}
       <div className="test-scroll__footer" style={scrollFooter}>
         <div style={scrollFooterInner}>
           {section ? (
@@ -1681,9 +1799,9 @@ function ScrollBody({
               <div style={navProgress}>Section {section.index + 1} / {section.count}</div>
               <button
                 type="button"
-                onClick={section.isLast ? onSubmit : section.onNext}
-                disabled={phase === 'submitting'}
-                style={primaryButton(phase === 'submitting')}
+                onClick={() => { if (advanceBlocked) return; (section.isLast ? onSubmit : section.onNext)(); }}
+                disabled={advanceBlocked}
+                style={primaryButton(advanceBlocked)}
               >
                 {phase === 'submitting' ? 'Submitting…' : section.isLast ? 'Submit' : 'Next section'}
               </button>
@@ -1700,9 +1818,9 @@ function ScrollBody({
               <div style={navProgress}>{activeIdx + 1} / {total}</div>
               <button
                 type="button"
-                onClick={onSubmit}
-                disabled={phase === 'submitting'}
-                style={primaryButton(phase === 'submitting')}
+                onClick={() => { if (advanceBlocked) return; onSubmit(); }}
+                disabled={advanceBlocked}
+                style={primaryButton(advanceBlocked)}
               >
                 {phase === 'submitting' ? 'Submitting…' : 'Submit'}
               </button>
@@ -2113,6 +2231,18 @@ const requiredWarnBar: React.CSSProperties = {
   background: '#fef2f2',
   border: '1px solid #fecaca',
   color: '#b91c1c',
+  fontSize: 13,
+  fontWeight: 600,
+  textAlign: 'center',
+};
+
+const audioLockBar: React.CSSProperties = {
+  marginTop: 16,
+  padding: '10px 14px',
+  borderRadius: 8,
+  background: '#eff6ff',
+  border: '1px solid #bfdbfe',
+  color: '#1d4ed8',
   fontSize: 13,
   fontWeight: 600,
   textAlign: 'center',
