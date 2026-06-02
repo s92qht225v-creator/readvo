@@ -1121,6 +1121,10 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             media={q.media}
             forceDevice={forceDevice}
             onAudioEnded={() => markAudioDone(`q:${q.id}`)}
+            /* Auto-start a locked question's audio so the student isn't
+               stranded on a disabled Next. Only when the lock is on and
+               not in preview. */
+            autoPlayAudio={!forceDevice && !!q.audioMustFinish && q.media?.type === 'audio'}
             header={(
               <>
                 {q.isExample ? <span className="test-player__example-badge" style={exampleBadge}>Example</span> : null}

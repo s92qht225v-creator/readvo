@@ -10,9 +10,14 @@ interface Props {
   style?: React.CSSProperties;
   /** Fired when this block's AUDIO media finishes playing (audio only). */
   onAudioEnded?: () => void;
+  /** Attempt to auto-start AUDIO media on mount (audio only). Used for
+   *  audio-locked questions so the student isn't stuck on a disabled
+   *  Next wondering why — the clip starts itself (browser gesture
+   *  permitting; the play control remains if autoplay is blocked). */
+  autoPlayAudio?: boolean;
 }
 
-export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded }: {
+export function QuestionMediaLayout({ media, header, answer, children, forceDevice, onAudioEnded, autoPlayAudio }: {
   media?: QuestionMedia;
   header?: React.ReactNode;
   answer?: React.ReactNode;
@@ -20,6 +25,8 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   forceDevice?: 'mobile' | 'desktop';
   /** Fired when the question's AUDIO media finishes playing. */
   onAudioEnded?: () => void;
+  /** Auto-start the question's AUDIO media on mount (audio-locked questions). */
+  autoPlayAudio?: boolean;
 }) {
   const content = children ?? (
     <>
@@ -41,7 +48,7 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   if (media.type === 'audio') {
     return (
       <div className="qmedia-layout qmedia-audio qmedia-audio-top">
-        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} />
+        <QuestionMediaBlock media={media} className="qmedia-asset" onAudioEnded={onAudioEnded} autoPlayAudio={autoPlayAudio} />
         <div className="qmedia-content">{content}</div>
       </div>
     );
@@ -54,13 +61,13 @@ export function QuestionMediaLayout({ media, header, answer, children, forceDevi
   );
 }
 
-export function QuestionMediaBlock({ media, className, style, onAudioEnded }: Props) {
+export function QuestionMediaBlock({ media, className, style, onAudioEnded, autoPlayAudio }: Props) {
   if (!media?.url) return null;
 
   if (media.type === 'audio') {
     return (
       <div className={className} style={{ ...audioFrameWrap, ...style }}>
-        <AudioPlayer src={media.url} onEnded={onAudioEnded} />
+        <AudioPlayer src={media.url} onEnded={onAudioEnded} autoPlay={autoPlayAudio} />
       </div>
     );
   }
@@ -139,13 +146,24 @@ function FramedImage({ media, className, style, transform, initialAspect }: {
   );
 }
 
-function AudioPlayer({ src, onEnded }: { src: string; onEnded?: () => void }) {
+function AudioPlayer({ src, onEnded, autoPlay }: { src: string; onEnded?: () => void; autoPlay?: boolean }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const onEndedRef = useRef(onEnded);
   onEndedRef.current = onEnded;
+
+  /* Auto-start on mount for audio-locked questions (gesture permitting —
+     arriving via Start/Next gives the page user-activation so play()
+     usually succeeds; if the browser blocks it, the play control stays
+     so the student can start it manually). */
+  useEffect(() => {
+    if (!autoPlay) return;
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.play().catch(() => { /* autoplay blocked — manual control remains */ });
+  }, [autoPlay, src]);
 
   useEffect(() => {
     const audio = audioRef.current;
