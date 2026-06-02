@@ -101,16 +101,14 @@
 
   .test-player__card {
     box-sizing: border-box !important;
-    /* Card-mode height is content-driven: grow to fit, with a floor so
-       short questions still get a comfortable card, and a viewport cap so
-       we ONLY scroll when content genuinely can't fit on screen. (Was a
-       hard `height: 620px` which forced a scrollbar whenever content was
-       620–viewport tall, even though it would have fit.)
-       `max-height` and `overflow-y` are NOT !important so scroll mode can
-       override them on `.test-player__card.test-scroll__item` by
-       specificity alone. */
+    /* `height` and `overflow-y` deliberately NOT !important so
+       scroll mode can override them on `.test-player__card.test-scroll__item`
+       via specificity alone, without re-introducing !important.
+       min-height stays as the canonical floor and is consumed by card
+       mode (which gets pinned to it via `height`) and scroll mode
+       (which lets cards grow with content above this floor). */
+    height: min(620px, calc(100vh - 136px));
     min-height: min(620px, calc(100vh - 136px)) !important;
-    max-height: calc(100vh - 136px);
     overflow-y: auto;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
@@ -325,9 +323,6 @@
    specificity alone. */
 .test-player__card.test-scroll__item {
   height: auto;
-  /* Scroll items grow freely with content (the page scrolls, not the
-     card) — don't inherit card mode's viewport max-height cap. */
-  max-height: none;
   overflow-y: visible;
   display: flex;
   flex-direction: column;
