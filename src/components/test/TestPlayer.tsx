@@ -1025,7 +1025,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
   const sectionAudioLocked = !forceDevice && audioActive && !!test.audio_lock
     && !audioDone.has(activeAudioTrackId)
     && (isLast || nextAudioTrackId !== activeAudioTrackId);
-  const questionAudioLocked = !forceDevice && !!q.audioMustFinish
+  /* Per-question audio lock fires for "Lock until audio finishes" AND for
+     "Play once" — a play-once clip is consumed the moment it starts, so
+     letting the student skip mid-play would waste their single listen.
+     Play-once therefore also blocks advancing until the clip finishes. */
+  const questionAudioLocked = !forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce)
     && q.media?.type === 'audio' && !audioDone.has(`q:${q.id}`);
   const audioLocked = sectionAudioLocked || questionAudioLocked;
   const nextBlocked = phase === 'submitting' || audioLocked;
@@ -1126,7 +1130,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             /* Auto-start a locked question's audio so the student isn't
                stranded on a disabled Next. Only when the lock is on and
                not in preview. */
-            autoPlayAudio={!forceDevice && !!q.audioMustFinish && q.media?.type === 'audio'}
+            autoPlayAudio={!forceDevice && (!!q.audioMustFinish || !!q.audioPlayOnce) && q.media?.type === 'audio'}
             /* Play-once for this question's audio (refresh-proof — reuses
                the consumed-audio store with a q:{id} track id). */
             audioPlayOnce={!forceDevice && !!q.audioPlayOnce && q.media?.type === 'audio'}
@@ -1706,11 +1710,11 @@ function ScrollBody({
 
   /* Audio-lock (scroll mode): block advancing past the section / submit
      until (a) the section/listening audio has finished (when audio_lock
-     is on) and (b) every per-question `audioMustFinish` audio in the
-     visible section has played through. */
+     is on) and (b) every per-question audio that must be heard in full
+     ("Lock until audio finishes" OR "Play once") has played through. */
   const sectionAudioLocked = audioLockEnabled && audioActive && !audioDone.has(activeAudioTrackId);
   const questionAudioLocked = !forceDevice && items.some(it =>
-    it.audioMustFinish && it.media?.type === 'audio' && !audioDone.has(`q:${it.id}`));
+    (it.audioMustFinish || it.audioPlayOnce) && it.media?.type === 'audio' && !audioDone.has(`q:${it.id}`));
   const audioLockedScroll = sectionAudioLocked || questionAudioLocked;
   const advanceBlocked = phase === 'submitting' || audioLockedScroll;
 

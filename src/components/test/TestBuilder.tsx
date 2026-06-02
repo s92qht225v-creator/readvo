@@ -3926,7 +3926,7 @@ function PreviewCanvas({
                 {(audioMustFinishSet || audioPlayOnceSet) ? (
                   <div style={previewAudioFlags}>
                     {audioMustFinishSet ? <span style={previewAudioFlagChip}>🔒 Locked until audio finishes</span> : null}
-                    {audioPlayOnceSet ? <span style={previewAudioFlagChip}>▶ Plays once — no replay</span> : null}
+                    {audioPlayOnceSet ? <span style={previewAudioFlagChip}>▶ Plays once — must finish, no replay</span> : null}
                   </div>
                 ) : null}
                 {isExample ? <span className="tb-preview-example-badge" style={previewExampleBadge}>Example</span> : null}
