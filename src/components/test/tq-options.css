@@ -557,11 +557,11 @@
   --qm-asset-h: auto;             /* aspect-ratio drives the height */
   /* Cap media to the card's available content height so a tall (portrait)
      video/image shrinks to fit INSIDE the fixed card instead of forcing it
-     to overflow + scroll. Card height is min(620px, 100vh - 136px); minus
-     the 48px top/bottom padding (96) and a small buffer. Same fixed 620
-     card on the live player, preview shell, and builder canvas, so one
-     value fits all three. */
-  --qm-asset-max-h: calc(min(620px, 100vh - 136px) - 108px);
+     to overflow + scroll. Card height is min(620px, 100vh - 136px); subtract
+     the card's own top+bottom padding (read from --qmedia-card-pad-top, which
+     is 48px on the live player / preview shell and 64px on the builder canvas)
+     plus a small buffer. Adapts to each surface's padding. */
+  --qm-asset-max-h: calc(min(620px, 100vh - 136px) - 2 * var(--qmedia-card-pad-top, 48px) - 16px);
   --qm-asset-radius: 0;            /* full-bleed in its grid cell */
   --qm-asset-margin-inline: 0;     /* flush against the cell edge */
   --qm-content-w: 100%;
