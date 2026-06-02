@@ -1,0 +1,226 @@
+{
+  "id": "hsk2-dialogue4",
+  "slug": "at-the-hotel",
+  "title": "在酒店",
+  "pinyin": "Zài jiǔdiàn",
+  "titleTranslation": "Mehmonxonada",
+  "titleTranslation_ru": "В гостинице",
+  "titleTranslation_en": "At the Hotel",
+  "level": 2,
+  "tag": "sayohat",
+  "dateAdded": "2026-06-02",
+  "sections": [
+    {
+      "id": "d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d4-s1",
+          "text_original": "你好，我想住一个晚上。",
+          "pinyin": "Nǐ hǎo, wǒ xiǎng zhù yí ge wǎnshang.",
+          "text_translation": "Salom, men bir kecha turmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу остановиться на одну ночь.",
+          "text_translation_en": "Hello, I want to stay for one night.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1 },
+            { "i": [3, 4], "p": "wǒ", "t": "men", "tr": "я", "h": 1 },
+            { "i": [4, 5], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть", "h": 1 },
+            { "i": [5, 6], "p": "zhù", "t": "turmoq, yashamoq", "tr": "жить, останавливаться", "h": 1 },
+            { "i": [6, 8], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [8, 10], "p": "wǎnshang", "t": "kecha, kechqurun", "tr": "вечер, ночь", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s2",
+          "text_original": "你好。你想要什么房间？",
+          "pinyin": "Nǐ hǎo. Nǐ xiǎng yào shénme fángjiān?",
+          "text_translation": "Salom. Qanday xona xohlaysiz?",
+          "text_translation_ru": "Здравствуйте. Какую комнату вы хотите?",
+          "text_translation_en": "Hello. What kind of room do you want?",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1 },
+            { "i": [3, 4], "p": "nǐ", "t": "sen, siz", "tr": "ты, вы", "h": 1 },
+            { "i": [4, 6], "p": "xiǎng yào", "t": "xohlamoq, istamoq", "tr": "хотеть", "h": 1 },
+            { "i": [6, 8], "p": "shénme", "t": "qanday, nima", "tr": "какой, что", "h": 1 },
+            { "i": [8, 10], "p": "fángjiān", "t": "xona", "tr": "комната, номер", "h": 2 }
+          ]
+        },
+        {
+          "id": "d4-s3",
+          "text_original": "我要一个小房间。",
+          "pinyin": "Wǒ yào yí ge xiǎo fángjiān.",
+          "text_translation": "Menga kichik xona kerak.",
+          "text_translation_ru": "Мне нужна маленькая комната.",
+          "text_translation_en": "I want a small room.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1 },
+            { "i": [1, 2], "p": "yào", "t": "istamoq, kerak", "tr": "хотеть, нужно", "h": 1 },
+            { "i": [2, 4], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [4, 5], "p": "xiǎo", "t": "kichik", "tr": "маленький", "h": 1 },
+            { "i": [5, 7], "p": "fángjiān", "t": "xona", "tr": "комната", "h": 2 }
+          ]
+        },
+        {
+          "id": "d4-s4",
+          "text_original": "可以。这个房间很干净，也很安静。",
+          "pinyin": "Kěyǐ. Zhège fángjiān hěn gānjìng, yě hěn ānjìng.",
+          "text_translation": "Mumkin. Bu xona juda toza, ham juda tinch.",
+          "text_translation_ru": "Можно. Эта комната очень чистая и очень тихая.",
+          "text_translation_en": "Okay. This room is very clean and also very quiet.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "kěyǐ", "t": "mumkin, bo'ladi", "tr": "можно", "h": 2 },
+            { "i": [3, 5], "p": "zhège", "t": "bu", "tr": "этот", "h": 1 },
+            { "i": [5, 7], "p": "fángjiān", "t": "xona", "tr": "комната", "h": 2 },
+            { "i": [7, 8], "p": "hěn", "t": "juda", "tr": "очень", "h": 1 },
+            { "i": [8, 10], "p": "gānjìng", "t": "toza", "tr": "чистый", "h": 2 },
+            { "i": [11, 12], "p": "yě", "t": "ham", "tr": "также, тоже", "h": 1 },
+            { "i": [12, 13], "p": "hěn", "t": "juda", "tr": "очень", "h": 1 },
+            { "i": [13, 15], "p": "ānjìng", "t": "tinch, jim", "tr": "тихий", "h": 2 }
+          ]
+        },
+        {
+          "id": "d4-s5",
+          "text_original": "这个房间多少钱？",
+          "pinyin": "Zhège fángjiān duōshao qián?",
+          "text_translation": "Bu xona qancha turadi?",
+          "text_translation_ru": "Сколько стоит эта комната?",
+          "text_translation_en": "How much is this room?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "zhège", "t": "bu", "tr": "этот", "h": 1 },
+            { "i": [2, 4], "p": "fángjiān", "t": "xona", "tr": "комната", "h": 2 },
+            { "i": [4, 6], "p": "duōshao", "t": "qancha, nechta", "tr": "сколько", "h": 1 },
+            { "i": [6, 7], "p": "qián", "t": "pul", "tr": "деньги", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s6",
+          "text_original": "一个晚上两百块。",
+          "pinyin": "Yí ge wǎnshang liǎng bǎi kuài.",
+          "text_translation": "Bir kecha ikki yuz yuan.",
+          "text_translation_ru": "Двести юаней за одну ночь.",
+          "text_translation_en": "Two hundred yuan for one night.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "yí ge", "t": "bitta", "tr": "один", "h": 1 },
+            { "i": [2, 4], "p": "wǎnshang", "t": "kecha, kechqurun", "tr": "ночь, вечер", "h": 1 },
+            { "i": [4, 5], "p": "liǎng", "t": "ikki", "tr": "два", "h": 1 },
+            { "i": [5, 6], "p": "bǎi", "t": "yuz", "tr": "сто", "h": 1 },
+            { "i": [6, 7], "p": "kuài", "t": "yuan (pul birligi)", "tr": "куай (юань)", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s7",
+          "text_original": "有点儿贵。有没有便宜一点儿的？",
+          "pinyin": "Yǒu diǎnr guì. Yǒu méiyǒu piányi yìdiǎnr de?",
+          "text_translation": "Bir oz qimmat. Arzonroq xona bormi?",
+          "text_translation_ru": "Немного дорого. Есть ли подешевле?",
+          "text_translation_en": "It is a little expensive. Do you have a cheaper one?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 3], "p": "yǒu diǎnr", "t": "bir oz", "tr": "немного", "h": 2 },
+            { "i": [3, 4], "p": "guì", "t": "qimmat", "tr": "дорогой", "h": 2 },
+            { "i": [5, 8], "p": "yǒu méiyǒu", "t": "bormi (bor-yo'q)", "tr": "есть ли", "h": 1 },
+            { "i": [8, 10], "p": "piányi", "t": "arzon", "tr": "дешёвый", "h": 2 },
+            { "i": [10, 13], "p": "yìdiǎnr", "t": "bir oz, ozroq", "tr": "немного", "h": 1 },
+            { "i": [13, 14], "p": "de", "t": "niki (egalik)", "tr": "частица", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s8",
+          "text_original": "有。这个房间一百五十块，但是小一点儿。",
+          "pinyin": "Yǒu. Zhège fángjiān yì bǎi wǔshí kuài, dànshì xiǎo yìdiǎnr.",
+          "text_translation": "Bor. Bu xona bir yuz ellik yuan, lekin bir oz kichikroq.",
+          "text_translation_ru": "Есть. Эта комната сто пятьдесят юаней, но немного меньше.",
+          "text_translation_en": "Yes. This room is 150 yuan, but it is a little smaller.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "есть", "h": 1 },
+            { "i": [2, 4], "p": "zhège", "t": "bu", "tr": "этот", "h": 1 },
+            { "i": [4, 6], "p": "fángjiān", "t": "xona", "tr": "комната", "h": 2 },
+            { "i": [6, 7], "p": "yì", "t": "bir", "tr": "один", "h": 1 },
+            { "i": [7, 8], "p": "bǎi", "t": "yuz", "tr": "сто", "h": 1 },
+            { "i": [8, 10], "p": "wǔshí", "t": "ellik", "tr": "пятьдесят", "h": 1 },
+            { "i": [10, 11], "p": "kuài", "t": "yuan", "tr": "куай (юань)", "h": 1 },
+            { "i": [12, 14], "p": "dànshì", "t": "lekin", "tr": "но", "h": 2 },
+            { "i": [14, 15], "p": "xiǎo", "t": "kichik", "tr": "маленький", "h": 1 },
+            { "i": [15, 18], "p": "yìdiǎnr", "t": "bir oz", "tr": "немного", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s9",
+          "text_original": "可以。酒店离火车站远吗？",
+          "pinyin": "Kěyǐ. Jiǔdiàn lí huǒchēzhàn yuǎn ma?",
+          "text_translation": "Mayli. Mehmonxona temir yo'l vokzalidan uzoqmi?",
+          "text_translation_ru": "Хорошо. Гостиница далеко от вокзала?",
+          "text_translation_en": "Okay. Is the hotel far from the train station?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "kěyǐ", "t": "mayli, mumkin", "tr": "хорошо, можно", "h": 2 },
+            { "i": [3, 5], "p": "jiǔdiàn", "t": "mehmonxona", "tr": "гостиница", "h": 2 },
+            { "i": [5, 6], "p": "lí", "t": "-dan (masofa)", "tr": "от", "h": 2 },
+            { "i": [6, 9], "p": "huǒchēzhàn", "t": "temir yo'l vokzali", "tr": "вокзал", "h": 1 },
+            { "i": [9, 10], "p": "yuǎn", "t": "uzoq", "tr": "далеко", "h": 1 },
+            { "i": [10, 11], "p": "ma", "t": "-mi (savol)", "tr": "ли (вопрос)", "h": 1 }
+          ]
+        },
+        {
+          "id": "d4-s10",
+          "text_original": "不远。坐车十分钟就到。",
+          "pinyin": "Bù yuǎn. Zuò chē shí fēnzhōng jiù dào.",
+          "text_translation": "Uzoq emas. Mashinada o'n daqiqada yetib boriladi.",
+          "text_translation_ru": "Недалеко. На машине доедете за десять минут.",
+          "text_translation_en": "Not far. It takes ten minutes by car.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "bù", "t": "emas, yo'q", "tr": "не", "h": 1 },
+            { "i": [1, 2], "p": "yuǎn", "t": "uzoq", "tr": "далеко", "h": 1 },
+            { "i": [3, 5], "p": "zuò chē", "t": "mashinada yurmoq", "tr": "ехать на машине", "h": 1 },
+            { "i": [5, 8], "p": "shí fēnzhōng", "t": "o'n daqiqa", "tr": "десять минут", "h": 1 },
+            { "i": [8, 9], "p": "jiù", "t": "darhol, -oq", "tr": "сразу, уже", "h": 2 },
+            { "i": [9, 10], "p": "dào", "t": "yetib bormoq", "tr": "прибыть", "h": 2 }
+          ]
+        },
+        {
+          "id": "d4-s11",
+          "text_original": "好，我要这个房间。",
+          "pinyin": "Hǎo, wǒ yào zhège fángjiān.",
+          "text_translation": "Yaxshi, men bu xonani olaman.",
+          "text_translation_ru": "Хорошо, я беру эту комнату.",
+          "text_translation_en": "Okay, I want this room.",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi, mayli", "tr": "хорошо", "h": 1 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1 },
+            { "i": [3, 4], "p": "yào", "t": "olmoq, istamoq", "tr": "хотеть, брать", "h": 1 },
+            { "i": [4, 6], "p": "zhège", "t": "bu", "tr": "этот", "h": 1 },
+            { "i": [6, 8], "p": "fángjiān", "t": "xona", "tr": "комната", "h": 2 }
+          ]
+        },
+        {
+          "id": "d4-s12",
+          "text_original": "好的。请写你的名字。",
+          "pinyin": "Hǎo de. Qǐng xiě nǐ de míngzi.",
+          "text_translation": "Mayli. Iltimos, ismingizni yozing.",
+          "text_translation_ru": "Хорошо. Пожалуйста, напишите ваше имя.",
+          "text_translation_en": "Okay. Please write your name.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "hǎo de", "t": "yaxshi, mayli", "tr": "хорошо", "h": 1 },
+            { "i": [3, 4], "p": "qǐng", "t": "iltimos", "tr": "пожалуйста", "h": 1 },
+            { "i": [4, 5], "p": "xiě", "t": "yozmoq", "tr": "писать", "h": 2 },
+            { "i": [5, 6], "p": "nǐ", "t": "sen, siz", "tr": "ты, вы", "h": 1 },
+            { "i": [6, 7], "p": "de", "t": "-ning (egalik)", "tr": "притяж. частица", "h": 1 },
+            { "i": [7, 9], "p": "míngzi", "t": "ism", "tr": "имя", "h": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
