@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { QuestionMedia } from '@/lib/test/types';
+import { claimAudioPlayback, isActiveAudio, releaseAudio } from './audioCoordinator';
 import './question-media.css';
 
 interface Props {
@@ -227,12 +228,14 @@ function AudioPlayer({ src, onEnded, autoPlay, playOnce, consumed, onConsumed }:
       }
       setCurrentTime(audio.currentTime);
     };
-    const handlePlay = () => { setIsPlaying(true); if (playOnce) { setStarted(true); fireConsumed(); } };
+    const handlePlay = () => { claimAudioPlayback(audio); setIsPlaying(true); if (playOnce) { setStarted(true); fireConsumed(); } };
     const handlePause = () => {
       setIsPlaying(false);
       /* Play-once: no pausing — silently resume unless the clip ended
-         (guards against OS media keys / system pauses). */
-      if (playOnce && !endedRef.current && audio.duration && audio.currentTime < audio.duration - 0.3) {
+         (guards against OS media keys / system pauses). But DON'T fight the
+         coordinator: if another audio is now active, this was paused on
+         purpose to keep "one at a time", so leave it paused. */
+      if (playOnce && !endedRef.current && isActiveAudio(audio) && audio.duration && audio.currentTime < audio.duration - 0.3) {
         audio.play().catch(() => {});
       }
     };
@@ -267,6 +270,7 @@ function AudioPlayer({ src, onEnded, autoPlay, playOnce, consumed, onConsumed }:
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('ended', handleEnded);
       audio.removeEventListener('seeking', handleSeeking);
+      releaseAudio(audio);
     };
   }, [src, playOnce]);
 

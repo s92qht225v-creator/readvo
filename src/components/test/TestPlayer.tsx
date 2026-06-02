@@ -7,6 +7,7 @@ import { MathText } from './MathText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
 import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
+import { claimAudioPlayback, isActiveAudio, releaseAudio } from './audioCoordinator';
 import type { PublicTest, PublicQuestion, PublicSection, AnswerSubmission } from '@/lib/test/types';
 import type { SectionScore } from '@/lib/test/grade';
 import { normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
@@ -1492,6 +1493,13 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed, onEnded }: {
     if (lockedOnMount) onEndedRef.current?.();
   }, [lockedOnMount]);
 
+  /* Drop this track from the coordinator's active slot when it unmounts
+     (section change / leaving the question phase). */
+  useEffect(() => {
+    const el = audioRef.current;
+    return () => { if (el) releaseAudio(el); };
+  }, [url]);
+
   /* Locked: already played once. No audio element, no replay. */
   if (playOnce && lockedOnMount) {
     return (
@@ -1515,6 +1523,7 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed, onEnded }: {
             src={url}
             controls
             style={{ flex: 1, minWidth: 0 }}
+            onPlay={(e) => claimAudioPlayback(e.currentTarget)}
             onEnded={() => onEndedRef.current?.()}
           />
         </div>
@@ -1559,12 +1568,14 @@ function ListeningAudioBar({ url, playOnce, consumed, onConsumed, onEnded }: {
           ref={audioRef}
           src={url}
           style={{ display: 'none' }}
-          onPlay={() => { setStarted(true); fireConsumed(); }}
+          onPlay={(e) => { claimAudioPlayback(e.currentTarget); setStarted(true); fireConsumed(); }}
           onPause={() => {
             /* No pausing allowed: silently resume unless the clip ended
-               (guards against OS media keys / system pauses). */
+               (guards against OS media keys / system pauses). But don't
+               fight the coordinator — if another audio is now active, this
+               was paused on purpose to keep "one at a time". */
             const el = audioRef.current;
-            if (el && !endedRef.current && el.duration && el.currentTime < el.duration - 0.3) {
+            if (el && !endedRef.current && isActiveAudio(el) && el.duration && el.currentTime < el.duration - 0.3) {
               el.play().catch(() => {});
             }
           }}
