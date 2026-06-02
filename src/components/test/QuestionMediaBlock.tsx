@@ -623,12 +623,10 @@ const mediaLink: React.CSSProperties = {
 };
 
 const audioFrameWrap: React.CSSProperties = {
+  // Audio always fills its column (answer column for audio+image, the
+  // audio-top row for audio-only) so it lines up with the choices. No
+  // max-width cap — the column owns the width.
   width: '100%',
-  maxWidth: 420,
-  // Horizontal centring only; vertical spacing is owned by the
-  // .qmedia-content gap so the wrapper's CSS box matches its visible
-  // bounds (same fix as videoFrameWrap and imageFrameStyle).
-  marginInline: 'auto',
   padding: 0,
   borderRadius: 0,
   background: 'transparent',
