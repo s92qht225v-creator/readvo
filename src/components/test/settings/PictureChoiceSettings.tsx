@@ -74,8 +74,8 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
         style={{ ...inputStyle, width: 220 }}
       />
       <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 4 }}>
-        How many answer images sit in one row (1–6). Leave empty for the
-        responsive default.
+        How many answer images sit in one row on desktop (1–6). Mobile always
+        shows 2 per row. Leave empty for the default (5 on desktop).
       </div>
     </Field>
     <Field label="Choices">

@@ -938,11 +938,15 @@
   transition: background-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
 }
 
-/* Fixed images-per-row (author set a column count): --pic-basis is
-   overridden inline to the exact 1/N fraction, and flex-grow is turned
-   off so a partial last row keeps the same card width (left-aligned)
-   instead of stretching to fill. */
-.test-picture-options[data-cols] > .test-picture-option {
+/* Fixed images-per-row (author set a column count via --pic-cols).
+   DESKTOP ONLY — mobile keeps its responsive 2-per-row default so a
+   phone never crams in N tiny images. Compute the exact 1/N flex-basis
+   from --pic-cols, and turn off flex-grow so a partial last row keeps the
+   same card width (left-aligned) instead of stretching to fill. */
+[data-test-device="desktop"] .test-picture-options[data-cols] {
+  --pic-basis: calc((100% - (var(--pic-cols) - 1) * var(--pic-gap)) / var(--pic-cols));
+}
+[data-test-device="desktop"] .test-picture-options[data-cols] > .test-picture-option {
   flex-grow: 0;
 }
 

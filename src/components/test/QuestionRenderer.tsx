@@ -89,15 +89,15 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
 
   if (question.type === 'picture_choice') {
     const opts = question.options as PublicPictureChoiceOptions;
-    // Fixed images-per-row: override the responsive --pic-basis token so
-    // each card's flex-basis is an exact 1/N fraction of the row (minus
-    // the inter-card gaps). data-cols turns off flex-grow so a partial
-    // last row keeps the same card width instead of stretching.
+    // Fixed images-per-row. Exposed as --pic-cols; the CSS computes the
+    // exact 1/N flex-basis from it but ONLY on desktop (see tq-options.css)
+    // — mobile always keeps its responsive 2-per-row default, since a phone
+    // can't fit many tiny images side by side.
     const cols = typeof opts.columns === 'number' && opts.columns >= 1
       ? Math.min(Math.floor(opts.columns), 6)
       : null;
     const picStyle = cols
-      ? ({ '--pic-basis': `calc((100% - ${cols - 1} * var(--pic-gap)) / ${cols})` } as CSSProperties)
+      ? ({ '--pic-cols': String(cols) } as CSSProperties)
       : undefined;
     return (
       <div
