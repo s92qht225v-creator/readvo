@@ -285,7 +285,20 @@ function MediaCropPreview({ media, draft, onChange }: {
 }) {
   const frameRef = useRef<HTMLDivElement | null>(null);
   const [frameRatio, setFrameRatio] = useState(16 / 9);
-  const imgAspect = media.naturalAspectRatio && media.naturalAspectRatio > 0 ? media.naturalAspectRatio : 1;
+  /* The image's real aspect ratio. Many uploads don't have a stored
+     naturalAspectRatio, and without it the crop math + contained-image
+     bounds both fall back to the frame ratio → a 1:1 crop renders as an
+     ellipse. So measure it from the actually-loaded <img> as the source
+     of truth (stored value used only until the image loads). */
+  const [runtimeAspect, setRuntimeAspect] = useState<number | null>(null);
+  const storedAspect = draft.naturalAspectRatio ?? media.naturalAspectRatio;
+  const imgAspect = storedAspect && storedAspect > 0
+    ? storedAspect
+    : (runtimeAspect && runtimeAspect > 0 ? runtimeAspect : 1);
+  const onImgLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const i = e.currentTarget;
+    if (i.naturalWidth > 0 && i.naturalHeight > 0) setRuntimeAspect(i.naturalWidth / i.naturalHeight);
+  };
   const crop = usesCrop(draft.aspectRatio) ? cropForAspect(draft.aspectRatio, draft.crop, imgAspect) : undefined;
   const cropRatio = cropAspectRatio(draft.aspectRatio);
   /* The fixed-ratio crop helpers work in PERCENTAGE space, so feed them the
@@ -293,8 +306,17 @@ function MediaCropPreview({ media, draft, onChange }: {
      ratio in PIXELS as the user drags/resizes (a circle stays a circle). */
   const cropPctRatio = cropRatio != null ? cropRatio / imgAspect : null;
   const transform = `rotate(${draft.rotation ?? 0}deg) scaleX(${draft.flipX ? -1 : 1}) scaleY(${draft.flipY ? -1 : 1})`;
-  const imageBounds = getContainedImageBounds(media.naturalAspectRatio, frameRatio);
+  const imageBounds = getContainedImageBounds(imgAspect, frameRatio);
   const visibleCrop = crop ? cropToFrame(crop, imageBounds) : undefined;
+
+  /* Backfill the measured aspect into the draft (once) when it's missing,
+     so the saved media + the player render the crop with the same ratio. */
+  useEffect(() => {
+    if (runtimeAspect && runtimeAspect > 0 && !(storedAspect && storedAspect > 0)) {
+      onChange({ ...draft, naturalAspectRatio: runtimeAspect });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [runtimeAspect]);
 
   useEffect(() => {
     const frame = frameRef.current;
@@ -383,6 +405,7 @@ function MediaCropPreview({ media, draft, onChange }: {
         <img
           src={media.url}
           alt={media.alt || ''}
+          onLoad={onImgLoad}
           style={{ ...settingsPreviewImage, transform }}
         />
       </div>
@@ -394,6 +417,7 @@ function MediaCropPreview({ media, draft, onChange }: {
       <img
         src={media.url}
         alt={media.alt || ''}
+        onLoad={onImgLoad}
         style={{ ...cropPreviewImage, transform }}
       />
       <div
