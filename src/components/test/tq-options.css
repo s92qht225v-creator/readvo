@@ -582,11 +582,10 @@
   --qm-asset-col: 2;
   --qm-content-col: 1;
   /* When the asset is narrower than its column (e.g. a portrait video
-     sized to a height cap), pin it to the card's OUTER edge — flush right
-     for float-right — instead of letting it sit left with a gap to the
-     card edge. The float-left variant flips this to `start`. Full-width
-     assets ignore it (nothing to justify). */
-  --qm-asset-justify: end;
+     sized to a height cap), CENTRE it in its column so it has equal
+     breathing room on both sides instead of being jammed against one
+     edge. Full-width (landscape) assets fill the column and ignore it. */
+  --qm-asset-justify: center;
 }
 
 [data-test-device="desktop"] .qmedia-desktop-float-left {
@@ -595,7 +594,7 @@
   --qm-grid: var(--qm-media-col) minmax(0, 1fr);
   --qm-asset-col: 1;
   --qm-content-col: 2;
-  --qm-asset-justify: start;   /* media on the left → flush to the card's left edge */
+  --qm-asset-justify: center;
 }
 
 /* Mobile float variant — same vars, different values. */
