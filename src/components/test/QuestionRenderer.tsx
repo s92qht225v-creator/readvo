@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import './tq-options.css';
 import type {
   PublicQuestion, PublicMcOptions, PublicShortTextOptions, PublicPictureChoiceOptions,
@@ -89,11 +89,23 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
 
   if (question.type === 'picture_choice') {
     const opts = question.options as PublicPictureChoiceOptions;
+    // Fixed images-per-row: override the responsive --pic-basis token so
+    // each card's flex-basis is an exact 1/N fraction of the row (minus
+    // the inter-card gaps). data-cols turns off flex-grow so a partial
+    // last row keeps the same card width instead of stretching.
+    const cols = typeof opts.columns === 'number' && opts.columns >= 1
+      ? Math.min(Math.floor(opts.columns), 6)
+      : null;
+    const picStyle = cols
+      ? ({ '--pic-basis': `calc((100% - ${cols - 1} * var(--pic-gap)) / ${cols})` } as CSSProperties)
+      : undefined;
     return (
       <div
         className="test-picture-options"
         role={opts.allowMultiple ? 'group' : 'radiogroup'}
         aria-label={question.prompt}
+        data-cols={cols ?? undefined}
+        style={picStyle}
       >
         {opts.choices.map((c, i) => {
           const selected = opts.allowMultiple

@@ -379,6 +379,7 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       options: {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
         allowMultiple: !!opts.allowMultiple,
+        columns: opts.columns,
       },
     };
   }

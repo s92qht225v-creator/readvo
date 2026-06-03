@@ -938,6 +938,14 @@
   transition: background-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
 }
 
+/* Fixed images-per-row (author set a column count): --pic-basis is
+   overridden inline to the exact 1/N fraction, and flex-grow is turned
+   off so a partial last row keeps the same card width (left-aligned)
+   instead of stretching to fill. */
+.test-picture-options[data-cols] > .test-picture-option {
+  flex-grow: 0;
+}
+
 .test-picture-option[data-selected="true"] {
   background: color-mix(in srgb, var(--test-theme-answer, #0445af) 16%, #ffffff);
   box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);

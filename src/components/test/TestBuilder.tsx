@@ -3708,7 +3708,7 @@ function PreviewCanvas({
       description: description || undefined,
       media,
       required: q.required,
-      options: { choices: previewShuffle(choices, !!opts.randomize), allowMultiple: !!opts.allowMultiple },
+      options: { choices: previewShuffle(choices, !!opts.randomize), allowMultiple: !!opts.allowMultiple, columns: opts.columns },
     };
   } else if (q.type === 'true_false') {
     previewQ = {

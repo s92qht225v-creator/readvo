@@ -54,7 +54,30 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
     });
   };
 
+  const setColumns = (raw: string) => {
+    const n = parseInt(raw, 10);
+    const columns = Number.isFinite(n) && n >= 1 ? Math.min(n, 6) : undefined;
+    onChange({ ...q, options: { ...opts, columns } });
+  };
+
   return (
+    <>
+    <Field label="Images per row">
+      <input
+        type="number"
+        min={1}
+        max={6}
+        inputMode="numeric"
+        value={opts.columns ?? ''}
+        placeholder="Auto (2 mobile · 5 desktop)"
+        onChange={e => setColumns(e.target.value)}
+        style={{ ...inputStyle, width: 220 }}
+      />
+      <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 4 }}>
+        How many answer images sit in one row (1–6). Leave empty for the
+        responsive default.
+      </div>
+    </Field>
     <Field label="Choices">
       <div style={{ display: 'grid', gap: 8 }}>
         {choices.map((c, i) => (
@@ -127,6 +150,7 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
         ) : null}
       </div>
     </Field>
+    </>
   );
 }
 

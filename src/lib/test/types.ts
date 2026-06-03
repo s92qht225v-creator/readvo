@@ -101,6 +101,9 @@ export interface PictureChoiceOptions {
   choices: PictureChoice[];
   randomize?: boolean;
   allowMultiple?: boolean;
+  /** Fixed number of answer images per row (1-6). Unset = responsive
+   *  default (2 on mobile, 5 on desktop). */
+  columns?: number;
   media?: QuestionMedia;
   audioMedia?: QuestionMedia;
   correctIndex: number | null;
@@ -367,6 +370,7 @@ export interface PublicNumberOptions {
 export interface PublicPictureChoiceOptions {
   choices: PublicPictureChoice[];
   allowMultiple?: boolean;
+  columns?: number;
 }
 
 export interface PublicChoice {
