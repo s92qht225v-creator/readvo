@@ -1,7 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { sanitizeQuestion } from '@/lib/test/sanitize';
-import type { TestQuestion, PublicTest } from '@/lib/test/types';
+import { annotatePinyin } from '@/lib/test/pinyin';
+import type { TestQuestion, PublicTest, PublicChoice } from '@/lib/test/types';
+
+/* When the test has "Show pinyin" on, annotate each choice's Chinese text
+   with per-character pinyin SERVER-SIDE, so the player renders it without
+   ever bundling the pinyin-pro library. Non-choice questions pass through. */
+function attachChoicePinyin<T extends { options?: unknown }>(pub: T): T {
+  const opts = pub.options as { choices?: PublicChoice[] } | undefined;
+  if (!opts?.choices?.length) return pub;
+  return {
+    ...pub,
+    options: {
+      ...opts,
+      choices: opts.choices.map(c => {
+        const segments = annotatePinyin(c.text);
+        return segments ? { ...c, pinyin: segments } : c;
+      }),
+    },
+  };
+}
 
 /**
  * GET /api/t/[slug] — public-facing test fetch. NEVER returns answer keys.
@@ -73,6 +92,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     strict_sections: !!test.strict_sections,
     play_once_audio: !!test.play_once_audio,
     audio_lock: !!test.audio_lock,
+    show_pinyin: !!test.show_pinyin,
     sections: (sections ?? []).map(s => ({
       id: s.id as string,
       position: s.position as number,
@@ -83,7 +103,8 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
     questions: (questions ?? [])
       .filter((q: TestQuestion) => !q.hidden)
       .map((q: TestQuestion) => {
-        const sanitized = sanitizeQuestion(q, seed);
+        let sanitized = sanitizeQuestion(q, seed);
+        if (test.show_pinyin) sanitized = attachChoicePinyin(sanitized);
         /* Preserve section_id on the public question so the player
            can group questions by section. sanitizeQuestion only
            sanitizes answer keys; section_id is non-secret metadata. */

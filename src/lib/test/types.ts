@@ -282,6 +282,9 @@ export interface Test {
   /** When true: the test-taker can't advance past a section until that
    *  section's audio has played through once (per-section / global track). */
   audio_lock?: boolean;
+  /** When true: answer choices with Chinese characters render pinyin above
+   *  each character (auto-generated). For HSK / Chinese-learner tests. */
+  show_pinyin?: boolean;
   is_graded: boolean;
   is_published: boolean;
   published_at: string | null;
@@ -373,9 +376,20 @@ export interface PublicPictureChoiceOptions {
   columns?: number;
 }
 
+/** One character of pinyin-annotated text (char + its pinyin; pinyin is ''
+ *  for non-Han characters). Lives here — not in pinyin.ts — so this types
+ *  file never pulls in the pinyin-pro library on the client. */
+export interface PinyinSegment {
+  c: string;
+  p: string;
+}
+
 export interface PublicChoice {
   id: string;
   text: string;
+  /** Present only when the test has "Show pinyin" on and the text has Han
+   *  characters. Server-generated so the player never bundles pinyin-pro. */
+  pinyin?: PinyinSegment[];
 }
 
 export interface PublicPictureChoice extends PublicChoice {
@@ -517,6 +531,8 @@ export interface PublicTest {
   /** When true: the test-taker can't advance past a section until that
    *  section's audio has played through once (per-section / global track). */
   audio_lock?: boolean;
+  /** When true: answer choices render auto-generated pinyin above Chinese. */
+  show_pinyin?: boolean;
   /* Ordered list of the test's sections (empty if the test is
      sectionless). Each question's `section_id` references one of
      these ids. */

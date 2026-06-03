@@ -1581,3 +1581,34 @@
   font-weight: 600;
   color: #dc2626;
 }
+
+/* ──────────────────────────────────────────────────────────────────────
+   Pinyin annotation (test "Show pinyin"). Per-character flexbox columns:
+   a small pinyin row stacked over the character, NOT <ruby> — gives
+   precise, cross-browser-consistent spacing and a clean baseline. All
+   em-based so it scales with the answer font. Segments are generated
+   server-side; non-Han chars carry an empty (non-breaking-space) pinyin
+   row so the characters still align on one baseline.
+   ────────────────────────────────────────────────────────────────────── */
+.tq-pinyin {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  column-gap: 0.16em;
+  row-gap: 0.12em;
+}
+.tq-pinyin__col {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tq-pinyin__py {
+  font-size: 0.6em;
+  line-height: 1.3;
+  opacity: 0.6;
+  white-space: nowrap;
+  font-weight: 400;
+}
+.tq-pinyin__hz {
+  line-height: 1.15;
+}

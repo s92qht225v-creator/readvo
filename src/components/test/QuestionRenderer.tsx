@@ -7,7 +7,7 @@ import type {
   PublicMatchOptions, PublicOrderingOptions, PublicFillBlanksOptions, PublicScrambleOptions,
   PublicLongAnswerOptions, PublicNumberOptions, PublicDropdownOptions, PublicCheckboxOptions,
   PublicOpinionScaleOptions, PublicRatingOptions,
-  AnswerSubmission,
+  AnswerSubmission, PinyinSegment,
 } from '@/lib/test/types';
 import { MathText } from './MathText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
@@ -18,6 +18,31 @@ import { ScramblePlayer } from './renderers/ScrambleRenderer';
 import { SpeakingRecorder } from './renderers/SpeakingRecorder';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+/* Pinyin annotation: per-character flexbox columns (pinyin stacked over the
+   character), not <ruby> — gives precise, cross-browser-consistent spacing.
+   Segments are generated server-side (pinyin-pro never ships to the player).
+   aria-label carries the clean text; the visual columns are aria-hidden. */
+function PinyinText({ segments }: { segments: PinyinSegment[] }) {
+  return (
+    <span className="tq-pinyin" aria-label={segments.map(s => s.c).join('')}>
+      {segments.map((s, i) => (
+        <span key={i} className="tq-pinyin__col" aria-hidden="true">
+          <span className="tq-pinyin__py">{s.p || ' '}</span>
+          <span className="tq-pinyin__hz">{s.c}</span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
+/* A choice label: pinyin-stacked when the server attached segments (test has
+   "Show pinyin" on and the text has Han), else normal MathText, else the
+   numbered placeholder. */
+function ChoiceLabel({ text, pinyin, index }: { text: string; pinyin?: PinyinSegment[]; index: number }) {
+  if (pinyin?.length) return <PinyinText segments={pinyin} />;
+  return <>{text ? <MathText>{text}</MathText> : `Choice ${index + 1}`}</>;
+}
 
 type AValue = AnswerSubmission['value'];
 
@@ -79,7 +104,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
               ) : (
                 <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
               )}
-              <span className="tq-option__label" dir="auto" lang={detectScriptLang(c.text)}>{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto" lang={detectScriptLang(c.text)}><ChoiceLabel text={c.text} pinyin={c.pinyin} index={i} /></span>
             </button>
           );
         })}
@@ -148,7 +173,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
               </div>
               <div className="test-picture-option__label">
                 <span className="test-picture-option__badge">{LETTERS[i] ?? i + 1}</span>
-                <span className="test-picture-option__text" dir="auto" lang={detectScriptLang(c.text)}>{c.text ? <MathText>{c.text}</MathText> : `Choice ${i + 1}`}</span>
+                <span className="test-picture-option__text" dir="auto" lang={detectScriptLang(c.text)}><ChoiceLabel text={c.text} pinyin={c.pinyin} index={i} /></span>
               </div>
             </button>
           );
@@ -205,7 +230,7 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
                   </svg>
                 ) : null}
               </span>
-              <span className="tq-option__label" dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${i + 1}`}</span>
+              <span className="tq-option__label" dir="auto" lang={detectScriptLang(choice.text)}><ChoiceLabel text={choice.text} pinyin={choice.pinyin} index={i} /></span>
             </button>
           );
         })}
@@ -446,7 +471,7 @@ function CustomDropdownAnswer({
           }
         }}
       >
-        <span dir="auto" lang={detectScriptLang(selectedChoice?.text)}>{selectedChoice?.text ? <MathText>{selectedChoice.text}</MathText> : 'Select an answer'}</span>
+        <span dir="auto" lang={detectScriptLang(selectedChoice?.text)}>{selectedChoice ? <ChoiceLabel text={selectedChoice.text} pinyin={selectedChoice.pinyin} index={0} /> : 'Select an answer'}</span>
         <ChevronDownIcon className="test-custom-dropdown__chevron" />
       </button>
       {open ? (
@@ -466,7 +491,7 @@ function CustomDropdownAnswer({
                   setOpen(false);
                 }}
               >
-                <span className="test-custom-dropdown__option-text" dir="auto" lang={detectScriptLang(choice.text)}>{choice.text ? <MathText>{choice.text}</MathText> : `Choice ${index + 1}`}</span>
+                <span className="test-custom-dropdown__option-text" dir="auto" lang={detectScriptLang(choice.text)}><ChoiceLabel text={choice.text} pinyin={choice.pinyin} index={index} /></span>
                 <span className="test-custom-dropdown__check">{selected ? '✓' : ''}</span>
               </button>
             );

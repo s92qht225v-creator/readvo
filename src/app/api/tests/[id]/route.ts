@@ -49,6 +49,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     strict_sections?: boolean;
     play_once_audio?: boolean;
     audio_lock?: boolean;
+    show_pinyin?: boolean;
     is_graded?: boolean;
     is_marketplace?: boolean;
     marketplace_price?: number | null;
@@ -87,6 +88,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   /* Play-once listening audio (independent of strict_sections). */
   if (typeof body.play_once_audio === 'boolean') patch.play_once_audio = body.play_once_audio;
   if (typeof body.audio_lock === 'boolean') patch.audio_lock = body.audio_lock;
+  if (typeof body.show_pinyin === 'boolean') patch.show_pinyin = body.show_pinyin;
 
   /* Marketplace flag + price + summary. Owner-gated only — any test
      owner can flag their own test for sale. The marketplace tab is

@@ -36,6 +36,7 @@ import { normalizeQuestionOptionsMedia } from '@/lib/test/media';
 import { MarketplaceIcon, MoreMenuIcon } from './testList/icons';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer, exampleAnswerValue } from '@/lib/test/sanitize';
+import { annotatePinyin } from '@/lib/test/pinyin';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
   Test, TestQuestion, TestSection, QuestionType, QuestionOptions,
@@ -43,7 +44,7 @@ import type {
   MatchOptions, OrderingOptions, FillBlanksOptions, ScrambleOptions,
   LongAnswerOptions, NumberOptions, DropdownOptions, CheckboxOptions,
   OpinionScaleOptions, RatingOptions,
-  PublicQuestion, TestScreenConfig,
+  PublicQuestion, TestScreenConfig, PinyinSegment,
   TestThemeConfig,
 } from '@/lib/test/types';
 
@@ -370,7 +371,7 @@ export function TestBuilder({ testId }: Props) {
   // state that should block autosave.
   const canAutosaveQuestions = true;
 
-  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'play_once_audio' | 'audio_lock' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
+  const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'play_once_audio' | 'audio_lock' | 'show_pinyin' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();
     const res = await fetch(`/api/tests/${testId}`, {
       method: 'PATCH',
@@ -817,6 +818,18 @@ export function TestBuilder({ testId }: Props) {
             }}
           />
         </div>
+        <label style={pinyinToggleRow} title="Auto-show pinyin above Chinese characters in answer choices (desktop + mobile). For HSK / Chinese tests.">
+          <input
+            type="checkbox"
+            checked={!!test.show_pinyin}
+            onChange={(e) => {
+              const next = e.target.checked;
+              setTest({ ...test, show_pinyin: next });
+              void updateTest({ show_pinyin: next });
+            }}
+          />
+          <span>拼 Show pinyin on answers</span>
+        </label>
         {/* Sections panel (stage-b). Renders ONLY when the test has at
             least one section OR the author clicks Add Section. Empty
             tests stay visually identical to stage (a). */}
@@ -1148,7 +1161,7 @@ export function TestBuilder({ testId }: Props) {
               </div>
             );
           })() : activeQuestion ? (
-            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} />
+            <PreviewCanvas q={activeQuestion} qIndex={activeQuestionIndex} previewDevice={previewDevice} theme={test.theme} previewScale={previewScale} showPinyin={!!test.show_pinyin} />
           ) : (
             <div style={emptyCanvas}>
               <div style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>No questions yet</div>
@@ -3623,12 +3636,14 @@ function PreviewCanvas({
   previewDevice,
   theme,
   previewScale,
+  showPinyin,
 }: {
   q: BuilderQuestion;
   qIndex: number;
   previewDevice: 'desktop' | 'mobile';
   theme?: TestThemeConfig | null;
   previewScale: number;
+  showPinyin: boolean;
 }) {
   const slideSize = BUILDER_PREVIEW_SIZE[previewDevice];
   const frameSize = BUILDER_PREVIEW_FRAME_SIZE[previewDevice];
@@ -3844,6 +3859,25 @@ function PreviewCanvas({
       required: q.required,
       options: { maxLength: opts.maxCharactersEnabled ? opts.maxLength : undefined },
     };
+  }
+
+  /* "Show pinyin" preview: annotate choice text client-side so the canvas
+     matches what respondents see. (The live player gets server-generated
+     pinyin; pinyin-pro only bundles into this builder chunk.) */
+  if (showPinyin) {
+    const o = previewQ.options as { choices?: Array<{ text: string; pinyin?: PinyinSegment[] }> } | undefined;
+    if (o?.choices?.length) {
+      previewQ = {
+        ...previewQ,
+        options: {
+          ...o,
+          choices: o.choices.map(c => {
+            const seg = annotatePinyin(c.text);
+            return seg ? { ...c, pinyin: seg } : c;
+          }),
+        },
+      } as PublicQuestion;
+    }
   }
 
   useEffect(() => {
@@ -5142,6 +5176,18 @@ const rightPane: React.CSSProperties = {
   background: '#fff', borderLeft: '1px solid #ded8d1',
   display: 'flex', flexDirection: 'column',
   minHeight: 0, overflow: 'auto',
+};
+
+const pinyinToggleRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  margin: '-4px 12px 12px',
+  padding: '0 2px',
+  fontSize: 13,
+  color: '#475569',
+  cursor: 'pointer',
+  userSelect: 'none',
 };
 
 const leftModeWrap: React.CSSProperties = {
