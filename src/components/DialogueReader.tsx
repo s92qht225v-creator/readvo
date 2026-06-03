@@ -9,6 +9,7 @@ import { useTrial } from '../hooks/useTrial';
 import { Paywall } from './Paywall';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
+import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
 import { BannerMenu } from './BannerMenu';
@@ -164,6 +165,41 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
   const allSentences = useMemo(() => dialogue.sections.flatMap(s => s.sentences), [dialogue.sections]);
 
+  // Per-sentence MiMo TTS fallback. Dialogues without recorded audio (e.g.
+  // HSK 2) have no `audio_url`; we resolve a playable URL from /api/tts
+  // (Supabase-cached, generated once) for each such sentence. Prefetching
+  // on mount warms the cache so a tap plays instantly inside the user
+  // gesture; a tap before the prefetch lands falls back to async resolve.
+  const [ttsUrls, setTtsUrls] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const missing = allSentences.filter(s => !s.audio_url && s.text_original?.trim());
+    if (missing.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      for (const s of missing) {
+        const url = await resolveTtsUrl(s.text_original);
+        if (cancelled) return;
+        if (url) setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [allSentences]);
+
+  // Resolve + play a sentence's audio: recorded `audio_url` when present,
+  // otherwise the (possibly already-prefetched) MiMo TTS URL.
+  const playSentence = useCallback((s: Sentence | undefined | null) => {
+    if (!s) return;
+    if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
+    const ready = s.audio_url ?? ttsUrls[s.id];
+    if (ready) { sentenceAudio.play(s.id, ready); return; }
+    void resolveTtsUrl(s.text_original).then(url => {
+      if (!url) return;
+      setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
+      sentenceAudio.play(s.id, url);
+    });
+  }, [ttsUrls, isPlaying, sentenceAudio]);
+
   const timedSentences = useMemo(
     () => allSentences.filter((s): s is Sentence & { start: number; end: number } => s.start !== undefined && s.end !== undefined),
     [allSentences]
@@ -185,24 +221,21 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
       setActiveSentenceId(targetId);
       if (targetId) {
         const s = allSentences.find(s => s.id === targetId);
-        if (s?.audio_url) sentenceAudio.play(targetId, s.audio_url);
+        playSentence(s);
       }
     } else {
       // Exiting focus mode — stop sentence audio
       sentenceAudio.stop();
     }
     setFocusMode(v => !v);
-  }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio]);
+  }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio, playSentence]);
 
   const handleSentenceClick = useCallback((id: string) => {
     dismissTip('dialogue-tour');
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
-    if (sentence?.audio_url) {
-      if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
-      sentenceAudio.play(id, sentence.audio_url);
-    }
-  }, [focusMode, allSentences, isPlaying, sentenceAudio]);
+    playSentence(sentence);
+  }, [focusMode, allSentences, playSentence]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
     const idx = allSentences.findIndex(s => s.id === displaySentenceId);
@@ -210,9 +243,9 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     const next = allSentences[dir === 'next' ? idx + 1 : idx - 1];
     if (next) {
       setActiveSentenceId(next.id);
-      if (next.audio_url) sentenceAudio.play(next.id, next.audio_url);
+      playSentence(next);
     }
-  }, [allSentences, displaySentenceId, sentenceAudio]);
+  }, [allSentences, displaySentenceId, playSentence]);
 
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -365,8 +398,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
                     <button className="story__focus-nav-btn" onClick={() => handleFocusNav('prev')} disabled={allSentences[0]?.id === displaySentenceId} type="button">
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
                     </button>
-                    {activeSentence?.audio_url && (
-                      <button className="story__focus-play-btn" onClick={() => sentenceAudio.play(activeSentence.id, activeSentence.audio_url!)} type="button">
+                    {activeSentence && (
+                      <button className="story__focus-play-btn" onClick={() => playSentence(activeSentence)} type="button">
                         {sentenceAudio.isPlaying(activeSentence.id)
                           ? <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
                           : <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>}
