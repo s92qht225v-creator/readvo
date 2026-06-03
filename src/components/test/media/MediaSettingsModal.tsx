@@ -72,7 +72,7 @@ export function MediaSettingsModal({ q, onClose, onChange }: {
                         setDraft({
                           ...draft,
                           aspectRatio,
-                          crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, draft.crop) : undefined,
+                          crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, draft.crop, media.naturalAspectRatio) : undefined,
                         });
                       }}
                     />
@@ -173,7 +173,7 @@ function normalizeMediaDraft(media: QuestionMedia): QuestionMedia {
   return {
     ...media,
     aspectRatio,
-    crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, media.crop) : undefined,
+    crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, media.crop, media.naturalAspectRatio) : undefined,
   };
 }
 
@@ -188,25 +188,35 @@ function usesCrop(value: QuestionMedia['aspectRatio']) {
   return value === 'free' || value === 'portrait' || value === 'square' || value === 'landscape' || value === 'circle';
 }
 
-function cropForAspect(value: QuestionMedia['aspectRatio'], existing?: QuestionMedia['crop']): NonNullable<QuestionMedia['crop']> {
-  if (existing) {
-    const ratio = cropAspectRatio(value);
-    return ratio ? clampFixedRatioCrop(existing, ratio) : clampCrop(existing);
-  }
+function cropForAspect(
+  value: QuestionMedia['aspectRatio'],
+  existing?: QuestionMedia['crop'],
+  imgAspect = 1,
+): NonNullable<QuestionMedia['crop']> {
+  const targetRatio = cropAspectRatio(value); // desired crop width/height in PIXELS (null = free)
+  /* Crop x/y/width/height are PERCENTAGES of the image. A percentage maps to
+     pixels through the image's own aspect ratio, so to make the crop the
+     target ratio in PIXELS the percentage ratio must be divided by the
+     image aspect: (w% · imgW)/(h% · imgH) = targetRatio → w%/h% = targetRatio/imgAspect.
+     Without this, a 1:1 "circle"/"square" crop on a landscape image comes out
+     wider-than-tall (an ellipse). */
+  const safeAspect = imgAspect > 0 ? imgAspect : 1;
+  const pctRatio = (targetRatio ?? 1) / safeAspect;
 
-  const ratio = cropAspectRatio(value) ?? 1;
+  if (existing) {
+    return targetRatio != null ? clampFixedRatioCrop(existing, pctRatio) : clampCrop(existing);
+  }
 
   if (value === 'free') {
     return { x: 8, y: 0, width: 84, height: 100 };
   }
 
-  const maxWidth = 74;
-  const maxHeight = 74;
-  let width = maxWidth;
-  let height = width / ratio;
-  if (height > maxHeight) {
-    height = maxHeight;
-    width = height * ratio;
+  const maxSize = 74;
+  let width = maxSize;
+  let height = width / pctRatio;
+  if (height > maxSize) {
+    height = maxSize;
+    width = height * pctRatio;
   }
   return {
     x: (100 - width) / 2,
@@ -275,8 +285,13 @@ function MediaCropPreview({ media, draft, onChange }: {
 }) {
   const frameRef = useRef<HTMLDivElement | null>(null);
   const [frameRatio, setFrameRatio] = useState(16 / 9);
-  const crop = usesCrop(draft.aspectRatio) ? cropForAspect(draft.aspectRatio, draft.crop) : undefined;
+  const imgAspect = media.naturalAspectRatio && media.naturalAspectRatio > 0 ? media.naturalAspectRatio : 1;
+  const crop = usesCrop(draft.aspectRatio) ? cropForAspect(draft.aspectRatio, draft.crop, imgAspect) : undefined;
   const cropRatio = cropAspectRatio(draft.aspectRatio);
+  /* The fixed-ratio crop helpers work in PERCENTAGE space, so feed them the
+     percentage ratio (pixel ratio ÷ image aspect) — keeps the crop the target
+     ratio in PIXELS as the user drags/resizes (a circle stays a circle). */
+  const cropPctRatio = cropRatio != null ? cropRatio / imgAspect : null;
   const transform = `rotate(${draft.rotation ?? 0}deg) scaleX(${draft.flipX ? -1 : 1}) scaleY(${draft.flipY ? -1 : 1})`;
   const imageBounds = getContainedImageBounds(media.naturalAspectRatio, frameRatio);
   const visibleCrop = crop ? cropToFrame(crop, imageBounds) : undefined;
@@ -297,8 +312,8 @@ function MediaCropPreview({ media, draft, onChange }: {
   const updateFreeCrop = (nextCrop: QuestionMedia['crop']) => {
     onChange({
       ...draft,
-      crop: cropRatio
-        ? clampFixedRatioCrop(nextCrop, cropRatio)
+      crop: cropPctRatio != null
+        ? clampFixedRatioCrop(nextCrop, cropPctRatio)
         : clampCrop(nextCrop, draft.aspectRatio === 'free' ? 8 : 18),
     });
   };
@@ -350,8 +365,8 @@ function MediaCropPreview({ media, draft, onChange }: {
     const onPointerMove = (moveEvent: PointerEvent) => {
       const dx = ((moveEvent.clientX - startX) / imagePixelWidth) * 100;
       const dy = ((moveEvent.clientY - startY) / imagePixelHeight) * 100;
-      updateFreeCrop(cropRatio
-        ? resizeFixedRatioCrop(startCrop, direction, dx, dy, cropRatio)
+      updateFreeCrop(cropPctRatio != null
+        ? resizeFixedRatioCrop(startCrop, direction, dx, dy, cropPctRatio)
         : resizeCrop(startCrop, direction, dx, dy));
     };
     const onPointerUp = () => {
