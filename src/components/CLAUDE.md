@@ -53,6 +53,7 @@
 - **Stories are unaffected** — the dialogue layout only activates when sentences have `speaker` fields
 - Data loaded from `content/dialogues/{bookId}/dialogue{N}.json` via `src/services/dialogues.ts`
 - **DialoguesPage** (`src/components/DialoguesPage.tsx`): List page with HSK level tabs, same pattern as StoriesPage
+- **TTS audio fallback** (dialogues with no recorded `audio_url`, e.g. HSK 2): `resolveTtsUrl` (`utils/ttsAudio.ts`) → MiMo `/api/tts`. DialogueReader prefetches on mount (warms cache so a tap stays in the user gesture for iOS), `playSentence()` uses `audio_url` else TTS, and a sequential "play all" FAB (`handlePlayAll`/`playSeqFrom`) walks sentences when there's no single recording. HSK 1 (has recordings) makes zero TTS calls.
 
 ### Story Reader
 - Accessible from Language Page → Matn tab → Hikoyalar card → `/chinese/hsk2/stories`

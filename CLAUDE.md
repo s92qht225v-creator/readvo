@@ -319,6 +319,11 @@ npm run build    # Production build
 npm run lint     # Run ESLint
 ```
 
+## Deployment
+- Deploy: `ssh deploy@178.105.107.198 './deploy.sh'` (cd /home/deploy/app → `git pull --ff-only origin main` → `npm install` → `npm run build` → restart `blim`). Commit + push to `main` first.
+- **Lockfile gotcha**: the server keeps an uncommitted `package-lock.json` (npm install rewrites it). A commit that changes the lockfile (any new dependency) makes `git pull --ff-only` abort. Fix: `ssh deploy@178.105.107.198 'cd /home/deploy/app && git checkout -- package-lock.json'`, then `./deploy.sh`.
+- **MiMo TTS** (`/api/tts`, `MIMO_API_KEY`): Chinese speech, cached once to Supabase `audio/tts/grammar/{hex}.wav` (hex = UTF-8 hex of the text). `src/utils/ttsAudio.ts` `resolveTtsUrl(text)` is the shared client resolver. Delete a cached clip (Supabase Storage DELETE) to force regen.
+
 ## Authentication & User Management
 - **Provider**: Telegram Login Widget (HMAC-SHA256 verification with bot token)
 - **Hook**: `src/hooks/useAuth.tsx` — `AuthProvider` wraps entire app in `layout.tsx`

@@ -1334,3 +1334,55 @@ Dev script is `next dev --webpack` (set in `package.json`). The test
 builder's module graph is large enough that Turbopack hits intermittent
 chunk-load races (`ERR_CONTENT_LENGTH_MISMATCH`) on rapid edits. Webpack
 HMR is slower (~1.5s vs <500ms) but stable.
+
+## Question / test feature flags (added later)
+
+- **Optional prompt**: question text is NOT required (builder + `PUT
+  .../questions` API). Player renders no `<h2>` for an empty prompt.
+- **`options.hidePrompt`** ("Show question text to respondents" toggle,
+  default on): keeps the prompt as a builder question-list label but hides
+  it from respondents — `sanitizeQuestion` blanks `prompt` when set (the
+  player already hides empty prompts); the builder canvas shows a muted
+  "hidden" note.
+- **`options.columns`** (picture_choice "Images per row", 1–6): **DESKTOP
+  ONLY**. QuestionRenderer sets `--pic-cols` + `data-cols`; the rule
+  `[data-test-device="desktop"] .test-picture-options[data-cols]` computes
+  the exact 1/N `--pic-basis` and turns off flex-grow. Mobile always stays
+  at its responsive 2-per-row default.
+- **`tests.show_pinyin`** (per-test): Chinese answer choices render pinyin
+  stacked above each character. Generated **SERVER-SIDE** in `/api/t/[slug]`
+  via `annotatePinyin` (`lib/test/pinyin.ts`, pinyin-pro, word-segmented so
+  most polyphonic readings resolve) → `PublicChoice.pinyin[]`; rendered by
+  `<PinyinText>` in QuestionRenderer (per-character **flexbox columns, NOT
+  `<ruby>`** — precise cross-browser spacing). **Never import pinyin-pro in
+  QuestionRenderer / the player** — keep it off the player bundle (route
+  server-side + TestBuilder PreviewCanvas client-side only). Choices only
+  (prompt + manual override are unbuilt follow-ups).
+- **Examples excluded from question numbering**: `realTotal` /
+  `displayNumberByIdx` are DISPLAY-only (`total` stays the full array length
+  for `isLast` / index bounds). Footer shows "Example" on example pages;
+  the navigator omits examples and renumbers real questions 1..N;
+  `answeredCount` excludes examples.
+- **Audio lock works with `audioMustFinish` alone**: `questionAudioLocked =
+  (audioMustFinish || audioPlayOnce) && audioMedia?.url && !done`. No
+  on-screen hint banner — Next / Questions navigator just disable while
+  locked.
+- **Cropped image render** (`croppedImageStyle` in QuestionMediaBlock):
+  height % must use the FRAME aspect (`aspectRatioNumeric`), NOT the crop
+  rectangle's %-ratio, or a non-square crop leaves a blank gap
+  (`object-fit:cover` already prevents distortion). Circle `border-radius`
+  is forced by card/preview chrome `!important` rules (test-player.css,
+  test-builder-preview.css, reading.css) — beat it in tq-options.css with a
+  higher-specificity `.qmedia-asset.qmedia-asset--circle { border-radius:
+  50% !important }`.
+
+## Verifying the player on localhost (preview shell gotcha)
+
+- `/test-app/t/[slug]` on localhost wraps `<TestPlayer>` in the **preview
+  shell with a forced device** (toolbar "Desktop preview" / "Mobile
+  preview" buttons, found via `aria-label`). **Viewport resize does NOT
+  flip the device on this route** — click the toolbar button. The real
+  production player (no shell) uses `window.innerWidth <= 640`.
+- Published tests are viewable on localhost without auth, so per-feature
+  checks can set a flag/column via SQL on a real test, verify, then revert.
+  The builder/dashboard pages still require Telegram auth.
