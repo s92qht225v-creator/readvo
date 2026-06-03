@@ -107,6 +107,16 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
           checked={q.required}
           onChange={v => onChange({ ...q, required: v })}
         />
+        <ToggleRow
+          label="Show question text to respondents"
+          checked={!getQuestionHidePrompt(q)}
+          onChange={v => onChange(setQuestionHidePrompt(q, !v))}
+        />
+        {getQuestionHidePrompt(q) ? (
+          <div style={staticNote}>
+            The question text is hidden from respondents and only used as a label in your question list.
+          </div>
+        ) : null}
         {['multiple_choice', 'picture_choice', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
           <ToggleRow
             label="Example (answer shown, not scored)"
@@ -492,6 +502,20 @@ function setQuestionDescription(q: BuilderQuestion, description: string): Builde
 function getQuestionInstruction(q: BuilderQuestion): string {
   const instruction = (q.options as { instruction?: unknown }).instruction;
   return typeof instruction === 'string' ? instruction : '';
+}
+
+function getQuestionHidePrompt(q: BuilderQuestion): boolean {
+  return (q.options as { hidePrompt?: unknown }).hidePrompt === true;
+}
+
+function setQuestionHidePrompt(q: BuilderQuestion, hidePrompt: boolean): BuilderQuestion {
+  return {
+    ...q,
+    options: {
+      ...(q.options as Record<string, unknown>),
+      hidePrompt,
+    } as BuilderQuestion['options'],
+  };
 }
 
 function getQuestionIsExample(q: BuilderQuestion): boolean {

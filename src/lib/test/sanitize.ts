@@ -181,6 +181,13 @@ export function sanitizeQuestion(q: TestQuestion, seed?: string): PublicQuestion
   if ((q.options as { audioPlayOnce?: unknown } | null)?.audioPlayOnce === true) {
     pub = { ...pub, audioPlayOnce: true };
   }
+  if ((q.options as { hidePrompt?: unknown } | null)?.hidePrompt === true) {
+    // Author opted to use the question text only as an internal label
+    // (shown in the builder's question list), not shown to respondents.
+    // Blanking it here means the player — which already renders no title
+    // for an empty prompt — hides it on every device/layout.
+    pub = { ...pub, prompt: '' };
+  }
   if (isExampleQuestion(q)) {
     // Worked example: intentionally reveal its own answer so the player can show
     // it pre-selected. The answer key for every OTHER question stays stripped.
