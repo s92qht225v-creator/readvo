@@ -752,6 +752,17 @@
 .qmedia-layout > .qmedia-asset.qmedia-asset--circle {
   border-radius: 50%;
 }
+/* Card/preview chrome hard-sets border-radius on every .qmedia-asset with
+   !important (test-player.css, test-builder-preview.css, reading.css), which
+   would flatten a circle crop into a square. Re-assert the circular mask with
+   enough specificity (4 classes incl. the preview shell) + !important to win
+   over all three. The wrapper's overflow:hidden clips the (overflowing) img
+   to this rounded shape, so only the wrapper needs the radius. */
+.test-preview-shell .test-player__card .qmedia-asset.qmedia-asset--circle,
+.test-player__card .qmedia-asset.qmedia-asset--circle,
+.tb-preview-card .qmedia-asset.qmedia-asset--circle {
+  border-radius: 50% !important;
+}
 
 /* Desktop: asset gets a grid placement (which column) and is
    vertically centred in its grid cell. All other dimensional / chrome

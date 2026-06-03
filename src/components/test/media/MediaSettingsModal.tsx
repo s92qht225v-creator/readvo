@@ -38,6 +38,10 @@ export function MediaSettingsModal({ q, onClose, onChange }: {
       rotation: draft.rotation ?? 0,
       flipX: !!draft.flipX,
       flipY: !!draft.flipY,
+      // Persist the image's real aspect ratio (measured at runtime when the
+      // upload didn't store one) — the player needs it to render the crop
+      // without distorting the image. crop % is meaningless without it.
+      naturalAspectRatio: draft.naturalAspectRatio ?? media.naturalAspectRatio,
     }));
   };
 
@@ -72,7 +76,7 @@ export function MediaSettingsModal({ q, onClose, onChange }: {
                         setDraft({
                           ...draft,
                           aspectRatio,
-                          crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, draft.crop, media.naturalAspectRatio) : undefined,
+                          crop: usesCrop(aspectRatio) ? cropForAspect(aspectRatio, draft.crop, draft.naturalAspectRatio ?? media.naturalAspectRatio) : undefined,
                         });
                       }}
                     />
@@ -309,11 +313,18 @@ function MediaCropPreview({ media, draft, onChange }: {
   const imageBounds = getContainedImageBounds(imgAspect, frameRatio);
   const visibleCrop = crop ? cropToFrame(crop, imageBounds) : undefined;
 
-  /* Backfill the measured aspect into the draft (once) when it's missing,
-     so the saved media + the player render the crop with the same ratio. */
+  /* Backfill the measured aspect into the draft (once) when it's missing, AND
+     re-correct the crop with it: the crop set on aspect-change was computed
+     with a fallback aspect of 1 (square-%, which is an ellipse in pixels on a
+     non-square image), so recompute it now that the true aspect is known. This
+     makes the SAVED crop + the player render a real circle, not just the
+     editor preview. */
   useEffect(() => {
     if (runtimeAspect && runtimeAspect > 0 && !(storedAspect && storedAspect > 0)) {
-      onChange({ ...draft, naturalAspectRatio: runtimeAspect });
+      const correctedCrop = usesCrop(draft.aspectRatio)
+        ? cropForAspect(draft.aspectRatio, draft.crop, runtimeAspect)
+        : draft.crop;
+      onChange({ ...draft, naturalAspectRatio: runtimeAspect, crop: correctedCrop });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runtimeAspect]);

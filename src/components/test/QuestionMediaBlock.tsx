@@ -142,7 +142,7 @@ export function QuestionMediaBlock({ media, className, style, onAudioEnded, auto
         <img
           src={media.url}
           alt={media.alt || ''}
-          style={{ ...croppedImageStyle(media.crop, media.naturalAspectRatio), transform }}
+          style={{ ...croppedImageStyle(media.crop, media.naturalAspectRatio, aspectRatioNumeric(media)), transform }}
         />
       </div>
     );
@@ -444,6 +444,22 @@ function normalizeDesktopLayout(value: QuestionMedia['layoutDesktop']) {
 }
 
 
+// Numeric counterpart to aspectRatioValue() — the on-screen frame aspect
+// (width / height) for the cropped-image renderer. Must mirror
+// aspectRatioValue()'s branches exactly so the geometry matches the CSS
+// `aspect-ratio` applied to the wrapper.
+function aspectRatioNumeric(media: QuestionMedia): number | undefined {
+  if (media.aspectRatio === 'circle' || media.aspectRatio === 'square' || media.aspectRatio === '1:1') return 1;
+  if (media.aspectRatio === 'landscape' || media.aspectRatio === '16:9') return 16 / 9;
+  if (media.aspectRatio === 'portrait' || media.aspectRatio === '3:4') return 3 / 4;
+  if (media.aspectRatio === '4:3') return 4 / 3;
+  if (media.aspectRatio === 'free' && media.crop) return media.crop.width / media.crop.height;
+  if ((media.aspectRatio === 'original' || !media.aspectRatio) && media.naturalAspectRatio && Number.isFinite(media.naturalAspectRatio)) {
+    return media.naturalAspectRatio;
+  }
+  return undefined;
+}
+
 function aspectRatioValue(media: QuestionMedia) {
   if (media.aspectRatio === 'circle' || media.aspectRatio === 'square' || media.aspectRatio === '1:1') return '1 / 1';
   if (media.aspectRatio === 'landscape' || media.aspectRatio === '16:9') return '16 / 9';
@@ -588,13 +604,22 @@ const framedImageStyle: React.CSSProperties = {
   transition: 'transform 160ms ease',
 };
 
-function croppedImageStyle(crop: NonNullable<QuestionMedia['crop']>, naturalAspectRatio: number | undefined): React.CSSProperties {
+function croppedImageStyle(crop: NonNullable<QuestionMedia['crop']>, naturalAspectRatio: number | undefined, frameAspect?: number): React.CSSProperties {
   const imageRatio = naturalAspectRatio && Number.isFinite(naturalAspectRatio) && naturalAspectRatio > 0
     ? naturalAspectRatio
     : crop.width / crop.height;
-  const cropRatio = crop.width / crop.height;
+  // The frame's aspect (1 for circle/square, 3/4 portrait, etc.) — NOT the
+  // crop rectangle's own ratio. The crop is stored as %-of-image, so its
+  // raw width/height ratio is a percent ratio, not the on-screen frame
+  // shape. Using it here (the old bug) left the image too short to fill a
+  // non-square crop, exposing a blank gap. object-fit:cover already
+  // guarantees the image never distorts; this only decides how tall the
+  // image element is so it exactly fills the frame.
+  const frameRatio = frameAspect && Number.isFinite(frameAspect) && frameAspect > 0
+    ? frameAspect
+    : crop.width / crop.height;
   const widthPercent = (100 / crop.width) * 100;
-  const heightPercent = widthPercent * (cropRatio / imageRatio);
+  const heightPercent = widthPercent * (frameRatio / imageRatio);
 
   return {
     position: 'absolute',
