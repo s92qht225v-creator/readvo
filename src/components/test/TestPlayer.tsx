@@ -1154,9 +1154,11 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
                     <MathText>{q.instruction}</MathText>
                   </p>
                 ) : null}
-                <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(q.prompt)}>
-                  {q.prompt ? <MathText>{q.prompt}</MathText> : '…'}
-                </h2>
+                {q.prompt ? (
+                  <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(q.prompt)}>
+                    <MathText>{q.prompt}</MathText>
+                  </h2>
+                ) : null}
                 {q.description ? (
                   <p className="test-player__description" style={questionDescription} dir="auto" lang={detectScriptLang(q.description)}>
                     <MathText>{q.description}</MathText>
@@ -1790,9 +1792,11 @@ function ScrollBody({
                         <MathText>{question.instruction}</MathText>
                       </p>
                     ) : null}
-                    <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
-                      {question.prompt ? <MathText>{question.prompt}</MathText> : '…'}
-                    </h2>
+                    {question.prompt ? (
+                      <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
+                        <MathText>{question.prompt}</MathText>
+                      </h2>
+                    ) : null}
                     {question.description ? (
                       <p className="test-player__description" style={questionDescription} dir="auto" lang={detectScriptLang(question.description)}>
                         <MathText>{question.description}</MathText>

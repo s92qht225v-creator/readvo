@@ -54,13 +54,6 @@ function testBuilderTab(tab: string | null): 'create' | 'share' | 'results' {
   return tab === 'share' || tab === 'results' ? tab : 'create';
 }
 
-function questionTypeLabel(type: QuestionType): string {
-  return type
-    .split('_')
-    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(' ');
-}
-
 function firstQuestionValidationError(
   questions: BuilderQuestion[],
   options?: { requireQuestions?: boolean },
@@ -72,16 +65,8 @@ function firstQuestionValidationError(
     };
   }
 
-  const emptyPromptIndex = questions.findIndex(q => !q.prompt.trim());
-  if (emptyPromptIndex !== -1) {
-    const q = questions[emptyPromptIndex];
-    const label = questionTypeLabel(q.type);
-    return {
-      index: emptyPromptIndex,
-      message: `Question ${emptyPromptIndex + 1} (${label}) is missing question text. Add the question text before saving or publishing.`,
-    };
-  }
-
+  // Question text (prompt) is optional — a question can rely on media
+  // and/or its answer choices alone — so empty prompts are not blocked.
   return null;
 }
 
@@ -381,10 +366,9 @@ export function TestBuilder({ testId }: Props) {
   }, [questions]);
 
   const dirty = useMemo(() => JSON.stringify(questions) !== savedSnapshot, [questions, savedSnapshot]);
-  const canAutosaveQuestions = useMemo(
-    () => questions.every(q => q.prompt.trim()),
-    [questions],
-  );
+  // Prompt is optional, so there's no longer an "incomplete question text"
+  // state that should block autosave.
+  const canAutosaveQuestions = true;
 
   const updateTest = async (patch: Partial<Pick<Test, 'title' | 'description' | 'theme' | 'welcome_screen' | 'end_screen' | 'timer_enabled' | 'time_limit_seconds' | 'layout' | 'listening_audio_url' | 'strict_sections' | 'play_once_audio' | 'audio_lock' | 'is_graded' | 'is_marketplace' | 'marketplace_price' | 'marketplace_summary'>>) => {
     const tok = await getAccessToken();

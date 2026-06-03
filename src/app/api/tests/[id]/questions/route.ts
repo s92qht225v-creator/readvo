@@ -51,13 +51,8 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
         { status: 400 },
       );
     }
-    const prompt = (q.prompt ?? '').toString().trim();
-    if (!prompt) {
-      return NextResponse.json(
-        { error: 'Question prompt is required' },
-        { status: 400 },
-      );
-    }
+    // Question prompt is optional — a question may rely on its media
+    // and/or answer choices alone, so an empty prompt is allowed.
   }
 
   const { data: existingQuestions, error: existingErr } = await admin
