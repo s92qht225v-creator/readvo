@@ -1194,15 +1194,6 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         </div>
       ) : null}
 
-      {/* Audio-lock hint — shown while a Next is blocked because the
-          section/listening audio or this question's own audio hasn't
-          finished playing yet. */}
-      {audioLocked ? (
-        <div role="status" style={audioLockBar}>
-          Listen to the audio to continue.
-        </div>
-      ) : null}
-
       <div className="test-player__nav" style={navRow}>
         <button
           type="button"
@@ -1837,11 +1828,6 @@ function ScrollBody({
           / Submit]. Back is hidden in strict (forward-only) mode and on
           the first section. Sectionless: the original Questions /
           progress / Submit row. */}
-      {audioLockedScroll ? (
-        <div role="status" style={{ ...audioLockBar, maxWidth: 1120, margin: '0 auto 12px', width: '100%' }}>
-          Listen to the audio to continue.
-        </div>
-      ) : null}
       <div className="test-scroll__footer" style={scrollFooter}>
         <div style={scrollFooterInner}>
           {section ? (
@@ -2286,18 +2272,6 @@ const requiredWarnBar: React.CSSProperties = {
   background: '#fef2f2',
   border: '1px solid #fecaca',
   color: '#b91c1c',
-  fontSize: 13,
-  fontWeight: 600,
-  textAlign: 'center',
-};
-
-const audioLockBar: React.CSSProperties = {
-  marginTop: 16,
-  padding: '10px 14px',
-  borderRadius: 8,
-  background: '#eff6ff',
-  border: '1px solid #bfdbfe',
-  color: '#1d4ed8',
   fontSize: 13,
   fontWeight: 600,
   textAlign: 'center',
