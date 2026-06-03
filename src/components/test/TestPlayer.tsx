@@ -392,10 +392,24 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
   }, [answers, name, profile, phase, currentSectionIdx, audioDone, answersStorageKey]);
 
   const total = test.questions.length;
+  /* Worked examples are instructional, not scored — they're excluded from
+     grading already, so they must NOT count toward the question numbering
+     either. `total` stays the full array length (it drives isLast / index
+     bounds); `realTotal` + `displayNumberByIdx` are DISPLAY-only: the
+     denominator and the per-question number a respondent sees, counting
+     only real questions. Example pages show "Example" instead of N / M. */
+  const realTotal = useMemo(
+    () => test.questions.reduce((n, question) => n + (question.isExample ? 0 : 1), 0),
+    [test.questions],
+  );
+  const displayNumberByIdx = useMemo(() => {
+    let n = 0;
+    return test.questions.map(question => (question.isExample ? null : ++n));
+  }, [test.questions]);
   const q: PublicQuestion | undefined = test.questions[idx];
   const answer = useMemo(() => (q ? (answers[q.id] ?? {}) : {}), [q, answers]);
   const answeredCount = useMemo(
-    () => test.questions.filter(question => hasQuestionAnswer(question, answers[question.id])).length,
+    () => test.questions.filter(question => !question.isExample && hasQuestionAnswer(question, answers[question.id])).length,
     [answers, test.questions],
   );
   const mobileWallpaperMedia = undefined;
@@ -1066,7 +1080,6 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           setActiveId={setScrollActiveId}
           activeIdx={scrollActiveIdx}
           phase={phase}
-          total={total}
           submitAttempted={submitAttempted}
           audioActive={audioActive}
           audioLockEnabled={!!test.audio_lock && !forceDevice}
@@ -1097,7 +1110,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
             answers={answers}
             currentIdx={scrollActiveIdx}
             answeredCount={answeredCount}
-            total={total}
+            total={realTotal}
             remainingSeconds={remainingSeconds}
             submitting={phase === 'submitting'}
             /* Sectionless scroll only reaches here (sectioned scroll
@@ -1207,7 +1220,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
           Questions
         </button>
         <div className="test-player__progress" style={navProgress}>
-          {idx + 1} / {total}
+          {q?.isExample ? 'Example' : <>{displayNumberByIdx[idx]} / {realTotal}</>}
         </div>
         <button
           type="button"
@@ -1233,7 +1246,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
         answers={answers}
         currentIdx={idx}
         answeredCount={answeredCount}
-        total={total}
+        total={realTotal}
         remainingSeconds={remainingSeconds}
         submitting={phase === 'submitting'}
         sectionGroups={sectionGroups}
@@ -1282,8 +1295,15 @@ function NavigatorOverlay({
   onFinish: () => void;
 }) {
   const globalIdxById = new Map(questions.map((qq, i) => [qq.id, i] as const));
+  /* Examples don't count as questions — number only the real ones (1..N)
+     and omit examples from the navigator grid entirely. */
+  const displayNumById = new Map<string, number>();
+  let displayN = 0;
+  for (const qq of questions) if (!qq.isExample) displayNumById.set(qq.id, ++displayN);
   const renderButton = (question: PublicQuestion) => {
+    if (question.isExample) return null;
     const questionIndex = globalIdxById.get(question.id) ?? 0;
+    const num = displayNumById.get(question.id) ?? questionIndex + 1;
     const answered = hasQuestionAnswer(question, answers[question.id]);
     const current = questionIndex === currentIdx;
     return (
@@ -1292,10 +1312,10 @@ function NavigatorOverlay({
         type="button"
         onClick={() => onGoTo(questionIndex)}
         aria-current={current ? 'step' : undefined}
-        aria-label={`Go to question ${questionIndex + 1}${answered ? ', answered' : ', unanswered'}`}
+        aria-label={`Go to question ${num}${answered ? ', answered' : ', unanswered'}`}
         style={navigatorQuestionButton(current, answered)}
       >
-        {questionIndex + 1}
+        {num}
       </button>
     );
   };
@@ -1605,7 +1625,6 @@ function ScrollBody({
   setActiveId,
   activeIdx,
   phase,
-  total,
   submitAttempted,
   audioActive,
   audioLockEnabled,
@@ -1637,7 +1656,6 @@ function ScrollBody({
   setActiveId: (id: string | null) => void;
   activeIdx: number;
   phase: Phase;
-  total: number;
   /* When set, the test is in sectioned mode: render a section header
      and a section footer (Prev/"Section X of Y"/Next-section or Submit)
      instead of the flat Questions/progress/Submit footer. */
@@ -1736,6 +1754,14 @@ function ScrollBody({
     (it.audioMustFinish || it.audioPlayOnce) && !!it.audioMedia?.url && !audioDone.has(`q:${it.id}`));
   const audioLockedScroll = sectionAudioLocked || questionAudioLocked;
   const advanceBlocked = phase === 'submitting' || audioLockedScroll;
+
+  /* Examples don't count toward the question numbering (display-only —
+     matches card mode). realTotal = non-example count; activeDisplayNum =
+     the active question's number among real questions (null on examples). */
+  const realTotal = test.questions.reduce((n, qq) => n + (qq.isExample ? 0 : 1), 0);
+  const activeIsExample = !!test.questions[activeIdx]?.isExample;
+  let activeDisplayNum = 0;
+  for (let i = 0; i <= activeIdx; i++) if (!test.questions[i]?.isExample) activeDisplayNum += 1;
 
   return (
     <div className="test-scroll" data-test-device={device} style={{ ...scrollShell, ...themeVars }}>
@@ -1856,7 +1882,7 @@ function ScrollBody({
               >
                 Questions
               </button>
-              <div style={navProgress}>{activeIdx + 1} / {total}</div>
+              <div style={navProgress}>{activeIsExample ? 'Example' : <>{activeDisplayNum} / {realTotal}</>}</div>
               <button
                 type="button"
                 onClick={() => { if (advanceBlocked) return; onSubmit(); }}
