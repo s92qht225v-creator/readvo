@@ -186,10 +186,71 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     return () => { cancelled = true; };
   }, [allSentences]);
 
-  // Resolve + play a sentence's audio: recorded `audio_url` when present,
-  // otherwise the (possibly already-prefetched) MiMo TTS URL.
+  // Whether the bottom-right "play all" FAB should drive a TTS sequence
+  // (no single recorded file to play, but sentences are TTS-playable).
+  const ttsPlayable = useMemo(
+    () => !dialogue.audio_url && allSentences.some(s => !!s.text_original?.trim()),
+    [dialogue.audio_url, allSentences],
+  );
+
+  // ── Sequential "play all" for dialogues without a single recording ──
+  // HSK 1 plays one recorded file with timestamp highlighting; HSK 2 has
+  // none, so we walk the sentences, playing each one's TTS audio in order
+  // and highlighting it — giving the same bottom-right play FAB.
+  const seqAudioRef = useRef<HTMLAudioElement | null>(null);
+  const seqActiveRef = useRef(false);
+  const seqIdxRef = useRef(0);
+
+  useEffect(() => {
+    if (dialogue.audio_url) return; // recorded full-audio path owns playback
+    const a = new Audio();
+    a.preload = 'none';
+    seqAudioRef.current = a;
+    return () => { seqActiveRef.current = false; a.onended = null; a.pause(); a.src = ''; };
+  }, [dialogue.audio_url]);
+
+  const stopSeq = useCallback(() => {
+    if (!seqActiveRef.current) return;
+    seqActiveRef.current = false;
+    const a = seqAudioRef.current;
+    if (a) { a.onended = null; a.pause(); }
+    setIsPlaying(false);
+    setIsAudioLoading(false);
+    setAudioActive(false);
+  }, []);
+
+  const playSeqFrom = useCallback(async (idx: number) => {
+    if (!seqActiveRef.current) return;
+    const s = allSentences[idx];
+    if (!s) { seqActiveRef.current = false; setIsPlaying(false); setAudioActive(false); setActiveSentenceId(null); return; }
+    seqIdxRef.current = idx;
+    setActiveSentenceId(s.id);
+    const url = s.audio_url ?? ttsUrls[s.id] ?? await resolveTtsUrl(s.text_original);
+    if (!seqActiveRef.current) return;
+    const a = seqAudioRef.current;
+    if (!a) return;
+    if (!url) { void playSeqFrom(idx + 1); return; } // skip un-resolvable sentence
+    a.onended = () => { if (seqActiveRef.current) void playSeqFrom(seqIdxRef.current + 1); };
+    a.src = url;
+    try { await a.play(); setIsAudioLoading(false); setIsPlaying(true); }
+    catch { /* autoplay rejected — leave state as-is */ }
+  }, [allSentences, ttsUrls]);
+
+  const handlePlayAll = useCallback(() => {
+    if (seqActiveRef.current) { stopSeq(); return; } // toggle: pause
+    sentenceAudio.stop();
+    seqActiveRef.current = true;
+    setAudioActive(true);
+    setIsAudioLoading(true);
+    const start = allSentences.findIndex(s => s.id === activeSentenceId);
+    void playSeqFrom(start >= 0 ? start : 0);
+  }, [stopSeq, sentenceAudio, allSentences, activeSentenceId, playSeqFrom]);
+
+  // Resolve + play a single sentence's audio: recorded `audio_url` when
+  // present, otherwise the (possibly already-prefetched) MiMo TTS URL.
   const playSentence = useCallback((s: Sentence | undefined | null) => {
     if (!s) return;
+    stopSeq(); // a manual sentence tap cancels any running "play all"
     if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
     const ready = s.audio_url ?? ttsUrls[s.id];
     if (ready) { sentenceAudio.play(s.id, ready); return; }
@@ -198,7 +259,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
       setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
       sentenceAudio.play(s.id, url);
     });
-  }, [ttsUrls, isPlaying, sentenceAudio]);
+  }, [ttsUrls, isPlaying, sentenceAudio, stopSeq]);
 
   const timedSentences = useMemo(
     () => allSentences.filter((s): s is Sentence & { start: number; end: number } => s.start !== undefined && s.end !== undefined),
@@ -480,8 +541,8 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
               )}
             </div>
 
-            {!focusMode && dialogue.audio_url && (
-              <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={handlePlay} type="button">
+            {!focusMode && (dialogue.audio_url || ttsPlayable) && (
+              <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={dialogue.audio_url ? handlePlay : handlePlayAll} type="button">
                 {isAudioLoading ? <span className="story__play-fab-spinner" /> :
                   isPlaying
                     ? <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
