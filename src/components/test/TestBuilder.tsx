@@ -121,6 +121,14 @@ function WelcomeScreenIcon({ color = 'currentColor' }: { color?: string }) {
   );
 }
 
+function SectionMenuIcon({ color = 'currentColor' }: { color?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill={color} d="M2.5 3a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H8L6.7 3.2A1.5 1.5 0 0 0 5.6 3zM2.5 4.5h3.1l1.3 1.3c.28.28.66.45 1.06.45h5.54v5.25H2.5z" fillRule="evenodd" clipRule="evenodd"/>
+    </svg>
+  );
+}
+
 function EndScreenIcon({ color = 'currentColor' }: { color?: string }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
@@ -1085,9 +1093,6 @@ export function TestBuilder({ testId }: Props) {
           >
             + Add question
           </button>
-          <button type="button" className="tb-left__section-add" style={{ marginTop: 8 }} onClick={() => createSection('')} title="Add section">
-            + Add section
-          </button>
           {sections.length > 0 ? (
             <label className="tb-left__forward-toggle">
               <input
@@ -1112,6 +1117,13 @@ export function TestBuilder({ testId }: Props) {
                   {item.label}
                 </button>
               ))}
+              <div style={addMenuDivider} />
+              <button type="button" onClick={() => { createSection(''); setShowAddMenu(false); }} className="tb-left__add-item">
+                <span className="tb-left__add-icon" style={{ background: '#e2e8f0', color: '#475569' }}>
+                  <SectionMenuIcon />
+                </span>
+                Add section
+              </button>
             </div>
           ) : null}
         </div>
@@ -1144,6 +1156,13 @@ export function TestBuilder({ testId }: Props) {
                     {item.label}
                   </button>
                 ))}
+                <div style={addMenuDivider} />
+                <button type="button" onClick={() => { createSection(''); setShowToolbarAddMenu(false); }} className="tb-left__add-item">
+                  <span className="tb-left__add-icon" style={{ background: '#e2e8f0', color: '#475569' }}>
+                    <SectionMenuIcon />
+                  </span>
+                  Add section
+                </button>
               </div>
             ) : null}
             <button
@@ -5578,6 +5597,12 @@ const addMenuTitle: React.CSSProperties = {
   fontWeight: 800,
   letterSpacing: 0.5,
   textTransform: 'uppercase',
+};
+
+const addMenuDivider: React.CSSProperties = {
+  height: 1,
+  background: '#ececec',
+  margin: '4px 8px',
 };
 
 const emptyCanvas: React.CSSProperties = {
