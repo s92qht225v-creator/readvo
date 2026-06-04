@@ -241,6 +241,16 @@ export function TestBuilder({ testId }: Props) {
   const [showPaywall, setShowPaywall] = useState<{ limit: number; message?: string } | null>(null);
   const [showAddMenu, setShowAddMenu] = useState(false);
   const [showToolbarAddMenu, setShowToolbarAddMenu] = useState(false);
+  // Which section folders are collapsed in the left rail (Stage 1: sections
+  // render as collapsible folders with their questions nested inside).
+  const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set());
+  const toggleSectionCollapsed = useCallback((id: string) => {
+    setCollapsedSections(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }, []);
   const [previewDevice, setPreviewDevice] = useState<'desktop' | 'mobile'>('desktop');
   const [openQuestionMenu, setOpenQuestionMenu] = useState<{ index: number; top: number; left: number } | null>(null);
   const [shareCopied, setShareCopied] = useState(false);
@@ -738,6 +748,10 @@ export function TestBuilder({ testId }: Props) {
     if (!over || active.id === over.id) return;
     const from = questions.findIndex(q => q.clientId === active.id);
     const to = questions.findIndex(q => q.clientId === over.id);
+    if (from < 0 || to < 0) return;
+    // Stage 1: drag reorders WITHIN a folder only. Cross-folder moves still
+    // go through the kebab "Move to section" (Stage 2 will add drag-to-folder).
+    if ((questions[from].section_id ?? null) !== (questions[to].section_id ?? null)) return;
     reorderQuestion(from, to);
   };
 
@@ -848,29 +862,8 @@ export function TestBuilder({ testId }: Props) {
           />
           <span>拼 Show pinyin on answers</span>
         </label>
-        {/* Sections panel (stage-b). Renders ONLY when the test has at
-            least one section OR the author clicks Add Section. Empty
-            tests stay visually identical to stage (a). */}
-        <SectionsPanel
-          sections={sections}
-          activeSectionId={activeBlock.kind === 'section' ? activeBlock.id : null}
-          strictSections={!!test.strict_sections}
-          onStrictChange={(next) => {
-            setTest({ ...test, strict_sections: next });
-            void updateTest({ strict_sections: next });
-          }}
-          onSelect={(id) => setActiveBlock({ kind: 'section', id })}
-          onCreate={() => { createSection(''); }}
-          onRename={(id, title) => { renameSection(id, title); }}
-          onCommit={(id, title) => { commitSectionTitle(id, title); }}
-          onDelete={(id) => {
-            if (!confirm('Delete this section? Its questions stay in the test (move back to "Unsectioned").')) return;
-            void deleteSection(id);
-            if (activeBlock.kind === 'section' && activeBlock.id === id) {
-              setActiveBlock({ kind: 'question', index: 0 });
-            }
-          }}
-        />
+        {/* Sections now render as collapsible FOLDERS inline in the list
+            below (Stage 1), replacing the old top SectionsPanel. */}
         <ul className="tb-left" style={{ listStyle: 'none', padding: '8px 8px 0', margin: 0, flex: 1, overflow: 'auto' }}>
           {welcomeScreen.enabled ? (
             <li className="tb-left__item-wrap">
@@ -903,27 +896,87 @@ export function TestBuilder({ testId }: Props) {
             </li>
           ) : null}
           <DndContext sensors={dndSensors} collisionDetection={closestCenter} onDragEnd={handleQuestionDragEnd}>
-            <SortableContext items={questions.map(q => q.clientId)} strategy={verticalListSortingStrategy}>
-              {questions.map((q, i) => (
-                <SortableQuestionItem
-                  key={q.clientId}
-                  q={q}
-                  index={i}
-                  isActive={activeBlock.kind === 'question' && i === activeQuestionIndex}
-                  isMenuOpen={openQuestionMenu?.index === i}
-                  onSelect={() => {
-                    setActiveIdx(i);
-                    setActiveBlock({ kind: 'question', index: i });
-                  }}
-                  onOpenMenu={(rect) => {
-                    setOpenQuestionMenu(current => current?.index === i
-                      ? null
-                      : { index: i, top: rect.top - 8, left: rect.right + 5 });
-                  }}
-                />
-              ))}
-            </SortableContext>
+            {(() => {
+              const renderQ = (q: BuilderQuestion) => {
+                const i = questions.findIndex(qq => qq.clientId === q.clientId);
+                return (
+                  <SortableQuestionItem
+                    key={q.clientId}
+                    q={q}
+                    index={i}
+                    isActive={activeBlock.kind === 'question' && i === activeQuestionIndex}
+                    isMenuOpen={openQuestionMenu?.index === i}
+                    onSelect={() => { setActiveIdx(i); setActiveBlock({ kind: 'question', index: i }); }}
+                    onOpenMenu={(rect) => {
+                      setOpenQuestionMenu(current => current?.index === i
+                        ? null
+                        : { index: i, top: rect.top - 8, left: rect.right + 5 });
+                    }}
+                  />
+                );
+              };
+              const unsectioned = questions.filter(q => !q.section_id);
+              return (
+                <>
+                  {sections.map(section => {
+                    const secQs = questions.filter(q => q.section_id === section.id);
+                    const collapsed = collapsedSections.has(section.id);
+                    return (
+                      <SectionFolder
+                        key={section.id}
+                        section={section}
+                        count={secQs.length}
+                        collapsed={collapsed}
+                        active={activeBlock.kind === 'section' && activeBlock.id === section.id}
+                        onToggle={() => toggleSectionCollapsed(section.id)}
+                        onSelect={() => setActiveBlock({ kind: 'section', id: section.id })}
+                        onRename={(t) => renameSection(section.id, t)}
+                        onCommit={(t) => commitSectionTitle(section.id, t)}
+                        onDelete={() => {
+                          if (!confirm('Delete this section? Its questions stay in the test (they become unsectioned).')) return;
+                          void deleteSection(section.id);
+                          if (activeBlock.kind === 'section' && activeBlock.id === section.id) {
+                            setActiveBlock({ kind: 'question', index: 0 });
+                          }
+                        }}
+                      >
+                        {!collapsed ? (
+                          <SortableContext items={secQs.map(q => q.clientId)} strategy={verticalListSortingStrategy}>
+                            {secQs.map(renderQ)}
+                          </SortableContext>
+                        ) : null}
+                      </SectionFolder>
+                    );
+                  })}
+                  {/* Unsectioned (loose) questions — at the bottom, like the
+                      player's trailing "Other questions" group. */}
+                  <SortableContext items={unsectioned.map(q => q.clientId)} strategy={verticalListSortingStrategy}>
+                    {unsectioned.map(renderQ)}
+                  </SortableContext>
+                </>
+              );
+            })()}
           </DndContext>
+          <li className="tb-left__item-wrap">
+            <button type="button" className="tb-left__section-add" onClick={() => createSection('')} title="Add section">
+              + Add section
+            </button>
+          </li>
+          {sections.length > 0 ? (
+            <li className="tb-left__item-wrap">
+              <label className="tb-left__forward-toggle">
+                <input
+                  type="checkbox"
+                  checked={!!test.strict_sections}
+                  onChange={(e) => { setTest({ ...test, strict_sections: e.target.checked }); void updateTest({ strict_sections: e.target.checked }); }}
+                />
+                <span>
+                  <span className="tb-left__forward-toggle-title">Forward-only navigation</span>
+                  <span className="tb-left__forward-toggle-hint">Lock back-nav between sections; audio plays once.</span>
+                </span>
+              </label>
+            </li>
+          ) : null}
           {endScreen.enabled ? (
             <li className="tb-left__item-wrap">
               <button
@@ -1536,6 +1589,56 @@ function SortableQuestionItem({
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="3.5" r="1.2" fill="currentColor"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="8" cy="12.5" r="1.2" fill="currentColor"/></svg>
       </button>
+    </li>
+  );
+}
+
+/* A collapsible section FOLDER in the left rail (Stage 1). Header row:
+   caret (collapse), inline-editable title (click selects the section →
+   SectionSettingsPanel), question count, audio dot, delete. Its questions
+   render nested in `children` (a SortableContext) when expanded. */
+function SectionFolder({
+  section, count, collapsed, active, onToggle, onSelect, onRename, onCommit, onDelete, children,
+}: {
+  section: TestSection;
+  count: number;
+  collapsed: boolean;
+  active: boolean;
+  onToggle: () => void;
+  onSelect: () => void;
+  onRename: (title: string) => void;
+  onCommit: (title: string) => void;
+  onDelete: () => void;
+  children?: React.ReactNode;
+}) {
+  return (
+    <li className="tb-left__folder">
+      <div className={`tb-left__folder-header ${active ? 'tb-left__folder-header--active' : ''}`}>
+        <button
+          type="button"
+          className="tb-left__folder-caret"
+          onClick={onToggle}
+          aria-expanded={!collapsed}
+          aria-label={collapsed ? 'Expand section' : 'Collapse section'}
+        >
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style={{ transform: collapsed ? 'rotate(-90deg)' : 'none', transition: 'transform 120ms ease' }}>
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+        <input
+          type="text"
+          className="tb-left__folder-title"
+          value={section.title}
+          placeholder="Untitled section"
+          onClick={onSelect}
+          onChange={(e) => onRename(e.target.value)}
+          onBlur={(e) => onCommit(e.target.value)}
+        />
+        <span className="tb-left__folder-count" title={`${count} question${count === 1 ? '' : 's'}`}>{count}</span>
+        {section.audio_url ? <span className="tb-left__folder-audio" title="Has audio">●</span> : null}
+        <button type="button" className="tb-left__folder-del" onClick={onDelete} title="Delete section" aria-label="Delete section">×</button>
+      </div>
+      {!collapsed ? <ul className="tb-left__folder-questions">{children}</ul> : null}
     </li>
   );
 }
