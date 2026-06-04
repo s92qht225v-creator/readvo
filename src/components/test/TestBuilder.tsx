@@ -7,6 +7,7 @@ import {
   DndContext,
   KeyboardSensor,
   PointerSensor,
+  useDroppable,
   type DragEndEvent,
   useSensor,
   useSensors,
@@ -127,6 +128,10 @@ function EndScreenIcon({ color = 'currentColor' }: { color?: string }) {
     </svg>
   );
 }
+
+// dnd-kit droppable id for the loose "unsectioned" zone at the bottom of the
+// question list. Dropping a question here clears its section_id.
+const DROP_UNSECTIONED = 'drop:unsectioned';
 
 const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
   { type: 'multiple_choice', label: 'Multiple choice' },
@@ -747,12 +752,53 @@ export function TestBuilder({ testId }: Props) {
     const { active, over } = event;
     if (!over || active.id === over.id) return;
     const from = questions.findIndex(q => q.clientId === active.id);
-    const to = questions.findIndex(q => q.clientId === over.id);
-    if (from < 0 || to < 0) return;
-    // Stage 1: drag reorders WITHIN a folder only. Cross-folder moves still
-    // go through the kebab "Move to section" (Stage 2 will add drag-to-folder).
-    if ((questions[from].section_id ?? null) !== (questions[to].section_id ?? null)) return;
-    reorderQuestion(from, to);
+    if (from < 0) return;
+    const overId = String(over.id);
+
+    // Resolve the drop target's section + (if dropped on a question) its index.
+    // overId can be: a question clientId, `sec:<id>` (a folder), or
+    // `unsectioned` (the loose zone at the bottom).
+    let targetSection: string | null;
+    let overIdx = -1;
+    if (overId.startsWith('sec:')) {
+      targetSection = overId.slice(4);
+    } else if (overId === DROP_UNSECTIONED) {
+      targetSection = null;
+    } else {
+      overIdx = questions.findIndex(q => q.clientId === overId);
+      if (overIdx < 0) return;
+      targetSection = questions[overIdx].section_id ?? null;
+    }
+
+    const sameSection = (questions[from].section_id ?? null) === targetSection;
+    if (sameSection && overIdx >= 0) {
+      // Plain reorder within the same folder.
+      reorderQuestion(from, overIdx);
+      return;
+    }
+
+    // Cross-folder move (or drop onto a folder / loose zone): reassign
+    // section_id and reposition. Display groups by section_id, so the exact
+    // index only sets within-group order. Grading is by question id → safe.
+    setQuestions(prev => {
+      const next = [...prev];
+      const [moved] = next.splice(from, 1);
+      const reassigned = { ...moved, section_id: targetSection };
+      if (overIdx >= 0) {
+        const newOverIdx = next.findIndex(q => q.clientId === overId);
+        const insertAt = from < overIdx ? newOverIdx + 1 : newOverIdx;
+        next.splice(Math.max(0, insertAt), 0, reassigned);
+      } else {
+        // Dropped on a folder header / empty folder / loose zone → append to
+        // the end of that group.
+        let insertAt = next.length;
+        for (let k = next.length - 1; k >= 0; k--) {
+          if ((next[k].section_id ?? null) === targetSection) { insertAt = k + 1; break; }
+        }
+        next.splice(insertAt, 0, reassigned);
+      }
+      return next;
+    });
   };
 
   const setActiveQ = (q: BuilderQuestion) => {
@@ -949,34 +995,18 @@ export function TestBuilder({ testId }: Props) {
                     );
                   })}
                   {/* Unsectioned (loose) questions — at the bottom, like the
-                      player's trailing "Other questions" group. */}
-                  <SortableContext items={unsectioned.map(q => q.clientId)} strategy={verticalListSortingStrategy}>
-                    {unsectioned.map(renderQ)}
-                  </SortableContext>
+                      player's trailing "Other questions" group. Also a drop
+                      target to un-section a question (only relevant when
+                      sections exist). */}
+                  <UnsectionedDropZone showHint={sections.length > 0 && unsectioned.length === 0}>
+                    <SortableContext items={unsectioned.map(q => q.clientId)} strategy={verticalListSortingStrategy}>
+                      {unsectioned.map(renderQ)}
+                    </SortableContext>
+                  </UnsectionedDropZone>
                 </>
               );
             })()}
           </DndContext>
-          <li className="tb-left__item-wrap">
-            <button type="button" className="tb-left__section-add" onClick={() => createSection('')} title="Add section">
-              + Add section
-            </button>
-          </li>
-          {sections.length > 0 ? (
-            <li className="tb-left__item-wrap">
-              <label className="tb-left__forward-toggle">
-                <input
-                  type="checkbox"
-                  checked={!!test.strict_sections}
-                  onChange={(e) => { setTest({ ...test, strict_sections: e.target.checked }); void updateTest({ strict_sections: e.target.checked }); }}
-                />
-                <span>
-                  <span className="tb-left__forward-toggle-title">Forward-only navigation</span>
-                  <span className="tb-left__forward-toggle-hint">Lock back-nav between sections; audio plays once.</span>
-                </span>
-              </label>
-            </li>
-          ) : null}
           {endScreen.enabled ? (
             <li className="tb-left__item-wrap">
               <button
@@ -1055,6 +1085,22 @@ export function TestBuilder({ testId }: Props) {
           >
             + Add question
           </button>
+          <button type="button" className="tb-left__section-add" style={{ marginTop: 8 }} onClick={() => createSection('')} title="Add section">
+            + Add section
+          </button>
+          {sections.length > 0 ? (
+            <label className="tb-left__forward-toggle">
+              <input
+                type="checkbox"
+                checked={!!test.strict_sections}
+                onChange={(e) => { setTest({ ...test, strict_sections: e.target.checked }); void updateTest({ strict_sections: e.target.checked }); }}
+              />
+              <span>
+                <span className="tb-left__forward-toggle-title">Forward-only navigation</span>
+                <span className="tb-left__forward-toggle-hint">Lock back-nav between sections; audio plays once.</span>
+              </span>
+            </label>
+          ) : null}
           {showAddMenu ? (
             <div className="tb-add-menu" style={addMenu}>
               <div style={addMenuTitle}>Question types</div>
@@ -1611,8 +1657,11 @@ function SectionFolder({
   onDelete: () => void;
   children?: React.ReactNode;
 }) {
+  // The whole folder is a drop target: dropping a question anywhere on it
+  // (header or empty body) moves the question into this section.
+  const { setNodeRef, isOver } = useDroppable({ id: `sec:${section.id}` });
   return (
-    <li className="tb-left__folder">
+    <li ref={setNodeRef} className={`tb-left__folder ${isOver ? 'tb-left__folder--over' : ''}`}>
       <div className={`tb-left__folder-header ${active ? 'tb-left__folder-header--active' : ''}`}>
         <button
           type="button"
@@ -1639,6 +1688,19 @@ function SectionFolder({
         <button type="button" className="tb-left__folder-del" onClick={onDelete} title="Delete section" aria-label="Delete section">×</button>
       </div>
       {!collapsed ? <ul className="tb-left__folder-questions">{children}</ul> : null}
+    </li>
+  );
+}
+
+/* The loose "unsectioned" zone at the bottom of the list — a drop target
+   that clears a dropped question's section_id. Shows a hint when empty (so
+   there's something to drop onto) but only when the test has sections. */
+function UnsectionedDropZone({ showHint, children }: { showHint: boolean; children?: React.ReactNode }) {
+  const { setNodeRef, isOver } = useDroppable({ id: DROP_UNSECTIONED });
+  return (
+    <li ref={setNodeRef} className={`tb-left__unsectioned ${isOver ? 'tb-left__unsectioned--over' : ''}`}>
+      <ul className="tb-left__unsectioned-questions">{children}</ul>
+      {showHint ? <div className="tb-left__unsectioned-hint">Drop here to remove from a section</div> : null}
     </li>
   );
 }
