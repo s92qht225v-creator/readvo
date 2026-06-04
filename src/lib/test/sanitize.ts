@@ -26,7 +26,7 @@ export function exampleAnswerValue(q: TestQuestion): AnswerSubmission['value'] |
     const o = q.options as TrueFalseOptions;
     return typeof o.correct === 'boolean' ? { bool: o.correct } : undefined;
   }
-  if (q.type === 'multiple_choice' || q.type === 'picture_choice') {
+  if (q.type === 'multiple_choice' || q.type === 'picture_choice' || q.type === 'image_letters') {
     const o = q.options as MultipleChoiceOptions | PictureChoiceOptions;
     if (o.allowMultiple) {
       const idx = o.correctIndexes ?? (o.correctIndex != null ? [o.correctIndex] : []);
@@ -367,7 +367,7 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       },
     };
   }
-  if (q.type === 'picture_choice') {
+  if (q.type === 'picture_choice' || q.type === 'image_letters') {
     const opts = q.options as PictureChoiceOptions;
     const choices = (opts.choices ?? []).map((c, i) => ({
       id: publicOptionId(q.id, 'choice', i),
@@ -377,7 +377,7 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
     return {
       id: q.id,
       position: q.position,
-      type: 'picture_choice',
+      type: q.type,
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),

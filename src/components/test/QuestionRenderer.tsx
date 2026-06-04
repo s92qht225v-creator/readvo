@@ -97,6 +97,58 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
     );
   }
 
+  if (question.type === 'image_letters') {
+    // Read the text → pick the LETTER of the matching image. Images labeled
+    // A–F (upload order); answer choices are bare letters in the SAME order
+    // (no shuffle). Single-select by choice id.
+    const opts = question.options as PublicPictureChoiceOptions;
+    const cols = typeof opts.columns === 'number' && opts.columns >= 1
+      ? Math.min(Math.floor(opts.columns), 6)
+      : null;
+    const gridStyle = cols ? ({ '--pic-cols': String(cols) } as CSSProperties) : undefined;
+    return (
+      <div className="test-image-options">
+        <div className="test-image-grid" data-cols={cols ?? undefined} style={gridStyle} role="group" aria-label="Images">
+          {opts.choices.map((c, i) => (
+            <figure key={c.id} className="test-image-grid__cell">
+              <div
+                className={`test-image-grid__img${c.image_url ? ' test-image-grid__img--has-image' : ''}`}
+                style={c.image_url ? { backgroundImage: `url(${c.image_url})` } : undefined}
+              >
+                {!c.image_url ? (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                    <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m21 15-5-5L5 21" />
+                  </svg>
+                ) : null}
+                <span className="test-image-grid__label" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+              </div>
+            </figure>
+          ))}
+        </div>
+        <div className="test-letter-options" role="radiogroup" aria-label={question.prompt}>
+          {opts.choices.map((c, i) => {
+            const selected = value.selectedId === c.id || value.selected === i;
+            const letter = LETTERS[i] ?? `${i + 1}`;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onChange({ selectedId: c.id })}
+                className="test-letter-option"
+                role="radio"
+                aria-checked={selected}
+                aria-label={`Option ${letter}`}
+                data-selected={selected ? 'true' : 'false'}
+              >
+                {letter}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   if (question.type === 'image_options') {
     // Matching: labeled image grid + the description list (shuffled order),
     // tap an image then a description to pair them. See ImageMatchPlayer.

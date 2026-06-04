@@ -14,6 +14,7 @@ export type QuestionType =
   | 'rating'
   | 'picture_choice'
   | 'image_options'
+  | 'image_letters'
   | 'true_false'
   | 'match'
   | 'ordering'
