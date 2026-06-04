@@ -375,9 +375,9 @@ export interface PublicPictureChoiceOptions {
   choices: PublicPictureChoice[];
   allowMultiple?: boolean;
   columns?: number;
-  /** image_options only: the order (choice ids) in which to render the
-   *  ANSWER (description) list, shuffled per respondent so it doesn't line
-   *  up with the image grid (which stays in upload order). */
+  /** image_options (matching) only: the order (choice ids) in which to
+   *  render the description list, shuffled per respondent so it doesn't line
+   *  up with the image grid. */
   answerOrder?: string[];
 }
 
@@ -406,6 +406,9 @@ export interface PublicTrueFalseOptions {}
 export interface PublicMatchLeft {
   id: string;
   text: string;
+  /** image_options matching: the left item is an image (description goes on
+   *  the right). */
+  image_url?: string;
 }
 export interface PublicMatchRight {
   id: string;

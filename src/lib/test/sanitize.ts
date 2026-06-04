@@ -26,13 +26,21 @@ export function exampleAnswerValue(q: TestQuestion): AnswerSubmission['value'] |
     const o = q.options as TrueFalseOptions;
     return typeof o.correct === 'boolean' ? { bool: o.correct } : undefined;
   }
-  if (q.type === 'multiple_choice' || q.type === 'picture_choice' || q.type === 'image_options') {
+  if (q.type === 'multiple_choice' || q.type === 'picture_choice') {
     const o = q.options as MultipleChoiceOptions | PictureChoiceOptions;
     if (o.allowMultiple) {
       const idx = o.correctIndexes ?? (o.correctIndex != null ? [o.correctIndex] : []);
       return idx.length ? { selectedIds: idx.map(cid) } : undefined;
     }
     return o.correctIndex != null ? { selectedId: cid(o.correctIndex) } : undefined;
+  }
+  if (q.type === 'image_options') {
+    // Matching example value: each image i paired with its own description
+    // (choice i). cid(i) = publicOptionId(q.id,'choice',i).
+    const choices = (q.options as PictureChoiceOptions).choices ?? [];
+    return choices.length
+      ? { pairs: choices.map((_, i) => ({ leftIndex: i, rightId: cid(i) })) }
+      : undefined;
   }
   if (q.type === 'checkbox') {
     const o = q.options as CheckboxOptions;
@@ -359,7 +367,7 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       },
     };
   }
-  if (q.type === 'picture_choice' || q.type === 'image_options') {
+  if (q.type === 'picture_choice') {
     const opts = q.options as PictureChoiceOptions;
     const choices = (opts.choices ?? []).map((c, i) => ({
       id: publicOptionId(q.id, 'choice', i),
@@ -369,27 +377,46 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
     return {
       id: q.id,
       position: q.position,
-      type: q.type,
+      type: 'picture_choice',
       prompt: q.prompt,
       description: questionDescription(q.options),
       instruction: questionInstruction(q.options),
       media: visualMedia(q),
       audioMedia: audioMediaOf(q),
       required: q.required,
-      options: q.type === 'image_options'
-        ? {
-            // Images stay in upload order; the description (answer) list is
-            // shuffled per respondent so position A's description isn't
-            // image A's. Grading is by choice id, so a reorder is safe.
-            choices,
-            columns: opts.columns,
-            answerOrder: stableShuffle(choices.map(c => c.id), `${q.id}:answers:${seed ?? ''}`),
-          }
-        : {
-            choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
-            allowMultiple: !!opts.allowMultiple,
-            columns: opts.columns,
-          },
+      options: {
+        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
+        allowMultiple: !!opts.allowMultiple,
+        columns: opts.columns,
+      },
+    };
+  }
+  if (q.type === 'image_options') {
+    // Matching: each choice carries an image + its description. The images
+    // render in upload order (labeled A–F); the descriptions render in
+    // `answerOrder` (shuffled per respondent) so they don't line up with the
+    // images. Correct pairing is image i ↔ choice i — graded by choice id.
+    const opts = q.options as PictureChoiceOptions;
+    const choices = (opts.choices ?? []).map((c, i) => ({
+      id: publicOptionId(q.id, 'choice', i),
+      text: c.text,
+      image_url: c.image_url,
+    }));
+    return {
+      id: q.id,
+      position: q.position,
+      type: 'image_options',
+      prompt: q.prompt,
+      description: questionDescription(q.options),
+      instruction: questionInstruction(q.options),
+      media: visualMedia(q),
+      audioMedia: audioMediaOf(q),
+      required: q.required,
+      options: {
+        choices,
+        columns: opts.columns,
+        answerOrder: stableShuffle(choices.map(c => c.id), `${q.id}:answers:${seed ?? ''}`),
+      },
     };
   }
   if (q.type === 'true_false') {

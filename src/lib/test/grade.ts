@@ -23,7 +23,7 @@ export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['val
     // Graded on a separate track — never part of the objective score.
     return null;
   }
-  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_options') {
+  if (question.type === 'multiple_choice' || question.type === 'picture_choice') {
     const opts = question.options as MultipleChoiceOptions | PictureChoiceOptions;
     const correctIndexes = opts.allowMultiple
       ? (opts.correctIndexes ?? (opts.correctIndex != null ? [opts.correctIndex] : []))
@@ -39,6 +39,16 @@ export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['val
     const a = [...new Set(submittedIndexes)].sort((x, y) => x - y);
     const b = [...new Set(correctIndexes)].sort((x, y) => x - y);
     return a.length === b.length && a.every((idx, i) => idx === b[i]);
+  }
+  if (question.type === 'image_options') {
+    // Matching: image i (leftIndex) must be paired with its own description
+    // (the choice whose id is publicOptionId(q.id,'choice',i)). All-or-nothing.
+    const opts = question.options as PictureChoiceOptions;
+    const n = (opts.choices ?? []).length;
+    if (n === 0) return null;
+    const submitted = submittedImagePairs(question.id, value, n);
+    if (submitted.size !== n) return false;
+    return Array.from({ length: n }).every((_, i) => submitted.get(i) === publicOptionId(question.id, 'choice', i));
   }
   if (question.type === 'short_text') {
     const opts = question.options as ShortTextOptions;
@@ -137,10 +147,14 @@ export function hasAnswer(question: TestQuestion, value: AnswerSubmission['value
   if (question.type === 'speaking') {
     return value.recorded === true;
   }
-  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_options') {
+  if (question.type === 'multiple_choice' || question.type === 'picture_choice') {
     return typeof value.selected === 'number' && value.selected >= 0
       || typeof value.selectedId === 'string' && value.selectedId.length > 0
       || Array.isArray(value.selectedIds) && value.selectedIds.length > 0;
+  }
+  if (question.type === 'image_options') {
+    const n = (question.options as PictureChoiceOptions).choices?.length ?? 0;
+    return n > 0 && submittedImagePairs(question.id, value, n).size === n;
   }
   if (question.type === 'short_text' || question.type === 'long_answer' || question.type === 'number') {
     return !!value.text && value.text.trim().length > 0;
@@ -276,6 +290,29 @@ function choiceIdToIndex(questionId: string, id: string): number | null {
     if (publicOptionId(questionId, 'choice', i) === id) return i;
   }
   return null;
+}
+
+// image_options matching: validate submitted pairs against the CHOICE ids
+// (each image i's correct partner is choice i's own description).
+function submittedImagePairs(
+  questionId: string,
+  value: AnswerSubmission['value'],
+  count: number,
+): Map<number, string> {
+  const validRightIds = new Set(
+    Array.from({ length: count }, (_, i) => publicOptionId(questionId, 'choice', i)),
+  );
+  const rawPairs = Array.isArray(value.pairs) ? value.pairs : [];
+  const submitted = new Map<number, string>();
+  const usedRightIds = new Set<string>();
+  for (const pair of rawPairs) {
+    if (!Number.isInteger(pair.leftIndex) || pair.leftIndex < 0 || pair.leftIndex >= count) continue;
+    if (typeof pair.rightId !== 'string' || !validRightIds.has(pair.rightId)) continue;
+    if (submitted.has(pair.leftIndex) || usedRightIds.has(pair.rightId)) continue;
+    submitted.set(pair.leftIndex, pair.rightId);
+    usedRightIds.add(pair.rightId);
+  }
+  return submitted;
 }
 
 function submittedMatchPairs(

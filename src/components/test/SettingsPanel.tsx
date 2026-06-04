@@ -93,7 +93,10 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         {q.type === 'opinion_scale' && <OpinionScaleSettings q={q} onChange={onChange} />}
         {q.type === 'rating' && <RatingSettings q={q} onChange={onChange} />}
         {q.type === 'picture_choice' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={isGraded} />}
-        {q.type === 'image_options' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={isGraded} />}
+        {/* image_options is matching: the correct pairing is each image with
+            its own description, so there's no single "correct" choice to mark
+            (isGraded=false hides the per-choice correct radio). */}
+        {q.type === 'image_options' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={false} />}
         {q.type === 'true_false' && <TrueFalseSettings q={q} onChange={onChange} isGraded={isGraded} />}
         {q.type === 'match' && <MatchSettings q={q} onChange={onChange} />}
         {q.type === 'ordering' && <OrderingSettings q={q} onChange={onChange} />}

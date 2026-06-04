@@ -1677,3 +1677,41 @@
   background: var(--test-theme-answer, #0445af);
   color: #fff;
 }
+
+/* ──────────────────────────────────────────────────────────────────────
+   Image matching (image_options): the image grid cells become tappable and
+   the description list shows pairing state. Tap an image (accent ring) then
+   a description to pair (both go green; the description's chip shows the
+   image's letter).
+   ────────────────────────────────────────────────────────────────────── */
+.test-image-grid__cell--tappable {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  text-align: inherit;
+  font: inherit;
+}
+.test-image-grid__cell[data-selected="true"] .test-image-grid__img {
+  box-shadow: inset 0 0 0 3px var(--test-theme-answer, #0445af);
+  border-color: transparent;
+}
+.test-image-grid__cell[data-matched="true"] .test-image-grid__img {
+  box-shadow: inset 0 0 0 3px #16a34a;
+  border-color: transparent;
+}
+.test-image-grid__cell[data-matched="true"][data-selected="true"] .test-image-grid__img {
+  box-shadow: inset 0 0 0 3px var(--test-theme-answer, #0445af);
+}
+.test-image-match__answer { cursor: pointer; }
+.test-image-match__answer[data-matched="true"] {
+  background: color-mix(in srgb, #16a34a 12%, #ffffff);
+}
+.test-image-match__answer[data-matched="true"] .tq-option__chip {
+  background: #16a34a;
+  color: #fff;
+}
+.test-image-match__answer[data-selected="true"] {
+  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
+}
