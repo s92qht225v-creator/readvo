@@ -222,7 +222,10 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   const playSeqFrom = useCallback(async (idx: number) => {
     if (!seqActiveRef.current) return;
     const s = allSentences[idx];
-    if (!s) { seqActiveRef.current = false; setIsPlaying(false); setAudioActive(false); setActiveSentenceId(null); return; }
+    // End of dialogue (or every sentence skipped because TTS couldn't
+    // resolve) — clear ALL playback state, including the loading spinner,
+    // so the FAB never gets stuck mid-load.
+    if (!s) { seqActiveRef.current = false; setIsPlaying(false); setIsAudioLoading(false); setAudioActive(false); setActiveSentenceId(null); return; }
     seqIdxRef.current = idx;
     setActiveSentenceId(s.id);
     const url = s.audio_url ?? ttsUrls[s.id] ?? await resolveTtsUrl(s.text_original);
