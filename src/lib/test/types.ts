@@ -375,6 +375,10 @@ export interface PublicPictureChoiceOptions {
   choices: PublicPictureChoice[];
   allowMultiple?: boolean;
   columns?: number;
+  /** image_options only: the order (choice ids) in which to render the
+   *  ANSWER (description) list, shuffled per respondent so it doesn't line
+   *  up with the image grid (which stays in upload order). */
+  answerOrder?: string[];
 }
 
 /** One character of pinyin-annotated text (char + its pinyin; pinyin is ''

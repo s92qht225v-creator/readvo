@@ -376,11 +376,20 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
       media: visualMedia(q),
       audioMedia: audioMediaOf(q),
       required: q.required,
-      options: {
-        choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
-        allowMultiple: !!opts.allowMultiple,
-        columns: opts.columns,
-      },
+      options: q.type === 'image_options'
+        ? {
+            // Images stay in upload order; the description (answer) list is
+            // shuffled per respondent so position A's description isn't
+            // image A's. Grading is by choice id, so a reorder is safe.
+            choices,
+            columns: opts.columns,
+            answerOrder: stableShuffle(choices.map(c => c.id), `${q.id}:answers:${seed ?? ''}`),
+          }
+        : {
+            choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
+            allowMultiple: !!opts.allowMultiple,
+            columns: opts.columns,
+          },
     };
   }
   if (q.type === 'true_false') {

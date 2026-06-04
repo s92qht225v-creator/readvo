@@ -97,14 +97,19 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
   }
 
   if (question.type === 'image_options') {
-    // Labeled image gallery (display-only) on top + a single-select radio
-    // list of the same letters below. Images reuse the picture-choice
-    // "images per row" mechanism (--pic-cols / data-cols, desktop-only).
+    // Images (labeled A–F) on top in upload order, for reference. Below, the
+    // single-select description list — rendered in the server-provided
+    // `answerOrder` (shuffled per respondent) so the answer at position A is
+    // NOT image A's description. Selection/grading is by choice id.
     const opts = question.options as PublicPictureChoiceOptions;
     const cols = typeof opts.columns === 'number' && opts.columns >= 1
       ? Math.min(Math.floor(opts.columns), 6)
       : null;
     const gridStyle = cols ? ({ '--pic-cols': String(cols) } as CSSProperties) : undefined;
+    const byId = new Map(opts.choices.map(c => [c.id, c]));
+    const answerList = (opts.answerOrder?.length
+      ? opts.answerOrder.map(id => byId.get(id)).filter((c): c is typeof opts.choices[number] => !!c)
+      : opts.choices);
     return (
       <div className="test-image-options">
         <div className="test-image-grid" data-cols={cols ?? undefined} style={gridStyle} role="group" aria-label="Images">
@@ -125,8 +130,8 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
           ))}
         </div>
         <div className="tq-options" role="radiogroup" aria-label={question.prompt}>
-          {opts.choices.map((c, i) => {
-            const selected = value.selectedId === c.id || value.selected === i;
+          {answerList.map((c, j) => {
+            const selected = value.selectedId === c.id;
             return (
               <button
                 key={c.id}
@@ -137,10 +142,10 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
                 aria-checked={selected}
                 data-selected={selected ? 'true' : 'false'}
               >
-                <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+                <span className="tq-option__chip" aria-hidden="true">{LETTERS[j] ?? j + 1}</span>
                 {(c.text || c.pinyin?.length) ? (
                   <span className="tq-option__label" dir="auto" lang={detectScriptLang(c.text)}>
-                    <ChoiceLabel text={c.text} pinyin={c.pinyin} index={i} />
+                    <ChoiceLabel text={c.text} pinyin={c.pinyin} index={j} />
                   </span>
                 ) : null}
               </button>
