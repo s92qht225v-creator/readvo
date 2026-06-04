@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo, useRef, useId } from 'react';
+import { useEffect, useLayoutEffect, useState, useCallback, useMemo, useRef, useId } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 import {
   closestCenter,
@@ -319,14 +319,23 @@ export function TestBuilder({ testId }: Props) {
       if (event.key === 'Escape') closeMenu();
     };
 
+    // Close when the PAGE scrolls (the menu is fixed-positioned and would
+    // detach from its anchor), but NOT when the user scrolls inside the
+    // menu itself — a tall menu (many sections) scrolls internally.
+    const handleScroll = (event: Event) => {
+      const target = event.target as Element | null;
+      if (target?.closest?.('.tb-left__menu')) return;
+      closeMenu();
+    };
+
     window.addEventListener('pointerdown', handlePointerDown);
     window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('scroll', closeMenu, true);
+    window.addEventListener('scroll', handleScroll, true);
 
     return () => {
       window.removeEventListener('pointerdown', handlePointerDown);
       window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('scroll', closeMenu, true);
+      window.removeEventListener('scroll', handleScroll, true);
     };
   }, [openQuestionMenu]);
 
@@ -1763,8 +1772,28 @@ function QuestionActionsMenu({ top, left, isHidden, sections, currentSectionId, 
   onDuplicate: () => void;
   onDelete: () => void;
 }) {
+  const menuRef = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState({ top, left });
+  // Anchor is fixed-positioned at the kebab button. If the menu would
+  // overflow the viewport (e.g. a test with many sections pushes it past
+  // the bottom), clamp it back on-screen — shift up/left so the whole menu
+  // is reachable. Runs before paint, so there's no flash at the bad spot.
+  useLayoutEffect(() => {
+    const el = menuRef.current;
+    if (!el) return;
+    const margin = 8;
+    const h = el.offsetHeight;
+    const w = el.offsetWidth;
+    let t = top;
+    let l = left;
+    if (t + h > window.innerHeight - margin) t = window.innerHeight - margin - h;
+    if (t < margin) t = margin;
+    if (l + w > window.innerWidth - margin) l = window.innerWidth - margin - w;
+    if (l < margin) l = margin;
+    setPos({ top: t, left: l });
+  }, [top, left]);
   return (
-    <div className="tb-left__menu" role="menu" style={{ top, left }} onClick={(e) => e.stopPropagation()}>
+    <div ref={menuRef} className="tb-left__menu" role="menu" style={{ top: pos.top, left: pos.left }} onClick={(e) => e.stopPropagation()}>
       <button
         type="button"
         className="tb-left__menu-item"
