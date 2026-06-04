@@ -96,6 +96,61 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
     );
   }
 
+  if (question.type === 'image_options') {
+    // Labeled image gallery (display-only) on top + a single-select radio
+    // list of the same letters below. Images reuse the picture-choice
+    // "images per row" mechanism (--pic-cols / data-cols, desktop-only).
+    const opts = question.options as PublicPictureChoiceOptions;
+    const cols = typeof opts.columns === 'number' && opts.columns >= 1
+      ? Math.min(Math.floor(opts.columns), 6)
+      : null;
+    const gridStyle = cols ? ({ '--pic-cols': String(cols) } as CSSProperties) : undefined;
+    return (
+      <div className="test-image-options">
+        <div className="test-image-grid" data-cols={cols ?? undefined} style={gridStyle} role="group" aria-label="Images">
+          {opts.choices.map((c, i) => (
+            <figure key={c.id} className="test-image-grid__cell">
+              <div
+                className={`test-image-grid__img${c.image_url ? ' test-image-grid__img--has-image' : ''}`}
+                style={c.image_url ? { backgroundImage: `url(${c.image_url})` } : undefined}
+              >
+                {!c.image_url ? (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                    <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m21 15-5-5L5 21" />
+                  </svg>
+                ) : null}
+                <span className="test-image-grid__label" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+              </div>
+            </figure>
+          ))}
+        </div>
+        <div className="tq-options" role="radiogroup" aria-label={question.prompt}>
+          {opts.choices.map((c, i) => {
+            const selected = value.selectedId === c.id || value.selected === i;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onChange({ selectedId: c.id })}
+                className="tq-option"
+                role="radio"
+                aria-checked={selected}
+                data-selected={selected ? 'true' : 'false'}
+              >
+                <span className="tq-option__chip" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+                {(c.text || c.pinyin?.length) ? (
+                  <span className="tq-option__label" dir="auto" lang={detectScriptLang(c.text)}>
+                    <ChoiceLabel text={c.text} pinyin={c.pinyin} index={i} />
+                  </span>
+                ) : null}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   if (question.type === 'picture_choice') {
     const opts = question.options as PublicPictureChoiceOptions;
     // Fixed images-per-row. Exposed as --pic-cols; the CSS computes the

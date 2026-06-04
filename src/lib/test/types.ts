@@ -13,6 +13,7 @@ export type QuestionType =
   | 'opinion_scale'
   | 'rating'
   | 'picture_choice'
+  | 'image_options'
   | 'true_false'
   | 'match'
   | 'ordering'

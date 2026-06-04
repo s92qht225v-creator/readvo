@@ -1612,3 +1612,68 @@
 .tq-pinyin__hz {
   line-height: 1.15;
 }
+
+/* ──────────────────────────────────────────────────────────────────────
+   Image options — a labeled image gallery (display-only) stacked over a
+   single-select radio list (which reuses .tq-options / .tq-option). The
+   gallery reuses the picture-choice --pic-* tokens for sizing + the
+   desktop-only "images per row" override (--pic-cols / data-cols).
+   ────────────────────────────────────────────────────────────────────── */
+.test-image-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: var(--tq-column);
+  max-width: 100%;
+  margin-inline: auto;
+}
+.test-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pic-gap);
+}
+.test-image-grid__cell {
+  flex: 1 1 var(--pic-basis);
+  min-width: 0;
+  margin: 0;
+}
+[data-test-device="desktop"] .test-image-grid[data-cols] {
+  --pic-basis: calc((100% - (var(--pic-cols) - 1) * var(--pic-gap)) / var(--pic-cols));
+}
+[data-test-device="desktop"] .test-image-grid[data-cols] > .test-image-grid__cell {
+  flex-grow: 0;
+}
+.test-image-grid__img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--pic-img-radius);
+  background-color: #f1f3f5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa3ad;
+  border: 1px solid color-mix(in srgb, var(--test-theme-answer, #0445af) 16%, #e6e8eb);
+}
+.test-image-grid__img--has-image {
+  color: transparent;
+  border-color: transparent;
+}
+.test-image-grid__label {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--test-theme-answer, #0445af);
+  color: #fff;
+}

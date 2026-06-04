@@ -93,6 +93,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         {q.type === 'opinion_scale' && <OpinionScaleSettings q={q} onChange={onChange} />}
         {q.type === 'rating' && <RatingSettings q={q} onChange={onChange} />}
         {q.type === 'picture_choice' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={isGraded} />}
+        {q.type === 'image_options' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={isGraded} />}
         {q.type === 'true_false' && <TrueFalseSettings q={q} onChange={onChange} isGraded={isGraded} />}
         {q.type === 'match' && <MatchSettings q={q} onChange={onChange} />}
         {q.type === 'ordering' && <OrderingSettings q={q} onChange={onChange} />}
@@ -117,7 +118,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
             The question text is hidden from respondents and only used as a label in your question list.
           </div>
         ) : null}
-        {['multiple_choice', 'picture_choice', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
+        {['multiple_choice', 'picture_choice', 'image_options', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
           <ToggleRow
             label="Example (answer shown, not scored)"
             checked={getQuestionIsExample(q)}
@@ -201,7 +202,7 @@ function MediaControls({ q, onOpen, onSettings, onRemove }: {
   const visual = getQuestionVisual(q);
   const audio = getQuestionAudio(q);
   const caps = mediaCapabilities(q.type);
-  const availableKinds: MediaKind[] = q.type === 'picture_choice'
+  const availableKinds: MediaKind[] = (q.type === 'picture_choice' || q.type === 'image_options')
     ? ['audio']
     : ['image', 'audio', 'video'];
   const hasImage = visual?.type === 'image';
@@ -584,6 +585,7 @@ function typeLabel(type: BuilderQuestion['type']) {
   if (type === 'opinion_scale') return 'Opinion scale';
   if (type === 'rating') return 'Rating';
   if (type === 'picture_choice') return 'Picture choice';
+  if (type === 'image_options') return 'Image options';
   if (type === 'true_false') return 'True / False';
   if (type === 'match') return 'Match pairs';
   if (type === 'ordering') return 'Ordering';

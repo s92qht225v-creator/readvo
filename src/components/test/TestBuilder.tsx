@@ -81,6 +81,8 @@ function TypeIcon({ type }: { type: QuestionType }) {
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M3.5 3.329 3.022 4.5h.956zM4.589 6l.216.532a.75.75 0 0 0 1.39-.566l-1.77-4.346a.998.998 0 0 0-1.85 0L.806 5.967a.75.75 0 1 0 1.39.566l.216-.532zM1.47 9.22A.75.75 0 0 1 2 9h2.303C5.38 9 6 9.896 6 10.79c0 .328-.084.657-.244.941.309.349.494.81.494 1.309 0 1.071-.852 1.96-1.946 1.96L2 15a.75.75 0 0 1-.75-.75v-4.5c0-.199.079-.39.22-.53m2.833 1.857c.04 0 .065-.008.08-.014a.13.13 0 0 0 .045-.035.36.36 0 0 0 .072-.24.36.36 0 0 0-.072-.239.13.13 0 0 0-.045-.034.2.2 0 0 0-.08-.014H2.75v.576zm-1.553 1.5h1.553a.45.45 0 0 1 .447.462c0 .266-.203.46-.447.46H2.75z" fillRule="evenodd" clipRule="evenodd"/><path fill={c} d="M8.75 3.498a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5zM8.75 11.503a.75.75 0 1 0 0 1.5h5.5a.75.75 0 0 0 0-1.5z"/></svg>;
     case 'picture_choice':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path fill={c} d="M10.448 6.96a1 1 0 0 0-.13.13c-.126.144-.28.356-.524.695L8.227 9.961c-.15.208-.287.4-.415.55a1.8 1.8 0 0 1-.536.446c-.327.17-.7.23-1.065.176a1.8 1.8 0 0 1-.65-.251 9 9 0 0 1-.57-.388l-.395-.282a9 9 0 0 0-.51-.35.6.6 0 0 0-.113-.058.25.25 0 0 0-.149.028.6.6 0 0 0-.084.095 9 9 0 0 0-.35.512l-1.144 1.75a13 13 0 0 0-.554.89c-.069.128-.087.19-.091.207a.25.25 0 0 0 .086.16c.017.005.078.023.223.037.232.02.552.022 1.048.022H13.15c.481 0 .79-.001 1.013-.022a1 1 0 0 0 .215-.036.25.25 0 0 0 .088-.157 1 1 0 0 0-.08-.202 13 13 0 0 0-.51-.876L11.21 7.84c-.218-.356-.355-.58-.469-.733a1 1 0 0 0-.12-.14.25.25 0 0 0-.174-.006m-.532-1.403a1.75 1.75 0 0 1 1.342.051c.31.143.522.381.688.604.16.216.332.498.527.819l2.702 4.43c.227.372.424.695.557.966.134.274.263.608.23.981-.044.5-.3.957-.704 1.255-.302.223-.655.286-.958.314-.3.028-.679.028-1.115.028H2.923c-.451 0-.841 0-1.15-.029-.309-.028-.67-.093-.976-.323a1.75 1.75 0 0 1-.695-1.283c-.025-.382.119-.72.264-.995.146-.273.359-.6.606-.977L2.15 9.596c.147-.224.28-.43.406-.59.136-.174.302-.353.535-.482a1.75 1.75 0 0 1 1.09-.205c.264.036.484.142.673.255.176.104.375.247.592.402l.396.282c.237.17.378.27.489.336.068.04.1.053.108.056a.25.25 0 0 0 .146-.024.6.6 0 0 0 .085-.087c.083-.099.185-.24.355-.476l1.57-2.18c.22-.305.413-.574.59-.777.181-.21.412-.43.73-.55m-3.333 4.07h.001z" fillRule="evenodd" clipRule="evenodd"/><path fill={c} d="M5.405 2.499a1.412 1.412 0 1 0 0 2.824 1.412 1.412 0 0 0 0-2.824M2.493 3.911a2.912 2.912 0 1 1 5.824 0 2.912 2.912 0 0 1-5.824 0" fillRule="evenodd" clipRule="evenodd"/></svg>;
+    case 'image_options':
+      return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1.5" width="6" height="6" rx="1" fill={c}/><rect x="9" y="1.5" width="6" height="6" rx="1" fill={c} opacity="0.45"/><rect x="1" y="9.5" width="9" height="2" rx="1" fill={c}/><rect x="1" y="12.5" width="9" height="2" rx="1" fill={c} opacity="0.5"/><circle cx="13" cy="10.5" r="1.4" fill={c}/></svg>;
     case 'true_false':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><g clipPath="url(#yesno-clip)"><path fill={c} d="M8 1.5c-.96 0-1.869.208-2.687.58a.75.75 0 0 1-.62-1.366 8 8 0 0 1 10.591 10.599.75.75 0 0 1-1.365-.622A6.5 6.5 0 0 0 8 1.5M.808.808a.75.75 0 0 1 1.06 0L4.111 3.05l11.082 11.082a.75.75 0 0 1-1.061 1.06l-1.05-1.05a1.7 1.7 0 0 1-.256.239A8 8 0 0 1 1.619 3.174a1.7 1.7 0 0 1 .239-.255l-1.05-1.05a.75.75 0 0 1 0-1.061M11.889 12.95 3.05 4.11a.22.22 0 0 0-.157-.068.1.1 0 0 0-.047.01.1.1 0 0 0-.031.028 6.5 6.5 0 0 0 9.106 9.106.1.1 0 0 0 .027-.032.1.1 0 0 0 .01-.047.22.22 0 0 0-.069-.157" fillRule="evenodd" clipRule="evenodd"/></g><defs><clipPath id="yesno-clip"><path fill={c} d="M0 0h16v16H0z"/></clipPath></defs></svg>;
     case 'match':
@@ -127,6 +129,7 @@ function EndScreenIcon({ color = 'currentColor' }: { color?: string }) {
 const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
   { type: 'multiple_choice', label: 'Multiple choice' },
   { type: 'picture_choice', label: 'Picture choice' },
+  { type: 'image_options', label: 'Image options' },
   { type: 'true_false', label: 'True / False' },
   { type: 'match', label: 'Match' },
   { type: 'ordering', label: 'Ordering' },
@@ -617,6 +620,7 @@ export function TestBuilder({ testId }: Props) {
     let options: BuilderQuestion['options'];
     if (type === 'multiple_choice') options = { choices: ['', ''], correctIndex: null, correctIndexes: [], randomize: false, allowMultiple: false };
     else if (type === 'picture_choice') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null, correctIndexes: [], randomize: false, allowMultiple: false };
+    else if (type === 'image_options') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null };
     else if (type === 'true_false') options = { correct: null };
     else if (type === 'match') options = { pairs: [{ left: '', right: '' }, { left: '', right: '' }] };
     else if (type === 'ordering') options = { items: ['', ''] };
@@ -3754,6 +3758,21 @@ function PreviewCanvas({
       media,
       required: q.required,
       options: { choices: previewShuffle(choices, !!opts.randomize), allowMultiple: !!opts.allowMultiple, columns: opts.columns },
+    };
+  } else if (q.type === 'image_options') {
+    const opts = q.options as PictureChoiceOptions;
+    const choices = (opts.choices ?? []).map((choice, i) => ({
+      id: publicOptionId(q.clientId, 'choice', i),
+      text: choice.text,
+      image_url: choice.image_url,
+    }));
+    previewQ = {
+      id: q.clientId, position: qIndex, type: 'image_options',
+      prompt: q.prompt || 'Question text…',
+      description: description || undefined,
+      media,
+      required: q.required,
+      options: { choices, columns: opts.columns },
     };
   } else if (q.type === 'true_false') {
     previewQ = {
