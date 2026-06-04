@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { QuestionRenderer } from './QuestionRenderer';
 import { MathText } from './MathText';
+import { PinyinText } from './PinyinText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
 import { ensureRespondentToken } from '@/lib/test/respondentToken';
 import { QuestionMediaBlock, QuestionMediaLayout } from './QuestionMediaBlock';
@@ -1169,7 +1170,7 @@ export function TestPlayer({ test, forceDevice, responseId, sessionStartedAt, in
                 ) : null}
                 {q.prompt ? (
                   <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(q.prompt)}>
-                    <MathText>{q.prompt}</MathText>
+                    {q.promptPinyin?.length ? <PinyinText segments={q.promptPinyin} /> : <MathText>{q.prompt}</MathText>}
                   </h2>
                 ) : null}
                 {q.description ? (
@@ -1811,7 +1812,7 @@ function ScrollBody({
                     ) : null}
                     {question.prompt ? (
                       <h2 className="test-player__title" style={questionTitle} dir="auto" lang={detectScriptLang(question.prompt)}>
-                        <MathText>{question.prompt}</MathText>
+                        {question.promptPinyin?.length ? <PinyinText segments={question.promptPinyin} /> : <MathText>{question.prompt}</MathText>}
                       </h2>
                     ) : null}
                     {question.description ? (

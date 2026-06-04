@@ -10,6 +10,7 @@ import type {
   AnswerSubmission, PinyinSegment,
 } from '@/lib/test/types';
 import { MathText } from './MathText';
+import { PinyinText } from './PinyinText';
 import { detectScriptLang } from '@/lib/test/scriptLang';
 import { FillBlanksPlayer } from './renderers/FillBlanksRenderer';
 import { MatchPlayer } from './renderers/MatchRenderer';
@@ -18,23 +19,6 @@ import { ScramblePlayer } from './renderers/ScrambleRenderer';
 import { SpeakingRecorder } from './renderers/SpeakingRecorder';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-/* Pinyin annotation: per-character flexbox columns (pinyin stacked over the
-   character), not <ruby> — gives precise, cross-browser-consistent spacing.
-   Segments are generated server-side (pinyin-pro never ships to the player).
-   aria-label carries the clean text; the visual columns are aria-hidden. */
-function PinyinText({ segments }: { segments: PinyinSegment[] }) {
-  return (
-    <span className="tq-pinyin" aria-label={segments.map(s => s.c).join('')}>
-      {segments.map((s, i) => (
-        <span key={i} className="tq-pinyin__col" aria-hidden="true">
-          <span className="tq-pinyin__py">{s.p || ' '}</span>
-          <span className="tq-pinyin__hz">{s.c}</span>
-        </span>
-      ))}
-    </span>
-  );
-}
 
 /* A choice label: pinyin-stacked when the server attached segments (test has
    "Show pinyin" on and the text has Han), else normal MathText, else the

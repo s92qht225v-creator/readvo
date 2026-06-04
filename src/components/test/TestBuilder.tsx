@@ -37,6 +37,7 @@ import { MarketplaceIcon, MoreMenuIcon } from './testList/icons';
 import { navigateToTestHref } from '@/lib/test/paths';
 import { publicOptionId, splitScrambleAnswer, exampleAnswerValue } from '@/lib/test/sanitize';
 import { annotatePinyin } from '@/lib/test/pinyin';
+import { PinyinText } from './PinyinText';
 import { DEFAULT_TEST_THEME, normalizeTestTheme, testThemeCssVars } from '@/lib/test/theme';
 import type {
   Test, TestQuestion, TestSection, QuestionType, QuestionOptions,
@@ -3879,6 +3880,8 @@ function PreviewCanvas({
       } as PublicQuestion;
     }
   }
+  // Prompt pinyin for the canvas title (mirrors the live player).
+  const promptPinyin = showPinyin && q.prompt ? annotatePinyin(q.prompt) : null;
 
   useEffect(() => {
     const frame = previewCardRef.current;
@@ -3981,7 +3984,9 @@ function PreviewCanvas({
                     letterSpacing: -0.6,
                     color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                   }}>
-                    {q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…'}
+                    {promptPinyin?.length
+                      ? <PinyinText segments={promptPinyin} />
+                      : (q.prompt ? <MathText>{q.prompt}</MathText> : 'Your question…')}
                   </h2>
                 )}
                 <div className="tb-preview-hint" dir="auto" lang={detectScriptLang(description)} style={previewHint}>

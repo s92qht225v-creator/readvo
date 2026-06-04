@@ -465,6 +465,9 @@ export interface PublicQuestion {
   position: number;
   type: QuestionType;
   prompt: string;
+  /** Per-character pinyin for `prompt` — present only when the test has
+   *  "Show pinyin" on and the prompt has Han characters (server-generated). */
+  promptPinyin?: PinyinSegment[];
   description?: string;
   /** Optional directive shown ABOVE the question text (e.g. "Read and
    *  select the best option."). Stored in options.instruction. */

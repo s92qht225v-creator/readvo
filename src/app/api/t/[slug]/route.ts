@@ -104,7 +104,13 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
       .filter((q: TestQuestion) => !q.hidden)
       .map((q: TestQuestion) => {
         let sanitized = sanitizeQuestion(q, seed);
-        if (test.show_pinyin) sanitized = attachChoicePinyin(sanitized);
+        if (test.show_pinyin) {
+          sanitized = attachChoicePinyin(sanitized);
+          // Annotate the prompt too. Uses the SANITIZED prompt, so a
+          // hidePrompt question (blanked) correctly gets no pinyin.
+          const promptPinyin = annotatePinyin(sanitized.prompt);
+          if (promptPinyin) sanitized = { ...sanitized, promptPinyin };
+        }
         /* Preserve section_id on the public question so the player
            can group questions by section. sanitizeQuestion only
            sanitizes answer keys; section_id is non-secret metadata. */
