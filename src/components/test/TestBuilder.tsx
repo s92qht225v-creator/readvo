@@ -1992,6 +1992,46 @@ function QuestionActionsMenu({ top, left, isHidden, sections, currentSectionId, 
     if (l < margin) l = margin;
     setPos({ top: t, left: l });
   }, [top, left]);
+
+  // "Move to section" opens a hover flyout (instead of a long inline list).
+  const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [subPos, setSubPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const submenuRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openSubmenu = () => {
+    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
+    const r = triggerRef.current?.getBoundingClientRect();
+    if (r) setSubPos({ top: r.top - 9, left: r.right - 2 });
+    setSubmenuOpen(true);
+  };
+  const scheduleCloseSubmenu = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setSubmenuOpen(false), 140);
+  };
+  const cancelCloseSubmenu = () => {
+    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
+  };
+  // Clamp the flyout on-screen (flip to the left of the menu near the right edge).
+  useLayoutEffect(() => {
+    if (!submenuOpen) return;
+    const el = submenuRef.current;
+    const trig = triggerRef.current;
+    if (!el || !trig) return;
+    const margin = 8;
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+    const r = trig.getBoundingClientRect();
+    let l = r.right - 2;
+    let t = r.top - 9;
+    if (l + w > window.innerWidth - margin) l = r.left - w + 2;
+    if (l < margin) l = margin;
+    if (t + h > window.innerHeight - margin) t = window.innerHeight - margin - h;
+    if (t < margin) t = margin;
+    setSubPos(prev => (Math.round(prev.left) === Math.round(l) && Math.round(prev.top) === Math.round(t) ? prev : { top: t, left: l }));
+  }, [submenuOpen]);
+  useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current); }, []);
+
   return (
     <div ref={menuRef} className="tb-left__menu" role="menu" style={{ top: pos.top, left: pos.left }} onClick={(e) => e.stopPropagation()}>
       <button
@@ -2043,29 +2083,63 @@ function QuestionActionsMenu({ top, left, isHidden, sections, currentSectionId, 
       {sections.length > 0 ? (
         <>
           <div style={questionMenuDivider} />
-          <div style={questionMenuSectionLabel}>Move to section</div>
-          <button
-            type="button"
-            className="tb-left__menu-item"
-            role="menuitem"
-            onClick={() => onMoveToSection(null)}
-            style={{ fontStyle: currentSectionId === null ? 'normal' : 'italic', color: currentSectionId === null ? undefined : '#64748b' }}
+          <div
+            className="tb-left__submenu-wrap"
+            onMouseEnter={openSubmenu}
+            onMouseLeave={scheduleCloseSubmenu}
           >
-            <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === null ? '✓' : ''}</span>
-            No section
-          </button>
-          {sections.map(section => (
             <button
-              key={section.id}
+              ref={triggerRef}
               type="button"
               className="tb-left__menu-item"
               role="menuitem"
-              onClick={() => onMoveToSection(section.id)}
+              aria-haspopup="menu"
+              aria-expanded={submenuOpen}
+              onClick={() => (submenuOpen ? setSubmenuOpen(false) : openSubmenu())}
             >
-              <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === section.id ? '✓' : ''}</span>
-              {section.title || 'Untitled section'}
+              <span className="tb-left__menu-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M1.75 4.25c0-.69.56-1.25 1.25-1.25h2.34c.3 0 .58.1.8.3l.86.74c.22.19.5.3.8.3H13c.69 0 1.25.56 1.25 1.25v6c0 .69-.56 1.25-1.25 1.25H3c-.69 0-1.25-.56-1.25-1.25z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <span style={{ flex: 1, textAlign: 'left' }}>Move to section</span>
+              <span aria-hidden="true" style={{ marginLeft: 8, color: '#94a3b8', fontSize: 15, lineHeight: 1 }}>›</span>
             </button>
-          ))}
+            {submenuOpen ? (
+              <div
+                ref={submenuRef}
+                className="tb-left__menu"
+                role="menu"
+                style={{ top: subPos.top, left: subPos.left }}
+                onMouseEnter={cancelCloseSubmenu}
+                onMouseLeave={scheduleCloseSubmenu}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="tb-left__menu-item"
+                  role="menuitem"
+                  onClick={() => onMoveToSection(null)}
+                  style={{ color: currentSectionId === null ? undefined : '#64748b' }}
+                >
+                  <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === null ? '✓' : ''}</span>
+                  No section
+                </button>
+                {sections.map(section => (
+                  <button
+                    key={section.id}
+                    type="button"
+                    className="tb-left__menu-item"
+                    role="menuitem"
+                    onClick={() => onMoveToSection(section.id)}
+                  >
+                    <span className="tb-left__menu-icon" aria-hidden="true">{currentSectionId === section.id ? '✓' : ''}</span>
+                    {section.title || 'Untitled section'}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
           <div style={questionMenuDivider} />
         </>
       ) : null}
@@ -5929,15 +6003,6 @@ const questionMenuDivider: React.CSSProperties = {
   height: 1,
   background: '#eceae0',
   margin: '4px 0',
-};
-
-const questionMenuSectionLabel: React.CSSProperties = {
-  fontSize: 11,
-  fontWeight: 800,
-  color: '#94a3b8',
-  letterSpacing: 0.5,
-  textTransform: 'uppercase',
-  padding: '4px 10px',
 };
 
 function Center({ children }: { children: React.ReactNode }) {
