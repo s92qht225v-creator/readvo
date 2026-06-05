@@ -17,6 +17,7 @@ import { NumberSettings } from './settings/NumberSettings';
 import { OpinionScaleSettings } from './settings/OpinionScaleSettings';
 import { OrderingSettings } from './settings/OrderingSettings';
 import { PictureChoiceSettings } from './settings/PictureChoiceSettings';
+import { WordBankSettings } from './settings/WordBankSettings';
 import { ScrambleSettings } from './settings/ScrambleSettings';
 import { RatingSettings } from './settings/RatingSettings';
 import { ShortTextSettings } from './settings/ShortTextSettings';
@@ -100,6 +101,9 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
         {/* image_letters is single-select: upload images, mark the one whose
             image the text describes (isGraded shows the per-choice radio). */}
         {q.type === 'image_letters' && <PictureChoiceSettings q={q} onChange={onChange} isGraded={isGraded} />}
+        {/* word_bank is single-select text choices: type the A–F words, mark
+            the one that fills the gap (isGraded shows the per-choice radio). */}
+        {q.type === 'word_bank' && <WordBankSettings q={q} onChange={onChange} isGraded={isGraded} />}
         {q.type === 'true_false' && <TrueFalseSettings q={q} onChange={onChange} isGraded={isGraded} />}
         {q.type === 'match' && <MatchSettings q={q} onChange={onChange} />}
         {q.type === 'ordering' && <OrderingSettings q={q} onChange={onChange} />}
@@ -124,7 +128,7 @@ export function SettingsPanel({ q, isGraded, index, total, onChange }: Props) {
             The question text is hidden from respondents and only used as a label in your question list.
           </div>
         ) : null}
-        {['multiple_choice', 'picture_choice', 'image_options', 'image_letters', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
+        {['multiple_choice', 'picture_choice', 'image_options', 'image_letters', 'word_bank', 'true_false', 'checkbox', 'dropdown', 'short_text', 'number', 'match', 'ordering', 'fill_blanks', 'scramble', 'long_answer'].includes(q.type) ? (
           <ToggleRow
             label="Example (answer shown, not scored)"
             checked={getQuestionIsExample(q)}
@@ -208,7 +212,7 @@ function MediaControls({ q, onOpen, onSettings, onRemove }: {
   const visual = getQuestionVisual(q);
   const audio = getQuestionAudio(q);
   const caps = mediaCapabilities(q.type);
-  const availableKinds: MediaKind[] = (q.type === 'picture_choice' || q.type === 'image_options' || q.type === 'image_letters')
+  const availableKinds: MediaKind[] = (q.type === 'picture_choice' || q.type === 'image_options' || q.type === 'image_letters' || q.type === 'word_bank')
     ? ['audio']
     : ['image', 'audio', 'video'];
   const hasImage = visual?.type === 'image';
@@ -593,6 +597,7 @@ function typeLabel(type: BuilderQuestion['type']) {
   if (type === 'picture_choice') return 'Picture choice';
   if (type === 'image_options') return 'Image options';
   if (type === 'image_letters') return 'Image letters';
+  if (type === 'word_bank') return 'Word bank';
   if (type === 'true_false') return 'True / False';
   if (type === 'match') return 'Match pairs';
   if (type === 'ordering') return 'Ordering';

@@ -183,6 +183,47 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
     );
   }
 
+  if (question.type === 'word_bank') {
+    // HSK "banked gap-fill": a fixed A–F word bank on top (each cell shows the
+    // word + pinyin + its letter), then bare letter answer buttons below.
+    // Single-select by choice id; no shuffle (the bank is a stable reference).
+    const opts = question.options as PublicPictureChoiceOptions;
+    return (
+      <div className="test-word-bank">
+        <div className="test-word-bank__grid" role="group" aria-label="Word bank">
+          {opts.choices.map((c, i) => (
+            <div key={c.id} className="test-word-bank__cell">
+              <span className="test-word-bank__letter" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+              <span className="test-word-bank__word" dir="auto" lang={detectScriptLang(c.text)}>
+                <ChoiceLabel text={c.text} pinyin={c.pinyin} index={i} />
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="test-letter-options" role="radiogroup" aria-label={question.prompt}>
+          {opts.choices.map((c, i) => {
+            const selected = value.selectedId === c.id || value.selected === i;
+            const letter = LETTERS[i] ?? `${i + 1}`;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onChange({ selectedId: c.id })}
+                className="test-letter-option"
+                role="radio"
+                aria-checked={selected}
+                aria-label={`Option ${letter}`}
+                data-selected={selected ? 'true' : 'false'}
+              >
+                {letter}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   if (question.type === 'image_options') {
     // Matching: labeled image grid + the description list (shuffled order),
     // tap an image then a description to pair them. See ImageMatchPlayer.

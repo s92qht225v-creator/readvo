@@ -86,6 +86,8 @@ function TypeIcon({ type }: { type: QuestionType }) {
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1.5" width="6" height="6" rx="1" fill={c}/><rect x="9" y="1.5" width="6" height="6" rx="1" fill={c} opacity="0.45"/><rect x="1" y="9.5" width="9" height="2" rx="1" fill={c}/><rect x="1" y="12.5" width="9" height="2" rx="1" fill={c} opacity="0.5"/><circle cx="13" cy="10.5" r="1.4" fill={c}/></svg>;
     case 'image_letters':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1.5" width="6" height="6" rx="1" fill={c}/><rect x="9" y="1.5" width="6" height="6" rx="1" fill={c} opacity="0.45"/><rect x="1.5" y="10" width="4" height="4" rx="1" fill="none" stroke={c} strokeWidth="1.3"/><rect x="6.5" y="10" width="4" height="4" rx="1" fill={c} opacity="0.5"/><rect x="11.5" y="10" width="3.2" height="4" rx="1" fill="none" stroke={c} strokeWidth="1.3" opacity="0.5"/></svg>;
+    case 'word_bank':
+      return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1.5" width="6.5" height="3" rx="1" fill={c}/><rect x="8.5" y="1.5" width="6.5" height="3" rx="1" fill={c} opacity="0.45"/><rect x="1" y="5.5" width="6.5" height="3" rx="1" fill={c} opacity="0.45"/><rect x="8.5" y="5.5" width="6.5" height="3" rx="1" fill={c}/><rect x="1.5" y="11" width="3" height="3.2" rx="1" fill="none" stroke={c} strokeWidth="1.3"/><rect x="6" y="11" width="3" height="3.2" rx="1" fill="none" stroke={c} strokeWidth="1.3" opacity="0.6"/><rect x="10.5" y="11" width="3" height="3.2" rx="1" fill="none" stroke={c} strokeWidth="1.3" opacity="0.6"/></svg>;
     case 'true_false':
       return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><g clipPath="url(#yesno-clip)"><path fill={c} d="M8 1.5c-.96 0-1.869.208-2.687.58a.75.75 0 0 1-.62-1.366 8 8 0 0 1 10.591 10.599.75.75 0 0 1-1.365-.622A6.5 6.5 0 0 0 8 1.5M.808.808a.75.75 0 0 1 1.06 0L4.111 3.05l11.082 11.082a.75.75 0 0 1-1.061 1.06l-1.05-1.05a1.7 1.7 0 0 1-.256.239A8 8 0 0 1 1.619 3.174a1.7 1.7 0 0 1 .239-.255l-1.05-1.05a.75.75 0 0 1 0-1.061M11.889 12.95 3.05 4.11a.22.22 0 0 0-.157-.068.1.1 0 0 0-.047.01.1.1 0 0 0-.031.028 6.5 6.5 0 0 0 9.106 9.106.1.1 0 0 0 .027-.032.1.1 0 0 0 .01-.047.22.22 0 0 0-.069-.157" fillRule="evenodd" clipRule="evenodd"/></g><defs><clipPath id="yesno-clip"><path fill={c} d="M0 0h16v16H0z"/></clipPath></defs></svg>;
     case 'match':
@@ -146,6 +148,7 @@ const ADD_MENU_ITEMS: { type: QuestionType; label: string }[] = [
   { type: 'picture_choice', label: 'Picture choice' },
   { type: 'image_options', label: 'Image options' },
   { type: 'image_letters', label: 'Image letters' },
+  { type: 'word_bank', label: 'Word bank' },
   { type: 'true_false', label: 'True / False' },
   { type: 'match', label: 'Match' },
   { type: 'ordering', label: 'Ordering' },
@@ -648,6 +651,7 @@ export function TestBuilder({ testId }: Props) {
     else if (type === 'picture_choice') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null, correctIndexes: [], randomize: false, allowMultiple: false };
     else if (type === 'image_options') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null };
     else if (type === 'image_letters') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null };
+    else if (type === 'word_bank') options = { choices: [{ text: '' }, { text: '' }], correctIndex: null };
     else if (type === 'true_false') options = { correct: null };
     else if (type === 'match') options = { pairs: [{ left: '', right: '' }, { left: '', right: '' }] };
     else if (type === 'ordering') options = { items: ['', ''] };
@@ -3980,6 +3984,20 @@ function PreviewCanvas({
       media,
       required: q.required,
       options: { choices, columns: opts.columns, imagesAsAnswers: !!opts.imagesAsAnswers },
+    };
+  } else if (q.type === 'word_bank') {
+    const opts = q.options as PictureChoiceOptions;
+    const choices = (opts.choices ?? []).map((choice, i) => ({
+      id: publicOptionId(q.clientId, 'choice', i),
+      text: choice.text,
+    }));
+    previewQ = {
+      id: q.clientId, position: qIndex, type: 'word_bank',
+      prompt: q.prompt || 'Question text…',
+      description: description || undefined,
+      media,
+      required: q.required,
+      options: { choices },
     };
   } else if (q.type === 'true_false') {
     previewQ = {

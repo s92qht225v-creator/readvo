@@ -23,7 +23,7 @@ export function gradeAnswer(question: TestQuestion, value: AnswerSubmission['val
     // Graded on a separate track — never part of the objective score.
     return null;
   }
-  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_letters') {
+  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_letters' || question.type === 'word_bank') {
     const opts = question.options as MultipleChoiceOptions | PictureChoiceOptions;
     const correctIndexes = opts.allowMultiple
       ? (opts.correctIndexes ?? (opts.correctIndex != null ? [opts.correctIndex] : []))
@@ -147,7 +147,7 @@ export function hasAnswer(question: TestQuestion, value: AnswerSubmission['value
   if (question.type === 'speaking') {
     return value.recorded === true;
   }
-  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_letters') {
+  if (question.type === 'multiple_choice' || question.type === 'picture_choice' || question.type === 'image_letters' || question.type === 'word_bank') {
     return typeof value.selected === 'number' && value.selected >= 0
       || typeof value.selectedId === 'string' && value.selectedId.length > 0
       || Array.isArray(value.selectedIds) && value.selectedIds.length > 0;

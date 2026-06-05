@@ -5,6 +5,7 @@ export const typePalette: Record<QuestionType, { bg: string; color: string }> = 
   picture_choice: { bg: '#dcfce7', color: '#15803d' },
   image_options: { bg: '#d1fae5', color: '#047857' },
   image_letters: { bg: '#cffafe', color: '#0e7490' },
+  word_bank: { bg: '#fae8ff', color: '#a21caf' },
   short_text: { bg: '#dbeafe', color: '#1d4ed8' },
   long_answer: { bg: '#e0f2fe', color: '#0369a1' },
   number: { bg: '#fef3c7', color: '#a16207' },

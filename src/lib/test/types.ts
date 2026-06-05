@@ -15,6 +15,7 @@ export type QuestionType =
   | 'picture_choice'
   | 'image_options'
   | 'image_letters'
+  | 'word_bank'
   | 'true_false'
   | 'match'
   | 'ordering'

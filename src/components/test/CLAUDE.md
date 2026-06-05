@@ -1356,8 +1356,26 @@ HMR is slower (~1.5s vs <500ms) but stable.
   `<PinyinText>` in QuestionRenderer (per-character **flexbox columns, NOT
   `<ruby>`** — precise cross-browser spacing). **Never import pinyin-pro in
   QuestionRenderer / the player** — keep it off the player bundle (route
-  server-side + TestBuilder PreviewCanvas client-side only). Choices only
-  (prompt + manual override are unbuilt follow-ups).
+  server-side + TestBuilder PreviewCanvas client-side only). Covers **both
+  answer choices AND the question prompt**: `/api/t/[slug]` annotates the
+  sanitized prompt into `PublicQuestion.promptPinyin` (gated on
+  `show_pinyin`, uses the sanitized prompt so a hidePrompt question gets
+  none); `TestPlayer` (card + scroll) and the builder PreviewCanvas render
+  `q.promptPinyin?.length ? <PinyinText> : <MathText>`. (Manual per-choice
+  override is still an unbuilt follow-up.)
+- **`word_bank` question type** (HSK "banked gap-fill" / reading part 4): a
+  single-select type that renders **Question (prompt, with pinyin) → Word bank
+  (A–F grid of text cells: letter + word + pinyin) → bare letter answer
+  buttons**. Reuses the `PictureChoiceOptions`/`PublicPictureChoiceOptions`
+  data shape and the single-select `grade.ts` / `sanitize.ts` branches (added
+  alongside `picture_choice`/`image_letters`), so no new grading/pinyin
+  plumbing — `attachChoicePinyin` annotates the bank words for free. Distinct
+  renderer (`.test-word-bank` + reused `.test-letter-options` buttons),
+  distinct settings editor (`settings/WordBankSettings.tsx`, text-only choices
+  + mark-correct, **no images/shuffle/multi-select**). No image/video media
+  (audio-only, like the other choice-grid types). CSS: `.test-word-bank*` in
+  `tq-options.css` (2-col grid both devices, theme-accent tinted cells). The
+  bank order is fixed A–F (no shuffle — it's a stable reference).
 - **Examples excluded from question numbering**: `realTotal` /
   `displayNumberByIdx` are DISPLAY-only (`total` stays the full array length
   for `isLast` / index bounds). Footer shows "Example" on example pages;

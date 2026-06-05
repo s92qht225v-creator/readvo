@@ -1717,6 +1717,50 @@
 }
 
 /* ──────────────────────────────────────────────────────────────────────
+   Word bank (word_bank): HSK banked gap-fill. A fixed grid of word cells
+   (letter + word + pinyin) sits above the bare letter answer buttons
+   (.test-letter-options, shared with image_letters). The grid is purely a
+   reference — the answer is the tapped letter below it.
+   ────────────────────────────────────────────────────────────────────── */
+.test-word-bank {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--tq-list-gap) * 2);
+}
+.test-word-bank__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--tq-list-gap);
+}
+.test-word-bank__cell {
+  display: flex;
+  align-items: center;
+  gap: var(--tq-option-content-gap);
+  min-width: 0;
+  padding: var(--tq-option-pad-y) var(--tq-option-pad-x);
+  min-height: var(--tq-option-min-h);
+  border-radius: var(--tq-option-radius);
+  background: color-mix(in srgb, var(--test-theme-answer, #0445af) 6%, #fff);
+  border: 1px solid color-mix(in srgb, var(--test-theme-answer, #0445af) 14%, #e6e8eb);
+}
+.test-word-bank__letter {
+  flex-shrink: 0;
+  min-width: 1.2em;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--tq-option-fs);
+  line-height: 1;
+  color: color-mix(in srgb, var(--test-theme-answer, #0445af) 55%, #6b7280);
+}
+.test-word-bank__word {
+  min-width: 0;
+  font-size: var(--tq-option-fs);
+  line-height: var(--tq-option-lh);
+  color: var(--test-theme-answer-text, #1a1a1a);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
    Image letters — a labeled image grid (reuses .test-image-grid) over a
    row of bare letter buttons (A, B, C…) as the single-select answer. The
    letters map 1:1 to the images in order (no shuffle). Themed like the
