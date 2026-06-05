@@ -1375,7 +1375,11 @@ HMR is slower (~1.5s vs <500ms) but stable.
   + mark-correct, **no images/shuffle/multi-select**). No image/video media
   (audio-only, like the other choice-grid types). CSS: `.test-word-bank*` in
   `tq-options.css` (2-col grid both devices, theme-accent tinted cells). The
-  bank order is fixed A–F (no shuffle — it's a stable reference).
+  bank order is fixed A–F (no shuffle — it's a stable reference). Like
+  image_letters, it honours the shared **`options.imagesAsAnswers`** flag
+  ("Tap the word to answer"): when on, the word cells become the clickable
+  answer (`.test-word-bank__cell--tappable` + `[data-selected]`) and the
+  letter-button row is hidden.
 - **Examples excluded from question numbering**: `realTotal` /
   `displayNumberByIdx` are DISPLAY-only (`total` stays the full array length
   for `isLast` / index bounds). Footer shows "Example" on example pages;

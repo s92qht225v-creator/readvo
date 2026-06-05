@@ -3997,7 +3997,7 @@ function PreviewCanvas({
       description: description || undefined,
       media,
       required: q.required,
-      options: { choices },
+      options: { choices, imagesAsAnswers: !!opts.imagesAsAnswers },
     };
   } else if (q.type === 'true_false') {
     previewQ = {

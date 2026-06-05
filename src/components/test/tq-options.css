@@ -1759,6 +1759,18 @@
   line-height: var(--tq-option-lh);
   color: var(--test-theme-answer-text, #1a1a1a);
 }
+/* "Tap the word" mode: the bank cells become the clickable answer (the
+   separate letter-button row is hidden). */
+.test-word-bank__cell--tappable {
+  appearance: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.test-word-bank__cell[data-selected="true"] {
+  box-shadow: inset 0 0 0 2px var(--test-theme-answer, #0445af);
+  border-color: transparent;
+}
 
 /* ──────────────────────────────────────────────────────────────────────
    Image letters — a labeled image grid (reuses .test-image-grid) over a

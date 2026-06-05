@@ -2,7 +2,7 @@
 
 import type { PictureChoice, PictureChoiceOptions } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
-import { Field, addChoiceBtn, inputStyle, removeBtn } from './_shared';
+import { Field, ToggleRow, addChoiceBtn, inputStyle, removeBtn } from './_shared';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -39,6 +39,19 @@ export function WordBankSettings({ q, onChange, isGraded }: {
   };
 
   return (
+    <>
+    <Field label="Answer mode">
+      <ToggleRow
+        label="Tap the word to answer"
+        checked={!!opts.imagesAsAnswers}
+        onChange={(v) => onChange({ ...q, options: { ...opts, imagesAsAnswers: v } })}
+        hint="hides the letter buttons"
+      />
+      <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 4 }}>
+        When on, the word-bank cells become the clickable answer and the
+        separate A/B/C row below them is hidden.
+      </div>
+    </Field>
     <Field label="Word bank">
       <div style={{ display: 'grid', gap: 8 }}>
         {choices.map((c, i) => (
@@ -75,5 +88,6 @@ export function WordBankSettings({ q, onChange, isGraded }: {
         </div>
       </div>
     </Field>
+    </>
   );
 }
