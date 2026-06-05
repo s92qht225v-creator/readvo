@@ -9,10 +9,17 @@ export function PinyinText({ segments }: { segments: PinyinSegment[] }) {
   return (
     <span className="tq-pinyin" aria-label={segments.map(s => s.c).join('')}>
       {segments.map((s, i) => (
-        <span key={i} className="tq-pinyin__col" aria-hidden="true">
-          <span className="tq-pinyin__py">{s.p || ' '}</span>
-          <span className="tq-pinyin__hz">{s.c}</span>
-        </span>
+        s.c.includes('\n') ? (
+          /* A newline forces the following characters onto a new line
+             (full-width flex break in the wrapping .tq-pinyin row) so
+             multi-line prompts / dialogues keep their line breaks. */
+          <span key={i} className="tq-pinyin__break" aria-hidden="true" />
+        ) : (
+          <span key={i} className="tq-pinyin__col" aria-hidden="true">
+            <span className="tq-pinyin__py">{s.p || ' '}</span>
+            <span className="tq-pinyin__hz">{s.c}</span>
+          </span>
+        )
       ))}
     </span>
   );

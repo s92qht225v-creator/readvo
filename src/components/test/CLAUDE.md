@@ -1363,6 +1363,14 @@ HMR is slower (~1.5s vs <500ms) but stable.
   none); `TestPlayer` (card + scroll) and the builder PreviewCanvas render
   `q.promptPinyin?.length ? <PinyinText> : <MathText>`. (Manual per-choice
   override is still an unbuilt follow-up.)
+- **Multi-line / dialogue prompts**: the prompt textarea preserves `\n`, and
+  the player/builder render line breaks. Plain-text path via
+  `white-space: pre-line` on `.test-player__title` + the builder's
+  `.tb-preview-title`; pinyin path via `PinyinText` rendering a full-width
+  `.tq-pinyin__break` for any segment whose char contains `\n` (the newline
+  survives `annotatePinyin` as its own `{c:'\n',p:''}` segment). Lets authors
+  type speaker-labeled dialogues (女：… / 男：…) on separate lines with pinyin
+  above each line.
 - **`word_bank` question type** (HSK "banked gap-fill" / reading part 4): a
   single-select type that renders **Question (prompt, with pinyin) → Word bank
   (A–F grid of text cells: letter + word + pinyin) → bare letter answer

@@ -143,6 +143,10 @@
   font-size: var(--test-title-size) !important;
   font-weight: 400 !important;
   line-height: 1.12 !important;
+  /* Preserve author line breaks in the prompt (multi-line dialogues), while
+     still collapsing runs of spaces. The pinyin path breaks via
+     .tq-pinyin__break; this covers the plain-text (no pinyin) path. */
+  white-space: pre-line;
 }
 
 .test-player__card .test-player__description {

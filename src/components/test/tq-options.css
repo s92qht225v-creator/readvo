@@ -1612,6 +1612,13 @@
 .tq-pinyin__hz {
   line-height: 1.15;
 }
+/* Forces a line break inside the wrapping .tq-pinyin row (multi-line
+   prompts / dialogues). Full-width flex item, zero height. */
+.tq-pinyin__break {
+  flex-basis: 100%;
+  width: 100%;
+  height: 0;
+}
 
 /* ──────────────────────────────────────────────────────────────────────
    Image options — a labeled image gallery (display-only) stacked over a

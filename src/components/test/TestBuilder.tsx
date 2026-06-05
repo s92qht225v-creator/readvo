@@ -4329,6 +4329,7 @@ function PreviewCanvas({
                     // prompt identically — without this the looser builder text wrapped
                     // to an extra line vs the live player.
                     letterSpacing: -0.6,
+                    whiteSpace: 'pre-line',
                     color: q.prompt ? 'var(--test-theme-question, #1c1626)' : '#cbd5e1',
                   }}>
                     {promptPinyin?.length
