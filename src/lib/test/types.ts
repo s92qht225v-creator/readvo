@@ -106,6 +106,9 @@ export interface PictureChoiceOptions {
   /** Fixed number of answer images per row (1-6). Unset = responsive
    *  default (2 on mobile, 5 on desktop). */
   columns?: number;
+  /** image_letters only: when true, the (letter-overlaid) images ARE the
+   *  clickable answer and the separate letter-button row is hidden. */
+  imagesAsAnswers?: boolean;
   media?: QuestionMedia;
   audioMedia?: QuestionMedia;
   correctIndex: number | null;
@@ -376,6 +379,8 @@ export interface PublicPictureChoiceOptions {
   choices: PublicPictureChoice[];
   allowMultiple?: boolean;
   columns?: number;
+  /** image_letters only — see PictureChoiceOptions.imagesAsAnswers. */
+  imagesAsAnswers?: boolean;
   /** image_options (matching) only: the order (choice ids) in which to
    *  render the description list, shuffled per respondent so it doesn't line
    *  up with the image grid. */

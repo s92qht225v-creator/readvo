@@ -3979,7 +3979,7 @@ function PreviewCanvas({
       description: description || undefined,
       media,
       required: q.required,
-      options: { choices, columns: opts.columns },
+      options: { choices, columns: opts.columns, imagesAsAnswers: !!opts.imagesAsAnswers },
     };
   } else if (q.type === 'true_false') {
     previewQ = {

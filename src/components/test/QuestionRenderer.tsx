@@ -106,11 +106,22 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
       ? Math.min(Math.floor(opts.columns), 6)
       : null;
     const gridStyle = cols ? ({ '--pic-cols': String(cols) } as CSSProperties) : undefined;
+    // When `imagesAsAnswers` is on, the letter-labeled images themselves are
+    // the clickable answer and the separate A/B/C button row is hidden.
+    const tapImage = !!opts.imagesAsAnswers;
     return (
       <div className="test-image-options">
-        <div className="test-image-grid" data-cols={cols ?? undefined} style={gridStyle} role="group" aria-label="Images">
-          {opts.choices.map((c, i) => (
-            <figure key={c.id} className="test-image-grid__cell">
+        <div
+          className="test-image-grid"
+          data-cols={cols ?? undefined}
+          style={gridStyle}
+          role={tapImage ? 'radiogroup' : 'group'}
+          aria-label={tapImage ? question.prompt : 'Images'}
+        >
+          {opts.choices.map((c, i) => {
+            const selected = value.selectedId === c.id || value.selected === i;
+            const letter = LETTERS[i] ?? `${i + 1}`;
+            const inner = (
               <div
                 className={`test-image-grid__img${c.image_url ? ' test-image-grid__img--has-image' : ''}`}
                 style={c.image_url ? { backgroundImage: `url(${c.image_url})` } : undefined}
@@ -120,31 +131,54 @@ export function QuestionRenderer({ question, value, onChange, onSubmit, slug, re
                     <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m21 15-5-5L5 21" />
                   </svg>
                 ) : null}
-                <span className="test-image-grid__label" aria-hidden="true">{LETTERS[i] ?? i + 1}</span>
+                <span className="test-image-grid__label" aria-hidden="true">{letter}</span>
               </div>
-            </figure>
-          ))}
-        </div>
-        <div className="test-letter-options" role="radiogroup" aria-label={question.prompt}>
-          {opts.choices.map((c, i) => {
-            const selected = value.selectedId === c.id || value.selected === i;
-            const letter = LETTERS[i] ?? `${i + 1}`;
+            );
+            if (tapImage) {
+              return (
+                <button
+                  key={c.id}
+                  type="button"
+                  onClick={() => onChange({ selectedId: c.id })}
+                  className="test-image-grid__cell test-image-grid__cell--tappable"
+                  role="radio"
+                  aria-checked={selected}
+                  aria-label={`Option ${letter}`}
+                  data-selected={selected ? 'true' : 'false'}
+                >
+                  {inner}
+                </button>
+              );
+            }
             return (
-              <button
-                key={c.id}
-                type="button"
-                onClick={() => onChange({ selectedId: c.id })}
-                className="test-letter-option"
-                role="radio"
-                aria-checked={selected}
-                aria-label={`Option ${letter}`}
-                data-selected={selected ? 'true' : 'false'}
-              >
-                {letter}
-              </button>
+              <figure key={c.id} className="test-image-grid__cell">
+                {inner}
+              </figure>
             );
           })}
         </div>
+        {tapImage ? null : (
+          <div className="test-letter-options" role="radiogroup" aria-label={question.prompt}>
+            {opts.choices.map((c, i) => {
+              const selected = value.selectedId === c.id || value.selected === i;
+              const letter = LETTERS[i] ?? `${i + 1}`;
+              return (
+                <button
+                  key={c.id}
+                  type="button"
+                  onClick={() => onChange({ selectedId: c.id })}
+                  className="test-letter-option"
+                  role="radio"
+                  aria-checked={selected}
+                  aria-label={`Option ${letter}`}
+                  data-selected={selected ? 'true' : 'false'}
+                >
+                  {letter}
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
     );
   }

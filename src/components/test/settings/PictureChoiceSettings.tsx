@@ -5,7 +5,7 @@ import type { PictureChoice, PictureChoiceOptions } from '@/lib/test/types';
 import type { BuilderQuestion } from '../builderTypes';
 import { MediaGalleryModal } from '../media/MediaGalleryModal';
 import {
-  Field, addChoiceBtn, inputStyle, removeBtn,
+  Field, ToggleRow, addChoiceBtn, inputStyle, removeBtn,
 } from './_shared';
 
 export function PictureChoiceSettings({ q, onChange, isGraded }: {
@@ -60,8 +60,24 @@ export function PictureChoiceSettings({ q, onChange, isGraded }: {
     onChange({ ...q, options: { ...opts, columns } });
   };
 
+  const isImageLetters = q.type === 'image_letters';
+
   return (
     <>
+    {isImageLetters ? (
+      <Field label="Answer mode">
+        <ToggleRow
+          label="Tap the image to answer"
+          checked={!!opts.imagesAsAnswers}
+          onChange={(v) => onChange({ ...q, options: { ...opts, imagesAsAnswers: v } })}
+          hint="hides the letter buttons"
+        />
+        <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 4 }}>
+          When on, the letter-labeled images become the clickable answer and the
+          separate A/B/C row below them is hidden.
+        </div>
+      </Field>
+    ) : null}
     <Field label="Images per row">
       <input
         type="number"

@@ -388,6 +388,7 @@ function sanitizeQuestionBase(q: TestQuestion, seed?: string): PublicQuestion {
         choices: opts.randomize ? stableShuffle(choices, choiceSeed) : choices,
         allowMultiple: !!opts.allowMultiple,
         columns: opts.columns,
+        imagesAsAnswers: q.type === 'image_letters' ? !!opts.imagesAsAnswers : undefined,
       },
     };
   }
