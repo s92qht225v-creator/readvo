@@ -904,18 +904,7 @@ export function TestBuilder({ testId }: Props) {
             }}
           />
         </div>
-        <label style={pinyinToggleRow} title="Auto-show pinyin above Chinese characters in answer choices (desktop + mobile). For HSK / Chinese tests.">
-          <input
-            type="checkbox"
-            checked={!!test.show_pinyin}
-            onChange={(e) => {
-              const next = e.target.checked;
-              setTest({ ...test, show_pinyin: next });
-              void updateTest({ show_pinyin: next });
-            }}
-          />
-          <span>拼 Show pinyin on answers</span>
-        </label>
+        {/* "Show pinyin" moved to the top toolbar (the 拼 Pinyin button). */}
         {/* Sections now render as collapsible FOLDERS inline in the list
             below (Stage 1), replacing the old top SectionsPanel. */}
         <ul className="tb-left" style={{ listStyle: 'none', padding: '8px 8px 0', margin: 0, flex: 1, overflow: 'auto' }}>
@@ -1206,6 +1195,21 @@ export function TestBuilder({ testId }: Props) {
             >
               <HeadphonesIcon />
               Listening
+            </button>
+            <button
+              type="button"
+              className="tb-toolbar__preview-btn"
+              onClick={() => {
+                const next = !test.show_pinyin;
+                setTest({ ...test, show_pinyin: next });
+                void updateTest({ show_pinyin: next });
+              }}
+              title="Show pinyin above Chinese in answers"
+              aria-pressed={!!test.show_pinyin}
+              style={test.show_pinyin ? { ...timerToolbarButton, ...toolbarTimerActive } : timerToolbarButton}
+            >
+              <span aria-hidden="true" style={{ fontSize: 14, fontWeight: 700, lineHeight: 1 }}>拼</span>
+              Pinyin
             </button>
             <button
               type="button"
@@ -5432,18 +5436,6 @@ const rightPane: React.CSSProperties = {
   background: '#fff', borderLeft: '1px solid #ded8d1',
   display: 'flex', flexDirection: 'column',
   minHeight: 0, overflow: 'auto',
-};
-
-const pinyinToggleRow: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 8,
-  margin: '-4px 12px 12px',
-  padding: '0 2px',
-  fontSize: 13,
-  color: '#475569',
-  cursor: 'pointer',
-  userSelect: 'none',
 };
 
 const leftModeWrap: React.CSSProperties = {
