@@ -10,6 +10,15 @@ import { getLessonsWithInfo } from '@/services/content';
 import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, WRITING_SETS_HSK5, WRITING_SETS_HSK6 } from '@/services/writing';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
+/** Toneless, space-joined pinyin for a writing set's words — powers the
+ *  writing-tab search by pinyin typed without tone marks. NFD decomposes the
+ *  tone diacritic AND ü's diaeresis into combining marks, which get stripped
+ *  (wǒ→wo, nǚ→nu). */
+const tonelessPinyin = (words: { pinyin: string }[] = []): string =>
+  words
+    .map((w) => (w.pinyin || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
+    .join(' ');
+
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
     title: 'Xitoy tili darslari — HSK 1-6 dialoglar, fleshkartalar, karaoke',
@@ -126,22 +135,22 @@ export default async function ChinesePage({ params }: { params: Promise<{ locale
           writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
             const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
             const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
           })}
-          writingSetsHsk2={WRITING_SETS_HSK2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+          writingSetsHsk2={WRITING_SETS_HSK2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
           writingSetsHsk2L2={WRITING_SETS_HSK2_L2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
             const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
             const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
           })}
           writingSetsHsk3={WRITING_SETS_HSK3.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
             const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
             const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
+            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
           })}
-          writingSetsHsk4={WRITING_SETS_HSK4.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
-          writingSetsHsk5={WRITING_SETS_HSK5.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
-          writingSetsHsk6={WRITING_SETS_HSK6.map(({ id, title, title_ru, subtitle, subtitle_ru, chars }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars }))}
+          writingSetsHsk4={WRITING_SETS_HSK4.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
+          writingSetsHsk5={WRITING_SETS_HSK5.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
+          writingSetsHsk6={WRITING_SETS_HSK6.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
         />
       </Suspense>
     </>

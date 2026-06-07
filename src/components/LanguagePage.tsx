@@ -297,6 +297,10 @@ interface WritingSetMeta {
   subtitle: string;
   subtitle_ru: string;
   chars: string;
+  /** Toneless pinyin of every word in the set, space-joined (e.g.
+   *  "de wo ni shi le bu zai ta women hao"). Lets the search box match
+   *  pinyin typed without tone marks. */
+  pinyin?: string;
   wordCount?: number;
   sampleChar?: string;
   sampleUz?: string;
@@ -668,12 +672,17 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
         {activeTab === 'writing' && (() => {
           const activeSets = hskVersion === '3.0' ? writingSets : writingHskLevel === '6' ? writingSetsHsk6 : writingHskLevel === '5' ? writingSetsHsk5 : writingHskLevel === '4' ? writingSetsHsk4 : writingHskLevel === '3' ? writingSetsHsk3 : writingHskLevel === '2' ? writingSetsHsk2L2 : writingSetsHsk2;
           const wq = writingSearch.trim().toLowerCase();
+          // Toneless form so typing pinyin without tone marks still matches
+          // (NFD decomposes the tone diacritic AND ü's diaeresis into
+          // combining marks, which we strip — wǒ→wo, nǚ→nu).
+          const wqToneless = wq.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
           const filteredSets = wq
             ? activeSets.filter((s) =>
                 s.title.toLowerCase().includes(wq) ||
                 s.title_ru.toLowerCase().includes(wq) ||
                 s.chars.includes(wq) ||
-                s.subtitle.toLowerCase().includes(wq)
+                s.subtitle.toLowerCase().includes(wq) ||
+                (!!s.pinyin && s.pinyin.includes(wqToneless))
               )
             : activeSets;
           return (
