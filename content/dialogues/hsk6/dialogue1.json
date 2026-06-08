@@ -1,0 +1,76 @@
+{
+  "id": "hsk6-dialogue1",
+  "slug": "talking-about-weather",
+  "title": "谈天气",
+  "pinyin": "Tán tiānqì",
+  "titleTranslation": "Ob-havo haqida suhbat",
+  "titleTranslation_ru": "Разговор о погоде",
+  "titleTranslation_en": "Talking About the Weather",
+  "level": 6,
+  "tag": "ob-havo",
+  "dateAdded": "2026-06-08",
+  "sections": [
+    {
+      "id": "d1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d1-s1",
+          "text_original": "最近这段时间天气总是阴晴不定，你有没有注意到？",
+          "pinyin": "Zuì jìn zhè duàn shí jiān tiān qì zǒng shì yīn qíng bú dìng, nǐ yǒu méi yǒu zhù yì dào?",
+          "text_translation": "So'nggi paytlarda ob-havo doim o'zgaruvchan — goh bulutli, goh ochiq. Sezdingmi?",
+          "text_translation_ru": "В последнее время погода всё время переменчивая — то пасмурно, то ясно. Ты заметил?",
+          "text_translation_en": "Lately the weather keeps changing between cloudy and clear — have you noticed?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s2",
+          "text_original": "当然注意到了。前几天还阳光明媚，这两天却一直阴沉沉的。",
+          "pinyin": "Dāng rán zhù yì dào le. Qián jǐ tiān hái yáng guāng míng mèi, zhè liǎng tiān què yì zhí yīn chén chén de.",
+          "text_translation": "Albatta sezdim. Bir necha kun oldin quyoshli va yorug' edi, bu kunlari esa doim tund (xira) bo'lyapti.",
+          "text_translation_ru": "Конечно заметил. Несколько дней назад было солнечно и ясно, а эти пару дней всё время пасмурно.",
+          "text_translation_en": "Of course I have. A few days ago it was bright and sunny, but these last couple of days it's been gloomy the whole time.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "这种天气其实挺影响人的心情的，有时候连工作效率都会下降。",
+          "pinyin": "Zhè zhǒng tiān qì qí shí tǐng yǐng xiǎng rén de xīn qíng de, yǒu shí hòu lián gōng zuò xiào lǜ dōu huì xià jiàng.",
+          "text_translation": "Bunday ob-havo aslida odamning kayfiyatiga ancha ta'sir qiladi — ba'zan hatto ish unumdorligi ham pasayadi.",
+          "text_translation_ru": "Такая погода на самом деле заметно влияет на настроение — иногда даже производительность падает.",
+          "text_translation_en": "This kind of weather really affects people's mood — sometimes even work efficiency drops.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "我也有同感。尤其是连续下雨的时候，总觉得整个人都没什么精神。",
+          "pinyin": "Wǒ yě yǒu tóng gǎn. Yóu qí shì lián xù xià yǔ de shí hòu, zǒng jué de zhěng gè rén dōu méi shén me jīng shén.",
+          "text_translation": "Men ham shunday his qilaman. Ayniqsa yomg'ir ketma-ket yog'ganda, o'zimni butunlay holsiz his qilaman.",
+          "text_translation_ru": "Я тоже так чувствую. Особенно когда дождь идёт несколько дней подряд, всегда чувствую себя совсем вялым.",
+          "text_translation_en": "I feel the same. Especially when it rains for days on end, I always feel completely listless.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s5",
+          "text_original": "不过也有人说，偶尔这样的天气反而能让人慢下来，好好休息一下。",
+          "pinyin": "Bú guò yě yǒu rén shuō, ǒu ěr zhè yàng de tiān qì fǎn ér néng ràng rén màn xià lái, hǎo hǎo xiū xi yí xià.",
+          "text_translation": "Lekin ba'zilar aytadiki, goho bunday ob-havo aksincha odamni sekinlashtirib, yaxshigina dam olishga imkon beradi.",
+          "text_translation_ru": "Но некоторые говорят, что иногда такая погода, наоборот, позволяет замедлиться и хорошо отдохнуть.",
+          "text_translation_en": "But some people say that occasionally this kind of weather actually lets you slow down and get some good rest.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s6",
+          "text_original": "说得也有道理，也许换个角度看，坏天气也未必完全是坏事。",
+          "pinyin": "Shuō de yě yǒu dào lǐ, yě xǔ huàn gè jiǎo dù kàn, huài tiān qì yě wèi bì wán quán shì huài shì.",
+          "text_translation": "Bunda ham mantiq bor. Balki boshqa nuqtai nazardan qarasak, yomon ob-havo ham har doim ham butunlay yomon narsa emas.",
+          "text_translation_ru": "В этом тоже есть смысл. Может, если взглянуть с другой стороны, плохая погода — не обязательно совсем плохо.",
+          "text_translation_en": "That makes sense too. Maybe, looked at from another angle, bad weather isn't necessarily entirely a bad thing.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

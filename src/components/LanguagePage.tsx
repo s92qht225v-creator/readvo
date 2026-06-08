@@ -311,6 +311,7 @@ interface WritingSetMeta {
 interface Props {
   dialogues: DialogueInfo[];
   dialoguesHsk2?: DialogueInfo[];
+  dialoguesHsk6?: DialogueInfo[];
   flashcardLessons?: FlashcardLesson[];
   writingSets?: WritingSetMeta[];
   writingSetsHsk2?: WritingSetMeta[];
@@ -321,7 +322,7 @@ interface Props {
   writingSetsHsk6?: WritingSetMeta[];
 }
 
-export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
+export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk6 = [], flashcardLessons = [], writingSets = [], writingSetsHsk2 = [], writingSetsHsk2L2 = [], writingSetsHsk3 = [], writingSetsHsk4 = [], writingSetsHsk5 = [], writingSetsHsk6 = [] }: Props) {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const { getStars: getGrammarStars } = useStars('grammar');
@@ -338,8 +339,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
-  const initialDialogueHsk = searchParams.get('dialhsk') === '2' ? '2' : '1';
-  const [dialogueHskLevel, setDialogueHskLevel] = useState<'1' | '2'>(initialDialogueHsk as '1' | '2');
+  const initialDialogueHsk = searchParams.get('dialhsk') === '6' ? '6' : searchParams.get('dialhsk') === '2' ? '2' : '1';
+  const [dialogueHskLevel, setDialogueHskLevel] = useState<'1' | '2' | '6'>(initialDialogueHsk as '1' | '2' | '6');
   const [bookmarks, setBookmarks] = useState<Set<string>>(() => {
     try {
       const saved = typeof window !== 'undefined' ? localStorage.getItem(BOOKMARK_KEY) : null;
@@ -401,7 +402,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
     });
   }, []);
 
-  const activeDialogues = dialogueHskLevel === '2' ? dialoguesHsk2 : dialogues;
+  const activeDialogues = dialogueHskLevel === '6' ? dialoguesHsk6 : dialogueHskLevel === '2' ? dialoguesHsk2 : dialogues;
 
   const availableTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -513,13 +514,13 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
         <div className={`lp__seg-bar${activeTab === 'flashcards' ? ' lp__seg-bar--col' : ''}`}>
           <div className={`lp__hsk-pills${(activeTab === 'writing' || activeTab === 'dialogues' || activeTab === 'grammar' || activeTab === 'flashcards') ? ' lp__hsk-pills--grid' : ''}`}>
             {(['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5', 'HSK 6'] as const).map((lv) => {
-              const hasContent = lv === 'HSK 1' || (activeTab === 'flashcards' && flashcardSubTab === 'lessons' && (lv === 'HSK 2' || lv === 'HSK 3')) || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6')) || (activeTab === 'dialogues' && lv === 'HSK 2' && dialoguesHsk2.length > 0);
+              const hasContent = lv === 'HSK 1' || (activeTab === 'flashcards' && flashcardSubTab === 'lessons' && (lv === 'HSK 2' || lv === 'HSK 3')) || (activeTab === 'writing' && hskVersion === '2.0' && (lv === 'HSK 2' || lv === 'HSK 3' || lv === 'HSK 4' || lv === 'HSK 5' || lv === 'HSK 6')) || (activeTab === 'dialogues' && lv === 'HSK 2' && dialoguesHsk2.length > 0) || (activeTab === 'dialogues' && lv === 'HSK 6' && dialoguesHsk6.length > 0);
               const isActive = activeTab === 'flashcards'
                 ? (flashcardSubTab === 'lessons' && ((lv === 'HSK 1' && flashcardHskLevel === '1') || (lv === 'HSK 2' && flashcardHskLevel === '2') || (lv === 'HSK 3' && flashcardHskLevel === '3')))
                 : activeTab === 'writing' && hskVersion === '2.0'
                   ? (lv === 'HSK 1' && writingHskLevel === '1') || (lv === 'HSK 2' && writingHskLevel === '2') || (lv === 'HSK 3' && writingHskLevel === '3') || (lv === 'HSK 4' && writingHskLevel === '4') || (lv === 'HSK 5' && writingHskLevel === '5') || (lv === 'HSK 6' && writingHskLevel === '6')
                   : activeTab === 'dialogues'
-                    ? (lv === 'HSK 1' && dialogueHskLevel === '1') || (lv === 'HSK 2' && dialogueHskLevel === '2')
+                    ? (lv === 'HSK 1' && dialogueHskLevel === '1') || (lv === 'HSK 2' && dialogueHskLevel === '2') || (lv === 'HSK 6' && dialogueHskLevel === '6')
                     : hasContent;
               return (
                 <button
@@ -536,7 +537,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], flashcardLessons =
                         setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1');
                       }
                       if (activeTab === 'dialogues') {
-                        setDialogueHskLevel(lv === 'HSK 2' ? '2' : '1');
+                        setDialogueHskLevel(lv === 'HSK 6' ? '6' : lv === 'HSK 2' ? '2' : '1');
                         setActiveTag(null);
                         setShowBookmarked(false);
                       }

@@ -31,9 +31,10 @@ function localeEntries(urlPath: string, opts: { changeFrequency: MetadataRoute.S
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [dialogues, dialoguesHsk2, songs, flashcardDeck, blogPosts] = await Promise.all([
+  const [dialogues, dialoguesHsk2, dialoguesHsk6, songs, flashcardDeck, blogPosts] = await Promise.all([
     loadDialoguesForBook('hsk1'),
     loadDialoguesForBook('hsk2'),
+    loadDialoguesForBook('hsk6'),
     loadKaraokeSongs(),
     loadFlashcardDeck('hsk1'),
     loadBlogPosts(),
@@ -59,6 +60,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const d of dialoguesHsk2) {
     entries.push(...localeEntries(`/chinese/hsk2/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
+  }
+  for (const d of dialoguesHsk6) {
+    entries.push(...localeEntries(`/chinese/hsk6/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
   }
 
   // Karaoke pages
