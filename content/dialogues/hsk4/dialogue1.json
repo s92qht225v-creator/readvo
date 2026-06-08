@@ -1,0 +1,76 @@
+{
+  "id": "hsk4-dialogue1",
+  "slug": "weather-changes",
+  "title": "天气变化",
+  "pinyin": "Tiānqì biànhuà",
+  "titleTranslation": "Ob-havo o'zgarishi",
+  "titleTranslation_ru": "Изменение погоды",
+  "titleTranslation_en": "Changes in the Weather",
+  "level": 4,
+  "tag": "ob-havo",
+  "dateAdded": "2026-06-08",
+  "sections": [
+    {
+      "id": "d1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d1-s1",
+          "text_original": "最近天气变化挺大的。",
+          "pinyin": "Zuì jìn tiān qì biàn huà tǐng dà de.",
+          "text_translation": "So'nggi paytlarda ob-havo ancha o'zgaryapti.",
+          "text_translation_ru": "В последнее время погода сильно меняется.",
+          "text_translation_en": "The weather has been changing a lot lately.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s2",
+          "text_original": "是啊，昨天还很热，今天就突然变冷了。",
+          "pinyin": "Shì a, zuó tiān hái hěn rè, jīn tiān jiù tū rán biàn lěng le.",
+          "text_translation": "Ha, kecha hali issiq edi, bugun esa to'satdan sovib ketdi.",
+          "text_translation_ru": "Да, вчера ещё было жарко, а сегодня вдруг похолодало.",
+          "text_translation_en": "Yeah, yesterday it was still hot, and today it suddenly turned cold.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "我早上出门的时候都不知道该穿什么。",
+          "pinyin": "Wǒ zǎo shàng chū mén de shí hòu dōu bù zhī dào gāi chuān shén me.",
+          "text_translation": "Ertalab uydan chiqayotganimda nima kiyishni ham bilmadim.",
+          "text_translation_ru": "Когда я выходил утром, даже не знал, что надеть.",
+          "text_translation_en": "When I went out this morning I didn't even know what to wear.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "我也是，所以带了一件外套。",
+          "pinyin": "Wǒ yě shì, suǒ yǐ dài le yí jiàn wài tào.",
+          "text_translation": "Men ham, shuning uchun bitta kurtka olib chiqdim.",
+          "text_translation_ru": "Я тоже, поэтому взял куртку.",
+          "text_translation_en": "Me too, so I brought a jacket.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s5",
+          "text_original": "听说明天还会下雨。",
+          "pinyin": "Tīng shuō míng tiān hái huì xià yǔ.",
+          "text_translation": "Eshitishimcha, ertaga yana yomg'ir yog'armish.",
+          "text_translation_ru": "Говорят, завтра ещё и дождь будет.",
+          "text_translation_en": "I heard it's going to rain tomorrow too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s6",
+          "text_original": "那我们周末的计划可能要改一下了。",
+          "pinyin": "Nà wǒ men zhōu mò de jì huà kě néng yào gǎi yí xià le.",
+          "text_translation": "Unda dam olish kunidagi rejalarimizni biroz o'zgartirishimizga to'g'ri kelar.",
+          "text_translation_ru": "Тогда, возможно, придётся изменить наши планы на выходные.",
+          "text_translation_en": "Then we might have to change our weekend plans.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

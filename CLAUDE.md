@@ -35,6 +35,7 @@ All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect 
 /{locale}/chinese/hsk1/dialogues            # Dialogues list page
 /{locale}/chinese/hsk1/dialogues/[dialogueId] # Dialogue reader page (uses StoryReader)
 /{locale}/chinese/hsk2/dialogues/[dialogueId] # HSK 2 dialogue reader (MiMo TTS audio fallback)
+/{locale}/chinese/hsk4/dialogues/[dialogueId] # HSK 4 dialogue reader (MiMo TTS audio fallback)
 /{locale}/chinese/hsk6/dialogues/[dialogueId] # HSK 6 dialogue reader (MiMo TTS audio fallback)
 /{locale}/chinese/hsk1/karaoke/[songId]     # Karaoke player page
 /{locale}/chinese/hsk1/writing/[setId]      # Writing practice page (per character set)
