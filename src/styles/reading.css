@@ -1009,6 +1009,144 @@ body {
   margin-bottom: 8px;
 }
 
+/* ── Dictation tab ─────────────────────────────────────────────────────── */
+.dr-dict {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 4px 24px;
+}
+.dr-dict--center {
+  min-height: 42vh;
+  justify-content: center;
+  text-align: center;
+}
+.dr-dict__ear { font-size: 44px; }
+.dr-dict__heading { font-size: 22px; font-weight: 800; color: #1a1a1a; margin: 0; }
+.dr-dict__intro { font-size: 14px; color: #777; margin: 0; max-width: 320px; line-height: 1.5; }
+.dr-dict__score { font-size: 40px; font-weight: 800; color: #dc2626; margin: 0; }
+
+.dr-dict__btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 48px;
+}
+.dr-dict__btn--primary {
+  background: linear-gradient(180deg, #dc2626, #b91c1c);
+  color: #fff;
+}
+
+.dr-dict__progress { font-size: 13px; color: #aaa; font-weight: 600; }
+
+.dr-dict__audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 48px;
+}
+.dr-dict__spinner {
+  width: 18px; height: 18px;
+  border: 2px solid #bfdbfe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* answer slots */
+.dr-dict__answer {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 2px dashed #d8d2cb;
+  border-radius: 12px;
+  background: #fafafa;
+}
+.dr-dict__answer--wrong { border-color: #ef4444; border-style: solid; background: #fef2f2; }
+.dr-dict__answer--correct,
+.dr-dict__answer--revealed { border-color: #16a34a; border-style: solid; background: #f0fdf4; }
+.dr-dict__answer-hint { color: #bbb; font-size: 14px; }
+
+/* tray */
+.dr-dict__tray {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.dr-dict__tile {
+  min-width: 46px;
+  height: 50px;
+  padding: 0 8px;
+  border: 1px solid #e2ddd6;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  font-size: 24px;
+  line-height: 1;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.dr-dict__tile--placed {
+  border-color: #dc2626;
+  background: #fff;
+}
+.dr-dict__tile:disabled { cursor: default; opacity: 0.9; }
+
+.dr-dict__feedback { font-size: 14px; font-weight: 600; text-align: center; }
+.dr-dict__feedback--wrong { color: #dc2626; }
+
+.dr-dict__link {
+  border: none;
+  background: none;
+  color: #999;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.dr-dict__reveal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.dr-dict__reveal-badge { font-size: 14px; font-weight: 800; }
+.dr-dict__reveal-badge--correct { color: #16a34a; }
+.dr-dict__reveal-badge--revealed { color: #999; }
+.dr-dict__reveal-zh { font-size: 22px; color: #1a1a1a; }
+.dr-dict__reveal-py { font-size: 14px; color: #2563eb; font-style: italic; }
+.dr-dict__reveal-tr { font-size: 14px; color: #777; margin-bottom: 6px; }
+
 /* ── DR shared card ── */
 .dr-card {
   background: #fff;

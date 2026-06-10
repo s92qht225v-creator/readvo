@@ -18,6 +18,7 @@ import { CoachMarkTour, dismissTip } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import { DialogueRolePlay } from './DialogueRolePlay';
 import type { DialogueLine } from './DialogueRolePlay';
+import { DialogueDictation, type DictationLine } from './DialogueDictation';
 import { useStars } from '../hooks/useStars';
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -124,7 +125,7 @@ interface DialogueReaderProps {
 const TABS = [
   { id: 'dialog', uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' },
   { id: 'vocab', uz: 'So\'zlar', ru: 'Слова', en: 'Words' },
-  { id: 'grammar', uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' },
+  { id: 'dictation', uz: 'Diktant', ru: 'Диктант', en: 'Dictation' },
   { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
@@ -159,9 +160,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
 
   // So'zlar tab state
   const [expandedVocab, setExpandedVocab] = useState<number | null>(null);
-
-  // Grammatika tab state
-  const [expandedGrammar, setExpandedGrammar] = useState<number | null>(null);
 
   const allSentences = useMemo(() => dialogue.sections.flatMap(s => s.sentences), [dialogue.sections]);
 
@@ -359,7 +357,22 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
     return words;
   }, [dialogue.vocab, allSentences]);
 
-  const grammarNotes = dialogue.grammarNotes ?? [];
+  // Dictation lines: one per sentence with ≥2 Han characters (worth scrambling).
+  const dictationLines: DictationLine[] = useMemo(() => {
+    const trOf = (s: typeof allSentences[number]) =>
+      language === 'ru' ? s.text_translation_ru
+      : language === 'en' ? (s.text_translation_en || s.text_translation)
+      : s.text_translation;
+    return allSentences
+      .filter(s => (s.text_original.match(/[㐀-鿿]/g)?.length ?? 0) >= 2)
+      .map(s => ({
+        id: s.id,
+        zh: s.text_original,
+        pinyin: s.pinyin,
+        translation: trOf(s),
+        audioUrl: s.audio_url ?? ttsUrls[s.id],
+      }));
+  }, [allSentences, language, ttsUrls]);
 
   // Extract DialogueLine[] for role-play practice. Merge consecutive
   // sentences from the same speaker so one A or B turn becomes one chat
@@ -643,52 +656,9 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
         )}
 
         {/* ── GRAMMATIKA TAB ── */}
-        {activeTab === 'grammar' && (
+        {activeTab === 'dictation' && (
           <div className="dr-panel">
-            {grammarNotes.length === 0 ? (
-              <div className="dr-empty">
-                <div className="dr-empty__icon">🚧</div>
-                <div>{({ uz: 'Tez kunda', ru: 'Скоро будет', en: 'Coming soon' } as Record<string, string>)[language]}</div>
-              </div>
-            ) : (
-              <>
-                {grammarNotes.map((g, i) => (
-                  <div key={i} className="dr-card dr-grammar-card" onClick={() => setExpandedGrammar(expandedGrammar === i ? null : i)}>
-                    <div className="dr-grammar-header">
-                      <span className="dr-grammar-pattern">{g.pattern}</span>
-                      <span className="dr-grammar-title">{language === 'ru' ? g.title_ru : language === 'en' ? (g.title_en || g.title_uz) : g.title_uz}</span>
-                      <ChevronDownIcon className={`dr-grammar-arrow${expandedGrammar === i ? ' dr-grammar-arrow--open' : ''}`} />
-                    </div>
-                    <div className="dr-grammar-desc">{language === 'ru' ? g.desc_ru : language === 'en' ? (g.desc_en || g.desc_uz) : g.desc_uz}</div>
-                    {expandedGrammar === i && (
-                      <div className="dr-grammar-expanded">
-                        {(g.formula || g.formula_ru) && (
-                          <div className="dr-grammar-formula">{language === 'ru' ? (g.formula_ru ?? g.formula) : language === 'en' ? (g.formula_en ?? g.formula) : g.formula}</div>
-                        )}
-                        {g.examples && g.examples.map((ex, ei) => (
-                          <div key={ei} className="dr-grammar-example">
-                            <div className="dr-vocab-example-zh">{ex.zh}</div>
-                            <div className="dr-vocab-example-py">{ex.py}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? ex.ru : language === 'en' ? (ex.en || ex.uz) : ex.uz}</div>
-                          </div>
-                        ))}
-                        {!g.examples && g.ex && (
-                          <div className="dr-grammar-example">
-                            <div className="dr-vocab-example-zh">{g.ex}</div>
-                            <div className="dr-vocab-example-py">{g.expy}</div>
-                            <div className="dr-vocab-example-tr">{language === 'ru' ? g.ex_ru : language === 'en' ? (g.ex_en || g.ex_uz) : g.ex_uz}</div>
-                          </div>
-                        )}
-                        {(g.tip_uz || g.tip_ru) && (
-                          <div className="dr-grammar-tip">💡 {language === 'ru' ? g.tip_ru : language === 'en' ? (g.tip_en || g.tip_uz) : g.tip_uz}</div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ))}
-                <div className="dr-hint">{({ uz: 'Bosing — formula va misollar ko\'rinadi', ru: 'Нажмите — увидите формулу и примеры', en: 'Tap to see formula and examples' } as Record<string, string>)[language]}</div>
-              </>
-            )}
+            <DialogueDictation lines={dictationLines} language={language} />
           </div>
         )}
 

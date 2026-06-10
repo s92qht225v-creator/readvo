@@ -52,6 +52,8 @@
 - **Focus mode**: Shows speaker label above the sentence text (`.story__focus-speaker`)
 - **Stories are unaffected** — the dialogue layout only activates when sentences have `speaker` fields
 - Data loaded from `content/dialogues/{bookId}/dialogue{N}.json` via `src/services/dialogues.ts`
+- **Tabs**: Dialog · Words (`So'zlar`) · **Dictation** (`Diktant`) · Practice (`Mashq`). The Grammar tab was **replaced by Dictation** (grammar lives in its own top-level Grammar section on the language page).
+- **Dictation tab** (`DialogueDictation.tsx`, sibling of `DialogueRolePlay`): a listening exercise — Start → hears a line (text hidden, audio via the dialogue's `audioUrl`/`resolveTtsUrl`) → rebuilds it by tapping its **Han CHARACTERS** into order (punctuation excluded) → auto-checks when full (green = correct, red = wrong/retry) → reveals the line (zh + pinyin + translation) → Next → score (`first-try correct / total`). One item per sentence with ≥2 Han chars. **Bespoke, self-contained — does NOT use the test engine**; only borrows the scramble *tile pattern*, styled with `.dr-dict*` in reading.css. No setState-in-effect (line-init in Start/Next/Restart handlers; the full-tile check runs inside the tap handler).
 - **DialoguesPage** (`src/components/DialoguesPage.tsx`): List page with HSK level tabs, same pattern as StoriesPage
 - **TTS audio fallback** (dialogues with no recorded `audio_url`, e.g. HSK 2): `resolveTtsUrl` (`utils/ttsAudio.ts`) → MiMo `/api/tts`. DialogueReader prefetches on mount (warms cache so a tap stays in the user gesture for iOS), `playSentence()` uses `audio_url` else TTS, and a sequential "play all" FAB (`handlePlayAll`/`playSeqFrom`) walks sentences when there's no single recording. HSK 1 (has recordings) makes zero TTS calls.
 
