@@ -1,6 +1,9 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { DndContext, closestCenter, PointerSensor, useSensor, useSensors, type DragEndEvent } from '@dnd-kit/core';
+import { SortableContext, useSortable, arrayMove, rectSortingStrategy } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 import type { Language } from '../types/ui-state';
 import { shuffleArray } from '@/utils/shuffle';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
@@ -74,31 +77,54 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
 
   const start = () => { setPhase('play'); setIdx(0); enterLine(0); };
 
+  // Drag-to-reorder within the answer box. PointerSensor with a small
+  // activation distance keeps tap-to-remove working (a tap < 6px is a click,
+  // not a drag). `draggedRef` suppresses the click that some browsers fire
+  // right after a drag, so reordering never accidentally removes a tile.
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 6 } }));
+  const draggedRef = useRef(false);
+
+  // Score a candidate answer order: green when complete + correct, red when
+  // complete + wrong, idle while still incomplete.
+  const evaluate = (arr: number[]) => {
+    if (arr.length !== chars.length) { setStatus('idle'); return; }
+    const answer = arr.map(i => chars[i]).join('');
+    if (answer === target) {
+      setStatus('correct');
+      setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
+    } else {
+      setStatus('wrong');
+      setMistakes(m => m + 1);
+    }
+  };
+
   const tapTray = (tileId: number) => {
     if (status === 'correct' || status === 'revealed') return;
     const nextPlaced = [...placed, tileId];
     setPlaced(nextPlaced);
     setTray(t => t.filter(x => x !== tileId));
-    // Check as soon as every tile is placed (no effect needed).
-    if (nextPlaced.length === chars.length) {
-      const answer = nextPlaced.map(i => chars[i]).join('');
-      if (answer === target) {
-        setStatus('correct');
-        setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
-      } else {
-        setStatus('wrong');
-        setMistakes(m => m + 1);
-      }
-    } else {
-      setStatus('idle');
-    }
+    evaluate(nextPlaced);
   };
   const tapPlaced = (pos: number) => {
+    if (draggedRef.current) return; // ignore the click that follows a drag
     if (status === 'correct' || status === 'revealed') return;
     const tileId = placed[pos];
     setStatus('idle');
     setPlaced(p => p.filter((_, i) => i !== pos));
     setTray(t => [...t, tileId]);
+  };
+
+  const onDragStart = () => { draggedRef.current = true; };
+  const onDragEnd = (e: DragEndEvent) => {
+    setTimeout(() => { draggedRef.current = false; }, 0);
+    const { active, over } = e;
+    if (!over || active.id === over.id) return;
+    const from = placed.indexOf(active.id as number);
+    const to = placed.indexOf(over.id as number);
+    if (from < 0 || to < 0) return;
+    const nextPlaced = arrayMove(placed, from, to);
+    setPlaced(nextPlaced);
+    evaluate(nextPlaced); // re-check: a reorder can complete or fix the answer
   };
 
   const reveal = () => {
@@ -183,22 +209,24 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
         <span>{T(language, 'Eshitish', 'Слушать', 'Listen')}</span>
       </button>
 
-      {/* Answer slots */}
-      <div className={`dr-dict__answer dr-dict__answer--${status}`}>
-        {placed.length === 0 ? (
-          <span className="dr-dict__answer-hint">{T(language, 'Tartiblang', 'Расставьте', 'Arrange')}</span>
-        ) : placed.map((tileId, pos) => (
-          <button
-            key={pos}
-            type="button"
-            className="dr-dict__tile dr-dict__tile--placed"
-            onClick={() => tapPlaced(pos)}
-            disabled={done}
-          >
-            {chars[tileId]}
-          </button>
-        ))}
-      </div>
+      {/* Answer slots — drag a placed tile to reorder, tap it to remove */}
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={onDragStart} onDragEnd={onDragEnd}>
+        <SortableContext items={placed} strategy={rectSortingStrategy}>
+          <div className={`dr-dict__answer dr-dict__answer--${status}`}>
+            {placed.length === 0 ? (
+              <span className="dr-dict__answer-hint">{T(language, 'Tartiblang', 'Расставьте', 'Arrange')}</span>
+            ) : placed.map((tileId, pos) => (
+              <SortablePlacedTile
+                key={tileId}
+                id={tileId}
+                char={chars[tileId]}
+                onTap={() => tapPlaced(pos)}
+                disabled={done}
+              />
+            ))}
+          </div>
+        </SortableContext>
+      </DndContext>
 
       {/* Tray */}
       {!done && (
@@ -243,5 +271,34 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
         </div>
       )}
     </div>
+  );
+}
+
+/** A placed answer tile: draggable to reorder (dnd-kit sortable), tappable to
+ *  remove. `disabled` (after the line is solved) freezes both. */
+function SortablePlacedTile({ id, char, onTap, disabled }: {
+  id: number; char: string; onTap: () => void; disabled: boolean;
+}) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id, disabled });
+  const style: CSSProperties = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : 1,
+    zIndex: isDragging ? 2 : undefined,
+    touchAction: 'none',
+  };
+  return (
+    <button
+      ref={setNodeRef}
+      type="button"
+      style={style}
+      className="dr-dict__tile dr-dict__tile--placed"
+      onClick={onTap}
+      disabled={disabled}
+      {...attributes}
+      {...listeners}
+    >
+      {char}
+    </button>
   );
 }
