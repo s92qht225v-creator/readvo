@@ -2,7 +2,6 @@
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { Link } from '@/i18n/navigation';
-import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { useLanguage } from '../hooks/useLanguage';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -19,6 +18,7 @@ import type { TourStep } from './CoachMark';
 import { DialogueRolePlay } from './DialogueRolePlay';
 import type { DialogueLine } from './DialogueRolePlay';
 import { DialogueDictation, type DictationLine } from './DialogueDictation';
+import { DialogueVocab } from './DialogueVocab';
 import { useStars } from '../hooks/useStars';
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -157,9 +157,6 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   const [isAudioLoading, setIsAudioLoading] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [audioActive, setAudioActive] = useState(false);
-
-  // So'zlar tab state
-  const [expandedVocab, setExpandedVocab] = useState<number | null>(null);
 
   const allSentences = useMemo(() => dialogue.sections.flatMap(s => s.sentences), [dialogue.sections]);
 
@@ -599,25 +596,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
               </div>
             ) : (
               <>
-                {vocabList.length > 0 && vocabList.map((v, i) => (
-                  <div key={i} className="dr-card dr-grammar-card" onClick={() => setExpandedVocab(expandedVocab === i ? null : i)}>
-                    <div className="dr-grammar-header">
-                      <span className="dr-grammar-pattern">{v.zh}</span>
-                      <span className="dr-vocab-card-py">{v.py}</span>
-                      <span className="dr-grammar-title">{language === 'ru' ? v.ru : language === 'en' ? (v.en || v.uz) : v.uz}</span>
-                      <ChevronDownIcon className={`dr-grammar-arrow${expandedVocab === i ? ' dr-grammar-arrow--open' : ''}`} />
-                    </div>
-                    {expandedVocab === i && v.ex && (
-                      <div className="dr-grammar-expanded">
-                        <div className="dr-grammar-example">
-                          <div className="dr-vocab-example-zh">{v.ex}</div>
-                          <div className="dr-vocab-example-py">{v.expy}</div>
-                          <div className="dr-vocab-example-tr">{language === 'ru' ? v.exru : language === 'en' ? (v.exen || v.exuz) : v.exuz}</div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                {vocabList.length > 0 && <DialogueVocab words={vocabList} language={language} />}
 
 
                 {dialogue.phrases && dialogue.phrases.length > 0 && (
