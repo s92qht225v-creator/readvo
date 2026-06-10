@@ -1480,92 +1480,67 @@ body {
   white-space: nowrap;
 }
 
-/* ── Words tab: "Practice these words" button + flashcards ───────────────── */
-.dr-vocab-practice-btn {
-  display: block;
-  width: 100%;
-  margin: 0 0 12px;
-  padding: 13px 16px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #dc2626, #b91c1c);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.dr-vfc {
-  max-width: 460px;
-  margin: 0 auto;
+/* ── Words tab: vocabulary flip-cards (tap to reveal translation) ────────── */
+.dr-flips {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 6px 4px 24px;
+  gap: 12px;
+  max-width: 460px;
+  margin: 0 auto;
 }
-.dr-vfc--center { min-height: 40vh; justify-content: center; text-align: center; }
-.dr-vfc__emoji { font-size: 44px; }
-.dr-vfc__score { font-size: 40px; font-weight: 800; color: #dc2626; }
-.dr-vfc__intro { font-size: 14px; color: #777; }
-.dr-vfc__progress { font-size: 13px; color: #aaa; font-weight: 600; align-self: center; }
-
-.dr-vfc__card {
+.dr-flip {
+  perspective: 1000px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.dr-flip__inner {
   position: relative;
-  width: 100%;
-  min-height: 220px;
+  min-height: 78px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.dr-flip--open .dr-flip__inner { transform: rotateY(180deg); }
+.dr-flip__face {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  text-align: center;
-  padding: 28px 20px;
-  background: #fff;
+  gap: 2px;
+  padding: 14px 16px;
   border: 1px solid #eee;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
-  cursor: pointer;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-.dr-vfc__audio {
+.dr-flip__front { position: relative; }
+.dr-flip__back {
+  transform: rotateY(180deg);
+  background: #fff7f7;
+  border-color: #f3d6d6;
+}
+.dr-flip__audio {
   position: absolute;
-  top: 12px;
+  top: 50%;
   right: 12px;
-  width: 40px;
-  height: 40px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #fef2f2;
+  color: #dc2626;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.dr-vfc__zh { font-size: 40px; font-weight: 600; color: #1a1a2e; line-height: 1.1; }
-.dr-vfc__py { font-size: 17px; color: #2563eb; font-style: italic; }
-.dr-vfc__hint { font-size: 13px; color: #bbb; margin-top: 8px; }
-.dr-vfc__meaning { font-size: 20px; font-weight: 600; color: #16a34a; margin-top: 6px; }
-.dr-vfc__ex { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
-.dr-vfc__ex-zh { font-size: 16px; color: #444; }
-.dr-vfc__ex-tr { font-size: 13px; color: #999; }
-
-.dr-vfc__row { display: flex; gap: 10px; width: 100%; }
-.dr-vfc__btn {
-  flex: 1;
-  min-height: 50px;
-  border: 1px solid #e2ddd6;
-  border-radius: 10px;
-  background: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  color: #2f2835;
-}
-.dr-vfc__btn--primary { background: linear-gradient(180deg, #dc2626, #b91c1c); color: #fff; border: none; }
-.dr-vfc__btn--no { background: #fee2e2; color: #dc2626; border: none; }
-.dr-vfc__btn--yes { background: linear-gradient(180deg, #16a34a, #15803d); color: #fff; border: none; }
-.dr-vfc__exit { border: none; background: none; color: #999; font-size: 13px; cursor: pointer; }
+.dr-flip__zh { font-size: 26px; font-weight: 600; color: #1a1a2e; line-height: 1.15; }
+.dr-flip__py { font-size: 14px; color: #dc2626; font-style: italic; }
+.dr-flip__meaning { font-size: 19px; font-weight: 700; color: #b91c1c; text-align: center; }
 
 .dr-grammar-title {
   font-size: 14px;
