@@ -101,6 +101,7 @@ interface TimeOfDayEntry {
 
 interface DialogueData {
   id: string;
+  level?: number;
   title: string;
   pinyin: string;
   titleTranslation: string;
@@ -423,7 +424,7 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">HSK {dialogue.level} · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
+            <div className="dr-hero__level">HSK {dialogue.level ?? 1} · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
             <h1 className="dr-hero__title">{dialogue.title}</h1>
             <div className="dr-hero__pinyin">{dialogue.pinyin}</div>
             <div className="dr-hero__translation">— {language === 'ru' ? dialogue.titleTranslation_ru : language === 'en' ? (dialogue.titleTranslation_en || dialogue.titleTranslation) : dialogue.titleTranslation} —</div>
