@@ -1,0 +1,184 @@
+{
+  "id": "hsk5-dialogue1",
+  "slug": "should-i-change-jobs",
+  "title": "要不要换工作",
+  "pinyin": "Yào bu yào huàn gōngzuò",
+  "titleTranslation": "Ishni almashtirsammikan?",
+  "titleTranslation_ru": "Менять ли работу?",
+  "titleTranslation_en": "Should I Change Jobs?",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-11",
+  "sections": [
+    {
+      "id": "d1-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d1-s1",
+          "text_original": "你最近看起来心事很多，是不是工作上遇到什么问题了？",
+          "pinyin": "Nǐ zuì jìn kàn qǐ lái xīn shì hěn duō, shì bu shì gōng zuò shàng yù dào shén me wèn tí le?",
+          "text_translation": "So'nggi paytlarda xayoling parishonga o'xshaydi — ishda biror muammoga duch keldingmi?",
+          "text_translation_ru": "Ты в последнее время выглядишь озабоченным — у тебя что-то случилось на работе?",
+          "text_translation_en": "You've seemed to have a lot on your mind lately — have you run into some problem at work?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s2",
+          "text_original": "是啊。我在考虑要不要换工作。",
+          "pinyin": "Shì a. Wǒ zài kǎo lǜ yào bu yào huàn gōng zuò.",
+          "text_translation": "Ha. Ishni almashtirsammikan, deb o'ylayapman.",
+          "text_translation_ru": "Да. Я раздумываю, не сменить ли работу.",
+          "text_translation_en": "Yeah. I'm thinking about whether to change jobs.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "为什么？你不是刚升职吗？",
+          "pinyin": "Wèi shén me? Nǐ bú shì gāng shēng zhí ma?",
+          "text_translation": "Nega? Sen hozirgina lavozimingni ko'tarmadingmi?",
+          "text_translation_ru": "Почему? Тебя же только что повысили?",
+          "text_translation_en": "Why? Didn't you just get promoted?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "职位是升了，可是压力也大了很多。每天都有新的任务，而且经常需要加班。",
+          "pinyin": "Zhí wèi shì shēng le, kě shì yā lì yě dà le hěn duō. Měi tiān dōu yǒu xīn de rèn wu, ér qiě jīng cháng xū yào jiā bān.",
+          "text_translation": "Lavozim ko'tarildi, lekin bosim ham ancha oshdi. Har kuni yangi vazifalar bor, ustiga-ustak ko'pincha qo'shimcha ishlashga to'g'ri keladi.",
+          "text_translation_ru": "Должность-то повысилась, но и давления стало намного больше. Каждый день новые задачи, и часто приходится задерживаться на работе.",
+          "text_translation_en": "My position did go up, but the pressure increased a lot too. Every day there are new tasks, and I often have to work overtime.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s5",
+          "text_original": "那你现在最不满意的是工资，还是工作内容？",
+          "pinyin": "Nà nǐ xiàn zài zuì bù mǎn yì de shì gōng zī, hái shì gōng zuò nèi róng?",
+          "text_translation": "Unda hozir eng ko'p nimadan norozisan — maoshdanmi yoki ishning mazmunidanmi?",
+          "text_translation_ru": "Тогда чем ты сейчас больше всего недоволен — зарплатой или содержанием работы?",
+          "text_translation_en": "So what are you most dissatisfied with now — the salary or the work itself?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s6",
+          "text_original": "工资还可以，主要是工作内容让我觉得没有发展空间。",
+          "pinyin": "Gōng zī hái kě yǐ, zhǔ yào shì gōng zuò nèi róng ràng wǒ jué de méi yǒu fā zhǎn kōng jiān.",
+          "text_translation": "Maosh yomon emas, asosiysi ishning mazmuni menda rivojlanish imkoni yo'qdek tuyg'u uyg'otadi.",
+          "text_translation_ru": "Зарплата нормальная, дело в основном в содержании работы — мне кажется, что нет пространства для роста.",
+          "text_translation_en": "The salary is okay; it's mainly the work itself that makes me feel there's no room to grow.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s7",
+          "text_original": "你的意思是，虽然职位高了，但是学不到新的东西？",
+          "pinyin": "Nǐ de yì sī shì, suī rán zhí wèi gāo le, dàn shì xué bú dào xīn de dōng xī?",
+          "text_translation": "Ya'ni, lavozim yuqori bo'lsa-da, yangi narsa o'rganmayapsan, demoqchimisan?",
+          "text_translation_ru": "Ты имеешь в виду, что хотя должность и выше, но новому ты не учишься?",
+          "text_translation_en": "You mean that even though your position is higher, you're not learning anything new?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s8",
+          "text_original": "对。我不想每天只是处理重复的问题。我希望能接触更有挑战的项目。",
+          "pinyin": "Duì. Wǒ bù xiǎng měi tiān zhǐ shì chǔ lǐ chóng fù de wèn tí. Wǒ xī wàng néng jiē chù gèng yǒu tiǎo zhàn de xiàng mù.",
+          "text_translation": "Ha. Men har kuni faqat takrorlanadigan muammolar bilan shug'ullanishni xohlamayman. Ko'proq sinovli loyihalar bilan ishlashni istayman.",
+          "text_translation_ru": "Да. Я не хочу каждый день решать одни и те же повторяющиеся задачи. Надеюсь заняться более сложными проектами.",
+          "text_translation_en": "Right. I don't want to just deal with repetitive problems every day. I hope to take on more challenging projects.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s9",
+          "text_original": "那你已经找到新的机会了吗？",
+          "pinyin": "Nà nǐ yǐ jīng zhǎo dào xīn de jī huì le ma?",
+          "text_translation": "Unda yangi imkoniyat topdingmi?",
+          "text_translation_ru": "Так ты уже нашёл новую возможность?",
+          "text_translation_en": "So have you already found a new opportunity?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s10",
+          "text_original": "有一家公司联系我了，条件不错，但是我还没决定。",
+          "pinyin": "Yǒu yì jiā gōng sī lián xì wǒ le, tiáo jiàn bú cuò, dàn shì wǒ hái méi jué dìng.",
+          "text_translation": "Bir kompaniya men bilan bog'landi, shartlari yaxshi, lekin men hali qaror qilmadim.",
+          "text_translation_ru": "Одна компания со мной связалась, условия хорошие, но я ещё не решил.",
+          "text_translation_en": "A company has contacted me — the terms are good, but I haven't decided yet.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s11",
+          "text_original": "你担心什么？",
+          "pinyin": "Nǐ dān xīn shén me?",
+          "text_translation": "Nimadan xavotirdasan?",
+          "text_translation_ru": "Чего ты опасаешься?",
+          "text_translation_en": "What are you worried about?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s12",
+          "text_original": "我担心新环境不一定适合我。现在的公司虽然累，但是同事之间合作得很好。",
+          "pinyin": "Wǒ dān xīn xīn huán jìng bù yí dìng shì hé wǒ. Xiàn zài de gōng sī suī rán lèi, dàn shì tóng shì zhī jiān hé zuò de hěn hǎo.",
+          "text_translation": "Yangi muhit menga to'g'ri kelmasligidan xavotirdaman. Hozirgi kompaniyada charchatsa-da, hamkasblar bir-biri bilan yaxshi hamkorlik qiladi.",
+          "text_translation_ru": "Боюсь, что новая обстановка мне не обязательно подойдёт. На нынешней работе хоть и устаёшь, зато коллеги хорошо сотрудничают.",
+          "text_translation_en": "I'm worried the new environment may not suit me. My current company is tiring, but the colleagues cooperate really well.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s13",
+          "text_original": "这确实需要考虑。换工作不能只看工资，也要看团队、发展和自己的状态。",
+          "pinyin": "Zhè què shí xū yào kǎo lǜ. Huàn gōng zuò bù néng zhī kàn gōng zī, yě yào kàn tuán duì, fā zhǎn hé zì jǐ de zhuàng tài.",
+          "text_translation": "Buni haqiqatan ham o'ylab ko'rish kerak. Ish almashtirishda faqat maoshga qaramaslik kerak — jamoa, rivojlanish va o'zingning holatingni ham hisobga olish lozim.",
+          "text_translation_ru": "Это действительно стоит обдумать. Меняя работу, нельзя смотреть только на зарплату — нужно учитывать и команду, и развитие, и собственное состояние.",
+          "text_translation_en": "That really does need thought. Changing jobs can't be just about salary — you also have to consider the team, growth, and your own state of mind.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s14",
+          "text_original": "所以我很犹豫。一方面我想改变，另一方面又怕做错选择。",
+          "pinyin": "Suǒ yǐ wǒ hěn yóu yù. Yì fāng miàn wǒ xiǎng gǎi biàn, lìng yì fāng miàn yòu pà zuò cuò xuǎn zé.",
+          "text_translation": "Shuning uchun juda ikkilanyapman. Bir tomondan o'zgarish istayman, ikkinchi tomondan noto'g'ri tanlov qilishdan qo'rqaman.",
+          "text_translation_ru": "Поэтому я так колеблюсь. С одной стороны, хочу перемен, с другой — боюсь сделать неправильный выбор.",
+          "text_translation_en": "That's why I'm so hesitant. On one hand I want change, on the other I'm afraid of making the wrong choice.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s15",
+          "text_original": "我觉得你可以先和现在的领导谈一谈，看看有没有机会换项目。",
+          "pinyin": "Wǒ jué de nǐ kě yǐ xiān hé xiàn zài de lǐng dǎo tán yi tán, kàn kàn yǒu méi yǒu jī huì huàn xiàng mù.",
+          "text_translation": "Menimcha, avval hozirgi rahbaring bilan gaplashib, loyihani almashtirish imkoni bor-yo'qligini bilib ko'rsang bo'ladi.",
+          "text_translation_ru": "Думаю, тебе стоит сначала поговорить с нынешним руководителем и узнать, есть ли возможность сменить проект.",
+          "text_translation_en": "I think you could first talk to your current boss and see if there's a chance to switch projects.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s16",
+          "text_original": "这个建议不错。如果公司愿意给我新的机会，我可能就不用离开了。",
+          "pinyin": "Zhè ge jiàn yì bú cuò. Rú guǒ gōng sī yuàn yì gěi wǒ xīn de jī huì, wǒ kě néng jiù bú yòng lí kāi le.",
+          "text_translation": "Bu yaxshi maslahat. Agar kompaniya menga yangi imkoniyat berishga rozi bo'lsa, ketishimga hojat qolmasligi mumkin.",
+          "text_translation_ru": "Хороший совет. Если компания готова дать мне новую возможность, мне, возможно, и не придётся уходить.",
+          "text_translation_en": "That's a good suggestion. If the company is willing to give me a new opportunity, I might not need to leave.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s17",
+          "text_original": "对。先沟通，再决定。这样比较稳妥。",
+          "pinyin": "Duì. Xiān gōu tōng, zài jué dìng. Zhè yàng bǐ jiào wěn tuǒ.",
+          "text_translation": "Ha. Avval muloqot qil, keyin qaror qil. Shunday qilgan ma'qulroq.",
+          "text_translation_ru": "Да. Сначала обсуди, потом решай. Так надёжнее.",
+          "text_translation_en": "Right. Communicate first, then decide. That way is safer.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s18",
+          "text_original": "好，我明天就找领导谈谈。谢谢你，我现在清楚多了。",
+          "pinyin": "Hǎo, wǒ míng tiān jiù zhǎo lǐng dǎo tán tán. Xiè xiè nǐ, wǒ xiàn zài qīng chǔ duō le.",
+          "text_translation": "Mayli, ertaga rahbarim bilan gaplashaman. Rahmat senga — endi menga ancha tushunarli bo'ldi.",
+          "text_translation_ru": "Хорошо, завтра же поговорю с руководителем. Спасибо тебе — теперь мне намного яснее.",
+          "text_translation_en": "Okay, I'll go talk to my boss tomorrow. Thank you — I'm much clearer now.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
