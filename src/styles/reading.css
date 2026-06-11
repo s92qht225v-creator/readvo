@@ -1489,6 +1489,32 @@ body {
 }
 
 /* ── Words tab: vocabulary flip-cards (tap to reveal translation) ────────── */
+.dr-vocab-dir {
+  display: flex;
+  background: #f5f5f8;
+  border: 1px solid #e0e0e6;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 460px;
+  margin: 0 auto 14px;
+}
+.dr-vocab-dir__btn {
+  flex: 1;
+  padding: 10px 8px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.dr-vocab-dir__btn--active {
+  background: #dc2626;
+  color: #fff;
+  font-weight: 600;
+}
 .dr-flips {
   display: flex;
   flex-direction: column;
