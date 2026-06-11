@@ -9,6 +9,18 @@
   "level": 2,
   "tag": "sayohat",
   "dateAdded": "2026-06-02",
+  "vocab": [
+    { "zh": "住", "py": "zhù", "uz": "yashamoq, qolmoq (tunash)", "ru": "жить, останавливаться", "en": "to stay, to live", "ex": "你好，我想住一个晚上。", "expy": "Nǐ hǎo, wǒ xiǎng zhù yí ge wǎnshang.", "ex_uz": "Salom, men bir kecha qolmoqchiman.", "ex_ru": "Здравствуйте, я хочу остановиться на одну ночь.", "ex_en": "Hello, I'd like to stay one night." },
+    { "zh": "房间", "py": "fángjiān", "uz": "xona", "ru": "комната, номер", "en": "room", "ex": "你想要什么房间？", "expy": "Nǐ xiǎng yào shénme fángjiān?", "ex_uz": "Qanday xona xohlaysiz?", "ex_ru": "Какой номер вы хотите?", "ex_en": "What kind of room do you want?" },
+    { "zh": "干净", "py": "gānjìng", "uz": "toza", "ru": "чистый", "en": "clean", "ex": "这个房间很干净，也很安静。", "expy": "Zhège fángjiān hěn gānjìng, yě hěn ānjìng.", "ex_uz": "Bu xona juda toza va tinch.", "ex_ru": "Этот номер очень чистый и тихий.", "ex_en": "This room is very clean and quiet." },
+    { "zh": "安静", "py": "ānjìng", "uz": "tinch, jim", "ru": "тихий, спокойный", "en": "quiet", "ex": "这个房间很干净，也很安静。", "expy": "Zhège fángjiān hěn gānjìng, yě hěn ānjìng.", "ex_uz": "Bu xona juda toza va tinch.", "ex_ru": "Этот номер очень чистый и тихий.", "ex_en": "This room is very clean and quiet." },
+    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой", "en": "expensive", "ex": "有点儿贵。有没有便宜一点儿的？", "expy": "Yǒudiǎnr guì. Yǒu méiyǒu piányi yìdiǎnr de?", "ex_uz": "Biroz qimmat. Arzonrog'i bormi?", "ex_ru": "Немного дорого. Есть подешевле?", "ex_en": "A bit expensive. Do you have a cheaper one?" },
+    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый", "en": "cheap", "ex": "有点儿贵。有没有便宜一点儿的？", "expy": "Yǒudiǎnr guì. Yǒu méiyǒu piányi yìdiǎnr de?", "ex_uz": "Biroz qimmat. Arzonrog'i bormi?", "ex_ru": "Немного дорого. Есть подешевле?", "ex_en": "A bit expensive. Do you have a cheaper one?" },
+    { "zh": "离…多远", "py": "lí … duō yuǎn", "uz": "...dan qancha uzoq?", "ru": "как далеко от ...?", "en": "how far is ... from ...?", "ex": "酒店离火车站远吗？", "expy": "Jiǔdiàn lí huǒchēzhàn yuǎn ma?", "ex_uz": "Mehmonxona vokzaldan uzoqmi?", "ex_ru": "Отель далеко от вокзала?", "ex_en": "Is the hotel far from the train station?" },
+    { "zh": "坐车", "py": "zuò chē", "uz": "mashinada/avtobusda bormoq", "ru": "ехать (на транспорте)", "en": "to go by car/bus", "ex": "坐车十分钟就到。", "expy": "Zuò chē shí fēnzhōng jiù dào.", "ex_uz": "Mashinada o'n daqiqada yetib borasiz.", "ex_ru": "На транспорте десять минут — и вы на месте.", "ex_en": "It's ten minutes by car." },
+    { "zh": "分钟", "py": "fēnzhōng", "uz": "daqiqa", "ru": "минута", "en": "minute", "ex": "坐车十分钟就到。", "expy": "Zuò chē shí fēnzhōng jiù dào.", "ex_uz": "Mashinada o'n daqiqada yetib borasiz.", "ex_ru": "На транспорте десять минут — и вы на месте.", "ex_en": "It's ten minutes by car." },
+    { "zh": "到", "py": "dào", "uz": "yetib bormoq", "ru": "прибыть, добраться", "en": "to arrive, to reach", "ex": "坐车十分钟就到。", "expy": "Zuò chē shí fēnzhōng jiù dào.", "ex_uz": "Mashinada o'n daqiqada yetib borasiz.", "ex_ru": "На транспорте десять минут — и вы на месте.", "ex_en": "It's ten minutes by car." }
+  ],
   "sections": [
     {
       "id": "d4-sec1",
