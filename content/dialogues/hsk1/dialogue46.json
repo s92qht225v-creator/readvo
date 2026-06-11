@@ -252,72 +252,42 @@
       "py": "gànma",
       "uz": "nima qilyapsan",
       "ru": "что делаешь / зачем",
-      "ex": "你干嘛呢？",
-      "expy": "Nǐ gànma ne?",
-      "ex_uz": "Nima qilyapsan?",
-      "ex_ru": "Что ты делаешь?",
-      "en": "what are you doing / why",
-      "ex_en": "What are you doing?"
+      "en": "what are you doing / why"
     },
     {
       "zh": "减肥",
       "py": "jiǎnféi",
       "uz": "ozmoq / vazn tashlamoq",
       "ru": "худеть / сбрасывать вес",
-      "ex": "她每天跑步减肥。",
-      "expy": "Tā měitiān pǎobù jiǎnféi.",
-      "ex_uz": "U har kuni yugurish bilan ozadi.",
-      "ex_ru": "Она каждый день бегает, чтобы похудеть.",
-      "en": "to lose weight",
-      "ex_en": "She runs every day to lose weight."
+      "en": "to lose weight"
     },
     {
       "zh": "手里",
       "py": "shǒu lǐ",
       "uz": "qo'lda",
       "ru": "в руке",
-      "ex": "你手里拿的是什么？",
-      "expy": "Nǐ shǒu lǐ ná de shì shénme?",
-      "ex_uz": "Qo'lingdagi nima?",
-      "ex_ru": "Что у тебя в руке?",
-      "en": "in hand",
-      "ex_en": "What's in your hand?"
+      "en": "in hand"
     },
     {
       "zh": "蛋糕",
       "py": "dàngāo",
       "uz": "tort / pirojnoe",
       "ru": "торт / пирожное",
-      "ex": "这个蛋糕很好吃。",
-      "expy": "Zhège dàngāo hěn hǎochī.",
-      "ex_uz": "Bu tort juda mazali.",
-      "ex_ru": "Этот торт очень вкусный.",
-      "en": "cake / pastry",
-      "ex_en": "This cake is very delicious."
+      "en": "cake / pastry"
     },
     {
       "zh": "明天",
       "py": "míngtiān",
       "uz": "ertaga",
       "ru": "завтра",
-      "ex": "明天你有空吗？",
-      "expy": "Míngtiān nǐ yǒu kòng ma?",
-      "ex_uz": "Ertaga bo'shsan?",
-      "ex_ru": "Завтра ты свободен?",
-      "en": "tomorrow",
-      "ex_en": "Are you free tomorrow?"
+      "en": "tomorrow"
     },
     {
       "zh": "开始",
       "py": "kāishǐ",
       "uz": "boshlamoq",
       "ru": "начинать / начать",
-      "ex": "我们开始吧！",
-      "expy": "Wǒmen kāishǐ ba!",
-      "ex_uz": "Boshlaylik!",
-      "ex_ru": "Давайте начнём!",
-      "en": "to begin / start",
-      "ex_en": "Let's begin!"
+      "en": "to begin / start"
     }
   ]
 }

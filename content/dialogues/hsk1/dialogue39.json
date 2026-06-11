@@ -310,72 +310,42 @@
       "py": "zuòyè",
       "uz": "uy vazifasi",
       "ru": "домашнее задание",
-      "ex": "老师给了很多作业。",
-      "expy": "Lǎoshī gěi le hěn duō zuòyè.",
-      "ex_uz": "O'qituvchi ko'p uy vazifa berdi.",
-      "ex_ru": "Учитель задал много домашнего задания.",
-      "en": "homework",
-      "ex_en": "The teacher assigned a lot of homework."
+      "en": "homework"
     },
     {
       "zh": "写",
       "py": "xiě",
       "uz": "yozmoq",
       "ru": "писать",
-      "ex": "你在写什么？",
-      "expy": "Nǐ zài xiě shénme?",
-      "ex_uz": "Sen nima yozyapsan?",
-      "ex_ru": "Что ты пишешь?",
-      "en": "to write",
-      "ex_en": "What are you writing?"
+      "en": "to write"
     },
     {
       "zh": "完",
       "py": "wán",
       "uz": "tugatmoq / bitmoq",
       "ru": "закончить / завершить",
-      "ex": "你吃完了吗？",
-      "expy": "Nǐ chī wán le ma?",
-      "ex_uz": "Yeb bo'ldingmi?",
-      "ex_ru": "Ты доел?",
-      "en": "to finish / complete",
-      "ex_en": "Are you done eating?"
+      "en": "to finish / complete"
     },
     {
       "zh": "还",
       "py": "hái",
       "uz": "hali, yana",
       "ru": "ещё",
-      "ex": "他还在学校。",
-      "expy": "Tā hái zài xuéxiào.",
-      "ex_uz": "U hali maktabda.",
-      "ex_ru": "Он ещё в школе.",
-      "en": "still / more",
-      "ex_en": "He's still at school."
+      "en": "still / more"
     },
     {
       "zh": "差",
       "py": "chà",
       "uz": "yetishmaslik / qolmoq",
       "ru": "не хватать / осталось",
-      "ex": "还差两个人。",
-      "expy": "Hái chà liǎng ge rén.",
-      "ex_uz": "Yana ikki kishi yetishmayapti.",
-      "ex_ru": "Ещё не хватает двух человек.",
-      "en": "not enough / remaining",
-      "ex_en": "Two more people are still missing."
+      "en": "not enough / remaining"
     },
     {
       "zh": "一半",
       "py": "yíbàn",
       "uz": "yarmi",
       "ru": "половина",
-      "ex": "我吃了一半。",
-      "expy": "Wǒ chī le yíbàn.",
-      "ex_uz": "Men yarmini yedim.",
-      "ex_ru": "Я съел половину.",
-      "en": "half",
-      "ex_en": "I ate half."
+      "en": "half"
     }
   ],
   "grammarNotes": [

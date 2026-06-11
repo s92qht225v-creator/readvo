@@ -303,72 +303,42 @@
       "py": "zhǔnbèi",
       "uz": "tayyorlanmoq",
       "ru": "готовиться",
-      "ex": "我准备好了。",
-      "expy": "Wǒ zhǔnbèi hǎo le.",
-      "ex_uz": "Men tayyorman.",
-      "ex_ru": "Я готов.",
-      "en": "to prepare",
-      "ex_en": "I'm ready."
+      "en": "to prepare"
     },
     {
       "zh": "还",
       "py": "hái",
       "uz": "hali / yana",
       "ru": "ещё",
-      "ex": "他还没来。",
-      "expy": "Tā hái méi lái.",
-      "ex_uz": "U hali kelmadi.",
-      "ex_ru": "Он ещё не пришёл.",
-      "en": "still / more",
-      "ex_en": "He hasn't come yet."
+      "en": "still / more"
     },
     {
       "zh": "久",
       "py": "jiǔ",
       "uz": "uzoq (vaqt)",
       "ru": "долго",
-      "ex": "你等了多久？",
-      "expy": "Nǐ děng le duō jiǔ?",
-      "ex_uz": "Qancha vaqt kutding?",
-      "ex_ru": "Как долго ты ждал?",
-      "en": "long (time)",
-      "ex_en": "How long have you been waiting?"
+      "en": "long (time)"
     },
     {
       "zh": "快",
       "py": "kuài",
       "uz": "tez / tezroq",
       "ru": "быстро / быстрее",
-      "ex": "快点走！",
-      "expy": "Kuài diǎn zǒu!",
-      "ex_uz": "Tezroq yur!",
-      "ex_ru": "Пошли быстрее!",
-      "en": "fast / faster",
-      "ex_en": "Let's go faster!"
+      "en": "fast / faster"
     },
     {
       "zh": "分钟",
       "py": "fēnzhōng",
       "uz": "daqiqa",
       "ru": "минута",
-      "ex": "还有十分钟。",
-      "expy": "Hái yǒu shí fēnzhōng.",
-      "ex_uz": "Yana o'n daqiqa bor.",
-      "ex_ru": "Ещё десять минут.",
-      "en": "minute",
-      "ex_en": "Ten more minutes."
+      "en": "minute"
     },
     {
       "zh": "迟到",
       "py": "chídào",
       "uz": "kechikmoq",
       "ru": "опоздать",
-      "ex": "他今天迟到了。",
-      "expy": "Tā jīntiān chídào le.",
-      "ex_uz": "U bugun kechikdi.",
-      "ex_ru": "Он сегодня опоздал.",
-      "en": "to be late",
-      "ex_en": "He was late today."
+      "en": "to be late"
     }
   ],
   "grammarNotes": [

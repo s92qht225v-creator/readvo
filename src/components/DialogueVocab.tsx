@@ -6,7 +6,6 @@ import { resolveTtsUrl } from '@/utils/ttsAudio';
 
 export interface VocabItem {
   zh: string; py: string; uz: string; ru: string; en: string;
-  ex: string; expy: string; exuz: string; exru: string; exen: string;
 }
 
 const meaningOf = (v: VocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en' ? (v.en || v.uz) : v.uz);

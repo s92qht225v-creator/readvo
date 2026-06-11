@@ -375,96 +375,56 @@
       "py": "nǐ hǎo",
       "uz": "salom",
       "ru": "привет / здравствуйте",
-      "ex": "你好！我叫李明。",
-      "expy": "Nǐ hǎo! Wǒ jiào Lǐ Míng.",
-      "ex_uz": "Salom! Mening ismim Li Ming.",
-      "ex_ru": "Привет! Меня зовут Ли Мин.",
-      "en": "hello",
-      "ex_en": "Hi! My name is Li Ming."
+      "en": "hello"
     },
     {
       "zh": "叫",
       "py": "jiào",
       "uz": "deb atalmoq / ismim ... bo'lmoq",
       "ru": "звать / называться",
-      "ex": "你叫什么名字？",
-      "expy": "Nǐ jiào shénme míngzi?",
-      "ex_uz": "Sening isming nima?",
-      "ex_ru": "Как тебя зовут?",
-      "en": "to be called / named",
-      "ex_en": "What's your name?"
+      "en": "to be called / named"
     },
     {
       "zh": "什么",
       "py": "shénme",
       "uz": "nima",
       "ru": "что / какой",
-      "ex": "你叫什么名字？",
-      "expy": "Nǐ jiào shénme míngzi?",
-      "ex_uz": "Sening isming nima?",
-      "ex_ru": "Как тебя зовут?",
-      "en": "what / which",
-      "ex_en": "What's your name?"
+      "en": "what / which"
     },
     {
       "zh": "名字",
       "py": "míngzi",
       "uz": "ism",
       "ru": "имя",
-      "ex": "你的名字很好听。",
-      "expy": "Nǐ de míngzi hěn hǎotīng.",
-      "ex_uz": "Sening isming juda chiroyli.",
-      "ex_ru": "У тебя очень красивое имя.",
-      "en": "name",
-      "ex_en": "You have a very beautiful name."
+      "en": "name"
     },
     {
       "zh": "对",
       "py": "duì",
       "uz": "ha, to'g'ri",
       "ru": "да, верно",
-      "ex": "对，我叫李明。",
-      "expy": "Duì, wǒ jiào Lǐ Míng.",
-      "ex_uz": "Ha, mening ismim Li Ming.",
-      "ex_ru": "Да, меня зовут Ли Мин.",
-      "en": "yes, correct",
-      "ex_en": "Yes, my name is Li Ming."
+      "en": "yes, correct"
     },
     {
       "zh": "很高兴",
       "py": "hěn gāoxìng",
       "uz": "juda xursand",
       "ru": "очень рад(а)",
-      "ex": "很高兴认识你！",
-      "expy": "Hěn gāoxìng rènshi nǐ!",
-      "ex_uz": "Tanishganimdan juda xursandman!",
-      "ex_ru": "Очень рад познакомиться!",
-      "en": "very glad / pleased",
-      "ex_en": "Very nice to meet you!"
+      "en": "very glad / pleased"
     },
     {
       "zh": "认识",
       "py": "rènshi",
       "uz": "tanishmoq",
       "ru": "познакомиться / знать",
-      "ex": "很高兴认识你。",
-      "expy": "Hěn gāoxìng rènshi nǐ.",
-      "ex_uz": "Tanishganimdan xursandman.",
-      "ex_ru": "Очень рад познакомиться.",
-      "en": "to get to know / to know",
-      "ex_en": "Nice to meet you."
+      "en": "to get to know / to know"
     },
     {
       "zh": "也",
       "py": "yě",
       "uz": "ham",
       "ru": "тоже",
-      "ex": "我也很高兴。",
-      "expy": "Wǒ yě hěn gāoxìng.",
-      "ex_uz": "Men ham juda xursandman.",
-      "ex_ru": "Я тоже очень рад.",
-      "en": "also / too",
-      "ex_en": "I'm happy too."
+      "en": "also / too"
     }
   ],
   "grammarNotes": [

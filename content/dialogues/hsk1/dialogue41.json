@@ -230,72 +230,42 @@
       "py": "fúwùyuán",
       "uz": "ofitsiant",
       "ru": "официант",
-      "ex": "服务员，请给我菜单。",
-      "expy": "Fúwùyuán, qǐng gěi wǒ càidān.",
-      "ex_uz": "Ofitsiant, menga menyuni bering.",
-      "ex_ru": "Официант, дайте мне меню.",
-      "en": "waiter",
-      "ex_en": "Waiter, give me the menu."
+      "en": "waiter"
     },
     {
       "zh": "买单",
       "py": "mǎidān",
       "uz": "hisob so'ramoq",
       "ru": "попросить счёт",
-      "ex": "吃完了，我们买单吧。",
-      "expy": "Chī wán le, wǒmen mǎidān ba.",
-      "ex_uz": "Yeb bo'ldik, hisob so'raylik.",
-      "ex_ru": "Мы доели, давай попросим счёт.",
-      "en": "to ask for the bill",
-      "ex_en": "We're done eating, let's ask for the bill."
+      "en": "to ask for the bill"
     },
     {
       "zh": "一共",
       "py": "yígòng",
       "uz": "hammasi bo'lib",
       "ru": "всего, итого",
-      "ex": "一共三个人。",
-      "expy": "Yígòng sān ge rén.",
-      "ex_uz": "Hammasi bo'lib uch kishi.",
-      "ex_ru": "Всего три человека.",
-      "en": "in total",
-      "ex_en": "Three people in total."
+      "en": "in total"
     },
     {
       "zh": "多少钱",
       "py": "duōshao qián",
       "uz": "qancha pul",
       "ru": "сколько стоит",
-      "ex": "这个多少钱？",
-      "expy": "Zhège duōshao qián?",
-      "ex_uz": "Bu qancha turadi?",
-      "ex_ru": "Сколько это стоит?",
-      "en": "how much does it cost",
-      "ex_en": "How much does this cost?"
+      "en": "how much does it cost"
     },
     {
       "zh": "可以",
       "py": "kěyǐ",
       "uz": "mumkin, bo'ladi",
       "ru": "можно, разрешается",
-      "ex": "我可以坐这儿吗？",
-      "expy": "Wǒ kěyǐ zuò zhèr ma?",
-      "ex_uz": "Bu yerga o'tirsam bo'ladimi?",
-      "ex_ru": "Можно мне сесть здесь?",
-      "en": "may / is allowed",
-      "ex_en": "Can I sit here?"
+      "en": "may / is allowed"
     },
     {
       "zh": "刷卡",
       "py": "shuākǎ",
       "uz": "karta bilan to'lamoq",
       "ru": "оплатить картой",
-      "ex": "这里可以刷卡吗？",
-      "expy": "Zhèlǐ kěyǐ shuākǎ ma?",
-      "ex_uz": "Bu yerda karta bilan to'lasa bo'ladimi?",
-      "ex_ru": "Здесь можно оплатить картой?",
-      "en": "to pay by card",
-      "ex_en": "Can I pay by card here?"
+      "en": "to pay by card"
     }
   ],
   "grammarNotes": [

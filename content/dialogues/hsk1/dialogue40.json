@@ -394,72 +394,42 @@
       "py": "diǎn cài",
       "uz": "ovqat buyurtma bermoq",
       "ru": "заказать еду",
-      "ex": "我们先看菜单再点菜。",
-      "expy": "Wǒmen xiān kàn càidān zài diǎn cài.",
-      "ex_uz": "Avval menyuni ko'raylik, keyin buyurtma beramiz.",
-      "ex_ru": "Сначала посмотрим меню, потом закажем.",
-      "en": "to order food",
-      "ex_en": "Let's look at the menu first, then order."
+      "en": "to order food"
     },
     {
       "zh": "来",
       "py": "lái",
       "uz": "olib keling (buyurtma)",
       "ru": "дайте, принесите (при заказе)",
-      "ex": "来一杯茶。",
-      "expy": "Lái yì bēi chá.",
-      "ex_uz": "Bir piyola choy olib keling.",
-      "ex_ru": "Принесите чашку чая.",
-      "en": "give / bring (when ordering)",
-      "ex_en": "Bring a cup of tea."
+      "en": "give / bring (when ordering)"
     },
     {
       "zh": "一份",
       "py": "yí fèn",
       "uz": "bir porsiya",
       "ru": "одна порция",
-      "ex": "来一份炒饭。",
-      "expy": "Lái yí fèn chǎofàn.",
-      "ex_uz": "Bir porsiya qovurilgan guruch olib keling.",
-      "ex_ru": "Одну порцию жареного риса.",
-      "en": "one serving",
-      "ex_en": "One serving of fried rice."
+      "en": "one serving"
     },
     {
       "zh": "辣",
       "py": "là",
       "uz": "achchiq",
       "ru": "острый",
-      "ex": "这个菜太辣了。",
-      "expy": "Zhège cài tài là le.",
-      "ex_uz": "Bu taom juda achchiq.",
-      "ex_ru": "Это блюдо слишком острое.",
-      "en": "spicy",
-      "ex_en": "This dish is too spicy."
+      "en": "spicy"
     },
     {
       "zh": "能",
       "py": "néng",
       "uz": "-a olmoq (qobiliyat)",
       "ru": "мочь (способность)",
-      "ex": "你能喝冰水吗？",
-      "expy": "Nǐ néng hē bīng shuǐ ma?",
-      "ex_uz": "Muzli suv icha olasanmi?",
-      "ex_ru": "Ты можешь пить ледяную воду?",
-      "en": "can (ability)",
-      "ex_en": "Can you drink ice water?"
+      "en": "can (ability)"
     },
     {
       "zh": "再",
       "py": "zài",
       "uz": "yana, qayta",
       "ru": "ещё, снова",
-      "ex": "再来一碗米饭。",
-      "expy": "Zài lái yì wǎn mǐfàn.",
-      "ex_uz": "Yana bir kosa guruch olib keling.",
-      "ex_ru": "Ещё одну тарелку риса.",
-      "en": "again / once more",
-      "ex_en": "One more plate of rice."
+      "en": "again / once more"
     }
   ],
   "grammarNotes": [

@@ -315,72 +315,42 @@
       "py": "zǒu",
       "uz": "ketmoq / yurmoq",
       "ru": "уходить / идти",
-      "ex": "你什么时候走？",
-      "expy": "Nǐ shénme shíhou zǒu?",
-      "ex_uz": "Sen qachon ketasan?",
-      "ex_ru": "Когда ты уезжаешь?",
-      "en": "to leave / go",
-      "ex_en": "When are you leaving?"
+      "en": "to leave / go"
     },
     {
       "zh": "坐",
       "py": "zuò",
       "uz": "minmoq (transport)",
       "ru": "ехать на (транспорте)",
-      "ex": "我坐飞机去北京。",
-      "expy": "Wǒ zuò fēijī qù Běijīng.",
-      "ex_uz": "Men samolyotda Pekinga boraman.",
-      "ex_ru": "Я лечу в Пекин на самолёте.",
-      "en": "to go by (transport)",
-      "ex_en": "I'm flying to Beijing by plane."
+      "en": "to go by (transport)"
     },
     {
       "zh": "火车",
       "py": "huǒchē",
       "uz": "poyezd",
       "ru": "поезд",
-      "ex": "火车几点开？",
-      "expy": "Huǒchē jǐ diǎn kāi?",
-      "ex_uz": "Poyezd soat nechada jo'naydi?",
-      "ex_ru": "Во сколько отправляется поезд?",
-      "en": "train",
-      "ex_en": "What time does the train depart?"
+      "en": "train"
     },
     {
       "zh": "飞机",
       "py": "fēijī",
       "uz": "samolyot",
       "ru": "самолёт",
-      "ex": "飞机很快。",
-      "expy": "Fēijī hěn kuài.",
-      "ex_uz": "Samolyot juda tez.",
-      "ex_ru": "Самолёт очень быстрый.",
-      "en": "airplane",
-      "ex_en": "The plane is very fast."
+      "en": "airplane"
     },
     {
       "zh": "还是",
       "py": "háishi",
       "uz": "yoki (tanlash savoli)",
       "ru": "или (в вопросе выбора)",
-      "ex": "你喝茶还是喝咖啡？",
-      "expy": "Nǐ hē chá háishi hē kāfēi?",
-      "ex_uz": "Choy ichasanmi yoki kofe?",
-      "ex_ru": "Ты будешь чай или кофе?",
-      "en": "or (in choice questions)",
-      "ex_en": "Will you have tea or coffee?"
+      "en": "or (in choice questions)"
     },
     {
       "zh": "送",
       "py": "sòng",
       "uz": "kuzatmoq / olib bormoq",
       "ru": "проводить / отвезти",
-      "ex": "我送你到门口。",
-      "expy": "Wǒ sòng nǐ dào ménkǒu.",
-      "ex_uz": "Men seni eshik oldigacha kuzataman.",
-      "ex_ru": "Я провожу тебя до двери.",
-      "en": "to see off / give a ride",
-      "ex_en": "I'll walk you to the door."
+      "en": "to see off / give a ride"
     }
   ],
   "grammarNotes": [

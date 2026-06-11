@@ -270,12 +270,7 @@
       "py": "diàntī",
       "uz": "lift",
       "ru": "лифт",
-      "ex": "电梯在那边。",
-      "expy": "Diàntī zài nàbiān.",
-      "ex_uz": "Lift ana u yerda.",
-      "ex_ru": "Лифт вон там.",
-      "en": "elevator / lift",
-      "ex_en": "The elevator is over there."
+      "en": "elevator / lift"
     }
   ]
 }

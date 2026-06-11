@@ -10,21 +10,111 @@
   "tag": "xarid",
   "dateAdded": "2026-06-04",
   "vocab": [
-    { "zh": "买", "py": "mǎi", "uz": "sotib olmoq", "ru": "покупать", "en": "to buy", "ex": "你想买什么？", "expy": "Nǐ xiǎng mǎi shénme?", "ex_uz": "Nima sotib olmoqchisiz?", "ex_ru": "Что вы хотите купить?", "ex_en": "What do you want to buy?" },
-    { "zh": "一件", "py": "yí jiàn", "uz": "bitta (kiyim)", "ru": "одна (вещь одежды)", "en": "one (item of clothing)", "ex": "我想买一件衣服。", "expy": "Wǒ xiǎng mǎi yí jiàn yīfu.", "ex_uz": "Men bitta kiyim sotib olmoqchiman.", "ex_ru": "Я хочу купить одежду.", "ex_en": "I want to buy a piece of clothing." },
-    { "zh": "衣服", "py": "yīfu", "uz": "kiyim", "ru": "одежда", "en": "clothes", "ex": "我想买一件衣服。", "expy": "Wǒ xiǎng mǎi yí jiàn yīfu.", "ex_uz": "Men bitta kiyim sotib olmoqchiman.", "ex_ru": "Я хочу купить одежду.", "ex_en": "I want to buy a piece of clothing." },
-    { "zh": "喜欢", "py": "xǐhuan", "uz": "yoqtirmoq", "ru": "нравиться, любить", "en": "to like", "ex": "你喜欢什么颜色？", "expy": "Nǐ xǐhuan shénme yánsè?", "ex_uz": "Qaysi rangni yoqtirasiz?", "ex_ru": "Какой цвет вам нравится?", "ex_en": "What color do you like?" },
-    { "zh": "颜色", "py": "yánsè", "uz": "rang", "ru": "цвет", "en": "color", "ex": "你喜欢什么颜色？", "expy": "Nǐ xǐhuan shénme yánsè?", "ex_uz": "Qaysi rangni yoqtirasiz?", "ex_ru": "Какой цвет вам нравится?", "ex_en": "What color do you like?" },
-    { "zh": "蓝色", "py": "lánsè", "uz": "ko'k (rang)", "ru": "синий", "en": "blue", "ex": "我喜欢蓝色。", "expy": "Wǒ xǐhuan lánsè.", "ex_uz": "Men ko'k rangni yoqtiraman.", "ex_ru": "Мне нравится синий.", "ex_en": "I like blue." },
-    { "zh": "怎么样", "py": "zěnmeyàng", "uz": "qanday? qalay?", "ru": "как? каков?", "en": "how about? how is it?", "ex": "那件蓝色的衣服怎么样？", "expy": "Nà jiàn lánsè de yīfu zěnmeyàng?", "ex_uz": "Anavi ko'k kiyim qanday?", "ex_ru": "Как насчёт той синей одежды?", "ex_en": "How about that blue piece of clothing?" },
-    { "zh": "好看", "py": "hǎokàn", "uz": "chiroyli", "ru": "красивый", "en": "good-looking, nice", "ex": "很好看，但是有点儿贵。", "expy": "Hěn hǎokàn, dànshì yǒudiǎnr guì.", "ex_uz": "Juda chiroyli, lekin biroz qimmat.", "ex_ru": "Очень красиво, но немного дорого.", "ex_en": "Very nice, but a bit expensive." },
-    { "zh": "贵", "py": "guì", "uz": "qimmat", "ru": "дорогой", "en": "expensive", "ex": "很好看，但是有点儿贵。", "expy": "Hěn hǎokàn, dànshì yǒudiǎnr guì.", "ex_uz": "Juda chiroyli, lekin biroz qimmat.", "ex_ru": "Очень красиво, но немного дорого.", "ex_en": "Very nice, but a bit expensive." },
-    { "zh": "便宜", "py": "piányi", "uz": "arzon", "ru": "дешёвый", "en": "cheap", "ex": "有没有便宜一点儿的？", "expy": "Yǒu méiyǒu piányi yìdiǎnr de?", "ex_uz": "Arzonrog'i bormi?", "ex_ru": "Есть подешевле?", "ex_en": "Do you have a cheaper one?" },
-    { "zh": "左边", "py": "zuǒbiān", "uz": "chap tomon", "ru": "левая сторона, слева", "en": "left side", "ex": "左边那件两百块。", "expy": "Zuǒbian nà jiàn liǎng bǎi kuài.", "ex_uz": "Chapdagi kiyim ikki yuz yuan.", "ex_ru": "Та, что слева, — двести юаней.", "ex_en": "The one on the left is two hundred yuan." },
-    { "zh": "试一试", "py": "shì yi shì", "uz": "kiyib ko'rmoq", "ru": "примерить, попробовать", "en": "to try (on)", "ex": "我可以试一试吗？", "expy": "Wǒ kěyǐ shì yi shì ma?", "ex_uz": "Kiyib ko'rsam bo'ladimi?", "ex_ru": "Можно примерить?", "ex_en": "Can I try it on?" },
-    { "zh": "试衣间", "py": "shìyījiān", "uz": "kiyinish xonasi", "ru": "примерочная", "en": "fitting room", "ex": "试衣间在前面。", "expy": "Shìyījiān zài qiánmiàn.", "ex_uz": "Kiyinish xonasi oldinda.", "ex_ru": "Примерочная впереди.", "ex_en": "The fitting room is ahead." },
-    { "zh": "前面", "py": "qiánmiàn", "uz": "oldinda", "ru": "впереди, спереди", "en": "in front, ahead", "ex": "试衣间在前面。", "expy": "Shìyījiān zài qiánmiàn.", "ex_uz": "Kiyinish xonasi oldinda.", "ex_ru": "Примерочная впереди.", "ex_en": "The fitting room is ahead." },
-    { "zh": "再", "py": "zài", "uz": "keyin, yana", "ru": "потом, затем", "en": "then, afterwards", "ex": "我试完以后再买。", "expy": "Wǒ shì wán yǐhòu zài mǎi.", "ex_uz": "Kiyib ko'rgandan keyin sotib olaman.", "ex_ru": "Примерю, а потом куплю.", "ex_en": "I'll buy it after trying it on." }
+    {
+      "zh": "买",
+      "py": "mǎi",
+      "uz": "sotib olmoq",
+      "ru": "покупать",
+      "en": "to buy"
+    },
+    {
+      "zh": "一件",
+      "py": "yí jiàn",
+      "uz": "bitta (kiyim)",
+      "ru": "одна (вещь одежды)",
+      "en": "one (item of clothing)"
+    },
+    {
+      "zh": "衣服",
+      "py": "yīfu",
+      "uz": "kiyim",
+      "ru": "одежда",
+      "en": "clothes"
+    },
+    {
+      "zh": "喜欢",
+      "py": "xǐhuan",
+      "uz": "yoqtirmoq",
+      "ru": "нравиться, любить",
+      "en": "to like"
+    },
+    {
+      "zh": "颜色",
+      "py": "yánsè",
+      "uz": "rang",
+      "ru": "цвет",
+      "en": "color"
+    },
+    {
+      "zh": "蓝色",
+      "py": "lánsè",
+      "uz": "ko'k (rang)",
+      "ru": "синий",
+      "en": "blue"
+    },
+    {
+      "zh": "怎么样",
+      "py": "zěnmeyàng",
+      "uz": "qanday? qalay?",
+      "ru": "как? каков?",
+      "en": "how about? how is it?"
+    },
+    {
+      "zh": "好看",
+      "py": "hǎokàn",
+      "uz": "chiroyli",
+      "ru": "красивый",
+      "en": "good-looking, nice"
+    },
+    {
+      "zh": "贵",
+      "py": "guì",
+      "uz": "qimmat",
+      "ru": "дорогой",
+      "en": "expensive"
+    },
+    {
+      "zh": "便宜",
+      "py": "piányi",
+      "uz": "arzon",
+      "ru": "дешёвый",
+      "en": "cheap"
+    },
+    {
+      "zh": "左边",
+      "py": "zuǒbiān",
+      "uz": "chap tomon",
+      "ru": "левая сторона, слева",
+      "en": "left side"
+    },
+    {
+      "zh": "试一试",
+      "py": "shì yi shì",
+      "uz": "kiyib ko'rmoq",
+      "ru": "примерить, попробовать",
+      "en": "to try (on)"
+    },
+    {
+      "zh": "试衣间",
+      "py": "shìyījiān",
+      "uz": "kiyinish xonasi",
+      "ru": "примерочная",
+      "en": "fitting room"
+    },
+    {
+      "zh": "前面",
+      "py": "qiánmiàn",
+      "uz": "oldinda",
+      "ru": "впереди, спереди",
+      "en": "in front, ahead"
+    },
+    {
+      "zh": "再",
+      "py": "zài",
+      "uz": "keyin, yana",
+      "ru": "потом, затем",
+      "en": "then, afterwards"
+    }
   ],
   "sections": [
     {

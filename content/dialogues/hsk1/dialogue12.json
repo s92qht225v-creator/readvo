@@ -397,36 +397,21 @@
       "py": "tóuténg",
       "uz": "bosh og'rig'i",
       "ru": "головная боль",
-      "ex": "我今天头疼。",
-      "expy": "Wǒ jīntiān tóuténg.",
-      "ex_uz": "Bugun boshim og'riyapti.",
-      "ex_ru": "У меня сегодня болит голова.",
-      "en": "headache",
-      "ex_en": "I have a headache today."
+      "en": "headache"
     },
     {
       "zh": "发烧",
       "py": "fāshāo",
       "uz": "isitma chiqmoq",
       "ru": "температура / жар",
-      "ex": "他发烧了。",
-      "expy": "Tā fāshāo le.",
-      "ex_uz": "Uning isitmasi chiqdi.",
-      "ex_ru": "У него поднялась температура.",
-      "en": "temperature / fever",
-      "ex_en": "He has a fever."
+      "en": "temperature / fever"
     },
     {
       "zh": "休息",
       "py": "xiūxi",
       "uz": "dam olmoq",
       "ru": "отдыхать",
-      "ex": "你休息一下吧。",
-      "expy": "Nǐ xiūxi yíxià ba.",
-      "ex_uz": "Biroz dam oling.",
-      "ex_ru": "Отдохни немного.",
-      "en": "to rest",
-      "ex_en": "Rest a little."
+      "en": "to rest"
     }
   ]
 }

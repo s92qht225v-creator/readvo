@@ -250,72 +250,42 @@
       "py": "wàimài",
       "uz": "dostavka taomi",
       "ru": "доставка еды",
-      "ex": "我们点外卖吧。",
-      "expy": "Wǒmen diǎn wàimài ba.",
-      "ex_uz": "Keling, dostavka buyurtma qilaylik.",
-      "ex_ru": "Давай закажем доставку.",
-      "en": "food delivery",
-      "ex_en": "Let's order delivery."
+      "en": "food delivery"
     },
     {
       "zh": "到",
       "py": "dào",
       "uz": "yetib kelmoq",
       "ru": "прибыть, приехать",
-      "ex": "他到了吗？",
-      "expy": "Tā dào le ma?",
-      "ex_uz": "U yetib keldimi?",
-      "ex_ru": "Он приехал?",
-      "en": "to arrive",
-      "ex_en": "Has he arrived?"
+      "en": "to arrive"
     },
     {
       "zh": "哪儿",
       "py": "nǎr",
       "uz": "qayerda",
       "ru": "где",
-      "ex": "你在哪儿？",
-      "expy": "Nǐ zài nǎr?",
-      "ex_uz": "Sen qayerdasen?",
-      "ex_ru": "Ты где?",
-      "en": "where",
-      "ex_en": "Where are you?"
+      "en": "where"
     },
     {
       "zh": "楼下",
       "py": "lóuxià",
       "uz": "bino pastida",
       "ru": "внизу (у дома)",
-      "ex": "他在楼下等你。",
-      "expy": "Tā zài lóuxià děng nǐ.",
-      "ex_uz": "U pastda seni kutyapti.",
-      "ex_ru": "Он ждёт тебя внизу.",
-      "en": "downstairs (at the entrance)",
-      "ex_en": "He's waiting for you downstairs."
+      "en": "downstairs (at the entrance)"
     },
     {
       "zh": "下去",
       "py": "xiàqù",
       "uz": "pastga tushmoq",
       "ru": "спуститься",
-      "ex": "你先下去，我马上来。",
-      "expy": "Nǐ xiān xiàqù, wǒ mǎshàng lái.",
-      "ex_uz": "Avval sen tush, men hozir kelaman.",
-      "ex_ru": "Сначала ты спустись, я сейчас приду.",
-      "en": "to go down",
-      "ex_en": "You go down first, I'll be right there."
+      "en": "to go down"
     },
     {
       "zh": "拿",
       "py": "ná",
       "uz": "olmoq, ko'tarmoq",
       "ru": "взять, нести",
-      "ex": "请帮我拿一下。",
-      "expy": "Qǐng bāng wǒ ná yíxià.",
-      "ex_uz": "Iltimos, menga olib bering.",
-      "ex_ru": "Пожалуйста, помоги мне взять.",
-      "en": "to take / carry",
-      "ex_en": "Please help me get it."
+      "en": "to take / carry"
     }
   ],
   "grammarNotes": [

@@ -15,396 +15,231 @@
       "py": "xīnshì",
       "uz": "tashvish, ko'ngildagi dard",
       "ru": "переживание, забота; то, что на душе",
-      "en": "worry; something on one's mind",
-      "ex": "你最近看起来心事很多。",
-      "expy": "Nǐ zuìjìn kànqǐlái xīnshì hěn duō.",
-      "ex_uz": "So'nggi paytlarda xayoling parishonga o'xshaydi.",
-      "ex_ru": "В последнее время ты выглядишь озабоченным.",
-      "ex_en": "You've seemed to have a lot on your mind lately."
+      "en": "worry; something on one's mind"
     },
     {
       "zh": "考虑",
       "py": "kǎolǜ",
       "uz": "o'ylab ko'rmoq, mulohaza qilmoq",
       "ru": "обдумывать, рассматривать",
-      "en": "to consider; to think about",
-      "ex": "我在考虑要不要换工作。",
-      "expy": "Wǒ zài kǎolǜ yào bu yào huàn gōngzuò.",
-      "ex_uz": "Ishni almashtirsammikan, deb o'ylayapman.",
-      "ex_ru": "Я раздумываю, не сменить ли работу.",
-      "ex_en": "I'm thinking about whether to change jobs."
+      "en": "to consider; to think about"
     },
     {
       "zh": "升职",
       "py": "shēngzhí",
       "uz": "lavozimi ko'tarilmoq, mansabga ko'tarilmoq",
       "ru": "получить повышение",
-      "en": "to get promoted",
-      "ex": "你不是刚升职吗？",
-      "expy": "Nǐ bú shì gāng shēngzhí ma?",
-      "ex_uz": "Sen hozirgina lavozimingni ko'tarmadingmi?",
-      "ex_ru": "Тебя же только что повысили?",
-      "ex_en": "Didn't you just get promoted?"
+      "en": "to get promoted"
     },
     {
       "zh": "压力",
       "py": "yālì",
       "uz": "bosim, ruhiy bosim, stress",
       "ru": "давление, стресс",
-      "en": "pressure; stress",
-      "ex": "压力也大了很多。",
-      "expy": "Yālì yě dà le hěn duō.",
-      "ex_uz": "Bosim ham ancha oshdi.",
-      "ex_ru": "Давления стало намного больше.",
-      "ex_en": "The pressure increased a lot too."
+      "en": "pressure; stress"
     },
     {
       "zh": "任务",
       "py": "rènwu",
       "uz": "vazifa, topshiriq",
       "ru": "задача, задание",
-      "en": "task; assignment",
-      "ex": "每天都有新的任务。",
-      "expy": "Měi tiān dōu yǒu xīn de rènwu.",
-      "ex_uz": "Har kuni yangi vazifalar bo'ladi.",
-      "ex_ru": "Каждый день новые задачи.",
-      "ex_en": "Every day there are new tasks."
+      "en": "task; assignment"
     },
     {
       "zh": "加班",
       "py": "jiābān",
       "uz": "qo'shimcha ishlamoq, navbatdan tashqari ishlamoq",
       "ru": "работать сверхурочно",
-      "en": "to work overtime",
-      "ex": "经常需要加班。",
-      "expy": "Jīngcháng xūyào jiābān.",
-      "ex_uz": "Ko'pincha qo'shimcha ishlashga to'g'ri keladi.",
-      "ex_ru": "Часто приходится работать сверхурочно.",
-      "ex_en": "I often have to work overtime."
+      "en": "to work overtime"
     },
     {
       "zh": "工资",
       "py": "gōngzī",
       "uz": "maosh, ish haqi",
       "ru": "зарплата",
-      "en": "salary; wages",
-      "ex": "工资还可以。",
-      "expy": "Gōngzī hái kěyǐ.",
-      "ex_uz": "Maosh yomon emas.",
-      "ex_ru": "Зарплата нормальная.",
-      "ex_en": "The salary is okay."
+      "en": "salary; wages"
     },
     {
       "zh": "内容",
       "py": "nèiróng",
       "uz": "mazmun, mundarija",
       "ru": "содержание",
-      "en": "content; work content",
-      "ex": "工作内容让我觉得没有发展空间。",
-      "expy": "Gōngzuò nèiróng ràng wǒ juéde méiyǒu fāzhǎn kōngjiān.",
-      "ex_uz": "Ishning mazmuni menda rivojlanish imkoni yo'qdek tuyg'u uyg'otadi.",
-      "ex_ru": "Содержание работы вызывает ощущение, что нет пространства для роста.",
-      "ex_en": "The work content makes me feel there's no room to grow."
+      "en": "content; work content"
     },
     {
       "zh": "发展",
       "py": "fāzhǎn",
       "uz": "rivojlanish, taraqqiyot",
       "ru": "развитие, рост",
-      "en": "development; growth",
-      "ex": "这个工作有很好的发展。",
-      "expy": "Zhège gōngzuò yǒu hěn hǎo de fāzhǎn.",
-      "ex_uz": "Bu ishda yaxshi rivojlanish bor.",
-      "ex_ru": "У этой работы хорошие перспективы развития.",
-      "ex_en": "This job has good development prospects."
+      "en": "development; growth"
     },
     {
       "zh": "空间",
       "py": "kōngjiān",
       "uz": "bo'shliq, joy, makon",
       "ru": "пространство, место",
-      "en": "space; room",
-      "ex": "这个房间空间很大。",
-      "expy": "Zhège fángjiān kōngjiān hěn dà.",
-      "ex_uz": "Bu xonaning joyi katta.",
-      "ex_ru": "В этой комнате много места.",
-      "ex_en": "This room has a lot of space."
+      "en": "space; room"
     },
     {
       "zh": "发展空间",
       "py": "fāzhǎn kōngjiān",
       "uz": "rivojlanish imkoni, o'sish imkoniyati",
       "ru": "пространство для роста, перспективы развития",
-      "en": "room for growth; development potential",
-      "ex": "这个工作没有发展空间。",
-      "expy": "Zhège gōngzuò méiyǒu fāzhǎn kōngjiān.",
-      "ex_uz": "Bu ishda rivojlanish imkoni yo'q.",
-      "ex_ru": "У этой работы нет пространства для роста.",
-      "ex_en": "This job has no room for growth."
+      "en": "room for growth; development potential"
     },
     {
       "zh": "处理",
       "py": "chǔlǐ",
       "uz": "hal qilmoq, ko'rib chiqmoq, bajarmoq",
       "ru": "решать, обрабатывать, справляться",
-      "en": "to handle; to deal with",
-      "ex": "我不想每天只是处理重复的问题。",
-      "expy": "Wǒ bù xiǎng měi tiān zhǐ shì chǔlǐ chóngfù de wèntí.",
-      "ex_uz": "Men har kuni faqat takrorlanadigan muammolar bilan shug'ullanishni xohlamayman.",
-      "ex_ru": "Я не хочу каждый день решать одни и те же повторяющиеся задачи.",
-      "ex_en": "I don't want to just deal with repetitive problems every day."
+      "en": "to handle; to deal with"
     },
     {
       "zh": "重复",
       "py": "chóngfù",
       "uz": "takrorlanadigan, takrorlamoq",
       "ru": "повторять, повторяющийся",
-      "en": "to repeat; repetitive",
-      "ex": "我不想做重复的工作。",
-      "expy": "Wǒ bù xiǎng zuò chóngfù de gōngzuò.",
-      "ex_uz": "Men takrorlanadigan ishni qilishni xohlamayman.",
-      "ex_ru": "Я не хочу делать повторяющуюся работу.",
-      "ex_en": "I don't want to do repetitive work."
+      "en": "to repeat; repetitive"
     },
     {
       "zh": "接触",
       "py": "jiēchù",
       "uz": "duch kelmoq, tanishmoq, ish olib bormoq",
       "ru": "соприкасаться, иметь дело с, знакомиться",
-      "en": "to come into contact with; to get exposure to",
-      "ex": "我希望能接触更有挑战的项目。",
-      "expy": "Wǒ xīwàng néng jiēchù gèng yǒu tiǎozhàn de xiàngmù.",
-      "ex_uz": "Ko'proq sinovli loyihalar bilan ishlashni istayman.",
-      "ex_ru": "Я надеюсь заняться более сложными проектами.",
-      "ex_en": "I hope to take on more challenging projects."
+      "en": "to come into contact with; to get exposure to"
     },
     {
       "zh": "挑战",
       "py": "tiǎozhàn",
       "uz": "sinov, qiyinchilik, chaqiriq",
       "ru": "вызов, испытание",
-      "en": "challenge",
-      "ex": "我喜欢有挑战的工作。",
-      "expy": "Wǒ xǐhuan yǒu tiǎozhàn de gōngzuò.",
-      "ex_uz": "Menga sinovli ish yoqadi.",
-      "ex_ru": "Мне нравится работа с вызовом.",
-      "ex_en": "I like challenging work."
+      "en": "challenge"
     },
     {
       "zh": "项目",
       "py": "xiàngmù",
       "uz": "loyiha",
       "ru": "проект",
-      "en": "project",
-      "ex": "这个项目很重要。",
-      "expy": "Zhège xiàngmù hěn zhòngyào.",
-      "ex_uz": "Bu loyiha juda muhim.",
-      "ex_ru": "Этот проект очень важный.",
-      "ex_en": "This project is very important."
+      "en": "project"
     },
     {
       "zh": "机会",
       "py": "jīhuì",
       "uz": "imkoniyat, fursat",
       "ru": "возможность, шанс",
-      "en": "opportunity; chance",
-      "ex": "你已经找到新的机会了吗？",
-      "expy": "Nǐ yǐjīng zhǎodào xīn de jīhuì le ma?",
-      "ex_uz": "Yangi imkoniyat topdingmi?",
-      "ex_ru": "Ты уже нашёл новую возможность?",
-      "ex_en": "Have you already found a new opportunity?"
+      "en": "opportunity; chance"
     },
     {
       "zh": "条件",
       "py": "tiáojiàn",
       "uz": "shart, sharoit, taklif",
       "ru": "условия",
-      "en": "conditions; terms; offer",
-      "ex": "这家公司的条件不错。",
-      "expy": "Zhè jiā gōngsī de tiáojiàn búcuò.",
-      "ex_uz": "Bu kompaniyaning shartlari yaxshi.",
-      "ex_ru": "Условия этой компании неплохие.",
-      "ex_en": "This company's terms are good."
+      "en": "conditions; terms; offer"
     },
     {
       "zh": "决定",
       "py": "juédìng",
       "uz": "qaror qilmoq, qaror",
       "ru": "решать, решение",
-      "en": "to decide; decision",
-      "ex": "我还没决定。",
-      "expy": "Wǒ hái méi juédìng.",
-      "ex_uz": "Men hali qaror qilmadim.",
-      "ex_ru": "Я ещё не решил.",
-      "ex_en": "I haven't decided yet."
+      "en": "to decide; decision"
     },
     {
       "zh": "环境",
       "py": "huánjìng",
       "uz": "muhit, atrof-muhit, sharoit",
       "ru": "обстановка, среда",
-      "en": "environment",
-      "ex": "我担心新环境不适合我。",
-      "expy": "Wǒ dānxīn xīn huánjìng bú shìhé wǒ.",
-      "ex_uz": "Yangi muhit menga to'g'ri kelmasligidan xavotirdaman.",
-      "ex_ru": "Боюсь, что новая обстановка мне не подойдёт.",
-      "ex_en": "I'm worried the new environment won't suit me."
+      "en": "environment"
     },
     {
       "zh": "适合",
       "py": "shìhé",
       "uz": "mos kelmoq, to'g'ri kelmoq",
       "ru": "подходить, годиться",
-      "en": "to suit; to be suitable for",
-      "ex": "这个工作很适合你。",
-      "expy": "Zhège gōngzuò hěn shìhé nǐ.",
-      "ex_uz": "Bu ish senga juda mos.",
-      "ex_ru": "Эта работа тебе очень подходит.",
-      "ex_en": "This job suits you well."
+      "en": "to suit; to be suitable for"
     },
     {
       "zh": "同事",
       "py": "tóngshì",
       "uz": "hamkasb, ish o'rtog'i",
       "ru": "коллега, сослуживец",
-      "en": "colleague; coworker",
-      "ex": "同事之间合作得很好。",
-      "expy": "Tóngshì zhījiān hézuò de hěn hǎo.",
-      "ex_uz": "Hamkasblar bir-biri bilan yaxshi hamkorlik qiladi.",
-      "ex_ru": "Коллеги хорошо сотрудничают.",
-      "ex_en": "The colleagues cooperate really well."
+      "en": "colleague; coworker"
     },
     {
       "zh": "合作",
       "py": "hézuò",
       "uz": "hamkorlik qilmoq, hamkorlik",
       "ru": "сотрудничать, сотрудничество",
-      "en": "to cooperate; cooperation",
-      "ex": "我们合作得很好。",
-      "expy": "Wǒmen hézuò de hěn hǎo.",
-      "ex_uz": "Biz yaxshi hamkorlik qilamiz.",
-      "ex_ru": "Мы хорошо сотрудничаем.",
-      "ex_en": "We cooperate really well."
+      "en": "to cooperate; cooperation"
     },
     {
       "zh": "确实",
       "py": "quèshí",
       "uz": "haqiqatan ham, rostdan ham",
       "ru": "действительно, в самом деле",
-      "en": "indeed; really",
-      "ex": "这确实需要考虑。",
-      "expy": "Zhè quèshí xūyào kǎolǜ.",
-      "ex_uz": "Buni haqiqatan ham o'ylab ko'rish kerak.",
-      "ex_ru": "Это действительно стоит обдумать.",
-      "ex_en": "This really does need thought."
+      "en": "indeed; really"
     },
     {
       "zh": "团队",
       "py": "tuánduì",
       "uz": "jamoa, guruh",
       "ru": "команда",
-      "en": "team",
-      "ex": "我们的团队很好。",
-      "expy": "Wǒmen de tuánduì hěn hǎo.",
-      "ex_uz": "Bizning jamoamiz juda yaxshi.",
-      "ex_ru": "Наша команда очень хорошая.",
-      "ex_en": "Our team is great."
+      "en": "team"
     },
     {
       "zh": "状态",
       "py": "zhuàngtài",
       "uz": "holat, ahvol, kayfiyat",
       "ru": "состояние",
-      "en": "state; condition",
-      "ex": "也要看自己的状态。",
-      "expy": "Yě yào kàn zìjǐ de zhuàngtài.",
-      "ex_uz": "O'zingning holatingni ham hisobga olish kerak.",
-      "ex_ru": "Нужно учитывать и собственное состояние.",
-      "ex_en": "You also have to consider your own state."
+      "en": "state; condition"
     },
     {
       "zh": "犹豫",
       "py": "yóuyù",
       "uz": "ikkilanmoq, taraddudlanmoq",
       "ru": "колебаться, сомневаться",
-      "en": "to hesitate",
-      "ex": "所以我很犹豫。",
-      "expy": "Suǒyǐ wǒ hěn yóuyù.",
-      "ex_uz": "Shuning uchun juda ikkilanyapman.",
-      "ex_ru": "Поэтому я так колеблюсь.",
-      "ex_en": "That's why I'm so hesitant."
+      "en": "to hesitate"
     },
     {
       "zh": "一方面……另一方面……",
       "py": "yì fāngmiàn… lìng yì fāngmiàn…",
       "uz": "bir tomondan… ikkinchi tomondan…",
       "ru": "с одной стороны… с другой стороны…",
-      "en": "on one hand… on the other hand…",
-      "ex": "一方面我想改变，另一方面又怕做错选择。",
-      "expy": "Yì fāngmiàn wǒ xiǎng gǎibiàn, lìng yì fāngmiàn yòu pà zuò cuò xuǎnzé.",
-      "ex_uz": "Bir tomondan o'zgarish istayman, ikkinchi tomondan noto'g'ri tanlov qilishdan qo'rqaman.",
-      "ex_ru": "С одной стороны, хочу перемен, с другой — боюсь сделать неправильный выбор.",
-      "ex_en": "On one hand I want change, on the other I'm afraid of making the wrong choice."
+      "en": "on one hand… on the other hand…"
     },
     {
       "zh": "改变",
       "py": "gǎibiàn",
       "uz": "o'zgartirmoq, o'zgarish",
       "ru": "изменять, изменение",
-      "en": "to change; change",
-      "ex": "我想改变现在的生活。",
-      "expy": "Wǒ xiǎng gǎibiàn xiànzài de shēnghuó.",
-      "ex_uz": "Men hozirgi hayotimni o'zgartirmoqchiman.",
-      "ex_ru": "Я хочу изменить нынешнюю жизнь.",
-      "ex_en": "I want to change my current life."
+      "en": "to change; change"
     },
     {
       "zh": "建议",
       "py": "jiànyì",
       "uz": "maslahat, taklif; maslahat bermoq",
       "ru": "совет, предложение; советовать",
-      "en": "suggestion; advice; to suggest",
-      "ex": "这个建议不错。",
-      "expy": "Zhège jiànyì búcuò.",
-      "ex_uz": "Bu yaxshi maslahat.",
-      "ex_ru": "Хороший совет.",
-      "ex_en": "That's a good suggestion."
+      "en": "suggestion; advice; to suggest"
     },
     {
       "zh": "领导",
       "py": "lǐngdǎo",
       "uz": "rahbar, boshliq",
       "ru": "руководитель, начальник",
-      "en": "leader; boss; manager",
-      "ex": "你可以先和领导谈一谈。",
-      "expy": "Nǐ kěyǐ xiān hé lǐngdǎo tán yi tán.",
-      "ex_uz": "Avval rahbaring bilan gaplashib ko'rsang bo'ladi.",
-      "ex_ru": "Сначала можешь поговорить с руководителем.",
-      "ex_en": "You could first talk to your boss."
+      "en": "leader; boss; manager"
     },
     {
       "zh": "沟通",
       "py": "gōutōng",
       "uz": "muloqot qilmoq, gaplashib kelishmoq",
       "ru": "общаться, налаживать контакт",
-      "en": "to communicate",
-      "ex": "先沟通，再决定。",
-      "expy": "Xiān gōutōng, zài juédìng.",
-      "ex_uz": "Avval muloqot qil, keyin qaror qil.",
-      "ex_ru": "Сначала обсуди, потом решай.",
-      "ex_en": "Communicate first, then decide."
+      "en": "to communicate"
     },
     {
       "zh": "稳妥",
       "py": "wěntuǒ",
       "uz": "ishonchli, ehtiyotkor, oqilona",
       "ru": "надёжный, разумный, осмотрительный",
-      "en": "safe; reliable; prudent; sensible",
-      "ex": "这样比较稳妥。",
-      "expy": "Zhèyàng bǐjiào wěntuǒ.",
-      "ex_uz": "Shunday qilgan ma'qulroq.",
-      "ex_ru": "Так надёжнее.",
-      "ex_en": "That way is safer."
+      "en": "safe; reliable; prudent; sensible"
     }
   ],
   "sections": [

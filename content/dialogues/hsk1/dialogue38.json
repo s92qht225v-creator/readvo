@@ -257,72 +257,42 @@
       "py": "jǐnzhāng",
       "uz": "hayajonlanmoq",
       "ru": "нервничать",
-      "ex": "考试前我很紧张。",
-      "expy": "Kǎoshì qián wǒ hěn jǐnzhāng.",
-      "ex_uz": "Imtihon oldidan men juda hayajonlanaman.",
-      "ex_ru": "Перед экзаменом я очень нервничаю.",
-      "en": "to be nervous",
-      "ex_en": "I'm very nervous before the exam."
+      "en": "to be nervous"
     },
     {
       "zh": "最近",
       "py": "zuìjìn",
       "uz": "yaqinda / oxirgi paytlarda",
       "ru": "в последнее время / недавно",
-      "ex": "你最近忙吗？",
-      "expy": "Nǐ zuìjìn máng ma?",
-      "ex_uz": "Yaqinda bandmisan?",
-      "ex_ru": "В последнее время занят?",
-      "en": "recently / lately",
-      "ex_en": "Been busy lately?"
+      "en": "recently / lately"
     },
     {
       "zh": "忙",
       "py": "máng",
       "uz": "band",
       "ru": "занят",
-      "ex": "他每天都很忙。",
-      "expy": "Tā měi tiān dōu hěn máng.",
-      "ex_uz": "U har kuni juda band.",
-      "ex_ru": "Он каждый день очень занят.",
-      "en": "busy",
-      "ex_en": "He's very busy every day."
+      "en": "busy"
     },
     {
       "zh": "考试",
       "py": "kǎoshì",
       "uz": "imtihon",
       "ru": "экзамен",
-      "ex": "明天有考试。",
-      "expy": "Míngtiān yǒu kǎoshì.",
-      "ex_uz": "Ertaga imtihon bor.",
-      "ex_ru": "Завтра экзамен.",
-      "en": "exam",
-      "ex_en": "The exam is tomorrow."
+      "en": "exam"
     },
     {
       "zh": "要",
       "py": "yào",
       "uz": "(-moqchi) / tez orada",
       "ru": "собираться / скоро",
-      "ex": "我要回家了。",
-      "expy": "Wǒ yào huí jiā le.",
-      "ex_uz": "Men uyga qaytmoqchiman.",
-      "ex_ru": "Я собираюсь домой.",
-      "en": "to be about to / soon",
-      "ex_en": "I'm going home."
+      "en": "to be about to / soon"
     },
     {
       "zh": "下个月",
       "py": "xià ge yuè",
       "uz": "keyingi oy",
       "ru": "в следующем месяце",
-      "ex": "下个月我去北京。",
-      "expy": "Xià ge yuè wǒ qù Běijīng.",
-      "ex_uz": "Keyingi oy men Pekinga boraman.",
-      "ex_ru": "В следующем месяце я еду в Пекин.",
-      "en": "next month",
-      "ex_en": "Next month I'm going to Beijing."
+      "en": "next month"
     }
   ],
   "grammarNotes": [

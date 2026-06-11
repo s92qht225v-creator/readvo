@@ -10,22 +10,118 @@
   "tag": "telefon",
   "dateAdded": "2026-06-08",
   "vocab": [
-    { "zh": "找", "py": "zhǎo", "uz": "qidirmoq", "ru": "искать", "en": "to look for", "ex": "你在找什么？", "expy": "Nǐ zài zhǎo shénme?", "ex_uz": "Nima qidiryapsan?", "ex_ru": "Что ты ищешь?", "ex_en": "What are you looking for?" },
-    { "zh": "手机", "py": "shǒujī", "uz": "mobil telefon", "ru": "мобильный телефон", "en": "cell phone", "ex": "我在找我的手机。", "expy": "Wǒ zài zhǎo wǒ de shǒujī.", "ex_uz": "Telefonimni qidiryapman.", "ex_ru": "Я ищу свой телефон.", "ex_en": "I'm looking for my phone." },
-    { "zh": "桌子", "py": "zhuōzi", "uz": "stol", "ru": "стол", "en": "table", "ex": "你看桌子上了吗？", "expy": "Nǐ kàn zhuōzi shàng le ma?", "ex_uz": "Stol ustiga qaradingmi?", "ex_ru": "Ты смотрел на столе?", "ex_en": "Did you look on the table?" },
-    { "zh": "只", "py": "zhǐ", "uz": "faqat", "ru": "только", "en": "only", "ex": "桌子上只有书和杯子。", "expy": "Zhuōzi shàng zhǐ yǒu shū hé bēizi.", "ex_uz": "Stol ustida faqat kitob va stakan bor.", "ex_ru": "На столе только книги и чашка.", "ex_en": "There are only books and a cup on the table." },
-    { "zh": "杯子", "py": "bēizi", "uz": "stakan", "ru": "чашка", "en": "cup", "ex": "桌子上只有书和杯子。", "expy": "Zhuōzi shàng zhǐ yǒu shū hé bēizi.", "ex_uz": "Stol ustida faqat kitob va stakan bor.", "ex_ru": "На столе только книги и чашка.", "ex_en": "There are only books and a cup on the table." },
-    { "zh": "书包", "py": "shūbāo", "uz": "maktab sumkasi", "ru": "школьный портфель", "en": "schoolbag", "ex": "书包里呢？", "expy": "Shūbāo lǐ ne?", "ex_uz": "Sumkang ichida-chi?", "ex_ru": "А в рюкзаке?", "ex_en": "What about in your backpack?" },
-    { "zh": "怎么办", "py": "zěnme bàn", "uz": "nima qilaman?", "ru": "что делать?", "en": "what to do?", "ex": "书包里也没有。怎么办？", "expy": "Shūbāo lǐ yě méi yǒu. Zěnme bàn?", "ex_uz": "Sumkada ham yo'q. Nima qilaman?", "ex_ru": "В рюкзаке тоже нет. Что делать?", "ex_en": "It's not in the backpack either. What should I do?" },
-    { "zh": "别着急", "py": "bié zháojí", "uz": "xavotir olma", "ru": "не волнуйся", "en": "don't worry", "ex": "别着急。我给你打电话。", "expy": "Bié zháojí. Wǒ gěi nǐ dǎ diànhuà.", "ex_uz": "Xavotir olma. Men senga qo'ng'iroq qilaman.", "ex_ru": "Не волнуйся. Я позвоню тебе.", "ex_en": "Don't worry. I'll call your phone." },
-    { "zh": "打电话", "py": "dǎ diànhuà", "uz": "qo'ng'iroq qilmoq", "ru": "звонить", "en": "to make a phone call", "ex": "我给你打电话。", "expy": "Wǒ gěi nǐ dǎ diànhuà.", "ex_uz": "Men senga qo'ng'iroq qilaman.", "ex_ru": "Я позвоню тебе.", "ex_en": "I'll call your phone." },
-    { "zh": "听", "py": "tīng", "uz": "tinglamoq", "ru": "слушать", "en": "to listen", "ex": "你听，手机在响。", "expy": "Nǐ tīng, shǒujī zài xiǎng.", "ex_uz": "Eshit, telefon jiringlayapti.", "ex_ru": "Послушай, телефон звонит.", "ex_en": "Listen, the phone is ringing." },
-    { "zh": "响", "py": "xiǎng", "uz": "jiringlamoq", "ru": "звенеть", "en": "to ring", "ex": "你听，手机在响。", "expy": "Nǐ tīng, shǒujī zài xiǎng.", "ex_uz": "Eshit, telefon jiringlayapti.", "ex_ru": "Послушай, телефон звонит.", "ex_en": "Listen, the phone is ringing." },
-    { "zh": "后口袋", "py": "hòu kǒudài", "uz": "orqa cho'ntak", "ru": "задний карман", "en": "back pocket", "ex": "在我后口袋里。", "expy": "Zài wǒ hòu kǒudài lǐ.", "ex_uz": "Orqa cho'ntagimda.", "ex_ru": "В заднем кармане.", "ex_en": "In my back pocket." },
-    { "zh": "以后", "py": "yǐhòu", "uz": "bundan keyin", "ru": "впредь, потом", "en": "from now on, later", "ex": "以后上课的时候，手机要放好。", "expy": "Yǐhòu shàng kè de shíhòu, shǒujī yào fàng hǎo.", "ex_uz": "Bundan keyin dars vaqtida telefonni joyiga qo'y.", "ex_ru": "В следующий раз на уроке убирай телефон.", "ex_en": "From now on, during class, put your phone away." },
-    { "zh": "上课", "py": "shàng kè", "uz": "darsda bo'lmoq", "ru": "на уроке", "en": "to be in class", "ex": "以后上课的时候，手机要放好。", "expy": "Yǐhòu shàng kè de shíhòu, shǒujī yào fàng hǎo.", "ex_uz": "Bundan keyin dars vaqtida telefonni joyiga qo'y.", "ex_ru": "В следующий раз на уроке убирай телефон.", "ex_en": "From now on, during class, put your phone away." },
-    { "zh": "时候", "py": "shíhou", "uz": "payt, vaqt", "ru": "во время, в течение", "en": "(the time) when, during", "ex": "以后上课的时候，手机要放好。", "expy": "Yǐhòu shàng kè de shíhòu, shǒujī yào fàng hǎo.", "ex_uz": "Bundan keyin dars vaqtida telefonni joyiga qo'y.", "ex_ru": "В следующий раз на уроке убирай телефон.", "ex_en": "From now on, during class, put your phone away." },
-    { "zh": "放好", "py": "fàng hǎo", "uz": "joyiga qo'ymoq", "ru": "убрать на место", "en": "to put away properly", "ex": "手机要放好。", "expy": "Shǒujī yào fàng hǎo.", "ex_uz": "Telefonni joyiga qo'yish kerak.", "ex_ru": "Телефон нужно убрать на место.", "ex_en": "You should put your phone away properly." }
+    {
+      "zh": "找",
+      "py": "zhǎo",
+      "uz": "qidirmoq",
+      "ru": "искать",
+      "en": "to look for"
+    },
+    {
+      "zh": "手机",
+      "py": "shǒujī",
+      "uz": "mobil telefon",
+      "ru": "мобильный телефон",
+      "en": "cell phone"
+    },
+    {
+      "zh": "桌子",
+      "py": "zhuōzi",
+      "uz": "stol",
+      "ru": "стол",
+      "en": "table"
+    },
+    {
+      "zh": "只",
+      "py": "zhǐ",
+      "uz": "faqat",
+      "ru": "только",
+      "en": "only"
+    },
+    {
+      "zh": "杯子",
+      "py": "bēizi",
+      "uz": "stakan",
+      "ru": "чашка",
+      "en": "cup"
+    },
+    {
+      "zh": "书包",
+      "py": "shūbāo",
+      "uz": "maktab sumkasi",
+      "ru": "школьный портфель",
+      "en": "schoolbag"
+    },
+    {
+      "zh": "怎么办",
+      "py": "zěnme bàn",
+      "uz": "nima qilaman?",
+      "ru": "что делать?",
+      "en": "what to do?"
+    },
+    {
+      "zh": "别着急",
+      "py": "bié zháojí",
+      "uz": "xavotir olma",
+      "ru": "не волнуйся",
+      "en": "don't worry"
+    },
+    {
+      "zh": "打电话",
+      "py": "dǎ diànhuà",
+      "uz": "qo'ng'iroq qilmoq",
+      "ru": "звонить",
+      "en": "to make a phone call"
+    },
+    {
+      "zh": "听",
+      "py": "tīng",
+      "uz": "tinglamoq",
+      "ru": "слушать",
+      "en": "to listen"
+    },
+    {
+      "zh": "响",
+      "py": "xiǎng",
+      "uz": "jiringlamoq",
+      "ru": "звенеть",
+      "en": "to ring"
+    },
+    {
+      "zh": "后口袋",
+      "py": "hòu kǒudài",
+      "uz": "orqa cho'ntak",
+      "ru": "задний карман",
+      "en": "back pocket"
+    },
+    {
+      "zh": "以后",
+      "py": "yǐhòu",
+      "uz": "bundan keyin",
+      "ru": "впредь, потом",
+      "en": "from now on, later"
+    },
+    {
+      "zh": "上课",
+      "py": "shàng kè",
+      "uz": "darsda bo'lmoq",
+      "ru": "на уроке",
+      "en": "to be in class"
+    },
+    {
+      "zh": "时候",
+      "py": "shíhou",
+      "uz": "payt, vaqt",
+      "ru": "во время, в течение",
+      "en": "(the time) when, during"
+    },
+    {
+      "zh": "放好",
+      "py": "fàng hǎo",
+      "uz": "joyiga qo'ymoq",
+      "ru": "убрать на место",
+      "en": "to put away properly"
+    }
   ],
   "sections": [
     {

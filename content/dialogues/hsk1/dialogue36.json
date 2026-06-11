@@ -259,72 +259,42 @@
       "py": "wèi",
       "uz": "alo",
       "ru": "алло",
-      "ex": "喂，你好！",
-      "expy": "Wèi, nǐ hǎo!",
-      "ex_uz": "Alo, salom!",
-      "ex_ru": "Алло, здравствуйте!",
-      "en": "hello (on the phone)",
-      "ex_en": "Hello!"
+      "en": "hello (on the phone)"
     },
     {
       "zh": "请问",
       "py": "qǐngwèn",
       "uz": "kechirasiz / aytingchi",
       "ru": "скажите пожалуйста",
-      "ex": "请问，这是哪儿？",
-      "expy": "Qǐngwèn, zhè shì nǎr?",
-      "ex_uz": "Kechirasiz, bu qayer?",
-      "ex_ru": "Скажите, где это?",
-      "en": "excuse me, please",
-      "ex_en": "Tell me, where is it?"
+      "en": "excuse me, please"
     },
     {
       "zh": "打",
       "py": "dǎ",
       "uz": "termoq / qo'ng'iroq qilmoq",
       "ru": "набирать / звонить",
-      "ex": "我给你打电话。",
-      "expy": "Wǒ gěi nǐ dǎ diànhuà.",
-      "ex_uz": "Men senga telefon qilaman.",
-      "ex_ru": "Я тебе позвоню.",
-      "en": "to dial / call",
-      "ex_en": "I'll call you."
+      "en": "to dial / call"
     },
     {
       "zh": "错",
       "py": "cuò",
       "uz": "noto'g'ri / xato",
       "ru": "неправильно / ошибка",
-      "ex": "这个字写错了。",
-      "expy": "Zhège zì xiě cuò le.",
-      "ex_uz": "Bu harf noto'g'ri yozilgan.",
-      "ex_ru": "Этот иероглиф написан неправильно.",
-      "en": "wrong / mistake",
-      "ex_en": "This character is written incorrectly."
+      "en": "wrong / mistake"
     },
     {
       "zh": "不好意思",
       "py": "bù hǎoyìsi",
       "uz": "uzr so'rayman",
       "ru": "извините / простите",
-      "ex": "不好意思，我来晚了。",
-      "expy": "Bù hǎoyìsi, wǒ lái wǎn le.",
-      "ex_uz": "Uzr, men kech keldim.",
-      "ex_ru": "Извините, я опоздал.",
-      "en": "sorry / excuse me",
-      "ex_en": "Sorry, I'm late."
+      "en": "sorry / excuse me"
     },
     {
       "zh": "没关系",
       "py": "méi guānxi",
       "uz": "hech gap emas",
       "ru": "ничего страшного",
-      "ex": "没关系，下次注意。",
-      "expy": "Méi guānxi, xià cì zhùyì.",
-      "ex_uz": "Hech gap emas, keyingi safar ehtiyot bo'ling.",
-      "ex_ru": "Ничего, в следующий раз будь внимательнее.",
-      "en": "no problem / it's okay",
-      "ex_en": "It's okay, be more careful next time."
+      "en": "no problem / it's okay"
     }
   ],
   "grammarNotes": [

@@ -276,12 +276,7 @@
       "py": "hàomǎ",
       "uz": "raqam / nomer",
       "ru": "номер",
-      "ex": "你的号码是多少？",
-      "expy": "Nǐ de hàomǎ shì duōshao?",
-      "ex_uz": "Raqamingiz necha?",
-      "ex_ru": "Какой у тебя номер?",
-      "en": "number",
-      "ex_en": "What's your number?"
+      "en": "number"
     }
   ]
 }

@@ -75,11 +75,6 @@ interface VocabEntry {
   uz: string;
   ru: string;
   en?: string;
-  ex: string;
-  expy: string;
-  ex_uz: string;
-  ex_ru: string;
-  ex_en?: string;
 }
 
 interface PhraseEntry {
@@ -339,17 +334,17 @@ export function DialogueReader({ dialogue, bookPath, listPath }: DialogueReaderP
   // Vocab: use authored vocab if present, else auto-extract from sentences
   const vocabList = useMemo(() => {
     if (dialogue.vocab && dialogue.vocab.length > 0) {
-      return dialogue.vocab.map(v => ({ zh: v.zh, py: v.py, uz: v.uz, ru: v.ru, en: v.en || '', ex: v.ex, expy: v.expy, exuz: v.ex_uz, exru: v.ex_ru, exen: v.ex_en || '' }));
+      return dialogue.vocab.map(v => ({ zh: v.zh, py: v.py, uz: v.uz, ru: v.ru, en: v.en || '' }));
     }
     const seen = new Set<string>();
-    const words: Array<{ zh: string; py: string; uz: string; ru: string; en: string; ex: string; expy: string; exuz: string; exru: string; exen: string }> = [];
+    const words: Array<{ zh: string; py: string; uz: string; ru: string; en: string }> = [];
     for (const s of allSentences) {
       if (!s.words) continue;
       for (const w of s.words) {
         const zh = s.text_original.slice(w.i[0], w.i[1]);
         if (seen.has(zh) || !zh.trim() || /[，。？！、""''：；]/.test(zh)) continue;
         seen.add(zh);
-        words.push({ zh, py: w.p, uz: w.t, ru: w.tr, en: '', ex: s.text_original, expy: s.pinyin, exuz: s.text_translation, exru: s.text_translation_ru, exen: s.text_translation_en || '' });
+        words.push({ zh, py: w.p, uz: w.t, ru: w.tr, en: '' });
       }
     }
     return words;

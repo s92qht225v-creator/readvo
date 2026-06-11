@@ -422,24 +422,14 @@
       "py": "mǐfàn",
       "uz": "guruch",
       "ru": "рис",
-      "ex": "我想吃米饭。",
-      "expy": "Wǒ xiǎng chī mǐfàn.",
-      "ex_uz": "Men guruch yegim keladi.",
-      "ex_ru": "Я хочу рис.",
-      "en": "rice",
-      "ex_en": "I want rice."
+      "en": "rice"
     },
     {
       "zh": "面条",
       "py": "miàntiáo",
       "uz": "lag'mon / noodle",
       "ru": "лапша",
-      "ex": "他很喜欢吃面条。",
-      "expy": "Tā hěn xǐhuan chī miàntiáo.",
-      "ex_uz": "U lag'mon yeyishni juda yoqtiradi.",
-      "ex_ru": "Он очень любит есть лапшу.",
-      "en": "noodles",
-      "ex_en": "He really loves eating noodles."
+      "en": "noodles"
     }
   ]
 }

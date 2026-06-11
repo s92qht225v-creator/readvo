@@ -10,20 +10,104 @@
   "tag": "kundalik",
   "dateAdded": "2026-06-11",
   "vocab": [
-    { "zh": "周末", "py": "zhōumò", "uz": "dam olish kuni, hafta oxiri", "ru": "выходные", "en": "weekend", "ex": "听说你这个周末要搬家，是真的吗？", "expy": "Tīngshuō nǐ zhège zhōumò yào bānjiā, shì zhēn de ma?", "ex_uz": "Eshitishimcha, shu dam olish kunlari ko'chyapsan, rostmi?", "ex_ru": "Слышал, ты в эти выходные переезжаешь, это правда?", "ex_en": "I heard you're moving this weekend, is that true?" },
-    { "zh": "搬家", "py": "bānjiā", "uz": "ko'chmoq (uy almashtirmoq)", "ru": "переезжать", "en": "to move house", "ex": "听说你这个周末要搬家，是真的吗？", "expy": "Tīngshuō nǐ zhège zhōumò yào bānjiā, shì zhēn de ma?", "ex_uz": "Eshitishimcha, shu dam olish kunlari ko'chyapsan, rostmi?", "ex_ru": "Слышал, ты в эти выходные переезжаешь, это правда?", "ex_en": "I heard you're moving this weekend, is that true?" },
-    { "zh": "已经", "py": "yǐjīng", "uz": "allaqachon", "ru": "уже", "en": "already", "ex": "我已经找好了新房子。", "expy": "Wǒ yǐjīng zhǎo hǎo le xīn fángzi.", "ex_uz": "Men yangi uy topib qo'ydim.", "ex_ru": "Я уже нашёл новый дом.", "ex_en": "I've already found a new place." },
-    { "zh": "虽然", "py": "suīrán", "uz": "garchi, ...sa-da", "ru": "хотя", "en": "although", "ex": "虽然不大，但是很安静。", "expy": "Suīrán bú dà, dànshì hěn ānjìng.", "ex_uz": "Garchi katta bo'lmasa-da, juda tinch.", "ex_ru": "Хоть и небольшой, зато очень тихий.", "ex_en": "Although it's not big, it's very quiet." },
-    { "zh": "安静", "py": "ānjìng", "uz": "tinch, jim", "ru": "тихий, спокойный", "en": "quiet", "ex": "虽然不大，但是很安静。", "expy": "Suīrán bú dà, dànshì hěn ānjìng.", "ex_uz": "Garchi katta bo'lmasa-da, juda tinch.", "ex_ru": "Хоть и небольшой, зато очень тихий.", "ex_en": "Although it's not big, it's very quiet." },
-    { "zh": "算", "py": "suàn", "uz": "hisoblanmoq, deb sanalmoq", "ru": "считаться", "en": "to count as, to be considered", "ex": "不算远。", "expy": "Bú suàn yuǎn.", "ex_uz": "Uzoq hisoblanmaydi.", "ex_ru": "Не считается далёким.", "ex_en": "It's not considered far." },
-    { "zh": "骑自行车", "py": "qí zìxíngchē", "uz": "velosipedda yurmoq", "ru": "ездить на велосипеде", "en": "to ride a bike", "ex": "骑自行车大概十五分钟。", "expy": "Qí zìxíngchē dàgài shíwǔ fēnzhōng.", "ex_uz": "Velosipedda taxminan o'n besh daqiqa.", "ex_ru": "На велосипеде примерно пятнадцать минут.", "ex_en": "About fifteen minutes by bike." },
-    { "zh": "大概", "py": "dàgài", "uz": "taxminan", "ru": "примерно, приблизительно", "en": "approximately, about", "ex": "骑自行车大概十五分钟。", "expy": "Qí zìxíngchē dàgài shíwǔ fēnzhōng.", "ex_uz": "Velosipedda taxminan o'n besh daqiqa.", "ex_ru": "На велосипеде примерно пятнадцать минут.", "ex_en": "About fifteen minutes by bike." },
-    { "zh": "方便", "py": "fāngbiàn", "uz": "qulay", "ru": "удобный", "en": "convenient", "ex": "那很方便。", "expy": "Nà hěn fāngbiàn.", "ex_uz": "Bu juda qulay ekan.", "ex_ru": "Это очень удобно.", "ex_en": "That's very convenient." },
-    { "zh": "吵", "py": "chǎo", "uz": "shovqinli", "ru": "шумный", "en": "noisy", "ex": "现在的房子太吵了，晚上经常睡不着。", "expy": "Xiànzài de fángzi tài chǎo le, wǎnshang jīngcháng shuì bu zháo.", "ex_uz": "Hozirgi uyim juda shovqinli, kechasi ko'pincha uxlay olmayman.", "ex_ru": "Нынешний дом слишком шумный, по ночам часто не могу уснуть.", "ex_en": "My current place is too noisy; I often can't fall asleep at night." },
-    { "zh": "经常", "py": "jīngcháng", "uz": "tez-tez, ko'pincha", "ru": "часто", "en": "often", "ex": "现在的房子太吵了，晚上经常睡不着。", "expy": "Xiànzài de fángzi tài chǎo le, wǎnshang jīngcháng shuì bu zháo.", "ex_uz": "Hozirgi uyim juda shovqinli, kechasi ko'pincha uxlay olmayman.", "ex_ru": "Нынешний дом слишком шумный, по ночам часто не могу уснуть.", "ex_en": "My current place is too noisy; I often can't fall asleep at night." },
-    { "zh": "睡不着", "py": "shuì bu zháo", "uz": "uxlay olmaslik", "ru": "не мочь уснуть", "en": "to be unable to fall asleep", "ex": "晚上经常睡不着。", "expy": "Wǎnshang jīngcháng shuì bu zháo.", "ex_uz": "Kechasi ko'pincha uxlay olmayman.", "ex_ru": "По ночам часто не могу уснуть.", "ex_en": "I often can't fall asleep at night." },
-    { "zh": "准备", "py": "zhǔnbèi", "uz": "tayyorlamoq, tayyorgarlik", "ru": "готовить(ся), подготовка", "en": "to prepare", "ex": "你东西都准备了吗？", "expy": "Nǐ dōngxi dōu zhǔnbèi le ma?", "ex_uz": "Narsalaringni hammasini tayyorladingmi?", "ex_ru": "Ты всё собрал?", "ex_en": "Have you got all your things ready?" },
-    { "zh": "打扫", "py": "dǎsǎo", "uz": "tozalamoq, supurmoq", "ru": "убирать, подметать", "en": "to clean, to sweep", "ex": "可以帮我打扫一下房间。", "expy": "Kěyǐ bāng wǒ dǎsǎo yíxià fángjiān.", "ex_uz": "Xonani tozalashga yordam berishing mumkin.", "ex_ru": "Помоги убрать комнату.", "ex_en": "You could help me clean the room." }
+    {
+      "zh": "周末",
+      "py": "zhōumò",
+      "uz": "dam olish kuni, hafta oxiri",
+      "ru": "выходные",
+      "en": "weekend"
+    },
+    {
+      "zh": "搬家",
+      "py": "bānjiā",
+      "uz": "ko'chmoq (uy almashtirmoq)",
+      "ru": "переезжать",
+      "en": "to move house"
+    },
+    {
+      "zh": "已经",
+      "py": "yǐjīng",
+      "uz": "allaqachon",
+      "ru": "уже",
+      "en": "already"
+    },
+    {
+      "zh": "虽然",
+      "py": "suīrán",
+      "uz": "garchi, ...sa-da",
+      "ru": "хотя",
+      "en": "although"
+    },
+    {
+      "zh": "安静",
+      "py": "ānjìng",
+      "uz": "tinch, jim",
+      "ru": "тихий, спокойный",
+      "en": "quiet"
+    },
+    {
+      "zh": "算",
+      "py": "suàn",
+      "uz": "hisoblanmoq, deb sanalmoq",
+      "ru": "считаться",
+      "en": "to count as, to be considered"
+    },
+    {
+      "zh": "骑自行车",
+      "py": "qí zìxíngchē",
+      "uz": "velosipedda yurmoq",
+      "ru": "ездить на велосипеде",
+      "en": "to ride a bike"
+    },
+    {
+      "zh": "大概",
+      "py": "dàgài",
+      "uz": "taxminan",
+      "ru": "примерно, приблизительно",
+      "en": "approximately, about"
+    },
+    {
+      "zh": "方便",
+      "py": "fāngbiàn",
+      "uz": "qulay",
+      "ru": "удобный",
+      "en": "convenient"
+    },
+    {
+      "zh": "吵",
+      "py": "chǎo",
+      "uz": "shovqinli",
+      "ru": "шумный",
+      "en": "noisy"
+    },
+    {
+      "zh": "经常",
+      "py": "jīngcháng",
+      "uz": "tez-tez, ko'pincha",
+      "ru": "часто",
+      "en": "often"
+    },
+    {
+      "zh": "睡不着",
+      "py": "shuì bu zháo",
+      "uz": "uxlay olmaslik",
+      "ru": "не мочь уснуть",
+      "en": "to be unable to fall asleep"
+    },
+    {
+      "zh": "准备",
+      "py": "zhǔnbèi",
+      "uz": "tayyorlamoq, tayyorgarlik",
+      "ru": "готовить(ся), подготовка",
+      "en": "to prepare"
+    },
+    {
+      "zh": "打扫",
+      "py": "dǎsǎo",
+      "uz": "tozalamoq, supurmoq",
+      "ru": "убирать, подметать",
+      "en": "to clean, to sweep"
+    }
   ],
   "sections": [
     {
@@ -32,22 +116,150 @@
       "heading": "",
       "subheading": "",
       "sentences": [
-        { "id": "d1-s1", "text_original": "听说你这个周末要搬家，是真的吗？", "pinyin": "Tīng shuō nǐ zhè ge zhōu mò yào bān jiā, shì zhēn de ma?", "text_translation": "Eshitishimcha, shu dam olish kunlari ko'chyapsan, rostmi?", "text_translation_ru": "Слышал, ты в эти выходные переезжаешь, это правда?", "text_translation_en": "I heard you're moving this weekend, is that true?", "speaker": "A" },
-        { "id": "d1-s2", "text_original": "是真的。我已经找好了新房子。", "pinyin": "Shì zhēn de. Wǒ yǐ jīng zhǎo hǎo le xīn fáng zi.", "text_translation": "Rost. Men yangi uy topib qo'ydim.", "text_translation_ru": "Правда. Я уже нашёл новый дом.", "text_translation_en": "It's true. I've already found a new place.", "speaker": "B" },
-        { "id": "d1-s3", "text_original": "新房子怎么样？", "pinyin": "Xīn fáng zi zěn me yàng?", "text_translation": "Yangi uy qanday?", "text_translation_ru": "Как новый дом?", "text_translation_en": "How's the new place?", "speaker": "A" },
-        { "id": "d1-s4", "text_original": "虽然不大，但是很安静。", "pinyin": "Suī rán bú dà, dàn shì hěn ān jìng.", "text_translation": "Garchi katta bo'lmasa-da, juda tinch.", "text_translation_ru": "Хоть и небольшой, зато очень тихий.", "text_translation_en": "Although it's not big, it's very quiet.", "speaker": "B" },
-        { "id": "d1-s5", "text_original": "离学校远吗？", "pinyin": "Lí xué xiào yuǎn ma?", "text_translation": "Maktabdan uzoqmi?", "text_translation_ru": "Далеко от школы?", "text_translation_en": "Is it far from school?", "speaker": "A" },
-        { "id": "d1-s6", "text_original": "不算远。骑自行车大概十五分钟。", "pinyin": "Bú suàn yuǎn. Qí zì xíng chē dà gài shí wǔ fēn zhōng.", "text_translation": "Unchalik uzoq emas. Velosipedda taxminan o'n besh daqiqa.", "text_translation_ru": "Не очень далеко. На велосипеде примерно пятнадцать минут.", "text_translation_en": "Not really far. About fifteen minutes by bike.", "speaker": "B" },
-        { "id": "d1-s7", "text_original": "那很方便。你为什么想搬家？", "pinyin": "Nà hěn fāng biàn. Nǐ wèi shén me xiǎng bān jiā?", "text_translation": "Bu qulay ekan. Nega ko'chmoqchisan?", "text_translation_ru": "Это удобно. Почему ты хочешь переехать?", "text_translation_en": "That's convenient. Why do you want to move?", "speaker": "A" },
-        { "id": "d1-s8", "text_original": "现在的房子太吵了，晚上经常睡不着。", "pinyin": "Xiàn zài de fáng zi tài chǎo le, wǎn shàng jīng cháng shuì bu zháo.", "text_translation": "Hozirgi uyim juda shovqinli, kechasi ko'pincha uxlay olmayman.", "text_translation_ru": "Нынешний дом слишком шумный, по ночам часто не могу уснуть.", "text_translation_en": "My current place is too noisy; I often can't fall asleep at night.", "speaker": "B" },
-        { "id": "d1-s9", "text_original": "你一个人搬吗？", "pinyin": "Nǐ yí gè rén bān ma?", "text_translation": "O'zing ko'chyapsanmi?", "text_translation_ru": "Ты переезжаешь один?", "text_translation_en": "Are you moving by yourself?", "speaker": "A" },
-        { "id": "d1-s10", "text_original": "不是。我请了两个朋友帮忙。", "pinyin": "Bú shì. Wǒ qǐng le liǎng gè péng yǒu bāng máng.", "text_translation": "Yo'q. Men ikki do'stimni yordamga chaqirdim.", "text_translation_ru": "Нет. Я попросил двух друзей помочь.", "text_translation_en": "No. I've asked two friends to help.", "speaker": "B" },
-        { "id": "d1-s11", "text_original": "你东西都准备了吗？", "pinyin": "Nǐ dōng xī dōu zhǔn bèi le ma?", "text_translation": "Narsalaringni hammasini tayyorladingmi?", "text_translation_ru": "Ты всё собрал?", "text_translation_en": "Have you got all your things ready?", "speaker": "A" },
-        { "id": "d1-s12", "text_original": "还没有。我今天晚上要收拾书和衣服。", "pinyin": "Hái méi yǒu. Wǒ jīn tiān wǎn shàng yào shōu shi shū hé yī fu.", "text_translation": "Hali yo'q. Bugun kechqurun kitob va kiyimlarimni yig'ishtirishim kerak.", "text_translation_ru": "Ещё нет. Сегодня вечером соберу книги и одежду.", "text_translation_en": "Not yet. Tonight I need to pack up my books and clothes.", "speaker": "B" },
-        { "id": "d1-s13", "text_original": "需要我帮你吗？", "pinyin": "Xū yào wǒ bāng nǐ ma?", "text_translation": "Yordam kerakmi?", "text_translation_ru": "Тебе помочь?", "text_translation_en": "Do you need my help?", "speaker": "A" },
-        { "id": "d1-s14", "text_original": "如果你有时间，可以帮我打扫一下房间。", "pinyin": "Rú guǒ nǐ yǒu shí jiān, kě yǐ bāng wǒ dǎ sǎo yí xià fáng jiān.", "text_translation": "Vaqting bo'lsa, xonani tozalashga yordam berishing mumkin.", "text_translation_ru": "Если есть время, помоги убрать комнату.", "text_translation_en": "If you have time, you could help me clean the room.", "speaker": "B" },
-        { "id": "d1-s15", "text_original": "没问题。我下午过去。", "pinyin": "Méi wèn tí. Wǒ xià wǔ guò qù.", "text_translation": "Muammo yo'q. Tushdan keyin boraman.", "text_translation_ru": "Без проблем. Приду днём.", "text_translation_en": "No problem. I'll come over in the afternoon.", "speaker": "A" },
-        { "id": "d1-s16", "text_original": "太好了。搬完以后，我请你们吃大餐！", "pinyin": "Tài hǎo le. Bān wán yǐ hòu, wǒ qǐng nǐ men chī dà cān!", "text_translation": "Juda yaxshi. Ko'chib bo'lgach, hammangizni katta ziyofatga taklif qilaman!", "text_translation_ru": "Отлично. После переезда угощу вас всех большим обедом!", "text_translation_en": "Great. After the move, I'll treat you all to a big meal!", "speaker": "B" }
+        {
+          "id": "d1-s1",
+          "text_original": "听说你这个周末要搬家，是真的吗？",
+          "pinyin": "Tīng shuō nǐ zhè ge zhōu mò yào bān jiā, shì zhēn de ma?",
+          "text_translation": "Eshitishimcha, shu dam olish kunlari ko'chyapsan, rostmi?",
+          "text_translation_ru": "Слышал, ты в эти выходные переезжаешь, это правда?",
+          "text_translation_en": "I heard you're moving this weekend, is that true?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s2",
+          "text_original": "是真的。我已经找好了新房子。",
+          "pinyin": "Shì zhēn de. Wǒ yǐ jīng zhǎo hǎo le xīn fáng zi.",
+          "text_translation": "Rost. Men yangi uy topib qo'ydim.",
+          "text_translation_ru": "Правда. Я уже нашёл новый дом.",
+          "text_translation_en": "It's true. I've already found a new place.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "新房子怎么样？",
+          "pinyin": "Xīn fáng zi zěn me yàng?",
+          "text_translation": "Yangi uy qanday?",
+          "text_translation_ru": "Как новый дом?",
+          "text_translation_en": "How's the new place?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "虽然不大，但是很安静。",
+          "pinyin": "Suī rán bú dà, dàn shì hěn ān jìng.",
+          "text_translation": "Garchi katta bo'lmasa-da, juda tinch.",
+          "text_translation_ru": "Хоть и небольшой, зато очень тихий.",
+          "text_translation_en": "Although it's not big, it's very quiet.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s5",
+          "text_original": "离学校远吗？",
+          "pinyin": "Lí xué xiào yuǎn ma?",
+          "text_translation": "Maktabdan uzoqmi?",
+          "text_translation_ru": "Далеко от школы?",
+          "text_translation_en": "Is it far from school?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s6",
+          "text_original": "不算远。骑自行车大概十五分钟。",
+          "pinyin": "Bú suàn yuǎn. Qí zì xíng chē dà gài shí wǔ fēn zhōng.",
+          "text_translation": "Unchalik uzoq emas. Velosipedda taxminan o'n besh daqiqa.",
+          "text_translation_ru": "Не очень далеко. На велосипеде примерно пятнадцать минут.",
+          "text_translation_en": "Not really far. About fifteen minutes by bike.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s7",
+          "text_original": "那很方便。你为什么想搬家？",
+          "pinyin": "Nà hěn fāng biàn. Nǐ wèi shén me xiǎng bān jiā?",
+          "text_translation": "Bu qulay ekan. Nega ko'chmoqchisan?",
+          "text_translation_ru": "Это удобно. Почему ты хочешь переехать?",
+          "text_translation_en": "That's convenient. Why do you want to move?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s8",
+          "text_original": "现在的房子太吵了，晚上经常睡不着。",
+          "pinyin": "Xiàn zài de fáng zi tài chǎo le, wǎn shàng jīng cháng shuì bu zháo.",
+          "text_translation": "Hozirgi uyim juda shovqinli, kechasi ko'pincha uxlay olmayman.",
+          "text_translation_ru": "Нынешний дом слишком шумный, по ночам часто не могу уснуть.",
+          "text_translation_en": "My current place is too noisy; I often can't fall asleep at night.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s9",
+          "text_original": "你一个人搬吗？",
+          "pinyin": "Nǐ yí gè rén bān ma?",
+          "text_translation": "O'zing ko'chyapsanmi?",
+          "text_translation_ru": "Ты переезжаешь один?",
+          "text_translation_en": "Are you moving by yourself?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s10",
+          "text_original": "不是。我请了两个朋友帮忙。",
+          "pinyin": "Bú shì. Wǒ qǐng le liǎng gè péng yǒu bāng máng.",
+          "text_translation": "Yo'q. Men ikki do'stimni yordamga chaqirdim.",
+          "text_translation_ru": "Нет. Я попросил двух друзей помочь.",
+          "text_translation_en": "No. I've asked two friends to help.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s11",
+          "text_original": "你东西都准备了吗？",
+          "pinyin": "Nǐ dōng xī dōu zhǔn bèi le ma?",
+          "text_translation": "Narsalaringni hammasini tayyorladingmi?",
+          "text_translation_ru": "Ты всё собрал?",
+          "text_translation_en": "Have you got all your things ready?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s12",
+          "text_original": "还没有。我今天晚上要收拾书和衣服。",
+          "pinyin": "Hái méi yǒu. Wǒ jīn tiān wǎn shàng yào shōu shi shū hé yī fu.",
+          "text_translation": "Hali yo'q. Bugun kechqurun kitob va kiyimlarimni yig'ishtirishim kerak.",
+          "text_translation_ru": "Ещё нет. Сегодня вечером соберу книги и одежду.",
+          "text_translation_en": "Not yet. Tonight I need to pack up my books and clothes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s13",
+          "text_original": "需要我帮你吗？",
+          "pinyin": "Xū yào wǒ bāng nǐ ma?",
+          "text_translation": "Yordam kerakmi?",
+          "text_translation_ru": "Тебе помочь?",
+          "text_translation_en": "Do you need my help?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s14",
+          "text_original": "如果你有时间，可以帮我打扫一下房间。",
+          "pinyin": "Rú guǒ nǐ yǒu shí jiān, kě yǐ bāng wǒ dǎ sǎo yí xià fáng jiān.",
+          "text_translation": "Vaqting bo'lsa, xonani tozalashga yordam berishing mumkin.",
+          "text_translation_ru": "Если есть время, помоги убрать комнату.",
+          "text_translation_en": "If you have time, you could help me clean the room.",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s15",
+          "text_original": "没问题。我下午过去。",
+          "pinyin": "Méi wèn tí. Wǒ xià wǔ guò qù.",
+          "text_translation": "Muammo yo'q. Tushdan keyin boraman.",
+          "text_translation_ru": "Без проблем. Приду днём.",
+          "text_translation_en": "No problem. I'll come over in the afternoon.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s16",
+          "text_original": "太好了。搬完以后，我请你们吃大餐！",
+          "pinyin": "Tài hǎo le. Bān wán yǐ hòu, wǒ qǐng nǐ men chī dà cān!",
+          "text_translation": "Juda yaxshi. Ko'chib bo'lgach, hammangizni katta ziyofatga taklif qilaman!",
+          "text_translation_ru": "Отлично. После переезда угощу вас всех большим обедом!",
+          "text_translation_en": "Great. After the move, I'll treat you all to a big meal!",
+          "speaker": "B"
+        }
       ]
     }
   ]

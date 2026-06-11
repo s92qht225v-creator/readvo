@@ -256,72 +256,42 @@
       "py": "jīntiān",
       "uz": "bugun",
       "ru": "сегодня",
-      "ex": "今天天气很好。",
-      "expy": "Jīntiān tiānqì hěn hǎo.",
-      "ex_uz": "Bugun ob-havo juda yaxshi.",
-      "ex_ru": "Сегодня хорошая погода.",
-      "en": "today",
-      "ex_en": "The weather is nice today."
+      "en": "today"
     },
     {
       "zh": "几点",
       "py": "jǐ diǎn",
       "uz": "soat necha",
       "ru": "который час / во сколько",
-      "ex": "现在几点了？",
-      "expy": "Xiànzài jǐ diǎn le?",
-      "ex_uz": "Hozir soat necha bo'ldi?",
-      "ex_ru": "Который сейчас час?",
-      "en": "what time / at what time",
-      "ex_en": "What time is it now?"
+      "en": "what time / at what time"
     },
     {
       "zh": "下班",
       "py": "xiàbān",
       "uz": "ishdan chiqmoq",
       "ru": "закончить работу",
-      "ex": "你几点下班？",
-      "expy": "Nǐ jǐ diǎn xiàbān?",
-      "ex_uz": "Soat nechada ishdan chiqasan?",
-      "ex_ru": "Во сколько ты заканчиваешь работу?",
-      "en": "to finish work",
-      "ex_en": "What time do you finish work?"
+      "en": "to finish work"
     },
     {
       "zh": "加班",
       "py": "jiābān",
       "uz": "qo'shimcha ishlamoq",
       "ru": "работать сверхурочно",
-      "ex": "他经常加班。",
-      "expy": "Tā jīngcháng jiābān.",
-      "ex_uz": "U tez-tez qo'shimcha ishlaydi.",
-      "ex_ru": "Он часто работает сверхурочно.",
-      "en": "to work overtime",
-      "ex_en": "He often works overtime."
+      "en": "to work overtime"
     },
     {
       "zh": "早点",
       "py": "zǎo diǎn",
       "uz": "ertaroq / tezroq",
       "ru": "пораньше",
-      "ex": "明天早点来。",
-      "expy": "Míngtiān zǎo diǎn lái.",
-      "ex_uz": "Ertaga ertaroq kel.",
-      "ex_ru": "Завтра приходи пораньше.",
-      "en": "earlier",
-      "ex_en": "Come earlier tomorrow."
+      "en": "earlier"
     },
     {
       "zh": "回来",
       "py": "huílái",
       "uz": "qaytib kelmoq",
       "ru": "вернуться",
-      "ex": "你什么时候回来？",
-      "expy": "Nǐ shénme shíhòu huílái?",
-      "ex_uz": "Qachon qaytib kelasan?",
-      "ex_ru": "Когда ты вернёшься?",
-      "en": "to come back / return",
-      "ex_en": "When will you come back?"
+      "en": "to come back / return"
     }
   ],
   "grammarNotes": [

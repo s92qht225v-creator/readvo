@@ -393,96 +393,56 @@
       "py": "wèi shénme",
       "uz": "nega, nima uchun",
       "ru": "почему, зачем",
-      "ex": "你为什么不去？",
-      "expy": "Nǐ wèi shénme bù qù?",
-      "ex_uz": "Nega bormayapsan?",
-      "ex_ru": "Почему ты не идёшь?",
-      "en": "why",
-      "ex_en": "Why aren't you going?"
+      "en": "why"
     },
     {
       "zh": "因为",
       "py": "yīnwèi",
       "uz": "chunki",
       "ru": "потому что",
-      "ex": "因为我很忙。",
-      "expy": "Yīnwèi wǒ hěn máng.",
-      "ex_uz": "Chunki men juda bandman.",
-      "ex_ru": "Потому что я очень занят.",
-      "en": "because",
-      "ex_en": "Because I'm very busy."
+      "en": "because"
     },
     {
       "zh": "封斋",
       "py": "fēng zhāi",
       "uz": "ro'za tutmoq",
       "ru": "соблюдать пост",
-      "ex": "我在封斋。",
-      "expy": "Wǒ zài fēng zhāi.",
-      "ex_uz": "Men ro'za tutayapman.",
-      "ex_ru": "Я соблюдаю пост.",
-      "en": "to fast (observe fasting)",
-      "ex_en": "I'm fasting."
+      "en": "to fast (observe fasting)"
     },
     {
       "zh": "斋月",
       "py": "zhāi yuè",
       "uz": "Ramazon oyi",
       "ru": "месяц Рамадан",
-      "ex": "现在是斋月。",
-      "expy": "Xiànzài shì zhāi yuè.",
-      "ex_uz": "Hozir Ramazon oyi.",
-      "ex_ru": "Сейчас месяц Рамадан.",
-      "en": "month of Ramadan",
-      "ex_en": "It's Ramadan now."
+      "en": "month of Ramadan"
     },
     {
       "zh": "白天",
       "py": "báitiān",
       "uz": "kunduz",
       "ru": "днём",
-      "ex": "白天不吃饭。",
-      "expy": "Báitiān bù chīfàn.",
-      "ex_uz": "Kunduz ovqat yemaydi.",
-      "ex_ru": "Днём не ест.",
-      "en": "in the afternoon",
-      "ex_en": "Doesn't eat during the day."
+      "en": "in the afternoon"
     },
     {
       "zh": "晚上",
       "py": "wǎnshang",
       "uz": "kechqurun",
       "ru": "вечером",
-      "ex": "晚上吃饭。",
-      "expy": "Wǎnshang chīfàn.",
-      "ex_uz": "Kechqurun ovqat yeydi.",
-      "ex_ru": "Вечером ест.",
-      "en": "in the evening",
-      "ex_en": "Eats in the evening."
+      "en": "in the evening"
     },
     {
       "zh": "辛苦",
       "py": "xīnkǔ",
       "uz": "qiyin, mashaqqatli",
       "ru": "трудно, тяжело",
-      "ex": "工作辛苦吗？",
-      "expy": "Gōngzuò xīnkǔ ma?",
-      "ex_uz": "Ish qiyinmi?",
-      "ex_ru": "Работа тяжёлая?",
-      "en": "difficult / hard",
-      "ex_en": "Is the work hard?"
+      "en": "difficult / hard"
     },
     {
       "zh": "对吗",
       "py": "duì ma",
       "uz": "shundaymi?",
       "ru": "правда?",
-      "ex": "你是学生，对吗？",
-      "expy": "Nǐ shì xuéshēng, duì ma?",
-      "ex_uz": "Sen talabasan, shundaymi?",
-      "ex_ru": "Ты студент, правда?",
-      "en": "really?",
-      "ex_en": "You're a student, right?"
+      "en": "really?"
     }
   ],
   "grammarNotes": [

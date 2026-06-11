@@ -280,12 +280,7 @@
       "py": "chōngdiàn",
       "uz": "zaryadka qilmoq",
       "ru": "заряжать",
-      "ex": "我的手机要充电了。",
-      "expy": "Wǒ de shǒujī yào chōngdiàn le.",
-      "ex_uz": "Telefonimni zaryadka qilishim kerak.",
-      "ex_ru": "Мне нужно зарядить телефон.",
-      "en": "to charge",
-      "ex_en": "I need to charge my phone."
+      "en": "to charge"
     }
   ]
 }

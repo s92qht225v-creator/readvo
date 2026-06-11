@@ -318,72 +318,42 @@
       "py": "ānquándài",
       "uz": "xavfsizlik kamari",
       "ru": "ремень безопасности",
-      "ex": "请系好安全带。",
-      "expy": "Qǐng jì hǎo ānquándài.",
-      "ex_uz": "Iltimos, xavfsizlik kamarini taqing.",
-      "ex_ru": "Пожалуйста, пристегните ремень безопасности.",
-      "en": "seatbelt",
-      "ex_en": "Please fasten your seatbelt."
+      "en": "seatbelt"
     },
     {
       "zh": "系",
       "py": "jì",
       "uz": "taqmoq / bog'lamoq",
       "ru": "пристегнуть / завязать",
-      "ex": "你系好安全带了吗？",
-      "expy": "Nǐ jì hǎo ānquándài le ma?",
-      "ex_uz": "Xavfsizlik kamarini taqdingmi?",
-      "ex_ru": "Ты пристегнул ремень безопасности?",
-      "en": "to fasten / buckle",
-      "ex_en": "Did you fasten your seatbelt?"
+      "en": "to fasten / buckle"
     },
     {
       "zh": "后面",
       "py": "hòumiàn",
       "uz": "orqada / keyinda",
       "ru": "сзади / позади",
-      "ex": "后面的人也来了。",
-      "expy": "Hòumiàn de rén yě lái le.",
-      "ex_uz": "Orqadagilar ham keldi.",
-      "ex_ru": "Люди сзади тоже пришли.",
-      "en": "behind / in the back",
-      "ex_en": "The people in the back also came."
+      "en": "behind / in the back"
     },
     {
       "zh": "也",
       "py": "yě",
       "uz": "ham",
       "ru": "тоже / также",
-      "ex": "我也喜欢中文。",
-      "expy": "Wǒ yě xǐhuan Zhōngwén.",
-      "ex_uz": "Men ham xitoy tilini yoqtiraman.",
-      "ex_ru": "Я тоже люблю китайский.",
-      "en": "also / as well",
-      "ex_en": "I also love Chinese."
+      "en": "also / as well"
     },
     {
       "zh": "出发",
       "py": "chūfā",
       "uz": "jo'namoq / yo'lga chiqmoq",
       "ru": "отправиться / выехать",
-      "ex": "我们八点出发。",
-      "expy": "Wǒmen bā diǎn chūfā.",
-      "ex_uz": "Biz soat sakkizda jo'naymiz.",
-      "ex_ru": "Мы отправляемся в восемь.",
-      "en": "to set off / depart",
-      "ex_en": "We leave at eight."
+      "en": "to set off / depart"
     },
     {
       "zh": "吧",
       "py": "ba",
       "uz": "(-ylik) taklif yuklamasi",
       "ru": "частица предложения",
-      "ex": "我们走吧。",
-      "expy": "Wǒmen zǒu ba.",
-      "ex_uz": "Ketdik.",
-      "ex_ru": "Давай пойдём.",
-      "en": "sentence particle",
-      "ex_en": "Let's go."
+      "en": "sentence particle"
     }
   ],
   "grammarNotes": [

@@ -243,72 +243,42 @@
       "py": "dào",
       "uz": "yetib kelmoq",
       "ru": "прибыть / приехать",
-      "ex": "你什么时候到？",
-      "expy": "Nǐ shénme shíhou dào?",
-      "ex_uz": "Sen qachon yetib kelasan?",
-      "ex_ru": "Когда ты приедешь?",
-      "en": "to arrive",
-      "ex_en": "When will you arrive?"
+      "en": "to arrive"
     },
     {
       "zh": "在",
       "py": "zài",
       "uz": "-da / joylashgan",
       "ru": "в / на / находиться",
-      "ex": "你在哪儿？",
-      "expy": "Nǐ zài nǎr?",
-      "ex_uz": "Sen qayerdasan?",
-      "ex_ru": "Где ты?",
-      "en": "at / in / to be at",
-      "ex_en": "Where are you?"
+      "en": "at / in / to be at"
     },
     {
       "zh": "门口",
       "py": "ménkǒu",
       "uz": "eshik oldi / kirish joyi",
       "ru": "у входа / у двери",
-      "ex": "我在门口等你。",
-      "expy": "Wǒ zài ménkǒu děng nǐ.",
-      "ex_uz": "Men seni eshik oldida kutaman.",
-      "ex_ru": "Я жду тебя у входа.",
-      "en": "at the entrance / at the door",
-      "ex_en": "I'm waiting for you at the entrance."
+      "en": "at the entrance / at the door"
     },
     {
       "zh": "等",
       "py": "děng",
       "uz": "kutmoq",
       "ru": "ждать",
-      "ex": "请等一下。",
-      "expy": "Qǐng děng yíxià.",
-      "ex_uz": "Iltimos, biroz kuting.",
-      "ex_ru": "Пожалуйста, подождите.",
-      "en": "to wait",
-      "ex_en": "Please wait."
+      "en": "to wait"
     },
     {
       "zh": "一下",
       "py": "yíxià",
       "uz": "biroz / bir lahza",
       "ru": "немного / разок",
-      "ex": "看一下这个。",
-      "expy": "Kàn yíxià zhège.",
-      "ex_uz": "Buni bir ko'ring.",
-      "ex_ru": "Посмотри-ка это.",
-      "en": "a little / just once",
-      "ex_en": "Take a look at this."
+      "en": "a little / just once"
     },
     {
       "zh": "哪儿",
       "py": "nǎr",
       "uz": "qayerda",
       "ru": "где",
-      "ex": "你家在哪儿？",
-      "expy": "Nǐ jiā zài nǎr?",
-      "ex_uz": "Uying qayerda?",
-      "ex_ru": "Где твой дом?",
-      "en": "where",
-      "ex_en": "Where is your home?"
+      "en": "where"
     }
   ],
   "grammarNotes": [

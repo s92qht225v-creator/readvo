@@ -10,16 +10,76 @@
   "tag": "salomatlik",
   "dateAdded": "2026-06-11",
   "vocab": [
-    { "zh": "运动", "py": "yùndòng", "uz": "sport, mashq qilmoq", "ru": "спорт, заниматься спортом", "en": "to exercise, sports", "ex": "你今天想运动吗？", "expy": "Nǐ jīntiān xiǎng yùndòng ma?", "ex_uz": "Bugun sport bilan shug'ullanmoqchimisan?", "ex_ru": "Хочешь сегодня позаниматься спортом?", "ex_en": "Do you want to exercise today?" },
-    { "zh": "可是", "py": "kěshì", "uz": "lekin, ammo", "ru": "но, однако", "en": "but, however", "ex": "想，可是我有点儿累。", "expy": "Xiǎng, kěshì wǒ yǒu diǎnr lèi.", "ex_uz": "Xohlayman, lekin biroz charchaganman.", "ex_ru": "Хочу, но я немного устал.", "ex_en": "I do, but I'm a bit tired." },
-    { "zh": "昨天", "py": "zuótiān", "uz": "kecha", "ru": "вчера", "en": "yesterday", "ex": "我昨天晚上睡得很晚。", "expy": "Wǒ zuótiān wǎnshang shuì de hěn wǎn.", "ex_uz": "Men kecha kechqurun juda kech uxladim.", "ex_ru": "Я вчера лёг спать очень поздно.", "ex_en": "I went to sleep very late last night." },
-    { "zh": "跑步", "py": "pǎobù", "uz": "yugurmoq", "ru": "бегать, бег", "en": "to run, running", "ex": "那我们今天不跑步，我们走路好吗？", "expy": "Nà wǒmen jīntiān bù pǎobù, wǒmen zǒulù hǎo ma?", "ex_uz": "Unda bugun yugurmaylik, piyoda yuramizmi?", "ex_ru": "Тогда давай сегодня не бегать, а пройдёмся пешком?", "ex_en": "Then let's not run today, let's walk instead, okay?" },
-    { "zh": "走路", "py": "zǒulù", "uz": "piyoda yurmoq", "ru": "ходить пешком", "en": "to walk", "ex": "走路不太累。", "expy": "Zǒulù bú tài lèi.", "ex_uz": "Piyoda yurish unchalik charchatmaydi.", "ex_ru": "Ходьба не очень утомляет.", "ex_en": "Walking isn't too tiring." },
-    { "zh": "星期", "py": "xīngqī", "uz": "hafta", "ru": "неделя", "en": "week", "ex": "你每个星期运动几次？", "expy": "Nǐ měi gè xīngqī yùndòng jǐ cì?", "ex_uz": "Haftada necha marta sport bilan shug'ullanasan?", "ex_ru": "Сколько раз в неделю ты занимаешься спортом?", "ex_en": "How many times a week do you exercise?" },
-    { "zh": "几次", "py": "jǐ cì", "uz": "necha marta", "ru": "сколько раз", "en": "how many times", "ex": "你每个星期运动几次？", "expy": "Nǐ měi gè xīngqī yùndòng jǐ cì?", "ex_uz": "Haftada necha marta sport bilan shug'ullanasan?", "ex_ru": "Сколько раз в неделю ты занимаешься спортом?", "ex_en": "How many times a week do you exercise?" },
-    { "zh": "少", "py": "shǎo", "uz": "kam, oz", "ru": "мало", "en": "few, little", "ex": "我运动太少了。", "expy": "Wǒ yùndòng tài shǎo le.", "ex_uz": "Men juda kam shug'ullanaman.", "ex_ru": "Я слишком мало занимаюсь.", "ex_en": "I exercise too little." },
-    { "zh": "开始", "py": "kāishǐ", "uz": "boshlamoq, boshlanmoq", "ru": "начинать(ся)", "en": "to begin, to start", "ex": "晚上七点开始。", "expy": "Wǎnshang qī diǎn kāishǐ.", "ex_uz": "Kechqurun soat yettida boshlaymiz.", "ex_ru": "Начинаем в семь вечера.", "ex_en": "We'll start at seven in the evening." },
-    { "zh": "带", "py": "dài", "uz": "olib kelmoq, olib yurmoq", "ru": "брать с собой, носить", "en": "to bring, to carry", "ex": "我带水，你也带水。", "expy": "Wǒ dài shuǐ, nǐ yě dài shuǐ.", "ex_uz": "Men suv olaman, sen ham suv ol.", "ex_ru": "Я возьму воду, ты тоже возьми воду.", "ex_en": "I'll bring water, you bring water too." }
+    {
+      "zh": "运动",
+      "py": "yùndòng",
+      "uz": "sport, mashq qilmoq",
+      "ru": "спорт, заниматься спортом",
+      "en": "to exercise, sports"
+    },
+    {
+      "zh": "可是",
+      "py": "kěshì",
+      "uz": "lekin, ammo",
+      "ru": "но, однако",
+      "en": "but, however"
+    },
+    {
+      "zh": "昨天",
+      "py": "zuótiān",
+      "uz": "kecha",
+      "ru": "вчера",
+      "en": "yesterday"
+    },
+    {
+      "zh": "跑步",
+      "py": "pǎobù",
+      "uz": "yugurmoq",
+      "ru": "бегать, бег",
+      "en": "to run, running"
+    },
+    {
+      "zh": "走路",
+      "py": "zǒulù",
+      "uz": "piyoda yurmoq",
+      "ru": "ходить пешком",
+      "en": "to walk"
+    },
+    {
+      "zh": "星期",
+      "py": "xīngqī",
+      "uz": "hafta",
+      "ru": "неделя",
+      "en": "week"
+    },
+    {
+      "zh": "几次",
+      "py": "jǐ cì",
+      "uz": "necha marta",
+      "ru": "сколько раз",
+      "en": "how many times"
+    },
+    {
+      "zh": "少",
+      "py": "shǎo",
+      "uz": "kam, oz",
+      "ru": "мало",
+      "en": "few, little"
+    },
+    {
+      "zh": "开始",
+      "py": "kāishǐ",
+      "uz": "boshlamoq, boshlanmoq",
+      "ru": "начинать(ся)",
+      "en": "to begin, to start"
+    },
+    {
+      "zh": "带",
+      "py": "dài",
+      "uz": "olib kelmoq, olib yurmoq",
+      "ru": "брать с собой, носить",
+      "en": "to bring, to carry"
+    }
   ],
   "sections": [
     {
@@ -28,19 +88,123 @@
       "heading": "",
       "subheading": "",
       "sentences": [
-        { "id": "d7-s1", "text_original": "你今天想运动吗？", "pinyin": "Nǐ jīn tiān xiǎng yùn dòng ma?", "text_translation": "Bugun sport bilan shug'ullanmoqchimisan?", "text_translation_ru": "Хочешь сегодня позаниматься спортом?", "text_translation_en": "Do you want to exercise today?", "speaker": "A" },
-        { "id": "d7-s2", "text_original": "想，可是我有点儿累。", "pinyin": "Xiǎng, kě shì wǒ yǒu diǎnr lèi.", "text_translation": "Xohlayman, lekin biroz charchaganman.", "text_translation_ru": "Хочу, но я немного устал.", "text_translation_en": "I do, but I'm a bit tired.", "speaker": "B" },
-        { "id": "d7-s3", "text_original": "你为什么累？", "pinyin": "Nǐ wèi shén me lèi?", "text_translation": "Nega charchagansan?", "text_translation_ru": "Почему ты устал?", "text_translation_en": "Why are you tired?", "speaker": "A" },
-        { "id": "d7-s4", "text_original": "我昨天晚上睡得很晚。", "pinyin": "Wǒ zuó tiān wǎn shàng shuì de hěn wǎn.", "text_translation": "Men kecha kechqurun juda kech uxladim.", "text_translation_ru": "Я вчера лёг спать очень поздно.", "text_translation_en": "I went to sleep very late last night.", "speaker": "B" },
-        { "id": "d7-s5", "text_original": "那我们今天不跑步，我们走路好吗？", "pinyin": "Nà wǒ men jīn tiān bù pǎo bù, wǒ men zǒu lù hǎo ma?", "text_translation": "Unda bugun yugurmaylik, piyoda yuramizmi?", "text_translation_ru": "Тогда давай сегодня не бегать, а пройдёмся пешком, хорошо?", "text_translation_en": "Then let's not run today, let's walk instead, okay?", "speaker": "A" },
-        { "id": "d7-s6", "text_original": "好。走路不太累。", "pinyin": "Hǎo. Zǒu lù bú tài lèi.", "text_translation": "Mayli. Piyoda yurish unchalik charchatmaydi.", "text_translation_ru": "Хорошо. Ходьба не очень утомляет.", "text_translation_en": "Okay. Walking isn't too tiring.", "speaker": "B" },
-        { "id": "d7-s7", "text_original": "你每个星期运动几次？", "pinyin": "Nǐ měi gè xīng qī yùn dòng jǐ cì?", "text_translation": "Haftada necha marta sport bilan shug'ullanasan?", "text_translation_ru": "Сколько раз в неделю ты занимаешься спортом?", "text_translation_en": "How many times a week do you exercise?", "speaker": "A" },
-        { "id": "d7-s8", "text_original": "一次。我运动太少了。", "pinyin": "Yí cì. Wǒ yùn dòng tài shǎo le.", "text_translation": "Bir marta. Men juda kam shug'ullanaman.", "text_translation_ru": "Один раз. Я слишком мало занимаюсь.", "text_translation_en": "Once. I exercise too little.", "speaker": "B" },
-        { "id": "d7-s9", "text_original": "以后我们每个星期运动三次，怎么样？", "pinyin": "Yǐ hòu wǒ men měi gè xīng qī yùn dòng sān cì, zěn me yàng?", "text_translation": "Bundan keyin haftada uch marta shug'ullanamiz, qalay?", "text_translation_ru": "Давай впредь заниматься три раза в неделю, как тебе?", "text_translation_en": "From now on let's exercise three times a week, how about that?", "speaker": "A" },
-        { "id": "d7-s10", "text_original": "可以。星期一、星期三和星期五吗？", "pinyin": "Kě yǐ. Xīng qī yī, xīng qī sān hé xīng qī wǔ ma?", "text_translation": "Mayli. Dushanba, chorshanba va juma kunlarimi?", "text_translation_ru": "Можно. Понедельник, среда и пятница?", "text_translation_en": "Sure. Monday, Wednesday and Friday?", "speaker": "B" },
-        { "id": "d7-s11", "text_original": "对。晚上七点开始。", "pinyin": "Duì. Wǎn shàng qī diǎn kāi shǐ.", "text_translation": "Ha. Kechqurun soat yettida boshlaymiz.", "text_translation_ru": "Да. Начинаем в семь вечера.", "text_translation_en": "Right. We'll start at seven in the evening.", "speaker": "A" },
-        { "id": "d7-s12", "text_original": "好。我带水，你也带水。", "pinyin": "Hǎo. Wǒ dài shuǐ, nǐ yě dài shuǐ.", "text_translation": "Mayli. Men suv olaman, sen ham suv ol.", "text_translation_ru": "Хорошо. Я возьму воду, ты тоже возьми воду.", "text_translation_en": "Okay. I'll bring water, you bring water too.", "speaker": "B" },
-        { "id": "d7-s13", "text_original": "没问题。", "pinyin": "Méi wèn tí.", "text_translation": "Muammo yo'q.", "text_translation_ru": "Без проблем.", "text_translation_en": "No problem.", "speaker": "A" }
+        {
+          "id": "d7-s1",
+          "text_original": "你今天想运动吗？",
+          "pinyin": "Nǐ jīn tiān xiǎng yùn dòng ma?",
+          "text_translation": "Bugun sport bilan shug'ullanmoqchimisan?",
+          "text_translation_ru": "Хочешь сегодня позаниматься спортом?",
+          "text_translation_en": "Do you want to exercise today?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s2",
+          "text_original": "想，可是我有点儿累。",
+          "pinyin": "Xiǎng, kě shì wǒ yǒu diǎnr lèi.",
+          "text_translation": "Xohlayman, lekin biroz charchaganman.",
+          "text_translation_ru": "Хочу, но я немного устал.",
+          "text_translation_en": "I do, but I'm a bit tired.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s3",
+          "text_original": "你为什么累？",
+          "pinyin": "Nǐ wèi shén me lèi?",
+          "text_translation": "Nega charchagansan?",
+          "text_translation_ru": "Почему ты устал?",
+          "text_translation_en": "Why are you tired?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s4",
+          "text_original": "我昨天晚上睡得很晚。",
+          "pinyin": "Wǒ zuó tiān wǎn shàng shuì de hěn wǎn.",
+          "text_translation": "Men kecha kechqurun juda kech uxladim.",
+          "text_translation_ru": "Я вчера лёг спать очень поздно.",
+          "text_translation_en": "I went to sleep very late last night.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s5",
+          "text_original": "那我们今天不跑步，我们走路好吗？",
+          "pinyin": "Nà wǒ men jīn tiān bù pǎo bù, wǒ men zǒu lù hǎo ma?",
+          "text_translation": "Unda bugun yugurmaylik, piyoda yuramizmi?",
+          "text_translation_ru": "Тогда давай сегодня не бегать, а пройдёмся пешком, хорошо?",
+          "text_translation_en": "Then let's not run today, let's walk instead, okay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s6",
+          "text_original": "好。走路不太累。",
+          "pinyin": "Hǎo. Zǒu lù bú tài lèi.",
+          "text_translation": "Mayli. Piyoda yurish unchalik charchatmaydi.",
+          "text_translation_ru": "Хорошо. Ходьба не очень утомляет.",
+          "text_translation_en": "Okay. Walking isn't too tiring.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s7",
+          "text_original": "你每个星期运动几次？",
+          "pinyin": "Nǐ měi gè xīng qī yùn dòng jǐ cì?",
+          "text_translation": "Haftada necha marta sport bilan shug'ullanasan?",
+          "text_translation_ru": "Сколько раз в неделю ты занимаешься спортом?",
+          "text_translation_en": "How many times a week do you exercise?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s8",
+          "text_original": "一次。我运动太少了。",
+          "pinyin": "Yí cì. Wǒ yùn dòng tài shǎo le.",
+          "text_translation": "Bir marta. Men juda kam shug'ullanaman.",
+          "text_translation_ru": "Один раз. Я слишком мало занимаюсь.",
+          "text_translation_en": "Once. I exercise too little.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s9",
+          "text_original": "以后我们每个星期运动三次，怎么样？",
+          "pinyin": "Yǐ hòu wǒ men měi gè xīng qī yùn dòng sān cì, zěn me yàng?",
+          "text_translation": "Bundan keyin haftada uch marta shug'ullanamiz, qalay?",
+          "text_translation_ru": "Давай впредь заниматься три раза в неделю, как тебе?",
+          "text_translation_en": "From now on let's exercise three times a week, how about that?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s10",
+          "text_original": "可以。星期一、星期三和星期五吗？",
+          "pinyin": "Kě yǐ. Xīng qī yī, xīng qī sān hé xīng qī wǔ ma?",
+          "text_translation": "Mayli. Dushanba, chorshanba va juma kunlarimi?",
+          "text_translation_ru": "Можно. Понедельник, среда и пятница?",
+          "text_translation_en": "Sure. Monday, Wednesday and Friday?",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s11",
+          "text_original": "对。晚上七点开始。",
+          "pinyin": "Duì. Wǎn shàng qī diǎn kāi shǐ.",
+          "text_translation": "Ha. Kechqurun soat yettida boshlaymiz.",
+          "text_translation_ru": "Да. Начинаем в семь вечера.",
+          "text_translation_en": "Right. We'll start at seven in the evening.",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s12",
+          "text_original": "好。我带水，你也带水。",
+          "pinyin": "Hǎo. Wǒ dài shuǐ, nǐ yě dài shuǐ.",
+          "text_translation": "Mayli. Men suv olaman, sen ham suv ol.",
+          "text_translation_ru": "Хорошо. Я возьму воду, ты тоже возьми воду.",
+          "text_translation_en": "Okay. I'll bring water, you bring water too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s13",
+          "text_original": "没问题。",
+          "pinyin": "Méi wèn tí.",
+          "text_translation": "Muammo yo'q.",
+          "text_translation_ru": "Без проблем.",
+          "text_translation_en": "No problem.",
+          "speaker": "A"
+        }
       ]
     }
   ]
