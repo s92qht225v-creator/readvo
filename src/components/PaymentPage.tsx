@@ -9,9 +9,9 @@ import { trackAll } from '@/utils/analytics';
 
 const PLANS = [
   { id: '1_month', months: 1, price: 50000 },
-  { id: '3_months', months: 3, price: 129000 },
-  { id: '6_months', months: 6, price: 229000 },
-  { id: '12_months', months: 12, price: 399000 },
+  { id: '3_months', months: 3, price: 142500 },
+  { id: '6_months', months: 6, price: 270000 },
+  { id: '12_months', months: 12, price: 510000 },
 ] as const;
 
 const PLAN_LABELS: Record<string, string> = {
@@ -416,7 +416,7 @@ export default function PaymentPage() {
             )}
             {plan.months >= 3 && (
               <span className="payment__plan-badge">
-                {plan.months === 12 ? '-33%' : plan.months === 6 ? '-24%' : '-14%'}
+                {plan.months === 12 ? '-15%' : plan.months === 6 ? '-10%' : '-5%'}
               </span>
             )}
           </button>
