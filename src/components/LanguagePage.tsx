@@ -450,7 +450,12 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
           </div>
           <div className="dr-hero__body">
             <h1 className="sr-only">{({ uz: 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar', ru: 'Китайский язык — уроки HSK 1, диалоги и упражнения', en: 'Chinese — HSK 1 lessons, dialogues and exercises' } as Record<string, string>)[language]}</h1>
-            <div className="dr-hero__level">HSK 1</div>
+            <div className="dr-hero__level">HSK {
+              activeTab === 'dialogues' ? dialogueHskLevel :
+              activeTab === 'flashcards' ? flashcardHskLevel :
+              activeTab === 'writing' ? (hskVersion === '2.0' ? writingHskLevel : '1') :
+              '1'
+            }</div>
             <div className="dr-hero__title" aria-hidden="true">{
               activeTab === 'dialogues' ? '对话' :
               activeTab === 'writing' ? '写字' :
