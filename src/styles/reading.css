@@ -1528,15 +1528,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 .dr-flip__inner {
-  position: relative;
+  display: grid;
   min-height: 78px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
 .dr-flip--open .dr-flip__inner { transform: rotateY(180deg); }
 .dr-flip__face {
-  position: absolute;
-  inset: 0;
+  /* Both faces share one grid cell → the card sizes to the TALLER face,
+     so a card's height is identical regardless of which side is in front. */
+  grid-area: 1 / 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1550,7 +1552,6 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.dr-flip__front { position: relative; }
 .dr-flip__back {
   transform: rotateY(180deg);
   background: #fff7f7;
