@@ -1184,6 +1184,14 @@ body {
 .dr-dialog-body--with-audio {
   padding-bottom: 48px;
 }
+@media (max-width: 600px) {
+  /* Reclaim side width on phones — the conversation sat 16px narrower
+     than the rest of the page on each side, looking pinched. */
+  .dr-dialog-body {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
 
 .dr-lines {
   display: flex;
