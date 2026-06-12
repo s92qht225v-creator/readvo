@@ -11,6 +11,10 @@ create table if not exists public.glossary (
   updated_at timestamptz not null default now(),
   unique (zh, py_norm)
 );
--- No RLS policies: the table is read/written only by the service-role key
--- (server + admin API). Keep RLS disabled so anon/auth roles have no access.
 create index if not exists glossary_zh_idx on public.glossary (zh);
+
+-- Enable RLS with NO policies: the service-role key (server + admin API) bypasses
+-- RLS and keeps full access, while anon/authenticated roles get zero access. The
+-- table is never queried from the browser. (RLS *disabled* would expose the table
+-- to the public anon key — read AND write — which is the opposite of what we want.)
+alter table public.glossary enable row level security;

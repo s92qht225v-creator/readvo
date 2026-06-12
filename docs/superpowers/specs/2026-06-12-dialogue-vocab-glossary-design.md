@@ -92,9 +92,10 @@ create table glossary (
   (zh, py_norm)` constraint guarantees one entry per `(zh, reading)`.
 - **Simplified only** — no traditional column (Blim content is 100% simplified).
 - **No example-sentence columns** — consistent with the prior dead-field cleanup.
-- **RLS / access:** no public access. The app reads server-side via the service-role client;
-  the admin panel writes via the admin API (service-role + admin-password). The browser never
-  touches the table directly.
+- **RLS / access:** **RLS is enabled with no policies.** The service-role key (server reads +
+  admin API writes) bypasses RLS and keeps full access; anon/authenticated roles get zero
+  access. The browser never touches the table directly. (Note: RLS *disabled* would expose the
+  table to the public anon key for read **and write** — the opposite of "no public access".)
 
 ### Reference model — dialogue `vocab[]`
 

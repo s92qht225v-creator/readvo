@@ -41,7 +41,8 @@ coverage/
 .claude/
 .mcp.json
 .superpowers/
-supabase/
+supabase/*
+!supabase/migrations/
 
 # Playwright MCP cache + screenshots
 .playwright-mcp/
