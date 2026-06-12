@@ -275,12 +275,6 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "充电",
-      "py": "chōngdiàn",
-      "uz": "zaryadka qilmoq",
-      "ru": "заряжать",
-      "en": "to charge"
-    }
+    "充电"
   ]
 }

@@ -265,12 +265,6 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xishoujian%20zai%20nar/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "电梯",
-      "py": "diàntī",
-      "uz": "lift",
-      "ru": "лифт",
-      "en": "elevator / lift"
-    }
+    "电梯"
   ]
 }

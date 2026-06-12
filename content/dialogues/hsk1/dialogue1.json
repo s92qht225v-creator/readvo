@@ -370,62 +370,14 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jiao%20shenme%20mingzi/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "你好",
-      "py": "nǐ hǎo",
-      "uz": "salom",
-      "ru": "привет / здравствуйте",
-      "en": "hello"
-    },
-    {
-      "zh": "叫",
-      "py": "jiào",
-      "uz": "deb atalmoq / ismim ... bo'lmoq",
-      "ru": "звать / называться",
-      "en": "to be called / named"
-    },
-    {
-      "zh": "什么",
-      "py": "shénme",
-      "uz": "nima",
-      "ru": "что / какой",
-      "en": "what / which"
-    },
-    {
-      "zh": "名字",
-      "py": "míngzi",
-      "uz": "ism",
-      "ru": "имя",
-      "en": "name"
-    },
-    {
-      "zh": "对",
-      "py": "duì",
-      "uz": "ha, to'g'ri",
-      "ru": "да, верно",
-      "en": "yes, correct"
-    },
-    {
-      "zh": "很高兴",
-      "py": "hěn gāoxìng",
-      "uz": "juda xursand",
-      "ru": "очень рад(а)",
-      "en": "very glad / pleased"
-    },
-    {
-      "zh": "认识",
-      "py": "rènshi",
-      "uz": "tanishmoq",
-      "ru": "познакомиться / знать",
-      "en": "to get to know / to know"
-    },
-    {
-      "zh": "也",
-      "py": "yě",
-      "uz": "ham",
-      "ru": "тоже",
-      "en": "also / too"
-    }
+    "你好",
+    "叫",
+    "什么",
+    "名字",
+    "对",
+    "很高兴",
+    "认识",
+    "也"
   ],
   "grammarNotes": [
     {

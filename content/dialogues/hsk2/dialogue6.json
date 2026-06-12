@@ -10,118 +10,22 @@
   "tag": "telefon",
   "dateAdded": "2026-06-08",
   "vocab": [
-    {
-      "zh": "找",
-      "py": "zhǎo",
-      "uz": "qidirmoq",
-      "ru": "искать",
-      "en": "to look for"
-    },
-    {
-      "zh": "手机",
-      "py": "shǒujī",
-      "uz": "mobil telefon",
-      "ru": "мобильный телефон",
-      "en": "cell phone"
-    },
-    {
-      "zh": "桌子",
-      "py": "zhuōzi",
-      "uz": "stol",
-      "ru": "стол",
-      "en": "table"
-    },
-    {
-      "zh": "只",
-      "py": "zhǐ",
-      "uz": "faqat",
-      "ru": "только",
-      "en": "only"
-    },
-    {
-      "zh": "杯子",
-      "py": "bēizi",
-      "uz": "stakan",
-      "ru": "чашка",
-      "en": "cup"
-    },
-    {
-      "zh": "书包",
-      "py": "shūbāo",
-      "uz": "maktab sumkasi",
-      "ru": "школьный портфель",
-      "en": "schoolbag"
-    },
-    {
-      "zh": "怎么办",
-      "py": "zěnme bàn",
-      "uz": "nima qilaman?",
-      "ru": "что делать?",
-      "en": "what to do?"
-    },
-    {
-      "zh": "别着急",
-      "py": "bié zháojí",
-      "uz": "xavotir olma",
-      "ru": "не волнуйся",
-      "en": "don't worry"
-    },
-    {
-      "zh": "打电话",
-      "py": "dǎ diànhuà",
-      "uz": "qo'ng'iroq qilmoq",
-      "ru": "звонить",
-      "en": "to make a phone call"
-    },
-    {
-      "zh": "听",
-      "py": "tīng",
-      "uz": "tinglamoq",
-      "ru": "слушать",
-      "en": "to listen"
-    },
-    {
-      "zh": "响",
-      "py": "xiǎng",
-      "uz": "jiringlamoq",
-      "ru": "звенеть",
-      "en": "to ring"
-    },
-    {
-      "zh": "后口袋",
-      "py": "hòu kǒudài",
-      "uz": "orqa cho'ntak",
-      "ru": "задний карман",
-      "en": "back pocket"
-    },
-    {
-      "zh": "以后",
-      "py": "yǐhòu",
-      "uz": "bundan keyin",
-      "ru": "впредь, потом",
-      "en": "from now on, later"
-    },
-    {
-      "zh": "上课",
-      "py": "shàng kè",
-      "uz": "darsda bo'lmoq",
-      "ru": "на уроке",
-      "en": "to be in class"
-    },
-    {
-      "zh": "时候",
-      "py": "shíhou",
-      "uz": "payt, vaqt",
-      "ru": "во время, в течение",
-      "en": "(the time) when, during"
-    },
-    {
-      "zh": "放好",
-      "py": "fàng hǎo",
-      "uz": "joyiga qo'ymoq",
-      "ru": "убрать на место",
-      "en": "to put away properly"
-    }
+    "找",
+    "手机",
+    "桌子",
+    "只",
+    "杯子",
+    "书包",
+    "怎么办",
+    "别着急",
+    "打电话",
+    "听",
+    "响",
+    "后口袋",
+    "以后",
+    "上课",
+    "时候",
+    "放好"
   ],
   "sections": [
     {

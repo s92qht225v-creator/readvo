@@ -298,48 +298,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "准备",
-      "py": "zhǔnbèi",
-      "uz": "tayyorlanmoq",
-      "ru": "готовиться",
-      "en": "to prepare"
-    },
-    {
-      "zh": "还",
-      "py": "hái",
-      "uz": "hali / yana",
-      "ru": "ещё",
-      "en": "still / more"
-    },
-    {
-      "zh": "久",
-      "py": "jiǔ",
-      "uz": "uzoq (vaqt)",
-      "ru": "долго",
-      "en": "long (time)"
-    },
-    {
-      "zh": "快",
-      "py": "kuài",
-      "uz": "tez / tezroq",
-      "ru": "быстро / быстрее",
-      "en": "fast / faster"
-    },
-    {
-      "zh": "分钟",
-      "py": "fēnzhōng",
-      "uz": "daqiqa",
-      "ru": "минута",
-      "en": "minute"
-    },
-    {
-      "zh": "迟到",
-      "py": "chídào",
-      "uz": "kechikmoq",
-      "ru": "опоздать",
-      "en": "to be late"
-    }
+    "准备",
+    "还",
+    "久",
+    "快",
+    "分钟",
+    "迟到"
   ],
   "grammarNotes": [
     {

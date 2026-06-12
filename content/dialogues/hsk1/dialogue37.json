@@ -238,48 +238,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "到",
-      "py": "dào",
-      "uz": "yetib kelmoq",
-      "ru": "прибыть / приехать",
-      "en": "to arrive"
-    },
-    {
-      "zh": "在",
-      "py": "zài",
-      "uz": "-da / joylashgan",
-      "ru": "в / на / находиться",
-      "en": "at / in / to be at"
-    },
-    {
-      "zh": "门口",
-      "py": "ménkǒu",
-      "uz": "eshik oldi / kirish joyi",
-      "ru": "у входа / у двери",
-      "en": "at the entrance / at the door"
-    },
-    {
-      "zh": "等",
-      "py": "děng",
-      "uz": "kutmoq",
-      "ru": "ждать",
-      "en": "to wait"
-    },
-    {
-      "zh": "一下",
-      "py": "yíxià",
-      "uz": "biroz / bir lahza",
-      "ru": "немного / разок",
-      "en": "a little / just once"
-    },
-    {
-      "zh": "哪儿",
-      "py": "nǎr",
-      "uz": "qayerda",
-      "ru": "где",
-      "en": "where"
-    }
+    "到",
+    "在",
+    "门口",
+    "等",
+    "一下",
+    "哪儿"
   ],
   "grammarNotes": [
     {

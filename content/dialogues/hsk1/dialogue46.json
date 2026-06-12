@@ -247,47 +247,11 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/jian%20fei/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "干嘛",
-      "py": "gànma",
-      "uz": "nima qilyapsan",
-      "ru": "что делаешь / зачем",
-      "en": "what are you doing / why"
-    },
-    {
-      "zh": "减肥",
-      "py": "jiǎnféi",
-      "uz": "ozmoq / vazn tashlamoq",
-      "ru": "худеть / сбрасывать вес",
-      "en": "to lose weight"
-    },
-    {
-      "zh": "手里",
-      "py": "shǒu lǐ",
-      "uz": "qo'lda",
-      "ru": "в руке",
-      "en": "in hand"
-    },
-    {
-      "zh": "蛋糕",
-      "py": "dàngāo",
-      "uz": "tort / pirojnoe",
-      "ru": "торт / пирожное",
-      "en": "cake / pastry"
-    },
-    {
-      "zh": "明天",
-      "py": "míngtiān",
-      "uz": "ertaga",
-      "ru": "завтра",
-      "en": "tomorrow"
-    },
-    {
-      "zh": "开始",
-      "py": "kāishǐ",
-      "uz": "boshlamoq",
-      "ru": "начинать / начать",
-      "en": "to begin / start"
-    }
+    "干嘛",
+    "减肥",
+    "手里",
+    "蛋糕",
+    "明天",
+    "开始"
   ]
 }

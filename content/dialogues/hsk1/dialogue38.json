@@ -252,48 +252,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "紧张",
-      "py": "jǐnzhāng",
-      "uz": "hayajonlanmoq",
-      "ru": "нервничать",
-      "en": "to be nervous"
-    },
-    {
-      "zh": "最近",
-      "py": "zuìjìn",
-      "uz": "yaqinda / oxirgi paytlarda",
-      "ru": "в последнее время / недавно",
-      "en": "recently / lately"
-    },
-    {
-      "zh": "忙",
-      "py": "máng",
-      "uz": "band",
-      "ru": "занят",
-      "en": "busy"
-    },
-    {
-      "zh": "考试",
-      "py": "kǎoshì",
-      "uz": "imtihon",
-      "ru": "экзамен",
-      "en": "exam"
-    },
-    {
-      "zh": "要",
-      "py": "yào",
-      "uz": "(-moqchi) / tez orada",
-      "ru": "собираться / скоро",
-      "en": "to be about to / soon"
-    },
-    {
-      "zh": "下个月",
-      "py": "xià ge yuè",
-      "uz": "keyingi oy",
-      "ru": "в следующем месяце",
-      "en": "next month"
-    }
+    "紧张",
+    "最近",
+    "忙",
+    "考试",
+    "要",
+    "下个月"
   ],
   "grammarNotes": [
     {

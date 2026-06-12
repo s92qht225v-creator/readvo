@@ -10,104 +10,20 @@
   "tag": "kundalik",
   "dateAdded": "2026-06-11",
   "vocab": [
-    {
-      "zh": "周末",
-      "py": "zhōumò",
-      "uz": "dam olish kuni, hafta oxiri",
-      "ru": "выходные",
-      "en": "weekend"
-    },
-    {
-      "zh": "搬家",
-      "py": "bānjiā",
-      "uz": "ko'chmoq (uy almashtirmoq)",
-      "ru": "переезжать",
-      "en": "to move house"
-    },
-    {
-      "zh": "已经",
-      "py": "yǐjīng",
-      "uz": "allaqachon",
-      "ru": "уже",
-      "en": "already"
-    },
-    {
-      "zh": "虽然",
-      "py": "suīrán",
-      "uz": "garchi, ...sa-da",
-      "ru": "хотя",
-      "en": "although"
-    },
-    {
-      "zh": "安静",
-      "py": "ānjìng",
-      "uz": "tinch, jim",
-      "ru": "тихий, спокойный",
-      "en": "quiet"
-    },
-    {
-      "zh": "算",
-      "py": "suàn",
-      "uz": "hisoblanmoq, deb sanalmoq",
-      "ru": "считаться",
-      "en": "to count as, to be considered"
-    },
-    {
-      "zh": "骑自行车",
-      "py": "qí zìxíngchē",
-      "uz": "velosipedda yurmoq",
-      "ru": "ездить на велосипеде",
-      "en": "to ride a bike"
-    },
-    {
-      "zh": "大概",
-      "py": "dàgài",
-      "uz": "taxminan",
-      "ru": "примерно, приблизительно",
-      "en": "approximately, about"
-    },
-    {
-      "zh": "方便",
-      "py": "fāngbiàn",
-      "uz": "qulay",
-      "ru": "удобный",
-      "en": "convenient"
-    },
-    {
-      "zh": "吵",
-      "py": "chǎo",
-      "uz": "shovqinli",
-      "ru": "шумный",
-      "en": "noisy"
-    },
-    {
-      "zh": "经常",
-      "py": "jīngcháng",
-      "uz": "tez-tez, ko'pincha",
-      "ru": "часто",
-      "en": "often"
-    },
-    {
-      "zh": "睡不着",
-      "py": "shuì bu zháo",
-      "uz": "uxlay olmaslik",
-      "ru": "не мочь уснуть",
-      "en": "to be unable to fall asleep"
-    },
-    {
-      "zh": "准备",
-      "py": "zhǔnbèi",
-      "uz": "tayyorlamoq, tayyorgarlik",
-      "ru": "готовить(ся), подготовка",
-      "en": "to prepare"
-    },
-    {
-      "zh": "打扫",
-      "py": "dǎsǎo",
-      "uz": "tozalamoq, supurmoq",
-      "ru": "убирать, подметать",
-      "en": "to clean, to sweep"
-    }
+    "周末",
+    "搬家",
+    "已经",
+    "虽然",
+    "安静",
+    "算",
+    "骑自行车",
+    "大概",
+    "方便",
+    "吵",
+    "经常",
+    "睡不着",
+    "准备",
+    "打扫"
   ],
   "sections": [
     {

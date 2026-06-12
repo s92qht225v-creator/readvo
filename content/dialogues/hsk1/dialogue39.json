@@ -305,48 +305,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "作业",
-      "py": "zuòyè",
-      "uz": "uy vazifasi",
-      "ru": "домашнее задание",
-      "en": "homework"
-    },
-    {
-      "zh": "写",
-      "py": "xiě",
-      "uz": "yozmoq",
-      "ru": "писать",
-      "en": "to write"
-    },
-    {
-      "zh": "完",
-      "py": "wán",
-      "uz": "tugatmoq / bitmoq",
-      "ru": "закончить / завершить",
-      "en": "to finish / complete"
-    },
-    {
-      "zh": "还",
-      "py": "hái",
-      "uz": "hali, yana",
-      "ru": "ещё",
-      "en": "still / more"
-    },
-    {
-      "zh": "差",
-      "py": "chà",
-      "uz": "yetishmaslik / qolmoq",
-      "ru": "не хватать / осталось",
-      "en": "not enough / remaining"
-    },
-    {
-      "zh": "一半",
-      "py": "yíbàn",
-      "uz": "yarmi",
-      "ru": "половина",
-      "en": "half"
-    }
+    "作业",
+    "写",
+    "完",
+    "还",
+    "差",
+    "一半"
   ],
   "grammarNotes": [
     {

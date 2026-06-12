@@ -245,48 +245,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "外卖",
-      "py": "wàimài",
-      "uz": "dostavka taomi",
-      "ru": "доставка еды",
-      "en": "food delivery"
-    },
-    {
-      "zh": "到",
-      "py": "dào",
-      "uz": "yetib kelmoq",
-      "ru": "прибыть, приехать",
-      "en": "to arrive"
-    },
-    {
-      "zh": "哪儿",
-      "py": "nǎr",
-      "uz": "qayerda",
-      "ru": "где",
-      "en": "where"
-    },
-    {
-      "zh": "楼下",
-      "py": "lóuxià",
-      "uz": "bino pastida",
-      "ru": "внизу (у дома)",
-      "en": "downstairs (at the entrance)"
-    },
-    {
-      "zh": "下去",
-      "py": "xiàqù",
-      "uz": "pastga tushmoq",
-      "ru": "спуститься",
-      "en": "to go down"
-    },
-    {
-      "zh": "拿",
-      "py": "ná",
-      "uz": "olmoq, ko'tarmoq",
-      "ru": "взять, нести",
-      "en": "to take / carry"
-    }
+    "外卖",
+    "到",
+    "哪儿",
+    "楼下",
+    "下去",
+    "拿"
   ],
   "grammarNotes": [
     {

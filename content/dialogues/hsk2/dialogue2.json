@@ -856,76 +856,16 @@
     }
   ],
   "vocab": [
-    {
-      "zh": "饿",
-      "py": "è",
-      "uz": "och",
-      "ru": "голодный",
-      "en": "hungry"
-    },
-    {
-      "zh": "有一点",
-      "py": "yǒu yìdiǎn",
-      "uz": "ozgina, biroz",
-      "ru": "немного",
-      "en": "a little, a bit"
-    },
-    {
-      "zh": "米饭",
-      "py": "mǐfàn",
-      "uz": "guruch (osh)",
-      "ru": "рис (варёный)",
-      "en": "(cooked) rice"
-    },
-    {
-      "zh": "鸡肉",
-      "py": "jīròu",
-      "uz": "tovuq go'shti",
-      "ru": "курица (мясо)",
-      "en": "chicken (meat)"
-    },
-    {
-      "zh": "喝",
-      "py": "hē",
-      "uz": "ichmoq",
-      "ru": "пить",
-      "en": "to drink"
-    },
-    {
-      "zh": "一杯茶",
-      "py": "yì bēi chá",
-      "uz": "bir piyola choy",
-      "ru": "чашка чая",
-      "en": "a cup of tea"
-    },
-    {
-      "zh": "一杯水",
-      "py": "yì bēi shuǐ",
-      "uz": "bir stakan suv",
-      "ru": "стакан воды",
-      "en": "a glass of water"
-    },
-    {
-      "zh": "服务员",
-      "py": "fúwùyuán",
-      "uz": "ofitsiant",
-      "ru": "официант",
-      "en": "waiter, server"
-    },
-    {
-      "zh": "点菜",
-      "py": "diǎn cài",
-      "uz": "ovqat buyurtma qilmoq",
-      "ru": "заказывать (блюда)",
-      "en": "to order (food)"
-    },
-    {
-      "zh": "一碗面条",
-      "py": "yì wǎn miàntiáo",
-      "uz": "bir kosa ugra",
-      "ru": "миска лапши",
-      "en": "a bowl of noodles"
-    }
+    "饿",
+    "有一点",
+    "米饭",
+    "鸡肉",
+    "喝",
+    "一杯茶",
+    "一杯水",
+    "服务员",
+    "点菜",
+    "一碗面条"
   ],
   "grammarNotes": [
     {

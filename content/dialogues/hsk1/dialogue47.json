@@ -388,62 +388,14 @@
   "dateAdded": "2026-02-26",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "为什么",
-      "py": "wèi shénme",
-      "uz": "nega, nima uchun",
-      "ru": "почему, зачем",
-      "en": "why"
-    },
-    {
-      "zh": "因为",
-      "py": "yīnwèi",
-      "uz": "chunki",
-      "ru": "потому что",
-      "en": "because"
-    },
-    {
-      "zh": "封斋",
-      "py": "fēng zhāi",
-      "uz": "ro'za tutmoq",
-      "ru": "соблюдать пост",
-      "en": "to fast (observe fasting)"
-    },
-    {
-      "zh": "斋月",
-      "py": "zhāi yuè",
-      "uz": "Ramazon oyi",
-      "ru": "месяц Рамадан",
-      "en": "month of Ramadan"
-    },
-    {
-      "zh": "白天",
-      "py": "báitiān",
-      "uz": "kunduz",
-      "ru": "днём",
-      "en": "in the afternoon"
-    },
-    {
-      "zh": "晚上",
-      "py": "wǎnshang",
-      "uz": "kechqurun",
-      "ru": "вечером",
-      "en": "in the evening"
-    },
-    {
-      "zh": "辛苦",
-      "py": "xīnkǔ",
-      "uz": "qiyin, mashaqqatli",
-      "ru": "трудно, тяжело",
-      "en": "difficult / hard"
-    },
-    {
-      "zh": "对吗",
-      "py": "duì ma",
-      "uz": "shundaymi?",
-      "ru": "правда?",
-      "en": "really?"
-    }
+    "为什么",
+    "因为",
+    "封斋",
+    "斋月",
+    "白天",
+    "晚上",
+    "辛苦",
+    "对吗"
   ],
   "grammarNotes": [
     {

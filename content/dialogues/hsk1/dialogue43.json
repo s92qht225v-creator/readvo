@@ -313,48 +313,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "安全带",
-      "py": "ānquándài",
-      "uz": "xavfsizlik kamari",
-      "ru": "ремень безопасности",
-      "en": "seatbelt"
-    },
-    {
-      "zh": "系",
-      "py": "jì",
-      "uz": "taqmoq / bog'lamoq",
-      "ru": "пристегнуть / завязать",
-      "en": "to fasten / buckle"
-    },
-    {
-      "zh": "后面",
-      "py": "hòumiàn",
-      "uz": "orqada / keyinda",
-      "ru": "сзади / позади",
-      "en": "behind / in the back"
-    },
-    {
-      "zh": "也",
-      "py": "yě",
-      "uz": "ham",
-      "ru": "тоже / также",
-      "en": "also / as well"
-    },
-    {
-      "zh": "出发",
-      "py": "chūfā",
-      "uz": "jo'namoq / yo'lga chiqmoq",
-      "ru": "отправиться / выехать",
-      "en": "to set off / depart"
-    },
-    {
-      "zh": "吧",
-      "py": "ba",
-      "uz": "(-ylik) taklif yuklamasi",
-      "ru": "частица предложения",
-      "en": "sentence particle"
-    }
+    "安全带",
+    "系",
+    "后面",
+    "也",
+    "出发",
+    "吧"
   ],
   "grammarNotes": [
     {

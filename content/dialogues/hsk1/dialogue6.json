@@ -208,12 +208,6 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "斤",
-      "py": "jīn",
-      "uz": "jin (0,5 kg)",
-      "ru": "цзинь (0,5 кг)",
-      "en": "jin (0.5 kg)"
-    }
+    "斤"
   ]
 }

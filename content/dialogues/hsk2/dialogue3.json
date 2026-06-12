@@ -10,125 +10,23 @@
   "tag": "ob-havo",
   "dateAdded": "2026-05-30",
   "vocab": [
-    {
-      "zh": "今天",
-      "py": "jīntiān",
-      "uz": "bugun",
-      "ru": "сегодня",
-      "en": "today"
-    },
-    {
-      "zh": "天气",
-      "py": "tiānqì",
-      "uz": "ob-havo",
-      "ru": "погода",
-      "en": "weather"
-    },
-    {
-      "zh": "冷",
-      "py": "lěng",
-      "uz": "sovuq",
-      "ru": "холодный",
-      "en": "cold"
-    },
-    {
-      "zh": "下雨",
-      "py": "xià yǔ",
-      "uz": "yomg'ir yog'moq",
-      "ru": "идёт дождь",
-      "en": "to rain"
-    },
-    {
-      "zh": "公园",
-      "py": "gōngyuán",
-      "uz": "park, bog'",
-      "ru": "парк",
-      "en": "park"
-    },
-    {
-      "zh": "时候",
-      "py": "shíhou",
-      "uz": "payt, vaqt",
-      "ru": "во время, в течение",
-      "en": "(the time) when, during"
-    },
-    {
-      "zh": "咖啡店",
-      "py": "kāfēidiàn",
-      "uz": "qahvaxona",
-      "ru": "кофейня",
-      "en": "coffee shop"
-    },
-    {
-      "zh": "学习",
-      "py": "xuéxí",
-      "uz": "o'rganmoq",
-      "ru": "учить, заниматься",
-      "en": "to study"
-    },
-    {
-      "zh": "中文",
-      "py": "Zhōngwén",
-      "uz": "Xitoy tili",
-      "ru": "китайский язык",
-      "en": "Chinese (language)"
-    },
-    {
-      "zh": "每天",
-      "py": "měitiān",
-      "uz": "har kuni",
-      "ru": "каждый день",
-      "en": "every day"
-    },
-    {
-      "zh": "都",
-      "py": "dōu",
-      "uz": "hammasi, har doim",
-      "ru": "все, всё",
-      "en": "all, every (emphatic)"
-    },
-    {
-      "zh": "每隔一天",
-      "py": "měi gé yì tiān",
-      "uz": "kun ora",
-      "ru": "через день",
-      "en": "every other day"
-    },
-    {
-      "zh": "觉得",
-      "py": "juéde",
-      "uz": "deb hisoblamoq, o'ylamoq",
-      "ru": "думать, считать",
-      "en": "to feel, to think"
-    },
-    {
-      "zh": "难",
-      "py": "nán",
-      "uz": "qiyin",
-      "ru": "трудный",
-      "en": "difficult, hard"
-    },
-    {
-      "zh": "有意思",
-      "py": "yǒu yìsi",
-      "uz": "qiziqarli",
-      "ru": "интересный",
-      "en": "interesting"
-    },
-    {
-      "zh": "以后",
-      "py": "yǐhòu",
-      "uz": "keyin, so'ng",
-      "ru": "после, потом",
-      "en": "after, afterwards"
-    },
-    {
-      "zh": "面条",
-      "py": "miàntiáo",
-      "uz": "ugra (lag'mon)",
-      "ru": "лапша",
-      "en": "noodles"
-    }
+    "今天",
+    "天气",
+    "冷",
+    "下雨",
+    "公园",
+    "时候",
+    "咖啡店",
+    "学习",
+    "中文",
+    "每天",
+    "都",
+    "每隔一天",
+    "觉得",
+    "难",
+    "有意思",
+    "以后",
+    "面条"
   ],
   "sections": [
     {

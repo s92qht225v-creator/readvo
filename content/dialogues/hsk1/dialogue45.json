@@ -274,69 +274,15 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "接电话",
-      "py": "jiē diànhuà",
-      "uz": "telefonga javob bermoq",
-      "ru": "ответить на звонок",
-      "en": "to answer a call"
-    },
-    {
-      "zh": "刚才",
-      "py": "gāngcái",
-      "uz": "hozirgina",
-      "ru": "только что",
-      "en": "just now"
-    },
-    {
-      "zh": "开会",
-      "py": "kāihuì",
-      "uz": "yig'ilish o'tkazmoq",
-      "ru": "проводить совещание",
-      "en": "to hold a meeting"
-    },
-    {
-      "zh": "这么",
-      "py": "zhème",
-      "uz": "shuncha / buncha",
-      "ru": "так / настолько",
-      "en": "so / so much"
-    },
-    {
-      "zh": "久",
-      "py": "jiǔ",
-      "uz": "uzoq",
-      "ru": "долго",
-      "en": "long (time)"
-    },
-    {
-      "zh": "事情",
-      "py": "shìqing",
-      "uz": "ish / narsa",
-      "ru": "дело / вещь",
-      "en": "matter / thing"
-    },
-    {
-      "zh": "有点",
-      "py": "yǒudiǎn",
-      "uz": "biroz",
-      "ru": "немного",
-      "en": "a little"
-    },
-    {
-      "zh": "下次",
-      "py": "xià cì",
-      "uz": "keyingi safar",
-      "ru": "в следующий раз",
-      "en": "next time"
-    },
-    {
-      "zh": "说一声",
-      "py": "shuō yì shēng",
-      "uz": "bir og'iz aytmoq",
-      "ru": "предупредить / сказать",
-      "en": "to inform / tell"
-    }
+    "接电话",
+    "刚才",
+    "开会",
+    "这么",
+    "久",
+    "事情",
+    "有点",
+    "下次",
+    "说一声"
   ],
   "grammarNotes": [
     {

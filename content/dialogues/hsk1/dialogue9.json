@@ -271,12 +271,6 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "号码",
-      "py": "hàomǎ",
-      "uz": "raqam / nomer",
-      "ru": "номер",
-      "en": "number"
-    }
+    "号码"
   ]
 }

@@ -251,48 +251,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "今天",
-      "py": "jīntiān",
-      "uz": "bugun",
-      "ru": "сегодня",
-      "en": "today"
-    },
-    {
-      "zh": "几点",
-      "py": "jǐ diǎn",
-      "uz": "soat necha",
-      "ru": "который час / во сколько",
-      "en": "what time / at what time"
-    },
-    {
-      "zh": "下班",
-      "py": "xiàbān",
-      "uz": "ishdan chiqmoq",
-      "ru": "закончить работу",
-      "en": "to finish work"
-    },
-    {
-      "zh": "加班",
-      "py": "jiābān",
-      "uz": "qo'shimcha ishlamoq",
-      "ru": "работать сверхурочно",
-      "en": "to work overtime"
-    },
-    {
-      "zh": "早点",
-      "py": "zǎo diǎn",
-      "uz": "ertaroq / tezroq",
-      "ru": "пораньше",
-      "en": "earlier"
-    },
-    {
-      "zh": "回来",
-      "py": "huílái",
-      "uz": "qaytib kelmoq",
-      "ru": "вернуться",
-      "en": "to come back / return"
-    }
+    "今天",
+    "几点",
+    "下班",
+    "加班",
+    "早点",
+    "回来"
   ],
   "grammarNotes": [
     {

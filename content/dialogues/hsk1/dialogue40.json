@@ -389,48 +389,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "点菜",
-      "py": "diǎn cài",
-      "uz": "ovqat buyurtma bermoq",
-      "ru": "заказать еду",
-      "en": "to order food"
-    },
-    {
-      "zh": "来",
-      "py": "lái",
-      "uz": "olib keling (buyurtma)",
-      "ru": "дайте, принесите (при заказе)",
-      "en": "give / bring (when ordering)"
-    },
-    {
-      "zh": "一份",
-      "py": "yí fèn",
-      "uz": "bir porsiya",
-      "ru": "одна порция",
-      "en": "one serving"
-    },
-    {
-      "zh": "辣",
-      "py": "là",
-      "uz": "achchiq",
-      "ru": "острый",
-      "en": "spicy"
-    },
-    {
-      "zh": "能",
-      "py": "néng",
-      "uz": "-a olmoq (qobiliyat)",
-      "ru": "мочь (способность)",
-      "en": "can (ability)"
-    },
-    {
-      "zh": "再",
-      "py": "zài",
-      "uz": "yana, qayta",
-      "ru": "ещё, снова",
-      "en": "again / once more"
-    }
+    "点菜",
+    "来",
+    "一份",
+    "辣",
+    "能",
+    "再来"
   ],
   "grammarNotes": [
     {

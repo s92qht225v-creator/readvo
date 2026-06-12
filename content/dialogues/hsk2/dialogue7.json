@@ -10,76 +10,16 @@
   "tag": "salomatlik",
   "dateAdded": "2026-06-11",
   "vocab": [
-    {
-      "zh": "运动",
-      "py": "yùndòng",
-      "uz": "sport, mashq qilmoq",
-      "ru": "спорт, заниматься спортом",
-      "en": "to exercise, sports"
-    },
-    {
-      "zh": "可是",
-      "py": "kěshì",
-      "uz": "lekin, ammo",
-      "ru": "но, однако",
-      "en": "but, however"
-    },
-    {
-      "zh": "昨天",
-      "py": "zuótiān",
-      "uz": "kecha",
-      "ru": "вчера",
-      "en": "yesterday"
-    },
-    {
-      "zh": "跑步",
-      "py": "pǎobù",
-      "uz": "yugurmoq",
-      "ru": "бегать, бег",
-      "en": "to run, running"
-    },
-    {
-      "zh": "走路",
-      "py": "zǒulù",
-      "uz": "piyoda yurmoq",
-      "ru": "ходить пешком",
-      "en": "to walk"
-    },
-    {
-      "zh": "星期",
-      "py": "xīngqī",
-      "uz": "hafta",
-      "ru": "неделя",
-      "en": "week"
-    },
-    {
-      "zh": "几次",
-      "py": "jǐ cì",
-      "uz": "necha marta",
-      "ru": "сколько раз",
-      "en": "how many times"
-    },
-    {
-      "zh": "少",
-      "py": "shǎo",
-      "uz": "kam, oz",
-      "ru": "мало",
-      "en": "few, little"
-    },
-    {
-      "zh": "开始",
-      "py": "kāishǐ",
-      "uz": "boshlamoq, boshlanmoq",
-      "ru": "начинать(ся)",
-      "en": "to begin, to start"
-    },
-    {
-      "zh": "带",
-      "py": "dài",
-      "uz": "olib kelmoq, olib yurmoq",
-      "ru": "брать с собой, носить",
-      "en": "to bring, to carry"
-    }
+    "运动",
+    "可是",
+    "昨天",
+    "跑步",
+    "走路",
+    "星期",
+    "几次",
+    "少",
+    "开始",
+    "带"
   ],
   "sections": [
     {

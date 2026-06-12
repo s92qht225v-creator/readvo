@@ -254,48 +254,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20da%20cuo%20le/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "喂",
-      "py": "wèi",
-      "uz": "alo",
-      "ru": "алло",
-      "en": "hello (on the phone)"
-    },
-    {
-      "zh": "请问",
-      "py": "qǐngwèn",
-      "uz": "kechirasiz / aytingchi",
-      "ru": "скажите пожалуйста",
-      "en": "excuse me, please"
-    },
-    {
-      "zh": "打",
-      "py": "dǎ",
-      "uz": "termoq / qo'ng'iroq qilmoq",
-      "ru": "набирать / звонить",
-      "en": "to dial / call"
-    },
-    {
-      "zh": "错",
-      "py": "cuò",
-      "uz": "noto'g'ri / xato",
-      "ru": "неправильно / ошибка",
-      "en": "wrong / mistake"
-    },
-    {
-      "zh": "不好意思",
-      "py": "bù hǎoyìsi",
-      "uz": "uzr so'rayman",
-      "ru": "извините / простите",
-      "en": "sorry / excuse me"
-    },
-    {
-      "zh": "没关系",
-      "py": "méi guānxi",
-      "uz": "hech gap emas",
-      "ru": "ничего страшного",
-      "en": "no problem / it's okay"
-    }
+    "喂",
+    "请问",
+    "打",
+    "错",
+    "不好意思",
+    "没关系"
   ],
   "grammarNotes": [
     {

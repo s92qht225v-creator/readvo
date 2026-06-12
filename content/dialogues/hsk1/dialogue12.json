@@ -392,26 +392,8 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "头疼",
-      "py": "tóuténg",
-      "uz": "bosh og'rig'i",
-      "ru": "головная боль",
-      "en": "headache"
-    },
-    {
-      "zh": "发烧",
-      "py": "fāshāo",
-      "uz": "isitma chiqmoq",
-      "ru": "температура / жар",
-      "en": "temperature / fever"
-    },
-    {
-      "zh": "休息",
-      "py": "xiūxi",
-      "uz": "dam olmoq",
-      "ru": "отдыхать",
-      "en": "to rest"
-    }
+    "头疼",
+    "发烧",
+    "休息"
   ]
 }

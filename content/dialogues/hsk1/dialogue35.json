@@ -310,48 +310,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "走",
-      "py": "zǒu",
-      "uz": "ketmoq / yurmoq",
-      "ru": "уходить / идти",
-      "en": "to leave / go"
-    },
-    {
-      "zh": "坐",
-      "py": "zuò",
-      "uz": "minmoq (transport)",
-      "ru": "ехать на (транспорте)",
-      "en": "to go by (transport)"
-    },
-    {
-      "zh": "火车",
-      "py": "huǒchē",
-      "uz": "poyezd",
-      "ru": "поезд",
-      "en": "train"
-    },
-    {
-      "zh": "飞机",
-      "py": "fēijī",
-      "uz": "samolyot",
-      "ru": "самолёт",
-      "en": "airplane"
-    },
-    {
-      "zh": "还是",
-      "py": "háishi",
-      "uz": "yoki (tanlash savoli)",
-      "ru": "или (в вопросе выбора)",
-      "en": "or (in choice questions)"
-    },
-    {
-      "zh": "送",
-      "py": "sòng",
-      "uz": "kuzatmoq / olib bormoq",
-      "ru": "проводить / отвезти",
-      "en": "to see off / give a ride"
-    }
+    "走",
+    "坐",
+    "火车",
+    "飞机",
+    "还是",
+    "送"
   ],
   "grammarNotes": [
     {

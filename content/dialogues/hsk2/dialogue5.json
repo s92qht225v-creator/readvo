@@ -10,111 +10,21 @@
   "tag": "xarid",
   "dateAdded": "2026-06-04",
   "vocab": [
-    {
-      "zh": "买",
-      "py": "mǎi",
-      "uz": "sotib olmoq",
-      "ru": "покупать",
-      "en": "to buy"
-    },
-    {
-      "zh": "一件",
-      "py": "yí jiàn",
-      "uz": "bitta (kiyim)",
-      "ru": "одна (вещь одежды)",
-      "en": "one (item of clothing)"
-    },
-    {
-      "zh": "衣服",
-      "py": "yīfu",
-      "uz": "kiyim",
-      "ru": "одежда",
-      "en": "clothes"
-    },
-    {
-      "zh": "喜欢",
-      "py": "xǐhuan",
-      "uz": "yoqtirmoq",
-      "ru": "нравиться, любить",
-      "en": "to like"
-    },
-    {
-      "zh": "颜色",
-      "py": "yánsè",
-      "uz": "rang",
-      "ru": "цвет",
-      "en": "color"
-    },
-    {
-      "zh": "蓝色",
-      "py": "lánsè",
-      "uz": "ko'k (rang)",
-      "ru": "синий",
-      "en": "blue"
-    },
-    {
-      "zh": "怎么样",
-      "py": "zěnmeyàng",
-      "uz": "qanday? qalay?",
-      "ru": "как? каков?",
-      "en": "how about? how is it?"
-    },
-    {
-      "zh": "好看",
-      "py": "hǎokàn",
-      "uz": "chiroyli",
-      "ru": "красивый",
-      "en": "good-looking, nice"
-    },
-    {
-      "zh": "贵",
-      "py": "guì",
-      "uz": "qimmat",
-      "ru": "дорогой",
-      "en": "expensive"
-    },
-    {
-      "zh": "便宜",
-      "py": "piányi",
-      "uz": "arzon",
-      "ru": "дешёвый",
-      "en": "cheap"
-    },
-    {
-      "zh": "左边",
-      "py": "zuǒbiān",
-      "uz": "chap tomon",
-      "ru": "левая сторона, слева",
-      "en": "left side"
-    },
-    {
-      "zh": "试一试",
-      "py": "shì yi shì",
-      "uz": "kiyib ko'rmoq",
-      "ru": "примерить, попробовать",
-      "en": "to try (on)"
-    },
-    {
-      "zh": "试衣间",
-      "py": "shìyījiān",
-      "uz": "kiyinish xonasi",
-      "ru": "примерочная",
-      "en": "fitting room"
-    },
-    {
-      "zh": "前面",
-      "py": "qiánmiàn",
-      "uz": "oldinda",
-      "ru": "впереди, спереди",
-      "en": "in front, ahead"
-    },
-    {
-      "zh": "再",
-      "py": "zài",
-      "uz": "keyin, yana",
-      "ru": "потом, затем",
-      "en": "then, afterwards"
-    }
+    "买",
+    "一件",
+    "衣服",
+    "喜欢",
+    "颜色",
+    "蓝色",
+    "怎么样",
+    "好看",
+    "贵",
+    "便宜",
+    "左边",
+    "试一试",
+    "试衣间",
+    "前面",
+    "再"
   ],
   "sections": [
     {

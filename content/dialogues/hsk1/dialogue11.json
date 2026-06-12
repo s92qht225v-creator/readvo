@@ -417,19 +417,7 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "米饭",
-      "py": "mǐfàn",
-      "uz": "guruch",
-      "ru": "рис",
-      "en": "rice"
-    },
-    {
-      "zh": "面条",
-      "py": "miàntiáo",
-      "uz": "lag'mon / noodle",
-      "ru": "лапша",
-      "en": "noodles"
-    }
+    "米饭",
+    "面条"
   ]
 }

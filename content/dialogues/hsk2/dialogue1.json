@@ -1000,83 +1000,17 @@
     }
   ],
   "vocab": [
-    {
-      "zh": "工作",
-      "py": "gōngzuò",
-      "uz": "ish; ishlamoq",
-      "ru": "работа; работать",
-      "en": "job; to work"
-    },
-    {
-      "zh": "医生",
-      "py": "yīshēng",
-      "uz": "shifokor, doktor",
-      "ru": "врач",
-      "en": "doctor"
-    },
-    {
-      "zh": "医院",
-      "py": "yīyuàn",
-      "uz": "kasalxona",
-      "ru": "больница",
-      "en": "hospital"
-    },
-    {
-      "zh": "学校",
-      "py": "xuéxiào",
-      "uz": "maktab",
-      "ru": "школа",
-      "en": "school"
-    },
-    {
-      "zh": "教",
-      "py": "jiāo",
-      "uz": "o'qitmoq, dars bermoq",
-      "ru": "преподавать, учить",
-      "en": "to teach"
-    },
-    {
-      "zh": "中文",
-      "py": "Zhōngwén",
-      "uz": "Xitoy tili",
-      "ru": "китайский язык",
-      "en": "Chinese (language)"
-    },
-    {
-      "zh": "喜欢",
-      "py": "xǐhuan",
-      "uz": "yoqtirmoq",
-      "ru": "нравиться, любить",
-      "en": "to like"
-    },
-    {
-      "zh": "以后",
-      "py": "yǐhòu",
-      "uz": "kelajakda, keyin",
-      "ru": "в будущем, потом",
-      "en": "in the future, later"
-    },
-    {
-      "zh": "因为",
-      "py": "yīnwèi",
-      "uz": "chunki",
-      "ru": "потому что",
-      "en": "because"
-    },
-    {
-      "zh": "帮助",
-      "py": "bāngzhù",
-      "uz": "yordam bermoq; yordam",
-      "ru": "помогать; помощь",
-      "en": "to help; help"
-    },
-    {
-      "zh": "别人",
-      "py": "biéren",
-      "uz": "boshqalar, o'zga odamlar",
-      "ru": "другие (люди)",
-      "en": "others, other people"
-    }
+    "工作",
+    "医生",
+    "医院",
+    "学校",
+    "教",
+    "中文",
+    "喜欢",
+    "以后",
+    "因为",
+    "帮助",
+    "别人"
   ],
   "grammarNotes": [
     {

@@ -225,48 +225,12 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "服务员",
-      "py": "fúwùyuán",
-      "uz": "ofitsiant",
-      "ru": "официант",
-      "en": "waiter"
-    },
-    {
-      "zh": "买单",
-      "py": "mǎidān",
-      "uz": "hisob so'ramoq",
-      "ru": "попросить счёт",
-      "en": "to ask for the bill"
-    },
-    {
-      "zh": "一共",
-      "py": "yígòng",
-      "uz": "hammasi bo'lib",
-      "ru": "всего, итого",
-      "en": "in total"
-    },
-    {
-      "zh": "多少钱",
-      "py": "duōshao qián",
-      "uz": "qancha pul",
-      "ru": "сколько стоит",
-      "en": "how much does it cost"
-    },
-    {
-      "zh": "可以",
-      "py": "kěyǐ",
-      "uz": "mumkin, bo'ladi",
-      "ru": "можно, разрешается",
-      "en": "may / is allowed"
-    },
-    {
-      "zh": "刷卡",
-      "py": "shuākǎ",
-      "uz": "karta bilan to'lamoq",
-      "ru": "оплатить картой",
-      "en": "to pay by card"
-    }
+    "服务员",
+    "买单",
+    "一共",
+    "多少钱",
+    "可以",
+    "刷卡"
   ],
   "grammarNotes": [
     {

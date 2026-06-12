@@ -10,237 +10,39 @@
   "tag": "ish",
   "dateAdded": "2026-06-11",
   "vocab": [
-    {
-      "zh": "心事",
-      "py": "xīnshì",
-      "uz": "tashvish, ko'ngildagi dard",
-      "ru": "переживание, забота; то, что на душе",
-      "en": "worry; something on one's mind"
-    },
-    {
-      "zh": "考虑",
-      "py": "kǎolǜ",
-      "uz": "o'ylab ko'rmoq, mulohaza qilmoq",
-      "ru": "обдумывать, рассматривать",
-      "en": "to consider; to think about"
-    },
-    {
-      "zh": "升职",
-      "py": "shēngzhí",
-      "uz": "lavozimi ko'tarilmoq, mansabga ko'tarilmoq",
-      "ru": "получить повышение",
-      "en": "to get promoted"
-    },
-    {
-      "zh": "压力",
-      "py": "yālì",
-      "uz": "bosim, ruhiy bosim, stress",
-      "ru": "давление, стресс",
-      "en": "pressure; stress"
-    },
-    {
-      "zh": "任务",
-      "py": "rènwu",
-      "uz": "vazifa, topshiriq",
-      "ru": "задача, задание",
-      "en": "task; assignment"
-    },
-    {
-      "zh": "加班",
-      "py": "jiābān",
-      "uz": "qo'shimcha ishlamoq, navbatdan tashqari ishlamoq",
-      "ru": "работать сверхурочно",
-      "en": "to work overtime"
-    },
-    {
-      "zh": "工资",
-      "py": "gōngzī",
-      "uz": "maosh, ish haqi",
-      "ru": "зарплата",
-      "en": "salary; wages"
-    },
-    {
-      "zh": "内容",
-      "py": "nèiróng",
-      "uz": "mazmun, mundarija",
-      "ru": "содержание",
-      "en": "content; work content"
-    },
-    {
-      "zh": "发展",
-      "py": "fāzhǎn",
-      "uz": "rivojlanish, taraqqiyot",
-      "ru": "развитие, рост",
-      "en": "development; growth"
-    },
-    {
-      "zh": "空间",
-      "py": "kōngjiān",
-      "uz": "bo'shliq, joy, makon",
-      "ru": "пространство, место",
-      "en": "space; room"
-    },
-    {
-      "zh": "发展空间",
-      "py": "fāzhǎn kōngjiān",
-      "uz": "rivojlanish imkoni, o'sish imkoniyati",
-      "ru": "пространство для роста, перспективы развития",
-      "en": "room for growth; development potential"
-    },
-    {
-      "zh": "处理",
-      "py": "chǔlǐ",
-      "uz": "hal qilmoq, ko'rib chiqmoq, bajarmoq",
-      "ru": "решать, обрабатывать, справляться",
-      "en": "to handle; to deal with"
-    },
-    {
-      "zh": "重复",
-      "py": "chóngfù",
-      "uz": "takrorlanadigan, takrorlamoq",
-      "ru": "повторять, повторяющийся",
-      "en": "to repeat; repetitive"
-    },
-    {
-      "zh": "接触",
-      "py": "jiēchù",
-      "uz": "duch kelmoq, tanishmoq, ish olib bormoq",
-      "ru": "соприкасаться, иметь дело с, знакомиться",
-      "en": "to come into contact with; to get exposure to"
-    },
-    {
-      "zh": "挑战",
-      "py": "tiǎozhàn",
-      "uz": "sinov, qiyinchilik, chaqiriq",
-      "ru": "вызов, испытание",
-      "en": "challenge"
-    },
-    {
-      "zh": "项目",
-      "py": "xiàngmù",
-      "uz": "loyiha",
-      "ru": "проект",
-      "en": "project"
-    },
-    {
-      "zh": "机会",
-      "py": "jīhuì",
-      "uz": "imkoniyat, fursat",
-      "ru": "возможность, шанс",
-      "en": "opportunity; chance"
-    },
-    {
-      "zh": "条件",
-      "py": "tiáojiàn",
-      "uz": "shart, sharoit, taklif",
-      "ru": "условия",
-      "en": "conditions; terms; offer"
-    },
-    {
-      "zh": "决定",
-      "py": "juédìng",
-      "uz": "qaror qilmoq, qaror",
-      "ru": "решать, решение",
-      "en": "to decide; decision"
-    },
-    {
-      "zh": "环境",
-      "py": "huánjìng",
-      "uz": "muhit, atrof-muhit, sharoit",
-      "ru": "обстановка, среда",
-      "en": "environment"
-    },
-    {
-      "zh": "适合",
-      "py": "shìhé",
-      "uz": "mos kelmoq, to'g'ri kelmoq",
-      "ru": "подходить, годиться",
-      "en": "to suit; to be suitable for"
-    },
-    {
-      "zh": "同事",
-      "py": "tóngshì",
-      "uz": "hamkasb, ish o'rtog'i",
-      "ru": "коллега, сослуживец",
-      "en": "colleague; coworker"
-    },
-    {
-      "zh": "合作",
-      "py": "hézuò",
-      "uz": "hamkorlik qilmoq, hamkorlik",
-      "ru": "сотрудничать, сотрудничество",
-      "en": "to cooperate; cooperation"
-    },
-    {
-      "zh": "确实",
-      "py": "quèshí",
-      "uz": "haqiqatan ham, rostdan ham",
-      "ru": "действительно, в самом деле",
-      "en": "indeed; really"
-    },
-    {
-      "zh": "团队",
-      "py": "tuánduì",
-      "uz": "jamoa, guruh",
-      "ru": "команда",
-      "en": "team"
-    },
-    {
-      "zh": "状态",
-      "py": "zhuàngtài",
-      "uz": "holat, ahvol, kayfiyat",
-      "ru": "состояние",
-      "en": "state; condition"
-    },
-    {
-      "zh": "犹豫",
-      "py": "yóuyù",
-      "uz": "ikkilanmoq, taraddudlanmoq",
-      "ru": "колебаться, сомневаться",
-      "en": "to hesitate"
-    },
-    {
-      "zh": "一方面……另一方面……",
-      "py": "yì fāngmiàn… lìng yì fāngmiàn…",
-      "uz": "bir tomondan… ikkinchi tomondan…",
-      "ru": "с одной стороны… с другой стороны…",
-      "en": "on one hand… on the other hand…"
-    },
-    {
-      "zh": "改变",
-      "py": "gǎibiàn",
-      "uz": "o'zgartirmoq, o'zgarish",
-      "ru": "изменять, изменение",
-      "en": "to change; change"
-    },
-    {
-      "zh": "建议",
-      "py": "jiànyì",
-      "uz": "maslahat, taklif; maslahat bermoq",
-      "ru": "совет, предложение; советовать",
-      "en": "suggestion; advice; to suggest"
-    },
-    {
-      "zh": "领导",
-      "py": "lǐngdǎo",
-      "uz": "rahbar, boshliq",
-      "ru": "руководитель, начальник",
-      "en": "leader; boss; manager"
-    },
-    {
-      "zh": "沟通",
-      "py": "gōutōng",
-      "uz": "muloqot qilmoq, gaplashib kelishmoq",
-      "ru": "общаться, налаживать контакт",
-      "en": "to communicate"
-    },
-    {
-      "zh": "稳妥",
-      "py": "wěntuǒ",
-      "uz": "ishonchli, ehtiyotkor, oqilona",
-      "ru": "надёжный, разумный, осмотрительный",
-      "en": "safe; reliable; prudent; sensible"
-    }
+    "心事",
+    "考虑",
+    "升职",
+    "压力",
+    "任务",
+    "加班",
+    "工资",
+    "内容",
+    "发展",
+    "空间",
+    "发展空间",
+    "处理",
+    "重复",
+    "接触",
+    "挑战",
+    "项目",
+    "机会",
+    "条件",
+    "决定",
+    "环境",
+    "适合",
+    "同事",
+    "合作",
+    "确实",
+    "团队",
+    "状态",
+    "犹豫",
+    "一方面……另一方面……",
+    "改变",
+    "建议",
+    "领导",
+    "沟通",
+    "稳妥"
   ],
   "sections": [
     {

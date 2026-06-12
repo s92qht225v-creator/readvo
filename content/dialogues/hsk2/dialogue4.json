@@ -10,83 +10,17 @@
   "tag": "sayohat",
   "dateAdded": "2026-06-02",
   "vocab": [
-    {
-      "zh": "住",
-      "py": "zhù",
-      "uz": "yashamoq, qolmoq (tunash)",
-      "ru": "жить, останавливаться",
-      "en": "to stay, to live"
-    },
-    {
-      "zh": "房间",
-      "py": "fángjiān",
-      "uz": "xona",
-      "ru": "комната, номер",
-      "en": "room"
-    },
-    {
-      "zh": "干净",
-      "py": "gānjìng",
-      "uz": "toza",
-      "ru": "чистый",
-      "en": "clean"
-    },
-    {
-      "zh": "安静",
-      "py": "ānjìng",
-      "uz": "tinch, jim",
-      "ru": "тихий, спокойный",
-      "en": "quiet"
-    },
-    {
-      "zh": "贵",
-      "py": "guì",
-      "uz": "qimmat",
-      "ru": "дорогой",
-      "en": "expensive"
-    },
-    {
-      "zh": "便宜",
-      "py": "piányi",
-      "uz": "arzon",
-      "ru": "дешёвый",
-      "en": "cheap"
-    },
-    {
-      "zh": "A 离 B 多远",
-      "py": "A lí B duō yuǎn",
-      "uz": "A B dan qancha uzoq",
-      "ru": "Как далеко А от Б",
-      "en": "How far is A from B"
-    },
-    {
-      "zh": "火车站",
-      "py": "huǒchēzhàn",
-      "uz": "vokzal, temir yo'l bekati",
-      "ru": "вокзал",
-      "en": "train station"
-    },
-    {
-      "zh": "坐车",
-      "py": "zuò chē",
-      "uz": "mashinada",
-      "ru": "на машине",
-      "en": "by car"
-    },
-    {
-      "zh": "分钟",
-      "py": "fēnzhōng",
-      "uz": "daqiqa",
-      "ru": "минута",
-      "en": "minute"
-    },
-    {
-      "zh": "到",
-      "py": "dào",
-      "uz": "yetib bormoq",
-      "ru": "прибыть, добраться",
-      "en": "to arrive, to reach"
-    }
+    "住",
+    "房间",
+    "干净",
+    "安静",
+    "贵",
+    "便宜",
+    "A 离 B 多远",
+    "火车站",
+    "坐车",
+    "分钟",
+    "到"
   ],
   "sections": [
     {

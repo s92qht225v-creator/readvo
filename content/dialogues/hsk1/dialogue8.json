@@ -428,12 +428,6 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue.mp3",
   "vocab": [
-    {
-      "zh": "学校",
-      "py": "xuéxiào",
-      "uz": "maktab",
-      "ru": "школа",
-      "en": "school"
-    }
+    "学校"
   ]
 }
