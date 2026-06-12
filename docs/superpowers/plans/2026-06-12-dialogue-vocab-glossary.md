@@ -262,7 +262,9 @@ for (zh, npy), occ in by_key.items():
     glosses = {(o[2].get('uz',''), o[2].get('ru',''), o[2].get('en','')) for o in occ}
     first = occ[0][2]
     hsk = min((o[1] for o in occ if o[1]), default=None)
-    row = {'zh': zh, 'py': first.get('py',''), 'py_norm': npy,
+    # store py in NFC so the DB's GENERATED py_norm matches the app's normPy(); do NOT
+    # emit py_norm (it's a generated column — inserting into it errors).
+    row = {'zh': zh, 'py': unicodedata.normalize('NFC', first.get('py','')), '_npy': npy,
            'uz': first.get('uz',''), 'ru': first.get('ru',''), 'en': first.get('en',''), 'hsk': hsk}
     rows.append(row)
     if len(glosses) > 1:
@@ -271,16 +273,17 @@ for (zh, npy), occ in by_key.items():
 
 # 3. which zh are homographs (need py in refs)?
 ambiguous = {zh for zh in {r['zh'] for r in rows}
-             if len({r['py_norm'] for r in rows if r['zh'] == zh}) > 1}
+             if len({r['_npy'] for r in rows if r['zh'] == zh}) > 1}
 
-# 4. emit seed SQL
+# 4. emit seed SQL — do NOT write py_norm (generated column); ON CONFLICT still
+#    targets the unique (zh, py_norm) constraint.
 def sql_str(s): return "'" + (s or '').replace("'", "''") + "'"
 with open(f'{OUT}/glossary-seed.sql', 'w', encoding='utf-8') as out:
-    out.write('insert into public.glossary (zh, py, py_norm, uz, ru, en, hsk) values\n')
+    out.write('insert into public.glossary (zh, py, uz, ru, en, hsk) values\n')
     vals = []
-    for r in sorted(rows, key=lambda r: (r['hsk'] or 9, r['py_norm'])):
+    for r in sorted(rows, key=lambda r: (r['hsk'] or 9, r['_npy'])):
         hsk = str(r['hsk']) if r['hsk'] else 'null'
-        vals.append(f"  ({sql_str(r['zh'])}, {sql_str(r['py'])}, {sql_str(r['py_norm'])}, "
+        vals.append(f"  ({sql_str(r['zh'])}, {sql_str(r['py'])}, "
                     f"{sql_str(r['uz'])}, {sql_str(r['ru'])}, {sql_str(r['en'])}, {hsk})")
     out.write(',\n'.join(vals) + '\non conflict (zh, py_norm) do nothing;\n')
 
@@ -385,8 +388,15 @@ export type DialoguePageResolved = Omit<DialoguePage, 'vocab'> & { vocab?: Vocab
 
 /** Resolve a dialogue's vocab references against the glossary (server-side). */
 export async function resolveDialogueVocab(d: DialoguePage): Promise<DialoguePageResolved> {
-  const vocab = d.vocab ? await resolveVocab(d.vocab) : undefined;
-  return { ...d, vocab };
+  if (!d.vocab) return { ...d, vocab: undefined };
+  try {
+    return { ...d, vocab: await resolveVocab(d.vocab) };
+  } catch (e) {
+    // getGlossary throws on a Supabase error (so the failure isn't cached);
+    // fall back to undefined → DialogueReader's auto-extract path.
+    console.error('[glossary] resolve failed, falling back to auto-extract:', e);
+    return { ...d, vocab: undefined };
+  }
 }
 ```
 
@@ -461,7 +471,6 @@ function ok(req: NextRequest) {
   const pw = req.headers.get('x-admin-password');
   return !!process.env.ADMIN_PASSWORD && pw === process.env.ADMIN_PASSWORD;
 }
-const norm = (py: string) => py.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
 
 export async function GET(req: NextRequest) {
   if (!ok(req)) return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
@@ -479,7 +488,8 @@ export async function POST(req: NextRequest) {
   for (const k of ['zh', 'py', 'uz', 'ru', 'en'] as const) {
     if (!b[k] || !String(b[k]).trim()) return NextResponse.json({ error: `Missing ${k}` }, { status: 400 });
   }
-  const row = { zh: b.zh.trim(), py: b.py.trim(), py_norm: norm(b.py), uz: b.uz, ru: b.ru, en: b.en,
+  // Store py in NFC; py_norm is a generated column (never set it here).
+  const row = { zh: b.zh.trim(), py: b.py.normalize('NFC').trim(), uz: b.uz, ru: b.ru, en: b.en,
                 hsk: b.hsk ? Number(b.hsk) : null, updated_at: new Date().toISOString() };
   const admin = getSupabaseAdmin();
   const { error } = b.id
