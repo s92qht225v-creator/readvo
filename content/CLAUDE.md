@@ -192,6 +192,15 @@ This file covers JSON format conventions for all content files in `/content/`.
 - Empty lines (no text) are skipped during rendering
 
 ### Dialogue JSON
+
+> **Vocabulary (`vocab[]`) is now a reference list, not inline translations.** A dialogue's
+> `vocab[]` holds references into the central Supabase `glossary` table: bare `"汉字"` strings,
+> `{ "zh", "py" }` for homographs, or `{ "zh", "py?", "uz?", "ru?", "en?" }` to override a gloss
+> for that dialogue's context. Translations live in the `glossary` table (edit them in the admin
+> Glossary tab), resolved server-side at render. To add a NEW word: add its row to the glossary
+> (admin tab or `supabase/migrations/20260612_glossary_seed.sql`) AND list its `zh` in the
+> dialogue's `vocab[]`. Run `npm run validate-glossary` to check every reference resolves.
+
 ```json
 {
   "id": "hsk1-dialogue1",

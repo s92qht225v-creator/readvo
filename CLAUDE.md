@@ -11,7 +11,7 @@ Always read the relevant CLAUDE.md file(s) before modifying any code. Check whic
 Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for language textbooks, designed for Uzbek, Russian, and English-speaking students. It supports multiple languages and books (starting with HSK Chinese). It provides sentence-by-sentence audio playback, pinyin/translation toggles, and a clean, textbook-like UI.
 
 ## Tech Stack
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS (reading.css) with CSS custom properties
 - **Font**: Noto Sans (via `next/font/google`, subsets: latin, cyrillic)
@@ -415,6 +415,12 @@ Only one device can be logged in at a time. New login kicks previous session.
 
 ### Dashboard Stats
 - Total users, active subscriptions, total revenue, pending payments count
+
+### Glossary Tab
+- **What**: CRUD editor for the dialogue-vocabulary glossary (single source of truth for dialogue Words-tab translations).
+- **API**: `src/app/api/admin/glossary/route.ts` — GET (search via sanitized `.or` ilike), POST (insert/update; NFC-normalizes `py`, validates `hsk` 1–6, never writes the generated `py_norm`, maps `23505` → friendly "already exists"), DELETE. All gated by `x-admin-password`. Each write calls `revalidateTag('glossary', 'max')` (guarded) so edits go live without a deploy.
+- **UI**: search box, add/edit form (zh, py, uz, ru, en, hsk), table with edit/delete.
+- **Data**: Supabase `glossary` table — `id, zh, py, py_norm (GENERATED), uz, ru, en, hsk, created_at, updated_at`, unique `(zh, py_norm)`, **RLS enabled with no policies** (service-role only; never queried from the browser). Read server-side via `getGlossary()` (`src/services/glossary.ts`, cached under the `glossary` tag); dialogues reference words by `(zh, py)` and resolve at render. See `docs/superpowers/specs/2026-06-12-dialogue-vocab-glossary-design.md`.
 
 ## User Progress Tracking
 - **API**: `src/app/api/progress/route.ts` (GET: retrieve, POST: save)
