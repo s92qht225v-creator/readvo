@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { usePrimeAudioToken } from '@/hooks/useAudioToken';
 import { protectAudioUrlSync } from '@/lib/audio/token-client';
 
-type AdminTab = 'payments' | 'users' | 'audio';
+type AdminTab = 'payments' | 'users' | 'audio' | 'glossary';
 
 interface Payment {
   id: string;
@@ -93,6 +93,34 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [ttsItems, setTtsItems] = useState<{ text: string; style: string; url: string }[]>([]);
   const ttsTextareaRef = useRef<HTMLTextAreaElement>(null);
   const ttsAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Glossary tab state
+  type GlossaryWord = { id: string; zh: string; py: string; uz: string; ru: string; en: string; hsk: number | null };
+  const [glossary, setGlossary] = useState<GlossaryWord[]>([]);
+  const [glossaryQ, setGlossaryQ] = useState('');
+  const [editWord, setEditWord] = useState<Partial<GlossaryWord> | null>(null);
+  const [glossaryErr, setGlossaryErr] = useState('');
+
+  const loadGlossary = async (q = '') => {
+    const res = await fetch(`/api/admin/glossary?q=${encodeURIComponent(q)}`, { headers: { 'x-admin-password': password } });
+    const json = await res.json();
+    if (res.ok) setGlossary(json.words || []);
+  };
+  const saveWord = async () => {
+    setGlossaryErr('');
+    const res = await fetch('/api/admin/glossary', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-admin-password': password },
+      body: JSON.stringify(editWord),
+    });
+    const json = await res.json();
+    if (!res.ok) { setGlossaryErr(json.error || 'Save failed'); return; }
+    setEditWord(null); await loadGlossary(glossaryQ);
+  };
+  const deleteWord = async (id: string) => {
+    if (!confirm('Delete this word?')) return;
+    await fetch(`/api/admin/glossary?id=${id}`, { method: 'DELETE', headers: { 'x-admin-password': password } });
+    await loadGlossary(glossaryQ);
+  };
 
   const fetchData = useCallback(async () => {
     const res = await fetch('/api/admin', {
@@ -351,6 +379,10 @@ export function AdminPanel({ password }: AdminPanelProps) {
         >
           Audio
         </button>
+        <button
+          className={`admin__tab${tab === 'glossary' ? ' admin__tab--active' : ''}`}
+          onClick={() => { setTab('glossary'); loadGlossary(); }}
+        >Glossary</button>
       </div>
 
       {/* Search */}
@@ -601,6 +633,53 @@ export function AdminPanel({ password }: AdminPanelProps) {
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {tab === 'glossary' && (
+        <div className="admin__glossary">
+          <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
+            <input
+              placeholder="Search 汉字 / pinyin / translation…"
+              value={glossaryQ}
+              onChange={(e) => setGlossaryQ(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') loadGlossary(glossaryQ); }}
+              style={{ flex: 1, padding: 8 }}
+            />
+            <button onClick={() => loadGlossary(glossaryQ)}>Search</button>
+            <button onClick={() => { setEditWord({ zh: '', py: '', uz: '', ru: '', en: '', hsk: null }); setGlossaryErr(''); }}>+ Add word</button>
+          </div>
+
+          {editWord && (
+            <div style={{ border: '1px solid #ddd', borderRadius: 8, padding: 12, marginBottom: 12 }}>
+              {(['zh', 'py', 'uz', 'ru', 'en'] as const).map((f) => (
+                <input key={f} placeholder={f} value={(editWord as Record<string, string>)[f] || ''}
+                  onChange={(e) => setEditWord({ ...editWord, [f]: e.target.value })}
+                  style={{ display: 'block', width: '100%', padding: 6, marginBottom: 6 }} />
+              ))}
+              <input placeholder="hsk (1-6, optional)" value={editWord.hsk ?? ''}
+                onChange={(e) => setEditWord({ ...editWord, hsk: e.target.value ? Number(e.target.value) : null })}
+                style={{ display: 'block', width: '100%', padding: 6, marginBottom: 6 }} />
+              {glossaryErr && <div style={{ color: '#dc2626', marginBottom: 6 }}>{glossaryErr}</div>}
+              <button onClick={saveWord}>Save</button>
+              <button onClick={() => setEditWord(null)} style={{ marginLeft: 8 }}>Cancel</button>
+            </div>
+          )}
+
+          <table style={{ width: '100%', fontSize: 14 }}>
+            <thead><tr><th>汉字</th><th>pinyin</th><th>UZ</th><th>RU</th><th>EN</th><th>HSK</th><th></th></tr></thead>
+            <tbody>
+              {glossary.map((w) => (
+                <tr key={w.id}>
+                  <td>{w.zh}</td><td>{w.py}</td><td>{w.uz}</td><td>{w.ru}</td><td>{w.en}</td><td>{w.hsk ?? ''}</td>
+                  <td>
+                    <button onClick={() => { setEditWord(w); setGlossaryErr(''); }}>Edit</button>
+                    <button onClick={() => deleteWord(w.id)} style={{ marginLeft: 6 }}>Delete</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
 
