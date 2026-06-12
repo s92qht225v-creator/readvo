@@ -574,15 +574,13 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **`getUserFromJWT(token)`**: Returns `{ id, email, user_metadata }` from JWT payload
 - **Used by**: `/api/stars`, `/api/subscription`, `/api/auth/session-check`, `/api/progress` — all low-risk read endpoints where local decode is sufficient
 
-## Caching & ISR
-- **ISR (Incremental Static Regeneration)**: Top 4 pages use `revalidate = 3600` (1 hour) to keep server-render cost low on the Hetzner box:
-  - `/{locale}` (homepage)
-  - `/{locale}/chinese` (language page)
-  - `/{locale}/blog` (blog list)
-  - `/{locale}/blog/[slug]` (blog posts)
-- After ISR, the first visitor per hour per locale triggers one server render; everyone else gets cached HTML.
-- **Dynamic pages** (no ISR): Payment page (`/{locale}/payment`) stays dynamic — checks subscription status per user
-- **Content pages**: Lesson, dialogue, flashcard, karaoke, writing, grammar pages use `generateStaticParams` for build-time generation
+## Caching & ISR (static rendering — 2026-06-12 restructure)
+- **ALL content routes are statically rendered** (`●` SSG in the build table): home, `/chinese`, dialogues (all 6 HSK readers, `revalidate = 3600`), grammar, writing, flashcards, karaoke, blog (list+posts). Production server render time: ~2–8 ms (was 0.4–0.8 s per-request).
+- **Three root layouts** (no top-level `src/app/layout.tsx`): `[locale]/layout.tsx` (main site — `<html lang={locale}>` from params, Noto Sans, `<AnalyticsScripts/>`, verification metas via `metadata.other`, intl+auth providers), `test-app/layout.tsx` (own `<html lang="en">`, Inter, MUST import `@/styles/reading.css` — the test player chrome lives there), `auth/layout.tsx` (minimal `lang="en"` shell).
+- **NEVER call `getLocale()` in a layout or `generateMetadata`** — it reads request headers and forces the whole tree dynamic (this was the original site-wide perf bug). Read the locale from `params`. Likewise `searchParams` in `generateMetadata` forces that route dynamic (`/chinese` per-tab metadata was removed for this reason).
+- **Freshness**: hourly ISR + tag-based: admin glossary writes call `revalidateTag('glossary','max')` which re-renders the static dialogue pages on next request (verified end-to-end). Content JSON changes go live on deploy (build re-renders).
+- **Dynamic pages** (no ISR): `/{locale}/payment` (per-user), `/api/*`, `test-app/*`, `auth/*`, topic-flashcards (pure client page).
+- **Auth still enforced**: `src/proxy.ts` middleware (blim-auth cookie → 307 login) runs BEFORE the cache on every request.
 
 ## Security Hardening
 - **HTTP security headers** (`next.config.js` `headers()`): `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security` (2yr, preload), `Referrer-Policy: strict-origin-when-cross-origin`, `X-DNS-Prefetch-Control: on`, `Permissions-Policy` (camera/mic/geo disabled). Applied to all routes via `source: '/(.*)'`.
