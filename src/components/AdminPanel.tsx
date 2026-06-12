@@ -68,6 +68,13 @@ function formatDate(dateStr: string) {
   });
 }
 
+const NAV_ICONS: Record<AdminTab, React.ReactNode> = {
+  payments: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 9.5h19" /><path d="M6 15.5h4" /></svg>),
+  users: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="8" r="3.2" /><path d="M3.4 19.2c.7-3.3 3-5.2 5.6-5.2s4.9 1.9 5.6 5.2" /><path d="M16.6 6.1a3 3 0 0 1 0 5.8" /><path d="M17.8 19.2a7.8 7.8 0 0 0-1.5-3.7" /></svg>),
+  audio: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"><path d="M4 10v4M8 7.5v9M12 4v16M16 7.5v9M20 10.5v3" /></svg>),
+  glossary: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4.5h10.5a2 2 0 0 1 2 2V20H7a2 2 0 0 1-2-2V4.5z" /><path d="M5 18.2A1.8 1.8 0 0 1 6.8 16.4H17.5" /><path d="M9 8.6h5M9 11.4h3.4" /></svg>),
+};
+
 interface AdminPanelProps {
   password: string;
 }
@@ -90,7 +97,8 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [ttsStylePreset, setTtsStylePreset] = useState('slow');
   const [ttsCustomStyle, setTtsCustomStyle] = useState('');
   const [ttsLoading, setTtsLoading] = useState(false);
-  const [ttsItems, setTtsItems] = useState<{ text: string; style: string; url: string }[]>([]);
+  type LibItem = { id: string; text: string; style: string; url: string; created_at: string };
+  const [library, setLibrary] = useState<LibItem[]>([]);
   const ttsTextareaRef = useRef<HTMLTextAreaElement>(null);
   const ttsAudioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -125,6 +133,20 @@ export function AdminPanel({ password }: AdminPanelProps) {
     const res = await fetch(`/api/admin/glossary?id=${id}`, { method: 'DELETE', headers: { 'x-admin-password': password } });
     if (!res.ok) { const j = await res.json().catch(() => ({})); setGlossaryErr(j.error || 'Delete failed'); return; }
     await loadGlossary(glossaryQ);
+  };
+
+  const loadLibrary = useCallback(async () => {
+    try {
+      const res = await fetch('/api/admin/audio', { headers: { 'x-admin-password': password } });
+      const j = await res.json();
+      if (res.ok) setLibrary(j.items || []);
+    } catch { /* ignore */ }
+  }, [password]);
+  const deleteLibraryItem = async (id: string) => {
+    if (!confirm('Audioni o\'chirishni xohlaysizmi?')) return;
+    const res = await fetch(`/api/admin/audio?id=${id}`, { method: 'DELETE', headers: { 'x-admin-password': password } });
+    if (res.ok) setLibrary((prev) => prev.filter((x) => x.id !== id));
+    else { const j = await res.json().catch(() => ({})); alert(`Xato: ${j.error || res.status}`); }
   };
 
   const fetchData = useCallback(async () => {
@@ -228,9 +250,9 @@ export function AdminPanel({ password }: AdminPanelProps) {
   }, [handleAction]);
 
   const getUserSubscription = useCallback((userId: string) => {
-    const now = new Date();
+    const nowDate = new Date();
     return subscriptions.find(
-      (s) => s.user_id === userId && new Date(s.ends_at) > now
+      (s) => s.user_id === userId && new Date(s.ends_at) > nowDate
     );
   }, [subscriptions]);
 
@@ -284,19 +306,22 @@ export function AdminPanel({ password }: AdminPanelProps) {
       }
       const data = await res.json();
       if (data.audio) {
-        const binary = atob(data.audio);
-        const bytes = new Uint8Array(binary.length);
-        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-        const blob = new Blob([bytes], { type: 'audio/wav' });
-        const url = URL.createObjectURL(blob);
-        setTtsItems(prev => [{ text: ttsText.trim(), style: style || '(default)', url }, ...prev]);
+        // Persist the clip to the saved library (upload to Supabase + record a row).
+        const save = await fetch('/api/admin/audio', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-password': password },
+          body: JSON.stringify({ text: ttsText.trim(), style: style || '', audioBase64: data.audio }),
+        });
+        const sj = await save.json().catch(() => ({}));
+        if (save.ok && sj.item) setLibrary(prev => [sj.item, ...prev]);
+        else alert(`Saqlashda xato: ${sj.error || save.status}`);
       }
     } catch (e) {
       alert(`TTS failed: ${e}`);
     } finally {
       setTtsLoading(false);
     }
-  }, [ttsText, getEffectiveStyle]);
+  }, [ttsText, getEffectiveStyle, password]);
 
   const playTtsAudio = useCallback((url: string) => {
     if (!ttsAudioRef.current) ttsAudioRef.current = new Audio();
@@ -327,375 +352,287 @@ export function AdminPanel({ password }: AdminPanelProps) {
     return new Date(b.last_active).getTime() - new Date(a.last_active).getTime();
   });
 
+  const NAV: { id: AdminTab; label: string; eyebrow: string; count: number | null }[] = [
+    { id: 'payments', label: 'To’lovlar', eyebrow: 'Revenue ops', count: payments.length },
+    { id: 'users', label: 'Foydalanuvchilar', eyebrow: 'Members', count: users.length },
+    { id: 'audio', label: 'Audio', eyebrow: 'TTS studio', count: null },
+    { id: 'glossary', label: 'Lug’at', eyebrow: 'Lexicon', count: glossary.length || null },
+  ];
+  const activeNav = NAV.find((n) => n.id === tab) || NAV[0];
+
   if (loading) {
     return (
-      <div className="admin">
-        <p className="admin__loading">Yuklanmoqda...</p>
+      <div className="adm adm--center">
+        <div className="adm__spinner" aria-hidden="true" />
+        <p className="adm__loading-text">Yuklanmoqda…</p>
       </div>
     );
   }
 
   return (
-    <div className="admin">
+    <div className="adm">
       <meta name="robots" content="noindex, nofollow" />
 
-      {/* Stats */}
-      {stats && (
-        <div className="admin__stats">
-          <div className="admin__stat">
-            <span className="admin__stat-value">{stats.totalUsers}</span>
-            <span className="admin__stat-label">Foydalanuvchilar</span>
-          </div>
-          <div className="admin__stat">
-            <span className="admin__stat-value">{stats.activeSubscriptions}</span>
-            <span className="admin__stat-label">Faol obuna</span>
-          </div>
-          <div className="admin__stat">
-            <span className="admin__stat-value">{formatPrice(stats.totalRevenue)}</span>
-            <span className="admin__stat-label">Jami daromad</span>
-          </div>
-          <div className="admin__stat">
-            <span className="admin__stat-value">{stats.pendingPayments}</span>
-            <span className="admin__stat-label">Kutilmoqda</span>
-          </div>
+      {/* ───────── Sidebar ───────── */}
+      <aside className="adm__sidebar">
+        <div className="adm__brand">
+          <span className="adm__brand-mark">blim<span className="adm__brand-dot">.</span></span>
+          <span className="adm__brand-eyebrow">Control deck</span>
         </div>
-      )}
 
-      {/* Tabs */}
-      <div className="admin__tabs">
-        <button
-          className={`admin__tab${tab === 'payments' ? ' admin__tab--active' : ''}`}
-          onClick={() => setTab('payments')}
-          type="button"
-        >
-          To&apos;lovlar ({payments.length})
-        </button>
-        <button
-          className={`admin__tab${tab === 'users' ? ' admin__tab--active' : ''}`}
-          onClick={() => setTab('users')}
-          type="button"
-        >
-          Foydalanuvchilar ({users.length})
-        </button>
-        <button
-          className={`admin__tab${tab === 'audio' ? ' admin__tab--active' : ''}`}
-          onClick={() => setTab('audio')}
-          type="button"
-        >
-          Audio
-        </button>
-        <button
-          className={`admin__tab${tab === 'glossary' ? ' admin__tab--active' : ''}`}
-          onClick={() => { setTab('glossary'); loadGlossary(); }}
-        >Glossary</button>
-      </div>
+        <nav className="adm__nav">
+          {NAV.map((n) => (
+            <button
+              key={n.id}
+              type="button"
+              className={`adm__nav-item${tab === n.id ? ' adm__nav-item--active' : ''}`}
+              onClick={() => { setTab(n.id); if (n.id === 'glossary' && glossary.length === 0) loadGlossary(); if (n.id === 'audio') loadLibrary(); }}
+            >
+              <span className="adm__nav-ico">{NAV_ICONS[n.id]}</span>
+              <span className="adm__nav-label">{n.label}</span>
+              {n.count != null && <span className="adm__nav-count">{n.count}</span>}
+            </button>
+          ))}
+        </nav>
 
-      {/* Search */}
-      <div className="admin__search">
-        <input
-          className="admin__search-input"
-          type="text"
-          placeholder={tab === 'payments' ? 'Email bo\'yicha qidirish...' : 'Ism yoki email bo\'yicha qidirish...'}
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        {search && (
-          <button className="admin__search-clear" type="button" onClick={() => setSearch('')}>
-            &times;
-          </button>
+        <div className="adm__sidefoot">
+          <span className="adm__sidefoot-char" aria-hidden="true">字</span>
+          <span className="adm__sidefoot-txt">Blim Admin<br /><em>internal</em></span>
+        </div>
+      </aside>
+
+      {/* ───────── Main ───────── */}
+      <main className="adm__main">
+        <header className="adm__topbar">
+          <div className="adm__head">
+            <span className="adm__eyebrow">{activeNav.eyebrow}</span>
+            <h1 className="adm__title">{activeNav.label}</h1>
+          </div>
+          {(tab === 'payments' || tab === 'users') && (
+            <div className="adm__search">
+              <svg className="adm__search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="m20.5 20.5-3.6-3.6" /></svg>
+              <input
+                className="adm__search-input"
+                type="text"
+                placeholder={tab === 'payments' ? 'Email…' : 'Ism yoki email…'}
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              {search && <button className="adm__search-clear" type="button" onClick={() => setSearch('')} aria-label="clear">&times;</button>}
+            </div>
+          )}
+        </header>
+
+        {stats && (
+          <section className="adm__stats">
+            <div className="adm__stat">
+              <span className="adm__stat-num">{stats.totalUsers}</span>
+              <span className="adm__stat-label">Foydalanuvchilar</span>
+            </div>
+            <div className="adm__stat">
+              <span className="adm__stat-num">{stats.activeSubscriptions}</span>
+              <span className="adm__stat-label">Faol obuna</span>
+            </div>
+            <div className="adm__stat adm__stat--accent">
+              <span className="adm__stat-num">{formatPrice(stats.totalRevenue)}</span>
+              <span className="adm__stat-label">Jami daromad · so&apos;m</span>
+            </div>
+            <div className="adm__stat">
+              <span className="adm__stat-num">{stats.pendingPayments}</span>
+              <span className="adm__stat-label">Kutilmoqda</span>
+            </div>
+          </section>
         )}
-      </div>
 
-      {/* Payments Tab */}
-      {tab === 'payments' && (
-        <div className="admin__list">
-          {filteredPayments.length === 0 ? (
-            <p className="admin__empty">{search ? 'Natija topilmadi' : 'Hozircha to\'lovlar yo\'q'}</p>
-          ) : (
-            filteredPayments.map((p) => (
-              <div key={p.id} className={`admin__card admin__card--${p.status}`}>
-                <div className="admin__card-header">
-                  <span className="admin__card-email">{p.user_email}</span>
-                  {p.kind === 'marketplace_test' ? (
-                    <span className="admin__badge" style={{ background: '#eaf0fb', color: '#0445b8' }}>
-                      Marketplace
-                    </span>
-                  ) : null}
-                  <span className={`admin__badge admin__badge--${p.status}`}>
-                    {p.status === 'pending' ? 'Kutilmoqda' : p.status === 'approved' ? 'Tasdiqlangan' : p.status === 'cancelled' ? 'Bekor qilingan' : 'Rad etilgan'}
+        {/* ───────── Payments ───────── */}
+        {tab === 'payments' && (
+          <section className="adm__grid">
+            {filteredPayments.length === 0 ? (
+              <p className="adm__empty">{search ? 'Natija topilmadi' : 'Hozircha to’lovlar yo’q'}</p>
+            ) : filteredPayments.map((p) => (
+              <article key={p.id} className={`adm__card adm__card--${p.status}`}>
+                <div className="adm__card-top">
+                  <span className="adm__email">{p.user_email}</span>
+                  <span className={`adm__pill adm__pill--${p.status}`}>
+                    {p.status === 'pending' ? 'Kutilmoqda' : p.status === 'approved' ? 'Tasdiqlangan' : p.status === 'cancelled' ? 'Bekor' : 'Rad etilgan'}
                   </span>
                 </div>
-                <div className="admin__card-details">
-                  <span>{p.kind === 'marketplace_test' ? `Test: ${p.marketplace_source_test_id?.slice(0, 8) ?? '?'}` : (PLAN_LABELS[p.plan] || p.plan)}</span>
-                  <span>{formatPrice(p.amount)} so&apos;m</span>
-                  <span>{formatDate(p.created_at)}</span>
+                <div className="adm__meta">
+                  <span className="adm__meta-plan">{p.kind === 'marketplace_test' ? `Test ${p.marketplace_source_test_id?.slice(0, 8) ?? '?'}` : (PLAN_LABELS[p.plan] || p.plan)}</span>
+                  <span className="adm__meta-amt">{formatPrice(p.amount)}</span>
+                  <span className="adm__meta-date">{formatDate(p.created_at)}</span>
                 </div>
                 {p.screenshot_url && (
-                  <div className="admin__screenshot-wrap">
+                  <button type="button" className="adm__shot" onClick={() => setExpandedScreenshot(expandedScreenshot === p.screenshot_url ? null : p.screenshot_url)}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.screenshot_url}
-                      alt="Screenshot"
-                      className="admin__screenshot"
-                      onClick={() => setExpandedScreenshot(
-                        expandedScreenshot === p.screenshot_url ? null : p.screenshot_url
-                      )}
-                    />
-                  </div>
+                    <img src={p.screenshot_url} alt="To'lov skrinshoti" />
+                  </button>
                 )}
-                {p.status === 'pending' && (
-                  <div className="admin__actions">
-                    <button
-                      className="admin__btn admin__btn--approve"
-                      onClick={() => handleAction('approve', { paymentId: p.id })}
-                      disabled={actionLoading === p.id}
-                      type="button"
-                    >
-                      {actionLoading === p.id ? '...' : 'Tasdiqlash'}
-                    </button>
-                    <button
-                      className="admin__btn admin__btn--reject"
-                      onClick={() => handleAction('reject', { paymentId: p.id })}
-                      disabled={actionLoading === p.id}
-                      type="button"
-                    >
-                      Rad etish
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))
-          )}
-        </div>
-      )}
-
-      {/* Users Tab */}
-      {tab === 'users' && (
-        <div className="admin__list">
-          {filteredUsers.length === 0 ? (
-            <p className="admin__empty">Natija topilmadi</p>
-          ) : filteredUsers.map((u) => {
-            const sub = getUserSubscription(u.id);
-            const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - now) / (24 * 60 * 60 * 1000)) : 0;
-            return (
-              <div key={u.id} className="admin__card">
-                <div className="admin__card-header">
-                  <div>
-                    <span className="admin__card-name">{u.name}</span>
-                    <span className="admin__card-email">{u.username ? `@${u.username}` : u.email}</span>
-                  </div>
-                  {sub ? (
-                    <span className="admin__badge admin__badge--approved">
-                      {daysLeft} kun &rarr; {formatDate(sub.ends_at)}
-                    </span>
-                  ) : (
-                    <span className="admin__badge admin__badge--none">Obuna yo&apos;q</span>
-                  )}
-                </div>
-                <div className="admin__card-details">
-                  <span>Ro&apos;yxatdan o&apos;tgan: {formatDate(u.created_at)}</span>
-                  <span style={{ marginLeft: 12 }}>Oxirgi tashrif: {u.last_active ? formatDate(u.last_active) : '—'}</span>
-                </div>
-                <div className="admin__sub-actions">
-                  {sub ? (
+                <div className="adm__actions">
+                  {p.status === 'pending' && (
                     <>
-                      <button
-                        className="admin__sub-btn admin__sub-btn--add"
-                        onClick={() => handleDaysPrompt('add_days', sub.id)}
-                        disabled={actionLoading === sub.id}
-                        type="button"
-                      >
-                        + Kun
-                      </button>
-                      <button
-                        className="admin__sub-btn admin__sub-btn--remove"
-                        onClick={() => handleDaysPrompt('remove_days', sub.id)}
-                        disabled={actionLoading === sub.id}
-                        type="button"
-                      >
-                        - Kun
-                      </button>
-                      <button
-                        className="admin__sub-btn admin__sub-btn--cancel"
-                        onClick={() => { if (confirm('Obunani bekor qilishni xohlaysizmi?')) handleAction('cancel_subscription', { subscriptionId: sub.id }); }}
-                        disabled={actionLoading === sub.id}
-                        type="button"
-                      >
-                        Bekor qilish
-                      </button>
+                      <button className="adm__btn adm__btn--approve" disabled={actionLoading === p.id} onClick={() => handleAction('approve', { paymentId: p.id })} type="button">{actionLoading === p.id ? '…' : 'Tasdiqlash'}</button>
+                      <button className="adm__btn adm__btn--reject" disabled={actionLoading === p.id} onClick={() => handleAction('reject', { paymentId: p.id })} type="button">Rad etish</button>
                     </>
-                  ) : (
-                    <button
-                      className="admin__sub-btn admin__sub-btn--grant"
-                      onClick={() => handleGrantPrompt(u.id, u.email)}
-                      disabled={actionLoading === u.id}
-                      type="button"
-                    >
-                      Obuna berish
-                    </button>
                   )}
+                  <button className="adm__btn adm__btn--danger" disabled={actionLoading === p.id} onClick={() => { if (confirm('To’lovni butunlay o’chirishni xohlaysizmi?')) handleAction('delete_payment', { paymentId: p.id }); }} type="button">O’chirish</button>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
+              </article>
+            ))}
+          </section>
+        )}
 
-      {/* Audio Tab */}
-      {tab === 'audio' && (
-        <div style={{ padding: '16px 0' }}>
-          <div className="admin__card" style={{ padding: 16 }}>
-            <textarea
-              ref={ttsTextareaRef}
-              value={ttsText}
-              onChange={(e) => setTtsText(e.target.value)}
-              placeholder="Chinese text to generate audio..."
-              rows={3}
-              style={{ width: '100%', padding: 10, fontSize: 16, borderRadius: 6, border: '1px solid #ddd', resize: 'vertical', fontFamily: 'inherit' }}
-            />
+        {/* ───────── Users ───────── */}
+        {tab === 'users' && (
+          <section className="adm__grid">
+            {filteredUsers.length === 0 ? (
+              <p className="adm__empty">Natija topilmadi</p>
+            ) : filteredUsers.map((u) => {
+              const sub = getUserSubscription(u.id);
+              const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - now) / (24 * 60 * 60 * 1000)) : 0;
+              return (
+                <article key={u.id} className="adm__card adm__card--user">
+                  <div className="adm__card-top">
+                    <div className="adm__who">
+                      <span className="adm__name">{u.name}</span>
+                      <span className="adm__handle">{u.username ? `@${u.username}` : u.email}</span>
+                    </div>
+                    {sub
+                      ? <span className="adm__pill adm__pill--approved">{daysLeft} kun</span>
+                      : <span className="adm__pill adm__pill--none">Obuna yo&apos;q</span>}
+                  </div>
+                  <div className="adm__meta">
+                    <span className="adm__meta-date">Ro&apos;yxat · {formatDate(u.created_at)}</span>
+                    <span className="adm__meta-date">Tashrif · {u.last_active ? formatDate(u.last_active) : '—'}</span>
+                  </div>
+                  <div className="adm__subactions">
+                    {sub ? (
+                      <>
+                        <button className="adm__btn adm__btn--ghost" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('add_days', sub.id)} type="button">+ Kun</button>
+                        <button className="adm__btn adm__btn--ghost" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('remove_days', sub.id)} type="button">− Kun</button>
+                        <button className="adm__btn adm__btn--danger" disabled={actionLoading === sub.id} onClick={() => { if (confirm('Obunani bekor qilishni xohlaysizmi?')) handleAction('cancel_subscription', { subscriptionId: sub.id }); }} type="button">Bekor</button>
+                      </>
+                    ) : (
+                      <button className="adm__btn adm__btn--approve" disabled={actionLoading === u.id} onClick={() => handleGrantPrompt(u.id, u.email)} type="button">Obuna berish</button>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </section>
+        )}
 
-            {/* Inline audio events */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
-              {INLINE_EVENTS.map((tag) => (
-                <button
-                  key={tag}
-                  type="button"
-                  onClick={() => insertAtCursor(tag)}
-                  style={{ padding: '4px 8px', fontSize: 12, borderRadius: 4, border: '1px solid #ccc', background: '#f5f5f5', cursor: 'pointer' }}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
-
-            {/* Style selector */}
-            <div style={{ marginTop: 12, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-              <select
-                value={ttsStylePreset}
-                onChange={(e) => setTtsStylePreset(e.target.value)}
-                style={{ padding: '6px 10px', fontSize: 14, borderRadius: 6, border: '1px solid #ddd' }}
-              >
-                {STYLE_PRESETS.map((p) => (
-                  <option key={p.value} value={p.value}>{p.label}</option>
+        {/* ───────── Audio (TTS) ───────── */}
+        {tab === 'audio' && (
+          <section className="adm__studio">
+            <div className="adm__panel">
+              <textarea ref={ttsTextareaRef} value={ttsText} onChange={(e) => setTtsText(e.target.value)} placeholder="Chinese text to generate audio…" rows={3} className="adm__textarea" />
+              <div className="adm__chips">
+                {INLINE_EVENTS.map((tag) => (
+                  <button key={tag} type="button" className="adm__chip" onClick={() => insertAtCursor(tag)}>{tag}</button>
                 ))}
-              </select>
-              {ttsStylePreset === 'custom' && (
-                <input
-                  type="text"
-                  value={ttsCustomStyle}
-                  onChange={(e) => setTtsCustomStyle(e.target.value)}
-                  placeholder="e.g. angry but calm, Sichuan dialect..."
-                  style={{ flex: 1, minWidth: 200, padding: '6px 10px', fontSize: 14, borderRadius: 6, border: '1px solid #ddd' }}
-                />
-              )}
+              </div>
+              <div className="adm__studio-row">
+                <select value={ttsStylePreset} onChange={(e) => setTtsStylePreset(e.target.value)} className="adm__select">
+                  {STYLE_PRESETS.map((p) => (<option key={p.value} value={p.value}>{p.label}</option>))}
+                </select>
+                {ttsStylePreset === 'custom' && (
+                  <input type="text" value={ttsCustomStyle} onChange={(e) => setTtsCustomStyle(e.target.value)} placeholder="e.g. angry but calm…" className="adm__input adm__input--grow" />
+                )}
+                <button type="button" className="adm__btn adm__btn--accent" onClick={handleGenerate} disabled={ttsLoading || !ttsText.trim()}>{ttsLoading ? 'Generating…' : 'Generate'}</button>
+              </div>
             </div>
 
-            {/* Generate button */}
-            <button
-              type="button"
-              onClick={handleGenerate}
-              disabled={ttsLoading || !ttsText.trim()}
-              style={{
-                marginTop: 12, padding: '10px 24px', fontSize: 15, fontWeight: 600,
-                borderRadius: 6, border: 'none', color: '#fff',
-                background: ttsLoading || !ttsText.trim() ? '#aaa' : '#dc2626',
-                cursor: ttsLoading || !ttsText.trim() ? 'not-allowed' : 'pointer',
-              }}
-            >
-              {ttsLoading ? 'Generating...' : 'Generate'}
-            </button>
-          </div>
-
-          {/* Session history */}
-          {ttsItems.length > 0 && (
-            <div style={{ marginTop: 16 }}>
-              <h3 style={{ fontSize: 14, fontWeight: 600, marginBottom: 8, color: '#666' }}>Generated ({ttsItems.length})</h3>
-              {ttsItems.map((item, i) => (
-                <div key={i} className="admin__card" style={{ padding: '10px 14px', marginBottom: 8 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: 16, fontWeight: 500 }}>{item.text}</div>
-                      <div style={{ fontSize: 11, color: '#999', marginTop: 2 }}>{item.style}</div>
-                    </div>
-                    <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
-                      <button
-                        type="button"
-                        onClick={() => playTtsAudio(item.url)}
-                        style={{ padding: '6px 12px', fontSize: 13, borderRadius: 4, border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}
-                      >
-                        &#9654; Play
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => downloadTtsAudio(item.url, item.text)}
-                        style={{ padding: '6px 12px', fontSize: 13, borderRadius: 4, border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}
-                      >
-                        &#8595; Download
-                      </button>
-                    </div>
+            <div className="adm__history">
+              <h3 className="adm__history-title">Saqlangan audiolar · {library.length}</h3>
+              {library.length === 0 ? (
+                <p className="adm__empty" style={{ padding: '32px 0', textAlign: 'left' }}>Hali saqlangan audio yo&apos;q. Yuqorida matn kiriting va «Generate» bosing.</p>
+              ) : library.map((item) => (
+                <div key={item.id} className="adm__audio-item">
+                  <div className="adm__audio-meta">
+                    <span className="adm__audio-text">{item.text}</span>
+                    <span className="adm__audio-style">{item.style || '(default)'}</span>
+                  </div>
+                  <div className="adm__audio-btns">
+                    <button type="button" className="adm__btn adm__btn--ghost" onClick={() => playTtsAudio(item.url)}>► Play</button>
+                    <button type="button" className="adm__btn adm__btn--ghost" onClick={() => downloadTtsAudio(item.url, item.text)}>↓</button>
+                    <button type="button" className="adm__btn adm__btn--danger" onClick={() => deleteLibraryItem(item.id)}>O&apos;chirish</button>
                   </div>
                 </div>
               ))}
             </div>
-          )}
-        </div>
-      )}
+          </section>
+        )}
 
-      {tab === 'glossary' && (
-        <div className="admin__glossary">
-          <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
-            <input
-              placeholder="Search 汉字 / pinyin / translation…"
-              value={glossaryQ}
-              onChange={(e) => setGlossaryQ(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter') loadGlossary(glossaryQ); }}
-              style={{ flex: 1, padding: 8 }}
-            />
-            <button onClick={() => loadGlossary(glossaryQ)}>Search</button>
-            <button onClick={() => { setEditWord({ zh: '', py: '', uz: '', ru: '', en: '', hsk: null }); setGlossaryErr(''); }}>+ Add word</button>
-          </div>
-
-          {editWord && (
-            <div style={{ border: '1px solid #ddd', borderRadius: 8, padding: 12, marginBottom: 12 }}>
-              {(['zh', 'py', 'uz', 'ru', 'en'] as const).map((f) => (
-                <input key={f} placeholder={f} value={(editWord as Record<string, string>)[f] || ''}
-                  onChange={(e) => setEditWord({ ...editWord, [f]: e.target.value })}
-                  style={{ display: 'block', width: '100%', padding: 6, marginBottom: 6 }} />
-              ))}
-              <input placeholder="hsk (1-6, optional)" value={editWord.hsk ?? ''}
-                onChange={(e) => setEditWord({ ...editWord, hsk: e.target.value ? Number(e.target.value) : null })}
-                style={{ display: 'block', width: '100%', padding: 6, marginBottom: 6 }} />
-              {glossaryErr && <div style={{ color: '#dc2626', marginBottom: 6 }}>{glossaryErr}</div>}
-              <button onClick={saveWord}>Save</button>
-              <button onClick={() => setEditWord(null)} style={{ marginLeft: 8 }}>Cancel</button>
+        {/* ───────── Glossary ───────── */}
+        {tab === 'glossary' && (
+          <section className="adm__glossary">
+            <div className="adm__toolbar">
+              <div className="adm__field">
+                <svg className="adm__search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="m20.5 20.5-3.6-3.6" /></svg>
+                <input className="adm__field-input" placeholder="汉字 / pinyin / tarjima…" value={glossaryQ} onChange={(e) => setGlossaryQ(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') loadGlossary(glossaryQ); }} />
+              </div>
+              <button className="adm__btn adm__btn--ghost" onClick={() => loadGlossary(glossaryQ)} type="button">Qidirish</button>
+              <button className="adm__btn adm__btn--accent" onClick={() => { setEditWord({ zh: '', py: '', uz: '', ru: '', en: '', hsk: null }); setGlossaryErr(''); }} type="button">+ So&apos;z</button>
+              <span className="adm__count">{glossary.length} ta</span>
             </div>
-          )}
 
-          <table style={{ width: '100%', fontSize: 14 }}>
-            <thead><tr><th>汉字</th><th>pinyin</th><th>UZ</th><th>RU</th><th>EN</th><th>HSK</th><th></th></tr></thead>
-            <tbody>
-              {glossary.map((w) => (
-                <tr key={w.id}>
-                  <td>{w.zh}</td><td>{w.py}</td><td>{w.uz}</td><td>{w.ru}</td><td>{w.en}</td><td>{w.hsk ?? ''}</td>
-                  <td>
-                    <button onClick={() => { setEditWord(w); setGlossaryErr(''); }}>Edit</button>
-                    <button onClick={() => deleteWord(w.id)} style={{ marginLeft: 6 }}>Delete</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+            {editWord && (
+              <div className="adm__editor">
+                <div className="adm__editor-grid">
+                  {(['zh', 'py', 'uz', 'ru', 'en'] as const).map((f) => (
+                    <label key={f} className="adm__field-lbl">
+                      <span>{f.toUpperCase()}</span>
+                      <input className="adm__input" placeholder={f} value={(editWord as Record<string, string>)[f] || ''} onChange={(e) => setEditWord({ ...editWord, [f]: e.target.value })} />
+                    </label>
+                  ))}
+                  <label className="adm__field-lbl">
+                    <span>HSK</span>
+                    <input className="adm__input" placeholder="1–6" value={editWord.hsk ?? ''} onChange={(e) => setEditWord({ ...editWord, hsk: e.target.value ? Number(e.target.value) : null })} />
+                  </label>
+                </div>
+                {glossaryErr && <div className="adm__err">{glossaryErr}</div>}
+                <div className="adm__editor-actions">
+                  <button className="adm__btn adm__btn--accent" onClick={saveWord} type="button">Saqlash</button>
+                  <button className="adm__btn adm__btn--ghost" onClick={() => setEditWord(null)} type="button">Bekor</button>
+                </div>
+              </div>
+            )}
+
+            <div className="adm__table-wrap">
+              <table className="adm__table">
+                <thead>
+                  <tr><th>汉字</th><th>Pinyin</th><th>UZ</th><th>RU</th><th>EN</th><th>HSK</th><th aria-label="actions" /></tr>
+                </thead>
+                <tbody>
+                  {glossary.length === 0 ? (
+                    <tr><td colSpan={7} className="adm__table-empty">Hech narsa yo&apos;q — qidiring yoki so&apos;z qo&apos;shing</td></tr>
+                  ) : glossary.map((w) => (
+                    <tr key={w.id}>
+                      <td className="adm__zh">{w.zh}</td>
+                      <td className="adm__py">{w.py}</td>
+                      <td>{w.uz}</td>
+                      <td>{w.ru}</td>
+                      <td>{w.en}</td>
+                      <td>{w.hsk != null ? <span className="adm__hsk">H{w.hsk}</span> : <span className="adm__dash">—</span>}</td>
+                      <td className="adm__rowact">
+                        <button className="adm__rowbtn" onClick={() => { setEditWord(w); setGlossaryErr(''); }} type="button">Edit</button>
+                        <button className="adm__rowbtn adm__rowbtn--del" onClick={() => deleteWord(w.id)} type="button">Del</button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+      </main>
 
       {/* Expanded screenshot overlay */}
       {expandedScreenshot && (
-        <div
-          className="admin__overlay"
-          onClick={() => setExpandedScreenshot(null)}
-        >
+        <div className="adm__overlay" onClick={() => setExpandedScreenshot(null)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={expandedScreenshot} alt="Screenshot" className="admin__overlay-img" />
+          <img src={expandedScreenshot} alt="Screenshot" className="adm__overlay-img" />
         </div>
       )}
     </div>
