@@ -496,11 +496,9 @@ export function HomePage() {
   if (isAdminParam) {
     if (isAdminAuthed) {
       return (
-        <main className="home" style={{ background: '#f5f5f5', minHeight: '100vh' }}>
+        <main className="admin-page">
           <meta name="robots" content="noindex, nofollow" />
-          <div style={{ padding: '24px 16px 0' }}>
-            <AdminPanel password={effectiveAdminPassword} />
-          </div>
+          <AdminPanel password={effectiveAdminPassword} />
         </main>
       );
     }
