@@ -102,9 +102,13 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [glossaryErr, setGlossaryErr] = useState('');
 
   const loadGlossary = async (q = '') => {
-    const res = await fetch(`/api/admin/glossary?q=${encodeURIComponent(q)}`, { headers: { 'x-admin-password': password } });
-    const json = await res.json();
-    if (res.ok) setGlossary(json.words || []);
+    setGlossaryErr('');
+    try {
+      const res = await fetch(`/api/admin/glossary?q=${encodeURIComponent(q)}`, { headers: { 'x-admin-password': password } });
+      const json = await res.json();
+      if (!res.ok) { setGlossaryErr(json.error || 'Load failed'); return; }
+      setGlossary(json.words || []);
+    } catch { setGlossaryErr('Load failed'); }
   };
   const saveWord = async () => {
     setGlossaryErr('');
@@ -118,7 +122,8 @@ export function AdminPanel({ password }: AdminPanelProps) {
   };
   const deleteWord = async (id: string) => {
     if (!confirm('Delete this word?')) return;
-    await fetch(`/api/admin/glossary?id=${id}`, { method: 'DELETE', headers: { 'x-admin-password': password } });
+    const res = await fetch(`/api/admin/glossary?id=${id}`, { method: 'DELETE', headers: { 'x-admin-password': password } });
+    if (!res.ok) { const j = await res.json().catch(() => ({})); setGlossaryErr(j.error || 'Delete failed'); return; }
     await loadGlossary(glossaryQ);
   };
 
