@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import katex from 'katex';
+import 'katex/dist/katex.min.css';
 
 /**
  * Renders text that may contain LaTeX math wrapped in `$...$` (inline)
@@ -16,7 +17,9 @@ import katex from 'katex';
  * expression renders in red rather than crashing the page — important
  * because teachers author the LaTeX by hand.
  *
- * Requires `katex/dist/katex.min.css` imported once at the app root.
+ * Imports `katex/dist/katex.min.css` itself, so the KaTeX styles are
+ * bundled only into routes that render MathText (the test app) instead
+ * of shipping to every visitor via the root layout.
  */
 type Segment = { math: false; text: string } | { math: true; tex: string; display: boolean };
 
