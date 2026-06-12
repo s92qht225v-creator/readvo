@@ -5,6 +5,8 @@ import { DialogueReader } from '@/components/DialogueReader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 import { stripPinyinTones } from '@/utils/rubyText';
 
+export const revalidate = 3600; // hourly ISR refresh (glossary edits also revalidate via tag)
+
 interface PageParams {
   params: Promise<{
     locale: string;
