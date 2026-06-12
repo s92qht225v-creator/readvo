@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { loadKaraokeSong } from '@/services/karaoke';
+import { loadKaraokeSong, loadKaraokeSongs } from '@/services/karaoke';
 import { KaraokePlayer } from '@/components/KaraokePlayer';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
@@ -9,6 +9,11 @@ interface PageParams {
     locale: string;
     songId: string;
   }>;
+}
+
+export async function generateStaticParams() {
+  const songs = await loadKaraokeSongs();
+  return songs.map((s) => ({ songId: s.id }));
 }
 
 export async function generateMetadata({ params }: PageParams) {
