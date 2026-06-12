@@ -8,8 +8,8 @@ export type { LessonInfo } from './content';
 
 export { loadFlashcardDeck } from './flashcards';
 
-export { loadDialoguesForBook, loadDialogue } from './dialogues';
-export type { DialogueInfo, DialoguePage } from './dialogues';
+export { loadDialoguesForBook, loadDialogue, resolveDialogueVocab } from './dialogues';
+export type { DialogueInfo, DialoguePage, DialoguePageResolved } from './dialogues';
 
 export { loadKaraokeSong, loadKaraokeSongs } from './karaoke';
 export type { KaraokeSong, KaraokeLine, KaraokeChar } from './karaoke';

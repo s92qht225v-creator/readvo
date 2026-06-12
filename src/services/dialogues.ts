@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { resolveVocab, type VocabRef, type VocabItem } from './glossary';
 
 const DIALOGUES_DIR = path.join(process.cwd(), 'content', 'dialogues');
 
@@ -47,18 +48,7 @@ export interface DialoguePage {
       words?: { i: [number, number]; p: string; t: string; tr: string; h?: number; l?: number }[];
     }[];
   }[];
-  vocab?: {
-    zh: string;
-    py: string;
-    uz: string;
-    ru: string;
-    en?: string;
-    ex: string;
-    expy: string;
-    ex_uz: string;
-    ex_ru: string;
-    ex_en?: string;
-  }[];
+  vocab?: VocabRef[];
   phrases?: {
     zh: string;
     py: string;
@@ -182,5 +172,20 @@ export async function loadDialogue(bookId: string, dialogueId: string): Promise<
     return null;
   } catch {
     return null;
+  }
+}
+
+export type DialoguePageResolved = Omit<DialoguePage, 'vocab'> & { vocab?: VocabItem[] };
+
+/** Resolve a dialogue's vocab references against the glossary (server-side). */
+export async function resolveDialogueVocab(d: DialoguePage): Promise<DialoguePageResolved> {
+  if (!d.vocab) return { ...d, vocab: undefined };
+  try {
+    return { ...d, vocab: await resolveVocab(d.vocab) };
+  } catch (e) {
+    // getGlossary throws on a Supabase error (so the failure isn't cached);
+    // fall back to undefined → DialogueReader's auto-extract path.
+    console.error('[glossary] resolve failed, falling back to auto-extract:', e);
+    return { ...d, vocab: undefined };
   }
 }

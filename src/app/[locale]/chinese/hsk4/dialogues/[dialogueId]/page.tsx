@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { loadDialogue, loadDialoguesForBook } from '@/services';
+import { loadDialogue, loadDialoguesForBook, resolveDialogueVocab } from '@/services';
 import { DialogueReader } from '@/components/DialogueReader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 import { stripPinyinTones } from '@/utils/rubyText';
@@ -59,11 +59,12 @@ export default async function DialoguePage({ params }: PageParams) {
   const { locale, dialogueId } = await params;
   setRequestLocale(locale);
 
-  const dialogue = await loadDialogue('hsk4', dialogueId);
+  const raw = await loadDialogue('hsk4', dialogueId);
 
-  if (!dialogue) {
+  if (!raw) {
     notFound();
   }
+  const dialogue = await resolveDialogueVocab(raw);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
   const translation = locale === 'ru' ? dialogue.titleTranslation_ru
