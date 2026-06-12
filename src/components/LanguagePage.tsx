@@ -24,6 +24,7 @@ const TAGS: Record<string, { uz: string; ru: string; en: string }> = {
   reja: { uz: 'Reja', ru: 'Планы', en: 'Plans' },
   muloqot: { uz: 'Muloqot', ru: 'Общение', en: 'Communication' },
   'ob-havo': { uz: 'Ob-havo', ru: 'Погода', en: 'Weather' },
+  texnologiya: { uz: 'Texnologiya', ru: 'Технологии', en: 'Technology' },
 };
 
 const BOOKMARK_KEY = 'blim-dialogue-bookmarks';

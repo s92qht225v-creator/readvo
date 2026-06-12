@@ -1,0 +1,184 @@
+{
+  "id": "hsk6-dialogue2",
+  "slug": "will-ai-make-people-lazy",
+  "title": "人工智能会不会让人变懒？",
+  "pinyin": "Rén gōng zhì néng huì bu huì ràng rén biàn lǎn?",
+  "titleTranslation": "Sun'iy intellekt odamni dangasa qiladimi?",
+  "titleTranslation_ru": "Сделает ли искусственный интеллект людей ленивыми?",
+  "titleTranslation_en": "Will AI Make People Lazy?",
+  "level": 6,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-12",
+  "sections": [
+    {
+      "id": "d2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d2-s1",
+          "text_original": "你觉得人工智能发展这么快，是好事还是坏事？",
+          "pinyin": "Nǐ jué de rén gōng zhì néng fā zhǎn zhè me kuài, shì hǎo shì hái shì huài shì?",
+          "text_translation": "Sun'iy intellekt shunchalik tez rivojlanayotgani yaxshimi yoki yomonmi, deb o'ylaysan?",
+          "text_translation_ru": "Как думаешь, такое быстрое развитие искусственного интеллекта — это хорошо или плохо?",
+          "text_translation_en": "Do you think AI developing this fast is a good thing or a bad thing?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s2",
+          "text_original": "不能简单地说好或坏，关键要看人怎么使用它。",
+          "pinyin": "Bù néng jiǎn dān de shuō hǎo huò huài, guān jiàn yào kàn rén zěn me shǐ yòng tā.",
+          "text_translation": "Yaxshi yoki yomon deb oddiy aytib bo'lmaydi, asosiysi odam uni qanday ishlatishiga bog'liq.",
+          "text_translation_ru": "Нельзя просто сказать «хорошо» или «плохо», главное — как человек его использует.",
+          "text_translation_en": "You can't simply call it good or bad — what matters is how people use it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s3",
+          "text_original": "可是现在很多人写文章、做计划，甚至思考问题都依赖人工智能。",
+          "pinyin": "Kě shì xiàn zài hěn duō rén xiě wén zhāng, zuò jì huà, shèn zhì sī kǎo wèn tí dōu yī lài rén gōng zhì néng.",
+          "text_translation": "Lekin hozir ko'p odamlar maqola yozish, reja tuzish, hatto muammolar haqida o'ylashda ham sun'iy intellektga tayanadi.",
+          "text_translation_ru": "Но сейчас многие пишут тексты, составляют планы и даже обдумывают вопросы, полагаясь на ИИ.",
+          "text_translation_en": "But these days many people rely on AI to write articles, make plans, and even to think through problems.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s4",
+          "text_original": "这确实是个问题。如果只是把它当成工具，它能提高效率；但如果完全依赖它，人的判断力可能会下降。",
+          "pinyin": "Zhè què shí shì ge wèn tí. Rú guǒ zhǐ shì bǎ tā dàng chéng gōng jù, tā néng tí gāo xiào lǜ; dàn rú guǒ wán quán yī lài tā, rén de pàn duàn lì kě néng huì xià jiàng.",
+          "text_translation": "Bu haqiqatan ham muammo. Agar uni shunchaki vosita sifatida ishlatsa, samaradorlikni oshiradi; lekin unga to'liq tayanib qolsa, odamning mulohaza qobiliyati pasayishi mumkin.",
+          "text_translation_ru": "Это действительно проблема. Если относиться к нему как к инструменту, он повышает эффективность; но если полностью полагаться на него, способность человека рассуждать может ослабнуть.",
+          "text_translation_en": "That really is a problem. If you treat it just as a tool, it boosts efficiency; but if you depend on it completely, people's judgment may decline.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s5",
+          "text_original": "我也有这种感觉。有时候答案来得太快，反而让人不愿意深入思考。",
+          "pinyin": "Wǒ yě yǒu zhè zhǒng gǎn jué. Yǒu shí hou dá àn lái de tài kuài, fǎn ér ràng rén bú yuàn yì shēn rù sī kǎo.",
+          "text_translation": "Menda ham shunday his bor. Ba'zan javob juda tez keladi va aksincha odamni chuqur o'ylashni istamaydigan qilib qo'yadi.",
+          "text_translation_ru": "У меня тоже такое ощущение. Иногда ответ приходит слишком быстро, и это, наоборот, отбивает желание думать глубже.",
+          "text_translation_en": "I feel that too. Sometimes the answer comes so fast that it actually makes you not want to think deeply.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s6",
+          "text_original": "对。方便本身没有错，问题在于人会不会因为方便而放弃思考。",
+          "pinyin": "Duì. Fāng biàn běn shēn méi yǒu cuò, wèn tí zài yú rén huì bu huì yīn wèi fāng biàn ér fàng qì sī kǎo.",
+          "text_translation": "To'g'ri. Qulaylikning o'zida ayb yo'q, gap shundaki, odam qulaylik tufayli o'ylashdan voz kechadimi yoki yo'q.",
+          "text_translation_ru": "Верно. В самом удобстве нет ничего плохого, вопрос в том, откажется ли человек от размышлений ради удобства.",
+          "text_translation_en": "Right. Convenience itself isn't wrong; the question is whether people give up thinking because of it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s7",
+          "text_original": "那你平时用人工智能吗？",
+          "pinyin": "Nà nǐ píng shí yòng rén gōng zhì néng ma?",
+          "text_translation": "Xo'sh, o'zing odatda sun'iy intellektdan foydalanasanmi?",
+          "text_translation_ru": "А ты сам обычно пользуешься искусственным интеллектом?",
+          "text_translation_en": "So do you use AI yourself usually?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s8",
+          "text_original": "用，但我一般先自己想一遍，再让它帮我补充或检查。",
+          "pinyin": "Yòng, dàn wǒ yì bān xiān zì jǐ xiǎng yí biàn, zài ràng tā bāng wǒ bǔ chōng huò jiǎn chá.",
+          "text_translation": "Foydalanaman, lekin odatda avval o'zim bir o'ylab chiqaman, keyin unga to'ldirish yoki tekshirishda yordam berishini so'rayman.",
+          "text_translation_ru": "Пользуюсь, но обычно сначала сам всё обдумываю, а потом прошу его дополнить или проверить.",
+          "text_translation_en": "I do, but I usually think it through myself first, then let it help me add to or check my work.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s9",
+          "text_original": "这样比较合理。也就是说，人还是要掌握主动权。",
+          "pinyin": "Zhè yàng bǐ jiào hé lǐ. Yě jiù shì shuō, rén hái shì yào zhǎng wò zhǔ dòng quán.",
+          "text_translation": "Bu mantiqliroq. Ya'ni, baribir tashabbus odamning qo'lida bo'lishi kerak.",
+          "text_translation_ru": "Так разумнее. То есть человек всё же должен сохранять инициативу.",
+          "text_translation_en": "That's more sensible. In other words, people should still keep the initiative.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s10",
+          "text_original": "没错。技术应该帮助人，而不是替代人的大脑。",
+          "pinyin": "Méi cuò. Jì shù yīng gāi bāng zhù rén, ér bú shì tì dài rén de dà nǎo.",
+          "text_translation": "To'g'ri. Texnologiya odamga yordam berishi kerak, uning miyasini almashtirishi emas.",
+          "text_translation_ru": "Именно. Технологии должны помогать человеку, а не заменять его мозг.",
+          "text_translation_en": "Exactly. Technology should help people, not replace their brains.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s11",
+          "text_original": "不过，有些工作确实可能被人工智能取代。",
+          "pinyin": "Bú guò, yǒu xiē gōng zuò què shí kě néng bèi rén gōng zhì néng qǔ dài.",
+          "text_translation": "Lekin ba'zi ishlar haqiqatan ham sun'iy intellekt tomonidan almashtirilishi mumkin.",
+          "text_translation_ru": "Однако некоторые профессии действительно могут быть заменены искусственным интеллектом.",
+          "text_translation_en": "Still, some jobs really might be replaced by AI.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s12",
+          "text_original": "是的，特别是那些重复性强、创造性低的工作。",
+          "pinyin": "Shì de, tè bié shì nà xiē chóng fù xìng qiáng, chuàng zào xìng dī de gōng zuò.",
+          "text_translation": "Ha, ayniqsa takrorlanuvchanligi yuqori, ijodkorligi past bo'lgan ishlar.",
+          "text_translation_ru": "Да, особенно та работа, где много повторений и мало творчества.",
+          "text_translation_en": "Yes, especially highly repetitive, low-creativity jobs.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s13",
+          "text_original": "那普通人应该怎么办？",
+          "pinyin": "Nà pǔ tōng rén yīng gāi zěn me bàn?",
+          "text_translation": "Unda oddiy odam nima qilishi kerak?",
+          "text_translation_ru": "И что же делать обычному человеку?",
+          "text_translation_en": "So what should ordinary people do?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s14",
+          "text_original": "我觉得最重要的是培养学习能力、表达能力和解决复杂问题的能力。",
+          "pinyin": "Wǒ jué de zuì zhòng yào de shì péi yǎng xué xí néng lì, biǎo dá néng lì hé jiě jué fù zá wèn tí de néng lì.",
+          "text_translation": "Menimcha, eng muhimi o'rganish, fikrni ifodalash va murakkab muammolarni yechish qobiliyatini rivojlantirish.",
+          "text_translation_ru": "По-моему, самое важное — развивать способность учиться, выражать мысли и решать сложные задачи.",
+          "text_translation_en": "I think the most important thing is to develop your ability to learn, to express yourself, and to solve complex problems.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s15",
+          "text_original": "也就是说，不能只学会使用工具，还要提高自己的核心能力。",
+          "pinyin": "Yě jiù shì shuō, bù néng zhǐ xué huì shǐ yòng gōng jù, hái yào tí gāo zì jǐ de hé xīn néng lì.",
+          "text_translation": "Ya'ni, faqat vositadan foydalanishni o'rganish kifoya emas, o'zingning asosiy qobiliyatlaringni ham oshirish kerak.",
+          "text_translation_ru": "То есть нельзя только научиться пользоваться инструментом, нужно ещё повышать свои ключевые навыки.",
+          "text_translation_en": "In other words, you can't just learn to use the tool — you also have to improve your core abilities.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s16",
+          "text_original": "对。工具会不断变化，但人的思维方式和判断能力才是长期竞争力。",
+          "pinyin": "Duì. Gōng jù huì bú duàn biàn huà, dàn rén de sī wéi fāng shì hé pàn duàn néng lì cái shì cháng qī jìng zhēng lì.",
+          "text_translation": "To'g'ri. Vositalar doimo o'zgaradi, lekin odamning fikrlash tarzi va mulohaza qobiliyati uzoq muddatli raqobatbardoshlikdir.",
+          "text_translation_ru": "Верно. Инструменты постоянно меняются, но именно образ мышления и способность судить — это долгосрочное конкурентное преимущество.",
+          "text_translation_en": "Right. Tools keep changing, but a person's way of thinking and judgment are what give lasting competitiveness.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s17",
+          "text_original": "听你这么说，我觉得关键不是用不用人工智能，而是怎么用。",
+          "pinyin": "Tīng nǐ zhè me shuō, wǒ jué de guān jiàn bú shì yòng bu yòng rén gōng zhì néng, ér shì zěn me yòng.",
+          "text_translation": "Sening gaplaringni eshitib, menimcha asosiysi sun'iy intellektdan foydalanish yoki foydalanmaslik emas, balki uni qanday ishlatish.",
+          "text_translation_ru": "Слушая тебя, я думаю, что главное не в том, пользоваться ли ИИ, а в том, как им пользоваться.",
+          "text_translation_en": "Hearing you say this, I think the key isn't whether to use AI, but how to use it.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s18",
+          "text_original": "对。只要人保持独立思考，人工智能就不会让人变懒，反而会成为提高能力的工具。",
+          "pinyin": "Duì. Zhǐ yào rén bǎo chí dú lì sī kǎo, rén gōng zhì néng jiù bú huì ràng rén biàn lǎn, fǎn ér huì chéng wéi tí gāo néng lì de gōng jù.",
+          "text_translation": "To'g'ri. Odam mustaqil fikrlashni saqlab qolsa, sun'iy intellekt odamni dangasa qilmaydi, aksincha qobiliyatni oshiradigan vositaga aylanadi.",
+          "text_translation_ru": "Верно. Пока человек сохраняет независимое мышление, ИИ не сделает людей ленивыми, а наоборот станет инструментом для развития способностей.",
+          "text_translation_en": "Right. As long as people keep thinking independently, AI won't make them lazy — instead it becomes a tool for improving their abilities.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
