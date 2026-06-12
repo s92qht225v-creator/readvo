@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getLocale, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { GrammarShenmePolishedPage } from '@/components/GrammarShenmePolishedPage';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -17,8 +17,8 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   },
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const m = pageMeta[locale] || pageMeta.uz;
 
   return {

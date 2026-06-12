@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { setRequestLocale, getLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { loadBlogPosts } from '@/services/blog';
 import { BlogList } from '@/components/BlogList';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
@@ -12,8 +12,8 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   en: { title: 'Chinese Language Blog — Articles & Guides', description: 'Articles on learning Chinese: HSK preparation, vocabulary tips, grammar and more.' },
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const m = pageMeta[locale] || pageMeta.uz;
   return {
     title: m.title,

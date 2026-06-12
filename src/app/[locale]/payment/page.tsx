@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { setRequestLocale, getLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import PaymentPage from '@/components/PaymentPage';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -8,8 +8,8 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   en: { title: 'Payment', description: 'Choose a Blim subscription plan and make a payment.' },
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const m = pageMeta[locale] || pageMeta.uz;
   return {
     title: m.title,
