@@ -2,7 +2,10 @@ create table if not exists public.glossary (
   id         uuid primary key default gen_random_uuid(),
   zh         text not null,
   py         text not null,
-  py_norm    text not null,
+  -- py_norm is GENERATED so callers never set it and it can never drift from py.
+  -- (SQL can't do Unicode NFC; writers store py already in NFC form, and the app's
+  --  normPy() also applies NFC, so app-side matching and this column stay consistent.)
+  py_norm    text generated always as (lower(btrim(regexp_replace(py, '\s+', ' ', 'g')))) stored,
   uz         text not null,
   ru         text not null,
   en         text not null,

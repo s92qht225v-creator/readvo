@@ -14,5 +14,6 @@ export type { DialogueInfo, DialoguePage } from './dialogues';
 export { loadKaraokeSong, loadKaraokeSongs } from './karaoke';
 export type { KaraokeSong, KaraokeLine, KaraokeChar } from './karaoke';
 
-export * from './glossary';
+export { normPy, getGlossary, resolveVocab } from './glossary';
+export type { GlossaryEntry, VocabRef, VocabItem } from './glossary';
 

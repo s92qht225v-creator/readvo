@@ -15,7 +15,10 @@ export const getGlossary = unstable_cache(
     const { data, error } = await getSupabaseAdmin()
       .from('glossary')
       .select('zh, py, uz, ru, en, hsk');
-    if (error) { console.error('[glossary] load failed:', error.message); return []; }
+    // Throw (don't return []) so unstable_cache does NOT cache a transient failure —
+    // otherwise one Supabase hiccup would persist an empty glossary for the whole
+    // tag lifetime. Callers (resolveDialogueVocab) catch this and fall back.
+    if (error) throw new Error(`[glossary] load failed: ${error.message}`);
     return data ?? [];
   },
   ['glossary-all'],
