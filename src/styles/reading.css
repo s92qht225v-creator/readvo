@@ -6634,7 +6634,7 @@ body {
 .adm__field-lbl .adm__input { width: 100%; }
 .adm__err { color: var(--red); font-size: 13px; margin-top: 12px; }
 .adm__editor-actions { display: flex; gap: 10px; margin-top: 16px; }
-.adm__table-wrap { background: #fff; border: 1px solid var(--line-soft); border-radius: 16px; overflow: hidden; }
+.adm__table-wrap { background: #fff; border: 1px solid var(--line-soft); border-radius: 16px; overflow-x: auto; }
 .adm__table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .adm__table thead th { text-align: left; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 14px 16px; background: #faf9f5; border-bottom: 1px solid var(--line); }
 .adm__table tbody td { padding: 12px 16px; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
@@ -6648,7 +6648,17 @@ body {
 .adm__rowbtn { font-family: var(--mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 5px 10px; border-radius: 7px; border: 1px solid var(--line); background: #fff; color: var(--muted); cursor: pointer; margin-left: 6px; }
 .adm__rowbtn:hover { border-color: var(--ink); color: var(--text); }
 .adm__rowbtn--del:hover { border-color: var(--red); color: var(--red); background: var(--rose-bg); }
+.adm__rowbtn:disabled { opacity: .5; cursor: not-allowed; }
+.adm__rowbtn--grant { color: var(--red); border-color: #f0c9c9; }
+.adm__rowbtn--grant:hover { background: var(--red); color: #fff; border-color: var(--red); }
 .adm__table-empty { text-align: center; padding: 50px; font-family: var(--mono); font-size: 13px; color: var(--faint); }
+
+/* Users table cells */
+.adm__table--users td { white-space: nowrap; }
+.adm__td-name { font-weight: 600; }
+.adm__td-handle { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.adm__td-email { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.adm__td-date { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
 /* Overlay */
 .adm__overlay { position: fixed; inset: 0; z-index: 200; background: rgba(8,8,10,0.82); display: flex; align-items: center; justify-content: center; padding: 32px; cursor: zoom-out; backdrop-filter: blur(4px); }

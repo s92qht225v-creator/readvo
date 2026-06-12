@@ -484,42 +484,44 @@ export function AdminPanel({ password }: AdminPanelProps) {
 
         {/* ───────── Users ───────── */}
         {tab === 'users' && (
-          <section className="adm__grid">
-            {filteredUsers.length === 0 ? (
-              <p className="adm__empty">Natija topilmadi</p>
-            ) : filteredUsers.map((u) => {
-              const sub = getUserSubscription(u.id);
-              const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - now) / (24 * 60 * 60 * 1000)) : 0;
-              return (
-                <article key={u.id} className="adm__card adm__card--user">
-                  <div className="adm__card-top">
-                    <div className="adm__who">
-                      <span className="adm__name">{u.name}</span>
-                      <span className="adm__handle">{u.username ? `@${u.username}` : u.email}</span>
-                    </div>
-                    {sub
-                      ? <span className="adm__pill adm__pill--approved">{daysLeft} kun</span>
-                      : <span className="adm__pill adm__pill--none">Obuna yo&apos;q</span>}
-                  </div>
-                  <div className="adm__meta">
-                    <span className="adm__meta-date">Ro&apos;yxat · {formatDate(u.created_at)}</span>
-                    <span className="adm__meta-date">Tashrif · {u.last_active ? formatDate(u.last_active) : '—'}</span>
-                  </div>
-                  <div className="adm__subactions">
-                    {sub ? (
-                      <>
-                        <button className="adm__btn adm__btn--ghost" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('add_days', sub.id)} type="button">+ Kun</button>
-                        <button className="adm__btn adm__btn--ghost" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('remove_days', sub.id)} type="button">− Kun</button>
-                        <button className="adm__btn adm__btn--danger" disabled={actionLoading === sub.id} onClick={() => { if (confirm('Obunani bekor qilishni xohlaysizmi?')) handleAction('cancel_subscription', { subscriptionId: sub.id }); }} type="button">Bekor</button>
-                      </>
-                    ) : (
-                      <button className="adm__btn adm__btn--approve" disabled={actionLoading === u.id} onClick={() => handleGrantPrompt(u.id, u.email)} type="button">Obuna berish</button>
-                    )}
-                  </div>
-                </article>
-              );
-            })}
-          </section>
+          <div className="adm__table-wrap">
+            <table className="adm__table adm__table--users">
+              <thead>
+                <tr><th>Ism</th><th>Username</th><th>Email</th><th>Ro&apos;yxat</th><th>Tashrif</th><th>Obuna</th><th aria-label="actions" /></tr>
+              </thead>
+              <tbody>
+                {filteredUsers.length === 0 ? (
+                  <tr><td colSpan={7} className="adm__table-empty">Natija topilmadi</td></tr>
+                ) : filteredUsers.map((u) => {
+                  const sub = getUserSubscription(u.id);
+                  const daysLeft = sub ? Math.ceil((new Date(sub.ends_at).getTime() - now) / (24 * 60 * 60 * 1000)) : 0;
+                  return (
+                    <tr key={u.id}>
+                      <td className="adm__td-name">{u.name}</td>
+                      <td className="adm__td-handle">{u.username ? `@${u.username}` : <span className="adm__dash">—</span>}</td>
+                      <td className="adm__td-email">{u.email}</td>
+                      <td className="adm__td-date">{formatDate(u.created_at)}</td>
+                      <td className="adm__td-date">{u.last_active ? formatDate(u.last_active) : <span className="adm__dash">—</span>}</td>
+                      <td>{sub
+                        ? <span className="adm__pill adm__pill--approved">{daysLeft} kun</span>
+                        : <span className="adm__pill adm__pill--none">Yo&apos;q</span>}</td>
+                      <td className="adm__rowact">
+                        {sub ? (
+                          <>
+                            <button className="adm__rowbtn" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('add_days', sub.id)} type="button">+Kun</button>
+                            <button className="adm__rowbtn" disabled={actionLoading === sub.id} onClick={() => handleDaysPrompt('remove_days', sub.id)} type="button">−Kun</button>
+                            <button className="adm__rowbtn adm__rowbtn--del" disabled={actionLoading === sub.id} onClick={() => { if (confirm('Obunani bekor qilishni xohlaysizmi?')) handleAction('cancel_subscription', { subscriptionId: sub.id }); }} type="button">Bekor</button>
+                          </>
+                        ) : (
+                          <button className="adm__rowbtn adm__rowbtn--grant" disabled={actionLoading === u.id} onClick={() => handleGrantPrompt(u.id, u.email)} type="button">+ Obuna</button>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         )}
 
         {/* ───────── Audio (TTS) ───────── */}
