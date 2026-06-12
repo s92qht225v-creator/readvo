@@ -582,8 +582,9 @@ or `$$…$$` (block), via KaTeX. A literal dollar is `\$`. Plain text with
 no `$` fast-paths to a bare string. `throwOnError: false` — bad LaTeX
 renders red instead of crashing (teachers author by hand).
 
-- `katex/dist/katex.min.css` is imported once in the root
-  `src/app/layout.tsx`.
+- `katex/dist/katex.min.css` is imported directly by `MathText.tsx`
+  (scoped to test-app routes; the old root `src/app/layout.tsx` was
+  removed in the multi-root-layout restructure).
 - Wired into: `TestPlayer` prompt + description; `QuestionRenderer`
   choice labels (mc / checkbox / picture / dropdown trigger + menu);
   `TestBuilder` PreviewCanvas prompt + description hint. Builder
