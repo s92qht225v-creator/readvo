@@ -14,15 +14,15 @@ three languages embedded per word. There is no single source of truth. Today thi
   glosses or pinyin (e.g. 面条 = "lag'mon" vs "ugra (lag'mon)"; 准备 = "tayyorlanmoq" vs
   "tayyorlamoq, tayyorgarlik").
 - A gloss fix lives in one file only; the same word elsewhere keeps the stale value.
+- There is no editor — every correction is a hand-edit in JSON.
 - No validation (completeness, JSON-breaking Chinese curly quotes, referential integrity).
 - The data is trapped per-file: no cross-dialogue flashcard decks, dictionary, or search.
-- Adding a 4th UI language later means editing every entry in every file.
 
 ## Goal
 
-A single vetted glossary as the source of truth for dialogue vocabulary, with dialogues
-referencing it (and able to override per-context), plus validation and a one-time
-migration — **without changing the Words-tab UI or any visible behavior.**
+A single vetted glossary as the source of truth for dialogue-word **translations**, stored in
+Supabase and **editable from the admin panel**, with dialogues referencing it — **without
+changing the Words-tab UI or any visible behavior** of existing dialogues.
 
 ## Research basis (why the key is `(zh, pinyin)`)
 
@@ -41,44 +41,60 @@ Blim's own data already contains this collision class:
 | 觉 | jué / jiào | "to feel" / "sleep 睡觉" |
 | 着 | zhe / zháo / zhuó | aspect particle / "to catch" / "to wear" |
 
-**Decision (non-negotiable, not a judgment call):** the glossary key is `(zh, pinyin)`.
-A key on `zh` alone would silently merge these.
+**Decision (non-negotiable):** the glossary key is `(zh, pinyin)`. A key on `zh` alone would
+silently merge these.
 
-Sources:
-- CC-CEDICT format & syntax: <http://cc-cedict.org/wiki/format:syntax>, <https://en.wikipedia.org/wiki/CEDICT>
-- Lexicographic sense enumeration / Chinese WSD framing: <https://arxiv.org/pdf/2405.07006>
+Sources: <http://cc-cedict.org/wiki/format:syntax>, <https://en.wikipedia.org/wiki/CEDICT>,
+<https://arxiv.org/pdf/2405.07006>.
 
 ## Locked decisions (from design review)
 
-1. **Reference style:** dialogues list bare `zh` strings; pinyin is added only when a word
-   has 2+ readings (homograph). Resolver + validator enforce correctness.
-2. **Polysemy depth (v1):** one gloss per `(zh, py)`; a dialogue overrides the meaning
-   inline when it needs a different sense at the same reading. No `senses[]` array in v1.
-3. **HSK metadata:** include an `hsk` field on each entry now (filled during migration).
-4. **Process:** formalize via spec (this doc) → writing-plans → implementation.
+1. **Reference style:** dialogues list bare `zh` strings; pinyin is added only for homographs.
+2. **Polysemy depth (v1):** one gloss per `(zh, py)`; a dialogue overrides the meaning inline
+   when it needs a different sense at the same reading. No `senses[]` array in v1.
+3. **HSK metadata:** every entry carries an `hsk` field (filled during migration).
+4. **Storage:** the glossary lives in a **Supabase table**, edited via the admin panel — *not*
+   a file in the repo (a deployed server can't durably edit its own source).
+5. **Process:** formalize via spec (this doc) → writing-plans → implementation.
 
-## Design
+## Architecture: content vs. data split
 
-### Data store — `content/dialogues/glossary.json`
+Two concerns are separated by where they live:
 
-A flat **array** of entries (git-diff-friendly, sortable). Each entry is one `(zh, py)` lexeme:
+- **"Which words a dialogue teaches" = content.** Stays in the dialogue JSON as an ordered
+  **reference list** (in git, versioned, appearance-ordered). Rarely changes.
+- **"What each word means" = data.** Moves to the Supabase `glossary` table. Editable in the
+  admin panel; goes live without a code deploy.
 
-```json
-[
-  { "zh": "加班", "py": "jiābān", "uz": "qo'shimcha ishlamoq",
-    "ru": "работать сверхурочно", "en": "to work overtime", "hsk": 2 },
-  { "zh": "还", "py": "hái",  "uz": "hali, yana", "ru": "ещё, всё ещё", "en": "still, yet", "hsk": 1 },
-  { "zh": "还", "py": "huán", "uz": "qaytarmoq",  "ru": "возвращать",   "en": "to return", "hsk": 3 }
-]
+Only the **server** reads the glossary table (service-role), resolves a dialogue's references
+into translations, and renders. The browser never queries Supabase for glossary data.
+
+### Supabase `glossary` table
+
+```sql
+create table glossary (
+  id         uuid primary key default gen_random_uuid(),
+  zh         text not null,
+  py         text not null,                       -- tone-marked pinyin, as displayed
+  py_norm    text not null,                       -- normalized for uniqueness (see below)
+  uz         text not null,
+  ru         text not null,
+  en         text not null,
+  hsk        smallint check (hsk between 1 and 6),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (zh, py_norm)
+);
 ```
 
-- **Required:** `zh`, `py`, `uz`, `ru`, `en`. **Optional:** `hsk` (integer 1–6).
-- **No `ex_*` fields** — consistent with the prior dead-field cleanup. (If example sentences
-  are ever rendered, they attach to the dialogue *reference* or a separate store, not here.)
-- **Uniqueness invariant:** `(zh, normPy)` is unique, where
-  `normPy = py.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase()`.
-  Tone marks survive NFC, so cháng ≠ zhǎng stay distinct; whitespace/case noise is collapsed.
-- **Simplified only.** Unlike CEDICT, Blim content is 100% simplified; no `trad` field.
+- `py_norm = py.normalize('NFC').trim().replace(/\s+/g,' ').toLowerCase()` — computed in app
+  code on write. Tone marks survive NFC, so cháng ≠ zhǎng stay distinct; the DB `unique
+  (zh, py_norm)` constraint guarantees one entry per `(zh, reading)`.
+- **Simplified only** — no traditional column (Blim content is 100% simplified).
+- **No example-sentence columns** — consistent with the prior dead-field cleanup.
+- **RLS / access:** no public access. The app reads server-side via the service-role client;
+  the admin panel writes via the admin API (service-role + admin-password). The browser never
+  touches the table directly.
 
 ### Reference model — dialogue `vocab[]`
 
@@ -92,89 +108,112 @@ A dialogue's `vocab` becomes an ordered list of references (appearance order pre
 ]
 ```
 
-A reference is one of:
-- **string** `zh`
-- **object** `{ zh, py? , uz?, ru?, en? }` — `py` disambiguates homographs; `uz`/`ru`/`en`
-  override the glossary value for *this dialogue only* (the polysemy mechanism).
+A reference is either a **string** `zh`, or an **object** `{ zh, py?, uz?, ru?, en? }` where
+`py` disambiguates homographs and any `uz`/`ru`/`en` **field-level merge** over the entry (only
+provided languages are replaced; the rest inherit from the glossary). Overrides stay in the
+JSON (content-ish, rare).
 
-### Resolution algorithm (build/SSR time)
+### Resolution (server-side)
 
-For each reference:
-1. Bare `zh` → find glossary entries with that `zh`.
-   - exactly one → use it.
-   - zero → **error** (dangling reference).
-   - 2+ → **error** ("ambiguous; specify py").
-2. `{ zh, py }` → resolve to the unique `(zh, normPy)` entry (error if none).
-3. Any `uz`/`ru`/`en` on the reference **field-level merge** over the resolved entry: only the
-   provided fields are replaced; unspecified languages keep the glossary value (e.g. a ref with
-   just `uz` overrides Uzbek but inherits `ru`/`en`/`py` from the entry).
+For each reference, at render on the server:
+1. Bare `zh` → entries with that `zh`: exactly one → use it; zero → **error** (dangling);
+   2+ → **error** ("ambiguous; specify py").
+2. `{ zh, py }` → the unique `(zh, py_norm)` entry (error if none).
+3. Reference `uz`/`ru`/`en` merge over the resolved entry.
 
-Output: `{ zh, py, uz, ru, en }[]` — **identical shape `DialogueVocab` already consumes**, so
+Output: `{ zh, py, uz, ru, en }[]` — **the exact shape `DialogueVocab` already consumes**, so
 the Words-tab component, flip-cards, and direction toggle are unchanged. The existing
-auto-extract fallback (from per-sentence `words[]`) stays as the safety net for dialogues
-with no curated list.
+auto-extract fallback (from per-sentence `words[]`) stays as the safety net for dialogues with
+no curated list, and also covers a dialogue whose referenced word is briefly missing from the
+table.
+
+### Freshness (admin edits going live)
+
+Dialogue pages resolve the glossary server-side. To make admin edits appear without a deploy:
+- Glossary reads are cached server-side under a **`glossary` cache tag**.
+- On any admin write (add/edit/delete), the admin API calls `revalidateTag('glossary')`, so the
+  next render re-reads the table → edits appear within seconds.
+- A time-based revalidate is the fallback if tag revalidation is unavailable.
 
 ### Components / files
 
 | Unit | Responsibility | Depends on |
 |------|----------------|-----------|
-| `content/dialogues/glossary.json` | the vetted source of truth | — |
-| `src/services/glossary.ts` | load glossary, build `Map<zh, entry[]>` index, `resolveVocab(refs)` → `VocabItem[]` | glossary.json |
-| `src/services/dialogues.ts` (modify) | resolve at the **service layer** (server/build time): call `resolveVocab(refs)` so the loaded dialogue exposes a resolved `VocabItem[]`; the client receives plain `VocabItem[]` exactly as today (glossary never shipped to the client) | glossary.ts |
-| `src/components/DialogueReader.tsx` | **unchanged** — receives already-resolved `VocabItem[]` from the service; existing `vocabList` memo + fallback keep working | — |
-| `scripts/validate-glossary.py` | pre-deploy invariants + referential integrity | glossary.json, dialogues |
-| `scripts/migrate-vocab-to-glossary.py` | one-time: dedupe 218 inline entries → glossary + rewrite dialogues to refs | current dialogue JSONs |
+| `glossary` Supabase table | source of truth for translations | — |
+| `src/services/glossary.ts` | server-side cached `getGlossary()` (Map index, `glossary` tag) + `resolveVocab(refs)` → `VocabItem[]` | Supabase admin client |
+| `src/app/[locale]/chinese/hsk*/dialogues/[dialogueId]/page.tsx` (modify, all levels) | resolve the dialogue's `vocab` refs server-side; pass resolved `VocabItem[]` into `DialogueReader` | glossary.ts |
+| `src/components/DialogueReader.tsx` (light modify) | accept resolved `VocabItem[]`; keep the auto-extract fallback | — |
+| `src/components/DialogueVocab.tsx` | **unchanged** | — |
+| `src/app/api/admin/glossary/route.ts` | GET (list/search), POST (upsert), DELETE; admin-password auth; computes `py_norm`; `revalidateTag('glossary')` after writes | Supabase admin client |
+| `src/components/AdminPanel.tsx` (modify) | new **Glossary** tab: search, paginated table, add/edit form (zh, py, uz, ru, en, hsk), delete | admin glossary API |
+| `scripts/migrate-vocab-to-glossary.py` | one-time: dedupe 218 inline entries → seed table + rewrite dialogues to reference lists + conflict report | current dialogue JSONs |
+| `scripts/validate-glossary.py` | referential integrity: every reference resolves; referenced `zh` appears in the dialogue | dialogues + table export |
 
-`DialogueVocab.tsx` is **unchanged**.
+> **Admin client note:** glossary CRUD uses plain `.from('glossary')` calls on the shared
+> service-role client. This is safe — the documented hazard is *session-mutating auth* calls
+> (`verifyOtp`/`setSession`) on the singleton, which this does not use.
+
+### Admin "Glossary" tab (Stage 4)
+
+A new tab in `AdminPanel.tsx`, matching the Users/Payments tabs:
+- **Search** by `zh`, pinyin, or any translation.
+- **Table** (paginated): zh · pinyin · UZ · RU · EN · HSK · edit/delete.
+- **Add word** form and inline **edit** (all of zh, py, uz, ru, en, hsk).
+- **Delete** with confirm. Delete is blocked (or warned) if a dialogue still references the word.
+- Duplicate `(zh, py_norm)` rejected by the DB constraint, surfaced as a friendly error.
 
 ### Validation — `scripts/validate-glossary.py`
 
-- glossary.json and all dialogue JSONs parse (catches Chinese curly-quote `"` JSON breakage).
-- every entry has non-empty `zh/py/uz/ru/en`; `hsk` ∈ 1–6 if present.
-- `(zh, normPy)` unique across the glossary.
-- pinyin is tone-**marked** (reject stray tone numbers) and within the allowed character set.
-- every dialogue `vocab` reference resolves to exactly one entry; no dangling/ambiguous refs;
-  overrides point at real entries.
+- all dialogue JSONs parse (catches Chinese curly-quote `"` JSON breakage).
+- every dialogue `vocab` reference resolves to exactly one table row; no dangling/ambiguous refs.
+- reference overrides are well-formed.
 - **content warning:** referenced `zh` actually appears in that dialogue's sentences.
+- (table-side completeness + `(zh, py_norm)` uniqueness are enforced by the schema itself.)
 
 ### Migration — `scripts/migrate-vocab-to-glossary.py` (run once)
 
 1. Read all 31 dialogues' current `{zh,py,uz,ru,en}` entries (218 total).
-2. Group by `(zh, normPy)`.
-3. Identical across occurrences → one canonical entry; derive `hsk` from the source dialogue's level.
-4. **Conflicts** (the 11 diverging words) → write `glossary-conflicts.json` listing each variant
-   and the files using it, then **stop** for human resolution (no auto-guessing meaning).
-5. Emit `glossary.json` sorted by `hsk`, then pinyin.
+2. Group by `(zh, py_norm)`.
+3. Identical across occurrences → one row; derive `hsk` from the source dialogue's level.
+4. **Conflicts** (the 11 diverging words) → write `glossary-conflicts.json` and **stop** for
+   human resolution (no auto-guessing meaning).
+5. Seed the `glossary` table (idempotent upsert on `(zh, py_norm)`).
 6. Rewrite each dialogue's `vocab[]` to references (bare `zh` where unambiguous, `{zh,py}` where
    homograph), **preserving appearance order**.
 
-### Scope boundaries (explicit)
+## Scope boundaries (explicit)
 
-- **Simplified only** — no traditional field.
-- **One gloss per `(zh, py)` in v1**; per-dialogue override for context. Multi-sense `senses[]`
-  is a possible v2 (standalone dictionary), not built now.
-- **No example sentences** in the glossary unless/until examples are rendered.
-- **No UI change** — Words tab renders byte-identical after migration.
+- Simplified only; one gloss per `(zh, py)` in v1 (override for context); no example sentences;
+  **no visible change** to the Words tab for existing dialogues.
 
 ## Phased implementation (each phase independently shippable)
 
-1. **Schema + loader + types + validation script.** Glossary unused; zero behavior change.
-2. **Migration.** Generate `glossary.json` + conflict report; human resolves the 11 conflicts.
-3. **Cut over.** Rewrite dialogues to references; wire the resolver; verify Words tab renders
-   identically on preview; deploy. Fallback retained.
-4. **Optional follow-ons.** Backfill HSK 4/6 vocab as references; ensure `hsk` everywhere; then
-   the unlocked features: cross-dialogue flashcard decks, vocab search, dictionary view.
+1. **Table + server loader + types + validation script.** Create the `glossary` table and the
+   cached server resolver. Dialogues still use their inline vocab (table not yet wired in), so
+   zero behavior change.
+2. **Migration.** Seed the table + conflict report (human resolves the 11); rewrite dialogue
+   JSONs to reference lists.
+3. **Cut over reads.** Dialogue pages resolve vocab from the table server-side; verify the Words
+   tab renders identically on preview for all levels/languages/both flip directions; deploy.
+   Auto-extract fallback retained.
+4. **Admin Glossary tab.** CRUD UI + admin API + `revalidateTag('glossary')` on save. (This is
+   the editor you asked for.)
+5. **Optional follow-ons.** Backfill HSK 4/6 vocab as references; then unlocked features:
+   cross-dialogue flashcard decks, vocab search, dictionary view.
 
 ## Risks & rollback
 
-- Each phase is a separate commit. Only Phase 3 changes behavior and is fully verifiable
-  (Words tab output compared before/after). The auto-extract fallback limits blast radius.
+- Each phase is a separate commit. Phases 1–2 don't change behavior. Phase 3 is the only
+  visible change and is fully verifiable (Words-tab output compared before/after); the
+  auto-extract fallback limits blast radius.
 - Migration conflicts are surfaced, not silently resolved — no meaning is invented.
+- Admin writes are service-role + admin-password gated, like existing admin actions.
 
 ## Success criteria
 
-- One glossary entry per `(zh, py)`; zero duplicated vocab across dialogue files.
+- One glossary row per `(zh, py)`; zero duplicated vocab across dialogue files.
 - The 11 current conflicts resolved to a single canonical gloss each.
-- Validation script passes in CI/pre-deploy.
-- Words tab (all dialogues, all three languages, both flip directions) renders identically
-  to pre-migration.
+- Admin can search, add, edit (all three languages), and delete words; edits appear on the site
+  without a code deploy.
+- Words tab (all dialogues, all three languages, both flip directions) renders identically to
+  pre-migration.
