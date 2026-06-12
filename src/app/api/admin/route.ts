@@ -265,5 +265,25 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
+  if (action === 'delete_payment') {
+    const { paymentId } = body;
+    if (!paymentId) return NextResponse.json({ error: 'Missing paymentId' }, { status: 400 });
+
+    // Best-effort: remove the screenshot from the `payments` storage bucket too.
+    const { data: p } = await admin
+      .from('payment_requests')
+      .select('screenshot_url')
+      .eq('id', paymentId)
+      .single();
+    const m = p?.screenshot_url?.match(/\/payments\/(.+)$/);
+    if (m) {
+      await admin.storage.from('payments').remove([decodeURIComponent(m[1])]).catch(() => {});
+    }
+
+    const { error } = await admin.from('payment_requests').delete().eq('id', paymentId);
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ ok: true });
+  }
+
   return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
 }
