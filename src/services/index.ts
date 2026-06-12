@@ -14,3 +14,5 @@ export type { DialogueInfo, DialoguePage } from './dialogues';
 export { loadKaraokeSong, loadKaraokeSongs } from './karaoke';
 export type { KaraokeSong, KaraokeLine, KaraokeChar } from './karaoke';
 
+export * from './glossary';
+

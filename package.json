@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "validate-content": "tsx scripts/validate-content.ts"
+    "validate-content": "tsx scripts/validate-content.ts",
+    "validate-glossary": "tsx scripts/validate-glossary.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
