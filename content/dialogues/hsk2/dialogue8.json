@@ -1,0 +1,120 @@
+{
+  "id": "hsk2-dialogue8",
+  "slug": "ask-the-teacher",
+  "title": "问老师",
+  "pinyin": "Wèn lǎoshī",
+  "titleTranslation": "O'qituvchidan so'rash",
+  "titleTranslation_ru": "Спросить учителя",
+  "titleTranslation_en": "Ask the Teacher",
+  "level": 2,
+  "tag": "dars",
+  "dateAdded": "2026-06-13",
+  "vocab": [
+    "今天",
+    "中文",
+    "听",
+    "可是",
+    "以后",
+    "上课"
+  ],
+  "sections": [
+    {
+      "id": "d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d8-s1",
+          "text_original": "今天的中文课你听懂了吗？",
+          "pinyin": "Jīn tiān de Zhōng wén kè nǐ tīng dǒng le ma?",
+          "text_translation": "Bugungi xitoy tili darsini tushundingmi?",
+          "text_translation_ru": "Ты понял сегодняшний урок китайского?",
+          "text_translation_en": "Did you understand today's Chinese class?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s2",
+          "text_original": "听懂了一点儿，但是我还有几个问题。",
+          "pinyin": "Tīng dǒng le yì diǎnr, dàn shì wǒ hái yǒu jǐ gè wèn tí.",
+          "text_translation": "Biroz tushundim, lekin menda hali bir nechta savol bor.",
+          "text_translation_ru": "Немного понял, но у меня всё ещё есть несколько вопросов.",
+          "text_translation_en": "I understood a little, but I still have a few questions.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s3",
+          "text_original": "你为什么不问老师？",
+          "pinyin": "Nǐ wèi shén me bù wèn lǎo shī?",
+          "text_translation": "Nega o'qituvchidan so'ramaysan?",
+          "text_translation_ru": "Почему ты не спросишь учителя?",
+          "text_translation_en": "Why don't you ask the teacher?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s4",
+          "text_original": "我想问，可是下课以后老师很忙。",
+          "pinyin": "Wǒ xiǎng wèn, kě shì xià kè yǐ hòu lǎo shī hěn máng.",
+          "text_translation": "So'ramoqchiman, lekin darsdan keyin o'qituvchi juda band.",
+          "text_translation_ru": "Я хочу спросить, но после урока учитель очень занят.",
+          "text_translation_en": "I want to ask, but after class the teacher is very busy.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s5",
+          "text_original": "那明天上课以前，我们一起问老师吧。",
+          "pinyin": "Nà míng tiān shàng kè yǐ qián, wǒ men yì qǐ wèn lǎo shī ba.",
+          "text_translation": "Unda ertaga darsdan oldin o'qituvchidan birga so'raylik.",
+          "text_translation_ru": "Тогда завтра перед уроком давай вместе спросим учителя.",
+          "text_translation_en": "Then tomorrow before class, let's ask the teacher together.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s6",
+          "text_original": "好。你也有问题吗？",
+          "pinyin": "Hǎo. Nǐ yě yǒu wèn tí ma?",
+          "text_translation": "Mayli. Senda ham savol bormi?",
+          "text_translation_ru": "Хорошо. У тебя тоже есть вопрос?",
+          "text_translation_en": "Okay. Do you also have a question?",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s7",
+          "text_original": "有。我不明白这个字怎么读。",
+          "pinyin": "Yǒu. Wǒ bù míng bai zhè ge zì zěn me dú.",
+          "text_translation": "Bor. Bu iyeroglif qanday o'qilishini tushunmayapman.",
+          "text_translation_ru": "Есть. Я не понимаю, как читается этот иероглиф.",
+          "text_translation_en": "I do. I don't understand how to read this character.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s8",
+          "text_original": "我知道，这个字读“新”。",
+          "pinyin": "Wǒ zhī dào, zhè ge zì dú \"xīn\".",
+          "text_translation": "Bilaman, bu iyeroglif \"xīn\" deb o'qiladi.",
+          "text_translation_ru": "Я знаю, этот иероглиф читается как «xīn».",
+          "text_translation_en": "I know, this character is read as \"xīn\".",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s9",
+          "text_original": "谢谢。你中文学得很好。",
+          "pinyin": "Xiè xie. Nǐ Zhōng wén xué de hěn hǎo.",
+          "text_translation": "Rahmat. Sen xitoy tilini juda yaxshi o'rganyapsan.",
+          "text_translation_ru": "Спасибо. Ты очень хорошо учишь китайский.",
+          "text_translation_en": "Thanks. You're learning Chinese very well.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s10",
+          "text_original": "没有，我还要多练习。",
+          "pinyin": "Méi yǒu, wǒ hái yào duō liàn xí.",
+          "text_translation": "Yo'q, men hali ko'proq mashq qilishim kerak.",
+          "text_translation_ru": "Нет, мне ещё нужно больше практиковаться.",
+          "text_translation_en": "No, I still need to practice more.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
