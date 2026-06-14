@@ -44,6 +44,23 @@ const AuthContext = createContext<AuthContextType>({
   getAccessToken: async () => null,
 });
 
+/**
+ * Sync the HttpOnly `blim-auth` render-gate cookie with the client session.
+ * The cookie can only be written server-side now (see /api/auth/gate), so the
+ * client triggers it via fetch on every auth event — preserving the old
+ * timing while removing the forgeable `document.cookie` writes.
+ */
+function syncGateCookie(token: string | null) {
+  if (token) {
+    fetch('/api/auth/gate', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+    }).catch(() => {}); // non-critical; the login callback already sets it
+  } else {
+    fetch('/api/auth/gate', { method: 'DELETE' }).catch(() => {});
+  }
+}
+
 function mapUser(supabaseUser: SupabaseUser): User {
   const meta = supabaseUser.user_metadata ?? {};
   const username = meta.preferred_username || meta.username || '';
@@ -86,11 +103,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Without this, returning visitors whose Supabase session is restored
       // from localStorage have no cookie and the middleware bounces them to
       // /login on protected routes.
-      if (newUser) {
-        document.cookie = 'blim-auth=1; path=/; max-age=31536000; SameSite=Lax';
-      } else {
-        document.cookie = 'blim-auth=; path=/; max-age=0; SameSite=Lax';
-      }
+      syncGateCookie(newUser ? (session?.access_token ?? null) : null);
       // Skip session checks for 60s after login to avoid race conditions
       if (_event === 'SIGNED_IN') {
         loginGrace.current = true;
@@ -130,10 +143,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (!newUser) {
         setSubscription(null);
         setSubscriptionChecked(false);
-        document.cookie = 'blim-auth=; path=/; max-age=0; SameSite=Lax';
-      } else {
-        document.cookie = 'blim-auth=1; path=/; max-age=31536000; SameSite=Lax';
       }
+      syncGateCookie(newUser ? (session?.access_token ?? null) : null);
     });
 
     return () => subscription.unsubscribe();
@@ -244,7 +255,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }).catch(() => {}); // fire-and-forget
     }
     localStorage.removeItem('blim-session-nonce');
-    document.cookie = 'blim-auth=; path=/; max-age=0';
+    syncGateCookie(null);
     await supabase.auth.signOut();
     setUser(null);
     setSubscription(null);

@@ -208,6 +208,16 @@ export async function POST(request: NextRequest) {
     });
     response.cookies.set('tg_state', '', { maxAge: 0, path: '/' });
     response.cookies.set('tg_next', '', { maxAge: 0, path: '/' });
+    // Set the HttpOnly render-gate cookie directly on the login response so
+    // the first protected navigation passes the middleware without waiting on
+    // a follow-up client round-trip. Mirrors /api/auth/gate.
+    response.cookies.set('blim-auth', '1', {
+      httpOnly: true,
+      path: '/',
+      maxAge: 31536000,
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production',
+    });
     return response;
   } catch (err) {
     console.error('Telegram callback error:', err);
