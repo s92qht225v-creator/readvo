@@ -894,7 +894,7 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
   }, [revealAll, loading, loadError, showGuideDot]);
 
   if (loading) {
-    return <div style={{ textAlign: 'center', padding: '20px', color: '#999' }}>...</div>;
+    return <div style={{ textAlign: 'center', padding: '20px', color: '#6b7177' }}>...</div>;
   }
 
   if (loadError) {

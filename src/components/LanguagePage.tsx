@@ -233,7 +233,7 @@ function FlashcardUnitSelector({ lessons, onStart, onSingle }: {
               }}>{sel ? '✓' : l.lessonNumber}</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>{l.title ?? `第${l.lessonNumber}课`}</div>
-                <div style={{ fontSize: 11, color: '#999' }}>{l.wordCount} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}</div>
+                <div style={{ fontSize: 11, color: '#6b7177' }}>{l.wordCount} {({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}</div>
               </div>
             </div>
           );
@@ -251,7 +251,7 @@ function FlashcardUnitSelector({ lessons, onStart, onSingle }: {
             </button>
             <button
               onClick={cancelSelect}
-              style={{ background: 'transparent', border: 'none', color: '#999', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
+              style={{ background: 'transparent', border: 'none', color: '#6b7177', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}
               type="button"
             >
               {({ uz: 'Bekor qilish', ru: 'Отмена', en: 'Cancel' } as Record<string, string>)[language]}

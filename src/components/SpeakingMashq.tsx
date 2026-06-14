@@ -392,7 +392,7 @@ export function SpeakingMashq({ questions, accentColor = '#be185d', accentBg = '
           <div style={{ textAlign: 'center' }}>
             {attempt === 2 && <div style={{ fontSize: 12, color: '#d97706', marginBottom: 10, fontWeight: 600 }}>{L(UI.lastAttempt)}</div>}
             <button onClick={startRecording} style={{ width: '100%', padding: '16px 0', background: accentColor, border: 'none', borderRadius: 12, color: '#fff', fontSize: 15, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>{L(UI.speakBtn)}</button>
-            <div style={{ fontSize: 11, color: '#bbb', marginTop: 8 }}>{L(UI.tapSpeak)}</div>
+            <div style={{ fontSize: 11, color: '#6b7177', marginTop: 8 }}>{L(UI.tapSpeak)}</div>
           </div>
         )}
 

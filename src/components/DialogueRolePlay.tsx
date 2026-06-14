@@ -115,6 +115,17 @@ function toSimplified(str: string): string {
 // blob URLs) so the same line doesn't hit the TTS API twice in one session.
 const mimoCache = new Map<string, string>();
 
+/** Revoke any blob: URLs held in the cache so they don't leak for the life of
+ *  the document. Supabase (`data.url`) entries are plain URLs — left intact. */
+function revokeMimoBlobs() {
+  for (const [key, url] of mimoCache) {
+    if (url.startsWith('blob:')) {
+      URL.revokeObjectURL(url);
+      mimoCache.delete(key);
+    }
+  }
+}
+
 async function fetchMimoUrl(text: string): Promise<string | null> {
   const cached = mimoCache.get(text);
   if (cached) return cached;
@@ -281,6 +292,9 @@ export function DialogueRolePlay({
       activeBubbleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [screen, unitIndex, phase]);
+
+  // ── Release any TTS blob URLs on unmount so they don't leak ──
+  useEffect(() => () => revokeMimoBlobs(), []);
 
   // ── Recording progress bar ──
   useEffect(() => {
@@ -748,8 +762,8 @@ export function DialogueRolePlay({
                 background: playingAppLine ? '#ccc' : accentColor,
                 cursor: playingAppLine ? 'not-allowed' : 'pointer',
               }}>{playingAppLine ? `${appRole} ${t(UI.appSays)}` : t(UI.speakBtn)}</button>
-              {!playingAppLine && round === 1 && <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
-              {!playingAppLine && round === 2 && <div style={{ fontSize: 11, color: '#bbb', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
+              {!playingAppLine && round === 1 && <div style={{ fontSize: 11, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
+              {!playingAppLine && round === 2 && <div style={{ fontSize: 11, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
             </div>
           )}
 

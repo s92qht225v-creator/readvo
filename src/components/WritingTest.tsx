@@ -321,7 +321,7 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
           {currentWord?.pinyin}
         </div>
         {totalCharsInWord > 1 && (
-          <div style={{ fontSize: 12, color: '#aaa', marginTop: 2 }}>
+          <div style={{ fontSize: 12, color: '#6b7177', marginTop: 2 }}>
             {charIndex + 1} / {totalCharsInWord}
           </div>
         )}
@@ -359,7 +359,7 @@ export function WritingTest({ words, lang, setId, onDone }: Props) {
         >
           {L({ uz: 'Bilmayman', ru: 'Не знаю', en: "Don't know" })}
         </button>
-        <span style={{ fontSize: 13, color: '#aaa', whiteSpace: 'nowrap' }}>
+        <span style={{ fontSize: 13, color: '#6b7177', whiteSpace: 'nowrap' }}>
           {completedChars + 1} / {totalChars}
         </span>
         <button

@@ -212,7 +212,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 )}
               </div>
             ))}
-            <div style={{ fontSize: 10, color: '#bbb', textAlign: 'center' as const, marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+            <div style={{ fontSize: 10, color: '#6b7177', textAlign: 'center' as const, marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
               <ChevronDownIcon style={{ width: 12, height: 12 }} />
               {({ uz: "bosing — misol ko'rinadi", ru: 'нажмите — покажет пример', en: 'tap to see example' } as Record<string, string>)[lang]}
             </div>
@@ -241,7 +241,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                     <span style={{ fontSize: 12, fontWeight: 600, color: '#dc2626' }}>{s.name}</span>
                     <span style={{ fontSize: 11, color: '#888' }}>{({ uz: s.uz, ru: s.ru, en: s.en } as Record<string, string>)[lang]}</span>
                   </div>
-                  <div style={{ fontSize: 10, color: '#999' }}>{(s.desc as Record<string, string>)[lang]}</div>
+                  <div style={{ fontSize: 10, color: '#6b7177' }}>{(s.desc as Record<string, string>)[lang]}</div>
                 </div>
               </div>
             ))}

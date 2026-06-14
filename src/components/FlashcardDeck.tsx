@@ -264,7 +264,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           <div style={{ padding: '0 16px', maxWidth: 520, margin: '0 auto', paddingTop: 16 }}>
             {/* Progress */}
             <div style={{ marginBottom: 14 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#999', marginBottom: 4 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#6b7177', marginBottom: 4 }}>
                 <span>{Math.min(currentIndex + 1, totalCards)} / {totalCards}</span>
                 <span>{pct}%</span>
               </div>
@@ -331,7 +331,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
 
                 <div
+                  role="button"
+                  tabIndex={0}
+                  aria-label={({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language]}
                   onClick={() => { if (!isDragging && Math.abs(dragX) < 5) { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
                   style={{
                     width: '100%', height: '100%',
                     transformStyle: 'preserve-3d',
@@ -352,7 +356,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                   }}>
                     {direction === 'cn' ? (
                       <>
-                        <div style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{currentCard.text_original}</div>
+                        <div lang="zh-Hans" style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{currentCard.text_original}</div>
                         {isPinyinVisible && (
                           <div style={{ fontSize: 16, color: '#dc2626', marginTop: 8 }}>{currentCard.pinyin}</div>
                         )}
@@ -388,7 +392,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                   }}>
                     {direction === 'cn' ? (
                       <>
-                        <div style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{currentCard.text_original}</div>
+                        <div lang="zh-Hans" style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{currentCard.text_original}</div>
                         <div style={{ fontSize: translation.length > 20 ? 22 : translation.length > 12 ? 28 : 36, fontWeight: 600, color: '#fff', marginTop: 10, textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
                         <div style={{ fontSize: 15, color: '#fca5a5', marginTop: 10 }}>{currentCard.pinyin}</div>
                       </>
@@ -397,7 +401,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         {isPinyinVisible && (
                           <div style={{ fontSize: 15, color: '#fca5a5' }}>{currentCard.pinyin}</div>
                         )}
-                        <div style={{ fontSize: 48, fontWeight: 300, color: '#fff', marginTop: 4 }}>{currentCard.text_original}</div>
+                        <div lang="zh-Hans" style={{ fontSize: 48, fontWeight: 300, color: '#fff', marginTop: 4 }}>{currentCard.text_original}</div>
                         <div style={{ fontSize: 18, color: '#fca5a5', marginTop: 8, textAlign: 'center' }}>{translation}</div>
                       </>
                     )}

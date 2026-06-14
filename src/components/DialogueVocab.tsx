@@ -25,21 +25,42 @@ type Dir = 'zh-native' | 'native-zh';
 export function DialogueVocab({ words, language }: { words: VocabItem[]; language: Language }) {
   const [open, setOpen] = useState<number | null>(null);
   const [dir, setDir] = useState<Dir>('zh-native');
+  // zh of the word whose audio is currently resolving/buffering (spinner), and
+  // a transient error toast when playback can't be produced.
+  const [busyZh, setBusyZh] = useState<string | null>(null);
+  const [audioError, setAudioError] = useState(false);
+  const errTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const audioLabel = ({ uz: 'Tinglash', ru: 'Прослушать', en: 'Play audio' } as Record<string, string>)[language];
+  const audioErrLabel = ({ uz: 'Audio mavjud emas', ru: 'Аудио недоступно', en: 'Audio unavailable' } as Record<string, string>)[language];
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const a = new Audio();
     a.preload = 'none';
     audioRef.current = a;
-    return () => { a.pause(); a.src = ''; };
+    return () => {
+      a.pause(); a.src = '';
+      if (errTimer.current) clearTimeout(errTimer.current);
+    };
   }, []);
   const playWord = async (zh: string) => {
     const a = audioRef.current;
     if (!a) return;
-    const url = await resolveTtsUrl(zh);
-    if (!url) return;
-    a.src = url;
-    try { await a.play(); } catch { /* autoplay blocked */ }
+    setBusyZh(zh);
+    setAudioError(false);
+    try {
+      const url = await resolveTtsUrl(zh);
+      if (!url) throw new Error('no url');
+      a.src = url;
+      await a.play(); // resolves once playback starts (buffering done)
+    } catch {
+      setAudioError(true);
+      if (errTimer.current) clearTimeout(errTimer.current);
+      errTimer.current = setTimeout(() => setAudioError(false), 2500);
+    } finally {
+      setBusyZh(null);
+    }
   };
 
   const modes: { id: Dir; label: string }[] = [
@@ -53,12 +74,16 @@ export function DialogueVocab({ words, language }: { words: VocabItem[]; languag
         type="button"
         className="dr-flip__audio"
         onClick={(e) => { e.stopPropagation(); void playWord(v.zh); }}
-        aria-label="audio"
+        aria-label={`${audioLabel}: ${v.zh}`}
+        aria-busy={busyZh === v.zh}
+        disabled={busyZh === v.zh}
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12z"/></svg>
+        {busyZh === v.zh
+          ? <span className="dr-flip__audio-spinner" aria-hidden="true" />
+          : <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12z"/></svg>}
       </button>
       <span className="dr-flip__py">{v.py}</span>
-      <span className="dr-flip__zh">{v.zh}</span>
+      <span className="dr-flip__zh" lang="zh-Hans">{v.zh}</span>
     </>
   );
   const meaningSide = (v: VocabItem) => <span className="dr-flip__meaning">{meaningOf(v, language)}</span>;
@@ -81,8 +106,15 @@ export function DialogueVocab({ words, language }: { words: VocabItem[]; languag
             key={i}
             className={`dr-flip ${open === i ? 'dr-flip--open' : ''}`}
             onClick={() => setOpen(open === i ? null : i)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setOpen(open === i ? null : i);
+              }
+            }}
             role="button"
             tabIndex={0}
+            aria-pressed={open === i}
           >
             <div className="dr-flip__inner">
               <div className="dr-flip__face dr-flip__front">
@@ -95,6 +127,9 @@ export function DialogueVocab({ words, language }: { words: VocabItem[]; languag
           </div>
         ))}
       </div>
+      {audioError && (
+        <div className="page__audio-error" role="status">{audioErrLabel}</div>
+      )}
     </>
   );
 }
