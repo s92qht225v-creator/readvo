@@ -63,8 +63,13 @@ export function useStars(sectionType: string) {
   /** Save star rating — updates local state optimistically + persists to server */
   const saveStars = useCallback(
     async (sectionId: string, stars: number) => {
-      // Optimistic update
+      // Capture the prior entry (if any) so we can restore it on failure
+      // instead of wiping a previously-earned score to nothing.
+      let prevEntry: StarEntry | undefined;
       setEntries((prev) => {
+        prevEntry = prev.find(
+          (e) => e.section_type === sectionType && e.section_id === sectionId
+        );
         const filtered = prev.filter(
           (e) => !(e.section_type === sectionType && e.section_id === sectionId)
         );
@@ -95,10 +100,14 @@ export function useStars(sectionType: string) {
           const res = await doSave();
           if (!res.ok) throw new Error('retry failed');
         } catch {
-          // Revert optimistic update
-          setEntries((prev) => prev.filter(
-            (e) => !(e.section_type === sectionType && e.section_id === sectionId)
-          ));
+          // Revert optimistic update: restore the prior entry if there was
+          // one, otherwise just drop the entry we optimistically added.
+          setEntries((prev) => {
+            const filtered = prev.filter(
+              (e) => !(e.section_type === sectionType && e.section_id === sectionId)
+            );
+            return prevEntry ? [...filtered, prevEntry] : filtered;
+          });
         }
       }
     },

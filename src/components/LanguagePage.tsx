@@ -712,8 +712,14 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
               <div className="lp__writing-sets">
                 {filteredSets.map((set) => {
                   const isEmpty = set.chars.length === 0;
-                  const title = language === 'ru' ? set.title_ru : language === 'en' ? set.title_ru.replace('Набор', 'Set') : set.title;
-                  const sub = (language === 'ru' ? set.subtitle_ru : language === 'en' ? set.subtitle_ru.replace('слов', 'words') : set.subtitle).split(' · ')[0];
+                  // Title/subtitle are derived generically (same pattern as the
+                  // flashcard cards below) rather than string-replacing the
+                  // Russian fields — that hack left Russian text on every set
+                  // whose title_ru wasn't literally "Набор N" (e.g. HSK 3-6
+                  // sets where title_ru holds the char list).
+                  const num = activeSets.indexOf(set) + 1;
+                  const title = ({ uz: `${num}-to'plam`, ru: `Набор ${num}`, en: `Set ${num}` } as Record<string, string>)[language];
+                  const sub = `${set.wordCount || 10} ${({ uz: "ta so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language]}`;
                   const inner = (
                     <>
                       <div className="lp__writing-card-deco" aria-hidden="true">{isEmpty ? '🔒' : set.chars.slice(0, 2)}</div>

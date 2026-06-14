@@ -27,10 +27,11 @@ function normalize(str: string): string {
 const CRITICAL_CHARS = new Set('我你他她它这那有没不是很都也吗呢吧啊');
 
 function hasCriticalSubstitution(normExp: string, normHeard: string): boolean {
-  const expSet = new Set(normExp);
+  // Only fire when the learner DROPPED an expected critical char. Adding an
+  // extra critical char (e.g. 老师 → 老师吗) is handled by the normal
+  // superset/distance checks and must not be force-failed here.
   const heardSet = new Set(normHeard);
-  for (const c of expSet) if (!heardSet.has(c) && CRITICAL_CHARS.has(c)) return true;
-  for (const c of heardSet) if (!expSet.has(c) && CRITICAL_CHARS.has(c)) return true;
+  for (const c of new Set(normExp)) if (!heardSet.has(c) && CRITICAL_CHARS.has(c)) return true;
   return false;
 }
 

@@ -214,7 +214,8 @@ function calcStars(r1: Score[], r2: Score[], shadowingUsed: boolean): number {
   const correct = all.filter(s => s === 'correct' || s === 'close').length;
   if (correct === total && !shadowingUsed) return 3;
   if (correct >= total - 1 && !shadowingUsed) return 2;
-  return 1;
+  if (correct > 0) return 1;
+  return 0; // failed every line — don't award a participation star
 }
 
 // ── Props ──
