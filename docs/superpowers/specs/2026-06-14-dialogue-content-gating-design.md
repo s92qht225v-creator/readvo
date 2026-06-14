@@ -103,29 +103,33 @@ page `<title>`); keeping them in the shell is fine and needed for the loading
 and paywall states. The learning content (sentences + vocab glosses) is what
 moves behind the endpoint.
 
-### 4. Reader split — thin shell wrapping the existing body
+### 4. Reader change — `meta` prop + fetched body (single component)
 
-To avoid churning the ~600-line reader, split responsibilities:
+`DialogueReader` is changed to receive `{ meta, book, slug, bookPath, listPath }`
+instead of `dialogue`. It holds the fetched `dialogue` in state (nullable) plus a
+`status` (`loading | loaded | locked | error`). On mount it `GET`s the content
+endpoint with the access token.
 
-- **`DialogueReaderShell`** (new, client) — receives `meta`, `bookPath`,
-  `listPath`. Renders the hero from `meta`. Holds fetch state and, on mount,
-  `GET`s the content endpoint with the access token. Three states:
-  - **loading** → hero + existing `loading-spinner` in the body area.
-  - **locked** (401/402) → hero + hard `<Paywall/>`; the body is never
-    rendered. (`paywall-blur` is removed entirely.)
-  - **loaded** → renders `<DialogueReaderBody dialogue={fetched} … />`.
-  - **error** (network/500) → inline retry affordance (reuse the existing
-    `.page__audio-error` toast styling for the message + a retry button).
-- **`DialogueReaderBody`** — the current `DialogueReader` internals, renamed,
-  receiving a guaranteed-non-null `dialogue` plus `bookPath`/`listPath`. Its
-  hooks and JSX are unchanged **except** that its hero block is removed (the
-  shell owns the hero, since it has `meta`). The body is only mounted once
-  `dialogue` is loaded, so its hooks never see a null dialogue. Net effect: the
-  hero is visible instantly from the static shell, and the tabbed content swaps
-  in after the fetch.
+- The **hero** (level / title / pinyin / translation) renders immediately from
+  `meta` — instant, from the static shell.
+- The **body** (tab bar + the four tab panels) renders only when `status ===
+  'loaded'`:
+  - **loading** → existing `loading-spinner` in the body area.
+  - **locked** (401/402) → hard `<Paywall/>`; the body is never rendered. The
+    `paywall-blur` cosmetic path is removed.
+  - **error** (network/5xx) → inline message + Retry (reuse the existing
+    `.page__audio-error` toast styling).
+
+All hooks that read the dialogue become null-safe (`dialogue?.sections ?? []`),
+which preserves hook order (hooks still run unconditionally). Kept as **one
+component** rather than a separate shell/body because `fontSize`, `language`, and
+the floating font controls are shared across the hero and the body; threading
+them through a split would be more churn for no behavioural gain.
 
 `getAccessToken()` from `useAuth()` supplies the Bearer token (same as
-`SpeakingMashq` / `DialogueRolePlay`).
+`SpeakingMashq` / `DialogueRolePlay`). All six HSK dialogue `[dialogueId]/
+page.tsx` files (hsk1–hsk6) share this reader, so all six switch to passing
+`meta` + `book` + `slug` together.
 
 ## Data flow
 
