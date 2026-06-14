@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { loadDialogue, loadDialoguesForBook, resolveDialogueVocab } from '@/services';
+import { loadDialogue, loadDialoguesForBook } from '@/services';
 import { DialogueReader } from '@/components/DialogueReader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 import { stripPinyinTones } from '@/utils/rubyText';
@@ -67,24 +67,23 @@ export default async function DialoguePage({ params }: PageParams) {
   if (!raw) {
     notFound();
   }
-  const dialogue = await resolveDialogueVocab(raw);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
-  const translation = locale === 'ru' ? dialogue.titleTranslation_ru
-    : locale === 'en' ? (dialogue.titleTranslation_en || dialogue.titleTranslation)
-    : dialogue.titleTranslation;
+  const translation = locale === 'ru' ? raw.titleTranslation_ru
+    : locale === 'en' ? (raw.titleTranslation_en || raw.titleTranslation)
+    : raw.titleTranslation;
   const dialoguesLabel = ({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[locale] || 'Dialogues';
   const jsonLd = jsonLdScript([
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
       { name: dialoguesLabel, path: `/${locale}/chinese?tab=dialogues` },
-      { name: `${dialogue.title} — ${translation}`, path: `/${locale}/chinese/hsk1/dialogues/${dialogueId}` },
+      { name: `${raw.title} — ${translation}`, path: `/${locale}/chinese/hsk1/dialogues/${dialogueId}` },
     ]),
     {
       '@type': 'LearningResource',
-      name: `${dialogue.title} (${dialogue.pinyin}) — ${translation}`,
-      description: `HSK 1 Chinese dialogue: ${dialogue.title} — ${translation}`,
+      name: `${raw.title} (${raw.pinyin}) — ${translation}`,
+      description: `HSK 1 Chinese dialogue: ${raw.title} — ${translation}`,
       educationalLevel: 'HSK 1',
       learningResourceType: 'Dialogue',
       inLanguage: 'zh',
@@ -96,7 +95,20 @@ export default async function DialoguePage({ params }: PageParams) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <DialogueReader dialogue={dialogue} bookPath="/chinese/hsk1" listPath="/chinese?tab=dialogues" />
+      <DialogueReader
+        meta={{
+          book: 'hsk1',
+          slug: dialogueId,
+          level: raw.level,
+          title: raw.title,
+          pinyin: raw.pinyin,
+          titleTranslation: raw.titleTranslation,
+          titleTranslation_ru: raw.titleTranslation_ru,
+          titleTranslation_en: raw.titleTranslation_en,
+        }}
+        bookPath="/chinese/hsk1"
+        listPath="/chinese?tab=dialogues"
+      />
     </>
   );
 }
