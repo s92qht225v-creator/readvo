@@ -8621,6 +8621,19 @@ body {
   gap: 12px;
 }
 
+/* Desktop: the dialogue / grammar / writing / flashcard-set lists flow into a
+   responsive multi-column grid instead of a single tall column (these two
+   container classes are used only on the language page). Mobile keeps the
+   single-column flex stack above. */
+@media (min-width: 760px) {
+  .home__lessons,
+  .lp__writing-sets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    align-items: start;
+  }
+}
+
 .lp__writing-card {
   display: block;
   background: #fff;

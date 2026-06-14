@@ -309,6 +309,18 @@ interface WritingSetMeta {
   sampleEn?: string;
 }
 
+type HskLevel = '1' | '2' | '3' | '4' | '5' | '6';
+
+/** Parse an HSK level from a URL param, clamped to [1, max]. Anything absent
+ *  or out of range falls back to '1'. Replaces repeated `=== '6' ? '6' : …`
+ *  ladders and makes the flashcard clamp (only levels 1-3 have decks)
+ *  explicit instead of a silent default. */
+function parseHskLevel(raw: string | null | undefined, max = 6): HskLevel {
+  const n = Number(raw);
+  if (Number.isInteger(n) && n >= 1 && n <= max) return String(n) as HskLevel;
+  return '1';
+}
+
 interface Props {
   dialogues: DialogueInfo[];
   dialoguesHsk2?: DialogueInfo[];
@@ -343,8 +355,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
-  const initialDialogueHsk = searchParams.get('dialhsk') === '6' ? '6' : searchParams.get('dialhsk') === '5' ? '5' : searchParams.get('dialhsk') === '4' ? '4' : searchParams.get('dialhsk') === '3' ? '3' : searchParams.get('dialhsk') === '2' ? '2' : '1';
-  const [dialogueHskLevel, setDialogueHskLevel] = useState<'1' | '2' | '3' | '4' | '5' | '6'>(initialDialogueHsk as '1' | '2' | '3' | '4' | '5' | '6');
+  const [dialogueHskLevel, setDialogueHskLevel] = useState<HskLevel>(parseHskLevel(searchParams.get('dialhsk')));
   const [bookmarks, setBookmarks] = useState<Set<string>>(() => {
     try {
       const saved = typeof window !== 'undefined' ? localStorage.getItem(BOOKMARK_KEY) : null;
@@ -357,8 +368,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
   // Writing tab
   const initialVersion = searchParams.get('version') === '3.0' ? '3.0' : '2.0';
   const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>(initialVersion);
-  const initialWritingHskLevel = searchParams.get('hsk') === '2' ? '2' : searchParams.get('hsk') === '3' ? '3' : searchParams.get('hsk') === '4' ? '4' : searchParams.get('hsk') === '5' ? '5' : searchParams.get('hsk') === '6' ? '6' : '1';
-  const [writingHskLevel, setWritingHskLevel] = useState<'1' | '2' | '3' | '4' | '5' | '6'>(initialWritingHskLevel as '1' | '2' | '3' | '4' | '5' | '6');
+  const [writingHskLevel, setWritingHskLevel] = useState<HskLevel>(parseHskLevel(searchParams.get('hsk')));
   const [writingSearch, setWritingSearch] = useState('');
   const [karaokeSearch, setKaraokeSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
@@ -374,8 +384,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
   });
   const initialSubTab = searchParams.get('subtab');
   const [flashcardSubTab, setFlashcardSubTab] = useState<'lessons' | 'topics'>(initialSubTab === 'topics' ? 'topics' : 'lessons');
-  const initialFlashHsk = searchParams.get('flashhsk');
-  const [flashcardHskLevel, setFlashcardHskLevel] = useState<'1' | '2' | '3'>(initialFlashHsk === '2' ? '2' : initialFlashHsk === '3' ? '3' : '1');
+  // Only HSK 1-3 have flashcard decks; parseHskLevel makes the clamp explicit.
+  const [flashcardHskLevel, setFlashcardHskLevel] = useState<'1' | '2' | '3'>(parseHskLevel(searchParams.get('flashhsk'), 3) as '1' | '2' | '3');
 
   // HSK dropdown
   const [hskDropdownOpen, setHskDropdownOpen] = useState(false);
@@ -639,7 +649,10 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                       <p className="dialogue-card__pinyin">{d.pinyin}</p>
                       <p className="dialogue-card__translation">{language === 'ru' ? d.titleTranslation_ru : language === 'en' ? (d.titleTranslation_en || d.titleTranslation) : d.titleTranslation}</p>
                       {(() => {
-                        const stars = getDialogueStars(d.id) ?? 0;
+                        // No star row until the user has actually attempted
+                        // this item; gold for the earned count once they have.
+                        const stars = getDialogueStars(d.id);
+                        if (stars == null) return null;
                         return (
                           <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
                             {[1, 2, 3].map(n => (
@@ -726,11 +739,13 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                       <div className="lp__writing-card__title">{title}</div>
                       <div className="lp__writing-card__sub">{isEmpty ? ({ uz: 'Tez kunda', ru: 'Скоро', en: 'Coming soon' } as Record<string, string>)[language] : sub}</div>
                       {!isEmpty && (() => {
+                        // No star row until attempted; gold for earned count.
                         const wStars = getWritingStars(set.id);
+                        if (wStars == null) return null;
                         return (
                           <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
                             {[1, 2, 3].map(n => (
-                              <span key={n} style={{ fontSize: 28, color: wStars != null && n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
+                              <span key={n} style={{ fontSize: 28, color: n <= wStars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>★</span>
                             ))}
                           </div>
                         );
@@ -923,12 +938,14 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                     </div>
                     <p className="grammar-card__translation">{({ uz: item.translation, ru: item.translation_ru, en: item.translation_en } as Record<string, string>)[language]}</p>
                     {(() => {
+                      // No star row until attempted; gold for earned count.
                       const slug = item.href.split('/').pop()!;
                       const stars = getGrammarStars(slug);
+                      if (stars == null) return null;
                       return (
                         <div style={{ display: 'flex', gap: 3, marginTop: 5 }}>
                           {[1, 2, 3].map(n => (
-                            <span key={n} style={{ fontSize: 28, color: stars != null && n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>
+                            <span key={n} style={{ fontSize: 28, color: n <= stars ? '#f59e0b' : 'rgba(0,0,0,0.05)' }}>
                               ★
                             </span>
                           ))}
