@@ -1,12 +1,6 @@
 import type { MetadataRoute } from 'next';
-import { loadDialoguesForBook } from '@/services/dialogues';
-import { loadKaraokeSongs } from '@/services/karaoke';
-import { loadFlashcardDeck } from '@/services/flashcards';
 import { loadBlogPosts } from '@/services/blog';
-import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, WRITING_SETS_HSK5, WRITING_SETS_HSK6 } from '@/services/writing';
 import { routing } from '@/i18n/routing';
-import fs from 'fs';
-import path from 'path';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
 const locales = routing.locales;
@@ -31,94 +25,19 @@ function localeEntries(urlPath: string, opts: { changeFrequency: MetadataRoute.S
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [dialogues, dialoguesHsk2, dialoguesHsk3, dialoguesHsk4, dialoguesHsk5, dialoguesHsk6, songs, flashcardDeck, blogPosts] = await Promise.all([
-    loadDialoguesForBook('hsk1'),
-    loadDialoguesForBook('hsk2'),
-    loadDialoguesForBook('hsk3'),
-    loadDialoguesForBook('hsk4'),
-    loadDialoguesForBook('hsk5'),
-    loadDialoguesForBook('hsk6'),
-    loadKaraokeSongs(),
-    loadFlashcardDeck('hsk1'),
-    loadBlogPosts(),
-  ]);
+  // Only publicly crawlable pages belong in the sitemap. All `/chinese/hsk*`
+  // content (dialogues, grammar, flashcards, karaoke, writing) sits behind the
+  // login wall — `src/proxy.ts` 307-redirects Googlebot to /login — so listing
+  // those URLs only advertises pages crawlers can never read. The crawlable
+  // surface is the marketing/landing pages: home, the `/chinese` catalog
+  // (public; the middleware only gates `/chinese/hsk*`), and the blog.
+  const blogPosts = await loadBlogPosts();
 
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
   entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
-  // List pages (standalone routes, not client-side tabs)
-  entries.push(...localeEntries('/chinese/hsk1/flashcards', { changeFrequency: 'monthly', priority: 0.6 }));
-  entries.push(...localeEntries('/chinese/hsk1/dialogues', { changeFrequency: 'monthly', priority: 0.6 }));
 
-  // Grammar pages
-  for (const slug of ['shenme', 'shi', 'ma', 'shei', 'na', 'de', 'ne', 'ji', 'shuzi', 'duoda', 'hui']) {
-    entries.push(...localeEntries(`/chinese/hsk1/grammar/${slug}`, { changeFrequency: 'monthly', priority: 0.7 }));
-  }
-
-  // Dialogue pages
-  for (const d of dialogues) {
-    entries.push(...localeEntries(`/chinese/hsk1/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-  for (const d of dialoguesHsk2) {
-    entries.push(...localeEntries(`/chinese/hsk2/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-  for (const d of dialoguesHsk3) {
-    entries.push(...localeEntries(`/chinese/hsk3/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-  for (const d of dialoguesHsk4) {
-    entries.push(...localeEntries(`/chinese/hsk4/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-  for (const d of dialoguesHsk5) {
-    entries.push(...localeEntries(`/chinese/hsk5/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-  for (const d of dialoguesHsk6) {
-    entries.push(...localeEntries(`/chinese/hsk6/dialogues/${d.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
-  }
-
-  // Karaoke pages
-  for (const s of songs) {
-    entries.push(...localeEntries(`/chinese/hsk1/karaoke/${s.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // Flashcard lesson pages
-  const flashcardLessons = new Set(flashcardDeck?.words.map((w) => w.lesson).filter(Boolean) || []);
-  for (const lesson of flashcardLessons) {
-    entries.push(...localeEntries(`/chinese/hsk1/flashcards/${lesson}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // HSK 1 flashcard set pages
-  for (const set of WRITING_SETS) {
-    entries.push(...localeEntries(`/chinese/hsk1/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // HSK 2 flashcard set pages
-  for (const set of WRITING_SETS_HSK2_L2) {
-    entries.push(...localeEntries(`/chinese/hsk2/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // HSK 3 flashcard set pages
-  for (const set of WRITING_SETS_HSK3) {
-    entries.push(...localeEntries(`/chinese/hsk3/flashcards/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // Topic flashcard pages
-  const topicsDir = path.join(process.cwd(), 'content', 'flashcards', 'topics');
-  try {
-    const topicFiles = fs.readdirSync(topicsDir).filter((f) => f.endsWith('.json'));
-    for (const f of topicFiles) {
-      entries.push(...localeEntries(`/chinese/hsk1/flashcards/topic/${f.replace('.json', '')}`, { changeFrequency: 'monthly', priority: 0.5 }));
-    }
-  } catch { /* topics dir may not exist */ }
-
-  // Writing practice pages (skip coming soon sets with no content)
-  for (const set of [...WRITING_SETS, ...WRITING_SETS_HSK2, ...WRITING_SETS_HSK2_L2, ...WRITING_SETS_HSK3, ...WRITING_SETS_HSK4, ...WRITING_SETS_HSK5, ...WRITING_SETS_HSK6]) {
-    if (!set.chars) continue;
-    entries.push(...localeEntries(`/chinese/hsk1/writing/${set.id}`, { changeFrequency: 'monthly', priority: 0.5 }));
-  }
-
-  // Blog pages
   entries.push(...localeEntries('/blog', { changeFrequency: 'weekly', priority: 0.7 }));
   for (const p of blogPosts) {
     entries.push(...localeEntries(`/blog/${p.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
