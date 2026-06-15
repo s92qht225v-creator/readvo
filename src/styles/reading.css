@@ -3898,7 +3898,7 @@ body {
 
 /* Tab bar below hero banner */
 .lp__tabs {
-  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
+  background: #dc2727;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   position: sticky;
