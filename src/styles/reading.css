@@ -3957,6 +3957,23 @@ body {
   .home__hero--lang .dr-hero__body { display: none; }
   .home__hero--lang .lp__hero-watermark { display: none; }
 
+  /* Nav bar → fixed bottom (the menu stays in the hero, so no ☰ here). */
+  .lp__tabs {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: 0;
+    z-index: 60;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
+  }
+  .lp__tabs-inner {
+    gap: 4px;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+  }
+
   .lp__tab {
     display: flex;
     align-items: center;
@@ -11440,6 +11457,8 @@ body {
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
   .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
+  /* clear the catalog's fixed bottom tab bar */
+  .telegram-fab--lifted { bottom: calc(66px + env(safe-area-inset-bottom)); }
 }
 
 /* =============================================================================
