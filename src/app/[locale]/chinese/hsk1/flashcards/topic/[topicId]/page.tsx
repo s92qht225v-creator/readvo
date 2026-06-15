@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { useParams } from 'next/navigation';
 import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { useAuth } from '@/hooks/useAuth';
 import type { FlashcardDeckData } from '@/types';
 
 export default function TopicFlashcardPage() {
   const router = useRouter();
   const params = useParams();
   const topicId = (params?.topicId as string) ?? '';
+  const { getAccessToken } = useAuth();
 
   const [deck, setDeck] = useState<FlashcardDeckData | null>(null);
   const [error, setError] = useState(false);
@@ -17,7 +19,10 @@ export default function TopicFlashcardPage() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch(`/api/flashcards/topic/${topicId}`);
+        const token = await getAccessToken();
+        const res = await fetch(`/api/flashcards/topic/${topicId}`, {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        });
         if (!res.ok) { router.replace('/chinese?tab=flashcards'); return; }
         const data = await res.json() as FlashcardDeckData;
         setDeck(data);
@@ -26,7 +31,7 @@ export default function TopicFlashcardPage() {
       }
     }
     load();
-  }, [topicId, router]);
+  }, [topicId, router, getAccessToken]);
 
   if (error) return <div style={{ padding: 40, textAlign: 'center', color: '#999' }}>Xatolik yuz berdi</div>;
   if (!deck) return <div className="loading-spinner" />;

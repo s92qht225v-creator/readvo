@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { Paywall } from '@/components/Paywall';
+import { useAuth } from '@/hooks/useAuth';
 import type { FlashcardDeckData } from '@/types';
 
 const FLASHCARD_MIX_KEY = 'blim-flashcard-mix';
@@ -16,9 +18,11 @@ interface LessonInfo {
 
 export default function FlashcardMixPage() {
   const router = useRouter();
+  const { getAccessToken } = useAuth();
   const [deck, setDeck] = useState<FlashcardDeckData | null>(null);
   const [lessonInfo, setLessonInfo] = useState<LessonInfo>({});
   const [error, setError] = useState(false);
+  const [locked, setLocked] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -29,7 +33,13 @@ export default function FlashcardMixPage() {
         const selectedIds: string[] = JSON.parse(raw);
         if (!selectedIds.length) { router.replace('/chinese?tab=flashcards'); return; }
 
-        const res = await fetch('/api/flashcards/hsk1');
+        const token = await getAccessToken();
+        if (!token) { setLocked(true); return; }
+
+        const res = await fetch('/api/flashcards/hsk1', {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (res.status === 401 || res.status === 402) { setLocked(true); return; }
         if (!res.ok) throw new Error('fetch failed');
         const fullData = await res.json();
         const fullDeck: FlashcardDeckData = fullData;
@@ -61,8 +71,9 @@ export default function FlashcardMixPage() {
       }
     }
     load();
-  }, [router]);
+  }, [router, getAccessToken]);
 
+  if (locked) return <Paywall />;
   if (error) return <div style={{ padding: 40, textAlign: 'center', color: '#999' }}>Xatolik yuz berdi</div>;
   if (!deck) return <div className="loading-spinner" />;
 
