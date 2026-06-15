@@ -39,6 +39,15 @@ const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] =
   { id: 'karaoke', label: 'KTV' },
 ];
 
+/* Icons for the mobile bottom tab bar. Inactive tabs show only the icon; the
+   active tab swaps the icon for its text label (see .lp__tab rules). */
+const TAB_ICONS: Record<string, React.ReactNode> = {
+  dialogues: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H8l-4 4V5a1 1 0 0 1 1-1z"/><path d="M8 9h8M8 12.5h5"/></svg>,
+  writing: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3z"/><path d="M13.5 6.5l3 3"/></svg>,
+  flashcards: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="7" width="13" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-1"/></svg>,
+  karaoke: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 18V5l12-2v13"/></svg>,
+};
+
 const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar'];
 
 const grammarItems = [
@@ -512,7 +521,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
               onClick={() => setActiveTab(tab.id)}
               type="button"
             >
-              {language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
+              <span className="lp__tab-icon" aria-hidden="true">{TAB_ICONS[tab.id]}</span>
+              <span className="lp__tab-label">{language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}</span>
             </button>
           ))}
           {/* Mobile-only menu (the hero — which holds the desktop menu — is

@@ -3936,23 +3936,65 @@ body {
   font-weight: 700;
 }
 
-/* Menu lives in the hero on desktop; these mobile-only affordances are hidden
-   by default and revealed in the ≤600px block below. */
+/* Desktop: tabs are text-only; the menu lives in the hero. These affordances
+   are mobile-only — hidden by default, revealed in the ≤600px block below. */
+.lp__tab-icon { display: none; }
+.lp__tab-icon svg { display: block; }
 .lp__tabs-menu { display: none; }
 .lp__footer-logo { display: none; }
 
-/* Mobile: drop the hero, put the menu in the tab bar, logo in the footer. */
+/* Mobile: no hero; the tab bar becomes a fixed BOTTOM bar with icon tabs (the
+   active tab swaps to its text label) plus the menu (☰, opens upward). Logo
+   moves to the footer. */
 @media (max-width: 600px) {
   .home__hero--lang { display: none; }
+  .lp__tabs {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: 0;
+    z-index: 60;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
+  }
+  .lp__tabs-inner {
+    gap: 4px;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+  }
+  .lp__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 6px 4px;
+    border-radius: 14px;
+    white-space: nowrap;
+    transition: flex 0.22s ease, background 0.15s, color 0.15s;
+  }
+  .lp__tab-icon { display: flex; align-items: center; justify-content: center; }
+  .lp__tab-icon svg { width: 23px; height: 23px; }
+  .lp__tab-label { display: none; }
+  .lp__tab--active { flex: 2.4; }
+  .lp__tab--active .lp__tab-icon { display: none; }
+  .lp__tab--active .lp__tab-label { display: inline; font-size: 0.9rem; }
+  /* Menu (☰) in the bottom bar — plain icon, dropdown opens UPWARD. */
   .lp__tabs-menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 0 0 auto;
   }
   .lp__tabs-menu .home__menu-btn {
-    width: 40px;
-    height: 40px;
-    min-height: 40px;
+    width: 46px;
+    height: 46px;
+    min-height: 46px;
+    background: transparent;
+  }
+  .lp__tabs-menu .home__menu-dropdown {
+    top: auto;
+    bottom: calc(100% + 6px);
   }
   .lp__footer-logo {
     display: block;
@@ -11423,6 +11465,8 @@ body {
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
   .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
+  /* clear the catalog's fixed bottom tab bar */
+  .telegram-fab--lifted { bottom: calc(66px + env(safe-area-inset-bottom)); }
 }
 
 /* =============================================================================
