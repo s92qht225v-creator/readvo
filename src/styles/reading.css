@@ -3936,6 +3936,32 @@ body {
   font-weight: 700;
 }
 
+/* Menu lives in the hero on desktop; these mobile-only affordances are hidden
+   by default and revealed in the ≤600px block below. */
+.lp__tabs-menu { display: none; }
+.lp__footer-logo { display: none; }
+
+/* Mobile: drop the hero, put the menu in the tab bar, logo in the footer. */
+@media (max-width: 600px) {
+  .home__hero--lang { display: none; }
+  .lp__tabs-menu {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+  .lp__tabs-menu .home__menu-btn {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+  .lp__footer-logo {
+    display: block;
+    text-align: center;
+    padding: 18px 0 2px;
+  }
+  .lp__footer-logo img { height: 24px; width: auto; }
+}
+
 .lp__hero-watermark {
   position: absolute;
   top: 46px;

@@ -48,3 +48,7 @@ supabase/*
 .playwright-mcp/
 mobile-*.png
 
+
+# Local agent skills (installed via npx skills add — not app code)
+.agents/
+skills-lock.json

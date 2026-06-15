@@ -7,7 +7,12 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
 
-export function BannerMenu() {
+/**
+ * @param extraItems Optional render-prop for catalog-specific links (e.g. the
+ *   Grammar section) shown at the top of the dropdown under a "Sections"
+ *   label. Receives a `close` callback so an item can dismiss the menu.
+ */
+export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) => React.ReactNode } = {}) {
   const [language, , setLanguage] = useLanguage();
   const { user, logout } = useAuth();
   const trial = useTrial();
@@ -42,6 +47,15 @@ export function BannerMenu() {
         </svg>
       </button>
       <div className={`home__menu-dropdown${menuOpen ? ' home__menu-dropdown--open' : ''}`}>
+          {extraItems && (
+            <>
+              <div className="home__menu-section-label">
+                {({ uz: 'Bo\'limlar', ru: 'Разделы', en: 'Sections' } as Record<string, string>)[language]}
+              </div>
+              {extraItems(() => setMenuOpen(false))}
+              <div className="home__menu-divider" />
+            </>
+          )}
           {user && (
             <>
               <div className="home__menu-user">

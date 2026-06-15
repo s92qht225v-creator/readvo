@@ -31,12 +31,12 @@ const BOOKMARK_KEY = 'blim-dialogue-bookmarks';
 
 type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar';
 
+// Grammar is reachable from the menu (BannerMenu "Sections"), not the tab bar.
 const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] = [
   { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог', label_en: 'Dialogues' },
   { id: 'writing', label: 'Yozish', label_ru: 'Письмо', label_en: 'Writing' },
   { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
   { id: 'karaoke', label: 'KTV' },
-  { id: 'grammar', label: 'Grammatika', label_ru: 'Грамматика', label_en: 'Grammar' },
 ];
 
 const validTabs: Tab[] = ['dialogues', 'writing', 'flashcards', 'karaoke', 'grammar'];
@@ -447,6 +447,18 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
 
   if (isLoading) return <div className="loading-spinner" />;
 
+  // Grammar lives in the menu now (not the tab bar). The render-prop is shared
+  // by the hero menu (desktop) and the tab-bar menu (mobile).
+  const grammarMenuItem = (close: () => void) => (
+    <button
+      className="home__menu-item"
+      type="button"
+      onClick={() => { setActiveTab('grammar'); close(); window.scrollTo({ top: 0 }); }}
+    >
+      {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}
+    </button>
+  );
+
   return (
     <main className="home">
       {/* Banner */}
@@ -457,7 +469,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
             <Link href="/" className="home__hero-logo">
               <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
             </Link>
-            <BannerMenu />
+            <BannerMenu extraItems={grammarMenuItem} />
           </div>
           <div className="dr-hero__body">
             <h1 className="sr-only">{({ uz: 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar', ru: 'Китайский язык — уроки HSK 1, диалоги и упражнения', en: 'Chinese — HSK 1 lessons, dialogues and exercises' } as Record<string, string>)[language]}</h1>
@@ -503,6 +515,11 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
               {language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
             </button>
           ))}
+          {/* Mobile-only menu (the hero — which holds the desktop menu — is
+              hidden on mobile). */}
+          <div className="lp__tabs-menu">
+            <BannerMenu extraItems={grammarMenuItem} />
+          </div>
         </div>
       </nav>
 
@@ -964,6 +981,10 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
 
       </section>
 
+      {/* Logo moves to the footer on mobile (the hero is hidden there). */}
+      <Link href="/" className="lp__footer-logo" aria-label="Blim">
+        <Image src="/logo-red.svg" alt="Blim" width={72} height={25} />
+      </Link>
       <PageFooter />
     </main>
   );
