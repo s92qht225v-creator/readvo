@@ -1,20 +1,11 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { getWritingSet, WRITING_SETS_HSK2_L2 } from '@/services/writing';
-import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { FlashcardDeckLoader } from '@/components/FlashcardDeckLoader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 interface Props {
   params: Promise<{ locale: string; lessonId: string }>;
-}
-
-const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
-
-function getWritingAudioUrl(char: string, pinyin: string): string {
-  const first = pinyin.split(' / ')[0];
-  const stripped = first.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
-  const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
-  return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -77,21 +68,9 @@ export default async function Hsk2FlashcardsPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <FlashcardDeck
-        deck={{
-          id: lessonId,
-          title: `${setNum}-to'plam`,
-          title_ru: `Набор ${setNum}`,
-          words: writingSet.words.map((w, i) => ({
-            id: `${lessonId}-${i}`,
-            text_original: w.char,
-            pinyin: w.pinyin,
-            text_translation: w.uz,
-            text_translation_ru: w.ru,
-            text_translation_en: w.en,
-            audio_url: getWritingAudioUrl(w.char, w.pinyin),
-          })),
-        }}
+      <FlashcardDeckLoader
+        book="hsk2"
+        deckId={lessonId}
         bookPath="/chinese/hsk2"
         backHref="/chinese?tab=flashcards&flashhsk=2"
       />

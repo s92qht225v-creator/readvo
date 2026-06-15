@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { loadFlashcardDeck } from '@/services/flashcards';
 import { getLessonsWithInfo } from '@/services/content';
 import { getWritingSet, WRITING_SETS } from '@/services/writing';
-import { FlashcardDeck } from '@/components/FlashcardDeck';
+import { FlashcardDeckLoader } from '@/components/FlashcardDeckLoader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 interface Props {
@@ -12,15 +12,6 @@ interface Props {
 
 function isWritingSetId(id: string) {
   return id.startsWith('hsk') && id.includes('-set');
-}
-
-const WRITING_AUDIO_BASE = 'https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Writing';
-
-function getWritingAudioUrl(char: string, pinyin: string): string {
-  const first = pinyin.split(' / ')[0];
-  const stripped = first.replace(/[ǖǘǚǜü]/gi, 'v').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s']/g, '').toLowerCase();
-  const unicode = Array.from(char).map(c => c.codePointAt(0)).join('');
-  return `${WRITING_AUDIO_BASE}/${stripped}_${unicode}.mp3`;
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -123,23 +114,7 @@ export default async function LessonFlashcardsPage({ params }: Props) {
     return (
       <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-        <FlashcardDeck
-          deck={{
-            id: lessonId,
-            title: `${setNum}-to'plam`,
-            title_ru: `Набор ${setNum}`,
-            words: writingSet.words.map((w, i) => ({
-              id: `${lessonId}-${i}`,
-              text_original: w.char,
-              pinyin: w.pinyin,
-              text_translation: w.uz,
-              text_translation_ru: w.ru,
-              text_translation_en: w.en,
-              audio_url: getWritingAudioUrl(w.char, w.pinyin),
-            })),
-          }}
-          bookPath="/chinese/hsk1"
-        />
+        <FlashcardDeckLoader book="hsk1" deckId={lessonId} bookPath="/chinese/hsk1" />
       </>
     );
   }
@@ -177,28 +152,15 @@ export default async function LessonFlashcardsPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <FlashcardDeck
-      deck={{
-        id: `${deck.id}-lesson${lessonNum}`,
-        title: `${lessonNum}-dars`,
-        title_ru: `Урок ${lessonNum}`,
-        words: lessonWords.map((w) => ({
-          id: w.id,
-          text_original: w.text_original,
-          pinyin: w.pinyin,
-          text_translation: w.text_translation,
-          text_translation_ru: w.text_translation_ru,
-          text_translation_en: w.text_translation_en,
-          lesson: w.lesson,
-          audio_url: w.audio_url,
-        })),
-      }}
-      bookPath="/chinese/hsk1"
-      lessonTitle={info?.title}
-      lessonPinyin={info?.pinyin}
-      lessonTitleTranslation={info?.titleTranslation}
-      lessonTitleTranslation_ru={info?.titleTranslation_ru}
-    />
+      <FlashcardDeckLoader
+        book="hsk1"
+        deckId={lessonId}
+        bookPath="/chinese/hsk1"
+        lessonTitle={info?.title}
+        lessonPinyin={info?.pinyin}
+        lessonTitleTranslation={info?.titleTranslation}
+        lessonTitleTranslation_ru={info?.titleTranslation_ru}
+      />
     </>
   );
 }
