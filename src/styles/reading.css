@@ -3936,48 +3936,6 @@ body {
   font-weight: 700;
 }
 
-/* Desktop: tabs are text-only (icons are a mobile-only affordance). */
-.lp__tab-icon { display: none; }
-.lp__tab-icon svg { display: block; }
-
-/* Mobile: move the tab bar to a fixed bottom bar. Inactive tabs show only an
-   icon; the active tab swaps to its text label and expands to fill the gap. */
-@media (max-width: 600px) {
-  .lp__tabs {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-left: 0;
-    z-index: 60;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
-  }
-  .lp__tabs-inner {
-    gap: 4px;
-    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-  }
-  .lp__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 46px;
-    padding: 6px 4px;
-    border-radius: 14px;
-    white-space: nowrap;
-    transition: flex 0.22s ease, background 0.15s, color 0.15s;
-  }
-  .lp__tab-icon { display: flex; align-items: center; justify-content: center; }
-  .lp__tab-icon svg { width: 23px; height: 23px; }
-  .lp__tab-label { display: none; }
-  .lp__tab--active { flex: 2.4; }
-  .lp__tab--active .lp__tab-icon { display: none; }
-  .lp__tab--active .lp__tab-label { display: inline; font-size: 0.9rem; }
-  /* Content clearance behind the fixed bar is provided by the shared
-     .home__footer (padding-bottom ~88px), which always renders last. */
-}
-
 .lp__hero-watermark {
   position: absolute;
   top: 46px;
@@ -11439,8 +11397,6 @@ body {
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
   .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
-  /* clear the catalog's fixed bottom tab bar */
-  .telegram-fab--lifted { bottom: calc(66px + env(safe-area-inset-bottom)); }
 }
 
 /* =============================================================================
