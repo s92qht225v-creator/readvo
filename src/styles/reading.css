@@ -3943,26 +3943,20 @@ body {
 .lp__tabs-menu { display: none; }
 .lp__footer-logo { display: none; }
 
-/* Mobile: no hero; the tab bar becomes a fixed BOTTOM bar with icon tabs (the
-   active tab swaps to its text label) plus the menu (☰, opens upward). Logo
-   moves to the footer. */
+/* Mobile: a SLIM hero (logo + ☰ menu only) sits on top; the nav bar stays a
+   sticky strip directly under it with icon tabs — the active tab swaps its icon
+   for its text label. */
 @media (max-width: 600px) {
-  .home__hero--lang { display: none; }
-  .lp__tabs {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-left: 0;
-    z-index: 60;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
-  }
-  .lp__tabs-inner {
-    gap: 4px;
-    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-  }
+  /* Slim the hero: keep the logo + menu top row, drop the big decorative block
+     and the fixed 175px banner height so it collapses to the row. */
+  .home__hero.home__hero--lang { height: auto; padding-bottom: 4px; }
+  .home__hero--lang .home__hero-inner { height: auto; }
+  /* The top row is absolutely positioned for the desktop banner; let it flow
+     so the slim hero sizes to it. */
+  .home__hero--lang .home__hero-top-row { position: static; }
+  .home__hero--lang .dr-hero__body { display: none; }
+  .home__hero--lang .lp__hero-watermark { display: none; }
+
   .lp__tab {
     display: flex;
     align-items: center;
@@ -3979,29 +3973,10 @@ body {
   .lp__tab--active { flex: 2.4; }
   .lp__tab--active .lp__tab-icon { display: none; }
   .lp__tab--active .lp__tab-label { display: inline; font-size: 0.9rem; }
-  /* Menu (☰) in the bottom bar — plain icon, dropdown opens UPWARD. */
-  .lp__tabs-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-  }
-  .lp__tabs-menu .home__menu-btn {
-    width: 46px;
-    height: 46px;
-    min-height: 46px;
-    background: transparent;
-  }
-  .lp__tabs-menu .home__menu-dropdown {
-    top: auto;
-    bottom: calc(100% + 6px);
-  }
-  .lp__footer-logo {
-    display: block;
-    text-align: center;
-    padding: 18px 0 2px;
-  }
-  .lp__footer-logo img { height: 24px; width: auto; }
+
+  /* Menu + logo are back in the hero — hide the bottom-nav-era duplicates. */
+  .lp__tabs-menu { display: none; }
+  .lp__footer-logo { display: none; }
 }
 
 .lp__hero-watermark {
@@ -11465,8 +11440,6 @@ body {
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
   .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
-  /* clear the catalog's fixed bottom tab bar */
-  .telegram-fab--lifted { bottom: calc(66px + env(safe-area-inset-bottom)); }
 }
 
 /* =============================================================================
