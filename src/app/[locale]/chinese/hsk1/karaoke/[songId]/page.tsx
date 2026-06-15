@@ -81,7 +81,17 @@ export default async function KaraokePage({ params }: PageParams) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <KaraokePlayer song={song} bookPath="/chinese/hsk1" />
+      <KaraokePlayer
+        meta={{
+          id: songId,
+          title: song.title,
+          pinyin: song.pinyin,
+          titleTranslation: song.titleTranslation,
+          titleTranslation_ru: song.titleTranslation_ru,
+          titleTranslation_en: song.titleTranslation_en,
+        }}
+        bookPath="/chinese/hsk1"
+      />
     </>
   );
 }
