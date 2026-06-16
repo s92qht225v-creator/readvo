@@ -267,3 +267,16 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('消息', 'xiāoxi', 'xabar', 'сообщение; новость', 'message; news', 3),
   ('发', 'fā', 'yubormoq', 'отправлять', 'to send', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 看病 (hsk2/dialogue11) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('脸色', 'liǎnsè', 'chehra rangi', 'цвет лица; вид', 'complexion; one''s look', 3),
+  ('吃药', 'chī yào', 'dori ichmoq', 'принимать лекарство', 'to take medicine', 2),
+  ('陪', 'péi', 'hamrohlik qilmoq', 'сопровождать', 'to accompany', 3),
+  ('自己', 'zìjǐ', 'o''zi', 'сам; себя', 'oneself', 2),
+  ('度', 'dù', 'gradus', 'градус', 'degree', 2),
+  ('高', 'gāo', 'baland', 'высокий', 'high; tall', 1),
+  ('马上', 'mǎshàng', 'darhol', 'сразу; немедленно', 'at once; right away', 2),
+  ('路口', 'lùkǒu', 'chorraha', 'перекрёсток', 'intersection', 3),
+  ('左转', 'zuǒ zhuǎn', 'chapga burilish', 'повернуть налево', 'to turn left', 3)
+  on conflict (zh, py_norm) do nothing;

@@ -1,0 +1,143 @@
+{
+  "id": "hsk2-dialogue11",
+  "slug": "seeing-a-doctor",
+  "title": "看病",
+  "pinyin": "Kàn bìng",
+  "titleTranslation": "Shifokorga borish",
+  "titleTranslation_ru": "Идти к врачу",
+  "titleTranslation_en": "Seeing a Doctor",
+  "level": 2,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "脸色",
+    "头疼",
+    "发烧",
+    "吃药",
+    "陪",
+    "自己",
+    "度",
+    "高",
+    "马上",
+    "路口",
+    "左转"
+  ],
+  "sections": [
+    {
+      "id": "d11-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d11-s1",
+          "text_original": "你怎么了？脸色不太好。",
+          "pinyin": "Nǐ zěn me le? Liǎn sè bú tài hǎo.",
+          "text_translation": "Senga nima bo'ldi? Rangging unchalik yaxshi emas.",
+          "text_translation_ru": "Что с тобой? Ты неважно выглядишь.",
+          "text_translation_en": "What's wrong? You don't look well.",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s2",
+          "text_original": "我头疼，还有点发烧。",
+          "pinyin": "Wǒ tóu téng, hái yǒu diǎn fā shāo.",
+          "text_translation": "Boshim og'riyapti, biroz isitmam ham bor.",
+          "text_translation_ru": "У меня болит голова, и ещё немного температура.",
+          "text_translation_en": "I have a headache, and I have a slight fever too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d11-s3",
+          "text_original": "你吃药了吗？",
+          "pinyin": "Nǐ chī yào le ma?",
+          "text_translation": "Dori ichdingmi?",
+          "text_translation_ru": "Ты принял лекарство?",
+          "text_translation_en": "Have you taken any medicine?",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s4",
+          "text_original": "没有。我想去医院看一下。",
+          "pinyin": "Méi yǒu. Wǒ xiǎng qù yī yuàn kàn yí xià.",
+          "text_translation": "Yo'q. Kasalxonaga borib ko'rsatmoqchiman.",
+          "text_translation_ru": "Нет. Я хочу сходить в больницу провериться.",
+          "text_translation_en": "No. I want to go to the hospital to get checked.",
+          "speaker": "B"
+        },
+        {
+          "id": "d11-s5",
+          "text_original": "我陪你去吧。",
+          "pinyin": "Wǒ péi nǐ qù ba.",
+          "text_translation": "Men sen bilan boraman.",
+          "text_translation_ru": "Я пойду с тобой.",
+          "text_translation_en": "Let me go with you.",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s6",
+          "text_original": "不用，我自己可以去。",
+          "pinyin": "Bú yòng, wǒ zì jǐ kě yǐ qù.",
+          "text_translation": "Shart emas, o'zim bora olaman.",
+          "text_translation_ru": "Не нужно, я сам могу пойти.",
+          "text_translation_en": "No need, I can go by myself.",
+          "speaker": "B"
+        },
+        {
+          "id": "d11-s7",
+          "text_original": "你发烧多少度？",
+          "pinyin": "Nǐ fā shāo duō shao dù?",
+          "text_translation": "Isitmang necha gradus?",
+          "text_translation_ru": "Какая у тебя температура?",
+          "text_translation_en": "What's your temperature?",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s8",
+          "text_original": "三十八度五。",
+          "pinyin": "Sān shí bā dù wǔ.",
+          "text_translation": "O'ttiz sakkiz yarim gradus.",
+          "text_translation_ru": "Тридцать восемь и пять.",
+          "text_translation_en": "Thirty-eight point five.",
+          "speaker": "B"
+        },
+        {
+          "id": "d11-s9",
+          "text_original": "那很高。你最好马上去医院。",
+          "pinyin": "Nà hěn gāo. Nǐ zuì hǎo mǎ shàng qù yī yuàn.",
+          "text_translation": "Bu juda baland. Darhol kasalxonaga borganing ma'qul.",
+          "text_translation_ru": "Это высокая. Тебе лучше сразу пойти в больницу.",
+          "text_translation_en": "That's high. You'd better go to the hospital right away.",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s10",
+          "text_original": "好。你知道医院怎么走吗？",
+          "pinyin": "Hǎo. Nǐ zhī dào yī yuàn zěn me zǒu ma?",
+          "text_translation": "Mayli. Kasalxonaga qanday borishni bilasanmi?",
+          "text_translation_ru": "Хорошо. Ты знаешь, как пройти в больницу?",
+          "text_translation_en": "Okay. Do you know how to get to the hospital?",
+          "speaker": "B"
+        },
+        {
+          "id": "d11-s11",
+          "text_original": "前面路口右转，走五分钟就到了。",
+          "pinyin": "Qián miàn lù kǒu yòu zhuǎn, zǒu wǔ fēn zhōng jiù dào le.",
+          "text_translation": "Oldindagi chorrahada o'ngga buriling, besh daqiqa yursangiz yetib borasiz.",
+          "text_translation_ru": "На перекрёстке впереди поверни направо, через пять минут дойдёшь.",
+          "text_translation_en": "Turn right at the intersection ahead, walk five minutes and you're there.",
+          "speaker": "A"
+        },
+        {
+          "id": "d11-s12",
+          "text_original": "谢谢！我走了。",
+          "pinyin": "Xiè xie! Wǒ zǒu le.",
+          "text_translation": "Rahmat! Men ketdim.",
+          "text_translation_ru": "Спасибо! Я пошёл.",
+          "text_translation_en": "Thanks! I'm off.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
