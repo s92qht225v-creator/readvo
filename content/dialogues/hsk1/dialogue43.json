@@ -16,308 +16,130 @@
       "sentences": [
         {
           "id": "d43-s1",
-          "text_original": "安全带系好了吗？",
-          "pinyin": "Ānquándài jì hǎo le ma?",
-          "text_translation": "Xavfsizlik kamaringizni taqib oldingmi?",
-          "text_translation_ru": "Ремень безопасности пристегнула?",
+          "text_original": "你准备好了吗？",
+          "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
+          "text_translation": "Tayyor bo'ldingmi?",
+          "text_translation_ru": "Ты готов?",
+          "text_translation_en": "Are you ready?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "ānquándài",
-              "t": "xavfsizlik kamari",
-              "tr": "ремень безопасности"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "jì",
-              "t": "taqmoq",
-              "tr": "пристегнуть"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "le",
-              "t": "(tugadi)",
-              "tr": "(завершение)",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue1.mp3",
-          "text_translation_en": "Is your seatbelt fastened?"
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "zhǔnbèi", "t": "tayyorlanmoq", "tr": "готовиться" },
+            { "i": [3, 4], "p": "hǎo", "t": "tayyor", "tr": "готово", "h": 1, "l": 1 },
+            { "i": [4, 5], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d43-s2",
-          "text_original": "系好了。",
-          "pinyin": "Jì hǎo le.",
-          "text_translation": "Taqib oldim.",
-          "text_translation_ru": "Пристегнула.",
+          "text_original": "好了。我们可以走了。",
+          "pinyin": "Hǎo le. Wǒmen kěyǐ zǒu le.",
+          "text_translation": "Tayyor. Yo'lga chiqsak bo'ladi.",
+          "text_translation_ru": "Готов. Можем ехать.",
+          "text_translation_en": "Ready. We can go.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "jì",
-              "t": "taqmoq",
-              "tr": "пристегнуть"
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "le",
-              "t": "(tugadi)",
-              "tr": "(завершение)",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue2.mp3",
-          "text_translation_en": "Yes, it is."
+            { "i": [0, 1], "p": "hǎo", "t": "tayyor", "tr": "готово", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [3, 5], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 2 },
+            { "i": [5, 7], "p": "kěyǐ", "t": "mumkin; bo'ladi", "tr": "можно" },
+            { "i": [7, 8], "p": "zǒu", "t": "ketmoq; yurmoq", "tr": "идти; ехать" },
+            { "i": [8, 9], "p": "le", "t": "(holat o'zgarishi)", "tr": "(изменение)" }
+          ]
         },
         {
           "id": "d43-s3",
-          "text_original": "后面的人呢？",
-          "pinyin": "Hòumiàn de rén ne?",
-          "text_translation": "Orqadagilarchi?",
-          "text_translation_ru": "А те, кто сзади?",
+          "text_original": "安全带系好了吗？",
+          "pinyin": "Ānquándài jì hǎo le ma?",
+          "text_translation": "Xavfsizlik kamarini taqib oldingmi?",
+          "text_translation_ru": "Ремень безопасности пристегнул?",
+          "text_translation_en": "Have you fastened your seatbelt?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "hòumiàn",
-              "t": "orqada",
-              "tr": "сзади"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "de",
-              "t": "(-ning)",
-              "tr": "(притяж.)",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "rén",
-              "t": "odam",
-              "tr": "человек",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "ne",
-              "t": "-chi",
-              "tr": "(а..?)",
-              "h": 1,
-              "l": 3
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue3.mp3",
-          "text_translation_en": "What about the people in the back?"
+            { "i": [0, 3], "p": "ānquándài", "t": "xavfsizlik kamari", "tr": "ремень безопасности" },
+            { "i": [3, 4], "p": "jì", "t": "bog'lamoq; taqmoq", "tr": "пристегнуть" },
+            { "i": [4, 5], "p": "hǎo", "t": "tayyor", "tr": "готово", "h": 1, "l": 1 },
+            { "i": [5, 6], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [6, 7], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d43-s4",
-          "text_original": "也系好了。",
-          "pinyin": "Yě jì hǎo le.",
-          "text_translation": "Ular ham taqib olishdi.",
-          "text_translation_ru": "Тоже пристегнулись.",
+          "text_original": "还没有。等一下。",
+          "pinyin": "Hái méiyǒu. Děng yíxià.",
+          "text_translation": "Hali yo'q. Bir oz kut.",
+          "text_translation_ru": "Ещё нет. Подожди немного.",
+          "text_translation_en": "Not yet. Wait a moment.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "yě",
-              "t": "ham",
-              "tr": "тоже",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "jì",
-              "t": "taqmoq",
-              "tr": "пристегнуть"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "le",
-              "t": "(tugadi)",
-              "tr": "(завершение)",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue4.mp3",
-          "text_translation_en": "They're fastened too."
+            { "i": [0, 3], "p": "hái méiyǒu", "t": "hali yo'q", "tr": "ещё нет" },
+            { "i": [4, 7], "p": "děng yíxià", "t": "bir oz kut", "tr": "подожди немного" }
+          ]
         },
         {
           "id": "d43-s5",
-          "text_original": "那我们出发吧。",
-          "pinyin": "Nà wǒmen chūfā ba.",
-          "text_translation": "Unda kettik.",
-          "text_translation_ru": "Тогда поехали.",
+          "text_original": "快点。我们要迟到了。",
+          "pinyin": "Kuài diǎn. Wǒmen yào chídào le.",
+          "text_translation": "Tezroq. Kechikamiz.",
+          "text_translation_ru": "Побыстрее. Мы опаздываем.",
+          "text_translation_en": "Hurry up. We're going to be late.",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda",
-              "tr": "тогда",
-              "h": 1,
-              "l": 9
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "chūfā",
-              "t": "jo'namoq",
-              "tr": "отправиться"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ba",
-              "t": "(-ylik)",
-              "tr": "(давай)",
-              "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue5.mp3",
-          "text_translation_en": "Then let's go."
+            { "i": [0, 2], "p": "kuài diǎn", "t": "tezroq", "tr": "побыстрее" },
+            { "i": [3, 5], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "yào", "t": "...moqchi (bo'lyapti)", "tr": "вот-вот", "h": 1, "l": 7 },
+            { "i": [6, 8], "p": "chídào", "t": "kechikmoq", "tr": "опаздывать" },
+            { "i": [8, 9], "p": "le", "t": "(holat o'zgarishi)", "tr": "(изменение)" }
+          ]
         },
         {
           "id": "d43-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "text_original": "好了。现在可以走了。",
+          "pinyin": "Hǎo le. Xiànzài kěyǐ zǒu le.",
+          "text_translation": "Bo'ldi. Endi yo'lga chiqsak bo'ladi.",
+          "text_translation_ru": "Готово. Теперь можем ехать.",
+          "text_translation_en": "Done. Now we can go.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
+            { "i": [0, 1], "p": "hǎo", "t": "tayyor", "tr": "готово", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [3, 5], "p": "xiànzài", "t": "hozir; endi", "tr": "сейчас; теперь", "h": 1, "l": 5 },
+            { "i": [5, 7], "p": "kěyǐ", "t": "mumkin; bo'ladi", "tr": "можно" },
+            { "i": [7, 8], "p": "zǒu", "t": "ketmoq; yurmoq", "tr": "идти; ехать" },
+            { "i": [8, 9], "p": "le", "t": "(holat o'zgarishi)", "tr": "(изменение)" }
+          ]
+        },
+        {
+          "id": "d43-s7",
+          "text_original": "好。我们走吧！",
+          "pinyin": "Hǎo. Wǒmen zǒu ba!",
+          "text_translation": "Mayli. Ketdik!",
+          "text_translation_ru": "Хорошо. Поехали!",
+          "text_translation_en": "Okay. Let's go!",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "hǎo", "t": "yaxshi", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [2, 4], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "zǒu", "t": "ketmoq; yurmoq", "tr": "идти; ехать" },
+            { "i": [5, 6], "p": "ba", "t": "(taklif)", "tr": "(побуждение)", "h": 1, "l": 6 }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3"
+      ]
     }
   ],
-  "tag": "transport",
+  "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20anquan%20dai%20ji%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
+    "准备",
+    "可以",
+    "走",
     "安全带",
     "系",
-    "后面",
-    "也",
-    "出发",
-    "吧"
+    "还没有",
+    "等一下",
+    "快点",
+    "要",
+    "迟到",
+    "现在"
   ]
 }

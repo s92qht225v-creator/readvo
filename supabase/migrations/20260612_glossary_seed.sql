@@ -494,3 +494,9 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('还没有', 'hái méiyǒu', 'hali yo''q', 'ещё нет', 'not yet', 2),
   ('见', 'jiàn', 'ko''rishmoq', 'видеть(ся)', 'to see; to meet', 1)
   on conflict (zh, py_norm) do nothing;
+
+-- 安全带系好了吗？ (hsk1/dialogue43) replacement — new vocab words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('等一下', 'děng yíxià', 'bir oz kuting; sal sabr qiling', 'подожди немного', 'wait a moment', 2),
+  ('快点', 'kuài diǎn', 'tezroq; shoshiling', 'побыстрее', 'hurry up; quickly', 2)
+  on conflict (zh, py_norm) do nothing;
