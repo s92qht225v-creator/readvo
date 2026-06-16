@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 const BUCKET = 'audio';
@@ -17,7 +17,15 @@ function publicUrl(path: string): string {
   return `${supabaseUrl}/storage/v1/object/public/${BUCKET}/${encodeURIComponent(path).replace(/%2F/g, '/')}`;
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
+  // Generating TTS hits a paid external API (MiMo) and writes to storage, so
+  // it must not be open to anonymous callers. Gate on the same-origin
+  // `blim-auth` cookie (HttpOnly, set on login) — logged-in users carry it
+  // automatically, so legitimate in-app calls are unaffected.
+  if (req.cookies.get('blim-auth')?.value !== '1') {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+  }
+
   const { text, style, skipCache } = await req.json();
 
   if (!text || typeof text !== 'string') {

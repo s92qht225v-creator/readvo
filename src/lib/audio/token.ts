@@ -11,7 +11,11 @@ import crypto from 'crypto';
 /* Derive the HMAC key from an existing server secret so no new env var
    has to be provisioned on the box. Server-role key is server-only. */
 function secret(): string {
-  return process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // An empty HMAC key produces deterministic, trivially-forgeable signatures,
+  // so refuse to sign/verify rather than silently degrade to "no security".
+  if (!key) throw new Error('SUPABASE_SERVICE_ROLE_KEY is required to sign audio tokens');
+  return key;
 }
 
 const DEFAULT_TTL_SEC = 60 * 60; // 1 hour — long enough for any single playback

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
-import { getUserFromJWT } from '@/lib/jwt';
 
 async function sendTelegramNotification(
   email: string,
@@ -48,8 +47,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
 
-  const user = getUserFromJWT(token);
-  if (!user) {
+  // Verify the JWT signature with Supabase (not a local decode) — this creates
+  // financial records + Telegram notifications, so the identity must be real
+  // and not a forgeable client-supplied token. getUser() only validates the
+  // token; it does not mutate the shared admin client's session.
+  const { data: authData, error: authErr } = await getSupabaseAdmin().auth.getUser(token);
+  const user = authData?.user;
+  if (authErr || !user) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
 

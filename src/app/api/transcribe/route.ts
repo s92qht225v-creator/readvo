@@ -8,10 +8,15 @@ import { postCorrect } from '@/lib/transcribe/post-correct';
 const DAILY_LIMIT = 100;
 
 export async function POST(request: NextRequest) {
-  // --- Auth (optional — daily limit only applies to logged-in users) ---
+  // --- Auth required: transcription hits paid STT providers, so an
+  // unauthenticated caller must not be able to invoke it (the per-user daily
+  // limit can't apply without a user). ---
   const authHeader = request.headers.get('authorization');
   const token = authHeader?.replace('Bearer ', '');
   const userId = token ? getUserIdFromJWT(token) : null;
+  if (!userId) {
+    return Response.json({ error: 'unauthorized' }, { status: 401 });
+  }
 
   // --- Parse FormData ---
   const formData = await request.formData();

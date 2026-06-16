@@ -51,12 +51,15 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }
 
-    const userId = getUserIdFromJWT(authHeader.slice(7), { skipExpiration: true });
-    if (!userId) {
+    // Verify the JWT signature (not a local decode) so a forged `sub` can't
+    // delete another user's session row and force-log-them-out (IDOR).
+    const admin = getSupabaseAdmin();
+    const { data: authData, error: authErr } = await admin.auth.getUser(authHeader.slice(7));
+    const userId = authData?.user?.id;
+    if (authErr || !userId) {
       return NextResponse.json({ ok: false }, { status: 401 });
     }
 
-    const admin = getSupabaseAdmin();
     await admin.from('active_sessions').delete().eq('user_id', userId);
     return NextResponse.json({ ok: true });
   } catch {

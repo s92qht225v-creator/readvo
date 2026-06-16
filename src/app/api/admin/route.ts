@@ -2,11 +2,35 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { copyMarketplaceTestToBuyer } from '@/lib/test/marketplaceCopy';
 
+// In-memory IP brute-force guard for the admin password — mirrors the limiter
+// on /api/admin/check so the main route can't be used to sidestep the lockout.
+const failedAttempts = new Map<string, { count: number; resetAt: number }>();
+const MAX_ATTEMPTS = 5;
+const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+
+function clientIp(request: NextRequest): string {
+  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+}
+
+function isRateLimited(request: NextRequest): boolean {
+  const entry = failedAttempts.get(clientIp(request));
+  return !!(entry && Date.now() < entry.resetAt && entry.count >= MAX_ATTEMPTS);
+}
+
 function verifyPassword(request: NextRequest) {
   const password = request.headers.get('x-admin-password');
   const adminPassword = process.env.ADMIN_PASSWORD;
-  if (!adminPassword || password !== adminPassword) return false;
-  return true;
+  const ok = !!adminPassword && password === adminPassword;
+  const ip = clientIp(request);
+  if (!ok) {
+    const now = Date.now();
+    const entry = failedAttempts.get(ip);
+    if (entry && now < entry.resetAt) entry.count++;
+    else failedAttempts.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+  } else {
+    failedAttempts.delete(ip);
+  }
+  return ok;
 }
 
 const PLAN_DAYS: Record<string, number> = {
@@ -17,6 +41,9 @@ const PLAN_DAYS: Record<string, number> = {
 };
 
 export async function GET(request: NextRequest) {
+  if (isRateLimited(request)) {
+    return NextResponse.json({ error: 'Too many attempts' }, { status: 429 });
+  }
   if (!verifyPassword(request)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
@@ -78,6 +105,9 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  if (isRateLimited(request)) {
+    return NextResponse.json({ error: 'Too many attempts' }, { status: 429 });
+  }
   if (!verifyPassword(request)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }

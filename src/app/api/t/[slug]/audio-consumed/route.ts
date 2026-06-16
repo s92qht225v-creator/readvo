@@ -48,6 +48,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   if (current.includes(trackId)) {
     return NextResponse.json({ ok: true, consumed_audio: current });
   }
+  // Cap the array so a client can't grow this row's storage unboundedly by
+  // posting an endless stream of distinct track ids. Any real test has far
+  // fewer than 200 listening tracks.
+  if (current.length >= 200) {
+    return NextResponse.json({ ok: true, consumed_audio: current });
+  }
   const next = [...current, trackId];
   const { error } = await admin
     .from('test_responses')
