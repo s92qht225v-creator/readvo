@@ -16,423 +16,234 @@
       "sentences": [
         {
           "id": "d45-s1",
-          "text_original": "你怎么不接电话？",
-          "pinyin": "Nǐ zěnme bù jiē diànhuà?",
-          "text_translation": "Nega telefonga javob bermayapsan?",
-          "text_translation_ru": "Почему не берёшь трубку?",
+          "text_original": "你昨天去商场了？",
+          "pinyin": "Nǐ zuótiān qù shāngchǎng le?",
+          "text_translation": "Kecha savdo markaziga bordingmi?",
+          "text_translation_ru": "Ты вчера ходил в торговый центр?",
+          "text_translation_en": "Did you go to the mall yesterday?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "zěnme",
-              "t": "nega",
-              "tr": "почему",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "bù",
-              "t": "yo'q",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "jiē",
-              "t": "javob bermoq",
-              "tr": "ответить (на звонок)"
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "diànhuà",
-              "t": "telefon",
-              "tr": "телефон",
-              "h": 1,
-              "l": 10
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue1.mp3",
-          "text_translation_en": "Why didn't you answer the phone?"
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "zuótiān", "t": "kecha", "tr": "вчера" },
+            { "i": [3, 4], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 },
+            { "i": [4, 6], "p": "shāngchǎng", "t": "savdo markazi", "tr": "торговый центр" },
+            { "i": [6, 7], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" }
+          ]
         },
         {
           "id": "d45-s2",
-          "text_original": "刚才在开会。",
-          "pinyin": "Gāngcái zài kāihuì.",
-          "text_translation": "Endiroqda yig'ilishda edim.",
-          "text_translation_ru": "Только что был на собрании.",
+          "text_original": "对。我买了一件衣服。",
+          "pinyin": "Duì. Wǒ mǎi le yí jiàn yīfu.",
+          "text_translation": "Ha. Bitta kiyim sotib oldim.",
+          "text_translation_ru": "Да. Я купил одну вещь из одежды.",
+          "text_translation_en": "Yes. I bought a piece of clothing.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "gāngcái",
-              "t": "hozirgina",
-              "tr": "только что"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "zài",
-              "t": "(-yapti)",
-              "tr": "(прогрессив)",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "kāihuì",
-              "t": "yig'ilish",
-              "tr": "собрание"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue2.mp3",
-          "text_translation_en": "I was in a meeting just now."
+            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать" },
+            { "i": [4, 5], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [5, 7], "p": "yí jiàn", "t": "bitta (dona)", "tr": "одна (штука)" },
+            { "i": [7, 9], "p": "yīfu", "t": "kiyim", "tr": "одежда" }
+          ]
         },
         {
           "id": "d45-s3",
-          "text_original": "开这么久？",
-          "pinyin": "Kāi zhème jiǔ?",
-          "text_translation": "Shuncha uzoq davom etdimi?",
-          "text_translation_ru": "Так долго?",
+          "text_original": "你为什么不叫我？",
+          "pinyin": "Nǐ wèishénme bú jiào wǒ?",
+          "text_translation": "Nega meni chaqirmading?",
+          "text_translation_ru": "Почему ты меня не позвал?",
+          "text_translation_en": "Why didn't you call me?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "kāi",
-              "t": "o'tkazmoq",
-              "tr": "проводить"
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "zhème",
-              "t": "shuncha",
-              "tr": "так"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "jiǔ",
-              "t": "uzoq",
-              "tr": "долго"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue3.mp3",
-          "text_translation_en": "That long?"
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 4], "p": "wèishénme", "t": "nega", "tr": "почему" },
+            { "i": [4, 5], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "jiào", "t": "chaqirmoq", "tr": "звать", "h": 1, "l": 1 },
+            { "i": [6, 7], "p": "wǒ", "t": "meni", "tr": "меня", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d45-s4",
-          "text_original": "事情有点多。",
-          "pinyin": "Shìqing yǒudiǎn duō.",
-          "text_translation": "Ishlar biroz ko'p edi.",
-          "text_translation_ru": "Дел было многовато.",
+          "text_original": "我不知道你有时间。",
+          "pinyin": "Wǒ bù zhīdào nǐ yǒu shíjiān.",
+          "text_translation": "Vaqting borligini bilmadim.",
+          "text_translation_ru": "Я не знал, что у тебя есть время.",
+          "text_translation_en": "I didn't know you had time.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "shìqing",
-              "t": "ish",
-              "tr": "дела"
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yǒudiǎn",
-              "t": "biroz",
-              "tr": "немного"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "duō",
-              "t": "ko'p",
-              "tr": "много",
-              "h": 1,
-              "l": 9
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue4.mp3",
-          "text_translation_en": "There were a lot of things to discuss."
+            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [2, 4], "p": "zhīdào", "t": "bilmoq", "tr": "знать" },
+            { "i": [4, 5], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [5, 6], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
+            { "i": [6, 8], "p": "shíjiān", "t": "vaqt", "tr": "время" }
+          ]
         },
         {
           "id": "d45-s5",
-          "text_original": "下次说一声。",
-          "pinyin": "Xià cì shuō yì shēng.",
-          "text_translation": "Keyingi safar bir og'iz aytib qo'y.",
-          "text_translation_ru": "В следующий раз предупреди.",
+          "text_original": "下次去的时候，说一声。",
+          "pinyin": "Xià cì qù de shíhou, shuō yì shēng.",
+          "text_translation": "Keyingi safar borganingda, bir og'iz aytib qo'y.",
+          "text_translation_ru": "В следующий раз, когда пойдёшь, предупреди.",
+          "text_translation_en": "Next time you go, give me a heads up.",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xià cì",
-              "t": "keyingi safar",
-              "tr": "в следующий раз",
-              "h": 1,
-              "l": 13
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "shuō",
-              "t": "aytmoq",
-              "tr": "сказать",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "yì shēng",
-              "t": "bir og'iz",
-              "tr": "одно слово"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue5.mp3",
-          "text_translation_en": "Let me know next time."
+            { "i": [0, 2], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
+            { "i": [2, 3], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 },
+            { "i": [3, 4], "p": "de", "t": "(bog'lovchi)", "tr": "(служебное)", "h": 1, "l": 1 },
+            { "i": [4, 6], "p": "shíhou", "t": "payt", "tr": "время; момент" },
+            { "i": [7, 9], "p": "shuō", "t": "aytmoq", "tr": "сказать", "h": 1, "l": 10 },
+            { "i": [9, 11], "p": "yì shēng", "t": "bir og'iz", "tr": "одно слово" }
+          ]
         },
         {
           "id": "d45-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "text_original": "好的。下次我们一起去。",
+          "pinyin": "Hǎo de. Xià cì wǒmen yìqǐ qù.",
+          "text_translation": "Xo'p. Keyingi safar birga boramiz.",
+          "text_translation_ru": "Хорошо. В следующий раз пойдём вместе.",
+          "text_translation_en": "Okay. Next time we'll go together.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue6.mp3",
-          "text_translation_en": "OK."
+            { "i": [0, 2], "p": "hǎo de", "t": "xo'p", "tr": "хорошо", "h": 1, "l": 1 },
+            { "i": [3, 5], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
+            { "i": [5, 7], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 2 },
+            { "i": [7, 9], "p": "yìqǐ", "t": "birga", "tr": "вместе" },
+            { "i": [9, 10], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3"
+      ]
     }
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20bu%20jie%20dianhua/dialogue.mp3",
   "vocab": [
-    "接电话",
-    "刚才",
-    "开会",
-    "这么",
-    "久",
-    "事情",
-    "有点",
+    "昨天",
+    "商场",
+    "买",
+    "件",
+    "衣服",
+    "为什么",
+    "叫",
+    "知道",
+    "时间",
     "下次",
-    "说一声"
+    "时候",
+    "说一声",
+    "一起"
   ],
   "grammarNotes": [
     {
-      "pattern": "怎么...？",
-      "title_uz": "Sabab so'rash (hayron qolish)",
-      "title_ru": "Спросить причину (удивление)",
-      "desc_uz": "怎么 = nega / qanday qilib. Biror narsaga hayron qolganda ishlatiladi.",
-      "desc_ru": "怎么 = почему / как так. Используется, когда удивляешься чему-то.",
-      "formula": "Ega + 怎么 + Fe'l？",
-      "formula_ru": "Подлеж. + 怎么 + Глагол？",
+      "pattern": "Fe'l + 了",
+      "title_uz": "Tugallangan ish (o'tgan zamon)",
+      "title_ru": "Завершённое действие (прош. время)",
+      "desc_uz": "了 fe'ldan keyin kelib, ish bajarilib bo'lganini bildiradi.",
+      "desc_ru": "了 после глагола показывает, что действие уже совершено.",
+      "formula": "Ega + Fe'l + 了",
+      "formula_ru": "Подлеж. + Глагол + 了",
       "examples": [
         {
-          "zh": "你怎么不接电话？",
-          "py": "Nǐ zěnme bù jiē diànhuà?",
-          "uz": "Nega telefonga javob bermading?",
-          "ru": "Почему ты не отвечал на звонок?",
-          "en": "Why didn't you answer the phone?"
+          "zh": "我买了一件衣服。",
+          "py": "Wǒ mǎi le yí jiàn yīfu.",
+          "uz": "Bitta kiyim sotib oldim.",
+          "ru": "Я купил одну вещь из одежды.",
+          "en": "I bought a piece of clothing."
         },
         {
-          "zh": "你怎么不吃饭？",
-          "py": "Nǐ zěnme bù chīfàn?",
-          "uz": "Nega ovqat yemayapsan?",
-          "ru": "Почему ты не ешь?",
-          "en": "Why aren't you eating?"
+          "zh": "你昨天去商场了？",
+          "py": "Nǐ zuótiān qù shāngchǎng le?",
+          "uz": "Kecha savdo markaziga bordingmi?",
+          "ru": "Ты вчера ходил в торговый центр?",
+          "en": "Did you go to the mall yesterday?"
         },
         {
-          "zh": "你怎么来了？",
-          "py": "Nǐ zěnme lái le?",
-          "uz": "Qanday qilib kelding?",
-          "ru": "Как ты пришёл?",
-          "en": "How did you get here?"
+          "zh": "他来了。",
+          "py": "Tā lái le.",
+          "uz": "U keldi.",
+          "ru": "Он пришёл.",
+          "en": "He came."
         }
       ],
-      "tip_uz": "怎么 hayronlik bildirganda fe'ldan OLDIN keladi. Oddiy savol uchun 为什么 ishlating.",
-      "tip_ru": "怎么 в значении удивления стоит ПЕРЕД глаголом. Для обычного вопроса используйте 为什么.",
-      "title_en": "Asking the reason (surprise)",
-      "desc_en": "怎么 = why / how come. Used when you're surprised about something.",
-      "formula_en": "Subj. + 怎么 + Verb？",
-      "tip_en": "怎么 (expressing surprise) goes BEFORE the verb. For a regular question, use 为什么."
+      "tip_uz": "了 = ish ALLAQACHON bo'lib o'tgan. O'zbekchada «-di» o'tgan zamon shakliga o'xshaydi.",
+      "tip_ru": "了 = действие УЖЕ произошло. Похоже на прошедшее время.",
+      "title_en": "Completed action (past)",
+      "desc_en": "了 after a verb shows the action has already been completed.",
+      "formula_en": "Subj. + Verb + 了",
+      "tip_en": "了 = the action ALREADY happened. Similar to the past tense."
     },
     {
-      "pattern": "在 + Fe'l",
-      "title_uz": "Hozir davom etayotgan ish",
-      "title_ru": "Продолжающееся действие",
-      "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi.",
-      "desc_ru": "在 перед глаголом обозначает действие, которое сейчас происходит.",
-      "formula": "Ega + 在 + Fe'l",
-      "formula_ru": "Подлеж. + 在 + Глагол",
+      "pattern": "为什么...？",
+      "title_uz": "Sabab so'rash",
+      "title_ru": "Спросить причину",
+      "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.",
+      "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.",
+      "formula": "Ega + 为什么 + Fe'l？",
+      "formula_ru": "Подлеж. + 为什么 + Глагол？",
       "examples": [
         {
-          "zh": "刚才在开会。",
-          "py": "Gāngcái zài kāihuì.",
-          "uz": "O'sha payt yig'ilishda edim.",
-          "ru": "Только что был на совещании.",
-          "en": "I was just in a meeting."
+          "zh": "你为什么不叫我？",
+          "py": "Nǐ wèishénme bú jiào wǒ?",
+          "uz": "Nega meni chaqirmading?",
+          "ru": "Почему ты меня не позвал?",
+          "en": "Why didn't you call me?"
         },
         {
-          "zh": "我在吃饭。",
-          "py": "Wǒ zài chīfàn.",
-          "uz": "Men ovqat yeyapman.",
-          "ru": "Я сейчас ем.",
-          "en": "I'm eating right now."
+          "zh": "他为什么不来？",
+          "py": "Tā wèishénme bù lái?",
+          "uz": "U nega kelmayapti?",
+          "ru": "Почему он не приходит?",
+          "en": "Why isn't he coming?"
         },
         {
-          "zh": "她在看书。",
-          "py": "Tā zài kàn shū.",
-          "uz": "U kitob o'qiyapti.",
-          "ru": "Она сейчас читает.",
-          "en": "She's reading right now."
+          "zh": "你为什么学中文？",
+          "py": "Nǐ wèishénme xué Zhōngwén?",
+          "uz": "Nega xitoy tilini o'rganayapsan?",
+          "ru": "Почему ты учишь китайский?",
+          "en": "Why are you learning Chinese?"
         }
       ],
-      "tip_uz": "在 + fe'l = hozir shu ishni qilayotganlikni bildiradi. O'zbek tilida «-yapman/-yapsan» shakli.",
-      "tip_ru": "在 + глагол = действие происходит прямо сейчас. Аналог «-ю/-ешь» в настоящем.",
-      "title_en": "Ongoing actions",
-      "desc_en": "在 before a verb indicates an action that is currently happening.",
-      "formula_en": "Subj. + 在 + Verb",
-      "tip_en": "在 + verb = the action is happening right now. Similar to \"-ing\" in English."
+      "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
+      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!",
+      "title_en": "Asking the reason",
+      "desc_en": "为什么 = why. Placed after the subject, before the verb.",
+      "formula_en": "Subj. + 为什么 + Verb？",
+      "tip_en": "为什么 always goes BEFORE the verb, never at the end of the sentence!"
     },
     {
-      "pattern": "这么 + Sifat",
-      "title_uz": "Bu qadar / shuncha",
-      "title_ru": "Так / настолько",
-      "desc_uz": "这么 = bu qadar / shuncha. Sifat yoki miqdordan oldin keladi.",
-      "desc_ru": "这么 = так / настолько. Ставится перед прилагательным или количеством.",
-      "formula": "这么 + Sifat / Miqdor",
-      "formula_ru": "这么 + Прилаг. / Количество",
+      "pattern": "...的时候",
+      "title_uz": "...paytda / ...ganda",
+      "title_ru": "Когда... / в то время как...",
+      "desc_uz": "的时候 ish yoki holatdan keyin kelib, «...paytda / ...ganda» ma'nosini beradi.",
+      "desc_ru": "的时候 ставится после действия и означает «когда / в момент...».",
+      "formula": "Fe'l/Holat + 的时候",
+      "formula_ru": "Глагол/Ситуация + 的时候",
       "examples": [
         {
-          "zh": "开这么久？",
-          "py": "Kāi zhème jiǔ?",
-          "uz": "Bu qadar uzoq yig'ilish bo'ldimi?",
-          "ru": "Так долго шло совещание?",
-          "en": "The meeting lasted that long?"
+          "zh": "下次去的时候，说一声。",
+          "py": "Xià cì qù de shíhou, shuō yì shēng.",
+          "uz": "Keyingi safar borganingda, bir og'iz aytib qo'y.",
+          "ru": "В следующий раз, когда пойдёшь, предупреди.",
+          "en": "Next time you go, give me a heads up."
         },
         {
-          "zh": "你怎么这么忙？",
-          "py": "Nǐ zěnme zhème máng?",
-          "uz": "Sen nega bu qadar bandsan?",
-          "ru": "Почему ты так занят?",
-          "en": "Why are you so busy?"
+          "zh": "吃饭的时候不要看手机。",
+          "py": "Chīfàn de shíhou bú yào kàn shǒujī.",
+          "uz": "Ovqat yeyotganda telefonga qaramang.",
+          "ru": "Когда ешь, не смотри в телефон.",
+          "en": "Don't look at your phone while eating."
         },
         {
-          "zh": "这么多事情！",
-          "py": "Zhème duō shìqing!",
-          "uz": "Bu qadar ko'p ish!",
-          "ru": "Столько дел!",
-          "en": "So many things to do!"
+          "zh": "我小的时候很瘦。",
+          "py": "Wǒ xiǎo de shíhou hěn shòu.",
+          "uz": "Men kichkina paytimda juda oriq edim.",
+          "ru": "Когда я был маленьким, я был очень худым.",
+          "en": "When I was little, I was very thin."
         }
       ],
-      "title_en": "So / to such a degree",
-      "desc_en": "这么 = so / this much. Placed before an adjective or quantity.",
-      "formula_en": "这么 + Adj. / Amount"
-    },
-    {
-      "pattern": "有点 + Sifat",
-      "title_uz": "Biroz / sal",
-      "title_ru": "Немного / чуть-чуть",
-      "desc_uz": "有点 = biroz / sal. Sifatdan oldin keladi, ko'pincha salbiy ma'noda.",
-      "desc_ru": "有点 = немного. Ставится перед прилагательным, чаще в негативном контексте.",
-      "formula": "有点 + Sifat",
-      "formula_ru": "有点 + Прилагательное",
-      "examples": [
-        {
-          "zh": "事情有点多。",
-          "py": "Shìqing yǒudiǎn duō.",
-          "uz": "Ishlar biroz ko'p.",
-          "ru": "Дел немного многовато.",
-          "en": "There's a bit too much to do."
-        },
-        {
-          "zh": "我有点累。",
-          "py": "Wǒ yǒudiǎn lèi.",
-          "uz": "Men biroz charchadim.",
-          "ru": "Я немного устал.",
-          "en": "I'm a bit tired."
-        },
-        {
-          "zh": "今天有点冷。",
-          "py": "Jīntiān yǒudiǎn lěng.",
-          "uz": "Bugun biroz sovuq.",
-          "ru": "Сегодня немного холодно.",
-          "en": "It's a bit cold today."
-        }
-      ],
-      "tip_uz": "有点 ko'pincha SALBIY holatlar bilan ishlatiladi: charchagan, sovuq, qiyin. Ijobiy uchun 一点 ishlating.",
-      "tip_ru": "有点 чаще используется с НЕГАТИВНЫМИ значениями: устал, холодно, трудно. Для позитивных — 一点.",
-      "title_en": "A little / just a bit",
-      "desc_en": "有点 = a little. Placed before an adjective, often in a negative context.",
-      "formula_en": "有点 + Adjective",
-      "tip_en": "有点 is more often used with NEGATIVE meanings: tired, cold, difficult. For positive — 一点."
+      "title_en": "When... / at the time of...",
+      "desc_en": "的时候 follows an action or situation and means \"when / at the time of...\".",
+      "formula_en": "Verb/Situation + 的时候"
     },
     {
       "pattern": "下次 + Fe'l",
@@ -444,11 +255,11 @@
       "formula_ru": "下次 + Глагол",
       "examples": [
         {
-          "zh": "下次说一声。",
-          "py": "Xià cì shuō yì shēng.",
-          "uz": "Keyingi safar xabar ber.",
-          "ru": "В следующий раз предупреди.",
-          "en": "Let me know next time."
+          "zh": "下次我们一起去。",
+          "py": "Xià cì wǒmen yìqǐ qù.",
+          "uz": "Keyingi safar birga boramiz.",
+          "ru": "В следующий раз пойдём вместе.",
+          "en": "Next time we'll go together."
         },
         {
           "zh": "下次早点来。",

@@ -480,3 +480,10 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('水果', 'shuǐguǒ', 'meva', 'фрукты', 'fruit', 1),
   ('蔬菜', 'shūcài', 'sabzavot', 'овощи', 'vegetables', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 下次说一声 (hsk1/dialogue45) replacement — new vocab words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('件', 'jiàn', 'dona (kiyim sanog''i)', 'штука (счётное слово для одежды)', 'measure word for clothing/items', 2),
+  ('知道', 'zhīdào', 'bilmoq', 'знать', 'to know', 1),
+  ('时间', 'shíjiān', 'vaqt', 'время', 'time', 1)
+  on conflict (zh, py_norm) do nothing;
