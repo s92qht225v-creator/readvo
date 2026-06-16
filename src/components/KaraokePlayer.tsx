@@ -10,6 +10,8 @@ import { useAudioToken } from '../hooks/useAudioToken';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { protectAudioUrl, isStorageUrl } from '../lib/audio/url';
 import { BannerMenu } from './BannerMenu';
+import { CoachMarkTour } from './CoachMark';
+import type { TourStep } from './CoachMark';
 import { trackAll } from '@/utils/analytics';
 
 interface KaraokeChar {
@@ -242,6 +244,10 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
 
   const progressRef = useRef<HTMLDivElement | null>(null);
   const isScrubbing = useRef(false);
+  // Coach-mark tour targets (first-run onboarding).
+  const firstLineRef = useRef<HTMLDivElement | null>(null);
+  const playBtnRef = useRef<HTMLButtonElement | null>(null);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
 
   const seekToX = useCallback((clientX: number) => {
     const audio = audioRef.current;
@@ -376,6 +382,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
                 return (
                   <div
                     key={line.id}
+                    ref={lineIdx === 0 ? firstLineRef : undefined}
                     className={`karaoke__line ${isActive ? 'karaoke__line--active' : ''} ${isPast ? 'karaoke__line--past' : ''}`}
                     onClick={() => setTappedLineIdx(lineIdx === tappedLineIdx ? -1 : lineIdx)}
                   >
@@ -417,6 +424,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
               {/* Toggle row */}
               <div className="karaoke__toggle-row">
                 <button
+                  ref={toggleRef}
                   className={`karaoke__toggle ${showTranslation ? 'karaoke__toggle--active' : ''}`}
                   onClick={() => setShowTranslation((v) => !v)}
                   type="button"
@@ -466,6 +474,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
                   <span className="karaoke__skip-label">15</span>
                 </button>
                 <button
+                  ref={playBtnRef}
                   className={`karaoke__play-btn ${isLoading ? 'karaoke__play-btn--loading' : ''}`}
                   onClick={handlePlayPause}
                   type="button"
@@ -500,6 +509,15 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
           </>
         )}
       </div>
+      <CoachMarkTour
+        tourId="karaoke-tour"
+        lang={language}
+        steps={[
+          { tipId: 'ktv-line', targetRef: firstLineRef, text: { uz: "Tarjimani ko'rish uchun qatorni bosing", ru: 'Нажмите на строку, чтобы увидеть перевод', en: 'Tap a line to see its translation' } },
+          { tipId: 'ktv-play', targetRef: playBtnRef, forceAbove: true, text: { uz: "Qo'shiqni boshlash yoki to'xtatish", ru: 'Воспроизвести или приостановить песню', en: 'Play or pause the song' } },
+          { tipId: 'ktv-toggle', targetRef: toggleRef, forceAbove: true, text: { uz: 'Tarjima va pinyinni yoqib-oʻchiring', ru: 'Включайте перевод и пиньинь', en: 'Toggle translation and pinyin' } },
+        ] as TourStep[]}
+      />
     </>
   );
 }

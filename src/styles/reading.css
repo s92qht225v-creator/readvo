@@ -968,7 +968,7 @@ body {
   border: none;
   border-radius: 8px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   font-family: inherit;
   font-size: 0.85rem;
   font-weight: 500;
@@ -3946,7 +3946,7 @@ body {
   border: none;
   border-radius: 3px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   font-family: inherit;
   font-size: 0.85rem;
   font-weight: 500;
@@ -8009,7 +8009,7 @@ body {
   padding: 7px 4px;
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 0.85rem;
   font-family: inherit;
   cursor: pointer;
