@@ -315,6 +315,20 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
   const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
 
+  // When a tapped line's audio finishes, drop its highlight so the line
+  // returns to its resting colour. We watch the per-sentence player for a
+  // playing → stopped transition and clear the matching selection. Focus mode
+  // keeps the selection so its ‹/› nav and replay button still have a target.
+  const sentencePlayingId = sentenceAudio.state.playingSentenceId;
+  const prevSentencePlayingRef = useRef<string | null>(null);
+  useEffect(() => {
+    const prev = prevSentencePlayingRef.current;
+    prevSentencePlayingRef.current = sentencePlayingId;
+    if (prev && !sentencePlayingId && !focusMode) {
+      setActiveSentenceId(curr => (curr === prev ? null : curr));
+    }
+  }, [sentencePlayingId, focusMode]);
+
   const toggleFocusMode = useCallback(() => {
     if (!focusMode) {
       // Entering focus mode — stop full track, start sentence audio
