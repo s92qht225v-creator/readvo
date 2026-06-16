@@ -1,0 +1,146 @@
+{
+  "id": "hsk2-dialogue12",
+  "slug": "asking-for-directions",
+  "title": "问路",
+  "pinyin": "Wèn lù",
+  "titleTranslation": "Yo'l so'rash",
+  "titleTranslation_ru": "Спросить дорогу",
+  "titleTranslation_en": "Asking for Directions",
+  "level": 2,
+  "tag": "transport",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "请问",
+    "附近",
+    "银行",
+    "大概",
+    "一直",
+    "往前",
+    "红绿灯",
+    "左转",
+    "然后",
+    "米",
+    "右边",
+    "公交站",
+    "门口",
+    "帮助"
+  ],
+  "sections": [
+    {
+      "id": "d12-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d12-s1",
+          "text_original": "你好，请问这附近有银行吗？",
+          "pinyin": "Nǐ hǎo, qǐng wèn zhè fù jìn yǒu yín háng ma?",
+          "text_translation": "Salom, kechirasiz, shu yaqin atrofda bank bormi?",
+          "text_translation_ru": "Здравствуйте, скажите, есть ли рядом банк?",
+          "text_translation_en": "Hello, excuse me, is there a bank nearby?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s2",
+          "text_original": "有。前面有一个中国银行。",
+          "pinyin": "Yǒu. Qián miàn yǒu yí ge Zhōng guó Yín háng.",
+          "text_translation": "Bor. Oldinda bitta Xitoy banki bor.",
+          "text_translation_ru": "Есть. Впереди есть отделение Банка Китая.",
+          "text_translation_en": "Yes. There's a Bank of China up ahead.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s3",
+          "text_original": "远不远？",
+          "pinyin": "Yuǎn bu yuǎn?",
+          "text_translation": "Uzoqmi?",
+          "text_translation_ru": "Это далеко?",
+          "text_translation_en": "Is it far?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s4",
+          "text_original": "不远。走路大概十分钟。",
+          "pinyin": "Bù yuǎn. Zǒu lù dà gài shí fēn zhōng.",
+          "text_translation": "Uzoq emas. Piyoda taxminan o'n daqiqa.",
+          "text_translation_ru": "Не далеко. Пешком примерно десять минут.",
+          "text_translation_en": "Not far. About ten minutes on foot.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s5",
+          "text_original": "怎么走？",
+          "pinyin": "Zěn me zǒu?",
+          "text_translation": "Qanday borish kerak?",
+          "text_translation_ru": "Как пройти?",
+          "text_translation_en": "How do I get there?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s6",
+          "text_original": "你从这儿一直往前走，到第二个红绿灯左转。",
+          "pinyin": "Nǐ cóng zhèr yì zhí wǎng qián zǒu, dào dì èr ge hóng lǜ dēng zuǒ zhuǎn.",
+          "text_translation": "Shu yerdan to'g'riga yuravering, ikkinchi svetoforda chapga buriling.",
+          "text_translation_ru": "Идите отсюда всё время прямо, на втором светофоре поверните налево.",
+          "text_translation_en": "Go straight ahead from here, and turn left at the second traffic light.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s7",
+          "text_original": "然后呢？",
+          "pinyin": "Rán hòu ne?",
+          "text_translation": "Keyin-chi?",
+          "text_translation_ru": "А потом?",
+          "text_translation_en": "And then?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s8",
+          "text_original": "再走两百米，银行就在你的右边。",
+          "pinyin": "Zài zǒu liǎng bǎi mǐ, yín háng jiù zài nǐ de yòu bian.",
+          "text_translation": "Yana ikki yuz metr yuring, bank o'ng tomoningizda bo'ladi.",
+          "text_translation_ru": "Пройдите ещё двести метров, банк будет справа от вас.",
+          "text_translation_en": "Walk another two hundred meters, and the bank will be on your right.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s9",
+          "text_original": "那儿有公交站吗？",
+          "pinyin": "Nàr yǒu gōng jiāo zhàn ma?",
+          "text_translation": "U yerda avtobus bekati bormi?",
+          "text_translation_ru": "Там есть автобусная остановка?",
+          "text_translation_en": "Is there a bus stop there?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s10",
+          "text_original": "有。公交站就在银行门口。",
+          "pinyin": "Yǒu. Gōng jiāo zhàn jiù zài yín háng mén kǒu.",
+          "text_translation": "Bor. Avtobus bekati bankning kiraverishida.",
+          "text_translation_ru": "Есть. Автобусная остановка прямо у входа в банк.",
+          "text_translation_en": "Yes. The bus stop is right at the bank's entrance.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s11",
+          "text_original": "太好了。谢谢你的帮助！",
+          "pinyin": "Tài hǎo le. Xiè xie nǐ de bāng zhù!",
+          "text_translation": "Juda yaxshi. Yordamingiz uchun rahmat!",
+          "text_translation_ru": "Отлично. Спасибо за помощь!",
+          "text_translation_en": "Great. Thank you for your help!",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s12",
+          "text_original": "不客气。",
+          "pinyin": "Bú kè qi.",
+          "text_translation": "Arzimaydi.",
+          "text_translation_ru": "Не за что.",
+          "text_translation_en": "You're welcome.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

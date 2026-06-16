@@ -280,3 +280,17 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('路口', 'lùkǒu', 'chorraha', 'перекрёсток', 'intersection', 3),
   ('右转', 'yòu zhuǎn', 'o''ngga burilish', 'повернуть направо', 'to turn right', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 问路 (hsk2/dialogue12) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('附近', 'fùjìn', 'yaqin atrof', 'окрестности; поблизости', 'nearby; vicinity', 2),
+  ('银行', 'yínháng', 'bank', 'банк', 'bank', 2),
+  ('一直', 'yìzhí', 'to''g''riga; doimo', 'всё время; прямо', 'straight; continuously', 2),
+  ('往前', 'wǎng qián', 'oldinga', 'вперёд', 'forward; ahead', 2),
+  ('红绿灯', 'hónglǜdēng', 'svetofor', 'светофор', 'traffic light', 3),
+  ('然后', 'ránhòu', 'keyin', 'потом; затем', 'then; afterwards', 2),
+  ('米', 'mǐ', 'metr; guruch', 'метр; рис', 'meter; rice', 2),
+  ('右边', 'yòubian', 'o''ng tomon', 'справа; правая сторона', 'right side', 2),
+  ('公交站', 'gōngjiāo zhàn', 'avtobus bekati', 'автобусная остановка', 'bus stop', 3),
+  ('左转', 'zuǒ zhuǎn', 'chapga burilish', 'повернуть налево', 'to turn left', 3)
+  on conflict (zh, py_norm) do nothing;
