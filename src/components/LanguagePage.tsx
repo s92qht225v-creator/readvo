@@ -487,6 +487,17 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
             <Link href="/" className="home__hero-logo">
               <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
             </Link>
+            {/* Mobile-only: the active tab's Chinese label, centered between
+                logo and menu so the slim hero isn't empty. Desktop shows the
+                full hero character in .dr-hero__body instead. */}
+            <span className="lp__hero-mobile-title" aria-hidden="true">- {
+              activeTab === 'dialogues' ? '对话' :
+              activeTab === 'writing' ? '写字' :
+              activeTab === 'flashcards' ? '词卡' :
+              activeTab === 'karaoke' ? 'KTV' :
+              activeTab === 'grammar' ? '语法' :
+              '测验'
+            } -</span>
             <BannerMenu />
           </div>
           <div className="dr-hero__body">

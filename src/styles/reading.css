@@ -3986,9 +3986,23 @@ body {
   .home__hero--lang .home__hero-inner { height: auto; padding-left: 0; padding-right: 0; }
   /* The top row is absolutely positioned for the desktop banner; let it flow
      so the slim hero sizes to it. */
-  .home__hero--lang .home__hero-top-row { position: static; }
+  .home__hero--lang .home__hero-top-row { position: relative; }
   .home__hero--lang .dr-hero__body { display: none; }
   .home__hero--lang .lp__hero-watermark { display: none; }
+  /* Active tab's Chinese label, centered between logo and menu. */
+  .home__hero--lang .lp__hero-mobile-title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
 
   /* Nav stays a sticky strip under the slim hero, but as icon tabs — the
      active tab swaps its icon for its text label. */
@@ -4004,6 +4018,9 @@ body {
   .lp__tab--active .lp__tab-icon { display: none; }
   .lp__tab--active .lp__tab-label { display: inline; }
 }
+
+/* Mobile-only — desktop shows the full hero character instead. */
+.lp__hero-mobile-title { display: none; }
 
 .lp__hero-watermark {
   position: absolute;
