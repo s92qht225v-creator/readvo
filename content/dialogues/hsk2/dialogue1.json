@@ -1011,49 +1011,5 @@
     "因为",
     "帮助",
     "别人"
-  ],
-  "grammarNotes": [
-    {
-      "pattern": "在 + joy + 工作",
-      "title_uz": "Joyni ko'rsatuvchi 在",
-      "title_ru": "Указание места с 在",
-      "title_en": "Saying where someone works with 在",
-      "desc_uz": "«在» (zài) ish joyini ko'rsatish uchun ishlatiladi: 在 + JOY + 工作 — «...da ishlaydi».",
-      "desc_ru": "«在» (zài) указывает место действия: 在 + МЕСТО + 工作 — «работает в...».",
-      "desc_en": "«在» (zài) marks where an action happens: 在 + PLACE + 工作 — \"works at/in...\".",
-      "ex": "他在医院工作。",
-      "expy": "Tā zài yīyuàn gōngzuò.",
-      "ex_uz": "U kasalxonada ishlaydi.",
-      "ex_ru": "Он работает в больнице.",
-      "ex_en": "He works at a hospital."
-    },
-    {
-      "pattern": "因为…，所以… (sabab-natija)",
-      "title_uz": "Sabab ko'rsatish: 因为",
-      "title_ru": "Причина с 因为",
-      "title_en": "Giving a reason with 因为",
-      "desc_uz": "«因为» (yīnwèi) — «chunki». Sababni keltirib chiqaradigan ergash gap boshida turadi.",
-      "desc_ru": "«因为» (yīnwèi) — «потому что». Ставится в начале придаточного предложения причины.",
-      "desc_en": "«因为» (yīnwèi) means \"because\". It introduces the clause that gives the reason.",
-      "ex": "我想做老师，因为我喜欢帮助别人。",
-      "expy": "Wǒ xiǎng zuò lǎoshī, yīnwèi wǒ xǐhuan bāngzhù biéren.",
-      "ex_uz": "Men o'qituvchi bo'lmoqchiman, chunki boshqalarga yordam berishni yoqtiraman.",
-      "ex_ru": "Я хочу стать учителем, потому что люблю помогать другим.",
-      "ex_en": "I want to be a teacher because I like helping others."
-    },
-    {
-      "pattern": "想 + fe'l",
-      "title_uz": "Istakni bildirish: 想",
-      "title_ru": "Желание с 想",
-      "title_en": "Expressing a wish with 想",
-      "desc_uz": "«想» (xiǎng) fe'l oldida kelib, «...moqchi» istagini bildiradi.",
-      "desc_ru": "«想» (xiǎng) перед глаголом выражает желание: «хочу...».",
-      "desc_en": "«想» (xiǎng) before a verb expresses a wish: \"want to / would like to...\".",
-      "ex": "我想做医生。",
-      "expy": "Wǒ xiǎng zuò yīshēng.",
-      "ex_uz": "Men shifokor bo'lmoqchiman.",
-      "ex_ru": "Я хочу стать врачом.",
-      "ex_en": "I want to be a doctor."
-    }
   ]
 }

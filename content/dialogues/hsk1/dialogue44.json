@@ -23,10 +23,48 @@
           "text_translation_en": "Are you working overtime today?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
-            { "i": [3, 5], "p": "jiābān", "t": "qo'shimcha ishlamoq", "tr": "работать сверхурочно" },
-            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "jiābān",
+              "t": "qo'shimcha ishlamoq",
+              "tr": "работать сверхурочно"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -38,11 +76,59 @@
           "text_translation_en": "Yes. I have to work overtime today.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 5], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
-            { "i": [5, 6], "p": "yào", "t": "kerak; -moqchi", "tr": "нужно; собираться", "h": 1, "l": 7 },
-            { "i": [6, 8], "p": "jiābān", "t": "qo'shimcha ishlamoq", "tr": "работать сверхурочно" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "jīntiān",
+              "t": "bugun",
+              "tr": "сегодня",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "yào",
+              "t": "kerak; -moqchi",
+              "tr": "нужно; собираться",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "jiābān",
+              "t": "qo'shimcha ishlamoq",
+              "tr": "работать сверхурочно"
+            }
           ]
         },
         {
@@ -54,8 +140,26 @@
           "text_translation_en": "What time do you get off work?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "jǐ diǎn", "t": "soat nechada", "tr": "во сколько", "h": 1, "l": 6 },
-            { "i": [2, 4], "p": "xiàbān", "t": "ishdan chiqmoq", "tr": "закончить работу" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "jǐ diǎn",
+              "t": "soat nechada",
+              "tr": "во сколько",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "xiàbān",
+              "t": "ishdan chiqmoq",
+              "tr": "закончить работу"
+            }
           ]
         },
         {
@@ -67,9 +171,37 @@
           "text_translation_en": "Eight in the evening.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
-            { "i": [2, 3], "p": "bā", "t": "sakkiz", "tr": "восемь", "h": 1, "l": 6 },
-            { "i": [3, 4], "p": "diǎn", "t": "soat", "tr": "часов" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечером",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "bā",
+              "t": "sakkiz",
+              "tr": "восемь",
+              "h": 1,
+              "l": 6
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "diǎn",
+              "t": "soat",
+              "tr": "часов"
+            }
           ]
         },
         {
@@ -81,11 +213,57 @@
           "text_translation_en": "Have you had dinner?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [2, 4], "p": "wǎncān", "t": "kechki ovqat", "tr": "ужин" },
-            { "i": [4, 5], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
-            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "wǎncān",
+              "t": "kechki ovqat",
+              "tr": "ужин"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(tugallangan ish)",
+              "tr": "(завершённость)"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -97,11 +275,55 @@
           "text_translation_en": "Not yet. I'll eat after work.",
           "speaker": "B",
           "words": [
-            { "i": [0, 3], "p": "hái méiyǒu", "t": "hali yo'q", "tr": "ещё нет" },
-            { "i": [4, 5], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [5, 7], "p": "xiàbān", "t": "ishdan chiqmoq", "tr": "закончить работу" },
-            { "i": [7, 9], "p": "yǐhòu", "t": "...dan keyin", "tr": "после" },
-            { "i": [9, 10], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "hái méiyǒu",
+              "t": "hali yo'q",
+              "tr": "ещё нет"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "xiàbān",
+              "t": "ishdan chiqmoq",
+              "tr": "закончить работу"
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "yǐhòu",
+              "t": "...dan keyin",
+              "tr": "после"
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ]
         },
         {
@@ -113,8 +335,24 @@
           "text_translation_en": "Thanks for your hard work!",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin; mehnat", "tr": "тяжело; труд" },
-            { "i": [2, 3], "p": "le", "t": "(ta'kid)", "tr": "(частица)" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xīnkǔ",
+              "t": "qiyin; mehnat",
+              "tr": "тяжело; труд"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "le",
+              "t": "(ta'kid)",
+              "tr": "(частица)"
+            }
           ]
         },
         {
@@ -126,9 +364,37 @@
           "text_translation_en": "Thanks! See you tomorrow.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 },
-            { "i": [3, 5], "p": "míngtiān", "t": "ertaga", "tr": "завтра", "h": 1, "l": 5 },
-            { "i": [5, 6], "p": "jiàn", "t": "ko'rishmoq", "tr": "видеться" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xièxie",
+              "t": "rahmat",
+              "tr": "спасибо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "jiàn",
+              "t": "ko'rishmoq",
+              "tr": "видеться"
+            }
           ]
         }
       ]
@@ -149,150 +415,5 @@
     "辛苦",
     "明天",
     "见"
-  ],
-  "grammarNotes": [
-    {
-      "pattern": "要 + Fe'l",
-      "title_uz": "Kerak / niyat (kelajak)",
-      "title_ru": "Нужно / намерение (будущее)",
-      "desc_uz": "要 fe'ldan oldin kelib, «...moqchi / ...ishi kerak» ma'nosini beradi.",
-      "desc_ru": "要 перед глаголом означает «собираться / нужно сделать».",
-      "formula": "Ega + 要 + Fe'l",
-      "formula_ru": "Подлеж. + 要 + Глагол",
-      "examples": [
-        {
-          "zh": "我今天要加班。",
-          "py": "Wǒ jīntiān yào jiābān.",
-          "uz": "Bugun qo'shimcha ishlashim kerak.",
-          "ru": "Сегодня мне нужно работать сверхурочно.",
-          "en": "I have to work overtime today."
-        },
-        {
-          "zh": "我要去商场。",
-          "py": "Wǒ yào qù shāngchǎng.",
-          "uz": "Savdo markaziga bormoqchiman.",
-          "ru": "Я собираюсь в торговый центр.",
-          "en": "I'm going to the mall."
-        },
-        {
-          "zh": "你要吃什么？",
-          "py": "Nǐ yào chī shénme?",
-          "uz": "Nima yemoqchisan?",
-          "ru": "Что ты будешь есть?",
-          "en": "What do you want to eat?"
-        }
-      ],
-      "title_en": "Need to / intend to (future)",
-      "desc_en": "要 before a verb means \"to be going to / to need to\".",
-      "formula_en": "Subj. + 要 + Verb"
-    },
-    {
-      "pattern": "几点 + Fe'l？",
-      "title_uz": "Vaqt so'rash",
-      "title_ru": "Спросить время",
-      "desc_uz": "几点 = soat necha. Ish-harakatning vaqtini so'rash uchun ishlatiladi.",
-      "desc_ru": "几点 = который час / во сколько. Используется для вопроса о времени действия.",
-      "formula": "(Ega) + 几点 + Fe'l？",
-      "formula_ru": "(Подлеж.) + 几点 + Глагол？",
-      "examples": [
-        {
-          "zh": "几点下班？",
-          "py": "Jǐ diǎn xiàbān?",
-          "uz": "Soat nechada ishdan chiqasan?",
-          "ru": "Во сколько заканчиваешь работу?",
-          "en": "What time do you get off work?"
-        },
-        {
-          "zh": "你几点起床？",
-          "py": "Nǐ jǐ diǎn qǐchuáng?",
-          "uz": "Soat nechada turasan?",
-          "ru": "Во сколько ты встаёшь?",
-          "en": "What time do you get up?"
-        },
-        {
-          "zh": "我们几点见面？",
-          "py": "Wǒmen jǐ diǎn jiànmiàn?",
-          "uz": "Soat nechada uchrashamiz?",
-          "ru": "Во сколько мы встречаемся?",
-          "en": "What time are we meeting?"
-        }
-      ],
-      "title_en": "Asking the time",
-      "desc_en": "几点 = what time / at what time. Used to ask about the time of an action.",
-      "formula_en": "(Subj.) + 几点 + Verb？"
-    },
-    {
-      "pattern": "Fe'l + 以后",
-      "title_uz": "...gandan keyin",
-      "title_ru": "После того как...",
-      "desc_uz": "以后 ish yoki vaqtdan keyin kelib, «...dan keyin / ...gach» ma'nosini beradi.",
-      "desc_ru": "以后 ставится после действия или времени и означает «после...».",
-      "formula": "Fe'l/Vaqt + 以后",
-      "formula_ru": "Глагол/Время + 以后",
-      "examples": [
-        {
-          "zh": "我下班以后吃。",
-          "py": "Wǒ xiàbān yǐhòu chī.",
-          "uz": "Ishdan chiqqach yeyman.",
-          "ru": "Поем после работы.",
-          "en": "I'll eat after work."
-        },
-        {
-          "zh": "吃饭以后我们去散步。",
-          "py": "Chīfàn yǐhòu wǒmen qù sànbù.",
-          "uz": "Ovqatdan keyin sayrga chiqamiz.",
-          "ru": "После еды мы пойдём прогуляться.",
-          "en": "After eating we'll go for a walk."
-        },
-        {
-          "zh": "下课以后我去图书馆。",
-          "py": "Xiàkè yǐhòu wǒ qù túshūguǎn.",
-          "uz": "Darsdan keyin kutubxonaga boraman.",
-          "ru": "После уроков я иду в библиотеку.",
-          "en": "After class I go to the library."
-        }
-      ],
-      "title_en": "After (doing something)",
-      "desc_en": "以后 follows an action or time and means \"after...\".",
-      "formula_en": "Verb/Time + 以后"
-    },
-    {
-      "pattern": "还没(有)",
-      "title_uz": "Hali ...magan",
-      "title_ru": "Ещё не...",
-      "desc_uz": "还没有 = hali yo'q / hali bajarilmagan. O'tgan ishning hali bo'lmaganini bildiradi.",
-      "desc_ru": "还没有 = ещё нет / ещё не сделал. Показывает, что действие пока не произошло.",
-      "formula": "还没(有) + Fe'l",
-      "formula_ru": "还没(有) + Глагол",
-      "examples": [
-        {
-          "zh": "还没有。",
-          "py": "Hái méiyǒu.",
-          "uz": "Hali yo'q.",
-          "ru": "Ещё нет.",
-          "en": "Not yet."
-        },
-        {
-          "zh": "我还没吃饭。",
-          "py": "Wǒ hái méi chīfàn.",
-          "uz": "Hali ovqat yemadim.",
-          "ru": "Я ещё не поел.",
-          "en": "I haven't eaten yet."
-        },
-        {
-          "zh": "他还没来。",
-          "py": "Tā hái méi lái.",
-          "uz": "U hali kelmadi.",
-          "ru": "Он ещё не пришёл.",
-          "en": "He hasn't come yet."
-        }
-      ],
-      "tip_uz": "O'tgan ishning inkori uchun 没 ishlating (不 emas). 还 = «hali» ma'nosini qo'shadi.",
-      "tip_ru": "Для отрицания прошедшего действия используйте 没 (не 不). 还 добавляет смысл «ещё».",
-      "title_en": "Not yet",
-      "desc_en": "还没有 = not yet / haven't done it yet. Shows an action hasn't happened so far.",
-      "formula_en": "还没(有) + Verb",
-      "tip_en": "Use 没 (not 不) to negate a past action. 还 adds the meaning \"still / yet\"."
-    }
   ]
 }

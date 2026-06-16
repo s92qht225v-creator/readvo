@@ -378,35 +378,5 @@
     "很高兴",
     "认识",
     "也"
-  ],
-  "grammarNotes": [
-    {
-      "pattern": "我叫 + 名字",
-      "title_uz": "Ismni aytish",
-      "title_ru": "Как представиться",
-      "desc_uz": "Xitoycha o'zini tanishtirish uchun «我叫» (wǒ jiào) — «mening ismim» iborasini ishlating.",
-      "desc_ru": "Для представления по-китайски используйте «我叫» (wǒ jiào) — «меня зовут».",
-      "ex": "我叫王芳。你叫什么名字？",
-      "expy": "Wǒ jiào Wáng Fāng. Nǐ jiào shénme míngzi?",
-      "ex_uz": "Mening ismim Van Fan. Sening isming nima?",
-      "ex_ru": "Меня зовут Ван Фан. Как тебя зовут?",
-      "title_en": "How to introduce yourself",
-      "desc_en": "To introduce yourself in Chinese, use «我叫» (wǒ jiào) — \"my name is\".",
-      "ex_en": "My name is Wang Fan. What's your name?"
-    },
-    {
-      "pattern": "很高兴认识你",
-      "title_uz": "Tanishish iborasi",
-      "title_ru": "Фраза при знакомстве",
-      "desc_uz": "«很高兴认识你» (hěn gāoxìng rènshi nǐ) — «Tanishganimdan xursandman» iborasi yangi odamni uchratganda qo'llanadi.",
-      "desc_ru": "Фраза «很高兴认识你» (hěn gāoxìng rènshi nǐ) — «очень рад познакомиться» используется при первом знакомстве.",
-      "ex": "你好！很高兴认识你，我叫张伟。",
-      "expy": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ, wǒ jiào Zhāng Wěi.",
-      "ex_uz": "Salom! Tanishganimdan xursandman, mening ismim Zhang Wei.",
-      "ex_ru": "Привет! Очень рад познакомиться, меня зовут Чжан Вэй.",
-      "title_en": "Meeting someone for the first time",
-      "desc_en": "The phrase «很高兴认识你» (hěn gāoxìng rènshi nǐ) — \"nice to meet you\" is used when meeting someone for the first time.",
-      "ex_en": "Hello! Nice to meet you, my name is Zhang Wei."
-    }
   ]
 }

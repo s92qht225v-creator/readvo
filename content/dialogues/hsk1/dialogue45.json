@@ -23,11 +23,55 @@
           "text_translation_en": "Did you go to the mall yesterday?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "zuótiān", "t": "kecha", "tr": "вчера" },
-            { "i": [3, 4], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 },
-            { "i": [4, 6], "p": "shāngchǎng", "t": "savdo markazi", "tr": "торговый центр" },
-            { "i": [6, 7], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zuótiān",
+              "t": "kecha",
+              "tr": "вчера"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shāngchǎng",
+              "t": "savdo markazi",
+              "tr": "торговый центр"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "le",
+              "t": "(tugallangan ish)",
+              "tr": "(завершённость)"
+            }
           ]
         },
         {
@@ -39,12 +83,64 @@
           "text_translation_en": "Yes. I bought a piece of clothing.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "mǎi", "t": "sotib olmoq", "tr": "покупать" },
-            { "i": [4, 5], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
-            { "i": [5, 7], "p": "yí jiàn", "t": "bitta (dona)", "tr": "одна (штука)" },
-            { "i": [7, 9], "p": "yīfu", "t": "kiyim", "tr": "одежда" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "mǎi",
+              "t": "sotib olmoq",
+              "tr": "покупать"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "le",
+              "t": "(tugallangan ish)",
+              "tr": "(завершённость)"
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "yí jiàn",
+              "t": "bitta (dona)",
+              "tr": "одна (штука)"
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "yīfu",
+              "t": "kiyim",
+              "tr": "одежда"
+            }
           ]
         },
         {
@@ -56,11 +152,59 @@
           "text_translation_en": "Why didn't you call me?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 4], "p": "wèishénme", "t": "nega", "tr": "почему" },
-            { "i": [4, 5], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [5, 6], "p": "jiào", "t": "chaqirmoq", "tr": "звать", "h": 1, "l": 1 },
-            { "i": [6, 7], "p": "wǒ", "t": "meni", "tr": "меня", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "wèishénme",
+              "t": "nega",
+              "tr": "почему"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "bú",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "jiào",
+              "t": "chaqirmoq",
+              "tr": "звать",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "wǒ",
+              "t": "meni",
+              "tr": "меня",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -72,12 +216,68 @@
           "text_translation_en": "I didn't know you had time.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [2, 4], "p": "zhīdào", "t": "bilmoq", "tr": "знать" },
-            { "i": [4, 5], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [5, 6], "p": "yǒu", "t": "bor", "tr": "иметь", "h": 1, "l": 4 },
-            { "i": [6, 8], "p": "shíjiān", "t": "vaqt", "tr": "время" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "zhīdào",
+              "t": "bilmoq",
+              "tr": "знать"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "иметь",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "shíjiān",
+              "t": "vaqt",
+              "tr": "время"
+            }
           ]
         },
         {
@@ -89,12 +289,68 @@
           "text_translation_en": "Next time you go, give me a heads up.",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
-            { "i": [2, 3], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 },
-            { "i": [3, 4], "p": "de", "t": "(bog'lovchi)", "tr": "(служебное)", "h": 1, "l": 1 },
-            { "i": [4, 6], "p": "shíhou", "t": "payt", "tr": "время; момент" },
-            { "i": [7, 9], "p": "shuō", "t": "aytmoq", "tr": "сказать", "h": 1, "l": 10 },
-            { "i": [9, 11], "p": "yì shēng", "t": "bir og'iz", "tr": "одно слово" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xià cì",
+              "t": "keyingi safar",
+              "tr": "в следующий раз",
+              "h": 1,
+              "l": 13
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "de",
+              "t": "(bog'lovchi)",
+              "tr": "(служебное)",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shíhou",
+              "t": "payt",
+              "tr": "время; момент"
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "shuō",
+              "t": "aytmoq",
+              "tr": "сказать",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                9,
+                11
+              ],
+              "p": "yì shēng",
+              "t": "bir og'iz",
+              "tr": "одно слово"
+            }
           ]
         },
         {
@@ -106,11 +362,59 @@
           "text_translation_en": "Okay. Next time we'll go together.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "hǎo de", "t": "xo'p", "tr": "хорошо", "h": 1, "l": 1 },
-            { "i": [3, 5], "p": "xià cì", "t": "keyingi safar", "tr": "в следующий раз", "h": 1, "l": 13 },
-            { "i": [5, 7], "p": "wǒmen", "t": "biz", "tr": "мы", "h": 1, "l": 2 },
-            { "i": [7, 9], "p": "yìqǐ", "t": "birga", "tr": "вместе" },
-            { "i": [9, 10], "p": "qù", "t": "bormoq", "tr": "идти", "h": 1, "l": 5 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎo de",
+              "t": "xo'p",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xià cì",
+              "t": "keyingi safar",
+              "tr": "в следующий раз",
+              "h": 1,
+              "l": 13
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "yìqǐ",
+              "t": "birga",
+              "tr": "вместе"
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1,
+              "l": 5
+            }
           ]
         }
       ]
@@ -132,153 +436,5 @@
     "时候",
     "说一声",
     "一起"
-  ],
-  "grammarNotes": [
-    {
-      "pattern": "Fe'l + 了",
-      "title_uz": "Tugallangan ish (o'tgan zamon)",
-      "title_ru": "Завершённое действие (прош. время)",
-      "desc_uz": "了 fe'ldan keyin kelib, ish bajarilib bo'lganini bildiradi.",
-      "desc_ru": "了 после глагола показывает, что действие уже совершено.",
-      "formula": "Ega + Fe'l + 了",
-      "formula_ru": "Подлеж. + Глагол + 了",
-      "examples": [
-        {
-          "zh": "我买了一件衣服。",
-          "py": "Wǒ mǎi le yí jiàn yīfu.",
-          "uz": "Bitta kiyim sotib oldim.",
-          "ru": "Я купил одну вещь из одежды.",
-          "en": "I bought a piece of clothing."
-        },
-        {
-          "zh": "你昨天去商场了？",
-          "py": "Nǐ zuótiān qù shāngchǎng le?",
-          "uz": "Kecha savdo markaziga bordingmi?",
-          "ru": "Ты вчера ходил в торговый центр?",
-          "en": "Did you go to the mall yesterday?"
-        },
-        {
-          "zh": "他来了。",
-          "py": "Tā lái le.",
-          "uz": "U keldi.",
-          "ru": "Он пришёл.",
-          "en": "He came."
-        }
-      ],
-      "tip_uz": "了 = ish ALLAQACHON bo'lib o'tgan. O'zbekchada «-di» o'tgan zamon shakliga o'xshaydi.",
-      "tip_ru": "了 = действие УЖЕ произошло. Похоже на прошедшее время.",
-      "title_en": "Completed action (past)",
-      "desc_en": "了 after a verb shows the action has already been completed.",
-      "formula_en": "Subj. + Verb + 了",
-      "tip_en": "了 = the action ALREADY happened. Similar to the past tense."
-    },
-    {
-      "pattern": "为什么...？",
-      "title_uz": "Sabab so'rash",
-      "title_ru": "Спросить причину",
-      "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.",
-      "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.",
-      "formula": "Ega + 为什么 + Fe'l？",
-      "formula_ru": "Подлеж. + 为什么 + Глагол？",
-      "examples": [
-        {
-          "zh": "你为什么不叫我？",
-          "py": "Nǐ wèishénme bú jiào wǒ?",
-          "uz": "Nega meni chaqirmading?",
-          "ru": "Почему ты меня не позвал?",
-          "en": "Why didn't you call me?"
-        },
-        {
-          "zh": "他为什么不来？",
-          "py": "Tā wèishénme bù lái?",
-          "uz": "U nega kelmayapti?",
-          "ru": "Почему он не приходит?",
-          "en": "Why isn't he coming?"
-        },
-        {
-          "zh": "你为什么学中文？",
-          "py": "Nǐ wèishénme xué Zhōngwén?",
-          "uz": "Nega xitoy tilini o'rganayapsan?",
-          "ru": "Почему ты учишь китайский?",
-          "en": "Why are you learning Chinese?"
-        }
-      ],
-      "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
-      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!",
-      "title_en": "Asking the reason",
-      "desc_en": "为什么 = why. Placed after the subject, before the verb.",
-      "formula_en": "Subj. + 为什么 + Verb？",
-      "tip_en": "为什么 always goes BEFORE the verb, never at the end of the sentence!"
-    },
-    {
-      "pattern": "...的时候",
-      "title_uz": "...paytda / ...ganda",
-      "title_ru": "Когда... / в то время как...",
-      "desc_uz": "的时候 ish yoki holatdan keyin kelib, «...paytda / ...ganda» ma'nosini beradi.",
-      "desc_ru": "的时候 ставится после действия и означает «когда / в момент...».",
-      "formula": "Fe'l/Holat + 的时候",
-      "formula_ru": "Глагол/Ситуация + 的时候",
-      "examples": [
-        {
-          "zh": "下次去的时候，说一声。",
-          "py": "Xià cì qù de shíhou, shuō yì shēng.",
-          "uz": "Keyingi safar borganingda, bir og'iz aytib qo'y.",
-          "ru": "В следующий раз, когда пойдёшь, предупреди.",
-          "en": "Next time you go, give me a heads up."
-        },
-        {
-          "zh": "吃饭的时候不要看手机。",
-          "py": "Chīfàn de shíhou bú yào kàn shǒujī.",
-          "uz": "Ovqat yeyotganda telefonga qaramang.",
-          "ru": "Когда ешь, не смотри в телефон.",
-          "en": "Don't look at your phone while eating."
-        },
-        {
-          "zh": "我小的时候很瘦。",
-          "py": "Wǒ xiǎo de shíhou hěn shòu.",
-          "uz": "Men kichkina paytimda juda oriq edim.",
-          "ru": "Когда я был маленьким, я был очень худым.",
-          "en": "When I was little, I was very thin."
-        }
-      ],
-      "title_en": "When... / at the time of...",
-      "desc_en": "的时候 follows an action or situation and means \"when / at the time of...\".",
-      "formula_en": "Verb/Situation + 的时候"
-    },
-    {
-      "pattern": "下次 + Fe'l",
-      "title_uz": "Keyingi safar",
-      "title_ru": "В следующий раз",
-      "desc_uz": "下次 = keyingi safar. Fe'ldan oldin kelib, kelajakdagi harakatni bildiradi.",
-      "desc_ru": "下次 = в следующий раз. Ставится перед глаголом для обозначения будущего действия.",
-      "formula": "下次 + Fe'l",
-      "formula_ru": "下次 + Глагол",
-      "examples": [
-        {
-          "zh": "下次我们一起去。",
-          "py": "Xià cì wǒmen yìqǐ qù.",
-          "uz": "Keyingi safar birga boramiz.",
-          "ru": "В следующий раз пойдём вместе.",
-          "en": "Next time we'll go together."
-        },
-        {
-          "zh": "下次早点来。",
-          "py": "Xià cì zǎo diǎn lái.",
-          "uz": "Keyingi safar ertaroq kel.",
-          "ru": "В следующий раз приходи раньше.",
-          "en": "Come earlier next time."
-        },
-        {
-          "zh": "下次我请你吃饭。",
-          "py": "Xià cì wǒ qǐng nǐ chīfàn.",
-          "uz": "Keyingi safar men seni ovqatga taklif qilaman.",
-          "ru": "В следующий раз я угощу тебя.",
-          "en": "Next time I'll treat you."
-        }
-      ],
-      "title_en": "Next time",
-      "desc_en": "下次 = next time. Placed before a verb to indicate a future action.",
-      "formula_en": "下次 + Verb"
-    }
   ]
 }

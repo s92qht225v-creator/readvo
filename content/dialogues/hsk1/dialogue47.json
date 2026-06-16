@@ -23,11 +23,57 @@
           "text_translation_en": "Hello! Why aren't you eating?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 },
-            { "i": [3, 4], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [4, 7], "p": "wèi shénme", "t": "nega", "tr": "почему" },
-            { "i": [7, 8], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [8, 10], "p": "chīfàn", "t": "ovqat yemoq", "tr": "есть" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "nǐ hǎo",
+              "t": "salom",
+              "tr": "привет",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                7
+              ],
+              "p": "wèi shénme",
+              "t": "nega",
+              "tr": "почему"
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                8,
+                10
+              ],
+              "p": "chīfàn",
+              "t": "ovqat yemoq",
+              "tr": "есть"
+            }
           ]
         },
         {
@@ -39,10 +85,46 @@
           "text_translation_en": "Because I'm fasting.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "yīnwèi", "t": "chunki", "tr": "потому что" },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
-            { "i": [4, 6], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "yīnwèi",
+              "t": "chunki",
+              "tr": "потому что"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "fēngzhāi",
+              "t": "ro'za tutmoq",
+              "tr": "держать пост"
+            }
           ]
         },
         {
@@ -54,11 +136,57 @@
           "text_translation_en": "Fasting? Is it Ramadan now?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" },
-            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
-            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
-            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" },
-            { "i": [8, 9], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "fēngzhāi",
+              "t": "ro'za tutmoq",
+              "tr": "держать пост"
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiànzài",
+              "t": "hozir",
+              "tr": "сейчас",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "shì",
+              "t": "bu",
+              "tr": "это",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "zhāiyuè",
+              "t": "ro'za oyi",
+              "tr": "Рамадан"
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -70,10 +198,48 @@
           "text_translation_en": "Yes. It's Ramadan now.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 },
-            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
-            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
-            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "shì de",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "xiànzài",
+              "t": "hozir",
+              "tr": "сейчас",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "shì",
+              "t": "bu",
+              "tr": "это",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "zhāiyuè",
+              "t": "ro'za oyi",
+              "tr": "Рамадан"
+            }
           ]
         },
         {
@@ -85,13 +251,79 @@
           "text_translation_en": "You don't eat anything during the day, right?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "báitiān", "t": "kunduz", "tr": "днём" },
-            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [5, 7], "p": "dōngxi", "t": "narsa", "tr": "вещь" },
-            { "i": [8, 9], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [9, 10], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "báitiān",
+              "t": "kunduz",
+              "tr": "днём"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "dōngxi",
+              "t": "narsa",
+              "tr": "вещь"
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -103,13 +335,81 @@
           "text_translation_en": "Right. I don't eat during the day, I eat in the evening.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 5], "p": "báitiān", "t": "kunduz", "tr": "днём" },
-            { "i": [5, 6], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [6, 7], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [8, 10], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
-            { "i": [10, 11], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "báitiān",
+              "t": "kunduz",
+              "tr": "днём"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                8,
+                10
+              ],
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечером",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ]
         },
         {
@@ -121,12 +421,70 @@
           "text_translation_en": "You don't eat in the morning either?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "zǎoshang", "t": "ertalab", "tr": "утром" },
-            { "i": [3, 4], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
-            { "i": [4, 5], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [5, 6], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [6, 7], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zǎoshang",
+              "t": "ertalab",
+              "tr": "утром"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -138,13 +496,77 @@
           "text_translation_en": "No. I don't eat in the morning or at noon.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [3, 5], "p": "zǎoshang", "t": "ertalab", "tr": "утром" },
-            { "i": [6, 8], "p": "zhōngwǔ", "t": "peshin", "tr": "полдень" },
-            { "i": [8, 9], "p": "dōu", "t": "hammasi", "tr": "всё; оба" },
-            { "i": [9, 10], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [10, 11], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "zǎoshang",
+              "t": "ertalab",
+              "tr": "утром"
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "zhōngwǔ",
+              "t": "peshin",
+              "tr": "полдень"
+            },
+            {
+              "i": [
+                8,
+                9
+              ],
+              "p": "dōu",
+              "t": "hammasi",
+              "tr": "всё; оба"
+            },
+            {
+              "i": [
+                9,
+                10
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ]
         },
         {
@@ -156,9 +578,37 @@
           "text_translation_en": "So when do you eat?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nà", "t": "unda", "tr": "тогда", "h": 1, "l": 5 },
-            { "i": [1, 5], "p": "shénme shíhou", "t": "qachon", "tr": "когда" },
-            { "i": [5, 6], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                1,
+                5
+              ],
+              "p": "shénme shíhou",
+              "t": "qachon",
+              "tr": "когда"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ]
         },
         {
@@ -170,8 +620,28 @@
           "text_translation_en": "I eat in the evening.",
           "speaker": "B",
           "words": [
-            { "i": [0, 2], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
-            { "i": [2, 3], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечером",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            }
           ]
         },
         {
@@ -183,8 +653,26 @@
           "text_translation_en": "Is it hard?",
           "speaker": "A",
           "words": [
-            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" },
-            { "i": [2, 3], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "xīnkǔ",
+              "t": "qiyin",
+              "tr": "тяжело"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -196,8 +684,26 @@
           "text_translation_en": "Not hard.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [1, 3], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "xīnkǔ",
+              "t": "qiyin",
+              "tr": "тяжело"
+            }
           ]
         }
       ]
@@ -221,223 +727,5 @@
     "都",
     "什么时候",
     "辛苦"
-  ],
-  "grammarNotes": [
-    {
-      "pattern": "为什么...？",
-      "title_uz": "Sabab so'rash",
-      "title_ru": "Спросить причину",
-      "desc_uz": "为什么 = nega / nima uchun. Egadan keyin, fe'ldan oldin keladi.",
-      "desc_ru": "为什么 = почему. Ставится после подлежащего, перед глаголом.",
-      "formula": "Ega + 为什么 + Fe'l？",
-      "formula_ru": "Подлеж. + 为什么 + Глагол？",
-      "examples": [
-        {
-          "zh": "你为什么不吃饭？",
-          "py": "Nǐ wèi shénme bù chīfàn?",
-          "uz": "Nega ovqat yemayapsan?",
-          "ru": "Почему ты не ешь?",
-          "en": "Why aren't you eating?"
-        },
-        {
-          "zh": "他为什么不来？",
-          "py": "Tā wèi shénme bù lái?",
-          "uz": "U nega kelmayapti?",
-          "ru": "Почему он не приходит?",
-          "en": "Why isn't he coming?"
-        },
-        {
-          "zh": "你为什么学中文？",
-          "py": "Nǐ wèi shénme xué Zhōngwén?",
-          "uz": "Nega xitoy tilini o'rganayapsan?",
-          "ru": "Почему ты учишь китайский?",
-          "en": "Why are you learning Chinese?"
-        }
-      ],
-      "tip_uz": "为什么 har doim fe'ldan OLDIN keladi. Gap oxiriga qo'ymang!",
-      "tip_ru": "为什么 всегда стоит ПЕРЕД глаголом, не в конце предложения!",
-      "title_en": "Asking the reason",
-      "desc_en": "为什么 = why. Placed after the subject, before the verb.",
-      "formula_en": "Subj. + 为什么 + Verb？",
-      "tip_en": "为什么 always goes BEFORE the verb, never at the end of the sentence!"
-    },
-    {
-      "pattern": "因为...",
-      "title_uz": "Sabab bildirish",
-      "title_ru": "Выразить причину",
-      "desc_uz": "因为 = chunki. 为什么 savoliga javob. Gapning boshida keladi.",
-      "desc_ru": "因为 = потому что. Ответ на 为什么. Стоит в начале предложения.",
-      "formula": "因为 + sabab",
-      "formula_ru": "因为 + причина",
-      "examples": [
-        {
-          "zh": "因为我在封斋。",
-          "py": "Yīnwèi wǒ zài fēng zhāi.",
-          "uz": "Chunki men ro'za tutayapman.",
-          "ru": "Потому что я соблюдаю пост.",
-          "en": "Because I'm fasting."
-        },
-        {
-          "zh": "因为今天是斋月。",
-          "py": "Yīnwèi jīntiān shì zhāi yuè.",
-          "uz": "Chunki bugun Ramazon oyi.",
-          "ru": "Потому что сегодня Рамадан.",
-          "en": "Because it's Ramadan today."
-        },
-        {
-          "zh": "因为我很忙。",
-          "py": "Yīnwèi wǒ hěn máng.",
-          "uz": "Chunki men juda bandman.",
-          "ru": "Потому что я очень занят.",
-          "en": "Because I'm very busy."
-        }
-      ],
-      "title_en": "Expressing a reason",
-      "desc_en": "因为 = because. The answer to 为什么. Goes at the beginning of the sentence.",
-      "formula_en": "因为 + reason"
-    },
-    {
-      "pattern": "在 + Fe'l",
-      "title_uz": "Hozir davom etayotgan ish",
-      "title_ru": "Продолжающееся действие",
-      "desc_uz": "在 fe'ldan oldin kelib, hozir davom etayotgan harakatni bildiradi. O'zbekcha: «...yapman».",
-      "desc_ru": "在 перед глаголом обозначает действие в процессе. Аналог «-ю/-ю сейчас».",
-      "formula": "Ega + 在 + Fe'l",
-      "formula_ru": "Подлеж. + 在 + Глагол",
-      "examples": [
-        {
-          "zh": "我在封斋。",
-          "py": "Wǒ zài fēng zhāi.",
-          "uz": "Men (hozir) ro'za tutayapman.",
-          "ru": "Я (сейчас) соблюдаю пост.",
-          "en": "I'm (currently) fasting."
-        },
-        {
-          "zh": "他在吃饭。",
-          "py": "Tā zài chīfàn.",
-          "uz": "U (hozir) ovqat yeyapti.",
-          "ru": "Он (сейчас) ест.",
-          "en": "He's eating (right now)."
-        },
-        {
-          "zh": "我们在学习。",
-          "py": "Wǒmen zài xuéxí.",
-          "uz": "Biz (hozir) o'qiyapmiz.",
-          "ru": "Мы (сейчас) учимся.",
-          "en": "We're studying (right now)."
-        }
-      ],
-      "title_en": "Ongoing actions",
-      "desc_en": "在 before a verb indicates an action in progress. Similar to \"-ing\" in English.",
-      "formula_en": "Subj. + 在 + Verb"
-    },
-    {
-      "pattern": "...是...吗？",
-      "title_uz": "Ha/yo'q savol",
-      "title_ru": "Вопрос да/нет",
-      "desc_uz": "是...吗？ = ...mi? Biror narsani tasdiqlash yoki so'rash uchun.",
-      "desc_ru": "是...吗？ = ...ли? Для подтверждения или уточнения.",
-      "formula": "Hozir + 是 + [narsa] + 吗？",
-      "formula_ru": "Сейчас + 是 + [что-то] + 吗？",
-      "examples": [
-        {
-          "zh": "现在是斋月吗？",
-          "py": "Xiànzài shì zhāi yuè ma?",
-          "uz": "Hozir Ramazon oyi-mi?",
-          "ru": "Сейчас Рамадан?",
-          "en": "Is it Ramadan now?"
-        },
-        {
-          "zh": "他是学生吗？",
-          "py": "Tā shì xuéshēng ma?",
-          "uz": "U talabami?",
-          "ru": "Он студент?",
-          "en": "Is he a student?"
-        },
-        {
-          "zh": "这是你的书吗？",
-          "py": "Zhè shì nǐ de shū ma?",
-          "uz": "Bu sening kitobingmi?",
-          "ru": "Это твоя книга?",
-          "en": "Is this your book?"
-        }
-      ],
-      "title_en": "Yes/no questions",
-      "desc_en": "是...吗？ = is it...? Used for confirmation or clarification.",
-      "formula_en": "Now + 是 + [something] + 吗？"
-    },
-    {
-      "pattern": "...，对吗？",
-      "title_uz": "Tasdiqlash so'rovi",
-      "title_ru": "Уточняющий вопрос",
-      "desc_uz": "对吗？ = shundaymi? / to'g'rimi? Gap oxiriga qo'shiladi — fikringizni tasdiqlatish uchun.",
-      "desc_ru": "对吗？ = правда? / верно? Добавляется в конец — для подтверждения своей мысли.",
-      "formula": "Gap + ，对吗？",
-      "formula_ru": "Предложение + ，对吗？",
-      "examples": [
-        {
-          "zh": "你白天不吃东西，对吗？",
-          "py": "Nǐ báitiān bù chī dōngxi, duì ma?",
-          "uz": "Kunduzi hech narsa yemaysan, shundaymi?",
-          "ru": "Ты днём ничего не ешь, правда?",
-          "en": "You don't eat anything during the day, right?"
-        },
-        {
-          "zh": "你是学生，对吗？",
-          "py": "Nǐ shì xuéshēng, duì ma?",
-          "uz": "Sen talabasan, shundaymi?",
-          "ru": "Ты студент, правда?",
-          "en": "You're a student, right?"
-        },
-        {
-          "zh": "他很忙，对吗？",
-          "py": "Tā hěn máng, duì ma?",
-          "uz": "U juda band, shundaymi?",
-          "ru": "Он очень занят, правда?",
-          "en": "He's very busy, right?"
-        }
-      ],
-      "title_en": "Follow-up questions",
-      "desc_en": "对吗？ = right? / correct? Added at the end — to confirm your thought.",
-      "formula_en": "Sentence + ，对吗？"
-    },
-    {
-      "pattern": "不 + Sifat",
-      "title_uz": "Sifat inkori",
-      "title_ru": "Отрицание прилагательного",
-      "desc_uz": "不 sifatdan oldin kelib, «...emas» ma'nosini beradi. 很 tushib qoladi!",
-      "desc_ru": "不 перед прилагательным даёт значение «не...». 很 при этом опускается!",
-      "formula": "不 + Sifat",
-      "formula_ru": "不 + Прилагательное",
-      "examples": [
-        {
-          "zh": "不辛苦。",
-          "py": "Bù xīnkǔ.",
-          "uz": "Qiyin emas.",
-          "ru": "Не тяжело.",
-          "en": "Not difficult."
-        },
-        {
-          "zh": "不忙。",
-          "py": "Bù máng.",
-          "uz": "Band emas.",
-          "ru": "Не занят.",
-          "en": "Not busy."
-        },
-        {
-          "zh": "不好。",
-          "py": "Bù hǎo.",
-          "uz": "Yaxshi emas.",
-          "ru": "Нехорошо.",
-          "en": "Not good."
-        }
-      ],
-      "tip_uz": "Tasdiqda 很好 (hěn hǎo) deymiz, inkorida esa faqat 不好 (bù hǎo) — 很 kerak emas!",
-      "tip_ru": "В утверждении говорим 很好 (hěn hǎo), в отрицании — только 不好 (bù hǎo), без 很!",
-      "title_en": "Negating adjectives",
-      "desc_en": "不 before an adjective gives the meaning \"not...\". 很 is omitted in this case!",
-      "formula_en": "不 + Adjective",
-      "tip_en": "In affirmative: 很好 (hěn hǎo). In negation: just 不好 (bù hǎo), without 很!"
-    }
   ]
 }
