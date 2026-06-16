@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronDownIcon } from '@/components/ChevronDownIcon';
 import { HanziCanvas } from './HanziCanvas';
+import { prefetchHanzi } from '@/utils/hanziStrokes';
 import { CoachMarkTour } from './CoachMark';
 import type { TourStep } from './CoachMark';
 import type { HanziWord } from '@/services/writing';
@@ -71,6 +72,13 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
     return () => { audio.stop(); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Warm every character's stroke data up front (one batch of CDN fetches) so
+  // the canvas renders instantly on the first card and on Next/Back instead of
+  // showing the "..." loader while each character fetches on demand.
+  useEffect(() => {
+    prefetchHanzi(activeWords.flatMap(w => [...w.char]));
+  }, [activeWords]);
   const [view, setView] = useState<View>(autoStart ? 'practice' : 'home');
   const [subtabInternal, setSubtabInternal] = useState<'writing' | 'chars'>('writing');
   const subtab = subtabProp ?? subtabInternal;

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
+import { strokeCache, loadStrokes, type StrokeData } from '@/utils/hanziStrokes';
 
 // Tunable constants
 const STROKE_TOLERANCE = 0.15;
@@ -14,10 +15,6 @@ interface Point {
   y: number;
 }
 
-interface StrokeData {
-  path: string;
-  median: Array<[number, number]>;
-}
 
 interface Props {
   char: string;
@@ -197,8 +194,6 @@ function redrawCompleted(
   }
 }
 
-// Module-level cache: avoids re-fetching character data on revisit
-const strokeCache = new Map<string, StrokeData[]>();
 
 export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = false, eraseSignal = 0, onPlayAudio }: Props) {
   const [canvasSize, setCanvasSize] = useState(400);
@@ -283,20 +278,9 @@ export function HanziCanvas({ char, lang, onComplete, revealAll = 0, hidden = fa
       return;
     }
 
-    fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/${encodeURIComponent(char)}.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to load');
-        return res.json();
-      })
-      .then((data) => {
+    loadStrokes(char)
+      .then((strokes) => {
         if (cancelled) return;
-        const strokes: StrokeData[] = (data.strokes || []).map(
-          (path: string, idx: number) => ({
-            path,
-            median: data.medians?.[idx] || [],
-          })
-        );
-        strokeCache.set(char, strokes);
         strokesRef.current = strokes;
         setStrokeCount(strokes.length);
         setLoading(false);

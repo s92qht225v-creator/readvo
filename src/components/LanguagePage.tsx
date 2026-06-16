@@ -9,6 +9,7 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useStars } from '../hooks/useStars';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { prefetchHanzi } from '@/utils/hanziStrokes';
 import { trackAll } from '@/utils/analytics';
 import type { DialogueInfo } from '../services/dialogues';
 
@@ -382,6 +383,22 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
   const [karaokeSearch, setKaraokeSearch] = useState('');
   const [grammarSearch, setGrammarSearch] = useState('');
   const [topicSearch, setTopicSearch] = useState('');
+
+  // On the Writing tab, warm the stroke data for the first character of each
+  // listed set. By the time the user taps a set card the glyph is cached, so
+  // the practice canvas renders it immediately instead of showing the "..."
+  // loader while it fetches from the CDN.
+  useEffect(() => {
+    if (activeTab !== 'writing') return;
+    const sets = hskVersion === '3.0' ? writingSets
+      : writingHskLevel === '6' ? writingSetsHsk6
+      : writingHskLevel === '5' ? writingSetsHsk5
+      : writingHskLevel === '4' ? writingSetsHsk4
+      : writingHskLevel === '3' ? writingSetsHsk3
+      : writingHskLevel === '2' ? writingSetsHsk2L2
+      : writingSetsHsk2;
+    prefetchHanzi(sets.map(s => [...s.chars][0]).filter(Boolean) as string[]);
+  }, [activeTab, hskVersion, writingHskLevel, writingSets, writingSetsHsk2, writingSetsHsk2L2, writingSetsHsk3, writingSetsHsk4, writingSetsHsk5, writingSetsHsk6]);
 
   // Flashcard mode
   const [flashcardMode, setFlashcardMode] = useState<string>(() => {
