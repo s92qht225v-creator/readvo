@@ -1,0 +1,228 @@
+{
+  "id": "hsk2-dialogue20",
+  "slug": "renting-an-apartment",
+  "title": "租房子",
+  "pinyin": "Zū fángzi",
+  "titleTranslation": "Uy ijaraga olish",
+  "titleTranslation_ru": "Снять квартиру",
+  "titleTranslation_en": "Renting an Apartment",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "听说",
+    "租",
+    "找到",
+    "满意",
+    "家具",
+    "卧室",
+    "客厅",
+    "厨房",
+    "卫生间",
+    "房租",
+    "包",
+    "水电",
+    "打算",
+    "市中心",
+    "比较",
+    "约",
+    "中介",
+    "看房",
+    "价格",
+    "物业费",
+    "听起来",
+    "了解",
+    "租房",
+    "合适"
+  ],
+  "sections": [
+    {
+      "id": "d20-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d20-s1",
+          "text_original": "听说你要租房子，找到了吗？",
+          "pinyin": "Tīng shuō nǐ yào zū fáng zi, zhǎo dào le ma?",
+          "text_translation": "Eshitishimcha, uy ijaraga olmoqchisan, topdingmi?",
+          "text_translation_ru": "Слышал, ты хочешь снять квартиру, нашёл?",
+          "text_translation_en": "I heard you want to rent an apartment — have you found one?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s2",
+          "text_original": "还没有。我昨天看了一间，但是不太满意。",
+          "pinyin": "Hái méi yǒu. Wǒ zuó tiān kàn le yì jiān, dàn shì bú tài mǎn yì.",
+          "text_translation": "Hali yo'q. Kecha bittasini ko'rdim, lekin unchalik ko'nglimga o'tirmadi.",
+          "text_translation_ru": "Ещё нет. Вчера посмотрел одну, но не очень доволен.",
+          "text_translation_en": "Not yet. I saw one yesterday, but I wasn't very satisfied.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s3",
+          "text_original": "为什么？房子不好吗？",
+          "pinyin": "Wèi shén me? Fáng zi bù hǎo ma?",
+          "text_translation": "Nega? Uy yomonmidi?",
+          "text_translation_ru": "Почему? Квартира плохая?",
+          "text_translation_en": "Why? Was the place no good?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s4",
+          "text_original": "房子还可以，但是太小了，而且没有家具。",
+          "pinyin": "Fáng zi hái kě yǐ, dàn shì tài xiǎo le, ér qiě méi yǒu jiā jù.",
+          "text_translation": "Uy bo'lardi, lekin juda kichkina, va mebeli ham yo'q.",
+          "text_translation_ru": "Квартира неплохая, но слишком маленькая, и нет мебели.",
+          "text_translation_en": "The place is okay, but too small, and it has no furniture.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s5",
+          "text_original": "你想要多大的房子？",
+          "pinyin": "Nǐ xiǎng yào duō dà de fáng zi?",
+          "text_translation": "Qanchalik katta uy istaysan?",
+          "text_translation_ru": "Какого размера квартиру ты хочешь?",
+          "text_translation_en": "How big a place do you want?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s6",
+          "text_original": "我想要一个卧室、一个客厅，还要有厨房和卫生间。",
+          "pinyin": "Wǒ xiǎng yào yí ge wò shì, yí ge kè tīng, hái yào yǒu chú fáng hé wèi shēng jiān.",
+          "text_translation": "Bitta yotoqxona, bitta mehmonxona, yana oshxona va hojatxona ham bo'lishini istayman.",
+          "text_translation_ru": "Я хочу спальню, гостиную, а также кухню и санузел.",
+          "text_translation_en": "I want one bedroom, one living room, and also a kitchen and bathroom.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s7",
+          "text_original": "房租贵吗？",
+          "pinyin": "Fáng zū guì ma?",
+          "text_translation": "Ijara haqi qimmatmi?",
+          "text_translation_ru": "Аренда дорогая?",
+          "text_translation_en": "Is the rent expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s8",
+          "text_original": "那间房子一个月两千五百块，不包水电。",
+          "pinyin": "Nà jiān fáng zi yí ge yuè liǎng qiān wǔ bǎi kuài, bù bāo shuǐ diàn.",
+          "text_translation": "U uy oyiga ikki ming besh yuz yuan, suv-elektr kirmaydi.",
+          "text_translation_ru": "Та квартира две тысячи пятьсот юаней в месяц, без коммунальных.",
+          "text_translation_en": "That place is 2,500 yuan a month, not including utilities.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s9",
+          "text_original": "有点贵。你打算租在哪儿？",
+          "pinyin": "Yǒu diǎn guì. Nǐ dǎ suàn zū zài nǎr?",
+          "text_translation": "Birozgina qimmat. Qayerdan ijaraga olmoqchisan?",
+          "text_translation_ru": "Дороговато. Где ты планируешь снимать?",
+          "text_translation_en": "A bit expensive. Where do you plan to rent?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s10",
+          "text_original": "我想租在市中心，离公司近一点。",
+          "pinyin": "Wǒ xiǎng zū zài shì zhōng xīn, lí gōng sī jìn yì diǎn.",
+          "text_translation": "Shahar markazidan, kompaniyaga yaqinroq joydan olmoqchiman.",
+          "text_translation_ru": "Я хочу снять в центре города, поближе к работе.",
+          "text_translation_en": "I want to rent in the city center, a bit closer to my company.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s11",
+          "text_original": "市中心的房子比较贵。",
+          "pinyin": "Shì zhōng xīn de fáng zi bǐ jiào guì.",
+          "text_translation": "Shahar markazidagi uylar ancha qimmat.",
+          "text_translation_ru": "В центре города жильё довольно дорогое.",
+          "text_translation_en": "Places in the city center are relatively expensive.",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s12",
+          "text_original": "我知道。所以我今天又约了一个中介看房。",
+          "pinyin": "Wǒ zhī dào. Suǒ yǐ wǒ jīn tiān yòu yuē le yí ge zhōng jiè kàn fáng.",
+          "text_translation": "Bilaman. Shuning uchun bugun yana bir vositachi bilan uy ko'rishga kelishdim.",
+          "text_translation_ru": "Я знаю. Поэтому сегодня я снова договорился с агентом о просмотре.",
+          "text_translation_en": "I know. So today I made another appointment with an agent to view a place.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s13",
+          "text_original": "房子在哪儿？",
+          "pinyin": "Fáng zi zài nǎr?",
+          "text_translation": "Uy qayerda?",
+          "text_translation_ru": "Где квартира?",
+          "text_translation_en": "Where is the place?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s14",
+          "text_original": "离公司不远，走路十五分钟。",
+          "pinyin": "Lí gōng sī bù yuǎn, zǒu lù shí wǔ fēn zhōng.",
+          "text_translation": "Kompaniyadan uzoq emas, piyoda o'n besh daqiqa.",
+          "text_translation_ru": "Недалеко от работы, пятнадцать минут пешком.",
+          "text_translation_en": "Not far from the company, fifteen minutes on foot.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s15",
+          "text_original": "价格呢？",
+          "pinyin": "Jià gé ne?",
+          "text_translation": "Narxi-chi?",
+          "text_translation_ru": "А цена?",
+          "text_translation_en": "And the price?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s16",
+          "text_original": "一个月两千块，包水电和物业费。",
+          "pinyin": "Yí ge yuè liǎng qiān kuài, bāo shuǐ diàn hé wù yè fèi.",
+          "text_translation": "Oyiga ikki ming yuan, suv-elektr va kommunal xizmat haqi ham kiradi.",
+          "text_translation_ru": "Две тысячи юаней в месяц, включая коммунальные и плату за обслуживание.",
+          "text_translation_en": "Two thousand yuan a month, including utilities and the management fee.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s17",
+          "text_original": "听起来不错！你什么时候去看？",
+          "pinyin": "Tīng qǐ lái bú cuò! Nǐ shén me shí hou qù kàn?",
+          "text_translation": "Yaxshiga o'xshaydi! Qachon ko'rgani borasan?",
+          "text_translation_ru": "Звучит неплохо! Когда ты пойдёшь смотреть?",
+          "text_translation_en": "That sounds good! When are you going to see it?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s18",
+          "text_original": "下午三点。你要不要一起去看看？",
+          "pinyin": "Xià wǔ sān diǎn. Nǐ yào bu yào yì qǐ qù kàn kan?",
+          "text_translation": "Tushdan keyin soat uchda. Birga borib ko'rasanmi?",
+          "text_translation_ru": "В три часа дня. Хочешь сходить посмотреть вместе?",
+          "text_translation_en": "Three in the afternoon. Do you want to come take a look together?",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s19",
+          "text_original": "好啊！我也正好想了解一下租房。",
+          "pinyin": "Hǎo a! Wǒ yě zhèng hǎo xiǎng liǎo jiě yí xià zū fáng.",
+          "text_translation": "Mayli! Men ham aynan ijara haqida bilib olmoqchi edim.",
+          "text_translation_ru": "Хорошо! Я как раз тоже хотел узнать про аренду жилья.",
+          "text_translation_en": "Sure! I happen to want to learn a bit about renting too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s20",
+          "text_original": "那下午见！希望这次能找到合适的。",
+          "pinyin": "Nà xià wǔ jiàn! Xī wàng zhè cì néng zhǎo dào hé shì de.",
+          "text_translation": "Unda tushdan keyin ko'rishamiz! Bu safar mosini topa olsam degandiman.",
+          "text_translation_ru": "Тогда до встречи днём! Надеюсь, в этот раз найду подходящую.",
+          "text_translation_en": "See you this afternoon then! I hope I can find a suitable one this time.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

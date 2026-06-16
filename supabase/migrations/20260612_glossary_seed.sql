@@ -406,3 +406,29 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('常常', 'chángcháng', 'tez-tez; ko''pincha', 'часто', 'often', 2),
   ('照片', 'zhàopiàn', 'surat; foto', 'фотография; снимок', 'photo', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 租房子 (hsk2/dialogue20) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('听说', 'tīngshuō', 'eshitishimcha; eshitdim', 'говорят; слышал', 'I heard that', 2),
+  ('租', 'zū', 'ijaraga olmoq', 'снимать; арендовать', 'to rent', 3),
+  ('找到', 'zhǎodào', 'topmoq', 'найти', 'to find', 2),
+  ('满意', 'mǎnyì', 'rozi; mamnun', 'довольный; удовлетворённый', 'satisfied', 3),
+  ('家具', 'jiājù', 'mebel', 'мебель', 'furniture', 3),
+  ('卧室', 'wòshì', 'yotoqxona', 'спальня', 'bedroom', 3),
+  ('客厅', 'kètīng', 'mehmonxona (xona); zal', 'гостиная', 'living room', 3),
+  ('厨房', 'chúfáng', 'oshxona', 'кухня', 'kitchen', 3),
+  ('卫生间', 'wèishēngjiān', 'hojatxona; vanna xonasi', 'туалет; ванная', 'bathroom; toilet', 3),
+  ('房租', 'fángzū', 'uy ijara haqi', 'арендная плата', 'rent (for housing)', 3),
+  ('水电', 'shuǐdiàn', 'suv va elektr (kommunal)', 'коммунальные (вода и электричество)', 'utilities (water and electricity)', 3),
+  ('市中心', 'shìzhōngxīn', 'shahar markazi', 'центр города', 'city center; downtown', 3),
+  ('比较', 'bǐjiào', 'nisbatan; ancha; solishtirmoq', 'сравнительно; довольно', 'relatively; to compare', 2),
+  ('约', 'yuē', 'kelishmoq; uchrashuv belgilamoq', 'договориться; назначить встречу', 'to make an appointment', 3),
+  ('中介', 'zhōngjiè', 'vositachi; agentlik', 'посредник; агентство', 'agent; agency', 4),
+  ('看房', 'kànfáng', 'uy ko''rmoq (ijara/sotib olish uchun)', 'смотреть жильё', 'to view a place (to rent/buy)', 3),
+  ('价格', 'jiàgé', 'narx', 'цена', 'price', 3),
+  ('物业费', 'wùyèfèi', 'kommunal xizmat haqi', 'плата за обслуживание (ЖКХ)', 'property management fee', 4),
+  ('听起来', 'tīngqǐlái', 'eshitilishicha; quloqqa ... eshitiladi', 'звучит; на слух', 'sounds (like)', 3),
+  ('了解', 'liǎojiě', 'bilmoq; tushunmoq; o''rganmoq', 'понимать; узнавать', 'to understand; to find out', 3),
+  ('租房', 'zūfáng', 'uy ijaraga olish', 'снимать жильё', 'to rent a place', 3),
+  ('合适', 'héshì', 'mos; munosib', 'подходящий', 'suitable; appropriate', 3)
+  on conflict (zh, py_norm) do nothing;
