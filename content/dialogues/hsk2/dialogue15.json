@@ -1,0 +1,238 @@
+{
+  "id": "hsk2-dialogue15",
+  "slug": "getting-around",
+  "title": "交通",
+  "pinyin": "Jiāotōng",
+  "titleTranslation": "Transport",
+  "titleTranslation_ru": "Транспорт",
+  "titleTranslation_en": "Transportation",
+  "level": 2,
+  "tag": "transport",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "上班",
+    "地铁",
+    "方便",
+    "有时候",
+    "座位",
+    "号线",
+    "公司",
+    "站",
+    "久",
+    "只",
+    "公交车",
+    "慢",
+    "堵车",
+    "开车",
+    "辆",
+    "停车",
+    "难",
+    "周末",
+    "出租车",
+    "或者",
+    "骑",
+    "自行车",
+    "健康",
+    "汽车",
+    "主意"
+  ],
+  "sections": [
+    {
+      "id": "d15-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d15-s1",
+          "text_original": "你每天怎么去上班？",
+          "pinyin": "Nǐ měi tiān zěn me qù shàng bān?",
+          "text_translation": "Har kuni ishga qanday borasan?",
+          "text_translation_ru": "Как ты каждый день добираешься до работы?",
+          "text_translation_en": "How do you get to work every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s2",
+          "text_original": "我坐地铁。地铁很快，也很方便。",
+          "pinyin": "Wǒ zuò dì tiě. Dì tiě hěn kuài, yě hěn fāng biàn.",
+          "text_translation": "Men metroda boraman. Metro tez va qulay.",
+          "text_translation_ru": "Я езжу на метро. Метро быстрое и удобное.",
+          "text_translation_en": "I take the subway. The subway is fast and convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s3",
+          "text_original": "地铁人多不多？",
+          "pinyin": "Dì tiě rén duō bu duō?",
+          "text_translation": "Metroda odam ko'pmi?",
+          "text_translation_ru": "В метро много людей?",
+          "text_translation_en": "Is the subway crowded?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s4",
+          "text_original": "早上人很多，有时候没有座位。",
+          "pinyin": "Zǎo shang rén hěn duō, yǒu shí hou méi yǒu zuò wèi.",
+          "text_translation": "Ertalab odam ko'p, ba'zan o'rin bo'lmaydi.",
+          "text_translation_ru": "Утром много людей, иногда нет свободных мест.",
+          "text_translation_en": "There are a lot of people in the morning; sometimes there are no seats.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s5",
+          "text_original": "你坐几号线？",
+          "pinyin": "Nǐ zuò jǐ hào xiàn?",
+          "text_translation": "Necha raqamli liniyada yurasan?",
+          "text_translation_ru": "По какой линии ты ездишь?",
+          "text_translation_en": "Which line do you take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s6",
+          "text_original": "二号线。从我家到公司，一共五站。",
+          "pinyin": "Èr hào xiàn. Cóng wǒ jiā dào gōng sī, yí gòng wǔ zhàn.",
+          "text_translation": "Ikkinchi liniya. Uyimdan kompaniyagacha jami besh bekat.",
+          "text_translation_ru": "По второй линии. От дома до работы всего пять остановок.",
+          "text_translation_en": "Line 2. From my home to the company, it's five stops in total.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s7",
+          "text_original": "那很近啊。你为什么不走路？",
+          "pinyin": "Nà hěn jìn a. Nǐ wèi shén me bù zǒu lù?",
+          "text_translation": "U holda juda yaqin-ku. Nega piyoda yurmaysan?",
+          "text_translation_ru": "Это же близко. Почему ты не ходишь пешком?",
+          "text_translation_en": "That's close. Why don't you walk?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s8",
+          "text_original": "走路要三十分钟，太久了。坐地铁只要十分钟。",
+          "pinyin": "Zǒu lù yào sān shí fēn zhōng, tài jiǔ le. Zuò dì tiě zhǐ yào shí fēn zhōng.",
+          "text_translation": "Piyoda yurish o'ttiz daqiqa, juda uzoq. Metroda atigi o'n daqiqa.",
+          "text_translation_ru": "Пешком тридцать минут — слишком долго. На метро всего десять минут.",
+          "text_translation_en": "Walking takes thirty minutes, too long. The subway only takes ten minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s9",
+          "text_original": "你坐公交车吗？",
+          "pinyin": "Nǐ zuò gōng jiāo chē ma?",
+          "text_translation": "Avtobusda yurasanmi?",
+          "text_translation_ru": "Ты ездишь на автобусе?",
+          "text_translation_en": "Do you take the bus?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s10",
+          "text_original": "不坐。公交车太慢了，还经常堵车。",
+          "pinyin": "Bú zuò. Gōng jiāo chē tài màn le, hái jīng cháng dǔ chē.",
+          "text_translation": "Yo'q. Avtobus juda sekin, yana tez-tez tirbandlik bo'ladi.",
+          "text_translation_ru": "Нет. Автобус слишком медленный, и часто пробки.",
+          "text_translation_en": "No. The bus is too slow, and there's often traffic.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s11",
+          "text_original": "你会开车吗？",
+          "pinyin": "Nǐ huì kāi chē ma?",
+          "text_translation": "Mashina haydashni bilasanmi?",
+          "text_translation_ru": "Ты умеешь водить машину?",
+          "text_translation_en": "Can you drive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s12",
+          "text_original": "会，但是我没有车。",
+          "pinyin": "Huì, dàn shì wǒ méi yǒu chē.",
+          "text_translation": "Bilaman, lekin mashinam yo'q.",
+          "text_translation_ru": "Умею, но у меня нет машины.",
+          "text_translation_en": "Yes, but I don't have a car.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s13",
+          "text_original": "你可以买一辆车。",
+          "pinyin": "Nǐ kě yǐ mǎi yí liàng chē.",
+          "text_translation": "Bitta mashina sotib olsang bo'ladi.",
+          "text_translation_ru": "Ты можешь купить машину.",
+          "text_translation_en": "You could buy a car.",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s14",
+          "text_original": "买车太贵了，而且停车也很难。",
+          "pinyin": "Mǎi chē tài guì le, ér qiě tíng chē yě hěn nán.",
+          "text_translation": "Mashina olish juda qimmat, va to'xtatish ham qiyin.",
+          "text_translation_ru": "Покупать машину слишком дорого, и парковаться тоже трудно.",
+          "text_translation_en": "Buying a car is too expensive, and parking is also difficult.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s15",
+          "text_original": "那你周末怎么出门？",
+          "pinyin": "Nà nǐ zhōu mò zěn me chū mén?",
+          "text_translation": "Unda dam olish kunlari qanday tashqariga chiqasan?",
+          "text_translation_ru": "А как ты выходишь из дома на выходных?",
+          "text_translation_en": "Then how do you get around on weekends?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s16",
+          "text_original": "我坐出租车或者骑自行车。",
+          "pinyin": "Wǒ zuò chū zū chē huò zhě qí zì xíng chē.",
+          "text_translation": "Taksida yuraman yoki velosiped minaman.",
+          "text_translation_ru": "Я езжу на такси или на велосипеде.",
+          "text_translation_en": "I take a taxi or ride a bicycle.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s17",
+          "text_original": "骑自行车很健康。",
+          "pinyin": "Qí zì xíng chē hěn jiàn kāng.",
+          "text_translation": "Velosiped minish salomatlik uchun foydali.",
+          "text_translation_ru": "Кататься на велосипеде очень полезно для здоровья.",
+          "text_translation_en": "Riding a bike is very healthy.",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s18",
+          "text_original": "对，而且不堵车。天气好的时候，我喜欢骑自行车。",
+          "pinyin": "Duì, ér qiě bù dǔ chē. Tiān qì hǎo de shí hou, wǒ xǐ huan qí zì xíng chē.",
+          "text_translation": "To'g'ri, va tirbandlik ham bo'lmaydi. Havo yaxshi bo'lganda velosiped minishni yoqtiraman.",
+          "text_translation_ru": "Да, и нет пробок. В хорошую погоду я люблю кататься на велосипеде.",
+          "text_translation_en": "Right, and there's no traffic. When the weather is nice, I like to ride my bike.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s19",
+          "text_original": "我也想买一辆自行车。",
+          "pinyin": "Wǒ yě xiǎng mǎi yí liàng zì xíng chē.",
+          "text_translation": "Men ham bitta velosiped sotib olmoqchiman.",
+          "text_translation_ru": "Я тоже хочу купить велосипед.",
+          "text_translation_en": "I'd like to buy a bicycle too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s20",
+          "text_original": "我们可以周末一起去骑车。",
+          "pinyin": "Wǒ men kě yǐ zhōu mò yì qǐ qù qí chē.",
+          "text_translation": "Dam olish kunlari birga velosiped minishga borsak bo'ladi.",
+          "text_translation_ru": "Мы можем на выходных вместе покататься.",
+          "text_translation_en": "We can go cycling together on the weekend.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s21",
+          "text_original": "好主意！",
+          "pinyin": "Hǎo zhǔ yi!",
+          "text_translation": "Zo'r fikr!",
+          "text_translation_ru": "Отличная идея!",
+          "text_translation_en": "Great idea!",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

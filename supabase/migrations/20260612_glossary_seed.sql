@@ -321,3 +321,26 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('生日蛋糕', 'shēngrì dàngāo', 'tug''ilgan kun torti', 'торт ко дню рождения', 'birthday cake', 2),
   ('一束花', 'yí shù huā', 'bir dasta gul', 'букет цветов', 'a bunch of flowers', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 交通 (hsk2/dialogue15) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('上班', 'shàngbān', 'ishga bormoq', 'идти на работу', 'to go to work', 2),
+  ('地铁', 'dìtiě', 'metro', 'метро', 'subway; metro', 2),
+  ('有时候', 'yǒu shíhou', 'ba''zan', 'иногда', 'sometimes', 2),
+  ('座位', 'zuòwèi', 'o''rin; joy', 'место (сидячее)', 'seat', 2),
+  ('号线', 'hào xiàn', '(metro) liniyasi', 'линия (метро)', '(subway) line', 3),
+  ('公司', 'gōngsī', 'kompaniya; firma', 'компания; фирма', 'company', 2),
+  ('站', 'zhàn', 'bekat; stansiya', 'остановка; станция', 'stop; station', 2),
+  ('公交车', 'gōngjiāo chē', 'avtobus', 'автобус', 'bus', 2),
+  ('慢', 'màn', 'sekin', 'медленный', 'slow', 2),
+  ('开车', 'kāichē', 'mashina haydamoq', 'водить машину', 'to drive (a car)', 2),
+  ('辆', 'liàng', 'dona (transport sanash so''zi)', 'счётное слово для транспорта', '(measure word for vehicles)', 2),
+  ('停车', 'tíngchē', 'mashina to''xtatmoq; park qilmoq', 'парковаться', 'to park', 3),
+  ('出租车', 'chūzū chē', 'taksi', 'такси', 'taxi', 2),
+  ('或者', 'huòzhě', 'yoki', 'или', 'or', 2),
+  ('骑', 'qí', 'minmoq (velosiped/ot)', 'ехать верхом; кататься', 'to ride', 2),
+  ('自行车', 'zìxíngchē', 'velosiped', 'велосипед', 'bicycle', 2),
+  ('健康', 'jiànkāng', 'sog''lom; salomatlik', 'здоровый; здоровье', 'healthy; health', 2),
+  ('汽车', 'qìchē', 'mashina; avtomobil', 'машина; автомобиль', 'car; automobile', 2),
+  ('主意', 'zhǔyi', 'fikr; g''oya', 'идея; мысль', 'idea', 3)
+  on conflict (zh, py_norm) do nothing;
