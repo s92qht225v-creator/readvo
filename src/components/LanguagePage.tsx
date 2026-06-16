@@ -36,7 +36,7 @@ type Tab = 'dialogues' | 'writing' | 'flashcards' | 'karaoke' | 'grammar';
 const tabs: { id: Tab; label: string; label_ru?: string; label_en?: string }[] = [
   { id: 'dialogues', label: 'Dialog', label_ru: 'Диалог', label_en: 'Dialogues' },
   { id: 'writing', label: 'Yozish', label_ru: 'Письмо', label_en: 'Writing' },
-  { id: 'flashcards', label: 'Flesh', label_ru: 'Флеш', label_en: 'Flash' },
+  { id: 'flashcards', label: 'Fleshkarta', label_ru: 'Флешкарты', label_en: 'Flashcards' },
   { id: 'karaoke', label: 'KTV' },
 ];
 
