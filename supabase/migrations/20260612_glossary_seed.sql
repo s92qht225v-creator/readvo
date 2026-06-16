@@ -294,3 +294,17 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('公交站', 'gōngjiāo zhàn', 'avtobus bekati', 'автобусная остановка', 'bus stop', 3),
   ('左转', 'zuǒ zhuǎn', 'chapga burilish', 'повернуть налево', 'to turn left', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 点菜 (hsk2/dialogue13) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('位置', 'wèizhi', 'joy; o''rin', 'место', 'seat; place', 2),
+  ('这边', 'zhèbiān', 'bu tomon; bu yer', 'здесь; сюда', 'this side; over here', 2),
+  ('菜单', 'càidān', 'menyu', 'меню', 'menu', 2),
+  ('店', 'diàn', 'do''kon; restoran', 'магазин; заведение', 'shop; store', 2),
+  ('鱼', 'yú', 'baliq', 'рыба', 'fish', 2),
+  ('汤', 'tāng', 'sho''rva', 'суп', 'soup', 2),
+  ('鸡蛋', 'jīdàn', 'tuxum', 'яйцо', 'egg', 1),
+  ('菜', 'cài', 'taom; sabzavot', 'блюдо; овощи', 'dish; vegetable', 1),
+  ('果汁', 'guǒzhī', 'meva sharbati', 'сок', 'juice', 2),
+  ('稍等', 'shāoděng', 'biroz kutmoq', 'подождать немного', 'to wait a moment', 3)
+  on conflict (zh, py_norm) do nothing;

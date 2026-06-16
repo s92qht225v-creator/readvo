@@ -1,0 +1,145 @@
+{
+  "id": "hsk2-dialogue13",
+  "slug": "ordering-food",
+  "title": "点菜",
+  "pinyin": "Diǎn cài",
+  "titleTranslation": "Taom buyurtma qilish",
+  "titleTranslation_ru": "Заказать еду",
+  "titleTranslation_en": "Ordering Food",
+  "level": 2,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "位置",
+    "这边",
+    "菜单",
+    "店",
+    "鱼",
+    "鸡肉",
+    "一份",
+    "汤",
+    "鸡蛋",
+    "菜",
+    "米饭",
+    "果汁",
+    "稍等"
+  ],
+  "sections": [
+    {
+      "id": "d13-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d13-s1",
+          "text_original": "你好！请问现在有位置吗？",
+          "pinyin": "Nǐ hǎo! Qǐng wèn xiàn zài yǒu wèi zhi ma?",
+          "text_translation": "Salom! Kechirasiz, hozir bo'sh joy bormi?",
+          "text_translation_ru": "Здравствуйте! Скажите, есть ли сейчас места?",
+          "text_translation_en": "Hello! Excuse me, are there any seats available now?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s2",
+          "text_original": "有。请坐这边。这是菜单。",
+          "pinyin": "Yǒu. Qǐng zuò zhè biān. Zhè shì cài dān.",
+          "text_translation": "Bor. Marhamat, bu yoqqa o'tiring. Mana menyu.",
+          "text_translation_ru": "Есть. Садитесь сюда, пожалуйста. Вот меню.",
+          "text_translation_en": "Yes. Please sit here. Here's the menu.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s3",
+          "text_original": "谢谢。你们店有什么好吃的？",
+          "pinyin": "Xiè xie. Nǐ men diàn yǒu shén me hǎo chī de?",
+          "text_translation": "Rahmat. Restoraningizda nima mazali?",
+          "text_translation_ru": "Спасибо. Что у вас вкусного?",
+          "text_translation_en": "Thanks. What's good to eat at your place?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s4",
+          "text_original": "我们的鱼和鸡肉都很好吃。",
+          "pinyin": "Wǒ men de yú hé jī ròu dōu hěn hǎo chī.",
+          "text_translation": "Bizning baliq va tovuq go'shtimiz juda mazali.",
+          "text_translation_ru": "Наша рыба и курица очень вкусные.",
+          "text_translation_en": "Our fish and chicken are both delicious.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s5",
+          "text_original": "我想吃鱼。鱼贵不贵？",
+          "pinyin": "Wǒ xiǎng chī yú. Yú guì bu guì?",
+          "text_translation": "Men baliq yemoqchiman. Baliq qimmatmi?",
+          "text_translation_ru": "Я хочу рыбу. Рыба дорогая?",
+          "text_translation_en": "I'd like fish. Is the fish expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s6",
+          "text_original": "不贵。一份鱼二十八块。",
+          "pinyin": "Bú guì. Yí fèn yú èr shí bā kuài.",
+          "text_translation": "Qimmat emas. Bir porsiya baliq yigirma sakkiz yuan.",
+          "text_translation_ru": "Не дорогая. Одна порция рыбы — двадцать восемь юаней.",
+          "text_translation_en": "Not expensive. One portion of fish is twenty-eight yuan.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s7",
+          "text_original": "好。我还要一个汤。",
+          "pinyin": "Hǎo. Wǒ hái yào yí ge tāng.",
+          "text_translation": "Yaxshi. Yana bitta sho'rva ham olaman.",
+          "text_translation_ru": "Хорошо. Я ещё возьму суп.",
+          "text_translation_en": "Okay. I'd also like a soup.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s8",
+          "text_original": "你要什么汤？我们有鸡蛋汤和菜汤。",
+          "pinyin": "Nǐ yào shén me tāng? Wǒ men yǒu jī dàn tāng hé cài tāng.",
+          "text_translation": "Qanaqa sho'rva xohlaysiz? Bizda tuxum sho'rva va sabzavotli sho'rva bor.",
+          "text_translation_ru": "Какой суп вы хотите? У нас есть яичный суп и овощной суп.",
+          "text_translation_en": "What soup would you like? We have egg soup and vegetable soup.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s9",
+          "text_original": "鸡蛋汤吧。再来一碗米饭。",
+          "pinyin": "Jī dàn tāng ba. Zài lái yì wǎn mǐ fàn.",
+          "text_translation": "Tuxum sho'rva bo'la qolsin. Yana bir kosa guruch ham bering.",
+          "text_translation_ru": "Давайте яичный суп. И ещё миску риса.",
+          "text_translation_en": "Egg soup, then. And bring a bowl of rice too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s10",
+          "text_original": "好的。你喝什么？我们有茶和果汁。",
+          "pinyin": "Hǎo de. Nǐ hē shén me? Wǒ men yǒu chá hé guǒ zhī.",
+          "text_translation": "Yaxshi. Nima ichasiz? Bizda choy va meva sharbati bor.",
+          "text_translation_ru": "Хорошо. Что будете пить? У нас есть чай и сок.",
+          "text_translation_en": "Sure. What would you like to drink? We have tea and juice.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s11",
+          "text_original": "我要一杯茶。",
+          "pinyin": "Wǒ yào yì bēi chá.",
+          "text_translation": "Men bir piyola choy olaman.",
+          "text_translation_ru": "Я хочу чашку чая.",
+          "text_translation_en": "I'd like a cup of tea.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s12",
+          "text_original": "好的。请稍等。",
+          "pinyin": "Hǎo de. Qǐng shāo děng.",
+          "text_translation": "Yaxshi. Biroz kuting.",
+          "text_translation_ru": "Хорошо. Подождите немного.",
+          "text_translation_en": "Sure. Please wait a moment.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
