@@ -82,6 +82,10 @@ body {
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 
+  /* Motion easing — natural deceleration, no bounce/elastic */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
   /* Layout */
   --header-height: 60px;
   --bottom-nav-height: 56px;
@@ -3289,7 +3293,8 @@ body {
 }
 
 .dialogues__search-input:focus {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 3px rgba(220, 38, 38, 0.14);
 }
 
 .dialogues__search-clear {
@@ -12620,4 +12625,112 @@ body {
 .test-gallery-cell:hover .test-gallery-trash,
 .test-gallery-trash:focus-visible {
   opacity: 1;
+}
+
+/* =============================================================================
+   Catalog micro-interactions — subtle, tasteful motion (impeccable: animate)
+   Press feedback on tappable controls, hover lift on cards, a bookmark pop,
+   and a search focus ring. All transform/opacity (no layout animation), 100–
+   220ms ease-out. Neutralized under prefers-reduced-motion (block at the end).
+   ============================================================================= */
+
+/* Filter chips */
+.dialogues__tag {
+  transition: background 0.18s var(--ease-out-quart),
+              border-color 0.18s var(--ease-out-quart),
+              color 0.18s var(--ease-out-quart),
+              transform 0.1s var(--ease-out-quart);
+}
+.dialogues__tag:active { transform: scale(0.96); }
+@media (hover: hover) {
+  .dialogues__tag:not(.dialogues__tag--active):hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+/* HSK level pills */
+.lp__hsk-pill {
+  transition: background 0.18s var(--ease-out-quart),
+              border-color 0.18s var(--ease-out-quart),
+              color 0.18s var(--ease-out-quart),
+              transform 0.1s var(--ease-out-quart);
+}
+.lp__hsk-pill:not(.lp__hsk-pill--active):not(.lp__hsk-pill--disabled):active {
+  transform: scale(0.96);
+}
+@media (hover: hover) {
+  .lp__hsk-pill:not(.lp__hsk-pill--active):not(.lp__hsk-pill--disabled):hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+/* Nav tabs — quick press feedback (active state styling unchanged) */
+.lp__tab { transition: background 0.15s var(--ease-out-quart), color 0.15s var(--ease-out-quart), transform 0.1s var(--ease-out-quart); }
+.lp__tab:active { transform: scale(0.94); }
+
+/* Cards — hover lift + press settle */
+.dialogue-card,
+.lp__writing-card {
+  transition: transform 0.2s var(--ease-out-quart), box-shadow 0.2s var(--ease-out-quart);
+  will-change: transform;
+}
+@media (hover: hover) {
+  .dialogue-card:hover,
+  .lp__writing-card:not(.lp__writing-card--soon):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+.dialogue-card:active,
+.lp__writing-card:not(.lp__writing-card--soon):active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+/* Bookmark — colour transition + a small pop when it becomes active */
+.dialogue-card__bookmark {
+  transition: color 0.15s var(--ease-out-quart), transform 0.12s var(--ease-out-quart);
+}
+.dialogue-card__bookmark:active { transform: scale(0.85); }
+.dialogue-card__bookmark--active {
+  animation: bookmark-pop 0.28s var(--ease-out-quint);
+}
+@keyframes bookmark-pop {
+  0%   { transform: scale(0.7); }
+  55%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* Hamburger menu button press */
+.home__menu-btn { transition: transform 0.1s var(--ease-out-quart); }
+.home__menu-btn:active { transform: scale(0.92); }
+
+/* Search input — smooth focus-ring transition (ring defined on the base
+   :focus rule above so there's one source of truth). */
+.dialogues__search-input {
+  transition: box-shadow 0.18s var(--ease-out-quart);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialogues__tag,
+  .lp__hsk-pill,
+  .lp__tab,
+  .dialogue-card,
+  .lp__writing-card,
+  .dialogue-card__bookmark,
+  .home__menu-btn,
+  .dialogues__search-input {
+    transition-duration: 0.01ms;
+  }
+  .dialogue-card:hover,
+  .lp__writing-card:hover,
+  .dialogue-card:active,
+  .lp__writing-card:active,
+  .dialogues__tag:active,
+  .lp__hsk-pill:active,
+  .lp__tab:active,
+  .home__menu-btn:active,
+  .dialogue-card__bookmark:active { transform: none; }
+  .dialogue-card__bookmark--active { animation: none; }
 }
