@@ -500,3 +500,27 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('等一下', 'děng yíxià', 'bir oz kuting; sal sabr qiling', 'подожди немного', 'wait a moment', 2),
   ('快点', 'kuài diǎn', 'tezroq; shoshiling', 'побыстрее', 'hurry up; quickly', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 约会 (hsk2/dialogue22) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('有空', 'yǒu kòng', 'bo''sh vaqti bo''lmoq', 'быть свободным', 'to have free time', 2),
+  ('电影', 'diànyǐng', 'kino; film', 'фильм; кино', 'movie; film', 1),
+  ('半', 'bàn', 'yarim', 'половина', 'half', 1),
+  ('电影院', 'diànyǐngyuàn', 'kinoteatr', 'кинотеатр', 'cinema; movie theater', 2),
+  ('爱情', 'àiqíng', 'sevgi; muhabbat', 'любовь', 'love; romance', 3),
+  ('西餐', 'xīcān', 'Yevropa taomi', 'западная кухня', 'Western food', 3),
+  ('不错', 'búcuò', 'yomon emas; zo''r', 'неплохо; хорошо', 'not bad; pretty good', 2),
+  ('西餐厅', 'xīcāntīng', 'Yevropa restorani', 'ресторан западной кухни', 'Western restaurant', 3)
+  on conflict (zh, py_norm) do nothing;
+
+-- 约会 (hsk2/dialogue22) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('有空', 'yǒu kòng', 'bo''sh vaqti bo''lmoq', 'быть свободным', 'to have free time', 2),
+  ('电影', 'diànyǐng', 'kino; film', 'фильм; кино', 'movie; film', 1),
+  ('半', 'bàn', 'yarim', 'половина', 'half', 1),
+  ('电影院', 'diànyǐngyuàn', 'kinoteatr', 'кинотеатр', 'cinema; movie theater', 2),
+  ('爱情', 'àiqíng', 'sevgi; muhabbat', 'любовь', 'love; romance', 3),
+  ('西餐', 'xīcān', 'Yevropa taomi', 'западная кухня', 'Western food', 3),
+  ('不错', 'búcuò', 'yomon emas; zo''r', 'неплохо; хорошо', 'not bad; pretty good', 2),
+  ('西餐厅', 'xīcāntīng', 'Yevropa restorani', 'ресторан западной кухни', 'Western restaurant', 3)
+  on conflict (zh, py_norm) do nothing;

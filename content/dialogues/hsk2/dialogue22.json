@@ -1,0 +1,189 @@
+{
+  "id": "hsk2-dialogue22",
+  "slug": "asking-someone-out",
+  "title": "约会",
+  "pinyin": "Yuēhuì",
+  "titleTranslation": "Uchrashuv",
+  "titleTranslation_ru": "Свидание",
+  "titleTranslation_en": "Asking Someone Out",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "周末",
+    "有空",
+    "请",
+    "电影",
+    "半",
+    "电影院",
+    "门口",
+    "爱情",
+    "以后",
+    "西餐",
+    "不错",
+    "西餐厅"
+  ],
+  "sections": [
+    {
+      "id": "d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d22-s1",
+          "text_original": "你周末有空吗？",
+          "pinyin": "Nǐ zhōu mò yǒu kòng ma?",
+          "text_translation": "Dam olish kunlari bo'sh vaqting bormi?",
+          "text_translation_ru": "У тебя есть время на выходных?",
+          "text_translation_en": "Are you free this weekend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s2",
+          "text_original": "有空。怎么了？",
+          "pinyin": "Yǒu kòng. Zěn me le?",
+          "text_translation": "Bor. Nima edi?",
+          "text_translation_ru": "Свободен. А что?",
+          "text_translation_en": "Yes, I'm free. What's up?",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s3",
+          "text_original": "我想请你看电影。",
+          "pinyin": "Wǒ xiǎng qǐng nǐ kàn diàn yǐng.",
+          "text_translation": "Seni kinoga taklif qilmoqchiman.",
+          "text_translation_ru": "Я хочу пригласить тебя в кино.",
+          "text_translation_en": "I'd like to invite you to a movie.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s4",
+          "text_original": "真的吗？太好了！什么时候？",
+          "pinyin": "Zhēn de ma? Tài hǎo le! Shén me shí hou?",
+          "text_translation": "Rostdanmi? Juda yaxshi! Qachon?",
+          "text_translation_ru": "Правда? Отлично! Когда?",
+          "text_translation_en": "Really? Great! When?",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s5",
+          "text_original": "星期六晚上，可以吗？",
+          "pinyin": "Xīng qī liù wǎn shang, kě yǐ ma?",
+          "text_translation": "Shanba kuni kechqurun, bo'ladimi?",
+          "text_translation_ru": "В субботу вечером, подойдёт?",
+          "text_translation_en": "Saturday evening, is that okay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s6",
+          "text_original": "可以。几点？",
+          "pinyin": "Kě yǐ. Jǐ diǎn?",
+          "text_translation": "Bo'ladi. Soat nechada?",
+          "text_translation_ru": "Хорошо. Во сколько?",
+          "text_translation_en": "Sure. What time?",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s7",
+          "text_original": "七点半。我在电影院门口等你。",
+          "pinyin": "Qī diǎn bàn. Wǒ zài diàn yǐng yuàn mén kǒu děng nǐ.",
+          "text_translation": "Yetti yarimda. Seni kinoteatr eshigi oldida kutaman.",
+          "text_translation_ru": "В полвосьмого. Я подожду тебя у входа в кинотеатр.",
+          "text_translation_en": "Seven thirty. I'll wait for you at the cinema entrance.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s8",
+          "text_original": "好。我们看什么电影？",
+          "pinyin": "Hǎo. Wǒ men kàn shén me diàn yǐng?",
+          "text_translation": "Yaxshi. Qanaqa kino ko'ramiz?",
+          "text_translation_ru": "Хорошо. Какой фильм будем смотреть?",
+          "text_translation_en": "Okay. What movie are we watching?",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s9",
+          "text_original": "看一个新的爱情电影。",
+          "pinyin": "Kàn yí ge xīn de ài qíng diàn yǐng.",
+          "text_translation": "Yangi sevgi filmini ko'ramiz.",
+          "text_translation_ru": "Новый романтический фильм.",
+          "text_translation_en": "A new romance movie.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s10",
+          "text_original": "爱情电影？我喜欢！",
+          "pinyin": "Ài qíng diàn yǐng? Wǒ xǐ huan!",
+          "text_translation": "Sevgi filmimi? Yoqtiraman!",
+          "text_translation_ru": "Романтический фильм? Я люблю такие!",
+          "text_translation_en": "A romance movie? I love those!",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s11",
+          "text_original": "看完电影以后，我们去吃饭吧。",
+          "pinyin": "Kàn wán diàn yǐng yǐ hòu, wǒ men qù chī fàn ba.",
+          "text_translation": "Kinodan keyin ovqatga boramiz.",
+          "text_translation_ru": "После фильма пойдём поедим.",
+          "text_translation_en": "After the movie, let's go eat.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s12",
+          "text_original": "好啊。你想吃什么？",
+          "pinyin": "Hǎo a. Nǐ xiǎng chī shén me?",
+          "text_translation": "Mayli. Sen nima yeging keladi?",
+          "text_translation_ru": "Хорошо. А ты что хочешь поесть?",
+          "text_translation_en": "Sure. What do you want to eat?",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s13",
+          "text_original": "你想吃什么？",
+          "pinyin": "Nǐ xiǎng chī shén me?",
+          "text_translation": "Yo'q, sen nima yeging keladi?",
+          "text_translation_ru": "Нет, это ты что хочешь поесть?",
+          "text_translation_en": "No, what do you want to eat?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s14",
+          "text_original": "我想吃西餐。",
+          "pinyin": "Wǒ xiǎng chī xī cān.",
+          "text_translation": "Yevropa taomini yegim keladi.",
+          "text_translation_ru": "Я хочу западную кухню.",
+          "text_translation_en": "I'd like Western food.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s15",
+          "text_original": "好的。我知道一家不错的西餐厅。",
+          "pinyin": "Hǎo de. Wǒ zhī dào yì jiā bú cuò de xī cān tīng.",
+          "text_translation": "Yaxshi. Men zo'r bir Yevropa restoranini bilaman.",
+          "text_translation_ru": "Хорошо. Я знаю один неплохой ресторан западной кухни.",
+          "text_translation_en": "Okay. I know a nice Western restaurant.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s16",
+          "text_original": "那星期六见！",
+          "pinyin": "Nà xīng qī liù jiàn!",
+          "text_translation": "Unda shanbada ko'rishamiz!",
+          "text_translation_ru": "Тогда до субботы!",
+          "text_translation_en": "See you Saturday then!",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s17",
+          "text_original": "星期六见！",
+          "pinyin": "Xīng qī liù jiàn!",
+          "text_translation": "Shanbada ko'rishamiz!",
+          "text_translation_ru": "До субботы!",
+          "text_translation_en": "See you Saturday!",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
