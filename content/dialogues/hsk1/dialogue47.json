@@ -16,55 +16,19 @@
       "sentences": [
         {
           "id": "d47-s1",
-          "text_original": "你为什么不吃饭？",
-          "pinyin": "Nǐ wèi shénme bù chīfàn?",
-          "text_translation": "Nega ovqat yemayapsan?",
-          "text_translation_ru": "Почему ты не ешь?",
+          "text_original": "你好！你为什么不吃饭？",
+          "pinyin": "Nǐ hǎo! Nǐ wèi shénme bù chīfàn?",
+          "text_translation": "Salom! Nega ovqat yemayapsan?",
+          "text_translation_ru": "Привет! Почему ты не ешь?",
+          "text_translation_en": "Hello! Why aren't you eating?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                4
-              ],
-              "p": "wèi shénme",
-              "t": "nega",
-              "tr": "почему"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "chīfàn",
-              "t": "ovqat yemoq",
-              "tr": "есть"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue1.mp3",
-          "text_translation_en": "Why aren't you eating?"
+            { "i": [0, 2], "p": "nǐ hǎo", "t": "salom", "tr": "привет", "h": 1, "l": 1 },
+            { "i": [3, 4], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [4, 7], "p": "wèi shénme", "t": "nega", "tr": "почему" },
+            { "i": [7, 8], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [8, 10], "p": "chīfàn", "t": "ovqat yemoq", "tr": "есть" }
+          ]
         },
         {
           "id": "d47-s2",
@@ -72,330 +36,191 @@
           "pinyin": "Yīnwèi wǒ zài fēngzhāi.",
           "text_translation": "Chunki men ro'za tutyapman.",
           "text_translation_ru": "Потому что я держу пост.",
+          "text_translation_en": "Because I'm fasting.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "yīnwèi",
-              "t": "chunki",
-              "tr": "потому что"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "zài",
-              "t": "(-yapti)",
-              "tr": "(прогрессив)",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "fēngzhāi",
-              "t": "ro'za tutmoq",
-              "tr": "держать пост"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue2.mp3",
-          "text_translation_en": "Because I'm fasting."
+            { "i": [0, 2], "p": "yīnwèi", "t": "chunki", "tr": "потому что" },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 4], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
+            { "i": [4, 6], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" }
+          ]
         },
         {
           "id": "d47-s3",
-          "text_original": "现在是斋月吗？",
-          "pinyin": "Xiànzài shì zhāiyuè ma?",
-          "text_translation": "Hozir ro'za oyimi?",
-          "text_translation_ru": "Сейчас Рамадан?",
+          "text_original": "封斋？现在是斋月吗？",
+          "pinyin": "Fēngzhāi? Xiànzài shì zhāiyuè ma?",
+          "text_translation": "Ro'za? Hozir ro'za oyimi?",
+          "text_translation_ru": "Пост? Сейчас Рамадан?",
+          "text_translation_en": "Fasting? Is it Ramadan now?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xiànzài",
-              "t": "hozir",
-              "tr": "сейчас",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "shì",
-              "t": "bu",
-              "tr": "это",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "zhāiyuè",
-              "t": "ro'za oyi",
-              "tr": "Рамадан"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue3.mp3",
-          "text_translation_en": "Is it Ramadan now?"
+            { "i": [0, 2], "p": "fēngzhāi", "t": "ro'za tutmoq", "tr": "держать пост" },
+            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
+            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" },
+            { "i": [8, 9], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d47-s4",
-          "text_original": "是的。",
-          "pinyin": "Shì de.",
-          "text_translation": "Ha.",
-          "text_translation_ru": "Да.",
+          "text_original": "是的。现在是斋月。",
+          "pinyin": "Shì de. Xiànzài shì zhāiyuè.",
+          "text_translation": "Ha. Hozir ro'za oyi.",
+          "text_translation_ru": "Да. Сейчас Рамадан.",
+          "text_translation_en": "Yes. It's Ramadan now.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "shì de",
-              "t": "ha",
-              "tr": "да",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue4.mp3",
-          "text_translation_en": "Yes."
+            { "i": [0, 2], "p": "shì de", "t": "ha", "tr": "да", "h": 1, "l": 2 },
+            { "i": [3, 5], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "shì", "t": "bu", "tr": "это", "h": 1, "l": 2 },
+            { "i": [6, 8], "p": "zhāiyuè", "t": "ro'za oyi", "tr": "Рамадан" }
+          ]
         },
         {
           "id": "d47-s5",
-          "text_original": "你白天不吃，对吗？",
-          "pinyin": "Nǐ báitiān bù chī, duì ma?",
-          "text_translation": "Kunduz ovqat yemaysan, to'g'rimi?",
-          "text_translation_ru": "Ты днём не ешь, правда?",
+          "text_original": "你白天不吃东西，对吗？",
+          "pinyin": "Nǐ báitiān bù chī dōngxi, duì ma?",
+          "text_translation": "Kunduzi hech narsa yemaysan, to'g'rimi?",
+          "text_translation_ru": "Ты днём ничего не ешь, правда?",
+          "text_translation_en": "You don't eat anything during the day, right?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "báitiān",
-              "t": "kunduz",
-              "tr": "днём"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue5.mp3",
-          "text_translation_en": "You don't eat during the day, right?"
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "báitiān", "t": "kunduz", "tr": "днём" },
+            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [5, 7], "p": "dōngxi", "t": "narsa", "tr": "вещь" },
+            { "i": [8, 9], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [9, 10], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d47-s6",
-          "text_original": "对，晚上吃。",
-          "pinyin": "Duì, wǎnshang chī.",
-          "text_translation": "Ha, kechqurun yeyman.",
-          "text_translation_ru": "Да, вечером ем.",
+          "text_original": "对。我白天不吃，晚上吃。",
+          "pinyin": "Duì. Wǒ báitiān bù chī, wǎnshang chī.",
+          "text_translation": "To'g'ri. Men kunduzi yemayman, kechqurun yeyman.",
+          "text_translation_ru": "Верно. Я днём не ем, ем вечером.",
+          "text_translation_en": "Right. I don't eat during the day, I eat in the evening.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "wǎnshang",
-              "t": "kechqurun",
-              "tr": "вечером",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue6.mp3",
-          "text_translation_en": "Right, I eat in the evening."
+            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 5], "p": "báitiān", "t": "kunduz", "tr": "днём" },
+            { "i": [5, 6], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [6, 7], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [8, 10], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
+            { "i": [10, 11], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ]
         },
         {
           "id": "d47-s7",
+          "text_original": "你早上也不吃吗？",
+          "pinyin": "Nǐ zǎoshang yě bù chī ma?",
+          "text_translation": "Ertalab ham yemaysanmi?",
+          "text_translation_ru": "Утром ты тоже не ешь?",
+          "text_translation_en": "You don't eat in the morning either?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "zǎoshang", "t": "ertalab", "tr": "утром" },
+            { "i": [3, 4], "p": "yě", "t": "ham", "tr": "тоже", "h": 1, "l": 3 },
+            { "i": [4, 5], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [5, 6], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [6, 7], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
+        },
+        {
+          "id": "d47-s8",
+          "text_original": "不吃。早上、中午都不吃。",
+          "pinyin": "Bù chī. Zǎoshang, zhōngwǔ dōu bù chī.",
+          "text_translation": "Yemayman. Ertalab ham, peshinda ham yemayman.",
+          "text_translation_ru": "Не ем. Ни утром, ни в полдень не ем.",
+          "text_translation_en": "No. I don't eat in the morning or at noon.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [1, 2], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [3, 5], "p": "zǎoshang", "t": "ertalab", "tr": "утром" },
+            { "i": [6, 8], "p": "zhōngwǔ", "t": "peshin", "tr": "полдень" },
+            { "i": [8, 9], "p": "dōu", "t": "hammasi", "tr": "всё; оба" },
+            { "i": [9, 10], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [10, 11], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d47-s9",
+          "text_original": "那什么时候吃？",
+          "pinyin": "Nà shénme shíhou chī?",
+          "text_translation": "Unda qachon yeysan?",
+          "text_translation_ru": "Тогда когда ты ешь?",
+          "text_translation_en": "So when do you eat?",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 1], "p": "nà", "t": "unda", "tr": "тогда", "h": 1, "l": 5 },
+            { "i": [1, 5], "p": "shénme shíhou", "t": "qachon", "tr": "когда" },
+            { "i": [5, 6], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d47-s10",
+          "text_original": "晚上吃。",
+          "pinyin": "Wǎnshang chī.",
+          "text_translation": "Kechqurun yeyman.",
+          "text_translation_ru": "Вечером ем.",
+          "text_translation_en": "I eat in the evening.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
+            { "i": [2, 3], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d47-s11",
           "text_original": "辛苦吗？",
           "pinyin": "Xīnkǔ ma?",
           "text_translation": "Qiyinmi?",
           "text_translation_ru": "Тяжело?",
+          "text_translation_en": "Is it hard?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xīnkǔ",
-              "t": "qiyin",
-              "tr": "тяжело"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue7.mp3",
-          "text_translation_en": "Is it hard?"
+            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" },
+            { "i": [2, 3], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
-          "id": "d47-s8",
+          "id": "d47-s12",
           "text_original": "不辛苦。",
           "pinyin": "Bù xīnkǔ.",
           "text_translation": "Qiyin emas.",
           "text_translation_ru": "Не тяжело.",
+          "text_translation_en": "Not hard.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "xīnkǔ",
-              "t": "qiyin",
-              "tr": "тяжело"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue8.mp3",
-          "text_translation_en": "Not hard."
+            { "i": [0, 1], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
+            { "i": [1, 3], "p": "xīnkǔ", "t": "qiyin", "tr": "тяжело" }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue.mp3"
+      ]
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-26",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhai%20yue/dialogue.mp3",
   "vocab": [
     "为什么",
+    "吃饭",
     "因为",
     "封斋",
+    "现在",
     "斋月",
     "白天",
+    "东西",
+    "对",
     "晚上",
-    "辛苦",
-    "对吗"
+    "早上",
+    "中午",
+    "都",
+    "什么时候",
+    "辛苦"
   ],
   "grammarNotes": [
     {
@@ -551,11 +376,11 @@
       "formula_ru": "Предложение + ，对吗？",
       "examples": [
         {
-          "zh": "你白天不吃，对吗？",
-          "py": "Nǐ báitiān bù chī, duì ma?",
-          "uz": "Kunduz yemaysan, shundaymi?",
-          "ru": "Ты днём не ешь, правда?",
-          "en": "You don't eat during the day, right?"
+          "zh": "你白天不吃东西，对吗？",
+          "py": "Nǐ báitiān bù chī dōngxi, duì ma?",
+          "uz": "Kunduzi hech narsa yemaysan, shundaymi?",
+          "ru": "Ты днём ничего не ешь, правда?",
+          "en": "You don't eat anything during the day, right?"
         },
         {
           "zh": "你是学生，对吗？",

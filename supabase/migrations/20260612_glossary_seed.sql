@@ -459,3 +459,13 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('厉害', 'lìhai', 'zo''r; ajoyib', 'круто; здорово', 'awesome; impressive', 3),
   ('跟', 'gēn', 'bilan; ...dan (o''rganmoq)', 'с; у (учиться у)', 'with; from', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 斋月 (hsk1/dialogue47) fix — new vocab words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('吃饭', 'chī fàn', 'ovqat yemoq', 'есть; кушать', 'to eat (a meal)', 1),
+  ('现在', 'xiànzài', 'hozir', 'сейчас', 'now', 1),
+  ('东西', 'dōngxi', 'narsa', 'вещь; что-то', 'thing', 1),
+  ('早上', 'zǎoshang', 'ertalab', 'утро', 'morning', 1),
+  ('中午', 'zhōngwǔ', 'tush; peshin', 'полдень', 'noon; midday', 1),
+  ('什么时候', 'shénme shíhou', 'qachon', 'когда', 'when', 1)
+  on conflict (zh, py_norm) do nothing;
