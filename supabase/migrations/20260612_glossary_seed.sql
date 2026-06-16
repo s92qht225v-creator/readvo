@@ -391,3 +391,18 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('独立', 'dúlì', 'mustaqil', 'независимый; самостоятельный', 'independent', 3),
   ('记得', 'jìde', 'eslab qolmoq; yodida bo''lmoq', 'помнить', 'to remember', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 爱好 (hsk2/dialogue19) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('平时', 'píngshí', 'odatda; oddiy kunlarda', 'обычно; в обычное время', 'usually; ordinarily', 2),
+  ('爱好', 'àihào', 'qiziqish; hobbi', 'хобби; увлечение', 'hobby', 2),
+  ('流行音乐', 'liúxíng yīnyuè', 'pop musiqa', 'поп-музыка', 'pop music', 3),
+  ('古典音乐', 'gǔdiǎn yīnyuè', 'klassik musiqa', 'классическая музыка', 'classical music', 3),
+  ('弹钢琴', 'tán gāngqín', 'pianino chalmoq', 'играть на пианино', 'to play the piano', 3),
+  ('小说', 'xiǎoshuō', 'roman; qissa', 'роман; повесть', 'novel; fiction', 3),
+  ('故事书', 'gùshi shū', 'hikoyalar kitobi', 'книга рассказов', 'storybook', 2),
+  ('关于', 'guānyú', 'haqida; to''g''risida', 'о; относительно', 'about; regarding', 3),
+  ('拍照', 'pāizhào', 'rasmga olmoq', 'фотографировать', 'to take photos', 3),
+  ('常常', 'chángcháng', 'tez-tez; ko''pincha', 'часто', 'often', 2),
+  ('照片', 'zhàopiàn', 'surat; foto', 'фотография; снимок', 'photo', 2)
+  on conflict (zh, py_norm) do nothing;

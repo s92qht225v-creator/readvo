@@ -1,0 +1,229 @@
+{
+  "id": "hsk2-dialogue19",
+  "slug": "hobbies",
+  "title": "爱好",
+  "pinyin": "Àihào",
+  "titleTranslation": "Qiziqishlar",
+  "titleTranslation_ru": "Хобби",
+  "titleTranslation_en": "Hobbies",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "平时",
+    "爱好",
+    "流行音乐",
+    "古典音乐",
+    "弹钢琴",
+    "经常",
+    "图书馆",
+    "小说",
+    "故事书",
+    "最近",
+    "有意思",
+    "关于",
+    "拍照",
+    "常常",
+    "照片",
+    "主意"
+  ],
+  "sections": [
+    {
+      "id": "d19-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d19-s1",
+          "text_original": "你平时喜欢做什么？",
+          "pinyin": "Nǐ píng shí xǐ huan zuò shén me?",
+          "text_translation": "Odatda nima qilishni yoqtirasan?",
+          "text_translation_ru": "Что ты обычно любишь делать?",
+          "text_translation_en": "What do you usually like to do?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s2",
+          "text_original": "我的爱好很多。我喜欢听音乐、看电影。",
+          "pinyin": "Wǒ de ài hào hěn duō. Wǒ xǐ huan tīng yīn yuè, kàn diàn yǐng.",
+          "text_translation": "Mening qiziqishlarim ko'p. Musiqa tinglashni, kino ko'rishni yoqtiraman.",
+          "text_translation_ru": "У меня много увлечений. Я люблю слушать музыку и смотреть фильмы.",
+          "text_translation_en": "I have a lot of hobbies. I like listening to music and watching movies.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s3",
+          "text_original": "你最喜欢什么音乐？",
+          "pinyin": "Nǐ zuì xǐ huan shén me yīn yuè?",
+          "text_translation": "Qaysi musiqani eng yoqtirasan?",
+          "text_translation_ru": "Какую музыку ты любишь больше всего?",
+          "text_translation_en": "What music do you like the most?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s4",
+          "text_original": "我喜欢流行音乐，也喜欢古典音乐。",
+          "pinyin": "Wǒ xǐ huan liú xíng yīn yuè, yě xǐ huan gǔ diǎn yīn yuè.",
+          "text_translation": "Men pop musiqani, klassik musiqani ham yoqtiraman.",
+          "text_translation_ru": "Я люблю поп-музыку и классическую музыку.",
+          "text_translation_en": "I like pop music, and I also like classical music.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s5",
+          "text_original": "你会弹钢琴吗？",
+          "pinyin": "Nǐ huì tán gāng qín ma?",
+          "text_translation": "Pianino chala olasanmi?",
+          "text_translation_ru": "Ты умеешь играть на пианино?",
+          "text_translation_en": "Can you play the piano?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s6",
+          "text_original": "会一点，但是弹得不好。",
+          "pinyin": "Huì yì diǎn, dàn shì tán de bù hǎo.",
+          "text_translation": "Biroz bilaman, lekin yaxshi chala olmayman.",
+          "text_translation_ru": "Немного умею, но играю плохо.",
+          "text_translation_en": "A little, but I don't play well.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s7",
+          "text_original": "你周末经常看电影吗？",
+          "pinyin": "Nǐ zhōu mò jīng cháng kàn diàn yǐng ma?",
+          "text_translation": "Dam olish kunlari tez-tez kino ko'rasanmi?",
+          "text_translation_ru": "Ты часто смотришь фильмы по выходным?",
+          "text_translation_en": "Do you often watch movies on weekends?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s8",
+          "text_original": "不经常。我周末喜欢去图书馆看书。",
+          "pinyin": "Bù jīng cháng. Wǒ zhōu mò xǐ huan qù tú shū guǎn kàn shū.",
+          "text_translation": "Tez-tez emas. Dam olish kunlari kutubxonaga borib kitob o'qishni yoqtiraman.",
+          "text_translation_ru": "Не часто. По выходным я люблю ходить в библиотеку читать.",
+          "text_translation_en": "Not often. On weekends I like to go to the library to read.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s9",
+          "text_original": "你看什么书？",
+          "pinyin": "Nǐ kàn shén me shū?",
+          "text_translation": "Qanaqa kitob o'qiysan?",
+          "text_translation_ru": "Какие книги ты читаешь?",
+          "text_translation_en": "What kind of books do you read?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s10",
+          "text_original": "我喜欢看小说和故事书。",
+          "pinyin": "Wǒ xǐ huan kàn xiǎo shuō hé gù shi shū.",
+          "text_translation": "Men roman va hikoyalar kitobini o'qishni yoqtiraman.",
+          "text_translation_ru": "Я люблю читать романы и книги с рассказами.",
+          "text_translation_en": "I like reading novels and storybooks.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s11",
+          "text_original": "我也喜欢看小说！你最近看什么？",
+          "pinyin": "Wǒ yě xǐ huan kàn xiǎo shuō! Nǐ zuì jìn kàn shén me?",
+          "text_translation": "Men ham roman o'qishni yoqtiraman! Yaqinda nima o'qiyapsan?",
+          "text_translation_ru": "Я тоже люблю романы! Что ты читаешь в последнее время?",
+          "text_translation_en": "I like novels too! What have you been reading lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s12",
+          "text_original": "我看了一本很有意思的书，关于旅行的。",
+          "pinyin": "Wǒ kàn le yì běn hěn yǒu yì si de shū, guān yú lǚ xíng de.",
+          "text_translation": "Sayohat haqida juda qiziqarli bir kitob o'qidim.",
+          "text_translation_ru": "Я прочитал очень интересную книгу о путешествиях.",
+          "text_translation_en": "I read a very interesting book about travel.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s13",
+          "text_original": "好看吗？",
+          "pinyin": "Hǎo kàn ma?",
+          "text_translation": "Qiziqarlimi?",
+          "text_translation_ru": "Интересная?",
+          "text_translation_en": "Is it good?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s14",
+          "text_original": "很好看。看完以后，我也想去旅行。",
+          "pinyin": "Hěn hǎo kàn. Kàn wán yǐ hòu, wǒ yě xiǎng qù lǚ xíng.",
+          "text_translation": "Juda qiziqarli. O'qib bo'lgach, men ham sayohatga bormoqchi bo'ldim.",
+          "text_translation_ru": "Очень интересная. Дочитав, я тоже захотел отправиться в путешествие.",
+          "text_translation_en": "Very good. After reading it, I also wanted to travel.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s15",
+          "text_original": "除了看书，你还喜欢做什么？",
+          "pinyin": "Chú le kàn shū, nǐ hái xǐ huan zuò shén me?",
+          "text_translation": "Kitob o'qishdan tashqari yana nima qilishni yoqtirasan?",
+          "text_translation_ru": "Кроме чтения, что ещё ты любишь делать?",
+          "text_translation_en": "Besides reading, what else do you like to do?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s16",
+          "text_original": "我还喜欢拍照。我常常去公园拍花和树。",
+          "pinyin": "Wǒ hái xǐ huan pāi zhào. Wǒ cháng cháng qù gōng yuán pāi huā hé shù.",
+          "text_translation": "Men yana rasmga olishni yoqtiraman. Ko'pincha bog'ga borib gul va daraxtlarni suratga olaman.",
+          "text_translation_ru": "Ещё я люблю фотографировать. Я часто хожу в парк снимать цветы и деревья.",
+          "text_translation_en": "I also like taking photos. I often go to the park to photograph flowers and trees.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s17",
+          "text_original": "我可以看看你拍的照片吗？",
+          "pinyin": "Wǒ kě yǐ kàn kan nǐ pāi de zhào piàn ma?",
+          "text_translation": "Olgan suratlaringni ko'rsam bo'ladimi?",
+          "text_translation_ru": "Можно посмотреть фотографии, которые ты сделал?",
+          "text_translation_en": "Can I see the photos you took?",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s18",
+          "text_original": "可以。你看，这些是我上个月拍的。",
+          "pinyin": "Kě yǐ. Nǐ kàn, zhè xiē shì wǒ shàng ge yuè pāi de.",
+          "text_translation": "Bo'ladi. Mana qara, bularni o'tgan oy olganman.",
+          "text_translation_ru": "Можно. Смотри, вот эти я снял в прошлом месяце.",
+          "text_translation_en": "Sure. Look, these are the ones I took last month.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s19",
+          "text_original": "好漂亮啊！你真会拍照！",
+          "pinyin": "Hǎo piào liang a! Nǐ zhēn huì pāi zhào!",
+          "text_translation": "Juda chiroyli! Sen rostdan ham rasmga olishni bilasan!",
+          "text_translation_ru": "Как красиво! Ты действительно умеешь фотографировать!",
+          "text_translation_en": "So beautiful! You're really good at taking photos!",
+          "speaker": "A"
+        },
+        {
+          "id": "d19-s20",
+          "text_original": "谢谢！如果你喜欢，下次我们可以一起去拍照。",
+          "pinyin": "Xiè xie! Rú guǒ nǐ xǐ huan, xià cì wǒ men kě yǐ yì qǐ qù pāi zhào.",
+          "text_translation": "Rahmat! Agar yoqtirsang, keyingi safar birga rasmga olishga borsak bo'ladi.",
+          "text_translation_ru": "Спасибо! Если хочешь, в следующий раз сходим фотографировать вместе.",
+          "text_translation_en": "Thanks! If you like, next time we can go take photos together.",
+          "speaker": "B"
+        },
+        {
+          "id": "d19-s21",
+          "text_original": "好主意！我也学学怎么拍照。",
+          "pinyin": "Hǎo zhǔ yi! Wǒ yě xué xue zěn me pāi zhào.",
+          "text_translation": "Zo'r fikr! Men ham rasmga olishni o'rganaman.",
+          "text_translation_ru": "Отличная идея! Я тоже поучусь фотографировать.",
+          "text_translation_en": "Great idea! I'll learn how to take photos too.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
