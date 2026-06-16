@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 export interface BlogSection {
@@ -36,11 +36,11 @@ export interface BlogPost {
 const blogDir = path.join(process.cwd(), 'content', 'blog');
 
 export async function loadBlogPosts(): Promise<BlogPost[]> {
-  const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.json'));
+  const files = (await fs.readdir(blogDir)).filter((f) => f.endsWith('.json'));
   const posts: BlogPost[] = [];
 
   for (const file of files) {
-    const raw = fs.readFileSync(path.join(blogDir, file), 'utf-8');
+    const raw = await fs.readFile(path.join(blogDir, file), 'utf-8');
     const post = JSON.parse(raw);
     if (post.published !== false) {
       posts.push(post);
@@ -52,9 +52,12 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
 
 export async function loadBlogPost(slug: string): Promise<BlogPost | null> {
   const filePath = path.join(blogDir, `${slug}.json`);
-  if (!fs.existsSync(filePath)) return null;
-
-  const raw = fs.readFileSync(filePath, 'utf-8');
+  let raw: string;
+  try {
+    raw = await fs.readFile(filePath, 'utf-8');
+  } catch {
+    return null;
+  }
   const post = JSON.parse(raw);
   if (post.published === false) return null;
   return post;

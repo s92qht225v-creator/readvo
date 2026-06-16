@@ -154,23 +154,27 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
     audio.src = protectAudioUrlSync(song.audio_url); // proxied if token ready, else public fallback
     audioRef.current = audio;
 
-    audio.addEventListener('loadedmetadata', () => setDuration(audio.duration));
-    audio.addEventListener('playing', () => {
+    // Property handlers so cleanup can null them out — otherwise a replaced
+    // element's stale 'ended' handler still fires and corrupts the progress bar.
+    audio.onloadedmetadata = () => setDuration(audio.duration);
+    audio.onplaying = () => {
       setIsLoading(false);
       setIsPlaying(true);
       setTappedLineIdx(-1);
-    });
-    audio.addEventListener('pause', () => setIsPlaying(false));
-    audio.addEventListener('ended', () => {
+    };
+    audio.onpause = () => setIsPlaying(false);
+    audio.onended = () => {
       setIsPlaying(false);
       setCurrentTime(audio.duration);
-    });
-    audio.addEventListener('error', () => {
+    };
+    audio.onerror = () => {
       setIsLoading(false);
       setIsPlaying(false);
-    });
+    };
 
     return () => {
+      audio.onloadedmetadata = null; audio.onplaying = null; audio.onpause = null;
+      audio.onended = null; audio.onerror = null;
       audio.pause();
       audio.src = '';
     };

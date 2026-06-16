@@ -390,15 +390,21 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
     const audio = new Audio();
     audio.preload = 'none';
     audioRef.current = audio;
-    audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
-    audio.addEventListener('playing', () => { setIsAudioLoading(false); setIsPlaying(true); if (timedSentences.length > 0) setActiveSentenceId(null); });
-    audio.addEventListener('ended', () => {
+    // Use property handlers (not addEventListener) so cleanup can null them out
+    // — otherwise a re-created element's stale 'ended'/'playing' handlers keep
+    // firing and clobber the new dialogue's state.
+    audio.ontimeupdate = () => setCurrentTime(audio.currentTime);
+    audio.onplaying = () => { setIsAudioLoading(false); setIsPlaying(true); if (timedSentences.length > 0) setActiveSentenceId(null); };
+    audio.onended = () => {
       setIsPlaying(false); setCurrentTime(0); setAudioActive(false);
       const lastId = allSentences[allSentences.length - 1]?.id ?? null;
       setFocusMode(fm => { if (fm) setActiveSentenceId(lastId); return fm; });
-    });
-    audio.addEventListener('error', () => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); });
-    return () => { audio.pause(); audio.src = ''; };
+    };
+    audio.onerror = () => { setIsAudioLoading(false); setIsPlaying(false); setAudioActive(false); };
+    return () => {
+      audio.ontimeupdate = null; audio.onplaying = null; audio.onended = null; audio.onerror = null;
+      audio.pause(); audio.src = '';
+    };
   }, [dialogue?.audio_url, allSentences, timedSentences.length]);
 
   // Vocab: use authored vocab if present, else auto-extract from sentences

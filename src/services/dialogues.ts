@@ -157,22 +157,29 @@ export async function loadDialogue(bookId: string, dialogueId: string): Promise<
     } catch { /* file doesn't exist, fall through */ }
   }
 
-  // Fallback: scan directory for matching id or slug
+  // Fallback: scan directory for matching id or slug. Read/parse each file in
+  // its own try/catch so one malformed JSON file doesn't abort the whole scan
+  // (which would 404 every other dialogue whose slug ≠ filename).
+  let files: string[];
   try {
-    const files = await fs.readdir(bookDir);
-    for (const file of files) {
-      if (!file.endsWith('.json')) continue;
+    files = await fs.readdir(bookDir);
+  } catch {
+    return null;
+  }
+  for (const file of files) {
+    if (!file.endsWith('.json')) continue;
+    try {
       const content = await fs.readFile(path.join(bookDir, file), 'utf-8');
       const data = JSON.parse(content) as DialoguePage;
       const slug = (data as DialoguePage & { slug?: string }).slug;
       if (slug === dialogueId || data.id === dialogueId) {
         return data;
       }
+    } catch (e) {
+      console.error(`[dialogues] failed to read/parse ${bookId}/${file}:`, e);
     }
-    return null;
-  } catch {
-    return null;
   }
+  return null;
 }
 
 export type DialoguePageResolved = Omit<DialoguePage, 'vocab'> & { vocab?: VocabItem[] };

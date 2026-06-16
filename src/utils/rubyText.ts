@@ -14,7 +14,9 @@ export interface RubyPair {
 
 function isCJK(char: string): boolean {
   const code = char.charCodeAt(0);
-  return (code >= 0x4e00 && code <= 0x9fff) || (code >= 0x3400 && code <= 0x4dbf);
+  return (code >= 0x4e00 && code <= 0x9fff)   // main CJK block
+    || (code >= 0x3400 && code <= 0x4dbf)      // Extension A
+    || (code >= 0xf900 && code <= 0xfaff);     // Compatibility Ideographs (e.g. 車, 更)
 }
 
 /**

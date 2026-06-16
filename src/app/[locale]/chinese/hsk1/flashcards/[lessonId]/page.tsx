@@ -14,6 +14,8 @@ function isWritingSetId(id: string) {
   return id.startsWith('hsk') && id.includes('-set');
 }
 
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props) {
   const { locale, lessonId } = await params;
 

@@ -8,6 +8,8 @@ interface Props {
   params: Promise<{ locale: string; setId: string }>;
 }
 
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: Props) {
   const { locale, setId } = await params;
   const set = getWritingSet(setId);

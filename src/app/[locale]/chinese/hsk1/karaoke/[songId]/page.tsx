@@ -4,6 +4,9 @@ import { loadKaraokeSong, loadKaraokeSongs } from '@/services/karaoke';
 import { KaraokePlayer } from '@/components/KaraokePlayer';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
+// Static shell with hourly ISR, matching the dialogue pages.
+export const revalidate = 3600;
+
 interface PageParams {
   params: Promise<{
     locale: string;
