@@ -546,3 +546,10 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('听歌', 'tīng gē', 'qo''shiq tinglamoq', 'слушать песни', 'to listen to songs', 2),
   ('有用', 'yǒuyòng', 'foydali', 'полезный', 'useful', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 工作 (hsk2/dialogue25) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('助理', 'zhùlǐ', 'yordamchi', 'помощник; ассистент', 'assistant', 4),
+  ('相处', 'xiāngchǔ', 'chiqishmoq; til topishmoq', 'ладить; общаться', 'to get along', 4),
+  ('友好', 'yǒuhǎo', 'do''stona', 'дружелюбный', 'friendly', 4)
+  on conflict (zh, py_norm) do nothing;
