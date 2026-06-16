@@ -242,3 +242,13 @@ update public.glossary set uz='keyin, so''ng', ru='потом, затем', en='
 insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('再来', 'zài lái', 'yana (bitta) olib kelmoq', 'заказать/принести ещё', '(to order) one more', 1)
   on conflict (zh, py_norm) do nothing;
+
+-- 借书 (hsk2/dialogue9) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('图书馆', 'túshūguǎn', 'kutubxona', 'библиотека', 'library', 2),
+  ('而且', 'érqiě', 'bundan tashqari', 'к тому же', 'moreover; and also', 2),
+  ('当然', 'dāngrán', 'albatta', 'конечно', 'of course', 2),
+  ('借', 'jiè', 'olmoq (qarzga); bermoq', 'одолжить; взять', 'to borrow; to lend', 2),
+  ('还', 'huán', 'qaytarmoq', 'вернуть', 'to return (something)', 2),
+  ('页', 'yè', 'bet (sahifa)', 'страница', 'page', 2)
+  on conflict (zh, py_norm) do nothing;

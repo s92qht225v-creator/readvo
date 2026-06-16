@@ -1,0 +1,142 @@
+{
+  "id": "hsk2-dialogue9",
+  "slug": "borrow-a-book",
+  "title": "借书",
+  "pinyin": "Jiè shū",
+  "titleTranslation": "Kitob olish",
+  "titleTranslation_ru": "Взять книгу",
+  "titleTranslation_en": "Borrowing a Book",
+  "level": 2,
+  "tag": "dars",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "图书馆",
+    "怎么样",
+    "而且",
+    "已经",
+    "以前",
+    "以后",
+    "当然",
+    { "zh": "借", "py": "jiè" },
+    { "zh": "还", "py": "huán" },
+    { "zh": "页", "py": "yè" }
+  ],
+  "sections": [
+    {
+      "id": "d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d9-s1",
+          "text_original": "你手里拿的是什么？",
+          "pinyin": "Nǐ shǒu lǐ ná de shì shén me?",
+          "text_translation": "Qo'lingdagi nima?",
+          "text_translation_ru": "Что у тебя в руке?",
+          "text_translation_en": "What are you holding in your hand?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s2",
+          "text_original": "是一本中文书。",
+          "pinyin": "Shì yì běn Zhōng wén shū.",
+          "text_translation": "Bu xitoycha kitob.",
+          "text_translation_ru": "Это книга на китайском.",
+          "text_translation_en": "It's a Chinese book.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s3",
+          "text_original": "这是你的书吗？",
+          "pinyin": "Zhè shì nǐ de shū ma?",
+          "text_translation": "Bu sening kitobingmi?",
+          "text_translation_ru": "Это твоя книга?",
+          "text_translation_en": "Is this your book?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s4",
+          "text_original": "不是，我从图书馆借的。",
+          "pinyin": "Bú shì, wǒ cóng tú shū guǎn jiè de.",
+          "text_translation": "Yo'q, men kutubxonadan oldim.",
+          "text_translation_ru": "Нет, я взял её в библиотеке.",
+          "text_translation_en": "No, I borrowed it from the library.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s5",
+          "text_original": "这本书怎么样？",
+          "pinyin": "Zhè běn shū zěn me yàng?",
+          "text_translation": "Bu kitob qanday?",
+          "text_translation_ru": "Как эта книга?",
+          "text_translation_en": "How is this book?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s6",
+          "text_original": "很好看，而且不太难。",
+          "pinyin": "Hěn hǎo kàn, ér qiě bú tài nán.",
+          "text_translation": "Juda qiziqarli, va unchalik qiyin emas.",
+          "text_translation_ru": "Очень интересная, и к тому же не слишком трудная.",
+          "text_translation_en": "It's very interesting, and not too difficult.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s7",
+          "text_original": "你看了多少页了？",
+          "pinyin": "Nǐ kàn le duō shao yè le?",
+          "text_translation": "Necha bet o'qiding?",
+          "text_translation_ru": "Сколько страниц ты прочитал?",
+          "text_translation_en": "How many pages have you read?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s8",
+          "text_original": "我已经看了三十页。",
+          "pinyin": "Wǒ yǐ jīng kàn le sān shí yè.",
+          "text_translation": "Men allaqachon o'ttiz bet o'qidim.",
+          "text_translation_ru": "Я уже прочитал тридцать страниц.",
+          "text_translation_en": "I've already read thirty pages.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s9",
+          "text_original": "你什么时候要还书？",
+          "pinyin": "Nǐ shén me shí hou yào huán shū?",
+          "text_translation": "Kitobni qachon qaytarishing kerak?",
+          "text_translation_ru": "Когда тебе нужно вернуть книгу?",
+          "text_translation_en": "When do you have to return the book?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s10",
+          "text_original": "下个星期一以前。",
+          "pinyin": "Xià ge xīng qī yī yǐ qián.",
+          "text_translation": "Keyingi dushanbagacha.",
+          "text_translation_ru": "До следующего понедельника.",
+          "text_translation_en": "Before next Monday.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s11",
+          "text_original": "看完以后，你可以借给我吗？",
+          "pinyin": "Kàn wán yǐ hòu, nǐ kě yǐ jiè gěi wǒ ma?",
+          "text_translation": "O'qib bo'lgach, menga berib turasanmi?",
+          "text_translation_ru": "После того как прочитаешь, можешь дать её мне?",
+          "text_translation_en": "After you finish reading, can you lend it to me?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s12",
+          "text_original": "当然可以。",
+          "pinyin": "Dāng rán kě yǐ.",
+          "text_translation": "Albatta.",
+          "text_translation_ru": "Конечно.",
+          "text_translation_en": "Of course.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

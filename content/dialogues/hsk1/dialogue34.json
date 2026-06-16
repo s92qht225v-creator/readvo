@@ -299,7 +299,7 @@
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
     "准备",
-    "还",
+    { "zh": "还", "py": "hái" },
     "久",
     "快",
     "分钟",
