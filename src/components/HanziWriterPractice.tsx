@@ -191,7 +191,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
               {({ uz: 'BARCHA IEROGLIFLAR', ru: 'ВСЕ ИЕРОГЛИФЫ', en: 'ALL CHARACTERS' } as Record<string, string>)[lang]}
             </div>
             {activeWords.map((w) => (
-              <div key={w.char} style={{ background: '#f5f5f8', borderRadius: 8, marginBottom: 5, overflow: 'hidden', borderLeft: '3px solid #fca5a5' }}>
+              <div key={w.char} style={{ background: '#f5f5f8', borderRadius: 8, marginBottom: 5, overflow: 'hidden', border: '1px solid #f3d0d0' }}>
                 <div onClick={() => setExpandedChar(expandedChar === w.char ? null : w.char)} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 12px', cursor: 'pointer' }}>
                   <span style={{ fontSize: 32, color: '#1a1a2e', fontWeight: 300, minWidth: 44, textAlign: 'center' as const }}>{w.char}</span>
                   <div style={{ flex: 1 }}>
@@ -208,7 +208,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 </div>
                 {expandedChar === w.char && (
                   <div style={{ padding: '0 12px 12px 12px' }}>
-                    <div style={{ background: '#fff', borderRadius: 8, padding: 10, borderLeft: '3px solid #dc2626' }}>
+                    <div style={{ background: '#fff', borderRadius: 8, padding: 10, border: '1px solid #f3d0d0' }}>
                       <div style={{ fontSize: 16, color: '#1a1a2e' }}>{w.ex}</div>
                       <div style={{ fontSize: 11, color: '#dc2626' }}>{w.expy}</div>
                       <div style={{ fontSize: 11, color: '#888' }}>{lang === 'ru' ? w.exru : lang === 'en' ? w.exen : w.exuz}</div>
@@ -253,7 +253,7 @@ export function HanziWriterPractice({ lang, words: wordsProp, onBack, autoStart,
                 </div>
               </div>
             ))}
-            <div style={{ marginTop: 10, background: '#fef3c7', borderRadius: 8, padding: 10, borderLeft: '3px solid #f59e0b', fontSize: 11, lineHeight: 1.6 as const, color: '#555' }}>
+            <div style={{ marginTop: 10, background: '#fef3c7', borderRadius: 8, padding: 10, border: '1px solid #fcd34d', fontSize: 11, lineHeight: 1.6 as const, color: '#555' }}>
               💡 {({ uz: "Chiziq tartibi qoidasi: yuqoridan pastga, chapdan o'ngga, tashqaridan ichkariga.", ru: 'Правило порядка черт: сверху вниз, слева направо, снаружи внутрь.', en: 'Stroke order rule: top to bottom, left to right, outside to inside.' } as Record<string, string>)[lang]}
             </div>
           </div>
