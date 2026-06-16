@@ -469,3 +469,14 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('中午', 'zhōngwǔ', 'tush; peshin', 'полдень', 'noon; midday', 1),
   ('什么时候', 'shénme shíhou', 'qachon', 'когда', 'when', 1)
   on conflict (zh, py_norm) do nothing;
+
+-- 减肥 (hsk1/dialogue46) replacement — new vocab words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('肉', 'ròu', 'go''sht', 'мясо', 'meat', 1),
+  ('胖', 'pàng', 'semiz', 'толстый', 'fat; chubby', 2),
+  ('想', 'xiǎng', 'xohlamoq; o''ylamoq', 'хотеть; думать', 'to want; to think', 1),
+  ('瘦', 'shòu', 'ozg''in; oriq', 'худой', 'thin; slim', 2),
+  ('一点', 'yì diǎn', 'bir oz', 'немного', 'a little', 1),
+  ('水果', 'shuǐguǒ', 'meva', 'фрукты', 'fruit', 1),
+  ('蔬菜', 'shūcài', 'sabzavot', 'овощи', 'vegetables', 2)
+  on conflict (zh, py_norm) do nothing;
