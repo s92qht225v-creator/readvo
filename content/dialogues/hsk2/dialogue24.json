@@ -1,0 +1,180 @@
+{
+  "id": "hsk2-dialogue24",
+  "slug": "studying-languages",
+  "title": "学习",
+  "pinyin": "Xuéxí",
+  "titleTranslation": "O'qish",
+  "titleTranslation_ru": "Учёба",
+  "titleTranslation_en": "Studying",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "最近",
+    "英语",
+    "写字",
+    "发音",
+    "汉字",
+    "没关系",
+    "慢慢",
+    "听歌",
+    "有用",
+    "帮助",
+    "试试",
+    "教"
+  ],
+  "sections": [
+    {
+      "id": "d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d24-s1",
+          "text_original": "你最近在学什么？",
+          "pinyin": "Nǐ zuì jìn zài xué shén me?",
+          "text_translation": "Yaqinda nima o'rganyapsan?",
+          "text_translation_ru": "Что ты учишь в последнее время?",
+          "text_translation_en": "What have you been studying lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s2",
+          "text_original": "我在学英语。你呢？",
+          "pinyin": "Wǒ zài xué Yīng yǔ. Nǐ ne?",
+          "text_translation": "Men ingliz tilini o'rganyapman. Sen-chi?",
+          "text_translation_ru": "Я учу английский. А ты?",
+          "text_translation_en": "I'm learning English. And you?",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s3",
+          "text_original": "我在学中文。我觉得中文很难。",
+          "pinyin": "Wǒ zài xué Zhōng wén. Wǒ jué de Zhōng wén hěn nán.",
+          "text_translation": "Men xitoy tilini o'rganyapman. Xitoy tili juda qiyin deb o'ylayman.",
+          "text_translation_ru": "Я учу китайский. Думаю, китайский очень сложный.",
+          "text_translation_en": "I'm learning Chinese. I think Chinese is very hard.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s4",
+          "text_original": "中文哪里难？",
+          "pinyin": "Zhōng wén nǎ li nán?",
+          "text_translation": "Xitoy tilining qayeri qiyin?",
+          "text_translation_ru": "Что в китайском сложного?",
+          "text_translation_en": "What's hard about Chinese?",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s5",
+          "text_original": "写字很难，发音也难。",
+          "pinyin": "Xiě zì hěn nán, fā yīn yě nán.",
+          "text_translation": "Harf yozish qiyin, talaffuz ham qiyin.",
+          "text_translation_ru": "Писать иероглифы сложно, произношение тоже сложное.",
+          "text_translation_en": "Writing characters is hard, and pronunciation is hard too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s6",
+          "text_original": "你每天学多久？",
+          "pinyin": "Nǐ měi tiān xué duō jiǔ?",
+          "text_translation": "Har kuni qancha o'qiysan?",
+          "text_translation_ru": "Сколько ты занимаешься каждый день?",
+          "text_translation_en": "How long do you study each day?",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s7",
+          "text_original": "我每天学一个小时。",
+          "pinyin": "Wǒ měi tiān xué yí ge xiǎo shí.",
+          "text_translation": "Har kuni bir soat o'qiyman.",
+          "text_translation_ru": "Я занимаюсь по часу в день.",
+          "text_translation_en": "I study for an hour every day.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s8",
+          "text_original": "你写汉字吗？",
+          "pinyin": "Nǐ xiě Hàn zì ma?",
+          "text_translation": "Iyerogliflar yozasanmi?",
+          "text_translation_ru": "Ты пишешь иероглифы?",
+          "text_translation_en": "Do you write Chinese characters?",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s9",
+          "text_original": "写。但是我写得不好。",
+          "pinyin": "Xiě. Dàn shì wǒ xiě de bù hǎo.",
+          "text_translation": "Yozaman. Lekin yaxshi yoza olmayman.",
+          "text_translation_ru": "Пишу. Но пишу плохо.",
+          "text_translation_en": "I do. But I don't write them well.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s10",
+          "text_original": "没关系。慢慢学，慢慢写。",
+          "pinyin": "Méi guān xi. Màn man xué, màn man xiě.",
+          "text_translation": "Zarari yo'q. Asta-sekin o'rgan, asta-sekin yoz.",
+          "text_translation_ru": "Ничего страшного. Учись потихоньку, пиши потихоньку.",
+          "text_translation_en": "It's okay. Learn slowly, write slowly.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s11",
+          "text_original": "你英语学得怎么样？",
+          "pinyin": "Nǐ Yīng yǔ xué de zěn me yàng?",
+          "text_translation": "Ingliz tilini qanday o'rganyapsan?",
+          "text_translation_ru": "Как у тебя с английским?",
+          "text_translation_en": "How's your English coming along?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s12",
+          "text_original": "还可以。我每天都听英语歌。",
+          "pinyin": "Hái kě yǐ. Wǒ měi tiān dōu tīng Yīng yǔ gē.",
+          "text_translation": "Yomon emas. Har kuni ingliz qo'shiqlarini tinglayman.",
+          "text_translation_ru": "Неплохо. Я каждый день слушаю английские песни.",
+          "text_translation_en": "Not bad. I listen to English songs every day.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s13",
+          "text_original": "听歌有用吗？",
+          "pinyin": "Tīng gē yǒu yòng ma?",
+          "text_translation": "Qo'shiq tinglash foydalimi?",
+          "text_translation_ru": "Слушать песни полезно?",
+          "text_translation_en": "Is listening to songs useful?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s14",
+          "text_original": "有用。听歌可以帮助学习。",
+          "pinyin": "Yǒu yòng. Tīng gē kě yǐ bāng zhù xué xí.",
+          "text_translation": "Foydali. Qo'shiq tinglash o'qishga yordam beradi.",
+          "text_translation_ru": "Полезно. Песни помогают в учёбе.",
+          "text_translation_en": "It is. Listening to songs can help you learn.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s15",
+          "text_original": "我也想试试。你教我好吗？",
+          "pinyin": "Wǒ yě xiǎng shì shi. Nǐ jiāo wǒ hǎo ma?",
+          "text_translation": "Men ham sinab ko'rmoqchiman. Menga o'rgatasanmi?",
+          "text_translation_ru": "Я тоже хочу попробовать. Научишь меня?",
+          "text_translation_en": "I want to try it too. Will you teach me?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s16",
+          "text_original": "好啊！我们一起学！",
+          "pinyin": "Hǎo a! Wǒ men yì qǐ xué!",
+          "text_translation": "Mayli! Birga o'rganamiz!",
+          "text_translation_ru": "Хорошо! Будем учиться вместе!",
+          "text_translation_en": "Sure! Let's study together!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

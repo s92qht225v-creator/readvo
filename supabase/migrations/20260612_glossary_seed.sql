@@ -535,3 +535,14 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('旅馆', 'lǚguǎn', 'mehmonxona', 'гостиница', 'hotel; inn', 3),
   ('祝', 'zhù', 'tilamoq', 'желать', 'to wish', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 学习 (hsk2/dialogue24) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('英语', 'Yīngyǔ', 'ingliz tili', 'английский язык', 'English (language)', 2),
+  ('写字', 'xiě zì', 'harf yozmoq', 'писать (иероглифы)', 'to write characters', 2),
+  ('发音', 'fāyīn', 'talaffuz', 'произношение', 'pronunciation', 3),
+  ('汉字', 'Hànzì', 'xitoy iyeroglifi', 'иероглиф', 'Chinese character', 2),
+  ('慢慢', 'mànman', 'asta-sekin', 'медленно; постепенно', 'slowly; gradually', 2),
+  ('听歌', 'tīng gē', 'qo''shiq tinglamoq', 'слушать песни', 'to listen to songs', 2),
+  ('有用', 'yǒuyòng', 'foydali', 'полезный', 'useful', 3)
+  on conflict (zh, py_norm) do nothing;
