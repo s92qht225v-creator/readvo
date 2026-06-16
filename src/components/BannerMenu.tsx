@@ -40,6 +40,9 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
       <button
         className="home__menu-btn"
         type="button"
+        aria-label={({ uz: 'Menyu', ru: 'Меню', en: 'Menu' } as Record<string, string>)[language]}
+        aria-haspopup="true"
+        aria-expanded={menuOpen}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">

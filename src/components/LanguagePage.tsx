@@ -219,11 +219,15 @@ function FlashcardUnitSelector({ lessons, onStart, onSingle }: {
           return (
             <div
               key={l.lessonId}
+              role="button"
+              tabIndex={0}
+              aria-label={l.title ?? `第${l.lessonNumber}课`}
               onPointerDown={() => handlePointerDown(l)}
               onPointerUp={() => handlePointerUp(l)}
               onPointerLeave={() => { if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; } }}
               onPointerCancel={() => { if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; } }}
               onClick={() => handleClick(l)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(l); } }}
               onContextMenu={(e) => e.preventDefault()}
               style={{
                 display: 'flex', alignItems: 'center', gap: 10,
@@ -525,6 +529,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
               className={`lp__tab ${activeTab === tab.id ? 'lp__tab--active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
               type="button"
+              aria-pressed={activeTab === tab.id}
+              aria-label={language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}
             >
               <span className="lp__tab-icon" aria-hidden="true">{TAB_ICONS[tab.id]}</span>
               <span className="lp__tab-label">{language === 'en' && tab.label_en ? tab.label_en : language === 'ru' && tab.label_ru ? tab.label_ru : tab.label}</span>
@@ -626,7 +632,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
               <input
                 type="text"
                 className="dialogues__search-input"
-                placeholder={({ uz: 'Dialoglarni qidirish...', ru: 'Поиск диалогов...', en: 'Search dialogues...' } as Record<string, string>)[language]}
+                aria-label={({ uz: 'Qidirish', ru: 'Поиск', en: 'Search' } as Record<string, string>)[language]}
+              placeholder={({ uz: 'Dialoglarni qidirish...', ru: 'Поиск диалогов...', en: 'Search dialogues...' } as Record<string, string>)[language]}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -749,7 +756,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                 <input
                   type="text"
                   className="dialogues__search-input"
-                  placeholder={({ uz: 'Belgilarni qidirish...', ru: 'Поиск иероглифов...', en: 'Search characters...' } as Record<string, string>)[language]}
+                  aria-label={({ uz: 'Qidirish', ru: 'Поиск', en: 'Search' } as Record<string, string>)[language]}
+              placeholder={({ uz: 'Belgilarni qidirish...', ru: 'Поиск иероглифов...', en: 'Search characters...' } as Record<string, string>)[language]}
                   value={writingSearch}
                   onChange={(e) => setWritingSearch(e.target.value)}
                 />
@@ -860,7 +868,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                     <input
                       type="text"
                       className="dialogues__search-input"
-                      placeholder={({ uz: 'Mavzularni qidirish...', ru: 'Поиск тем...', en: 'Search topics...' } as Record<string, string>)[language]}
+                      aria-label={({ uz: 'Qidirish', ru: 'Поиск', en: 'Search' } as Record<string, string>)[language]}
+              placeholder={({ uz: 'Mavzularni qidirish...', ru: 'Поиск тем...', en: 'Search topics...' } as Record<string, string>)[language]}
                       value={topicSearch}
                       onChange={(e) => setTopicSearch(e.target.value)}
                     />
@@ -903,6 +912,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
             <input
               type="text"
               className="dialogues__search-input"
+              aria-label={({ uz: 'Qidirish', ru: 'Поиск', en: 'Search' } as Record<string, string>)[language]}
               placeholder={({ uz: 'Qo\'shiqlarni qidirish...', ru: 'Поиск песен...', en: 'Search songs...' } as Record<string, string>)[language]}
               value={karaokeSearch}
               onChange={(e) => setKaraokeSearch(e.target.value)}
@@ -955,7 +965,8 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
                 <input
                   type="text"
                   className="dialogues__search-input"
-                  placeholder={({ uz: 'Grammatikani qidirish...', ru: 'Поиск грамматики...', en: 'Search grammar...' } as Record<string, string>)[language]}
+                  aria-label={({ uz: 'Qidirish', ru: 'Поиск', en: 'Search' } as Record<string, string>)[language]}
+              placeholder={({ uz: 'Grammatikani qidirish...', ru: 'Поиск грамматики...', en: 'Search grammar...' } as Record<string, string>)[language]}
                   value={grammarSearch}
                   onChange={(e) => setGrammarSearch(e.target.value)}
                 />

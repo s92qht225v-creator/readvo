@@ -482,8 +482,8 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
         <div className="dr-hero">
           <div className="dr-hero__watermark">对话</div>
           <div className="dr-hero__top-row">
-            <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
             </Link>
             <BannerMenu />
           </div>
@@ -524,6 +524,8 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
                       }
                     }}
                     type="button"
+                    aria-pressed={activeTab === t.id}
+                    aria-label={(t as Record<string, string>)[language] ?? t.uz}
                   >
                     <span className="dr-tabs__icon" aria-hidden="true">{DR_TAB_ICONS[t.id]}</span>
                     <span className="dr-tabs__label">{(t as Record<string, string>)[language] ?? t.uz}</span>
@@ -635,7 +637,7 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
                 </div>
 
                 {!focusMode && (dialogue.audio_url || ttsPlayable) && (
-                  <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={dialogue.audio_url ? handlePlay : handlePlayAll} type="button">
+                  <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={dialogue.audio_url ? handlePlay : handlePlayAll} type="button" aria-label={isAudioLoading ? ({ uz: 'Yuklanmoqda', ru: 'Загрузка', en: 'Loading' } as Record<string, string>)[language] : isPlaying ? ({ uz: 'Toxtatish', ru: 'Пауза', en: 'Pause' } as Record<string, string>)[language] : ({ uz: 'Tinglash', ru: 'Слушать', en: 'Play' } as Record<string, string>)[language]}>
                     {isAudioLoading ? <span className="story__play-fab-spinner" /> :
                       isPlaying
                         ? <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
@@ -646,13 +648,13 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
                 {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
                 <nav className="story__bottom-bar">
                   <div className="story__bottom-bar-inner">
-                    <button ref={focusBtnRef} className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button">
+                    <button ref={focusBtnRef} className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button" aria-pressed={focusMode}>
                       {({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}
                     </button>
-                    <button ref={translationBtnRef} className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button">
+                    <button ref={translationBtnRef} className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
                       {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
                     </button>
-                    <button ref={pinyinBtnRef} className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button">
+                    <button ref={pinyinBtnRef} className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button" aria-pressed={showPinyin}>
                       Pinyin
                     </button>
                   </div>

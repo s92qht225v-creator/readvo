@@ -320,7 +320,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
         <div className="dr-hero">
           <div className="dr-hero__watermark">曲</div>
           <div className="dr-hero__top-row">
-            <Link href="/chinese?tab=karaoke" className="dr-back-btn">
+            <Link href="/chinese?tab=karaoke" className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
               <span aria-hidden>&#8249;</span>
             </Link>
             <BannerMenu />
@@ -416,6 +416,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
                   className={`karaoke__toggle ${showTranslation ? 'karaoke__toggle--active' : ''}`}
                   onClick={() => setShowTranslation((v) => !v)}
                   type="button"
+                  aria-pressed={showTranslation}
                 >
                   {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
                 </button>
@@ -423,6 +424,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
                   className={`karaoke__toggle ${showPinyin ? 'karaoke__toggle--active' : ''}`}
                   onClick={() => setShowPinyin((v) => !v)}
                   type="button"
+                  aria-pressed={showPinyin}
                 >
                   Pinyin
                 </button>
