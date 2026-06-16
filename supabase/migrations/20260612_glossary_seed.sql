@@ -278,5 +278,5 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('高', 'gāo', 'baland', 'высокий', 'high; tall', 1),
   ('马上', 'mǎshàng', 'darhol', 'сразу; немедленно', 'at once; right away', 2),
   ('路口', 'lùkǒu', 'chorraha', 'перекрёсток', 'intersection', 3),
-  ('左转', 'zuǒ zhuǎn', 'chapga burilish', 'повернуть налево', 'to turn left', 3)
+  ('右转', 'yòu zhuǎn', 'o''ngga burilish', 'повернуть направо', 'to turn right', 3)
   on conflict (zh, py_norm) do nothing;
