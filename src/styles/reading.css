@@ -839,11 +839,21 @@ body {
 }
 
 @media (max-width: 600px) {
+  /* Slim the dialogue hero to match the catalog's mobile hero (~79px):
+     collapse to the back-button + menu row, drop the title body + watermark.
+     The top row is absolutely positioned for the tall banner, so let it flow. */
+  .dr-hero {
+    height: auto;
+    padding-bottom: 12px;
+  }
   .dr-hero__top-row {
+    position: static;
     max-width: 100%;
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
   }
+  .dr-hero .dr-hero__body { display: none; }
+  .dr-hero .dr-hero__watermark { display: none; }
 }
 
 .dr-back-btn {
