@@ -487,3 +487,10 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('知道', 'zhīdào', 'bilmoq', 'знать', 'to know', 1),
   ('时间', 'shíjiān', 'vaqt', 'время', 'time', 1)
   on conflict (zh, py_norm) do nothing;
+
+-- 你今天加班吗？ (hsk1/dialogue44) replacement — new vocab words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('晚餐', 'wǎncān', 'kechki ovqat', 'ужин', 'dinner', 3),
+  ('还没有', 'hái méiyǒu', 'hali yo''q', 'ещё нет', 'not yet', 2),
+  ('见', 'jiàn', 'ko''rishmoq', 'видеть(ся)', 'to see; to meet', 1)
+  on conflict (zh, py_norm) do nothing;

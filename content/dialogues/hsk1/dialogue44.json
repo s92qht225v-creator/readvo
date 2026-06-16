@@ -16,264 +16,191 @@
       "sentences": [
         {
           "id": "d44-s1",
-          "text_original": "你今天几点下班？",
-          "pinyin": "Nǐ jīntiān jǐ diǎn xiàbān?",
-          "text_translation": "Bugun soat nechada ishdan chiqasan?",
-          "text_translation_ru": "Во сколько сегодня заканчиваешь работу?",
+          "text_original": "你今天加班吗？",
+          "pinyin": "Nǐ jīntiān jiābān ma?",
+          "text_translation": "Bugun qo'shimcha ishlaysanmi?",
+          "text_translation_ru": "Ты сегодня работаешь сверхурочно?",
+          "text_translation_en": "Are you working overtime today?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "jīntiān",
-              "t": "bugun",
-              "tr": "сегодня",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "jǐ diǎn",
-              "t": "soat nechada",
-              "tr": "во сколько",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "xiàbān",
-              "t": "ishdan chiqmoq",
-              "tr": "закончить работу"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue1.mp3",
-          "text_translation_en": "What time do you get off work today?"
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 3], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
+            { "i": [3, 5], "p": "jiābān", "t": "qo'shimcha ishlamoq", "tr": "работать сверхурочно" },
+            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d44-s2",
-          "text_original": "六点。",
-          "pinyin": "Liù diǎn.",
-          "text_translation": "Soat oltida.",
-          "text_translation_ru": "В шесть.",
+          "text_original": "对。我今天要加班。",
+          "pinyin": "Duì. Wǒ jīntiān yào jiābān.",
+          "text_translation": "Ha. Bugun qo'shimcha ishlashim kerak.",
+          "text_translation_ru": "Да. Сегодня мне нужно работать сверхурочно.",
+          "text_translation_en": "Yes. I have to work overtime today.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "liù",
-              "t": "olti",
-              "tr": "шесть",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "часов",
-              "h": 1,
-              "l": 6
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue2.mp3",
-          "text_translation_en": "At six."
+            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
+            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [3, 5], "p": "jīntiān", "t": "bugun", "tr": "сегодня", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "yào", "t": "kerak; -moqchi", "tr": "нужно; собираться", "h": 1, "l": 7 },
+            { "i": [6, 8], "p": "jiābān", "t": "qo'shimcha ishlamoq", "tr": "работать сверхурочно" }
+          ]
         },
         {
           "id": "d44-s3",
-          "text_original": "加班吗？",
-          "pinyin": "Jiābān ma?",
-          "text_translation": "Ishdan keyin qolib ishlaysanmi?",
-          "text_translation_ru": "Будешь работать сверхурочно?",
+          "text_original": "几点下班？",
+          "pinyin": "Jǐ diǎn xiàbān?",
+          "text_translation": "Soat nechada ishdan chiqasan?",
+          "text_translation_ru": "Во сколько заканчиваешь работу?",
+          "text_translation_en": "What time do you get off work?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "jiābān",
-              "t": "qo'shimcha ishlamoq",
-              "tr": "работать сверхурочно"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue3.mp3",
-          "text_translation_en": "Working overtime?"
+            { "i": [0, 2], "p": "jǐ diǎn", "t": "soat nechada", "tr": "во сколько", "h": 1, "l": 6 },
+            { "i": [2, 4], "p": "xiàbān", "t": "ishdan chiqmoq", "tr": "закончить работу" }
+          ]
         },
         {
           "id": "d44-s4",
-          "text_original": "不加班。",
-          "pinyin": "Bù jiābān.",
-          "text_translation": "Yo'q.",
-          "text_translation_ru": "Нет.",
+          "text_original": "晚上八点。",
+          "pinyin": "Wǎnshang bā diǎn.",
+          "text_translation": "Kechqurun soat sakkizda.",
+          "text_translation_ru": "Вечером в восемь.",
+          "text_translation_en": "Eight in the evening.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bù",
-              "t": "yo'q",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "jiābān",
-              "t": "qo'shimcha ishlamoq",
-              "tr": "работать сверхурочно"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue4.mp3",
-          "text_translation_en": "No."
+            { "i": [0, 2], "p": "wǎnshang", "t": "kechqurun", "tr": "вечером", "h": 1, "l": 5 },
+            { "i": [2, 3], "p": "bā", "t": "sakkiz", "tr": "восемь", "h": 1, "l": 6 },
+            { "i": [3, 4], "p": "diǎn", "t": "soat", "tr": "часов" }
+          ]
         },
         {
           "id": "d44-s5",
-          "text_original": "那早点回来。",
-          "pinyin": "Nà zǎo diǎn huílái.",
-          "text_translation": "Unda ertaroq qaytgin.",
-          "text_translation_ru": "Тогда возвращайся пораньше.",
+          "text_original": "你吃晚餐了吗？",
+          "pinyin": "Nǐ chī wǎncān le ma?",
+          "text_translation": "Kechki ovqat yedingmi?",
+          "text_translation_ru": "Ты поужинал?",
+          "text_translation_en": "Have you had dinner?",
           "speaker": "A",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda",
-              "tr": "тогда",
-              "h": 1,
-              "l": 9
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "zǎo",
-              "t": "erta",
-              "tr": "рано"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "diǎn",
-              "t": "biroz",
-              "tr": "немного",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "huílái",
-              "t": "qaytmoq",
-              "tr": "вернуться",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue5.mp3",
-          "text_translation_en": "Then come home early."
+            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
+            { "i": [1, 2], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
+            { "i": [2, 4], "p": "wǎncān", "t": "kechki ovqat", "tr": "ужин" },
+            { "i": [4, 5], "p": "le", "t": "(tugallangan ish)", "tr": "(завершённость)" },
+            { "i": [5, 6], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+          ]
         },
         {
           "id": "d44-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "text_original": "还没有。我下班以后吃。",
+          "pinyin": "Hái méiyǒu. Wǒ xiàbān yǐhòu chī.",
+          "text_translation": "Hali yo'q. Ishdan chiqqach yeyman.",
+          "text_translation_ru": "Ещё нет. Поем после работы.",
+          "text_translation_en": "Not yet. I'll eat after work.",
           "speaker": "B",
           "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
+            { "i": [0, 3], "p": "hái méiyǒu", "t": "hali yo'q", "tr": "ещё нет" },
+            { "i": [4, 5], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
+            { "i": [5, 7], "p": "xiàbān", "t": "ishdan chiqmoq", "tr": "закончить работу" },
+            { "i": [7, 9], "p": "yǐhòu", "t": "...dan keyin", "tr": "после" },
+            { "i": [9, 10], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 }
+          ]
+        },
+        {
+          "id": "d44-s7",
+          "text_original": "辛苦了！",
+          "pinyin": "Xīnkǔ le!",
+          "text_translation": "Charchamang!",
+          "text_translation_ru": "Спасибо за труд!",
+          "text_translation_en": "Thanks for your hard work!",
+          "speaker": "A",
+          "words": [
+            { "i": [0, 2], "p": "xīnkǔ", "t": "qiyin; mehnat", "tr": "тяжело; труд" },
+            { "i": [2, 3], "p": "le", "t": "(ta'kid)", "tr": "(частица)" }
+          ]
+        },
+        {
+          "id": "d44-s8",
+          "text_original": "谢谢！明天见。",
+          "pinyin": "Xièxie! Míngtiān jiàn.",
+          "text_translation": "Rahmat! Ertaga ko'rishamiz.",
+          "text_translation_ru": "Спасибо! До завтра.",
+          "text_translation_en": "Thanks! See you tomorrow.",
+          "speaker": "B",
+          "words": [
+            { "i": [0, 2], "p": "xièxie", "t": "rahmat", "tr": "спасибо", "h": 1, "l": 1 },
+            { "i": [3, 5], "p": "míngtiān", "t": "ertaga", "tr": "завтра", "h": 1, "l": 5 },
+            { "i": [5, 6], "p": "jiàn", "t": "ko'rishmoq", "tr": "видеться" }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jintian%20jia%20ban%20ma/dialogue.mp3",
   "vocab": [
     "今天",
-    "几点",
-    "下班",
     "加班",
-    "早点",
-    "回来"
+    "要",
+    "下班",
+    "晚上",
+    "点",
+    "晚餐",
+    "还没有",
+    "以后",
+    "辛苦",
+    "明天",
+    "见"
   ],
   "grammarNotes": [
+    {
+      "pattern": "要 + Fe'l",
+      "title_uz": "Kerak / niyat (kelajak)",
+      "title_ru": "Нужно / намерение (будущее)",
+      "desc_uz": "要 fe'ldan oldin kelib, «...moqchi / ...ishi kerak» ma'nosini beradi.",
+      "desc_ru": "要 перед глаголом означает «собираться / нужно сделать».",
+      "formula": "Ega + 要 + Fe'l",
+      "formula_ru": "Подлеж. + 要 + Глагол",
+      "examples": [
+        {
+          "zh": "我今天要加班。",
+          "py": "Wǒ jīntiān yào jiābān.",
+          "uz": "Bugun qo'shimcha ishlashim kerak.",
+          "ru": "Сегодня мне нужно работать сверхурочно.",
+          "en": "I have to work overtime today."
+        },
+        {
+          "zh": "我要去商场。",
+          "py": "Wǒ yào qù shāngchǎng.",
+          "uz": "Savdo markaziga bormoqchiman.",
+          "ru": "Я собираюсь в торговый центр.",
+          "en": "I'm going to the mall."
+        },
+        {
+          "zh": "你要吃什么？",
+          "py": "Nǐ yào chī shénme?",
+          "uz": "Nima yemoqchisan?",
+          "ru": "Что ты будешь есть?",
+          "en": "What do you want to eat?"
+        }
+      ],
+      "title_en": "Need to / intend to (future)",
+      "desc_en": "要 before a verb means \"to be going to / to need to\".",
+      "formula_en": "Subj. + 要 + Verb"
+    },
     {
       "pattern": "几点 + Fe'l？",
       "title_uz": "Vaqt so'rash",
       "title_ru": "Спросить время",
       "desc_uz": "几点 = soat necha. Ish-harakatning vaqtini so'rash uchun ishlatiladi.",
       "desc_ru": "几点 = который час / во сколько. Используется для вопроса о времени действия.",
-      "formula": "Ega + 几点 + Fe'l？",
-      "formula_ru": "Подлеж. + 几点 + Глагол？",
+      "formula": "(Ega) + 几点 + Fe'l？",
+      "formula_ru": "(Подлеж.) + 几点 + Глагол？",
       "examples": [
         {
-          "zh": "你今天几点下班？",
-          "py": "Nǐ jīntiān jǐ diǎn xiàbān?",
-          "uz": "Bugun soat nechada ishdan chiqasan?",
-          "ru": "Во сколько сегодня заканчиваешь?",
-          "en": "What time do you finish today?"
+          "zh": "几点下班？",
+          "py": "Jǐ diǎn xiàbān?",
+          "uz": "Soat nechada ishdan chiqasan?",
+          "ru": "Во сколько заканчиваешь работу?",
+          "en": "What time do you get off work?"
         },
         {
           "zh": "你几点起床？",
@@ -292,115 +219,80 @@
       ],
       "title_en": "Asking the time",
       "desc_en": "几点 = what time / at what time. Used to ask about the time of an action.",
-      "formula_en": "Subj. + 几点 + Verb？"
+      "formula_en": "(Subj.) + 几点 + Verb？"
     },
     {
-      "pattern": "不 + Fe'l",
-      "title_uz": "Oddiy inkor",
-      "title_ru": "Простое отрицание",
-      "desc_uz": "不 fe'ldan oldin kelib, inkor ma'nosini beradi. Hozirgi va kelajak vaqt uchun ishlatiladi.",
-      "desc_ru": "不 перед глаголом выражает отрицание. Используется для настоящего и будущего времени.",
-      "formula": "Ega + 不 + Fe'l",
-      "formula_ru": "Подлеж. + 不 + Глагол",
+      "pattern": "Fe'l + 以后",
+      "title_uz": "...gandan keyin",
+      "title_ru": "После того как...",
+      "desc_uz": "以后 ish yoki vaqtdan keyin kelib, «...dan keyin / ...gach» ma'nosini beradi.",
+      "desc_ru": "以后 ставится после действия или времени и означает «после...».",
+      "formula": "Fe'l/Vaqt + 以后",
+      "formula_ru": "Глагол/Время + 以后",
       "examples": [
         {
-          "zh": "不加班。",
-          "py": "Bù jiābān.",
-          "uz": "Qo'shimcha ishlamayman.",
-          "ru": "Не работаю сверхурочно.",
-          "en": "I'm not working overtime."
+          "zh": "我下班以后吃。",
+          "py": "Wǒ xiàbān yǐhòu chī.",
+          "uz": "Ishdan chiqqach yeyman.",
+          "ru": "Поем после работы.",
+          "en": "I'll eat after work."
         },
         {
-          "zh": "我不去。",
-          "py": "Wǒ bù qù.",
-          "uz": "Men bormayman.",
-          "ru": "Я не пойду.",
-          "en": "I won't go."
+          "zh": "吃饭以后我们去散步。",
+          "py": "Chīfàn yǐhòu wǒmen qù sànbù.",
+          "uz": "Ovqatdan keyin sayrga chiqamiz.",
+          "ru": "После еды мы пойдём прогуляться.",
+          "en": "After eating we'll go for a walk."
         },
         {
-          "zh": "他不吃肉。",
-          "py": "Tā bù chī ròu.",
-          "uz": "U go'sht yemaydi.",
-          "ru": "Он не ест мясо.",
-          "en": "He doesn't eat meat."
+          "zh": "下课以后我去图书馆。",
+          "py": "Xiàkè yǐhòu wǒ qù túshūguǎn.",
+          "uz": "Darsdan keyin kutubxonaga boraman.",
+          "ru": "После уроков я иду в библиотеку.",
+          "en": "After class I go to the library."
         }
       ],
-      "tip_uz": "不 hozirgi va kelajak vaqt uchun. O'tgan zamon uchun 没 ishlating: 没去 (bormadim).",
-      "tip_ru": "不 для настоящего и будущего. Для прошедшего используйте 没: 没去 (не ходил).",
-      "title_en": "Simple negation",
-      "desc_en": "不 before a verb expresses negation. Used for present and future tense.",
-      "formula_en": "Subj. + 不 + Verb",
-      "tip_en": "不 for present and future. For past, use 没: 没去 (didn't go)."
+      "title_en": "After (doing something)",
+      "desc_en": "以后 follows an action or time and means \"after...\".",
+      "formula_en": "Verb/Time + 以后"
     },
     {
-      "pattern": "那 + ...",
-      "title_uz": "Xulosa / natija bildirish",
-      "title_ru": "Вывод / следствие",
-      "desc_uz": "那 = unday bo'lsa / unda. Oldingi gapga asoslanib xulosa yoki taklif bildiradi.",
-      "desc_ru": "那 = тогда / в таком случае. Выражает вывод или предложение на основе предыдущего.",
-      "formula": "[Oldingi gap] → 那 + xulosa/taklif",
-      "formula_ru": "[Предыдущее] → 那 + вывод/предложение",
+      "pattern": "还没(有)",
+      "title_uz": "Hali ...magan",
+      "title_ru": "Ещё не...",
+      "desc_uz": "还没有 = hali yo'q / hali bajarilmagan. O'tgan ishning hali bo'lmaganini bildiradi.",
+      "desc_ru": "还没有 = ещё нет / ещё не сделал. Показывает, что действие пока не произошло.",
+      "formula": "还没(有) + Fe'l",
+      "formula_ru": "还没(有) + Глагол",
       "examples": [
         {
-          "zh": "那早点回来。",
-          "py": "Nà zǎo diǎn huílái.",
-          "uz": "Unday bo'lsa, ertaroq qaytib kel.",
-          "ru": "Тогда возвращайся пораньше.",
-          "en": "Then come back early."
+          "zh": "还没有。",
+          "py": "Hái méiyǒu.",
+          "uz": "Hali yo'q.",
+          "ru": "Ещё нет.",
+          "en": "Not yet."
         },
         {
-          "zh": "那我们走吧。",
-          "py": "Nà wǒmen zǒu ba.",
-          "uz": "Unday bo'lsa, ketdik.",
-          "ru": "Тогда пойдёмте.",
-          "en": "Then let's go."
+          "zh": "我还没吃饭。",
+          "py": "Wǒ hái méi chīfàn.",
+          "uz": "Hali ovqat yemadim.",
+          "ru": "Я ещё не поел.",
+          "en": "I haven't eaten yet."
         },
         {
-          "zh": "那明天见。",
-          "py": "Nà míngtiān jiàn.",
-          "uz": "Unday bo'lsa, ertaga ko'rishamiz.",
-          "ru": "Тогда до завтра.",
-          "en": "Then see you tomorrow."
+          "zh": "他还没来。",
+          "py": "Tā hái méi lái.",
+          "uz": "U hali kelmadi.",
+          "ru": "Он ещё не пришёл.",
+          "en": "He hasn't come yet."
         }
       ],
-      "title_en": "Conclusion / consequence",
-      "desc_en": "那 = then / in that case. Expresses a conclusion or suggestion based on the previous statement.",
-      "formula_en": "[Previous] → 那 + conclusion/suggestion"
-    },
-    {
-      "pattern": "早点 + Fe'l",
-      "title_uz": "Ertaroq / tezroq bajarish",
-      "title_ru": "Сделать пораньше",
-      "desc_uz": "早点 = ertaroq / tezroq. Fe'ldan oldin kelib, harakatni oddatdagidan erta bajarishni bildiradi.",
-      "desc_ru": "早点 = пораньше. Перед глаголом означает сделать действие раньше обычного.",
-      "formula": "早点 + Fe'l",
-      "formula_ru": "早点 + Глагол",
-      "examples": [
-        {
-          "zh": "那早点回来。",
-          "py": "Nà zǎo diǎn huílái.",
-          "uz": "Unday bo'lsa, ertaroq qaytib kel.",
-          "ru": "Тогда возвращайся пораньше.",
-          "en": "Then come back early."
-        },
-        {
-          "zh": "早点睡觉。",
-          "py": "Zǎo diǎn shuìjiào.",
-          "uz": "Ertaroq uxla.",
-          "ru": "Ложись спать пораньше.",
-          "en": "Go to bed early."
-        },
-        {
-          "zh": "明天早点来。",
-          "py": "Míngtiān zǎo diǎn lái.",
-          "uz": "Ertaga ertaroq kel.",
-          "ru": "Завтра приходи пораньше.",
-          "en": "Come earlier tomorrow."
-        }
-      ],
-      "title_en": "Do something earlier",
-      "desc_en": "早点 = a bit earlier. Before a verb, it means to do the action earlier than usual.",
-      "formula_en": "早点 + Verb"
+      "tip_uz": "O'tgan ishning inkori uchun 没 ishlating (不 emas). 还 = «hali» ma'nosini qo'shadi.",
+      "tip_ru": "Для отрицания прошедшего действия используйте 没 (не 不). 还 добавляет смысл «ещё».",
+      "title_en": "Not yet",
+      "desc_en": "还没有 = not yet / haven't done it yet. Shows an action hasn't happened so far.",
+      "formula_en": "还没(有) + Verb",
+      "tip_en": "Use 没 (not 不) to negate a past action. 还 adds the meaning \"still / yet\"."
     }
   ]
 }
