@@ -378,3 +378,16 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('白色', 'báisè', 'oq rang', 'белый цвет', 'white', 2),
   ('正好', 'zhènghǎo', 'aynan; xuddi mos', 'как раз; кстати', 'just right; happen to', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 宠物 (hsk2/dialogue18) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('养', 'yǎng', 'boqmoq (uy hayvoni); o''stirmoq', 'содержать (питомца); растить', 'to raise; to keep (a pet)', 2),
+  ('宠物', 'chǒngwù', 'uy hayvoni', 'домашнее животное; питомец', 'pet', 3),
+  ('可爱', 'kě''ài', 'yoqimtoy; chiroyli', 'милый; очаровательный', 'cute; lovely', 2),
+  ('聪明', 'cōngming', 'aqlli; zukko', 'умный; сообразительный', 'smart; clever', 2),
+  ('猫粮', 'māoliáng', 'mushuk yemi', 'кошачий корм', 'cat food', 3),
+  ('幸福', 'xìngfú', 'baxtli; baxt', 'счастливый; счастье', 'happy; happiness', 3),
+  ('散步', 'sànbù', 'sayr qilmoq; piyoda yurmoq', 'гулять; прогулка', 'to take a walk', 3),
+  ('独立', 'dúlì', 'mustaqil', 'независимый; самостоятельный', 'independent', 3),
+  ('记得', 'jìde', 'eslab qolmoq; yodida bo''lmoq', 'помнить', 'to remember', 2)
+  on conflict (zh, py_norm) do nothing;

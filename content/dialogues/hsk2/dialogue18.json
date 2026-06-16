@@ -1,0 +1,238 @@
+{
+  "id": "hsk2-dialogue18",
+  "slug": "having-a-pet",
+  "title": "宠物",
+  "pinyin": "Chǒngwù",
+  "titleTranslation": "Uy hayvoni",
+  "titleTranslation_ru": "Домашний питомец",
+  "titleTranslation_en": "Pets",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "养",
+    "宠物",
+    "可爱",
+    "聪明",
+    "猫粮",
+    "喂",
+    "幸福",
+    "干净",
+    "散步",
+    "陪",
+    "独立",
+    "记得",
+    "建议",
+    "考虑",
+    "送",
+    "消息"
+  ],
+  "sections": [
+    {
+      "id": "d18-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d18-s1",
+          "text_original": "你养宠物吗？",
+          "pinyin": "Nǐ yǎng chǒng wù ma?",
+          "text_translation": "Uy hayvoni boqasanmi?",
+          "text_translation_ru": "У тебя есть домашний питомец?",
+          "text_translation_en": "Do you keep any pets?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s2",
+          "text_original": "养。我养了一只猫。",
+          "pinyin": "Yǎng. Wǒ yǎng le yì zhī māo.",
+          "text_translation": "Ha. Men bitta mushuk boqaman.",
+          "text_translation_ru": "Да. У меня есть кошка.",
+          "text_translation_en": "Yes. I have a cat.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s3",
+          "text_original": "真的吗？猫可爱吗？",
+          "pinyin": "Zhēn de ma? Māo kě ài ma?",
+          "text_translation": "Rostdanmi? Mushuk yoqimtoymi?",
+          "text_translation_ru": "Правда? Кошка милая?",
+          "text_translation_en": "Really? Is the cat cute?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s4",
+          "text_original": "很可爱！它叫小花，是白色的。",
+          "pinyin": "Hěn kě ài! Tā jiào Xiǎo Huā, shì bái sè de.",
+          "text_translation": "Juda yoqimtoy! Uning ismi Syaohua, oq rangda.",
+          "text_translation_ru": "Очень милая! Её зовут Сяохуа, она белая.",
+          "text_translation_en": "Very cute! Her name is Xiao Hua, and she's white.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s5",
+          "text_original": "它多大了？",
+          "pinyin": "Tā duō dà le?",
+          "text_translation": "U necha yoshda?",
+          "text_translation_ru": "Сколько ей лет?",
+          "text_translation_en": "How old is she?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s6",
+          "text_original": "一岁了。它很小，但是很聪明。",
+          "pinyin": "Yí suì le. Tā hěn xiǎo, dàn shì hěn cōng ming.",
+          "text_translation": "Bir yoshda. U kichkina, lekin juda aqlli.",
+          "text_translation_ru": "Один год. Она маленькая, но очень умная.",
+          "text_translation_en": "One year old. She's small, but very smart.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s7",
+          "text_original": "它喜欢吃什么？",
+          "pinyin": "Tā xǐ huan chī shén me?",
+          "text_translation": "U nima yeyishni yoqtiradi?",
+          "text_translation_ru": "Что она любит есть?",
+          "text_translation_en": "What does she like to eat?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s8",
+          "text_original": "它喜欢吃鱼和猫粮。",
+          "pinyin": "Tā xǐ huan chī yú hé māo liáng.",
+          "text_translation": "U baliq va mushuk yemini yoqtiradi.",
+          "text_translation_ru": "Она любит рыбу и кошачий корм.",
+          "text_translation_en": "She likes fish and cat food.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s9",
+          "text_original": "你每天喂它几次？",
+          "pinyin": "Nǐ měi tiān wèi tā jǐ cì?",
+          "text_translation": "Uni har kuni necha marta boqasan?",
+          "text_translation_ru": "Сколько раз в день ты её кормишь?",
+          "text_translation_en": "How many times a day do you feed her?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s10",
+          "text_original": "喂三次。早上、中午和晚上。",
+          "pinyin": "Wèi sān cì. Zǎo shang, zhōng wǔ hé wǎn shang.",
+          "text_translation": "Uch marta. Ertalab, tushda va kechqurun.",
+          "text_translation_ru": "Три раза. Утром, в обед и вечером.",
+          "text_translation_en": "Three times. Morning, noon, and evening.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s11",
+          "text_original": "它睡觉睡得多吗？",
+          "pinyin": "Tā shuì jiào shuì de duō ma?",
+          "text_translation": "U ko'p uxlaydimi?",
+          "text_translation_ru": "Она много спит?",
+          "text_translation_en": "Does she sleep a lot?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s12",
+          "text_original": "很多。它一天睡十几个小时。",
+          "pinyin": "Hěn duō. Tā yì tiān shuì shí jǐ ge xiǎo shí.",
+          "text_translation": "Juda ko'p. U kuniga o'n bir-o'n besh soat uxlaydi.",
+          "text_translation_ru": "Много. Она спит больше десяти часов в день.",
+          "text_translation_en": "A lot. She sleeps more than ten hours a day.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s13",
+          "text_original": "哇，真幸福！我也想养一只猫。",
+          "pinyin": "Wā, zhēn xìng fú! Wǒ yě xiǎng yǎng yì zhī māo.",
+          "text_translation": "Voy, juda baxtli! Men ham bitta mushuk boqmoqchiman.",
+          "text_translation_ru": "Вот это счастье! Я тоже хочу завести кошку.",
+          "text_translation_en": "Wow, so lucky! I'd like to get a cat too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s14",
+          "text_original": "你可以养猫。猫很干净，不需要每天出去散步。",
+          "pinyin": "Nǐ kě yǐ yǎng māo. Māo hěn gān jìng, bù xū yào měi tiān chū qù sàn bù.",
+          "text_translation": "Mushuk boqsang bo'ladi. Mushuk toza, har kuni sayrga olib chiqish shart emas.",
+          "text_translation_ru": "Ты можешь завести кошку. Кошки чистые, их не нужно каждый день выгуливать.",
+          "text_translation_en": "You can keep a cat. Cats are clean and don't need to go out for walks every day.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s15",
+          "text_original": "养狗和养猫哪个更好？",
+          "pinyin": "Yǎng gǒu hé yǎng māo nǎ ge gèng hǎo?",
+          "text_translation": "It boqish va mushuk boqish — qaysi biri yaxshiroq?",
+          "text_translation_ru": "Что лучше — держать собаку или кошку?",
+          "text_translation_en": "Which is better, keeping a dog or a cat?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s16",
+          "text_original": "看你的时间。狗需要人陪，猫比较独立。",
+          "pinyin": "Kàn nǐ de shí jiān. Gǒu xū yào rén péi, māo bǐ jiào dú lì.",
+          "text_translation": "Vaqtingga bog'liq. It odamning hamrohligini xohlaydi, mushuk esa mustaqilroq.",
+          "text_translation_ru": "Зависит от твоего времени. Собаке нужна компания, кошки более независимы.",
+          "text_translation_en": "It depends on your time. Dogs need company, cats are more independent.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s17",
+          "text_original": "我工作很忙，可能养猫更好。",
+          "pinyin": "Wǒ gōng zuò hěn máng, kě néng yǎng māo gèng hǎo.",
+          "text_translation": "Ishim juda band, ehtimol mushuk boqgan yaxshiroqdir.",
+          "text_translation_ru": "Я очень занят на работе, наверное, кошка лучше.",
+          "text_translation_en": "I'm very busy with work, so a cat is probably better.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s18",
+          "text_original": "对。养猫不难，但是你要记得喂它。",
+          "pinyin": "Duì. Yǎng māo bù nán, dàn shì nǐ yào jì de wèi tā.",
+          "text_translation": "To'g'ri. Mushuk boqish qiyin emas, lekin uni boqishni eslab turishing kerak.",
+          "text_translation_ru": "Да. Держать кошку не сложно, но нужно не забывать её кормить.",
+          "text_translation_en": "Right. Keeping a cat isn't hard, but you have to remember to feed her.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s19",
+          "text_original": "谢谢你的建议！我考虑一下。",
+          "pinyin": "Xiè xie nǐ de jiàn yì! Wǒ kǎo lǜ yí xià.",
+          "text_translation": "Maslahating uchun rahmat! O'ylab ko'raman.",
+          "text_translation_ru": "Спасибо за совет! Я подумаю.",
+          "text_translation_en": "Thanks for the advice! I'll think about it.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s20",
+          "text_original": "不客气。如果你想养，我可以送你一只小猫。",
+          "pinyin": "Bú kè qi. Rú guǒ nǐ xiǎng yǎng, wǒ kě yǐ sòng nǐ yì zhī xiǎo māo.",
+          "text_translation": "Arzimaydi. Agar boqmoqchi bo'lsang, senga bitta mushukcha sovg'a qila olaman.",
+          "text_translation_ru": "Не за что. Если захочешь завести, я могу подарить тебе котёнка.",
+          "text_translation_en": "You're welcome. If you want one, I can give you a kitten.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s21",
+          "text_original": "太好了！我想好了告诉你。",
+          "pinyin": "Tài hǎo le! Wǒ xiǎng hǎo le gào su nǐ.",
+          "text_translation": "Juda yaxshi! Qaror qilsam, senga aytaman.",
+          "text_translation_ru": "Отлично! Когда решу, скажу тебе.",
+          "text_translation_en": "Great! I'll tell you once I've decided.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s22",
+          "text_original": "好的，等你消息。",
+          "pinyin": "Hǎo de, děng nǐ xiāo xi.",
+          "text_translation": "Yaxshi, xabaringni kutaman.",
+          "text_translation_ru": "Хорошо, жду твоего сообщения.",
+          "text_translation_en": "Okay, I'll wait to hear from you.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
