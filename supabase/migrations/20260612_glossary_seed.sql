@@ -308,3 +308,16 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('果汁', 'guǒzhī', 'meva sharbati', 'сок', 'juice', 2),
   ('稍等', 'shāoděng', 'biroz kutmoq', 'подождать немного', 'to wait a moment', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 生日 (hsk2/dialogue14) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('生日', 'shēngrì', 'tug''ilgan kun', 'день рождения', 'birthday', 1),
+  ('打算', 'dǎsuàn', 'reja qilmoq; niyat', 'планировать; намереваться', 'to plan; to intend', 2),
+  ('过', 'guò', 'o''tkazmoq; nishonlamoq', 'проводить; отмечать', 'to spend; to celebrate', 2),
+  ('请', 'qǐng', 'taklif qilmoq; iltimos', 'приглашать; пожалуйста', 'to invite; please', 1),
+  ('做饭', 'zuò fàn', 'ovqat pishirmoq', 'готовить еду', 'to cook', 2),
+  ('早', 'zǎo', 'erta', 'рано', 'early', 1),
+  ('玩', 'wán', 'o''ynamoq; vaqt o''tkazmoq', 'играть; развлекаться', 'to play; to have fun', 2),
+  ('生日蛋糕', 'shēngrì dàngāo', 'tug''ilgan kun torti', 'торт ко дню рождения', 'birthday cake', 2),
+  ('一束花', 'yí shù huā', 'bir dasta gul', 'букет цветов', 'a bunch of flowers', 2)
+  on conflict (zh, py_norm) do nothing;

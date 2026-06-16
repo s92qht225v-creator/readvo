@@ -1,0 +1,196 @@
+{
+  "id": "hsk2-dialogue14",
+  "slug": "birthday-plans",
+  "title": "生日",
+  "pinyin": "Shēngrì",
+  "titleTranslation": "Tug'ilgan kun",
+  "titleTranslation_ru": "День рождения",
+  "titleTranslation_en": "Birthday",
+  "level": 2,
+  "tag": "reja",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "生日",
+    "打算",
+    { "zh": "过", "py": "guò" },
+    "请",
+    "做饭",
+    "开始",
+    "早",
+    "玩",
+    "生日蛋糕",
+    "一束花"
+  ],
+  "sections": [
+    {
+      "id": "d14-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d14-s1",
+          "text_original": "明天是你的生日，对吧？",
+          "pinyin": "Míng tiān shì nǐ de shēng rì, duì ba?",
+          "text_translation": "Ertaga sening tug'ilgan kuning, to'g'rimi?",
+          "text_translation_ru": "Завтра твой день рождения, верно?",
+          "text_translation_en": "Tomorrow is your birthday, right?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s2",
+          "text_original": "对！你怎么知道的？",
+          "pinyin": "Duì! Nǐ zěn me zhī dào de?",
+          "text_translation": "To'g'ri! Qayerdan bilding?",
+          "text_translation_ru": "Да! Откуда ты узнал?",
+          "text_translation_en": "Yes! How did you know?",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s3",
+          "text_original": "我听小明说的。你打算怎么过？",
+          "pinyin": "Wǒ tīng Xiǎo Míng shuō de. Nǐ dǎ suàn zěn me guò?",
+          "text_translation": "Xiao Mingdan eshitdim. Qanday o'tkazmoqchisan?",
+          "text_translation_ru": "Я слышал от Сяо Мина. Как ты планируешь его отметить?",
+          "text_translation_en": "I heard from Xiao Ming. How do you plan to celebrate?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s4",
+          "text_original": "我想请几个朋友来家里吃饭。",
+          "pinyin": "Wǒ xiǎng qǐng jǐ gè péng you lái jiā lǐ chī fàn.",
+          "text_translation": "Bir nechta do'stimni uyga ovqatga taklif qilmoqchiman.",
+          "text_translation_ru": "Я хочу пригласить несколько друзей домой на ужин.",
+          "text_translation_en": "I want to invite a few friends over for dinner.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s5",
+          "text_original": "你做饭吗？",
+          "pinyin": "Nǐ zuò fàn ma?",
+          "text_translation": "O'zing ovqat pishirasanmi?",
+          "text_translation_ru": "Ты сам готовишь?",
+          "text_translation_en": "Are you cooking?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s6",
+          "text_original": "不，我妈妈帮我做。",
+          "pinyin": "Bù, wǒ mā ma bāng wǒ zuò.",
+          "text_translation": "Yo'q, onam menga yordam beradi.",
+          "text_translation_ru": "Нет, мама поможет мне приготовить.",
+          "text_translation_en": "No, my mom is helping me cook.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s7",
+          "text_original": "你请了谁？",
+          "pinyin": "Nǐ qǐng le shéi?",
+          "text_translation": "Kimni taklif qilding?",
+          "text_translation_ru": "Кого ты пригласил?",
+          "text_translation_en": "Who did you invite?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s8",
+          "text_original": "请了小张、小王，还有你。",
+          "pinyin": "Qǐng le Xiǎo Zhāng, Xiǎo Wáng, hái yǒu nǐ.",
+          "text_translation": "Xiao Zhang, Xiao Wang va seni taklif qildim.",
+          "text_translation_ru": "Пригласил Сяо Чжана, Сяо Вана и тебя.",
+          "text_translation_en": "I invited Xiao Zhang, Xiao Wang, and you.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s9",
+          "text_original": "太好了！几点开始？",
+          "pinyin": "Tài hǎo le! Jǐ diǎn kāi shǐ?",
+          "text_translation": "Juda yaxshi! Soat nechada boshlanadi?",
+          "text_translation_ru": "Отлично! Во сколько начало?",
+          "text_translation_en": "Great! What time does it start?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s10",
+          "text_original": "晚上六点半。你早点来玩。",
+          "pinyin": "Wǎn shang liù diǎn bàn. Nǐ zǎo diǎn lái wán.",
+          "text_translation": "Kechqurun olti yarimda. Ertaroq kelib o'yna.",
+          "text_translation_ru": "В половине седьмого вечера. Приходи пораньше повеселиться.",
+          "text_translation_en": "Six thirty in the evening. Come early to hang out.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s11",
+          "text_original": "好。我给你买一个生日蛋糕。",
+          "pinyin": "Hǎo. Wǒ gěi nǐ mǎi yí ge shēng rì dàn gāo.",
+          "text_translation": "Yaxshi. Senga tug'ilgan kun torti olib kelaman.",
+          "text_translation_ru": "Хорошо. Я куплю тебе торт ко дню рождения.",
+          "text_translation_en": "Okay. I'll buy you a birthday cake.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s12",
+          "text_original": "不用买，我买了。",
+          "pinyin": "Bú yòng mǎi, wǒ mǎi le.",
+          "text_translation": "Sotib olishing shart emas, men oldim.",
+          "text_translation_ru": "Не нужно покупать, я уже купил.",
+          "text_translation_en": "No need to buy one, I already did.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s13",
+          "text_original": "那我给你准备一个礼物。",
+          "pinyin": "Nà wǒ gěi nǐ zhǔn bèi yí ge lǐ wù.",
+          "text_translation": "Unda men senga sovg'a tayyorlayman.",
+          "text_translation_ru": "Тогда я приготовлю тебе подарок.",
+          "text_translation_en": "Then I'll prepare a gift for you.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s14",
+          "text_original": "真的吗？太开心了！",
+          "pinyin": "Zhēn de ma? Tài kāi xīn le!",
+          "text_translation": "Rostdanmi? Juda xursandman!",
+          "text_translation_ru": "Правда? Я так рад!",
+          "text_translation_en": "Really? I'm so happy!",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s15",
+          "text_original": "你喜欢什么？",
+          "pinyin": "Nǐ xǐ huan shén me?",
+          "text_translation": "Nimani yoqtirasan?",
+          "text_translation_ru": "Что тебе нравится?",
+          "text_translation_en": "What do you like?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s16",
+          "text_original": "我喜欢花。",
+          "pinyin": "Wǒ xǐ huan huā.",
+          "text_translation": "Men gulni yoqtiraman.",
+          "text_translation_ru": "Я люблю цветы.",
+          "text_translation_en": "I like flowers.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s17",
+          "text_original": "好，我送你一束花。",
+          "pinyin": "Hǎo, wǒ sòng nǐ yí shù huā.",
+          "text_translation": "Yaxshi, senga bir dasta gul sovg'a qilaman.",
+          "text_translation_ru": "Хорошо, я подарю тебе букет цветов.",
+          "text_translation_en": "Okay, I'll give you a bunch of flowers.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s18",
+          "text_original": "谢谢你！明天见！",
+          "pinyin": "Xiè xie nǐ! Míng tiān jiàn!",
+          "text_translation": "Rahmat! Ertaga ko'rishguncha!",
+          "text_translation_ru": "Спасибо! До завтра!",
+          "text_translation_en": "Thank you! See you tomorrow!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
