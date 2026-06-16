@@ -366,3 +366,15 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('故宫', 'Gùgōng', 'Gugun (Taqiqlangan shahar)', 'Гугун (Запретный город)', 'the Forbidden City', 3),
   ('夏天', 'xiàtiān', 'yoz', 'лето', 'summer', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 购物 (hsk2/dialogue17) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('商场', 'shāngchǎng', 'savdo markazi', 'торговый центр', 'shopping mall', 2),
+  ('毛衣', 'máoyī', 'jemper; sviter', 'свитер; кофта', 'sweater', 2),
+  ('裤子', 'kùzi', 'shim', 'брюки; штаны', 'pants; trousers', 2),
+  ('打折', 'dǎzhé', 'chegirma qilmoq', 'делать скидку', 'to give a discount; sale', 3),
+  ('月底', 'yuèdǐ', 'oy oxiri', 'конец месяца', 'end of the month', 3),
+  ('外套', 'wàitào', 'ustki kiyim; palto', 'верхняя одежда; пальто', 'coat; jacket', 3),
+  ('白色', 'báisè', 'oq rang', 'белый цвет', 'white', 2),
+  ('正好', 'zhènghǎo', 'aynan; xuddi mos', 'как раз; кстати', 'just right; happen to', 3)
+  on conflict (zh, py_norm) do nothing;

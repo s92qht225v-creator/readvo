@@ -1,0 +1,218 @@
+{
+  "id": "hsk2-dialogue17",
+  "slug": "shopping-for-clothes",
+  "title": "购物",
+  "pinyin": "Gòuwù",
+  "titleTranslation": "Xarid qilish",
+  "titleTranslation_ru": "Покупки",
+  "titleTranslation_en": "Shopping",
+  "level": 2,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "周末",
+    "商场",
+    "毛衣",
+    "裤子",
+    "便宜",
+    "因为",
+    "打折",
+    "月底",
+    "外套",
+    "颜色",
+    "蓝色",
+    "白色",
+    "正好",
+    "门口"
+  ],
+  "sections": [
+    {
+      "id": "d17-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d17-s1",
+          "text_original": "你周末去哪儿了？",
+          "pinyin": "Nǐ zhōu mò qù nǎr le?",
+          "text_translation": "Dam olish kunlari qayerga bording?",
+          "text_translation_ru": "Куда ты ходил на выходных?",
+          "text_translation_en": "Where did you go on the weekend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s2",
+          "text_original": "我去商场买衣服了。",
+          "pinyin": "Wǒ qù shāng chǎng mǎi yī fu le.",
+          "text_translation": "Savdo markaziga kiyim olishga bordim.",
+          "text_translation_ru": "Я ходил в торговый центр за одеждой.",
+          "text_translation_en": "I went to the mall to buy clothes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s3",
+          "text_original": "你买了什么？",
+          "pinyin": "Nǐ mǎi le shén me?",
+          "text_translation": "Nima sotib olding?",
+          "text_translation_ru": "Что ты купил?",
+          "text_translation_en": "What did you buy?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s4",
+          "text_original": "我买了一件毛衣和一条裤子。",
+          "pinyin": "Wǒ mǎi le yí jiàn máo yī hé yì tiáo kù zi.",
+          "text_translation": "Bitta jemper va bitta shim sotib oldim.",
+          "text_translation_ru": "Я купил свитер и брюки.",
+          "text_translation_en": "I bought a sweater and a pair of pants.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s5",
+          "text_original": "好看吗？",
+          "pinyin": "Hǎo kàn ma?",
+          "text_translation": "Chiroylimi?",
+          "text_translation_ru": "Красивые?",
+          "text_translation_en": "Do they look nice?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s6",
+          "text_original": "很好看。毛衣是红色的，裤子是黑色的。",
+          "pinyin": "Hěn hǎo kàn. Máo yī shì hóng sè de, kù zi shì hēi sè de.",
+          "text_translation": "Juda chiroyli. Jemper qizil, shim qora.",
+          "text_translation_ru": "Очень красивые. Свитер красный, брюки чёрные.",
+          "text_translation_en": "Very nice. The sweater is red, and the pants are black.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s7",
+          "text_original": "贵不贵？",
+          "pinyin": "Guì bu guì?",
+          "text_translation": "Qimmatmi?",
+          "text_translation_ru": "Дорого?",
+          "text_translation_en": "Were they expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s8",
+          "text_original": "不贵。毛衣一百二十块，裤子八十块。",
+          "pinyin": "Bú guì. Máo yī yì bǎi èr shí kuài, kù zi bā shí kuài.",
+          "text_translation": "Qimmat emas. Jemper bir yuz yigirma yuan, shim sakson yuan.",
+          "text_translation_ru": "Не дорого. Свитер сто двадцать юаней, брюки восемьдесят.",
+          "text_translation_en": "Not expensive. The sweater was 120 yuan, the pants 80 yuan.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s9",
+          "text_original": "一共两百块！很便宜啊！",
+          "pinyin": "Yí gòng liǎng bǎi kuài! Hěn pián yi a!",
+          "text_translation": "Jami ikki yuz yuan! Juda arzon-ku!",
+          "text_translation_ru": "Всего двести юаней! Очень дёшево!",
+          "text_translation_en": "Two hundred yuan in total! That's very cheap!",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s10",
+          "text_original": "对，因为商场在打折。",
+          "pinyin": "Duì, yīn wèi shāng chǎng zài dǎ zhé.",
+          "text_translation": "Ha, chunki savdo markazida chegirma bor.",
+          "text_translation_ru": "Да, потому что в торговом центре скидки.",
+          "text_translation_en": "Yeah, because the mall is having a sale.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s11",
+          "text_original": "打折打到什么时候？",
+          "pinyin": "Dǎ zhé dǎ dào shén me shí hou?",
+          "text_translation": "Chegirma qachongacha?",
+          "text_translation_ru": "До какого числа скидки?",
+          "text_translation_en": "Until when is the sale?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s12",
+          "text_original": "到这个月底。你也可以去看看。",
+          "pinyin": "Dào zhè ge yuè dǐ. Nǐ yě kě yǐ qù kàn kan.",
+          "text_translation": "Shu oy oxirigacha. Sen ham borib ko'rsang bo'ladi.",
+          "text_translation_ru": "До конца этого месяца. Ты тоже можешь сходить посмотреть.",
+          "text_translation_en": "Until the end of this month. You can go take a look too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s13",
+          "text_original": "我也想买一件外套。",
+          "pinyin": "Wǒ yě xiǎng mǎi yí jiàn wài tào.",
+          "text_translation": "Men ham bitta ustki kiyim olmoqchiman.",
+          "text_translation_ru": "Я тоже хочу купить куртку.",
+          "text_translation_en": "I'd like to buy a coat too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s14",
+          "text_original": "那个商场有很多外套，颜色也很多。",
+          "pinyin": "Nà ge shāng chǎng yǒu hěn duō wài tào, yán sè yě hěn duō.",
+          "text_translation": "U savdo markazida ko'p ustki kiyim bor, ranglari ham ko'p.",
+          "text_translation_ru": "В том торговом центре много курток, и цветов тоже много.",
+          "text_translation_en": "That mall has lots of coats, and lots of colors too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s15",
+          "text_original": "你喜欢什么颜色？",
+          "pinyin": "Nǐ xǐ huan shén me yán sè?",
+          "text_translation": "Qaysi rangni yoqtirasan?",
+          "text_translation_ru": "Какой цвет тебе нравится?",
+          "text_translation_en": "What color do you like?",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s16",
+          "text_original": "我喜欢蓝色和白色。",
+          "pinyin": "Wǒ xǐ huan lán sè hé bái sè.",
+          "text_translation": "Men ko'k va oq rangni yoqtiraman.",
+          "text_translation_ru": "Я люблю синий и белый.",
+          "text_translation_en": "I like blue and white.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s17",
+          "text_original": "我也喜欢蓝色。我们下午一起去看看吧！",
+          "pinyin": "Wǒ yě xǐ huan lán sè. Wǒ men xià wǔ yì qǐ qù kàn kan ba!",
+          "text_translation": "Men ham ko'k rangni yoqtiraman. Tushdan keyin birga borib ko'raylik!",
+          "text_translation_ru": "Я тоже люблю синий. Давай сходим вместе посмотреть после обеда!",
+          "text_translation_en": "I like blue too. Let's go take a look together this afternoon!",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s18",
+          "text_original": "好啊！我正好没事。",
+          "pinyin": "Hǎo a! Wǒ zhèng hǎo méi shì.",
+          "text_translation": "Mayli! Men aynan bo'shman.",
+          "text_translation_ru": "Хорошо! Я как раз свободен.",
+          "text_translation_en": "Sure! I happen to be free.",
+          "speaker": "B"
+        },
+        {
+          "id": "d17-s19",
+          "text_original": "那下午两点，商场门口见。",
+          "pinyin": "Nà xià wǔ liǎng diǎn, shāng chǎng mén kǒu jiàn.",
+          "text_translation": "Unda tushdan keyin soat ikkida, savdo markazi oldida uchrashamiz.",
+          "text_translation_ru": "Тогда в два часа дня встретимся у входа в торговый центр.",
+          "text_translation_en": "Then let's meet at the mall entrance at two in the afternoon.",
+          "speaker": "A"
+        },
+        {
+          "id": "d17-s20",
+          "text_original": "好的，下午见！",
+          "pinyin": "Hǎo de, xià wǔ jiàn!",
+          "text_translation": "Yaxshi, tushdan keyin ko'rishamiz!",
+          "text_translation_ru": "Хорошо, до встречи днём!",
+          "text_translation_en": "Okay, see you this afternoon!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
