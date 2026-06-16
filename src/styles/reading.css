@@ -984,6 +984,25 @@ body {
   font-weight: 700;
 }
 
+/* Desktop: text-only tabs (icons are a mobile affordance). */
+.dr-tabs__icon { display: none; }
+.dr-tabs__icon svg { display: block; }
+
+@media (max-width: 600px) {
+  /* Mobile: icon tabs — the active tab swaps its icon for its text label. */
+  .dr-tabs__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .dr-tabs__icon { display: flex; align-items: center; justify-content: center; }
+  .dr-tabs__icon svg { width: 22px; height: 22px; }
+  .dr-tabs__label { display: none; }
+  .dr-tabs__tab--active .dr-tabs__icon { display: none; }
+  .dr-tabs__tab--active .dr-tabs__label { display: inline; }
+}
+
 .dialogue-reader {
   max-width: 900px;
   margin: 0 auto;
@@ -3904,7 +3923,7 @@ body {
 
 /* Tab bar below hero banner */
 .lp__tabs {
-  background: #dc2727;
+  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   position: sticky;
@@ -3965,8 +3984,19 @@ body {
   .home__hero--lang .dr-hero__body { display: none; }
   .home__hero--lang .lp__hero-watermark { display: none; }
 
-  /* Nav bar stays a sticky text-tab strip directly under the slim hero
-     (inherits the base .lp__tabs / .lp__tab rules — text labels, no icons). */
+  /* Nav stays a sticky strip under the slim hero, but as icon tabs — the
+     active tab swaps its icon for its text label. */
+  .lp__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .lp__tab-icon { display: flex; align-items: center; justify-content: center; }
+  .lp__tab-icon svg { width: 22px; height: 22px; }
+  .lp__tab-label { display: none; }
+  .lp__tab--active .lp__tab-icon { display: none; }
+  .lp__tab--active .lp__tab-label { display: inline; }
 }
 
 .lp__hero-watermark {
