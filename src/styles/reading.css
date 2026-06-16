@@ -3950,7 +3950,10 @@ body {
   /* Slim the hero: keep the logo + menu top row, drop the big decorative block
      and the fixed 175px banner height so it collapses to the row. */
   .home__hero.home__hero--lang { height: auto; padding-bottom: 4px; }
-  .home__hero--lang .home__hero-inner { height: auto; }
+  /* Spread the logo (left) and ☰ menu (right) out toward the dialogue-card
+     edges. Cards inset 24px; trimming the inner padding to 8px lands the logo's
+     left edge and the menu's right edge flush with the card edges (not past). */
+  .home__hero--lang .home__hero-inner { height: auto; padding-left: 0; padding-right: 0; }
   /* The top row is absolutely positioned for the desktop banner; let it flow
      so the slim hero sizes to it. */
   .home__hero--lang .home__hero-top-row { position: static; }

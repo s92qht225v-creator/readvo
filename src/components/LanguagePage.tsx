@@ -456,18 +456,6 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
 
   if (isLoading) return <div className="loading-spinner" />;
 
-  // Grammar lives in the menu now (not the tab bar). The render-prop is shared
-  // by the hero menu (desktop) and the tab-bar menu (mobile).
-  const grammarMenuItem = (close: () => void) => (
-    <button
-      className="home__menu-item"
-      type="button"
-      onClick={() => { setActiveTab('grammar'); close(); window.scrollTo({ top: 0 }); }}
-    >
-      {({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}
-    </button>
-  );
-
   return (
     <main className="home">
       {/* Banner */}
@@ -478,7 +466,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
             <Link href="/" className="home__hero-logo">
               <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
             </Link>
-            <BannerMenu extraItems={grammarMenuItem} />
+            <BannerMenu />
           </div>
           <div className="dr-hero__body">
             <h1 className="sr-only">{({ uz: 'Xitoy tili — HSK 1 darslari, dialoglar va mashqlar', ru: 'Китайский язык — уроки HSK 1, диалоги и упражнения', en: 'Chinese — HSK 1 lessons, dialogues and exercises' } as Record<string, string>)[language]}</h1>
@@ -528,7 +516,7 @@ export function LanguagePage({ dialogues, dialoguesHsk2 = [], dialoguesHsk3 = []
           {/* Mobile-only menu (the hero — which holds the desktop menu — is
               hidden on mobile). */}
           <div className="lp__tabs-menu">
-            <BannerMenu extraItems={grammarMenuItem} />
+            <BannerMenu />
           </div>
         </div>
       </nav>
