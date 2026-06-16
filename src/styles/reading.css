@@ -988,24 +988,6 @@ body {
   font-weight: 700;
 }
 
-/* Desktop: text-only tabs (icons are a mobile affordance). */
-.dr-tabs__icon { display: none; }
-.dr-tabs__icon svg { display: block; }
-
-@media (max-width: 600px) {
-  /* Mobile: icon tabs — the active tab swaps its icon for its text label. */
-  .dr-tabs__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-  }
-  .dr-tabs__icon { display: flex; align-items: center; justify-content: center; }
-  .dr-tabs__icon svg { width: 22px; height: 22px; }
-  .dr-tabs__label { display: none; }
-  .dr-tabs__tab--active .dr-tabs__icon { display: none; }
-  .dr-tabs__tab--active .dr-tabs__label { display: inline; }
-}
 
 .dialogue-reader {
   max-width: 900px;

@@ -136,15 +136,6 @@ const TABS = [
   { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
-/* Icons for the mobile tab bar. Inactive tabs show only the icon; the active
-   tab swaps its icon for its text label (see .dr-tabs__icon / __label rules). */
-const DR_TAB_ICONS: Record<string, React.ReactNode> = {
-  dialog: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H8l-4 4V5a1 1 0 0 1 1-1z"/><path d="M8 9h8M8 12.5h5"/></svg>,
-  vocab: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5a2 2 0 0 1 2-2h6v16H6a2 2 0 0 0-2 2V5z"/><path d="M20 5a2 2 0 0 0-2-2h-6v16h6a2 2 0 0 1 2 2V5z"/></svg>,
-  dictation: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 16a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2v2zM3 16a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2v2z"/></svg>,
-  practice: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>,
-};
-
 export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps) {
   const { isLoading: authLoading } = useRequireAuth();
   const { getAccessToken } = useAuth();
@@ -533,8 +524,7 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
                     aria-pressed={activeTab === t.id}
                     aria-label={(t as Record<string, string>)[language] ?? t.uz}
                   >
-                    <span className="dr-tabs__icon" aria-hidden="true">{DR_TAB_ICONS[t.id]}</span>
-                    <span className="dr-tabs__label">{(t as Record<string, string>)[language] ?? t.uz}</span>
+                    {(t as Record<string, string>)[language] ?? t.uz}
                   </button>
                 ))}
               </div>
