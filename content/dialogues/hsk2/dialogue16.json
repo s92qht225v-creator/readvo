@@ -1,0 +1,225 @@
+{
+  "id": "hsk2-dialogue16",
+  "slug": "a-trip-to-shanghai",
+  "title": "旅行",
+  "pinyin": "Lǚxíng",
+  "titleTranslation": "Sayohat",
+  "titleTranslation_ru": "Путешествие",
+  "titleTranslation_en": "Travel",
+  "level": 2,
+  "tag": "reja",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "上个月",
+    "旅行",
+    "好玩",
+    "外滩",
+    "东方明珠塔",
+    "高铁",
+    "小时",
+    "酒店",
+    "包",
+    "早餐",
+    "小吃",
+    "小笼包",
+    "购物",
+    "一些",
+    "礼物",
+    "送",
+    "家人",
+    "下次",
+    "打算",
+    "故宫",
+    "夏天"
+  ],
+  "sections": [
+    {
+      "id": "d16-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d16-s1",
+          "text_original": "你上个月去哪儿旅行了？",
+          "pinyin": "Nǐ shàng ge yuè qù nǎr lǚ xíng le?",
+          "text_translation": "O'tgan oy qayerga sayohat qilding?",
+          "text_translation_ru": "Куда ты ездил путешествовать в прошлом месяце?",
+          "text_translation_en": "Where did you travel last month?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s2",
+          "text_original": "我去了上海。",
+          "pinyin": "Wǒ qù le Shàng hǎi.",
+          "text_translation": "Men Shanxayga bordim.",
+          "text_translation_ru": "Я ездил в Шанхай.",
+          "text_translation_en": "I went to Shanghai.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s3",
+          "text_original": "上海好玩吗？",
+          "pinyin": "Shàng hǎi hǎo wán ma?",
+          "text_translation": "Shanxay qiziqarlimi?",
+          "text_translation_ru": "В Шанхае было интересно?",
+          "text_translation_en": "Was Shanghai fun?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s4",
+          "text_original": "很好玩！我去了外滩和东方明珠塔。",
+          "pinyin": "Hěn hǎo wán! Wǒ qù le Wài tān hé Dōng fāng Míng zhū Tǎ.",
+          "text_translation": "Juda qiziqarli! Vaytan va \"Sharq marvaridi\" minorasiga bordim.",
+          "text_translation_ru": "Очень интересно! Я был на Вайтане и у телебашни «Восточная жемчужина».",
+          "text_translation_en": "Very fun! I went to the Bund and the Oriental Pearl Tower.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s5",
+          "text_original": "你一个人去的吗？",
+          "pinyin": "Nǐ yí ge rén qù de ma?",
+          "text_translation": "Yolg'iz bordingmi?",
+          "text_translation_ru": "Ты ездил один?",
+          "text_translation_en": "Did you go by yourself?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s6",
+          "text_original": "不是。我和朋友一起去的。",
+          "pinyin": "Bú shì. Wǒ hé péng you yì qǐ qù de.",
+          "text_translation": "Yo'q. Do'stim bilan birga bordim.",
+          "text_translation_ru": "Нет. Я ездил вместе с другом.",
+          "text_translation_en": "No. I went together with a friend.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s7",
+          "text_original": "你们怎么去的？",
+          "pinyin": "Nǐ men zěn me qù de?",
+          "text_translation": "Qanday bordingiz?",
+          "text_translation_ru": "Как вы добрались?",
+          "text_translation_en": "How did you get there?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s8",
+          "text_original": "我们坐高铁去的。很快，只要四个小时。",
+          "pinyin": "Wǒ men zuò gāo tiě qù de. Hěn kuài, zhǐ yào sì ge xiǎo shí.",
+          "text_translation": "Tezyurar poyezdda bordik. Juda tez, atigi to'rt soat.",
+          "text_translation_ru": "Мы ехали на высокоскоростном поезде. Очень быстро, всего четыре часа.",
+          "text_translation_en": "We took the high-speed rail. It's fast, only four hours.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s9",
+          "text_original": "你们住了几天？",
+          "pinyin": "Nǐ men zhù le jǐ tiān?",
+          "text_translation": "Necha kun turdingiz?",
+          "text_translation_ru": "Сколько дней вы там были?",
+          "text_translation_en": "How many days did you stay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s10",
+          "text_original": "住了三天。我们住在一家小酒店。",
+          "pinyin": "Zhù le sān tiān. Wǒ men zhù zài yì jiā xiǎo jiǔ diàn.",
+          "text_translation": "Uch kun turdik. Biz kichik mehmonxonada turdik.",
+          "text_translation_ru": "Мы пробыли три дня. Мы жили в небольшом отеле.",
+          "text_translation_en": "We stayed three days. We stayed at a small hotel.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s11",
+          "text_original": "酒店贵不贵？",
+          "pinyin": "Jiǔ diàn guì bu guì?",
+          "text_translation": "Mehmonxona qimmatmi?",
+          "text_translation_ru": "Отель дорогой?",
+          "text_translation_en": "Was the hotel expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s12",
+          "text_original": "不贵。一晚上两百块，还包早餐。",
+          "pinyin": "Bú guì. Yì wǎn shang liǎng bǎi kuài, hái bāo zǎo cān.",
+          "text_translation": "Qimmat emas. Bir kechasi ikki yuz yuan, nonushta ham kiradi.",
+          "text_translation_ru": "Не дорогой. Двести юаней за ночь, и завтрак включён.",
+          "text_translation_en": "Not expensive. Two hundred yuan a night, and breakfast is included.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s13",
+          "text_original": "你们吃了什么好吃的？",
+          "pinyin": "Nǐ men chī le shén me hǎo chī de?",
+          "text_translation": "Qanaqa mazali narsalar yedingiz?",
+          "text_translation_ru": "Что вкусного вы поели?",
+          "text_translation_en": "What good food did you eat?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s14",
+          "text_original": "吃了很多上海小吃，小笼包最好吃！",
+          "pinyin": "Chī le hěn duō Shàng hǎi xiǎo chī, xiǎo lóng bāo zuì hǎo chī!",
+          "text_translation": "Ko'p Shanxay gazaklaridan yedik, eng mazasi xiaolungbao edi!",
+          "text_translation_ru": "Мы поели много шанхайских закусок, сяолунбао самые вкусные!",
+          "text_translation_en": "We ate lots of Shanghai snacks; the xiaolongbao were the best!",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s15",
+          "text_original": "你们去购物了吗？",
+          "pinyin": "Nǐ men qù gòu wù le ma?",
+          "text_translation": "Xarid qilishga bordingizmi?",
+          "text_translation_ru": "Вы ходили по магазинам?",
+          "text_translation_en": "Did you go shopping?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s16",
+          "text_original": "去了。我买了一些礼物送给家人。",
+          "pinyin": "Qù le. Wǒ mǎi le yì xiē lǐ wù sòng gěi jiā rén.",
+          "text_translation": "Bordik. Oilamga bir nechta sovg'a sotib oldim.",
+          "text_translation_ru": "Ходили. Я купил несколько подарков для семьи.",
+          "text_translation_en": "We did. I bought some gifts for my family.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s17",
+          "text_original": "下次旅行，你打算去哪儿？",
+          "pinyin": "Xià cì lǚ xíng, nǐ dǎ suàn qù nǎr?",
+          "text_translation": "Keyingi safar qayerga borishni rejalashtiryapsan?",
+          "text_translation_ru": "Куда ты планируешь поехать в следующий раз?",
+          "text_translation_en": "Where do you plan to go on your next trip?",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s18",
+          "text_original": "我想去北京看故宫。",
+          "pinyin": "Wǒ xiǎng qù Běi jīng kàn Gù gōng.",
+          "text_translation": "Pekinga borib Gugunni ko'rmoqchiman.",
+          "text_translation_ru": "Я хочу поехать в Пекин и посмотреть Гугун.",
+          "text_translation_en": "I want to go to Beijing to see the Forbidden City.",
+          "speaker": "B"
+        },
+        {
+          "id": "d16-s19",
+          "text_original": "我也想去！我们可以一起去。",
+          "pinyin": "Wǒ yě xiǎng qù! Wǒ men kě yǐ yì qǐ qù.",
+          "text_translation": "Men ham bormoqchiman! Birga borsak bo'ladi.",
+          "text_translation_ru": "Я тоже хочу! Мы можем поехать вместе.",
+          "text_translation_en": "I'd like to go too! We can go together.",
+          "speaker": "A"
+        },
+        {
+          "id": "d16-s20",
+          "text_original": "太好了！我们夏天去吧。",
+          "pinyin": "Tài hǎo le! Wǒ men xià tiān qù ba.",
+          "text_translation": "Juda yaxshi! Yozda boraylik.",
+          "text_translation_ru": "Отлично! Давай поедем летом.",
+          "text_translation_en": "Great! Let's go in the summer.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -344,3 +344,25 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('汽车', 'qìchē', 'mashina; avtomobil', 'машина; автомобиль', 'car; automobile', 2),
   ('主意', 'zhǔyi', 'fikr; g''oya', 'идея; мысль', 'idea', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 旅行 (hsk2/dialogue16) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('上个月', 'shàng ge yuè', 'o''tgan oy', 'в прошлом месяце', 'last month', 2),
+  ('旅行', 'lǚxíng', 'sayohat', 'путешествие', 'travel; trip', 2),
+  ('好玩', 'hǎowán', 'qiziqarli', 'интересно; весело', 'fun; enjoyable', 2),
+  ('外滩', 'Wàitān', 'Vaytan (Shanxaydagi sayilgoh)', 'Вайтань (набережная в Шанхае)', 'The Bund (Shanghai)', 3),
+  ('东方明珠塔', 'Dōngfāng Míngzhū Tǎ', '"Sharq marvaridi" minorasi', 'телебашня «Восточная жемчужина»', 'Oriental Pearl Tower', 3),
+  ('高铁', 'gāotiě', 'tezyurar poyezd', 'высокоскоростной поезд', 'high-speed rail', 3),
+  ('小时', 'xiǎoshí', 'soat (vaqt)', 'час', 'hour', 2),
+  ('酒店', 'jiǔdiàn', 'mehmonxona', 'гостиница; отель', 'hotel', 2),
+  ('包', 'bāo', 'o''z ichiga olmoq; sumka', 'включать; сумка', 'to include; bag', 2),
+  ('早餐', 'zǎocān', 'nonushta', 'завтрак', 'breakfast', 2),
+  ('小吃', 'xiǎochī', 'yengil taom; gazak', 'закуски; уличная еда', 'snacks; street food', 3),
+  ('小笼包', 'xiǎolóngbāo', 'xiaolungbao (bug''da pishirilgan manti)', 'сяолунбао (пельмени на пару)', 'xiaolongbao (soup dumplings)', 3),
+  ('购物', 'gòuwù', 'xarid qilish', 'шопинг; покупки', 'shopping', 3),
+  ('一些', 'yìxiē', 'bir oz; bir nechta', 'немного; несколько', 'some; a few', 2),
+  ('礼物', 'lǐwù', 'sovg''a', 'подарок', 'gift; present', 2),
+  ('家人', 'jiārén', 'oila a''zolari', 'члены семьи', 'family members', 2),
+  ('故宫', 'Gùgōng', 'Gugun (Taqiqlangan shahar)', 'Гугун (Запретный город)', 'the Forbidden City', 3),
+  ('夏天', 'xiàtiān', 'yoz', 'лето', 'summer', 2)
+  on conflict (zh, py_norm) do nothing;
