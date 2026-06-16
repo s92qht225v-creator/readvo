@@ -996,49 +996,6 @@ body {
   padding-bottom: calc(var(--bottom-nav-height) + 1em + var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
 }
 
-@media (max-width: 600px) {
-  /* Move the section tab bar (Dialog / Words / Dictation / Practice) from the
-     top to a fixed bottom bar. The Dialog-tab toggle pill and the play FAB
-     float just above it; the Practice-tab mic area and every tab's content are
-     offset so nothing hides behind the nav. --dr-nav-h ≈ the nav bar height. */
-  .dialogue-reader { --dr-nav-h: 54px; }
-
-  .dr-tabs {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-left: 0;
-    z-index: 95;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
-  }
-  .dr-tabs__inner {
-    max-width: 100%;
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
-  }
-  .dr-tabs__tab { padding: 9px 4px; }
-
-  /* Tab content clears the fixed nav (+ the toggle pill on the Dialog tab). */
-  .dr-dialog-body { padding-bottom: calc(var(--dr-nav-h) + 84px + env(safe-area-inset-bottom, 0px)); }
-  .dr-panel { padding-bottom: calc(var(--dr-nav-h) + 24px + env(safe-area-inset-bottom, 0px)); }
-
-  /* Dialog toggle pill (the floating bar) floats just above the nav. */
-  .dialogue-reader .story__bottom-bar {
-    bottom: calc(var(--dr-nav-h) + env(safe-area-inset-bottom, 0px));
-  }
-
-  /* Play FAB above the toggle pill + nav. */
-  .story__play-fab {
-    bottom: calc(var(--dr-nav-h) + 88px + env(safe-area-inset-bottom, 0px));
-  }
-
-  /* Practice mic area sits on top of the nav, not behind it. */
-  .drp__mic-area {
-    bottom: calc(var(--dr-nav-h) + env(safe-area-inset-bottom, 0px));
-  }
-}
 
 /* Content panels (vocab / grammar / quiz) */
 .dr-panel {
@@ -3993,8 +3950,7 @@ body {
 .lp__footer-logo { display: none; }
 
 /* Mobile: a SLIM hero (logo + ☰ menu only) sits on top; the nav bar stays a
-   sticky strip directly under it with icon tabs — the active tab swaps its icon
-   for its text label. */
+   sticky text-tab strip directly under it (same as desktop). */
 @media (max-width: 600px) {
   /* Slim the hero: keep the logo + menu top row, drop the big decorative block
      and the fixed 175px banner height so it collapses to the row. */
@@ -4009,43 +3965,8 @@ body {
   .home__hero--lang .dr-hero__body { display: none; }
   .home__hero--lang .lp__hero-watermark { display: none; }
 
-  /* Nav bar → fixed bottom (the menu stays in the hero, so no ☰ here). */
-  .lp__tabs {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-left: 0;
-    z-index: 60;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2);
-  }
-  .lp__tabs-inner {
-    gap: 4px;
-    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-  }
-
-  .lp__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 46px;
-    padding: 6px 4px;
-    border-radius: 14px;
-    white-space: nowrap;
-    transition: flex 0.22s ease, background 0.15s, color 0.15s;
-  }
-  .lp__tab-icon { display: flex; align-items: center; justify-content: center; }
-  .lp__tab-icon svg { width: 23px; height: 23px; }
-  .lp__tab-label { display: none; }
-  .lp__tab--active { flex: 2.4; }
-  .lp__tab--active .lp__tab-icon { display: none; }
-  .lp__tab--active .lp__tab-label { display: inline; font-size: 0.9rem; }
-
-  /* Menu + logo are back in the hero — hide the bottom-nav-era duplicates. */
-  .lp__tabs-menu { display: none; }
-  .lp__footer-logo { display: none; }
+  /* Nav bar stays a sticky text-tab strip directly under the slim hero
+     (inherits the base .lp__tabs / .lp__tab rules — text labels, no icons). */
 }
 
 .lp__hero-watermark {
@@ -11509,8 +11430,6 @@ body {
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
   .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
-  /* clear the catalog's fixed bottom tab bar */
-  .telegram-fab--lifted { bottom: calc(66px + env(safe-area-inset-bottom)); }
 }
 
 /* =============================================================================
