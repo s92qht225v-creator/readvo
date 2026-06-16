@@ -1,0 +1,141 @@
+{
+  "id": "hsk2-dialogue10",
+  "slug": "waiting-for-a-friend",
+  "title": "等朋友",
+  "pinyin": "Děng péngyou",
+  "titleTranslation": "Do'stni kutish",
+  "titleTranslation_ru": "Ждать друга",
+  "titleTranslation_en": "Waiting for a Friend",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "谁",
+    "等",
+    "发消息",
+    "路上",
+    "堵车",
+    "多久",
+    "大概",
+    { "zh": "点", "py": "diǎn" },
+    "咖啡"
+  ],
+  "sections": [
+    {
+      "id": "d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d10-s1",
+          "text_original": "你在等谁？",
+          "pinyin": "Nǐ zài děng shéi?",
+          "text_translation": "Kimni kutyapsan?",
+          "text_translation_ru": "Кого ты ждёшь?",
+          "text_translation_en": "Who are you waiting for?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s2",
+          "text_original": "我在等我朋友。",
+          "pinyin": "Wǒ zài děng wǒ péng you.",
+          "text_translation": "Men do'stimni kutyapman.",
+          "text_translation_ru": "Я жду своего друга.",
+          "text_translation_en": "I'm waiting for my friend.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s3",
+          "text_original": "他什么时候来？",
+          "pinyin": "Tā shén me shí hou lái?",
+          "text_translation": "U qachon keladi?",
+          "text_translation_ru": "Когда он придёт?",
+          "text_translation_en": "When is he coming?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s4",
+          "text_original": "他说三点来。",
+          "pinyin": "Tā shuō sān diǎn lái.",
+          "text_translation": "U soat uchda kelaman dedi.",
+          "text_translation_ru": "Он сказал, что придёт в три часа.",
+          "text_translation_en": "He said he'd come at three o'clock.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s5",
+          "text_original": "现在已经三点十分了。",
+          "pinyin": "Xiàn zài yǐ jīng sān diǎn shí fēn le.",
+          "text_translation": "Hozir allaqachon uchdan o'n daqiqa o'tdi.",
+          "text_translation_ru": "Сейчас уже три часа десять минут.",
+          "text_translation_en": "It's already ten past three now.",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s6",
+          "text_original": "是啊，所以我给他发了一个消息。",
+          "pinyin": "Shì a, suǒ yǐ wǒ gěi tā fā le yí gè xiāo xi.",
+          "text_translation": "Ha, shuning uchun unga xabar yubordim.",
+          "text_translation_ru": "Да, поэтому я отправил ему сообщение.",
+          "text_translation_en": "Yeah, so I sent him a message.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s7",
+          "text_original": "他怎么说？",
+          "pinyin": "Tā zěn me shuō?",
+          "text_translation": "U nima dedi?",
+          "text_translation_ru": "Что он ответил?",
+          "text_translation_en": "What did he say?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s8",
+          "text_original": "他说路上有点儿堵车。",
+          "pinyin": "Tā shuō lù shang yǒu diǎnr dǔ chē.",
+          "text_translation": "U yo'lda biroz tirbandlik bor dedi.",
+          "text_translation_ru": "Он сказал, что на дороге небольшая пробка.",
+          "text_translation_en": "He said there's a bit of traffic on the way.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s9",
+          "text_original": "那他还要多久？",
+          "pinyin": "Nà tā hái yào duō jiǔ?",
+          "text_translation": "Unda u yana qancha vaqt kerak?",
+          "text_translation_ru": "Тогда сколько ему ещё нужно?",
+          "text_translation_en": "So how much longer will he be?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s10",
+          "text_original": "大概十分钟。",
+          "pinyin": "Dà gài shí fēn zhōng.",
+          "text_translation": "Taxminan o'n daqiqa.",
+          "text_translation_ru": "Примерно десять минут.",
+          "text_translation_en": "About ten minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s11",
+          "text_original": "他来了以后，我们一起点咖啡吧。",
+          "pinyin": "Tā lái le yǐ hòu, wǒ men yì qǐ diǎn kā fēi ba.",
+          "text_translation": "U kelgandan keyin, birga qahva buyuramiz.",
+          "text_translation_ru": "После того как он придёт, давай вместе закажем кофе.",
+          "text_translation_en": "After he arrives, let's order coffee together.",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s12",
+          "text_original": "好啊。",
+          "pinyin": "Hǎo a.",
+          "text_translation": "Mayli.",
+          "text_translation_ru": "Хорошо.",
+          "text_translation_en": "Sure.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

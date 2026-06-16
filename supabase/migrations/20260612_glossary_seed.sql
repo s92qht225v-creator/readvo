@@ -252,3 +252,18 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('还', 'huán', 'qaytarmoq', 'вернуть', 'to return (something)', 2),
   ('页', 'yè', 'bet (sahifa)', 'страница', 'page', 2)
   on conflict (zh, py_norm) do nothing;
+
+-- 等朋友 (hsk2/dialogue10) vocab + related words.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('谁', 'shéi', 'kim', 'кто', 'who', 1),
+  ('发消息', 'fā xiāoxi', 'xabar yubormoq', 'отправить сообщение', 'to send a message', 3),
+  ('路上', 'lùshang', 'yo''lda', 'в пути; по дороге', 'on the way', 2),
+  ('多久', 'duō jiǔ', 'qancha vaqt', 'как долго', 'how long', 2),
+  ('咖啡', 'kāfēi', 'qahva', 'кофе', 'coffee', 1),
+  ('堵车', 'dǔchē', 'tirbandlik', 'пробка (на дороге)', 'traffic jam', 3),
+  ('大概', 'dàgài', 'taxminan', 'примерно', 'approximately', 3),
+  ('点', 'diǎn', 'buyurtma bermoq', 'заказать', 'to order (food/drinks)', 2),
+  ('所以', 'suǒyǐ', 'shuning uchun', 'поэтому', 'so; therefore', 2),
+  ('消息', 'xiāoxi', 'xabar', 'сообщение; новость', 'message; news', 3),
+  ('发', 'fā', 'yubormoq', 'отправлять', 'to send', 2)
+  on conflict (zh, py_norm) do nothing;
