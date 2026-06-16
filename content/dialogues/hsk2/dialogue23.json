@@ -1,0 +1,162 @@
+{
+  "id": "hsk2-dialogue23",
+  "slug": "holiday-plans",
+  "title": "假期",
+  "pinyin": "Jiàqī",
+  "titleTranslation": "Ta'til",
+  "titleTranslation_ru": "Каникулы",
+  "titleTranslation_en": "Holiday",
+  "level": 2,
+  "tag": "sayohat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "假期",
+    "打算",
+    "海边",
+    "大自然",
+    "凉",
+    "家人",
+    "开车",
+    "方便",
+    "地方",
+    "旅馆",
+    "听起来",
+    "祝"
+  ],
+  "sections": [
+    {
+      "id": "d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d23-s1",
+          "text_original": "下个星期有假期，你打算去哪儿？",
+          "pinyin": "Xià ge xīng qī yǒu jià qī, nǐ dǎ suàn qù nǎr?",
+          "text_translation": "Keyingi hafta ta'til bor, qayerga bormoqchisan?",
+          "text_translation_ru": "На следующей неделе каникулы, куда ты собираешься?",
+          "text_translation_en": "There's a holiday next week — where are you planning to go?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s2",
+          "text_original": "我打算去海边。你呢？",
+          "pinyin": "Wǒ dǎ suàn qù hǎi biān. Nǐ ne?",
+          "text_translation": "Men dengiz bo'yiga bormoqchiman. Sen-chi?",
+          "text_translation_ru": "Я собираюсь на море. А ты?",
+          "text_translation_en": "I'm planning to go to the seaside. And you?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s3",
+          "text_original": "我想去山上。我喜欢大自然。",
+          "pinyin": "Wǒ xiǎng qù shān shang. Wǒ xǐ huan dà zì rán.",
+          "text_translation": "Men tog'ga bormoqchiman. Tabiatni yoqtiraman.",
+          "text_translation_ru": "Я хочу в горы. Я люблю природу.",
+          "text_translation_en": "I want to go to the mountains. I love nature.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s4",
+          "text_original": "山上冷不冷？",
+          "pinyin": "Shān shang lěng bu lěng?",
+          "text_translation": "Tog'da sovuqmi?",
+          "text_translation_ru": "В горах холодно?",
+          "text_translation_en": "Is it cold in the mountains?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s5",
+          "text_original": "不冷。但是晚上有点凉。",
+          "pinyin": "Bù lěng. Dàn shì wǎn shang yǒu diǎn liáng.",
+          "text_translation": "Sovuq emas. Lekin kechqurun biroz salqin.",
+          "text_translation_ru": "Не холодно. Но вечером немного прохладно.",
+          "text_translation_en": "Not cold. But it's a bit chilly in the evening.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s6",
+          "text_original": "你一个人去吗？",
+          "pinyin": "Nǐ yí ge rén qù ma?",
+          "text_translation": "Yolg'iz borasanmi?",
+          "text_translation_ru": "Ты едешь один?",
+          "text_translation_en": "Are you going alone?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s7",
+          "text_original": "不是。我和家人一起去。",
+          "pinyin": "Bú shì. Wǒ hé jiā rén yì qǐ qù.",
+          "text_translation": "Yo'q. Oilam bilan birga boraman.",
+          "text_translation_ru": "Нет. Я еду вместе с семьёй.",
+          "text_translation_en": "No. I'm going with my family.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s8",
+          "text_original": "你们怎么去？",
+          "pinyin": "Nǐ men zěn me qù?",
+          "text_translation": "Qanday borasizlar?",
+          "text_translation_ru": "Как вы добираетесь?",
+          "text_translation_en": "How are you getting there?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s9",
+          "text_original": "我们开车去。开车很方便。",
+          "pinyin": "Wǒ men kāi chē qù. Kāi chē hěn fāng biàn.",
+          "text_translation": "Mashinada boramiz. Mashinada qulay.",
+          "text_translation_ru": "Едем на машине. На машине очень удобно.",
+          "text_translation_en": "We're driving. Driving is very convenient.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s10",
+          "text_original": "住的地方找到了吗？",
+          "pinyin": "Zhù de dì fang zhǎo dào le ma?",
+          "text_translation": "Yashaydigan joy topildimi?",
+          "text_translation_ru": "Место для проживания нашли?",
+          "text_translation_en": "Have you found a place to stay?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s11",
+          "text_original": "找到了。我们住在一家小旅馆。",
+          "pinyin": "Zhǎo dào le. Wǒ men zhù zài yì jiā xiǎo lǚ guǎn.",
+          "text_translation": "Topildi. Kichkina bir mehmonxonada turamiz.",
+          "text_translation_ru": "Нашли. Мы остановимся в небольшой гостинице.",
+          "text_translation_en": "Yes. We're staying at a small inn.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s12",
+          "text_original": "那儿漂亮吗？",
+          "pinyin": "Nàr piào liang ma?",
+          "text_translation": "U yer chiroylimi?",
+          "text_translation_ru": "Там красиво?",
+          "text_translation_en": "Is it beautiful there?",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s13",
+          "text_original": "很漂亮。可以看山，也可以看水。",
+          "pinyin": "Hěn piào liang. Kě yǐ kàn shān, yě kě yǐ kàn shuǐ.",
+          "text_translation": "Juda chiroyli. Tog'ni ham, suvni ham ko'rsa bo'ladi.",
+          "text_translation_ru": "Очень красиво. Можно любоваться и горами, и водой.",
+          "text_translation_en": "Very beautiful. You can see mountains and water.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s14",
+          "text_original": "听起来真好！祝你们玩得开心！",
+          "pinyin": "Tīng qǐ lái zhēn hǎo! Zhù nǐ men wán de kāi xīn!",
+          "text_translation": "Juda zo'rga o'xshaydi! Yaxshi dam olishlaringizni tilayman!",
+          "text_translation_ru": "Звучит здорово! Желаю вам хорошо повеселиться!",
+          "text_translation_en": "That sounds great! Have a wonderful time!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

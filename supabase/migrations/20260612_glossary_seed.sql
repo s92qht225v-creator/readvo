@@ -524,3 +524,14 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('不错', 'búcuò', 'yomon emas; zo''r', 'неплохо; хорошо', 'not bad; pretty good', 2),
   ('西餐厅', 'xīcāntīng', 'Yevropa restorani', 'ресторан западной кухни', 'Western restaurant', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 假期 (hsk2/dialogue23) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('假期', 'jiàqī', 'ta''til', 'каникулы; отпуск', 'holiday; vacation', 3),
+  ('海边', 'hǎibiān', 'dengiz bo''yi', 'побережье; у моря', 'seaside', 3),
+  ('大自然', 'dàzìrán', 'tabiat', 'природа', 'nature', 4),
+  ('凉', 'liáng', 'salqin', 'прохладный', 'cool; chilly', 3),
+  ('地方', 'dìfang', 'joy', 'место', 'place', 2),
+  ('旅馆', 'lǚguǎn', 'mehmonxona', 'гостиница', 'hotel; inn', 3),
+  ('祝', 'zhù', 'tilamoq', 'желать', 'to wish', 3)
+  on conflict (zh, py_norm) do nothing;
