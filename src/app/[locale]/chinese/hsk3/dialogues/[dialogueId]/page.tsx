@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { loadDialogue, loadDialoguesForBook } from '@/services';
+import { getDialogue, loadDialoguesForBook } from '@/services';
 import { DialogueReader } from '@/components/DialogueReader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 import { stripPinyinTones } from '@/utils/rubyText';
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageParams) {
   const { locale, dialogueId } = await params;
-  const dialogue = await loadDialogue('hsk3', dialogueId);
+  const dialogue = await getDialogue('hsk3', dialogueId);
 
   const translation = dialogue
     ? locale === 'ru' ? dialogue.titleTranslation_ru
@@ -61,7 +61,7 @@ export default async function DialoguePage({ params }: PageParams) {
   const { locale, dialogueId } = await params;
   setRequestLocale(locale);
 
-  const raw = await loadDialogue('hsk3', dialogueId);
+  const raw = await getDialogue('hsk3', dialogueId);
 
   if (!raw) {
     notFound();

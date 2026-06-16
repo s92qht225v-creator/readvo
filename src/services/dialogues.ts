@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import fs from 'fs/promises';
 import path from 'path';
 import { resolveVocab, type VocabRef, type VocabItem } from './glossary';
@@ -181,6 +182,13 @@ export async function loadDialogue(bookId: string, dialogueId: string): Promise<
   }
   return null;
 }
+
+/**
+ * Request-scoped memoized loadDialogue. generateMetadata and the page body both
+ * need the same dialogue; React's cache() dedupes them to a single read per
+ * render (and avoids running the O(N) slug→file fallback scan twice).
+ */
+export const getDialogue = cache(loadDialogue);
 
 export type DialoguePageResolved = Omit<DialoguePage, 'vocab'> & { vocab?: VocabItem[] };
 

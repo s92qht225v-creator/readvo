@@ -8,7 +8,7 @@ export type { LessonInfo } from './content';
 
 export { loadFlashcardDeck } from './flashcards';
 
-export { loadDialoguesForBook, loadDialogue, resolveDialogueVocab } from './dialogues';
+export { loadDialoguesForBook, loadDialogue, getDialogue, resolveDialogueVocab } from './dialogues';
 export type { DialogueInfo, DialoguePage, DialoguePageResolved } from './dialogues';
 
 export { loadKaraokeSong, loadKaraokeSongs } from './karaoke';
