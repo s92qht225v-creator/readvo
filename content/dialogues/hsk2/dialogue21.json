@@ -1,0 +1,277 @@
+{
+  "id": "hsk2-dialogue21",
+  "slug": "cooking-dinner",
+  "title": "做饭",
+  "pinyin": "Zuò fàn",
+  "titleTranslation": "Ovqat pishirish",
+  "titleTranslation_ru": "Готовить еду",
+  "titleTranslation_en": "Cooking",
+  "level": 2,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "做饭",
+    "试试",
+    "红烧鱼",
+    "刚刚",
+    "开始",
+    "帮忙",
+    "洗菜",
+    "切菜",
+    "葱",
+    "姜",
+    "蒜",
+    "冰箱",
+    "西红柿",
+    "炒鸡蛋",
+    "青菜",
+    "调料",
+    "盐",
+    "酱油",
+    "糖",
+    "煮",
+    "大概",
+    "闻起来",
+    "香",
+    "马上",
+    "尝",
+    "厉害",
+    "教",
+    "跟"
+  ],
+  "sections": [
+    {
+      "id": "d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d21-s1",
+          "text_original": "晚上好！你在做什么？",
+          "pinyin": "Wǎn shang hǎo! Nǐ zài zuò shén me?",
+          "text_translation": "Xayrli kech! Nima qilyapsan?",
+          "text_translation_ru": "Добрый вечер! Что ты делаешь?",
+          "text_translation_en": "Good evening! What are you doing?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s2",
+          "text_original": "我在做饭。今天想试试做红烧鱼。",
+          "pinyin": "Wǒ zài zuò fàn. Jīn tiān xiǎng shì shi zuò hóng shāo yú.",
+          "text_translation": "Ovqat pishiryapman. Bugun qizil sousdagi baliqni sinab ko'rmoqchiman.",
+          "text_translation_ru": "Я готовлю. Сегодня хочу попробовать сделать рыбу хуншао.",
+          "text_translation_en": "I'm cooking. Today I want to try making red-braised fish.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s3",
+          "text_original": "你会做饭吗？",
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "text_translation": "Ovqat pishira olasanmi?",
+          "text_translation_ru": "Ты умеешь готовить?",
+          "text_translation_en": "Can you cook?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s4",
+          "text_original": "会一点。我刚刚开始学。",
+          "pinyin": "Huì yì diǎn. Wǒ gāng gāng kāi shǐ xué.",
+          "text_translation": "Biroz bilaman. Endigina o'rgana boshladim.",
+          "text_translation_ru": "Немного. Я только начал учиться.",
+          "text_translation_en": "A little. I just started learning.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s5",
+          "text_original": "需要我帮忙吗？",
+          "pinyin": "Xū yào wǒ bāng máng ma?",
+          "text_translation": "Yordam kerakmi?",
+          "text_translation_ru": "Нужна моя помощь?",
+          "text_translation_en": "Do you need my help?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s6",
+          "text_original": "好啊！你可以帮我洗菜和切菜吗？",
+          "pinyin": "Hǎo a! Nǐ kě yǐ bāng wǒ xǐ cài hé qiē cài ma?",
+          "text_translation": "Mayli! Sabzavot yuvish va to'g'rashda yordam bera olasanmi?",
+          "text_translation_ru": "Хорошо! Можешь помочь мне помыть и нарезать овощи?",
+          "text_translation_en": "Sure! Can you help me wash and cut the vegetables?",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s7",
+          "text_original": "可以。要切什么？",
+          "pinyin": "Kě yǐ. Yào qiē shén me?",
+          "text_translation": "Bo'ladi. Nimani to'g'ray?",
+          "text_translation_ru": "Можно. Что резать?",
+          "text_translation_en": "Sure. What should I cut?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s8",
+          "text_original": "切一些葱、姜和蒜。",
+          "pinyin": "Qiē yì xiē cōng, jiāng hé suàn.",
+          "text_translation": "Bir oz ko'k piyoz, zanjabil va sarimsoq to'g'ra.",
+          "text_translation_ru": "Нарежь немного зелёного лука, имбиря и чеснока.",
+          "text_translation_en": "Cut some scallions, ginger, and garlic.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s9",
+          "text_original": "好的。鱼买了吗？",
+          "pinyin": "Hǎo de. Yú mǎi le ma?",
+          "text_translation": "Yaxshi. Baliq olib qo'yildimi?",
+          "text_translation_ru": "Хорошо. Рыбу купил?",
+          "text_translation_en": "Okay. Did you buy the fish?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s10",
+          "text_original": "买了。在冰箱里。",
+          "pinyin": "Mǎi le. Zài bīng xiāng lǐ.",
+          "text_translation": "Oldim. Muzlatgichda.",
+          "text_translation_ru": "Купил. В холодильнике.",
+          "text_translation_en": "Yes. It's in the fridge.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s11",
+          "text_original": "还需要别的菜吗？",
+          "pinyin": "Hái xū yào bié de cài ma?",
+          "text_translation": "Yana boshqa taom kerakmi?",
+          "text_translation_ru": "Нужны ещё какие-то блюда?",
+          "text_translation_en": "Do we need any other dishes?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s12",
+          "text_original": "再做一个西红柿炒鸡蛋，一个青菜。",
+          "pinyin": "Zài zuò yí ge xī hóng shì chǎo jī dàn, yí ge qīng cài.",
+          "text_translation": "Yana bitta pomidorli qovurilgan tuxum va bitta ko'k sabzavot qilamiz.",
+          "text_translation_ru": "Ещё сделаем яичницу с помидорами и зелёные овощи.",
+          "text_translation_en": "Let's also make tomato scrambled eggs and a green-vegetable dish.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s13",
+          "text_original": "西红柿炒鸡蛋我喜欢吃！",
+          "pinyin": "Xī hóng shì chǎo jī dàn wǒ xǐ huan chī!",
+          "text_translation": "Pomidorli qovurilgan tuxumni yoqtiraman!",
+          "text_translation_ru": "Яичницу с помидорами я люблю!",
+          "text_translation_en": "I love tomato scrambled eggs!",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s14",
+          "text_original": "那我做多一点。",
+          "pinyin": "Nà wǒ zuò duō yì diǎn.",
+          "text_translation": "Unda ko'proq qilaman.",
+          "text_translation_ru": "Тогда я сделаю побольше.",
+          "text_translation_en": "Then I'll make a bit more.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s15",
+          "text_original": "你用什么调料？",
+          "pinyin": "Nǐ yòng shén me tiáo liào?",
+          "text_translation": "Qanaqa ziravor ishlatasan?",
+          "text_translation_ru": "Какие приправы ты используешь?",
+          "text_translation_en": "What seasonings do you use?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s16",
+          "text_original": "用盐、酱油和糖。",
+          "pinyin": "Yòng yán, jiàng yóu hé táng.",
+          "text_translation": "Tuz, soya sousi va shakar ishlataman.",
+          "text_translation_ru": "Использую соль, соевый соус и сахар.",
+          "text_translation_en": "Salt, soy sauce, and sugar.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s17",
+          "text_original": "鱼要煮多久？",
+          "pinyin": "Yú yào zhǔ duō jiǔ?",
+          "text_translation": "Baliqni qancha vaqt pishirish kerak?",
+          "text_translation_ru": "Сколько варить рыбу?",
+          "text_translation_en": "How long does the fish need to cook?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s18",
+          "text_original": "大概二十分钟。",
+          "pinyin": "Dà gài èr shí fēn zhōng.",
+          "text_translation": "Taxminan yigirma daqiqa.",
+          "text_translation_ru": "Примерно двадцать минут.",
+          "text_translation_en": "About twenty minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s19",
+          "text_original": "饭煮了吗？",
+          "pinyin": "Fàn zhǔ le ma?",
+          "text_translation": "Guruch pishdimi?",
+          "text_translation_ru": "Рис уже варится?",
+          "text_translation_en": "Is the rice cooking?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s20",
+          "text_original": "还没。我现在煮饭。",
+          "pinyin": "Hái méi. Wǒ xiàn zài zhǔ fàn.",
+          "text_translation": "Hali yo'q. Hozir guruch pishiraman.",
+          "text_translation_ru": "Ещё нет. Я сейчас поставлю рис.",
+          "text_translation_en": "Not yet. I'll cook the rice now.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s21",
+          "text_original": "你做的菜闻起来好香啊！",
+          "pinyin": "Nǐ zuò de cài wén qǐ lái hǎo xiāng a!",
+          "text_translation": "Sen pishirgan taomning hidi juda xushbo'y-ku!",
+          "text_translation_ru": "Твоя еда так вкусно пахнет!",
+          "text_translation_en": "The food you're making smells so good!",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s22",
+          "text_original": "马上就好了。你尝一尝吧！",
+          "pinyin": "Mǎ shàng jiù hǎo le. Nǐ cháng yi cháng ba!",
+          "text_translation": "Hozir tayyor bo'ladi. Tatib ko'r!",
+          "text_translation_ru": "Сейчас будет готово. Попробуй!",
+          "text_translation_en": "It'll be ready in a moment. Have a taste!",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s23",
+          "text_original": "好吃！你真厉害！",
+          "pinyin": "Hǎo chī! Nǐ zhēn lì hai!",
+          "text_translation": "Mazali! Sen rostdan ham zo'rsan!",
+          "text_translation_ru": "Вкусно! Ты молодец!",
+          "text_translation_en": "Delicious! You're really good!",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s24",
+          "text_original": "谢谢！以后我可以教你做菜。",
+          "pinyin": "Xiè xie! Yǐ hòu wǒ kě yǐ jiāo nǐ zuò cài.",
+          "text_translation": "Rahmat! Keyinchalik senga ovqat pishirishni o'rgataman.",
+          "text_translation_ru": "Спасибо! В будущем я могу научить тебя готовить.",
+          "text_translation_en": "Thanks! I can teach you to cook sometime.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s25",
+          "text_original": "太好了！我要跟你学。",
+          "pinyin": "Tài hǎo le! Wǒ yào gēn nǐ xué.",
+          "text_translation": "Juda yaxshi! Sendan o'rganaman.",
+          "text_translation_ru": "Отлично! Я буду учиться у тебя.",
+          "text_translation_en": "Great! I'll learn from you.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -432,3 +432,30 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('租房', 'zūfáng', 'uy ijaraga olish', 'снимать жильё', 'to rent a place', 3),
   ('合适', 'héshì', 'mos; munosib', 'подходящий', 'suitable; appropriate', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 做饭 (hsk2/dialogue21) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('试试', 'shìshi', 'sinab ko''rmoq', 'попробовать', 'to try', 2),
+  ('红烧鱼', 'hóngshāo yú', 'qizil sousda dimlangan baliq', 'рыба хуншао (в соевом соусе)', 'red-braised fish', 4),
+  ('刚刚', 'gānggāng', 'hozirgina; endigina', 'только что', 'just (now)', 3),
+  ('帮忙', 'bāngmáng', 'yordam bermoq', 'помогать', 'to help', 2),
+  ('洗菜', 'xǐ cài', 'sabzavot yuvmoq', 'мыть овощи', 'to wash vegetables', 3),
+  ('切菜', 'qiē cài', 'sabzavot to''g''ramoq', 'резать овощи', 'to cut vegetables', 3),
+  ('葱', 'cōng', 'ko''k piyoz', 'зелёный лук', 'scallion; green onion', 4),
+  ('姜', 'jiāng', 'zanjabil', 'имбирь', 'ginger', 4),
+  ('蒜', 'suàn', 'sarimsoq', 'чеснок', 'garlic', 4),
+  ('冰箱', 'bīngxiāng', 'muzlatgich', 'холодильник', 'refrigerator', 3),
+  ('西红柿', 'xīhóngshì', 'pomidor', 'помидор', 'tomato', 3),
+  ('炒鸡蛋', 'chǎo jīdàn', 'qovurilgan tuxum', 'яичница; жареные яйца', 'scrambled eggs', 3),
+  ('青菜', 'qīngcài', 'ko''k sabzavot', 'зелёные овощи', 'green vegetables', 3),
+  ('调料', 'tiáoliào', 'ziravor', 'приправа; специи', 'seasoning; condiment', 4),
+  ('盐', 'yán', 'tuz', 'соль', 'salt', 3),
+  ('酱油', 'jiàngyóu', 'soya sousi', 'соевый соус', 'soy sauce', 3),
+  ('糖', 'táng', 'shakar; qand', 'сахар; конфета', 'sugar; candy', 2),
+  ('煮', 'zhǔ', 'qaynatmoq; pishirmoq', 'варить', 'to boil; to cook', 3),
+  ('闻起来', 'wén qǐlái', 'hidi ... keladi', 'пахнет; на запах', 'smells (like)', 3),
+  ('香', 'xiāng', 'xushbo''y; mazali hidli', 'ароматный; вкусно пахнущий', 'fragrant; aromatic', 3),
+  ('尝', 'cháng', 'tatib ko''rmoq', 'пробовать (на вкус)', 'to taste', 3),
+  ('厉害', 'lìhai', 'zo''r; ajoyib', 'круто; здорово', 'awesome; impressive', 3),
+  ('跟', 'gēn', 'bilan; ...dan (o''rganmoq)', 'с; у (учиться у)', 'with; from', 2)
+  on conflict (zh, py_norm) do nothing;
