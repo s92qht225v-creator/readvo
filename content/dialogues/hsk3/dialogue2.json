@@ -1,0 +1,200 @@
+{
+  "id": "hsk3-dialogue2",
+  "slug": "staying-healthy",
+  "title": "健康",
+  "pinyin": "Jiànkāng",
+  "titleTranslation": "Salomatlik",
+  "titleTranslation_ru": "Здоровье",
+  "titleTranslation_en": "Health",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "气色",
+    "感觉",
+    "空气",
+    "游泳",
+    "肩膀",
+    "改变",
+    "熬夜",
+    "精神",
+    "坚持",
+    "发现",
+    "变化",
+    "做到",
+    "到时候",
+    "尤其"
+  ],
+  "sections": [
+    {
+      "id": "d2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d2-s1",
+          "text_original": "你最近看起来气色不错，是不是开始运动了？",
+          "pinyin": "Nǐ zuì jìn kàn qǐ lái qì sè bú cuò, shì bú shì kāi shǐ yùn dòng le?",
+          "text_translation": "Yaqinda rang-ro'ying yaxshi ko'rinyapti, sport bilan shug'ullana boshladingmi?",
+          "text_translation_ru": "Ты в последнее время хорошо выглядишь, начал заниматься спортом?",
+          "text_translation_en": "You've been looking good lately — did you start exercising?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s2",
+          "text_original": "对。我上个月开始每天跑步。",
+          "pinyin": "Duì. Wǒ shàng ge yuè kāi shǐ měi tiān pǎo bù.",
+          "text_translation": "Ha. O'tgan oydan beri har kuni yugura boshladim.",
+          "text_translation_ru": "Да. С прошлого месяца я каждый день бегаю.",
+          "text_translation_en": "Yeah. I started running every day last month.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s3",
+          "text_original": "你跑多久？",
+          "pinyin": "Nǐ pǎo duō jiǔ?",
+          "text_translation": "Qancha yuguryapsan?",
+          "text_translation_ru": "Сколько ты бегаешь?",
+          "text_translation_en": "How long do you run?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s4",
+          "text_original": "一般跑四十分钟。跑完以后感觉很舒服。",
+          "pinyin": "Yì bān pǎo sì shí fēn zhōng. Pǎo wán yǐ hòu gǎn jué hěn shū fu.",
+          "text_translation": "Odatda qirq daqiqa yuguraman. Yugurib bo'lgach o'zimni juda yengil his qilaman.",
+          "text_translation_ru": "Обычно бегаю сорок минут. После пробежки чувствую себя очень хорошо.",
+          "text_translation_en": "Usually about forty minutes. I feel great after running.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s5",
+          "text_original": "你早上跑还是晚上跑？",
+          "pinyin": "Nǐ zǎo shang pǎo hái shì wǎn shang pǎo?",
+          "text_translation": "Ertalab yugurasanmi yoki kechqurunmi?",
+          "text_translation_ru": "Ты бегаешь утром или вечером?",
+          "text_translation_en": "Do you run in the morning or in the evening?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s6",
+          "text_original": "早上跑。早上空气比较好，人也少。",
+          "pinyin": "Zǎo shang pǎo. Zǎo shang kōng qì bǐ jiào hǎo, rén yě shǎo.",
+          "text_translation": "Ertalab yuguraman. Ertalab havo toza, odam ham kam.",
+          "text_translation_ru": "Утром. Утром воздух чище, и людей меньше.",
+          "text_translation_en": "In the morning. The air is fresher and there are fewer people.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s7",
+          "text_original": "除了跑步，你还做别的运动吗？",
+          "pinyin": "Chú le pǎo bù, nǐ hái zuò bié de yùn dòng ma?",
+          "text_translation": "Yugurishdan tashqari boshqa sport bilan shug'ullanasanmi?",
+          "text_translation_ru": "Кроме бега, ты занимаешься другим спортом?",
+          "text_translation_en": "Besides running, do you do any other exercise?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s8",
+          "text_original": "周末我会去游泳。游泳对肩膀很好。",
+          "pinyin": "Zhōu mò wǒ huì qù yóu yǒng. Yóu yǒng duì jiān bǎng hěn hǎo.",
+          "text_translation": "Dam olish kunlari suzgani boraman. Suzish yelka uchun juda foydali.",
+          "text_translation_ru": "По выходным я хожу плавать. Плавание полезно для плеч.",
+          "text_translation_en": "On weekends I go swimming. Swimming is good for the shoulders.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s9",
+          "text_original": "你的生活习惯改变了不少。",
+          "pinyin": "Nǐ de shēng huó xí guàn gǎi biàn le bù shǎo.",
+          "text_translation": "Turmush odatlaring ancha o'zgaribdi.",
+          "text_translation_ru": "Твои привычки заметно изменились.",
+          "text_translation_en": "Your lifestyle habits have changed quite a bit.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s10",
+          "text_original": "是啊。以前我经常熬夜，早上起不来。",
+          "pinyin": "Shì a. Yǐ qián wǒ jīng cháng áo yè, zǎo shang qǐ bù lái.",
+          "text_translation": "Ha. Ilgari tez-tez tunni bedor o'tkazardim, ertalab turolmasdim.",
+          "text_translation_ru": "Да. Раньше я часто не спал по ночам и не мог встать утром.",
+          "text_translation_en": "Yeah. I used to stay up late often and couldn't get up in the morning.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s11",
+          "text_original": "熬夜对身体不好，我也知道，但是改不了。",
+          "pinyin": "Áo yè duì shēn tǐ bù hǎo, wǒ yě zhī dào, dàn shì gǎi bù liǎo.",
+          "text_translation": "Tunni bedor o'tkazish sog'liqqa zararli, men ham bilaman, lekin tashlay olmayman.",
+          "text_translation_ru": "Поздно ложиться вредно для здоровья, я знаю, но не могу это изменить.",
+          "text_translation_en": "Staying up late is bad for your health — I know, but I can't change it.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s12",
+          "text_original": "你可以慢慢来。先从早睡开始。",
+          "pinyin": "Nǐ kě yǐ màn man lái. Xiān cóng zǎo shuì kāi shǐ.",
+          "text_translation": "Asta-sekin qilsang bo'ladi. Avval erta yotishdan boshla.",
+          "text_translation_ru": "Можешь делать это постепенно. Начни с того, чтобы ложиться раньше.",
+          "text_translation_en": "You can take it slow. Start by going to bed early.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s13",
+          "text_original": "你晚上几点睡？",
+          "pinyin": "Nǐ wǎn shang jǐ diǎn shuì?",
+          "text_translation": "Kechqurun soat nechada uxlaysan?",
+          "text_translation_ru": "Во сколько ты ложишься спать?",
+          "text_translation_en": "What time do you go to sleep?",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s14",
+          "text_original": "十一点以前。睡够了第二天精神好。",
+          "pinyin": "Shí yī diǎn yǐ qián. Shuì gòu le dì èr tiān jīng shén hǎo.",
+          "text_translation": "O'n birdan oldin. Yetarli uxlasang, ertasi kuni tetik bo'lasan.",
+          "text_translation_ru": "До одиннадцати. Если выспаться, на следующий день бодрость есть.",
+          "text_translation_en": "Before eleven. If you sleep enough, you have energy the next day.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s15",
+          "text_original": "你说得对。我打算从今天开始早睡。",
+          "pinyin": "Nǐ shuō de duì. Wǒ dǎ suàn cóng jīn tiān kāi shǐ zǎo shuì.",
+          "text_translation": "To'g'ri aytasan. Bugundan boshlab erta yotmoqchiman.",
+          "text_translation_ru": "Ты прав. Я собираюсь с сегодняшнего дня ложиться рано.",
+          "text_translation_en": "You're right. I'm going to start going to bed early from today.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s16",
+          "text_original": "好习惯要坚持。坚持一段时间，你会发现变化。",
+          "pinyin": "Hǎo xí guàn yào jiān chí. Jiān chí yí duàn shí jiān, nǐ huì fā xiàn biàn huà.",
+          "text_translation": "Yaxshi odatni davom ettirish kerak. Bir muddat sabot qilsang, o'zgarishni sezasan.",
+          "text_translation_ru": "Хорошие привычки нужно поддерживать. Продержись какое-то время — заметишь изменения.",
+          "text_translation_en": "Good habits need persistence. Keep at it for a while and you'll notice changes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s17",
+          "text_original": "希望我能做到。",
+          "pinyin": "Xī wàng wǒ néng zuò dào.",
+          "text_translation": "Uddasidan chiqsam degandiman.",
+          "text_translation_ru": "Надеюсь, у меня получится.",
+          "text_translation_en": "I hope I can do it.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s18",
+          "text_original": "你一定能！到时候我们一起跑步。",
+          "pinyin": "Nǐ yí dìng néng! Dào shí hou wǒ men yì qǐ pǎo bù.",
+          "text_translation": "Albatta uddalaysan! O'shanda birga yuguramiz.",
+          "text_translation_ru": "У тебя обязательно получится! Тогда будем бегать вместе.",
+          "text_translation_en": "You definitely can! When the time comes, we'll run together.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

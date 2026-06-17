@@ -630,3 +630,20 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('身体', 'shēntǐ', 'tana; sog''liq', 'тело; здоровье', 'body; health', 2),
   ('应该', 'yīnggāi', 'kerak; lozim', 'следует; должен', 'should; ought to', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 健康 (hsk3/dialogue2) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('气色', 'qìsè', 'rang-ro''y; chehra', 'цвет лица; вид', 'complexion; look', 5),
+  ('感觉', 'gǎnjué', 'his; sezgi; his qilmoq', 'чувство; ощущать', 'feeling; to feel', 3),
+  ('空气', 'kōngqì', 'havo', 'воздух', 'air', 3),
+  ('游泳', 'yóuyǒng', 'suzmoq', 'плавать', 'to swim', 2),
+  ('肩膀', 'jiānbǎng', 'yelka', 'плечо', 'shoulder', 5),
+  ('熬夜', 'áoyè', 'tunni bedor o''tkazmoq', 'засиживаться допоздна', 'to stay up late', 4),
+  ('精神', 'jīngshén', 'kayfiyat; tetiklik; ruh', 'бодрость; дух', 'spirit; energy', 4),
+  ('坚持', 'jiānchí', 'davom ettirmoq; sabot qilmoq', 'упорно продолжать; настаивать', 'to persist; to keep at it', 4),
+  ('发现', 'fāxiàn', 'kashf qilmoq; sezmoq', 'обнаружить; заметить', 'to discover; to find', 3),
+  ('变化', 'biànhuà', 'o''zgarish', 'изменение', 'change', 3),
+  ('做到', 'zuòdào', 'erishmoq; uddasidan chiqmoq', 'суметь сделать; добиться', 'to manage to do; to achieve', 3),
+  ('到时候', 'dàoshíhou', 'o''sha payt kelganda', 'когда придёт время', 'when the time comes', 4),
+  ('尤其', 'yóuqí', 'ayniqsa', 'особенно', 'especially', 3)
+  on conflict (zh, py_norm) do nothing;
