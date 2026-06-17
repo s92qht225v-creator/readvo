@@ -563,3 +563,21 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('小学生', 'xiǎoxuéshēng', 'boshlang''ich sinf o''quvchisi', 'ученик начальной школы', 'primary school student', 2),
   ('关系', 'guānxi', 'munosabat; aloqa', 'отношения', 'relationship', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 电影 (hsk2/dialogue27) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('一部', 'yí bù', 'bitta (film/kitob sanog''i)', 'один (фильм/книга)', 'one (measure word for films/books)', 2),
+  ('喜剧片', 'xǐjùpiàn', 'komediya film', 'комедия (фильм)', 'comedy film', 4),
+  ('演', 'yǎn', 'rol o''ynamoq; namoyish qilmoq', 'играть (роль); показывать', 'to act; to perform', 3),
+  ('出名', 'chūmíng', 'mashhur', 'известный; знаменитый', 'famous', 4),
+  ('讲', 'jiǎng', 'gapirmoq; hikoya qilmoq', 'рассказывать; говорить', 'to tell; to speak', 2),
+  ('故事', 'gùshi', 'hikoya', 'история; рассказ', 'story', 2),
+  ('感人', 'gǎnrén', 'ta''sirli', 'трогательный', 'touching; moving', 4),
+  ('差点', 'chàdiǎn', 'sal bo''lmasa; ozgina qolib', 'чуть не; едва не', 'almost; nearly', 3),
+  ('哭', 'kū', 'yig''lamoq', 'плакать', 'to cry', 2),
+  ('电影票', 'diànyǐngpiào', 'kino chiptasi', 'билет в кино', 'movie ticket', 2),
+  ('类型', 'lèixíng', 'tur; janr', 'тип; жанр', 'type; genre', 4),
+  ('爱情片', 'àiqíngpiàn', 'sevgi filmi', 'романтический фильм', 'romance film', 4),
+  ('动画片', 'dònghuàpiàn', 'multfilm', 'мультфильм', 'animated film; cartoon', 3),
+  ('告诉', 'gàosu', 'aytmoq; xabar bermoq', 'сказать; сообщить', 'to tell', 1)
+  on conflict (zh, py_norm) do nothing;

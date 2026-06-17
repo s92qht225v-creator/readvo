@@ -1,0 +1,196 @@
+{
+  "id": "hsk2-dialogue27",
+  "slug": "talking-about-movies",
+  "title": "电影",
+  "pinyin": "Diànyǐng",
+  "titleTranslation": "Kino",
+  "titleTranslation_ru": "Кино",
+  "titleTranslation_en": "Movies",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "电影",
+    "一部",
+    "喜剧片",
+    "有意思",
+    "演",
+    "出名",
+    "讲",
+    "故事",
+    "听起来",
+    "感人",
+    "差点",
+    "哭",
+    "电影票",
+    "平时",
+    "类型",
+    "爱情片",
+    "动画片",
+    "听说",
+    "告诉"
+  ],
+  "sections": [
+    {
+      "id": "d27-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d27-s1",
+          "text_original": "你最近看电影了吗？",
+          "pinyin": "Nǐ zuì jìn kàn diàn yǐng le ma?",
+          "text_translation": "Yaqinda kino ko'rdingmi?",
+          "text_translation_ru": "Ты в последнее время смотрел кино?",
+          "text_translation_en": "Have you watched any movies lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s2",
+          "text_original": "看了。我昨天看了一部新电影。",
+          "pinyin": "Kàn le. Wǒ zuó tiān kàn le yí bù xīn diàn yǐng.",
+          "text_translation": "Ko'rdim. Kecha yangi bir film ko'rdim.",
+          "text_translation_ru": "Смотрел. Вчера посмотрел один новый фильм.",
+          "text_translation_en": "I did. I watched a new movie yesterday.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s3",
+          "text_original": "什么电影？好看吗？",
+          "pinyin": "Shén me diàn yǐng? Hǎo kàn ma?",
+          "text_translation": "Qanaqa film? Yaxshimi?",
+          "text_translation_ru": "Какой фильм? Хороший?",
+          "text_translation_en": "What movie? Was it good?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s4",
+          "text_original": "是一部喜剧片，很有意思。",
+          "pinyin": "Shì yí bù xǐ jù piàn, hěn yǒu yì si.",
+          "text_translation": "Komediya film edi, juda qiziqarli.",
+          "text_translation_ru": "Это комедия, очень интересная.",
+          "text_translation_en": "It's a comedy, very entertaining.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s5",
+          "text_original": "谁演的？",
+          "pinyin": "Shuí yǎn de?",
+          "text_translation": "Kim o'ynagan?",
+          "text_translation_ru": "Кто играл?",
+          "text_translation_en": "Who's in it?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s6",
+          "text_original": "一个很出名的演员。",
+          "pinyin": "Yí ge hěn chū míng de yǎn yuán.",
+          "text_translation": "Juda mashhur bir aktyor.",
+          "text_translation_ru": "Один очень известный актёр.",
+          "text_translation_en": "A very famous actor.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s7",
+          "text_original": "电影讲了什么？",
+          "pinyin": "Diàn yǐng jiǎng le shén me?",
+          "text_translation": "Film nima haqida edi?",
+          "text_translation_ru": "О чём фильм?",
+          "text_translation_en": "What's the movie about?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s8",
+          "text_original": "讲一个男人和他的狗的故事。",
+          "pinyin": "Jiǎng yí ge nán rén hé tā de gǒu de gù shi.",
+          "text_translation": "Bir erkak va uning iti haqidagi hikoya.",
+          "text_translation_ru": "Это история об одном мужчине и его собаке.",
+          "text_translation_en": "It tells the story of a man and his dog.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s9",
+          "text_original": "听起来很感人。",
+          "pinyin": "Tīng qǐ lái hěn gǎn rén.",
+          "text_translation": "Juda ta'sirliga o'xshaydi.",
+          "text_translation_ru": "Звучит очень трогательно.",
+          "text_translation_en": "That sounds very touching.",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s10",
+          "text_original": "对。我差点儿哭了。",
+          "pinyin": "Duì. Wǒ chà diǎnr kū le.",
+          "text_translation": "Ha. Sal bo'lmasa yig'lab yubordim.",
+          "text_translation_ru": "Да. Я чуть не заплакал.",
+          "text_translation_en": "Yeah. I almost cried.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s11",
+          "text_original": "电影票贵不贵？",
+          "pinyin": "Diàn yǐng piào guì bu guì?",
+          "text_translation": "Kino chiptasi qimmatmi?",
+          "text_translation_ru": "Билеты в кино дорогие?",
+          "text_translation_en": "Are movie tickets expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s12",
+          "text_original": "不贵。网上买票更便宜。",
+          "pinyin": "Bú guì. Wǎng shàng mǎi piào gèng pián yi.",
+          "text_translation": "Qimmat emas. Internetdan chipta olsa arzonroq.",
+          "text_translation_ru": "Не дорогие. Покупать билеты онлайн ещё дешевле.",
+          "text_translation_en": "Not expensive. Buying tickets online is even cheaper.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s13",
+          "text_original": "你平时喜欢看什么类型的电影？",
+          "pinyin": "Nǐ píng shí xǐ huan kàn shén me lèi xíng de diàn yǐng?",
+          "text_translation": "Odatda qanaqa janrdagi kinolarni yoqtirasan?",
+          "text_translation_ru": "Какие жанры фильмов ты обычно любишь?",
+          "text_translation_en": "What kinds of movies do you usually like?",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s14",
+          "text_original": "我喜欢看爱情片和动画片。",
+          "pinyin": "Wǒ xǐ huan kàn ài qíng piàn hé dòng huà piàn.",
+          "text_translation": "Sevgi filmlari va multfilmlarni yoqtiraman.",
+          "text_translation_ru": "Я люблю романтические фильмы и мультфильмы.",
+          "text_translation_en": "I like romance films and animated films.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s15",
+          "text_original": "爱情片我也喜欢。最近有一部新的，听说很好看。",
+          "pinyin": "Ài qíng piàn wǒ yě xǐ huan. Zuì jìn yǒu yí bù xīn de, tīng shuō hěn hǎo kàn.",
+          "text_translation": "Sevgi filmlarini men ham yoqtiraman. Yaqinda yangisi chiqibdi, juda yaxshi deyishyapti.",
+          "text_translation_ru": "Романтические фильмы я тоже люблю. Недавно вышел новый, говорят, очень хороший.",
+          "text_translation_en": "I like romance films too. There's a new one out — I hear it's really good.",
+          "speaker": "A"
+        },
+        {
+          "id": "d27-s16",
+          "text_original": "那太好了！你看了以后告诉我好不好看。",
+          "pinyin": "Nà tài hǎo le! Nǐ kàn le yǐ hòu gào su wǒ hǎo bu hǎo kàn.",
+          "text_translation": "Juda yaxshi! Ko'rgandan keyin yaxshi-yomonligini menga ayt.",
+          "text_translation_ru": "Отлично! Посмотришь — расскажи, хороший ли он.",
+          "text_translation_en": "Great! After you watch it, tell me if it's good.",
+          "speaker": "B"
+        },
+        {
+          "id": "d27-s17",
+          "text_original": "没问题。我周末就去看。",
+          "pinyin": "Méi wèn tí. Wǒ zhōu mò jiù qù kàn.",
+          "text_translation": "Muammo yo'q. Dam olish kunlari borib ko'raman.",
+          "text_translation_ru": "Без проблем. Схожу на выходных.",
+          "text_translation_en": "No problem. I'll go see it this weekend.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
