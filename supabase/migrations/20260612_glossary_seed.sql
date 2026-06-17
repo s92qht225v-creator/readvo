@@ -613,3 +613,20 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('查', 'chá', 'tekshirmoq; qidirmoq', 'проверять; искать', 'to check; to look up', 3),
   ('快递', 'kuàidì', 'tezkor yetkazib berish; kuryer', 'экспресс-доставка; курьер', 'express delivery; courier', 4)
   on conflict (zh, py_norm) do nothing;
+
+-- 日常 (hsk2/dialogue30) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('起床', 'qǐchuáng', 'uyqudan turmoq', 'вставать (с постели)', 'to get up', 2),
+  ('一般', 'yìbān', 'odatda; oddiy', 'обычно; обычный', 'usually; generally', 3),
+  ('面包', 'miànbāo', 'non (bulka)', 'хлеб', 'bread', 2),
+  ('牛奶', 'niúnǎi', 'sut', 'молоко', 'milk', 2),
+  ('左右', 'zuǒyòu', 'taxminan; atrofida', 'около; приблизительно', 'about; approximately', 3),
+  ('先', 'xiān', 'avval; oldin', 'сначала', 'first; beforehand', 2),
+  ('电视', 'diànshì', 'televizor', 'телевизор', 'television', 1),
+  ('睡觉', 'shuìjiào', 'uxlamoq', 'спать', 'to sleep', 1),
+  ('生活', 'shēnghuó', 'hayot; turmush', 'жизнь', 'life', 3),
+  ('规律', 'guīlǜ', 'tartib; muntazamlik', 'режим; закономерность', 'routine; regularity', 5),
+  ('习惯', 'xíguàn', 'odat; odatlanmoq', 'привычка; привыкать', 'habit; to be used to', 3),
+  ('身体', 'shēntǐ', 'tana; sog''liq', 'тело; здоровье', 'body; health', 2),
+  ('应该', 'yīnggāi', 'kerak; lozim', 'следует; должен', 'should; ought to', 3)
+  on conflict (zh, py_norm) do nothing;

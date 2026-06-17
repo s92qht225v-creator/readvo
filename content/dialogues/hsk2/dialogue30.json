@@ -1,0 +1,206 @@
+{
+  "id": "hsk2-dialogue30",
+  "slug": "daily-routine",
+  "title": "日常",
+  "pinyin": "Rìcháng",
+  "titleTranslation": "Kundalik tartib",
+  "titleTranslation_ru": "Распорядок дня",
+  "titleTranslation_en": "Daily Routine",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "起床",
+    "一般",
+    "比较",
+    "面包",
+    "鸡蛋",
+    "牛奶",
+    "上班",
+    "走路",
+    "大概",
+    "左右",
+    "先",
+    "然后",
+    "电视",
+    "或者",
+    "睡觉",
+    "生活",
+    "规律",
+    "习惯",
+    "身体",
+    "应该"
+  ],
+  "sections": [
+    {
+      "id": "d30-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d30-s1",
+          "text_original": "你每天几点起床？",
+          "pinyin": "Nǐ měi tiān jǐ diǎn qǐ chuáng?",
+          "text_translation": "Har kuni soat nechada turasan?",
+          "text_translation_ru": "Во сколько ты встаёшь каждый день?",
+          "text_translation_en": "What time do you get up every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s2",
+          "text_original": "我一般六点半起床。你呢？",
+          "pinyin": "Wǒ yì bān liù diǎn bàn qǐ chuáng. Nǐ ne?",
+          "text_translation": "Men odatda olti yarimda turaman. Sen-chi?",
+          "text_translation_ru": "Я обычно встаю в полседьмого. А ты?",
+          "text_translation_en": "I usually get up at six thirty. And you?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s3",
+          "text_original": "我七点起床。我起得比较晚。",
+          "pinyin": "Wǒ qī diǎn qǐ chuáng. Wǒ qǐ de bǐ jiào wǎn.",
+          "text_translation": "Men yettida turaman. Ancha kech turaman.",
+          "text_translation_ru": "Я встаю в семь. Я встаю довольно поздно.",
+          "text_translation_en": "I get up at seven. I get up rather late.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s4",
+          "text_original": "你早上吃什么？",
+          "pinyin": "Nǐ zǎo shang chī shén me?",
+          "text_translation": "Ertalab nima yeysan?",
+          "text_translation_ru": "Что ты ешь утром?",
+          "text_translation_en": "What do you eat in the morning?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s5",
+          "text_original": "我常常吃面包和鸡蛋，喝一杯牛奶。",
+          "pinyin": "Wǒ cháng cháng chī miàn bāo hé jī dàn, hē yì bēi niú nǎi.",
+          "text_translation": "Ko'pincha non va tuxum yeyman, bir stakan sut ichaman.",
+          "text_translation_ru": "Я часто ем хлеб и яйца, пью стакан молока.",
+          "text_translation_en": "I often eat bread and eggs, and drink a glass of milk.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s6",
+          "text_original": "你几点上班？",
+          "pinyin": "Nǐ jǐ diǎn shàng bān?",
+          "text_translation": "Soat nechada ishga borasan?",
+          "text_translation_ru": "Во сколько ты идёшь на работу?",
+          "text_translation_en": "What time do you go to work?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s7",
+          "text_original": "八点半上班。我走路去公司。",
+          "pinyin": "Bā diǎn bàn shàng bān. Wǒ zǒu lù qù gōng sī.",
+          "text_translation": "Sakkiz yarimda ishga boraman. Kompaniyaga piyoda boraman.",
+          "text_translation_ru": "Начинаю в полдевятого. Я хожу на работу пешком.",
+          "text_translation_en": "I start at eight thirty. I walk to the company.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s8",
+          "text_original": "走路要多久？",
+          "pinyin": "Zǒu lù yào duō jiǔ?",
+          "text_translation": "Piyoda qancha vaqt ketadi?",
+          "text_translation_ru": "Сколько идти пешком?",
+          "text_translation_en": "How long does it take to walk?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s9",
+          "text_original": "大概二十分钟。",
+          "pinyin": "Dà gài èr shí fēn zhōng.",
+          "text_translation": "Taxminan yigirma daqiqa.",
+          "text_translation_ru": "Примерно двадцать минут.",
+          "text_translation_en": "About twenty minutes.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s10",
+          "text_original": "那你晚上几点回家？",
+          "pinyin": "Nà nǐ wǎn shang jǐ diǎn huí jiā?",
+          "text_translation": "Unda kechqurun soat nechada uyga qaytasan?",
+          "text_translation_ru": "А во сколько ты возвращаешься домой вечером?",
+          "text_translation_en": "So what time do you get home in the evening?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s11",
+          "text_original": "六点下班，六点半左右到家。",
+          "pinyin": "Liù diǎn xià bān, liù diǎn bàn zuǒ yòu dào jiā.",
+          "text_translation": "Oltida ishdan chiqaman, olti yarimlarda uyga yetaman.",
+          "text_translation_ru": "В шесть заканчиваю работу, дома около полседьмого.",
+          "text_translation_en": "I finish at six and get home around six thirty.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s12",
+          "text_original": "回家以后做什么？",
+          "pinyin": "Huí jiā yǐ hòu zuò shén me?",
+          "text_translation": "Uyga qaytgach nima qilasan?",
+          "text_translation_ru": "Что делаешь после возвращения домой?",
+          "text_translation_en": "What do you do after you get home?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s13",
+          "text_original": "先做饭，然后看电视或者看书。",
+          "pinyin": "Xiān zuò fàn, rán hòu kàn diàn shì huò zhě kàn shū.",
+          "text_translation": "Avval ovqat tayyorlayman, keyin televizor ko'raman yoki kitob o'qiyman.",
+          "text_translation_ru": "Сначала готовлю, потом смотрю телевизор или читаю.",
+          "text_translation_en": "First I cook, then I watch TV or read.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s14",
+          "text_original": "你几点睡觉？",
+          "pinyin": "Nǐ jǐ diǎn shuì jiào?",
+          "text_translation": "Soat nechada uxlaysan?",
+          "text_translation_ru": "Во сколько ты ложишься спать?",
+          "text_translation_en": "What time do you go to sleep?",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s15",
+          "text_original": "十一点左右。",
+          "pinyin": "Shí yī diǎn zuǒ yòu.",
+          "text_translation": "O'n birlarda.",
+          "text_translation_ru": "Около одиннадцати.",
+          "text_translation_en": "Around eleven.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s16",
+          "text_original": "那你的生活很有规律。",
+          "pinyin": "Nà nǐ de shēng huó hěn yǒu guī lǜ.",
+          "text_translation": "Unda hayoting juda tartibli ekan.",
+          "text_translation_ru": "Тогда у тебя очень размеренная жизнь.",
+          "text_translation_en": "Then your life is very regular.",
+          "speaker": "B"
+        },
+        {
+          "id": "d30-s17",
+          "text_original": "对，习惯了。早睡早起对身体好。",
+          "pinyin": "Duì, xí guàn le. Zǎo shuì zǎo qǐ duì shēn tǐ hǎo.",
+          "text_translation": "Ha, odatlanib qoldim. Erta yotib erta turish sog'liq uchun foydali.",
+          "text_translation_ru": "Да, привык. Рано ложиться и рано вставать полезно для здоровья.",
+          "text_translation_en": "Yeah, I'm used to it. Early to bed and early to rise is good for your health.",
+          "speaker": "A"
+        },
+        {
+          "id": "d30-s18",
+          "text_original": "你说得对，我也应该早睡。",
+          "pinyin": "Nǐ shuō de duì, wǒ yě yīng gāi zǎo shuì.",
+          "text_translation": "To'g'ri aytasan, men ham erta yotishim kerak.",
+          "text_translation_ru": "Ты прав, мне тоже стоит ложиться раньше.",
+          "text_translation_en": "You're right, I should go to bed early too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
