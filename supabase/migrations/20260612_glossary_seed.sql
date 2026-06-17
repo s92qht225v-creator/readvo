@@ -647,3 +647,22 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('到时候', 'dàoshíhou', 'o''sha payt kelganda', 'когда придёт время', 'when the time comes', 4),
   ('尤其', 'yóuqí', 'ayniqsa', 'особенно', 'especially', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 工作 (hsk3/dialogue3) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('好久不见', 'hǎojiǔ bú jiàn', 'ko''rishmaganimizga ancha bo''ldi', 'давно не виделись', 'long time no see', 3),
+  ('换', 'huàn', 'almashtirmoq', 'менять', 'to change; to switch', 3),
+  ('外企', 'wàiqǐ', 'chet el kompaniyasi', 'иностранная компания', 'foreign company', 5),
+  ('市场助理', 'shìchǎng zhùlǐ', 'marketing yordamchisi', 'ассистент по маркетингу', 'marketing assistant', 5),
+  ('放松', 'fàngsōng', 'dam olmoq; bo''shashmoq', 'расслабляться', 'to relax', 4),
+  ('健身房', 'jiànshēnfáng', 'sport zali', 'тренажёрный зал', 'gym', 4),
+  ('注意', 'zhùyì', 'e''tibor bermoq', 'обращать внимание', 'to pay attention', 3),
+  ('未来', 'wèilái', 'kelajak', 'будущее', 'future', 4),
+  ('计划', 'jìhuà', 'reja', 'план', 'plan', 4),
+  ('积累', 'jīlěi', 'to''plamoq', 'накапливать', 'to accumulate', 5),
+  ('经验', 'jīngyàn', 'tajriba', 'опыт', 'experience', 4),
+  ('创业', 'chuàngyè', 'o''z biznesini boshlamoq', 'основать своё дело', 'to start a business', 5),
+  ('相信', 'xiāngxìn', 'ishonmoq', 'верить', 'to believe; to trust', 3),
+  ('鼓励', 'gǔlì', 'rag''batlantirmoq; dalda bermoq', 'поощрять; подбадривать', 'to encourage', 4),
+  ('努力', 'nǔlì', 'harakat qilmoq; tirishmoq', 'стараться; усердно', 'to work hard; effort', 3)
+  on conflict (zh, py_norm) do nothing;

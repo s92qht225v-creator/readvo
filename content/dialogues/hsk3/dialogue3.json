@@ -1,0 +1,223 @@
+{
+  "id": "hsk3-dialogue3",
+  "slug": "a-new-job",
+  "title": "工作",
+  "pinyin": "Gōngzuò",
+  "titleTranslation": "Ish",
+  "titleTranslation_ru": "Работа",
+  "titleTranslation_en": "Work",
+  "level": 3,
+  "tag": "ish",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "好久不见",
+    "换",
+    "外企",
+    "市场助理",
+    "压力",
+    "确实",
+    "放松",
+    "健身房",
+    "约",
+    "注意",
+    "未来",
+    "计划",
+    "积累",
+    "经验",
+    "机会",
+    "创业",
+    "相信",
+    "鼓励",
+    "努力"
+  ],
+  "sections": [
+    {
+      "id": "d3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d3-s1",
+          "text_original": "好久不见！你最近怎么样？",
+          "pinyin": "Hǎo jiǔ bú jiàn! Nǐ zuì jìn zěn me yàng?",
+          "text_translation": "Ko'rishmaganimizga ancha bo'ldi! Yaqinda ahvoling qalay?",
+          "text_translation_ru": "Давно не виделись! Как ты в последнее время?",
+          "text_translation_en": "Long time no see! How have you been lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s2",
+          "text_original": "还不错。我换了一份新工作。",
+          "pinyin": "Hái bú cuò. Wǒ huàn le yí fèn xīn gōng zuò.",
+          "text_translation": "Yomon emas. Yangi ishga o'tdim.",
+          "text_translation_ru": "Неплохо. Я сменил работу.",
+          "text_translation_en": "Not bad. I switched to a new job.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s3",
+          "text_original": "真的吗？你现在在哪儿工作？",
+          "pinyin": "Zhēn de ma? Nǐ xiàn zài zài nǎr gōng zuò?",
+          "text_translation": "Rostdanmi? Hozir qayerda ishlaysan?",
+          "text_translation_ru": "Правда? Где ты сейчас работаешь?",
+          "text_translation_en": "Really? Where do you work now?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s4",
+          "text_original": "在一家外企做市场助理。",
+          "pinyin": "Zài yì jiā wài qǐ zuò shì chǎng zhù lǐ.",
+          "text_translation": "Bir chet el kompaniyasida marketing yordamchisi bo'lib ishlayman.",
+          "text_translation_ru": "В иностранной компании, ассистентом по маркетингу.",
+          "text_translation_en": "At a foreign company, as a marketing assistant.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s5",
+          "text_original": "听起来不错！你喜欢这份工作吗？",
+          "pinyin": "Tīng qǐ lái bú cuò! Nǐ xǐ huan zhè fèn gōng zuò ma?",
+          "text_translation": "Yaxshiga o'xshaydi! Bu ishni yoqtirasanmi?",
+          "text_translation_ru": "Звучит неплохо! Тебе нравится эта работа?",
+          "text_translation_en": "Sounds good! Do you like this job?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s6",
+          "text_original": "挺喜欢的。虽然压力比以前大，但是能学到很多东西。",
+          "pinyin": "Tǐng xǐ huan de. Suī rán yā lì bǐ yǐ qián dà, dàn shì néng xué dào hěn duō dōng xi.",
+          "text_translation": "Ancha yoqtiraman. Garchi avvalgidan ko'ra bosim ko'proq bo'lsa-da, ko'p narsa o'rganaman.",
+          "text_translation_ru": "Очень нравится. Хотя стресса больше, чем раньше, зато можно многому научиться.",
+          "text_translation_en": "I really like it. Although there's more pressure than before, I can learn a lot.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s7",
+          "text_original": "你每天工作时间长吗？",
+          "pinyin": "Nǐ měi tiān gōng zuò shí jiān cháng ma?",
+          "text_translation": "Har kuni ish vaqting uzunmi?",
+          "text_translation_ru": "У тебя длинный рабочий день?",
+          "text_translation_en": "Are your working hours long each day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s8",
+          "text_original": "一般八个小时，有时候会加班。",
+          "pinyin": "Yì bān bā ge xiǎo shí, yǒu shí hou huì jiā bān.",
+          "text_translation": "Odatda sakkiz soat, ba'zan qo'shimcha ishlayman.",
+          "text_translation_ru": "Обычно восемь часов, иногда задерживаюсь.",
+          "text_translation_en": "Usually eight hours, sometimes I work overtime.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s9",
+          "text_original": "周末也加班吗？",
+          "pinyin": "Zhōu mò yě jiā bān ma?",
+          "text_translation": "Dam olish kunlari ham ishlaysanmi?",
+          "text_translation_ru": "По выходным тоже работаешь сверхурочно?",
+          "text_translation_en": "Do you work overtime on weekends too?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s10",
+          "text_original": "不一定。如果有重要的项目，周末也要去公司。",
+          "pinyin": "Bù yí dìng. Rú guǒ yǒu zhòng yào de xiàng mù, zhōu mò yě yào qù gōng sī.",
+          "text_translation": "Har doim emas. Agar muhim loyiha bo'lsa, dam olish kunlari ham kompaniyaga boraman.",
+          "text_translation_ru": "Не обязательно. Если есть важный проект, то и по выходным приходится ездить в офис.",
+          "text_translation_en": "Not always. If there's an important project, I have to go in on weekends too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s11",
+          "text_original": "那你的休息时间变少了吧？",
+          "pinyin": "Nà nǐ de xiū xi shí jiān biàn shǎo le ba?",
+          "text_translation": "Unda dam olish vaqting kamayib qoldimi?",
+          "text_translation_ru": "Тогда у тебя стало меньше времени на отдых?",
+          "text_translation_en": "So you have less rest time now, right?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s12",
+          "text_original": "确实。但是休息的时候我会好好放松。",
+          "pinyin": "Què shí. Dàn shì xiū xi de shí hou wǒ huì hǎo hao fàng sōng.",
+          "text_translation": "Haqiqatan ham. Lekin dam olganimda yaxshilab dam olaman.",
+          "text_translation_ru": "Действительно. Но когда отдыхаю, я хорошо расслабляюсь.",
+          "text_translation_en": "Indeed. But when I rest, I relax properly.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s13",
+          "text_original": "你平时怎么放松？",
+          "pinyin": "Nǐ píng shí zěn me fàng sōng?",
+          "text_translation": "Odatda qanday dam olasan?",
+          "text_translation_ru": "Как ты обычно расслабляешься?",
+          "text_translation_en": "How do you usually relax?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s14",
+          "text_original": "周末我常去健身房运动，或者约朋友看电影。",
+          "pinyin": "Zhōu mò wǒ cháng qù jiàn shēn fáng yùn dòng, huò zhě yuē péng you kàn diàn yǐng.",
+          "text_translation": "Dam olish kunlari ko'pincha sport zaliga boraman yoki do'stlarim bilan kelishib kino ko'raman.",
+          "text_translation_ru": "По выходным я часто хожу в спортзал или зову друзей в кино.",
+          "text_translation_en": "On weekends I often go to the gym, or arrange to see a movie with friends.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s15",
+          "text_original": "这个习惯很好。工作再忙也要注意身体。",
+          "pinyin": "Zhè ge xí guàn hěn hǎo. Gōng zuò zài máng yě yào zhù yì shēn tǐ.",
+          "text_translation": "Bu juda yaxshi odat. Ish qanchalik ko'p bo'lsa ham, sog'liqqa e'tibor berish kerak.",
+          "text_translation_ru": "Это хорошая привычка. Как бы ни был занят работой, нужно следить за здоровьем.",
+          "text_translation_en": "That's a great habit. No matter how busy work is, you should look after your health.",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s16",
+          "text_original": "对。健康比什么都重要。",
+          "pinyin": "Duì. Jiàn kāng bǐ shén me dōu zhòng yào.",
+          "text_translation": "To'g'ri. Salomatlik hamma narsadan muhim.",
+          "text_translation_ru": "Да. Здоровье важнее всего.",
+          "text_translation_en": "Right. Health is more important than anything.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s17",
+          "text_original": "那你对未来有什么计划吗？",
+          "pinyin": "Nà nǐ duì wèi lái yǒu shén me jì huà ma?",
+          "text_translation": "Kelajak uchun qanaqa rejalaring bor?",
+          "text_translation_ru": "А какие у тебя планы на будущее?",
+          "text_translation_en": "So do you have any plans for the future?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s18",
+          "text_original": "我想先积累经验，以后有机会自己创业。",
+          "pinyin": "Wǒ xiǎng xiān jī lěi jīng yàn, yǐ hòu yǒu jī huì zì jǐ chuàng yè.",
+          "text_translation": "Avval tajriba to'plamoqchiman, keyin imkon bo'lsa o'z biznesimni boshlamoqchiman.",
+          "text_translation_ru": "Сначала хочу накопить опыт, а потом, если будет возможность, открыть своё дело.",
+          "text_translation_en": "I want to gain experience first, and later start my own business if I get the chance.",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s19",
+          "text_original": "你一定可以的！相信你。",
+          "pinyin": "Nǐ yí dìng kě yǐ de! Xiāng xìn nǐ.",
+          "text_translation": "Albatta uddalaysan! Senga ishonaman.",
+          "text_translation_ru": "У тебя обязательно получится! Верю в тебя.",
+          "text_translation_en": "You can definitely do it! I believe in you.",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s20",
+          "text_original": "谢谢鼓励！我会努力的。",
+          "pinyin": "Xiè xie gǔ lì! Wǒ huì nǔ lì de.",
+          "text_translation": "Dalda berganing uchun rahmat! Harakat qilaman.",
+          "text_translation_ru": "Спасибо за поддержку! Я буду стараться.",
+          "text_translation_en": "Thanks for the encouragement! I'll work hard.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
