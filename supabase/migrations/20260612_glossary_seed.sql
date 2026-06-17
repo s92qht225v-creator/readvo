@@ -595,3 +595,21 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('退房', 'tuìfáng', 'xonadan chiqish (check-out)', 'выехать из номера; чек-аут', 'to check out', 4),
   ('记住', 'jìzhù', 'eslab qolmoq', 'запомнить', 'to remember; to memorize', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 寄包裹 (hsk2/dialogue29) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('包裹', 'bāoguǒ', 'posilka', 'посылка', 'package; parcel', 4),
+  ('寄', 'jì', 'jo''natmoq (pochta)', 'отправлять (по почте)', 'to send (by mail)', 3),
+  ('美国', 'Měiguó', 'Amerika (AQSH)', 'Америка (США)', 'the United States', 1),
+  ('快的', 'kuài de', 'tezkor variant', 'быстрый (вариант)', 'the fast (one)', 2),
+  ('慢的', 'màn de', 'sekin variant', 'медленный (вариант)', 'the slow (one)', 2),
+  ('填', 'tián', 'to''ldirmoq', 'заполнять', 'to fill in', 4),
+  ('单子', 'dānzi', 'blank; varaqa', 'бланк; квитанция', 'form; slip', 3),
+  ('地址', 'dìzhǐ', 'manzil', 'адрес', 'address', 3),
+  ('清楚', 'qīngchu', 'aniq; ravshan', 'чётко; ясно', 'clear(ly)', 3),
+  ('零钱', 'língqián', 'maydalik; qaytim', 'мелочь; сдача', 'change (money)', 4),
+  ('收据', 'shōujù', 'kvitansiya; chek', 'квитанция; чек', 'receipt', 4),
+  ('以内', 'yǐnèi', 'ichida; davomida', 'в пределах', 'within', 4),
+  ('查', 'chá', 'tekshirmoq; qidirmoq', 'проверять; искать', 'to check; to look up', 3),
+  ('快递', 'kuàidì', 'tezkor yetkazib berish; kuryer', 'экспресс-доставка; курьер', 'express delivery; courier', 4)
+  on conflict (zh, py_norm) do nothing;
