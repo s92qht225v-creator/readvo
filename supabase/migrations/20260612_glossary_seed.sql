@@ -553,3 +553,13 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('相处', 'xiāngchǔ', 'chiqishmoq; til topishmoq', 'ладить; общаться', 'to get along', 4),
   ('友好', 'yǒuhǎo', 'do''stona', 'дружелюбный', 'friendly', 4)
   on conflict (zh, py_norm) do nothing;
+
+-- 朋友 (hsk2/dialogue26) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('见面', 'jiànmiàn', 'uchrashmoq', 'встречаться', 'to meet (up)', 2),
+  ('聊天', 'liáotiān', 'suhbatlashmoq; gaplashmoq', 'болтать; беседовать', 'to chat', 2),
+  ('大学', 'dàxué', 'universitet', 'университет', 'university', 2),
+  ('同学', 'tóngxué', 'sinfdosh; kursdosh', 'одноклассник; однокурсник', 'classmate', 1),
+  ('小学生', 'xiǎoxuéshēng', 'boshlang''ich sinf o''quvchisi', 'ученик начальной школы', 'primary school student', 2),
+  ('关系', 'guānxi', 'munosabat; aloqa', 'отношения', 'relationship', 3)
+  on conflict (zh, py_norm) do nothing;

@@ -1,0 +1,167 @@
+{
+  "id": "hsk2-dialogue26",
+  "slug": "old-friends",
+  "title": "朋友",
+  "pinyin": "Péngyou",
+  "titleTranslation": "Do'stlar",
+  "titleTranslation_ru": "Друзья",
+  "titleTranslation_en": "Friends",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "周末",
+    "跟",
+    "见面",
+    "公园",
+    "散步",
+    "拍照",
+    "聊天",
+    "认识",
+    "大学",
+    "同学",
+    "经常",
+    "以前",
+    "教",
+    "小学生",
+    "关系",
+    "下次",
+    "当然"
+  ],
+  "sections": [
+    {
+      "id": "d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d26-s1",
+          "text_original": "你周末跟朋友见面了吗？",
+          "pinyin": "Nǐ zhōu mò gēn péng you jiàn miàn le ma?",
+          "text_translation": "Dam olish kunlari do'sting bilan uchrashdingmi?",
+          "text_translation_ru": "Ты на выходных встречался с другом?",
+          "text_translation_en": "Did you meet up with a friend over the weekend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s2",
+          "text_original": "见了。我们一起去了公园。",
+          "pinyin": "Jiàn le. Wǒ men yì qǐ qù le gōng yuán.",
+          "text_translation": "Uchrashdim. Birga bog'ga bordik.",
+          "text_translation_ru": "Встречался. Мы вместе ходили в парк.",
+          "text_translation_en": "I did. We went to the park together.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s3",
+          "text_original": "你们在公园做什么？",
+          "pinyin": "Nǐ men zài gōng yuán zuò shén me?",
+          "text_translation": "Bog'da nima qildingiz?",
+          "text_translation_ru": "Что вы делали в парке?",
+          "text_translation_en": "What did you do in the park?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s4",
+          "text_original": "我们散步、拍照、聊天。",
+          "pinyin": "Wǒ men sàn bù, pāi zhào, liáo tiān.",
+          "text_translation": "Sayr qildik, rasmga tushdik, suhbatlashdik.",
+          "text_translation_ru": "Мы гуляли, фотографировались, болтали.",
+          "text_translation_en": "We took a walk, took photos, and chatted.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s5",
+          "text_original": "你跟你朋友认识多久了？",
+          "pinyin": "Nǐ gēn nǐ péng you rèn shi duō jiǔ le?",
+          "text_translation": "Do'sting bilan qancha vaqtdan beri tanishsan?",
+          "text_translation_ru": "Как давно ты знаком со своим другом?",
+          "text_translation_en": "How long have you known your friend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s6",
+          "text_original": "认识三年了。我们是大学同学。",
+          "pinyin": "Rèn shi sān nián le. Wǒ men shì dà xué tóng xué.",
+          "text_translation": "Uch yildan beri tanishmiz. Biz universitet kursdoshlarimiz.",
+          "text_translation_ru": "Знакомы три года. Мы однокурсники.",
+          "text_translation_en": "We've known each other for three years. We're university classmates.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s7",
+          "text_original": "你们经常见面吗？",
+          "pinyin": "Nǐ men jīng cháng jiàn miàn ma?",
+          "text_translation": "Tez-tez uchrashasizmi?",
+          "text_translation_ru": "Вы часто видитесь?",
+          "text_translation_en": "Do you meet up often?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s8",
+          "text_original": "以前经常见，现在他工作很忙。",
+          "pinyin": "Yǐ qián jīng cháng jiàn, xiàn zài tā gōng zuò hěn máng.",
+          "text_translation": "Ilgari tez-tez ko'rishardik, hozir u ishda juda band.",
+          "text_translation_ru": "Раньше часто виделись, сейчас он очень занят на работе.",
+          "text_translation_en": "We used to meet often, but now he's very busy with work.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s9",
+          "text_original": "他做什么工作？",
+          "pinyin": "Tā zuò shén me gōng zuò?",
+          "text_translation": "U qanaqa ish qiladi?",
+          "text_translation_ru": "Кем он работает?",
+          "text_translation_en": "What does he do?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s10",
+          "text_original": "他是老师，教小学生。",
+          "pinyin": "Tā shì lǎo shī, jiāo xiǎo xué shēng.",
+          "text_translation": "U o'qituvchi, boshlang'ich sinf o'quvchilariga dars beradi.",
+          "text_translation_ru": "Он учитель, преподаёт младшим школьникам.",
+          "text_translation_en": "He's a teacher; he teaches primary school students.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s11",
+          "text_original": "你们关系好吗？",
+          "pinyin": "Nǐ men guān xi hǎo ma?",
+          "text_translation": "Munosabatlaringiz yaxshimi?",
+          "text_translation_ru": "У вас хорошие отношения?",
+          "text_translation_en": "Do you two get along well?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s12",
+          "text_original": "很好。他是我的好朋友。",
+          "pinyin": "Hěn hǎo. Tā shì wǒ de hǎo péng you.",
+          "text_translation": "Juda yaxshi. U mening yaqin do'stim.",
+          "text_translation_ru": "Очень хорошие. Он мой хороший друг.",
+          "text_translation_en": "Very. He's my good friend.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s13",
+          "text_original": "下次你们见面，可以叫我一起吗？",
+          "pinyin": "Xià cì nǐ men jiàn miàn, kě yǐ jiào wǒ yì qǐ ma?",
+          "text_translation": "Keyingi safar uchrashganingizda, meni ham chaqirsang bo'ladimi?",
+          "text_translation_ru": "В следующий раз, когда встретитесь, можешь позвать и меня?",
+          "text_translation_en": "Next time you meet up, can you invite me along?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s14",
+          "text_original": "当然可以！",
+          "pinyin": "Dāng rán kě yǐ!",
+          "text_translation": "Albatta bo'ladi!",
+          "text_translation_ru": "Конечно можно!",
+          "text_translation_en": "Of course!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
