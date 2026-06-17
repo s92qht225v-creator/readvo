@@ -581,3 +581,17 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('动画片', 'dònghuàpiàn', 'multfilm', 'мультфильм', 'animated film; cartoon', 3),
   ('告诉', 'gàosu', 'aytmoq; xabar bermoq', 'сказать; сообщить', 'to tell', 1)
   on conflict (zh, py_norm) do nothing;
+
+-- 住酒店 (hsk2/dialogue28) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('订', 'dìng', 'buyurtma qilmoq; band qilmoq', 'бронировать; заказывать', 'to book; to reserve', 3),
+  ('单人间', 'dānrénjiān', 'bir kishilik xona', 'одноместный номер', 'single room', 3),
+  ('双人间', 'shuāngrénjiān', 'ikki kishilik xona', 'двухместный номер', 'double room', 3),
+  ('包括', 'bāokuò', 'o''z ichiga olmoq; kiritmoq', 'включать (в себя)', 'to include', 4),
+  ('网络', 'wǎngluò', 'internet; tarmoq', 'интернет; сеть', 'internet; network', 3),
+  ('免费', 'miǎnfèi', 'bepul', 'бесплатный', 'free (of charge)', 3),
+  ('身份证', 'shēnfènzhèng', 'shaxsiy guvohnoma; pasport', 'удостоверение личности', 'ID card', 4),
+  ('房卡', 'fángkǎ', 'xona kartasi (kaliti)', 'ключ-карта от номера', 'room key card', 4),
+  ('退房', 'tuìfáng', 'xonadan chiqish (check-out)', 'выехать из номера; чек-аут', 'to check out', 4),
+  ('记住', 'jìzhù', 'eslab qolmoq', 'запомнить', 'to remember; to memorize', 3)
+  on conflict (zh, py_norm) do nothing;

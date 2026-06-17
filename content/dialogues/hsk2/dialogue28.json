@@ -1,0 +1,172 @@
+{
+  "id": "hsk2-dialogue28",
+  "slug": "checking-into-a-hotel",
+  "title": "住酒店",
+  "pinyin": "Zhù jiǔdiàn",
+  "titleTranslation": "Mehmonxonada turish",
+  "titleTranslation_ru": "В отеле",
+  "titleTranslation_en": "Checking into a Hotel",
+  "level": 2,
+  "tag": "sayohat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "订",
+    "房间",
+    "单人间",
+    "双人间",
+    "包括",
+    "早餐",
+    "电梯",
+    "网络",
+    "免费",
+    "身份证",
+    "房卡",
+    "退房",
+    "记住"
+  ],
+  "sections": [
+    {
+      "id": "d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d28-s1",
+          "text_original": "你好，我要订一个房间。",
+          "pinyin": "Nǐ hǎo, wǒ yào dìng yí ge fáng jiān.",
+          "text_translation": "Salom, bir xona band qilmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу забронировать номер.",
+          "text_translation_en": "Hello, I'd like to book a room.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s2",
+          "text_original": "您要单人间还是双人间？",
+          "pinyin": "Nín yào dān rén jiān hái shì shuāng rén jiān?",
+          "text_translation": "Bir kishilik xonami yoki ikki kishilik xonami?",
+          "text_translation_ru": "Вам одноместный или двухместный номер?",
+          "text_translation_en": "Would you like a single room or a double room?",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s3",
+          "text_original": "单人间。一个晚上多少钱？",
+          "pinyin": "Dān rén jiān. Yí ge wǎn shang duō shao qián?",
+          "text_translation": "Bir kishilik xona. Bir kechasi qancha turadi?",
+          "text_translation_ru": "Одноместный. Сколько стоит за ночь?",
+          "text_translation_en": "A single room. How much is one night?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s4",
+          "text_original": "三百块，包括早餐。",
+          "pinyin": "Sān bǎi kuài, bāo kuò zǎo cān.",
+          "text_translation": "Uch yuz yuan, nonushta ham kiradi.",
+          "text_translation_ru": "Триста юаней, завтрак включён.",
+          "text_translation_en": "Three hundred yuan, breakfast included.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s5",
+          "text_original": "可以看看房间吗？",
+          "pinyin": "Kě yǐ kàn kan fáng jiān ma?",
+          "text_translation": "Xonani ko'rsam bo'ladimi?",
+          "text_translation_ru": "Можно посмотреть номер?",
+          "text_translation_en": "Can I take a look at the room?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s6",
+          "text_original": "可以。房间在五楼，有电梯。",
+          "pinyin": "Kě yǐ. Fáng jiān zài wǔ lóu, yǒu diàn tī.",
+          "text_translation": "Bo'ladi. Xona beshinchi qavatda, lift bor.",
+          "text_translation_ru": "Можно. Номер на пятом этаже, есть лифт.",
+          "text_translation_en": "Sure. The room is on the fifth floor, there's an elevator.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s7",
+          "text_original": "房间里有网络吗？",
+          "pinyin": "Fáng jiān lǐ yǒu wǎng luò ma?",
+          "text_translation": "Xonada internet bormi?",
+          "text_translation_ru": "В номере есть интернет?",
+          "text_translation_en": "Is there internet in the room?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s8",
+          "text_original": "有。网络是免费的。",
+          "pinyin": "Yǒu. Wǎng luò shì miǎn fèi de.",
+          "text_translation": "Bor. Internet bepul.",
+          "text_translation_ru": "Есть. Интернет бесплатный.",
+          "text_translation_en": "Yes. The internet is free.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s9",
+          "text_original": "太好了。我要订三天。",
+          "pinyin": "Tài hǎo le. Wǒ yào dìng sān tiān.",
+          "text_translation": "Juda yaxshi. Uch kunga band qilmoqchiman.",
+          "text_translation_ru": "Отлично. Я хочу забронировать на три дня.",
+          "text_translation_en": "Great. I'd like to book for three days.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s10",
+          "text_original": "好的。请给我您的身份证。",
+          "pinyin": "Hǎo de. Qǐng gěi wǒ nín de shēn fèn zhèng.",
+          "text_translation": "Yaxshi. Iltimos, shaxsiy guvohnomangizni bering.",
+          "text_translation_ru": "Хорошо. Дайте, пожалуйста, ваше удостоверение личности.",
+          "text_translation_en": "Okay. Please give me your ID card.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s11",
+          "text_original": "给你。",
+          "pinyin": "Gěi nǐ.",
+          "text_translation": "Mana.",
+          "text_translation_ru": "Вот, держите.",
+          "text_translation_en": "Here you go.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s12",
+          "text_original": "这是您的房卡。三楼305房间。",
+          "pinyin": "Zhè shì nín de fáng kǎ. Sān lóu sān líng wǔ fáng jiān.",
+          "text_translation": "Bu sizning xona kartangiz. Uchinchi qavat, 305-xona.",
+          "text_translation_ru": "Вот ваша ключ-карта. Третий этаж, номер 305.",
+          "text_translation_en": "Here's your key card. Third floor, room 305.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s13",
+          "text_original": "谢谢。几点退房？",
+          "pinyin": "Xiè xie. Jǐ diǎn tuì fáng?",
+          "text_translation": "Rahmat. Soat nechada xonadan chiqish kerak?",
+          "text_translation_ru": "Спасибо. Во сколько выезд?",
+          "text_translation_en": "Thanks. What time is check-out?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s14",
+          "text_original": "中午十二点以前。",
+          "pinyin": "Zhōng wǔ shí èr diǎn yǐ qián.",
+          "text_translation": "Tushdagi o'n ikkidan oldin.",
+          "text_translation_ru": "До двенадцати часов дня.",
+          "text_translation_en": "Before twelve noon.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s15",
+          "text_original": "好的，我记住了。",
+          "pinyin": "Hǎo de, wǒ jì zhù le.",
+          "text_translation": "Yaxshi, esimda saqlab qoldim.",
+          "text_translation_ru": "Хорошо, я запомнил.",
+          "text_translation_en": "Okay, I'll remember that.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
