@@ -28,10 +28,10 @@ export default function FlashcardMixPage() {
     async function load() {
       try {
         const raw = localStorage.getItem(FLASHCARD_MIX_KEY);
-        if (!raw) { router.replace('/chinese?tab=flashcards'); return; }
+        if (!raw) { router.replace('/chinese/flashcards'); return; }
 
         const selectedIds: string[] = JSON.parse(raw);
-        if (!selectedIds.length) { router.replace('/chinese?tab=flashcards'); return; }
+        if (!selectedIds.length) { router.replace('/chinese/flashcards'); return; }
 
         const token = await getAccessToken();
         if (!token) { setLocked(true); return; }
@@ -48,7 +48,7 @@ export default function FlashcardMixPage() {
         const selectedNums = new Set(selectedIds.map(Number));
         const words = fullDeck.words.filter((w) => selectedNums.has(w.lesson ?? -1));
 
-        if (words.length === 0) { router.replace('/chinese?tab=flashcards'); return; }
+        if (words.length === 0) { router.replace('/chinese/flashcards'); return; }
 
         const lessonList = [...selectedIds].map(Number).sort((a, b) => a - b).join(', ');
         const singleLesson = selectedIds.length === 1 ? Number(selectedIds[0]) : null;

@@ -45,7 +45,7 @@ export default async function DePage({ params }: { params: Promise<{ locale: str
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: grammarLabel, path: `/${locale}/chinese/grammar` },
       { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/de` },
     ]),
     grammarTermJsonLd('de', locale),

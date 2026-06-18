@@ -30,7 +30,7 @@ export function WritingPracticePage({ setId, title, title_ru, words }: Props) {
   const isHsk4 = setId.startsWith('hsk4-');
   const isHsk5 = setId.startsWith('hsk5-');
   const isHsk6 = setId.startsWith('hsk6-');
-  const backUrl = isHsk6 ? '/chinese?tab=writing&version=2.0&hsk=6' : isHsk5 ? '/chinese?tab=writing&version=2.0&hsk=5' : isHsk4 ? '/chinese?tab=writing&version=2.0&hsk=4' : isHsk2L2 ? '/chinese?tab=writing&version=2.0&hsk=2' : isHsk3 ? '/chinese?tab=writing&version=2.0&hsk=3' : isHsk2 ? '/chinese?tab=writing&version=2.0' : '/chinese?tab=writing&version=3.0';
+  const backUrl = isHsk6 ? '/chinese/writing?version=2.0&hsk=6' : isHsk5 ? '/chinese/writing?version=2.0&hsk=5' : isHsk4 ? '/chinese/writing?version=2.0&hsk=4' : isHsk2L2 ? '/chinese/writing?version=2.0&hsk=2' : isHsk3 ? '/chinese/writing?version=2.0&hsk=3' : isHsk2 ? '/chinese/writing?version=2.0' : '/chinese/writing?version=3.0';
 
   // Analytics: track writing practice view
   useEffect(() => {

@@ -45,7 +45,7 @@ export default async function HuiPage({ params }: { params: Promise<{ locale: st
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: grammarLabel, path: `/${locale}/chinese?tab=grammar` },
+      { name: grammarLabel, path: `/${locale}/chinese/grammar` },
       { name: (pageMeta[locale] || pageMeta.uz).title.split(' — ')[0], path: `/${locale}/chinese/hsk1/grammar/hui` },
     ]),
     grammarTermJsonLd('hui', locale),

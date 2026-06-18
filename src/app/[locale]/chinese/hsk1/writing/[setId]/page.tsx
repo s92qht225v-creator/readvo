@@ -61,7 +61,7 @@ export default async function WritingSetPage({ params }: Props) {
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: writingLabel, path: `/${locale}/chinese?tab=writing` },
+      { name: writingLabel, path: `/${locale}/chinese/writing` },
       { name: setTitle, path: `/${locale}/chinese/hsk1/writing/${setId}` },
     ]),
   ]);

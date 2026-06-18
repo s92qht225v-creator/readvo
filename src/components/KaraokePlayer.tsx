@@ -330,7 +330,7 @@ export function KaraokePlayer({ meta, bookPath }: KaraokePlayerProps) {
         <div className="dr-hero">
           <div className="dr-hero__watermark">曲</div>
           <div className="dr-hero__top-row">
-            <Link href="/chinese?tab=karaoke" className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
+            <Link href="/chinese/karaoke" className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
               <span aria-hidden>&#8249;</span>
             </Link>
             <BannerMenu />

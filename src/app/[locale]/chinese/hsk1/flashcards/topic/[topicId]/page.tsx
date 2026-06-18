@@ -23,7 +23,7 @@ export default function TopicFlashcardPage() {
         const res = await fetch(`/api/flashcards/topic/${topicId}`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
         });
-        if (!res.ok) { router.replace('/chinese?tab=flashcards'); return; }
+        if (!res.ok) { router.replace('/chinese/flashcards'); return; }
         const data = await res.json() as FlashcardDeckData;
         setDeck(data);
       } catch {
@@ -40,7 +40,7 @@ export default function TopicFlashcardPage() {
     <FlashcardDeck
       deck={deck}
       bookPath="/chinese/hsk1"
-      backHref="/chinese?tab=flashcards&subtab=topics"
+      backHref="/chinese/flashcards?subtab=topics"
       lessonTitle={deck.title_zh}
       lessonPinyin={deck.title_pinyin}
       lessonTitleTranslation={deck.title}

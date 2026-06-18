@@ -60,7 +60,7 @@ export default async function Hsk2FlashcardsPage({ params }: Props) {
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: flashLabel, path: `/${locale}/chinese?tab=flashcards` },
+      { name: flashLabel, path: `/${locale}/chinese/flashcards` },
       { name: setLabel, path: `/${locale}/chinese/hsk2/flashcards/${lessonId}` },
     ]),
   ]);
@@ -72,7 +72,7 @@ export default async function Hsk2FlashcardsPage({ params }: Props) {
         book="hsk2"
         deckId={lessonId}
         bookPath="/chinese/hsk2"
-        backHref="/chinese?tab=flashcards&flashhsk=2"
+        backHref="/chinese/flashcards?flashhsk=2"
       />
     </>
   );

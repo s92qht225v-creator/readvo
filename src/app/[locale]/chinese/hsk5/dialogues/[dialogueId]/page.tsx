@@ -76,7 +76,7 @@ export default async function DialoguePage({ params }: PageParams) {
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: dialoguesLabel, path: `/${locale}/chinese?tab=dialogues&dialhsk=5` },
+      { name: dialoguesLabel, path: `/${locale}/chinese?dialhsk=5` },
       { name: `${raw.title} — ${translation}`, path: `/${locale}/chinese/hsk5/dialogues/${dialogueId}` },
     ]),
     {
@@ -106,7 +106,7 @@ export default async function DialoguePage({ params }: PageParams) {
           titleTranslation_en: raw.titleTranslation_en,
         }}
         bookPath="/chinese/hsk5"
-        listPath="/chinese?tab=dialogues&dialhsk=5"
+        listPath="/chinese?dialhsk=5"
       />
     </>
   );

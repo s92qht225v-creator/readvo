@@ -355,7 +355,7 @@ export function GrammarHuiPolishedPage() {
     const existing = getStars('hui');
     if (existing === undefined || stars > existing) saveStars('hui', stars);
     setQuizAnswers({});
-    router.push('/chinese?tab=grammar');
+    router.push('/chinese/grammar');
   };
 
   return (
@@ -363,7 +363,7 @@ export function GrammarHuiPolishedPage() {
       <div className="dr-hero">
         <div className="dr-hero__watermark">会</div>
         <div className="dr-hero__top-row">
-          <Link href="/chinese?tab=grammar" className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
+          <Link href="/chinese/grammar" className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>

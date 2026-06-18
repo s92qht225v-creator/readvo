@@ -5,5 +5,5 @@ export default async function HSK1DialoguesPage({ params }: { params: Promise<{ 
   const { locale } = await params;
   setRequestLocale(locale);
 
-  redirect(`/${locale}/chinese?tab=dialogues`);
+  redirect(`/${locale}/chinese`);
 }
