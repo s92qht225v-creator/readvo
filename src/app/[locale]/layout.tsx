@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Sans } from 'next/font/google';
+import { Noto_Sans, Noto_Naskh_Arabic } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -10,6 +10,7 @@ import { TelegramFAB } from '@/components/TelegramFAB';
 import { AnalyticsScripts } from '@/components/AnalyticsScripts';
 
 const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
+const arabicFont = Noto_Naskh_Arabic({ subsets: ['arabic'], weight: ['400', '500', '700'], variable: '--font-arabic', display: 'swap', preload: false });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
 
@@ -85,7 +86,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${font.className} ${font.variable}`}>
+      <body className={`${font.className} ${font.variable} ${arabicFont.variable}`}>
         <AnalyticsScripts />
         <NextIntlClientProvider messages={messages}>
           <AuthProvider>
