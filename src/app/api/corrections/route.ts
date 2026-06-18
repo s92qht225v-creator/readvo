@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     const subtab = url.searchParams.get('subtab');
     const parts: string[] = [];
     if (path.includes('/writing/')) parts.push('Yozish: ' + path.split('/writing/')[1]);
-    else if (path.includes('/flashcards/topic/')) parts.push('Flesh/Mavzu: ' + path.split('/topic/')[1]);
+    else if (path.includes('/flashcards/topics/')) parts.push('Flesh/Mavzu: ' + path.split('/topics/')[1]);
     else if (path.includes('/flashcards/')) parts.push('Flesh: dars ' + path.split('/flashcards/')[1]);
     else if (path.includes('/dialogues/')) parts.push('Dialog: ' + path.split('/dialogues/')[1]);
     else if (path.includes('/stories/')) parts.push('Hikoya: ' + path.split('/stories/')[1]);

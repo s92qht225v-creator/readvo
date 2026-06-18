@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.)/;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.)/;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -76,6 +76,28 @@ export default function proxy(request: NextRequest) {
   if (karaokeMatch) {
     const dest = request.nextUrl.clone();
     dest.pathname = `/${karaokeMatch[1]}/chinese/karaoke/${karaokeMatch[2]}`;
+    return NextResponse.redirect(dest, 301);
+  }
+
+  // Redirect legacy book-first flashcard URLs to section-first (301 permanent).
+  // Order matters: the static `mix` and `topic` patterns must precede the
+  // generic lessons pattern so they match first.
+  const fcMix = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk\d\/flashcards\/mix$/);
+  if (fcMix) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${fcMix[1]}/chinese/flashcards/mix`;
+    return NextResponse.redirect(dest, 301);
+  }
+  const fcTopic = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk\d\/flashcards\/topic\/(.+)$/);
+  if (fcTopic) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${fcTopic[1]}/chinese/flashcards/topics/${fcTopic[2]}`;
+    return NextResponse.redirect(dest, 301);
+  }
+  const fcLesson = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk(\d)\/flashcards\/(.+)$/);
+  if (fcLesson) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${fcLesson[1]}/chinese/flashcards/hsk${fcLesson[2]}/${fcLesson[3]}`;
     return NextResponse.redirect(dest, 301);
   }
 

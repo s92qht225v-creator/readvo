@@ -174,7 +174,7 @@ export function FlashcardsCatalog({ writingSets, writingSetsHsk2L2, writingSetsH
                   <Link
                     key={set.id}
                     className="lp__writing-card"
-                    href={`/chinese/${hskPath}/flashcards/${set.id}`}
+                    href={`/chinese/flashcards/${hskPath}/${set.id}`}
                     prefetch={false}
                   >
                     <div className="lp__writing-card-deco" aria-hidden="true">{ghost}</div>
@@ -222,7 +222,7 @@ export function FlashcardsCatalog({ writingSets, writingSetsHsk2L2, writingSetsH
                 {filteredTopics.map((topic) => (
                   <Link
                     key={topic.slug}
-                    href={`/chinese/hsk1/flashcards/topic/${topic.slug}`}
+                    href={`/chinese/flashcards/topics/${topic.slug}`}
                     prefetch={false}
                     style={{
                       background: '#fff', borderRadius: 10, padding: '14px',
