@@ -46,6 +46,7 @@ const t = {
     ctaSubtitle: 'Ro\'yxatdan o\'ting va barcha imkoniyatlardan foydalaning — hech qanday to\'lov talab qilinmaydi',
     footerText: 'Blim — Interaktiv til darsliklari',
     chinese: 'Xitoy tili',
+    arabic: 'Arab tili',
     tagline: 'Interaktiv til darsliklari',
     liveNow: 'Hozir {n} kishi o\'qimoqda',
   },
@@ -85,6 +86,7 @@ const t = {
     ctaSubtitle: 'Зарегистрируйтесь и получите полный доступ ко всем функциям — без оплаты',
     footerText: 'Blim — Интерактивные учебники языков',
     chinese: 'Китайский язык',
+    arabic: 'Арабский',
     tagline: 'Интерактивные учебники языков',
     liveNow: 'Сейчас {n} человек занимаются',
   },
@@ -124,6 +126,7 @@ const t = {
     ctaSubtitle: 'Sign up and get full access to all features — no payment required',
     footerText: 'Blim — Interactive language textbooks',
     chinese: 'Chinese',
+    arabic: 'Arabic',
     tagline: 'Interactive language textbooks',
     liveNow: '{n} people studying right now',
   },
@@ -138,6 +141,7 @@ function getActiveCount(): number {
 
 const languageList = [
   { id: 'chinese', nameOriginal: '中文', flag: '🇨🇳' },
+  { id: 'arabic', nameOriginal: 'العربية', flag: '🇸🇦' },
 ];
 
 
