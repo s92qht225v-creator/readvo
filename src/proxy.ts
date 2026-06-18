@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk)/;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.)/;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -65,6 +65,14 @@ export default function proxy(request: NextRequest) {
   if (dlgList) {
     const dest = request.nextUrl.clone();
     dest.pathname = `/${dlgList[1]}/chinese`;
+    return NextResponse.redirect(dest, 301);
+  }
+
+  // Redirect legacy book-first karaoke URLs to section-first (301 permanent)
+  const karaokeMatch = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk1\/karaoke\/(.+)$/);
+  if (karaokeMatch) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${karaokeMatch[1]}/chinese/karaoke/${karaokeMatch[2]}`;
     return NextResponse.redirect(dest, 301);
   }
 
