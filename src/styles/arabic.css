@@ -1,0 +1,18 @@
+/* Language-agnostic reader core chrome (logical properties → direction-safe). */
+.reader-core { max-width: 900px; margin-inline: auto; padding-inline: 16px; }
+.reader-core__lines { display: flex; flex-direction: column; gap: 14px; padding-block: 16px; }
+.reader-core__line { padding-inline-start: 0; }
+.reader-core__speaker { font-weight: 700; color: var(--color-accent, #dc2626); margin-inline-end: 6px; }
+.reader-core__sentence { cursor: pointer; line-height: 2.2; }
+.reader-core__sentence--active { color: var(--color-accent, #dc2626); }
+.reader-core__translation { color: #666; font-style: italic; margin-block-start: 4px; }
+
+/* Arabic script specifics */
+.reader-core--arabic { direction: rtl; text-align: right; font-family: var(--font-arabic), serif; }
+.reader-core--arabic .ar-text { font-size: 1.6em; }
+.reader-core--arabic .ar-translit { display: block; font-family: var(--font-pinyin), sans-serif; font-size: 0.85em; color: #888; font-style: italic; }
+
+/* Chinese proof config (used only in dev/proof, not the live reader) */
+.reader-core--chinese { direction: ltr; }
+.reader-core--chinese .zh-char { display: inline-flex; flex-direction: column; align-items: center; margin: 0 1px; }
+.reader-core--chinese .zh-py { font-size: 0.6em; color: var(--color-accent, #dc2626); font-style: italic; }
