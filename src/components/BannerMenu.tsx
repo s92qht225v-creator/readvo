@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from '@/i18n/navigation';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
@@ -17,6 +17,8 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
   const { user, logout } = useAuth();
   const trial = useTrial();
   const router = useRouter();
+  const pathname = usePathname();
+  const onArabic = pathname?.includes('/arabic') ?? false;
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -98,14 +100,14 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
           <div className="home__menu-lang-row">
             <Link
               href="/chinese/dialogues"
-              className="home__menu-lang-btn home__menu-lang-btn--active"
+              className={`home__menu-lang-btn ${onArabic ? '' : 'home__menu-lang-btn--active'}`}
               onClick={() => setMenuOpen(false)}
             >
               中文
             </Link>
             <Link
               href="/arabic/dialogues"
-              className="home__menu-lang-btn"
+              className={`home__menu-lang-btn ${onArabic ? 'home__menu-lang-btn--active' : ''}`}
               onClick={() => setMenuOpen(false)}
             >
               العربية
