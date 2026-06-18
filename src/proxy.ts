@@ -57,6 +57,15 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(dest, 301);
   }
 
+  // /arabic root → the Dialogues catalog (Arabic has one section in v1).
+  const arRootMatch = pathname.match(/^\/(uz|ru|en)\/arabic\/?$/);
+  if (arRootMatch) {
+    const dest = request.nextUrl.clone();
+    dest.searchParams.delete('tab');
+    dest.pathname = `/${arRootMatch[1]}/arabic/dialogues`;
+    return NextResponse.redirect(dest, 301);
+  }
+
   // Redirect legacy book-first dialogue URLs to section-first (301 permanent)
   const dlgReader = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk(\d)\/dialogues\/(.+)$/);
   if (dlgReader) {
