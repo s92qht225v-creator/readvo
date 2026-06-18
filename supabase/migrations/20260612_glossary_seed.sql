@@ -666,3 +666,26 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('鼓励', 'gǔlì', 'rag''batlantirmoq; dalda bermoq', 'поощрять; подбадривать', 'to encourage', 4),
   ('努力', 'nǔlì', 'harakat qilmoq; tirishmoq', 'стараться; усердно', 'to work hard; effort', 3)
   on conflict (zh, py_norm) do nothing;
+
+-- 学习 (hsk3/dialogue4) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('报名', 'bàomíng', 'ro''yxatdan o''tmoq; ariza topshirmoq', 'записаться; регистрироваться', 'to sign up; to register', 4),
+  ('复习', 'fùxí', 'takrorlamoq', 'повторять (материал)', 'to review (lessons)', 3),
+  ('听力', 'tīnglì', 'tinglab tushunish', 'аудирование', 'listening comprehension', 4),
+  ('阅读', 'yuèdú', 'o''qish (matn)', 'чтение', 'reading', 4),
+  ('写作', 'xiězuò', 'yozma ish; insho yozish', 'письмо; сочинение', 'writing (composition)', 5),
+  ('部分', 'bùfen', 'qism', 'часть', 'part; section', 4),
+  ('方法', 'fāngfǎ', 'usul; metod', 'метод; способ', 'method', 4),
+  ('软件', 'ruǎnjiàn', 'dastur; ilova', 'программа; приложение', 'software; app', 4),
+  ('背', 'bèi', 'yodlamoq', 'заучивать наизусть', 'to memorize', 4),
+  ('有效', 'yǒuxiào', 'samarali; foydali', 'эффективный', 'effective', 5),
+  ('词汇量', 'cíhuì liàng', 'so''z boyligi', 'словарный запас', 'vocabulary size', 6),
+  ('提高', 'tígāo', 'oshirmoq; yaxshilamoq', 'повышать; улучшать', 'to improve; to raise', 3),
+  ('模拟题', 'mónǐ tí', 'sinov (mashq) testlari', 'пробные задания', 'practice test questions', 5),
+  ('结果', 'jiéguǒ', 'natija', 'результат', 'result', 4),
+  ('留学', 'liúxué', 'chet elda o''qimoq', 'учиться за границей', 'to study abroad', 4),
+  ('有名', 'yǒumíng', 'mashhur', 'известный', 'famous', 3),
+  ('顺利', 'shùnlì', 'muvaffaqiyatli; bemalol', 'успешно; гладко', 'smooth; successful', 4),
+  ('申请', 'shēnqǐng', 'ariza bermoq', 'подавать заявку', 'to apply', 4),
+  ('成功', 'chénggōng', 'muvaffaqiyat; muvaffaqiyatli', 'успех; успешный', 'success; to succeed', 4)
+  on conflict (zh, py_norm) do nothing;

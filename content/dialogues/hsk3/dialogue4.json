@@ -1,0 +1,223 @@
+{
+  "id": "hsk3-dialogue4",
+  "slug": "preparing-for-the-hsk",
+  "title": "学习",
+  "pinyin": "Xuéxí",
+  "titleTranslation": "O'qish",
+  "titleTranslation_ru": "Учёба",
+  "titleTranslation_en": "Studying",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "报名",
+    "复习",
+    "听力",
+    "阅读",
+    "写作",
+    "部分",
+    "方法",
+    "软件",
+    "背",
+    "有效",
+    "词汇量",
+    "提高",
+    "模拟题",
+    "结果",
+    "留学",
+    "有名",
+    "顺利",
+    "申请",
+    "成功"
+  ],
+  "sections": [
+    {
+      "id": "d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d4-s1",
+          "text_original": "你最近在忙什么？好几天没看到你了。",
+          "pinyin": "Nǐ zuì jìn zài máng shén me? Hǎo jǐ tiān méi kàn dào nǐ le.",
+          "text_translation": "Yaqinda nima bilan bandsan? Bir necha kundan beri ko'rmayapman.",
+          "text_translation_ru": "Чем ты занят в последнее время? Несколько дней тебя не видел.",
+          "text_translation_en": "What have you been busy with? I haven't seen you for several days.",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s2",
+          "text_original": "我在准备HSK考试，下个月就要考了。",
+          "pinyin": "Wǒ zài zhǔn bèi HSK kǎo shì, xià ge yuè jiù yào kǎo le.",
+          "text_translation": "HSK imtihoniga tayyorlanyapman, keyingi oy topshiraman.",
+          "text_translation_ru": "Я готовлюсь к экзамену HSK, в следующем месяце буду сдавать.",
+          "text_translation_en": "I'm preparing for the HSK exam — I'm taking it next month.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s3",
+          "text_original": "你报名考几级？",
+          "pinyin": "Nǐ bào míng kǎo jǐ jí?",
+          "text_translation": "Nechanchi darajaga ro'yxatdan o'tding?",
+          "text_translation_ru": "На какой уровень ты записался?",
+          "text_translation_en": "Which level did you sign up for?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s4",
+          "text_original": "四级。我已经复习了两个多月了。",
+          "pinyin": "Sì jí. Wǒ yǐ jīng fù xí le liǎng ge duō yuè le.",
+          "text_translation": "To'rtinchi daraja. Ikki oydan ko'proq vaqtdan beri takrorlayapman.",
+          "text_translation_ru": "Четвёртый уровень. Я уже повторяю больше двух месяцев.",
+          "text_translation_en": "Level 4. I've already been reviewing for over two months.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s5",
+          "text_original": "你觉得难吗？",
+          "pinyin": "Nǐ jué de nán ma?",
+          "text_translation": "Senga qiyin tuyulyaptimi?",
+          "text_translation_ru": "Тебе кажется сложным?",
+          "text_translation_en": "Do you find it hard?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s6",
+          "text_original": "听力和阅读还好，但是写作部分比较难。",
+          "pinyin": "Tīng lì hé yuè dú hái hǎo, dàn shì xiě zuò bù fen bǐ jiào nán.",
+          "text_translation": "Tinglash va o'qish qismi hali holva, lekin yozma qism ancha qiyin.",
+          "text_translation_ru": "Аудирование и чтение ничего, а вот письменная часть сложновата.",
+          "text_translation_en": "Listening and reading are okay, but the writing section is rather hard.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s7",
+          "text_original": "你每天学习多长时间？",
+          "pinyin": "Nǐ měi tiān xué xí duō cháng shí jiān?",
+          "text_translation": "Har kuni qancha vaqt o'qiysan?",
+          "text_translation_ru": "Сколько времени ты занимаешься каждый день?",
+          "text_translation_en": "How long do you study each day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s8",
+          "text_original": "一般两个小时，周末会多一些。",
+          "pinyin": "Yì bān liǎng ge xiǎo shí, zhōu mò huì duō yì xiē.",
+          "text_translation": "Odatda ikki soat, dam olish kunlari biroz ko'proq.",
+          "text_translation_ru": "Обычно два часа, по выходным побольше.",
+          "text_translation_en": "Usually two hours, a bit more on weekends.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s9",
+          "text_original": "你用什么方法记单词？",
+          "pinyin": "Nǐ yòng shén me fāng fǎ jì dān cí?",
+          "text_translation": "So'zlarni yodlash uchun qanaqa usul ishlatasan?",
+          "text_translation_ru": "Каким методом ты запоминаешь слова?",
+          "text_translation_en": "What method do you use to memorize words?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s10",
+          "text_original": "我每天用手机软件背二十个新词，然后复习旧的。",
+          "pinyin": "Wǒ měi tiān yòng shǒu jī ruǎn jiàn bèi èr shí ge xīn cí, rán hòu fù xí jiù de.",
+          "text_translation": "Har kuni telefon ilovasi bilan yigirmata yangi so'z yodlayman, keyin eskilarini takrorlayman.",
+          "text_translation_ru": "Каждый день учу двадцать новых слов в приложении, потом повторяю старые.",
+          "text_translation_en": "Every day I memorize twenty new words with a phone app, then review the old ones.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s11",
+          "text_original": "这个方法有效吗？",
+          "pinyin": "Zhè ge fāng fǎ yǒu xiào ma?",
+          "text_translation": "Bu usul samaralimi?",
+          "text_translation_ru": "Этот метод эффективен?",
+          "text_translation_en": "Is this method effective?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s12",
+          "text_original": "挺有效的。坚持了两个月，我的词汇量提高了很多。",
+          "pinyin": "Tǐng yǒu xiào de. Jiān chí le liǎng ge yuè, wǒ de cí huì liàng tí gāo le hěn duō.",
+          "text_translation": "Ancha samarali. Ikki oy sabot qildim, so'z boyligim ancha oshdi.",
+          "text_translation_ru": "Довольно эффективен. За два месяца мой словарный запас сильно вырос.",
+          "text_translation_en": "Quite effective. After two months of keeping at it, my vocabulary has grown a lot.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s13",
+          "text_original": "你有没有做模拟题？",
+          "pinyin": "Nǐ yǒu méi yǒu zuò mó nǐ tí?",
+          "text_translation": "Sinov testlarini ishladingmi?",
+          "text_translation_ru": "Ты решал пробные задания?",
+          "text_translation_en": "Have you done any practice tests?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s14",
+          "text_original": "做了。上周做了一套，结果还不错。",
+          "pinyin": "Zuò le. Shàng zhōu zuò le yí tào, jié guǒ hái bú cuò.",
+          "text_translation": "Ishladim. O'tgan hafta bitta to'plamni ishladim, natija yomon emas edi.",
+          "text_translation_ru": "Решал. На прошлой неделе прошёл один комплект, результат неплохой.",
+          "text_translation_en": "I have. Last week I did one set, and the result was pretty good.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s15",
+          "text_original": "那你应该没问题！",
+          "pinyin": "Nà nǐ yīng gāi méi wèn tí!",
+          "text_translation": "Unda muammo bo'lmasa kerak!",
+          "text_translation_ru": "Тогда у тебя точно всё получится!",
+          "text_translation_en": "Then you should be fine!",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s16",
+          "text_original": "希望如此。考完以后我打算去中国留学。",
+          "pinyin": "Xī wàng rú cǐ. Kǎo wán yǐ hòu wǒ dǎ suàn qù Zhōng guó liú xué.",
+          "text_translation": "Shunday bo'lsa edi. Imtihondan keyin Xitoyga o'qishga bormoqchiman.",
+          "text_translation_ru": "Надеюсь. После экзамена я собираюсь поехать учиться в Китай.",
+          "text_translation_en": "I hope so. After the exam I plan to go study in China.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s17",
+          "text_original": "真的吗？太好了！你想去哪个城市？",
+          "pinyin": "Zhēn de ma? Tài hǎo le! Nǐ xiǎng qù nǎ ge chéng shì?",
+          "text_translation": "Rostdanmi? Juda yaxshi! Qaysi shaharga bormoqchisan?",
+          "text_translation_ru": "Правда? Отлично! В какой город ты хочешь поехать?",
+          "text_translation_en": "Really? That's great! Which city do you want to go to?",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s18",
+          "text_original": "我想去北京。那边的大学很有名。",
+          "pinyin": "Wǒ xiǎng qù Běi jīng. Nà biān de dà xué hěn yǒu míng.",
+          "text_translation": "Pekinga bormoqchiman. U yerdagi universitetlar juda mashhur.",
+          "text_translation_ru": "Хочу в Пекин. Тамошние университеты очень известные.",
+          "text_translation_en": "I want to go to Beijing. The universities there are very famous.",
+          "speaker": "B"
+        },
+        {
+          "id": "d4-s19",
+          "text_original": "祝你考试顺利！也祝你申请成功！",
+          "pinyin": "Zhù nǐ kǎo shì shùn lì! Yě zhù nǐ shēn qǐng chéng gōng!",
+          "text_translation": "Imtihoning muvaffaqiyatli o'tsin! Arizang ham qabul bo'lsin!",
+          "text_translation_ru": "Желаю тебе сдать экзамен! И чтобы заявку одобрили!",
+          "text_translation_en": "Good luck with your exam! And good luck with your application!",
+          "speaker": "A"
+        },
+        {
+          "id": "d4-s20",
+          "text_original": "谢谢！如果我考过了，我请你吃饭！",
+          "pinyin": "Xiè xie! Rú guǒ wǒ kǎo guò le, wǒ qǐng nǐ chī fàn!",
+          "text_translation": "Rahmat! Agar imtihondan o'tsam, seni ovqatga taklif qilaman!",
+          "text_translation_ru": "Спасибо! Если сдам, угощу тебя обедом!",
+          "text_translation_en": "Thanks! If I pass, I'll treat you to a meal!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
