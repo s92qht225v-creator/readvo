@@ -50,3 +50,32 @@ export function listArabicDialogues(): { level: string; slug: string }[] {
   }
   return out;
 }
+
+/** Lightweight per-dialogue metadata for the catalog grid. */
+export interface ArabicDialogueCardMeta {
+  id: string;
+  slug: string;
+  level: string;
+  title: string;
+  translit: string;
+  titleTranslation_uz: string;
+  titleTranslation_ru: string;
+  titleTranslation_en: string;
+}
+
+/** Load catalog metadata for every Arabic dialogue, grouped by CEFR level. */
+export function loadArabicDialogueCatalog(): Record<string, ArabicDialogueCardMeta[]> {
+  const out: Record<string, ArabicDialogueCardMeta[]> = { a1: [], a2: [], b1: [], b2: [], c1: [], c2: [] };
+  for (const { level, slug } of listArabicDialogues()) {
+    const d = loadArabicDialogue(level, slug);
+    if (!d) continue;
+    out[level].push({
+      id: d.id, slug, level,
+      title: d.title, translit: d.translit,
+      titleTranslation_uz: d.titleTranslation_uz,
+      titleTranslation_ru: d.titleTranslation_ru,
+      titleTranslation_en: d.titleTranslation_en,
+    });
+  }
+  return out;
+}

@@ -54,3 +54,10 @@ export interface WritingSetMeta {
   sampleRu?: string;
   sampleEn?: string;
 }
+
+export type CefrLevel = 'a1' | 'a2' | 'b1' | 'b2' | 'c1' | 'c2';
+export const CEFR_LEVELS: CefrLevel[] = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+
+export function parseCefrLevel(raw: string | null | undefined): CefrLevel {
+  return CEFR_LEVELS.includes(raw as CefrLevel) ? (raw as CefrLevel) : 'a1';
+}
