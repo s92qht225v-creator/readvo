@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/./;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/flashcards\/./;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
