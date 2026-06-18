@@ -7409,3 +7409,33 @@ export const WRITING_SETS_HSK6: WritingSet[] = [
 export function getWritingSet(setId: string): WritingSet | undefined {
   return WRITING_SETS.find((s) => s.id === setId) || WRITING_SETS_HSK2.find((s) => s.id === setId) || WRITING_SETS_HSK2_L2.find((s) => s.id === setId) || WRITING_SETS_HSK3.find((s) => s.id === setId) || WRITING_SETS_HSK4.find((s) => s.id === setId) || WRITING_SETS_HSK5.find((s) => s.id === setId) || WRITING_SETS_HSK6.find((s) => s.id === setId);
 }
+
+// Section-first writing URL scheme: /chinese/writing/hsk{level}/set{N}.
+// The user-facing HSK level (hsk1..hsk6, all HSK 2.0) maps to the underlying
+// WRITING_SETS_* array, which uses its own legacy id prefix. The `[set]`
+// segment is `set{N}` where N is the id suffix (arrays are contiguous, so this
+// also equals the displayed set number). Resolution is by reconstructed id,
+// so it stays correct even if an array ever has a gap.
+const WRITING_LEVEL_MAP: Record<string, { arr: WritingSet[]; prefix: string }> = {
+  hsk1: { arr: WRITING_SETS_HSK2, prefix: 'hsk2-set' },
+  hsk2: { arr: WRITING_SETS_HSK2_L2, prefix: 'hsk2-l2-set' },
+  hsk3: { arr: WRITING_SETS_HSK3, prefix: 'hsk3-set' },
+  hsk4: { arr: WRITING_SETS_HSK4, prefix: 'hsk4-set' },
+  hsk5: { arr: WRITING_SETS_HSK5, prefix: 'hsk5-set' },
+  hsk6: { arr: WRITING_SETS_HSK6, prefix: 'hsk6-set' },
+};
+
+/** Resolve a section-first writing URL (level, "set{N}") to its WritingSet. */
+export function resolveWritingSet(level: string, setSeg: string): WritingSet | undefined {
+  const entry = WRITING_LEVEL_MAP[level];
+  if (!entry) return undefined;
+  const m = setSeg.match(/^set(\d+)$/);
+  if (!m) return undefined;
+  return entry.arr.find((s) => s.id === `${entry.prefix}${m[1]}`);
+}
+
+/** All non-empty (level, set) params for generateStaticParams. */
+export const WRITING_ROUTE_PARAMS: { level: string; set: string }[] = Object.entries(WRITING_LEVEL_MAP).flatMap(
+  ([level, { arr, prefix }]) =>
+    arr.filter((s) => s.words.length > 0).map((s) => ({ level, set: `set${s.id.slice(prefix.length)}` })),
+);

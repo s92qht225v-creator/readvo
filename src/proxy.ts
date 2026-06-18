@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.)/;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.|writing\/.)/;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -98,6 +98,24 @@ export default function proxy(request: NextRequest) {
   if (fcLesson) {
     const dest = request.nextUrl.clone();
     dest.pathname = `/${fcLesson[1]}/chinese/flashcards/hsk${fcLesson[2]}/${fcLesson[3]}`;
+    return NextResponse.redirect(dest, 301);
+  }
+
+  // Redirect legacy book-first writing URLs to section-first (301 permanent).
+  // Old: /chinese/hsk1/writing/{setId}. The set id's legacy prefix maps to the
+  // user-facing HSK level (HSK 2.0 only): hsk2-set* → hsk1, hsk2-l2-set* → hsk2,
+  // hsk{3..6}-set* → hsk{3..6}. The old HSK 3.0 sets (hsk1-set*) are no longer
+  // linked from the writing catalog, so they redirect to the catalog itself.
+  const wr = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk1\/writing\/(.+)$/);
+  if (wr) {
+    const [, loc, setId] = wr;
+    const dest = request.nextUrl.clone();
+    let target = `/${loc}/chinese/writing`;
+    let m: RegExpMatchArray | null;
+    if ((m = setId.match(/^hsk2-l2-set(\d+)$/))) target = `/${loc}/chinese/writing/hsk2/set${m[1]}`;
+    else if ((m = setId.match(/^hsk2-set(\d+)$/))) target = `/${loc}/chinese/writing/hsk1/set${m[1]}`;
+    else if ((m = setId.match(/^hsk([3-6])-set(\d+)$/))) target = `/${loc}/chinese/writing/hsk${m[1]}/set${m[2]}`;
+    dest.pathname = target;
     return NextResponse.redirect(dest, 301);
   }
 

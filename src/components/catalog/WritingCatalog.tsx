@@ -29,9 +29,9 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
   const { getStars: getWritingStars } = useStars('writing');
   const searchParams = useSearchParams();
 
-  // Writing tab state — init EXACTLY as LanguagePage does
-  const initialVersion = searchParams.get('version') === '3.0' ? '3.0' : '2.0';
-  const [hskVersion, setHskVersion] = useState<'3.0' | '2.0'>(initialVersion);
+  // Writing tab state. HSK 3.0 is hidden — writing shows HSK 2.0 levels 1-6
+  // only, so the version is pinned to '2.0' (no version toggle).
+  const [hskVersion] = useState<'3.0' | '2.0'>('2.0');
   const [writingHskLevel, setWritingHskLevel] = useState<HskLevel>(parseHskLevel(searchParams.get('hsk')));
   const [writingSearch, setWritingSearch] = useState('');
 
@@ -86,26 +86,6 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
   return (
     <main className="home">
       <CatalogHeader currentTab="writing" hskLevel={hskVersion === '2.0' ? writingHskLevel : '1'} />
-
-      {/* HSK version toggle (writing-only) */}
-      <div className="lp__seg-bar">
-        <div className="lp__hsk-version-bar">
-          <button
-            className={`lp__hsk-version-btn${hskVersion === '2.0' ? ' lp__hsk-version-btn--active' : ''}`}
-            onClick={() => { setHskVersion('2.0'); }}
-            type="button"
-          >
-            HSK 2.0
-          </button>
-          <button
-            className={`lp__hsk-version-btn${hskVersion === '3.0' ? ' lp__hsk-version-btn--active' : ''}`}
-            onClick={() => { setHskVersion('3.0'); setWritingHskLevel('1'); }}
-            type="button"
-          >
-            HSK 3.0
-          </button>
-        </div>
-      </div>
 
       {/* HSK level pills — writing portion (verbatim from LanguagePage, writing-only logic) */}
       <div className="lp__seg-bar">
@@ -184,7 +164,7 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
                 {inner}
               </div>
             ) : (
-              <Link key={set.id} className="lp__writing-card" href={`/chinese/hsk1/writing/${set.id}`} prefetch={false}>
+              <Link key={set.id} className="lp__writing-card" href={`/chinese/writing/hsk${writingHskLevel}/set${set.id.split('-set').pop()}`} prefetch={false}>
                 {inner}
               </Link>
             );
