@@ -689,3 +689,24 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('申请', 'shēnqǐng', 'ariza bermoq', 'подавать заявку', 'to apply', 4),
   ('成功', 'chénggōng', 'muvaffaqiyat; muvaffaqiyatli', 'успех; успешный', 'success; to succeed', 4)
   on conflict (zh, py_norm) do nothing;
+
+-- 环境 (hsk4/dialogue2) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('越来越', 'yuè lái yuè', 'tobora; borgan sari', 'всё более', 'more and more', 3),
+  ('全球变暖', 'quánqiú biànnuǎn', 'global isish', 'глобальное потепление', 'global warming', 6),
+  ('冰川', 'bīngchuān', 'muzlik', 'ледник', 'glacier', 6),
+  ('融化', 'rónghuà', 'erimoq', 'таять', 'to melt', 5),
+  ('可怕', 'kěpà', 'dahshatli; qo''rqinchli', 'страшный; ужасный', 'terrible; frightening', 4),
+  ('尝试', 'chángshì', 'sinab ko''rmoq; urinmoq', 'пробовать; пытаться', 'to try; to attempt', 5),
+  ('塑料袋', 'sùliàodài', 'plastik (selofan) xalta', 'полиэтиленовый пакет', 'plastic bag', 5),
+  ('忘记', 'wàngjì', 'unutmoq', 'забывать', 'to forget', 3),
+  ('节约', 'jiéyuē', 'tejamoq', 'экономить', 'to save; to conserve', 5),
+  ('同意', 'tóngyì', 'rozi bo''lmoq', 'соглашаться', 'to agree', 3),
+  ('节能灯', 'jiénéngdēng', 'energiya tejamkor chiroq', 'энергосберегающая лампа', 'energy-saving lamp', 6),
+  ('省电', 'shěng diàn', 'elektr energiyasini tejamoq', 'экономить электричество', 'to save electricity', 5),
+  ('保护', 'bǎohù', 'himoya qilmoq; asramoq', 'защищать; охранять', 'to protect', 4),
+  ('社区', 'shèqū', 'jamiyat; mahalla', 'микрорайон; сообщество', 'community', 5),
+  ('环保', 'huánbǎo', 'atrof-muhitni muhofaza qilish', 'охрана окружающей среды', 'environmental protection', 5),
+  ('活动', 'huódòng', 'tadbir; faoliyat', 'мероприятие; деятельность', 'activity; event', 4),
+  ('参与', 'cānyù', 'ishtirok etmoq; qatnashmoq', 'участвовать', 'to participate', 5)
+  on conflict (zh, py_norm) do nothing;

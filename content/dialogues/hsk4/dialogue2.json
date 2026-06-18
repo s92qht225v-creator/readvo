@@ -1,0 +1,197 @@
+{
+  "id": "hsk4-dialogue2",
+  "slug": "protecting-the-environment",
+  "title": "环境",
+  "pinyin": "Huánjìng",
+  "titleTranslation": "Atrof-muhit",
+  "titleTranslation_ru": "Окружающая среда",
+  "titleTranslation_en": "Environment",
+  "level": 4,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "发现",
+    "越来越",
+    "全球变暖",
+    "冰川",
+    "融化",
+    "可怕",
+    "尝试",
+    "塑料袋",
+    "忘记",
+    "节约",
+    "同意",
+    "节能灯",
+    "省电",
+    "改变",
+    "保护",
+    "环境",
+    "社区",
+    "环保",
+    "活动",
+    "参与"
+  ],
+  "sections": [
+    {
+      "id": "d2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d2-s1",
+          "text_original": "你发现了吗？最近天气越来越热了。",
+          "pinyin": "Nǐ fā xiàn le ma? Zuì jìn tiān qì yuè lái yuè rè le.",
+          "text_translation": "Sezdingmi? Yaqinda havo tobora isib boryapti.",
+          "text_translation_ru": "Ты заметил? В последнее время погода становится всё жарче.",
+          "text_translation_en": "Have you noticed? The weather's been getting hotter and hotter lately.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s2",
+          "text_original": "是啊。我觉得夏天比以前长了很多。",
+          "pinyin": "Shì a. Wǒ jué de xià tiān bǐ yǐ qián cháng le hěn duō.",
+          "text_translation": "Ha. Menimcha yoz avvalgidan ancha uzaydi.",
+          "text_translation_ru": "Да. Мне кажется, лето стало намного длиннее, чем раньше.",
+          "text_translation_en": "Yeah. I feel like summer is much longer than it used to be.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s3",
+          "text_original": "全球变暖是一个大问题。",
+          "pinyin": "Quán qiú biàn nuǎn shì yí ge dà wèn tí.",
+          "text_translation": "Global isish katta muammo.",
+          "text_translation_ru": "Глобальное потепление — большая проблема.",
+          "text_translation_en": "Global warming is a big problem.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s4",
+          "text_original": "对。我在新闻上看到，很多地方的冰川都在融化。",
+          "pinyin": "Duì. Wǒ zài xīn wén shàng kàn dào, hěn duō dì fang de bīng chuān dōu zài róng huà.",
+          "text_translation": "To'g'ri. Yangiliklardan ko'rdim, ko'p joylarda muzliklar erib ketyapti.",
+          "text_translation_ru": "Да. Я видел в новостях, что ледники во многих местах тают.",
+          "text_translation_en": "Right. I saw on the news that glaciers in many places are melting.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s5",
+          "text_original": "太可怕了！我们应该做点什么。",
+          "pinyin": "Tài kě pà le! Wǒ men yīng gāi zuò diǎn shén me.",
+          "text_translation": "Juda dahshatli! Biz nimadir qilishimiz kerak.",
+          "text_translation_ru": "Это ужасно! Нам нужно что-то делать.",
+          "text_translation_en": "That's terrible! We should do something.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s6",
+          "text_original": "我最近开始骑自行车上班，少开车。",
+          "pinyin": "Wǒ zuì jìn kāi shǐ qí zì xíng chē shàng bān, shǎo kāi chē.",
+          "text_translation": "Men yaqinda velosipedda ishga bora boshladim, mashinani kamroq haydayman.",
+          "text_translation_ru": "Я недавно начал ездить на работу на велосипеде, меньше пользуюсь машиной.",
+          "text_translation_en": "I recently started cycling to work and driving less.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s7",
+          "text_original": "这是个好习惯。我也在尝试少用塑料袋。",
+          "pinyin": "Zhè shì ge hǎo xí guàn. Wǒ yě zài cháng shì shǎo yòng sù liào dài.",
+          "text_translation": "Bu yaxshi odat. Men ham plastik xaltalarni kamroq ishlatishga harakat qilyapman.",
+          "text_translation_ru": "Это хорошая привычка. Я тоже стараюсь меньше использовать пакеты.",
+          "text_translation_en": "That's a good habit. I'm also trying to use fewer plastic bags.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s8",
+          "text_original": "你出门带自己的购物袋吗？",
+          "pinyin": "Nǐ chū mén dài zì jǐ de gòu wù dài ma?",
+          "text_translation": "Tashqariga chiqqaningda o'zingning xarid xaltangni olib chiqasanmi?",
+          "text_translation_ru": "Ты берёшь с собой свою сумку для покупок?",
+          "text_translation_en": "Do you bring your own shopping bag when you go out?",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s9",
+          "text_original": "有时候带，但是经常忘记。",
+          "pinyin": "Yǒu shí hou dài, dàn shì jīng cháng wàng jì.",
+          "text_translation": "Ba'zan olaman, lekin ko'pincha unutaman.",
+          "text_translation_ru": "Иногда беру, но часто забываю.",
+          "text_translation_en": "Sometimes I do, but I often forget.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s10",
+          "text_original": "慢慢来。我开始也有点不习惯。",
+          "pinyin": "Màn man lái. Wǒ kāi shǐ yě yǒu diǎn bù xí guàn.",
+          "text_translation": "Asta-sekin bo'ladi. Men ham boshida biroz odatlanmagandim.",
+          "text_translation_ru": "Не спеши. Я тоже сначала не привык.",
+          "text_translation_en": "Take it slow. I wasn't used to it at first either.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s11",
+          "text_original": "还有一件事，我觉得我们应该节约用水。",
+          "pinyin": "Hái yǒu yí jiàn shì, wǒ jué de wǒ men yīng gāi jié yuē yòng shuǐ.",
+          "text_translation": "Yana bir narsa bor, menimcha biz suvni tejashimiz kerak.",
+          "text_translation_ru": "Ещё одно: мне кажется, нам нужно экономить воду.",
+          "text_translation_en": "One more thing — I think we should conserve water.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s12",
+          "text_original": "同意。我洗澡的时间比以前短了。",
+          "pinyin": "Tóng yì. Wǒ xǐ zǎo de shí jiān bǐ yǐ qián duǎn le.",
+          "text_translation": "Roziman. Men cho'milish vaqtim avvalgidan qisqardi.",
+          "text_translation_ru": "Согласен. Я стал принимать душ быстрее, чем раньше.",
+          "text_translation_en": "Agreed. My showers are shorter than they used to be.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s13",
+          "text_original": "我们家还买了节能灯，更省电。",
+          "pinyin": "Wǒ men jiā hái mǎi le jié néng dēng, gèng shěng diàn.",
+          "text_translation": "Bizning oilamiz energiya tejamkor chiroqlar ham oldi, ko'proq elektr tejaydi.",
+          "text_translation_ru": "Мы дома ещё купили энергосберегающие лампы — они экономят электричество.",
+          "text_translation_en": "My family also bought energy-saving lamps, which save more electricity.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s14",
+          "text_original": "这些都是小事，但是大家一起做就会有改变。",
+          "pinyin": "Zhè xiē dōu shì xiǎo shì, dàn shì dà jiā yì qǐ zuò jiù huì yǒu gǎi biàn.",
+          "text_translation": "Bularning hammasi mayda ishlar, lekin hamma birga qilsa, o'zgarish bo'ladi.",
+          "text_translation_ru": "Это всё мелочи, но если все будут делать это вместе, появятся изменения.",
+          "text_translation_en": "These are all small things, but if everyone does them together, there will be change.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s15",
+          "text_original": "你说得对。保护环境需要每个人的努力。",
+          "pinyin": "Nǐ shuō de duì. Bǎo hù huán jìng xū yào měi ge rén de nǔ lì.",
+          "text_translation": "To'g'ri aytasan. Atrof-muhitni asrash har bir kishining harakatini talab qiladi.",
+          "text_translation_ru": "Ты прав. Защита окружающей среды требует усилий каждого.",
+          "text_translation_en": "You're right. Protecting the environment takes everyone's effort.",
+          "speaker": "A"
+        },
+        {
+          "id": "d2-s16",
+          "text_original": "下次社区有环保活动，我们一起参加吧。",
+          "pinyin": "Xià cì shè qū yǒu huán bǎo huó dòng, wǒ men yì qǐ cān jiā ba.",
+          "text_translation": "Keyingi safar mahallada ekologik tadbir bo'lsa, birga qatnashaylik.",
+          "text_translation_ru": "В следующий раз, когда в районе будет экологическое мероприятие, давай пойдём вместе.",
+          "text_translation_en": "Next time there's an environmental event in the community, let's go together.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s17",
+          "text_original": "好！我早就想参与这类活动了。",
+          "pinyin": "Hǎo! Wǒ zǎo jiù xiǎng cān yù zhè lèi huó dòng le.",
+          "text_translation": "Mayli! Men allaqachon shunaqa tadbirlarda qatnashmoqchi edim.",
+          "text_translation_ru": "Хорошо! Я давно хотел участвовать в таких мероприятиях.",
+          "text_translation_en": "Great! I've been wanting to take part in this kind of activity for a while.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
