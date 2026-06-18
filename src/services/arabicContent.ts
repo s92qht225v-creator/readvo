@@ -79,3 +79,47 @@ export function loadArabicDialogueCatalog(): Record<string, ArabicDialogueCardMe
   }
   return out;
 }
+
+// ── Flashcards ───────────────────────────────────────────────────────────────
+
+export interface ArabicFlashcard {
+  id: string;
+  ar: string;        // fully vowelized Arabic
+  translit: string;  // Latin transliteration
+  uz: string;
+  ru: string;
+  en: string;
+}
+
+export interface ArabicFlashcardDeck {
+  id: string;
+  level: string;     // 'a1'..'c2'
+  title_uz: string;
+  title_ru: string;
+  title_en: string;
+  cards: ArabicFlashcard[];
+}
+
+const FLASHCARD_ROOT = path.join(process.cwd(), 'content', 'flashcards', 'arabic');
+
+/** Load one Arabic flashcard deck by CEFR level, or null. */
+export function loadArabicFlashcardDeck(level: string): ArabicFlashcardDeck | null {
+  if (!LEVELS.includes(level)) return null;
+  const file = path.join(FLASHCARD_ROOT, `${level}.json`);
+  if (!fs.existsSync(file)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf-8')) as ArabicFlashcardDeck;
+  } catch {
+    return null;
+  }
+}
+
+/** Levels that have a flashcard deck, with card counts (for the catalog). */
+export function loadArabicFlashcardCatalog(): { level: string; count: number }[] {
+  const out: { level: string; count: number }[] = [];
+  for (const level of LEVELS) {
+    const d = loadArabicFlashcardDeck(level);
+    if (d && d.cards.length > 0) out.push({ level, count: d.cards.length });
+  }
+  return out;
+}

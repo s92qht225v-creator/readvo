@@ -1,0 +1,17 @@
+{
+  "id": "arabic-a1",
+  "level": "a1",
+  "title_uz": "A1 so'zlar",
+  "title_ru": "A1 слова",
+  "title_en": "A1 words",
+  "cards": [
+    { "id": "1", "ar": "مَرْحَبًا", "translit": "marḥaban", "uz": "salom", "ru": "привет", "en": "hello" },
+    { "id": "2", "ar": "كِتَابٌ", "translit": "kitābun", "uz": "kitob", "ru": "книга", "en": "book" },
+    { "id": "3", "ar": "بَيْتٌ", "translit": "baytun", "uz": "uy", "ru": "дом", "en": "house" },
+    { "id": "4", "ar": "مَاءٌ", "translit": "māʾun", "uz": "suv", "ru": "вода", "en": "water" },
+    { "id": "5", "ar": "خُبْزٌ", "translit": "khubzun", "uz": "non", "ru": "хлеб", "en": "bread" },
+    { "id": "6", "ar": "مَدْرَسَةٌ", "translit": "madrasatun", "uz": "maktab", "ru": "школа", "en": "school" },
+    { "id": "7", "ar": "صَدِيقٌ", "translit": "ṣadīqun", "uz": "do'st", "ru": "друг", "en": "friend" },
+    { "id": "8", "ar": "كَبِيرٌ", "translit": "kabīrun", "uz": "katta", "ru": "большой", "en": "big" }
+  ]
+}
