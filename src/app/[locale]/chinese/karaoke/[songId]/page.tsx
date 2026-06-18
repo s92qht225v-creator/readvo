@@ -50,12 +50,12 @@ export async function generateMetadata({ params }: PageParams) {
       : fallbackTitle[locale] || fallbackTitle.uz,
     description: descMeta[locale] || descMeta.uz,
     alternates: {
-      canonical: `/${locale}/chinese/hsk1/karaoke/${songId}`,
+      canonical: `/${locale}/chinese/karaoke/${songId}`,
       languages: {
-        uz: `/uz/chinese/hsk1/karaoke/${songId}`,
-        ru: `/ru/chinese/hsk1/karaoke/${songId}`,
-        en: `/en/chinese/hsk1/karaoke/${songId}`,
-        'x-default': `/uz/chinese/hsk1/karaoke/${songId}`,
+        uz: `/uz/chinese/karaoke/${songId}`,
+        ru: `/ru/chinese/karaoke/${songId}`,
+        en: `/en/chinese/karaoke/${songId}`,
+        'x-default': `/uz/chinese/karaoke/${songId}`,
       },
     },
   };
@@ -77,7 +77,7 @@ export default async function KaraokePage({ params }: PageParams) {
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
       { name: karaokeLabel, path: `/${locale}/chinese/karaoke` },
-      { name: song.title, path: `/${locale}/chinese/hsk1/karaoke/${songId}` },
+      { name: song.title, path: `/${locale}/chinese/karaoke/${songId}` },
     ]),
   ]);
 
@@ -93,7 +93,7 @@ export default async function KaraokePage({ params }: PageParams) {
           titleTranslation_ru: song.titleTranslation_ru,
           titleTranslation_en: song.titleTranslation_en,
         }}
-        bookPath="/chinese/hsk1"
+        bookPath="/chinese"
       />
     </>
   );

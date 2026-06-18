@@ -9,14 +9,14 @@ import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 
 const karaokeItems = [
-  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', translation_en: 'The Moon Represents My Heart', href: '/chinese/hsk1/karaoke/yueliang' },
-  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', translation_en: 'Friend', href: '/chinese/hsk1/karaoke/pengyou' },
-  { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', translation_en: 'Fairy Tale', href: '/chinese/hsk1/karaoke/tonghua' },
-  { title: '后来', pinyin: 'Hòulái', translation: 'Keyinroq', translation_ru: 'Потом', translation_en: 'Later', href: '/chinese/hsk1/karaoke/houlai' },
-  { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', translation_en: 'Mouse Loves Rice', href: '/chinese/hsk1/karaoke/laoshuaidami' },
-  { title: '小苹果', pinyin: 'Xiǎo Píngguǒ', translation: 'Kichkina olma', translation_ru: 'Маленькое яблочко', translation_en: 'Little Apple', href: '/chinese/hsk1/karaoke/xiaopinguo' },
-  { title: '世界这么大还是遇见你', pinyin: 'Shìjiè Zhème Dà Háishi Yùjiàn Nǐ', translation: 'Dunyo shuncha katta, baribir senga duch keldim', translation_ru: 'Мир так велик, но я встретил тебя', translation_en: 'The World Is So Big, Yet I Met You', href: '/chinese/hsk1/karaoke/shijiezhemeda' },
-  { title: '我的歌声里', pinyin: 'Wǒ De Gēshēng Lǐ', translation: "Mening qo'shig'imda", translation_ru: 'В моей песне', translation_en: 'In My Song', href: '/chinese/hsk1/karaoke/wodeshengli' },
+  { title: '月亮代表我的心', pinyin: 'Yuèliàng dàibiǎo wǒ de xīn', translation: 'Oy yuragimni ifodalaydi', translation_ru: 'Луна выражает моё сердце', translation_en: 'The Moon Represents My Heart', href: '/chinese/karaoke/yueliang' },
+  { title: '朋友', pinyin: 'Péngyou', translation: 'Do\'st', translation_ru: 'Друг', translation_en: 'Friend', href: '/chinese/karaoke/pengyou' },
+  { title: '童话', pinyin: 'Tónghuà', translation: 'Ertak', translation_ru: 'Сказка', translation_en: 'Fairy Tale', href: '/chinese/karaoke/tonghua' },
+  { title: '后来', pinyin: 'Hòulái', translation: 'Keyinroq', translation_ru: 'Потом', translation_en: 'Later', href: '/chinese/karaoke/houlai' },
+  { title: '老鼠爱大米', pinyin: 'Lǎoshǔ Ài Dàmǐ', translation: 'Sichqon guruchni sevadi', translation_ru: 'Мышка любит рис', translation_en: 'Mouse Loves Rice', href: '/chinese/karaoke/laoshuaidami' },
+  { title: '小苹果', pinyin: 'Xiǎo Píngguǒ', translation: 'Kichkina olma', translation_ru: 'Маленькое яблочко', translation_en: 'Little Apple', href: '/chinese/karaoke/xiaopinguo' },
+  { title: '世界这么大还是遇见你', pinyin: 'Shìjiè Zhème Dà Háishi Yùjiàn Nǐ', translation: 'Dunyo shuncha katta, baribir senga duch keldim', translation_ru: 'Мир так велик, но я встретил тебя', translation_en: 'The World Is So Big, Yet I Met You', href: '/chinese/karaoke/shijiezhemeda' },
+  { title: '我的歌声里', pinyin: 'Wǒ De Gēshēng Lǐ', translation: "Mening qo'shig'imda", translation_ru: 'В моей песне', translation_en: 'In My Song', href: '/chinese/karaoke/wodeshengli' },
 ];
 
 export function KaraokeCatalog() {
