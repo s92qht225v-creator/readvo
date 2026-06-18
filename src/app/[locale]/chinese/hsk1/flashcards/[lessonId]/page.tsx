@@ -108,7 +108,7 @@ export default async function LessonFlashcardsPage({ params }: Props) {
       breadcrumbJsonLd([
         { name: 'Blim', path: `/${locale}` },
         { name: 'Chinese', path: `/${locale}/chinese` },
-        { name: flashLabel, path: `/${locale}/chinese?tab=flashcards` },
+        { name: flashLabel, path: `/${locale}/chinese/flashcards` },
         { name: setLabel, path: `/${locale}/chinese/hsk1/flashcards/${lessonId}` },
       ]),
     ]);

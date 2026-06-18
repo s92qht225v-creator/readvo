@@ -1,140 +1,41 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
-import { LanguagePage } from '@/components/LanguagePage';
-
-export const revalidate = 3600; // re-render at most once per hour
-import { loadDialoguesForBook } from '@/services/dialogues';
-import { loadFlashcardDeck } from '@/services/flashcards';
-import { getLessonsWithInfo } from '@/services/content';
-import { WRITING_SETS, WRITING_SETS_HSK2, WRITING_SETS_HSK2_L2, WRITING_SETS_HSK3, WRITING_SETS_HSK4, WRITING_SETS_HSK5, WRITING_SETS_HSK6 } from '@/services/writing';
+import { DialoguesCatalog } from '@/components/catalog/DialoguesCatalog';
+import { loadDialoguesAll } from '@/services/catalogData';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
-/** Toneless, space-joined pinyin for a writing set's words — powers the
- *  writing-tab search by pinyin typed without tone marks. NFD decomposes the
- *  tone diacritic AND ü's diaeresis into combining marks, which get stripped
- *  (wǒ→wo, nǚ→nu). */
-const tonelessPinyin = (words: { pinyin: string }[] = []): string =>
-  words
-    .map((w) => (w.pinyin || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
-    .join(' ');
+export const revalidate = 3600;
 
 const pageMeta: Record<string, { title: string; description: string }> = {
-  uz: {
-    title: 'Xitoy tili darslari — HSK 1-6 dialoglar, fleshkartalar, karaoke',
-    description: 'HSK 1-6 dialoglar, fleshkartalar, karaoke, ieroglif yozish va grammatika. Bepul boshlang!',
-  },
-  ru: {
-    title: 'Уроки китайского — HSK 1-6 диалоги, флешкарты, караоке',
-    description: 'HSK 1-6: диалоги, флешкарты, караоке, написание иероглифов и грамматика. Начните бесплатно!',
-  },
-  en: {
-    title: 'Chinese Lessons — HSK 1-6 Dialogues, Flashcards, Karaoke',
-    description: 'HSK 1-6: dialogues, flashcards, karaoke, character writing and grammar. Start for free!',
-  },
+  uz: { title: 'Xitoy tili dialoglari — HSK 1-6', description: 'HSK 1-6 xitoy tili dialoglari: audio, pinyin, tarjima. Bepul boshlang!' },
+  ru: { title: 'Диалоги на китайском — HSK 1-6', description: 'Диалоги HSK 1-6: аудио, пиньинь, перевод. Начните бесплатно!' },
+  en: { title: 'Chinese Dialogues — HSK 1-6', description: 'HSK 1-6 Chinese dialogues with audio, pinyin and translation. Start free!' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = pageMeta[locale] || pageMeta.uz;
   return {
-    title: m.title,
-    description: m.description,
-    alternates: {
-      canonical: `/${locale}/chinese`,
-      languages: {
-        uz: '/uz/chinese',
-        ru: '/ru/chinese',
-        en: '/en/chinese',
-        'x-default': '/uz/chinese',
-      },
-    },
+    title: m.title, description: m.description,
+    alternates: { canonical: `/${locale}/chinese`, languages: { uz: '/uz/chinese', ru: '/ru/chinese', en: '/en/chinese', 'x-default': '/uz/chinese' } },
   };
 }
 
-export default async function ChinesePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ChineseDialoguesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [dialogues, dialoguesHsk2, dialoguesHsk3, dialoguesHsk4, dialoguesHsk5, dialoguesHsk6, deck, lessonInfos] = await Promise.all([
-    loadDialoguesForBook('hsk1'),
-    loadDialoguesForBook('hsk2'),
-    loadDialoguesForBook('hsk3'),
-    loadDialoguesForBook('hsk4'),
-    loadDialoguesForBook('hsk5'),
-    loadDialoguesForBook('hsk6'),
-    loadFlashcardDeck('hsk1'),
-    getLessonsWithInfo(),
-  ]);
-
-  const flashcardLessons = deck
-    ? Array.from(new Set(deck.words.map((w) => w.lesson).filter(Boolean)))
-        .sort((a, b) => (a as number) - (b as number))
-        .map((lessonNum) => {
-          const info = lessonInfos.find((l) => l.lessonNumber === lessonNum);
-          const wordsInLesson = deck.words.filter((w) => w.lesson === lessonNum);
-          const sample = wordsInLesson[0];
-          return {
-            lessonId: String(lessonNum),
-            lessonNumber: lessonNum as number,
-            wordCount: wordsInLesson.length,
-            title: info?.title,
-            title_ru: info?.titleTranslation_ru,
-            sampleChar: sample?.text_original,
-            sampleUz: sample?.text_translation,
-            sampleRu: sample?.text_translation_ru,
-            sampleEn: sample?.text_translation_en,
-          };
-        })
-    : [];
-
+  const d = await loadDialoguesAll();
   const homeLabel = ({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[locale] || 'Home';
   const jsonLd = jsonLdScript([
-    breadcrumbJsonLd([
-      { name: homeLabel, path: `/${locale}` },
-      { name: 'Chinese', path: `/${locale}/chinese` },
-    ]),
-    {
-      '@type': 'Course',
-      name: 'HSK 1 Chinese',
-      description: (pageMeta[locale] || pageMeta.uz).description,
-      provider: { '@type': 'Organization', name: 'Blim' },
-      inLanguage: 'zh',
-      educationalLevel: 'Beginner',
-    },
+    breadcrumbJsonLd([{ name: homeLabel, path: `/${locale}` }, { name: 'Chinese', path: `/${locale}/chinese` }]),
+    { '@type': 'Course', name: 'HSK 1 Chinese', description: (pageMeta[locale] || pageMeta.uz).description, provider: { '@type': 'Organization', name: 'Blim' }, inLanguage: 'zh', educationalLevel: 'Beginner' },
   ]);
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <Suspense>
-        <LanguagePage
-          dialogues={dialogues}
-          dialoguesHsk2={dialoguesHsk2}
-          dialoguesHsk3={dialoguesHsk3}
-          dialoguesHsk4={dialoguesHsk4}
-          dialoguesHsk5={dialoguesHsk5}
-          dialoguesHsk6={dialoguesHsk6}
-          flashcardLessons={flashcardLessons}
-          writingSets={WRITING_SETS.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
-            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
-            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
-          })}
-          writingSetsHsk2={WRITING_SETS_HSK2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
-          writingSetsHsk2L2={WRITING_SETS_HSK2_L2.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
-            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
-            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
-          })}
-          writingSetsHsk3={WRITING_SETS_HSK3.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => {
-            const key = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
-            const short = [...words].sort((a, b) => a[key].length - b[key].length)[0];
-            return { id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words), wordCount: words.length, sampleChar: short?.char, sampleUz: short?.uz, sampleRu: short?.ru, sampleEn: short?.en };
-          })}
-          writingSetsHsk4={WRITING_SETS_HSK4.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
-          writingSetsHsk5={WRITING_SETS_HSK5.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
-          writingSetsHsk6={WRITING_SETS_HSK6.map(({ id, title, title_ru, subtitle, subtitle_ru, chars, words }) => ({ id, title, title_ru, subtitle, subtitle_ru, chars, pinyin: tonelessPinyin(words) }))}
-        />
+        <DialoguesCatalog dialogues={d.dialogues} dialoguesHsk2={d.dialoguesHsk2} dialoguesHsk3={d.dialoguesHsk3} dialoguesHsk4={d.dialoguesHsk4} dialoguesHsk5={d.dialoguesHsk5} dialoguesHsk6={d.dialoguesHsk6} />
       </Suspense>
     </>
   );

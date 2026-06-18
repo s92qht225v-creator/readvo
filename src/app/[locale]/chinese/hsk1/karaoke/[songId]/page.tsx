@@ -76,7 +76,7 @@ export default async function KaraokePage({ params }: PageParams) {
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: karaokeLabel, path: `/${locale}/chinese?tab=karaoke` },
+      { name: karaokeLabel, path: `/${locale}/chinese/karaoke` },
       { name: song.title, path: `/${locale}/chinese/hsk1/karaoke/${songId}` },
     ]),
   ]);

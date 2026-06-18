@@ -44,7 +44,7 @@ export function grammarTermJsonLd(slug: string, locale: string) {
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'HSK 1 Grammar',
-      url: `${siteUrl}/${locale}/chinese?tab=grammar`,
+      url: `${siteUrl}/${locale}/chinese/grammar`,
     },
     url: `${siteUrl}/${locale}/chinese/hsk1/grammar/${slug}`,
   };

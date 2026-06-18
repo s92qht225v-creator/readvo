@@ -43,6 +43,17 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // Redirect legacy ?tab= links to per-tab routes (e.g. /uz/chinese?tab=flashcards → /uz/chinese/flashcards)
+  const TAB_ROUTES: Record<string, string> = { writing: 'writing', flashcards: 'flashcards', karaoke: 'karaoke', grammar: 'grammar' };
+  const tabMatch = pathname.match(/^\/(uz|ru|en)\/chinese\/?$/);
+  if (tabMatch && request.nextUrl.searchParams.has('tab')) {
+    const tab = request.nextUrl.searchParams.get('tab')!;
+    const dest = request.nextUrl.clone();
+    dest.searchParams.delete('tab');
+    dest.pathname = TAB_ROUTES[tab] ? `/${tabMatch[1]}/chinese/${TAB_ROUTES[tab]}` : `/${tabMatch[1]}/chinese`;
+    return NextResponse.redirect(dest, 308);
+  }
+
   // Server-side auth check: redirect unauthenticated users on protected routes
   // Skip in development (localhost) for dev mode
   if (process.env.NODE_ENV !== 'development') {
