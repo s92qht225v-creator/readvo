@@ -97,7 +97,7 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
           </div>
           <div className="home__menu-lang-row">
             <Link
-              href="/chinese"
+              href="/chinese/dialogues"
               className="home__menu-lang-btn home__menu-lang-btn--active"
               onClick={() => setMenuOpen(false)}
             >

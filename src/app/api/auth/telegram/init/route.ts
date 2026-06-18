@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
   const forwardedHost = request.headers.get('x-forwarded-host') || request.headers.get('host');
   const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
   const origin = forwardedHost ? `${forwardedProto}://${forwardedHost}` : request.nextUrl.origin;
-  const nextPath = request.nextUrl.searchParams.get('next') || '/uz/chinese';
+  const nextPath = request.nextUrl.searchParams.get('next') || '/uz/chinese/dialogues';
   const redirectUri = `${origin}/auth/telegram/complete`;
 
   // CSRF state

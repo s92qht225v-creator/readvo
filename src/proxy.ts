@@ -43,15 +43,18 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Redirect legacy ?tab= links to per-tab routes (e.g. /uz/chinese?tab=flashcards → /uz/chinese/flashcards)
-  const TAB_ROUTES: Record<string, string> = { writing: 'writing', flashcards: 'flashcards', karaoke: 'karaoke', grammar: 'grammar' };
-  const tabMatch = pathname.match(/^\/(uz|ru|en)\/chinese\/?$/);
-  if (tabMatch && request.nextUrl.searchParams.has('tab')) {
-    const tab = request.nextUrl.searchParams.get('tab')!;
+  // The bare /chinese root is now the Dialogues catalog at /chinese/dialogues.
+  // Redirect /chinese (and any legacy ?tab=) to the per-tab route (301 permanent,
+  // preserving other query params like ?dialhsk).
+  const TAB_ROUTES: Record<string, string> = { dialogues: 'dialogues', writing: 'writing', flashcards: 'flashcards', karaoke: 'karaoke', grammar: 'grammar' };
+  const rootMatch = pathname.match(/^\/(uz|ru|en)\/chinese\/?$/);
+  if (rootMatch) {
     const dest = request.nextUrl.clone();
+    const tab = dest.searchParams.get('tab');
     dest.searchParams.delete('tab');
-    dest.pathname = TAB_ROUTES[tab] ? `/${tabMatch[1]}/chinese/${TAB_ROUTES[tab]}` : `/${tabMatch[1]}/chinese`;
-    return NextResponse.redirect(dest, 308);
+    const seg = tab && TAB_ROUTES[tab] ? TAB_ROUTES[tab] : 'dialogues';
+    dest.pathname = `/${rootMatch[1]}/chinese/${seg}`;
+    return NextResponse.redirect(dest, 301);
   }
 
   // Redirect legacy book-first dialogue URLs to section-first (301 permanent)
@@ -64,7 +67,7 @@ export default function proxy(request: NextRequest) {
   const dlgList = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk\d\/dialogues\/?$/);
   if (dlgList) {
     const dest = request.nextUrl.clone();
-    dest.pathname = `/${dlgList[1]}/chinese`;
+    dest.pathname = `/${dlgList[1]}/chinese/dialogues`;
     return NextResponse.redirect(dest, 301);
   }
 

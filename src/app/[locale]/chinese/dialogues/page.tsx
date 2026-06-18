@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const m = pageMeta[locale] || pageMeta.uz;
   return {
     title: m.title, description: m.description,
-    alternates: { canonical: `/${locale}/chinese`, languages: { uz: '/uz/chinese', ru: '/ru/chinese', en: '/en/chinese', 'x-default': '/uz/chinese' } },
+    alternates: { canonical: `/${locale}/chinese/dialogues`, languages: { uz: '/uz/chinese/dialogues', ru: '/ru/chinese/dialogues', en: '/en/chinese/dialogues', 'x-default': '/uz/chinese/dialogues' } },
   };
 }
 
@@ -27,8 +27,13 @@ export default async function ChineseDialoguesPage({ params }: { params: Promise
   setRequestLocale(locale);
   const d = await loadDialoguesAll();
   const homeLabel = ({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[locale] || 'Home';
+  const dialoguesLabel = ({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[locale] || 'Dialogues';
   const jsonLd = jsonLdScript([
-    breadcrumbJsonLd([{ name: homeLabel, path: `/${locale}` }, { name: 'Chinese', path: `/${locale}/chinese` }]),
+    breadcrumbJsonLd([
+      { name: homeLabel, path: `/${locale}` },
+      { name: 'Chinese', path: `/${locale}/chinese/dialogues` },
+      { name: dialoguesLabel, path: `/${locale}/chinese/dialogues` },
+    ]),
     { '@type': 'Course', name: 'HSK 1 Chinese', description: (pageMeta[locale] || pageMeta.uz).description, provider: { '@type': 'Organization', name: 'Blim' }, inLanguage: 'zh', educationalLevel: 'Beginner' },
   ]);
   return (

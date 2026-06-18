@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
 
   // CSRF validation: compare state from Telegram redirect with stored cookie
   const storedState = request.cookies.get('tg_state')?.value;
-  const nextPath = request.cookies.get('tg_next')?.value || '/uz/chinese';
+  const nextPath = request.cookies.get('tg_next')?.value || '/uz/chinese/dialogues';
   if (!storedState || !state || state !== storedState) {
     return NextResponse.json({ error: 'invalid_csrf_state' }, { status: 403 });
   }

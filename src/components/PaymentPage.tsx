@@ -176,7 +176,7 @@ export default function PaymentPage() {
   // ─── Render helpers ───
   const renderHeader = () => (
     <header className="payment__header">
-      <Link href="/chinese" className="payment__logo">
+      <Link href="/chinese/dialogues" className="payment__logo">
         <Image src="/logo-red.svg" alt="Blim" width={64} height={22} className="reader__home-logo" priority />
       </Link>
     </header>
@@ -203,7 +203,7 @@ export default function PaymentPage() {
             </div>
             <h2 className="payment__success-title">{t('Obuna faol', 'Подписка активна', 'Subscription active')}</h2>
             <p className="payment__success-text">{t(`${subDaysLeft} kun qoldi`, `Осталось ${subDaysLeft} дн.`, `${subDaysLeft} days left`)}</p>
-            <Link href="/chinese" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
+            <Link href="/chinese/dialogues" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
           </div>
         </main>
       );
@@ -234,7 +234,7 @@ export default function PaymentPage() {
                 `Your payment for ${label} (${formatPrice(existingPayment.amount)} UZS) is being reviewed. Your account will be activated soon.`
               )}
             </p>
-            <Link href="/chinese" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
+            <Link href="/chinese/dialogues" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
           </div>
         </main>
       );
@@ -280,7 +280,7 @@ export default function PaymentPage() {
           </div>
           <h2 className="payment__success-title">{t('Chek yuborildi!', 'Чек отправлен!', 'Receipt sent!')}</h2>
           <p className="payment__success-text">{t('Hisobingiz tez orada faollashtiriladi.', 'Ваш аккаунт будет активирован в ближайшее время.', 'Your account will be activated shortly.')}</p>
-          <Link href="/chinese" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
+          <Link href="/chinese/dialogues" className="payment__back-btn">{t('← Bosh sahifa', '← На главную', '← Home')}</Link>
         </div>
       </main>
     );

@@ -237,7 +237,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const loginWithGoogle = useCallback(async (nextPath?: string) => {
     const origin = window.location.origin;
-    const target = nextPath ?? '/uz/chinese';
+    const target = nextPath ?? '/uz/chinese/dialogues';
     const callback = `/auth/callback?next=${encodeURIComponent(target)}`;
     await supabase.auth.signInWithOAuth({
       provider: 'google',

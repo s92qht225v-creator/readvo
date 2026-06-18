@@ -19,7 +19,7 @@ export function Paywall() {
         <Link href="/payment" className="paywall__btn">
           {({ uz: "To'lov", ru: 'Оплата', en: 'Payment' } as Record<string, string>)[language]}
         </Link>
-        <Link href="/chinese" className="paywall__back">
+        <Link href="/chinese/dialogues" className="paywall__back">
           {({ uz: '← Bosh sahifa', ru: '← На главную', en: '← Home' } as Record<string, string>)[language]}
         </Link>
       </div>

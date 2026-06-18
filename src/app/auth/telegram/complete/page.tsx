@@ -89,7 +89,7 @@ function TelegramCompleteInner() {
         // Analytics: track registration/login
         trackAll('CompleteRegistration', 'registration', 'sign_up', { status: 'success' });
 
-        router.replace(typeof next === 'string' && next.startsWith('/') ? next : `${lp}/chinese`);
+        router.replace(typeof next === 'string' && next.startsWith('/') ? next : `${lp}/chinese/dialogues`);
       } catch (err) {
         console.error('Telegram complete error:', err);
         router.replace(`${lp}/?error=complete_failed`);

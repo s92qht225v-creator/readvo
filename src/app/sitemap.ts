@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
-  entries.push(...localeEntries('/chinese', { changeFrequency: 'weekly', priority: 0.9 }));
+  entries.push(...localeEntries('/chinese/dialogues', { changeFrequency: 'weekly', priority: 0.9 }));
   entries.push(...localeEntries('/chinese/writing', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/karaoke', { changeFrequency: 'weekly', priority: 0.8 }));

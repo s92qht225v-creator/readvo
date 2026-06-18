@@ -412,9 +412,9 @@ function LandingPage({ language, toggleLanguage, s }: {
         <Image src="/logo.svg" alt="Blim" width={64} height={28} className="landing__footer-logo" />
         <p className="landing__footer-text">{s.footerText}</p>
         <div className="landing__footer-links">
-          <Link href="/chinese" className="landing__footer-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese/dialogues" className="landing__footer-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
           <Link href="/chinese/grammar" className="landing__footer-link">{({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</Link>
-          <Link href="/chinese" className="landing__footer-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
+          <Link href="/chinese/dialogues" className="landing__footer-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
           <Link href="/chinese/flashcards" className="landing__footer-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
           <Link href="/chinese/karaoke" className="landing__footer-link">KTV</Link>
           <Link href="/chinese/writing" className="landing__footer-link">{({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[language]}</Link>
@@ -459,7 +459,7 @@ export function HomePage() {
 
   useEffect(() => {
     if (!isLoading && user && !isAdminParam) {
-      router.replace('/chinese');
+      router.replace('/chinese/dialogues');
     }
   }, [isLoading, user, router, isAdminParam]);
 

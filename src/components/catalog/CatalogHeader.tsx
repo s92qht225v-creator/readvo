@@ -24,7 +24,7 @@ const TAB_ICONS: Record<string, React.ReactNode> = {
 };
 
 function hrefFor(id: Tab): string {
-  return id === 'dialogues' ? '/chinese' : `/chinese/${id}`;
+  return `/chinese/${id}`;
 }
 
 export function CatalogHeader({ currentTab, hskLevel = '1' }: { currentTab: Tab; hskLevel?: string }) {

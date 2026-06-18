@@ -141,9 +141,9 @@ export function PageFooter() {
         </div>
       )}
       <nav className="home__footer-nav">
-        <Link href="/chinese" className="home__footer-nav-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
+        <Link href="/chinese/dialogues" className="home__footer-nav-link">{({ uz: 'Darslar', ru: 'Уроки', en: 'Lessons' } as Record<string, string>)[language]}</Link>
         <Link href="/chinese/grammar" className="home__footer-nav-link">{({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</Link>
-        <Link href="/chinese" className="home__footer-nav-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
+        <Link href="/chinese/dialogues" className="home__footer-nav-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
         <Link href="/chinese/flashcards" className="home__footer-nav-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
         <Link href="/blog" className="home__footer-nav-link">Blog</Link>
       </nav>

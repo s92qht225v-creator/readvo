@@ -78,8 +78,8 @@ export default async function DialoguePage({ params }: PageParams) {
   const jsonLd = jsonLdScript([
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
-      { name: 'Chinese', path: `/${locale}/chinese` },
-      { name: dialoguesLabel, path: `/${locale}/chinese?dialhsk=${num}` },
+      { name: 'Chinese', path: `/${locale}/chinese/dialogues` },
+      { name: dialoguesLabel, path: `/${locale}/chinese/dialogues?dialhsk=${num}` },
       { name: `${raw.title} — ${translation}`, path: `/${locale}/chinese/dialogues/${level}/${dialogueId}` },
     ]),
     {
@@ -109,7 +109,7 @@ export default async function DialoguePage({ params }: PageParams) {
           titleTranslation_en: raw.titleTranslation_en,
         }}
         bookPath={`/chinese/${level}`}
-        listPath={`/chinese?dialhsk=${num}`}
+        listPath={`/chinese/dialogues?dialhsk=${num}`}
       />
     </>
   );
