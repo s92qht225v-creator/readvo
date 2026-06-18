@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useRequireAuth } from '../../hooks/useRequireAuth';
 import { useLanguage } from '../../hooks/useLanguage';
@@ -69,6 +70,10 @@ export function KaraokeCatalog() {
         </div>
       </section>
 
+      {/* Logo moves to the footer on mobile (the hero is hidden there). */}
+      <Link href="/" className="lp__footer-logo" aria-label="Blim">
+        <Image src="/logo-red.svg" alt="Blim" width={72} height={25} />
+      </Link>
       <PageFooter />
     </main>
   );
