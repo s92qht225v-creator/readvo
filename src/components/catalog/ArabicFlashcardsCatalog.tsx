@@ -10,7 +10,7 @@ export function ArabicFlashcardsCatalog({ decks }: { decks: { level: string; cou
   const [language] = useLanguage();
   const wordsLabel = ({ uz: "so'z", ru: 'слов', en: 'words' } as Record<string, string>)[language];
   return (
-    <main className="home">
+    <main className="home theme-ar">
       <ArabicCatalogHeader currentTab="flashcards" />
 
       <section className="home__content">

@@ -25,7 +25,7 @@ export function ArabicDialoguesCatalog({ catalog }: { catalog: Catalog }) {
       : d.titleTranslation_uz;
 
   return (
-    <main className="home">
+    <main className="home theme-ar">
       <ArabicCatalogHeader currentTab="dialogues" />
 
       <div className="lp__seg-bar">

@@ -84,7 +84,7 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
   return (
     <>
       {status === 'locked' && <Paywall />}
-      <div className="dialogue-reader">
+      <div className="dialogue-reader theme-ar">
         <div className="dr-hero">
           <div className="dr-hero__watermark" aria-hidden="true">عربي</div>
           <div className="dr-hero__top-row">

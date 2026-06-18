@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../../hooks/useLanguage';
 import { BannerMenu } from '../BannerMenu';
+import '@/styles/arabic.css';
 
 type ArTab = 'dialogues' | 'flashcards';
 

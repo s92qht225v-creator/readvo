@@ -38,3 +38,15 @@
 .ar-fc__done { display: flex; flex-direction: column; align-items: center; gap: 14px; padding-block: 40px; }
 .ar-fc__done-title { font-size: 1.6em; font-weight: 700; }
 .ar-fc__done-stats { color: #666; }
+
+/* ── Arabic green theme (#2E8B57) — scoped to Arabic pages via .theme-ar ──
+   Overrides the shared red branding for Arabic pages only. The accent
+   variable flips all var-driven reds (pinyin/translit text, active toggles,
+   sentence highlights, progress bar); the hardcoded banner/tab/pill gradients
+   are overridden explicitly, keeping the same direction + 3-stop shape. */
+.theme-ar { --color-accent: #2E8B57; }
+.theme-ar .home__hero,
+.theme-ar .dr-hero { background: linear-gradient(180deg, #2E8B57 0%, #25734B 40%, #1A5236 100%); }
+.theme-ar .lp__tabs { background: linear-gradient(180deg, #25734B 0%, #1A5236 100%); }
+.theme-ar .lp__hsk-pill--active { background: #2E8B57; border-color: #2E8B57; }
+.theme-ar .ar-fc__face--back { background: linear-gradient(135deg, #2E8B57, #25734B); }

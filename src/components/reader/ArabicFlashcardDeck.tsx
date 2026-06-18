@@ -77,7 +77,7 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
   return (
     <>
       {status === 'locked' && <Paywall />}
-      <main className="home">
+      <main className="home theme-ar">
         <div className="dr-hero">
           <div className="dr-hero__top-row">
             <Link href="/arabic/flashcards" className="dr-back-btn" aria-label="Back">
