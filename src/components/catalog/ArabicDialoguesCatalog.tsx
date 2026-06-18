@@ -8,6 +8,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { CEFR_LEVELS, parseCefrLevel, type CefrLevel } from './types';
+import { ArabicCatalogTabs } from './ArabicCatalogTabs';
 import type { ArabicDialogueCardMeta } from '@/services/arabicContent';
 
 type Catalog = Record<string, ArabicDialogueCardMeta[]>;
@@ -60,6 +61,8 @@ export function ArabicDialoguesCatalog({ catalog }: { catalog: Catalog }) {
           </div>
         </div>
       </header>
+
+      <ArabicCatalogTabs current="dialogues" />
 
       <div className="lp__seg-bar">
         <div className="lp__hsk-pills lp__hsk-pills--grid">
