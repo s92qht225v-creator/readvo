@@ -1,10 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ArabicFlashcardsCatalog } from '@/components/catalog/ArabicFlashcardsCatalog';
 import { loadArabicFlashcardCatalog } from '@/services/arabicContent';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 export const revalidate = 3600;
+
+// Green browser chrome (address bar) on Arabic pages, matching the banner.
+export const viewport: Viewport = { themeColor: '#2E8B57' };
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: { title: 'Arab tili fleshkartalar — A1-C2', description: "Arab tili so'zlarini fleshkartalar bilan yodlang. Harakat va transliteratsiya bilan. Bepul!" },

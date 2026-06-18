@@ -1,3 +1,4 @@
+import type { Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadArabicFlashcardDeck, loadArabicFlashcardCatalog } from '@/services/arabicContent';
@@ -5,6 +6,9 @@ import { ArabicFlashcardDeck } from '@/components/reader/ArabicFlashcardDeck';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 export const revalidate = 3600;
+
+// Green browser chrome (address bar) on Arabic pages, matching the banner.
+export const viewport: Viewport = { themeColor: '#2E8B57' };
 
 interface PageParams { params: Promise<{ locale: string; level: string }>; }
 
