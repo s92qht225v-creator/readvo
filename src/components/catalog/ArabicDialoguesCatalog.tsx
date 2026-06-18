@@ -1,14 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/hooks/useLanguage';
-import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { CEFR_LEVELS, parseCefrLevel, type CefrLevel } from './types';
-import { ArabicCatalogTabs } from './ArabicCatalogTabs';
+import { ArabicCatalogHeader } from './ArabicCatalogHeader';
 import type { ArabicDialogueCardMeta } from '@/services/arabicContent';
 
 type Catalog = Record<string, ArabicDialogueCardMeta[]>;
@@ -28,41 +26,7 @@ export function ArabicDialoguesCatalog({ catalog }: { catalog: Catalog }) {
 
   return (
     <main className="home">
-      <header className="home__hero" dir="ltr">
-        <div className="home__hero-inner">
-          <div className="home__hero-top-row">
-            <Link href="/" className="home__hero-logo" aria-label="Blim">
-              <Image
-                src="/logo.svg"
-                alt="Blim"
-                width={64}
-                height={28}
-                className="home__hero-logo-img"
-              />
-            </Link>
-            <BannerMenu />
-          </div>
-          <div className="dr-hero__body">
-            <div className="dr-hero__level">
-              {
-                ({ uz: 'Arab tili', ru: 'Арабский', en: 'Arabic' } as Record<
-                  string,
-                  string
-                >)[language]
-              }
-            </div>
-            {/* vowelized حِوَار with harakat */}
-            <h1 className="dr-hero__title" dir="rtl">
-              &#x062D;&#x0650;&#x0648;&#x064E;&#x0627;&#x0631;
-            </h1>
-            <div className="dr-hero__pinyin" dir="ltr">
-              ḥiwār
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <ArabicCatalogTabs current="dialogues" />
+      <ArabicCatalogHeader currentTab="dialogues" />
 
       <div className="lp__seg-bar">
         <div className="lp__hsk-pills lp__hsk-pills--grid">
