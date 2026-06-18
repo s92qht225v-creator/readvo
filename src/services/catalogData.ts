@@ -1,7 +1,5 @@
 // src/services/catalogData.ts
 import { loadDialoguesForBook, type DialogueInfo } from '@/services/dialogues';
-import { loadFlashcardDeck } from '@/services/flashcards';
-import { getLessonsWithInfo } from '@/services/content';
 import {
   WRITING_SETS,
   WRITING_SETS_HSK2,
@@ -12,7 +10,7 @@ import {
   WRITING_SETS_HSK6,
   type WritingSet,
 } from '@/services/writing';
-import type { FlashcardLesson, WritingSetMeta } from '@/components/catalog/types';
+import type { WritingSetMeta } from '@/components/catalog/types';
 
 /** Toneless, space-joined pinyin for a writing set's words (NFD-strip tone marks).
  *  NFD decomposes tone diacritics AND ü's diaeresis into combining marks which get
@@ -48,31 +46,6 @@ export async function loadDialoguesAll(): Promise<{
   return { dialogues, dialoguesHsk2, dialoguesHsk3, dialoguesHsk4, dialoguesHsk5, dialoguesHsk6 };
 }
 
-export async function loadFlashcardCatalog(): Promise<FlashcardLesson[]> {
-  const [deck, lessonInfos] = await Promise.all([
-    loadFlashcardDeck('hsk1'),
-    getLessonsWithInfo(),
-  ]);
-  if (!deck) return [];
-  return Array.from(new Set(deck.words.map((w) => w.lesson).filter(Boolean)))
-    .sort((a, b) => (a as number) - (b as number))
-    .map((lessonNum) => {
-      const info = lessonInfos.find((l) => l.lessonNumber === lessonNum);
-      const wordsInLesson = deck.words.filter((w) => w.lesson === lessonNum);
-      const sample = wordsInLesson[0];
-      return {
-        lessonId: String(lessonNum),
-        lessonNumber: lessonNum as number,
-        wordCount: wordsInLesson.length,
-        title: info?.title,
-        title_ru: info?.titleTranslation_ru,
-        sampleChar: sample?.text_original,
-        sampleUz: sample?.text_translation,
-        sampleRu: sample?.text_translation_ru,
-        sampleEn: sample?.text_translation_en,
-      };
-    });
-}
 
 /** Map a writing-set array to its catalog meta.
  *
