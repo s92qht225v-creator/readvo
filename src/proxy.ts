@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/hsk/;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk)/;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -52,6 +52,20 @@ export default function proxy(request: NextRequest) {
     dest.searchParams.delete('tab');
     dest.pathname = TAB_ROUTES[tab] ? `/${tabMatch[1]}/chinese/${TAB_ROUTES[tab]}` : `/${tabMatch[1]}/chinese`;
     return NextResponse.redirect(dest, 308);
+  }
+
+  // Redirect legacy book-first dialogue URLs to section-first (301 permanent)
+  const dlgReader = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk(\d)\/dialogues\/(.+)$/);
+  if (dlgReader) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${dlgReader[1]}/chinese/dialogues/hsk${dlgReader[2]}/${dlgReader[3]}`;
+    return NextResponse.redirect(dest, 301);
+  }
+  const dlgList = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk\d\/dialogues\/?$/);
+  if (dlgList) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${dlgList[1]}/chinese`;
+    return NextResponse.redirect(dest, 301);
   }
 
   // Server-side auth check: redirect unauthenticated users on protected routes
