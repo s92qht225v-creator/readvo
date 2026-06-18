@@ -184,7 +184,7 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
         {/* Dialogue cards */}
         <div className="home__lessons">
           {filteredDialogues.map((d) => (
-            <Link key={d.id} href={`/chinese/hsk${dialogueHskLevel}/dialogues/${d.slug}`} prefetch={false} className="dialogue-card">
+            <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} className="dialogue-card">
               <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>
               <div className="dialogue-card__content">
                 <div className="dialogue-card__text">
