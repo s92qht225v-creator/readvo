@@ -1,0 +1,167 @@
+{
+  "id": "hsk3-dialogue5",
+  "slug": "small-green-habits",
+  "title": "保护环境",
+  "pinyin": "Bǎohù huánjìng",
+  "titleTranslation": "Atrof-muhitni asrash",
+  "titleTranslation_ru": "Защита окружающей среды",
+  "titleTranslation_en": "Protecting the Environment",
+  "level": 3,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-16",
+  "vocab": [
+    "购物袋",
+    "塑料袋",
+    "环境",
+    "污染",
+    "塑料瓶",
+    "关灯",
+    "注意",
+    "垃圾",
+    "分类",
+    "减少",
+    "小区",
+    "垃圾桶",
+    "物业",
+    "保护",
+    "身边",
+    "世界",
+    "越来越"
+  ],
+  "sections": [
+    {
+      "id": "d5-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d5-s1",
+          "text_original": "你手里拿的是什么？",
+          "pinyin": "Nǐ shǒu lǐ ná de shì shén me?",
+          "text_translation": "Qo'lingdagi nima?",
+          "text_translation_ru": "Что у тебя в руке?",
+          "text_translation_en": "What's that you're holding?",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s2",
+          "text_original": "我刚买的购物袋。以后去超市不用塑料袋了。",
+          "pinyin": "Wǒ gāng mǎi de gòu wù dài. Yǐ hòu qù chāo shì bú yòng sù liào dài le.",
+          "text_translation": "Endigina olgan xarid xaltam. Bundan keyin do'konga borganda plastik xalta ishlatmayman.",
+          "text_translation_ru": "Сумка для покупок, которую я только что купил. Теперь в супермаркете не буду брать пакеты.",
+          "text_translation_en": "A shopping bag I just bought. From now on I won't use plastic bags at the supermarket.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s3",
+          "text_original": "好习惯！我也应该这样做。",
+          "pinyin": "Hǎo xí guàn! Wǒ yě yīng gāi zhè yàng zuò.",
+          "text_translation": "Yaxshi odat! Men ham shunday qilishim kerak.",
+          "text_translation_ru": "Хорошая привычка! Мне тоже стоит так делать.",
+          "text_translation_en": "Good habit! I should do the same.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s4",
+          "text_original": "塑料袋对环境污染很大，少用比较好。",
+          "pinyin": "Sù liào dài duì huán jìng wū rǎn hěn dà, shǎo yòng bǐ jiào hǎo.",
+          "text_translation": "Plastik xaltalar atrof-muhitni juda ifloslantiradi, kamroq ishlatgan ma'qul.",
+          "text_translation_ru": "Пакеты сильно загрязняют окружающую среду, лучше использовать их меньше.",
+          "text_translation_en": "Plastic bags pollute the environment a lot, so it's better to use fewer.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s5",
+          "text_original": "你说得对。我平时喝水也用杯子，不用塑料瓶。",
+          "pinyin": "Nǐ shuō de duì. Wǒ píng shí hē shuǐ yě yòng bēi zi, bú yòng sù liào píng.",
+          "text_translation": "To'g'ri aytasan. Men odatda suv ichganda ham stakandan foydalanaman, plastik shisha ishlatmayman.",
+          "text_translation_ru": "Ты прав. Я обычно пью воду из стакана, а не из пластиковой бутылки.",
+          "text_translation_en": "You're right. I usually drink water from a cup, not a plastic bottle.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s6",
+          "text_original": "还有，出去的时候记得关灯。",
+          "pinyin": "Hái yǒu, chū qù de shí hou jì de guān dēng.",
+          "text_translation": "Yana, chiqayotganda chiroqni o'chirishni unutma.",
+          "text_translation_ru": "И ещё, когда выходишь, не забывай выключать свет.",
+          "text_translation_en": "Also, remember to turn off the lights when you go out.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s7",
+          "text_original": "这个我常常忘记，以后一定注意。",
+          "pinyin": "Zhè ge wǒ cháng cháng wàng jì, yǐ hòu yí dìng zhù yì.",
+          "text_translation": "Buni ko'pincha unutaman, bundan keyin albatta e'tibor beraman.",
+          "text_translation_ru": "Это я часто забываю, впредь обязательно буду внимателен.",
+          "text_translation_en": "I often forget that — I'll definitely pay attention from now on.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s8",
+          "text_original": "我们还可以把垃圾分类，比如瓶子、纸和食物。",
+          "pinyin": "Wǒ men hái kě yǐ bǎ lā jī fēn lèi, bǐ rú píng zi, zhǐ hé shí wù.",
+          "text_translation": "Biz yana axlatni saralashimiz mumkin, masalan shishalar, qog'oz va oziq-ovqat.",
+          "text_translation_ru": "Ещё мы можем сортировать мусор, например бутылки, бумагу и еду.",
+          "text_translation_en": "We can also sort the garbage — for example bottles, paper, and food.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s9",
+          "text_original": "这样做可以减少垃圾，是吗？",
+          "pinyin": "Zhè yàng zuò kě yǐ jiǎn shǎo lā jī, shì ma?",
+          "text_translation": "Bunday qilish axlatni kamaytiradi, shundaymi?",
+          "text_translation_ru": "Так можно уменьшить количество мусора, верно?",
+          "text_translation_en": "Doing this can reduce waste, right?",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s10",
+          "text_original": "对。我住的小区已经有几个分类垃圾桶了。",
+          "pinyin": "Duì. Wǒ zhù de xiǎo qū yǐ jīng yǒu jǐ ge fēn lèi lā jī tǒng le.",
+          "text_translation": "Ha. Men yashaydigan mahallada allaqachon bir nechta saralash uchun axlat qutisi bor.",
+          "text_translation_ru": "Да. В моём районе уже есть несколько баков для раздельного мусора.",
+          "text_translation_en": "Yes. The neighborhood where I live already has several sorting bins.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s11",
+          "text_original": "我们小区还没有，我去问问物业。",
+          "pinyin": "Wǒ men xiǎo qū hái méi yǒu, wǒ qù wèn wen wù yè.",
+          "text_translation": "Bizning mahallada hali yo'q, uy-joy boshqarmasidan so'rab ko'raman.",
+          "text_translation_ru": "В нашем районе пока нет, спрошу у управляющей компании.",
+          "text_translation_en": "Ours doesn't have them yet — I'll go ask the property management.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s12",
+          "text_original": "保护环境要从我们身边的小事做起。",
+          "pinyin": "Bǎo hù huán jìng yào cóng wǒ men shēn biān de xiǎo shì zuò qǐ.",
+          "text_translation": "Atrof-muhitni asrashni atrofimizdagi kichik ishlardan boshlash kerak.",
+          "text_translation_ru": "Защиту окружающей среды нужно начинать с мелочей вокруг нас.",
+          "text_translation_en": "Protecting the environment starts with the small things around us.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s13",
+          "text_original": "对。每个人都做一点，世界就会更干净。",
+          "pinyin": "Duì. Měi ge rén dōu zuò yì diǎn, shì jiè jiù huì gèng gān jìng.",
+          "text_translation": "To'g'ri. Har kim bir oz qilsa, dunyo yanada tozaroq bo'ladi.",
+          "text_translation_ru": "Да. Если каждый сделает немного, мир станет чище.",
+          "text_translation_en": "Right. If everyone does a little, the world will be cleaner.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s14",
+          "text_original": "希望我们的城市越来越美！",
+          "pinyin": "Xī wàng wǒ men de chéng shì yuè lái yuè měi!",
+          "text_translation": "Shahrimiz tobora go'zallashib borishini istayman!",
+          "text_translation_ru": "Надеюсь, наш город будет становиться всё красивее!",
+          "text_translation_en": "I hope our city gets more and more beautiful!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

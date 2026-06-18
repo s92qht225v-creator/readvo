@@ -710,3 +710,19 @@ insert into public.glossary (zh, py, uz, ru, en, hsk) values
   ('活动', 'huódòng', 'tadbir; faoliyat', 'мероприятие; деятельность', 'activity; event', 4),
   ('参与', 'cānyù', 'ishtirok etmoq; qatnashmoq', 'участвовать', 'to participate', 5)
   on conflict (zh, py_norm) do nothing;
+
+-- 保护环境 (hsk3/dialogue5) vocab.
+insert into public.glossary (zh, py, uz, ru, en, hsk) values
+  ('购物袋', 'gòuwùdài', 'xarid xaltasi', 'сумка для покупок', 'shopping bag', 4),
+  ('污染', 'wūrǎn', 'ifloslanish; ifloslantirmoq', 'загрязнение; загрязнять', 'pollution; to pollute', 4),
+  ('塑料瓶', 'sùliàopíng', 'plastik shisha', 'пластиковая бутылка', 'plastic bottle', 5),
+  ('关灯', 'guān dēng', 'chiroqni o''chirmoq', 'выключать свет', 'to turn off the light', 2),
+  ('垃圾', 'lājī', 'axlat; chiqindi', 'мусор', 'garbage; trash', 4),
+  ('分类', 'fēnlèi', 'turkumlamoq; saralamoq', 'сортировать; классифицировать', 'to sort; to classify', 5),
+  ('减少', 'jiǎnshǎo', 'kamaytirmoq', 'уменьшать; сокращать', 'to reduce', 4),
+  ('小区', 'xiǎoqū', 'turar-joy majmuasi; mahalla', 'жилой квартал', 'residential neighborhood', 4),
+  ('垃圾桶', 'lājītǒng', 'axlat qutisi', 'мусорное ведро/бак', 'trash can; dustbin', 4),
+  ('物业', 'wùyè', 'uy-joy boshqarmasi; mulk xizmati', 'управляющая компания; ЖКХ', 'property management', 5),
+  ('身边', 'shēnbiān', 'atrofdagi; yon-atrof', 'вокруг; рядом', 'around oneself; nearby', 4),
+  ('世界', 'shìjiè', 'dunyo; olam', 'мир', 'world', 3)
+  on conflict (zh, py_norm) do nothing;
