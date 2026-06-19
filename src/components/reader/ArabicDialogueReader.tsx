@@ -30,11 +30,18 @@ interface ApiSentence {
   ar_f?: string; translit_f?: string;
   ar?: string; translit?: string;
   text_translation_uz: string; text_translation_ru: string; text_translation_en: string;
+  // Optional female-version translations (e.g. a line that names the speaker —
+  // the gloss flips with the 👨/👩 toggle). Fall back to the base when absent.
+  text_translation_uz_f?: string; text_translation_ru_f?: string; text_translation_en_f?: string;
   audio_url?: string;
 }
 interface ApiDialogue { id: string; sentences: ApiSentence[]; }
 
-function trOf(s: ApiSentence, lang: Language): string {
+function trOf(s: ApiSentence, lang: Language, mode: 'm' | 'f' = 'm'): string {
+  if (mode === 'f') {
+    const f = lang === 'ru' ? s.text_translation_ru_f : lang === 'en' ? s.text_translation_en_f : s.text_translation_uz_f;
+    if (f) return f;
+  }
   return lang === 'ru' ? s.text_translation_ru : lang === 'en' ? s.text_translation_en : s.text_translation_uz;
 }
 
@@ -86,7 +93,7 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
     id: s.id,
     text: arOf(s),
     translit: translitOf(s),
-    translation: trOf(s, language),
+    translation: trOf(s, language, genderMode),
     speaker: s.speaker,
     audioText: arOf(s),
     audioUrl: s.audio_url,
