@@ -45,22 +45,28 @@
       "speaker": "B",
       "ar_m": "اِسْمِي عَلِيٌّ. وَمَا اسْمُكَ؟",
       "translit_m": "Ismī ʿAliyyun. Wa mā ismuka?",
-      "ar_f": "اِسْمِي عَلِيٌّ. وَمَا اسْمُكِ؟",
-      "translit_f": "Ismī ʿAliyyun. Wa mā ismuki?",
+      "ar_f": "اِسْمِي عَائِشَةُ. وَمَا اسْمُكِ؟",
+      "translit_f": "Ismī ʿĀʾishatu. Wa mā ismuki?",
       "text_translation_uz": "Mening ismim Ali. Sening isming nima?",
       "text_translation_ru": "Меня зовут Али. А как тебя зовут?",
-      "text_translation_en": "My name is Ali. And what's your name?"
+      "text_translation_en": "My name is Ali. And what's your name?",
+      "text_translation_uz_f": "Mening ismim Aisha. Sening isming nima?",
+      "text_translation_ru_f": "Меня зовут Аиша. А как тебя зовут?",
+      "text_translation_en_f": "My name is Aisha. And what's your name?"
     },
     {
       "id": "s5",
       "speaker": "A",
       "ar_m": "اِسْمِي أَحْمَدُ. تَشَرَّفْتُ بِمَعْرِفَتِكَ.",
       "translit_m": "Ismī Aḥmadu. Tasharraftu bi-maʿrifatika.",
-      "ar_f": "اِسْمِي أَحْمَدُ. تَشَرَّفْتُ بِمَعْرِفَتِكِ.",
-      "translit_f": "Ismī Aḥmadu. Tasharraftu bi-maʿrifatiki.",
+      "ar_f": "اِسْمِي فَاطِمَةُ. تَشَرَّفْتُ بِمَعْرِفَتِكِ.",
+      "translit_f": "Ismī Fāṭimatu. Tasharraftu bi-maʿrifatiki.",
       "text_translation_uz": "Mening ismim Ahmad. Tanishganimdan xursandman.",
       "text_translation_ru": "Меня зовут Ахмад. Приятно познакомиться.",
-      "text_translation_en": "My name is Ahmad. Nice to meet you."
+      "text_translation_en": "My name is Ahmad. Nice to meet you.",
+      "text_translation_uz_f": "Mening ismim Fotima. Tanishganimdan xursandman.",
+      "text_translation_ru_f": "Меня зовут Фатима. Приятно познакомиться.",
+      "text_translation_en_f": "My name is Fatima. Nice to meet you."
     },
     {
       "id": "s6",
