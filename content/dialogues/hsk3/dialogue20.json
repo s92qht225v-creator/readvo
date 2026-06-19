@@ -1,0 +1,209 @@
+{
+  "id": "hsk3-dialogue20",
+  "slug": "online-courses",
+  "title": "线上课程",
+  "pinyin": "Xiànshàng kèchéng",
+  "titleTranslation": "Onlayn kurslar",
+  "titleTranslation_ru": "Онлайн-курсы",
+  "titleTranslation_en": "Online Courses",
+  "level": 3,
+  "tag": "ish",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "线上",
+    "线下",
+    "报",
+    "通过",
+    "效果",
+    "认真",
+    "分心",
+    "专心",
+    "听讲",
+    "上传",
+    "学费",
+    "性价比",
+    "试听",
+    "报名"
+  ],
+  "sections": [
+    {
+      "id": "d20-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d20-s1",
+          "text_original": "你最近在学什么？",
+          "pinyin": "Nǐ zuìjìn zài xué shénme?",
+          "text_translation": "Yaqinda nima o'rganyapsan?",
+          "text_translation_ru": "Что ты сейчас изучаешь?",
+          "text_translation_en": "What have you been studying lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s2",
+          "text_original": "我报了一个线上英语课，每周上三次课。",
+          "pinyin": "Wǒ bào le yí ge xiànshàng Yīngyǔ kè, měi zhōu shàng sān cì kè.",
+          "text_translation": "Bitta onlayn ingliz tili kursiga yozildim, haftasiga uch marta dars bo'ladi.",
+          "text_translation_ru": "Я записался на онлайн-курс английского, занятия три раза в неделю.",
+          "text_translation_en": "I signed up for an online English course — three classes a week.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s3",
+          "text_original": "线上课跟线下课有什么不一样？",
+          "pinyin": "Xiànshàng kè gēn xiànxià kè yǒu shénme bù yíyàng?",
+          "text_translation": "Onlayn dars yuzma-yuz darsdan nimasi bilan farq qiladi?",
+          "text_translation_ru": "Чем онлайн-занятия отличаются от очных?",
+          "text_translation_en": "How are online classes different from in-person ones?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s4",
+          "text_original": "线上课不用出门，在家就能上，很方便。",
+          "pinyin": "Xiànshàng kè búyòng chūmén, zài jiā jiù néng shàng, hěn fāngbiàn.",
+          "text_translation": "Onlayn darsda uydan chiqish shart emas, uyda turib qatnashsa bo'ladi, juda qulay.",
+          "text_translation_ru": "На онлайн-занятие не нужно выходить из дома — можно учиться прямо дома, очень удобно.",
+          "text_translation_en": "For online classes you don't have to go out — you can attend from home, very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s5",
+          "text_original": "那老师怎么教？",
+          "pinyin": "Nà lǎoshī zěnme jiāo?",
+          "text_translation": "Unda o'qituvchi qanday dars beradi?",
+          "text_translation_ru": "А как преподаёт учитель?",
+          "text_translation_en": "So how does the teacher teach?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s6",
+          "text_original": "老师通过视频上课，可以跟学生聊天、回答问题。",
+          "pinyin": "Lǎoshī tōngguò shìpín shàngkè, kěyǐ gēn xuéshēng liáotiān, huídá wèntí.",
+          "text_translation": "O'qituvchi video orqali dars o'tadi, o'quvchilar bilan gaplashishi va savollarga javob berishi mumkin.",
+          "text_translation_ru": "Учитель ведёт урок через видео, может общаться с учениками и отвечать на вопросы.",
+          "text_translation_en": "The teacher teaches via video and can chat with students and answer questions.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s7",
+          "text_original": "你觉得效果好吗？",
+          "pinyin": "Nǐ juéde xiàoguǒ hǎo ma?",
+          "text_translation": "Seningcha natijasi yaxshimi?",
+          "text_translation_ru": "Как ты думаешь, результат хороший?",
+          "text_translation_en": "Do you think it's effective?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s8",
+          "text_original": "我觉得还可以。只要认真听，跟线下差不多。",
+          "pinyin": "Wǒ juéde hái kěyǐ. Zhǐyào rènzhēn tīng, gēn xiànxià chàbuduō.",
+          "text_translation": "Menimcha yomon emas. Diqqat bilan tinglasang, yuzma-yuz darsdan deyarli farqi yo'q.",
+          "text_translation_ru": "По-моему, вполне. Если слушать внимательно, почти как очно.",
+          "text_translation_en": "I think it's pretty good. As long as you listen carefully, it's about the same as in-person.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s9",
+          "text_original": "你上课的时候会不会分心？",
+          "pinyin": "Nǐ shàngkè de shíhou huì bú huì fēnxīn?",
+          "text_translation": "Dars paytida diqqating bo'linib ketmaydimi?",
+          "text_translation_ru": "Ты не отвлекаешься во время занятий?",
+          "text_translation_en": "Do you get distracted during class?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s10",
+          "text_original": "有时候会。尤其是手机在旁边的时候。",
+          "pinyin": "Yǒu shíhou huì. Yóuqí shì shǒujī zài pángbiān de shíhou.",
+          "text_translation": "Ba'zan bo'linadi. Ayniqsa telefon yonimda bo'lganda.",
+          "text_translation_ru": "Иногда да. Особенно когда телефон рядом.",
+          "text_translation_en": "Sometimes. Especially when my phone is next to me.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s11",
+          "text_original": "那你怎么解决这个问题？",
+          "pinyin": "Nà nǐ zěnme jiějué zhè ge wèntí?",
+          "text_translation": "Unda bu muammoni qanday hal qilasan?",
+          "text_translation_ru": "А как ты решаешь эту проблему?",
+          "text_translation_en": "So how do you solve that problem?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s12",
+          "text_original": "上课的时候把手机放远一点，专心听讲。",
+          "pinyin": "Shàngkè de shíhou bǎ shǒujī fàng yuǎn yì diǎn, zhuānxīn tīngjiǎng.",
+          "text_translation": "Dars paytida telefonni uzoqroqqa qo'yib, diqqat bilan darsni tinglayman.",
+          "text_translation_ru": "Во время занятия кладу телефон подальше и сосредоточенно слушаю.",
+          "text_translation_en": "During class I put my phone a bit further away and listen attentively.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s13",
+          "text_original": "你们有作业吗？",
+          "pinyin": "Nǐmen yǒu zuòyè ma?",
+          "text_translation": "Sizlarga uy vazifasi beriladimi?",
+          "text_translation_ru": "У вас есть домашние задания?",
+          "text_translation_en": "Do you have homework?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s14",
+          "text_original": "有。老师会发练习给我们做，做完以后上传。",
+          "pinyin": "Yǒu. Lǎoshī huì fā liànxí gěi wǒmen zuò, zuò wán yǐhòu shàngchuán.",
+          "text_translation": "Ha. O'qituvchi bizga mashqlar yuboradi, bajarib bo'lgach yuklab qo'yamiz.",
+          "text_translation_ru": "Есть. Учитель присылает нам упражнения, а после выполнения мы их загружаем.",
+          "text_translation_en": "Yes. The teacher sends us exercises to do, and after finishing we upload them.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s15",
+          "text_original": "那学费贵不贵？",
+          "pinyin": "Nà xuéfèi guì bu guì?",
+          "text_translation": "Unda o'qish to'lovi qimmatmi?",
+          "text_translation_ru": "А плата за обучение дорогая?",
+          "text_translation_en": "Is the tuition expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s16",
+          "text_original": "不贵。比线下课便宜很多，一节课大概几十块。",
+          "pinyin": "Bú guì. Bǐ xiànxià kè piányi hěn duō, yì jié kè dàgài jǐ shí kuài.",
+          "text_translation": "Qimmat emas. Yuzma-yuz darsdan ancha arzon, bitta dars taxminan o'n-yigirma yuancha.",
+          "text_translation_ru": "Недорого. Намного дешевле очных занятий, одно занятие — примерно несколько десятков юаней.",
+          "text_translation_en": "Not expensive. Much cheaper than in-person classes — about a few dozen yuan per lesson.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s17",
+          "text_original": "性价比挺高的。我考虑报一个中文课。",
+          "pinyin": "Xìngjiàbǐ tǐng gāo de. Wǒ kǎolǜ bào yí ge Zhōngwén kè.",
+          "text_translation": "Narx-sifat nisbati ancha yaxshi ekan. Men xitoy tili kursiga yozilishni o'ylab ko'ryapman.",
+          "text_translation_ru": "Соотношение цена/качество довольно хорошее. Я подумываю записаться на курс китайского.",
+          "text_translation_en": "The value for money is pretty high. I'm thinking of signing up for a Chinese course.",
+          "speaker": "A"
+        },
+        {
+          "id": "d20-s18",
+          "text_original": "你可以先试听一节课，觉得合适再报名。",
+          "pinyin": "Nǐ kěyǐ xiān shìtīng yì jié kè, juéde héshì zài bàomíng.",
+          "text_translation": "Avval bitta sinov darsini tinglab ko'rsang bo'ladi, mos kelsa keyin yozilasan.",
+          "text_translation_ru": "Можешь сначала посетить пробное занятие, а если подойдёт — записаться.",
+          "text_translation_en": "You can first sit in on a trial lesson, and sign up if it feels right.",
+          "speaker": "B"
+        },
+        {
+          "id": "d20-s19",
+          "text_original": "好主意！我也想试试线上学习的感觉。",
+          "pinyin": "Hǎo zhǔyi! Wǒ yě xiǎng shì shì xiànshàng xuéxí de gǎnjué.",
+          "text_translation": "Yaxshi fikr! Men ham onlayn o'qish qanday bo'lishini his qilib ko'rmoqchiman.",
+          "text_translation_ru": "Хорошая идея! Я тоже хочу почувствовать, каково это — учиться онлайн.",
+          "text_translation_en": "Good idea! I'd like to try out what online learning feels like too.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
