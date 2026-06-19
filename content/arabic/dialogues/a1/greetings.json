@@ -11,31 +11,31 @@
       "id": "s1",
       "speaker": "A",
       "ar_m": "اَلسَّلَامُ عَلَيْكُمْ",
-      "translit_m": "as-salāmu ʿalaykum.",
+      "translit_m": "As-salāmu ʿalaykum.",
       "ar_f": "اَلسَّلَامُ عَلَيْكُمْ",
-      "translit_f": "as-salāmu ʿalaykum.",
+      "translit_f": "As-salāmu ʿalaykum.",
       "text_translation_uz": "Assalomu alaykum.",
-      "text_translation_ru": "Мир вам.",
-      "text_translation_en": "Peace be upon you."
+      "text_translation_ru": "Здравствуйте.",
+      "text_translation_en": "Hello."
     },
     {
       "id": "s2",
       "speaker": "B",
       "ar_m": "وَعَلَيْكُمُ السَّلَامُ",
-      "translit_m": "wa-ʿalaykumu s-salām.",
+      "translit_m": "Wa ʿalaykumu as-salām.",
       "ar_f": "وَعَلَيْكُمُ السَّلَامُ",
-      "translit_f": "wa-ʿalaykumu s-salām.",
+      "translit_f": "Wa ʿalaykumu as-salām.",
       "text_translation_uz": "Va alaykum assalom.",
-      "text_translation_ru": "И вам мир.",
-      "text_translation_en": "And upon you peace."
+      "text_translation_ru": "И вам здравствуйте.",
+      "text_translation_en": "Hello."
     },
     {
       "id": "s3",
       "speaker": "A",
       "ar_m": "كَيْفَ حَالُكَ؟",
-      "translit_m": "kayfa ḥāluka?",
+      "translit_m": "Kayfa ḥāluka?",
       "ar_f": "كَيْفَ حَالُكِ؟",
-      "translit_f": "kayfa ḥāluki?",
+      "translit_f": "Kayfa ḥāluki?",
       "text_translation_uz": "Qalaysiz?",
       "text_translation_ru": "Как дела?",
       "text_translation_en": "How are you?"
@@ -43,13 +43,24 @@
     {
       "id": "s4",
       "speaker": "B",
-      "ar_m": "أَنَا بِخَيْرٍ، شُكْرًا.",
-      "translit_m": "anā bi-khayrin, shukran.",
-      "ar_f": "أَنَا بِخَيْرٍ، شُكْرًا.",
-      "translit_f": "anā bi-khayrin, shukran.",
-      "text_translation_uz": "Yaxshi, rahmat.",
-      "text_translation_ru": "Хорошо, спасибо.",
-      "text_translation_en": "I am well, thank you."
+      "ar_m": "أَنَا بِخَيْرٍ، وَأَنْتَ؟",
+      "translit_m": "Anā bikhayrin, wa anta?",
+      "ar_f": "أَنَا بِخَيْرٍ، وَأَنْتِ؟",
+      "translit_f": "Anā bikhayrin, wa anti?",
+      "text_translation_uz": "Men yaxshiman, sizchi?",
+      "text_translation_ru": "Я хорошо, а ты?",
+      "text_translation_en": "I am fine, and you?"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "ar_m": "أَنَا بِخَيْرٍ أَيْضًا",
+      "translit_m": "Anā bikhayrin ayḍan.",
+      "ar_f": "أَنَا بِخَيْرٍ أَيْضًا",
+      "translit_f": "Anā bikhayrin ayḍan.",
+      "text_translation_uz": "Men ham yaxshiman.",
+      "text_translation_ru": "Я тоже хорошо.",
+      "text_translation_en": "I am fine too."
     }
   ]
 }
