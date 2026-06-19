@@ -1,0 +1,230 @@
+{
+  "id": "hsk4-dialogue6",
+  "slug": "fitness",
+  "title": "健身",
+  "pinyin": "Jiànshēn",
+  "titleTranslation": "Fitnes",
+  "titleTranslation_ru": "Фитнес",
+  "titleTranslation_en": "Fitness",
+  "level": 4,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "健身",
+    "健身房",
+    "热身",
+    "力量",
+    "训练",
+    "教练",
+    "制定",
+    "明显",
+    "精神",
+    "会员",
+    "私教",
+    "另算",
+    "值得",
+    "办卡",
+    "坚持不了",
+    "月卡",
+    "续"
+  ],
+  "sections": [
+    {
+      "id": "d6-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d6-s1",
+          "text_original": "你最近好像瘦了，是不是在运动？",
+          "pinyin": "Nǐ zuìjìn hǎoxiàng shòu le, shì bú shì zài yùndòng?",
+          "text_translation": "Yaqinda ozgandeksan, sport bilan shug'ullanyapsanmi?",
+          "text_translation_ru": "Ты, кажется, похудел в последнее время — занимаешься спортом?",
+          "text_translation_en": "You seem to have lost weight lately — are you exercising?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s2",
+          "text_original": "对。我三个月前开始去健身房了。",
+          "pinyin": "Duì. Wǒ sān ge yuè qián kāishǐ qù jiànshēnfáng le.",
+          "text_translation": "Ha. Uch oy oldin sport zaliga qatnay boshladim.",
+          "text_translation_ru": "Да. Три месяца назад я начал ходить в спортзал.",
+          "text_translation_en": "Yeah. I started going to the gym three months ago.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s3",
+          "text_original": "你一周去几次？",
+          "pinyin": "Nǐ yì zhōu qù jǐ cì?",
+          "text_translation": "Haftasiga necha marta borasan?",
+          "text_translation_ru": "Сколько раз в неделю ходишь?",
+          "text_translation_en": "How many times a week do you go?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s4",
+          "text_original": "一周去四次，周一到周四。",
+          "pinyin": "Yì zhōu qù sì cì, zhōuyī dào zhōusì.",
+          "text_translation": "Haftasiga to'rt marta, dushanbadan payshanbagacha.",
+          "text_translation_ru": "Четыре раза в неделю, с понедельника по четверг.",
+          "text_translation_en": "Four times a week, Monday to Thursday.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s5",
+          "text_original": "你一般练什么？",
+          "pinyin": "Nǐ yìbān liàn shénme?",
+          "text_translation": "Odatda nimani mashq qilasan?",
+          "text_translation_ru": "Что ты обычно тренируешь?",
+          "text_translation_en": "What do you usually train?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s6",
+          "text_original": "跑步热身，然后做一些力量训练。",
+          "pinyin": "Pǎobù rèshēn, ránhòu zuò yì xiē lìliàng xùnliàn.",
+          "text_translation": "Yugurib qizib olaman, keyin biroz kuch mashqlarini qilaman.",
+          "text_translation_ru": "Разминаюсь бегом, потом делаю силовые упражнения.",
+          "text_translation_en": "I warm up with running, then do some strength training.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s7",
+          "text_original": "请教练了吗？",
+          "pinyin": "Qǐng jiàoliàn le ma?",
+          "text_translation": "Murabbiy yolladingmi?",
+          "text_translation_ru": "Ты нанял тренера?",
+          "text_translation_en": "Did you hire a coach?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s8",
+          "text_original": "请了。教练帮我制定了计划。",
+          "pinyin": "Qǐng le. Jiàoliàn bāng wǒ zhìdìng le jìhuà.",
+          "text_translation": "Yolladim. Murabbiy menga reja tuzib berdi.",
+          "text_translation_ru": "Нанял. Тренер составил для меня план.",
+          "text_translation_en": "I did. The coach drew up a plan for me.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s9",
+          "text_original": "效果好明显啊！",
+          "pinyin": "Xiàoguǒ hǎo míngxiǎn a!",
+          "text_translation": "Natijasi juda sezilarli ekan!",
+          "text_translation_ru": "Результат очень заметный!",
+          "text_translation_en": "The results are really noticeable!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s10",
+          "text_original": "谢谢！主要是比以前有精神了。",
+          "pinyin": "Xièxie! Zhǔyào shì bǐ yǐqián yǒu jīngshen le.",
+          "text_translation": "Rahmat! Asosiysi, avvalgidan ko'ra tetikroq bo'lib qoldim.",
+          "text_translation_ru": "Спасибо! Главное, у меня стало больше энергии, чем раньше.",
+          "text_translation_en": "Thanks! The main thing is I have more energy than before.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s11",
+          "text_original": "一个月多少钱？",
+          "pinyin": "Yí ge yuè duōshao qián?",
+          "text_translation": "Oyiga qancha turadi?",
+          "text_translation_ru": "Сколько стоит в месяц?",
+          "text_translation_en": "How much is it a month?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s12",
+          "text_original": "会员费三百块，私教课另算。",
+          "pinyin": "Huìyuán fèi sānbǎi kuài, sījiào kè lìngsuàn.",
+          "text_translation": "A'zolik to'lovi uch yuz yuan, shaxsiy murabbiy darslari alohida hisoblanadi.",
+          "text_translation_ru": "Членский взнос — триста юаней, занятия с персональным тренером считаются отдельно.",
+          "text_translation_en": "The membership fee is three hundred yuan; personal training sessions are charged separately.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s13",
+          "text_original": "你觉得值得吗？",
+          "pinyin": "Nǐ juéde zhídé ma?",
+          "text_translation": "Seningcha bu arziydimi?",
+          "text_translation_ru": "Думаешь, оно того стоит?",
+          "text_translation_en": "Do you think it's worth it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s14",
+          "text_original": "非常值得。为了健康，花点钱没关系。",
+          "pinyin": "Fēicháng zhídé. Wèile jiànkāng, huā diǎn qián méi guānxi.",
+          "text_translation": "Juda arziydi. Salomatlik uchun bir oz pul sarflashning hech qanday muammosi yo'q.",
+          "text_translation_ru": "Очень даже стоит. Ради здоровья потратить немного денег — не страшно.",
+          "text_translation_en": "Totally worth it. For your health, spending a bit of money is no big deal.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s15",
+          "text_original": "我也想去办一张卡，但是怕自己坚持不了。",
+          "pinyin": "Wǒ yě xiǎng qù bàn yì zhāng kǎ, dànshì pà zìjǐ jiānchí bù liǎo.",
+          "text_translation": "Men ham karta ochmoqchiman, lekin o'zim davom ettira olmasligimdan qo'rqaman.",
+          "text_translation_ru": "Я тоже хочу оформить карту, но боюсь, что не смогу заниматься регулярно.",
+          "text_translation_en": "I'd like to get a membership too, but I'm afraid I won't stick with it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s16",
+          "text_original": "你可以先办月卡试试，觉得好再续。",
+          "pinyin": "Nǐ kěyǐ xiān bàn yuèkǎ shì shi, juéde hǎo zài xù.",
+          "text_translation": "Avval oylik abonement ochib ko'rsang bo'ladi, yaxshi desang keyin uzaytirasan.",
+          "text_translation_ru": "Можешь сначала оформить месячный абонемент на пробу, а если понравится — продлить.",
+          "text_translation_en": "You can get a monthly pass first to try it, and renew if you like it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s17",
+          "text_original": "好主意。你平时几点去？",
+          "pinyin": "Hǎo zhǔyi. Nǐ píngshí jǐ diǎn qù?",
+          "text_translation": "Yaxshi fikr. Odatda soat nechada borasan?",
+          "text_translation_ru": "Хорошая идея. Во сколько ты обычно ходишь?",
+          "text_translation_en": "Good idea. What time do you usually go?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s18",
+          "text_original": "我下班后直接去，大概七点左右到。",
+          "pinyin": "Wǒ xiàbān hòu zhíjiē qù, dàgài qī diǎn zuǒyòu dào.",
+          "text_translation": "Ishdan keyin to'g'ridan-to'g'ri boraman, taxminan yettilarda yetib boraman.",
+          "text_translation_ru": "Иду сразу после работы, прихожу примерно к семи.",
+          "text_translation_en": "I go straight there after work and arrive around seven.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s19",
+          "text_original": "那个时间人多不多？",
+          "pinyin": "Nà ge shíjiān rén duō bu duō?",
+          "text_translation": "O'sha vaqtda odam ko'pmi?",
+          "text_translation_ru": "В это время много людей?",
+          "text_translation_en": "Is it crowded at that time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d6-s20",
+          "text_original": "还可以。周末人比较多，我一般不去。",
+          "pinyin": "Hái kěyǐ. Zhōumò rén bǐjiào duō, wǒ yìbān bú qù.",
+          "text_translation": "Yomon emas. Dam olish kunlari odam ko'proq bo'ladi, odatda bormayman.",
+          "text_translation_ru": "Терпимо. По выходным людей побольше, поэтому я обычно не хожу.",
+          "text_translation_en": "It's okay. On weekends it's more crowded, so I usually don't go.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d6-s21",
+          "text_original": "好的，我考虑一下。有不懂的再问你。",
+          "pinyin": "Hǎo de, wǒ kǎolǜ yí xià. Yǒu bù dǒng de zài wèn nǐ.",
+          "text_translation": "Yaxshi, o'ylab ko'raman. Tushunmagan joyim bo'lsa, yana sendan so'rayman.",
+          "text_translation_ru": "Хорошо, я подумаю. Если что-то будет непонятно, ещё спрошу у тебя.",
+          "text_translation_en": "Okay, I'll think about it. If there's anything I don't get, I'll ask you again.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
