@@ -1,0 +1,178 @@
+{
+  "id": "hsk3-dialogue13",
+  "slug": "sports",
+  "title": "运动",
+  "pinyin": "Yùndòng",
+  "titleTranslation": "Sport",
+  "titleTranslation_ru": "Спорт",
+  "titleTranslation_en": "Sports",
+  "level": 3,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "羽毛球",
+    "感觉",
+    "体育馆",
+    "场地",
+    "网球",
+    "成就感",
+    "机会",
+    "球拍",
+    "多余",
+    "准时"
+  ],
+  "sections": [
+    {
+      "id": "d13-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d13-s1",
+          "text_original": "你周末一般做什么运动？",
+          "pinyin": "Nǐ zhōumò yìbān zuò shénme yùndòng?",
+          "text_translation": "Dam olish kunlari odatda qanday sport bilan shug'ullanasan?",
+          "text_translation_ru": "Каким спортом ты обычно занимаешься по выходным?",
+          "text_translation_en": "What sport do you usually do on weekends?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s2",
+          "text_original": "我最近开始打羽毛球了，感觉特别有意思。",
+          "pinyin": "Wǒ zuìjìn kāishǐ dǎ yǔmáoqiú le, gǎnjué tèbié yǒuyìsi.",
+          "text_translation": "Yaqinda badminton o'ynay boshladim, juda qiziqarli ekan.",
+          "text_translation_ru": "Недавно начал играть в бадминтон — кажется, это очень интересно.",
+          "text_translation_en": "I recently started playing badminton — it feels really fun.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s3",
+          "text_original": "你以前打过吗？",
+          "pinyin": "Nǐ yǐqián dǎ guo ma?",
+          "text_translation": "Avval o'ynaganmiding?",
+          "text_translation_ru": "Ты раньше играл?",
+          "text_translation_en": "Have you played before?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s4",
+          "text_original": "以前很少打。上个月朋友带我打了一次，我就喜欢上了。",
+          "pinyin": "Yǐqián hěn shǎo dǎ. Shàng ge yuè péngyou dài wǒ dǎ le yí cì, wǒ jiù xǐhuān shàng le.",
+          "text_translation": "Avval kam o'ynardim. O'tgan oy do'stim meni bir marta o'ynashga olib bordi, shundan keyin yoqtirib qoldim.",
+          "text_translation_ru": "Раньше играл редко. В прошлом месяце друг сводил меня поиграть, и мне сразу понравилось.",
+          "text_translation_en": "I rarely played before. Last month a friend took me to play once, and I fell in love with it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s5",
+          "text_original": "你一般在哪里打？",
+          "pinyin": "Nǐ yìbān zài nǎli dǎ?",
+          "text_translation": "Odatda qayerda o'ynaysan?",
+          "text_translation_ru": "Где ты обычно играешь?",
+          "text_translation_en": "Where do you usually play?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s6",
+          "text_original": "我们公司附近有一个体育馆，周末人不多，场地很好租。",
+          "pinyin": "Wǒmen gōngsī fùjìn yǒu yí ge tǐyùguǎn, zhōumò rén bù duō, chǎngdì hěn hǎo zū.",
+          "text_translation": "Ofisimiz yaqinida sport zali bor, dam olish kunlari odam kam bo'ladi, maydonni ijaraga olish oson.",
+          "text_translation_ru": "Рядом с нашей компанией есть спортзал, по выходным там немного людей, и площадку легко арендовать.",
+          "text_translation_en": "There's a sports hall near our office; it's not crowded on weekends and the court is easy to book.",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s7",
+          "text_original": "你会打网球吗？",
+          "pinyin": "Nǐ huì dǎ wǎngqiú ma?",
+          "text_translation": "Tennis o'ynay olasanmi?",
+          "text_translation_ru": "Ты умеешь играть в теннис?",
+          "text_translation_en": "Can you play tennis?",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s8",
+          "text_original": "不会，但是我一直想学。你觉得网球难吗？",
+          "pinyin": "Bú huì, dànshì wǒ yìzhí xiǎng xué. Nǐ juéde wǎngqiú nán ma?",
+          "text_translation": "Yo'q, lekin doim o'rganmoqchi bo'lganman. Seningcha tennis qiyinmi?",
+          "text_translation_ru": "Нет, но я всё время хотел научиться. Как думаешь, теннис сложный?",
+          "text_translation_en": "No, but I've always wanted to learn. Do you think tennis is hard?",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s9",
+          "text_original": "有点难，但是学会以后特别有成就感。",
+          "pinyin": "Yǒu diǎn nán, dànshì xuéhuì yǐhòu tèbié yǒu chéngjiùgǎn.",
+          "text_translation": "Birozroq qiyin, lekin o'rganib olgandan keyin katta qoniqish hissi beradi.",
+          "text_translation_ru": "Немного сложный, но после того как научишься, появляется особое чувство достижения.",
+          "text_translation_en": "A bit hard, but once you learn it, it's really satisfying.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s10",
+          "text_original": "那我也找机会试试。你周末有时间教我吗？",
+          "pinyin": "Nà wǒ yě zhǎo jīhuì shì shi. Nǐ zhōumò yǒu shíjiān jiāo wǒ ma?",
+          "text_translation": "Unda men ham imkoniyat topib ko'rib ko'raman. Dam olish kunlari menga o'rgatishga vaqting bo'ladimi?",
+          "text_translation_ru": "Тогда и я при случае попробую. У тебя есть время на выходных меня поучить?",
+          "text_translation_en": "Then I'll find a chance to give it a try too. Do you have time to teach me this weekend?",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s11",
+          "text_original": "可以啊！周末上午我一般都有空。",
+          "pinyin": "Kěyǐ a! Zhōumò shàngwǔ wǒ yìbān dōu yǒu kòng.",
+          "text_translation": "Albatta! Dam olish kunlari ertalab odatda bo'sh bo'laman.",
+          "text_translation_ru": "Конечно! По выходным утром я обычно свободен.",
+          "text_translation_en": "Sure! I'm usually free on weekend mornings.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s12",
+          "text_original": "太好了！我们约这周六上午怎么样？",
+          "pinyin": "Tài hǎo le! Wǒmen yuē zhè zhōuliù shàngwǔ zěnmeyàng?",
+          "text_translation": "Juda zo'r! Shu shanba ertalabga kelishaylikmi?",
+          "text_translation_ru": "Отлично! Давай договоримся на эту субботу утром?",
+          "text_translation_en": "Great! How about we set it for this Saturday morning?",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s13",
+          "text_original": "没问题。你需要自己带球拍，我这边有多余的。",
+          "pinyin": "Méi wèntí. Nǐ xūyào zìjǐ dài qiúpāi, wǒ zhè biān yǒu duōyú de.",
+          "text_translation": "Muammo yo'q. O'zing raketka olib kelishing kerak, menda zaxirasi bor.",
+          "text_translation_ru": "Без проблем. Тебе нужна своя ракетка, у меня есть запасная.",
+          "text_translation_en": "No problem. You'll need to bring your own racket — I have a spare one here.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s14",
+          "text_original": "好，那我先去买一个。周六上午体育馆见！",
+          "pinyin": "Hǎo, nà wǒ xiān qù mǎi yí ge. Zhōuliù shàngwǔ tǐyùguǎn jiàn!",
+          "text_translation": "Yaxshi, unda avval borib bitta sotib olaman. Shanba ertalab sport zalida ko'rishamiz!",
+          "text_translation_ru": "Хорошо, тогда я сначала куплю одну. Встретимся в субботу утром в спортзале!",
+          "text_translation_en": "Okay, then I'll go buy one first. See you Saturday morning at the sports hall!",
+          "speaker": "B"
+        },
+        {
+          "id": "d13-s15",
+          "text_original": "好！别迟到哦。",
+          "pinyin": "Hǎo! Bié chídào o.",
+          "text_translation": "Mayli! Kechikma-ya.",
+          "text_translation_ru": "Хорошо! Только не опаздывай.",
+          "text_translation_en": "Alright! Don't be late.",
+          "speaker": "A"
+        },
+        {
+          "id": "d13-s16",
+          "text_original": "放心，我一定准时到！",
+          "pinyin": "Fàngxīn, wǒ yídìng zhǔnshí dào!",
+          "text_translation": "Xotirjam bo'l, albatta o'z vaqtida yetib boraman!",
+          "text_translation_ru": "Не волнуйся, я точно приду вовремя!",
+          "text_translation_en": "Don't worry, I'll definitely be there on time!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
