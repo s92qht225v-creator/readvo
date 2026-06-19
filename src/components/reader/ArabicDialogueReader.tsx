@@ -24,9 +24,13 @@ export interface ArabicDialogueMeta {
 }
 
 interface ApiSentence {
-  id: string; ar: string; translit: string;
+  id: string;
+  speaker?: 'A' | 'B';
+  ar_m?: string; translit_m?: string;
+  ar_f?: string; translit_f?: string;
+  ar?: string; translit?: string;
   text_translation_uz: string; text_translation_ru: string; text_translation_en: string;
-  speaker?: 'A' | 'B'; audio_url?: string;
+  audio_url?: string;
 }
 interface ApiDialogue { id: string; sentences: ApiSentence[]; }
 
@@ -40,6 +44,19 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
   const [language] = useLanguage();
   const [dialogue, setDialogue] = useState<ApiDialogue | null>(null);
   const [status, setStatus] = useState<'loading' | 'loaded' | 'locked' | 'error'>('loading');
+  const [genderMode, setGenderMode] = useState<'m' | 'f'>('m');
+
+  // A dialogue is gendered iff any sentence carries both gender wordings.
+  const isGendered = (dialogue?.sentences ?? []).some((s) => s.ar_m && s.ar_f);
+
+  // OpenAI voice per (mode, speaker): male onyx/echo, female nova/shimmer.
+  const voiceFor = (speaker: 'A' | 'B' | undefined): string =>
+    genderMode === 'm' ? (speaker === 'B' ? 'echo' : 'onyx') : (speaker === 'B' ? 'shimmer' : 'nova');
+
+  const arOf = (s: ApiSentence): string =>
+    genderMode === 'm' ? (s.ar_m ?? s.ar ?? '') : (s.ar_f ?? s.ar ?? '');
+  const translitOf = (s: ApiSentence): string =>
+    genderMode === 'm' ? (s.translit_m ?? s.translit ?? '') : (s.translit_f ?? s.translit ?? '');
 
   useEffect(() => {
     if (authLoading) return;
@@ -67,15 +84,19 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
 
   const sentences: ReaderSentence[] = (dialogue?.sentences ?? []).map((s) => ({
     id: s.id,
-    text: s.ar,
-    translit: s.translit,
+    text: arOf(s),
+    translit: translitOf(s),
     translation: trOf(s, language),
     speaker: s.speaker,
-    audioText: s.ar,
+    audioText: arOf(s),
     audioUrl: s.audio_url,
+    voice: isGendered ? voiceFor(s.speaker) : undefined,
   }));
 
-  const resolveAudio = useCallback((s: ReaderSentence) => resolveTtsUrlAr(s.audioText), []);
+  const resolveAudio = useCallback(
+    (s: ReaderSentence) => resolveTtsUrlAr(s.audioText, s.voice),
+    [],
+  );
 
   const titleTr = language === 'ru' ? meta.titleTranslation_ru : language === 'en' ? meta.titleTranslation_en : meta.titleTranslation_uz;
 
@@ -109,6 +130,16 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
             sentences={sentences}
             resolveAudio={resolveAudio}
             labels={{ translation: ({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language] }}
+            fabExtra={isGendered ? (
+              <button
+                type="button"
+                className="ar-gender-fab"
+                onClick={() => setGenderMode((g) => (g === 'm' ? 'f' : 'm'))}
+                aria-label={genderMode === 'm' ? 'Switch to female version' : 'Switch to male version'}
+              >
+                {genderMode === 'm' ? '👨' : '👩'}
+              </button>
+            ) : undefined}
           />
         )}
       </div>
