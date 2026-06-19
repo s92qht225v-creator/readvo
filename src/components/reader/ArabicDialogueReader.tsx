@@ -137,7 +137,19 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
                 onClick={() => setGenderMode((g) => (g === 'm' ? 'f' : 'm'))}
                 aria-label={genderMode === 'm' ? 'Switch to female version' : 'Switch to male version'}
               >
-                {genderMode === 'm' ? '👨' : '👩'}
+                {genderMode === 'm' ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="9" cy="15" r="5" />
+                    <line x1="12.5" y1="11.5" x2="20" y2="4" />
+                    <polyline points="14 4 20 4 20 10" />
+                  </svg>
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="9" r="5" />
+                    <line x1="12" y1="14" x2="12" y2="21" />
+                    <line x1="9" y1="18" x2="15" y2="18" />
+                  </svg>
+                )}
               </button>
             ) : undefined}
           />
