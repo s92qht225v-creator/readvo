@@ -9,13 +9,10 @@ const BUCKET = 'audio';
 // the cache path so the switch regenerates every clip fresh.
 const PROVIDER = 'google';
 const TTS_PREFIX = `ar/tts/${PROVIDER}`;
-const DEFAULT_VOICE = 'ar-XA-Wavenet-B';
+const DEFAULT_VOICE = 'ar-XA-Chirp3-HD-Charon';
 
-// Allowed Google ar-XA voices (B/C male, A/D female).
-const ALLOWED_VOICES = new Set([
-  'ar-XA-Wavenet-A', 'ar-XA-Wavenet-B', 'ar-XA-Wavenet-C', 'ar-XA-Wavenet-D',
-  'ar-XA-Standard-A', 'ar-XA-Standard-B', 'ar-XA-Standard-C', 'ar-XA-Standard-D',
-]);
+// Allow Google ar-XA voices: Chirp3-HD (newest, most natural), Wavenet, Standard.
+const VOICE_RE = /^ar-XA-(Chirp3-HD-[A-Za-z]+|Wavenet-[A-D]|Standard-[A-D])$/;
 
 function storagePath(text: string, voice: string): string {
   const hex = Buffer.from(text, 'utf-8').toString('hex');
@@ -38,7 +35,7 @@ export async function POST(req: NextRequest) {
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
-  const voice = typeof rawVoice === 'string' && ALLOWED_VOICES.has(rawVoice) ? rawVoice : DEFAULT_VOICE;
+  const voice = typeof rawVoice === 'string' && VOICE_RE.test(rawVoice) ? rawVoice : DEFAULT_VOICE;
 
   const supabase = getSupabaseAdmin();
   const path = storagePath(text, voice);

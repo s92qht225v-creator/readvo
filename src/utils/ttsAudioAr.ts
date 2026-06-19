@@ -2,7 +2,7 @@ const cache = new Map<string, string>();
 const inflight = new Map<string, Promise<string | null>>();
 
 /** Resolve a playable Arabic TTS URL for `text` in `voice` (Supabase-cached, memoized). */
-export async function resolveTtsUrlAr(text: string, voice = 'ar-XA-Wavenet-B'): Promise<string | null> {
+export async function resolveTtsUrlAr(text: string, voice = 'ar-XA-Chirp3-HD-Charon'): Promise<string | null> {
   const raw = (text ?? '').trim();
   if (!raw) return null;
   const key = `${voice}:${raw}`;
