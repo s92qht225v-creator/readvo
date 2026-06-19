@@ -3,13 +3,19 @@ import path from 'path';
 
 export interface ArabicSentence {
   id: string;
-  ar: string;                 // fully vowelized Arabic
-  translit: string;           // Latin transliteration
+  speaker?: 'A' | 'B';
+  // Gendered wording (present → the dialogue is gendered):
+  ar_m?: string;
+  translit_m?: string;
+  ar_f?: string;
+  translit_f?: string;
+  // Legacy single-gender wording (present when not gendered):
+  ar?: string;
+  translit?: string;
   text_translation_uz: string;
   text_translation_ru: string;
   text_translation_en: string;
-  speaker?: 'A' | 'B';
-  audio_url?: string;         // optional recorded audio; else TTS
+  audio_url?: string;
 }
 
 export interface ArabicDialogue {
