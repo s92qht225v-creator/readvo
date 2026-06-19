@@ -1,0 +1,216 @@
+{
+  "id": "hsk3-dialogue6",
+  "slug": "friends",
+  "title": "朋友",
+  "pinyin": "Péngyou",
+  "titleTranslation": "Do'stlar",
+  "titleTranslation_ru": "Друзья",
+  "titleTranslation_en": "Friends",
+  "level": 3,
+  "tag": "muloqot",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "爬山",
+    "总是",
+    "解决",
+    "性格",
+    "开朗",
+    "幽默",
+    "距离",
+    "影响",
+    "友情",
+    "真正",
+    "像...一样",
+    "珍惜"
+  ],
+  "sections": [
+    {
+      "id": "d6-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d6-s1",
+          "text_original": "你周末跟朋友见面了吗？",
+          "pinyin": "Nǐ zhōumò gēn péngyou jiànmiàn le ma?",
+          "text_translation": "Dam olish kunlari do'sting bilan uchrashdingmi?",
+          "text_translation_ru": "Ты виделся с другом на выходных?",
+          "text_translation_en": "Did you meet up with your friend over the weekend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s2",
+          "text_original": "见了。我们一起去爬山了。",
+          "pinyin": "Jiàn le. Wǒmen yìqǐ qù páshān le.",
+          "text_translation": "Ha. Birga toqqa chiqdik.",
+          "text_translation_ru": "Да. Мы вместе ходили в горы.",
+          "text_translation_en": "Yes. We went hiking together.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s3",
+          "text_original": "爬山累不累？",
+          "pinyin": "Páshān lèi bu lèi?",
+          "text_translation": "Toqqa chiqish charchatdimi?",
+          "text_translation_ru": "Восхождение было утомительным?",
+          "text_translation_en": "Was the climb tiring?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s4",
+          "text_original": "有一点累，但是很好玩。山上的风景很美。",
+          "pinyin": "Yǒu yì diǎn lèi, dànshì hěn hǎowán. Shānshang de fēngjǐng hěn měi.",
+          "text_translation": "Bir oz charchatdi, lekin juda qiziqarli edi. Tog'dagi manzara juda chiroyli.",
+          "text_translation_ru": "Немного устали, но было очень весело. Виды в горах очень красивые.",
+          "text_translation_en": "A little tiring, but a lot of fun. The scenery up the mountain was beautiful.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s5",
+          "text_original": "你们爬了多长时间？",
+          "pinyin": "Nǐmen pá le duō cháng shíjiān?",
+          "text_translation": "Qancha vaqt chiqdingiz?",
+          "text_translation_ru": "Сколько времени вы поднимались?",
+          "text_translation_en": "How long did you climb for?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s6",
+          "text_original": "大概三个小时。我们一边爬一边聊天。",
+          "pinyin": "Dàgài sān ge xiǎoshí. Wǒmen yìbiān pá yìbiān liáotiān.",
+          "text_translation": "Taxminan uch soat. Chiqa-chiqa suhbatlashdik.",
+          "text_translation_ru": "Примерно три часа. Мы поднимались и болтали.",
+          "text_translation_en": "About three hours. We chatted as we climbed.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s7",
+          "text_original": "你们关系一定很好。",
+          "pinyin": "Nǐmen guānxi yídìng hěn hǎo.",
+          "text_translation": "Munosabatingiz juda yaxshi bo'lsa kerak.",
+          "text_translation_ru": "У вас, наверное, очень хорошие отношения.",
+          "text_translation_en": "You two must be really close.",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s8",
+          "text_original": "对，我们从大学就认识了。已经认识五年了。",
+          "pinyin": "Duì, wǒmen cóng dàxué jiù rènshi le. Yǐjīng rènshi wǔ nián le.",
+          "text_translation": "Ha, biz universitetdan beri tanishmiz. Allaqachon besh yildan beri tanishmiz.",
+          "text_translation_ru": "Да, мы знакомы ещё с университета. Знакомы уже пять лет.",
+          "text_translation_en": "Yes, we've known each other since university — five years now.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s9",
+          "text_original": "她是你最好的朋友吗？",
+          "pinyin": "Tā shì nǐ zuì hǎo de péngyou ma?",
+          "text_translation": "U sening eng yaxshi do'stingmi?",
+          "text_translation_ru": "Она твоя лучшая подруга?",
+          "text_translation_en": "Is she your best friend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s10",
+          "text_original": "是。我开心的时候想找她，不开心的时候也想找她。",
+          "pinyin": "Shì. Wǒ kāixīn de shíhou xiǎng zhǎo tā, bù kāixīn de shíhou yě xiǎng zhǎo tā.",
+          "text_translation": "Ha. Xursand bo'lganimda uni qidiraman, xafa bo'lganimda ham uni qidiraman.",
+          "text_translation_ru": "Да. Когда мне радостно, хочу к ней, и когда грустно — тоже к ней.",
+          "text_translation_en": "Yes. When I'm happy I want to be with her, and when I'm sad I want to be with her too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s11",
+          "text_original": "有这样的朋友真幸福！",
+          "pinyin": "Yǒu zhèyàng de péngyou zhēn xìngfú!",
+          "text_translation": "Bunday do'st bo'lgani haqiqatan baxt!",
+          "text_translation_ru": "Как же это счастье — иметь такого друга!",
+          "text_translation_en": "Having a friend like that is true happiness!",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s12",
+          "text_original": "是啊。她总是帮我解决问题。",
+          "pinyin": "Shì a. Tā zǒng shì bāng wǒ jiějué wèntí.",
+          "text_translation": "Ha-da. U doim menga muammolarni hal qilishda yordam beradi.",
+          "text_translation_ru": "Да. Она всегда помогает мне решать проблемы.",
+          "text_translation_en": "Yeah. She always helps me solve my problems.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s13",
+          "text_original": "她是个什么样的人？",
+          "pinyin": "Tā shì ge shénmeyàng de rén?",
+          "text_translation": "U qanday odam?",
+          "text_translation_ru": "Что она за человек?",
+          "text_translation_en": "What kind of person is she?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s14",
+          "text_original": "她性格很开朗，也很幽默。跟她在一起总是很开心。",
+          "pinyin": "Tā xìnggé hěn kāilǎng, yě hěn yōumò. Gēn tā zài yìqǐ zǒng shì hěn kāixīn.",
+          "text_translation": "Uning fe'l-atvori juda ochiq, hazilkash ham. U bilan birga bo'lish doim juda yoqimli.",
+          "text_translation_ru": "У неё очень открытый характер, и она с юмором. С ней всегда весело.",
+          "text_translation_en": "She has a really cheerful personality and a good sense of humour. It's always fun being with her.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s15",
+          "text_original": "你们经常见面吗？",
+          "pinyin": "Nǐmen jīngcháng jiànmiàn ma?",
+          "text_translation": "Tez-tez uchrashasizmi?",
+          "text_translation_ru": "Вы часто видитесь?",
+          "text_translation_en": "Do you see each other often?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s16",
+          "text_original": "以前经常见，现在她工作忙，一个月见一两次。",
+          "pinyin": "Yǐqián jīngcháng jiàn, xiànzài tā gōngzuò máng, yí ge yuè jiàn yì liǎng cì.",
+          "text_translation": "Avval tez-tez ko'rishardik, hozir uning ishi ko'p, oyiga bir-ikki marta uchrashamiz.",
+          "text_translation_ru": "Раньше виделись часто, теперь она занята на работе — встречаемся раз-два в месяц.",
+          "text_translation_en": "We used to meet often; now she's busy with work, so we meet once or twice a month.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s17",
+          "text_original": "距离会影响你们的友情吗？",
+          "pinyin": "Jùlí huì yǐngxiǎng nǐmen de yǒuqíng ma?",
+          "text_translation": "Masofa do'stligingizga ta'sir qiladimi?",
+          "text_translation_ru": "Влияет ли расстояние на вашу дружбу?",
+          "text_translation_en": "Does distance affect your friendship?",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s18",
+          "text_original": "不会。真正的朋友不会因为距离变远。",
+          "pinyin": "Bú huì. Zhēnzhèng de péngyou bú huì yīnwèi jùlí biàn yuǎn.",
+          "text_translation": "Yo'q. Haqiqiy do'stlar masofa tufayli uzoqlashmaydi.",
+          "text_translation_ru": "Нет. Настоящие друзья не отдаляются из-за расстояния.",
+          "text_translation_en": "No. True friends don't drift apart because of distance.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s19",
+          "text_original": "你说得对。好朋友就像家人一样。",
+          "pinyin": "Nǐ shuō de duì. Hǎo péngyou jiù xiàng jiārén yíyàng.",
+          "text_translation": "To'g'ri aytasan. Yaxshi do'st xuddi oila a'zosidek.",
+          "text_translation_ru": "Ты прав. Хороший друг — как член семьи.",
+          "text_translation_en": "You're right. A good friend is just like family.",
+          "speaker": "A"
+        },
+        {
+          "id": "d6-s20",
+          "text_original": "对。我真的很珍惜她。",
+          "pinyin": "Duì. Wǒ zhēn de hěn zhēnxī tā.",
+          "text_translation": "Ha. Men uni chinakam qadrlayman.",
+          "text_translation_ru": "Да. Я её действительно очень ценю.",
+          "text_translation_en": "Right. I really treasure her.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
