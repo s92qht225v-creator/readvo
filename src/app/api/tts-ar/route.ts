@@ -4,9 +4,11 @@ import { getSupabaseAdmin } from '@/lib/supabase-server';
 const BUCKET = 'audio';
 const TTS_PREFIX = 'ar/tts';
 
-function storagePath(text: string): string {
+const ALLOWED_VOICES = new Set(['alloy', 'echo', 'onyx', 'nova', 'shimmer', 'fable']);
+
+function storagePath(text: string, voice: string): string {
   const hex = Buffer.from(text, 'utf-8').toString('hex');
-  return `${TTS_PREFIX}/${hex}.mp3`;
+  return `${TTS_PREFIX}/${voice}/${hex}.mp3`;
 }
 
 function publicUrl(path: string): string {
@@ -21,13 +23,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const { text } = await req.json();
+  const { text, voice: rawVoice } = await req.json();
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
+  const voice = typeof rawVoice === 'string' && ALLOWED_VOICES.has(rawVoice) ? rawVoice : 'alloy';
 
   const supabase = getSupabaseAdmin();
-  const path = storagePath(text);
+  const path = storagePath(text, voice);
 
   // 1. Cache hit?
   const { data: existing, error: dlError } = await supabase.storage.from(BUCKET).download(path);
@@ -45,7 +48,7 @@ export async function POST(req: NextRequest) {
     const res = await fetch('https://api.openai.com/v1/audio/speech', {
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'tts-1', voice: 'alloy', input: text, response_format: 'mp3' }),
+      body: JSON.stringify({ model: 'tts-1', voice, input: text, response_format: 'mp3' }),
     });
     if (!res.ok) {
       console.error('OpenAI TTS error:', res.status, await res.text().catch(() => ''));
