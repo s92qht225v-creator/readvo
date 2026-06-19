@@ -2,7 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 const BUCKET = 'audio';
-const TTS_PREFIX = 'ar/tts';
+// `gpt-4o-mini-tts` reads Modern Standard Arabic far more faithfully than the
+// older `tts-1` (which mis-reads vowelized MSA into wrong words). The model is
+// baked into the cache path so upgrading regenerates every clip instead of
+// serving the old, butchered `tts-1` audio.
+const TTS_MODEL = 'gpt-4o-mini-tts';
+const TTS_PREFIX = `ar/tts/${TTS_MODEL}`;
 
 const ALLOWED_VOICES = new Set(['alloy', 'echo', 'onyx', 'nova', 'shimmer', 'fable']);
 
@@ -48,7 +53,13 @@ export async function POST(req: NextRequest) {
     const res = await fetch('https://api.openai.com/v1/audio/speech', {
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'tts-1', voice, input: text, response_format: 'mp3' }),
+      body: JSON.stringify({
+        model: TTS_MODEL,
+        voice,
+        input: text,
+        response_format: 'mp3',
+        instructions: 'Read the text as clear, natural Modern Standard Arabic. Pronounce every word exactly as written, following the diacritics (harakat).',
+      }),
     });
     if (!res.ok) {
       console.error('OpenAI TTS error:', res.status, await res.text().catch(() => ''));
