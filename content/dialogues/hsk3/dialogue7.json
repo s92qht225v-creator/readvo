@@ -1,0 +1,200 @@
+{
+  "id": "hsk3-dialogue7",
+  "slug": "online-shopping",
+  "title": "网上购物",
+  "pinyin": "Wǎngshàng gòuwù",
+  "titleTranslation": "Onlayn xarid",
+  "titleTranslation_ru": "Покупки онлайн",
+  "titleTranslation_en": "Online Shopping",
+  "level": 3,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "选",
+    "担心",
+    "评价",
+    "说明",
+    "大小",
+    "退货",
+    "商家",
+    "免费",
+    "退换",
+    "好处",
+    "选择",
+    "比价",
+    "亲眼",
+    "日用品"
+  ],
+  "sections": [
+    {
+      "id": "d7-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d7-s1",
+          "text_original": "你最近买了很多东西吗？我看你经常收快递。",
+          "pinyin": "Nǐ zuìjìn mǎi le hěn duō dōngxi ma? Wǒ kàn nǐ jīngcháng shōu kuàidì.",
+          "text_translation": "Yaqinda ko'p narsa sotib oldingmi? Tez-tez pochta olayotganingni ko'ryapman.",
+          "text_translation_ru": "Ты в последнее время много покупаешь? Я вижу, ты часто получаешь посылки.",
+          "text_translation_en": "Have you bought a lot lately? I see you getting deliveries all the time.",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s2",
+          "text_original": "对，我最近喜欢在网上买东西。",
+          "pinyin": "Duì, wǒ zuìjìn xǐhuān zài wǎngshàng mǎi dōngxi.",
+          "text_translation": "Ha, yaqinda internetdan xarid qilishni yoqtirib qoldim.",
+          "text_translation_ru": "Да, мне в последнее время нравится покупать в интернете.",
+          "text_translation_en": "Yeah, lately I've been into shopping online.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s3",
+          "text_original": "网上买东西方便吗？",
+          "pinyin": "Wǎngshàng mǎi dōngxi fāngbiàn ma?",
+          "text_translation": "Internetdan xarid qilish qulaymi?",
+          "text_translation_ru": "Покупать в интернете удобно?",
+          "text_translation_en": "Is shopping online convenient?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s4",
+          "text_original": "很方便。不用出门，在家就能选。",
+          "pinyin": "Hěn fāngbiàn. Búyòng chūmén, zài jiā jiù néng xuǎn.",
+          "text_translation": "Juda qulay. Uydan chiqmasdan, uyda turib tanlash mumkin.",
+          "text_translation_ru": "Очень удобно. Не нужно выходить из дома — можно выбирать прямо дома.",
+          "text_translation_en": "Very convenient. No need to go out — you can choose right from home.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s5",
+          "text_original": "你不怕买到不好的东西吗？",
+          "pinyin": "Nǐ bú pà mǎi dào bù hǎo de dōngxi ma?",
+          "text_translation": "Sifatsiz narsa sotib olishdan qo'rqmaysanmi?",
+          "text_translation_ru": "А ты не боишься купить что-то некачественное?",
+          "text_translation_en": "Aren't you afraid of ending up with something bad?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s6",
+          "text_original": "有一点担心。所以我都会看别人的评价。",
+          "pinyin": "Yǒu yì diǎn dānxīn. Suǒyǐ wǒ dōu huì kàn biérén de píngjià.",
+          "text_translation": "Bir oz xavotirlanaman. Shuning uchun har doim boshqalarning sharhlarini o'qiyman.",
+          "text_translation_ru": "Немного переживаю. Поэтому всегда читаю отзывы других.",
+          "text_translation_en": "A little worried. So I always read other people's reviews.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s7",
+          "text_original": "评价有用吗？",
+          "pinyin": "Píngjià yǒuyòng ma?",
+          "text_translation": "Sharhlar foydalimi?",
+          "text_translation_ru": "Отзывы полезны?",
+          "text_translation_en": "Are reviews useful?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s8",
+          "text_original": "很有用。好的评价多，说明东西不错。",
+          "pinyin": "Hěn yǒuyòng. Hǎo de píngjià duō, shuōmíng dōngxi búcuò.",
+          "text_translation": "Juda foydali. Yaxshi sharhlar ko'p bo'lsa, demak narsa yaxshi.",
+          "text_translation_ru": "Очень полезны. Если хороших отзывов много, значит товар хороший.",
+          "text_translation_en": "Very useful. Lots of good reviews means the product is decent.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s9",
+          "text_original": "你在网上买过衣服吗？",
+          "pinyin": "Nǐ zài wǎngshàng mǎi guo yīfu ma?",
+          "text_translation": "Internetdan kiyim sotib olganmisan?",
+          "text_translation_ru": "Ты покупал одежду в интернете?",
+          "text_translation_en": "Have you ever bought clothes online?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s10",
+          "text_original": "买过。但是衣服比较难选，大小不合适就要退。",
+          "pinyin": "Mǎi guo. Dànshì yīfu bǐjiào nán xuǎn, dàxiǎo bù héshì jiù yào tuì.",
+          "text_translation": "Olganman. Lekin kiyimni tanlash ancha qiyin, o'lchami to'g'ri kelmasa qaytarish kerak.",
+          "text_translation_ru": "Покупал. Но одежду выбирать сложнее — если размер не подходит, приходится возвращать.",
+          "text_translation_en": "I have. But clothes are harder to choose — if the size doesn't fit, you have to return it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s11",
+          "text_original": "退货麻烦吗？",
+          "pinyin": "Tuìhuò máfan ma?",
+          "text_translation": "Tovarni qaytarish mashaqqatlimi?",
+          "text_translation_ru": "Возврат товара хлопотный?",
+          "text_translation_en": "Is returning items a hassle?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s12",
+          "text_original": "不麻烦。现在很多商家都免费退换。",
+          "pinyin": "Bù máfan. Xiànzài hěn duō shāngjiā dōu miǎnfèi tuìhuàn.",
+          "text_translation": "Mashaqqatli emas. Hozir ko'p sotuvchilar bepul qaytarib almashtiradi.",
+          "text_translation_ru": "Не хлопотный. Сейчас многие продавцы делают возврат и обмен бесплатно.",
+          "text_translation_en": "Not at all. These days many sellers offer free returns and exchanges.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s13",
+          "text_original": "那你觉得网上购物最大的好处是什么？",
+          "pinyin": "Nà nǐ juéde wǎngshàng gòuwù zuì dà de hǎochù shì shénme?",
+          "text_translation": "Unda seningcha onlayn xaridning eng katta foydasi nima?",
+          "text_translation_ru": "А в чём, по-твоему, главное преимущество онлайн-покупок?",
+          "text_translation_en": "So what do you think is the biggest advantage of online shopping?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s14",
+          "text_original": "价格便宜，选择多，还可以比价。",
+          "pinyin": "Jiàgé piányi, xuǎnzé duō, hái kěyǐ bǐjià.",
+          "text_translation": "Narxi arzon, tanlov ko'p, narxlarni ham solishtirsa bo'ladi.",
+          "text_translation_ru": "Цены ниже, выбор большой, и можно сравнивать цены.",
+          "text_translation_en": "Prices are cheaper, there's more choice, and you can compare prices.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s15",
+          "text_original": "那你以后还会去商场买东西吗？",
+          "pinyin": "Nà nǐ yǐhòu hái huì qù shāngchǎng mǎi dōngxi ma?",
+          "text_translation": "Unda kelajakda ham do'konga xarid qilish uchun borasanmi?",
+          "text_translation_ru": "Тогда ты ещё будешь ходить за покупками в магазин?",
+          "text_translation_en": "So will you still go to the mall to shop in the future?",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s16",
+          "text_original": "也会。有些东西还是亲眼看看比较好。",
+          "pinyin": "Yě huì. Yǒuxiē dōngxi háishì qīnyǎn kàn kan bǐjiào hǎo.",
+          "text_translation": "Boraman ham. Ba'zi narsalarni o'z ko'zing bilan ko'rgan yaxshiroq.",
+          "text_translation_ru": "Буду. Некоторые вещи всё же лучше посмотреть своими глазами.",
+          "text_translation_en": "I will. Some things are still better to see with your own eyes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d7-s17",
+          "text_original": "你说得对。我一般买书和日用品在网上买。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yìbān mǎi shū hé rìyòngpǐn zài wǎngshàng mǎi.",
+          "text_translation": "To'g'ri aytasan. Men odatda kitob va kundalik ehtiyoj mollarini internetdan olaman.",
+          "text_translation_ru": "Ты прав. Я обычно покупаю книги и товары повседневного спроса в интернете.",
+          "text_translation_en": "You're right. I usually buy books and daily necessities online.",
+          "speaker": "A"
+        },
+        {
+          "id": "d7-s18",
+          "text_original": "对，这些东西不用担心大小问题。",
+          "pinyin": "Duì, zhèxiē dōngxi búyòng dānxīn dàxiǎo wèntí.",
+          "text_translation": "Ha, bunday narsalarda o'lcham muammosidan xavotirlanish shart emas.",
+          "text_translation_ru": "Да, с такими вещами не нужно переживать из-за размера.",
+          "text_translation_en": "Right, with those you don't have to worry about size.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
