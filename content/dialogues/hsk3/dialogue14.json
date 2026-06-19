@@ -1,0 +1,179 @@
+{
+  "id": "hsk3-dialogue14",
+  "slug": "queuing-for-milk-tea",
+  "title": "排队",
+  "pinyin": "Páiduì",
+  "titleTranslation": "Navbatda turish",
+  "titleTranslation_ru": "Очередь за молочным чаем",
+  "titleTranslation_en": "Queuing for Milk Tea",
+  "level": 3,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "排队",
+    "奶茶",
+    "火",
+    "奶盖",
+    "强烈",
+    "推荐",
+    "口味",
+    "水果茶",
+    "新鲜",
+    "招牌",
+    "失望"
+  ],
+  "sections": [
+    {
+      "id": "d14-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d14-s1",
+          "text_original": "你在干什么？站在这儿很久了。",
+          "pinyin": "Nǐ zài gàn shénme? Zhàn zài zhèr hěn jiǔ le.",
+          "text_translation": "Nima qilyapsan? Bu yerda ancha vaqtdan beri turibsan.",
+          "text_translation_ru": "Что ты делаешь? Стоишь здесь уже давно.",
+          "text_translation_en": "What are you doing? You've been standing here a long time.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s2",
+          "text_original": "我在排队买奶茶。这家店最近特别火。",
+          "pinyin": "Wǒ zài páiduì mǎi nǎichá. Zhè jiā diàn zuìjìn tèbié huǒ.",
+          "text_translation": "Sut choyi olish uchun navbatda turibman. Bu do'kon yaqinda juda mashhur bo'lib ketdi.",
+          "text_translation_ru": "Я стою в очереди за молочным чаем. Это заведение в последнее время очень популярно.",
+          "text_translation_en": "I'm queuing to buy milk tea. This shop has gotten really popular lately.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s3",
+          "text_original": "你排了多长时间了？",
+          "pinyin": "Nǐ pái le duō cháng shíjiān le?",
+          "text_translation": "Qancha vaqtdan beri navbatdasan?",
+          "text_translation_ru": "Сколько ты уже стоишь в очереди?",
+          "text_translation_en": "How long have you been in line?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s4",
+          "text_original": "已经排了半个小时了，前面还有十几个人。",
+          "pinyin": "Yǐjīng pái le bàn ge xiǎoshí le, qiánmiàn hái yǒu shí jǐ ge rén.",
+          "text_translation": "Yarim soat bo'ldi, oldinda hali o'n nechta odam bor.",
+          "text_translation_ru": "Уже полчаса, впереди ещё человек десять с лишним.",
+          "text_translation_en": "Half an hour already, and there are still a dozen or so people ahead.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s5",
+          "text_original": "为了喝一杯奶茶等这么久，值得吗？",
+          "pinyin": "Wèile hē yì bēi nǎichá děng zhème jiǔ, zhíde ma?",
+          "text_translation": "Bir piyola sut choyi uchun shuncha kutish arziydimi?",
+          "text_translation_ru": "Стоить ли так долго ждать ради одного стакана молочного чая?",
+          "text_translation_en": "Is it worth waiting this long for one cup of milk tea?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s6",
+          "text_original": "听说这家的奶盖特别好喝，我朋友强烈推荐。",
+          "pinyin": "Tīngshuō zhè jiā de nǎigài tèbié hǎo hē, wǒ péngyou qiángliè tuījiàn.",
+          "text_translation": "Eshitishimcha, bularning sut ko'pigi juda mazali ekan, do'stim qattiq tavsiya qildi.",
+          "text_translation_ru": "Говорят, у них молочная пенка особенно вкусная, друг мне настоятельно её рекомендовал.",
+          "text_translation_en": "I heard their milk foam is especially tasty — my friend strongly recommended it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s7",
+          "text_original": "那我也买一杯吧，跟你一起等。",
+          "pinyin": "Nà wǒ yě mǎi yì bēi ba, gēn nǐ yìqǐ děng.",
+          "text_translation": "Unda men ham bittasini olay, sen bilan birga kutaman.",
+          "text_translation_ru": "Тогда и я возьму стаканчик, подожду вместе с тобой.",
+          "text_translation_en": "Then I'll buy a cup too and wait with you.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s8",
+          "text_original": "好啊！你想喝什么口味？",
+          "pinyin": "Hǎo a! Nǐ xiǎng hē shénme kǒuwèi?",
+          "text_translation": "Yaxshi! Qaysi ta'mdagisini ichmoqchisan?",
+          "text_translation_ru": "Отлично! Какой вкус ты хочешь?",
+          "text_translation_en": "Great! What flavor do you want?",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s9",
+          "text_original": "我喜欢水果茶，比如柠檬茶或者百香果茶。",
+          "pinyin": "Wǒ xǐhuān shuǐguǒ chá, bǐrú níngméng chá huòzhě bǎixiāngguǒ chá.",
+          "text_translation": "Men mevali choyni yoqtiraman, masalan limonli choy yoki marakuya choyi.",
+          "text_translation_ru": "Я люблю фруктовый чай, например лимонный или с маракуйей.",
+          "text_translation_en": "I like fruit tea, like lemon tea or passion fruit tea.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s10",
+          "text_original": "他们家的水果茶也不错，很新鲜。",
+          "pinyin": "Tāmen jiā de shuǐguǒ chá yě búcuò, hěn xīnxiān.",
+          "text_translation": "Bularning mevali choyi ham yomon emas, juda yangi.",
+          "text_translation_ru": "Их фруктовый чай тоже неплох, очень свежий.",
+          "text_translation_en": "Their fruit tea is good too — very fresh.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s11",
+          "text_original": "那你推荐哪个？",
+          "pinyin": "Nà nǐ tuījiàn nǎ ge?",
+          "text_translation": "Unda qaysi birini tavsiya qilasan?",
+          "text_translation_ru": "А какой ты порекомендуешь?",
+          "text_translation_en": "So which one do you recommend?",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s12",
+          "text_original": "我推荐招牌奶茶，奶盖很香。",
+          "pinyin": "Wǒ tuījiàn zhāopái nǎichá, nǎigài hěn xiāng.",
+          "text_translation": "Men firma sut choyini tavsiya qilaman, sut ko'pigi juda xushbo'y.",
+          "text_translation_ru": "Я рекомендую фирменный молочный чай, у него ароматная пенка.",
+          "text_translation_en": "I recommend the signature milk tea — the milk foam is very fragrant.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s13",
+          "text_original": "好，那就听你的。",
+          "pinyin": "Hǎo, nà jiù tīng nǐ de.",
+          "text_translation": "Mayli, unda sening aytganingni qilaman.",
+          "text_translation_ru": "Хорошо, тогда послушаюсь тебя.",
+          "text_translation_en": "Okay, I'll go with your suggestion.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s14",
+          "text_original": "快到了，还有五分钟就到我们了。",
+          "pinyin": "Kuài dào le, hái yǒu wǔ fēnzhōng jiù dào wǒmen le.",
+          "text_translation": "Yaqinlashyapmiz, yana besh daqiqada navbatimiz keladi.",
+          "text_translation_ru": "Уже скоро, через пять минут будет наша очередь.",
+          "text_translation_en": "Almost there — five more minutes and it'll be our turn.",
+          "speaker": "B"
+        },
+        {
+          "id": "d14-s15",
+          "text_original": "太好了！等这么久，希望真的好喝。",
+          "pinyin": "Tài hǎo le! Děng zhème jiǔ, xīwàng zhēn de hǎo hē.",
+          "text_translation": "Juda yaxshi! Shuncha kutdik, umid qilamanki, rostdan mazali bo'lar.",
+          "text_translation_ru": "Отлично! После такого долгого ожидания надеюсь, что он и правда вкусный.",
+          "text_translation_en": "Great! After waiting this long, I hope it's really good.",
+          "speaker": "A"
+        },
+        {
+          "id": "d14-s16",
+          "text_original": "一定不会让你失望的！",
+          "pinyin": "Yídìng bú huì ràng nǐ shīwàng de!",
+          "text_translation": "Seni hech qachon umidsizlantirmaydi!",
+          "text_translation_ru": "Он точно тебя не разочарует!",
+          "text_translation_en": "It definitely won't disappoint you!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
