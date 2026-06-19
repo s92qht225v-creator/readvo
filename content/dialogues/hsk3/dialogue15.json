@@ -1,0 +1,206 @@
+{
+  "id": "hsk3-dialogue15",
+  "slug": "food-delivery",
+  "title": "外卖",
+  "pinyin": "Wàimài",
+  "titleTranslation": "Yetkazib berish",
+  "titleTranslation_ru": "Доставка еды",
+  "titleTranslation_en": "Food Delivery",
+  "level": 3,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "外卖",
+    "点",
+    "油",
+    "带饭",
+    "炒菜",
+    "饺子",
+    "软件",
+    "优惠",
+    "高峰期",
+    "午餐",
+    "晚餐"
+  ],
+  "sections": [
+    {
+      "id": "d15-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d15-s1",
+          "text_original": "你中午吃什么？",
+          "pinyin": "Nǐ zhōngwǔ chī shénme?",
+          "text_translation": "Tushlikka nima yeysan?",
+          "text_translation_ru": "Что ты ешь на обед?",
+          "text_translation_en": "What are you having for lunch?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s2",
+          "text_original": "我不想做饭，打算点外卖。",
+          "pinyin": "Wǒ bù xiǎng zuò fàn, dǎsuàn diǎn wàimài.",
+          "text_translation": "Ovqat tayyorlagim kelmayapti, yetkazib berishga buyurtma bermoqchiman.",
+          "text_translation_ru": "Готовить не хочется, собираюсь заказать доставку.",
+          "text_translation_en": "I don't feel like cooking, so I'm going to order delivery.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s3",
+          "text_original": "你经常点外卖吗？",
+          "pinyin": "Nǐ jīngcháng diǎn wàimài ma?",
+          "text_translation": "Tez-tez yetkazib berish buyurtma qilasanmi?",
+          "text_translation_ru": "Ты часто заказываешь доставку?",
+          "text_translation_en": "Do you order delivery often?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s4",
+          "text_original": "一周三四次吧，工作太忙没时间做饭。",
+          "pinyin": "Yì zhōu sān sì cì ba, gōngzuò tài máng méi shíjiān zuò fàn.",
+          "text_translation": "Haftasiga uch-to'rt marta, ish juda band, ovqat tayyorlashga vaqt yo'q.",
+          "text_translation_ru": "Раза три-четыре в неделю — работы много, готовить некогда.",
+          "text_translation_en": "Three or four times a week — work's too busy, no time to cook.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s5",
+          "text_original": "外卖方便是方便，但是健康吗？",
+          "pinyin": "Wàimài fāngbiàn shì fāngbiàn, dànshì jiànkāng ma?",
+          "text_translation": "Yetkazib berish qulay-ku, lekin foydalimi?",
+          "text_translation_ru": "Доставка удобна, конечно, но полезна ли она?",
+          "text_translation_en": "Delivery is convenient, sure, but is it healthy?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s6",
+          "text_original": "确实不太健康，油和盐都比较多。",
+          "pinyin": "Quèshí bú tài jiànkāng, yóu hé yán dōu bǐjiào duō.",
+          "text_translation": "Rostdan ham unchalik foydali emas, yog' ham, tuz ham ko'p bo'ladi.",
+          "text_translation_ru": "Действительно не очень полезна, и масла, и соли довольно много.",
+          "text_translation_en": "It really isn't very healthy — there's quite a lot of oil and salt.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s7",
+          "text_original": "那你为什么不自己带饭？",
+          "pinyin": "Nà nǐ wèishénme bú zìjǐ dài fàn?",
+          "text_translation": "Unda nega o'zing ovqat olib bormaysan?",
+          "text_translation_ru": "Тогда почему ты не берёшь еду с собой?",
+          "text_translation_en": "Then why don't you bring your own food?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s8",
+          "text_original": "有时候会带，但是早上起不来，没时间准备。",
+          "pinyin": "Yǒu shíhou huì dài, dànshì zǎoshang qǐ bù lái, méi shíjiān zhǔnbèi.",
+          "text_translation": "Ba'zan olib boraman, lekin ertalab uyqudan turolmayman, tayyorlashga vaqt bo'lmaydi.",
+          "text_translation_ru": "Иногда беру, но утром не могу встать, нет времени готовить.",
+          "text_translation_en": "Sometimes I do, but I can't get up in the morning and have no time to prepare it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s9",
+          "text_original": "你一般点什么？",
+          "pinyin": "Nǐ yìbān diǎn shénme?",
+          "text_translation": "Odatda nima buyurtma qilasan?",
+          "text_translation_ru": "Что ты обычно заказываешь?",
+          "text_translation_en": "What do you usually order?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s10",
+          "text_original": "米饭、炒菜或者面条，偶尔也会点饺子。",
+          "pinyin": "Mǐfàn, chǎocài huòzhě miàntiáo, ǒu'ěr yě huì diǎn jiǎozi.",
+          "text_translation": "Guruch, qovurilgan taom yoki lag'mon, ba'zan chuchvara ham buyurtma qilaman.",
+          "text_translation_ru": "Рис, жареные блюда или лапшу, иногда заказываю пельмени.",
+          "text_translation_en": "Rice, stir-fried dishes or noodles, and occasionally dumplings too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s11",
+          "text_original": "你用什么软件点外卖？",
+          "pinyin": "Nǐ yòng shénme ruǎnjiàn diǎn wàimài?",
+          "text_translation": "Qaysi ilova orqali yetkazib berish buyurtma qilasan?",
+          "text_translation_ru": "Через какое приложение ты заказываешь доставку?",
+          "text_translation_en": "Which app do you use to order delivery?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s12",
+          "text_original": "我用美团和饿了么，哪个优惠多就用哪个。",
+          "pinyin": "Wǒ yòng Měituán hé Èleme, nǎ ge yōuhuì duō jiù yòng nǎ ge.",
+          "text_translation": "Meituan va Eleme'dan foydalanaman, qaysisida chegirma ko'p bo'lsa, o'shanidan.",
+          "text_translation_ru": "Пользуюсь Meituan и Eleme, у кого больше скидок — тем и пользуюсь.",
+          "text_translation_en": "I use Meituan and Eleme — whichever has more discounts is the one I use.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s13",
+          "text_original": "外卖一般多久能到？",
+          "pinyin": "Wàimài yìbān duō jiǔ néng dào?",
+          "text_translation": "Yetkazib berish odatda qancha vaqtda keladi?",
+          "text_translation_ru": "Сколько обычно идёт доставка?",
+          "text_translation_en": "How long does delivery usually take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s14",
+          "text_original": "三四十分钟左右，高峰期可能会慢一些。",
+          "pinyin": "Sān sìshí fēnzhōng zuǒyòu, gāofēngqī kěnéng huì màn yì xiē.",
+          "text_translation": "Taxminan o'ttiz-qirq daqiqa, gavjum vaqtlarda biroz sekinroq bo'lishi mumkin.",
+          "text_translation_ru": "Около тридцати-сорока минут, в час пик может быть чуть медленнее.",
+          "text_translation_en": "About thirty to forty minutes; during peak hours it can be a bit slower.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s15",
+          "text_original": "那你每天花多少钱在吃上？",
+          "pinyin": "Nà nǐ měitiān huā duōshao qián zài chī shàng?",
+          "text_translation": "Unda har kuni ovqatga qancha pul sarflaysan?",
+          "text_translation_ru": "А сколько ты тратишь на еду каждый день?",
+          "text_translation_en": "So how much do you spend on food each day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s16",
+          "text_original": "午餐和晚餐加起来大概六七十块。",
+          "pinyin": "Wǔcān hé wǎncān jiā qǐlái dàgài liù qīshí kuài.",
+          "text_translation": "Tushlik va kechki ovqat birga taxminan oltmish-yetmish yuan.",
+          "text_translation_ru": "Обед и ужин вместе — примерно шестьдесят-семьдесят юаней.",
+          "text_translation_en": "Lunch and dinner together come to about sixty or seventy yuan.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s17",
+          "text_original": "那一个月下来不少钱啊！",
+          "pinyin": "Nà yí ge yuè xiàlái bùshǎo qián a!",
+          "text_translation": "Unda bir oyda anchagina pul bo'ladi-ku!",
+          "text_translation_ru": "Так за месяц набегает немало денег!",
+          "text_translation_en": "That adds up to quite a lot over a month!",
+          "speaker": "A"
+        },
+        {
+          "id": "d15-s18",
+          "text_original": "是啊，所以我打算以后尽量少点外卖。",
+          "pinyin": "Shì a, suǒyǐ wǒ dǎsuàn yǐhòu jǐnliàng shǎo diǎn wàimài.",
+          "text_translation": "Ha-da, shuning uchun bundan keyin iloji boricha kamroq yetkazib berish buyurtma qilmoqchiman.",
+          "text_translation_ru": "Да, поэтому впредь я собираюсь как можно реже заказывать доставку.",
+          "text_translation_en": "Yeah, so from now on I plan to order delivery as little as possible.",
+          "speaker": "B"
+        },
+        {
+          "id": "d15-s19",
+          "text_original": "对，省钱又健康。",
+          "pinyin": "Duì, shěng qián yòu jiànkāng.",
+          "text_translation": "To'g'ri, pul ham tejaladi, sog'liq uchun ham foydali.",
+          "text_translation_ru": "Верно, и деньги экономишь, и полезнее для здоровья.",
+          "text_translation_en": "Right — it saves money and it's healthier.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
