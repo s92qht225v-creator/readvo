@@ -10,9 +10,10 @@ interface ReaderCoreProps {
   sentences: ReaderSentence[];
   resolveAudio: (s: ReaderSentence) => Promise<string | null>;
   labels: { translation: string };
+  fabExtra?: React.ReactNode;
 }
 
-export function ReaderCore({ config, sentences, resolveAudio, labels }: ReaderCoreProps) {
+export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }: ReaderCoreProps) {
   const [showPrimaryAid, setShowPrimaryAid] = useState(true);
   const [showSecondaryAid, setShowSecondaryAid] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -95,6 +96,8 @@ export function ReaderCore({ config, sentences, resolveAudio, labels }: ReaderCo
           </div>
         ))}
       </div>
+
+      {fabExtra}
 
       {sentences.length > 0 && (
         <button

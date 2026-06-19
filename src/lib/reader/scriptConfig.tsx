@@ -12,6 +12,7 @@ export interface ReaderSentence {
   speaker?: string;      // 'A' | 'B' for dialogues
   audioText: string;     // text sent to TTS when no recorded audioUrl
   audioUrl?: string;
+  voice?: string;        // optional TTS voice (Arabic gendered speakers)
 }
 
 export interface RenderOpts {
