@@ -1,0 +1,163 @@
+{
+  "id": "hsk3-dialogue18",
+  "slug": "short-videos",
+  "title": "短视频",
+  "pinyin": "Duǎn shìpín",
+  "titleTranslation": "Qisqa videolar",
+  "titleTranslation_ru": "Короткие видео",
+  "titleTranslation_en": "Short Videos",
+  "level": 3,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "短视频",
+    "内容",
+    "搞笑",
+    "美食",
+    "偶尔",
+    "技巧",
+    "娱乐",
+    "本来",
+    "结果",
+    "停不下来",
+    "定",
+    "关掉",
+    "影响"
+  ],
+  "sections": [
+    {
+      "id": "d18-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d18-s1",
+          "text_original": "你每天花多少时间看短视频？",
+          "pinyin": "Nǐ měitiān huā duōshao shíjiān kàn duǎn shìpín?",
+          "text_translation": "Har kuni qisqa videolar ko'rishga qancha vaqt sarflaysan?",
+          "text_translation_ru": "Сколько времени в день ты тратишь на короткие видео?",
+          "text_translation_en": "How much time do you spend watching short videos every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s2",
+          "text_original": "差不多一两个小时吧，吃饭的时候、睡觉前都会看。",
+          "pinyin": "Chàbuduō yì liǎng ge xiǎoshí ba, chīfàn de shíhou, shuìjiào qián dōu huì kàn.",
+          "text_translation": "Taxminan bir-ikki soat, ovqatlanayotganda ham, uxlashdan oldin ham ko'raman.",
+          "text_translation_ru": "Примерно час-два, смотрю и во время еды, и перед сном.",
+          "text_translation_en": "About one or two hours — I watch them while eating and before bed.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s3",
+          "text_original": "你看什么类型的内容？",
+          "pinyin": "Nǐ kàn shénme lèixíng de nèiróng?",
+          "text_translation": "Qanday turdagi kontent ko'rasan?",
+          "text_translation_ru": "Какой тип контента ты смотришь?",
+          "text_translation_en": "What kind of content do you watch?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s4",
+          "text_original": "我喜欢看搞笑的、美食的和教做菜的。",
+          "pinyin": "Wǒ xǐhuān kàn gǎoxiào de, měishí de hé jiāo zuò cài de.",
+          "text_translation": "Kulgili, taom haqidagi va ovqat tayyorlashni o'rgatadigan videolarni yoqtiraman.",
+          "text_translation_ru": "Люблю смешное, про еду и про то, как готовить.",
+          "text_translation_en": "I like funny ones, food ones, and ones that teach cooking.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s5",
+          "text_original": "你也看那些教你学英语的吗？",
+          "pinyin": "Nǐ yě kàn nàxiē jiāo nǐ xué Yīngyǔ de ma?",
+          "text_translation": "Ingliz tilini o'rgatadiganlarini ham ko'rasanmi?",
+          "text_translation_ru": "Ты смотришь и те, что учат английскому?",
+          "text_translation_en": "Do you also watch the ones that teach you English?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s6",
+          "text_original": "偶尔看。但是学东西我还是更喜欢看书或者上课。",
+          "pinyin": "Ǒu'ěr kàn. Dànshì xué dōngxi wǒ háishì gèng xǐhuān kàn shū huòzhě shàngkè.",
+          "text_translation": "Ba'zan ko'raman. Lekin biror narsa o'rganishda men baribir kitob o'qish yoki darsga borishni afzal ko'raman.",
+          "text_translation_ru": "Иногда смотрю. Но учиться я всё же больше люблю по книгам или на занятиях.",
+          "text_translation_en": "Occasionally. But for learning, I still prefer reading books or attending classes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s7",
+          "text_original": "你觉得看短视频能学到东西吗？",
+          "pinyin": "Nǐ juéde kàn duǎn shìpín néng xué dào dōngxi ma?",
+          "text_translation": "Seningcha qisqa videolardan biror narsa o'rgansa bo'ladimi?",
+          "text_translation_ru": "Как ты думаешь, по коротким видео можно чему-то научиться?",
+          "text_translation_en": "Do you think you can learn anything from short videos?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s8",
+          "text_original": "能学到一些，比如生活小技巧。但是大部分时间就是娱乐。",
+          "pinyin": "Néng xué dào yì xiē, bǐrú shēnghuó xiǎo jìqiǎo. Dànshì dà bùfen shíjiān jiù shì yúlè.",
+          "text_translation": "Bir nimalarni o'rgansa bo'ladi, masalan turmush uchun kichik hiyla-usullar. Lekin ko'p vaqt shunchaki ko'ngilochar.",
+          "text_translation_ru": "Кое-чему можно, например бытовым лайфхакам. Но большую часть времени это просто развлечение.",
+          "text_translation_en": "You can learn a few things, like little life hacks. But most of the time it's just entertainment.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s9",
+          "text_original": "那你有没有觉得浪费时间？",
+          "pinyin": "Nà nǐ yǒu méiyǒu juéde làngfèi shíjiān?",
+          "text_translation": "Unda vaqtni behuda sarflayapman deb o'ylamaysanmi?",
+          "text_translation_ru": "А ты не чувствуешь, что тратишь время впустую?",
+          "text_translation_en": "So do you ever feel like it's a waste of time?",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s10",
+          "text_original": "有时候会。刷着刷着一个小时就过去了。",
+          "pinyin": "Yǒu shíhou huì. Shuā zhe shuā zhe yí ge xiǎoshí jiù guòqù le.",
+          "text_translation": "Ba'zan shunday bo'ladi. Ko'rib-ko'rib o'tirsam, bir soat o'tib ketadi.",
+          "text_translation_ru": "Иногда да. Листаешь-листаешь — и час уже прошёл.",
+          "text_translation_en": "Sometimes. You keep scrolling and an hour just goes by.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s11",
+          "text_original": "我也是！本来只想看十分钟，结果停不下来。",
+          "pinyin": "Wǒ yě shì! Běnlái zhǐ xiǎng kàn shí fēnzhōng, jiéguǒ tíng bù xiàlái.",
+          "text_translation": "Men ham! Aslida atigi o'n daqiqa ko'rmoqchi bo'laman, oqibatda to'xtatib bo'lmaydi.",
+          "text_translation_ru": "У меня так же! Сначала хочешь посмотреть всего десять минут, а в итоге не можешь остановиться.",
+          "text_translation_en": "Me too! I only mean to watch for ten minutes, but then I can't stop.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s12",
+          "text_original": "所以我现在会给自己定一个时间，到了就关掉。",
+          "pinyin": "Suǒyǐ wǒ xiànzài huì gěi zìjǐ dìng yí ge shíjiān, dào le jiù guāndiào.",
+          "text_translation": "Shuning uchun hozir o'zimga vaqt belgilab qo'yaman, vaqti kelganda o'chiraman.",
+          "text_translation_ru": "Поэтому теперь я ставлю себе время и, как оно наступает, выключаю.",
+          "text_translation_en": "So now I set a time limit for myself, and when it's up, I turn it off.",
+          "speaker": "B"
+        },
+        {
+          "id": "d18-s13",
+          "text_original": "这个办法好。不然晚上看到很晚，影响睡觉。",
+          "pinyin": "Zhè ge bànfǎ hǎo. Bùrán wǎnshang kàn dào hěn wǎn, yǐngxiǎng shuìjiào.",
+          "text_translation": "Bu usul yaxshi. Aks holda kechasi juda kechgacha ko'rib, uyquga ta'sir qiladi.",
+          "text_translation_ru": "Хороший способ. Иначе будешь смотреть до поздней ночи и это повлияет на сон.",
+          "text_translation_en": "That's a good method. Otherwise you watch until late at night and it affects your sleep.",
+          "speaker": "A"
+        },
+        {
+          "id": "d18-s14",
+          "text_original": "对。我现在晚上十一点以后就不看了。",
+          "pinyin": "Duì. Wǒ xiànzài wǎnshang shíyī diǎn yǐhòu jiù bú kàn le.",
+          "text_translation": "To'g'ri. Men hozir kechqurun o'n birdan keyin ko'rmayman.",
+          "text_translation_ru": "Да. Теперь я после одиннадцати вечера их не смотрю.",
+          "text_translation_en": "Right. Now I don't watch them after eleven at night.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
