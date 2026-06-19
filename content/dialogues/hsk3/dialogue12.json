@@ -1,0 +1,185 @@
+{
+  "id": "hsk3-dialogue12",
+  "slug": "festivals",
+  "title": "节日",
+  "pinyin": "Jiérì",
+  "titleTranslation": "Bayramlar",
+  "titleTranslation_ru": "Праздники",
+  "titleTranslation_en": "Festivals",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "老家",
+    "差不多",
+    "想念",
+    "父母",
+    "家乡",
+    "传统",
+    "年夜饭",
+    "包饺子",
+    "春晚",
+    "代表",
+    "年年有余",
+    "鞭炮",
+    "贴春联",
+    "挂灯笼",
+    "红包",
+    "发红包",
+    "长大"
+  ],
+  "sections": [
+    {
+      "id": "d12-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d12-s1",
+          "text_original": "下个星期就是春节了，你准备怎么过？",
+          "pinyin": "Xià ge xīngqī jiù shì Chūnjié le, nǐ zhǔnbèi zěnme guò?",
+          "text_translation": "Keyingi hafta Bahor bayrami, uni qanday o'tkazmoqchisan?",
+          "text_translation_ru": "На следующей неделе уже Праздник весны, как собираешься его провести?",
+          "text_translation_en": "Next week is the Spring Festival — how are you planning to spend it?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s2",
+          "text_original": "我打算回老家跟家人一起过年。",
+          "pinyin": "Wǒ dǎsuàn huí lǎojiā gēn jiārén yìqǐ guò nián.",
+          "text_translation": "Ona yurtimga qaytib, oilam bilan birga yangi yilni kutib olmoqchiman.",
+          "text_translation_ru": "Планирую вернуться в родной дом и встретить Новый год с семьёй.",
+          "text_translation_en": "I plan to go back to my hometown and celebrate the New Year with my family.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s3",
+          "text_original": "你多久没回家了？",
+          "pinyin": "Nǐ duō jiǔ méi huí jiā le?",
+          "text_translation": "Uyga qaytmaganingga qancha bo'ldi?",
+          "text_translation_ru": "Как давно ты не был дома?",
+          "text_translation_en": "How long has it been since you went home?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s4",
+          "text_original": "差不多一年了。很想念父母和家乡的味道。",
+          "pinyin": "Chàbuduō yì nián le. Hěn xiǎngniàn fùmǔ hé jiāxiāng de wèidào.",
+          "text_translation": "Deyarli bir yil bo'ldi. Ota-onamni va tug'ilgan yurtim ta'mini juda sog'indim.",
+          "text_translation_ru": "Почти год. Очень скучаю по родителям и по вкусу родных мест.",
+          "text_translation_en": "Almost a year. I really miss my parents and the flavors of home.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s5",
+          "text_original": "春节你们家有什么传统？",
+          "pinyin": "Chūnjié nǐmen jiā yǒu shénme chuántǒng?",
+          "text_translation": "Bahor bayramida sizning oilangizda qanday an'analar bor?",
+          "text_translation_ru": "Какие традиции у вашей семьи на Праздник весны?",
+          "text_translation_en": "What traditions does your family have for the Spring Festival?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s6",
+          "text_original": "我们一家人会一起吃年夜饭、包饺子、看春晚。",
+          "pinyin": "Wǒmen yì jiā rén huì yìqǐ chī niányèfàn, bāo jiǎozi, kàn Chūnwǎn.",
+          "text_translation": "Butun oila birga yangi yil arafasidagi kechki ovqatni yeymiz, chuchvara tugamiz va gala-konsertni tomosha qilamiz.",
+          "text_translation_ru": "Вся семья вместе ужинает в канун Нового года, лепит пельмени и смотрит новогодний гала-концерт.",
+          "text_translation_en": "Our whole family eats the New Year's Eve dinner together, makes dumplings, and watches the Spring Festival Gala.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s7",
+          "text_original": "你最喜欢哪道菜？",
+          "pinyin": "Nǐ zuì xǐhuān nǎ dào cài?",
+          "text_translation": "Qaysi taomni eng yaxshi ko'rasan?",
+          "text_translation_ru": "Какое блюдо тебе нравится больше всего?",
+          "text_translation_en": "Which dish do you like best?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s8",
+          "text_original": "我最喜欢妈妈做的红烧鱼，因为「鱼」代表「年年有余」。",
+          "pinyin": "Wǒ zuì xǐhuān māma zuò de hóngshāo yú, yīnwèi 'yú' dàibiǎo 'niánnián yǒuyú'.",
+          "text_translation": "Eng yoqtirganim — onam tayyorlaydigan qizil dimlangan baliq, chunki «baliq» (yú) «har yili mo'l-ko'lchilik» (niánnián yǒuyú) ramzi.",
+          "text_translation_ru": "Больше всего люблю рыбу в соевом соусе, которую готовит мама, ведь «рыба» (юй) символизирует «достаток каждый год».",
+          "text_translation_en": "My favorite is the braised fish my mom makes, because \"fish\" (yú) represents \"surplus every year.\"",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s9",
+          "text_original": "原来是这样！你们家放鞭炮吗？",
+          "pinyin": "Yuánlái shì zhèyàng! Nǐmen jiā fàng biānpào ma?",
+          "text_translation": "Mana qanaqa ekan! Uyingizda petarda otishadimi?",
+          "text_translation_ru": "Вот оно что! А у вас дома запускают петарды?",
+          "text_translation_en": "So that's why! Does your family set off firecrackers?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s10",
+          "text_original": "现在城市里不让放了，但是我们会贴春联和挂灯笼。",
+          "pinyin": "Xiànzài chéngshì lǐ bú ràng fàng le, dànshì wǒmen huì tiē chūnlián hé guà dēnglong.",
+          "text_translation": "Hozir shaharda otishga ruxsat berilmaydi, lekin biz bahor bayrami juftbaytlarini yopishtiramiz va fonus osamiz.",
+          "text_translation_ru": "Сейчас в городе их запускать не разрешают, но мы клеим новогодние парные надписи и вешаем фонарики.",
+          "text_translation_en": "They're not allowed in the city now, but we paste Spring Festival couplets and hang lanterns.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s11",
+          "text_original": "你收红包了吗？",
+          "pinyin": "Nǐ shōu hóngbāo le ma?",
+          "text_translation": "Qizil konvert olding mi?",
+          "text_translation_ru": "Ты уже получил красный конверт?",
+          "text_translation_en": "Have you gotten a red envelope yet?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s12",
+          "text_original": "还没到时候。今年我工作了，可能要给爸妈发红包。",
+          "pinyin": "Hái méi dào shíhou. Jīnnián wǒ gōngzuò le, kěnéng yào gěi bà mā fā hóngbāo.",
+          "text_translation": "Hali vaqti kelmadi. Bu yil ishlay boshladim, balki ota-onamga qizil konvert berishim kerak bo'lar.",
+          "text_translation_ru": "Ещё не время. В этом году я уже работаю, так что, наверное, сам буду дарить родителям красные конверты.",
+          "text_translation_en": "Not time yet. This year I'm working, so I might have to give my parents red envelopes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s13",
+          "text_original": "那说明你真的长大了！",
+          "pinyin": "Nà shuōmíng nǐ zhēn de zhǎng dà le!",
+          "text_translation": "Demak sen rostdan ham ulg'aybsan!",
+          "text_translation_ru": "Значит, ты и правда повзрослел!",
+          "text_translation_en": "That shows you've really grown up!",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s14",
+          "text_original": "是啊。过节最重要的不是礼物和吃的，而是家人在一起。",
+          "pinyin": "Shì a. Guòjié zuì zhòngyào de bú shì lǐwù hé chī de, ér shì jiārén zài yìqǐ.",
+          "text_translation": "Ha. Bayramda eng muhimi sovg'a yoki ovqat emas, balki oilaning birga bo'lishi.",
+          "text_translation_ru": "Да. Самое важное в празднике — не подарки и не еда, а то, что семья вместе.",
+          "text_translation_en": "Yeah. The most important thing about a holiday isn't gifts or food, but being together with family.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s15",
+          "text_original": "你说得太对了！祝你春节快乐！",
+          "pinyin": "Nǐ shuō de tài duì le! Zhù nǐ Chūnjié kuàilè!",
+          "text_translation": "Juda to'g'ri aytding! Bahor bayrami muborak bo'lsin!",
+          "text_translation_ru": "Как же ты прав! С праздником весны тебя!",
+          "text_translation_en": "You're so right! Happy Spring Festival!",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s16",
+          "text_original": "谢谢！也祝你春节快乐！",
+          "pinyin": "Xièxie! Yě zhù nǐ Chūnjié kuàilè!",
+          "text_translation": "Rahmat! Senga ham Bahor bayrami muborak!",
+          "text_translation_ru": "Спасибо! И тебя с праздником весны!",
+          "text_translation_en": "Thank you! Happy Spring Festival to you too!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
