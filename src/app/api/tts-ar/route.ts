@@ -2,14 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 const BUCKET = 'audio';
-// `gpt-4o-mini-tts` reads Modern Standard Arabic far more faithfully than the
-// older `tts-1` (which mis-reads vowelized MSA into wrong words). The model is
-// baked into the cache path so upgrading regenerates every clip instead of
-// serving the old, butchered `tts-1` audio.
-const TTS_MODEL = 'gpt-4o-mini-tts';
-const TTS_PREFIX = `ar/tts/${TTS_MODEL}`;
+// Google Cloud TTS with native `ar-XA` Arabic voices. Unlike OpenAI's models
+// (tts-1 mis-read MSA words; gpt-4o-mini-tts is generative and *added* words on
+// short lines), Google's neural voices are deterministic — they pronounce
+// exactly the text given, no hallucinated/extra words. Provider is baked into
+// the cache path so the switch regenerates every clip fresh.
+const PROVIDER = 'google';
+const TTS_PREFIX = `ar/tts/${PROVIDER}`;
+const DEFAULT_VOICE = 'ar-XA-Wavenet-B';
 
-const ALLOWED_VOICES = new Set(['alloy', 'echo', 'onyx', 'nova', 'shimmer', 'fable']);
+// Allowed Google ar-XA voices (B/C male, A/D female).
+const ALLOWED_VOICES = new Set([
+  'ar-XA-Wavenet-A', 'ar-XA-Wavenet-B', 'ar-XA-Wavenet-C', 'ar-XA-Wavenet-D',
+  'ar-XA-Standard-A', 'ar-XA-Standard-B', 'ar-XA-Standard-C', 'ar-XA-Standard-D',
+]);
 
 function storagePath(text: string, voice: string): string {
   const hex = Buffer.from(text, 'utf-8').toString('hex');
@@ -32,7 +38,7 @@ export async function POST(req: NextRequest) {
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
-  const voice = typeof rawVoice === 'string' && ALLOWED_VOICES.has(rawVoice) ? rawVoice : 'alloy';
+  const voice = typeof rawVoice === 'string' && ALLOWED_VOICES.has(rawVoice) ? rawVoice : DEFAULT_VOICE;
 
   const supabase = getSupabaseAdmin();
   const path = storagePath(text, voice);
@@ -43,29 +49,36 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ url: publicUrl(path) });
   }
 
-  // 2. Generate via OpenAI TTS (provider is swappable; OPENAI_API_KEY already in env).
-  const apiKey = process.env.OPENAI_API_KEY;
+  // 2. Generate via Google Cloud TTS.
+  const apiKey = process.env.GOOGLE_TTS_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: 'TTS not configured' }, { status: 503 });
   }
 
   try {
-    const res = await fetch('https://api.openai.com/v1/audio/speech', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: TTS_MODEL,
-        voice,
-        input: text,
-        response_format: 'mp3',
-        instructions: 'Read the text as clear, natural Modern Standard Arabic. Pronounce every word exactly as written, following the diacritics (harakat).',
-      }),
-    });
+    const res = await fetch(
+      `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          input: { text },
+          voice: { languageCode: 'ar-XA', name: voice },
+          audioConfig: { audioEncoding: 'MP3' },
+        }),
+      },
+    );
     if (!res.ok) {
-      console.error('OpenAI TTS error:', res.status, await res.text().catch(() => ''));
+      console.error('Google TTS error:', res.status, await res.text().catch(() => ''));
       return NextResponse.json({ error: 'TTS request failed' }, { status: res.status });
     }
-    const audioBuffer = Buffer.from(await res.arrayBuffer());
+    const json = await res.json();
+    const b64 = json.audioContent as string | undefined;
+    if (!b64) {
+      console.error('Google TTS: no audioContent in response');
+      return NextResponse.json({ error: 'TTS request failed' }, { status: 502 });
+    }
+    const audioBuffer = Buffer.from(b64, 'base64');
 
     // 3. Cache to Supabase
     const { error: uploadError } = await supabase.storage
@@ -73,7 +86,7 @@ export async function POST(req: NextRequest) {
       .upload(path, audioBuffer, { contentType: 'audio/mpeg', upsert: true });
     if (uploadError) {
       console.error('Supabase upload error:', uploadError);
-      return NextResponse.json({ url: `data:audio/mpeg;base64,${audioBuffer.toString('base64')}` });
+      return NextResponse.json({ url: `data:audio/mpeg;base64,${b64}` });
     }
     return NextResponse.json({ url: publicUrl(path) });
   } catch (e) {

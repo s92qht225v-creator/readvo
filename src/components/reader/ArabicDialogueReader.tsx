@@ -56,9 +56,11 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
   // A dialogue is gendered iff any sentence carries both gender wordings.
   const isGendered = (dialogue?.sentences ?? []).some((s) => s.ar_m && s.ar_f);
 
-  // OpenAI voice per (mode, speaker): male onyx/echo, female nova/shimmer.
+  // Google ar-XA voice per (mode, speaker): male B/C, female A/D.
   const voiceFor = (speaker: 'A' | 'B' | undefined): string =>
-    genderMode === 'm' ? (speaker === 'B' ? 'echo' : 'onyx') : (speaker === 'B' ? 'shimmer' : 'nova');
+    genderMode === 'm'
+      ? (speaker === 'B' ? 'ar-XA-Wavenet-C' : 'ar-XA-Wavenet-B')
+      : (speaker === 'B' ? 'ar-XA-Wavenet-D' : 'ar-XA-Wavenet-A');
 
   const arOf = (s: ApiSentence): string =>
     genderMode === 'm' ? (s.ar_m ?? s.ar ?? '') : (s.ar_f ?? s.ar ?? '');
