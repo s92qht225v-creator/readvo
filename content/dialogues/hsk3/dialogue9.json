@@ -1,0 +1,236 @@
+{
+  "id": "hsk3-dialogue9",
+  "slug": "pets",
+  "title": "宠物",
+  "pinyin": "Chǒngwù",
+  "titleTranslation": "Uy hayvonlari",
+  "titleTranslation_ru": "Домашние животные",
+  "titleTranslation_en": "Pets",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "品种",
+    "泰迪",
+    "照顾",
+    "值得",
+    "狗粮",
+    "零食",
+    "生病",
+    "兽医",
+    "幸亏",
+    "一直",
+    "快乐",
+    "热情",
+    "心思",
+    "回报"
+  ],
+  "sections": [
+    {
+      "id": "d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d9-s1",
+          "text_original": "你养宠物吗？",
+          "pinyin": "Nǐ yǎng chǒngwù ma?",
+          "text_translation": "Uy hayvoni boqasanmi?",
+          "text_translation_ru": "У тебя есть домашнее животное?",
+          "text_translation_en": "Do you have a pet?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s2",
+          "text_original": "养。我有一只狗，它叫小黑。",
+          "pinyin": "Yǎng. Wǒ yǒu yì zhī gǒu, tā jiào Xiǎo Hēi.",
+          "text_translation": "Ha. Mening bir itim bor, ismi Xiao Hei.",
+          "text_translation_ru": "Есть. У меня собака, её зовут Сяо Хэй.",
+          "text_translation_en": "Yes. I have a dog named Xiao Hei.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s3",
+          "text_original": "小黑是什么品种？",
+          "pinyin": "Xiǎo Hēi shì shénme pǐnzhǒng?",
+          "text_translation": "Xiao Hei qaysi zotdan?",
+          "text_translation_ru": "Какой породы Сяо Хэй?",
+          "text_translation_en": "What breed is Xiao Hei?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s4",
+          "text_original": "是泰迪。它不大，但是特别聪明。",
+          "pinyin": "Shì Tàidí. Tā bú dà, dànshì tèbié cōngming.",
+          "text_translation": "Teddi. U katta emas, lekin juda aqlli.",
+          "text_translation_ru": "Тедди. Он небольшой, но очень умный.",
+          "text_translation_en": "A Teddy (toy poodle). He's small but really smart.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s5",
+          "text_original": "它多大了？",
+          "pinyin": "Tā duō dà le?",
+          "text_translation": "U necha yoshda?",
+          "text_translation_ru": "Сколько ему лет?",
+          "text_translation_en": "How old is he?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s6",
+          "text_original": "两岁多了。已经跟我住了快两年。",
+          "pinyin": "Liǎng suì duō le. Yǐjīng gēn wǒ zhù le kuài liǎng nián.",
+          "text_translation": "Ikki yoshdan oshdi. Men bilan deyarli ikki yildan beri yashayapti.",
+          "text_translation_ru": "Чуть больше двух лет. Живёт со мной уже почти два года.",
+          "text_translation_en": "Over two years old. He's lived with me for almost two years now.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s7",
+          "text_original": "你平时怎么照顾它？",
+          "pinyin": "Nǐ píngshí zěnme zhàogù tā?",
+          "text_translation": "Odatda unga qanday g'amxo'rlik qilasan?",
+          "text_translation_ru": "Как ты обычно за ним ухаживаешь?",
+          "text_translation_en": "How do you usually take care of him?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s8",
+          "text_original": "每天喂两次，早晚各一次。每周带它出去散步三四次。",
+          "pinyin": "Měitiān wèi liǎng cì, zǎowǎn gè yí cì. Měi zhōu dài tā chūqù sànbù sān sì cì.",
+          "text_translation": "Har kuni ikki marta — ertalab va kechqurun bir martadan ovqatlantiraman. Har hafta uch-to'rt marta sayrga olib chiqaman.",
+          "text_translation_ru": "Кормлю дважды в день, утром и вечером по разу. Раз в неделю вывожу гулять три-четыре раза.",
+          "text_translation_en": "I feed him twice a day, once in the morning and once in the evening. I take him out for walks three or four times a week.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s9",
+          "text_original": "散步多久？",
+          "pinyin": "Sànbù duō jiǔ?",
+          "text_translation": "Sayr qancha davom etadi?",
+          "text_translation_ru": "Сколько длится прогулка?",
+          "text_translation_en": "How long are the walks?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s10",
+          "text_original": "一般半小时左右。它很喜欢在外面跑。",
+          "pinyin": "Yìbān bàn xiǎoshí zuǒyòu. Tā hěn xǐhuān zài wàimiàn pǎo.",
+          "text_translation": "Odatda yarim soatcha. U tashqarida yugurishni juda yaxshi ko'radi.",
+          "text_translation_ru": "Обычно около получаса. Он очень любит бегать на улице.",
+          "text_translation_en": "Usually about half an hour. He loves running around outside.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s11",
+          "text_original": "养狗需要花很多时间和钱吗？",
+          "pinyin": "Yǎng gǒu xūyào huā hěn duō shíjiān hé qián ma?",
+          "text_translation": "It boqish ko'p vaqt va pul talab qiladimi?",
+          "text_translation_ru": "Содержать собаку требует много времени и денег?",
+          "text_translation_en": "Does keeping a dog take a lot of time and money?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s12",
+          "text_original": "时间和钱都要花一些。但是我觉得很值得。",
+          "pinyin": "Shíjiān hé qián dōu yào huā yì xiē. Dànshì wǒ juéde hěn zhídé.",
+          "text_translation": "Biroz vaqt ham, pul ham ketadi. Lekin menimcha buning arzigulik joyi bor.",
+          "text_translation_ru": "И время, и деньги нужны. Но, по-моему, оно того стоит.",
+          "text_translation_en": "Both time and money, yes. But I think it's totally worth it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s13",
+          "text_original": "每个月大概花多少钱？",
+          "pinyin": "Měi ge yuè dàgài huā duōshao qián?",
+          "text_translation": "Oyiga taxminan qancha pul ketadi?",
+          "text_translation_ru": "Сколько примерно уходит в месяц?",
+          "text_translation_en": "About how much do you spend a month?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s14",
+          "text_original": "五百块左右，包括狗粮、零食和洗澡。",
+          "pinyin": "Wǔ bǎi kuài zuǒyòu, bāokuò gǒuliáng, língshí hé xǐzǎo.",
+          "text_translation": "Besh yuz yuancha — it ozuqasi, gazaklar va cho'miltirishni qo'shib.",
+          "text_translation_ru": "Около пятисот юаней, включая корм, лакомства и купание.",
+          "text_translation_en": "Around five hundred yuan, including dog food, treats and baths.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s15",
+          "text_original": "它生病的时候怎么办？",
+          "pinyin": "Tā shēngbìng de shíhou zěnme bàn?",
+          "text_translation": "U kasal bo'lib qolsa nima qilasan?",
+          "text_translation_ru": "А что делать, когда он болеет?",
+          "text_translation_en": "What do you do when he gets sick?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s16",
+          "text_original": "我会带它去看兽医。幸好它身体一直不错。",
+          "pinyin": "Wǒ huì dài tā qù kàn shòuyī. Xìnghǎo tā shēntǐ yìzhí búcuò.",
+          "text_translation": "Uni veterinarga olib boraman. Yaxshiyamki, u doim sog'lom bo'lib turibdi.",
+          "text_translation_ru": "Веду его к ветеринару. К счастью, он всё время довольно здоров.",
+          "text_translation_en": "I take him to the vet. Luckily, his health has always been good.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s17",
+          "text_original": "养狗最大的快乐是什么？",
+          "pinyin": "Yǎng gǒu zuì dà de kuàilè shì shénme?",
+          "text_translation": "It boqishning eng katta quvonchi nima?",
+          "text_translation_ru": "В чём самая большая радость от собаки?",
+          "text_translation_en": "What's the greatest joy of having a dog?",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s18",
+          "text_original": "它总是很热情地欢迎我回家。看到它我就很开心。",
+          "pinyin": "Tā zǒng shì hěn rèqíng de huānyíng wǒ huí jiā. Kàn dào tā wǒ jiù hěn kāixīn.",
+          "text_translation": "U meni uyga qaytganimda doim iliq kutib oladi. Uni ko'rsam, darrov xursand bo'laman.",
+          "text_translation_ru": "Он всегда тепло встречает меня дома. Как только вижу его, сразу радуюсь.",
+          "text_translation_en": "He always greets me warmly when I come home. Just seeing him makes me happy.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s19",
+          "text_original": "我也想养一只，但是怕麻烦。",
+          "pinyin": "Wǒ yě xiǎng yǎng yì zhī, dànshì pà máfan.",
+          "text_translation": "Men ham bitta boqmoqchiman, lekin ovoragarchilikdan qo'rqaman.",
+          "text_translation_ru": "Я тоже хочу завести, но боюсь хлопот.",
+          "text_translation_en": "I'd like to get one too, but I'm afraid of the hassle.",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s20",
+          "text_original": "确实需要花心思，但是回报也很多。",
+          "pinyin": "Quèshí xūyào huā xīnsi, dànshì huíbào yě hěn duō.",
+          "text_translation": "Haqiqatan ham mehnat va e'tibor talab qiladi, lekin evaziga ham ko'p narsa beradi.",
+          "text_translation_ru": "Действительно нужно вкладывать силы, но и отдача большая.",
+          "text_translation_en": "It really does take effort, but the rewards are great too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d9-s21",
+          "text_original": "谢谢你的建议，我再考虑考虑。",
+          "pinyin": "Xièxie nǐ de jiànyì, wǒ zài kǎolǜ kǎolǜ.",
+          "text_translation": "Maslahating uchun rahmat, yana bir o'ylab ko'raman.",
+          "text_translation_ru": "Спасибо за совет, я ещё подумаю.",
+          "text_translation_en": "Thanks for the advice, I'll think it over a bit more.",
+          "speaker": "A"
+        },
+        {
+          "id": "d9-s22",
+          "text_original": "不客气。如果你想养，到时候可以问我。",
+          "pinyin": "Bú kèqi. Rúguǒ nǐ xiǎng yǎng, dàoshíhou kěyǐ wèn wǒ.",
+          "text_translation": "Arzimaydi. Agar boqmoqchi bo'lsang, o'shanda mendan so'rashing mumkin.",
+          "text_translation_ru": "Не за что. Если захочешь завести, тогда можешь спросить меня.",
+          "text_translation_en": "You're welcome. If you decide to get one, you can ask me then.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
