@@ -1,0 +1,77 @@
+{
+  "id": "introductions",
+  "level": "a1",
+  "title": "تَعَارُف",
+  "translit": "Taʿāruf",
+  "titleTranslation_uz": "Tanishuv",
+  "titleTranslation_ru": "Знакомство",
+  "titleTranslation_en": "Introductions",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "ar_m": "اَلسَّلَامُ عَلَيْكُمْ",
+      "translit_m": "As-salāmu ʿalaykum.",
+      "ar_f": "اَلسَّلَامُ عَلَيْكُمْ",
+      "translit_f": "As-salāmu ʿalaykum.",
+      "text_translation_uz": "Assalomu alaykum.",
+      "text_translation_ru": "Мир вам.",
+      "text_translation_en": "Peace be upon you."
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "ar_m": "وَعَلَيْكُمُ السَّلَامُ",
+      "translit_m": "Wa ʿalaykumu as-salām.",
+      "ar_f": "وَعَلَيْكُمُ السَّلَامُ",
+      "translit_f": "Wa ʿalaykumu as-salām.",
+      "text_translation_uz": "Va alaykum assalom.",
+      "text_translation_ru": "И вам мир.",
+      "text_translation_en": "And peace be upon you."
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "ar_m": "مَا اسْمُكَ؟",
+      "translit_m": "Mā ismuka?",
+      "ar_f": "مَا اسْمُكِ؟",
+      "translit_f": "Mā ismuki?",
+      "text_translation_uz": "Isming nima?",
+      "text_translation_ru": "Как тебя зовут?",
+      "text_translation_en": "What's your name?"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "ar_m": "اِسْمِي عَلِيٌّ. وَمَا اسْمُكَ؟",
+      "translit_m": "Ismī ʿAliyyun. Wa mā ismuka?",
+      "ar_f": "اِسْمِي عَلِيٌّ. وَمَا اسْمُكِ؟",
+      "translit_f": "Ismī ʿAliyyun. Wa mā ismuki?",
+      "text_translation_uz": "Mening ismim Ali. Sening isming nima?",
+      "text_translation_ru": "Меня зовут Али. А как тебя зовут?",
+      "text_translation_en": "My name is Ali. And what's your name?"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "ar_m": "اِسْمِي أَحْمَدُ. تَشَرَّفْتُ بِمَعْرِفَتِكَ.",
+      "translit_m": "Ismī Aḥmadu. Tasharraftu bi-maʿrifatika.",
+      "ar_f": "اِسْمِي أَحْمَدُ. تَشَرَّفْتُ بِمَعْرِفَتِكِ.",
+      "translit_f": "Ismī Aḥmadu. Tasharraftu bi-maʿrifatiki.",
+      "text_translation_uz": "Mening ismim Ahmad. Tanishganimdan xursandman.",
+      "text_translation_ru": "Меня зовут Ахмад. Приятно познакомиться.",
+      "text_translation_en": "My name is Ahmad. Nice to meet you."
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "ar_m": "وَأَنَا أَيْضًا.",
+      "translit_m": "Wa anā ayḍan.",
+      "ar_f": "وَأَنَا أَيْضًا.",
+      "translit_f": "Wa anā ayḍan.",
+      "text_translation_uz": "Men ham.",
+      "text_translation_ru": "Я тоже.",
+      "text_translation_en": "Me too."
+    }
+  ]
+}
