@@ -1,0 +1,246 @@
+{
+  "id": "hsk3-dialogue8",
+  "slug": "transportation",
+  "title": "交通",
+  "pinyin": "Jiāotōng",
+  "titleTranslation": "Transport",
+  "titleTranslation_ru": "Транспорт",
+  "titleTranslation_en": "Transportation",
+  "level": 3,
+  "tag": "transport",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "交通",
+    "挤",
+    "提早",
+    "早高峰",
+    "考虑",
+    "安全",
+    "差不多",
+    "要是不",
+    "共享单车",
+    "到处",
+    "除非",
+    "不然",
+    "划算",
+    "省钱",
+    "环保"
+  ],
+  "sections": [
+    {
+      "id": "d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d8-s1",
+          "text_original": "你每天怎么去上班？",
+          "pinyin": "Nǐ měitiān zěnme qù shàngbān?",
+          "text_translation": "Har kuni ishga qanday borasan?",
+          "text_translation_ru": "Как ты каждый день добираешься на работу?",
+          "text_translation_en": "How do you get to work every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s2",
+          "text_original": "我坐地铁。地铁很快，也很方便。",
+          "pinyin": "Wǒ zuò dìtiě. Dìtiě hěn kuài, yě hěn fāngbiàn.",
+          "text_translation": "Metroda. Metro juda tez va qulay.",
+          "text_translation_ru": "На метро. Метро быстрое и удобное.",
+          "text_translation_en": "I take the subway. It's fast and convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s3",
+          "text_original": "地铁人多不多？",
+          "pinyin": "Dìtiě rén duō bu duō?",
+          "text_translation": "Metroda odam ko'pmi?",
+          "text_translation_ru": "В метро много людей?",
+          "text_translation_en": "Is the subway crowded?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s4",
+          "text_original": "早上特别多，有时候挤不上去。",
+          "pinyin": "Zǎoshang tèbié duō, yǒu shíhou jǐ bú shàng qù.",
+          "text_translation": "Ertalab juda ko'p, ba'zan tiqilib chiqib bo'lmaydi.",
+          "text_translation_ru": "Утром особенно много, иногда даже не втиснуться.",
+          "text_translation_en": "Especially in the morning — sometimes you can't even squeeze in.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s5",
+          "text_original": "那你为什么不早点出门？",
+          "pinyin": "Nà nǐ wèishénme bù zǎo diǎn chūmén?",
+          "text_translation": "Unda nega ertaroq chiqmaysan?",
+          "text_translation_ru": "Тогда почему ты не выходишь пораньше?",
+          "text_translation_en": "Then why don't you leave a bit earlier?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s6",
+          "text_original": "我已经提早了。但是早高峰人还是很多。",
+          "pinyin": "Wǒ yǐjīng tízǎo le. Dànshì zǎo gāofēng rén háishì hěn duō.",
+          "text_translation": "Allaqachon ertaroq chiqyapman. Lekin ertalabki tirbandlikda baribir odam ko'p.",
+          "text_translation_ru": "Я и так выхожу раньше. Но в утренний час пик людей всё равно много.",
+          "text_translation_en": "I already leave early. But there are still tons of people in the morning rush hour.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s7",
+          "text_original": "你坐几号线？",
+          "pinyin": "Nǐ zuò jǐ hào xiàn?",
+          "text_translation": "Necha raqamli liniyada yurasan?",
+          "text_translation_ru": "По какой линии ты ездишь?",
+          "text_translation_en": "Which line do you take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s8",
+          "text_original": "二号线。从我家到公司，一共六站。",
+          "pinyin": "Èr hào xiàn. Cóng wǒ jiā dào gōngsī, yígòng liù zhàn.",
+          "text_translation": "Ikkinchi liniya. Uydan ofisgacha jami olti bekat.",
+          "text_translation_ru": "Вторая линия. От дома до работы всего шесть станций.",
+          "text_translation_en": "Line 2. From home to the office it's six stops in total.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s9",
+          "text_original": "那很近啊。你考虑过骑车上班吗？",
+          "pinyin": "Nà hěn jìn a. Nǐ kǎolǜ guo qí chē shàngbān ma?",
+          "text_translation": "Unda juda yaqin-ku. Velosipedda ishga borishni o'ylab ko'rganmisan?",
+          "text_translation_ru": "Так это близко. А ты не думал ездить на работу на велосипеде?",
+          "text_translation_en": "That's close, then. Have you considered cycling to work?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s10",
+          "text_original": "考虑过。但是路上车太多，不太安全。",
+          "pinyin": "Kǎolǜ guo. Dànshì lù shàng chē tài duō, bú tài ānquán.",
+          "text_translation": "O'ylab ko'rganman. Lekin yo'lda mashina juda ko'p, unchalik xavfsiz emas.",
+          "text_translation_ru": "Думал. Но на дороге слишком много машин, не очень безопасно.",
+          "text_translation_en": "I have. But there are too many cars on the road — it's not very safe.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s11",
+          "text_original": "也是。最近交通越来越堵了。",
+          "pinyin": "Yě shì. Zuìjìn jiāotōng yuè lái yuè dǔ le.",
+          "text_translation": "To'g'ri. Yaqinda yo'l harakati tobora tirband bo'lyapti.",
+          "text_translation_ru": "И правда. В последнее время на дорогах всё больше пробок.",
+          "text_translation_en": "True. Traffic has been getting more and more jammed lately.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s12",
+          "text_original": "是啊。尤其是下雨天，堵得特别厉害。",
+          "pinyin": "Shì a. Yóuqí shì xià yǔ tiān, dǔ de tèbié lìhai.",
+          "text_translation": "Ha. Ayniqsa yomg'irli kunlari juda qattiq tirband bo'ladi.",
+          "text_translation_ru": "Да. Особенно в дождливые дни пробки просто ужасные.",
+          "text_translation_en": "Yeah. Especially on rainy days, the jams are really bad.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s13",
+          "text_original": "你一般几点出门？",
+          "pinyin": "Nǐ yìbān jǐ diǎn chūmén?",
+          "text_translation": "Odatda soat nechada chiqasan?",
+          "text_translation_ru": "Во сколько ты обычно выходишь?",
+          "text_translation_en": "What time do you usually head out?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s14",
+          "text_original": "七点半。到公司差不多八点十分。",
+          "pinyin": "Qī diǎn bàn. Dào gōngsī chàbuduō bā diǎn shí fēn.",
+          "text_translation": "Yetti yarimda. Ofisga deyarli sakkizu o'n daqiqada yetib boraman.",
+          "text_translation_ru": "В полвосьмого. До работы добираюсь примерно к 8:10.",
+          "text_translation_en": "Seven thirty. I get to the office at about ten past eight.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s15",
+          "text_original": "那路上要四十分钟啊。",
+          "pinyin": "Nà lù shàng yào sìshí fēnzhōng a.",
+          "text_translation": "Demak yo'lda qirq daqiqa ketadi-da.",
+          "text_translation_ru": "Значит, дорога занимает сорок минут.",
+          "text_translation_en": "So it takes forty minutes on the way.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s16",
+          "text_original": "对。要是不堵车，二十分钟就到了。",
+          "pinyin": "Duì. Yàoshi bù dǔchē, èrshí fēnzhōng jiù dào le.",
+          "text_translation": "Ha. Tirbandlik bo'lmasa, yigirma daqiqada yetib boraman.",
+          "text_translation_ru": "Да. Если бы не пробки, доехал бы за двадцать минут.",
+          "text_translation_en": "Right. If there's no traffic jam, I'd be there in twenty minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s17",
+          "text_original": "你周末出门也坐地铁吗？",
+          "pinyin": "Nǐ zhōumò chūmén yě zuò dìtiě ma?",
+          "text_translation": "Dam olish kunlari ham metroda yurasanmi?",
+          "text_translation_ru": "На выходных ты тоже ездишь на метро?",
+          "text_translation_en": "Do you take the subway on weekends too?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s18",
+          "text_original": "不一定。周末我更喜欢走路或者骑共享单车。",
+          "pinyin": "Bù yídìng. Zhōumò wǒ gèng xǐhuān zǒulù huòzhě qí gòngxiǎng dānchē.",
+          "text_translation": "Har doim emas. Dam olish kunlari ko'proq piyoda yurish yoki ijara velosipedda yurishni yoqtiraman.",
+          "text_translation_ru": "Не всегда. По выходным я больше люблю ходить пешком или брать велосипед каршеринга.",
+          "text_translation_en": "Not necessarily. On weekends I prefer walking or riding a shared bike.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s19",
+          "text_original": "共享单车很方便，到处都能找到。",
+          "pinyin": "Gòngxiǎng dānchē hěn fāngbiàn, dàochù dōu néng zhǎodào.",
+          "text_translation": "Ijara velosiped juda qulay, hamma joydan topsa bo'ladi.",
+          "text_translation_ru": "Велосипеды каршеринга очень удобны — их можно найти повсюду.",
+          "text_translation_en": "Shared bikes are really convenient — you can find them everywhere.",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s20",
+          "text_original": "对，而且比坐车便宜多了。",
+          "pinyin": "Duì, érqiě bǐ zuò chē piányi duō le.",
+          "text_translation": "Ha, ustiga-ustak transportda yurishdan ancha arzon.",
+          "text_translation_ru": "Да, и к тому же намного дешевле, чем ездить на транспорте.",
+          "text_translation_en": "Yeah, and it's much cheaper than taking transport.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s21",
+          "text_original": "你平时会选择打车吗？",
+          "pinyin": "Nǐ píngshí huì xuǎnzé dǎchē ma?",
+          "text_translation": "Odatda taksi chaqirishni tanlaysanmi?",
+          "text_translation_ru": "Ты обычно выбираешь такси?",
+          "text_translation_en": "Do you usually opt for a taxi?",
+          "speaker": "A"
+        },
+        {
+          "id": "d8-s22",
+          "text_original": "很少。除非很急，不然我觉得打车不划算。",
+          "pinyin": "Hěn shǎo. Chúfēi hěn jí, bùrán wǒ juéde dǎchē bù huásuàn.",
+          "text_translation": "Juda kam. Juda shoshilmasam, taksi olish menimcha foydali emas.",
+          "text_translation_ru": "Очень редко. Если только не спешу — иначе считаю, что такси невыгодно.",
+          "text_translation_en": "Rarely. Unless I'm in a rush, I don't think taking a taxi is worth it.",
+          "speaker": "B"
+        },
+        {
+          "id": "d8-s23",
+          "text_original": "你说得对，省钱又环保。",
+          "pinyin": "Nǐ shuō de duì, shěng qián yòu huánbǎo.",
+          "text_translation": "To'g'ri aytasan — pulni ham tejaydi, atrof-muhitga ham foydali.",
+          "text_translation_ru": "Ты прав — и деньги экономишь, и для экологии полезно.",
+          "text_translation_en": "You're right — it saves money and it's eco-friendly.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
