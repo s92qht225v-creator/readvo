@@ -1,0 +1,199 @@
+{
+  "id": "hsk3-dialogue10",
+  "slug": "making-friends-online",
+  "title": "网上交友",
+  "pinyin": "Wǎngshàng jiāoyǒu",
+  "titleTranslation": "Onlayn tanishuv",
+  "titleTranslation_ru": "Знакомства онлайн",
+  "titleTranslation_en": "Making Friends Online",
+  "level": 3,
+  "tag": "muloqot",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "交友",
+    "方式",
+    "社交软件",
+    "安全",
+    "只要",
+    "遇到",
+    "摄影",
+    "共同",
+    "话题",
+    "可靠",
+    "判断",
+    "公共场所",
+    "顺利"
+  ],
+  "sections": [
+    {
+      "id": "d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d10-s1",
+          "text_original": "你平时喜欢用什么方式交朋友？",
+          "pinyin": "Nǐ píngshí xǐhuān yòng shénme fāngshì jiāo péngyou?",
+          "text_translation": "Odatda do'st orttirishni qaysi usulda yoqtirasan?",
+          "text_translation_ru": "Каким способом ты обычно любишь заводить друзей?",
+          "text_translation_en": "How do you usually like to make friends?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s2",
+          "text_original": "我最近开始用社交软件交朋友。",
+          "pinyin": "Wǒ zuìjìn kāishǐ yòng shèjiāo ruǎnjiàn jiāo péngyou.",
+          "text_translation": "Yaqinda ijtimoiy tarmoq ilovalari orqali do'st orttira boshladim.",
+          "text_translation_ru": "В последнее время я начал заводить друзей через соцсети.",
+          "text_translation_en": "I recently started making friends through social apps.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s3",
+          "text_original": "网上交友安全吗？",
+          "pinyin": "Wǎngshàng jiāoyǒu ānquán ma?",
+          "text_translation": "Internetda tanishish xavfsizmi?",
+          "text_translation_ru": "Знакомиться в интернете безопасно?",
+          "text_translation_en": "Is making friends online safe?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s4",
+          "text_original": "只要小心一些，应该没问题。",
+          "pinyin": "Zhǐyào xiǎoxīn yì xiē, yīnggāi méi wèntí.",
+          "text_translation": "Bir oz ehtiyot bo'lsang bo'lgani, muammo bo'lmasligi kerak.",
+          "text_translation_ru": "Если быть немного осторожнее, проблем быть не должно.",
+          "text_translation_en": "As long as you're a bit careful, it should be fine.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s5",
+          "text_original": "你遇到过有趣的人吗？",
+          "pinyin": "Nǐ yùdào guo yǒuqù de rén ma?",
+          "text_translation": "Qiziqarli odamlarga duch kelganmisan?",
+          "text_translation_ru": "Тебе встречались интересные люди?",
+          "text_translation_en": "Have you come across any interesting people?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s6",
+          "text_original": "遇到过。上个月我认识了一个喜欢摄影的朋友。",
+          "pinyin": "Yùdào guo. Shàng ge yuè wǒ rènshi le yí ge xǐhuān shèyǐng de péngyou.",
+          "text_translation": "Duch kelganman. O'tgan oy fotografiyani yaxshi ko'radigan bir do'st bilan tanishdim.",
+          "text_translation_ru": "Встречались. В прошлом месяце я познакомился с человеком, который любит фотографию.",
+          "text_translation_en": "I have. Last month I met a friend who loves photography.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s7",
+          "text_original": "你们见过面吗？",
+          "pinyin": "Nǐmen jiàn guo miàn ma?",
+          "text_translation": "Yuzma-yuz uchrashganmisizlar?",
+          "text_translation_ru": "Вы уже виделись?",
+          "text_translation_en": "Have you two met in person?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s8",
+          "text_original": "还没有。但是我们已经聊了很多次了。",
+          "pinyin": "Hái méiyǒu. Dànshì wǒmen yǐjīng liáo le hěn duō cì le.",
+          "text_translation": "Hali yo'q. Lekin allaqachon ko'p marta suhbatlashganmiz.",
+          "text_translation_ru": "Ещё нет. Но мы уже много раз общались.",
+          "text_translation_en": "Not yet. But we've already chatted many times.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s9",
+          "text_original": "你们聊些什么？",
+          "pinyin": "Nǐmen liáo xiē shénme?",
+          "text_translation": "Nimalar haqida suhbatlashasizlar?",
+          "text_translation_ru": "О чём вы разговариваете?",
+          "text_translation_en": "What do you talk about?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s10",
+          "text_original": "聊生活、电影、旅行。我们有很多共同话题。",
+          "pinyin": "Liáo shēnghuó, diànyǐng, lǚxíng. Wǒmen yǒu hěn duō gòngtóng huàtí.",
+          "text_translation": "Hayot, kino, sayohat haqida. Bizda umumiy mavzular ko'p.",
+          "text_translation_ru": "О жизни, фильмах, путешествиях. У нас много общих тем.",
+          "text_translation_en": "About life, films, travel. We have a lot of common topics.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s11",
+          "text_original": "你觉得网上认识的朋友可靠吗？",
+          "pinyin": "Nǐ juéde wǎngshàng rènshi de péngyou kěkào ma?",
+          "text_translation": "Seningcha internetda tanishgan do'st ishonchli bo'ladimi?",
+          "text_translation_ru": "Как ты думаешь, друзья из интернета надёжны?",
+          "text_translation_en": "Do you think friends you meet online are reliable?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s12",
+          "text_original": "不一定。要聊久一点才能判断。",
+          "pinyin": "Bù yídìng. Yào liáo jiǔ yì diǎn cáinéng pànduàn.",
+          "text_translation": "Har doim emas. Birozroq uzoq suhbatlashib ko'rgachgina baho berish mumkin.",
+          "text_translation_ru": "Не обязательно. Чтобы судить, нужно пообщаться подольше.",
+          "text_translation_en": "Not necessarily. You can only judge after chatting for a while.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s13",
+          "text_original": "你有告诉家人这件事吗？",
+          "pinyin": "Nǐ yǒu gàosu jiārén zhè jiàn shì ma?",
+          "text_translation": "Bu haqda oilangga aytdingmi?",
+          "text_translation_ru": "Ты рассказал об этом родным?",
+          "text_translation_en": "Have you told your family about this?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s14",
+          "text_original": "有。我妈有点担心，但是我跟她说我会小心。",
+          "pinyin": "Yǒu. Wǒ mā yǒu diǎn dānxīn, dànshì wǒ gēn tā shuō wǒ huì xiǎoxīn.",
+          "text_translation": "Aytdim. Onam biroz xavotirlandi, lekin men unga ehtiyot bo'lishimni aytdim.",
+          "text_translation_ru": "Рассказал. Мама немного переживает, но я сказал ей, что буду осторожен.",
+          "text_translation_en": "I have. My mom is a little worried, but I told her I'd be careful.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s15",
+          "text_original": "你打算什么时候见面？",
+          "pinyin": "Nǐ dǎsuàn shénme shíhou jiànmiàn?",
+          "text_translation": "Qachon uchrashmoqchisan?",
+          "text_translation_ru": "Когда планируешь встретиться?",
+          "text_translation_en": "When do you plan to meet up?",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s16",
+          "text_original": "可能下个月吧。我们会选择公共场所见面。",
+          "pinyin": "Kěnéng xià ge yuè ba. Wǒmen huì xuǎnzé gōnggòng chǎngsuǒ jiànmiàn.",
+          "text_translation": "Ehtimol keyingi oy. Uchrashish uchun jamoat joyini tanlaymiz.",
+          "text_translation_ru": "Наверное, в следующем месяце. Мы выберем для встречи общественное место.",
+          "text_translation_en": "Probably next month. We'll choose a public place to meet.",
+          "speaker": "B"
+        },
+        {
+          "id": "d10-s17",
+          "text_original": "那比较安全。祝你交到好朋友！",
+          "pinyin": "Nà bǐjiào ānquán. Zhù nǐ jiāo dào hǎo péngyou!",
+          "text_translation": "Bu ancha xavfsiz. Yaxshi do'st orttirishingni tilayman!",
+          "text_translation_ru": "Так безопаснее. Желаю тебе найти хорошего друга!",
+          "text_translation_en": "That's safer. Hope you make a good friend!",
+          "speaker": "A"
+        },
+        {
+          "id": "d10-s18",
+          "text_original": "谢谢！如果见面顺利，我告诉你。",
+          "pinyin": "Xièxie! Rúguǒ jiànmiàn shùnlì, wǒ gàosu nǐ.",
+          "text_translation": "Rahmat! Uchrashuv yaxshi o'tsa, senga aytaman.",
+          "text_translation_ru": "Спасибо! Если встреча пройдёт хорошо, расскажу тебе.",
+          "text_translation_en": "Thanks! If the meeting goes well, I'll let you know.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
