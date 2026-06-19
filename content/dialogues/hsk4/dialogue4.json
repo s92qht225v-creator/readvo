@@ -1,0 +1,192 @@
+{
+  "id": "hsk4-dialogue4",
+  "slug": "stress",
+  "title": "压力",
+  "pinyin": "Yālì",
+  "titleTranslation": "Stress",
+  "titleTranslation_ru": "Стресс",
+  "titleTranslation_en": "Stress",
+  "level": 4,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "压力",
+    "正常",
+    "情况",
+    "着急",
+    "理解",
+    "睡眠",
+    "踏实",
+    "放松",
+    "坚持",
+    "建议",
+    "留",
+    "心情",
+    "适当",
+    "反而",
+    "效率"
+  ],
+  "sections": [
+    {
+      "id": "d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d4-s1",
+          "text_original": "你最近看起来有点累，怎么了？",
+          "pinyin": "Nǐ zuìjìn kàn qǐlái yǒu diǎn lèi, zěnme le?",
+          "text_translation": "Yaqinda biroz charchagan ko'rinasan, nima bo'ldi?",
+          "text_translation_ru": "Ты в последнее время выглядишь немного уставшим, что случилось?",
+          "text_translation_en": "You've looked a bit tired lately — what's wrong?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s2",
+          "text_original": "最近工作压力太大了，经常加班到很晚。",
+          "pinyin": "Zuìjìn gōngzuò yālì tài dà le, jīngcháng jiābān dào hěn wǎn.",
+          "text_translation": "Yaqinda ishdagi bosim juda kuchli, tez-tez kechgacha qo'shimcha ishlayman.",
+          "text_translation_ru": "В последнее время на работе слишком большое давление, часто задерживаюсь допоздна.",
+          "text_translation_en": "Work has been really stressful lately — I often work overtime until late.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s3",
+          "text_original": "你每天几点下班？",
+          "pinyin": "Nǐ měitiān jǐ diǎn xiàbān?",
+          "text_translation": "Har kuni soat nechada ishdan chiqasan?",
+          "text_translation_ru": "Во сколько ты каждый день уходишь с работы?",
+          "text_translation_en": "What time do you finish work every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s4",
+          "text_original": "正常情况下六点，但这周都到八九点。",
+          "pinyin": "Zhèngcháng qíngkuàng xià liù diǎn, dàn zhè zhōu dōu dào bā jiǔ diǎn.",
+          "text_translation": "Oddiy holatda oltida, lekin bu hafta sakkiz-to'qqizgacha qoldim.",
+          "text_translation_ru": "В обычной ситуации в шесть, но на этой неделе — до восьми-девяти.",
+          "text_translation_en": "Normally at six, but this week it's been eight or nine.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s5",
+          "text_original": "那太辛苦了！你有没有想过休息一下？",
+          "pinyin": "Nà tài xīnkǔ le! Nǐ yǒu méiyǒu xiǎng guo xiūxi yí xià?",
+          "text_translation": "Juda mashaqqatli ekan! Biroz dam olishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Это очень тяжело! Ты не думал немного отдохнуть?",
+          "text_translation_en": "That's exhausting! Have you thought about taking a break?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s6",
+          "text_original": "我也知道应该休息，但是工作做不完，心里着急。",
+          "pinyin": "Wǒ yě zhīdào yīnggāi xiūxi, dànshì gōngzuò zuò bù wán, xīnli zháojí.",
+          "text_translation": "Dam olish kerakligini bilaman, lekin ish tugamaydi, ko'nglim xavotirda.",
+          "text_translation_ru": "Я и сам знаю, что нужно отдохнуть, но работа не кончается, и я нервничаю.",
+          "text_translation_en": "I know I should rest, but the work never ends, and I get anxious.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s7",
+          "text_original": "我理解，但是身体比工作重要。",
+          "pinyin": "Wǒ lǐjiě, dànshì shēntǐ bǐ gōngzuò zhòngyào.",
+          "text_translation": "Tushunaman, lekin salomatlik ishdan muhimroq.",
+          "text_translation_ru": "Я понимаю, но здоровье важнее работы.",
+          "text_translation_en": "I understand, but your health is more important than work.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s8",
+          "text_original": "你说得对。我最近睡眠也不好，经常睡不踏实。",
+          "pinyin": "Nǐ shuō de duì. Wǒ zuìjìn shuìmián yě bù hǎo, jīngcháng shuì bù tāshi.",
+          "text_translation": "To'g'ri aytasan. Yaqinda uyqum ham yomon, tez-tez tinch uxlayolmayman.",
+          "text_translation_ru": "Ты прав. В последнее время и сон плохой, часто сплю беспокойно.",
+          "text_translation_en": "You're right. My sleep has been bad lately too — I often don't sleep soundly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s9",
+          "text_original": "你试过运动或者听音乐放松吗？",
+          "pinyin": "Nǐ shì guo yùndòng huòzhě tīng yīnyuè fàngsōng ma?",
+          "text_translation": "Sport bilan shug'ullanib yoki musiqa tinglab dam olishni sinab ko'rganmisan?",
+          "text_translation_ru": "Ты пробовал расслабляться спортом или музыкой?",
+          "text_translation_en": "Have you tried exercising or listening to music to relax?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s10",
+          "text_original": "试过，但是很难坚持。工作一忙就忘了。",
+          "pinyin": "Shì guo, dànshì hěn nán jiānchí. Gōngzuò yì máng jiù wàng le.",
+          "text_translation": "Sinaganman, lekin davom ettirish qiyin. Ish ko'payishi bilanoq unutib qo'yaman.",
+          "text_translation_ru": "Пробовал, но трудно придерживаться. Как только закручусь на работе — сразу забываю.",
+          "text_translation_en": "I have, but it's hard to keep it up. As soon as work gets busy, I forget.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s11",
+          "text_original": "我建议你每天给自己留半小时，什么都不想，就休息。",
+          "pinyin": "Wǒ jiànyì nǐ měitiān gěi zìjǐ liú bàn xiǎoshí, shénme dōu bù xiǎng, jiù xiūxi.",
+          "text_translation": "Senga maslahatim: har kuni o'zingga yarim soat ajrat, hech narsa o'ylamasdan shunchaki dam ol.",
+          "text_translation_ru": "Советую тебе каждый день оставлять себе полчаса: ни о чём не думать, просто отдыхать.",
+          "text_translation_en": "I suggest you set aside half an hour for yourself every day — think about nothing, just rest.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s12",
+          "text_original": "这个建议不错，我试试看。",
+          "pinyin": "Zhè ge jiànyì búcuò, wǒ shì shi kàn.",
+          "text_translation": "Bu maslahat yaxshi ekan, sinab ko'raman.",
+          "text_translation_ru": "Хороший совет, попробую.",
+          "text_translation_en": "That's a good suggestion, I'll give it a try.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s13",
+          "text_original": "周末也可以出去走走，换换心情。",
+          "pinyin": "Zhōumò yě kěyǐ chūqù zǒu zǒu, huàn huan xīnqíng.",
+          "text_translation": "Dam olish kunlari ham tashqariga chiqib aylanib, kayfiyatingni o'zgartirsang bo'ladi.",
+          "text_translation_ru": "На выходных тоже можно выйти прогуляться, сменить настроение.",
+          "text_translation_en": "On weekends you can also go out for a walk and change your mood.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s14",
+          "text_original": "好。这周末我打算去公园散步，不加班了。",
+          "pinyin": "Hǎo. Zhè zhōumò wǒ dǎsuàn qù gōngyuán sànbù, bù jiābān le.",
+          "text_translation": "Yaxshi. Shu dam olish kuni bog'da sayr qilmoqchiman, qo'shimcha ishlamayman.",
+          "text_translation_ru": "Хорошо. В эти выходные я собираюсь погулять в парке и не работать сверхурочно.",
+          "text_translation_en": "Okay. This weekend I plan to take a walk in the park and not work overtime.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s15",
+          "text_original": "这就对了！适当的休息反而能让工作更有效率。",
+          "pinyin": "Zhè jiù duì le! Shìdàng de xiūxi fǎn'ér néng ràng gōngzuò gèng yǒu xiàolǜ.",
+          "text_translation": "Mana shunday-da! Me'yorida dam olish, aksincha, ishni yanada samaraliroq qiladi.",
+          "text_translation_ru": "Вот это правильно! Умеренный отдых, наоборот, делает работу более эффективной.",
+          "text_translation_en": "That's the way! Proper rest actually makes work more efficient.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d4-s16",
+          "text_original": "谢谢你！跟你聊完感觉好多了。",
+          "pinyin": "Xièxie nǐ! Gēn nǐ liáo wán gǎnjué hǎo duō le.",
+          "text_translation": "Rahmat senga! Sen bilan suhbatlashganimdan keyin ancha yengil tortdim.",
+          "text_translation_ru": "Спасибо тебе! После разговора с тобой стало намного легче.",
+          "text_translation_en": "Thank you! I feel much better after talking with you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d4-s17",
+          "text_original": "不客气！压力大的时候记得找人说说。",
+          "pinyin": "Bú kèqi! Yālì dà de shíhou jìde zhǎo rén shuō shuo.",
+          "text_translation": "Arzimaydi! Bosim kuchaygan paytda kimdir bilan gaplashishni unutma.",
+          "text_translation_ru": "Не за что! Когда давит стресс, не забывай с кем-нибудь поговорить.",
+          "text_translation_en": "You're welcome! When the stress gets heavy, remember to talk to someone.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
