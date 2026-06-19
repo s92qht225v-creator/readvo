@@ -51,3 +51,25 @@
 .theme-ar .lp__hsk-pill--active { background: #2E8B57; border-color: #2E8B57; }
 .theme-ar .ar-fc__face--back { background: linear-gradient(135deg, #2E8B57, #25734B); }
 .theme-ar .home__menu-lang-btn--active { background: #2E8B57; border-color: #2E8B57; }
+
+/* Gender toggle FAB (stacked above the play-all FAB; solid, not faded) */
+.ar-gender-fab {
+  position: fixed;
+  bottom: 148px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-accent, #2E8B57);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+}
+.ar-gender-fab:active { transform: scale(0.94); }
