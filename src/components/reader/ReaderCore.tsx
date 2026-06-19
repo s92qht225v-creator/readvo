@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import '@/styles/arabic.css';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 import type { ScriptConfig, ReaderSentence } from '@/lib/reader/scriptConfig';
@@ -17,13 +17,67 @@ export function ReaderCore({ config, sentences, resolveAudio, labels }: ReaderCo
   const [showSecondaryAid, setShowSecondaryAid] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
-  const { play } = useAudioPlayer();
+  const { play, stop } = useAudioPlayer();
+
+  // ── Sequential "play all" ──────────────────────────────────────────────────
+  // A dedicated <audio> element (not the singleton tap player) so we get an
+  // `onended` hook to advance to the next sentence. Tapping a sentence cancels
+  // the sequence and vice-versa.
+  const [isPlayingAll, setIsPlayingAll] = useState(false);
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  const seqAudioRef = useRef<HTMLAudioElement | null>(null);
+  const seqActiveRef = useRef(false);
+  const seqIdxRef = useRef(0);
+
+  useEffect(() => {
+    const a = new Audio();
+    a.preload = 'none';
+    seqAudioRef.current = a;
+    return () => { seqActiveRef.current = false; a.onended = null; a.pause(); a.src = ''; };
+  }, []);
+
+  const stopSeq = useCallback(() => {
+    if (!seqActiveRef.current) return;
+    seqActiveRef.current = false;
+    const a = seqAudioRef.current;
+    if (a) { a.onended = null; a.pause(); }
+    setIsPlayingAll(false);
+    setIsLoadingAudio(false);
+  }, []);
+
+  const playSeqFrom = useCallback(async (idx: number) => {
+    if (!seqActiveRef.current) return;
+    const s = sentences[idx];
+    if (!s) { seqActiveRef.current = false; setIsPlayingAll(false); setIsLoadingAudio(false); setActiveId(null); return; }
+    seqIdxRef.current = idx;
+    setActiveId(s.id);
+    const url = s.audioUrl ?? (await resolveAudio(s));
+    if (!seqActiveRef.current) return;
+    const a = seqAudioRef.current;
+    if (!a) return;
+    if (!url) { void playSeqFrom(idx + 1); return; } // skip un-resolvable line
+    a.onended = () => { if (seqActiveRef.current) void playSeqFrom(seqIdxRef.current + 1); };
+    a.src = url;
+    try { await a.play(); setIsLoadingAudio(false); setIsPlayingAll(true); }
+    catch { /* autoplay rejected — leave state as-is */ }
+  }, [sentences, resolveAudio]);
+
+  const handlePlayAll = useCallback(() => {
+    if (seqActiveRef.current) { stopSeq(); return; } // toggle: pause
+    stop(); // cancel any tapped-sentence audio
+    seqActiveRef.current = true;
+    setIsPlayingAll(true);
+    setIsLoadingAudio(true);
+    const start = sentences.findIndex((s) => s.id === activeId);
+    void playSeqFrom(start >= 0 ? start : 0);
+  }, [stopSeq, stop, sentences, activeId, playSeqFrom]);
 
   const onSentence = useCallback(async (s: ReaderSentence) => {
+    stopSeq(); // a manual tap cancels "play all"
     setActiveId(s.id);
     const url = s.audioUrl ?? (await resolveAudio(s));
     if (url) play(s.id, url);
-  }, [play, resolveAudio]);
+  }, [play, resolveAudio, stopSeq]);
 
   return (
     <div className={`reader-core ${config.fontClass}`} dir={config.dir}>
@@ -41,6 +95,20 @@ export function ReaderCore({ config, sentences, resolveAudio, labels }: ReaderCo
           </div>
         ))}
       </div>
+
+      {sentences.length > 0 && (
+        <button
+          className={`story__play-fab ${isLoadingAudio ? 'story__play-fab--loading' : ''}`}
+          onClick={handlePlayAll}
+          type="button"
+          aria-label={isPlayingAll ? 'Pause' : 'Play all'}
+        >
+          {isLoadingAudio ? <span className="story__play-fab-spinner" /> :
+            isPlayingAll
+              ? <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+              : <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg>}
+        </button>
+      )}
 
       <nav className="story__bottom-bar">
         <div className="story__bottom-bar-inner">
