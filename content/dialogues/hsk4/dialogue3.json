@@ -1,0 +1,229 @@
+{
+  "id": "hsk4-dialogue3",
+  "slug": "internet",
+  "title": "互联网",
+  "pinyin": "Hùliánwǎng",
+  "titleTranslation": "Internet",
+  "titleTranslation_ru": "Интернет",
+  "titleTranslation_en": "The Internet",
+  "level": 4,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "查资料",
+    "刷短视频",
+    "网购",
+    "互联网",
+    "变化",
+    "解决",
+    "在线",
+    "远程办公",
+    "信息",
+    "真假",
+    "浪费",
+    "尽量",
+    "保护",
+    "个人",
+    "随便",
+    "公共",
+    "登录",
+    "账号",
+    "诈骗",
+    "提醒",
+    "智能",
+    "正确",
+    "道理",
+    "主人",
+    "奴隶"
+  ],
+  "sections": [
+    {
+      "id": "d3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d3-s1",
+          "text_original": "你每天花多少时间上网？",
+          "pinyin": "Nǐ měitiān huā duōshao shíjiān shàngwǎng?",
+          "text_translation": "Har kuni internetda qancha vaqt o'tkazasan?",
+          "text_translation_ru": "Сколько времени в день ты проводишь в интернете?",
+          "text_translation_en": "How much time do you spend online every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s2",
+          "text_original": "大概三四个小时吧，工作也需要用电脑。",
+          "pinyin": "Dàgài sān sì ge xiǎoshí ba, gōngzuò yě xūyào yòng diànnǎo.",
+          "text_translation": "Taxminan uch-to'rt soat, ishda ham kompyuter kerak bo'ladi.",
+          "text_translation_ru": "Примерно три-четыре часа, для работы тоже нужен компьютер.",
+          "text_translation_en": "About three or four hours — work needs a computer too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s3",
+          "text_original": "你上网一般做什么？",
+          "pinyin": "Nǐ shàngwǎng yìbān zuò shénme?",
+          "text_translation": "Internetda odatda nima qilasan?",
+          "text_translation_ru": "Что ты обычно делаешь в интернете?",
+          "text_translation_en": "What do you usually do online?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s4",
+          "text_original": "查资料、看新闻、刷短视频，有时候也会网购。",
+          "pinyin": "Chá zīliào, kàn xīnwén, shuā duǎn shìpín, yǒu shíhou yě huì wǎnggòu.",
+          "text_translation": "Ma'lumot izlayman, yangiliklarni o'qiyman, qisqa videolar ko'raman, ba'zan onlayn xarid ham qilaman.",
+          "text_translation_ru": "Ищу информацию, читаю новости, листаю короткие видео, иногда делаю покупки онлайн.",
+          "text_translation_en": "Look up information, read the news, scroll short videos, and sometimes shop online.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s5",
+          "text_original": "你觉得互联网给生活带来了什么变化？",
+          "pinyin": "Nǐ juéde hùliánwǎng gěi shēnghuó dài lái le shénme biànhuà?",
+          "text_translation": "Seningcha internet hayotga qanday o'zgarishlar olib keldi?",
+          "text_translation_ru": "Как ты думаешь, какие изменения интернет принёс в жизнь?",
+          "text_translation_en": "What changes do you think the Internet has brought to life?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s6",
+          "text_original": "变化很大！现在做什么都很方便，不用出门就能解决很多问题。",
+          "pinyin": "Biànhuà hěn dà! Xiànzài zuò shénme dōu hěn fāngbiàn, búyòng chūmén jiù néng jiějué hěn duō wèntí.",
+          "text_translation": "O'zgarishlar juda katta! Hozir hamma narsa qulay, uydan chiqmasdan ko'p muammolarni hal qilsa bo'ladi.",
+          "text_translation_ru": "Изменения огромные! Сейчас всё делать удобно — не выходя из дома можно решить множество вопросов.",
+          "text_translation_en": "Huge changes! Now everything is convenient — you can solve many problems without leaving home.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s7",
+          "text_original": "比如呢？",
+          "pinyin": "Bǐrú ne?",
+          "text_translation": "Masalan?",
+          "text_translation_ru": "Например?",
+          "text_translation_en": "Like what?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s8",
+          "text_original": "比如可以在线学习、远程办公、网上交水电费。",
+          "pinyin": "Bǐrú kěyǐ zàixiàn xuéxí, yuǎnchéng bàngōng, wǎngshàng jiāo shuǐdiàn fèi.",
+          "text_translation": "Masalan, onlayn o'qish, masofadan ishlash, kommunal to'lovlarni internet orqali to'lash mumkin.",
+          "text_translation_ru": "Например, можно учиться онлайн, работать удалённо, оплачивать коммунальные услуги через интернет.",
+          "text_translation_en": "For example, you can study online, work remotely, and pay utility bills over the Internet.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s9",
+          "text_original": "那你觉得有没有不好的地方？",
+          "pinyin": "Nà nǐ juéde yǒu méiyǒu bù hǎo de dìfang?",
+          "text_translation": "Unda seningcha yomon tomonlari ham bormi?",
+          "text_translation_ru": "А есть ли, по-твоему, плохие стороны?",
+          "text_translation_en": "So do you think there are any downsides?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s10",
+          "text_original": "当然有。网上信息太多，真假难分。而且容易浪费时间。",
+          "pinyin": "Dāngrán yǒu. Wǎngshàng xìnxī tài duō, zhēnjiǎ nán fēn. Érqiě róngyì làngfèi shíjiān.",
+          "text_translation": "Albatta bor. Internetda axborot juda ko'p, rost-yolg'onini ajratish qiyin. Ustiga-ustak vaqtni behuda sarflash oson.",
+          "text_translation_ru": "Конечно есть. В сети слишком много информации, трудно отличить правду от лжи. К тому же легко тратить время впустую.",
+          "text_translation_en": "Of course. There's too much information online and it's hard to tell true from false. Plus it's easy to waste time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s11",
+          "text_original": "你会不会觉得没有网络就不习惯？",
+          "pinyin": "Nǐ huì bú huì juéde méiyǒu wǎngluò jiù bù xíguàn?",
+          "text_translation": "Internet bo'lmasa o'zingni noqulay his qilasanmi?",
+          "text_translation_ru": "Тебе бывает некомфортно без интернета?",
+          "text_translation_en": "Do you feel out of sorts without the Internet?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s12",
+          "text_original": "会有一点。但是如果去旅行，我尽量少看手机，多看看风景。",
+          "pinyin": "Huì yǒu yì diǎn. Dànshì rúguǒ qù lǚxíng, wǒ jǐnliàng shǎo kàn shǒujī, duō kàn kan fēngjǐng.",
+          "text_translation": "Bir oz his qilaman. Lekin sayohatga borsam, iloji boricha telefonga kamroq qarab, manzaralarni ko'proq tomosha qilaman.",
+          "text_translation_ru": "Немного. Но когда еду путешествовать, стараюсь меньше смотреть в телефон и больше любоваться видами.",
+          "text_translation_en": "A little. But when I travel, I try to look at my phone less and enjoy the scenery more.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s13",
+          "text_original": "你上网会注意保护个人信息吗？",
+          "pinyin": "Nǐ shàngwǎng huì zhùyì bǎohù gèrén xìnxī ma?",
+          "text_translation": "Internetda shaxsiy ma'lumotlaringni himoya qilishga e'tibor berasanmi?",
+          "text_translation_ru": "Ты заботишься о защите личной информации в интернете?",
+          "text_translation_en": "Do you pay attention to protecting your personal information online?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s14",
+          "text_original": "会的。我不随便填个人信息，也不在公共网络下登录重要账号。",
+          "pinyin": "Huì de. Wǒ bù suíbiàn tián gèrén xìnxī, yě bú zài gōnggòng wǎngluò xià dēnglù zhòngyào zhànghào.",
+          "text_translation": "Ha. Shaxsiy ma'lumotni o'ylamasdan kiritmayman, muhim akkauntlarga umumiy tarmoqda kirmayman.",
+          "text_translation_ru": "Да. Я не ввожу личные данные как попало и не вхожу в важные аккаунты через общественные сети.",
+          "text_translation_en": "I do. I don't fill in personal info carelessly, and I don't log into important accounts on public networks.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s15",
+          "text_original": "这很重要。现在网络诈骗太多了。",
+          "pinyin": "Zhè hěn zhòngyào. Xiànzài wǎngluò zhàpiàn tài duō le.",
+          "text_translation": "Bu juda muhim. Hozir internet firibgarligi juda ko'p.",
+          "text_translation_ru": "Это очень важно. Сейчас слишком много интернет-мошенничества.",
+          "text_translation_en": "That's very important. There's so much online fraud these days.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s16",
+          "text_original": "对。所以我经常提醒家人也要小心。",
+          "pinyin": "Duì. Suǒyǐ wǒ jīngcháng tíxǐng jiārén yě yào xiǎoxīn.",
+          "text_translation": "To'g'ri. Shuning uchun oilamga ham ehtiyot bo'lishni tez-tez eslatib turaman.",
+          "text_translation_ru": "Да. Поэтому я часто напоминаю родным, что тоже нужно быть осторожными.",
+          "text_translation_en": "Right. So I often remind my family to be careful too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s17",
+          "text_original": "你觉得以后网络会发展成什么样？",
+          "pinyin": "Nǐ juéde yǐhòu wǎngluò huì fāzhǎn chéng shénmeyàng?",
+          "text_translation": "Seningcha kelajakda internet qanday rivojlanadi?",
+          "text_translation_ru": "Как ты думаешь, как интернет будет развиваться дальше?",
+          "text_translation_en": "How do you think the Internet will develop in the future?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s18",
+          "text_original": "我觉得会越来越智能，生活也会更方便。但是我们要学会正确使用。",
+          "pinyin": "Wǒ juéde huì yuè lái yuè zhìnéng, shēnghuó yě huì gèng fāngbiàn. Dànshì wǒmen yào xuéhuì zhèngquè shǐyòng.",
+          "text_translation": "Menimcha tobora aqlli bo'lib boradi, hayot ham qulayroq bo'ladi. Lekin biz uni to'g'ri ishlatishni o'rganishimiz kerak.",
+          "text_translation_ru": "Думаю, он будет всё умнее, и жизнь станет ещё удобнее. Но нам нужно научиться пользоваться им правильно.",
+          "text_translation_en": "I think it'll get smarter and smarter, and life will be even more convenient. But we need to learn to use it correctly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d3-s19",
+          "text_original": "有道理。网络是工具，关键看人怎么用。",
+          "pinyin": "Yǒu dàoli. Wǎngluò shì gōngjù, guānjiàn kàn rén zěnme yòng.",
+          "text_translation": "Mantiqli. Internet — bu vosita, asosiysi odam uni qanday ishlatishida.",
+          "text_translation_ru": "Резонно. Интернет — это инструмент, главное, как человек им пользуется.",
+          "text_translation_en": "Makes sense. The Internet is a tool — what matters is how people use it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d3-s20",
+          "text_original": "对！我们要做网络的主人，不做网络的奴隶。",
+          "pinyin": "Duì! Wǒmen yào zuò wǎngluò de zhǔrén, bú zuò wǎngluò de núlì.",
+          "text_translation": "To'g'ri! Biz internetning egasi bo'lishimiz kerak, quli emas.",
+          "text_translation_ru": "Верно! Мы должны быть хозяевами интернета, а не его рабами.",
+          "text_translation_en": "Exactly! We should be the masters of the Internet, not its slaves.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
