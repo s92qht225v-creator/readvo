@@ -43,10 +43,10 @@
     {
       "id": "s4",
       "speaker": "B",
-      "ar_m": "أَنَا مِنْ أُوزْبَكِسْتَانَ. وَأَنْتَ؟",
-      "translit_m": "Anā min Ūzbakistāna. Wa anta?",
-      "ar_f": "أَنَا مِنْ أُوزْبَكِسْتَانَ. وَأَنْتِ؟",
-      "translit_f": "Anā min Ūzbakistāna. Wa anti?",
+      "ar_m": "أَنَا مِنْ أُوزْبَكِسْتَان. وَأَنْتَ؟",
+      "translit_m": "Anā min Ūzbakistān. Wa anta?",
+      "ar_f": "أَنَا مِنْ أُوزْبَكِسْتَان. وَأَنْتِ؟",
+      "translit_f": "Anā min Ūzbakistān. Wa anti?",
       "text_translation_uz": "Men O'zbekistondanman. Sen-chi?",
       "text_translation_ru": "Я из Узбекистана. А ты?",
       "text_translation_en": "I'm from Uzbekistan. And you?"
@@ -54,10 +54,10 @@
     {
       "id": "s5",
       "speaker": "A",
-      "ar_m": "أَنَا مِنْ مِصْرَ.",
-      "translit_m": "Anā min Miṣra.",
-      "ar_f": "أَنَا مِنْ مِصْرَ.",
-      "translit_f": "Anā min Miṣra.",
+      "ar_m": "أَنَا مِنْ مِصْر.",
+      "translit_m": "Anā min Miṣr.",
+      "ar_f": "أَنَا مِنْ مِصْر.",
+      "translit_f": "Anā min Miṣr.",
       "text_translation_uz": "Men Misrdanman.",
       "text_translation_ru": "Я из Египта.",
       "text_translation_en": "I'm from Egypt."
