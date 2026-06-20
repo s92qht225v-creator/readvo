@@ -1,0 +1,139 @@
+{
+  "id": "hsk3-dialogue26",
+  "slug": "getting-a-haircut",
+  "title": "理发",
+  "pinyin": "Lǐfà",
+  "titleTranslation": "Soch oldirish",
+  "titleTranslation_ru": "Стрижка",
+  "titleTranslation_en": "Getting a Haircut",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "理发师",
+    "理发店",
+    "技术",
+    "男士",
+    "女士",
+    "发型",
+    "打理"
+  ],
+  "sections": [
+    {
+      "id": "d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d26-s1",
+          "text_original": "你头发好像长了，准备去剪吗？",
+          "pinyin": "Nǐ tóufa hǎoxiàng cháng le, zhǔnbèi qù jiǎn ma?",
+          "text_translation": "Soching o'sib qolgandek, oldirgani bormoqchimisan?",
+          "text_translation_ru": "У тебя, кажется, волосы отросли — собираешься стричься?",
+          "text_translation_en": "Your hair seems to have gotten long — planning to get it cut?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s2",
+          "text_original": "对，我约了今天下午三点的理发师。",
+          "pinyin": "Duì, wǒ yuē le jīntiān xiàwǔ sān diǎn de lǐfàshī.",
+          "text_translation": "Ha, bugun tushdan keyin soat uchga sartaroshga yozildim.",
+          "text_translation_ru": "Да, я записался к парикмахеру на сегодня на три часа дня.",
+          "text_translation_en": "Yeah, I booked a barber for three o'clock this afternoon.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s3",
+          "text_original": "你一般去哪儿剪头发？",
+          "pinyin": "Nǐ yìbān qù nǎr jiǎn tóufa?",
+          "text_translation": "Odatda qayerda soch oldirasan?",
+          "text_translation_ru": "Где ты обычно стрижёшься?",
+          "text_translation_en": "Where do you usually get your hair cut?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s4",
+          "text_original": "我常去小区门口那家理发店，价格不贵，技术也不错。",
+          "pinyin": "Wǒ cháng qù xiǎoqū ménkǒu nà jiā lǐfàdiàn, jiàgé bú guì, jìshù yě búcuò.",
+          "text_translation": "Ko'pincha turar joy darvozasi oldidagi sartaroshxonaga boraman, narxi qimmat emas, mahorati ham yaxshi.",
+          "text_translation_ru": "Чаще всего хожу в парикмахерскую у входа в наш район: и цена невысокая, и мастерство хорошее.",
+          "text_translation_en": "I often go to the salon at the entrance of my neighborhood — the price isn't high and the skill is good.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s5",
+          "text_original": "剪一次多少钱？",
+          "pinyin": "Jiǎn yí cì duōshao qián?",
+          "text_translation": "Bir marta soch oldirish qancha turadi?",
+          "text_translation_ru": "Сколько стоит одна стрижка?",
+          "text_translation_en": "How much is one haircut?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s6",
+          "text_original": "男士剪发三十块，女士剪发贵一些。",
+          "pinyin": "Nánshì jiǎnfà sānshí kuài, nǚshì jiǎnfà guì yì xiē.",
+          "text_translation": "Erkaklar uchun soch oldirish o'ttiz yuan, ayollar uchun biroz qimmatroq.",
+          "text_translation_ru": "Мужская стрижка — тридцать юаней, женская немного дороже.",
+          "text_translation_en": "A men's cut is thirty yuan; a women's cut is a bit more expensive.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s7",
+          "text_original": "你平时会换发型吗？",
+          "pinyin": "Nǐ píngshí huì huàn fǎxíng ma?",
+          "text_translation": "Odatda soch turmagini o'zgartirasanmi?",
+          "text_translation_ru": "Ты обычно меняешь причёску?",
+          "text_translation_en": "Do you usually change your hairstyle?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s8",
+          "text_original": "不会。我一直都是短头发，好打理。",
+          "pinyin": "Bú huì. Wǒ yìzhí dōu shì duǎn tóufa, hǎo dǎlǐ.",
+          "text_translation": "Yo'q. Men doim kalta soch qo'yaman, parvarishi oson.",
+          "text_translation_ru": "Нет. У меня всегда короткие волосы, за ними легко ухаживать.",
+          "text_translation_en": "No. I always keep my hair short — it's easy to manage.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s9",
+          "text_original": "我也想剪头发，但是不知道哪个理发师好。",
+          "pinyin": "Wǒ yě xiǎng jiǎn tóufa, dànshì bù zhīdào nǎ ge lǐfàshī hǎo.",
+          "text_translation": "Men ham soch oldirmoqchiman, lekin qaysi sartarosh yaxshiligini bilmayman.",
+          "text_translation_ru": "Я тоже хочу подстричься, но не знаю, какой парикмахер хороший.",
+          "text_translation_en": "I want to get a haircut too, but I don't know which barber is good.",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s10",
+          "text_original": "你可以跟我一起去，我帮你推荐我的理发师。",
+          "pinyin": "Nǐ kěyǐ gēn wǒ yìqǐ qù, wǒ bāng nǐ tuījiàn wǒ de lǐfàshī.",
+          "text_translation": "Men bilan birga borsang bo'ladi, o'z sartaroshimni senga tavsiya qilaman.",
+          "text_translation_ru": "Можешь пойти со мной, я порекомендую тебе своего парикмахера.",
+          "text_translation_en": "You can come with me — I'll recommend my barber to you.",
+          "speaker": "B"
+        },
+        {
+          "id": "d26-s11",
+          "text_original": "好啊！他今天下午有空吗？",
+          "pinyin": "Hǎo a! Tā jīntiān xiàwǔ yǒu kòng ma?",
+          "text_translation": "Yaxshi! U bugun tushdan keyin bo'shmi?",
+          "text_translation_ru": "Отлично! У него есть время сегодня днём?",
+          "text_translation_en": "Great! Is he free this afternoon?",
+          "speaker": "A"
+        },
+        {
+          "id": "d26-s12",
+          "text_original": "应该有。我先帮你问一下。",
+          "pinyin": "Yīnggāi yǒu. Wǒ xiān bāng nǐ wèn yí xià.",
+          "text_translation": "Bo'lsa kerak. Avval sen uchun so'rab beraman.",
+          "text_translation_ru": "Должно быть. Я сначала спрошу за тебя.",
+          "text_translation_en": "He probably is. Let me ask for you first.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
