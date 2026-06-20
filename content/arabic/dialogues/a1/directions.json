@@ -6,6 +6,16 @@
   "titleTranslation_uz": "Hojatxona qayerda?",
   "titleTranslation_ru": "Где туалет?",
   "titleTranslation_en": "Where Is the Bathroom?",
+  "vocab": [
+    { "ar": "لَوْ سَمَحْتَ", "translit": "Law samaḥta", "uz": "Iltimos, kechirasiz", "ru": "Извините, пожалуйста", "en": "Excuse me, please" },
+    { "ar": "أَيْنَ", "translit": "ayna", "uz": "qayerda", "ru": "где", "en": "where" },
+    { "ar": "الْحَمَّامُ", "translit": "al-ḥammām", "uz": "hojatxona", "ru": "туалет", "en": "bathroom" },
+    { "ar": "هُنَاكَ", "translit": "hunāka", "uz": "oʻsha yerda", "ru": "вон там", "en": "over there" },
+    { "ar": "عَلَى الْيَسَارِ", "translit": "ʿalā al-yasār", "uz": "chap tomonda", "ru": "слева", "en": "on the left" },
+    { "ar": "شُكْرًا جَزِيلًا", "translit": "Shukran jazīlan", "uz": "Katta rahmat", "ru": "Большое спасибо", "en": "Thank you very much" },
+    { "ar": "عَفْوًا", "translit": "ʿAfwan", "uz": "Arzimaydi", "ru": "Пожалуйста (не за что)", "en": "You're welcome" },
+    { "ar": "مَعَ السَّلَامَةِ", "translit": "Maʿa as-salāmah", "uz": "Xayr", "ru": "До свидания", "en": "Goodbye" }
+  ],
   "sentences": [
     {
       "id": "s1",

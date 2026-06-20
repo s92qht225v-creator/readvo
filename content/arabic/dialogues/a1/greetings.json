@@ -6,6 +6,15 @@
   "titleTranslation_uz": "Salomlashish",
   "titleTranslation_ru": "Приветствие",
   "titleTranslation_en": "Greetings",
+  "vocab": [
+    { "ar": "اَلسَّلَامُ عَلَيْكُمْ", "translit": "As-salāmu ʿalaykum", "uz": "Assalomu alaykum", "ru": "Мир вам", "en": "Peace be upon you" },
+    { "ar": "وَعَلَيْكُمُ السَّلَامُ", "translit": "Wa ʿalaykumu as-salām", "uz": "Va alaykum assalom", "ru": "И вам мир", "en": "And peace be upon you" },
+    { "ar": "كَيْفَ حَالُكَ؟", "translit": "Kayfa ḥāluka?", "uz": "Qalaysan?", "ru": "Как дела?", "en": "How are you?" },
+    { "ar": "حَالٌ", "translit": "ḥāl", "uz": "ahvol, holat", "ru": "состояние, дела", "en": "state, condition" },
+    { "ar": "أَنَا بِخَيْرٍ", "translit": "Anā bikhayrin", "uz": "Men yaxshiman", "ru": "Я хорошо", "en": "I am fine" },
+    { "ar": "أَنْتَ", "translit": "anta", "uz": "sen", "ru": "ты", "en": "you" },
+    { "ar": "أَيْضًا", "translit": "ayḍan", "uz": "ham, shuningdek", "ru": "тоже", "en": "too, also" }
+  ],
   "sentences": [
     {
       "id": "s1",

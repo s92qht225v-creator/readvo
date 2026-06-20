@@ -6,6 +6,14 @@
   "titleTranslation_uz": "Tanishuv",
   "titleTranslation_ru": "Знакомство",
   "titleTranslation_en": "Introductions",
+  "vocab": [
+    { "ar": "اَلسَّلَامُ عَلَيْكُمْ", "translit": "As-salāmu ʿalaykum", "uz": "Assalomu alaykum", "ru": "Мир вам", "en": "Peace be upon you" },
+    { "ar": "مَا اسْمُكَ؟", "translit": "Mā ismuka?", "uz": "Isming nima?", "ru": "Как тебя зовут?", "en": "What's your name?" },
+    { "ar": "اِسْمٌ", "translit": "ism", "uz": "ism", "ru": "имя", "en": "name" },
+    { "ar": "اِسْمِي", "translit": "ismī", "uz": "mening ismim", "ru": "меня зовут (моё имя)", "en": "my name is" },
+    { "ar": "تَشَرَّفْتُ بِمَعْرِفَتِكَ", "translit": "Tasharraftu bi-maʿrifatika", "uz": "Tanishganimdan xursandman", "ru": "Приятно познакомиться", "en": "Nice to meet you" },
+    { "ar": "وَأَنَا أَيْضًا", "translit": "Wa anā ayḍan", "uz": "Men ham", "ru": "Я тоже", "en": "Me too" }
+  ],
   "sentences": [
     {
       "id": "s1",

@@ -6,6 +6,15 @@
   "titleTranslation_uz": "Qayerdansan?",
   "titleTranslation_ru": "Откуда ты?",
   "titleTranslation_en": "Where are you from?",
+  "vocab": [
+    { "ar": "مِنْ أَيْنَ أَنْتَ؟", "translit": "Min ayna anta?", "uz": "Qayerdansan?", "ru": "Откуда ты?", "en": "Where are you from?" },
+    { "ar": "مِنْ", "translit": "min", "uz": "dan", "ru": "из", "en": "from" },
+    { "ar": "أَيْنَ", "translit": "ayna", "uz": "qayerda", "ru": "где", "en": "where" },
+    { "ar": "أَنَا مِنْ", "translit": "Anā min", "uz": "Men ...danman", "ru": "Я из", "en": "I am from" },
+    { "ar": "أُوزْبَكِسْتَان", "translit": "Ūzbakistān", "uz": "Oʻzbekiston", "ru": "Узбекистан", "en": "Uzbekistan" },
+    { "ar": "مِصْر", "translit": "Miṣr", "uz": "Misr", "ru": "Египет", "en": "Egypt" },
+    { "ar": "أَهْلًا وَسَهْلًا", "translit": "Ahlan wa sahlan", "uz": "Xush kelibsiz", "ru": "Добро пожаловать", "en": "Welcome" }
+  ],
   "sentences": [
     {
       "id": "s1",

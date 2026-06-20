@@ -73,3 +73,24 @@
   z-index: 80;
 }
 .ar-gender-fab:active { transform: scale(0.94); }
+
+/* ── Words tab (reuses the .dr-tabs / .dr-flip chrome, re-themed green) ── */
+.ar-vocab { padding-block: 16px; }
+/* Arabic word face: RTL, Naskh font, larger than the Chinese .dr-flip__zh. */
+.dr-flip__ar {
+  font-family: var(--font-arabic), serif;
+  direction: rtl;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.45;
+  text-align: center;
+}
+.dr-flip__translit { font-size: 14px; color: var(--color-accent, #2E8B57); font-style: italic; }
+
+/* Green re-theme of the shared (red) dialogue chrome, scoped to Arabic pages. */
+.theme-ar .dr-tabs { background: linear-gradient(180deg, #25734B 0%, #1A5236 100%); }
+.theme-ar .dr-flip__back { background: #f1f9f4; border-color: #cfe9da; }
+.theme-ar .dr-flip__meaning { color: #1A5236; }
+.theme-ar .dr-flip__audio { background: #e9f5ee; color: var(--color-accent, #2E8B57); }
+.theme-ar .dr-flip__audio-spinner { border-color: #cfe9da; border-top-color: var(--color-accent, #2E8B57); }

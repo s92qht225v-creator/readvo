@@ -18,6 +18,15 @@ export interface ArabicSentence {
   audio_url?: string;
 }
 
+/** A dialogue vocabulary entry (Words tab). */
+export interface ArabicVocab {
+  ar: string;        // fully vowelized Arabic word/phrase
+  translit: string;  // Latin transliteration
+  uz: string;
+  ru: string;
+  en: string;
+}
+
 export interface ArabicDialogue {
   id: string;
   level: string;              // 'a1'..'c2'
@@ -27,6 +36,7 @@ export interface ArabicDialogue {
   titleTranslation_ru: string;
   titleTranslation_en: string;
   sentences: ArabicSentence[];
+  vocab?: ArabicVocab[];      // Words tab (optional; no tab shown when absent)
 }
 
 const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
